@@ -123,6 +123,15 @@ $wgConf->settings = array(
     ),
 
     // Permissions
+    'wgAddGroups' => array(
+        'default' => array(
+            'bureaucrat' => array(
+                'bot',
+                'sysop',
+                'bureaucrat',
+            ),
+        ),
+    ),
     '+wgGroupPermissions' => array(
         'default' => array(
             '*' => array(
@@ -165,7 +174,14 @@ $wgConf->settings = array(
             ),
         ),
     ),
-
+    'wgRemoveGroups' => array(
+        'default' => array(
+            'bureaucrat' => array(
+                'bot',
+                'sysop',
+            ),
+        ),
+    ),
     // Server
     'wgArticlePath' => array(
         'default' => '/wiki/$1',
@@ -265,6 +281,44 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 }
 
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
+
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['writeapi'] = false;
+	$wgGroupPermissions['user']['read'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['user']['writeapi'] = false;
+	$wgGroupPermissions['user']['emailuser'] = false;
+	$wgGroupPermissions['member']['read'] = true;
+	$wgGroupPermissions['member']['edit'] = true;
+	$wgGroupPermissions['member']['emailuser'] = true;
+	$wgGroupPermissions['member']['upload'] = true;
+	$wgGroupPermissions['member']['writeapi'] = true;
+        $wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' );
+        $wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' );
+}
+
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createaccount'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['user']['createaccount'] = false;
+	$wgGroupPermissions['sysop']['createaccount'] = false;
+	$wgGroupPermissions['sysop']['upload'] = false;
+	$wgGroupPermissions['sysop']['delete'] = false;
+	$wgGroupPermissions['sysop']['deletedtext'] = false;
+	$wgGroupPermissions['sysop']['deletedhistory'] = false;
+	$wgGroupPermissions['sysop']['deletelogentry'] = false;
+	$wgGroupPermissions['sysop']['deleterevision'] = false;
+	$wgGroupPermissions['sysop']['undelete'] = false;
+	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['sysop']['importupload'] = false;
+	$wgGroupPermissions['sysop']['edit'] = false;
+	$wgGroupPermissions['sysop']['block'] = false;
+	$wgGroupPermissions['sysop']['protect'] = false;
+}
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
