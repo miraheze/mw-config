@@ -1,14 +1,8 @@
 language: php
 php:
   - 5.4
-before_script:
-  # For the syntax check to work we need some fake vars
-  - mkdir /home/travis/build/Miraheze/private                -Needs to be changed, Reception123
-  - cp /home/travis/build/Miraheze/mw-config/.travis.vars.yml /home/travis/build/Miraheze/private/vars.yml  -^, reception123
 
 script:
-  # Check playbook syntax
-  - sudo mw-config -i production local.yml --syntax-check
   # Check php script syntax
   - bash .travis.phplint.sh
 
