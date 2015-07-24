@@ -182,6 +182,7 @@ $wgConf->settings = array(
             ),
         ),
     ),
+
     // Server
     'wgArticlePath' => array(
         'default' => '/wiki/$1',
@@ -296,8 +297,8 @@ if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
 	$wgGroupPermissions['member']['emailuser'] = true;
 	$wgGroupPermissions['member']['upload'] = true;
 	$wgGroupPermissions['member']['writeapi'] = true;
-        $wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' );
-        $wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' );
+	$wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' );
+	$wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' );
 }
 
 if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
