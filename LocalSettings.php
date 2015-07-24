@@ -1,4 +1,4 @@
-<?php
+People<?php
 /*
 LocalSettings.php for Miraheze.
 Authors of initial version: John Lewis, Southparkfan, Orain contributors
@@ -265,6 +265,38 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 }
 
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
+
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['*']['read'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['*']['edit'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['*']['writeapi'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['user']['read'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['user']['edit'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['user']['upload'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['user']['writeapi'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['user']['emailuser'] = false; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['member']['read'] = true; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['member']['edit'] = true; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['member']['emailuser'] = true; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['member']['upload'] = true; }
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) { $wgGroupPermissions['member']['writeapi'] = true; }
+
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['*']['edit'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['*']['createaccount'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['user']['edit'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['user']['createaccount'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['createaccount'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['upload'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['delete'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['deletedtext'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['deletedhistory'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['deletelogentry'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['deleterevision'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['undelete'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['import'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['importupload'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['edit'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['block'] = false; }
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) { $wgGroupPermissions['sysop']['protect'] = false; }
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
