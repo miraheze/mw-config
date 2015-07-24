@@ -123,7 +123,7 @@ $wgConf->settings = array(
     ),
 
     // Permissions
-    'wgRemoveGroups' => array(
+    'wgAddGroups' => array(
         'default' => array(
             'bureaucrat' => array(
                 'bot',
@@ -282,7 +282,7 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 
-if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
@@ -296,8 +296,8 @@ if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
 	$wgGroupPermissions['member']['emailuser'] = true;
 	$wgGroupPermissions['member']['upload'] = true;
 	$wgGroupPermissions['member']['writeapi'] = true;
-        $wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' )
-        $wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' )
+        $wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' );
+        $wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' );
 }
 
 if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
