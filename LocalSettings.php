@@ -108,10 +108,10 @@ $wgConf->settings = array(
     ),
     'wgSMTP' => array(
         'default' => array(
-            'host' => '185.52.1.76',
+            'host' => 'mail.miraheze.org',
             'port' => 25,
             'IDHost' => 'miraheze.org',
-            'auth' => true,
+            'auth' => false,
             'username' => 'noreply',
             'password' => $wmgSMTPPassword,
         ),
