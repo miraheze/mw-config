@@ -24,6 +24,32 @@ $wgLocalVirtualHosts = array( '185.52.1.77' );
 $wmgHostname = ( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 
 $wgConf->settings = array(
+    // AbuseFilter
+    'wgAbuseFilterCentralDB' => array(
+        'default' => 'metawiki',
+    ),
+    'wgAbuseFilterIsCentral' => array(
+        'default' => false,
+        'metawiki' => true,
+    ),
+
+    // CentralAuth
+    'wgCentralAuthAutoNew' => array(
+        'default' => true,
+    ),
+    'wgCentralAuthAutoMigrate' => array(
+        'default' => true,
+    ),
+    'wgCentralAuthCookies' => array(
+        'default' => true,
+    ),
+    'wgCentralAuthCookieDomain' => array(
+        'default' => '.miraheze.org',
+    ),
+    'wgCentralAuthCreateOnView' => array(
+        'default' => true,
+    ),
+
     // Database
     'wgDBtype' => array(
         'default' => 'mysql',
@@ -94,6 +120,50 @@ $wgConf->settings = array(
     // Misc stuff
     'wgSitename' => array(
         'default' => 'No sitename set!',
+    ),
+
+    // Permissions
+    '+wgGroupPermissions' => array(
+        'default' => array(
+            '*' => array(
+                'abusefilter-log' => true,
+                'abusefilter-log-detail' => true,
+                'abusefilter-view' => true,
+            ),
+            'oversight' => array(
+                'abusefilter-hidden-log' => true,
+                'abusefilter-hide-log' => true,
+                'browsearchive' => true,
+                'deletedhistory' => true,
+                'deletedtext' => true,
+                'deletelogentry' => true,
+                'deleterevision' => true,
+                'hideuser' => true,
+                'suppressionlog' => true,
+                'suppressrevision' => true,
+            ),
+            'sysop' => array(
+                'abusefilter-modify' => true,
+                'abusefilter-modify-restricted' => true,
+                'abusefilter-revert' => true,
+                'deletelogentry' => true,
+                'deleterevision' => true,
+                'massmessage' => false,
+                'rollback' => true,
+            ),
+        ),
+        '+metawiki' => array(
+            'steward' => array(
+                'abusefilter-modify-global' => true,
+                'centralauth-lock' => true,
+                'centralauth-oversight' => true,
+                'centralauth-rename' => true,
+                'centralauth-unmerge' => true,
+                'noratelimit' => true,
+                'userrights' => true,
+                'userrights-interwiki' => true,
+            ),
+        ),
     ),
 
     // Server
