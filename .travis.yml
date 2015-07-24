@@ -12,7 +12,7 @@ install:
 before_script:
   # For the syntax check to work we need some fake vars
   - mkdir /home/travis/build/Orain/private                -Needs to be changed, Reception123
-  - cp /home/travis/build/Orain/ansible-playbook/.travis.vars.yml /home/travis/build/Orain/private/vars.yml  -^, reception123
+  - cp /home/travis/build/Miraheze/mw-config/.travis.vars.yml /home/travis/build/Miraheze/private/vars.yml  -^, reception123
 
 script:
   # Check playbook syntax
