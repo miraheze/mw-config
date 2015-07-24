@@ -272,11 +272,9 @@ $wgConf->extractAllGlobals( $wgDBname );
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
     header( "HTTP/1.0 404 Not Found" );
     echo <<<EOF
-    Wiki not found!
+    <center><h1>404 Wiki Not Found</h1></center>
     <hr>
-    nginx - MediaWiki
+    <center>nginx - MediaWiki</center>
 EOF;
     die( 1 );
 }
-
-// TODO: Rights for closed/private wikis
