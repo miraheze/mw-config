@@ -3,7 +3,7 @@ php:
   - 5.4
 
 before_install:
-  - sudo FORCE_ADD_APT_REPOSITORY=1 add-apt-repository ppa:rquillo/ansible
+  - sudo FORCE_ADD_APT_REPOSITORY=1 add-apt-repository ppa:rquillo/mw-config
   - sudo apt-get update
 
 install:
