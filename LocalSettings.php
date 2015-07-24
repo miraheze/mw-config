@@ -299,6 +299,17 @@ if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
 	$wgGroupPermissions['member']['writeapi'] = true;
 	$wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' );
 	$wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' );
+	$wgWhitelistRead =
+		array(
+			"Main Page",
+			"Special:UserLogin",
+			"Special:UserLogout",
+			"Special:ResetPassword",
+			"MediaWiki:Common.css",
+			"Special:CentralAutoLogin",
+			"Special:CentralLogin",
+			"Special:ConfirmEmail"
+		);
 }
 
 if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
