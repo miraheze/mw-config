@@ -1,17 +1,9 @@
 language: php
 php:
   - 5.4
-
-before_install:
-  - sudo FORCE_ADD_APT_REPOSITORY=1 add-apt-repository ppa:rquillo/mw-config
-  - sudo apt-get update
-
-install:
-  - sudo apt-get install mw-config
-
 before_script:
   # For the syntax check to work we need some fake vars
-  - mkdir /home/travis/build/Orain/private                -Needs to be changed, Reception123
+  - mkdir /home/travis/build/Miraheze/private                -Needs to be changed, Reception123
   - cp /home/travis/build/Miraheze/mw-config/.travis.vars.yml /home/travis/build/Miraheze/private/vars.yml  -^, reception123
 
 script:
