@@ -123,6 +123,15 @@ $wgConf->settings = array(
     ),
 
     // Permissions
+    'wgRemoveGroups' => array(
+        'default' => array(
+            'bureaucrat' => array(
+                'bot',
+                'sysop',
+                'bureaucrat',
+            ),
+        ),
+    ),
     '+wgGroupPermissions' => array(
         'default' => array(
             '*' => array(
@@ -165,7 +174,14 @@ $wgConf->settings = array(
             ),
         ),
     ),
-
+    'wgRemoveGroups' => array(
+        'default' => array(
+            'bureaucrat' => array(
+                'bot',
+                'sysop',
+            ),
+        ),
+    ),
     // Server
     'wgArticlePath' => array(
         'default' => '/wiki/$1',
@@ -280,6 +296,8 @@ if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
 	$wgGroupPermissions['member']['emailuser'] = true;
 	$wgGroupPermissions['member']['upload'] = true;
 	$wgGroupPermissions['member']['writeapi'] = true;
+        $wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' )
+        $wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' )
 }
 
 if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
