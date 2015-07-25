@@ -7,8 +7,6 @@ $wgObjectCaches['redis'] = array(
 
 $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
-
-# Disabled because they make the wiki not faster, but slower --SPF
-// $wgMessageCacheType = 'redis';
-// $wgParserCacheType = 'redis';
-// $wgLanguageConverterCacheType = 'redis';
+$wgMessageCacheType = 'redis';
+$wgParserCacheType = 'redis';
+$wgLanguageConverterCacheType = 'redis';
