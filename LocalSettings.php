@@ -63,6 +63,12 @@ $wgConf->settings = array(
     'wgDBadminuser' => array(
         'default' => 'wikiadmin',
     ),
+    'wgSharedDB' => array(
+        'default' => 'metawiki',
+    ),
+    'wgSharedTables' => array(
+        'default' => array( 'objectcache' ),
+    ),
     
     // Files
     'wgEnableUploads' => array(
@@ -282,6 +288,7 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 }
 
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
+require_once( "/srv/mediawiki/config/RedisConfig.php" );
 
 if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
 	$wgGroupPermissions['*']['read'] = false;
