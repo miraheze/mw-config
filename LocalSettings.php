@@ -159,7 +159,7 @@ $wgConf->settings = array(
             ),
             'bureaucrat' => array(
                 'userrights' => false,
-                'rename' => false,
+                'renameuser' => false,
             ),
             'sysop' => array(
                 'abusefilter-modify' => true,
