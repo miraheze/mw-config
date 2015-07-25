@@ -16,7 +16,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
     die( 'Not an entry point.' );
 }
 f
-$wmgUploadHostname = "static.orain.org";
+$wmgUploadHostname = "static.miraheze.org";
 
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
