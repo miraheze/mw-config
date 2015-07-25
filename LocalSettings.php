@@ -15,7 +15,6 @@ require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 if ( !defined( 'MEDIAWIKI' ) ) {
     die( 'Not an entry point.' );
 }
-f
 $wmgUploadHostname = "static.miraheze.org";
 
 # Initialize $wgConf
@@ -122,8 +121,7 @@ $wgConf->settings = array(
             'auth' => false,
             'username' => 'noreply',
             'password' => $wmgSMTPPassword,
-        ),
-        
+
     'wgLogo' => array(
 	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
     (
