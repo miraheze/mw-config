@@ -76,7 +76,7 @@ $wgConf->settings = array(
         'default' => 'metawiki',
     ),
     'wgSharedTables' => array(
-        'default' => array( 'objectcache' ),
+        'default' => array(),
     ),
     
     // Files
