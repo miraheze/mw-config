@@ -16,6 +16,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
     die( 'Not an entry point.' );
 }
 
+$wmgUploadHostname = "static.miraheze.org";
+
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
@@ -219,6 +221,9 @@ $wgConf->settings = array(
     // Style
     'wgDefaultSkin' => array(
         'default' => 'vector',
+    ),
+    'wgLogo' => array(
+	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
     ),
 
     // Empty arrays (do not touch unless you know what you're doing)
