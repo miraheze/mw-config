@@ -183,6 +183,7 @@ $wgConf->settings = array(
                 'centralauth-oversight' => true,
                 'centralauth-rename' => true,
                 'centralauth-unmerge' => true,
+                'createwiki' => true,
                 'noratelimit' => true,
                 'userrights' => true,
                 'userrights-interwiki' => true,
