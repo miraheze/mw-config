@@ -121,10 +121,11 @@ $wgConf->settings = array(
             'auth' => false,
             'username' => 'noreply',
             'password' => $wmgSMTPPassword,
-
+-         ),
+-      ),
     'wgLogo' => array(
 	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
-    (
+    )
     // Misc stuff
     'wgSitename' => array(
         'default' => 'No sitename set!',
