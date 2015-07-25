@@ -1,3 +1,6 @@
 <?php
 // Switch case
-switch( $wgDBname ) 
+switch( $wgDBname ) {
+	case 'metawiki':
+		break;
+}
