@@ -157,6 +157,10 @@ $wgConf->settings = array(
                 'suppressionlog' => true,
                 'suppressrevision' => true,
             ),
+            'bureaucrat' => array(
+                'userrights' => false,
+                'rename' => false,
+            ),
             'sysop' => array(
                 'abusefilter-modify' => true,
                 'abusefilter-modify-restricted' => true,
