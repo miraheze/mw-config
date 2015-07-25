@@ -125,7 +125,7 @@ $wgConf->settings = array(
     // Logo
     ),
     'wgLogo' => array(
-	    'default' => "//$wmgUploadHostname/meta.miraheze.org/wiki/File:Miraheze_first_logo.png",
+	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
 
     // Misc stuff
     'wgSitename' => array(
