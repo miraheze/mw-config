@@ -126,7 +126,8 @@ $wgConf->settings = array(
     ),
     'wgLogo' => array(
 	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
-
+    (
+$wmgUploadHostname = "static.orain.org";
     // Misc stuff
     'wgSitename' => array(
         'default' => 'No sitename set!',
