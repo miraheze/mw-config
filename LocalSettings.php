@@ -49,6 +49,15 @@ $wgConf->settings = array(
     'wgCentralAuthCreateOnView' => array(
         'default' => true,
     ),
+    'wgCentralAuthDatabase' => array(
+        'default' => 'centralauth',
+    ),
+    'wgCentralAuthLoginWiki' => array(
+        'default' => 'loginwiki',
+    ),
+    'wgCentralAuthSilentLogin' => array(
+        'default' => true,
+    ),
 
     // Database
     'wgDBtype' => array(

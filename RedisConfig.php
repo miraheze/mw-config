@@ -5,7 +5,7 @@ $wgObjectCaches['redis'] = array(
     'password'          => $wmgRedisPassword,
 );
 
-$wgMainCacheType = CACHE_DB;
+$wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
 
 # Disabled because they make the wiki not faster, but slower --SPF
