@@ -15,6 +15,8 @@ require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 if ( !defined( 'MEDIAWIKI' ) ) {
     die( 'Not an entry point.' );
 }
+f
+$wmgUploadHostname = "static.orain.org";
 
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
@@ -126,8 +128,6 @@ $wgConf->settings = array(
     ),
     'wgLogo' => array(
 	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
-$wmgUploadHostname = "static.orain.org";
-
     (
     // Misc stuff
     'wgSitename' => array(
