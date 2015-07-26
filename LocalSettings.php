@@ -16,6 +16,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
     die( 'Not an entry point.' );
 }
 
+$wmgUploadHostname = "static.miraheze.org";
+
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
@@ -154,6 +156,10 @@ $wgConf->settings = array(
                 'abusefilter-log-detail' => true,
                 'abusefilter-view' => true,
             ),
+            'bureaucrat' => array(
+                'renameuser' => false,
+                'userrights' => false,
+            ),
             'oversight' => array(
                 'abusefilter-hidden-log' => true,
                 'abusefilter-hide-log' => true,
@@ -187,6 +193,9 @@ $wgConf->settings = array(
                 'noratelimit' => true,
                 'userrights' => true,
                 'userrights-interwiki' => true,
+            ),
+            'wikicreator' => array(
+                'createwiki' => true,
             ),
         ),
     ),
@@ -225,6 +234,9 @@ $wgConf->settings = array(
     // Style
     'wgDefaultSkin' => array(
         'default' => 'vector',
+    ),
+    'wgLogo' => array(
+	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
     ),
 
     // Empty arrays (do not touch unless you know what you're doing)
