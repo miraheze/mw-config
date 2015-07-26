@@ -147,6 +147,10 @@ $wgConf->settings = array(
                 'abusefilter-log-detail' => true,
                 'abusefilter-view' => true,
             ),
+            'bureaucrat' => array(
+                'renameuser' => false,
+                'userrights' => false,
+            ),
             'oversight' => array(
                 'abusefilter-hidden-log' => true,
                 'abusefilter-hide-log' => true,
@@ -158,10 +162,6 @@ $wgConf->settings = array(
                 'hideuser' => true,
                 'suppressionlog' => true,
                 'suppressrevision' => true,
-            ),
-            'bureaucrat' => array(
-                'userrights' => false,
-                'renameuser' => false,
             ),
             'sysop' => array(
                 'abusefilter-modify' => true,
@@ -183,6 +183,9 @@ $wgConf->settings = array(
                 'noratelimit' => true,
                 'userrights' => true,
                 'userrights-interwiki' => true,
+            ),
+            'wikicreator' => array(
+                'createwiki' => true,
             ),
         ),
     ),
