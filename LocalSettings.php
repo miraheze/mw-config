@@ -193,6 +193,9 @@ $wgConf->settings = array(
                 'noratelimit' => true,
                 'userrights' => true,
                 'userrights-interwiki' => true,
+             'wikicreator' => array(
+               	'createwiki' => true,
+             
             ),
             'wikicreator' => array(
                 'createwiki' => true,
