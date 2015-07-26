@@ -189,7 +189,6 @@ $wgConf->settings = array(
                 'userrights-interwiki' => true,
              'wikicreator' => array(
                	'createwiki' => true,
-               	'autopatrol' => true,
              
             ),
         ),
