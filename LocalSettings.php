@@ -23,7 +23,7 @@ $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
 $wgLocalVirtualHosts = array( '185.52.1.77' );
 
-$wmgHostname = ( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
+$wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 
 $wgConf->settings = array(
     // AbuseFilter
@@ -296,7 +296,7 @@ $wmgDatabaseList = file( "$IP/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
     $wikiDB = explode( '|', $wikiLine, 4 );
-    list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad ( $wikiDB, 4, '' );
+    list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
     $wgLocalDatabases[] = $DBname;
     $wgConf->settings['wgSitename'][$DBname] = $siteName;
     $wgConf->settings['wgLanguagecode'][$DBname] = $siteLang;
