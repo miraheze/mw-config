@@ -13,7 +13,7 @@ require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 
 # Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
-    die( 'Not an entry point.' );
+	die( 'Not an entry point.' );
 }
 
 $wmgUploadHostname = "static.miraheze.org";
@@ -26,77 +26,77 @@ $wgLocalVirtualHosts = array( '185.52.1.77' );
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 
 $wgConf->settings = array(
-    // AbuseFilter
-    'wgAbuseFilterCentralDB' => array(
-        'default' => 'metawiki',
-    ),
-    'wgAbuseFilterIsCentral' => array(
-        'default' => false,
-        'metawiki' => true,
-    ),
+	// AbuseFilter
+	'wgAbuseFilterCentralDB' => array(
+		'default' => 'metawiki',
+	),
+	'wgAbuseFilterIsCentral' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
 
-    // CentralAuth
-    'wgCentralAuthAutoNew' => array(
-        'default' => true,
-    ),
-    'wgCentralAuthAutoMigrate' => array(
-        'default' => true,
-    ),
-    'wgCentralAuthCookies' => array(
-        'default' => true,
-    ),
-    'wgCentralAuthCookieDomain' => array(
-        'default' => '.miraheze.org',
-    ),
-    'wgCentralAuthCreateOnView' => array(
-        'default' => true,
-    ),
-    'wgCentralAuthDatabase' => array(
-        'default' => 'centralauth',
-    ),
-    'wgCentralAuthLoginWiki' => array(
-        'default' => 'loginwiki',
-    ),
-    'wgCentralAuthSilentLogin' => array(
-        'default' => true,
-    ),
+	// CentralAuth
+	'wgCentralAuthAutoNew' => array(
+		'default' => true,
+	),
+	'wgCentralAuthAutoMigrate' => array(
+		'default' => true,
+	),
+	'wgCentralAuthCookies' => array(
+		'default' => true,
+	),
+	'wgCentralAuthCookieDomain' => array(
+		'default' => '.miraheze.org',
+	),
+	'wgCentralAuthCreateOnView' => array(
+		'default' => true,
+	),
+	'wgCentralAuthDatabase' => array(
+		'default' => 'centralauth',
+	),
+	'wgCentralAuthLoginWiki' => array(
+		'default' => 'loginwiki',
+	),
+	'wgCentralAuthSilentLogin' => array(
+		'default' => true,
+	),
 
-    // Database
-    'wgDBtype' => array(
-        'default' => 'mysql',
-    ),
-    'wgDBserver' => array(
-        'default' => '185.52.1.77',
-    ),
-    'wgDBuser' => array(
-        'default' => 'mediawiki',
-    ),
-    'wgDBadminuser' => array(
-        'default' => 'wikiadmin',
-    ),
-    'wgSharedDB' => array(
-        'default' => 'metawiki',
-    ),
-    'wgSharedTables' => array(
-        'default' => array(),
-    ),
+	// Database
+	'wgDBtype' => array(
+		'default' => 'mysql',
+	),
+	'wgDBserver' => array(
+		'default' => '185.52.1.77',
+	),
+	'wgDBuser' => array(
+		'default' => 'mediawiki',
+	),
+	'wgDBadminuser' => array(
+		'default' => 'wikiadmin',
+	),
+	'wgSharedDB' => array(
+		'default' => 'metawiki',
+	),
+	'wgSharedTables' => array(
+		'default' => array(),
+	),
 
-    // Files
-    'wgEnableUploads' => array(
-        'default' => true,
-    ),
-    'wgFileExtensions' => array(
-        'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
-    ),
-    'wgUseInstantCommons' => array(
-        'default' => true,
-    ),
-    'wgUploadDirectory' => array(
-        'default' => "/srv/mediawiki-static/$wmgHostname",
-    ),
-    'wgUploadPath' => array(
-        'default' => "https://static.miraheze.org/$wmgHostname",
-    ),
+	// Files
+	'wgEnableUploads' => array(
+		'default' => true,
+	),
+	'wgFileExtensions' => array(
+		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
+	),
+	'wgUseInstantCommons' => array(
+		'default' => true,
+	),
+	'wgUploadDirectory' => array(
+		'default' => "/srv/mediawiki-static/$wmgHostname",
+	),
+	'wgUploadPath' => array(
+		'default' => "https://static.miraheze.org/$wmgHostname",
+	),
 
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => array(
@@ -107,46 +107,46 @@ $wgConf->settings = array(
 		'default' => 'centralauth', // use centralauth for global blocks
 	),
 
-    // ImageMagick
-    'wgUseImageMagick' => array(
-        'default' => true,
-    ),
-    'wgImageMagickCommand' => array(
-        'default' => '/usr/bin/convert',
-    ),
+	// ImageMagick
+	'wgUseImageMagick' => array(
+		'default' => true,
+	),
+	'wgImageMagickCommand' => array(
+		'default' => '/usr/bin/convert',
+	),
 
 	// Interwiki
 	'wgInterwikiCentralDB' => array(
 		'default' => 'metawiki',
 	),
 
-    // Job Queue
-    'wgJobRunRate' => array(
-        'default' => 0,
-    ),
+	// Job Queue
+	'wgJobRunRate' => array(
+		'default' => 0,
+	),
 
-    // Language
-    'wgLanguageCode' => array( // Hardcode "en"
-        'default' => 'en',
-    ),
+	// Language
+	'wgLanguageCode' => array( // Hardcode "en"
+		'default' => 'en',
+	),
 
-    // Mail
-    'wgEnableEmail' => array(
-        'default' => true,
-    ),
-    'wgPasswordSender' => array(
-        'default' => 'noreply@miraheze.org',
-    ),
-    'wgSMTP' => array(
-        'default' => array(
-            'host' => 'mail.miraheze.org',
-            'port' => 25,
-            'IDHost' => 'miraheze.org',
-            'auth' => false,
-            'username' => 'noreply',
-            'password' => $wmgSMTPPassword,
-        ),
-    ),
+	// Mail
+	'wgEnableEmail' => array(
+		'default' => true,
+	),
+	'wgPasswordSender' => array(
+		'default' => 'noreply@miraheze.org',
+	),
+	'wgSMTP' => array(
+		'default' => array(
+			'host' => 'mail.miraheze.org',
+			'port' => 25,
+			'IDHost' => 'miraheze.org',
+			'auth' => false,
+			'username' => 'noreply',
+			'password' => $wmgSMTPPassword,
+		),
+	),
 
 	// MassMessage
 	'wgAllowGlobalMessaging' => array(
@@ -154,102 +154,102 @@ $wgConf->settings = array(
 		'metawiki' => true,
 	),
 
-    // Misc stuff
-    'wgSitename' => array(
-        'default' => 'No sitename set!',
-    ),
+	// Misc stuff
+	'wgSitename' => array(
+		'default' => 'No sitename set!',
+	),
 
-    // Permissions
-    'wgAddGroups' => array(
-        'default' => array(
-            'bureaucrat' => array(
-                'bot',
-                'sysop',
-                'bureaucrat',
-            ),
-        ),
-    ),
-    '+wgGroupPermissions' => array(
-        'default' => array(
-            '*' => array(
-                'abusefilter-log' => true,
-                'abusefilter-log-detail' => true,
-                'abusefilter-view' => true,
-            ),
-            'bureaucrat' => array(
-                'renameuser' => false,
-                'userrights' => false,
-            ),
-            'oversight' => array(
-                'abusefilter-hidden-log' => true,
-                'abusefilter-hide-log' => true,
-                'browsearchive' => true,
-                'deletedhistory' => true,
-                'deletedtext' => true,
-                'deletelogentry' => true,
-                'deleterevision' => true,
-                'hideuser' => true,
-                'suppressionlog' => true,
-                'suppressrevision' => true,
-            ),
-            'sysop' => array(
-                'abusefilter-modify' => true,
-                'abusefilter-modify-restricted' => true,
-                'abusefilter-revert' => true,
-                'deletelogentry' => true,
-                'deleterevision' => true,
-                'massmessage' => false,
-                'rollback' => true,
-            ),
-        ),
-        '+metawiki' => array(
-            'steward' => array(
-                'abusefilter-modify-global' => true,
-                'centralauth-lock' => true,
-                'centralauth-oversight' => true,
-                'centralauth-rename' => true,
-                'centralauth-unmerge' => true,
-                'createwiki' => true,
-                'noratelimit' => true,
-                'userrights' => true,
-                'userrights-interwiki' => true,
-            ),
-            'wikicreator' => array(
-                'createwiki' => true,
-            ),
-        ),
-    ),
-    'wgRemoveGroups' => array(
-        'default' => array(
-            'bureaucrat' => array(
-                'bot',
-                'sysop',
-            ),
-        ),
-    ),
+	// Permissions
+	'wgAddGroups' => array(
+		'default' => array(
+			'bureaucrat' => array(
+				'bot',
+				'sysop',
+				'bureaucrat',
+			),
+		),
+	),
+	'+wgGroupPermissions' => array(
+		'default' => array(
+			'*' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+				'abusefilter-view' => true,
+			),
+			'bureaucrat' => array(
+				'renameuser' => false,
+				'userrights' => false,
+			),
+			'oversight' => array(
+				'abusefilter-hidden-log' => true,
+				'abusefilter-hide-log' => true,
+				'browsearchive' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'hideuser' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+			),
+			'sysop' => array(
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-revert' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'massmessage' => false,
+				'rollback' => true,
+			),
+		),
+		'+metawiki' => array(
+			'steward' => array(
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'centralauth-oversight' => true,
+				'centralauth-rename' => true,
+				'centralauth-unmerge' => true,
+				'createwiki' => true,
+				'noratelimit' => true,
+				'userrights' => true,
+				'userrights-interwiki' => true,
+			),
+			'wikicreator' => array(
+				'createwiki' => true,
+			),
+		),
+	),
+	'wgRemoveGroups' => array(
+		'default' => array(
+			'bureaucrat' => array(
+				'bot',
+				'sysop',
+			),
+		),
+	),
 
-    // Server
-    'wgArticlePath' => array(
-        'default' => '/wiki/$1',
-    ),
-    'wgDisableOutputCompression' => array(
-        'default' => true,
-    ),
-    'wgScriptExtension' => array(
-        'default' => '.php',
-    ),
-    'wgScriptPath' => array(
-        'default' => '/w',
-    ),
-    'wgServer' => array(
-        'default' => 'https://$lang.miraheze.org',
-    ),
-    'wgShowHostnames' => array(
-        'default' => true,
-    ),
-    'wgUsePathInfo' => array(
-        'default' => true,
-    ),
+	// Server
+	'wgArticlePath' => array(
+		'default' => '/wiki/$1',
+	),
+	'wgDisableOutputCompression' => array(
+		'default' => true,
+	),
+	'wgScriptExtension' => array(
+		'default' => '.php',
+	),
+	'wgScriptPath' => array(
+		'default' => '/w',
+	),
+	'wgServer' => array(
+		'default' => 'https://$lang.miraheze.org',
+	),
+	'wgShowHostnames' => array(
+		'default' => true,
+	),
+	'wgUsePathInfo' => array(
+		'default' => true,
+	),
 
 	// SiteMatrix
 	'wgSiteMatrixPrivateSites' => array(
@@ -259,13 +259,13 @@ $wgConf->settings = array(
 		'default' => "$IP/closed.dblist",
 	),
 
-    // Style
-    'wgDefaultSkin' => array(
-        'default' => 'vector',
-    ),
-    'wgLogo' => array(
-	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
-    ),
+	// Style
+	'wgDefaultSkin' => array(
+		'default' => 'vector',
+	),
+	'wgLogo' => array(
+		'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
+	),
 
 	// UrlShortener
 	'wgUrlShortenerTemplate' => array(
@@ -280,54 +280,54 @@ $wgConf->settings = array(
 		),
 	),
 
-    // Empty arrays (do not touch unless you know what you're doing)
-    'wmgClosedWiki' => array(
-        'default' => false,
-    ),
-    'wmgPrivateWiki' => array(
-        'default' => false,
-    ),
+	// Empty arrays (do not touch unless you know what you're doing)
+	'wmgClosedWiki' => array(
+		'default' => false,
+	),
+	'wmgPrivateWiki' => array(
+		'default' => false,
+	),
 );
 
 function efGetSiteParams( $conf, $wiki ) {
-    $site = null;
-    $lang = null;
-    foreach ( $conf->suffixes as $suffix ) {
-        if ( substr( $wiki, -strlen( $suffix ) ) == $suffix ) {
-            $site = $suffix;
-            $lang = substr( $wiki, 0, -strlen( $suffix ) );
-            break;
-        }
-    }
-    return array(
-        'suffix' => $site,
-        'lang' => $lang,
-        'params' => array(
-            'lang' => $lang,
-            'site' => $site,
-            'wiki' => $wiki,
-        ),
-        'tags' => array(),
-    );
+	$site = null;
+	$lang = null;
+	foreach ( $conf->suffixes as $suffix ) {
+		if ( substr( $wiki, -strlen( $suffix ) ) == $suffix ) {
+			$site = $suffix;
+			$lang = substr( $wiki, 0, -strlen( $suffix ) );
+			break;
+		}
+	}
+	return array(
+		'suffix' => $site,
+		'lang' => $lang,
+		'params' => array(
+			'lang' => $lang,
+			'site' => $site,
+			'wiki' => $wiki,
+		),
+		'tags' => array(),
+	);
 }
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
 
 # The thing that determines the dbname
 if ( defined( 'MW_DB' ) ) {
-    $wgDBname = MW_DB;
+	$wgDBname = MW_DB;
 } elseif ( $wmgHostname === 'meta.miraheze.org' ) {
-    $wgDBname = 'metawiki';
+	$wgDBname = 'metawiki';
 } elseif ( preg_match( '/^www\.(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-    $wgDBname = $matches[1] . 'wiki';
+	$wgDBname = $matches[1] . 'wiki';
 } elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-    $wgDBname = $matches[1] . 'wiki';
+	$wgDBname = $matches[1] . 'wiki';
 } elseif ( $search = array_search( 'http://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
-    $wgDBname = $search;
+	$wgDBname = $search;
 } elseif ( $search = array_search( 'https://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
-    $wgDBname = $search;
+	$wgDBname = $search;
 } else {
-    $wgDBname = false;
+	$wgDBname = false;
 }
 
 # Initialize dblist (ensure metawiki is always up even in the
@@ -336,18 +336,18 @@ $wgLocalDatabases = array( 'metawiki' );
 $wmgDatabaseList = file( "$IP/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
-    $wikiDB = explode( '|', $wikiLine, 4 );
-    list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
-    $wgLocalDatabases[] = $DBname;
-    $wgConf->settings['wgSitename'][$DBname] = $siteName;
-    $wgConf->settings['wgLanguagecode'][$DBname] = $siteLang;
+	$wikiDB = explode( '|', $wikiLine, 4 );
+	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
+	$wgLocalDatabases[] = $DBname;
+	$wgConf->settings['wgSitename'][$DBname] = $siteName;
+	$wgConf->settings['wgLanguagecode'][$DBname] = $siteLang;
 
-    if ( strpos( $wikiTagList, 'private' ) ) {
-        $wgConf->settings['wmgPrivateWiki'][$DBname] = true;
-    }
-    if ( strpos( $wikiTagList, 'closed' ) ) {
-        $wgConf->settings['wmgClosedWiki'][$DBname] = true;
-    }
+	if ( strpos( $wikiTagList, 'private' ) ) {
+		$wgConf->settings['wmgPrivateWiki'][$DBname] = true;
+	}
+	if ( strpos( $wikiTagList, 'closed' ) ) {
+		$wgConf->settings['wmgClosedWiki'][$DBname] = true;
+	}
 }
 
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
@@ -406,11 +406,11 @@ $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
-    header( "HTTP/1.0 404 Not Found" );
-    echo <<<EOF
-    <center><h1>404 Wiki Not Found</h1></center>
-    <hr>
-    <center>nginx - MediaWiki</center>
+	header( "HTTP/1.0 404 Not Found" );
+	echo <<<EOF
+	<center><h1>404 Wiki Not Found</h1></center>
+	<hr>
+	<center>nginx - MediaWiki</center>
 EOF;
-    die( 1 );
+	die( 1 );
 }
