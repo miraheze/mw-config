@@ -80,7 +80,7 @@ $wgConf->settings = array(
     'wgSharedTables' => array(
         'default' => array(),
     ),
-    
+
     // Files
     'wgEnableUploads' => array(
         'default' => true,
@@ -98,6 +98,15 @@ $wgConf->settings = array(
         'default' => "https://static.miraheze.org/$wmgHostname",
     ),
 
+	// GlobalBlocking
+	'wgApplyGlobalBlocks' => array(
+		'default' => true,
+		'metawiki' => false,
+	),
+	'wgGlobalBlockingDatabase' => array(
+		'default' => 'centralauth', // use centralauth for global blocks
+	),
+
     // ImageMagick
     'wgUseImageMagick' => array(
         'default' => true,
@@ -105,6 +114,11 @@ $wgConf->settings = array(
     'wgImageMagickCommand' => array(
         'default' => '/usr/bin/convert',
     ),
+
+	// Interwiki
+	'wgInterwikiCentralDB' => array(
+		'default' => 'metawiki',
+	),
 
     // Job Queue
     'wgJobRunRate' => array(
@@ -133,6 +147,12 @@ $wgConf->settings = array(
             'password' => $wmgSMTPPassword,
         ),
     ),
+
+	// MassMessage
+	'wgAllowGlobalMessaging' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
 
     // Misc stuff
     'wgSitename' => array(
@@ -231,6 +251,14 @@ $wgConf->settings = array(
         'default' => true,
     ),
 
+	// SiteMatrix
+	'wgSiteMatrixPrivateSites' => array(
+		'default' => "$IP/private.dblist",
+	),
+	'wgSiteMatrixClosedSites' => array(
+		'default' => "$IP/closed.dblist",
+	),
+
     // Style
     'wgDefaultSkin' => array(
         'default' => 'vector',
@@ -238,6 +266,19 @@ $wgConf->settings = array(
     'wgLogo' => array(
 	    'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
     ),
+
+	// UrlShortener
+	'wgUrlShortenerTemplate' => array(
+		'default' => '/m/$1',
+	),
+	'wgUrlShortenerDBName' => array(
+		'default' => 'metawiki',
+	),
+	'wgUrlShortenerDomainsWhitelist' => array(
+		'default' => array(
+			'(.*\.)?miraheze\.org',
+		),
+	),
 
     // Empty arrays (do not touch unless you know what you're doing)
     'wmgClosedWiki' => array(
