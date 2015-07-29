@@ -1,0 +1,11 @@
+<?php
+
+$wgDBadminpassword = "blablablabla";
+$wgDBpassword = "blablablabla";
+
+$wmgRedisPassword = "blablablabla";
+
+$wmgSMTPPassword = "blablablabla";
+
+$wgUpgradeKey = "blablablabla";
+$wgSecretKey = "blablablabla";
