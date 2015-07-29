@@ -22,7 +22,7 @@ if ( $wmgUseTranslate ) {
 	$wgAddGroups['translate-proofr'] = false;
 	// unset this unused group already
 	unset( $wgGroupPermissions['translate-proofr'] );
-	}
+}
 
 if ( $wmgUseWikiEditor ) {
 	wfLoadExtension( 'WikiEditor' );
