@@ -264,7 +264,7 @@ $wgConf->settings = array(
 		'default' => 'vector',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/meta.miraheze.org/d/dc/Miraheze_first_logo.png",
+		'default' => "//$wmgUploadHostname/meta.miraheze.org/9/9b/Hexawiki.svg",
 	),
 
 	// UrlShortener
