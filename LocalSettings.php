@@ -91,12 +91,6 @@ $wgConf->settings = array(
 	'wgUseInstantCommons' => array(
 		'default' => true,
 	),
-	'wgUploadDirectory' => array(
-		'default' => "/srv/mediawiki-static/$wgDBname",
-	),
-	'wgUploadPath' => array(
-		'default' => "https://static.miraheze.org/$wgDBname",
-	),
 
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => array(
@@ -264,7 +258,7 @@ $wgConf->settings = array(
 		'default' => 'vector',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/$wgDBname/d/de/Hexawiki.png",
+		'default' => "//$wmgUploadHostname/metawiki/d/de/Hexawiki.png",
 	),
 
 	// UrlShortener
@@ -355,6 +349,11 @@ require_once( "/srv/mediawiki/config/RedisConfig.php" );
 
 // wgGroupPermissions which don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
+
+// Needs to be set AFTER $wgDBname is set to a correct value
+$wgUploadDirectory = "/srv/mediawiki-static/$wgDBname";
+$wgUploadPath = "https://static.miraheze.org/$wgDBname";
+
 
 if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
 	$wgGroupPermissions['*']['read'] = false;
