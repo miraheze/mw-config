@@ -92,10 +92,10 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	'wgUploadDirectory' => array(
-		'default' => "/srv/mediawiki-static/$wmgHostname",
+		'default' => "/srv/mediawiki-static/$wgDBname",
 	),
 	'wgUploadPath' => array(
-		'default' => "https://static.miraheze.org/$wmgHostname",
+		'default' => "https://static.miraheze.org/$wgDBname",
 	),
 
 	// GlobalBlocking
@@ -264,7 +264,7 @@ $wgConf->settings = array(
 		'default' => 'vector',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/meta.miraheze.org/c/c5/Rsz_hexawiki.png",
+		'default' => "//$wmgUploadHostname/$wgDBname/d/de/Hexawiki.png",
 	),
 
 	// UrlShortener
@@ -352,6 +352,9 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/RedisConfig.php" );
+
+// wgGroupPermissions which don't work when set in $wgConf->settings
+$wgGroupPermissions['bureaucrat']['userrights'] = false;
 
 if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
 	$wgGroupPermissions['*']['read'] = false;
