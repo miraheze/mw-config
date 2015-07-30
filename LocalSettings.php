@@ -335,13 +335,18 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguagecode'][$DBname] = $siteLang;
+}
 
-	if ( strpos( $wikiTagList, 'private' ) ) {
-		$wgConf->settings['wmgPrivateWiki'][$DBname] = true;
-	}
-	if ( strpos( $wikiTagList, 'closed' ) ) {
-		$wgConf->settings['wmgClosedWiki'][$DBname] = true;
-	}
+$wmgPrivateDatabasesList = file( "$IP/private.dblist" );
+foreach ( $wmgPrivateDatabasesList as $database ) {
+	$database = trim( $database );
+	$wgConf->settings['wmgPrivateWiki'][$database] = true;
+}
+
+$wmgClosedDatabasesList = file( "$IP/closed.dblist" );
+foreach ( $wmgClosedDatabasesList as $database ) {
+	$database = trim( $database );
+	$wgConf->settings['wmgClosedWiki'][$database] = true;
 }
 
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
@@ -355,7 +360,7 @@ $wgUploadDirectory = "/srv/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 
-if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
+if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] === true ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
@@ -384,7 +389,7 @@ if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) {
 		);
 }
 
-if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) {
+if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] === true ) {
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['createaccount'] = false;
 	$wgGroupPermissions['user']['edit'] = false;
