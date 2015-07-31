@@ -152,6 +152,10 @@ $wgConf->settings = array(
 	'wgSitename' => array(
 		'default' => 'No sitename set!',
 	),
+	'wmgUseCreateWiki' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
 
 	// Permissions
 	'wgAddGroups' => array(

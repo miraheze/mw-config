@@ -6,6 +6,10 @@ if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/cldr/cldr.php" );
 }
 
+if ( $wmgUseCreateWiki ) {
+    require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+}
+
 if ( $wmgUseEchoThanks ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
