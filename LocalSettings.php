@@ -416,6 +416,8 @@ if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] === true ) {
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
+require_once( "/srv/mediawiki/config/LocalExtensions.php" );
+
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	header( "HTTP/1.0 404 Not Found" );
 	echo <<<EOF
