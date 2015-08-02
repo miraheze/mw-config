@@ -70,6 +70,7 @@ $wgConf->settings = array(
 		        "$IP/extensions/CheckUser/cu_log.sql",
 		        "$IP/extensions/CheckUser/cu_changes.sql",
 		        "$IP/extensions/Echo/echo.sql",
+			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
 		        "$IP/extensions/Translate/sql/revtag.sql",
 		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
@@ -78,7 +79,8 @@ $wgConf->settings = array(
 		        "$IP/extensions/Translate/sql/translate_reviews.sql",
 		        "$IP/extensions/Translate/sql/translate_sections.sql",
 		        "$IP/extensions/Translate/sql/translate_stash.sql",
-		        "$IP/extensions/Translate/sql/translate_tm.sql"
+		        "$IP/extensions/Translate/sql/translate_tm.sql",
+			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		),
 	),
 
