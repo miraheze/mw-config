@@ -61,6 +61,22 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 
+	// CreateWiki
+	'wgCreateWikiSQLfiles' = array(
+	        "$IP/maintenance/tables.sql",
+	        "$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+	        "$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+	        "$IP/extensions/CheckUser/cu_log.sql",
+	        "$IP/extensions/CheckUser/cu_changes.sql",
+	        "$IP/extensions/Echo/echo.sql",
+	        "$IP/extensions/Translate/sql/revtag.sql"
+	        "$IP/extensions/Translate/sql/revtag.sql"
+	        "$IP/extensions/Translate/sql/revtag.sql"
+	        "$IP/extensions/Translate/sql/revtag.sql"
+	        "$IP/extensions/Translate/sql/revtag.sql"
+	        "$IP/extensions/Translate/sql/revtag.sql"
+	),
+
 	// Database
 	'wgDBtype' => array(
 		'default' => 'mysql',
@@ -79,6 +95,25 @@ $wgConf->settings = array(
 	),
 	'wgSharedTables' => array(
 		'default' => array(),
+	),
+
+	// Extensions
+	'wmgUseBabel' => array(
+		'default' => true,
+	),
+	'wmgUseWikiEditor' => array(
+		'default' => false,
+	),
+	'wmgUseCreateWiki' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
+	'wmgUseEchoThanks' => array(
+		'default' => true,
+	),
+	'wmgUseTranslate' => array(
+		'default' => false,
+		'metawiki' => true,
 	),
 
 	// Files
@@ -151,10 +186,6 @@ $wgConf->settings = array(
 	// Misc stuff
 	'wgSitename' => array(
 		'default' => 'No sitename set!',
-	),
-	'wmgUseCreateWiki' => array(
-		'default' => false,
-		'metawiki' => true,
 	),
 
 	// Permissions
