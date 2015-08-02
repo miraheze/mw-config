@@ -63,26 +63,28 @@ $wgConf->settings = array(
 
 	// CreateWiki
 	'wgCreateWikiSQLfiles' => array(
-	        "$IP/maintenance/tables.sql",
-	        "$IP/extensions/AbuseFilter/abusefilter.tables.sql",
-	        "$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
-	        "$IP/extensions/CheckUser/cu_log.sql",
-	        "$IP/extensions/CheckUser/cu_changes.sql",
-	        "$IP/extensions/Echo/echo.sql",
-	        "$IP/extensions/Translate/sql/revtag.sql",
-	        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
-	        "$IP/extensions/Translate/sql/translate_groupstats.sql",
-	        "$IP/extensions/Translate/sql/translate_messageindex.sql",
-	        "$IP/extensions/Translate/sql/translate_metadata.sql",
-	        "$IP/extensions/Translate/sql/translate_reviews.sql",
-	        "$IP/extensions/Translate/sql/translate_sections.sql",
-	        "$IP/extensions/Translate/sql/translate_stash.sql",
-	        "$IP/extensions/Translate/sql/translate_tm.sql",
-	        "$IP/extensions/Translate/sql/translate_groupstats-indexchange.sql",
-	        "$IP/extensions/Translate/sql/translate_groupstats-proofread.sql",
-	        "$IP/extensions/Translate/sql/translate_sections-indexchange.sql",
-	        "$IP/extensions/Translate/sql/translate_sections-indexchange2.sql",
-	        "$IP/extensions/Translate/sql/translate_sections-trs_order.patch.sql"
+		'default' => array(
+		        "$IP/maintenance/tables.sql",
+		        "$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+		        "$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+		        "$IP/extensions/CheckUser/cu_log.sql",
+		        "$IP/extensions/CheckUser/cu_changes.sql",
+		        "$IP/extensions/Echo/echo.sql",
+		        "$IP/extensions/Translate/sql/revtag.sql",
+		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
+		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
+		        "$IP/extensions/Translate/sql/translate_messageindex.sql",
+		        "$IP/extensions/Translate/sql/translate_metadata.sql",
+		        "$IP/extensions/Translate/sql/translate_reviews.sql",
+		        "$IP/extensions/Translate/sql/translate_sections.sql",
+		        "$IP/extensions/Translate/sql/translate_stash.sql",
+		        "$IP/extensions/Translate/sql/translate_tm.sql",
+		        "$IP/extensions/Translate/sql/translate_groupstats-indexchange.sql",
+		        "$IP/extensions/Translate/sql/translate_groupstats-proofread.sql",
+		        "$IP/extensions/Translate/sql/translate_sections-indexchange.sql",
+		        "$IP/extensions/Translate/sql/translate_sections-indexchange2.sql",
+		        "$IP/extensions/Translate/sql/translate_sections-trs_order.patch.sql"
+		),
 	),
 
 	// Database
@@ -465,4 +467,11 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	<center>nginx - MediaWiki</center>
 EOF;
 	die( 1 );
+}
+
+# TODO: Fix this hack!
+if ( isset( $wgConf->settings['wgCreateWikiSQLfiles'][$wgDBname] ) ) {
+       $wgCreateWikiSQLfiles = $wgConf->settings['wgCreateWikiSQLfiles'][$wgDBname];
+} elseif ( isset( $wgConf->settings['wgCreateWikiSQLfiles']['default'] ) ) {
+       $wgCreateWikiSQLfiles = $wgConf->settings['wgCreateWikiSQLfiles']['default'];
 }
