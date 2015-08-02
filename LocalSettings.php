@@ -300,7 +300,7 @@ $wgConf->settings = array(
 		'default' => 'vector',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/d/de/Hexawiki.png",
+		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 	),
 
 	// UrlShortener
