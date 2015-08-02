@@ -78,12 +78,7 @@ $wgConf->settings = array(
 		        "$IP/extensions/Translate/sql/translate_reviews.sql",
 		        "$IP/extensions/Translate/sql/translate_sections.sql",
 		        "$IP/extensions/Translate/sql/translate_stash.sql",
-		        "$IP/extensions/Translate/sql/translate_tm.sql",
-		        "$IP/extensions/Translate/sql/translate_groupstats-indexchange.sql",
-		        "$IP/extensions/Translate/sql/translate_groupstats-proofread.sql",
-		        "$IP/extensions/Translate/sql/translate_sections-indexchange.sql",
-		        "$IP/extensions/Translate/sql/translate_sections-indexchange2.sql",
-		        "$IP/extensions/Translate/sql/translate_sections-trs_order.patch.sql"
+		        "$IP/extensions/Translate/sql/translate_tm.sql"
 		),
 	),
 
