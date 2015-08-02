@@ -14,6 +14,14 @@ if ( $wmgUseEchoThanks ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
+
+if ( $wmgUseFlow ) {
+	require_once "$IP/extensions/Flow/Flow.php";
+	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
+	$wgFlowParsoidURL = 'http://parsoid1.miraheze.org:8142';
+	$wgFlowParsoidPrefix = "$wgDBname";
+}
+
 if ( $wmgUseTranslate ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	require_once( "$IP/extensions/Translate/Translate.php" );

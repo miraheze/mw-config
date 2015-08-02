@@ -118,6 +118,10 @@ $wgConf->settings = array(
 	'wmgUseEchoThanks' => array(
 		'default' => true,
 	),
+	'wmgUseFlow' => array(
+		'default' => false,
+		'parsoidwiki' => true,
+	),
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'metawiki' => true,
