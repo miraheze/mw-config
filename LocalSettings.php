@@ -121,6 +121,7 @@ $wgConf->settings = array(
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'metawiki' => true,
+		'spiralwiki' => true,
 	),
 
 	// Files
