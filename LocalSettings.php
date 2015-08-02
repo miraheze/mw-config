@@ -62,7 +62,7 @@ $wgConf->settings = array(
 	),
 
 	// CreateWiki
-	'wgCreateWikiSQLfiles' = array(
+	'wgCreateWikiSQLfiles' => array(
 	        "$IP/maintenance/tables.sql",
 	        "$IP/extensions/AbuseFilter/abusefilter.tables.sql",
 	        "$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
@@ -72,6 +72,7 @@ $wgConf->settings = array(
 	        "$IP/extensions/Translate/sql/revtag.sql",
 	        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 	        "$IP/extensions/Translate/sql/translate_groupstats.sql",
+	        "$IP/extensions/Translate/sql/translate_messageindex.sql",
 	        "$IP/extensions/Translate/sql/translate_metadata.sql",
 	        "$IP/extensions/Translate/sql/translate_reviews.sql",
 	        "$IP/extensions/Translate/sql/translate_sections.sql",
