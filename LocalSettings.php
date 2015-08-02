@@ -133,8 +133,7 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
-		'default' => false,
-		'parsoidwiki' => true,
+		'default' => false, // Do not enable. -John
 	),
 
 	// Files
