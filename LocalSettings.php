@@ -338,7 +338,7 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
-	$wgConf->settings['wgLanguagecode'][$DBname] = $siteLang;
+	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
 }
 
 $wmgPrivateDatabasesList = file( "$IP/private.dblist" );
