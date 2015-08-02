@@ -39,7 +39,7 @@ $wgConf->settings = array(
 	'wgCentralAuthAutoNew' => array(
 		'default' => true,
 	),
-	'wgCentralAuthAuthLoginWikis' => array(
+	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
 			'spiral.wiki' => 'spiralwiki',
 		),
