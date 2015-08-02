@@ -127,6 +127,10 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'spiralwiki' => true,
 	),
+	'wmgUseVisualEditor' => array(
+		'default' => false,
+		'parsoidwiki' => true,
+	),
 
 	// Files
 	'wgEnableUploads' => array(

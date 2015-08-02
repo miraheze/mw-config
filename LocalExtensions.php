@@ -16,7 +16,7 @@ if ( $wmgUseEchoThanks ) {
 }
 
 if ( $wmgUseFlow ) {
-	require_once "$IP/extensions/Flow/Flow.php";
+	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
 	$wgFlowParsoidURL = 'http://parsoid1.miraheze.org:8142';
 	$wgFlowParsoidPrefix = "$wgDBname";
@@ -34,6 +34,12 @@ if ( $wmgUseTranslate ) {
 	$wgAddGroups['translate-proofr'] = false;
 	// unset this unused group already
 	unset( $wgGroupPermissions['translate-proofr'] );
+}
+
+if ( $wmgUseVisualEditor ) {
+	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
+	$wgVisualEditorParsoidURL = 'http://parsoid1.miraheze.org:8142';
+	$wgVisualEditorParsoidPrefix = "$wgDBname";
 }
 
 if ( $wmgUseWikiEditor ) {
