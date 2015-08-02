@@ -469,6 +469,11 @@ if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] === true ) {
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
+if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
+        unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
+        $wgCentralAuthCookieDomain = $wmgHostname;
+}
+
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
