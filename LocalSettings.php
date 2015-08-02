@@ -39,6 +39,11 @@ $wgConf->settings = array(
 	'wgCentralAuthAutoNew' => array(
 		'default' => true,
 	),
+	'wgCentralAuthAuthLoginWikis' => array(
+		'default' => array(
+			'spiral.wiki' => 'spiralwiki',
+		),
+	),
 	'wgCentralAuthAutoMigrate' => array(
 		'default' => true,
 	),
@@ -288,6 +293,7 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
+		'spiralwiki' => 'https://spiral.wiki',
 	),
 	'wgShowHostnames' => array(
 		'default' => true,
