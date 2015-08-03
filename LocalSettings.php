@@ -269,7 +269,7 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'bureaucratprotect' => true,
 		
-		),
+		
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
