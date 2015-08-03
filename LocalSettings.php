@@ -35,6 +35,21 @@ $wgConf->settings = array(
 		'metawiki' => true,
 	),
 
+	// Anti-spam
+	'wgSpamBlacklistFiles' => array(
+		'default' => array(
+			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
+		),
+	),
+	'wgTitleBlacklistSources' => array(
+		'default' => array(
+			array(
+				'type' => 'url',
+				'src' => 'https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
+			),
+		),
+	),
+
 	// Cache
 	'wgCacheDirectory' => array(
 		'default' => '/srv/mediawiki/w/cache',
