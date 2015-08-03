@@ -143,21 +143,25 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
 		'metawiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
 		'default' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false,
+		'extloadwiki' => true,
 		'parsoidwiki' => true,
 		'spiralwiki' => true,
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
+		'extloadwiki' => true,
 		'metawiki' => true,
 		'spiralwiki' => true,
 	),
