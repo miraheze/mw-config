@@ -534,9 +534,15 @@ EOF;
 	die( 1 );
 }
 
-# TODO: Fix this hack!
+# TODO: Fix those hacks! (see #22)
 if ( isset( $wgConf->settings['wgCreateWikiSQLfiles'][$wgDBname] ) ) {
        $wgCreateWikiSQLfiles = $wgConf->settings['wgCreateWikiSQLfiles'][$wgDBname];
 } elseif ( isset( $wgConf->settings['wgCreateWikiSQLfiles']['default'] ) ) {
        $wgCreateWikiSQLfiles = $wgConf->settings['wgCreateWikiSQLfiles']['default'];
+}
+
+if ( isset( $wgConf->settings['wgFlowOccupyNamespaces'][$wgDBname] ) ) {
+       $wgFlowOccupyNamespaces = $wgConf->settings['wgFlowOccupyNamespaces'][$wgDBname];
+} elseif ( isset( $wgConf->settings['wgFlowOccupyNamespaces']['default'] ) ) {
+       $wgFlowOccupyNamespaces = $wgConf->settings['wgFlowOccupyNamespaces']['default'];
 }
