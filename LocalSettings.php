@@ -211,7 +211,7 @@ $wgConf->settings = array(
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
-			'bureaucrat' => array(
+		'bureaucrat' => array(
 				'bot',
 				'sysop',
 				'bureaucrat',
@@ -268,7 +268,7 @@ $wgConf->settings = array(
 			),
 		'testwiki' => array(
 	        	'bureaucrat' => array(
-+				'bureaucratprotect' => true,
+				'bureaucratprotect' => true,
        			),
 
 		),
