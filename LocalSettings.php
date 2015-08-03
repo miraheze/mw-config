@@ -211,7 +211,7 @@ $wgConf->settings = array(
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
-			'bureaucrat' => array(
+		'bureaucrat' => array(
 				'bot',
 				'sysop',
 				'bureaucrat',
@@ -266,6 +266,11 @@ $wgConf->settings = array(
 			'wikicreator' => array(
 				'createwiki' => true,
 			),
+		'testwiki' => array(
+	        	'bureaucrat' => array(
+				'bureaucratprotect' => true,
+       			),
+
 		),
 	),
 	'wgRemoveGroups' => array(
@@ -276,7 +281,12 @@ $wgConf->settings = array(
 			),
 		),
 	),
-
+	// Restrictions
+	'+wgRestrictionLevels' => array(
+		'testwiki' => array(
+			'bureaucrat',
+		),
+       ),
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
