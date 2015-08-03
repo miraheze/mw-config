@@ -35,6 +35,19 @@ $wgConf->settings = array(
 		'metawiki' => true,
 	),
 
+	// Cache
+	'wgCacheDirectory' => array(
+		'default' => '/srv/mediawiki/w/cache',
+	),
+	'wgLocalisationCacheConf' => array(
+		'default' => array(
+			'class' => 'LocalisationCache',
+			'store' => 'files',
+			'storeDirectory' => "$IP/cache/l10n",
+			'manualRecache' => true,
+		),
+	),
+
 	// CentralAuth
 	'wgCentralAuthAutoNew' => array(
 		'default' => true,
