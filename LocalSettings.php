@@ -345,10 +345,10 @@ $wgConf->settings = array(
 
 	// SiteMatrix
 	'wgSiteMatrixPrivateSites' => array(
-		'default' => "$IP/private.dblist",
+		'default' => "/srv/mediawiki/dblist/private.dblist",
 	),
 	'wgSiteMatrixClosedSites' => array(
-		'default' => "$IP/closed.dblist",
+		'default' => "/srv/mediawiki/dblist/closed.dblist",
 	),
 
 	// Style
@@ -426,7 +426,7 @@ if ( defined( 'MW_DB' ) ) {
 # Initialize dblist (ensure metawiki is always up even in the
 # case of a corrupt dblist)
 $wgLocalDatabases = array( 'metawiki' );
-$wmgDatabaseList = file( "$IP/all.dblist" );
+$wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wikiDB = explode( '|', $wikiLine, 4 );
@@ -436,13 +436,13 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
 }
 
-$wmgPrivateDatabasesList = file( "$IP/private.dblist" );
+$wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
 foreach ( $wmgPrivateDatabasesList as $database ) {
 	$database = trim( $database );
 	$wgConf->settings['wmgPrivateWiki'][$database] = true;
 }
 
-$wmgClosedDatabasesList = file( "$IP/closed.dblist" );
+$wmgClosedDatabasesList = file( "/srv/mediawiki/dblist/closed.dblist" );
 foreach ( $wmgClosedDatabasesList as $database ) {
 	$database = trim( $database );
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
