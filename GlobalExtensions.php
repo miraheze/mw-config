@@ -6,7 +6,6 @@ require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
-
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'Gadgets' );
@@ -16,5 +15,4 @@ wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'ParserFunctions' );
-wfLoadExtension( 'SiteMatrix' );
 wfLoadExtension( 'SpamBlacklist' );
