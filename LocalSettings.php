@@ -233,7 +233,7 @@ $wgConf->settings = array(
 			'host' => 'mail.miraheze.org',
 			'port' => 25,
 			'IDHost' => 'miraheze.org',
-			'auth' => false,
+			'auth' => true,
 			'username' => 'noreply',
 			'password' => $wmgSMTPPassword,
 		),
