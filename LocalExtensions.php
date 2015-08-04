@@ -8,6 +8,7 @@ if ( $wmgUseBabel ) {
 
 if ( $wmgUseCreateWiki ) {
     require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+    $wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
 }
 
 if ( $wmgUseEchoThanks ) {
@@ -18,6 +19,7 @@ if ( $wmgUseEchoThanks ) {
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
+	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 	$wgFlowParsoidURL = 'http://parsoid1.miraheze.org:8142';
 	$wgFlowParsoidPrefix = "$wgDBname";
 }
