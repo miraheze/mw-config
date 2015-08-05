@@ -9,6 +9,7 @@ require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'Gadgets' );
+wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'MassMessage' );
 wfLoadExtension( 'Nuke' );
