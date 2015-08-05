@@ -307,8 +307,11 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
-			),
-		),
+		'+testwiki' => array(
+			'bureaucrat' => array(
+				'bureaucratprotect' => true,
+		
+		
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -318,6 +321,12 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	// Restrictions
+	'+wgRestrictionLevels' => array(
+		'default' => array(
+			'bureaucrat',
+	),
+		),
 
 	// Server
 	'wgArticlePath' => array(
