@@ -319,7 +319,21 @@ $wgConf->settings = array(
 		),
 	),
 
-	// Server
+	     // License
+	'wgRightsIcon' => array(
+		'default' => "//$wmgUploadHostname/common/skins/common/images/cc-by-sa.png",
+	),
+	'wgRightsPage' => array(
+		'default' => '',
+	),
+	'wgRightsText' => array(
+		'default' => 'Creative Commons Attribution Share Alike',
+	),
+	'wgRightsUrl' => array(
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+
+	),
+             // Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
 	),
