@@ -459,7 +459,7 @@ $wgUploadDirectory = "/srv/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 
-if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] === true ) {
+if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
@@ -488,7 +488,7 @@ if ( $wgConf->settings['wmgPrivateWiki'][$wgDBname] === true ) {
 		);
 }
 
-if ( $wgConf->settings['wmgClosedWiki'][$wgDBname] === true ) {
+if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['createaccount'] = false;
 	$wgGroupPermissions['user']['edit'] = false;
