@@ -250,6 +250,11 @@ $wgConf->settings = array(
 		'default' => 'No sitename set!',
 	),
 
+	// Mobile
+	'wgMFAutodetectMobileView' => array(
+		'default' => true,
+	),
+
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(

@@ -5,6 +5,7 @@ require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/ConfirmEdit/QuestyCaptcha.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
+require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );
