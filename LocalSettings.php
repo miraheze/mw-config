@@ -103,7 +103,7 @@ $wgConf->settings = array(
 		        "$IP/extensions/CheckUser/cu_log.sql",
 		        "$IP/extensions/CheckUser/cu_changes.sql",
 		        "$IP/extensions/Echo/echo.sql",
-			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
+		        "$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
 		        "$IP/extensions/Translate/sql/revtag.sql",
 		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
@@ -113,7 +113,7 @@ $wgConf->settings = array(
 		        "$IP/extensions/Translate/sql/translate_sections.sql",
 		        "$IP/extensions/Translate/sql/translate_stash.sql",
 		        "$IP/extensions/Translate/sql/translate_tm.sql",
-			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
+		        "$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		),
 	),
 
@@ -219,6 +219,23 @@ $wgConf->settings = array(
 	// Language
 	'wgLanguageCode' => array( // Hardcode "en"
 		'default' => 'en',
+	),
+
+	// License
+	'wgRightsIcon' => array(
+		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
+	),
+	'wgRightsPage' => array(
+		'default' => '',
+	),
+	'wgRightsText' => array(
+		'default' => 'Creative Commons Attribution Share Alike',
+		'spiralwiki' => 'CC0 Public Domain',
+	),
+	'wgRightsUrl' => array(
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
 
 	// Mail
