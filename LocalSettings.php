@@ -332,6 +332,12 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	'wgGroupsRemoveFromSelf' => array(
+		'default' => array(),
+		'quantixwiki' => array(
+			'*' => true,
+		),
+	),
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
