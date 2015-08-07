@@ -340,6 +340,14 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	'wgRevokePermissions' => array(
+		'default' => array(),
+		'loginwiki' => array(
+			'*' => array(
+				'edit',
+			),
+		),
+	),
 
 	// Server
 	'wgArticlePath' => array(
