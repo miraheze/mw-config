@@ -344,7 +344,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		'loginwiki' => array(
 			'*' => array(
-				'edit',
+				'edit' => true,
 			),
 		),
 	),
