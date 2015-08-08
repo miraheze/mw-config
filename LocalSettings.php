@@ -314,7 +314,8 @@ $wgConf->settings = array(
 				'createwiki' => true,
 		'+testwiki' => array(
 			'bureaucrat' => array(
-				'bureaucratprotect' => true,
+				'bureaucrat' => true,
+						),
 					),
 				),	
 			),
