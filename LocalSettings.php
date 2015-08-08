@@ -164,12 +164,14 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'parsoidwiki' => true,
 		'spiralwiki' => true,
+		'spiraltestwiki' => true,
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'extloadwiki' => true,
 		'metawiki' => true,
 		'spiralwiki' => true,
+		'spiraltestwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Do not enable. -John
@@ -190,6 +192,10 @@ $wgConf->settings = array(
 	'wmgFlowOccupyNamespaces' => array(
 		'default' => array(),
 		'spiralwiki' => array(
+			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
+			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
+		),
+		'spiraltestwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
