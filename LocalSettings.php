@@ -423,6 +423,16 @@ $wgConf->settings = array(
 		'spiralwiki' => "//$wmgUploadHostname/spiralwiki/f/fa/Espiralogo.svg",
 	),
 
+    // Translate
+    'wmgTranslateBlacklist' => array(
+        'default' => array(),
+        'spiralwiki' => array(
+            '*' => array(
+                'en' => 'English is the source language.',
+            ),
+        ),
+    ),
+
 	// UrlShortener
 	'wgUrlShortenerTemplate' => array(
 		'default' => '/m/$1',

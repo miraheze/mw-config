@@ -40,7 +40,7 @@ if ( $wmgUseTranslate ) {
 	$wgAddGroups['translate-proofr'] = false;
 	// unset this unused group already
 	unset( $wgGroupPermissions['translate-proofr'] );
-
+    $wgTranslateBlacklist = $wmgTranslateBlacklist;
 	require_once( "/srv/mediawiki/config/TranslateConfigHack.php" );
 }
 
