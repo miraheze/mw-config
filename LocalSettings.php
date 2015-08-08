@@ -25,6 +25,12 @@ $wgLocalVirtualHosts = array( '185.52.1.77' );
 
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 
+// Namespaces (please count upwards from 1600 to avoid any conflicts!)
+
+// metawiki
+define( 'NS_TECH', 1600 );
+define( 'NS_TECH_TALK', 1601 );
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -158,6 +164,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'parsoidwiki' => true,
 		'spiralwiki' => true,
+		'spiraltestwiki' => true,
 	),
     'wmgUseScribunto' => array(
         'default' => false,
@@ -169,6 +176,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 		'spiralwiki' => true,
+		'spiraltestwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Do not enable. -John
@@ -189,6 +197,10 @@ $wgConf->settings = array(
 	'wmgFlowOccupyNamespaces' => array(
 		'default' => array(),
 		'spiralwiki' => array(
+			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
+			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
+		),
+		'spiraltestwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
@@ -229,15 +241,18 @@ $wgConf->settings = array(
 	// License
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 	),
 	'wgRightsPage' => array(
-		'default' => ''
+		'default' => '',
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
+		'spiralwiki' => 'CC0 Public Domain',
 	),
 	'wgRightsUrl' => array(
-		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/'
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
 
 	// Mail
@@ -272,6 +287,15 @@ $wgConf->settings = array(
 	// Mobile
 	'wgMFAutodetectMobileView' => array(
 		'default' => true,
+	),
+
+	// Namespaces
+	'wgExtraNamespaces' => array(
+		'default' => array(),
+		'metawiki' => array(
+			NS_TECH => 'Tech',
+			NS_TECH_TALK => 'Tech_talk'
+		),
 	),
 
 	// Permissions
@@ -334,11 +358,25 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	'wgGroupsRemoveFromSelf' => array(
+		'default' => array(),
+		'quantixwiki' => array(
+			'*' => true,
+		),
+	),
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
 				'bot',
 				'sysop',
+			),
+		),
+	),
+	'wgRevokePermissions' => array(
+		'default' => array(),
+		'loginwiki' => array(
+			'*' => array(
+				'edit' => true,
 			),
 		),
 	),
@@ -447,9 +485,8 @@ if ( defined( 'MW_DB' ) ) {
 	$wgDBname = false;
 }
 
-# Initialize dblist (ensure metawiki is always up even in the
-# case of a corrupt dblist)
-$wgLocalDatabases = array( 'metawiki' );
+# Initialize dblist
+$wgLocalDatabases = array();
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
