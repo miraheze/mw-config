@@ -474,9 +474,8 @@ if ( defined( 'MW_DB' ) ) {
 	$wgDBname = false;
 }
 
-# Initialize dblist (ensure metawiki is always up even in the
-# case of a corrupt dblist)
-$wgLocalDatabases = array( 'metawiki' );
+# Initialize dblist
+$wgLocalDatabases = array();
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
