@@ -166,11 +166,12 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
-    'wmgUseScribunto' => array(
-        'default' => false,
-        'extloadwiki' => true,
-        'spiraltestwiki' => true,
-    ),
+	'wmgUseScribunto' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'spiralwiki' => true,
+		'spiraltestwiki' => true,
+	),
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'extloadwiki' => true,
@@ -196,10 +197,10 @@ $wgConf->settings = array(
 	// Flow
 	'wmgFlowOccupyNamespaces' => array(
 		'default' => array(),
-		'spiralwiki' => array(
+		/*'spiralwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
-		),
+		),*/
 		'spiraltestwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
