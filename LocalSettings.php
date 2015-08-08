@@ -159,6 +159,11 @@ $wgConf->settings = array(
 		'parsoidwiki' => true,
 		'spiralwiki' => true,
 	),
+    'wmgUseScribunto' => array(
+        'default' => false,
+        'extloadwiki' => true,
+        'spiraltestwiki' => true,
+    ),
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'extloadwiki' => true,

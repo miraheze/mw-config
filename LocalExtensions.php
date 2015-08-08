@@ -24,6 +24,10 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidPrefix = "$wgDBname";
 }
 
+if ( $wmgUseScribunto ) {
+    require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+}
+
 if ( $wmgUseTranslate ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	require_once( "$IP/extensions/Translate/Translate.php" );
