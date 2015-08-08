@@ -294,7 +294,14 @@ $wgConf->settings = array(
 				'bot',
 				'sysop',
 				'bureaucrat',
-			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+				
+				),
+			),	
+		           
 		),
 	),
 	'+wgGroupPermissions' => array(
@@ -344,6 +351,11 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
+		'+testwiki' => array(
+			'bureaucrat' => array(
+				'bureaucratprotect' => true,
+					),
+				),	
 			),
 		),
 	),
