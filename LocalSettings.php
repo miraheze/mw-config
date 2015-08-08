@@ -25,6 +25,12 @@ $wgLocalVirtualHosts = array( '185.52.1.77' );
 
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 
+// Namespaces (please count upwards from 1600 to avoid any conflicts!)
+
+// metawiki
+define( NS_TECH, 1600 );
+define( NS_TECH_TALK, 1601 );
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -270,6 +276,15 @@ $wgConf->settings = array(
 	// Mobile
 	'wgMFAutodetectMobileView' => array(
 		'default' => true,
+	),
+
+	// Namespaces
+	'wgExtraNamespaces' => array(
+		'default' => array(),
+		'metawiki' => array(
+			NS_TECH => 'Tech',
+			NS_TECH_TALK => 'Tech_talk'
+		),
 	),
 
 	// Permissions
