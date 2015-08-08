@@ -28,8 +28,8 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 
 // metawiki
-define( NS_TECH, 1600 );
-define( NS_TECH_TALK, 1601 );
+define( 'NS_TECH', 1600 );
+define( 'NS_TECH_TALK', 1601 );
 
 $wgConf->settings = array(
 	// AbuseFilter
