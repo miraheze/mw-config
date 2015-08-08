@@ -263,7 +263,6 @@ $wgConf->settings = array(
 				'confirmed',
 				'rollbacker',
 			),	
-		           
 		),
 	),
 	'+wgGroupPermissions' => array(
