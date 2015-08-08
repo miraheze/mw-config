@@ -261,9 +261,10 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
-			
-		                ),
-			),
+				
+				),
+			),	
+		           
 		),
 	),
 	'+wgGroupPermissions' => array(
