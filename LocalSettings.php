@@ -315,12 +315,9 @@ $wgConf->settings = array(
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
-						),
-					),
-				),	
 			),
 		),
-	),
+	),	
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
