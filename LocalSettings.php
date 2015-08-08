@@ -262,7 +262,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'rollbacker',
 			
-		),
+		                ),
 			),
 		),
 	),
