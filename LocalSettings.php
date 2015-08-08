@@ -330,7 +330,17 @@ $wgConf->settings = array(
 			),
 		),
 	),
-
+        // Restrictions
+	'+wgRestrictionLevels' => array(
+		'testwiki' => array(
+			'bureaucrat',
+		),
+	),
+	'+wgRestrictionTypes' => array(
+		'testwiki' => array(
+			'delete'
+		),
+	),
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
