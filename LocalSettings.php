@@ -312,10 +312,11 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
+	),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
-			),
+		
 		),
 	),	
 	'wgRemoveGroups' => array(
