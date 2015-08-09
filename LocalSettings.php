@@ -604,6 +604,43 @@ the sequence <code>$myChallengeString</code>:",
         'answer' => $myChallengeString[$myChallengeIndex - 1]
 );
 
+$wgHooks['SkinAfterBottomScripts'][] = 'piwikScript';
+function piwikScript( $skin, &$text = '' ) {
+		global $wmgPiwikSiteID, $wgUser;
+		if ( !$wmgPiwikSiteID ) {
+			$wmgPiwikSiteID = 1;
+		}
+		$id = strval( $wmgPiwikSiteID );
+		$title = $skin->getRelevantTitle();
+		$jstitle = Xml::encodeJsVar( $title->getPrefixedText() );
+		$urltitle = $title->getPrefixedURL();
+		$userType = $wgUser->isLoggedIn() ? "User" : "Anonymous";
+		$text .= <<<SCRIPT
+<!-- Piwik -->
+<script type="text/javascript">
+	var _paq = _paq || [];
+	_paq.push(["trackPageView"]);
+	_paq.push(["enableLinkTracking"]);
+	(function() {
+		var u = "//piwik.miraheze.org/";
+		_paq.push(["setTrackerUrl", u+"piwik.php"]);
+		_paq.push(['setDocumentTitle', {$jstitle}]);
+		_paq.push(["setSiteId", "{$id}"]);
+		_paq.push(["setCustomVariable", 1, "userType", "{$userType}", "visit"]);
+		var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+		g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+	})();
+</script>
+<!-- End Piwik Code -->
+<!-- Piwik Image Tracker -->
+<noscript>
+<img src="//piwik.miraheze.org/piwik.php?idsite={$id}&amp;rec=1&amp;action_name={$urltitle}" style="border:0" alt="" />
+</noscript>
+<!-- End Piwik -->
+SCRIPT;
+		return true;
+}
+
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	header( "HTTP/1.0 404 Not Found" );
 	echo <<<EOF
