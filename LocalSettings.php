@@ -277,6 +277,11 @@ $wgConf->settings = array(
 		),
 	),
 
+	// Math
+	'wgTexvc' => array(
+		'default' => '/usr/bin/texvc',
+	),
+
 	// MassMessage
 	'wgAllowGlobalMessaging' => array(
 		'default' => false,
