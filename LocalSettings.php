@@ -42,6 +42,9 @@ $wgConf->settings = array(
 	),
 
 	// Anti-spam
+	'wgAccountCreationThrottle' => array(
+		'default' => 5,
+	),
 	'wgSpamBlacklistFiles' => array(
 		'default' => array(
 			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
