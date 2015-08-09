@@ -602,7 +602,7 @@ the sequence <code>$myChallengeString</code>:",
 );
 
 $wgHooks['SkinAfterBottomScripts'][] = 'piwikScript';
-static function piwikScript( $skin, &$text = '' ) {
+function piwikScript( $skin, &$text = '' ) {
 		global $wmgPiwikSiteID, $wgUser;
 		if ( !$wmgPiwikSiteID ) {
 			$wmgPiwikSiteID = 1;
