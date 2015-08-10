@@ -184,6 +184,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'testwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Do not enable. -John
