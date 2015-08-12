@@ -455,7 +455,7 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
-		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/f/fb/Logo_Otra_Democracia_Es_Posible.jpg',
+		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 	),
 
         // Translate
