@@ -319,7 +319,7 @@ $wgConf->settings = array(
 				'sysop',
 				'bureaucrat',
 			'sysop' => array(
-				'autopatroll',
+				'autopatrolled',
 				'confirmed',
 				'rollbacker,
 				),
