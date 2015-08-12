@@ -405,15 +405,15 @@ $wgConf->settings = array(
 	// Restriction types
 	'+wgRestrictionLevels' => array(
 		'default' => array(
-			user,
+			'user',
 		),
 		'testwiki' => array(
-			bureaucrat,
+			'bureaucrat',
 		),
 	),
 	'+wgRestrictionTypes' => array(
 		'default' => array(
-			delete,
+			'delete',
 		),
 	),
 
