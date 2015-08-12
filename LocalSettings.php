@@ -353,6 +353,9 @@ $wgConf->settings = array(
 				'massmessage' => false,
 				'rollback' => true,
 			),
+			'user' => array(
+				'user' => true, //for "Allow logged in users" protection level
+			),
 		),
 		'+metawiki' => array(
 			'steward' => array(
@@ -368,6 +371,11 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
+			),
+		),
+		'+testwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
 			),
 		),
 	),
@@ -391,6 +399,21 @@ $wgConf->settings = array(
 			'*' => array(
 				'edit' => true,
 			),
+		),
+	),
+
+	// Restriction types
+	'+wgRestrictionLevels' => array(
+		'default' => array(
+			'user',
+		),
+		'testwiki' => array(
+			'bureaucrat',
+		),
+	),
+	'+wgRestrictionTypes' => array(
+		'default' => array(
+			'delete',
 		),
 	),
 
@@ -435,15 +458,15 @@ $wgConf->settings = array(
 		'spiralwiki' => "//$wmgUploadHostname/spiralwiki/f/fa/Espiralogo.svg",
 	),
 
-    // Translate
-    'wmgTranslateBlacklist' => array(
-        'default' => array(),
-        'spiralwiki' => array(
-            '*' => array(
-                'en' => 'English is the source language.',
-            ),
+        // Translate
+        'wmgTranslateBlacklist' => array(
+                'default' => array(),
+                'spiralwiki' => array(
+                     '*' => array(
+                         'en' => 'English is the source language.',
+                     ),
+                ),
         ),
-    ),
 
 	// UrlShortener
 	'wgUrlShortenerTemplate' => array(
@@ -658,4 +681,4 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	<center>nginx - MediaWiki</center>
 EOF;
 	die( 1 );
-}
+} 
