@@ -319,6 +319,11 @@ $wgConf->settings = array(
 				'sysop',
 				'bureaucrat',
 			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker,
+			),
 		),
 	),
 	'+wgGroupPermissions' => array(
@@ -327,6 +332,18 @@ $wgConf->settings = array(
 				'abusefilter-log' => true,
 				'abusefilter-log-detail' => true,
 				'abusefilter-view' => true,
+			'confirmed' => array(
+				'patrol' => true,
+				'skipcaptcha' => true,
+				'upload' => true,
+			),
+			'autopatrolled' => array(
+				'autopatrol' => true,
+				'patrol' => true,
+				'skipcaptcha' => true,
+			),
+			'rollbacker' => array(
+				'rollback' => true,
 			),
 			'bureaucrat' => array(
 				'renameuser' => false,
