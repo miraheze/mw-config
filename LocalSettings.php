@@ -112,6 +112,7 @@ $wgConf->settings = array(
 		        "$IP/extensions/CheckUser/cu_log.sql",
 		        "$IP/extensions/CheckUser/cu_changes.sql",
 		        "$IP/extensions/Echo/echo.sql",
+			"$IP/extensions/Flow/flow.sql",
 		        "$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
 			"$IP/extensions/Math/db/math.mysql.sql",
 			"$IP/extensions/Math/db/mathlatexml.mysql.sql",
