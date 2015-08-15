@@ -315,15 +315,12 @@ $wgConf->settings = array(
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
-				'autopatolled',
 				'bot',
 				'bureaucrat',
-				'confirmed',
-				'skipcaptcha',
 				'sysop',
 			),
 			'sysop' => array(
-				'autopatolled',
+				'autopatrolled',
 				'confirmed',
 				'skipcaptcha',
 			),
@@ -336,7 +333,7 @@ $wgConf->settings = array(
 				'abusefilter-log-detail' => true,
 				'abusefilter-view' => true,
 			),
-			'autopatolled' => array(
+			'autopatrolled' => array(
 				'autopatrol' => true,
 				'patrol' => true,
 			),
@@ -411,7 +408,7 @@ $wgConf->settings = array(
 				'sysop',
 			),
 			'sysop' => array(
-				'autopatolled',
+				'autopatrolled',
 				'confirmed',
 				'skipcaptcha',
 			),
