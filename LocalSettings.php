@@ -315,9 +315,17 @@ $wgConf->settings = array(
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'autopatolled',
 				'bot',
-				'sysop',
 				'bureaucrat',
+				'confirmed',
+				'skipcaptcha',
+				'sysop',
+			),
+			'sysop' => array(
+				'autopatolled',
+				'confirmed',
+				'skipcaptcha',
 			),
 		),
 	),
@@ -328,9 +336,18 @@ $wgConf->settings = array(
 				'abusefilter-log-detail' => true,
 				'abusefilter-view' => true,
 			),
+			'autopatolled' => array(
+				'autopatrol' => true,
+				'editsemiprotected' => true,
+				'patrol' => true,
+			),
 			'bureaucrat' => array(
 				'renameuser' => false,
 				'userrights' => false,
+			),
+			'confirmed' => array(
+				'editsemiprotected' => true,
+				'patrol' => true,
 			),
 			'oversight' => array(
 				'abusefilter-hidden-log' => true,
@@ -343,6 +360,9 @@ $wgConf->settings = array(
 				'hideuser' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
+			),
+			'skipcaptcha' => array(
+				'skipcaptcha' => true,
 			),
 			'sysop' => array(
 				'abusefilter-modify' => true,
@@ -388,8 +408,16 @@ $wgConf->settings = array(
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
+				'autopatrolled',
 				'bot',
+				'confirmed',
+				'skipcaptcha',
 				'sysop',
+			),
+			'sysop' => array(
+				'autopatolled',
+				'confirmed',
+				'skipcaptcha',
 			),
 		),
 	),
