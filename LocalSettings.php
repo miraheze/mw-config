@@ -338,7 +338,6 @@ $wgConf->settings = array(
 			),
 			'autopatolled' => array(
 				'autopatrol' => true,
-				'editsemiprotected' => true,
 				'patrol' => true,
 			),
 			'bureaucrat' => array(
@@ -408,10 +407,7 @@ $wgConf->settings = array(
 	'wgRemoveGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
-				'autopatrolled',
 				'bot',
-				'confirmed',
-				'skipcaptcha',
 				'sysop',
 			),
 			'sysop' => array(
