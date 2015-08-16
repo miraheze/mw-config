@@ -590,18 +590,8 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['*']['edit'] = false;
-	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['user']['read'] = false;
-	$wgGroupPermissions['user']['edit'] = false;
-	$wgGroupPermissions['user']['upload'] = false;
-	$wgGroupPermissions['user']['writeapi'] = false;
-	$wgGroupPermissions['user']['emailuser'] = false;
 	$wgGroupPermissions['member']['read'] = true;
-	$wgGroupPermissions['member']['edit'] = true;
-	$wgGroupPermissions['member']['emailuser'] = true;
-	$wgGroupPermissions['member']['upload'] = true;
-	$wgGroupPermissions['member']['writeapi'] = true;
 	$wgGroupPermissions['sysop']['read'] = true;
 	$wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' );
 	$wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' );
