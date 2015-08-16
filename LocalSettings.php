@@ -633,13 +633,14 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgWhitelistRead =
 		array(
 			"Main Page",
-			"Special:UserLogin",
-			"Special:UserLogout",
-			"Special:ResetPassword",
 			"MediaWiki:Common.css",
 			"Special:CentralAutoLogin",
 			"Special:CentralLogin",
-			"Special:ConfirmEmail"
+			"Special:ConfirmEmail",
+			"Special:Notifications",
+			"Special:ResetPassword",
+			"Special:UserLogin",
+			"Special:UserLogout",
 		);
 }
 
