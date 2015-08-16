@@ -386,7 +386,6 @@ $wgConf->settings = array(
 				'abusefilter-modify' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
-				'bigdelete' => false,
 				'deletelogentry' => true,
 				'deleterevision' => true,
 				'massmessage' => false,
@@ -683,6 +682,9 @@ $wgCaptchaQuestions[] = array(
 the sequence <code>$myChallengeString</code>:",
         'answer' => $myChallengeString[$myChallengeIndex - 1]
 );
+
+// Hard overrides
+$wgGroupPermissions['sysop']['bigdelete'] = false;
 
 $wgHooks['SkinAfterBottomScripts'][] = 'piwikScript';
 function piwikScript( $skin, &$text = '' ) {
