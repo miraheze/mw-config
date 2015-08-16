@@ -156,6 +156,11 @@ $wgConf->settings = array(
 		'default' => array(),
 	),
 
+	// Delete
+	'wgDeleteRevisionsLimit' => array(
+		'default' => '250', // databases don't have much memory - let's not overload them in future
+	),
+
 	// Extensions
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -379,6 +384,7 @@ $wgConf->settings = array(
 				'abusefilter-modify' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
+				'bigdelete' => false,
 				'deletelogentry' => true,
 				'deleterevision' => true,
 				'massmessage' => false,
