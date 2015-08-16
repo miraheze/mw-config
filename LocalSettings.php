@@ -602,6 +602,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['member']['emailuser'] = true;
 	$wgGroupPermissions['member']['upload'] = true;
 	$wgGroupPermissions['member']['writeapi'] = true;
+	$wgGroupPermissions['sysop']['read'] = true;
 	$wgAddGroups['bureaucrat'] = array( 'bot', 'sysop', 'bureaucrat', 'member' );
 	$wgRemoveGroups['bureaucrat'] = array( 'bot', 'sysop', 'member' );
 	$wgWhitelistRead =
