@@ -45,6 +45,12 @@ $wgConf->settings = array(
 	'wgAccountCreationThrottle' => array(
 		'default' => 5,
 	),
+	'wgAutoConfirmAge' => array(
+		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
+	),
+	'wgAutoConfirmCount' => array(
+		'default' => 10,
+	),
 	'wgSpamBlacklistFiles' => array(
 		'default' => array(
 			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
@@ -194,6 +200,14 @@ $wgConf->settings = array(
 	// Files
 	'wgEnableUploads' => array(
 		'default' => true,
+	),
+	'wgAllowCopyUploads' => array(
+		'default' => false,
+		'quantixwiki' => true,
+	),
+	'wgCopyUploadsFromSpecialUpload' => array(
+		'default' => false,
+		'quantixwiki' => true,
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
@@ -390,6 +404,16 @@ $wgConf->settings = array(
 				'createwiki' => true,
 			),
 		),
+		'+quantixwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'protect' => true,
+				'upload_by_url' => true,
+			),
+			'sysop' => array(
+				'upload_by_url' => true,
+			),
+		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -428,6 +452,9 @@ $wgConf->settings = array(
 	'+wgRestrictionLevels' => array(
 		'default' => array(
 			'user',
+		),
+		'quantixwiki' => array(
+			'bureaucrat',
 		),
 		'testwiki' => array(
 			'bureaucrat',
