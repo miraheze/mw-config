@@ -337,11 +337,13 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'bot',
 				'bureaucrat',
+				'member',
 				'sysop',
 			),
 			'sysop' => array(
 				'autopatrolled',
 				'confirmed',
+				'member',
 				'skipcaptcha',
 			),
 		),
