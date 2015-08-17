@@ -518,7 +518,7 @@ $wgConf->settings = array(
 
 	// Timezone
 	'wgLocaltimezone' => array(
-		'default' => 'Europe/London',
+		'default' => 'UTC',
 	),
 
         // Translate
