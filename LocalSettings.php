@@ -370,6 +370,18 @@ $wgConf->settings = array(
 			),
 		),
 		'+quantixwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat',
+				'superadmin',
+				'admin',
+				'coder',
+			),
+			'coder' => array(
+				'confirmed',
+				'member',
+				'autoconfirmed',
+				'skipcaptcha',
+			),
 			'owner' => array(
 				'bureaucrat',
 				'superadmin',
@@ -378,12 +390,6 @@ $wgConf->settings = array(
 			),
 			'superadmin' => array(
 				'admin',
-			),
-			'coder' => array(
-				'confirmed',
-				'member',
-				'autoconfirmed',
-				'skipcaptcha',
 			),
 		),
 	),
@@ -506,6 +512,17 @@ $wgConf->settings = array(
 			),
 		),
 		'+quantixwiki' => array(
+			'bureaucrat' => array(
+				'superadmin',
+				'admin',
+				'coder',
+			),
+			'coder' => array(
+				'confirmed',
+				'member',
+				'autoconfirmed',
+				'skipcaptcha',
+			),
 			'owner' => array(
 				'bureaucrat',
 				'superadmin',
@@ -514,12 +531,6 @@ $wgConf->settings = array(
 			),
 			'superadmin' => array(
 				'admin',
-			),
-			'coder' => array(
-				'confirmed',
-				'member',
-				'autoconfirmed',
-				'skipcaptcha',
 			),
 		),
 	),
