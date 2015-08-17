@@ -187,6 +187,7 @@ $wgConf->settings = array(
 	'wmgUseScribunto' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'kurumiwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
