@@ -198,7 +198,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
-		'quanixwiki' => true,
+		'quantixwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
