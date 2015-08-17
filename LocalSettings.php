@@ -516,6 +516,11 @@ $wgConf->settings = array(
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 	),
 
+	// Timezone
+	'wgLocaltimezone' => array(
+		'default' => 'Europe/London',
+	),
+
         // Translate
         'wmgTranslateBlacklist' => array(
                 'default' => array(),
