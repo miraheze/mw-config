@@ -31,6 +31,16 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
 
+//QuantixWiki
+define( 'NS_HL2RP', 1602 );
+define( 'NS_HL2RP_TALK', 1603 );
+define( 'NS_ARP', 1604 );
+define( 'NS_ARP_TALK', 1605 );
+define( 'NS_EVENT', 1606 );
+define( 'NS_EVENT_TALK', 1607 );
+define( 'NS_CLAN', 1608 );
+define( 'NS_CLAN_TALK', 1609 );
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -188,6 +198,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
+		'quanixwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
@@ -330,6 +341,16 @@ $wgConf->settings = array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
 		),
+		'quantixwiki' => array(
+			NS_HL2RP => 'HL2RP',
+			NS_HL2RP_TALK => 'HL2RP_talk',
+			NS_ARP => 'ARP',
+			NS_ARP_TALK => 'ARP_talk',
+			NS_EVENT => 'Event',
+			NS_EVENT_TALK => 'Event_talk',
+			NS_CLAN => 'Clan',
+			NS_CLAN_TALK => 'Clan_talk'
+		),
 	),
 
 	// Permissions
@@ -345,6 +366,23 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'member',
+				'skipcaptcha',
+			),
+		),
+		'+quantixwiki' => array(
+			'owner' => array(
+				'bureaucrat',
+				'superadmin',
+				'admin',
+				'coder',
+			),
+			'superadmin' => array(
+				'admin',
+			),
+			'coder' => array(
+				'confirmed',
+				'member',
+				'autoconfirmed',
 				'skipcaptcha',
 			),
 		),
@@ -413,12 +451,31 @@ $wgConf->settings = array(
 			),
 		),
 		'+quantixwiki' => array(
+			'admin' => array(
+				'read' => true,
+			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 				'protect' => true,
 				'upload_by_url' => true,
 			),
+			'coder' => array(
+				'coder' => true,
+				'protect' => true,
+				'editprotected' => true,
+				'upload' => true,
+				'reupload-own' => true,
+			),
+			'superadmin' => array(
+				'read' => true,
+			),
 			'sysop' => array(
+				'upload_by_url' => true,
+			),
+			'owner' => array(
+				'bureaucrat' => true,
+				'owner' => true,
+				'protect' => true,
 				'upload_by_url' => true,
 			),
 		),
@@ -448,6 +505,23 @@ $wgConf->settings = array(
 				'skipcaptcha',
 			),
 		),
+		'+quantixwiki' => array(
+			'owner' => array(
+				'bureaucrat',
+				'superadmin',
+				'admin',
+				'coder',
+			),
+			'superadmin' => array(
+				'admin',
+			),
+			'coder' => array(
+				'confirmed',
+				'member',
+				'autoconfirmed',
+				'skipcaptcha',
+			),
+		),
 	),
 	'wgRevokePermissions' => array(
 		'default' => array(),
@@ -465,6 +539,8 @@ $wgConf->settings = array(
 		),
 		'quantixwiki' => array(
 			'bureaucrat',
+			'coder',
+			'owner',
 		),
 		'testwiki' => array(
 			'bureaucrat',
