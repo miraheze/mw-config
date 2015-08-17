@@ -10,6 +10,7 @@ $wgDebugLogGroups = array(
 	'captcha' => "$wmgLogDir/debuglogs/captcha.log",
 	'CentralAuth' => "$wmgLogDir/debuglogs/CentralAuth.log",
 	'collection' => "$wmgLogDir/debuglogs/collection.log",
+	'CreateWiki' => "$wmgLogDir/debuglogs/CreateWiki.log",
 	'DBPerformance' => "$wmgLogDir/debuglogs/dbperformance.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
