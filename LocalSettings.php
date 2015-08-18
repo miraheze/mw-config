@@ -353,8 +353,8 @@ $wgConf->settings = array(
 		),
 	),
 	'wgContentNamespaces' => array(
-		'default' => array( NS_MAIN; ),
-		'quantixwiki' => array( NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN )
+		'default' => array( NS_MAIN ),
+		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN ),
 	),
 
 	// Permissions
