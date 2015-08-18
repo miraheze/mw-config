@@ -24,8 +24,12 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidPrefix = "$wgDBname";
 }
 
+if ( $wmgUseMultiUpload ) {
+	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+}
+
 if ( $wmgUseScribunto ) {
-    require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 }
 
 if ( $wmgUseTranslate ) {

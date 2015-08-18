@@ -194,6 +194,11 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
+	'wmgUseMultiUpload' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'quantixwiki' => true,
+	),
 	'wmgUseScribunto' => array(
 		'default' => false,
 		'extloadwiki' => true,
