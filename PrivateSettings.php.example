@@ -9,3 +9,6 @@ $wmgSMTPPassword = "blablablabla";
 
 $wgUpgradeKey = "blablablabla";
 $wgSecretKey = "blablablabla";
+
+$ReCaptchaSiteKey = "blablablabla";
+$ReCaptchaSecretKey = "blablablabla";
