@@ -680,16 +680,8 @@ if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 
-$wgCaptchaClass = 'QuestyCaptcha';
-$myChallengeString = substr( md5( uniqid( mt_rand(), true ) ), 0, 8 );
-$myChallengeIndex = rand(0, 7) + 1;
-$myChallengePositions = array( 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth' );
-$myChallengePositionName = $myChallengePositions[$myChallengeIndex - 1];
-$wgCaptchaQuestions[] = array(
-        'question' => "Please provide the $myChallengePositionName character from
-the sequence <code>$myChallengeString</code>:",
-        'answer' => $myChallengeString[$myChallengeIndex - 1]
-);
+$wgCaptchaClass = 'ReCaptchaNoCaptcha';
+$wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
 
 // Hard overrides
 $wgGroupPermissions['sysop']['bigdelete'] = false;
