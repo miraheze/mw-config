@@ -406,6 +406,15 @@ $wgConf->settings = array(
 				'admin',
 			),
 		),
+		'+testwiki' => array(
+			'bureaucrat' => array(
+				'testgroup',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -503,6 +512,10 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 			),
+			'consul' => array(
+				'read' => true,
+				'consul' = true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
@@ -550,6 +563,14 @@ $wgConf->settings = array(
 			),
 			'superadmin' => array(
 				'admin',
+			),
+		'+testwiki' => array(
+			'bureaucrat' => array(
+				'testgroup',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
 			),
 		),
 	),
