@@ -514,7 +514,7 @@ $wgConf->settings = array(
 			),
 			'consul' => array(
 				'read' => true,
-				'consul' = true,
+				'consul' => true,
 			),
 		),
 	),
@@ -564,6 +564,7 @@ $wgConf->settings = array(
 			'superadmin' => array(
 				'admin',
 			),
+		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
