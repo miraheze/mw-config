@@ -474,6 +474,9 @@ $wgConf->settings = array(
 				'userrights' => true,
 				'userrights-interwiki' => true,
 			),
+			'sysop' => array(
+				'interwiki' => true,
+			),
 			'wikicreator' => array(
 				'createwiki' => true,
 			),
