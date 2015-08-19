@@ -447,6 +447,7 @@ $wgConf->settings = array(
 				'hideuser' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
+			),
 			'rollbacker' => array(
 				'rollback' => true,
 			),
