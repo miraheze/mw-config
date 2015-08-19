@@ -375,6 +375,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'member',
+				'rollbacker'
 				'skipcaptcha',
 			),
 		),
@@ -446,6 +447,8 @@ $wgConf->settings = array(
 				'hideuser' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
+			'rollbacker' => array(
+				'rollback' => true,
 			),
 			'skipcaptcha' => array(
 				'skipcaptcha' => true,
