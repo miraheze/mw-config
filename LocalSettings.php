@@ -40,6 +40,12 @@ define( 'NS_EVENT', 1606 );
 define( 'NS_EVENT_TALK', 1607 );
 define( 'NS_CLAN', 1608 );
 define( 'NS_CLAN_TALK', 1609 );
+define( 'NS_POE', 1610 );
+define( 'NS_POE_TALK', 1611 );
+define( 'NS_LEAGUE', 1612 );
+define( 'NS_LEAGUE_TALK', 1613 );
+define( 'NS_SMITE', 1614 );
+define( 'NS_SMITE_TALK', 1615 );
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -353,12 +359,18 @@ $wgConf->settings = array(
 			NS_EVENT => 'Event',
 			NS_EVENT_TALK => 'Event_talk',
 			NS_CLAN => 'Clan',
-			NS_CLAN_TALK => 'Clan_talk'
+			NS_CLAN_TALK => 'Clan_talk',
+			NS_POE => 'PoE',
+			NS_POE_TALK => 'PoE_talk',
+			NS_LEAGUE => 'League',
+			NS_LEAGUE_TALK => 'League_talk',
+			NS_SMITE => 'Smite',
+			NS_SMITE_TALK => 'Smite_talk'
 		),
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
-		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN ),
+		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 	),
 
 	// Permissions
@@ -374,6 +386,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'member',
+				'rollback',
 				'skipcaptcha',
 			),
 		),
@@ -445,6 +458,9 @@ $wgConf->settings = array(
 				'hideuser' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
+			),
+			'rollback' => array(
+				'rollback' => true,
 			),
 			'skipcaptcha' => array(
 				'skipcaptcha' => true,
@@ -537,6 +553,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'member',
+				'rollback',
 				'skipcaptcha',
 			),
 		),
