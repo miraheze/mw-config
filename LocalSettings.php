@@ -190,7 +190,6 @@ $wgConf->settings = array(
 	'wmgUseFlow' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'parsoidwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
