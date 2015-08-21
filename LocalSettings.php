@@ -31,7 +31,7 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
 
-//QuantixWiki
+// QuantixWiki
 define( 'NS_HL2RP', 1602 );
 define( 'NS_HL2RP_TALK', 1603 );
 define( 'NS_ARP', 1604 );
@@ -459,7 +459,7 @@ $wgConf->settings = array(
 				'rollback' => true,
 			),
 			'user' => array(
-				'user' => true, //for "Allow logged in users" protection level
+				'user' => true, // for "Allow logged in users" protection level
 			),
 		),
 		'+metawiki' => array(
@@ -862,4 +862,4 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	<center>nginx - MediaWiki</center>
 EOF;
 	die( 1 );
-} 
+}
