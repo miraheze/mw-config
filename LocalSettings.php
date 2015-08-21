@@ -386,7 +386,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'member',
-				'rollback',
+				'rollbacker',
 				'skipcaptcha',
 			),
 		),
@@ -459,7 +459,7 @@ $wgConf->settings = array(
 				'suppressionlog' => true,
 				'suppressrevision' => true,
 			),
-			'rollback' => array(
+			'rollbacker' => array(
 				'rollback' => true,
 			),
 			'skipcaptcha' => array(
@@ -553,7 +553,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'member',
-				'rollback',
+				'rollbacker',
 				'skipcaptcha',
 			),
 		),
