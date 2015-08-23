@@ -666,8 +666,17 @@ $wgConf->settings = array(
 	),
 
 	// Style
+	'wgAppleTouchIcon' => array(
+		'default' => '/apple-touch-icon.png',
+	),
+	'wgCentralAuthLoginIcon' => array(
+		'default' => '/usr/share/nginx/favicons/default.ico',
+	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
+	),
+	'wgFavicon' => array(
+		'default' => '/favicon.ico',
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
