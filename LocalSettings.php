@@ -435,6 +435,7 @@ $wgConf->settings = array(
 			'consul' => array(
 				'bot',
 				'bureaucrat',
+				'consul',
 			),
 		),
 	),
