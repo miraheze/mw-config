@@ -93,6 +93,16 @@ $wgConf->settings = array(
 			'manualRecache' => true,
 		),
 	),
+	'wgResourceLoaderMaxage' => array(
+		'versioned' => array(
+			'server' => 30 * 24 * 60 * 60,
+			'client' => 30 * 24 * 60 * 60,
+		),
+		'unversioned' => array(
+			'server' => 20 * 60,
+			'client' => 20 * 60,
+		),
+	),
 
 	// CentralAuth
 	'wgCentralAuthAutoNew' => array(
