@@ -766,11 +766,22 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
 }
 
+if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
+	header( "HTTP/1.0 404 Not Found" );
+	echo <<<EOF
+	<center><h1>404 Wiki Not Found</h1></center>
+	<hr>
+	<center>nginx - MediaWiki</center>
+EOF;
+	die( 1 );
+}
+
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/RedisConfig.php" );
 
-// wgGroupPermissions which don't work when set in $wgConf->settings
+// Hard overrides that don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
+$wgGroupPermissions['sysop']['bigdelete'] = false;
 
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadDirectory = "/srv/mediawiki-static/$wgDBname";
@@ -831,9 +842,6 @@ require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
 $wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
 
-// Hard overrides
-$wgGroupPermissions['sysop']['bigdelete'] = false;
-
 $wgHooks['SkinAfterBottomScripts'][] = 'piwikScript';
 function piwikScript( $skin, &$text = '' ) {
 		global $wmgPiwikSiteID, $wgUser;
@@ -869,14 +877,4 @@ function piwikScript( $skin, &$text = '' ) {
 <!-- End Piwik -->
 SCRIPT;
 		return true;
-}
-
-if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
-	header( "HTTP/1.0 404 Not Found" );
-	echo <<<EOF
-	<center><h1>404 Wiki Not Found</h1></center>
-	<hr>
-	<center>nginx - MediaWiki</center>
-EOF;
-	die( 1 );
 }
