@@ -482,7 +482,6 @@ $wgConf->settings = array(
 				'abusefilter-revert' => true,
 				'deletelogentry' => true,
 				'deleterevision' => true,
-				'massmessage' => false,
 				'rollback' => true,
 			),
 			'user' => array(
