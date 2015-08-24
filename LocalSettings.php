@@ -863,6 +863,15 @@ require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
 $wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
 
+if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+        $wgRCFeeds['irc'] = array(
+                'formatter' => 'MirahezeIRCRCFeedFormatter',
+                'uri' => 'udp://185.52.1.76:5070',
+                'add_interwiki_prefix' => false,
+                'omit_bots' => true,
+        );
+}
+
 $wgHooks['SkinAfterBottomScripts'][] = 'piwikScript';
 function piwikScript( $skin, &$text = '' ) {
 		global $wmgPiwikSiteID, $wgUser;
