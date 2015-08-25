@@ -860,9 +860,17 @@ if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 
+# Timeline
+putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
+$wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
+$wgTimelineSettings->perlCommand = "/usr/bin/perl";
+$wgTimelineSettings->fontFile = 'FreeSans';
+
+# ReCaptcha
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
 $wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
 
+# ircrcbot
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
         $wgRCFeeds['irc'] = array(
                 'formatter' => 'MirahezeIRCRCFeedFormatter',
