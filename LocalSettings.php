@@ -414,6 +414,11 @@ $wgConf->settings = array(
 				'skipcaptcha',
 			),
 		),
+		'+dpwiki' => array(
+			'bureaucrat' => array(
+				'respected',
+			),
+		),
 		'+quantixwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat',
@@ -506,6 +511,14 @@ $wgConf->settings = array(
 				'user' => true, // for "Allow logged in users" protection level
 			),
 		),
+		'+dpwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+			),
+			'respected' => array(
+				'respected' => true,
+			),
+		),
 		'+metawiki' => array(
 			'steward' => array(
 				'abusefilter-modify-global' => true,
@@ -585,6 +598,11 @@ $wgConf->settings = array(
 				'skipcaptcha',
 			),
 		),
+		'+dpwiki' => array(
+			'bureaucrat' => array(
+				'respected',
+			),
+		),
 		'+quantixwiki' => array(
 			'bureaucrat' => array(
 				'superadmin',
@@ -636,12 +654,16 @@ $wgConf->settings = array(
 		'default' => array(
 			'user',
 		),
-		'quantixwiki' => array(
+		'+dpwiki' => array(
+			'bureaucrat',
+			'respected',
+		),
+		'+quantixwiki' => array(
 			'bureaucrat',
 			'coder',
 			'owner',
 		),
-		'testwiki' => array(
+		'+testwiki' => array(
 			'bureaucrat',
 		),
 	),
