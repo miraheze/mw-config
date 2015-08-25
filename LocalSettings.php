@@ -231,7 +231,8 @@ $wgConf->settings = array(
 		'testwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
-		'default' => false, // Do not enable. -John
+		'default' => false, // Do not add to any wikis" -John
+		'extloadwiki' => true,
 	),
 
 	// Files

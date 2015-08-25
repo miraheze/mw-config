@@ -22,6 +22,10 @@ if ( $wmgUseFlow ) {
 	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 	$wgFlowParsoidURL = 'http://parsoid1.miraheze.org:8142';
 	$wgFlowParsoidPrefix = "$wgDBname";
+
+	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+		$wgFlowParsoidForwardCookies = true;
+	}
 }
 
 if ( $wmgUseMultiUpload ) {
@@ -52,6 +56,10 @@ if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://parsoid1.miraheze.org:8142';
 	$wgVisualEditorParsoidPrefix = "$wgDBname";
+
+	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+		$wgVisualEditorParsoidForwardCookies = true;
+	}
 }
 
 if ( $wmgUseWikiEditor ) {
