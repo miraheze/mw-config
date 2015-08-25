@@ -235,6 +235,9 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'spiralwiki' => true,
 	),
+	'wmgUseWikiEditor' => array(
+		'default' => true,
+	),
 
 	// Files
 	'wgEnableUploads' => array(
