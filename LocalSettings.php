@@ -149,6 +149,8 @@ $wgConf->settings = array(
 			"$IP/extensions/Math/db/math.mysql.sql",
 			"$IP/extensions/Math/db/mathlatexml.mysql.sql",
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
+			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
+			"$IP/extensions/OAuth/backend/schema/mysql/callback_is_prefix.sql",
 		        "$IP/extensions/Translate/sql/revtag.sql",
 		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
