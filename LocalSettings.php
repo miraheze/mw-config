@@ -514,6 +514,7 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
+				'respected' => true,
 			),
 			'respected' => array(
 				'respected' => true,
