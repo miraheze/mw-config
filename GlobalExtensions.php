@@ -6,6 +6,7 @@ require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/Math/Math.php" );
 require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+require_once( "$IP/extensions/OAuth/OAuth.php" );
 require_once( "$IP/extensions/SiteMatrix/SiteMatrix.php" );
 require_once( "$IP/extensions/Timeline/Timeline.php" );
 require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );

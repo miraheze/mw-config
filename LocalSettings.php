@@ -386,6 +386,17 @@ $wgConf->settings = array(
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 	),
 
+	// OAuth
+	'wgMWOAuthCentralWiki' => array(
+		'default' => 'metawiki',
+	),
+	'wgMWOAuthSharedUserSource' => array(
+		'default' => 'CentralAuth',
+	),
+	'wgMWOAuthSecureTokenTransfer' => array(
+		'default' => true,
+	),
+
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
@@ -452,6 +463,10 @@ $wgConf->settings = array(
 			'autopatrolled' => array(
 				'autopatrol' => true,
 				'patrol' => true,
+			),
+			'autoconfirmed' => array(
+				'mwoauthproposeconsumer' => true,
+				'mwoauthupdateownconsumer' => true,
 			),
 			'bureaucrat' => array(
 				'renameuser' => false,
