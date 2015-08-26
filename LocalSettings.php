@@ -188,7 +188,11 @@ $wgConf->settings = array(
 	'wgDeleteRevisionsLimit' => array(
 		'default' => '250', // databases don't have much memory - let's not overload them in future
 	),
-
+	// Disable anon editing
+	'wmgDisableAnonEditing' => array(
+		'default' => false,
+		'antiguabarbudacalypsowiki' => true,
+	),
 	// Extensions
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -826,6 +830,13 @@ $wmgClosedDatabasesList = file( "/srv/mediawiki/dblist/closed.dblist" );
 foreach ( $wmgClosedDatabasesList as $database ) {
 	$database = trim( $database );
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
+}
+
+}
+
+if ( $wmgDisableAnonEditing ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
 }
 
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
