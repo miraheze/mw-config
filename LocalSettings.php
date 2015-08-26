@@ -218,6 +218,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
+		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
 		'quantixwiki' => true,
