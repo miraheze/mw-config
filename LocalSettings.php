@@ -193,6 +193,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'antiguabarbudacalypsowiki' => true,
 	),
+		if ( $wmgDisableAnonEditing ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+		}
 	// Extensions
 	'wmgUseBabel' => array(
 		'default' => true,
