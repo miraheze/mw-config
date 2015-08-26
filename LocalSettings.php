@@ -832,8 +832,6 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
 }
 
-}
-
 if ( $wmgDisableAnonEditing ) {
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
