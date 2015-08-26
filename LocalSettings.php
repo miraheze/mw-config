@@ -833,11 +833,6 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
 }
 
-if ( $wmgDisableAnonEditing ) {
-	$wgGroupPermissions['*']['edit'] = false;
-	$wgGroupPermissions['*']['createpage'] = false;
-}
-
 if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
 	header( "HTTP/1.0 404 Not Found" );
 	echo <<<EOF

@@ -71,3 +71,9 @@ if ( $wmgUseWikiEditor ) {
 	$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 	$wgCodeEditorEnableCore = true;
 }
+
+// Permission variables
+if ( $wmgDisableAnonEditing ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+}
