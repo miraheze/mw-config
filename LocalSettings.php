@@ -751,10 +751,10 @@ if ( defined( 'MW_DB' ) ) {
 	$wgDBname = MW_DB;
 } elseif ( $wmgHostname === 'meta.miraheze.org' ) {
 	$wgDBname = 'metawiki';
-} elseif ( preg_match( '/^www\.(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-	$wgDBname = $matches[1] . 'wiki';
 } elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
+} elseif ( preg_match( '/^www\.(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+    $wgDBname = $matches[1] . 'wiki';
 } elseif ( $search = array_search( 'http://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
 	$wgDBname = $search;
 } elseif ( $search = array_search( 'https://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
@@ -787,16 +787,7 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
 }
 
-if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
-	header( "HTTP/1.0 404 Not Found" );
-	echo <<<EOF
-	<center><h1>404 Wiki Not Found</h1></center>
-	<hr>
-	<center>nginx - MediaWiki</center>
-EOF;
-	die( 1 );
-}
-
+require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/RedisConfig.php" );
 
@@ -878,41 +869,4 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
                 'add_interwiki_prefix' => false,
                 'omit_bots' => true,
         );
-}
-
-$wgHooks['SkinAfterBottomScripts'][] = 'piwikScript';
-function piwikScript( $skin, &$text = '' ) {
-		global $wmgPiwikSiteID, $wgUser;
-		if ( !$wmgPiwikSiteID ) {
-			$wmgPiwikSiteID = 1;
-		}
-		$id = strval( $wmgPiwikSiteID );
-		$title = $skin->getRelevantTitle();
-		$jstitle = Xml::encodeJsVar( $title->getPrefixedText() );
-		$urltitle = $title->getPrefixedURL();
-		$userType = $wgUser->isLoggedIn() ? "User" : "Anonymous";
-		$text .= <<<SCRIPT
-<!-- Piwik -->
-<script type="text/javascript">
-	var _paq = _paq || [];
-	_paq.push(["trackPageView"]);
-	_paq.push(["enableLinkTracking"]);
-	(function() {
-		var u = "//piwik.miraheze.org/";
-		_paq.push(["setTrackerUrl", u+"piwik.php"]);
-		_paq.push(['setDocumentTitle', {$jstitle}]);
-		_paq.push(["setSiteId", "{$id}"]);
-		_paq.push(["setCustomVariable", 1, "userType", "{$userType}", "visit"]);
-		var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-		g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-	})();
-</script>
-<!-- End Piwik Code -->
-<!-- Piwik Image Tracker -->
-<noscript>
-<img src="//piwik.miraheze.org/piwik.php?idsite={$id}&amp;rec=1&amp;action_name={$urltitle}" style="border:0" alt="" />
-</noscript>
-<!-- End Piwik -->
-SCRIPT;
-		return true;
 }
