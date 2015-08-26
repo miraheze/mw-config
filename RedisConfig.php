@@ -7,6 +7,7 @@ $wgObjectCaches['redis'] = array(
 
 $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
+$wgSessionsInObjectCache = true;
 $wgMessageCacheType = 'redis';
 $wgParserCacheType = 'redis';
 $wgLanguageConverterCacheType = 'redis';

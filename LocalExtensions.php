@@ -22,6 +22,10 @@ if ( $wmgUseFlow ) {
 	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 	$wgFlowParsoidURL = 'http://parsoid1.miraheze.org:8142';
 	$wgFlowParsoidPrefix = "$wgDBname";
+
+	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+		$wgFlowParsoidForwardCookies = true;
+	}
 }
 
 if ( $wmgUseMultiUpload ) {
@@ -44,7 +48,7 @@ if ( $wmgUseTranslate ) {
 	$wgAddGroups['translate-proofr'] = false;
 	// unset this unused group already
 	unset( $wgGroupPermissions['translate-proofr'] );
-    $wgTranslateBlacklist = $wmgTranslateBlacklist;
+	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	require_once( "/srv/mediawiki/config/TranslateConfigHack.php" );
 }
 
@@ -52,6 +56,12 @@ if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://parsoid1.miraheze.org:8142';
 	$wgVisualEditorParsoidPrefix = "$wgDBname";
+
+	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+		$wgVisualEditorParsoidForwardCookies = true;
+	}
+
+	$wgDefaultUserOptions['visualeditor-enable'] = 1;
 }
 
 if ( $wmgUseWikiEditor ) {
@@ -60,4 +70,10 @@ if ( $wmgUseWikiEditor ) {
 	$wgDefaultUserOptions['usebetatoolbar'] = 1;
 	$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 	$wgCodeEditorEnableCore = true;
+}
+
+// Permission variables
+if ( $wmgDisableAnonEditing ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
 }

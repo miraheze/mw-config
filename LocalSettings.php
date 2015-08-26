@@ -149,6 +149,8 @@ $wgConf->settings = array(
 			"$IP/extensions/Math/db/math.mysql.sql",
 			"$IP/extensions/Math/db/mathlatexml.mysql.sql",
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
+			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
+			"$IP/extensions/OAuth/backend/schema/mysql/callback_is_prefix.sql",
 		        "$IP/extensions/Translate/sql/revtag.sql",
 		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
@@ -186,14 +188,14 @@ $wgConf->settings = array(
 	'wgDeleteRevisionsLimit' => array(
 		'default' => '250', // databases don't have much memory - let's not overload them in future
 	),
-
+	// Disable anon editing
+	'wmgDisableAnonEditing' => array(
+		'default' => false,
+		'antiguabarbudacalypsowiki' => true,
+	),
 	// Extensions
 	'wmgUseBabel' => array(
 		'default' => true,
-	),
-	'wmgUseWikiEditor' => array(
-		'default' => false,
-		'extloadwiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
@@ -216,6 +218,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
+		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
 		'quantixwiki' => true,
@@ -231,7 +234,12 @@ $wgConf->settings = array(
 		'testwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
-		'default' => false, // Do not enable. -John
+		'default' => false, // Please consult John before changing variables here! -John
+		'extloadwiki' => true,
+		'spiralwiki' => true,
+	),
+	'wmgUseWikiEditor' => array(
+		'default' => true,
 	),
 
 	// Files
@@ -383,6 +391,17 @@ $wgConf->settings = array(
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 	),
 
+	// OAuth
+	'wgMWOAuthCentralWiki' => array(
+		'default' => 'metawiki',
+	),
+	'wgMWOAuthSharedUserSource' => array(
+		'default' => 'CentralAuth',
+	),
+	'wgMWOAuthSecureTokenTransfer' => array(
+		'default' => true,
+	),
+
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
@@ -398,6 +417,11 @@ $wgConf->settings = array(
 				'member',
 				'rollbacker',
 				'skipcaptcha',
+			),
+		),
+		'+dpwiki' => array(
+			'bureaucrat' => array(
+				'respected',
 			),
 		),
 		'+quantixwiki' => array(
@@ -450,6 +474,10 @@ $wgConf->settings = array(
 				'autopatrol' => true,
 				'patrol' => true,
 			),
+			'autoconfirmed' => array(
+				'mwoauthproposeconsumer' => true,
+				'mwoauthupdateownconsumer' => true,
+			),
 			'bureaucrat' => array(
 				'renameuser' => false,
 				'userrights' => false,
@@ -486,6 +514,15 @@ $wgConf->settings = array(
 			),
 			'user' => array(
 				'user' => true, // for "Allow logged in users" protection level
+			),
+		),
+		'+dpwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'respected' => true,
+			),
+			'respected' => array(
+				'respected' => true,
 			),
 		),
 		'+metawiki' => array(
@@ -567,6 +604,11 @@ $wgConf->settings = array(
 				'skipcaptcha',
 			),
 		),
+		'+dpwiki' => array(
+			'bureaucrat' => array(
+				'respected',
+			),
+		),
 		'+quantixwiki' => array(
 			'bureaucrat' => array(
 				'superadmin',
@@ -618,12 +660,16 @@ $wgConf->settings = array(
 		'default' => array(
 			'user',
 		),
-		'quantixwiki' => array(
+		'+dpwiki' => array(
+			'bureaucrat',
+			'respected',
+		),
+		'+quantixwiki' => array(
 			'bureaucrat',
 			'coder',
 			'owner',
 		),
-		'testwiki' => array(
+		'+testwiki' => array(
 			'bureaucrat',
 		),
 	),
