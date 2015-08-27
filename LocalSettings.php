@@ -695,7 +695,7 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
-		'imedroneswiki' => 'http://wiki.imedrones.org'
+		'imedroneswiki' => 'http://wiki.imedrones.org',
 		'spiralwiki' => 'https://spiral.wiki',
 	),
 	'wgShowHostnames' => array(
