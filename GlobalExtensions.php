@@ -26,3 +26,13 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'SpamBlacklist' );
+
+require_once( "$IP/extensions/GlobalCssJs/GlobalCssJs.php" );
+$wgGlobalCssJsConfig = array(
+	'wiki' => 'metawiki',
+	'source' => 'metawiki',
+);
+$wgResourceLoaderSources['metawiki'] = array(
+	'apiScript' => '//meta.miraheze.org/w/api.php',
+	'loadScript' => '//meta.miraheze.org/w/load.php',
+);
