@@ -5,6 +5,7 @@ require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
+require_once( "$IP/extensions/GlobalCssJs/GlobalCssJs.php" );
 require_once( "$IP/extensions/Math/Math.php" );
 require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 require_once( "$IP/extensions/OAuth/OAuth.php" );
