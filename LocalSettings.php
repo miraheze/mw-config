@@ -283,6 +283,25 @@ $wgConf->settings = array(
 		'default' => 'centralauth', // use centralauth for global blocks
 	),
 
+	// GlobalCssJs
+	'wgGlobalCssJsConfig' => array(
+		'default' => array(
+			'wiki' => 'metawiki',
+			'source' => 'metawiki',
+		),
+	),
+	'+wgResourceLoaderSources' => array(
+		'default' => array(
+			'metawiki' => array(
+				'apiScript' => '//meta.miraheze.org/w/api.php',
+				'loadScript' => '//meta.miraheze.org/w/load.php',
+			),
+		),
+	),
+	'wgUseGlobalSiteCssJs' => array(
+		'default' => false,
+	),
+
 	// ImageMagick
 	'wgUseImageMagick' => array(
 		'default' => true,
@@ -707,6 +726,12 @@ $wgConf->settings = array(
 	),
 
 	// Style
+	'wgAllowUserCss' => array(
+		'default' => true,
+	),
+	'wgAllowUserJs' => array(
+		'default' => true,
+	),
 	'wgAppleTouchIcon' => array(
 		'default' => '/apple-touch-icon.png',
 	),

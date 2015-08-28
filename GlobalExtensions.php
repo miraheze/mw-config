@@ -17,6 +17,7 @@ wfLoadExtension( 'CiteThisPage' );
 wfLoadExtension( 'ConfirmEdit/ReCaptchaNoCaptcha' );
 wfLoadExtension( 'Disambiguator' );
 wfLoadExtension( 'Gadgets' );
+wfLoadExtension( 'GlobalCssJs' );
 wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'MassMessage' );
