@@ -905,6 +905,13 @@ $wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
 $wgTimelineSettings->perlCommand = "/usr/bin/perl";
 $wgTimelineSettings->fontFile = 'FreeSans';
 
+# Footer icon
+$wgFooterIcons['poweredby']['miraheze'] = array(
+	'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
+	'url' => 'https://meta.miraheze.org/wiki/',
+	'alt' => 'Powered by Miraheze',
+);
+
 # ReCaptcha
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
 $wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
