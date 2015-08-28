@@ -416,7 +416,6 @@ $wgConf->settings = array(
 				'confirmed',
 				'member',
 				'rollbacker',
-				'skipcaptcha',
 			),
 		),
 		'+dpwiki' => array(
@@ -435,7 +434,6 @@ $wgConf->settings = array(
 				'confirmed',
 				'member',
 				'autopatrolled',
-				'skipcaptcha',
 			),
 			'owner' => array(
 				'admin',
@@ -444,7 +442,6 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'coder',
 				'confirmed',
-				'skipcaptcha',
 				'superadmin',
 				'sysop',
 			),
@@ -502,9 +499,6 @@ $wgConf->settings = array(
 			),
 			'rollbacker' => array(
 				'rollback' => true,
-			),
-			'skipcaptcha' => array(
-				'skipcaptcha' => true,
 			),
 			'sysop' => array(
 				'abusefilter-modify' => true,
@@ -630,7 +624,6 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'coder',
 				'confirmed',
-				'skipcaptcha',
 				'superadmin',
 				'sysop',
 			),
