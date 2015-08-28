@@ -273,6 +273,26 @@ $wgConf->settings = array(
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
 	),
+	// Footer
+	$wgFooterIcons = array(
+	"copyright" => array(
+		"copyright" => array(), // placeholder for the built in copyright icon
+	),
+	"poweredby" => array(
+		"mediawiki" => array(
+			"src" => null, // Defaults to "$wgStylePath/common/images/poweredby_mediawiki_88x31.png"
+			"url" => "https://www.mediawiki.org/",
+			"alt" => "Powered by MediaWiki",
+	),
+),
+	"powerdby" => array(
+		"miraheze" => array( 
+			"src" => "//$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png"
+			"url" => "https://meta.miraheze.org/",
+			"alt" => "Powered by Miraheze",
+		),
+	),
+);
 
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => array(
@@ -904,13 +924,6 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
 $wgTimelineSettings->perlCommand = "/usr/bin/perl";
 $wgTimelineSettings->fontFile = 'FreeSans';
-
-# Footer icon
-$wgFooterIcons['poweredby']['miraheze'] = array(
-	'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
-	'url' => 'https://meta.miraheze.org/wiki/',
-	'alt' => 'Powered by Miraheze',
-);
 
 # ReCaptcha
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
