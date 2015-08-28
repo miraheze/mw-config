@@ -473,6 +473,7 @@ $wgConf->settings = array(
 			'autopatrolled' => array(
 				'autopatrol' => true,
 				'patrol' => true,
+				'skipcaptcha' => true,
 			),
 			'autoconfirmed' => array(
 				'mwoauthproposeconsumer' => true,
@@ -485,6 +486,7 @@ $wgConf->settings = array(
 			'confirmed' => array(
 				'editsemiprotected' => true,
 				'patrol' => true,
+				'skipcaptcha' => true,
 			),
 			'oversight' => array(
 				'abusefilter-hidden-log' => true,
