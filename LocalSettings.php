@@ -188,11 +188,13 @@ $wgConf->settings = array(
 	'wgDeleteRevisionsLimit' => array(
 		'default' => '250', // databases don't have much memory - let's not overload them in future
 	),
+
 	// Disable anon editing
 	'wmgDisableAnonEditing' => array(
 		'default' => false,
 		'antiguabarbudacalypsowiki' => true,
 	),
+
 	// Extensions
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -200,6 +202,11 @@ $wgConf->settings = array(
 	'wmgUseCreateWiki' => array(
 		'default' => false,
 		'metawiki' => true,
+		'extloadwiki' => true,
+	),
+	'wmgUseDynamicPageList' => array(
+		'default' => false,
+		'camerainfowiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(

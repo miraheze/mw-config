@@ -11,6 +11,10 @@ if ( $wmgUseCreateWiki ) {
     $wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
 }
 
+if ( $wmgUseDynamicPageList ) {
+	require_once( "$IP/extensions/DynamicPageList/DynamicPageList.php" );
+}
+
 if ( $wmgUseEchoThanks ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
