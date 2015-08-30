@@ -779,6 +779,9 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	'wmgTranslateTranslationServices' => array(
+		'default' => array(),
+	),
 
 	// UrlShortener
 	'wgUrlShortenerTemplate' => array(
