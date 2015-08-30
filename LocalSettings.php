@@ -766,14 +766,19 @@ $wgConf->settings = array(
 	),
 
         // Translate
-        'wmgTranslateBlacklist' => array(
-                'default' => array(),
-                'spiralwiki' => array(
-                     '*' => array(
-                         'en' => 'English is the source language.',
-                     ),
-                ),
-        ),
+	'wmgTranslateBlacklist' => array(
+		'default' => array(),
+		'metawiki' => array(
+			'*' => array(
+				'en' => 'English is the source language.',	
+			),
+		),
+		'spiralwiki' => array(
+			'*' => array(
+				'en' => 'English is the source language.',
+			),
+		),
+	),
 
 	// UrlShortener
 	'wgUrlShortenerTemplate' => array(
