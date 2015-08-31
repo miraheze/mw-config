@@ -111,6 +111,7 @@ $wgConf->settings = array(
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
 			'spiral.wiki' => 'spiralwiki',
+			'anuwiki.com' => 'anuwiki'
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -716,6 +717,7 @@ $wgConf->settings = array(
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
 		'spiralwiki' => 'https://spiral.wiki',
+		'anuwiki' => 'https://anuwiki.com'
 	),
 	'wgShowHostnames' => array(
 		'default' => true,
