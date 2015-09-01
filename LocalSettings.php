@@ -244,6 +244,7 @@ $wgConf->settings = array(
 		'default' => false, // Please consult John before changing variables here! -John
 		'extloadwiki' => true,
 		'spiralwiki' => true,
+		'torejorgwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
