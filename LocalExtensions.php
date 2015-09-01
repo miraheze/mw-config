@@ -67,6 +67,9 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	$wgDefaultUserOptions['visualeditor-enable'] = 1;
+	
+	// Load TemplateData
+	wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseWikiEditor ) {
