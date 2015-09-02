@@ -114,6 +114,7 @@ $wgConf->settings = array(
 	),
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
+			'anuwiki.com' => 'anuwiki',
 			'spiral.wiki' => 'spiralwiki',
 		),
 	),
@@ -418,7 +419,7 @@ $wgConf->settings = array(
 		),
 		'reviwiki' => array(
 			NS_SERVER => 'Server',
-			NS_SERVER_TALK => 'Server_talk'
+			NS_SERVER_TALK => 'Server_talk',
 		),
 	),
 	'wgContentNamespaces' => array(
@@ -724,6 +725,7 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
+		'anuwiki' => 'https://anuwiki.com',
 		'spiralwiki' => 'https://spiral.wiki',
 	),
 	'wgShowHostnames' => array(
@@ -772,7 +774,7 @@ $wgConf->settings = array(
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
-		'reviwiki' => 'Asia/Seoul'
+		'reviwiki' => 'Asia/Seoul',
 	),
 
         // Translate
@@ -780,7 +782,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		'metawiki' => array(
 			'*' => array(
-				'en' => 'English is the source language.',	
+				'en' => 'English is the source language.',
 			),
 		),
 		'spiralwiki' => array(
@@ -803,6 +805,8 @@ $wgConf->settings = array(
 	'wgUrlShortenerDomainsWhitelist' => array(
 		'default' => array(
 			'(.*\.)?miraheze\.org',
+			'spiral\.wiki',
+			'anuwiki\.com',
 		),
 	),
 
