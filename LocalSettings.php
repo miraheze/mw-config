@@ -47,6 +47,10 @@ define( 'NS_LEAGUE_TALK', 1613 );
 define( 'NS_SMITE', 1614 );
 define( 'NS_SMITE_TALK', 1615 );
 
+// ReviWiki
+define( 'NS_SERVER', 1616 );
+define( 'NS_SERVER_TALK', 1617);
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -412,6 +416,10 @@ $wgConf->settings = array(
 			NS_SMITE => 'Smite',
 			NS_SMITE_TALK => 'Smite_talk'
 		),
+		'reviwiki' => array(
+			NS_SERVER => 'Server',
+			NS_SERVER_TALK => 'Server_talk'
+		),
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
@@ -764,6 +772,7 @@ $wgConf->settings = array(
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
+		'reviwiki' => 'Asia/Seoul'
 	),
 
         // Translate
