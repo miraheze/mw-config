@@ -231,6 +231,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
+		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
@@ -252,6 +253,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please consult John before changing variables here! -John
+		'cbmediawiki' => true,
 		'extloadwiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
