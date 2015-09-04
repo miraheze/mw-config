@@ -156,6 +156,7 @@ $wgConf->settings = array(
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/callback_is_prefix.sql",
+			"$IP/extensions/TimedMediaHandler/TimedMediaHandler.sql",
 		        "$IP/extensions/Translate/sql/revtag.sql",
 		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
@@ -236,6 +237,10 @@ $wgConf->settings = array(
 		'quantixwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+	),
+	'wmgUseTimedMediaHandler' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,

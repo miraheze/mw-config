@@ -57,6 +57,12 @@ if ( $wmgUseTranslate ) {
 	require_once( "/srv/mediawiki/config/TranslateConfigHack.php" );
 }
 
+if ( $wmgUseTimedMediaHandler ) {
+	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
+	$wgFFmpeg2theoraLocation = false;
+}
+
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://parsoid1.miraheze.org:8142';
