@@ -98,13 +98,15 @@ $wgConf->settings = array(
 		),
 	),
 	'wgResourceLoaderMaxage' => array(
-		'versioned' => array(
-			'server' => 30 * 24 * 60 * 60,
-			'client' => 30 * 24 * 60 * 60,
-		),
-		'unversioned' => array(
-			'server' => 20 * 60,
-			'client' => 20 * 60,
+		'default' => array(
+			'versioned' => array(
+				'server' => 30 * 24 * 60 * 60,
+				'client' => 30 * 24 * 60 * 60,
+			),
+			'unversioned' => array(
+				'server' => 30 * 60,
+				'client' => 30 * 60,
+			),
 		),
 	),
 
