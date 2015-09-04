@@ -230,6 +230,7 @@ $wgConf->settings = array(
 		'quantixwiki' => true,
 	),
 	'wmgUseScribunto' => array(
+		'cbmediawiki' => true,
 		'default' => false,
 		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
@@ -251,6 +252,7 @@ $wgConf->settings = array(
 		'testwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
+		'cbmediawiki' => true,
 		'default' => false, // Please consult John before changing variables here! -John
 		'extloadwiki' => true,
 		'spiralwiki' => true,
