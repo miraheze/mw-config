@@ -629,7 +629,6 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
-				'skipcaptcha',
 			),
 		),
 		'+dpwiki' => array(
@@ -647,7 +646,6 @@ $wgConf->settings = array(
 				'confirmed',
 				'member',
 				'autopatrolled',
-				'skipcaptcha',
 			),
 			'owner' => array(
 				'admin',
@@ -899,10 +897,10 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['user']['read'] = false;
 	$wgGroupPermissions['member']['read'] = true;
 	$wgGroupPermissions['sysop']['read'] = true;
-	$wgAddGroups['bureaucrat'][] = 'member';
-	$wgRemoveGroups['bureaucrat'][] = 'member';
-	$wgAddGroups['sysop'][] = 'member';
-	$wgRemoveGroups['sysop'][] = 'member';
+	$wgConf->settings['wgAddGroups']['default']['bureaucrat'][] = 'member';
+	$wgConf->settings['wgAddGroups']['default']['sysop'][] = 'member';
+	$wgConf->settings['wgRemoveGroups']['default']['bureaucrat'][] = 'member';
+	$wgConf->settings['wgRemoveGroups']['default']['sysop'][] = 'member';
 	$wgWhitelistRead =
 		array(
 			"Main Page",
