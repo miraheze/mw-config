@@ -98,13 +98,15 @@ $wgConf->settings = array(
 		),
 	),
 	'wgResourceLoaderMaxage' => array(
-		'versioned' => array(
-			'server' => 30 * 24 * 60 * 60,
-			'client' => 30 * 24 * 60 * 60,
-		),
-		'unversioned' => array(
-			'server' => 20 * 60,
-			'client' => 20 * 60,
+		'default' => array(
+			'versioned' => array(
+				'server' => 30 * 24 * 60 * 60,
+				'client' => 30 * 24 * 60 * 60,
+			),
+			'unversioned' => array(
+				'server' => 30 * 60,
+				'client' => 30 * 60,
+			),
 		),
 	),
 
@@ -235,6 +237,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
+		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
@@ -256,6 +259,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please consult John before changing variables here! -John
+		'cbmediawiki' => true,
 		'extloadwiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
