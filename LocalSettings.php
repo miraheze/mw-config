@@ -23,7 +23,7 @@ $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
 $wgLocalVirtualHosts = array( '185.52.1.77' );
 
-$wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : null;
+$wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 
@@ -210,6 +210,7 @@ $wgConf->settings = array(
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
 		'anuwiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
