@@ -205,6 +205,10 @@ $wgConf->settings = array(
 	'wmgUseBabel' => array(
 		'default' => true,
 	),
+	'wmgUseCollapsibleVector' => array(
+		'default' => false,
+		'anuwiki' => true,
+	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
 		'metawiki' => true,

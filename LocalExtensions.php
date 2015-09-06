@@ -6,6 +6,10 @@ if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/cldr/cldr.php" );
 }
 
+if ( $wmgUseCollapsibleVector ) {
+	wfLoadExtension( 'CollapsibleVector' );
+}
+
 if ( $wmgUseCreateWiki ) {
     require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
     $wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
