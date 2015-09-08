@@ -1,7 +1,7 @@
 <?php
 /*
 LocalSettings.php for Miraheze.
-Authors of initial version: John Lewis, Southparkfan, Orain contributors
+Authors of initial version: Southparkfan, John Lewis, Orain contributors
 */
 
 # Load PrivateSettings (e.g. wgDBpassword)
@@ -774,6 +774,7 @@ $wgConf->settings = array(
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
+		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
