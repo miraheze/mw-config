@@ -780,6 +780,7 @@ $wgConf->settings = array(
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/Mirahezetestwiki.png",
+		'wikifuturewiki' => "//$wmgUploadHostname/wikifuturewiki/b/bc/Wiki.png",
 	),
 
 	// Timezone
