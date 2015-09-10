@@ -9,7 +9,7 @@ require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
 # Load global skins and extensions
 require_once( "/srv/mediawiki/config/GlobalSkins.php" );
-require_once( "/srv/mediawikisci/config/GlobalExtensions.php" );
+require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 
 # Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
