@@ -245,6 +245,7 @@ $wgConf->settings = array(
 		'quantixwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'wikifuturewiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
