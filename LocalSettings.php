@@ -785,6 +785,7 @@ $wgConf->settings = array(
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/Mirahezetestwiki.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
+		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/0/0c/TB_Ink_135x135.png",
 		'wikifuturewiki' => "//$wmgUploadHostname/wikifuturewiki/b/bc/Wiki.png",
 	),
 
