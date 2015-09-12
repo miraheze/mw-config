@@ -201,6 +201,7 @@ $wgConf->settings = array(
 	'wmgDisableAnonEditing' => array(
 		'default' => false,
 		'antiguabarbudacalypsowiki' => true,
+		'micropediawiki' => true,
 	),
 
 	// Extensions
