@@ -775,6 +775,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
+		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
