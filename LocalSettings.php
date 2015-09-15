@@ -117,7 +117,8 @@ $wgConf->settings = array(
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
 			'anuwiki.com' => 'anuwiki',
-			'spiral.wiki' => 'spiralwiki',
+			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
+			'spiral.wiki' => 'spiralwiki,'
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -741,6 +742,7 @@ $wgConf->settings = array(
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
 		'anuwiki' => 'https://anuwiki.com',
+		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
 		'spiralwiki' => 'https://spiral.wiki',
 	),
 	'wgShowHostnames' => array(
@@ -873,10 +875,6 @@ if ( defined( 'MW_DB' ) ) {
 	$wgDBname = 'metawiki';
 } elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
-} elseif ( preg_match( '/^www\.(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-    $wgDBname = $matches[1] . 'wiki';
-} elseif ( $search = array_search( 'http://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
-	$wgDBname = $search;
 } elseif ( $search = array_search( 'https://' . $wmgHostname, $wgConf->settings['wgServer'] ) ) {
 	$wgDBname = $search;
 } else {
