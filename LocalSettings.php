@@ -235,6 +235,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMultiUpload' => array(
 		'default' => false,
+		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
