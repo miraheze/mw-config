@@ -249,7 +249,6 @@ $wgConf->settings = array(
 		'quantixwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
-		'wikifuturewiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
@@ -793,7 +792,6 @@ $wgConf->settings = array(
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/Mirahezetestwiki.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/d/df/20150913_WelcomeWiki-Logo_TranspWritten135x135.png",
-		'wikifuturewiki' => "//$wmgUploadHostname/wikifuturewiki/b/bc/Wiki.png",
 	),
 
 	// Timezone
