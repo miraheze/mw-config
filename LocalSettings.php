@@ -229,12 +229,14 @@ $wgConf->settings = array(
 	'wmgUseFlow' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'mecanonwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
 	'wmgUseMultiUpload' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'mecanonwiki' => true, 
 		'quantixwiki' => true,
 	),
 	'wmgUseScribunto' => array(
@@ -265,6 +267,7 @@ $wgConf->settings = array(
 		'cbmediawiki' => true,
 		'clicordiwiki' => true,
 		'extloadwiki' => true,
+		'mecanonwiki' => true,
 		'nwpwiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
