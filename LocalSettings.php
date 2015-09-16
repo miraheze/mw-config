@@ -366,6 +366,7 @@ $wgConf->settings = array(
 	// License
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'diavwiki' => 'https://static.miraheze.org/diavwiki/f/fc/Copyrighted_Content.png',
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 	),
 	'wgRightsPage' => array(
@@ -373,10 +374,12 @@ $wgConf->settings = array(
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
+		'diavwiki' => 'All Rights Reserved',
 		'spiralwiki' => 'CC0 Public Domain',
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'diavwiki' => 'https://diav.miraheze.org/wiki/Project:Copyrights',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
 
