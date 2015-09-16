@@ -263,6 +263,7 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 		'testwiki' => true,
+		'welcomewiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please consult John before changing variables here! -John
