@@ -777,7 +777,6 @@ $wgConf->settings = array(
 	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
-		'diavwiki' => 'cologneblue',
 	),
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
