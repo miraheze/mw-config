@@ -203,6 +203,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'antiguabarbudacalypsowiki' => true,
 		'micropediawiki' => true,
+		'welcomewiki' => true,
 	),
 
 	// Extensions
