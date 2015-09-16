@@ -118,7 +118,7 @@ $wgConf->settings = array(
 		'default' => array(
 			'anuwiki.com' => 'anuwiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
-			'spiral.wiki' => 'spiralwiki,'
+			'spiral.wiki' => 'spiralwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
