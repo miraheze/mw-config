@@ -371,6 +371,8 @@ $wgConf->settings = array(
 	),
 	'wgRightsPage' => array(
 		'default' => '',
+		'diavwiki' => 'Project:Copyrights',
+		'quantixwiki' => 'Project:Copyrights',
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
