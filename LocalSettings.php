@@ -270,6 +270,7 @@ $wgConf->settings = array(
 		'cbmediawiki' => true,
 		'clicordiwiki' => true,
 		'extloadwiki' => true,
+		'genwiki' => true,
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
 		'spiralwiki' => true,
