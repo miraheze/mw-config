@@ -369,7 +369,7 @@ $wgConf->settings = array(
 	// License
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
-		'diavwiki' => 'https://static.miraheze.org/diavwiki/f/fc/Copyrighted_Content.png',
+		'diavwiki' => '//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png',
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 	),
 	'wgRightsPage' => array(
