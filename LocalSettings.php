@@ -15,6 +15,7 @@ require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
+
 $wmgUploadHostname = "static.miraheze.org";
 
 # Initialize $wgConf
