@@ -222,6 +222,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
 	),
@@ -244,6 +245,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
@@ -278,6 +280,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
+		'allthetropeswiki' => true,
 	),
 
 	// Files
@@ -793,6 +796,7 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/b/b0/New_Logo_080314.png",
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
