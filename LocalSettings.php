@@ -222,6 +222,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
 	),
@@ -244,6 +245,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
@@ -278,6 +280,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
+		'allthetropeswiki' => true,
 	),
 
 	// Files
