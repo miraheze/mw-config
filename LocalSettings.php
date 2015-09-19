@@ -201,6 +201,7 @@ $wgConf->settings = array(
 	// Disable anon editing
 	'wmgDisableAnonEditing' => array(
 		'default' => false,
+		'8stationwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'micropediawiki' => true,
 		'welcomewiki' => true,
@@ -238,6 +239,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMultiUpload' => array(
 		'default' => false,
+		'8stationwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'extloadwiki' => true,
 		'mecanonwiki' => true, 
@@ -790,6 +792,7 @@ $wgConf->settings = array(
 	),
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
+		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/6/64/Favicon.ico",
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
@@ -798,6 +801,7 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/3/3b/Wiki_logo.png",
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
 		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
