@@ -257,6 +257,10 @@ $wgConf->settings = array(
 		'spiraltestwiki' => true,
 		'tanodswiki' => true,
 	),
+	'wmgUseSubpageFun' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
 		'extloadwiki' => true,

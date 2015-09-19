@@ -44,6 +44,10 @@ if ( $wmgUseScribunto ) {
 	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 }
 
+if ( $wgUseSubpageFun ) {
+	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
+}
+
 if ( $wmgUseTranslate ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	require_once( "$IP/extensions/Translate/Translate.php" );
