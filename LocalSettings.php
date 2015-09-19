@@ -260,6 +260,7 @@ $wgConf->settings = array(
 	'wmgUseSubpageFun' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
