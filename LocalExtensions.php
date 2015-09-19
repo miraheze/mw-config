@@ -44,7 +44,7 @@ if ( $wmgUseScribunto ) {
 	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 }
 
-if ( $wgUseSubpageFun ) {
+if ( $wmgUseSubpageFun ) {
 	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 }
 
