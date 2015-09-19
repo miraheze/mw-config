@@ -805,6 +805,7 @@ $wgConf->settings = array(
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
+		'reviwiki' => "//upload.wikimedia.org/wikipedia/thumb/8/84/Gnome-dev-network.svg/1024px-Gnome-dev-network.svg.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/Mirahezetestwiki.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
