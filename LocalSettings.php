@@ -6,7 +6,7 @@ Authors of initial version: Southparkfan, John Lewis, Orain contributors
 
 # Load PrivateSettings (e.g. wgDBpassword)
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
-
+logo
 # Load global skins and extensions
 require_once( "/srv/mediawiki/config/GlobalSkins.php" );
 require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
@@ -790,6 +790,7 @@ $wgConf->settings = array(
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
+		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
