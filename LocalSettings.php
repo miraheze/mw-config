@@ -3,10 +3,9 @@
 LocalSettings.php for Miraheze.
 Authors of initial version: Southparkfan, John Lewis, Orain contributors
 */
-
 # Load PrivateSettings (e.g. wgDBpassword)
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
-
+logo
 # Load global skins and extensions
 require_once( "/srv/mediawiki/config/GlobalSkins.php" );
 require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
@@ -790,6 +789,7 @@ $wgConf->settings = array(
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
+		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
@@ -799,6 +799,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
+		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
