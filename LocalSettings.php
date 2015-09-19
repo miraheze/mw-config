@@ -253,6 +253,7 @@ $wgConf->settings = array(
 		'quantixwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'tanodswiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
