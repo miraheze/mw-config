@@ -540,7 +540,7 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'editor',
 			),
-			'admin' => array(
+			'sysop' => array(
 				'bot',
 				'editor',
 			),
