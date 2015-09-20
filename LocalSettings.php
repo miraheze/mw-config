@@ -467,6 +467,12 @@ $wgConf->settings = array(
 		'default' => array( NS_MAIN ),
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 	),
+	'+wgNamespacesWithSubpages' => array(
+		'default' => array(),
+		'metawiki' => array(
+			NS_MAIN => true,
+		),
+	),
 
 	// OAuth
 	'wgMWOAuthCentralWiki' => array(
