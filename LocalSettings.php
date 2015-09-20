@@ -615,6 +615,28 @@ $wgConf->settings = array(
 				'createwiki' => true,
 			),
 		),
+		'+poserdazfreebieswiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'user' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'autoconfirmed' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+			'confirmed' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+			'sysop' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 		'+quantixwiki' => array(
 			'admin' => array(
 				'read' => true,
