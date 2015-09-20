@@ -540,6 +540,15 @@ $wgConf->settings = array(
 				'consul',
 			),
 		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'bot',
+				'editor',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
