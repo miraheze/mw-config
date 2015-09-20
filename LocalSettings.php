@@ -244,6 +244,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
+		'cinemawiki' => true,
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
@@ -285,6 +286,7 @@ $wgConf->settings = array(
 		'nwpwiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
+		'cinemawiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -532,6 +534,15 @@ $wgConf->settings = array(
 				'bot',
 				'bureaucrat',
 				'consul',
+			),
+		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'admin' => array(
+				'bot',
+				'editor',
 			),
 		),
 	),
