@@ -469,7 +469,7 @@ $wgConf->settings = array(
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
-		'metawiki' => array(
+		'+metawiki' => array(
 			NS_MAIN => true,
 		),
 	),
