@@ -285,6 +285,7 @@ $wgConf->settings = array(
 		'nwpwiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
+		'unikumwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
