@@ -237,6 +237,11 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
+	'wmgUseImageMap' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'creersonarbrewiki' => true,
+	),
 	'wmgUseMultiUpload' => array(
 		'default' => false,
 		'8stationwiki' => true,
