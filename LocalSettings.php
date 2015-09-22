@@ -508,6 +508,10 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
+		'+reviwiki' => array(
+			NS_MAIN => true,
+			NS_SERVER => true,
+		),
 		'+unikumwiki' => array(
 			NS_MAIN => true,
 		),
