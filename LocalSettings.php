@@ -178,6 +178,10 @@ $wgConf->settings = array(
 	),
 
 	// Database
+	'wgCompressRevisions' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+	),
 	'wgDBtype' => array(
 		'default' => 'mysql',
 	),
