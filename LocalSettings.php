@@ -486,6 +486,9 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
+		'+unikumwiki' => array(
+			NS_MAIN => true,
+		),
 	),
 
 	// OAuth
