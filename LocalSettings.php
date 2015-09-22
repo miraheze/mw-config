@@ -636,6 +636,11 @@ $wgConf->settings = array(
 				'user' => true, // for "Allow logged in users" protection level
 			),
 		),
+		'+catboxwiki' => array(
+			'user' => array(
+				'upload_by_url' => true,
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
