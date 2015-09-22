@@ -27,11 +27,15 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefin
 
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 
+// catboxwiki
+define( 'NS_COMIC', 1618 );
+define( 'NS_COMIC_TALK', 1619 );
+
 // metawiki
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
 
-// QuantixWiki
+// quantixwiki
 define( 'NS_HL2RP', 1602 );
 define( 'NS_HL2RP_TALK', 1603 );
 define( 'NS_ARP', 1604 );
@@ -466,10 +470,14 @@ $wgConf->settings = array(
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
+		'catboxwiki' => array( NS_MAIN, NS_COMIC ),
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
+		'+catboxwiki' => array(
+			NS_COMIC => true,
+		),
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
