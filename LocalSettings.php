@@ -228,6 +228,7 @@ $wgConf->settings = array(
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'allthetropestestwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
 	),
@@ -258,6 +259,7 @@ $wgConf->settings = array(
 	'wmgUseScribunto' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'allthetropestestwiki' => true,
 		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'catboxwiki' => true,
@@ -271,6 +273,7 @@ $wgConf->settings = array(
 	'wmgUseSubpageFun' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'allthetropestestwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
@@ -489,6 +492,9 @@ $wgConf->settings = array(
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
 		'+allthetropeswiki' => array(
+			NS_MAIN => true,
+		),
+		'+allthetropestestwiki' => array(
 			NS_MAIN => true,
 		),
 		'+catboxwiki' => array(
