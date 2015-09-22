@@ -480,6 +480,9 @@ $wgConf->settings = array(
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
+		'+allthetropeswiki' => array(
+			NS_MAIN => true,
+		),
 		'+catboxwiki' => array(
 			NS_COMIC => true,
 		),
