@@ -528,6 +528,14 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'editor',
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -620,6 +628,13 @@ $wgConf->settings = array(
 			),
 			'user' => array(
 				'user' => true, // for "Allow logged in users" protection level
+			),
+		),
+		'+cinemawiki' => array(
+			'editor' => array(
+				'edit' => true,
+				'move' => true,
+				'protect' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -727,6 +742,14 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'editor',
 			),
 		),
 		'+dpwiki' => array(
