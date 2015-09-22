@@ -250,6 +250,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'8stationwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'catboxwiki' => true,
 		'extloadwiki' => true,
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
@@ -259,6 +260,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'catboxwiki' => true,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
 		'quantixwiki' => true,
@@ -307,10 +309,12 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
+		'catboxwiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
+		'catboxwiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgFileExtensions' => array(
@@ -448,6 +452,10 @@ $wgConf->settings = array(
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
+		'catboxwiki' => array(
+			NS_COMIC => 'Comic',
+			NS_COMIC_TALK => 'Comic_talk'
+		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
@@ -485,6 +493,7 @@ $wgConf->settings = array(
 		),
 		'+catboxwiki' => array(
 			NS_COMIC => true,
+			NS_MAIN => true,
 		),
 		'+metawiki' => array(
 			NS_MAIN => true,
