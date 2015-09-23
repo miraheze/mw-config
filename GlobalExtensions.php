@@ -26,4 +26,5 @@ wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'Poem' );
 wfLoadExtension( 'SpamBlacklist' );

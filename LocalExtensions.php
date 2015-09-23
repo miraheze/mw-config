@@ -1,6 +1,10 @@
 <?php
 
 // Set up extensions for use on wikis that are not global
+if ( $wmgUseAdminLinks ) {
+	require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
+}
+
 if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/Babel/Babel.php" );
 	require_once( "$IP/extensions/cldr/cldr.php" );
@@ -11,8 +15,8 @@ if ( $wmgUseCollapsibleVector ) {
 }
 
 if ( $wmgUseCreateWiki ) {
-    require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
-    $wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
+	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
 }
 
 if ( $wmgUseDynamicPageList ) {
@@ -44,8 +48,17 @@ if ( $wmgUseScribunto ) {
 	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 }
 
+if ( $wmgUseSocialProfile ) {
+	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+}
+
 if ( $wmgUseSubpageFun ) {
 	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
+}
+
+if ( $wmgUseTabsCombination ) {
+	require_once( "$IP/extensions/Tabber/Tabber.php" );
+	require_once( "$IP/extensions/Tabs/Tabs.php" );
 }
 
 if ( $wmgUseTranslate ) {

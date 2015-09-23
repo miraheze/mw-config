@@ -208,6 +208,11 @@ $wgConf->settings = array(
 	),
 
 	// Extensions
+	'wmgUseAdminLinks' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseBabel' => array(
 		'default' => true,
 	),
@@ -257,7 +262,18 @@ $wgConf->settings = array(
 		'spiraltestwiki' => true,
 		'tanodswiki' => true,
 	),
+	// Do not ever enable without contacting me! --Southparkfan
+	'wmgUseSocialProfile' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'micropediawiki' => true,
+	),
 	'wmgUseSubpageFun' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
+	'wmgUseTabsCombination' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
