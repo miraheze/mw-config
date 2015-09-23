@@ -40,6 +40,10 @@ if ( $wmgUseFlow ) {
 	}
 }
 
+if ( $wmgUseImageMap ) {
+	wfLoadExtension( 'ImageMap' );
+}
+
 if ( $wmgUseMultiUpload ) {
 	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 }

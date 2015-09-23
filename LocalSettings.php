@@ -27,11 +27,15 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefin
 
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 
+// catboxwiki
+define( 'NS_COMIC', 1618 );
+define( 'NS_COMIC_TALK', 1619 );
+
 // metawiki
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
 
-// QuantixWiki
+// quantixwiki
 define( 'NS_HL2RP', 1602 );
 define( 'NS_HL2RP_TALK', 1603 );
 define( 'NS_ARP', 1604 );
@@ -174,6 +178,10 @@ $wgConf->settings = array(
 	),
 
 	// Database
+	'wgCompressRevisions' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+	),
 	'wgDBtype' => array(
 		'default' => 'mysql',
 	),
@@ -229,6 +237,7 @@ $wgConf->settings = array(
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'allthetropestestwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
 	),
@@ -242,10 +251,16 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
+	'wmgUseImageMap' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'creersonarbrewiki' => true,
+	),
 	'wmgUseMultiUpload' => array(
 		'default' => false,
 		'8stationwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'catboxwiki' => true,
 		'extloadwiki' => true,
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
@@ -253,8 +268,10 @@ $wgConf->settings = array(
 	'wmgUseScribunto' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'allthetropestestwiki' => true,
 		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'catboxwiki' => true,
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
 		'quantixwiki' => true,
@@ -271,6 +288,7 @@ $wgConf->settings = array(
 	'wmgUseSubpageFun' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'allthetropestestwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseTabsCombination' => array(
@@ -299,8 +317,10 @@ $wgConf->settings = array(
 		'genwiki' => true,
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
+		'recherchesdocumentaireswiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
+		'unikumwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -313,10 +333,12 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
+		'catboxwiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
+		'catboxwiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgFileExtensions' => array(
@@ -454,6 +476,10 @@ $wgConf->settings = array(
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
+		'catboxwiki' => array(
+			NS_COMIC => 'Comic',
+			NS_COMIC_TALK => 'Comic_talk'
+		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
@@ -481,7 +507,31 @@ $wgConf->settings = array(
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
+		'catboxwiki' => array( NS_MAIN, NS_COMIC ),
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
+	),
+	'+wgNamespacesWithSubpages' => array(
+		'default' => array(),
+		'+allthetropeswiki' => array(
+			NS_MAIN => true,
+		),
+		'+allthetropestestwiki' => array(
+			NS_MAIN => true,
+		),
+		'+catboxwiki' => array(
+			NS_COMIC => true,
+			NS_MAIN => true,
+		),
+		'+metawiki' => array(
+			NS_MAIN => true,
+		),
+		'+reviwiki' => array(
+			NS_MAIN => true,
+			NS_SERVER => true,
+		),
+		'+unikumwiki' => array(
+			NS_MAIN => true,
+		),
 	),
 
 	// OAuth
@@ -603,6 +653,11 @@ $wgConf->settings = array(
 				'user' => true, // for "Allow logged in users" protection level
 			),
 		),
+		'+catboxwiki' => array(
+			'user' => array(
+				'upload_by_url' => true,
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -629,6 +684,28 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
+			),
+		),
+		'+poserdazfreebieswiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'user' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'autoconfirmed' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+			'confirmed' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+			'sysop' => array(
+				'edit' => true,
+				'createpage' => true,
 			),
 		),
 		'+quantixwiki' => array(
@@ -830,16 +907,17 @@ $wgConf->settings = array(
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
-		'reviwiki' => "//upload.wikimedia.org/wikipedia/thumb/8/84/Gnome-dev-network.svg/1024px-Gnome-dev-network.svg.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/Mirahezetestwiki.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
+		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/d/df/20150913_WelcomeWiki-Logo_TranspWritten135x135.png",
 	),
 
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
+		'catboxwiki' => 'America/Detroit',
 		'reviwiki' => 'Asia/Seoul',
 	),
 
@@ -1037,4 +1115,15 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
                 'add_interwiki_prefix' => false,
                 'omit_bots' => true,
         );
+}
+
+# Will remove this later --SPF
+if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
+	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
+	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+}
+
+if ( $wgDBname == 'allthetropeswiki' ) {
+	$wgReadOnly = true;
+	$wgCompressRevisions = true;
 }
