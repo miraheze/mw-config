@@ -1099,3 +1099,14 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
                 'omit_bots' => true,
         );
 }
+
+# Will remove this later --SPF
+if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
+	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
+	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+}
+
+if ( $wgDBname == 'allthetropeswiki' ) {
+	$wgReadOnly = true;
+	$wgCompressRevisions = true;
+}
