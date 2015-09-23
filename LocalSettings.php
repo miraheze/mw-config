@@ -301,6 +301,7 @@ $wgConf->settings = array(
 		'genwiki' => true,
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
+		'recherchesdocumentaireswiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
