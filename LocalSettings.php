@@ -899,6 +899,7 @@ $wgConf->settings = array(
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
+		'catboxwiki' => 'America/Detroit',
 		'reviwiki' => 'Asia/Seoul',
 	),
 
