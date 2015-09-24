@@ -256,6 +256,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'creersonarbrewiki' => true,
 	),
+	'wmgUseInputBox' => array(
+		'default' => true,
+		'allthetropeswiki' => false, // breaks editing
+	),
 	'wmgUseMultiUpload' => array(
 		'default' => false,
 		'8stationwiki' => true,

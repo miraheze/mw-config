@@ -44,6 +44,10 @@ if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
 
+if ( $wmgUseInputBox ) {
+	wfLoadExtension( 'InputBox' );
+}
+
 if ( $wmgUseMultiUpload ) {
 	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 }
