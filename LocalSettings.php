@@ -563,6 +563,14 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'editor',
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -660,6 +668,13 @@ $wgConf->settings = array(
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
+			),
+		),
+		'+cinemawiki' => array(
+			'editor' => array(
+				'edit' => true,
+				'move' => true,
+				'protect' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -767,6 +782,14 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'editor',
 			),
 		),
 		'+dpwiki' => array(
@@ -1036,6 +1059,11 @@ require_once( "/srv/mediawiki/config/RedisConfig.php" );
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['bigdelete'] = false;
 
+if ( $wgDBname == 'cinemawiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+}
+
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadDirectory = "/srv/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
@@ -1128,6 +1156,6 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 }
 
 if ( $wgDBname == 'allthetropeswiki' ) {
-	$wgReadOnly = true;
 	$wgCompressRevisions = true;
+	require_once( "$IP/extensions/Variables/Variables.php" );
 }
