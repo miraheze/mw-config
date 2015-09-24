@@ -1152,7 +1152,6 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 }
 
 if ( $wgDBname == 'allthetropeswiki' ) {
-	$wgReadOnly = true;
 	$wgCompressRevisions = true;
 	require_once( "$IP/extensions/Variables/Variables.php" );
 }
