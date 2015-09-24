@@ -559,6 +559,14 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'editor',
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -656,6 +664,13 @@ $wgConf->settings = array(
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
+			),
+		),
+		'+cinemawiki' => array(
+			'editor' => array(
+				'edit' => true,
+				'move' => true,
+				'protect' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -763,6 +778,14 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'editor',
 			),
 		),
 		'+dpwiki' => array(
@@ -1031,6 +1054,11 @@ require_once( "/srv/mediawiki/config/RedisConfig.php" );
 // Hard overrides that don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['bigdelete'] = false;
+
+if ( $wgDBname == 'cinemawiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+}
 
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadDirectory = "/srv/mediawiki-static/$wgDBname";
