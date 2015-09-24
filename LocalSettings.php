@@ -275,9 +275,11 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'kurumiwiki' => true,
 		'quantixwiki' => true,
+		'rawdatawiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 		'tanodswiki' => true,
+		'rawdatawiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
 	'wmgUseSocialProfile' => array(
@@ -317,6 +319,7 @@ $wgConf->settings = array(
 		'genwiki' => true,
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
+		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
