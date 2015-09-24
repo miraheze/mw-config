@@ -211,6 +211,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'8stationwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'cinemawiki' => true,
 		'micropediawiki' => true,
 		'welcomewiki' => true,
 	),
@@ -559,14 +560,6 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
-		'+cinemawiki' => array(
-			'bureaucrat' => array(
-				'editor',
-			),
-			'sysop' => array(
-				'editor',
-			),
-		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -664,13 +657,6 @@ $wgConf->settings = array(
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
-			),
-		),
-		'+cinemawiki' => array(
-			'editor' => array(
-				'edit' => true,
-				'move' => true,
-				'protect' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -778,14 +764,6 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
-			),
-		),
-		'+cinemawiki' => array(
-			'bureaucrat' => array(
-				'editor',
-			),
-			'sysop' => array(
-				'editor',
 			),
 		),
 		'+dpwiki' => array(
