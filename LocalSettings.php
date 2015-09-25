@@ -276,6 +276,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'allthetropestestwiki' => true,
+		'aryamanwiki' => true,
 		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'catboxwiki' => true,
