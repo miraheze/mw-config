@@ -1161,9 +1161,9 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
         require_once( "$IP/extensions/CSS/CSS.php" );
         require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
         require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+        require_once( "$IP/extensions/Variables/Variables.php" );
 }
 
 if ( $wgDBname == 'allthetropeswiki' ) {
 	$wgCompressRevisions = true;
-	require_once( "$IP/extensions/Variables/Variables.php" );
 }
