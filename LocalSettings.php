@@ -1157,6 +1157,10 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
+        require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+        require_once( "$IP/extensions/CSS/CSS.php" );
+        require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
+        require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
 
 if ( $wgDBname == 'allthetropeswiki' ) {
