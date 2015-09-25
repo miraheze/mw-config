@@ -122,6 +122,7 @@ $wgConf->settings = array(
 		'default' => array(
 			'anuwiki.com' => 'anuwiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
+			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
 			'spiral.wiki' => 'spiralwiki',
 		),
 	),
@@ -882,6 +883,7 @@ $wgConf->settings = array(
 		'default' => 'https://$lang.miraheze.org',
 		'anuwiki' => 'https://anuwiki.com',
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
+		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
 	),
 	'wgShowHostnames' => array(
