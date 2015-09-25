@@ -272,11 +272,11 @@ $wgConf->settings = array(
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
 	),
-	'wmgUseScribunto' => array
+	'wmgUseScribunto' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'allthetropestestwiki' => true,
-		'aryamanwiki => true,'
+		'aryamanwiki => true,
 		'cbmediawiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'catboxwiki' => true,
