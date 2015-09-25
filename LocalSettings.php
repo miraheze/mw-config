@@ -228,6 +228,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'anuwiki' => true,
 		'extloadwiki' => true,
 	),
@@ -255,6 +256,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseImageMap' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'creersonarbrewiki' => true,
 	),
@@ -265,6 +267,7 @@ $wgConf->settings = array(
 	'wmgUseMultiUpload' => array(
 		'default' => false,
 		'8stationwiki' => true,
+		'allthetropeswiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'catboxwiki' => true,
 		'cinemawiki' => true,
@@ -319,6 +322,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'cbmediawiki' => true,
 		'cinemawiki' => true,
 		'clicordiwiki' => true,
@@ -330,6 +334,7 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
+		
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
