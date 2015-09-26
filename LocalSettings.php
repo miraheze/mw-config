@@ -314,6 +314,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'metawiki' => true,
 		'spiralwiki' => true,
