@@ -20,7 +20,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
                         <tbody>
                             <tr>
                                 <td>Host: {$_SERVER['HTTP_HOST']}</td>
-                                <td>Visitor IP: {$_SERVER['REMOTE_ADDR']}/td>
+                                <td>Visitor IP: {$_SERVER['REMOTE_ADDR']}</td>
                             </tr>
                             <tr>
                                 <td>Request URL: {$requestURL}</td>
