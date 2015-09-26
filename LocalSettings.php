@@ -334,7 +334,6 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
-		
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
