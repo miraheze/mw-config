@@ -64,6 +64,10 @@ if ( $wmgUseSubpageFun ) {
 	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 }
 
+if ( $wmgUseSyntaxHighlight ) {
+	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+}
+
 if ( $wmgUseTabsCombination ) {
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
 	require_once( "$IP/extensions/Tabs/Tabs.php" );

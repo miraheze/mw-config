@@ -305,6 +305,10 @@ $wgConf->settings = array(
 		'allthetropestestwiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseSyntaxHighlight' => array(
+		'default' => false,
+		'extloadwiki' => false,
+	),
 	'wmgUseTabsCombination' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
