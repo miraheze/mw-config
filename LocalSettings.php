@@ -336,6 +336,7 @@ $wgConf->settings = array(
 		'nwpwiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
+		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
