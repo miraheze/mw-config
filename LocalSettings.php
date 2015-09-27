@@ -764,7 +764,7 @@ $wgConf->settings = array(
 			),
 			'testgroup' => array(
 				'read' => true,
-				'testgroup => true,
+				'testgroup' => true,
 			),
 		),
 	),
