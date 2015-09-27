@@ -1159,6 +1159,10 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
         require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
         require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
         require_once( "$IP/extensions/Variables/Variables.php" );
+	require_once( "$IP/extensions/PageImages/PageImages.php" );
+	require_once( "$IP/extensions/Popups/Popups.php" );
+	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
 
 if ( $wgDBname == 'allthetropeswiki' ) {
