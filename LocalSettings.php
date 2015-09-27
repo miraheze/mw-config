@@ -848,6 +848,7 @@ $wgConf->settings = array(
 		),
 		'+testwiki' => array(
 			'bureaucrat',
+			'consul',
 		),
 	),
 	'+wgRestrictionTypes' => array(
