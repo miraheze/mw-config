@@ -165,6 +165,7 @@ $wgConf->settings = array(
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/callback_is_prefix.sql",
 			"$IP/extensions/TimedMediaHandler/TimedMediaHandler.sql",
+			"$IP/extensions/TitleKey/titlekey.sql",
 		        "$IP/extensions/Translate/sql/revtag.sql",
 		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
