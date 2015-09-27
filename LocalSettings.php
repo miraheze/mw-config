@@ -307,7 +307,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSyntaxHighlight' => array(
 		'default' => false,
-		'extloadwiki' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseTabsCombination' => array(
 		'default' => false,
