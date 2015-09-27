@@ -764,6 +764,10 @@ $wgConf->settings = array(
 				'read' => true,
 				'consul' => true,
 			),
+			'testgroup' => array(
+				'read' => true,
+				'testgroup' => true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
@@ -815,9 +819,6 @@ $wgConf->settings = array(
 			),
 		),
 		'+testwiki' => array(
-			'bureaucrat' => array(
-				'testgroup',
-			),
 			'consul' => array(
 				'bot',
 				'bureaucrat',
@@ -849,6 +850,7 @@ $wgConf->settings = array(
 		),
 		'+testwiki' => array(
 			'bureaucrat',
+			'consul',
 		),
 	),
 	'+wgRestrictionTypes' => array(
