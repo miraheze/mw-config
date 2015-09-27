@@ -527,6 +527,7 @@ $wgConf->settings = array(
 		'default' => array( NS_MAIN ),
 		'catboxwiki' => array( NS_MAIN, NS_COMIC ),
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
+		'reviwiki' => array( NS_MAIN, NS_SERVER ),
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
