@@ -819,6 +819,9 @@ $wgConf->settings = array(
 			),
 		),
 		'+testwiki' => array(
+			'bureaucrat' => array(
+				'testgroup'
+			),
 			'consul' => array(
 				'bot',
 				'bureaucrat',
