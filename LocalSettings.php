@@ -319,6 +319,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'rtwiki' => true,
 		'testwiki' => true,
 		'welcomewiki' => true,
 	),
@@ -940,6 +941,7 @@ $wgConf->settings = array(
 		'default' => 'UTC',
 		'catboxwiki' => 'America/Detroit',
 		'reviwiki' => 'Asia/Seoul',
+		'rtwiki' => 'Asia/Seoul',
 	),
 
         // Translate
