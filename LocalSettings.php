@@ -342,6 +342,7 @@ $wgConf->settings = array(
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
 		'pqwiki' => true,
+		'permanentfuturelabwiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
 		'spiralwiki' => true,
