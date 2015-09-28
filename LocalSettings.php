@@ -1171,7 +1171,3 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
-
-if ( $wgDBname == 'allthetropeswiki' ) {
-	$wgCompressRevisions = true;
-}
