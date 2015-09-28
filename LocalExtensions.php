@@ -53,9 +53,9 @@ if ( $wmgUseInputBox ) {
 }
 
 if ( $wmgUseMsPackage ) {
-	require_once "$IP/extensions/MsUpload/MsUpload.php";
-	require_once "$IP/extensions/MsLinks/MsLinks.php";
-	require_once "$IP/extensions/MsCatSelect/MsCatSelect.php";
+	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+	require_once( "$IP/extensions/MsLinks/MsLinks.php" );
+	require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
 }
 
 if ( $wmgUseMultiUpload ) {
