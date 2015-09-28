@@ -275,7 +275,7 @@ $wgConf->settings = array(
 	'wmgUseMsPackage' => array(
 		'default' => false,
 		'catboxwiki' => false,
-		'extloadwiki' => false,
+		'extloadwiki' => true,
 		'quantixwiki' => false,
 	),
 	'wmgUseMultiUpload' => array(
