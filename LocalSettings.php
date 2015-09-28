@@ -224,6 +224,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'testwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
