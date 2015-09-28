@@ -272,6 +272,12 @@ $wgConf->settings = array(
 		'default' => true,
 		'allthetropeswiki' => false, // breaks editing
 	),
+	'wmgUseMsPackage' => array(
+		'default' => false,
+		'catboxwiki' => false,
+		'extloadwiki' => false,
+		'quantixwiki' => false,
+	),
 	'wmgUseMultiUpload' => array(
 		'default' => false,
 		'8stationwiki' => true,

@@ -52,6 +52,12 @@ if ( $wmgUseInputBox ) {
 	wfLoadExtension( 'InputBox' );
 }
 
+if ( $wmgUseMsPackage ) {
+	require_once "$IP/extensions/MsUpload/MsUpload.php";
+	require_once "$IP/extensions/MsLinks/MsLinks.php";
+	require_once "$IP/extensions/MsCatSelect/MsCatSelect.php";
+}
+
 if ( $wmgUseMultiUpload ) {
 	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 }
