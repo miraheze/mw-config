@@ -10,6 +10,10 @@ if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/cldr/cldr.php" );
 }
 
+if ( $wmgUseCharInsert ) {
+	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+}
+
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
@@ -50,6 +54,12 @@ if ( $wmgUseInputBox ) {
 
 if ( $wmgUseMultiUpload ) {
 	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+}
+
+if ( $wmgUsePopups ) {
+        require_once( "$IP/extensions/PageImages/PageImages.php" );
+        require_once( "$IP/extensions/Popups/Popups.php" );
+        require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 }
 
 if ( $wmgUseScribunto ) {
@@ -94,6 +104,10 @@ if ( $wmgUseTimedMediaHandler ) {
 	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
 	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 	$wgFFmpeg2theoraLocation = false;
+}
+
+if ( $wmgUseTitleKey ) {
+	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
 
 if ( $wmgUseVisualEditor ) {

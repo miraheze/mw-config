@@ -228,6 +228,11 @@ $wgConf->settings = array(
 	'wmgUseBabel' => array(
 		'default' => true,
 	),
+	'wmgUseCharInsert' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -277,6 +282,11 @@ $wgConf->settings = array(
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
 	),
+	'wmgUsePopups' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseScribunto' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -317,6 +327,11 @@ $wgConf->settings = array(
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
+		'extloadwiki' => true,
+	),
+	'wmgUseTitleKey' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseTranslate' => array(
@@ -1161,13 +1176,8 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-        require_once( "$IP/extensions/CharInsert/CharInsert.php" );
-        require_once( "$IP/extensions/CSS/CSS.php" );
-        require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
+	require_once( "$IP/extensions/CSS/CSS.php" );
+	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
         require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
         require_once( "$IP/extensions/Variables/Variables.php" );
-	require_once( "$IP/extensions/PageImages/PageImages.php" );
-	require_once( "$IP/extensions/Popups/Popups.php" );
-	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
-	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
