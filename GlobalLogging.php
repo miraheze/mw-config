@@ -12,6 +12,7 @@ $wgDebugLogGroups = array(
 	'collection' => "$wmgLogDir/debuglogs/collection.log",
 	'CreateWiki' => "$wmgLogDir/debuglogs/CreateWiki.log",
 	'DBPerformance' => "$wmgLogDir/debuglogs/dbperformance.log",
+	'error' => "$wmgLogDir/debuglogs/php-error.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
