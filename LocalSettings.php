@@ -27,6 +27,18 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefin
 
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 
+// allthetropeswiki
+
+define( "NS_TROPEWORKSHOP", 1620 );
+define( "NS_TROPEWORKSHOP_TALK", 1621 );
+$wgExtraNamespaces[NS_TROPEWORKSHOP] = "Trope Workshop";
+$wgExtraNamespaces[NS_TROPEWORKSHOP_TALK] = "Trope Workshop talk";   // underscore required
+$wgNamespacesWithSubpages[NS_TROPEWORKSHOP] = true;            //subpages enabled for the namespace
+$wgNamespaceAliases['ATT'] = NS_PROJECT;
+$wgNamespaceAliases['ATT_talk'] = NS_PROJECT_TALK;
+$wgNamespaceAliases['YKTTW' ] = NS_TROPEWORKSHOP;
+$wgNamespaceAliases['YKTTW_talk'] = NS_TROPEWORKSHOP_TALK;
+
 // catboxwiki
 define( 'NS_COMIC', 1618 );
 define( 'NS_COMIC_TALK', 1619 );
