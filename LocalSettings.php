@@ -866,6 +866,10 @@ $wgConf->settings = array(
 		'loginwiki' => array(
 			'*' => array(
 				'edit' => true,
+		'testwiki' => array(
+			'sysop' => array(
+				'nuke' => false,
+				),
 			),
 		),
 	),
