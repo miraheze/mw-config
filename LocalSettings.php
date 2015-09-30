@@ -108,12 +108,12 @@ $wgConf->settings = array(
 	'wgResourceLoaderMaxage' => array(
 		'default' => array(
 			'versioned' => array(
-				'server' => 30 * 24 * 60 * 60,
+				'server' => 30 * 24 * 60 * 60, // 30 days
 				'client' => 30 * 24 * 60 * 60,
 			),
 			'unversioned' => array(
-				'server' => 30 * 60,
-				'client' => 30 * 60,
+				'server' => 5 * 24 * 60 * 60, // 5 days
+				'client' => 5 * 24 * 60 * 60,
 			),
 		),
 	),
@@ -1189,6 +1189,14 @@ $wgFooterIcons['poweredby']['miraheze'] = array(
 	'url' => 'https://meta.miraheze.org/wiki/',
 	'alt' => 'Powered by Miraheze',
 );
+
+if ( $wgDBname === 'permanentfuturelabwiki' ) {
+	$wgFooterIcons['poweredby']['wikiapiary'] = array(
+		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+		'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab'
+		'alt' => 'Monitored by WikiApiary',
+	);
+}
 
 # ReCaptcha
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
