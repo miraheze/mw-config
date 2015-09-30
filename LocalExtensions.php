@@ -109,7 +109,7 @@ if ( $wmgUseTranslate ) {
 if ( $wmgUseTimedMediaHandler ) {
 	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
 	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
-	$wgFFmpeg2theoraLocation = false;
+	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
 
 if ( $wmgUseTitleKey ) {
