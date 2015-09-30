@@ -1193,7 +1193,7 @@ $wgFooterIcons['poweredby']['miraheze'] = array(
 if ( $wgDBname === 'permanentfuturelabwiki' ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = array(
 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-		'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab'
+		'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
 		'alt' => 'Monitored by WikiApiary',
 	);
 }
