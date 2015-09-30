@@ -869,6 +869,7 @@ $wgConf->settings = array(
 		'testwiki' => array(
 			'sysop' => array(
 				'nuke' => false,
+					),
 				),
 			),
 		),
