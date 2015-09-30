@@ -324,10 +324,10 @@ $wgConf->settings = array(
 		'allthetropestestwiki' => true,
 		'extloadwiki' => true,
 	),
-	'wmgUseSyntaxHighlight' => array(
+	'wmgUseSyntaxHighlight' => array( // SegFaults with HHVM. Disabled. --John
 		'default' => false,
-		'allthetropeswiki' => true,
-		'extloadwiki' => true,
+		'allthetropeswiki' => false,
+		'extloadwiki' => false,
 	),
 	'wmgUseTabsCombination' => array(
 		'default' => false,
