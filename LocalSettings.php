@@ -27,6 +27,10 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefin
 
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 
+// allthetropeswiki
+define( 'NS_TROPEWORKSHOP', 1620 );
+define( 'NS_TROPEWORKSHOP_TALK', 1621 );
+
 // catboxwiki
 define( 'NS_COMIC', 1618 );
 define( 'NS_COMIC_TALK', 1619 );
@@ -527,6 +531,10 @@ $wgConf->settings = array(
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
+		'allthetropeswiki' => array(
+			NS_TROPEWORKSHOP => 'Trope_Workshop',
+			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
+		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
 			NS_COMIC_TALK => 'Comic_talk'
@@ -562,10 +570,20 @@ $wgConf->settings = array(
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 		'reviwiki' => array( NS_MAIN, NS_SERVER ),
 	),
+	'+wgNamespaceAliases' => array(
+		'default' => array(),
+		'+allthetropeswiki' => array(
+			'ATT' => NS_PROJECT,
+			'ATT_talk' => NS_PROJECT_TALK,
+			'YKTTW' => NS_TROPEWORKSHOP,
+			'YKTTW_talk' => NS_TROPEWORKSHOP_TALK,
+		),
+	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
+			NS_TROPEWORKSHOP => true,
 		),
 		'+allthetropestestwiki' => array(
 			NS_MAIN => true,
