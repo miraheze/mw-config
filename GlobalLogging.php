@@ -20,3 +20,15 @@ $wgDebugLogGroups = array(
 	'redis' => "$wmgLogDir/debuglogs/redis.log",
 	'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 );
+
+if ( $wgCommandLineMode ) {
+	error_reporting( -1 );
+	ini_set( 'display_startup_errors', 1 );
+	ini_set( 'display_errors', 1 );
+	
+	$wgShowExceptionDetails = true;
+	
+	$wgShowSQLErrors = true;
+	$wgDebugDumpSql = true;
+	$wgShowDBErrorBacktrace = true;
+}
