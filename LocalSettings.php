@@ -314,6 +314,7 @@ $wgConf->settings = array(
 		'pqwiki' => true,
 		'quantixwiki' => true,
 		'rawdatawiki' => true,
+		'safiriawiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 		'tanodswiki' => true,
@@ -375,6 +376,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
+		'safiriawiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
@@ -477,6 +479,7 @@ $wgConf->settings = array(
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
+		'safiriawiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 	),
 	'wgRightsPage' => array(
@@ -487,11 +490,13 @@ $wgConf->settings = array(
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'diavwiki' => 'All Rights Reserved',
+		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'spiralwiki' => 'CC0 Public Domain',
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 		'diavwiki' => 'https://diav.miraheze.org/wiki/Project:Copyrights',
+		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
 
@@ -984,6 +989,7 @@ $wgConf->settings = array(
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
+		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/f/fc/Safiria_wiki_favicon.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
 	),
 	'wgLogo' => array(
