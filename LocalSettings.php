@@ -697,6 +697,7 @@ $wgConf->settings = array(
 			'autoconfirmed' => array(
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
+				'skipcaptcha' => true,
 			),
 			'bureaucrat' => array(
 				'renameuser' => false,
