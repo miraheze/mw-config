@@ -309,6 +309,7 @@ $wgConf->settings = array(
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
 		'extloadwiki' => true,
+		'iqtwiki' => true,
 		'kurumiwiki' => true,
 		'pqwiki' => true,
 		'quantixwiki' => true,
