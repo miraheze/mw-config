@@ -229,6 +229,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'testwiki' => true,
+		'undisconnectwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -255,6 +256,7 @@ $wgConf->settings = array(
 		'allthetropestestwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
+		'undisconnectwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
 		'default' => true,
@@ -383,7 +385,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
-		'allthetropeswiki' => true,
 	),
 
 	// Files
