@@ -129,6 +129,7 @@ $wgConf->settings = array(
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
 			'secure.reviwiki.info' => 'reviwiki',
 			'spiral.wiki' => 'spiralwiki',
+			'wiki.printmaking.be' => 'printmakingbewiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -949,6 +950,7 @@ $wgConf->settings = array(
 		'anuwiki' => 'https://anuwiki.com',
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
+		'printmakingbewiki' => 'https://wiki.printmaking.be',
 		'reviwiki' => 'https://secure.reviwiki.info',
 		'spiralwiki' => 'https://spiral.wiki',
 	),
