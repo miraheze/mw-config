@@ -221,6 +221,7 @@ $wgConf->settings = array(
 		'antiguabarbudacalypsowiki' => true,
 		'cinemawiki' => true,
 		'micropediawiki' => true,
+		'poserdazfreebieswiki' => true,
 		'welcomewiki' => true,
 	),
 
@@ -229,6 +230,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'poserdazfreebieswiki' => true,
 		'testwiki' => true,
 		'undisconnectwiki' => true,
 	),
@@ -1009,6 +1011,7 @@ $wgConf->settings = array(
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/c/c0/Permanent-Future-Lab-logo-150x150-mediawiki.png",
+		'printmakingbewiki' => "//$wmgUploadHostname/printmakingbewiki/2/22/Pmk-logo-wiki-135px.png",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/Mirahezetestwiki.png",
