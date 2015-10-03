@@ -320,6 +320,7 @@ $wgConf->settings = array(
 		'safiriawiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'szkwiki' => true,
 		'tanodswiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
