@@ -1240,4 +1240,8 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
         require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
         require_once( "$IP/extensions/Variables/Variables.php" );
+        wfLoadExtension( 'MultiBoilerplate' );
+        require_once( "$IP/extensions/CustomData/CustomData.php" );
+        require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+
 }
