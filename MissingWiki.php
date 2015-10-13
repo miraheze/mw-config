@@ -14,7 +14,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) ) {
             <div style="text-align: center;">
                 <h1>404 Wiki Not Found</h1>
                 <p>The wiki you wanted to visit does not exist. Please be sure you typed the URL correctly.</p>
-                <p>If you think there's a technical problem, please provide the system administrators with the following details:</p>
+                <p>If you think there's a technical problem, please contact the system administrators with the following details:</p>
                 <p style="font-size:14px;align:center;">
                     <table style="font-style:italic;" align="center">
                         <tbody>
