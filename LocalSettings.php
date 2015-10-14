@@ -231,6 +231,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'poserdazfreebieswiki' => true,
+		'szkwiki' => true,
 		'testwiki' => true,
 		'undisconnectwiki' => true,
 	),
@@ -298,6 +299,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
+		'szkwiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
@@ -822,6 +824,14 @@ $wgConf->settings = array(
 				'owner' => true,
 				'protect' => true,
 				'upload_by_url' => true,
+			),
+		),
+		'+szkwiki' => array(
+			'*' => array(
+				'edit' => false,
+			),
+			'user' => array(
+				'edit' => false, 
 			),
 		),
 		'+testwiki' => array(
