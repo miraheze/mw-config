@@ -108,12 +108,12 @@ $wgConf->settings = array(
 	'wgResourceLoaderMaxage' => array(
 		'default' => array(
 			'versioned' => array(
-				'server' => 30 * 24 * 60 * 60,
+				'server' => 30 * 24 * 60 * 60, // 30 days
 				'client' => 30 * 24 * 60 * 60,
 			),
 			'unversioned' => array(
-				'server' => 30 * 60,
-				'client' => 30 * 60,
+				'server' => 5 * 24 * 60 * 60, // 5 days
+				'client' => 5 * 24 * 60 * 60,
 			),
 		),
 	),
@@ -129,6 +129,7 @@ $wgConf->settings = array(
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
 			'secure.reviwiki.info' => 'reviwiki',
 			'spiral.wiki' => 'spiralwiki',
+			'wiki.printmaking.be' => 'printmakingbewiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -223,6 +224,7 @@ $wgConf->settings = array(
 		'antiguabarbudacalypsowiki' => true,
 		'cinemawiki' => true,
 		'micropediawiki' => true,
+		'poserdazfreebieswiki' => true,
 		'welcomewiki' => true,
 	),
 
@@ -231,7 +233,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'poserdazfreebieswiki' => true,
+		'szkwiki' => true,
 		'testwiki' => true,
+		'undisconnectwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -258,6 +263,7 @@ $wgConf->settings = array(
 		'allthetropestestwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
+		'undisconnectwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
 		'default' => true,
@@ -266,6 +272,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'mecanonwiki' => true,
+		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 	),
@@ -295,6 +302,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'mecanonwiki' => true, 
 		'quantixwiki' => true,
+		'szkwiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
@@ -311,12 +319,15 @@ $wgConf->settings = array(
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
 		'extloadwiki' => true,
+		'iqtwiki' => true,
 		'kurumiwiki' => true,
 		'pqwiki' => true,
 		'quantixwiki' => true,
 		'rawdatawiki' => true,
+		'safiriawiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'szkwiki' => true,
 		'tanodswiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
@@ -376,13 +387,13 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
+		'safiriawiki' => true,
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
-		'allthetropeswiki' => true,
 	),
 
 	// Files
@@ -409,6 +420,10 @@ $wgConf->settings = array(
 	// Flow
 	'wmgFlowOccupyNamespaces' => array(
 		'default' => array(),
+		'permanentfuturelabwiki' => array(
+			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK, 
+			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
+		),
 		'spiralwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
@@ -474,6 +489,7 @@ $wgConf->settings = array(
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
+		'safiriawiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 	),
 	'wgRightsPage' => array(
@@ -484,11 +500,13 @@ $wgConf->settings = array(
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'diavwiki' => 'All Rights Reserved',
+		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'spiralwiki' => 'CC0 Public Domain',
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 		'diavwiki' => 'https://diav.miraheze.org/wiki/Project:Copyrights',
+		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
 
@@ -689,6 +707,7 @@ $wgConf->settings = array(
 			'autoconfirmed' => array(
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
+				'skipcaptcha' => true,
 			),
 			'bureaucrat' => array(
 				'renameuser' => false,
@@ -808,6 +827,14 @@ $wgConf->settings = array(
 				'owner' => true,
 				'protect' => true,
 				'upload_by_url' => true,
+			),
+		),
+		'+szkwiki' => array(
+			'*' => array(
+				'edit' => false,
+			),
+			'user' => array(
+				'edit' => false, 
 			),
 		),
 		'+testwiki' => array(
@@ -939,6 +966,7 @@ $wgConf->settings = array(
 		'anuwiki' => 'https://anuwiki.com',
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
+		'printmakingbewiki' => 'https://wiki.printmaking.be',
 		'reviwiki' => 'https://secure.reviwiki.info',
 		'spiralwiki' => 'https://spiral.wiki',
 	),
@@ -981,6 +1009,7 @@ $wgConf->settings = array(
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
+		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/f/fc/Safiria_wiki_favicon.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
 	),
 	'wgLogo' => array(
@@ -995,6 +1024,7 @@ $wgConf->settings = array(
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/c/c0/Permanent-Future-Lab-logo-150x150-mediawiki.png",
+		'printmakingbewiki' => "//$wmgUploadHostname/printmakingbewiki/2/22/Pmk-logo-wiki-135px.png",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/Mirahezetestwiki.png",
@@ -1193,6 +1223,14 @@ $wgFooterIcons['poweredby']['miraheze'] = array(
 	'alt' => 'Powered by Miraheze',
 );
 
+if ( $wgDBname === 'permanentfuturelabwiki' ) {
+	$wgFooterIcons['poweredby']['wikiapiary'] = array(
+		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+		'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
+		'alt' => 'Monitored by WikiApiary',
+	);
+}
+
 # ReCaptcha
 $wgCaptchaClass = 'ReCaptchaNoCaptcha';
 $wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
@@ -1215,4 +1253,8 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
         require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
         require_once( "$IP/extensions/Variables/Variables.php" );
+        wfLoadExtension( 'MultiBoilerplate' );
+        require_once( "$IP/extensions/CustomData/CustomData.php" );
+        require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+
 }
