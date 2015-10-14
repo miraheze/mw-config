@@ -201,6 +201,9 @@ $wgConf->settings = array(
 	'wgDBadminuser' => array(
 		'default' => 'wikiadmin',
 	),
+	'wgReadOnly' => array(
+		'default' => false,
+	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
 	),
