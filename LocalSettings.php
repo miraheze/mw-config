@@ -203,9 +203,9 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => "Read-only for database maintenance.",
-		'allthetropeswiki' => false,
-		'loginwiki' => false,
+		'default' => false,
+		'allthetropeswiki' => "Read-only for database maintenance.",
+		'metawiki' => "Read-only for database maintenance.",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
