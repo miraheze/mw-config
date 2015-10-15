@@ -226,6 +226,7 @@ $wgConf->settings = array(
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'welcomewiki' => true,
+		'wikiacawiki' => true,
 	),
 
 	// Extensions
