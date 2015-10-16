@@ -20,6 +20,6 @@ notifications:
   email:
     recipients:
       - southparkfan@miraheze.org
-      - reviwiki@gmail.com
+      - revi@reviwiki.info
     on_success: change
     on_failure: always
