@@ -393,6 +393,10 @@ $wgConf->settings = array(
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
 	),
+	'wmgVariables' => array(
+		'default' => false,
+		'szkwiki' => true,
+	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
