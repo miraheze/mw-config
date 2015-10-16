@@ -116,6 +116,10 @@ if ( $wmgUseTitleKey ) {
 	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
 
+if ( $wmgUseVariables ) {
+	require_once( "$IP/extensions/Variables/Variables.php" );
+}
+
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://parsoid1.miraheze.org:8142';
