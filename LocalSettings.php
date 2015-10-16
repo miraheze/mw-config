@@ -92,7 +92,12 @@ $wgConf->settings = array(
 			),
 		),
 	),
-
+	// Allow External Images
+	'$wgAllowExternalImages' => array(
+		'default' => false,
+		'szkwiki' => true,
+	),
+	
 	// Cache
 	'wgCacheDirectory' => array(
 		'default' => '/srv/mediawiki/w/cache',
