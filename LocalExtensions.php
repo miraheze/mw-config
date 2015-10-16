@@ -143,6 +143,10 @@ if ( $wmgUseWikiEditor ) {
 	$wgCodeEditorEnableCore = true;
 }
 
+if ( $wmgUseYouTube ) {
+	require_once( "$IP/extensions/YouTube/YouTube.php" );
+}
+
 // Permission variables
 if ( $wmgDisableAnonEditing ) {
 	$wgGroupPermissions['*']['edit'] = false;

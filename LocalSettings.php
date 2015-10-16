@@ -402,6 +402,12 @@ $wgConf->settings = array(
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
+        'wmgUseYouTube' => array(
+                'default' => false,
+                'extloadwiki' => true,
+                'szkwiki' => true,
+                'testwiki' => true,
+        ),
 
 	// Files
 	'wgEnableUploads' => array(
