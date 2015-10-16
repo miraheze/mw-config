@@ -393,6 +393,12 @@ $wgConf->settings = array(
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
 	),
+	'wmgUseVariables' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+		'szkwiki' => true,
+	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
@@ -1256,7 +1262,6 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/CSS/CSS.php" );
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
         require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-        require_once( "$IP/extensions/Variables/Variables.php" );
         wfLoadExtension( 'MultiBoilerplate' );
         require_once( "$IP/extensions/CustomData/CustomData.php" );
         require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
