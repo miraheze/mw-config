@@ -417,6 +417,9 @@ $wgConf->settings = array(
 	'wgUseInstantCommons' => array(
 		'default' => true,
 	),
+	'wgEnableImageWhitelist' => array(
+		'default' => false,
+	),
 
 	// Flow
 	'wmgFlowOccupyNamespaces' => array(
