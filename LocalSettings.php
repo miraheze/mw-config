@@ -404,6 +404,7 @@ $wgConf->settings = array(
                 'extloadwiki' => true,
                 'szkwiki' => true,
                 'testwiki' => true,
+                'worldpediawiki' => true,
         ),
 
 	// Files
