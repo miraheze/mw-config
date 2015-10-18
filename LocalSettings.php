@@ -519,7 +519,6 @@ $wgConf->settings = array(
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
-		'diavwiki' => 'https://diav.miraheze.org/wiki/Project:Copyrights',
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 	),
