@@ -52,6 +52,10 @@ if ( $wmgUseInputBox ) {
 	wfLoadExtension( 'InputBox' );
 }
 
+if ( $wmgUseJosa ) {
+	wfLoadExtension( 'Josa' );
+}
+
 if ( $wmgUseMsPackage ) {
 	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 	require_once( "$IP/extensions/MsLinks/MsLinks.php" );

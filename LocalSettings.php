@@ -286,6 +286,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'allthetropeswiki' => false, // breaks editing
 	),
+	'wmgUseJosa' => array(
+		'default' => false,
+		'reviwiki' => true,
+	),
 	'wmgUseMsPackage' => array(
 		'default' => false,
 		'catboxwiki' => true,
