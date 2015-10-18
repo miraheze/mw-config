@@ -401,6 +401,7 @@ $wgConf->settings = array(
 	),
         'wmgUseYouTube' => array(
                 'default' => false,
+                'allthetropeswiki' => true,
                 'extloadwiki' => true,
                 'szkwiki' => true,
                 'testwiki' => true,
