@@ -232,6 +232,7 @@ $wgConf->settings = array(
 	'wmgUseAdminLinks' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'applebranchwiki' => true,
 		'extloadwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'szkwiki' => true,
