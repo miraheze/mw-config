@@ -373,7 +373,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'aryamanwiki' => true,
 		'cbmediawiki' => true,
 		'clicordiwiki' => true,
