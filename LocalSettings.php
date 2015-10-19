@@ -374,6 +374,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false,
+		'applebranchwiki' => true,
 		'aryamanwiki' => true,
 		'cbmediawiki' => true,
 		'clicordiwiki' => true,
