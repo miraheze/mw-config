@@ -1271,3 +1271,6 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
         require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 
 }
+
+$wgUseSquid = true;
+$wgSquidServers = array( '81.4.124.61' );
