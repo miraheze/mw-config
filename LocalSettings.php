@@ -1266,11 +1266,18 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 	require_once( "$IP/extensions/CSS/CSS.php" );
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
-        require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-        wfLoadExtension( 'MultiBoilerplate' );
-        require_once( "$IP/extensions/CustomData/CustomData.php" );
-        require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+	wfLoadExtension( 'MultiBoilerplate' );
+	$wgMultiBoilerplateDisplaySpecialPage = true;
+	$wgMultiBoilerplateOptions = false;
+	require_once( "$IP/extensions/CustomData/CustomData.php" );
+	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+	require_once( "$IP/extensions/SectionHide/SectionHide.php" );
+	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+}
 
+if ( $wgDBname == 'extloadwiki' || $wgDBname == 'reviwiki' ) {
+	require_once( "$IP/extensions/Josa/Josa.php" );
 }
 
 $wgUseSquid = true;
