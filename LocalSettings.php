@@ -288,6 +288,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseJosa' => array(
 		'default' => false,
+		'extloadwiki' => true,
 		'reviwiki' => true,
 	),
 	'wmgUseMsPackage' => array(
