@@ -1282,9 +1282,5 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 }
 
-if ( $wgDBname == 'extloadwiki' || $wgDBname == 'reviwiki' ) {
-	require_once( "$IP/extensions/Josa/Josa.php" );
-}
-
 $wgUseSquid = true;
 $wgSquidServers = array( '81.4.124.61' );
