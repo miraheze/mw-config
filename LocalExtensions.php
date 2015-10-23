@@ -53,7 +53,7 @@ if ( $wmgUseInputBox ) {
 }
 
 if ( $wmgUseJosa ) {
-	wfLoadExtension( 'Josa' );
+	require_once( "$IP/extensions/Josa/Josa.php" );
 }
 
 if ( $wmgUseMsPackage ) {
