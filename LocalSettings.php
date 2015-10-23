@@ -1286,6 +1286,7 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 	require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
 $wgUseSquid = true;
