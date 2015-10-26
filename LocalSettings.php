@@ -234,10 +234,10 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'extloadwiki' => true,
+		'heistwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'szkwiki' => true,
 		'testwiki' => true,
-		'undisconnectwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -264,7 +264,7 @@ $wgConf->settings = array(
 		'allthetropestestwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
-		'undisconnectwiki' => true,
+		'heistwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
 		'default' => true,
