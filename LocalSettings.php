@@ -934,6 +934,24 @@ $wgConf->settings = array(
 				'bureaucrat',
 			),
 		),
+		'+walthamstowlabourwiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'user' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'confirmed' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+			'sysop' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 	),
 	'wgRevokePermissions' => array(
 		'default' => array(),
