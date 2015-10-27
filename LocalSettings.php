@@ -717,6 +717,15 @@ $wgConf->settings = array(
 				'consul',
 			),
 		),
+		'+walthamstowlabourwiki' => array(
+			'sysop' => array(
+				'editor-approver',
+				'editor',
+			),
+			'editor-approver' => array(
+				'editor',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -879,7 +888,14 @@ $wgConf->settings = array(
 		'+walthamstowlabourwiki' => array(
 			'*' => array(
 				'edit' => false,
-				'createaccount' => false,
+			),
+			'user' => array(
+				'edit' => false,
+			),
+			'editor' => array(
+				'edit' => true,
+			),
+			'editor-approver' => array(
 			),
 		),
 	),
@@ -938,6 +954,15 @@ $wgConf->settings = array(
 			'consul' => array(
 				'bot',
 				'bureaucrat',
+			),
+		),
+		'+walthamstowlabourwiki' => array(
+			'sysop' => array(
+				'editor-approver',
+				'editor',
+			),
+			'editor-approver' => array(
+				'editor',
 			),
 		),
 	),
