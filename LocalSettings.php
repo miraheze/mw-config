@@ -717,6 +717,15 @@ $wgConf->settings = array(
 				'consul',
 			),
 		),
+		'+walthamstowlabourwiki' => array(
+			'sysop' => array(
+				'editor-approver',
+				'editor',
+			),
+			'editor-approver' => array(
+				'editor',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -876,6 +885,19 @@ $wgConf->settings = array(
 				'testgroup' => true,
 			),
 		),
+		'+walthamstowlabourwiki' => array(
+			'*' => array(
+				'edit' => false,
+			),
+			'user' => array(
+				'edit' => false,
+			),
+			'editor' => array(
+				'edit' => true,
+			),
+			'editor-approver' => array(
+			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
@@ -935,21 +957,12 @@ $wgConf->settings = array(
 			),
 		),
 		'+walthamstowlabourwiki' => array(
-			'*' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-			'user' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-			'confirmed' => array(
-				'edit' => true,
-				'createpage' => true,
-			),
 			'sysop' => array(
-				'edit' => true,
-				'createpage' => true,
+				'editor-approver',
+				'editor',
+			),
+			'editor-approver' => array(
+				'editor',
 			),
 		),
 	),
