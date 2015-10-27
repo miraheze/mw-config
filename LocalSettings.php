@@ -876,6 +876,12 @@ $wgConf->settings = array(
 				'testgroup' => true,
 			),
 		),
+		'+walthamstowlabourwiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createaccount' => false,
+			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
@@ -932,24 +938,6 @@ $wgConf->settings = array(
 			'consul' => array(
 				'bot',
 				'bureaucrat',
-			),
-		),
-		'+walthamstowlabourwiki' => array(
-			'*' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-			'user' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-			'confirmed' => array(
-				'edit' => true,
-				'createpage' => true,
-			),
-			'sysop' => array(
-				'edit' => true,
-				'createpage' => true,
 			),
 		),
 	),
