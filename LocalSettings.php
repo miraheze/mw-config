@@ -723,6 +723,7 @@ $wgConf->settings = array(
 				'editor',
 			),
 			'editor-approver' => array(
+				'editor-approver',
 				'editor',
 			),
 		),
@@ -896,6 +897,7 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 			'editor-approver' => array(
+				'edit' => true,
 			),
 		),
 	),
