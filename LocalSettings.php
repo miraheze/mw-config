@@ -335,6 +335,7 @@ $wgConf->settings = array(
 		'spiraltestwiki' => true,
 		'szkwiki' => true,
 		'tanodswiki' => true,
+		'wdbwiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
 	'wmgUseSocialProfile' => array(
@@ -1069,6 +1070,7 @@ $wgConf->settings = array(
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/f/fc/Safiria_wiki_favicon.png",
+		'wdbwiki' => "//$wmgUploadHostnamwdbwiki/2/26/Dancing-135px.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
 	),
 	'wgLogo' => array(
