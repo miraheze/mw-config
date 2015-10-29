@@ -9,8 +9,11 @@ $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
 $wgSessionsInObjectCache = true;
 $wgMessageCacheType = 'redis';
-$wgParserCacheType = CACHE_DB;
-$wgLanguageConverterCacheType = CACHE_DB;
+
+if ( $wgDBname === 'allthetropeswiki' ) {
+	$wgParserCacheType = CACHE_DB;
+	$wgLanguageConverterCacheType = CACHE_DB;
+}
 
 $wgJobTypeConf['default'] = array(
 	'class' => 'JobQueueRedis',
