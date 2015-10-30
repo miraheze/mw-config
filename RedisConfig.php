@@ -8,9 +8,10 @@ $wgObjectCaches['redis'] = array(
 $wgMainCacheType = 'redis';
 $wgSessionCacheType = 'redis';
 $wgSessionsInObjectCache = true;
-$wgMessageCacheType = 'redis';
-$wgParserCacheType = 'redis';
-$wgLanguageConverterCacheType = 'redis';
+
+$wgMessageCacheType = CACHE_NONE;
+$wgParserCacheType = CACHE_DB;
+$wgLanguageConverterCacheType = CACHE_DB;
 
 $wgJobTypeConf['default'] = array(
 	'class' => 'JobQueueRedis',
