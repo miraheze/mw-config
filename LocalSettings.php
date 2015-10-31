@@ -226,6 +226,7 @@ $wgConf->settings = array(
 		'poserdazfreebieswiki' => true,
 		'welcomewiki' => true,
 		'wikiacawiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 
 	// Extensions
@@ -238,6 +239,7 @@ $wgConf->settings = array(
 		'poserdazfreebieswiki' => true,
 		'szkwiki' => true,
 		'testwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -246,6 +248,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
@@ -265,6 +268,7 @@ $wgConf->settings = array(
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
 		'heistwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
 		'default' => true,
@@ -277,6 +281,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseImageMap' => array(
 		'default' => false,
@@ -314,6 +319,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
@@ -336,6 +342,7 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'tanodswiki' => true,
 		'wdbwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
 	'wmgUseSocialProfile' => array(
@@ -400,12 +407,14 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'szkwiki' => true,
+		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -459,6 +468,10 @@ $wgConf->settings = array(
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
 		'spiraltestwiki' => array(
+			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
+			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
+		),
+		'walthamstowlabourwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
