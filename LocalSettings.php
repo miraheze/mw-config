@@ -1344,3 +1344,4 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 
 $wgUseSquid = true;
 $wgSquidServers = array( '81.4.124.61' );
+$wgPreprocessorCacheThreshold = false;
