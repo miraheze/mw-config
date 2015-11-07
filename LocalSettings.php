@@ -105,6 +105,11 @@ $wgConf->settings = array(
 			'manualRecache' => true,
 		),
 	),
+	// Do not enable this without Southparkfan's
+	// permission, as it could let Redis crash.
+	'wgPreprocessorCacheThreshold' => array(
+		'default' => false,
+	),
 	'wgResourceLoaderMaxage' => array(
 		'default' => array(
 			'versioned' => array(
@@ -570,6 +575,9 @@ $wgConf->settings = array(
 			'username' => 'noreply',
 			'password' => $wmgSMTPPassword,
 		),
+	),
+	'wgEnotifWatchlist' => array(
+		'default' => true,
 	),
 
 	// Math
@@ -1062,6 +1070,14 @@ $wgConf->settings = array(
 		'default' => "/srv/mediawiki/dblist/closed.dblist",
 	),
 
+	// Squid (aka Varnish)
+	'wgUseSquid' => array(
+		'default' => true,
+	),
+	'wgSquidServers' => array(
+		'default' => array( '81.4.124.61', '107.191.126.23' ),
+	}
+	
 	// Style
 	'wgAllowUserCss' => array(
 		'default' => true,
@@ -1342,6 +1358,4 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
-$wgUseSquid = true;
-$wgSquidServers = array( '81.4.124.61' );
-$wgPreprocessorCacheThreshold = false;
+$wgDefaultUserOptions['enotifwatchlistpages'] = 0;
