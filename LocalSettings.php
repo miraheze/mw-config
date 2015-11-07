@@ -27,14 +27,6 @@ $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefin
 
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 
-// allthetropeswiki
-define( 'NS_TROPEWORKSHOP', 1620 );
-define( 'NS_TROPEWORKSHOP_TALK', 1621 );
-
-// catboxwiki
-define( 'NS_COMIC', 1618 );
-define( 'NS_COMIC_TALK', 1619 );
-
 // metawiki
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
@@ -58,6 +50,18 @@ define( 'NS_SMITE_TALK', 1615 );
 // ReviWiki
 define( 'NS_SERVER', 1616 );
 define( 'NS_SERVER_TALK', 1617);
+
+// catboxwiki
+define( 'NS_COMIC', 1618 );
+define( 'NS_COMIC_TALK', 1619 );
+
+// allthetropeswiki
+define( 'NS_TROPEWORKSHOP', 1620 );
+define( 'NS_TROPEWORKSHOP_TALK', 1621 );
+
+// safiriawiki
+define( 'NS_HOENN', 1622 );
+define( 'NS_HOENN_TALK', 1623 );
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -636,12 +640,17 @@ $wgConf->settings = array(
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
 		),
+		'safiriawiki' => array(
+			NS_HOENN => 'Hoenn',
+			NS_HOENN_TALK => 'Hoenn_talk',
+		),
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
 		'catboxwiki' => array( NS_MAIN, NS_COMIC ),
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 		'reviwiki' => array( NS_MAIN, NS_SERVER ),
+		'safiriawiki' => array( NS_MAIN, NS_HOENN ),
 	),
 	'+wgNamespaceAliases' => array(
 		'default' => array(),
@@ -671,6 +680,10 @@ $wgConf->settings = array(
 		'+reviwiki' => array(
 			NS_MAIN => true,
 			NS_SERVER => true,
+		),
+		'+safiriawiki' => array(
+			NS_MAIN => true,
+			NS_HOENN => true,
 		),
 		'+unikumwiki' => array(
 			NS_MAIN => true,
