@@ -183,7 +183,6 @@ $wgConf->settings = array(
 			"$IP/extensions/PageTriage/sql/PageTriagePageTags.sql",
 			"$IP/extensions/PageTriage/sql/PageTriagePage.sql",
 			"$IP/extensions/PageTriage/sql/PageTriageLog.sql",
-			"$IP/extensions/PageTriage/sql/PageTriageTags.sql",
 			"$IP/extensions/TimedMediaHandler/TimedMediaHandler.sql",
 			"$IP/extensions/TitleKey/titlekey.sql",
 		        "$IP/extensions/Translate/sql/revtag.sql",
