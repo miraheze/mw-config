@@ -346,6 +346,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'iqtwiki' => true,
 		'kurumiwiki' => true,
+		'luismark2015wiki' => true,
 		'pqwiki' => true,
 		'quantixwiki' => true,
 		'rawdatawiki' => true,
