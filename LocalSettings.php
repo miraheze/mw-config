@@ -412,6 +412,7 @@ $wgConf->settings = array(
 		'clicordiwiki' => true,
 		'extloadwiki' => true,
 		'esswaywiki' => true,
+		'etpowiki' => true,
 		'genwiki' => true,
 		'hshsinfoportalwiki' => true,
 		'mecanonwiki' => true,
