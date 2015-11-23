@@ -453,11 +453,13 @@ $wgConf->settings = array(
 	'wgAllowCopyUploads' => array(
 		'default' => false,
 		'catboxwiki' => true,
+		'entropediawiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
 		'catboxwiki' => true,
+		'entropediawiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgFileExtensions' => array(
