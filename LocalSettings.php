@@ -136,7 +136,7 @@ $wgConf->settings = array(
 			'anuwiki.com' => 'anuwiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
-			'secure.reviwiki.info' => 'reviwiki',
+			'private.revi.wiki' => 'reviwiki',
 			'spiral.wiki' => 'spiralwiki',
 			'wiki.printmaking.be' => 'printmakingbewiki',
 		),
@@ -1080,7 +1080,7 @@ $wgConf->settings = array(
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
 		'printmakingbewiki' => 'https://wiki.printmaking.be',
-		'reviwiki' => 'https://secure.reviwiki.info',
+		'reviwiki' => 'https://private.revi.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
 	),
 	'wgShowHostnames' => array(
