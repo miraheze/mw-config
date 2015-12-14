@@ -1133,7 +1133,7 @@ $wgConf->settings = array(
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/6/64/Favicon.ico",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/f/fc/Safiria_wiki_favicon.png",
-		'titreprovisoirewiki' => "//$wmgUploadHosntame/titreprovisoirewiki/0/01/Favicon_titrepro.png",
+		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/0/01/Favicon_titrepro.png",
 		'wdbwiki' => "//$wmgUploadHostname/wdbwiki/2/26/Dancing-135px.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
 	),
