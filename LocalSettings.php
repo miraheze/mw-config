@@ -96,7 +96,10 @@ $wgConf->settings = array(
 			),
 		),
 	),
-
+	// Talkpage edit
+	'$wgBlockAllowsUTEdit' => array(
+		'default' => true,
+		),
 	// Cache
 	'wgCacheDirectory' => array(
 		'default' => '/srv/mediawiki/w/cache',
