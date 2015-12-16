@@ -511,9 +511,9 @@ $wgConf->settings = array(
 		'default' => 'centralauth', // use centralauth for global blocks
 	),
 	
-	'$wgBlockAllowsUTEdit' => array(
+	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
-		),
+	),
 
 	// GlobalCssJs
 	'wgGlobalCssJsConfig' => array(
