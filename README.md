@@ -1,5 +1,7 @@
 # mw-config
 
+[![Build Status](https://travis-ci.org/miraheze/mw-config.svg?branch=master)](https://travis-ci.org/miraheze/mw-config)
+
 Miraheze's public wiki configurations.
 
 # Contributing
