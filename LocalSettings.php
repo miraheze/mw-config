@@ -96,7 +96,12 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	// Block
+	'wgBlockAllowsUTEdit' => array(
+		'default' => true,
+	),
 
+	
 	// Cache
 	'wgCacheDirectory' => array(
 		'default' => '/srv/mediawiki/w/cache',
@@ -512,7 +517,6 @@ $wgConf->settings = array(
 	'wgGlobalBlockingDatabase' => array(
 		'default' => 'centralauth', // use centralauth for global blocks
 	),
-
 	// GlobalCssJs
 	'wgGlobalCssJsConfig' => array(
 		'default' => array(
