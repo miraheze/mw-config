@@ -184,6 +184,7 @@ $wgConf->settings = array(
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/callback_is_prefix.sql",
+			"$IP/extensions/OAuth/backend/schema/mysql/developer_agreement.sql",
 			"$IP/extensions/PageTriage/sql/PageTriageTags.sql",
 			"$IP/extensions/PageTriage/sql/PageTriagePageTags.sql",
 			"$IP/extensions/PageTriage/sql/PageTriagePage.sql",
