@@ -777,6 +777,7 @@ $wgConf->settings = array(
 				'bot',
 				'bureaucrat',
 				'consul',
+				'exampleuser',
 			),
 		),
 		'+walthamstowlabourwiki' => array(
@@ -947,7 +948,10 @@ $wgConf->settings = array(
 				'read' => true,
 				'testgroup' => true,
 			),
-		),
+			'exampleuser' => array(
+				'editmyoptions' => false,
+			),
+		), 
 		'+walthamstowlabourwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1018,6 +1022,7 @@ $wgConf->settings = array(
 			'consul' => array(
 				'bot',
 				'bureaucrat',
+				'exampleuser',
 			),
 		),
 		'+walthamstowlabourwiki' => array(
