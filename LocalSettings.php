@@ -343,10 +343,11 @@ $wgConf->settings = array(
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'allthetropestestwiki' => true,
-		'aryamanwiki' => true,
+		'allthetropeswiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'aryamanwiki' => true,
+		'avionwiki' = true,
 		'buswiki' => true,
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
