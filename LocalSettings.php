@@ -296,6 +296,7 @@ $wgConf->settings = array(
 	'wmgUseFlow' => array(
 		'default' => false,
 		'8stationwiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'mecanonwiki' => true,
 		'permanentfuturelabwiki' => true,
@@ -421,6 +422,7 @@ $wgConf->settings = array(
 		'braindumpwiki' => true,
 		'cbmediawiki' => true,
 		'clicordiwiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'esswaywiki' => true,
 		'etpowiki' => true,
@@ -1413,13 +1415,3 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
-# TestWiki hook
-if ( $wgDBname === 'testwiki' ) {
-    $wgHooks['PrefsPasswordAudit'][] = 'test_onPrefsPasswordAudit';
-    function test_onPrefsPasswordAudit( $user, $newPass, $error ) {
-        if ( $user->getName() == 'Example' ) {
-            return "User not allowed to change password, Example account";
-        }
-        return true;
-    }
-}
