@@ -1422,5 +1422,4 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 		return "User not allowed to change password, Example account";
 	}
 		return true;
-	}
 }
