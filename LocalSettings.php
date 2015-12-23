@@ -1415,3 +1415,13 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
+# TestWiki hook
+if ( $wgDBname === 'testwiki' ) {
+	$wgHooks['PrefsPasswordAudit'][] = 'test_onPrefsPasswordAudit';
+	function test_onPrefsPasswordAudit( $user, $newPass, $error ) {
+	if ( $user->getName() == 'Example' ) {
+		return "User not allowed to change password, Example account";
+	}
+	return true;
+	}
+}
