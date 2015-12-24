@@ -375,6 +375,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
+		'outofreachwiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
 		'default' => false,
