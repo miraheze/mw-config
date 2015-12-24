@@ -123,11 +123,11 @@ $wgConf->settings = array(
 		'default' => array(
 			'versioned' => array(
 				'server' => 30 * 24 * 60 * 60, // 30 days
-				'client' => 30 * 24 * 60 * 60,
+				'client' => 30 * 24 * 60 * 60, // 30 days
 			),
 			'unversioned' => array(
-				'server' => 5 * 24 * 60 * 60, // 5 days
-				'client' => 5 * 24 * 60 * 60,
+				'server' => 5 * 60, // 5 minutes
+				'client' => 15 * 60, // 15 minutes
 			),
 		),
 	),
