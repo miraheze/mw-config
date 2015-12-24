@@ -746,6 +746,10 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'trusted',
 			),
+			'supervisor' => array(
+				'supervisor',
+				'bureaucrat',
+			),
 		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
@@ -860,7 +864,6 @@ $wgConf->settings = array(
 		),
 		'+developmentwiki' => array(
 			'trusted' => array(
-				'editprotected' => true,
 				'editsemiprotected' => true,
 				'autoconfirmed' => true,
 				'skipcaptcha' => true,
@@ -870,6 +873,10 @@ $wgConf->settings = array(
 				'protect' => true,
 				'delete' => true,
 				'move' => true,
+			),
+			'supervisor' => array(
+				'supervisor' => true,
+				'bureaaucrat' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -1011,6 +1018,10 @@ $wgConf->settings = array(
 		'+developmentwiki' => array(
 			'bureaucrat' => array(
 				'trusted',
+			),
+			'supervisor' => array(
+				'supervisor',
+				'bureaucrat',
 			),
 		),
 		'+dpwiki' => array(
