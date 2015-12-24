@@ -745,6 +745,11 @@ $wgConf->settings = array(
 		'+developmentwiki' => array(
 			'bureaucrat' => array(
 				'trusted',
+			'supervisor' => array(
+				'bureaucrat'
+				'supervisor'
+				'sysop',
+				),
 			),
 			'supervisor' => array(
 				'supervisor',
@@ -873,6 +878,9 @@ $wgConf->settings = array(
 				'protect' => true,
 				'delete' => true,
 				'move' => true,
+			'supervisor' => array(
+				'autoconfirmed' => true,
+				),
 			),
 			'supervisor' => array(
 				'supervisor' => true,
@@ -1018,6 +1026,11 @@ $wgConf->settings = array(
 		'+developmentwiki' => array(
 			'bureaucrat' => array(
 				'trusted',
+			'supervisor' => array(
+				'bureaucrat'
+				'supervisor'
+				'sysop'
+				),
 			),
 			'supervisor' => array(
 				'supervisor',
