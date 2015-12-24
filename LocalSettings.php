@@ -742,6 +742,11 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+developmentwiki' => array(
+			'bureaucrat' => array(
+				'trusted',
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -851,6 +856,20 @@ $wgConf->settings = array(
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
+			),
+		),
+		'+developmentwiki' => array(
+			'trusted' => array(
+				'editprotected' => true,
+				'editsemiprotected' => true,
+				'autoconfirmed' => true,
+				'skipcaptcha' => true,
+				'autopatrol' => true,
+				'patrol' => true,
+				'block' => true,
+				'protect' => true,
+				'delete' => true,
+				'move' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -987,6 +1006,11 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+		),
+		'+developmentwiki' => array(
+			'bureaucrat' => array(
+				'trusted',
 			),
 		),
 		'+dpwiki' => array(
