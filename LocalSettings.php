@@ -876,7 +876,7 @@ $wgConf->settings = array(
 			),
 			'supervisor' => array(
 				'supervisor' => true,
-				'bureaaucrat' => true,
+				'bureaucrat' => true,
 			),
 		),
 		'+dpwiki' => array(
