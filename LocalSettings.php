@@ -122,8 +122,8 @@ $wgConf->settings = array(
 	'wgResourceLoaderMaxage' => array(
 		'default' => array(
 			'versioned' => array(
-				'server' => 30 * 24 * 60 * 60, // 30 days
-				'client' => 30 * 24 * 60 * 60, // 30 days
+				'server' => 12 * 60 * 60, // 12 hours
+				'client' => 1 * 24 * 60 * 60, // 1 day
 			),
 			'unversioned' => array(
 				'server' => 5 * 60, // 5 minutes
