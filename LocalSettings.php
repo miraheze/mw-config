@@ -749,7 +749,7 @@ $wgConf->settings = array(
 				'bureaucrat'
 				'supervisor'
 				'sysop',
-				,)
+				),
 			),
 		),
 		'+dpwiki' => array(
