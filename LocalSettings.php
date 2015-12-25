@@ -933,9 +933,6 @@ $wgConf->settings = array(
 				'spamblacklistlog' => true,
 				'titleblacklistlog' => true,
 			),
-			'mirahezestaff' => array(
-				'*' => true,
-			),
 		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
