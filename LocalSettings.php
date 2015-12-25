@@ -356,6 +356,7 @@ $wgConf->settings = array(
 		'buswiki' => true,
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'iqtwiki' => true,
 		'kurumiwiki' => true,
