@@ -63,6 +63,10 @@ define( 'NS_TROPEWORKSHOP_TALK', 1621 );
 define( 'NS_HOENN', 1622 );
 define( 'NS_HOENN_TALK', 1623 );
 
+// developmentwiki
+define( 'NS_OFFICIAL', 1624 );
+define( 'NS_OFFICIAL_TALK', 1625 );
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -641,6 +645,10 @@ $wgConf->settings = array(
 			NS_COMIC => 'Comic',
 			NS_COMIC_TALK => 'Comic_talk'
 		),
+		'developmentwiki' => array(
+			NS_OFFICIAL => 'Official',
+			NS_OFFICIAL_TALK => 'Official_talk',
+		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
@@ -699,6 +707,11 @@ $wgConf->settings = array(
 			NS_COMIC => true,
 			NS_MAIN => true,
 		),
+		'+catboxwiki' => array(
+			NS_MAIN => true,
+			NS_OFFICIAL => true,
+			NS_TEMPLATE => true,
+		),
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
@@ -746,11 +759,14 @@ $wgConf->settings = array(
 		'+developmentwiki' => array(
 			'supervisor' => array(
 				'bureaucrat',
+				'sysop',
 				'trusted',
 			),
 			'wikifounder' => array(
 				'supervisor',
 				'bureaucrat',
+				'sysop',
+				'trusted',
 			),
 		),
 		'+dpwiki' => array(
@@ -932,6 +948,13 @@ $wgConf->settings = array(
 				'deletedtext' => true,
 				'spamblacklistlog' => true,
 				'titleblacklistlog' => true,
+				'supervisor' => true,
+			),
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+			),
+			'wikifounder' => array(
+				'wikifounder' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -1073,10 +1096,14 @@ $wgConf->settings = array(
 		'+developmentwiki' => array(
 			'supervisor' => array(
 				'bureaucrat',
+				'sysop',
 				'trusted',
 			),
 			'wikifounder' => array(
 				'supervisor',
+				'bureaucrat',
+				'sysop',
+				'trusted',
 			),
 		),
 		'+dpwiki' => array(
