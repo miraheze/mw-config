@@ -460,6 +460,7 @@ $wgConf->settings = array(
                 'szkwiki' => true,
                 'testwiki' => true,
                 'worldpediawiki' => true,
+                'developmentwiki' => true,
         ),
 
 	// Files
@@ -743,10 +744,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+developmentwiki' => array(
-			'bureaucrat' => array(
+			'supervisor' => array(
+				'bureaucrat',
 				'trusted',
 			),
-			'supervisor' => array(
+			'wikifounder' => array(
 				'supervisor',
 				'bureaucrat',
 			),
@@ -875,8 +877,64 @@ $wgConf->settings = array(
 				'move' => true,
 			),
 			'supervisor' => array(
-				'supervisor' => true,
-				'bureaucrat' => true,
+				'blockemail' => true,
+				'block' => true,
+				'ipblock-exempt' => true,
+				'proxyunbannable' => true,
+				'protect' => true,
+				'managechangetags' => true,
+				'createaccount' => true,
+				'flow-delete' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'delete' => true,
+				'globalblocks-whitelist' => true,
+				'flow-edit-post' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'editprotected' => true,
+				'editsemiprotected' => true,
+				'editinterface' => true,
+				'autopatrol' => true,
+				'importupload' => true,
+				'import' => true,
+				'flow-lock' => true,
+				'patrol' => true,
+				'markbotedits' => true,
+				'nuke' => true,
+				'mergehistory' => true,
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'move-categorypage' => true,
+				'movefile' => true,
+				'move' => true,
+				'move-suppages' => true,
+				'move-rootuserpages' => true,
+				'autoconfirmed' => true,
+				'noratelimit' => true,
+				'supressredirect' => true,
+				'reupload-shared' => true,
+				'override-antispoof' => true,
+				'tboverride' => true,
+				'reupload' => true,
+				'skipcaptcha' => true,
+				'rollback' = true,
+				'abusefilter-revert' => true,
+				'browsearchive' => true,
+				'massmessage' => true,
+				'unblockself' => true,
+				'undelete' => true,
+				'upload' => true,
+				'apihighlimits' => true,
+				'mf-uploadbutton' => true,
+				'unwatchedpages' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'spamblacklistlog' => true,
+				'titleblacklistlog' => true,
+			),
+			'mirahezestaff' => array(
+				'*' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -1016,12 +1074,12 @@ $wgConf->settings = array(
 			),
 		),
 		'+developmentwiki' => array(
-			'bureaucrat' => array(
+			'supervisor' => array(
+				'bureaucrat',
 				'trusted',
 			),
-			'supervisor' => array(
+			'wikifounder' => array(
 				'supervisor',
-				'bureaucrat',
 			),
 		),
 		'+dpwiki' => array(
@@ -1105,6 +1163,12 @@ $wgConf->settings = array(
 		'+testwiki' => array(
 			'bureaucrat',
 			'consul',
+		),
+		'+developmentwiki' => array(
+			'bureaucrat',
+			'supervisor',
+			'wikifounder',
+			'mirahezestaff',
 		),
 	),
 	'+wgRestrictionTypes' => array(
