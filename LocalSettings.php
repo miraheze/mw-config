@@ -1165,7 +1165,6 @@ $wgConf->settings = array(
 			'bureaucrat',
 			'supervisor',
 			'wikifounder',
-			'mirahezestaff',
 		),
 	),
 	'+wgRestrictionTypes' => array(
