@@ -142,6 +142,7 @@ $wgConf->settings = array(
 	),
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
+			'allthetropes.org' => 'allthetropeswiki',
 			'anuwiki.com' => 'anuwiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
@@ -1216,6 +1217,7 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
+		'allthetropeswiki' => 'https://allthetropes.org',
 		'anuwiki' => 'https://anuwiki.com',
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
