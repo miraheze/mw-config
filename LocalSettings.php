@@ -252,6 +252,16 @@ $wgConf->settings = array(
 		'wikiacawiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	
+	// Dormancy policy && RC stuff
+	'wgRCMaxAge' => array(
+		'default' => 180 * 24 * 3600,
+		'allthetropeswiki' => 90 * 24 * 3600,
+		'extloadwiki' => 90 * 24 * 3600,
+		'loginwiki' => 90 * 24 * 3600,
+		'metawiki' => 90 * 24 * 3600,
+		'testwiki' => 90 * 24 * 3600,
+	),
 
 	// Extensions
 	'wmgUseAdminLinks' => array(
