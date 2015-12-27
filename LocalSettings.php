@@ -1563,3 +1563,10 @@ EOF;
         return true;
 }
 // **** TEMPORARILY FOR 1.26 UPGRADE ****
+
+// MaxRCAge for dormancy policy
+$wgRCMaxAge = 180
+if ( $wgDBname == 'allthetropeswiki' || $wgDBname = 'loginwiki' || $wgGBname = 'metawiki' || $wgGBname = 'testwiki' || $wgGBname = 'extloadwiki' ) {
+	$wgRCMaxAge = 90
+}
+// end of dormancy policy
