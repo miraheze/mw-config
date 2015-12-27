@@ -226,9 +226,6 @@ $wgConf->settings = array(
 	'wgDBadminuser' => array(
 		'default' => 'wikiadmin',
 	),
-	'wgReadOnly' => array(
-		'default' => "Miraheze is upgrading its MediaWiki installation to 1.26. All wikis will be read-only until 18:00 UTC.",
-	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
 	),
@@ -1562,15 +1559,3 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 		return true;
 }
 
-// **** TEMPORARILY FOR 1.26 UPGRADE ****
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-        $siteNotice .= <<<EOF
-<table class="wikitable" style="text-align:center;"><tbody><tr>
-<td>Miraheze will upgrade all wikis to <a class="external free" rel="nofollow" href="//mediawiki.org/wiki/MediaWiki_1.26">MediaWiki 1.26</a> on the 27th of December. A maintenance window has been scheduled to take place from 16:00 until 18:00 (<a class="external free" rel="nofollow" href="http://www.worldtimeserver.com/current_time_in_UTC.aspx">UTC +0</a>).<p>During this maintenance window, all wikis will be in <b>read-only</b> mode. The wikis will remain readable during this maintenance window, although some small issues might occur during the upgrade. When the maintenance window is over, all wikis will be made editable again.</p><p>If you have any questions regarding this upgrade, please contact us at our <a class="external free" href="https://meta.miraheze.org/wiki/Stewards'_noticeboard">Stewards' Noticeboard</a>.</p></td>
-</tr></tbody></table>
-EOF;
-
-        return true;
-}
-// **** TEMPORARILY FOR 1.26 UPGRADE ****
