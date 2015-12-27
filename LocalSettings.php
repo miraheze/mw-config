@@ -226,7 +226,7 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => "Miraheze is upgrading its MediaWiki installation to 1.26. All wikis will be read-only until 18:00 UTC.",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
