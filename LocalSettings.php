@@ -252,6 +252,16 @@ $wgConf->settings = array(
 		'wikiacawiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	
+	// Dormancy policy && RC stuff
+	'wgRCMaxAge' => array(
+		'default' => 180 * 24 * 3600,
+		'allthetropeswiki' => 90 * 24 * 3600,
+		'extloadwiki' => 90 * 24 * 3600,
+		'loginwiki' => 90 * 24 * 3600,
+		'metawiki' => 90 * 24 * 3600,
+		'testwiki' => 90 * 24 * 3600,
+	),
 
 	// Extensions
 	'wmgUseAdminLinks' => array(
@@ -1563,10 +1573,3 @@ EOF;
         return true;
 }
 // **** TEMPORARILY FOR 1.26 UPGRADE ****
-
-// MaxRCAge for dormancy policy
-$wgRCMaxAge = 180
-if ( $wgDBname == 'allthetropeswiki' || $wgDBname = 'loginwiki' || $wgGBname = 'metawiki' || $wgGBname = 'testwiki' || $wgGBname = 'extloadwiki' ) {
-	$wgRCMaxAge = 90
-}
-// end of dormancy policy
