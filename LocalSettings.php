@@ -228,7 +228,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'allthetropeswiki' => 'Due to an issue with the MediaWiki upgrade, we\'ll keep All The Tropes in read-only mode to fix some upgrade issues. Sorry for the inconvience, and please email sysadmin [at] miraheze [dot] org if you have any questions.',
+		'allthetropeswiki' => 'Due to an issue with the MediaWiki upgrade, we\'ll keep All The Tropes in read-only mode to fix some upgrade issues. Sorry for the inconvenience, and please email sysadmin [at] miraheze [dot] org if you have any questions.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
