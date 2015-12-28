@@ -323,6 +323,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
+		'extloadwiki' => true,
 		'stoutofreachwiki' => true,
 	),
 	'wmgUseImageMap' => array(
