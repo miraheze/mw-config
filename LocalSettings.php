@@ -321,6 +321,10 @@ $wgConf->settings = array(
 		'spiraltestwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	'wmgUseFeaturedFeeds' => array(
+		'default' => false,
+		'stoutofreachwiki' => true,
+	),
 	'wmgUseImageMap' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
