@@ -1348,6 +1348,11 @@ $wgConf->settings = array(
 		'default' => array(),
 	),
 
+	// UniversalLanguageSelector
+	'wgULSAnonCanChangeLanguage' => array(
+		'default' => false,
+	),
+
 	// UrlShortener
 	'wgUrlShortenerTemplate' => array(
 		'default' => '/m/$1',
