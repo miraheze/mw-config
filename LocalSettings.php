@@ -1563,3 +1563,14 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 		return true;
 }
 
+// **** TEMPORARY SITE NOTICE FOR DORMANCY POLICY ****		
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';		
+function onSiteNoticeAfter( &$siteNotice, $skin ) {		
+       $siteNotice .= <<<EOF		
+<table class="wikitable" style="text-align:center;"><tbody><tr>		
+<td>Miraheze will be implementing a new global policy on 1 January 2016. This new <a class="external free" rel="nofollow" href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a> will effect almost all wikis and users. Please be sure to review the policy and famliarize yourself with it. As always, questions or concernsm ay be <a class="external free" rel="nofollow" href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">left on the Stewards' noticeboard</a>. Thank you for choosing Miraheze!</td>		
+</tr></tbody></table>		
+EOF;		
+        return true;		
+}		
+// **** TEMPORARY SITE NOTICE ****
