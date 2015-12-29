@@ -155,6 +155,10 @@ if ( $wmgUseWikiEditor ) {
 	$wgCodeEditorEnableCore = true;
 }
 
+if ( $wmgUseWikiForum ) {
+	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
+}
+
 if ( $wmgUseYouTube ) {
 	require_once( "$IP/extensions/YouTube/YouTube.php" );
 }
