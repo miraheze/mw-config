@@ -381,6 +381,7 @@ $wgConf->settings = array(
 		'safiriawiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'stoutofreachwiki' => true,
 		'szkwiki' => true,
 		'tanodswiki' => true,
 		'wdbwiki' => true,
