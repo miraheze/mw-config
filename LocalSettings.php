@@ -269,6 +269,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'heistwiki' => true,
 		'poserdazfreebieswiki' => true,
