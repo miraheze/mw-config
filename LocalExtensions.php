@@ -44,6 +44,10 @@ if ( $wmgUseFlow ) {
 	}
 }
 
+if ( $wmgUseFeaturedFeeds) {
+	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
+}
+
 if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
