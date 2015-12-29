@@ -310,6 +310,9 @@ $wgConf->settings = array(
 	'wmgUseEchoThanks' => array(
 		'default' => true,
 	),
+	'wmgUseFeaturedFeeds' => array(
+		'default' => false,
+	),
 	'wmgUseFlow' => array(
 		'default' => false,
 		'8stationwiki' => true,
@@ -469,6 +472,9 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'szkwiki' => true,
 		'walthamstowlabourwiki' => true,
+	),
+	'wmgUseVectorBeta' => array(
+		'default' => false,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
