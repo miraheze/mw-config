@@ -470,6 +470,12 @@ $wgConf->settings = array(
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
+	'wmgUseWikiForum' => array(
+		'default' => false,
+		'entropediawiki' => true,
+		'extloadwiki' => true,
+		'indexwiki' => true,
+	),
         'wmgUseYouTube' => array(
                 'default' => false,
                 'allthetropeswiki' => true,
