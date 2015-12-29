@@ -469,6 +469,11 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	'wmgUseVectorBeta' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
