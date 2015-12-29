@@ -393,6 +393,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
+		'stoutofreachwiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
 		'default' => false,
