@@ -497,11 +497,6 @@ $wgConf->settings = array(
                 'worldpediawiki' => true,
                 'developmentwiki' => true,
         ),
-        // When enabling WikiForum on wikis, update.php must be manually run on that wiki!
-	'wmgUseWikiForum' => array(
-		'default' => false,
-		'extloadwiki' => true,
-	),
 
 	// Files
 	'wgEnableUploads' => array(
