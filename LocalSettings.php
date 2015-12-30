@@ -470,6 +470,7 @@ $wgConf->settings = array(
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
+	// When enabling WikiForum on wikis, update.php must be manually run on that wiki!
 	'wmgUseWikiForum' => array(
 		'default' => false,
 		'entropediawiki' => true,
