@@ -36,11 +36,14 @@ if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
 	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
-	$wgFlowParsoidURL = 'http://parsoid1.miraheze.org:8142';
-	$wgFlowParsoidPrefix = "$wgDBname";
+
+	$wgVirtualRestConfig['modules']['parsoid'] = array(
+	  'url' => 'http://parsoid1.miraheze.org:8142',
+	  'prefix' => $wgDBname,
+	);
 
 	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-		$wgFlowParsoidForwardCookies = true;
+		$wgVirtualRestConfig['modules']['parsoid']['forwardCookies'] = true;
 	}
 }
 
@@ -134,11 +137,15 @@ if ( $wmgUseVectorBeta ) {
 
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-	$wgVisualEditorParsoidURL = 'http://parsoid1.miraheze.org:8142';
-	$wgVisualEditorParsoidPrefix = "$wgDBname";
+
+	$wgVirtualRestConfig['modules']['parsoid'] = array(
+	  'url' => 'http://parsoid1.miraheze.org:8142',
+	  'prefix' => $wgDBname,
+	);
+
 
 	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-		$wgVisualEditorParsoidForwardCookies = true;
+		$wgVirtualRestConfig['modules']['parsoid']['forwardCookies'] = true;
 	}
 
 	$wgDefaultUserOptions['visualeditor-enable'] = 1;
