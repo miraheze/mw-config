@@ -422,6 +422,10 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseTemplataData' => array(
+		'default' => false,
+		'adnovumwiki' => true,
+	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
 		'extloadwiki' => true,
