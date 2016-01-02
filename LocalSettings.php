@@ -401,6 +401,7 @@ $wgConf->settings = array(
 	// Do not ever enable without contacting me! --Southparkfan
 	'wmgUseSocialProfile' => array(
 		'default' => false,
+		'adnovumwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
 		'stoutofreachwiki' => true,
