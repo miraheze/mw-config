@@ -475,7 +475,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseVectorBeta' => array(
 		'default' => false,
-		'allthetropes' => true,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
