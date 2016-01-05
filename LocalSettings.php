@@ -83,6 +83,7 @@ $wgConf->settings = array(
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
+		'developmentwiki' => 259200, // 3 days * 24 hours * 60 minutes * 60 seconds
 	),
 	'wgAutoConfirmCount' => array(
 		'default' => 10,
