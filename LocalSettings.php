@@ -400,6 +400,7 @@ $wgConf->settings = array(
 		'tanodswiki' => true,
 		'wdbwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'worldofkirbycraftwiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
 	'wmgUseSocialProfile' => array(
