@@ -926,6 +926,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+developmentwiki' => array(
+			'steward' => array(
+				'wikifounder' => true,
+				'supervisor' => true,
+				'bureaucrat' => true,
+			),
 			'trusted' => array(
 				'editsemiprotected' => true,
 				'autoconfirmed' => true,
