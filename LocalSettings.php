@@ -366,7 +366,7 @@ $wgConf->settings = array(
 		'quantixwiki' => false,
 		'szkwiki' => false,
 	),
-	'wmgUseMobileFrontEnd' => array(
+	'wmgUseMobileFrontend' => array(
 		'default' => true,
 		'izanagiwiki' => false,
 	),
@@ -474,6 +474,7 @@ $wgConf->settings = array(
 		'etpowiki' => true,
 		'genwiki' => true,
 		'hshsinfoportalwiki' => true,
+		'izanagiwiki' => true,
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
 		'partupwiki' => true,
