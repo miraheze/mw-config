@@ -346,9 +346,10 @@ $wgConf->settings = array(
 	'wmgUseMsPackage' => array(
 		'default' => false,
 		'catboxwiki' => true,
-		'extloadwiki' => true,
+		'extloadwiki' => true, //do not set this to false without disabling MsUpload on all wikis below
 		'quantixwiki' => true,
 	),
+	//MsUpload is enabled on extloadwiki via MsPackage^
 	'wmgUseMsUpload' => array(
 		'default' => false,
 		'izanagiwiki' => true,
