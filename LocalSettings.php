@@ -1620,6 +1620,11 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 		return true;
 }
 
+// FOR DISABLING MOBILEFRONTEND FOR IZANGIWIKI 
+$wmgUseFrontend => array(
+if ( $wgDBname !== 'izangiwiki' ) { require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" ); }
+),
+
 // **** TEMPORARILY FOR DORMANCY POLICY ****
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
