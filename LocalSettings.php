@@ -480,6 +480,7 @@ $wgConf->settings = array(
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'izanagionlinewiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
@@ -513,6 +514,7 @@ $wgConf->settings = array(
                 'testwiki' => true,
                 'worldpediawiki' => true,
                 'developmentwiki' => true,
+		'izanagionlinewiki' => true,
         ),
 
 	// Files
@@ -628,6 +630,7 @@ $wgConf->settings = array(
 		'developmentwiki' => 'Official:Copyrights',
 		'diavwiki' => 'Project:Copyrights',
 		'quantixwiki' => 'Project:Copyrights',
+		'developmentwiki' => 'Official:Copyright',
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
