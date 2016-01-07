@@ -856,6 +856,10 @@ $wgConf->settings = array(
 				'consul',
 				'exampleuser',
 			),
+			'steward' => array(
+				'consul',
+				'exampleuser',
+			),
 		),
 		'+walthamstowlabourwiki' => array(
 			'sysop' => array(
@@ -1194,6 +1198,10 @@ $wgConf->settings = array(
 			'consul' => array(
 				'bot',
 				'bureaucrat',
+				'exampleuser',
+			),
+			'steward' => array(
+				'consul',
 				'exampleuser',
 			),
 		),
