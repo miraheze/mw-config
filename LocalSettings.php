@@ -349,6 +349,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'quantixwiki' => true,
 	),
+	'wmgUseMsUpload' => array(
+		'default' => false,
+		'izanagiwiki' => true,
+	),
         // multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
 		'default' => false,
@@ -361,6 +365,10 @@ $wgConf->settings = array(
 		'mecanonwiki' => false, 
 		'quantixwiki' => false,
 		'szkwiki' => false,
+	),
+	'wmgUseMobileFrontEnd' => array(
+		'default' => true,
+		'izanagiwiki' => false,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
