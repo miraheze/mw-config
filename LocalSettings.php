@@ -346,8 +346,13 @@ $wgConf->settings = array(
 	'wmgUseMsPackage' => array(
 		'default' => false,
 		'catboxwiki' => true,
-		'extloadwiki' => true,
+		'extloadwiki' => true, //do not set this to false without disabling MsUpload on all wikis below
 		'quantixwiki' => true,
+	),
+	//MsUpload is enabled on extloadwiki via MsPackage^
+	'wmgUseMsUpload' => array(
+		'default' => false,
+		'izanagiwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
@@ -361,6 +366,10 @@ $wgConf->settings = array(
 		'mecanonwiki' => false, 
 		'quantixwiki' => false,
 		'szkwiki' => false,
+	),
+	'wmgUseMobileFrontend' => array(
+		'default' => true,
+		'izanagiwiki' => false,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
@@ -466,6 +475,7 @@ $wgConf->settings = array(
 		'etpowiki' => true,
 		'genwiki' => true,
 		'hshsinfoportalwiki' => true,
+		'izanagiwiki' => true,
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
 		'partupwiki' => true,

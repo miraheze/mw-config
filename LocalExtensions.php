@@ -69,8 +69,16 @@ if ( $wmgUseMsPackage ) {
 	require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
 }
 
+if ( $wmgUseMsUpload ) {
+	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+}
+
 if ( $wmgUseMultiUpload ) {
 	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
+}
+
+if ( $wmgUseMobileFrontend ) {
+	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 }
 
 if ( $wmgUsePopups ) {
