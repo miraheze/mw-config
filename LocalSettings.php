@@ -1136,14 +1136,12 @@ $wgConf->settings = array(
 			),
 			'consul' => array(
 				'read' => true,
+				'bureaucrat' => true,
 				'consul' => true,
 			),
 			'testgroup' => array(
 				'read' => true,
 				'testgroup' => true,
-			),
-			'exampleuser' => array(
-				'editmyoptions' => false,
 			),
 		), 
 		'+walthamstowlabourwiki' => array(
@@ -1256,7 +1254,10 @@ $wgConf->settings = array(
 		),
 		'testwiki' => array(
 			'sysop' => array(
-				'nuke' => false,
+				'nuke' => true,
+			),
+			'exampleuser' => array(
+				'editmyoptions' => true,
 			),
 		),
 	),
