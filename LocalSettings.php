@@ -859,19 +859,37 @@ $wgConf->settings = array(
 				'admin',
 			),
 		),
-		'+testwiki' => array(
+		'testwiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
+				'bureaucrat',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
 			),
 			'consul' => array(
 				'bot',
 				'bureaucrat',
 				'consul',
 				'exampleuser',
+				'testgroup',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
 			),
 			'steward' => array(
 				'consul',
+				'bot',
+				'bureaucrat',
+				'consul',
 				'exampleuser',
+				'testgroup',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
 			),
 		),
 		'+walthamstowlabourwiki' => array(
@@ -1206,7 +1224,8 @@ $wgConf->settings = array(
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
-				'testgroup'
+				'testgroup',
+				'bot',
 			),
 			'consul' => array(
 				'bot',
