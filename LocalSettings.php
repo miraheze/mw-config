@@ -472,6 +472,7 @@ $wgConf->settings = array(
 		'applebranchwiki' => true,
 		'arguwikiwiki' => true,
 		'aryamanwiki' => true,
+		'biblicalwikiwiki' => true,
 		'braindumpwiki' => true,
 		'cbmediawiki' => true,
 		'clicordiwiki' => true,
