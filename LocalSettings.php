@@ -67,6 +67,10 @@ define( 'NS_HOENN_TALK', 1623 );
 define( 'NS_OFFICIAL', 1624 );
 define( 'NS_OFFICIAL_TALK', 1625 );
 
+// AdnovumWiki (AdnovumRP)
+define( 'NS_PORTAL', 1626 );
+define( 'NS_PORTAL_TALK', 1627 );
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -696,6 +700,10 @@ $wgConf->settings = array(
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
+		'adnovumwiki' => array(
+			NS_PORTAL => 'Portal',
+			NS_TPORTAL_TALK => 'Portal_talk',
+		),
 		'allthetropeswiki' => array(
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
 			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
@@ -746,6 +754,10 @@ $wgConf->settings = array(
 	),
 	'+wgNamespaceAliases' => array(
 		'default' => array(),
+		'+adnovumwiki' => array(
+			'ARP' => NS_PROJECT,
+			'ARP_talk' => NS_PROJECT_TALK,
+		),
 		'+allthetropeswiki' => array(
 			'ATT' => NS_PROJECT,
 			'ATT_talk' => NS_PROJECT_TALK,
@@ -755,6 +767,11 @@ $wgConf->settings = array(
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
+		'+adnovumwiki' => array(
+			NS_MAIN => true,
+			NS_USER => true,
+			NS_TEMPLATE => true,
+		),
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
 			NS_TROPEWORKSHOP => true,
@@ -1378,6 +1395,7 @@ $wgConf->settings = array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/3/3b/Wiki_logo.png",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/f/f1/APlogo.png",
+		'adnovumwiki' => "//$wmgUploadHostname/adnovumwiki/f/fa/AdnovumRPtemplogo.png",
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
 		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/0/03/AppleBranch_135.png",
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
