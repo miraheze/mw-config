@@ -702,7 +702,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		'adnovumwiki' => array(
 			NS_PORTAL => 'Portal',
-			NS_TPORTAL_TALK => 'Portal_talk',
+			NS_PORTAL_TALK => 'Portal_talk',
 		),
 		'allthetropeswiki' => array(
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
