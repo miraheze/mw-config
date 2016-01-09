@@ -356,6 +356,7 @@ $wgConf->settings = array(
 	//MsUpload is enabled on extloadwiki via MsPackage^
 	'wmgUseMsUpload' => array(
 		'default' => false,
+		'adnovumwiki' => true,
 		'izanagiwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
