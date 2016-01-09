@@ -1668,16 +1668,3 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 	}
 		return true;
 }
-
-// **** TEMPORARILY FOR DORMANCY POLICY ****
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	$siteNotice .= <<<EOF
-	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>As of 5 January 2016, Miraheze has implemented an official <a class="external free" href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy.</a>. This policy contains important information about the activity levels a wiki should show to avoid closure or deletion of the wiki. Please do not hesitate to <a class="external free" href="https://meta.miraheze.org/wiki/Stewards'_Noticeboard">contact us</a> if you have any questions regarding this policy.</td>
-	</tr></tbody></table>
-EOF;
-
-	return true;
-}
-// **** TEMPORARILY FOR DORMANCY POLICY ****
