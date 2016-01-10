@@ -70,6 +70,8 @@ define( 'NS_OFFICIAL_TALK', 1625 );
 // AdnovumWiki (AdnovumRP)
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
+define( 'NS_HELP', 1628 );
+define( 'NS_HELP_TALK', 1629 );
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -709,6 +711,8 @@ $wgConf->settings = array(
 		'adnovumwiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
+			NS_HELP => 'Help',
+			NS_HELP_TALK => 'Help_talk',
 		),
 		'allthetropeswiki' => array(
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
@@ -763,6 +767,10 @@ $wgConf->settings = array(
 		'+adnovumwiki' => array(
 			'ARP' => NS_PROJECT,
 			'ARP_talk' => NS_PROJECT_TALK,
+			'WP' => NS_PROJECT,
+			'WP_talk' => NS_PROJECT_TALK,
+			'H' => NS_HELP,
+			'H_talk' => NS_HELP_TALK,
 		),
 		'+allthetropeswiki' => array(
 			'ATT' => NS_PROJECT,
@@ -777,6 +785,8 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_USER => true,
 			NS_TEMPLATE => true,
+			NS_PORTAL => true,
+			NS_HELP => true,
 		),
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
