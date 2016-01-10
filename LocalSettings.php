@@ -70,8 +70,6 @@ define( 'NS_OFFICIAL_TALK', 1625 );
 // AdnovumWiki (AdnovumRP)
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
-# define( 'NS_HELP', 1628 ); already defined as NS_12
-# define( 'NS_HELP_TALK', 1629 );already defined as NS_13
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -767,8 +765,6 @@ $wgConf->settings = array(
 		'+adnovumwiki' => array(
 			'ARP' => NS_PROJECT,
 			'ARP_talk' => NS_PROJECT_TALK,
-			'WP' => NS_PROJECT,
-			'WP_talk' => NS_PROJECT_TALK,
 			'H' => NS_HELP,
 			'H_talk' => NS_HELP_TALK,
 		),
