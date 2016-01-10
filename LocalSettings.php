@@ -405,6 +405,7 @@ $wgConf->settings = array(
 		'luismark2015wiki' => true,
 		'novahistoriaewiki' => true,
 		'partupwiki' => true,
+		'poserdazfreebiestestwiki' => true,
 		'pqwiki' => true,
 		'quantixwiki' => true,
 		'rawdatawiki' => true,
