@@ -393,6 +393,7 @@ $wgConf->settings = array(
 		'antiguabarbudacalypsowiki' => true,
 		'aryamanwiki' => true,
 		'avionwiki' => true,
+		'biblicalwikiwiki' => true,
 		'buswiki' => true,
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
