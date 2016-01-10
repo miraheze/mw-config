@@ -251,6 +251,7 @@ $wgConf->settings = array(
 	'wmgDisableAnonEditing' => array(
 		'default' => false,
 		'8stationwiki' => true,
+		'adnovumwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
