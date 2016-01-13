@@ -698,6 +698,10 @@ $wgConf->settings = array(
 	'wgSitename' => array(
 		'default' => 'No sitename set!',
 	),
+	'wgAllowDisplayTitle' => array(
+		'default' => false,
+		'nissanecuwiki' => true,
+	),
 
 	// Mobile
 	'wgMFAutodetectMobileView' => array(
