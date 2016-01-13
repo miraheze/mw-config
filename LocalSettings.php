@@ -699,7 +699,7 @@ $wgConf->settings = array(
 		'default' => 'No sitename set!',
 	),
 	'wgAllowDisplayTitle' => array(
-		'default' => false,
+		'default' => true,
 		'nissanecuwiki' => true,
 	),
 
