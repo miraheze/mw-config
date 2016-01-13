@@ -395,6 +395,7 @@ $wgConf->settings = array(
 		'avionwiki' => true,
 		'biblicalwikiwiki' => true,
 		'buswiki' => true,
+		'boulderwikiwiki' => true,
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
 		'developmentwiki' => true,
