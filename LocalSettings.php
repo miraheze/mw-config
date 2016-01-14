@@ -1169,6 +1169,7 @@ $wgConf->settings = array(
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
+				'editinterface' => true,
 			),
 			'consul' => array(
 				'read' => true,
@@ -1291,6 +1292,7 @@ $wgConf->settings = array(
 		'testwiki' => array(
 			'sysop' => array(
 				'nuke' => true,
+				'editinterface' => true,
 			),
 			'exampleuser' => array(
 				'editmyoptions' => true,
