@@ -478,6 +478,7 @@ $wgConf->settings = array(
 		'arguwikiwiki' => true,
 		'aryamanwiki' => true,
 		'biblicalwikiwiki' => true,
+		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
 		'cbmediawiki' => true,
 		'clicordiwiki' => true,
