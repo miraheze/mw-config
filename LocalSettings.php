@@ -1292,7 +1292,7 @@ $wgConf->settings = array(
 		'testwiki' => array(
 			'sysop' => array(
 				'nuke' => true,
-				'editinterface' => true,
+				# 'editinterface' => true, //mistakenly applies to other groups as well
 			),
 			'exampleuser' => array(
 				'editmyoptions' => true,
