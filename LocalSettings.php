@@ -370,6 +370,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => false,
 		'antiguabarbudacalypsowiki' => false,
 		'catboxwiki' => false,
+		'chandruswethswiki' => true,
 		'extloadwiki' => false,
 		'izanagiwiki' => false,
 		'mecanonwiki' => false, 
