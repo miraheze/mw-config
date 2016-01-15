@@ -482,6 +482,7 @@ $wgConf->settings = array(
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
 		'cbmediawiki' => true,
+		'chandruswethswiki' => true,
 		'clicordiwiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
