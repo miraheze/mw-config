@@ -360,6 +360,7 @@ $wgConf->settings = array(
 	'wmgUseMsUpload' => array(
 		'default' => false,
 		'adnovumwiki' => true,
+		'chandruswethswiki' => true,
 		'izanagiwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
