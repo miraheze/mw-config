@@ -445,6 +445,7 @@ $wgConf->settings = array(
 		// 'allthetropeswiki' => true,
 		// 'extloadwiki' => true,
 		// 'datasciencewiki' => true,
+		// 'cssandjsschoolboardwiki' => true,
 	),
 	'wmgUseTabsCombination' => array(
 		'default' => false,
@@ -485,6 +486,7 @@ $wgConf->settings = array(
 		'cbmediawiki' => true,
 		'chandruswethswiki' => true,
 		'clicordiwiki' => true,
+		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'esswaywiki' => true,
