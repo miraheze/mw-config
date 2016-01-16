@@ -420,6 +420,7 @@ $wgConf->settings = array(
 		'stoutofreachwiki' => true,
 		'szkwiki' => true,
 		'tanodswiki' => true,
+		'tyrolmountainswiki' => true,
 		'wdbwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'worldofkirbycraftwiki' => true,
