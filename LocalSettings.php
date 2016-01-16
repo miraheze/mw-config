@@ -1174,6 +1174,7 @@ $wgConf->settings = array(
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
+				'nuke' => true,
 				'editinterface' => true,
 			),
 			'consul' => array(
