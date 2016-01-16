@@ -1697,3 +1697,13 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 	}
 		return true;
 }
+
+$wmgParsoidIPs = array( '185.52.1.144' );
+
+// Alternative to forwarding user cookies to Parsoid
+if ( !$wgCommandLineMode ) {
+	if ( in_array( $_SERVER['REMOTE_ADDR'], $wmgParsoidIPs ) ) {
+		$wgGroupPermissions['*']['read'] = true;
+		$wgGroupPermissions['*']['edit'] = true;
+	}
+}

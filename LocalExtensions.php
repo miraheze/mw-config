@@ -41,10 +41,6 @@ if ( $wmgUseFlow ) {
 	  'url' => 'http://parsoid1.miraheze.org:8142',
 	  'prefix' => $wgDBname,
 	);
-
-	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-		$wgVirtualRestConfig['modules']['parsoid']['forwardCookies'] = true;
-	}
 }
 
 if ( $wmgUseFeaturedFeeds) {
@@ -150,11 +146,6 @@ if ( $wmgUseVisualEditor ) {
 	  'url' => 'http://parsoid1.miraheze.org:8142',
 	  'prefix' => $wgDBname,
 	);
-
-
-	if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-		$wgVirtualRestConfig['modules']['parsoid']['forwardCookies'] = true;
-	}
 
 	$wgDefaultUserOptions['visualeditor-enable'] = 1;
 	
