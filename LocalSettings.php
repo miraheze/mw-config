@@ -333,6 +333,10 @@ $wgConf->settings = array(
 		'spiraltestwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	'wmgUseForeground' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseImageMap' => array(
 		'default' => false,
 		'adnovumwiki' => true,
@@ -443,7 +447,7 @@ $wgConf->settings = array(
 	'wmgUseSyntaxHighlight' => array( 
 		'default' => false,
 		// 'allthetropeswiki' => true,
-		// 'extloadwiki' => true,
+		'extloadwiki' => true,
 		// 'datasciencewiki' => true,
 		// 'cssandjsschoolboardwiki' => true,
 	),
