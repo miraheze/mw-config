@@ -47,6 +47,10 @@ if ( $wmgUseFeaturedFeeds) {
 	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
 }
 
+if ( $wmgUseForeground) {
+	require_once( "$IP/skins/foreground/foreground.php" );
+}
+
 if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
