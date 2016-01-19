@@ -280,6 +280,7 @@ $wgConf->settings = array(
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'gameswiki' => true,
 		'heistwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'szkwiki' => true,
@@ -359,6 +360,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'catboxwiki' => true,
 		'extloadwiki' => true, //do not set this to false without disabling MsUpload on all wikis below
+		'gameswiki' => true,
 		'quantixwiki' => true,
 	),
 	//MsUpload is enabled on extloadwiki via MsPackage^
@@ -406,6 +408,7 @@ $wgConf->settings = array(
 		'cbmediawiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'gameswiki' => true,
 		'iqtwiki' => true,
 		'jbkwwiki' => true,
 		'kurumiwiki' => true,
@@ -541,6 +544,7 @@ $wgConf->settings = array(
                 'allthetropeswiki' => true,
                 'bmedwiki' => true,
                 'extloadwiki' => true,
+		'gameswiki' => true,
                 'izanagiwiki' => true,
                 'szkwiki' => true,
                 'testwiki' => true,
@@ -1305,7 +1309,7 @@ $wgConf->settings = array(
 		),
 		'testwiki' => array(
 			'sysop' => array(
-				'nuke' => true,
+				# 'nuke' => true, // done in overrides at end of file
 				# 'editinterface' => true, //mistakenly applies to other groups as well
 			),
 			'exampleuser' => array(
