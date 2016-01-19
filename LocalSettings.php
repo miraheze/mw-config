@@ -1209,7 +1209,10 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
-		'quantixwiki' => array(
+		'gameswiki' => array(
+			'*' => true,
+		),
+		'lupawiki' => array(
 			'*' => true,
 		),
 	),
