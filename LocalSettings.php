@@ -1716,3 +1716,13 @@ if ( !$wgCommandLineMode ) {
 		$wgGroupPermissions['*']['edit'] = true;
 	}
 }
+
+// TestWiki overrides
+if ( $wgDBname === 'testwiki' ) {
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['bureaucrat']['nuke'] = true;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['bureaucrat']['editinterface'] = true;
+	$wgGroupPermissions['consul']['editinterface'] = true;
+}
+
