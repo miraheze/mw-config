@@ -1190,10 +1190,10 @@ $wgConf->settings = array(
 				'read' => true,
 				'bureaucrat' => true,
 				'consul' => true,
+				'editinterface' => true,
 			),
 			'testgroup' => array(
 				'read' => true,
-				'testgroup' => true,
 			),
 		), 
 		'+walthamstowlabourwiki' => array(
@@ -1724,9 +1724,6 @@ if ( !$wgCommandLineMode ) {
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
-	$wgGroupPermissions['bureaucrat']['nuke'] = true;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['bureaucrat']['editinterface'] = true;
-	$wgGroupPermissions['consul']['editinterface'] = true;
 }
 
