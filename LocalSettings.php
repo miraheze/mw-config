@@ -583,6 +583,7 @@ $wgConf->settings = array(
 	'wgExternalLinkTarget' = array(
 		'default' => false,
 		'vrgowiki' => '_blank'
+	),
 	// Flow
 	'wmgFlowOccupyNamespaces' => array(
 		'default' => array(),
