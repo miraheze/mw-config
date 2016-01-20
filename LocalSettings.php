@@ -1202,11 +1202,11 @@ $wgConf->settings = array(
 		'+vrgowiki' => array(
 			'sysop' => array(
 				'edit' => true,
+			),
 			'bureaucrat => array(
 				'edit' => true,
 			),	
 		),
-	),
 		'+walthamstowlabourwiki' => array(
 			'*' => array(
 				'edit' => false,
