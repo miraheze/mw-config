@@ -517,7 +517,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
-		'vrgowiki' => true
+		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseVariables' => array(
