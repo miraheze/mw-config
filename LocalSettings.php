@@ -517,6 +517,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
+		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseVariables' => array(
@@ -1198,6 +1199,14 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		), 
+		'+vrgowiki' => array(
+			'sysop' => array(
+				'edit' => true,
+			),
+			'bureaucrat => array(
+				'edit' => true,
+			),	
+		),
 		'+walthamstowlabourwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1722,10 +1731,14 @@ if ( !$wgCommandLineMode ) {
 		$wgGroupPermissions['*']['edit'] = true;
 	}
 }
-
+// Revoking permissions
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
+}
+// Vrgo overrides
+if ( $wgDBname === 'vrgowiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
 }
 
