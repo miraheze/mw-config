@@ -1736,6 +1736,7 @@ if ( !$wgCommandLineMode ) {
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
+}
 // Vrgo overrides
 if ( $wgDBname === 'vrgowiki' ) {
 	$wgGroupPermissions['*']['edit'] = false;
