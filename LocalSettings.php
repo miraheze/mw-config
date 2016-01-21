@@ -588,7 +588,11 @@ $wgConf->settings = array(
 	'wgEnableImageWhitelist' => array(
 		'default' => false,
 	),
-
+	// External Link Target
+	'wgExternalLinkTarget' => array(
+		'default' => false,
+		'vrgowiki' => '_blank',
+	),
 	// Flow
 	'wmgFlowOccupyNamespaces' => array(
 		'default' => array(),
