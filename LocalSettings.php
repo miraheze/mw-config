@@ -876,6 +876,16 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+cssandjsschoolboardwiki' => array(
+			'Founder' => array(
+				'autopatrolled',
+				'bot',
+				'bureaucrat'
+				'confirmed',
+				'sysop',
+				'rollbacker',
+			),
+		),
 		'+developmentwiki' => array(
 			'supervisor' => array(
 				'bureaucrat',
@@ -918,6 +928,16 @@ $wgConf->settings = array(
 			),
 			'superadmin' => array(
 				'admin',
+			),
+		),
+		'+quantumwiki' => array(
+			'Founder' => array(
+				'autopatrolled',
+				'bot',
+				'bureaucrat'
+				'confirmed',
+				'sysop',
+				'rollbacker',
 			),
 		),
 		'testwiki' => array(
@@ -1025,6 +1045,14 @@ $wgConf->settings = array(
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
+			),
+		),
+		'+cssandjsschoolboardwiki' => array(
+			'Founder' => array(
+				'read' => true,
+			),
+			'steward' => array(
+				'userrights'=> true,
 			),
 		),
 		'+developmentwiki' => array(
@@ -1188,6 +1216,11 @@ $wgConf->settings = array(
 				'upload_by_url' => true,
 			),
 		),
+		'+quantumwiki' => array(
+			'Founder' => array(
+				'read' => true,
+			),
+		),
 		'+szkwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1256,6 +1289,16 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+cssandjsschoolboardwiki' => array(
+			'Founder' => array(
+				'autopatrolled',
+				'bot',
+				'bureaucrat'
+				'confirmed',
+				'sysop',
+				'rollbacker',
+			),
+		),
 		'+developmentwiki' => array(
 			'supervisor' => array(
 				'bureaucrat',
@@ -1297,6 +1340,16 @@ $wgConf->settings = array(
 			),
 			'superadmin' => array(
 				'admin',
+			),
+		),
+		'+quantumwiki' => array(
+			'Founder' => array(
+				'autopatrolled',
+				'bot',
+				'bureaucrat'
+				'confirmed',
+				'sysop',
+				'rollbacker',
 			),
 		),
 		'+testwiki' => array(
