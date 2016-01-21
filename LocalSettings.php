@@ -257,6 +257,7 @@ $wgConf->settings = array(
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'turkcesozlukwiki' => true,
+		'vrgowiki' => true,
 		'welcomewiki' => true,
 		'wikiacawiki' => true,
 		'walthamstowlabourwiki' => true,
@@ -518,6 +519,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
+		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseVariables' => array(
@@ -554,7 +556,13 @@ $wgConf->settings = array(
                 'worldpediawiki' => true,
                 'developmentwiki' => true,
         ),
-
+        
+        // External link target
+	'wgExternalLinkTarget' => array(
+		'default' = false,
+		'vrgowiki' = '_blank',
+	),
+	
 	// Files
 	'wgEnableUploads' => array(
 		'default' => true,
@@ -945,6 +953,11 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+vrgowiki' => array(
+			'bureaucrat' => array(
+				'Teachers',
+			),
+		),
 		'+walthamstowlabourwiki' => array(
 			'sysop' => array(
 				'editor-approver',
@@ -1199,6 +1212,14 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		), 
+		'+vrgowiki' => array(
+			'sysop' => array(
+				'edit' => true,
+			),
+			'Teachers' => array(
+				'edit' => true, 
+			),
+		),
 		'+walthamstowlabourwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1291,6 +1312,11 @@ $wgConf->settings = array(
 			'steward' => array(
 				'consul',
 				'exampleuser',
+			),
+		),
+		'+vrgowiki' => array(
+			'bureaucrat' => array(
+				'Teachers',
 			),
 		),
 		'+walthamstowlabourwiki' => array(
@@ -1466,6 +1492,7 @@ $wgConf->settings = array(
 		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/d/d4/Logo_titrepro.svg",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
 		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
+		'vrgowiki' => "//$wmgUploadHostname/vrgowiki/4/4d/VRGO_logga.png",
 		'wdbwiki' => "//$wmgUploadHostname/wdbwiki/2/26/Dancing-135px.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/d/df/20150913_WelcomeWiki-Logo_TranspWritten135x135.png",
 		'worldofkirbycraftwiki' => "//$wmgUploadHostname/worldofkirbycraftwiki/2/2f/WoKWikiLogo.png",
@@ -1731,3 +1758,7 @@ if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 }
 
+// vrgo.miraheze.org overrides
+if ( $wgDBname === 'vrgowiki' ) {
+	$wgGroupPermissions['user']['edit'] = false;
+}
