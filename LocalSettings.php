@@ -559,8 +559,8 @@ $wgConf->settings = array(
         
         // External link target
 	'wgExternalLinkTarget' => array(
-		'default' = false,
-		'vrgowiki' = '_blank',
+		'default' => false,
+		'vrgowiki' => '_blank',
 	),
 	
 	// Files
