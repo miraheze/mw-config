@@ -424,6 +424,7 @@ $wgConf->settings = array(
 		'reriawiki' => true,
 		'safiriawiki' => true,
 		'shoppingwiki' => true,
+		'specialeducationwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 		'stoutofreachwiki' => true,
