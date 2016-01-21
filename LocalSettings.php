@@ -1052,7 +1052,7 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 			'steward' => array(
-				'userrights'=> true,
+				'userrights' => true,
 			),
 		),
 		'+developmentwiki' => array(
