@@ -420,6 +420,7 @@ $wgConf->settings = array(
 		'novahistoriaewiki' => true,
 		'partupwiki' => true,
 		'pflanzenwiki' => true,
+		'poserdazfreebieswiki' => true,
 		'poserdazfreebiestestwiki' => true,
 		'pqwiki' => true,
 		'quantixwiki' => true,
