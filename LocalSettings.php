@@ -338,7 +338,9 @@ $wgConf->settings = array(
 	),
 	'wmgUseForeground' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'permanentfuturelabwiki' => true,
 	),
 	'wmgUseImageMap' => array(
 		'default' => false,
