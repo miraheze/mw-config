@@ -461,10 +461,12 @@ $wgConf->settings = array(
 	// Possible cause of HHVM crashes
 	'wmgUseSyntaxHighlight' => array( 
 		'default' => false,
-		// 'allthetropeswiki' => true,
+		'allthetropeswiki' => true,
+		'datasciencewiki' => true,
+		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
-		// 'datasciencewiki' => true,
-		// 'cssandjsschoolboardwiki' => true,
+		'urho3dwiki' => true,
+
 	),
 	'wmgUseTabsCombination' => array(
 		'default' => false,
