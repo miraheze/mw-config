@@ -566,7 +566,7 @@ $wgConf->settings = array(
                 'szkwiki' => true,
                 'testwiki' => true,
                 'worldpediawiki' => true,
-                'urho3dwiki' => true,'
+                'urho3dwiki' => true,
         ),
         
         // External link target
