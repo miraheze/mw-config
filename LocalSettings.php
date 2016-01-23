@@ -392,7 +392,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMonaco' => array(
 		'default' => false,
-		'extload' => true, 
+		'extloadwiki' => true, 
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
