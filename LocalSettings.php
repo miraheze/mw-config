@@ -15,7 +15,7 @@ require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
-
+u
 $wmgUploadHostname = "static.miraheze.org";
 
 # Initialize $wgConf
@@ -529,7 +529,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
-		'urho3dwiki' => true
+		'urho3dwiki' => true,
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
