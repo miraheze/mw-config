@@ -81,7 +81,7 @@ if ( $wmgUseMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 }
 
-if { $wmgUseMonaco ) {
+if ( $wmgUseMonaco ) {
 	require_once( "$IP/extensions/Monaco/Monaco-port.php" );
 }
 
