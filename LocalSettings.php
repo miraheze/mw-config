@@ -509,6 +509,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'esswaywiki' => true,
 		'etpowiki' => true,
+		'gameswiki' => true,
 		'genwiki' => true,
 		'hshsinfoportalwiki' => true,
 		'izanagiwiki' => true,
