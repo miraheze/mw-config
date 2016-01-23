@@ -82,7 +82,7 @@ if ( $wmgUseMobileFrontend ) {
 }
 
 if ( $wmgUseMonaco ) {
-	require_once( "$IP/extensions/Monaco/Monaco-port.php" );
+	require_once( "$IP/skins/Monaco/monaco.php" );
 }
 
 if ( $wmgUsePopups ) {
