@@ -373,7 +373,6 @@ $wgConf->settings = array(
 		'adnovumwiki' => true,
 		'chandruswethswiki' => true,
 		'izanagiwiki' => true,
-		'urho3dwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
