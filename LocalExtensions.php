@@ -80,9 +80,11 @@ if ( $wmgUseMultiUpload ) {
 if ( $wmgUseMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 }
+
 if { $wmgUseMonaco ) {
 	require_once( "$IP/extensions/Monaco/Monaco-port.php" );
 }
+
 if ( $wmgUsePopups ) {
         require_once( "$IP/extensions/PageImages/PageImages.php" );
         require_once( "$IP/extensions/Popups/Popups.php" );
