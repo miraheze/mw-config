@@ -365,6 +365,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true, //do not set this to false without disabling MsUpload on all wikis below
 		'gameswiki' => true,
 		'quantixwiki' => true,
+		'urho3dwiki' => true,
 	),
 	//MsUpload is enabled on extloadwiki via MsPackage^
 	'wmgUseMsUpload' => array(
@@ -527,6 +528,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
+		'urho3dwiki' => true,
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
@@ -556,13 +558,14 @@ $wgConf->settings = array(
                 'default' => false,
                 'allthetropeswiki' => true,
                 'bmedwiki' => true,
+                'developmentwiki' => true,
                 'extloadwiki' => true,
 		'gameswiki' => true,
                 'izanagiwiki' => true,
                 'szkwiki' => true,
                 'testwiki' => true,
                 'worldpediawiki' => true,
-                'developmentwiki' => true,
+                'urho3dwiki' => true,
         ),
         
         // External link target
