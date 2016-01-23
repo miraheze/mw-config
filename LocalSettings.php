@@ -390,6 +390,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'izanagiwiki' => false,
 	),
+	'wmgUseMonaco' => array(
+		'default' => false,
+		'extloadwiki' => true, 
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
