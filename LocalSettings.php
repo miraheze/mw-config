@@ -566,6 +566,7 @@ $wgConf->settings = array(
                 'izanagiwiki' => true,
                 'szkwiki' => true,
                 'testwiki' => true,
+                'twplantwiki' => true,
                 'worldpediawiki' => true,
                 'urho3dwiki' => true,
         ),
