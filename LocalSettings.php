@@ -1513,6 +1513,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/6/64/Favicon.ico",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/b/be/APfavicon.png",
+		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/3/33/Logo-amafuwa.png",
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
