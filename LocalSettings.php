@@ -292,6 +292,10 @@ $wgConf->settings = array(
 	'wmgUseBabel' => array(
 		'default' => true,
 	),
+	'wmgUseCalendar' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
