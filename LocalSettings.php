@@ -416,6 +416,7 @@ $wgConf->settings = array(
 		'boulderwikiwiki' => true,
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
+		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'gameswiki' => true,
