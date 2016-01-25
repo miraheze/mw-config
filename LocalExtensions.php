@@ -10,6 +10,10 @@ if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/cldr/cldr.php" );
 }
 
+if ( $wmgUseCalendar ) {
+	require_once( "$IP/extensions/Calendar/Calendar.php" );
+}
+
 if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
