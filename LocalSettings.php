@@ -1763,7 +1763,7 @@ $wgTimelineSettings->fontFile = 'FreeSans';
 $wgFooterIcons['poweredby']['miraheze'] = array(
 	'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
 	'url' => 'https://meta.miraheze.org/wiki/',
-	'alt' => 'Powered by Miraheze',
+	'alt' => 'Miraheze Wiki Hosting',
 );
 
 if ( $wgDBname === 'permanentfuturelabwiki' ) {
