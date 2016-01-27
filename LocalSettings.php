@@ -520,6 +520,7 @@ $wgConf->settings = array(
 		'genwiki' => true,
 		'hshsinfoportalwiki' => true,
 		'izanagiwiki' => true,
+		'luckandlogicwiki' => true,
 		'mecanonwiki' => true,
 		'nwpwiki' => true,
 		'partupwiki' => true,
