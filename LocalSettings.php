@@ -397,6 +397,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true, 
 	),
+	'wmgUseNoTitle' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
