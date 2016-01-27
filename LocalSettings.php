@@ -400,7 +400,11 @@ $wgConf->settings = array(
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
+		'aktposwiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'luckandlogicwiki' => true,
+		'urho3dwiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
