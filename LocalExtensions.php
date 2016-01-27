@@ -85,6 +85,10 @@ if ( $wmgUseMonaco ) {
 	require_once( "$IP/skins/Monaco/monaco.php" );
 }
 
+if ( $wmgUseNoTitle ) {
+	require_once( "$IP/skins/NoTitle/NoTitle.php" );
+}
+
 if ( $wmgUsePopups ) {
         require_once( "$IP/extensions/PageImages/PageImages.php" );
         require_once( "$IP/extensions/Popups/Popups.php" );
