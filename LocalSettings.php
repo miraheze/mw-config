@@ -1198,6 +1198,11 @@ $wgConf->settings = array(
 				'createwiki' => true,
 			),
 		),
+		'+luckandlogicwiki' => array(
+			'sysop => array(
+				'edit' => true,
+			),
+		),
 		'+poserdazfreebieswiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1849,6 +1854,11 @@ if ( $wgDBname === 'testwiki' ) {
 
 // vrgo.miraheze.org overrides
 if ( $wgDBname === 'vrgowiki' ) {
+	$wgGroupPermissions['user']['edit'] = false;
+}
+
+// luckandlogic.miraheze.org overrides
+if ( $wgDBname === 'luckandlogicwiki' ) {
 	$wgGroupPermissions['user']['edit'] = false;
 }
 
