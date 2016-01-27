@@ -51,6 +51,10 @@ if ( $wmgUseForeground) {
 	require_once( "$IP/skins/foreground/foreground.php" );
 }
 
+if ( $wmgUseHTMLets ) {
+	require_once( "$IP/extensions/HTMLets/HTMLets.php" );
+}
+
 if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
