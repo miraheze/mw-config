@@ -374,6 +374,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'chandruswethswiki' => true,
 		'izanagiwiki' => true,
+		'luckandlogicwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
@@ -569,6 +570,7 @@ $wgConf->settings = array(
                 'extloadwiki' => true,
 		'gameswiki' => true,
                 'izanagiwiki' => true,
+                'luckandlogicwiki' => true,
                 'szkwiki' => true,
                 'testwiki' => true,
                 'twplantwiki' => true,
@@ -1522,6 +1524,7 @@ $wgConf->settings = array(
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
+		'luckandlogicwiki' "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/d/de/OneAgency_Favicon.png",
@@ -1551,6 +1554,7 @@ $wgConf->settings = array(
 		'hshsinfoportalwiki' => "//$wmgUploadHostname/hshsinfoportalwiki/e/ec/HSHS_Logo.jpeg",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/e/eb/IZLogo.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
+		'luckandlogicwiki' "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/e/eb/OneAgency_WikiLogo_Black.png",
