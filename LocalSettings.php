@@ -1074,6 +1074,9 @@ $wgConf->settings = array(
 			'user' => array(
 				'user' => true, // for "Allow logged in users" protection level
 			),
+			'steward' => array(
+				'userrights' => true,
+			),
 		),
 		'+catboxwiki' => array(
 			'user' => array(
@@ -1083,9 +1086,6 @@ $wgConf->settings = array(
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'read' => true,
-			),
-			'steward' => array(
-				'userrights' => true,
 			),
 		),
 		'+developmentwiki' => array(
