@@ -342,6 +342,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'permanentfuturelabwiki' => true,
 	),
+	'wmgUseHTMLets' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseImageMap' => array(
 		'default' => false,
 		'adnovumwiki' => true,
