@@ -548,6 +548,7 @@ $wgConf->settings = array(
 		'urho3dwiki' => true,
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
+		'webflowwiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
@@ -585,6 +586,7 @@ $wgConf->settings = array(
                 'testwiki' => true,
                 'twplantwiki' => true,
                 'worldpediawiki' => true,
+                'webflowwiki' => true,
                 'urho3dwiki' => true,
         ),
         
