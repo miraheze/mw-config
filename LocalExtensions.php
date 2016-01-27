@@ -48,7 +48,7 @@ if ( $wmgUseFeaturedFeeds) {
 }
 
 if ( $wmgUseForeground) {
-	require_once( "$IP/extensions/foreground/foreground.php" );
+	require_once( "$IP/skins/foreground/foreground.php" );
 }
 
 if ( $wmgUseImageMap ) {
