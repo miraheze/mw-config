@@ -395,6 +395,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMonaco' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true, 
 	),
 	'wmgUseNoTitle' => array(
