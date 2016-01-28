@@ -254,6 +254,7 @@ $wgConf->settings = array(
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'luckandlogicwiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'turkcesozlukwiki' => true,
@@ -1198,6 +1199,11 @@ $wgConf->settings = array(
 				'createwiki' => true,
 			),
 		),
+		'+luckandlogicwiki' => array(
+			'sysop' => array(
+				'edit' => true,
+			),
+		),
 		'+poserdazfreebieswiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1849,6 +1855,11 @@ if ( $wgDBname === 'testwiki' ) {
 
 // vrgo.miraheze.org overrides
 if ( $wgDBname === 'vrgowiki' ) {
+	$wgGroupPermissions['user']['edit'] = false;
+}
+
+// luckandlogic.miraheze.org overrides
+if ( $wgDBname === 'luckandlogicwiki' ) {
 	$wgGroupPermissions['user']['edit'] = false;
 }
 
