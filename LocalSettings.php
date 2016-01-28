@@ -581,6 +581,7 @@ $wgConf->settings = array(
 	),
         'wmgUseYouTube' => array(
                 'default' => false,
+                'airwiki' => true,
                 'allthetropeswiki' => true,
                 'aktposwiki' => true,
                 'bmedwiki' => true,
