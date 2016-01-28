@@ -367,6 +367,11 @@ $wgConf->settings = array(
 		'quantixwiki' => true,
 		'urho3dwiki' => true,
 	),
+	// MSCatSelect (from MsPackage) option
+	'wgMSCS_WarnNoCategories' => array(
+		'default' => true,
+		'gameswiki' => false,
+	),
 	//MsUpload is enabled on extloadwiki via MsPackage^
 	'wmgUseMsUpload' => array(
 		'default' => false,
