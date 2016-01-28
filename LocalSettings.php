@@ -254,6 +254,7 @@ $wgConf->settings = array(
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'luckandlogicwiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'turkcesozlukwiki' => true,
@@ -1199,7 +1200,7 @@ $wgConf->settings = array(
 			),
 		),
 		'+luckandlogicwiki' => array(
-			'sysop => array(
+			'sysop' => array(
 				'edit' => true,
 			),
 		),
