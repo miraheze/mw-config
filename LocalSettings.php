@@ -870,6 +870,11 @@ $wgConf->settings = array(
 			NS_OFFICIAL => true,
 			NS_TEMPLATE => true,
 		),
+		'+gameswiki' => array(
+			NS_MAIN => true,
+			NS_USER => true,
+			NS_PROJECT => true,
+		),
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
