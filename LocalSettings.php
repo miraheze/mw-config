@@ -540,6 +540,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => true,
 		'luckandlogicwiki' => true,
 		'mecanonwiki' => true,
+		'metawiki' => true,
 		'nwpwiki' => true,
 		'partupwiki' => true,
 		'pflanzenwiki' => true,
