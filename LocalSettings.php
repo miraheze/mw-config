@@ -665,6 +665,7 @@ $wgConf->settings = array(
 	'wgGlobalBlockingDatabase' => array(
 		'default' => 'centralauth', // use centralauth for global blocks
 	),
+	
 	// GlobalCssJs
 	'wgGlobalCssJsConfig' => array(
 		'default' => array(
@@ -1649,6 +1650,10 @@ $wgConf->settings = array(
 		),
 	),
 
+	// VisualEditor
+	'wmgVisualEditorEnableDefault' => array(
+		'default' => true,
+	),
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
 		'default' => false,
