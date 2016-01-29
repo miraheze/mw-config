@@ -765,7 +765,20 @@ $wgConf->settings = array(
 		'metawiki' => true,
 	),
 
-	// Misc stuff
+	// MirahezeMagic
+	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions
+	'wgFindInactiveWikisWhitelist' => array(
+		'default' => array(
+			'metawiki',
+			'allthetropeswiki',
+			'spiralwiki',
+			'extloadwiki',
+			'loginwiki',
+			'testwiki',
+		),
+	),
+	
+	// Misc. stuff
 	'wgSitename' => array(
 		'default' => 'No sitename set!',
 	),
