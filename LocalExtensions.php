@@ -155,11 +155,16 @@ if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-	  'url' => 'http://parsoid1.miraheze.org:8142',
-	  'prefix' => $wgDBname,
+		'url' => 'http://parsoid1.miraheze.org:8142',
+		'prefix' => $wgDBname,
 	);
 
-	$wgDefaultUserOptions['visualeditor-enable'] = 1;
+
+	if ( $wmgVisualEditorEnableDefault ) {
+		$wgDefaultUserOptions['visualeditor-enable'] = 1;
+	} else {
+		$wgDefaultUserOptions['visualeditor-enable'] = 0;
+	}
 	
 	// Load TemplateData
 	wfLoadExtension( 'TemplateData' );
