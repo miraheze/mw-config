@@ -296,6 +296,7 @@ $wgConf->settings = array(
 	'wmgUseCharInsert' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
