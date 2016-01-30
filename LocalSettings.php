@@ -493,6 +493,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'developmentwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
@@ -953,13 +954,16 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'sysop',
 				'trusted',
+				'interfaceeditor'
 			),
 			'wikifounder' => array(
 				'supervisor',
 				'bureaucrat',
 				'sysop',
 				'trusted',
+				'interfaceeditor'
 			),
+	
 		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
@@ -1198,6 +1202,11 @@ $wgConf->settings = array(
 			'wikifounder' => array(
 				'wikifounder' => true,
 			),
+			'interfaceeditor' => array(
+				'editprotected' => true,
+				'editsemiprotected' => true,
+				'editinterface' => true,
+			),
 		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
@@ -1366,12 +1375,14 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'sysop',
 				'trusted',
+				'interfaceeditor'
 			),
 			'wikifounder' => array(
 				'supervisor',
 				'bureaucrat',
 				'sysop',
 				'trusted',
+				'interfaceeditor'
 			),
 		),
 		'+dpwiki' => array(
