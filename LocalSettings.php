@@ -609,7 +609,7 @@ $wgConf->settings = array(
 	
 	// Files
 	'wgEnableUploads' => array(
-		'default' => true,
+		'default' => false,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
