@@ -552,6 +552,7 @@ $wgConf->settings = array(
 		'safiriawiki' => true,
 		'shoppingwiki' => true,
 		'spiralwiki' => true,
+		'testwiki' => true,
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
@@ -1678,6 +1679,7 @@ $wgConf->settings = array(
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => array(
 		'default' => true,
+		'testwiki' => false,
 	),
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
