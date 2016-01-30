@@ -382,6 +382,7 @@ $wgConf->settings = array(
 		'chandruswethswiki' => true,
 		'izanagiwiki' => true,
 		'luckandlogicwiki' => true,
+		'webflowwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
