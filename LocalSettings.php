@@ -1574,6 +1574,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/6/64/Favicon.ico",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/b/be/APfavicon.png",
+		'cssandjsschoolboardwiki' => '//upload.wikimedia.org/wikipedia/commons/2/2b/Page_css_48.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
