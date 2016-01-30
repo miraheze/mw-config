@@ -610,7 +610,7 @@ $wgConf->settings = array(
 	
 	// Files
 	'wgEnableUploads' => array(
-		'default' => false,
+		'default' => true,
 		'testwiki' => true,
 	),
 	'wgAllowCopyUploads' => array(
