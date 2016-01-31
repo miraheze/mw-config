@@ -90,7 +90,7 @@ if ( $wmgUseMonaco ) {
 }
 
 if ( $wmgUseNewUserMessage ) {
-	require_once( "$IP/extensions/CSS/CSS.php" );
+	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 }
 
 if ( $wmgUseNoTitle ) {
