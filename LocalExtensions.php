@@ -23,6 +23,10 @@ if ( $wmgUseCreateWiki ) {
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
 }
 
+if ( $wmgUseCSS ) {
+	require_once( "$IP/extensions/CSS/CSS.php" );
+}
+
 if ( $wmgUseDynamicPageList ) {
 	require_once( "$IP/extensions/DynamicPageList/DynamicPageList.php" );
 }
@@ -43,11 +47,11 @@ if ( $wmgUseFlow ) {
 	);
 }
 
-if ( $wmgUseFeaturedFeeds) {
+if ( $wmgUseFeaturedFeeds ) {
 	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
 }
 
-if ( $wmgUseForeground) {
+if ( $wmgUseForeground ) {
 	require_once( "$IP/skins/foreground/foreground.php" );
 }
 
@@ -85,6 +89,10 @@ if ( $wmgUseMonaco ) {
 	require_once( "$IP/skins/Monaco/monaco.php" );
 }
 
+if ( $wmgUseNewUserMessage ) {
+	require_once( "$IP/extensions/CSS/CSS.php" );
+}
+
 if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 }
@@ -97,6 +105,10 @@ if ( $wmgUsePopups ) {
 
 if ( $wmgUseScribunto ) {
 	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+}
+
+if ( $wmgUseSectionHide ) {
+	require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 }
 
 if ( $wmgUseSocialProfile ) {

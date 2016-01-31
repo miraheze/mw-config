@@ -311,6 +311,11 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseCSS' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -374,7 +379,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'gameswiki' => false,
 	),
-	//MsUpload is enabled on extloadwiki via MsPackage^
+	//MsUpload is enabled on extloadwiki via MsPackage
 	'wmgUseMsUpload' => array(
 		'default' => false,
 		'adnovumwiki' => true,
@@ -405,6 +410,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true, 
+	),
+	'wmgUseNewUserMessage' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
@@ -465,6 +475,11 @@ $wgConf->settings = array(
 		'wdbwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'worldofkirbycraftwiki' => true,
+	),
+	'wmgUseSectionHide' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
 	'wmgUseSocialProfile' => array(
@@ -1859,15 +1874,12 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-	require_once( "$IP/extensions/CSS/CSS.php" );
-	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 	wfLoadExtension( 'MultiBoilerplate' );
 	$wgMultiBoilerplateDisplaySpecialPage = true;
 	$wgMultiBoilerplateOptions = false;
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-	require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
