@@ -315,6 +315,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'webflowwiki' => true,
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
@@ -414,6 +415,7 @@ $wgConf->settings = array(
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
@@ -478,7 +480,9 @@ $wgConf->settings = array(
 	),
 	'wmgUseSectionHide' => array(
 		'default' => false,
+		'aktposwiki' => true,
 		'allthetropeswiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
@@ -507,6 +511,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTabsCombination' => array(
 		'default' => false,
+		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'developmentwiki' => true,
@@ -1590,6 +1595,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/6/64/Favicon.ico",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/b/be/APfavicon.png",
+		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/8/84/Rainbowstar.png",
 		'cssandjsschoolboardwiki' => '//upload.wikimedia.org/wikipedia/commons/2/2b/Page_css_48.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
