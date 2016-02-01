@@ -1929,3 +1929,8 @@ if ( $wgDBname == 'metawiki' ) {
                 $out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
         }
 }
+
+// Allow to run rebuildLocalisationCache.php when installing the server
+if ( !file_exists( '/srv/mediawiwiki/w/cache/l10n' ) && PHP_SAPI === 'cli' ) {
+        $wgLocalisationCacheConf['manualRecache'] = false;
+}
