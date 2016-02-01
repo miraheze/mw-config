@@ -1254,6 +1254,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'interwiki' => true,
+				'deletedhistory' => true,
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
