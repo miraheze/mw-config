@@ -275,6 +275,12 @@ $wgConf->settings = array(
 	),
 
 	// Extensions
+	
+	'wmgUseAddHTMLMetaAndTitle' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'permanentfuturelabwiki' => true,
+	),
 	'wmgUseAdminLinks' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
