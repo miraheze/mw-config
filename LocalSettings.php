@@ -275,7 +275,6 @@ $wgConf->settings = array(
 	),
 
 	// Extensions
-	
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
 		'extloadwiki' => true,
