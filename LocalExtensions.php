@@ -2,7 +2,7 @@
 
 // Set up extensions for use on wikis that are not global
 if ( $wmgUseAddHTMLMetaAndTitle ) {
-	require_once( "$IP/extensions/AddHTMLMetaAndTitle/AddHTMLMetaAndTitle.php"; );
+	require_once( "$IP/extensions/AddHTMLMetaAndTitle/AddHTMLMetaAndTitle.php" );
 }
 
 if ( $wmgUseAdminLinks ) {
