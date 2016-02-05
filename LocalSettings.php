@@ -379,6 +379,7 @@ $wgConf->settings = array(
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
 		'gameswiki' => false,
+		'quantixwiki' => false,
 	),
 	//MsUpload is enabled on extloadwiki via MsPackage
 	'wmgUseMsUpload' => array(
