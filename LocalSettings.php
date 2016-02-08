@@ -395,6 +395,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
+		'exitsincwiki' => true,
 		'izanagiwiki' => true,
 		'luckandlogicwiki' => true,
 		'webflowwiki' => true,
