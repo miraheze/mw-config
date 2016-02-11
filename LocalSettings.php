@@ -1819,23 +1819,14 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 		array(
 			"Main Page",
 			"MediaWiki:Common.css",
+			"Special:CentralAutoLogin",
+			"Special:CentralLogin",
 			"Special:ConfirmEmail",
 			"Special:Notifications",
 			"Special:ResetPassword",
 			"Special:UserLogin",
 			"Special:UserLogout",
 		);
-
-	// The special page name in Title.php for those special pages
-	// can either contain a subpage (i.e. "Special:CentralAuthLogin/complete")
-	// or can contain the localized version of the "Special:" word (i.e. Spezial or Speciaal),
-	// and that is a limitation of $wgWhitelistRead.
-	// FIXME: usage of $wgContLang->getNsText( NS_SPECIAL ) is highly preferred, but since $wgContLang
-	// is not set in LocalSettings.php yet, we need to do this kind of stuff.
-        $wgWhitelistReadRegexp =
-                array(
-                        "/^(.*)\:Central(Auto)?Login(.*)/",
-                );
 }
 
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
