@@ -439,6 +439,7 @@ $wgConf->settings = array(
 	'wmgUsePopups' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'christipediawiki' => true,
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
