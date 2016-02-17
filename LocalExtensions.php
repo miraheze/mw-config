@@ -55,6 +55,10 @@ if ( $wmgUseFeaturedFeeds ) {
 	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
 }
 
+if ( $wmgUseFlaggedRevs ) {
+	require_once( "$IP/extensions/FlaggedRevs/FlaggedRevs.php" );
+}
+
 if ( $wmgUseForeground ) {
 	require_once( "$IP/skins/foreground/foreground.php" );
 }
