@@ -341,6 +341,7 @@ $wgConf->settings = array(
 	'wmgUseFlaggedRevs' => array(
 		'default' => false,
 		'extloadwiki' => true,
+	),
 	'wmgUseFlow' => array(
 		'default' => false,
 		'8stationwiki' => true,
