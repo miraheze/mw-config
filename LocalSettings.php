@@ -157,6 +157,7 @@ $wgConf->settings = array(
 			'publictestwiki.com' => 'testwiki',
 			'spiral.wiki' => 'spiralwiki',
 			'wiki.printmaking.be' => 'printmakingbewiki',
+			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -1575,6 +1576,7 @@ $wgConf->settings = array(
 		'testwiki' => 'https://publictestwiki.com',
 		'reviwiki' => 'https://private.revi.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
+		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
 		'default' => true,
