@@ -1659,6 +1659,7 @@ $wgConf->settings = array(
 		'cssandjsschoolboardwiki' => "//upload.wikimedia.org/wikipedia/commons/c/c7/Css.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
+		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/6/60/FC_Logo_135p.png",
 		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
 		'hshsinfoportalwiki' => "//$wmgUploadHostname/hshsinfoportalwiki/e/ec/HSHS_Logo.jpeg",
 		'islamwissenschaftwiki' => "//$wmgUploadHostname/islamwissenschaftwiki/b/bc/Wiki.png",
