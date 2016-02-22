@@ -466,6 +466,7 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'gameswiki' => true,
+		'newhudsoniawiki' => true,
 		'iqtwiki' => true,
 		'izanagiwiki' => true,
 		'jbkwwiki' => true,
