@@ -1944,6 +1944,22 @@ if ( !$wgCommandLineMode ) {
 	}
 }
 
+// Quantix Wiki overrides
+if ( $wgDBname === 'quantixwiki' ) {
+	$wgWhitelistRead =
+		array(
+			"Quantix Gaming",
+			"MediaWiki:Common.css",
+			"Special:CentralAutoLogin",
+			"Special:CentralLogin",
+			"Special:ConfirmEmail",
+			"Special:Notifications",
+			"Special:ResetPassword",
+			"Special:UserLogin",
+			"Special:UserLogout",
+		);
+}
+
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
