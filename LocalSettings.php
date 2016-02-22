@@ -259,13 +259,14 @@ $wgConf->settings = array(
 		'izanagiwiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
+		'ricwiki' => true,
 		'turkcesozlukwiki' => true,
 		'vrgowiki' => true,
 		'welcomewiki' => true,
 		'wikiacawiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
-	
+
 	// Dormancy policy && RC stuff
 	'wgRCMaxAge' => array(
 		'default' => 180 * 24 * 3600,
@@ -348,6 +349,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'mecanonwiki' => true,
 		'permanentfuturelabwiki' => true,
+		'ricwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
 		'walthamstowlabourwiki' => true,
@@ -590,6 +592,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
+		'ricwiki' => true,
 		'safiriawiki' => true,
 		'shoppingwiki' => true,
 		'sirikotwiki' => true,
@@ -647,13 +650,13 @@ $wgConf->settings = array(
                 'webflowwiki' => true,
                 'urho3dwiki' => true,
         ),
-        
+
         // External link target
 	'wgExternalLinkTarget' => array(
 		'default' => false,
 		'vrgowiki' => '_blank',
 	),
-	
+
 	// Files
 	'wgEnableUploads' => array(
 		'default' => true,
