@@ -1672,6 +1672,7 @@ $wgConf->settings = array(
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/a/a6/Part-up-logo-150x150-mediawiki.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/c/c0/Permanent-Future-Lab-logo-150x150-mediawiki.png",
 		'printmakingbewiki' => "//$wmgUploadHostname/printmakingbewiki/2/22/Pmk-logo-wiki-135px.png",
+		'rebelalliancewiki' => "//$wmgUploadHostname/rebelalliancewiki/f/fe/Logo135.png",
 		'reriawiki' => "//$wmgUploadHostname/reriawiki/a/a6/Header.png",
 		'rwbyfrwiki' =>	"//$wmgUploadHostname/rwbyfrwiki/a/a3/RWBYLogo.jpeg",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
