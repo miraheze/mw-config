@@ -1967,4 +1967,3 @@ if ( $wgDBname == 'metawiki' ) {
 if ( $wgDBname == 'extloadwiki' ) {
 	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
 }
-}
