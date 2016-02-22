@@ -1963,3 +1963,8 @@ if ( $wgDBname == 'metawiki' ) {
                 $out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
         }
 }
+
+if ( $wgDBname == 'extloadwiki' ) {
+	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
+}
+}
