@@ -344,6 +344,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
+		'allthetropeswiki' => true,
 		'christipediawiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
