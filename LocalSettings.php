@@ -156,6 +156,7 @@ $wgConf->settings = array(
 			'private.revi.wiki' => 'reviwiki',
 			'publictestwiki.com' => 'testwiki',
 			'spiral.wiki' => 'spiralwiki',
+			'universebuild.com' => 'universebuildwiki',
 			'wiki.printmaking.be' => 'printmakingbewiki',
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 		),
@@ -1580,6 +1581,7 @@ $wgConf->settings = array(
 		'testwiki' => 'https://publictestwiki.com',
 		'reviwiki' => 'https://private.revi.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
+		'universebuildwiki' => 'https://universebuild.com',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
