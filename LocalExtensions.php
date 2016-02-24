@@ -111,6 +111,10 @@ if ( $wmgUsePopups ) {
         require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 }
 
+if ( $wmgUseSandboxLink ) {
+	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
+}
+
 if ( $wmgUseScribunto ) {
 	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 }
