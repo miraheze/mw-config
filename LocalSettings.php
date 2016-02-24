@@ -356,7 +356,6 @@ $wgConf->settings = array(
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'allthetropestestwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
 		'heistwiki' => true,
@@ -380,7 +379,6 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'ricwiki' => true,
 		'spiralwiki' => true,
-		'spiraltestwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseForeground' => array(
@@ -491,7 +489,6 @@ $wgConf->settings = array(
 		'adnovumwiki' => true,
 		'airwiki' => true,
 		'allthetropeswiki' => true,
-		'allthetropestestwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'aktposwiki' => true,
 		'aryamanwiki' => true,
@@ -516,7 +513,6 @@ $wgConf->settings = array(
 		'partupwiki' => true,
 		'pflanzenwiki' => true,
 		'poserdazfreebieswiki' => true,
-		'poserdazfreebiestestwiki' => true,
 		'pqwiki' => true,
 		'quantixwiki' => true,
 		'rawdatawiki' => true,
@@ -526,7 +522,6 @@ $wgConf->settings = array(
 		'sirikotwiki' => true,
 		'specialeducationwiki' => true,
 		'spiralwiki' => true,
-		'spiraltestwiki' => true,
 		'stoutofreachwiki' => true,
 		'szkwiki' => true,
 		'tanodswiki' => true,
@@ -553,7 +548,6 @@ $wgConf->settings = array(
 	'wmgUseSubpageFun' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'allthetropestestwiki' => true,
 		'extloadwiki' => true,
 	),
 	// Possible cause of HHVM crashes
@@ -589,7 +583,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 		'spiralwiki' => true,
-		'spiraltestwiki' => true,
 		'rtwiki' => true,
 		'testwiki' => true,
 		'welcomewiki' => true,
@@ -742,10 +735,6 @@ $wgConf->settings = array(
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
 		'spiralwiki' => array(
-			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
-			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
-		),
-		'spiraltestwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
@@ -974,9 +963,6 @@ $wgConf->settings = array(
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
 			NS_TROPEWORKSHOP => true,
-		),
-		'+allthetropestestwiki' => array(
-			NS_MAIN => true,
 		),
 		'+catboxwiki' => array(
 			NS_COMIC => true,
