@@ -14,6 +14,10 @@ if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/cldr/cldr.php" );
 }
 
+if ( $wmgUseBetaFeatures ) {
+	wfLoadExtension( 'BetaFeatures' );
+}
+
 if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
