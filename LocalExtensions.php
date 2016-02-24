@@ -198,6 +198,10 @@ if ( $wmgUseWikiForum ) {
 	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 }
 
+if ( $wmgUseWikiLove ) {
+	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
+}
+
 if ( $wmgUseYouTube ) {
 	require_once( "$IP/extensions/YouTube/YouTube.php" );
 }
