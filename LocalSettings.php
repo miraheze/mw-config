@@ -457,6 +457,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseScribunto' => array(
