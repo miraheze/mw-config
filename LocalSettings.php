@@ -305,6 +305,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseCharInsert' => array(
