@@ -634,6 +634,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
         'wmgUseYouTube' => array(
