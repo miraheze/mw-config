@@ -105,6 +105,27 @@ $wgConf->settings = array(
 			),
 		),
 	),
+	// BetaFeatures
+	'wgMediaViewerIsInBeta' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+	),
+	'wgPopupsBetaFeature' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+	),
+	'wgVectorBetaTypography' => array(
+		'default' => true,
+	),
+	'wgVectorBetaPersonalBar' => array(
+		'default' => true,
+	),
+	'wgVectorBetaWinter' => array(
+		'default' => true,
+	),
+	'wgVectorBetaFormRefresh' => array(
+		'default' => true,
+	),
 	// Block
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
@@ -412,6 +433,11 @@ $wgConf->settings = array(
 		'luckandlogicwiki' => true,
 		'webflowwiki' => true,
 	),
+	'wmgUseMultimediaViewer' => array(
+		'default' => false,
+		//'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
         // multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
 		'default' => false,
@@ -573,6 +599,7 @@ $wgConf->settings = array(
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'airwiki' => true,
+		'allthetropeswiki' => true,
 		'aktposwiki' => true,
 		'applebranchwiki' => true,
 		'arguwikiwiki' => true,

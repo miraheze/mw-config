@@ -85,6 +85,10 @@ if ( $wmgUseMsUpload ) {
 	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 }
 
+if ( $wmgUseMultimediaViewer ) {
+	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+}
+
 if ( $wmgUseMultiUpload ) {
 	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
 }
