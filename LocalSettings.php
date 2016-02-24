@@ -632,6 +632,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'indexwiki' => true,
 	),
+	'wmgUseWikiLove' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
         'wmgUseYouTube' => array(
                 'default' => false,
                 'airwiki' => true,
