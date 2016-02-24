@@ -435,7 +435,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
-		//'allthetropeswiki' => true,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
