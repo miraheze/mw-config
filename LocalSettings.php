@@ -189,6 +189,7 @@ $wgConf->settings = array(
 		        "$IP/maintenance/tables.sql",
 		        "$IP/extensions/AbuseFilter/abusefilter.tables.sql",
 		        "$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
 		        "$IP/extensions/CheckUser/cu_log.sql",
 		        "$IP/extensions/CheckUser/cu_changes.sql",
 		        "$IP/extensions/Echo/echo.sql",
