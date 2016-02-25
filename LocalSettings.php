@@ -578,6 +578,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'developmentwiki' => true,
+		'universebuildwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
