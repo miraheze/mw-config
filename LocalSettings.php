@@ -304,6 +304,7 @@ $wgConf->settings = array(
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'partupwiki' => true,
 	),
 	'wmgUseAdminLinks' => array(
 		'default' => false,
