@@ -381,6 +381,7 @@ $wgConf->settings = array(
 		'ricwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseForeground' => array(
@@ -396,6 +397,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'creersonarbrewiki' => true,
 		'shoppingwiki' => true,
+		'universebuildwiki' => true,
 	),
 	'wmgUseInputBox' => array(
 		'default' => true,
@@ -465,6 +467,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'universebuildwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
@@ -472,6 +475,7 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'luckandlogicwiki' => true,
+		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 	),
 	'wmgUsePopups' => array(
@@ -531,6 +535,7 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'tanodswiki' => true,
 		'tyrolmountainswiki' => true,
+		'universebuildwiki' => true,
 		'wdbwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'worldofkirbycraftwiki' => true,
@@ -643,6 +648,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
+		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
