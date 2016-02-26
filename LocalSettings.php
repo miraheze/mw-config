@@ -279,10 +279,12 @@ $wgConf->settings = array(
 		'adnovumwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
 		'christipediawiki' => true,
+		'drunkenpeasantswikiwiki' => true,
 		'izanagiwiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'ricwiki' => true,
+		'thoughtonomywikiwiki' => true,
 		'turkcesozlukwiki' => true,
 		'vrgowiki' => true,
 		'welcomewiki' => true,
@@ -304,6 +306,7 @@ $wgConf->settings = array(
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'partupwiki' => true,
 	),
 	'wmgUseAdminLinks' => array(
 		'default' => false,
@@ -312,6 +315,7 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
+		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'gameswiki' => true,
 		'heistwiki' => true,
@@ -375,12 +379,14 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'christipediawiki' => true,
 		'developmentwiki' => true,
+		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'mecanonwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'ricwiki' => true,
 		'spiralwiki' => true,
 		'spiraltestwiki' => true,
+		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseForeground' => array(
@@ -396,6 +402,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'creersonarbrewiki' => true,
 		'shoppingwiki' => true,
+		'universebuildwiki' => true,
 	),
 	'wmgUseInputBox' => array(
 		'default' => true,
@@ -427,10 +434,12 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
+		'drunkenpeasantswikiwiki' => true,
 		'elainarmuawiki' => true,
 		'exitsincwiki' => true,
 		'izanagiwiki' => true,
 		'luckandlogicwiki' => true,
+		'universebuildwiki' => true,
 		'webflowwiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
@@ -465,13 +474,16 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'universebuildwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
 		'aktposwiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'lbsgeswiki' => true,
 		'luckandlogicwiki' => true,
+		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 	),
 	'wmgUsePopups' => array(
@@ -531,6 +543,7 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'tanodswiki' => true,
 		'tyrolmountainswiki' => true,
+		'universebuildwiki' => true,
 		'wdbwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'worldofkirbycraftwiki' => true,
@@ -546,6 +559,7 @@ $wgConf->settings = array(
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
+		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
 		'stoutofreachwiki' => true,
@@ -572,6 +586,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'developmentwiki' => true,
+		'universebuildwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
@@ -613,6 +628,7 @@ $wgConf->settings = array(
 		'clicordiwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
+		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'elainarmuawiki' => true,
 		'esswaywiki' => true,
@@ -644,6 +660,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'unikumwiki' => true,
+		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
@@ -684,6 +701,7 @@ $wgConf->settings = array(
                 'bmedwiki' => true,
                 'christipediawiki' => true,
                 'developmentwiki' => true,
+                'drunkenpeasantswikiwiki' => true,
                 'elainarmuawiki' => true,
                 'extloadwiki' => true,
 		'gameswiki' => true,
@@ -735,6 +753,10 @@ $wgConf->settings = array(
 	'wmgFlowOccupyNamespaces' => array(
 		'default' => array(),
 		'8sationwiki' => array(
+			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK, 
+			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
+		),
+		'drunkenpeasantswikiwiki' => array(
 			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK, 
 			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
 		),
@@ -1678,6 +1700,7 @@ $wgConf->settings = array(
 		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
 		'cssandjsschoolboardwiki' => '//upload.wikimedia.org/wikipedia/commons/2/2b/Page_css_48.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
+		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/d/dc/HollowLogo2.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
@@ -1708,13 +1731,18 @@ $wgConf->settings = array(
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/2/22/Main_page.PNG",
 		'biblicalwikiwiki' => "//$wmgUploadHostname/biblicalwikiwiki/e/e2/WikiLogo.svg",
+		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
 		'cssandjsschoolboardwiki' => "//upload.wikimedia.org/wikipedia/commons/c/c7/Css.png",
+		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
+		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/b/bc/Wiki.png",
 		'elsieworldwiki' => "//$wmgUploadHostname/elsiesworldwiki/5/51/Elsie_logo.png",
+		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
 		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/6/60/FC_Logo_135p.png",
 		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
 		'hshsinfoportalwiki' => "//$wmgUploadHostname/hshsinfoportalwiki/e/ec/HSHS_Logo.jpeg",
+		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
 		'islamwissenschaftwiki' => "//$wmgUploadHostname/islamwissenschaftwiki/b/bc/Wiki.png",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/e/eb/IZLogo.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
@@ -1989,7 +2017,8 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 		return true;
 }
 
-$wmgParsoidIPs = array( '185.52.1.144' );
+// You are required to add "::ffff:"!
+$wmgParsoidIPs = array( '::ffff:185.52.1.144' );
 
 // Alternative to forwarding user cookies to Parsoid
 if ( !$wgCommandLineMode ) {
