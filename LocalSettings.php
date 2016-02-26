@@ -623,6 +623,7 @@ $wgConf->settings = array(
 		'hshsinfoportalwiki' => true,
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
+		'lbsgeswiki' => true,
 		'luckandlogicwiki' => true,
 		'mecanonwiki' => true,
 		'metawiki' => true,
