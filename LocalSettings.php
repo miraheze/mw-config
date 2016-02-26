@@ -283,6 +283,7 @@ $wgConf->settings = array(
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'ricwiki' => true,
+		'thoughtonomywikiwiki' => true,
 		'turkcesozlukwiki' => true,
 		'vrgowiki' => true,
 		'welcomewiki' => true,
