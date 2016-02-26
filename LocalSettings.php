@@ -437,6 +437,7 @@ $wgConf->settings = array(
 		'exitsincwiki' => true,
 		'izanagiwiki' => true,
 		'luckandlogicwiki' => true,
+		'universebuildwiki' => true,
 		'webflowwiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
