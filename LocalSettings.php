@@ -670,6 +670,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'eotewiki' => true,
 		'szkwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
