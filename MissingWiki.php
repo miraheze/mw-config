@@ -8,15 +8,47 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
     echo <<<EOF
     <html>
         <head>
-            <link rel="stylesheet" href="//meta.miraheze.org/w/load.php?modules=mediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*">
+            <style type="text/css">
+                html, body {
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    font-family: sans-serif;
+                }
+                html {
+                    font-size: 100%;
+                }
+                body {
+                    background-color: hsl(0, 0%, 96%);
+                }
+                h1, h2 {
+                    margin-bottom: .6em !important;
+                }
+                h1 {
+                    font-size: 188%;
+                }
+                h1, h2, h3, h4, h5, h6 {
+                    color: hsl(0, 0%, 0%);
+                    background: none;
+                    font-weight: normal;
+                    margin: 0;
+                    overflow: hidden;
+                    padding-top: .5em;
+                    padding-bottom: .17em;
+                    border-bottom: 1px solid hsl(0, 0%, 67%);
+                }
+                p {
+                    margin: .4em 0 .5em 0;
+                }
+            </style>
         </head>
         <body>
             <div style="text-align: center;">
                 <h1>404 Wiki Not Found</h1>
                 <p>The wiki you wanted to visit does not exist. Please be sure you typed the URL correctly.</p>
                 <p>If you think there's a technical problem, please contact the system administrators and provide the following details:</p>
-                <p style="font-size:14px;align:center;">
-                    <table style="font-style:italic;" align="center">
+                <p style="align:center;">
+                    <table style="font-style: italic; font-size: 14px;" align="center">
                         <tbody>
                             <tr>
                                 <td>Host: {$_SERVER['HTTP_HOST']}</td>
@@ -30,7 +62,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
                     </table>
                 </p> 
             </div>
-            <div style="float:right;padding-right:1em;">
+            <div style="float: right; padding-right: 1em;">
                 <a href="https://meta.miraheze.org/wiki/Miraheze">
                     <img src="https://static.miraheze.org/metawiki/7/7e/Powered_by_Miraheze.png" alt="Powered by Miraheze" />
                 </a>
