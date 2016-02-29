@@ -674,10 +674,11 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	// Disabled because 1) unmaintained extension 2) https://phabricator.wikimedia.org/T71490
 	'wmgUseVectorBeta' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
-		'extloadwiki' => true,
+		// 'allthetropeswiki' => true,
+		// 'extloadwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
