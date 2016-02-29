@@ -26,10 +26,6 @@ if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
 
-if ( $wmgUseContactPage ) {
-	require_once( "$IP/extensions/ContactPage/ContactPage.php" );
-}
-
 if ( $wmgUseCreateWiki ) {
 	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
