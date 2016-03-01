@@ -114,18 +114,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 	),
-	'wgVectorBetaTypography' => array(
-		'default' => true,
-	),
-	'wgVectorBetaPersonalBar' => array(
-		'default' => true,
-	),
-	'wgVectorBetaWinter' => array(
-		'default' => true,
-	),
-	'wgVectorBetaFormRefresh' => array(
-		'default' => true,
-	),
 	// Block
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
@@ -673,12 +661,6 @@ $wgConf->settings = array(
 		'eotewiki' => true,
 		'szkwiki' => true,
 		'walthamstowlabourwiki' => true,
-	),
-	// Disabled because 1) unmaintained extension 2) https://phabricator.wikimedia.org/T71490
-	'wmgUseVectorBeta' => array(
-		'default' => false,
-		// 'allthetropeswiki' => true,
-		// 'extloadwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,

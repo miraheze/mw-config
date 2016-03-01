@@ -175,10 +175,6 @@ if ( $wmgUseVariables ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 }
 
-if ( $wmgUseVectorBeta ) {
-	wfLoadExtension( 'VectorBeta' );
-}
-
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 
