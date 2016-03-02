@@ -421,6 +421,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'adnovumwiki' => true,
 		'aktposwiki' => true,
+		'allthetropeswiki' => true,
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
 		'drunkenpeasantswikiwiki' => true,
