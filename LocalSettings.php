@@ -1809,6 +1809,7 @@ $wgConf->settings = array(
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => array(
 		'default' => true,
+		'allthetropeswiki' => false,
 		'testwiki' => false,
 	),
 	// Empty arrays (do not touch unless you know what you're doing)
