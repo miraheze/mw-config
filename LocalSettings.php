@@ -514,6 +514,7 @@ $wgConf->settings = array(
 		'kurumiwiki' => true,
 		'lclwikiwiki' => true,
 		'lifelinewiki' => true,
+		'librewiki' => true,
 		'luismark2015wiki' => true,
 		'novahistoriaewiki' => true,
 		'partupwiki' => true,
