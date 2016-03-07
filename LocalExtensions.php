@@ -183,7 +183,6 @@ if ( $wmgUseVisualEditor ) {
 		'prefix' => $wgDBname,
 	);
 
-
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 	} else {
