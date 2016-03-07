@@ -173,7 +173,6 @@ if ( $wmgUseTitleKey ) {
 
 if ( $wgTemplateDataUseGUI ) {
         require_once "$IP/extensions/TemplateData/TemplateData.php";
-
 }
 
 
