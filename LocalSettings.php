@@ -396,6 +396,7 @@ $wgConf->settings = array(
 	'wmgUseInputBox' => array(
 		'default' => true,
 		'allthetropeswiki' => false, // breaks editing
+		'newcolumbiawiki' => true,
 	),
 	'wmgUseJosa' => array(
 		'default' => false,
@@ -539,6 +540,7 @@ $wgConf->settings = array(
 		'wdbwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'worldofkirbycraftwiki' => true,
+		'newcolumbiawiki' => true,
 	),
 	'wmgUseSectionHide' => array(
 		'default' => false,
@@ -636,6 +638,7 @@ $wgConf->settings = array(
 		'luckandlogicwiki' => true,
 		'mecanonwiki' => true,
 		'metawiki' => true,
+		'newcolumbiawiki' => true,
 		'newtrendwiki' => true,
 		'nwpwiki' => true,
 		'partupwiki' => true,
