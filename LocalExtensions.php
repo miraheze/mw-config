@@ -171,6 +171,12 @@ if ( $wmgUseTitleKey ) {
 	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
 
+if ( $wgTemplateDataUseGUI ) {
+        require_once "$IP/extensions/TemplateData/TemplateData.php";
+
+}
+
+
 if ( $wmgUseVariables ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 }
