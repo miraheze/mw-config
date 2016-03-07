@@ -171,7 +171,6 @@ if ( $wmgUseTitleKey ) {
 	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
 
-
 if ( $wmgUseVariables ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 }
@@ -183,7 +182,6 @@ if ( $wmgUseVisualEditor ) {
 		'url' => 'http://parsoid1.miraheze.org:8142',
 		'prefix' => $wgDBname,
 	);
-
 
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
