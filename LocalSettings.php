@@ -1743,6 +1743,7 @@ $wgConf->settings = array(
 		'luckandlogicwiki' => "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
+		'newcolumbiawiki' => "//$wmgUpladHostname/newcolumbiawiki/2/2a/USNC_sunflower_logo.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/e/eb/OneAgency_WikiLogo_Black.png",
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/a/a6/Part-up-logo-150x150-mediawiki.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/c/c0/Permanent-Future-Lab-logo-150x150-mediawiki.png",
