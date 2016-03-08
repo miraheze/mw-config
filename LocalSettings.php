@@ -527,6 +527,7 @@ $wgConf->settings = array(
 		'rawdatawiki' => true,
 		'reriawiki' => true,
 		'safiriawiki' => true,
+		'sfrepresentuswiki' => true,
 		'shoppingwiki' => true,
 		'sirikotwiki' => true,
 		'specialeducationwiki' => true,
