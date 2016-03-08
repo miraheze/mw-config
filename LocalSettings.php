@@ -1696,6 +1696,7 @@ $wgConf->settings = array(
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
 		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/d/dc/HollowLogo2.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
+		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/1/18/FreeCollegeProject.ico",
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
 		'luckandlogicwiki' => "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
