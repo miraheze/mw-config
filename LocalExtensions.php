@@ -109,6 +109,10 @@ if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 }
 
+if ( $wmgUsePoll ) {
+	require_once( "$IP/extensions/Poll/Poll.php" );
+}
+
 if ( $wmgUsePopups ) {
         require_once( "$IP/extensions/PageImages/PageImages.php" );
         require_once( "$IP/extensions/Popups/Popups.php" );
