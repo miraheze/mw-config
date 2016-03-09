@@ -50,8 +50,8 @@ if ( $wmgUseFlow ) {
 	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-	  'url' => 'http://parsoid1.miraheze.org:8142',
-	  'prefix' => $wgDBname,
+		'url' => 'http://parsoid1.miraheze.org:8142',
+		'prefix' => $wgDBname,
 	);
 }
 
@@ -107,6 +107,7 @@ if ( $wmgUseNewUserMessage ) {
 
 if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
+	$wgRestrictDisplayTitle = false;
 }
 
 if ( $wmgUsePoll ) {
