@@ -485,6 +485,8 @@ $wgConf->settings = array(
 	'wmgUsePoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'lclwiki' => true,
+		'universebuildwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
