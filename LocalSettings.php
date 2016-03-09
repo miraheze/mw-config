@@ -482,6 +482,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	'wmgUsePoll' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
