@@ -23,7 +23,7 @@ if ( $wmgUseCharInsert ) {
 }
 
 if ( $wmgUseContactPage) {
-	wfLoadExtension( 'ContactPage' );
+	require_once( "$IP/extensions/ContactPage/ContactPage.php" );
 
 	// Contact Page is a fairly complex (well long) extension to configure.
 	// All config should be in the file below on a wikidb basis.
