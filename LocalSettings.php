@@ -329,6 +329,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
+	'wmgUseContactPage' => array(
+		'default' => false, // Add wiki config to ContactPage.php
+		'extloadwiki' => true,
+	),
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
