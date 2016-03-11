@@ -637,6 +637,7 @@ $wgConf->settings = array(
 		'etpowiki' => true,
 		'gameswiki' => true,
 		'genwiki' => true,
+		'hftqmswiki' => true,
 		'hobbieswiki' => true,
 		'hshsinfoportalwiki' => true,
 		'islamwissenschaftwiki' => true,
