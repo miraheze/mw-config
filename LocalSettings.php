@@ -1010,6 +1010,9 @@ $wgConf->settings = array(
 			NS_USER => true,
 			NS_PROJECT => true,
 		),
+		'+hobbieswiki' => array(
+			NS_MAIN => true,
+		),
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
