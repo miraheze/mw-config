@@ -331,6 +331,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
+		'christipediawiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseCollapsibleVector' => array(
