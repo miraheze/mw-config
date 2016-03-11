@@ -515,6 +515,7 @@ $wgConf->settings = array(
 		'cbmediawiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
+		'diavwiki' => true,
 		'extloadwiki' => true,
 		'gameswiki' => true,
 		'newhudsoniawiki' => true,
