@@ -1684,6 +1684,7 @@ $wgConf->settings = array(
 	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
+		'cybercrimewiki' => 'modern',
 	),
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
