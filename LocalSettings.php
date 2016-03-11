@@ -269,6 +269,7 @@ $wgConf->settings = array(
 		'antiguabarbudacalypsowiki' => true,
 		'christipediawiki' => true,
 		'drunkenpeasantswikiwiki' => true,
+		'fieldresearchwiki' => true,
 		'izanagiwiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
