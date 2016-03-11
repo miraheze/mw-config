@@ -1337,6 +1337,16 @@ $wgConf->settings = array(
 				'respected' => true,
 			),
 		),
+		'+fieldresearchwiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'user' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 		'+metawiki' => array(
 			'steward' => array(
 				'abusefilter-modify-global' => true,
