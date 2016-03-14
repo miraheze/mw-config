@@ -632,6 +632,7 @@ $wgConf->settings = array(
 		'clicordiwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
+		'dottorcontewiki' => true,
 		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'elainarmuawiki' => true,
