@@ -1767,6 +1767,7 @@ $wgConf->settings = array(
 		'reriawiki' => "//$wmgUploadHostname/reriawiki/a/a6/Header.png",
 		'rwbyfrwiki' =>	"//$wmgUploadHostname/rwbyfrwiki/a/a3/RWBYLogo.jpeg",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
+		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/4/41/RepUsLogo_small.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'sirikotwiki' => '//www.sirikot.com/wiki_logo.png',
 		'stoutofreachwiki' => "//$wmgUploadHostname/stoutofreachwiki/b/bc/Wiki.png",
