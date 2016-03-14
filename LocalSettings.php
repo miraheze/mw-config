@@ -577,12 +577,13 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	// Possible cause of HHVM crashes
-	'wmgUseSyntaxHighlight' => array( 
+	'wmgUseSyntaxHighlight' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'datasciencewiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
+		'sizzlecookiewiki' => true,
 		'urho3dwiki' => true,
 
 	),
