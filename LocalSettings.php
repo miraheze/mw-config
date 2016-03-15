@@ -168,6 +168,7 @@ $wgConf->settings = array(
 			'universebuild.com' => 'universebuildwiki',
 			'wiki.dottorconte.eu' => 'dottorcontewiki',
 			'wiki.printmaking.be' => 'printmakingbewiki',
+			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 		),
 	),
@@ -1655,6 +1656,7 @@ $wgConf->settings = array(
 		'reviwiki' => 'https://private.revi.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
 		'universebuildwiki' => 'https://universebuild.com',
+		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
