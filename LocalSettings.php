@@ -1912,26 +1912,23 @@ if ( defined( 'MW_DB' ) ) {
 
 # Initialize dblist
 $wgLocalDatabases = array();
-$wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
+$wmgDatabaseList = file_get_contents( "/srv/mediawiki/dblist/all.dblist" );
 
-foreach ( $wmgDatabaseList as $wikiLine ) {
-	$wikiDB = explode( '|', $wikiLine, 4 );
-	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
-	$wgLocalDatabases[] = $DBname;
-	$wgConf->settings['wgSitename'][$DBname] = $siteName;
-	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
-}
+foreach ( json_decode( $wmgDatabaseList, true ) as $entry ) {
+	$wikiDB = array_keys( $entry )[0];
+	
+	$wgLocalDatabases[] = $wikiDB;
+	
+	$wgConf->settings['wgSitename'][$wikiDB] = $entry[$wikiDB]['settings']['sitename'];
+	$wgConf->settings['wgLanguageCode'][$wikiDB] = $entry[$wikiDB]['settings']['language'];
 
-$wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
-foreach ( $wmgPrivateDatabasesList as $database ) {
-	$database = trim( $database );
-	$wgConf->settings['wmgPrivateWiki'][$database] = true;
-}
-
-$wmgClosedDatabasesList = file( "/srv/mediawiki/dblist/closed.dblist" );
-foreach ( $wmgClosedDatabasesList as $database ) {
-	$database = trim( $database );
-	$wgConf->settings['wmgClosedWiki'][$database] = true;
+	if ( $entry[$wikiDB]['private'] == true ) {
+		$wgConf->settings['wmgPrivateWiki'][$wikiDB] = $entry[$wikiDB]['private'];
+	}
+	
+	if ( $entry[$wikiDB]['closed'] == true ) {
+		$wgConf->settings['wmgClosedWiki'][$wikiDB] = $entry[$wikiDB]['closed'];
+	}
 }
 
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
