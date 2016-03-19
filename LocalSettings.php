@@ -113,6 +113,7 @@ $wgConf->settings = array(
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'ndtestwiki' => true,
 	),
 	// Block
 	'wgBlockAllowsUTEdit' => array(
@@ -312,6 +313,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'gameswiki' => true,
 		'heistwiki' => true,
+		'ndtestwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'szkwiki' => true,
 		'testwiki' => true,
@@ -325,12 +327,14 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'ndtestwiki' => true,
 	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
+		'ndtestwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseContactPage' => array(
@@ -353,6 +357,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'ndtestwiki' => true,
 		'webflowwiki' => true,
 	),
 	'wmgUseDynamicPageList' => array(
@@ -438,6 +443,7 @@ $wgConf->settings = array(
 		'exitsincwiki' => true,
 		'izanagiwiki' => true,
 		'luckandlogicwiki' => true,
+		'ndtestwiki' => true,
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 	),
@@ -445,6 +451,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'ndtestwiki' => true,
 	),
         // multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
@@ -482,6 +489,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'lbsgeswiki' => true,
 		'luckandlogicwiki' => true,
+		'ndtestwiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 	),
@@ -490,6 +498,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
+		'ndtestwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUsePoll' => array(
@@ -502,6 +511,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'ndtestwiki' => true,
 	),
 	'wmgUseScribunto' => array(
 		'default' => false,
@@ -522,7 +532,6 @@ $wgConf->settings = array(
 		'diavwiki' => true,
 		'extloadwiki' => true,
 		'gameswiki' => true,
-		'newhudsoniawiki' => true,
 		'iqtwiki' => true,
 		'izanagiwiki' => true,
 		'jbkwwiki' => true,
@@ -531,6 +540,8 @@ $wgConf->settings = array(
 		'lifelinewiki' => true,
 		'librewiki' => true,
 		'luismark2015wiki' => true,
+		'ndtestwiki' => true,
+		'newhudsoniawiki' => true,
 		'novahistoriaewiki' => true,
 		'partupwiki' => true,
 		'pflanzenwiki' => true,
@@ -584,6 +595,7 @@ $wgConf->settings = array(
 		'datasciencewiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
+		'ndtestwiki' => true,
 		'sizzlecookiewiki' => true,
 		'urho3dwiki' => true,
 
@@ -721,6 +733,7 @@ $wgConf->settings = array(
                 'izanagiwiki' => true,
                 'lclwikiwiki' => true,
                 'luckandlogicwiki' => true,
+		'ndtestwiki' => true,
                 'szkwiki' => true,
                 'testwiki' => true,
                 'twplantwiki' => true,
@@ -745,12 +758,14 @@ $wgConf->settings = array(
 		'default' => false,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
+		'ndtestwiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
+		'ndtestwiki' => true,
 		'quantixwiki' => true,
 	),
 	'wgFileExtensions' => array(
