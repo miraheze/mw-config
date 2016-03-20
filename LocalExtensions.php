@@ -71,6 +71,10 @@ if ( $wmgUseForeground ) {
 	require_once( "$IP/skins/foreground/foreground.php" );
 }
 
+if ( $wmgUseHighlightLinksInCategory ) {
+    wfLoadExtension( 'HighlightLinksInCategory' );
+}
+
 if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
