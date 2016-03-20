@@ -568,6 +568,10 @@ $wgConf->settings = array(
 		'worldofkirbycraftwiki' => true,
 		'newcolumbiawiki' => true,
 	),
+	'wgScribuntoUseGeSHi' => array( // Scribunto variable. Only enable when Scribunto AND SyntaxHighlight_GeSHi are enabled.
+		'default' => false,
+		'cssandjsschoolboardwiki' => true,
+	),
 	'wmgUseSectionHide' => array(
 		'default' => false,
 		'aktposwiki' => true,
