@@ -397,6 +397,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'permanentfuturelabwiki' => true,
 	),
+	'wmgUseHighlightLinksInCategory' => array(
+	    'default' => false,
+	    'extloadwiki' => true,
+	),
 	'wmgUseImageMap' => array(
 		'default' => false,
 		'adnovumwiki' => true,
@@ -833,6 +837,15 @@ $wgConf->settings = array(
 	'wgUseGlobalSiteCssJs' => array(
 		'default' => false,
 	),
+
+    // HighlightLinks
+    'wgHighlightLinksInCategory' => array(
+        'default' => array(),
+        'extloadwiki' => array(
+            'Trope' => 'trope',
+            'YMMV_Trope' => 'ymmv',
+        ),
+    ),
 
 	// ImageMagick
 	'wgUseImageMagick' => array(
