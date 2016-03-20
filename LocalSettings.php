@@ -425,12 +425,6 @@ $wgConf->settings = array(
 		'quantixwiki' => true,
 		'urho3dwiki' => true,
 	),
-	// MSCatSelect (from MsPackage) option
-	'wgMSCS_WarnNoCategories' => array(
-		'default' => true,
-		'gameswiki' => false,
-		'quantixwiki' => false,
-	),
 	//MsUpload is enabled on extloadwiki via MsPackage
 	'wmgUseMsUpload' => array(
 		'default' => false,
@@ -567,10 +561,6 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'worldofkirbycraftwiki' => true,
 		'newcolumbiawiki' => true,
-	),
-	'wgScribuntoUseGeSHi' => array( // Scribunto variable. Only enable when Scribunto AND SyntaxHighlight_GeSHi are enabled.
-		'default' => false,
-		'cssandjsschoolboardwiki' => true,
 	),
 	'wmgUseSectionHide' => array(
 		'default' => false,
@@ -942,6 +932,13 @@ $wgConf->settings = array(
 	// Mobile
 	'wgMFAutodetectMobileView' => array(
 		'default' => true,
+	),
+	
+	// MsCatSelect vars
+	'wgMSCS_WarnNoCategories' => array( // MSCatSelect (from MsPackage) option
+		'default' => true,
+		'gameswiki' => false,
+		'quantixwiki' => false,
 	),
 
 	// Namespaces
@@ -1654,6 +1651,12 @@ $wgConf->settings = array(
 		),
 	),
 
+	// Scribunto vars
+	'wgScribuntoUseGeSHi' => array( // Scribunto variable. Only enable when Scribunto AND SyntaxHighlight_GeSHi are enabled.
+		'default' => false,
+		'cssandjsschoolboardwiki' => true,
+	),
+	
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
