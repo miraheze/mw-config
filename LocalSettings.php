@@ -671,6 +671,7 @@ $wgConf->settings = array(
 		'newcolumbiawiki' => true,
 		'newtrendwiki' => true,
 		'nwpwiki' => true,
+		'oyeavdelingenwiki' => true,
 		'partupwiki' => true,
 		'pflanzenwiki' => true,
 		'pqwiki' => true,
