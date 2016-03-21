@@ -1808,6 +1808,7 @@ $wgConf->settings = array(
 		'moralecwiki' => "//$wmgUploadHostname/moralecwiki/e/e8/Moralec-pluto.png",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/2/2a/USNC_sunflower_logo.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/e/eb/OneAgency_WikiLogo_Black.png",
+        'oyeavdelingenwiki' => "$wmgUploadHostname/oyeavdelingenwiki/7/7b/OUS_Logo.png",
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/a/a6/Part-up-logo-150x150-mediawiki.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/c/c0/Permanent-Future-Lab-logo-150x150-mediawiki.png",
 		'printmakingbewiki' => "//$wmgUploadHostname/printmakingbewiki/2/22/Pmk-logo-wiki-135px.png",
