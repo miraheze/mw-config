@@ -399,6 +399,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseHighlightLinksInCategory' => array(
 	    'default' => false,
+	    'allthetropeswiki' => true,
 	    'extloadwiki' => true,
 	),
 	'wmgUseImageMap' => array(
@@ -840,10 +841,13 @@ $wgConf->settings = array(
 
     // HighlightLinks
     'wgHighlightLinksInCategory' => array(
-        'default' => array(),
-        'extloadwiki' => array(
+        'default' => null,
+        'allthetropeswiki' => array(
             'Trope' => 'trope',
             'YMMV_Trope' => 'ymmv',
+        ),
+        'extloadwiki' => array(
+            'Trope' => 'trope',
         ),
     ),
 
