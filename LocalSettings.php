@@ -670,6 +670,7 @@ $wgConf->settings = array(
 		'ndtestwiki' => true,
 		'newcolumbiawiki' => true,
 		'newtrendwiki' => true,
+		'nidda23wiki' => true,
 		'nwpwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'partupwiki' => true,
