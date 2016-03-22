@@ -505,6 +505,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'lclwiki' => true,
+		'nidda23wiki' => true,
 		'universebuildwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
