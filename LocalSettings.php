@@ -444,6 +444,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => true,
 		'luckandlogicwiki' => true,
 		'ndtestwiki' => true,
+		'oyeavdelingenwiki' => true,
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 	),
