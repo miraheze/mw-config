@@ -644,6 +644,7 @@ $wgConf->settings = array(
 		'biblicalwikiwiki' => true,
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
+		'carvingwiki' => true,
 		'cbmediawiki' => true,
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
