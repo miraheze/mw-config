@@ -1711,7 +1711,7 @@ $wgConf->settings = array(
 		'spiralwiki' => 'https://spiral.wiki',
 		'universebuildwiki' => 'https://universebuild.com',
 		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
-		'wikiparkinsonwiki' => 'https://wikiparkinsonwiki.org',
+		'wikiparkinsonwiki' => 'https://wikiparkinson.org',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
