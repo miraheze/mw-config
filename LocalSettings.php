@@ -276,6 +276,7 @@ $wgConf->settings = array(
 		'dottorcontewiki' => true,
 		'drunkenpeasantswikiwiki' => true,
 		'fieldresearchwiki' => true,
+		'freecollegeprojectwiki' => true,
 		'izanagiwiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
