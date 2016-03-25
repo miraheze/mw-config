@@ -783,7 +783,7 @@ $wgConf->settings = array(
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
-		'oyeavdelingenwiki' => array( 'docx', 'doc', 'gif', 'ico', 'jpeg', 'jpg', 'odt', 'ods', 'odp', 'ogg', 'png', 'svg', 'pdf', 'xls', 'xlsx')
+		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'gif', 'ico', 'jpeg', 'jpg', 'odt', 'ods', 'odp', 'ogg', 'png', 'svg', 'pdf', 'xls', 'xlsx')
 	),
 	'wgUseInstantCommons' => array(
 		'default' => true,
