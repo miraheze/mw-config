@@ -604,6 +604,7 @@ $wgConf->settings = array(
 		'ndtestwiki' => true,
 		'sizzlecookiewiki' => true,
 		'urho3dwiki' => true,
+		'valentinaprojectwiki' => true,
 
 	),
 	'wmgUseTabsCombination' => array(
@@ -783,7 +784,6 @@ $wgConf->settings = array(
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
-		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx')
 	),
 	'wgUseInstantCommons' => array(
 		'default' => true,
