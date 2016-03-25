@@ -168,6 +168,7 @@ $wgConf->settings = array(
 			'spiral.wiki' => 'spiralwiki',
 			'universebuild.com' => 'universebuildwiki',
 			'wiki.dottorconte.eu' => 'dottorcontewiki',
+			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wiki.printmaking.be' => 'printmakingbewiki',
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
@@ -1710,6 +1711,7 @@ $wgConf->settings = array(
 		'spiralwiki' => 'https://spiral.wiki',
 		'universebuildwiki' => 'https://universebuild.com',
 		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
+		'wikiparkinsonwiki' => 'https://wikiparkinsonwiki.org',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
