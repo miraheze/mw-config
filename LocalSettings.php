@@ -270,6 +270,7 @@ $wgConf->settings = array(
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'antiguabarbudacalypsowiki' => true,
+		'carvingwiki' => true,
 		'christipediawiki' => true,
 		'dottorcontewiki' => true,
 		'drunkenpeasantswikiwiki' => true,
@@ -1851,6 +1852,7 @@ $wgConf->settings = array(
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
+		'carvingwiki' => 'America/Denver',
 		'catboxwiki' => 'America/Detroit',
 		'reviwiki' => 'Asia/Seoul',
 		'rtwiki' => 'Asia/Seoul',
