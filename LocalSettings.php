@@ -736,6 +736,7 @@ $wgConf->settings = array(
                 'drunkenpeasantswikiwiki' => true,
                 'elainarmuawiki' => true,
                 'extloadwiki' => true,
+                'freecollegeprojectwiki' => true,
 		'gameswiki' => true,
 		'islamwissenschaftwiki' => true,
                 'izanagiwiki' => true,
