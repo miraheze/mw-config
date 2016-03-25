@@ -604,6 +604,7 @@ $wgConf->settings = array(
 		'ndtestwiki' => true,
 		'sizzlecookiewiki' => true,
 		'urho3dwiki' => true,
+		'valentinaprojectwiki' => true,
 
 	),
 	'wmgUseTabsCombination' => array(
