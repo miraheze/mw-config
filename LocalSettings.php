@@ -1816,6 +1816,7 @@ $wgConf->settings = array(
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/5/59/Snowflake135.png",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
 		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/3/39/Cw_logo.png",
+		'collabvmwiki' => "//$wmgUploadHostname/collabvmwiki/c/c9/Logo.png",
 		'cssandjsschoolboardwiki' => "//upload.wikimedia.org/wikipedia/commons/c/c7/Css.png",
 		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
 		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/b/bc/Wiki.png",
