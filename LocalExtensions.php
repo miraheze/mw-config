@@ -72,7 +72,7 @@ if ( $wmgUseForeground ) {
 }
 
 if ( $wmgUseHighlightLinksInCategory ) {
-    wfLoadExtension( 'HighlightLinksInCategory' );
+	wfLoadExtension( 'HighlightLinksInCategory' );
 }
 
 if ( $wmgUseImageMap ) {
@@ -127,9 +127,9 @@ if ( $wmgUsePoll ) {
 }
 
 if ( $wmgUsePopups ) {
-        require_once( "$IP/extensions/PageImages/PageImages.php" );
-        require_once( "$IP/extensions/Popups/Popups.php" );
-        require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	require_once( "$IP/extensions/PageImages/PageImages.php" );
+	require_once( "$IP/extensions/Popups/Popups.php" );
+	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 }
 
 if ( $wmgUseSandboxLink ) {
