@@ -199,15 +199,15 @@ $wgConf->settings = array(
 	// CreateWiki
 	'wmgCreateWikiSQLfiles' => array(
 		'default' => array(
-		        "$IP/maintenance/tables.sql",
-		        "$IP/extensions/AbuseFilter/abusefilter.tables.sql",
-		        "$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+			"$IP/maintenance/tables.sql",
+			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
-		        "$IP/extensions/CheckUser/cu_log.sql",
-		        "$IP/extensions/CheckUser/cu_changes.sql",
-		        "$IP/extensions/Echo/echo.sql",
+			"$IP/extensions/CheckUser/cu_log.sql",
+			"$IP/extensions/CheckUser/cu_changes.sql",
+			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/Flow/flow.sql",
-		        "$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
+			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
 			"$IP/extensions/Math/db/math.mysql.sql",
 			"$IP/extensions/Math/db/mathlatexml.mysql.sql",
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
@@ -219,16 +219,16 @@ $wgConf->settings = array(
 			"$IP/extensions/Poll/archives/Poll-install-manual.sql",
 			"$IP/extensions/TimedMediaHandler/TimedMediaHandler.sql",
 			"$IP/extensions/TitleKey/titlekey.sql",
-		        "$IP/extensions/Translate/sql/revtag.sql",
-		        "$IP/extensions/Translate/sql/translate_groupreviews.sql",
-		        "$IP/extensions/Translate/sql/translate_groupstats.sql",
-		        "$IP/extensions/Translate/sql/translate_messageindex.sql",
-		        "$IP/extensions/Translate/sql/translate_metadata.sql",
-		        "$IP/extensions/Translate/sql/translate_reviews.sql",
-		        "$IP/extensions/Translate/sql/translate_sections.sql",
-		        "$IP/extensions/Translate/sql/translate_stash.sql",
-		        "$IP/extensions/Translate/sql/translate_tm.sql",
-		        "$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
+			"$IP/extensions/Translate/sql/revtag.sql",
+			"$IP/extensions/Translate/sql/translate_groupreviews.sql",
+			"$IP/extensions/Translate/sql/translate_groupstats.sql",
+			"$IP/extensions/Translate/sql/translate_messageindex.sql",
+			"$IP/extensions/Translate/sql/translate_metadata.sql",
+			"$IP/extensions/Translate/sql/translate_reviews.sql",
+			"$IP/extensions/Translate/sql/translate_sections.sql",
+			"$IP/extensions/Translate/sql/translate_stash.sql",
+			"$IP/extensions/Translate/sql/translate_tm.sql",
+			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		),
 	),
 
@@ -402,9 +402,9 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 	),
 	'wmgUseHighlightLinksInCategory' => array(
-	    'default' => false,
-	    'allthetropeswiki' => true,
-	    'extloadwiki' => true,
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseImageMap' => array(
 		'default' => false,
@@ -458,7 +458,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ndtestwiki' => true,
 	),
-        // multiupload is unmaintained and causes errors
+	// multiupload is unmaintained and causes errors
 	'wmgUseMultiUpload' => array(
 		'default' => false,
 		'8stationwiki' => false,
@@ -731,36 +731,36 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
-        'wmgUseYouTube' => array(
-                'default' => false,
-                'airwiki' => true,
-                'allthetropeswiki' => true,
-                'aktposwiki' => true,
-                'apolcourseswiki' => true,
-                'bmedwiki' => true,
-                'carvingwiki' => true,
-                'christipediawiki' => true,
-                'developmentwiki' => true,
-                'drunkenpeasantswikiwiki' => true,
-                'elainarmuawiki' => true,
-                'extloadwiki' => true,
-                'freecollegeprojectwiki' => true,
+	'wmgUseYouTube' => array(
+		'default' => false,
+		'airwiki' => true,
+		'allthetropeswiki' => true,
+		'aktposwiki' => true,
+		'apolcourseswiki' => true,
+		'bmedwiki' => true,
+		'carvingwiki' => true,
+		'christipediawiki' => true,
+		'developmentwiki' => true,
+		'drunkenpeasantswikiwiki' => true,
+		'elainarmuawiki' => true,
+		'extloadwiki' => true,
+		'freecollegeprojectwiki' => true,
 		'gameswiki' => true,
 		'islamwissenschaftwiki' => true,
-                'izanagiwiki' => true,
-                'lclwikiwiki' => true,
-                'luckandlogicwiki' => true,
+		'izanagiwiki' => true,
+		'lclwikiwiki' => true,
+		'luckandlogicwiki' => true,
 		'ndtestwiki' => true,
-                'szkwiki' => true,
-                'testwiki' => true,
-                'twplantwiki' => true,
+		'szkwiki' => true,
+		'testwiki' => true,
+		'twplantwiki' => true,
 		'valentinaprojectwiki' => true,
-                'worldpediawiki' => true,
-                'webflowwiki' => true,
-                'urho3dwiki' => true,
-        ),
+		'worldpediawiki' => true,
+		'webflowwiki' => true,
+		'urho3dwiki' => true,
+	),
 
-        // External link target
+	// External link target
 	'wgExternalLinkTarget' => array(
 		'default' => false,
 		'vrgowiki' => '_blank',
@@ -849,17 +849,17 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 
-    // HighlightLinks
-    'wgHighlightLinksInCategory' => array(
-        'default' => null,
-        'allthetropeswiki' => array(
-            'Trope' => 'trope',
-            'YMMV_Trope' => 'ymmv',
-        ),
-        'extloadwiki' => array(
-            'Trope' => 'trope',
-        ),
-    ),
+	// HighlightLinks
+	'wgHighlightLinksInCategory' => array(
+		'default' => array(),
+		'allthetropeswiki' => array(
+			'Trope' => 'trope',
+			'YMMV_Trope' => 'ymmv',
+		),
+		'extloadwiki' => array(
+			'Trope' => 'trope',
+		),
+	),
 
 	// ImageMagick
 	'wgUseImageMagick' => array(
@@ -1877,7 +1877,7 @@ $wgConf->settings = array(
 		'rtwiki' => 'Asia/Seoul',
 	),
 
-        // Translate
+	// Translate
 	'wmgTranslateBlacklist' => array(
 		'default' => array(),
 		'metawiki' => array(
@@ -2051,8 +2051,8 @@ $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
 if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
-        unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
-        $wgCentralAuthCookieDomain = $wmgHostname;
+	unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
+	$wgCentralAuthCookieDomain = $wmgHostname;
 }
 
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
@@ -2084,12 +2084,12 @@ $wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
 
 # ircrcbot
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-        $wgRCFeeds['irc'] = array(
-                'formatter' => 'MirahezeIRCRCFeedFormatter',
-                'uri' => 'udp://185.52.1.76:5070',
-                'add_interwiki_prefix' => false,
-                'omit_bots' => true,
-        );
+	$wgRCFeeds['irc'] = array(
+		'formatter' => 'MirahezeIRCRCFeedFormatter',
+		'uri' => 'udp://185.52.1.76:5070',
+		'add_interwiki_prefix' => false,
+		'omit_bots' => true,
+	);
 }
 
 # Will remove this later --SPF
@@ -2139,12 +2139,12 @@ if ( $wgDBname === 'vrgowiki' ) {
 }
 
 if ( $wgDBname == 'metawiki' ) {
-        $wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
-        function wfModifyMetaTags( OutputPage $out ) {
-                $out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
-                $out->addMeta( 'revisit-after', '2 days' );
-                $out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
-        }
+	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
+	function wfModifyMetaTags( OutputPage $out ) {
+		$out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
+		$out->addMeta( 'revisit-after', '2 days' );
+		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
+	}
 }
 
 if ( $wgDBname == 'extloadwiki' ) {
