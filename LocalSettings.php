@@ -1736,6 +1736,9 @@ $wgConf->settings = array(
 	'wgSiteMatrixClosedSites' => array(
 		'default' => "/srv/mediawiki/dblist/closed.dblist",
 	),
+	'wgSiteMatrixSites' => array(
+		'default' => array(),
+	),
 
 	// Squid (aka Varnish)
 	'wgUseSquid' => array(
