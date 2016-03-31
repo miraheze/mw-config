@@ -1416,9 +1416,6 @@ $wgConf->settings = array(
 				'userrights' => true,
 				'userrights-interwiki' => true,
 			),
-			'finances' => array(
-				'globalgroupmembership' => true, // So labster can add donators
-			),
 			'sysop' => array(
 				'interwiki' => true,
 			),
