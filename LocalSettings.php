@@ -1402,9 +1402,6 @@ $wgConf->settings = array(
 			),
 		),
 		'+metawiki' => array(
-			'finances' => array(
-				'globalgroupmembership' => true, // So labster can add donators
-			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
