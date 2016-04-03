@@ -396,6 +396,7 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'ernaehrungsrathh' => true
 	),
 	'wmgUseForeground' => array(
 		'default' => false,
@@ -710,6 +711,7 @@ $wgConf->settings = array(
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
+		'ernaehrungsrathh' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
