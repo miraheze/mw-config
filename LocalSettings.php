@@ -377,10 +377,6 @@ $wgConf->settings = array(
 	'wmgUseEchoThanks' => array(
 		'default' => true,
 	),
-	'wmgUseEditcount' => array(
-	    'default' => false,
-	    'extloadwiki' => true,
-	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
 	),
@@ -584,6 +580,7 @@ $wgConf->settings = array(
 		'whufcyouthwiki' => true,
 		'worldofkirbycraftwiki' => true,
 		'newcolumbiawiki' => true,
+		'stellachronicawiki' => true,
 	),
 	'wmgUseSectionHide' => array(
 		'default' => false,
@@ -600,6 +597,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'micropediawiki' => true,
 		'stoutofreachwiki' => true,
+		'stellachronicawiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
 		'default' => false,
@@ -719,6 +717,7 @@ $wgConf->settings = array(
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
+		'stellachronicawiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
