@@ -575,6 +575,7 @@ $wgConf->settings = array(
 		'wdbwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'whentheycrywiki' => true,
+		'whufcyouthwiki' => true,
 		'worldofkirbycraftwiki' => true,
 		'newcolumbiawiki' => true,
 	),
