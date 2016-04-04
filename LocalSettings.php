@@ -1065,13 +1065,13 @@ $wgConf->settings = array(
 			NS_TROPEWORKSHOP => true,
 		),
 		'+catboxwiki' => array(
+			NS_MAIN => true,
 			NS_COMIC => true,
-			NS_MAIN => true,
-		),
-		'+catboxwiki' => array(
-			NS_MAIN => true,
 			NS_OFFICIAL => true,
 			NS_TEMPLATE => true,
+		),
+		'+clementsworldbuildingwiki' => array(
+			NS_MAIN => true,
 		),
 		'+gameswiki' => array(
 			NS_MAIN => true,
@@ -1694,7 +1694,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'cssandjsschoolboardwiki' => true,
 	),
-	
+
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
