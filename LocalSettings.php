@@ -377,6 +377,10 @@ $wgConf->settings = array(
 	'wmgUseEchoThanks' => array(
 		'default' => true,
 	),
+	'wmgUseEditcount' => array(
+	    'default' => false,
+	    'extloadwiki' => true,
+	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
 	),
