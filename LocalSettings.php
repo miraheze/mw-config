@@ -1074,6 +1074,9 @@ $wgConf->settings = array(
 		'+clementsworldbuildingwiki' => array(
 			NS_MAIN => true,
 		),
+		'+eotewiki' => array(
+			NS_MAIN => true,
+		),
 		'+gameswiki' => array(
 			NS_MAIN => true,
 			NS_USER => true,
