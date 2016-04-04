@@ -620,6 +620,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'developmentwiki' => true,
+		'whentheycrywiki' => true,
 		'universebuildwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
