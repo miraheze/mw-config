@@ -391,6 +391,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'mecanonwiki' => true,
 		'ndtestwiki' => true,
+		'oyeavdelingenwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'ricwiki' => true,
 		'spiralwiki' => true,
