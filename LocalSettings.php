@@ -678,6 +678,7 @@ $wgConf->settings = array(
 		'ernaehrungsrathhwiki' => true,
 		'esswaywiki' => true,
 		'etpowiki' => true,
+		'foodsharinghamburgwiki' => true,
 		'gameswiki' => true,
 		'genwiki' => true,
 		'hftqmswiki' => true,
