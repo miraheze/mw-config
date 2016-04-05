@@ -390,6 +390,7 @@ $wgConf->settings = array(
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
 		'christipediawiki' => true,
+		'dicficwiki' => true,
 		'developmentwiki' => true,
 		'drunkenpeasantswikiwiki' => true,
 		'ernaehrungsrathhwiki' => true,
