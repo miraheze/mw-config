@@ -625,6 +625,7 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'whentheycrywiki' => true,
 		'universebuildwiki' => true,
+		'stellachronicawiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
