@@ -672,6 +672,7 @@ $wgConf->settings = array(
 		'clicordiwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
+		'dicficwiki' => true,
 		'dottorcontewiki' => true,
 		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
@@ -723,7 +724,6 @@ $wgConf->settings = array(
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
-		'dicficwiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
@@ -1853,6 +1853,7 @@ $wgConf->settings = array(
 		'collabvmwiki' => "//$wmgUploadHostname/collabvmwiki/c/c9/Logo.png",
 		'cssandjsschoolboardwiki' => "//upload.wikimedia.org/wikipedia/commons/c/c7/Css.png",
 		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
+		'dicficwiki' => "//$wmgUploadHostname/dicficwiki/b/b1/Dicfic-logo.png",
 		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/b/bc/Wiki.png",
 		'elsieworldwiki' => "//$wmgUploadHostname/elsiesworldwiki/5/51/Elsie_logo.png",
 		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
@@ -1902,7 +1903,6 @@ $wgConf->settings = array(
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/d/df/20150913_WelcomeWiki-Logo_TranspWritten135x135.png",
 		'webflowwiki' => "//$wmgUploadHostname/webflowwiki/f/fb/Webflow-logo-raster-blue-2015.png",
 		'worldofkirbycraftwiki' => "//$wmgUploadHostname/worldofkirbycraftwiki/2/2f/WoKWikiLogo.png",
-		'dicficwiki' => "//$wmgUploadHostname/dicficwiki/b/b1/Dicfic-logo.png",
 	),
 
 	// Timezone
