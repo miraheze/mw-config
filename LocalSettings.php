@@ -957,6 +957,13 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
+	'+wgNamespacesToPostIn => array(
+		'default' => array(),
+		'+bgowiki' => array(
+			NS_MAIN,
+			NS_PROJECT,
+		),
+	),
 
 	// MirahezeMagic
 	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions
