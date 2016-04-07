@@ -603,6 +603,7 @@ $wgConf->settings = array(
 		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
+		'stellachronicawiki' => true,
 		'stoutofreachwiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
@@ -629,8 +630,10 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'developmentwiki' => true,
-		'whentheycrywiki' => true,
+		'stellachronicawiki' => true,
 		'universebuildwiki' => true,
+		'whentheycrywiki' => true,
+
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
@@ -647,6 +650,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'metawiki' => true,
+		'stellachronicawiki' => true,
 		'spiralwiki' => true,
 		'rtwiki' => true,
 		'testwiki' => true,
