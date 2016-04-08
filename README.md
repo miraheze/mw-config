@@ -6,7 +6,7 @@ Miraheze's public wiki configurations.
 
 # Contributing
 
-Pull requests are welcome! Please use tabs over four spaces, and make sure to follow the conventions!
+Pull requests are welcome! Please read [contributing.md](.github/CONTRIBUTING.md) and follow the conventions!
 
 # Security Vulnerability
 
