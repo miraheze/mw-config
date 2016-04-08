@@ -1776,6 +1776,7 @@ $wgConf->settings = array(
                'prefix' => "w"
            ),
            "wiktionary" => array(),
+           "wikibooks" => null,
         ),
 	),
 
