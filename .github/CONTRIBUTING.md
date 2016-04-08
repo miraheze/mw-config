@@ -6,9 +6,9 @@ Below is an example snippets from the LocalSettings, and we'll cover important s
 
 ```php
     'wmgUseJosa' => array(
-    'default' => false,
-    'extloadwiki' => true,
-    'reviwiki' => true,
+        'default' => false,
+        'extloadwiki' => true,
+        'reviwiki' => true,
     ),
 ```
 
