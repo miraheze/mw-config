@@ -960,8 +960,8 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
-	'+wgNamespacesToPostIn' => array(
-		'default' => array(),
+	'wgNamespacesToPostIn' => array(
+		'default' => array( NS PROJECT, ),
 		'+bgowiki' => array(
 			NS_MAIN,
 			NS_PROJECT,
