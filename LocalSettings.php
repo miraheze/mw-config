@@ -1769,7 +1769,14 @@ $wgConf->settings = array(
 		'default' => "/srv/mediawiki/dblist/closed.dblist",
 	),
 	'wgSiteMatrixSites' => array(
-		'default' => array(),
+		'default' => array(
+		    'wiki' => array(
+               'name' => "Miraheze",
+               'host' => "meta.miraheze.org",
+               'prefix' => "w"
+           ),
+           "wiktionary" => array(),
+        ),
 	),
 
 	// Squid (aka Varnish)
