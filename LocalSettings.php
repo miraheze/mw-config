@@ -2156,6 +2156,7 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
+	require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );  #Will move later --labster
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
