@@ -612,7 +612,6 @@ $wgConf->settings = array(
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
-		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
 		'stoutofreachwiki' => true,
