@@ -126,6 +126,10 @@ if ( $wmgUseNoTitle ) {
 	$wgRestrictDisplayTitle = false;
 }
 
+if ( $wmgUsePageNotice ) {
+	require_once( "$IP/extensions/PageNotice/PageNotice.php" );
+}
+
 if ( $wmgUsePoll ) {
 	require_once( "$IP/extensions/Poll/Poll.php" );
 }
