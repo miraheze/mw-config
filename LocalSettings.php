@@ -703,6 +703,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => true,
 		'lbsgeswiki' => true,
 		'lclwikiwiki' => true,
+		'littlebigplanetwiki' => true,
 		'luckandlogicwiki' => true,
 		'mecanonwiki' => true,
 		'metawiki' => true,
