@@ -602,6 +602,10 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseSimpleTooltip' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	// Do not ever enable without contacting me! --Southparkfan
 	'wmgUseSocialProfile' => array(
 		'default' => false,

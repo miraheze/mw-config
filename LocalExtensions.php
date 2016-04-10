@@ -152,6 +152,10 @@ if ( $wmgUseSectionHide ) {
 	require_once( "$IP/extensions/SectionHide/SectionHide.php" );
 }
 
+if ( $wmgUseSimpleTooltip ) {
+	require_once( "$IP/extensions/SimpleTooltip/SimpleTooltip.php" );
+}
+
 if ( $wmgUseSocialProfile ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 }
