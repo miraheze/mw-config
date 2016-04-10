@@ -604,6 +604,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
+		'apolcourseswiki' => true,
 		'extloadwiki' => true,
 	),
 	// Do not ever enable without contacting me! --Southparkfan
