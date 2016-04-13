@@ -293,6 +293,7 @@ $wgConf->settings = array(
 		'fieldresearchwiki' => true,
 		'freecollegeprojectwiki' => true,
 		'izanagiwiki' => true,
+		'kl6fwiki' => true,
 		'micropediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'ricwiki' => true,
