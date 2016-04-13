@@ -621,7 +621,8 @@ $wgConf->settings = array(
 		'apolcourseswiki' => true,
 		'extloadwiki' => true,
 	),
-	// Do not ever enable without contacting me! --Southparkfan
+	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
+	// Requires run of update.php
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
@@ -648,6 +649,7 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => true,
 
 	),
+	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
 		'default' => false,
 		'aktposwiki' => true,
