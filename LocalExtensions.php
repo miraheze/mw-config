@@ -91,6 +91,11 @@ if ( $wmgUseJosa ) {
 	require_once( "$IP/extensions/Josa/Josa.php" );
 }
 
+if ( $wmgUseLoopsCombo ) {
+	require_once( "$IP/extensions/Variables/Variables.php" );
+	require_once( "$IP/extensions/Loops/Loops.php");
+}
+
 if ( $wmgUseMsPackage ) {
 	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 	require_once( "$IP/extensions/MsLinks/MsLinks.php" );

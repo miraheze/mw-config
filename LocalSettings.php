@@ -452,6 +452,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'reviwiki' => true,
 	),
+	'wmgUseLoopsCombo' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseMsPackage' => array(
 		'default' => false,
 		'catboxwiki' => true,
