@@ -652,6 +652,7 @@ $wgConf->settings = array(
 		'datasciencewiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
+		'idtestwiki' => true,
 		'ndtestwiki' => true,
 		'sizzlecookiewiki' => true,
 		'urho3dwiki' => true,
