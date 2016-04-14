@@ -729,6 +729,7 @@ $wgConf->settings = array(
 		'hftqmswiki' => true,
 		'hobbieswiki' => true,
 		'hshsinfoportalwiki' => true,
+		'idtestwiki' => true,
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
 		'lbsgeswiki' => true,
