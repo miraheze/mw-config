@@ -117,6 +117,10 @@ if ( $wmgUseMonaco ) {
 	require_once( "$IP/skins/Monaco/monaco.php" );
 }
 
+if ( $wmgUseNativeSvgHandler ) {
+	require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
+}
+
 if ( $wmgUseNewUserMessage ) {
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 }

@@ -507,6 +507,9 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true, 
 	),
+	'wmgUseNativeSvgHandler' => array(
+	    'default' => true,
+	),
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -2182,7 +2185,6 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
-	require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );  #Will move later --labster
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
