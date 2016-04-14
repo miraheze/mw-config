@@ -454,6 +454,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseLoopsCombo' => array(
 		'default' => false,
+		'eotewiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseMsPackage' => array(
@@ -772,6 +773,7 @@ $wgConf->settings = array(
 	'wmgUseVariables' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'bgowiki' => true,
 		'extloadwiki' => true,
 		'eotewiki' => true,
 		'szkwiki' => true,
@@ -963,6 +965,7 @@ $wgConf->settings = array(
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'diavwiki' => 'All Rights Reserved',
+		'oyeavdelingenwiki' => 'All Rights Reserved',
 		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'spiralwiki' => 'CC0 Public Domain',
 	),
