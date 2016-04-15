@@ -517,6 +517,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewestPages' => array(
 	    'default' => false,
+	    'christipediawiki' => true,
 	    'extloadwiki' => true,
 	),
 	'wmgUseNewUserMessage' => array(
