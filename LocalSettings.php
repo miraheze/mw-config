@@ -515,6 +515,10 @@ $wgConf->settings = array(
 	'wmgUseNativeSvgHandler' => array(
 	    'default' => true,
 	),
+	'wmgUseNewestPages' => array(
+	    'default' => false,
+	    'extloadwiki' => true,
+	),
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

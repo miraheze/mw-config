@@ -126,6 +126,10 @@ if ( $wmgUseNativeSvgHandler ) {
 	require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
 }
 
+if ( $wmgUseNewestPages ) {
+	require_once( "$IP/extensions/NewestPages/NewestPages.php" );
+}
+
 if ( $wmgUseNewUserMessage ) {
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 }
