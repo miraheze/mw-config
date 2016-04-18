@@ -702,6 +702,7 @@ $wgConf->settings = array(
 	'wmgUseVisualEditor' => array(
 		'default' => false,
 		'8stationwiki' => true,
+		'aacenterpriselearningwiki' => true,
 		'adnovumwiki' => true,
 		'aescapeswiki' => true,
 		'airwiki' => true,
