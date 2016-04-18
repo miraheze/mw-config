@@ -481,6 +481,7 @@ $wgConf->settings = array(
 		'luckandlogicwiki' => true,
 		'ndtestwiki' => true,
 		'oyeavdelingenwiki' => true,
+		'poserdazfreebieswiki' => true,
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 	),
