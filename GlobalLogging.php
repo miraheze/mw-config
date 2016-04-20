@@ -11,7 +11,6 @@ $wgDebugLogGroups = array(
 	'CentralAuth' => "$wmgLogDir/debuglogs/CentralAuth.log",
 	'collection' => "$wmgLogDir/debuglogs/collection.log",
 	'CreateWiki' => "$wmgLogDir/debuglogs/CreateWiki.log",
-	'DBPerformance' => "$wmgLogDir/debuglogs/dbperformance.log",
 	'error' => "$wmgLogDir/debuglogs/php-error.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
@@ -25,9 +24,9 @@ if ( $wgCommandLineMode ) {
 	error_reporting( -1 );
 	ini_set( 'display_startup_errors', 1 );
 	ini_set( 'display_errors', 1 );
-	
+
 	$wgShowExceptionDetails = true;
-	
+
 	$wgShowSQLErrors = true;
 	$wgDebugDumpSql = true;
 	$wgShowDBErrorBacktrace = true;
