@@ -299,6 +299,7 @@ $wgConf->settings = array(
 		'ricwiki' => true,
 		'softwarecrisiswiki' => true,
 		'thoughtonomywikiwiki' => true,
+		'touhouenginewiki' => true,
 		'turkcesozlukwiki' => true,
 		'vrgowiki' => true,
 		'welcomewiki' => true,
