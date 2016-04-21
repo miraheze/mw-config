@@ -338,6 +338,7 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'testwiki' => true,
 		'tochkiwiki' => true,
+		'touhouenginewiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseBabel' => array(
@@ -418,6 +419,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'ricwiki' => true,
 		'spiralwiki' => true,
+		'touhouenginewiki' => true,
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
@@ -776,6 +778,7 @@ $wgConf->settings = array(
 		'testwiki' => true,
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
+		'touhouenginewiki' => true,
 		'unikumwiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
