@@ -667,6 +667,7 @@ $wgConf->settings = array(
 		'idtestwiki' => true,
 		'ndtestwiki' => true,
 		'sizzlecookiewiki' => true,
+		'touhouenginewiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 
