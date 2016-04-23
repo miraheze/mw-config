@@ -403,7 +403,7 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseFlow' => array(
-		'default' => false,
+		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
@@ -706,7 +706,7 @@ $wgConf->settings = array(
 		'welcomewiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
-		'default' => false,
+		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
 		'8stationwiki' => true,
 		'aacenterpriselearningwiki' => true,
 		'adnovumwiki' => true,
