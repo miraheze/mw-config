@@ -671,7 +671,6 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
-
 	),
 	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
@@ -683,7 +682,6 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'universebuildwiki' => true,
 		'whentheycrywiki' => true,
-
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
