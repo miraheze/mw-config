@@ -495,19 +495,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ndtestwiki' => true,
 	),
-	// multiupload is unmaintained and causes errors
-	'wmgUseMultiUpload' => array(
-		'default' => false,
-		'8stationwiki' => false,
-		'allthetropeswiki' => false,
-		'antiguabarbudacalypsowiki' => false,
-		'catboxwiki' => false,
-		'extloadwiki' => false,
-		'izanagiwiki' => false,
-		'mecanonwiki' => false, 
-		'quantixwiki' => false,
-		'szkwiki' => false,
-	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
 		'izanagiwiki' => false,

@@ -110,10 +110,6 @@ if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 }
 
-if ( $wmgUseMultiUpload ) {
-	require_once( "$IP/extensions/MultiUpload/MultiUpload.php" );
-}
-
 if ( $wmgUseMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 }
