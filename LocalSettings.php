@@ -623,6 +623,7 @@ $wgConf->settings = array(
 		'specialeducationwiki' => true,
 		'spiralwiki' => true,
 		'stellachronicawiki' => true,
+		'stormfmwiki' => true,
 		'stoutofreachwiki' => true,
 		'szkwiki' => true,
 		'tanodswiki' => true,
