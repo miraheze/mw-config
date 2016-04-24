@@ -546,7 +546,7 @@ $wgConf->settings = array(
 	'wmgUsePageTriage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'cssandjsschoolboard' => true,
+		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUsePopups' => array(
