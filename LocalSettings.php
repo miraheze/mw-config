@@ -547,6 +547,7 @@ $wgConf->settings = array(
 	'wmgUsePageTriage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'bgowiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
 		'poserdazfreebieswiki' => true,
