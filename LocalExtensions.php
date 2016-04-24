@@ -147,6 +147,10 @@ if ( $wmgUsePageNotice ) {
 	require_once( "$IP/extensions/PageNotice/PageNotice.php" );
 }
 
+if ( $wmgUsePageTriage ) {
+	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+}
+
 if ( $wmgUsePoll ) {
 	require_once( "$IP/extensions/Poll/Poll.php" );
 }
