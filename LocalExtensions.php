@@ -77,6 +77,10 @@ if ( $wmgUseForeground ) {
 
 if ( $wmgUseHeaderTabs ) {
 	require_once "$IP/extensions/HeaderTabs/HeaderTabs.php";
+	if ( $wgDBname == 'extloadwiki' ) {
+	     // load LC despite SectionHide's strong objections
+	    unset( $htUseHistory );
+	}
 }
 
 if ( $wmgUseHighlightLinksInCategory ) {

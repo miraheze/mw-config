@@ -433,6 +433,8 @@ $wgConf->settings = array(
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
 		'default' => false,
+		'bdorpwiki' => true,
+		'datachronwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseHighlightLinksInCategory' => array(
