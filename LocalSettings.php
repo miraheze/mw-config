@@ -549,6 +549,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
+		'poserdazfreebieswiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
