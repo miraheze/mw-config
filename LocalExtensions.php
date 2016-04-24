@@ -155,6 +155,13 @@ if ( $wmgUseSandboxLink ) {
 
 if ( $wmgUseScribunto ) {
 	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+
+    if ( $wmgUseSyntaxHighlight ) {
+        $wgScribuntoUseGeSHi = true;
+    }
+    if ( $wmgUseWikiEditor ) {
+        $wgScribuntoUseCodeEditor = true;
+    }
 }
 
 if ( $wmgUseSectionHide ) {

@@ -1773,12 +1773,6 @@ $wgConf->settings = array(
 		),
 	),
 
-	// Scribunto vars
-	'wgScribuntoUseGeSHi' => array( // Scribunto variable. Only enable when Scribunto AND SyntaxHighlight_GeSHi are enabled.
-		'default' => false,
-		'cssandjsschoolboardwiki' => true,
-	),
-
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
