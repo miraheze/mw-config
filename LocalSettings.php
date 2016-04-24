@@ -456,6 +456,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'allthetropeswiki' => false, // breaks editing
 		'newcolumbiawiki' => true,
+		'simonjonwiki' => true,
 	),
 	'wmgUseJosa' => array(
 		'default' => false,
@@ -776,6 +777,7 @@ $wgConf->settings = array(
 		'shoppingwiki' => true,
 		'soshomophobiewiki' => true,
 		'stellachronicawiki' => true,
+		'simonjonwiki' => true,
 		'sirikotwiki' => true,
 		'spiralwiki' => true,
 		'taylorwiki' => true,
