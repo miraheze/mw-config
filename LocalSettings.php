@@ -587,6 +587,7 @@ $wgConf->settings = array(
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
 		'cssandjsschoolboardwiki' => true,
+		'dalarwiki' => true,
 		'developmentwiki' => true,
 		'diavwiki' => true,
 		'dmwwiki' => true,
