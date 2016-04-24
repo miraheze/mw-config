@@ -543,6 +543,12 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
+	'wmgUsePageTriage' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'cssandjsschoolboard' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -2210,7 +2216,6 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	$wgMultiBoilerplateOptions = false;
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
