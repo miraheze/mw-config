@@ -430,6 +430,11 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'permanentfuturelabwiki' => true,
 	),
+	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
+	'wmgUseHeaderTabs' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseHighlightLinksInCategory' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

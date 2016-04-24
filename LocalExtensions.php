@@ -75,6 +75,10 @@ if ( $wmgUseForeground ) {
 	require_once( "$IP/skins/foreground/foreground.php" );
 }
 
+if ( $wmgUseHeaderTabs ) {
+	require_once "$IP/extensions/HeaderTabs/HeaderTabs.php";
+}
+
 if ( $wmgUseHighlightLinksInCategory ) {
 	wfLoadExtension( 'HighlightLinksInCategory' );
 }
