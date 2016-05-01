@@ -399,6 +399,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'idtestwiki' => true,
 	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
@@ -573,6 +574,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'idtestwiki' => true,
 		'ndtestwiki' => true,
 	),
 	'wmgUseScribunto' => array(
@@ -651,6 +653,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'apolcourseswiki' => true,
 		'extloadwiki' => true,
+		'idtestwiki' => true,
 	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
 	// Requires run of update.php
