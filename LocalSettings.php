@@ -415,6 +415,7 @@ $wgConf->settings = array(
 		'drunkenpeasantswikiwiki' => true,
 		'ernaehrungsrathhwiki' => true,
 		'extloadwiki' => true,
+		'ezdmfwiki' => true,
 		'mecanonwiki' => true,
 		'ndtestwiki' => true,
 		'oyeavdelingenwiki' => true,
