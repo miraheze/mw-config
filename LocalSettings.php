@@ -678,6 +678,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
+		'wikicervanteswiki' => true,
 	),
 	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
@@ -777,6 +778,7 @@ $wgConf->settings = array(
 		'pflanzenwiki' => true,
 		'pqwiki' => true,
 		'permanentfuturelabwiki' => true,
+		'qwertywiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
 		'ricwiki' => true,
@@ -800,6 +802,7 @@ $wgConf->settings = array(
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
+		'wikicervanteswiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
@@ -820,6 +823,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'indexwiki' => true,
 		'stellachronicawiki' => true,
+		'wikicervanteswiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
