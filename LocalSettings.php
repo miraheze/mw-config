@@ -399,6 +399,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+                'idtestwiki' => true,
 	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
