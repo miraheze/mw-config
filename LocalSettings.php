@@ -2022,6 +2022,7 @@ $wgConf->settings = array(
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
+		'alanpediawiki' => 'Asia/Taipei',
 		'carvingwiki' => 'America/Denver',
 		'catboxwiki' => 'America/Detroit',
 		'reviwiki' => 'Asia/Seoul',
