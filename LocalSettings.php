@@ -677,6 +677,7 @@ $wgConf->settings = array(
 		'ezdmfwiki' => true,
 		'idtestwiki' => true,
 		'ndtestwiki' => true,
+		'pascalscada' => true,
 		'sizzlecookiewiki' => true,
 		'touhouenginewiki' => true,
 		'urho3dwiki' => true,
@@ -1164,6 +1165,10 @@ $wgConf->settings = array(
 			'ATT_talk' => NS_PROJECT_TALK,
 			'YKTTW' => NS_TROPEWORKSHOP,
 			'YKTTW_talk' => NS_TROPEWORKSHOP_TALK,
+		),
+		'+humorpediawiki' => array(
+			'HP' => NS_PROJECT,
+			'HP_talk' => NS_PROJECT_TALK,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
