@@ -1608,8 +1608,8 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		),
-		'+snowthegame' => array(
-			'sysop => array(
+		'+snowthegamewiki' => array(
+			'sysop' => array(
 				'createpage' => true,
 			),
 		),
