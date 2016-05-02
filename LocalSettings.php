@@ -794,6 +794,7 @@ $wgConf->settings = array(
 		'ricwiki' => true,
 		'safiriawiki' => true,
 		'shoppingwiki' => true,
+		'snowthegamewiki' => true,
 		'soshomophobiewiki' => true,
 		'stellachronicawiki' => true,
 		'simonjonwiki' => true,
@@ -1607,6 +1608,11 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		),
+		'+snowthegame' => array(
+			'sysop => array(
+				'createpage' => true,
+			),
+		),
 		'+szkwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -1925,6 +1931,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
 		'rwbyfrwiki' =>	"//$wmgUploadHostname/rwbyfrwiki/c/c8/RWBYfavicon.jpg",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/f/fc/Safiria_wiki_favicon.png",
+		'snowthegamewiki' => "//$wmgUploadHostanem/snowthegamewiki/8/89/SNOW_logo_wiki.png",
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/5/5c/Favicon_logo.png",
 		'sirikotwiki' => '//sirikot.com/favicon.png',
 		'stoutofreachwiki' => "//$wmgUploadHostname/stoutofreachwiki/6/64/Favicon.ico",
@@ -1996,6 +2003,7 @@ $wgConf->settings = array(
 		'sapperpediawiki' => "//$wmgUploadHostname/sapperpediawiki/f/f8/Sapperpedia_small.png",
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/4/41/RepUsLogo_small.png",
 		'sirikotwiki' => '//www.sirikot.com/wiki_logo.png',
+		'snowthegamewiki' => "//$wmgUploadHostname/snowthegamewiki/8/89/SNOW_logo_wiki.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'stormfmwiki' => "//$wmgUploadHostname/stormfmwiki/1/18/Stormlogo_small.png",
 		'stoutofreachwiki' => "//$wmgUploadHostname/stoutofreachwiki/b/bc/Wiki.png",
@@ -2279,6 +2287,10 @@ if ( !$wgCommandLineMode ) {
 }
 
 // TestWiki overrides
+// snowthegame.miraheze.org overrides
+if ( $wgDBname === 'snowthegamewiki' ) {
+	$wgGroupPermissions['*']['createpage'] = false;
+}
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
