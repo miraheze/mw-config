@@ -1045,6 +1045,9 @@ $wgConf->settings = array(
 	'wgEnotifWatchlist' => array(
 		'default' => true,
 	),
+	'wgUserEmailUseReplyTo' => array(
+		'default' => true,
+	),
 
 	// Math
 	'wgTexvc' => array(
