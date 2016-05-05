@@ -571,6 +571,12 @@ $wgConf->settings = array(
 		'nidda23wiki' => true,
 		'universebuildwiki' => true,
 	),
+	'wmgUseRandomSelection' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+		'tmewiki' => true,
+	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -634,6 +640,7 @@ $wgConf->settings = array(
 		'stoutofreachwiki' => true,
 		'szkwiki' => true,
 		'tanodswiki' => true,
+		'tmewiki' => true,
 		'tyrolmountainswiki' => true,
 		'universebuildwiki' => true,
 		'wdbwiki' => true,
@@ -804,6 +811,7 @@ $wgConf->settings = array(
 		'taylorwiki' => true,
 		'teleswikiwiki' => true,
 		'testwiki' => true,
+		'tmewiki' => true,
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'touhouenginewiki' => true,
@@ -1941,6 +1949,7 @@ $wgConf->settings = array(
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/5/5c/Favicon_logo.png",
 		'sirikotwiki' => '//sirikot.com/favicon.png',
 		'stoutofreachwiki' => "//$wmgUploadHostname/stoutofreachwiki/6/64/Favicon.ico",
+		'tmewiki' => "//$wmgUploadHostname/tmewiki/6/64/Favicon.ico",
 		'teleswikiwiki' => "//$wmgUploadHostname/teleswikiwiki/7/7f/Teleslogosmoler.png",
 		'themfbclubwiki' => "//$wmgUploadHostname/themfbclubwiki/6/64/Favicon.ico",
 		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/0/01/Favicon_titrepro.png",
@@ -2013,6 +2022,7 @@ $wgConf->settings = array(
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'stormfmwiki' => "//$wmgUploadHostname/stormfmwiki/1/18/Stormlogo_small.png",
 		'stoutofreachwiki' => "//$wmgUploadHostname/stoutofreachwiki/b/bc/Wiki.png",
+		'tmewiki' => "//$wmgUploadHostname/tmewiki/b/bc/Wiki.png",
 		'teleswikiwiki' => "//$wmgUploadHostname/teleswikiwiki/b/b6/Teleslogo01.png",
 		'terriblespacewiki' => "//$wmgUploadHostname/terriblespacewiki/e/eb/Terrible_space_logo.png",
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/NewLogo.png",
@@ -2263,7 +2273,6 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 	wfLoadExtension( 'MultiBoilerplate' );
 	$wgMultiBoilerplateDisplaySpecialPage = true;
 	$wgMultiBoilerplateOptions = false;
