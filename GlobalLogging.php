@@ -17,6 +17,7 @@ $wgDebugLogGroups = array(
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
 	'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 	'redis' => "$wmgLogDir/debuglogs/redis.log",
+	'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
 	'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 );
 
