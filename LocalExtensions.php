@@ -161,6 +161,10 @@ if ( $wmgUsePopups ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 }
 
+if ( $wmgUseRandomSelection ) {
+	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+}
+
 if ( $wmgUseSandboxLink ) {
 	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
 }
