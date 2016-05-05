@@ -571,6 +571,12 @@ $wgConf->settings = array(
 		'nidda23wiki' => true,
 		'universebuildwiki' => true,
 	),
+	'wmgUseRandomSelectin' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+		'tmewiki' => true,
+	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -2267,16 +2273,12 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 	require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
-	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 	wfLoadExtension( 'MultiBoilerplate' );
 	$wgMultiBoilerplateDisplaySpecialPage = true;
 	$wgMultiBoilerplateOptions = false;
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
-}
-if ( $wgDBname == 'tmewiki' ) {
-	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
