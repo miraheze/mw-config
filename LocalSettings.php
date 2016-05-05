@@ -571,7 +571,7 @@ $wgConf->settings = array(
 		'nidda23wiki' => true,
 		'universebuildwiki' => true,
 	),
-	'wmgUseRandomSelectin' => array(
+	'wmgUseRandomSelection' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
