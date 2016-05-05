@@ -2280,8 +2280,7 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 		return true;
 }
 
-// You are required to add "::ffff:"!
-$wmgParsoidIPs = array( '::ffff:185.52.1.144' );
+$wmgParsoidIPs = array( '185.52.1.144' );
 
 // Alternative to forwarding user cookies to Parsoid
 if ( !$wgCommandLineMode ) {
