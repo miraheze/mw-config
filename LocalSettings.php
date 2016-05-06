@@ -575,6 +575,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'humorpediawiki' => true,
 		'tmewiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
