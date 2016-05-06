@@ -1225,6 +1225,9 @@ $wgConf->settings = array(
 		'+hobbieswiki' => array(
 			NS_MAIN => true,
 		),
+		'+humorpediawiki' => array(
+			NS_TALK => true,
+		),
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
