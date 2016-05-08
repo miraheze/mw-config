@@ -381,6 +381,9 @@ $wgConf->settings = array(
 	'wmgUseComments' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'ezdmfwiki' => true,
+		'openconstitutionwiki' => true,
+		'stellachronicawiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
