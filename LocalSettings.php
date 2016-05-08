@@ -67,7 +67,7 @@ define( 'NS_HOENN_TALK', 1623 );
 define( 'NS_OFFICIAL', 1624 );
 define( 'NS_OFFICIAL_TALK', 1625 );
 
-// AdnovumWiki (AdnovumRP)
+// AdnovumWiki (AdnovumRP) and others
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
 
@@ -1166,6 +1166,10 @@ $wgConf->settings = array(
 			NS_HOENN => 'Hoenn',
 			NS_HOENN_TALK => 'Hoenn_talk',
 		),
+		'tmewiki' => array(
+			NS_PORTAL => 'Portal',
+			NS_PORTAL_TALK => 'Portal_talk',
+		),
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
@@ -1173,6 +1177,10 @@ $wgConf->settings = array(
 		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 		'reviwiki' => array( NS_MAIN, NS_SERVER ),
 		'safiriawiki' => array( NS_MAIN, NS_HOENN ),
+	),
+	'wgMetaNamespace' => array(
+	    'default' => null,
+	    'tmewiki' => 'TME',
 	),
 	'+wgNamespaceAliases' => array(
 		'default' => array(),
@@ -1191,6 +1199,10 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
+		),
+		'+tmewiki' => array(
+			'The_Multilingual_Encyclopedia' => NS_PROJECT,
+			'The_Multilingual_Encyclopedia_talk' => NS_PROJECT_TALK,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
@@ -1242,6 +1254,13 @@ $wgConf->settings = array(
 		'+safiriawiki' => array(
 			NS_MAIN => true,
 			NS_HOENN => true,
+		),
+		'+tmewiki' => array(
+			NS_MAIN => true,
+			NS_USER => true,
+			NS_PROJECT => true,
+			NS_TEMPLATE => true,
+			NS_PORTAL => true,
 		),
 		'+unikumwiki' => array(
 			NS_MAIN => true,
