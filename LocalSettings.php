@@ -199,6 +199,11 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 
+	// Comments extension
+	'wgCommentsDefaultAvatar' => array(
+	    'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
+	),
+
 	// CreateWiki
 	'wmgCreateWikiSQLfiles' => array(
 		'default' => array(
@@ -208,6 +213,7 @@ $wgConf->settings = array(
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
+			"$IP/extensions/Comments/sql/comments.sql",
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/Flow/flow.sql",
 			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
