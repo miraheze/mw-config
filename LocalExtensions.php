@@ -34,6 +34,10 @@ if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
 
+if ( $wmgUseComments ) {
+	wfLoadExtension( 'Comments' );
+}
+
 if ( $wmgUseCreateWiki ) {
 	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;

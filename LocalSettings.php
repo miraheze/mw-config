@@ -372,6 +372,10 @@ $wgConf->settings = array(
 		'anuwiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseComments' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
 		'metawiki' => true,
