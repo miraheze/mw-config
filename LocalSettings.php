@@ -906,6 +906,7 @@ $wgConf->settings = array(
 	// External link target
 	'wgExternalLinkTarget' => array(
 		'default' => false,
+		'sylwiki' => '_blank',
 		'vrgowiki' => '_blank',
 	),
 
@@ -1674,6 +1675,11 @@ $wgConf->settings = array(
 				'edit' => false, 
 			),
 		),
+		'+sylwiki' => array(
+			'editor' => array(
+				'edit' => true,
+			),
+		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -2349,6 +2355,11 @@ if ( !$wgCommandLineMode ) {
 if ( $wgDBname === 'snowthegamewiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 }
+
+if ( $wgDBname == 'sylwiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
+}
+
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
