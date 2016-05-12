@@ -350,6 +350,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'touhouenginewiki' => true,
 		'walthamstowlabourwiki' => true,
+		'yggdrasilwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
@@ -442,6 +443,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'yggdrasilwiki' => true,
 	),
 	'wmgUseForeground' => array(
 		'default' => false,
@@ -841,6 +843,7 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
 		'wikicervanteswiki' => true,
+		'yggdrasilwiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
@@ -2084,6 +2087,7 @@ $wgConf->settings = array(
 		'whentheycrywiki' => "//$wmgUploadHostname/whentheycrywiki/b/b5/Logo_m.png",
 		'worldofkirbycraftwiki' => "//$wmgUploadHostname/worldofkirbycraftwiki/2/2f/WoKWikiLogo.png",
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/0c/LogodelWiki.png",
+		'yggdrasilwiki' => "//$wmgUploadHostname/yggdrasilwiki/c/cd/Yggdrasil-logo.png",
 	),
 
 	// Timezone
