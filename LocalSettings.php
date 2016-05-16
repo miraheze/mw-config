@@ -2110,6 +2110,7 @@ $wgConf->settings = array(
 		'ontariobrasswiki' => 'America/Toronto',
 		'reviwiki' => 'Asia/Seoul',
 		'rtwiki' => 'Asia/Seoul',
+		'webtoonwiki' => 'Asia/Seoul',
 	),
 
 	// Translate
