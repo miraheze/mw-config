@@ -1961,7 +1961,7 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 		'cybercrimewiki' => 'modern',
-		'ontariobrasswiki' = 'monobook',
+		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
 		'stellachronicawiki' => 'monobook',
 	),
@@ -2104,7 +2104,7 @@ $wgConf->settings = array(
 		'carvingwiki' => 'America/Denver',
 		'catboxwiki' => 'America/Detroit',
 		'doraemonpediawiki' => 'Asia/Taipei',
-		'ontariobrasswiki' => 'New York/Toronto',
+		'ontariobrasswiki' => 'America/Toronto',
 		'reviwiki' => 'Asia/Seoul',
 		'rtwiki' => 'Asia/Seoul',
 	),
