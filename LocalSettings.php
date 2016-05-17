@@ -762,6 +762,7 @@ $wgConf->settings = array(
 		'aescapeswiki' => true,
 		'airwiki' => true,
 		'alanpediawiki' => true,
+		'allbanks2wiki' => true,
 		'allthetropeswiki' => true,
 		'aktposwiki' => true,
 		'applebranchwiki' => true,
@@ -1490,6 +1491,28 @@ $wgConf->settings = array(
 				'userrights' => true,
 			),
 		),
+		'+allbanks2wiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'user' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'autoconfirmed' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'confirmed' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'sysop' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
@@ -1974,6 +1997,7 @@ $wgConf->settings = array(
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/6/64/Favicon.ico",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/b/be/APfavicon.png",
 		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/8/84/Rainbowstar.png",
+		'allbanks2wiki' => "//$wmgUploadHostname/allbanks2wiki/7/7f/AllBanks2Logo.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/3/3b/Favicongif.gif",
 		'bgowiki' => "//$wmgUploadHostname/bgowiki/6/64/Favicon.ico",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/6/64/Favicon.ico",
@@ -2023,6 +2047,7 @@ $wgConf->settings = array(
 		'adnovumwiki' => "//$wmgUploadHostname/adnovumwiki/f/fa/AdnovumRPtemplogo.png",
 		'airwiki' => "//$wmgUploadHostname/airwiki/8/8e/Logo-scadta-133x133.gif",
 		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/3/33/Logo-amafuwa.png",
+		'allbanks2wiki' => "//$wmgUploadHostname/allbanks2wiki/7/7f/AllBanks2Logo.png",
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
 		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/0/03/AppleBranch_135.png",
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
