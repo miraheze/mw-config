@@ -1,7 +1,5 @@
 # PLEASE DO NOT FILE A BUG HERE!
 
-Miraheze system administrators (who are responsible for github) have decided that miraheze no longer uses GitHub for incoming bugs.
+As of April 2016, Miraheze moved from GitHub to [Phabricator](https://phabricator.miraheze.org) for issue tracking. We do not longer fix issues reported on GitHub.
 
-Instead, they have decided to use [phabricator](https://phabricator.miraheze.org). All bugs have been migrated to the new infrastructure, and we are no longer accepting incoming bugs using github issues.
-
-Since you can register to miraheze phabricator using your github ID using OAuth, please consider filing a bug there. phabricator's markup is almost identical to github's one, and it shouldn't take more than 2 minutes to register there and file a task there. Thank you.
+Please use Phabricator from now on to report issues. It won't take long to register at Phabricator, since we offer OAuth integration with our Miraheze wikis and GitHub. Phabricator's markup is almost identical to GitHub's one, so you'll get used to it very fast.
