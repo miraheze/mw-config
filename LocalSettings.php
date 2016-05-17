@@ -1491,6 +1491,28 @@ $wgConf->settings = array(
 				'userrights' => true,
 			),
 		),
+		'+allbanks2wiki' => array(
+			'*' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'user' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'autoconfirmed' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'confirmed' => array(
+				'edit' => false,
+				'createpage' => false,
+			),
+			'sysop' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
