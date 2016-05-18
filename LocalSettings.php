@@ -642,6 +642,7 @@ $wgConf->settings = array(
 		'newknowledgewiki' => true,
 		'novahistoriaewiki' => true,
 		'ontariobrasswiki' => true,
+		'panoramawiki' => true,
 		'partupwiki' => true,
 		'pflanzenwiki' => true,
 		'poserdazfreebieswiki' => true,
