@@ -809,6 +809,7 @@ $wgConf->settings = array(
 		'littlebigplanetwiki' => true,
 		'lizardwiki' => true,
 		'luckandlogicwiki' => true,
+		'lunfengwiki' => true,
 		'mecanonwiki' => true,
 		'metawiki' => true,
 		'mydegreewiki' => true,
