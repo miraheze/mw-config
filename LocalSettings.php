@@ -2161,6 +2161,7 @@ $wgConf->settings = array(
 		'carvingwiki' => 'America/Denver',
 		'catboxwiki' => 'America/Detroit',
 		'doraemonpediawiki' => 'Asia/Taipei',
+		'libertywiki' => 'Asia/Seoul',
 		'lunfengwiki' => 'Asia/Taipei',
 		'ontariobrasswiki' => 'America/Toronto',
 		'reviwiki' => 'Asia/Seoul',
