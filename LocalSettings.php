@@ -934,6 +934,7 @@ $wgConf->settings = array(
 	// External link target
 	'wgExternalLinkTarget' => array(
 		'default' => false,
+		'forexwiki' => '_blank',
 		'sylwiki' => '_blank',
 		'vrgowiki' => '_blank',
 	),
@@ -1637,6 +1638,14 @@ $wgConf->settings = array(
 				'respected' => true,
 			),
 		),
+		'+forexwiki' => array(
+			'*' => array(
+				'edit' => false,
+			),
+			'editor' => array(
+				'edit' => true,
+			),
+		),
 		'+metawiki' => array(
 			'steward' => array(
 				'abusefilter-modify-global' => true,
@@ -2033,6 +2042,7 @@ $wgConf->settings = array(
 		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/d/dc/HollowLogo2.png",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/6/64/Favicon.ico",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
+		'forexwiki' => "//$wmgUploadHostname/forexwiki/6/64/Favicon.ico",
 		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/1/18/FreeCollegeProject.ico",
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
@@ -2092,6 +2102,7 @@ $wgConf->settings = array(
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
 		'foodsharinghamburgwiki' => "//$wmgUploadHostname/foodsharinghamburgwiki/d/d2/FoodsharingHamburgLogo135px.jpg",
+		'forexwiki' => "//$wmgUploadHostname/forexwiki/c/c9/Logo.png",
 		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/6/60/FC_Logo_135p.png",
 		'fusiongpwiki' => "//$wmgUploadHostname/fusiongpwiki/f/f2/Fusion_Ball.png",
 		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
