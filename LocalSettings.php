@@ -829,6 +829,7 @@ $wgConf->settings = array(
 		'nwpwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'openconstitutionwiki' => true,
+		'panoramawiki' => true,
 		'partupwiki' => true,
 		'pflanzenwiki' => true,
 		'priyowiki' => true,
@@ -2205,6 +2206,7 @@ $wgConf->settings = array(
 	'wmgVisualEditorEnableDefault' => array(
 		'default' => true,
 		'allthetropeswiki' => false,
+		'panoramawiki' => false,
 		'testwiki' => false,
 	),
 	// Empty arrays (do not touch unless you know what you're doing)
