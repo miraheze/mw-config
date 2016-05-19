@@ -608,6 +608,10 @@ $wgConf->settings = array(
 		'idtestwiki' => true,
 		'ndtestwiki' => true,
 	),
+	'wmgUseScratchBlocks' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseScribunto' => array(
 		'default' => false,
 		'adnovumwiki' => true,
