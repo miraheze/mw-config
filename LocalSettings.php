@@ -288,7 +288,7 @@ $wgConf->settings = array(
 		'default' => '250', // databases don't have much memory - let's not overload them in future
 	),
 
-	// Disable anon editing
+	// Disable editing
 	'wmgDisableAnonEditing' => array(
 		'default' => false,
 		'8stationwiki' => true,
@@ -317,6 +317,11 @@ $wgConf->settings = array(
 		'welcomewiki' => true,
 		'wikiacawiki' => true,
 		'walthamstowlabourwiki' => true,
+	),
+	'wmgDisableUserEditing' => array(
+		'default' => false,
+		'chrisipediawiki' => true,
+		'vrgowiki' => true,
 	),
 
 	// Dormancy policy && RC stuff
@@ -2448,11 +2453,6 @@ if ( !$wgCommandLineMode ) {
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
-}
-
-// vrgo.miraheze.org overrides
-if ( $wgDBname === 'vrgowiki' ) {
-	$wgGroupPermissions['user']['edit'] = false;
 }
 
 if ( $wgDBname == 'metawiki' ) {

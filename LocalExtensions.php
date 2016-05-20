@@ -288,3 +288,7 @@ if ( $wmgDisableAnonEditing ) {
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
 }
+
+if ( $wmgDisableUserEditing ) {
+	$wgGroupPermissions['user']['edit'] = false;
+}
