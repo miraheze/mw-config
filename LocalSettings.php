@@ -299,6 +299,7 @@ $wgConf->settings = array(
 		'clementsworldbuildingwiki' => true,
 		'dottorcontewiki' => true,
 		'drunkenpeasantswikiwiki' => true,
+		'forexwiki' => true,
 		'fieldresearchwiki' => true,
 		'freecollegeprojectwiki' => true,
 		'izanagiwiki' => true,
@@ -321,6 +322,7 @@ $wgConf->settings = array(
 	'wmgDisableUserEditing' => array(
 		'default' => false,
 		'chrisipediawiki' => true,
+		'forexwiki' => true,
 		'vrgowiki' => true,
 	),
 
@@ -1384,11 +1386,15 @@ $wgConf->settings = array(
 				'trusted',
 				'interfaceeditor'
 			),
-	
 		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
+			),
+		),
+		'+forexwiki' => array(
+			'sysop' => array(
+				'editor',
 			),
 		),
 		'+quantixwiki' => array(
