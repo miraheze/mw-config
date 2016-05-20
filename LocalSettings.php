@@ -1355,6 +1355,11 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+christipediawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+		),
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -1552,6 +1557,11 @@ $wgConf->settings = array(
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
+			),
+		),
+		'+christipediawiki' => array(
+			'editor' => array(
+				'edit' => true,
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
@@ -1814,6 +1824,11 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+		),
+		'+chrisipediawiki' => array(
+			'bureaucrat' => array(
+				'editor',
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
