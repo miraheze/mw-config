@@ -968,6 +968,7 @@ $wgConf->settings = array(
 	),
 	'wgEnableImageWhitelist' => array(
 		'default' => false,
+		'jubeatwikithwiki' => true,
 	),
 
 	// Flow
@@ -1146,6 +1147,10 @@ $wgConf->settings = array(
 	'wgAllowDisplayTitle' => array(
 		'default' => true,
 		'nissanecuwiki' => true,
+	),
+	'wgCapitalLinks' => array(
+		'default' => true,
+		'jubeatwikithwiki' => false,
 	),
 
 	// Mobile
