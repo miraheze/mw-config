@@ -491,6 +491,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseLoopsCombo' => array(
 		'default' => false,
+		'bgowiki' => true,
 		'eotewiki' => true,
 		'extloadwiki' => true,
 	),
@@ -623,6 +624,7 @@ $wgConf->settings = array(
 		'aryamanwiki' => true,
 		'avionwiki' => true,
 		'biblicalwikiwiki' => true,
+		'bgowiki' => true,
 		'buswiki' => true,
 		'boulderwikiwiki' => true,
 		'catboxwiki' => true,
