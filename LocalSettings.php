@@ -1262,6 +1262,8 @@ $wgConf->settings = array(
 			'Категория' => NS_CATEGORY,
 			'Портал' => NS_PORTAL,
 			'Служебная' => NS_SPECIAL,
+			'Kuva' => NS_FILE,
+			'Luokka' => NS_CATEGORY,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
