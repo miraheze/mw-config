@@ -308,6 +308,8 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'ricwiki' => true,
 		'softwarecrisiswiki' => true,
+		'snowthegamewiki' => true,
+		'sylwiki' => true,
 		'thoughtonomywikiwiki' => true,
 		'touhouenginewiki' => true,
 		'turkcesozlukwiki' => true,
@@ -2443,15 +2445,6 @@ if ( !$wgCommandLineMode ) {
 }
 
 // TestWiki overrides
-// snowthegame.miraheze.org overrides
-if ( $wgDBname === 'snowthegamewiki' ) {
-	$wgGroupPermissions['*']['createpage'] = false;
-}
-
-if ( $wgDBname == 'sylwiki' ) {
-	$wgGroupPermissions['*']['edit'] = false;
-}
-
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
