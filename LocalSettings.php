@@ -302,6 +302,7 @@ $wgConf->settings = array(
 		'forexwiki' => true,
 		'fieldresearchwiki' => true,
 		'freecollegeprojectwiki' => true,
+		'geodatawiki' => true,
 		'izanagiwiki' => true,
 		'kl6fwiki' => true,
 		'micropediawiki' => true,
@@ -323,6 +324,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'chrisipediawiki' => true,
 		'forexwiki' => true,
+		'geodatawiki' => true,
 		'vrgowiki' => true,
 	),
 
@@ -1691,6 +1693,11 @@ $wgConf->settings = array(
 				'edit' => false,
 			),
 			'editor' => array(
+				'edit' => true,
+			),
+		),
+		'+geodatawiki' => array(
+			'sysop' => array(
 				'edit' => true,
 			),
 		),
