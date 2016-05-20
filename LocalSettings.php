@@ -579,6 +579,7 @@ $wgConf->settings = array(
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
 		'poserdazfreebieswiki' => true,
+		'priyowiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
