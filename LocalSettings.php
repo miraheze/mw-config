@@ -532,6 +532,7 @@ $wgConf->settings = array(
 		'oyeavdelingenwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
+		'snowthegamewiki' => true,
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 	),
@@ -1464,6 +1465,13 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
+			),
+		),
+		'snowthegamewiki' => array(
+			'bureaucrat' => array(
+				'bot',
+				'bureaucrat',
+				'sysop',
 			),
 		),
 		'+vrgowiki' => array(
