@@ -1250,6 +1250,18 @@ $wgConf->settings = array(
 		'+tmewiki' => array(
 			'The_Multilingual_Encyclopedia' => NS_PROJECT,
 			'The_Multilingual_Encyclopedia_talk' => NS_PROJECT_TALK,
+			'Bestand' => NS_FILE,
+			'Categorie' => NS_CATEGORY,
+			'Categoría' => NS_CATEGORY,
+			'Archivo' => NS_FILE,
+			'Módulo' => NS_MODULE,
+			'Especial' => NS_SPECIAL,
+			'Espesyal' => NS_SPECIAL,
+			'Specialaĵo' => NS_SPECIAL,
+			'Specialis' => NS_SPECIAL,
+			'Категория' => NS_CATEGORY,
+			'Портал' => NS_PORTAL,
+			'Служебная' => NS_SPECIAL,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
