@@ -1068,6 +1068,7 @@ $wgConf->settings = array(
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
 		'safiriawiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
+		'universebuildwiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 	),
 	'wgRightsPage' => array(
 		'default' => '',
@@ -1081,11 +1082,13 @@ $wgConf->settings = array(
 		'oyeavdelingenwiki' => 'All Rights Reserved',
 		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'spiralwiki' => 'CC0 Public Domain',
+		'universebuildwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+		'universebuildwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 	),
 
 	// Mail
