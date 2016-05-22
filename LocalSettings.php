@@ -465,6 +465,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'wisdomwikiwiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseForeground' => array(
@@ -590,6 +591,7 @@ $wgConf->settings = array(
 	'wmgUsePageNotice' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUsePageTriage' => array(
 		'default' => false,
@@ -599,6 +601,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
@@ -894,6 +897,7 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
 		'wikicervanteswiki' => true,
+		'wisdomwikiwiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseVariables' => array(
@@ -2148,6 +2152,7 @@ $wgConf->settings = array(
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
 		'webflowwiki' => "//$wmgUploadHostname/webflowwiki/6/64/Favicon.ico",
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/08/FaviconCervantes.ico",
+		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
@@ -2243,6 +2248,7 @@ $wgConf->settings = array(
 		'whentheycrywiki' => "//$wmgUploadHostname/whentheycrywiki/b/b5/Logo_m.png",
 		'worldofkirbycraftwiki' => "//$wmgUploadHostname/worldofkirbycraftwiki/2/2f/WoKWikiLogo.png",
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/0c/LogodelWiki.png",
+		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'yggdrasilwiki' => "//$wmgUploadHostname/yggdrasilwiki/c/cd/Yggdrasil-logo.png",
 	),
 
