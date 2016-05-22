@@ -425,6 +425,7 @@ $wgConf->settings = array(
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
 		'heistwiki' => true,
+		'hydrawikiwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
