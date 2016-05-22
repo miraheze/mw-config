@@ -71,6 +71,10 @@ define( 'NS_OFFICIAL_TALK', 1625 );
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
 
+// Refer to NS_MODULE before importing Scribunto (tmewiki)
+define( 'WMG_NS_MODULE', 828 );
+define( 'WMG_NS_MODULE_TALK', 829 );
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
@@ -1281,7 +1285,7 @@ $wgConf->settings = array(
 			'Categorie' => NS_CATEGORY,
 			'Categoría' => NS_CATEGORY,
 			'Archivo' => NS_FILE,
-			'Módulo' => NS_MODULE,
+			'Módulo' => WMG_NS_MODULE,
 			'Especial' => NS_SPECIAL,
 			'Espesyal' => NS_SPECIAL,
 			'Specialaĵo' => NS_SPECIAL,
