@@ -960,6 +960,7 @@ $wgConf->settings = array(
 		'testwiki' => true,
 		'twplantwiki' => true,
 		'valentinaprojectwiki' => true,
+		'wisdomwikiwiki' => true,
 		'worldpediawiki' => true,
 		'webflowwiki' => true,
 		'urho3dwiki' => true,
