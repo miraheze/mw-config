@@ -837,6 +837,7 @@ $wgConf->settings = array(
 		'fishpercolatorwiki' => true,
 		'foodsharinghamburgwiki' => true,
 		'gameswiki' => true,
+        'geirpediawiki' => true,
 		'genwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'hftqmswiki' => true,
