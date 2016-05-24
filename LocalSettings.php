@@ -948,6 +948,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'freecollegeprojectwiki' => true,
 		'gameswiki' => true,
+        'geirpediawiki' => true,
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
 		'lclwikiwiki' => true,
