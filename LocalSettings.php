@@ -731,6 +731,7 @@ $wgConf->settings = array(
 		'datachronwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
+		'microsoftwiki' => true,
 		'stellachronicawiki' => true,
 		'stoutofreachwiki' => true,
 		'priyowiki' => true,
