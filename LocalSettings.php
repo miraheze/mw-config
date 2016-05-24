@@ -309,7 +309,6 @@ $wgConf->settings = array(
 		'izanagiwiki' => true,
 		'kl6fwiki' => true,
 		'micropediawiki' => true,
-		'microsoftwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
 		'ricwiki' => true,
@@ -1810,6 +1809,14 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+		'+studynotekrwiki' => array(
+			'voter' => array(
+				'rollback' => true,
+				'editsemiprotected' => true,
+				'patrol' => true,
+				'skipcpatcha' => true,
+			),
+		),
 		'+szkwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -2024,7 +2031,11 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
+		'+studynotekrwiki' => array(
+			'voter',
+		),
 	),
+		
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
@@ -2137,7 +2148,6 @@ $wgConf->settings = array(
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
 		'luckandlogicwiki' => "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
-		'microsoftwiki' => "//$wmgUploadHostname/microsoftwiki/6/66/Logoforwiki.png",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/d/de/OneAgency_Favicon.png",
 		'ontariobrasswiki' => "//$wmgUploadHostname/ontariobrasswiki/0/09/Ontariobrass.png",
@@ -2213,7 +2223,6 @@ $wgConf->settings = array(
 		'madgendersciencewiki' => "//$wmgUploadHostname/madgendersciencewiki/1/1f/Mgs_logo.jpg",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
-		'microsoftwiki' => "//$wmgUploadHostname/microsoftwiki/6/66/Logoforwiki.png",
 		'moralecwiki' => "//$wmgUploadHostname/moralecwiki/e/e8/Moralec-pluto.png",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/2/2a/USNC_sunflower_logo.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/e/eb/OneAgency_WikiLogo_Black.png",
