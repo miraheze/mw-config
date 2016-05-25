@@ -460,7 +460,6 @@ $wgConf->settings = array(
 		'mecanonwiki' => true,
 		'ndtestwiki' => true,
 		'oyeavdelingenwiki' => true,
-		'permanentfuturelabwiki' => true,
 		'priyowiki' => true,
 		'ricwiki' => true,
 		'spiralwiki' => true,
@@ -555,6 +554,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
+		'permanentfuturelabwiki' => false,
 		'izanagiwiki' => false,
 	),
 	'wmgUseMonaco' => array(
