@@ -1619,6 +1619,7 @@ $wgConf->settings = array(
 				'move' => true,
 				'movefile' => false,
 				'ipblock-exempt' => false,
+			),
 			'bureaucrat' => array(
 				'edit' => true,
 				'sysop' => true,
@@ -1626,6 +1627,7 @@ $wgConf->settings = array(
 				'patrol' => true,
 				'ipblock-exempt' => true,
 				'createaccount' => true,
+			),
 			'sysop' => array(
 				'edit' => true,
 				'nuke' => false,
@@ -1636,6 +1638,7 @@ $wgConf->settings = array(
 				'autopatrol' => true,
 				'patrol' => true,
 				'ipblock-exempt' => true,
+			),
 			'Founder' => array(
 				'edit' => true,
 				'sysop' => true,
@@ -2007,10 +2010,13 @@ $wgConf->settings = array(
 		 		'admin',
 		 		'trusted',
 		 		'confirmed',
+		 	),
 		 	'admin' => array(
 		 		'autopatrolled',
+		 	),
 		 	'trusted' => array(
 		 		'trusted'
+		 	),
 		 	'bureaucrat' => array(
 		 		'bot', 
 		 		'admin', 
