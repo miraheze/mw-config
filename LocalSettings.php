@@ -1608,15 +1608,7 @@ $wgConf->settings = array(
 		),
 		'+idtestwiki' => array(
 			'trusted' => array(
-				'edit' => true, 
-				'editsemiprotected' => true, 
-				'autoconfirmed' => true, 
-				'skipcaptcha' => true,
-				'autopatrol' => true,
-				'patrol' => true,
-				'block' => true,
-				'protect' => true,
-				'move' => true,
+				'sysop' => true, 
 				'movefile' => false,
 				'ipblock-exempt' => false,
 			),
@@ -1629,14 +1621,10 @@ $wgConf->settings = array(
 				'createaccount' => true,
 			),
 			'sysop' => array(
-				'edit' => true,
 				'nuke' => false,
-				'blockemail' =>false,
-			),
+				'blockemail' => false,
+				'protect'  => false,			),
 			'Founder' => array(
-				'edit' => true,
-				'sysop' => true,
-				'bureaucrat' => true,
 				'nuke' => true,
 				'blockemail' => true,
 				'ipblock-exempt' => true,
@@ -2001,11 +1989,11 @@ $wgConf->settings = array(
 		 		'bot',
 		 		'rollbacker',
 		 		'bureaucrat',
-		 		'admin',
+		 		'sysop',
 		 		'trusted',
 		 		'confirmed',
 		 	),
-		 	'admin' => array(
+		 	'sysop' => array(
 		 		'autopatrolled',
 		 	),
 		 	'trusted' => array(
@@ -2013,7 +2001,7 @@ $wgConf->settings = array(
 		 	),
 		 	'bureaucrat' => array(
 		 		'bot', 
-		 		'admin', 
+		 		'sysop', 
 		 		'rollback',
 		 		'confirmed',
 		 	),
