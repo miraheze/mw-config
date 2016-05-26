@@ -1404,7 +1404,7 @@ $wgConf->settings = array(
 		'+idtestwiki' => array(
 			'Founder' => array(
 				'bot', 
-				'admin', 
+				'syop', 
 				'bureaucrat', 
 				'rollbacker', 
 				'autopatrolled', 
@@ -1413,13 +1413,13 @@ $wgConf->settings = array(
 			), 
 			'bureaucrat' => array(
 				'bot', 
-				'admin', 
+				'sysop', 
 				'bureaucrat', 
 				'rollback', 
 				'confirmed',
 				'autopatrolled',
 			), 
-			'admin' => array(
+			'Sysop' => array(
 				'autopatrolled',
 			), 
 		),
@@ -1632,12 +1632,6 @@ $wgConf->settings = array(
 				'edit' => true,
 				'nuke' => false,
 				'blockemail' =>false,
-				'deleterevision' => true,
-				'massmessage' => true,
-				'undelete' => true,
-				'autopatrol' => true,
-				'patrol' => true,
-				'ipblock-exempt' => true,
 			),
 			'Founder' => array(
 				'edit' => true,
