@@ -1404,7 +1404,7 @@ $wgConf->settings = array(
 		'+idtestwiki' => array(
 			'Founder' => array(
 				'bot', 
-				'syop', 
+				'sysop', 
 				'bureaucrat', 
 				'rollbacker', 
 				'autopatrolled', 
@@ -1417,9 +1417,6 @@ $wgConf->settings = array(
 				'bureaucrat', 
 				'rollback', 
 				'confirmed',
-				'autopatrolled',
-			), 
-			'Sysop' => array(
 				'autopatrolled',
 			), 
 		),
@@ -1985,7 +1982,7 @@ $wgConf->settings = array(
 		),
 		 '+idtestwiki' => array(
 		 	'Founder' => array(
-		 		'autopattolled',
+		 		'autopatrolled',
 		 		'bot',
 		 		'rollbacker',
 		 		'bureaucrat',
@@ -1993,15 +1990,10 @@ $wgConf->settings = array(
 		 		'trusted',
 		 		'confirmed',
 		 	),
-		 	'sysop' => array(
-		 		'autopatrolled',
-		 	),
 		 	'trusted' => array(
 		 		'trusted'
 		 	),
 		 	'bureaucrat' => array(
-		 		'bot', 
-		 		'sysop', 
 		 		'rollback',
 		 		'confirmed',
 		 	),
