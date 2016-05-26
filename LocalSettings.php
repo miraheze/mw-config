@@ -1412,9 +1412,6 @@ $wgConf->settings = array(
 				'trusted', 
 			), 
 			'bureaucrat' => array(
-				'bot', 
-				'sysop', 
-				'bureaucrat', 
 				'rollback', 
 				'confirmed',
 				'autopatrolled',
@@ -1612,15 +1609,13 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'edit' => true,
 				'sysop' => true,
-				'autopatrol' => true,
-				'patrol' => true,
-				'ipblock-exempt' => true,
-				'createaccount' => true,
+				'protect' => true,
 			),
 			'sysop' => array(
 				'nuke' => false,
 				'blockemail' => false,
-				'protect'  => false,			),
+				'protect'  => false,
+			),
 			'Founder' => array(
 				'nuke' => true,
 				'blockemail' => true,
