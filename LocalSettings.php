@@ -1814,6 +1814,15 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+		'+studynotekrwiki' => array(
+			'voter' => array(
+				'rollback' => true,
+				'editsemiprotected' => true,
+				'patrol' => true,
+				'skipcpatcha' => true,
+				'voter' => true,
+			),
+		),
 		'+szkwiki' => array(
 			'*' => array(
 				'edit' => false,
@@ -2028,7 +2037,11 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
+		'+studynotekrwiki' => array(
+			'voter',
+		),
 	),
+		
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
