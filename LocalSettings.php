@@ -674,6 +674,7 @@ $wgConf->settings = array(
 		'meregoswiki' => true,
 		'missionalwisdomwiki' => true,
 		'ndtestwiki' => true,
+        'neuronpediawiki' => true,
 		'newhudsoniawiki' => true,
 		'newknowledgewiki' => true,
 		'novahistoriaewiki' => true,
