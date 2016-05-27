@@ -1816,6 +1816,7 @@ $wgConf->settings = array(
 				'editsemiprotected' => true,
 				'patrol' => true,
 				'skipcpatcha' => true,
+				'voter' => true,
 			),
 		),
 		'+szkwiki' => array(
