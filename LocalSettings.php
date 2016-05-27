@@ -671,6 +671,7 @@ $wgConf->settings = array(
 		'lifelinewiki' => true,
 		'librewiki' => true,
 		'luismark2015wiki' => true,
+		'maiasongcontestwiki' => true,
 		'meregoswiki' => true,
 		'missionalwisdomwiki' => true,
 		'ndtestwiki' => true,
