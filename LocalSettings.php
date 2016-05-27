@@ -860,6 +860,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'mydegreewiki' => true,
 		'ndtestwiki' => true,
+        'neuronpediawiki' => true,
 		'newcolumbiawiki' => true,
 		'newknowledgewiki' => true,
 		'newtrendwiki' => true,
