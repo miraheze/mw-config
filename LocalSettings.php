@@ -277,7 +277,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'allthetropeswiki' => 'Miraheze System Administrators are performing database maintenance until approximately 20:25 UTC.',
+		// 'allthetropeswiki' => 'Miraheze System Administrators are performing database maintenance until approximately 20:25 UTC.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
