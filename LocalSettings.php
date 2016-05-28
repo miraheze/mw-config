@@ -1522,6 +1522,11 @@ $wgConf->settings = array(
 				'sysop',
 			),
 		),
+		'studynotekrwiki' => array(
+			'sysop' => array(
+				'voter',
+			),
+		),
 		'+vrgowiki' => array(
 			'bureaucrat' => array(
 				'Teachers',
@@ -1982,6 +1987,11 @@ $wgConf->settings = array(
 			'steward' => array(
 				'consul',
 				'exampleuser',
+			),
+		),
+		'studynotekrwiki' => array(
+			'sysop' => array(
+				'voter'
 			),
 		),
 		'+vrgowiki' => array(
