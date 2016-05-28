@@ -291,4 +291,5 @@ if ( $wmgDisableAnonEditing ) {
 
 if ( $wmgDisableUserEditing ) {
 	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['confirmed']['edit'] = true;
 }

@@ -313,6 +313,7 @@ $wgConf->settings = array(
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
 		'ricwiki' => true,
+		'saliorpediawiki' => true,
 		'softwarecrisiswiki' => true,
 		'snowthegamewiki' => true,
 		'sylwiki' => true,
@@ -329,6 +330,7 @@ $wgConf->settings = array(
 		'chrisipediawiki' => true,
 		'forexwiki' => true,
 		'geodatawiki' => true,
+		'saliorpediawiki' => true,
 		'vrgowiki' => true,
 	),
 
