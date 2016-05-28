@@ -291,5 +291,10 @@ if ( $wmgDisableAnonEditing ) {
 
 if ( $wmgDisableUserEditing ) {
 	$wgGroupPermissions['user']['edit'] = false;
-	$wgGroupPermissions['confirmed']['edit'] = true;
+}
+
+if ( $wmgAddEditorGroup )
+	$wgGroupPermissions['editor']['edit'] = true;
+	$wgGroupPermissions['editor']['createpage'] = true;
+	$wgAddGroups['bureaucrat'][] = 'editor';
 }

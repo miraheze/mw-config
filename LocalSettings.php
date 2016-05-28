@@ -333,6 +333,10 @@ $wgConf->settings = array(
 		'saliorpediawiki' => true,
 		'vrgowiki' => true,
 	),
+	'wmgAddEditorGroup' => array(
+		'default' => false,
+		'saliorpediawiki' => true,
+	),
 
 	// Dormancy policy && RC stuff
 	'wgRCMaxAge' => array(
@@ -1724,9 +1728,6 @@ $wgConf->settings = array(
 			),
 		),
 		'+forexwiki' => array(
-			'*' => array(
-				'edit' => false,
-			),
 			'editor' => array(
 				'edit' => true,
 			),
