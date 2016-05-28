@@ -71,6 +71,10 @@ define( 'NS_OFFICIAL_TALK', 1625 );
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
 
+// tmewiki
+define( 'NS_CALL_OF_DUTY', 1628 );
+define( 'NS_CALL_OF_DUTY_TALK', 1629 );
+
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
 define( 'WMG_NS_MODULE_TALK', 829 );
@@ -763,6 +767,7 @@ $wgConf->settings = array(
 		'sizzlecookiewiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
+		'tmewiki' => true,
 		'touhouenginewiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
@@ -960,7 +965,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'freecollegeprojectwiki' => true,
 		'gameswiki' => true,
-        'geirpediawiki' => true,
+        	'geirpediawiki' => true,
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
 		'lclwikiwiki' => true,
@@ -1266,14 +1271,17 @@ $wgConf->settings = array(
 		'tmewiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
+			NS_CALL_OF_DUTY => 'Call_of_Duty',
+			NS_CALL_OF_DUTY_TALK => 'Call_of_Duty_talk',
 		),
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
-		'catboxwiki' => array( NS_MAIN, NS_COMIC ),
-		'quantixwiki' => array( NS_MAIN, NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
-		'reviwiki' => array( NS_MAIN, NS_SERVER ),
-		'safiriawiki' => array( NS_MAIN, NS_HOENN ),
+		'+catboxwiki' => array( NS_COMIC ),
+		'+quantixwiki' => array( NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
+		'+reviwiki' => array( NS_SERVER ),
+		'+safiriawiki' => array( NS_HOENN ),
+		'+tmewiki' => array( NS_CALL_OF_DUTY ),
 	),
 	'wgMetaNamespace' => array(
 	    'default' => null,
@@ -1375,6 +1383,7 @@ $wgConf->settings = array(
 			NS_PROJECT => true,
 			NS_TEMPLATE => true,
 			NS_PORTAL => true,
+			NS_CALL_OF_DUTY => true,
 		),
 		'+unikumwiki' => array(
 			NS_MAIN => true,
