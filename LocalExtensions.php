@@ -293,7 +293,7 @@ if ( $wmgDisableUserEditing ) {
 	$wgGroupPermissions['user']['edit'] = false;
 }
 
-if ( $wmgAddEditorGroup )
+if ( $wmgAddEditorGroup ) {
 	$wgGroupPermissions['editor']['edit'] = true;
 	$wgGroupPermissions['editor']['createpage'] = true;
 	$wgAddGroups['bureaucrat'][] = 'editor';
