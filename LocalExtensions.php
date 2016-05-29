@@ -108,6 +108,18 @@ if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Loops/Loops.php");
 }
 
+if ( $wmgUseMetrolook ) {
+	wfLoadSkin( 'Metrolook' );
+}
+
+if ( $wmgUseMobileFrontend ) {
+	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+}
+
+if ( $wmgUseMonaco ) {
+	require_once( "$IP/skins/Monaco/monaco.php" );
+}
+
 if ( $wmgUseMsPackage ) {
 	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 	require_once( "$IP/extensions/MsLinks/MsLinks.php" );
@@ -120,14 +132,6 @@ if ( $wmgUseMsUpload ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
-}
-
-if ( $wmgUseMobileFrontend ) {
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-}
-
-if ( $wmgUseMonaco ) {
-	require_once( "$IP/skins/Monaco/monaco.php" );
 }
 
 if ( $wmgUseNativeSvgHandler ) {

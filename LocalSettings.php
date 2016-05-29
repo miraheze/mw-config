@@ -526,6 +526,20 @@ $wgConf->settings = array(
 		'eotewiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseMetrolook' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
+	'wmgUseMobileFrontend' => array(
+		'default' => true,
+		'permanentfuturelabwiki' => false,
+		'izanagiwiki' => false,
+	),
+	'wmgUseMonaco' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseMsPackage' => array(
 		'default' => false,
 		'catboxwiki' => true,
@@ -562,16 +576,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'ndtestwiki' => true,
-	),
-	'wmgUseMobileFrontend' => array(
-		'default' => true,
-		'permanentfuturelabwiki' => false,
-		'izanagiwiki' => false,
-	),
-	'wmgUseMonaco' => array(
-		'default' => false,
-		'allthetropeswiki' => true,
-		'extloadwiki' => true, 
 	),
 	'wmgUseNativeSvgHandler' => array(
 	    'default' => true,
