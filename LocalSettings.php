@@ -806,6 +806,10 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => true,
 		'welcomewiki' => true,
 	),
+	'wmgUseVoteNY' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
 		'8stationwiki' => true,

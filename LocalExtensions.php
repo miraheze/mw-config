@@ -263,6 +263,10 @@ if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'TemplateData' );
 }
 
+if ( $wmgUseVoteNY ) {
+	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
+}
+
 if ( $wmgUseWikiEditor ) {
 	wfLoadExtension( 'WikiEditor' );
 	wfLoadExtension( 'CodeEditor' );
