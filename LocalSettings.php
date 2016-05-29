@@ -732,6 +732,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
+		'8stationwiki' => true,
 		'apolcourseswiki' => true,
 		'extloadwiki' => true,
 		'idtestwiki' => true,
