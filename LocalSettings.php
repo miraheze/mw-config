@@ -815,7 +815,9 @@ $wgConf->settings = array(
 	),
 	'wmgUseVoteNY' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'openconstitutionwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
