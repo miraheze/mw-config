@@ -256,6 +256,7 @@ $wgConf->settings = array(
 			"$IP/extensions/Translate/sql/translate_sections.sql",
 			"$IP/extensions/Translate/sql/translate_stash.sql",
 			"$IP/extensions/Translate/sql/translate_tm.sql",
+			"$IP/extensions/VoteNY/vote.mysql",
 			"$IP/extensions/WikiForum/sql/wikiforum.sql",
 			"$IP/extensions/WikiLove/patches/WikiLoveLog.sql",
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
