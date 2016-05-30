@@ -384,6 +384,7 @@ $wgConf->settings = array(
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'openconstitutionwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
