@@ -529,11 +529,13 @@ $wgConf->settings = array(
 	'wmgUseMetrolook' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'microsoftwiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
-		'permanentfuturelabwiki' => false,
 		'izanagiwiki' => false,
+		'microsoftwiki' => false,
+		'permanentfuturelabwiki' => false,
 	),
 	'wmgUseMonaco' => array(
 		'default' => false,
@@ -742,13 +744,13 @@ $wgConf->settings = array(
 		'idtestwiki' => true,
 	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
-	// Requires run of update.php
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
+		'microsoftwiki' => true,
 		'stellachronicawiki' => true,
 		'stoutofreachwiki' => true,
 		'priyowiki' => true,
@@ -950,6 +952,7 @@ $wgConf->settings = array(
 		'entropediawiki' => true,
 		'extloadwiki' => true,
 		'indexwiki' => true,
+		'microsoftwiki' => true,
 		'stellachronicawiki' => true,
 		'wikicervanteswiki' => true,
 	),
@@ -2161,6 +2164,7 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 		'cybercrimewiki' => 'modern',
+		'microsoftwiki' => 'metrolook',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
 		'stellachronicawiki' => 'monobook',
