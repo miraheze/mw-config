@@ -9,6 +9,13 @@ if ( $wmgUseAdminLinks ) {
 	require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 }
 
+if ( $wmgUseAJAXPoll ) {
+	wfLoadExtension( 'AJAXPoll' );
+	// Hiding information is not the wiki way
+	$wgGroupPermissions['*']['ajaxpoll-view-results'] = true;
+	$wgGroupPermissions['*']['ajaxpoll-view-results-before-vote'] = true;
+}
+
 if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/Babel/Babel.php" );
 	require_once( "$IP/extensions/cldr/cldr.php" );

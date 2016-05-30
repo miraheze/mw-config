@@ -381,6 +381,10 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'yggdrasilwiki' => true,
 	),
+	'wmgUseAJAXPoll' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseBabel' => array(
 		'default' => true,
 	),
