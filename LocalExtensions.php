@@ -70,12 +70,24 @@ if ( $wmgUseEchoThanks ) {
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
-	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'http://parsoid1.miraheze.org:8142',
 		'prefix' => $wgDBname,
 	);
+
+	if ( $wmgFlowDefaultNamespaces ) {
+		$wgNamespaceContentModels = array(
+			NS_TALK => CONTENT_MODEL_FLOW_BOARD,
+			NS_USER_TALK => CONTENT_MODEL_FLOW_BOARD,
+			NS_PROJECT_TALK => CONTENT_MODEL_FLOW_BOARD,
+			NS_FILE_TALK => CONTENT_MODEL_FLOW_BOARD,
+			NS_MEDIAWIKI_TALK => CONTENT_MODEL_FLOW_BOARD,
+			NS_TEMPLATE_TALK => CONTENT_MODEL_FLOW_BOARD,
+			NS_HELP_TALK => CONTENT_MODEL_FLOW_BOARD,
+			NS_CATEOGRY_TALK => CONTENT_MODEL_FLOW_BOARD,
+		);
+	}
 }
 
 if ( $wmgUseFeaturedFeeds ) {

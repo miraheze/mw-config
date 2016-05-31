@@ -1049,31 +1049,19 @@ $wgConf->settings = array(
 	),
 
 	// Flow
-	'wmgFlowOccupyNamespaces' => array(
+	'wgFlowDefaultNamespaces' => array(
+		'default' => false,
+		'8stationwiki' => true,
+		'allthetropeswiki' => true,
+		'drunkenpeasantswikiwiki' => true,
+		'permanentfuturelabwiki' => true,
+		'spiralwiki' => true,
+		'walthamstowlaboutwiki' => true,
+	),
+	'+wgNamespaceContentModels' => array(
 		'default' => array(),
-		'8sationwiki' => array(
-			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK, 
-			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
-		),
 		'allthetropeswiki' => array(
-			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK, 
-			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK, NS_TROPEWORKSHOP_TALK
-		),
-		'drunkenpeasantswikiwiki' => array(
-			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK, 
-			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
-		),
-		'permanentfuturelabwiki' => array(
-			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK, 
-			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
-		),
-		'spiralwiki' => array(
-			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
-			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
-		),
-		'walthamstowlabourwiki' => array(
-			NS_TALK, NS_USER_TALK, NS_PROJECT_TALK, NS_FILE_TALK,
-			NS_MEDIAWIKI_TALK, NS_TEMPLATE_TALK, NS_HELP_TALK, NS_CATEGORY_TALK
+			NS_TROPEWORKSHOP_TALK => CONTENT_MODEL_FLOW_BOARD,
 		),
 	),
 
