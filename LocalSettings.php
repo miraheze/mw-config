@@ -1574,6 +1574,12 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'voter',
 			),
+			'bureaucrat' => array(
+				'sysop',
+				'voter',
+				'bot',
+				'autopatrolled'
+			),
 		),
 		'+vrgowiki' => array(
 			'bureaucrat' => array(
@@ -2121,6 +2127,12 @@ $wgConf->settings = array(
 		'studynotekrwiki' => array(
 			'sysop' => array(
 				'voter'
+			),
+			'bureaucrat' => array(
+				'sysop',
+				'voter',
+				'bot',
+				'autopatrolled',
 			),
 		),
 		'+vrgowiki' => array(
