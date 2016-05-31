@@ -1049,7 +1049,7 @@ $wgConf->settings = array(
 	),
 
 	// Flow
-	'wgFlowDefaultNamespaces' => array(
+	'wmgFlowDefaultNamespaces' => array(
 		'default' => false,
 		'8stationwiki' => true,
 		'allthetropeswiki' => true,
