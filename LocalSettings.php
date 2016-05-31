@@ -854,6 +854,7 @@ $wgConf->settings = array(
 		'cbmediawiki' => true,
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
+		'civitaswiki' => true,
 		'clementsworldbuildingwiki' => true,
 		'clicordiwiki' => true,
 		'cssandjsschoolboardwiki' => true,
