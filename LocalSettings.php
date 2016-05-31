@@ -2667,7 +2667,6 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 # Will remove this later --SPF
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
-	//require_once( "$IP/extensions/LiquidThreads/LiquidThreads.php" );
 	wfLoadExtension( 'MultiBoilerplate' );
 	$wgMultiBoilerplateDisplaySpecialPage = true;
 	$wgMultiBoilerplateOptions = false;
