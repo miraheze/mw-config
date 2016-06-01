@@ -1789,7 +1789,7 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
-		'+idestwiki' => array(
+		'+idtestwiki' => array(
 			'Founder' => array(
 				'blockemail' => true,
 				'block' => true,
