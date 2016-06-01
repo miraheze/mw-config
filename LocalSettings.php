@@ -2184,6 +2184,11 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
+		'+idtestwiki' => array(
+			'trusted',
+			'Bureaucrat',
+			'Founder',
+		),
 		'+studynotekrwiki' => array(
 			'voter',
 		),
