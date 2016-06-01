@@ -2186,7 +2186,7 @@ $wgConf->settings = array(
 		),
 		'+idtestwiki' => array(
 			'trusted',
-			'Bureaucrat',
+			'bureaucrat',
 			'Founder',
 		),
 		'+studynotekrwiki' => array(
