@@ -1059,12 +1059,6 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'walthamstowlaboutwiki' => true,
 	),
-	'+wgNamespaceContentModels' => array(
-		'default' => array(),
-		'allthetropeswiki' => array(
-			NS_TROPEWORKSHOP_TALK => CONTENT_MODEL_FLOW_BOARD,
-		),
-	),
 
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => array(
@@ -2674,6 +2668,11 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	);
+}
+
+# Should be after LocalExtensions due to constants
+if ( $wgDBname === 'allthetropeswiki' ) {
+	$wgNamespaceContentModels[NS_TROPEWORKSHOP_TALK] = CONTENT_MODEL_FLOW_BOARD;
 }
 
 # Will remove this later --SPF
