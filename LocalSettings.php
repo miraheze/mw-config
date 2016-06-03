@@ -153,8 +153,8 @@ $wgConf->settings = array(
 				'client' => 1 * 24 * 60 * 60, // 1 day
 			),
 			'unversioned' => array(
-				'server' => 25 * 60, // 25 minutes
-				'client' => 60 * 60, // 1 hour
+				'server' => 5 * 60, // 5 minutes
+				'client' => 30 * 60, // 30 minutes
 			),
 		),
 	),
