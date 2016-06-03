@@ -1853,6 +1853,7 @@ $wgConf->settings = array(
 				'nuke' => false,
 				'movefile' => false,
 				'blockemail' => false,
+				'deletelogentry' => false,
 			),
 			'trusted' => array(
 				'block' => true,
