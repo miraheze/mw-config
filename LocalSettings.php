@@ -1843,10 +1843,10 @@ $wgConf->settings = array(
 				'titleblacklistlog' => true,
 				'founder' => true,
 			),
-			'sysop' => array(
-				'nuke' => false,
-				'movefile' => false,
-				'blockemail' => false,
+			'bureaucrat' => array(
+				'nuke' => true,
+				'movefile' => true,
+				'blockemail' => true,
 			),
 			'trusted' => array(
 				'block' => true,
@@ -2059,6 +2059,8 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+				'trusted',
+			'bureaucrat' => array(
 				'trusted',
 			),
 		),
@@ -2709,6 +2711,14 @@ if ( !$wgCommandLineMode ) {
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+}
+
+// WikiId Test overrides
+if ( $wgDBname === 'idtestwiki' ) {
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['blockemail'] = false;
+	$wgGroupPermissions['sysop']['deletelogentry'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 }
 
