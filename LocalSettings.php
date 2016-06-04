@@ -2060,6 +2060,7 @@ $wgConf->settings = array(
 				'sysop',
 				'rollbacker',
 				'trusted',
+			),
 			'bureaucrat' => array(
 				'trusted',
 			),
