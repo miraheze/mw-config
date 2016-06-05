@@ -2716,7 +2716,7 @@ if ( $wgDBname === 'testwiki' ) {
 }
 
 // WikiId Test overrides
-if ( $wgDBname === 'idtestwiki' ) {
+if ( $wgDBname == 'idtestwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
