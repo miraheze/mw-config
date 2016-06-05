@@ -321,6 +321,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'ricwiki' => true,
 		'saliorpediawiki' => true,
+		'safiriawiki' => true,
 		'softwarecrisiswiki' => true,
 		'snowthegamewiki' => true,
 		'sylwiki' => true,
@@ -338,6 +339,7 @@ $wgConf->settings = array(
 		'forexwiki' => true,
 		'geodatawiki' => true,
 		'saliorpediawiki' => true,
+		'safiriawiki' => true,
 		'vrgowiki' => true,
 	),
 	'wmgAddEditorGroup' => array(
@@ -1944,12 +1946,18 @@ $wgConf->settings = array(
 				'voter' => true,
 			),
 		),
+		'+safiriawiki' => array(
+			'sysop' => array(
+				'createpage' => true,
+				'edit' => true,
+			),
+		),
 		'+szkwiki' => array(
 			'*' => array(
 				'edit' => false,
 			),
 			'user' => array(
-				'edit' => false, 
+				'edit' => false,
 			),
 		),
 		'+sylwiki' => array(
