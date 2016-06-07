@@ -2747,8 +2747,8 @@ if ( $wgDBname == 'idtestwiki' ) {
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['sysop']['deletehistory'] = false;
-	$wgGroupPermissions['sysop']['deletetext'] = false;
+	$wgGroupPermissions['sysop']['deletedhistory'] = false;
+	$wgGroupPermissions['sysop']['deletedtext'] = false;
 }
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
