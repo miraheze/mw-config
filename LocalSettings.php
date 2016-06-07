@@ -1330,7 +1330,9 @@ $wgConf->settings = array(
 			'The_Multilingual_Encyclopedia' => NS_PROJECT,
 			'The_Multilingual_Encyclopedia_talk' => NS_PROJECT_TALK,
 			'Bestand' => NS_FILE,
+			'Fichier' => NS_FILE,
 			'Categorie' => NS_CATEGORY,
+			'Catégorie' => NS_CATEGORY,
 			'Categoría' => NS_CATEGORY,
 			'Archivo' => NS_FILE,
 			'Módulo' => WMG_NS_MODULE,
@@ -1346,6 +1348,8 @@ $wgConf->settings = array(
 			'Dosiero' => NS_FILE,
 			'Kategorio' => NS_CATEGORY,
 			'Файл' => NS_FILE,
+			'Modèle' => NS_TEMPLATE,
+			'Aide' => NS_HELP,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
