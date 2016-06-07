@@ -888,6 +888,7 @@ $wgConf->settings = array(
 		'hshsinfoportalwiki' => true,
 		'hsoodenwiki' => true,
 		'idtestwiki' => true,
+		'ilearnthingswiki' => true,
 		'imstswiki' => true,
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
