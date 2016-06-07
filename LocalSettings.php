@@ -318,6 +318,7 @@ $wgConf->settings = array(
 		'kl6fwiki' => true,
 		'micropediawiki' => true,
 		'microsoftwiki' => true,
+		'ofthevampirewiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
 		'ricwiki' => true,
