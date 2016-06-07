@@ -908,6 +908,7 @@ $wgConf->settings = array(
 		'newtrendwiki' => true,
 		'nidda23wiki' => true,
 		'nwpwiki' => true,
+		'ofthevampirewiki' => true,
 		'oyeavdelingenwiki' => true,
 		'openconstitutionwiki' => true,
 		'panoramawiki' => true,
