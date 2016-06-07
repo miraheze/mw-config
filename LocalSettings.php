@@ -791,6 +791,7 @@ $wgConf->settings = array(
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 		'wikicervanteswiki' => true,
+		'xofwiki' => true,
 	),
 	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
@@ -2736,8 +2737,9 @@ if ( $wgDBname == 'idtestwiki' ) {
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['sysop']['deletehistory'] = false;
+	$wgGroupPermissions['sysop']['deletetext'] = false;
 }
-
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 	function wfModifyMetaTags( OutputPage $out ) {
