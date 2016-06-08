@@ -843,6 +843,7 @@ $wgConf->settings = array(
 		'aescapeswiki' => true,
 		'airwiki' => true,
 		'alanpediawiki' => true,
+		'algopediawiki' => true,
 		'allbanks2wiki' => true,
 		'allthetropeswiki' => true,
 		'aktposwiki' => true,
