@@ -843,6 +843,7 @@ $wgConf->settings = array(
 		'aescapeswiki' => true,
 		'airwiki' => true,
 		'alanpediawiki' => true,
+		'algopediawiki' => true,
 		'allbanks2wiki' => true,
 		'allthetropeswiki' => true,
 		'aktposwiki' => true,
@@ -2747,7 +2748,6 @@ if ( $wgDBname == 'idtestwiki' ) {
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['sysop']['deletedhistory'] = false;
 	$wgGroupPermissions['sysop']['deletedtext'] = false;
 }
 if ( $wgDBname == 'metawiki' ) {
