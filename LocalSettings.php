@@ -1354,6 +1354,12 @@ $wgConf->settings = array(
 			'Файл' => NS_FILE,
 			'Modèle' => NS_TEMPLATE,
 			'Aide' => NS_HELP,
+			'Plik' => NS_FILE,
+			'Kategoria' => NS_CATEGORY,
+			'Specjalna' => NS_SPECIAL,
+			'Szablon' => NS_TEMPLATE,
+			'Pomoc' => NS_HELP,
+			'Moduł' => WMG_NS_MODULE,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
