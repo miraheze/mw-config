@@ -952,6 +952,7 @@ $wgConf->settings = array(
 		'webflowwiki' => true,
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
+		'wikihoyowiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseVariables' => array(
