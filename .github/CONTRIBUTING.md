@@ -14,6 +14,8 @@ Below is an example snippet from our LocalSettings.php:
 
 We use tabs with indent size 8 - if you use the GitHub editor this styling will be automatically applied.
 
+Please note that wiki identifiers are formed by the name of the wiki followed by `wiki` string, for instance, `'namewiki'` is the identifier for `name.miraheze.org`. 
+
 # Alphabetical order
 
 As you can see in our example snippet, values are alphabetically sorted based on the wiki name. The only exception is the 'default' value, which should be always above all others.
