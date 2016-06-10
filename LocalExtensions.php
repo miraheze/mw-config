@@ -87,7 +87,7 @@ if ( $wmgFlowDefaultNamespaces ) {
 		NS_TEMPLATE_TALK => CONTENT_MODEL_FLOW_BOARD,
 		NS_HELP_TALK => CONTENT_MODEL_FLOW_BOARD,
 		NS_CATEGORY_TALK => CONTENT_MODEL_FLOW_BOARD,
-	);
+	) + $wgNamespaceContentModels;
 }
 
 if ( $wmgUseFeaturedFeeds ) {
