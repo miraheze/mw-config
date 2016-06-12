@@ -1004,6 +1004,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'szkwiki' => true,
 		'testwiki' => true,
+		'tmewiki' => true,
 		'twplantwiki' => true,
 		'valentinaprojectwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -1349,6 +1350,7 @@ $wgConf->settings = array(
 			'Szablon' => NS_TEMPLATE,
 			'Pomoc' => NS_HELP,
 			'Moduł' => WMG_NS_MODULE,
+			'Datei' => NS_FILE,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
