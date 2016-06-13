@@ -328,6 +328,7 @@ $wgConf->settings = array(
 		'chrisipediawiki' => true,
 		'forexwiki' => true,
 		'geodatawiki' => true,
+		'metatrekwiki' => true,
 		'saliorpediawiki' => true,
 		'safiriawiki' => true,
 		'vrgowiki' => true,
@@ -2736,11 +2737,6 @@ if ( !$wgCommandLineMode ) {
 		$wgGroupPermissions['*']['read'] = true;
 		$wgGroupPermissions['*']['edit'] = true;
 	}
-}
-
-// metatrek.mh.o
-if ( $wgDBname == 'metatrekwiki' ) {
-	$wgGroupPermissions['*']['edit'] = false;
 }
 
 // TestWiki overrides
