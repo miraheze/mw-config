@@ -58,6 +58,8 @@ define( 'NS_COMIC_TALK', 1619 );
 // allthetropeswiki
 define( 'NS_TROPEWORKSHOP', 1620 );
 define( 'NS_TROPEWORKSHOP_TALK', 1621 );
+define( 'NS_REVIEWS', 1630 );
+define( 'NS_REVIEWS_TALK', 1631 );
 
 // safiriawiki
 define( 'NS_HOENN', 1622 );
@@ -1333,6 +1335,8 @@ $wgConf->settings = array(
 		'allthetropeswiki' => array(
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
 			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
+			NS_REVIEWS => 'Reviews',
+			NS_REVIEWS_TALK => 'Reviews_talk',
 		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
@@ -2703,6 +2707,7 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 # Should be after LocalExtensions due to constants
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgNamespaceContentModels[NS_TROPEWORKSHOP_TALK] = CONTENT_MODEL_FLOW_BOARD;
+	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
 }
 
 # Will remove this later --SPF
