@@ -286,6 +286,123 @@ $wgConf->settings = array(
 		'default' => '250', // databases don't have much memory - let's not overload them in future
 	),
 
+	// Editing Matrix
+	'wmgEditingMatrix' => array(
+		'default' => array(
+			'anon' => true, // allow anonymous editing
+			'user' => true, // allowing user editing
+			'editor' => false, // add an editor group for editing + sysop assign
+			'sysop' => false, // allow sysop' to edit (not needed)
+		),
+		'+8stationwiki' => array(
+			'anon' => false,
+		),
+		'+adnovumwiki' => array(
+			'anon' => false,
+		),
+		'+antiguabarbudacalypsowiki' => array(
+			'anon' => false,
+		),
+		'+carvingwiki' => array(
+			'anon' => false,
+		),
+		'+christipediawiki' => array(
+			'anon' => false,
+			'user' => false,
+		),
+		'+clementsworldbuildingwiki' => array(
+			'anon' => false,
+		),
+		'+dottorcontewiki' => array(
+			'anon' => false,
+		),
+		'+drunkenpeasantswikiwiki' => array(
+			'anon' => false,
+		),
+		'+forexwiki' => array(
+			'anon' => false,
+			'user' => false,
+		),
+		'+fieldresearchwiki' => array(
+			'anon' => false,
+		),
+		'+freecollegeprojectwiki' => array(
+			'anon' => false,
+		),
+		'+geodatawiki' => array(
+			'anon' => false,
+			'user' => false,
+		),
+		'+izanagiwiki' => array(
+			'anon' => false,
+		),
+		'+kl6fwiki' => array(
+			'anon' => false,
+		),
+		'+metatrekwiki' => array(
+			'anon' => false,
+			'user' => false,
+			'sysop' => true,
+		),
+		'+microsoftwiki' => array(
+			'anon' => false,
+		),
+		'+micropediawiki' => array(
+			'anon' => false,
+		),
+		'+ofthevampirewiki' => array(
+			'anon' => false,
+		),
+		'+poserdazfreebieswiki' => array(
+			'anon' => false,
+		),
+		'+priyowiki' => array(
+			'anon' => false,
+		),
+		'+ricwiki' => array(
+			'anon' => false,
+		),
+		'+saliorpediawiki' => array(
+			'anon' => false,
+			'user' => false,
+		),
+		'+safiriawiki' => array(
+			'anon' => false,
+			'user' => false,
+		),
+		'+softwarecrisiswiki' => array(
+			'anon' => false,
+		),
+		'+snowthegamewiki' => array(
+			'anon' => false,
+		),
+		'+sylwiki' => array(
+			'anon' => false,
+		),
+		'+thoughtonomywikiwiki' => array(
+			'anon' => false,
+		),
+		'+touhouenginewiki' => array(
+			'anon' => false,
+		),
+		'+turkcesozlukwiki' => array(
+			'anon' => false,
+		),
+		'+vrgowiki' => array(
+			'anon' => false,
+			'user' => false,
+		),
+		'+welcomewiki' => array(
+			'anon' => false,
+		),
+		'+wikiacawiki' => array(
+			'anon' => false,
+		),
+		'+walthamstowlabourwiki' => array(
+			'anon' => false,
+		),
+	),
+
 	// Disable editing
 	'wmgDisableAnonEditing' => array(
 		'default' => false,
