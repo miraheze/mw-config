@@ -300,6 +300,11 @@ $wgConf->settings = array(
 		'+adnovumwiki' => array(
 			'anon' => true,
 		),
+		'+allbanks2wiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+antiguabarbudacalypsowiki' => array(
 			'anon' => true,
 		),
@@ -309,6 +314,7 @@ $wgConf->settings = array(
 		'+christipediawiki' => array(
 			'anon' => true,
 			'user' => true,
+			'editor' => true,
 		),
 		'+clementsworldbuildingwiki' => array(
 			'anon' => true,
@@ -322,6 +328,7 @@ $wgConf->settings = array(
 		'+forexwiki' => array(
 			'anon' => true,
 			'user' => true,
+			'editor' => true,
 		),
 		'+fieldresearchwiki' => array(
 			'anon' => true,
@@ -332,6 +339,7 @@ $wgConf->settings = array(
 		'+geodatawiki' => array(
 			'anon' => true,
 			'user' => true,
+			'sysop' => true,
 		),
 		'+izanagiwiki' => array(
 			'anon' => true,
@@ -355,6 +363,8 @@ $wgConf->settings = array(
 		),
 		'+poserdazfreebieswiki' => array(
 			'anon' => true,
+			'user' => true,
+			'sysop' => true,
 		),
 		'+priyowiki' => array(
 			'anon' => true,
@@ -365,19 +375,28 @@ $wgConf->settings = array(
 		'+saliorpediawiki' => array(
 			'anon' => true,
 			'user' => true,
+			'editor' => true,
 		),
 		'+safiriawiki' => array(
 			'anon' => true,
 			'user' => true,
+			'sysop' => true,
 		),
 		'+softwarecrisiswiki' => array(
 			'anon' => true,
 		),
 		'+snowthegamewiki' => array(
 			'anon' => true,
+			'sysop' => true,
 		),
 		'+sylwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'editor' => true,
+		),
+		'+szkwiki' => array(
+			'anon' => true,
+			'user' => true,
 		),
 		'+thoughtonomywikiwiki' => array(
 			'anon' => true,
@@ -391,6 +410,7 @@ $wgConf->settings = array(
 		'+vrgowiki' => array(
 			'anon' => true,
 			'user' => true,
+			'sysop' => true,
 		),
 		'+welcomewiki' => array(
 			'anon' => true,
@@ -400,59 +420,9 @@ $wgConf->settings = array(
 		),
 		'+walthamstowlabourwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'sysop' => true,
 		),
-	),
-
-	// Disable editing
-	'wmgDisableAnonEditing' => array(
-		'default' => false,
-		'8stationwiki' => true,
-		'adnovumwiki' => true,
-		'antiguabarbudacalypsowiki' => true,
-		'carvingwiki' => true,
-		'christipediawiki' => true,
-		'clementsworldbuildingwiki' => true,
-		'dottorcontewiki' => true,
-		'drunkenpeasantswikiwiki' => true,
-		'forexwiki' => true,
-		'fieldresearchwiki' => true,
-		'freecollegeprojectwiki' => true,
-		'geodatawiki' => true,
-		'izanagiwiki' => true,
-		'kl6fwiki' => true,
-		'metatrekwiki' => true,
-		'micropediawiki' => true,
-		'microsoftwiki' => true,
-		'ofthevampirewiki' => true,
-		'poserdazfreebieswiki' => true,
-		'priyowiki' => true,
-		'ricwiki' => true,
-		'saliorpediawiki' => true,
-		'safiriawiki' => true,
-		'softwarecrisiswiki' => true,
-		'snowthegamewiki' => true,
-		'sylwiki' => true,
-		'thoughtonomywikiwiki' => true,
-		'touhouenginewiki' => true,
-		'turkcesozlukwiki' => true,
-		'vrgowiki' => true,
-		'welcomewiki' => true,
-		'wikiacawiki' => true,
-		'walthamstowlabourwiki' => true,
-	),
-	'wmgDisableUserEditing' => array(
-		'default' => false,
-		'chrisipediawiki' => true,
-		'forexwiki' => true,
-		'geodatawiki' => true,
-		'metatrekwiki' => true,
-		'saliorpediawiki' => true,
-		'safiriawiki' => true,
-		'vrgowiki' => true,
-	),
-	'wmgAddEditorGroup' => array(
-		'default' => false,
-		'saliorpediawiki' => true,
 	),
 
 	// Dormancy policy && RC stuff
@@ -1562,11 +1532,6 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
-		'+christipediawiki' => array(
-			'bureaucrat' => array(
-				'editor',
-			),
-		),
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -1595,11 +1560,6 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
-			),
-		),
-		'+forexwiki' => array(
-			'sysop' => array(
-				'editor',
 			),
 		),
 		'+idtestwiki' => array(
@@ -1776,14 +1736,6 @@ $wgConf->settings = array(
 			),
 		),
 		'+allbanks2wiki' => array(
-			'*' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-			'user' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
 			'autoconfirmed' => array(
 				'edit' => false,
 				'createpage' => false,
@@ -1792,19 +1744,10 @@ $wgConf->settings = array(
 				'edit' => false,
 				'createpage' => false,
 			),
-			'sysop' => array(
-				'edit' => true,
-				'createpage' => true,
-			),
 		),
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
-			),
-		),
-		'+christipediawiki' => array(
-			'editor' => array(
-				'edit' => true,
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
@@ -1908,16 +1851,6 @@ $wgConf->settings = array(
 				'respected' => true,
 			),
 		),
-		'+forexwiki' => array(
-			'editor' => array(
-				'edit' => true,
-			),
-		),
-		'+geodatawiki' => array(
-			'sysop' => array(
-				'edit' => true,
-			),
-		),
 		'+idtestwiki' => array(
 			'Founder' => array(
 				'blockemail' => true,
@@ -2008,23 +1941,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+poserdazfreebieswiki' => array(
-			'*' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-			'user' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
 			'autoconfirmed' => array(
 				'edit' => true,
 				'createpage' => true,
 			),
 			'confirmed' => array(
-				'edit' => true,
-				'createpage' => true,
-			),
-			'sysop' => array(
 				'edit' => true,
 				'createpage' => true,
 			),
@@ -2063,11 +1984,6 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		),
-		'+snowthegamewiki' => array(
-			'sysop' => array(
-				'createpage' => true,
-			),
-		),
 		'+studynotekrwiki' => array(
 			'voter' => array(
 				'rollback' => true,
@@ -2075,25 +1991,6 @@ $wgConf->settings = array(
 				'patrol' => true,
 				'skipcpatcha' => true,
 				'voter' => true,
-			),
-		),
-		'+safiriawiki' => array(
-			'sysop' => array(
-				'createpage' => true,
-				'edit' => true,
-			),
-		),
-		'+szkwiki' => array(
-			'*' => array(
-				'edit' => false,
-			),
-			'user' => array(
-				'edit' => false,
-			),
-		),
-		'+sylwiki' => array(
-			'editor' => array(
-				'edit' => true,
 			),
 		),
 		'+testwiki' => array(
@@ -2111,25 +2008,13 @@ $wgConf->settings = array(
 			'testgroup' => array(
 				'read' => true,
 			),
-		), 
+		),
 		'+vrgowiki' => array(
-			'sysop' => array(
-				'edit' => true,
-			),
 			'Teachers' => array(
-				'edit' => true, 
+				'edit' => true,
 			),
 		),
 		'+walthamstowlabourwiki' => array(
-			'*' => array(
-				'edit' => false,
-			),
-			'user' => array(
-				'edit' => false,
-			),
-			'editor' => array(
-				'edit' => true,
-			),
 			'editor-approver' => array(
 				'edit' => true,
 			),
@@ -2154,11 +2039,6 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
-			),
-		),
-		'+chrisipediawiki' => array(
-			'bureaucrat' => array(
-				'editor',
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
