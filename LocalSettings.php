@@ -303,6 +303,7 @@ $wgConf->settings = array(
 		'geodatawiki' => true,
 		'izanagiwiki' => true,
 		'kl6fwiki' => true,
+		'metatrekwiki' => true,
 		'micropediawiki' => true,
 		'microsoftwiki' => true,
 		'ofthevampirewiki' => true,
@@ -1142,6 +1143,7 @@ $wgConf->settings = array(
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'diavwiki' => 'All Rights Reserved',
+		'metatrekwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'oyeavdelingenwiki' => 'All Rights Reserved',
 		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'spiralwiki' => 'CC0 Public Domain',
@@ -1149,6 +1151,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'metatrekwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'universebuildwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
@@ -2733,6 +2736,11 @@ if ( !$wgCommandLineMode ) {
 		$wgGroupPermissions['*']['read'] = true;
 		$wgGroupPermissions['*']['edit'] = true;
 	}
+}
+
+// metatrek.mh.o
+if ( $wgDBname == 'metatrekwiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
 }
 
 // TestWiki overrides
