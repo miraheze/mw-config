@@ -72,7 +72,7 @@ if ( $wmgUseFlow ) {
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-		'url' => 'http://parsoid1.miraheze.org:8142',
+		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 	);
 }
@@ -271,7 +271,7 @@ if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-		'url' => 'http://parsoid1.miraheze.org:8142',
+		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 	);
 
