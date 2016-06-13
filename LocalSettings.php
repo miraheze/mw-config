@@ -289,117 +289,117 @@ $wgConf->settings = array(
 	// Editing Matrix
 	'wmgEditingMatrix' => array(
 		'default' => array(
-			'anon' => true, // allow anonymous editing
-			'user' => true, // allowing user editing
+			'anon' => false, // disable anonymous editing
+			'user' => false, // disable user editing
 			'editor' => false, // add an editor group for editing + sysop assign
 			'sysop' => false, // allow sysop' to edit (not needed)
 		),
 		'+8stationwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+adnovumwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+antiguabarbudacalypsowiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+carvingwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+christipediawiki' => array(
-			'anon' => false,
-			'user' => false,
+			'anon' => true,
+			'user' => true,
 		),
 		'+clementsworldbuildingwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+dottorcontewiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+drunkenpeasantswikiwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+forexwiki' => array(
-			'anon' => false,
-			'user' => false,
+			'anon' => true,
+			'user' => true,
 		),
 		'+fieldresearchwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+freecollegeprojectwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+geodatawiki' => array(
-			'anon' => false,
-			'user' => false,
+			'anon' => true,
+			'user' => true,
 		),
 		'+izanagiwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+kl6fwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+metatrekwiki' => array(
-			'anon' => false,
-			'user' => false,
+			'anon' => true,
+			'user' => true,
 			'sysop' => true,
 		),
 		'+microsoftwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+micropediawiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+ofthevampirewiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+poserdazfreebieswiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+priyowiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+ricwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+saliorpediawiki' => array(
-			'anon' => false,
-			'user' => false,
+			'anon' => true,
+			'user' => true,
 		),
 		'+safiriawiki' => array(
-			'anon' => false,
-			'user' => false,
+			'anon' => true,
+			'user' => true,
 		),
 		'+softwarecrisiswiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+snowthegamewiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+sylwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+thoughtonomywikiwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+touhouenginewiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+turkcesozlukwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+vrgowiki' => array(
-			'anon' => false,
-			'user' => false,
+			'anon' => true,
+			'user' => true,
 		),
 		'+welcomewiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+wikiacawiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 		'+walthamstowlabourwiki' => array(
-			'anon' => false,
+			'anon' => true,
 		),
 	),
 

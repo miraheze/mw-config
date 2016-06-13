@@ -313,12 +313,12 @@ if ( $wmgUseYouTube ) {
 // Permission variables
 if ( $wmgEditingMatrix ) {
 	$mhEM = $wmgEditingMatrix;
-	if ( !$mhEM['anon'] ) {
+	if ( $mhEM['anon'] ) {
 		$wgGroupPermissions['*']['edit'] = false;
 		$wgGroupPermissions['*']['createpage'] = false;
 	}
 
-	if ( !$mhEM['user'] ) {
+	if ( $mhEM['user'] ) {
 		$wgGroupPermissions['user']['edit'] = false;
 		$wgGroupPermissions['user']['createpage'] = false;
 	}
