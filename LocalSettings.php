@@ -1691,6 +1691,7 @@ $wgConf->settings = array(
 				'abusefilter-log' => true,
 				'abusefilter-log-detail' => true,
 				'abusefilter-view' => true,
+				'centralauth-autoaccount' => true,
 			),
 			'autopatrolled' => array(
 				'autopatrol' => true,
