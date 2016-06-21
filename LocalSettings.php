@@ -483,6 +483,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ndtestwiki' => true,
 	),
+	'wmgUseBlogPage' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

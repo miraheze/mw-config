@@ -25,6 +25,11 @@ if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
 }
 
+if ( $wmgUseBlogPage ) {
+	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+	wfLoadExtension( 'BlogPage' );
+}
+
 if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
