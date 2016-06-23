@@ -398,6 +398,7 @@ $wgConf->settings = array(
 			'anon' => true,
 			'user' => true,
 			'editor' => true,
+			'sysop' => true,
 		),
 		'+szkwiki' => array(
 			'anon' => true,
