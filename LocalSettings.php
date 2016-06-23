@@ -1045,6 +1045,7 @@ $wgConf->settings = array(
 		'vrgowiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
+		'wikibookswiki' => true,
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
 		'wikihoyowiki' => true,
