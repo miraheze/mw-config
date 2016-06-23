@@ -1047,6 +1047,7 @@ $wgConf->settings = array(
 		'webflowwiki' => true,
 		'wikibookswiki' => true,
 		'wikicervanteswiki' => true,
+		'wikikaisagawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wikihoyowiki' => true,
 		'yggdrasilwiki' => true,
@@ -1060,6 +1061,7 @@ $wgConf->settings = array(
 		'secondcirclewiki' => true,
 		'szkwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'wikikaisagawiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -2557,6 +2559,7 @@ $wgConf->settings = array(
 		'panoramawiki' => false,
 		'testwiki' => false,
 	),
+
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
 		'default' => false,
