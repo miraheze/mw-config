@@ -77,6 +77,12 @@ define( 'NS_PORTAL_TALK', 1627 );
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
 
+// wisdomwikiwiki
+define( 'NS_LCS', 1630 );
+define( 'NS_LCS_TALK', 1631 );
+define( 'NS_MEDI', 1632 );
+define( 'NS_MEDI_TALK', 1633 );
+
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
 define( 'WMG_NS_MODULE_TALK', 829 );
@@ -835,6 +841,7 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'whentheycrywiki' => true,
 		'whufcyouthwiki' => true,
+		'wisdomwikiwiki' => true,
 		'worldofkirbycraftwiki' => true,
 		'newcolumbiawiki' => true,
 	),
@@ -1409,6 +1416,12 @@ $wgConf->settings = array(
 			NS_CALL_OF_DUTY => 'Call_of_Duty',
 			NS_CALL_OF_DUTY_TALK => 'Call_of_Duty_talk',
 		),
+		'wisdomwikiwiki' => array(
+			NS_LCS	=> 'LCS',
+			NS_LCS_TALK => 'LCS_talk',
+			NS_MEDI => 'Medi',
+			NS_MEDI_TALK => 'Medi_talk',
+		)
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
@@ -1534,6 +1547,10 @@ $wgConf->settings = array(
 		'+unikumwiki' => array(
 			NS_MAIN => true,
 		),
+		'+wisdomwikiwiki' => array(
+			NS_MAIN => true,
+			NS_LCS => true,
+		)
 	),
 
 	// OAuth
