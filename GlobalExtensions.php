@@ -25,4 +25,3 @@ wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'Poem' );
 wfLoadExtension( 'SiteMatrix' );
-wfLoadExtension( 'SpamBlacklist' );

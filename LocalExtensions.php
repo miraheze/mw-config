@@ -9,6 +9,13 @@ if ( $wmgUseAdminLinks ) {
 	require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
 }
 
+if ( $wmgUseAJAXPoll ) {
+	wfLoadExtension( 'AJAXPoll' );
+	// Hiding information is not the wiki way
+	$wgGroupPermissions['*']['ajaxpoll-view-results'] = true;
+	$wgGroupPermissions['*']['ajaxpoll-view-results-before-vote'] = true;
+}
+
 if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/Babel/Babel.php" );
 	require_once( "$IP/extensions/cldr/cldr.php" );
@@ -16,6 +23,11 @@ if ( $wmgUseBabel ) {
 
 if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
+}
+
+if ( $wmgUseBlogPage ) {
+	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+	require_once( "$IP/extensions/BlogPage/Blog.php" );
 }
 
 if ( $wmgUseCharInsert ) {
@@ -63,12 +75,24 @@ if ( $wmgUseEchoThanks ) {
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
-	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-		'url' => 'http://parsoid1.miraheze.org:8142',
+		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 	);
+}
+
+if ( $wmgFlowDefaultNamespaces ) {
+	$wgNamespaceContentModels = array(
+		NS_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_USER_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_PROJECT_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_FILE_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_MEDIAWIKI_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_TEMPLATE_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_HELP_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_CATEGORY_TALK => CONTENT_MODEL_FLOW_BOARD,
+	) + $wgNamespaceContentModels;
 }
 
 if ( $wmgUseFeaturedFeeds ) {
@@ -108,6 +132,18 @@ if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Loops/Loops.php");
 }
 
+if ( $wmgUseMetrolook ) {
+	wfLoadSkin( 'Metrolook' );
+}
+
+if ( $wmgUseMobileFrontend ) {
+	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+}
+
+if ( $wmgUseMonaco ) {
+	require_once( "$IP/skins/Monaco/monaco.php" );
+}
+
 if ( $wmgUseMsPackage ) {
 	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
 	require_once( "$IP/extensions/MsLinks/MsLinks.php" );
@@ -120,14 +156,6 @@ if ( $wmgUseMsUpload ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
-}
-
-if ( $wmgUseMobileFrontend ) {
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-}
-
-if ( $wmgUseMonaco ) {
-	require_once( "$IP/skins/Monaco/monaco.php" );
 }
 
 if ( $wmgUseNativeSvgHandler ) {
@@ -248,7 +276,7 @@ if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
-		'url' => 'http://parsoid1.miraheze.org:8142',
+		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 	);
 
@@ -261,6 +289,10 @@ if ( $wmgUseVisualEditor ) {
 	
 	// Load TemplateData
 	wfLoadExtension( 'TemplateData' );
+}
+
+if ( $wmgUseVoteNY ) {
+	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
 }
 
 if ( $wmgUseWikiEditor ) {
@@ -284,11 +316,27 @@ if ( $wmgUseYouTube ) {
 }
 
 // Permission variables
-if ( $wmgDisableAnonEditing ) {
-	$wgGroupPermissions['*']['edit'] = false;
-	$wgGroupPermissions['*']['createpage'] = false;
-}
+if ( $wmgEditingMatrix ) {
+	$mhEM = $wmgEditingMatrix;
+	if ( $mhEM['anon'] ) {
+		$wgGroupPermissions['*']['edit'] = false;
+		$wgGroupPermissions['*']['createpage'] = false;
+	}
 
-if ( $wmgDisableUserEditing ) {
-	$wgGroupPermissions['user']['edit'] = false;
+	if ( $mhEM['user'] ) {
+		$wgGroupPermissions['user']['edit'] = false;
+		$wgGroupPermissions['user']['createpage'] = false;
+	}
+
+	if ( $mhEM['editor'] ) {
+		$wgGroupPermissions['editor']['edit'] = true;
+		$wgGroupPermissions['editor']['createpage'] = true;
+		$wgAddGroups['sysop'][] = 'editor';
+		$wgRemoveGroups['sysop'][] = 'editor';
+	}
+
+	if ( $mhEM['sysop'] ) {
+		$wgGroupPermissions['sysop']['edit'] = true;
+		$wgGroupPermissions['sysop']['createpage'] = true;
+	}
 }
