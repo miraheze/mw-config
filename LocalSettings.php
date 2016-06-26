@@ -177,7 +177,7 @@ $wgConf->settings = array(
 			'wiki.printmaking.be' => 'printmakingbewiki',
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
-			'wisdomwiki.org' => 'wisdomwiki',
+			'wisdomwiki.org' => 'wisdomwikiwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -2281,7 +2281,7 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
 		'wikikaisagawiki' => 'https://wiki.kaisaga.com',
 		'wikiparkinsonwiki' => 'https://wikiparkinson.org',
-		'wisdomwiki' => 'https://wisdomwiki.org',
+		'wisdomwikiwiki' => 'https://wisdomwiki.org',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
