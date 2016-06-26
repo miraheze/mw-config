@@ -783,6 +783,7 @@ $wgConf->settings = array(
 		'boulderwikiwiki' => true,
 		'catboxwiki' => true,
 		'cbmediawiki' => true,
+		'civitaswiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'dalarwiki' => true,
 		'developmentwiki' => true,
