@@ -1,7 +1,6 @@
 <?php
 require_once( "$IP/extensions/AbuseFilter/AbuseFilter.php" );
 require_once( "$IP/extensions/AntiSpoof/AntiSpoof.php" );
-require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 require_once( "$IP/extensions/CentralAuth/CentralAuth.php" );
 require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );

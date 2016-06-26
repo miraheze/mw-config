@@ -489,6 +489,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
+	'wmgUseCategoryTree' => array(
+		'default' => true,
+		'whentheycrywiki' => false,
+	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

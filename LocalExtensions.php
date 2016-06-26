@@ -30,6 +30,10 @@ if ( $wmgUseBlogPage ) {
 	require_once( "$IP/extensions/BlogPage/Blog.php" );
 }
 
+if ( $wmgUseCategoryTree ) {
+	require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
+}
+
 if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
