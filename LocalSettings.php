@@ -1088,6 +1088,7 @@ $wgConf->settings = array(
 		'microsoftwiki' => true,
 		'stellachronicawiki' => true,
 		'wikicervanteswiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
