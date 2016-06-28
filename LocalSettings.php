@@ -1255,6 +1255,7 @@ $wgConf->settings = array(
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
 		'safiriawiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
+		'wisdomwikiwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png',
 		'universebuildwiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 	),
 	'wgRightsPage' => array(
@@ -1262,6 +1263,7 @@ $wgConf->settings = array(
 		'developmentwiki' => 'Official:Copyrights',
 		'diavwiki' => 'Project:Copyrights',
 		'quantixwiki' => 'Project:Copyrights',
+		'wisdomwikiwiki' => 'Copyleft',
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
@@ -1270,6 +1272,7 @@ $wgConf->settings = array(
 		'oyeavdelingenwiki' => 'All Rights Reserved',
 		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'spiralwiki' => 'CC0 Public Domain',
+		'wisdomwikiwiki' => 'Creative Commons Attribution-NonCommercial-NoDerivatives',
 		'universebuildwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 	),
 	'wgRightsUrl' => array(
@@ -1277,6 +1280,7 @@ $wgConf->settings = array(
 		'metatrekwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+		'wisdomwikiwiki' => 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
 		'universebuildwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 	),
 
