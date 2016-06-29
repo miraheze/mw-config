@@ -2391,6 +2391,7 @@ $wgConf->settings = array(
 		'genwiki' => "//$wmgUploadHostname/genwiki/6/64/Favicon.ico",
 		'grottocenterwiki' => "//$wmgUploadHostname/grottocenterwiki/6/64/Favicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
+		'lexiquewiki' => "//$wmgUploadHostname/lexiquewiki/0/0f/Lexique_favicon.ico",
 		'luckandlogicwiki' => "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'microsoftwiki' => "//$wmgUploadHostname/microsoftwiki/6/66/Logoforwiki.png",
