@@ -717,6 +717,7 @@ $wgConf->settings = array(
 		'carvingwiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'idleomenswiki' => true,
 		'lbsgeswiki' => true,
 		'luckandlogicwiki' => true,
 		'ndtestwiki' => true,
