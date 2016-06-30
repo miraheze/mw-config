@@ -396,6 +396,8 @@ $wgConf->settings = array(
 		),
 		'+seldirwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'editor' => true,
 		),
 		'+softwarecrisiswiki' => array(
 			'anon' => true,
@@ -2811,12 +2813,6 @@ if ( !$wgCommandLineMode ) {
 		$wgGroupPermissions['*']['read'] = true;
 		$wgGroupPermissions['*']['edit'] = true;
 	}
-}
-
-// SledirWiki overrides
-if ( $wgDBname == 'idtestwiki' ) {
-	$wgGroupPermissions['*']['createaccount'] = false;
-	
 }
 
 // TestWiki overrides
