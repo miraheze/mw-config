@@ -634,6 +634,7 @@ $wgConf->settings = array(
 	'wmgUseInputBox' => array(
 		'default' => true,
 		'allthetropeswiki' => false, // breaks editing
+		'musiclibrarywiki' => true,
 		'newcolumbiawiki' => true,
 		'simonjonwiki' => true,
 	),
