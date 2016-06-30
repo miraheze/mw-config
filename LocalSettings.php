@@ -394,6 +394,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+seldirwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+		),
 		'+softwarecrisiswiki' => array(
 			'anon' => true,
 		),
