@@ -689,6 +689,7 @@ $wgConf->settings = array(
 		'snowthegamewiki' => true,
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
+		'whentheycrywiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
