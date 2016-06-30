@@ -1004,6 +1004,7 @@ $wgConf->settings = array(
 		'idtestwiki' => true,
 		'ilearnthingswiki' => true,
 		'imstswiki' => true,
+		'inazumaelevenwiki' => true,
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
 		'lancemedicalwiki' => true,
