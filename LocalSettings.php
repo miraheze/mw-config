@@ -589,7 +589,6 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'priyowiki' => true,
 		'ricwiki' => true,
-		'soshomophobiewiki' => true,
 		'spiralwiki' => true,
 		'touhouenginewiki' => true,
 		'universebuildwiki' => true,
@@ -1073,6 +1072,7 @@ $wgConf->settings = array(
 		'wikikaisagawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wikihoyowiki' => true,
+		'worldbuildingwiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseVariables' => array(
