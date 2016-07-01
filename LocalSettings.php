@@ -1058,6 +1058,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'simonjonwiki' => true,
 		'sirikotwiki' => true,
+		'skyfireflyffwiki' => true,
 		'spiralwiki' => true,
 		'taylorwiki' => true,
 		'teleswikiwiki' => true,
