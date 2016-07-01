@@ -1484,6 +1484,8 @@ $wgConf->settings = array(
 			'Fil' => NS_FILE,
 			'Skabelon' => NS_TEMPLATE,
 			'Kategori' => NS_CATEGORY,
+			'Predefinição' => NS_TEMPLATE,
+			'Imagem' => NS_IMAGE,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
