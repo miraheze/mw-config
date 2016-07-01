@@ -823,6 +823,7 @@ $wgConf->settings = array(
 		'musiclibrarywiki' => true,
 		'ndtestwiki' => true,
 		'neuronpediawiki' => true,
+		'newcolumbiawiki' => true,
 		'newhudsoniawiki' => true,
 		'newknowledgewiki' => true,
 		'novahistoriaewiki' => true,
@@ -858,8 +859,8 @@ $wgConf->settings = array(
 		'whentheycrywiki' => true,
 		'whufcyouthwiki' => true,
 		'wisdomwikiwiki' => true,
+		'worldbuildingwiki' => true,
 		'worldofkirbycraftwiki' => true,
-		'newcolumbiawiki' => true,
 	),
 	'wmgUseSectionHide' => array(
 		'default' => false,
