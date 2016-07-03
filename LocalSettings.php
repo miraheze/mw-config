@@ -942,6 +942,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'metawiki' => true,
+		'inazumaelevenwiki' => true,
 		'stellachronicawiki' => true,
 		'spiralwiki' => true,
 		'rtwiki' => true,
