@@ -703,6 +703,11 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ndtestwiki' => true,
 	),
+	'wmgUseMultiBoilerplate' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'wisdomwikiwiki' => true,
+	),
 	'wmgUseNativeSvgHandler' => array(
 	    'default' => true,
 	),
@@ -2825,9 +2830,6 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 # Will remove this later --SPF
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
-	wfLoadExtension( 'MultiBoilerplate' );
-	$wgMultiBoilerplateDisplaySpecialPage = true;
-	$wgMultiBoilerplateOptions = false;
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );

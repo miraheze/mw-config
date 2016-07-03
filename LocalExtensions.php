@@ -162,6 +162,12 @@ if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 }
 
+if ( $wmgUseMultiBoilerplate ) {
+	wfLoadExtension( 'MultiBoilerplate' );
+	$wgMultiBoilerplateDisplaySpecialPage = true;
+	$wgMultiBoilerplateOptions = false;
+}
+
 if ( $wmgUseNativeSvgHandler ) {
 	require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
 }
