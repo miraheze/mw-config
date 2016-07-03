@@ -174,6 +174,7 @@ $wgConf->settings = array(
 			'publictestwiki.com' => 'testwiki',
 			'spiral.wiki' => 'spiralwiki',
 			'universebuild.com' => 'universebuildwiki',
+			'wiki.aenasan.com' => 'aenasanwiki',
 			'wiki.dottorconte.eu' => 'dottorcontewiki',
 			'wiki.downhillderelicts.com' => 'downhillderelictswiki',
 			'wiki.dwplive.com' => 'dwplivewiki',
@@ -2319,6 +2320,7 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
+		'aenasanwiki' => 'https://wiki.aenasan.com',
 		'allthetropeswiki' => 'https://allthetropes.org',
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
 		'anuwiki' => 'https://anuwiki.com',
