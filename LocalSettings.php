@@ -2628,6 +2628,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => '#miraheze-allthetropes',
 	),
+	'wgWebChatClient' => array(
+		'default' => false,
+		'allthetropeswiki' => 'freenodeChat',
+		),
 
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
