@@ -1101,7 +1101,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
-		'wisdomwiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
@@ -2626,19 +2626,19 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => 'irc.freenode.net',
 		'extloadwiki' => 'irc.freenode.net',
-		'wisdomwiki' => 'irc.freenode.net',
+		'wisdomwikiwiki' => 'irc.freenode.net',
 	),
 	'wmgWebChatChannel' => array(
 		'default' => false,
 		'allthetropeswiki' => '#miraheze-allthetropes',
 		'extloadwiki' => '#miraheze-staff',
-		'wisdomwiki' => '#miraheze-wisdomwiki',
+		'wisdomwikiwiki' => '#miraheze-wisdomwiki',
 	),
 	'wmgWebChatClient' => array(
 		'default' => false,
 		'allthetropeswiki' => 'freenodeChat',
 		'extloadwiki' => 'freenodeChat',
-		'#miraheze-wisdomwiki' => 'freenodeChat',
+		'wisdomwikiwiki' => 'freenodeChat',
 	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
