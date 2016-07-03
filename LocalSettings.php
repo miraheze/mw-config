@@ -1096,6 +1096,10 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'wikikaisagawiki' => true,
 	),
+	'wmgUseWebChat' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
