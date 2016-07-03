@@ -706,6 +706,7 @@ $wgConf->settings = array(
 	'wmgUseMultiBoilerplate' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseNativeSvgHandler' => array(
