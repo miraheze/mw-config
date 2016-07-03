@@ -942,6 +942,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'metawiki' => true,
+		'inazumaelevenwiki' => true,
 		'stellachronicawiki' => true,
 		'spiralwiki' => true,
 		'rtwiki' => true,
@@ -2618,22 +2619,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => false,
 		'panoramawiki' => false,
 		'testwiki' => false,
-	),
-	// WebChat config
-	'wgWebChatServer' => array(
-		'default' => false,
-		'allthetropeswiki' => 'irc.freenode.net',
-		'extloadwiki' => 'irc.freenode.net',
-	),
-	'wgWebChatChannel' => array(
-		'default' => false,
-		'allthetropeswiki' => '#miraheze-allthetropes',
-		'extloadwiki' => '#miraheze-staff',
-	),
-	'wgWebChatClient' => array(
-		'default' => false,
-		'allthetropeswiki' => 'freenodeChat',
-		'extloadwiki' => 'freenodeChat',
 	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
