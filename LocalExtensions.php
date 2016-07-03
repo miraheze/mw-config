@@ -299,6 +299,10 @@ if ( $wmgUseVoteNY ) {
 	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
 }
 
+if ( $wmgWebChat ) {
+	require_once( "$IP/extensions/WebChat/WebChat.php" );
+}
+
 if ( $wmgUseWikiEditor ) {
 	wfLoadExtension( 'WikiEditor' );
 	wfLoadExtension( 'CodeEditor' );
