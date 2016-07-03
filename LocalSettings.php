@@ -2628,8 +2628,14 @@ $wgConf->settings = array(
 		'testwiki' => false,
 	),
 	'wmgVisualEditorAvailableNamespaces' => array(
-		'default' => array( NS_MAIN, NS_USER ),
-		'+wisdomwikiwiki' => array( NS_LCS, NS_MEDI ),
+		'default' => array(
+			NS_MAIN => true,
+			NS_USER => true,
+		 ),
+		'+wisdomwikiwiki' => array(
+			NS_LCS => true,
+			NS_MEDI => true,
+		),
 	),
 	// WebChat config
 	'wmgWebChatServer' => array(
