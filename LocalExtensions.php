@@ -299,7 +299,7 @@ if ( $wmgUseVoteNY ) {
 	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
 }
 
-if ( $wmgWebChat ) {
+if ( $wmgUseWebChat ) {
 	require_once( "$IP/extensions/WebChat/WebChat.php" );
 }
 
