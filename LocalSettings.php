@@ -2619,6 +2619,15 @@ $wgConf->settings = array(
 		'panoramawiki' => false,
 		'testwiki' => false,
 	),
+	// WebChat config
+	'$wgWebChatServer' => array(
+		'default' => false,
+		'allthetropeswiki' => 'irc.freenode.net',
+	),
+	'$wgWebChatChannel' => array(
+		'default' => false,
+		'allthetropeswiki' => '#miraheze-allthetropes',
+	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
@@ -2819,14 +2828,6 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 }
 
 $wmgParsoidIPs = array( '185.52.1.144' );
-
-// WebChat config
-'$wgWebChatServer' => array(
-	'allthetropeswiki' => 'irc.freenode.net',
-	),
-'$wgWebChatChannel' => array(
-	'allthetropeswiki' => '#miraheze-allthetropes',
-	),
 
 // Alternative to forwarding user cookies to Parsoid
 if ( !$wgCommandLineMode ) {
