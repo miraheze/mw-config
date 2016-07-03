@@ -2820,6 +2820,14 @@ function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 
 $wmgParsoidIPs = array( '185.52.1.144' );
 
+// WebChat config
+'$wgWebChatServer' => array(
+	'allthetropeswiki' => 'irc.freenode.net',
+	),
+'$wgWebChatChannel' = array(
+	'allthetropeswiki' => '#miraheze-allthetropes',
+	),
+
 // Alternative to forwarding user cookies to Parsoid
 if ( !$wgCommandLineMode ) {
 	if ( in_array( $_SERVER['REMOTE_ADDR'], $wmgParsoidIPs ) ) {
