@@ -1099,6 +1099,7 @@ $wgConf->settings = array(
 	'wmgUseWebChat' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
