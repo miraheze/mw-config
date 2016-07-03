@@ -290,7 +290,7 @@ if ( $wmgUseVisualEditor ) {
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 	}
-	
+
 	// Load TemplateData
 	wfLoadExtension( 'TemplateData' );
 }
@@ -301,6 +301,9 @@ if ( $wmgUseVoteNY ) {
 
 if ( $wmgUseWebChat ) {
 	require_once( "$IP/extensions/WebChat/WebChat.php" );
+	$wgWebChatClient = $wmgWebChatClient;
+	$wgWebChatServer = $wmgWebChatServer;
+	$wgWebChatChannel = $wmgWebChatChannel;
 }
 
 if ( $wmgUseWikiEditor ) {
