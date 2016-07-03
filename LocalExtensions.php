@@ -291,6 +291,8 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 	}
 
+	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
+
 	// Load TemplateData
 	wfLoadExtension( 'TemplateData' );
 }
