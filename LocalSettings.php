@@ -2622,7 +2622,7 @@ $wgConf->settings = array(
 		'testwiki' => false,
 	),
 	'wmgVisualEditorAvailableNamespaces' => array(
-		'default' => false,
+		'default' => array( NS_MAIN, NS_USER ),
 		'+wisdomwikiwiki' => array( NS_LCS, NS_MEDI ),
 	),
 	// WebChat config
