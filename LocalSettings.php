@@ -2620,11 +2620,11 @@ $wgConf->settings = array(
 		'testwiki' => false,
 	),
 	// WebChat config
-	'$wgWebChatServer' => array(
+	'wgWebChatServer' => array(
 		'default' => false,
 		'allthetropeswiki' => 'irc.freenode.net',
 	),
-	'$wgWebChatChannel' => array(
+	'wgWebChatChannel' => array(
 		'default' => false,
 		'allthetropeswiki' => '#miraheze-allthetropes',
 	),
