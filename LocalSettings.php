@@ -2824,7 +2824,7 @@ $wmgParsoidIPs = array( '185.52.1.144' );
 '$wgWebChatServer' => array(
 	'allthetropeswiki' => 'irc.freenode.net',
 	),
-'$wgWebChatChannel' = array(
+'$wgWebChatChannel' => array(
 	'allthetropeswiki' => '#miraheze-allthetropes',
 	),
 
