@@ -505,6 +505,7 @@ $wgConf->settings = array(
 	'wmgUseBlogPage' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'microsoftwiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
