@@ -30,6 +30,10 @@ if ( $wmgUseBlogPage ) {
 	require_once( "$IP/extensions/BlogPage/Blog.php" );
 }
 
+if ( $wmgUseMSCalendar ) {
+	require_once( "$IP/extensions/MSCalendar/MSCalendar.php" );
+}
+
 if ( $wmgUseCategoryTree ) {
 	require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 }
