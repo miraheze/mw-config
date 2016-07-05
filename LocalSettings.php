@@ -504,7 +504,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ircwiki' => true,
 	),
-	'wmgUseCalendar' => array(
+	'wmgUseMSCalendar' => array(
 		'default' => false,
 		'aucelewiki' => true,
 		'extloadwiki' => true,
