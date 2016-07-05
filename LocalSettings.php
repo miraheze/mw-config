@@ -504,6 +504,12 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ircwiki' => true,
 	),
+	'wmgUseCalendar' => array(
+		'default' => false,
+		'aucelewiki' => true,
+		'extloadwiki' => true,
+		'umodwiki' => true,
+	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
 		'whentheycrywiki' => false,
