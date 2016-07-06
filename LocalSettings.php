@@ -430,6 +430,7 @@ $wgConf->settings = array(
 		'+szkwiki' => array(
 			'anon' => true,
 			'user' => true,
+			'sysop' => true,
 		),
 		'+thoughtonomywikiwiki' => array(
 			'anon' => true,
