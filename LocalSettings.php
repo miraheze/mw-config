@@ -76,6 +76,20 @@ define( 'NS_PORTAL_TALK', 1627 );
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
+define( 'NS_MINECRAFT', 1630 );
+define( 'NS_MINECRAFT_TALK', 1631 );
+define( 'NS_SUPER_MARIO_LAND_2', 1632 );
+define( 'NS_SUPER_MARIO_LAND_2_TALK', 1633 );
+define( 'NS_SUPER_MARIO_WORLD_2', 1634 );
+define( 'NS_SUPER_MARIO_WORLD_2_TALK', 1635 );
+define( 'NS_SUPER_MARIO_BROS', 1636 );
+define( 'NS_SUPER_MARIO_BROS_TALK', 1637 );
+define( 'NS_SUPER_MARIO_ADVANCE_2', 1638 );
+define( 'NS_SUPER_MARIO_ADVANCE_2_TALK', 1639 );
+define( 'NS_SUPER_MARIO_ADVANCE_3', 1640 );
+define( 'NS_SUPER_MARIO_ADVANCE_3_TALK', 1641 );
+define( 'NS_SUPER_MARIO_ADVANCE_4', 1642 );
+define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1643 );
 
 // wisdomwikiwiki
 define( 'NS_LCS', 1630 );
@@ -1448,6 +1462,22 @@ $wgConf->settings = array(
 			NS_PORTAL_TALK => 'Portal_talk',
 			NS_CALL_OF_DUTY => 'Call_of_Duty',
 			NS_CALL_OF_DUTY_TALK => 'Call_of_Duty_talk',
+			NS_MINECRAFT => 'Minecraft',
+			NS_MINECRAFT_TALK => 'Minecraft_talk',
+			NS_SUPER_MARIO_LAND_2 => 'Super_Mario_Land_2',
+			NS_SUPER_MARIO_LAND_2_TALK => 'Super_Mario_Land_2_talk',
+			NS_SUPER_MARIO_WORLD_2 => 'Super_Mario_World_2',
+			NS_SUPER_MARIO_WORLD_2_TALK => 'Super_Mario_World_2_talk',
+			NS_SUPER_MARIO_BROS => 'Super_Mario_Bros.',
+			NS_SUPER_MARIO_BROS_TALK => 'Super_Mario_Bros._talk',
+			NS_SUPER_MARIO_ADVANCE => 'Super_Mario_Advance',
+			NS_SUPER_MARIO_ADVANCE_TALK => 'Super_Mario_Advance_talk',
+			NS_SUPER_MARIO_ADVANCE_2 => 'Super_Mario_Advance_2',
+			NS_SUPER_MARIO_ADVANCE_2_TALK => 'Super_Mario_Advance_2_talk',
+			NS_SUPER_MARIO_ADVANCE_3 => 'Super_Mario_Advance_3',
+			NS_SUPER_MARIO_ADVANCE_3_TALK => 'Super_Mario_Advance_3_talk',
+			NS_SUPER_MARIO_ADVANCE_4 => 'Super_Mario_Advance_4',
+			NS_SUPER_MARIO_ADVANCE_4_TALK => 'Super_Mario_Advance_4_talk',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
@@ -1462,7 +1492,7 @@ $wgConf->settings = array(
 		'+quantixwiki' => array( NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+safiriawiki' => array( NS_HOENN ),
-		'+tmewiki' => array( NS_CALL_OF_DUTY ),
+		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4 ),
 	),
 	'wgMetaNamespace' => array(
 	    'default' => null,
@@ -1517,6 +1547,11 @@ $wgConf->settings = array(
 			'Pomoc' => NS_HELP,
 			'Moduł' => WMG_NS_MODULE,
 			'Datei' => NS_FILE,
+			'Fil' => NS_FILE,
+			'Skabelon' => NS_TEMPLATE,
+			'Kategori' => NS_CATEGORY,
+			'Predefinição' => NS_TEMPLATE,
+			'Imagem' => NS_IMAGE,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
