@@ -126,10 +126,12 @@ $wgConf->settings = array(
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	// Block
 	'wgBlockAllowsUTEdit' => array(
