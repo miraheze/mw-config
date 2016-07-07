@@ -517,6 +517,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
@@ -721,6 +722,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
 		'default' => false,
