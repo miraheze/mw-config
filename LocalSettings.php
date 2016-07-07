@@ -779,6 +779,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUsePoll' => array(
