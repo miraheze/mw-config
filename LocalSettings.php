@@ -126,10 +126,12 @@ $wgConf->settings = array(
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	// Block
 	'wgBlockAllowsUTEdit' => array(
@@ -515,6 +517,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
@@ -719,6 +722,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
 		'default' => false,
@@ -775,6 +779,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 		'walthamstowlabourwiki' => true,
 	),
 	'wmgUsePoll' => array(
