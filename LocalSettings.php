@@ -76,26 +76,26 @@ define( 'NS_PORTAL_TALK', 1627 );
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
-define( 'NS_MINECRAFT', 1630 );
-define( 'NS_MINECRAFT_TALK', 1631 );
-define( 'NS_SUPER_MARIO_LAND_2', 1632 );
-define( 'NS_SUPER_MARIO_LAND_2_TALK', 1633 );
-define( 'NS_SUPER_MARIO_WORLD_2', 1634 );
-define( 'NS_SUPER_MARIO_WORLD_2_TALK', 1635 );
-define( 'NS_SUPER_MARIO_BROS', 1636 );
-define( 'NS_SUPER_MARIO_BROS_TALK', 1637 );
-define( 'NS_SUPER_MARIO_ADVANCE_2', 1638 );
-define( 'NS_SUPER_MARIO_ADVANCE_2_TALK', 1639 );
-define( 'NS_SUPER_MARIO_ADVANCE_3', 1640 );
-define( 'NS_SUPER_MARIO_ADVANCE_3_TALK', 1641 );
-define( 'NS_SUPER_MARIO_ADVANCE_4', 1642 );
-define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1643 );
+define( 'NS_MINECRAFT', 1636 );
+define( 'NS_MINECRAFT_TALK', 1637 );
+define( 'NS_SUPER_MARIO_LAND_2', 1638 );
+define( 'NS_SUPER_MARIO_LAND_2_TALK', 1639 );
+define( 'NS_SUPER_MARIO_WORLD_2', 1640 );
+define( 'NS_SUPER_MARIO_WORLD_2_TALK', 1641 );
+define( 'NS_SUPER_MARIO_BROS', 1645 );
+define( 'NS_SUPER_MARIO_BROS_TALK', 1643 );
+define( 'NS_SUPER_MARIO_ADVANCE_2', 1644 );
+define( 'NS_SUPER_MARIO_ADVANCE_2_TALK', 1645 );
+define( 'NS_SUPER_MARIO_ADVANCE_3', 1646 );
+define( 'NS_SUPER_MARIO_ADVANCE_3_TALK', 1647 );
+define( 'NS_SUPER_MARIO_ADVANCE_4', 1648 );
+define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1649 );
 
 // wisdomwikiwiki
-define( 'NS_LCS', 1630 );
-define( 'NS_LCS_TALK', 1631 );
-define( 'NS_MEDI', 1632 );
-define( 'NS_MEDI_TALK', 1633 );
+define( 'NS_LCS', 1632 );
+define( 'NS_LCS_TALK', 1633 );
+define( 'NS_MEDI', 1634 );
+define( 'NS_MEDI_TALK', 1635 );
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
