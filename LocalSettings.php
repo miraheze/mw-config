@@ -930,6 +930,7 @@ $wgConf->settings = array(
 		'idtestwiki' => true,
 		'pascalscada' => true,
 		'priyowiki' => true,
+		'sourcewiki' => true,
 		'sizzlecookiewiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
