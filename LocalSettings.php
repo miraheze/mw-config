@@ -678,6 +678,7 @@ $wgConf->settings = array(
 	'wmgUseMetrolook' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
