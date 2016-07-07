@@ -1111,6 +1111,7 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wikihoyowiki' => true,
 		'worldbuildingwiki' => true,
+		'yourosongcontestwiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseVariables' => array(
