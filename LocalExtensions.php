@@ -1,6 +1,10 @@
 <?php
 
 // Set up extensions for use on wikis that are not global
+if ( $wmgUseAccessControl ) {
+	require_once( "$IP/extensions/AccessControl/AccessControl.php" );
+}
+
 if ( $wmgUseAddHTMLMetaAndTitle ) {
 	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
 }

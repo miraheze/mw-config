@@ -480,6 +480,10 @@ $wgConf->settings = array(
 	),
 
 	// Extensions
+	'wmgUseAccessControl' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
 		'extloadwiki' => true,
