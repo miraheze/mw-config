@@ -2056,6 +2056,7 @@ $wgConf->settings = array(
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
+				'managewiki' => true,
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
@@ -2065,6 +2066,7 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
+				'managewiki' => true,
 			),
 		),
 		'+poserdazfreebieswiki' => array(
