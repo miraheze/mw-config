@@ -480,6 +480,10 @@ $wgConf->settings = array(
 	),
 
 	// Extensions
+	// Miraheze makes no garuntee about the security of information 
+	// on wikis in relation to this extension. 
+	// Additionally users should be made aware of this and agree to it.
+	// See https://phabricator.miraheze.org/T296#4468
 	'wmgUseAccessControl' => array(
 		'default' => false,
 		'extloadwiki' => true,
