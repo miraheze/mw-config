@@ -487,6 +487,7 @@ $wgConf->settings = array(
 	'wmgUseAccessControl' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
