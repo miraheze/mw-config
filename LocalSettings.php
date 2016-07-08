@@ -73,6 +73,12 @@ define( 'NS_OFFICIAL_TALK', 1625 );
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
 
+// wisdomwikiwiki
+define( 'NS_LCS', 1630 );
+define( 'NS_LCS_TALK', 1631 );
+define( 'NS_MEDI', 1632 );
+define( 'NS_MEDI_TALK', 1633 );
+
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
@@ -92,12 +98,6 @@ define( 'NS_SUPER_MARIO_ADVANCE_3', 1648 );
 define( 'NS_SUPER_MARIO_ADVANCE_3_TALK', 1649 );
 define( 'NS_SUPER_MARIO_ADVANCE_4', 1650 );
 define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1651 );
-
-// wisdomwikiwiki
-define( 'NS_LCS', 1632 );
-define( 'NS_LCS_TALK', 1633 );
-define( 'NS_MEDI', 1634 );
-define( 'NS_MEDI_TALK', 1635 );
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
