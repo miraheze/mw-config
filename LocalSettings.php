@@ -551,7 +551,7 @@ $wgConf->settings = array(
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
-		'wisdomwiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
@@ -563,7 +563,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'anuwiki' => true,
 		'extloadwiki' => true,
-		'wisdomwiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUseComments' => array(
 		'default' => false,
