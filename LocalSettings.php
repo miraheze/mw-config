@@ -78,6 +78,10 @@ define( 'NS_LCS', 1630 );
 define( 'NS_LCS_TALK', 1631 );
 define( 'NS_MEDI', 1632 );
 define( 'NS_MEDI_TALK', 1633 );
+define('NS_LIBRARY', 1634);
+define('NS_LIBRARY_TALK', 1635);
+define('NS_TEACHING', 1636);
+define('NS_TEACHING_TALK', 1637);
 
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
