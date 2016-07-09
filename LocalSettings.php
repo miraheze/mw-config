@@ -73,6 +73,18 @@ define( 'NS_OFFICIAL_TALK', 1625 );
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
 
+// wisdomwikiwiki
+define( 'NS_LCS', 1654 );
+define( 'NS_LCS_TALK', 1655 );
+define( 'NS_MEDI', 1656 );
+define( 'NS_MEDI_TALK', 1657 );
+define('NS_LIBRARY', 1658);
+define('NS_LIBRARY_TALK', 1659);
+define('NS_TEACHING', 1660);
+define('NS_TEACHING_TALK', 1661);
+define('NS_BLANK', 1662);
+define('NS_BLANK_TALK', 1663);
+
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
@@ -92,12 +104,6 @@ define( 'NS_SUPER_MARIO_ADVANCE_3', 1648 );
 define( 'NS_SUPER_MARIO_ADVANCE_3_TALK', 1649 );
 define( 'NS_SUPER_MARIO_ADVANCE_4', 1650 );
 define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1651 );
-
-// wisdomwikiwiki
-define( 'NS_LCS', 1632 );
-define( 'NS_LCS_TALK', 1633 );
-define( 'NS_MEDI', 1634 );
-define( 'NS_MEDI_TALK', 1635 );
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -178,10 +184,11 @@ $wgConf->settings = array(
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
 			'allthetropes.org' => 'allthetropeswiki',
-			'anuwiki.com' => 'anuwiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
+			'anuwiki.com' => 'anuwiki',
 			'boulderwiki.org' => 'boulderwikiwiki',
 			'carving.wiki' => 'carvingwiki',
+			'drone-regulation.info' => 'droneregulationwiki',
 			'haxion.space' => 'haxionspacewiki',
 			'meta.trek.tk' => 'metatrekwiki',
 			'oneagencydunedin.wiki' => 'oneagencydunedinwiki',
@@ -197,10 +204,10 @@ $wgConf->settings = array(
 			'wiki.dwplive.com' => 'dwplivewiki',
 			'wiki.grottocenter.org' => 'grottocenterwiki',
 			'wiki.kaisaga.com' => 'wikikaisagawiki',
-			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wiki.printmaking.be' => 'printmakingbewiki',
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
+			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
 		),
 	),
@@ -1016,6 +1023,7 @@ $wgConf->settings = array(
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
 		'carvingwiki' => true,
+		'casuarinawiki' => true,
 		'cbmediawiki' => true,
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
@@ -1505,6 +1513,12 @@ $wgConf->settings = array(
 			NS_LCS_TALK => 'LCS_talk',
 			NS_MEDI => 'Medi',
 			NS_MEDI_TALK => 'Medi_talk',
+			NS_LIBRARY => 'Library',
+			NS_LIBRARY_TALK => 'Library_talk',
+			NS_TEACHING => 'Teaching',
+			NS_TEACHING_TALK => 'Teaching_talk',
+			NS_BLANK => 'Blank',
+			NS_BLANK_TALK => 'Blank_talk',
 		)
 	),
 	'wgContentNamespaces' => array(
@@ -2379,6 +2393,7 @@ $wgConf->settings = array(
 		'carvingwiki' => 'https://carving.wiki',
 		'dottorcontewiki' => 'https://wiki.dottorconte.eu',
 		'downhillderelictswiki' => 'https://wiki.downhillderelicts.com',
+		'droneregulationwiki' => 'https://drone-regulation.info',
 		'dwplivewiki' => 'https://wiki.dwplive.com',
 		'grottocenterwiki' => 'https://wiki.grottocenter.org',
 		'haxionspacewiki' => 'https://haxion.space',
@@ -2622,6 +2637,7 @@ $wgConf->settings = array(
 		'default' => 'UTC',
 		'alanpediawiki' => 'Asia/Taipei',
 		'carvingwiki' => 'America/Denver',
+		'casuarinawiki' => 'Asia/Beijing',
 		'catboxwiki' => 'America/Detroit',
 		'doraemonpediawiki' => 'Asia/Taipei',
 		'libertywiki' => 'Asia/Seoul',
