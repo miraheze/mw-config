@@ -74,10 +74,16 @@ define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
 
 // wisdomwikiwiki
-define( 'NS_LCS', 1630 );
-define( 'NS_LCS_TALK', 1631 );
-define( 'NS_MEDI', 1632 );
-define( 'NS_MEDI_TALK', 1633 );
+define( 'NS_LCS', 1654 );
+define( 'NS_LCS_TALK', 1655 );
+define( 'NS_MEDI', 1656 );
+define( 'NS_MEDI_TALK', 1657 );
+define('NS_LIBRARY', 1658);
+define('NS_LIBRARY_TALK', 1659);
+define('NS_TEACHING', 1660);
+define('NS_TEACHING_TALK', 1661);
+define('NS_BLANK', 1662);
+define('NS_BLANK_TALK', 1663);
 
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
@@ -1507,6 +1513,12 @@ $wgConf->settings = array(
 			NS_LCS_TALK => 'LCS_talk',
 			NS_MEDI => 'Medi',
 			NS_MEDI_TALK => 'Medi_talk',
+			NS_LIBRARY => 'Library',
+			NS_LIBRARY_TALK => 'Library_talk',
+			NS_TEACHING => 'Teaching',
+			NS_TEACHING_TALK => 'Teaching_talk',
+			NS_BLANK => 'Blank',
+			NS_BLANK_TALK => 'Blank_talk',
 		)
 	),
 	'wgContentNamespaces' => array(
