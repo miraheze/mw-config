@@ -2080,6 +2080,7 @@ $wgConf->settings = array(
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
 				'managewiki' => true,
+				'managewiki-restricted' => true,
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
