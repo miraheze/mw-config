@@ -63,7 +63,7 @@ if ( $wmgUseComments ) {
 }
 
 if ( $wmgUseCreateWiki ) {
-	require_once( "$IP/extensions/CreateWiki/CreateWiki.php" );
+	wfLoadExtension( 'CreateWiki' );
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
 }
 
