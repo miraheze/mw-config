@@ -489,10 +489,10 @@ $wgConf->settings = array(
 	),
 
 	// Extensions
-	// Miraheze makes no garuntee about the security of information 
-	// on wikis in relation to this extension. 
-	// Additionally users should be made aware of this and agree to it.
-	// See https://phabricator.miraheze.org/T296#4468
+	// AccessControl: due to security risks, use of this extension is at the founder's own risk.
+	// Prior to enabling the extension the founder should agree (on their own wiki, under their founder account!)
+	// that Miraheze is NOT responsible for any data leaks caused by this extension,
+	// and that the founder is fully responsible for the usage of AccessControl.
 	'wmgUseAccessControl' => array(
 		'default' => false,
 		'extloadwiki' => true,
