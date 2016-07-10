@@ -1148,6 +1148,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
 	),
+	'wmgUseWidgets' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),

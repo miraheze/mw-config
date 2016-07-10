@@ -322,6 +322,10 @@ if ( $wmgUseWebChat ) {
 	$wgWebChatChannel = $wmgWebChatChannel;
 }
 
+if ( $wmgUseWidgets ) {
+	require_once( "$IP/extensions/Widgets/Widgets.php" );
+}
+
 if ( $wmgUseWikiEditor ) {
 	wfLoadExtension( 'WikiEditor' );
 	wfLoadExtension( 'CodeEditor' );
