@@ -2727,6 +2727,9 @@ $wgConf->settings = array(
 		'+wisdomwikiwiki' => array(
 			NS_LCS => true,
 			NS_MEDI => true,
+			NS_LIBRARY => true,
+			NS_TEACHING => true,
+			NS_BLANK => true,
 		),
 	),
 	// WebChat config
