@@ -531,6 +531,7 @@ $wgConf->settings = array(
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'grandtheftwikiwiki' => true,
 	),
 	'wmgUseBabel' => array(
 		'default' => true,
