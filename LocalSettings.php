@@ -1150,7 +1150,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
-		'extloadwiki' => true,
+	# Disabled due to breakage from T282
+	#	'extloadwiki' => true,
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
