@@ -20,6 +20,10 @@ if ( $wmgUseAJAXPoll ) {
 	$wgGroupPermissions['*']['ajaxpoll-view-results-before-vote'] = true;
 }
 
+if ( $wmgUseAuthorProtect ) {
+	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
+}
+
 if ( $wmgUseBabel ) {
 	require_once( "$IP/extensions/Babel/Babel.php" );
 	require_once( "$IP/extensions/cldr/cldr.php" );

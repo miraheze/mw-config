@@ -528,6 +528,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'openconstitutionwiki' => true,
 	),
+	'wmgUseAuthorProtect' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseBabel' => array(
 		'default' => true,
 	),
