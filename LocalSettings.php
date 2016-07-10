@@ -104,6 +104,8 @@ define( 'NS_SUPER_MARIO_ADVANCE_3', 1648 );
 define( 'NS_SUPER_MARIO_ADVANCE_3_TALK', 1649 );
 define( 'NS_SUPER_MARIO_ADVANCE_4', 1650 );
 define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1651 );
+define( 'NS_THE_LEGEND_OF_ZELDA', 1652 );
+define( 'NS_THE_LEGEND_OF_ZELDA_TALK', 1653 );
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1517,6 +1519,8 @@ $wgConf->settings = array(
 			NS_SUPER_MARIO_ADVANCE_3_TALK => 'Super_Mario_Advance_3_talk',
 			NS_SUPER_MARIO_ADVANCE_4 => 'Super_Mario_Advance_4',
 			NS_SUPER_MARIO_ADVANCE_4_TALK => 'Super_Mario_Advance_4_talk',
+			NS_THE_LEGEND_OF_ZELDA => 'The_Legend_of_Zelda',
+			NS_THE_LEGEND_OF_ZELDA_TALK => 'The_Legend_of_Zelda_talk',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
@@ -1537,7 +1541,7 @@ $wgConf->settings = array(
 		'+quantixwiki' => array( NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+safiriawiki' => array( NS_HOENN ),
-		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4 ),
+		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA ),
 	),
 	'wgMetaNamespace' => array(
 	    'default' => null,
@@ -1597,6 +1601,7 @@ $wgConf->settings = array(
 			'Kategori' => NS_CATEGORY,
 			'Predefinição' => NS_TEMPLATE,
 			'Imagem' => NS_IMAGE,
+			'画像' => NS_FILE,
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
