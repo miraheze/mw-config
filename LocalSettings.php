@@ -2647,7 +2647,6 @@ $wgConf->settings = array(
 		'default' => 'UTC',
 		'alanpediawiki' => 'Asia/Taipei',
 		'carvingwiki' => 'America/Denver',
-		'casuarinawiki' => 'Asia/Beijing',
 		'catboxwiki' => 'America/Detroit',
 		'doraemonpediawiki' => 'Asia/Taipei',
 		'libertywiki' => 'Asia/Seoul',
