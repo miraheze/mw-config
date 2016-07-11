@@ -653,6 +653,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'yacresourceswiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseForeground' => array(
@@ -1221,11 +1222,12 @@ $wgConf->settings = array(
 		'testwiki' => true,
 		'tmewiki' => true,
 		'twplantwiki' => true,
+		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 		'wisdomwikiwiki' => true,
 		'worldpediawiki' => true,
 		'webflowwiki' => true,
-		'urho3dwiki' => true,
+		'yacresourceswiki' => true,
 	),
 
 	// External link target
