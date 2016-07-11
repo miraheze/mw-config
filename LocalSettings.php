@@ -2599,6 +2599,7 @@ $wgConf->settings = array(
 		'luckandlogicwiki' => "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
 		'madgendersciencewiki' => "//$wmgUploadHostname/madgendersciencewiki/1/1f/Mgs_logo.jpg",
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
+		'maiasongcontestwiki' => "//$wmgUploadHostname/maiasongcontestwiki/b/bc/Sitelogo.png",
 		'makeiteasyautoswiki' => "//$wmgUploadHostname/makeiteasyautoswiki/0/01/Miea.png",
 		'mcwiki' => "//$wmgUploadHostname/mcwiki/b/bc/Wiki.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
