@@ -653,6 +653,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'yacresourceswiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseForeground' => array(
