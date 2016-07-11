@@ -1125,6 +1125,7 @@ $wgConf->settings = array(
 		'taylorwiki' => true,
 		'teleswikiwiki' => true,
 		'testwiki' => true,
+		'thefosterswiki' => true,
 		'tmewiki' => true,
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
