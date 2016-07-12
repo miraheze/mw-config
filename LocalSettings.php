@@ -482,7 +482,8 @@ $wgConf->settings = array(
 			'sysop' => true,
 		),
 		'+wisdomsandboxwiki' => array(
-			'anon' => true,)
+			'anon' => true,
+		),
 	),
 
 	// Dormancy policy && RC stuff
@@ -1572,6 +1573,9 @@ $wgConf->settings = array(
 			NS_BLANK => 'Blank',
 			NS_BLANK_TALK => 'Blank_talk',
 		)
+		'wisdomsandboxwiki' => array(
+			NS_TEST	=> 'TEST',
+			NS_TEST_TALK => 'TEST_talk',
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
