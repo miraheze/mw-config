@@ -482,7 +482,7 @@ $wgConf->settings = array(
 			'sysop' => true,
 		),
 		'+wisdomsandboxwiki' => array(
-			'anon'=true,)
+			'anon' => true,)
 	),
 
 	// Dormancy policy && RC stuff
