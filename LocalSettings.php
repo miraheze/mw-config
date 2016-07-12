@@ -1572,10 +1572,11 @@ $wgConf->settings = array(
 			NS_TEACHING_TALK => 'Teaching_talk',
 			NS_BLANK => 'Blank',
 			NS_BLANK_TALK => 'Blank_talk',
-		)
+		),
 		'wisdomsandboxwiki' => array(
 			NS_TEST	=> 'TEST',
 			NS_TEST_TALK => 'TEST_talk',
+		),	
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
