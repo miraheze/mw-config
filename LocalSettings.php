@@ -823,6 +823,7 @@ $wgConf->settings = array(
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
@@ -1184,6 +1185,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
@@ -2472,6 +2474,7 @@ $wgConf->settings = array(
 		'wikikaisagawiki' => 'https://wiki.kaisaga.com',
 		'wikiparkinsonwiki' => 'https://wikiparkinson.org',
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
+		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
@@ -2781,18 +2784,21 @@ $wgConf->settings = array(
 		'allthetropeswiki' => 'irc.freenode.net',
 		'extloadwiki' => 'irc.freenode.net',
 		'wisdomwikiwiki' => 'irc.freenode.net',
+		'wisdomsandboxwiki' => 'irc.freenode.net',
 	),
 	'wmgWebChatChannel' => array(
 		'default' => false,
 		'allthetropeswiki' => '#miraheze-allthetropes',
 		'extloadwiki' => '#miraheze-staff',
 		'wisdomwikiwiki' => '#miraheze-wisdomwiki',
+		'wisdomsandboxwiki' => '#miraheze-wisdomwiki',
 	),
 	'wmgWebChatClient' => array(
 		'default' => false,
 		'allthetropeswiki' => 'freenodeChat',
 		'extloadwiki' => 'freenodeChat',
 		'wisdomwikiwiki' => 'freenodeChat',
+		'wisdomsandboxwiki' => 'freenodeChat',
 	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
