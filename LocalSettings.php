@@ -85,6 +85,10 @@ define('NS_TEACHING_TALK', 1661);
 define('NS_BLANK', 1662);
 define('NS_BLANK_TALK', 1663);
 
+// wisdomsandboxwiki
+define( 'NS_TEST',1632);
+define( 'NS_TEST_TALK',1633);
+
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
@@ -477,6 +481,8 @@ $wgConf->settings = array(
 			'editor' => true,
 			'sysop' => true,
 		),
+		'+wisdomsandboxwiki' => array(
+			'anon'=true,)
 	),
 
 	// Dormancy policy && RC stuff
@@ -498,6 +504,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
@@ -558,6 +565,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -570,6 +578,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
@@ -582,6 +591,7 @@ $wgConf->settings = array(
 		'anuwiki' => true,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseComments' => array(
 		'default' => false,
@@ -613,6 +623,7 @@ $wgConf->settings = array(
 		'hydrawikiwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
 		'default' => true,
@@ -654,6 +665,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'yacresourceswiki' => true,
 		'yggdrasilwiki' => true,
 	),
@@ -750,6 +762,7 @@ $wgConf->settings = array(
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
@@ -762,6 +775,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseNativeSvgHandler' => array(
 	    'default' => true,
@@ -777,6 +791,8 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'universebuildwiki' => true,
+		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
@@ -835,6 +851,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'idtestwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
@@ -917,6 +934,7 @@ $wgConf->settings = array(
 		'whentheycrywiki' => true,
 		'whufcyouthwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'worldbuildingwiki' => true,
 		'worldofkirbycraftwiki' => true,
 	),
@@ -1143,6 +1161,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => true,
 		'wikikaisagawiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'wikihoyowiki' => true,
 		'worldbuildingwiki' => true,
 		'yourosongcontestwiki' => true,
@@ -1183,6 +1202,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
@@ -1227,6 +1247,7 @@ $wgConf->settings = array(
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'worldpediawiki' => true,
 		'webflowwiki' => true,
 		'yacresourceswiki' => true,
@@ -1239,6 +1260,7 @@ $wgConf->settings = array(
 		'sylwiki' => '_blank',
 		'vrgowiki' => '_blank',
 		'wisdomwikiwiki' => '_blank',
+		'wisdomsandboxwiki' => '_blank',
 	),
 
 	// Files
@@ -2741,6 +2763,9 @@ $wgConf->settings = array(
 			NS_LIBRARY => true,
 			NS_TEACHING => true,
 			NS_BLANK => true,
+		),
+		'+wisdomwikiwiki' => array(
+			NS_TEST => true,
 		),
 	),
 	// WebChat config
