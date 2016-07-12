@@ -85,6 +85,10 @@ define('NS_TEACHING_TALK', 1661);
 define('NS_BLANK', 1662);
 define('NS_BLANK_TALK', 1663);
 
+// wisdomsandboxwiki
+define( 'NS_TEST',1632);
+define( 'NS_TEST_TALK',1633);
+
 // tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
@@ -199,6 +203,7 @@ $wgConf->settings = array(
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
 			'private.revi.wiki' => 'reviwiki',
 			'publictestwiki.com' => 'testwiki',
+			'sandbox.wisdomwiki.org' => 'wisdomsandboxwiki',
 			'spiral.wiki' => 'spiralwiki',
 			'universebuild.com' => 'universebuildwiki',
 			'wiki.aenasan.com' => 'aenasanwiki',
@@ -480,6 +485,9 @@ $wgConf->settings = array(
 			'editor' => true,
 			'sysop' => true,
 		),
+		'+wisdomsandboxwiki' => array(
+			'anon' => true,
+		),
 	),
 
 	// Dormancy policy && RC stuff
@@ -501,6 +509,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
@@ -561,6 +570,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -573,6 +583,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
@@ -585,6 +596,7 @@ $wgConf->settings = array(
 		'anuwiki' => true,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseComments' => array(
 		'default' => false,
@@ -616,6 +628,7 @@ $wgConf->settings = array(
 		'hydrawikiwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseEchoThanks' => array(
 		'default' => true,
@@ -657,6 +670,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'yacresourceswiki' => true,
 		'yggdrasilwiki' => true,
 	),
@@ -753,6 +767,7 @@ $wgConf->settings = array(
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
@@ -765,6 +780,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseNativeSvgHandler' => array(
 	    'default' => true,
@@ -780,6 +796,8 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'universebuildwiki' => true,
+		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
@@ -809,6 +827,7 @@ $wgConf->settings = array(
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
@@ -838,6 +857,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'idtestwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
@@ -921,6 +941,7 @@ $wgConf->settings = array(
 		'whentheycrywiki' => true,
 		'whufcyouthwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'worldbuildingwiki' => true,
 		'worldofkirbycraftwiki' => true,
 	),
@@ -1148,6 +1169,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => true,
 		'wikikaisagawiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'wikihoyowiki' => true,
 		'worldbuildingwiki' => true,
 		'yourosongcontestwiki' => true,
@@ -1169,6 +1191,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
@@ -1188,6 +1211,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
@@ -1232,6 +1256,7 @@ $wgConf->settings = array(
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'worldpediawiki' => true,
 		'webflowwiki' => true,
 		'yacresourceswiki' => true,
@@ -1244,6 +1269,7 @@ $wgConf->settings = array(
 		'sylwiki' => '_blank',
 		'vrgowiki' => '_blank',
 		'wisdomwikiwiki' => '_blank',
+		'wisdomsandboxwiki' => '_blank',
 	),
 
 	// Files
@@ -1554,7 +1580,11 @@ $wgConf->settings = array(
 			NS_TEACHING_TALK => 'Teaching_talk',
 			NS_BLANK => 'Blank',
 			NS_BLANK_TALK => 'Blank_talk',
-		)
+		),
+		'wisdomsandboxwiki' => array(
+			NS_TEST	=> 'TEST',
+			NS_TEST_TALK => 'TEST_talk',
+		),	
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
@@ -2450,6 +2480,7 @@ $wgConf->settings = array(
 		'wikikaisagawiki' => 'https://wiki.kaisaga.com',
 		'wikiparkinsonwiki' => 'https://wikiparkinson.org',
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
+		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 	),
 	'wgShowHostnames' => array(
@@ -2554,6 +2585,7 @@ $wgConf->settings = array(
 		'wikibookswiki' => "//$wmgUploadHostname/wikibookswiki/6/60/Wiki_favicon.png",
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/08/FaviconCervantes.ico",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
+		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
@@ -2671,6 +2703,7 @@ $wgConf->settings = array(
 		'wikibookswiki' => "//$wmgUploadHostname/wikibookswiki/3/3b/Wiki_logo.png",
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/0c/LogodelWiki.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
+		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
 		'yggdrasilwiki' => "//$wmgUploadHostname/yggdrasilwiki/c/cd/Yggdrasil-logo.png",
 	),
 
@@ -2747,6 +2780,9 @@ $wgConf->settings = array(
 			NS_TEACHING => true,
 			NS_BLANK => true,
 		),
+		'+wisdomwikiwiki' => array(
+			NS_TEST => true,
+		),
 	),
 	// WebChat config
 	'wmgWebChatServer' => array(
@@ -2754,18 +2790,21 @@ $wgConf->settings = array(
 		'allthetropeswiki' => 'irc.freenode.net',
 		'extloadwiki' => 'irc.freenode.net',
 		'wisdomwikiwiki' => 'irc.freenode.net',
+		'wisdomsandboxwiki' => 'irc.freenode.net',
 	),
 	'wmgWebChatChannel' => array(
 		'default' => false,
 		'allthetropeswiki' => '#miraheze-allthetropes',
 		'extloadwiki' => '#miraheze-staff',
 		'wisdomwikiwiki' => '#miraheze-wisdomwiki',
+		'wisdomsandboxwiki' => '#miraheze-wisdomwiki',
 	),
 	'wmgWebChatClient' => array(
 		'default' => false,
 		'allthetropeswiki' => 'freenodeChat',
 		'extloadwiki' => 'freenodeChat',
 		'wisdomwikiwiki' => 'freenodeChat',
+		'wisdomsandboxwiki' => 'freenodeChat',
 	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
