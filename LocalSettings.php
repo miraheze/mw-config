@@ -203,6 +203,7 @@ $wgConf->settings = array(
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
 			'private.revi.wiki' => 'reviwiki',
 			'publictestwiki.com' => 'testwiki',
+			'sandbox.wisdomwiki.org' => 'wisdomsandboxwiki',
 			'spiral.wiki' => 'spiralwiki',
 			'universebuild.com' => 'universebuildwiki',
 			'wiki.aenasan.com' => 'aenasanwiki',
