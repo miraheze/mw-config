@@ -360,6 +360,9 @@ $wgConf->settings = array(
 		'+clementsworldbuildingwiki' => array(
 			'anon' => true,
 		),
+		'+dditecwiki' => array(
+			'anon' => true,
+		),
 		'+dottorcontewiki' => array(
 			'anon' => true,
 		),
