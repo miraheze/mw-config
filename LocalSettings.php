@@ -368,6 +368,8 @@ $wgConf->settings = array(
 		),
 		'+dditecwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'editor' => true,
 		),
 		'+dottorcontewiki' => array(
 			'anon' => true,
