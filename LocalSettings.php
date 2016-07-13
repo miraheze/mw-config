@@ -817,6 +817,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePageNotice' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'secondcirclewiki' => true,
 		'wisdomwikiwiki' => true,
