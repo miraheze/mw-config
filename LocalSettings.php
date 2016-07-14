@@ -2442,6 +2442,9 @@ $wgConf->settings = array(
 		'default' => array(
 			'delete',
 		),
+		'testwiki' => array(
+			'deleterevision',
+		),
 	),
 
 	// Server
