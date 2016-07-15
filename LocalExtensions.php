@@ -227,16 +227,13 @@ if ( $wmgUseScratchBlocks ) {
 	wfLoadExtension( "ScratchBlocks" );
 }
 
-if ( $wmgUseScribunto ) {
-	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
-
-    if ( $wmgUseSyntaxHighlight ) {
+if ( $wmgUseSyntaxHighlight ) {
         $wgScribuntoUseGeSHi = true;
-    }
-    if ( $wmgUseWikiEditor ) {
-        $wgScribuntoUseCodeEditor = true;
-    }
 }
+if ( $wmgUseWikiEditor ) {
+        $wgScribuntoUseCodeEditor = true;
+}
+
 
 if ( $wmgUseSectionHide ) {
 	require_once( "$IP/extensions/SectionHide/SectionHide.php" );
