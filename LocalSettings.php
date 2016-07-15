@@ -457,6 +457,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+thelonsdalebattalionwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+thoughtonomywikiwiki' => array(
 			'anon' => true,
 		),
@@ -1460,6 +1465,16 @@ $wgConf->settings = array(
 			NS_MAIN,
 			NS_PROJECT,
 		),
+	),
+	
+	// Metrolook settings
+	'wgMetrolookDownArrow' => array(
+		'default' => true,
+		'thelonsdalebattalionwiki' => false,
+	),
+	'wgMetrolookBartile' => array(
+		'default' => true,
+		'thelonsdalebattalionwiki' => false,
 	),
 
 	// MirahezeMagic
