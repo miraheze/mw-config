@@ -23,4 +23,5 @@ wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'ParserFunctions' );
 wfLoadExtension( 'Poem' );
+wfLoadExtension( 'Scribunto' );
 wfLoadExtension( 'SiteMatrix' );
