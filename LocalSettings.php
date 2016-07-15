@@ -1001,6 +1001,7 @@ $wgConf->settings = array(
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 		'wikicervanteswiki' => true,
+		'xdjibiwiki' => true,
 		'xofwiki' => true,
 	),
 	// Combo of Tabs + Tabber
@@ -1177,6 +1178,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 		'wikihoyowiki' => true,
 		'worldbuildingwiki' => true,
+		'xdjibiwiki' => true,
 		'yourosongcontestwiki' => true,
 		'yggdrasilwiki' => true,
 	),
