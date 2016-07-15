@@ -227,9 +227,6 @@ if ( $wmgUseScratchBlocks ) {
 	wfLoadExtension( "ScratchBlocks" );
 }
 
-if ( $wmgUseScribunto ) {
-	require_once( "$IP/extensions/Scribunto/Scribunto.php" );
-
     if ( $wmgUseSyntaxHighlight ) {
         $wgScribuntoUseGeSHi = true;
     }
