@@ -2790,7 +2790,7 @@ $wgConf->settings = array(
 			NS_TEACHING => true,
 			NS_BLANK => true,
 		),
-		'+wisdomwikiwiki' => array(
+		'+wisdomsandboxwiki' => array(
 			NS_TEST => true,
 		),
 	),
