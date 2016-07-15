@@ -1466,11 +1466,11 @@ $wgConf->settings = array(
 	),
 	
 	// Metrolook settings
-	'$wgMetrolookDownArrow' => array(
+	'wgMetrolookDownArrow' => array(
 		'default' => true,
 		'thelonsdalebattalionwiki' => false,
 	),
-	'$wgMetrolookBartile' => array(
+	'wgMetrolookBartile' => array(
 		'default' => true,
 		'thelonsdalebattalionwiki' => false,
 	),
