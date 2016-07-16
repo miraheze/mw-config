@@ -2373,6 +2373,9 @@ $wgConf->settings = array(
 	),
 
 	// Scribunto
+	'wgCodeEditorEnableCore' => array(
+		'default' => true,
+	),
 	'wgScribuntoUseCodeEditor' => array(
 		'default' => true,
 	),

@@ -309,14 +309,6 @@ if ( $wmgUseWidgets ) {
 	require_once( "$IP/extensions/Widgets/Widgets.php" );
 }
 
-if ( $wmgUseWikiEditor ) {
-	wfLoadExtension( 'WikiEditor' );
-	wfLoadExtension( 'CodeEditor' );
-	$wgDefaultUserOptions['usebetatoolbar'] = 1;
-	$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
-	$wgCodeEditorEnableCore = true;
-}
-
 if ( $wmgUseWikiForum ) {
 	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 }
