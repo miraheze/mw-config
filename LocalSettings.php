@@ -642,9 +642,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
-	'wmgUseEchoThanks' => array(
-		'default' => true,
-	),
 	'wmgUseEditcount' => array(
 		'default' => false,
 		'aktposwiki' => true,

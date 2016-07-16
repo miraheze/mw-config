@@ -78,11 +78,6 @@ if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
 }
 
-if ( $wmgUseEchoThanks ) {
-	require_once( "$IP/extensions/Echo/Echo.php" );
-	require_once( "$IP/extensions/Thanks/Thanks.php" );
-}
-
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
