@@ -1123,9 +1123,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => false, // Disabled due to breakage from T282
 	),
-	'wmgUseWikiEditor' => array(
-		'default' => true,
-	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
 		'entropediawiki' => true,
@@ -2373,6 +2370,11 @@ $wgConf->settings = array(
 		'default' => array(
 			'delete',
 		),
+	),
+
+	// Scribunto
+	'wgScribuntoUseCodeEditor' => array(
+		'default' => true,
 	),
 
 	// Server
