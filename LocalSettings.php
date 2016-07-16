@@ -1662,7 +1662,11 @@ $wgConf->settings = array(
 			NS_LCS => true,
 			NS_LIBRARY => true,
 			NS_TEACHING => true,
-		)
+		),
+		'+wisdomsandboxwiki' => array(
+			NS_MAIN => true,
+			NS_TEST => true,
+		),
 	),
 
 	// OAuth
