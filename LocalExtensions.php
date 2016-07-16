@@ -170,10 +170,6 @@ if ( $wmgUseMultiBoilerplate ) {
 	$wgMultiBoilerplateOptions = false;
 }
 
-if ( $wmgUseNativeSvgHandler ) {
-	require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
-}
-
 if ( $wmgUseNewestPages ) {
 	require_once( "$IP/extensions/NewestPages/NewestPages.php" );
 }

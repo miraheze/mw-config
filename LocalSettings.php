@@ -789,9 +789,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
-	'wmgUseNativeSvgHandler' => array(
-	    'default' => true,
-	),
 	'wmgUseNewestPages' => array(
 	    'default' => false,
 	    'christipediawiki' => true,
