@@ -521,6 +521,7 @@ $wgConf->settings = array(
 	'wmgUseAccessControl' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'wimawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
