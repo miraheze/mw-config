@@ -26,12 +26,8 @@ $wgLocalVirtualHosts = array( '185.52.1.77' );
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
-
-// metawiki
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
-
-// quantixwiki
 define( 'NS_HL2RP', 1602 );
 define( 'NS_HL2RP_TALK', 1603 );
 define( 'NS_ARP', 1604 );
@@ -46,59 +42,33 @@ define( 'NS_LEAGUE', 1612 );
 define( 'NS_LEAGUE_TALK', 1613 );
 define( 'NS_SMITE', 1614 );
 define( 'NS_SMITE_TALK', 1615 );
-
-// ReviWiki
 define( 'NS_SERVER', 1616 );
 define( 'NS_SERVER_TALK', 1617);
-
-// catboxwiki
 define( 'NS_COMIC', 1618 );
 define( 'NS_COMIC_TALK', 1619 );
-
-// allthetropeswiki
 define( 'NS_TROPEWORKSHOP', 1620 );
 define( 'NS_TROPEWORKSHOP_TALK', 1621 );
-define( 'NS_REVIEWS', 1630 );
-define( 'NS_REVIEWS_TALK', 1631 );
-
-// safiriawiki
 define( 'NS_HOENN', 1622 );
 define( 'NS_HOENN_TALK', 1623 );
-
-// developmentwiki
 define( 'NS_OFFICIAL', 1624 );
 define( 'NS_OFFICIAL_TALK', 1625 );
-
-// AdnovumWiki (AdnovumRP) and others
 define( 'NS_PORTAL', 1626 );
 define( 'NS_PORTAL_TALK', 1627 );
-
-// wisdomwikiwiki
-define( 'NS_LCS', 1654 );
-define( 'NS_LCS_TALK', 1655 );
-define( 'NS_MEDI', 1656 );
-define( 'NS_MEDI_TALK', 1657 );
-define('NS_LIBRARY', 1658);
-define('NS_LIBRARY_TALK', 1659);
-define('NS_TEACHING', 1660);
-define('NS_TEACHING_TALK', 1661);
-define('NS_BLANK', 1662);
-define('NS_BLANK_TALK', 1663);
-
-// wisdomsandboxwiki
-define( 'NS_TEST',1632);
-define( 'NS_TEST_TALK',1633);
-
-// tmewiki
 define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
+define( 'NS_REVIEWS', 1630 );
+define( 'NS_REVIEWS_TALK', 1631 );
+define( 'NS_TEST', 1632);
+define( 'NS_TEST_TALK', 1633);
+// MISSING 1634
+// MISSING 1635
 define( 'NS_MINECRAFT', 1636 );
 define( 'NS_MINECRAFT_TALK', 1637 );
 define( 'NS_SUPER_MARIO_LAND_2', 1638 );
 define( 'NS_SUPER_MARIO_LAND_2_TALK', 1639 );
 define( 'NS_SUPER_MARIO_WORLD_2', 1640 );
 define( 'NS_SUPER_MARIO_WORLD_2_TALK', 1641 );
-define( 'NS_SUPER_MARIO_BROS', 1645 );
+define( 'NS_SUPER_MARIO_BROS', 1642 );
 define( 'NS_SUPER_MARIO_BROS_TALK', 1643 );
 define( 'NS_SUPER_MARIO_ADVANCE', 1644 );
 define( 'NS_SUPER_MARIO_ADVANCE_TALK', 1645 );
@@ -110,6 +80,16 @@ define( 'NS_SUPER_MARIO_ADVANCE_4', 1650 );
 define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1651 );
 define( 'NS_THE_LEGEND_OF_ZELDA', 1652 );
 define( 'NS_THE_LEGEND_OF_ZELDA_TALK', 1653 );
+define( 'NS_LCS', 1654 );
+define( 'NS_LCS_TALK', 1655 );
+define( 'NS_MEDI', 1656 );
+define( 'NS_MEDI_TALK', 1657 );
+define( 'NS_LIBRARY', 1658);
+define( 'NS_LIBRARY_TALK', 1659);
+define( 'NS_TEACHING', 1660);
+define( 'NS_TEACHING_TALK', 1661);
+define( 'NS_BLANK', 1662);
+define( 'NS_BLANK_TALK', 1663);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
