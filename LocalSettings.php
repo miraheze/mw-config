@@ -2474,6 +2474,7 @@ $wgConf->settings = array(
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
 		'stellachronicawiki' => 'monobook',
+		'thelonsdalebattalionwiki' => 'metrolook',
 	),
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
