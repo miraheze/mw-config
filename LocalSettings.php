@@ -413,6 +413,11 @@ $wgConf->settings = array(
 		'+ofthevampirewiki' => array(
 			'anon' => true,
 		),
+		'+oncprojectwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+poserdazfreebieswiki' => array(
 			'anon' => true,
 			'user' => true,
