@@ -136,6 +136,7 @@ $wgConf->settings = array(
 	'wgAutoConfirmCount' => array(
 		'default' => 10,
 	),
+
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
@@ -147,12 +148,12 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'inazumaelevenwiki' => true,
 	),
+
 	// Block
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
 	),
 
-	
 	// Cache
 	'wgCacheDirectory' => array(
 		'default' => '/srv/mediawiki/w/cache',
@@ -720,8 +721,6 @@ $wgConf->settings = array(
 	'wmgUseInputBox' => array(
 		'default' => true,
 		'allthetropeswiki' => false, // breaks editing
-		'newcolumbiawiki' => true,
-		'simonjonwiki' => true,
 	),
 	'wmgUseJosa' => array(
 		'default' => false,
@@ -753,12 +752,12 @@ $wgConf->settings = array(
 	'wmgUseMsPackage' => array(
 		'default' => false,
 		'catboxwiki' => true,
-		'extloadwiki' => true, //do not set this to false without disabling MsUpload on all wikis below
+		'extloadwiki' => true, // do not set this to false without disabling MsUpload on all wikis below
 		'gameswiki' => true,
 		'quantixwiki' => true,
 		'urho3dwiki' => true,
 	),
-	//MsUpload is enabled on extloadwiki via MsPackage
+	// MsUpload is enabled on extloadwiki via MsPackage
 	'wmgUseMsUpload' => array(
 		'default' => false,
 		'adnovumwiki' => true,
@@ -910,7 +909,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
-	// Possible cause of HHVM crashes
 	'wmgUseSyntaxHighlight' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -1132,13 +1130,11 @@ $wgConf->settings = array(
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
-	# Disabled due to breakage from T282
-	#	'extloadwiki' => true,
+		'extloadwiki' => false, // Disabled due to breakage from T282
 	),
 	'wmgUseWikiEditor' => array(
 		'default' => true,
 	),
-	// When enabling WikiForum on wikis, update.php must be manually run on that wiki!
 	'wmgUseWikiForum' => array(
 		'default' => false,
 		'entropediawiki' => true,
@@ -1212,7 +1208,6 @@ $wgConf->settings = array(
 	// Files
 	'wgEnableUploads' => array(
 		'default' => true,
-		'testwiki' => true,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
@@ -1228,7 +1223,7 @@ $wgConf->settings = array(
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
-		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx')
+		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
 	),
 	'wgUseInstantCommons' => array(
 		'default' => true,
@@ -1422,7 +1417,6 @@ $wgConf->settings = array(
 	),
 	'wgAllowDisplayTitle' => array(
 		'default' => true,
-		'nissanecuwiki' => true,
 	),
 
 	// Mobile
@@ -1431,7 +1425,7 @@ $wgConf->settings = array(
 	),
 	
 	// MsCatSelect vars
-	'wgMSCS_WarnNoCategories' => array( // MSCatSelect (from MsPackage) option
+	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
 		'gameswiki' => false,
 		'quantixwiki' => false,
@@ -2740,6 +2734,7 @@ $wgConf->settings = array(
 			NS_TEST => true,
 		),
 	),
+
 	// WebChat config
 	'wmgWebChatServer' => array(
 		'default' => false,
