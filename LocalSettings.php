@@ -565,9 +565,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'grandtheftwikiwiki' => true,
 	),
-	'wmgUseBabel' => array(
-		'default' => true,
-	),
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
