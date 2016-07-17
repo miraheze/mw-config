@@ -898,6 +898,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'idtestwiki' => true,
+		'partupwiki' => true,
 		'pascalscada' => true,
 		'priyowiki' => true,
 		'sourcewiki' => true,
