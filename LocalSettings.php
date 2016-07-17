@@ -2581,6 +2581,7 @@ $wgConf->settings = array(
 		'makeiteasyautoswiki' => "//$wmgUploadHostname/makeiteasyautoswiki/0/01/Miea.png",
 		'mcwiki' => "//$wmgUploadHostname/mcwiki/b/bc/Wiki.png",
 		'mecanonwiki' => "//$wmgUploadHostname/mecanonwiki/8/85/Mecanon_logo.png",
+		'mindgearwiki' => "//$wmgUploadHostname/mindgearwiki/3/36/Mind_Gear.png",
 		'moralecwiki' => "//$wmgUploadHostname/moralecwiki/e/e8/Moralec-pluto.png",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/2/2a/USNC_sunflower_logo.png",
 		'nanopediawiki' => "//$wmgUploadHostname/nanopediawiki/c/c9/Logo.png",
