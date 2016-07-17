@@ -391,6 +391,11 @@ $wgConf->settings = array(
 		'+micropediawiki' => array(
 			'anon' => true,
 		),
+		'+ntlawwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+ofthevampirewiki' => array(
 			'anon' => true,
 		),
