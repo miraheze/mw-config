@@ -90,6 +90,14 @@ define( 'NS_TEACHING', 1660);
 define( 'NS_TEACHING_TALK', 1661);
 define( 'NS_BLANK', 1662);
 define( 'NS_BLANK_TALK', 1663);
+define( 'NS_RESEARCH', 1664);
+define( 'NS_RESEARCH_TALK', 1665);
+define('NS_ADMIN', 1666);
+define('NS_ADMIN_TALK', 1667);
+define('NS_WORKSHOP', 1668);
+define('NS_WORKSHOP_TALK', 1669);
+define('NS_SELP', 1670);
+define('NS_SELP_TALK', 1671);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1437,6 +1445,16 @@ $wgConf->settings = array(
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
+		),
+		'hydrawikiwiki' => array(
+			NS_RESEARCH => "Research",
+			NS_RESEARCH_TALK => "Research_talk",
+			NS_ADMIN => "Admin",
+			NS_ADMIN_TALK => "Admin_talk",
+			NS_WORKSHOP => "Workshop",
+			NS_WORKSHOP_TALK => "Workshop_talk",
+			NS_SELP => "Selp",
+			NS_SELP_TALK => "Selp_talk",
 		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
