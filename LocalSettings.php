@@ -2554,6 +2554,7 @@ $wgConf->settings = array(
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'evawiki' => "//$wmgUploadHostname/evawiki/e/ec/EVA-Wiki.png",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
+		'fifamwiki' => "//$wmgUploadHostname/fifamwiki/4/4b/Wikilogo.png",
 		'fishpercolatorwiki' => "//$wmgUploadHostname/fishpercolatorwiki/d/d2/FPLogo.png",
 		'foodsharinghamburgwiki' => "//$wmgUploadHostname/foodsharinghamburgwiki/d/d2/FoodsharingHamburgLogo135px.jpg",
 		'forexwiki' => "//$wmgUploadHostname/forexwiki/c/c9/Logo.png",
