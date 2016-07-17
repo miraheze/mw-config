@@ -369,6 +369,11 @@ $wgConf->settings = array(
 		'+freecollegeprojectwiki' => array(
 			'anon' => true,
 		),
+		'+frontdeskswiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+geodatawiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -998,6 +1003,7 @@ $wgConf->settings = array(
 		'ezdmfwiki' => true,
 		'fishpercolatorwiki' => true,
 		'foodsharinghamburgwiki' => true,
+		'frontdeskswiki' => true,
 		'gameswiki' => true,
 		'geirpediawiki' => true,
 		'genwiki' => true,
