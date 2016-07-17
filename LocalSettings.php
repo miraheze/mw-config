@@ -2920,6 +2920,9 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
+$wgDefaultUserOptions['usebetatoolbar'] = 1;  
+$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1; 
+
 
 $wgHooks['PrefsPasswordAudit'][] = 'onPrefsPasswordAuditTestWiki';
 function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
