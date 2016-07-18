@@ -1116,6 +1116,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'pnphilotenwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -2750,7 +2751,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => 'irc.freenode.net',
 		'extloadwiki' => 'irc.freenode.net',
-		'pnphilotenwiki' => 'irc.freenode.net'
+		'pnphilotenwiki' => 'irc.freenode.net',
 		'wisdomwikiwiki' => 'irc.freenode.net',
 		'wisdomsandboxwiki' => 'irc.freenode.net',
 	),
