@@ -955,6 +955,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'pathfinderwiki' => true,
 		'stellachronicawiki' => true,
+		'studynotekrwiki' => true,
 		'spiralwiki' => true,
 		'rtwiki' => true,
 		'testwiki' => true,
