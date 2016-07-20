@@ -98,6 +98,12 @@ define('NS_WORKSHOP', 1668);
 define('NS_WORKSHOP_TALK', 1669);
 define('NS_SELP', 1670);
 define('NS_SELP_TALK', 1671);
+define('NS_STUDY_NOTE', 1672);
+define('NS_STUDY_NOTE_TALK', 1673);
+define('NS_EXPLANATION', 1674);
+define('NS_EXPLANATION_TALK', 1675);
+define('NS_KOREAN_STUDY_NOTE', 1676);
+define('NS_KOREAN_STUDY_NOTE_TALK', 1677);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -952,6 +958,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'pathfinderwiki' => true,
 		'stellachronicawiki' => true,
+		'studynotekrwiki' => true,
 		'spiralwiki' => true,
 		'rtwiki' => true,
 		'testwiki' => true,
@@ -1491,6 +1498,12 @@ $wgConf->settings = array(
 			NS_HOENN => 'Hoenn',
 			NS_HOENN_TALK => 'Hoenn_talk',
 		),
+		'studynotekrwiki' => array(
+			NS_STUDY_NOTE => 'Study note',
+			NS_STUDY_NOTE_TALK => 'Study note_talk',
+			NS_EXPLANATION => 'Explanation',
+			NS_EXPLANATION_TALK => 'Explanation_talk',
+		),
 		'tmewiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
@@ -1561,6 +1574,10 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
+		),
+		'+studynotekrwiki' => array(
+			'KSN' => NS_KOREAN_STUDY_NOTE,
+			'KSN_TALK' => NS_KOREAN_STUDY_NOTE_TALK,
 		),
 		'+tmewiki' => array(
 			'The_Multilingual_Encyclopedia' => NS_PROJECT,
