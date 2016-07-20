@@ -551,6 +551,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
+		'worldbattlewiki' => true,
 		'yggdrasilwiki' => true,
 	),
 	'wmgUseAJAXPoll' => array(
