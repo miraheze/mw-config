@@ -970,6 +970,7 @@ $wgConf->settings = array(
 		'aacenterpriselearningwiki' => true,
 		'adnovumwiki' => true,
 		'aescapeswiki' => true,
+		'ageofimperialismwiki' => true,
 		'airwiki' => true,
 		'aktposwiki' => true,
 		'alanpediawiki' => true,
