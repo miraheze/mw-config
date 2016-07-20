@@ -128,7 +128,7 @@ $wgConf->settings = array(
 	// Article Count Method
 	'wgArticleCountMethod' = array(
 		'default' => false, // To update it, you will need to run the maintenance/updateArticleCount.php script
-		'lomithradienwiki' => 'any',
+		'lomithradienwiki' => any,
 	),
 
 	// BetaFeatures
