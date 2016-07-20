@@ -124,6 +124,12 @@ $wgConf->settings = array(
 	'wgAutoConfirmCount' => array(
 		'default' => 10,
 	),
+	// Article Count Method
+	'wgArticleCountMethod' => array(
+		'default' => false, // To update it, you will need to run the maintenance/updateArticleCount.php script
+		'lomithradienwiki' => 'any',
+	),
+
 
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => array(
