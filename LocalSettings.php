@@ -124,7 +124,7 @@ $wgConf->settings = array(
 	'wgAutoConfirmCount' => array(
 		'default' => 10,
 	),
-
+	
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
@@ -2457,7 +2457,13 @@ $wgConf->settings = array(
 	'wgSiteMatrixSites' => array(
 		'default' => array(),
 	),
-
+	
+	// Statistics
+	'wgArticleCountMethod' => array(
+		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
+		'lomithradienwiki' => 'any',
+	),
+	
 	// Squid (aka Varnish)
 	'wgUseSquid' => array(
 		'default' => true,
