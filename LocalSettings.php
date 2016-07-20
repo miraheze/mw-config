@@ -983,6 +983,7 @@ $wgConf->settings = array(
 		'aryamanwiki' => true,
 		'atheneumwiki' => true,
 		'augustinianumwiki' => true,
+		'aurcusonlinewiki' => true,
 		'bgowiki' => true,
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
