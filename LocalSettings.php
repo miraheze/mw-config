@@ -1569,6 +1569,10 @@ $wgConf->settings = array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
 		),
+		'+studynotekrwiki' => array(
+			'KSN' => NS_KOREAN_STUDY_NOTE,
+			'KSN_TALK' => NS_KOREAN_STUDY_NOTE_TALK,
+		),
 		'+tmewiki' => array(
 			'The_Multilingual_Encyclopedia' => NS_PROJECT,
 			'The_Multilingual_Encyclopedia_talk' => NS_PROJECT_TALK,
