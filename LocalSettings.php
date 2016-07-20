@@ -103,7 +103,7 @@ define('NS_STUDY_NOTE_TALK', 1673);
 define('EXPLANATION', 1674);
 define('EXPLANATION_TALK', 1675);
 define('NS_KOREAN_STUDY_NOTE', 1676);
-define('NS_KOREAN_STUDY_NOTE_TALK', 1677)
+define('NS_KOREAN_STUDY_NOTE_TALK', 1677);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
