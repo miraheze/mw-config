@@ -2462,7 +2462,6 @@ $wgConf->settings = array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'lomithradienwiki' => 'any',
 	),
-	
 	// Squid (aka Varnish)
 	'wgUseSquid' => array(
 		'default' => true,
