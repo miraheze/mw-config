@@ -102,6 +102,8 @@ define('NS_STUDY_NOTE', 1672);
 define('NS_STUDY_NOTE_TALK', 1673);
 define('EXPLANATION', 1674);
 define('EXPLANATION_TALK', 1675);
+define('NS_KOREAN_STUDY_NOTE', 1676);
+define('NS_KOREAN_STUDY_NOTE_TALK', 1677)
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1493,10 +1495,10 @@ $wgConf->settings = array(
 			NS_HOENN_TALK => 'Hoenn_talk',
 		),
 		'studynotekrwiki' => array(
-			'NS_STUDY_NOTE' => 'Study note',
-			'NS_STUDY_NOTE_TALK' => 'Study note_talk',
-			'NS_EXPLANATION' => 'Explanation',
-			'NS_EXPLANATION_TALK' => 'Explanation_talk',
+			NS_STUDY_NOTE => 'Study note',
+			NS_STUDY_NOTE_TALK => 'Study note_talk',
+			NS_EXPLANATION => 'Explanation',
+			NS_EXPLANATION_TALK => 'Explanation_talk',
 		),
 		'tmewiki' => array(
 			NS_PORTAL => 'Portal',
