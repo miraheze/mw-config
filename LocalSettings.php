@@ -1194,6 +1194,7 @@ $wgConf->settings = array(
 		'vrgowiki' => '_blank',
 		'wisdomwikiwiki' => '_blank',
 		'wisdomsandboxwiki' => '_blank',
+		'yacresourceswiki' => '_blank',
 	),
 
 	// Files
