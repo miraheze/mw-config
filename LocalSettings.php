@@ -556,7 +556,6 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'touhouenginewiki' => true,
 		'walthamstowlabourwiki' => true,
-		'wisdomwikiwiki' => true,
 		'worldbattlewiki' => true,
 		'yggdrasilwiki' => true,
 	),
@@ -716,6 +715,7 @@ $wgConf->settings = array(
 		'shoppingwiki' => true,
 		'studynotekrwiki' => true,
 		'universebuildwiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUseInputBox' => array(
 		'default' => true,
@@ -846,6 +846,8 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUsePoll' => array(
 		'default' => false,
@@ -879,7 +881,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
-		'wisdomwikiwiki' => true,
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
@@ -949,6 +950,8 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
+		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
@@ -1226,6 +1229,8 @@ $wgConf->settings = array(
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
+		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
+		'+wisdomsandboxwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
 	),
 	'wgUseInstantCommons' => array(
 		'default' => true,
