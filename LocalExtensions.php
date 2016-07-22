@@ -133,6 +133,10 @@ if ( $wmgUseJosa ) {
 	require_once( "$IP/extensions/Josa/Josa.php" );
 }
 
+if ( $wmgUseLinkSuggest ) {
+	wfLoadExtension( 'LinkSuggest' );
+}
+
 if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 	require_once( "$IP/extensions/Loops/Loops.php");
