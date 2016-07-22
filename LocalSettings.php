@@ -2187,6 +2187,9 @@ $wgConf->settings = array(
 				'skipcpatcha' => true,
 				'voter' => true,
 			),
+			'sysop' => array(
+				'commentadmin' => true,
+			),
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
