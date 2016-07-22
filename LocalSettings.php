@@ -315,7 +315,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		// 'allthetropeswiki' => 'Miraheze System Administrators are performing database maintenance until approximately 20:25 UTC.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -3002,12 +3001,12 @@ $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;  
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1; 
 
-
 $wgHooks['PrefsPasswordAudit'][] = 'onPrefsPasswordAuditTestWiki';
 function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
 	if ( $user->getName() == 'Example' ) {
 		return "User not allowed to change password, Example account";
 	}
+
 		return true;
 }
 
@@ -3037,6 +3036,7 @@ if ( $wgDBname == 'idtestwiki' ) {
 }
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
+
 	function wfModifyMetaTags( OutputPage $out ) {
 		$out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
 		$out->addMeta( 'revisit-after', '2 days' );
