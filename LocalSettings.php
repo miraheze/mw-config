@@ -728,6 +728,11 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'reviwiki' => true,
 	),
+	'wmgUseLinkSuggest' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseLoopsCombo' => array(
 		'default' => false,
 		'bgowiki' => true,
