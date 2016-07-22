@@ -134,7 +134,7 @@ if ( $wmgUseJosa ) {
 }
 
 if ( $wmgUseLinkSuggest ) {
-	require_once( "$IP/extensions/LinkSuggest/LinkSuggest.php" );
+	wfLoadExtension( 'LinkSuggest' );
 }
 
 if ( $wmgUseLoopsCombo ) {
