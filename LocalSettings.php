@@ -3056,10 +3056,20 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
-$siteNotice .= <<<EOF
-<table class="wikitable" style="text-align:center;"><tbody><tr>
-<td>[[m:Miraheze-1-year|The first anniversary of Miraheze is today! Come celebrate with us, as we reflect on the our start and look to the future.]] And please let us know how you feel about Miraheze by [http://goo.gl/forms/rHK82494r4SSGt7y2 taking our survey], so that we can learn how to improve our service. Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
-</tr></tbody></table>
+	global $wgDBname;
+	
+	if ( $wgDBname == 'metawiki' ) {
+		$siteNotice .= <<<EOF
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+		<td>[[Miraheze-1-year|The first anniversary of Miraheze is today! Come celebrate with us, as we reflect on the our start and look to the future.]] And please let us know how you feel about Miraheze by [http://goo.gl/forms/rHK82494r4SSGt7y2 taking our survey], so that we can learn how to improve our service. Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+		</tr></tbody></table>
 EOF;
-return true;
+	} else {
+		$siteNotice .= <<<EOF
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+		<td>[[m:Miraheze-1-year|The first anniversary of Miraheze is today! Come celebrate with us, as we reflect on the our start and look to the future.]] And please let us know how you feel about Miraheze by [http://goo.gl/forms/rHK82494r4SSGt7y2 taking our survey], so that we can learn how to improve our service. Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+		</tr></tbody></table>
+EOF;
+	}
+	return true;
 }
