@@ -489,9 +489,6 @@ $wgConf->settings = array(
 		'+welcomewiki' => array(
 			'anon' => true,
 		),
-		'+wikiacawiki' => array(
-			'anon' => true,
-		),
 		'+walthamstowlabourwiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -852,7 +849,6 @@ $wgConf->settings = array(
 	'wmgUsePoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'lclwiki' => true,
 		'nidda23wiki' => true,
 		'universebuildwiki' => true,
 	),
@@ -1189,7 +1185,6 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'testwiki' => true,
 		'tmewiki' => true,
-		'twplantwiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -1247,7 +1242,6 @@ $wgConf->settings = array(
 		'drunkenpeasantswikiwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
-		'walthamstowlaboutwiki' => true,
 	),
 
 	// GlobalBlocking
@@ -2221,9 +2215,6 @@ $wgConf->settings = array(
 		'gameswiki' => array(
 			'*' => true,
 		),
-		'lupawiki' => array(
-			'*' => true,
-		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -2614,7 +2605,6 @@ $wgConf->settings = array(
 		'diggywikipolskawiki' => "//$wmgUploadHostname/diggywikipolskawiki/8/81/Logodiggy.png",
 		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/b/bc/Wiki.png",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/c/c0/Logo_135.png",
-		'elsieworldwiki' => "//$wmgUploadHostname/elsiesworldwiki/5/51/Elsie_logo.png",
 		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'evawiki' => "//$wmgUploadHostname/evawiki/e/ec/EVA-Wiki.png",
