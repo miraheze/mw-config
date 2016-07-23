@@ -1053,6 +1053,7 @@ $wgConf->settings = array(
 		'lunfengwiki' => true,
 		'maiasongcontestwiki' => true,
 		'mecanonwiki' => true,
+		'menufeedwiki' => true,
 		'meregoswiki' => true,
 		'metawiki' => true,
 		'musiclibrarywiki' => true,
