@@ -744,6 +744,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
