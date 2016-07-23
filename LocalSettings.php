@@ -3047,10 +3047,9 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
         $wgLocalisationCacheConf['manualRecache'] = false;
 }
 
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+// Global SiteNotice
+/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wgDBname;
-	
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
 	<td><a href="https://meta.miraheze.org/wiki/Miraheze-1-year">The first anniversary of Miraheze is today! Come celebrate with us, as we reflect on our start and look to the future.</a> And please let us know how you feel about Miraheze by  <a href="http://goo.gl/forms/rHK82494r4SSGt7y2">taking our survey</a>, so that we can learn how to improve our service. Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
@@ -3058,4 +3057,4 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
 
 	return true;
-}
+} */
