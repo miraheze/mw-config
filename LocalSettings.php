@@ -136,11 +136,13 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'inazumaelevenwiki' => true,
+		'thehushhushsagawiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'inazumaelevenwiki' => true,
+		'thehushhushsagawiki' => true,
 	),
 
 	// Block
@@ -571,6 +573,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
+		'thehushhushsagawiki' => true,
 	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
@@ -966,6 +969,7 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'rtwiki' => true,
 		'testwiki' => true,
+		'thehushhushsagawiki' => true,
 		'valentinaprojectwiki' => true,
 		'welcomewiki' => true,
 	),
@@ -1094,6 +1098,7 @@ $wgConf->settings = array(
 		'teleswikiwiki' => true,
 		'testwiki' => true,
 		'thefosterswiki' => true,
+		'thehushhushsagawiki' => true,
 		'tmewiki' => true,
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
