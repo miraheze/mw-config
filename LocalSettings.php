@@ -104,6 +104,8 @@ define('NS_EXPLANATION', 1674);
 define('NS_EXPLANATION_TALK', 1675);
 define('NS_KOREAN_STUDY_NOTE', 1676);
 define('NS_KOREAN_STUDY_NOTE_TALK', 1677);
+define('NS_GLOSSARY', 1678);
+define('NS_GLOSSARY_TALK', 1679);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1517,6 +1519,10 @@ $wgConf->settings = array(
 			NS_STUDY_NOTE_TALK => 'Study note_talk',
 			NS_EXPLANATION => 'Explanation',
 			NS_EXPLANATION_TALK => 'Explanation_talk',
+		),
+		'thelonsdalebattalionwiki' => array(
+			NS_GLOSSARY => 'Glossary',
+			NS_GLOSSARY_TALK => 'Glossary_talk',
 		),
 		'tmewiki' => array(
 			NS_PORTAL => 'Portal',
