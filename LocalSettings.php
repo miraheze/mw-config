@@ -1410,6 +1410,11 @@ $wgConf->settings = array(
 	'wgMetrolookDownArrow' => array(
 		'default' => true,
 		'thelonsdalebattalionwiki' => false,
+		'allthetropeswiki' => false,
+	),
+	'wgMetrolookUploadButton' => array(
+		'default' => true,
+		'allthetropeswiki' => false,
 	),
 	'wgMetrolookBartile' => array(
 		'default' => true,
