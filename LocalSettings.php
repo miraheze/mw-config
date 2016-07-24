@@ -638,6 +638,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'webflowwiki' => true,
 	),
+	'wmgUseDuskToDawn' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

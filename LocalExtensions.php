@@ -70,6 +70,10 @@ if ( $wmgUseCSS ) {
 	require_once( "$IP/extensions/CSS/CSS.php" );
 }
 
+if ( $wmgUseDuskToDawn ) {
+	wfLoadSkin( 'DuskToDawn' );
+}
+
 if ( $wmgUseDynamicPageList ) {
 	require_once( "$IP/extensions/DynamicPageList/DynamicPageList.php" );
 }
