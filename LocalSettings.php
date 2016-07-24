@@ -2542,6 +2542,7 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 		'cybercrimewiki' => 'modern',
+		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
 		'stellachronicawiki' => 'monobook',
