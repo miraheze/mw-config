@@ -641,6 +641,7 @@ $wgConf->settings = array(
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'ofthevampirewiki' => true,
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
