@@ -879,6 +879,12 @@ $wgConf->settings = array(
 		'humorpediawiki' => true,
 		'tmewiki' => true,
 	),
+	'wmgUseRelatedArticles' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+		'youtubewiki' => true,
+	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -3024,7 +3030,6 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
-	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
