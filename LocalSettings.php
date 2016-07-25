@@ -878,12 +878,6 @@ $wgConf->settings = array(
 		'humorpediawiki' => true,
 		'tmewiki' => true,
 	),
-	'wmgUseRelatedArticles' => array(
-		'default' => false,
-		'allthetropeswiki' => true,
-		'extloadwiki' => true,
-		'youtubewiki' => true,
-	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -2406,26 +2400,7 @@ $wgConf->settings = array(
 			),
 		),
 	),
-	// RelatedArticles settings
-	'wgRelatedArticlesLoggingSamplingRate' => array(
-	 	'default' => false,
-	 	'allthetropeswiki' => '0.01',
-	 	'extloadwiki' => '0.01',
-	 	'youtubewiki' => '0.01',
-	 ),
-	 'wgRelatedArticlesShowReadMore' => array(
-	 	'default' => false,
-	 	'allthetropeswiki' => true,
-	 	'extloadwiki' => true,
-	 	'youtubewiki' => true,
-	 ),
-	 'wgRelatedArticlesShowInFooter' => array(
-	 	'default' => false,
-	 	'allthetropeswiki' => true,
-	 	'extloadwiki' => true,
-	 	'youtubewiki' => true,
-	 ),
-	 
+
 	// Restriction types
 	'+wgRestrictionLevels' => array(
 		'default' => array(
@@ -3047,6 +3022,7 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
+	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
