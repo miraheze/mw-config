@@ -213,6 +213,10 @@ if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
 
+if ( $wmgUseRelatedArticles ) {
+	wfLoadExtension( 'RelatedArticles' );
+}
+
 if ( $wmgUseSandboxLink ) {
 	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
 }
