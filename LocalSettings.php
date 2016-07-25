@@ -585,6 +585,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'ircwiki' => true,
+		'robloxscripterswiki' => true,
 	),
 	'wmgUseMSCalendar' => array(
 		'default' => false,
