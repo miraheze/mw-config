@@ -627,6 +627,7 @@ $wgConf->settings = array(
 		'ezdmfwiki' => true,
 		'openconstitutionwiki' => true,
 		'priyowiki' => true,
+		'robloxscripterswiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 	),
@@ -919,6 +920,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'micropediawiki' => true,
 		'ircwiki' => true,
+		'robloxscripterswiki' => true,
 		'stellachronicawiki' => true,
 		'stoutofreachwiki' => true,
 		'priyowiki' => true,
@@ -997,6 +999,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'openconstitutionwiki' => true,
+		'robloxscripterswiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
