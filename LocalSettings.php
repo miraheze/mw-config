@@ -580,6 +580,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
+		'robloxscripterswiki' => true,
 		'thehushhushsagawiki' => true,
 	),
 	'wmgUseBlogPage' => array(
@@ -805,6 +806,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
+		'robloxscripterswiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
 		'default' => false,
@@ -988,6 +990,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 		'spiralwiki' => true,
+		'robloxscripterswiki' => true,
 		'rtwiki' => true,
 		'testwiki' => true,
 		'thehushhushsagawiki' => true,
