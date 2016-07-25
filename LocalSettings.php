@@ -2411,9 +2411,9 @@ $wgConf->settings = array(
 	// RelatedArticles settings
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 	 	'default' => false,
-	 	'allthetropeswiki' => '0.3'
-	 	'extloadwiki' => '0.3'
-	 	'youtubewiki' => '0.3'
+	 	'allthetropeswiki' => '0.3',
+	 	'extloadwiki' => '0.3',
+	 	'youtubewiki' => '0.3',
 	 ),
 	 'wgRelatedArticlesShowReadMore' => array(
 	 	'default' => false,
