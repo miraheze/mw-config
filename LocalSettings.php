@@ -739,7 +739,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseLoopsCombo' => array(
@@ -972,7 +971,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'metawiki' => true,
