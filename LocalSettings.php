@@ -139,12 +139,14 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'inazumaelevenwiki' => true,
 		'thehushhushsagawiki' => true,
+		'youtubewiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'inazumaelevenwiki' => true,
 		'thehushhushsagawiki' => true,
+		'youtubewiki' => true,
 	),
 
 	// Block
@@ -983,6 +985,7 @@ $wgConf->settings = array(
 		'thehushhushsagawiki' => true,
 		'valentinaprojectwiki' => true,
 		'welcomewiki' => true,
+		'youtubewiki' => true,
 	),
 	'wmgUseVoteNY' => array(
 		'default' => false,
@@ -1135,6 +1138,7 @@ $wgConf->settings = array(
 		'xdjibiwiki' => true,
 		'yourosongcontestwiki' => true,
 		'yggdrasilwiki' => true,
+		'youtubewiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
