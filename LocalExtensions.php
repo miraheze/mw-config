@@ -214,7 +214,7 @@ if ( $wmgUseRandomSelection ) {
 }
 
 if ( $wmgUseRelatedArticles ) {
-	wfLoadExtension( 'RelatedArticles' );
+	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 }
 
 if ( $wmgUseSandboxLink ) {
