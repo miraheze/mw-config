@@ -583,6 +583,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'robloxscripterswiki' => true,
+		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
 	),
