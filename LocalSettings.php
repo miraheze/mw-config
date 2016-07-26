@@ -106,6 +106,8 @@ define('NS_KOREAN_STUDY_NOTE', 1676);
 define('NS_KOREAN_STUDY_NOTE_TALK', 1677);
 define('NS_GLOSSARY', 1678);
 define('NS_GLOSSARY_TALK', 1679);
+define('NS_SPRITES', 1680);
+define('NS_SPRITES_TALK', 1681);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1601,6 +1603,10 @@ $wgConf->settings = array(
 			NS_TEST	=> 'TEST',
 			NS_TEST_TALK => 'TEST_talk',
 		),	
+		'whentheycrywiki' => array(
+			NS_SPRITES => 'Sprites',
+			NS_SPRITES_TALK => 'Sprites_talk',
+		),
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
