@@ -811,6 +811,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'robloxscripterswiki' => true,
+		'thefosterswiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
