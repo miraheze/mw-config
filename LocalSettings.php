@@ -947,6 +947,7 @@ $wgConf->settings = array(
 		'robloxscripterswiki' => true,
 		'sourcewiki' => true,
 		'sizzlecookiewiki' => true,
+		'spacegamewiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 		'tmewiki' => true,
