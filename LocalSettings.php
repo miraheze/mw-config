@@ -1269,6 +1269,7 @@ $wgConf->settings = array(
 	),
 	'wgUseInstantCommons' => array(
 		'default' => true,
+		'thefosterswiki' => false,
 	),
 	'wgEnableImageWhitelist' => array(
 		'default' => false,
