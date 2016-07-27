@@ -1232,6 +1232,7 @@ $wgConf->settings = array(
 		'freecollegeprojectwiki' => true,
 		'gameswiki' => true,
         	'geirpediawiki' => true,
+        	'geodatawiki' => true,
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
 		'lclwikiwiki' => true,
