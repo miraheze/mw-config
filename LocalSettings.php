@@ -915,6 +915,7 @@ $wgConf->settings = array(
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'qwertywiki' => true,
 	),
 	'wmgUseSectionHide' => array(
 		'default' => false,
