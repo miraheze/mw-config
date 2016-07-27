@@ -817,6 +817,7 @@ $wgConf->settings = array(
 		'justinbieberwiki' => true,
 		'robloxscripterswiki' => true,
 		'thefosterswiki' => true,
+		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
@@ -877,6 +878,7 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
+		'thehushhushsagawiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
@@ -899,6 +901,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
