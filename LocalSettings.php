@@ -1115,6 +1115,7 @@ $wgConf->settings = array(
 		'nwpwiki' => true,
 		'ofthevampirewiki' => true,
 		'openconstitutionwiki' => true,
+		'opengovpioneerswiki' => true,
 		'oyeavdelingenwiki' => true,
 		'panoramawiki' => true,
 		'paodeaodawiki' => true,
