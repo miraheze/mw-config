@@ -9,6 +9,7 @@ require_once( "$IP/extensions/GlobalBlocking/GlobalBlocking.php" );
 require_once( "$IP/extensions/Math/Math.php" );
 require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
 require_once( "$IP/extensions/OAuth/OAuth.php" );
+require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 require_once( "$IP/extensions/Timeline/Timeline.php" );
 require_once( "$IP/extensions/Thanks/Thanks.php" );
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
