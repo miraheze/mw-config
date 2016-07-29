@@ -1238,6 +1238,7 @@ $wgConf->settings = array(
 		'gameswiki' => true,
         	'geirpediawiki' => true,
         	'geodatawiki' => true,
+        	'inazumaelevenwiki' => true, 
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
 		'lclwikiwiki' => true,
