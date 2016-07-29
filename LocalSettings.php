@@ -880,6 +880,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
+		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
