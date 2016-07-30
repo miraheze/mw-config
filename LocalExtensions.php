@@ -20,6 +20,10 @@ if ( $wmgUseAJAXPoll ) {
 	$wgGroupPermissions['*']['ajaxpoll-view-results-before-vote'] = true;
 }
 
+if ( $wmgUseApex ) {
+	wfLoadSkin( 'apex' );
+}
+
 if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }

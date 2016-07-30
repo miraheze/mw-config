@@ -575,6 +575,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'openconstitutionwiki' => true,
 	),
+	'wmgUseApex' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
 		'extloadwiki' => true,
