@@ -880,6 +880,7 @@ $wgConf->settings = array(
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'frontdeskswiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
