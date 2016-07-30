@@ -578,6 +578,7 @@ $wgConf->settings = array(
 	'wmgUseApex' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
