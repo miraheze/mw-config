@@ -203,6 +203,10 @@ if ( $wmgUsePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 }
 
+if ( $wmgUsePDFEmbed ) {
+	require_once( "$IP/extensions/PDFEmbed/PDFEmbed.php" );
+}
+
 if ( $wmgUsePoll ) {
 	require_once( "$IP/extensions/Poll/Poll.php" );
 }
