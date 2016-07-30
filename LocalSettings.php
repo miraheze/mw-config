@@ -1151,6 +1151,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'spiralwiki' => true,
 		'taylorwiki' => true,
+		'tcc6640wiki' => true,
 		'teleswikiwiki' => true,
 		'testwiki' => true,
 		'thefosterswiki' => true,
