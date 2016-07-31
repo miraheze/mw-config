@@ -1722,6 +1722,12 @@ $wgConf->settings = array(
 			'画像' => NS_FILE,
 		),
 	),
+	'+wgNamespacesToBeSearchedDefault' => array(
+		'default' => array(),
+		'+metawiki' => array(
+			NS_TECH => true,
+		),
+	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
 		'+adnovumwiki' => array(
