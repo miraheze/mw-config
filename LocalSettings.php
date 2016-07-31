@@ -245,6 +245,10 @@ $wgConf->settings = array(
 	'wgCentralAuthDatabase' => array(
 		'default' => 'centralauth',
 	),
+	'wgCentralAuthEnableGlobalRenameRequest' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
 	'wgCentralAuthLoginWiki' => array(
 		'default' => 'loginwiki',
 	),
