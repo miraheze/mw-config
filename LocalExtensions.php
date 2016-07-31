@@ -86,6 +86,10 @@ if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
 }
 
+if ( $wmgUseErudite ) {
+	wfLoadSkin( 'erudite' );
+}
+
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;

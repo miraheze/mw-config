@@ -681,6 +681,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'idtestwiki' => true,
 	),
+	'wmgUseErudite' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
 	),
