@@ -683,6 +683,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseErudite' => array(
 		'default' => false,
+		'bdorpwiki' => true,
+		'datachronwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseFeaturedFeeds' => array(
@@ -2625,7 +2627,9 @@ $wgConf->settings = array(
 	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
+		'bdorpwiki' => 'erudite',
 		'cybercrimewiki' => 'modern',
+		'datachronwiki' => 'erudite',
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
