@@ -189,6 +189,9 @@ $wgConf->settings = array(
 	),
 
 	// CentralAuth
+	'wgCentralAuthAutoCreateWikis' => array(
+		'default' => array( 'loginwiki', 'metawiki' ),
+	),
 	'wgCentralAuthAutoNew' => array(
 		'default' => true,
 	),
