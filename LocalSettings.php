@@ -881,6 +881,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
+		'virpatel524wiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
