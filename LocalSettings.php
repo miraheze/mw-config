@@ -1000,6 +1000,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => true,
 		'xdjibiwiki' => true,
 		'xofwiki' => true,
+		'dtswiki' => true,
 	),
 	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
