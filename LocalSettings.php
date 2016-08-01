@@ -1093,6 +1093,7 @@ $wgConf->settings = array(
 		'dmwwiki' => true,
 		'dottorcontewiki' => true,
 		'drunkenpeasantswikiwiki' => true,
+		'dtswiki' => true,
 		'dwplivewiki' => true,
 		'elainarmuawiki' => true,
 		'ernaehrungsrathhwiki' => true,
