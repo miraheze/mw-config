@@ -1008,6 +1008,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'developmentwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 		'stellachronicawiki' => true,
 		'universebuildwiki' => true,
 		'whentheycrywiki' => true,
