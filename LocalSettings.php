@@ -1200,6 +1200,7 @@ $wgConf->settings = array(
 		'yourosongcontestwiki' => true,
 		'yggdrasilwiki' => true,
 		'youtubewiki' => true,
+		'dtswiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
