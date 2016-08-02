@@ -1236,6 +1236,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'starsetonline' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
