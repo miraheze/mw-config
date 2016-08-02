@@ -1232,6 +1232,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'indexwiki' => true,
 		'ircwiki' => true,
+		'starsetonline' => true,
 		'stellachronicawiki' => true,
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
