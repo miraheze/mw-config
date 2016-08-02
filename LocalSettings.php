@@ -1075,6 +1075,7 @@ $wgConf->settings = array(
 		'bgowiki' => true,
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
+		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
 		'carvingwiki' => true,
