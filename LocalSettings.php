@@ -602,6 +602,7 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
+		'dtswiki' => true,
 	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
@@ -620,6 +621,7 @@ $wgConf->settings = array(
 	'wmgUseCategoryTree' => array(
 		'default' => true,
 		'whentheycrywiki' => false,
+		'dtswiki' => true,
 	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
@@ -669,7 +671,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ofthevampirewiki' => true,
 	),
-	'wmgUseDynamicPageList' => array(
+	'wmgUsede' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'augustinianumwiki' => true,
@@ -696,6 +698,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
+		'dtswiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
@@ -733,6 +736,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'permanentfuturelabwiki' => true,
+		'dtswiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
@@ -889,6 +893,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'dtswiki' => true,
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
