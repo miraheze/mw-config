@@ -586,6 +586,7 @@ $wgConf->settings = array(
 	'wmgUseApex' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseAuthorProtect' => array(
@@ -733,6 +734,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 		'permanentfuturelabwiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
@@ -783,6 +785,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
