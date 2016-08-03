@@ -1211,7 +1211,6 @@ $wgConf->settings = array(
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
 	),
-	),
 	'wmgUseVariables' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
