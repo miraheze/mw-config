@@ -701,7 +701,7 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseFlow' => array(
-	'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
+		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
