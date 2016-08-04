@@ -2671,6 +2671,7 @@ $wgConf->settings = array(
 		'allbanks2wiki' => "//$wmgUploadHostname/allbanks2wiki/7/7f/AllBanks2Logo.png",
 		'aenasanwiki' => "//$wmgUploadHostname/aenasanwiki/e/e6/AEfav.ico",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/64/Favicon.ico",
+		'avionwiki' => "//$wmgUploadHostname/avionwiki/3/31/Argis_Wiki_Logo.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/3/3b/Favicongif.gif",
 		'bgowiki' => "//$wmgUploadHostname/bgowiki/6/64/Favicon.ico",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/6/64/Favicon.ico",
