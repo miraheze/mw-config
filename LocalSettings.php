@@ -1283,6 +1283,7 @@ $wgConf->settings = array(
 		'lifewiki' => true,
 		'luckandlogicwiki' => true,
 		'ontariobrasswiki' => true,
+		'plazmaburstwiki' => true,
 		'priyowiki' => true,
 		'secondcirclewiki' => true,
 		'starsetonlinewiki' => true,
