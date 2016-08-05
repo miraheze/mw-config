@@ -763,6 +763,7 @@ $wgConf->settings = array(
 		'shoppingwiki' => true,
 		'studynotekrwiki' => true,
 		'universebuildwiki' => true,
+		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseInputBox' => array(
