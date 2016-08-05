@@ -108,6 +108,8 @@ define('NS_GLOSSARY', 1678);
 define('NS_GLOSSARY_TALK', 1679);
 define('NS_SPRITES', 1680);
 define('NS_SPRITES_TALK', 1681);
+define('NS_GALLERY', 1682);
+define('NS_GALLERY_TALK', 1683);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1661,6 +1663,8 @@ $wgConf->settings = array(
 		'whentheycrywiki' => array(
 			NS_SPRITES => 'Sprites',
 			NS_SPRITES_TALK => 'Sprites_talk',
+			NS_GALLERY => 'Gallery',
+			NS_GALLERY_TALK => 'Gallery_talk',
 		),
 	),
 	'wgContentNamespaces' => array(
