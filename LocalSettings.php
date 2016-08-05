@@ -2490,6 +2490,13 @@ $wgConf->settings = array(
 			),
 		),
 	),
+
+	// Piwik settings
+	'wmgPiwikSiteID' => array(
+		'default' => '1',
+		'allthetropeswiki' => '2',
+	),
+
 	// RelatedArticles settings
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 	 	'default' => false,
