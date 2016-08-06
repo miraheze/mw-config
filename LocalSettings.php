@@ -1054,6 +1054,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'testwiki' => true,
 		'thehushhushsagawiki' => true,
+		'urpswiki' => true,
 		'valentinaprojectwiki' => true,
 		'welcomewiki' => true,
 		'youtubewiki' => true,
