@@ -145,6 +145,10 @@ if ( $wmgUseJosa ) {
 	require_once( "$IP/extensions/Josa/Josa.php" );
 }
 
+if ( $wmgUseLabeledSectionTransclusion ) {
+	wfLoadExtension( 'LabeledSectionTransclusion' );
+}
+
 if ( $wmgUseLinkSuggest ) {
 	wfLoadExtension( 'LinkSuggest' );
 }

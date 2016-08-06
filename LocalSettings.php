@@ -775,6 +775,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'reviwiki' => true,
 	),
+	'wmgUseLabeledSectionTransclusion' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
 		'extloadwiki' => true,
