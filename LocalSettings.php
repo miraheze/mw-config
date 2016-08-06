@@ -777,6 +777,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
+		'bmedwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseLinkSuggest' => array(
