@@ -38,7 +38,7 @@ if ( $wmgUseBlogPage ) {
 }
 
 if ( $wmgUseMSCalendar ) {
-	require_once( "$IP/extensions/MSCalendar/MsCalendar.php" );
+	require_once( "$IP/extensions/MsCalendar/MsCalendar.php" );
 }
 
 if ( $wmgUseCategoryTree ) {
