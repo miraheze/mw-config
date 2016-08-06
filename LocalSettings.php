@@ -284,7 +284,7 @@ $wgConf->settings = array(
 			"$IP/extensions/Math/db/math.mysql.sql",
 			"$IP/extensions/Math/db/mathlatexml.mysql.sql",
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
-			"$IP/extensions/MSCalendar/MsCalendar.sql",
+			"$IP/extensions/MsCalendar/MsCalendar.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
 			"$IP/extensions/PageTriage/sql/PageTriageTags.sql",
 			"$IP/extensions/PageTriage/sql/PageTriagePageTags.sql",
