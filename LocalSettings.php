@@ -677,6 +677,7 @@ $wgConf->settings = array(
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'wisdomwikiwiki' => true,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
