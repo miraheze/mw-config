@@ -674,6 +674,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'webflowwiki' => true,
 	),
+	'wmgUseCustomNavBlocks' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
 		'extloadwiki' => true,
