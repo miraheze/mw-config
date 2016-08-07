@@ -70,11 +70,6 @@ if ( $wmgUseCreateWiki ) {
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
 }
 
-if ( $wmgUseCustomNavBlocks) {
-	require_once "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php";
-
-}
-
 if ( $wmgUseCSS ) {
 	require_once( "$IP/extensions/CSS/CSS.php" );
 }
