@@ -958,7 +958,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseReplaceText' => array(
 		'default' => false,
-		'extloadwiki' => false, // Let me create Special:RecentChanges page, please don't enable until being sure what the bug is
+		'extloadwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
