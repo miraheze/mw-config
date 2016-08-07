@@ -239,6 +239,10 @@ if ( $wmgUseRelatedArticles ) {
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 }
 
+if ( $wmgUseReplaceText ) {
+	wfLoadExtension( 'ReplaceText' );
+}
+
 if ( $wmgUseSandboxLink ) {
 	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
 }

@@ -955,6 +955,10 @@ $wgConf->settings = array(
 		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
 	),
+	'wmgUseReplaceText' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
