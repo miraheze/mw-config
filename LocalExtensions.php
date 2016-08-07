@@ -74,6 +74,11 @@ if ( $wmgUseCSS ) {
 	require_once( "$IP/extensions/CSS/CSS.php" );
 }
 
+if ( $wmgUseCustomNavBlocks) {
+	require_once "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php";
+	$wgCustomNavBlocksEnable = true;
+}
+
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 }
