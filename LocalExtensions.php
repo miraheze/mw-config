@@ -240,7 +240,7 @@ if ( $wmgUseRelatedArticles ) {
 }
 
 if ( $wmgUseReplaceText ) {
-	require_once "$IP/extensions/ReplaceText/ReplaceText.php";
+	wfLoadExtension( 'ReplaceText' );
 }
 
 if ( $wmgUseSandboxLink ) {
