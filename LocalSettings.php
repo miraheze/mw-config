@@ -1118,6 +1118,7 @@ $wgConf->settings = array(
 		'clementsworldbuildingwiki' => true,
 		'clicordiwiki' => true,
 		'cssandjsschoolboardwiki' => true,
+		'dalarwiki' => true,
 		'datachronwiki' => true,
 		'detlefswiki' => true,
 		'developmentwiki' => true,
