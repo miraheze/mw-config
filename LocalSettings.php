@@ -232,7 +232,7 @@ $wgConf->settings = array(
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
-			'www.fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
+			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -2634,7 +2634,7 @@ $wgConf->settings = array(
 		'downhillderelictswiki' => 'https://wiki.downhillderelicts.com',
 		'droneregulationwiki' => 'https://drone-regulation.info',
 		'dwplivewiki' => 'https://wiki.dwplive.com',
-		'fibromyalgiaengineerwiki' => 'https://www.fibromyalgia-engineer.com',
+		'fibromyalgiaengineerwiki' => 'https://fibromyalgia-engineer.com',
 		'garyjohnsonmeetupswiki' => 'https://wiki.garyjohnsonmeetups.com',
 		'grottocenterwiki' => 'https://wiki.grottocenter.org',
 		'haxionspacewiki' => 'https://haxion.space',
