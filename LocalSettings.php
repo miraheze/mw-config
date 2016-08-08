@@ -1261,8 +1261,10 @@ $wgConf->settings = array(
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
+		'aemanualwiki' => true,
 		'extloadwiki' => true,
 		'geodatawiki' => true,
+		'plazmaburstwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
