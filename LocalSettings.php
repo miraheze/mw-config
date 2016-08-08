@@ -790,6 +790,7 @@ $wgConf->settings = array(
 	'wmgUseJavascriptSlideshow' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'plazmaburstwiki' => true,
 	),
 	'wmgUseJosa' => array(
 		'default' => false,
