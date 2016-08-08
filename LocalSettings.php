@@ -205,6 +205,7 @@ $wgConf->settings = array(
 			'boulderwiki.org' => 'boulderwikiwiki',
 			'carving.wiki' => 'carvingwiki',
 			'drone-regulation.info' => 'droneregulationwiki',
+			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
 			'haxion.space' => 'haxionspacewiki',
 			'ircwiki.cf' => 'ircwiki',
 			'meta.trek.tk' => 'metatrekwiki',
@@ -232,7 +233,6 @@ $wgConf->settings = array(
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
-			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
