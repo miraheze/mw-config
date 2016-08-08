@@ -2300,6 +2300,11 @@ $wgConf->settings = array(
 				'managewiki' => true,
 			),
 		),
+		'oncprojectwiki' => array(
+			'sysop' => array(
+				'edit' => true,
+			),
+		),
 		'+poserdazfreebieswiki' => array(
 			'autoconfirmed' => array(
 				'edit' => true,
@@ -3220,6 +3225,9 @@ if ( !$wgCommandLineMode ) {
 		$wgGroupPermissions['*']['edit'] = true;
 	}
 }
+// Oncprojectwiki overrides
+if ( $wgDBname == 'oncprojectwiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
 
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
