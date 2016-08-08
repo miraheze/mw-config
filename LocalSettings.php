@@ -1104,6 +1104,7 @@ $wgConf->settings = array(
 		'adnovumwiki' => true,
 		'aescapeswiki' => true,
 		'ageofimperialismwiki' => true,
+		'ageofimperialistswiki' => true,
 		'airwiki' => true,
 		'aktposwiki' => true,
 		'alanpediawiki' => true,
