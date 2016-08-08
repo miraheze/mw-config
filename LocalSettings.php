@@ -1262,6 +1262,7 @@ $wgConf->settings = array(
 	'wmgUseWidgets' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'geodatawiki' => true,
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
