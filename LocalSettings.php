@@ -1195,6 +1195,7 @@ $wgConf->settings = array(
 		'nidda23wiki' => true,
 		'nwpwiki' => true,
 		'ofthevampirewiki' => true,
+		'oncprojectwiki' => true,
 		'openconstitutionwiki' => true,
 		'opengovpioneerswiki' => true,
 		'oyeavdelingenwiki' => true,
