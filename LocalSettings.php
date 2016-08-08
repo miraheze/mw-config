@@ -787,6 +787,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'allthetropeswiki' => false, // breaks editing
 	),
+	'wmgUseJavascriptSlideshow' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseJosa' => array(
 		'default' => false,
 		'extloadwiki' => true,

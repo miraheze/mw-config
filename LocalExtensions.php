@@ -146,6 +146,10 @@ if ( $wmgUseInputBox ) {
 	wfLoadExtension( 'InputBox' );
 }
 
+if ( $wmgUseJavascriptSlideshow ) {
+	require_once( "$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php" );
+}
+
 if ( $wmgUseJosa ) {
 	require_once( "$IP/extensions/Josa/Josa.php" );
 }
