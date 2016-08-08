@@ -720,6 +720,7 @@ $wgConf->settings = array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
+		'ageofimperialistswiki' => true,
 		'allthetropeswiki' => true,
 		'bgowiki' => true,
 		'cecwiki' => true,
