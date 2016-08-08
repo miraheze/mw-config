@@ -958,7 +958,9 @@ $wgConf->settings = array(
 	),
 	'wmgUseReplaceText' => array(
 		'default' => false,
+		'evawiki' => true,
 		'extloadwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
