@@ -416,6 +416,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+godaigowiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+izanagiwiki' => array(
 			'anon' => true,
 		),
