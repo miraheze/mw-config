@@ -764,6 +764,11 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'starsetonlinewiki' => true,
 	),
+	'wmgUsegoogleAnalytics' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'opengovpioneerswiki' => true,
+	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
 		'default' => false,
@@ -1402,6 +1407,11 @@ $wgConf->settings = array(
 		'drunkenpeasantswikiwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
+	),
+	
+	// Google Analytics settings
+	'wgGoogleAnalyticsAccount' => array(
+		'opengovpioneerswiki' => 'UA-3467930-17',
 	),
 
 	// GlobalBlocking
