@@ -2731,6 +2731,7 @@ $wgConf->settings = array(
 		'bdorpwiki' => 'erudite',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
+		'dtswiki' => 'metrolook',
 		'godaigowiki' => 'monobook',
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
