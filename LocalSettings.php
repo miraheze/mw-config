@@ -828,6 +828,7 @@ $wgConf->settings = array(
 	'wmgUseMetrolook' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'dtswiki'=> true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'thelonsdalebattalionwiki' => true,
