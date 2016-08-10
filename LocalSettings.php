@@ -1881,6 +1881,12 @@ $wgConf->settings = array(
 	'wgMWOAuthSecureTokenTransfer' => array(
 		'default' => true,
 	),
+	
+	// Pagelang
+	'wgPageLanguageUseDB' => array(
+		'default' => false,
+		'spiralwiki' => true,
+	),
 
 	// Permissions
 	'wgAddGroups' => array(
@@ -2362,6 +2368,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin' => true,
+			),
+		),
+		'+spiralwiki' => array(
+			'sysop' => array(
+				'pagelang'
 			),
 		),
 		'+testwiki' => array(
