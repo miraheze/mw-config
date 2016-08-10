@@ -766,8 +766,8 @@ $wgConf->settings = array(
 	),
 	'wmgUsegoogleAnalytics' => array(
 		'default' => false,
-		'extloadwiki' => true,
-		'opengovpioneerswiki' => true,
+		'extloadwiki' => false,
+		'opengovpioneerswiki' => false,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
