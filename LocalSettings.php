@@ -1411,7 +1411,6 @@ $wgConf->settings = array(
 	
 	// Google Analytics settings
 	'wgGoogleAnalyticsAccount' => array(
-		'default' => false,
 		'opengovpioneerswiki' => 'UA-3467930-17',
 	),
 
