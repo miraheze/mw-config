@@ -774,6 +774,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'bdorpwiki' => true,
 		'datachronwiki' => true,
+		'dtswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseHighlightLinksInCategory' => array(
