@@ -686,7 +686,6 @@ $wgConf->settings = array(
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'wisdomwikiwiki' => true,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
@@ -945,6 +944,8 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
+		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 		'virpatel524wiki' => true,
 	),
 	'wmgUsePopups' => array(
@@ -1294,6 +1295,8 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'geodatawiki' => true,
 		'plazmaburstwiki' => true,
+		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
