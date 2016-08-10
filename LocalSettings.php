@@ -2387,7 +2387,7 @@ $wgConf->settings = array(
 		),
 		'+spiralwiki' => array(
 			'sysop' => array(
-				'pagelang'
+				'pagelang' => true,
 			),
 		),
 		'+testwiki' => array(
