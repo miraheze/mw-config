@@ -643,6 +643,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'cssandjsschoolboardwiki' => true,
+		'dtswiki' => true,
 		'extloadwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
