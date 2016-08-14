@@ -312,6 +312,11 @@ $wgConf->settings = array(
 			"$IP/extensions/Translate/sql/translate_stash.sql",
 			"$IP/extensions/Translate/sql/translate_tm.sql",
 			"$IP/extensions/VoteNY/vote.mysql",
+			"$IP/extensions/Wikibase/repo/sql/Wikibase.sql",
+			"$IP/extensions/Wikibase/repo/sql/changes.sql",
+			"$IP/extensions/Wikibase/repo/sql/changes_dispatch.sql",
+			"$IP/extensions/Wikibase/repo/sql/changes_subscriptions.sql",
+			"$IP/extensions/Wikibase/repo/sql/wb_property_info.sql",
 			"$IP/extensions/WikiForum/sql/wikiforum.sql",
 			"$IP/extensions/WikiLove/patches/WikiLoveLog.sql",
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
