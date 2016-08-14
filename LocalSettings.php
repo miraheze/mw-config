@@ -1852,6 +1852,11 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			NS_TALK => true,
 		),
+		'+janesskillspackwiki' => array(
+			NS_MAIN => true,
+			NS_USER => true,
+			NS_PROJECT => true,
+		),
 		'+metawiki' => array(
 			NS_MAIN => true,
 		),
