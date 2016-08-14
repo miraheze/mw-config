@@ -60,8 +60,6 @@ define( 'NS_REVIEWS', 1630 );
 define( 'NS_REVIEWS_TALK', 1631 );
 define( 'NS_TEST', 1632);
 define( 'NS_TEST_TALK', 1633);
-define( 'WB_NS_PROPERTY', 1634);
-define( 'WB_NS_PROPERTY_TALK', 1635);
 define( 'NS_MINECRAFT', 1636 );
 define( 'NS_MINECRAFT_TALK', 1637 );
 define( 'NS_SUPER_MARIO_LAND_2', 1638 );
@@ -110,8 +108,6 @@ define( 'NS_SPRITES', 1680);
 define( 'NS_SPRITES_TALK', 1681);
 define( 'NS_GALLERY', 1682);
 define( 'NS_GALLERY_TALK', 1683);
-define( 'WB_NS_ITEM', 1684);
-define( 'WB_NS_ITEM_TALK', 1685);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
