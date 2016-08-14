@@ -60,8 +60,8 @@ define( 'NS_REVIEWS', 1630 );
 define( 'NS_REVIEWS_TALK', 1631 );
 define( 'NS_TEST', 1632);
 define( 'NS_TEST_TALK', 1633);
-// MISSING 1634
-// MISSING 1635
+define( 'WB_NS_PROPERTY', 1634);
+define( 'WB_NS_PROPERTY_TALK', 1635);
 define( 'NS_MINECRAFT', 1636 );
 define( 'NS_MINECRAFT_TALK', 1637 );
 define( 'NS_SUPER_MARIO_LAND_2', 1638 );
@@ -92,24 +92,26 @@ define( 'NS_BLANK', 1662);
 define( 'NS_BLANK_TALK', 1663);
 define( 'NS_RESEARCH', 1664);
 define( 'NS_RESEARCH_TALK', 1665);
-define('NS_ADMIN', 1666);
-define('NS_ADMIN_TALK', 1667);
-define('NS_WORKSHOP', 1668);
-define('NS_WORKSHOP_TALK', 1669);
-define('NS_SELP', 1670);
-define('NS_SELP_TALK', 1671);
-define('NS_STUDY_NOTE', 1672);
-define('NS_STUDY_NOTE_TALK', 1673);
-define('NS_EXPLANATION', 1674);
-define('NS_EXPLANATION_TALK', 1675);
-define('NS_KOREAN_STUDY_NOTE', 1676);
-define('NS_KOREAN_STUDY_NOTE_TALK', 1677);
-define('NS_GLOSSARY', 1678);
-define('NS_GLOSSARY_TALK', 1679);
-define('NS_SPRITES', 1680);
-define('NS_SPRITES_TALK', 1681);
-define('NS_GALLERY', 1682);
-define('NS_GALLERY_TALK', 1683);
+define( 'NS_ADMIN', 1666);
+define( 'NS_ADMIN_TALK', 1667);
+define( 'NS_WORKSHOP', 1668);
+define( 'NS_WORKSHOP_TALK', 1669);
+define( 'NS_SELP', 1670);
+define( 'NS_SELP_TALK', 1671);
+define( 'NS_STUDY_NOTE', 1672);
+define( 'NS_STUDY_NOTE_TALK', 1673);
+define( 'NS_EXPLANATION', 1674);
+define( 'NS_EXPLANATION_TALK', 1675);
+define( 'NS_KOREAN_STUDY_NOTE', 1676);
+define( 'NS_KOREAN_STUDY_NOTE_TALK', 1677);
+define( 'NS_GLOSSARY', 1678);
+define( 'NS_GLOSSARY_TALK', 1679);
+define( 'NS_SPRITES', 1680);
+define( 'NS_SPRITES_TALK', 1681);
+define( 'NS_GALLERY', 1682);
+define( 'NS_GALLERY_TALK', 1683);
+define( 'WB_NS_ITEM', 1684);
+define( 'WB_NS_ITEM_TALK', 1685);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1302,6 +1304,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseWikibaseRepository' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
 		'entropediawiki' => true,
@@ -1611,7 +1617,7 @@ $wgConf->settings = array(
 	'wgMFAutodetectMobileView' => array(
 		'default' => true,
 	),
-	
+
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
@@ -3249,8 +3255,8 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
-$wgDefaultUserOptions['usebetatoolbar'] = 1;  
-$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1; 
+$wgDefaultUserOptions['usebetatoolbar'] = 1;
+$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
 $wgHooks['PrefsPasswordAudit'][] = 'onPrefsPasswordAuditTestWiki';
 function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {

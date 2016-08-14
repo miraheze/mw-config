@@ -355,6 +355,14 @@ if ( $wmgUseWidgets ) {
 	require_once( "$IP/extensions/Widgets/Widgets.php" );
 }
 
+if ( $wmgUseWikibaseRepository ) {
+	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
+	$wgEnableWikibaseRepo = true;
+
+	// Includes Wikibase Configuration. There is a global and per-wiki system here.
+	require_once( "/srv/mediawiki/config/Wikibase.php" );
+}
+
 if ( $wmgUseWikiForum ) {
 	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 }
