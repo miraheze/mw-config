@@ -2740,6 +2740,7 @@ $wgConf->settings = array(
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'lomithradienwiki' => 'any',
+		'throisarwiki' => 'any',
 	),
 	
 	// Squid (aka Varnish)
