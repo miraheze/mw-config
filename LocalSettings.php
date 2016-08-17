@@ -1132,6 +1132,7 @@ $wgConf->settings = array(
 		'algopediawiki' => true,
 		'allbanks2wiki' => true,
 		'allthetropeswiki' => true,
+		'alwikiwiki' => true,
 		'applebranchwiki' => true,
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
