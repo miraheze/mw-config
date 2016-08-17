@@ -1609,6 +1609,7 @@ $wgConf->settings = array(
 			'extloadwiki',
 			'loginwiki',
 			'testwiki',
+			'throisarwiki',
 		),
 	),
 	
