@@ -442,6 +442,9 @@ $wgConf->settings = array(
 		'+micropediawiki' => array(
 			'anon' => true,
 		),
+		'+miraiwiki' => array(
+			'anon' => true,
+		),
 		'+ntlawwiki' => array(
 			'anon' => true,
 			'user' => true,
