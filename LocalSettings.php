@@ -735,6 +735,7 @@ $wgConf->settings = array(
 		'adnovumwiki' => true,
 		'ageofimperialistswiki' => true,
 		'allthetropeswiki' => true,
+		'alwikiwiki' => true,
 		'bgowiki' => true,
 		'cecwiki' => true,
 		'christipediawiki' => true,
