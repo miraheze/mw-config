@@ -579,7 +579,6 @@ $wgConf->settings = array(
 		'drunkenpeasantswikiwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
-		'gameswiki' => true,
 		'heistwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
@@ -856,7 +855,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'catboxwiki' => true,
 		'extloadwiki' => true, // do not set this to false without disabling MsUpload on all wikis below
-		'gameswiki' => true,
 		'quantixwiki' => true,
 		'urho3dwiki' => true,
 	),
@@ -1182,7 +1180,6 @@ $wgConf->settings = array(
 		'fishpercolatorwiki' => true,
 		'foodsharinghamburgwiki' => true,
 		'frontdeskswiki' => true,
-		'gameswiki' => true,
 		'geirpediawiki' => true,
 		'genwiki' => true,
 		'gncwiki' => true,
@@ -1357,7 +1354,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'florianoromanowiki' => true,
 		'freecollegeprojectwiki' => true,
-		'gameswiki' => true,
 		'geirpediawiki' => true,
 		'geodatawiki' => true,
 		'inazumaelevenwiki' => true,
@@ -1513,7 +1509,6 @@ $wgConf->settings = array(
 		'safiriawiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 		'sourcewiki' => 'https://source.miraheze.org/wiki/Source_Code_Wiki:Copyrights',
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
-		'tanakiwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'wisdomwikiwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png',
 		'universebuildwiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 	),
@@ -1634,7 +1629,6 @@ $wgConf->settings = array(
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
-		'gameswiki' => false,
 		'quantixwiki' => false,
 	),
 
@@ -1863,11 +1857,6 @@ $wgConf->settings = array(
 		),
 		'+eotewiki' => array(
 			NS_MAIN => true,
-		),
-		'+gameswiki' => array(
-			NS_MAIN => true,
-			NS_USER => true,
-			NS_PROJECT => true,
 		),
 		'+hobbieswiki' => array(
 			NS_MAIN => true,
@@ -2450,9 +2439,6 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
-		'gameswiki' => array(
-			'*' => true,
-		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -2749,7 +2735,6 @@ $wgConf->settings = array(
 	// Statistics
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
-		'lomithradienwiki' => 'any',
 		'throisarwiki' => 'any',
 	),
 	
