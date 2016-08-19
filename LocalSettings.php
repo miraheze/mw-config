@@ -1436,6 +1436,7 @@ $wgConf->settings = array(
 		'8stationwiki' => true,
 		'allthetropeswiki' => true,
 		'drunkenpeasantswikiwiki' => true,
+		'espiralwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
 	),
