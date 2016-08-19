@@ -591,7 +591,6 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'walthamstowlabourwiki' => true,
 		'worldbattlewiki' => true,
-		'yggdrasilwiki' => true,
 		'yugiohwiki' => true,
 	),
 	'wmgUseAJAXPoll' => array(
@@ -764,7 +763,6 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
 		'yacresourceswiki' => true,
-		'yggdrasilwiki' => true,
 	),
 	'wmgUseForeground' => array(
 		'default' => false,
@@ -1284,7 +1282,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'worldbuildingwiki' => true,
 		'xdjibiwiki' => true,
-		'yggdrasilwiki' => true,
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
 	),
@@ -2985,7 +2982,6 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/0c/LogodelWiki.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
-		'yggdrasilwiki' => "//$wmgUploadHostname/yggdrasilwiki/c/cd/Yggdrasil-logo.png",
 	),
 
 	// Timezone
