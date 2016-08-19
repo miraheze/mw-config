@@ -855,7 +855,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'catboxwiki' => true,
 		'extloadwiki' => true, // do not set this to false without disabling MsUpload on all wikis below
-		'quantixwiki' => true,
 		'urho3dwiki' => true,
 	),
 	// MsUpload is enabled on extloadwiki via MsPackage
@@ -1399,13 +1398,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
-		'quantixwiki' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
-		'quantixwiki' => true,
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
@@ -1516,7 +1513,6 @@ $wgConf->settings = array(
 		'default' => '',
 		'developmentwiki' => 'Official:Copyrights',
 		'diavwiki' => 'Project:Copyrights',
-		'quantixwiki' => 'Project:Copyrights',
 		'sourcewiki' => 'Project:Copyrights',
 		'wisdomwikiwiki' => 'Copyleft',
 	),
@@ -1629,7 +1625,6 @@ $wgConf->settings = array(
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
-		'quantixwiki' => false,
 	),
 
 	// Namespaces
@@ -1672,22 +1667,6 @@ $wgConf->settings = array(
 		'metawiki' => array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
-		),
-		'quantixwiki' => array(
-			NS_HL2RP => 'HL2RP',
-			NS_HL2RP_TALK => 'HL2RP_talk',
-			NS_ARP => 'ARP',
-			NS_ARP_TALK => 'ARP_talk',
-			NS_EVENT => 'Event',
-			NS_EVENT_TALK => 'Event_talk',
-			NS_CLAN => 'Clan',
-			NS_CLAN_TALK => 'Clan_talk',
-			NS_POE => 'PoE',
-			NS_POE_TALK => 'PoE_talk',
-			NS_LEAGUE => 'League',
-			NS_LEAGUE_TALK => 'League_talk',
-			NS_SMITE => 'Smite',
-			NS_SMITE_TALK => 'Smite_talk'
 		),
 		'reviwiki' => array(
 			NS_SERVER => 'Server',
@@ -1757,7 +1736,6 @@ $wgConf->settings = array(
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
 		'+catboxwiki' => array( NS_COMIC ),
-		'+quantixwiki' => array( NS_HL2RP, NS_ARP, NS_EVENT, NS_CLAN, NS_POE, NS_LEAGUE, NS_SMITE ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+safiriawiki' => array( NS_HOENN ),
 		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA ),
@@ -1979,32 +1957,6 @@ $wgConf->settings = array(
 			),
 			'bureaucrat' => array(
 				'trusted',
-			),
-		),
-		'+quantixwiki' => array(
-			'bureaucrat' => array(
-				'bureaucrat',
-				'superadmin',
-				'admin',
-				'coder',
-			),
-			'coder' => array(
-				'confirmed',
-				'member',
-				'autopatrolled',
-			),
-			'owner' => array(
-				'admin',
-				'autopatrolled',
-				'bot',
-				'bureaucrat',
-				'coder',
-				'confirmed',
-				'superadmin',
-				'sysop',
-			),
-			'superadmin' => array(
-				'admin',
 			),
 		),
 		'+quantumwiki' => array(
@@ -2359,35 +2311,6 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
-		'+quantixwiki' => array(
-			'admin' => array(
-				'read' => true,
-			),
-			'bureaucrat' => array(
-				'bureaucrat' => true,
-				'protect' => true,
-				'upload_by_url' => true,
-			),
-			'coder' => array(
-				'coder' => true,
-				'protect' => true,
-				'editprotected' => true,
-				'upload' => true,
-				'reupload-own' => true,
-			),
-			'superadmin' => array(
-				'read' => true,
-			),
-			'sysop' => array(
-				'upload_by_url' => true,
-			),
-			'owner' => array(
-				'bureaucrat' => true,
-				'owner' => true,
-				'protect' => true,
-				'upload_by_url' => true,
-			),
-		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'read' => true,
@@ -2496,31 +2419,6 @@ $wgConf->settings = array(
 				'trusted',
 			),
 		),
-		'+quantixwiki' => array(
-			'bureaucrat' => array(
-				'superadmin',
-				'admin',
-				'coder',
-			),
-			'coder' => array(
-				'confirmed',
-				'member',
-				'autopatrolled',
-			),
-			'owner' => array(
-				'admin',
-				'autopatrolled',
-				'bot',
-				'bureaucrat',
-				'coder',
-				'confirmed',
-				'superadmin',
-				'sysop',
-			),
-			'superadmin' => array(
-				'admin',
-			),
-		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -2624,11 +2522,6 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat',
 			'respected',
-		),
-		'+quantixwiki' => array(
-			'bureaucrat',
-			'coder',
-			'owner',
 		),
 		'+testwiki' => array(
 			'bureaucrat',
