@@ -2771,6 +2771,7 @@ $wgConf->settings = array(
 		'drunkenpeasantswikiwiki' => "//$wmgUploadHostname/drunkenpeasantswikiwiki/b/bc/Wiki.png",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/c/c0/Logo_135.png",
 		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
+		'espiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'evawiki' => "//$wmgUploadHostname/evawiki/e/ec/EVA-Wiki.png",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
