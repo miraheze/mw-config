@@ -2746,6 +2746,7 @@ $wgConf->settings = array(
 		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/3/33/Logo-amafuwa.png",
 		'allbanks2wiki' => "//$wmgUploadHostname/allbanks2wiki/7/7f/AllBanks2Logo.png",
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
+		'alwikiwiki' => "//$wmgUploadHostname/alwikiwiki/3/3b/Wiki_logo.png",
 		'amaninfowiki' => "//$wmgUploadHostname/amaninfowiki/c/c9/Logo.png",
 		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/0/03/AppleBranch_135.png",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/6c/Astromagicka_logo.png",
