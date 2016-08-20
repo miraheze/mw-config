@@ -1075,6 +1075,7 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'thelonsdalebattalionwiki' => true,
+		'russiawatchwiki' => true,
 		'stellachronicawiki' => true,
 		'universebuildwiki' => true,
 		'whentheycrywiki' => true,
