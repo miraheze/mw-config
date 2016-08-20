@@ -805,7 +805,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseInputBox' => array(
 		'default' => true,
-		'allthetropeswiki' => false, // breaks editing
 	),
 	'wmgUseJavascriptSlideshow' => array(
 		'default' => false,
