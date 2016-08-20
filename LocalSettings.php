@@ -3100,8 +3100,8 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
-			"<div class=\"wikitable\" style=\"text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;\"> <span class=\"plainlinks\">[https://meta.miraheze.org/wiki/Stewards%27_noticeboard '''Miraheze Staff'''] has closed this wiki because there have been [[Special:RecentChanges|'''no edits''']] or [[Special:Logs|'''logs''']] made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to [https://meta.miraheze.org/wiki/Requests_for_adoption Requests for adoption] and make a request. If this wiki is not adopted within 6 months it may be deleted. </span></div>",
-		EOF;
+			<div class=\"wikitable\" style=\"text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;\"> <span class=\"plainlinks\">[https://meta.miraheze.org/wiki/Stewards%27_noticeboard '''Miraheze Staff'''] has closed this wiki because there have been [[Special:RecentChanges|'''no edits''']] or [[Special:Logs|'''logs''']] made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to [https://meta.miraheze.org/wiki/Requests_for_adoption Requests for adoption] and make a request. If this wiki is not adopted within 6 months it may be deleted. </span></div>
+EOF;
 		return true;
 	}
 }
@@ -3229,3 +3229,4 @@ EOF;
 
 	return true;
 } */
+z
