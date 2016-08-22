@@ -200,7 +200,6 @@ $wgConf->settings = array(
 			'allthetropes.org' => 'allthetropeswiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
 			'aman.info.tm' => 'amaninfowiki',
-			'anuwiki.com' => 'anuwiki',
 			'boulderwiki.org' => 'boulderwikiwiki',
 			'carving.wiki' => 'carvingwiki',
 			'drone-regulation.info' => 'droneregulationwiki',
@@ -2582,7 +2581,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => 'https://allthetropes.org',
 		'amaninfowiki' => 'https://aman.info.tm',
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
-		'anuwiki' => 'https://anuwiki.com',
 		'boulderwikiwiki' => 'https://boulderwiki.org',
 		'carvingwiki' => 'https://carving.wiki',
 		'dottorcontewiki' => 'https://wiki.dottorconte.eu',
@@ -2925,7 +2923,6 @@ $wgConf->settings = array(
 		'default' => array(
 			'(.*\.)?miraheze\.org',
 			'spiral\.wiki',
-			'anuwiki\.com',
 		),
 	),
 
