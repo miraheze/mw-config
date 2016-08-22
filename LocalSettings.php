@@ -981,6 +981,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'humorpediawiki' => true,
 		'tmewiki' => true,
+		'russiawatchwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
