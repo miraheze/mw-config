@@ -232,7 +232,7 @@ $wgConf->settings = array(
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
-			'zenbuddhism.info' => 'zenbuddhismwiki'
+			'zenbuddhism.info' => 'zenbuddhismwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
