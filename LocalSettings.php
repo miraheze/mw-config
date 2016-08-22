@@ -232,7 +232,6 @@ $wgConf->settings = array(
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
-			'zenbuddhism.info' => 'zenbuddhismwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -2613,7 +2612,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
 		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
 		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
-		'zenbuddhismwiki' => 'https://zenbuddhism.info',
 	),
 	'wgShowHostnames' => array(
 		'default' => true,
