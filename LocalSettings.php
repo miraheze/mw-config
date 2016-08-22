@@ -917,6 +917,7 @@ $wgConf->settings = array(
 	'wmgUseNoTitle' => array(
 		'default' => false,
 		'aktposwiki' => true,
+		'alwikiwiki' => true,
 		'carvingwiki' => true,
 		'developmentwiki' => true,
 		'dtswiki' => true,
@@ -1316,6 +1317,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
+		'alwikiwiki' => true,
 		'entropediawiki' => true,
 		'extloadwiki' => true,
 		'indexwiki' => true,
