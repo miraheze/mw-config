@@ -1217,6 +1217,7 @@ $wgConf->settings = array(
 		'musictabswiki' => true,
 		'mydegreewiki' => true,
 		'neuronpediawiki' => true,
+		'newarkmanorwiki' => true,
 		'newcolumbiawiki' => true,
 		'newknowledgewiki' => true,
 		'newtrendwiki' => true,
