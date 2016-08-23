@@ -1279,6 +1279,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
 		'worldbuildingwiki' => true,
+		'wthsapgovwiki' => true,
 		'xdjibiwiki' => true,
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
