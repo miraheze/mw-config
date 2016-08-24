@@ -2568,7 +2568,9 @@ $wgConf->settings = array(
 	'wgRSSCacheAge' => array(
 		'default' => '3600'
 	),
-	'wgRSSUrlWhitelist' => array("*")
+	'wgRSSUrlWhitelist' => array(
+		'default' => array("*")
+	),
 	'wgRSSProxy' => array(
 		'default' => false,
 	),
