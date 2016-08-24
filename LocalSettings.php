@@ -139,13 +139,9 @@ $wgConf->settings = array(
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
-		'robloxscripterswiki' => true,
-		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
-		'thelonsdalebattalionwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
@@ -1646,7 +1642,13 @@ $wgConf->settings = array(
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
 	),
-
+	// MultimediaViewer (not beta)
+	'wgMediaViewerEnableByDefault' => array(
+		'extloadwiki' => true,
+		'robloxscripterswiki' => true,
+		'thefosterswiki' => true,
+		'thelonsdalebattalionwiki' => true,
+	),
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
