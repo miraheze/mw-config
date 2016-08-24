@@ -249,7 +249,7 @@ if ( $wmgUseRelatedArticles ) {
 
 if ( $wmgUseReplaceText ) {
 	wfLoadExtension( 'ReplaceText' );
-	"$wgRSSUrlWhitelist = array( "*" );
+	$wgRSSUrlWhitelist = array( "*" );
 }
 
 if ( $wmgUseRSS ) {
