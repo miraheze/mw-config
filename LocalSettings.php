@@ -2569,7 +2569,7 @@ $wgConf->settings = array(
 		'default' => '3600'
 	),
 	'wgRSSUrlWhitelist' => array(
-		'default' => array("*")
+		'default' => array( "*" )
 	),
 	'wgRSSProxy' => array(
 		'default' => false,
