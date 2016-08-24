@@ -892,6 +892,7 @@ $wgConf->settings = array(
 		'robloxscripterswiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
+		'thelonsdalebattalionwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
