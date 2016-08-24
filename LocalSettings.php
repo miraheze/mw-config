@@ -1,4 +1,4 @@
-<?php
+quim m<?php
 /*
 LocalSettings.php for Miraheze.
 Authors of initial version: Southparkfan, John Lewis, Orain contributors
@@ -203,7 +203,6 @@ $wgConf->settings = array(
 			'boulderwiki.org' => 'boulderwikiwiki',
 			'carving.wiki' => 'carvingwiki',
 			'drone-regulation.info' => 'droneregulationwiki',
-			'espiral.org' => 'espiralwiki',
 			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
 			'haxion.space' => 'haxionspacewiki',
 			'ircwiki.cf' => 'ircwiki',
@@ -2615,7 +2614,6 @@ $wgConf->settings = array(
 		'downhillderelictswiki' => 'https://wiki.downhillderelicts.com',
 		'droneregulationwiki' => 'https://drone-regulation.info',
 		'dwplivewiki' => 'https://wiki.dwplive.com',
-		'espiralwiki' => 'https://espiral.org',
 		'fibromyalgiaengineerwiki' => 'https://fibromyalgia-engineer.com',
 		'garyjohnsonmeetupswiki' => 'https://wiki.garyjohnsonmeetups.com',
 		'grottocenterwiki' => 'https://wiki.grottocenter.org',
