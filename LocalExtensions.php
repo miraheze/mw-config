@@ -253,6 +253,7 @@ if ( $wmgUseReplaceText ) {
 
 if ( $wmgUseRSS ) {
 	require_once( "$IP/extensions/RSS/RSS.php" );
+	$wgRSSUrlWhitelist = array( "*" );
 }
 
 if ( $wmgUseSandboxLink ) {
