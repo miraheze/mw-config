@@ -2563,6 +2563,20 @@ $wgConf->settings = array(
 			'delete',
 		),
 	),
+	
+	// RSS Settings
+	'wgRSSCacheAge' => array(
+		'default' => '3600'
+	),
+	'wgRSSUrlWhitelist' => array(
+		'default' => '*'
+	),
+	'wgRSSProxy' => array(
+		'default' => false,
+	),
+	'wgRSSDateDefaultFormat' => array(
+		'default' => 'Y-m-d H:i:s'
+	),
 
 	// Scribunto
 	'wgCodeEditorEnableCore' => array(
