@@ -251,6 +251,10 @@ if ( $wmgUseReplaceText ) {
 	wfLoadExtension( 'ReplaceText' );
 }
 
+if ( $wmgUseRSS ) {
+	require_once( "$IP/extensions/RSS/RSS.php" );
+}
+
 if ( $wmgUseSandboxLink ) {
 	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
 }

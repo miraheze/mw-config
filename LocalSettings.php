@@ -1000,6 +1000,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
+	'wmgUseRSS' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
