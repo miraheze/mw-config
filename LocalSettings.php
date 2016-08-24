@@ -1002,6 +1002,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRSS' => array(
 		'default' => false,
+		'emulationwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
