@@ -2577,9 +2577,6 @@ $wgConf->settings = array(
 	'wgRSSDateDefaultFormat' => array(
 		'default' => 'Y-m-d H:i:s'
 	),
-	'wgRSSAllowedFeeds' => array(
-		'default' => array("*")
-	),
 
 	// Scribunto
 	'wgCodeEditorEnableCore' => array(
