@@ -139,9 +139,13 @@ $wgConf->settings = array(
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
+		'robloxscripterswiki' => true,
+		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
+		'thelonsdalebattalionwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
