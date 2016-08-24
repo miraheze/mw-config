@@ -2981,6 +2981,10 @@ $wgConf->settings = array(
 			NS_TEST => true,
 		),
 	),
+        'wgVisualEditorSupportedSkins' => array(
+                'defualt' => array(),
+                'permanentfuturelabwiki' => array( 'foreground' ),
+        ),
 
 	// WebChat config
 	'wmgWebChatServer' => array(
