@@ -1000,19 +1000,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
-	// RSS Settings
-	'wgRSSCacheAge' => array(
-		'default' => '3600'
-	),
-	'wgRSSUrlWhitelist' => array(
-		'default' => array( "*" )
-	),
-	'wgRSSProxy' => array(
-		'default' => false,
-	),
-	'wgRSSDateDefaultFormat' => array(
-		'default' => 'Y-m-d H:i:s'
-	),
 	'wmgUseRSS' => array(
 		'default' => false,
 		'extloadwiki' => true,
