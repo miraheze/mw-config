@@ -1052,6 +1052,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSyntaxHighlight' => array(
 		'default' => false,
+		'alfrescowiki' => true,
 		'allthetropeswiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'datasciencewiki' => true,
