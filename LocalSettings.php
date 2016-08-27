@@ -682,6 +682,7 @@ $wgConf->settings = array(
 	'wmgUseCookieWarning' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
