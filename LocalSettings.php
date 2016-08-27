@@ -609,6 +609,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'grandtheftwikiwiki' => true,
+		'testauthorprotectwiki' => true,
 	),
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
