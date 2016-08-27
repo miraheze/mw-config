@@ -323,7 +323,11 @@ $wgConf->settings = array(
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		),
 	),
-
+	// Cookies extension settings
+	'wgCookieWarningMoreUrl' => array(
+		'default' => false,
+		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk/wiki/The_Lonsdale_Battalion:Cookies'
+	),
 	// Database
 	'wgCompressRevisions' => array(
 		'default' => false,
