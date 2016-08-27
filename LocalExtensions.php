@@ -185,6 +185,8 @@ if ( $wmgUseMetrolook ) {
 
 if ( $wmgUseMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+
+	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
 if ( $wmgUseMonaco ) {
