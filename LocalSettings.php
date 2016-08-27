@@ -1838,6 +1838,9 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			NS_TECH => true,
 		),
+		'+thelonsdalebattalionwiki' => array(
+			NS_GLOSSARY => true,
+		),
 	),
 	'+wgNamespacesWithSubpages' => array(
 		'default' => array(),
