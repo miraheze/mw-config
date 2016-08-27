@@ -656,11 +656,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
-	'wmgUseContactPage' => array(
-		'default' => false, // Add wiki config to ContactPage.php
-		'christipediawiki' => true,
-		'extloadwiki' => true,
-	),
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -678,6 +673,15 @@ $wgConf->settings = array(
 		'robloxscripterswiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
+	),
+	'wmgUseContactPage' => array(
+		'default' => false, // Add wiki config to ContactPage.php
+		'christipediawiki' => true,
+		'extloadwiki' => true,
+	),
+	'wmgUseCookieWarning' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,

@@ -49,13 +49,6 @@ if ( $wmgUseCharInsert ) {
 	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
 
-if ( $wmgUseContactPage) {
-	require_once( "$IP/extensions/ContactPage/ContactPage.php" );
-
-	// Contact Page is a fairly complex (well long) extension to configure.
-	// All config should be in the file below on a wikidb basis.
-	require_once( "/srv/mediawiki/config/ContactPage.php" );
-}
 
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
@@ -63,6 +56,21 @@ if ( $wmgUseCollapsibleVector ) {
 
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
+}
+
+if ( $wmgUseContactPage ) {
+	require_once( "$IP/extensions/ContactPage/ContactPage.php" );
+
+	// Contact Page is a fairly complex (well long) extension to configure.
+	// All config should be in the file below on a wikidb basis.
+	require_once( "/srv/mediawiki/config/ContactPage.php" );
+}
+
+if ( $wmgUseCookieWarning ) {
+	wfLoadExtension( 'CookieWarning' );
+	// Geolocate here to determine to whom to show the cookie warning
+	$wgCookieWarningEnabled = true;
+	// Haha just kidding -- annoy everyone
 }
 
 if ( $wmgUseCreateWiki ) {
