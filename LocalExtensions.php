@@ -279,7 +279,7 @@ if ( $wmgUseSyntaxHighlight ) {
 }
 
 if ( $wmgUseSectionHide ) {
-	require_once( "$IP/extensions/SectionHide/SectionHide.php" );
+	wfLoadExtension( 'SectionHide' );
 }
 
 if ( $wmgUseSimpleTooltip ) {
