@@ -468,6 +468,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+plazmaburstwiki' => array(
+			'anon' => true,
+		),
 		'+priyowiki' => array(
 			'anon' => true,
 		),
