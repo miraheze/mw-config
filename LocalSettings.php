@@ -470,6 +470,9 @@ $wgConf->settings = array(
 		),
 		'+plazmaburstwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+			'editor' => true,
 		),
 		'+priyowiki' => array(
 			'anon' => true,
@@ -677,6 +680,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'openconstitutionwiki' => true,
+		'plazmaburstwiki' => true,
 		'priyowiki' => true,
 		'robloxscripterswiki' => true,
 		'stellachronicawiki' => true,
