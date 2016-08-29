@@ -1317,6 +1317,7 @@ $wgConf->settings = array(
 	'wmgUseVariables' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'ayrshirewiki' => true,
 		'bgowiki' => true,
 		'extloadwiki' => true,
 		'eotewiki' => true,
