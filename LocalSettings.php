@@ -3014,6 +3014,11 @@ $wgConf->settings = array(
                 'defualt' => array(),
                 'permanentfuturelabwiki' => array( 'foreground' ),
         ),
+        'wgUseSingleEditTab' => array(
+        	'default' => false,
+        	'espiralwiki' => true,
+        	'spiralwiki' => true,
+        ),
 
 	// WebChat config
 	'wmgWebChatServer' => array(
