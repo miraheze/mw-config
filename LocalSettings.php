@@ -3020,9 +3020,9 @@ $wgConf->settings = array(
         	'spiralwiki' => true,
         ),
         'wgFlowEditorList' => array(
-        	'default' => ('wikitext', 'none')
-        	'espiralwiki' => ('visualeditor')
-        	'spiralwiki' => ('visualedtior')
+        	'default' => array('wikitext', 'none')
+        	'espiralwiki' => array('visualeditor')
+        	'spiralwiki' => array('visualedtior')
         ),
 
 	// WebChat config
