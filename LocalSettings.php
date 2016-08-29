@@ -2994,6 +2994,9 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_USER => true,
 		 ),
+		 '+espiralwiki' => array(
+		 	NS_ESPIRAL => true,
+		 ),
 		'+wisdomwikiwiki' => array(
 			NS_LCS => true,
 			NS_MEDI => true,
