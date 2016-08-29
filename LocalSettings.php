@@ -108,6 +108,8 @@ define( 'NS_SPRITES', 1680);
 define( 'NS_SPRITES_TALK', 1681);
 define( 'NS_GALLERY', 1682);
 define( 'NS_GALLERY_TALK', 1683);
+define( 'NS_ESPIRAL', 1684);
+define( 'NS_ESPIRAL_TALK, 1685');
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1694,6 +1696,10 @@ $wgConf->settings = array(
 		'developmentwiki' => array(
 			NS_OFFICIAL => 'Official',
 			NS_OFFICIAL_TALK => 'Official_talk',
+		),
+		'espiralwiki' => array(
+			NS_ESPIRAL => 'Espiral',
+			NS_ESPIRAL_TALK => 'Espiral_talk',
 		),
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
