@@ -1168,6 +1168,7 @@ $wgConf->settings = array(
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
 		'aryamanwiki' => true,
+		'ayrshirewiki' => true,
 		'atheneumwiki' => true,
 		'augustinianumwiki' => true,
 		'aurcusonlinewiki' => true,
