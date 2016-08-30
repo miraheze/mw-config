@@ -3022,7 +3022,7 @@ $wgConf->settings = array(
         	'espiralwiki' => true,
         	'spiralwiki' => true,
         ),
-        'wmgFlowEditorList' => array(
+        'wgFlowEditorList' => array(
         	'default' => array('wikitext', 'visualeditor'),
         	'espiralwiki' => array('visualeditor'),
         	'spiralwiki' => array('visualeditor'),
