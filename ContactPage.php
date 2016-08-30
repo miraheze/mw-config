@@ -15,6 +15,20 @@ if ( $wgDBname == 'extloadwiki' ) {
 	);
 }
 
+if ( $wgDBname == 'ayrshirewiki' ) {
+	$wgContactConfig['default'] = array(
+		'RecipientUser' => 'Gordonuk',
+		'SenderEmail' => $wgPasswordSender,
+		'SenderName' => 'Miraheze No Reply',
+		'RequireDetails' => true,
+		'IncludeIP' => false, // No privy
+		'AdditionalFields' => array(),
+		'DisplayFormat' => 'table',
+		'RLModules' => array(),
+		'RLStyleModules' => array(),
+	);
+}
+
 if ( $wgDBname == 'christipediawiki' ) {
 	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'Kees Langeveld',
