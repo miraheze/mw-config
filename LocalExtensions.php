@@ -106,11 +106,12 @@ if ( $wmgUseErudite ) {
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
-
+	
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 	);
+	$wgFlowEditorList = $wmgFlowEditorList
 }
 
 if ( $wmgFlowDefaultNamespaces ) {
