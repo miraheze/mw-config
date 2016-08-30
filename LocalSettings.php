@@ -660,6 +660,7 @@ $wgConf->settings = array(
 	'wmgUseCharInsert' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'anothertimeline2120wiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
