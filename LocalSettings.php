@@ -616,6 +616,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
+		'ayrshirewiki' => true,
 		'extloadwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'testauthorprotectwiki' => true,
@@ -687,6 +688,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
+		'ayrshirewiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
 	),
