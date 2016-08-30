@@ -3017,7 +3017,7 @@ $wgConf->settings = array(
                 'defualt' => array(),
                 'permanentfuturelabwiki' => array( 'foreground' ),
         ),
-        'wgUseSingleEditTab' => array(
+        'wgVisualEditorUseSingleEditTab' => array(
         	'default' => false,
         	'espiralwiki' => true,
         	'spiralwiki' => true,
