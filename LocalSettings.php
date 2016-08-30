@@ -1261,6 +1261,7 @@ $wgConf->settings = array(
 		'panoramawiki' => true,
 		'paodeaodawiki' => true,
 		'partupwiki' => true,
+		'pbmwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'pflanzenwiki' => true,
 		'pqwiki' => true,
