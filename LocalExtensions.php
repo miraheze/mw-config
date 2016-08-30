@@ -111,6 +111,8 @@ if ( $wmgUseFlow ) {
 		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 	);
+
+	$wgFlowEditorList = $wmgFlowEditorList;
 }
 
 if ( $wmgFlowDefaultNamespaces ) {
