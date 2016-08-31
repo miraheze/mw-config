@@ -1626,8 +1626,9 @@ $wgConf->settings = array(
 	// Metrolook settings
 	'wgMetrolookDownArrow' => array(
 		'default' => true,
-		'thelonsdalebattalionwiki' => false,
 		'allthetropeswiki' => false,
+		'ayrshirewiki' => false,
+		'thelonsdalebattalionwiki' => false,
 	),
 	'wgMetrolookUploadButton' => array(
 		'default' => true,
@@ -1635,7 +1636,16 @@ $wgConf->settings = array(
 	),
 	'wgMetrolookBartile' => array(
 		'default' => true,
+		'ayrshirewiki' => false,
 		'thelonsdalebattalionwiki' => false,
+	),
+	'wgMetrolookMobile' => array(
+		'default' => true,
+		'ayrshirewiki' => false,
+	),
+	'wgMetrolookUseIconWatch' => array(
+		'default' => true,
+		'ayrshirewiki' => false,
 	),
 
 	// MirahezeMagic
