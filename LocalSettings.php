@@ -677,7 +677,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseComments' => array(
-		'default' => false,
+		'default' => false, // Remember to assign 'commentadmin' rights!
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'openconstitutionwiki' => true,
@@ -2366,6 +2366,11 @@ $wgConf->settings = array(
 			'wikicreator' => array(
 				'createwiki' => true,
 				'managewiki' => true,
+			),
+		),
+		'+plazmaburstwiki' => array(
+			'sysop' => array(
+				'commentadmin' => true,
 			),
 		),
 		'+poserdazfreebieswiki' => array(
