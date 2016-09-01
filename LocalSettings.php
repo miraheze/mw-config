@@ -1648,7 +1648,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => false,
 	),
 	'wgMetrolookLine' => array(
-		'default' = true, 
+		'default' => true, 
 		'ayrshirewiki' => false,
 	),
 
