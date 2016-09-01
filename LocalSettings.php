@@ -1647,6 +1647,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'ayrshirewiki' => false,
 	),
+	'wgMetrolookLine' => array(
+		'default' = true, 
+		'ayrshirewiki' => false,
+	),
 
 	// MirahezeMagic
 	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions
