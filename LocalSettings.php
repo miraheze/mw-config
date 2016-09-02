@@ -1678,7 +1678,7 @@ $wgConf->settings = array(
 
 	// Mobile
 	'wmgMFAutodetectMobileView' => array(
-		'default' => false,
+		'default' => true,
 	),
 
 	// MsCatSelect vars
