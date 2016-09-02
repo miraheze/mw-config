@@ -881,6 +881,7 @@ $wgConf->settings = array(
 	// MsUpload is enabled on extloadwiki via MsPackage
 	'wmgUseMsUpload' => array(
 		'default' => false,
+		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
