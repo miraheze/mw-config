@@ -103,8 +103,8 @@ if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }
 
-if ( $wmgUseFancyBoxThings ) {
-	require_once( "$IP/extensions/FancyBoxThings/FancyBoxThings.php" );
+if ( $wmgUseFancyBoxThumbs ) {
+	require_once( "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php" );
 }
 
 if ( $wmgUseFlow ) {
