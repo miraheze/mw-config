@@ -1453,6 +1453,7 @@ $wgConf->settings = array(
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
+		'+exitsincwiki' => array('txt' ),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx','xml'),
 		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
