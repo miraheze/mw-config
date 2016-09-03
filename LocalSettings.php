@@ -746,7 +746,7 @@ $wgConf->settings = array(
 		'datachronwiki' => true,
 		'extloadwiki' => true,
 	),
-	'wmgUseFancyBoxThings' => array(
+	'wmgUseFancyBoxThumbs' => array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
