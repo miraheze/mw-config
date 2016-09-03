@@ -746,6 +746,10 @@ $wgConf->settings = array(
 		'datachronwiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseFancyBoxThings' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
 	),
