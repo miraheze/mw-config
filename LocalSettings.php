@@ -748,6 +748,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseFancyBoxThumbs' => array(
 		'default' => false,
+		'ayrshirewiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseFeaturedFeeds' => array(
