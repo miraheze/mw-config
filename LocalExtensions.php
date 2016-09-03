@@ -103,6 +103,10 @@ if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }
 
+if ( $wmgUseFancyBoxThings ) {
+	require_once( "$IP/extensions/FancyBoxThings/FancyBoxThings.php" );
+}
+
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
