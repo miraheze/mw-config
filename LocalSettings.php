@@ -1109,6 +1109,7 @@ $wgConf->settings = array(
 	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
 		'default' => false,
+		'8stationwiki' => true,
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
