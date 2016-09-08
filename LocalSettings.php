@@ -1615,6 +1615,9 @@ $wgConf->settings = array(
 	),
 
 	// Math
+	'wgMathValidModes' => array(
+		'default' => array( 'png' ),
+	),
 	'wgTexvc' => array(
 		'default' => '/usr/bin/texvc',
 	),
