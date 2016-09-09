@@ -1244,6 +1244,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => true,
 		'janesskillspackwiki' => true,
 		'justinbieberwiki' => true,
+		'kassaiwiki' => true,
 		'lancemedicalwiki' => true,
 		'lbsgeswiki' => true,
 		'lclwikiwiki' => true,
