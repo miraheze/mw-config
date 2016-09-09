@@ -1358,6 +1358,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'aemanualwiki' => true,
 		'amaninfowiki' => true,
+		'ayrshirewiki' => true,
 		'extloadwiki' => true,
 		'geodatawiki' => true,
 		'plazmaburstwiki' => true,
