@@ -108,6 +108,8 @@ define( 'NS_SPRITES', 1680);
 define( 'NS_SPRITES_TALK', 1681);
 define( 'NS_GALLERY', 1682);
 define( 'NS_GALLERY_TALK', 1683);
+define( 'NS_HALAMAN', 1684);
+define( 'NS_HALAMAN_TALK', 1685);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -590,6 +592,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'heistwiki' => true,
+		'perpuswiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
 		'secondcirclewiki' => true,
@@ -739,6 +742,7 @@ $wgConf->settings = array(
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'idtestwiki' => true,
+		'perpuswiki' => true,
 	),
 	'wmgUseErudite' => array(
 		'default' => false,
@@ -1091,6 +1095,7 @@ $wgConf->settings = array(
 		'idtestwiki' => true,
 		'partupwiki' => true,
 		'pascalscada' => true,
+		'perpuswiki' => true,
 		'priyowiki' => true,
 		'robloxscripterswiki' => true,
 		'sizzlecookiewiki' => true,
@@ -1146,6 +1151,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'testwiki' => true,
 		'thehushhushsagawiki' => true,
+		'perpuswiki' => true,
 		'urpswiki' => true,
 		'valentinaprojectwiki' => true,
 		'welcomewiki' => true,
@@ -1761,6 +1767,10 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => array(
 			NS_GLOSSARY => 'Glossary',
 			NS_GLOSSARY_TALK => 'Glossary_talk',
+		),
+		'+perpuswiki' => array(
+			NS_HALAMAN => 'Halaman',
+			NS_HALAMAN_TALK => 'Permbicaraan_Halaman',
 		),
 		'tmewiki' => array(
 			NS_PORTAL => 'Portal',
