@@ -1063,6 +1063,7 @@ $wgConf->settings = array(
 		'apolcourseswiki' => true,
 		'extloadwiki' => true,
 		'idtestwiki' => true,
+		'perpuswiki' => true,
 	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
 	'wmgUseSocialProfile' => array(
