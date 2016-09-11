@@ -1204,6 +1204,7 @@ $wgConf->settings = array(
 		'civitaswiki' => true,
 		'clementsworldbuildingwiki' => true,
 		'clicordiwiki' => true,
+		'cnvwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'cvsmbwiki' => true,
 		'dalarwiki' => true,
