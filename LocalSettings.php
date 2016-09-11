@@ -1291,6 +1291,7 @@ $wgConf->settings = array(
 		'rpcharacterswiki' => true,
 		'safiriawiki' => true,
 		'secondcirclewiki' => true,
+		'seldir' => true,
 		'setonwiki' => true,
 		'shoppingwiki' => true,
 		'simonjonwiki' => true,
