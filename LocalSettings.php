@@ -1583,7 +1583,6 @@ $wgConf->settings = array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'diavwiki' => 'All Rights Reserved',
 		'espiralwiki' => 'CC0 Public Domain',
-		'jayuwikiwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'metatrekwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'oyeavdelingenwiki' => 'All Rights Reserved',
 		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
