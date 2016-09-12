@@ -209,7 +209,6 @@ $wgConf->settings = array(
 			'haxion.space' => 'haxionspacewiki',
 			'ircwiki.cf' => 'ircwiki',
 			'meta.trek.tk' => 'metatrekwiki',
-			
 			'oneagencydunedin.wiki' => 'oneagencydunedinwiki',
 			'oyeavdelingen.org' => 'oyeavdelingenwiki',
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
