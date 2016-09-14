@@ -351,6 +351,7 @@ if ( $wmgUseVisualEditor ) {
 
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
+		$wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 	}
