@@ -646,11 +646,13 @@ $wgConf->settings = array(
 	),
 	'wmgUseMSCalendar' => array(
 		'default' => false,
+		'5awiki' => true,
 		'aucelewiki' => true,
 		'barbarasherwikiwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'financialfindswiki' => true,
+		'hontsukuruwiki' => true,
 		'robertsnoteswiki' => true,
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
