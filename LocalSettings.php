@@ -110,6 +110,9 @@ define( 'NS_GALLERY', 1682);
 define( 'NS_GALLERY_TALK', 1683);
 define( 'NS_HALAMAN', 1684);
 define( 'NS_HALAMAN_TALK', 1685);
+define( 'NS_DICT', 1686);
+define( 'NS_DICT_TALK', 1687);
+
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1726,6 +1729,10 @@ $wgConf->settings = array(
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
+		'adiapediawiki' => array(
+			NS_DICT => 'Dict',
+			NS_DICT_TALK => 'Dict_talk',
+		),
 		'adnovumwiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
