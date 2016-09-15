@@ -113,7 +113,6 @@ define( 'NS_HALAMAN_TALK', 1685);
 define( 'NS_DICT', 1686);
 define( 'NS_DICT_TALK', 1687);
 
-
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
 define( 'WMG_NS_MODULE_TALK', 829 );
