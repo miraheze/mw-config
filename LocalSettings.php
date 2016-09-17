@@ -903,6 +903,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'amaninfowiki' => true,
+		'anduinwiki' => true,
 		'ayrshirewiki' => true,
 		'bgowiki' => true,
 		'chandruswethswiki' => true,
