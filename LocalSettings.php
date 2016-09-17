@@ -398,6 +398,9 @@ $wgConf->settings = array(
 		'+clementsworldbuildingwiki' => array(
 			'anon' => true,
 		),
+		'+cpiwiki' => array(
+			'anon' => true,
+		),
 		'+dditecwiki' => array(
 			'anon' => true,
 			'user' => true,
