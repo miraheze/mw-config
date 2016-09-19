@@ -1268,6 +1268,7 @@ $wgConf->settings = array(
 		'lingnlangwiki' => true,
 		'littlebigplanetwiki' => true,
 		'lizardwiki' => true,
+		'lovelivewiki' => true,
 		'luckandlogicwiki' => true,
 		'lunfengwiki' => true,
 		'maiasongcontestwiki' => true,
