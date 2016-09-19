@@ -999,7 +999,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
-		'nextlevelwikiwiki' true,
+		'nextlevelwikiwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'virpatel524wiki' => true,
