@@ -1113,6 +1113,7 @@ $wgConf->settings = array(
 		'pascalscada' => true,
 		'perpuswiki' => true,
 		'priyowiki' => true,
+		'programmingreferencewiki' => true,
 		'robloxscripterswiki' => true,
 		'sizzlecookiewiki' => true,
 		'sourcewiki' => true,
