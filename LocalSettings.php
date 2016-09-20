@@ -1625,6 +1625,7 @@ $wgConf->settings = array(
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'sourcewiki' => 'https://source.miraheze.org/wiki/Source_Code_Wiki:Copyrights',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+		'ujhswiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'wisdomwikiwiki' => 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
 		'universebuildwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 	),
