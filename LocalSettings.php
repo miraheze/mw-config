@@ -1587,7 +1587,6 @@ $wgConf->settings = array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
 		'espiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
-		'jayuwikiwiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png",
 		'libertywikiwiki' => "http://creativecommons.org.nz/wp-content/uploads/2012/05/by-nc-sa1.png",
 		'safiriawiki' => "https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png",
 		'sourcewiki' => 'https://source.miraheze.org/wiki/Source_Code_Wiki:Copyrights',
