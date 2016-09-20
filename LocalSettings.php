@@ -871,6 +871,7 @@ $wgConf->settings = array(
 		'bgowiki' => true,
 		'eotewiki' => true,
 		'extloadwiki' => true,
+		'marcoschriekwiki' => true,
 		'secondcirclewiki' => true,
 	),
 	'wmgUseMetrolook' => array(
