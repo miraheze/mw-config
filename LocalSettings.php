@@ -874,6 +874,9 @@ $wgConf->settings = array(
 		'marcoschriekwiki' => true,
 		'secondcirclewiki' => true,
 	),
+	'wmgUseMaps' => array(
+		'default' => false,
+		'extloadwiki' => true,)
 	'wmgUseMetrolook' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
