@@ -876,7 +876,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMaps' => array(
 		'default' => false,
-		'extloadwiki' => false, // Makes extloadwiki fail. --Reception123
+		'extloadwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
