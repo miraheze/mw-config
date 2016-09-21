@@ -187,7 +187,7 @@ if ( $wmgUseLoopsCombo ) {
 
 if ( $wmgUseMaps ) {
 	require_once( "$IP/extensions/Maps/Maps.php" );
-	$egMapsDefaultService' = 'openlayers';
+	$egMapsDefaultService = 'openlayers';
 }
 
 if ( $wmgUseMetrolook ) {
