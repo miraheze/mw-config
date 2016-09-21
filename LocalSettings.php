@@ -876,6 +876,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMaps' => array(
 		'default' => false,
+		'ayrshirewiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
