@@ -3257,6 +3257,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 			"Special:ResetPassword",
 			"Special:UserLogin",
 			"Special:UserLogout",
+			"Special:CreateAccount",
 		);
 }
 
