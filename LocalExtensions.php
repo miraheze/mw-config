@@ -54,6 +54,10 @@ if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
 
+if ( $wmgUseContentTranslation ) {
+	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
+}
+
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
 }
