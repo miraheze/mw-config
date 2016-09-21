@@ -708,6 +708,7 @@ $wgConf->settings = array(
 	'wmgUseContentTranslation' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'pathfinderwiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
 		'default' => false,
