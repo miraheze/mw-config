@@ -1241,6 +1241,7 @@ $wgConf->settings = array(
 		'detlefswiki' => true,
 		'developmentwiki' => true,
 		'dicficwiki' => true,
+		'dishwiki' => true,
 		'dmwwiki' => true,
 		'dottorcontewiki' => true,
 		'drunkenpeasantswikiwiki' => true,
