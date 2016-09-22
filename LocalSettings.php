@@ -676,6 +676,7 @@ $wgConf->settings = array(
 		'cssandjsschoolboardwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
+		'studynotekrwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
