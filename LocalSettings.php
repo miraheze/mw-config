@@ -1529,6 +1529,10 @@ $wgConf->settings = array(
 	'wgEnableImageWhitelist' => array(
 		'default' => false,
 	),
+	'wgShowArchiveThumbnails' => array(
+		'default' => true,
+		'doinwiki' => false,
+	),
 
 	// Flow
 	'wmgFlowDefaultNamespaces' => array(
