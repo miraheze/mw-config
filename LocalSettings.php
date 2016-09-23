@@ -379,6 +379,11 @@ $wgConf->settings = array(
 		'+adnovumwiki' => array(
 			'anon' => true,
 		),
+		'+aleenghawiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+allbanks2wiki' => array(
 			'anon' => true,
 			'user' => true,
