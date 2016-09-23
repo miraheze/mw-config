@@ -885,6 +885,10 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseMassEditRegex' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
