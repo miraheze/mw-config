@@ -194,6 +194,10 @@ if ( $wmgUseMaps ) {
 	$egMapsDefaultService = 'openlayers';
 }
 
+if ( $wmgUseMassEditRegex ) {
+	require_once( "$IP/extensions/MassEditRegex/MassEditRegex.php" );
+}
+
 if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 }
