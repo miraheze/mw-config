@@ -7,7 +7,7 @@ if ( $wmgUseAccessControl ) {
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
 	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
-}
+}c
 
 if ( $wmgUseAdminLinks ) {
 	require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
@@ -52,10 +52,6 @@ if ( $wmgUseCharInsert ) {
 
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
-}
-
-if ( $wmgUseContentTranslation ) {
-	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
 }
 
 if ( $wmgUseComments ) {
