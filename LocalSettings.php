@@ -1170,6 +1170,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
+		'dishwiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'metawiki' => true,
