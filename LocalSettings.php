@@ -888,7 +888,8 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
-		'default' => false, // Permissions must be set for the extension to work!
+		'default' => false, // sysop is given permission 'masseditregex' by default
+		'allthetropeswiki' => true,
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 	),

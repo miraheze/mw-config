@@ -192,6 +192,7 @@ if ( $wmgUseMaps ) {
 
 if ( $wmgUseMassEditRegex ) {
 	require_once( "$IP/extensions/MassEditRegex/MassEditRegex.php" );
+	$wgGroupPermissions['sysop']['masseditregex'] = true;
 }
 
 if ( $wmgUseMetrolook ) {
