@@ -712,11 +712,6 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'extloadwiki' => true,
 	),
-	'wmgUseContentTranslation' => array(
-		'default' => false,
-		'extloadwiki' => true,
-		'pathfinderwiki' => true,
-	),
 	'wmgUseCookieWarning' => array(
 		'default' => false,
 		'extloadwiki' => true,
