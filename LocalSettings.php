@@ -886,7 +886,8 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
-		'default' => false,
+		'default' => false, // Permissions must be set for the extension to work!
+		'cpiwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
@@ -2257,6 +2258,11 @@ $wgConf->settings = array(
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'read' => true,
+			),
+		),
+		'+cpiwiki' => array(
+			'sysop' => array(
+				'masseditregex'
 			),
 		),
 		'+developmentwiki' => array(
