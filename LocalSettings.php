@@ -1110,6 +1110,7 @@ $wgConf->settings = array(
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
+		'applewikiwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
