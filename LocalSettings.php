@@ -2939,6 +2939,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
 		'alwikiwiki' => "//$wmgUploadHostname/alwikiwiki/3/3b/Wiki_logo.png",
 		'amaninfowiki' => "//$wmgUploadHostname/amaninfowiki/c/c9/Logo.png",
+		'anduinwiki' => "//$wmgUploadHostname/anduinwiki/c/c9/Logo.png",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/3/3b/Wiki_logo.png",
 		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/0/03/AppleBranch_135.png",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/6c/Astromagicka_logo.png",
