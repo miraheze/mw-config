@@ -1096,7 +1096,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
-		//'extloadwiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
