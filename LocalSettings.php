@@ -697,6 +697,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseComments' => array(
 		'default' => false, // Remember to assign 'commentadmin' rights!
+		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'openconstitutionwiki' => true,
@@ -1021,6 +1022,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
+		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
 		'nextlevelwikiwiki' => true,
@@ -1108,6 +1110,7 @@ $wgConf->settings = array(
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
+		'applewikiwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
 		'micropediawiki' => true,
@@ -1439,6 +1442,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
+		'applewikiwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
