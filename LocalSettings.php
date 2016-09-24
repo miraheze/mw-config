@@ -2920,6 +2920,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/08/FaviconCervantes.ico",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
+		'fbwikiwiki' => "//$wmgUploadHostname/fbwikiwiki/4/4c/Fbwiki_favicon.ico",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
@@ -3069,6 +3070,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/0c/LogodelWiki.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
+		'fbwikiwiki' => "//$wmgUploadHostname/fbwikiwiki/thumb/4/4a/Fbwiki_logo.png/135px-Fbwiki_logo.png",
 	),
 
 	// Timezone
@@ -3085,6 +3087,7 @@ $wgConf->settings = array(
 		'reviwiki' => 'Asia/Seoul',
 		'rtwiki' => 'Asia/Seoul',
 		'webtoonwiki' => 'Asia/Seoul',
+		'fbwikiwiki' => 'Asia/Seoul',
 	),
 
 	// Translate
@@ -3158,11 +3161,13 @@ $wgConf->settings = array(
         	'default' => false,
         	'espiralwiki' => true,
         	'spiralwiki' => true,
+        	'fbwikiwiki' => true,
         ),
         'wmgFlowEditorList' => array(
         	'default' => array('wikitext', 'visualeditor'),
         	'espiralwiki' => array('visualeditor'),
         	'spiralwiki' => array('visualeditor'),
+        	'fbwikiwiki' => array('visualeditor'),
         	),
 
 	// WebChat config
