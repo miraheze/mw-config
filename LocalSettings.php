@@ -832,6 +832,10 @@ $wgConf->settings = array(
 		'dtswiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseHideSection' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseHighlightLinksInCategory' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -1090,7 +1094,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
-		'extloadwiki' => true,
+		//'extloadwiki' => true,
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,

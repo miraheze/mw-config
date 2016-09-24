@@ -152,6 +152,10 @@ if ( $wmgUseHeaderTabs ) {
 	}
 }
 
+if ( $wmgUseHideSection ) {
+	wfLoadExtension( 'HideSection' );
+}
+
 if ( $wmgUseHighlightLinksInCategory ) {
 	wfLoadExtension( 'HighlightLinksInCategory' );
 }
