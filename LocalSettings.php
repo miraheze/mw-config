@@ -835,6 +835,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseHideSection' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseHighlightLinksInCategory' => array(
@@ -1094,7 +1095,6 @@ $wgConf->settings = array(
 	'wmgUseSectionHide' => array(
 		'default' => false,
 		'aktposwiki' => true,
-		'allthetropeswiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 	),
