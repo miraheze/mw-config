@@ -2964,6 +2964,7 @@ $wgConf->settings = array(
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/b/bc/Wiki.png",
 		'collabvmwiki' => "//$wmgUploadHostname/collabvmwiki/c/c9/Logo.png",
 		'conuconwiki' => "//phabricator.miraheze.org/file/data/o6plmtjp4afd6vvxcx2m/PHID-FILE-fzbuutpmykupn5jz256h/CONUCON_small_face.png",
+		'cpiwiki' => "//$wmgUploadHostname/cpiwiki/f/fb/CPI_Alpha_DS_2.png",
 		'cssandjsschoolboardwiki' => "//upload.wikimedia.org/wikipedia/commons/c/c7/Css.png",
 		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
 		'cvmlabwiki' => "//$wmgUploadHostname/cvmlabwiki/3/3b/Wiki_logo.png",
