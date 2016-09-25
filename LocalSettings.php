@@ -794,6 +794,7 @@ $wgConf->settings = array(
 		'espiralwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
+	        'fbwikiwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'ircwiki' => true,
 		'kwikiwiki' => true,
@@ -1552,6 +1553,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'drunkenpeasantswikiwiki' => true,
 		'espiralwiki' => true,
+	        'fbwikiwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
 	),
@@ -3148,6 +3150,9 @@ $wgConf->settings = array(
 			NS_USER => true,
 		 ),
 		 '+espiralwiki' => array(
+		 	NS_PROJECT => true,
+		 ),
+		 '+fbwikiwiki' => array(
 		 	NS_PROJECT => true,
 		 ),
 		'+wisdomwikiwiki' => array(
