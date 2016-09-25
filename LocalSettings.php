@@ -1430,6 +1430,7 @@ $wgConf->settings = array(
 	'wmgUseWikiForum' => array(
 		'default' => false,
 		'alwikiwiki' => true,
+		'applewikiwiki' => true,
 		'entropediawiki' => true,
 		'extloadwiki' => true,
 		'indexwiki' => true,
