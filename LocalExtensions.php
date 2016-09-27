@@ -95,6 +95,10 @@ if ( $wmgUseDynamicPageList ) {
 	require_once( "$IP/extensions/DynamicPageList/DynamicPageList.php" );
 }
 
+if ( $wmgUseDynamicPageList3 ) {
+	require_once( "$IP/extensions/DynamicPageList3/DynamicPageList3.php" );
+}
+
 if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
 }
