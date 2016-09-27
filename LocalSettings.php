@@ -2559,6 +2559,11 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+applewikiwiki' => array(
+			'sysop' => array(
+				'commentadmin',
+			),
+		),
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
