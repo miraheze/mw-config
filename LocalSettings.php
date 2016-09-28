@@ -580,6 +580,7 @@ $wgConf->settings = array(
 	// and that the founder is fully responsible for the usage of AccessControl.
 	'wmgUseAccessControl' => array(
 		'default' => false,
+		'bmedwiki' => true,
 		'extloadwiki' => true,
 		'mindgearwiki' => true,
 		'wimawiki' => true,
