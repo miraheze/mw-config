@@ -751,6 +751,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseDynamicPageList3' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseEditcount' => array(
 		'default' => false,
 		'aktposwiki' => true,
