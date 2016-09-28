@@ -741,7 +741,6 @@ $wgConf->settings = array(
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'ayrshirewiki' => true,
 		'augustinianumwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
@@ -753,6 +752,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseDynamicPageList3' => array(
 		'default' => false,
+		'ayrshirewiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseEditcount' => array(
