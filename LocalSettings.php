@@ -2280,6 +2280,11 @@ $wgConf->settings = array(
 				'createpage' => false,
 			),
 		),
+		'+applewikiwiki' => array(
+			'user' => array(
+				'upload_by_url' => true,
+			),
+		),
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
