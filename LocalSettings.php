@@ -1504,6 +1504,7 @@ $wgConf->settings = array(
 	// External link target
 	'wgExternalLinkTarget' => array(
 		'default' => false,
+		'cpiwiki' => '_blank',
 		'doinwiki' => '_blank',
 		'forexwiki' => '_blank',
 		'sylwiki' => '_blank',
