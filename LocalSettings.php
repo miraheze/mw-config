@@ -1106,6 +1106,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'8stationwiki' => true,
 		'apolcourseswiki' => true,
+		'cpiwiki' => true,
 		'extloadwiki' => true,
 		'idtestwiki' => true,
 		'perpuswiki' => true,
@@ -1190,6 +1191,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
+		'cpiwiki' => true,
 		'dishwiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
