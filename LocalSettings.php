@@ -1342,6 +1342,7 @@ $wgConf->settings = array(
 		'pflanzenwiki' => true,
 		'pqwiki' => true,
 		'priyowiki' => true,
+		'pso2wiki' => true,
 		'qwertywiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
