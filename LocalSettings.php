@@ -1083,6 +1083,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'emulationwiki' => true,
 		'extloadwiki' => true,
+		'lgproduktsupportwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
