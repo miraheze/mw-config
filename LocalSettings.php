@@ -1129,6 +1129,7 @@ $wgConf->settings = array(
 		'robloxscripterswiki' => true,
 		'stellachronicawiki' => true,
 		'stoutofreachwiki' => true,
+                'allthetropeswiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
 		'default' => false,
@@ -1453,6 +1454,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+                'allthetropeswiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
