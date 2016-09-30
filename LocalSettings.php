@@ -1790,6 +1790,28 @@ $wgConf->settings = array(
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
 	),
+	
+	// MsUpload settings
+	'wgMSU_useDragDrop' => array(
+		'default' => false,
+		'anduinwiki' => true,
+	),
+	
+	'wgMSU_showAutoCat' => array(
+		'default' => false,
+		'anduinwiki' => true,
+	),
+	
+	'wgMSU_checkAutoCat' => array(
+		'default' => false,
+		'anduinwiki' => true,
+	),
+	
+	'wgMSU_confirmReplace' => array(
+		'default' => false,
+		'anduinwiki' => true,
+	),
+	
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => array(
 		'extloadwiki' => true,
