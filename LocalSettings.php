@@ -729,6 +729,7 @@ $wgConf->settings = array(
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'webflowwiki' => true,
+                'applewikiwiki' => true,
 	),
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
