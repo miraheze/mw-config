@@ -112,6 +112,7 @@ define( 'NS_HALAMAN', 1684);
 define( 'NS_HALAMAN_TALK', 1685);
 define( 'NS_DICT', 1686);
 define( 'NS_DICT_TALK', 1687);
+define( 'NS_PROJECT', 1688);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -798,6 +799,7 @@ $wgConf->settings = array(
 		'espiralwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
+	        'fbwikiwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'ircwiki' => true,
 		'kwikiwiki' => true,
@@ -1565,6 +1567,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'drunkenpeasantswikiwiki' => true,
 		'espiralwiki' => true,
+	        'fbwikiwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
 	),
@@ -3203,6 +3206,9 @@ $wgConf->settings = array(
 			NS_USER => true,
 		 ),
 		 '+espiralwiki' => array(
+		 	NS_PROJECT => true,
+		 ),
+		 '+fbwikiwiki' => array(
 		 	NS_PROJECT => true,
 		 ),
 		'+wisdomwikiwiki' => array(
