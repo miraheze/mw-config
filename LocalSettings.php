@@ -802,6 +802,7 @@ $wgConf->settings = array(
 	        'fbwikiwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'ircwiki' => true,
+		'korachwiki' => true,
 		'kwikiwiki' => true,
 		'mecanonwiki' => true,
 		'nextlevelwikiwiki' => true,
