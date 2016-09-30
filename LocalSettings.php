@@ -1427,6 +1427,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'geodatawiki' => true,
 		'plazmaburstwiki' => true,
+		'soshomophobiewiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
