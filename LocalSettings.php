@@ -1780,22 +1780,22 @@ $wgConf->settings = array(
 	),
 	
 	// MsUpload settings
-	'$wgMSU_useDragDrop' => array(
+	'wgMSU_useDragDrop' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
 	
-	'$wgMSU_showAutoCat' => array(
+	'wgMSU_showAutoCat' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
 	
-	'$wgMSU_checkAutoCat' => array(
+	'wgMSU_checkAutoCat' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
 	
-	'$wgMSU_confirmReplace' => array(
+	'wgMSU_confirmReplace' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
