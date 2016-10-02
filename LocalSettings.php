@@ -2161,7 +2161,7 @@ $wgConf->settings = array(
 				'respected',
 			),
 		),
-		'+idtestwiki' => array(
+		'+trexwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
 				'bot',
@@ -2435,7 +2435,7 @@ $wgConf->settings = array(
 				'respected' => true,
 			),
 		),
-		'+idtestwiki' => array(
+		'+trexwiki' => array(
 			'Founder' => array(
 				'blockemail' => true,
 				'block' => true,
@@ -2641,7 +2641,7 @@ $wgConf->settings = array(
 				'respected',
 			),
 		),
-		'+idtestwiki' => array(
+		'+trexwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
 				'bot',
@@ -3062,7 +3062,7 @@ $wgConf->settings = array(
 		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
 		'lunfengwiki' => "//$wmgUploadHostname/lunfengwiki/b/bc/Wiki.png",
 		'idleomenswiki' => "//$wmgUploadHostname/idleomenswiki/9/9e/IdleOmens-Logo.png",
-		'idtestwiki' => "//$wmgUploadHostname/idtestwiki/b/bc/Wiki.png",
+		'trexwiki' => "//$wmgUploadHostname/idtestwiki/b/bc/Wiki.png",
 		'islamwissenschaftwiki' => "//$wmgUploadHostname/islamwissenschaftwiki/b/bc/Wiki.png",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/e/eb/IZLogo.png",
 		'lexiquewiki' =>  "//$wmgUploadHostname/lexiquewiki/6/6d/LibraryLexique-smallRes.png",
@@ -3491,8 +3491,8 @@ if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 }
 
-// WikiId Test overrides
-if ( $wgDBname == 'idtestwiki' ) {
+// trexwiki overrides
+if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
