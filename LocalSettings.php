@@ -3487,7 +3487,7 @@ if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 }
 
-// WikiId Test overrides
+// trexwiki overrides
 if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
