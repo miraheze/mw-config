@@ -1120,7 +1120,7 @@ $wgConf->settings = array(
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
-                'allthetropeswiki' => true,
+		'allthetropeswiki' => true,
 		'applewikiwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
@@ -1443,7 +1443,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
-                'allthetropeswiki' => true,
+		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
 		'applewikiwiki' => true,
 		'entropediawiki' => true,
