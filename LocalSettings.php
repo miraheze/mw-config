@@ -1224,6 +1224,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
+		'1209wiki' => true,
 		'3dicxyzwiki' => true,
 		'8stationwiki' => true,
 		'aacenterpriselearningwiki' => true,
@@ -1462,6 +1463,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseYouTube' => array(
 		'default' => false,
+		'1209wiki' => true,
 		'airwiki' => true,
 		'alanpediawiki' => true,
 		'allthetropeswiki' => true,
