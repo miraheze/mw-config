@@ -1120,6 +1120,7 @@ $wgConf->settings = array(
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
+                'allthetropeswiki' => true,
 		'applewikiwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
@@ -1129,7 +1130,6 @@ $wgConf->settings = array(
 		'robloxscripterswiki' => true,
 		'stellachronicawiki' => true,
 		'stoutofreachwiki' => true,
-                'allthetropeswiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
 		'default' => false,
@@ -1443,6 +1443,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
+                'allthetropeswiki' => true,
 		'alwikiwiki' => true,
 		'applewikiwiki' => true,
 		'entropediawiki' => true,
@@ -1454,7 +1455,6 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
-                'allthetropeswiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
