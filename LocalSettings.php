@@ -1041,6 +1041,7 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
+		'ggdrwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'wisdomwikiwiki' => true,
