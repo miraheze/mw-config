@@ -807,6 +807,7 @@ $wgConf->settings = array(
 		'korachwiki' => true,
 		'kwikiwiki' => true,
 		'mecanonwiki' => true,
+		'moziwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'permanentfuturelabwiki' => true,
