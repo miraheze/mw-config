@@ -2896,6 +2896,7 @@ $wgConf->settings = array(
 	),
 	'wgAppleTouchIcon' => array(
 		'default' => '/apple-touch-icon.png',
+		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
 	),
 	'wgCentralAuthLoginIcon' => array(
 		'default' => '/usr/share/nginx/favicons/default.ico',
