@@ -1903,7 +1903,7 @@ $wgConf->settings = array(
 			NS_GLOSSARY => 'Glossary',
 			NS_GLOSSARY_TALK => 'Glossary_talk',
 		),
-		'+perpuswiki' => array(
+		'+trexwiki' => array(
 			NS_HALAMAN => 'Halaman',
 			NS_HALAMAN_TALK => 'Permbicaraan_Halaman',
 		),
@@ -2781,7 +2781,7 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
-		'+idtestwiki' => array(
+		'+trexwiki' => array(
 			'trusted',
 			'bureaucrat',
 			'Founder',
@@ -3137,7 +3137,7 @@ $wgConf->settings = array(
 		'themfbclubwiki' => "//$wmgUploadHostname/themfbclubwiki/b/bc/Wiki.png",
 		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/d/d4/Logo_titrepro.svg",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
-		'trexwiki' => "//$wmgUploadHostname/trexwiki/b/bc/Wiki.png",
+		'trexwiki' => "//$wmgUploadHostname/trexwiki/4/49/Wikit.png",
 		'uprisewiki' => "//$wmgUploadHostname/uprisewiki/2/2e/DotLogo130px.png",
 		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
