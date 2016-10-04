@@ -653,6 +653,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'ircwiki' => true,
 		'robloxscripterswiki' => true,
