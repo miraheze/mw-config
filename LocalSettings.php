@@ -1477,6 +1477,11 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseWikiTextLoggedInOut' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseYouTube' => array(
 		'default' => false,
 		'1209wiki' => true,
