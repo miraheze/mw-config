@@ -3539,13 +3539,13 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td><a href="https://meta.miraheze.org/wiki/Miraheze-1-year">The first anniversary of Miraheze is today! Come celebrate with us, as we reflect on our start and look to the future.</a> And please let us know how you feel about Miraheze by  <a href="http://goo.gl/forms/rHK82494r4SSGt7y2">taking our survey</a>, so that we can learn how to improve our service. Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+	<td>Global Notice: Miraheze would like to appologize to anyone who noticed recent downtime. There were technical difficulties renewing a SSL certificate for one of our wikis and one of our two servers temporarily became inaccessible. All issues should be resolved now, please email staff or leave a message <a href="https://meta.miraheze.org/wiki/SN">here</a> if you are still experiencing issues.</p></td>
 	</tr></tbody></table>
 EOF;
 
 	return true;
-} */
+}
