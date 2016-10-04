@@ -411,6 +411,10 @@ if ( $wmgUseWikiLove ) {
 	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
 }
 
+if ( $wmgUseWikiTextLoggedInOut ) {
+	require_once( "$IP/extensions/WikiTextLoggedInOut/WikiTextLoggedInOut.php" );
+}
+
 if ( $wmgUseYouTube ) {
 	require_once( "$IP/extensions/YouTube/YouTube.php" );
 }
