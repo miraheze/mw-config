@@ -1082,6 +1082,14 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'russiawatchwiki' => true,
 	),
+	
+		'wmgUseRefreshed' => array(
+		'default' => false,
+		'applewikiwiki' => true,
+		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
+	),
+	
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
