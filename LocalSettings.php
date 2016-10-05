@@ -354,6 +354,7 @@ $wgConf->settings = array(
 	'wgReadOnly' => array(
 		//'default' => false,
 		'default' => "Wiki involved in migration. Please refer to site notice.",
+		'extloadwiki' => false,
 		'metawiki' => "Migration, prevent CreateWiki and other tool usage globally",
 	),
 	'wgSharedDB' => array(
@@ -3405,7 +3406,6 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 			"Special:UserLogout",
 			"Special:CreateAccount",
 		);
-	$wgReadOnly = "Wiki involved in migration.";
 }
 
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
