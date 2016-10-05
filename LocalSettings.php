@@ -352,8 +352,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'allthetropeswiki' => "Migration - database is still importing. Feel free to edit any other wiki though.",
-		'metawiki' => "Migration, prevent CreateWiki and other tool usage globally",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -3548,7 +3546,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
@@ -3558,4 +3556,4 @@ EOF;
 
 	return true;
 }
-
+*/
