@@ -352,6 +352,8 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		//'default' => "Wiki involved in migration. Please refer to site notice.",
+		'allthetropeswiki' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -3402,6 +3404,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 			"Special:UserLogout",
 			"Special:CreateAccount",
 		);
+	//$wgReadOnly = "Wiki involved in migration.";
 }
 
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
@@ -3430,6 +3433,7 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 EOF;
 		return true;
 	}
+
 }
 
 $wgConf->wikis = $wgLocalDatabases;
@@ -3545,14 +3549,14 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>Global Notice: Miraheze would like to appologize to anyone who noticed recent downtime. There were technical difficulties renewing a SSL certificate for one of our wikis and one of our two servers temporarily became inaccessible. All issues should be resolved now, please email staff or leave a message <a href="https://meta.miraheze.org/wiki/SN">here</a> if you are still experiencing issues.</p></td>
+	<td>Wikis will be read-only for a period of time while a database migration takes place. Wikis will be handed in a set phases (closed wikis, then private, then public and then notably large wikis will be handled separately. An estimate time frame is not currently available but any time while this sitenotice is present is applicable. If you have issues or concerns, please join #miraheze on Freenode and ping JohnLewis.</td>
 	</tr></tbody></table>
 EOF;
 
 	return true;
 }
-*/
+
