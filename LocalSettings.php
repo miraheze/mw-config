@@ -3423,8 +3423,8 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['sysop']['block'] = false;
 	$wgGroupPermissions['sysop']['protect'] = false;
 	
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
+	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<div class=\"wikitable\" style=\"text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;\"> <span class=\"plainlinks\"><a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Miraheze Staff</a> has closed this wiki because there have been <b>no edits</b> or <b>or logs</b> made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to <a href="https://meta.miraheze.org/wiki/Requests_for_adoption">Requests for adoption</a> and make a request. If this wiki is not adopted within 6 months it may be deleted. </span></div>
 EOF;
@@ -3545,7 +3545,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
@@ -3555,3 +3555,4 @@ EOF;
 
 	return true;
 }
+*/
