@@ -353,6 +353,7 @@ $wgConf->settings = array(
 	'wgReadOnly' => array(
 		//'default' => false,
 		'default' => "Wiki involved in migration. Please refer to site notice.",
+		'allthetropeswiki' => false,
 		'metawiki' => "Migration, prevent CreateWiki and other tool usage globally",
 	),
 	'wgSharedDB' => array(
@@ -1081,6 +1082,10 @@ $wgConf->settings = array(
 		'humorpediawiki' => true,
 		'tmewiki' => true,
 		'russiawatchwiki' => true,
+	),
+	'wmgUseRefreshed' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
