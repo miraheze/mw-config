@@ -342,6 +342,7 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
 	require_once( "/srv/mediawiki/config/TranslateConfigHack.php" );
+	$wgULSGeoService = false;
 }
 
 if ( $wmgUseTimedMediaHandler ) {
