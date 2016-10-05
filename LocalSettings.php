@@ -352,9 +352,8 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		//'default' => false,
-		'default' => "Wiki involved in migration. Please refer to site notice.",
-		'extloadwiki' => false,
+		'default' => false,
+		'allthetropeswiki' => "Migration - database is still importing. Feel free to edit any other wiki though.",
 		'metawiki' => "Migration, prevent CreateWiki and other tool usage globally",
 	),
 	'wgSharedDB' => array(
