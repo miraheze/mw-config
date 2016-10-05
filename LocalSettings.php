@@ -342,7 +342,8 @@ $wgConf->settings = array(
 		'default' => 'mysql',
 	),
 	'wgDBserver' => array(
-		'default' => '185.52.1.77',
+		'default' => '81.4.125.112',
+		'allthetropeswiki' => '185.52.1.77',
 	),
 	'wgDBuser' => array(
 		'default' => 'mediawiki',
