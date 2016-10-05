@@ -3405,7 +3405,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 			"Special:UserLogout",
 			"Special:CreateAccount",
 		);
-	//$wgReadOnly = "Wiki involved in migration.";
+	$wgReadOnly = "Wiki involved in migration.";
 }
 
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
