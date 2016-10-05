@@ -353,7 +353,6 @@ $wgConf->settings = array(
 	'wgReadOnly' => array(
 		//'default' => false,
 		'default' => "Wiki involved in migration. Please refer to site notice.",
-		'allthetropeswiki' => false,
 		'metawiki' => "Migration, prevent CreateWiki and other tool usage globally",
 	),
 	'wgSharedDB' => array(
