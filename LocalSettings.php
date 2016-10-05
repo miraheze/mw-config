@@ -1347,6 +1347,7 @@ $wgConf->settings = array(
 		'musiclibrarywiki' => true,
 		'musictabswiki' => true,
 		'mydegreewiki' => true,
+		'mylogicwiki' => true,
 		'ndnwiki' => true,
 		'neuronpediawiki' => true,
 		'newarkmanorwiki' => true,
