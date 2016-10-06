@@ -277,7 +277,7 @@ if ( $wmgUseRandomSelection ) {
 }
 
 if ( $wmgUseRefreshed ) {
-	require_once( "$IP/skins/Refreshed/Refreshed.php" );
+	require_once( "$IP/skins/Refreshed/refreshed.php" );
 }
 
 if ( $wmgUseRelatedArticles ) {
