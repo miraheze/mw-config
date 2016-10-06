@@ -276,6 +276,10 @@ if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
 
+if ( $wmgUseRefreshed ) {
+	require_once( "$IP/skins/Refreshed/Refreshed.php" );
+}
+
 if ( $wmgUseRelatedArticles ) {
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
