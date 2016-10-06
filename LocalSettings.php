@@ -1080,6 +1080,10 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'russiawatchwiki' => true,
 	),
+	'wmgUseRefreshed' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
