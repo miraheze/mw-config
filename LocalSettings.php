@@ -1047,6 +1047,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
 		'ggdrwiki' => true,
+		'lgproduktsupportwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'wisdomwikiwiki' => true,
