@@ -809,6 +809,7 @@ $wgConf->settings = array(
 		'ircwiki' => true,
 		'korachwiki' => true,
 		'kwikiwiki' => true,
+		'marcoschriekwiki' => true,
 		'mecanonwiki' => true,
 		'moziwiki' => true,
 		'nextlevelwikiwiki' => true,
