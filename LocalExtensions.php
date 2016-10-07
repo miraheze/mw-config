@@ -203,6 +203,10 @@ if ( $wmgUseMassEditRegex ) {
 	$wgGroupPermissions['sysop']['masseditregex'] = true;
 }
 
+if ( $wmgUseMediaWikiChat ) {
+	require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php" );
+}
+
 if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 }
