@@ -1007,6 +1007,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
+		'addawiki' => true,
 		'aktposwiki' => true,
 		'alwikiwiki' => true,
 		'carvingwiki' => true,
