@@ -354,7 +354,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'imperiuswiki' => "This wiki is temporarily read-only while we finish up renaming imperiuswiki to it.",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
