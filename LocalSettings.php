@@ -1591,7 +1591,7 @@ $wgConf->settings = array(
 	),
 	'wgUseInstantCommons' => array(
 		'default' => true,
-		'amaninfowiki' => true,
+		'amaninfowiki' => false,
 		'thefosterswiki' => false,
 	),
 	'wgEnableImageWhitelist' => array(
