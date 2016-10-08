@@ -914,6 +914,10 @@ $wgConf->settings = array(
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseMediaWikiChat' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
