@@ -204,7 +204,7 @@ if ( $wmgUseMassEditRegex ) {
 }
 
 if ( $wmgUseMediaWikiChat ) {
-	require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php" );
+	wfLoadExtension( 'MediaWikiChat' );
 }
 
 if ( $wmgUseMetrolook ) {
