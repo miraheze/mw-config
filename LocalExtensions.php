@@ -144,10 +144,6 @@ if ( $wmgUseForeground ) {
 	require_once( "$IP/skins/foreground/foreground.php" );
 }
 
-if ( $wmgUsegoogleAnalytics ) {
-	require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
-}
-
 if ( $wmgUseHeaderTabs ) {
 	require_once "$IP/extensions/HeaderTabs/HeaderTabs.php";
 	if ( $wgDBname == 'extloadwiki' ) {
