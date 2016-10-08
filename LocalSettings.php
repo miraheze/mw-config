@@ -3001,6 +3001,7 @@ $wgConf->settings = array(
 		'openonderwijswiki' => "//$wmgUploadHostname/openonderwijswiki/c/ca/Ooo_logo_square_favicon.svg",
 		'ontariobrasswiki' => "//$wmgUploadHostname/ontariobrasswiki/0/09/Ontariobrass.png",
 		'openconstitutionwiki' => "//$wmgUploadHostname/openconstitutionwiki/e/e3/OpnConst_favicon.png",
+	        'paranormalwiki' => "//$wmgUploadHostname/paranormalwiki/2/2d/PW.ico",
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/6/64/Favicon.ico",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
 		'pluspiwiki' => "//$wmgUploadHostname/pluspiwiki/6/64/Favicon.ico",
