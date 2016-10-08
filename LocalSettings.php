@@ -354,8 +354,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'addawiki' => "This wiki is temporarily read-only while it is renamed to imperiuswiki",
-		'imperiuswiki' => "This wiki is temporarily read-only while we finish up renaming addawiki to it.",
+		'imperiuswiki' => "This wiki is temporarily read-only while we finish up renaming imperiuswiki to it.",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -1010,7 +1009,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
-		'addawiki' => true,
+		'imperiuswiki' => true,
 		'aktposwiki' => true,
 		'alwikiwiki' => true,
 		'carvingwiki' => true,
@@ -2953,7 +2952,7 @@ $wgConf->settings = array(
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/6/64/Favicon.ico",
-		'addawiki' => "//$wmgUploadHostname/addawiki/e/e7/BlackMythFavicon.ico",
+		'imperiuswiki' => "//$wmgUploadHostname/imperiuswiki/e/e7/BlackMythFavicon.ico",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/b/be/APfavicon.png",
 		'adiaprojectwiki' => "//$wmgUploadHostname/adiaprojectwiki/9/91/Adiafavicon.png",
 		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/8/84/Rainbowstar.png",
@@ -3030,7 +3029,7 @@ $wgConf->settings = array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/3/3b/Wiki_logo.png",
 		'aacenterpriselearningwiki' => "//$wmgUploadHostname/aacenterpriselearningwiki/c/c6/AACLogo.jpg",
-		'addawiki' => "//$wmgUploadHostname/addawiki/1/1e/BlackMythLogo.png",
+		'imperiuswiki' => "//$wmgUploadHostname/imperiuswiki/1/1e/BlackMythLogo.png",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/f/f1/APlogo.png",
 		'adiaprojectwiki' => "//$wmgUploadHostname/adiaprojectwiki/8/8b/Adialogo.png",
 		'adnovumwiki' => "//$wmgUploadHostname/adnovumwiki/f/fa/AdnovumRPtemplogo.png",
