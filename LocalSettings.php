@@ -924,7 +924,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMediaWikiChat' => array(
 		'default' => false,
-		'extloadwiki' => true, // Errors --Reception123
+		'extloadwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
