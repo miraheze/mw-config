@@ -642,6 +642,7 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseArticleRatings' => array(
+		'default' => false,
 		'extloadwiki' => true,
 	),
 	'wmgUseAuthorProtect' => array(
