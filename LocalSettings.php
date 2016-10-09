@@ -448,6 +448,11 @@ $wgConf->settings = array(
 		'+izanagiwiki' => array(
 			'anon' => true,
 		),
+		'+justwikiwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+kl6fwiki' => array(
 			'anon' => true,
 		),
