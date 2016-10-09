@@ -581,7 +581,7 @@ $wgConf->settings = array(
 		'testwiki' => 90 * 24 * 3600,
 	),
 
-	// Extensions
+	// Extensions and Skins
 	// AccessControl: due to security risks, use of this extension is at the founder's own risk.
 	// Prior to enabling the extension the founder should agree (on their own wiki, under their founder account!)
 	// that Miraheze is NOT responsible for any data leaks caused by this extension,
@@ -844,6 +844,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => false,
 		'opengovpioneerswiki' => false,
+	        'amaninfowiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
