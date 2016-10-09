@@ -2359,7 +2359,11 @@ $wgConf->settings = array(
 		'+applewikiwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
-			),
+	               ),
+                 	'sysop' => array(
+	                           'bigdelete' => true,
+	              ),
+			
 		),
 		'+catboxwiki' => array(
 			'user' => array(
