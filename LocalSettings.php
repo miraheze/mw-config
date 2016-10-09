@@ -576,7 +576,7 @@ $wgConf->settings = array(
 		'testwiki' => 90 * 24 * 3600,
 	),
 
-	// Extensions
+	// Extensions and Skins
 	// AccessControl: due to security risks, use of this extension is at the founder's own risk.
 	// Prior to enabling the extension the founder should agree (on their own wiki, under their founder account!)
 	// that Miraheze is NOT responsible for any data leaks caused by this extension,
@@ -829,6 +829,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseForeground' => array(
 		'default' => false,
+                '3dicwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
@@ -1252,6 +1253,7 @@ $wgConf->settings = array(
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
 		'1209wiki' => true,
+                '3dicwiki' => true,
 		'3dicxyzwiki' => true,
 		'8stationwiki' => true,
 		'aacenterpriselearningwiki' => true,
