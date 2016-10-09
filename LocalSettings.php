@@ -374,6 +374,7 @@ $wgConf->settings = array(
 			'user' => false, // disable user editing
 			'editor' => false, // add an editor group for editing + sysop assign
 			'sysop' => false, // allow sysop' to edit (not needed)
+		
 		),
 		'+8stationwiki' => array(
 			'anon' => true,
@@ -447,6 +448,11 @@ $wgConf->settings = array(
 		),
 		'+izanagiwiki' => array(
 			'anon' => true,
+		),
+		'+justwikiwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
 		),
 		'+kl6fwiki' => array(
 			'anon' => true,
