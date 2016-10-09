@@ -374,7 +374,6 @@ $wgConf->settings = array(
 			'user' => false, // disable user editing
 			'editor' => false, // add an editor group for editing + sysop assign
 			'sysop' => false, // allow sysop' to edit (not needed)
-		
 		),
 		'+8stationwiki' => array(
 			'anon' => true,
