@@ -24,6 +24,9 @@ if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 }
 
+if ( $wmgUseArticleFeedbackv5) {
+	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
+
 if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }
