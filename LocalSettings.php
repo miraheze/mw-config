@@ -921,6 +921,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMediaWikiChat' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
