@@ -843,11 +843,6 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'starsetonlinewiki' => true,
 	),
-	'wmgUsegoogleAnalytics' => array(
-		'default' => false,
-		'extloadwiki' => false,
-		'opengovpioneerswiki' => false,
-	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
 		'default' => false,
