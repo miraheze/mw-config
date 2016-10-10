@@ -836,6 +836,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseForeground' => array(
 		'default' => false,
+		'3dicwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
@@ -1259,6 +1260,7 @@ $wgConf->settings = array(
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
 		'1209wiki' => true,
+		'3dicwiki' => true,
 		'3dicxyzwiki' => true,
 		'8stationwiki' => true,
 		'aacenterpriselearningwiki' => true,
