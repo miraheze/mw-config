@@ -583,7 +583,7 @@ $wgConf->settings = array(
 		'testwiki' => 90 * 24 * 3600,
 	),
 
-	// Extensions
+	// Extensions and Skins
 	// AccessControl: due to security risks, use of this extension is at the founder's own risk.
 	// Prior to enabling the extension the founder should agree (on their own wiki, under their founder account!)
 	// that Miraheze is NOT responsible for any data leaks caused by this extension,
@@ -926,6 +926,7 @@ $wgConf->settings = array(
 	'wmgUseMediaWikiChat' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'applewikiwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
