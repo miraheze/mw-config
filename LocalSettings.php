@@ -789,6 +789,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'ayrshirewiki' => true,
 		'extloadwiki' => true,
+		'lgproduktsupportwiki' => true,
 	),
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
