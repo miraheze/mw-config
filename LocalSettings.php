@@ -1,7 +1,7 @@
 <?php
 /*
 LocalSettings.php for Miraheze.
-Authors of initial version: Southparkfan, John Lewis, Orain contributors
+Authors dummyof initial version: Southparkfan, John Lewis, Orain contributors
 */
 
 # Load PrivateSettings (e.g. wgDBpassword)
