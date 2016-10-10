@@ -24,6 +24,10 @@ if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 }
 
+if ( $wmgUseArticleRatings ) {
+	require_once( "$IP/extensions/ArticleRatings/ArticleRatings.php" );
+}
+
 if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }
