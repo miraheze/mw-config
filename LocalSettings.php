@@ -643,7 +643,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseArticleRatings' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => false,
 	),
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
