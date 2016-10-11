@@ -2954,6 +2954,7 @@ $wgConf->settings = array(
 	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
+	        '3dicwiki' => 'foreground',
 		'bdorpwiki' => 'erudite',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
