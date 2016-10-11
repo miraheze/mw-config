@@ -1399,6 +1399,7 @@ $wgConf->settings = array(
 		'recherchesdocumentaireswiki' => true,
 		'ricwiki' => true,
 		'robloxscripterswiki' => true,
+		'rocketleaguequebecwiki' => true,
 		'rpcharacterswiki' => true,
 		'safiriawiki' => true,
 		'secondcirclewiki' => true,
