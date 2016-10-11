@@ -641,10 +641,6 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
-	'wmgUseArticleRatings' => array(
-		'default' => false,
-		'extloadwiki' => true,
-	),
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
