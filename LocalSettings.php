@@ -1233,6 +1233,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
+		'3dicwiki' => true,
 		'cpiwiki' => true,
 		'dishwiki' => true,
 		'extloadwiki' => true,
