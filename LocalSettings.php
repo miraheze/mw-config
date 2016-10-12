@@ -455,6 +455,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+jokowiki' => array(
+			'anon' => true,
+		),
 		'+kl6fwiki' => array(
 			'anon' => true,
 		),
