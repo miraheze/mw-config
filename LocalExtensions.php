@@ -25,8 +25,7 @@ if ( $wmgUseApex ) {
 }
 
 if ( $wmgUseArticleRatings ) {
-	require_once( "$IP/extensions/ArticleRatings/ArticleRatings.php" );
-}
+	wfLoadExtension( 'ArticleRatings' );}
 
 if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
