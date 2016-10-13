@@ -3592,7 +3592,7 @@ $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>Our server provider will be performing network maintenance today (October 13) from 22:30 to 00:30 UTC. During the network maintenance it is possible your wiki cannot be read or edited for a few minutes. Miraheze apologizes for any inconvenience. If you have questions please see us on <a href="https://meta.miraheze.org/wiki/IRC">IRC</a>.</td>
+	<td>Our server provider will be performing network maintenance today (October 13) from 22:30 to 00:30 UTC. During the network maintenance it is possible your wiki cannot be read or edited for a few minutes. Miraheze apologizes for any inconvenience. If you have any questions please see us on <a href="https://meta.miraheze.org/wiki/IRC">IRC</a>.</td>
 	</tr></tbody></table>
 EOF;
 
