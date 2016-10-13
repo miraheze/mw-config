@@ -725,6 +725,7 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
+		'foodsharinghamburgwiki' => true,
 		'openconstitutionwiki' => true,
 		'plazmaburstwiki' => true,
 		'priyowiki' => true,
