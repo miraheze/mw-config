@@ -650,7 +650,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseArticleRatings' => array(
 		'default' => false,
-		'applewikiwiki' => true,
+		'applewikiwiki' => false, // Until the database changes are made. --Reception123
 		'extloadwiki' => true,
 	),
 	'wmgUseAuthorProtect' => array(
