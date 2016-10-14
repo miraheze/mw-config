@@ -3598,7 +3598,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
@@ -3607,5 +3607,4 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
 
 	return true;
-}
-
+}*/
