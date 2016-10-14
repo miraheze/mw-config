@@ -648,6 +648,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
+		'applewikiwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseArticleRatings' => array(
