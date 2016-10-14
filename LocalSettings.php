@@ -1599,6 +1599,7 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
+                'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
 		'ndnwiki' => true,
@@ -1621,6 +1622,7 @@ $wgConf->settings = array(
 	),
 	'wgUseInstantCommons' => array(
 		'default' => true,
+                'pso2wiki' => true,
 		'amaninfowiki' => false,
 		'thefosterswiki' => false,
 	),
