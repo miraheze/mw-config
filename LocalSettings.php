@@ -725,6 +725,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseComments' => array(
 		'default' => false, // Remember to assign 'commentadmin' rights!
+		'allthetropeswiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
@@ -2199,6 +2200,11 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+allthetropeswiki' => array(
+			'sysop' => array(
+				'commentadmin',
+			),
+		),
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -2677,6 +2683,11 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+		),
+		'+allthetropeswiki' => array(
+			'sysop' => array(
+				'commentadmin',
 			),
 		),
 		'+applewikiwiki' => array(
