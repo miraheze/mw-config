@@ -1601,6 +1601,7 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
+		'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
 		'ndnwiki' => true,
