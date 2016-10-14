@@ -1271,6 +1271,7 @@ $wgConf->settings = array(
 	'wmgUseVoteNY' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'espiralwiki' => true,
 		'extloadwiki' => true,
 		'openconstitutionwiki' => true,
 		'robloxscripterswiki' => true,
