@@ -281,6 +281,7 @@ $wgConf->settings = array(
 			"$IP/extensions/AJAXPoll/patches/create-table--ajaxpoll_info.sql",
 			"$IP/extensions/AJAXPoll/patches/create-table--ajaxpoll_vote.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+			"$IP/extensions/ArticleRatings/ratings.sql",
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
