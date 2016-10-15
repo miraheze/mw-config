@@ -43,7 +43,7 @@ if ( $wgDBname == 'christipediawiki' ) {
 	);
 }
 
-if ( $wgDBname == 'fablabesds' ) {
+if ( $wgDBname == 'fablabesdswiki' ) {
 	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'Contact COOP FabLab ESDS',
 		'SenderEmail' => $wgPasswordSender,
