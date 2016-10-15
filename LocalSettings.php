@@ -681,6 +681,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ircwiki' => true,
 		'robloxscripterswiki' => true,
+		'wikidolphinhansenwiki' => true,
 	),
 	'wmgUseMSCalendar' => array(
 		'default' => false,
@@ -1458,6 +1459,7 @@ $wgConf->settings = array(
 		'webflowwiki' => true,
 		'wikibookswiki' => true,
 		'wikicervanteswiki' => true,
+		'wikidolphinhansenwiki' => true,
 		'wikihoyowiki' => true,
 		'wikikaisagawiki' => true,
 		'wisdomsandboxwiki' => true,
