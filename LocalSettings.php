@@ -441,8 +441,6 @@ $wgConf->settings = array(
 		),
 		'+geodatawiki' => array(
 			'anon' => true,
-			'user' => true,
-			'sysop' => true,
 		),
 		'+godaigowiki' => array(
 			'anon' => true,
