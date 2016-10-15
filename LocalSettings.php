@@ -649,7 +649,7 @@ $wgConf->settings = array(
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
 		'applewikiwiki' => true,
-		'fablabesds' => true,
+		'fablabesdswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseArticleRatings' => array(
@@ -741,7 +741,7 @@ $wgConf->settings = array(
 		'default' => false, // Add wiki config to ContactPage.php
 		'ayrshirewiki' => true,
 		'christipediawiki' => true,
-		'fablabesds' => true,
+		'fablabesdswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
@@ -1347,7 +1347,7 @@ $wgConf->settings = array(
 		'evawiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
-		'fablabesds' => true,
+		'fablabesdswiki' => true,
 		'fbwikiwiki' => true,
 		'fishpercolatorwiki' => true,
 		'foodsharinghamburgwiki' => true,
