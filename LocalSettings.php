@@ -2664,6 +2664,7 @@ $wgConf->settings = array(
 		'+takethatwikiwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
+		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
