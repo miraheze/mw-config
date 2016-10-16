@@ -1625,7 +1625,7 @@ $wgConf->settings = array(
 	'wgUseInstantCommons' => array(
 		'default' => true,
 		'amaninfowiki' => false,
-		'pso2wiki' => true,
+		'pso2wiki' => false,
 		'thefosterswiki' => false,
 	),
 	'wgEnableImageWhitelist' => array(
