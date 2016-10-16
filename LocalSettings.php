@@ -1414,6 +1414,7 @@ $wgConf->settings = array(
 		'pqwiki' => true,
 		'priyowiki' => true,
 		'pso2wiki' => true,
+		'purpanrangueiluswiki' => true,
 		'qwertywiki' => true,
 		'rawdatawiki' => true,
 		'recherchesdocumentaireswiki' => true,
