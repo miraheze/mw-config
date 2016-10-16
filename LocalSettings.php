@@ -1615,6 +1615,7 @@ $wgConf->settings = array(
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
+		'+anduinwiki' => array('ogv' ),
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
 		'+exitsincwiki' => array('txt' ),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
