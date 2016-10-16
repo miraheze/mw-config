@@ -42,3 +42,23 @@ if ( $wgDBname == 'christipediawiki' ) {
 		'RLStyleModules' => array(),
 	);
 }
+
+if ( $wgDBname == 'fablabesdswiki' ) {
+	$wgContactConfig['default'] = array(
+		'RecipientUser' => 'Contact COOP FabLab ESDS',
+		'SenderEmail' => $wgPasswordSender,
+		'SenderName' => 'Ne pas répondre FabLab ESDS',
+		'RequireDetails' => true,
+		'IncludeIP' => false, // No privy
+		'AdditionalFields' => array(
+			'TitreArticleDemande' => array(
+				'label' => 'Titre de l\'article demandé (si c\'est la cas)',
+				'type' => 'text',
+				'required' => false,  // Either "true" or "false" as required
+			),
+		),
+		'DisplayFormat' => 'table',
+		'RLModules' => array(),
+		'RLStyleModules' => array(),
+	);
+}
