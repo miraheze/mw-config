@@ -1320,6 +1320,7 @@ $wgConf->settings = array(
 		'clementsworldbuildingwiki' => true,
 		'clicordiwiki' => true,
 		'cnvwiki' => true,
+		'corydoctorowwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'cybersecuritywiki' => true,
 		'cvsmbwiki' => true,
