@@ -1596,6 +1596,7 @@ $wgConf->settings = array(
 		'secondcirclewiki' => true,
 		'starsetonlinewiki' => true,
 		'szkwiki' => true,
+		'takethatwikiwiki' => true,
 		'testwiki' => true,
 		'tmewiki' => true,
 		'urho3dwiki' => true,
@@ -2664,6 +2665,7 @@ $wgConf->settings = array(
 		'+takethatwikiwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
+			),
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
