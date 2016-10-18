@@ -1446,6 +1446,7 @@ $wgConf->settings = array(
 		'seldirwiki' => true,
 		'setonwiki' => true,
 		'shoppingwiki' => true,
+		'sidemwiki' => true,
 		'simonjonwiki' => true,
 		'sirikotwiki' => true,
 		'sjuhabitatwiki' => true,
