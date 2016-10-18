@@ -252,6 +252,10 @@ if ( $wmgUseNewUserMessage ) {
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 }
 
+if ( $wmgUseNewUsersList ) {
+	require_once ( "$IP/extensions/NewUsersList/NewUsersList.php" );
+}
+
 if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 	$wgRestrictDisplayTitle = false;
