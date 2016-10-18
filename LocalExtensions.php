@@ -252,6 +252,9 @@ if ( $wmgUseNewUserMessage ) {
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 }
 
+if ( $wmgUseNostalgia ) {
+	require_once( "$IP/skins/Nostalgia/Nostalgia.php" );
+
 if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 	$wgRestrictDisplayTitle = false;
