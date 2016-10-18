@@ -663,6 +663,10 @@ $wgConf->settings = array(
 		'grandtheftwikiwiki' => true,
 		'testauthorprotectwiki' => true,
 	),
+	'wmgUseAutomaticBoardWelcome' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
