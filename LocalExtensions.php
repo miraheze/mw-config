@@ -254,6 +254,7 @@ if ( $wmgUseNewUserMessage ) {
 
 if ( $wmgUseNostalgia ) {
 	require_once( "$IP/skins/Nostalgia/Nostalgia.php" );
+}
 
 if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
