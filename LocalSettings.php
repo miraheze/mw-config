@@ -357,7 +357,7 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => 'This is a copy of a backup of this wiki. Editing and other actions are disallowed.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
