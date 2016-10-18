@@ -35,6 +35,10 @@ if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }
 
+if ( $wmgUseAutomaticBoardWelcome ) {
+	require_once( "$IP/extensions/AutomaticBoardWelcome/AutomaticBoardWelcome.php" );
+}
+
 if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
 }
