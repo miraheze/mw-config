@@ -358,7 +358,8 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => 'This is a copy of a backup of this wiki. Editing and other actions are disallowed.',
+		'default' => false,
+		'allthetropeswiki' => 'This is a copy of a backup of this wiki. Editing and other actions are disallowed.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
