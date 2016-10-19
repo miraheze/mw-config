@@ -3650,13 +3650,16 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>Our server provider will be performing network maintenance today (October 13) from 22:30 to 00:30 UTC. During the network maintenance it is possible your wiki cannot be read or edited for a few minutes. Miraheze apologizes for any inconvenience. If you have any questions please see us on <a href="https://meta.miraheze.org/wiki/IRC">IRC</a>.</td>
+	<td>Miraheze is performing database recovery after a database crash. All wikis will be in read-only mode. Please watch our <a href="https://www.facebook.com/miraheze">Facebook</a> and <a href="https://twitter.com/miraheze">Twitter</a> pages for more information.</td>
 	</tr></tbody></table>
 EOF;
 
 	return true;
-}*/
+}
+
+$wgDisableTextSearch = true;
+
