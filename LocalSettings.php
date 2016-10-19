@@ -21,7 +21,7 @@ $wmgUploadHostname = "static.miraheze.org";
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
-$wgLocalVirtualHosts = array( '185.52.1.77' );
+$wgLocalVirtualHosts = array( '81.4.125.112' );
 
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 
@@ -348,7 +348,8 @@ $wgConf->settings = array(
 		'default' => 'mysql',
 	),
 	'wgDBserver' => array(
-		'default' => '185.52.1.77',
+		'default' => '81.4.125.112',
+		'allthetropeswiki' => '185.52.1.77',
 	),
 	'wgDBuser' => array(
 		'default' => 'mediawiki',
