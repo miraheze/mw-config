@@ -349,7 +349,6 @@ $wgConf->settings = array(
 	),
 	'wgDBserver' => array(
 		'default' => '81.4.125.112',
-		'allthetropeswiki' => '185.52.1.77',
 	),
 	'wgDBuser' => array(
 		'default' => 'mediawiki',
@@ -359,7 +358,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'allthetropeswiki' => 'This is a copy of a backup of this wiki. Editing and other actions are disallowed.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -3652,7 +3650,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
@@ -3662,6 +3660,7 @@ EOF;
 
 	return true;
 }
+*/
 
 $wgDisableTextSearch = true;
 
