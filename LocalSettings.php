@@ -458,6 +458,9 @@ $wgConf->settings = array(
 		'+jokowiki' => array(
 			'anon' => true,
 		),
+		'+karniarutheniawiki' => array(
+			'anon' => true,
+		),
 		'+kl6fwiki' => array(
 			'anon' => true,
 		),
@@ -1391,6 +1394,7 @@ $wgConf->settings = array(
 		'janesskillspackwiki' => true,
 		'justinbieberwiki' => true,
 		'kassaiwiki' => true,
+		'karniarutheniawiki' => true,
 		'kinderacicwiki' => true,
 		'lancemedicalwiki' => true,
 		'lbsgeswiki' => true,
@@ -3074,6 +3078,7 @@ $wgConf->settings = array(
 		'grottocenterwiki' => "//$wmgUploadHostname/grottocenterwiki/6/64/Favicon.ico",
 		'imperiuswiki' => "//$wmgUploadHostname/imperiuswiki/b/b2/ImperiusFavicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
+		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
 		'lexiquewiki' => "//$wmgUploadHostname/lexiquewiki/0/0f/Lexique_favicon.ico",
 		'luckandlogicwiki' => "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
@@ -3187,6 +3192,7 @@ $wgConf->settings = array(
 		'hydrawikiwiki' => "//$wmgUploadHostname/hydrawikiwiki/7/79/Hydra-logo.png",
 		'jayuwikiwiki' => "//$wmgUploadHostname/jayuwikiwiki/d/d7/Jayuwiki3.png",
 		'jokowiki' => "//$wmgUploadHostname/jokowiki/0/0d/Icon_Joko.png",
+		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
 		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
 		'lunfengwiki' => "//$wmgUploadHostname/lunfengwiki/b/bc/Wiki.png",
 		'idleomenswiki' => "//$wmgUploadHostname/idleomenswiki/9/9e/IdleOmens-Logo.png",
