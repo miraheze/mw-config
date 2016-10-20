@@ -1056,6 +1056,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseNewUsersList' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
 		'imperiuswiki' => true,
