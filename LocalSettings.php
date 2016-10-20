@@ -665,6 +665,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'testauthorprotectwiki' => true,
+		'trexwiki' => true,
 	),
 	'wmgUseAutomaticBoardWelcome' => array(
 		'default' => false,
