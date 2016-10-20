@@ -1058,6 +1058,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewUsersList' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
