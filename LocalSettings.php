@@ -669,6 +669,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseAutomaticBoardWelcome' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseBetaFeatures' => array(
