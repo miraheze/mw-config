@@ -257,7 +257,7 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseNewUsersList ) {
-	require_once ( "$IP/extensions/NewUsersList/NewUsersList.php" );
+	wfLoadExtension( 'NewUsersList' );
 }
 
 if ( $wmgUseNoTitle ) {
