@@ -1061,6 +1061,10 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseNostalgia' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
 		'imperiuswiki' => true,
