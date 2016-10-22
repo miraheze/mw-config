@@ -3687,5 +3687,3 @@ EOF;
 	return true;
 } */
 
-$wgDisableTextSearch = true;
-
