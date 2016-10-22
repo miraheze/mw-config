@@ -3544,6 +3544,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['createaccount'] = false;
+	$wgGroupPermissions['*']['autocreateaccount'] = true;
 	$wgGroupPermissions['user']['edit'] = false;
 	$wgGroupPermissions['user']['createaccount'] = false;
 	$wgGroupPermissions['sysop']['createaccount'] = false;
