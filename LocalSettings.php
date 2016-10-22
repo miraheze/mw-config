@@ -1472,6 +1472,7 @@ $wgConf->settings = array(
 		'skyfireflyffwiki' => true,
 		'snowthegamewiki' => true,
 		'soshomophobiewiki' => true,
+		'southparkfanwiki' => true,
 		'spiralwiki' => true,
 		'starsetonlinewiki' => true,
 		'stellachronicawiki' => true,
