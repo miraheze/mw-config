@@ -2249,6 +2249,7 @@ $wgConf->settings = array(
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
+				'staff',
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
@@ -2739,6 +2740,7 @@ $wgConf->settings = array(
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
+				'staff',
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
