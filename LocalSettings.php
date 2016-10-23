@@ -613,7 +613,6 @@ $wgConf->settings = array(
 	'wmgUseAdminLinks' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'applebranchwiki' => true,
 		'christipediawiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
@@ -651,12 +650,14 @@ $wgConf->settings = array(
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
 		'applewikiwiki' => true,
+		'applebranchwiki' => true,
 		'fablabesdswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseArticleRatings' => array(
 		'default' => false,
-		'applewikiwiki' => false, // Until the database changes are made. --Reception123
+		'applewikiwiki' => true,
+		'applebranchwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseAuthorProtect' => array(
@@ -737,6 +738,7 @@ $wgConf->settings = array(
 	'wmgUseComments' => array(
 		'default' => false, // Remember to assign 'commentadmin' rights!
 		'allthetropeswiki' => true,
+		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
@@ -769,6 +771,7 @@ $wgConf->settings = array(
 	'wmgUseCSS' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
@@ -959,6 +962,7 @@ $wgConf->settings = array(
 	'wmgUseMediaWikiChat' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 	),
@@ -1104,6 +1108,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
+		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
@@ -1205,6 +1210,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
+		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
@@ -1332,7 +1338,6 @@ $wgConf->settings = array(
 		'allbanks2wiki' => true,
 		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
-		'applebranchwiki' => true,
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
 		'aryamanwiki' => true,
@@ -1555,6 +1560,7 @@ $wgConf->settings = array(
 	'wmgUseWikiForum' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'applebranchwiki' => true,
 		'alwikiwiki' => true,
 		'applewikiwiki' => true,
 		'entropediawiki' => true,
@@ -1569,6 +1575,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
+		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
@@ -1651,6 +1658,7 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
+		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
@@ -1658,6 +1666,8 @@ $wgConf->settings = array(
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
+		'applebranchwiki' => true,
+		'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
 		'ndnwiki' => true,
@@ -2253,6 +2263,12 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+applebranchwiki' => array(
+			'sysop' => array(
+				'commentadmin',
+				'staff',
+			),
+		),
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -2445,6 +2461,11 @@ $wgConf->settings = array(
 			'confirmed' => array(
 				'edit' => false,
 				'createpage' => false,
+			),
+		),
+		'+applebranchwiki' => array(
+			'user' => array(
+				'upload_by_url' => true,
 			),
 		),
 		'+applewikiwiki' => array(
@@ -2744,6 +2765,12 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+applebranchwiki' => array(
+			'sysop' => array(
+				'commentadmin',
+				'staff',
+			),
+		),
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -3039,6 +3066,7 @@ $wgConf->settings = array(
 	'wgAppleTouchIcon' => array(
 		'default' => '/apple-touch-icon.png',
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
+		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png
 	),
 	'wgCentralAuthLoginIcon' => array(
 		'default' => '/usr/share/nginx/favicons/default.ico',
@@ -3068,6 +3096,7 @@ $wgConf->settings = array(
 		'anduinwiki' => "//$wmgUploadHostname/anduinwiki/9/96/Favicon.jpg",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/6/64/Favicon.ico",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
+		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/64/Favicon.ico",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/3/3b/Favicongif.gif",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/6/64/Favicon.ico",
