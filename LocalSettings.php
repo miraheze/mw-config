@@ -976,6 +976,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => false,
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
+		'extloadwiki' => false,
 	),
 	'wmgUseMonaco' => array(
 		'default' => false,
@@ -1149,7 +1150,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRefreshed' => array(
 		'default' => false,
-		'extloadwiki' => false, // Errors, not sure why
+		'extloadwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
