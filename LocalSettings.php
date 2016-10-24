@@ -3066,7 +3066,7 @@ $wgConf->settings = array(
 	'wgAppleTouchIcon' => array(
 		'default' => '/apple-touch-icon.png',
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
-		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png
+		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png",
 	),
 	'wgCentralAuthLoginIcon' => array(
 		'default' => '/usr/share/nginx/favicons/default.ico',
@@ -3096,7 +3096,7 @@ $wgConf->settings = array(
 		'anduinwiki' => "//$wmgUploadHostname/anduinwiki/9/96/Favicon.jpg",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/6/64/Favicon.ico",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
-		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png
+		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/64/Favicon.ico",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/3/3b/Favicongif.gif",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/6/64/Favicon.ico",
