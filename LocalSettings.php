@@ -1236,6 +1236,7 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
+		'noalatalawiki' => true,
 		'partupwiki' => true,
 		'pascalscada' => true,
 		'perpuswiki' => true,
