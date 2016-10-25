@@ -1431,6 +1431,7 @@ $wgConf->settings = array(
 		'menufeedwiki' => true,
 		'meregoswiki' => true,
 		'metawiki' => true,
+		'mikrodevwiki' => true,
 		'musicarchivewiki' => true,
 		'musiclibrarywiki' => true,
 		'musictabswiki' => true,
