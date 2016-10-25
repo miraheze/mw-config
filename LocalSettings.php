@@ -2269,12 +2269,14 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'commentadmin',
 				'staff',
+				'reviewer',
 			),
 		),
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
 				'staff',
+				'reviewer',
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
@@ -2771,12 +2773,14 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'commentadmin',
 				'staff',
+				'reviewer',
 			),
 		),
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
 				'staff',
+				'reviewer',
 			),
 		),
 		'+cssandjsschoolboardwiki' => array(
