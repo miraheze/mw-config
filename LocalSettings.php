@@ -1116,6 +1116,7 @@ $wgConf->settings = array(
 		'lgproduktsupportwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
+		'noalatalawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'virpatel524wiki' => true,
