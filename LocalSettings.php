@@ -1800,6 +1800,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
+		'arasuithielwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'diavwiki' => 'All Rights Reserved',
 		'espiralwiki' => 'CC0 Public Domain',
 		'metatrekwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
@@ -1813,6 +1814,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'arasuithielwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'espiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'jayuwikiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'kwikiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
