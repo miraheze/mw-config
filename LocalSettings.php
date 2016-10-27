@@ -1446,6 +1446,7 @@ $wgConf->settings = array(
 		'newtrendwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'nidda23wiki' => true,
+		'noalatalawiki' => true,
 		'nvcwiki' => true,
 		'nwpwiki' => true,
 		'ofthevampirewiki' => true,
