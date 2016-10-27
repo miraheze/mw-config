@@ -2310,17 +2310,20 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'Founder' => array(
+			'Co' => array(
+				'Ceo',
+			),
+			'Ceo' => array(
 				'autopatrolled',
 				'bot',
 				'bureaucrat',
 				'confirmed',
 				'sysop',
 				'rollbacker',
-				'trusted',
+				'sysmag',
 			),
 			'bureaucrat' => array(
-				'trusted',
+				'sysmag',
 			),
 		),
 		'+quantumwiki' => array(
@@ -2589,7 +2592,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'Founder' => array(
+			'Co' => array(
+				'autopatrol' => true,
+			),
+			'Ceo' => array(
 				'blockemail' => true,
 				'block' => true,
 				'ipblock-exempt' => true,
@@ -2652,10 +2658,11 @@ $wgConf->settings = array(
 				'movefile' => true,
 				'blockemail' => true,
 			),
-			'trusted' => array(
+			'sysmag' => array(
 				'block' => true,
 				'autoconfirmed' => true,
 				'autopatrolled' => true,
+				'editinterface' => true,
 			),
 		),
 		'+metawiki' => array(
@@ -2814,17 +2821,20 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'Founder' => array(
+			'Co' => array(
+				'Ceo',
+			),
+			'Ceo' => array(
 				'autopatrolled',
 				'bot',
 				'bureaucrat',
 				'confirmed',
 				'sysop',
 				'rollbacker',
-				'trusted',
+				'sysmag',
 			),
 			'bureaucrat' => array(
-				'trusted',
+				'sysmag',
 			),
 		),
 		'+quantumwiki' => array(
@@ -2941,9 +2951,10 @@ $wgConf->settings = array(
 			'wikifounder',
 		),
 		'+trexwiki' => array(
-			'trusted',
+			'sysmag',
 			'bureaucrat',
-			'Founder',
+			'Ceo',
+			'Co',
 		),
 		'+studynotekrwiki' => array(
 			'voter',
@@ -3722,4 +3733,3 @@ EOF;
 
 	return true;
 } */
-
