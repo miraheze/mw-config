@@ -1622,6 +1622,7 @@ $wgConf->settings = array(
 		'lifewiki' => true,
 		'luckandlogicwiki' => true,
 		'marcoschriekwiki' => true,
+		'mikrodevwiki' => true,
 		'ndnwiki' => true,
 		'ontariobrasswiki' => true,
 		'openonderwijswiki' => true,
