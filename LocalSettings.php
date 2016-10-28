@@ -409,6 +409,9 @@ $wgConf->settings = array(
 		'+clementsworldbuildingwiki' => array(
 			'anon' => true,
 		),
+		'+compilerdevwiki' => array(
+			'anon' => true,
+		),
 		'+cpiwiki' => array(
 			'anon' => true,
 		),
