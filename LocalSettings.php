@@ -3576,32 +3576,6 @@ $wgGroupPermissions['sysop']['bigdelete'] = false;
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
-
-if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['user']['read'] = false;
-	$wgGroupPermissions['member']['read'] = true;
-	$wgGroupPermissions['sysop']['read'] = true;
-	$wgConf->settings['wgAddGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgAddGroups']['default']['sysop'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['sysop'][] = 'member';
-	$wgWhitelistRead =
-		array(
-			"Main Page",
-			"Accueil", 
-			"MediaWiki:Common.css",
-			"Special:CentralAutoLogin",
-			"Special:CentralLogin",
-			"Special:ConfirmEmail",
-			"Special:Notifications",
-			"Special:ResetPassword",
-			"Special:UserLogin",
-			"Special:UserLogout",
-			"Special:CreateAccount",
-		);
-}
-
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['createaccount'] = false;
