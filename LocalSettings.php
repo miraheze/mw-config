@@ -2014,6 +2014,10 @@ $wgConf->settings = array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
 		),
+		'noalatalawiki' => array(
+			NS_PORTAL => 'Portal',
+			NS_PORTAL_TALK => 'Portal_talk',
+		),
 		'reviwiki' => array(
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
