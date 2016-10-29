@@ -12,6 +12,15 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgWhitelistRead =
 		array(
 			"Main Page",
+			"Página principal",
+			"대문",
+			"Заглавная страница",
+			"Αρχική σελίδα",
+			"Pagina principale",
+			"Hoofdpagina",
+			"Strona główna",
+			"עמוד ראשי",
+			"Glavna stranica",
     			"lipu lawa",
     			"Pagrindinis puslapis",
     			"Ape",
@@ -84,6 +93,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 			"メインページ",
 			"Αρχικόν σελίδα",
 			"Haaptsäit",
+			"Hauptseite",
 			"Il-Paġna prinċipali",
 			"Tepas",
 			"بُنیادی تاکدیم",
