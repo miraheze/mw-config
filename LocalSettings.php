@@ -3732,14 +3732,13 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>The search feature has been disabled on all Miraheze wikis, because it was responsible for the server crash yesterday. Miraheze staff is trying to find a fix for this bug, until that is done you won't be able to use the search feature.</td>
+	<td>Miraheze would like to apologize for any downtime or speed issues. We are currently investigating the issue.</td>
 	</tr></tbody></table>
 EOF;
 
 	return true;
-} */
-
+}
