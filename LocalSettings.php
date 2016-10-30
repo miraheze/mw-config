@@ -1337,6 +1337,7 @@ $wgConf->settings = array(
 		'allbanks2wiki' => true,
 		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
+		'apneuverenigingwiki' => true,
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
 		'aryamanwiki' => true,
