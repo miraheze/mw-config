@@ -199,9 +199,10 @@ $wgConf->settings = array(
 	'wgCentralAuthAutoNew' => array(
 		'default' => true,
 	),
+	# Because it's an extremely long list, browsers are sending too many requests. --SPF 2016-10-30
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
-			'allthetropes.org' => 'allthetropeswiki',
+			/* 'allthetropes.org' => 'allthetropeswiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
 			'aman.info.tm' => 'amaninfowiki',
 			'applewiki.tk' => 'applewikiwiki',
@@ -239,7 +240,7 @@ $wgConf->settings = array(
 			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
-			'www.zenbuddhism.info' => 'zenbuddhismwiki',
+			'www.zenbuddhism.info' => 'zenbuddhismwiki', */
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
