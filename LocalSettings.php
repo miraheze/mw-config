@@ -236,7 +236,6 @@ $wgConf->settings = array(
 			'wiki.lbcomms.co.za' => 'nextlevelwikiwiki',
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
-			'wiki.zepaltusproject.com' => 'zepaltusprojectwiki',
 			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
 			'www.zenbuddhism.info' => 'zenbuddhismwiki',
@@ -3044,7 +3043,6 @@ $wgConf->settings = array(
 		'wikiparkinsonwiki' => 'https://wikiparkinson.org',
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
 		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
-		'zepaltusprojectwiki' => 'https://wiki.zepaltusproject.com',
 		'zenbuddhismwiki' => 'https://www.zenbuddhism.info',
 	),
 	'wgShowHostnames' => array(
