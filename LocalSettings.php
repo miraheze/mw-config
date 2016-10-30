@@ -1504,6 +1504,7 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => true,
 		'videogameswiki' => true,
 		'vrgowiki' => true,
+		'wabcwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
 		'wikibookswiki' => true,
