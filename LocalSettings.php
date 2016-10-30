@@ -3736,7 +3736,7 @@ $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>Miraheze would like to apologize for any downtime or speed issues. We are currently investigating the issue.</td>
+	<td>Miraheze would like to apologize for any downtime or speed issues. We are currently investigating the issue. Click <a href="https://phabricator.miraheze.org/T963">here</a> for more information.</td></td>
 	</tr></tbody></table>
 EOF;
 
