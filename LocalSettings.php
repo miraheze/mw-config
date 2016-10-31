@@ -3399,7 +3399,7 @@ $wgConf->settings = array(
 		'default' => array(),
 	),
 	'wgTranslateDocumentationLanguageCode' => array(
-		'default' => array(),
+		'default' => false,
 		'nvcwiki' => 'qqq',
 	),
 
