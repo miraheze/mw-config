@@ -365,7 +365,7 @@ if ( $wmgUseTranslate ) {
 	unset( $wgGroupPermissions['translate-proofr'] );
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
-	$wgTranslateDocumentationLanguageCode = $wgTranslateDocumentationLanguageCode;
+	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
 	require_once( "/srv/mediawiki/config/TranslateConfigHack.php" );
 	$wgULSGeoService = false;
 }
