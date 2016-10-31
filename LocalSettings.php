@@ -3398,7 +3398,7 @@ $wgConf->settings = array(
 	'wmgTranslateTranslationServices' => array(
 		'default' => array(),
 	),
-	'wgTranslateDocumentationLanguageCode' => array(
+	'wmgTranslateDocumentationLanguageCode' => array(
 		'default' => false,
 		'nvcwiki' => 'qqq',
 	),
