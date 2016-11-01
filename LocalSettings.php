@@ -511,6 +511,11 @@ $wgConf->settings = array(
 		'+ricwiki' => array(
 			'anon' => true,
 		),
+		'+rpgbrigadewiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+saliorpediawiki' => array(
 			'anon' => true,
 			'user' => true,
