@@ -802,6 +802,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'heistwiki' => true,
 		'hydrawikiwiki' => true,
+		'noalatalawiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
