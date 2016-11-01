@@ -579,7 +579,7 @@ $wgConf->settings = array(
 		),
 	),
 
-	'wgPFEnableStringFunctions' => array(
+	'wmgPFEnableStringFunctions' => array(
 		'default' => false,
 		'marcoschriekwiki' => true,
 	),
