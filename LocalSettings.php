@@ -3702,15 +3702,6 @@ $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
-$wgHooks['PrefsPasswordAudit'][] = 'onPrefsPasswordAuditTestWiki';
-function onPrefsPasswordAuditTestWiki( $user, $newPass, $error ) {
-	if ( $user->getName() == 'Example' ) {
-		return "User not allowed to change password, Example account";
-	}
-
-		return true;
-}
-
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
