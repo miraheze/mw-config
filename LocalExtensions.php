@@ -114,6 +114,10 @@ if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
 }
 
+if ( $wmgPFEnableStringFunctions ) {
+    $wgPFEnableStringFunctions = true;
+}
+
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }
