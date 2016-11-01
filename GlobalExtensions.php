@@ -29,6 +29,7 @@ wfLoadExtension( 'Nuke' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'ParserFunctions' );
+wgPFEnableStringFunctions = true;
 wfLoadExtension( 'Poem' );
 wfLoadExtension( 'SiteMatrix' );
 wfLoadExtension( 'WikiEditor' );
