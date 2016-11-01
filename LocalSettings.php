@@ -582,6 +582,11 @@ $wgConf->settings = array(
 		),
 	),
 
+	'wmgPFEnableStringFunctions' => array(
+		'default' => false,
+		'marcoschriekwiki' => true,
+	),
+
 	// Dormancy policy && RC stuff
 	'wgRCMaxAge' => array(
 		'default' => 180 * 24 * 3600,
@@ -3749,4 +3754,3 @@ EOF;
 
 	return true;
 } */
-
