@@ -1407,6 +1407,7 @@ $wgConf->settings = array(
 		'genwiki' => true,
 		'gncwiki' => true,
 		'grandtheftwikiwiki' => true,
+		'gzewiki' => true,
 		'hftqmswiki' => true,
 		'hobbieswiki' => true,
 		'hshsinfoportalwiki' => true,
