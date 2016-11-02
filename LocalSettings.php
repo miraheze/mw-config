@@ -112,6 +112,8 @@ define( 'NS_HALAMAN', 1684);
 define( 'NS_HALAMAN_TALK', 1685);
 define( 'NS_DICT', 1686);
 define( 'NS_DICT_TALK', 1687);
+define( 'NS_FEATURED', 1688);
+define( 'NS_FEATURED_TALK', 1689);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1990,6 +1992,8 @@ $wgConf->settings = array(
 			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
 			NS_REVIEWS => 'Reviews',
 			NS_REVIEWS_TALK => 'Reviews_talk',
+			NS_FEATURED => 'Featured_Page',
+			NS_FEATURED_TALK => 'Featured_Page_talk',
 		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
@@ -2114,6 +2118,8 @@ $wgConf->settings = array(
 			'ATT_talk' => NS_PROJECT_TALK,
 			'YKTTW' => NS_TROPEWORKSHOP,
 			'YKTTW_talk' => NS_TROPEWORKSHOP_TALK,
+			'Blurb' => NS_FEATURED,
+			'Blurb_talk' => NS_FEATURED_TALK,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
