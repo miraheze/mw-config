@@ -1802,6 +1802,7 @@ $wgConf->settings = array(
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
 		'espiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 		'libertywikiwiki' => 'http://creativecommons.org.nz/wp-content/uploads/2012/05/by-nc-sa1.png',
+		'rezeroswiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'safiriawiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'sourcewiki' => 'https://source.miraheze.org/wiki/Source_Code_Wiki:Copyrights',
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
@@ -1824,6 +1825,7 @@ $wgConf->settings = array(
 		'metatrekwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'libertywikiwiki' => 'Attribution-NonCommercial-ShareAlike 3.0 Unported',
 		'oyeavdelingenwiki' => 'All Rights Reserved',
+		'rezeroswiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'sourcewiki' => 'Wiki copyright information.',
 		'spiralwiki' => 'CC0 Public Domain',
@@ -1839,6 +1841,7 @@ $wgConf->settings = array(
 		'kwikiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'libertywikiwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'metatrekwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+		'rezeroswiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'sourcewiki' => 'https://source.miraheze.org/wiki/Source_Code_Wiki:Copyrights',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
@@ -3759,4 +3762,3 @@ EOF;
 
 	return true;
 } */
-
