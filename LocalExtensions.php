@@ -122,6 +122,10 @@ if ( $wmgUseFancyBoxThumbs ) {
 	require_once( "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php" );
 }
 
+if ( $wmgUseFlaggedRevs ) {
+	require_once( "$IP/extensions/FlaggedRevs/FlaggedRevs.php" );
+}
+
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
