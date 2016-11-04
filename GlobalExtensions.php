@@ -12,7 +12,6 @@ require_once( "$IP/extensions/OAuth/OAuth.php" );
 require_once( "$IP/extensions/Timeline/Timeline.php" );
 require_once( "$IP/extensions/Thanks/Thanks.php" );
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
-require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
 wfLoadExtension( 'Babel' );
 wfLoadExtension( 'CheckUser' );
 wfLoadExtension( 'Cite' );

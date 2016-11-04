@@ -334,6 +334,10 @@ if ( $wmgUseSectionHide ) {
 	wfLoadExtension( 'SectionHide' );
 }
 
+if ( $wmgUseShortURL ) {
+	require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
+}
+
 if ( $wmgUseSimpleTooltip ) {
 	require_once( "$IP/extensions/SimpleTooltip/SimpleTooltip.php" );
 }

@@ -1222,6 +1222,11 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'hendrickswiki' => true,
 	),
+	'wmgUseShortURL' => array(
+		'default' => true,
+		'applewikiwiki' => false,
+		'applebranchwiki' => false,
+	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
 		'8stationwiki' => true,
