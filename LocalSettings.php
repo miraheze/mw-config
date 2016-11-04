@@ -1950,6 +1950,7 @@ $wgConf->settings = array(
 	// Mobile
 	'wmgMFAutodetectMobileView' => array(
 		'default' => true,
+		'trexwiki' => false,
 	),
 
 	// MsCatSelect vars
