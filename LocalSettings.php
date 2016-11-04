@@ -497,6 +497,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+philmont126wiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+poserdazfreebieswiki' => array(
 			'anon' => true,
 			'user' => true,
