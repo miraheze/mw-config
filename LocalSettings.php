@@ -1070,6 +1070,7 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'perpuswiki' => true,
+		'trexwiki' => true,
 		'universebuildwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
