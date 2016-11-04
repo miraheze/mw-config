@@ -3567,6 +3567,7 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/RedisConfig.php" );
+require_once( "/srv/mediawiki/config/PrivateWikiWhitelist.php" );
 
 // Hard overrides that don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
