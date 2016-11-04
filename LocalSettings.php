@@ -717,6 +717,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'financialfindswiki' => true,
 		'hontsukuruwiki' => true,
+		'philmont126wiki' => true,
 		'robertsnoteswiki' => true,
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
