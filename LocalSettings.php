@@ -290,6 +290,7 @@ $wgConf->settings = array(
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/Comments/sql/comments.sql",
 			"$IP/extensions/Echo/echo.sql",
+			"$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
 			"$IP/extensions/Flow/flow.sql",
 			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
 			"$IP/extensions/Math/db/math.mysql.sql",
