@@ -3452,7 +3452,7 @@ $wgConf->settings = array(
 	'wgUrlShortenerDomainsWhitelist' => array(
 		'default' => array(
 			'(.*\.)?miraheze\.org',
-			'espiral\.wiki',
+			'espiral\.org',
 			'spiral\.wiki',
 		),
 	),
