@@ -3640,6 +3640,7 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/RedisConfig.php" );
+require_once( "/srv/mediawiki/config/PrivateWikiWhitelist.php" );
 
 // Hard overrides that don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
@@ -3648,32 +3649,6 @@ $wgGroupPermissions['sysop']['bigdelete'] = false;
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
-
-
-if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['user']['read'] = false;
-	$wgGroupPermissions['member']['read'] = true;
-	$wgGroupPermissions['sysop']['read'] = true;
-	$wgConf->settings['wgAddGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgAddGroups']['default']['sysop'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['sysop'][] = 'member';
-	$wgWhitelistRead =
-		array(
-			"Main Page",
-			"Accueil", 
-			"MediaWiki:Common.css",
-			"Special:CentralAutoLogin",
-			"Special:CentralLogin",
-			"Special:ConfirmEmail",
-			"Special:Notifications",
-			"Special:ResetPassword",
-			"Special:UserLogin",
-			"Special:UserLogout",
-			"Special:CreateAccount",
-		);
-}
 
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['edit'] = false;
