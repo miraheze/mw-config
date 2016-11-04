@@ -844,6 +844,10 @@ $wgConf->settings = array(
 	'wmgUseFeaturedFeeds' => array(
 		'default' => false,
 	),
+	'wmgUseFlaggedRevs' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
 		'8stationwiki' => true,
