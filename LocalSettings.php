@@ -1214,7 +1214,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseShortURL' => array(
 		'default' => true,
-		'espiralwiki' => false,
+		'applewikiwiki' => false,
+		'applebranchwiki' => false,
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
