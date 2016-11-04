@@ -1212,6 +1212,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'hendrickswiki' => true,
 	),
+	'wmgUseShortURL' => array(
+		'default' => true,
+		'espiralwiki' => false,
+	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
 		'8stationwiki' => true,
