@@ -361,8 +361,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'kaydadegerwiki' => 'This wiki is locked from editing while it is being renamed.',
-		'vukufwiki' => 'This wiki is locked from editing while kaydadegerwiki is being renamed.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
