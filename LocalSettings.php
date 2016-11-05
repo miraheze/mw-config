@@ -1080,6 +1080,7 @@ $wgConf->settings = array(
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'perpuswiki' => true,
+		'takethatwikiwiki' => true,
 		'trexwiki' => true,
 		'universebuildwiki' => true,
 		'wisdomwikiwiki' => true,
