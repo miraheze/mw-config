@@ -853,6 +853,7 @@ $wgConf->settings = array(
 	'wmgUseFlaggedRevs' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'pso2wiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
@@ -1686,6 +1687,61 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => '_blank',
 		'wisdomsandboxwiki' => '_blank',
 		'yacresourceswiki' => '_blank',
+	),
+	
+	// FlaggedRevs
+	'wgFlaggedRevsNamespaces' => array( 
+		'default' => false,
+		'+pso2wiki' => array(
+			NS_MAIN, 
+			NS_FILE, 
+			NS_TEMPLATE,  
+			NS_HELP,
+			NS_PROJECT, 
+			NS_MEDIAWIKI,
+		),
+	),
+	'wgFlaggedRevsTags' => array(
+		'default' => false,
+		'+pso2wiki' => array(
+			'status' => array(
+				'quality' => 1,
+				'levels' => 2,
+				'pristine' => 3,
+			),
+		),
+	),
+	'wgFlaggedRevsTagsRestrictions' => array(
+		'default' => false,
+		'+pso2wiki' => array(
+			'status' => array( 
+				'review' => 1, 
+				'autoreview' => 1,
+			),
+		),
+	),
+	'wgFlaggedRevsTagsAuto' => array(
+		'default' => false,
+		'+pso2wiki' => array(
+			'status' => 1,
+		),
+	),
+	'wgFlaggedRevsAutopromote' => array(
+		'default' => false,
+		'+pso2wiki' => array(
+				'days' => 14, 
+				'edits' => 100,
+				'excludeLastDays' => 1,
+				'benchmarks' => 1,
+				'spacing' => 1,
+				'totalContentEdits' => 100,
+				'totalCheckedEdits' => 100,
+				'uniqueContentPages' => 10,
+				'editComments' => 80,
+				'userpageBytes' => 1,
+				'neverBlocked' => true,
+				'maxRevertedEditRatio'=> .05,
+		),
 	),
 
 	// Files
