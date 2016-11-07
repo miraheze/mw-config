@@ -1148,6 +1148,10 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 		'virpatel524wiki' => true,
 	),
+	'wmgUsePdfHandler' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
