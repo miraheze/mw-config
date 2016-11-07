@@ -286,6 +286,10 @@ if ( $wmgUsePDFEmbed ) {
 	require_once( "$IP/extensions/PDFEmbed/PDFEmbed.php" );
 }
 
+if ( $wmgUsePdfHandler ) {
+	wfLoadExtension( 'PdfHandler' );
+}
+
 if ( $wmgUsePoll ) {
 	require_once( "$IP/extensions/Poll/Poll.php" );
 }
