@@ -426,6 +426,9 @@ $wgConf->settings = array(
 		'+dottorcontewiki' => array(
 			'anon' => true,
 		),
+		'+evelopediawiki' => array(
+			'anon' => true,
+		),
 		'+forexwiki' => array(
 			'anon' => true,
 			'user' => true,
