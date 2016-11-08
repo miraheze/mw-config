@@ -3245,6 +3245,7 @@ $wgConf->settings = array(
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/6/60/Wiki_favicon.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
 		'evawiki' => "//$wmgUploadHostname/evawiki/6/64/Favicon.ico",
+		'evelopediawiki' => "//$wmgUploadHostname/evelopediawiki/6/64/Favicon.ico
 		'fbwikiwiki' => "//$wmgUploadHostname/fbwikiwiki/4/4c/Fbwiki_favicon.ico",
 		'fmbvwiki' => "//$wmgUploadHostname/fmbvwiki/0/06/Fmbvfavicon.png",
 		'forexwiki' => "//$wmgUploadHostname/forexwiki/6/64/Favicon.ico",
