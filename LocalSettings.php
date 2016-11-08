@@ -1151,6 +1151,7 @@ $wgConf->settings = array(
 	'wmgUsePdfHandler' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'noalatalawiki' => true,
 	),
 	'wmgUsePopups' => array(
 		'default' => false,
