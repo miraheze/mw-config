@@ -392,6 +392,10 @@ if ( $wmgUseTitleKey ) {
 	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
 
+if ( $wmgUseTorBlock ) {
+	require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+}
+
 if ( $wmgUseVariables ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 }
