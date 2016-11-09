@@ -1651,6 +1651,7 @@ $wgConf->settings = array(
 		'dwplivewiki' => true,
 		'elainarmuawiki' => true,
 		'evawiki' => true,
+		'evelopediawiki' => true,
 		'extloadwiki' => true,
 		'florianoromanowiki' => true,
 		'freecollegeprojectwiki' => true,
