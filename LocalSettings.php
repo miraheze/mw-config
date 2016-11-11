@@ -1334,6 +1334,7 @@ $wgConf->settings = array(
 	'wmgUseTorBlock' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'takethatwikiwiki' => true,
         ),
 	'wmgUseTranslate' => array(
 		'default' => false,
