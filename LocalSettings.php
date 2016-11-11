@@ -2036,6 +2036,7 @@ $wgConf->settings = array(
 			'loginwiki',
 			'testwiki',
 			'throisarwiki',
+			'wikibridgewiki',
 		),
 	),
 	
