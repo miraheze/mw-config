@@ -2902,12 +2902,12 @@ $wgConf->settings = array(
 		),
 		'+wikibridgewiki' => array(
 			'abusefilter-manager' => array(
-			'abusefilter-modify' => true,
-			'abusefilter-log-detail' => true,
-			'abusefilter-view' => true,
-			'abusefilter-log' => true,
-			'abusefilter-modify-restricted' => true,
-			'abusefilter-revert' => true,
+				'abusefilter-modify' => true,
+				'abusefilter-log-detail' => true,
+				'abusefilter-view' => true,
+				'abusefilter-log' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-revert' => true,
 			),
 			'pagemover' => array(
 				'move' => true,
