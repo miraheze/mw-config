@@ -1702,7 +1702,7 @@ $wgConf->settings = array(
 	// FlaggedRevs
 	'wgFlaggedRevsNamespaces' => array( 
 		'default' => false,
-		'+pso2wiki' => array(
+		'pso2wiki' => array(
 			NS_MAIN, 
 			NS_FILE, 
 			NS_TEMPLATE,  
@@ -1713,7 +1713,7 @@ $wgConf->settings = array(
 	),
 	'wgFlaggedRevsTags' => array(
 		'default' => false,
-		'+pso2wiki' => array(
+		'pso2wiki' => array(
 			'status' => array(
 				'quality' => 1,
 				'levels' => 2,
@@ -1723,7 +1723,7 @@ $wgConf->settings = array(
 	),
 	'wgFlaggedRevsTagsRestrictions' => array(
 		'default' => false,
-		'+pso2wiki' => array(
+		'pso2wiki' => array(
 			'status' => array( 
 				'review' => 1, 
 				'autoreview' => 1,
@@ -1732,13 +1732,13 @@ $wgConf->settings = array(
 	),
 	'wgFlaggedRevsTagsAuto' => array(
 		'default' => false,
-		'+pso2wiki' => array(
+		'pso2wiki' => array(
 			'status' => 1,
 		),
 	),
 	'wgFlaggedRevsAutopromote' => array(
 		'default' => false,
-		'+pso2wiki' => array(
+		'pso2wiki' => array(
 				'days' => 14, 
 				'edits' => 100,
 				'excludeLastDays' => 1,
