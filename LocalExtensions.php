@@ -200,6 +200,10 @@ if ( $wmgUseLinkSuggest ) {
 	wfLoadExtension( 'LinkSuggest' );
 }
 
+if ( $wmgUseLocalisationUpdate ) {
+	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
+}
+
 if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 	require_once( "$IP/extensions/Loops/Loops.php");
