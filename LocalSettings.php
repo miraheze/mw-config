@@ -966,6 +966,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
+	'wmgUseLocalisationUpdate' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseLoopsCombo' => array(
 		'default' => false,
 		'bgowiki' => true,
