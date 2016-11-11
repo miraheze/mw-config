@@ -2538,7 +2538,8 @@ $wgConf->settings = array(
 		),
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
-				abusefilter-manager => true,
+				'abusefilter-manager' => true,
+				'pagemover' => true,
 				),
 			),	
 		'+wikidolphinhansenwiki' => array(
@@ -2908,6 +2909,14 @@ $wgConf->settings = array(
 			'abusefilter-modify-restricted' => true,
 			'abusefilter-revert' => true,
 			),
+			'pagemover' => array(
+				'move' => true,
+				'suppressredirect' => true,
+				'movefile' => true,
+				'move-subpages' => true,
+				'move-rootuserpages' => true,
+				'move-categorypages' => true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
@@ -3043,7 +3052,8 @@ $wgConf->settings = array(
 		),
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
-				abusefilter-Manager => true,
+				'abusefilter-manager' => true,
+				'pagemover' => true,
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
