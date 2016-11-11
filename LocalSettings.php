@@ -775,6 +775,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
+		'wikidolphinhansenwiki' => true,
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
@@ -1373,6 +1374,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'openconstitutionwiki' => true,
 		'robloxscripterswiki' => true,
+		'wikidolphinhansenwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
@@ -2533,6 +2535,11 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+wikidolphinhansenwiki' => array(
+			'sysop' => array(
+				'commentadmin',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -3016,6 +3023,11 @@ $wgConf->settings = array(
 			),
 			'editor-approver' => array(
 				'editor',
+			),
+		),
+		'+wikidolphinhansenwiki' => array(
+			'sysop' => array(
+				'commentadmin',
 			),
 		),
 	),
