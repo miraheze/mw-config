@@ -2538,8 +2538,8 @@ $wgConf->settings = array(
 		),
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
-				'abusefilter-manager' => true,
-				'pagemover' => true,
+				'abusefilter-manager',
+				'pagemover',
 				),
 			),	
 		'+wikidolphinhansenwiki' => array(
@@ -3052,8 +3052,8 @@ $wgConf->settings = array(
 		),
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
-				'abusefilter-manager' => true,
-				'pagemover' => true,
+				'abusefilter-manager',
+				'pagemover',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
