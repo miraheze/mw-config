@@ -2536,6 +2536,11 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+wikibridgewiki' => array(
+			'bureaucrat' => array(
+				AbuseFilter Manager => true,
+				),
+			),	
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -3035,6 +3040,11 @@ $wgConf->settings = array(
 			),
 			'editor-approver' => array(
 				'editor',
+			),
+		),
+		'+wikibridgewiki' => array(
+			'bureaucrat' => array(
+				AbuseFilter Manager => true,
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
