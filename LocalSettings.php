@@ -3596,7 +3596,6 @@ $wgConf->settings = array(
 			'allthetropes\.org',
 			'aman.info\.tm',
 			'antiguabarbudacalypso\.com',
-			'applewiki\.tk',
 			'boulderwiki\.org',
 			'carving\.wiki',
 			'wiki.dottorconte\.eu',
