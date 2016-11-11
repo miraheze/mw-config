@@ -2538,7 +2538,7 @@ $wgConf->settings = array(
 		),
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
-				AbuseFilter Manager => true,
+				abusefilter-manager => true,
 				),
 			),	
 		'+wikidolphinhansenwiki' => array(
@@ -2900,12 +2900,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikibridgewiki' => array(
-			'AbuseFilter Manager' => array(
+			'abusefilter-manager' => array(
 			'abusefilter-modify' => true,
 			'abusefilter-log-detail' => true,
 			'abusefilter-view' => true,
 			'abusefilter-log' => true,
-			'abusefilter-private' => true,
 			'abusefilter-modify-restricted' => true,
 			'abusefilter-revert' => true,
 			),
@@ -3044,7 +3043,7 @@ $wgConf->settings = array(
 		),
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
-				AbuseFilter Manager => true,
+				abusefilter-Manager => true,
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
