@@ -2894,6 +2894,17 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+wikibridgewiki' => array(
+			'AbuseFilter Manager' => array(
+			'abusefilter-modify' => true,
+			'abusefilter-log-detail' => true,
+			'abusefilter-view' => true,
+			'abusefilter-log' => true,
+			'abusefilter-private' => true,
+			'abusefilter-modify-restricted' => true,
+			'abusefilter-revert' => true,
+			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
