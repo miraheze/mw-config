@@ -1396,6 +1396,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
 		'apneuverenigingwiki' => true,
+		'applebranchwiki' => true,
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
 		'aryamanwiki' => true,
