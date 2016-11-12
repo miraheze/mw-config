@@ -313,7 +313,7 @@ if ( $wmgUseRandomSelection ) {
 }
 
 if ( $wmgUseRefreshed ) {
-	require_once( "$IP/skins/Refreshed/refreshed.php" );
+	wfLoadSkin( refreshed );
 }
 
 if ( $wmgUseRelatedArticles ) {
