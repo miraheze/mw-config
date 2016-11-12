@@ -261,6 +261,10 @@ if ( $wmgUseNewestPages ) {
 	require_once( "$IP/extensions/NewestPages/NewestPages.php" );
 }
 
+if ( $wmgUseNewsletter ) {
+	require_once( "$IP/extensions/Newsletter/Newsletter.php" );
+}
+
 if ( $wmgUseNewUserMessage ) {
 	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 }
