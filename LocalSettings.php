@@ -2929,6 +2929,9 @@ $wgConf->settings = array(
 			'massmessage-sender' => array(
 				'massmessage' => true,
 			),
+			'founder' => array(
+				'read' => true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
