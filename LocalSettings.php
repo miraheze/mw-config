@@ -1085,6 +1085,10 @@ $wgConf->settings = array(
 	    'christipediawiki' => true,
 	    'extloadwiki' => true,
 	),
+	'wmgUseNewsletter' => array(
+		'default' => false,
+		'extloadwiki' => true
+	),
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
