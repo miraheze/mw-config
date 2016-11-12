@@ -1087,6 +1087,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewsletter' => array(
 		'default' => false,
+		'espiralwiki' => true,
 		'extloadwiki' => true
 	),
 	'wmgUseNewUserMessage' => array(
