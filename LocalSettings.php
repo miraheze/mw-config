@@ -1198,7 +1198,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRefreshed' => array(
 		'default' => false,
-		'extloadwiki' => false, // Errors --Reception123
+		'extloadwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
