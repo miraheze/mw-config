@@ -1950,6 +1950,13 @@ $wgConf->settings = array(
 		'universebuildwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 	),
 
+	// Links
+	'+wgUrlProtocols' => array(
+	    'default' => array(),
+		// file protocol only allowed on private wikis
+		'gzewiki' => array ( "file://" ),
+	),
+
 	// Mail
 	'wgEnableEmail' => array(
 		'default' => true,
