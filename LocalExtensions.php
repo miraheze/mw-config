@@ -309,7 +309,7 @@ if ( $wmgUseRandomSelection ) {
 }
 
 if ( $wmgUseRefreshed ) {
-	wfLoadExtension( 'Refreshed' );
+	wfLoadSkin( 'Refreshed' );
 }
 
 if ( $wmgUseRelatedArticles ) {
