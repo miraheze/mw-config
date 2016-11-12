@@ -2549,8 +2549,8 @@ $wgConf->settings = array(
 				'abusefilter-manager',
 				'pagemover',
 				'massmessage-sender'
-				),
-			),	
+			),
+		),	
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -3067,6 +3067,9 @@ $wgConf->settings = array(
 				'abusefilter-manager',
 				'pagemover',
 				'massmessage-sender',
+			),
+			'founder' => array(
+				'bureaucrat',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
