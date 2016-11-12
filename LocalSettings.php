@@ -1957,7 +1957,14 @@ $wgConf->settings = array(
 		// file protocol only allowed on private wikis
 		'gzewiki' => array ( "file://" ),
 	),
-
+	
+	// LocalisationUpdate
+	'wgLocalisationUpdateRepositories['github']' => array(
+			'mediawiki' => 'https://github.com/Miraheze/MirahezeMagic/i18n/miraheze',
+			'extension' => 'https://raw.github.com/wikimedia/mediawiki-extensions-%NAME%/master/%PATH%',
+			'skin' => 'https://raw.github.com/wikimedia/mediawiki-skins-%NAME%/master/%PATH%',
+	),
+	
 	// Mail
 	'wgEnableEmail' => array(
 		'default' => true,
