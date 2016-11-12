@@ -1056,6 +1056,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
+		'wikibridgewiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -2540,6 +2541,7 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'abusefilter-manager',
 				'pagemover',
+				'massmessage-sender'
 				),
 			),	
 		'+wikidolphinhansenwiki' => array(
@@ -2917,6 +2919,9 @@ $wgConf->settings = array(
 				'move-rootuserpages' => true,
 				'move-categorypages' => true,
 			),
+			'massmessage-sender' => array(
+				'massmessage' => true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
@@ -3054,6 +3059,7 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'abusefilter-manager',
 				'pagemover',
+				'massmessage-sender',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
