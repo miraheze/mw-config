@@ -309,7 +309,7 @@ if ( $wmgUseRandomSelection ) {
 }
 
 if ( $wmgUseRefreshed ) {
-	require_once( "$IP/skins/Refreshed/Refreshed.php" );
+	wfLoadExtension( 'Refreshed' );
 }
 
 if ( $wmgUseRelatedArticles ) {
