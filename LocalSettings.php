@@ -1198,6 +1198,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseRefreshed' => array(
 		'default' => false,
+		'applebranchwiki' => true,
+		'applewikiwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
