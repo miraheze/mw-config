@@ -84,6 +84,10 @@ if ( $wmgUseCookieWarning ) {
 	// Haha just kidding -- annoy everyone
 }
 
+if ( $wmgUseCreatePage ) {
+	require_once( "$IP/extensions/CreatePage/CreatePage.php" );
+}
+
 if ( $wmgUseCreateWiki ) {
 	wfLoadExtension( 'CreateWiki' );
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
