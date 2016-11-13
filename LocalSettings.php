@@ -798,6 +798,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCreatePage' => array(
 		'default' => false,
+		'evelopediawiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
