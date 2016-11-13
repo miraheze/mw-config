@@ -281,6 +281,8 @@ if ( $wmgUseNoTitle ) {
 if ( $wmgUseOATHAuth ) { 
 	wfLoadExtension( 'OATHAuth' );
 	$wgOATHAuthDatabase = $wmgOATHAuthDatabase;
+	$wgGroupPermissions['*']['oathauth-enable'] = false;
+	$wgGroupPermissions['sysop']['oathauth-enable'] = true;
 }
 
 if ( $wmgUsePageNotice ) {

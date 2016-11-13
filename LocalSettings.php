@@ -1127,6 +1127,7 @@ $wgConf->settings = array(
 	'wmgUseOATHAuth' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'metawiki' => true,
 	),
 	'wmgUsePageNotice' => array(
 		'default' => false,
