@@ -789,6 +789,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
+	'wmgUseCreatePage' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
 		'metawiki' => true,
