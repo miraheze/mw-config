@@ -2055,8 +2055,12 @@ $wgConf->settings = array(
 	'wgAllowDisplayTitle' => array(
 		'default' => true,
 	),
-
-	// Mobile
+	'wgRestrictDisplayTitle' => array(
+		'default' => true, // Wikis with NoTitle have it set to false
+		'takethatwikiwiki' => false,
+	),
+	
+	// MobileFrontend
 	'wmgMFAutodetectMobileView' => array(
 		'default' => true,
 		'trexwiki' => false,
@@ -2066,7 +2070,7 @@ $wgConf->settings = array(
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
 	),
-	
+
 	// MsUpload settings
 	'wgMSU_useDragDrop' => array(
 		'default' => false,
