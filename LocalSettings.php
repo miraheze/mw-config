@@ -2578,16 +2578,12 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'abusefilter-manager',
 				'pagemover',
-				'massmessage-sender',
+				'massmessage-sender'
 			),
 			'founder' => array(
 				'abusefilter-manager',
-				'pagemover',
+				'pagemover'
 			),
-			'sysop' => array(
-				'abusefilter-manager',
-				'pagemover',
-				'massmessage-sender',
 		),	
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
@@ -3116,10 +3112,6 @@ $wgConf->settings = array(
 				'abusefilter-manager',
 				'pagemover'
 			),
-			'sysop' => array(
-				'abusefilter-manager',
-				'pagemover',
-				'massmessage-sender',
 		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
