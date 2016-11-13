@@ -2586,6 +2586,7 @@ $wgConf->settings = array(
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
+				'reviewer',
 			),
 			'founder' => array(
 				'abusefilter-manager',
@@ -2593,6 +2594,7 @@ $wgConf->settings = array(
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
+				'reviewer',
 			),
 			'sysop' => array(
 				'abusefilter-manager',
@@ -2600,6 +2602,7 @@ $wgConf->settings = array(
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
+				'reviewer',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
@@ -3129,6 +3132,7 @@ $wgConf->settings = array(
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
+				'reviewer',
 			),
 			'founder' => array(
 				'abusefilter-manager',
@@ -3137,6 +3141,7 @@ $wgConf->settings = array(
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
+				'reviewer',
 			),
 			'sysop' => array(
 				'abusefilter-manager',
@@ -3144,6 +3149,7 @@ $wgConf->settings = array(
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
+				'reviewer',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
