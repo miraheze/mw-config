@@ -2972,6 +2972,9 @@ $wgConf->settings = array(
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
 			),
+			'bureaucrat' => array(
+				'templateeditor' => true,
+			),
 			'ipblock-exempt' => array(
 				'ipblock-exempt' => true,
 			),
@@ -2987,7 +2990,10 @@ $wgConf->settings = array(
 				'massmessage' => true,
 			),
 			'founder' => array(
-				'read' => true,
+				'templateeditor' => true,
+			),
+			'sysop' => array(
+				'templateeditor' => true,
 			),
 			'template-editor' => array(
 				'templateeditor' => true,
