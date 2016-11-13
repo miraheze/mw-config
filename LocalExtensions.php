@@ -128,6 +128,14 @@ if ( $wmgUseFancyBoxThumbs ) {
 
 if ( $wmgUseFlaggedRevs ) {
 	require_once( "$IP/extensions/FlaggedRevs/FlaggedRevs.php" );
+
+	$wgFlaggedRevsNamespaces = $wmgFlaggedRevsNamespaces;
+	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
+	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
+	$wgFlaggedRevsTagsRestrictions = $wmgFlaggedRevsTagsRestrictions;
+	$wgFlaggedRevsTagsAuto = $wmgFlaggedRevsTagsAuto;
+	$wgFlaggedRevsAutopromote = $wmgFlaggedRevsAutopromote;
+
 }
 
 if ( $wmgUseFlow ) {

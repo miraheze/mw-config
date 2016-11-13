@@ -1739,9 +1739,9 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => '_blank',
 		'yacresourceswiki' => '_blank',
 	),
-	
+
 	// FlaggedRevs
-	'wgFlaggedRevsNamespaces' => array(
+	'wmgFlaggedRevsNamespaces' => array(
 		'default' => array(
 			NS_MAIN,
 			NS_FILE,
@@ -1751,7 +1751,11 @@ $wgConf->settings = array(
 			NS_MEDIAWIKI,
 		),
 	),
-	'wgFlaggedRevsTags' => array(
+	'wmgFlaggedRevsProtection' => array(
+		'default' => false,
+		'wikibridgewiki' => true,
+	),
+	'wmgFlaggedRevsTags' => array(
 		'default' => array(
 			'status' => array(
 				'quality' => 1,
@@ -1760,7 +1764,7 @@ $wgConf->settings = array(
 			),
 		),
 	),
-	'wgFlaggedRevsTagsRestrictions' => array(
+	'wmgFlaggedRevsTagsRestrictions' => array(
 		'default' => array(
 			'status' => array(
 				'review' => 1,
@@ -1768,12 +1772,12 @@ $wgConf->settings = array(
 			),
 		),
 	),
-	'wgFlaggedRevsTagsAuto' => array(
+	'wmgFlaggedRevsTagsAuto' => array(
 		'default' => array(
 			'status' => 1,
 		),
 	),
-	'wgFlaggedRevsAutopromote' => array(
+	'wmgFlaggedRevsAutopromote' => array(
 		'default' => array(
 			'days' => 14,
 			'edits' => 100,
