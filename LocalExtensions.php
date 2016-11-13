@@ -280,6 +280,7 @@ if ( $wmgUseNoTitle ) {
 
 if ( $wmgUseOATHAuth ) { 
 	wfLoadExtension( 'OATHAuth' );
+	$wgOATHAuthDatabase = $wmgOATHAuthDatabase;
 }
 
 if ( $wmgUsePageNotice ) {

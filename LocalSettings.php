@@ -2379,6 +2379,11 @@ $wgConf->settings = array(
 		),
 	),
 
+	// OATHAuth
+	'wmgOATHAuthDatabase' => array(
+		'default' => 'centralauth',
+	),
+
 	// OAuth
 	'wgMWOAuthCentralWiki' => array(
 		'default' => 'metawiki',
