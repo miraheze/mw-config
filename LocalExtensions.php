@@ -357,6 +357,10 @@ if ( $wmgUseSimpleTooltip ) {
 	require_once( "$IP/extensions/SimpleTooltip/SimpleTooltip.php" );
 }
 
+if ( $wmgUseSiteScout ) {
+	wfLoadExtension( 'SiteScout' );
+}
+
 if ( $wmgUseSocialProfile ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 }
