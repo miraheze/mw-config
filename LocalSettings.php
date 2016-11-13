@@ -2586,18 +2586,21 @@ $wgConf->settings = array(
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
 				'abusefilter-manager',
+				'ipblock-exempt',
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
 			),
 			'founder' => array(
 				'abusefilter-manager',
+				'ipblock-exempt',
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
 			),
 			'sysop' => array(
 				'abusefilter-manager',
+				'ipblock-exempt',
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
@@ -2970,6 +2973,9 @@ $wgConf->settings = array(
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
 			),
+			'ipblock-exempt' => array(
+				'ipblock-exempt' => true,
+			),
 			'pagemover' => array(
 				'move' => true,
 				'suppressredirect' => true,
@@ -3123,6 +3129,7 @@ $wgConf->settings = array(
 		'+wikibridgewiki' => array(
 			'bureaucrat' => array(
 				'abusefilter-manager',
+				'ipblock-exempt',
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
@@ -3130,12 +3137,14 @@ $wgConf->settings = array(
 			'founder' => array(
 				'abusefilter-manager',
 				'bureaucrat',
+				'ipblock-exempt',
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
 			),
 			'sysop' => array(
 				'abusefilter-manager',
+				'ipblock-exempt',
 				'pagemover',
 				'massmessage-sender',
 				'template-editor',
