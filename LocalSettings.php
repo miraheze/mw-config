@@ -2315,6 +2315,14 @@ $wgConf->settings = array(
 			'画像' => NS_FILE,
 		),
 	),
+	'+wgNamespaceProtection' => array(
+		'default' => array(),
+		'wikibridgewiki' => array(
+			NS_TEMPLATE => array(
+				'templateeditor',
+			),
+		),
+	),
 	'+wgNamespacesToBeSearchedDefault' => array(
 		'default' => array(),
 		'+metawiki' => array(
@@ -2579,18 +2587,22 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'abusefilter-manager',
 				'pagemover',
-				'massmessage-sender'
+				'massmessage-sender',
+				'template-editor',
 			),
 			'founder' => array(
 				'abusefilter-manager',
-				'pagemover'
+				'pagemover',
+				'massmessage-sender',
+				'template-editor',
 			),
 			'sysop' => array(
 				'abusefilter-manager',
 				'pagemover',
 				'massmessage-sender',
+				'template-editor',
 			),
-		),	
+		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -2972,6 +2984,9 @@ $wgConf->settings = array(
 			'founder' => array(
 				'read' => true,
 			),
+			'template-editor' => array(
+				'templateeditor' => true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
@@ -3110,18 +3125,20 @@ $wgConf->settings = array(
 				'abusefilter-manager',
 				'pagemover',
 				'massmessage-sender',
-			),
-			'founder' => array(
-				'bureaucrat',
+				'template-editor',
 			),
 			'founder' => array(
 				'abusefilter-manager',
-				'pagemover'
+				'bureaucrat',
+				'pagemover',
+				'massmessage-sender',
+				'template-editor',
 			),
 			'sysop' => array(
 				'abusefilter-manager',
 				'pagemover',
 				'massmessage-sender',
+				'template-editor',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
