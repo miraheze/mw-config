@@ -3228,7 +3228,7 @@ $wgConf->settings = array(
 			'voter',
 		),
 		'+wikibridgewiki' => array(
-			'templateeditor'
+			'templateeditor',
 		),
 	),
 		
