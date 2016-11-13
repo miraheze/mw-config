@@ -1748,7 +1748,6 @@ $wgConf->settings = array(
 			NS_TEMPLATE,
 			NS_HELP,
 			NS_PROJECT,
-			NS_MEDIAWIKI,
 		),
 	),
 	'wmgFlaggedRevsProtection' => array(
