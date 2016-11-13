@@ -1124,6 +1124,10 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 	),
+	'wmgUseOATHAuth' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUsePageNotice' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

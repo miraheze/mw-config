@@ -278,6 +278,10 @@ if ( $wmgUseNoTitle ) {
 	$wgRestrictDisplayTitle = false;
 }
 
+if ( $wmgUseOATHAuth ) { 
+	wfLoadExtension( 'OATHAuth' );
+}
+
 if ( $wmgUsePageNotice ) {
 	require_once( "$IP/extensions/PageNotice/PageNotice.php" );
 }
