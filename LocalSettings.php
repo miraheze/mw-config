@@ -1255,6 +1255,10 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 		'perpuswiki' => true,
 	),
+	'wmgUseSiteScout' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
 	'wmgUseSocialProfile' => array(
 		'default' => false,
