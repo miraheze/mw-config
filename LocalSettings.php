@@ -1273,6 +1273,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSiteScout' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
