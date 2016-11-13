@@ -2311,14 +2311,6 @@ $wgConf->settings = array(
 			'画像' => NS_FILE,
 		),
 	),
-	'+wgNamespaceProtection' => array(
-		'default' => array(),
-		'wikibridgewiki' => array(
-			NS_TEMPLATE => array(
-				'templateeditor',
-			),
-		),
-	),
 	'+wgNamespacesToBeSearchedDefault' => array(
 		'default' => array(),
 		'+metawiki' => array(
@@ -3234,6 +3226,9 @@ $wgConf->settings = array(
 		),
 		'+studynotekrwiki' => array(
 			'voter',
+		),
+		'+wikibridgewiki' => array(
+			'templateeditor'
 		),
 	),
 		
