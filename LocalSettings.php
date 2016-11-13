@@ -299,7 +299,6 @@ $wgConf->settings = array(
 			"$IP/extensions/MediaWikiChat/sql/chat.sql",
   			"$IP/extensions/MediaWikiChat/sql/chat_users.sql",
 			"$IP/extensions/MsCalendar/MsCalendar.sql",
-			"$IP/extensions/OATHAuth/sql/mysql/tables.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
 			"$IP/extensions/PageTriage/sql/PageTriageTags.sql",
 			"$IP/extensions/PageTriage/sql/PageTriagePageTags.sql",
