@@ -1156,6 +1156,7 @@ $wgConf->settings = array(
 		'bgowiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
+		'jackperswiki' => true,
 		'ndnwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
