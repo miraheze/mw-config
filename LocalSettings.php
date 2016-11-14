@@ -1750,6 +1750,10 @@ $wgConf->settings = array(
 			NS_HELP,
 			NS_PROJECT,
 		),
+		'+wikibridgewiki' => array(
+			NS_USER,
+			NS_USER_TALK,
+		),
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
