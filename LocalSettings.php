@@ -2420,6 +2420,12 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 	),
 
+	//PageTriage
+	'wgPageTriageInfinitScrolling' => array(
+		'default' => true,
+		'jackperswiki' => false,
+	),
+
 	// Permissions
 	'wgAddGroups' => array(
 		'default' => array(
