@@ -2621,6 +2621,7 @@ $wgConf->settings = array(
 				'abusefilter-log-detail' => true,
 				'abusefilter-view' => true,
 				'centralauth-autoaccount' => true,
+				'oathauth-enable' => false, // does this work?
 			),
 			'autopatrolled' => array(
 				'autopatrol' => true,
@@ -3169,17 +3170,13 @@ $wgConf->settings = array(
 		),
 	),
 	'wgRevokePermissions' => array(
-		'default' => array(
-			'*' => array(
-				'oathauth-enable' => true,
-			),
-		),
-		'+loginwiki' => array(
+		'default' => array(),
+		'loginwiki' => array(
 			'*' => array(
 				'edit' => true,
 			),
 		),
-		'+testwiki' => array(
+		'testwiki' => array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
 				# 'editinterface' => true, //mistakenly applies to other groups as well
