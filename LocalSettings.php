@@ -1750,7 +1750,7 @@ $wgConf->settings = array(
 			NS_HELP,
 			NS_PROJECT,
 		),
-		'wikibridgewiki' => array(
+		'+wikibridgewiki' => array(
 			NS_USER,
 			NS_USER_TALK,
 		),
