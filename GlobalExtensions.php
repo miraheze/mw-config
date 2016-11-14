@@ -26,6 +26,7 @@ wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'MassMessage' );
 wfLoadExtension( 'MirahezeMagic' );
 wfLoadExtension( 'Nuke' );
+wfLoadExtension( 'OATHAuth' );
 wfLoadExtension( 'Renameuser' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'ParserFunctions' );

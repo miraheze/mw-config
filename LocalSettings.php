@@ -2399,7 +2399,7 @@ $wgConf->settings = array(
 	),
 
 	// OATHAuth
-	'wmgOATHAuthDatabase' => array(
+	'wgOATHAuthDatabase' => array(
 		'default' => 'centralauth',
 	),
 
@@ -2892,6 +2892,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'interwiki' => true,
+				'oathauth-enable' => true,
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
@@ -3168,13 +3169,17 @@ $wgConf->settings = array(
 		),
 	),
 	'wgRevokePermissions' => array(
-		'default' => array(),
-		'loginwiki' => array(
+		'default' => array(
+			'*' => array(
+				'oathauth-enable' => true,
+			),
+		),
+		'+loginwiki' => array(
 			'*' => array(
 				'edit' => true,
 			),
 		),
-		'testwiki' => array(
+		'+testwiki' => array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
 				# 'editinterface' => true, //mistakenly applies to other groups as well
