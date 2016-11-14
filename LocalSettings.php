@@ -1660,6 +1660,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUsewikihiero' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
 		'applebranchwiki' => true,
