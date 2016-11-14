@@ -477,6 +477,10 @@ if ( $wmgUseWikiForum ) {
 	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 }
 
+if ( $wmgUseWikiHiero ) {
+	require_once( "$IP/extensions/WikiHiero/WikiHiero.php" );
+}
+
 if ( $wmgUseWikiLove ) {
 	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
 }
