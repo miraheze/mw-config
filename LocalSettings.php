@@ -1683,6 +1683,7 @@ $wgConf->settings = array(
 		'bmedwiki' => true,
 		'carvingwiki' => true,
 		'christipediawiki' => true,
+		'corydoctorowwiki' => true,
 		'datachronwiki' => true,
 		'developmentwiki' => true,
 		'dmwwiki' => true,
