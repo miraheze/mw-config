@@ -1669,7 +1669,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsewikihiero' => array(
 		'default' => false,
-		'extloadwiki' => false, // errors -Reception123
+		'extloadwiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
