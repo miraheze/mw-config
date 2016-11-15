@@ -1806,6 +1806,10 @@ $wgConf->settings = array(
 			'maxRevertedEditRatio'=> .05,
 		),
 	),
+	'wgFlaggedRevsAutoReview' => array(
+		'default' => false,
+		'wikibridgewiki' => true,
+	),
 
 	// Files
 	'wgEnableUploads' => array(
