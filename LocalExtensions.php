@@ -470,6 +470,10 @@ if ( $wmgUseWikiForum ) {
 	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 }
 
+if ( $wmgUsewikihiero ) {
+	require_once( "$IP/extensions/wikihiero/wikihiero.php" );
+}
+
 if ( $wmgUseWikiLove ) {
 	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
 }
