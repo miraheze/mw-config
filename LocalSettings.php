@@ -2915,6 +2915,11 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+		'+pso2wiki' => array(
+ 			'sysop' => array(
+ 				'unreviewedpages' => true,
+ 			),
+ 		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'read' => true,
