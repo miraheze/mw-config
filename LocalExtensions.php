@@ -135,6 +135,7 @@ if ( $wmgUseFlaggedRevs ) {
 	$wgFlaggedRevsTagsRestrictions = $wmgFlaggedRevsTagsRestrictions;
 	$wgFlaggedRevsTagsAuto = $wmgFlaggedRevsTagsAuto;
 	$wgFlaggedRevsAutopromote = $wmgFlaggedRevsAutopromote;
+	$wgFlaggedRevsAutoReview = $wmgFlaggedRevsAutoReview;
 
 }
 
