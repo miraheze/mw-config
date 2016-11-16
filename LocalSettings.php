@@ -1813,6 +1813,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'wikibridgewiki' => true,
 	),
+	'wmgFlaggedRevsRestrictionLevels' => array(
+		'default' => array( '', 'sysop' ),
+		'+wikibridgewiki' => array( 'autoconfirmed', 'autoreview' ),
+	),
 
 	// Files
 	'wgEnableUploads' => array(
