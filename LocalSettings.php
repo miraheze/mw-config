@@ -1075,6 +1075,7 @@ $wgConf->settings = array(
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'bttestwiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
