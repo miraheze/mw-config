@@ -1671,6 +1671,7 @@ $wgConf->settings = array(
 	'wmgUsewikihiero' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jackperswiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
