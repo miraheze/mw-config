@@ -1654,7 +1654,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'alwikiwiki' => true,
 		'applewikiwiki' => true,
