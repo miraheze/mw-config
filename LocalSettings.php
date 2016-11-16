@@ -997,6 +997,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'ayrshirewiki' => true,
 		'extloadwiki' => true,
+		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
