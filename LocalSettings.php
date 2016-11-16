@@ -1439,6 +1439,7 @@ $wgConf->settings = array(
 		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
+		'bttestwiki' => true,
 		'carvingwiki' => true,
 		'casuarinawiki' => true,
 		'cbmediawiki' => true,
