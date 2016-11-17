@@ -273,6 +273,7 @@ if ( $wmgUseNewestPages ) {
 
 if ( $wmgUseNewsletter ) {
 	require_once( "$IP/extensions/Newsletter/Newsletter.php" );
+	$wgGroupPermissions['confirmed']['newsletter-create'] = true;
 }
 
 if ( $wmgUseNewUserMessage ) {
