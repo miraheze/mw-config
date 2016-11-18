@@ -319,6 +319,10 @@ if ( $wmgUsePopups ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 }
 
+if ( $wmgUseProtectSite ) {
+	require_once( "$IP/extensions/ProtectSite/ProtectSite.php" );
+}
+
 if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
