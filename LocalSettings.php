@@ -1092,6 +1092,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'muckhackwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1099,6 +1100,7 @@ $wgConf->settings = array(
 	    'default' => false,
 	    'christipediawiki' => true,
 	    'extloadwiki' => true,
+	    'muckhackwiki' => true,
 	),
 	'wmgUseNewsletter' => array(
 		'default' => false,
