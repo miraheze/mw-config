@@ -649,6 +649,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'heistwiki' => true,
+		'wikibridgewiki' => true,
 		'ndnwiki' => true,
 		'perpuswiki' => true,
 		'poserdazfreebieswiki' => true,
