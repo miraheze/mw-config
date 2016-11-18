@@ -649,7 +649,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'heistwiki' => true,
-		'wikibridgewiki' => true,
 		'ndnwiki' => true,
 		'perpuswiki' => true,
 		'poserdazfreebieswiki' => true,
@@ -874,7 +873,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'pso2wiki' => true,
-		'wikibridgewiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
@@ -1066,7 +1064,6 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
-		'wikibridgewiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1772,7 +1769,6 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
-		'wikibridgewiki' => true,
 	),
 	'wmgFlaggedRevsTags' => array(
 		'default' => array(
@@ -1814,11 +1810,9 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsAutoReview' => array(
 		'default' => false,
-		'wikibridgewiki' => true,
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
-		'+wikibridgewiki' => array( 'autoconfirmed', 'autoreview' ),
 	),
 
 	// Files
@@ -2609,32 +2603,6 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
-		'+wikibridgewiki' => array(
-			'bureaucrat' => array(
-				'abusefilter-manager',
-				'ipblock-exempt',
-				'pagemover',
-				'massmessage-sender',
-				'template-editor',
-				'reviewer',
-			),
-			'founder' => array(
-				'abusefilter-manager',
-				'ipblock-exempt',
-				'pagemover',
-				'massmessage-sender',
-				'template-editor',
-				'reviewer',
-			),
-			'sysop' => array(
-				'abusefilter-manager',
-				'ipblock-exempt',
-				'pagemover',
-				'massmessage-sender',
-				'template-editor',
-				'reviewer',
-			),
-		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -3000,42 +2968,6 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
-		'+wikibridgewiki' => array(
-			'abusefilter-manager' => array(
-				'abusefilter-modify' => true,
-				'abusefilter-log-detail' => true,
-				'abusefilter-view' => true,
-				'abusefilter-log' => true,
-				'abusefilter-modify-restricted' => true,
-				'abusefilter-revert' => true,
-			),
-			'bureaucrat' => array(
-				'templateeditor' => true,
-			),
-			'ipblock-exempt' => array(
-				'ipblock-exempt' => true,
-			),
-			'pagemover' => array(
-				'move' => true,
-				'suppressredirect' => true,
-				'movefile' => true,
-				'move-subpages' => true,
-				'move-rootuserpages' => true,
-				'move-categorypages' => true,
-			),
-			'massmessage-sender' => array(
-				'massmessage' => true,
-			),
-			'founder' => array(
-				'templateeditor' => true,
-			),
-			'sysop' => array(
-				'templateeditor' => true,
-			),
-			'template-editor' => array(
-				'templateeditor' => true,
-			),
-		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
@@ -3166,33 +3098,6 @@ $wgConf->settings = array(
 			),
 			'editor-approver' => array(
 				'editor',
-			),
-		),
-		'+wikibridgewiki' => array(
-			'bureaucrat' => array(
-				'abusefilter-manager',
-				'ipblock-exempt',
-				'pagemover',
-				'massmessage-sender',
-				'template-editor',
-				'reviewer',
-			),
-			'founder' => array(
-				'abusefilter-manager',
-				'bureaucrat',
-				'ipblock-exempt',
-				'pagemover',
-				'massmessage-sender',
-				'template-editor',
-				'reviewer',
-			),
-			'sysop' => array(
-				'abusefilter-manager',
-				'ipblock-exempt',
-				'pagemover',
-				'massmessage-sender',
-				'template-editor',
-				'reviewer',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
