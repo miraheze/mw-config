@@ -1215,6 +1215,10 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'universebuildwiki' => true,
 	),
+	'wmgUseProtectSite' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseRandomSelection' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
