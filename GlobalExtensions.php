@@ -23,6 +23,7 @@ wfLoadExtension( 'Disambiguator' );
 wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'GlobalCssJs' );
 wfLoadExtension( 'Interwiki' );
+wfLoadExtension( 'InputBox' );
 wfLoadExtension( 'MassMessage' );
 wfLoadExtension( 'MirahezeMagic' );
 wfLoadExtension( 'Nuke' );
