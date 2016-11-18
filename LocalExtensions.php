@@ -194,10 +194,6 @@ if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
 
-if ( $wmgUseInputBox ) {
-	wfLoadExtension( 'InputBox' );
-}
-
 if ( $wmgUseJavascriptSlideshow ) {
 	require_once( "$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php" );
 }
