@@ -962,9 +962,6 @@ $wgConf->settings = array(
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
 	),
-	'wmgUseInputBox' => array(
-		'default' => true,
-	),
 	'wmgUseJavascriptSlideshow' => array(
 		'default' => false,
 		'extloadwiki' => true,
