@@ -852,6 +852,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'trexwiki' => true,
 		'perpuswiki' => true,
+		'muckhackwiki' => true,
 	),
 	'wmgUseErudite' => array(
 		'default' => false,
@@ -1871,6 +1872,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'espiralwiki' => true,
 	        'fbwikiwiki' => true,
+		'muckhackwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
 	),
