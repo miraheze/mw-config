@@ -4006,7 +4006,7 @@ if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
 	$wgGroupPermissions['user']['reupload-shared'] = false;
-
+}
 
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
