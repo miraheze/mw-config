@@ -114,6 +114,8 @@ define( 'NS_DICT', 1686);
 define( 'NS_DICT_TALK', 1687);
 define( 'NS_FEATURED', 1688);
 define( 'NS_FEATURED_TALK', 1689);
+define( 'NS_ARTIKEL', 1690);
+define( 'NS_ARTIKEL_TALK', 1691);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2215,6 +2217,8 @@ $wgConf->settings = array(
 		'+trexwiki' => array(
 			NS_HALAMAN => 'Halaman',
 			NS_HALAMAN_TALK => 'Permbicaraan_Halaman',
+			NS_ARTIKEL => 'Artikel',
+			NS_ARTIKEL_TALK => 'Artikel_talk',
 		),
 		'tmewiki' => array(
 			NS_PORTAL => 'Portal',
