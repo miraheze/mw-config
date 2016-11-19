@@ -36,7 +36,7 @@ if ( $wmgUseAuthorProtect ) {
 }
 
 if ( $wmgUseAutomaticBoardWelcome ) {
-	wfLoadExtension( 'AutomaticBoardWelcome' );
+	require_once( "$IP/extensions/AutomaticBoardWelcome/AutomaticBoardWelcome.php" );
 }
 
 if ( $wmgUseBetaFeatures ) {
@@ -53,7 +53,7 @@ if ( $wmgUseMSCalendar ) {
 }
 
 if ( $wmgUseCategoryTree ) {
-	wfLoadExtension( 'CategoryTree' );
+	require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
 }
 
 if ( $wmgUseCharInsert ) {
@@ -225,7 +225,7 @@ if ( $wmgUseMassEditRegex ) {
 }
 
 if ( $wmgUseMediaWikiChat ) {
-	wfLoadExtension( 'MediaWikiChat' );
+	require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php" );
 }
 
 if ( $wmgUseMetrolook ) {
@@ -253,7 +253,7 @@ if ( $wmgUseMsUpload ) {
 }
 
 if ( $wmgUseMultimediaViewer ) {
-	wfLoadExtension( 'MultimediaViewer' );
+	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 }
 
 if ( $wmgUseMultiBoilerplate ) {
@@ -332,7 +332,7 @@ if ( $wmgUseReplaceText ) {
 }
 
 if ( $wmgUseRSS ) {
-	wfLoadExtension ( 'RSS' );
+	require_once( "$IP/extensions/RSS/RSS.php" );
 	$wgRSSUrlWhitelist = array( "*" );
 }
 
@@ -407,7 +407,7 @@ if ( $wmgUseTimedMediaHandler ) {
 }
 
 if ( $wmgUseTitleKey ) {
-	wfLoadExtension ( 'TitleKey' );
+	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
 }
 
 if ( $wmgUseTorBlock ) {
@@ -465,7 +465,7 @@ if ( $wmgUseWikibaseRepository ) {
 }
 
 if ( $wmgUseWikiForum ) {
-	wfLoadExtension( 'WikiForum' );
+	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
 }
 
 if ( $wmgUsewikihiero ) {
@@ -473,7 +473,7 @@ if ( $wmgUsewikihiero ) {
 }
 
 if ( $wmgUseWikiLove ) {
-	wfLoadExtension( 'WikiLove' );
+	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
