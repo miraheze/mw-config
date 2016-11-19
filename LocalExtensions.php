@@ -267,12 +267,12 @@ if ( $wmgUseNewestPages ) {
 }
 
 if ( $wmgUseNewsletter ) {
-	require_once( "$IP/extensions/Newsletter/Newsletter.php" );
+	wfLoadExtension( 'Newsletter' );
 	$wgGroupPermissions['confirmed']['newsletter-create'] = true;
 }
 
 if ( $wmgUseNewUserMessage ) {
-	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
+	wfLoadExtension( 'NewUserMessage' );
 }
 
 if ( $wmgUseNewUsersList ) {
@@ -337,7 +337,7 @@ if ( $wmgUseRSS ) {
 }
 
 if ( $wmgUseSandboxLink ) {
-	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
+	wfLoadExtension ( 'SandboxLink' );
 }
 
 if ( $wmgUseScratchBlocks ) {
@@ -353,7 +353,7 @@ if ( $wmgUseSectionHide ) {
 }
 
 if ( $wmgUseShortURL ) {
-	require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
+	wfLoadExtension ( 'URLShortener' );
 }
 
 if ( $wmgUseSimpleTooltip ) {
@@ -419,8 +419,8 @@ if ( $wmgUseVariables ) {
 }
 
 if ( $wmgUseVisualEditor ) {
-	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-
+	wfLoadExtension ( 'VisualEditor' );
+	
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
@@ -477,7 +477,7 @@ if ( $wmgUseWikiLove ) {
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
-	require_once( "$IP/extensions/WikiTextLoggedInOut/WikiTextLoggedInOut.php" );
+	wfLoadExtension( 'WikiTextLoggedInOut' );
 }
 
 if ( $wmgUseYouTube ) {
