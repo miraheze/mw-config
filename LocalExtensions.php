@@ -57,8 +57,9 @@ if ( $wmgUseCategoryTree ) {
 }
 
 if ( $wmgUseCharInsert ) {
-	wfLoadExtension( 'CharInsert' );
+	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
 }
+
 
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
@@ -166,7 +167,7 @@ if ( $wmgFlowDefaultNamespaces ) {
 }
 
 if ( $wmgUseFeaturedFeeds ) {
-	wfLoadExtension( 'FeaturedFeeds' );
+	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
 }
 
 if ( $wmgUseForeground ) {
@@ -174,7 +175,7 @@ if ( $wmgUseForeground ) {
 }
 
 if ( $wmgUseHeaderTabs ) {
-	wfLoadExtension( 'HeaderTabs' );
+	require_once "$IP/extensions/HeaderTabs/HeaderTabs.php";
 	if ( $wgDBname == 'extloadwiki' ) {
 		// load LC despite SectionHide's strong objections
 		unset( $htUseHistory );
@@ -233,8 +234,8 @@ if ( $wmgUseMetrolook ) {
 }
 
 if ( $wmgUseMobileFrontend ) {
-	wfLoadExtension( 'MobileFrontend' );
-	
+	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
@@ -263,16 +264,16 @@ if ( $wmgUseMultiBoilerplate ) {
 }
 
 if ( $wmgUseNewestPages ) {
-	wfLoadExtension( 'NewestPages' );
+	require_once( "$IP/extensions/NewestPages/NewestPages.php" );
 }
 
 if ( $wmgUseNewsletter ) {
-	wfLoadExtension( 'Newsletter' );
+	require_once( "$IP/extensions/Newsletter/Newsletter.php" );
 	$wgGroupPermissions['confirmed']['newsletter-create'] = true;
 }
 
 if ( $wmgUseNewUserMessage ) {
-	wfLoadExtension( 'NewUserMessage' );
+	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
 }
 
 if ( $wmgUseNewUsersList ) {
@@ -337,7 +338,7 @@ if ( $wmgUseRSS ) {
 }
 
 if ( $wmgUseSandboxLink ) {
-	wfLoadExtension ( 'SandboxLink' );
+	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
 }
 
 if ( $wmgUseScratchBlocks ) {
@@ -353,7 +354,7 @@ if ( $wmgUseSectionHide ) {
 }
 
 if ( $wmgUseShortURL ) {
-	wfLoadExtension ( 'ShortURL' );
+	require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
 }
 
 if ( $wmgUseSimpleTooltip ) {
@@ -419,8 +420,8 @@ if ( $wmgUseVariables ) {
 }
 
 if ( $wmgUseVisualEditor ) {
-	wfLoadExtension ( 'VisualEditor' );
-	
+	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
+
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
@@ -477,11 +478,11 @@ if ( $wmgUseWikiLove ) {
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
-	wfLoadExtension( 'WikiTextLoggedInOut' );
+	require_once( "$IP/extensions/WikiTextLoggedInOut/WikiTextLoggedInOut.php" );
 }
 
 if ( $wmgUseYouTube ) {
-	wfLoadExtension( 'YouTube' );
+	require_once( "$IP/extensions/YouTube/YouTube.php" );
 }
 
 // Permission variables
