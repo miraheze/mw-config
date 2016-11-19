@@ -579,6 +579,9 @@ $wgConf->settings = array(
 		'+touhouenginewiki' => array(
 			'anon' => true,
 		),
+		'+traunstoanerwiki' => array(
+			'anon' => true,
+		),
 		'+turkcesozlukwiki' => array(
 			'anon' => true,
 		),
