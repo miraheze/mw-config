@@ -442,7 +442,7 @@ if ( $wmgUseVisualEditor ) {
 }
 
 if ( $wmgUseVoteNY ) {
-	wfLoadExtension( 'VoteNY' );
+	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
 }
 
 if ( $wmgUseWebChat ) {
