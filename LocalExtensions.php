@@ -57,9 +57,8 @@ if ( $wmgUseCategoryTree ) {
 }
 
 if ( $wmgUseCharInsert ) {
-	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+	wfLoadExtension( 'CharInsert' );
 }
-
 
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
@@ -167,7 +166,7 @@ if ( $wmgFlowDefaultNamespaces ) {
 }
 
 if ( $wmgUseFeaturedFeeds ) {
-	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
+	wfLoadExtension( 'FeaturedFeeds' );
 }
 
 if ( $wmgUseForeground ) {
@@ -175,7 +174,7 @@ if ( $wmgUseForeground ) {
 }
 
 if ( $wmgUseHeaderTabs ) {
-	require_once "$IP/extensions/HeaderTabs/HeaderTabs.php";
+	require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
 	if ( $wgDBname == 'extloadwiki' ) {
 		// load LC despite SectionHide's strong objections
 		unset( $htUseHistory );
@@ -234,8 +233,8 @@ if ( $wmgUseMetrolook ) {
 }
 
 if ( $wmgUseMobileFrontend ) {
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-
+	wfLoadExtension( 'MobileFrontend' );
+	
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
@@ -264,7 +263,7 @@ if ( $wmgUseMultiBoilerplate ) {
 }
 
 if ( $wmgUseNewestPages ) {
-	require_once( "$IP/extensions/NewestPages/NewestPages.php" );
+	wfLoadExtension( 'NewestPages' );
 }
 
 if ( $wmgUseNewsletter ) {
