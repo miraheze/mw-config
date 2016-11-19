@@ -353,7 +353,7 @@ if ( $wmgUseSectionHide ) {
 }
 
 if ( $wmgUseShortURL ) {
-	wfLoadExtension ( 'URLShortener' );
+	wfLoadExtension ( 'UrlShortener' );
 }
 
 if ( $wmgUseSimpleTooltip ) {
