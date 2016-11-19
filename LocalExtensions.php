@@ -174,7 +174,7 @@ if ( $wmgUseForeground ) {
 }
 
 if ( $wmgUseHeaderTabs ) {
-	wfLoadExtension( 'HeaderTabs' );
+	require_once( "$IP/skins/HeaderTabs/HeaderTabs.php" );
 	if ( $wgDBname == 'extloadwiki' ) {
 		// load LC despite SectionHide's strong objections
 		unset( $htUseHistory );
