@@ -2523,6 +2523,14 @@ $wgConf->settings = array(
 				'respected',
 			),
 		),
+		'+jayuwikiwiki' => array(
+			'bureaucrat' => array(
+				'voter',
+			),
+			'sysop' => array(
+				'commentadmin',
+			),
+		),
 		'+trexwiki' => array(
 			'Co' => array(
 				'Ceo',
@@ -2812,9 +2820,17 @@ $wgConf->settings = array(
 			),
 		),
 		'+jayuwikiwiki' => array(
-			'sysop'
+			'sysop' => array(
 				'commentadmin' => true,
+			'voter' => array(
+				'voter' => true,
+				'autopatrol' => true,
+				'patrol' => true,
+				'skipcaptcha' => true,
+				'editsemiprotected' => true,
+				'rollback' => true,
 			),
+		),
 
 		'+trexwiki' => array(
 			'Co' => array(
@@ -3049,6 +3065,14 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
+			),
+		),
+		'+jayuwikiwiki' => array(
+			'bureaucrat' => array(
+				'voter',
+			),
+			'sysop' => array(
+				'commentadmin',
 			),
 		),
 		'+trexwiki' => array(
