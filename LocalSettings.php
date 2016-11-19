@@ -2089,7 +2089,6 @@ $wgConf->settings = array(
 			'loginwiki',
 			'testwiki',
 			'throisarwiki',
-			'wikibridgewiki',
 		),
 	),
 	
@@ -3177,9 +3176,6 @@ $wgConf->settings = array(
 		),
 		'+studynotekrwiki' => array(
 			'voter',
-		),
-		'+wikibridgewiki' => array(
-			'templateeditor',
 		),
 	),
 		
