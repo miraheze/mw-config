@@ -46,6 +46,7 @@ if ( $wmgUseBetaFeatures ) {
 if ( $wmgUseBlogPage ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 	require_once( "$IP/extensions/BlogPage/Blog.php" );
+	$wgBlogPageDisplay['comment_of_day'] = false;
 }
 
 if ( $wmgUseMSCalendar ) {
