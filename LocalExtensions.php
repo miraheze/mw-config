@@ -36,7 +36,7 @@ if ( $wmgUseAuthorProtect ) {
 }
 
 if ( $wmgUseAutomaticBoardWelcome ) {
-	require_once( "$IP/extensions/AutomaticBoardWelcome/AutomaticBoardWelcome.php" );
+	wfLoadExtension( 'AutomaticBoardWelcome' );
 }
 
 if ( $wmgUseBetaFeatures ) {
@@ -53,13 +53,12 @@ if ( $wmgUseMSCalendar ) {
 }
 
 if ( $wmgUseCategoryTree ) {
-	require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
+	wfLoadExtension( 'CategoryTree' );
 }
 
 if ( $wmgUseCharInsert ) {
-	require_once( "$IP/extensions/CharInsert/CharInsert.php" );
+	wfLoadExtension( 'CharInsert' );
 }
-
 
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
@@ -167,7 +166,7 @@ if ( $wmgFlowDefaultNamespaces ) {
 }
 
 if ( $wmgUseFeaturedFeeds ) {
-	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
+	wfLoadExtension( 'FeaturedFeeds' );
 }
 
 if ( $wmgUseForeground ) {
@@ -175,7 +174,7 @@ if ( $wmgUseForeground ) {
 }
 
 if ( $wmgUseHeaderTabs ) {
-	require_once "$IP/extensions/HeaderTabs/HeaderTabs.php";
+	wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {
 		// load LC despite SectionHide's strong objections
 		unset( $htUseHistory );
@@ -226,7 +225,7 @@ if ( $wmgUseMassEditRegex ) {
 }
 
 if ( $wmgUseMediaWikiChat ) {
-	require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php" );
+	wfLoadExtension( 'MediaWikiChat' );
 }
 
 if ( $wmgUseMetrolook ) {
@@ -234,8 +233,8 @@ if ( $wmgUseMetrolook ) {
 }
 
 if ( $wmgUseMobileFrontend ) {
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
-
+	wfLoadExtension( 'MobileFrontend' );
+	
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
@@ -254,7 +253,7 @@ if ( $wmgUseMsUpload ) {
 }
 
 if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+	wfLoadExtension( 'MultimediaViewer' );
 }
 
 if ( $wmgUseMultiBoilerplate ) {
@@ -264,16 +263,16 @@ if ( $wmgUseMultiBoilerplate ) {
 }
 
 if ( $wmgUseNewestPages ) {
-	require_once( "$IP/extensions/NewestPages/NewestPages.php" );
+	wfLoadExtension( 'NewestPages' );
 }
 
 if ( $wmgUseNewsletter ) {
-	require_once( "$IP/extensions/Newsletter/Newsletter.php" );
+	wfLoadExtension( 'Newsletter' );
 	$wgGroupPermissions['confirmed']['newsletter-create'] = true;
 }
 
 if ( $wmgUseNewUserMessage ) {
-	require_once( "$IP/extensions/NewUserMessage/NewUserMessage.php" );
+	wfLoadExtension( 'NewUserMessage' );
 }
 
 if ( $wmgUseNewUsersList ) {
@@ -333,12 +332,12 @@ if ( $wmgUseReplaceText ) {
 }
 
 if ( $wmgUseRSS ) {
-	require_once( "$IP/extensions/RSS/RSS.php" );
+	wfLoadExtension ( 'RSS' );
 	$wgRSSUrlWhitelist = array( "*" );
 }
 
 if ( $wmgUseSandboxLink ) {
-	require_once( "$IP/extensions/SandboxLink/SandboxLink.php" );
+	wfLoadExtension ( 'SandboxLink' );
 }
 
 if ( $wmgUseScratchBlocks ) {
@@ -354,7 +353,7 @@ if ( $wmgUseSectionHide ) {
 }
 
 if ( $wmgUseShortURL ) {
-	require_once( "$IP/extensions/UrlShortener/UrlShortener.php" );
+	wfLoadExtension ( 'ShortURL' );
 }
 
 if ( $wmgUseSimpleTooltip ) {
@@ -408,7 +407,7 @@ if ( $wmgUseTimedMediaHandler ) {
 }
 
 if ( $wmgUseTitleKey ) {
-	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
+	wfLoadExtension ( 'TitleKey' );
 }
 
 if ( $wmgUseTorBlock ) {
@@ -420,8 +419,8 @@ if ( $wmgUseVariables ) {
 }
 
 if ( $wmgUseVisualEditor ) {
-	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-
+	wfLoadExtension ( 'VisualEditor' );
+	
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
@@ -443,7 +442,7 @@ if ( $wmgUseVisualEditor ) {
 }
 
 if ( $wmgUseVoteNY ) {
-	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
+	wfLoadExtension( 'VoteNY' );
 }
 
 if ( $wmgUseWebChat ) {
@@ -466,7 +465,7 @@ if ( $wmgUseWikibaseRepository ) {
 }
 
 if ( $wmgUseWikiForum ) {
-	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
+	wfLoadExtension( 'WikiForum' );
 }
 
 if ( $wmgUsewikihiero ) {
@@ -474,15 +473,15 @@ if ( $wmgUsewikihiero ) {
 }
 
 if ( $wmgUseWikiLove ) {
-	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
+	wfLoadExtension( 'WikiLove' );
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
-	require_once( "$IP/extensions/WikiTextLoggedInOut/WikiTextLoggedInOut.php" );
+	wfLoadExtension( 'WikiTextLoggedInOut' );
 }
 
 if ( $wmgUseYouTube ) {
-	require_once( "$IP/extensions/YouTube/YouTube.php" );
+	wfLoadExtension( 'YouTube' );
 }
 
 // Permission variables
