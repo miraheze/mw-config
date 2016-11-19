@@ -2820,9 +2820,34 @@ $wgConf->settings = array(
 			),
 		),
 		'+jayuwikiwiki' => array(
+			'autoconfirmed' => array(
+				'move' => true,
+				'move-subpages' => true,
+				'move-categorypages' => true,
+				'movefile' => true,
+				'move-rootuserpages' => true,
+				'upload' => true,
+				'reupload-shared' => true,
+			),
+			'confirmed' => array(
+				'move' => true,
+				'move-subpages' => true,
+				'move-categorypages' => true,
+				'movefile' => true,
+				'move-rootuserpages' => true,
+				'upload' => true,
+				'reupload-shared' => true,
+			),	
 			'sysop' => array(
 				'commentadmin' => true,
+			),
 			'voter' => array(
+				'delete' => true,
+				'browsearchive' => true,
+				'deleterevision' => true,
+				'deletedtext' => true,
+				'suppressedredirect' => true,
+				'abusefilter-private' => true,
 				'voter' => true,
 				'autopatrol' => true,
 				'patrol' => true,
@@ -3971,6 +3996,17 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
+	
+// Jayuwikiwiki ovverides
+if ( $wgDBname === 'testwiki' ) {
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['user']['reupload-shared'] = false;
+
 
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
