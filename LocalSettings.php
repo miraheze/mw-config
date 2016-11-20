@@ -881,6 +881,8 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'pso2wiki' => true,
 		'trexwiki' => true,
+		'wikijokewiki' => true,
+		'wikiarchitecturewiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
