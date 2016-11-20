@@ -3169,9 +3169,19 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+wikiarchitecturewiki' => array(
+			'founder' => array(
+				'bureaucrat'
+			),
+		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+wikijokewiki' => array(
+			'founder' => array(
+				'bureaucrat'
 			),
 		),
 	),
