@@ -758,6 +758,7 @@ $wgConf->settings = array(
 		'doinwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 		'studynotekrwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -779,6 +780,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'foodsharinghamburgwiki' => true,
+		'jayuwikiwiki' => true,
 		'muckhackwiki' => true,
 		'openconstitutionwiki' => true,
 		'plazmaburstwiki' => true,
@@ -958,6 +960,7 @@ $wgConf->settings = array(
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'hendrickswiki' => true,
+		'jayuwikiwiki' => true,
 		'lclwikiwiki' => true,
 		'shoppingwiki' => true,
 		'studynotekrwiki' => true,
@@ -999,6 +1002,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'ayrshirewiki' => true,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
 	),
@@ -1211,6 +1215,7 @@ $wgConf->settings = array(
 	'wmgUsePoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 		'nidda23wiki' => true,
 		'takethatwikiwiki' => true,
 		'universebuildwiki' => true,
@@ -1322,6 +1327,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'hendrickswiki' => true,
+		'jayuwikiwiki' => true,
 		'trexwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
@@ -1377,6 +1383,7 @@ $wgConf->settings = array(
 	'wmgUseTorBlock' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 		'takethatwikiwiki' => true,
         ),
 	'wmgUseTranslate' => array(
@@ -1506,6 +1513,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => true,	
 		'jakeperswiki' => true,
 		'janesskillspackwiki' => true,
+		'jayuwikiwiki' => true,
 		'justinbieberwiki' => true,
 		'kassaiwiki' => true,
 		'karniarutheniawiki' => true,
@@ -1723,6 +1731,7 @@ $wgConf->settings = array(
 		'islamwissenschaftwiki' => true,
 		'izanagiwiki' => true,
 		'jakeperswiki' => true,
+		'jayuwikiwiki' => true,
 		'janesskillspackwiki' => true,
 		'lclwikiwiki' => true,
 		'lifewiki' => true,
@@ -2517,6 +2526,14 @@ $wgConf->settings = array(
 				'respected',
 			),
 		),
+		'+jayuwikiwiki' => array(
+			'bureaucrat' => array(
+				'voter',
+			),
+			'sysop' => array(
+				'commentadmin',
+			),
+		),
 		'+trexwiki' => array(
 			'Co' => array(
 				'Ceo',
@@ -2805,6 +2822,44 @@ $wgConf->settings = array(
 				'respected' => true,
 			),
 		),
+		'+jayuwikiwiki' => array(
+			'autoconfirmed' => array(
+				'move' => true,
+				'move-subpages' => true,
+				'move-categorypages' => true,
+				'movefile' => true,
+				'move-rootuserpages' => true,
+				'upload' => true,
+				'reupload-shared' => true,
+			),
+			'confirmed' => array(
+				'move' => true,
+				'move-subpages' => true,
+				'move-categorypages' => true,
+				'movefile' => true,
+				'move-rootuserpages' => true,
+				'upload' => true,
+				'reupload-shared' => true,
+			),	
+			'sysop' => array(
+				'commentadmin' => true,
+			),
+			'voter' => array(
+				'delete' => true,
+				'browsearchive' => true,
+				'deleterevision' => true,
+				'deletedtext' => true,
+				'suppressedredirect' => true,
+				'abusefilter-private' => true,
+				'voter' => true,
+				'autopatrol' => true,
+				'patrol' => true,
+				'skipcaptcha' => true,
+				'editsemiprotected' => true,
+				'rollback' => true,
+			),
+		),
+
 		'+trexwiki' => array(
 			'Co' => array(
 				'autopatrol' => true,
@@ -3038,6 +3093,14 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
+			),
+		),
+		'+jayuwikiwiki' => array(
+			'bureaucrat' => array(
+				'voter',
+			),
+			'sysop' => array(
+				'commentadmin',
 			),
 		),
 		'+trexwiki' => array(
@@ -3936,6 +3999,17 @@ if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
+	
+// Jayuwikiwiki ovverides
+if ( $wgDBname === 'testwiki' ) {
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['user']['reupload-shared'] = false;
+}
 
 // TestWiki overrides
 if ( $wgDBname === 'testwiki' ) {
