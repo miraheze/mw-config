@@ -3034,10 +3034,16 @@ $wgConf->settings = array(
 			'founder' => array(
 				'read' => true,
 			),
+			'page-creator' => array(
+				'createpage' => true,
+			),
 		),
 		'+wikijokewiki' => array(
 			'founder' => array(
 				'read' => true,
+			),
+			'page-creator' => array(
+				'createpage' => true,
 			),
 		),
 	),
@@ -4045,6 +4051,16 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['sysop']['deletedtext'] = false;
 }
+	
+// wikijokewiki and wikiarchitecturewiki overrides
+if ( $wgDBname == 'wikijokewiki' ) {
+	$wgGroupPermissions['user']['create'] = false;
+}
+	
+if ( $wgDBname == 'wikiarchitecturewiki' ) {
+	$wgGroupPermissions['user']['create'] = false;
+}
+	
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
