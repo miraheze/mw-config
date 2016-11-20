@@ -1826,9 +1826,7 @@ $wgConf->settings = array(
 		),
 	),
 	'wmgFlaggedRevsAutoReview' => array(
-		'default' => false,
-		'wikijokewiki' => true,
-		'wikiarchhitecturewiki' => true,
+		'default' => true,
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
