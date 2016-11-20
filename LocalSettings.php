@@ -2846,8 +2846,10 @@ $wgConf->settings = array(
 			),
 			'voter' => array(
 				'delete' => true,
+				'browsearchive' => true,
+ -				'deleterevision' => true,
+ -				'deletedtext' => true,
 				'suppressedredirect' => true,
-				'abusefilter-private' => true,
 				'voter' => true,
 				'autopatrol' => true,
 				'patrol' => true,
