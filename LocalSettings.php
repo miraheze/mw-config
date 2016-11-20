@@ -1827,6 +1827,8 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsAutoReview' => array(
 		'default' => false,
+		'wikijokewiki' => true,
+		'wikiarchhitecturewiki' => true,
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
@@ -2633,6 +2635,7 @@ $wgConf->settings = array(
 			'founder' => array(
 				'bureaucrat',
 				'page-creator',
+				'reviewer',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
@@ -2644,6 +2647,7 @@ $wgConf->settings = array(
 			'founder' => array(
 				'bureaucrat',
 				'page-creator',
+				'reviewer',
 			),
 		),
 	),
@@ -3202,6 +3206,7 @@ $wgConf->settings = array(
 			'founder' => array(
 				'bureaucrat',
 				'page-creator',
+				'reviewer',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
@@ -3213,6 +3218,7 @@ $wgConf->settings = array(
 			'founder' => array(
 				'bureaucrat',
 				'page-creator',
+				'reviewer',
 			),
 		),
 	),
