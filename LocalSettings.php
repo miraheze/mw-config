@@ -2849,8 +2849,8 @@ $wgConf->settings = array(
 			'voter' => array(
 				'delete' => true,
 				'browsearchive' => true,
- -				'deleterevision' => true,
- -				'deletedtext' => true,
+				'deleterevision' => true,
+				'deletedtext' => true,
 				'suppressedredirect' => true,
 				'voter' => true,
 				'autopatrol' => true,
@@ -2860,7 +2860,6 @@ $wgConf->settings = array(
 				'rollback' => true,
 			),
 		),
-
 		'+trexwiki' => array(
 			'Co' => array(
 				'autopatrol' => true,
@@ -3029,6 +3028,16 @@ $wgConf->settings = array(
 		'+walthamstowlabourwiki' => array(
 			'editor-approver' => array(
 				'edit' => true,
+			),
+		),
+		'+wikiarchitecturewiki' => array(
+			'founder' => array(
+				'read' => true,
+			),
+		),
+		'+wikijokewiki' => array(
+			'founder' => array(
+				'read' => true,
 			),
 		),
 	),
