@@ -2629,9 +2629,21 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+wikiarchitecturewiki' => array(
+			'founder' => array(
+				'bureaucrat',
+				'page-creator',
+			),
+		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+wikijokewiki' => array(
+			'founder' => array(
+				'bureaucrat',
+				'page-creator',
 			),
 		),
 	),
@@ -3188,7 +3200,8 @@ $wgConf->settings = array(
 		),
 		'+wikiarchitecturewiki' => array(
 			'founder' => array(
-				'bureaucrat'
+				'bureaucrat',
+				'page-creator',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
@@ -3198,7 +3211,8 @@ $wgConf->settings = array(
 		),
 		'+wikijokewiki' => array(
 			'founder' => array(
-				'bureaucrat'
+				'bureaucrat',
+				'page-creator',
 			),
 		),
 	),
