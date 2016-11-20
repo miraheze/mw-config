@@ -4000,7 +4000,7 @@ $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 	
 // Jayuwikiwiki ovverides
-if ( $wgDBname === 'testwiki' ) {
+if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-categorypages'] = false;
