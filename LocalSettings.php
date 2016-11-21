@@ -4118,3 +4118,7 @@ EOF;
 
 	return true;
 } */
+
+if ( $wgDBname == 'extloadwiki' ) {
+	wfLoadExtension( 'ManageWiki' );
+}
