@@ -2052,6 +2052,9 @@ $wgConf->settings = array(
 	),
 
 	// ManageWiki
+	'wgManageWikiMainDatabase' => array(
+		'default' => 'metawiki',
+	),
 	'wgManageWikiEnable' => array(
 		'default' => false,
 		'extloadwiki' => true,
