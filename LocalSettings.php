@@ -882,7 +882,6 @@ $wgConf->settings = array(
 		'pso2wiki' => true,
 		'trexwiki' => true,
 		'wikijokewiki' => true,
-		'wikiarchitecturewiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
@@ -2639,13 +2638,6 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
-		'+wikiarchitecturewiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'page-creator',
-				'reviewer',
-			),
-		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -3054,14 +3046,6 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
-		'+wikiarchitecturewiki' => array(
-			'founder' => array(
-				'read' => true,
-			),
-			'page-creator' => array(
-				'createpage' => true,
-			),
-		),
 		'+wikijokewiki' => array(
 			'founder' => array(
 				'read' => true,
@@ -3208,13 +3192,6 @@ $wgConf->settings = array(
 			),
 			'editor-approver' => array(
 				'editor',
-			),
-		),
-		'+wikiarchitecturewiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'page-creator',
-				'reviewer',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
