@@ -2966,8 +2966,6 @@ $wgConf->settings = array(
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
-				'managewiki' => true,
-				'managewiki-restricted' => true,
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
@@ -2978,7 +2976,6 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
-				'managewiki' => true,
 			),
 		),
 		'+plazmaburstwiki' => array(
