@@ -2051,6 +2051,13 @@ $wgConf->settings = array(
 		'default' => '/usr/bin/texvc',
 	),
 
+	// ManageWiki
+	'wgManageWikiEnable' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'metawiki' => true,
+	),
+	
 	// MassMessage
 	'wgAllowGlobalMessaging' => array(
 		'default' => false,
