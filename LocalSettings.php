@@ -1782,6 +1782,11 @@ $wgConf->settings = array(
 			NS_HELP,
 			NS_PROJECT,
 		),
+		'trexwiki' => array(
+			NS_Artikel,
+			NS_FILE,
+			NS_TEMPLATE,
+		),
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
@@ -2546,10 +2551,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'co' => array(
-				'ceo',
+			'Co' => array(
+				'Ceo',
 			),
-			'ceo' => array(
+			'Ceo' => array(
 				'autopatrolled',
 				'bot',
 				'bureaucrat',
@@ -2557,9 +2562,6 @@ $wgConf->settings = array(
 				'sysop',
 				'rollbacker',
 				'sysmag',
-				'editors',
-				'reviewer',
-				'autochecked users',
 			),
 			'bureaucrat' => array(
 				'sysmag',
@@ -2880,15 +2882,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'co' => array(
-				'co' => true,
-				'protect' => true,
+			'Co' => array(
 				'autopatrol' => true,
-				'autoreview' => true,
-				'validate' => true,
 			),
-			'ceo' => array(
-				'ceo' => true,
+			'Ceo' => array(
 				'blockemail' => true,
 				'block' => true,
 				'ipblock-exempt' => true,
@@ -2944,13 +2941,9 @@ $wgConf->settings = array(
 				'deletedtext' => true,
 				'spamblacklistlog' => true,
 				'titleblacklistlog' => true,
-				'autoreview' => true,
-				'validate' => true,
-				'editors' => true,
+				'founder' => true,
 			),
 			'bureaucrat' => array(
-				'autoreview' => true,
-				'editors' => true,
 				'nuke' => true,
 				'movefile' => true,
 				'blockemail' => true,
@@ -3140,10 +3133,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'co' => array(
-				'ceo',
+			'Co' => array(
+				'Ceo',
 			),
-			'ceo' => array(
+			'Ceo' => array(
 				'autopatrolled',
 				'bot',
 				'bureaucrat',
@@ -3151,9 +3144,6 @@ $wgConf->settings = array(
 				'sysop',
 				'rollbacker',
 				'sysmag',
-				'editors',
-				'reviewer',
-				'autochecked users',
 			),
 			'bureaucrat' => array(
 				'sysmag',
@@ -3287,8 +3277,8 @@ $wgConf->settings = array(
 		'+trexwiki' => array(
 			'sysmag',
 			'bureaucrat',
-			'ceo',
-			'co',
+			'Ceo',
+			'Co',
 		),
 		'+studynotekrwiki' => array(
 			'voter',
@@ -4071,7 +4061,6 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['sysop']['deletedtext'] = false;
-	$wgGroupPermissions['sysop']['deletedhistory'] = false;
 }
 	
 // wikijokewiki and wikiarchitecturewiki overrides
