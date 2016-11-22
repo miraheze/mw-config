@@ -1619,6 +1619,7 @@ $wgConf->settings = array(
 		'wikidolphinhansenwiki' => true,
 		'wikihoyowiki' => true,
 		'wikikaisagawiki' => true,
+		'wikipucwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
 		'worldbuildingwiki' => true,
@@ -1640,7 +1641,6 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wikikaisagawiki' => true,
-		'wikipucwiki' => true,
 	),
 	'wmgUseWebChat' => array(
 		'default' => false,
