@@ -2886,9 +2886,9 @@ $wgConf->settings = array(
 		),
 		'+trexwiki' => array(
 			'co' => array(
-				'autopatrol' => true,
 				'co' => true,
 				'ceo' => true,
+				'reviewer' => true,
 				'protect' => true,
 			),
 			'ceo' => array(
@@ -2950,7 +2950,8 @@ $wgConf->settings = array(
 				'titleblacklistlog' => true,
 				'validate' => true,
 				'autoreview' => true,
-				'autochecked usera' => true,
+				'autochecked users' => true,
+				'editors' => true,
 			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -2959,7 +2960,7 @@ $wgConf->settings = array(
 				'blockemail' => true,
 			),
 			'sysmag' => array(
-				'block' => true,
+				'autoreview' => true,
 				'autoconfirmed' => true,
 				'autopatrolled' => true,
 				'editinterface' => true,
