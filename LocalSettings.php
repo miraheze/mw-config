@@ -1782,6 +1782,11 @@ $wgConf->settings = array(
 			NS_HELP,
 			NS_PROJECT,
 		),
+		'trexwiki' => array(
+			NS_Artikel,
+			NS_FILE,
+			NS_TEMPLATE,
+		),
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
@@ -2882,10 +2887,9 @@ $wgConf->settings = array(
 		'+trexwiki' => array(
 			'co' => array(
 				'co' => true,
+				'ceo' => true,
+				'reviewer' => true,
 				'protect' => true,
-				'autopatrol' => true,
-				'autoreview' => true,
-				'validate' => true,
 			),
 			'ceo' => array(
 				'ceo' => true,
@@ -2944,19 +2948,19 @@ $wgConf->settings = array(
 				'deletedtext' => true,
 				'spamblacklistlog' => true,
 				'titleblacklistlog' => true,
-				'autoreview' => true,
 				'validate' => true,
+				'autoreview' => true,
+				'autochecked users' => true,
 				'editors' => true,
 			),
 			'bureaucrat' => array(
-				'autoreview' => true,
-				'editors' => true,
+				'bureaucrat' => true,
 				'nuke' => true,
 				'movefile' => true,
 				'blockemail' => true,
 			),
 			'sysmag' => array(
-				'block' => true,
+				'autoreview' => true,
 				'autoconfirmed' => true,
 				'autopatrolled' => true,
 				'editinterface' => true,
@@ -4072,6 +4076,8 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['sysop']['deletedtext'] = false;
 	$wgGroupPermissions['sysop']['deletedhistory'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
 	
 // wikijokewiki and wikiarchitecturewiki overrides
