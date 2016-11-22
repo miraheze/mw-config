@@ -2551,10 +2551,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'Co' => array(
-				'Ceo',
+			'co' => array(
+				'ceo',
 			),
-			'Ceo' => array(
+			'ceo' => array(
 				'autopatrolled',
 				'bot',
 				'bureaucrat',
@@ -2562,6 +2562,9 @@ $wgConf->settings = array(
 				'sysop',
 				'rollbacker',
 				'sysmag',
+				'editors',
+				'reviewer',
+				'autochecked users',
 			),
 			'bureaucrat' => array(
 				'sysmag',
@@ -2882,10 +2885,14 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'Co' => array(
+			'co' => array(
 				'autopatrol' => true,
+				'co' => true,
+				'ceo' => true,
+				'protect' => true,
 			),
-			'Ceo' => array(
+			'ceo' => array(
+				'ceo' => true,
 				'blockemail' => true,
 				'block' => true,
 				'ipblock-exempt' => true,
@@ -2941,9 +2948,12 @@ $wgConf->settings = array(
 				'deletedtext' => true,
 				'spamblacklistlog' => true,
 				'titleblacklistlog' => true,
-				'founder' => true,
+				'validate' => true,
+				'autoreview' => true,
+				'autochecked usera' => true,
 			),
 			'bureaucrat' => array(
+				'bureaucrat' => true,
 				'nuke' => true,
 				'movefile' => true,
 				'blockemail' => true,
@@ -3133,10 +3143,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+trexwiki' => array(
-			'Co' => array(
-				'Ceo',
+			'co' => array(
+				'ceo',
 			),
-			'Ceo' => array(
+			'ceo' => array(
 				'autopatrolled',
 				'bot',
 				'bureaucrat',
@@ -3144,6 +3154,9 @@ $wgConf->settings = array(
 				'sysop',
 				'rollbacker',
 				'sysmag',
+				'editors',
+				'reviewer',
+				'autochecked users',
 			),
 			'bureaucrat' => array(
 				'sysmag',
@@ -3277,8 +3290,8 @@ $wgConf->settings = array(
 		'+trexwiki' => array(
 			'sysmag',
 			'bureaucrat',
-			'Ceo',
-			'Co',
+			'ceo',
+			'co',
 		),
 		'+studynotekrwiki' => array(
 			'voter',
@@ -4061,6 +4074,9 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['sysop']['deletedtext'] = false;
+	$wgGroupPermissions['sysop']['deletedhistory'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
 	
 // wikijokewiki and wikiarchitecturewiki overrides
