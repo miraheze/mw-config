@@ -4116,3 +4116,7 @@ EOF;
 if ( $wgDBname == 'extloadwiki' ) {
 	wfLoadExtension( 'ManageWiki' );
 }
+
+if ( $wgDBname == 'metawiki' ) {
+	wfLoadExtension( 'ManageWiki' );
+}
