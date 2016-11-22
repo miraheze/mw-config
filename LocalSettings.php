@@ -1640,6 +1640,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wikikaisagawiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseWebChat' => array(
 		'default' => false,
@@ -3529,6 +3530,7 @@ $wgConf->settings = array(
 		'wikibookswiki' => "//$wmgUploadHostname/wikibookswiki/6/60/Wiki_favicon.png",
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/08/FaviconCervantes.ico",
 		'wikidolphinhansenwiki' => "//$wmgUploadHostname/wikidolphinhansenwiki/b/bf/Dolphin-icon-150.png",
+		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/4/4a/Logo_copia_2.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
 	),
