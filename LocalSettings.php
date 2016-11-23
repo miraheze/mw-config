@@ -1784,7 +1784,7 @@ $wgConf->settings = array(
 			NS_PROJECT,
 		),
 		'trexwiki' => array(
-			NS_Artikel,
+			NS_ARTIKEL,
 			NS_FILE,
 			NS_TEMPLATE,
 		),
