@@ -4121,7 +4121,3 @@ EOF;
 
 	return true;
 } */
-
-if ( $wgDBname == 'extloadwiki' || $wgDBname == 'metawiki' || $wgDBname == 'southparkfanwiki' ) {
-	wfLoadExtension( 'ManageWiki' );
-}

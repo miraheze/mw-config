@@ -24,6 +24,7 @@ wfLoadExtension( 'Gadgets' );
 wfLoadExtension( 'GlobalCssJs' );
 wfLoadExtension( 'Interwiki' );
 wfLoadExtension( 'InputBox' );
+wfLoadExtension( 'ManageWiki' );
 wfLoadExtension( 'MassMessage' );
 wfLoadExtension( 'MirahezeMagic' );
 wfLoadExtension( 'Nuke' );
