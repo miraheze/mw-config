@@ -315,6 +315,10 @@ if ( $wmgUsePopups ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 }
 
+if ( $wmgUseQuiz ) {
+	wfLoadExtension( 'Quiz' );
+}
+	
 if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
