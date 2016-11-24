@@ -1222,6 +1222,10 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'universebuildwiki' => true,
 	),
+	'wmgUseQuiz' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseRandomSelection' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
