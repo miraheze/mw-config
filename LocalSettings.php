@@ -882,7 +882,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'pso2wiki' => true,
 		'trexwiki' => true,
-		'wikijokewiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
@@ -2653,13 +2652,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+wikijokewiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'page-creator',
-				'reviewer',
-			),
-		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -3064,14 +3056,6 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
-		'+wikijokewiki' => array(
-			'founder' => array(
-				'read' => true,
-			),
-			'page-creator' => array(
-				'createpage' => true,
-			),
-		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
@@ -3218,13 +3202,6 @@ $wgConf->settings = array(
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
-			),
-		),
-		'+wikijokewiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'page-creator',
-				'reviewer',
 			),
 		),
 	),
