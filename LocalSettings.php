@@ -1224,6 +1224,7 @@ $wgConf->settings = array(
 	'wmgUseQuiz' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 	),
 	'wmgUseRandomSelection' => array(
 		'default' => false,
