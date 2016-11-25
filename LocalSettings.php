@@ -2652,6 +2652,7 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
 			'*' => array(
