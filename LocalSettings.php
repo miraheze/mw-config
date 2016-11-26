@@ -1669,6 +1669,7 @@ $wgConf->settings = array(
 		'plazmaburstwiki' => true,
 		'soshomophobiewiki' => true,
 		'takethatwikiwiki' => true,
+		'wikipucwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
