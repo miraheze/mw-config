@@ -1150,6 +1150,7 @@ $wgConf->settings = array(
 		'openconstitutionwiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseOATHAuth' => array(
 		'default' => false,
@@ -1220,6 +1221,7 @@ $wgConf->settings = array(
 		'nidda23wiki' => true,
 		'takethatwikiwiki' => true,
 		'universebuildwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -1759,6 +1761,7 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
+		'wikipucwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'worldpediawiki' => true,
