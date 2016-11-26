@@ -3061,6 +3061,12 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+wikipucwiki' => array(
+			'user' => array(
+				'ajaxpoll-vote' => true,
+				'ajaxpoll-view-results' => true,
+			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
