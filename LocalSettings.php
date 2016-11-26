@@ -2671,6 +2671,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+				'banned',
 			),
 		),
 	),
@@ -3244,6 +3245,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+				'banned',
 			),
 		),
 	),
@@ -3261,6 +3263,14 @@ $wgConf->settings = array(
 			),
 			'exampleuser' => array(
 				'editmyoptions' => true,
+			),
+		),
+		'wikicanadawiki' => array(
+			'*' => array(
+				'read' => true,
+			),
+			'banned' => array(
+				'read' => true,
 			),
 		),
 	),
