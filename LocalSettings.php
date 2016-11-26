@@ -3075,6 +3075,11 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+wikicanadawiki' => array(
+			'Founder' => array(
+				'read' => true,
+			),
+		),
 		'+wikipucwiki' => array(
 			'user' => array(
 				'ajaxpoll-vote' => true,
