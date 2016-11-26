@@ -1077,6 +1077,7 @@ $wgConf->settings = array(
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
@@ -2660,6 +2661,16 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+wikicanadawiki' => array(
+			'Founder' => array(
+				'bureaucrat',
+				'autopatrolled',
+				'bot',
+				'confirmed',
+				'sysop',
+				'rollbacker',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -3216,6 +3227,16 @@ $wgConf->settings = array(
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+wikicanadawiki' => array(
+			'Founder' => array(
+				'bureaucrat',
+				'autopatrolled',
+				'bot',
+				'confirmed',
+				'sysop',
+				'rollbacker',
 			),
 		),
 	),
