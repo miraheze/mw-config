@@ -931,6 +931,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
+		'jayuwikiwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'starsetonlinewiki' => true,
 	),
