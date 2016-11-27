@@ -4081,7 +4081,7 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 # Will remove this later --SPF
 if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
-	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
+	wfLoadExtension( 'SubPageList3' );
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
