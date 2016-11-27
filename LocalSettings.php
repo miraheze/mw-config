@@ -3266,9 +3266,6 @@ $wgConf->settings = array(
 			),
 		),
 		'wikicanadawiki' => array(
- 			'*' => array(
- 				'read' => true,
- 			),
  			'banned' => array(
  				'read' => true,
  			),
@@ -4126,6 +4123,10 @@ if ( $wgDBname == 'metawiki' ) {
 if ( $wgDBname == 'extloadwiki' ) {
 	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
 }
+
+-if ( $wgDBname == 'wikijokewiki' ) {		
+ -	$wgGroupPermissions['*']['read'] = false;		
+ -}
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
         $wgLocalisationCacheConf['manualRecache'] = false;
