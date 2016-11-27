@@ -4105,7 +4105,7 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
 
-if ( $wgDBname == 'wikicanadawiki' )
+if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['banned']['read'] = false;
 }
