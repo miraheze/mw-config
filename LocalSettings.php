@@ -2236,6 +2236,10 @@ $wgConf->settings = array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
 		),
+		'ratanpirwiki' => array(
+			NS_PORTAL => 'Portal',
+			NS_PORTAL_TALK => 'Portal_talk',
+		),
 		'reviwiki' => array(
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
