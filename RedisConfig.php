@@ -6,7 +6,7 @@ $wgObjectCaches['redis'] = array(
 );
 
 $wgMainCacheType = 'redis';
-$wgSessionCacheType = 'redis';
+$wgSessionCacheType = CACHE_DB;
 $wgSessionsInObjectCache = true;
 
 $wgMessageCacheType = CACHE_NONE;
