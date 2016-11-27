@@ -3083,7 +3083,7 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikipucwiki' => array(
-			'user' => array(
+			'*' => array(
 				'ajaxpoll-vote' => true,
 				'ajaxpoll-view-results' => true,
 			),
