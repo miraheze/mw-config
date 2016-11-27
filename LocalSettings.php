@@ -4124,7 +4124,7 @@ if ( $wgDBname == 'extloadwiki' ) {
 	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
 }
 
--if ( $wgDBname == 'wikijokewiki' ) {		
+-if ( $wgDBname == 'wikicanadawiki' ) {		
  -	$wgGroupPermissions['*']['read'] = false;		
  -}
 
