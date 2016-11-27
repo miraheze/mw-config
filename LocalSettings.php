@@ -3265,14 +3265,6 @@ $wgConf->settings = array(
 				'editmyoptions' => true,
 			),
 		),
-		'wikicanadawiki' => array(
-			'*' => array(
-				'read' => true,
-			),
-			'banned' => array(
-				'read' => true,
-			),
-		),
 	),
 
 	// Piwik settings
@@ -4112,16 +4104,12 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
-	
-// wikijokewiki and wikiarchitecturewiki overrides
-if ( $wgDBname == 'wikijokewiki' ) {
-	$wgGroupPermissions['user']['create'] = false;
+
+if ( $wgDBname == 'wikicanadawiki' )
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['banned']['read'] = false;
 }
-	
-if ( $wgDBname == 'wikiarchitecturewiki' ) {
-	$wgGroupPermissions['user']['create'] = false;
-}
-	
+
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
