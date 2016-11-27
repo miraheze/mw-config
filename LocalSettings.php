@@ -2675,6 +2675,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+				'banned',
 			),
 		),
 	),
@@ -3248,6 +3249,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+				'banned',
 			),
 		),
 	),
@@ -3267,6 +3269,11 @@ $wgConf->settings = array(
 				'editmyoptions' => true,
 			),
 		),
+		'wikicanadawiki' => array(
+ 			'banned' => array(
+ 				'read' => true,
+ 			),
+ 		),
 	),
 
 	// Piwik settings
@@ -4106,16 +4113,7 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
-	
-// wikijokewiki and wikiarchitecturewiki overrides
-if ( $wgDBname == 'wikijokewiki' ) {
-	$wgGroupPermissions['user']['create'] = false;
-}
-	
-if ( $wgDBname == 'wikiarchitecturewiki' ) {
-	$wgGroupPermissions['user']['create'] = false;
-}
-	
+
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
@@ -4128,6 +4126,10 @@ if ( $wgDBname == 'metawiki' ) {
 
 if ( $wgDBname == 'extloadwiki' ) {
 	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
+}
+
+if ( $wgDBname == 'wikicanadawiki' ) {		
+	$wgGroupPermissions['*']['read'] = false;		
 }
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
