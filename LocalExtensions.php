@@ -96,6 +96,10 @@ if ( $wmgUseCustomNavBlocks) {
 	$wgCustomNavBlocksEnable = true;
 }
 
+if ( $wmgUseDPLForum ) {
+	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
+}
+
 if ( $wmgUseDynamicPageList ) {
 	 wfLoadExtension( 'DynamicPageList' );
 }
@@ -332,6 +336,10 @@ if ( $wmgUseSocialProfile ) {
 
 if ( $wmgUseSubpageFun ) {
 	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
+}
+
+if ( $wmgUseSubPageList3 ) {
+	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
 if ( $wmgUseSyntaxHighlight ) {

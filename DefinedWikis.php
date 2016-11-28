@@ -165,13 +165,6 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
 }
 
-# Will remove this later --SPF
-if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
-	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
-	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
-}
-
-
 // Jayuwikiwiki ovverides
 if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['move'] = false;
@@ -209,10 +202,6 @@ if ( $wgDBname == 'metawiki' ) {
 		$out->addMeta( 'revisit-after', '2 days' );
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
-}
-
-if ( $wgDBname == 'extloadwiki' ) {
-	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
 }
 
 if ( $wgDBname == 'wikicanadawiki' ) {

@@ -893,6 +893,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
+	'wmgUseDPLForum' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -1339,6 +1344,11 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
+	'wmgUseSubPageList3' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
