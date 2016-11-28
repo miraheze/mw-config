@@ -907,6 +907,7 @@ $wgConf->settings = array(
 		'heistwiki' => true,
 		'hydrawikiwiki' => true,
 		'noalatalawiki' => true,
+		'rpgbrigadewiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
@@ -1127,6 +1128,7 @@ $wgConf->settings = array(
 		'justinbieberwiki' => true,
 		'ndnwiki' => true,
 		'robloxscripterswiki' => true,
+		'rpgbrigadewiki' => true,
 		'takethatwikiwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
@@ -1269,6 +1271,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'humorpediawiki' => true,
+		'rpgbrigadewiki' => true,
 		'takethatwikiwiki' => true,
 		'tmewiki' => true,
 		'russiawatchwiki' => true,
@@ -1465,6 +1468,7 @@ $wgConf->settings = array(
 		'aacenterpriselearningwiki' => true,
 		'adnovumwiki' => true,
 		'aescapeswiki' => true,
+		'ageofenlightenmentwiki' => true,
 		'ageofimperialismwiki' => true,
 		'ageofimperialistswiki' => true,
 		'airwiki' => true,
@@ -1785,6 +1789,7 @@ $wgConf->settings = array(
 		'openonderwijswiki' => true,
 		'plazmaburstwiki' => true,
 		'priyowiki' => true,
+		'rpgbrigadewiki' => true,
 		'secondcirclewiki' => true,
 		'starsetonlinewiki' => true,
 		'szkwiki' => true,
@@ -3525,6 +3530,7 @@ $wgConf->settings = array(
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
 		'dditecwiki' => "//$wmgUploadHostname/dditecwiki/8/87/Ddu_logo.png",
 		'doinwiki' => "//$wmgUploadHostname/doinwiki/6/64/Favicon.ico",
+		'drones4allwiki' => "//$wmgUploadHostname/drones4allwiki/2/26/Favicon.png",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/6/64/Favicon.ico",
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/6/60/Wiki_favicon.png",
 		'eternalconfictwiki' => "//$wmgUploadHostname/eternalconfictwiki/a/a9/AD_new_logo4.png",
@@ -3583,7 +3589,7 @@ $wgConf->settings = array(
 		'wikibookswiki' => "//$wmgUploadHostname/wikibookswiki/6/60/Wiki_favicon.png",
 		'wikicervanteswiki' => "//$wmgUploadHostname/wikicervanteswiki/0/08/FaviconCervantes.ico",
 		'wikidolphinhansenwiki' => "//$wmgUploadHostname/wikidolphinhansenwiki/b/bf/Dolphin-icon-150.png",
-		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/4/4a/Logo_copia_2.png",
+		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/2/26/Favicon.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
 	),
@@ -3639,6 +3645,7 @@ $wgConf->settings = array(
 		'dicficwiki' => "//$wmgUploadHostname/dicficwiki/b/b1/Dicfic-logo.png",
 		'diggywikipolskawiki' => "//$wmgUploadHostname/diggywikipolskawiki/8/81/Logodiggy.png",
 		'doinwiki' => "//$wmgUploadHostname/doinwiki/6/60/Wiki_Logo.png",
+		'drones4allwiki' => "//$wmgUploadHostname/drones4allwiki/6/60/Wiki_Logo.png",
 		'dsiguidewiki' => "//$wmgUploadHostname/dsiguidewiki/1/13/Wikilogod.jpg",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/c/c0/Logo_135.png",
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/3/3b/Wiki_logo.png",
@@ -3742,6 +3749,7 @@ $wgConf->settings = array(
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
 		'toftcricketclubwiki' => "//$wmgUploadHostname/toftcricketclubwiki/2/23/ToftLogo.png",
 		'trexwiki' => "//$wmgUploadHostname/trexwiki/4/49/Wikit.png",
+		'ubuntuwiki' => "//$wmgUploadHostname/ubuntuwiki/1/11/UbuntuWiki.png",
 		'uprisewiki' => "//$wmgUploadHostname/uprisewiki/2/2e/DotLogo130px.png",
 		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
@@ -3754,6 +3762,7 @@ $wgConf->settings = array(
 		'webtoonwiki' => "//$wmgUploadHostname/webtoonwiki/b/ba/Webtoon_wiki_symbol.PNG",
 		'wikicanadawiki' => "//$wmgUploadHostname/wikicanadawiki/0/0b/WikiCanada.jpg",
 		'wikiparkinsonwiki' => "//$wmgUploadHostname/wikiparkinsonwiki/f/fb/WikiParkinsonLogo-135.png",
+		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/9/98/Logowikifinal.png",
 		'wikiversitywiki' => "//$wmgUploadHostname/wikiversitywiki/7/71/Wikiversity-Miraheze-temporary-logo.png",
 		'whentheycrywiki' => "//$wmgUploadHostname/whentheycrywiki/b/b5/Logo_m.png",
 		'worldbattlewiki' => "//$wmgUploadHostname/worldbattlewiki/4/40/Globe1.png",
@@ -4050,11 +4059,11 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>The search feature has been disabled on all Miraheze wikis, because it was responsible for the server crash yesterday. Miraheze staff is trying to find a fix for this bug, until that is done you won't be able to use the search feature.</td>
+	<td>IMPORTANT: Miraheze intends on upgrading MediaWiki from 1.27.1 to 1.28.0 today. The process will start at around 21:30 UTC and a window of 2 hours (until 23:30 UTC) has been allocated for work. Wikis may become read-only during this period. We are aiming to ensure 100% readability of wikis during this time. If you have any issues, please join #miraheze on freenode.</td>
 	</tr></tbody></table>
 EOF;
 
