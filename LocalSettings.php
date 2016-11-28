@@ -3997,11 +3997,6 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
 }
 
-require_once( "/srv/mediawiki/config/MissingWiki.php" );
-require_once( "/srv/mediawiki/config/GlobalLogging.php" );
-require_once( "/srv/mediawiki/config/RedisConfig.php" );
-require_once( "/srv/mediawiki/config/PrivateWikiWhitelist.php" );
-
 // Hard overrides that don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['bigdelete'] = false;
@@ -4047,8 +4042,6 @@ if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 	unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
 	$wgCentralAuthCookieDomain = $wmgHostname;
 }
-
-require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 
 # Timeline
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
@@ -4163,3 +4156,11 @@ EOF;
 
 	return true;
 } */
+
+// Include other configuration files
+require_once( "/srv/mediawiki/config/GlobalLogging.php" );
+require_once( "/srv/mediawiki/config/GlobalMatricies.php" );
+require_once( "/srv/mediawiki/config/LocalExtensions.php" );
+require_once( "/srv/mediawiki/config/MissingWiki.php" );
+require_once( "/srv/mediawiki/config/PrivateWikiWhitelist.php" );
+require_once( "/srv/mediawiki/config/RedisConfig.php" );
