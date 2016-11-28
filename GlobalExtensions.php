@@ -2,36 +2,38 @@
 require_once( "$IP/extensions/Echo/Echo.php" );
 require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
-wfLoadExtension( 'AbuseFilter' );
-wfLoadExtension( 'AntiSpoof' );
-wfLoadExtension( 'Babel' );
-wfLoadExtension( 'CentralAuth' );
-wfLoadExtension( 'CheckUser' );
-wfLoadExtension( 'Cite' );
-wfLoadExtension( 'CiteThisPage' );
-wfLoadExtension( 'CodeEditor' );
-wfLoadExtension( 'ConfirmEdit' );
-wfLoadExtension( 'ConfirmEdit/ReCaptchaNoCaptcha' );
-wfLoadExtension( 'Disambiguator' );
-wfLoadExtension( 'Gadgets' );
-wfLoadExtension( 'GlobalBlocking' );
-wfLoadExtension( 'GlobalCssJs' );
-wfLoadExtension( 'InputBox' );
-wfLoadExtension( 'Interwiki' );
-wfLoadExtension( 'LocalisationUpdate' );
-wfLoadExtension( 'ManageWiki' );
-wfLoadExtension( 'MassMessage' );
-wfLoadExtension( 'Math' );
-wfLoadExtension( 'MirahezeMagic' );
-wfLoadExtension( 'Nuke' );
-wfLoadExtension( 'OATHAuth' );
-wfLoadExtension( 'OAuth' );
-wfLoadExtension( 'ParserFunctions' );
-wfLoadExtension( 'Poem' );
-wfLoadExtension( 'Renameuser' );
-wfLoadExtension( 'SiteMatrix' );
-wfLoadExtension( 'Timeline' );
-wfLoadExtension( 'Thanks' );
-wfLoadExtension( 'TitleBlacklist' );
-wfLoadExtension( 'WikiEditor' );
-wfLoadExtension( 'cldr' );
+wfLoadExtensions( [
+	'AbuseFilter',
+	'AntiSpoof',
+	'Babel',
+	'CentralAuth',
+	'CheckUser',
+	'Cite',
+	'CiteThisPage',
+	'CodeEditor',
+	'ConfirmEdit',
+	'ConfirmEdit/ReCaptchaNoCaptcha',
+	'Disambiguator',
+	'Gadgets',
+	'GlobalBlocking',
+	'GlobalCssJs',
+	'InputBox',
+	'Interwiki',
+	'LocalisationUpdate',
+	'ManageWiki',
+	'MassMessage',
+	'Math',
+	'MirahezeMagic',
+	'Nuke',
+	'OATHAuth',
+	'OAuth',
+	'ParserFunctions',
+	'Poem',
+	'Renameuser',
+	'SiteMatrix',
+	'Timeline',
+	'Thanks',
+	'TitleBlacklist',
+	'WikiEditor',
+	'cldr'
+] );
