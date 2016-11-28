@@ -4068,7 +4068,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
 
 	return true;
-} */
+}
 
 // Include other configuration files
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
