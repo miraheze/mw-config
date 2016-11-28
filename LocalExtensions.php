@@ -268,7 +268,7 @@ if ( $wmgUsePageTriage ) {
 }
 
 if ( $wmgUsePDFEmbed ) {
-	wfLoadExtension( 'PDFEmbed' );
+	require_once( "$IP/extensions/PDFEmbed/PDFEmbed.php" );
 }
 
 if ( $wmgUsePdfHandler ) {
@@ -372,7 +372,7 @@ if ( $wmgUseTranslate ) {
 
 if ( $wmgUseTimedMediaHandler ) {
 	 wfLoadExtension( 'MwEmbedSupport' );
-	 wfLoadExtension( 'TimedMediaHandler' );
+	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
 
@@ -434,7 +434,7 @@ if ( $wmgUseWikiForum ) {
 }
 
 if ( $wmgUsewikihiero ) {
-	 wfLoadExtension( 'wikihiera' );
+	 wfLoadExtension( 'wikihiero' );
 }
 
 if ( $wmgUseWikiLove ) {

@@ -619,6 +619,7 @@ $wgConf->settings = array(
 	'wmgSkinMatrix' => array(
 		'default' => array(
 			'apex' => false,
+			'dusktodawn' => false,
 			'erudite' => false,
 			'foreground' => false,
 			'metrolook' => false,
@@ -4029,12 +4030,6 @@ if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 	$wgCentralAuthCookieDomain = $wmgHostname;
 }
 
-# Timeline
-putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
-$wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
-$wgTimelineSettings->perlCommand = "/usr/bin/perl";
-$wgTimelineSettings->fontFile = 'FreeSans';
-
 # Footer icon
 $wgFooterIcons['poweredby']['miraheze'] = array(
 	'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
@@ -4072,10 +4067,16 @@ EOF;
 
 // Include other configuration files
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
-require_once( "/srv/mediawiki/config/GlobalMatricies.php" );
+require_once( "/srv/mediawiki/config/GlobalMatrices.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/RedisConfig.php" );
+
+// LE dependency
+putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
+$wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
+$wgTimelineSettings->perlCommand = "/usr/bin/perl";
+$wgTimelineSettings->fontFile = 'FreeSans';
 
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/DefinedWikis.php" );
