@@ -19,10 +19,6 @@ if ( $wmgUseAJAXPoll ) {
 	$wgGroupPermissions['*']['ajaxpoll-view-results-before-vote'] = true;
 }
 
-if ( $wmgUseApex ) {
-	wfLoadSkin( 'apex' );
-}
-
 if ( $wmgUseArticleFeedbackv5 ) {
 	 wfLoadExtension( 'ArticleFeedbackv5' );
 }
@@ -100,10 +96,6 @@ if ( $wmgUseCustomNavBlocks) {
 	$wgCustomNavBlocksEnable = true;
 }
 
-if ( $wmgUseDuskToDawn ) {
-	wfLoadSkin( 'DuskToDawn' );
-}
-
 if ( $wmgUseDynamicPageList ) {
 	 wfLoadExtension( 'DynamicPageList' );
 }
@@ -114,10 +106,6 @@ if ( $wmgUseDynamicPageList3 ) {
 
 if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
-}
-
-if ( $wmgUseErudite ) {
-	wfLoadSkin( 'erudite' );
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
@@ -162,10 +150,6 @@ if ( $wmgFlowDefaultNamespaces ) {
 
 if ( $wmgUseFeaturedFeeds ) {
 	wfLoadExtension( 'FeaturedFeeds' );
-}
-
-if ( $wmgUseForeground ) {
-	require_once( "$IP/skins/foreground/foreground.php" );
 }
 
 if ( $wmgUseHeaderTabs ) {
@@ -223,18 +207,10 @@ if ( $wmgUseMediaWikiChat ) {
 	 wfLoadExtension( 'MediaWikiChat' );
 }
 
-if ( $wmgUseMetrolook ) {
-	wfLoadSkin( 'Metrolook' );
-}
-
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
-}
-
-if ( $wmgUseMonaco ) {
-	require_once( "$IP/skins/Monaco/monaco.php" );
 }
 
 if ( $wmgUseMsPackage ) {
@@ -274,10 +250,6 @@ if ( $wmgUseNewUsersList ) {
 	wfLoadExtension( 'NewUsersList' );
 }
 
-if ( $wmgUseNostalgia ) {
-	require_once( "$IP/skins/Nostalgia/Nostalgia.php" );
-}
-
 if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 	$wgRestrictDisplayTitle = false;
@@ -315,10 +287,6 @@ if ( $wmgUseQuiz ) {
 
 if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
-}
-
-if ( $wmgUseRefreshed ) {
-	wfLoadSkin( 'Refreshed' );
 }
 
 if ( $wmgUseRelatedArticles ) {
@@ -475,30 +443,4 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 
 if ( $wmgUseYouTube ) {
 	require_once( "$IP/extensions/YouTube/YouTube.php" );
-}
-
-// Permission variables
-if ( $wmgEditingMatrix ) {
-	$mhEM = $wmgEditingMatrix;
-	if ( $mhEM['anon'] ) {
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['*']['createpage'] = false;
-	}
-
-	if ( $mhEM['user'] ) {
-		$wgGroupPermissions['user']['edit'] = false;
-		$wgGroupPermissions['user']['createpage'] = false;
-	}
-
-	if ( $mhEM['editor'] ) {
-		$wgGroupPermissions['editor']['edit'] = true;
-		$wgGroupPermissions['editor']['createpage'] = true;
-		$wgAddGroups['sysop'][] = 'editor';
-		$wgRemoveGroups['sysop'][] = 'editor';
-	}
-
-	if ( $mhEM['sysop'] ) {
-		$wgGroupPermissions['sysop']['edit'] = true;
-		$wgGroupPermissions['sysop']['createpage'] = true;
-	}
 }

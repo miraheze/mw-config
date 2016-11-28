@@ -382,7 +382,7 @@ $wgConf->settings = array(
 		'default' => '250', // databases don't have much memory - let's not overload them in future
 	),
 
-	// Editing Matrix
+	// Matricies
 	'wmgEditingMatrix' => array(
 		'default' => array(
 			'anon' => false, // disable anonymous editing
@@ -608,6 +608,69 @@ $wgConf->settings = array(
 			'anon' => true,
 		),
 	),
+	'wmgSkinMatrix' => array(
+		'default' => array(
+			'apex' => false,
+			'erudite' => false,
+			'foreground' => false,
+			'metrolook' => false,
+			'monaco' => false,
+			'nostalgia' => false,
+			'refreshed' => false,
+		),
+		'+3dicwiki' => array(
+			'foreground' => true,
+		),
+		'+allthetropeswiki' => array(
+			'foreground' => true,
+			'metrolook' => true,
+			'monaco' => true,
+		),
+		'+ayrshirewiki' => array(
+			'metrolook' => true,
+		),
+		'+dborpwiki' => array(
+			'erudite' => true,
+		),
+		'+datachronwiki' => array(
+			'erudite' => true,
+		),
+		'+dtswiki' => array(
+			'apex' => true,
+			'metrolook' => true,
+		),
+		'+extloadwiki' => array(
+			'apex' => true,
+			'dusktodawn' => true,
+			'erudite' => true,
+			'foreground' => true,
+			'metrolook' => true,
+			'monaco' => true,
+			'nostalgia' => true,
+			'refreshed' => false,
+		),
+		'+inazumaelevenwiki' => array(
+			'apex' => true,
+			'foreground' => true,
+			'metrolook' => true,
+		),
+		'+jayuwikiwiki' => array(
+			'foreground' => true,
+		),
+		'+ofthevampirewiki' => array(
+			'dusktodawn' => true,
+		),
+		'+permanentfuturelabwiki' => array(
+			'foreground' => true,
+		),
+		'+starsetonlinewiki' => array(
+			'foreground' => true,
+		),
+		'+thelonsdalebattalionwiki' => array(
+			'apex' => true,
+			'metrolook' => true,
+		),
+	),
 
 	'wgPFEnableStringFunctions' => array(
 		'default' => false,
@@ -674,13 +737,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'openconstitutionwiki' => true,
 		'wikipucwiki' => true,
-	),
-	'wmgUseApex' => array(
-		'default' => false,
-		'dtswiki' => true,
-		'extloadwiki' => true,
-		'inazumaelevenwiki' => true,
-		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
@@ -829,11 +885,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
-	'wmgUseDuskToDawn' => array(
-		'default' => false,
-		'extloadwiki' => true,
-		'ofthevampirewiki' => true,
-	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -861,12 +912,6 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 		'perpuswiki' => true,
 		'muckhackwiki' => true,
-	),
-	'wmgUseErudite' => array(
-		'default' => false,
-		'bdorpwiki' => true,
-		'datachronwiki' => true,
-		'extloadwiki' => true,
 	),
 	'wmgUseFancyBoxThumbs' => array(
 		'default' => false,
@@ -925,16 +970,6 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
 		'yacresourceswiki' => true,
-	),
-	'wmgUseForeground' => array(
-		'default' => false,
-		'3dicwiki' => true,
-		'allthetropeswiki' => true,
-		'extloadwiki' => true,
-		'inazumaelevenwiki' => true,
-		'jayuwikiwiki' => true,
-		'permanentfuturelabwiki' => true,
-		'starsetonlinewiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
@@ -1023,25 +1058,11 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 	),
-	'wmgUseMetrolook' => array(
-		'default' => false,
-		'allthetropeswiki' => true,
-		'ayrshirewiki' => true,
-		'dtswiki'=> true,
-		'extloadwiki' => true,
-		'inazumaelevenwiki' => true,
-		'thelonsdalebattalionwiki' => true,
-	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
 		'izanagiwiki' => false,
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
-	),
-	'wmgUseMonaco' => array(
-		'default' => false,
-		'allthetropeswiki' => true,
-		'extloadwiki' => true,
 	),
 	'wmgUseMsPackage' => array(
 		'default' => false,
@@ -1131,10 +1152,6 @@ $wgConf->settings = array(
 	'wmgUseNewUsersList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'extloadwiki' => true,
-	),
-	'wmgUseNostalgia' => array(
-		'default' => false,
 		'extloadwiki' => true,
 	),
 	'wmgUseNoTitle' => array(
@@ -1239,10 +1256,6 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'tmewiki' => true,
 		'russiawatchwiki' => true,
-	),
-	'wmgUseRefreshed' => array(
-		'default' => false,
-		'extloadwiki' => false,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
