@@ -1549,7 +1549,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'ircwiki' => true,
 		'islamwissenschaftwiki' => true,
-		'izanagiwiki' => true,	
+		'izanagiwiki' => true,
 		'jakeperswiki' => true,
 		'janesskillspackwiki' => true,
 		'jayuwikiwiki' => true,
@@ -1933,11 +1933,6 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
 	),
-	
-	// Google Analytics settings
-	'wgGoogleAnalyticsAccount' => array(
-		'opengovpioneerswiki' => 'UA-3467930-17',
-	),
 
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => array(
@@ -1947,7 +1942,7 @@ $wgConf->settings = array(
 	'wgGlobalBlockingDatabase' => array(
 		'default' => 'centralauth', // use centralauth for global blocks
 	),
-	
+
 	// GlobalCssJs
 	'wgGlobalCssJsConfig' => array(
 		'default' => array(
@@ -2105,7 +2100,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 	),
-	
+
 	// MassMessage
 	'wgAllowGlobalMessaging' => array(
 		'default' => false,
@@ -2118,7 +2113,7 @@ $wgConf->settings = array(
 			NS_PROJECT,
 		),
 	),
-	
+
 	// Metrolook settings
 	'wgMetrolookDownArrow' => array(
 		'default' => true,
@@ -2144,7 +2139,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => false,
 	),
 	'wgMetrolookLine' => array(
-		'default' => true, 
+		'default' => true,
 		'ayrshirewiki' => false,
 	),
 
@@ -2162,7 +2157,7 @@ $wgConf->settings = array(
 			'throisarwiki',
 		),
 	),
-	
+
 	// Misc. stuff
 	'wgSitename' => array(
 		'default' => 'No sitename set!',
@@ -2174,7 +2169,7 @@ $wgConf->settings = array(
 		'default' => true, // Wikis with NoTitle have it set to false
 		'takethatwikiwiki' => false,
 	),
-	
+
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => array(
 		'default' => true,
@@ -2191,22 +2186,19 @@ $wgConf->settings = array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
-	
 	'wgMSU_showAutoCat' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
-	
 	'wgMSU_checkAutoCat' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
-	
 	'wgMSU_confirmReplace' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
-	
+
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => array(
 		'extloadwiki' => true,
@@ -2214,6 +2206,7 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
+
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
@@ -2332,7 +2325,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => array(
 			NS_TEST	=> 'TEST',
 			NS_TEST_TALK => 'TEST_talk',
-		),	
+		),
 		'whentheycrywiki' => array(
 			NS_SPRITES => 'Sprites',
 			NS_SPRITES_TALK => 'Sprites_talk',
@@ -2511,7 +2504,7 @@ $wgConf->settings = array(
 	'wgMWOAuthSecureTokenTransfer' => array(
 		'default' => true,
 	),
-	
+
 	// Pagelang
 	'wgPageLanguageUseDB' => array(
 		'default' => false,
@@ -2915,7 +2908,7 @@ $wgConf->settings = array(
 				'move-rootuserpages' => true,
 				'upload' => true,
 				'reupload-shared' => true,
-			),	
+			),
 			'sysop' => array(
 				'commentadmin' => true,
 			),
@@ -3330,7 +3323,7 @@ $wgConf->settings = array(
 	 	'extloadwiki' => true,
 	 	'youtubewiki' => true,
 	 ),
-	 
+
 	// Restriction types
 	'+wgRestrictionLevels' => array(
 		'default' => array(
@@ -3359,13 +3352,13 @@ $wgConf->settings = array(
 			'voter',
 		),
 	),
-		
+
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
 		),
 	),
-	
+
 	// RSS Settings
 	'wgRSSCacheAge' => array(
 		'default' => '3600'
@@ -3459,13 +3452,13 @@ $wgConf->settings = array(
 	'wgSiteMatrixSites' => array(
 		'default' => array(),
 	),
-	
+
 	// Statistics
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'throisarwiki' => 'any',
 	),
-	
+
 	// Squid (aka Varnish)
 	'wgUseSquid' => array(
 		'default' => true,
@@ -3473,7 +3466,7 @@ $wgConf->settings = array(
 	'wgSquidServers' => array(
 		'default' => array( '81.4.124.61:81', '107.191.126.23:81' ),
 	),
-	
+
 	// Style
 	'wgAllowUserCss' => array(
 		'default' => true,
