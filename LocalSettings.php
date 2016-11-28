@@ -981,8 +981,11 @@ $wgConf->settings = array(
 	),
 	'wmgUseHideSection' => array(
 		'default' => false,
+		'aktposwiki' => true,
 		'allthetropeswiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'hendrickswiki' => true,
 	),
 	'wmgUseHighlightLinksInCategory' => array(
 		'default' => false,
@@ -1289,13 +1292,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'qwertywiki' => true,
-	),
-	'wmgUseSectionHide' => array(
-		'default' => false,
-		'aktposwiki' => true,
-		'developmentwiki' => true,
-		'extloadwiki' => true,
-		'hendrickswiki' => true,
 	),
 	'wmgUseShortURL' => array(
 		'default' => true,

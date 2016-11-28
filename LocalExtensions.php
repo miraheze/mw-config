@@ -314,10 +314,6 @@ if ( $wmgUseSyntaxHighlight ) {
         $wgScribuntoUseGeSHi = true;
 }
 
-if ( $wmgUseSectionHide ) {
-	wfLoadExtension( 'SectionHide' );
-}
-
 if ( $wmgUseShortURL ) {
 	wfLoadExtension ( 'UrlShortener' );
 }
