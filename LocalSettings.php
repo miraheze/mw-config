@@ -4054,29 +4054,13 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>IMPORTANT: Miraheze intends on upgrading MediaWiki from 1.27.1 to 1.28.0 today. The process will start at around 21:30 UTC and a window of 2 hours (until 23:30 UTC) has been allocated for work. Wikis may become read-only during this period. We are aiming to ensure 100% readability of wikis during this time. If you have any issues, please join #miraheze on freenode.</td>
+	<td>The search feature has been disabled on all Miraheze wikis, because it was responsible for the server crash yesterday. Miraheze staff is trying to find a fix for this bug, until that is done you won't be able to use the search feature.</td>
 	</tr></tbody></table>
 EOF;
 
 	return true;
-}
-
-// Include other configuration files
-require_once( "/srv/mediawiki/config/GlobalLogging.php" );
-require_once( "/srv/mediawiki/config/GlobalMatrices.php" );
-require_once( "/srv/mediawiki/config/LocalExtensions.php" );
-require_once( "/srv/mediawiki/config/MissingWiki.php" );
-require_once( "/srv/mediawiki/config/RedisConfig.php" );
-
-// LE dependency
-putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
-$wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
-$wgTimelineSettings->perlCommand = "/usr/bin/perl";
-$wgTimelineSettings->fontFile = 'FreeSans';
-
-// Define last to avoid all dependencies
-require_once( "/srv/mediawiki/config/DefinedWikis.php" );
+} */
