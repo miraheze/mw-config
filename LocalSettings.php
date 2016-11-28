@@ -4072,7 +4072,7 @@ EOF;
 
 // Include other configuration files
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
-require_once( "/srv/mediawiki/config/GlobalMatricies.php" );
+require_once( "/srv/mediawiki/config/GlobalMatrices.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/RedisConfig.php" );
