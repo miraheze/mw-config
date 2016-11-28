@@ -1,5 +1,4 @@
 <?php
-
 // Set up extensions for use on wikis that are not global
 if ( $wmgUseAccessControl ) {
 	require_once( "$IP/extensions/AccessControl/AccessControl.php" );
@@ -20,29 +19,25 @@ if ( $wmgUseAJAXPoll ) {
 	$wgGroupPermissions['*']['ajaxpoll-view-results-before-vote'] = true;
 }
 
-if ( $wmgUseApex ) {
-	wfLoadSkin( 'apex' );
-}
-
 if ( $wmgUseArticleFeedbackv5 ) {
-	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
+	 wfLoadExtension( 'ArticleFeedbackv5' );
 }
 
 if ( $wmgUseArticleRatings ) {
-	wfLoadExtension( 'ArticleRatings' );}
+	wfLoadExtension( 'ArticleRatings' );
+}
 
 if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }
 
 if ( $wmgUseAutomaticBoardWelcome ) {
-	require_once( "$IP/extensions/AutomaticBoardWelcome/AutomaticBoardWelcome.php" );
+	 wfLoadExtension( 'AutomaticBoardWelcome' );
 }
 
 if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
 }
-
 if ( $wmgUseBlogPage ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 	wfLoadExtension( 'BlogPage' );
@@ -50,11 +45,11 @@ if ( $wmgUseBlogPage ) {
 }
 
 if ( $wmgUseMSCalendar ) {
-	require_once( "$IP/extensions/MsCalendar/MsCalendar.php" );
+	wfLoadExtension( 'MsCalendar' );
 }
 
 if ( $wmgUseCategoryTree ) {
-	require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
+	 wfLoadExtension( 'CategoryTree' );
 }
 
 if ( $wmgUseCharInsert ) {
@@ -70,8 +65,7 @@ if ( $wmgUseComments ) {
 }
 
 if ( $wmgUseContactPage ) {
-	require_once( "$IP/extensions/ContactPage/ContactPage.php" );
-
+	 wfLoadExtension( 'ContactPage' );
 	// Contact Page is a fairly complex (well long) extension to configure.
 	// All config should be in the file below on a wikidb basis.
 	require_once( "/srv/mediawiki/config/ContactPage.php" );
@@ -98,28 +92,24 @@ if ( $wmgUseCSS ) {
 }
 
 if ( $wmgUseCustomNavBlocks) {
-	require_once "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php";
+	require_once( "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php" );
 	$wgCustomNavBlocksEnable = true;
 }
 
-if ( $wmgUseDuskToDawn ) {
-	wfLoadSkin( 'DuskToDawn' );
+if ( $wmgUseDPLForum ) {
+	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 }
 
 if ( $wmgUseDynamicPageList ) {
-	require_once( "$IP/extensions/DynamicPageList/DynamicPageList.php" );
+	 wfLoadExtension( 'DynamicPageList' );
 }
 
 if ( $wmgUseDynamicPageList3 ) {
-	require_once( "$IP/extensions/DynamicPageList3/DynamicPageList.php" );
+	 wfLoadExtension( 'DynamicPageList3' );
 }
 
 if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
-}
-
-if ( $wmgUseErudite ) {
-	wfLoadSkin( 'erudite' );
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
@@ -128,7 +118,6 @@ if ( $wmgUseFancyBoxThumbs ) {
 
 if ( $wmgUseFlaggedRevs ) {
 	require_once( "$IP/extensions/FlaggedRevs/FlaggedRevs.php" );
-
 	$wgFlaggedRevsNamespaces = $wmgFlaggedRevsNamespaces;
 	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
 	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
@@ -137,19 +126,16 @@ if ( $wmgUseFlaggedRevs ) {
 	$wgFlaggedRevsAutopromote = $wmgFlaggedRevsAutopromote;
 	$wgFlaggedRevsAutoReview = $wmgFlaggedRevsAutoReview;
 	$wgFlaggedRevsRestrictionLevels = $wmgFlaggedRevsRestrictionLevels;
-
 }
 
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
-
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
 	);
-
 	$wgFlowEditorList = $wmgFlowEditorList;
 }
 
@@ -170,12 +156,8 @@ if ( $wmgUseFeaturedFeeds ) {
 	wfLoadExtension( 'FeaturedFeeds' );
 }
 
-if ( $wmgUseForeground ) {
-	require_once( "$IP/skins/foreground/foreground.php" );
-}
-
 if ( $wmgUseHeaderTabs ) {
-	require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+	 wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {
 		// load LC despite SectionHide's strong objections
 		unset( $htUseHistory );
@@ -199,7 +181,7 @@ if ( $wmgUseJavascriptSlideshow ) {
 }
 
 if ( $wmgUseJosa ) {
-	require_once( "$IP/extensions/Josa/Josa.php" );
+	wfLoadExtension( 'Josa' );
 }
 
 if ( $wmgUseLabeledSectionTransclusion ) {
@@ -226,35 +208,27 @@ if ( $wmgUseMassEditRegex ) {
 }
 
 if ( $wmgUseMediaWikiChat ) {
-	require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php" );
-}
-
-if ( $wmgUseMetrolook ) {
-	wfLoadSkin( 'Metrolook' );
+	 wfLoadExtension( 'MediaWikiChat' );
 }
 
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
-	
+
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
-if ( $wmgUseMonaco ) {
-	require_once( "$IP/skins/Monaco/monaco.php" );
-}
-
 if ( $wmgUseMsPackage ) {
-	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+	 wfLoadExtension( 'MsUpload' );
 	require_once( "$IP/extensions/MsLinks/MsLinks.php" );
 	require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
 }
 
 if ( $wmgUseMsUpload ) {
-	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+	 wfLoadExtension( 'MsUpload' );
 }
 
 if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+	 wfLoadExtension( 'MultimediaViewer' );
 }
 
 if ( $wmgUseMultiBoilerplate ) {
@@ -280,10 +254,6 @@ if ( $wmgUseNewUsersList ) {
 	wfLoadExtension( 'NewUsersList' );
 }
 
-if ( $wmgUseNostalgia ) {
-	require_once( "$IP/skins/Nostalgia/Nostalgia.php" );
-}
-
 if ( $wmgUseNoTitle ) {
 	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
 	$wgRestrictDisplayTitle = false;
@@ -298,7 +268,7 @@ if ( $wmgUsePageTriage ) {
 }
 
 if ( $wmgUsePDFEmbed ) {
-	require_once( "$IP/extensions/PDFEmbed/PDFEmbed.php" );
+	wfLoadExtension( 'PDFEmbed' );
 }
 
 if ( $wmgUsePdfHandler ) {
@@ -310,26 +280,21 @@ if ( $wmgUsePoll ) {
 }
 
 if ( $wmgUsePopups ) {
-	require_once( "$IP/extensions/PageImages/PageImages.php" );
-	require_once( "$IP/extensions/Popups/Popups.php" );
-	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	wfLoadExtension( 'PageImages' );
+	wfLoadExtension( 'Popups' );
+	wfLoadExtension( 'TextExtracts' );
 }
 
 if ( $wmgUseQuiz ) {
 	wfLoadExtension( 'Quiz' );
 }
-	
+
 if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
 
-if ( $wmgUseRefreshed ) {
-	wfLoadSkin( 'Refreshed' );
-}
-
 if ( $wmgUseRelatedArticles ) {
-	require_once( "$IP/extensions/CustomData/CustomData.php" );
-	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+	 wfLoadExtension( 'RelatedArticles' );
 }
 
 if ( $wmgUseReplaceText ) {
@@ -337,7 +302,7 @@ if ( $wmgUseReplaceText ) {
 }
 
 if ( $wmgUseRSS ) {
-	require_once( "$IP/extensions/RSS/RSS.php" );
+	 wfLoadExtension( 'RSS' );
 	$wgRSSUrlWhitelist = array( "*" );
 }
 
@@ -351,10 +316,6 @@ if ( $wmgUseScratchBlocks ) {
 
 if ( $wmgUseSyntaxHighlight ) {
         $wgScribuntoUseGeSHi = true;
-}
-
-if ( $wmgUseSectionHide ) {
-	wfLoadExtension( 'SectionHide' );
 }
 
 if ( $wmgUseShortURL ) {
@@ -377,6 +338,10 @@ if ( $wmgUseSubpageFun ) {
 	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 }
 
+if ( $wmgUseSubPageList3 ) {
+	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
+}
+
 if ( $wmgUseSyntaxHighlight ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
@@ -387,7 +352,7 @@ if ( $wmgUseTabsCombination ) {
 }
 
 if ( $wmgUseTranslate ) {
-	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+	 wfLoadExtension( 'UniversalLanguageSelector' );
 	require_once( "$IP/extensions/Translate/Translate.php" );
 	$wgGroupPermissions['sysop']['pagetranslation'] = true;
 	$wgGroupPermissions['sysop']['translate-import'] = true;
@@ -406,17 +371,17 @@ if ( $wmgUseTranslate ) {
 }
 
 if ( $wmgUseTimedMediaHandler ) {
-	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
-	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
+	 wfLoadExtension( 'MwEmbedSupport' );
+	 wfLoadExtension( 'TimedMediaHandler' );
 	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
 
 if ( $wmgUseTitleKey ) {
-	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
+	 wfLoadExtension( 'TitleKey' );
 }
 
 if ( $wmgUseTorBlock ) {
-	require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+	 wfLoadExtension( 'TorBlock' );
 }
 
 if ( $wmgUseVariables ) {
@@ -425,29 +390,25 @@ if ( $wmgUseVariables ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension ( 'VisualEditor' );
-	
+
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid1.miraheze.org:443',
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
 	);
-
-
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 		$wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 	}
-
 	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
-
 	// Load TemplateData
 	wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseVoteNY ) {
-	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
+	 wfLoadExtension( 'VoteNY' );
 }
 
 if ( $wmgUseWebChat ) {
@@ -464,21 +425,20 @@ if ( $wmgUseWidgets ) {
 if ( $wmgUseWikibaseRepository ) {
 	$wgEnableWikibaseRepo = true;
 	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
-
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once( "/srv/mediawiki/config/Wikibase.php" );
 }
 
 if ( $wmgUseWikiForum ) {
-	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
+	 wfLoadExtension( 'WikiForum' );
 }
 
 if ( $wmgUsewikihiero ) {
-	require_once( "$IP/extensions/wikihiero/wikihiero.php" );
+	 wfLoadExtension( 'wikihiera' );
 }
 
 if ( $wmgUseWikiLove ) {
-	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
+	 wfLoadExtension( 'WikiLove' );
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
@@ -487,30 +447,4 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 
 if ( $wmgUseYouTube ) {
 	require_once( "$IP/extensions/YouTube/YouTube.php" );
-}
-
-// Permission variables
-if ( $wmgEditingMatrix ) {
-	$mhEM = $wmgEditingMatrix;
-	if ( $mhEM['anon'] ) {
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['*']['createpage'] = false;
-	}
-
-	if ( $mhEM['user'] ) {
-		$wgGroupPermissions['user']['edit'] = false;
-		$wgGroupPermissions['user']['createpage'] = false;
-	}
-
-	if ( $mhEM['editor'] ) {
-		$wgGroupPermissions['editor']['edit'] = true;
-		$wgGroupPermissions['editor']['createpage'] = true;
-		$wgAddGroups['sysop'][] = 'editor';
-		$wgRemoveGroups['sysop'][] = 'editor';
-	}
-
-	if ( $mhEM['sysop'] ) {
-		$wgGroupPermissions['sysop']['edit'] = true;
-		$wgGroupPermissions['sysop']['createpage'] = true;
-	}
 }
