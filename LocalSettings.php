@@ -2677,17 +2677,21 @@ $wgConf->settings = array(
 		'+wikicanadawiki' => array(
 			'Founder' => array(
 				'bureaucrat',
-				'autopatrolled',
-				'bot',
-				'confirmed',
-				'sysop',
-				'rollbacker',
 				'banned',
-				'moderator',
 			),
 			'moderator' => array(
 				'autopatrolled',
 				'confirmed',
+			),
+			'sysop' => array(
+				'moderator',
+			),
+			'bureaucrat' => array(
+				'moderator',
+				'confirmed',
+				'autopatrolled',
+				'rollback',
+				'bot',
 			),
 		),
 	),
@@ -3271,17 +3275,21 @@ $wgConf->settings = array(
 		'+wikicanadawiki' => array(
 			'Founder' => array(
 				'bureaucrat',
-				'autopatrolled',
-				'bot',
-				'confirmed',
-				'sysop',
-				'rollbacker',
 				'banned',
-				'moderator',
 			),
 			'moderator' => array(
 				'autopatrolled',
 				'confirmed',
+			),
+			'sysop' => array(
+				'moderator',
+			),
+			'bureaucrat' => array(
+				'moderator',
+				'confirmed',
+				'autopatrolled',
+				'rollback',
+				'bot',
 			),
 		),
 	),
