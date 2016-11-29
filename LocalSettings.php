@@ -4166,10 +4166,6 @@ if ( $wgDBname == 'extloadwiki' ) {
 	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
 }
 
-if ( $wgDBname == 'wikicanadawiki' ) {		
-	$wgGroupPermissions['*']['read'] = false;		
-}
-
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
         $wgLocalisationCacheConf['manualRecache'] = false;
 }
