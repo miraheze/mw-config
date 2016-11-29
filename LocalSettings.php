@@ -2683,6 +2683,11 @@ $wgConf->settings = array(
 				'sysop',
 				'rollbacker',
 				'banned',
+				'moderator',
+			),
+			'moderator' => array(
+				'autopatrolled',
+				'confirmed',
 			),
 		),
 	),
@@ -3093,6 +3098,21 @@ $wgConf->settings = array(
 			'Founder' => array(
 				'read' => true,
 			),
+			'moderator' => array(
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'undelete' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'deleted' => true,
+				'block' => true,
+				'protect' => true,
+				'ediprotected' => true,
+				'unblockself' => true,
+				'blockemail' => true,
+				'autopatrolled' => true,
+				'supressredirect' => true,
+			),
 		),
 		'+wikipucwiki' => array(
 			'*' => array(
@@ -3257,6 +3277,11 @@ $wgConf->settings = array(
 				'sysop',
 				'rollbacker',
 				'banned',
+				'moderator',
+			),
+			'moderator' => array(
+				'autopatrolled',
+				'confirmed',
 			),
 		),
 	),
