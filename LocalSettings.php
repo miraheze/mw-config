@@ -4177,7 +4177,7 @@ if ( $wgDBname == 'extloadwiki' ) {
 if ( $wgDBname == 'wikicanadawiki' ) {		
 	$wgGroupPermissions['*']['read'] = false;	
 	$wgWhitelistRead = array(
-    "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:PasswordReset", "MediaWiki:Common.css", "MediaWiki:Common.js"
+    "Main Page", "Special:UserLogin", "Special:UserLogout", "Special:PasswordReset", "MediaWiki:Common.css", "MediaWiki:Common.js", "Special:CreateAccount"
     );
 }
 
