@@ -557,6 +557,10 @@ $wgConf->settings = array(
 			'anon' => true,
 			'sysop' => true,
 		),
+		'+sthomaspriwiki' => array(
+			'user' => true,
+			'sysop' => true,
+		),
 		'+sylwiki' => array(
 			'anon' => true,
 			'user' => true,
