@@ -614,6 +614,10 @@ $wgConf->settings = array(
 		'marcoschriekwiki' => true,
 	),
 
+	'wgAllowSlowParserFunctions' => array(
+		'default' => false,
+		'trexwiki' => true,
+	),
 	// Dormancy policy && RC stuff
 	'wgRCMaxAge' => array(
 		'default' => 180 * 24 * 3600,
