@@ -1200,6 +1200,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePdfHandler' => array(
 		'default' => false,
+		'apneuverenigingwiki' => true,
 		'extloadwiki' => true,
 		'noalatalawiki' => true,
 	),
