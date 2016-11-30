@@ -1419,6 +1419,7 @@ $wgConf->settings = array(
 		'nvcwiki' => true,
 		'pathfinderwiki' => true,
 		'robloxscripterswiki' => true,
+		'rpgbrigadewiki' => true,
 		'rtwiki' => true,
 		'spiralwiki' => true,
 		'stellachronicawiki' => true,
