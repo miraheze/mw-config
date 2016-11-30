@@ -369,8 +369,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'adiapediawiki' => true,
-		'elerawiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
