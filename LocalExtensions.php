@@ -116,7 +116,7 @@ if ( $wmgUseDynamicPageList ) {
 }
 
 if ( $wmgUseDynamicPageList3 ) {
-	wfLoadExtension( 'DynamicPageList3' );
+	require_once( "$IP/extensions/DynamicPageList3/DynamicPageList.php" );
 }
 
 if ( $wmgUseEditcount ) {
