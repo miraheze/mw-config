@@ -1200,6 +1200,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
+		'constwiki' => true,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
 		'ggdrwiki' => true,
@@ -1214,6 +1215,7 @@ $wgConf->settings = array(
 	'wmgUsePdfHandler' => array(
 		'default' => false,
 		'apneuverenigingwiki' => true,
+		'constwiki' => true,
 		'extloadwiki' => true,
 		'noalatalawiki' => true,
 	),
