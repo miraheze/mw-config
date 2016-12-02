@@ -4225,8 +4225,3 @@ EOF;
 
 	return true;
 }
-// Debug
-if ( $wgDBname == 'metawiki' ) {
-	$wgShowExceptionDetails = true;
-}
-
