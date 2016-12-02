@@ -316,7 +316,7 @@ if ( $wmgUsePoll ) {
 }
 
 if ( $wmgUsePopups ) {
-	wfLoadExtension( 'PageImages/PageImages.php' );
+	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
 	wfLoadExtension( 'TextExtracts' );
 }
@@ -452,7 +452,7 @@ if ( $wmgUseVisualEditor ) {
 }
 
 if ( $wmgUseVoteNY ) {
-	wfLoadExtension( 'VoteNY/VoteNY.php' );
+	wfLoadExtension( 'VoteNY' );
 }
 
 if ( $wmgUseWebChat ) {
