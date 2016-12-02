@@ -209,10 +209,3 @@ $wgWhitelistRead =
 		"Special:UserLogout",
 		"Special:CreateAccount",
 );
-
-// Timeline
-putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
-$wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
-$wgTimelineSettings->perlCommand = "/usr/bin/perl";
-$wgTimelineSettings->fontFile = 'FreeSans';
-
