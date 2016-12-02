@@ -369,7 +369,7 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => "MediaWiki 1.28 database work.",
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -1208,6 +1208,7 @@ $wgConf->settings = array(
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
+		'savagewikiwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'virpatel524wiki' => true,
@@ -1608,6 +1609,7 @@ $wgConf->settings = array(
 		'rocketleaguequebecwiki' => true,
 		'rpcharacterswiki' => true,
 		'safiriawiki' => true,
+		'savagewikiwiki' => true,
 		'secondcirclewiki' => true,
 		'seldirwiki' => true,
 		'setonwiki' => true,
