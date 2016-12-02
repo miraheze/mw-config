@@ -369,7 +369,7 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => "MediaWiki 1.28 database work.",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
