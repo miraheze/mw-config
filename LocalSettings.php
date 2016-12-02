@@ -196,6 +196,14 @@ $wgConf->settings = array(
 		),
 	),
 
+	// Captcha
+	'wgCaptchaClass' => array(
+		'default' => 'ReCaptchaNoCaptcha',
+	),
+	'wgReCaptchaSendRemoteIP' => array(
+		'default' => false,
+	),
+
 	// CentralAuth
 	'wgCentralAuthAutoCreateWikis' => array(
 		'default' => array( 'loginwiki', 'metawiki' ),
@@ -369,7 +377,7 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => "MediaWiki 1.28 database work.",
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -844,6 +852,11 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ofthevampirewiki' => true,
 	),
+	'wmgUseDPLForum' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -959,8 +972,11 @@ $wgConf->settings = array(
 	),
 	'wmgUseHideSection' => array(
 		'default' => false,
+		'aktposwiki' => true,
 		'allthetropeswiki' => true,
+		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'hendrickswiki' => true,
 	),
 	'wmgUseHighlightLinksInCategory' => array(
 		'default' => false,
@@ -1016,12 +1032,12 @@ $wgConf->settings = array(
 		'secondcirclewiki' => true,
 	),
 	'wmgUseMaps' => array(
-		'default' => false,
-		'ayrshirewiki' => true,
-		'extloadwiki' => true,
-		'jayuwikiwiki' => true,
-		'noalatalawiki' => true,
-		'takethatwikiwiki' => true,
+		'default' => false, // Is not playing well with 1.28
+	//	'ayrshirewiki' => true,
+	//	'extloadwiki' => true,
+	//	'jayuwikiwiki' => true,
+	//	'noalatalawiki' => true,
+	//	'takethatwikiwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
@@ -1296,13 +1312,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'qwertywiki' => true,
 	),
-	'wmgUseSectionHide' => array(
-		'default' => false,
-		'aktposwiki' => true,
-		'developmentwiki' => true,
-		'extloadwiki' => true,
-		'hendrickswiki' => true,
-	),
 	'wmgUseShortURL' => array(
 		'default' => true,
 		'applewikiwiki' => false,
@@ -1341,6 +1350,11 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'extloadwiki' => true,
+	),
+	'wmgUseSubPageList3' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
@@ -1929,11 +1943,6 @@ $wgConf->settings = array(
 		'muckhackwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
-	),
-	
-	// Google Analytics settings
-	'wgGoogleAnalyticsAccount' => array(
-		'opengovpioneerswiki' => 'UA-3467930-17',
 	),
 
 	// GlobalBlocking
@@ -4053,11 +4062,6 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
 }
 
-require_once( "/srv/mediawiki/config/MissingWiki.php" );
-require_once( "/srv/mediawiki/config/GlobalLogging.php" );
-require_once( "/srv/mediawiki/config/RedisConfig.php" );
-require_once( "/srv/mediawiki/config/PrivateWikiWhitelist.php" );
-
 // Hard overrides that don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['bigdelete'] = false;
@@ -4066,36 +4070,6 @@ $wgGroupPermissions['sysop']['bigdelete'] = false;
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
-if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
-	$wgGroupPermissions['*']['edit'] = false;
-	$wgGroupPermissions['*']['createaccount'] = false;
-	$wgGroupPermissions['*']['autocreateaccount'] = true;
-	$wgGroupPermissions['user']['edit'] = false;
-	$wgGroupPermissions['user']['createaccount'] = false;
-	$wgGroupPermissions['sysop']['createaccount'] = false;
-	$wgGroupPermissions['sysop']['upload'] = false;
-	$wgGroupPermissions['sysop']['delete'] = false;
-	$wgGroupPermissions['sysop']['deletedtext'] = false;
-	$wgGroupPermissions['sysop']['deletedhistory'] = false;
-	$wgGroupPermissions['sysop']['deletelogentry'] = false;
-	$wgGroupPermissions['sysop']['deleterevision'] = false;
-	$wgGroupPermissions['sysop']['undelete'] = false;
-	$wgGroupPermissions['sysop']['import'] = false;
-	$wgGroupPermissions['sysop']['importupload'] = false;
-	$wgGroupPermissions['sysop']['edit'] = false;
-	$wgGroupPermissions['sysop']['block'] = false;
-	$wgGroupPermissions['sysop']['protect'] = false;
-	
-	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
-	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
-		$siteNotice .= <<<EOF
-			<div class=\"wikitable\" style=\"text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;\"> <span class=\"plainlinks\"><a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Miraheze Staff</a> has closed this wiki because there have been <b>no edits</b> or <b>or logs</b> made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to <a href="https://meta.miraheze.org/wiki/Requests_for_adoption">Requests for adoption</a> and make a request. If this wiki is not adopted within 6 months it may be deleted. </span></div>
-EOF;
-		return true;
-	}
-
-}
-
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
@@ -4103,14 +4077,6 @@ if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 	unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
 	$wgCentralAuthCookieDomain = $wmgHostname;
 }
-
-require_once( "/srv/mediawiki/config/LocalExtensions.php" );
-
-# Timeline
-putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
-$wgTimelineSettings->ploticusCommand = "/usr/bin/ploticus";
-$wgTimelineSettings->perlCommand = "/usr/bin/perl";
-$wgTimelineSettings->fontFile = 'FreeSans';
 
 # Footer icon
 $wgFooterIcons['poweredby']['miraheze'] = array(
@@ -4127,95 +4093,16 @@ if ( $wgDBname === 'permanentfuturelabwiki' ) {
 	);
 }
 
-# ReCaptcha
-$wgCaptchaClass = 'ReCaptchaNoCaptcha';
-$wgReCaptchaSendRemoteIP = false; // Don't send users' IPs
-
-# ircrcbot
-if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgRCFeeds['irc'] = array(
-		'formatter' => 'MirahezeIRCRCFeedFormatter',
-		'uri' => 'udp://185.52.1.76:5070',
-		'add_interwiki_prefix' => false,
-		'omit_bots' => true,
-	);
-}
-
-# Should be after LocalExtensions due to constants
-if ( $wgDBname === 'allthetropeswiki' ) {
-	$wgNamespaceContentModels[NS_TROPEWORKSHOP_TALK] = CONTENT_MODEL_FLOW_BOARD;
-	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
-}
-
-# Will remove this later --SPF
-if ( $wgDBname == 'extloadwiki' || $wgDBname == 'allthetropeswiki' ) {
-	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
-	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
-}
-
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
-	
-// Jayuwikiwiki ovverides
-if ( $wgDBname === 'jayuwikiwiki' ) {
-	$wgGroupPermissions['user']['move'] = false;
-	$wgGroupPermissions['user']['move-subpages'] = false;
-	$wgGroupPermissions['user']['move-categorypages'] = false;
-	$wgGroupPermissions['user']['movefile'] = false;
-	$wgGroupPermissions['user']['move-rootuserpages'] = false;
-	$wgGroupPermissions['user']['upload'] = false;
-	$wgGroupPermissions['user']['reupload-shared'] = false;
-}
-
-// sthomaspriwiki ovverides
-if ( $wgDBname === 'sthomaspriwiki' ) {
-	$wgGroupPermissions['sysop']['block'] = false;
-	$wgGroupPermissions['sysop']['blockemail'] = false;
-}
-
-// TestWiki overrides
-if ( $wgDBname === 'testwiki' ) {
-	$wgGroupPermissions['sysop']['nuke'] = false;
-	$wgGroupPermissions['sysop']['editinterface'] = false;
-}
-
-// trexwiki overrides
-if ( $wgDBname == 'trexwiki' ) {
-	$wgGroupPermissions['sysop']['nuke'] = false;
-	$wgGroupPermissions['sysop']['blockemail'] = false;
-	$wgGroupPermissions['sysop']['deletelogentry'] = false;
-	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['sysop']['deletedtext'] = false;
-	$wgGroupPermissions['sysop']['deletedhistory'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
-}
-
-if ( $wgDBname == 'metawiki' ) {
-	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
-
-	function wfModifyMetaTags( OutputPage $out ) {
-		$out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
-		$out->addMeta( 'revisit-after', '2 days' );
-		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
-	}
-}
-
-if ( $wgDBname == 'extloadwiki' ) {
-	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
-}
-
-if ( $wgDBname == 'wikicanadawiki' ) {		
-	$wgGroupPermissions['*']['read'] = false;
-}
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
         $wgLocalisationCacheConf['manualRecache'] = false;
 }
 
 // Global SiteNotice
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
@@ -4224,4 +4111,13 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
 
 	return true;
-}
+} */
+
+// Include other configuration file
+require_once( "/srv/mediawiki/config/GlobalLogging.php" );
+require_once( "/srv/mediawiki/config/LocalExtensions.php" );
+require_once( "/srv/mediawiki/config/MissingWiki.php" );
+require_once( "/srv/mediawiki/config/RedisConfig.php" );
+
+// Define last to avoid all dependencies
+require_once( "/srv/mediawiki/config/LocalWiki.php" );

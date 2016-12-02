@@ -1,5 +1,5 @@
 <?php
-require_once( "$IP/skins/CologneBlue/CologneBlue.php" );
+wfLoadSkin( 'CologneBlue' );
 wfLoadSkin( 'Modern' );
 wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Vector' );
