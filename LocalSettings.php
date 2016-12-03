@@ -1791,6 +1791,7 @@ $wgConf->settings = array(
 		'mikrodevwiki' => true,
 		'muckhackwiki' => true,
 		'ndnwiki' => true,
+		'noalatalawiki' => true,
 		'ontariobrasswiki' => true,
 		'openonderwijswiki' => true,
 		'plazmaburstwiki' => true,
