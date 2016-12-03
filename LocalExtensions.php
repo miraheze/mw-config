@@ -25,18 +25,19 @@ if ( $wmgUseApex ) {
 }
 
 if ( $wmgUseArticleFeedbackv5 ) {
-	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
+	wfLoadExtension( 'ArticleFeedbackv5' );
 }
 
 if ( $wmgUseArticleRatings ) {
-	wfLoadExtension( 'ArticleRatings' );}
+	wfLoadExtension( 'ArticleRatings' );
+}
 
 if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }
 
 if ( $wmgUseAutomaticBoardWelcome ) {
-	require_once( "$IP/extensions/AutomaticBoardWelcome/AutomaticBoardWelcome.php" );
+	wfLoadExtension( 'AutomaticBoardWelcome' );
 }
 
 if ( $wmgUseBetaFeatures ) {
@@ -50,11 +51,11 @@ if ( $wmgUseBlogPage ) {
 }
 
 if ( $wmgUseMSCalendar ) {
-	require_once( "$IP/extensions/MsCalendar/MsCalendar.php" );
+	wfLoadExtension( 'MsCalendar' );
 }
 
 if ( $wmgUseCategoryTree ) {
-	require_once( "$IP/extensions/CategoryTree/CategoryTree.php" );
+	wfLoadExtension( 'CategoryTree' );
 }
 
 if ( $wmgUseCharInsert ) {
@@ -70,7 +71,7 @@ if ( $wmgUseComments ) {
 }
 
 if ( $wmgUseContactPage ) {
-	require_once( "$IP/extensions/ContactPage/ContactPage.php" );
+	wfLoadExtension( 'ContactPage' );
 
 	// Contact Page is a fairly complex (well long) extension to configure.
 	// All config should be in the file below on a wikidb basis.
@@ -98,7 +99,7 @@ if ( $wmgUseCSS ) {
 }
 
 if ( $wmgUseCustomNavBlocks) {
-	require_once "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php";
+	require_once( "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php" );
 	$wgCustomNavBlocksEnable = true;
 }
 
@@ -106,8 +107,12 @@ if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 }
 
+if ( $wmgUseDPLForum ) {
+	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
+}
+
 if ( $wmgUseDynamicPageList ) {
-	require_once( "$IP/extensions/DynamicPageList/DynamicPageList.php" );
+	wfLoadExtension( 'DynamicPageList' );
 }
 
 if ( $wmgUseDynamicPageList3 ) {
@@ -171,11 +176,11 @@ if ( $wmgUseFeaturedFeeds ) {
 }
 
 if ( $wmgUseForeground ) {
-	require_once( "$IP/skins/foreground/foreground.php" );
+	wfLoadSkin( 'foreground' );
 }
 
 if ( $wmgUseHeaderTabs ) {
-	require_once( "$IP/extensions/HeaderTabs/HeaderTabs.php" );
+	wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {
 		// load LC despite SectionHide's strong objections
 		unset( $htUseHistory );
@@ -199,7 +204,7 @@ if ( $wmgUseJavascriptSlideshow ) {
 }
 
 if ( $wmgUseJosa ) {
-	require_once( "$IP/extensions/Josa/Josa.php" );
+	wfLoadExtension( 'Josa' );
 }
 
 if ( $wmgUseLabeledSectionTransclusion ) {
@@ -218,6 +223,7 @@ if ( $wmgUseLoopsCombo ) {
 if ( $wmgUseMaps ) {
 	require_once( "$IP/extensions/Maps/Maps.php" );
 	$egMapsDefaultService = 'openlayers';
+	$egMapsDisableSmwIntegration = true;
 }
 
 if ( $wmgUseMassEditRegex ) {
@@ -226,7 +232,7 @@ if ( $wmgUseMassEditRegex ) {
 }
 
 if ( $wmgUseMediaWikiChat ) {
-	require_once( "$IP/extensions/MediaWikiChat/MediaWikiChat.php" );
+	wfLoadExtension( 'MediaWikiChat' );
 }
 
 if ( $wmgUseMetrolook ) {
@@ -235,7 +241,7 @@ if ( $wmgUseMetrolook ) {
 
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
-	
+
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
@@ -244,17 +250,17 @@ if ( $wmgUseMonaco ) {
 }
 
 if ( $wmgUseMsPackage ) {
-	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+	wfLoadExtension( 'MsUpload' );
 	require_once( "$IP/extensions/MsLinks/MsLinks.php" );
 	require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
 }
 
 if ( $wmgUseMsUpload ) {
-	require_once( "$IP/extensions/MsUpload/MsUpload.php" );
+	wfLoadExtension( 'MsUpload' );
 }
 
 if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+	wfLoadExtension( 'MultimediaViewer' );
 }
 
 if ( $wmgUseMultiBoilerplate ) {
@@ -281,7 +287,7 @@ if ( $wmgUseNewUsersList ) {
 }
 
 if ( $wmgUseNostalgia ) {
-	require_once( "$IP/skins/Nostalgia/Nostalgia.php" );
+	wfLoadSkin( 'Nostalgia' );
 }
 
 if ( $wmgUseNoTitle ) {
@@ -310,9 +316,9 @@ if ( $wmgUsePoll ) {
 }
 
 if ( $wmgUsePopups ) {
-	require_once( "$IP/extensions/PageImages/PageImages.php" );
-	require_once( "$IP/extensions/Popups/Popups.php" );
-	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	wfLoadExtension( 'PageImages' );
+	wfLoadExtension( 'Popups' );
+	wfLoadExtension( 'TextExtracts' );
 }
 
 if ( $wmgUseQuiz ) {
@@ -328,8 +334,7 @@ if ( $wmgUseRefreshed ) {
 }
 
 if ( $wmgUseRelatedArticles ) {
-	require_once( "$IP/extensions/CustomData/CustomData.php" );
-	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+	wfLoadExtension( 'RelatedArticles' );
 }
 
 if ( $wmgUseReplaceText ) {
@@ -337,7 +342,7 @@ if ( $wmgUseReplaceText ) {
 }
 
 if ( $wmgUseRSS ) {
-	require_once( "$IP/extensions/RSS/RSS.php" );
+	wfLoadExtension( 'RSS' );
 	$wgRSSUrlWhitelist = array( "*" );
 }
 
@@ -351,10 +356,6 @@ if ( $wmgUseScratchBlocks ) {
 
 if ( $wmgUseSyntaxHighlight ) {
         $wgScribuntoUseGeSHi = true;
-}
-
-if ( $wmgUseSectionHide ) {
-	wfLoadExtension( 'SectionHide' );
 }
 
 if ( $wmgUseShortURL ) {
@@ -377,6 +378,10 @@ if ( $wmgUseSubpageFun ) {
 	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 }
 
+if ( $wmgUseSubPageList3 ) {
+	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
+}
+
 if ( $wmgUseSyntaxHighlight ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
@@ -387,7 +392,7 @@ if ( $wmgUseTabsCombination ) {
 }
 
 if ( $wmgUseTranslate ) {
-	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+	wfLoadExtension( 'UniversalLanguageSelector' );
 	require_once( "$IP/extensions/Translate/Translate.php" );
 	$wgGroupPermissions['sysop']['pagetranslation'] = true;
 	$wgGroupPermissions['sysop']['translate-import'] = true;
@@ -406,17 +411,17 @@ if ( $wmgUseTranslate ) {
 }
 
 if ( $wmgUseTimedMediaHandler ) {
-	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+	wfLoadExtension( 'MwEmbedSupport' );
 	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
 
 if ( $wmgUseTitleKey ) {
-	require_once( "$IP/extensions/TitleKey/TitleKey.php" );
+	wfLoadExtension( 'TitleKey' );
 }
 
 if ( $wmgUseTorBlock ) {
-	require_once( "$IP/extensions/TorBlock/TorBlock.php" );
+	wfLoadExtension( 'TorBlock' );
 }
 
 if ( $wmgUseVariables ) {
@@ -447,7 +452,7 @@ if ( $wmgUseVisualEditor ) {
 }
 
 if ( $wmgUseVoteNY ) {
-	require_once( "$IP/extensions/VoteNY/VoteNY.php" );
+	wfLoadExtension( 'VoteNY' );
 }
 
 if ( $wmgUseWebChat ) {
@@ -470,15 +475,15 @@ if ( $wmgUseWikibaseRepository ) {
 }
 
 if ( $wmgUseWikiForum ) {
-	require_once( "$IP/extensions/WikiForum/WikiForum.php" );
+	wfLoadExtension( 'WikiForum' );
 }
 
 if ( $wmgUsewikihiero ) {
-	require_once( "$IP/extensions/wikihiero/wikihiero.php" );
+	wfLoadExtension( 'wikihiero' );
 }
 
 if ( $wmgUseWikiLove ) {
-	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
+	wfLoadExtension( 'WikiLove' );
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
