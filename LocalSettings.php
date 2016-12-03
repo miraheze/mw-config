@@ -642,10 +642,10 @@ $wgConf->settings = array(
 	),
 
 	// Extensions and Skins
-	// AccessControl: due to security risks, use of this extension is at the founder's own risk.
-	// Prior to enabling the extension the founder should agree (on their own wiki, under their founder account!)
+	// AccessControl: due to security risks, use of this extension is at a wikis' calculated risk.
+	// Prior to enabling the extension a bureaucrat should agree (on their own wiki)
 	// that Miraheze is NOT responsible for any data leaks caused by this extension,
-	// and that the founder is fully responsible for the usage of AccessControl.
+	// and that the wiki and elevated users are fully responsible for the usage of AccessControl.
 	'wmgUseAccessControl' => array(
 		'default' => false,
 		'bmedwiki' => true,
