@@ -2719,7 +2719,6 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'rollback',
-				'bot',
 			),
 		),
 	),
