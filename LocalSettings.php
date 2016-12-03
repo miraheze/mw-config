@@ -2718,7 +2718,7 @@ $wgConf->settings = array(
 				'moderator',
 				'confirmed',
 				'autopatrolled',
-				'rollback',
+				'rollbacker',
 			),
 		),
 	),
