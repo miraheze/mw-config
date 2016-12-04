@@ -1036,12 +1036,12 @@ $wgConf->settings = array(
 		'secondcirclewiki' => true,
 	),
 	'wmgUseMaps' => array(
-		'default' => false, // Is not playing well with 1.28
-	//	'ayrshirewiki' => true,
+		'default' => false,
+		'ayrshirewiki' => true,
 		'extloadwiki' => true,
-	//	'jayuwikiwiki' => true,
-	//	'noalatalawiki' => true,
-	//	'takethatwikiwiki' => true,
+		'jayuwikiwiki' => true,
+		'noalatalawiki' => true,
+		'takethatwikiwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
