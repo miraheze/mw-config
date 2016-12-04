@@ -116,6 +116,8 @@ define( 'NS_FEATURED', 1688);
 define( 'NS_FEATURED_TALK', 1689);
 define( 'NS_ARTIKEL', 1690);
 define( 'NS_ARTIKEL_TALK', 1691);
+define( 'NS_VIDEO', 1692);
+define( 'NS_VIDEO_TALK', 1693);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -856,6 +858,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'rpgbrigadewiki' => true,
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
@@ -1029,6 +1032,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'marcoschriekwiki' => true,
 		'ndnwiki' => true,
+		'rpgbrigadewiki' => true,
 		'secondcirclewiki' => true,
 	),
 	'wmgUseMaps' => array(
@@ -1181,6 +1185,7 @@ $wgConf->settings = array(
 		'lbsgeswiki' => true,
 		'luckandlogicwiki' => true,
 		'openconstitutionwiki' => true,
+		'rpgbrigadewiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 		'wikipucwiki' => true,
@@ -2278,6 +2283,10 @@ $wgConf->settings = array(
 		'reviwiki' => array(
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
+		),
+		'rpgbrigadewiki' => array(
+			NS_VIDEO => 'Video',
+			NS_VIDEO_TALK => 'Video_talk',
 		),
 		'safiriawiki' => array(
 			NS_HOENN => 'Hoenn',
