@@ -4109,11 +4109,21 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
- $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
 	<td><a href="https://meta.miraheze.org/wiki/Miraheze">Miraheze</a> invites all users to comment on <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Stewards">this Request for Comment</a> regarding <a href="https://meta.miraheze.org/wiki/Stewards">Stewards</a>. The consensus gathered in this RfC will be used to draft an official policy regarding the responsibilities, appointment, and removal of all Stewards.</td>
+	</tr></tbody></table>
+EOF;
+
+	return true;
+}*/
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	$siteNotice .= <<<EOF
+	<table class="wikitable" style="text-align:center;"><tbody><tr>
+	<td><b>Miraheze notice:</b> our database server died, and we are migrating all wikis to a new server now. Please follow our <a href="https://facebook.com/miraheze">Facebook</a> and <a href="https://twitter.com/miraheze">Twitter</a> pages for status updates, or visit us on IRC.</td>
 	</tr></tbody></table>
 EOF;
 
