@@ -379,7 +379,7 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => 'Miraheze is fixing a critical issue with its database servers.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
