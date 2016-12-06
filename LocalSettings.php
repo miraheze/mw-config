@@ -379,7 +379,8 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => 'Miraheze is fixing a critical issue with its database servers.',
+		'default' => false, // 'Miraheze is fixing a critical issue with its database servers.',
+		'allthetropeswiki' => 'Miraheze is still investigating issues resulting from migrating All The Tropes to the new database server.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
