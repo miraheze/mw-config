@@ -106,6 +106,11 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 }
 
+// Depends on $wgContentNamespaces
+if ( $wgDBname == 'abitaregeawiki' ) {
+	$wgExemptFromUserRobotsControl = array();
+}
+
 $wgWhitelistRead =
 	array(
 		"Main Page",
