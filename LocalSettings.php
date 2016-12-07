@@ -687,6 +687,7 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'worldbattlewiki' => true,
 		'yugiohwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
@@ -766,6 +767,7 @@ $wgConf->settings = array(
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -3170,6 +3172,9 @@ $wgConf->settings = array(
 				'autopatrolled' => true,
 				'supressredirect' => true,
 			),
+			'sysop' => array(
+				'protectsite' => true
+		
 		),
 		'+wikipucwiki' => array(
 			'*' => array(
