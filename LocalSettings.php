@@ -3174,6 +3174,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'protectsite' => true
+			),	
 		
 		),
 		'+wikipucwiki' => array(
