@@ -2717,9 +2717,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikicanadawiki' => array(
-			'Founder' => array(
+			'founder' => array(
 				'bureaucrat',
 				'banned',
+				'founder',
 			),
 			'moderator' => array(
 				'autopatrolled',
@@ -3146,8 +3147,12 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikicanadawiki' => array(
-			'Founder' => array(
+			'founder' => array(
 				'read' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'renameuser' => true,
+				'usermerge' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
@@ -3320,9 +3325,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikicanadawiki' => array(
-			'Founder' => array(
+			'founder' => array(
 				'bureaucrat',
 				'banned',
+				'founder',
 			),
 			'moderator' => array(
 				'autopatrolled',
