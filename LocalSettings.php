@@ -1269,6 +1269,14 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'wikipucwiki' => true,
 	),
+	
+	'wmgUseProtectSite' => array(
+		'default' => false
+		'extloadwiki => true
+		'wikicanadawiki' => true
+		
+	
+	),
 	'wmgUseQuiz' => array(
 		'default' => false,
 		'extloadwiki' => true,
