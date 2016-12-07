@@ -322,7 +322,7 @@ if ( $wmgUsePopups ) {
 }
 
 if ( $wmgUseProtectSite ) {
-	require_once( "$IP/extensions/ProtectSite/ProtectSite.php" );
+	wfLoadExtension( 'ProtectSite' );
 }
 
 if ( $wmgUseQuiz ) {
