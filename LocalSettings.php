@@ -1272,6 +1272,8 @@ $wgConf->settings = array(
 	'wmgUseProtectSite' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'sthomaspriwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
