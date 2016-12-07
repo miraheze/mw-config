@@ -701,6 +701,14 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
+	
+	'wmgUseApprovedRevs' => array(
+		'default' => false
+		'extloadwiki => true
+		'wikicanadawiki' => true
+	
+        ),
+	
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
 		'applewikiwiki' => true,
