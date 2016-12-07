@@ -321,6 +321,10 @@ if ( $wmgUsePopups ) {
 	wfLoadExtension( 'TextExtracts' );
 }
 
+if ( $wmgUseProtectSite ) {
+	wfLoadExtension( 'ProtectSite' );
+}
+
 if ( $wmgUseQuiz ) {
 	wfLoadExtension( 'Quiz' );
 }
