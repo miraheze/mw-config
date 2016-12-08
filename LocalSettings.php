@@ -812,6 +812,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
 		'wikidolphinhansenwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
