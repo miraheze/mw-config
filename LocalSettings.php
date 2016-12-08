@@ -4131,16 +4131,16 @@ EOF;
 
 	return true;
 }*/
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td style="font-size: 14px;"><b>Miraheze notice:</b> all wikis will be put in read-only mode on December 6, 2016 15:20 UTC for a database server migration. Please save your edits <u>before</u> 15:20 UTC! You can follow our <a href="https://facebook.com/miraheze">Facebook</a> and <a href="https://twitter.com/miraheze">Twitter</a> pages for status updates, or visit us on IRC.</td>
+	<td style="font-size: 14px;"><b>Miraheze notice:</b> all wikis will be put in read-only mode on December 8, 2016 17:45 UTC for a final database server migration. Please save your edits <u>before</u> 17:45 UTC! You can follow our <a href="https://facebook.com/miraheze">Facebook</a> and <a href="https://twitter.com/miraheze">Twitter</a> pages for status updates, or visit us on IRC.</td>
 	</tr></tbody></table>
 EOF;
 
 	return true;
-}*/
+}
 
 // Include other configuration file
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
