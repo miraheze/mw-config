@@ -3156,7 +3156,7 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikicanadawiki' => array(
-			'Founder' => array(
+			'founder' => array(
 				'read' => true,
 			),
 			'moderator' => array(
