@@ -1480,6 +1480,7 @@ $wgConf->settings = array(
 		'openconstitutionwiki' => true,
 		'robloxscripterswiki' => true,
 		'wikidolphinhansenwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
