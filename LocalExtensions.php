@@ -123,6 +123,10 @@ if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
 }
 
+if ( $wmgUseEducationProgram ) {
+	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
+}
+
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }

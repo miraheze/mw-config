@@ -894,6 +894,10 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 
 	),
+	'wmgUseEducationProgram' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseErudite' => array(
 		'default' => false,
 		'bdorpwiki' => true,
