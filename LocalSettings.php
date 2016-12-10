@@ -1302,6 +1302,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRefreshed' => array(
 		'default' => false,
+		'allthetropeswiki', => true,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
