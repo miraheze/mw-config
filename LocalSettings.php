@@ -1302,7 +1302,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRefreshed' => array(
 		'default' => false,
-		'extloadwiki' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
