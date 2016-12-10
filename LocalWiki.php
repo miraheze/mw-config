@@ -110,6 +110,8 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 if ( $wgDBname == 'abitaregeawiki' ) {
 	$wgExemptFromUserRobotsControl = array();
 }
+// Math overrides 
+$wgMathValidModes = 'png';
 
 $wgWhitelistRead =
 	array(
