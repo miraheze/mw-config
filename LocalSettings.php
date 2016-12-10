@@ -898,7 +898,7 @@ $wgConf->settings = array(
 	'wmgUseEducationProgram' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'lezar224' => true,
+		'lezar224wiki' => true,
 	),
 	'wmgUseErudite' => array(
 		'default' => false,
