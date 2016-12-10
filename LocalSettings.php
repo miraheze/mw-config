@@ -1301,8 +1301,11 @@ $wgConf->settings = array(
 		'russiawatchwiki' => true,
 	),
 	'wmgUseRefreshed' => array(
+		'applebranchwiki' => true,
+		'applewikiwiki' => true,
 		'default' => false,
 		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
