@@ -3197,6 +3197,7 @@ $wgConf->settings = array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
 				'ajaxpoll-view-results' => true,
+				'voteny' => true,
 			),
 		),
 	),
