@@ -1053,7 +1053,6 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
-		'wikidmatlandwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
@@ -1080,6 +1079,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
+		'applebranchwiki' => false,
+		'applewikiwiki'=> false,
 		'izanagiwiki' => false,
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
@@ -3197,7 +3198,6 @@ $wgConf->settings = array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
 				'ajaxpoll-view-results' => true,
-				'voteny' => true,
 			),
 		),
 	),
@@ -3580,6 +3580,8 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 	        '3dicwiki' => 'foreground',
+		'applebranchwiki' => 'refreshed',
+		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
