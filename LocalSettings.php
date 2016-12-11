@@ -1053,6 +1053,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
+		'wikidmatlandwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
@@ -3198,6 +3199,7 @@ $wgConf->settings = array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
 				'ajaxpoll-view-results' => true,
+				'voteny' => true,
 			),
 		),
 	),
