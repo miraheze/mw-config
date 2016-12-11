@@ -3936,6 +3936,7 @@ $wgConf->settings = array(
 			'carving\.wiki',
 			'wiki.dottorconte\.eu',
 			'wiki.downhillderelicts\.com',
+			'wiki.drones4nature.info',
 			'wiki.dwplive\.com',
 			'fibromyalgia-engineer\.com',
 			'wiki.forfunssake\.co.uk',
