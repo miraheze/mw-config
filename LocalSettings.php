@@ -1080,6 +1080,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
+		'applebranchwiki' => false,
+		'applewikiwiki'=> false,
 		'izanagiwiki' => false,
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
@@ -3580,6 +3582,8 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 	        '3dicwiki' => 'foreground',
+		'applebranchwiki' => 'refreshed',
+		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
