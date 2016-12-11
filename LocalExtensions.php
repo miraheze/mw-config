@@ -123,6 +123,10 @@ if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
 }
 
+if ( $wmgUseEducationProgram ) {
+	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
+}
+
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }
@@ -319,6 +323,10 @@ if ( $wmgUsePopups ) {
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
 	wfLoadExtension( 'TextExtracts' );
+}
+
+if ( $wmgUseProtectSite ) {
+	wfLoadExtension( 'ProtectSite' );
 }
 
 if ( $wmgUseQuiz ) {

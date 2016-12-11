@@ -116,6 +116,8 @@ define( 'NS_FEATURED', 1688);
 define( 'NS_FEATURED_TALK', 1689);
 define( 'NS_ARTIKEL', 1690);
 define( 'NS_ARTIKEL_TALK', 1691);
+define( 'NS_VIDEO', 1692);
+define( 'NS_VIDEO_TALK', 1693);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -238,7 +240,6 @@ $wgConf->settings = array(
 			'thelonsdalebattalion.co.uk' => 'thelonsdalebattalionwiki',
 			'thinkingliquid.org' => 'thinkingliquidwiki',
 			'universebuild.com' => 'universebuildwiki',
-			'wiki.a22.dk' => 'wikia22wiki',
 			'wiki.aenasan.com' => 'aenasanwiki',
 			'wiki.dottorconte.eu' => 'dottorcontewiki',
 			'wiki.dwplive.com' => 'dwplivewiki',
@@ -303,6 +304,7 @@ $wgConf->settings = array(
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/Comments/sql/comments.sql",
 			"$IP/extensions/Echo/echo.sql",
+			"$IP/extensions/EducationProgram/sql/EducationProgram.sql",
 			"$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
 			"$IP/extensions/Flow/flow.sql",
 			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
@@ -377,7 +379,7 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => false, // 'Miraheze is performing its final database server migration. It will take approximately 2 to 3 hours, so we expect to finish it between 19:45 and 20:45 UTC.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -642,10 +644,10 @@ $wgConf->settings = array(
 	),
 
 	// Extensions and Skins
-	// AccessControl: due to security risks, use of this extension is at the founder's own risk.
-	// Prior to enabling the extension the founder should agree (on their own wiki, under their founder account!)
+	// AccessControl: due to security risks, use of this extension is at a wikis' calculated risk.
+	// Prior to enabling the extension a bureaucrat should agree (on their own wiki)
 	// that Miraheze is NOT responsible for any data leaks caused by this extension,
-	// and that the founder is fully responsible for the usage of AccessControl.
+	// and that the wiki and elevated users are fully responsible for the usage of AccessControl.
 	'wmgUseAccessControl' => array(
 		'default' => false,
 		'bmedwiki' => true,
@@ -685,6 +687,7 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'worldbattlewiki' => true,
 		'yugiohwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
@@ -764,6 +767,7 @@ $wgConf->settings = array(
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -810,6 +814,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
 		'wikidolphinhansenwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseContactPage' => array(
 		'default' => false, // Add wiki config to ContactPage.php
@@ -856,6 +861,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'rpgbrigadewiki' => true,
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
@@ -883,10 +889,16 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
-		'trexwiki' => true,
-		'perpuswiki' => true,
 		'muckhackwiki' => true,
+		'perpuswiki' => true,
 		'sthomaspriwiki' => true,
+		'trexwiki' => true,
+
+	),
+	'wmgUseEducationProgram' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'lezar224wiki' => true,
 	),
 	'wmgUseErudite' => array(
 		'default' => false,
@@ -934,6 +946,7 @@ $wgConf->settings = array(
 		'ircwiki' => true,
 		'korachwiki' => true,
 		'kwikiwiki' => true,
+		'lezar224wiki' => true,
 		'marcoschriekwiki' => true,
 		'moziwiki' => true,
 		'muckhackwiki' => true,
@@ -944,6 +957,7 @@ $wgConf->settings = array(
 		'ricwiki' => true,
 		'soshomophobiewiki' => true,
 		'spiralwiki' => true,
+		'sthomaspriwiki' => true,
 		'takethatwikiwiki' => true,
 		'touhouenginewiki' => true,
 		'universebuildwiki' => true,
@@ -1029,15 +1043,16 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'marcoschriekwiki' => true,
 		'ndnwiki' => true,
+		'rpgbrigadewiki' => true,
 		'secondcirclewiki' => true,
 	),
 	'wmgUseMaps' => array(
-		'default' => false, // Is not playing well with 1.28
-	//	'ayrshirewiki' => true,
-	//	'extloadwiki' => true,
-	//	'jayuwikiwiki' => true,
-	//	'noalatalawiki' => true,
-	//	'takethatwikiwiki' => true,
+		'default' => false,
+		'ayrshirewiki' => true,
+		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
+		'noalatalawiki' => true,
+		'takethatwikiwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
@@ -1087,7 +1102,6 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'amaninfowiki' => true,
-		'anduinwiki' => true,
 		'ayrshirewiki' => true,
 		'bgowiki' => true,
 		'chandruswethswiki' => true,
@@ -1121,6 +1135,7 @@ $wgConf->settings = array(
 		'ndnwiki' => true,
 		'robloxscripterswiki' => true,
 		'rpgbrigadewiki' => true,
+		'sthomaspriwiki' => true,
 		'takethatwikiwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
@@ -1182,6 +1197,7 @@ $wgConf->settings = array(
 		'lbsgeswiki' => true,
 		'luckandlogicwiki' => true,
 		'openconstitutionwiki' => true,
+		'rpgbrigadewiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
 		'wikipucwiki' => true,
@@ -1197,6 +1213,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ndnwiki' => true,
 		'secondcirclewiki' => true,
+		'sthomaspriwiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUsePageTriage' => array(
@@ -1209,6 +1226,7 @@ $wgConf->settings = array(
 		'ndnwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
+		'sthomaspriwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1224,6 +1242,7 @@ $wgConf->settings = array(
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
+		'savagewikiwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'virpatel524wiki' => true,
@@ -1260,6 +1279,12 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'wikipucwiki' => true,
 	),
+	'wmgUseProtectSite' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'sthomaspriwiki' => true,
+		'wikicanadawiki' => true,
+	),
 	'wmgUseQuiz' => array(
 		'default' => false,
 		'extloadwiki' => true,
@@ -1277,7 +1302,10 @@ $wgConf->settings = array(
 	),
 	'wmgUseRefreshed' => array(
 		'default' => false,
-		'extloadwiki' => false,
+		'applebranchwiki' => true,
+		'applewikiwiki' => true,
+		'extloadwiki' => true,
+		'inazumaelevenwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
@@ -1324,8 +1352,8 @@ $wgConf->settings = array(
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 		'jakeperswiki' => true,
-		'trexwiki' => true,
 		'perpuswiki' => true,
+		'trexwiki' => true,
 	),
 	'wmgUseSiteScout' => array(
 		'default' => false,
@@ -1341,8 +1369,9 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
-		'micropediawiki' => true,
 		'ircwiki' => true,
+		'lezar224wiki' => true,
+		'micropediawiki' => true,
 		'priyowiki' => true,
 		'robloxscripterswiki' => true,
 		'stellachronicawiki' => true,
@@ -1372,7 +1401,6 @@ $wgConf->settings = array(
 		'ezdmfwiki' => true,
 		'hendrickswiki' => true,
 		'jayuwikiwiki' => true,
-		'trexwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
@@ -1388,6 +1416,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 		'tmewiki' => true,
+		'trexwiki' => true,
 		'touhouenginewiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
@@ -1462,6 +1491,7 @@ $wgConf->settings = array(
 		'openconstitutionwiki' => true,
 		'robloxscripterswiki' => true,
 		'wikidolphinhansenwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
 		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
@@ -1551,7 +1581,6 @@ $wgConf->settings = array(
 		'hshsinfoportalwiki' => true,
 		'hsoodenwiki' => true,
 		'hytecwiki' => true,
-		'trexwiki' => true,
 		'ilearnthingswiki' => true,
 		'imstswiki' => true,
 		'inazumaelevenwiki' => true,
@@ -1568,6 +1597,7 @@ $wgConf->settings = array(
 		'lancemedicalwiki' => true,
 		'lbsgeswiki' => true,
 		'lclwikiwiki' => true,
+		'lezar224wiki' => true,
 		'lingnlangwiki' => true,
 		'littlebigplanetwiki' => true,
 		'lizardwiki' => true,
@@ -1622,6 +1652,7 @@ $wgConf->settings = array(
 		'rocketleaguequebecwiki' => true,
 		'rpcharacterswiki' => true,
 		'safiriawiki' => true,
+		'savagewikiwiki' => true,
 		'secondcirclewiki' => true,
 		'seldirwiki' => true,
 		'setonwiki' => true,
@@ -1652,6 +1683,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'touhouenginewiki' => true,
+		'trexwiki' => true,
 		'unikumwiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
@@ -1790,6 +1822,7 @@ $wgConf->settings = array(
 		'mikrodevwiki' => true,
 		'muckhackwiki' => true,
 		'ndnwiki' => true,
+		'noalatalawiki' => true,
 		'ontariobrasswiki' => true,
 		'openonderwijswiki' => true,
 		'plazmaburstwiki' => true,
@@ -1911,7 +1944,6 @@ $wgConf->settings = array(
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
-		'+anduinwiki' => array('ogv' ),
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
 		'+exitsincwiki' => array('txt' ),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
@@ -2278,6 +2310,10 @@ $wgConf->settings = array(
 		'reviwiki' => array(
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
+		),
+		'rpgbrigadewiki' => array(
+			NS_VIDEO => 'Video',
+			NS_VIDEO_TALK => 'Video_talk',
 		),
 		'safiriawiki' => array(
 			NS_HOENN => 'Hoenn',
@@ -2703,9 +2739,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikicanadawiki' => array(
-			'Founder' => array(
+			'founder' => array(
 				'bureaucrat',
 				'banned',
+				'founder',
 			),
 			'moderator' => array(
 				'autopatrolled',
@@ -2718,8 +2755,7 @@ $wgConf->settings = array(
 				'moderator',
 				'confirmed',
 				'autopatrolled',
-				'rollback',
-				'bot',
+				'rollbacker',
 			),
 		),
 	),
@@ -2954,88 +2990,6 @@ $wgConf->settings = array(
 				'blockemail' => true,
 			),
 		),
-		'+trexwiki' => array(
-			'co' => array(
-				'co' => true,
-				'ceo' => true,
-				'reviewer' => true,
-				'protect' => true,
-			),
-			'ceo' => array(
-				'ceo' => true,
-				'blockemail' => true,
-				'block' => true,
-				'ipblock-exempt' => true,
-				'proxyunbannable' => true,
-				'protect' => true,
-				'managechangetags' => true,
-				'createaccount' => true,
-				'flow-delete' => true,
-				'deletelogentry' => true,
-				'deleterevision' => true,
-				'delete' => true,
-				'globalblock-whitelist' => true,
-				'flow-edit-post' => true,
-				'editusercss' => true,
-				'edituserjs' => true,
-				'editprotected' => true,
-				'editsemiprotected' => true,
-				'editinterface' => true,
-				'autopatrol' => true,
-				'importupload' => true,
-				'import' => true,
-				'flow-lock' => true,
-				'patrol' => true,
-				'markbotedits' => true,
-				'nuke' => true,
-				'mergehistory' => true,
-				'abusefilter-modify' => true,
-				'abusefilter-modify-restricted' => true,
-				'move-categorypages' => true,
-				'movefile' => true,
-				'move' => true,
-				'move-subpages' => true,
-				'move-rootuserpages' => true,
-				'autoconfirmed' => true,
-				'noratelimit' => true,
-				'suppressredirect' => true,
-				'reupload-shared' => true,
-				'override-antispoof' => true,
-				'tboverride' => true,
-				'reupload' => true,
-				'skipcaptcha' => true,
-				'rollback' => true,
-				'abusefilter-revert' => true,
-				'browsearchive' => true,
-				'massmessage' => true,
-				'unblockself' => true,
-				'undelete' => true,
-				'upload' => true,
-				'apihighlimits' => true,
-				'mf-uploadbutton' => true,
-				'unwatchedpages' => true,
-				'deletedhistory' => true,
-				'deletedtext' => true,
-				'spamblacklistlog' => true,
-				'titleblacklistlog' => true,
-				'validate' => true,
-				'autoreview' => true,
-				'autochecked users' => true,
-				'editors' => true,
-			),
-			'bureaucrat' => array(
-				'bureaucrat' => true,
-				'nuke' => true,
-				'movefile' => true,
-				'blockemail' => true,
-			),
-			'sysmag' => array(
-				'autoreview' => true,
-				'autoconfirmed' => true,
-				'autopatrolled' => true,
-				'editinterface' => true,
-			),
-		),
 		'+metawiki' => array(
 			'steward' => array(
 				'abusefilter-modify-global' => true,
@@ -3122,6 +3076,88 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		),
+		'+trexwiki' => array(
+			'co' => array(
+				'co' => true,
+				'ceo' => true,
+				'reviewer' => true,
+				'protect' => true,
+			),
+			'ceo' => array(
+				'ceo' => true,
+				'blockemail' => true,
+				'block' => true,
+				'ipblock-exempt' => true,
+				'proxyunbannable' => true,
+				'protect' => true,
+				'managechangetags' => true,
+				'createaccount' => true,
+				'flow-delete' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'delete' => true,
+				'globalblock-whitelist' => true,
+				'flow-edit-post' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'editprotected' => true,
+				'editsemiprotected' => true,
+				'editinterface' => true,
+				'autopatrol' => true,
+				'importupload' => true,
+				'import' => true,
+				'flow-lock' => true,
+				'patrol' => true,
+				'markbotedits' => true,
+				'nuke' => true,
+				'mergehistory' => true,
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'move-categorypages' => true,
+				'movefile' => true,
+				'move' => true,
+				'move-subpages' => true,
+				'move-rootuserpages' => true,
+				'autoconfirmed' => true,
+				'noratelimit' => true,
+				'suppressredirect' => true,
+				'reupload-shared' => true,
+				'override-antispoof' => true,
+				'tboverride' => true,
+				'reupload' => true,
+				'skipcaptcha' => true,
+				'rollback' => true,
+				'abusefilter-revert' => true,
+				'browsearchive' => true,
+				'massmessage' => true,
+				'unblockself' => true,
+				'undelete' => true,
+				'upload' => true,
+				'apihighlimits' => true,
+				'mf-uploadbutton' => true,
+				'unwatchedpages' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'spamblacklistlog' => true,
+				'titleblacklistlog' => true,
+				'validate' => true,
+				'autoreview' => true,
+				'autochecked users' => true,
+				'editors' => true,
+			),
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'nuke' => true,
+				'movefile' => true,
+				'blockemail' => true,
+			),
+			'sysmag' => array(
+				'autoreview' => true,
+				'autoconfirmed' => true,
+				'autopatrolled' => true,
+				'editinterface' => true,
+			),
+		),
 		'+vrgowiki' => array(
 			'Teachers' => array(
 				'edit' => true,
@@ -3133,7 +3169,7 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikicanadawiki' => array(
-			'Founder' => array(
+			'founder' => array(
 				'read' => true,
 			),
 			'moderator' => array(
@@ -3151,6 +3187,10 @@ $wgConf->settings = array(
 				'autopatrolled' => true,
 				'supressredirect' => true,
 			),
+			'sysop' => array(
+				'protectsite' => true
+			),	
+		
 		),
 		'+wikipucwiki' => array(
 			'*' => array(
@@ -3231,26 +3271,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+trexwiki' => array(
-			'co' => array(
-				'ceo',
-			),
-			'ceo' => array(
-				'autopatrolled',
-				'bot',
-				'bureaucrat',
-				'confirmed',
-				'sysop',
-				'rollbacker',
-				'sysmag',
-				'editors',
-				'reviewer',
-				'autochecked users',
-			),
-			'bureaucrat' => array(
-				'sysmag',
-			),
-		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -3274,6 +3294,26 @@ $wgConf->settings = array(
 			'steward' => array(
 				'consul',
 				'exampleuser',
+			),
+		),
+		'+trexwiki' => array(
+			'co' => array(
+				'ceo',
+			),
+			'ceo' => array(
+				'autopatrolled',
+				'bot',
+				'bureaucrat',
+				'confirmed',
+				'sysop',
+				'rollbacker',
+				'sysmag',
+				'editors',
+				'reviewer',
+				'autochecked users',
+			),
+			'bureaucrat' => array(
+				'sysmag',
 			),
 		),
 		'studynotekrwiki' => array(
@@ -3307,9 +3347,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+wikicanadawiki' => array(
-			'Founder' => array(
+			'founder' => array(
 				'bureaucrat',
 				'banned',
+				'founder',
 			),
 			'moderator' => array(
 				'autopatrolled',
@@ -3394,14 +3435,14 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
+		'+studynotekrwiki' => array(
+			'voter',
+		),
 		'+trexwiki' => array(
 			'sysmag',
 			'bureaucrat',
 			'ceo',
 			'co',
-		),
-		'+studynotekrwiki' => array(
-			'voter',
 		),
 	),
 		
@@ -3481,7 +3522,6 @@ $wgConf->settings = array(
 		'thinkingliquidwiki' => 'https://thinkingliquid.org',
 		'universebuildwiki' => 'https://universebuild.com',
 		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
-		'wikia22wiki' => 'https://wiki.a22.dk',
 		'wikikaisagawiki' => 'https://wiki.kaisaga.com',
 		'wikiparkinsonwiki' => 'https://wikiparkinson.org',
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
@@ -3558,7 +3598,6 @@ $wgConf->settings = array(
 		'aenasanwiki' => "//$wmgUploadHostname/aenasanwiki/e/e6/AEfav.ico",
 		'alwikiwiki' => "//$wmgUploadHostname/alwikiwiki/5/59/ALWikiFavicon.ico",
 		'amaninfowiki' => "//$wmgUploadHostname/amaninfowiki/6/64/Favicon.ico",
-		'anduinwiki' => "//$wmgUploadHostname/anduinwiki/9/96/Favicon.jpg",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/6/64/Favicon.ico",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
 		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png",
@@ -3614,6 +3653,7 @@ $wgConf->settings = array(
 		'rpgbrigadewiki' => "//$wmgUploadHostname/rpgbrigadewiki/6/64/Favicon.ico",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/f/fc/Safiria_wiki_favicon.png",
 		'saliorpediawiki' => "//$wmgUploadHostname/saliorpediawiki/a/ac/Favicon-1.png",
+		'savagewikiwiki' => "//$wmgUploadHostname/savagewikiwiki/6/64/Favicon.ico",
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/5/5c/Favicon_logo.png",
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/c/c4/SHA_Favicon.svg",
 		'sirikotwiki' => '//sirikot.com/favicon.png',
@@ -3658,7 +3698,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
 		'alwikiwiki' => "//$wmgUploadHostname/alwikiwiki/3/35/WikiLogo.png",
 		'amaninfowiki' => "//$wmgUploadHostname/amaninfowiki/c/c9/Logo.png",
-		'anduinwiki' => "//$wmgUploadHostname/anduinwiki/c/c9/Logo.png",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/3/3b/Wiki_logo.png",
 		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/0/03/AppleBranch_135.png",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/c/c9/AppleWikilogo.PNG",
@@ -3768,6 +3807,7 @@ $wgConf->settings = array(
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
 		'sapperpediawiki' => "//$wmgUploadHostname/sapperpediawiki/f/f8/Sapperpedia_small.png",
 		'saliorpediawiki' => "//$wmgUploadHostname/saliorpediawiki/9/98/BirdRoc.png",
+		'savagewikiwiki' => "//$wmgUploadHostname/savagewikiwiki/9/98/Sav_Wiki_logo.jpg",
 		'sdeuropewiki' => "//$wmgUploadHostname/sdeuropewiki/d/d4/Logo.jpg",
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/4/41/RepUsLogo_small.png",
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/e/e3/SHA_Wiki_logo.svg",
@@ -4102,16 +4142,26 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td>MediaWiki 1.28 upgrade: Following the previous attempt, Miraheze has tested MediaWiki 1.28 and is satisfied a deployment is possible. Therefore, at around 19:30 UTC wikis will be put into read-only while the relevant changes are made to deploy 1.28. The window for this is expected to be short ranging from 30 minutes to 1 hour. If you have any issues, speak to #miraheze on freenode.net.</td>
+	<td><a href="https://meta.miraheze.org/wiki/Miraheze">Miraheze</a> invites all users to comment on <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Stewards">this Request for Comment</a> regarding <a href="https://meta.miraheze.org/wiki/Stewards">Stewards</a>. The consensus gathered in this RfC will be used to draft an official policy regarding the responsibilities, appointment, and removal of all Stewards.</td>
 	</tr></tbody></table>
 EOF;
 
 	return true;
-} */
+}*/
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	$siteNotice .= <<<EOF
+	<table class="wikitable" style="text-align:center;"><tbody><tr>
+	<td style="font-size: 14px;">Miraheze has completed the database server migration. All wikis should be working as usual now, and Miraheze will work on publishing an explanation of this incident soon.</td>
+	</tr></tbody></table>
+EOF;
+
+	return true;
+}
 
 // Include other configuration file
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
