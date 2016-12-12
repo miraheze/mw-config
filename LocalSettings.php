@@ -3402,11 +3402,7 @@ $wgConf->settings = array(
  				'read' => true,
 				'edit' => true,
  			),
-			'user' => array(
-				'applychangetags' => true,
-				'managechangetags' => true,
-				'changetags' => true,
-			),
+			
  		),
 	),
 
