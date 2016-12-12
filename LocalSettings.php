@@ -2755,6 +2755,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
+				'tag manager'
 			),
 			'bureaucrat' => array(
 				'moderator',
@@ -3193,8 +3194,12 @@ $wgConf->settings = array(
 				'supressredirect' => true,
 			),
 			'sysop' => array(
-				'protectsite' => true
-			),	
+				'protectsite' => true,
+			),
+			'tag manager' => array(
+				'changetags' => true,
+				'applychangetags' => true,
+				'managechangetags' => true,
 		
 		),
 		'+wikipucwiki' => array(
@@ -3364,6 +3369,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
+				'tag manager'
 			),
 			'bureaucrat' => array(
 				'moderator',
@@ -3395,6 +3401,10 @@ $wgConf->settings = array(
  				'read' => true,
 				'edit' => true,
  			),
+			'*' => array(
+				'changetags' => true,
+				'applychangetags' => true,
+			),
  		),
 	),
 
