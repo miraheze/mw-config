@@ -104,6 +104,8 @@ if ( $wgDBname == 'metawiki' ) {
 
 if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['user']['changetags'] = false;
+	$wgGroupPermissions['user']['applychangetags'] = false;
 }
 
 // Depends on $wgContentNamespaces
