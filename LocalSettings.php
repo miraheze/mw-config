@@ -688,7 +688,6 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'worldbattlewiki' => true,
 		'yugiohwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
@@ -768,7 +767,6 @@ $wgConf->settings = array(
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -1287,7 +1285,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -2743,26 +2740,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'banned',
-				'founder',
-			),
-			'moderator' => array(
-				'autopatrolled',
-				'confirmed',
-			),
-			'sysop' => array(
-				'moderator',
-			),
-			'bureaucrat' => array(
-				'moderator',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
-			),
-		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -3173,30 +3150,6 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'read' => true,
-			),
-			'moderator' => array(
-				'deletelogentry' => true,
-				'deleterevision' => true,
-				'undelete' => true,
-				'deletedhistory' => true,
-				'deletedtext' => true,
-				'deleted' => true,
-				'block' => true,
-				'protect' => true,
-				'ediprotected' => true,
-				'unblockself' => true,
-				'blockemail' => true,
-				'autopatrolled' => true,
-				'supressredirect' => true,
-			),
-			'sysop' => array(
-				'protectsite' => true
-			),	
-		
-		),
 		'+wikipucwiki' => array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
@@ -3352,27 +3305,7 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'banned',
-				'founder',
-			),
-			'moderator' => array(
-				'autopatrolled',
-				'confirmed',
-			),
-			'sysop' => array(
-				'moderator',
-			),
-			'bureaucrat' => array(
-				'moderator',
-				'confirmed',
-				'autopatrolled',
-				'rollback',
-				'bot',
-			),
-		),
+
 	),
 	'wgRevokePermissions' => array(
 		'default' => array(),
@@ -3390,11 +3323,6 @@ $wgConf->settings = array(
 				'editmyoptions' => true,
 			),
 		),
-		'wikicanadawiki' => array(
- 			'banned' => array(
- 				'read' => true,
- 			),
- 		),
 	),
 
 	// Piwik settings
@@ -3858,7 +3786,6 @@ $wgConf->settings = array(
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/d/df/20150913_WelcomeWiki-Logo_TranspWritten135x135.png",
 		'webflowwiki' => "//$wmgUploadHostname/webflowwiki/f/fb/Webflow-logo-raster-blue-2015.png",
 		'webtoonwiki' => "//$wmgUploadHostname/webtoonwiki/b/ba/Webtoon_wiki_symbol.PNG",
-		'wikicanadawiki' => "//$wmgUploadHostname/wikicanadawiki/0/0b/WikiCanada.jpg",
 		'wikiparkinsonwiki' => "//$wmgUploadHostname/wikiparkinsonwiki/f/fb/WikiParkinsonLogo-135.png",
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/9/98/Logowikifinal.png",
 		'wikiversitywiki' => "//$wmgUploadHostname/wikiversitywiki/7/71/Wikiversity-Miraheze-temporary-logo.png",
