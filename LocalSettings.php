@@ -4174,7 +4174,7 @@ EOF;
 
 	return true;
 }*/
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
@@ -4183,7 +4183,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
 
 	return true;
-}
+}*/
 
 // Include other configuration file
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
