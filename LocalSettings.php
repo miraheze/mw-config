@@ -2755,12 +2755,14 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
-			),
-			'bureaucrat' => array(
-				'moderator',
 				'confirmed',
 				'autopatrolled',
-				'rollbacker',
+				'rollback',
+				'bot',
+			
+			),
+			'bureaucrat' => array(
+				'sysop',
 			),
 		),
 	),
@@ -3364,13 +3366,14 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
-			),
-			'bureaucrat' => array(
-				'moderator',
 				'confirmed',
 				'autopatrolled',
-				'rollback',
+				'rollbacker',
 				'bot',
+				
+			),
+			'bureaucrat' => array(
+				'sysop',
 			),
 		),
 	),
