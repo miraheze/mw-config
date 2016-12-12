@@ -4174,16 +4174,6 @@ EOF;
 
 	return true;
 }*/
-#$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-#function onSiteNoticeAfter( &$siteNotice, $skin ) {
-#	$siteNotice .= <<<EOF
-#	<table class="wikitable" style="text-align:center;"><tbody><tr>
-#	<td style="font-size: 14px;">Miraheze has completed the database server migration. All wikis should be working as usual now, and Miraheze will work on publishing an explanation of this incident soon.</td>
-#	</tr></tbody></table>
-#EOF;
-#
-#	return true;
-#}
 
 // Include other configuration file
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
