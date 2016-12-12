@@ -3194,7 +3194,10 @@ $wgConf->settings = array(
 				'supressredirect' => true,
 			),
 			'sysop' => array(
-				'protectsite' => true
+				'protectsite' => true,
+				'changetags' => true,
+				'managechangetags' => true,
+				'applychangetags' => true,
 			),
 			'tagmanager' => array(
 				'changetags' => true,
