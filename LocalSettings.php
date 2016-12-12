@@ -704,9 +704,9 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseApprovedRevs' => array(
-		'default' => false
-		'extloadwiki' => true
-		'wikicanadawiki' => true
+		'default' => false,
+		'extloadwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
