@@ -2755,7 +2755,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
-				'tagmanager'
+				'tagmanager',
 			),
 			'bureaucrat' => array(
 				'moderator',
@@ -3370,7 +3370,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
-				'tagmanager'
+				'tagmanager',
 			),
 			'bureaucrat' => array(
 				'moderator',
@@ -3404,8 +3404,8 @@ $wgConf->settings = array(
  			),
 			'user' => array(
 				'applychangetags' => true,
-				'managechangetags' = true,
-				'changetags' = true,
+				'managechangetags' => true,
+				'changetags' => true,
 			),
  		),
 	),
