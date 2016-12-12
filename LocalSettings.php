@@ -2785,8 +2785,8 @@ $wgConf->settings = array(
 				'skipcaptcha' => true,
 			),
 			'bureaucrat' => array(
-				'renameuser' => false,
-				'userrights' => false,
+				'renameuser' => true,
+				'userrights' => true,
 			),
 			'confirmed' => array(
 				'editsemiprotected' => true,
