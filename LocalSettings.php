@@ -3393,6 +3393,7 @@ $wgConf->settings = array(
 		'wikicanadawiki' => array(
  			'banned' => array(
  				'read' => true,
+				'edit' => true,
  			),
  		),
 	),
