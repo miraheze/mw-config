@@ -1528,6 +1528,7 @@ $wgConf->settings = array(
 		'aurcusonlinewiki' => true,
 		'bgowiki' => true,
 		'betapurplewiki' => true,
+		'betternewswiki' => true,
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
 		'bmedwiki' => true,
