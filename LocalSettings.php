@@ -1170,6 +1170,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'ganeshawiki' => true,
 		'muckhackwiki' => true,
 		'perpuswiki' => true,
 		'takethatwikiwiki' => true,
