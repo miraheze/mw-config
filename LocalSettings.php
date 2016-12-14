@@ -222,6 +222,7 @@ $wgConf->settings = array(
 			'applewiki.tk' => 'applewikiwiki',
 			'boulderwiki.org' => 'boulderwikiwiki',
 			'carving.wiki' => 'carvingwiki',
+			'wiki.drones4nature.info' => 'drones4allwiki', 
 			'espiral.org' => 'espiralwiki',
 			'evelopedia.tk' => 'evelopediawiki',
 			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
@@ -1053,6 +1054,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
+		'wikidmatlandwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
@@ -1079,6 +1081,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
+		'applebranchwiki' => false,
+		'applewikiwiki'=> false,
 		'izanagiwiki' => false,
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
@@ -1166,6 +1170,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
+		'ganeshawiki' => true,
 		'muckhackwiki' => true,
 		'perpuswiki' => true,
 		'takethatwikiwiki' => true,
@@ -1302,6 +1307,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRefreshed' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
@@ -1523,6 +1529,7 @@ $wgConf->settings = array(
 		'aurcusonlinewiki' => true,
 		'bgowiki' => true,
 		'betapurplewiki' => true,
+		'betternewswiki' => true,
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
 		'bmedwiki' => true,
@@ -1749,20 +1756,20 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
-		'default' => false,
-		'applebranchwiki' => true,
-		'alwikiwiki' => true,
-		'applewikiwiki' => true,
-		'entropediawiki' => true,
+		'default' => false, // disables captcha on all actions
+	//	'applebranchwiki' => true,
+	//	'alwikiwiki' => true,
+	//	'applewikiwiki' => true,
+	//	'entropediawiki' => true,
 		'extloadwiki' => true,
-		'indexwiki' => true,
-		'ircwiki' => true,
-		'porpwiki' => true,
-		'starsetonlinewiki' => true,
-		'stellachronicawiki' => true,
-		'wikicervanteswiki' => true,
-		'wisdomwikiwiki' => true,
-		'wisdomsandboxwiki' => true,
+	//	'indexwiki' => true,
+	//	'ircwiki' => true,
+	//	'porpwiki' => true,
+	//	'starsetonlinewiki' => true,
+	//	'stellachronicawiki' => true,
+	//	'wikicervanteswiki' => true,
+	//	'wisdomwikiwiki' => true,
+	//	'wisdomsandboxwiki' => true,
 	),
 	'wmgUsewikihiero' => array(
 		'default' => false,
@@ -2750,6 +2757,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
+				'tagmanager',
 			),
 			'bureaucrat' => array(
 				'moderator',
@@ -3188,14 +3196,23 @@ $wgConf->settings = array(
 				'supressredirect' => true,
 			),
 			'sysop' => array(
-				'protectsite' => true
-			),	
+				'protectsite' => true,
+				'changetags' => true,
+				'managechangetags' => true,
+				'applychangetags' => true,
+			),
+			'tagmanager' => array(
+				'changetags' => true,
+				'applychangetags' => true,
+				'managechangetags' => true,
+			),
 		
 		),
 		'+wikipucwiki' => array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
 				'ajaxpoll-view-results' => true,
+				'voteny' => true,
 			),
 		),
 	),
@@ -3358,6 +3375,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'moderator',
+				'tagmanager',
 			),
 			'bureaucrat' => array(
 				'moderator',
@@ -3387,7 +3405,9 @@ $wgConf->settings = array(
 		'wikicanadawiki' => array(
  			'banned' => array(
  				'read' => true,
+				'edit' => true,
  			),
+			
  		),
 	),
 
@@ -3495,6 +3515,7 @@ $wgConf->settings = array(
 		'boulderwikiwiki' => 'https://boulderwiki.org',
 		'carvingwiki' => 'https://carving.wiki',
 		'dottorcontewiki' => 'https://wiki.dottorconte.eu',
+		'drones4allwiki' => 'https://wiki.drones4nature.info',
 		'dwplivewiki' => 'https://wiki.dwplive.com',
 		'espiralwiki' => 'https://espiral.org',
 		'evelopediawiki' => 'https://evelopedia.tk',
@@ -3578,6 +3599,8 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 	        '3dicwiki' => 'foreground',
+		'applebranchwiki' => 'refreshed',
+		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
@@ -3919,32 +3942,33 @@ $wgConf->settings = array(
 	'wgUrlShortenerDomainsWhitelist' => array(
 		'default' => array(
 			'(.*\.)?miraheze\.org',
-			'wiki.aenasan\.com',
+			'wiki\.aenasan\.com',
 			'allthetropes\.org',
-			'aman.info\.tm',
+			'aman\.info\.tm',
 			'antiguabarbudacalypso\.com',
 			'boulderwiki\.org',
 			'carving\.wiki',
-			'wiki.dottorconte\.eu',
-			'wiki.downhillderelicts\.com',
-			'wiki.dwplive\.com',
+			'wiki\.dottorconte\.eu',
+			'wiki\.downhillderelicts\.com',
+			'wiki\.drones4nature\.info',
+			'wiki\.dwplive\.com',
 			'fibromyalgia-engineer\.com',
-			'wiki.forfunssake\.co.uk',
-			'wiki.garyjohnsonmeetups\.com',
-			'wiki.grottocenter\.org',
+			'wiki\.forfunssake\.co.uk',
+			'wiki\.garyjohnsonmeetups\.com',
+			'wiki\.grottocenter\.org',
 			'haxion\.space',
 			'ircwiki\.cf',
-			'wiki.labby\.io',
-			'wiki.make717\.org',
-			'meta.trek\.tk',
-			'wiki.lbcomms\.co.za',
+			'wiki\.labby\.io',
+			'wiki\.make717\.org',
+			'meta\.trek\.tk',
+			'wiki\.lbcomms\.co.za',
 			'oneagencydunedin\.wiki',
-			'www.openonderwijs\.org',
+			'www\.openonderwijs\.org',
 			'oyeavdelingen\.org',
 			'permanentfuturelab\.wiki',
 			'publictestwiki\.com',
 			'private\.revi.wiki',
-			'wiki.rpgbrigade\.org',
+			'wiki\.rpgbrigade\.org',
 			'takethatwiki\.com',
 			'thelonsdalebattalion\.co.uk',
 			'thinkingliquid\.org',
@@ -3954,7 +3978,7 @@ $wgConf->settings = array(
 			'wikiparkinson\.org',
 			'wisdomwiki\.org',
 			'sandbox\.wisdomwiki.org',
-			'www.zenbuddhism\.info',
+			'www\.zenbuddhism\.info',
 			'espiral\.org',
 			'spiral\.wiki',
 		),
@@ -4152,16 +4176,6 @@ EOF;
 
 	return true;
 }*/
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	$siteNotice .= <<<EOF
-	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td style="font-size: 14px;">Miraheze has completed the database server migration. All wikis should be working as usual now, and Miraheze will work on publishing an explanation of this incident soon.</td>
-	</tr></tbody></table>
-EOF;
-
-	return true;
-}
 
 // Include other configuration file
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
