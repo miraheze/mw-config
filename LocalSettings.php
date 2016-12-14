@@ -1384,6 +1384,7 @@ $wgConf->settings = array(
 		'jakeperswiki' => true,
 		'perpuswiki' => true,
 		'trexwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseSiteScout' => array(
 		'default' => false,
