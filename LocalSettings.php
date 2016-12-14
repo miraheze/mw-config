@@ -1433,6 +1433,7 @@ $wgConf->settings = array(
 		'ezdmfwiki' => true,
 		'ganeshawiki' => true,
 		'hendrickswiki' => true,
+		'integrawiki' => true,
 		'jayuwikiwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
