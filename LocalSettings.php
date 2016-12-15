@@ -2795,21 +2795,15 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'banned',
 				'founder',
-			),
-			'moderator' => array(
-				'autopatrolled',
-				'confirmed',
-			),
-			'sysop' => array(
+				'sysop',
 				'moderator',
-				'tagmanager',
-			),
-			'bureaucrat' => array(
-				'moderator',
-				'confirmed',
-				'autopatrolled',
 				'rollbacker',
+				'autopatrolled',
+				'confirmed',
+				'tagmanager',
+				'bot',
 			),
+			
 		),
 	),
 	'+wgGroupPermissions' => array(
@@ -3413,20 +3407,12 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'banned',
 				'founder',
-			),
-			'moderator' => array(
+				'sysop',
+				'moderator',
+				'rollbacker',
 				'autopatrolled',
 				'confirmed',
-			),
-			'sysop' => array(
-				'moderator',
 				'tagmanager',
-			),
-			'bureaucrat' => array(
-				'moderator',
-				'confirmed',
-				'autopatrolled',
-				'rollback',
 				'bot',
 			),
 		),
