@@ -106,6 +106,10 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['user']['changetags'] = false;
 	$wgGroupPermissions['user']['applychangetags'] = false;
+	$wgAddGroups['sysop'] = array();
+	$wgRemoveGroups['sysop'] = array();
+	$wgAddGroups['bureaucrat'] = array();
+	$wgRemoveGroups['bureaucrat'] = array();
 }
 
 // Depends on $wgContentNamespaces

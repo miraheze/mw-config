@@ -118,6 +118,8 @@ define( 'NS_ARTIKEL', 1690);
 define( 'NS_ARTIKEL_TALK', 1691);
 define( 'NS_VIDEO', 1692);
 define( 'NS_VIDEO_TALK', 1693);
+define( 'NS_OPINION', 1694);
+define( 'NS_OPINION_TALK', 1695);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -149,6 +151,7 @@ $wgConf->settings = array(
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
 		'thehushhushsagawiki' => true,
@@ -157,6 +160,7 @@ $wgConf->settings = array(
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
 		'thehushhushsagawiki' => true,
@@ -421,6 +425,9 @@ $wgConf->settings = array(
 		'+antiguabarbudacalypsowiki' => array(
 			'anon' => true,
 		),
+		'+calexitwiki' => array(
+			'anon' => true,
+		),
 		'+carvingwiki' => array(
 			'anon' => true,
 		),
@@ -661,6 +668,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'partupwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -668,6 +676,7 @@ $wgConf->settings = array(
 	'wmgUseAdminLinks' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'developmentwiki' => true,
@@ -734,6 +743,7 @@ $wgConf->settings = array(
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
@@ -747,6 +757,7 @@ $wgConf->settings = array(
 	'wmgUseBlogPage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'ircwiki' => true,
 		'robloxscripterswiki' => true,
@@ -831,6 +842,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCreatePage' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'evelopediawiki' => true,
 		'extloadwiki' => true,
 	),
@@ -881,6 +893,7 @@ $wgConf->settings = array(
 	'wmgUseDynamicPageList3' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
 	),
@@ -930,6 +943,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
 		'bgowiki' => true,
+		'calexitwiki' => true,
 		'cecwiki' => true,
 		'christipediawiki' => true,
 		'detlefswiki' => true,
@@ -1019,6 +1033,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseJavascriptSlideshow' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'plazmaburstwiki' => true,
 		'takethatwikiwiki' => true,
@@ -1050,6 +1065,7 @@ $wgConf->settings = array(
 	'wmgUseMaps' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
@@ -1062,6 +1078,7 @@ $wgConf->settings = array(
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 		'takethatwikiwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseMediaWikiChat' => array(
 		'default' => false,
@@ -1133,6 +1150,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'bttestwiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
@@ -1156,6 +1174,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewestPages' => array(
 	    'default' => false,
+	    'calexitwiki' => true,
 	    'christipediawiki' => true,
 	    'extloadwiki' => true,
 	    'muckhackwiki' => true,
@@ -1225,6 +1244,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'bgowiki' => true,
+		'calexitwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
 		'jackperswiki' => true,
@@ -1239,6 +1259,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
+		'calexitwiki' => true,
 		'constwiki' => true,
 		'extloadwiki' => true,
 		'frontdeskswiki' => true,
@@ -1316,6 +1337,7 @@ $wgConf->settings = array(
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'justinbieberwiki' => true,
 		'thehushhushsagawiki' => true,
@@ -1323,6 +1345,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseReplaceText' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'evawiki' => true,
 		'extloadwiki' => true,
 		'thelonsdalebattalionwiki' => true,
@@ -1336,6 +1359,7 @@ $wgConf->settings = array(
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'idtestwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -1355,11 +1379,13 @@ $wgConf->settings = array(
 		'default' => false,
 		'8stationwiki' => true,
 		'apolcourseswiki' => true,
+		'calexitwiki' => true,
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 		'jakeperswiki' => true,
 		'perpuswiki' => true,
 		'trexwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseSiteScout' => array(
 		'default' => false,
@@ -1367,12 +1393,15 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
+	// Should be this, but change $nameofwiki at the end:
+	// sudo -u www-data cp -R /srv/mediawiki/w/extensions/SocialProfile/avatars /srv/mediawiki/w/extensions/SocialProfile/awards /mnt/mediawiki-static/$nameofwiki/
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
+		'calexitwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
 		'ircwiki' => true,
@@ -1405,7 +1434,9 @@ $wgConf->settings = array(
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
+		'ganeshawiki' => true,
 		'hendrickswiki' => true,
+		'integrawiki' => true,
 		'jayuwikiwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
@@ -1468,6 +1499,7 @@ $wgConf->settings = array(
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'3dicwiki' => true,
+		'calexitwiki' => true,
 		'cpiwiki' => true,
 		'dishwiki' => true,
 		'extloadwiki' => true,
@@ -1536,6 +1568,7 @@ $wgConf->settings = array(
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
 		'bttestwiki' => true,
+		'calexitwiki' => true,
 		'carvingwiki' => true,
 		'casuarinawiki' => true,
 		'cbmediawiki' => true,
@@ -1578,6 +1611,7 @@ $wgConf->settings = array(
 		'fmbvwiki' => true,
 		'foodsharinghamburgwiki' => true,
 		'frontdeskswiki' => true,
+		'ganeshawiki' => true,
 		'geirpediawiki' => true,
 		'genwiki' => true,
 		'gncwiki' => true,
@@ -1781,11 +1815,13 @@ $wgConf->settings = array(
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseWikiTextLoggedInOut' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseYouTube' => array(
@@ -1798,6 +1834,7 @@ $wgConf->settings = array(
 		'apolcourseswiki' => true,
 		'biuwiki' => true,
 		'bmedwiki' => true,
+		'calexitwiki' => true,
 		'carvingwiki' => true,
 		'christipediawiki' => true,
 		'corydoctorowwiki' => true,
@@ -2235,6 +2272,7 @@ $wgConf->settings = array(
 	'wgMSU_useDragDrop' => array(
 		'default' => false,
 		'anduinwiki' => true,
+		'calexitwiki' => true,
 	),
 	
 	'wgMSU_showAutoCat' => array(
@@ -2254,6 +2292,7 @@ $wgConf->settings = array(
 	
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => array(
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'robloxscripterswiki' => true,
 		'thefosterswiki' => true,
@@ -2279,6 +2318,9 @@ $wgConf->settings = array(
 			NS_REVIEWS_TALK => 'Reviews_talk',
 			NS_FEATURED => 'Featured_Page',
 			NS_FEATURED_TALK => 'Featured_Page_talk',
+		),
+		'calexitwiki' => array(
+			NS_OPINION => 'Opinion'
 		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
@@ -2484,6 +2526,12 @@ $wgConf->settings = array(
 		'+allthetropeswiki' => array(
 			NS_MAIN => true,
 			NS_TROPEWORKSHOP => true,
+		),
+		'+calexitwiki' => array(
+			NS_MAIN => true,
+			NS_OPINION => true,
+			NS_USER => true,
+			NS_HELP => true,
 		),
 		'+catboxwiki' => array(
 			NS_MAIN => true,
@@ -2750,20 +2798,13 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'banned',
 				'founder',
-			),
-			'moderator' => array(
-				'autopatrolled',
-				'confirmed',
-			),
-			'sysop' => array(
 				'moderator',
-				'tagmanager',
-			),
-			'bureaucrat' => array(
-				'moderator',
+				'sysop',
+				'bot',
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
+				'tagmanager',
 			),
 		),
 	),
@@ -3368,21 +3409,13 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'banned',
 				'founder',
-			),
-			'moderator' => array(
-				'autopatrolled',
-				'confirmed',
-			),
-			'sysop' => array(
 				'moderator',
-				'tagmanager',
-			),
-			'bureaucrat' => array(
-				'moderator',
-				'confirmed',
-				'autopatrolled',
-				'rollback',
+				'sysop',
 				'bot',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+				'tagmanager',
 			),
 		),
 	),
@@ -3421,18 +3454,21 @@ $wgConf->settings = array(
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 	 	'default' => false,
 	 	'allthetropeswiki' => '0.01',
+	 	'calexitwiki' => '0.01',
 	 	'extloadwiki' => '0.01',
 	 	'youtubewiki' => '0.01',
 	 ),
 	 'wgRelatedArticlesShowReadMore' => array(
 	 	'default' => false,
 	 	'allthetropeswiki' => true,
+		'calexitwiki' => true,
 	 	'extloadwiki' => true,
 	 	'youtubewiki' => true,
 	 ),
 	 'wgRelatedArticlesShowInFooter' => array(
 	 	'default' => false,
 	 	'allthetropeswiki' => true,
+		'calexitwiki' => true,
 	 	'extloadwiki' => true,
 	 	'youtubewiki' => true,
 	 ),
@@ -3629,6 +3665,7 @@ $wgConf->settings = array(
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/6/64/Favicon.ico",
 		'bgowiki' => "//$wmgUploadHostname/bgowiki/6/64/Favicon.ico",
 		'bzdetopediawiki' => "//$wmgUploadHostname/bzdetopediawiki/6/64/Favicon.ico",
+		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/6/6a/Cali_flag_favicon.ico",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/6/64/Favicon.ico",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
 		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/8/8b/CW_favicon.ico",
@@ -3736,6 +3773,7 @@ $wgConf->settings = array(
 		'biblicalwikiwiki' => "//$wmgUploadHostname/biblicalwikiwiki/e/e2/WikiLogo.svg",
 		'burnoutwiki' => "//$wmgUploadHostname/burnoutwiki/0/0b/BURNOUTWIKI_LOGO_135px.png",
 		'bzdetopediawiki' => "//$wmgUploadHostname/bzdetopediawiki/b/bc/Wiki.png",
+		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/5/59/Snowflake135.png",
 		'centriswiki' => "//$wmgUploadHostname/centriswiki/8/86/Logo_da_Wiki_-_simples.png",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
@@ -3857,6 +3895,7 @@ $wgConf->settings = array(
 		'theinternetemowiki' => "//$wmgUploadHostname/theinternetemowiki/b/bc/Wiki.png",
 		'thelonsdalebattalionwiki' => "//$wmgUploadHostname/thelonsdalebattalionwiki/2/22/SoldiersLogo.png",
 		'themfbclubwiki' => "//$wmgUploadHostname/themfbclubwiki/b/bc/Wiki.png",
+		'teireawiki' => "//$wmgUploadHostname/teireawiki/e/e5/Teirea_wiki_logo.png",
 		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/d/d4/Logo_titrepro.svg",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
 		'toftcricketclubwiki' => "//$wmgUploadHostname/toftcricketclubwiki/2/23/ToftLogo.png",
@@ -3892,6 +3931,7 @@ $wgConf->settings = array(
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
 		'alanpediawiki' => 'Asia/Taipei',
+		'calexitwiki' => 'America/Los_Angeles',
 		'carvingwiki' => 'America/Denver',
 		'casuarinawiki' => 'Asia/Shanghai',
 		'catboxwiki' => 'America/Detroit',
