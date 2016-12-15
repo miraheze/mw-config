@@ -1392,6 +1392,8 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
+	// Should be this, but change $nameofwiki at the end:
+	// sudo -u www-data cp -R /srv/mediawiki/w/extensions/SocialProfile/avatars /srv/mediawiki/w/extensions/SocialProfile/awards /mnt/mediawiki-static/$nameofwiki/
 	'wmgUseSocialProfile' => array(
 		'default' => false,
 		'adnovumwiki' => true,
