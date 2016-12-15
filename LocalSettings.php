@@ -1078,6 +1078,7 @@ $wgConf->settings = array(
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 		'takethatwikiwiki' => true,
+		'wikipucwiki' => true,
 	),
 	'wmgUseMediaWikiChat' => array(
 		'default' => false,
