@@ -3219,8 +3219,6 @@ $wgConf->settings = array(
 		'+wikicanadawiki' => array(
 			'founder' => array(
 				'read' => true,
-			),
-			'moderator' => array(
 				'deletelogentry' => true,
 				'deleterevision' => true,
 				'undelete' => true,
@@ -3234,12 +3232,12 @@ $wgConf->settings = array(
 				'blockemail' => true,
 				'autopatrolled' => true,
 				'supressredirect' => true,
-			),
-			'sysop' => array(
-				'protectsite' => true,
 				'changetags' => true,
 				'managechangetags' => true,
 				'applychangetags' => true,
+			),
+			'sysop' => array(
+				'protectsite' => true,
 			),
 			'tagmanager' => array(
 				'changetags' => true,
