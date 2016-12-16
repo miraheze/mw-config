@@ -1111,6 +1111,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMsPackage' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'catboxwiki' => true,
 		'extloadwiki' => true, // do not set this to false without disabling MsUpload on all wikis below
 		'urho3dwiki' => true,
