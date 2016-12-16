@@ -3254,6 +3254,7 @@ $wgConf->settings = array(
 				'ajaxpoll-vote' => true,
 				'ajaxpoll-view-results' => true,
 				'voteny' => true,
+				'upload' => true,
 			),
 		),
 	),
