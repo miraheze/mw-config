@@ -912,6 +912,7 @@ $wgConf->settings = array(
 	'wmgUseEducationProgram' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'ganeshawiki' => true,
 		'lezar224wiki' => true,
 	),
 	'wmgUseErudite' => array(
@@ -1100,6 +1101,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'applebranchwiki' => false,
 		'applewikiwiki'=> false,
+		'ganeshawiki' => false,
 		'izanagiwiki' => false,
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
@@ -1300,6 +1302,7 @@ $wgConf->settings = array(
 	'wmgUsePoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'ganeshawiki' => true,
 		'jayuwikiwiki' => true,
 		'nidda23wiki' => true,
 		'takethatwikiwiki' => true,
@@ -1315,6 +1318,7 @@ $wgConf->settings = array(
 	'wmgUseQuiz' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'ganeshawiki' => true,
 		'jayuwikiwiki' => true,
 	),
 	'wmgUseRandomSelection' => array(
@@ -1527,6 +1531,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'espiralwiki' => true,
 		'extloadwiki' => true,
+		'ganeshawiki' => true,
 		'openconstitutionwiki' => true,
 		'robloxscripterswiki' => true,
 		'wikidolphinhansenwiki' => true,
@@ -2682,6 +2687,11 @@ $wgConf->settings = array(
 				'interfaceeditor'
 			),
 		),
+		'+dokumenwiki' => array(
+			'bureaucrat' => array(
+				'member',
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -3320,6 +3330,11 @@ $wgConf->settings = array(
 				'interfaceeditor'
 			),
 		),
+		'+dokumenwiki' => array(
+			'bureaucrat' => array(
+				'member',
+			),
+		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -3646,6 +3661,7 @@ $wgConf->settings = array(
 		'datachronwiki' => 'erudite',
 		'dtswiki' => 'metrolook',
 		'godaigowiki' => 'monobook',
+		'ganeshawiki' => 'monobook',
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
