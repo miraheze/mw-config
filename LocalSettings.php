@@ -1735,6 +1735,7 @@ $wgConf->settings = array(
 		'torejorgwiki' => true,
 		'touhouenginewiki' => true,
 		'trexwiki' => true,
+		'trumpwiki' => true,
 		'unikumwiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
