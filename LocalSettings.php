@@ -1131,6 +1131,7 @@ $wgConf->settings = array(
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
 		'doinwiki' => true,
+		'doraemonwiki' => true,
 		'elainarmuawiki' => true,
 		'emulationwiki' => true,
 		'evawiki' => true,
