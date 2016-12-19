@@ -1598,6 +1598,7 @@ $wgConf->settings = array(
 		'dishwiki' => true,
 		'dmwwiki' => true,
 		'doinwiki' => true,
+		'doraemonwiki' => true,
 		'dottorcontewiki' => true,
 		'drones4allwiki' => true,
 		'dtswiki' => true,
