@@ -878,7 +878,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'augustinianumwiki' => true,
 		'camerainfowiki' => true,
 		'extloadwiki' => true,
@@ -892,6 +891,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseDynamicPageList3' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'ayrshirewiki' => true,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
