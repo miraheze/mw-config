@@ -39,10 +39,10 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['user']['read'] = false;
 	$wgGroupPermissions['member']['read'] = true;
 	$wgGroupPermissions['sysop']['read'] = true;
-	$wgConf->settings['wgAddGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgAddGroups']['default']['sysop'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['sysop'][] = 'member';
+	$wgAddGroups['bureaucrat'][] = 'member';
+	$wgAddGroups['sysop'][] = 'member';
+	$wgRemoveGroups['bureaucrat'][] = 'member';
+	$wgRemoveGroups['sysop'][] = 'member';
 }
 
 // ircrcbot (!=private)
