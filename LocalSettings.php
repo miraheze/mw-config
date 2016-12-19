@@ -453,6 +453,9 @@ $wgConf->settings = array(
 		'+dottorcontewiki' => array(
 			'anon' => true,
 		),
+		'+drones4allwiki' => array(
+			'anon' => true,
+		),
 		'+evelopediawiki' => array(
 			'anon' => true,
 		),
