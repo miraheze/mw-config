@@ -4242,11 +4242,11 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td><a href="https://meta.miraheze.org/wiki/Miraheze">Miraheze</a> invites all users to comment on <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Stewards">this Request for Comment</a> regarding <a href="https://meta.miraheze.org/wiki/Stewards">Stewards</a>. The consensus gathered in this RfC will be used to draft an official policy regarding the responsibilities, appointment, and removal of all Stewards.</td>
+	<td><a href="Users who are not locally blocked/banned are invited to comment on the status update on Miraheze's WikiCanada at https://wikicanada.miraheze.org/wiki/WikiCanada:Status_report - comments given here will help determine the future of this project.
 	</tr></tbody></table>
 EOF;
 
