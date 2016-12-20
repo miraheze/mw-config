@@ -789,6 +789,7 @@ $wgConf->settings = array(
 	'wmgUseCategoryTree' => array(
 		'default' => true,
 		'whentheycrywiki' => false,
+		'chocowiki' => true,
 	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
@@ -893,6 +894,7 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'chocowiki' => true,
 	),
 	'wmgUseDynamicPageList3' => array(
 		'default' => false,
@@ -1763,6 +1765,7 @@ $wgConf->settings = array(
 		'xdjibiwiki' => true,
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
+		'chocowiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
