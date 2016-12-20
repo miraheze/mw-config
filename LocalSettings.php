@@ -3035,16 +3035,18 @@ $wgConf->settings = array(
 				'move-rootuserpages' => true,
 				'upload' => true,
 				'reupload-shared' => true,
-			),	
+			),
 			'sysop' => array(
 				'commentadmin' => true,
+				'editvoter' => true,
 			),
 			'voter' => array(
 				'delete' => true,
 				'browsearchive' => true,
 				'deleterevision' => true,
 				'deletedtext' => true,
-				'suppressedredirect' => true,
+				'editvoter' => true,
+				'suppressredirect' => true,
 				'voter' => true,
 				'autopatrol' => true,
 				'patrol' => true,
@@ -3516,6 +3518,9 @@ $wgConf->settings = array(
 			'bureaucrat',
 			'supervisor',
 			'wikifounder',
+		),
+		'+jayuwikiwiki' => array(
+			'editvoter',
 		),
 		'+studynotekrwiki' => array(
 			'voter',

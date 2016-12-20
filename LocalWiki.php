@@ -62,6 +62,7 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 }
 
 if ( $wgDBname === 'jayuwikiwiki' ) {
+	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-categorypages'] = false;
