@@ -1052,6 +1052,7 @@ $wgConf->settings = array(
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
 		'bmedwiki' => true,
+		'christipediawiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseLinkSuggest' => array(
