@@ -1721,6 +1721,7 @@ $wgConf->settings = array(
 		'sjuhabitatwiki' => true,
 		'skyfireflyffwiki' => true,
 		'snowthegamewiki' => true,
+		'soundboxwiki' => true,
 		'soshomophobiewiki' => true,
 		'southparkfanwiki' => true,
 		'spiralwiki' => true,
