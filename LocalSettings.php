@@ -1522,6 +1522,7 @@ $wgConf->settings = array(
 		'robloxscripterswiki' => true,
 		'rpgbrigadewiki' => true,
 		'rtwiki' => true,
+		'soundboxwiki' => true,
 		'spiralwiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
