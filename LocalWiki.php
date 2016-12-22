@@ -73,10 +73,6 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 }
 
 if ( $wgDBname == 'soundboxiki' ) {
-	$wgGroupPermissions['user']['createtalk'] = false;
-	$wgGroupPermissions['user']['createpage'] = false;
-	$wgGroupPermissions['user']['edit'] = false;
-	$wgGroupPermissions['user']['editmywatchlist'] = false;
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['*']['edit'] = false;
