@@ -501,29 +501,3 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 if ( $wmgUseYouTube ) {
 	require_once( "$IP/extensions/YouTube/YouTube.php" );
 }
-
-// Permission variables
-if ( $wmgEditingMatrix ) {
-	$mhEM = $wmgEditingMatrix;
-	if ( $mhEM['anon'] ) {
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['*']['createpage'] = false;
-	}
-
-	if ( $mhEM['user'] ) {
-		$wgGroupPermissions['user']['edit'] = false;
-		$wgGroupPermissions['user']['createpage'] = false;
-	}
-
-	if ( $mhEM['editor'] ) {
-		$wgGroupPermissions['editor']['edit'] = true;
-		$wgGroupPermissions['editor']['createpage'] = true;
-		$wgAddGroups['sysop'][] = 'editor';
-		$wgRemoveGroups['sysop'][] = 'editor';
-	}
-
-	if ( $mhEM['sysop'] ) {
-		$wgGroupPermissions['sysop']['edit'] = true;
-		$wgGroupPermissions['sysop']['createpage'] = true;
-	}
-}
