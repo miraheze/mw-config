@@ -72,6 +72,17 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['reupload-shared'] = false;
 }
 
+if ( $wgDBname == 'soundboxiki' ) {
+	$wgGroupPermissions['user']['createtalk'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['user']['editmywatchlist'] = false;
+	$wgGroupPermissions['*']['createtalk'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['editmywatchlist'] = false;
+}
+
 if ( $wgDBname === 'sthomaspriwiki' ) {
 	$wgGroupPermissions['sysop']['block'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
