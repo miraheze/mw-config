@@ -579,6 +579,12 @@ $wgConf->settings = array(
 			'anon' => true,
 			'sysop' => true,
 		),
+		'+soundboxwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+			'editor' => true,
+		),
 		'+sthomaspriwiki' => array(
 			'user' => true,
 			'sysop' => true,
