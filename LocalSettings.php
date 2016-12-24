@@ -4273,6 +4273,18 @@ EOF;
 	return true;
 }*/
 
+
+// Global database error notice extra text
+$wgExceptionHooks['DBConnectionError'] = "databaseErrorTextHook";
+function databaseErrorTextHook ( $e, $args ) {
+    return "<ul>
+    <li>2016-12-24T03:00 - We are conducting recovery efforts on our database.
+      We believe the database was improperly shut down by the OOM killer, but
+      we should be back up within an hour</li>
+    </ul>";
+}
+
+
 // Include other configuration file
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
