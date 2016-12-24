@@ -118,6 +118,7 @@ if ( $wgDBname == 'metawiki' ) {
 		$out->addMeta( 'revisit-after', '2 days' );
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
+-}
 
 // Depends on $wgContentNamespaces
 if ( $wgDBname == 'abitaregeawiki' ) {
