@@ -4262,16 +4262,15 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	$siteNotice .= <<<EOF
 	<table class="wikitable" style="text-align:center;"><tbody><tr>
-	<td><a href="https://meta.miraheze.org/wiki/Miraheze">Miraheze</a> invites all users to comment on <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Stewards">this Request for Comment</a> regarding <a href="https://meta.miraheze.org/wiki/Stewards">Stewards</a>. The consensus gathered in this RfC will be used to draft an official policy regarding the responsibilities, appointment, and removal of all Stewards.</td>
+	<td>Miraheze global notice: MariaDB on our database server crashed at 01:15 UTC. System administrators restarted MariaDB and it went into recovery mode. Instead of trying to dump and move data like from 5 Dec - 8 Dec, the server was left alone to recover for ~2 hours. at 3:10 UTC, the server finished recovery and successfully started. Any observed issues with the site or data should be reported to system administrators.</td>
 	</tr></tbody></table>
 EOF;
-
 	return true;
-}*/
+}
 
 
 // Global database error notice extra text
