@@ -61,6 +61,16 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
 }
 
+if ( $wgDBname == 'elementswiki' ) {
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['user']['changetags'] = false;
+	$wgGroupPermissions['user']['applychangetags'] = false;
+	$wgAddGroups['sysop'] = array();
+	$wgRemoveGroups['sysop'] = array();
+	$wgAddGroups['bureaucrat'] = array();
+	$wgRemoveGroups['bureaucrat'] = array();
+}
+
 if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['user']['move'] = false;
@@ -108,17 +118,6 @@ if ( $wgDBname == 'metawiki' ) {
 		$out->addMeta( 'revisit-after', '2 days' );
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
-}
-
-if ( $wgDBname == 'wikicanadawiki' ) {
-	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['user']['changetags'] = false;
-	$wgGroupPermissions['user']['applychangetags'] = false;
-	$wgAddGroups['sysop'] = array();
-	$wgRemoveGroups['sysop'] = array();
-	$wgAddGroups['bureaucrat'] = array();
-	$wgRemoveGroups['bureaucrat'] = array();
-}
 
 // Depends on $wgContentNamespaces
 if ( $wgDBname == 'abitaregeawiki' ) {
