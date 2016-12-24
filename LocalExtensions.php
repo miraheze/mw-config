@@ -432,6 +432,11 @@ if ( $wmgUseTorBlock ) {
 	wfLoadExtension( 'TorBlock' );
 }
 
+if ( $wmgUseUserWelcome ) {
+	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+    require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
+}
+
 if ( $wmgUseVariables ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 }

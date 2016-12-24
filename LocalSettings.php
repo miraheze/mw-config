@@ -291,7 +291,7 @@ $wgConf->settings = array(
 
 	// Comments extension
 	'wgCommentsDefaultAvatar' => array(
-	    'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
+		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	),
 
 	// CreateWiki
@@ -968,7 +968,7 @@ $wgConf->settings = array(
 		'evelopediawiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
-	        'fbwikiwiki' => true,
+		'fbwikiwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'ircwiki' => true,
 		'korachwiki' => true,
@@ -1189,11 +1189,11 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseNewestPages' => array(
-	    'default' => false,
-	    'calexitwiki' => true,
-	    'christipediawiki' => true,
-	    'extloadwiki' => true,
-	    'muckhackwiki' => true,
+		'default' => false,
+		'calexitwiki' => true,
+		'christipediawiki' => true,
+		'extloadwiki' => true,
+		'muckhackwiki' => true,
 	),
 	'wmgUseNewsletter' => array(
 		'default' => false,
@@ -1513,7 +1513,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'takethatwikiwiki' => true,
-        ),
+	),
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'3dicwiki' => true,
@@ -1539,6 +1539,10 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => true,
 		'welcomewiki' => true,
 		'youtubewiki' => true,
+	),
+	'wmgUseUserWelcome' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseVoteNY' => array(
 		'default' => false,
@@ -2041,7 +2045,7 @@ $wgConf->settings = array(
 		'8stationwiki' => true,
 		'allthetropeswiki' => true,
 		'espiralwiki' => true,
-	        'fbwikiwiki' => true,
+		'fbwikiwiki' => true,
 		'muckhackwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
@@ -2167,7 +2171,7 @@ $wgConf->settings = array(
 
 	// Links
 	'+wgUrlProtocols' => array(
-	    'default' => array(),
+		'default' => array(),
 		// file protocol only allowed on private wikis
 		'gzewiki' => array ( "file://" ),
 	),
@@ -2465,8 +2469,8 @@ $wgConf->settings = array(
 		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA ),
 	),
 	'wgMetaNamespace' => array(
-	    'default' => null,
-	    'tmewiki' => 'TME',
+		'default' => null,
+		'tmewiki' => 'TME',
 	),
 	'+wgNamespaceAliases' => array(
 		'default' => array(),
@@ -3676,7 +3680,7 @@ $wgConf->settings = array(
 	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
-	        '3dicwiki' => 'foreground',
+		'3dicwiki' => 'foreground',
 		'applebranchwiki' => 'refreshed',
 		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
@@ -3749,7 +3753,7 @@ $wgConf->settings = array(
 		'ontariobrasswiki' => "//$wmgUploadHostname/ontariobrasswiki/0/09/Ontariobrass.png",
 		'openconstitutionwiki' => "//$wmgUploadHostname/openconstitutionwiki/e/e3/OpnConst_favicon.png",
 		'openkorebrasilwikiwiki' => "//$wmgUploadHostname/openkorebrasilwikiwiki/3/35/WikiLogo.png",
-	        'paranormalwiki' => "//$wmgUploadHostname/paranormalwiki/2/2d/PW.ico",
+		'paranormalwiki' => "//$wmgUploadHostname/paranormalwiki/2/2d/PW.ico",
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/6/64/Favicon.ico",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
 		'plasmawiki' => "//$wmgUploadHostname/plasmawiki/e/e3/PlasmaWiki_Favicon.ico",
@@ -4104,22 +4108,23 @@ $wgConf->settings = array(
 			NS_TEST => true,
 		),
 	),
-        'wgVisualEditorSupportedSkins' => array(
-                'defualt' => array(),
-                'permanentfuturelabwiki' => array( 'foreground' ),
-        ),
-        'wgVisualEditorUseSingleEditTab' => array(
-        	'default' => false,
-        	'espiralwiki' => true,
-        	'fbwikiwiki' => true,
-        	'spiralwiki' => true,
-        ),
-        'wmgFlowEditorList' => array(
-        	'default' => array('wikitext', 'visualeditor'),
-        	'espiralwiki' => array('visualeditor'),
-        	'fbwikiwiki' => array('visualeditor'),
-        	'spiralwiki' => array('visualeditor'),
-        	),
+	'wgVisualEditorSupportedSkins' => array(
+		'defualt' => array(),
+		'permanentfuturelabwiki' => array( 'foreground' ),
+	),
+	'wgVisualEditorUseSingleEditTab' => array(
+		'default' => false,
+		'espiralwiki' => true,
+		'fbwikiwiki' => true,
+		'spiralwiki' => true,
+	),
+	'wmgFlowEditorList' => array(
+		'default' => array('wikitext', 'visualeditor'),
+		'espiralwiki' => array('visualeditor'),
+		'fbwikiwiki' => array('visualeditor'),
+		'spiralwiki' => array('visualeditor'),
+	),
+
 
 	// WebChat config
 	'wmgWebChatServer' => array(
@@ -4253,7 +4258,7 @@ $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
-        $wgLocalisationCacheConf['manualRecache'] = false;
+	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
 // Global SiteNotice
