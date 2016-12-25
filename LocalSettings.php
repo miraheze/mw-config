@@ -706,7 +706,6 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'worldbattlewiki' => true,
 		'yugiohwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
@@ -788,7 +787,7 @@ $wgConf->settings = array(
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
-		'wikicanadawiki' => true,
+		'elementswiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -913,6 +912,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'dtswiki' => true,
+		'elementswiki' => true,
 		'extloadwiki' => true,
 		'muckhackwiki' => true,
 		'perpuswiki' => true,
@@ -1160,7 +1160,7 @@ $wgConf->settings = array(
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
-		'wikicanadawiki' => true,
+		'elementswiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
@@ -1326,7 +1326,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
-		'wikicanadawiki' => true,
+		'elementswiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -1846,6 +1846,7 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
+		'elementswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseWikiTextLoggedInOut' => array(
@@ -2830,7 +2831,7 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+wikicanadawiki' => array(
+		'+elementswiki' => array(
 			'founder' => array(
 				'bureaucrat',
 				'banned',
@@ -2842,6 +2843,9 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'rollbacker',
 				'tagmanager',
+			),
+			'bureaucrat' => array(
+				'founder'
 			),
 		),
 	),
@@ -3250,13 +3254,13 @@ $wgConf->settings = array(
 			'Teachers' => array(
 				'edit' => true,
 			),
-		),
-		'+walthamstowlabourwiki' => array(
+		),		
+                '+walthamstowlabourwiki' => array(
 			'editor-approver' => array(
 				'edit' => true,
 			),
 		),
-		'+wikicanadawiki' => array(
+		'+elementswiki' => array(
 			'founder' => array(
 				'read' => true,
 			),
@@ -3449,7 +3453,7 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+wikicanadawiki' => array(
+		'+elementswiki' => array(
 			'founder' => array(
 				'bureaucrat',
 				'banned',
@@ -3480,7 +3484,7 @@ $wgConf->settings = array(
 				'editmyoptions' => true,
 			),
 		),
-		'wikicanadawiki' => array(
+		'elementswiki' => array(
  			'banned' => array(
  				'read' => true,
 				'edit' => true,
