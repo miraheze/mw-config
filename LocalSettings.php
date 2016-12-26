@@ -2851,9 +2851,6 @@ $wgConf->settings = array(
 				'rollbacker',
 				'tagmanager',
 			),
-			'bureaucrat' => array(
-				'founder'
-			),
 		),
 	),
 	'+wgGroupPermissions' => array(
@@ -3274,6 +3271,7 @@ $wgConf->settings = array(
 			'moderator' => array(
 				'deletelogentry' => true,
 				'deleterevision' => true,
+				'delete' => true,
 				'undelete' => true,
 				'deletedhistory' => true,
 				'deletedtext' => true,
