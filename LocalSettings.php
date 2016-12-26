@@ -1780,6 +1780,7 @@ $wgConf->settings = array(
 		'worldbuildingwiki' => true,
 		'wthsapgovwiki' => true,
 		'xdjibiwiki' => true,
+		'xjtluwiki' => true,
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
 		'chocowiki' => true,
