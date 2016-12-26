@@ -4262,18 +4262,18 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-        global $wgDBname;
-        if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
-	        $siteNotice .= <<<EOF
-	        <table class="wikitable" style="text-align:center;"><tbody><tr>
-	        <td>Miraheze global notice: MariaDB on our database server crashed at 01:15 UTC. System administrators restarted MariaDB and it went into recovery mode. Instead of trying to dump and move data like from 5 Dec - 8 Dec, the server was left alone to recover for ~2 hours. at 3:10 UTC, the server finished recovery and successfully started. Any observed issues with the site or data should be reported to system administrators.</td>
-	        </tr></tbody></table>
-EOF;
-        }
-	return true;
-}
+// $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+// function onSiteNoticeAfter( &$siteNotice, $skin ) {
+//        global $wgDBname;
+//        if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
+//	        $siteNotice .= <<<EOF
+//	        <table class="wikitable" style="text-align:center;"><tbody><tr>
+//	        <td>Miraheze global notice: MariaDB on our database server crashed at 01:15 UTC. System administrators restarted MariaDB and it went into recovery mode. Instead of trying to dump and move data like from 5 Dec - 8 Dec, the server was left alone to recover for ~2 hours. at 3:10 UTC, the server finished recovery and successfully started. Any observed issues with the site or data should be reported to system administrators.</td>
+//	        </tr></tbody></table>
+// EOF;
+//        }
+//	return true;
+// }
 
 
 // Global database error notice extra text
