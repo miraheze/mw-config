@@ -183,6 +183,10 @@ if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 }
 
+if ( $wmgUseGamepress ) {
+    wfLoadSkin( 'Gamepress' );
+}
+
 if ( $wmgUseHeaderTabs ) {
 	wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {
@@ -416,6 +420,10 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
 	require_once( "/srv/mediawiki/config/TranslateConfigHack.php" );
 	$wgULSGeoService = false;
+}
+
+if ( $wmgUseTheme ) {
+	wfLoadExtension( 'Theme' );
 }
 
 if ( $wmgUseTimedMediaHandler ) {

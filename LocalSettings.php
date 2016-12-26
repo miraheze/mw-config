@@ -1002,6 +1002,10 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'starsetonlinewiki' => true,
 	),
+	'wmgUseGamepress' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
 		'default' => false,
@@ -1492,6 +1496,10 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'universebuildwiki' => true,
 		'whentheycrywiki' => true,
+	),
+	'wmgUseTheme' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
@@ -4274,6 +4282,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 
 
 // Global database error notice extra text
+// This didn't actually work but I filed https://phabricator.wikimedia.org/T154076
 /* $wgExceptionHooks['DBConnectionError'] = "databaseErrorTextHook";
 function databaseErrorTextHook ( $e, $args ) {
     return "<ul>
