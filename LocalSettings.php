@@ -705,7 +705,6 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'worldbattlewiki' => true,
 		'yugiohwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
@@ -777,6 +776,7 @@ $wgConf->settings = array(
 		'aucelewiki' => true,
 		'barbarasherwikiwiki' => true,
 		'dtswiki' => true,
+		'elementswiki' => true,
 		'extloadwiki' => true,
 		'financialfindswiki' => true,
 		'hontsukuruwiki' => true,
@@ -787,7 +787,6 @@ $wgConf->settings = array(
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -1148,6 +1147,7 @@ $wgConf->settings = array(
 		'doinwiki' => true,
 		'doraemonwiki' => true,
 		'elainarmuawiki' => true,
+		'elementswiki' => true,
 		'emulationwiki' => true,
 		'evawiki' => true,
 		'exitsincwiki' => true,
@@ -1163,7 +1163,6 @@ $wgConf->settings = array(
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
@@ -1327,9 +1326,9 @@ $wgConf->settings = array(
 	),
 	'wmgUseProtectSite' => array(
 		'default' => false,
+		'elementswiki' => true,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -2727,6 +2726,21 @@ $wgConf->settings = array(
 				'respected',
 			),
 		),
+		'+elementswiki' => array(
+			'founder' => array(
+				'bureaucrat',
+				'banned',
+				'founder',
+				'moderator',
+				'sysop',
+				'bot',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+				'tagmanager',
+			),
+		),
+			
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
@@ -2834,20 +2848,6 @@ $wgConf->settings = array(
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
-			),
-		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'banned',
-				'founder',
-				'moderator',
-				'sysop',
-				'bot',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
-				'tagmanager',
 			),
 		),
 	),
@@ -3039,6 +3039,38 @@ $wgConf->settings = array(
 			'respected' => array(
 				'respected' => true,
 			),
+		),
+		'+elementswiki' => array(
+			'founder' => array(
+				'read' => true,
+			),
+			'moderator' => array(
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'undelete' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'deleted' => true,
+				'block' => true,
+				'protect' => true,
+				'ediprotected' => true,
+				'unblockself' => true,
+				'blockemail' => true,
+				'autopatrolled' => true,
+				'supressredirect' => true,
+			),
+			'sysop' => array(
+				'protectsite' => true,
+				'changetags' => true,
+				'managechangetags' => true,
+				'applychangetags' => true,
+			),
+			'tagmanager' => array(
+				'changetags' => true,
+				'applychangetags' => true,
+				'managechangetags' => true,
+				
+				),
 		),
 		'+jayuwikiwiki' => array(
 			'autoconfirmed' => array(
@@ -3261,37 +3293,6 @@ $wgConf->settings = array(
 			'editor-approver' => array(
 				'edit' => true,
 			),
-		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'read' => true,
-			),
-			'moderator' => array(
-				'deletelogentry' => true,
-				'deleterevision' => true,
-				'undelete' => true,
-				'deletedhistory' => true,
-				'deletedtext' => true,
-				'deleted' => true,
-				'block' => true,
-				'protect' => true,
-				'ediprotected' => true,
-				'unblockself' => true,
-				'blockemail' => true,
-				'autopatrolled' => true,
-				'supressredirect' => true,
-			),
-			'sysop' => array(
-				'protectsite' => true,
-				'changetags' => true,
-				'managechangetags' => true,
-				'applychangetags' => true,
-			),
-			'tagmanager' => array(
-				'changetags' => true,
-				'applychangetags' => true,
-				'managechangetags' => true,
-			),
 		
 		),
 		'+wikipucwiki' => array(
@@ -3371,6 +3372,21 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'respected',
 			),
+		),
+		'+wikicanadawiki' => array(
+			'founder' => array(
+				'bureaucrat',
+				'banned',
+				'founder',
+				'moderator',
+				'sysop',
+				'bot',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+				'tagmanager',
+			),
+			
 		),
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
@@ -3453,21 +3469,6 @@ $wgConf->settings = array(
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
-			),
-		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'bureaucrat',
-				'banned',
-				'founder',
-				'moderator',
-				'sysop',
-				'bot',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
-				'tagmanager',
-			),
 		),
 	),
 	'wgRevokePermissions' => array(
@@ -3477,6 +3478,13 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'wikicanadawiki' => array(
+ 			'banned' => array(
+ 				'read' => true,
+				'edit' => true,
+ 			),
+			
+		),
 		'testwiki' => array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
@@ -3484,13 +3492,6 @@ $wgConf->settings = array(
 			),
 			'exampleuser' => array(
 				'editmyoptions' => true,
-			),
-		),
-		'wikicanadawiki' => array(
- 			'banned' => array(
- 				'read' => true,
-				'edit' => true,
- 			),
 			
  		),
 	),
