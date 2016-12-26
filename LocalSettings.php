@@ -3277,7 +3277,6 @@ $wgConf->settings = array(
 				'undelete' => true,
 				'deletedhistory' => true,
 				'deletedtext' => true,
-				'deleted' => true,
 				'block' => true,
 				'protect' => true,
 				'editprotected' => true,
