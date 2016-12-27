@@ -3274,7 +3274,6 @@ $wgConf->settings = array(
 				'editinterface' => true,
 				'editusercss' => true,
 				'edituserjs' => true,
-				'siteadmin' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
