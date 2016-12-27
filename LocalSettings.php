@@ -2856,10 +2856,10 @@ $wgConf->settings = array(
 				'researcher',
 			),
 			'bureaucrat' => array(
-				'autopatrolled'
-				'confirmed'
-				'rollbacker'
-				'researcher'
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+				'researcher',
 			),
 		),
 	),
@@ -3491,10 +3491,10 @@ $wgConf->settings = array(
 				'researcher',
 			),
 			'bureaucrat' => array(
-				'autopatrolled'
-				'confirmed'
-				'rollbacker'
-				'researcher'
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+				'researcher',
 			),
 		),
 	),
