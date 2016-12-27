@@ -1600,6 +1600,7 @@ $wgConf->settings = array(
 		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
+		'brynda1231wiki' => true,
 		'bttestwiki' => true,
 		'calexitwiki' => true,
 		'cancerwiki' => true,
