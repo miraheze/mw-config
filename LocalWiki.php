@@ -85,6 +85,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['move-rootuserpages'] = false;
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['sysop']['unblockself'] = false;
 
 }
 
