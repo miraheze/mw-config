@@ -69,7 +69,12 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgRemoveGroups['sysop'] = array();
 	$wgAddGroups['bureaucrat'] = array();
 	$wgRemoveGroups['bureaucrat'] = array();
-	
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['sysop']['interwiki'] = false;
+	$wgGroupPermissions['sysop']['editusercss'] = false;
+	$wgGroupPermissions['sysop']['edituserjs'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+
 }
 
 if ( $wgDBname === 'jayuwikiwiki' ) {
