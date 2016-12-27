@@ -1004,6 +1004,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseGamepress' => array(
 		'default' => false,
+		'claneuphoriawiki' => true,
 		'extloadwiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
@@ -1499,6 +1500,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseTheme' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
+		'claneuphoriawiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseTimedMediaHandler' => array(
@@ -3694,6 +3697,7 @@ $wgConf->settings = array(
 		'applebranchwiki' => 'refreshed',
 		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
+		'claneuphoriawiki' => 'gamepress',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
 		'dtswiki' => 'metrolook',
