@@ -964,6 +964,7 @@ $wgConf->settings = array(
 		'dicficwiki' => true,
 		'drones4allwiki' => true,
 		'dtswiki' => true,
+		'elementswiki' => true,
 		'ernaehrungsrathhwiki' => true,
 		'espiralwiki' => true,
 		'evelopediawiki' => true,
@@ -3314,6 +3315,13 @@ $wgConf->settings = array(
 			),
 			'bureaucrat' => array(
 				'tboverride' => true,
+				'flow-hide' => true,
+				'flow-delete' => true,
+				'flow-lock' => true,
+			),
+			'user' => array(
+				'flow-create-board' => true,
+				'flow-edit-post' => true,
 			),
 		
 		),
