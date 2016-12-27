@@ -86,6 +86,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['unblockself'] = false;
+	wfLoadExtensions( array( 'Babel', 'CheckUser', 'GlobalBlocking', 'Math', 'Poem', 'RenameUser' ) ) = false;
 
 }
 
