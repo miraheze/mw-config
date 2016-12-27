@@ -86,6 +86,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['unblockself'] = false;
+	$wgGroupPermissions['oversight']['flow-suppress'] = false;
 
 }
 
