@@ -1328,9 +1328,10 @@ $wgConf->settings = array(
 	),
 	'wmgUseProtectSite' => array(
 		'default' => false,
+		'elementswiki' => true,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
-		'elementswiki' => true,
+		'testwiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
