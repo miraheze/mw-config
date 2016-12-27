@@ -74,6 +74,17 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgProtectSiteLimit = '2 months';
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['sysop']['move'] = false;
+	$wgGroupPermissions['sysop']['movefile'] = false;
+	$wgGroupPermissions['sysop']['move-categorypages'] = false;
+	$wgGroupPermissions['sysop']['move-rootuserpages'] = false;
+	$wgGroupPermissions['sysop']['importupload'] = false;
+	$wgGroupPermissions['sysop']['import'] = false;
 
 }
 
