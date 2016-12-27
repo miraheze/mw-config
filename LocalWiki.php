@@ -67,8 +67,6 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['user']['applychangetags'] = false;
 	$wgAddGroups['sysop'] = array();
 	$wgRemoveGroups['sysop'] = array();
-	$wgAddGroups['bureaucrat'] = array();
-	$wgRemoveGroups['bureaucrat'] = array();
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
 	$wgGroupPermissions['sysop']['editusercss'] = false;
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
