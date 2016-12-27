@@ -60,6 +60,7 @@ if ( isset( $wgConf->settings['wmgReadonlyWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['block'] = false;
 	$wgGroupPermissions['sysop']['protect'] = false;
+}
 
 // ircrcbot (!=private)
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
