@@ -2855,12 +2855,6 @@ $wgConf->settings = array(
 				'rollbacker',
 				'researcher',
 			),
-			'bureaucrat' => array(
-				'autopatrolled',
-				'confirmed',
-				'rollbacker',
-				'researcher',
-			),
 		),
 	),
 	'+wgGroupPermissions' => array(
@@ -3281,6 +3275,7 @@ $wgConf->settings = array(
 				'editinterface' => true,
 				'editusercss' => true,
 				'edituserjs' => true,
+				'unblockself' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
@@ -3293,13 +3288,13 @@ $wgConf->settings = array(
 				'protect' => true,
 				'editprotected' => true,
 				'editsemiprotected' => true,
-				'unblockself' => true,
 				'blockemail' => true,
 				'autopatrol' => true,
 				'suppressredirect' => true,
 			),
 			'sysop' => array(
 				'protectsite' => true,
+				'applychangetags' => true,
 			),
 			'researcher' => array(
 				'changetags' => true,
@@ -3487,12 +3482,6 @@ $wgConf->settings = array(
 				'bot',
 				'confirmed',
 				'autopatrolled',
-				'rollbacker',
-				'researcher',
-			),
-			'bureaucrat' => array(
-				'autopatrolled',
-				'confirmed',
 				'rollbacker',
 				'researcher',
 			),
