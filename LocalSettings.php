@@ -3270,6 +3270,11 @@ $wgConf->settings = array(
 		'+elementswiki' => array(
 			'founder' => array(
 				'read' => true,
+				'globalblock-whitelist' => true,
+				'interwiki' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'siteadmin' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
