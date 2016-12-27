@@ -1331,7 +1331,6 @@ $wgConf->settings = array(
 		'elementswiki' => true,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
-		'testwiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
