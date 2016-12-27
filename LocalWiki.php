@@ -73,7 +73,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['editusercss'] = false;
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgProtectSiteLimit = 2 months;
+	$wgProtectSiteLimit = '2 months';
 
 }
 
