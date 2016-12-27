@@ -3309,6 +3309,9 @@ $wgConf->settings = array(
 				'importupload' => true,
 				'import' => true,
 			),
+			'bureaucrat' => array(
+				'tboverride' => true,
+			),
 		
 		),
 		'+wikipucwiki' => array(
