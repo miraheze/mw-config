@@ -1481,6 +1481,7 @@ $wgConf->settings = array(
 		'wikicervanteswiki' => true,
 		'xdjibiwiki' => true,
 		'xofwiki' => true,
+		'xjtluwiki' => true,
 	),
 	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
