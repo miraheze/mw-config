@@ -2853,7 +2853,13 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
-				'tagmanager',
+				'researcher',
+			),
+			'bureaucrat' => array(
+				'autopatrolled'
+				'confirmed'
+				'rollbacker'
+				'researcher'
 			),
 		),
 	),
@@ -3294,14 +3300,19 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'protectsite' => true,
-				'changetags' => true,
-				'managechangetags' => true,
-				'applychangetags' => true,
 			),
-			'tagmanager' => array(
+			'researcher' => array(
 				'changetags' => true,
 				'applychangetags' => true,
 				'managechangetags' => true,
+				'deletechangetags' => true,
+				'move' => true,
+				'movefile' => true,
+				'move-categorypages' => true,
+				'move-rootuserpages' => true,
+				'move-subpages' => true,
+				'importupload' => true,
+				'import' => true,
 			),
 		
 		),
@@ -3477,7 +3488,13 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
-				'tagmanager',
+				'researcher',
+			),
+			'bureaucrat' => array(
+				'autopatrolled'
+				'confirmed'
+				'rollbacker'
+				'researcher'
 			),
 		),
 	),
