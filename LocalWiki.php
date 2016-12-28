@@ -139,7 +139,6 @@ if ( $wgDBname == 'trexwiki' ) {
 
 if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['user']['read'] = false;
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 if ( $wgDBname == 'metawiki' ) {
