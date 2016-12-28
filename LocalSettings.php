@@ -3331,6 +3331,7 @@ $wgConf->settings = array(
 				'suppressrevision' => true,
 				'checkuser' => true,
 				'checkuser-log' => true,
+			),
 		
 		),
 		'+wikipucwiki' => array(
