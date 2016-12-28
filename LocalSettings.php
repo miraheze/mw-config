@@ -3280,6 +3280,11 @@ $wgConf->settings = array(
 				'editusercss' => true,
 				'edituserjs' => true,
 				'unblockself' => true,
+				'flow-hide' => true,
+				'flow-delete' => true,
+				'flow-lock' => true,
+				'flow-create-board' => true,
+				'flow-edit-post' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
@@ -3315,13 +3320,12 @@ $wgConf->settings = array(
 			),
 			'bureaucrat' => array(
 				'tboverride' => true,
-				'flow-hide' => true,
-				'flow-delete' => true,
-				'flow-lock' => true,
-			),
-			'user' => array(
-				'flow-create-board' => true,
-				'flow-edit-post' => true,
+				'markbotedits' => true,
+				'mergehistory' => true,
+				'massmessage' => true,
+				'unwatchedpages' => true,
+				'reupload' => true,
+				'reupload-shared' => true,
 			),
 		
 		),
