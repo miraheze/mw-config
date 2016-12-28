@@ -681,6 +681,7 @@ $wgConf->settings = array(
 	'wmgUseAccessControl' => array(
 		'default' => false,
 		'bmedwiki' => true,
+		'claneuphoriawiki' => true,
 		'extloadwiki' => true,
 		'mindgearwiki' => true,
 		'ndnwiki' => true,
