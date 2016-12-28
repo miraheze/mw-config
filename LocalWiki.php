@@ -136,6 +136,11 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
 
+if ( $wgDBname == 'swisscomraidwiki' ) {
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['user']['read'] = false;
+	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
+}
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
