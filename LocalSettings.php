@@ -1665,6 +1665,7 @@ $wgConf->settings = array(
 		'fmbvwiki' => true,
 		'foodsharinghamburgwiki' => true,
 		'frontdeskswiki' => true,
+		'fusewiki' => true,
 		'ganeshawiki' => true,
 		'geirpediawiki' => true,
 		'genwiki' => true,
