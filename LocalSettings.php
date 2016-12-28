@@ -3320,6 +3320,12 @@ $wgConf->settings = array(
 			),
 			'bureaucrat' => array(
 				'tboverride' => true,
+				'markbotedits' => true,
+				'mergehistory' => true,
+				'massmessage' => true,
+				'unwatchedpages' => true,
+				'reupload' => true,
+				'reupload-shared' => true,
 			),
 		
 		),
