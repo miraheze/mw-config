@@ -590,6 +590,12 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+swisscomraidwiki' => array(
+			'user' => true,
+			'anon' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+sylwiki' => array(
 			'anon' => true,
 			'user' => true,
