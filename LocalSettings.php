@@ -437,6 +437,12 @@ $wgConf->settings = array(
 			'user' => true,
 			'editor' => true,
 		),
+		'+claneuphoriawiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+clementsworldbuildingwiki' => array(
 			'anon' => true,
 		),
