@@ -3094,12 +3094,6 @@ $wgConf->settings = array(
 				'rollback' => true,
 			),
 		),
-		'+sthomaspriwiki' => array(
-			'bureaucrat' => array(
-				'block' => true,
-				'blockemail' => true,
-			),
-		),
 		'+metawiki' => array(
 			'steward' => array(
 				'abusefilter-modify-global' => true,
@@ -3143,6 +3137,19 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
+		'+sthomaspriwiki' => array(
+			'bureaucrat' => array(
+				'block' => true,
+				'blockemail' => true,
+			),
+		),
+		'+swisscomraidwiki' => array(
+			'emailconfirmed' => array(
+				'read' => true,
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'read' => true,
