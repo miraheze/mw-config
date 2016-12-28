@@ -1014,6 +1014,7 @@ $wgConf->settings = array(
 		'3dicwiki' => true,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'fusewiki' => true,
 		'inazumaelevenwiki' => true,
 		'jayuwikiwiki' => true,
 		'permanentfuturelabwiki' => true,
