@@ -2864,6 +2864,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'rollbacker',
 				'researcher',
+				'Flow bot',
 			),
 		),
 	),
@@ -3340,6 +3341,13 @@ $wgConf->settings = array(
 				'reupload' => true,
 				'reupload-shared' => true,
 			),
+			'Flow bot' => array(
+				'bot' => true,
+				'noratelimit' => true,
+				'autopatrol' => true,
+				'skipcaptcha' => true,
+				'autoconfirmed' => true,
+			),
 		
 		),
 		'+wikipucwiki' => array(
@@ -3515,6 +3523,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'rollbacker',
 				'researcher',
+				'Flow bot',
 			),
 		),
 	),
