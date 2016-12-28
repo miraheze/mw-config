@@ -2864,7 +2864,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'rollbacker',
 				'researcher',
-				'Flow bot',
+				'flow-bot',
 			),
 		),
 	),
@@ -3341,7 +3341,7 @@ $wgConf->settings = array(
 				'reupload' => true,
 				'reupload-shared' => true,
 			),
-			'Flow bot' => array(
+			'flow-bot' => array(
 				'bot' => true,
 				'noratelimit' => true,
 				'autopatrol' => true,
@@ -3523,7 +3523,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'rollbacker',
 				'researcher',
-				'Flow bot',
+				'flow-bot',
 			),
 		),
 	),
