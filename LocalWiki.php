@@ -95,6 +95,12 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['override-antispoof'] = false;
 	$wgGroupPermissions['*']['flow-hide'] = false;
 	$wgFlowGroupPermissions['suppress']['flow-suppress'] = false;
+	$wgGroupPermissions['sysop']['flow-delete'] = false;
+	$wgGroupPermissions['sysop']['flow-edit-post'] = false;
+	$wgGroupPermissions['sysop']['flow-lock'] = false;
+	$wgGroupPermissions['sysop']['move-subpages'] = false;
+	$wgGroupPermissions['sysop']['tboverride'] = false;
+	$wgGroupPermissions['sysop']['noratelimit'] = false;
 
 }
 
