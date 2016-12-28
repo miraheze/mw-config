@@ -86,6 +86,14 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['unblockself'] = false;
+	$wgGroupPermissions['sysop']['markbotedits'] = false;
+	$wgGroupPermissions['sysop']['mergehistory'] = false;
+	$wgGroupPermissions['sysop']['massmessage'] = false;
+	$wgGroupPermissoins['sysop']['unwatchedpages'] = false;
+	$wgGroupPermissions['sysop']['reupload'] = false;
+	$wgGroupPermissions['sysop']['reupload-shared'] = false;
+	$wgGroupPermissions['sysop']['override-antispoof'] = false;
+	$wgGroupPermissions['*']['flow-hide'] = false;
 
 }
 
