@@ -39,10 +39,10 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['user']['read'] = false;
 	$wgGroupPermissions['member']['read'] = true;
 	$wgGroupPermissions['sysop']['read'] = true;
-	$wgConf->settings['wgAddGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgAddGroups']['default']['sysop'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['bureaucrat'][] = 'member';
-	$wgConf->settings['wgRemoveGroups']['default']['sysop'][] = 'member';
+	$wgAddGroups['bureaucrat'][] = 'member';
+	$wgAddGroups['sysop'][] = 'member';
+	$wgRemoveGroups['bureaucrat'][] = 'member';
+	$wgRemoveGroups['sysop'][] = 'member';
 }
 
 // ircrcbot (!=private)
@@ -61,7 +61,51 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
 }
 
+if ( $wgDBname == 'elementswiki' ) {
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['user']['changetags'] = false;
+	$wgGroupPermissions['user']['applychangetags'] = false;
+	$wgAddGroups['sysop'] = array();
+	$wgRemoveGroups['sysop'] = array();
+	$wgAddGroups['bureaucrat'] = array();
+	$wgRemoveGroups['bureaucrat'] = array();
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['sysop']['editusercss'] = false;
+	$wgGroupPermissions['sysop']['edituserjs'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgProtectSiteLimit = '2 months';
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['sysop']['move'] = false;
+	$wgGroupPermissions['sysop']['movefile'] = false;
+	$wgGroupPermissions['sysop']['move-categorypages'] = false;
+	$wgGroupPermissions['sysop']['move-rootuserpages'] = false;
+	$wgGroupPermissions['sysop']['importupload'] = false;
+	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['sysop']['unblockself'] = false;
+	$wgGroupPermissions['sysop']['markbotedits'] = false;
+	$wgGroupPermissions['sysop']['mergehistory'] = false;
+	$wgGroupPermissions['sysop']['massmessage'] = false;
+	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
+	$wgGroupPermissions['sysop']['reupload'] = false;
+	$wgGroupPermissions['sysop']['reupload-shared'] = false;
+	$wgGroupPermissions['sysop']['override-antispoof'] = false;
+	$wgGroupPermissions['*']['flow-hide'] = false;
+	$wgFlowGroupPermissions['suppress']['flow-suppress'] = false;
+	$wgGroupPermissions['sysop']['flow-delete'] = false;
+	$wgGroupPermissions['sysop']['flow-edit-post'] = false;
+	$wgGroupPermissions['sysop']['flow-lock'] = false;
+	$wgGroupPermissions['sysop']['move-subpages'] = false;
+	$wgGroupPermissions['sysop']['tboverride'] = false;
+	$wgGroupPermissions['sysop']['noratelimit'] = false;
+
+}
+
 if ( $wgDBname === 'jayuwikiwiki' ) {
+	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-categorypages'] = false;
@@ -69,6 +113,13 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
 	$wgGroupPermissions['user']['reupload-shared'] = false;
+}
+
+if ( $wgDBname == 'soundboxiki' ) {
+	$wgGroupPermissions['*']['createtalk'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['editmywatchlist'] = false;
 }
 
 if ( $wgDBname === 'sthomaspriwiki' ) {
@@ -92,6 +143,10 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
 
+if ( $wgDBname == 'swisscomraidwiki' ) {
+	$wgGroupPermissions['*']['read'] = false;
+	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
+}
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
@@ -100,16 +155,7 @@ if ( $wgDBname == 'metawiki' ) {
 		$out->addMeta( 'revisit-after', '2 days' );
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
-}
 
-if ( $wgDBname == 'wikicanadawiki' ) {
-	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['user']['changetags'] = false;
-	$wgGroupPermissions['user']['applychangetags'] = false;
-	$wgAddGroups['sysop'] = array();
-	$wgRemoveGroups['sysop'] = array();
-	$wgAddGroups['bureaucrat'] = array();
-	$wgRemoveGroups['bureaucrat'] = array();
 }
 
 // Depends on $wgContentNamespaces
@@ -220,3 +266,29 @@ $wgWhitelistRead =
 		"Special:UserLogout",
 		"Special:CreateAccount",
 );
+
+// Permission variables
+if ( $wmgEditingMatrix ) {
+	$mhEM = $wmgEditingMatrix;
+	if ( $mhEM['anon'] ) {
+		$wgGroupPermissions['*']['edit'] = false;
+		$wgGroupPermissions['*']['createpage'] = false;
+	}
+
+	if ( $mhEM['user'] ) {
+		$wgGroupPermissions['user']['edit'] = false;
+		$wgGroupPermissions['user']['createpage'] = false;
+	}
+
+	if ( $mhEM['editor'] ) {
+		$wgGroupPermissions['editor']['edit'] = true;
+		$wgGroupPermissions['editor']['createpage'] = true;
+		$wgAddGroups['sysop'][] = 'editor';
+		$wgRemoveGroups['sysop'][] = 'editor';
+	}
+
+	if ( $mhEM['sysop'] ) {
+		$wgGroupPermissions['sysop']['edit'] = true;
+		$wgGroupPermissions['sysop']['createpage'] = true;
+	}
+}

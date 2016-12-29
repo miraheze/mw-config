@@ -183,6 +183,10 @@ if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 }
 
+if ( $wmgUseGamepress ) {
+    wfLoadSkin( 'Gamepress' );
+}
+
 if ( $wmgUseHeaderTabs ) {
 	wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {
@@ -418,6 +422,10 @@ if ( $wmgUseTranslate ) {
 	$wgULSGeoService = false;
 }
 
+if ( $wmgUseTheme ) {
+	wfLoadExtension( 'Theme' );
+}
+
 if ( $wmgUseTimedMediaHandler ) {
 	wfLoadExtension( 'MwEmbedSupport' );
 	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
@@ -430,6 +438,11 @@ if ( $wmgUseTitleKey ) {
 
 if ( $wmgUseTorBlock ) {
 	wfLoadExtension( 'TorBlock' );
+}
+
+if ( $wmgUseUserWelcome ) {
+	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+    require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
 }
 
 if ( $wmgUseVariables ) {
@@ -500,30 +513,4 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 
 if ( $wmgUseYouTube ) {
 	require_once( "$IP/extensions/YouTube/YouTube.php" );
-}
-
-// Permission variables
-if ( $wmgEditingMatrix ) {
-	$mhEM = $wmgEditingMatrix;
-	if ( $mhEM['anon'] ) {
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['*']['createpage'] = false;
-	}
-
-	if ( $mhEM['user'] ) {
-		$wgGroupPermissions['user']['edit'] = false;
-		$wgGroupPermissions['user']['createpage'] = false;
-	}
-
-	if ( $mhEM['editor'] ) {
-		$wgGroupPermissions['editor']['edit'] = true;
-		$wgGroupPermissions['editor']['createpage'] = true;
-		$wgAddGroups['sysop'][] = 'editor';
-		$wgRemoveGroups['sysop'][] = 'editor';
-	}
-
-	if ( $mhEM['sysop'] ) {
-		$wgGroupPermissions['sysop']['edit'] = true;
-		$wgGroupPermissions['sysop']['createpage'] = true;
-	}
 }
