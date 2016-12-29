@@ -2831,9 +2831,14 @@ $wgConf->settings = array(
 			),
 		),
 		'sovereignwiki' => array(
-			'sysop' => array(
+			'bureaucrat' => array(
 				'officer',
 				'game-master',
+				'sysop'
+				'bureaucrat'
+				'rollbacker'
+				'autopatrolled'
+				'confirmed'
 			),
 		),
 		'studynotekrwiki' => array(
@@ -3505,9 +3510,14 @@ $wgConf->settings = array(
 			),
 		),
 		'sovereignwiki' => array(
-			'sysop' => array(
+			'bureaucrat' => array(
 				'officer',
 				'game-master',
+				'sysop'
+				'bureaucrat'
+				'rollbacker'
+				'autopatrolled'
+				'confirmed'
 			),
 		),
 		'studynotekrwiki' => array(
