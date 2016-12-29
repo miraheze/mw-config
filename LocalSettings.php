@@ -4382,7 +4382,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
         $siteNotice .= <<<EOF
         <table class="wikitable" style="text-align:center;"><tbody><tr>
         <td>Miraheze will adopt a new <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Terms of Service</a>,
-        <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Privacy Policy</a>,
+        <a href="https://meta.miraheze.org/wiki/Privacy_Policy">Privacy Policy</a>,
         and <a href="https://meta.miraheze.org/wiki/Content_Policy">Content Policy (for wiki administrators)</a>.
         All policies will be adopted on January 1, 2017, but you can preview them now.
         The Terms of Service and Privacy Policy will apply to all users of Miraheze wikis.<br />
