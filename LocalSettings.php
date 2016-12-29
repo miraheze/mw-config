@@ -4186,6 +4186,7 @@ $wgConf->settings = array(
 	),
 	'wgVisualEditorSupportedSkins' => array(
 		'defualt' => array(),
+		'fusewiki' => array( 'foreground' ),
 		'permanentfuturelabwiki' => array( 'foreground' ),
 	),
 	'wgVisualEditorUseSingleEditTab' => array(
