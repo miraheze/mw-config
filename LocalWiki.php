@@ -94,7 +94,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['reupload-shared'] = false;
 	$wgGroupPermissions['sysop']['override-antispoof'] = false;
 	$wgGroupPermissions['*']['flow-hide'] = false;
-	$wgFlowGroupPermissions['suppress']['flow-suppress'] = false;
+	unset( $wgGroupPermissions['suppress'] );
 	$wgGroupPermissions['sysop']['flow-delete'] = false;
 	$wgGroupPermissions['sysop']['flow-edit-post'] = false;
 	$wgGroupPermissions['sysop']['flow-lock'] = false;
