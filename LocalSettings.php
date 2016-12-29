@@ -2831,7 +2831,7 @@ $wgConf->settings = array(
 			),
 		),
 		'sovereignwiki' => array(
-			'sysop' => true,
+			'sysop' => array(
 				'officer',
 				'game-master',
 			),
@@ -3505,7 +3505,7 @@ $wgConf->settings = array(
 			),
 		),
 		'sovereignwiki' => array(
-			'sysop' => true,
+			'sysop' => array(
 				'officer',
 				'game-master',
 			),
