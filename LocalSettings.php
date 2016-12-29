@@ -2830,13 +2830,18 @@ $wgConf->settings = array(
 				'sysop',
 			),
 		),
-		'sovereignwiki' => array(
-			'sysop' => array(
+		'+sovereignwiki' => array(
+			'bureaucrat' => array(
 				'officer',
 				'game-master',
+				'sysop',
+				'bureaucrat',
+				'rollbacker',
+				'autopatrolled',
+				'confirmed',
 			),
 		),
-		'studynotekrwiki' => array(
+		'+studynotekrwiki' => array(
 			'sysop' => array(
 				'voter',
 			),
@@ -3504,10 +3509,15 @@ $wgConf->settings = array(
 				'sysmag',
 			),
 		),
-		'sovereignwiki' => array(
-			'sysop' => array(
+		'+sovereignwiki' => array(
+			'bureaucrat' => array(
 				'officer',
 				'game-master',
+				'sysop',
+				'bureaucrat',
+				'rollbacker',
+				'autopatrolled',
+				'confirmed',
 			),
 		),
 		'studynotekrwiki' => array(
