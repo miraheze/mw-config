@@ -4375,18 +4375,24 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 }
 
 // Global SiteNotice
-// $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-// function onSiteNoticeAfter( &$siteNotice, $skin ) {
-//        global $wgDBname;
-//        if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
-//	        $siteNotice .= <<<EOF
-//	        <table class="wikitable" style="text-align:center;"><tbody><tr>
-//	        <td>Miraheze global notice: MariaDB on our database server crashed at 01:15 UTC. System administrators restarted MariaDB and it went into recovery mode. Instead of trying to dump and move data like from 5 Dec - 8 Dec, the server was left alone to recover for ~2 hours. at 3:10 UTC, the server finished recovery and successfully started. Any observed issues with the site or data should be reported to system administrators.</td>
-//	        </tr></tbody></table>
-// EOF;
-//        }
-//	return true;
-// }
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+       global $wgDBname;
+       if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
+        $siteNotice .= <<<EOF
+        <table class="wikitable" style="text-align:center;"><tbody><tr>
+        <td>Miraheze will adopt a new <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Terms of Service</a>,
+        <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Privacy Policy</a>,
+        and <a href="https://meta.miraheze.org/wiki/Content_Policy">Content Policy (for wiki administrators)</a>.
+        All policies will be adopted on January 1, 2017, but you can preview them now.
+        The Terms of Service and Privacy Policy will apply to all users of Miraheze wikis.<br />
+        Keep editing, and have a happy new year!
+        </td>
+        </tr></tbody></table>
+EOF;
+       }
+return true;
+}
 
 
 // Global database error notice extra text
