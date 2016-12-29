@@ -89,7 +89,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
 	$wgGroupPermissions['sysop']['mergehistory'] = false;
 	$wgGroupPermissions['sysop']['massmessage'] = false;
-	$wgGroupPermissoins['sysop']['unwatchedpages'] = false;
+	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
 	$wgGroupPermissions['sysop']['reupload'] = false;
 	$wgGroupPermissions['sysop']['reupload-shared'] = false;
 	$wgGroupPermissions['sysop']['override-antispoof'] = false;
