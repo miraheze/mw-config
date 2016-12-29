@@ -2871,7 +2871,6 @@ $wgConf->settings = array(
 				'bot',
 				'confirmed',
 				'autopatrolled',
-				'rollbacker',
 				'researcher',
 				'flow-bot',
 			),
@@ -3340,6 +3339,7 @@ $wgConf->settings = array(
 				'move-subpages' => true,
 				'importupload' => true,
 				'import' => true,
+				'rollback' => true,
 			),
 			'bureaucrat' => array(
 				'tboverride' => true,
@@ -3530,7 +3530,6 @@ $wgConf->settings = array(
 				'bot',
 				'confirmed',
 				'autopatrolled',
-				'rollbacker',
 				'researcher',
 				'flow-bot',
 			),
