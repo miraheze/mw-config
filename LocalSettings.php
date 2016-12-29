@@ -3160,9 +3160,11 @@ $wgConf->settings = array(
 		'+sovereignwiki' => array(
 			'officer' => array(
 				'read' => true,
+				'officer' => true,
 			),
 			'game-master' => array(
 				'read' => true,
+				'game-master' => true,
 			),
 		),
 		'+sthomaspriwiki' => array(
