@@ -2830,6 +2830,12 @@ $wgConf->settings = array(
 				'sysop',
 			),
 		),
+		'sovereignwiki' => array(
+			'sysop' => true,
+				'officer',
+				'game-master',
+			),
+		),
 		'studynotekrwiki' => array(
 			'sysop' => array(
 				'voter',
@@ -3146,6 +3152,14 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
+		'+sovereignwiki' => array(
+			'officer' => array(
+				'read' => true,
+			),
+			'game-master' => array(
+				'read' => true,
+			),
+		),
 		'+sthomaspriwiki' => array(
 			'bureaucrat' => array(
 				'block' => true,
@@ -3490,6 +3504,12 @@ $wgConf->settings = array(
 				'sysmag',
 			),
 		),
+		'sovereignwiki' => array(
+			'sysop' => true,
+				'officer',
+				'game-master',
+			),
+		),
 		'studynotekrwiki' => array(
 			'sysop' => array(
 				'voter'
@@ -3609,6 +3629,10 @@ $wgConf->settings = array(
 		),
 		'+jayuwikiwiki' => array(
 			'editvoter',
+		),
+		'+sovereignwiki' => array(
+			'officer',
+			'game-master',
 		),
 		'+studynotekrwiki' => array(
 			'voter',
