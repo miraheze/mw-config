@@ -3328,6 +3328,9 @@ $wgConf->settings = array(
 				'flow-lock' => true,
 				'flow-create-board' => true,
 				'flow-edit-post' => true,
+				'autopatrol' => true,
+				'patrol' => true,
+				'skipcaptcha' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
