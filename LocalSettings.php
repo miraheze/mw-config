@@ -879,6 +879,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
+		'calexitwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'takethatwikiwiki' => true,
@@ -886,6 +887,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseDuskToDawn' => array(
@@ -1079,6 +1081,7 @@ $wgConf->settings = array(
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
 		'bmedwiki' => true,
+		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
 	),
@@ -1109,6 +1112,7 @@ $wgConf->settings = array(
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 		'takethatwikiwiki' => true,
@@ -1313,6 +1317,7 @@ $wgConf->settings = array(
 	'wmgUsePdfHandler' => array(
 		'default' => false,
 		'apneuverenigingwiki' => true,
+		'calexitwiki' => true,
 		'constwiki' => true,
 		'extloadwiki' => true,
 		'noalatalawiki' => true,
@@ -1320,6 +1325,7 @@ $wgConf->settings = array(
 	'wmgUsePopups' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
 		'inazumaelevenwiki' => true,
@@ -1345,6 +1351,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseProtectSite' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'elementswiki' => true,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
@@ -1429,6 +1436,7 @@ $wgConf->settings = array(
 	'wmgUseSiteScout' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
@@ -1454,6 +1462,7 @@ $wgConf->settings = array(
 	'wmgUseSubpageFun' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseSubPageList3' => array(
@@ -1835,6 +1844,7 @@ $wgConf->settings = array(
 		'aemanualwiki' => true,
 		'amaninfowiki' => true,
 		'ayrshirewiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'geodatawiki' => true,
 		'muckhackwiki' => true,
@@ -2075,6 +2085,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'8stationwiki' => true,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'espiralwiki' => true,
 		'fbwikiwiki' => true,
 		'muckhackwiki' => true,
@@ -2383,7 +2394,8 @@ $wgConf->settings = array(
 			NS_FEATURED_TALK => 'Featured_Page_talk',
 		),
 		'calexitwiki' => array(
-			NS_OPINION => 'Opinion'
+			NS_OPINION => 'Opinion',
+			NS_TIMELINE => 'Timeline',
 		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
@@ -2496,6 +2508,7 @@ $wgConf->settings = array(
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
+		'+calexitwiki' => array( NS_OPINION, NS_TIMELINE ),
 		'+catboxwiki' => array( NS_COMIC ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+safiriawiki' => array( NS_HOENN ),
@@ -2503,6 +2516,7 @@ $wgConf->settings = array(
 	),
 	'wgMetaNamespace' => array(
 		'default' => null,
+		'calexitwiki' => 'CalExit_Wiki',
 		'tmewiki' => 'TME',
 	),
 	'+wgNamespaceAliases' => array(
@@ -2592,6 +2606,7 @@ $wgConf->settings = array(
 		),
 		'+calexitwiki' => array(
 			NS_MAIN => true,
+			NS_TIMELINE => true,
 			NS_OPINION => true,
 			NS_USER => true,
 			NS_HELP => true,
@@ -4212,6 +4227,10 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_USER => true,
 		 ),
+		 '+calexitwiki' => array(
+		 	NS_OPINION => true,
+		 	NS_TIMELINE => true,
+		 ),
 		 '+espiralwiki' => array(
 		 	NS_PROJECT => true,
 		 ),
@@ -4236,12 +4255,14 @@ $wgConf->settings = array(
 	),
 	'wgVisualEditorUseSingleEditTab' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'espiralwiki' => true,
 		'fbwikiwiki' => true,
 		'spiralwiki' => true,
 	),
 	'wmgFlowEditorList' => array(
 		'default' => array('wikitext', 'visualeditor'),
+		'calexitwiki' => array('visualeditor'),
 		'espiralwiki' => array('visualeditor'),
 		'fbwikiwiki' => array('visualeditor'),
 		'spiralwiki' => array('visualeditor'),
