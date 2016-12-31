@@ -2641,6 +2641,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			NS_MAIN => true,
+			NS_TECH => true,
 		),
 		'+partupwiki' => array(
 			NS_MAIN => true,
