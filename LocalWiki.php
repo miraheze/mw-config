@@ -265,7 +265,8 @@ $wgWhitelistRead =
 		"Special:ResetPassword",
 		"Special:UserLogin",
 		"Special:UserLogout",
-		"Special:CreateAccount"
+		"Special:CreateAccount",
+		"Spezial:Benutzerkonto anlegen"
 );
 
 // Permission variables
