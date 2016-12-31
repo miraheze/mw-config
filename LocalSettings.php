@@ -961,7 +961,6 @@ $wgConf->settings = array(
 	'wmgUseFlaggedRevs' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'pso2wiki' => true,
 		'trexwiki' => true,
 	),
 	'wmgUseFlow' => array(
