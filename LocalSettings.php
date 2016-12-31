@@ -120,8 +120,6 @@ define( 'NS_VIDEO', 1692);
 define( 'NS_VIDEO_TALK', 1693);
 define( 'NS_OPINION', 1694);
 define( 'NS_OPINION_TALK', 1695);
-define( 'NS_OPINION', 1694);
-define( 'NS_OPINION_TALK', 1695);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
