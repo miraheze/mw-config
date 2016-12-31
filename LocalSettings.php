@@ -2346,6 +2346,7 @@ $wgConf->settings = array(
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
+		'extloadwiki' => false,
 	),
 
 	// MsUpload settings
