@@ -3369,7 +3369,6 @@ $wgConf->settings = array(
 				'blockemail' => true,
 				'autopatrol' => true,
 				'suppressredirect' => true,
-				'moderator' => true,
 			),
 			'sysop' => array(
 				'protectsite' => true,
@@ -3388,7 +3387,6 @@ $wgConf->settings = array(
 				'importupload' => true,
 				'import' => true,
 				'rollback' => true,
-				'researcher' => true,
 			),
 			'bureaucrat' => array(
 				'tboverride' => true,
@@ -3657,10 +3655,6 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat',
 			'respected',
-		),
-		'+elementswiki' => array(
-			'researcher',
-			'moderator',
 		),
 		'+testwiki' => array(
 			'bureaucrat',
