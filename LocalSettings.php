@@ -138,7 +138,7 @@ $wgConf->settings = array(
 	),
 	'wgAbuseFilterAvailableActions' => array(
 		'default' => array(
-			 'flag' => true,
+			'flag' => true,
 			'throttle' => true,
 			'warn' =>  true,
 			'disallow' => true,
