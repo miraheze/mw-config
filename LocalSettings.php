@@ -4448,7 +4448,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
         </td>
         </tr></tbody></table>
         <table class="wikitable" style="text-align:center;"><tbody><tr>
-        <td>As you might have noticed, Miraheze wikis were unavailable at random times for multiple hours, due to database errors. As a result of those errors, Miraheze will perform quick, but high-priority database maintenance on 19:50 UTC today. To avoid loss of edits, save your edits before that time.
+        <td>The database maintenance has been completed, and you can save your edits now. Thank you for your patience.
         </td>
         </tr></tbody></table>
 EOF;
