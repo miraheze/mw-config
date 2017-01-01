@@ -61,6 +61,12 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
 }
 
+if ( $wgDBname === 'brynda1231wiki' ) {
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['user']['move'] = false;
+}
+
 if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['user']['changetags'] = false;
