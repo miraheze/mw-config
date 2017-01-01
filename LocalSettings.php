@@ -4413,12 +4413,11 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
        if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
         $siteNotice .= <<<EOF
         <table class="wikitable" style="text-align:center;"><tbody><tr>
-        <td>Miraheze will adopt a new <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Terms of Service</a>,
+        <td>Miraheze has adopted a new <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Terms of Service</a>,
         <a href="https://meta.miraheze.org/wiki/Privacy_Policy">Privacy Policy</a>,
         and <a href="https://meta.miraheze.org/wiki/Content_Policy">Content Policy (for wiki administrators)</a>.
-        All policies will be adopted on January 1, 2017, but you can preview them now.
-        The Terms of Service and Privacy Policy will apply to all users of Miraheze wikis.<br />
-        Keep editing, and have a happy new year!
+        The Terms of Service and Privacy Policy apply to <i>all users</i> of Miraheze wikis, so please read.<br />
+        Keep on editing, and have a happy new year!
         </td>
         </tr></tbody></table>
 EOF;
