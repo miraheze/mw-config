@@ -4430,6 +4430,9 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
+// Fonts
+putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
+
 // Global SiteNotice
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
