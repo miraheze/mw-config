@@ -136,7 +136,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
-	'wgAbuseFilterAvailableActions' => array(
+	'wgAbuseFilterActions' => array(
 		'default' => array(
 			'flag' => true,
 			'throttle' => true,
