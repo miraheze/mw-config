@@ -136,6 +136,30 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
+	'wgAbuseFilterAvailableActions' => array(
+		'default' => array(
+			 'flag' => true,
+			'throttle' => true,
+			'warn' =>  true,
+			'disallow' => true,
+			'blockautopromote' => true,
+			'block' => true,
+			'degroup' => true,
+			'rangeblock' => false,
+			'tag' => true,
+		),
+		'elementswiki' => array(
+			'flag' => true,
+			'throttle' => true,
+			'warn' => true,
+			'disallow' => true,
+			'blockautopromote' => true,
+			'block' => true,
+			'degroup' => false,
+			'rangeblock' => true,
+			'tag' => true,
+		),
+	),
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
