@@ -4447,10 +4447,6 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
         Keep on editing, and have a happy new year!
         </td>
         </tr></tbody></table>
-        <table class="wikitable" style="text-align:center;"><tbody><tr>
-        <td>The database maintenance has been completed, and you can save your edits now. Thank you for your patience.
-        </td>
-        </tr></tbody></table>
 EOF;
        }
 return true;
