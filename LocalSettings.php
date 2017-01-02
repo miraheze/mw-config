@@ -1187,6 +1187,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'catboxwiki' => true,
 		'extloadwiki' => true, // do not set this to false without disabling MsUpload on all wikis below
+		'jayuwikiwiki' => true,
 		'urho3dwiki' => true,
 	),
 	// MsUpload is enabled on extloadwiki via MsPackage
@@ -1211,7 +1212,6 @@ $wgConf->settings = array(
 		'exitsincwiki' => true,
 		'hendrickswiki' => true,
 		'izanagiwiki' => true,
-		'jayuwikiwiki' => true,
 		'luckandlogicwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'poserdazfreebieswiki' => true,
