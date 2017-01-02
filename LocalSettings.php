@@ -122,6 +122,8 @@ define( 'NS_OPINION', 1694);
 define( 'NS_OPINION_TALK', 1695);
 define( 'NS_TIMELINE', 1696);
 define( 'NS_TIMELINE_TALK', 1697);
+define( 'NS_CLAN37', 1698);
+define( 'NS_CLAN37_TALK', 1699);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2438,6 +2440,10 @@ $wgConf->settings = array(
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
 			NS_COMIC_TALK => 'Comic_talk'
+		),
+		'claneuphoriawiki' => array(
+			NS_CLAN37 => 'Clan37',
+			NS_CLAN37_TALK => 'Clan3_talk',
 		),
 		'developmentwiki' => array(
 			NS_OFFICIAL => 'Official',
