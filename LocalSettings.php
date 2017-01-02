@@ -164,8 +164,7 @@ $wgConf->settings = array(
 		'default' => 'indefinite',
 	),
 	'wgAbuseFilterAnonBlockDuration' => array(
-		'default' => null
-		'elementswiki' => '6 months',
+		'default' => '6 months',
 	),
 
 	// Anti-spam
