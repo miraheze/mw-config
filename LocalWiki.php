@@ -102,7 +102,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['*']['flow-hide'] = false;
 	unset( $wgGroupPermissions['suppress'] );
 	unset( $wgGroupPermissions['rollbacker'] );
-	unset( $wgGroupPermissions['checkuser'];
+	unset( $wgGroupPermissions['checkuser'] );
 	$wgGroupPermissions['sysop']['flow-delete'] = false;
 	$wgGroupPermissions['sysop']['flow-edit-post'] = false;
 	$wgGroupPermissions['sysop']['flow-lock'] = false;
