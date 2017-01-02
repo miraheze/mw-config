@@ -160,6 +160,13 @@ $wgConf->settings = array(
 			'tag' => true,
 		),
 	),
+	'wgAbuseFilterBlockDuration' => array(
+		'default' => 'indefinite',
+	),
+	'wgAbuseFilterAnonBlockDuration' => array(
+		'default' => null
+		'elementswiki' => '6 months',
+	),
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
