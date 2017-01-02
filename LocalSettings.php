@@ -1192,6 +1192,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'bgowiki' => true,
 		'bigforestwikipediawiki' => true,
+		'casuarinawiki' => true,
 		'chandruswethswiki' => true,
 		'christipediawiki' => true,
 		'doinwiki' => true,
