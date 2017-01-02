@@ -102,6 +102,9 @@ if ( $wmgUseCustomNavBlocks) {
 	require_once( "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php" );
 	$wgCustomNavBlocksEnable = true;
 }
+if ( $wmgUseDismissableSiteNotice ) {
+	wfLoadExtension( 'DismissableSiteNotice' );
+}
 
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );

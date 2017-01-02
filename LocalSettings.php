@@ -926,6 +926,10 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseDismissableSiteNotice' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
 		'extloadwiki' => true,
@@ -3833,13 +3837,18 @@ $wgConf->settings = array(
 	'wgSiteMatrixSites' => array(
 		'default' => array(),
 	),
-	
+
+	// SiteNotice
+	'wgDismissableSiteNoticeForAnons' => array(
+		'default' => true,
+	),
+
 	// Statistics
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'throisarwiki' => 'any',
 	),
-	
+
 	// Squid (aka Varnish)
 	'wgUseSquid' => array(
 		'default' => true,
@@ -3847,7 +3856,7 @@ $wgConf->settings = array(
 	'wgSquidServers' => array(
 		'default' => array( '81.4.124.61:81', '107.191.126.23:81' ),
 	),
-	
+
 	// Style
 	'wgAllowUserCss' => array(
 		'default' => true,
@@ -4459,6 +4468,11 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Global SiteNotice
+// Increment this version number whenever you change the site notice
+// and don't comment it out
+$wgMajorSiteNoticeID = 1;
+
+// Write your SiteNotice below.  Comment out this section to disable.
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
        global $wgDBname;
