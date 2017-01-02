@@ -365,6 +365,7 @@ $wgConf->settings = array(
 			"$IP/extensions/PageTriage/sql/PageTriageLog.sql",
 			"$IP/extensions/Poll/archives/Poll-install-manual.sql",
 			"$IP/extensions/SocialProfile/UserProfile/user_profile.sql",
+			"$IP/extensions/SecurePoll/SecurePoll.sql",
 			"$IP/extensions/SocialProfile/UserSystemMessages/user_system_messages.sql",
 			"$IP/extensions/SocialProfile/UserStats/user_points_monthly.sql",
 			"$IP/extensions/SocialProfile/UserStats/user_points_archive.sql",
