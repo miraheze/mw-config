@@ -1457,6 +1457,7 @@ $wgConf->settings = array(
 	'wmgUseSecurePoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 	),
 	'wmgUseShortURL' => array(
 		'default' => true,
@@ -1571,6 +1572,7 @@ $wgConf->settings = array(
 	'wmgUseTemplateSandbox' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 	),
 	'wmgUseTheme' => array(
 		'default' => false,
