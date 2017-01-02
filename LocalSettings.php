@@ -1631,6 +1631,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseUserWelcome' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseVoteNY' => array(
