@@ -336,7 +336,7 @@ if ( $wmgUseProtectSite ) {
 if ( $wmgUseQuiz ) {
 	wfLoadExtension( 'Quiz' );
 }
-	
+
 if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
@@ -364,6 +364,10 @@ if ( $wmgUseSandboxLink ) {
 
 if ( $wmgUseScratchBlocks ) {
 	wfLoadExtension( "ScratchBlocks" );
+}
+
+if ( $wmgUseSecurePoll ) {
+	wfLoadExtension( 'SecurePoll' );
 }
 
 if ( $wmgUseSyntaxHighlight ) {
@@ -401,6 +405,10 @@ if ( $wmgUseSyntaxHighlight ) {
 if ( $wmgUseTabsCombination ) {
 	require_once( "$IP/extensions/Tabber/Tabber.php" );
 	require_once( "$IP/extensions/Tabs/Tabs.php" );
+}
+
+if ( $wmgUseTemplateSandbox ) {
+	wfLoadExtension( 'TemplateSandbox' );
 }
 
 if ( $wmgUseTranslate ) {

@@ -1453,6 +1453,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'qwertywiki' => true,
 	),
+	'wmgUseSecurePoll' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseShortURL' => array(
 		'default' => true,
 		'applewikiwiki' => false,
@@ -1562,6 +1566,10 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'universebuildwiki' => true,
 		'whentheycrywiki' => true,
+	),
+	'wmgUseTemplateSandbox' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseTheme' => array(
 		'default' => false,
