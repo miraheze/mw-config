@@ -484,10 +484,6 @@ $wgConf->settings = array(
 		'+compilerdevwiki' => array(
 			'anon' => true,
 		),
-		'+cosiadventurewiki' => array(
-			'anon' => true,
-			'user' => true,
-		),
 		'+cpiwiki' => array(
 			'anon' => true,
 		),
