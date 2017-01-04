@@ -284,6 +284,10 @@ if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }
 
+if ( $wmgUseNewSignupPage ) {
+	wfLoadExtension( 'NewSignupPage' );
+}
+
 if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
 	$wgGroupPermissions['confirmed']['newsletter-create'] = true;
