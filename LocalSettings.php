@@ -1267,6 +1267,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'muckhackwiki' => true,
 	),
+	'wmgUseNewSignupPage' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseNewsletter' => array(
 		'default' => false,
 		'espiralwiki' => true,
