@@ -441,6 +441,7 @@ $wgConf->settings = array(
 			'user' => false, // disable user editing
 			'editor' => false, // add an editor group for editing + sysop assign
 			'sysop' => false, // allow sysop' to edit (not needed)
+	
 		),
 		'+8stationwiki' => array(
 			'anon' => true,
@@ -483,6 +484,10 @@ $wgConf->settings = array(
 		),
 		'+compilerdevwiki' => array(
 			'anon' => true,
+		),
+		'+cosiadventurewiki' => array(
+			'anon' => false,
+			'user' => false,
 		),
 		'+cpiwiki' => array(
 			'anon' => true,
