@@ -1269,6 +1269,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewSignupPage' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseNewsletter' => array(
