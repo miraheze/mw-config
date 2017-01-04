@@ -842,7 +842,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'whentheycrywiki' => false,
 		'chocowiki' => true,
-		'ratanpirwiki' => true,
+		
 	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
