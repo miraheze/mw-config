@@ -67,6 +67,21 @@ if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['user']['move'] = false;
 }
 
+if ( $wgDBname === 'cosiadventurewiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['createtalk'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['user']['reupload-shared'] = false;
+	$wgGroupPermissions['user']['reupload'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
+}
+
 if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['user']['changetags'] = false;
