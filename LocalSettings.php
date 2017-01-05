@@ -487,6 +487,7 @@ $wgConf->settings = array(
 		'+cosiadventurewiki' => array(
 			'anon' => true,
 			'user' => true,
+			'sysop' => true,
 		),
 		'+cpiwiki' => array(
 			'anon' => true,
