@@ -108,6 +108,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['move-subpages'] = false;
 	$wgGroupPermissions['sysop']['tboverride'] = false;
 	$wgGroupPermissions['sysop']['noratelimit'] = false;
+	$wgGroupPermissions['steward']['userrights'] = false;
 
 }
 
