@@ -3469,6 +3469,15 @@ $wgConf->settings = array(
 				'autopatrol' => true,
 				'autoconfirmed' => true,
 			),
+			'Steward' => array(
+				'abusefilter-hidden-log' => true,
+				'abusefilter-hide-log' => true,
+				'hideuser' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+			),
 		
 		),
 		'+wikipucwiki' => array(
