@@ -1828,6 +1828,7 @@ $wgConf->settings = array(
 		'secondcirclewiki' => true,
 		'seldirwiki' => true,
 		'setonwiki' => true,
+		'shippingandmetawiki' => true,
 		'shoppingwiki' => true,
 		'sidemwiki' => true,
 		'simonjonwiki' => true,
