@@ -2379,6 +2379,7 @@ $wgConf->settings = array(
 			'metawiki',
 			'allthetropeswiki',
 			'bitcoindebateswiki',
+			'softwarecrisiswiki',
 			'spiralwiki',
 			'extloadwiki',
 			'loginwiki',
