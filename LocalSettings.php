@@ -1469,6 +1469,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'qwertywiki' => true,
 	),
+	'wmgUseScributno' => array(
+		'default' => false,
+		'elementswiki' => true,
+	),
 	'wmgUseSecurePoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
