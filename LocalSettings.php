@@ -2656,6 +2656,13 @@ $wgConf->settings = array(
 			'画像' => NS_FILE,
 		),
 	),
+	'+wgNamesspaceProtection' => array(
+		'default' => array(),
+		'elementswiki' => array(
+			NS_MODULE => array( 'module-edit' ),
+			NS_TEMPLATE => array( 'template-edit' ),
+		),
+	),
 	'+wgNamespacesToBeSearchedDefault' => array(
 		'default' => array(),
 		'+metawiki' => array(
@@ -3434,6 +3441,8 @@ $wgConf->settings = array(
 				'autopatrol' => true,
 				'patrol' => true,
 				'skipcaptcha' => true,
+				'module-edit' => true,
+				'template-edit' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
@@ -3467,6 +3476,7 @@ $wgConf->settings = array(
 				'importupload' => true,
 				'import' => true,
 				'rollback' => true,
+				'template-edit' => true,
 			),
 			'bureaucrat' => array(
 				'tboverride' => true,
