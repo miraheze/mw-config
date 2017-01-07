@@ -65,6 +65,7 @@ if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
 	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['sysop']['createpage'] = true;
 }
 
 if ( $wgDBname == 'elementswiki' ) {
@@ -108,6 +109,7 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['move-subpages'] = false;
 	$wgGroupPermissions['sysop']['tboverride'] = false;
 	$wgGroupPermissions['sysop']['noratelimit'] = false;
+	$wgGroupPermissions['steward']['userrights'] = false;
 
 }
 

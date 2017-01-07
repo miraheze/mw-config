@@ -935,6 +935,7 @@ $wgConf->settings = array(
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 		'extloadwiki' => true,
+		'elementswiki' => false,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
@@ -2379,6 +2380,7 @@ $wgConf->settings = array(
 			'metawiki',
 			'allthetropeswiki',
 			'bitcoindebateswiki',
+			'softwarecrisiswiki',
 			'spiralwiki',
 			'extloadwiki',
 			'loginwiki',
@@ -2653,6 +2655,13 @@ $wgConf->settings = array(
 			'Predefinição' => NS_TEMPLATE,
 			'Imagem' => NS_IMAGE,
 			'画像' => NS_FILE,
+		),
+	),
+	'+wgNamespaceProtection' => array(
+		'default' => array(),
+		'elementswiki' => array(
+			NS_MODULE => array( 'module-edit' ),
+			NS_TEMPLATE => array( 'template-edit' ),
 		),
 	),
 	'+wgNamespacesToBeSearchedDefault' => array(
@@ -2973,6 +2982,19 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'researcher',
 				'flow-bot',
+			),
+			'steward' => array(
+				'bureaucrat',
+				'moderator',
+				'sysop',
+				'bot',
+				'confirmed',
+				'autopatrolled',
+				'researcher',
+				'flow-bot',
+				'checkuser',
+				'oversight',
+				'steward',
 			),
 		),
 	),
@@ -3420,6 +3442,8 @@ $wgConf->settings = array(
 				'autopatrol' => true,
 				'patrol' => true,
 				'skipcaptcha' => true,
+				'module-edit' => true,
+				'template-edit' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
@@ -3453,6 +3477,7 @@ $wgConf->settings = array(
 				'importupload' => true,
 				'import' => true,
 				'rollback' => true,
+				'template-edit' => true,
 			),
 			'bureaucrat' => array(
 				'tboverride' => true,
@@ -3649,6 +3674,19 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'banned',
 				'founder',
+				'moderator',
+				'sysop',
+				'bot',
+				'confirmed',
+				'autopatrolled',
+				'researcher',
+				'flow-bot',
+				'checkuser',
+				'oversight',
+				'steward',
+			),
+			'steward' => array(
+				'bureaucrat',
 				'moderator',
 				'sysop',
 				'bot',
@@ -4489,23 +4527,23 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgMajorSiteNoticeID = 1;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-       global $wgDBname;
-       if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
-        $siteNotice .= <<<EOF
-        <table class="wikitable" style="text-align:center;"><tbody><tr>
-        <td>Miraheze has adopted a new <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Terms of Service</a>,
-        <a href="https://meta.miraheze.org/wiki/Privacy_Policy">Privacy Policy</a>,
-        and <a href="https://meta.miraheze.org/wiki/Content_Policy">Content Policy (for wiki administrators)</a>.
-        The Terms of Service and Privacy Policy apply to <i>all users</i> of Miraheze wikis, so please read.<br />
-        Keep on editing, and have a happy new year!
-        </td>
-        </tr></tbody></table>
-EOF;
-       }
-return true;
-}
+// $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+// function onSiteNoticeAfter( &$siteNotice, $skin ) {
+//        global $wgDBname;
+//        if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
+//         $siteNotice .= <<<EOF
+//         <table class="wikitable" style="text-align:center;"><tbody><tr>
+//         <td>Miraheze has adopted a new <a href="https://meta.miraheze.org/wiki/Terms_of_Use">Terms of Service</a>,
+//         <a href="https://meta.miraheze.org/wiki/Privacy_Policy">Privacy Policy</a>,
+//         and <a href="https://meta.miraheze.org/wiki/Content_Policy">Content Policy (for wiki administrators)</a>.
+//         The Terms of Service and Privacy Policy apply to <i>all users</i> of Miraheze wikis, so please read.<br />
+//         Keep on editing, and have a happy new year!
+//         </td>
+//         </tr></tbody></table>
+// EOF;
+//        }
+// return true;
+// }
 
 
 // Global database error notice extra text
