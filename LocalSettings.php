@@ -2656,7 +2656,7 @@ $wgConf->settings = array(
 			'画像' => NS_FILE,
 		),
 	),
-	'+wgNamesspaceProtection' => array(
+	'+wgNamespaceProtection' => array(
 		'default' => array(),
 		'elementswiki' => array(
 			NS_MODULE => array( 'module-edit' ),
