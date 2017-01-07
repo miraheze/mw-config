@@ -935,6 +935,7 @@ $wgConf->settings = array(
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 		'extloadwiki' => true,
+		'elementswiki' => false,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
