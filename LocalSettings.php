@@ -2987,7 +2987,6 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'researcher',
 				'flow-bot',
-				'commentadmin',
 			),
 			'steward' => array(
 				'bureaucrat',
@@ -3001,7 +3000,6 @@ $wgConf->settings = array(
 				'checkuser',
 				'oversight',
 				'steward',
-				'commentadmin',
 			),
 		),
 	),
@@ -3459,7 +3457,6 @@ $wgConf->settings = array(
 				'skipcaptcha' => true,
 				'module-edit' => true,
 				'template-edit' => true,
-				'commentadmin' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
@@ -3475,6 +3472,7 @@ $wgConf->settings = array(
 				'blockemail' => true,
 				'autopatrol' => true,
 				'suppressredirect' => true,
+				'commentadmin' => true,
 			),
 			'sysop' => array(
 				'protectsite' => true,
@@ -3700,7 +3698,6 @@ $wgConf->settings = array(
 				'checkuser',
 				'oversight',
 				'steward',
-				'commentadmin',
 			),
 			'steward' => array(
 				'bureaucrat',
@@ -3714,7 +3711,6 @@ $wgConf->settings = array(
 				'checkuser',
 				'oversight',
 				'steward',
-				'commentadmin',
 			),
 		),
 	),
