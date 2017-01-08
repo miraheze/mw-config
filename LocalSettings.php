@@ -1277,8 +1277,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewSignupPage' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
-		'extloadwiki' => true,
+		'extloadwiki' => false, // DO NOT ENABLE !! This extension uses ShoutWiki notices and is not adapted for Miraheze --Reception123
 	),
 	'wmgUseNewsletter' => array(
 		'default' => false,
