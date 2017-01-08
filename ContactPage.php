@@ -45,7 +45,7 @@ if ( $wgDBname == 'christipediawiki' ) {
 
 if ( $wgDBname == 'deltaquadtestwiki' ) {
 	$wgContactConfig['default'] = array(
-		'RecipientUser' => 'DeltaQuad Test Wiki',
+		'RecipientUser' => 'DeltaQuad',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
