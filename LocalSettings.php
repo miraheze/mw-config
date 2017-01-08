@@ -790,6 +790,7 @@ $wgConf->settings = array(
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
+		'deltaquadtestwiki' => true,
 		'extloadwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'jakeperswiki' => true,
@@ -877,6 +878,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
+		'deltaquadtestwiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'foodsharinghamburgwiki' => true,
@@ -897,6 +899,7 @@ $wgConf->settings = array(
 		'default' => false, // Add wiki config to ContactPage.php
 		'ayrshirewiki' => true,
 		'christipediawiki' => true,
+		'deltaquadtestwiki' => true,
 		'fablabesdswiki' => true,
 		'extloadwiki' => true,
 	),
@@ -1611,6 +1614,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTorBlock' => array(
 		'default' => false,
+		'deltaquadtestwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'takethatwikiwiki' => true,
@@ -3176,6 +3180,14 @@ $wgConf->settings = array(
 				'editprotected' => true,
 				'editsemiprotected' => true,
 				'editinterface' => true,
+			),
+		),
+		'deltaquadtestwiki' => array(
+			'bureaucrat' => array(
+				'commentadmin' => true,
+				'author' => true,
+				'authorprotect' => true,
+				'torunblock' => true,
 			),
 		),
 		'+dpwiki' => array(
