@@ -793,7 +793,7 @@ $wgConf->settings = array(
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
-		'deltaquadtestwiki' => true,
+		'elementswiki' => true,
 		'extloadwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'jakeperswiki' => true,
@@ -881,7 +881,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
-		'deltaquadtestwiki' => true,
+		'elementswiki' => true,
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'foodsharinghamburgwiki' => true,
@@ -902,7 +902,7 @@ $wgConf->settings = array(
 		'default' => false, // Add wiki config to ContactPage.php
 		'ayrshirewiki' => true,
 		'christipediawiki' => true,
-		'deltaquadtestwiki' => true,
+		'elementswiki' => true,
 		'fablabesdswiki' => true,
 		'extloadwiki' => true,
 	),
@@ -1616,7 +1616,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseTorBlock' => array(
 		'default' => false,
-		'deltaquadtestwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'takethatwikiwiki' => true,
@@ -2988,6 +2987,7 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'researcher',
 				'flow-bot',
+				'commentadmin',
 			),
 			'steward' => array(
 				'bureaucrat',
@@ -3001,6 +3001,7 @@ $wgConf->settings = array(
 				'checkuser',
 				'oversight',
 				'steward',
+				'commentadmin',
 			),
 		),
 	),
@@ -3458,6 +3459,7 @@ $wgConf->settings = array(
 				'skipcaptcha' => true,
 				'module-edit' => true,
 				'template-edit' => true,
+				'commentadmin' => true,
 			),
 			'moderator' => array(
 				'deletelogentry' => true,
@@ -3698,6 +3700,7 @@ $wgConf->settings = array(
 				'checkuser',
 				'oversight',
 				'steward',
+				'commentadmin',
 			),
 			'steward' => array(
 				'bureaucrat',
@@ -3711,6 +3714,7 @@ $wgConf->settings = array(
 				'checkuser',
 				'oversight',
 				'steward',
+				'commentadmin',
 			),
 		),
 	),
