@@ -461,6 +461,9 @@ $wgConf->settings = array(
 		'+antiguabarbudacalypsowiki' => array(
 			'anon' => true,
 		),
+		'+caeruleawiki' => array(
+			'anon' => true,
+		),
 		'+calexitwiki' => array(
 			'anon' => true,
 		),
