@@ -3184,7 +3184,7 @@ $wgConf->settings = array(
 				'editinterface' => true,
 			),
 		),
-		'deltaquadtestwiki' => array(
+		'+deltaquadtestwiki' => array(
 			'bureaucrat' => array(
 				'commentadmin' => true,
 				'author' => true,
