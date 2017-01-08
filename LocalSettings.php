@@ -180,7 +180,7 @@ $wgConf->settings = array(
 	'wgAutoConfirmCount' => array(
 		'default' => 10,
 	),
-	
+
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
@@ -259,7 +259,7 @@ $wgConf->settings = array(
 			'aman.info.tm' => 'amaninfowiki',
 			'applewiki.tk' => 'applewikiwiki',
 			'carving.wiki' => 'carvingwiki',
-			'wiki.drones4nature.info' => 'drones4allwiki', 
+			'wiki.drones4nature.info' => 'drones4allwiki',
 			'espiral.org' => 'espiralwiki',
 			'evelopedia.tk' => 'evelopediawiki',
 			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
@@ -851,7 +851,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'whentheycrywiki' => false,
 		'chocowiki' => true,
-		
+
 	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
@@ -1016,7 +1016,7 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 	),
 	'wmgUseFlow' => array(
-		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)		
+		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'ageofimperialistswiki' => true,
@@ -1278,6 +1278,7 @@ $wgConf->settings = array(
 	'wmgUseNewSignupPage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseNewsletter' => array(
@@ -1288,6 +1289,7 @@ $wgConf->settings = array(
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'developmentwiki' => true,
 		'extloadwiki' => true,
 		'ganeshawiki' => true,
@@ -1313,6 +1315,7 @@ $wgConf->settings = array(
 		'imperiuswiki' => true,
 		'aktposwiki' => true,
 		'alwikiwiki' => true,
+		'calexitwiki' => true,
 		'carvingwiki' => true,
 		'developmentwiki' => true,
 		'dtswiki' => true,
@@ -1335,6 +1338,7 @@ $wgConf->settings = array(
 	'wmgUsePageNotice' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'ndnwiki' => true,
 		'secondcirclewiki' => true,
@@ -1651,6 +1655,7 @@ $wgConf->settings = array(
 	'wmgUseUserWelcome' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseVoteNY' => array(
@@ -1765,7 +1770,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'ircwiki' => true,
 		'islamwissenschaftwiki' => true,
-		'izanagiwiki' => true,	
+		'izanagiwiki' => true,
 		'jakeperswiki' => true,
 		'janesskillspackwiki' => true,
 		'jayuwikiwiki' => true,
@@ -1897,6 +1902,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'ayrshirewiki' => true,
 		'bgowiki' => true,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'eotewiki' => true,
 		'marcoschriekwiki' => true,
@@ -2177,7 +2183,7 @@ $wgConf->settings = array(
 	'wgGlobalBlockingDatabase' => array(
 		'default' => 'centralauth', // use centralauth for global blocks
 	),
-	
+
 	// GlobalCssJs
 	'wgGlobalCssJsConfig' => array(
 		'default' => array(
@@ -2337,7 +2343,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 	),
-	
+
 	// MassMessage
 	'wgAllowGlobalMessaging' => array(
 		'default' => false,
@@ -2350,7 +2356,7 @@ $wgConf->settings = array(
 			NS_PROJECT,
 		),
 	),
-	
+
 	// Metrolook settings
 	'wgMetrolookDownArrow' => array(
 		'default' => true,
@@ -2376,7 +2382,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => false,
 	),
 	'wgMetrolookLine' => array(
-		'default' => true, 
+		'default' => true,
 		'ayrshirewiki' => false,
 	),
 
@@ -2395,7 +2401,7 @@ $wgConf->settings = array(
 			'throisarwiki',
 		),
 	),
-	
+
 	// Misc. stuff
 	'wgSitename' => array(
 		'default' => 'No sitename set!',
@@ -2407,7 +2413,7 @@ $wgConf->settings = array(
 		'default' => true, // Wikis with NoTitle have it set to false
 		'takethatwikiwiki' => false,
 	),
-	
+
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => array(
 		'default' => true,
@@ -2426,22 +2432,22 @@ $wgConf->settings = array(
 		'anduinwiki' => true,
 		'calexitwiki' => true,
 	),
-	
+
 	'wgMSU_showAutoCat' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
-	
+
 	'wgMSU_checkAutoCat' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
-	
+
 	'wgMSU_confirmReplace' => array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
-	
+
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => array(
 		'calexitwiki' => true,
@@ -2473,7 +2479,12 @@ $wgConf->settings = array(
 		),
 		'calexitwiki' => array(
 			NS_OPINION => 'Opinion',
+			NS_OPINION_TALK => 'Opinion_talk',
 			NS_TIMELINE => 'Timeline',
+			NS_PORTAL => 'Portal',
+			NS_PORTAL_TALK => 'Portal_talk',
+			NS_HELP => 'Help',
+			NS_HELP_TALK => 'Help_talk',
 		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
@@ -2580,7 +2591,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => array(
 			NS_TEST	=> 'TEST',
 			NS_TEST_TALK => 'TEST_talk',
-		),	
+		),
 		'whentheycrywiki' => array(
 			NS_SPRITES => 'Sprites',
 			NS_SPRITES_TALK => 'Sprites_talk',
@@ -2695,9 +2706,11 @@ $wgConf->settings = array(
 		),
 		'+calexitwiki' => array(
 			NS_MAIN => true,
+			NS_USER => true,
 			NS_TIMELINE => true,
 			NS_OPINION => true,
-			NS_USER => true,
+			NS_PORTAL => true,
+			NS_TEMPLATE => true,
 			NS_HELP => true,
 		),
 		'+catboxwiki' => array(
@@ -2776,7 +2789,7 @@ $wgConf->settings = array(
 	'wgMWOAuthSecureTokenTransfer' => array(
 		'default' => true,
 	),
-	
+
 	// Pagelang
 	'wgPageLanguageUseDB' => array(
 		'default' => false,
@@ -3435,7 +3448,7 @@ $wgConf->settings = array(
 			'Teachers' => array(
 				'edit' => true,
 			),
-		),		
+		),
                 '+walthamstowlabourwiki' => array(
 			'editor-approver' => array(
 				'edit' => true,
@@ -3510,7 +3523,7 @@ $wgConf->settings = array(
 				'autopatrol' => true,
 				'autoconfirmed' => true,
 			),
-		
+
 		),
 		'+wikipucwiki' => array(
 			'*' => array(
@@ -3736,7 +3749,7 @@ $wgConf->settings = array(
  				'read' => true,
 				'edit' => true,
  			),
-			
+
  		),
 	),
 
@@ -3768,7 +3781,7 @@ $wgConf->settings = array(
 	 	'extloadwiki' => true,
 	 	'youtubewiki' => true,
 	 ),
-	 
+
 	// Restriction types
 	'+wgRestrictionLevels' => array(
 		'default' => array(
@@ -3804,13 +3817,13 @@ $wgConf->settings = array(
 			'co',
 		),
 	),
-		
+
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
 		),
 	),
-	
+
 	// RSS Settings
 	'wgRSSCacheAge' => array(
 		'default' => '3600'
@@ -4101,7 +4114,7 @@ $wgConf->settings = array(
 		'cssandjsschoolboardwiki' => "//upload.wikimedia.org/wikipedia/commons/c/c7/Css.png",
 		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
 		'cvmlabwiki' => "//$wmgUploadHostname/cvmlabwiki/3/3b/Wiki_logo.png",
-		'czechpolicywiki' => "//$wmgUploadHostname/czechpolicywiki/2/20/Plain_logo.png", 
+		'czechpolicywiki' => "//$wmgUploadHostname/czechpolicywiki/2/20/Plain_logo.png",
 		'datachronwiki' => "//$wmgUploadHostname/datachronwiki/f/f3/1408002974_WS.png",
 		'dditecwiki' => "//$wmgUploadHostname/dditecwiki/8/87/Ddu_logo.png",
 		'decisorwiki' => "//$wmgUploadHostname/decisorwiki/8/87/DECISOR135x135.png",
@@ -4359,6 +4372,8 @@ $wgConf->settings = array(
 		 '+calexitwiki' => array(
 		 	NS_OPINION => true,
 		 	NS_TIMELINE => true,
+ 			NS_PORTAL => true,
+		 	NS_HELP => true,
 		 ),
 		 '+espiralwiki' => array(
 		 	NS_PROJECT => true,
