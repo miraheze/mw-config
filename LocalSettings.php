@@ -799,7 +799,6 @@ $wgConf->settings = array(
 		'jakeperswiki' => true,
 		'sthomaspriwiki' => true,
 		'testauthorprotectwiki' => true,
-		'testwiki' => true,
 		'trexwiki' => true,
 	),
 	'wmgUseAutomaticBoardWelcome' => array(
@@ -1621,7 +1620,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'takethatwikiwiki' => true,
-		'testwiki' => true,
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
