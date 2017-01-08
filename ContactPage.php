@@ -47,7 +47,7 @@ if ( $wgDBname == 'deltaquadtestwiki' ) {
 	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'DeltaQuad Test Wiki',
 		'SenderEmail' => $wgPasswordSender,
-		'SenderName' => 'noreply@deltaquadtestwiki.org',
+		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false,
 		'AdditionalFields' => array(),
