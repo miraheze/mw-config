@@ -43,7 +43,7 @@ if ( $wgDBname == 'christipediawiki' ) {
 	);
 }
 
-if ( $wgDBname == 'deltaquadtestwiki' ) {
+if ( $wgDBname == 'elementswiki' ) {
 	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'DeltaQuad',
 		'SenderEmail' => $wgPasswordSender,
