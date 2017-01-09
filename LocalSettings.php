@@ -1821,6 +1821,7 @@ $wgConf->settings = array(
 		'pbmwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'pflanzenwiki' => true,
+		'plasticssongcontestwiki' => true,
 		'pqwiki' => true,
 		'porpwiki' => true,
 		'priyowiki' => true,
