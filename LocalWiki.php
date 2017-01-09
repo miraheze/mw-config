@@ -114,6 +114,10 @@ if ( $wgDBname == 'elementswiki' ) {
 
 }
 
+if ( $wgDBname === 'howtoturtlewiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
+}
+
 if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['user']['move'] = false;
