@@ -533,7 +533,7 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
-		'howtoturtlewiki' => array(
+		'+howtoturtlewiki' => array(
 			'anon' => true,
 		),
 		'+izanagiwiki' => array(
