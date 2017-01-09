@@ -1748,7 +1748,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'fablabesdswiki' => true,
-		'fantasiawiki' => true,
 		'fbwikiwiki' => true,
 		'fishpercolatorwiki' => true,
 		'fmbvwiki' => true,
