@@ -2723,6 +2723,9 @@ $wgConf->settings = array(
 		'+clementsworldbuildingwiki' => array(
 			NS_MAIN => true,
 		),
+		'+cnvwiki' => array(
+			NS_MAIN => true,
+		),
 		'+eotewiki' => array(
 			NS_MAIN => true,
 		),
