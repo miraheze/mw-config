@@ -18,6 +18,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wmgUploadHostname = "static.miraheze.org";
 
+
+
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
@@ -4157,6 +4159,7 @@ $wgConf->settings = array(
 		'jokowiki' => "//$wmgUploadHostname/jokowiki/0/0d/Icon_Joko.png",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
 		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
+		'lingnlangwiki' => "//wmgUploadHostname/lingnlangwiki/b/bc/Wiki.png",
 		'lunfengwiki' => "//$wmgUploadHostname/lunfengwiki/b/bc/Wiki.png",
 		'idleomenswiki' => "//$wmgUploadHostname/idleomenswiki/9/9e/IdleOmens-Logo.png",
 		'imperiuswiki' => "//$wmgUploadHostname/imperiuswiki/9/94/ImperiusLogo.png",
