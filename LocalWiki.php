@@ -111,7 +111,12 @@ if ( $wgDBname == 'elementswiki' ) {
 	$wgGroupPermissions['sysop']['tboverride'] = false;
 	$wgGroupPermissions['sysop']['noratelimit'] = false;
 	$wgGroupPermissions['steward']['userrights'] = false;
+}
 
+if ( $wgDBname === 'intpwiki' ) {
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['sysop']['createpage'] = true;
 }
 
 if ( $wgDBname === 'jayuwikiwiki' ) {
