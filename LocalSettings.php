@@ -1610,6 +1610,7 @@ $wgConf->settings = array(
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'enmarchewiki' => true,
 		'geirpediawiki' => true,
 	),
 	'wmgUseTitleKey' => array(
