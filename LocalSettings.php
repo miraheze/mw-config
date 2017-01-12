@@ -4227,6 +4227,7 @@ $wgConf->settings = array(
 		'teleswikiwiki' => "//$wmgUploadHostname/teleswikiwiki/b/b6/Teleslogo01.png",
 		'terriblespacewiki' => "//$wmgUploadHostname/terriblespacewiki/e/eb/Terrible_space_logo.png",
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/NewLogo.png",
+		'texwikiwiki' => "//$wmgUploadHostname/texwikiwiki/3/34/Texwikilogo.png",
 		'thecscwiki' => "//$wmgUploadHostname/thecscwiki/5/5d/CSC_logo_final.svg",
 		'thefosterswiki' => "//$wmgUploadHostname/thefosterswiki/archive/c/c9/20160726073101%21Logo.png",
 		'theinternetemowiki' => "//$wmgUploadHostname/theinternetemowiki/b/bc/Wiki.png",
