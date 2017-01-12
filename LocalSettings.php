@@ -4132,6 +4132,7 @@ $wgConf->settings = array(
 		'dsiguidewiki' => "//$wmgUploadHostname/dsiguidewiki/1/13/Wikilogod.jpg",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/c/c0/Logo_135.png",
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/3/3b/Wiki_logo.png",
+		'enmarchewiki' => "//$wmgUploadHostname//enmarchewiki/7/71/LogoEM68_135x135.png",
 		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
 		'espiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'eternalconfictwiki' => "//$wmgUploadHostname/eternalconfictwiki/a/a9/AD_new_logo4.png",
