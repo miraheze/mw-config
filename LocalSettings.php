@@ -553,6 +553,9 @@ $wgConf->settings = array(
 		'+kl6fwiki' => array(
 			'anon' => true,
 		),
+		'+maiasongcontestwiki' => array(
+			'anon' => true,
+		),
 		'+metatrekwiki' => array(
 			'anon' => true,
 			'user' => true,
