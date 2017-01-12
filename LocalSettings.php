@@ -1236,6 +1236,7 @@ $wgConf->settings = array(
 		'exitsincwiki' => true,
 		'hendrickswiki' => true,
 		'izanagiwiki' => true,
+		'lanstationwiki' => true,
 		'luckandlogicwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'poserdazfreebieswiki' => true,
