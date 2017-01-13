@@ -1086,6 +1086,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseGraph' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
