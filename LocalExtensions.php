@@ -190,6 +190,10 @@ if ( $wmgUseGamepress ) {
     wfLoadSkin( 'Gamepress' );
 }
 
+if ( $wmgUseGraph ) {
+	wfLoadExtension( 'Graph' );
+}
+
 if ( $wmgUseHeaderTabs ) {
 	wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {
