@@ -1084,6 +1084,10 @@ $wgConf->settings = array(
 		'claneuphoriawiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseGraph' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
 		'default' => false,
