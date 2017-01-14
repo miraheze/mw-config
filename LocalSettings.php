@@ -4075,6 +4075,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => "//$wmgUploadHostname/takethatwikiwiki/6/64/Favicon.ico",
 		'tmewiki' => "//$wmgUploadHostname/tmewiki/6/64/Favicon.ico",
 		'teleswikiwiki' => "//$wmgUploadHostname/teleswikiwiki/7/7f/Teleslogosmoler.png",
+		'texwikiwiki' => "//$wmgUploadHostname/texwikiwiki/2/26/Favicon.png",
 		'thecscwiki' => "//$wmgUploadHostname/thecscwiki/0/0d/Csc_favicon.png",
 		'thelonsdalebattalionwiki' => "//$wmgUploadHostname/thelonsdalebattalionwiki/2/21/SoldiersFavicon.png",
 		'themfbclubwiki' => "//$wmgUploadHostname/themfbclubwiki/6/64/Favicon.ico",
