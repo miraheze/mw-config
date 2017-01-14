@@ -2766,6 +2766,10 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_HOENN => true,
 		),
+		'+sidemwiki' => array(
+			NS_MAIN => true,
+			NS_USER => true,
+		),
 		'+tmewiki' => array(
 			NS_MAIN => true,
 			NS_USER => true,
@@ -4062,6 +4066,7 @@ $wgConf->settings = array(
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/5/5c/Favicon_logo.png",
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/c/c4/SHA_Favicon.svg",
 		'shippingandmetawiki' => "//$wmgUploadHostname/shippingandmetawiki/6/64/Favicon.ico",
+		'sidemwiki' => "//$wmgUploadHostname/sidemwiki/7/76/Sidem-favicon.ico",
 		'sirikotwiki' => '//sirikot.com/favicon.png',
 		'snowthegamewiki' => "//$wmgUploadHostname/snowthegamewiki/8/89/SNOW_logo_wiki.png",
 		'sqlserverwiki' => "//$wmgUploadHostname/sqlserverwiki/6/64/Favicon.ico",
@@ -4226,6 +4231,7 @@ $wgConf->settings = array(
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/4/41/RepUsLogo_small.png",
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/e/e3/SHA_Wiki_logo.svg",
 		'shippingandmetawiki' => "//$wmgUploadHostname/shippingandmetawiki/7/7d/CSM_Logo.png",
+		'sidemwiki' => "//$wmgUploadHostname/sidemwiki/a/a5/Sidem-logo.png",
 		'sirikotwiki' => '//www.sirikot.com/wiki_logo.png',
 		'sjuhabitatwiki' => "//$wmgUploadHostname/sjuhabitatwiki/7/7a/Habi_logo_wiki.png",
 		'skyfireflyffwiki' => "//$wmgUploadHostname/skyfireflyffwiki/c/c9/Logo.png",
