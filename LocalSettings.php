@@ -1492,6 +1492,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSecurePoll' => array(
 		'default' => false,
+		'bigforestwikipediawiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 	),
