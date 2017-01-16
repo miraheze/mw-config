@@ -1018,7 +1018,7 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 	),
 	'wmgUseFlow' => array(
-		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
+		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'ageofimperialistswiki' => true,
@@ -1682,7 +1682,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
-		'default' => false, // Please make sure parsoid is enabled on modules/parsoid/manifests/init.pp or modules/parsoid/templates/settings.js (custom domains only)
+		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
 		'1209wiki' => true,
 		'3dicwiki' => true,
 		'3dicxyzwiki' => true,
