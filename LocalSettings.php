@@ -1110,6 +1110,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
+		'bigforestwikipediawiki' => true,
 		'creersonarbrewiki' => true,
 		'doinwiki' => true,
 		'dtswiki' => true,
@@ -1161,6 +1162,7 @@ $wgConf->settings = array(
 	'wmgUseMaps' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
+		'bigforestwikipediawiki' => true,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
@@ -1427,6 +1429,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
+		'bigforestwikipediawiki' => true,
 		'extloadwiki' => true,
 		'ganeshawiki' => true,
 		'jayuwikiwiki' => true,
@@ -1460,6 +1463,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseReplaceText' => array(
 		'default' => false,
+		'bigforestwikipediawiki' => true,
 		'calexitwiki' => true,
 		'evawiki' => true,
 		'extloadwiki' => true,
@@ -1603,6 +1607,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTemplateSandbox' => array(
 		'default' => false,
+		'bigforestwikipediawiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 	),
@@ -1628,6 +1633,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTorBlock' => array(
 		'default' => false,
+		'bigforestwikipediawiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'takethatwikiwiki' => true,
@@ -1708,6 +1714,7 @@ $wgConf->settings = array(
 		'betternewswiki' => true,
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
+		'bigforestwikipediawiki' => true,
 		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
