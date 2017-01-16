@@ -379,6 +379,7 @@ if ( $wmgUseScratchBlocks ) {
 
 if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
+	$wgGroupPermissions['sysop']['securepoll-create-poll'] = true;
 }
 
 if ( $wmgUseSyntaxHighlight ) {
