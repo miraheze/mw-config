@@ -631,10 +631,6 @@ $wgConf->settings = array(
 		'+softwarecrisiswiki' => array(
 			'anon' => true,
 		),
-		'+snowthegamewiki' => array(
-			'anon' => true,
-			'sysop' => true,
-		),
 		'+soundboxwiki' => array(
 			'anon' => true,
 			'user' => true,
