@@ -4410,6 +4410,7 @@ $wgConf->settings = array(
 	'wmgVisualEditorEnableDefault' => array(
 		'default' => true,
 		'allthetropeswiki' => false,
+		'bttestwiki' => true,
 		'panoramawiki' => false,
 		'testwiki' => false,
 	),
