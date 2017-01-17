@@ -1164,6 +1164,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'bigforestwikipediawiki' => true,
 		'calexitwiki' => true,
+		'enmarchewiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
