@@ -1813,6 +1813,7 @@ $wgConf->settings = array(
 		'meregoswiki' => true,
 		'metawiki' => true,
 		'mikrodevwiki' => true,
+		'miningpromieswiki' => true,
 		'muckhackwiki' => true,
 		'musicarchivewiki' => true,
 		'musiclibrarywiki' => true,
