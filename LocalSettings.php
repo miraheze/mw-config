@@ -578,6 +578,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+nvuwiki' => array(
+			'user' => true,
+		),
 		'+ofthevampirewiki' => array(
 			'anon' => true,
 		),
