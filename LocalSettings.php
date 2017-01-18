@@ -2522,7 +2522,7 @@ $wgConf->settings = array(
 		),
 		'claneuphoriawiki' => array(
 			NS_CLAN37 => 'Clan37',
-			NS_CLAN37_TALK => 'Clan3_talk',
+			NS_CLAN37_TALK => 'Clan37_talk',
 		),
 		'developmentwiki' => array(
 			NS_OFFICIAL => 'Official',
