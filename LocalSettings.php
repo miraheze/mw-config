@@ -2176,6 +2176,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'amaninfowiki' => false,
 		'pso2wiki' => false,
+		'sidemwiki' => false,
 		'thefosterswiki' => false,
 	),
 	'wgEnableImageWhitelist' => array(
