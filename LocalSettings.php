@@ -4646,3 +4646,7 @@ require_once( "/srv/mediawiki/config/RedisConfig.php" );
 
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
+
+$wgGroupPermissions['*']['createaccount'] = false;
+$wgGroupPermissions['*']['edit'] = false;
+
