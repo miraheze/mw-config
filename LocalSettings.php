@@ -1499,10 +1499,8 @@ $wgConf->settings = array(
 		'qwertywiki' => true,
 	),
 	'wmgUseSecurePoll' => array(
-		'default' => false,
-		'bigforestwikipediawiki' => true,
+		'default' => false, // Uncontrollable access to private information
 		'extloadwiki' => true,
-		'jayuwikiwiki' => true,
 	),
 	'wmgUseShortURL' => array(
 		'default' => true,
