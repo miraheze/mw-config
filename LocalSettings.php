@@ -202,6 +202,10 @@ $wgConf->settings = array(
 	),
 
 	// Block
+	'wgAutoblockExpiry' => array(
+		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
+		'brynda1231wiki' => 230400, // 64 hours * 60 minutes * 60 seconds
+	),
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
 	),
