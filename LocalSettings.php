@@ -200,7 +200,10 @@ $wgConf->settings = array(
 		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
 	),
-
+	'wgVisualEditorEnableWikitext' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	// Block
 	'wgAutoblockExpiry' => array(
 		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
