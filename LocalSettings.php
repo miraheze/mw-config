@@ -867,6 +867,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'anothertimeline2120wiki' => true,
 		'bigforestwikipediawiki' => true,
+		'brynda1231wiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'doinwiki' => true,
 		'dtswiki' => true,
