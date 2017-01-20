@@ -203,6 +203,7 @@ $wgConf->settings = array(
 	'wgVisualEditorEnableWikitext' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'thehushhushsagawiki' => true,
 	),
 	// Block
 	'wgAutoblockExpiry' => array(
