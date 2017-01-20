@@ -2312,6 +2312,7 @@ $wgConf->settings = array(
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 		'arasuithielwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
+		'bigforestwikipediawiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'compilerdevwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'espiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'japanjayuwikiwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
