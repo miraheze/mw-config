@@ -426,7 +426,8 @@ $wgConf->settings = array(
 		'default' => 'wikiadmin',
 	),
 	'wgReadOnly' => array(
-		'default' => false, // 'Miraheze is performing its final database server migration. It will take approximately 2 to 3 hours, so we expect to finish it between 19:45 and 20:45 UTC.',
+		'default' => false,
+		'allthetropeswiki' => 'Database migration',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
