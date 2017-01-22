@@ -4635,18 +4635,6 @@ $wgMajorSiteNoticeID = 1;
 //        }
 // return true;
 // }
-if ( $wgDBname == 'allthetropeswiki' ) {
-		$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
-	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
-		$siteNotice .= <<<EOF
-			<div class=\"wikitable\" style=\"text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;\"> <span class=\"plainlinks\">
-         	<td>Miraheze will be performing maintenance on All The Tropes starting with 20:00 UTC. This means that the site will be read-only for a few hours. Sorry for any inconveniences this may cause. 
-         	</td>
-         	</tr></tbody></table>
-EOF;
-		return true;
-	}
- }
 
 // Global database error notice extra text
 // This didn't actually work but I filed https://phabricator.wikimedia.org/T154076
