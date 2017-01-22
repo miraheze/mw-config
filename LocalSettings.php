@@ -746,6 +746,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
+		'alwikiwiki' => true,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'partupwiki' => true,
@@ -993,6 +994,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
+		'alwikiwiki' => true,
 		'dtswiki' => true,
 		'elementswiki' => true,
 		'extloadwiki' => true,
