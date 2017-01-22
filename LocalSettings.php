@@ -502,6 +502,12 @@ $wgConf->settings = array(
 		'+cpiwiki' => array(
 			'anon' => true,
 		),
+		'+dalarwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+dditecwiki' => array(
 			'anon' => true,
 			'user' => true,
