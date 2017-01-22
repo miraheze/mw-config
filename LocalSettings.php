@@ -413,21 +413,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 	),
-	'wgDBtype' => array(
-		'default' => 'mysql',
-	),
-	'wgDBserver' => array(
-		'default' => '81.4.125.112',
-	),
-	'wgDBuser' => array(
-		'default' => 'mediawiki',
-	),
 	'wgDBadminuser' => array(
 		'default' => 'wikiadmin',
 	),
-	'wgReadOnly' => array(
-		'default' => false,
-		'allthetropeswiki' => 'Database migration',
+	'wgDBuser' => array(
+		'default' => 'mediawiki',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -4665,10 +4655,11 @@ function databaseErrorTextHook ( $e, $args ) {
 
 
 // Include other configuration file
+require_once( "/srv/mediawiki/config/Database.php" );
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
-require_once( "/srv/mediawiki/config/RedisConfig.php" );
+require_once( "/srv/mediawiki/config/Redis.php" );
 
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
