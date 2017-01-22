@@ -1924,6 +1924,7 @@ $wgConf->settings = array(
 		'xdjibiwiki' => true,
 		'xdwxstywiki' => true,
 		'xjtluwiki' => true,
+		'ylscwiki' => true,
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
 		'chocowiki' => true,
