@@ -905,6 +905,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
+		'tawseelawiki' => true,
 		'wikidolphinhansenwiki' => true,
 		'wikipucwiki' => true,
 	),
@@ -926,6 +927,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'evelopediawiki' => true,
 		'extloadwiki' => true,
+		'tawseelawiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
@@ -1885,6 +1887,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
+		'tawseelawiki' => true,
 		'taylorwiki' => true,
 		'techeducationwiki' => true,
 		'tcc6640wiki' => true,
