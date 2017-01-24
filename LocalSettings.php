@@ -1896,6 +1896,7 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'theworldwiki' => true,
+		'titaniawiki' => true,
 		'tmewiki' => true,
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
