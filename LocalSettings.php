@@ -4252,6 +4252,7 @@ $wgConf->settings = array(
 		'pocketmonsterswiki' => "//$wmgUploadHostname/pocketmonsterswiki/4/47/PMLogo.png",
 		'printmakingbewiki' => "//$wmgUploadHostname/printmakingbewiki/2/22/Pmk-logo-wiki-135px.png",
 		'priyowiki' => "//$wmgUploadHostname/priyowiki/c/c9/Logo.png",
+		'procrastipediawiki' => "//$wmgUploadHostname/procrastipediawiki/d/dd/Procrastipedia_Logo.png",
 		'rebelalliancewiki' => "//$wmgUploadHostname/rebelalliancewiki/f/fe/Logo135.png",
 		'reiaasuwiki' => "//$wmgUploadHostname/reiaasuwiki/1/1e/Reiaasu-wiki-logo-1.png",
 		'rpgbrigadewiki' => "//$wmgUploadHostname/rpgbrigadewiki/c/c9/Logo.png",
