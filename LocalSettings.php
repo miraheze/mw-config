@@ -124,6 +124,10 @@ define( 'NS_TIMELINE', 1696);
 define( 'NS_TIMELINE_TALK', 1697);
 define( 'NS_CLAN37', 1698);
 define( 'NS_CLAN37_TALK', 1699);
+define( 'NS_DRAFT', 1700);
+define( 'NS_DRAFT_TALK', 1701);
+define( 'NS_HISTORICAL_TIMELINE', 1702);
+define( 'NS_HISTORICAL_TIMELINE_TALK', 1703);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -925,7 +929,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseCreatePage' => array(
 		'default' => false,
-		'calexitwiki' => true,
 		'evelopediawiki' => true,
 		'extloadwiki' => true,
 		'tawseelawiki' => true,
@@ -1336,7 +1339,6 @@ $wgConf->settings = array(
 		'imperiuswiki' => true,
 		'aktposwiki' => true,
 		'alwikiwiki' => true,
-		'calexitwiki' => true,
 		'carvingwiki' => true,
 		'developmentwiki' => true,
 		'dtswiki' => true,
@@ -2523,13 +2525,17 @@ $wgConf->settings = array(
 			NS_FEATURED_TALK => 'Featured_Page_talk',
 		),
 		'calexitwiki' => array(
-			NS_OPINION => 'Opinion',
-			NS_OPINION_TALK => 'Opinion_talk',
-			NS_TIMELINE => 'Timeline',
-			NS_PORTAL => 'Portal',
-			NS_PORTAL_TALK => 'Portal_talk',
+			NS_CALEXIT_WIKI => 'CalExit Wiki',
+			NS_DRAFT => 'Draft',
+			NS_DRAFT_TALK => 'Draft_talk',
 			NS_HELP => 'Help',
 			NS_HELP_TALK => 'Help_talk',
+			NS_HISTORICAL_TIMELINE => 'Historical Timeline',
+			NS_OPINION => 'Opinion',
+			NS_OPINION_TALK => 'Opinion_talk',
+			NS_PORTAL => 'Portal',
+			NS_PORTAL_TALK => 'Portal_talk',
+			NS_TIMELINE => 'Timeline',
 		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
@@ -2646,7 +2652,7 @@ $wgConf->settings = array(
 	),
 	'wgContentNamespaces' => array(
 		'default' => array( NS_MAIN ),
-		'+calexitwiki' => array( NS_OPINION, NS_TIMELINE ),
+		'+calexitwiki' => array( NS_OPINION, NS_TIMELINE, NS_HISTORICAL_TIMELINE ),
 		'+catboxwiki' => array( NS_COMIC ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+safiriawiki' => array( NS_HOENN ),
@@ -2750,13 +2756,16 @@ $wgConf->settings = array(
 			NS_TROPEWORKSHOP => true,
 		),
 		'+calexitwiki' => array(
+			NS_CALEXIT_WIKI => true,
+			NS_DRAFT => true,
+			NS_HELP => true,
+			NS_HISTORICAL_TIMELINE => true,
 			NS_MAIN => true,
-			NS_USER => true,
-			NS_TIMELINE => true,
 			NS_OPINION => true,
 			NS_PORTAL => true,
 			NS_TEMPLATE => true,
-			NS_HELP => true,
+			NS_TIMELINE => true,
+			NS_USER => true,
 		),
 		'+catboxwiki' => array(
 			NS_MAIN => true,
@@ -4442,10 +4451,14 @@ $wgConf->settings = array(
 			NS_USER => true,
 		 ),
 		 '+calexitwiki' => array(
+		 	NS_BLOG => true,
+		 	NS_CALEXIT_WIKI => true,
+		 	NS_DRAFT => true,
+		 	NS_HELP => true,
+		 	NS_HISTORICAL_TIMELINE => true,
 		 	NS_OPINION => true,
 		 	NS_TIMELINE => true,
  			NS_PORTAL => true,
-		 	NS_HELP => true,
 		 ),
 		 '+espiralwiki' => array(
 		 	NS_PROJECT => true,
@@ -4471,7 +4484,6 @@ $wgConf->settings = array(
 	),
 	'wgVisualEditorUseSingleEditTab' => array(
 		'default' => false,
-		'calexitwiki' => true,
 		'espiralwiki' => true,
 		'fbwikiwiki' => true,
 		'spiralwiki' => true,
