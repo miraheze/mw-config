@@ -1147,6 +1147,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 		'plazmaburstwiki' => true,
 		'takethatwikiwiki' => true,
 	),
