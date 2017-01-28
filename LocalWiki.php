@@ -93,9 +93,9 @@ if ( $wgDBname === 'bigforestwikipediawiki' ) {
 	$wgGroupPermissions['judge']['securepoll-create-poll'] = true;
 	$wgGroupPermissions['judge']['managechangetags'] = true;
 	$wgGroupPermissions['judge']['tboverride'] = true;
-	$wgGroupPermissions['judge']['abusefilter-view-private'] = true;
-	$wgGroupPermissions['judge']['abusefilter-log-private'] = true;
-	$wgGroupPermissions['judge']['abusefilter-private'] = true;
+	$wgGroupPermissions['judge']['abusefilter-modify'] = true;
+	$wgGroupPermissions['judge']['abusefilter-modify-restricted'] = true;
+	$wgGroupPermissions['judge']['abusefilter-revert'] = true;
 	$wgGroupPermissions['judge']['protect'] = true;
 	$wgGroupPermissions['judge']['spamblacklistlog'] = true;
 	$wgGroupPermissions['judge']['titleblacklistlog'] = true;
