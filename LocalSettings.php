@@ -1234,7 +1234,6 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'catboxwiki' => true,
 		'extloadwiki' => true, // do not set this to false without disabling MsUpload on all wikis below
-		'jayuwikiwiki' => true,
 		'urho3dwiki' => true,
 	),
 	// MsUpload is enabled on extloadwiki via MsPackage
@@ -1259,6 +1258,7 @@ $wgConf->settings = array(
 		'exitsincwiki' => true,
 		'hendrickswiki' => true,
 		'izanagiwiki' => true,
+		'jayuwikiwiki' => true,
 		'lanstationwiki' => true,
 		'luckandlogicwiki' => true,
 		'oyeavdelingenwiki' => true,
@@ -2193,6 +2193,7 @@ $wgConf->settings = array(
 		'+amaninfowiki' => array('pcap', 'cap' ),
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
 		'+exitsincwiki' => array('txt' ),
+		'+jayuwikiwiki' => array('bmp', 'apng', 'tiff', 'wav', 'mp3', 'oga', 'ogv', 'asv', 'swf', 'wmv'),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
 		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
