@@ -4197,6 +4197,7 @@ $wgConf->settings = array(
 		'cvmlabwiki' => "//$wmgUploadHostname/cvmlabwiki/3/3b/Wiki_logo.png",
 		'czechpolicywiki' => "//$wmgUploadHostname/czechpolicywiki/2/20/Plain_logo.png",
 		'datachronwiki' => "//$wmgUploadHostname/datachronwiki/f/f3/1408002974_WS.png",
+		'dcrzonewiki' => "//$wmgUploadHostname/dcrzonewiki/4/4b/Wikilogo.png",
 		'dditecwiki' => "//$wmgUploadHostname/dditecwiki/8/87/Ddu_logo.png",
 		'decisorwiki' => "//$wmgUploadHostname/decisorwiki/8/87/DECISOR135x135.png",
 		'dicficwiki' => "//$wmgUploadHostname/dicficwiki/b/b1/Dicfic-logo.png",
