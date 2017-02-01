@@ -444,6 +444,9 @@ $wgConf->settings = array(
 			'editor' => false, // add an editor group for editing + sysop assign
 			'sysop' => false, // allow sysop' to edit (not needed)
 		),
+		'+690squadronwiki' => array(
+			'anon' => true,
+		),
 		'+8stationwiki' => array(
 			'anon' => true,
 		),
@@ -944,6 +947,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCSS' => array(
 		'default' => false,
+		'690squadronwiki' => true,
 		'allthetropeswiki' => true,
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
@@ -1039,6 +1043,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
+		'690squadronwiki' => true,
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
 		'ageofimperialistswiki' => true,
@@ -1414,6 +1419,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePdfHandler' => array(
 		'default' => false,
+		'690squadronwiki' => true,
 		'apneuverenigingwiki' => true,
 		'calexitwiki' => true,
 		'constwiki' => true,
@@ -1667,6 +1673,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTorBlock' => array(
 		'default' => false,
+		'690squadronwiki' => true,
 		'bigforestwikipediawiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
@@ -1722,6 +1729,7 @@ $wgConf->settings = array(
 		'1209wiki' => true,
 		'3dicwiki' => true,
 		'3dicxyzwiki' => true,
+		'690squadronwiki' => true,
 		'8stationwiki' => true,
 		'aacenterpriselearningwiki' => true,
 		'adnovumwiki' => true,
@@ -4166,6 +4174,7 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'690squadronwiki' => "//$wmgUploadHostname/690squadronwiki/f/f4/Squadlogo.png",
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/3/3b/Wiki_logo.png",
 		'aacenterpriselearningwiki' => "//$wmgUploadHostname/aacenterpriselearningwiki/c/c6/AACLogo.jpg",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/f/f1/APlogo.png",
