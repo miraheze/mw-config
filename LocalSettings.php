@@ -4342,6 +4342,7 @@ $wgConf->settings = array(
 		'skyfireflyffwiki' => "//$wmgUploadHostname/skyfireflyffwiki/c/c9/Logo.png",
 		'smfdoesathingwiki' => "//$wmgUploadHostname/smfdoesathingwiki/b/bc/Wiki.png",
 		'snowthegamewiki' => "//$wmgUploadHostname/snowthegamewiki/8/89/SNOW_logo_wiki.png",
+		'sorevivalwiki' => "//$wmgUploadHostname/sorevivalwiki/2/20/System_Overload_Revival_Logo.png",
 		'sqlserverwiki' => "//$wmgUploadHostname/sqlserverwiki/d/d4/Logo.jpg",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'starsetonlinewiki' => "//$wmgUploadHostname/starsetonlinewiki/8/89/Wiki_logo.jpg",
