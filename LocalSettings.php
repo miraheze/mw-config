@@ -2576,7 +2576,6 @@ $wgConf->settings = array(
 			NS_FEATURED_TALK => 'Featured_Page_talk',
 		),
 		'calexitwiki' => array(
-			NS_CALEXIT_WIKI => 'CalExit Wiki',
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_HELP => 'Help',
@@ -2807,7 +2806,6 @@ $wgConf->settings = array(
 			NS_TROPEWORKSHOP => true,
 		),
 		'+calexitwiki' => array(
-			NS_CALEXIT_WIKI => true,
 			NS_DRAFT => true,
 			NS_HELP => true,
 			NS_HISTORICAL_TIMELINE => true,
@@ -4511,8 +4509,6 @@ $wgConf->settings = array(
 			NS_USER => true,
 		 ),
 		 '+calexitwiki' => array(
-		 	NS_BLOG => true,
-		 	NS_CALEXIT_WIKI => true,
 		 	NS_DRAFT => true,
 		 	NS_HELP => true,
 		 	NS_HISTORICAL_TIMELINE => true,
