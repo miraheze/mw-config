@@ -968,7 +968,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
-		'pgnwikiwiki' => true,
 	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
@@ -1449,6 +1448,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'justinbieberwiki' => true,
 		'marcoschriekwiki' => true,
+		'pgnwikiwiki' => true,
 		'takethatwikiwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
@@ -1507,6 +1507,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'justinbieberwiki' => true,
+		'pgnwikiwiki' => true,
 		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
 	),
