@@ -128,6 +128,19 @@ define( 'NS_DRAFT', 1700);
 define( 'NS_DRAFT_TALK', 1701);
 define( 'NS_HISTORICAL_TIMELINE', 1702);
 define( 'NS_HISTORICAL_TIMELINE_TALK', 1703);
+define( 'NS_QUIZSET', 1704);
+define( 'NS_QUIZSET_TALK', 1705);
+define( 'NS_NOTEBOOK', 1706);
+define( 'NS_NOTEBOOK_TALK', 1707);
+define( 'NS_SOURCE', 1708);
+define( 'NS_SOURCE_TALK', 1709);
+define( 'NS_GAME', 1710);
+define( 'NS_GAME_TALK', 1711);
+define( 'NS_PICTUREBOARD', 1712);
+define( 'NS_PICTUREBOARD_TALK', 1713);
+define( 'NS_TINYFOREST', 1714);
+define( 'NS_TINYFOREST_TALK', 1715);
+
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2578,6 +2591,20 @@ $wgConf->settings = array(
 			NS_FEATURED => 'Featured_Page',
 			NS_FEATURED_TALK => 'Featured_Page_talk',
 		),
+		'bigforestwikipediawiki' => array(
+			NS_QUIZSET => 'Quizset',
+			NS_QUIZSET => 'Quizset_talk',
+			NS_NOTEBOOK => 'Notebook',
+			NS_NOTEBOOK_TALK => 'Notebook_talk',
+			NS_SOURCE => 'Source',
+			NS_SOURCE_TALK => 'Source_talk',
+			NS_GAME => 'Game',
+			NS_GAME_TALK => 'Game_talk',
+			NS_PICTUREBOARD => 'Pictureboard',
+			NS_PICTUREBOARD_TALK => 'Pictureboard_talk',
+			NS_TINYFOREST => 'Tinyforest',
+			NS_TINYFOREST_TALK => 'Tinyforest_talk',
+		),
 		'calexitwiki' => array(
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
@@ -2731,6 +2758,17 @@ $wgConf->settings = array(
 			'YKTTW_talk' => NS_TROPEWORKSHOP_TALK,
 			'Blurb' => NS_FEATURED,
 			'Blurb_talk' => NS_FEATURED_TALK,
+		),
+		'+bigforestwikipediawiki' => array(
+			'사' => NS_USER,
+			'큰' => NS_PROJECT,
+			'Temp' => NS_TEMPLATE,
+			'퀴즈' => NS_QUIZSET,
+			'공책' => NS_NOTEBOOK,
+			'책' => NS_SOURCE,
+			'게임' => NS_GAME,
+			'그림판' => NS_PICTUREBOARD,
+			'작은숲' => NS_TINYFOREST,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
@@ -4107,6 +4145,7 @@ $wgConf->settings = array(
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/3/3b/Favicongif.gif",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/6/64/Favicon.ico",
 		'bgowiki' => "//$wmgUploadHostname/bgowiki/6/64/Favicon.ico",
+		'bigforestwikipediawiki' => "//$wmgUploadHostname/bigforestwikipediawiki/d/d2/Favicon_SeongJjinDoe_v2.png",
 		'bzdetopediawiki' => "//$wmgUploadHostname/bzdetopediawiki/6/64/Favicon.ico",
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/6/6a/Cali_flag_favicon.ico",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/6/64/Favicon.ico",
@@ -4224,6 +4263,7 @@ $wgConf->settings = array(
 		'beatstationwiki' => "//$wmgUploadHostname/beatstationwiki/d/da/Wiki_logo2.png",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/0/0e/BetaPurpleLogo.png",
 		'biblicalwikiwiki' => "//$wmgUploadHostname/biblicalwikiwiki/e/e2/WikiLogo.svg",
+		'bigforestwikipediawiki' => "//$wmgUploadHostname/bigforestwikipediawiki/f/f0/Logo_Candidate.png",
 		'burnoutwiki' => "//$wmgUploadHostname/burnoutwiki/0/0b/BURNOUTWIKI_LOGO_135px.png",
 		'bzdetopediawiki' => "//$wmgUploadHostname/bzdetopediawiki/b/bc/Wiki.png",
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
