@@ -1089,6 +1089,7 @@ $wgConf->settings = array(
 		'korachwiki' => true,
 		'kwikiwiki' => true,
 		'lezar224wiki' => true,
+		'literaturewiki' => true,
 		'marcoschriekwiki' => true,
 		'moziwiki' => true,
 		'muckhackwiki' => true,
