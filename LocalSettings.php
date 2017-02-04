@@ -686,11 +686,6 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
-		'+thelonsdalebattalionwiki' => array(
-			'anon' => true,
-			'user' => true,
-			'sysop' => true,
-		),
 		'+thoughtonomywikiwiki' => array(
 			'anon' => true,
 		),
