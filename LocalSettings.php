@@ -1778,6 +1778,7 @@ $wgConf->settings = array(
 		'braindumpwiki' => true,
 		'brynda1231wiki' => true,
 		'bttestwiki' => true,
+		'byblopediawiki' => true,
 		'calexitwiki' => true,
 		'cancerwiki' => true,
 		'carvingwiki' => true,
