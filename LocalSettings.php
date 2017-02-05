@@ -1338,6 +1338,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNews' => array(
 		'default' => false,
+		'cpiwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseNewSignupPage' => array(
