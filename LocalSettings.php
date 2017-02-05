@@ -1336,6 +1336,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'muckhackwiki' => true,
 	),
+	'wmgUseNews' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseNewSignupPage' => array(
 		'default' => false,
 		'extloadwiki' => false, // DO NOT ENABLE !! This extension uses ShoutWiki notices and is not adapted for Miraheze --Reception123
