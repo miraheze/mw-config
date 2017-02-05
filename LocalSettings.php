@@ -2843,6 +2843,9 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_TROPEWORKSHOP => true,
 		),
+		'+caeruleawiki' => array(
+			NS_MAIN => true,
+		),
 		'+calexitwiki' => array(
 			NS_DRAFT => true,
 			NS_HELP => true,
