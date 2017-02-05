@@ -288,6 +288,10 @@ if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }
 
+if ($wmgUseNews ) {
+	require_once( "$IP/extensions/News/News.php" );
+}
+
 if ( $wmgUseNewSignupPage ) {
 	wfLoadExtension( 'NewSignupPage' );
 }
