@@ -4273,6 +4273,7 @@ $wgConf->settings = array(
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/0/0e/BetaPurpleLogo.png",
 		'biblicalwikiwiki' => "//$wmgUploadHostname/biblicalwikiwiki/e/e2/WikiLogo.svg",
 		'bigforestwikipediawiki' => "//$wmgUploadHostname/bigforestwikipediawiki/f/f0/Logo_Candidate.png",
+		'bloodstainedwiki' => "//$wmgUploadHostname/bloodstainedwiki/7/71/Logo_Icon.png",
 		'burnoutwiki' => "//$wmgUploadHostname/burnoutwiki/0/0b/BURNOUTWIKI_LOGO_135px.png",
 		'bzdetopediawiki' => "//$wmgUploadHostname/bzdetopediawiki/b/bc/Wiki.png",
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
