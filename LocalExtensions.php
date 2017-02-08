@@ -404,7 +404,8 @@ if ( $wmgUseSiteScout ) {
 
 if ( $wmgUseSocialProfile ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
-	wgAddGroups['bureaucrat'][] = 'staff';
+	unset( $wgGroupPermissions['staff'] );
+	$wgGroupPermissions['sysop']['editothersprofiles'] = true;
 }
 
 if ( $wmgUseSubpageFun ) {
