@@ -1364,6 +1364,7 @@ $wgConf->settings = array(
 		'perpuswiki' => true,
 		'pgnwikiwiki' => true,
 		'takethatwikiwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 		'trexwiki' => true,
 		'universebuildwiki' => true,
 		'wisdomwikiwiki' => true,
