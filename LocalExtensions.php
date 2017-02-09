@@ -406,6 +406,10 @@ if ( $wmgUseSocialProfile ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 }
 
+if ( $wmgUseSpoilers ) {
+	wfLoadExtension( 'Spoiler' );
+}
+
 if ( $wmgUseSubpageFun ) {
 	require_once( "$IP/extensions/SubpageFun/SubpageFun.php" );
 }
