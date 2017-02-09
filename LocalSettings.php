@@ -1606,6 +1606,10 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'takethatwikiwiki' => true,
 	),
+	'wmgUseSpoilers' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseSubpageFun' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
