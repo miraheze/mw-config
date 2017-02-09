@@ -1608,6 +1608,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSpoilers' => array(
 		'default' => false,
+		'adventurewikiwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseSubpageFun' => array(
