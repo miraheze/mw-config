@@ -407,7 +407,7 @@ if ( $wmgUseSocialProfile ) {
 }
 
 if ( $wmgUseSpoilers ) {
-	wfLoadExtension( 'Spoiler' );
+	wfLoadExtension( 'Spoilers' );
 }
 
 if ( $wmgUseSubpageFun ) {
