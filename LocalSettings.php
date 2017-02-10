@@ -3699,7 +3699,7 @@ $wgConf->settings = array(
 
 		),
 		'usawiki' => array(
-			'president' => array(
+			'vice-president' => array(
 				'nuke' => true,
 				'mergehistory' => true,
 				'markbotedits' => true,
@@ -3715,6 +3715,8 @@ $wgConf->settings = array(
 				'import' => true,
 				'importupload' => true,
 				'unwatchedpages' => true,
+			),
+			'president' => array(
 				'blockemail' => true,
 				'block' => true,
 				'protect' => true,
