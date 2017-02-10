@@ -3698,6 +3698,21 @@ $wgConf->settings = array(
 			),
 
 		),
+		'usawiki' => array(
+			'staff' => array(
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'centralauth-lock' => true,
+				'centralauth-oversight' => true,
+				'centralauth-rename' => true,
+				'centralauth-unmerge' => true,
+				'siteadmin' => true,
+				'renameuser' => true,
+				'hideusesr' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+			),
+		),	
 		'+wikipucwiki' => array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
