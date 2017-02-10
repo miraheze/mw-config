@@ -122,8 +122,8 @@ define( 'NS_OPINION', 1694);
 define( 'NS_OPINION_TALK', 1695);
 define( 'NS_TIMELINE', 1696);
 define( 'NS_TIMELINE_TALK', 1697);
-define( 'NS_CLAN37', 1698);
-define( 'NS_CLAN37_TALK', 1699);
+define( 'NS_CLAN', 1698);
+define( 'NS_CLAN_TALK', 1699);
 define( 'NS_DRAFT', 1700);
 define( 'NS_DRAFT_TALK', 1701);
 define( 'NS_HISTORICAL_TIMELINE', 1702);
@@ -2635,8 +2635,8 @@ $wgConf->settings = array(
 			NS_COMIC_TALK => 'Comic_talk'
 		),
 		'claneuphoriawiki' => array(
-			NS_CLAN37 => 'Clan37',
-			NS_CLAN37_TALK => 'Clan37_talk',
+			NS_CLAN => 'Clan',
+			NS_CLAN_TALK => 'Clan_talk',
 		),
 		'developmentwiki' => array(
 			NS_OFFICIAL => 'Official',
