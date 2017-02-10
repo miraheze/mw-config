@@ -3699,7 +3699,7 @@ $wgConf->settings = array(
 
 		),
 		'usawiki' => array(
-			'staff' => array(
+			'steward' => array(
 				'checkuser' => true,
 				'checkuser-log' => true,
 				'centralauth-lock' => true,
