@@ -285,6 +285,8 @@ if ( $wgDBName == 'usawiki' ) {
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['*']['abusefilter-view-detail'] = false;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgAddGroups['sysop'] = array();
+	$wgRemoveGroups['sysop'] = array();
 }
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
