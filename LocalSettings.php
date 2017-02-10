@@ -3711,6 +3711,8 @@ $wgConf->settings = array(
 				'hideusesr' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
+				'globalblock' => true,
+				'userrights' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
