@@ -996,6 +996,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseDuplicator' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseDynamicPageList' => array(
