@@ -953,6 +953,9 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'tawseelawiki' => true,
 	),
+	'wmgUseCreateRedirect' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	'wmgUseCreateWiki' => array(
 		'default' => false,
 		'metawiki' => true,
