@@ -960,6 +960,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCreateRedirect' => array(
 		'default' => false,
+		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseCreateWiki' => array(
