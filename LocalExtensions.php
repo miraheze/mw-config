@@ -89,6 +89,10 @@ if ( $wmgUseCreatePage ) {
 	require_once( "$IP/extensions/CreatePage/CreatePage.php" );
 }
 
+if ( $wmgUseCreateRedirect ) {
+	require_once( "$IP/extensions/CreateRedirect/CreateRedirect.php" );
+}
+
 if ( $wmgUseCreateWiki ) {
 	wfLoadExtension( 'CreateWiki' );
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
