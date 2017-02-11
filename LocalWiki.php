@@ -272,7 +272,6 @@ if ( $wgDBName == 'usawiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-private'] = false;
 	$wgGroupPermissions['sysop']['rollback'] = false;
 	$wgGroupPermissions['user']['move-categorypages'] = false;
 	$wgGroupPermissions['user']['changetags'] = false;
