@@ -3746,7 +3746,6 @@ $wgConf->settings = array(
 				'abusefilter-modify' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
-				'abusefilter-private' => true,
 				'rollback' => true,
 			),
 		),		
