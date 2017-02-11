@@ -994,6 +994,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'rpgbrigadewiki' => true,
 	),
+	'wmgUseDuplicator' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
 		'augustinianumwiki' => true,
@@ -1567,6 +1571,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'applewikiwiki' => false,
 		'applebranchwiki' => false,
+	),
+	'wmgUseSimpleChanges' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,

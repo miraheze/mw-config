@@ -102,6 +102,7 @@ if ( $wmgUseCustomNavBlocks) {
 	require_once( "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php" );
 	$wgCustomNavBlocksEnable = true;
 }
+
 if ( $wmgUseDismissableSiteNotice ) {
 	wfLoadExtension( 'DismissableSiteNotice' );
 }
@@ -112,6 +113,10 @@ if ( $wmgUseDuskToDawn ) {
 
 if ( $wmgUseDPLForum ) {
 	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
+}
+
+if ( $wmgUseDuplicator ) {
+	require_once( "$IP/extensions/Duplicator/Duplicator.php" );
 }
 
 if ( $wmgUseDynamicPageList ) {
@@ -384,6 +389,10 @@ if ( $wmgUseScratchBlocks ) {
 if ( $wmgUseSecurePoll ) {
 	wfLoadExtension( 'SecurePoll' );
 	$wgGroupPermissions['sysop']['securepoll-create-poll'] = true;
+}
+
+if ( $wmgUseSimpleChanges ) {
+	require_once( "$IP/extensions/SimpleChanges/SimpleChanges.php" );
 }
 
 if ( $wmgUseSyntaxHighlight ) {
