@@ -3144,6 +3144,7 @@ $wgConf->settings = array(
 				'sysop',
 				'bot',
 				'president',
+				'vice-president',
 			),
 		),
 		'+vrgowiki' => array(
@@ -3867,6 +3868,7 @@ $wgConf->settings = array(
 				'sysop',
 				'bot',
 				'president',
+				'vice-president',
 			),
 		),
 		'+vrgowiki' => array(
