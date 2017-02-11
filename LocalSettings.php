@@ -1711,6 +1711,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
+		'arquivosdoprincipadowiki' => true,
 		'bigforestwiki' => true,
 		'extloadwiki' => true,
 		'enmarchewiki' => true,
