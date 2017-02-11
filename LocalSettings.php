@@ -664,6 +664,11 @@ $wgConf->settings = array(
 			'sysop' => true,
 			'editor' => true,
 		),
+		'+stemorgwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+sthomaspriwiki' => array(
 			'user' => true,
 			'sysop' => true,
