@@ -956,6 +956,7 @@ $wgConf->settings = array(
 	'wmgUseCreateRedirect' => array(
 		'default' => false,
 		'extloadwiki' => true,
+	),
 	'wmgUseCreateWiki' => array(
 		'default' => false,
 		'metawiki' => true,
