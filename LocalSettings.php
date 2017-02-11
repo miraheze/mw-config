@@ -135,9 +135,9 @@ define( 'NS_SOURCE_TALK', 1707);
 define( 'NS_GAME', 1708);
 define( 'NS_GAME_TALK', 1709);
 define( 'NS_PICTUREBOARD', 1710);
-define( 'NS_PICTUREBOARD_TALK', 1712);
-define( 'NS_TINYFOREST', 1713);
-define( 'NS_TINYFOREST_TALK', 1714);
+define( 'NS_PICTUREBOARD_TALK', 1711);
+define( 'NS_TINYFOREST', 1712);
+define( 'NS_TINYFOREST_TALK', 1713);
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
