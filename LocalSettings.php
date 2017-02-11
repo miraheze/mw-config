@@ -1575,6 +1575,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSimpleChanges' => array(
 		'default' => false,
+		'christipediawiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseSimpleTooltip' => array(
