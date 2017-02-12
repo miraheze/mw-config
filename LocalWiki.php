@@ -68,7 +68,7 @@ if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['sysop']['createpage'] = true;
 }
 
-if ( $wgDBname === 'bigforestwikipediawiki' ) {
+if ( $wgDBname === 'bigforestwiki' ) {
 	unset( $wgGroupPermissions['rollbacker'] );
 	$wgGroupPermissions['autoconfirmed']['rollback'] = true;
 	$wgGroupPermissions['confirmed']['rollback'] = true;
