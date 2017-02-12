@@ -112,12 +112,10 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgAddGroups['bureaucrat'][] = 'confirmed';
 	$wgAddGroups['bureaucrat'][] = 'voter';
 	$wgAddGroups['bureaucrat'][] = 'judge';
-	$wgAddGroups['bureaucrat'][] = 'developing-manager';
 	$wgRemoveGroups['bureaucrat'][] = 'confirmed';
 	$wgRemoveGroups['bureaucrat'][] = 'voter';
 	$wgRemoveGroups['bureaucrat'][] = 'judge';
 	$wgRemoveGroups['bureaucrat'][] = 'bureaucrat';
-	$wgRemoveGroups['bureaucrat'][] = 'developing-manager';
 	$wgRestrictionLevels[] = 'editvoter';
 	$wgGroupPermissions['*']['editmycss'] = false;
 	$wgGroupPermissions['*']['editmyjs'] = false;
@@ -134,15 +132,6 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['confirmed']['move'] = true;
 	$wgGroupPermissions['confirmed']['movefile'] = true;
 	$wgGroupPermissions['confirmed']['upload'] = true;
-	$wgGroupPermissions['developing-manager']['unblockself'] = true;
-	$wgGroupPermissions['developing-manager']['block'] = true;
-	$wgGroupPermissions['developing-manager']['noratelimit'] = true;
-	$wgGroupPermissions['developing-manager']['override-antispoof'] = true;
-	$wgAddGroups['developing-manager'] = array( 'confirmed', 'autopatrolled', 'voter', 'sysop', 'judge' );
-	$wgGroupsAddToSelf['developing-manager'][] = 'bureaucrat';
-	$wgRemoveGroups['developing-manager'] = array( 'confirmed', 'autopatrolled', 'sysop', 'judge', 'voter' );
-	$wgGroupsRemoveFromSelf['developing-manager'][] = 'bureaucrat';
-	$wgGroupsRemoveFromSelf['developing-manager'][] = 'developing-manager';
 }
 
 if ( $wgDBname == 'elementswiki' ) {
