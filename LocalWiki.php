@@ -226,6 +226,8 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['sysop']['editusercss'] = false;
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
+	$wgGroupPermissions['sysop']['browsearchive'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
 	$wgGroupPermissions['bureaucrat']['nuke'] = true;
 	$wgGroupPermissions['bureaucrat']['markbotedits'] = true;
 	$wgGroupPermissions['bureaucrat']['mergehistory'] = true;
@@ -240,15 +242,12 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['bureaucrat']['deletedtext'] = true;
 	$wgGroupPermissions['bureaucrat']['editusercss'] = true;
 	$wgGroupPermissions['bureaucrat']['edituserjs'] = true;
+	$wgGroupPermissions['bureaucrat']['browsearchive'] = true;
 	$wgGroupPermissions['owner'] = array(
 		'abusefilter-modify' => true,
 		'abusefilter-modify-restricted' => true,
 		'abusefilter-revert' => true,
 		'protectsite' => true,
-		'delete' => true,
-		'undelete' => true,
-		'deletelogentry' => true,
-		'deleterevision' => true,
 		'block' => true,
 		'unblock' => true,
 		'unblockself' => true,
