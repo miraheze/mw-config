@@ -1506,7 +1506,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'elementswiki' => true,
 		'extloadwiki' => true,
-		'picturepedia' = true,
+		'picturepediawiki' = true,
 		'sthomaspriwiki' => true,
 	),
 	'wmgUseQuiz' => array(
