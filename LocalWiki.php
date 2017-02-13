@@ -223,6 +223,9 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 	$wgGroupPermissions['sysop']['block'] = false;
 	$wgGroupPermissions['sysop']['unblockself'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['sysop']['editusercss'] = false;
+	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['bureaucrat']['nuke'] = true;
 	$wgGroupPermissions['bureaucrat']['markbotedits'] = true;
 	$wgGroupPermissions['bureaucrat']['mergehistory'] = true;
@@ -235,6 +238,8 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['bureaucrat']['undelete'] = true;
 	$wgGroupPermissions['bureaucrat']['deletedhistory'] = true;
 	$wgGroupPermissions['bureaucrat']['deletedtext'] = true;
+	$wgGroupPermissions['bureaucrat']['editusercss'] = true;
+	$wgGroupPermissions['bureaucrat']['edituserjs'] = true;
 	$wgGroupPermissions['owner'] = array(
 		'abusefilter-modify' => true,
 		'abusefilter-modify-restricted' => true,
@@ -259,6 +264,7 @@ if ( $wgDBname == 'picturepediawiki' ) {
 		'blockemail' => true,
 		'unblockself' => true,
 		'owner' => true,
+		'editinterface' => true,
 	);
 	$wgAddGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
 	$wgRemoveGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
