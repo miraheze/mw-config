@@ -196,6 +196,50 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['reupload-shared'] = false;
 }
 
+if ( $wgDBname == 'picturepediawiki' ) {
+	unset( $wgGroupPermissions['rollbacker'] );
+	unset( $wgGroupPermissions['autopatrolled'] );
+	unset( $wgAddGroups['sysop'] );
+	unset( $wgAddGroups['bureaucrat'] );
+	unset( $wgRemoveGroups['sysop'] );
+	unset( $wgRemoveGroups['bureaucrat'] );
+	$wgGroupPermissions['*']['autopatrol'] = true;
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['markbotedits'] = false;
+	$wgGroupPermissions['sysop']['mergehistory'] = false;
+	$wgGroupPermissions['sysop']['tboverride'] = false;
+	$wgGroupPermissions['sysop']['override-antispoof'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
+	$wgGroupPermissions['bureaucrat']['nuke'] = true;
+	$wgGroupPermissions['bureaucrat']['markbotedits'] = true;
+	$wgGroupPermissions['bureaucrat']['mergehistory'] = true;
+	$wgGroupPermissions['bureaucrat']['tboverride'] = true;
+	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
+	$wgGroupPermissions['owner'] = array(
+		'abusefilter-modify' = true,
+		'abusefilter-modify-restricted' = true,
+		'abusefilter-revert' = true,
+		'protectsite' = true,
+		'delete' = true,
+		'undelete' = true,
+		'deletelogentry' = true,
+		'deleterevision' = true,
+		'block' = true,
+		'unblock' = true,
+		'unblockself' = true,
+		'blockemail' = true,
+		'globalblock-whitelist' = true,
+		'protect' = true,
+		'unprotect' = true,
+		'editprotected' = true,
+		'rollback' = true,
+	);
+	$wgAddGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
+	$wgRemoveGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
+}
+
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
