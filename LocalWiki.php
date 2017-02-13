@@ -216,7 +216,6 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
 	$wgGroupPermissions['sysop']['deleterevision'] = false;
 	$wgGroupPermissions['sysop']['delete'] = false;
-	$wgGroupPermissions['sysop']['editprotected'] = false;
 	$wgGroupPermissions['sysop']['suppressredirect'] = false;
 	$wgGroupPermissions['sysop']['undelete'] = false;
 	$wgGroupPermissions['sysop']['deletedhistory'] = false;
@@ -259,9 +258,11 @@ if ( $wgDBname == 'picturepediawiki' ) {
 		'block' => true,
 		'blockemail' => true,
 		'unblockself' => true,
+		'owner' => true,
 	);
 	$wgAddGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
 	$wgRemoveGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
+	$wgRestrictionLevels[] = 'owner';
 }
 
 if ( $wgDBname == 'soundboxiki' ) {
