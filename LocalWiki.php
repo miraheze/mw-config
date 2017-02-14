@@ -70,18 +70,6 @@ if ( $wgDBname === 'brynda1231wiki' ) {
 
 if ( $wgDBname === 'bigforestwiki' ) {
 	unset( $wgGroupPermissions['rollbacker'] );
-	$wgAddGroups['judge'] = array( 'confirmed', 'autopatrolled', 'voter' );
-	$wgRemoveGroups['judge'] = array( 'confirmed', 'autopatrolled', 'sysop', 'judge', 'voter', 'bureaucrat' );
-	$wgAddGroups['sysop'][] = 'voter';
-	$wgRemoveGroups['sysop'][] = 'voter';
-	$wgAddGroups['bureaucrat'][] = 'confirmed';
-	$wgAddGroups['bureaucrat'][] = 'voter';
-	$wgAddGroups['bureaucrat'][] = 'judge';
-	$wgRemoveGroups['bureaucrat'][] = 'confirmed';
-	$wgRemoveGroups['bureaucrat'][] = 'voter';
-	$wgRemoveGroups['bureaucrat'][] = 'judge';
-	$wgRemoveGroups['bureaucrat'][] = 'bureaucrat';
-	$wgRestrictionLevels[] = 'editvoter';
 	$wgGroupPermissions['*']['editmycss'] = false;
 	$wgGroupPermissions['*']['editmyjs'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
