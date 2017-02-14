@@ -199,6 +199,8 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 if ( $wgDBname == 'picturepediawiki' ) {
 	unset( $wgGroupPermissions['rollbacker'] );
 	unset( $wgGroupPermissions['autopatrolled'] );
+	unset( $wgGroupPermissions['checkuser'] );
+	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgAddGroups['sysop'] );
 	unset( $wgAddGroups['bureaucrat'] );
 	unset( $wgRemoveGroups['sysop'] );
@@ -243,6 +245,17 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['bureaucrat']['editusercss'] = true;
 	$wgGroupPermissions['bureaucrat']['edituserjs'] = true;
 	$wgGroupPermissions['bureaucrat']['browsearchive'] = true;
+	$wgGroupPermissions['steward'] = array(
+		'hideuser' => true,
+		'abusefilter-hide-log' => true,
+		'abusefilter-hidden-log' => true,
+		'suppressrevision' => true,
+		'suppressionlog' => true,
+		'checkuser' => true,
+		'checkuser-log' => true,
+		'renameuser' => true,
+		'siteadmin' => true,
+	);
 	$wgGroupPermissions['owner'] = array(
 		'abusefilter-modify' => true,
 		'abusefilter-modify-restricted' => true,
