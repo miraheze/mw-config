@@ -302,6 +302,11 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
+if ( $wgDBname == 'usawiki' ) {
+	unset( $wgGroupPermissions['steward'] );
+	unset( $wgGroupPermissions['checkuser'] );
+	unset( $wgGroupPermissions['oversight'] );
+}
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
