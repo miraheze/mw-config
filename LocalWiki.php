@@ -302,6 +302,61 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
+if ( $wgDBName == 'usawiki' ) {
+	unset( $wgGroupPermissions['bureaucrat'] );
+	unset( $wgGroupPermissions['rollbacker'] );
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['mergehistory'] = false;
+	$wgGroupPermissions['sysop']['markbotedits'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['sysop']['editusercss'] = false;
+	$wgGroupPermissions['sysop']['edituserjs'] = false;
+	$wgGroupPermissions['sysop']['managechangetags'] = false;
+	$wgGroupPermissions['sysop']['deletechangetags'] = false;
+	$wgGroupPermissions['sysop']['massmessage'] = false;
+	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['sysop']['importupload'] = false;
+	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
+	$wgGroupPermissions['sysop']['block'] = false;
+	$wgGroupPermissions['sysop']['blockemail'] = false;
+	$wgGroupPermissions['sysop']['protect'] = false;
+	$wgGroupPermissions['sysop']['deletelogentry'] = false;
+	$wgGroupPermissions['sysop']['deleterevision'] = false;
+	$wgGroupPermissions['sysop']['delete'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['sysop']['unblockself'] = false;
+	$wgGroupPermissions['sysop']['undelete'] = false;
+	$wgGroupPermissions['sysop']['browsearchive'] = false;
+	$wgGroupPermissions['sysop']['editprotected'] = false;
+	$wgGroupPermissions['sysop']['editsemiprotected'] = false;
+	$wgGroupPermissions['sysop']['suppressredirect'] = false;
+	$wgGroupPermissions['sysop']['override-antispoof'] = false;
+	$wgGroupPermissions['sysop']['tboverride'] = false;
+	$wgGroupPermissions['sysop']['deletedhistory'] = false;
+	$wgGroupPermissions['sysop']['deletedtext'] = false;
+	$wgGroupPermissions['sysop']['move-categorypages'] = false;
+	$wgGroupPermissions['sysop']['movefile'] = false;
+	$wgGroupPermissions['sysop']['move'] = false;
+	$wgGroupPermissions['sysop']['move-subpages'] = false;
+	$wgGroupPermissions['sysop']['move-rootuserpages'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['rollback'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['changetags'] = false;
+	$wgGroupPermissions['user']['applychangetags'] = false;
+	$wgGroupPermissions['user']['editcontentmodel'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['*']['abusefilter-view'] = false;
+	$wgGroupPermissions['*']['abusefilter-view-detail'] = false;
+	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgAddGroups['sysop'] = array();
+	$wgRemoveGroups['sysop'] = array();
+}
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
