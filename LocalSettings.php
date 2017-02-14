@@ -4284,6 +4284,7 @@ $wgConf->settings = array(
 		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png",
 		'assaultandroidcactuswiki' => "//$wmgUploadHostname/assaultandroidcactuswiki/6/64/Favicon.ico",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/64/Favicon.ico",
+		'bchwiki' => "//$wmgUploadHostname/bchwiki/c/c0/Logo_135.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/3/3b/Favicongif.gif",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/6/64/Favicon.ico",
 		'bgowiki' => "//$wmgUploadHostname/bgowiki/6/64/Favicon.ico",
