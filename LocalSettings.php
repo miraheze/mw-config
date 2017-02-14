@@ -3131,6 +3131,21 @@ $wgConf->settings = array(
 				'reviewer',
 			),
 		),
+		'+bigforestwiki' => array(
+			'bureaucrat' => array(
+				'confirmed',
+				'voter',
+				'judge',
+			),
+			'judge' => array(
+				'confirmed',
+				'autopatrolled',
+				'voter',
+			);
+			'sysop' => array(
+				'voter',
+			),
+		),
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -3930,6 +3945,25 @@ $wgConf->settings = array(
 				'reviewer',
 			),
 		),
+		'+bigforestwiki' => array(
+			'bureaucrat' => array(
+				'confirmed',
+				'voter',
+				'judge',
+				'bureaucrat',
+			),
+			'judge' => array(
+				'confirmed',
+				'autopatrolled',
+				'sysop',
+				'judge',
+				'voter',
+				'bureaucrat',
+			);
+			'sysop' => array(
+				'voter',
+			),
+		),
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -4148,6 +4182,9 @@ $wgConf->settings = array(
 	'+wgRestrictionLevels' => array(
 		'default' => array(
 			'user',
+		),
+		'+bigforestwiki' => array(
+			'editvoter',
 		),
 		'+dpwiki' => array(
 			'bureaucrat',
