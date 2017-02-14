@@ -255,6 +255,13 @@ if ( $wgDBname == 'picturepediawiki' ) {
 		'checkuser-log' => true,
 		'renameuser' => true,
 		'siteadmin' => true,
+		'userrights' => true,
+		'centralauth-lock' => true,
+		'centralauth-rename' => true,
+		'centralauth-oversight' => true,
+		'globalgrouppermissions' => true,
+		'globalgroupmembership' => true,
+		'globalblock' => true,
 	);
 	$wgGroupPermissions['owner'] = array(
 		'abusefilter-modify' => true,
