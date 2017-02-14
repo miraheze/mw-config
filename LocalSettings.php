@@ -3476,6 +3476,11 @@ $wgConf->settings = array(
 				'editvoter' => true,
 			),
 		),
+		'+brynda1231wiki' => array(
+			'sysop' => array(
+				'createpage' => true,
+			),
+		),
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
@@ -3593,6 +3598,11 @@ $wgConf->settings = array(
 			),
 			'respected' => array(
 				'respected' => true,
+			),
+		),
+		'+intpwiki' => array(
+			'sysop' => array(
+				'createpage' => true,
 			),
 		),
 		'+jayuwikiwiki' => array(
