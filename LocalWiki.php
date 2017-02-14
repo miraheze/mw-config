@@ -147,7 +147,6 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	unset( $wgAddGroups['bureaucrat'] );
 	unset( $wgRemoveGroups['sysop'] );
 	unset( $wgRemoveGroups['bureaucrat'] );
-	$wgGroupPermissions['*']['autopatrol'] = true;
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
 	$wgGroupPermissions['sysop']['mergehistory'] = false;
@@ -172,46 +171,7 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['browsearchive'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
-	$wgGroupPermissions['bureaucrat']['nuke'] = true;
-	$wgGroupPermissions['bureaucrat']['markbotedits'] = true;
-	$wgGroupPermissions['bureaucrat']['mergehistory'] = true;
-	$wgGroupPermissions['bureaucrat']['tboverride'] = true;
 	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
-	$wgGroupPermissions['bureaucrat']['deletelogentry'] = true;
-	$wgGroupPermissions['bureaucrat']['deleterevision'] = true;
-	$wgGroupPermissions['bureaucrat']['delete'] = true;
-	$wgGroupPermissions['bureaucrat']['suppressredirect'] = true;
-	$wgGroupPermissions['bureaucrat']['undelete'] = true;
-	$wgGroupPermissions['bureaucrat']['deletedhistory'] = true;
-	$wgGroupPermissions['bureaucrat']['deletedtext'] = true;
-	$wgGroupPermissions['bureaucrat']['editusercss'] = true;
-	$wgGroupPermissions['bureaucrat']['edituserjs'] = true;
-	$wgGroupPermissions['bureaucrat']['browsearchive'] = true;
-	$wgGroupPermissions['owner'] = array(
-		'abusefilter-modify' => true,
-		'abusefilter-modify-restricted' => true,
-		'abusefilter-revert' => true,
-		'protectsite' => true,
-		'block' => true,
-		'unblock' => true,
-		'unblockself' => true,
-		'blockemail' => true,
-		'globalblock-whitelist' => true,
-		'protect' => true,
-		'unprotect' => true,
-		'editprotected' => true,
-		'rollback' => true,
-		'protect' => true,
-		'editprotected' => true,
-		'block' => true,
-		'blockemail' => true,
-		'unblockself' => true,
-		'owner' => true,
-		'editinterface' => true,
-	);
-	$wgAddGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
-	$wgRemoveGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
-	$wgRestrictionLevels[] = 'owner';
 }
 
 if ( $wgDBname == 'soundboxiki' ) {
