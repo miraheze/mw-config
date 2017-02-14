@@ -346,6 +346,11 @@ $wgConf->settings = array(
 	'wgCentralAuthSilentLogin' => array(
 		'default' => true,
 	),
+	
+	// CheckUser
+	'wgCheckUserForceSummary' => array(
+		'default' => true,
+	),
 
 	// Comments extension
 	'wgCommentsDefaultAvatar' => array(
