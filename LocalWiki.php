@@ -65,73 +65,16 @@ if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
 	$wgGroupPermissions['user']['move'] = false;
-	$wgGroupPermissions['sysop']['createpage'] = true;
 }
 
 if ( $wgDBname === 'bigforestwiki' ) {
 	unset( $wgGroupPermissions['rollbacker'] );
-	$wgGroupPermissions['autoconfirmed']['rollback'] = true;
-	$wgGroupPermissions['confirmed']['rollback'] = true;
-	$wgGroupPermissions['voter']['editvoter'] = true;
-	$wgGroupPermissions['sysop']['editvoter'] = true;
-	$wgGroupPermissions['bureaucrat']['block'] = true;
-	$wgGroupPermissions['bureaucrat']['unblockself'] = true;
-	$wgGroupPermissions['judge']['editvoter'] = true;
-	$wgGroupPermissions['judge']['ipblock-exempt'] = true;
-	$wgGroupPermissions['judge']['blockemail'] = true;
-	$wgGroupPermissions['judge']['block'] = true;
-	$wgGroupPermissions['judge']['unblockself'] = true;
-	$wgGroupPermissions['judge']['editusercss'] = true;
-	$wgGroupPermissions['judge']['edituserjs'] = true;
-	$wgGroupPermissions['judge']['patrol'] = true;
-	$wgGroupPermissions['judge']['autopatrolled'] = true;
-	$wgGroupPermissions['judge']['delete'] = true;
-	$wgGroupPermissions['judge']['deleterevision'] = true;
-	$wgGroupPermissions['judge']['undelete'] = true;
-	$wgGroupPermissions['judge']['browsearchive'] = true;
-	$wgGroupPermissions['judge']['deletedtext'] = true;
-	$wgGroupPermissions['judge']['securepoll-create-poll'] = true;
-	$wgGroupPermissions['judge']['managechangetags'] = true;
-	$wgGroupPermissions['judge']['tboverride'] = true;
-	$wgGroupPermissions['judge']['abusefilter-view-private'] = true;
-	$wgGroupPermissions['judge']['abusefilter-log-private'] = true;
-	$wgGroupPermissions['judge']['protect'] = true;
-	$wgGroupPermissions['judge']['spamblacklistlog'] = true;
-	$wgGroupPermissions['judge']['titleblacklistlog'] = true;
-	$wgGroupPermissions['judge']['unwatchedpages'] = true;
-	$wgGroupPermissions['judge']['rollback'] = true;
-	$wgGroupPermissions['judge']['proxyunbannable'] = true;
-	$wgGroupPermissions['judge']['override-antispoof'] = true;
-	$wgGroupPermissions['judge']['deletelogentry'] = true;
-	$wgGroupPermissions['judge']['editprotected'] = true;
-	$wgGroupPermissions['judge']['editsemiprotected'] = true;
-	$wgAddGroups['judge'] = array( 'confirmed', 'autopatrolled', 'voter' );
-	$wgRemoveGroups['judge'] = array( 'confirmed', 'autopatrolled', 'sysop', 'judge', 'voter', 'bureaucrat' );
-	$wgAddGroups['sysop'][] = 'voter';
-	$wgRemoveGroups['sysop'][] = 'voter';
-	$wgAddGroups['bureaucrat'][] = 'confirmed';
-	$wgAddGroups['bureaucrat'][] = 'voter';
-	$wgAddGroups['bureaucrat'][] = 'judge';
-	$wgRemoveGroups['bureaucrat'][] = 'confirmed';
-	$wgRemoveGroups['bureaucrat'][] = 'voter';
-	$wgRemoveGroups['bureaucrat'][] = 'judge';
-	$wgRemoveGroups['bureaucrat'][] = 'bureaucrat';
-	$wgRestrictionLevels[] = 'editvoter';
 	$wgGroupPermissions['*']['editmycss'] = false;
 	$wgGroupPermissions['*']['editmyjs'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
-	$wgGroupPermissions['user']['editmycss'] = true;
-	$wgGroupPermissions['user']['editmyjs'] = true;
-	$wgGroupPermissions['user']['writeapi'] = true;
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
-	$wgGroupPermissions['autoconfirmed']['move'] = true;
-	$wgGroupPermissions['autoconfirmed']['movefile'] = true;
-	$wgGroupPermissions['autoconfirmed']['upload'] = true;
-	$wgGroupPermissions['confirmed']['move'] = true;
-	$wgGroupPermissions['confirmed']['movefile'] = true;
-	$wgGroupPermissions['confirmed']['upload'] = true;
 }
 
 if ( $wgDBname == 'elementswiki' ) {
@@ -182,7 +125,6 @@ if ( $wgDBname == 'elementswiki' ) {
 if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
-	$wgGroupPermissions['sysop']['createpage'] = true;
 }
 
 if ( $wgDBname === 'jayuwikiwiki' ) {
@@ -203,7 +145,6 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	unset( $wgAddGroups['bureaucrat'] );
 	unset( $wgRemoveGroups['sysop'] );
 	unset( $wgRemoveGroups['bureaucrat'] );
-	$wgGroupPermissions['*']['autopatrol'] = true;
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
 	$wgGroupPermissions['sysop']['mergehistory'] = false;
@@ -228,46 +169,7 @@ if ( $wgDBname == 'picturepediawiki' ) {
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['browsearchive'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
-	$wgGroupPermissions['bureaucrat']['nuke'] = true;
-	$wgGroupPermissions['bureaucrat']['markbotedits'] = true;
-	$wgGroupPermissions['bureaucrat']['mergehistory'] = true;
-	$wgGroupPermissions['bureaucrat']['tboverride'] = true;
 	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
-	$wgGroupPermissions['bureaucrat']['deletelogentry'] = true;
-	$wgGroupPermissions['bureaucrat']['deleterevision'] = true;
-	$wgGroupPermissions['bureaucrat']['delete'] = true;
-	$wgGroupPermissions['bureaucrat']['suppressredirect'] = true;
-	$wgGroupPermissions['bureaucrat']['undelete'] = true;
-	$wgGroupPermissions['bureaucrat']['deletedhistory'] = true;
-	$wgGroupPermissions['bureaucrat']['deletedtext'] = true;
-	$wgGroupPermissions['bureaucrat']['editusercss'] = true;
-	$wgGroupPermissions['bureaucrat']['edituserjs'] = true;
-	$wgGroupPermissions['bureaucrat']['browsearchive'] = true;
-	$wgGroupPermissions['owner'] = array(
-		'abusefilter-modify' => true,
-		'abusefilter-modify-restricted' => true,
-		'abusefilter-revert' => true,
-		'protectsite' => true,
-		'block' => true,
-		'unblock' => true,
-		'unblockself' => true,
-		'blockemail' => true,
-		'globalblock-whitelist' => true,
-		'protect' => true,
-		'unprotect' => true,
-		'editprotected' => true,
-		'rollback' => true,
-		'protect' => true,
-		'editprotected' => true,
-		'block' => true,
-		'blockemail' => true,
-		'unblockself' => true,
-		'owner' => true,
-		'editinterface' => true,
-	);
-	$wgAddGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
-	$wgRemoveGroups['owner'] = array( 'sysop', 'bot', 'bureaucrat', 'confirmed', 'owner' );
-	$wgRestrictionLevels[] = 'owner';
 }
 
 if ( $wgDBname == 'soundboxiki' ) {
@@ -302,6 +204,7 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
+
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 

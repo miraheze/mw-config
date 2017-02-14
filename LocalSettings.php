@@ -3131,6 +3131,21 @@ $wgConf->settings = array(
 				'reviewer',
 			),
 		),
+		'+bigforestwiki' => array(
+			'bureaucrat' => array(
+				'confirmed',
+				'voter',
+				'judge',
+			),
+			'judge' => array(
+				'confirmed',
+				'autopatrolled',
+				'voter',
+			),
+			'sysop' => array(
+				'voter',
+			),
+		),
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -3392,6 +3407,71 @@ $wgConf->settings = array(
 				'upload_by_url' => true,
 			),
 		),
+		'+bigforestwiki' => array(
+			'autoconfirmed' => array(
+				'rollback' => true,
+				'move' => true,
+				'movefile' => true,
+				'upload' => true,
+			),
+			'bureaucrat' => array(
+				'block' => true,
+				'unblockself' => true,
+			),
+			'confirmed' => array(
+				'rollback' => true,
+				'move' => true,
+				'movefile' => true,
+				'upload' => true,
+			),
+			'judge' => array(
+				'editvoter' => true,
+				'ipblock-exempt' => true,
+				'blockemail' => true,
+				'block' => true,
+				'unblockself' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'patrol' => true,
+				'autopatrolled' => true,
+				'delete' => true,
+				'deleterevision' => true,
+				'undelete' => true,
+				'browsearchive' => true,
+				'deletedtext' => true,
+				'securepoll-create-poll' => true,
+				'managechangetags' => true,
+				'tboverride' => true,
+				'abusefilter-view-private' => true,
+				'abusefilter-log-private' => true,
+				'protect' => true,
+				'spamblacklistlog' => true,
+				'titleblacklistlog' => true,
+				'unwatchedpages' => true,
+				'rollback' => true,
+				'proxyunbannable' => true,
+				'override-antispoof' => true,
+				'deletelogentry' => true,
+				'editprotected' => true,
+				'editsemiprotected' => true,
+			),
+			'sysop' => array(
+				'editvoter' => true,
+			),
+			'user' => array(
+				'editmycss' => true,
+				'editmyjs' => true,
+				'writeapi' => true,
+			),
+			'voter' => array(
+				'editvoter' => true,
+			),
+		),
+		'+brynda1231wiki' => array(
+			'sysop' => array(
+				'createpage' => true,
+			),
+		),
 		'+catboxwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
@@ -3509,6 +3589,11 @@ $wgConf->settings = array(
 			),
 			'respected' => array(
 				'respected' => true,
+			),
+		),
+		'+intpwiki' => array(
+			'sysop' => array(
+				'createpage' => true,
 			),
 		),
 		'+jayuwikiwiki' => array(
@@ -3870,6 +3955,25 @@ $wgConf->settings = array(
 				'reviewer',
 			),
 		),
+		'+bigforestwiki' => array(
+			'bureaucrat' => array(
+				'confirmed',
+				'voter',
+				'judge',
+				'bureaucrat',
+			),
+			'judge' => array(
+				'confirmed',
+				'autopatrolled',
+				'sysop',
+				'judge',
+				'voter',
+				'bureaucrat',
+			),
+			'sysop' => array(
+				'voter',
+			),
+		),
 		'+cssandjsschoolboardwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -4088,6 +4192,9 @@ $wgConf->settings = array(
 	'+wgRestrictionLevels' => array(
 		'default' => array(
 			'user',
+		),
+		'+bigforestwiki' => array(
+			'editvoter',
 		),
 		'+dpwiki' => array(
 			'bureaucrat',
