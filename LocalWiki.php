@@ -70,41 +70,6 @@ if ( $wgDBname === 'brynda1231wiki' ) {
 
 if ( $wgDBname === 'bigforestwiki' ) {
 	unset( $wgGroupPermissions['rollbacker'] );
-	$wgGroupPermissions['autoconfirmed']['rollback'] = true;
-	$wgGroupPermissions['confirmed']['rollback'] = true;
-	$wgGroupPermissions['voter']['editvoter'] = true;
-	$wgGroupPermissions['sysop']['editvoter'] = true;
-	$wgGroupPermissions['bureaucrat']['block'] = true;
-	$wgGroupPermissions['bureaucrat']['unblockself'] = true;
-	$wgGroupPermissions['judge']['editvoter'] = true;
-	$wgGroupPermissions['judge']['ipblock-exempt'] = true;
-	$wgGroupPermissions['judge']['blockemail'] = true;
-	$wgGroupPermissions['judge']['block'] = true;
-	$wgGroupPermissions['judge']['unblockself'] = true;
-	$wgGroupPermissions['judge']['editusercss'] = true;
-	$wgGroupPermissions['judge']['edituserjs'] = true;
-	$wgGroupPermissions['judge']['patrol'] = true;
-	$wgGroupPermissions['judge']['autopatrolled'] = true;
-	$wgGroupPermissions['judge']['delete'] = true;
-	$wgGroupPermissions['judge']['deleterevision'] = true;
-	$wgGroupPermissions['judge']['undelete'] = true;
-	$wgGroupPermissions['judge']['browsearchive'] = true;
-	$wgGroupPermissions['judge']['deletedtext'] = true;
-	$wgGroupPermissions['judge']['securepoll-create-poll'] = true;
-	$wgGroupPermissions['judge']['managechangetags'] = true;
-	$wgGroupPermissions['judge']['tboverride'] = true;
-	$wgGroupPermissions['judge']['abusefilter-view-private'] = true;
-	$wgGroupPermissions['judge']['abusefilter-log-private'] = true;
-	$wgGroupPermissions['judge']['protect'] = true;
-	$wgGroupPermissions['judge']['spamblacklistlog'] = true;
-	$wgGroupPermissions['judge']['titleblacklistlog'] = true;
-	$wgGroupPermissions['judge']['unwatchedpages'] = true;
-	$wgGroupPermissions['judge']['rollback'] = true;
-	$wgGroupPermissions['judge']['proxyunbannable'] = true;
-	$wgGroupPermissions['judge']['override-antispoof'] = true;
-	$wgGroupPermissions['judge']['deletelogentry'] = true;
-	$wgGroupPermissions['judge']['editprotected'] = true;
-	$wgGroupPermissions['judge']['editsemiprotected'] = true;
 	$wgAddGroups['judge'] = array( 'confirmed', 'autopatrolled', 'voter' );
 	$wgRemoveGroups['judge'] = array( 'confirmed', 'autopatrolled', 'sysop', 'judge', 'voter', 'bureaucrat' );
 	$wgAddGroups['sysop'][] = 'voter';
@@ -120,18 +85,9 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['*']['editmycss'] = false;
 	$wgGroupPermissions['*']['editmyjs'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
-	$wgGroupPermissions['user']['editmycss'] = true;
-	$wgGroupPermissions['user']['editmyjs'] = true;
-	$wgGroupPermissions['user']['writeapi'] = true;
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
-	$wgGroupPermissions['autoconfirmed']['move'] = true;
-	$wgGroupPermissions['autoconfirmed']['movefile'] = true;
-	$wgGroupPermissions['autoconfirmed']['upload'] = true;
-	$wgGroupPermissions['confirmed']['move'] = true;
-	$wgGroupPermissions['confirmed']['movefile'] = true;
-	$wgGroupPermissions['confirmed']['upload'] = true;
 }
 
 if ( $wgDBname == 'elementswiki' ) {
