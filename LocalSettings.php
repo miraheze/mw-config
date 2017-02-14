@@ -3189,15 +3189,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+picturepediawiki' => array(
-			'owner' => array(
-				'sysop',
-				'bot',
-				'bureaucrat',
-				'confirmed',
-				'owner',
-			),
-		),
 		'+trexwiki' => array(
 			'co' => array(
 				'ceo',
@@ -3671,49 +3662,6 @@ $wgConf->settings = array(
 				'commentadmin' => true,
 			),
 		),
-		'+picturepediawiki' => array(
-			'*' => array(
-				'autopatrol' => true,
-			),
-			'bureaucrat' => array(
-				'nuke' => true,
-				'markbotedits' => true,
-				'mergehistory' => true,
-				'tboverride' => true,
-				'deletelogentry' => true,
-				'deleterevision' => true,
-				'delete' => true,
-				'suppressredirect' => true,
-				'undelete' => true,
-				'deletedhistory' => true,
-				'deletedtext' => true,
-				'editusercss' => true,
-				'edituserjs' => true,
-				'browsearchive' => true,
-			),
-			'owner' => array(
-				'abusefilter-modify' => true,
-				'abusefilter-modify-restricted' => true,
-				'abusefilter-revert' => true,
-				'protectsite' => true,
-				'block' => true,
-				'unblock' => true,
-				'unblockself' => true,
-				'blockemail' => true,
-				'globalblock-whitelist' => true,
-				'protect' => true,
-				'unprotect' => true,
-				'editprotected' => true,
-				'rollback' => true,
-				'protect' => true,
-				'editprotected' => true,
-				'block' => true,
-				'blockemail' => true,
-				'unblockself' => true,
-				'owner' => true,
-				'editinterface' => true,
-			),
-		),
 		'+plazmaburstwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
@@ -4069,15 +4017,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+picturepediawiki' => array(
-			'owner' => array(
-				'sysop',
-				'bot',
-				'bureaucrat',
-				'confirmed',
-				'owner',
-			),
-		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -4272,9 +4211,6 @@ $wgConf->settings = array(
 		),
 		'+jayuwikiwiki' => array(
 			'editvoter',
-		),
-		'+picturepediawiki' => array(
-			'owner',
 		),
 		'+sovereignwiki' => array(
 			'officer',
