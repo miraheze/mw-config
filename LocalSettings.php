@@ -3141,7 +3141,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'voter',
-			);
+			),
 			'sysop' => array(
 				'voter',
 			),
@@ -3196,7 +3196,7 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'confirmed',
 				'owner',
-			);
+			),
 		),
 		'+trexwiki' => array(
 			'co' => array(
@@ -4021,7 +4021,7 @@ $wgConf->settings = array(
 				'judge',
 				'voter',
 				'bureaucrat',
-			);
+			),
 			'sysop' => array(
 				'voter',
 			),
@@ -4076,7 +4076,7 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'confirmed',
 				'owner',
-			);
+			),
 		),
 		'+quantumwiki' => array(
 			'Founder' => array(
