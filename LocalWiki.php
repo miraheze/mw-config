@@ -65,7 +65,6 @@ if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
 	$wgGroupPermissions['user']['move'] = false;
-	$wgGroupPermissions['sysop']['createpage'] = true;
 }
 
 if ( $wgDBname === 'bigforestwiki' ) {
@@ -126,7 +125,6 @@ if ( $wgDBname == 'elementswiki' ) {
 if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
-	$wgGroupPermissions['sysop']['createpage'] = true;
 }
 
 if ( $wgDBname === 'jayuwikiwiki' ) {
