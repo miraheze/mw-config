@@ -1816,6 +1816,7 @@ $wgConf->settings = array(
 		'attackontitanwiki' => true,
 		'augustinianumwiki' => true,
 		'aurcusonlinewiki' => true,
+		'bchwiki' => true,
 		'bgowiki' => true,
 		'betapurplewiki' => true,
 		'bettermediawiki' => true,
