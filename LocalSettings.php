@@ -707,11 +707,6 @@ $wgConf->settings = array(
 		'+turkcesozlukwiki' => array(
 			'anon' => true,
 		),
-		'+vrgowiki' => array(
-			'anon' => true,
-			'user' => true,
-			'sysop' => true,
-		),
 		'+welcomewiki' => array(
 			'anon' => true,
 		),
@@ -2011,7 +2006,6 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => true,
 		'vgalimentiwiki' => true,
 		'videogameswiki' => true,
-		'vrgowiki' => true,
 		'wabcwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
@@ -2192,7 +2186,6 @@ $wgConf->settings = array(
 		'doinwiki' => '_blank',
 		'forexwiki' => '_blank',
 		'sylwiki' => '_blank',
-		'vrgowiki' => '_blank',
 		'wisdomwikiwiki' => '_blank',
 		'wisdomsandboxwiki' => '_blank',
 		'yacresourceswiki' => '_blank',
@@ -3285,11 +3278,6 @@ $wgConf->settings = array(
 				'autopatrolled'
 			),
 		),
-		'+vrgowiki' => array(
-			'bureaucrat' => array(
-				'Teachers',
-			),
-		),
 		'+walthamstowlabourwiki' => array(
 			'sysop' => array(
 				'editor-approver',
@@ -3834,11 +3822,6 @@ $wgConf->settings = array(
 				'editinterface' => true,
 			),
 		),
-		'+vrgowiki' => array(
-			'Teachers' => array(
-				'edit' => true,
-			),
-		),
                 '+walthamstowlabourwiki' => array(
 			'editor-approver' => array(
 				'edit' => true,
@@ -4086,11 +4069,6 @@ $wgConf->settings = array(
 				'voter',
 				'bot',
 				'autopatrolled',
-			),
-		),
-		'+vrgowiki' => array(
-			'bureaucrat' => array(
-				'Teachers',
 			),
 		),
 		'+walthamstowlabourwiki' => array(
@@ -4682,7 +4660,6 @@ $wgConf->settings = array(
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
 		'valentinaprojectwiki' => "//$wmgUploadHostname/valentinaprojectwiki/2/25/Valentina_logo_v1.png",
 		'vgalimentiwiki' => "//$wmgUploadHostname/vgalimentiwiki/f/f9/Vgalimenti-logo.png",
-		'vrgowiki' => "//$wmgUploadHostname/vrgowiki/4/4d/VRGO_logga.png",
 		'wabcwiki' => "//$wmgUploadHostname/wabcwiki/2/25/Logowabc.png",
 		'wdbwiki' => "//$wmgUploadHostname/wdbwiki/2/26/Dancing-135px.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/d/df/20150913_WelcomeWiki-Logo_TranspWritten135x135.png",
