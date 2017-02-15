@@ -4620,6 +4620,7 @@ $wgConf->settings = array(
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/e/e3/SHA_Wiki_logo.svg",
 		'shippingandmetawiki' => "//$wmgUploadHostname/shippingandmetawiki/7/7d/CSM_Logo.png",
 		'sidemwiki' => "//$wmgUploadHostname/sidemwiki/a/a5/Sidem-logo.png",
+		'sikhwikitestwiki' => "//$wmgUploadHostname/sikhwikitestwiki/b/b5/Cover_The_Purpose_of_Your_Life_LOGO_135x135.png",
 		'sirikotwiki' => '//www.sirikot.com/wiki_logo.png',
 		'sjuhabitatwiki' => "//$wmgUploadHostname/sjuhabitatwiki/7/7a/Habi_logo_wiki.png",
 		'skyfireflyffwiki' => "//$wmgUploadHostname/skyfireflyffwiki/c/c9/Logo.png",
