@@ -4214,6 +4214,12 @@ $wgConf->settings = array(
 			'delete',
 		),
 	),
+	
+	// Robot policy
+	'wgDefaultRobotPolicy' => array(
+		'default' => 'index,follow',
+		'tharranarothwiki' => 'noindex,nofollow',
+	),
 
 	// RSS Settings
 	'wgRSSCacheAge' => array(
