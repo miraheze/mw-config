@@ -4675,6 +4675,7 @@ $wgConf->settings = array(
 		'trexwiki' => "//$wmgUploadHostname/trexwiki/4/49/Wikit.png",
 		'trumpwiki' => "//$wmgUploadHostname/trumpwiki/c/c3/Magnifying-logo.jpg",
 		'ubuntuwiki' => "//$wmgUploadHostname/ubuntuwiki/1/11/UbuntuWiki.png",
+		'umpcwiki' => "//$wmgUploadHostname/umpcwiki/5/53/LogoUMPC-spunta.png",
 		'uprisewiki' => "//$wmgUploadHostname/uprisewiki/2/2e/DotLogo130px.png",
 		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
