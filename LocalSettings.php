@@ -3284,6 +3284,16 @@ $wgConf->settings = array(
 				'autopatrolled'
 			),
 		),
+		'+usawiki' => array(
+			'president' => array(
+				'autopatrolled',
+				'confirmed',
+				'sysop',
+				'bot',
+				'president',
+				'vice-president',
+			),
+		),
 		'+vrgowiki' => array(
 			'bureaucrat' => array(
 				'Teachers',
@@ -4085,6 +4095,16 @@ $wgConf->settings = array(
 				'voter',
 				'bot',
 				'autopatrolled',
+			),
+		),
+		'+usawiki' => array(
+			'president' => array(
+				'autopatrolled',
+				'confirmed',
+				'sysop',
+				'bot',
+				'president',
+				'vice-president',
 			),
 		),
 		'+vrgowiki' => array(
