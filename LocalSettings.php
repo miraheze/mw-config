@@ -4414,6 +4414,7 @@ $wgConf->settings = array(
 		'drones4allwiki' => "//$wmgUploadHostname/drones4allwiki/2/26/Favicon.png",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/6/64/Favicon.ico",
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/6/60/Wiki_favicon.png",
+		'enmarchewiki' => "//$wmgUploadHostname/enmarchewiki/d/d8/LogoEM32x32transparency.png",
 		'eternalconfictwiki' => "//$wmgUploadHostname/eternalconfictwiki/a/a9/AD_new_logo4.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/FaviconETPO.gif",
 		'evawiki' => "//$wmgUploadHostname/evawiki/6/64/Favicon.ico",
