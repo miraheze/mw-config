@@ -138,40 +138,6 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['reupload-shared'] = false;
 }
 
-if ( $wgDBname == 'picturepediawiki' ) {
-	unset( $wgGroupPermissions['rollbacker'] );
-	unset( $wgGroupPermissions['autopatrolled'] );
-	unset( $wgAddGroups['sysop'] );
-	unset( $wgAddGroups['bureaucrat'] );
-	unset( $wgRemoveGroups['sysop'] );
-	unset( $wgRemoveGroups['bureaucrat'] );
-	$wgGroupPermissions['sysop']['nuke'] = false;
-	$wgGroupPermissions['sysop']['markbotedits'] = false;
-	$wgGroupPermissions['sysop']['mergehistory'] = false;
-	$wgGroupPermissions['sysop']['tboverride'] = false;
-	$wgGroupPermissions['sysop']['override-antispoof'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
-	$wgGroupPermissions['sysop']['protect'] = false;
-	$wgGroupPermissions['sysop']['deletelogentry'] = false;
-	$wgGroupPermissions['sysop']['deleterevision'] = false;
-	$wgGroupPermissions['sysop']['delete'] = false;
-	$wgGroupPermissions['sysop']['suppressredirect'] = false;
-	$wgGroupPermissions['sysop']['undelete'] = false;
-	$wgGroupPermissions['sysop']['deletedhistory'] = false;
-	$wgGroupPermissions['sysop']['deletedtext'] = false;
-	$wgGroupPermissions['sysop']['blockemail'] = false;
-	$wgGroupPermissions['sysop']['block'] = false;
-	$wgGroupPermissions['sysop']['unblockself'] = false;
-	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['sysop']['editusercss'] = false;
-	$wgGroupPermissions['sysop']['edituserjs'] = false;
-	$wgGroupPermissions['sysop']['browsearchive'] = false;
-	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
-	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
-}
-
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
