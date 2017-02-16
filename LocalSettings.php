@@ -637,6 +637,12 @@ $wgConf->settings = array(
 		'+priyowiki' => array(
 			'anon' => true,
 		),
+		'+revitwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+			'editor' => true,
+		),
 		'+ricwiki' => array(
 			'anon' => true,
 		),
@@ -4366,6 +4372,7 @@ $wgConf->settings = array(
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
+		'revitwiki' => 'monobook',
 		'thelonsdalebattalionwiki' => 'metrolook',
 	),
 	'wgFavicon' => array(
