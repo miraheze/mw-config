@@ -1418,7 +1418,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePageForms' => array(
 		'default' => false,
-		'extloadwiki' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUsePageNotice' => array(
 		'default' => false,
