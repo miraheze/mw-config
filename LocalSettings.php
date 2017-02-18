@@ -1418,7 +1418,6 @@ $wgConf->settings = array(
 	),
 	'wmgUsePageForms' => array(
 		'default' => false,
-		'calexitwiki' => true,
 		'extloadwiki' => false,
 	),
 	'wmgUsePageNotice' => array(
