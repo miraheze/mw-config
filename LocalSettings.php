@@ -4325,6 +4325,7 @@ $wgConf->settings = array(
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'fourleafficswiki' => 'any',
+		'tharranarothwiki' => 'any',
 		'throisarwiki' => 'any',
 	),
 
