@@ -4903,6 +4903,6 @@ require_once( "/srv/mediawiki/config/LocalWiki.php" );
 
 $wgCentralAuthReadOnly = true;
 
-if ( $wgDBname === 'metawiki' ) {
+if ( $wgDBname === 'extloadwiki' ) {
 	$wgReadOnly = 'Migrating to another database server';
 }
