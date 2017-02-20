@@ -4900,9 +4900,3 @@ require_once( "/srv/mediawiki/config/Redis.php" );
 
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
-
-$wgCentralAuthReadOnly = true;
-
-if ( $wgDBname === 'extloadwiki' ) {
-	$wgReadOnly = 'Migrating to another database server';
-}

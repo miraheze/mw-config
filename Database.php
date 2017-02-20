@@ -5,6 +5,7 @@ $wgLBFactoryConf = array(
 	'sectionsByDB' => array(
 		'allthetropeswiki' => 'c2',
 		'centralauth' => 'c2',
+		'extloadwiki' => 'c2',
 		'loginwiki' => 'c2',
 		'metawiki' => 'c2',
 	),
