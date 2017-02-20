@@ -7,7 +7,6 @@ $wgLBFactoryConf = array(
 		'centralauth' => 'c2',
 		'extloadwiki' => 'c2',
 		'loginwiki' => 'c2',
-		'metawiki' => 'c2',
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array(
