@@ -3591,6 +3591,12 @@ $wgConf->settings = array(
 			),
 		),
 		'+metawiki' => array(
+			'autoconfirmed' => array(
+				'move' => true,
+			),
+			'confirmed' => array(
+				'move' => true,
+			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -3607,6 +3613,9 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'interwiki' => true,
 				'oathauth-enable' => true,
+			),
+			'user' => array(
+				'move' => false,
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
