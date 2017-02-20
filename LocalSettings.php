@@ -538,6 +538,11 @@ $wgConf->settings = array(
 		'+evelopediawiki' => array(
 			'anon' => true,
 		),
+		'+exercicesdefrancaisprodfrwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+forexwiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -2281,6 +2286,7 @@ $wgConf->settings = array(
 		'+amaninfowiki' => array('pcap', 'cap' ),
 		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
+		'+exercicesdefrancaisprodfrwiki' => array('html', 'htm' ),
 		'+exitsincwiki' => array('txt' ),
 		'+jayuwikiwiki' => array('bmp', 'apng', 'tiff', 'wav', 'mp3', 'oga', 'ogv', 'asv', 'swf', 'wmv'),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
@@ -4550,6 +4556,7 @@ $wgConf->settings = array(
 		'eternalconfictwiki' => "//$wmgUploadHostname/eternalconfictwiki/a/a9/AD_new_logo4.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'evawiki' => "//$wmgUploadHostname/evawiki/e/ec/EVA-Wiki.png",
+		'exercicesdefrancaisprodfrwiki' => "//$wmgUploadHostname/exercicesdefrancaisprodfrwiki/c/c4/Logo_Exercices.jpeg",
 		'fbwikiwiki' => "//$wmgUploadHostname/fbwikiwiki/thumb/4/4a/Fbwiki_logo.png/135px-Fbwiki_logo.png",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
 		'fifamwiki' => "//$wmgUploadHostname/fifamwiki/0/0c/Wikilogo_160px.png",
