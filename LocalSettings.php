@@ -1852,6 +1852,7 @@ $wgConf->settings = array(
 		'clicordiwiki' => true,
 		'cnvwiki' => true,
 		'cogitopediewiki' => true,
+		'conquestofparadiserpwiki' => true,
 		'corydoctorowwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'cybersecuritywiki' => true,
