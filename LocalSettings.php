@@ -4903,6 +4903,6 @@ require_once( "/srv/mediawiki/config/LocalWiki.php" );
 
 $wgCentralAuthReadOnly = true;
 
-if ( $wgDBname === 'loginwiki' ) {
-	$wgReadOnly = 'Global account changes are disabled.';
+if ( $wgDBname === 'metawiki' ) {
+	$wgReadOnly = 'Migrating to another database server';
 }
