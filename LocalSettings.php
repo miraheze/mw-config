@@ -2378,6 +2378,9 @@ $wgConf->settings = array(
 	),
 
 	// Interwiki
+	'wgEnableScaryTranscluding' => array(
+		'default' => true,
+	),
 	'wgInterwikiCentralDB' => array(
 		'default' => 'metawiki',
 	),
