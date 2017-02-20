@@ -77,51 +77,6 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
-if ( $wgDBname == 'elementswiki' ) {
-	$wgGroupPermissions['*']['read'] = false;
-	$wgGroupPermissions['user']['changetags'] = false;
-	$wgGroupPermissions['user']['applychangetags'] = false;
-	$wgAddGroups['sysop'] = array();
-	$wgRemoveGroups['sysop'] = array();
-	$wgAddGroups['bureaucrat'] = array();
-	$wgRemoveGroups['bureaucrat'] = array();
-	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
-	$wgGroupPermissions['sysop']['editusercss'] = false;
-	$wgGroupPermissions['sysop']['edituserjs'] = false;
-	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgProtectSiteLimit = '2 months';
-	$wgGroupPermissions['user']['move'] = false;
-	$wgGroupPermissions['user']['movefile'] = false;
-	$wgGroupPermissions['user']['move-categorypages'] = false;
-	$wgGroupPermissions['user']['move-subpages'] = false;
-	$wgGroupPermissions['user']['move-rootuserpages'] = false;
-	$wgGroupPermissions['sysop']['move'] = false;
-	$wgGroupPermissions['sysop']['movefile'] = false;
-	$wgGroupPermissions['sysop']['move-categorypages'] = false;
-	$wgGroupPermissions['sysop']['move-rootuserpages'] = false;
-	$wgGroupPermissions['sysop']['importupload'] = false;
-	$wgGroupPermissions['sysop']['import'] = false;
-	$wgGroupPermissions['sysop']['unblockself'] = false;
-	$wgGroupPermissions['sysop']['markbotedits'] = false;
-	$wgGroupPermissions['sysop']['mergehistory'] = false;
-	$wgGroupPermissions['sysop']['massmessage'] = false;
-	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
-	$wgGroupPermissions['sysop']['reupload'] = false;
-	$wgGroupPermissions['sysop']['reupload-shared'] = false;
-	$wgGroupPermissions['sysop']['override-antispoof'] = false;
-	$wgGroupPermissions['*']['flow-hide'] = false;
-	unset( $wgGroupPermissions['suppress'] );
-	unset( $wgGroupPermissions['rollbacker'] );
-	unset ($wgGroupPermissions['commentadmin'] );
-	$wgGroupPermissions['sysop']['flow-delete'] = false;
-	$wgGroupPermissions['sysop']['flow-edit-post'] = false;
-	$wgGroupPermissions['sysop']['flow-lock'] = false;
-	$wgGroupPermissions['sysop']['move-subpages'] = false;
-	$wgGroupPermissions['sysop']['tboverride'] = false;
-	$wgGroupPermissions['sysop']['noratelimit'] = false;
-	$wgGroupPermissions['steward']['userrights'] = false;
-}
-
 if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;

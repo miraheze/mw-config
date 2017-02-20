@@ -43,20 +43,6 @@ if ( $wgDBname == 'christipediawiki' ) {
 	);
 }
 
-if ( $wgDBname == 'elementswiki' ) {
-	$wgContactConfig['default'] = array(
-		'RecipientUser' => 'DeltaQuad',
-		'SenderEmail' => $wgPasswordSender,
-		'SenderName' => 'Miraheze No Reply',
-		'RequireDetails' => true,
-		'IncludeIP' => false,
-		'AdditionalFields' => array(),
-		'DisplayFormat' => 'table',
-		'RLModules' => array(),
-		'RLStyleModules' => array(),
-	);
-}
-
 if ( $wgDBname == 'fablabesdswiki' ) {
 	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'Contact COOP FabLab ESDS',
