@@ -2408,7 +2408,7 @@ $wgConf->settings = array(
 		'safiriawiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'sourcewiki' => 'https://source.miraheze.org/wiki/Source_Code_Wiki:Copyrights',
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
-		'tharranarothwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
+		'lothuialethwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'wisdomwikiwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png',
 		'universebuildwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 	),
@@ -2434,7 +2434,7 @@ $wgConf->settings = array(
 		'safiriawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'sourcewiki' => 'Wiki copyright information.',
 		'spiralwiki' => 'CC0 Public Domain',
-		'tharranarothwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
+		'lothuialethwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'wisdomwikiwiki' => 'Creative Commons Attribution-NonCommercial-NoDerivatives',
 		'universebuildwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 	),
@@ -2454,7 +2454,7 @@ $wgConf->settings = array(
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'sourcewiki' => 'https://source.miraheze.org/wiki/Source_Code_Wiki:Copyrights',
 		'spiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
-		'tharranarothwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+		'lothuialethwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'ujhswiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'universebuildwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'unjeongwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
@@ -4234,7 +4234,7 @@ $wgConf->settings = array(
 	// Robot policy
 	'wgDefaultRobotPolicy' => array(
 		'default' => 'index,follow',
-		'tharranarothwiki' => 'noindex,nofollow',
+		'lothuialethwiki' => 'noindex,nofollow',
 	),
 
 	// RSS Settings
@@ -4342,7 +4342,7 @@ $wgConf->settings = array(
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'fourleafficswiki' => 'any',
-		'tharranarothwiki' => 'any',
+		'lothuialethwiki' => 'any',
 		'throisarwiki' => 'any',
 	),
 
