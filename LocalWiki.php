@@ -135,6 +135,7 @@ if ( $wgDBname == 'metawiki' ) {
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
 
+	$wgGroupPermissions['user']['move'] = false;
 }
 
 // Depends on $wgContentNamespaces

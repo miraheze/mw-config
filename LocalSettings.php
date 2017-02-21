@@ -3612,9 +3612,6 @@ $wgConf->settings = array(
 				'interwiki' => true,
 				'oathauth-enable' => true,
 			),
-			'user' => array(
-				'move' => false,
-			),
 			'wikicreator' => array(
 				'createwiki' => true,
 				'managewiki' => true,
