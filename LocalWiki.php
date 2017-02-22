@@ -136,6 +136,8 @@ if ( $wgDBname == 'metawiki' ) {
 	}
 
 	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['createpage'] = false; //Recent vandalism. Users have no need to create pages on Meta --Reception123
+
 }
 
 // Depends on $wgContentNamespaces
