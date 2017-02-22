@@ -834,7 +834,6 @@ $wgConf->settings = array(
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
