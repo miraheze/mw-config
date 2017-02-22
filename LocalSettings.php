@@ -3591,9 +3591,11 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			'autoconfirmed' => array(
 				'move' => true,
+				'createpage' => true,
 			),
 			'confirmed' => array(
 				'move' => true,
+				'createpage' => true,
 			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
