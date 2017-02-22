@@ -2727,7 +2727,7 @@ $wgConf->settings = array(
 		),
 		'bigforestwiki' => array(
 			NS_QUIZSET => 'Quizset',
-			NS_QUIZSET => 'Quizset_talk',
+			NS_QUIZSET_TALK => 'Quizset_talk',
 			NS_NOTEBOOK => 'Notebook',
 			NS_NOTEBOOK_TALK => 'Notebook_talk',
 			NS_SOURCE => 'Source',
