@@ -1788,6 +1788,7 @@ $wgConf->settings = array(
 		'ageofenlightenmentwiki' => true,
 		'ageofimperialismwiki' => true,
 		'ageofimperialistswiki' => true,
+		'ageloniawiki' => true,
 		'airwiki' => true,
 		'aktposwiki' => true,
 		'alanpediawiki' => true,
