@@ -4876,7 +4876,3 @@ require_once( "/srv/mediawiki/config/Redis.php" );
 
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
-
-if ( $wgDBname == 'buswiki' || $wgDBname == 'supernamuwiki' || $wgDBname == 'tmewiki' || $wgDBname == 'zgradetenniswiki' ) {
-	$wgReadOnly = "Migrating database to another server. Please try again in a few minutes.";
-}

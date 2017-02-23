@@ -4,9 +4,13 @@ $wgLBFactoryConf = array(
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => array(
 		'allthetropeswiki' => 'c2',
+		'buswiki' => 'c2',
 		'centralauth' => 'c2',
 		'extloadwiki' => 'c2',
 		'loginwiki' => 'c2',
+		'supernamuwiki' => 'c2',
+		'tmewiki' => 'c2',
+		'zgradetenniswiki' => 'c2',
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array(
