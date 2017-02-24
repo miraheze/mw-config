@@ -1926,6 +1926,7 @@ $wgConf->settings = array(
 		'nextlevelwikiwiki' => true,
 		'nidda23wiki' => true,
 		'noalatalawiki' => true,
+		'nonbinarywiki' => true,
 		'nvcwiki' => true,
 		'nwpwiki' => true,
 		'ofthevampirewiki' => true,
