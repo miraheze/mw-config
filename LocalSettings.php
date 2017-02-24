@@ -4854,18 +4854,18 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgMajorSiteNoticeID = 1;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wgDBname;
-	if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
-		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is performing database maintenance over the next hour in order to improve performance. During this time some wikis will be uneditable and some may not be reachable for a small period of time while work is carried out. If you have any issues, please come to #miraheze on freenode.net.</td>
-			</tr></tbody></table>
-EOF;
-	}
-	return true;
-}
+// $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+// function onSiteNoticeAfter( &$siteNotice, $skin ) {
+//	global $wgDBname;
+//	if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
+//		$siteNotice .= <<<EOF
+//			<table class="wikitable" style="text-align:center;"><tbody><tr>
+//			<td>Miraheze is performing database maintenance over the next hour in order to improve performance. During this time some wikis will be uneditable and some may not be reachable for a small period of time while work is carried out. If you have any issues, please come to #miraheze on freenode.net.</td>
+//			</tr></tbody></table>
+//EOF;
+//	}
+//	return true;
+// }
 
 // Include other configuration file
 require_once( "/srv/mediawiki/config/Database.php" );
