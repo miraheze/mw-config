@@ -1207,6 +1207,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMaps' => array(
 		'default' => false,
+		'aerosswiki' => true,
 		'ayrshirewiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
@@ -1676,6 +1677,7 @@ $wgConf->settings = array(
 	'wmgUseTabsCombination' => array(
 		'default' => false,
 		'8stationwiki' => true,
+		'aerosswiki' => true,
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'bigforestwiki' => true,
