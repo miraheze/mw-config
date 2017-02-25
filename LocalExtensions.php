@@ -327,10 +327,6 @@ if ( $wmgUseNoTitle ) {
 	$wgRestrictDisplayTitle = false;
 }
 
-if ( $wmgUsePageForms ) {
-	wfLoadExtension( 'PageForms' );
-}
-
 if ( $wmgUsePageNotice ) {
 	require_once( "$IP/extensions/PageNotice/PageNotice.php" );
 }

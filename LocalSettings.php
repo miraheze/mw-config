@@ -1404,10 +1404,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 	),
-	'wmgUsePageForms' => array(
-		'default' => false,
-		'extloadwiki' => true,
-	),
 	'wmgUsePageNotice' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
