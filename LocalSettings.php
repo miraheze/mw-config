@@ -304,7 +304,7 @@ $wgConf->settings = array(
 			'wikiparkinson.org' => 'wikiparkinsonwiki',
 			'wikipuk.cl' => 'wikipucwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
-			'wiki.wishcert.com' => 'wishcertwiki',
+			'histories.wiki' => 'wishcertwiki',
 			'www.zenbuddhism.info' => 'zenbuddhismwiki',
 		),
 	),
@@ -4158,7 +4158,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => 'https://wikipuk.cl',
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
 		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
-		'wishcertwiki' => 'https://wiki.wishcert.com',
+		'wishcertwiki' => 'https://histories.wiki',
 		'zenbuddhismwiki' => 'https://www.zenbuddhism.info',
 	),
 	'wgShowHostnames' => array(
