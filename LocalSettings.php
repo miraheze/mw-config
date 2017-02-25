@@ -1876,6 +1876,7 @@ $wgConf->settings = array(
 		'grandtheftwikiwiki' => true,
 		'gzewiki' => true,
 		'hftqmswiki' => true,
+		'hjelpemidlerwiki' => true,
 		'hobbieswiki' => true,
 		'hshsinfoportalwiki' => true,
 		'hsoodenwiki' => true,
