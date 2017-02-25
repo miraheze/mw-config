@@ -1104,6 +1104,7 @@ $wgConf->settings = array(
 		'walthamstowlabourwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wishcertwiki' => true,
 		'yacresourceswiki' => true,
 	),
 	'wmgUseForeground' => array(
@@ -2008,6 +2009,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
+		'wishcertwiki' => true,
 		'worldbuildingwiki' => true,
 		'wthsapgovwiki' => true,
 		'xdjibiwiki' => true,
