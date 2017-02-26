@@ -2306,6 +2306,7 @@ $wgConf->settings = array(
 		'muckhackwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'spiralwiki' => true,
+		'wishcertwiki' => true,
 	),
 
 	// GlobalBlocking
