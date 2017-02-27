@@ -2544,6 +2544,7 @@ $wgConf->settings = array(
 		'default' => array(
 			'metawiki',
 			'allthetropeswiki',
+			'biblicalwikiwiki',
 			'bitcoindebateswiki',
 			'softwarecrisiswiki',
 			'spiralwiki',
