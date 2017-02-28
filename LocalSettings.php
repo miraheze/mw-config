@@ -1723,9 +1723,11 @@ $wgConf->settings = array(
 	'wmgUseTorBlock' => array(
 		'default' => false,
 		'690squadronwiki' => true,
+		'bgowiki' => true,
 		'bigforestwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
+		'metawiki' => true,
 		'takethatwikiwiki' => true,
 	),
 	'wmgUseTranslate' => array(
