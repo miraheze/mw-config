@@ -2055,6 +2055,7 @@ $wgConf->settings = array(
 	'wmgUseWhoIsWatching' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'wrocwiki' => true,
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
