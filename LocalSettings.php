@@ -2051,6 +2051,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseWhoIsWatching' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseWidgets' => array(
 		'default' => false,
 		'aemanualwiki' => true,
