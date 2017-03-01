@@ -530,6 +530,10 @@ if ( $wmgUseWebChat ) {
 	$wgWebChatChannel = $wmgWebChatChannel;
 }
 
+if ( $wmgUseWhoIsWatching ) {
+	require_once( "$IP/extensions/WhoIsWatching/WhoIsWatching.php" );
+}
+
 if ( $wmgUseWidgets ) {
 	require_once( "$IP/extensions/Widgets/Widgets.php" );
 }
