@@ -125,7 +125,40 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgGroupPermissions['*']['read'] = false;
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
-
+if ( $wgDBname == 'wikiyangtzewiki' ) {
+	$wgGroupPermissions['*']['abusefilter-view'] = false; //Restrict Special:AbuseFilter access to managers
+	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
+	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
+	$wgGroupPermissions['oversight']['deletelogentry'] = false; //All oversighters are also admins, so there's no point for this
+	$wgGroupPermissions['oversight']['deleterevision'] = false;
+	$wgGroupPermissions['oversight']['browsearchive'] = false;
+	$wgGroupPermissions['oversight']['deletedhistory'] = false;
+	$wgGroupPermissions['oversight']['deletedtext'] = false;
+	$wgGroupPermissions['sysop']['markbotedits'] = false; //The following userrights are being restricted to other groups
+	$wgGroupPermissions['sysop']['mergehistory'] = false;
+	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
+	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['sysop']['import-upload'] = false;
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['editusercss'] = false;
+	$wgGroupPermissions['sysop']['edituserjs'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['user']['editcontentmodel'] = false;
+	unset( $wgGroupPermissions['steward'] ); //No CentralAuth actions locally on my wiki, please.
+	unset( $wgGroupPermissions['confirmed'] ); //I don't have any real purpose for this user group
+	$wgAddGroups['sysop'] = array();
+	$wgAddGroups['bureaucrat'] = array();
+	$wgRemoveGroups['sysop'] = array();
+	$wgRemoveGroups['bureaucrat'] = array();
+}
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
