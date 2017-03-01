@@ -1956,6 +1956,7 @@ $wgConf->settings = array(
 		'purpanrangueiluswiki' => true,
 		'qwertywiki' => true,
 		'rawdatawiki' => true,
+		'revitwiki' => true,
 		'ricwiki' => true,
 		'robloxscripterswiki' => true,
 		'rocketleaguequebecwiki' => true,
