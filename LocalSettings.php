@@ -3294,6 +3294,18 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+wikiyangtzewiki' => array(
+			'founder' => array(
+				'sysop',
+				'bureaucrat',
+				'page mover',
+				'importer',
+				'edit filter manager',
+				'autopatrolled',
+				'rollbacker',
+				'bot',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
@@ -3817,6 +3829,39 @@ $wgConf->settings = array(
 				'upload' => true,
 			),
 		),
+		'wikiyangtzewiki' => array(
+			'bureaucrat' => array(
+				'markbotedits' => true,
+				'mergehistory' => true,
+				'unwatchedpages' => true,
+				'nuke' => true,
+				'editcontentmodel' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'editinterface' => true,
+				'checkuser-log' => true, //This is not actually granting crat access to CU, but rather just allowing crats to monitor the local CU log
+			),
+			'page mover' => array(
+				'move' => true,
+				'movefile' => true,
+				'move-categorypages' => true,
+				'move-subpages' => true,
+				'move-rootuserpages' => true,
+				'suppressredirect' => true,
+			),
+			'importer' => array(
+				'import' => true,
+				'import-upload' => true,
+			),
+			'edit filter manager' => array(
+				'abusefilter-view' => true,
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+				'abusefilter-revert' => true,
+			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
@@ -3993,6 +4038,18 @@ $wgConf->settings = array(
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+wikiyangtzewiki' => array(
+			'founder' => array(
+				'sysop',
+				'bureaucrat',
+				'page mover',
+				'importer',
+				'edit filter manager',
+				'autopatrolled',
+				'rollbacker',
+				'bot',
 			),
 		),
 	),
