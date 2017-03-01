@@ -165,17 +165,31 @@ $wgConf->settings = array(
 			'rangeblock' => false,
 			'tag' => true,
 		),
+		'wikiyangtzewiki' => array(
+			'flag' => true,
+			'throttle' => true,
+			'warn' => true,
+			'disallow' => true,
+			'blockautopromote' => true,
+			'block' => false,
+			'degroup' => false,
+			'rangeblock' => false,
+			'tag' => true,
+		),
 	),
 	'wgAbuseFilterBlockDuration' => array(
 		'default' => 'indefinite',
+		'wikiyangtzewiki' => '72 hours',
 	),
 	'wgAbuseFilterAnonBlockDuration' => array(
 		'default' => '6 months',
+		'wikiyangtzewiki' => '31 hours',
 	),
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
 		'default' => 5,
+		'wikiyangtzewiki' => 6,
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
@@ -251,6 +265,7 @@ $wgConf->settings = array(
 	// Captcha
 	'wgCaptchaClass' => array(
 		'default' => 'ReCaptchaNoCaptcha',
+		'wikiyangtzewiki' => 'QuestyCaptcha',
 	),
 	'wgReCaptchaSendRemoteIP' => array(
 		'default' => false,
@@ -976,6 +991,7 @@ $wgConf->settings = array(
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 		'extloadwiki' => true,
+		'wikiyangtzewiki' => false,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
@@ -1026,6 +1042,7 @@ $wgConf->settings = array(
 		'perpuswiki' => true,
 		'sthomaspriwiki' => true,
 		'trexwiki' => true,
+		'wikiyangtzewiki' => true,
 
 	),
 	'wmgUseEducationProgram' => array(
@@ -1055,6 +1072,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
+		'wikiyangtzewiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
@@ -1299,6 +1317,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
+		'wikiyangtzewiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1499,6 +1518,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'sthomaspriwiki' => true,
+		'wikiyangtzewiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -2101,6 +2121,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
+		'wikiyangtzewiki' => true,
 	),
 	'wmgUseWikiTextLoggedInOut' => array(
 		'default' => false,
@@ -2248,6 +2269,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
+		'wikiyangtzewiki' => array( '', 'autoconfirmed', 'sysop', 'bureaucrat', 'founder' ),
 	),
 
 	// Files
