@@ -138,11 +138,13 @@ define( 'NS_PICTUREBOARD', 1712);
 define( 'NS_PICTUREBOARD_TALK', 1713);
 define( 'NS_TINYFOREST', 1714);
 define( 'NS_TINYFOREST_TALK', 1715);
-
+define( 'NS_WNS2', 1716);
+define( 'NS_WNS2_TALK', 1717);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
 define( 'WMG_NS_MODULE_TALK', 829 );
+
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -2055,7 +2057,6 @@ $wgConf->settings = array(
 	'wmgUseWhoIsWatching' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'wrocwiki' => true,
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
@@ -2859,6 +2860,10 @@ $wgConf->settings = array(
 			NS_THE_LEGEND_OF_ZELDA => 'The_Legend_of_Zelda',
 			NS_THE_LEGEND_OF_ZELDA_TALK => 'The_Legend_of_Zelda_talk',
 		),
+		'uwswiki' => array(
+ 		 	NS_WSN2 => 'Wsn2',
+  		 	NS_WSN2_TALK => 'Wsn2_talk',
+  		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
 			NS_LCS_TALK => 'LCS_talk',
