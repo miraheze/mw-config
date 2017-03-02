@@ -1999,6 +1999,7 @@ $wgConf->settings = array(
 		'tochkiwiki' => true,
 		'torejorgwiki' => true,
 		'touhouenginewiki' => true,
+		'trablangwiki' => true,
 		'trexwiki' => true,
 		'trumpwiki' => true,
 		'tsponiewiki' => true,
