@@ -892,6 +892,7 @@ $wgConf->settings = array(
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
+		'particracywikiwiki' => true,
 		'studynotekrwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
