@@ -2863,8 +2863,8 @@ $wgConf->settings = array(
 			NS_THE_LEGEND_OF_ZELDA_TALK => 'The_Legend_of_Zelda_talk',
 		),
 		'uwswiki' => array(
- 		 	NS_WSN2 => 'Wsn2',
-  		 	NS_WSN2_TALK => 'Wsn2_talk',
+ 		 	NS_WNS2 => 'WNS2',
+  		 	NS_WNS2_TALK => 'WNS2_talk',
   		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
