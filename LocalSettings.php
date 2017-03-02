@@ -1219,6 +1219,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 		'wikidmatlandwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
