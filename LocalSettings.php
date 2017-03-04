@@ -1203,6 +1203,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
+		'testwiki' => true,
 	),
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
