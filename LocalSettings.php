@@ -1034,6 +1034,7 @@ $wgConf->settings = array(
 	'wmgUseEditSubpages' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 	),
 	'wmgUseEducationProgram' => array(
 		'default' => false,
