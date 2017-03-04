@@ -1837,6 +1837,7 @@ $wgConf->settings = array(
 		'carvingwiki' => true,
 		'casuarinawiki' => true,
 		'cbmediawiki' => true,
+		'changemyorgwiki' => true,
 		'christipediawiki' => true,
 		'cisowiki' => true,
 		'civitaswiki' => true,
