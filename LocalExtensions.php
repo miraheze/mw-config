@@ -135,6 +135,10 @@ if ( $wmgUseEditcount ) {
     wfLoadExtension( 'Editcount' );
 }
 
+if ( $wmgUseEditSubpages ) {
+	require_once( "$IP/extensions/EditSubpages/EditSubpages.php" );
+}
+
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
 }
