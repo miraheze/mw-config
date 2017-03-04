@@ -1030,7 +1030,10 @@ $wgConf->settings = array(
 		'perpuswiki' => true,
 		'sthomaspriwiki' => true,
 		'trexwiki' => true,
-
+	),
+	'wmgUseEditSubpages' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseEducationProgram' => array(
 		'default' => false,
