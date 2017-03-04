@@ -2740,6 +2740,13 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
+	// MobileFrontend 
+	'wgMFNoMobilePages' => array(
+		'default' => array(),
+		'alwikiwiki' => array(
+			'Main Page',
+		),
+	),
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
