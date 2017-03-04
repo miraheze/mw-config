@@ -557,6 +557,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+houseofettlingarfreyuwiki' => array(
+			'anon' => true,
+		),
 		'+howtoturtlewiki' => array(
 			'anon' => true,
 		),
