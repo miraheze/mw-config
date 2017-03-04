@@ -140,6 +140,8 @@ define( 'NS_TINYFOREST', 1714);
 define( 'NS_TINYFOREST_TALK', 1715);
 define( 'NS_WNS2', 1716);
 define( 'NS_WNS2_TALK', 1717);
+define( 'NS_HOWTO', 1718);
+define( 'NS_HOWTO_TALK', 1719);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2787,6 +2789,8 @@ $wgConf->settings = array(
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
+			NS_HOWTO => 'Howto',
+			NS_HOWTO_TALK => 'Howto_talk',
 		),
 		'hydrawikiwiki' => array(
 			NS_RESEARCH => "Research",
