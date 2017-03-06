@@ -632,6 +632,9 @@ $wgConf->settings = array(
 			'sysop' => true,
 			'editor' => true,
 		),
+		'+prfmukwiki' => array(
+			'anon' => true,
+		),
 		'+priyowiki' => array(
 			'anon' => true,
 		),
@@ -1105,6 +1108,7 @@ $wgConf->settings = array(
 		'nextlevelwikiwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'permanentfuturelabwiki' => true,
+		'prfmukwiki' => true,
 		'priyowiki' => true,
 		'ricwiki' => true,
 		'soshomophobiewiki' => true,
@@ -1969,6 +1973,7 @@ $wgConf->settings = array(
 		'plasticssongcontestwiki' => true,
 		'pqwiki' => true,
 		'porpwiki' => true,
+		'prfmukwiki' => true,
 		'priyowiki' => true,
 		'pso2wiki' => true,
 		'purpanrangueiluswiki' => true,
