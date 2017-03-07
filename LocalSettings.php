@@ -2331,16 +2331,7 @@ $wgConf->settings = array(
 
 	// Flow
 	'wmgFlowDefaultNamespaces' => array(
-		'default' => false,
-		'8stationwiki' => true,
-		'allthetropeswiki' => true,
-		'calexitwiki' => true,
-		'espiralwiki' => true,
-		'fbwikiwiki' => true,
-		'muckhackwiki' => true,
-		'permanentfuturelabwiki' => true,
-		'spiralwiki' => true,
-		'wishcertwiki' => true,
+		'default' => true,
 	),
 
 	// GlobalBlocking
