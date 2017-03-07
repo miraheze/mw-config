@@ -178,7 +178,7 @@ if ( $wmgUseFlow ) {
 	$wgFlowEditorList = $wmgFlowEditorList;
 }
 
-if ( $wmgFlowDefaultNamespaces ) {
+if ( $wmgFlowDefaultNamespaces && $wmgUseFlow ) {
 	$wgNamespaceContentModels = array(
 		NS_TALK => CONTENT_MODEL_FLOW_BOARD,
 		NS_USER_TALK => CONTENT_MODEL_FLOW_BOARD,
