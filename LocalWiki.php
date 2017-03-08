@@ -61,6 +61,20 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
 }
 
+if ( $wgDBname ==== 'americanopedia' ) {
+	$wgGroupPermissions['sysop']['import'] = false
+	$wgGroupPermissions['sysop']['importupload'] = false
+	$wgGroupPermissions['sysop']['managechangetags'] = false
+	$wgGroupPermissoins['sysop']['deletechangetags'] = false
+	$wgGroupPermissions['sysop']['unblockself'] = false
+	$wgGroupPermissions['sysop']['abusefilter-modify'] = false
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = false
+	$wgGroupPermissions['user']['changetags'] = false
+	$wgGroupPermissions['user']['applychangetags'] = false
+	$wgGroupPermissions['user']['editcontentmodel'] = false
+}
+
 if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
