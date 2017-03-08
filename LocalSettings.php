@@ -3415,6 +3415,30 @@ $wgConf->settings = array(
 				'createpage' => false,
 			),
 		),
+		'+americanopedia' => array(
+			'bureaucrat' => array(
+				'import' => true,
+				'importupload' => true,
+				'editcontentmodel' => true,
+				'changetags' => true,
+				'applychangetags' => true,
+				'managechangetags' => true,
+				'deletechangetags' => true,
+			),
+			'staff' => array(
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-revert' => true,
+				'unblockself' => true,
+				'userrights' => true,
+				'siteadmin' => true,
+				'renameuser' => true,
+			),
+			'sysop' => array(
+				'abusefilter-view-private' => true,
+				'abusefilter-log-private' => true,
+			),
+		),	
 		'+applebranchwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
