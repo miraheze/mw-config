@@ -4370,6 +4370,7 @@ $wgConf->settings = array(
 		'paranormalwiki' => "//$wmgUploadHostname/paranormalwiki/2/2d/PW.ico",
 		'particracywikiwiki' => "//$wmgUploadHostname/particracywikiwiki/6/64/Favicon.ico",
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/6/64/Favicon.ico",
+		'patch153wiki' => "//$wmgUploadHostname/patch153wiki/1/1f/ICMS.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
 		'plasmawiki' => "//$wmgUploadHostname/plasmawiki/e/e3/PlasmaWiki_Favicon.ico",
 		'pocketmonsterswiki' => "//$wmgUploadHostname/pocketmonsterswiki/d/d2/PMFavicon.png",
