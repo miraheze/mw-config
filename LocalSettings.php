@@ -4637,6 +4637,7 @@ $wgConf->settings = array(
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
 		'alanpediawiki' => 'Asia/Taipei',
+		'alwikiwiki' => 'America/New York',
 		'bigforestwiki' => 'Asia/Seoul',
 		'calexitwiki' => 'America/Los_Angeles',
 		'carvingwiki' => 'America/Denver',
