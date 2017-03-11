@@ -4493,6 +4493,7 @@ $wgConf->settings = array(
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
 		'evawiki' => "//$wmgUploadHostname/evawiki/e/ec/EVA-Wiki.png",
 		'exercicesdefrancaisprodfrwiki' => "//$wmgUploadHostname/exercicesdefrancaisprodfrwiki/c/c4/Logo_Exercices.jpeg",
+		'fablabesdswiki' => "//$wmgUploadHostname/fablabesdswiki/3/3c/CFDS_Logo.svg",
 		'fbwikiwiki' => "//$wmgUploadHostname/fbwikiwiki/thumb/4/4a/Fbwiki_logo.png/135px-Fbwiki_logo.png",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
 		'fifamwiki' => "//$wmgUploadHostname/fifamwiki/0/0c/Wikilogo_160px.png",
