@@ -2998,6 +2998,10 @@ $wgConf->settings = array(
 			'Predefinição' => NS_TEMPLATE,
 			'Imagem' => NS_IMAGE,
 			'画像' => NS_FILE,
+			'Kategorie' => NS_CATEGORY,
+			'Kategoriebespreking' => NS_CATEGORY_TALK,
+			'Lêer' => NS_FILE,
+			'Lêerbespreking' => NS_FILE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
