@@ -331,6 +331,10 @@ if ( $wmgUseNoTitle ) {
 	$wgRestrictDisplayTitle = false;
 }
 
+if ( $wmgUsePagedTiffHandler ) {
+	wfLoadExtension( 'PagedTiffHandler' );
+}
+
 if ( $wmgUsePageForms ) {
 	wfLoadExtension( 'PageForms' );
 }
@@ -359,6 +363,19 @@ if ( $wmgUsePopups ) {
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
 	wfLoadExtension( 'TextExtracts' );
+}
+
+if ( $wmgUseProofreadPage ) {
+	wfLoadExtension( 'ProofreadPage' );
+
+	$wgExtraNamespaces[NS_PROOFREAD_PAGE] = 'Page';
+	$wgExtraNamespaces[NS_PROOFREAD_PAGE_TALK] = 'Page_talk';
+	$wgExtraNamespaces[NS_PROOFREAD_INDEX] = 'Index';
+	$wgExtraNamespaces[NS_PROOFREAD_INDEX_TALK] = 'Index_talk';
+	$wgProofreadPageNamespaceIds = array(
+		'index' => NS_PROOFREAD_INDEX,
+		'page' => NS_PROOFREAD_PAGE
+	);
 }
 
 if ( $wmgUseProtectSite ) {

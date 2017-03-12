@@ -147,6 +147,11 @@ define( 'NS_HOWTO_TALK', 1719);
 define( 'WMG_NS_MODULE', 828 );
 define( 'WMG_NS_MODULE_TALK', 829 );
 
+// Special namespace re-defined
+define( 'NS_PROOFREAD_PAGE', 250);
+define( 'NS_PROOFREAD_PAGE_TALK', 251);
+define( 'NS_PROOFREAD_INDEX', 252);
+define( 'NS_PROOFREAD_INDEX_TALK', 253);
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -383,6 +388,7 @@ $wgConf->settings = array(
 			"$IP/extensions/PageTriage/sql/PageTriagePage.sql",
 			"$IP/extensions/PageTriage/sql/PageTriageLog.sql",
 			"$IP/extensions/Poll/archives/Poll-install-manual.sql",
+			"$IP/extensions/ProofreadPage/sql/ProofreadIndex.sql",
 			"$IP/extensions/SocialProfile/UserProfile/user_profile.sql",
 			"$IP/extensions/SocialProfile/UserProfile/user_fields_privacy.sql",
 			"$IP/extensions/SecurePoll/SecurePoll.sql",
@@ -1426,6 +1432,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 	),
+	'wmgUsePagedTiffHandler' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUsePageForms' => array(
 		'default' => false,
 		'extloadwiki' => false, // 502 errors. See T1489 for details. --Reception123
@@ -1516,6 +1526,10 @@ $wgConf->settings = array(
 		'tutorwiki' => true,
 		'universebuildwiki' => true,
 		'wikipucwiki' => true,
+	),
+	'wmgUseProofreadPage' => array(
+		'default' => false,
+		'extloadwiki' => true,
 	),
 	'wmgUseProtectSite' => array(
 		'default' => false,
