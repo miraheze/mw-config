@@ -1434,6 +1434,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePagedTiffHandler' => array(
 		'default' => false,
+		'bpwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUsePageForms' => array(
@@ -1487,6 +1488,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'690squadronwiki' => true,
 		'apneuverenigingwiki' => true,
+		'bpwiki' => true,
 		'calexitwiki' => true,
 		'constwiki' => true,
 		'extloadwiki' => true,
@@ -1529,6 +1531,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseProofreadPage' => array(
 		'default' => false,
+		'bpwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseProtectSite' => array(
