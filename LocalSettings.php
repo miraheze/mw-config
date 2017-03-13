@@ -202,6 +202,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
 		'thehushhushsagawiki' => true,
+		'tokyohoulwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
@@ -211,6 +212,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
 		'thehushhushsagawiki' => true,
+		'tokyoghoulwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgVisualEditorEnableWikitext' => array(
@@ -862,6 +864,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
+		'tokyoghoulwiki' => true,
 		'votingwiki' => true,
 		'youtubewiki' => true,
 	),
@@ -1352,6 +1355,7 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'thelonsdalebattalionwiki' => true,
+		'tokyoghoulwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
@@ -1513,6 +1517,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
+		'tokyoghoulwiki' => true,
 		'votingwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -1795,6 +1800,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'testwiki' => true,
 		'thehushhushsagawiki' => true,
+		'tokyoghoulwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
 		'urpswiki' => true,
