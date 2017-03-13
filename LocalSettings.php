@@ -2076,6 +2076,7 @@ $wgConf->settings = array(
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
 		'chocowiki' => true,
+		'zitabiteswiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
