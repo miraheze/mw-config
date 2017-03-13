@@ -2017,6 +2017,7 @@ $wgConf->settings = array(
 		'rpcharacterswiki' => true,
 		'safiriawiki' => true,
 		'savagewikiwiki' => true,
+		'scruffywiki' => true,
 		'secondcirclewiki' => true,
 		'seldirwiki' => true,
 		'setonwiki' => true,
