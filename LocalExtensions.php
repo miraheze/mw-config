@@ -273,7 +273,7 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
-if ( $wmgUseModernSKylight ) {
+if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
 
