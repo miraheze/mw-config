@@ -4493,7 +4493,6 @@ $wgConf->settings = array(
 		'arefepvawiki' => "//$wmgUploadHostname/arefepvawiki/9/92/Logoaf.png",
 		'assaultandroidcactuswiki' => "//$wmgUploadHostname/assaultandroidcactuswiki/7/7b/Cactus_icon.png",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/6c/Astromagicka_logo.png",
-		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/3/34/Logowiki.PNG",
 		'anuwiki' => "//$wmgUploadHostname/anuwiki/8/8e/Anuwikilogo.png",
 		'avionwiki' => "//$wmgUploadHostname/avionwiki/3/31/Argis_Wiki_Logo.png",
 		'ayrshirewiki' => "//$wmgUploadHostname/ayrshirewiki/b/bc/Wiki.png",
