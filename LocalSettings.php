@@ -843,6 +843,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'testauthorprotectwiki' => true,
 		'trexwiki' => true,
+		'wikihubwiki' => true,
 	),
 	'wmgUseAutomaticBoardWelcome' => array(
 		'default' => false,
@@ -948,6 +949,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'tawseelawiki' => true,
 		'wikidolphinhansenwiki' => true,
+		'wikihubwiki' => true,
 		'wikipucwiki' => true,
 	),
 	'wmgUseContactPage' => array(
@@ -1083,6 +1085,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
+		'wikihubwiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
@@ -1131,6 +1134,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'universebuildwiki' => true,
 		'votingwiki' => true,
+		'wikihubwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -1334,6 +1338,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
+		'wikihubwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
