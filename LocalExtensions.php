@@ -274,7 +274,7 @@ if ( $wmgUseMobileFrontend ) {
 }
 
 if ( $wmgUseModernSkylight ) {
-	wfLoadSkin( 'ModernSkylight' );
+	require_once( "$IP/skins/ModernSkylight/ModernSkylight.php" );
 }
 
 if ( $wmgUseMonaco ) {
