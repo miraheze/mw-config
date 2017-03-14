@@ -1288,6 +1288,10 @@ $wgConf->settings = array(
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
 	),
+	'wmgUseModernSkylight' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseMonaco' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
