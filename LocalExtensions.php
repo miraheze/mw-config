@@ -273,6 +273,10 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
+if ( $wmgUseModernSKylight ) {
+	wfLoadSkin( 'ModernSkylight' );
+}
+
 if ( $wmgUseMonaco ) {
 	require_once( "$IP/skins/Monaco/monaco.php" );
 }
