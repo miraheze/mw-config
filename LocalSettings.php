@@ -1291,6 +1291,7 @@ $wgConf->settings = array(
 	'wmgUseModernSkylight' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
 	),
 	'wmgUseMonaco' => array(
 		'default' => false,
