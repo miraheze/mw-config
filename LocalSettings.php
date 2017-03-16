@@ -2006,6 +2006,7 @@ $wgConf->settings = array(
 		'oncprojectwiki' => true,
 		'openconstitutionwiki' => true,
 		'opengovpioneerswiki' => true,
+		'ourmxfestwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'panoramawiki' => true,
 		'paodeaodawiki' => true,
