@@ -4575,6 +4575,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => "//$wmgUploadHostname/jayuwikiwiki/d/d7/Jayuwiki3.png",
 		'jokowiki' => "//$wmgUploadHostname/jokowiki/0/0d/Icon_Joko.png",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
+		'kosmopolitikawiki' => "//$wmgUploadHostname/kosmopolitikawiki/d/db/Kosmopolitika's_Rocket_1.3.png",
 		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
 		'lingnlangwiki' => "//wmgUploadHostname/lingnlangwiki/b/bc/Wiki.png",
 		'lunfengwiki' => "//$wmgUploadHostname/lunfengwiki/b/bc/Wiki.png",
