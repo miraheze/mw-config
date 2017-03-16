@@ -46,6 +46,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
             <div style="text-align: center;">
                 <h1>404 Wiki Not Found</h1>
                 <p>The wiki you wanted to visit does not exist. Please be sure you typed the URL correctly.</p>
+                <p>You can find all of our existing wikis <a href="https://meta.miraheze.org/wiki/Special:SiteMatrix">here</a>.</p>
                 <p>If you think there's a technical problem, please contact the system administrators and provide the following details:</p>
                 <p style="align:center;">
                     <table style="font-style: italic; font-size: 14px;" align="center">
