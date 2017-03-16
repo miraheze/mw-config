@@ -219,6 +219,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'thehushhushsagawiki' => true,
+		'tokyoghoulwiki' => true,
 	),
 	// Block
 	'wgAutoblockExpiry' => array(
@@ -2062,6 +2063,7 @@ $wgConf->settings = array(
 		'titaniawiki' => true,
 		'tmewiki' => true,
 		'tochkiwiki' => true,
+		'tokyoghoulwiki' => true,
 		'torejorgwiki' => true,
 		'touhouenginewiki' => true,
 		'trablangwiki' => true,
