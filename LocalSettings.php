@@ -1235,7 +1235,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
-	'wmgUseLoopsCombo' => array( // If wiki
+	'wmgUseLoopsCombo' => array( // Remember to remove from Variables if the wiki is enabled there
 		'default' => false,
 		'bigforestwiki' => true,
 		'bgowiki' => true,
