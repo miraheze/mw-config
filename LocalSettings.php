@@ -142,6 +142,8 @@ define( 'NS_WNS2', 1716);
 define( 'NS_WNS2_TALK', 1717);
 define( 'NS_HOWTO', 1718);
 define( 'NS_HOWTO_TALK', 1719);
+define( 'NS_NEWLIST', 1720);
+define( 'NS_NEWLIST', 1721);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -208,6 +210,7 @@ $wgConf->settings = array(
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
@@ -856,6 +859,7 @@ $wgConf->settings = array(
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
@@ -1159,6 +1163,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseGraph' => array(
 		'default' => false,
+		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 	),
@@ -1230,8 +1235,9 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
-	'wmgUseLoopsCombo' => array(
+	'wmgUseLoopsCombo' => array( // If wiki
 		'default' => false,
+		'bigforestwiki' => true,
 		'bgowiki' => true,
 		'eotewiki' => true,
 		'extloadwiki' => true,
@@ -2112,7 +2118,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'ayrshirewiki' => true,
 		'bgowiki' => true,
-		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'eotewiki' => true,
@@ -2837,6 +2842,8 @@ $wgConf->settings = array(
 			NS_PICTUREBOARD_TALK => 'Pictureboard_talk',
 			NS_TINYFOREST => 'Tinyforest',
 			NS_TINYFOREST_TALK => 'Tinyforest_talk',
+			NS_NEWLIST => 'Newlist',
+			NS_NEWLIST_TALK => 'Newlist_talk',
 		),
 		'calexitwiki' => array(
 			NS_DRAFT => 'Draft',
@@ -3008,6 +3015,16 @@ $wgConf->settings = array(
 			'게임' => NS_GAME,
 			'그림판' => NS_PICTUREBOARD,
 			'작은숲' => NS_TINYFOREST,
+			"토" => NS_TALK,
+			"사토" => NS_USER_TALK,
+			"숲" => NS_PROJECT,
+			"큰숲" => NS_PROJECT,
+			"숲토" => NS_PROJECT_TALK,
+			"파" => NS_FILE,
+			"틀토" => NS_TEMPLATE_TALK,
+			"분" => NS_CATEGORY,
+			"분토" => NS_CATEGORY_TALK,
+			"뉴스" => NS_NEWLIST,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
