@@ -142,8 +142,8 @@ define( 'NS_WNS2', 1716);
 define( 'NS_WNS2_TALK', 1717);
 define( 'NS_HOWTO', 1718);
 define( 'NS_HOWTO_TALK', 1719);
-define( 'NS_NEWLIST', 1720);
-define( 'NS_NEWLIST', 1721);
+define( 'NS_NEWSLINK', 1720);
+define( 'NS_NEWSLINK_TALK', 1721);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2842,8 +2842,8 @@ $wgConf->settings = array(
 			NS_PICTUREBOARD_TALK => 'Pictureboard_talk',
 			NS_TINYFOREST => 'Tinyforest',
 			NS_TINYFOREST_TALK => 'Tinyforest_talk',
-			NS_NEWLIST => 'Newlist',
-			NS_NEWLIST_TALK => 'Newlist_talk',
+			NS_NEWLIST => 'Newslink',
+			NS_NEWLIST_TALK => 'Newslink_talk',
 		),
 		'calexitwiki' => array(
 			NS_DRAFT => 'Draft',
