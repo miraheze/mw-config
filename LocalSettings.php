@@ -2842,8 +2842,8 @@ $wgConf->settings = array(
 			NS_PICTUREBOARD_TALK => 'Pictureboard_talk',
 			NS_TINYFOREST => 'Tinyforest',
 			NS_TINYFOREST_TALK => 'Tinyforest_talk',
-			NS_NEWLIST => 'Newslink',
-			NS_NEWLIST_TALK => 'Newslink_talk',
+			NS_NEWSLINK => 'Newslink',
+			NS_NEWSLINK_TALK => 'Newslink_talk',
 		),
 		'calexitwiki' => array(
 			NS_DRAFT => 'Draft',
@@ -3024,7 +3024,7 @@ $wgConf->settings = array(
 			"틀토" => NS_TEMPLATE_TALK,
 			"분" => NS_CATEGORY,
 			"분토" => NS_CATEGORY_TALK,
-			"뉴스" => NS_NEWLIST,
+			"뉴스" => NS_NEWSLINK,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
