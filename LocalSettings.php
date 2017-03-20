@@ -1024,6 +1024,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'calexitwiki' => true,
 		'extloadwiki' => true,
+		'foundationsofteachingwiki' => true,
 	),
 	'wmgUseDynamicPageList' => array(
 		'default' => false,
