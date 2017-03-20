@@ -489,6 +489,10 @@ $wgConf->settings = array(
 		'+antiguabarbudacalypsowiki' => array(
 			'anon' => true,
 		),
+		'+bitcoindebateswiki' => array(
+			'anon' => true,
+			'user' => true,
+		),
 		'+caeruleawiki' => array(
 			'anon' => true,
 		),
@@ -3567,6 +3571,13 @@ $wgConf->settings = array(
 			),
 			'voter' => array(
 				'editvoter' => true,
+			),
+		),
+		'+bitcoindebateswiki' => array(
+			'emailconfirmed' => array(
+				'read' => true,
+				'edit' => true,
+				'createpage' => true,
 			),
 		),
 		'+brynda1231wiki' => array(
