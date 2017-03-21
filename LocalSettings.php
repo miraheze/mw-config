@@ -491,6 +491,7 @@ $wgConf->settings = array(
 		),
 		'+bitcoindebateswiki' => array(
       			'anon' => true,
+			'user' => true,
     		),
 		'+caeruleawiki' => array(
 			'anon' => true,
@@ -4175,9 +4176,6 @@ $wgConf->settings = array(
 		),
 		'+bitcoindebateswiki' => array(
 			'emailconfirmed' => array(
-				"&",
-				array( APCOND_EDITCOUNT, &$wgAutoConfirmCount ),
-				array( APCOND_AGE, &$wgAutoConfirmAge ),
 				APCOND_EMAILCONFIRMED,
 			),
 		),
