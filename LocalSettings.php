@@ -4613,6 +4613,7 @@ $wgConf->settings = array(
 		'hsoodenwiki' => "//$wmgUploadHostname/hsoodenwiki/8/82/135px-wiki-logo-blank.png",
 		'humorpediawiki' => "//$wmgUploadHostname/humorpediawiki/b/bc/Wiki.png",
 		'hydrawikiwiki' => "//$wmgUploadHostname/hydrawikiwiki/7/79/Hydra-logo.png",
+		'jacksonheightswiki' => "$wmgUploadHostname/jacksonheightswiki/b/b5/Jackson_heights_logo_135_X_135.png",
 		'jayuwikiwiki' => "//$wmgUploadHostname/jayuwikiwiki/d/d7/Jayuwiki3.png",
 		'jokowiki' => "//$wmgUploadHostname/jokowiki/0/0d/Icon_Joko.png",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
