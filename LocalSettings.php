@@ -4155,7 +4155,28 @@ $wgConf->settings = array(
 			),
 		),
 	),
-
+	'wgAutopromote' => array(
+		'default' => array(
+			'autoconfirmed' => array(
+				"&",
+				array( APCOND_EDITCOUNT, &$wgAutoConfirmCount ),
+				array( APCOND_AGE, &$wgAutoConfirmAge ),
+			),
+		),
+		'+bitcoindebateswiki' => array(
+			'emailconfirmed' => array(
+				"&",
+				array( APCOND_EDITCOUNT, &$wgAutoConfirmCount ),
+				array( APCOND_AGE, &$wgAutoConfirmAge ),
+				APCOND_EMAILCONFIRMED,
+			),
+		),
+	),
+	'wgImplicitGroups' => array(
+		'default' => array( '*', 'user', 'autoconfirmed' ),
+		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
+	),
+	
 	// Piwik settings
 	'wmgPiwikSiteID' => array(
 		'default' => '1',
