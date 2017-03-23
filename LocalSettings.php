@@ -1151,6 +1151,7 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wishcertwiki' => true,
 		'yacresourceswiki' => true,
+		'yeoksawiki' => true,
 	),
 	'wmgUseForeground' => array(
 		'default' => false,
@@ -2120,6 +2121,7 @@ $wgConf->settings = array(
 		'xdjibiwiki' => true,
 		'xdwxstywiki' => true,
 		'xjtluwiki' => true,
+		'yeoksawiki' => true,
 		'ylscwiki' => true,
 		'yourosongcontestwiki' => true,
 		'youtubewiki' => true,
