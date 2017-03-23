@@ -11,7 +11,7 @@ require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 require_once( "/srv/mediawiki/config/GlobalSkins.php" );
 require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 
-# Don't allow web access.
+# Don't allow web access.f
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
@@ -924,6 +924,7 @@ $wgConf->settings = array(
 		'dtswiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
+		'modularwiki' => true,
 		'particracywikiwiki' => true,
 		'studynotekrwiki' => true,
 		'walthamstowlabourwiki' => true,
@@ -935,6 +936,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'anuwiki' => true,
 		'extloadwiki' => true,
+		'modularwiki' => true,
 		'scruffywiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
@@ -1350,6 +1352,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'lanstationwiki' => true,
 		'luckandlogicwiki' => true,
+		'modularwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
@@ -1527,6 +1530,7 @@ $wgConf->settings = array(
 		'constwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
+		'modularwiki' => true,
 		'noalatalawiki' => true,
 		'scruffywiki' => true,
 	),
@@ -1620,6 +1624,7 @@ $wgConf->settings = array(
 		'evawiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
+		'modularwiki' => true,
 		'scruffywiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
@@ -1635,6 +1640,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'idtestwiki' => true,
+		'modularwiki' => true,
 		'scruffywiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
@@ -1729,6 +1735,7 @@ $wgConf->settings = array(
 		'hendrickswiki' => true,
 		'integrawiki' => true,
 		'jayuwikiwiki' => true,
+		'modularwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
@@ -1779,6 +1786,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
+		'modularwiki' => true,
 	),
 	'wmgUseTheme' => array(
 		'default' => false,
@@ -2009,6 +2017,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'mikrodevwiki' => true,
 		'miningpromieswiki' => true,
+		'modularwiki' => true,
 		'muckhackwiki' => true,
 		'musicarchivewiki' => true,
 		'musiclibrarywiki' => true,
@@ -2167,6 +2176,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'geodatawiki' => true,
 		'jayuwikiwiki' => true,
+		'modularwiki' => true,
 		'muckhackwiki' => true,
 		'plazmaburstwiki' => true,
 		'scruffywiki' => true,
