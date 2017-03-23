@@ -1986,6 +1986,7 @@ $wgConf->settings = array(
 		'karniarutheniawiki' => true,
 		'kinderacicwiki' => true,
 		'krebswiki' => true,
+		'kstartupswiki' => true,
 		'lancemedicalwiki' => true,
 		'lbsgeswiki' => true,
 		'lclwikiwiki' => true,
