@@ -1913,6 +1913,7 @@ $wgConf->settings = array(
 		'casuarinawiki' => true,
 		'cbmediawiki' => true,
 		'changemyorgwiki' => true,
+		'chimaerawiki' => true,
 		'christipediawiki' => true,
 		'cisowiki' => true,
 		'civitaswiki' => true,
