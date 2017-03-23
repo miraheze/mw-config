@@ -11,7 +11,7 @@ require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 require_once( "/srv/mediawiki/config/GlobalSkins.php" );
 require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 
-# Don't allow web access.f
+# Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
