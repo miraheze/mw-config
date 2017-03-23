@@ -1793,6 +1793,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'enmarchewiki' => true,
 		'geirpediawiki' => true,
+		'tymyrddinwiki' => true,
 	),
 	'wmgUseTitleKey' => array(
 		'default' => false,
