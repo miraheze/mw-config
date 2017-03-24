@@ -604,6 +604,12 @@ $wgConf->settings = array(
 		'+maiasongcontestwiki' => array(
 			'anon' => true,
 		),
+		'+medergistswiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+			'editor' => true,
+		),
 		'+metatrekwiki' => array(
 			'anon' => true,
 			'user' => true,
