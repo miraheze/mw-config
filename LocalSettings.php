@@ -1234,6 +1234,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'plazmaburstwiki' => true,
 		'takethatwikiwiki' => true,
+		'tymyrddinwiki' => true,
 	),
 	'wmgUseJosa' => array(
 		'default' => false,
