@@ -862,6 +862,10 @@ $wgConf->settings = array(
 		'testauthorprotectwiki' => true,
 		'trexwiki' => true,
 	),
+	'wmgUseAutoCreateCategoryPages' => array
+		'default' => false, // DO NOT enable on wikis that have more than 500 categories
+		'extloadwiki' => true,
+	),
 	'wmgUseAutomaticBoardWelcome' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
