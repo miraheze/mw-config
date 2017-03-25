@@ -2292,6 +2292,7 @@ $wgConf->settings = array(
 		'marcoschriekwiki' => true,
 		'mikrodevwiki' => true,
 		'muckhackwiki' => true,
+		'musicwiki' => true,
 		'ndnwiki' => true,
 		'noalatalawiki' => true,
 		'ontariobrasswiki' => true,
