@@ -1594,9 +1594,15 @@ $wgConf->settings = array(
 	),
 	'wmgUseProtectSite' => array(
 		'default' => false,
+		'barbarasherwikiwiki' => true,
 		'calexitwiki' => true,
+		'financialfindswiki' => true,
 		'extloadwiki' => true,
 		'jjmodwiki' => true,
+		'robertsnoteswiki' => true,
+		'sqlserverwiki' => true,
+		'sterbalfamilyrecipeswiki' => true,
+		'sterbalssundrystudieswiki' => true,
 		'sthomaspriwiki' => true,
 	),
 	'wmgUseQuiz' => array(
