@@ -36,6 +36,10 @@ if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }
 
+if ( $wmgUseAutoCreateCategoryPages ) {
+	wfLoadExtension( 'AutoCreateCategoryPages' );
+}
+
 if ( $wmgUseAutomaticBoardWelcome ) {
 	wfLoadExtension( 'AutomaticBoardWelcome' );
 }
