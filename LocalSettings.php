@@ -1110,6 +1110,7 @@ $wgConf->settings = array(
 	'wmgUseFlaggedRevs' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'musicwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
 	),
@@ -1147,6 +1148,7 @@ $wgConf->settings = array(
 		'marcoschriekwiki' => true,
 		'moziwiki' => true,
 		'muckhackwiki' => true,
+		'musicwiki' => true,
 		'nomicwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'oyeavdelingenwiki' => true,
@@ -1304,6 +1306,7 @@ $wgConf->settings = array(
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
+		'musicwiki' => true,
 		'pgnwikiwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
