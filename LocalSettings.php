@@ -587,6 +587,9 @@ $wgConf->settings = array(
 		'+izanagiwiki' => array(
 			'anon' => true,
 		),
+		'+jjmodwiki' => array(
+			'anon' => true,
+		),
 		'+justwikiwiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -1598,7 +1601,6 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'financialfindswiki' => true,
 		'extloadwiki' => true,
-		'jjmodwiki' => true,
 		'robertsnoteswiki' => true,
 		'sqlserverwiki' => true,
 		'sterbalfamilyrecipeswiki' => true,
