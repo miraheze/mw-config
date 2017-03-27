@@ -3140,9 +3140,6 @@ $wgConf->settings = array(
 			NS_PROJECT => array(
 				'project-edit',
 			),
-			NS_PROJECT_TALK => array(
-				'project-talk-edit',
-			),
 		),
 	),
 	'+wgNamespacesToBeSearchedDefault' => array(
@@ -4028,7 +4025,6 @@ $wgConf->settings = array(
 		'+yeoksawiki' => array(
 			'sysop' => array(
 				'project-edit' => true,
-				'project-edit-talk' => true,
 			),
 		),
 	),
