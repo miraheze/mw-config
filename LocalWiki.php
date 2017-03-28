@@ -98,6 +98,10 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['reupload-shared'] = false;
 }
 
+if ( $wgDBname === 'metawiki' ) {
+	$wgGroupPermissions['user']['torunblocked'] = false;
+}
+
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
