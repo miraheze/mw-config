@@ -1,3 +1,4 @@
+
 <?php
 /*
 LocalSettings.php for Miraheze.
@@ -4846,6 +4847,7 @@ $wgConf->settings = array(
 		'carvingwiki' => 'America/Denver',
 		'casuarinawiki' => 'Asia/Shanghai',
 		'catboxwiki' => 'America/Detroit',
+		'doinwiki' => 'Asia/Seoul',
 		'doraemonpediawiki' => 'Asia/Taipei',
 		'fbwikiwiki' => 'Asia/Seoul',
 		'libertywiki' => 'Asia/Seoul',
