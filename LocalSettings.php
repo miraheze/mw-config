@@ -4811,6 +4811,7 @@ $wgConf->settings = array(
 		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
 		'valentinaprojectwiki' => "//$wmgUploadHostname/valentinaprojectwiki/2/25/Valentina_logo_v1.png",
+		'velcomwiki' => "//$wmgUploadHostname/velcomwiki/0/0f/Velcom_logo.png",
 		'vgalimentiwiki' => "//$wmgUploadHostname/vgalimentiwiki/f/f9/Vgalimenti-logo.png",
 		'wabcwiki' => "//$wmgUploadHostname/wabcwiki/2/25/Logowabc.png",
 		'wdbwiki' => "//$wmgUploadHostname/wdbwiki/2/26/Dancing-135px.png",
