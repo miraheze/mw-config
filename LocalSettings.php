@@ -1,4 +1,3 @@
-
 <?php
 /*
 LocalSettings.php for Miraheze.
@@ -1913,6 +1912,7 @@ $wgConf->settings = array(
 		'ageofimperialismwiki' => true,
 		'ageofimperialistswiki' => true,
 		'ageloniawiki' => true,
+		'aidorupediawiki' => true,
 		'airwiki' => true,
 		'aktposwiki' => true,
 		'alanpediawiki' => true,
@@ -4486,6 +4486,7 @@ $wgConf->settings = array(
 		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/8/84/Rainbowstar.png",
 		'allbanks2wiki' => "//$wmgUploadHostname/allbanks2wiki/7/7f/AllBanks2Logo.png",
 		'aenasanwiki' => "//$wmgUploadHostname/aenasanwiki/e/e6/AEfav.ico",
+		'aidorupediawiki' => "//$wmgUploadHostname/aidorupediawiki/3/33/Idolsonawikiico.png",
 		'alwikiwiki' => "//$wmgUploadHostname/alwikiwiki/5/59/ALWikiFavicon.ico",
 		'amaninfowiki' => "//$wmgUploadHostname/amaninfowiki/6/64/Favicon.ico",
 		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/7/7f/Favicon-20170311123705233.ico",
