@@ -792,6 +792,7 @@ $wgConf->settings = array(
 		'wimawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'kstartupswiki' => true,
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
@@ -800,6 +801,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'partupwiki' => true,
 		'wisdomwikiwiki' => true,
+		'kstartupswiki' => true,
 	),
 	'wmgUseAdminLinks' => array(
 		'default' => false,
