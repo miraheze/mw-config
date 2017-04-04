@@ -3815,6 +3815,21 @@ $wgConf->settings = array(
 			'autoconfirmed' => array(
 				'createtalk' => true,
 			),
+			'bot' => array(
+				'createpage' => true,
+				'createtalk' => true,
+				'edit' => true,
+			),
+			'bureaucrat' => array(
+				'createpage' => true,
+				'createtalk' => true,
+				'edit' => true,
+			),
+			'sysop' => array(
+				'createpage' => true,
+				'createtalk' => true,
+				'edit' => true,
+			),
 			'user' => array(
 				'createtalk' => true,
 			),
