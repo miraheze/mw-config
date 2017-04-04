@@ -98,6 +98,17 @@ if ( $wgDBname === 'jayuwikiwiki' ) {
 	$wgGroupPermissions['user']['reupload-shared'] = false;
 }
 
+if ( $wgDBname === 'kstartupswiki' ) {
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createtalk'] = false;
+	$wgGroupPermissions['autoconfirmed']['createpage'] = false;
+	$wgGroupPermissions['autoconfirmed']['edit'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+
+}
+
 if ( $wgDBname === 'metawiki' ) {
 	$wgGroupPermissions['user']['torunblocked'] = false;
 }
