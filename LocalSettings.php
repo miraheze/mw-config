@@ -4814,6 +4814,7 @@ $wgConf->settings = array(
 		'sorevivalwiki' => "//$wmgUploadHostname/sorevivalwiki/2/20/System_Overload_Revival_Logo.png",
 		'sqlserverwiki' => "//$wmgUploadHostname/sqlserverwiki/d/d4/Logo.jpg",
 		'speleowiki' => "//$wmgUploadHostname/speleowiki/c/c3/SpeleoWikiV1.2_135x135.png",
+		'spidersilkwiki' => "//$wmgUploadHostname/spidersilkwiki/2/25/Spidersilk-logo.jpg",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'starsetonlinewiki' => "//$wmgUploadHostname/starsetonlinewiki/8/89/Wiki_logo.jpg",
 		'stellachronicawiki' => "//$wmgUploadHostname/stellachronicawiki/d/d0/SCLogo2.png",
