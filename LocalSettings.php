@@ -4503,7 +4503,6 @@ $wgConf->settings = array(
 		'dtswiki' => 'metrolook',
 		'godaigowiki' => 'monobook',
 		'ganeshawiki' => 'monobook',
-		'medergistswiki' => 'modern',
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
