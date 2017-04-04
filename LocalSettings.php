@@ -3811,6 +3811,23 @@ $wgConf->settings = array(
 				'rollback' => true,
 			),
 		),
+		'+kstartupswiki' => array(
+			'*' => array(
+				'createpage' => false,
+				'edit' => false,
+				'createtalk' => false,
+			),
+			'autoconfirmed' => array(
+				'createpage' => false,
+				'edit' => false,
+				'createtalk' => true,
+			),
+			'user' => array(
+				'createpage' => false,
+				'edit' => false,
+				'createtalk' => true,
+			),
+		),
 		'+metawiki' => array(
 			'autoconfirmed' => array(
 				'move' => true,
