@@ -3812,19 +3812,10 @@ $wgConf->settings = array(
 			),
 		),
 		'+kstartupswiki' => array(
-			'*' => array(
-				'createpage' => false,
-				'edit' => false,
-				'createtalk' => false,
-			),
 			'autoconfirmed' => array(
-				'createpage' => false,
-				'edit' => false,
 				'createtalk' => true,
 			),
 			'user' => array(
-				'createpage' => false,
-				'edit' => false,
 				'createtalk' => true,
 			),
 		),
