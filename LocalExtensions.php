@@ -339,10 +339,6 @@ if ( $wmgUseNoTitle ) {
 	$wgRestrictDisplayTitle = false;
 }
 
-if ( $wmgUseOpenGraphMeta ) {
-	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
-}
-
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 }
