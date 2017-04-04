@@ -1483,6 +1483,10 @@ $wgConf->settings = array(
 		'urho3dwiki' => true,
 		'wikipucwiki' => true,
 	),
+	'wmgUseOpenGraphMeta' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseOATHAuth' => array(
 		'default' => false,
 		'extloadwiki' => true,
