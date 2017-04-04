@@ -3813,7 +3813,9 @@ $wgConf->settings = array(
 		),
 		'+kstartupswiki' => array(
 			'autoconfirmed' => array(
+				'createpage' => true,
 				'createtalk' => true,
+				'edit' => true,
 			),
 			'bot' => array(
 				'createpage' => true,
