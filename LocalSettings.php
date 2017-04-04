@@ -3835,7 +3835,7 @@ $wgConf->settings = array(
 			),
 			'user' => array(
 				'createtalk' => true,
-				'flow-create-board' => true,
+				'edit' => true,
 			),
 		),
 		'+metawiki' => array(
