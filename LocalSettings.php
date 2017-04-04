@@ -1141,6 +1141,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ezdmfwiki' => true,
 		'fbwikiwiki' => true,
+		'coldbloodedwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'ircwiki' => true,
 		'korachwiki' => true,
@@ -1960,6 +1961,7 @@ $wgConf->settings = array(
 		'clicordiwiki' => true,
 		'cnvwiki' => true,
 		'cogitopediewiki' => true,
+		'coldbloodedwiki' => true,
 		'conquestofparadiserpwiki' => true,
 		'corydoctorowwiki' => true,
 		'cssandjsschoolboardwiki' => true,
@@ -4521,6 +4523,7 @@ $wgConf->settings = array(
 		'claneuphoriawiki' => "//$wmgUploadHostname/claneuphoriawiki/6/64/Favicon.ico",
 		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/8/8b/CW_favicon.ico",
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/6/64/Favicon.ico",
+		'coldbloodedwiki' => "//$wmgUploadHostname/coldbloodedwiki/6/64/Favicon.ico",
 		'compilerdevwiki' => "//$wmgUploadHostname/compilerdevwiki/c/c9/Logo.png",
 		'cosiadventurewiki' => "//$wmgUploadHostname/cosiadventurewiki/3/3b/Wiki_logo.png",
 		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
@@ -4664,6 +4667,7 @@ $wgConf->settings = array(
 		'chromiumrosewiki' => "//$wmgUploadHostname/chromiumrosewiki/b/ba/ChromiumRose135x135.png",
 		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/3/39/Cw_logo.png",
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/b/bc/Wiki.png",
+		'coldbloodedwiki' => "//$wmgUploadHostname/coldbloodedwiki/3/35/WikiLogo.png",
 		'collabvmwiki' => "//$wmgUploadHostname/collabvmwiki/c/c9/Logo.png",
 		'compilerdevwiki' => "//$wmgUploadHostname/compilerdevwiki/c/c9/Logo.png",
 		'conuconwiki' => "//phabricator.miraheze.org/file/data/o6plmtjp4afd6vvxcx2m/PHID-FILE-fzbuutpmykupn5jz256h/CONUCON_small_face.png",
@@ -4861,6 +4865,7 @@ $wgConf->settings = array(
 		'carvingwiki' => 'America/Denver',
 		'casuarinawiki' => 'Asia/Shanghai',
 		'catboxwiki' => 'America/Detroit',
+		'coldbloodedwiki' => 'Asia/Seoul',
 		'doinwiki' => 'Asia/Seoul',
 		'doraemonpediawiki' => 'Asia/Taipei',
 		'fbwikiwiki' => 'Asia/Seoul',
@@ -4959,6 +4964,7 @@ $wgConf->settings = array(
 			'www\.zenbuddhism\.info',
 			'espiral\.org',
 			'spiral\.wiki',
+			'wiki\.coldblooded\.ga',
 		),
 	),
 
@@ -4982,6 +4988,9 @@ $wgConf->settings = array(
 		 	NS_OPINION => true,
 		 	NS_TIMELINE => true,
  			NS_PORTAL => true,
+		 ),
+		'+coldbloodedwiki' => array(
+		 	NS_PROJECT => true,
 		 ),
 		 '+espiralwiki' => array(
 		 	NS_PROJECT => true,
@@ -5007,6 +5016,7 @@ $wgConf->settings = array(
 	),
 	'wgVisualEditorUseSingleEditTab' => array(
 		'default' => false,
+		'coldbloodedwiki' => true,
 		'espiralwiki' => true,
 		'fbwikiwiki' => true,
 		'spiralwiki' => true,
@@ -5014,6 +5024,7 @@ $wgConf->settings = array(
 	'wmgFlowEditorList' => array(
 		'default' => array('wikitext', 'visualeditor'),
 		'calexitwiki' => array('visualeditor'),
+		'coldbloodedwiki' => array('visualeditor'),
 		'espiralwiki' => array('visualeditor'),
 		'fbwikiwiki' => array('visualeditor'),
 		'spiralwiki' => array('visualeditor'),
