@@ -103,8 +103,6 @@ if ( $wgDBname === 'kstartupswiki' ) {
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
-	$wgGroupPermissions['user']['edit'] = false;
-
 }
 
 if ( $wgDBname === 'metawiki' ) {
