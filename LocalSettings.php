@@ -4109,6 +4109,11 @@ $wgConf->settings = array(
 				'judge',
 				'voter',
 				'bureaucrat',
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+				),	
 			),
 			'sysop' => array(
 				'voter',
