@@ -2546,6 +2546,7 @@ $wgConf->settings = array(
 		'default' => '',
 		'developmentwiki' => 'Official:Copyrights',
 		'diavwiki' => 'Project:Copyrights',
+		'kstartupswiki' => 'Project:저작권',
 		'sourcewiki' => 'Project:Copyrights',
 		'wisdomwikiwiki' => 'Copyleft',
 	),
@@ -2558,7 +2559,7 @@ $wgConf->settings = array(
 		'humorpediawiki' => 'Creative Commons Attribution-ShareAlike 4.0 International License',
 		'japanjayuwikiwiki' => 'Creative Commons Attribution Share Alike',
 		'jayuvandalwiki' => 'Creative Commons Attribution Share Alike',
-		'kstartupswiki' => 'Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International',
+		'kstartupswiki' => '크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스',
 		'libertywikiwiki' => 'Attribution-NonCommercial-ShareAlike 3.0 Unported',
 		'metatrekwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'oyeavdelingenwiki' => 'All Rights Reserved',
@@ -3834,6 +3835,7 @@ $wgConf->settings = array(
 			),
 			'user' => array(
 				'createtalk' => true,
+				'flow-create-board' => true,
 			),
 		),
 		'+metawiki' => array(
