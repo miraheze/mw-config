@@ -4770,6 +4770,7 @@ $wgConf->settings = array(
 		'modularwiki' => "//$wmgUploadHostname/modularwiki/d/dc/Modular_synth_wiki_logo.png",
 		'moralecwiki' => "//$wmgUploadHostname/moralecwiki/e/e8/Moralec-pluto.png",
 		'musicarchivewiki' => "//$wmgUploadHostname/musicarchivewiki/d/d4/Logo.jpg",
+		'mynimowiki' => "//$wmgUploadHostname/mynimowiki/thumb/7/77/Mynimo_Wiki.png/120px-Mynimo_Wiki.png",
 		'natenwiki' => "//$wmgUploadHostname/natenwiki/c/c9/Logo.png",
 		'newarkmanorwiki' => "//$wmgUploadHostname/newarkmanorwiki/8/89/Wiki_logo.jpg",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/a/a0/Wiki-logo.png",
