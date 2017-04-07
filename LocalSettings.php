@@ -2220,6 +2220,7 @@ $wgConf->settings = array(
 		'scruffywiki' => true,
 		'soshomophobiewiki' => true,
 		'takethatwikiwiki' => true,
+		'thecscwiki' => true,
 		'wikipucwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
