@@ -630,6 +630,9 @@ $wgConf->settings = array(
 		'+miraiwiki' => array(
 			'anon' => true,
 		),
+		'+modularwiki' => array(
+			'anon' => true,
+		),
 		'+noalatalawiki' => array(
 			'anon' => true,
 		),
