@@ -2091,6 +2091,7 @@ $wgConf->settings = array(
 		'pgnwikiwiki' => true,
 		'plasticssongcontestwiki' => true,
 		'pqwiki' => true,
+		'politicswiki' => true,
 		'porpwiki' => true,
 		'prfmukwiki' => true,
 		'priyowiki' => true,
