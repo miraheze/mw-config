@@ -2151,6 +2151,7 @@ $wgConf->settings = array(
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
 		'vgalimentiwiki' => true,
+		'victorianrpwiki' => true,
 		'videogameswiki' => true,
 		'votingwiki' => true,
 		'wabcwiki' => true,
