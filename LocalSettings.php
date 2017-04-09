@@ -2162,6 +2162,7 @@ $wgConf->settings = array(
 		'wikidolphinhansenwiki' => true,
 		'wikihoyowiki' => true,
 		'wikikaisagawiki' => true,
+		'wikinicuswiki' => true,
 		'wikipucwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
