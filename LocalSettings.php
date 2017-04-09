@@ -4855,6 +4855,7 @@ $wgConf->settings = array(
 		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/d/d4/Logo_titrepro.svg",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
 		'toftcricketclubwiki' => "//$wmgUploadHostname/toftcricketclubwiki/2/23/ToftLogo.png",
+		'trainwiki' => "//$wmgUploadHostname/trainwiki/c/ce/Cdwk.png",
 		'trexwiki' => "//$wmgUploadHostname/trexwiki/4/49/Wikit.png",
 		'trumpwiki' => "//$wmgUploadHostname/trumpwiki/c/c3/Magnifying-logo.jpg",
 		'tymyrddinwiki' => "//$wmgUploadHostname/tymyrddinwiki/c/c5/Ty-myrddin-logo-transparant.png",
