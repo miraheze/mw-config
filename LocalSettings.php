@@ -1950,6 +1950,7 @@ $wgConf->settings = array(
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
 		'bigforestwiki' => true,
+		'biskwiki' => true,
 		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
