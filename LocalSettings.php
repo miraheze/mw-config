@@ -1991,6 +1991,7 @@ $wgConf->settings = array(
 		'drones4allwiki' => true,
 		'dtswiki' => true,
 		'dwplivewiki' => true,
+		'easterwiki' => true,
 		'easywikiwiki' => true,
 		'ernaehrungsrathhwiki' => true,
 		'espiralwiki' => true,
