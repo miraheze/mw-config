@@ -2007,6 +2007,7 @@ $wgConf->settings = array(
 		'fishpercolatorwiki' => true,
 		'fmbvwiki' => true,
 		'foodsharinghamburgwiki' => true,
+		'freestateofjoneswiki' => true,
 		'frontdeskswiki' => true,
 		'fsxworldspainwiki' => true,
 		'fusewiki' => true,
