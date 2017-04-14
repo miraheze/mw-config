@@ -478,6 +478,9 @@ $wgConf->settings = array(
 		'+8stationwiki' => array(
 			'anon' => true,
 		),
+		'+adiaprojectwiki' => array(
+			'anon' => true,
+		),
 		'+adnovumwiki' => array(
 			'anon' => true,
 		),
