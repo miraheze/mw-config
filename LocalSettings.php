@@ -2078,6 +2078,7 @@ $wgConf->settings = array(
 		'mylogicwiki' => true,
 		'mynyddwiki' => true,
 		'ndnwiki' => true,
+		'neuromotorwiki' => true,
 		'neuronpediawiki' => true,
 		'newarkmanorwiki' => true,
 		'newcolumbiawiki' => true,
