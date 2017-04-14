@@ -1840,6 +1840,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'arquivosdoprincipadowiki' => true,
 		'bigforestwiki' => true,
+		'corydoctorowwiki' => true,
 		'extloadwiki' => true,
 		'enmarchewiki' => true,
 		'geirpediawiki' => true,
