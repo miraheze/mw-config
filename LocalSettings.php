@@ -144,6 +144,8 @@ define( 'NS_HOWTO', 1718);
 define( 'NS_HOWTO_TALK', 1719);
 define( 'NS_NEWSLINK', 1720);
 define( 'NS_NEWSLINK_TALK', 1721);
+define( 'NS_CIVILIZATION_IV', 1722);
+define( 'NS_CIVILIZATION_IV_TALK', 1723);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3053,6 +3055,8 @@ $wgConf->settings = array(
 			NS_SUPER_MARIO_ADVANCE_4_TALK => 'Super_Mario_Advance_4_talk',
 			NS_THE_LEGEND_OF_ZELDA => 'The_Legend_of_Zelda',
 			NS_THE_LEGEND_OF_ZELDA_TALK => 'The_Legend_of_Zelda_talk',
+			NS_CIVILIZATION_IV => 'Civilization_IV',
+			NS_CIVILIZATION_IV_TALK => 'Civilization_IV_talk',
 		),
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
@@ -3087,7 +3091,7 @@ $wgConf->settings = array(
 		'+catboxwiki' => array( NS_COMIC ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+safiriawiki' => array( NS_HOENN ),
-		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA ),
+		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA, NS_CIVILIZATION_IV ),
 	),
 	'wgMetaNamespace' => array(
 		'default' => null,
