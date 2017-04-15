@@ -1021,6 +1021,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCrossReference' => array(
 		'default' => false,
+		'chocowiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseCSS' => array(
