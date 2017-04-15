@@ -1965,6 +1965,7 @@ $wgConf->settings = array(
 		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
 		'braindumpwiki' => true,
+		'breedersofthenephelymwiki' => true,
 		'brynda1231wiki' => true,
 		'bttestwiki' => true,
 		'byblopediawiki' => true,
