@@ -59,6 +59,7 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgNamespaceContentModels[NS_TROPEWORKSHOP_TALK] = CONTENT_MODEL_FLOW_BOARD;
 	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
+	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
 }
 
 if ( $wgDBname === 'brynda1231wiki' ) {
