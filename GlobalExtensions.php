@@ -12,7 +12,6 @@ wfLoadExtensions( [
 	'CiteThisPage',
 	'CodeEditor',
 	'ConfirmEdit',
-	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'Disambiguator',
 	'Gadgets',
 	'GlobalBlocking',

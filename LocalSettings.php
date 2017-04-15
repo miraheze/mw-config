@@ -178,17 +178,31 @@ $wgConf->settings = array(
 			'rangeblock' => false,
 			'tag' => true,
 		),
+		'wikihubwiki' => array(
+			'flag' => true,
+			'throttle' => false,
+			'warn' => true,
+			'disallow' => true,
+			'blockautopromote' => false,
+			'block' => true,
+			'degroup' => true,
+			'rangeblock' => true,
+			'tag' => true,
+		),
 	),
 	'wgAbuseFilterBlockDuration' => array(
 		'default' => 'indefinite',
+		'wikihubwiki' => '31 hours', //Indefinite blocks should not be placed by an automated system
 	),
 	'wgAbuseFilterAnonBlockDuration' => array(
 		'default' => '6 months',
+		'wikihubwiki' => '31 hours', //Six months is too long for an automated system block
 	),
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
 		'default' => 5,
+		'wikihubwiki' => 6, //Match Wikimedia Foundation
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
@@ -268,6 +282,7 @@ $wgConf->settings = array(
 	// Captcha
 	'wgCaptchaClass' => array(
 		'default' => 'ReCaptchaNoCaptcha',
+		'wikihub' => 'QuestyCaptcha', //Easier to use and more interface-friendly
 	),
 	'wgReCaptchaSendRemoteIP' => array(
 		'default' => false,
@@ -875,6 +890,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'testauthorprotectwiki' => true,
 		'trexwiki' => true,
+		'wikihubwiki' => true,
 	),
 	'wmgUseAutoCreateCategoryPages' => array(
 		'default' => false, // DO NOT enable on wikis that have more than 500 categories
@@ -989,6 +1005,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'tawseelawiki' => true,
 		'wikidolphinhansenwiki' => true,
+		'wikihubwiki' => true,
 		'wikipucwiki' => true,
 	),
 	'wmgUseContactPage' => array(
@@ -1133,6 +1150,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
+		'wikihubwiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
@@ -1184,6 +1202,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'universebuildwiki' => true,
 		'votingwiki' => true,
+		'wikihubwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -1401,6 +1420,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
+		'wikihubwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
