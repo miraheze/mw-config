@@ -102,6 +102,10 @@ if ( $wmgUseCreateWiki ) {
 	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
 }
 
+if ( $wmgUseCrossReference ) {
+	require_once( "$IP/extensions/CrossReference/CrossReference.php" );
+}
+
 if ( $wmgUseCSS ) {
 	require_once( "$IP/extensions/CSS/CSS.php" );
 }

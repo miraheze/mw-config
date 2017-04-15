@@ -1019,6 +1019,10 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'extloadwiki' => true,
 	),
+	'wmgUseCrossReference' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseCSS' => array(
 		'default' => false,
 		'690squadronwiki' => true,
