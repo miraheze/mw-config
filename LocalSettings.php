@@ -3569,6 +3569,10 @@ $wgConf->settings = array(
 				'autoreview',
 				'chatmod',
 				'blockedfromchat',
+				'edit-filter-manager',
+				'page-mover',
+				'importer',
+				'uploader',
 				
 			),
 		),	
@@ -4146,7 +4150,7 @@ $wgConf->settings = array(
 				'hideuser' => true,
 				'suppressrevision' => true,
 				'suppressionlog' => true,
-				'abusefilter-global' => true,
+				'abusefilter-modify-global' => true,
 			),
 			'edit-filter-manager' => array(
 				'applychangetags' => true,
@@ -4380,6 +4384,10 @@ $wgConf->settings = array(
 				'editor',
 				'chatmod',
 				'blockedfromchat',
+				'edit-filter-manager',
+				'page-mover',
+				'importer',
+				'uploader',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
