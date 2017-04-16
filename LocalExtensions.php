@@ -55,7 +55,7 @@ if ( $wmgUseBlogPage ) {
 }
 
 if ( $wmgUseBootstrapMediawiki ) {
-	require_once( "$IP/skins/BootstrapMediawiki/BootstrapMediawiki.php" );
+	require_once( "$IP/skins/BootstrapMediawiki/bootstrap-mediawiki.php" );
 }
 
 if ( $wmgUseMSCalendar ) {
