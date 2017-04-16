@@ -144,6 +144,26 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
+if ( $wgDBname == 'wikicanadawiki' ) {
+	$wgGroupPermissions['sysop']['managechangetags'] = false;
+	$wgGroupPermissions['sysop']['deletechangetags'] = false;
+	$wgGroupPermissions['sysop']['importupload'] = false;
+	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['sysop']['markbotedits'] = false;
+	$wgGroupPermissions['sysop']['mergehistory'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['user']['changetags'] = false;
+	$wgGroupPermissions['user']['applychangetags'] = false;
+	$wgGroupPermissions['user']['editcontentmodel'] = false;
+	$wgAddGroups['sysop'] = array();
+	$wgRemoveGroups['sysop'] = array();
+	$wgAddGroups['bureaucrat'] = array();
+	$wgRemoveGroups['bureaucrat'] = array();
+	unset( $wgGroupPermissions['checkuser'] );
+	unset( $wgGroupPermissions['oversight'] );
+}	
+
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
