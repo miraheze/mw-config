@@ -1521,7 +1521,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePageForms' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => false, // 502 errors. See T1489 for details. --Reception123
 	),
 	'wmgUsePageNotice' => array(
 		'default' => false,
