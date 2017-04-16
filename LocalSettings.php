@@ -4143,6 +4143,10 @@ $wgConf->settings = array(
 				'suppressrevision' => true,
 				'suppressionlog' => true,
 			),
+			'founder' => array(
+				'read' => true,
+				'edit' => true,
+			),
 		),	
 		'+wikipucwiki' => array(
 			'*' => array(
