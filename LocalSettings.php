@@ -4146,14 +4146,14 @@ $wgConf->settings = array(
 				'suppressionlog' => true,
 				'abusefilter-global' => true,
 			),
-			'edit filter manager' => array(
+			'edit-filter-manager' => array(
 				'applychangetags' => true,
 				'changetags' => true,
 				'abusefilter-modify' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
 			),
-			'page mover' => array(
+			'page-mover' => array(
 				'move' => true,
 				'move-categorypages' => true,
 				'move-subpages' => true,
