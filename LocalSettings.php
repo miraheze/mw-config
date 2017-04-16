@@ -3563,6 +3563,12 @@ $wgConf->settings = array(
 				'sysop',
 				'bureaucrat',
 				'founder',
+				'reviewer',
+				'editor',
+				'autoreview',
+				'chatmod',
+				'blockedfromchat',
+				
 			),
 		),	
 		'+wikidolphinhansenwiki' => array(
@@ -4348,6 +4354,11 @@ $wgConf->settings = array(
 				'sysop',
 				'bureaucrat',
 				'founder',
+				'reviewer',
+				'autoreview',
+				'editor',
+				'chatmod',
+				'blockedfromchat',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
