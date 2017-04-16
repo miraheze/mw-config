@@ -1053,7 +1053,7 @@ $wgConf->settings = array(
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 		'extloadwiki' => true,
-		'wikicanadawiki' => false;
+		'wikicanadawiki' => false,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
