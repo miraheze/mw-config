@@ -178,17 +178,31 @@ $wgConf->settings = array(
 			'rangeblock' => false,
 			'tag' => true,
 		),
+		'wikicanadawiki' => array(
+			'flag' => true,
+			'throttle' => true,
+			'warn' => true,
+			'disallow' = true,
+			'blockautopromote' => true,
+			'block' => true,
+			'rangeblock' => true,
+			'degroup' => true,
+			'tag' => true,
+		),
 	),
 	'wgAbuseFilterBlockDuration' => array(
 		'default' => 'indefinite',
+		'wikicanadawiki' => '1 week',
 	),
 	'wgAbuseFilterAnonBlockDuration' => array(
 		'default' => '6 months',
+		'wikicanadawiki' => '72 hours',
 	),
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
 		'default' => 5,
+		'wikicanadawiki' => 6,
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
