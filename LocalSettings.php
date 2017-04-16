@@ -2175,6 +2175,7 @@ $wgConf->settings = array(
 		'trumpwiki' => true,
 		'tsponiewiki' => true,
 		'tymyrddinwiki' => true,
+		'uoluwiki' => true,
 		'unikumwiki' => true,
 		'universebuildwiki' => true,
 		'urho3dwiki' => true,
