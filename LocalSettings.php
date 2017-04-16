@@ -3547,6 +3547,17 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+wikicanadawiki' => array(
+			'founder' => array(
+				'bot',
+				'autopatrolled',
+				'rollbacker',
+				'confirmed',
+				'sysop',
+				'bureaucrat',
+				'founder',
+			),
+		),	
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4100,6 +4111,38 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+wikicanadawiki' => array(
+			'bureaucrat' => array(
+				'managechangetags' => true,
+				'deletechangetags' => true,
+				'importupload' => true,
+				'import' => true,
+				'markbotedits' => true,
+				'mergehistory' => true,
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'changetags' => true,
+				'applychangetags' => true,
+				'editcontentmodel' => true,
+			),
+			'sysadmin' => array(
+				'userrights' => true,
+				'centralauth-admin' => true,
+				'centralauth-lock' => true,
+				'centralauth-rename' => true,
+				'centralauth-oversight' => true,
+				'centralauth-unmerge' => true,
+				'globalgrouppermissions' => true,
+				'globalgroupmembership' => true,
+				'renameuser' => true,
+				'siteadmin' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'hideuser' => true,
+				'suppressrevision' => true,
+				'suppressionlog' => true,
+			),
+		),	
 		'+wikipucwiki' => array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
@@ -4284,6 +4327,17 @@ $wgConf->settings = array(
 			),
 			'editor-approver' => array(
 				'editor',
+			),
+		),
+		'+wikicanadawiki' => array(
+			'founder' => array(
+				'bot',
+				'autopatrolled',
+				'rollbacker',
+				'confirmed',
+				'sysop',
+				'bureaucrat',
+				'founder',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
