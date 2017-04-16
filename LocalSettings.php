@@ -2403,6 +2403,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
+		'wikicanadawiki' => true,
 	),
 	'wmgFlaggedRevsTags' => array(
 		'default' => array(
