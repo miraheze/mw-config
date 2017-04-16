@@ -1053,6 +1053,7 @@ $wgConf->settings = array(
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 		'extloadwiki' => true,
+		'wikicanadawiki' => false;
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
@@ -1138,6 +1139,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
@@ -1333,6 +1335,7 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
@@ -1406,6 +1409,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
+		'wikicanadawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1632,6 +1636,7 @@ $wgConf->settings = array(
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
 		'sthomaspriwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
