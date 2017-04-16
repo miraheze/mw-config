@@ -4125,7 +4125,7 @@ $wgConf->settings = array(
 				'applychangetags' => true,
 				'editcontentmodel' => true,
 			),
-			'sysadmin' => array(
+			'steward' => array(
 				'userrights' => true,
 				'centralauth-admin' => true,
 				'centralauth-lock' => true,
