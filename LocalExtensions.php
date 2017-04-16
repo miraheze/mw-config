@@ -54,6 +54,10 @@ if ( $wmgUseBlogPage ) {
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
+if ( $wmgUseBootstrapMediawiki ) {
+	require_once( "$IP/skins/BootstrapMediawiki/BootstrapMediawiki.php" );
+}
+
 if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }

@@ -916,6 +916,10 @@ $wgConf->settings = array(
 		'robloxscripterswiki' => true,
 		'wikidolphinhansenwiki' => true,
 	),
+	'wmgUseBootstrapMediawiki' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseMSCalendar' => array(
 		'default' => false,
 		'5awiki' => true,
