@@ -153,14 +153,21 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['sysop']['mergehistory'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
 	$wgGroupPermissions['user']['changetags'] = false;
 	$wgGroupPermissions['user']['applychangetags'] = false;
 	$wgGroupPermissions['user']['editcontentmodel'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['user']['reupload'] = false;
+	$wgGroupPermissions['user']['reupload-shared'] = false;
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgAddGroups['sysop'] = array();
 	$wgRemoveGroups['sysop'] = array();
 	$wgAddGroups['bureaucrat'] = array();
 	$wgRemoveGroups['bureaucrat'] = array();
-	unset( $wgGroupPermissions['checkuser'] );
 	unset( $wgGroupPermissions['oversight'] );
 }	
 
