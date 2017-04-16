@@ -162,7 +162,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgRemoveGroups['bureaucrat'] = array();
 	unset( $wgGroupPermissions['checkuser'] );
 	unset( $wgGroupPermissions['oversight'] );
-	unset( $wgGroupPermissions['steward'] );
 }	
 
 if ( $wgDBname == 'metawiki' ) {
