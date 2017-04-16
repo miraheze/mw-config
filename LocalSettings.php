@@ -4182,6 +4182,7 @@ $wgConf->settings = array(
 			'founder' => array(
 				'read' => true,
 				'edit' => true,
+				'globalblock-exempt' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
