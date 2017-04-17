@@ -179,15 +179,7 @@ $wgConf->settings = array(
 			'tag' => true,
 		),
 		'wikicanadawiki' => array(
-			'flag' => true,
-			'throttle' => true,
-			'warn' => true,
-			'disallow' => true,
-			'blockautopromote' => true,
-			'block' => true,
 			'rangeblock' => true,
-			'degroup' => true,
-			'tag' => true,
 		),
 	),
 	'wgAbuseFilterBlockDuration' => array(
