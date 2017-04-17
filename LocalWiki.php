@@ -154,6 +154,13 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
+	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
+	$wgGroupPermissions['sysop']['override-antispoof'] = false;
+	$wgGroupPermissions['sysop']['massmessage'] = false;
+	$wgGroupPermissions['sysop']['editusercss'] = false;
+	$wgGroupPermissions['sysop']['edituserjs'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
 	$wgGroupPermissions['user']['changetags'] = false;
 	$wgGroupPermissions['user']['applychangetags'] = false;
 	$wgGroupPermissions['user']['editcontentmodel'] = false;
@@ -164,6 +171,7 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['user']['move-categorypages'] = false;
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
 	$wgAddGroups['sysop'] = array();
 	$wgRemoveGroups['sysop'] = array();
 	$wgAddGroups['bureaucrat'] = array();
