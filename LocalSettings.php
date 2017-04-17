@@ -4142,6 +4142,8 @@ $wgConf->settings = array(
 				'markbotedits' => true,
 				'mergehistory' => true,
 				'editcontentmodel' => true,
+				'massmessage' => true,
+				'unwatchedpages' => true,
 			),
 			'steward' => array(
 				'userrights' => true,
@@ -4170,6 +4172,7 @@ $wgConf->settings = array(
 				'move-categorypages' => true,
 				'move-subpages' => true,
 				'move-rootuserpages' => true,
+				'movefile' => true,
 				'suppressredirect' => true,
 			),
 			'uploader' => array(
@@ -4186,9 +4189,11 @@ $wgConf->settings = array(
 				'abusefilter-log-private' => true,
 			),
 			'founder' => array(
-				'read' => true,
-				'edit' => true,
 				'globalblock-exempt' => true,
+				'editinterface' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'protectsite' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
