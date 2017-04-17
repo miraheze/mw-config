@@ -894,6 +894,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
+		'wikicanadawiki' => true,
 	),
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
@@ -1541,6 +1542,7 @@ $wgConf->settings = array(
 		'ndnwiki' => true,
 		'secondcirclewiki' => true,
 		'sthomaspriwiki' => true,
+		'wikicanadawiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUsePageTriage' => array(
