@@ -3282,9 +3282,6 @@ $wgConf->settings = array(
 			NS_CATEGORY => true,
 			NS_CATEGORY_TALK => true,
 		),
-		'+ictjudikaturawiki' => array(
-			NS_MAIN => true,
-		),
 		'+janesskillspackwiki' => array(
 			NS_MAIN => true,
 			NS_USER => true,
