@@ -234,7 +234,12 @@ $wgConf->settings = array(
 	'wgBlockAllowsUTEdit' => array(
 		'default' => true,
 	),
-
+	// Allow External Images
+	'$wgAllowExternalImages' => array(
+		'default' => false,
+		'szkwiki' => true,
+	),
+	
 	// Cache
 	'wgCacheDirectory' => array(
 		'default' => '/srv/mediawiki/w/cache',
