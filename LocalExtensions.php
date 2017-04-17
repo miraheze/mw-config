@@ -66,6 +66,10 @@ if ( $wmgUseCategoryTree ) {
 	wfLoadExtension( 'CategoryTree' );
 }
 
+if ( $wmgUseCalendar ) {
+	require_once( "$IP/extensions/Calendar/Calendar.php" );
+}
+
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
