@@ -3581,6 +3581,15 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+cinemawiki' => array(
+			'bureaucrat' => array(
+				'editor',
+			),
+			'sysop' => array(
+				'bot',
+				'editor',
+			),
+		),
 	),
 	'+wgGroupPermissions' => array(
 		'default' => array(
