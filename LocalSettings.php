@@ -2510,6 +2510,7 @@ $wgConf->settings = array(
 	),
 	'wgEnableImageWhitelist' => array(
 		'default' => false,
+		'jubeatwikithwiki' => true,
 	),
 	'wgShowArchiveThumbnails' => array(
 		'default' => true,
@@ -2891,6 +2892,10 @@ $wgConf->settings = array(
 	'wgRestrictDisplayTitle' => array(
 		'default' => true, // Wikis with NoTitle have it set to false
 		'takethatwikiwiki' => false,
+	),
+	'wgCapitalLinks' => array(
+		'default' => true,
+		'jubeatwikithwiki' => false,
 	),
 
 	// MobileFrontend
