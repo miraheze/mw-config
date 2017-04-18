@@ -4044,6 +4044,7 @@ $wgConf->settings = array(
 				'bureaucrat' => true,
 				'nuke' => true,
 				'editinterface' => true,
+				'globalblock-whitelist' => true,
 			),
 			'consul' => array(
 				'read' => true,
