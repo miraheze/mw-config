@@ -5398,6 +5398,14 @@ $wgMajorSiteNoticeID = 1;
 //	return true;
 // }
 
+// Hook so that Terms of Service is included in footer
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
+function lfTOSLink( $sk, &$tpl ) {
+	$tpl->set( 'termsofservice', $sk->footerLink( 'termsofservice', 'termsofservicepage' ) );
+	$tpl->data['footerlinks']['places'][] = 'termsofservice';
+	return true;
+}
+
 // Include other configuration file
 require_once( "/srv/mediawiki/config/Database.php" );
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
