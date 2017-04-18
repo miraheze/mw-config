@@ -4197,6 +4197,8 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'abusefilter-view-private' => true,
 				'abusefilter-log-private' => true,
+				'review' => true,
+				'validate' => true,
 			),
 			'founder' => array(
 				'globalblock-exempt' => true,
