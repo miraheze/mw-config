@@ -1622,6 +1622,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ganeshawiki' => true,
 		'jayuwikiwiki' => true,
+		'malaysiawiki' => true,
 		'nidda23wiki' => true,
 		'pgnwikiwiki' => true,
 		'takethatwikiwiki' => true,
