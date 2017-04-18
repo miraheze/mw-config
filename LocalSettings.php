@@ -5042,6 +5042,7 @@ $wgConf->settings = array(
 		'tymyrddinwiki' => "//$wmgUploadHostname/tymyrddinwiki/c/c5/Ty-myrddin-logo-transparant.png",
 		'ubuntuwiki' => "//$wmgUploadHostname/ubuntuwiki/1/11/UbuntuWiki.png",
 		'umpcwiki' => "//$wmgUploadHostname/umpcwiki/5/53/LogoUMPC-spunta.png",
+		'unoitudowiki' => "//$wmgUploadHostname/unoitudowiki/1/1b/Logo_unoi.png",
 		'uprisewiki' => "//$wmgUploadHostname/uprisewiki/2/2e/DotLogo130px.png",
 		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
