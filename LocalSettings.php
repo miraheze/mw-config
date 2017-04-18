@@ -4204,6 +4204,9 @@ $wgConf->settings = array(
 				'edituserjs' => true,
 				'protectsite' => true,
 			),
+			'bot' => array(
+				'editinterface' => true,
+			),
 		),	
 		'+wikipucwiki' => array(
 			'*' => array(
