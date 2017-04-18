@@ -2462,6 +2462,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
+		'wikicanadawiki' => array( '', 'sysop', 'autoconfirmed', 'user' ),
 	),
 
 	// Files
@@ -3580,8 +3581,6 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'founder',
 				'reviewer',
-				'editor',
-				'autoreview',
 				'chatmod',
 				'blockedfromchat',
 				'edit-filter-manager',
@@ -4407,8 +4406,6 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'founder',
 				'reviewer',
-				'autoreview',
-				'editor',
 				'chatmod',
 				'blockedfromchat',
 				'edit-filter-manager',
