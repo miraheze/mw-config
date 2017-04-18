@@ -2458,7 +2458,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
-		'wikicanadawiki' => array( '', 'sysop', 'autoconfirmed', 'user' );
+		'wikicanadawiki' => array( '', 'sysop', 'autoconfirmed', 'user' ),
 	),
 
 	// Files
