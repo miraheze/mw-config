@@ -375,6 +375,10 @@ if ( $wmgUsePoll ) {
 	require_once( "$IP/extensions/Poll/Poll.php" );
 }
 
+if ( $wmgUseNoTitle ) {
+	require_once( "$IP/skins/NoTitle/NoTitle.php" );
+}
+
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
