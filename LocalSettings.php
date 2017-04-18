@@ -1072,6 +1072,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
+		'inkubatorwiki' => true,
 		'rpgbrigadewiki' => true,
 	),
 	'wmgUseDuplicator' => array(
