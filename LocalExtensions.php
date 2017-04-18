@@ -235,6 +235,10 @@ if ( $wmgUseHighlightLinksInCategory ) {
 	wfLoadExtension( 'HighlightLinksInCategory' );
 }
 
+if ( $wmgUseHTMLets ) {
+	require_once( "$IP/extensions/HTMLets/HTMLets.php" );
+}
+
 if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
