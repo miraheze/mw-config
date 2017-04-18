@@ -126,6 +126,7 @@ if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
 }
 
 if ( $wgDBname == 'trexwiki' ) {
