@@ -207,6 +207,10 @@ if ( $wmgUseFeaturedFeeds ) {
 	wfLoadExtension( 'FeaturedFeeds' );
 }
 
+if ( $wmgUseFlaggedRevs ) {
+	require_once( "$IP/extensions/FlaggedRevs/FlaggedRevs.php" );
+}
+
 if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 }
