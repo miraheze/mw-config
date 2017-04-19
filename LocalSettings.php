@@ -3216,6 +3216,11 @@ $wgConf->settings = array(
 				'project-edit',
 			),
 		),
+		'+wikicanadawiki' => array(
+			NS_TEMPLATE => array(
+				'templateeditor',
+			),
+		),
 	),
 	'+wgNamespacesToBeSearchedDefault' => array(
 		'default' => array(),
