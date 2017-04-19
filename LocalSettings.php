@@ -894,7 +894,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseBetaFeatures' => array(
 		'default' => false,
@@ -1343,7 +1342,6 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
