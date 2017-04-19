@@ -851,6 +851,7 @@ $wgConf->settings = array(
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'malaysiawiki' => true,
 		'openconstitutionwiki' => true,
 		'wikipucwiki' => true,
 	),
