@@ -4169,6 +4169,8 @@ $wgConf->settings = array(
 				'suppressrevision' => true,
 				'suppressionlog' => true,
 				'abusefilter-modify-global' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
 			),
 			'edit-filter-manager' => array(
 				'applychangetags' => true,
@@ -4455,6 +4457,7 @@ $wgConf->settings = array(
 	'wgImplicitGroups' => array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
 		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
+		'wikicanadawiki' => array( '*', 'user', 'autoconfirmed', 'checkuser' ),
 	),
 	
 	// Piwik settings
