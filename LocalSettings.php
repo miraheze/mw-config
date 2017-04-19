@@ -2776,7 +2776,6 @@ $wgConf->settings = array(
 			'loginwiki',
 			'lothuialethwiki',
 			'testwiki',
-			'throisarwiki',
 			'wrightwiki',
 			'wright001wiki',
 			'wright002wiki',
@@ -4654,7 +4653,6 @@ $wgConf->settings = array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'fourleafficswiki' => 'any',
 		'lothuialethwiki' => 'any',
-		'throisarwiki' => 'any',
 	),
 
 	// Squid (aka Varnish)
