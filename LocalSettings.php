@@ -3583,7 +3583,7 @@ $wgConf->settings = array(
 				'founder',
 				'reviewer',
 				'chatmod',
-				'blockedfromchat',
+				'banned',
 				'edit-filter-manager',
 				'page-mover',
 				'importer',
@@ -4212,6 +4212,16 @@ $wgConf->settings = array(
 			'bot' => array(
 				'editinterface' => true,
 			),
+			'user' => array(
+				'editmyoptions' => true,
+				'editmyprivateinfo' => true,
+				'editmyusercss' => true,
+				'editmyuserjs' => true,
+				'editmywatchlist' => true,
+				'viewmyprivateinfo' => true,
+				'viewmywatchlist' => true,
+				'chat' => true,
+			),
 		),	
 		'+wikipucwiki' => array(
 			'*' => array(
@@ -4410,7 +4420,7 @@ $wgConf->settings = array(
 				'founder',
 				'reviewer',
 				'chatmod',
-				'blockedfromchat',
+				'banned',
 				'edit-filter-manager',
 				'page-mover',
 				'importer',
@@ -4437,6 +4447,22 @@ $wgConf->settings = array(
 			),
 			'exampleuser' => array(
 				'editmyoptions' => true,
+			),
+		),
+		'wikicanadawiki' => array(
+			'banned' => array(
+				'createtalk' => true,
+				'createpage' => true,
+				'edit' => true,
+				'editmyoptions' => true,
+				'editmyprivateinfo' => true,
+				'editmyusercss' => true,
+				'editmyuserjs' => true,
+				'editmywatchlist' => true,
+				'read' => true,
+				'writeapi' => true,
+				'viewmyprivateinfo' => true,
+				'viewmywatchlist' => true,
 			),
 		),
 	),
