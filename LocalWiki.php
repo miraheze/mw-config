@@ -172,6 +172,8 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['checkuser']['checkuser'] = false;
+	$wgGroupPermissions['checkuser']['checkuser-log'] = false;
 	$wgAddGroups['sysop'] = array();
 	$wgRemoveGroups['sysop'] = array();
 	$wgAddGroups['bureaucrat'] = array();
