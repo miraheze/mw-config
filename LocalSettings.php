@@ -4457,7 +4457,7 @@ $wgConf->settings = array(
 	'wgImplicitGroups' => array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
 		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
-		'wikicanadawiki' => array( '*', 'user', 'autoconfirmed', 'checkuser' ),
+		'wikicanadawiki' => array( '*', 'user', 'autoconfirmed' ),
 	),
 	
 	// Piwik settings
