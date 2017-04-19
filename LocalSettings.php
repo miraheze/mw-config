@@ -930,7 +930,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'kstartupswiki' => true,
 	),
-	'wmgUseMSCalendar' => array(
+	'wmgUseMsCalendar' => array(
 		'default' => false,
 		'5awiki' => true,
 		'aucelewiki' => true,
