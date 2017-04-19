@@ -3221,6 +3221,11 @@ $wgConf->settings = array(
 				'project-edit',
 			),
 		),
+		'+wikicanadawiki' => array(
+			NS_TEMPLATE => array(
+				'templateeditor',
+			),
+		),
 	),
 	'+wgNamespacesToBeSearchedDefault' => array(
 		'default' => array(),
@@ -3586,7 +3591,7 @@ $wgConf->settings = array(
 				'page-mover',
 				'importer',
 				'uploader',
-				
+				'template-editor',
 			),
 		),	
 		'+wikidolphinhansenwiki' => array(
@@ -4199,6 +4204,7 @@ $wgConf->settings = array(
 				'abusefilter-log-private' => true,
 				'review' => true,
 				'validate' => true,
+				'templateeditor' => true,
 			),
 			'founder' => array(
 				'globalblock-exempt' => true,
@@ -4219,6 +4225,9 @@ $wgConf->settings = array(
 				'viewmyprivateinfo' => true,
 				'viewmywatchlist' => true,
 				'chat' => true,
+			),
+			'template-editor' => array(
+				'templateeditor' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
@@ -4423,6 +4432,7 @@ $wgConf->settings = array(
 				'page-mover',
 				'importer',
 				'uploader',
+				'template-editor',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
