@@ -145,6 +145,18 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 }
 
 if ( $wgDBname == 'wikicanadawiki' ) {
+	$wgGroupPermissions['*']['createtalk'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['editmyoptions'] = false;
+	$wgGroupPermissions['*']['editmyprivateinfo'] = false;
+	$wgGroupPermissions['*']['editmyusercss'] = false;
+	$wgGroupPermissions['*']['editmyuserjs'] = false;
+	$wgGroupPermissions['*']['editmywatchlist'] = false;
+	$wgGroupPermissions['*']['read'] = false;
+	$wgGroupPermissions['*']['writeapi'] = false;
+	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
+	$wgGroupPermissions['*']['viewmywatchlist'] = false;
 	$wgGroupPermissions['sysop']['managechangetags'] = false;
 	$wgGroupPermissions['sysop']['deletechangetags'] = false;
 	$wgGroupPermissions['sysop']['importupload'] = false;
@@ -181,6 +193,7 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgGroupPermissions['autoreview'] );
 	unset( $wgGroupPermissions['editor'] );
+	unset( $wgGroupPermissions['blockedfromchat'] );
 }	
 
 if ( $wgDBname == 'metawiki' ) {
