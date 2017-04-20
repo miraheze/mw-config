@@ -3585,7 +3585,7 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'founder',
 				'reviewer',
-				'chatmod',
+				'ipblock-exempt',
 				'banned',
 				'edit-filter-manager',
 				'page-mover',
@@ -4205,6 +4205,7 @@ $wgConf->settings = array(
 				'review' => true,
 				'validate' => true,
 				'templateeditor' => true,
+				'proxyunbannable' => true,
 			),
 			'founder' => array(
 				'globalblock-exempt' => true,
@@ -4228,6 +4229,9 @@ $wgConf->settings = array(
 			),
 			'template-editor' => array(
 				'templateeditor' => true,
+			),
+			'ipblock-exempt' => array(
+				'ipblock-exempt' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
@@ -4426,7 +4430,7 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'founder',
 				'reviewer',
-				'chatmod',
+				'ipblock-exempt',
 				'banned',
 				'edit-filter-manager',
 				'page-mover',
