@@ -3676,7 +3676,11 @@ $wgConf->settings = array(
 		'+applewikiwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
-			),
+	               ),
+                 	'sysop' => array(
+	                           'bigdelete' => true,
+	              ),
+			
 		),
 		'+bigforestwiki' => array(
 			'autoconfirmed' => array(
