@@ -10,7 +10,6 @@ $wgLBFactoryConf = array(
 		'loginwiki' => 'c2',
 		'supernamuwiki' => 'c2',
 		'tmewiki' => 'c2',
-		'zgradetenniswiki' => 'c2',
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array(
