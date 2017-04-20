@@ -5437,7 +5437,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	//if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is performing maintenance on one of its database clusters due to a database crash. While your wiki might not be on the affected database cluster, all wikis are in read-only mode to protect the data of all wikis.</td>
+			<td>Miraheze suffered from database issues today, which seem to be solved now. You can now edit your wiki. <br> Miraheze's System Administrators will keep monitoring the database servers today, and they will be investigating what exactly happened.</td>
 			</tr></tbody></table>
 EOF;
 	//}
