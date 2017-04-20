@@ -4232,6 +4232,7 @@ $wgConf->settings = array(
 			),
 			'ipblock-exempt' => array(
 				'ipblock-exempt' => true,
+				'proxyunbannable' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
