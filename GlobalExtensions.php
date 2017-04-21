@@ -6,6 +6,7 @@ wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
 	'Babel',
+	'BetaFeatures',
 	'CentralAuth',
 	'CheckUser',
 	'Cite',

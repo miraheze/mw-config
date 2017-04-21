@@ -794,6 +794,10 @@ $wgConf->settings = array(
 		'testwiki' => 90 * 24 * 3600,
 	),
 	// Echo
+	'wgEchoCrossWikiNotifications' => array(
+		'default' => true,
+		'wikicanadawiki' => true,
+	),
 	'wgEchoUseCrossWikiBetaFeature' => array(
 		'default' => true,
 		'wikicanadawiki' => false,
@@ -901,26 +905,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
-	),
-	'wmgUseBetaFeatures' => array(
-		'default' => false,
-		'allthetropeswiki' => true,
-		'bigforestwiki' => true,
-		'calexitwiki' => true,
-		'dtswiki' => true,
-		'extloadwiki' => true,
-		'inazumaelevenwiki' => true,
-		'jayuwikiwiki' => true,
-		'justinbieberwiki' => true,
-		'metawiki' => true,
-		'pgnwikiwiki' => true,
-		'robloxscripterswiki' => true,
-		'takethatwikiwiki' => true,
-		'thefosterswiki' => true,
-		'thehushhushsagawiki' => true,
-		'tokyoghoulwiki' => true,
-		'votingwiki' => true,
-		'youtubewiki' => true,
 	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
