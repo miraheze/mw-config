@@ -45,6 +45,23 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRemoveGroups['sysop'][] = 'member';
 }
 
+//Read-only Wikis
+if ( isset( $wgConf->settings['wmgReadonlyWiki'][$wgDBname] ) ) {
+	$wgGroupPermissions['*']['read'] = true;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] => false;
+	$wgGroupPermissions['*']['createtalk'] => false;
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['sysop']['delete'] = false;
+	$wgGroupPermissions['sysop']['undelete'] = false;
+	$wgGroupPermissions['sysop']['deletelogentry'] = false;
+	$wgGroupPermissions['sysop']['deleterevision'] = false;
+	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['sysop']['importupload'] = false;
+	$wgGroupPermissions['sysop']['block'] = false;
+	$wgGroupPermissions['sysop']['protect'] = false;
+}
+
 // ircrcbot (!=private)
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRCFeeds['irc'] = array(
