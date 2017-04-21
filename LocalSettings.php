@@ -796,7 +796,7 @@ $wgConf->settings = array(
 	// Echo
 	'wgEchoCrossWikiNotifications' => array(
 		'default' => true,
-		'wikicanadawiki' => true,
+		'wikicanadawiki' => false,
 	),
 	'wgEchoUseCrossWikiBetaFeature' => array(
 		'default' => true,
