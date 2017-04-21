@@ -971,6 +971,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseCheckUser' => array(
+		'default' => true
+		'wikicanadawiki' => false
+	),
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
