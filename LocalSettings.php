@@ -1729,9 +1729,8 @@ $wgConf->settings = array(
 		'qwertywiki' => true,
 	),
 	'wmgUseSecurePoll' => array(
-		'default' => false, // Uncontrollable access to private information
+		'default' => false, // Uncontrollable access to private information. DO NOT ENABLE!
 		'extloadwiki' => true,
-		'nationstateswiki' => true,
 	),
 	'wmgUseShortURL' => array(
 		'default' => true,
