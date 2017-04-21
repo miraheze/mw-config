@@ -3203,6 +3203,9 @@ $wgConf->settings = array(
 			'Lêer' => NS_FILE,
 			'Lêerbespreking' => NS_FILE_TALK,
 		),
+		'+wikicanadawiki' => array(
+			'WC' => NS_PROJECT
+		),
 	),
 	'+wgNamespaceProtection' => array(
 		'default' => array(),
