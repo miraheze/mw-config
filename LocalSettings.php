@@ -2713,7 +2713,6 @@ $wgConf->settings = array(
 	'wgEnableManageWiki' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'metawiki' => true,
 	),
 
 	// MassMessage
