@@ -911,6 +911,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'jayuwikiwiki' => true,
 		'justinbieberwiki' => true,
+		'metawiki' => true,
 		'pgnwikiwiki' => true,
 		'robloxscripterswiki' => true,
 		'takethatwikiwiki' => true,
