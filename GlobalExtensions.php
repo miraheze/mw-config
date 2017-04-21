@@ -7,7 +7,6 @@ wfLoadExtensions( [
 	'AntiSpoof',
 	'Babel',
 	'CentralAuth',
-	'CheckUser',
 	'Cite',
 	'CiteThisPage',
 	'CodeEditor',
