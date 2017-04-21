@@ -794,6 +794,10 @@ $wgConf->settings = array(
 		'metawiki' => 90 * 24 * 3600,
 		'testwiki' => 90 * 24 * 3600,
 	),
+	// Echo
+	'wgEchoUseCrossWikiBetaFeature' => array(
+		'default' => true,
+	),
 
 	// Extensions and Skins
 	// AccessControl: due to security risks, use of this extension is at a wikis' calculated risk.
