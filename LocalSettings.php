@@ -861,6 +861,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'malaysiawiki' => true,
 		'openconstitutionwiki' => true,
+		'nationstateswiki' => true,
 		'wikipucwiki' => true,
 	),
 	'wmgUseApex' => array(
