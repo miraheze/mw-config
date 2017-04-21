@@ -797,6 +797,7 @@ $wgConf->settings = array(
 	// Echo
 	'wgEchoUseCrossWikiBetaFeature' => array(
 		'default' => true,
+		'wikicanadawiki' => false,
 	),
 
 	// Extensions and Skins
