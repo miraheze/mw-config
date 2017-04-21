@@ -431,11 +431,6 @@ if ( $wmgUseScratchBlocks ) {
 	wfLoadExtension( "ScratchBlocks" );
 }
 
-if ( $wmgUseSecurePoll ) {
-	wfLoadExtension( 'SecurePoll' );
-	$wgGroupPermissions['sysop']['securepoll-create-poll'] = true;
-}
-
 if ( $wmgUseSimpleChanges ) {
 	require_once( "$IP/extensions/SimpleChanges/SimpleChanges.php" );
 }

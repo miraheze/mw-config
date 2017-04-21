@@ -414,7 +414,6 @@ $wgConf->settings = array(
 			"$IP/extensions/ProofreadPage/sql/ProofreadIndex.sql",
 			"$IP/extensions/SocialProfile/UserProfile/user_profile.sql",
 			"$IP/extensions/SocialProfile/UserProfile/user_fields_privacy.sql",
-			"$IP/extensions/SecurePoll/SecurePoll.sql",
 			"$IP/extensions/SocialProfile/UserSystemMessages/user_system_messages.sql",
 			"$IP/extensions/SocialProfile/UserStats/user_points_monthly.sql",
 			"$IP/extensions/SocialProfile/UserStats/user_points_archive.sql",
@@ -1727,10 +1726,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'qwertywiki' => true,
-	),
-	'wmgUseSecurePoll' => array(
-		'default' => false, // Uncontrollable access to private information. DO NOT ENABLE!
-		'extloadwiki' => true,
 	),
 	'wmgUseShortURL' => array(
 		'default' => true,
@@ -3721,7 +3716,6 @@ $wgConf->settings = array(
 				'undelete' => true,
 				'browsearchive' => true,
 				'deletedtext' => true,
-				'securepoll-create-poll' => true,
 				'managechangetags' => true,
 				'tboverride' => true,
 				'abusefilter-view-private' => true,
