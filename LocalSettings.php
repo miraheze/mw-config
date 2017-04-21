@@ -3650,6 +3650,7 @@ $wgConf->settings = array(
 				'deletelogentry' => true,
 				'deleterevision' => true,
 				'rollback' => true,
+				'interwiki' => true,
 			),
 			'user' => array(
 				'user' => true, // for "Allow logged in users" protection level
