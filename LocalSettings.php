@@ -4208,9 +4208,6 @@ $wgConf->settings = array(
 				'edituserjs' => true,
 				'protectsite' => true,
 			),
-			'bot' => array(
-				'editinterface' => true,
-			),
 			'user' => array(
 				'editmyoptions' => true,
 				'editmyprivateinfo' => true,
