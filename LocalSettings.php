@@ -2567,6 +2567,8 @@ $wgConf->settings = array(
 	),
 	'wgInterwikiCentralDB' => array(
 		'default' => 'metawiki',
+		'literaturewiki' => 'bnetwiki',
+		'nomicwiki' => 'bnetwiki'
 	),
 
 	// Job Queue
@@ -4235,6 +4237,18 @@ $wgConf->settings = array(
 				'ajaxpoll-view-results' => true,
 				'voteny' => true,
 				'upload' => true,
+			),
+		'+literaturewiki' => array(
+			'sysop' => array(
+				'interwiki' => true,
+			),
+		'+nomicwiki' => array(
+			'sysop' => array(
+				'interwiki' => true,
+			),
+		'+bnetwiki' => array(
+			'sysop' => array(
+				'interwiki' => true,
 			),
 		),
 		'+yeoksawiki' => array(
