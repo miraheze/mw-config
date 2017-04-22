@@ -5430,18 +5430,18 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgMajorSiteNoticeID = 1;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wgDBname;
-	if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
-		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze suffered from database issues today, which seem to be solved now. You can now edit your wiki. <br> Miraheze's System Administrators will keep monitoring the database servers today, and they will be investigating what exactly happened.</td>
-			</tr></tbody></table>
-EOF;
-	}
-	return true;
-}
+//$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+//function onSiteNoticeAfter( &$siteNotice, $skin ) {
+// 	global $wgDBname;
+//	if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
+//		$siteNotice .= <<<EOF
+//			<table class="wikitable" style="text-align:center;"><tbody><tr>
+//			<td>Miraheze suffered from database issues today, which seem to be solved now. You can now edit your wiki. <br> Miraheze's System Administrators will keep monitoring the database servers today, and they will be investigating what exactly happened.</td>
+//			</tr></tbody></table>
+//EOF;
+//	}
+//	return true;
+//}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
