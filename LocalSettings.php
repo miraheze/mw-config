@@ -2767,6 +2767,7 @@ $wgConf->settings = array(
 			'lothuialethwiki',
 			'testwiki',
 			'wrightwiki',
+			'wright000wiki',
 			'wright001wiki',
 			'wright002wiki',
 			'wright003wiki',
