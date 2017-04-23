@@ -1262,6 +1262,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
+		'tiandiwiki' => true,
 		'universebuildwiki' => true,
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
