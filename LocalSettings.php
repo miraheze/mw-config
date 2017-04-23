@@ -1446,6 +1446,7 @@ $wgConf->settings = array(
 	'wmgUseMultiBoilerplate' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'chimaerawiki' => true,
 		'extloadwiki' => true,
 		'muckhackwiki' => true,
 		'wisdomwikiwiki' => true,
