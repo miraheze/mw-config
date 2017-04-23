@@ -2187,6 +2187,7 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 		'trumpwiki' => true,
 		'tsponiewiki' => true,
+		'twswiki' => true,
 		'tymyrddinwiki' => true,
 		'uoluwiki' => true,
 		'unikumwiki' => true,
