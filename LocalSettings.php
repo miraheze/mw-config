@@ -2204,6 +2204,7 @@ $wgConf->settings = array(
 		'wabcwiki' => true,
 		'walthamstowlabourwiki' => true,
 		'webflowwiki' => true,
+		'westmarcheswiki' => true,
 		'wikibookswiki' => true,
 		'wikicervanteswiki' => true,
 		'wikidolphinhansenwiki' => true,
