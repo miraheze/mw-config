@@ -2394,6 +2394,12 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => '_blank',
 		'yacresourceswiki' => '_blank',
 	),
+	
+	// Allow External Images
+	'wgAllowExternalImages' => array (
+		'default' => false,
+		'westmarcheswiki' => true,
+	),
 
 	// FlaggedRevs
 	'wmgFlaggedRevsNamespaces' => array(
