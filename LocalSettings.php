@@ -816,6 +816,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'mindgearwiki' => true,
 		'ndnwiki' => true,
+		'westmarhceswiki' => true,
 		'wimawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
