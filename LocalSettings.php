@@ -1604,6 +1604,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'justinbieberwiki' => true,
 		'marcoschriekwiki' => true,
+		'nanatsunotaizaiwiki' => true,
 		'pgnwikiwiki' => true,
 		'takethatwikiwiki' => true,
 		'thefosterswiki' => true,
