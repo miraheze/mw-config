@@ -2053,6 +2053,7 @@ $wgConf->settings = array(
 		'hftqmswiki' => true,
 		'hjelpemidlerwiki' => true,
 		'hktransportpediawiki' => true,
+		'hlptestwiki' => true,
 		'hobbieswiki' => true,
 		'hshsinfoportalwiki' => true,
 		'hsoodenwiki' => true,
