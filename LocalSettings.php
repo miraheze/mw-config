@@ -2398,7 +2398,7 @@ $wgConf->settings = array(
 	// Allow External Images
 	'wgAllowExternalImages' => array (
 		'default' => false,
-		'westmarcheswiki' => true
+		'westmarcheswiki' => true,
 	),
 
 	// FlaggedRevs
