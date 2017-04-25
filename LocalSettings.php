@@ -3524,35 +3524,17 @@ $wgConf->settings = array(
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
-				'testgroup',
 				'bureaucrat',
 				'sysop',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
 			),
 			'consul' => array(
 				'bot',
-				'bureaucrat',
-				'consul',
-				'exampleuser',
-				'testgroup',
-				'sysop',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
 			),
 			'steward' => array(
 				'consul',
-				'bot',
-				'bureaucrat',
-				'consul',
-				'exampleuser',
+			),
+			'sysop' => array(
 				'testgroup',
-				'sysop',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
 			),
 		),
 		'snowthegamewiki' => array(
@@ -4372,17 +4354,16 @@ $wgConf->settings = array(
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
-				'testgroup',
 				'bot',
 			),
 			'consul' => array(
-				'bot',
 				'bureaucrat',
-				'exampleuser',
 			),
 			'steward' => array(
 				'consul',
-				'exampleuser',
+			),
+			'sysop' => array(
+				'testgroup',
 			),
 		),
 		'+trexwiki' => array(
@@ -4472,9 +4453,6 @@ $wgConf->settings = array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
 				# 'editinterface' => true, //mistakenly applies to other groups as well
-			),
-			'exampleuser' => array(
-				'editmyoptions' => true,
 			),
 		),
 		'wikicanadawiki' => array(
