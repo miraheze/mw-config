@@ -2408,7 +2408,7 @@ $wgConf->settings = array(
 	),
 	
 	// Allow HTML <img> tag
-	'wgAllowwgAllowImageTag' => array(
+	'wgAllowImageTag' => array(
 		'default' => false,
 		'westmarcheswiki' => true,
 	),
