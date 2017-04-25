@@ -3522,7 +3522,7 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
-		'testwiki' => array(
+		'+testwiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
 				'bureaucrat',
