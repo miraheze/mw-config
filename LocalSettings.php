@@ -4947,6 +4947,7 @@ $wgConf->settings = array(
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/3/3b/Wiki_logo.png",
 		'enmarchewiki' => "//$wmgUploadHostname/enmarchewiki/a/af/Logo-em-alsace68.png",
 		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
+		'esctwiki' => "//$wmgUploadHostname/esctwiki/5/5e/ESCTLogo.png",
 		'espiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'eternalconfictwiki' => "//$wmgUploadHostname/eternalconfictwiki/a/a9/AD_new_logo4.png",
 		'etpowiki' => "//$wmgUploadHostname/etpowiki/1/1f/LogoETPO.gif",
