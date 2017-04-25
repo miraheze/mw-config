@@ -2407,6 +2407,12 @@ $wgConf->settings = array(
 		'default' => false,
 		'westmarcheswiki' => true,
 	),
+	
+	// Allow HTML <img> tag
+	'wgAllowImageTag' => array(
+		'default' => false,
+		'westmarcheswiki' => true,
+	),
 
 	// FlaggedRevs
 	'wmgFlaggedRevsNamespaces' => array(
