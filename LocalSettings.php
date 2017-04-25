@@ -2105,6 +2105,7 @@ $wgConf->settings = array(
 		'mydegreewiki' => true,
 		'mylogicwiki' => true,
 		'mynyddwiki' => true,
+		'nanatsunotaizai' => true,
 		'nationstateswiki' => true,
 		'ndnwiki' => true,
 		'neuromotorwiki' => true,
