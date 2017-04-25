@@ -3529,6 +3529,7 @@ $wgConf->settings = array(
 			),
 			'consul' => array(
 				'bot',
+				'consul',
 			),
 			'steward' => array(
 				'consul',
