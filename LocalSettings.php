@@ -866,6 +866,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseAJAXPoll' => array(
 		'default' => false,
+		'bigforestwiki' => true,
 		'extloadwiki' => true,
 		'malaysiawiki' => true,
 		'openconstitutionwiki' => true,
@@ -1592,6 +1593,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'690squadronwiki' => true,
 		'apneuverenigingwiki' => true,
+		'bigforestwiki' => true,
 		'bpwiki' => true,
 		'calexitwiki' => true,
 		'constwiki' => true,
