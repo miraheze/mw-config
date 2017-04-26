@@ -1971,6 +1971,7 @@ $wgConf->settings = array(
 		'applebranchwiki' => true,
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
+		'artificercreationswiki' => true,
 		'aryamanwiki' => true,
 		'ayrshirewiki' => true,
 		'atheneumwiki' => true,
