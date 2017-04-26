@@ -3540,19 +3540,6 @@ $wgConf->settings = array(
 				'bot',
 				'bureaucrat',
 				'consul',
-				'exampleuser',
-				'testgroup',
-				'sysop',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
-			),
-			'steward' => array(
-				'consul',
-				'bot',
-				'bureaucrat',
-				'consul',
-				'exampleuser',
 				'testgroup',
 				'sysop',
 				'confirmed',
@@ -4383,11 +4370,11 @@ $wgConf->settings = array(
 			'consul' => array(
 				'bot',
 				'bureaucrat',
-				'exampleuser',
-			),
-			'steward' => array(
-				'consul',
-				'exampleuser',
+				'testgroup',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
 			),
 		),
 		'+trexwiki' => array(
@@ -4477,9 +4464,6 @@ $wgConf->settings = array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
 				# 'editinterface' => true, //mistakenly applies to other groups as well
-			),
-			'exampleuser' => array(
-				'editmyoptions' => true,
 			),
 		),
 		'wikicanadawiki' => array(
