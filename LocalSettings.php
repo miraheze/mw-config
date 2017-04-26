@@ -1258,6 +1258,7 @@ $wgConf->settings = array(
 		'creersonarbrewiki' => true,
 		'doinwiki' => true,
 		'dtswiki' => true,
+		'esctwiki' => true,
 		'extloadwiki' => true,
 		'hendrickswiki' => true,
 		'jayuwikiwiki' => true,
