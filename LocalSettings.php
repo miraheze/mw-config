@@ -2287,6 +2287,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikibaseRepository' => array(
 		'default' => false,
+		'artificercreationswiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
