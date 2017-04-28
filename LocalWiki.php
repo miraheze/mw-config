@@ -185,6 +185,7 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['torunblocked'] = false;
 	$wgGroupPermissions['checkuser']['checkuser'] = false;
 	$wgGroupPermissions['checkuser']['checkuser-log'] = false;
 	$wgAddGroups['sysop'] = array();
@@ -194,7 +195,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgGroupPermissions['autoreview'] );
 	unset( $wgGroupPermissions['editor'] );
-	unset( $wgGroupPermissions['blockedfromchat'] );
 }	
 
 if ( $wgDBname == 'metawiki' ) {

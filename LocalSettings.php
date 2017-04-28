@@ -4219,6 +4219,7 @@ $wgConf->settings = array(
 				'validate' => true,
 				'templateeditor' => true,
 				'proxyunbannable' => true,
+				'torunblocked' => true,
 			),
 			'founder' => array(
 				'globalblock-exempt' => true,
@@ -4235,7 +4236,6 @@ $wgConf->settings = array(
 				'editmywatchlist' => true,
 				'viewmyprivateinfo' => true,
 				'viewmywatchlist' => true,
-				'chat' => true,
 			),
 			'template-editor' => array(
 				'templateeditor' => true,
@@ -4243,6 +4243,7 @@ $wgConf->settings = array(
 			'ipblock-exempt' => array(
 				'ipblock-exempt' => true,
 				'proxyunbannable' => true,
+				'torunblocked' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
