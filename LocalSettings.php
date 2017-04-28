@@ -4578,7 +4578,7 @@ $wgConf->settings = array(
 		'default' => array(
 			'delete',
 		),
-		'wikicanadawiki' => array();
+		'wikicanadawiki' => array(
 		),
 	),
 	
