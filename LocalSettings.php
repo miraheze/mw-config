@@ -868,6 +868,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'bigforestwiki' => true,
 		'extloadwiki' => true,
+		'inkubatorwiki' => true,
 		'malaysiawiki' => true,
 		'openconstitutionwiki' => true,
 		'nationstateswiki' => true,
