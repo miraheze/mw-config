@@ -2187,6 +2187,7 @@ $wgConf->settings = array(
 		'tcc6640wiki' => true,
 		'teleswikiwiki' => true,
 		'testwiki' => true,
+		'thecscwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'theworldwiki' => true,
