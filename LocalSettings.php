@@ -4579,6 +4579,8 @@ $wgConf->settings = array(
 		'default' => array(
 			'delete',
 		),
+		'wikicanadawiki' => array(
+		),
 	),
 	
 	// Robot policy
