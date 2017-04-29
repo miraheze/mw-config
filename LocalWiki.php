@@ -78,11 +78,9 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
-//if ( $wgDBname === 'cvtwiki' ) {
-//	$wgWhitelistRead = array(
-//		'CVT action log',
-//	);
-//}
+if ( $wgDBname === 'cvtwiki' ) {
+	$wgWhitelistRead[] = 'CVT action log';
+}
 
 if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
