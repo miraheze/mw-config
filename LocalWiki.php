@@ -78,10 +78,6 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
-if ( $wgDBname === 'cvtwiki' ) {
-	$wgWhitelistRead[] = 'CVT action log';
-}
-
 if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = true;
@@ -324,6 +320,11 @@ $wgWhitelistRead =
 		"Special:CreateAccount",
 		"Spezial:Benutzerkonto anlegen"
 );
+
+// Additional wgReadWhitelist changes
+if ( $wgDBname === 'cvtwiki' ) {
+	$wgWhitelistRead[] = 'CVT action log';
+}
 
 // Permission variables
 if ( $wmgEditingMatrix ) {
