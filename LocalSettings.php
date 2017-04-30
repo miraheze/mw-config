@@ -3503,6 +3503,12 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+metawiki' => array(
+			'sysadmin' => array(
+				'wikicreator',
+				'sysadmin',
+			),
+		),
 		'+trexwiki' => array(
 			'co' => array(
 				'ceo',
@@ -3975,9 +3981,6 @@ $wgConf->settings = array(
 				'centralauth-oversight' => true,
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
-				'createwiki' => true,
-				'managewiki' => true,
-				'managewiki-restricted' => true,
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
@@ -3989,6 +3992,11 @@ $wgConf->settings = array(
 			'wikicreator' => array(
 				'createwiki' => true,
 				'managewiki' => true,
+			),
+			'sysadmin' => array(
+				'createwiki' => true,
+				'managewiki' => true,
+				'managewiki-restricted' => true,
 			),
 		),
 		'+pgnwikiwiki' => array(
@@ -4375,6 +4383,13 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+metawiki' => array(
+			'sysadmin' => array(
+				'wikicreator',
+				'sysadmin',
+				'bureaucrat',
 			),
 		),
 		'+quantumwiki' => array(
