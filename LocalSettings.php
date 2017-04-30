@@ -3590,6 +3590,12 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+westmarcheswiki' => array(
+			'sysop' => array(
+				'gamemasters',
+				'loremasters',
+			),
+		),
 		'+wikicanadawiki' => array(
 			'founder' => array(
 				'bot',
@@ -4162,6 +4168,18 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+westmarcheswiki' => array(
+			'gamemasters' => array(
+				'read' => true,
+				'edit' => true,
+				'gamemasters' => true,
+			),
+			'loremasters' => array(
+				'read' => true,
+				'edit' => true,
+				'loremasters' => true,
+			),
+		),
 		'+wikicanadawiki' => array(
 			'bureaucrat' => array(
 				'managechangetags' => true,
@@ -4573,6 +4591,10 @@ $wgConf->settings = array(
 			'bureaucrat',
 			'ceo',
 			'co',
+		),
+		'+westmarcheswiki' => array(
+			'gamemasters',
+			'loremasters',
 		),
 	),
 
