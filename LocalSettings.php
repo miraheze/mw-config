@@ -3710,6 +3710,11 @@ $wgConf->settings = array(
 				'createpage' => false,
 			),
 		),
+		'+allthetropeswiki' => array(
+			'sysop' => array(
+				'editothersprofiles' => true,
+			),
+		),
 		'+applebranchwiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
@@ -4771,6 +4776,16 @@ $wgConf->settings = array(
 	// SiteNotice
 	'wgDismissableSiteNoticeForAnons' => array(
 		'default' => true,
+	),
+	
+	// SocialProfile
+	'wgUserProfileThresholds' => array(
+		'default' => array(
+			'edits' => 0,
+		),
+		'allthetropes' => array(
+			'edits' => 10,
+		),
 	),
 
 	// Statistics
