@@ -5243,6 +5243,20 @@ $wgConf->settings = array(
 		'rtwiki' => 'Asia/Seoul',
 		'webtoonwiki' => 'Asia/Seoul',
 	),
+	
+	// TitleBlacklist 
+	'wgTitleBlacklistSources' => array(
+		'default' => array(
+			'type' => 'localpage',
+			'src'  => 'MediaWiki:Titleblacklist',
+		),
+	),
+	'wgTitleBlacklistUsernameSources' => array(
+		'default' => array(
+			'type' => 'localpage',
+			'src'  => 'MediaWiki:Titleblacklist',
+		),
+	),
 
 	// Translate
 	'wmgTranslateBlacklist' => array(
