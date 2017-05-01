@@ -8,6 +8,7 @@ $wgLBFactoryConf = array(
 		'centralauth' => 'c2',
 		'extloadwiki' => 'c2',
 		'loginwiki' => 'c2',
+		'metawiki' => 'c1',
 		'supernamuwiki' => 'c2',
 		'tmewiki' => 'c2',
 	),
