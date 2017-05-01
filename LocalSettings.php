@@ -5484,7 +5484,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>A proposal for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Code_of_Conduct">Code of Conduct</a> has been made. There is also currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#Void.27s_Request_for_Stewardship">open Request for Stewardship</a> and proposal for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Changes_to_CVT_group">changes to the Counter Vandalism Team's global permissions</a>. All Miraheze users are welcome to comment on all three of these requests.</td>
+			<td>A proposal for a <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Code_of_Conduct">Code of Conduct</a> has been made. There is also currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#Void.27s_Request_for_Stewardship">open Request for Stewardship</a> and proposal for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Changes_to_CVT_group">changes to the Counter Vandalism Team's global permissions</a>. All Miraheze users are welcome to comment on all three of these requests.</td>
 			</tr></tbody></table>
 EOF;
 	}
