@@ -245,6 +245,11 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 
+	// Bot passwords
+	'wgBotPasswordsDatabase' => array(
+		'default' => 'centralauth',
+	),
+
 	// Cache
 	'wgCacheDirectory' => array(
 		'default' => '/srv/mediawiki/w/cache',
