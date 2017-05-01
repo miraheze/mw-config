@@ -854,6 +854,7 @@ $wgConf->settings = array(
 		'pgnwikiwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
+		'pruebawiki' => true,
 		'secondcirclewiki' => true,
 		'starsetonlinewiki' => true,
 		'szkwiki' => true,
@@ -3523,6 +3524,24 @@ $wgConf->settings = array(
 				'sysmag',
 			),
 		),
+		'+pruebawiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
+				'consul',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -4011,6 +4030,20 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+		'+pruebawiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'nuke' => true,
+				'editinterface' => true,
+				'globalblock-whitelist' => true,
+			),
+			'consul' => array(
+				'read' => true,
+				'bureaucrat' => true,
+				'consul' => true,
+				'editinterface' => true,
+			),
+		),
 		'+pso2wiki' => array(
  			'sysop' => array(
  				'unreviewedpages' => true,
@@ -4377,6 +4410,19 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+pruebawiki' => array(
+			'bureaucrat' => array(
+				'bot',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+		),
 		'+quantumwiki' => array(
 			'Founder' => array(
 				'autopatrolled',
@@ -4580,6 +4626,10 @@ $wgConf->settings = array(
 		),
 		'+jayuwikiwiki' => array(
 			'editvoter',
+		),
+		'+pruebawiki' => array(
+			'bureaucrat',
+			'consul',
 		),
 		'+sovereignwiki' => array(
 			'officer',
@@ -5069,6 +5119,7 @@ $wgConf->settings = array(
 		'printmakingbewiki' => "//$wmgUploadHostname/printmakingbewiki/2/22/Pmk-logo-wiki-135px.png",
 		'priyowiki' => "//$wmgUploadHostname/priyowiki/c/c9/Logo.png",
 		'procrastipediawiki' => "//$wmgUploadHostname/procrastipediawiki/1/1e/PCPedia_Logo.png",
+		'pruebawiki' => "//$wmgUploadHostname/pruebawiki/7/77/LogoWiki.PNG",
 		'rebelalliancewiki' => "//$wmgUploadHostname/rebelalliancewiki/f/fe/Logo135.png",
 		'reiaasuwiki' => "//$wmgUploadHostname/reiaasuwiki/1/1e/Reiaasu-wiki-logo-1.png",
 		'reservedurablewiki' => "//$wmgUploadHostname/reservedurablewiki/3/37/Logo_sustainable_storage_135_pi.png",
