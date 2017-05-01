@@ -11,6 +11,7 @@ $wgDebugLogGroups = array(
 	'CentralAuth' => "$wmgLogDir/debuglogs/CentralAuth.log",
 	'collection' => "$wmgLogDir/debuglogs/collection.log",
 	'CreateWiki' => "$wmgLogDir/debuglogs/CreateWiki.log",
+	'Echo' => "$wmgLogDir/debuglogs/Echo.log",
 	'error' => "$wmgLogDir/debuglogs/php-error.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
