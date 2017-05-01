@@ -806,6 +806,12 @@ $wgConf->settings = array(
 		'default' => true,
 		'wikicanadawiki' => false,
 	),
+	'wgEchoUseJobQueueue' => array(
+		'default' => true,
+	),
+	'wgEchoSharedTrackingDB' => array(
+		'default' => 'metawiki',
+	),
 	'wgEchoUseCrossWikiBetaFeature' => array(
 		'default' => true,
 		'wikicanadawiki' => false,
