@@ -1228,6 +1228,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'3dicwiki' => true,
 		'allthetropeswiki' => true,
+		'corydoctorowwiki' => true,
 		'extloadwiki' => true,
 		'fusewiki' => true,
 		'grandtheftautowiki' => true,
