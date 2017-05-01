@@ -4901,6 +4901,7 @@ $wgConf->settings = array(
 		'icmscholarswiki' => "//$wmgUploadHostname/icmscholarswiki/6/69/Logo135px.png",
 		'imperiuswiki' => "//$wmgUploadHostname/imperiuswiki/b/b2/ImperiusFavicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
+		'jacksonheightswiki' => "//$wmgUploadHostname/jacksonheightswiki/0/0d/JH-wiki-2.ico",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
 		'kkandpwiki' => "//$wmgUploadHostname/kkandpwiki/c/ca/Favicon1-1024x1024.png",
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/6/64/Favicon.ico",
