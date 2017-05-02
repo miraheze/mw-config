@@ -2152,6 +2152,7 @@ $wgConf->settings = array(
 		'openconstitutionwiki' => true,
 		'opengovpioneerswiki' => true,
 		'ourmxfestwiki' => true,
+		'overonwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'panoramawiki' => true,
 		'paodeaodawiki' => true,
