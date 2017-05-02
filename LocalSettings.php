@@ -5263,12 +5263,20 @@ $wgConf->settings = array(
 			'type' => 'localpage',
 			'src'  => 'MediaWiki:Titleblacklist',
 		),
+        'meta' => array(
+            'type' => 'url',
+            'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
+        ),
 	),
 	'wgTitleBlacklistUsernameSources' => array(
 		'default' => array(
 			'type' => 'localpage',
 			'src'  => 'MediaWiki:Titleblacklist',
 		),
+        'meta' => array(
+            'type' => 'url',
+            'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
+        ),
 	),
 
 	// Translate
