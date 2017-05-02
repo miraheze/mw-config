@@ -212,6 +212,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
 		'nanatsunotaizaiwiki' => true,
+		'pruebawiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyohoulwiki' => true,
 		'youtubewiki' => true,
@@ -2449,6 +2450,11 @@ $wgConf->settings = array(
 			NS_HELP,
 			NS_PROJECT,
 		),
+		'pruebawiki' => array(
+			NS_MAIN,
+			NS_FILE,
+			NS_TEMPLATE,
+		),
 		'trexwiki' => array(
 			NS_ARTIKEL,
 			NS_FILE,
@@ -2502,6 +2508,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
+		'pruebawiki' => array( '', 'sysop', 'bureaucrat', 'consul', 'autoconfirmed', 'user' ),
 		'wikicanadawiki' => array( '', 'sysop', 'autoconfirmed', 'user' ),
 	),
 
@@ -3555,6 +3562,7 @@ $wgConf->settings = array(
 				'bot',
 				'bureaucrat',
 				'consul',
+				'testgroup',
 				'sysop',
 				'confirmed',
 				'autopatrolled',
@@ -4054,6 +4062,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+pruebawiki' => array(
+			'sysop' => array(
+				'autoreview' => true,
+				'review' => true,
+				'validate' => true,
+			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 				'nuke' => true,
@@ -4065,6 +4078,16 @@ $wgConf->settings = array(
 				'bureaucrat' => true,
 				'consul' => true,
 				'editinterface' => true,
+				'autoreview' => true,
+				'review' => true,
+				'validate' => true,
+				'stablesettings' => true,
+				'ipblock-exempt' => true,
+				'proxyunbannable' => true,
+				'torunblocked' => true,
+			),
+			'testgroup' => array(
+				'read' => true,
 			),
 		),
 		'+pso2wiki' => array(
@@ -4436,10 +4459,12 @@ $wgConf->settings = array(
 		'+pruebawiki' => array(
 			'bureaucrat' => array(
 				'bot',
+				'testgroup',
 			),
 			'consul' => array(
 				'bot',
 				'bureaucrat',
+				'testgroup',
 				'sysop',
 				'confirmed',
 				'autopatrolled',
@@ -4676,6 +4701,9 @@ $wgConf->settings = array(
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
+		),
+		'pruebawiki' => array(
+			'protect',
 		),
 		'wikicanadawiki' => array(
 		),
