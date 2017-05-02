@@ -2749,11 +2749,11 @@ $wgConf->settings = array(
 	'wgManageWikiMainDatabase' => array(
 		'default' => 'metawiki',
 	),
+	'wgManageWikiGlobalWiki' => array(
+		'default' => 'metawiki',
+	),
 	'wgEnableManageWiki' => array(
-		'default' => false,
-		'extloadwiki' => true,
-		'metawiki' => true,
-		'testwiki' => true,
+		'default' => true,
 	),
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
