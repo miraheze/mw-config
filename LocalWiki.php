@@ -351,3 +351,7 @@ if ( $wmgEditingMatrix ) {
 		$wgGroupPermissions['sysop']['createpage'] = true;
 	}
 }
+
+if ( $wmgManageWikiGroup && $wgEnableManageWiki ) { // if set and if enabled
+	$wgGroupPermissions[$wmgManageWikiGroup]['managewiki'] = true;
+}

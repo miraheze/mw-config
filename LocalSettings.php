@@ -2754,6 +2754,9 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 	),
+	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
+		'default' => 'bureaucrat',
+	),
 
 	// MassMessage
 	'wgAllowGlobalMessaging' => array(
