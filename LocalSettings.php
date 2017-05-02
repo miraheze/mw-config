@@ -2767,6 +2767,7 @@ $wgConf->settings = array(
 		'default' => 'bureaucrat',
 		'metawiki' => 'wikicreator',
 		'testwiki' => 'consul',
+		'wikicanadawiki' => 'founder',
 	),
 
 	// MassMessage
