@@ -2757,6 +2757,7 @@ $wgConf->settings = array(
 	),
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
+		'metawiki' => 'wikicreator',
 		'testwiki' => 'consul',
 	),
 
@@ -4029,7 +4030,6 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
-				'managewiki' => true,
 			),
 		),
 		'+pgnwikiwiki' => array(
