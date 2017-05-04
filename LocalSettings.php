@@ -191,18 +191,8 @@ $wgConf->settings = array(
 		'wikicanadawiki' => '72 hours',
 	),
 	'wgAbuseFilterRestrictedActions' => array(
-		'default' => array(
-			'blockautopromote' => true,
-			'block' => true,
-			'degroup' => true,
-			'rangeblock' => true,
-		),
-		'wikicanadawiki' => array(
-			'blockautopromote' => false,
-			'block' => false,
-			'degroup' => false,
-			'rangeblock' => true,
-		),
+		'default' => array( 'blockautopromote', 'block', 'degroup', 'rangeblock' ),
+		'wikicanadawiki' => array( 'rangeblock' ),
 	),
 
 	// Anti-spam
