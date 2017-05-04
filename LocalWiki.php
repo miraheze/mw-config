@@ -164,7 +164,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
 	$wgGroupPermissions['sysop']['mergehistory'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
 	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
