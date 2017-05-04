@@ -4282,7 +4282,6 @@ $wgConf->settings = array(
 				'centralauth-admin' => true,
 				'centralauth-lock' => true,
 				'centralauth-rename' => true,
-				'centralauth-oversight' => true,
 				'centralauth-unmerge' => true,
 				'centralauth-usermerge' => true,
 				'globalgrouppermissions' => true,
@@ -4345,6 +4344,7 @@ $wgConf->settings = array(
 		                'checkuser' => true,  //Named for WMF "Ombudsmen Commission"
 		                'checkuser-log' => true,
 		                'hideuser' => true,
+				'centralauth-oversight' => true,
 		                'suppressrevision' => true,
 		                'suppressionlog' => true,
 		                'abusefilter-private' => true,
@@ -4563,7 +4563,6 @@ $wgConf->settings = array(
 				'reviewer',
 				'ipblock-exempt',
 				'banned',
-				'edit-filter-manager',
 				'page-mover',
 				'importer',
 				'uploader',
