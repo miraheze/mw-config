@@ -141,7 +141,6 @@ if ( $wgDBname == 'trexwiki' ) {
 }
 
 if ( $wgDBname == 'swisscomraidwiki' ) {
-	$wgGroupPermissions['*']['read'] = false;
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
@@ -154,7 +153,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['editmyusercss'] = false;
 	$wgGroupPermissions['*']['editmyuserjs'] = false;
 	$wgGroupPermissions['*']['editmywatchlist'] = false;
-	$wgGroupPermissions['*']['read'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
 	$wgGroupPermissions['*']['viewmywatchlist'] = false;
