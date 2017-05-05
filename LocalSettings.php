@@ -4291,7 +4291,7 @@ $wgConf->settings = array(
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
 			),
-			'staff' => array(
+			'steward' => array(
 				'userrights' => true,
 				'userrights-interwiki' => true,
 				'interwiki' => true,
@@ -4313,6 +4313,7 @@ $wgConf->settings = array(
 				'abusefilter-hide-log' => true,
 				'abusefilter-hidden-log' => true,
 				'abusefilter-modify-global' => true,
+				'globalblock' => true,
 			),
 			'moderator' => array(
 				'block' => true,
