@@ -190,6 +190,20 @@ $wgConf->settings = array(
 		'default' => '6 months',
 		'wikicanadawiki' => '72 hours',
 	),
+	'wgAbuseFilterRestrictions' => array(
+		'default' => array(
+			'blockautopromote' => true,
+			'block' => true,
+			'degroup' => true,
+			'rangeblock' => true,
+		),
+		'wikicanadawiki' => array(
+			'blockautopromote' => false,
+			'block' => false,
+			'degroup' => false,
+			'rangeblock' => true,
+		),
+	),
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
