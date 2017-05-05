@@ -2410,6 +2410,7 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'urho3dwiki' => true,
 		'valentinaprojectwiki' => true,
+		'wikiletraswiki' => true,
 		'wikipucwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
