@@ -164,7 +164,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
 	$wgGroupPermissions['sysop']['mergehistory'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
 	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
@@ -195,6 +194,7 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgGroupPermissions['autoreview'] );
 	unset( $wgGroupPermissions['editor'] );
+	unset( $wgGroupPermissions['steward'] );
 }	
 
 if ( $wgDBname == 'metawiki' ) {
