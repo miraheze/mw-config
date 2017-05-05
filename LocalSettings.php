@@ -4705,6 +4705,7 @@ $wgConf->settings = array(
 			'delete',
 		),
 		'pruebawiki' => array(
+			'delete',
 			'protect',
 		),
 		'wikicanadawiki' => array(
