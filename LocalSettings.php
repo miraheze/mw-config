@@ -1926,6 +1926,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTorBlock' => array(
 		'default' => true,
+		'wikicanadawiki' => false,
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
