@@ -1124,6 +1124,7 @@ $wgConf->settings = array(
 		'noalatalawiki' => true,
 		'rpgbrigadewiki' => true,
 		'walthamstowlabourwiki' => true,
+		'wikiletraswiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 		'chocowiki' => true,
