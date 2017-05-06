@@ -4386,6 +4386,9 @@ $wgConf->settings = array(
 				'protect' => true,
 				'delete' => true,
 				'undelete' => true,
+				'block' => true,
+				'blockemail' => true,
+				'unblockself' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
