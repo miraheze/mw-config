@@ -170,6 +170,7 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
+	$wgGroupPermissions['user']['read'] = true;
 	$wgGroupPermissions['user']['changetags'] = false;
 	$wgGroupPermissions['user']['applychangetags'] = false;
 	$wgGroupPermissions['user']['editcontentmodel'] = false;
