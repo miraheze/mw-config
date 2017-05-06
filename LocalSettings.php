@@ -4378,6 +4378,7 @@ $wgConf->settings = array(
 				'editmywatchlist' => true,
 				'viewmyprivateinfo' => true,
 				'viewmywatchlist' => true,
+				'read' => true,
 			),
 			'template-editor' => array(
 				'templateeditor' => true,
