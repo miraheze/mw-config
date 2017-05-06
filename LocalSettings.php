@@ -1189,6 +1189,7 @@ $wgConf->settings = array(
 		'moziwiki' => true,
 		'muckhackwiki' => true,
 		'nomicwiki' => true,
+		'nationsglorywiki' => true,
 		'nextlevelwikiwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'permanentfuturelabwiki' => true,
