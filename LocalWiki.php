@@ -156,8 +156,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
 	$wgGroupPermissions['*']['viewmywatchlist'] = false;
-	$wgGroupPermissions['sysop']['managechangetags'] = false;
-	$wgGroupPermissions['sysop']['deletechangetags'] = false;
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
@@ -166,7 +164,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
 	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
 	$wgGroupPermissions['sysop']['override-antispoof'] = false;
-	$wgGroupPermissions['sysop']['massmessage'] = false;
 	$wgGroupPermissions['sysop']['editusercss'] = false;
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;

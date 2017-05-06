@@ -4280,14 +4280,9 @@ $wgConf->settings = array(
 		),
 		'+wikicanadawiki' => array(
 			'bureaucrat' => array(
-				'managechangetags' => true,
-				'deletechangetags' => true,
-				'applychangetags' => true,
-				'changetags' => true,
 				'markbotedits' => true,
 				'mergehistory' => true,
 				'editcontentmodel' => true,
-				'massmessage' => true,
 				'unwatchedpages' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
@@ -4349,6 +4344,11 @@ $wgConf->settings = array(
 				'templateeditor' => true,
 				'proxyunbannable' => true,
 				'torunblocked' => true,
+				'managechangetags' => true,
+				'deletechangetags' => true,
+				'applychangetags' => true,
+				'changetags' => true,
+				'massmessage' => true,
 			),
 			'founder' => array(
 				'globalblock-exempt' => true,
