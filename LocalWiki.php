@@ -194,7 +194,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgGroupPermissions['autoreview'] );
 	unset( $wgGroupPermissions['editor'] );
-	unset( $wgGroupPermissions['steward'] );
 }	
 
 if ( $wgDBname == 'metawiki' ) {
