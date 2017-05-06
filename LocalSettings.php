@@ -3601,12 +3601,8 @@ $wgConf->settings = array(
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
-				'testgroup',
 				'bureaucrat',
 				'sysop',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
 			),
 			'consul' => array(
 				'bot',
@@ -3617,6 +3613,13 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+				'exampleuser',
+				'testgroup',
 			),
 		),
 		'snowthegamewiki' => array(
@@ -4527,6 +4530,10 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
+			),
+			'sysop' => array(
+				'testgroup',
+				'exampleuser',
 			),
 		),
 		'+trexwiki' => array(
