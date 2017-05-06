@@ -3681,6 +3681,7 @@ $wgConf->settings = array(
 				'importer',
 				'uploader',
 				'template-editor',
+				'sysadmin',
 			),
 		),	
 		'+wikidolphinhansenwiki' => array(
@@ -4378,6 +4379,14 @@ $wgConf->settings = array(
 				'proxyunbannable' => true,
 				'torunblocked' => true,
 			),
+			'sysadmin' => array(
+				'read' => true,
+				'edit' => true,
+				'move' => true,
+				'protect' => true,
+				'delete' => true,
+				'undelete' => true,
+			),
 		),	
 		'+wikipucwiki' => array(
 			'*' => array(
@@ -4597,6 +4606,7 @@ $wgConf->settings = array(
 				'importer',
 				'uploader',
 				'template-editor',
+				'sysadmin',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
