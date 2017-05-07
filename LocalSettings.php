@@ -2542,6 +2542,7 @@ $wgConf->settings = array(
 	// Flow
 	'wmgFlowDefaultNamespaces' => array(
 		'default' => true,
+		'nationsglorywiki' => false,
 	),
 
 	// GlobalBlocking
