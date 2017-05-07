@@ -350,6 +350,7 @@ $wgConf->settings = array(
 			'wiki.grottocenter.org' => 'grottocenterwiki',
 			'wiki.kaisaga.com' => 'wikikaisagawiki',
 			'wiki.labby.io' => 'labbywiki',
+			'wiki.livesnowmap.com' => 'livesnowmapwiki',
 			'wiki.lbcomms.co.za' => 'nextlevelwikiwiki',
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.meeusen.net' => 'meeusenwiki',
@@ -4808,6 +4809,7 @@ $wgConf->settings = array(
 		'jacksonheightswiki' => 'https://wiki.jacksonheights.nyc',
 		'kstartupswiki' => 'https://wiki.besuccess.com',
 		'labbywiki' => 'https://wiki.labby.io',
+		'livesnowmapwiki' => 'https://wiki.livesnowmap.com', 
 		'make717wiki' => 'https://wiki.make717.org',
 		'meeusenwiki' => 'https://wiki.meeusen.net',
 		'metatrekwiki' => 'https://meta.trek.tk',
@@ -5411,6 +5413,7 @@ $wgConf->settings = array(
 			'ircwiki\.cf',
 			'wiki\.jacksonheights\.nyc',
 			'wiki\.labby\.io',
+			'wiki\.livesnowmap\.com'
 			'wiki\.make717\.org',
 			'meta\.trek\.tk',
 			'wiki\.lbcomms\.co.za',
