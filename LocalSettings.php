@@ -2571,6 +2571,7 @@ $wgConf->settings = array(
 	'wgUseInstantCommons' => array(
 		'default' => true,
 		'amaninfowiki' => false,
+		'armsinstitutewiki' => false,
 		'modularwiki' => false,
 		'pso2wiki' => false,
 		'sidemwiki' => false,
