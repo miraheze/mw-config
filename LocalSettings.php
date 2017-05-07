@@ -5413,7 +5413,7 @@ $wgConf->settings = array(
 			'ircwiki\.cf',
 			'wiki\.jacksonheights\.nyc',
 			'wiki\.labby\.io',
-			'wiki\.livesnowmap\.com'
+			'wiki\.livesnowmap\.com',
 			'wiki\.make717\.org',
 			'meta\.trek\.tk',
 			'wiki\.lbcomms\.co.za',
