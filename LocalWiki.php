@@ -77,6 +77,9 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['movefile'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
 }
+if ( $wgDBname === 'hlptestwiki' ) {
+	$wgGroupPermissions['*']['edit'] = false;
+}
 
 if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
