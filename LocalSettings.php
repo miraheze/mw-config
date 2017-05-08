@@ -1690,6 +1690,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'financialfindswiki' => true,
 		'extloadwiki' => true,
+		'nationglorywiki' => true,
 		'robertsnoteswiki' => true,
 		'sqlserverwiki' => true,
 		'sterbalfamilyrecipeswiki' => true,
