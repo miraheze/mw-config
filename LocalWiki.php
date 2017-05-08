@@ -191,7 +191,6 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	unset( $wgGroupPermissions['autoreview'] );
 	unset( $wgGroupPermissions['editor'] );
 	unset( $wgGroupPermissions['member'] );
-	unset( $wgGroupPermissions['suppress'] ); //Remove useless "suppressors" group defined by Flow
 }	
 
 if ( $wgDBname == 'metawiki' ) {

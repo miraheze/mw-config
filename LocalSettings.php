@@ -1237,7 +1237,6 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'votingwiki' => true,
 		'walthamstowlabourwiki' => true,
-		'wikicanadawiki' => true,
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wishcertwiki' => true,
@@ -3688,7 +3687,6 @@ $wgConf->settings = array(
 				'importer',
 				'uploader',
 				'template-editor',
-				'flow-bot',
 			),
 		),	
 		'+wikidolphinhansenwiki' => array(
@@ -4321,7 +4319,6 @@ $wgConf->settings = array(
 				'abusefilter-hidden-log' => true,
 				'abusefilter-modify-global' => true,
 				'globalblock' => true,
-				'flow-suppress' => true,
 			),
 			'researcher' => array(
 				'abusefilter-view-private' => true,
@@ -4386,14 +4383,6 @@ $wgConf->settings = array(
 				'ipblock-exempt' => true,
 				'proxyunbannable' => true,
 				'torunblocked' => true,
-			),
-			'flow-bot' => array(
-				'bot' => true,
-				'autopatrol' => true,
-				'skipcaptcha' => true,
-				'nominornewtalk' => true,
-				'autoconfirmed' => true,
-				'editsemiprotected' => true,
 			),
 		),	
 		'+wikipucwiki' => array(
@@ -4614,7 +4603,6 @@ $wgConf->settings = array(
 				'importer',
 				'uploader',
 				'template-editor',
-				'flow-bot',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
