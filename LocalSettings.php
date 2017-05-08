@@ -1094,6 +1094,7 @@ $wgConf->settings = array(
 	'wmgUseDarkVector' => array(
 		'default' => true,
 		'extloadwiki' => true,
+		'grandtheftautowiki' => true,
 	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
