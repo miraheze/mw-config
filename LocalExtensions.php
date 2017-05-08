@@ -115,6 +115,10 @@ if ( $wmgUseCustomNavBlocks) {
 	$wgCustomNavBlocksEnable = true;
 }
 
+if ( $wmgUseDarkVector ) {
+	wfLoadSkin( 'DarkVector' );
+}
+
 if ( $wmgUseDismissableSiteNotice ) {
 	wfLoadExtension( 'DismissableSiteNotice' );
 }
