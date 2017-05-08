@@ -960,7 +960,6 @@ $wgConf->settings = array(
 	'wmgUseBootstrapMediawiki' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'fablabesdswiki' => true,
 		'kstartupswiki' => true,
 	),
 	'wmgUseMSCalendar' => array(
