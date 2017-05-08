@@ -5665,7 +5665,7 @@ $wgMajorSiteNoticeID = 3;
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
  	global $wgDBname;
-	if ( $wgDBname !== 'rpgbrigadewiki' || $wgDBname !== 'wikicanadawiki' ) {
+	if ( $wgDBname !== 'rpgbrigadewiki' && $wgDBname !== 'wikicanadawiki' ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
 			<td>There is currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#Void.27s_Request_for_Stewardship">open Request for Stewardship</a> and proposal for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Changes_to_CVT_group">changes to the Counter Vandalism Team's global permissions</a>. All Miraheze users are welcome to comment on both of these requests.</td>
