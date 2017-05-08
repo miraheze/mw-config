@@ -1707,6 +1707,7 @@ $wgConf->settings = array(
 	'wmgUseRandomSelection' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'armsinstitutewiki' => true,
 		'extloadwiki' => true,
 		'humorpediawiki' => true,
 		'rpgbrigadewiki' => true,
