@@ -5351,8 +5351,8 @@ $wgConf->settings = array(
 	// TitleBlacklist 
 	'wgTitleBlacklistSources' => array(
 		'default' => array(
-			'type' => 'localpage',
-			'src'  => 'MediaWiki:Titleblacklist',
+			'type' => 'url',
+			'src'  => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
 		),
 		'meta' => array(
 			'type' => 'url',
@@ -5361,8 +5361,8 @@ $wgConf->settings = array(
 	),
 	'wgTitleBlacklistUsernameSources' => array(
 		'default' => array(
-			'type' => 'localpage',
-			'src'  => 'MediaWiki:Titleblacklist',
+			'type' => 'url',
+			'src'  => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
 		),
 		'meta' => array(
 			'type' => 'url',
