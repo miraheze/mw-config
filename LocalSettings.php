@@ -5181,6 +5181,7 @@ $wgConf->settings = array(
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
 		'kkandpwiki' => "//$wmgUploadHostname/kkandpwiki/0/09/Monogram-01.png",
 		'kosmopolitikawiki' => "//$wmgUploadHostname/kosmopolitikawiki/d/db/Kosmopolitika's_Rocket_1.3.png",
+		'kspancevowiki' => "//$wmgUploadHostname/kspancevowiki/1/1a/Krunamala.png",
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/1/14/Mediawiki-icon-135x135.png",
 		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
 		'lingnlangwiki' => "//wmgUploadHostname/lingnlangwiki/b/bc/Wiki.png",
