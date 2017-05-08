@@ -4,7 +4,7 @@ LocalSettings.php for Miraheze.
 Authors of initial version: Southparkfan, John Lewis, Orain contributors
 */
 
-# Load PrivateSettings (e.g. wgDBpassword)
+# Load PrivateSettings (e.g. fwgDBpassword)
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
 # Load global skins and extensions
@@ -1089,6 +1089,10 @@ $wgConf->settings = array(
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
 		'calexitwiki' => true,
+		'extloadwiki' => true,
+	),
+	'wmgUseDarkVector' => array(
+		'default' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseDismissableSiteNotice' => array(
