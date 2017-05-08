@@ -155,6 +155,13 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
 	$wgGroupPermissions['*']['viewmywatchlist'] = false;
+	$wgGroupPermissions['sysop']['importupload'] = false;
+ 	$wgGroupPermissions['sysop']['import'] = false;
+ 	$wgGroupPermissions['sysop']['markbotedits'] = false;
+ 	$wgGroupPermissions['sysop']['mergehistory'] = false;
+ 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+ 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
+ 	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
 	$wgGroupPermissions['sysop']['override-antispoof'] = false;
 	$wgGroupPermissions['sysop']['editusercss'] = false;
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
