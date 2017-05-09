@@ -2485,7 +2485,7 @@ $wgConf->settings = array(
 		'pruebawiki' => array(
 			NS_MAIN,
 			NS_FILE,
-			NS_TEMPLATE,
+			NS_PROJECT,
 		),
 		'trexwiki' => array(
 			NS_ARTIKEL,
@@ -2495,6 +2495,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
+		'pruebawiki' => true,
 		'wikicanadawiki' => true,
 	),
 	'wmgFlaggedRevsTags' => array(
@@ -2534,6 +2535,7 @@ $wgConf->settings = array(
 			'neverBlocked' => true,
 			'maxRevertedEditRatio'=> .05,
 		),
+		'pruebawiki' => false,
 	),
 	'wmgFlaggedRevsAutoReview' => array(
 		'default' => true,
@@ -3593,7 +3595,11 @@ $wgConf->settings = array(
 				'sysop',
 				'confirmed',
 				'autopatrolled',
+				'autoreview',
 				'rollbacker',
+				'editor',
+				'reviewer',
+				'autoreview',
 			),
 			'consul' => array(
 				'bot',
@@ -3603,7 +3609,10 @@ $wgConf->settings = array(
 				'sysop',
 				'confirmed',
 				'autopatrolled',
+				'autoreview',
 				'rollbacker',
+				'editor',
+				'reviewer',
 			),
 		),
 		'+quantumwiki' => array(
@@ -4099,11 +4108,6 @@ $wgConf->settings = array(
 			),
 		),
 		'+pruebawiki' => array(
-			'sysop' => array(
-				'autoreview' => true,
-				'review' => true,
-				'validate' => true,
-			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 				'nuke' => true,
@@ -4122,6 +4126,10 @@ $wgConf->settings = array(
 				'ipblock-exempt' => true,
 				'proxyunbannable' => true,
 				'torunblocked' => true,
+				'autoreview' => true,
+				'review' => true,
+				'validate' => true,
+				'stablesettings' => true,
 			),
 			'testgroup' => array(
 				'read' => true,
@@ -4509,6 +4517,12 @@ $wgConf->settings = array(
 		'+pruebawiki' => array(
 			'bureaucrat' => array(
 				'bot',
+				'confirmed',
+				'rollbacker',
+				'autopatrolled',
+				'autoreview',
+				'editor',
+				'reviewer',
 				'testgroup',
 			),
 			'consul' => array(
@@ -4518,7 +4532,10 @@ $wgConf->settings = array(
 				'sysop',
 				'confirmed',
 				'autopatrolled',
+				'autoreview',
 				'rollbacker',
+				'editor',
+				'reviewer',
 			),
 		),
 		'+quantumwiki' => array(
