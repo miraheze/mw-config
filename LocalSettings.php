@@ -1757,6 +1757,7 @@ $wgConf->settings = array(
 		'emulationwiki' => true,
 		'extloadwiki' => true,
 		'lgproduktsupportwiki' => true,
+		'tymyrddinwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
