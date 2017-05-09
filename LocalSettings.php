@@ -5548,22 +5548,22 @@ $wgConf->settings = array(
 	
 	//WhoIsWatching
 	$whoiswatching_nametype => array(
-		'default' => "RealName";
-		'wikicanadawiki' => "UserName";
+		'default' => "RealName",
+		'wikicanadawiki' => "UserName",
 	),
 	$whoiswatching_allowaddingpeople = array(
-		'default' => false;
+		'default' => false,
 		'wikicanadawiki' => true,
 	),
 	$whoiswatching_showifzero => array(
-		'default' => true;
+		'default' => true,
 	),
 	$whoiswatching_showwatchingusers => array(
-		'default' => false;
+		'default' => false,
 		'wikicanadawiki' => true,
 	),
 	$whoiswatching_maxPicklistUsers => array(
-		'default' => 10;
+		'default' => 10,
 	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
