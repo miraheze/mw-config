@@ -5546,23 +5546,23 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => 'freenodeChat',
 	),
 	
-	//WhoIsWatching
-	$whoiswatching_nametype => array(
+	// WhoIsWatching
+	'whoiswatching_nametype' => array(
 		'default' => "RealName",
 		'wikicanadawiki' => "UserName",
 	),
-	$whoiswatching_allowaddingpeople = array(
+	'whoiswatching_allowaddingpeople' => array(
 		'default' => false,
 		'wikicanadawiki' => true,
 	),
-	$whoiswatching_showifzero => array(
+	'whoiswatching_showifzero' => array(
 		'default' => true,
 	),
-	$whoiswatching_showwatchingusers => array(
+	'whoiswatching_showwatchingusers' => array(
 		'default' => false,
 		'wikicanadawiki' => true,
 	),
-	$whoiswatching_maxPicklistUsers => array(
+	'whoiswatching_maxPicklistUsers' => array(
 		'default' => 10,
 	),
 
