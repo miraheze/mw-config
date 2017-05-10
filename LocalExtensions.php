@@ -483,7 +483,7 @@ if ( $wmgUseTemplateSandbox ) {
 }
 
 if ( $wmgUseTimeless ) {
-	require_once( "$IP/skins/Timeless/Timeless.php" );
+	wfLoadSkin( 'Timeless' );
 }
 
 if ( $wmgUseTranslate ) {
