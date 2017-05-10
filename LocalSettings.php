@@ -4114,6 +4114,7 @@ $wgConf->settings = array(
 				'autopatrol' => true,
 				'autoreview' => true,
 				'skipcaptcha' => true,
+			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 				'nuke' => true,
