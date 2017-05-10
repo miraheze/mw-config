@@ -5135,6 +5135,7 @@ $wgConf->settings = array(
 		'bchwiki' => "//$wmgUploadHostname/bchwiki/c/c0/Logo_135.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/2/22/Main_page.PNG",
 		'beatstationwiki' => "//$wmgUploadHostname/beatstationwiki/d/da/Wiki_logo2.png",
+		'berlinowiki' => "//$wmgUploadHostname/berlinowiki/b/be/Berlino_new_logo.png",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/0/0e/BetaPurpleLogo.png",
 		'biblicalwikiwiki' => "//$wmgUploadHostname/biblicalwikiwiki/e/e2/WikiLogo.svg",
 		'bigforestwiki' => "//$wmgUploadHostname/bigforestwiki/f/f0/Logo_Candidate.png",
