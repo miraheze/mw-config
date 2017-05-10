@@ -179,6 +179,7 @@ $wgConf->settings = array(
 			'tag' => true,
 		),
 		'wikicanadawiki' => array(
+			'degroup' => false,
 			'rangeblock' => true,
 		),
 	),
