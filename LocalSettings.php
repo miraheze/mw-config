@@ -1932,6 +1932,7 @@ $wgConf->settings = array(
 	'wmgUseTimeless' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'grandtheftautowiki' => true,
 	),
 	'wmgUseTitleKey' => array(
 		'default' => false,
