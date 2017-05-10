@@ -3587,9 +3587,6 @@ $wgConf->settings = array(
 		),
 		'+pruebawiki' => array(
 			'sysop' => array(
-				'confirmed',
-				'rollbacker',
-				'autopatrolled',
 				'autoreview',
 				'editor',
 				'reviewer',
@@ -4522,9 +4519,6 @@ $wgConf->settings = array(
 		),
 		'+pruebawiki' => array(
 			'sysop' => array(
-				'confirmed',
-				'rollbacker',
-				'autopatrolled',
 				'autoreview',
 				'editor',
 				'reviewer',
