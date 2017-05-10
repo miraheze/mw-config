@@ -482,6 +482,10 @@ if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 }
 
+if ( $wmgUseTimeless ) {
+	require_once( "$IP/skins/Timeless/Timeless.php" );
+}
+
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
 	require_once( "$IP/extensions/Translate/Translate.php" );
