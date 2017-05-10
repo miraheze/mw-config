@@ -1929,6 +1929,10 @@ $wgConf->settings = array(
 		'geirpediawiki' => true,
 		'tymyrddinwiki' => true,
 	),
+	'wmgUseTimedMediaHandler' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseTitleKey' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
