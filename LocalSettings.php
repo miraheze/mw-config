@@ -1929,7 +1929,7 @@ $wgConf->settings = array(
 		'geirpediawiki' => true,
 		'tymyrddinwiki' => true,
 	),
-	'wmgUseTimedMediaHandler' => array(
+	'wmgUseTimeless' => array(
 		'default' => false,
 		'extloadwiki' => true,
 	),
