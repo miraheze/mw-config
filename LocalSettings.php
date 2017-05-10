@@ -3594,6 +3594,7 @@ $wgConf->settings = array(
 				'editor',
 				'reviewer',
 				'testgroup',
+			),
 			'bureaucrat' => array(
 				'bureaucrat',
 				'sysop',
