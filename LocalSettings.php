@@ -2539,6 +2539,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsAutoReview' => array(
 		'default' => true,
+		'pruebawiki' => false,
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
@@ -4108,6 +4109,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+pruebawiki' => array(
+			'autopatrolled' => array(
+				'patrol' => true,
+				'autopatrol' => true,
+				'autoreview' => true,
+				'skipcaptcha' => true,
 			'bureaucrat' => array(
 				'bureaucrat' => true,
 				'nuke' => true,
@@ -4124,12 +4130,7 @@ $wgConf->settings = array(
 				'validate' => true,
 				'stablesettings' => true,
 				'ipblock-exempt' => true,
-				'proxyunbannable' => true,
 				'torunblocked' => true,
-				'autoreview' => true,
-				'review' => true,
-				'validate' => true,
-				'stablesettings' => true,
 			),
 			'testgroup' => array(
 				'read' => true,
