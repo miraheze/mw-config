@@ -2540,7 +2540,6 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsAutoReview' => array(
 		'default' => true,
-		'pruebawiki' => false,
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
