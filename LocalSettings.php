@@ -2484,8 +2484,8 @@ $wgConf->settings = array(
 			NS_PROJECT,
 		),
 		'pruebawiki' => array(
-			NS_MAIN,
 			NS_FILE,
+			NS_PROJECT,
 			NS_TEMPLATE,
 		),
 		'trexwiki' => array(
@@ -2496,6 +2496,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
+		'pruebawiki' => true,
 		'wikicanadawiki' => true,
 	),
 	'wmgFlaggedRevsTags' => array(
@@ -2535,9 +2536,11 @@ $wgConf->settings = array(
 			'neverBlocked' => true,
 			'maxRevertedEditRatio'=> .05,
 		),
+		'pruebawiki' => false,
 	),
 	'wmgFlaggedRevsAutoReview' => array(
 		'default' => true,
+		'pruebawiki' => false,
 	),
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
@@ -3594,7 +3597,11 @@ $wgConf->settings = array(
 				'sysop',
 				'confirmed',
 				'autopatrolled',
+				'autoreview',
 				'rollbacker',
+				'editor',
+				'reviewer',
+				'autoreview',
 			),
 			'consul' => array(
 				'bot',
@@ -3604,7 +3611,10 @@ $wgConf->settings = array(
 				'sysop',
 				'confirmed',
 				'autopatrolled',
+				'autoreview',
 				'rollbacker',
+				'editor',
+				'reviewer',
 			),
 		),
 		'+quantumwiki' => array(
@@ -4100,10 +4110,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+pruebawiki' => array(
-			'sysop' => array(
+			'autopatrolled' => array(
+				'patrol' => true,
+				'autopatrol' => true,
 				'autoreview' => true,
-				'review' => true,
-				'validate' => true,
+				'skipcaptcha' => true,
 			),
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -4121,7 +4132,6 @@ $wgConf->settings = array(
 				'validate' => true,
 				'stablesettings' => true,
 				'ipblock-exempt' => true,
-				'proxyunbannable' => true,
 				'torunblocked' => true,
 			),
 			'testgroup' => array(
@@ -4510,6 +4520,12 @@ $wgConf->settings = array(
 		'+pruebawiki' => array(
 			'bureaucrat' => array(
 				'bot',
+				'confirmed',
+				'rollbacker',
+				'autopatrolled',
+				'autoreview',
+				'editor',
+				'reviewer',
 				'testgroup',
 			),
 			'consul' => array(
@@ -4519,7 +4535,10 @@ $wgConf->settings = array(
 				'sysop',
 				'confirmed',
 				'autopatrolled',
+				'autoreview',
 				'rollbacker',
+				'editor',
+				'reviewer',
 			),
 		),
 		'+quantumwiki' => array(
