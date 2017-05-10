@@ -2483,11 +2483,6 @@ $wgConf->settings = array(
 			NS_HELP,
 			NS_PROJECT,
 		),
-		'pruebawiki' => array(
-			NS_FILE,
-			NS_PROJECT,
-			NS_TEMPLATE,
-		),
 		'trexwiki' => array(
 			NS_ARTIKEL,
 			NS_FILE,
@@ -3591,6 +3586,14 @@ $wgConf->settings = array(
 			),
 		),
 		'+pruebawiki' => array(
+			'sysop' => array(
+				'confirmed',
+				'rollbacker',
+				'autopatrolled',
+				'autoreview',
+				'editor',
+				'reviewer',
+				'testgroup',
 			'bureaucrat' => array(
 				'bureaucrat',
 				'sysop',
@@ -4517,6 +4520,15 @@ $wgConf->settings = array(
 			),
 		),
 		'+pruebawiki' => array(
+			'sysop' => array(
+				'confirmed',
+				'rollbacker',
+				'autopatrolled',
+				'autoreview',
+				'editor',
+				'reviewer',
+				'testgroup',
+			),
 			'bureaucrat' => array(
 				'bot',
 				'confirmed',
