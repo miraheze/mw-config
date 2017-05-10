@@ -2209,6 +2209,7 @@ $wgConf->settings = array(
 		'ricwiki' => true,
 		'robloxscripterswiki' => true,
 		'rocketleaguequebecwiki' => true,
+		'rootsandlimbswiki' => true,
 		'rpcharacterswiki' => true,
 		'safiriawiki' => true,
 		'savagewikiwiki' => true,
