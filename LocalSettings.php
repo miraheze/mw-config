@@ -3715,6 +3715,7 @@ $wgConf->settings = array(
 				'importer',
 				'uploader',
 				'template-editor',
+				'account-creator',
 			),
 		),	
 		'+wikidolphinhansenwiki' => array(
@@ -4412,6 +4413,12 @@ $wgConf->settings = array(
 				'proxyunbannable' => true,
 				'torunblocked' => true,
 			),
+			'account-creator' => array(
+				'override-antispoof' => true,
+				'noratelimit' => true,
+				'tboverride' => true,
+				'tboverride-account' => true,
+			),
 		),	
 		'+wikipucwiki' => array(
 			'*' => array(
@@ -4646,6 +4653,7 @@ $wgConf->settings = array(
 				'importer',
 				'uploader',
 				'template-editor',
+				'account-creator',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
