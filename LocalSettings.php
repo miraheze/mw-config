@@ -5587,26 +5587,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => 'freenodeChat',
 		'wisdomsandboxwiki' => 'freenodeChat',
 	),
-	
-	// WhoIsWatching
-	'whoiswatching_nametype' => array(
-		'default' => "RealName",
-		'wikicanadawiki' => "UserName",
-	),
-	'whoiswatching_allowaddingpeople' => array(
-		'default' => false,
-		'wikicanadawiki' => true,
-	),
-	'whoiswatching_showifzero' => array(
-		'default' => true,
-	),
-	'whoiswatching_showwatchingusers' => array(
-		'default' => false,
-		'wikicanadawiki' => true,
-	),
-	'whoiswatching_maxPicklistUsers' => array(
-		'default' => 10,
-	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
