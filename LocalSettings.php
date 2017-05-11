@@ -2318,7 +2318,6 @@ $wgConf->settings = array(
 	'wmgUseWhoIsWatching' => array(
 		'default' => false,
 		'extloadwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseWidgets' => array(
 		'default' => false,
