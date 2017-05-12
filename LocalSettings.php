@@ -1900,6 +1900,7 @@ $wgConf->settings = array(
 		'nationstateswiki' => true,
 		'thelonsdalebattalionwiki' => true,
 		'russiawatchwiki' => true,
+		'sidemwiki' => true,
 		'stellachronicawiki' => true,
 		'takethatwikiwiki' => true,
 		'universebuildwiki' => true,
