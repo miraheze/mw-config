@@ -828,7 +828,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'wikicanadawiki' => false,
 	),
-	'wgEchoUseJobQueueue' => array(
+	'wgEchoUseJobQueue' => array(
 		'default' => true,
 	),
 	'wgEchoSharedTrackingDB' => array(
