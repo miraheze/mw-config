@@ -5528,24 +5528,30 @@ $wgConf->settings = array(
 		'default' => array(
 			NS_MAIN => true,
 			NS_USER => true,
-		 ),
-		 '+calexitwiki' => array(
-		 	NS_DRAFT => true,
-		 	NS_HELP => true,
-		 	NS_HISTORICAL_TIMELINE => true,
-		 	NS_OPINION => true,
-		 	NS_TIMELINE => true,
+		),
+		'+calexitwiki' => array(
+			NS_DRAFT => true,
+			NS_HELP => true,
+			NS_HISTORICAL_TIMELINE => true,
+			NS_OPINION => true,
+			NS_TIMELINE => true,
  			NS_PORTAL => true,
-		 ),
+		),
 		'+coldbloodedwiki' => array(
-		 	NS_PROJECT => true,
-		 ),
-		 '+espiralwiki' => array(
-		 	NS_PROJECT => true,
-		 ),
-		 '+fbwikiwiki' => array(
-		 	NS_PROJECT => true,
-		 ),
+			NS_PROJECT => true,
+		),
+		'+espiralwiki' => array(
+			NS_PROJECT => true,
+		),
+		'+fbwikiwiki' => array(
+			NS_PROJECT => true,
+		),
+		'oncprojectwiki' => array(
+			NS_PROJECT => true,
+			NS_TEMPLATE => true,
+			NS_CATEGORY => true,
+			NS_FILE => true,
+		),
 		'+wisdomwikiwiki' => array(
 			NS_LCS => true,
 			NS_MEDI => true,
