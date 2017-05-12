@@ -1186,6 +1186,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'pruebawiki' => true,
+		'styleguidesheetwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
 		'wikicanadawiki' => true,
