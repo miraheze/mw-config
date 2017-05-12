@@ -3716,6 +3716,7 @@ $wgConf->settings = array(
 				'uploader',
 				'template-editor',
 				'account-creator',
+				'massmessage-sender',
 			),
 		),	
 		'+wikidolphinhansenwiki' => array(
@@ -4419,6 +4420,9 @@ $wgConf->settings = array(
 				'tboverride' => true,
 				'tboverride-account' => true,
 			),
+			'massmessage-sender' => array(
+				'massmessage' => true,
+			),
 		),	
 		'+wikipucwiki' => array(
 			'*' => array(
@@ -4654,6 +4658,7 @@ $wgConf->settings = array(
 				'uploader',
 				'template-editor',
 				'account-creator',
+				'massmessage-sender',
 			),
 		),
 		'+wikidolphinhansenwiki' => array(
