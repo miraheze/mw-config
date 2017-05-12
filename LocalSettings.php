@@ -5149,6 +5149,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => "//$wmgUploadHostname/bigforestwiki/f/f0/Logo_Candidate.png",
 		'bloodstainedwiki' => "//$wmgUploadHostname/bloodstainedwiki/7/71/Logo_Icon.png",
 		'bqwiki' => "//$wmgUploadHostname/bqwiki/6/6d/Bq-wiki.svg",
+		'breedersofthenephelymwiki' => "//$wmgUploadHostname/breedersofthenephelymwiki/4/49/WindowsIcon.png",
 		'burnoutwiki' => "//$wmgUploadHostname/burnoutwiki/0/0b/BURNOUTWIKI_LOGO_135px.png",
 		'bzdetopediawiki' => "//$wmgUploadHostname/bzdetopediawiki/b/bc/Wiki.png",
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
