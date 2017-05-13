@@ -936,7 +936,7 @@ $wgConf->settings = array(
 		'trexwiki' => true,
 	),
 	'wmgUseAutoCreateCategoryPages' => array(
-		'default' => false, // DO NOT enable on wikis that have more than 500 categories
+		'default' => false, // DO NOT enable on wikis that have more than 500 categories. See T1230
 		'ayrshirewiki' => true,
 		'extloadwiki' => true,
 		'knowledgewiki' => true,
@@ -1519,7 +1519,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewSignupPage' => array(
 		'default' => false,
-		'extloadwiki' => false, // DO NOT ENABLE !! This extension uses ShoutWiki notices and is not adapted for Miraheze --Reception123
+		'extloadwiki' => false, // DO NOT ENABLE !! This extension uses ShoutWiki notices and is not adapted for Miraheze. See T761#22421 --Reception123
 	),
 	'wmgUseNewsletter' => array(
 		'default' => false,
@@ -1932,7 +1932,7 @@ $wgConf->settings = array(
 		'geirpediawiki' => true,
 		'tymyrddinwiki' => true,
 	),
-	'wmgUseTimeless' => array( // Internal Errors
+	'wmgUseTimeless' => array( // Internal Errors. See T1746. --Reception123
 		'default' => false,
 		'corydoctorowwiki' => false,
 		'extloadwiki' => true,
@@ -2349,7 +2349,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
-		'default' => false, // disables captcha on all actions
+		'default' => false, // DO NOT ENABLE. disables captcha on all actions. See T1124 (upstream) --Reception123
 	//	'applebranchwiki' => true,
 	//	'alwikiwiki' => true,
 	//	'applewikiwiki' => true,
