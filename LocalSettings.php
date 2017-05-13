@@ -1932,11 +1932,11 @@ $wgConf->settings = array(
 		'geirpediawiki' => true,
 		'tymyrddinwiki' => true,
 	),
-	'wmgUseTimeless' => array(
+	'wmgUseTimeless' => array( // Internal Errors
 		'default' => false,
-		'corydoctorowwiki' => true,
+		'corydoctorowwiki' => false,
 		'extloadwiki' => true,
-		'grandtheftautowiki' => true,
+		'grandtheftautowiki' => false,
 	),
 	'wmgUseTitleKey' => array(
 		'default' => false,
