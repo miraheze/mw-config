@@ -1933,6 +1933,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTimeless' => array(
 		'default' => false,
+		'corydoctorowwiki' => true,
 		'extloadwiki' => true,
 		'grandtheftautowiki' => true,
 	),
