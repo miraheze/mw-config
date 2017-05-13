@@ -1365,6 +1365,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'enmarchewiki' => true,
 		'extloadwiki' => true,
+		'jacksonheightswiki' => true,
 		'jayuwikiwiki' => true,
 		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
