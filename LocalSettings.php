@@ -247,6 +247,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'nanatsunotaizaiwiki' => true,
+		'raymanspeedrunwiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyoghoulwiki' => true,
 	),
@@ -2210,6 +2211,7 @@ $wgConf->settings = array(
 		'purpanrangueiluswiki' => true,
 		'qwertywiki' => true,
 		'rawdatawiki' => true,
+		'raymanspeedrunwiki' => true,
 		'revitwiki' => true,
 		'ricwiki' => true,
 		'robloxscripterswiki' => true,
@@ -3414,6 +3416,9 @@ $wgConf->settings = array(
 			NS_TECH => true,
 		),
 		'+partupwiki' => array(
+			NS_MAIN => true,
+		),
+		'+raymanspeedrunwiki' => array(
 			NS_MAIN => true,
 		),
 		'+reviwiki' => array(
