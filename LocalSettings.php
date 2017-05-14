@@ -832,6 +832,9 @@ $wgConf->settings = array(
 	'wgEchoUseJobQueue' => array(
 		'default' => true,
 	),
+	'wgEchoSharedTrackingCluster' => array(
+		'default' => 'echo',
+	),
 	'wgEchoSharedTrackingDB' => array(
 		'default' => 'metawiki',
 	),

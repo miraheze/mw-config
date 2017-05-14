@@ -32,6 +32,11 @@ $wgLBFactoryConf = array(
 		'db2' => '81.4.125.112',
 		'db3' => '81.4.127.157',
 	),
+	'externalLoads' => array(
+		'echo' => array(
+			'db2' => 1, // should echo c1
+		),
+	),
 	'readOnlyBySection' => array(
 	//	'DEFAULT' => '',
 	//	'c1' => 'Maintenance ongoing on the database server.',
