@@ -850,6 +850,7 @@ $wgConf->settings = array(
 		'bmedwiki' => true,
 		'claneuphoriawiki' => true,
 		'extloadwiki' => true,
+		'metaautonomywiki' => true,
 		'mindgearwiki' => true,
 		'ndnwiki' => true,
 		'westmarcheswiki' => true,
