@@ -5413,21 +5413,21 @@ $wgConf->settings = array(
 	'wgTitleBlacklistSources' => array(
 		'default' => array(
 			'type' => 'url',
-			'src'  => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
+			'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
 		),
 		'meta' => array(
 			'type' => 'url',
-			'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
+			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
 		),
 	),
 	'wgTitleBlacklistUsernameSources' => array(
 		'default' => array(
 			'type' => 'url',
-			'src'  => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
+			'src'  => 'https://meta.miraheze.org/w/index.php?title=Titleblacklist&action=raw',
 		),
 		'meta' => array(
 			'type' => 'url',
-			'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
+			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Title_blacklist&action=raw',
 		),
 	),
 
