@@ -3190,6 +3190,10 @@ $wgConf->settings = array(
 			NS_THE_LEGEND_OF_ZELDA_TALK => 'The_Legend_of_Zelda_talk',
 			NS_CIVILIZATION_IV => 'Civilization_IV',
 			NS_CIVILIZATION_IV_TALK => 'Civilization_IV_talk',
+			NS_DRAFT => 'Draft',
+			NS_DRAFT_TALK => 'Draft_talk',
+			NS_OFFICIAL => 'Official',
+			NS_OFFICIAL_TALK => 'Official_talk',
 		),
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
@@ -4088,11 +4092,6 @@ $wgConf->settings = array(
 			'confirmed' => array(
 				'move' => true,
 				'createpage' => true,
-			),
-			'cvt' => array(
-				'abusefilter-modify-global' => true,
-				'centralauth-lock' => true,
-				'globalblock' => true,
 			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
@@ -5754,7 +5753,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	if ( $wgDBname !== 'rpgbrigadewiki' && $wgDBname !== 'wikicanadawiki' ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>There is currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#Void.27s_Request_for_Stewardship">open Request for Stewardship</a>. All Miraheze users are welcome to comment.</td>
+			<td>There is currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#Void.27s_Request_for_Stewardship">open Request for Stewardship</a> and proposal for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Changes_to_CVT_group">changes to the Counter Vandalism Team's global permissions</a>. All Miraheze users are welcome to comment on both of these requests.</td>
 			</tr></tbody></table>
 EOF;
 	}
