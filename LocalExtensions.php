@@ -519,10 +519,6 @@ if ( $wmgUseTitleKey ) {
 	wfLoadExtension( 'TitleKey' );
 }
 
-if ( $wmgUseTorBlock ) {
-	wfLoadExtension( 'TorBlock' );
-}
-
 if ( $wmgUseUserWelcome ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
     require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
