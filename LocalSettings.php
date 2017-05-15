@@ -3584,6 +3584,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+metawiki' => array(
+			'sysop' => array(
+				'cvt',
+			),
+		),
 		'+trexwiki' => array(
 			'co' => array(
 				'ceo',
@@ -4109,6 +4114,11 @@ $wgConf->settings = array(
 			'wikicreator' => array(
 				'createwiki' => true,
 			),
+			'cvt' => array(
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'globalblock' => true,
+			),
 		),
 		'+pgnwikiwiki' => array(
 			'sysop' => array(
@@ -4545,6 +4555,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+metawiki' => array(
+			'sysop' => array(
+				'cvt',
 			),
 		),
 		'+pruebawiki' => array(
