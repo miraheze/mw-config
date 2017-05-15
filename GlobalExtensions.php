@@ -35,6 +35,7 @@ wfLoadExtensions( [
 	'Timeline',
 	'Thanks',
 	'TitleBlacklist',
+	'TorBlock',
 	'WikiEditor',
 	'cldr'
 ] );
