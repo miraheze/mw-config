@@ -4089,6 +4089,11 @@ $wgConf->settings = array(
 				'move' => true,
 				'createpage' => true,
 			),
+			'cvt' => array(
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'globalblock' => true,
+			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
