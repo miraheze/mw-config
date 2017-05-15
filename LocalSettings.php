@@ -3190,6 +3190,10 @@ $wgConf->settings = array(
 			NS_THE_LEGEND_OF_ZELDA_TALK => 'The_Legend_of_Zelda_talk',
 			NS_CIVILIZATION_IV => 'Civilization_IV',
 			NS_CIVILIZATION_IV_TALK => 'Civilization_IV_talk',
+			NS_DRAFT => 'Draft',
+			NS_DRAFT_TALK => 'Draft_talk',
+			NS_OFFICIAL => 'Official',
+			NS_OFFICIAL_TALK => 'Official_talk',
 		),
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
