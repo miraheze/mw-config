@@ -1952,9 +1952,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
-	'wmgUseTorBlock' => array(
-		'default' => true,
-	),
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'3dicwiki' => true,
