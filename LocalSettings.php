@@ -4417,7 +4417,6 @@ $wgConf->settings = array(
 				'editusercss' => true,
 				'edituserjs' => true,
 				'protectsite' => true,
-				'oathauth-enable' => true,
 			),
 			'user' => array(
 				'editmyoptions' => true,
