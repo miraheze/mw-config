@@ -1360,6 +1360,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'marcoschriekwiki' => true,
 		'ndnwiki' => true,
+		'raymanspeedrunwiki' => true,
 		'rpgbrigadewiki' => true,
 		'secondcirclewiki' => true,
 	),
