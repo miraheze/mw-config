@@ -5136,6 +5136,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/2/26/Favicon.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
+		'nutscriptwiki' => "//$wmgUploadHostname/nutscriptwiki/6/64/Favicon.ico",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
@@ -5393,6 +5394,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/f/fb/Logo_finito_trans.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
+		'nutscriptwiki' => "//$wmgUploadHostname/nutscriptwiki/2/26/Nutscript.png",
 	),
 
 	// Timezone
