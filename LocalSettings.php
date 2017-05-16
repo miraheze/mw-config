@@ -4415,6 +4415,10 @@ $wgConf->settings = array(
 				'editusercss' => true,
 				'edituserjs' => true,
 				'protectsite' => true,
+				'flow-hide' => true,
+				'flow-lock' => true,
+				'flow-create-board' => true,
+				'flow-edit-post' => true,
 			),
 			'user' => array(
 				'editmyoptions' => true,
