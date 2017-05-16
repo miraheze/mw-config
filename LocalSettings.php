@@ -2049,6 +2049,7 @@ $wgConf->settings = array(
 		'biskwiki' => true,
 		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
+		'bpawiki' => true,
 		'braindumpwiki' => true,
 		'breedersofthenephelymwiki' => true,
 		'brynda1231wiki' => true,
