@@ -3335,6 +3335,9 @@ $wgConf->settings = array(
 			NS_TEMPLATE => array(
 				'templateeditor',
 			),
+			NS_MODULE => array(
+				'templateeditor',
+			),
 		),
 	),
 	'+wgNamespacesToBeSearchedDefault' => array(
