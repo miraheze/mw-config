@@ -5079,6 +5079,7 @@ $wgConf->settings = array(
 		'nationsglorywiki' => "//$wmgUploadHostname/nationsglorywiki/0/04/NationsGlory.png",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/5/5b/Wiki-favicon.png",
 		'nonbinarywiki' => "//$wmgUploadHostname/nonbinarywiki/5/53/Wikiicon.ico",
+		'nutscriptwiki' => "//$wmgUploadHostname/nutscriptwiki/6/64/Favicon.ico",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/2/26/Favicon.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/d/de/OneAgency_Favicon.png",
 		'openonderwijswiki' => "//$wmgUploadHostname/openonderwijswiki/c/ca/Ooo_logo_square_favicon.svg",
@@ -5136,7 +5137,6 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/2/26/Favicon.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
-		'nutscriptwiki' => "//$wmgUploadHostname/nutscriptwiki/6/64/Favicon.ico",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
@@ -5286,6 +5286,7 @@ $wgConf->settings = array(
 		'nanopediawiki' => "//$wmgUploadHostname/nanopediawiki/c/c9/Logo.png",
 		'nonbinarywiki' => "//$wmgUploadHostname/nonbinarywiki/a/a9/Wikilogo.svg",
 		'notezenwiki' => "//$wmgUploadHostname/notezenwiki/c/c9/Logo.png",
+		'nutscriptwiki' => "//$wmgUploadHostname/nutscriptwiki/2/26/Nutscript.png",
 		'oneagencydunedinwiki' => "//$wmgUploadHostname/oneagencydunedinwiki/e/eb/OneAgency_WikiLogo_Black.png",
 		'ontariobrasswiki' => "//$wmgUploadHostname/ontariobrasswiki/0/09/Ontariobrass.png",
 		'openconstitutionwiki' => "//$wmgUploadHostname/openconstitutionwiki/4/40/LOGO.png",
@@ -5394,7 +5395,6 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/f/fb/Logo_finito_trans.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
-		'nutscriptwiki' => "//$wmgUploadHostname/nutscriptwiki/2/26/Nutscript.png",
 	),
 
 	// Timezone
