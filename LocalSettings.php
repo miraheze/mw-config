@@ -3338,6 +3338,9 @@ $wgConf->settings = array(
 			NS_MODULE => array(
 				'templateeditor',
 			),
+			NS_PROJECT => array(
+				'editprojectpage',
+			),
 		),
 	),
 	'+wgNamespacesToBeSearchedDefault' => array(
@@ -4418,6 +4421,7 @@ $wgConf->settings = array(
 				'editusercss' => true,
 				'edituserjs' => true,
 				'protectsite' => true,
+				'editprojectpage' => true,
 			),
 			'user' => array(
 				'editmyoptions' => true,
