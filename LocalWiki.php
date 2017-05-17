@@ -183,6 +183,10 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['user']['torunblocked'] = false;
 	$wgGroupPermissions['checkuser']['checkuser'] = false;
 	$wgGroupPermissions['checkuser']['checkuser-log'] = false;
+	$wgGroupPermissions['steward']['globalblock'] = false;
+	$wgGroupPermissions['steward']['centralauth-lock'] = false;
+	$wgGroupPermissions['steward']['centralauth-oversight'] = false;
+	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
 	$wgAddGroups['sysop'] = array();
 	$wgRemoveGroups['sysop'] = array();
 	$wgAddGroups['bureaucrat'] = array();
