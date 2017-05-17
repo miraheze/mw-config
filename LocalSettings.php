@@ -403,6 +403,11 @@ $wgConf->settings = array(
 	'wgCommentsDefaultAvatar' => array(
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	),
+	
+	 // Contribution Scores
+	 'wgContribScoreDisableCache' => array(
+ 		 'default' => true,
+ 	 ),
 
 	// CreateWiki
 	'wmgCreateWikiSQLfiles' => array(
@@ -1050,6 +1055,10 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'christipediawiki' => true,
 		'fablabesdswiki' => true,
+		'extloadwiki' => true,
+	),
+	'wmgUseContributionScores' => array(
+		'default' => false,
 		'extloadwiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
