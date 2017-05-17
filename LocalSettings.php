@@ -2884,6 +2884,7 @@ $wgConf->settings = array(
 			'extloadwiki',
 			'loginwiki',
 			'lothuialethwiki',
+			'taliaferrowiki',
 			'testwiki',
 			'wrightwiki',
 			'wright000wiki',
