@@ -82,6 +82,11 @@ if ( $wmgUseContactPage ) {
 	require_once( "/srv/mediawiki/config/ContactPage.php" );
 }
 
+if ( $wmgUseContributionScores ) {
+	require_once( "$IP/extensions/ContributionScores/ContributionScores.php" );
+}
+
+
 if ( $wmgUseCookieWarning ) {
 	wfLoadExtension( 'CookieWarning' );
 	// Geolocate here to determine to whom to show the cookie warning
