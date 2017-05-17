@@ -2190,6 +2190,7 @@ $wgConf->settings = array(
 		'nanatsunotaizaiwiki' => true,
 		'nationstateswiki' => true,
 		'ndnwiki' => true,
+		'nenawikiwiki' => true,
 		'neuromotorwiki' => true,
 		'neuronpediawiki' => true,
 		'newarkmanorwiki' => true,
