@@ -795,6 +795,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+wikicanadawiki' => array(
+			'user' => true,
+		),
 		'+wisdomwikiwiki' => array(
 			'anon' => true,
 			'user' => true,
