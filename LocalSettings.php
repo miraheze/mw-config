@@ -995,7 +995,6 @@ $wgConf->settings = array(
 		'default' => true,
 		'whentheycrywiki' => false,
 		'chocowiki' => true,
-
 	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
@@ -1430,6 +1429,8 @@ $wgConf->settings = array(
 		'izanagiwiki' => false,
 		'ndnwiki' => false,
 		'permanentfuturelabwiki' => false,
+		'reviwiki' => false,
+		'reviwikiwiki' => false,
 	),
 	'wmgUseModernSkylight' => array(
 		'default' => false,
@@ -1984,7 +1985,6 @@ $wgConf->settings = array(
 		'pgnwikiwiki' => true,
 		'robloxscripterswiki' => true,
 		'rpgbrigadewiki' => true,
-		'rtwiki' => true,
 		'spiralwiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
@@ -5449,7 +5449,7 @@ $wgConf->settings = array(
 		'lunfengwiki' => 'Asia/Taipei',
 		'ontariobrasswiki' => 'America/Toronto',
 		'reviwiki' => 'Asia/Seoul',
-		'rtwiki' => 'Asia/Seoul',
+		'reviwikiwiki' => 'Asia/Seoul',
 		'webtoonwiki' => 'Asia/Seoul',
 	),
 	
@@ -5638,7 +5638,6 @@ $wgConf->settings = array(
 		'fbwikiwiki' => array('visualeditor'),
 		'spiralwiki' => array('visualeditor'),
 	),
-
 
 	// WebChat config
 	'wmgWebChatServer' => array(
