@@ -728,6 +728,9 @@ $wgConf->settings = array(
 			'sysop' => true,
 			'editor' => true,
 		),
+		'+reviwikiwiki' => array(
+			'anon' => true,
+		),
 		'+ricwiki' => array(
 			'anon' => true,
 		),
