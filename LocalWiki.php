@@ -167,6 +167,7 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
 	$wgGroupPermissions['*']['viewmywatchlist'] = false;
+	$wgGroupPermissions['*']['flow-hide'] = false;
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
@@ -178,6 +179,9 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['sysop']['editusercss'] = false;
 	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['sysop']['flow-delete'] = false;
+	$wgGroupPermissions['sysop']['flow-edit-post'] = false;
+	$wgGroupPermissions['sysop']['flow-lock'] = false;
 	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
 	$wgGroupPermissions['user']['read'] = true;
 	$wgGroupPermissions['user']['changetags'] = false;
@@ -192,6 +196,7 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
 	$wgGroupPermissions['user']['torunblocked'] = false;
+	$wgGroupPermissions['user']['flow-lock'] = false;
 	$wgGroupPermissions['checkuser']['checkuser'] = false;
 	$wgGroupPermissions['checkuser']['checkuser-log'] = false;
 	$wgGroupPermissions['steward']['globalblock'] = false;
