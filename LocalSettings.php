@@ -961,6 +961,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
 	),
+	'wmgUseAutoSitemap' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
