@@ -166,49 +166,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
-	'wgAbuseFilterActions' => array(
-		'default' => array(
-			'flag' => true,
-			'throttle' => true,
-			'warn' =>  true,
-			'disallow' => true,
-			'blockautopromote' => true,
-			'block' => true,
-			'degroup' => true,
-			'rangeblock' => false,
-			'tag' => true,
-		),
-		'wikicanadawiki' => array(
-			'rangeblock' => true,
-		),
-	),
-	'wgAbuseFilterBlockDuration' => array(
-		'default' => 'indefinite',
-		'wikicanadawiki' => '1 week',
-	),
-	'wgAbuseFilterAnonBlockDuration' => array(
-		'default' => '6 months',
-		'wikicanadawiki' => '72 hours',
-	),
-	'wgAbuseFilterRestrictions' => array(
-		'default' => array(
-			'blockautopromote' => true,
-			'block' => true,
-			'degroup' => true,
-			'rangeblock' => true,
-		),
-		'wikicanadawiki' => array(
-			'blockautopromote' => false,
-			'block' => false,
-			'degroup' => false,
-			'rangeblock' => true,
-		),
-	),
+
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
 		'default' => 5,
-		'wikicanadawiki' => 6,
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
@@ -829,7 +791,6 @@ $wgConf->settings = array(
 	// Echo
 	'wgEchoCrossWikiNotifications' => array(
 		'default' => true,
-		'wikicanadawiki' => false,
 	),
 	'wgEchoUseJobQueue' => array(
 		'default' => true,
@@ -842,7 +803,6 @@ $wgConf->settings = array(
 	),
 	'wgEchoUseCrossWikiBetaFeature' => array(
 		'default' => true,
-		'wikicanadawiki' => false,
 	),
 
 	// Extensions and Skins
@@ -1118,7 +1078,6 @@ $wgConf->settings = array(
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 		'extloadwiki' => true,
-		'wikicanadawiki' => false,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
@@ -1206,7 +1165,6 @@ $wgConf->settings = array(
 		'styleguidesheetwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseFlow' => array(
 		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
@@ -1481,7 +1439,6 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
-		'wikicanadawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1714,7 +1671,6 @@ $wgConf->settings = array(
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
 		'sthomaspriwiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -2496,7 +2452,6 @@ $wgConf->settings = array(
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
 		'pruebawiki' => true,
-		'wikicanadawiki' => true,
 	),
 	'wmgFlaggedRevsTags' => array(
 		'default' => array(
@@ -2543,7 +2498,6 @@ $wgConf->settings = array(
 	'wmgFlaggedRevsRestrictionLevels' => array(
 		'default' => array( '', 'sysop' ),
 		'pruebawiki' => array( '', 'sysop', 'bureaucrat', 'consul', 'autoconfirmed', 'user' ),
-		'wikicanadawiki' => array( '', 'sysop', 'autoconfirmed', 'user' ),
 	),
 
 	// Files
@@ -2807,7 +2761,6 @@ $wgConf->settings = array(
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
 		'testwiki' => 'consul',
-		'wikicanadawiki' => 'founder',
 	),
 
 	// MassMessage
@@ -3315,9 +3268,6 @@ $wgConf->settings = array(
 			'Lêer' => NS_FILE,
 			'Lêerbespreking' => NS_FILE_TALK,
 		),
-		'+wikicanadawiki' => array(
-			'WC' => NS_PROJECT
-		),
 	),
 	'+wgNamespaceProtection' => array(
 		'default' => array(),
@@ -3347,17 +3297,6 @@ $wgConf->settings = array(
 		'+yeoksawiki' => array(
 			NS_PROJECT => array(
 				'project-edit',
-			),
-		),
-		'+wikicanadawiki' => array(
-			NS_TEMPLATE => array(
-				'templateeditor',
-			),
-			NS_MODULE => array(
-				'templateeditor',
-			),
-			NS_PROJECT => array(
-				'editprojectpage',
 			),
 		),
 	),
@@ -3729,27 +3668,6 @@ $wgConf->settings = array(
 				'loremasters',
 			),
 		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'bot',
-				'autopatrolled',
-				'rollbacker',
-				'confirmed',
-				'sysop',
-				'bureaucrat',
-				'founder',
-				'reviewer',
-				'ipblock-exempt',
-				'banned',
-				'researcher',
-				'page-mover',
-				'importer',
-				'uploader',
-				'template-editor',
-				'account-creator',
-				'massmessage-sender',
-			),
-		),	
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4364,106 +4282,6 @@ $wgConf->settings = array(
 				'loremasters' => true,
 			),
 		),
-		'+wikicanadawiki' => array(
-			'bureaucrat' => array(
-				'markbotedits' => true,
-				'mergehistory' => true,
-				'editcontentmodel' => true,
-				'unwatchedpages' => true,
-				'abusefilter-modify-restricted' => true,
-				'abusefilter-revert' => true,
-			),
-			'steward' => array(
-				'userrights' => true,
-				'userrights-interwiki' => true,
-				'interwiki' => true,
-				'hideuser' => true,
-				'suppressrevision' => true,
-				'suppressionlog' => true,
-				'viewsuppressed' => true,
-				'checkuser' => true,
-				'checkuser-log' => true,
-				'renameuser' => true,
-				'siteadmin' => true,
-				'abusefilter-private' => true,
-				'abusefilter-hide-log' => true,
-				'abusefilter-hidden-log' => true,
-			),
-			'researcher' => array(
-				'abusefilter-view-private' => true,
-				'abusefilter-log-private' => true,
-				'titleblacklistlog' => true,
-				'autoreview' => true,
-				'autopatrol' => true,
-				'browsearchive' => true,
-				'deletedhistory' => true,
-				'deletedtext' => true,
-			),
-			'page-mover' => array(
-				'move' => true,
-				'move-categorypages' => true,
-				'move-subpages' => true,
-				'move-rootuserpages' => true,
-				'movefile' => true,
-				'suppressredirect' => true,
-			),
-			'uploader' => array(
-				'upload' => true,
-				'reupload' => true,
-				'reupload-shared' => true,
-			),
-			'importer' => array(
-				'import' => true,
-				'importupload' => true,
-			),
-			'sysop' => array(
-				'review' => true,
-				'validate' => true,
-				'templateeditor' => true,
-				'proxyunbannable' => true,
-				'torunblocked' => true,
-				'managechangetags' => true,
-				'deletechangetags' => true,
-				'applychangetags' => true,
-				'changetags' => true,
-				'massmessage' => true,
-			),
-			'founder' => array(
-				'globalblock-exempt' => true,
-				'editinterface' => true,
-				'editusercss' => true,
-				'edituserjs' => true,
-				'protectsite' => true,
-				'editprojectpage' => true,
-			),
-			'user' => array(
-				'editmyoptions' => true,
-				'editmyprivateinfo' => true,
-				'editmyusercss' => true,
-				'editmyuserjs' => true,
-				'editmywatchlist' => true,
-				'viewmyprivateinfo' => true,
-				'viewmywatchlist' => true,
-				'read' => true,
-			),
-			'template-editor' => array(
-				'templateeditor' => true,
-			),
-			'ipblock-exempt' => array(
-				'ipblock-exempt' => true,
-				'proxyunbannable' => true,
-				'torunblocked' => true,
-			),
-			'account-creator' => array(
-				'override-antispoof' => true,
-				'noratelimit' => true,
-				'tboverride' => true,
-				'tboverride-account' => true,
-			),
-			'massmessage-sender' => array(
-				'massmessage' => true,
-			),
-		),	
 		'+wikipucwiki' => array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
@@ -4671,27 +4489,6 @@ $wgConf->settings = array(
 				'autopatrolled',
 			),
 		),
-		'+wikicanadawiki' => array(
-			'founder' => array(
-				'bot',
-				'autopatrolled',
-				'rollbacker',
-				'confirmed',
-				'sysop',
-				'bureaucrat',
-				'founder',
-				'reviewer',
-				'ipblock-exempt',
-				'banned',
-				'researcher',
-				'page-mover',
-				'importer',
-				'uploader',
-				'template-editor',
-				'account-creator',
-				'massmessage-sender',
-			),
-		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4709,19 +4506,6 @@ $wgConf->settings = array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
 				# 'editinterface' => true, //mistakenly applies to other groups as well
-			),
-		),
-		'wikicanadawiki' => array(
-			'banned' => array(
-				'editmyoptions' => true,
-				'editmyprivateinfo' => true,
-				'editmyusercss' => true,
-				'editmyuserjs' => true,
-				'editmywatchlist' => true,
-				'read' => true,
-				'writeapi' => true,
-				'viewmyprivateinfo' => true,
-				'viewmywatchlist' => true,
 			),
 		),
 	),
@@ -4742,7 +4526,6 @@ $wgConf->settings = array(
 	'wgImplicitGroups' => array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
 		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
-		'wikicanadawiki' => array( '*', 'user', 'autoconfirmed' ),
 	),
 	
 	// Piwik settings
@@ -4828,8 +4611,6 @@ $wgConf->settings = array(
 		'pruebawiki' => array(
 			'delete',
 			'protect',
-		),
-		'wikicanadawiki' => array(
 		),
 	),
 	
@@ -5394,7 +5175,6 @@ $wgConf->settings = array(
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/d/df/20150913_WelcomeWiki-Logo_TranspWritten135x135.png",
 		'webflowwiki' => "//$wmgUploadHostname/webflowwiki/f/fb/Webflow-logo-raster-blue-2015.png",
 		'webtoonwiki' => "//$wmgUploadHostname/webtoonwiki/b/ba/Webtoon_wiki_symbol.PNG",
-		'wikicanadawiki' => "//$wmgUploadHostname/wikicanadawiki/4/46/Site_logo.jpg",
 		'wikiletraswiki' => "//$wmgUploadHostname/wikiletraswiki/c/c9/Logo.png",
 		'wikiparkinsonwiki' => "//$wmgUploadHostname/wikiparkinsonwiki/f/fb/WikiParkinsonLogo-135.png",
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/9/98/Logowikifinal.png",
@@ -5767,7 +5547,7 @@ $wgMajorSiteNoticeID = 3;
 /*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
  	global $wgDBname;
-	if ( $wgDBname !== 'rpgbrigadewiki' && $wgDBname !== 'wikicanadawiki' ) {
+	if ( $wgDBname !== 'rpgbrigadewiki' ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
 			<td>There is currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#Void.27s_Request_for_Stewardship">open Request for Stewardship</a>. All Miraheze users are welcome to comment.</td>
