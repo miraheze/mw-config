@@ -1105,6 +1105,10 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'webflowwiki' => true,
 	),
+	'wmgUseCustomHeader' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
 		'calexitwiki' => true,
