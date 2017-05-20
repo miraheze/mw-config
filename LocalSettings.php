@@ -203,6 +203,10 @@ $wgConf->settings = array(
 			'degroup' => false,
 			'rangeblock' => true,
 		),
+		'wgAbuseFilterDisallowGlobalLocalBlocks' => array(
+			'default' => false,
+			'wikicanadawiki' => true,
+		),
 	),
 
 	// Anti-spam
