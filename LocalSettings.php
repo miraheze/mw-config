@@ -2365,7 +2365,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsewikihiero' => array(
 		'default' => false,
-		//'extloadwiki' => true,
+		'extloadwiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
