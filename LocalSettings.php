@@ -4745,9 +4745,6 @@ $wgConf->settings = array(
 		),
 		'wikicanadawiki' => array(
 			'banned' => array(
-				'createtalk' => true,
-				'createpage' => true,
-				'edit' => true,
 				'editmyoptions' => true,
 				'editmyprivateinfo' => true,
 				'editmyusercss' => true,

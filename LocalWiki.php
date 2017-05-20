@@ -145,9 +145,6 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 }
 
 if ( $wgDBname == 'wikicanadawiki' ) {
-	$wgGroupPermissions['*']['createtalk'] = false;
-	$wgGroupPermissions['*']['createpage'] = false;
-	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['editmyoptions'] = false;
 	$wgGroupPermissions['*']['editmyprivateinfo'] = false;
 	$wgGroupPermissions['*']['editmyusercss'] = false;
