@@ -680,6 +680,9 @@ $wgConf->settings = array(
 		'+modularwiki' => array(
 			'anon' => true,
 		),
+		'+nenawiki' => array(
+			'anon' => true,
+		),
 		'+noalatalawiki' => array(
 			'anon' => true,
 		),
@@ -2456,6 +2459,7 @@ $wgConf->settings = array(
 		'cpiwiki' => '_blank',
 		'doinwiki' => '_blank',
 		'forexwiki' => '_blank',
+		'nenawikiwiki' => '_blank',
 		'sylwiki' => '_blank',
 		'wisdomwikiwiki' => '_blank',
 		'wisdomsandboxwiki' => '_blank',
@@ -3317,6 +3321,29 @@ $wgConf->settings = array(
 	),
 	'+wgNamespaceProtection' => array(
 		'default' => array(),
+		'+nenawikiwiki' => array(
+			NS_MAIN => array(
+				'edit-content-pages',
+			),
+			NS_USER => array(
+				'edit-content-pages',
+			),
+			NS_PROJECT => array(
+				'edit-content-pages',
+			),
+			NS_FILE => array(
+				'edit-content-pages',
+			),
+			NS_TEMPLATE => array(
+				'edit-content-pages',
+			),
+			NS_HELP => array(
+				'edit-content-pages',
+			),
+			NS_CATEGORY => array(
+				'edit-content-pages',
+			),
+		),
 		'+yeoksawiki' => array(
 			NS_PROJECT => array(
 				'project-edit',
@@ -4104,6 +4131,22 @@ $wgConf->settings = array(
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
+			),
+		),
+		'+nenawikiwiki' => array(
+			'editor' => array(
+				'createpage' => true,
+				'move' => true,
+				'move-subpages' => true,
+				'move-rootuserpages' => true,
+				'movefile' => true,
+				'writeapi' => true,
+				'upload' => true,
+				'reupload' => true,
+				'reupload-shared' => true,
+				'minoredit' => true,
+				'purge' => true,
+				'edit-content-pages' => true,
 			),
 		),
 		'+pgnwikiwiki' => array(

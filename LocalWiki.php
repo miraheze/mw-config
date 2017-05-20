@@ -110,6 +110,20 @@ if ( $wgDBname === 'metawiki' ) {
 	$wgGroupPermissions['user']['torunblocked'] = false;
 }
 
+if ( $wgDBname === 'nenawikiwiki' ) {
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-rootuserpages'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['user']['writeapi'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['user']['reupload'] = false;
+	$wgGroupPermissions['user']['reupload-shared'] = false;
+	$wgGroupPermissions['user']['minoredit'] = false;
+	$wgGroupPermissions['user']['purge'] = false;
+}
+
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
