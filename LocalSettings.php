@@ -1603,7 +1603,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseOpenGraphMeta' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => false, // Upstream issue. T1617. --Reception123
 	),
 	'wmgUsePagedTiffHandler' => array(
 		'default' => false,
