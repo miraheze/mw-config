@@ -962,7 +962,8 @@ $wgConf->settings = array(
 		'pgnwikiwiki' => true,
 	),
 	'wmgUseAutoSitemap' => array(
-		'default' => false,
+		'default' => false, // Please read T1558#32765 before enabling on any wiki! --Reception123
+		'alwikiwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseBlogPage' => array(
