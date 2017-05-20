@@ -156,6 +156,9 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['*']['writeapi'] = false;
 	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
 	$wgGroupPermissions['*']['viewmywatchlist'] = false;
+	$wgGroupPermissions['*']['createaccount'] = false;
+	$wgGroupPermissions['*']['centralauth-autoaccount'] = false;
+	$wgGroupPermissions['*']['autocreateaccount'] = false;
 	$wgGroupPermissions['sysop']['importupload'] = false;
 	$wgGroupPermissions['sysop']['import'] = false;
 	$wgGroupPermissions['sysop']['markbotedits'] = false;
@@ -181,6 +184,8 @@ if ( $wgDBname == 'wikicanadawiki' ) {
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
 	$wgGroupPermissions['user']['torunblocked'] = false;
+	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['user']['createtalk'] = false;
 	$wgGroupPermissions['checkuser']['checkuser'] = false;
 	$wgGroupPermissions['checkuser']['checkuser-log'] = false;
 	$wgGroupPermissions['steward']['globalblock'] = false;
