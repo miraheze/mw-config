@@ -1111,6 +1111,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCustomHeader' => array(
 		'default' => false,
+		'hlptestwiki' => true,
 		'extloadwiki' => true,
 	),
 	'wmgUseCustomNavBlocks' => array(
