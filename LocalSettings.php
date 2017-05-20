@@ -3612,6 +3612,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+metawiki' => array(
+			'bureaucrat' => array(
+				'cvt',
+			),
+		),
 		'+trexwiki' => array(
 			'co' => array(
 				'ceo',
@@ -4480,6 +4485,11 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
+		'metawiki' => array(
+			'cvt' => array(
+				'cvt',
+			),
+		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -4572,6 +4582,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+metawiki' => array(
+			'bureaucrat' => array(
+				'cvt',
 			),
 		),
 		'+pruebawiki' => array(
