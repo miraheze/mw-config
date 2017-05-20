@@ -2747,7 +2747,6 @@ $wgConf->settings = array(
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
-		'arasuithielwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'coldbloodedwiki' => '크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스',		
 		'compilerdevwiki' => 'CC0 Public Domain',
 		'diavwiki' => 'All Rights Reserved',
@@ -2773,7 +2772,6 @@ $wgConf->settings = array(
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
-		'arasuithielwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'bigforestwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'coldbloodedwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ko',		
 		'compilerdevwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
@@ -2907,7 +2905,6 @@ $wgConf->settings = array(
 		'default' => array(
 			'metawiki',
 			'allthetropeswiki',
-			'arasuithielwiki',
 			'biblicalwikiwiki',
 			'bitcoindebateswiki',
 			'bpwiki',
