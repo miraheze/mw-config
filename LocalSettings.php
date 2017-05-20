@@ -1601,6 +1601,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'metawiki' => true,
 	),
+	'wmgUseOpenGraphMeta' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUsePagedTiffHandler' => array(
 		'default' => false,
 		'bpwiki' => true,
