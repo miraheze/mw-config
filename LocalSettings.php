@@ -1642,7 +1642,6 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'extloadwiki' => true,
-		'jackperswiki' => true,
 		'ndnwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
@@ -2412,7 +2411,6 @@ $wgConf->settings = array(
 	'wmgUsewikihiero' => array(
 		'default' => false,
 		//'extloadwiki' => true,
-		//'jackperswiki' => true,
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
@@ -3540,7 +3538,6 @@ $wgConf->settings = array(
 	//PageTriage
 	'wgPageTriageInfinitScrolling' => array(
 		'default' => true,
-		'jackperswiki' => false,
 	),
 
 	// Permissions
