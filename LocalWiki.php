@@ -124,6 +124,13 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgGroupPermissions['user']['purge'] = false;
 }
 
+if ( $wgDBname === 'pruebawiki' ) {
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	unset( $wgGroupPermissions['autoreview'] );
+}
+
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
