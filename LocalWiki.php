@@ -135,6 +135,7 @@ if ( $wgDBname === 'metawiki' ) {
 }
 
 if ( $wgDBname === 'nenawikiwiki' ) {
+	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
