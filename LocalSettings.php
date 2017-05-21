@@ -682,6 +682,7 @@ $wgConf->settings = array(
 		),
 		'+nenawiki' => array(
 			'anon' => true,
+			'sysop' => true,
 		),
 		'+noalatalawiki' => array(
 			'anon' => true,
@@ -1473,6 +1474,7 @@ $wgConf->settings = array(
 		'luckandlogicwiki' => true,
 		'modularwiki' => true,
 		'nationstateswiki' => true,
+		'nenawikiwiki' => true,
 		'oyeavdelingenwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
@@ -3612,6 +3614,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+nenawikiwiki' => array(
+			'bureaucrat' => array(
+				'editor',
 			),
 		),
 		'+trexwiki' => array(
