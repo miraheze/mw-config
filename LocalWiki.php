@@ -83,6 +83,28 @@ if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = true;
 }
 
+if ( $wgDBname === 'isvwiki' ) {
+	$wgGroupPermissions['*']['editmyusercss'] = false;
+	$wgGroupPermissions['*']['editmyuserjs'] = false;
+	$wgGroupPermissions['*']['writeapi'] = false;
+	
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	
+	$wgGroupPermissions['autopatrolled']['autopatrol'] = false;
+	$wgGroupPermissions['bot']['autopatrol'] = false;
+	$wgGroupPermissions['sysop']['autopatrol'] = false;
+	$wgGroupPermissions['autopatrolled']['patrol'] = false;
+	$wgGroupPermissions['confirmed']['patrol'] = false;
+	$wgGroupPermissions['sysop']['patrol'] = false;
+	
+	unset ( $wgGroupPermissions['autoreview'] );
+	unset ( $wgGroupPermissions['editor'] );
+	unset ( $wgGroupPermissions['reviewer'] );
+}
+
 if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
