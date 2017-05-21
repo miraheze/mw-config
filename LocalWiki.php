@@ -189,56 +189,6 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
-if ( $wgDBname == 'wikicanadawiki' ) {
-	$wgGroupPermissions['*']['editmyoptions'] = false;
-	$wgGroupPermissions['*']['editmyprivateinfo'] = false;
-	$wgGroupPermissions['*']['editmyusercss'] = false;
-	$wgGroupPermissions['*']['editmyuserjs'] = false;
-	$wgGroupPermissions['*']['editmywatchlist'] = false;
-	$wgGroupPermissions['*']['writeapi'] = false;
-	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
-	$wgGroupPermissions['*']['viewmywatchlist'] = false;
-	$wgGroupPermissions['sysop']['importupload'] = false;
-	$wgGroupPermissions['sysop']['import'] = false;
-	$wgGroupPermissions['sysop']['markbotedits'] = false;
-	$wgGroupPermissions['sysop']['mergehistory'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
-	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
-	$wgGroupPermissions['sysop']['override-antispoof'] = false;
-	$wgGroupPermissions['sysop']['editusercss'] = false;
-	$wgGroupPermissions['sysop']['edituserjs'] = false;
-	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
-	$wgGroupPermissions['user']['read'] = true;
-	$wgGroupPermissions['user']['changetags'] = false;
-	$wgGroupPermissions['user']['applychangetags'] = false;
-	$wgGroupPermissions['user']['editcontentmodel'] = false;
-	$wgGroupPermissions['user']['upload'] = false;
-	$wgGroupPermissions['user']['reupload'] = false;
-	$wgGroupPermissions['user']['reupload-shared'] = false;
-	$wgGroupPermissions['user']['move'] = false;
-	$wgGroupPermissions['user']['move-categorypages'] = false;
-	$wgGroupPermissions['user']['move-subpages'] = false;
-	$wgGroupPermissions['user']['move-rootuserpages'] = false;
-	$wgGroupPermissions['user']['movefile'] = false;
-	$wgGroupPermissions['user']['torunblocked'] = false;
-	$wgGroupPermissions['checkuser']['checkuser'] = false;
-	$wgGroupPermissions['checkuser']['checkuser-log'] = false;
-	$wgGroupPermissions['steward']['globalblock'] = false;
-	$wgGroupPermissions['steward']['centralauth-lock'] = false;
-	$wgGroupPermissions['steward']['centralauth-oversight'] = false;
-	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
-	$wgAddGroups['sysop'] = array();
-	$wgRemoveGroups['sysop'] = array();
-	$wgAddGroups['bureaucrat'] = array();
-	$wgRemoveGroups['bureaucrat'] = array();
-	unset( $wgGroupPermissions['oversight'] );
-	unset( $wgGroupPermissions['autoreview'] );
-	unset( $wgGroupPermissions['editor'] );
-	unset( $wgGroupPermissions['member'] );
-}	
-
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
