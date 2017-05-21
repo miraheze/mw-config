@@ -1182,6 +1182,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ganeshawiki' => true,
 		'lezar224wiki' => true,
+		'pruebawiki' => true,
 		'tutorwiki' => true,
 	),
 	'wmgUseErudite' => array(
@@ -3634,7 +3635,6 @@ $wgConf->settings = array(
 		),
 		'+pruebawiki' => array(
 			'sysop' => array(
-				'autoreview',
 				'editor',
 				'reviewer',
 				'testgroup',
@@ -3642,26 +3642,29 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'bureaucrat',
 				'sysop',
+				'bot',
 				'confirmed',
-				'autopatrolled',
-				'autoreview',
 				'rollbacker',
+				'autopatrolled',
 				'editor',
 				'reviewer',
-				'autoreview',
+				'testgroup',
 			),
 			'consul' => array(
 				'bot',
-				'bureaucrat',
 				'consul',
+				'bureaucrat',
 				'testgroup',
 				'sysop',
 				'confirmed',
 				'autopatrolled',
-				'autoreview',
 				'rollbacker',
 				'editor',
 				'reviewer',
+				'epcoordinator',
+				'epinstructor',
+				'epcampus',
+				'eponline',
 			),
 		),
 		'+quantumwiki' => array(
@@ -4184,6 +4187,7 @@ $wgConf->settings = array(
 			),
 			'consul' => array(
 				'read' => true,
+				'nuke' => true,
 				'bureaucrat' => true,
 				'consul' => true,
 				'editinterface' => true,
@@ -4576,17 +4580,16 @@ $wgConf->settings = array(
 		),
 		'+pruebawiki' => array(
 			'sysop' => array(
-				'autoreview',
 				'editor',
 				'reviewer',
 				'testgroup',
 			),
 			'bureaucrat' => array(
+				'sysop',
 				'bot',
 				'confirmed',
 				'rollbacker',
 				'autopatrolled',
-				'autoreview',
 				'editor',
 				'reviewer',
 				'testgroup',
@@ -4602,6 +4605,10 @@ $wgConf->settings = array(
 				'rollbacker',
 				'editor',
 				'reviewer',
+				'epcoordinator',
+				'epinstructor',
+				'epcampus',
+				'eponline',
 			),
 		),
 		'+quantumwiki' => array(
