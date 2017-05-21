@@ -5144,6 +5144,7 @@ $wgConf->settings = array(
 		'modularwiki' => "//$wmgUploadHostname/modularwiki/6/64/Favicon.ico",
 		'natenwiki' => "//$wmgUploadHostname/natenwiki/c/c9/Logo.png",
 		'nationsglorywiki' => "//$wmgUploadHostname/nationsglorywiki/0/04/NationsGlory.png",
+		'nenawikiwiki' => "//$wmgUploadHostname/nenawikiwiki/f/fa/Nena911orange.ico",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/5/5b/Wiki-favicon.png",
 		'nonbinarywiki' => "//$wmgUploadHostname/nonbinarywiki/5/53/Wikiicon.ico",
 		'nutscriptwiki' => "//$wmgUploadHostname/nutscriptwiki/6/64/Favicon.ico",
