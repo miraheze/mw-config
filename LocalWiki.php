@@ -83,6 +83,31 @@ if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = true;
 }
 
+if ( $wgDBname === 'isvwiki' ) {
+	$wgGroupPermissions['*']['editmyusercss'] = false;
+	$wgGroupPermissions['*']['editmyuserjs'] = false;
+	$wgGroupPermissions['*']['writeapi'] = false;
+	$wgGroupPermissions['user']['editmyusercss'] = true;
+	$wgGroupPermissions['user']['editmyuserjs'] = true;
+	
+	$wgGroupPermissions['autopatrolled']['autopatrol'] = false;
+	$wgGroupPermissions['bot']['autopatrol'] = false;
+	$wgGroupPermissions['sysop']['autopatrol'] = false;
+	$wgGroupPermissions['autopatrolled']['patrol'] = false;
+	$wgGroupPermissions['confirmed']['patrol'] = false;
+	$wgGroupPermissions['sysop']['patrol'] = false;
+	
+	$wgGroupPermissions['autopatrolled']['autoreview'] = true;
+	$wgGroupPermissions['bot']['autoreview'] = true;
+	$wgGroupPermissions['confirmed']['autoreview'] = true;
+	$wgGroupPermissions['confirmed']['review'] = true;
+	$wgGroupPermissions['confirmed']['autoconfirmed'] = true;
+	
+	unset ( $wgGroupPermissions['autoreview'] );
+	unset ( $wgGroupPermissions['editor'] );
+	unset ( $wgGroupPermissions['reviewer'] );
+}
+
 if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
