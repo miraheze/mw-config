@@ -2520,7 +2520,7 @@ $wgConf->settings = array(
 			),
 		),
 		'isvwiki' => array(
-			'accuracy' => array(
+			'status' => array(
 				'levels' => 1,
 			),
 		),
