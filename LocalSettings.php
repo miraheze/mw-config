@@ -5313,6 +5313,7 @@ $wgConf->settings = array(
 		'mynimowiki' => "//$wmgUploadHostname/mynimowiki/thumb/7/77/Mynimo_Wiki.png/120px-Mynimo_Wiki.png",
 		'natenwiki' => "//$wmgUploadHostname/natenwiki/c/c9/Logo.png",
 		'nationsglorywiki' => "//$wmgUploadHostname/nationsglorywiki/2/29/Logo_Wiki.jpg",
+		'nenawikiwiki' => "//$wmgUploadHostname/nenawikiwiki/4/4d/NENA_logo_120x100.png",
 		'newarkmanorwiki' => "//$wmgUploadHostname/newarkmanorwiki/8/89/Wiki_logo.jpg",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/a/a0/Wiki-logo.png",
 		'nanopediawiki' => "//$wmgUploadHostname/nanopediawiki/c/c9/Logo.png",
