@@ -1204,6 +1204,7 @@ $wgConf->settings = array(
 	'wmgUseFlaggedRevs' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'isvwiki' => true,
 		'pruebawiki' => true,
 		'styleguidesheetwiki' => true,
 		'trexwiki' => true,
@@ -2491,6 +2492,13 @@ $wgConf->settings = array(
 			NS_HELP,
 			NS_PROJECT,
 		),
+		'isvwiki' => array(
+			NS_MAIN,
+			NS_FILE,
+			NS_TEMPLATE,
+			NS_CATEGORY,
+			828,
+		),
 		'trexwiki' => array(
 			NS_ARTIKEL,
 			NS_FILE,
@@ -2499,6 +2507,7 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
+		'isvwiki' => true,
 		'pruebawiki' => true,
 		'wikicanadawiki' => true,
 	),
@@ -2508,6 +2517,11 @@ $wgConf->settings = array(
 				'quality' => 1,
 				'levels' => 2,
 				'pristine' => 3,
+			),
+		),
+		'isvwiki' => array(
+			'accuracy' => array(
+				'levels' => 1,
 			),
 		),
 	),
@@ -2539,6 +2553,7 @@ $wgConf->settings = array(
 			'neverBlocked' => true,
 			'maxRevertedEditRatio'=> .05,
 		),
+		'isvwiki' => false,
 		'pruebawiki' => false,
 	),
 	'wmgFlaggedRevsAutoReview' => array(
