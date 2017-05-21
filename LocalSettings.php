@@ -4159,6 +4159,9 @@ $wgConf->settings = array(
 				'purge' => true,
 				'edit-content-pages' => true,
 			),
+			'sysop' => array(
+				'edit-content-pages' => true,
+			),
 		),
 		'+pgnwikiwiki' => array(
 			'sysop' => array(
