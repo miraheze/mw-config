@@ -2522,6 +2522,8 @@ $wgConf->settings = array(
 		'isvwiki' => array(
 			'status' => array(
 				'levels' => 1,
+				'quality' => 2,
+				'pristine' => 4,
 			),
 		),
 	),
@@ -4081,7 +4083,7 @@ $wgConf->settings = array(
 				'movefile' => true,
 				'move-categorypages' => true,
 				'move-subpages' => true,
-			)
+			),
 		),
 		'+jayuwikiwiki' => array(
 			'autoconfirmed' => array(
