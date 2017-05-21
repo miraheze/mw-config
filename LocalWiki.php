@@ -87,8 +87,11 @@ if ( $wgDBname === 'isvwiki' ) {
 	$wgGroupPermissions['*']['editmyusercss'] = false;
 	$wgGroupPermissions['*']['editmyuserjs'] = false;
 	$wgGroupPermissions['*']['writeapi'] = false;
-	$wgGroupPermissions['user']['editmyusercss'] = true;
-	$wgGroupPermissions['user']['editmyuserjs'] = true;
+	
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
 	
 	$wgGroupPermissions['autopatrolled']['autopatrol'] = false;
 	$wgGroupPermissions['bot']['autopatrol'] = false;
@@ -96,12 +99,6 @@ if ( $wgDBname === 'isvwiki' ) {
 	$wgGroupPermissions['autopatrolled']['patrol'] = false;
 	$wgGroupPermissions['confirmed']['patrol'] = false;
 	$wgGroupPermissions['sysop']['patrol'] = false;
-	
-	$wgGroupPermissions['autopatrolled']['autoreview'] = true;
-	$wgGroupPermissions['bot']['autoreview'] = true;
-	$wgGroupPermissions['confirmed']['autoreview'] = true;
-	$wgGroupPermissions['confirmed']['review'] = true;
-	$wgGroupPermissions['confirmed']['autoconfirmed'] = true;
 	
 	unset ( $wgGroupPermissions['autoreview'] );
 	unset ( $wgGroupPermissions['editor'] );
