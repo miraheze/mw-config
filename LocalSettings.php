@@ -2507,7 +2507,6 @@ $wgConf->settings = array(
 	),
 	'wmgFlaggedRevsProtection' => array(
 		'default' => false,
-		'isvwiki' => true,
 		'pruebawiki' => true,
 		'wikicanadawiki' => true,
 	),
@@ -4080,6 +4079,7 @@ $wgConf->settings = array(
 				'autoconfirmed' => true,
 				'autoreview' => true,
 				'review' => true,
+				'unreviewedpages' => true,
 				'movefile' => true,
 				'move-categorypages' => true,
 				'move-subpages' => true,
