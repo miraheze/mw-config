@@ -4612,7 +4612,6 @@ $wgConf->settings = array(
 				'sysop',
 				'confirmed',
 				'autopatrolled',
-				'autoreview',
 				'rollbacker',
 				'editor',
 				'reviewer',
