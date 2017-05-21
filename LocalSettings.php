@@ -4060,6 +4060,29 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+		'+isvwiki' => array(
+			'user' => array(
+				'editmyusercss' => true,
+				'editmyuserjs' => true,
+			),
+			'autoconfirmed' => array(
+				'move' => true,
+			),
+			'bot' => array(
+				'autoreview' => true,
+			),
+			'autopatrolled' => array(
+				'autoreview' => true,
+			),
+			'confirmed' => array(
+				'autoconfirmed' => true,
+				'autoreview' => true,
+				'review' => true,
+				'movefile' => true,
+				'move-categorypages' => true,
+				'move-subpages' => true,
+			)
+		),
 		'+jayuwikiwiki' => array(
 			'autoconfirmed' => array(
 				'move' => true,
