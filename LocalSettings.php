@@ -645,7 +645,7 @@ $wgConf->settings = array(
 		'+modularwiki' => array(
 			'anon' => true,
 		),
-		'+nenawiki' => array(
+		'+nenawikiwiki' => array(
 			'anon' => true,
 			'sysop' => true,
 		),
