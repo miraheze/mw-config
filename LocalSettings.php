@@ -1110,6 +1110,7 @@ $wgConf->settings = array(
 		'kstartupswiki' => true,
 		'noalatalawiki' => true,
 		'rpgbrigadewiki' => true,
+		'sidemwiki' => true,
 		'wikiletraswiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
@@ -1317,6 +1318,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
+		'sidemwiki' => true,
 		'testwiki' => true,
 	),
 	'wmgUseLinkSuggest' => array(
