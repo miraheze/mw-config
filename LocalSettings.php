@@ -1882,6 +1882,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'bigforestwiki' => true,
 		'extloadwiki' => true,
+		'isvwiki' => true,
 		'jayuwikiwiki' => true,
 		'modularwiki' => true,
 	),
