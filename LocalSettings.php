@@ -327,7 +327,6 @@ $wgConf->settings = array(
 			'wikipuk.cl' => 'wikipucwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
 			'histories.wiki' => 'wishcertwiki',
-			'yeoksa.wiki' => 'yeoksawiki',
 			'www.zenbuddhism.info' => 'zenbuddhismwiki',
 			'www.aksaraywiki.com' => 'aksaraywikiwiki',
 		),
@@ -4756,7 +4755,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
 		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
 		'wishcertwiki' => 'https://histories.wiki',
-		'yeoksawiki' => 'https://yeoksa.wiki',
 		'zenbuddhismwiki' => 'https://www.zenbuddhism.info',
 	),
 	'wgShowHostnames' => array(
@@ -5380,7 +5378,6 @@ $wgConf->settings = array(
 			'sandbox\.wisdomwiki.org',
 			'savage-wiki\.com',
 			'speleo\.wiki',
-			'yeoksa.wiki\.com',
 			'www\.zenbuddhism\.info',
 			'www\.aksaraywiki\.com',
 			'espiral\.org',
