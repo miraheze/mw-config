@@ -1149,6 +1149,7 @@ $wgConf->settings = array(
 		'bdorpwiki' => true,
 		'datachronwiki' => true,
 		'extloadwiki' => true,
+		'lunacyindwiki' => true,
 	),
 	'wmgUseFancyBoxThumbs' => array(
 		'default' => false,
