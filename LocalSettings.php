@@ -1358,6 +1358,7 @@ $wgConf->settings = array(
 		'cpiwiki' => true,
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
+		'magezwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'takethatwikiwiki' => true,
 		'wikipucwiki' => true,
