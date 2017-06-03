@@ -62,13 +62,6 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
 }
 
-if ( $wgDBname === 'ayrshirewiki' ) {
-if ( in_array( 'googlemaps3', $GLOBALS['egMapsAvailableServices'] ) ) {
-	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
-	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
-}
-}
-
 if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
