@@ -3373,6 +3373,9 @@ $wgConf->settings = array(
 			NS_OFFICIAL => true,
 			NS_TEMPLATE => true,
 		),
+		'+christipediawiki' => array(
+			NS_MAIN => true,
+		),
 		'+clementsworldbuildingwiki' => array(
 			NS_MAIN => true,
 		),
