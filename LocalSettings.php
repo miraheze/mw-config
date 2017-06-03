@@ -1315,6 +1315,7 @@ $wgConf->settings = array(
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
 		'bmedwiki' => true,
+		'bpwiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'extloadwiki' => true,
