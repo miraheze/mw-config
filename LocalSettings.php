@@ -1858,6 +1858,7 @@ $wgConf->settings = array(
 		'spacegamewiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
+		'sysexwiki' => true,
 		'tmewiki' => true,
 		'trexwiki' => true,
 		'touhouenginewiki' => true,
