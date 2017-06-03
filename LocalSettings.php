@@ -1844,6 +1844,7 @@ $wgConf->settings = array(
 		'jawp2chwiki' => true,
 		'jayuwikiwiki' => true,
 		'karmazynxyz' => true,
+		'lizhongresearchwiki' => true,
 		'modularwiki' => true,
 		'ndnwiki' => true,
 		'nextlevelwikiwiki' => true,
