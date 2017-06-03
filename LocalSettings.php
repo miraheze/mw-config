@@ -973,6 +973,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'modularwiki' => true,
 		'particracywikiwiki' => true,
+		'recentiawiki' => true,
 		'studynotekrwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
