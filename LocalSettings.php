@@ -2968,6 +2968,7 @@ $wgConf->settings = array(
 	),
 	'wgRestrictDisplayTitle' => array(
 		'default' => true, // Wikis with NoTitle have it set to false
+		'ayrshirewiki' => true,
 		'takethatwikiwiki' => false,
 	),
 
