@@ -4979,6 +4979,7 @@ $wgConf->settings = array(
 		'sqlserverwiki' => "//$wmgUploadHostname/sqlserverwiki/6/64/Favicon.ico",
 		'starsetonlinewiki' => "//$wmgUploadHostname/starsetonlinewiki/9/93/Wiki_favicon.ico",
 		'stellachronicawiki' => "//$wmgUploadHostname/stellachronicawiki/9/93/Scwiki-favicon.png",
+		'sysexwiki' => "//$wmgUploadHostname/sysexwiki/1/1d/Sysex.ico",
 		'takethatwikiwiki' => "//$wmgUploadHostname/takethatwikiwiki/6/64/Favicon.ico",
 		'tmewiki' => "//$wmgUploadHostname/tmewiki/6/64/Favicon.ico",
 		'teessidehackspacewiki' => "//$wmgUploadHostname/teessidehackspacewiki/6/64/Favicon.ico",
