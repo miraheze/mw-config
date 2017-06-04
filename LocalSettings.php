@@ -2768,6 +2768,10 @@ $wgConf->settings = array(
 	'wgUserEmailUseReplyTo' => array(
 		'default' => true,
 	),
+	'wgEmailConfirmToEdit' => array(
+		'default' => false,
+		'nenawikiwiki' => true,
+	),
 
 	// Math
 	'wgMathValidModes' => array(
@@ -3586,7 +3590,7 @@ $wgConf->settings = array(
 			),
 		),
 		'+nenawikiwiki' => array(
-			'bureaucrat' => array(
+			'sysop' => array(
 				'editor',
 			),
 		),
