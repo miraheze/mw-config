@@ -457,6 +457,11 @@ $wgConf->settings = array(
 	'wgDBuser' => array(
 		'default' => 'mediawiki',
 	),
+	'wgReadOnly' => array(
+		'default' => false,
+		'omnipediawiki' => true, // database rename
+		'omniversaliswiki' => true, // ^
+	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
 	),
