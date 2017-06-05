@@ -3311,7 +3311,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		'+nenawikiwiki' => array(
 			NS_MAIN => array(
-				'edit-content-pages',
+				'edit-admin-pages',
 			),
 			NS_USER => array(
 				'edit-content-pages',
@@ -3326,10 +3326,10 @@ $wgConf->settings = array(
 				'edit-content-pages',
 			),
 			NS_HELP => array(
-				'edit-content-pages',
+				'edit-admin-pages',
 			),
 			NS_CATEGORY => array(
-				'edit-content-pages',
+				'edit-admin-pages',
 			),
 		),
 		'+yeoksawiki' => array(
@@ -4140,6 +4140,7 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'edit-content-pages' => true,
+				'edit-admin-pages' => true,
 			),
 		),
 		'+pgnwikiwiki' => array(
