@@ -1947,6 +1947,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'metawiki' => true,
 		'mikrodevwiki' => true,
+		'mikrodevdocswiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'nvcwiki' => true,
 		'pathfinderwiki' => true,
