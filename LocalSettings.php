@@ -5114,6 +5114,7 @@ $wgConf->settings = array(
 		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/6/60/FC_Logo_135p.png",
 		'freestateofjoneswiki' => "//$wmgUploadHostname/freestateofjoneswiki/2/29/Free_State_of_Jones_Seal_Logo.png",
 		'fusiongpwiki' => "//$wmgUploadHostname/fusiongpwiki/f/f2/Fusion_Ball.png",
+		'galenadevwiki' => "//$wmgUploadHostname/galenadevwiki/9/96/Temp_logo1.png",
 		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
 		'geodatawiki' => "//$wmgUploadHostname/geodatawiki/c/c1/GlobeIcon160.png",
 		'grandtheftautowiki' => "//$wmgUploadHostname/grandtheftautowiki/9/9e/GrandTheftAuto.png",
