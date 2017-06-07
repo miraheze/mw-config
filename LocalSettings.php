@@ -5096,6 +5096,7 @@ $wgConf->settings = array(
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/c/c0/Logo_135.png",
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/3/3b/Wiki_logo.png",
 		'enmarchewiki' => "//$wmgUploadHostname/enmarchewiki/a/af/Logo-em-alsace68.png",
+		'embobada' => "//$wmgUploadHostname/embobadawiki/3/35/Schermafbeelding_2017-05-11_om_16.37.12.png",
 		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
 		'esctwiki' => "//$wmgUploadHostname/esctwiki/d/d9/Heart.png",
 		'espiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
