@@ -2448,6 +2448,7 @@ $wgConf->settings = array(
 	// Allow External Images
 	'wgAllowExternalImages' => array (
 		'default' => false,
+		'mikrodevdocswiki' => true,
 		'westmarcheswiki' => true,
 	),
 	
