@@ -1260,6 +1260,7 @@ $wgConf->settings = array(
 	'wmgUseGroupsSidebar' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'tedcswiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
