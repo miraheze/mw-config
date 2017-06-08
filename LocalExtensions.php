@@ -536,6 +536,10 @@ if ( $wmgUseTitleKey ) {
 	wfLoadExtension( 'TitleKey' );
 }
 
+if ( $wmgUseTocTree ) {
+	wfLoadExtension( 'TocTree' );
+}
+
 if ( $wmgUseUserWelcome ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
     require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
