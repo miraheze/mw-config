@@ -232,6 +232,10 @@ if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
 
+if ( $wmgUseGroupsSidebar ) {
+	require_once( "$IP/extensions/GroupsSidebar/GroupsSidebar.php" );
+}
+
 if ( $wmgUseHeaderTabs ) {
 	wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {
