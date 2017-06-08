@@ -1934,6 +1934,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseTocTree' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseTranslate' => array(
 		'default' => false,
 		'3dicwiki' => true,
