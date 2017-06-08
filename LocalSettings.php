@@ -2207,6 +2207,7 @@ $wgConf->settings = array(
 		'rawdatawiki' => true,
 		'raymanspeedrunwiki' => true,
 		'revitwiki' => true,
+		'robertswiki' => true,
 		'rocketleaguequebecwiki' => true,
 		'rootsandlimbswiki' => true,
 		'rpcharacterswiki' => true,
