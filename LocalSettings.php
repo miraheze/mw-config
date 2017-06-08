@@ -3678,6 +3678,11 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+robertswiki' => array(
+			'sysop' => array(
+				'bot',
+			),
+		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
@@ -4392,6 +4397,11 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
+		'+robertswiki' => array(
+			'sysop' => array(
+				'sysop',
+			),
+		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -4526,6 +4536,11 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+			),
+		),
+		'+robertswiki' => array(
+			'sysop' => array(
+				'bot',
 			),
 		),
 		'+testwiki' => array(
