@@ -161,6 +161,7 @@ if ( $wgDBname === 'robertswiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
 }
 
 if ( $wgDBname == 'soundboxiki' ) {
