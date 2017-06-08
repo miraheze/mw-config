@@ -1,6 +1,5 @@
 <?php
 
-
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
 // Closed Wikis
@@ -155,6 +154,13 @@ if ( $wgDBname === 'pruebawiki' ) {
 	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
 	unset( $wgGroupPermissions['autoreview'] );
+}
+
+if ( $wgDBname === 'robertswiki' ) {
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
 }
 
 if ( $wgDBname == 'soundboxiki' ) {
