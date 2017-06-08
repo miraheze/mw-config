@@ -1937,6 +1937,7 @@ $wgConf->settings = array(
 	'wmgUseTocTree' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'tedcswiki' => true,
 	),
 	'wmgUseTranslate' => array(
 		'default' => false,
