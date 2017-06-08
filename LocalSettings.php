@@ -1692,6 +1692,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'nationsglorywiki' => true,
 		'robertsnoteswiki' => true,
+		'robertswiki' => true,
 		'sqlserverwiki' => true,
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
@@ -3682,6 +3683,9 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'bot',
 			),
+			'staff' => array(
+				'bureaucrat',
+			),
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
@@ -4227,6 +4231,9 @@ $wgConf->settings = array(
 				'abusefilter-revert' => true,
 				'globalblock-whitelist' => true,
 			),
+			'staff' => array(
+				'protectsite' => true,
+			),
 		),
 		'+sovereignwiki' => array(
 			'officer' => array(
@@ -4549,6 +4556,9 @@ $wgConf->settings = array(
 		'+robertswiki' => array(
 			'sysop' => array(
 				'bot',
+			),
+			'staff' => array(
+				'bureaucrat',
 			),
 		),
 		'+testwiki' => array(
