@@ -2368,6 +2368,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
 		'pruebawiki' => true,
+		'robertswiki' => true,
 	),
 	'wmgUseWikiTextLoggedInOut' => array(
 		'default' => false,
