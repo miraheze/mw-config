@@ -4220,6 +4220,14 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
+		'+robertswiki' => array(
+			'bureaucrat' => array(
+				'nuke' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-revert' => true,
+				'globalblock-whitelist' => true,
+			),
+		),
 		'+sovereignwiki' => array(
 			'officer' => array(
 				'read' => true,
