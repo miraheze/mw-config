@@ -1927,11 +1927,11 @@ $wgConf->settings = array(
 		'geirpediawiki' => true,
 		'tymyrddinwiki' => true,
 	),
-	'wmgUseTimeless' => array( // Internal Errors. See T1746. --Reception123
+	'wmgUseTimeless' => array( 
 		'default' => false,
-		'corydoctorowwiki' => false,
+		'corydoctorowwiki' => true,
 		'extloadwiki' => true,
-		'grandtheftautowiki' => false,
+		'grandtheftautowiki' => true,
 	),
 	'wmgUseTitleKey' => array(
 		'default' => false,
