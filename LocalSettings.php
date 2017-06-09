@@ -2818,6 +2818,7 @@ $wgConf->settings = array(
 		'default' => 'bureaucrat',
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
+		'robertswiki' => 'staff',
 		'testwiki' => 'consul',
 	),
 
