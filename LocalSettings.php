@@ -1692,6 +1692,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'nationsglorywiki' => true,
 		'robertsnoteswiki' => true,
+		'robertswiki' => true,
 		'sqlserverwiki' => true,
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
@@ -2206,6 +2207,7 @@ $wgConf->settings = array(
 		'rawdatawiki' => true,
 		'raymanspeedrunwiki' => true,
 		'revitwiki' => true,
+		'robertswiki' => true,
 		'rocketleaguequebecwiki' => true,
 		'rootsandlimbswiki' => true,
 		'rpcharacterswiki' => true,
@@ -2366,6 +2368,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
 		'pruebawiki' => true,
+		'robertswiki' => true,
 	),
 	'wmgUseWikiTextLoggedInOut' => array(
 		'default' => false,
@@ -3678,6 +3681,14 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+robertswiki' => array(
+			'sysop' => array(
+				'bot',
+			),
+			'staff' => array(
+				'bureaucrat',
+			),
+		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
@@ -4215,6 +4226,18 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
+		'+robertswiki' => array(
+			'bureaucrat' => array(
+				'nuke' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-revert' => true,
+				'globalblock-whitelist' => true,
+			),
+			'staff' => array(
+				'protectsite' => true,
+				'editstaff' => true,
+			),
+		),
 		'+sovereignwiki' => array(
 			'officer' => array(
 				'read' => true,
@@ -4392,6 +4415,11 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
+		'+robertswiki' => array(
+			'sysop' => array(
+				'sysop',
+			),
+		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -4526,6 +4554,14 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+			),
+		),
+		'+robertswiki' => array(
+			'sysop' => array(
+				'bot',
+			),
+			'staff' => array(
+				'bureaucrat',
 			),
 		),
 		'+testwiki' => array(
@@ -4680,6 +4716,9 @@ $wgConf->settings = array(
 		'+pruebawiki' => array(
 			'bureaucrat',
 			'consul',
+		),
+		'+robertswiki' => array(
+			'editstaff',
 		),
 		'+sovereignwiki' => array(
 			'officer',

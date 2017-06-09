@@ -156,6 +156,14 @@ if ( $wgDBname === 'pruebawiki' ) {
 	unset( $wgGroupPermissions['autoreview'] );
 }
 
+if ( $wgDBname === 'robertswiki' ) {
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
+}
+
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
