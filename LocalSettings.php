@@ -4235,6 +4235,7 @@ $wgConf->settings = array(
 			),
 			'staff' => array(
 				'protectsite' => true,
+				'editstaff' => true,
 			),
 		),
 		'+sovereignwiki' => array(
@@ -4715,6 +4716,9 @@ $wgConf->settings = array(
 		'+pruebawiki' => array(
 			'bureaucrat',
 			'consul',
+		),
+		'+robertswiki' => array(
+			'editstaff',
 		),
 		'+sovereignwiki' => array(
 			'officer',
