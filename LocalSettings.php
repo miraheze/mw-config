@@ -1894,6 +1894,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'jayuwikiwiki' => true,
 		'knowledgewiki' => true,
+		'lunacyindwiki' => true,
 		'magezwiki' => true,
 		'nationstateswiki' => true,
 		'thelonsdalebattalionwiki' => true,
