@@ -1725,6 +1725,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'grandtheftautowiki' => true,
 		'inazumaelevenwiki' => true,
+		'robertswiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
@@ -3688,6 +3689,7 @@ $wgConf->settings = array(
 			),
 			'staff' => array(
 				'bureaucrat',
+				'staff',
 			),
 		),
 		'+testwiki' => array(
@@ -4563,6 +4565,7 @@ $wgConf->settings = array(
 			),
 			'staff' => array(
 				'bureaucrat',
+				'staff',
 			),
 		),
 		'+testwiki' => array(
