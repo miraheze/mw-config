@@ -5215,6 +5215,7 @@ $wgConf->settings = array(
 		'malaysiawiki' => "//$wmgUploadHostname/malaysiawiki/1/1d/Malaysian_flag_round135.png",
 		'mcwiki' => "//$wmgUploadHostname/mcwiki/b/bc/Wiki.png",
 		'mindgearwiki' => "//$wmgUploadHostname/mindgearwiki/3/36/Mind_Gear.png",
+		'mikrodevwiki' => "//$wmgUploadHostname/mikrodevwiki/c/c9/Logo.png",
 		'miraewiki' => "//$wmgUploadHostname/miraewiki/2/22/LogoOfMirae.png",
 		'modularwiki' => "//$wmgUploadHostname/modularwiki/d/dc/Modular_synth_wiki_logo.png",
 		'moralecwiki' => "//$wmgUploadHostname/moralecwiki/e/e8/Moralec-pluto.png",
