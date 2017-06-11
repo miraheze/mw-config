@@ -1564,6 +1564,7 @@ $wgConf->settings = array(
 		'idleomenswiki' => true,
 		'lbsgeswiki' => true,
 		'luckandlogicwiki' => true,
+		'reversibleworkwiki' => true,
 		'rpgbrigadewiki' => true,
 		'universebuildwiki' => true,
 		'wikipucwiki' => true,
