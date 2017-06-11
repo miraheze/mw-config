@@ -157,6 +157,8 @@ if ( $wgDBname === 'pruebawiki' ) {
 }
 
 if ( $wgDBname === 'robertswiki' ) {
+	$wgAddGroups['sysop']['member'] = false;
+	$wgRemoveGroups['sysop']['member'] = false;
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
