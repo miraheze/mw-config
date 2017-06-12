@@ -1965,6 +1965,7 @@ $wgConf->settings = array(
 		'mikrodevdocswiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'nvcwiki' => true,
+		'partupwiki' => true,
 		'pathfinderwiki' => true,
 		'pgnwikiwiki' => true,
 		'rpgbrigadewiki' => true,
