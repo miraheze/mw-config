@@ -1386,6 +1386,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ircwiki' => true,
 		'pgnwikiwiki' => true,
+		'robertswiki' => true,
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
@@ -3706,8 +3707,11 @@ $wgConf->settings = array(
 		'+robertswiki' => array(
 			'sysop' => array(
 				'bot',
+				'patroller',
 			),
 			'staff' => array(
+				'member',
+				'sysop',
 				'bureaucrat',
 				'staff',
 			),
@@ -4250,7 +4254,24 @@ $wgConf->settings = array(
  			),
  		),
 		'+robertswiki' => array(
+			'patroller' => array(
+				'autopatrol' => true,
+				'patrol' => true,
+				'browsearchive' => true,
+				'deletedhistory' => true,
+				'rollback' => true,
+				'abusefilter-view-private' => true,
+				'abusefilter-log-private' => true,
+			),
+			'sysop' => array(
+				'editcontentmodel' => true,
+				'changetags' => true,
+				'applychangetags' => true,
+				'torunblocked' => true,
+			),
 			'bureaucrat' => array(
+				'managechangetags' => true,
+				'deletechangetags' => true,
 				'nuke' => true,
 				'abusefilter-modify-restricted' => true,
 				'abusefilter-revert' => true,
@@ -4259,6 +4280,8 @@ $wgConf->settings = array(
 			'staff' => array(
 				'protectsite' => true,
 				'editstaff' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
 			),
 		),
 		'+sovereignwiki' => array(
@@ -4582,6 +4605,7 @@ $wgConf->settings = array(
 		'+robertswiki' => array(
 			'sysop' => array(
 				'bot',
+				'patroller',
 			),
 			'staff' => array(
 				'bureaucrat',
