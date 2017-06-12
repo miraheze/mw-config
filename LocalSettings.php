@@ -1983,6 +1983,10 @@ $wgConf->settings = array(
 		'welcomewiki' => true,
 		'youtubewiki' => true,
 	),
+	'wmgUseTweeki' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseUserWelcome' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
