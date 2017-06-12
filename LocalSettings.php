@@ -1406,6 +1406,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => false,
 		'reviwiki' => false,
 		'reviwikiwiki' => false,
+		'wikipukwiki' => false,
 	),
 	'wmgUseModernSkylight' => array(
 		'default' => false,
