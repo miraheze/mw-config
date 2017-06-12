@@ -1095,6 +1095,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'extloadwiki' => true,
 		'inkubatorwiki' => true,
+		'isvwiki' => true,
 		'rpgbrigadewiki' => true,
 	),
 	'wmgUseDuplicator' => array(
@@ -2491,7 +2492,7 @@ $wgConf->settings = array(
 			NS_FILE,
 			NS_TEMPLATE,
 			NS_CATEGORY,
-			828,
+			WMG_NS_MODULE,
 		),
 		'trexwiki' => array(
 			NS_ARTIKEL,
@@ -3334,6 +3335,12 @@ $wgConf->settings = array(
 	),
 	'+wgNamespaceProtection' => array(
 		'default' => array(),
+		'+isvwiki' => array(
+			// Forum talk
+			111 => array(
+				'editinterface'
+			),
+		),
 		'+nenawikiwiki' => array(
 			NS_MAIN => array(
 				'edit-admin-pages',
@@ -5348,6 +5355,14 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
 	),
 
+	// TemplateSandbox
+	'wgTemplateSandboxEditNamespaces' => array(
+		'default' => array(
+			NS_TEMPLATE,
+			WMG_NS_MODULE
+		)
+	),
+	
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
@@ -5496,6 +5511,7 @@ $wgConf->settings = array(
 		'default' => true,
 		'allthetropeswiki' => false,
 		'bttestwiki' => true,
+		'isvwiki' => true,
 		'panoramawiki' => false,
 		'testwiki' => false,
 	),
@@ -5538,8 +5554,12 @@ $wgConf->settings = array(
 			NS_TEST => true,
 		),
 	),
+	'wgVisualEditorShowBetaWelcome' => array(
+		'default' => true,
+		'isvwiki' => false,
+	),
 	'wgVisualEditorSupportedSkins' => array(
-		'defualt' => array(),
+		'default' => array(),
 		'fusewiki' => array( 'foreground' ),
 		'permanentfuturelabwiki' => array( 'foreground' ),
 	),
@@ -5548,6 +5568,7 @@ $wgConf->settings = array(
 		'coldbloodedwiki' => true,
 		'espiralwiki' => true,
 		'fbwikiwiki' => true,
+		'isvwiki' => true,
 		'spiralwiki' => true,
 	),
 	'wmgFlowEditorList' => array(
