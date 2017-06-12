@@ -560,6 +560,9 @@ $wgConf->settings = array(
 		'+drones4allwiki' => array(
 			'anon' => true,
 		),
+		'+enenwiki' => array(
+			'anon' => true,
+		),
 		'+evelopediawiki' => array(
 			'anon' => true,
 		),
