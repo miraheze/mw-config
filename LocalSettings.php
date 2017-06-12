@@ -1985,7 +1985,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTweeki' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => false,
 	),
 	'wmgUseUserWelcome' => array(
 		'default' => false,
