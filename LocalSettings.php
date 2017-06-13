@@ -2302,6 +2302,7 @@ $wgConf->settings = array(
 		'youtubewiki' => true,
 		'chocowiki' => true,
 		'zitabiteswiki' => true,
+		'zharkunuwiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
