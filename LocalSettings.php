@@ -212,6 +212,7 @@ $wgConf->settings = array(
 		'raymanspeedrunwiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyoghoulwiki' => true,
+		'zharkunuwiki' => true,
 	),
 	// Block
 	'wgAutoblockExpiry' => array(
@@ -2301,6 +2302,7 @@ $wgConf->settings = array(
 		'youtubewiki' => true,
 		'chocowiki' => true,
 		'zitabiteswiki' => true,
+		'zharkunuwiki' => true,
 	),
 	'wmgUseVariables' => array(
 		'default' => false,
