@@ -1399,6 +1399,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'ircwiki' => true,
 		'microsoftwiki' => true,
+		'pfsolutionswiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
@@ -5297,7 +5298,7 @@ $wgConf->settings = array(
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/a/a6/Part-up-logo-150x150-mediawiki.png",
 		'patch153wiki' => "//$wmgUploadHostname/patch153wiki/1/1f/ICMS.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/c/c0/Permanent-Future-Lab-logo-150x150-mediawiki.png",
-		'pfsolutionswiki' => "//$wmgUploadHostname/pfsolutionswiki/1/19/Swoosh_-_Transparent.png",
+		'pfsolutionswiki' => "//$wmgUploadHostname/pfsolutionswiki/3/33/Swoosh_-_Square-Logo.png",
 		'pgnwikiwiki' => "//$wmgUploadHostname/pgnwikiwiki/2/22/MainPhotoWiki.png",
 		'philmont126wiki' => "//$wmgUploadHostname/philmont126wiki/f/f6/PhilmontLogo.jpg",
 		'plasmawiki' => "//$wmgUploadHostname/plasmawiki/0/08/PlasmaWiki_Logo.svg",
