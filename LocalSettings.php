@@ -175,6 +175,7 @@ $wgConf->settings = array(
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
 		'developmentwiki' => 259200, // 3 days * 24 hours * 60 minutes * 60 seconds
+		'proxybotwiki' => 604800, // 7 days * 24 hours * 60 minutes * 60 seconds
 	),
 	'wgAutoConfirmCount' => array(
 		'default' => 10,
@@ -3299,6 +3300,9 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
+		),
+		'+proxybotwiki' => array(
+			'UT' => NS_USER_TALK,
 		),
 		'+studynotekrwiki' => array(
 			'KSN' => NS_KOREAN_STUDY_NOTE,
