@@ -171,6 +171,7 @@ $wgConf->settings = array(
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
 		'default' => 5,
+		'proxybotwiki' => 7,
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
@@ -1874,6 +1875,7 @@ $wgConf->settings = array(
 		'perpuswiki' => true,
 		'priyowiki' => true,
 		'programmingreferencewiki' => true,
+		'proxybotwiki' => true
 		'scruffywiki' => true,
 		'sizzlecookiewiki' => true,
 		'sourcewiki' => true,
