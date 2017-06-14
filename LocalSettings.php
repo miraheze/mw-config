@@ -3713,7 +3713,9 @@ $wgConf->settings = array(
 		),
 		'+robertswiki' => array(
 			'sysop' => array(
+				'blockedfromchat',
 				'bot',
+				'chatmod'
 				'patroller',
 			),
 			'staff' => array(
@@ -4611,10 +4613,14 @@ $wgConf->settings = array(
 		),
 		'+robertswiki' => array(
 			'sysop' => array(
+				'blockedfromchat',
 				'bot',
+				'chatmod'
 				'patroller',
 			),
 			'staff' => array(
+				'member',
+				'sysop',
 				'bureaucrat',
 				'staff',
 			),
