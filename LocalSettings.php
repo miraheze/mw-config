@@ -3715,7 +3715,7 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'blockedfromchat',
 				'bot',
-				'chatmod'
+				'chatmod',
 				'patroller',
 			),
 			'staff' => array(
@@ -4615,7 +4615,7 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'blockedfromchat',
 				'bot',
-				'chatmod'
+				'chatmod',
 				'patroller',
 			),
 			'staff' => array(
