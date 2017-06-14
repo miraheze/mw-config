@@ -544,6 +544,10 @@ if ( $wmgUseTocTree ) {
 	wfLoadExtension( 'TocTree' );
 }
 
+if ( $wmgUseTweeki ) {
+	wfLoadSkin( 'Tweeki' );
+}
+
 if ( $wmgUseUserWelcome ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
     require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
