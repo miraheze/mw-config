@@ -1388,7 +1388,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ircwiki' => true,
 		'pgnwikiwiki' => true,
-		'robertswiki' => true,
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
@@ -1702,7 +1701,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'nationsglorywiki' => true,
 		'robertsnoteswiki' => true,
-		'robertswiki' => true,
 		'sqlserverwiki' => true,
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
@@ -1735,7 +1733,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'grandtheftautowiki' => true,
 		'inazumaelevenwiki' => true,
-		'robertswiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
@@ -2225,7 +2222,6 @@ $wgConf->settings = array(
 		'rawdatawiki' => true,
 		'raymanspeedrunwiki' => true,
 		'revitwiki' => true,
-		'robertswiki' => true,
 		'rocketleaguequebecwiki' => true,
 		'rootsandlimbswiki' => true,
 		'rpcharacterswiki' => true,
@@ -2388,7 +2384,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
 		'pruebawiki' => true,
-		'robertswiki' => true,
 	),
 	'wmgUseWikiTextLoggedInOut' => array(
 		'default' => false,
@@ -2838,7 +2833,6 @@ $wgConf->settings = array(
 		'default' => 'bureaucrat',
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
-		'robertswiki' => 'staff',
 		'testwiki' => 'consul',
 	),
 
@@ -3711,18 +3705,6 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
-		'+robertswiki' => array(
-			'sysop' => array(
-				'bot',
-				'patroller',
-			),
-			'staff' => array(
-				'member',
-				'sysop',
-				'bureaucrat',
-				'staff',
-			),
-		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
@@ -4260,16 +4242,6 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
-		'+robertswiki' => array(
-			'patroller' => array(
-				'autopatrol' => true,
-				'patrol' => true,
-				'browsearchive' => true,
-				'deletedhistory' => true,
-				'rollback' => true,
-				'abusefilter-view-private' => true,
-				'abusefilter-log-private' => true,
-			),
 			'sysop' => array(
 				'editcontentmodel' => true,
 				'changetags' => true,
@@ -4468,11 +4440,6 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
-		'+robertswiki' => array(
-			'sysop' => array(
-				'sysop',
-			),
-		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -4607,16 +4574,6 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
-			),
-		),
-		'+robertswiki' => array(
-			'sysop' => array(
-				'bot',
-				'patroller',
-			),
-			'staff' => array(
-				'bureaucrat',
-				'staff',
 			),
 		),
 		'+testwiki' => array(
@@ -4771,9 +4728,6 @@ $wgConf->settings = array(
 		'+pruebawiki' => array(
 			'bureaucrat',
 			'consul',
-		),
-		'+robertswiki' => array(
-			'editstaff',
 		),
 		'+sovereignwiki' => array(
 			'officer',
