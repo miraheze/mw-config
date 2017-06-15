@@ -4934,6 +4934,7 @@ $wgConf->settings = array(
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
+		'pfsolutionswiki' => 'metrolook',
 		'raymanspeedrunwiki' => 'bootstrapmediawiki',
 		'revitwiki' => 'monobook',
 		'thelonsdalebattalionwiki' => 'metrolook',
