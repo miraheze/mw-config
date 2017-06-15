@@ -2783,6 +2783,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		// file protocol only allowed on private wikis
 		'gzewiki' => array ( "file://" ),
+		'bchwiki' => array ( "file://" ),
 	),
 
 	// Mail
