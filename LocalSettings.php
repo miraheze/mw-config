@@ -2199,6 +2199,7 @@ $wgConf->settings = array(
 		'nxwikiwiki' => true,
 		'ofthevampirewiki' => true,
 		'oncprojectwiki' => true,
+		'oolawikiwiki' => true,
 		'opengovpioneerswiki' => true,
 		'ourmxfestwiki' => true,
 		'overonwiki' => true,
