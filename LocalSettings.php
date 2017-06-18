@@ -5740,7 +5740,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
 	}
 	return true;
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
