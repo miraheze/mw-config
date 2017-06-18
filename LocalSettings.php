@@ -2386,6 +2386,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'pgnwikiwiki' => true,
+		'proxybotwiki' => true,
 		'pruebawiki' => true,
 	),
 	'wmgUseWikiTextLoggedInOut' => array(
