@@ -1875,6 +1875,7 @@ $wgConf->settings = array(
 		'proxybotwiki' => true,
 		'scruffywiki' => true,
 		'sizzlecookiewiki' => true,
+		'slinxxywiki' => true,
 		'sourcewiki' => true,
 		'spacegamewiki' => true,
 		'stellachronicawiki' => true,
