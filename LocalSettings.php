@@ -1993,6 +1993,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTweeki' => array(
 		'default' => false,
+		'corydoctorowwiki' => true,
 		'extloadwiki' => false,
 	),
 	'wmgUseUserWelcome' => array(
@@ -4930,6 +4931,7 @@ $wgConf->settings = array(
 		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
 		'claneuphoriawiki' => 'gamepress',
+		'corydoctorowwiki' => 'tweeki',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
 		'dtswiki' => 'metrolook',
