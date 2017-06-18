@@ -5726,16 +5726,16 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 3;
+$wgMajorSiteNoticeID = 4;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
  	global $wgDBname;
 	if ( $wgDBname !== 'rpgbrigadewiki' ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>There is currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#Void.27s_Request_for_Stewardship">open Request for Stewardship</a>. All Miraheze users are welcome to comment.</td>
+			<td><a href="https://meta.miraheze.org/wiki/System_administrators">Miraheze System Administrators</a> are aware of the intermittent 503 issues and uploading issues that are currently occurring. We are currently investigating the cause.</td>
 			</tr></tbody></table>
 EOF;
 	}
