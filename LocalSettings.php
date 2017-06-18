@@ -5729,7 +5729,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgMajorSiteNoticeID = 4;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
  	global $wgDBname;
 	if ( $wgDBname !== 'rpgbrigadewiki' ) {
