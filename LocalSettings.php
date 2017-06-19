@@ -3488,6 +3488,9 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_SERVER => true,
 		),
+		'+reviwikiwiki' => array(
+			NS_MAIN => true,
+		),
 		'+safiriawiki' => array(
 			NS_MAIN => true,
 			NS_HOENN => true,
