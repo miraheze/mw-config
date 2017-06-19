@@ -5662,7 +5662,7 @@ $wgLocalDatabases = array();
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
-	$wikiDB = explode( '|', $wikiLine, 4 );
+	$wikiDB = explode( '|', $wikiLine, 5 );
 	list( $DBname, $siteName, $siteLang, $siteLogo, $wikiTagList ) = array_pad( $wikiDB, 5, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
