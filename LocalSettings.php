@@ -2440,6 +2440,7 @@ $wgConf->settings = array(
 		'marcoschriekwiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
+		'miraewiki' => true,
 		'modularwiki' => true,
 		'muckhackwiki' => true,
 		'ndnwiki' => true,
