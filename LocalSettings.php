@@ -2147,6 +2147,7 @@ $wgConf->settings = array(
 		'kassaiwiki' => true,
 		'karniarutheniawiki' => true,
 		'kevincwiki' => true,
+		'kgbwiki' => true,
 		'kinderacicwiki' => true,
 		'knowledgewiki' => true,
 		'kozawiki' => true,
