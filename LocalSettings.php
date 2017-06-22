@@ -1165,6 +1165,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'lunacyindwiki' => true,
 	),
+	'wmgUseEventLogging' => array(
+		'default' => false,
+		'isvwiki' => true,
+	),
 	'wmgUseFancyBoxThumbs' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
@@ -1268,6 +1272,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => true,
 		'tedcswiki' => true,
+	),
+	'wmgUseGuidedTour' => array(
+		'default' => false,
+		'isvwiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
