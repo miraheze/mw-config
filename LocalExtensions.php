@@ -173,7 +173,7 @@ if ( $wmgUseErudite ) {
 }
 
 if ( $wmgUseEventLogging) {
-	require_once "$IP/extensions/EventLogging/EventLogging.php";
+	wfLoadExtension( 'EventLogging' );
 	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
 	$wgEventLoggingFile = '$wmgLogDir/events.log';
 }
@@ -243,7 +243,7 @@ if ( $wmgUseGroupsSidebar ) {
 }
 
 if ( $wmgUseGuidedTour ) {
-	require_once ( "$IP/extensions/GuidedTour/GuidedTour.php" );
+	wfLoadExtension( 'GuidedTour' );
 }
 
 if ( $wmgUseHeaderTabs ) {
