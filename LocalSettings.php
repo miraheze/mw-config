@@ -607,6 +607,9 @@ $wgConf->settings = array(
 		'+howtoturtlewiki' => array(
 			'anon' => true,
 		),
+		'+ircwiki' => array(
+			'anon' => true,
+		),
 		'+izanagiwiki' => array(
 			'anon' => true,
 		),
@@ -624,6 +627,12 @@ $wgConf->settings = array(
 		'+karniarutheniawiki' => array(
 			'anon' => true,
 		),
+		'+karrotwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+kl6fwiki' => array(
 			'anon' => true,
 		),
@@ -640,9 +649,6 @@ $wgConf->settings = array(
 			'anon' => true,
 			'user' => true,
 			'sysop' => true,
-		),
-		'+ircwiki' => array(
-			'anon' => true,
 		),
 		'+micropediawiki' => array(
 			'anon' => true,
