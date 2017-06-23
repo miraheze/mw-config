@@ -157,26 +157,6 @@ if ( $wgDBname === 'pruebawiki' ) {
 	unset( $wgGroupPermissions['autoreview'] );
 }
 
-if ( $wgDBname === 'robertswiki' ) {
-	unset( $wgAddGroups['bureaucrat'] );
-	unset( $wgRemoveGroups['bureaucrat'] );
-	$wgAddGroups['sysop']['member'] = false;
-	$wgRemoveGroups['sysop']['member'] = false;
-	$wgGroupPermissions['sysop']['nuke'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
-	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
-	$wgGroupPermissions['sysop']['managechangetags'] = false;
-	$wgGroupPermissions['sysop']['deletechangetags'] = false;
-	$wgGroupPermissions['sysop']['editusercss'] = false;
-	$wgGroupPermissions['sysop']['edituserjs'] = false;
-	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
-	$wgGroupPermissions['user']['editcontentmodel'] = false;
-	$wgGroupPermissions['user']['changetags'] = false;
-	$wgGroupPermissions['user']['applychangetags'] = false;
-	$wgGroupPermissions['user']['torunblocked'] = false;
-}
-
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
