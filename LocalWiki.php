@@ -343,24 +343,26 @@ if ( $wgDBname === 'cvtwiki' ) {
 // Permission variables
 if ( $wmgEditingMatrix ) {
 	$mhEM = $wmgEditingMatrix;
-	if ( $mhEM['anon'] ) {
+	if ( $mhEM['anon'] ) { // Disables anonymous editing if set to true
 		$wgGroupPermissions['*']['edit'] = false;
 		$wgGroupPermissions['*']['createpage'] = false;
 	}
 
-	if ( $mhEM['user'] ) {
+	if ( $mhEM['user'] ) { // Disables editing by logged in users if set to true
 		$wgGroupPermissions['user']['edit'] = false;
 		$wgGroupPermissions['user']['createpage'] = false;
 	}
 
-	if ( $mhEM['editor'] ) {
+	if ( $mhEM['editor'] ) { // Creates an 'editor' group that is addable by bureaucrats/sysops if set to true
 		$wgGroupPermissions['editor']['edit'] = true;
 		$wgGroupPermissions['editor']['createpage'] = true;
+		$wgAddGroups['bureaucrat'][] = 'editor';
 		$wgAddGroups['sysop'][] = 'editor';
+		$wgRemoveGroups['bureaucrat'][] = 'editor';
 		$wgRemoveGroups['sysop'][] = 'editor';
 	}
 
-	if ( $mhEM['sysop'] ) {
+	if ( $mhEM['sysop'] ) { // Allows sysops to edit if $mhEM['anon'] and $mhEM['user'] are both set to true
 		$wgGroupPermissions['sysop']['edit'] = true;
 		$wgGroupPermissions['sysop']['createpage'] = true;
 	}
