@@ -4251,27 +4251,6 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
-			'sysop' => array(
-				'editcontentmodel' => true,
-				'changetags' => true,
-				'applychangetags' => true,
-				'torunblocked' => true,
-			),
-			'bureaucrat' => array(
-				'managechangetags' => true,
-				'deletechangetags' => true,
-				'nuke' => true,
-				'abusefilter-modify-restricted' => true,
-				'abusefilter-revert' => true,
-				'globalblock-whitelist' => true,
-			),
-			'staff' => array(
-				'protectsite' => true,
-				'editstaff' => true,
-				'editusercss' => true,
-				'edituserjs' => true,
-			),
-		),
 		'+sovereignwiki' => array(
 			'officer' => array(
 				'read' => true,
