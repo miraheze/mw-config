@@ -3724,7 +3724,6 @@ $wgConf->settings = array(
 		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
-				'testgroup',
 				'bureaucrat',
 				'sysop',
 				'confirmed',
@@ -3735,7 +3734,6 @@ $wgConf->settings = array(
 				'bot',
 				'bureaucrat',
 				'consul',
-				'testgroup',
 				'sysop',
 				'confirmed',
 				'autopatrolled',
