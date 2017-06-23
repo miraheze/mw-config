@@ -478,10 +478,10 @@ $wgConf->settings = array(
 	// Editing Matrix
 	'wmgEditingMatrix' => array(
 		'default' => array(
-			'anon' => false, // disable anonymous editing
-			'user' => false, // disable user editing
-			'editor' => false, // add an editor group for editing + sysop assign
-			'sysop' => false, // allow sysop' to edit (not needed)
+			'anon' => false, // Disables editing by anonymous users if set to true
+			'user' => false, // Disables editing by logged in users if set to true
+			'editor' => false, // Creates an 'editor' group assignable by bureaucrats/sysops if set to true
+			'sysop' => false, // Allows sysops to edit if anonymous and logged in users are not allowed to edit.
 		),
 		'+690squadronwiki' => array(
 			'anon' => true,
