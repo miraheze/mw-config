@@ -4425,6 +4425,7 @@ $wgConf->settings = array(
 				'project-edit' => true,
 			),
 		),
+	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
 	),
