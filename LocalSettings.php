@@ -4039,14 +4039,6 @@ $wgConf->settings = array(
 				'editinterface' => true,
 			),
 		),
-		'+deltaquadtestwiki' => array(
-			'bureaucrat' => array(
-				'commentadmin' => true,
-				'author' => true,
-				'authorprotect' => true,
-				'torunblock' => true,
-			),
-		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
