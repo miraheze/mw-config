@@ -359,7 +359,7 @@ $wgConf->settings = array(
 	'wgCentralAuthSilentLogin' => array(
 		'default' => true,
 	),
-	
+
 	// CheckUser
 	'wgCheckUserForceSummary' => array(
 		'default' => true,
@@ -369,7 +369,7 @@ $wgConf->settings = array(
 	'wgCommentsDefaultAvatar' => array(
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	),
-	
+
 	 // Contribution Scores
 	 'wgContribScoreDisableCache' => array(
  		 'default' => true,
@@ -1939,7 +1939,7 @@ $wgConf->settings = array(
 		'geirpediawiki' => true,
 		'tymyrddinwiki' => true,
 	),
-	'wmgUseTimeless' => array( 
+	'wmgUseTimeless' => array(
 		'default' => false,
 		'corydoctorowwiki' => true,
 		'extloadwiki' => true,
@@ -2480,7 +2480,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => '_blank',
 		'yacresourceswiki' => '_blank',
 	),
-	
+
 	// Allow External Images
 	'wgAllowExternalImages' => array(
 		'default' => false,
@@ -2488,7 +2488,7 @@ $wgConf->settings = array(
 		'mikrodevdocswiki' => true,
 		'westmarcheswiki' => true,
 	),
-	
+
 	// Allow HTML <img> tag
 	'wgAllowImageTag' => array(
 		'default' => false,
@@ -2702,7 +2702,7 @@ $wgConf->settings = array(
 	// License
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
-		'coldbloodedwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',		
+		'coldbloodedwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',
 		'compilerdevwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
 		'espiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
@@ -2730,7 +2730,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
-		'coldbloodedwiki' => '크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스',		
+		'coldbloodedwiki' => '크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스',
 		'compilerdevwiki' => 'CC0 Public Domain',
 		'diavwiki' => 'All Rights Reserved',
 		'espiralwiki' => 'CC0 Public Domain',
@@ -2756,7 +2756,7 @@ $wgConf->settings = array(
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 		'bigforestwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-		'coldbloodedwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ko',		
+		'coldbloodedwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ko',
 		'compilerdevwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'espiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'gamdugwiki' => 'https://creativecommons.org/licenses/by-nc/3.0/au/',
@@ -3067,7 +3067,7 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
-	// MobileFrontend 
+	// MobileFrontend
 	'wgMFNoMobilePages' => array(
 		'default' => array(),
 		'alwikiwiki' => array(
@@ -3647,6 +3647,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+karrotwiki' => array(
+			'bureaucrat' => array(
+				'member',
+			),
+		),
 		'+nenawikiwiki' => array(
 			'sysop' => array(
 				'editor',
@@ -4117,6 +4122,20 @@ $wgConf->settings = array(
 				'rollback' => true,
 			),
 		),
+		'+karrotwiki' => array(
+			'*' => array(
+				'edit' => false,
+			),
+			'bureaucrat' => array(
+				'edit' => true,
+			),
+			'member' => array(
+				'edit' => true,
+			),
+			'sysop' => array(
+				'edit' => true,
+			),
+		),
 		'+kstartupswiki' => array(
 			'autoconfirmed' => array(
 				'createpage' => true,
@@ -4544,6 +4563,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+karrotwiki' => array(
+			'bureaucrat' => array(
+				'member',
+			),
+		),
 		'+pruebawiki' => array(
 			'sysop' => array(
 				'editor',
@@ -4681,7 +4705,7 @@ $wgConf->settings = array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
 		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
 	),
-	
+
 	// Piwik settings
 	'wmgPiwikSiteID' => array(
 		'default' => '1',
@@ -4767,7 +4791,7 @@ $wgConf->settings = array(
 			'protect',
 		),
 	),
-	
+
 	// Robot policy
 	'wgDefaultRobotPolicy' => array(
 		'default' => 'index,follow',
@@ -4833,7 +4857,7 @@ $wgConf->settings = array(
 		'jacksonheightswiki' => 'https://wiki.jacksonheights.nyc',
 		'kstartupswiki' => 'https://wiki.besuccess.com',
 		'labbywiki' => 'https://wiki.labby.io',
-		'livesnowmapwiki' => 'https://wiki.livesnowmap.com', 
+		'livesnowmapwiki' => 'https://wiki.livesnowmap.com',
 		'make717wiki' => 'https://wiki.make717.org',
 		'meeusenwiki' => 'https://wiki.meeusen.net',
 		'metatrekwiki' => 'https://meta.trek.tk',
@@ -4886,7 +4910,7 @@ $wgConf->settings = array(
 	'wgDismissableSiteNoticeForAnons' => array(
 		'default' => true,
 	),
-	
+
 	// SocialProfile
 	'wgUserProfileThresholds' => array(
 		'default' => array(
@@ -5373,7 +5397,7 @@ $wgConf->settings = array(
 			WMG_NS_MODULE
 		)
 	),
-	
+
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
@@ -5396,8 +5420,8 @@ $wgConf->settings = array(
 		'reviwikiwiki' => 'Asia/Seoul',
 		'webtoonwiki' => 'Asia/Seoul',
 	),
-	
-	// TitleBlacklist 
+
+	// TitleBlacklist
 	'wgTitleBlacklistSources' => array(
 		'default' => array(
 			'type' => 'url',
@@ -5668,11 +5692,13 @@ $wgLocalDatabases = array();
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
-	$wikiDB = explode( '|', $wikiLine, 4 );
-	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
+	$wikiDB = explode( '|', $wikiLine, 6 );
+	list( $DBname, $siteName, $siteLang, $siteLogo, $siteFavicon, $wikiTagList ) = array_pad( $wikiDB, 6, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
+	$wgConf->settings['wgLogo'][$DBname] = $siteLogo;
+	$wgConf->settings['wgFavicon'][$DBname] = $siteFavicon;
 }
 
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
