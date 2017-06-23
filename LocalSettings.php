@@ -3742,7 +3742,7 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
-		'snowthegamewiki' => array(
+		'+snowthegamewiki' => array(
 			'bureaucrat' => array(
 				'bot',
 				'bureaucrat',
