@@ -4750,6 +4750,7 @@ $wgConf->settings = array(
 	'wgDefaultRobotPolicy' => array(
 		'default' => 'index,follow',
 		'foodsharinghamburgwiki' => 'noindex,nofollow',
+		'ildrilwiki' => 'noindex,nofollow',
 		'lothuialethwiki' => 'noindex,nofollow',
 	),
 
@@ -4879,6 +4880,7 @@ $wgConf->settings = array(
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'fourleafficswiki' => 'any',
+		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
 	),
 
