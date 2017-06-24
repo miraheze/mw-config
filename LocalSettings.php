@@ -607,6 +607,12 @@ $wgConf->settings = array(
 		'+howtoturtlewiki' => array(
 			'anon' => true,
 		),
+		'+ildrilwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+ircwiki' => array(
 			'anon' => true,
 		),
