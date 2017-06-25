@@ -2499,12 +2499,14 @@ $wgConf->settings = array(
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 		'westmarcheswiki' => true,
+		'magezwiki' => true,
 	),
 	
 	// Allow HTML <img> tag
 	'wgAllowImageTag' => array(
 		'default' => false,
 		'westmarcheswiki' => true,
+		'magezwiki' => true,
 	),
 
 	// FlaggedRevs
