@@ -2496,17 +2496,17 @@ $wgConf->settings = array(
 	// Allow External Images
 	'wgAllowExternalImages' => array(
 		'default' => false,
+		'magezwiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 		'westmarcheswiki' => true,
-		'magezwiki' => true,
 	),
 	
 	// Allow HTML <img> tag
 	'wgAllowImageTag' => array(
 		'default' => false,
-		'westmarcheswiki' => true,
 		'magezwiki' => true,
+		'westmarcheswiki' => true,
 	),
 
 	// FlaggedRevs
