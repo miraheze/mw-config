@@ -2495,7 +2495,7 @@ $wgConf->settings = array(
 	
 	// Allow External Images
 	'wgAllowExternalImages' => array(
-		'default' => false,
+		'default' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 		'westmarcheswiki' => true,
@@ -2503,7 +2503,7 @@ $wgConf->settings = array(
 	
 	// Allow HTML <img> tag
 	'wgAllowImageTag' => array(
-		'default' => false,
+		'default' => true,
 		'westmarcheswiki' => true,
 	),
 
