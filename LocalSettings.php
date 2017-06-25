@@ -2590,7 +2590,8 @@ $wgConf->settings = array(
 
 	// Files
 	'wgEnableUploads' => array(
-		'default' => true,
+		'default' => false, // Upload issues T1912. Minimising other downtime caused by them. --Reception123
+		'extloadwiki' => true,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
@@ -5727,7 +5728,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	if ( $wgDBname !== 'rpgbrigadewiki' ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td><a href="https://meta.miraheze.org/wiki/System_administrators">Miraheze System Administrators</a> are aware of the intermittent 503 issues and uploading issues that are currently occurring. We are currently investigating the cause.</td>
+			<td><a href="https://meta.miraheze.org/wiki/System_administrators">Miraheze System Administrators</a> are aware of the intermittent 503 issues and uploading issues that are currently occurring. To completely minimize other downtime, we have temporarily disabled uploads on all wikis until the issue is resolved. Sorry for the inconvenience.</td>
 			</tr></tbody></table>
 EOF;
 	}
