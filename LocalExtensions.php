@@ -175,7 +175,7 @@ if ( $wmgUseErudite ) {
 if ( $wmgUseEventLogging) {
 	wfLoadExtension( 'EventLogging' );
 	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
-	$wgEventLoggingFile = '$wmgLogDir/events.log';
+	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
