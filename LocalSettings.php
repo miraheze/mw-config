@@ -2592,8 +2592,7 @@ $wgConf->settings = array(
 
 	// Files
 	'wgEnableUploads' => array(
-		'default' => false, // Upload issues T1912. Minimising other downtime caused by them. --Reception123
-		'extloadwiki' => true,
+		'default' => true,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
