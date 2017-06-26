@@ -1167,6 +1167,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseEventLogging' => array(
 		'default' => false,
+		'extloadwiki' => true,
 		'isvwiki' => true,
 	),
 	'wmgUseFancyBoxThumbs' => array(
@@ -1275,6 +1276,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseGuidedTour' => array(
 		'default' => false,
+		'extloadwiki' => true,
 		'isvwiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
