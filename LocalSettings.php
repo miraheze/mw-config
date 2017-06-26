@@ -5198,6 +5198,7 @@ $wgConf->settings = array(
 		'jacksonheightswiki' => "//$wmgUploadHostname/jacksonheightswiki/b/b5/Jackson_heights_logo_135_X_135.png",
 		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/b/b1/Jawp2ch_Logo1.svg",
 		'jayuwikiwiki' => "//$wmgUploadHostname/jayuwikiwiki/d/d7/Jayuwiki3.png",
+		'jjmodwiki' => "//$wmgUploadHostname/jjmodwiki/d/d4/Logo.jpg",
 		'jokowiki' => "//$wmgUploadHostname/jokowiki/0/0d/Icon_Joko.png",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
 		'kkandpwiki' => "//$wmgUploadHostname/kkandpwiki/0/09/Monogram-01.png",
