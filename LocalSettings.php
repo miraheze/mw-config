@@ -2506,6 +2506,7 @@ $wgConf->settings = array(
 	'wgAllowImageTag' => array(
 		'default' => false,
 		'magezwiki' => true,
+		'mikrodevwiki' => true,
 		'westmarcheswiki' => true,
 	),
 
