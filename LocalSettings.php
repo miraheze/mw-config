@@ -209,6 +209,7 @@ $wgConf->settings = array(
 	),
 	'wgVisualEditorEnableWikitext' => array(
 		'default' => false,
+		'aerosswiki' => true,
 		'extloadwiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'raymanspeedrunwiki' => true,
