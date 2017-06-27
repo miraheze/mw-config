@@ -3404,7 +3404,7 @@ $wgConf->settings = array(
 				'edit-admin-pages',
 			),
 			NS_CATEGORY => array(
-				'edit-admin-pages',
+				'edit-content-pages',
 			),
 		),
 		'+yeoksawiki' => array(
