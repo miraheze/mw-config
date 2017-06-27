@@ -2247,6 +2247,7 @@ $wgConf->settings = array(
 		'rocketleaguequebecwiki' => true,
 		'rootsandlimbswiki' => true,
 		'rpcharacterswiki' => true,
+		'rwdvolvowiki' => true,
 		'safiriawiki' => true,
 		'savagewikiwiki' => true,
 		'scruffywiki' => true,
