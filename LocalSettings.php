@@ -4196,6 +4196,7 @@ $wgConf->settings = array(
 		'+nenawikiwiki' => array(
 			'editor' => array(
 				'createpage' => true,
+				'edit' => true,
 				'move' => true,
 				'move-subpages' => true,
 				'move-rootuserpages' => true,
