@@ -208,6 +208,7 @@ $wgConf->settings = array(
 		'youtubewiki' => true,
 	),
 	'wgVisualEditorEnableWikitext' => array(
+		'aerosswiki' => true,
 		'default' => false,
 		'extloadwiki' => true,
 		'nanatsunotaizaiwiki' => true,
