@@ -209,7 +209,6 @@ $wgConf->settings = array(
 	),
 	'wgVisualEditorEnableWikitext' => array(
 		'default' => false,
-		'aerosswiki' => true,
 		'extloadwiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'raymanspeedrunwiki' => true,
@@ -793,6 +792,11 @@ $wgConf->settings = array(
 		'+wisdomsandboxwiki' => array(
 			'anon' => true,
 		),
+		'wishwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 	),
 
 	'wgPFEnableStringFunctions' => array(
@@ -978,7 +982,6 @@ $wgConf->settings = array(
 	'wmgUseCategoryTree' => array(
 		'default' => true,
 		'whentheycrywiki' => false,
-		'chocowiki' => true,
 	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
@@ -2307,6 +2310,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wishcertwiki' => true,
+		'wishwiki' => true,
 		'worldbuildingwiki' => true,
 		'wthsapgovwiki' => true,
 		'xdjibiwiki' => true,
@@ -2476,6 +2480,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'wishwiki' => true,
 		'worldpediawiki' => true,
 		'webflowwiki' => true,
 		'yacresourceswiki' => true,
@@ -5083,6 +5088,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/2/26/Favicon.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
+		'wishwiki' => "$wmgUploadHostname/wishwiki/a/aa/Internet_favicon.png",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
@@ -5354,6 +5360,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/f/fb/Logo_finito_trans.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
+		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
 	),
 
 	// TemplateSandbox
