@@ -5285,6 +5285,7 @@ $wgConf->settings = array(
 		'reiaasuwiki' => "//$wmgUploadHostname/reiaasuwiki/1/1e/Reiaasu-wiki-logo-1.png",
 		'reservedurablewiki' => "//$wmgUploadHostname/reservedurablewiki/3/37/Logo_sustainable_storage_135_pi.png",
 		'rpgbrigadewiki' => "//$wmgUploadHostname/rpgbrigadewiki/c/c9/Logo.png",
+		'rwdvolvowiki' => "//$wmgUploadHostname/rwdvolvowiki/9/93/Rwdvolvo-135px.png",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
 		'sapperpediawiki' => "//$wmgUploadHostname/sapperpediawiki/f/f8/Sapperpedia_small.png",
 		'saliorpediawiki' => "//$wmgUploadHostname/saliorpediawiki/9/98/BirdRoc.png",
