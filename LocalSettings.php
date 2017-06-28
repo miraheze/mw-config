@@ -2249,6 +2249,7 @@ $wgConf->settings = array(
 		'rpcharacterswiki' => true,
 		'rwdvolvowiki' => true,
 		'safiriawiki' => true,
+		'saharinspacewiki' => true,
 		'savagewikiwiki' => true,
 		'scruffywiki' => true,
 		'seldirwiki' => true,
