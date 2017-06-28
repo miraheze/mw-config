@@ -735,6 +735,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+saharinspacewiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+		),
 		'+seldirwiki' => array(
 			'anon' => true,
 			'user' => true,
