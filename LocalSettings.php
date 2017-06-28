@@ -3386,7 +3386,7 @@ $wgConf->settings = array(
 		),
 		'+nenawikiwiki' => array(
 			NS_MAIN => array(
-				'edit-admin-pages',
+				'edit-content-pages',
 			),
 			NS_USER => array(
 				'edit-content-pages',
