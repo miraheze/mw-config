@@ -172,6 +172,12 @@ if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }
 
+if ( $wmgUseEventLogging) {
+	wfLoadExtension( 'EventLogging' );
+	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
+	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
+}
+
 if ( $wmgUseFancyBoxThumbs ) {
 	require_once( "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php" );
 }
@@ -234,6 +240,10 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseGroupsSidebar ) {
 	require_once( "$IP/extensions/GroupsSidebar/GroupsSidebar.php" );
+}
+
+if ( $wmgUseGuidedTour ) {
+	wfLoadExtension( 'GuidedTour' );
 }
 
 if ( $wmgUseHeaderTabs ) {
