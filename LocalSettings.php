@@ -4655,6 +4655,11 @@ $wgConf->settings = array(
 				'autopatrolled',
 			),
 		),
+		'+sycwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat',
+			),
+		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
