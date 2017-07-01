@@ -303,6 +303,7 @@ $wgWhitelistRead =
 		"Lonkásá ya libosó",
 		"Hauptseit",
 		"Accueil",
+		"Halaman Utama",
 		"MediaWiki:Common.css",
 		"Special:CentralAutoLogin",
 		"Special:CentralLogin",
