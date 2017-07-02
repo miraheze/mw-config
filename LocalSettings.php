@@ -623,6 +623,9 @@ $wgConf->settings = array(
 		),
 		'+geomasterywiki' => array(
 			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
 		),
 		'+justwikiwiki' => array(
 			'anon' => true,
