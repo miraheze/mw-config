@@ -3391,6 +3391,7 @@ $wgConf->settings = array(
 			'Kategoriebespreking' => NS_CATEGORY_TALK,
 			'Lêer' => NS_FILE,
 			'Lêerbespreking' => NS_FILE_TALK,
+			'Plantilla' => NS_TEMPLATE,
 		),
 	),
 	'+wgNamespaceProtection' => array(
