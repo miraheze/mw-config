@@ -4191,6 +4191,11 @@ $wgConf->settings = array(
 				'centralauth-lock' => true,
 				'globalblock' => true,
 			),
+			'proxybot' => array(
+				'editprotected' => true,
+				'globalblock' => true,
+				'block' => true,
+			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
