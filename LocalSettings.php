@@ -3454,6 +3454,9 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_TROPEWORKSHOP => true,
 		),
+		'+alwikiwiki' => array(
+			NS_MAIN => true,
+		),
 		'+caeruleawiki' => array(
 			NS_MAIN => true,
 		),
