@@ -325,6 +325,7 @@ $wgConf->settings = array(
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.meeusen.net' => 'meeusenwiki',
 			'wiki.rizalespe.com' => 'rizalespewiki',
+			'wiki.tulpa.info' => 'tulpawiki',
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wikiescola.com.br' => 'wikiescolawiki',
 			'www.wikiletras.tk' => 'wikiletraswiki',
@@ -3454,9 +3455,6 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_TROPEWORKSHOP => true,
 		),
-		'+alwikiwiki' => array(
-			NS_MAIN => true,
-		),
 		'+caeruleawiki' => array(
 			NS_MAIN => true,
 		),
@@ -4874,6 +4872,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
 		'pruebawiki' => 'https://es.publictestwiki.com',
 		'testwiki' => 'https://publictestwiki.com',
+		'tulpawiki' => 'https://wiki.tulpa.info',
 		'reviwiki' => 'https://private.revi.wiki',
 		'reviwikiwiki' => 'https://reviwiki.info',
 		'rizalespewiki' => 'https://wiki.rizalespe.com',
@@ -5535,6 +5534,7 @@ $wgConf->settings = array(
 			'takethatwiki\.com',
 			'wiki\.teessidehackspace\.org\.uk',
 			'thelonsdalebattalion\.co.uk',
+			'wiki\.tulpa\.info',
 			'universebuild\.com',
 			'wiki\.valentinaproject.org',
 			'wiki\.kaisaga.com',
