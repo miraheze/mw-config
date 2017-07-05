@@ -1349,6 +1349,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
 		'tiandiwiki' => true,
+		'tmewiki' => true,
 		'universebuildwiki' => true,
 		'victorianrpwiki' => true,
 		'whentheycrywiki' => true,
