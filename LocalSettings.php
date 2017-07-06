@@ -2307,6 +2307,7 @@ $wgConf->settings = array(
 		'theworldwiki' => true,
 		'titaniawiki' => true,
 		'tmewiki' => true,
+		'tnoteswiki' => true,
 		'tochkiwiki' => true,
 		'tokyoghoulwiki' => true,
 		'torejorgwiki' => true,
