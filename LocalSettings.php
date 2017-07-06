@@ -5444,6 +5444,7 @@ $wgConf->settings = array(
 		'kstartupswiki' => 'Asia/Seoul',
 		'libertywiki' => 'Asia/Seoul',
 		'lunfengwiki' => 'Asia/Taipei',
+		'nenawikiwiki' => 'America/New_York',
 		'ontariobrasswiki' => 'America/Toronto',
 		'reviwiki' => 'Asia/Seoul',
 		'reviwikiwiki' => 'Asia/Seoul',
