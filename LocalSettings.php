@@ -657,6 +657,9 @@ $wgConf->settings = array(
 		'+maiasongcontestwiki' => array(
 			'anon' => true,
 		),
+		'+marinebiodiversitymatrixwiki' => array(
+			'anon' => true,
+		),
 		'+medergistswiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -2210,6 +2213,7 @@ $wgConf->settings = array(
 		'maiasongcontestwiki' => true,
 		'malaysiawiki' => true,
 		'marcoschriekwiki' => true,
+		'marinebiodiversitymatrix' => true,
 		'make717wiki' => true,
 		'medergistswiki' => true,
 		'medlabisowiki' => true,
