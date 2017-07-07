@@ -5192,7 +5192,6 @@ $wgConf->settings = array(
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
 		'carelliwiki' => "//$wmgUploadHostname/carelliwiki/9/9c/Logo-carelli.png",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/5/59/Snowflake135.png",
-		'centriswiki' => "//$wmgUploadHostname/centriswiki/8/86/Logo_da_Wiki_-_simples.png",
 		'changemyorgwiki' => "//$wmgUploadHostname/changemyorgwiki/2/2c/ChangeMyOrgUpdatedLogo.png",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
 		'chromiumrosewiki' => "//$wmgUploadHostname/chromiumrosewiki/b/ba/ChromiumRose135x135.png",
