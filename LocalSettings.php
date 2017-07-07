@@ -903,6 +903,7 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'takethatwikiwiki' => true,
 		'testwiki' => true,
+		'thebbwiki' => true,
 		'tochkiwiki' => true,
 		'touhouenginewiki' => true,
 		'worldbattlewiki' => true,
@@ -915,6 +916,7 @@ $wgConf->settings = array(
 		'inkubatorwiki' => true,
 		'malaysiawiki' => true,
 		'nationstateswiki' => true,
+		'thebbwiki' => true,
 		'wikipucwiki' => true,
 	),
 	'wmgUseApex' => array(
@@ -973,6 +975,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true,
 		'ircwiki' => true,
+		'thebbwiki' => true,
 		'wikidolphinhansenwiki' => true,
 	),
 	'wmgUseBootstrapMediawiki' => array(
@@ -1052,6 +1055,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
 		'tawseelawiki' => true,
+		'thebbwiki' => true,
 		'wikidolphinhansenwiki' => true,
 		'wikipucwiki' => true,
 	),
@@ -1078,6 +1082,7 @@ $wgConf->settings = array(
 		'evelopediawiki' => true,
 		'extloadwiki' => true,
 		'tawseelawiki' => true,
+		'thebbwiki' => true,
 	),
 	'wmgUseCreateRedirect' => array(
 		'default' => false,
@@ -1139,6 +1144,7 @@ $wgConf->settings = array(
 		'inkubatorwiki' => true,
 		'isvwiki' => true,
 		'rpgbrigadewiki' => true,
+		'thebbwiki' => true,
 	),
 	'wmgUseDuplicator' => array(
 		'default' => false,
@@ -1435,6 +1441,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'ircwiki' => true,
 		'pgnwikiwiki' => true,
+		'thebbwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
 		'default' => false,
@@ -1513,6 +1520,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'scruffywiki' => true,
 		'snowthegamewiki' => true,
+		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 		'universebuildwiki' => true,
 		'webflowwiki' => true,
@@ -1712,6 +1720,7 @@ $wgConf->settings = array(
 		'nanatsunotaizaiwiki' => true,
 		'pgnwikiwiki' => true,
 		'takethatwikiwiki' => true,
+		'thebbwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyoghoulwiki' => true,
@@ -1730,6 +1739,7 @@ $wgConf->settings = array(
 		'malaysiawiki' => true,
 		'pgnwikiwiki' => true,
 		'takethatwikiwiki' => true,
+		'thebbwiki' => true,
 		'tutorwiki' => true,
 		'universebuildwiki' => true,
 		'wikipucwiki' => true,
@@ -1752,6 +1762,7 @@ $wgConf->settings = array(
 		'sterbalfamilyrecipeswiki' => true,
 		'sterbalssundrystudieswiki' => true,
 		'sthomaspriwiki' => true,
+		'thebbwiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -1800,6 +1811,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'modularwiki' => true,
 		'scruffywiki' => true,
+		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseRSS' => array(
@@ -2305,6 +2317,7 @@ $wgConf->settings = array(
 		'tekkenwiki' => true,
 		'teleswikiwiki' => true,
 		'testwiki' => true,
+		'thebbwiki' => true,
 		'thecscwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
@@ -2506,6 +2519,7 @@ $wgConf->settings = array(
 		'szkwiki' => true,
 		'takethatwikiwiki' => true,
 		'testwiki' => true,
+		'thebbwiki' => true,
 		'tmewiki' => true,
 		'valentinaprojectwiki' => true,
 		'wikiletraswiki' => true,
@@ -4374,6 +4388,11 @@ $wgConf->settings = array(
 			),
 			'testgroup' => array(
 				'read' => true,
+			),
+		),
+		'thebbwiki' => array(
+			'sysop' => array(
+				'commentadmin' => true,
 			),
 		),
 		'+trexwiki' => array(
