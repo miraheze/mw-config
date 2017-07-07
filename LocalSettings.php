@@ -1884,6 +1884,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'stellachronicawiki' => true,
 		'takethatwikiwiki' => true,
+		'thebbwiki' => true,
 	),
 	'wmgUseSpoilers' => array(
 		'default' => false,
