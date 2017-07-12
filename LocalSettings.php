@@ -2386,6 +2386,7 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'eotewiki' => true,
 		'marcoschriekwiki' => true,
+		'sysexwiki' => true,
 		'szkwiki' => true,
 		'takethatwikiwiki' => true,
 		'wikikaisagawiki' => true,
