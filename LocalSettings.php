@@ -1018,6 +1018,7 @@ $wgConf->settings = array(
 		'doinwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true,
+		'hantpediawiki' => true,
 		'isvwiki' => true,
 		'jawp2chwiki' => true,
 		'jayuwikiwiki' => true,
