@@ -1420,6 +1420,7 @@ $wgConf->settings = array(
 		'noalatalawiki' => true,
 		'takethatwikiwiki' => true,
 		'thelonsdalebattalionwiki' => true,
+		'unionnorteamericanawiki' => true,
 		'wikidmatlandwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
