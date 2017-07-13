@@ -5280,6 +5280,7 @@ $wgConf->settings = array(
 		'grottocenterwiki' => "//$wmgUploadHostname/grottocenterwiki/a/ac/Logo_grottocenter.png",
 		'gundambiowiki' => "//$wmgUploadHostname/gundambiowiki/b/bc/Wiki.png",
 		'hamfemwiki' => "//$wmgUploadHostname/hamfemwiki/3/33/Hamfem-Logo1.jpg",
+		'hantpediawiki' => "//$wmgUploadHostname/hantpediawiki/b/bc/Wiki.png",
 		'heathenwiki' => "//$wmgUploadHostname/heathenwiki/b/b5/HeathenWiki_Logo.png",
 		'heralwikiawiki' => "//$wmgUploadHostname/heralwikiawiki/c/c9/Logo.png",
 		'hktransportpediawiki' => "//$wmgUploadHostname/hktransportpediawiki/6/60/Logo2wiki.PNG",
