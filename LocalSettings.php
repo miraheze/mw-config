@@ -5419,6 +5419,7 @@ $wgConf->settings = array(
 		'thedistancewiki' => "//$wmgUploadHostname/thedistancewiki/e/e2/NewWikiLogo.gif",
 		'toftcricketclubwiki' => "//$wmgUploadHostname/toftcricketclubwiki/2/23/ToftLogo.png",
 		'trainwiki' => "//$wmgUploadHostname/trainwiki/c/ce/Cdwk.png",
+		'trashpirateswiki' => "//$wmgUploadHostname/trashpirateswiki/0/09/TrashPirateLogo.jpg",
 		'trexwiki' => "//$wmgUploadHostname/trexwiki/4/49/Wikit.png",
 		'trumpwiki' => "//$wmgUploadHostname/trumpwiki/c/c3/Magnifying-logo.jpg",
 		'tulpawiki' => "//$wmgUploadHostname/tulpawiki/1/10/Tulpa.info-Logo.png",
