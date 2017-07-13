@@ -80,10 +80,6 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
-if ( $wgDBname === 'everythingiknowwiki' ) {
-	$wgWhitelistRead[] != 'Main Page';
-}
-
 if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = true;
