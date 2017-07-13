@@ -4838,7 +4838,7 @@ $wgConf->settings = array(
 			'protect',
 		),
 	),
-	
+
 	// Robot policy
 	'wgDefaultRobotPolicy' => array(
 		'default' => 'index,follow',
@@ -4962,7 +4962,7 @@ $wgConf->settings = array(
 	'wgDismissableSiteNoticeForAnons' => array(
 		'default' => true,
 	),
-	
+
 	// SocialProfile
 	'wgUserProfileThresholds' => array(
 		'default' => array(
@@ -5828,22 +5828,21 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 5;
+$wgMajorSiteNoticeID = 6;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
  	global $wgDBname;
 	if ( $wgDBname !== 'rpgbrigadewiki' ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td><a href="https://meta.miraheze.org/wiki/System_administrators">Miraheze System Administrators</a> are aware of the intermittent 503 issues and uploading issues that are currently occurring. The issues with uploads appear to have been resolved, and uploads have been re-enabled globally.</td>
+			<td>Miraheze staff are conducting an <a href="https://goo.gl/forms/WXAoae2tgTa6x8Bk1">Annual Survey</a>. Please participate!</td>
 			</tr></tbody></table>
 EOF;
 	}
 	return true;
 }
-*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
