@@ -5836,7 +5836,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
  	global $wgDBname;
 	if ( $wgDBname !== 'rpgbrigadewiki' ) {
 		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
+			<table class="wikitable" align="right" style="text-align:center;"><tbody><tr>
 			<td>Miraheze staff are conducting an <a href="https://goo.gl/forms/WXAoae2tgTa6x8Bk1">Annual Survey</a>. Please participate!</td>
 			</tr></tbody></table>
 EOF;
