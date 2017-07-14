@@ -660,6 +660,8 @@ $wgConf->settings = array(
 		),
 		'+marinebiodiversitymatrixwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'sysop' => true,
 		),
 		'+medergistswiki' => array(
 			'anon' => true,
@@ -4210,6 +4212,13 @@ $wgConf->settings = array(
 			),
 			'user' => array(
 				'createtalk' => true,
+				'edit' => true,
+			),
+		),
+		'+marinebiodiversitymatrixwiki' => array(
+			'member' => array(
+				'createtalk' => true,
+				'createpage' => true,
 				'edit' => true,
 			),
 		),
