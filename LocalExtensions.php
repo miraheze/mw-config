@@ -36,10 +36,6 @@ if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }
 
-if ( $wmgUseAutoSitemap ) {
-	wfLoadExtension( 'AutoSitemap' );
-}
-
 if ( $wmgUseAutoCreateCategoryPages ) {
 	wfLoadExtension( 'AutoCreateCategoryPages' );
 }

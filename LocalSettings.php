@@ -966,11 +966,6 @@ $wgConf->settings = array(
 		'ircwiki' => true,
 		'pgnwikiwiki' => true,
 	),
-	'wmgUseAutoSitemap' => array(
-		'default' => false, // Please read T1558#32765 before enabling on any wiki! --Reception123
-		'alwikiwiki' => false, // Does not work. To be uninstalled soon.
-		'extloadwiki' => false,
-	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
