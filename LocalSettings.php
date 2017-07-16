@@ -215,6 +215,7 @@ $wgConf->settings = array(
 		'nanatsunotaizaiwiki' => true,
 		'raymanspeedrunwiki' => true,
 		'thehushhushsagawiki' => true,
+		'tmewiki' => true,
 		'tokyoghoulwiki' => true,
 		'zharkunuwiki' => true,
 	),
