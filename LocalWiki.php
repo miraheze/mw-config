@@ -67,6 +67,7 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
+	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
 }
 
 if ( $wgDBname === 'brynda1231wiki' ) {
