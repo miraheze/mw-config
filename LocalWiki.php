@@ -64,6 +64,11 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgGroupPermissions['user']['createpage'] = true;
 }
 
+if ( $wgDBname === 'ayrshirewiki' ) {
+	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
+	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
+}
+
 if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
