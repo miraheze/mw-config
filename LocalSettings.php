@@ -826,6 +826,7 @@ $wgConf->settings = array(
 	'wgPFEnableStringFunctions' => array(
 		'default' => false,
 		'marcoschriekwiki' => true,
+		'realmgrinderwiki' => true,
 	),
 
 	'wgAllowSlowParserFunctions' => array(
