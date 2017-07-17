@@ -1778,6 +1778,7 @@ $wgConf->settings = array(
 		'sterbalssundrystudieswiki' => true,
 		'sthomaspriwiki' => true,
 		'thebbwiki' => true,
+		'tnoteswiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
@@ -5707,6 +5708,19 @@ $wgConf->settings = array(
 		'espiralwiki' => array('visualeditor'),
 		'fbwikiwiki' => array('visualeditor'),
 		'spiralwiki' => array('visualeditor'),
+	),
+	
+	// Protect site config
+	'wgProtectSiteLimit' => array(
+		'default' => '1 week',
+		'tnoteswiki' => 'indefinite',
+	),
+	'wgProtectSiteDefaultTimeout' => array(
+		'default' => '1 hour',
+		'tnoteswiki' => '2 hours',
+	),
+	'wgProtectSiteExempt' => array(
+		'default' => array(),
 	),
 
 	// WebChat config
