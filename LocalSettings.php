@@ -5712,15 +5712,12 @@ $wgConf->settings = array(
 	
 	// Protect site config
 	'wgProtectSiteLimit' => array(
-		'default' => '1 week',
 		'tnoteswiki' => 'indefinite',
 	),
 	'wgProtectSiteDefaultTimeout' => array(
-		'default' => '1 hour',
 		'tnoteswiki' => '2 hours',
 	),
 	'wgProtectSiteExempt' => array(
-		'default' => array(),
 	),
 
 	// WebChat config
