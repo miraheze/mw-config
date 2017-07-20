@@ -1129,8 +1129,9 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	'wmgUseDarkVector' => array(
-		'default' => true,
+		'default' => false,
 		'extloadwiki' => true,
+		'girlsfrontlinewiki' => true,
 		'grandtheftautowiki' => true,
 	),
 	'wmgUseDismissableSiteNotice' => array(
