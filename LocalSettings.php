@@ -1129,8 +1129,9 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 	),
 	'wmgUseDarkVector' => array(
-		'default' => true,
+		'default' => false,
 		'extloadwiki' => true,
+		'girlsfrontlinewiki' => true,
 		'grandtheftautowiki' => true,
 	),
 	'wmgUseDismissableSiteNotice' => array(
@@ -5040,8 +5041,9 @@ $wgConf->settings = array(
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
 		'dtswiki' => 'metrolook',
-		'godaigowiki' => 'monobook',
 		'ganeshawiki' => 'monobook',
+		'girlsfrontlinewiki' => 'darkvector',
+		'godaigowiki' => 'monobook',
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
