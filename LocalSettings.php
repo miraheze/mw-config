@@ -5867,7 +5867,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgMajorSiteNoticeID = 6;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
  	global $wgDBname;
 	if ( $wgDBname !== 'rpgbrigadewiki' ) {
@@ -5879,7 +5879,7 @@ EOF;
 	}
 	return true;
 }
-
+*/
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
