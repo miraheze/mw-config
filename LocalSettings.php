@@ -5243,6 +5243,7 @@ $wgConf->settings = array(
 		'bchwiki' => "//$wmgUploadHostname/bchwiki/c/c0/Logo_135.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/2/22/Main_page.PNG",
 		'beatstationwiki' => "//$wmgUploadHostname/beatstationwiki/d/da/Wiki_logo2.png",
+		'beminwiki' => "//$wmgUploadHostname/beminwiki/1/11/Beminpedia_logo.png",
 		'berlinowiki' => "//$wmgUploadHostname/berlinowiki/thumb/b/be/Berlino_new_logo.png/253px-Berlino_new_logo.png",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/0/0e/BetaPurpleLogo.png",
 		'biblicalwikiwiki' => "//$wmgUploadHostname/biblicalwikiwiki/e/e2/WikiLogo.svg",
