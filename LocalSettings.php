@@ -5079,6 +5079,7 @@ $wgConf->settings = array(
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/64/Favicon.ico",
 		'bchwiki' => "//$wmgUploadHostname/bchwiki/c/c0/Logo_135.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/3/3b/Favicongif.gif",
+		'beminwiki' => "//$wmgUploadHostname/beminwiki/1/15/BeminFavicon.png",
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/6/64/Favicon.ico",
 		'bgowiki' => "//$wmgUploadHostname/bgowiki/6/64/Favicon.ico",
 		'bigforestwiki' => "//$wmgUploadHostname/bigforestwiki/d/d2/Favicon_SeongJjinDoe_v2.png",
