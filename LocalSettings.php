@@ -1809,7 +1809,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'grandtheftautowiki' => true,
 		'inazumaelevenwiki' => true,
-		'thebbwiki' => false,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
