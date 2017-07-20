@@ -4144,6 +4144,11 @@ $wgConf->settings = array(
 				'respected' => true,
 			),
 		),
+		'+hasanistanwiki' => array(
+			'user' => array(
+				'chat' => true,
+			),
+		),
 		'+intpwiki' => array(
 			'sysop' => array(
 				'createpage' => true,
