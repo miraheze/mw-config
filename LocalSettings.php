@@ -1809,7 +1809,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'grandtheftautowiki' => true,
 		'inazumaelevenwiki' => true,
-		'thebbwiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
@@ -5056,7 +5055,7 @@ $wgConf->settings = array(
 		'pfsolutionswiki' => 'metrolook',
 		'raymanspeedrunwiki' => 'bootstrapmediawiki',
 		'revitwiki' => 'monobook',
-		'thebbwiki' => 'refreshed',
+		'thebbwiki' => 'apex',
 		'thelonsdalebattalionwiki' => 'metrolook',
 	),
 	'wgFavicon' => array(
