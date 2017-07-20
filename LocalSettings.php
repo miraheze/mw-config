@@ -1449,6 +1449,7 @@ $wgConf->settings = array(
 		'applebranchwiki' => true,
 		'applewikiwiki' => true,
 		'extloadwiki' => true,
+		'hasanistanwiki' => true,
 		'ircwiki' => true,
 		'pgnwikiwiki' => true,
 		'thebbwiki' => true,
