@@ -5283,7 +5283,6 @@ $wgConf->settings = array(
 		'doinwiki' => "//$wmgUploadHostname/doinwiki/6/60/Wiki_Logo.png",
 		'doraemonwiki' => "//$wmgUploadHostname/doraemonwiki/8/8b/D2.png",
 		'drones4allwiki' => "//$wmgUploadHostname/drones4allwiki/6/60/Wiki_Logo.png",
-		'dsiguidewiki' => "//$wmgUploadHostname/dsiguidewiki/1/13/Wikilogod.jpg",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/c/c0/Logo_135.png",
 		'emulationwiki' => "//$wmgUploadHostname/emulationwiki/3/3b/Wiki_logo.png",
 		'embobadawiki' => "//$wmgUploadHostname/embobadawiki/3/35/Tof.png",
