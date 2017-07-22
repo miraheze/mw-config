@@ -5881,20 +5881,13 @@ $wgMajorSiteNoticeID = 7;
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wgDBname;
-	
-	if ( $wgDBname == 'metawiki' ) {
+	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
  		<td><a href="https://meta.miraheze.org/wiki/Miraheze-2-year">The second anniversary of Miraheze is today!</a> Come celebrate with us, as we reflect on our achivements and look to the future. Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
 		</tr></tbody></table>
 EOF;
-	} else {
-		$siteNotice .= <<<EOF
-		<table class="wikitable" style="text-align:center;"><tbody><tr>
- 		<td> <a href="https://meta.miraheze.org/wiki/Miraheze-2-year">The second anniversary of Miraheze is today!</a> Come celebrate with us, as we reflect on our achivements and look to the future. Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
-		</tr></tbody></table>
-EOF;
-	}
+	 }
 	return true;
 }
 // Hook so that Terms of Service is included in footer
