@@ -2545,6 +2545,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'testwiki' => true,
 		'thebbwiki' => true,
+		'thelonsdalebattalionwiki' => true,
 		'tmewiki' => true,
 		'valentinaprojectwiki' => true,
 		'wikiletraswiki' => true,
