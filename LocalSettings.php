@@ -5884,13 +5884,13 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	if ( $wgDBname == 'metawiki' ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
- 		<td>[[Miraheze-2-year|The second anniversary of Miraheze is today! Come celebrate with us, as we reflect on our achivements and look to the future.]] Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+ 		<td><a href="https://meta.miraheze.org/wiki/Miraheze-1-year">The second anniversary of Miraheze is today!</a> Come celebrate with us, as we reflect on our achivements and look to the future.]] Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
 		</tr></tbody></table>
 EOF;
 	} else {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
- 		<td>[[m:Miraheze-2-year|The second anniversary of Miraheze is today! Come celebrate with us, as we reflect on our achivements and look to the future.]] Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+ 		<td> <a href="https://meta.miraheze.org/wiki/Miraheze-1-year">The second anniversary of Miraheze is today!</a> Come celebrate with us, as we reflect on our achivements and look to the future.]] Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
 		</tr></tbody></table>
 EOF;
 	}
