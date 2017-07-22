@@ -5873,22 +5873,28 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 6;
+$wgMajorSiteNoticeID = 7;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
- 	global $wgDBname;
-	if ( $wgDBname !== 'rpgbrigadewiki' ) {
+	global $wgDBname;
+	
+	if ( $wgDBname == 'metawiki' ) {
 		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze staff are conducting an <a href="https://goo.gl/forms/WXAoae2tgTa6x8Bk1">Annual Survey</a>. Please participate!</td>
-			</tr></tbody></table>
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+ 		<td>[[Miraheze-2-year|The second anniversary of Miraheze is today! Come celebrate with us, as we reflect on our achivements and look to the future.]] Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+		</tr></tbody></table>
+EOF;
+	} else {
+		$siteNotice .= <<<EOF
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+ 		<td>[[m:Miraheze-2-year|The second anniversary of Miraheze is today! Come celebrate with us, as we reflect on our achivements and look to the future.]] Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+		</tr></tbody></table>
 EOF;
 	}
 	return true;
 }
-*/
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
