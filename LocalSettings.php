@@ -844,7 +844,7 @@ $wgConf->settings = array(
 		'testwiki' => 90 * 24 * 3600,
 	),
 	// Echo
-	'wmgEchoEnableEmailBatch' => array(
+	'wgEchoEnableEmailBatch' => array(
 		'default' => true,
 	),
 	'wgEchoCrossWikiNotifications' => array(
