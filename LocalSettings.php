@@ -2912,9 +2912,9 @@ $wgConf->settings = array(
 	'wgEnotifWatchlist' => array(
 		'default' => true,
 	),
-//	'wgUserEmailUseReplyTo' => array(
-//		'default' => true,
-//	),
+	'wgUserEmailUseReplyTo' => array(
+		'default' => true,
+	),
 	'wgEmailConfirmToEdit' => array(
 		'default' => false,
 		'nenawikiwiki' => true,
