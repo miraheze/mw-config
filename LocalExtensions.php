@@ -390,6 +390,10 @@ if ( $wmgUsePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 }
 
+if ( $wmgUsePdfBook ) {
+	wfLoadExtension( 'PdfBook' );
+}
+
 if ( $wmgUsePDFEmbed ) {
 	require_once( "$IP/extensions/PDFEmbed/PDFEmbed.php" );
 }

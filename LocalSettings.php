@@ -1688,6 +1688,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUsePdfBook' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
 		'applebranchwiki' => true,
