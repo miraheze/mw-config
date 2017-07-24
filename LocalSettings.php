@@ -5060,6 +5060,7 @@ $wgConf->settings = array(
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'permanentfuturelabwiki' => 'foreground',
+		'pfsolutionswiki' => 'metrolook',
 		'raymanspeedrunwiki' => 'bootstrapmediawiki',
 		'revitwiki' => 'monobook',
 		'thebbwiki' => 'apex',
@@ -5712,6 +5713,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		'fusewiki' => array( 'foreground' ),
 		'permanentfuturelabwiki' => array( 'foreground' ),
+		'pfsolutions' => array( 'metrolook' ),
 	),
 	'wgVisualEditorUseSingleEditTab' => array(
 		'default' => false,
