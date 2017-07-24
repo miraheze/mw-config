@@ -391,7 +391,7 @@ if ( $wmgUsePageTriage ) {
 }
 
 if ( $wmgUsePdfBook ) {
-	wfLoadExtension( 'PdfBook' );
+	wfLoadExtension( 'PdfBook/MediaWiki/PdfBook' );
 }
 
 if ( $wmgUsePDFEmbed ) {
