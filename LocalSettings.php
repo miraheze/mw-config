@@ -2366,6 +2366,7 @@ $wgConf->settings = array(
 		'uoluwiki' => true,
 		'unikumwiki' => true,
 		'universebuildwiki' => true,
+		'ussewiki' => true,
 		'valentinaprojectwiki' => true,
 		'vgalimentiwiki' => true,
 		'victorianrpwiki' => true,
