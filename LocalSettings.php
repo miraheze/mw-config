@@ -3412,8 +3412,8 @@ $wgConf->settings = array(
 			"뉴스" => NS_NEWSLINK,
 		),
 		'+dakhilcommunitywiki' => array(
-			'DC' => NS_MAIN
-			'DC_talk' => NS_TALK
+			'DC' => NS_MAIN,
+			'DC_talk' => NS_TALK,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
