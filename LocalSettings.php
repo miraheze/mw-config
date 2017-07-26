@@ -1416,6 +1416,7 @@ $wgConf->settings = array(
 		'ndnwiki' => true,
 		'raymanspeedrunwiki' => true,
 		'rpgbrigadewiki' => true,
+		'sysexwiki' => true,
 	),
 	'wmgUseMaps' => array(
 		'default' => false,
@@ -2415,7 +2416,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'eotewiki' => true,
 		'marcoschriekwiki' => true,
-		'sysexwiki' => true,
 		'szkwiki' => true,
 		'takethatwikiwiki' => true,
 		'wikikaisagawiki' => true,
