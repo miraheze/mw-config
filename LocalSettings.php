@@ -4328,6 +4328,7 @@ $wgConf->settings = array(
 			),
 			'emailconfirmed' => array(
 				'createtalk' => true,
+				'edit' => true,
 				'edit-talkpages' => true,
 			),
 		),
