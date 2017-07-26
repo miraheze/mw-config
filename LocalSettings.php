@@ -3495,6 +3495,9 @@ $wgConf->settings = array(
 			NS_CATEGORY => array(
 				'edit-content-pages',
 			),
+			NS_TALK => array(
+				'edit-talkpages',
+			),
 		),
 		'+yeoksawiki' => array(
 			NS_PROJECT => array(
@@ -4322,6 +4325,10 @@ $wgConf->settings = array(
 				'edit-content-pages' => true,
 				'edit-admin-pages' => true,
 			),
+			'emailconfirmed' => array(
+				'createtalk' => true,
+				'edit-talkpages' => true,
+			),
 		),
 		'+pgnwikiwiki' => array(
 			'sysop' => array(
@@ -4792,6 +4799,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+bitcoindebateswiki' => array(
+			'emailconfirmed' => array(
+				APCOND_EMAILCONFIRMED,
+			),
+		),
+		'+nenawikiwiki' => array(
 			'emailconfirmed' => array(
 				APCOND_EMAILCONFIRMED,
 			),
