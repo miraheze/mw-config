@@ -691,6 +691,7 @@ $wgConf->settings = array(
 		),
 		'+nenawikiwiki' => array(
 			'anon' => true,
+			'user' => true,
 			'sysop' => true,
 		),
 		'+noalatalawiki' => array(
