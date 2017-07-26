@@ -4654,6 +4654,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+nenawikiwiki' => array(
+			'sysop' => array(
+				'editor',
+			),
+		),
 		'+pruebawiki' => array(
 			'sysop' => array(
 				'editor',
