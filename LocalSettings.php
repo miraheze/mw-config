@@ -3411,6 +3411,10 @@ $wgConf->settings = array(
 			"분토" => NS_CATEGORY_TALK,
 			"뉴스" => NS_NEWSLINK,
 		),
+		'+dakhilcommunitywiki' => array(
+			'DC' => NS_MAIN
+			'DC_talk' => NS_TALK
+		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
