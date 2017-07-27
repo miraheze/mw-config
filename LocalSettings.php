@@ -5489,6 +5489,7 @@ $wgConf->settings = array(
 		'terriblespacewiki' => "//$wmgUploadHostname/terriblespacewiki/e/eb/Terrible_space_logo.png",
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/NewLogo.png",
 		'texwikiwiki' => "//$wmgUploadHostname/texwikiwiki/3/34/Texwikilogo.png",
+		'theavatarchronicleswiki' => "//$wmgUploadHostname/theavatarchronicleswiki/0/05/DragonIcon.svg",
 		'thecscwiki' => "//$wmgUploadHostname/thecscwiki/5/5d/CSC_logo_final.svg",
 		'thefosterswiki' => "//$wmgUploadHostname/thefosterswiki/archive/c/c9/20160726073101%21Logo.png",
 		'thelonsdalebattalionwiki' => "//$wmgUploadHostname/thelonsdalebattalionwiki/2/22/SoldiersLogo.png",
