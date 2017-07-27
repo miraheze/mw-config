@@ -864,6 +864,11 @@ $wgConf->settings = array(
 	'wgEchoUseCrossWikiBetaFeature' => array(
 		'default' => true,
 	),
+	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
+ 	'wgExemptFromUserRobotsControl' => array(
+ 		'default' => $wgContentNamespaces,
+ 		'thelonsdalebattalionwiki' => array(),
+ 	),
 
 	// Extensions and Skins
 	// AccessControl: due to security risks, use of this extension is at a wikis' calculated risk.
