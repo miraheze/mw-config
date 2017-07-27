@@ -3140,6 +3140,10 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'takethatwikiwiki' => false,
 	),
+	'wgCapitalLinks' => array(
+		'default' => true,
+		'dicowiki' => false,
+	),
 
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => array(
