@@ -1579,6 +1579,7 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => true,
 		'tmewiki' => true,
 		'tokyoghoulwiki' => true,
+		'unionnorteamericanawiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
