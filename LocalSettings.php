@@ -3478,6 +3478,7 @@ $wgConf->settings = array(
 			'Lêerbespreking' => NS_FILE_TALK,
 			'Plantilla' => NS_TEMPLATE,
 			'Ŝablono' => NS_TEMPLATE,
+			'Ayuda' => NS_HELP,
 		),
 	),
 	'+wgNamespaceProtection' => array(
