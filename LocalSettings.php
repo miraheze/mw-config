@@ -467,9 +467,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'bpwiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'bigforestwiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'thelonsdalebattalionwiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
