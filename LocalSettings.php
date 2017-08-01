@@ -1793,6 +1793,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'financialfindswiki' => true,
 		'extloadwiki' => true,
+		'hasanistanwiki' => true,
 		'nationsglorywiki' => true,
 		'robertsnoteswiki' => true,
 		'sqlserverwiki' => true,
@@ -1801,7 +1802,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'thebbwiki' => true,
 		'tnoteswiki' => true,
-		'hasanistanwiki' => true,
+		
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
