@@ -1793,6 +1793,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'financialfindswiki' => true,
 		'extloadwiki' => true,
+		'hasanistanwiki' => true,
 		'nationsglorywiki' => true,
 		'robertsnoteswiki' => true,
 		'sqlserverwiki' => true,
