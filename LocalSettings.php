@@ -1703,8 +1703,8 @@ $wgConf->settings = array(
 	),
 	'wmgUsePdfBook' => array(
 		'default' => false,
-		'extloadwiki' => true,
-		'testwiki' => true,
+		'extloadwiki' => true, // Does not work when CustomNavBlocks is enabled! --Reception123
+		'nenawikiwiki' => true,
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
