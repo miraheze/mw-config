@@ -4465,10 +4465,11 @@ $wgConf->settings = array(
 				'globalblock-whitelist' => true,
 			),
 			'consul' => array(
-				'read' => true,
+				'abusefilter-modify-restricted' => true,
 				'bureaucrat' => true,
 				'consul' => true,
 				'editinterface' => true,
+				'read' => true,
 			),
 			'testgroup' => array(
 				'read' => true,
