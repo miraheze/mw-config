@@ -1704,6 +1704,7 @@ $wgConf->settings = array(
 	'wmgUsePdfBook' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'testwiki' => true,
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
