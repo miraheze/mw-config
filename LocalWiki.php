@@ -176,10 +176,11 @@ if ( $wgDBname === 'sthomaspriwiki' ) {
 }
 
 if ( $wgDBname === 'testwiki' ) {
-	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
+	$wgGroupPermissions['sysop']['nuke'] = false;
 }
 
 if ( $wgDBname == 'trexwiki' ) {
