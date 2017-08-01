@@ -1801,6 +1801,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'thebbwiki' => true,
 		'tnoteswiki' => true,
+		'hasanistanwiki' => true,
 	),
 	'wmgUseQuiz' => array(
 		'default' => false,
