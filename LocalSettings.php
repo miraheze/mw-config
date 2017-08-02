@@ -2449,6 +2449,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
+		'christipediawiki' => true,
 		'extloadwiki' => true,
 		'geodatawiki' => true,
 		'modularwiki' => true,
