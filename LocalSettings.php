@@ -338,7 +338,6 @@ $wgConf->settings = array(
 			'histories.wiki' => 'wishcertwiki',
 			'www.aksaraywiki.com' => 'aksaraywikiwiki',
 			'www.zenbuddhism.info' => 'zenbuddhismwiki',
-			'www.modelusgov.us' => 'modelusgovwiki',
 		),
 	),
 	'wgCentralAuthAutoMigrate' => array(
@@ -4999,7 +4998,6 @@ $wgConf->settings = array(
 		'make717wiki' => 'https://wiki.make717.org',
 		'marinebiodiversitymatrixwiki' => 'https://marinebiodiversitymatrix.org',
 		'meeusenwiki' => 'https://wiki.meeusen.net',
-		'modelusgovwiki' => 'https://www.modelusgov.us',
 		'nenawikiwiki' => 'https://nenawiki.org',
 		'nextlevelwikiwiki' => 'https://wiki.lbcomms.co.za',
 		'openonderwijswiki' => 'https://www.openonderwijs.org',
@@ -5710,7 +5708,6 @@ $wgConf->settings = array(
 			'speleo\.wiki',
 			'www\.aksaraywiki\.com',
 			'www\.zenbuddhism\.info',
-			'www\.modelusgov\.us',
 			'espiral\.org',
 			'spiral\.wiki',
 			'wiki\.coldblooded\.ga',
