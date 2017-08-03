@@ -2707,6 +2707,7 @@ $wgConf->settings = array(
 		'catboxwiki' => true,
 		'entropediawiki' => true,
 		'ndnwiki' => true,
+		'nonbinarywiki' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
