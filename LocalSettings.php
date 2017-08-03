@@ -3794,6 +3794,11 @@ $wgConf->settings = array(
 				'editor',
 			),
 		),
+		'+nonbinarywiki' => array(
+			'sysop' => array(
+				'uploader',
+			),
+		),
 		'+trexwiki' => array(
 			'co' => array(
 				'ceo',
@@ -4355,6 +4360,11 @@ $wgConf->settings = array(
 				'edit-talkpages' => true,
 			),
 		),
+		'+nonbinarywiki' => array(
+			'uploader' => array(
+				'upload_by_url' => true,
+			),
+		),
 		'+pgnwikiwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
@@ -4690,6 +4700,11 @@ $wgConf->settings = array(
 		'+nenawikiwiki' => array(
 			'sysop' => array(
 				'editor',
+			),
+		),
+		'+nonbinarywiki' => array(
+			'sysop' => array(
+				'uploader',
 			),
 		),
 		'+pruebawiki' => array(
