@@ -2168,6 +2168,7 @@ $wgConf->settings = array(
 		'carelliwiki' => true,
 		'carvingwiki' => true,
 		'casuarinawiki' => true,
+		'cccpwiki' => true,
 		'changemyorgwiki' => true,
 		'chimaerawiki' => true,
 		'christipediawiki' => true,
