@@ -170,10 +170,6 @@ if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['editmywatchlist'] = false;
 }
 
-if ( $wgDBname === 'ssptopwiki' ) {
-	$wgGroupPermissions['read-only']['edit'] = false;
-}
-
 if ( $wgDBname === 'sthomaspriwiki' ) {
 	$wgGroupPermissions['sysop']['block'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
