@@ -171,7 +171,7 @@ if ( $wgDBname == 'soundboxiki' ) {
 }
 
 if ( $wgDBname === 'ssptopwiki' ) {
-	$wgGroupPermissions['member']['edit'] = false;
+	$wgGroupPermissions['read-only']['edit'] = false;
 }
 
 if ( $wgDBname === 'sthomaspriwiki' ) {
