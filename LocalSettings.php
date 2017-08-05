@@ -4841,6 +4841,11 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'ssptopwiki' => array(
+			'read-only' => array(
+				'edit' => true,
+			),
+		),
 		'testwiki' => array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
