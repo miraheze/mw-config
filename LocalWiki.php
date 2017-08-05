@@ -172,8 +172,6 @@ if ( $wgDBname == 'soundboxiki' ) {
 
 if ( $wgDBname === 'ssptopwiki' ) {
 	$wgGroupPermissions['member']['edit'] = false;
-	$wgGroupPermissions['*']['createpage'] = false;
-	$wgGroupPermissions['*']['createtalk'] = false;
 }
 
 if ( $wgDBname === 'sthomaspriwiki' ) {
