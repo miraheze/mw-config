@@ -3801,6 +3801,11 @@ $wgConf->settings = array(
 				'uploader',
 			),
 		),
+		'+ssptopwiki' => array(
+			'sysop' => array(
+				'read-only',
+			),
+		),
 		'+trexwiki' => array(
 			'co' => array(
 				'ceo',
@@ -4432,6 +4437,11 @@ $wgConf->settings = array(
 				'game-master' => true,
 			),
 		),
+		'+ssptopwiki' => array(
+			'read-only' => array(
+				'read' => true,
+			),
+		),
 		'+sthomaspriwiki' => array(
 			'bureaucrat' => array(
 				'block' => true,
@@ -4749,6 +4759,11 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+			),
+		),
+		'+ssptopwiki' => array(
+			'sysop' => array(
+				'read-only',
 			),
 		),
 		'+testwiki' => array(
