@@ -170,6 +170,12 @@ if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['editmywatchlist'] = false;
 }
 
+if ( $wgDBname === 'ssptopwiki' ) {
+	$wgGroupPermissions['member']['edit'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['createtalk'] = false;
+}
+
 if ( $wgDBname === 'sthomaspriwiki' ) {
 	$wgGroupPermissions['sysop']['block'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
