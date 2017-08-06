@@ -519,6 +519,9 @@ $wgConf->settings = array(
 		'+antiguabarbudacalypsowiki' => array(
 			'anon' => true,
 		),
+		'+antropologiaargentinawiki' => array(
+			'anon' => true,
+		),
 		'+bitcoindebateswiki' => array(
       			'anon' => true,
 			'user' => true,
