@@ -801,6 +801,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+test1wiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+thoughtonomywikiwiki' => array(
 			'anon' => true,
 		),
