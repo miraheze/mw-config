@@ -801,11 +801,6 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
-		'+test1wiki' => array(
-			'anon' => true,
-			'user' => true,
-			'sysop' => true,
-		),
 		'+thoughtonomywikiwiki' => array(
 			'anon' => true,
 		),
@@ -3644,6 +3639,9 @@ $wgConf->settings = array(
 		),
 		'+reviwikiwiki' => array(
 			NS_MAIN => true,
+		),
+		'+rswiki' => array(
+			NS_TEMPLATE => true,
 		),
 		'+safiriawiki' => array(
 			NS_MAIN => true,
