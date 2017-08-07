@@ -454,6 +454,9 @@ $wgConf->settings = array(
 		'default' => false,
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk/wiki/The_Lonsdale_Battalion:Cookies'
 	),
+	'wgCookieSetOnAutoblock' => array(
+		'default' => true,
+	),
 	// Database
 	'wgCompressRevisions' => array(
 		'default' => false,
