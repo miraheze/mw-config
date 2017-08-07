@@ -5994,22 +5994,22 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 7;
+$wgMajorSiteNoticeID = 8;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wgDBname;
-	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
+//	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
- 		<td><a href="https://meta.miraheze.org/wiki/Miraheze-2-year">The second anniversary of Miraheze is today!</a> Come celebrate with us, as we reflect on our achivements and look to the future. Survey results are also available! Thank you all for reading and editing Miraheze wikis!</a>.</p></td>
+		<td>Miraheze will upgrade all wikis to <a href="//mediawiki.org/wiki/MediaWiki_1.29">MediaWiki 1.29</a> starting [] UTC. At that time, all wikis will be put in <b>read-only<b> mode, so please make sure to save all your changes before then! If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
 		</tr></tbody></table>
 EOF;
 	 }
 	return true;
 }
-*/
+
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
