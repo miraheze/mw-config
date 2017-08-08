@@ -819,6 +819,9 @@ $wgConf->settings = array(
 		'+turkcesozlukwiki' => array(
 			'anon' => true,
 		),
+		'+utamacrosswiki' => array(
+			'anon' => true,
+		),
 		'+welcomewiki' => array(
 			'anon' => true,
 		),
