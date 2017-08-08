@@ -332,6 +332,7 @@ $wgConf->settings = array(
 			'wiki.tulpa.info' => 'tulpawiki',
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wikiescola.com.br' => 'wikiescolawiki',
+			'wiki.worlduniversityandschool.org' => 'worlduniversityandschoolwiki',
 			'www.wikiletras.tk' => 'wikiletraswiki',
 			'wikipuk.cl' => 'wikipucwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
@@ -2203,6 +2204,7 @@ $wgConf->settings = array(
 		'urpswiki' => true,
 		'valentinaprojectwiki' => true,
 		'welcomewiki' => true,
+		'worlduniversityandschoolwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseTweeki' => array(
@@ -5190,6 +5192,7 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
 		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
 		'wishcertwiki' => 'https://histories.wiki',
+		'worlduniversityandschoolwiki' => 'https://wiki.worlduniversityandschool.org',
 		'zenbuddhismwiki' => 'https://www.zenbuddhism.info',
 	),
 	'wgShowHostnames' => array(
@@ -5871,6 +5874,7 @@ $wgConf->settings = array(
 			'wiki\.valentinaproject.org',
 			'wiki\.kaisaga.com',
 			'wikiescola\.com\.br',
+			'wiki\.worlduniversityandschool\.org'.
 			'www.wikiletras\.tk',
 			'wikipuk\.cl',
 			'wisdomwiki\.org',
