@@ -870,6 +870,7 @@ $wgConf->settings = array(
 //		'bmedwiki' => true,
 //		'claneuphoriawiki' => true,
 //		'extloadwiki' => true,
+//		'test1wiki' => true,
 //		'metaautonomywiki' => true,
 //		'mindgearwiki' => true,
 //		'ndnwiki' => true,
