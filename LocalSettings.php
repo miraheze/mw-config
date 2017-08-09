@@ -3389,6 +3389,10 @@ $wgConf->settings = array(
 			NS_PORTAL_TALK => 'Portal_talk',
 			NS_TIMELINE => 'Timeline',
 		),
+		'casuarinawiki' => array(
+			NS_LIBRARY => '圖書館',
+			NS_LIBRARY_TALK => '圖書討論',
+		),
 		'catboxwiki' => array(
 			NS_COMIC => 'Comic',
 			NS_COMIC_TALK => 'Comic_talk'
@@ -3564,6 +3568,10 @@ $wgConf->settings = array(
 			"분" => NS_CATEGORY,
 			"분토" => NS_CATEGORY_TALK,
 			"뉴스" => NS_NEWSLINK,
+		),
+		'+casuarinawiki' => array(
+			'文庫' => NS_LIBRARY,
+			'文庫討論' => NS_LIBRARY_TALK,
 		),
 		'+dakhilcommunitywiki' => array(
 			'DC' => NS_MAIN,
