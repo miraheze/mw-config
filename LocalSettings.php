@@ -2128,6 +2128,7 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'universebuildwiki' => true,
 		'whentheycrywiki' => true,
+		'youtauwiki' => true,
 	),
 	'wmgUseTemplateSandbox' => array(
 		'default' => false,
@@ -2718,6 +2719,7 @@ $wgConf->settings = array(
 		'worldpediawiki' => true,
 		'webflowwiki' => true,
 		'yacresourceswiki' => true,
+		'youtauwiki' => true,
 	),
 
 	// External link target
