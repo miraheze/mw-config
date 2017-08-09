@@ -64,6 +64,12 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgGroupPermissions['user']['createpage'] = true;
 }
 
+if ( $wgDBname === 'ayrshirewiki' ) {
+	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
+	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
+	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
+}
+
 if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
@@ -170,10 +176,11 @@ if ( $wgDBname === 'sthomaspriwiki' ) {
 }
 
 if ( $wgDBname === 'testwiki' ) {
-	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
+	$wgGroupPermissions['sysop']['nuke'] = false;
 }
 
 if ( $wgDBname == 'trexwiki' ) {
