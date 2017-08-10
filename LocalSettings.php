@@ -2535,6 +2535,7 @@ $wgConf->settings = array(
 		'wishwiki' => true,
 		'worldbuildingwiki' => true,
 		'wthsapgovwiki' => true,
+		'wustlnsgywiki' => true,
 		'xdjibiwiki' => true,
 		'xdwxstywiki' => true,
 		'xjtluwiki' => true,
