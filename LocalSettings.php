@@ -5585,6 +5585,7 @@ $wgConf->settings = array(
 		'idleomenswiki' => "//$wmgUploadHostname/idleomenswiki/9/9e/IdleOmens-Logo.png",
 		'imperiuswiki' => "//$wmgUploadHostname/imperiuswiki/9/94/ImperiusLogo.png",
 		'integrywiki' => "//$wmgUploadHostname/integrywiki/b/bc/Wiki.png",
+		'ipolywiki' => "//$wmgUploadHostname/ipolywiki/c/c1/IPoly_Logo.svg",
 		'islamwissenschaftwiki' => "//$wmgUploadHostname/islamwissenschaftwiki/b/bc/Wiki.png",
 		'isvwiki' => "//$wmgUploadHostname/isvwiki/b/bc/Med%C5%BEuviki-logo-latn.svg",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/e/eb/IZLogo.png",
