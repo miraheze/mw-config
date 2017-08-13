@@ -2607,8 +2607,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikibaseRepository' => array(
 		'default' => false,
-		'extloadwiki' => true, 
- 	 	'test1wiki' => true,
+		'extloadwiki' => false, // REL1_29 seems broken currently.
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false, // DO NOT ENABLE. disables captcha on all actions. See T1124 (upstream) --Reception123
