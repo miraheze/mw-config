@@ -460,6 +460,9 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	// Database
+	'wgAllowSchemaUpdates' => array(
+		'default' => false,
+	),
 	'wgCompressRevisions' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
