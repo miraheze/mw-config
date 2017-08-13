@@ -471,7 +471,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => 'Upgrading to MediaWiki 1.29',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -6145,7 +6145,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 8;
+$wgMajorSiteNoticeID = 9;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -6154,7 +6154,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 //	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Miraheze will upgrade all wikis to <a href="//mediawiki.org/wiki/MediaWiki_1.29">MediaWiki 1.29</a> starting 1900 UTC. At that time, all wikis will be put in <b>read-only<b> mode, so please make sure to save all your changes before then! If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
+		<td>Miraheze is currently performing an update to <a href="//mediawiki.org/wiki/MediaWiki_1.29">MediaWiki 1.29</a>. At this time, all wikis are in <b>read-only<b> mode. If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
 		</tr></tbody></table>
 EOF;
 //	 }
