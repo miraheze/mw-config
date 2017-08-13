@@ -1,9 +1,9 @@
 <?php
 
 // Set up extensions for use on wikis that are not global
-//if ( $wmgUseAccessControl ) { // Causes errors with 1.29 --Reception123
-//	require_once( "$IP/extensions/AccessControl/AccessControl.php" );
-//}
+if ( $wmgUseAccessControl ) {
+	require_once( "$IP/extensions/AccessControl/AccessControl.php" );
+}
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
 	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
@@ -137,7 +137,7 @@ if ( $wmgUseDuskToDawn ) {
 }
 
 if ( $wmgUseDPLForum ) {
-	wfLoadExtension( 'DPLForum' );
+	require_once( "$IP/extensions/DPLForum/DPLforum.php" );
 }
 
 if ( $wmgUseDuplicator ) {
@@ -157,11 +157,11 @@ if ( $wmgUseEditcount ) {
 }
 
 if ( $wmgUseEditSubpages ) {
-    wfLoadExtension( 'EditSubpages' );
+	require_once( "$IP/extensions/EditSubpages/EditSubpages.php" );
 }
 
 if ( $wmgUseEducationProgram ) {
-    wfLoadExtension( 'EducationProgram' );
+	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
 }
 
 if ( $wmgUseErudite ) {
@@ -387,7 +387,7 @@ if ( $wmgUsePageNotice ) {
 }
 
 if ( $wmgUsePageTriage ) {
-	wfLoadExtension( 'PageTriage' );
+	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 }
 
 if ( $wmgUsePdfBook ) {
@@ -497,7 +497,7 @@ if ( $wmgUseSubpageFun ) {
 }
 
 if ( $wmgUseSubPageList3 ) {
-	wfLoadExtension( 'SubPageList3' );
+	require_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
 if ( $wmgUseSyntaxHighlight ) {
@@ -505,7 +505,7 @@ if ( $wmgUseSyntaxHighlight ) {
 }
 
 if ( $wmgUseTabsCombination ) {
-	wfLoadExtension( 'Tabber' );
+	require_once( "$IP/extensions/Tabber/Tabber.php" );
 	require_once( "$IP/extensions/Tabs/Tabs.php" );
 }
 
@@ -560,7 +560,7 @@ if ( $wmgUseTweeki ) {
 
 if ( $wmgUseUserWelcome ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
-   	require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
+    require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
 }
 
 if ( $wmgUseVariables ) {
@@ -602,7 +602,7 @@ if ( $wmgUseWebChat ) {
 }
 
 if ( $wmgUseWhoIsWatching ) {
-	wfLoadExtension( 'WhoIsWatching' );
+	require_once( "$IP/extensions/WhoIsWatching/WhoIsWatching.php" );
 }
 
 if ( $wmgUseWidgets ) {
