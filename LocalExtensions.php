@@ -395,7 +395,7 @@ if ( $wmgUsePdfBook ) {
 }
 
 if ( $wmgUsePDFEmbed ) {
-	require_once( "$IP/extensions/PDFEmbed/PDFEmbed.php" );
+	wfLoadExtension( 'PDFEmbed' );
 }
 
 if ( $wmgUsePdfHandler ) {
