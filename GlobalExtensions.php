@@ -1,4 +1,5 @@
 <?php
+require_once( "$IP/extensions/Echo/Echo.php" );
 require_once( "$IP/extensions/NativeSvgHandler/NativeSvgHandler.php" );
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 wfLoadExtensions( [
@@ -14,7 +15,6 @@ wfLoadExtensions( [
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'Disambiguator',
-	'Echo',
 	'Gadgets',
 	'GlobalBlocking',
 	'GlobalCssJs',

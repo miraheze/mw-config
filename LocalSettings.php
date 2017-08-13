@@ -456,9 +456,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk/wiki/The_Lonsdale_Battalion:Cookies'
 	),
-	'wgCookieSetOnAutoblock' => array(
-		'default' => true,
-	),
 	// Database
 	'wgCompressRevisions' => array(
 		'default' => false,
@@ -890,20 +887,20 @@ $wgConf->settings = array(
 	// Prior to enabling the extension a bureaucrat should agree (on their own wiki)
 	// that Miraheze is NOT responsible for any data leaks caused by this extension,
 	// and that the wiki and elevated users are fully responsible for the usage of AccessControl.
-//	'wmgUseAccessControl' => array(
-//		'default' => false, // Do not enable! Causes errors with 1.29 --Reception123
-//		'bmedwiki' => true,
-//		'claneuphoriawiki' => true,
-//		'extloadwiki' => true,
-//		'test1wiki' => true,
-//		'metaautonomywiki' => true,
-//		'mindgearwiki' => true,
-//		'ndnwiki' => true,
-//		'westmarcheswiki' => true,
-//		'wimawiki' => true,
-//		'wisdomwikiwiki' => true,
-//		'wisdomsandboxwiki' => true,
-//	),
+	'wmgUseAccessControl' => array(
+		'default' => false,
+		'bmedwiki' => true,
+		'claneuphoriawiki' => true,
+		'extloadwiki' => true, 
+ 	 	'test1wiki' => true,
+		'metaautonomywiki' => true,
+		'mindgearwiki' => true,
+		'ndnwiki' => true,
+		'westmarcheswiki' => true,
+		'wimawiki' => true,
+		'wisdomwikiwiki' => true,
+		'wisdomsandboxwiki' => true,
+	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
 		'alwikiwiki' => true,
