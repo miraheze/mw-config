@@ -6003,7 +6003,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 //	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Miraheze will upgrade all wikis to <a href="//mediawiki.org/wiki/MediaWiki_1.29">MediaWiki 1.29</a> starting [] UTC. At that time, all wikis will be put in <b>read-only<b> mode, so please make sure to save all your changes before then! If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
+		<td>Miraheze will upgrade all wikis to <a href="//mediawiki.org/wiki/MediaWiki_1.29">MediaWiki 1.29</a> starting 1900 UTC. At that time, all wikis will be put in <b>read-only<b> mode, so please make sure to save all your changes before then! If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
 		</tr></tbody></table>
 EOF;
 //	 }
