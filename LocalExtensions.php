@@ -207,14 +207,14 @@ if ( $wmgUseFlow ) {
 
 if ( $wmgFlowDefaultNamespaces && $wmgUseFlow ) {
 	$wgNamespaceContentModels = array(
-		NS_TALK => CONTENT_MODEL_FLOW_BOARD,
-		NS_USER_TALK => CONTENT_MODEL_FLOW_BOARD,
-		NS_PROJECT_TALK => CONTENT_MODEL_FLOW_BOARD,
-		NS_FILE_TALK => CONTENT_MODEL_FLOW_BOARD,
-		NS_MEDIAWIKI_TALK => CONTENT_MODEL_FLOW_BOARD,
-		NS_TEMPLATE_TALK => CONTENT_MODEL_FLOW_BOARD,
-		NS_HELP_TALK => CONTENT_MODEL_FLOW_BOARD,
-		NS_CATEGORY_TALK => CONTENT_MODEL_FLOW_BOARD,
+		NS_TALK => 'flow-board',
+		NS_USER_TALK => 'flow-board',
+		NS_PROJECT_TALK => 'flow-board',
+		NS_FILE_TALK => 'flow-board',
+		NS_MEDIAWIKI_TALK => 'flow-board',
+		NS_TEMPLATE_TALK => 'flow-board',
+		NS_HELP_TALK => 'flow-board',
+		NS_CATEGORY_TALK => 'flow-board',
 	) + $wgNamespaceContentModels;
 }
 
