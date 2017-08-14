@@ -2785,7 +2785,7 @@ $wgConf->settings = array(
 			NS_PROJECT,
 		),
 		'isvwiki' => array(
-			NS_MAIN,
+		//	NS_MAIN,
 			NS_FILE,
 			NS_TEMPLATE,
 			NS_CATEGORY,
