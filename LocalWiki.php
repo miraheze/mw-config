@@ -57,8 +57,8 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 
 // Per-wiki overrides
 if ( $wgDBname === 'allthetropeswiki' ) {
-	$wgNamespaceContentModels[NS_TROPEWORKSHOP_TALK] = CONTENT_MODEL_FLOW_BOARD;
-	$wgNamespaceContentModels[NS_REVIEWS] = CONTENT_MODEL_FLOW_BOARD;
+	$wgNamespaceContentModels[NS_TROPEWORKSHOP_TALK] = 'flow-board';
+	$wgNamespaceContentModels[NS_REVIEWS] = 'flow-board';
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = true;
