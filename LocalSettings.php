@@ -487,6 +487,17 @@ $wgConf->settings = array(
 		'default' => '250', // databases don't have much memory - let's not overload them in future
 	),
 
+	// DJVU
+	'wgDjvuDump' => array(
+		'default' => '/usr/bin/djvudump',
+	),
+	'wgDjvuRenderer' => array(
+		'default' => '/usr/bin/ddjvu',
+	),
+	'wgDjvuTxt' => array(
+		'default' => '/usr/bin/djvutxt',
+	),
+
 	// Editing Matrix
 	'wmgEditingMatrix' => array(
 		'default' => array(
@@ -2867,7 +2878,7 @@ $wgConf->settings = array(
 		'ndnwiki' => true,
 	),
 	'wgFileExtensions' => array(
-		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf' ),
+		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
 		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
