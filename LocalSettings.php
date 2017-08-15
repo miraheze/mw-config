@@ -5046,11 +5046,21 @@ $wgConf->settings = array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
 		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
 	),
-	
+
 	// Piwik settings
 	'wmgPiwikSiteID' => array(
 		'default' => '1',
 		'allthetropeswiki' => '2',
+	),
+
+	// RateLimits
+	'+wgRateLimits' => array(
+		'default' => aray(),
+		'metawiki' => array(
+			'requestwiki' => array(
+				'user' => array( 1, 3600 ),
+			),
+		),
 	),
 
 	// RelatedArticles settings
