@@ -5055,7 +5055,7 @@ $wgConf->settings = array(
 
 	// RateLimits
 	'+wgRateLimits' => array(
-		'default' => aray(),
+		'default' => array(),
 		'metawiki' => array(
 			'requestwiki' => array(
 				'user' => array( 1, 3600 ),
