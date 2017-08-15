@@ -154,6 +154,7 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgGroupPermissions['user']['reupload-shared'] = false;
 	$wgGroupPermissions['user']['minoredit'] = false;
 	$wgGroupPermissions['user']['purge'] = false;
+	$wgGroupPermissions['sysop']['autopatrol'] = false;
 }
 
 if ( $wgDBname === 'pruebawiki' ) {
