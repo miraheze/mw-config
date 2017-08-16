@@ -1648,6 +1648,7 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => true,
 		'tmewiki' => true,
 		'universebuildwiki' => true,
+		'utamacrosswiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
