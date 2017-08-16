@@ -588,6 +588,12 @@ $wgConf->settings = array(
 			'user' => true,
 			'editor' => true,
 		),
+		'+designatedsurvivorwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+dottorcontewiki' => array(
 			'anon' => true,
 		),
