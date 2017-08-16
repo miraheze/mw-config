@@ -2364,6 +2364,7 @@ $wgConf->settings = array(
 		'fusewiki' => true,
 		'ganeshawiki' => true,
 		'geirpediawiki' => true,
+		'geresbamyanwiki' => true,
 		'genwiki' => true,
 		'gncwiki' => true,
 		'grandtheftwikiwiki' => true,
