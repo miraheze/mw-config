@@ -2368,6 +2368,7 @@ $wgConf->settings = array(
 		'frontdeskswiki' => true,
 		'fsxworldspainwiki' => true,
 		'fusewiki' => true,
+		'gameonwiki' => true,
 		'ganeshawiki' => true,
 		'geirpediawiki' => true,
 		'geresbamyanwiki' => true,
