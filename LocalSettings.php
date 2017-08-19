@@ -5327,6 +5327,7 @@ $wgConf->settings = array(
 		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
 		'claneuphoriawiki' => 'gamepress',
+		'corydoctorowwiki' => 'timeless',
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
 		'dtswiki' => 'metrolook',
