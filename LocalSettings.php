@@ -146,6 +146,15 @@ define( 'NS_NEWSLINK', 1720);
 define( 'NS_NEWSLINK_TALK', 1721);
 define( 'NS_CIVILIZATION_IV', 1722);
 define( 'NS_CIVILIZATION_IV_TALK', 1723);
+define( 'NS_PSEUDO_NEWS', 1724);
+define( 'NS_PSEUDO_NEWS_TALK', 1725);
+define( 'NS_PSEUDO_BASE_DICTIONARY', 1726);
+define( 'NS_PSEUDO_BASE_DICTIONARY_TALK', 1727);
+define( 'NS_PSEUDO_BASE_LIBRARY', 1728);
+define( 'NS_PSEUDO_BASE_LIBRARY_TALK', 1729);
+define( 'NS_PSEUDO_BASE_MUSIC', 1730);
+define( 'NS_PSEUDO_BASE_MUSIC_TALK', 1731);
+
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3525,6 +3534,16 @@ $wgConf->settings = array(
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_OFFICIAL => 'Official',
 			NS_OFFICIAL_TALK => 'Official_talk',
+		),
+		'uncyclopediawiki' => array(
+			NS_PSEUDO_NEWS => '伪基新闻',
+			NS_PSEUDO_NEWS_TALK => '伪基新闻谈',
+			NS_PSEUDO_BASE_DICTIONARY => '伪基词典',
+			NS_PSEUDO_BASE_DICTIONARY_TALK => '伪基词典谈',
+			NS_PSEUDO_BASE_LIBRARY => '伪基文库',
+			NS_PSEUDO_BASE_LIBRARY_TALK => '伪基文库谈',
+			NS_PSEUDO_BASE_MUSIC => '伪基音乐',
+			NS_PSEUDO_BASE_MUSIC_TALK => '伪基音乐谈',
 		),
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
