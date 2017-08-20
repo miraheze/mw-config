@@ -2551,6 +2551,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'trablangwiki' => true,
 		'trexwiki' => true,
+		'triseptsolutionswiki' => true,
 		'trumpwiki' => true,
 		'tsponiewiki' => true,
 		'twswiki' => true,
