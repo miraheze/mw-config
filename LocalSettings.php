@@ -5770,6 +5770,7 @@ $wgConf->settings = array(
 		'unoitudowiki' => "//$wmgUploadHostname/unoitudowiki/1/1b/Logo_unoi.png",
 		'uprisewiki' => "//$wmgUploadHostname/uprisewiki/2/2e/DotLogo130px.png",
 		'umemaro3dwiki' => "//$wmgUploadHostname/umemaro3dwiki/b/bc/Wiki.png",
+		'uncyclopediawiki' => "//$wmgUploadHostname/uncyclopediawiki/b/bc/Wiki.png",
 		'unikumwiki' => "//$wmgUploadHostname/unikumwiki/e/e0/Unikum_135x135.png",
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
 		'utamacrosswiki' => "//$wmgUploadHostname/utamacrosswiki/c/cb/Utamacross_logo.png",
