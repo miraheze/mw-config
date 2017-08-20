@@ -764,6 +764,11 @@ $wgConf->settings = array(
 			'sysop' => true,
 			'editor' => true,
 		),
+		'+pocketmonsterswiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+prfmukwiki' => array(
 			'anon' => true,
 		),
