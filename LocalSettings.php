@@ -484,6 +484,13 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'constwiki' => 'Database migration.',
+		'jawp2chwiki' => 'Database migration.',
+		'jayuwikiwiki' => 'Database migration.',
+		'kingkillerwiki' => 'Database migration.',
+		'librewiki' => 'Database migration.',
+		'maiasongcontestwiki' => 'Database migration.',
+		'poserdazfreebieswiki' => 'Database migration.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
