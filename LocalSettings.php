@@ -265,7 +265,7 @@ $wgConf->settings = array(
 		'default' => 'metawiki',
 	),
 	'wgNoticeProjects' => array( 
-		'default' => 'closed', 'private', 'all',
+		'default' => array('closed', 'private', 'all'),
 	),
 	'wgCentralHost' => array(
 		'default' => "//meta.miraheze.org",
