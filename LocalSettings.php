@@ -1166,7 +1166,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseContributionScores' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => false,
 	),
 	'wmgUseCookieWarning' => array(
 		'default' => false,
