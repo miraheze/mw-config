@@ -5604,6 +5604,7 @@ $wgConf->settings = array(
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/b/bc/Wiki.png",
 		'coldbloodedwiki' => "//$wmgUploadHostname/coldbloodedwiki/1/12/WikiLogo_135.png",
 		'collabvmwiki' => "//$wmgUploadHostname/collabvmwiki/c/c9/Logo.png",
+		'colonizemarswiki' => "//$wmgUploadHostname/colonizemarswiki/c/c1/Colonize_logo.png",
 		'compilerdevwiki' => "//$wmgUploadHostname/compilerdevwiki/c/c9/Logo.png",
 		'conuconwiki' => "//phabricator.miraheze.org/file/data/o6plmtjp4afd6vvxcx2m/PHID-FILE-fzbuutpmykupn5jz256h/CONUCON_small_face.png",
 		'cosiadventurewiki' => "//$wmgUploadHostname/cosiadventurewiki/3/3b/Wiki_logo.png",
