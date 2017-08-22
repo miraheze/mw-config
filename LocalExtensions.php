@@ -62,6 +62,10 @@ if ( $wmgUseCategoryTree ) {
 	wfLoadExtension( 'CategoryTree' );
 }
 
+if ( $wmgUseCentralNotice ) {
+	wfLoadExtension( 'CentralNotice' );
+}
+
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
