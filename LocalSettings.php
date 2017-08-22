@@ -272,8 +272,8 @@ $wgConf->settings = array(
 	),
 	'wgNoticeProject' => array(
 		'default' => 'default',
-		'closed' => 'closed',
-		'private' => 'private',
+		'+closed' => 'closed',
+		'+private' => 'private',
 	),
 	
 	// Do not enable this without Southparkfan's
