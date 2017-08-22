@@ -264,7 +264,9 @@ $wgConf->settings = array(
 	'wgCentralDBname' => array(
 		'default' => 'metawiki',
 	),
-	'wgNoticeProjects' => array( 'closed', 'private', 'all'),
+	'wgNoticeProjects' => array( 
+		'default' => 'closed', 'private', 'all',
+	),
 	'wgCentralHost' => array(
 		'default' => "//meta.miraheze.org",
 	),
