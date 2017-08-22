@@ -264,6 +264,14 @@ $wgConf->settings = array(
 	'wgCentralDBname' => array(
 		'default' => 'metawiki',
 	),
+	'wgNoticeProjects' => array( 'closed', 'private', 'all'),
+	'wgCentralHost' => array(
+		'default' => "//meta.miraheze.org",
+	),
+	'wgNoticeProject' => array(
+		'default' => '$site',
+		'metawiki' => 'meta',
+	),
 	
 	// Do not enable this without Southparkfan's
 	// permission, as it could let Redis crash.
