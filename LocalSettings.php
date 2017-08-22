@@ -271,7 +271,9 @@ $wgConf->settings = array(
 		'default' => "//meta.miraheze.org",
 	),
 	'wgNoticeProject' => array(
-		'default' => array('default', 'closed', 'private', ),
+		'default' => 'default',
+		'closed' => 'closed',
+		'private' => 'private',
 	),
 	
 	// Do not enable this without Southparkfan's
