@@ -412,7 +412,6 @@ $wgConf->settings = array(
 			"$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql",
 			"$IP/extensions/ArticleRatings/ratings.sql",
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
-			"$IP/extensions/CentralNotice/CentralNotice.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/Comments/sql/comments.sql",
