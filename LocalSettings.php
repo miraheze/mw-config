@@ -437,6 +437,8 @@ $wgConf->settings = array(
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
 			"$IP/extensions/MediaWikiChat/sql/chat.sql",
   			"$IP/extensions/MediaWikiChat/sql/chat_users.sql",
+			"$IP/extensions/Moderation/sql/patch-moderation.sql",
+			"$IP/extensions/Moderation/sql/patch-moderation_block.sql",
 			"$IP/extensions/MsCalendar/MsCalendar.sql",
 			"$IP/extensions/Newsletter/sql/nl_issues.sql",
 			"$IP/extensions/Newsletter/sql/nl_newsletters.sql",
