@@ -382,6 +382,7 @@ $wgConf->settings = array(
 	),
 	'wgCentralAuthCreateOnView' => array(
 		'default' => true,
+		'nenawikiwiki' => false,
 	),
 	'wgCentralAuthDatabase' => array(
 		'default' => 'centralauth',
@@ -1752,7 +1753,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewSignupPage' => array(
 		'default' => false,
-		'extloadwiki' => false, // DO NOT ENABLE !! This extension uses ShoutWiki notices and is not adapted for Miraheze. See T761#22421 --Reception123
+		'extloadwiki' => true,
+		'nenawikiwiki' => true,
 	),
 	'wmgUseNewsletter' => array(
 		'default' => false,
