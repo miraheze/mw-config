@@ -2287,6 +2287,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'extloadwiki' => false,
 	),
+	'wmgUseUrlGetParameters' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseUserWelcome' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

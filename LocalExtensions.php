@@ -562,6 +562,10 @@ if ( $wmgUseTweeki ) {
 	wfLoadSkin( 'Tweeki' );
 }
 
+if ( $wmgUseUrlGetParameters ) {
+	require_once( "$IP/extensions/UrlGetParameters/UrlGetParameters.php" );
+}
+
 if ( $wmgUseUserWelcome ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
    	require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
