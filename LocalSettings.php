@@ -3233,6 +3233,7 @@ $wgConf->settings = array(
 			'bitcoindebateswiki',
 			'bpwiki',
 			'cvtwiki',
+			'dditecwiki',
 			'extloadwiki',
 			'newarkmanorwiki',
 			'proxybotwiki',
