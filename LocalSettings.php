@@ -1630,9 +1630,13 @@ $wgConf->settings = array(
 		'reviwikiwiki' => false,
 		'wikipukwiki' => false,
 	),
-	'wmgUseModeration' => array(
+	'wmgUseModeration' => array( // Don't forget to also set the 'moderation' right.
 		'default' => false,
 		'extloadwiki' => true,
+		'modularwiki' => true,
+		'nenawikiwiki' => true,
+		'prfmukwiki' => true,
+		'utamacrosswiki' => true,
 	),
 	'wmgUseModernSkylight' => array(
 		'default' => false,
@@ -4585,6 +4589,11 @@ $wgConf->settings = array(
 				'createwiki' => true,
 			),
 		),
+		'+modularwiki' => array(
+			'sysop' => array(
+				'moderation' => true,
+			),
+		),
 		'+nenawikiwiki' => array(
 			'editor' => array(
 				'createpage' => true,
@@ -4604,6 +4613,7 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'edit-content-pages' => true,
 				'edit-admin-pages' => true,
+				'moderation' => true,
 			),
 			'emailconfirmed' => array(
 				'createtalk' => true,
@@ -4624,6 +4634,11 @@ $wgConf->settings = array(
 		'+plazmaburstwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
+			),
+		),
+		'+prfmukwiki' => array(
+			'sysop' => array(
+				'moderation' => true,
 			),
 		),
 		'+poserdazfreebieswiki' => array(
@@ -4829,6 +4844,11 @@ $wgConf->settings = array(
 				'autoconfirmed' => true,
 				'autopatrolled' => true,
 				'editinterface' => true,
+			),
+		),
+		'+utamacrosswiki' => array(
+			'sysop' => array(
+				'moderation' => true,
 			),
 		),
 		'+westmarcheswiki' => array(
