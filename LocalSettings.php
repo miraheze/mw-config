@@ -2291,7 +2291,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseUrlGetParameters' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'extloadwiki' => false, // Upstream errors. See T2070.
 	),
 	'wmgUseUserWelcome' => array(
 		'default' => false,
