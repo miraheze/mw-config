@@ -1630,10 +1630,6 @@ $wgConf->settings = array(
 		'reviwikiwiki' => false,
 		'wikipukwiki' => false,
 	),
-	'wmgUseModeration' => array
-		'default' => false,
-		'extloadwiki' => true,
-	),
 	'wmgUseModernSkylight' => array(
 		'default' => false,
 		'extloadwiki' => true, 

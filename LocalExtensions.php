@@ -312,10 +312,6 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
 
-if ( $wmgUseModeration ) {
-	wfLoadExtension( 'Moderation' );
-}
-
 if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
