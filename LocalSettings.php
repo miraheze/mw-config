@@ -154,6 +154,11 @@ define( 'NS_PSEUDO_BASE_LIBRARY', 1728);
 define( 'NS_PSEUDO_BASE_LIBRARY_TALK', 1729);
 define( 'NS_PSEUDO_BASE_MUSIC', 1730);
 define( 'NS_PSEUDO_BASE_MUSIC_TALK', 1731);
+define( 'NS_RGB', 1732);
+define( 'NS_RGB_TALK', 1733);
+define( 'NS_LINESTYLE', 1734);
+define( 'NS_LINESTYLE_TALK', 1735);
+
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
@@ -3535,6 +3540,12 @@ $wgConf->settings = array(
 		'reviwiki' => array(
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
+		),
+		'revitwiki' => array(
+			NS_RGB => 'Rgb',
+			NS_RGB_TALK => 'Rgb_talk',
+			NS_LINESTYLE => 'LineStyle',
+			NS_LINESTYLE_TALK => 'LineStyle_talk',
 		),
 		'rpgbrigadewiki' => array(
 			NS_VIDEO => 'Video',
