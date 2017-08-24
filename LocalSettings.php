@@ -1404,6 +1404,7 @@ $wgConf->settings = array(
 		'marcoschriekwiki' => true,
 		'moziwiki' => true,
 		'muckhackwiki' => true,
+		'nenawikiwiki' => true,
 		'nomicwiki' => true,
 		'nationsglorywiki' => true,
 		'nextlevelwikiwiki' => true,
