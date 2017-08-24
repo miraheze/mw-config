@@ -2417,6 +2417,7 @@ $wgConf->settings = array(
 		'evawiki' => true,
 		'evelopediawiki' => true,
 		'extloadwiki' => true, 
+		'eyebobswiki' => true,
  	 	'test1wiki' => true,
 		'fablabesdswiki' => true,
 		'fantasiawiki' => true,
