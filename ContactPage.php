@@ -29,6 +29,21 @@ if ( $wgDBname == 'ayrshirewiki' ) {
 	);
 }
 
+if ( $wgDBname == 'cdcwiki' ) {
+	// Test form on extloadwiki - this is *not* as complicated as they get
+	$wgContactConfig['extloadtest'] = array(
+		'RecipientUser' => 'NonstickRon',
+		'SenderEmail' => $wgPasswordSender,
+		'SenderName' => 'Miraheze No Reply',
+		'RequireDetails' => true,
+		'IncludeIP' => false, // Lets not do this ever for privacy (unless offical forms)
+		'AdditionalFields' => array(),
+		'DisplayFormat' => 'table',
+		'RLModules' => array(),
+		'RLStyleModules' => array(),
+	);
+}
+
 if ( $wgDBname == 'christipediawiki' ) {
 	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'Kees Langeveld',
