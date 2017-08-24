@@ -30,8 +30,7 @@ if ( $wgDBname == 'ayrshirewiki' ) {
 }
 
 if ( $wgDBname == 'cdcwiki' ) {
-	// Test form on extloadwiki - this is *not* as complicated as they get
-	$wgContactConfig['extloadtest'] = array(
+	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'NonstickRon',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Miraheze No Reply',
