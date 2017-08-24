@@ -1091,6 +1091,7 @@ $wgConf->settings = array(
 		'barbarasherwikiwiki' => true,
 		'dtswiki' => true,
 		'extloadwiki' => true, 
+		'eyebobswiki' => true,
  	 	'test1wiki' => true,
 		'financialfindswiki' => true,
 		'hontsukuruwiki' => true,
