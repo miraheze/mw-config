@@ -205,8 +205,6 @@ if ( $wmgUseFlow ) {
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
 	);
-
-	$wgFlowEditorList = $wmgFlowEditorList;
 }
 
 if ( $wmgFlowDefaultNamespaces && $wmgUseFlow ) {
