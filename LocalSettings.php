@@ -6132,15 +6132,6 @@ $wgConf->settings = array(
 		'isvwiki' => true,
 		'spiralwiki' => true,
 	),
-	'wmgFlowEditorList' => array(
-		'default' => array('wikitext', 'visualeditor'),
-		'calexitwiki' => array('visualeditor'),
-		'coldbloodedwiki' => array('visualeditor'),
-		'espiralwiki' => array('visualeditor'),
-		'fbwikiwiki' => array('visualeditor'),
-		'nenawikiwiki' => array('visualeditor'),
-		'spiralwiki' => array('visualeditor'),
-	),
 	
 	// Protect site config
 	'wgProtectSiteLimit' => array(
