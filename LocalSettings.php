@@ -6138,6 +6138,7 @@ $wgConf->settings = array(
 		'coldbloodedwiki' => array('visualeditor'),
 		'espiralwiki' => array('visualeditor'),
 		'fbwikiwiki' => array('visualeditor'),
+		'nenawikiwiki' => array('visualeditor', 'wikitext'),
 		'spiralwiki' => array('visualeditor'),
 	),
 	
