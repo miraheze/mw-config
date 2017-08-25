@@ -155,6 +155,7 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgGroupPermissions['user']['minoredit'] = false;
 	$wgGroupPermissions['user']['purge'] = false;
 	$wgGroupPermissions['sysop']['autopatrol'] = false;
+	$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
 }
 
 if ( $wgDBname === 'pruebawiki' ) {
