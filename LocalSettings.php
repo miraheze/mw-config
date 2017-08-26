@@ -3545,8 +3545,8 @@ $wgConf->settings = array(
 			NS_SERVER_TALK => 'Server_talk',
 		),
 		'revitwiki' => array(
-			NS_RGB => 'Rgb',
-			NS_RGB_TALK => 'Rgb_talk',
+			NS_RGB => 'RGB',
+			NS_RGB_TALK => 'RGB_talk',
 			NS_LINESTYLE => 'LineStyle',
 			NS_LINESTYLE_TALK => 'LineStyle_talk',
 		),
