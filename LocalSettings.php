@@ -4070,6 +4070,13 @@ $wgConf->settings = array(
 				'uploader',
 			),
 		),
+		'+serinfhospwiki' => array(
+			'sysop' => array(
+				'SupportStaff',
+				'SalesStaff',
+				'PreSalesStaff',
+			),
+		),
 		'+ssptopwiki' => array(
 			'sysop' => array(
 				'read-only',
@@ -5055,6 +5062,13 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
+			),
+		),
+		'+serinfhospwiki' => array(
+			'sysop' => array(
+				'SupportStaff',
+				'SalesStaff',
+				'PreSalesStaff',
 			),
 		),
 		'+ssptopwiki' => array(
