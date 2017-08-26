@@ -4706,6 +4706,18 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
+		'+serinfhospwiki' => array(
+			'SupportStaff' => array(
+				'read' => true,
+			),
+			'SalesStaff' => array(
+				'read' => true,
+			),
+			'PreSalesStaff' => array(
+				'read' => true,
+				'edit' => true,
+			),
+		),
 		'+sovereignwiki' => array(
 			'officer' => array(
 				'read' => true,
