@@ -2568,6 +2568,7 @@ $wgConf->settings = array(
 		'savagewikiwiki' => true,
 		'scruffywiki' => true,
 		'seldirwiki' => true,
+		'serinfhospwiki' => true,
 		'setonwiki' => true,
 		'shippingandmetawiki' => true,
 		'sidemwiki' => true,
