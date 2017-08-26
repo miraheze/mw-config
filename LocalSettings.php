@@ -2968,6 +2968,7 @@ $wgConf->settings = array(
 		'+modularwiki' => array('pdf', 'mid', 'mp3', 'flac', 'svg', 'fpd' ),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
 		'+scruffywiki' => array( 'pdf', 'mid', 'mp3', 'flac', 'svg', 'fpd'),
+		'+serinfhospwiki' => array( 'pdf', 'zip' ),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
 		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
 		'+wisdomsandboxwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
