@@ -2971,6 +2971,7 @@ $wgConf->settings = array(
 		'+scruffywiki' => array( 'pdf', 'mid', 'mp3', 'flac', 'svg', 'fpd'),
 		'+serinfhospwiki' => array( 'pdf', 'zip' ),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
+		'+valentinaprojectwiki' => array( 'val', 'vit', 'vst'),
 		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
 		'+wisdomsandboxwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
 	),
