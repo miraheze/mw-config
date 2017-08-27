@@ -1646,7 +1646,6 @@ $wgConf->settings = array(
 		'modularwiki' => true,
 		'nenawikiwiki' => true,
 		'prfmukwiki' => true,
-		'utamacrosswiki' => true,
 	),
 	'wmgUseModernSkylight' => array(
 		'default' => false,
@@ -4884,11 +4883,6 @@ $wgConf->settings = array(
 				'autoconfirmed' => true,
 				'autopatrolled' => true,
 				'editinterface' => true,
-			),
-		),
-		'+utamacrosswiki' => array(
-			'sysop' => array(
-				'moderation' => true,
 			),
 		),
 		'+westmarcheswiki' => array(
