@@ -1308,6 +1308,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'extloadwiki' => true, 
  	 	'test1wiki' => true,
+		'themirrorwiki' => true,
 		'sthomaspriwiki' => true,
 	),
 	'wmgUseEditcount' => array(
@@ -2004,6 +2005,7 @@ $wgConf->settings = array(
 		'newnamlawiki' => true,
 		'rpgbrigadewiki' => true,
 		'takethatwikiwiki' => true,
+		'themirrorwiki' => true,
 		'tmewiki' => true,
 		'russiawatchwiki' => true,
 	),
