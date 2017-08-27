@@ -5729,6 +5729,7 @@ $wgConf->settings = array(
 		'eyebobswiki' => "//$wmgUploadHostname/eyebobswiki/0/0d/Eyebobs_logo_Resized.jpg",
 		'fablabesdswiki' => "//$wmgUploadHostname/fablabesdswiki/3/3c/CFDS_Logo.svg",
 		'fbwikiwiki' => "//$wmgUploadHostname/fbwikiwiki/thumb/4/4a/Fbwiki_logo.png/135px-Fbwiki_logo.png",
+		'feuwiki' => "//$wmgUploadHostname/feuwiki/8/81/Feu-logo.png",
 		'fieldresearchwiki' => "//$wmgUploadHostname/fieldresearchwiki/d/d1/Logo_c.jpg",
 		'fifamwiki' => "//$wmgUploadHostname/fifamwiki/0/0c/Wikilogo_160px.png",
 		'fishpercolatorwiki' => "//$wmgUploadHostname/fishpercolatorwiki/d/d2/FPLogo.png",
