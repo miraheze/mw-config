@@ -1879,6 +1879,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePdfBook' => array(
 		'default' => false,
+		'chocowiki' => true,
 		'extloadwiki' => true, 
  	 	'test1wiki' => true, // Does not work when CustomNavBlocks is enabled! --Reception123
 		'foundationsofteachingwiki' => true,
