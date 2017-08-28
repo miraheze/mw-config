@@ -2149,6 +2149,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
 		'bigforestwiki' => true,
+		'cpudevwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'datasciencewiki' => true,
 		'detlefswiki' => true,
