@@ -4069,6 +4069,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+metawiki' => array(
+			'sysop' => array(
+				'translationadmin',
+			),
+		),
 		'+nenawikiwiki' => array(
 			'sysop' => array(
 				'editor',
@@ -5020,6 +5025,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+metawiki' => array(
+			'sysop' => array(
+				'translationadmin',
 			),
 		),
 		'+nenawikiwiki' => array(
