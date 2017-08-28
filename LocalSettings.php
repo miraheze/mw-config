@@ -4634,7 +4634,7 @@ $wgConf->settings = array(
 				'pagetranslation' => true,
 				'translate-import' => true,
 				'translate-manage' => true,
-				),
+			),
 		),
 		'+modularwiki' => array(
 			'sysop' => array(
