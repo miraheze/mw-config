@@ -1244,11 +1244,6 @@ $wgConf->settings = array(
 		'extloadwiki' => true, 
  	 	'test1wiki' => true,
 	),
-	'wmgUseCustomNavBlocks' => array(
-		'default' => false,
-		'extloadwiki' => true,
- 	 	'test1wiki' => true,
-	),
 	'wmgUseDarkVector' => array(
 		'default' => false,
 		'extloadwiki' => true, 

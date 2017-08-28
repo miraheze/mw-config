@@ -123,11 +123,6 @@ if ( $wmgUseCustomHeader ) {
 	wfLoadExtension( 'CustomHeader' );
 }
 
-if ( $wmgUseCustomNavBlocks) {
-	require_once( "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php" );
-	$wgCustomNavBlocksEnable = true;
-}
-
 if ( $wmgUseDarkVector ) {
 	wfLoadSkin( 'DarkVector' );
 }
