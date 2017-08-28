@@ -1246,8 +1246,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
-		'extloadwiki' => false, // HTTP 500 error when trying to modify MediaWiki: file. See T998. --Reception123
- 	 	'test1wiki' => false,
+		'extloadwiki' => true,
+ 	 	'test1wiki' => true,
 	),
 	'wmgUseDarkVector' => array(
 		'default' => false,
@@ -1258,8 +1258,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
-		'extloadwiki' => true, 
- 	 	'test1wiki' => true,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
