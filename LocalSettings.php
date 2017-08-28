@@ -5971,6 +5971,7 @@ $wgConf->settings = array(
 		'lunfengwiki' => 'Asia/Taipei',
 		'nenawikiwiki' => 'America/New_York',
 		'ontariobrasswiki' => 'America/Toronto',
+		'proxybotwiki' => 'America/Chicago',
 		'reviwiki' => 'Asia/Seoul',
 		'reviwikiwiki' => 'Asia/Seoul',
 		'thelonsdalebattalionwiki' => 'Europe/London',
