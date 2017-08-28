@@ -1878,6 +1878,7 @@ $wgConf->settings = array(
 		'foundationsofteachingwiki' => true,
 		'ncpprcwiki' => true,
 		'nenawikiwiki' => true,
+		'serinfhospwiki' => true,
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
