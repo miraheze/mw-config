@@ -1,5 +1,7 @@
 <?php
-wfLoadSkin( 'CologneBlue' );
-wfLoadSkin( 'Modern' );
-wfLoadSkin( 'MonoBook' );
-wfLoadSkin( 'Vector' );
+wfLoadSkins( [
+	'CologneBlue',
+	'Modern',
+	'MonoBook',
+	'Vector'
+] );
