@@ -1726,6 +1726,7 @@ $wgConf->settings = array(
  	 	'test1wiki' => true,
 		'inazumaelevenwiki' => true,
 		'ircwiki' => true,
+		'jayuwikiwiki' => true,
 		'justinbieberwiki' => true,
 		'magnaversewiki' => true,
 		'microsoftwiki' => true,
@@ -2244,6 +2245,7 @@ $wgConf->settings = array(
  	 	'test1wiki' => true,
 		'enmarchewiki' => true,
 		'geirpediawiki' => true,
+		'jayuwikiwiki' => true,
 		'tymyrddinwiki' => true,
 	),
 	'wmgUseTimeless' => array( 
