@@ -4624,6 +4624,12 @@ $wgConf->settings = array(
 			'wikicreator' => array(
 				'createwiki' => true,
 			),
+			'translationadmin' => array(
+				'pagelang' => true,
+				'pagetranslation' => true,
+				'translate-import' => true,
+				'translate-manage' => true,
+				),
 		),
 		'+modularwiki' => array(
 			'sysop' => array(
