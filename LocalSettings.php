@@ -5969,6 +5969,7 @@ $wgConf->settings = array(
 		'ontariobrasswiki' => 'America/Toronto',
 		'reviwiki' => 'Asia/Seoul',
 		'reviwikiwiki' => 'Asia/Seoul',
+		'thelonsdalebattalionwiki' => 'Europe/London',
 		'webtoonwiki' => 'Asia/Seoul',
 	),
 	
