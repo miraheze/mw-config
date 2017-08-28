@@ -1246,9 +1246,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseCustomNavBlocks' => array(
 		'default' => false,
-		'calexitwiki' => true,
-		'extloadwiki' => true, 
- 	 	'test1wiki' => true,
+		'extloadwiki' => false, // HTTP 500 error when trying to modify MediaWiki: file. See T998. --Reception123
+ 	 	'test1wiki' => false,
 	),
 	'wmgUseDarkVector' => array(
 		'default' => false,
