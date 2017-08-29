@@ -32,6 +32,10 @@ if ( $wmgUseArticleRatings ) {
 	wfLoadExtension( 'ArticleRatings' );
 }
 
+if ( $wmgUseArticleToCategory2 ) {
+	require_once "$IP/extensions/ArticleToCategory2/ArticleToCategory2.php";
+}
+
 if ( $wmgUseAuthorProtect ) {
 	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
 }

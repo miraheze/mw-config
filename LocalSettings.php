@@ -1043,6 +1043,10 @@ $wgConf->settings = array(
 		'extloadwiki' => true, 
  	 	'test1wiki' => true,
 	),
+	'wmgUseArticleToCategory2' => array(
+		'default' => false,
+		'extloadwiki' => true,
+	),
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
 		'ayrshirewiki' => true,
