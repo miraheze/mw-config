@@ -91,10 +91,6 @@ if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = true;
 }
 
-if ( $wgDBname === 'ildrilwiki' || $wgDBname === 'lothuialethwiki' ) {
-	$wgWebChatClients['Mibbit']['url'] = '//embed.mibbit.com/index.html';
-}
-
 if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
