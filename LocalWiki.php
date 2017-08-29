@@ -92,7 +92,7 @@ if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 }
 
 if ( $wgDBname === 'ildrilwiki' || $wgDBname === 'lothuialethwiki' ) {
-	$wgWebChatClients['mibbit']['url'] = '//embed.mibbit.com/index.html';
+	$wgWebChatClients['Mibbit']['url'] = '//embed.mibbit.com/index.html';
 }
 
 if ( $wgDBname === 'intpwiki' ) {
