@@ -91,7 +91,7 @@ if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = true;
 }
 
-if ( $wgDBname === 'ildrilwiki' || $wgDBname == 'lothuialethwiki' ) {
+if ( $wgDBname === 'ildrilwiki' || $wgDBname === 'lothuialethwiki' ) {
 	$wgWebChatClients['mibbit']['url'] = 'https';
 }
 
