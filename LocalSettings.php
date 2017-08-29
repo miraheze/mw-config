@@ -1046,6 +1046,8 @@ $wgConf->settings = array(
 	'wmgUseArticleToCategory2' => array(
 		'default' => false,
 		'extloadwiki' => true,
+		'jayuwikiwiki' => true,
+		'test1wiki' => true,
 	),
 	'wmgUseAuthorProtect' => array(
 		'default' => false,
