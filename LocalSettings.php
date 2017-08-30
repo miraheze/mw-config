@@ -678,6 +678,9 @@ $wgConf->settings = array(
 		),
 		'+houseofettlingarfreyuwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
 		),
 		'+howtoturtlewiki' => array(
 			'anon' => true,
