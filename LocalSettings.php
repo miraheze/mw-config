@@ -964,7 +964,6 @@ $wgConf->settings = array(
 //		'metaautonomywiki' => true,
 //		'mindgearwiki' => true,
 //		'ndnwiki' => true,
-//		'westmarcheswiki' => true,
 //		'wimawiki' => true,
 //		'wisdomwikiwiki' => true,
 //		'wisdomsandboxwiki' => true,
@@ -2629,7 +2628,6 @@ $wgConf->settings = array(
 		'votingwiki' => true,
 		'wabcwiki' => true,
 		'webflowwiki' => true,
-		'westmarcheswiki' => true,
 		'wikibookswiki' => true,
 		'wikicervanteswiki' => true,
 		'wikidolphinhansenwiki' => true,
@@ -2855,7 +2853,6 @@ $wgConf->settings = array(
 		'magnaversewiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
-		'westmarcheswiki' => true,
 	),
 	
 	// Allow HTML <img> tag
@@ -2863,7 +2860,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'magezwiki' => true,
 		'mikrodevwiki' => true,
-		'westmarcheswiki' => true,
 	),
 
 	// FlaggedRevs
@@ -4209,12 +4205,6 @@ $wgConf->settings = array(
 				'autopatrolled'
 			),
 		),
-		'+westmarcheswiki' => array(
-			'sysop' => array(
-				'gamemasters',
-				'loremasters',
-			),
-		),
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4899,18 +4889,6 @@ $wgConf->settings = array(
 				'editinterface' => true,
 			),
 		),
-		'+westmarcheswiki' => array(
-			'gamemasters' => array(
-				'read' => true,
-				'edit' => true,
-				'gamemasters' => true,
-			),
-			'loremasters' => array(
-				'read' => true,
-				'edit' => true,
-				'loremasters' => true,
-			),
-		),
 		'+wikipucwiki' => array(
 			'*' => array(
 				'ajaxpoll-vote' => true,
@@ -5276,11 +5254,6 @@ $wgConf->settings = array(
 			'ceo',
 			'co',
 		),
-		'+westmarcheswiki' => array(
-			'gamemasters',
-			'loremasters',
-		),
-	),
 
 	'+wgRestrictionTypes' => array(
 		'default' => array(
