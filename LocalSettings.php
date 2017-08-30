@@ -5254,7 +5254,8 @@ $wgConf->settings = array(
 			'ceo',
 			'co',
 		),
-
+	),
+	
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
