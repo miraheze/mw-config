@@ -5783,6 +5783,7 @@ $wgConf->settings = array(
 		'kspancevowiki' => "//$wmgUploadHostname/kspancevowiki/1/1a/Krunamala.png",
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/1/14/Mediawiki-icon-135x135.png",
 		'lanstationwiki' => "//$wmgUploadHostname/lanstationwiki/e/e2/Miniian.png",
+		'lapeninsulewiki' => "//$wmgUploadHostname/lapeninsulewiki/6/66/Constellation_de_la_P%C3%A9ninsule.png",
 		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
 		'leftypolwiki' => "//$wmgUploadHostname//leftypolwiki/3/3b/Wiki_logo.png",
 		'lexiquewiki' => "//$wmgUploadHostname/lexiquewiki/6/6d/LibraryLexique-smallRes.png",
