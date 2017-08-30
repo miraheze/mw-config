@@ -33,7 +33,7 @@ if ( $wmgUseArticleRatings ) {
 }
 
 if ( $wmgUseArticleToCategory2 ) {
-	require_once "$IP/extensions/ArticleToCategory2/ArticleToCategory2.php";
+	require_once( "$IP/extensions/ArticleToCategory2/ArticleToCategory2.php" );
 }
 
 if ( $wmgUseAuthorProtect ) {
@@ -152,7 +152,7 @@ if ( $wmgUseDynamicPageList ) {
 }
 
 if ( $wmgUseDynamicPageList3 ) {
-	require_once( "$IP/extensions/DynamicPageList3/DynamicPageList.php" );
+	wfLoadExtension( 'DynamicPageList3' );
 }
 
 if ( $wmgUseEditcount ) {
@@ -196,7 +196,7 @@ if ( $wmgUseFlaggedRevs ) {
 }
 
 if ( $wmgUseFlow ) {
-	require_once( "$IP/extensions/Flow/Flow.php" );
+	wfLoadExtension( 'Flow' );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
