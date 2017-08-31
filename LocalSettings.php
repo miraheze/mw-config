@@ -3881,6 +3881,7 @@ $wgConf->settings = array(
 				'commentadmin',
 				'staff',
 				'reviewer',
+				'chatmod',
 			),
 		),
 		'+applewikiwiki' => array(
@@ -3888,6 +3889,7 @@ $wgConf->settings = array(
 				'commentadmin',
 				'staff',
 				'reviewer',
+				'chatmod',
 			),
 		),
 		'+animationmoviewikiwiki' => array(
@@ -4811,6 +4813,7 @@ $wgConf->settings = array(
 				'commentadmin',
 				'staff',
 				'reviewer',
+				'chatmod',
 			),
 		),
 		'+applewikiwiki' => array(
@@ -4818,6 +4821,7 @@ $wgConf->settings = array(
 				'commentadmin',
 				'staff',
 				'reviewer',
+				'chatmod',
 			),
 		),
 		'+bigforestwiki' => array(
