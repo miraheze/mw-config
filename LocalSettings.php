@@ -6181,7 +6181,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
-$wgExtensionEntryPointListFiles[] = "srv/mediawiki/config/extension-list";
+$wgExtensionEntryPointListFiles[] = "/srv/mediawiki/w/extensions";
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
@@ -6219,6 +6219,7 @@ require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/Redis.php" );
+require_once( "/srv/mediawiki/config/ExtensionMessageFiles.php" );
 
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
