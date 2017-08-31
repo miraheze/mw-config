@@ -467,6 +467,10 @@ if ( $wmgUseScratchBlocks ) {
 	wfLoadExtension( "ScratchBlocks" );
 }
 
+if ( $wmgUseScore ) {
+	wfLoadExtension( 'Score' );
+}
+
 if ( $wmgUseSimpleChanges ) {
 	require_once( "$IP/extensions/SimpleChanges/SimpleChanges.php" );
 }
