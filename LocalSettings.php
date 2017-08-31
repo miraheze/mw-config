@@ -1979,7 +1979,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScore' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'test1wiki' => true,
 	),
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
