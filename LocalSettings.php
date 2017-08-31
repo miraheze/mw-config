@@ -16,7 +16,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-$wmgUploadHostname = "static.miraheze.org";
+$wmgUploadHostname = "//$wmgUploadHostname/kuonsamwiki/b/bc/My_Handsome.png";
 
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
@@ -5920,6 +5920,7 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
+		'kuonsamwiki' => "//$wmgUploadHostname/kuonsamwiki/b/bc/My_Handsome.png",
 	),
 
 	// TemplateSandbox
