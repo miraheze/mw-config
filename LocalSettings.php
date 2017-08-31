@@ -16,7 +16,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-$wmgUploadHostname = "//$wmgUploadHostname/kuonsamwiki/b/bc/My_Handsome.png";
+$wmgUploadHostname = "static.miraheze.org";
 
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
@@ -5858,6 +5858,7 @@ $wgConf->settings = array(
 		'sterbalfamilyrecipeswiki' => "//$wmgUploadHostname/sterbalfamilyrecipeswiki/c/c4/Logo-135x135.jpg",
 		'stormfmwiki' => "//$wmgUploadHostname/stormfmwiki/1/18/Stormlogo_small.png",
 		'studynotekrwiki' => "//$wmgUploadHostname/studynotekrwiki/b/b3/Imageedit_6_7597747851.gif",
+		'kuonsamwiki' => "//$wmgUploadHostname/kuonsamwiki/b/bc/My_Handsome.png",
 		'supportdrivenwiki' => "//$wmgUploadHostname/supportdrivenwiki/c/c1/Logo_dark.png",
 		'sysexwiki' => "//$wmgUploadHostname/sysexwiki/1/13/Sysex.png",
 		'takethatwikiwiki' => "//$wmgUploadHostname/takethatwikiwiki/e/e8/Take_That_Wiki_Logo_Small.png",
@@ -5920,7 +5921,6 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
-		'kuonsamwiki' => "//$wmgUploadHostname/kuonsamwiki/b/bc/My_Handsome.png",
 	),
 
 	// TemplateSandbox
