@@ -2885,7 +2885,7 @@ $wgConf->settings = array(
 		'doinwiki' => false,
 	),
 	'wgThumbnailEpoch' => array(
-		'default' => false,
+		'default' => '20030516000000',
 		'bpwiki' => '20170814000000',
 	),
 
