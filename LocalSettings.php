@@ -1979,6 +1979,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseScore' => array(
 		'default' => false,
+		'garamwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseScratchBlocks' => array(
