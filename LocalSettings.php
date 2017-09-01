@@ -1977,6 +1977,10 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseScore' => array(
+		'default' => false,
+		'test1wiki' => true,
+	),
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
 		'test1wiki' => true,
