@@ -2884,6 +2884,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'doinwiki' => false,
 	),
+	'wgThumbnailEpoch' => array(
+		'default' => false,
+		'bpwiki' => '20170814000000',
+	),
 
 	// Flow
 	'wmgFlowDefaultNamespaces' => array(
