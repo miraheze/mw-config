@@ -2839,7 +2839,7 @@ $wgConf->settings = array(
 
 	// Files
 	'wgEnableUploads' => array(
-		'default' => false,
+		'default' => true,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
@@ -6209,18 +6209,18 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgMajorSiteNoticeID = 9;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wgDBname;
-	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
-		$siteNotice .= <<<EOF
-		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>We are currently investigating some file issues, so uploads are temporarily disabled. We are sorry for the inconvenience, and we're doing our best to re-enable uploads as soon as possible. </p></td>
-		</tr></tbody></table>
-EOF;
-	 }
-	return true;
-}
+//$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+//function onSiteNoticeAfter( &$siteNotice, $skin ) {
+//	global $wgDBname;
+//	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
+//		$siteNotice .= <<<EOF
+//		<table class="wikitable" style="text-align:center;"><tbody><tr>
+//		<td>We are currently investigating some file issues, so uploads are temporarily disabled. We are sorry for the inconvenience, and we're doing our best to re-enable uploads as soon as possible. </p></td>
+//		</tr></tbody></table>
+//EOF;
+//	 }
+//	return true;
+//}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
