@@ -1501,6 +1501,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'test1wiki' => true,
 	),
+	'wmgUseLoginNotify' => array(
+		'default' => false,
+		'test1wiki' => true,
+	),
 	'wmgUseLoopsCombo' => array( // Remember to remove from Variables if the wiki is enabled there
 		'default' => false,
 		'bigforestwiki' => true,

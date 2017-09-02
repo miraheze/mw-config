@@ -279,6 +279,10 @@ if ( $wmgUseLinkSuggest ) {
 	wfLoadExtension( 'LinkSuggest' );
 }
 
+if ( $wmgUseLoginNotify ) {
+	wfLoadExtension( 'LoginNotify' );
+}
+
 if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 	require_once( "$IP/extensions/Loops/Loops.php");
