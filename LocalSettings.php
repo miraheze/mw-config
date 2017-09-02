@@ -6215,7 +6215,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>We are currently investigating some file issues, so uploads are temporarily disabled. This should not take long and uploads should be enabled very soon. We are sorry for any inconviniences that this may cause. </p></td>
+		<td>We are currently investigating some file issues, so uploads are temporarily disabled. We are sorry for the inconvenience, and we're doing our best to re-enable uploads as soon as possible. </p></td>
 		</tr></tbody></table>
 EOF;
 	 }
