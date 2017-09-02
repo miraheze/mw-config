@@ -64,6 +64,7 @@ $IP/extensions/Josa/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
+$IP/extensions/LoginNotify/extension.json
 $IP/extensions/Loops/Loops.php
 $IP/extensions/ManageWiki/extension.json
 $IP/extensions/Maps/Maps.php
