@@ -1503,6 +1503,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseLoginNotify' => array(
 		'default' => false,
+		'loginwiki' => true,
+		'metawiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseLoopsCombo' => array( // Remember to remove from Variables if the wiki is enabled there
