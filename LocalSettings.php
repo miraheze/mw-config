@@ -1417,7 +1417,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'test1wiki' => true,
-		'unionnorteamericanawiki' = true,
+		'unionnorteamericanawiki' => true,
 	),
 	'wmgUseGroupsSidebar' => array(
 		'default' => false,
