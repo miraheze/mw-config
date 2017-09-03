@@ -2593,6 +2593,7 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'test1wiki' => true,
 		'geodatawiki' => true,
+		'gtnhwiki' => true,
 		'modularwiki' => true,
 		'muckhackwiki' => true,
 		'plazmaburstwiki' => true,
