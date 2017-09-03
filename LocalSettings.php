@@ -1497,7 +1497,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'sidemwiki' => true,
 		'testwiki' => true,
-		'unionnorteamericanawiki' = true,
+		'unionnorteamericanawiki' => true,
 	),
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
