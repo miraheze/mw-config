@@ -5464,6 +5464,7 @@ $wgConf->settings = array(
 		'particracywikiwiki' => "//$wmgUploadHostname/particracywikiwiki/6/64/Favicon.ico",
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/6/64/Favicon.ico",
 		'patch153wiki' => "//$wmgUploadHostname/patch153wiki/1/1f/ICMS.png",
+		'pculsdwiki' => "//$wmgUploadHostname/pculsdwiki/4/42/Linux.ico
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/6/64/Favicon.ico",
 		'pfsolutionswiki' => "//$wmgUploadHostname/pfsolutionswiki/0/0f/PF_Solutions_Icon.ico",
 		'plasmawiki' => "//$wmgUploadHostname/plasmawiki/e/e3/PlasmaWiki_Favicon.ico",
