@@ -3663,6 +3663,7 @@ $wgConf->settings = array(
 			'Plantilla' => NS_TEMPLATE,
 			'Ŝablono' => NS_TEMPLATE,
 			'Ayuda' => NS_HELP,
+			'Sjabloon' => NS_TEMPLATE,
 		),
 	),
 	'+wgNamespaceProtection' => array(
