@@ -5,6 +5,10 @@
 //	require_once( "$IP/extensions/AccessControl/AccessControl.php" );
 //}
 
+if ( $wmgUseAddThis ) {
+	require_once "$IP/extensions/AddThis/AddThis.php";
+}
+
 if ( $wmgUseAddHTMLMetaAndTitle ) {
 	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
 }
