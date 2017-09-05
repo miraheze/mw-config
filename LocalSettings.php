@@ -3830,6 +3830,9 @@ $wgConf->settings = array(
 		'+unikumwiki' => array(
 			NS_MAIN => true,
 		),
+		'+voidwiki' => array(
+			NS_MAIN => true,
+		),
 		'+wisdomwikiwiki' => array(
 			NS_MAIN => true,
 			NS_LCS => true,
