@@ -6,7 +6,7 @@
 //}
 
 if ( $wmgUseAddThis ) {
-	require_once "$IP/extensions/AddThis/AddThis.php";
+	require_once( "$IP/extensions/AddThis/AddThis.php" );
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
