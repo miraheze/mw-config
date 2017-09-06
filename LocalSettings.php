@@ -2497,6 +2497,7 @@ $wgConf->settings = array(
 		'soshomophobiewiki' => true,
 		'southparkfanwiki' => true,
 		'spiralwiki' => true,
+		'spritopiawiki' => true,
 		'starsetonlinewiki' => true,
 		'stellachronicawiki' => true,
 		'sthomaspriwiki' => true,
