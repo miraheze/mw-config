@@ -1178,7 +1178,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseContributionScores' => array(
 		'default' => false,
-		'extloadwiki' => false,
+		'test1wiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
 		'default' => false,
@@ -2220,10 +2220,12 @@ $wgConf->settings = array(
 	'wmgUseTweeki' => array(
 		'default' => false,
 		'extloadwiki' => false,
+		'test1wiki' => true,
 	),
 	'wmgUseUrlGetParameters' => array(
 		'default' => false,
 		'extloadwiki' => false, // Upstream errors. See T2070.
+		'test1wiki' => true,
 	),
 	'wmgUseUserWelcome' => array(
 		'default' => false,
