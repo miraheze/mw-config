@@ -411,7 +411,7 @@ $wgConf->settings = array(
 	'wgCommentsDefaultAvatar' => array(
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	),
-	
+
 	 // Contribution Scores
 	 'wgContribScoreDisableCache' => array(
  		 'default' => true,
@@ -968,6 +968,7 @@ $wgConf->settings = array(
 //	),
 	'wmgUseAddThis' => array(
 		'default' => false,
+		'christipediawiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
@@ -1178,6 +1179,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseContributionScores' => array(
 		'default' => false,
+		'malaysiawiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
@@ -2219,12 +2221,13 @@ $wgConf->settings = array(
 	),
 	'wmgUseTweeki' => array(
 		'default' => false,
-		'extloadwiki' => false,
+		'corydoctorowwiki' => true,
+		'raymanspeedrunwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseUrlGetParameters' => array(
 		'default' => false,
-		'extloadwiki' => false, // Upstream errors. See T2070.
+		'newnamlawiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseUserWelcome' => array(
