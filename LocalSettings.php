@@ -966,6 +966,10 @@ $wgConf->settings = array(
 //		'wisdomwikiwiki' => true,
 //		'wisdomsandboxwiki' => true,
 //	),
+	'wmgUseAddThis' => array(
+		'default' => false,
+		'test1wiki' => true,
+	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
 		'alwikiwiki' => true,
