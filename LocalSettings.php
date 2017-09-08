@@ -2315,6 +2315,7 @@ $wgConf->settings = array(
 		'coldbloodedwiki' => true,
 		'conquestofparadiserpwiki' => true,
 		'corydoctorowwiki' => true,
+		'csnimsbordeauxwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'cybersecuritywiki' => true,
 		'cvsmbwiki' => true,
