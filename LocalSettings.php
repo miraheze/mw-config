@@ -1031,14 +1031,14 @@ $wgConf->settings = array(
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
 		'applewikiwiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'fablabesdswiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseArticleRatings' => array(
 		'default' => false,
 		'applewikiwiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseArticleToCategory2' => array(
@@ -1149,7 +1149,7 @@ $wgConf->settings = array(
 	'wmgUseComments' => array(
 		'default' => false, // Remember to assign 'commentadmin' rights!
 		'allthetropeswiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'animationmoviewikiwiki' => true,
 		'test1wiki' => true,
@@ -1215,7 +1215,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'690squadronwiki' => true,
 		'allthetropeswiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
@@ -1561,7 +1561,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'test1wiki' => true,
 		'hasanistanwiki' => true,
@@ -1584,7 +1584,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
-		'applebranchwiki' => false,
+		'macfan4000wiki' => false,
 		'applewikiwiki'=> false,
 		'ganeshawiki' => false,
 		'izanagiwiki' => false,
@@ -1824,7 +1824,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'calexitwiki' => true,
 		'constwiki' => true,
@@ -1940,7 +1940,7 @@ $wgConf->settings = array(
 	'wmgUseRefreshed' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'test1wiki' => true,
 		'grandtheftautowiki' => true,
@@ -2000,7 +2000,7 @@ $wgConf->settings = array(
 	'wmgUseShortURL' => array(
 		'default' => true,
 		'applewikiwiki' => false,
-		'applebranchwiki' => false,
+		'macfan4000wiki' => false,
 	),
 	'wmgUseSimpleChanges' => array(
 		'default' => false,
@@ -2032,7 +2032,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'calexitwiki' => true,
 		'datachronwiki' => true,
@@ -2185,7 +2185,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'3dicwiki' => true,
 		'applewikiwiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'cpiwiki' => true,
@@ -2271,7 +2271,7 @@ $wgConf->settings = array(
 		'alwikiwiki' => true,
 		'animationmoviewikiwiki' => true,
 		'apneuverenigingwiki' => true,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
 		'artificercreationswiki' => true,
@@ -2621,7 +2621,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false, // DO NOT ENABLE. disables captcha on all actions. See T1124 (upstream) --Reception123
-	//	'applebranchwiki' => true,
+	//	'macfan4000wiki' => true,
 	//	'alwikiwiki' => true,
 	//	'applewikiwiki' => true,
 	//	'entropediawiki' => true,
@@ -2643,7 +2643,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
@@ -2853,7 +2853,7 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
@@ -2862,7 +2862,7 @@ $wgConf->settings = array(
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
-		'applebranchwiki' => true,
+		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
@@ -3902,7 +3902,7 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+applebranchwiki' => array(
+		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
 				'staff',
@@ -4194,7 +4194,7 @@ $wgConf->settings = array(
 				'editothersprofiles' => true,
 			),
 		),
-		'+applebranchwiki' => array(
+		'+macfan4000wiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
 			),
@@ -4834,7 +4834,7 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+applebranchwiki' => array(
+		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
 				'staff',
@@ -5338,7 +5338,6 @@ $wgConf->settings = array(
 	'wgAppleTouchIcon' => array(
 		'default' => '/apple-touch-icon.png',
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
-		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png",
 		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/2/27/Jawp2ch_apple-touch-icon.png",
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/6/64/Favicon.ico",
 	),
@@ -5386,7 +5385,6 @@ $wgConf->settings = array(
 		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/7/7f/Favicon-20170311123705233.ico",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/6/64/Favicon.ico",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
-		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/e/ee/AppleBranch_Icon.png",
 		'assaultandroidcactuswiki' => "//$wmgUploadHostname/assaultandroidcactuswiki/6/64/Favicon.ico",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/64/Favicon.ico",
 		'bchwiki' => "//$wmgUploadHostname/bchwiki/c/c0/Logo_135.png",
@@ -5553,7 +5551,6 @@ $wgConf->settings = array(
 		'amicitiawiki' => "//$wmgUploadHostname/amicitiawiki/9/9b/Amicitia_logo.png",
 		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/b/bd/Fdg.PNG",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/3/3b/Wiki_logo.png",
-		'applebranchwiki' => "//$wmgUploadHostname/applebranchwiki/0/03/AppleBranch_135.png",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/c/c9/AppleWikilogo.PNG",
 		'arefepvawiki' => "//$wmgUploadHostname/arefepvawiki/9/92/Logoaf.png",
 		'assaultandroidcactuswiki' => "//$wmgUploadHostname/assaultandroidcactuswiki/7/7b/Cactus_icon.png",
