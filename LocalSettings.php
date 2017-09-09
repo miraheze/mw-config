@@ -1031,8 +1031,8 @@ $wgConf->settings = array(
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
 		'applewikiwiki' => true,
-		'macfan4000wiki' => true,
 		'fablabesdswiki' => true,
+		'macfan4000wiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseArticleRatings' => array(
@@ -1149,13 +1149,13 @@ $wgConf->settings = array(
 	'wmgUseComments' => array(
 		'default' => false, // Remember to assign 'commentadmin' rights!
 		'allthetropeswiki' => true,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'animationmoviewikiwiki' => true,
 		'test1wiki' => true,
 		'foodsharinghamburgwiki' => true,
 		'ircwiki' => true,
 		'jayuwikiwiki' => true,
+		'macfan4000wiki' => true,
 		'muckhackwiki' => true,
 		'pgnwikiwiki' => true,
 		'plazmaburstwiki' => true,
@@ -1215,13 +1215,13 @@ $wgConf->settings = array(
 		'default' => false,
 		'690squadronwiki' => true,
 		'allthetropeswiki' => true,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'dtswiki' => true,
 		'test1wiki' => true,
 		'knowledgewiki' => true,
+		'macfan4000wiki' => true,
 		'takethatwikiwiki' => true,
 		'webflowwiki' => true,
 	),
@@ -1561,11 +1561,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'test1wiki' => true,
 		'hasanistanwiki' => true,
 		'ircwiki' => true,
+		'macfan4000wiki' => true,
 		'pgnwikiwiki' => true,
 		'thebbwiki' => true,
 	),
@@ -1584,10 +1584,10 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
-		'macfan4000wiki' => false,
 		'applewikiwiki'=> false,
 		'ganeshawiki' => false,
 		'izanagiwiki' => false,
+		'macfan4000wiki' => false,
 		'ndwiki' => false,
 		'permanentfuturelabwiki' => false,
 		'reviwiki' => false,
@@ -1824,7 +1824,6 @@ $wgConf->settings = array(
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'calexitwiki' => true,
 		'constwiki' => true,
@@ -1832,6 +1831,7 @@ $wgConf->settings = array(
 		'frontdeskswiki' => true,
 		'ggdrwiki' => true,
 		'lgproduktsupportwiki' => true,
+		'macfan4000wiki' => true,
 		'magnaversewiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
@@ -1940,11 +1940,11 @@ $wgConf->settings = array(
 	'wmgUseRefreshed' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'test1wiki' => true,
 		'grandtheftautowiki' => true,
 		'inazumaelevenwiki' => true,
+		'macfan4000wiki' => true,
 	),
 	'wmgUseRelatedArticles' => array(
 		'default' => false,
@@ -2032,13 +2032,13 @@ $wgConf->settings = array(
 		'default' => false,
 		'adnovumwiki' => true,
 		'allthetropeswiki' => true,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'calexitwiki' => true,
 		'datachronwiki' => true,
 		'test1wiki' => true,
 		'ircwiki' => true,
 		'lezar224wiki' => true,
+		'macfan4000wiki' => true,
 		'micropediawiki' => true,
 		'priyowiki' => true,
 		'stellachronicawiki' => true,
@@ -2185,7 +2185,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'3dicwiki' => true,
 		'applewikiwiki' => true,
-		'macfan4000wiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'cpiwiki' => true,
@@ -2195,6 +2194,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'ircwiki' => true,
 		'jayuwikiwiki' => true,
+		'macfan4000wiki' => true,
 		'metawiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
@@ -2271,7 +2271,6 @@ $wgConf->settings = array(
 		'alwikiwiki' => true,
 		'animationmoviewikiwiki' => true,
 		'apneuverenigingwiki' => true,
-		'macfan4000wiki' => true,
 		'arabudlandwiki' => true,
 		'arguwikiwiki' => true,
 		'artificercreationswiki' => true,
@@ -2409,6 +2408,7 @@ $wgConf->settings = array(
 		'lovelivewiki' => true,
 		'luckandlogicwiki' => true,
 		'lunfengwiki' => true,
+		'macfan4000wiki' => true,
 		'magezwiki' => true,
 		'magnaversewiki' => true,
 		'maiasongcontestwiki' => true,
@@ -2621,7 +2621,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false, // DO NOT ENABLE. disables captcha on all actions. See T1124 (upstream) --Reception123
-	//	'macfan4000wiki' => true,
 	//	'alwikiwiki' => true,
 	//	'applewikiwiki' => true,
 	//	'entropediawiki' => true,
@@ -2630,6 +2629,7 @@ $wgConf->settings = array(
 	//  'knowledgewiki' => true,
 	//	'indexwiki' => true,
 	//	'ircwiki' => true,
+	//	'macfan4000wiki' => true,
 	//	'porpwiki' => true,
 	//	'starsetonlinewiki' => true,
 	//	'stellachronicawiki' => true,
@@ -2643,10 +2643,10 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
+		'macfan4000wiki' => true,
 		'test1wiki' => true,
 		'pgnwikiwiki' => true,
 		'proxybotwiki' => true,
@@ -2853,19 +2853,19 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
+		'macfan4000wiki' => true,
 		'ndwiki' => true,
 		'nonbinarywiki' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
-		'macfan4000wiki' => true,
 		'applewikiwiki' => true,
 		'catboxwiki' => true,
 		'entropediawiki' => true,
+		'macfan4000wiki' => true,
 		'ndwiki' => true,
 	),
 	'wgFileExtensions' => array(
@@ -3902,14 +3902,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+macfan4000wiki' => array(
-			'sysop' => array(
-				'commentadmin',
-				'staff',
-				'reviewer',
-				'chatmod',
-			),
-		),
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -3979,6 +3971,14 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+macfan4000wiki' => array(
+			'sysop' => array(
+				'commentadmin',
+				'staff',
+				'reviewer',
+				'chatmod',
 			),
 		),
 		'+nenawikiwiki' => array(
@@ -4192,11 +4192,6 @@ $wgConf->settings = array(
 		'+allthetropeswiki' => array(
 			'sysop' => array(
 				'editothersprofiles' => true,
-			),
-		),
-		'+macfan4000wiki' => array(
-			'user' => array(
-				'upload_by_url' => true,
 			),
 		),
 		'+applewikiwiki' => array(
@@ -4482,6 +4477,11 @@ $wgConf->settings = array(
 			'user' => array(
 				'createtalk' => true,
 				'edit' => true,
+			),
+		),
+		'+macfan4000wiki' => array(
+			'user' => array(
+				'upload_by_url' => true,
 			),
 		),
 		'+marinebiodiversitymatrixwiki' => array(
@@ -4834,14 +4834,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+macfan4000wiki' => array(
-			'sysop' => array(
-				'commentadmin',
-				'staff',
-				'reviewer',
-				'chatmod',
-			),
-		),
 		'+applewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4910,6 +4902,14 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+macfan4000wiki' => array(
+			'sysop' => array(
+				'commentadmin',
+				'staff',
+				'reviewer',
+				'chatmod',
 			),
 		),
 		'+nenawikiwiki' => array(
@@ -5347,7 +5347,6 @@ $wgConf->settings = array(
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 		'3dicwiki' => 'foreground',
-		'macfan4000wiki' => 'refreshed',
 		'applewikiwiki' => 'refreshed',
 		'bdorpwiki' => 'erudite',
 		'claneuphoriawiki' => 'gamepress',
@@ -5358,6 +5357,7 @@ $wgConf->settings = array(
 		'ganeshawiki' => 'monobook',
 		'girlsfrontlinewiki' => 'darkvector',
 		'godaigowiki' => 'monobook',
+		'macfan4000wiki' => 'refreshed',
 		'ofthevampirewiki' => 'dusktodawn',
 		'ontariobrasswiki' => 'monobook',
 		'pculsdwiki' => 'monobook',
