@@ -4552,6 +4552,11 @@ $wgConf->settings = array(
 				'moderation' => true,
 			),
 		),
+		'+scruffywiki' => array(
+			'sysop' => array(
+				'moderation' => true,
+			),
+		),
 		'+nenawikiwiki' => array(
 			'editor' => array(
 				'createpage' => true,
@@ -4644,11 +4649,6 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
-		'+scruffywiki' => array(
-			'sysop' => array(
-				'moderation' => true,
-			),
-		),
 		'+serinfhospwiki' => array(
 			'SupportStaff' => array(
 				'read' => true,
