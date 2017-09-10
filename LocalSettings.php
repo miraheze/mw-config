@@ -1539,6 +1539,10 @@ $wgConf->settings = array(
 		'rpgbrigadewiki' => true,
 		'sysexwiki' => true,
 	),
+	'wmgUseMagicNoCache' => array(
+		'default' => false,
+		'test1wiki' => true,
+	),
 	'wmgUseMaps' => array(
 		'default' => false,
 		'aerosswiki' => true,
