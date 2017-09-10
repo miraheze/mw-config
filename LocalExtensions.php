@@ -287,12 +287,13 @@ if ( $wmgUseLoginNotify ) {
 	wfLoadExtension( 'LoginNotify' );
 }
 
-if ( $wmgUseMagicNoCache ) {
-	require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+if ( $wmgUseLoopsCombo ) {
+	require_once( "$IP/extensions/Variables/Variables.php" );
+	require_once( "$IP/extensions/Loops/Loops.php");
 }
 
-if ( $wmgUseMaps ) {
-	require_once( "$IP/extensions/Maps/Maps.php" );
+if ( $wmgUseMagicNoCache ) {
+	require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 }
 	
 if ( $wmgUseMaps ) {
