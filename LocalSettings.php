@@ -615,6 +615,12 @@ $wgConf->settings = array(
 		'+cpiwiki' => array(
 			'anon' => true,
 		),
+		'+creationismwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+dalarwiki' => array(
 			'anon' => true,
 			'user' => true,
