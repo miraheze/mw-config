@@ -288,7 +288,7 @@ if ( $wmgUseLoginNotify ) {
 }
 
 if ( $wmgUseMagicNoCache ) {
-	require_once "$IP/extensions/MagicNoCache/MagicNoCache.php";
+	require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 }
 
 if ( $wmgUseMaps ) {
