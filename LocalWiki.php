@@ -101,7 +101,7 @@ if ( $wgDBname === 'ipolywiki' ) {
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-categorypages'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
-	$wgGroupPermissions['user']['move-rootuserpagse'] = false:
+	$wgGroupPermissions['user']['move-rootuserpagse'] = false;
 }
 
 if ( $wgDBname === 'isvwiki' ) {
