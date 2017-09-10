@@ -697,6 +697,12 @@ $wgConf->settings = array(
 			'editor' => true,
 			'sysop' => true,
 		),
+		'+ipolywiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+ircwiki' => array(
 			'anon' => true,
 		),
