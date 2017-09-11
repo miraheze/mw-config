@@ -4644,6 +4644,11 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
+		'+scruffywiki' => array(
+			'sysop' => array(
+				'moderation' => true,
+			),
+		),
 		'+serinfhospwiki' => array(
 			'SupportStaff' => array(
 				'read' => true,
