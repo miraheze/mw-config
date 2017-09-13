@@ -269,7 +269,7 @@ $wgConf->settings = array(
 	'wgCentralSelectedBannerDispatcher' => array(
 		'default' => "//meta.miraheze.org/w/index.php/Special:BannerLoader",
 	),
-	'wfCentralBannerRecorder' => array(
+	'wgCentralBannerRecorder' => array(
 		'default' => "//meta.miraheze.org/w/index.php/Special:RecordImpression",
 	),
 	'wgCentralDBname' => array(
