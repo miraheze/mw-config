@@ -23,6 +23,8 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['sysop']['block'] = false;
 	$wgGroupPermissions['sysop']['protect'] = false;
 
+	$wgNoticeProject[] = 'closed';
+
 	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
 	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
@@ -43,6 +45,8 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgAddGroups['sysop'][] = 'member';
 	$wgRemoveGroups['bureaucrat'][] = 'member';
 	$wgRemoveGroups['sysop'][] = 'member';
+
+	$wgNoticeProject[] = 'private';
 }
 
 // ircrcbot (!=private)
