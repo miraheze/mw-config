@@ -928,6 +928,7 @@ $wgConf->settings = array(
 
 	'wgAllowSlowParserFunctions' => array(
 		'default' => false,
+		'elarawiki' => true,
 		'trexwiki' => true,
 	),
 	// Dormancy policy && RC stuff
