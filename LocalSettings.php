@@ -1542,6 +1542,7 @@ $wgConf->settings = array(
 	'wmgUseMagicNoCache' => array(
 		'default' => false,
 		'test1wiki' => true,
+		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseMaps' => array(
 		'default' => false,
