@@ -96,6 +96,14 @@ if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['user']['createpage'] = false;
 }
 
+if ( $wgDBname === 'ipolywiki' ) {
+	$wgGroupPermissions['user']['move'] = false;
+	$wgGroupPermissions['user']['move-subpages'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['move-rootuserpagse'] = false;
+}
+
 if ( $wgDBname === 'isvwiki' ) {
 	$wgSimpleFlaggedRevsUI = false;
 	

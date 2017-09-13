@@ -5,6 +5,10 @@
 //	require_once( "$IP/extensions/AccessControl/AccessControl.php" );
 //}
 
+if ( $wmgUseAddThis ) {
+	require_once( "$IP/extensions/AddThis/AddThis.php" );
+}
+
 if ( $wmgUseAddHTMLMetaAndTitle ) {
 	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
 }
@@ -30,6 +34,10 @@ if ( $wmgUseArticleFeedbackv5 ) {
 
 if ( $wmgUseArticleRatings ) {
 	wfLoadExtension( 'ArticleRatings' );
+}
+
+if ( $wmgUseArticleToCategory2 ) {
+	require_once( "$IP/extensions/ArticleToCategory2/ArticleToCategory2.php" );
 }
 
 if ( $wmgUseAuthorProtect ) {
@@ -123,11 +131,6 @@ if ( $wmgUseCustomHeader ) {
 	wfLoadExtension( 'CustomHeader' );
 }
 
-if ( $wmgUseCustomNavBlocks) {
-	require_once( "$IP/extensions/CustomNavBlocks/CustomNavBlocks.php" );
-	$wgCustomNavBlocksEnable = true;
-}
-
 if ( $wmgUseDarkVector ) {
 	wfLoadSkin( 'DarkVector' );
 }
@@ -153,7 +156,7 @@ if ( $wmgUseDynamicPageList ) {
 }
 
 if ( $wmgUseDynamicPageList3 ) {
-	require_once( "$IP/extensions/DynamicPageList3/DynamicPageList.php" );
+	wfLoadExtension( 'DynamicPageList3' );
 }
 
 if ( $wmgUseEditcount ) {
@@ -197,7 +200,7 @@ if ( $wmgUseFlaggedRevs ) {
 }
 
 if ( $wmgUseFlow ) {
-	require_once( "$IP/extensions/Flow/Flow.php" );
+	wfLoadExtension( 'Flow' );
 	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
@@ -278,6 +281,10 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 
 if ( $wmgUseLinkSuggest ) {
 	wfLoadExtension( 'LinkSuggest' );
+}
+
+if ( $wmgUseLoginNotify ) {
+	wfLoadExtension( 'LoginNotify' );
 }
 
 if ( $wmgUseLoopsCombo ) {
@@ -468,6 +475,10 @@ if ( $wmgUseScratchBlocks ) {
 	wfLoadExtension( "ScratchBlocks" );
 }
 
+if ( $wmgUseScore ) {
+	wfLoadExtension( 'Score' );
+}
+
 if ( $wmgUseSimpleChanges ) {
 	require_once( "$IP/extensions/SimpleChanges/SimpleChanges.php" );
 }
@@ -609,6 +620,8 @@ if ( $wmgUseWebChat ) {
 	$wgWebChatClient = $wmgWebChatClient;
 	$wgWebChatServer = $wmgWebChatServer;
 	$wgWebChatChannel = $wmgWebChatChannel;
+	$wgWebChatClients['Mibbit']['url'] = '//embed.mibbit.com/index.html';
+
 }
 
 if ( $wmgUseWhoIsWatching ) {
