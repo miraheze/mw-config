@@ -260,17 +260,23 @@ $wgConf->settings = array(
 			'manualRecache' => true,
 		),
 	),
-	
-	// CentralNotice 
+
+	// CentralNotice
 	'wgNoticeInfrastructure' => array(
 		'default' => false,
 		'metawiki' => true,
 	),
+	'wgCentralSelectedBannerDispatcher' => array(
+		'default' => "//meta.miraheze.org/w/index.php/Special:BannerLoader",
+	),
+	'wfCentralBannerRecorder' => array(
+		'default' => "//meta.miraheze.org/w/index.php/Special:RecordImpression",
+	),
 	'wgCentralDBname' => array(
 		'default' => 'metawiki',
 	),
-	'wgNoticeProjects' => array( 
-		'default' => array('closed', 'private', 'all'),
+	'wgNoticeProjects' => array(
+		'default' => array( 'closed', 'private', 'all' ),
 	),
 	'wgCentralHost' => array(
 		'default' => "//meta.miraheze.org",
@@ -278,7 +284,7 @@ $wgConf->settings = array(
 	'wgNoticeProject' => array(
 		'default' => array( 'all' ),
 	),
-	
+
 	// Do not enable this without Southparkfan's
 	// permission, as it could let Redis crash.
 	'wgPreprocessorCacheThreshold' => array(
