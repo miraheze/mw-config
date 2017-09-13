@@ -1931,6 +1931,7 @@ $wgConf->settings = array(
 		'financialfindswiki' => true,
 		'test1wiki' => true,
 		'hasanistanwiki' => true,
+		'infectopedeiki' => true,
 		'nationsglorywiki' => true,
 		'robertsnoteswiki' => true,
 		'sqlserverwiki' => true,
