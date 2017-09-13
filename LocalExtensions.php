@@ -292,6 +292,10 @@ if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Loops/Loops.php");
 }
 
+if ( $wmgUseMagicNoCache ) {
+	require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+}
+	
 if ( $wmgUseMaps ) {
 	require_once( "$IP/extensions/Maps/Maps.php" );
 	$egMapsDefaultService = 'openlayers';
