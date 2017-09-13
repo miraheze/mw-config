@@ -795,6 +795,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+openkorebrasilwikiwiki' => array(
+			'anon' => true,
+			),
 		'+philmont126wiki' => array(
 			'anon' => true,
 			'user' => true,
