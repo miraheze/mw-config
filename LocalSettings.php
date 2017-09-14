@@ -2676,6 +2676,7 @@ $wgConf->settings = array(
 		'applewikiwiki' => true,
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
+		'corydoctorowwiki' => true,
 		'macfan4000wiki' => true,
 		'test1wiki' => true,
 		'pgnwikiwiki' => true,
