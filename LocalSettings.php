@@ -1958,6 +1958,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'test1wiki' => true,
 		'humorpediawiki' => true,
+		'lingnlangwiki' => true,
 		'newnamlawiki' => true,
 		'rpgbrigadewiki' => true,
 		'takethatwikiwiki' => true,
