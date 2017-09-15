@@ -1206,7 +1206,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'test1wiki' => true,
 		'pgnwikiwiki' => true,
-		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseCreatePage' => array(
 		'default' => false,
