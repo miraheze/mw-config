@@ -151,6 +151,7 @@ if ( $wgDBname === 'kstartupswiki' ) {
 
 if ( $wgDBname === 'metawiki' ) {
 	$wgGroupPermissions['user']['torunblocked'] = false;
+	$wgGroupPermissions['user']['translate'] = false;	
 }
 
 if ( $wgDBname === 'nenawikiwiki' ) {
