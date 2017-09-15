@@ -4012,6 +4012,14 @@ $wgConf->settings = array(
 				'chatmod',
 			),
 		),
+		'+metawiki' => array(
+			'sysop' => array(
+				'translator',
+			),
+			'translationadmin' => array(
+				'translator',
+			),
+		),
 		'+nenawikiwiki' => array(
 			'sysop' => array(
 				'editor',
@@ -4558,6 +4566,12 @@ $wgConf->settings = array(
 				'interwiki' => true,
 				'oathauth-enable' => true,
 			),
+			'translationadmin' => array(
+				'translate' => true,
+			),
+			'translator' => array(
+				'translate' => true,
+			),
 			'wikicreator' => array(
 				'createwiki' => true,
 			),
@@ -4946,6 +4960,14 @@ $wgConf->settings = array(
 				'staff',
 				'reviewer',
 				'chatmod',
+			),
+		),
+		'+metawiki' => array(
+			'sysop'	=> array(
+				'translator',
+			),
+			'translationadmin' => array(
+				'translator',
 			),
 		),
 		'+nenawikiwiki' => array(
