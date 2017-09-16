@@ -2106,6 +2106,7 @@ $wgConf->settings = array(
 		'gtnhwiki' => true,
 		'hendrickswiki' => true,
 		'integrawiki' => true,
+		'isnstjustwiki' => true,
 		'isvwiki' => true,
 		'jawp2chwiki' => true,
 		'jayuwikiwiki' => true,
