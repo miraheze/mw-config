@@ -1199,6 +1199,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseContributionScores' => array(
 		'default' => false,
+		'dongyangwiki' => true,
 		'malaysiawiki' => true,
 		'test1wiki' => true,
 	),
