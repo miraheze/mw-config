@@ -6288,7 +6288,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>There are currently two ongoing Requests for Comment. One is for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Amendment_of_Code_of_Conduct,_September_2017">ammending the Code of Conduct by adding a Commission</a> and the other is for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Username_policy">creating a global username policy.</a> All Miraheze users are welcome to comment on both of these. </p></td>
+		<td>There are currently two ongoing Requests for Comment. One is for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Amendment_of_Code_of_Conduct,_September_2017">amending the Code of Conduct by adding a Commission</a> and the other is for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Username_policy">creating a global username policy.</a> All Miraheze users are welcome to comment on both of these. </p></td>
 		</tr></tbody></table>
 EOF;
 	 }
