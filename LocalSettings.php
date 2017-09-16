@@ -6282,18 +6282,18 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 $wgMajorSiteNoticeID = 9;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-//$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-//function onSiteNoticeAfter( &$siteNotice, $skin ) {
-//	global $wgDBname;
-//	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
-//		$siteNotice .= <<<EOF
-//		<table class="wikitable" style="text-align:center;"><tbody><tr>
-//		<td>We are currently investigating some file issues, so uploads are temporarily disabled. We are sorry for the inconvenience, and we're doing our best to re-enable uploads as soon as possible. </p></td>
-//		</tr></tbody></table>
-//EOF;
-//	 }
-//	return true;
-//}
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	global $wgDBname;
+	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
+		$siteNotice .= <<<EOF
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+		<td>There are currently two ongoing Reqeusts for Comment. One is for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Amendment_of_Code_of_Conduct,_September_2017">ammending the Code of Conduct by adding a Commission</a> and the other is for <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Username_policy">creating a global username policy.</a> All Miraheze users are welcome to comment on both of these. </p></td>
+		</tr></tbody></table>
+EOF;
+	 }
+	return true;
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
