@@ -4002,6 +4002,11 @@ $wgConf->settings = array(
 				'respected',
 			),
 		),
+		'+hellointernetwiki' => array(
+			'sysop' => array(
+				'commentadmin',
+			),
+		),
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
