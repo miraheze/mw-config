@@ -1173,6 +1173,7 @@ $wgConf->settings = array(
 		'animationmoviewikiwiki' => true,
 		'test1wiki' => true,
 		'foodsharinghamburgwiki' => true,
+		'hellointernetwiki' => true,
 		'ircwiki' => true,
 		'jayuwikiwiki' => true,
 		'macfan4000wiki' => true,
@@ -1442,6 +1443,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
+		'hellointernetwiki' => true,
 		'test1wiki' => true,
 		'unionnorteamericanawiki' => true,
 	),
@@ -2009,6 +2011,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
 		'test1wiki' => true,
+		'hellointernetwiki' => true,
 		'idtestwiki' => true,
 		'modularwiki' => true,
 		'nationstateswiki' => true,
@@ -2065,6 +2068,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'datachronwiki' => true,
 		'test1wiki' => true,
+		'hellointernetwiki' => true,
 		'ircwiki' => true,
 		'lezar224wiki' => true,
 		'macfan4000wiki' => true,
@@ -2395,6 +2399,7 @@ $wgConf->settings = array(
 		'gtnhwiki' => true,
 		'gzewiki' => true,
 		'hamfemwiki' => true,
+		'hellointernetwiki' => true,
 		'hftqmswiki' => true,
 		'historiaalternativawiki' => true,
 		'hjelpemidlerwiki' => true,
@@ -2679,6 +2684,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
 		'corydoctorowwiki' => true,
+		'hellointernetwiki' => true,
 		'macfan4000wiki' => true,
 		'test1wiki' => true,
 		'pgnwikiwiki' => true,
@@ -3997,6 +4003,11 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
+			),
+		),
+		'+hellointernetwiki' => array(
+			'sysop' => array(
+				'commentadmin',
 			),
 		),
 		'+jayuwikiwiki' => array(
