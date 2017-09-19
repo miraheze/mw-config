@@ -6335,4 +6335,3 @@ require_once( "/srv/mediawiki/config/LocalWiki.php" );
 
 // Define last - Extension message files for loading extensions
 require_once( "/srv/mediawiki/config/ExtensionMessageFiles.php" );
-
