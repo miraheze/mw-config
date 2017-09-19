@@ -335,6 +335,7 @@ $wgConf->settings = array(
 			'espiral.org' => 'espiralwiki',
 			'evelopedia.tk' => 'evelopediawiki',
 			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
+			'froggy.info' => 'feuwiki',
 			'gamdug.tk' => 'gamdugwiki',
 			'wiki.jacksonheights.nyc' => 'jacksonheightswiki',
 			'lodge.jsnydr.com' => 'lodgejsnydrwiki',
@@ -1173,6 +1174,7 @@ $wgConf->settings = array(
 		'animationmoviewikiwiki' => true,
 		'test1wiki' => true,
 		'foodsharinghamburgwiki' => true,
+		'hellointernetwiki' => true,
 		'ircwiki' => true,
 		'jayuwikiwiki' => true,
 		'macfan4000wiki' => true,
@@ -1442,6 +1444,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
+		'hellointernetwiki' => true,
 		'test1wiki' => true,
 		'unionnorteamericanawiki' => true,
 	),
@@ -1680,6 +1683,7 @@ $wgConf->settings = array(
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
 		'scruffywiki' => true,
+		'showmedicinawiki' => true,
 		'snowthegamewiki' => true,
 		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
@@ -2009,6 +2013,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
 		'test1wiki' => true,
+		'hellointernetwiki' => true,
 		'idtestwiki' => true,
 		'modularwiki' => true,
 		'nationstateswiki' => true,
@@ -2065,6 +2070,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'datachronwiki' => true,
 		'test1wiki' => true,
+		'hellointernetwiki' => true,
 		'ircwiki' => true,
 		'lezar224wiki' => true,
 		'macfan4000wiki' => true,
@@ -2395,6 +2401,7 @@ $wgConf->settings = array(
 		'gtnhwiki' => true,
 		'gzewiki' => true,
 		'hamfemwiki' => true,
+		'hellointernetwiki' => true,
 		'hftqmswiki' => true,
 		'historiaalternativawiki' => true,
 		'hjelpemidlerwiki' => true,
@@ -2520,6 +2527,7 @@ $wgConf->settings = array(
 		'serinfhospwiki' => true,
 		'setonwiki' => true,
 		'shippingandmetawiki' => true,
+		'showmedicinawiki' => true,
 		'sidemwiki' => true,
 		'simonjonwiki' => true,
 		'sirikotwiki' => true,
@@ -2679,6 +2687,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
 		'corydoctorowwiki' => true,
+		'hellointernetwiki' => true,
 		'macfan4000wiki' => true,
 		'test1wiki' => true,
 		'pgnwikiwiki' => true,
@@ -2911,6 +2920,7 @@ $wgConf->settings = array(
 		'+jayuwikiwiki' => array('bmp', 'apng', 'tiff', 'wav', 'mp3', 'oga', 'ogv', 'asv', 'swf', 'wmv'),
 		'+modularwiki' => array('pdf', 'mid', 'mp3', 'flac', 'svg', 'fpd', 'oga', 'ogv'),
 		'+oyeavdelingenwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx'),
+		'+pculsdwiki' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'mp3', 'wma', 'mp4', 'zip', 'rar', 'xlsx', 'ppt', 'docx', 'doc'),
 		'+scruffywiki' => array( 'pdf', 'mid', 'mp3', 'flac', 'svg', 'fpd', 'oga', 'ogv'),
 		'+serinfhospwiki' => array( 'pdf', 'zip' ),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
@@ -3996,6 +4006,11 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
+			),
+		),
+		'+hellointernetwiki' => array(
+			'sysop' => array(
+				'commentadmin',
 			),
 		),
 		'+jayuwikiwiki' => array(
@@ -5298,6 +5313,7 @@ $wgConf->settings = array(
 		'embobadawiki' => 'https://embobada.com',
 		'espiralwiki' => 'https://espiral.org',
 		'evelopediawiki' => 'https://evelopedia.tk',
+		'feuwiki' => 'https://froggy.info',
 		'fibromyalgiaengineerwiki' => 'https://fibromyalgia-engineer.com',
 		'gamdugwiki' => 'https://gamdug.tk',
 		'grottocenterwiki' => 'https://wiki.grottocenter.org',
@@ -6009,6 +6025,7 @@ $wgConf->settings = array(
 			'wiki\.drones4nature\.info',
 			'wiki\.dwplive\.com',
 			'embobada\.com',
+			'froggy\.info',
 			'fibromyalgia-engineer\.com',
 			'gamdug\.tk',
 			'wiki\.grottocenter\.org',
@@ -6318,4 +6335,3 @@ require_once( "/srv/mediawiki/config/LocalWiki.php" );
 
 // Define last - Extension message files for loading extensions
 require_once( "/srv/mediawiki/config/ExtensionMessageFiles.php" );
-
