@@ -2500,6 +2500,7 @@ $wgConf->settings = array(
 		'patch153wiki' => true,
 		'pbmwiki' => true,
 		'permanentfuturelabwiki' => true,
+		'petctviewerwiki' => true,
 		'pfsolutionswiki' => true,
 		'pgnwikiwiki' => true,
 		'plasticssongcontestwiki' => true,
