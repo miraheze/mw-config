@@ -5831,6 +5831,7 @@ $wgConf->settings = array(
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/4/41/RepUsLogo_small.png",
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/e/e3/SHA_Wiki_logo.svg",
 		'shippingandmetawiki' => "//$wmgUploadHostname/shippingandmetawiki/7/7d/CSM_Logo.png",
+		'showmedicinawiki' => "//$wmgUploadHostname//showmedicinawiki/4/4b/Show_Medicina.jpg",
 		'sichoeumlonwiki' => "//$wmgUploadHostname/sichoeumlonwiki/b/b6/MyFile.jpeg",
 		'sidemwiki' => "//$wmgUploadHostname/sidemwiki/a/a5/Sidem-logo.png",
 		'sikhwikitestwiki' => "//$wmgUploadHostname/sikhwikitestwiki/b/b5/Cover_The_Purpose_of_Your_Life_LOGO_135x135.png",
