@@ -5632,6 +5632,7 @@ $wgConf->settings = array(
 		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/b/bd/Fdg.PNG",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/3/3b/Wiki_logo.png",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/c/c9/AppleWikilogo.PNG",
+		'appswiki' => "//$wmgUploadHostname/appswiki/d/d2/AppediaLogo.png",
 		'arefepvawiki' => "//$wmgUploadHostname/arefepvawiki/9/92/Logoaf.png",
 		'assaultandroidcactuswiki' => "//$wmgUploadHostname/assaultandroidcactuswiki/7/7b/Cactus_icon.png",
 		'ashenswikiwiki' => "//$wmgUploadHostname/ashenswikiwiki/e/e4/Ashens_Wiki_Logo.png",
