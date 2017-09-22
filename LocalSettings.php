@@ -609,6 +609,9 @@ $wgConf->settings = array(
 		'+clementsworldbuildingwiki' => array(
 			'anon' => true,
 		),
+		'+clonedeploywiki' => array(
+			'anon' => true,
+		),
 		'+compilerdevwiki' => array(
 			'anon' => true,
 		),
@@ -927,7 +930,7 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
-		'yoavfreundwiki' => array(
+		'+yoavfreundwiki' => array(
 			'anon' => true,
 			'user' => true,
 			'sysop' => true,
