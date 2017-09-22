@@ -927,6 +927,12 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'yoavfreundwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+			'editor' => true,
+		),
 	),
 
 	'wgPFEnableStringFunctions' => array(
