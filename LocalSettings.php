@@ -2356,6 +2356,7 @@ $wgConf->settings = array(
 		'civitaswiki' => true,
 		'clementsworldbuildingwiki' => true,
 		'clicordiwiki' => true,
+		'clonedeploywiki' => true,
 		'cnvwiki' => true,
 		'cogitopediewiki' => true,
 		'coldbloodedwiki' => true,
