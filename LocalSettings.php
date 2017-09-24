@@ -3391,6 +3391,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'anduinwiki' => true,
 		'calexitwiki' => true,
+		'showmedicinawiki' => true,
 	),
 
 	'wgMSU_showAutoCat' => array(
