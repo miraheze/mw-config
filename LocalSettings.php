@@ -2411,6 +2411,7 @@ $wgConf->settings = array(
 		'gameonwiki' => true,
 		'ganeshawiki' => true,
 		'geirpediawiki' => true,
+		'generalistprogramwiki' => true,
 		'geresbamyanwiki' => true,
 		'genwiki' => true,
 		'gncwiki' => true,
