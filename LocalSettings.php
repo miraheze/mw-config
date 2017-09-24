@@ -343,6 +343,7 @@ $wgConf->settings = array(
 			'nenawiki.org' => 'nenawikiwiki',
 			'nonbinary.wiki' => 'nonbinarywiki',
 			'www.openonderwijs.org' => 'openonderwijswiki',
+			'oecumene.wiki' => 'oecumenewiki',
 			'oyeavdelingen.org' => 'oyeavdelingenwiki',
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
 			'private.revi.wiki' => 'reviwiki',
@@ -5349,6 +5350,7 @@ $wgConf->settings = array(
 		'nenawikiwiki' => 'https://nenawiki.org',
 		'nextlevelwikiwiki' => 'https://wiki.lbcomms.co.za',
 		'nonbinarywiki' => 'https://nonbinary.wiki',
+		'oecumenewiki' => 'https://oecumene.wiki',
 		'openonderwijswiki' => 'https://www.openonderwijs.org',
 		'oyeavdelingenwiki' => 'https://oyeavdelingen.org',
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
@@ -6068,6 +6070,7 @@ $wgConf->settings = array(
 			'wiki\.lbcomms\.co.za',
 			'wiki\.rizalespe\.com',
 			'wiki\.simplicitysolutionsgroup\.com',
+			'oecumene\.wiki'
 			'oneagencydunedin\.wiki',
 			'www\.openonderwijs\.org',
 			'oyeavdelingen\.org',
