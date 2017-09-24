@@ -5769,6 +5769,7 @@ $wgConf->settings = array(
 		'geodatawiki' => "//$wmgUploadHostname/geodatawiki/c/c1/GlobeIcon160.png",
 		'girlsfrontlinewiki' => "//$wmgUploadHostname/girlsfrontlinewiki/3/35/GirlsFrontline_logo-135px.jpg",
 		'grandtheftautowiki' => "//$wmgUploadHostname/grandtheftautowiki/9/9e/GrandTheftAuto.png",
+		'grdarchivewiki' => "//$wmgUploadHostname/grdarchivewiki/b/be/Greater_Arms_of_Delvera.png",
 		'grottocenterwiki' => "//$wmgUploadHostname/grottocenterwiki/a/ac/Logo_grottocenter.png",
 		'gundambiowiki' => "//$wmgUploadHostname/gundambiowiki/b/bc/Wiki.png",
 		'hamfemwiki' => "//$wmgUploadHostname/hamfemwiki/3/33/Hamfem-Logo1.jpg",
