@@ -654,6 +654,11 @@ $wgConf->settings = array(
 		'+drones4allwiki' => array(
 			'anon' => true,
 		),
+		'+earthianwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+enenwiki' => array(
 			'anon' => true,
 		),
@@ -4030,6 +4035,11 @@ $wgConf->settings = array(
 				'respected',
 			),
 		),
+		'+earthianwiki' => array(
+			'sysop' => array(
+				'Citizen',
+			),
+		),
 		'+hellointernetwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4457,6 +4467,11 @@ $wgConf->settings = array(
 			),
 			'respected' => array(
 				'respected' => true,
+			),
+		),
+		'+earthianwiki' => array(
+			'Citizen' => array(
+				'edit' => true,
 			),
 		),
 		'+hasanistanwiki' => array(
@@ -4983,6 +4998,11 @@ $wgConf->settings = array(
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
+			),
+		),
+		'+earthianwiki' => array(
+			'sysop' => array(
+				'Citizen',
 			),
 		),
 		'+jayuwikiwiki' => array(
