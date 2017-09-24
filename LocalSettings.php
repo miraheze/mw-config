@@ -1823,11 +1823,6 @@ $wgConf->settings = array(
 		'universebuildwiki' => true,
 		'wikipucwiki' => true,
 	),
-	'wmgUseOATHAuth' => array(
-		'default' => false,
-		'test1wiki' => true,
-		'metawiki' => true,
-	),
 	'wmgUseOpenGraphMeta' => array(
 		'default' => false,
 		'extloadwiki' => false, // Upstream issue. T1617. --Reception123
