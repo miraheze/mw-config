@@ -5867,6 +5867,7 @@ $wgConf->settings = array(
 		'priyowiki' => "//$wmgUploadHostname/priyowiki/c/c9/Logo.png",
 		'procrastipediawiki' => "//$wmgUploadHostname/procrastipediawiki/1/1e/PCPedia_Logo.png",
 		'pruebawiki' => "//$wmgUploadHostname/pruebawiki/7/77/LogoWiki.PNG",
+		'qmswiki' => "//$wmgUploadHostname/qmswiki/8/8f/QMS_Logo.png",
 		'raymanspeedrunwiki' => "//$wmgUploadHostname/raymanspeedrunwiki/0/0e/Rayman_Speedrun_Wiki_Logo.png",
 		'rebelalliancewiki' => "//$wmgUploadHostname/rebelalliancewiki/f/fe/Logo135.png",
 		'reiaasuwiki' => "//$wmgUploadHostname/reiaasuwiki/1/1e/Reiaasu-wiki-logo-1.png",
