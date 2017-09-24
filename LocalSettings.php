@@ -4263,6 +4263,7 @@ $wgConf->settings = array(
 				'abusefilter-revert' => true,
 				'deletelogentry' => true,
 				'deleterevision' => true,
+				'interwiki' => true,
 				'rollback' => true,
 			),
 			'user' => array(
