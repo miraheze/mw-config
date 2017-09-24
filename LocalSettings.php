@@ -1421,6 +1421,7 @@ $wgConf->settings = array(
 		'nationsglorywiki' => true,
 		'nextlevelwikiwiki' => true,
 		'nxwikiwiki' => true,
+		'oecumenewiki' => true,
 		'oyeavdelingenwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'prfmukwiki' => true,
