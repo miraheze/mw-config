@@ -6070,7 +6070,7 @@ $wgConf->settings = array(
 			'wiki\.lbcomms\.co.za',
 			'wiki\.rizalespe\.com',
 			'wiki\.simplicitysolutionsgroup\.com',
-			'oecumene\.wiki'
+			'oecumene\.wiki',
 			'oneagencydunedin\.wiki',
 			'www\.openonderwijs\.org',
 			'oyeavdelingen\.org',
