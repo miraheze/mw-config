@@ -5782,6 +5782,7 @@ $wgConf->settings = array(
 		'lbsgeswiki' => "//$wmgUploadHostname/lbsgeswiki/0/05/WikiLogo.jpg",
 		'leftypolwiki' => "//$wmgUploadHostname//leftypolwiki/3/3b/Wiki_logo.png",
 		'lexiquewiki' => "//$wmgUploadHostname/lexiquewiki/6/6d/LibraryLexique-smallRes.png",
+		'lfwikiwiki' => "//$wmgUploadHostname/lfwikiwiki/3/3d/Brunch_%281%29.png",
 		'lingnlangwiki' => "//$wmgUploadHostname/lingnlangwiki/b/bc/Wiki.png",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'livesnowmapwiki' => "//$wmgUploadHostname/livesnowmapwiki/2/27/Snowflake.png",
