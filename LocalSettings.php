@@ -1703,6 +1703,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'scruffywiki' => true,
 		'showmedicinawiki' => true,
+		'sidemwiki' => true,
 		'snowthegamewiki' => true,
 		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
