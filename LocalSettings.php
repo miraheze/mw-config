@@ -2454,6 +2454,7 @@ $wgConf->settings = array(
 		'lapoliticswiki' => true,
 		'lbsgeswiki' => true,
 		'lezar224wiki' => true,
+		'lfwikiwiki' => true,
 		'lingnlangwiki' => true,
 		'littlebigplanetwiki' => true,
 		'lizardwiki' => true,
