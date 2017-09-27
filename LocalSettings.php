@@ -2011,6 +2011,7 @@ $wgConf->settings = array(
 	'wmgUseReplaceText' => array(
 		'default' => false,
 		'bigforestwiki' => true,
+		'bigtoewiki' => true,
 		'calexitwiki' => true,
 		'evawiki' => true,
 		'test1wiki' => true,
