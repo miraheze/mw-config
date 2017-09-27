@@ -2029,6 +2029,7 @@ $wgConf->settings = array(
 	'wmgUseSandboxLink' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'appswiki' => true,
 		'calexitwiki' => true,
 		'test1wiki' => true,
 		'hellointernetwiki' => true,
