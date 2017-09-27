@@ -2673,6 +2673,7 @@ $wgConf->settings = array(
 		'embobadawiki' => true,
 		'geodatawiki' => true,
 		'gtnhwiki' => true,
+		'hellointernetwiki' => true,
 		'modularwiki' => true,
 		'muckhackwiki' => true,
 		'nationsglorywiki' => true,
