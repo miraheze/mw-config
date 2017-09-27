@@ -1513,6 +1513,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'hendrickswiki' => true,
 		'jayuwikiwiki' => true,
+		'magnaorbiswiki' => true,
 		'pgnwikiwiki' => true,
 		'sthomaspriwiki' => true,
 		'studynotekrwiki' => true,
