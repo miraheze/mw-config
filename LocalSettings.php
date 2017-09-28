@@ -5599,6 +5599,7 @@ $wgConf->settings = array(
 		'lanstationwiki' => "//$wmgUploadHostname//lanstationwiki/9/9b/Miniianfav.png",
 		'leftypolwiki' => "//$wmgUploadHostname//leftypolwiki/d/d5/Red_flag.gif",
 		'lexiquewiki' => "//$wmgUploadHostname/lexiquewiki/0/0f/Lexique_favicon.ico",
+		'lfwikiwiki' => "//$wmgUploadHostname/lfwikiwiki/1/1a/5lFgOTZ.png",
 		'lingnlangwiki' => "//$wmgUploadHostname/lingnlangwiki/7/7e/Fav.ico",
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'logalnetwiki' => "//$wmgUploadHostname/logalnetwiki/2/26/Favicon.png",
