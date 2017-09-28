@@ -1739,6 +1739,7 @@ $wgConf->settings = array(
 		'ircwiki' => true,
 		'jayuwikiwiki' => true,
 		'justinbieberwiki' => true,
+		'lfwikiwiki' => true,
 		'magnaversewiki' => true,
 		'microsoftwiki' => true,
 		'nanatsunotaizaiwiki' => true,
@@ -1925,6 +1926,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'jayuwikiwiki' => true,
 		'justinbieberwiki' => true,
+		'lfwikiwiki' => true,
 		'marcoschriekwiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'pgnwikiwiki' => true,
@@ -2015,6 +2017,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'test1wiki' => true,
 		'justinbieberwiki' => true,
+		'lfwikiwiki' => true,
 		'pgnwikiwiki' => true,
 		'thehushhushsagawiki' => true,
 		'youtubewiki' => true,
@@ -2046,6 +2049,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'hellointernetwiki' => true,
 		'idtestwiki' => true,
+		'lfwikiwiki' => true,
 		'modularwiki' => true,
 		'nationstateswiki' => true,
 		'scruffywiki' => true,
@@ -5245,26 +5249,26 @@ $wgConf->settings = array(
 
 	// RelatedArticles settings
 	'wgRelatedArticlesLoggingSamplingRate' => array(
-	 	'default' => false,
-	 	'allthetropeswiki' => '0.01',
-	 	'calexitwiki' => '0.01',
-	 	'extloadwiki' => '0.01',
-	 	'youtubewiki' => '0.01',
-	 ),
-	 'wgRelatedArticlesShowReadMore' => array(
-	 	'default' => false,
-	 	'allthetropeswiki' => true,
+		'default' => false,
+		'allthetropeswiki' => '0.01',
+		'calexitwiki' => '0.01',
+		'extloadwiki' => '0.01',
+		'youtubewiki' => '0.01',
+	),
+	'wgRelatedArticlesShowReadMore' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
 		'calexitwiki' => true,
-	 	'extloadwiki' => true,
-	 	'youtubewiki' => true,
-	 ),
-	 'wgRelatedArticlesShowInFooter' => array(
-	 	'default' => false,
-	 	'allthetropeswiki' => true,
+		'extloadwiki' => true,
+		'youtubewiki' => true,
+	),
+	'wgRelatedArticlesShowInFooter' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
 		'calexitwiki' => true,
-	 	'extloadwiki' => true,
-	 	'youtubewiki' => true,
-	 ),
+		'extloadwiki' => true,
+		'youtubewiki' => true,
+	),
 
 	// Restriction types
 	'+wgRestrictionLevels' => array(
