@@ -2568,6 +2568,7 @@ $wgConf->settings = array(
 		'saharinspacewiki' => true,
 		'savagewikiwiki' => true,
 		'scruffywiki' => true,
+		'seawiki' => true,
 		'seldirwiki' => true,
 		'serinfhospwiki' => true,
 		'setonwiki' => true,
