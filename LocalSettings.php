@@ -3287,6 +3287,7 @@ $wgConf->settings = array(
 			'staffwiki',
 			'loginwiki',
 			'lothuialethwiki',
+			't40wiki',
 			'taliaferrowiki',
 			'testwiki',
 			'wrightwiki',
