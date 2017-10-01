@@ -549,7 +549,6 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
-	require_once( "/srv/mediawiki/config/TranslateConfigHack.php" );
 	$wgULSGeoService = false;
 }
 
