@@ -2432,6 +2432,7 @@ $wgConf->settings = array(
 		'generalistprogramwiki' => true,
 		'geresbamyanwiki' => true,
 		'genwiki' => true,
+		'gepacobiodivwiki' => true,
 		'gncwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'grandtheftautowiki' => true,
