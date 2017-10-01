@@ -3054,6 +3054,7 @@ $wgConf->settings = array(
 	// License
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'adiaprojectwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'coldbloodedwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',		
 		'compilerdevwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 		'cpudevwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
@@ -3085,6 +3086,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
+		'adiaprojectwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'coldbloodedwiki' => '크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스',		
 		'compilerdevwiki' => 'CC0 Public Domain',
 		'cpudevwiki' => 'CC0 Public Domain',
@@ -3113,6 +3115,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'adiaprojectwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'bigforestwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'coldbloodedwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ko',		
 		'compilerdevwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
