@@ -5349,6 +5349,7 @@ $wgConf->settings = array(
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
+		'oecumenewiki' => '/$1',
 	),
 	'wgDisableOutputCompression' => array(
 		'default' => true,
