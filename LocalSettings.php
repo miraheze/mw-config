@@ -1408,6 +1408,7 @@ $wgConf->settings = array(
 		'evelopediawiki' => true,
 		'test1wiki' => true,
 		'fbwikiwiki' => true,
+		'gepacobiodivwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'grandtheftautowiki' => true,
 		'ircwiki' => true,
