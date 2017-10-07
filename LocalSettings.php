@@ -205,6 +205,7 @@ $wgConf->settings = array(
 		'justinbieberwiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'pruebawiki' => true,
+		'test1wiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyohoulwiki' => true,
 		'youtubewiki' => true,
@@ -217,6 +218,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
 		'nanatsunotaizaiwiki' => true,
+		'test1wiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyoghoulwiki' => true,
 		'youtubewiki' => true,
@@ -228,10 +230,15 @@ $wgConf->settings = array(
 		'magnaversewiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'raymanspeedrunwiki' => true,
+		'test1wiki' => true,
 		'thehushhushsagawiki' => true,
 		'tmewiki' => true,
 		'tokyoghoulwiki' => true,
 		'zharkunuwiki' => true,
+	),
+	'wgEnableRcFiltersBetaFeature' => array(
+		'default' => false,
+		'test1wiki' => true,
 	),
 	// Block
 	'wgAutoblockExpiry' => array(
