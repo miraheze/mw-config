@@ -5616,6 +5616,7 @@ $wgConf->settings = array(
 		'linuxwiki' => "//$wmgUploadHostname/linuxwiki/f/f2/Linuxwikilogo.png",
 		'logalnetwiki' => "//$wmgUploadHostname/logalnetwiki/2/26/Favicon.png",
 		'luckandlogicwiki' => "//$wmgUploadHostname/luckandlogicwiki/2/26/Favicon.png",
+		'madgendersciencewiki' => "//$wmgUploadHostname/madgendersciencewiki/0/01/Mgsfavicon.png",
 		'modularwiki' => "//$wmgUploadHostname/modularwiki/6/64/Favicon.ico",
 		'natenwiki' => "//$wmgUploadHostname/natenwiki/c/c9/Logo.png",
 		'nationsglorywiki' => "//$wmgUploadHostname/nationsglorywiki/0/04/NationsGlory.png",
