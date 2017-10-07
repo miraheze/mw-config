@@ -4088,6 +4088,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+infectopedwiki' => array(
+			'bureaucrat' => array(
+				'reviewer' => true,
+			),
+		),
 		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -5046,6 +5051,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+infectopedwiki' => array(
+			'bureaucrat' => array(
+				'reviewer' => true,
 			),
 		),
 		'+macfan4000wiki' => array(
@@ -6244,10 +6254,12 @@ $wgConf->settings = array(
 	// Protect site config
 	'wgProtectSiteLimit' => array(
 		'default' => '1 week',
+		'infectopedwiki' => 'indefinite',
 		'tnoteswiki' => 'indefinite',
 	),
 	'wgProtectSiteDefaultTimeout' => array(
 		'default' => '1 hour',
+		'infectopedwiki' => '2 hours',
 		'tnoteswiki' => '2 hours',
 	),
 
