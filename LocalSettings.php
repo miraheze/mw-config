@@ -5737,6 +5737,7 @@ $wgConf->settings = array(
 		'amicitiawiki' => "//$wmgUploadHostname/amicitiawiki/9/9b/Amicitia_logo.png",
 		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/b/bd/Fdg.PNG",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/3/3b/Wiki_logo.png",
+		'apellidosmurcianoswiki' => "//$wmgUploadHostname/apellidosmurcianoswiki/2/27/Amlogo.png",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/c/c9/AppleWikilogo.PNG",
 		'appswiki' => "//$wmgUploadHostname/appswiki/d/d2/AppediaLogo.png",
 		'arefepvawiki' => "//$wmgUploadHostname/arefepvawiki/9/92/Logoaf.png",
