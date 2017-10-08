@@ -591,6 +591,9 @@ $wgConf->settings = array(
 		'+antropologiaargentinawiki' => array(
 			'anon' => true,
 		),
+		'+apellidosmurcianoswiki' => array(
+			'anon' => true,
+		),
 		'+bitcoindebateswiki' => array(
       			'anon' => true,
 			'user' => true,
