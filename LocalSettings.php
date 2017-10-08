@@ -4111,10 +4111,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'sysop' => array(
-				'translator',
-			),
-			'translationadmin' => array(
-				'translator',
+				'translationadmin',
 			),
 		),
 		'+nenawikiwiki' => array(
@@ -4640,6 +4637,7 @@ $wgConf->settings = array(
 			'confirmed' => array(
 				'move' => true,
 				'createpage' => true,
+				'translate' => true,
 			),
 			'cvt' => array(
 				'abusefilter-modify-global' => true,
@@ -4669,9 +4667,6 @@ $wgConf->settings = array(
 				'oathauth-enable' => true,
 			),
 			'translationadmin' => array(
-				'translate' => true,
-			),
-			'translator' => array(
 				'translate' => true,
 			),
 			'wikicreator' => array(
@@ -5076,10 +5071,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'sysop'	=> array(
-				'translator',
-			),
-			'translationadmin' => array(
-				'translator',
+				'translationadmin',
 			),
 		),
 		'+nenawikiwiki' => array(
