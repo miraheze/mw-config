@@ -4099,16 +4099,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+metawiki' => array(
-			'sysop' => array(
-				'translationadmin',
-        ),
-      ),
 		'+infectopedwiki' => array(
 			'bureaucrat' => array(
 				'reviewer' => true,
-        ),
-      ),
+				),
+			),
 		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4676,16 +4671,13 @@ $wgConf->settings = array(
 				'oathauth-enable' => true,
 			),
 			'translationadmin' => array(
-				'translate' => true,
-			),
-			'wikicreator' => array(
-				'createwiki' => true,
-			),
-			'translationadmin' => array(
 				'pagelang' => true,
 				'pagetranslation' => true,
 				'translate-import' => true,
 				'translate-manage' => true,
+			),
+			'wikicreator' => array(
+				'createwiki' => true,
 			),
 		),
 		'+modularwiki' => array(
@@ -5071,11 +5063,6 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+metawiki' => array(
-			'sysop' => array(
-				'translationadmin',
-        ),
-      ),
 		'+infectopedwiki' => array(
 			'bureaucrat' => array(
 				'reviewer' => true,
