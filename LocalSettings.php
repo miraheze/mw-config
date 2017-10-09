@@ -4636,6 +4636,7 @@ $wgConf->settings = array(
 			'autoconfirmed' => array(
 				'move' => true,
 				'createpage' => true,
+				'translate' => true,
 			),
 			'confirmed' => array(
 				'move' => true,
