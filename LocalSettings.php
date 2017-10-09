@@ -4102,8 +4102,8 @@ $wgConf->settings = array(
 		'+infectopedwiki' => array(
 			'bureaucrat' => array(
 				'reviewer' => true,
-				),
 			),
+		),
 		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
