@@ -292,6 +292,10 @@ if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Loops/Loops.php");
 }
 
+if ( $wmgUseMagicNoCache ) {
+	require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+}
+	
 if ( $wmgUseMaps ) {
 	require_once( "$IP/extensions/Maps/Maps.php" );
 	$egMapsDefaultService = 'openlayers';
@@ -542,10 +546,6 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['sysop']['translate-manage'] = true;
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
-	$wgGroupPermissions['translate-proofr']['translate-messagereview'] = false;
-	$wgAddGroups['translate-proofr'] = false;
-	// unset this unused group already
-	unset( $wgGroupPermissions['translate-proofr'] );
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
