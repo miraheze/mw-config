@@ -5560,6 +5560,7 @@ $wgConf->settings = array(
 		'amicitiawiki' => "//$wmgUploadHostname/amicitiawiki/5/5b/Amicitia_favicon.svg",
 		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/7/7f/Favicon-20170311123705233.ico",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/6/64/Favicon.ico",
+		'apellidosmurcianoswiki' => "//$wmgUploadHostname/apellidosmurcianoswiki/2/26/Favicon.png",
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
 		'assaultandroidcactuswiki' => "//$wmgUploadHostname/assaultandroidcactuswiki/6/64/Favicon.ico",
 		'astrowiki' => "//$wmgUploadHostname/astrowiki/6/64/Favicon.ico",
