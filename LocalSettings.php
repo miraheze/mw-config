@@ -5925,6 +5925,7 @@ $wgConf->settings = array(
 		'oyeavdelingenwiki' => "//$wmgUploadHostname/oyeavdelingenwiki/7/7b/OUS_Logo.png",
 		'oneironautwiki' => "//$wmgUploadHostname/oneironautwiki/7/7b/Oneironaut-Wiki-logo.png",
 		'ordiswiki' => "//$wmgUploadHostname/ordiswiki/6/65/OE_Logo.png",
+		'paddelnwiki' => "//$wmgUploadHostname/paddelnwiki/9/9c/GutDrauf.png",
 		'paranormalwiki' => "//$wmgUploadHostname/paranormalwiki/2/2d/Parawiki.png",
 		'particracywikiwiki' => "//$wmgUploadHostname/particracywikiwiki/6/69/Wiki_logo_parti.png",
 		'partupwiki' => "//$wmgUploadHostname/partupwiki/a/a6/Part-up-logo-150x150-mediawiki.png",
