@@ -5719,7 +5719,8 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/2/26/Favicon.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/6/64/Favicon.ico",
-		'wishwiki' => "$wmgUploadHostname/wishwiki/a/aa/Internet_favicon.png",
+		'wishwiki' => "//$wmgUploadHostname/wishwiki/a/aa/Internet_favicon.png",
+		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
@@ -6044,6 +6045,7 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
+		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
 	),
 
 	// TemplateSandbox
