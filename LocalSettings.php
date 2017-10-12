@@ -5770,6 +5770,7 @@ $wgConf->settings = array(
 		'breedersofthenephelymwiki' => "//$wmgUploadHostname/breedersofthenephelymwiki/4/49/WindowsIcon.png",
 		'bpawiki' => "//$wmgUploadHostname/bpawiki/d/d3/Bpa-140.jpg",
 		'bugolaviawiki' => "//$wmgUploadHostname/bugolaviawiki/2/28/Bugolavian_Coat_of_Arms.png",
+		'bunker401wiki' => "//$wmgUploadHostname/bunker401wiki/7/74/Logo_Bunker_401.png",
 		'burnoutwiki' => "//$wmgUploadHostname/burnoutwiki/0/0b/BURNOUTWIKI_LOGO_135px.png",
 		'bzdetopediawiki' => "//$wmgUploadHostname/bzdetopediawiki/b/bc/Wiki.png",
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
