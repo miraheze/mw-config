@@ -1419,6 +1419,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'enmarchewiki' => true,
 		'extloadwiki' => true,
+		'liesbornwikiwiki' => true,
 		'jacksonheightswiki' => true,
 		'jayuwikiwiki' => true,
 		'magnaversewiki' => true,
