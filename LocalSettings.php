@@ -2431,6 +2431,7 @@ $wgConf->settings = array(
 		'earthianwiki' => true,
 		'easterwiki' => true,
 		'easywikiwiki' => true,
+		'ellersliedemowiki' => true,
 		'ernaehrungsrathhwiki' => true,
 		'espiralwiki' => true,
 		'esswaywiki' => true,
