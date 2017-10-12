@@ -2388,6 +2388,7 @@ $wgConf->settings = array(
 		'braindumpwiki' => true,
 		'breedersofthenephelymwiki' => true,
 		'brxdwiki' => true,
+		'bunker401wiki' => true,
 		'brynda1231wiki' => true,
 		'bttestwiki' => true,
 		'byblopediawiki' => true,
