@@ -5609,6 +5609,7 @@ $wgConf->settings = array(
 		'evelopediawiki' => "//$wmgUploadHostname/evelopediawiki/6/64/Favicon.ico",
 		'fbwikiwiki' => "//$wmgUploadHostname/fbwikiwiki/4/4c/Fbwiki_favicon.ico",
 		'fefoxtttwiki' => "//$wmgUploadHostname/fefoxtttwiki/d/d7/NewIcon.jpg",
+		'feuwiki' => "//$wmgUploadHostname/feuwiki/6/64/Favicon.ico",
 		'fmbvwiki' => "//$wmgUploadHostname/fmbvwiki/0/06/Fmbvfavicon.png",
 		'forexwiki' => "//$wmgUploadHostname/forexwiki/6/64/Favicon.ico",
 		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/1/18/FreeCollegeProject.ico",
