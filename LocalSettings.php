@@ -2781,6 +2781,7 @@ $wgConf->settings = array(
 		'bilgiwiki' => true,
 		'biuwiki' => true,
 		'bmedwiki' => true,
+		'bunker401wiki' => true,
 		'calexitwiki' => true,
 		'carvingwiki' => true,
 		'christipediawiki' => true,
