@@ -5865,6 +5865,7 @@ $wgConf->settings = array(
 		'ipolywiki' => "//$wmgUploadHostname/ipolywiki/3/33/IPoly_Logo_-SQ-.png",
 		'islamwissenschaftwiki' => "//$wmgUploadHostname/islamwissenschaftwiki/b/bc/Wiki.png",
 		'isvwiki' => "//$wmgUploadHostname/isvwiki/b/bc/Med%C5%BEuviki-logo-latn.svg",
+		'itasiawiki' => "//$wmgUploadHostname/itasiawiki/f/f7/Mylogo.png",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/e/eb/IZLogo.png",
 		'jacksonheightswiki' => "//$wmgUploadHostname/jacksonheightswiki/b/b5/Jackson_heights_logo_135_X_135.png",
 		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/b/b1/Jawp2ch_Logo1.svg",
