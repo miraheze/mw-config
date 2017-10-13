@@ -2014,6 +2014,7 @@ $wgConf->settings = array(
 		'hellointernetwiki' => true,
 		'humorpediawiki' => true,
 		'lingnlangwiki' => true,
+		'madgendersciencewiki' => true,
 		'newnamlawiki' => true,
 		'rpgbrigadewiki' => true,
 		'takethatwikiwiki' => true,
