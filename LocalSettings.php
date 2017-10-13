@@ -365,7 +365,6 @@ $wgConf->settings = array(
 			'takethatwiki.com' => 'takethatwikiwiki',
 			'wiki.teessidehackspace.org.uk' => 'teessidehackspacewiki',
 			'thelonsdalebattalion.co.uk' => 'thelonsdalebattalionwiki',
-			'wiki.aenasan.com' => 'aenasanwiki',
 			'wiki.autocountsoft.com' => 'autocountwiki',
 			'wiki.besuccess.com' => 'kstartupswiki',
 			'wiki.clonedeploy.org' => 'clonedeploywiki',
@@ -5399,7 +5398,6 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
-		'aenasanwiki' => 'https://wiki.aenasan.com',
 		'aksaraywikiwiki' => 'https://www.aksaraywiki.com',
 		'allthetropeswiki' => 'https://allthetropes.org',
 		'alwikiwiki' => 'https://www.alwiki.net',
@@ -6148,7 +6146,6 @@ $wgConf->settings = array(
 	'wgUrlShortenerDomainsWhitelist' => array(
 		'default' => array(
 			'(.*\.)?miraheze\.org',
-			'wiki\.aenasan\.com',
 			'allthetropes\.org',
 			'aman\.info\.tm',
 			'antiguabarbudacalypso\.com',
