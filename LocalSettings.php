@@ -1657,6 +1657,7 @@ $wgConf->settings = array(
 		'pfsolutionswiki' => true,
 		'test1wiki' => true,
 		'thelonsdalebattalionwiki' => true,
+		'unmadewiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
@@ -5554,6 +5555,7 @@ $wgConf->settings = array(
 		'revitwiki' => 'monobook',
 		'thebbwiki' => 'apex',
 		'thelonsdalebattalionwiki' => 'metrolook',
+		'unmadewiki' => 'metrolook',
 	),
 	'wgFavicon' => array(
 		'default' => '/favicon.ico',
