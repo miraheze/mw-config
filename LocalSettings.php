@@ -2810,6 +2810,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'janesskillspackwiki' => true,
 		'lifewiki' => true,
+		'lexiquewiki' => true,
 		'luckandlogicwiki' => true,
 		'marcoschriekwiki' => true,
 		'mikrodevwiki' => true,
