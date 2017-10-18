@@ -3592,6 +3592,8 @@ $wgConf->settings = array(
 		'revitwiki' => array(
 			NS_RGB => 'RGB',
 			NS_RGB_TALK => 'RGB_talk',
+			NS_IDEA => 'IDEA',
+			NS_IDEA_TALK => 'IDEA_talk',
 			NS_LINESTYLE => 'LineStyle',
 			NS_LINESTYLE_TALK => 'LineStyle_talk',
 		),
