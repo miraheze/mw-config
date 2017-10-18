@@ -1210,6 +1210,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'macfan4000wiki' => true,
 		'muckhackwiki' => true,
+		'paddelnwiki' => true,
 		'pgnwikiwiki' => true,
 		'plazmaburstwiki' => true,
 		'priyowiki' => true,
