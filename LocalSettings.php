@@ -5015,6 +5015,7 @@ $wgConf->settings = array(
 		),
 		'+zhdelwiki' => array(
 			'confirmed' => array(
+				'createpage' => true,
 				'edit' => true,
 				'move' => true,
 				'upload' => true,
