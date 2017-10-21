@@ -158,8 +158,8 @@ define( 'NS_RGB', 1732);
 define( 'NS_RGB_TALK', 1733);
 define( 'NS_LINESTYLE', 1734);
 define( 'NS_LINESTYLE_TALK', 1735);
-
-
+define( 'NS_IDEA', 1736);
+define( 'NS_IDEA_TALK', 1737);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
