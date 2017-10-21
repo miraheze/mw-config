@@ -958,6 +958,10 @@ $wgConf->settings = array(
 			'sysop' => true,
 			'editor' => true,
 		),
+		'+zhdelwiki' => array(
+			'anon' => true,
+			'user' => true,
+		),
 	),
 
 	'wgPFEnableStringFunctions' => array(
@@ -4986,6 +4990,13 @@ $wgConf->settings = array(
 				'project-edit' => true,
 			),
 		),
+		'+zhdelwiki' => array(
+			'confirmed' => array(
+				'edit' => true,
+				'move' => true,
+				'upload' => true,
+			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
@@ -5248,6 +5259,13 @@ $wgConf->settings = array(
 			'sysop' => array(
 				# 'nuke' => true, // done in overrides at end of file
 				# 'editinterface' => true, //mistakenly applies to other groups as well
+			),
+		),
+		'zhdelwiki' => array(
+			'autopatrolled' => array(
+				'patrol' => true,
+				'autopatrol' => true,
+				'skipcaptcha' => true,
 			),
 		),
 	),
