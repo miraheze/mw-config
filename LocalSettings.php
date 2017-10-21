@@ -5856,6 +5856,7 @@ $wgConf->settings = array(
 		'embobadawiki' => "//$wmgUploadHostname/embobadawiki/d/d5/Logo-embobada.png",
 		'encyclopaedicawiki' => "//$wmgUploadHostname/encyclopaedicawiki/e/e0/Favicon_new.png",
 		'enmarchewiki' => "//$wmgUploadHostname/enmarchewiki/c/c9/LaREM68-135x135.png",
+		'ensemblemulhousewiki' => "//$wmgUploadHostname/ensemblemulhousewiki/e/e7/EnsembleMulhouse135x135logo.png",
 		'eotewiki' => "//$wmgUploadHostname/eotewiki/6/64/Logo_triumph.png",
 		'esctwiki' => "//$wmgUploadHostname/esctwiki/d/d9/Heart.png",
 		'espiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
