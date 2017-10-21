@@ -1803,7 +1803,7 @@ $wgConf->settings = array(
 		'chimaerawiki' => true,
 		'test1wiki' => true,
 		'muckhackwiki' => true,
-		'poserdazfreebieswiki" => true,
+		'poserdazfreebieswiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
