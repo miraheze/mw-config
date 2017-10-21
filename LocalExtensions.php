@@ -84,6 +84,8 @@ if ( $wmgUseCollapsibleVector ) {
 
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
+	$wgGroupPermissions['sysop']['commentadmin'] = true;
+
 }
 
 if ( $wmgUseContactPage ) {
