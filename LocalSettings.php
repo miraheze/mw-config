@@ -938,6 +938,11 @@ $wgConf->settings = array(
 		'+welcomewiki' => array(
 			'anon' => true,
 		),
+		'+whentheycrywiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+wisdomwikiwiki' => array(
 			'anon' => true,
 			'user' => true,
