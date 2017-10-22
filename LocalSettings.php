@@ -5286,9 +5286,9 @@ $wgConf->settings = array(
 			),
 		),
 		'zhdelwiki' => array(
-			'autopatrolled' => array(
-				'patrol' => true,
-				'autopatrol' => true,
+			'autoconfirmed' => array(
+				'editsemiprotected' => true,
+				'autoconfirmed' => true,
 				'skipcaptcha' => true,
 			),
 		),
