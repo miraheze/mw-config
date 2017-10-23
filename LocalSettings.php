@@ -3490,7 +3490,9 @@ $wgConf->settings = array(
 	'wgMSU_useDragDrop' => array(
 		'default' => false,
 		'anduinwiki' => true,
+		'bigforestwiki' => true,
 		'calexitwiki' => true,
+		'jayuwikiwiki' => true,
 		'showmedicinawiki' => true,
 	),
 
