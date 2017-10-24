@@ -1794,6 +1794,7 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'tokyoghoulwiki' => true,
 		'unionnorteamericanawiki' => true,
+		'whentheycrywiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
