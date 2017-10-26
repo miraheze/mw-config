@@ -1813,6 +1813,7 @@ $wgConf->settings = array(
 	'wmgUseNewestPages' => array(
 		'default' => false,
 		'appswiki' => true,
+		'aristidewiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'hellointernetwiki' => true,
@@ -2087,6 +2088,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRSS' => array(
 		'default' => false,
+		'aristidewiki' => true,
 		'emulationwiki' => true,
 		'test1wiki' => true,
 		'lgproduktsupportwiki' => true,
@@ -6204,6 +6206,7 @@ $wgConf->settings = array(
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => array(
 		'default' => false,
+		'aristidewiki' => true,
 	),
 
 	// UrlShortener
