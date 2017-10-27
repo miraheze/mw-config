@@ -3693,6 +3693,10 @@ $wgConf->settings = array(
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_OFFICIAL => 'Official',
 			NS_OFFICIAL_TALK => 'Official_talk',
+			NS_GAME => 'Game',
+			NS_GAME_TALK => 'Game_talk',
+			NS_IDEA => 'Idea',
+			NS_IDEA_TALK => 'Idea_talk',
 		),
 		'uncyclopediawiki' => array(
 			NS_PSEUDO_NEWS => '伪基新闻',
