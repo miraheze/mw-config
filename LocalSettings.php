@@ -2833,6 +2833,7 @@ $wgConf->settings = array(
 		'aristidewiki' => true,
 		'bigforestwiki' => true,
 		'bilgiwiki' => true,
+		'biskwiki' => true,
 		'biuwiki' => true,
 		'bmedwiki' => true,
 		'bunker401wiki' => true,
