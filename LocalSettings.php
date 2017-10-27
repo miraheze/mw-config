@@ -3848,6 +3848,7 @@ $wgConf->settings = array(
 			'Sjabloon' => NS_TEMPLATE,
 			'Vorlage' => NS_TEMPLATE,
 			'Bild' => NS_MEDIA,
+			'Modulo' => NS_MODULE,
 		),
 	),
 	'+wgNamespaceProtection' => array(
