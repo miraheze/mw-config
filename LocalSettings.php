@@ -2817,6 +2817,7 @@ $wgConf->settings = array(
 		'animationmoviewikiwiki' => true,
 		'apolcourseswiki' => true,
 		'appswiki' => true,
+		'aristidewiki' => true,
 		'bigforestwiki' => true,
 		'bilgiwiki' => true,
 		'biuwiki' => true,
