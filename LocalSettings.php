@@ -1468,6 +1468,7 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => true,
 		'prfmukwiki' => true,
 		'priyowiki' => true,
+		'puzzlewiki' => true,
 		'rswiki' => true,
 		'soshomophobiewiki' => true,
 		'spiralwiki' => true,
