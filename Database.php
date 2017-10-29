@@ -20,6 +20,7 @@ $wgLBFactoryConf = array(
 		'supernamuwiki' => 'c2',
 		'thelonsdalebattalionwiki' => 'c2',
 		'tmewiki' => 'c2',
+		'vandalwiki' => 'c2',
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array(
