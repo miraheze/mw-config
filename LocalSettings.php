@@ -529,7 +529,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'partupwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
