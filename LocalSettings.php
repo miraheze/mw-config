@@ -3714,6 +3714,8 @@ $wgConf->settings = array(
 			NS_GAME_TALK => 'Game_talk',
 			NS_IDEA => 'Idea',
 			NS_IDEA_TALK => 'Idea_talk',
+			NS_TIMELINE => 'Timeline',
+			NS_TIMELINE_TALK => 'Timeline_talk',
 		),
 		'uncyclopediawiki' => array(
 			NS_PSEUDO_NEWS => '伪基新闻',
@@ -3870,6 +3872,9 @@ $wgConf->settings = array(
 			'Vorlage' => NS_TEMPLATE,
 			'Bild' => NS_MEDIA,
 			'Modulo' => NS_MODULE,
+			'Fitxer' => NS_FILE,
+			'Categoria' => NS_CATEGORY,
+			'Imatge' => NS_FILE,
 		),
 	),
 	'+wgNamespaceProtection' => array(
