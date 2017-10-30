@@ -2776,7 +2776,10 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikibaseRepository' => array(
 		'default' => false,
-		'extloadwiki' => false, // REL1_29 seems broken currently.
+		'beminwiki' => true,
+		'maiasongcontestwiki' => true,
+		'test1wiki' => true,
+		'vukufwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
