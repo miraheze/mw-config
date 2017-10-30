@@ -6594,5 +6594,7 @@ require_once( "/srv/mediawiki/config/Redis.php" );
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
 
 // Define last - Extension message files for loading extensions
-require_once( "/srv/mediawiki/config/ExtensionMessageFiles.php" );
+if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
+	require_once( "/srv/mediawiki/config/ExtensionMessageFiles.php" );
+}
 
