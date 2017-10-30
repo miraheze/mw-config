@@ -6170,7 +6170,7 @@ $wgConf->settings = array(
 			NS_TEMPLATE,
 			WMG_NS_MODULE
 		)
-	)
+	),
 	
 	// Timezone
 	'wgLocaltimezone' => array(
