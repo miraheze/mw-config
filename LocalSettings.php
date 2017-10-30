@@ -531,13 +531,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'appswiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'christipediawiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'ciptamediawiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'diggywikipolskawiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'platprojectwiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'yoavfreundwiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
-		'yourosongcontestwiki' => "This wiki is temporarily in read-only mode while we migrate it between our Database servers",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
