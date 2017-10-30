@@ -1993,6 +1993,7 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyoghoulwiki' => true,
+		'utamacrosswiki' => true,
 		'votingwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
