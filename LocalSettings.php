@@ -2327,6 +2327,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'3dicwiki' => true,
 		'applewikiwiki' => true,
+		'ayurbookswiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'cpiwiki' => true,
@@ -2419,6 +2420,7 @@ $wgConf->settings = array(
 		'artificercreationswiki' => true,
 		'aryamanwiki' => true,
 		'ayrshirewiki' => true,
+		'ayurbookswiki' => true,
 		'atheneumwiki' => true,
 		'attackontitanwiki' => true,
 		'bchwiki' => true,
@@ -6168,7 +6170,7 @@ $wgConf->settings = array(
 			NS_TEMPLATE,
 			WMG_NS_MODULE
 		)
-	),
+	)
 	
 	// Timezone
 	'wgLocaltimezone' => array(
