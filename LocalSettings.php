@@ -160,6 +160,8 @@ define( 'NS_LINESTYLE', 1734);
 define( 'NS_LINESTYLE_TALK', 1735);
 define( 'NS_IDEA', 1736);
 define( 'NS_IDEA_TALK', 1737);
+define( 'NS_POLICY', 1738);
+define( 'NS_POLICY_TALK', 1739);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3716,6 +3718,8 @@ $wgConf->settings = array(
 			NS_IDEA_TALK => 'Idea_talk',
 			NS_TIMELINE => 'Timeline',
 			NS_TIMELINE_TALK => 'Timeline_talk',
+			NS_POLICY => 'Policy',
+			NS_POLICY_TALK = 'Policy_talk',
 		),
 		'uncyclopediawiki' => array(
 			NS_PSEUDO_NEWS => '伪基新闻',
