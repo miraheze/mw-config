@@ -3719,7 +3719,7 @@ $wgConf->settings = array(
 			NS_TIMELINE => 'Timeline',
 			NS_TIMELINE_TALK => 'Timeline_talk',
 			NS_POLICY => 'Policy',
-			NS_POLICY_TALK = 'Policy_talk',
+			NS_POLICY_TALK => 'Policy_talk',
 		),
 		'uncyclopediawiki' => array(
 			NS_PSEUDO_NEWS => '伪基新闻',
