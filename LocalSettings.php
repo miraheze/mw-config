@@ -3875,6 +3875,10 @@ $wgConf->settings = array(
 			'Fitxer' => NS_FILE,
 			'Categoria' => NS_CATEGORY,
 			'Imatge' => NS_FILE,
+			'Datoteka' => NS_FILE,
+			'Kategorija' => NS_CATEGORY,
+			'Helpo' => NS_HELP,
+			'Projekto' => NS_PROJECT,
 		),
 	),
 	'+wgNamespaceProtection' => array(
