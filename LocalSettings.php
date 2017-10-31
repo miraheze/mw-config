@@ -3821,6 +3821,12 @@ $wgConf->settings = array(
 			"분토" => NS_CATEGORY_TALK,
 			"뉴스" => NS_NEWSLINK,
 		),
+		'+bpwiki' => array(
+			'Halaman' => NS_PROOFREAD_PAGE,
+			'Pembicaraan_Halaman' => NS_PROOFREAD_PAGE_TALK,
+			'Indeks' => NS_PROOFREAD_INDEX,
+			'Pembicaraan_Indeks' => NS_PROOFREAD_INDEX_TALK,
+		),
 		'+casuarinawiki' => array(
 			'文庫' => NS_LIBRARY,
 			'文庫討論' => NS_LIBRARY_TALK,
