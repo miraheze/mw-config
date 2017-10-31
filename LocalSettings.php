@@ -162,8 +162,8 @@ define( 'NS_IDEA', 1736);
 define( 'NS_IDEA_TALK', 1737);
 define( 'NS_POLICY', 1738);
 define( 'NS_POLICY_TALK', 1739);
-define( 'NS_LEGACY', 1780);
-define( 'NS_LEGACY_TALK', 1781);
+define( 'NS_LEGACY', 1740);
+define( 'NS_LEGACY_TALK', 1741);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
