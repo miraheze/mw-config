@@ -1196,6 +1196,7 @@ $wgConf->settings = array(
 		'particracywikiwiki' => true,
 		'recentiawiki' => true,
 		'studynotekrwiki' => true,
+		'wikapediawiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -2904,6 +2905,7 @@ $wgConf->settings = array(
 		'uncyclopediawiki' => true,
 		'unmadewiki' => true,
 		'valentinaprojectwiki' => true,
+		'wikapediawiki' => true,
 		'wikiletraswiki' => true,
 		'wikipucwiki' => true,
 		'wisdomwikiwiki' => true,
@@ -6202,6 +6204,7 @@ $wgConf->settings = array(
 		'reviwikiwiki' => 'Asia/Seoul',
 		'thelonsdalebattalionwiki' => 'Europe/London',
 		'webtoonwiki' => 'Asia/Seoul',
+		'wikapediawiki' => 'Asia/Taipei',
 	),
 	
 	// TitleBlacklist 
