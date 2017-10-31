@@ -3370,6 +3370,7 @@ $wgConf->settings = array(
 			'dditecwiki',
 			'extloadwiki',
 			'geomasterywiki',
+			'lexiquewiki' => true,
 			'newarkmanorwiki',
 			'nissanecuwiki',
 			'noalatalawiki',
