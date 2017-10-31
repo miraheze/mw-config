@@ -2781,6 +2781,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikibaseRepository' => array(
 		'default' => false,
+		'aerosswiki' => true,
 		'beminwiki' => true,
 		'maiasongcontestwiki' => true,
 		'test1wiki' => true,
