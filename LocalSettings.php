@@ -5976,6 +5976,7 @@ $wgConf->settings = array(
 		'heathenwiki' => "//$wmgUploadHostname/heathenwiki/b/b5/HeathenWiki_Logo.png",
 		'hellointernetwiki' => "//$wmgUploadHostname/hellointernetwiki/7/79/TimpediaLogo2.png",
 		'heralwikiawiki' => "//$wmgUploadHostname/heralwikiawiki/c/c9/Logo.png",
+		'hexelswiki' => "//$wmgUploadHostname/hexelswiki/f/ff/Hexlogo135.png",
 		'hktransportpediawiki' => "//$wmgUploadHostname/hktransportpediawiki/6/60/Logo2wiki.PNG",
 		'houseofettlingarfreyuwiki' => "//$wmgUploadHostname/houseofettlingarfreyuwiki/7/74/Shield_Arms_House_Ettlingar_Freyu5.png",
 		'hshsinfoportalwiki' => "//$wmgUploadHostname/hshsinfoportalwiki/e/ec/HSHS_Logo.jpeg",
