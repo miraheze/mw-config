@@ -75,7 +75,7 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private";
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
 	$wgUploadPath = "https://ciptamedia.miraheze.org/w/img_auth.php";
 }
 
