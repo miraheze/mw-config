@@ -74,6 +74,11 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
 }
 
+if ( $wgDBname === 'ciptamediawiki' ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private";
+	$wgUploadPath = "https://ciptamedia.miraheze.org/w/img_auth.php";
+}
+
 if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
