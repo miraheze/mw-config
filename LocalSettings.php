@@ -1339,6 +1339,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'heistwiki' => true,
 		'hellointernetwiki' => true,
+		'hexelswiki' => true,
 		'hydrawikiwiki' => true,
 		'kstartupswiki' => true,
 		'noalatalawiki' => true,
