@@ -2579,6 +2579,7 @@ $wgConf->settings = array(
 		'marinebiodiversitymatrix' => true,
 		'make717wiki' => true,
 		'medergistswiki' => true,
+		'medicinawiki' => true,
 		'medlabisowiki' => true,
 		'menufeedwiki' => true,
 		'meregoswiki' => true,
