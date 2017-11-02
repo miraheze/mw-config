@@ -4244,6 +4244,7 @@ $wgConf->settings = array(
 		'+nenawikiwiki' => array(
 			'sysop' => array(
 				'editor',
+				'NENA Members',
 			),
 		),
 		'+nonbinarywiki' => array(
@@ -4822,6 +4823,11 @@ $wgConf->settings = array(
 				'purge' => true,
 				'edit-content-pages' => true,
 			),
+			'NENA Members' => array(
+				'createtalk' => true,
+				'edit' => true,
+				'edit-talkpages' => true,
+			),	
 			'sysop' => array(
 				'edit-content-pages' => true,
 				'edit-admin-pages' => true,
@@ -5213,6 +5219,7 @@ $wgConf->settings = array(
 		'+nenawikiwiki' => array(
 			'sysop' => array(
 				'editor',
+				'NENA Members',
 			),
 		),
 		'+nonbinarywiki' => array(

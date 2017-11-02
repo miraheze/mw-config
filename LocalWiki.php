@@ -174,6 +174,12 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgGroupPermissions['user']['minoredit'] = false;
 	$wgGroupPermissions['user']['purge'] = false;
 	$wgGroupPermissions['sysop']['autopatrol'] = false;
+	$wgGroupPermissions['user']['changetags'] = false;
+	$wgGroupPermissions['user']['applychangetags'] = false;
+	$wgGroupPermissions['user']['move-categorypages'] = false;
+	$wgGroupPermissions['user']['editcontentmodel'] = false;
+	$wgGroupPermissions['user']['torunblocked'] = false;
+
 	$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
 }
 
