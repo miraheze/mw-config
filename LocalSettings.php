@@ -3073,6 +3073,7 @@ $wgConf->settings = array(
 		'+serinfhospwiki' => array( 'pdf', 'zip' ),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
 		'+themirrorwiki' => array( 'mp3'),
+		'+tmewiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
 		'+unmadewiki' => array('mp3'),
 		'+valentinaprojectwiki' => array( 'val', 'vit', 'vst'),
 		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
@@ -3910,6 +3911,7 @@ $wgConf->settings = array(
 			'Kategorija' => NS_CATEGORY,
 			'Helpo' => NS_HELP,
 			'Projekto' => NS_PROJECT,
+			'Kategorya' => NS_CATEGORY,
 		),
 	),
 	'+wgNamespaceProtection' => array(
