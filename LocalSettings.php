@@ -6363,6 +6363,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => false,
 		'bttestwiki' => true,
 		'isvwiki' => false,
+		'malaysiawiki' => true,
 		'panoramawiki' => false,
 		'testwiki' => false,
 	),
