@@ -1607,10 +1607,10 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 	),
 	'wmgUseLoginNotify' => array(
-		'default' => false,
-		'loginwiki' => true,
-		'metawiki' => true,
-		'test1wiki' => true,
+		'default' => false, // Disabled until 1.30 fix T2188. --Reception123
+		'loginwiki' => false,
+		'metawiki' => false,
+		'test1wiki' => false,
 	),
 	'wmgUseLoopsCombo' => array( // Remember to remove from Variables if the wiki is enabled there
 		'default' => false,
