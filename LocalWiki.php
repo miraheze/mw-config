@@ -167,6 +167,7 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['user']['createtalk'] = false;
 	$wgGroupPermissions['user']['writeapi'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
 	$wgGroupPermissions['user']['reupload'] = false;
