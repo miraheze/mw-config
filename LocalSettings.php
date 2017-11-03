@@ -272,6 +272,24 @@ $wgConf->settings = array(
 			'manualRecache' => true,
 		),
 	),
+	'wgPreprocessorCacheThreshold' => array(
+		'default' => false,
+	),
+	'wgResourceLoaderMaxage' => array(
+		'default' => array(
+			'versioned' => array(
+				'server' => 12 * 60 * 60, // 12 hours
+				'client' => 1 * 24 * 60 * 60, // 1 day
+			),
+			'unversioned' => array(
+				'server' => 5 * 60, // 5 minutes
+				'client' => 30 * 60, // 30 minutes
+			),
+		),
+	),
+	'wgRevisionCacheExpiry' => array(
+		'default' => 0,
+	),
 
 	// CentralNotice
 	'wgNoticeInfrastructure' => array(
@@ -295,24 +313,6 @@ $wgConf->settings = array(
 	),
 	'wgNoticeProject' => array(
 		'default' => array( 'all' ),
-	),
-
-	// Do not enable this without Southparkfan's
-	// permission, as it could let Redis crash.
-	'wgPreprocessorCacheThreshold' => array(
-		'default' => false,
-	),
-	'wgResourceLoaderMaxage' => array(
-		'default' => array(
-			'versioned' => array(
-				'server' => 12 * 60 * 60, // 12 hours
-				'client' => 1 * 24 * 60 * 60, // 1 day
-			),
-			'unversioned' => array(
-				'server' => 5 * 60, // 5 minutes
-				'client' => 30 * 60, // 30 minutes
-			),
-		),
 	),
 
 	// Captcha
