@@ -5520,6 +5520,12 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 
+	// Site notice opt out
+	'wmgSiteNoticeOptOut' => array(
+		'default' => false,
+		'nenawikiwiki' => true,
+	),
+
 	// Server
 	'wgArticlePath' => array(
 		'default' => '/wiki/$1',
@@ -6596,12 +6602,13 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Increment this version number whenever you change the site notice
 // and don't comment it out
 $wgMajorSiteNoticeID = 9;
+$snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wgDBname;
-	 if ( $wgDBname !== 'nenawikiwiki' ) { // Opt out if sitenotice is not directly service related
+	global $wmgSiteNoticeOptOut, $snImportant;
+	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
 		<td>The Request for Comment <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Amendment_of_Code_of_Conduct,_September_2017">proposing to amend the Code of Conduct by adding a Commission</a> has passed. Therefore, all users are invited to <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Formation_of_Code_of_Conduct_Commission">nominate users to be commission members</a> </p></td>
