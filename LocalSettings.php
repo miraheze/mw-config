@@ -4836,9 +4836,7 @@ $wgConf->settings = array(
 				'moderation' => true,
 			),
 			'emailconfirmed' => array(
-				'createtalk' => true,
-				'edit' => true,
-				'edit-talkpages' => true,
+				'read' => true,
 			),
 		),
 		'+nonbinarywiki' => array(
