@@ -637,7 +637,6 @@ if ( $wmgUseWidgets ) {
 if ( $wmgUseWikibaseRepository ) {
 	$wgEnableWikibaseRepo = true;
 	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
-	require_once( "$IP/extensions/Wikibase/repo/ExampleSettings.php" );
 
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once( "/srv/mediawiki/config/Wikibase.php" );
