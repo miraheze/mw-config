@@ -2614,6 +2614,7 @@ $wgConf->settings = array(
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
 		'nonbinarywiki' => true,
+		'novayawiki' => true,
 		'nvcwiki' => true,
 		'nwpwiki' => true,
 		'nxwikiwiki' => true,
