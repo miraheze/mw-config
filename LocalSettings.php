@@ -5507,8 +5507,10 @@ $wgConf->settings = array(
 		'default' => 'index,follow',
 		'foodsharinghamburgwiki' => 'noindex,nofollow',
 		'ildrilwiki' => 'noindex,nofollow',
+		'librewiki' => 'noindex,nofollow',
 		'lothuialethwiki' => 'noindex,nofollow',
 		'paddelnwiki' => 'noindex,nofollow',
+		'reviwikiwiki' => 'noindex,nofollow',
 	),
 
 	// RSS Settings
