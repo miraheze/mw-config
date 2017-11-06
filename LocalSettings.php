@@ -221,6 +221,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'inazumaelevenwiki' => true,
 		'justinbieberwiki' => true,
+		'medicinawiki' => true,
 		'nanatsunotaizaiwiki' => true,
 		'test1wiki' => true,
 		'thehushhushsagawiki' => true,
