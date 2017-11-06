@@ -2117,6 +2117,7 @@ $wgConf->settings = array(
 		'emulationwiki' => true,
 		'test1wiki' => true,
 		'lgproduktsupportwiki' => true,
+		'speleowiki' => true,
 		'tymyrddinwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
