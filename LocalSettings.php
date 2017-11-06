@@ -341,7 +341,7 @@ $wgConf->settings = array(
 			'changemy.org' => 'changemyorgwiki',
 			'disabled.life' => 'disabledlifewiki',
 			'wiki.drones4nature.info' => 'drones4allwiki',
-			'embobada.com' => 'embobadawiki', 
+			'embobada.com' => 'embobadawiki',
 			'es.publictestwiki.com' => 'pruebawiki',
 			'espiral.org' => 'espiralwiki',
 			'evelopedia.tk' => 'evelopediawiki',
@@ -423,7 +423,7 @@ $wgConf->settings = array(
 	'wgCentralAuthSilentLogin' => array(
 		'default' => true,
 	),
-	
+
 	// CheckUser
 	'wgCheckUserForceSummary' => array(
 		'default' => true,
@@ -1184,6 +1184,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'anothertimeline2120wiki' => true,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'brynda1231wiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'doinwiki' => true,
@@ -1207,6 +1208,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'anuwiki' => true,
+		'bonobowiki' => true,
 		'test1wiki' => true,
 		'modularwiki' => true,
 		'scruffywiki' => true,
@@ -1712,6 +1714,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseModeration' => array( // Don't forget to also set the 'moderation' right.
 		'default' => false,
+		'bonobowiki' => true,
 		'modularwiki' => true,
 		'scruffywiki' => true,
 		'nenawikiwiki' => true,
@@ -1732,7 +1735,7 @@ $wgConf->settings = array(
 		'default' => false, // do not set this to false without disabling MsUpload on all wikis below
 		'calexitwiki' => true,
 		'catboxwiki' => true,
-		'test1wiki' => true, 
+		'test1wiki' => true,
 	),
 	// MsUpload is enabled on extloadwiki via MsPackage
 	'wmgUseMsUpload' => array(
@@ -1747,6 +1750,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'bgowiki' => true,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'casuarinawiki' => true,
 		'christipediawiki' => true,
 		'doinwiki' => true,
@@ -1948,7 +1952,7 @@ $wgConf->settings = array(
 		'ncpprcwiki' => true,
 		'nenawikiwiki' => true,
 		'serinfhospwiki' => true,
-		'test1wiki' => true, 
+		'test1wiki' => true,
 	),
 	'wmgUsePDFEmbed' => array(
 		'default' => false,
@@ -1974,6 +1978,7 @@ $wgConf->settings = array(
 		'690squadronwiki' => true,
 		'apneuverenigingwiki' => true,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'bpwiki' => true,
 		'calexitwiki' => true,
 		'constwiki' => true,
@@ -2100,6 +2105,7 @@ $wgConf->settings = array(
 	'wmgUseReplaceText' => array(
 		'default' => false,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'bigtoewiki' => true,
 		'calexitwiki' => true,
 		'evawiki' => true,
@@ -2122,6 +2128,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'appswiki' => true,
+		'bonobowiki' => true,
 		'calexitwiki' => true,
 		'test1wiki' => true,
 		'hellointernetwiki' => true,
@@ -2220,6 +2227,7 @@ $wgConf->settings = array(
 		'amicitiawiki' => true,
 		'autocountwiki' => true,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'cpudevwiki' => true,
 		'cssandjsschoolboardwiki' => true,
 		'datasciencewiki' => true,
@@ -2445,6 +2453,7 @@ $wgConf->settings = array(
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'biskwiki' => true,
 		'bmedwiki' => true,
 		'boulderwikiwiki' => true,
@@ -2772,6 +2781,7 @@ $wgConf->settings = array(
 		'appswiki' => true,
 		'ayrshirewiki' => true,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'embobadawiki' => true,
@@ -2945,7 +2955,7 @@ $wgConf->settings = array(
 		'yacresourceswiki' => '_blank',
 	),
 
-	
+
 	// Allow External Images
 	'wgAllowExternalImages' => array(
 		'default' => false,
@@ -2954,7 +2964,7 @@ $wgConf->settings = array(
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 	),
-	
+
 	// Allow HTML <img> tag
 	'wgAllowImageTag' => array(
 		'default' => false,
@@ -3068,6 +3078,7 @@ $wgConf->settings = array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
 		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
+		'+bonobowiki' => array( 'pdf', 'mid', 'mp3', 'flac', 'svg', 'fpd', 'oga', 'ogv'),
 		'+csnimsbordeauxwiki' => array( 'docx', 'xlsx', 'pptx', 'pub', 'xps', 'odt', 'ods', 'odp', 'odg', 'otg', 'rar', 'tar', 'gz', 'gz2', 'bz', 'bz2', 'zip', 'ipe', 'dia', 'svg', 'bib', 'add', 'spl', 'cls', 'tex', 'bst', 'sh', 'bat', 'gp', 'dat', 'fig', 'sty', 'py', 'cpp', 'hpp', 'hxx', 'c', 'h', 'mat', 'txt', 'desktop', 'md', 'perf', 'plot', 'data', 'xml', 'html', 'alist' ),
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
 		'+exercicesdefrancaisprodfrwiki' => array('html', 'htm' ),
@@ -3180,7 +3191,7 @@ $wgConf->settings = array(
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'adiaprojectwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
-		'coldbloodedwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',		
+		'coldbloodedwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',
 		'compilerdevwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 		'cpudevwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/f/fc/Copyrighted_Content.png",
@@ -3212,7 +3223,7 @@ $wgConf->settings = array(
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'adiaprojectwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
-		'coldbloodedwiki' => '크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스',		
+		'coldbloodedwiki' => '크리에이티브 커먼즈 저작자표시-동일조건변경허락 4.0 국제 라이선스',
 		'compilerdevwiki' => 'CC0 Public Domain',
 		'cpudevwiki' => 'CC0 Public Domain',
 		'diavwiki' => 'All Rights Reserved',
@@ -3242,7 +3253,7 @@ $wgConf->settings = array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 		'adiaprojectwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'bigforestwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-		'coldbloodedwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ko',		
+		'coldbloodedwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/deed.ko',
 		'compilerdevwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'cpudevwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'espiralwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
@@ -3574,7 +3585,7 @@ $wgConf->settings = array(
 		'thefosterswiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
-	// MobileFrontend 
+	// MobileFrontend
 	'wgMFNoMobilePages' => array(
 		'default' => array(),
 		'alwikiwiki' => array(
@@ -4536,6 +4547,11 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+		'+bonobowiki' => array(
+			'sysop' => array(
+				'moderation' => true,
+			),
+		),
 		'+brynda1231wiki' => array(
 			'sysop' => array(
 				'createpage' => true,
@@ -4840,7 +4856,7 @@ $wgConf->settings = array(
 				'createtalk' => true,
 				'edit' => true,
 				'edit-talkpages' => true,
-			),	
+			),
 			'sysop' => array(
 				'edit-content-pages' => true,
 				'edit-admin-pages' => true,
@@ -5491,7 +5507,7 @@ $wgConf->settings = array(
 			'co',
 		),
 	),
-	
+
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
@@ -5581,7 +5597,7 @@ $wgConf->settings = array(
 		'kstartupswiki' => 'https://wiki.besuccess.com',
 		'labbywiki' => 'https://wiki.labby.io',
 		'lodgejsnydrwiki' => 'https://lodge.jsnydr.com',
-		'lspdfrwiki' => 'https://wiki.lspdfr.de',	
+		'lspdfrwiki' => 'https://wiki.lspdfr.de',
 		'madgendersciencewiki' => 'https://madgenderscience.wiki',
 		'make717wiki' => 'https://wiki.make717.org',
 		'marinebiodiversitymatrixwiki' => 'https://marinebiodiversitymatrix.org',
@@ -5663,7 +5679,7 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	'wgSquidServers' => array(
-		'default' => array( 
+		'default' => array(
 			'107.191.126.23:81', // cp2
 			'81.4.109.133:81' // cp4
 		),
@@ -6223,7 +6239,7 @@ $wgConf->settings = array(
 			WMG_NS_MODULE
 		)
 	),
-	
+
 	// Timezone
 	'wgLocaltimezone' => array(
 		'default' => 'UTC',
@@ -6251,8 +6267,8 @@ $wgConf->settings = array(
 		'webtoonwiki' => 'Asia/Seoul',
 		'wikapediawiki' => 'Asia/Taipei',
 	),
-	
-	// TitleBlacklist 
+
+	// TitleBlacklist
 	'wgTitleBlacklistSources' => array(
 		'default' => array(
 			'type' => 'url',
@@ -6449,7 +6465,7 @@ $wgConf->settings = array(
 		'isvwiki' => true,
 		'spiralwiki' => true,
 	),
-	
+
 	// Protect site config
 	'wgProtectSiteLimit' => array(
 		'default' => '1 week',
@@ -6650,4 +6666,3 @@ require_once( "/srv/mediawiki/config/LocalWiki.php" );
 if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once( "/srv/mediawiki/config/ExtensionMessageFiles.php" );
 }
-
