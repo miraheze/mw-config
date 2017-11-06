@@ -1267,6 +1267,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'tawseelawiki' => true,
 		'thebbwiki' => true,
+		'twelvethfleetwiki' => true,
 	),
 	'wmgUseCreateRedirect' => array(
 		'default' => false,
