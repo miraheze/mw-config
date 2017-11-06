@@ -4806,7 +4806,10 @@ $wgConf->settings = array(
 				'oathauth-enable' => true,
 			),
 			'translationadmin' => array(
-				'translate' => true,
+				'pagelang' => true,
+				'pagetranslation' => true,
+				'translate-import' => true,
+				'translate-manage' => true,
 			),
 			'wikicreator' => array(
 				'createwiki' => true,
