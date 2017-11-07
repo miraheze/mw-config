@@ -3928,6 +3928,7 @@ $wgConf->settings = array(
 			'Kategorya' => NS_CATEGORY,
 			'Modelo' => NS_TEMPLATE,
 			'Ficheiro' => NS_FILE,
+			'Axuda' => NS_HELP,
 		),
 	),
 	'+wgNamespaceProtection' => array(
