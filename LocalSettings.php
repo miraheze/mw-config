@@ -866,6 +866,8 @@ $wgConf->settings = array(
 		),
 		'+reviwikiwiki' => array(
 			'anon' => true,
+			'user' => true,
+			'sysop' => true,
 		),
 		'+rpgbrigadewiki' => array(
 			'anon' => true,
