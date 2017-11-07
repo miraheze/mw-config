@@ -66,8 +66,12 @@ if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
 
+if ( $wmgUseCargo ) {
+	wfLoadExtension( 'Cargo' );
+}
+
 if ( $wmgUseCategoryTree ) {
-	wfLoadExtension( 'CategoryTree' );
+       	wfLoadExtension( 'CategoryTree' );
 }
 
 if ( $wmgUseCentralNotice ) {
