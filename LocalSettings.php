@@ -450,6 +450,7 @@ $wgConf->settings = array(
 			"$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql",
 			"$IP/extensions/ArticleRatings/ratings.sql",
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
+			"$IP/extensions/Cargo/sql/Cargo.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/Comments/sql/comments.sql",
@@ -1172,6 +1173,10 @@ $wgConf->settings = array(
 		'umodwiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+	),
+	'wmgUseCargo' => array(
+		'default' => false,
+		'test1wiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
