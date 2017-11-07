@@ -71,7 +71,7 @@ if ( $wmgUseCargo ) {
 }
 
 if ( $wmgUseCategoryTree ) {
-       	wfLoadExtension( 'CategoryTree' );
+	wfLoadExtension( 'CategoryTree' );
 }
 
 if ( $wmgUseCentralNotice ) {
