@@ -3926,6 +3926,8 @@ $wgConf->settings = array(
 			'Helpo' => NS_HELP,
 			'Projekto' => NS_PROJECT,
 			'Kategorya' => NS_CATEGORY,
+			'Modelo' => NS_TEMPLATE,
+			'Ficheiro' => NS_FILE,
 		),
 	),
 	'+wgNamespaceProtection' => array(
