@@ -68,6 +68,11 @@ if ( $wmgUseMSCalendar ) {
 
 if ( $wmgUseCargo ) {
 	wfLoadExtension( 'Cargo' );
+	$wgCargoDBname = 'cargodb';
+	$wgCargoDBtype = $wgDBtype;
+	$wgCargoDBserver = $wgDBserver;
+	$wgCargoDBuser = $wgDBuser;
+	$wgCargoDBpassword = $wgCargoDBpassword;
 }
 
 if ( $wmgUseCategoryTree ) {

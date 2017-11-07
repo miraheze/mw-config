@@ -8,6 +8,7 @@ $wgLBFactoryConf = array(
 		'bpwiki' => 'c2',
 		'bigforestwiki' => 'c2',
 		'buswiki' => 'c2',
+		'cargodb' => 'c2',
 		'centralauth' => 'c2',
 		'christipediawiki' => 'c2',
 		'ciptamediawiki' => 'c2',
