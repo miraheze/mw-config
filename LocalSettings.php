@@ -1781,6 +1781,7 @@ $wgConf->settings = array(
 		'oyeavdelingenwiki' => true,
 		'poserdazfreebieswiki' => true,
 		'priyowiki' => true,
+		'revitwiki' => true,
 		'scruffywiki' => true,
 		'showmedicinawiki' => true,
 		'sidemwiki' => true,
