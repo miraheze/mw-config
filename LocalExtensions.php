@@ -72,7 +72,7 @@ if ( $wmgUseCargo ) {
 	$wgCargoDBtype = $wgDBtype;
 	$wgCargoDBserver = $wgDBserver;
 	$wgCargoDBuser = $wgDBuser;
-	$wgCargoDBpassword = $wgCargoDBpassword;
+	$wgCargoDBpassword = $wgDBpassword;
 }
 
 if ( $wmgUseCategoryTree ) {
