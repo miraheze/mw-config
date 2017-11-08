@@ -2725,6 +2725,7 @@ $wgConf->settings = array(
 		'ussewiki' => true,
 		'valentinaprojectwiki' => true,
 		'vgalimentiwiki' => true,
+		'vicprojectwiki' => true,
 		'victorianrpwiki' => true,
 		'videogameswiki' => true,
 		'votingwiki' => true,
