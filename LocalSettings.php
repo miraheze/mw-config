@@ -1842,6 +1842,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'muckhackwiki' => true,
 		'poserdazfreebieswiki' => true,
+		'scruffywiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
