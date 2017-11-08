@@ -1176,7 +1176,9 @@ $wgConf->settings = array(
 	),
 	'wmgUseCargo' => array(
 		'default' => false,
+		'bonobowiki' => true,
 		'test1wiki' => true,
+		'scruffywiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
