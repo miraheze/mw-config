@@ -311,6 +311,7 @@ if ( $wmgUseMaps ) {
 	require_once( "$IP/extensions/Maps/Maps.php" );
 	$egMapsDefaultService = 'openlayers';
 	$egMapsDisableSmwIntegration = true;
+	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
 }
 
 if ( $wmgUseMassEditRegex ) {
