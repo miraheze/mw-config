@@ -1931,6 +1931,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePageForms' => array(
 		'default' => false,
+		'scruffywiki' => true,
 		'serinfhospwiki' => true,
 		'test1wiki' => true,
 	),
