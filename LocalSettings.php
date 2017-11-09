@@ -2977,6 +2977,7 @@ $wgConf->settings = array(
 		'magnaversewiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
+		'travailcollaboratifwiki' => true,
 	),
 
 	// Allow HTML <img> tag
