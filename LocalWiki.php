@@ -210,6 +210,10 @@ if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 }
 
+if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
+	$egMapsDefaultService = 'googlemaps3';
+}
+
 if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
