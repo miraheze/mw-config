@@ -4,7 +4,6 @@ $wgLBFactoryConf = array(
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => array(
 		'allthetropeswiki' => 'c2',
-		'appswiki' => 'c2',
 		'bpwiki' => 'c2',
 		'bigforestwiki' => 'c2',
 		'buswiki' => 'c2',
