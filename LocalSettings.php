@@ -1725,9 +1725,9 @@ $wgConf->settings = array(
 	'wmgUseModeration' => array( // Don't forget to also set the 'moderation' right.
 		'default' => false,
 		'bonobowiki' => true,
-		'scruffywiki' => true,
 		'nenawikiwiki' => true,
 		'prfmukwiki' => true,
+		'scruffywiki' => true,		
 		'sdiywiki' => true,
 		'test1wiki' => true,
 	),
