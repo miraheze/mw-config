@@ -535,6 +535,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'aristidewiki' => 'Renaming wiki',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
