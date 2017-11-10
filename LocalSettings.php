@@ -535,15 +535,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'ayrshirewiki' => 'We are migrating this database between our servers',
-		'bgowiki' => 'We are migrating this database between our servers',
-		'lionhearttaleswiki' => 'We are migrating this database between our servers',
-		'meregoswiki' => 'We are migrating this database between our servers',
-		'mikrodevwiki' => 'We are migrating this database between our servers',
-		'plasticssongcontestwiki' => 'We are migrating this database between our servers',
-		'sirikotwiki' => 'We are migrating this database between our servers',
-		'spiralwiki' => 'We are migrating this database between our servers',
-		'wikiversitywiki' => 'We are migrating this database between our servers',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
