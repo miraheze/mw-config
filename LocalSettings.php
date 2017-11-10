@@ -3638,6 +3638,10 @@ $wgConf->settings = array(
 			NS_NEWSLINK => 'Newslink',
 			NS_NEWSLINK_TALK => 'Newslink_talk',
 		),
+		'bonobowiki' => array(
+			NS_DRAFT => 'Draft',
+			NS_DRAFT_TALK => 'Draft_talk',
+		),
 		'calexitwiki' => array(
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
@@ -3713,6 +3717,14 @@ $wgConf->settings = array(
 		'safiriawiki' => array(
 			NS_HOENN => 'Hoenn',
 			NS_HOENN_TALK => 'Hoenn_talk',
+		),
+		'scruffywiki' => array(
+			NS_DRAFT => 'Draft',
+			NS_DRAFT_TALK => 'Draft_talk',
+		),
+		'sdiywiki' => array(
+			NS_DRAFT => 'Draft',
+			NS_DRAFT_TALK => 'Draft_talk',
 		),
 		'studynotekrwiki' => array(
 			NS_STUDY_NOTE => 'Study note',
