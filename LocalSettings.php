@@ -3565,8 +3565,11 @@ $wgConf->settings = array(
 		'default' => false,
 		'anduinwiki' => true,
 		'bigforestwiki' => true,
+		'bonobowiki' => true,
 		'calexitwiki' => true,
 		'jayuwikiwiki' => true,
+		'scruffywiki' => true,
+		'sdiywiki' => true,
 		'showmedicinawiki' => true,
 	),
 
