@@ -1850,7 +1850,7 @@ $wgConf->settings = array(
 	'wmgUseNewestPages' => array(
 		'default' => false,
 		'appswiki' => true,
-		'aristidewiki' => true,
+		'pfl2wiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'hellointernetwiki' => true,
@@ -2133,7 +2133,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseRSS' => array(
 		'default' => false,
-		'aristidewiki' => true,
+		'pfl2wiki' => true,
 		'emulationwiki' => true,
 		'test1wiki' => true,
 		'lgproduktsupportwiki' => true,
@@ -2883,7 +2883,7 @@ $wgConf->settings = array(
 		'animationmoviewikiwiki' => true,
 		'apolcourseswiki' => true,
 		'appswiki' => true,
-		'aristidewiki' => true,
+		'pfl2wiki' => true,
 		'bigforestwiki' => true,
 		'bilgiwiki' => true,
 		'biskwiki' => true,
@@ -3095,7 +3095,7 @@ $wgConf->settings = array(
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
-		'+aristidewiki' => array('rar' ),
+		'+pfl2wiki' => array('rar' ),
 		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
 		'+bonobowiki' => array( 'pdf', 'mid', 'mp3', 'flac', 'svg', 'fpd', 'oga', 'ogv'),
 		'+csnimsbordeauxwiki' => array( 'docx', 'xlsx', 'pptx', 'pub', 'xps', 'odt', 'ods', 'odp', 'odg', 'otg', 'rar', 'tar', 'gz', 'gz2', 'bz', 'bz2', 'zip', 'ipe', 'dia', 'svg', 'bib', 'add', 'spl', 'cls', 'tex', 'bst', 'sh', 'bat', 'gp', 'dat', 'fig', 'sty', 'py', 'cpp', 'hpp', 'hxx', 'c', 'h', 'mat', 'txt', 'desktop', 'md', 'perf', 'plot', 'data', 'xml', 'html', 'alist' ),
@@ -6336,7 +6336,7 @@ $wgConf->settings = array(
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => array(
 		'default' => false,
-		'aristidewiki' => true,
+		'pfl2wiki' => true,
 	),
 
 	// UrlShortener
