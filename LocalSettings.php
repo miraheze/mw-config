@@ -6037,6 +6037,7 @@ $wgConf->settings = array(
 		'forexwiki' => "//$wmgUploadHostname/forexwiki/c/c9/Logo.png",
 		'freecollegeprojectwiki' => "//$wmgUploadHostname/freecollegeprojectwiki/6/60/FC_Logo_135p.png",
 		'freestateofjoneswiki' => "//$wmgUploadHostname/freestateofjoneswiki/2/29/Free_State_of_Jones_Seal_Logo.png",
+		'furbyislandwiki' => "//$wmgUploadHostname/furbyislandwiki/b/bc/Wiki.png",
 		'fusiongpwiki' => "//$wmgUploadHostname/fusiongpwiki/f/f2/Fusion_Ball.png",
 		'galenadevwiki' => "//$wmgUploadHostname/galenadevwiki/9/96/Temp_logo1.png",
 		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
