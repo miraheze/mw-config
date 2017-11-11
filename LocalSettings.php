@@ -6213,6 +6213,7 @@ $wgConf->settings = array(
 		'toftcricketclubwiki' => "//$wmgUploadHostname/toftcricketclubwiki/2/23/ToftLogo.png",
 		'trainwiki' => "//$wmgUploadHostname/trainwiki/c/ce/Cdwk.png",
 		'trashpirateswiki' => "//$wmgUploadHostname/trashpirateswiki/0/09/TrashPirateLogo.jpg",
+		'travailcollaboratifwiki' => "//$wmgUploadHostname/travailcollaboratifwiki/8/83/Collaborons.jpg",
 		'trexwiki' => "//$wmgUploadHostname/trexwiki/4/49/Wikit.png",
 		'triseptsoloutionswiki' => "//$wmgUploadHostname/triseptsolutionswiki/2/25/Trisept_Logo.png",
 		'trumpwiki' => "//$wmgUploadHostname/trumpwiki/c/c3/Magnifying-logo.jpg",
