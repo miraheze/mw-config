@@ -6165,6 +6165,7 @@ $wgConf->settings = array(
 		'schnellbildungwiki' => "//$wmgUploadHostname/schnellbildungwiki/6/6f/Logo.svg",
 		'scientiawikiwiki' => "//$wmgUploadHostname/scientiawikiwiki/d/d4/Logo.jpg",
 		'scruffywiki' => "//$wmgUploadHostname/scruffywiki/4/43/Scruffy_logo.png",
+		'sdiywiki' => "//$wmgUploadHostname/sdiywiki/9/92/SDIY_wiki_logo.png",
 		'serinfhospwiki' => "//$wmgUploadHostname/serinfhospwiki/c/c1/Logotype.svg",
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/4/41/RepUsLogo_small.png",
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/e/e3/SHA_Wiki_logo.svg",
