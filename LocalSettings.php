@@ -2980,6 +2980,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'magezwiki' => true,
 		'mikrodevwiki' => true,
+		'travailcollaboratifwiki' => true,
 	),
 
 	// FlaggedRevs
