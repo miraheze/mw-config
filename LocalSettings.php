@@ -164,6 +164,8 @@ define( 'NS_POLICY', 1738);
 define( 'NS_POLICY_TALK', 1739);
 define( 'NS_LEGACY', 1740);
 define( 'NS_LEGACY_TALK', 1741);
+define( 'NS_BOILERPLATE', 1742);
+define( 'NS_BOILERPLATE_TALK', 1743);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3645,6 +3647,8 @@ $wgConf->settings = array(
 		'bonobowiki' => array(
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
+			NS_BOILERPLATE => 'Boilerplate',
+			NS_BOILERPLATE_TALK => 'Boilerplate_talk',
 		),
 		'calexitwiki' => array(
 			NS_DRAFT => 'Draft',
@@ -3725,10 +3729,14 @@ $wgConf->settings = array(
 		'scruffywiki' => array(
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
+			NS_BOILERPLATE => 'Boilerplate',
+			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
 		),
 		'sdiywiki' => array(
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
+			NS_BOILERPLATE => 'Boilerplate',
+			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
 		),
 		'studynotekrwiki' => array(
 			NS_STUDY_NOTE => 'Study note',
