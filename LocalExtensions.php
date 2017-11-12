@@ -70,7 +70,7 @@ if ( $wmgUseCargo ) {
 	wfLoadExtension( 'Cargo' );
 	$wgCargoDBname = 'cargodb';
 	$wgCargoDBtype = $wgDBtype;
-	$wgCargoDBserver = $wgDBserver;
+	$wgCargoDBserver = "81.4.127.157";
 	$wgCargoDBuser = $wgDBuser;
 	$wgCargoDBpassword = $wgDBpassword;
 }
