@@ -3595,7 +3595,7 @@ $wgConf->settings = array(
 	),
 	
 	// MultiBoilerplate settings
-	'wgMultiBoilerplateDiplaySpecialPage' = > array(
+	'wgMultiBoilerplateDiplaySpecialPage' => array(
 		'default' => false,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
