@@ -2956,10 +2956,13 @@ $wgConf->settings = array(
 	// External link target
 	'wgExternalLinkTarget' => array(
 		'default' => false,
+		'bonobowiki' => '_blank',
 		'cpiwiki' => '_blank',
 		'doinwiki' => '_blank',
 		'forexwiki' => '_blank',
 		'nenawikiwiki' => '_blank',
+		'scruffywiki' => '_blank',
+		'sdiywiki' => '_blank',
 		'sylwiki' => '_blank',
 		'wisdomwikiwiki' => '_blank',
 		'wisdomsandboxwiki' => '_blank',
