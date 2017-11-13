@@ -3593,6 +3593,13 @@ $wgConf->settings = array(
 		'default' => false,
 		'anduinwiki' => true,
 	),
+	
+	// MultiBoilerplate settings
+	'wgMultiBoilerplateDiplaySpecialPage' = > array(
+		'default' => false,
+		'scruffywiki' => true,
+		'sdiywiki' => true,
+	), 	
 
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => array(
