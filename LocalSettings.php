@@ -772,6 +772,9 @@ $wgConf->settings = array(
 		'+kl6fwiki' => array(
 			'anon' => true,
 		),
+		'+lexiquewiki' => array(
+			'anon' => true,
+		),
 		'+maiasongcontestwiki' => array(
 			'anon' => true,
 		),
@@ -2616,6 +2619,7 @@ $wgConf->settings = array(
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 		'miningpromieswiki' => true,
+		'modelshipreferencewiki' => true,
 		'muckhackwiki' => true,
 		'musicarchivewiki' => true,
 		'musiclibrarywiki' => true,
