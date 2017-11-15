@@ -48,10 +48,6 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 	wfLoadExtension( 'AutoCreateCategoryPages' );
 }
 
-if ( $wmgUseAutomaticBoardWelcome ) {
-	wfLoadExtension( 'AutomaticBoardWelcome' );
-}
-
 if ( $wmgUseBlogPage ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 	wfLoadExtension( 'BlogPage' );

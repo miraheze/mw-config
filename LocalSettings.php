@@ -1141,13 +1141,13 @@ $wgConf->settings = array(
 		'magnaversewiki' => true,
 		'nationstateswiki' => true,
 	),
-	'wmgUseAutomaticBoardWelcome' => array(
-		'default' => false,
-		'allthetropeswiki' => true,
-		'test1wiki' => true,
-		'ircwiki' => true,
-		'pgnwikiwiki' => true,
-	),
+//	'wmgUseAutomaticBoardWelcome' => array( // To be replaced with HAWelcome extension. T2433 --Reception123 
+//		'default' => false,
+//		'allthetropeswiki' => true,
+//		'test1wiki' => true,
+//		'ircwiki' => true,
+//		'pgnwikiwiki' => true,
+//	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
