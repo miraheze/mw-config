@@ -3426,6 +3426,7 @@ $wgConf->settings = array(
 			'proxybotwiki',
 			'reviwiki',
 			'reviwikiwiki',
+			'sdiywiki',
 			'softwarecrisiswiki',
 			'spaceechowiki',
 			'spiralwiki',
