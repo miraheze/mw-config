@@ -254,6 +254,10 @@ if ( $wmgUseGuidedTour ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
+if ( $wmgUseHAWelcome ) {
+	wfLoadExtension( 'HAWelcome' );
+}
+
 if ( $wmgUseHeaderTabs ) {
 	wfLoadExtension( 'HeaderTabs' );
 	if ( $wgDBname == 'extloadwiki' ) {

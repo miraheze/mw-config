@@ -1141,13 +1141,6 @@ $wgConf->settings = array(
 		'magnaversewiki' => true,
 		'nationstateswiki' => true,
 	),
-//	'wmgUseAutomaticBoardWelcome' => array( // To be replaced with HAWelcome extension. T2433 --Reception123 
-//		'default' => false,
-//		'allthetropeswiki' => true,
-//		'test1wiki' => true,
-//		'ircwiki' => true,
-//		'pgnwikiwiki' => true,
-//	),
 	'wmgUseBlogPage' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
@@ -1547,6 +1540,13 @@ $wgConf->settings = array(
 		'default' => false,
 		'test1wiki' => true,
 		'isvwiki' => true,
+	),
+	'wmgUseHAWelcome' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'test1wiki' => true,
+		'ircwiki' => true,
+		'pgnwikiwiki' => true,
 	),
 	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(

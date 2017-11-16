@@ -7,7 +7,6 @@ $IP/extensions/ArticleRatings/extension.json
 $IP/extensions/ArticleToCategory2/ArticleToCategory2.php
 $IP/extensions/AuthorProtect/AuthorProtect.php
 $IP/extensions/AutoCreateCategoryPages/extension.json
-$IP/extensions/AutomaticBoardWelcome/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
@@ -55,6 +54,7 @@ $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/Graph/extension.json
 $IP/extensions/GroupsSidebar/GroupsSidebar.php
 $IP/extensions/GuidedTour/extension.json
+$IP/extensions/HAWelcome/extension.json
 $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json
