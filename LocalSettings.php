@@ -1304,6 +1304,7 @@ $wgConf->settings = array(
 		'690squadronwiki' => true,
 		'allthetropeswiki' => true,
 		'applewikiwiki' => true,
+		'arcticlandshelpwiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'dtswiki' => true,
