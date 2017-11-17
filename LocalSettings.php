@@ -2302,6 +2302,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'developmentwiki' => true,
 		'eternalconficttwiki' => true,
+		'homestuckwiki' => true,
 		'test1wiki' => true,
 		'jayuwikiwiki' => true,
 		'knowledgewiki' => true,
