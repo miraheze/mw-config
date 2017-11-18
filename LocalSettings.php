@@ -166,6 +166,8 @@ define( 'NS_LEGACY', 1740);
 define( 'NS_LEGACY_TALK', 1741);
 define( 'NS_BOILERPLATE', 1742);
 define( 'NS_BOILERPLATE_TALK', 1743);
+define( 'NS_WPIMPORT', 1744);
+define( 'NS_WPIMPORT', 1745);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3732,6 +3734,10 @@ $wgConf->settings = array(
 		'noalatalawiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
+		),
+		'picardwiki' => array(
+			NS_WPIMPORT => 'WPImport',
+			NS_WPIMPORT_TALK => 'WPImport_talk',
 		),
 		'ratanpirwiki' => array(
 			NS_PORTAL => 'Portal',
