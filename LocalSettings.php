@@ -3444,7 +3444,7 @@ $wgConf->settings = array(
 			'cvtwiki',
 			'dditecwiki',
 			'geomasterywiki',
-			'lexiquewiki'
+			'lexiquewiki',
 			'newarkmanorwiki',
 			'nissanecuwiki',
 			'noalatalawiki',
