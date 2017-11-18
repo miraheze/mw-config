@@ -3427,17 +3427,22 @@ $wgConf->settings = array(
 	),
 
 	// MirahezeMagic
-	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions
+	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions and https://meta.miraheze.org/wiki/Dormancy_Policy/Exemptions
 	'wgFindInactiveWikisWhitelist' => array(
 		'default' => array(
-			'metawiki',
+			// Exceptions
+			'conductwiki',
+			'cvtwiki',
+			'metawiki', 
+			'staffwiki',
+			'loginwiki',
+			// Exemptions
 			'allthetropeswiki',
 			'biblicalwikiwiki',
 			'bitcoindebateswiki',
 			'bpwiki',
 			'cvtwiki',
 			'dditecwiki',
-			'extloadwiki',
 			'geomasterywiki',
 			'lexiquewiki' => true,
 			'newarkmanorwiki',
@@ -3450,8 +3455,6 @@ $wgConf->settings = array(
 			'softwarecrisiswiki',
 			'spaceechowiki',
 			'spiralwiki',
-			'staffwiki',
-			'loginwiki',
 			'lothuialethwiki',
 			't40wiki',
 			'taliaferrowiki',
