@@ -6214,6 +6214,7 @@ $wgConf->settings = array(
 		'savagewikiwiki' => "//$wmgUploadHostname/savagewikiwiki/9/98/Sav_Wiki_logo.jpg",
 		'schnellbildungwiki' => "//$wmgUploadHostname/schnellbildungwiki/6/6f/Logo.svg",
 		'scientiawikiwiki' => "//$wmgUploadHostname/scientiawikiwiki/d/d4/Logo.jpg",
+		'scffantasyescwiki' => "//$wmgUploadHostname/scffantasyescwiki/3/31/Wiki_Eurovision_Heart_%28Infobox%29.svg.png",
 		'scruffywiki' => "//$wmgUploadHostname/scruffywiki/4/43/Scruffy_logo.png",
 		'sdiywiki' => "//$wmgUploadHostname/sdiywiki/9/92/SDIY_wiki_logo.png",
 		'serinfhospwiki' => "//$wmgUploadHostname/serinfhospwiki/c/c1/Logotype.svg",
