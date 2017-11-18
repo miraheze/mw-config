@@ -167,7 +167,9 @@ define( 'NS_LEGACY_TALK', 1741);
 define( 'NS_BOILERPLATE', 1742);
 define( 'NS_BOILERPLATE_TALK', 1743);
 define( 'NS_WPIMPORT', 1744);
-define( 'NS_WPIMPORT', 1745);
+define( 'NS_WPIMPORT_TALK', 1745);
+define( 'NS_ARCHIVE', 1746);
+define( 'NS_ARCHIVE', 1747);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2191,6 +2193,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'christipediawiki' => true,
 		'test1wiki' => true,
+		'oecumenewiki' => true,
 	),
 	'wmgUseSimpleTooltip' => array(
 		'default' => false,
@@ -3735,6 +3738,10 @@ $wgConf->settings = array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
 		),
+		'oecumenewiki' => array(
+			NS_ARCHIVE => 'Архив',
+			NS_ARCHIVE_TALK => 'Архив_обсуждение',
+		),
 		'picardwiki' => array(
 			NS_WPIMPORT => 'WPImport',
 			NS_WPIMPORT_TALK => 'WPImport_talk',
@@ -3785,7 +3792,7 @@ $wgConf->settings = array(
 			NS_GLOSSARY => 'Glossary',
 			NS_GLOSSARY_TALK => 'Glossary_talk',
 		),
-		'+trexwiki' => array(
+		'trexwiki' => array(
 			NS_HALAMAN => 'Halaman',
 			NS_HALAMAN_TALK => 'Permbicaraan_Halaman',
 			NS_ARTIKEL => 'Artikel',
