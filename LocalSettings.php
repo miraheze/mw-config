@@ -2688,6 +2688,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'pruebawiki' => true,
 		'pso2wiki' => true,
+		'pythiawiki' => true,
 		'qwertywiki' => true,
 		'rawdatawiki' => true,
 		'raymanspeedrunwiki' => true,
