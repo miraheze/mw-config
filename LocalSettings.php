@@ -5978,6 +5978,7 @@ $wgConf->settings = array(
 		'tulpawiki' => "//$wmgUploadHostname/tulpawiki/6/63/Tulpa.info-Favicon.png",
 		'twswiki' => "//$wmgUploadHostname/twswiki/3/34/Tws-favicon.png",
 		'tymyrddinwiki' => "//$wmgUploadHostname/tymyrddinwiki/6/63/Ty-myrddin-favicon.ico",
+		'ubrwikiwiki' => "//$wmgUploadHostname/ubrwikiwiki/6/64/Favicon.ico",
 		'umemaro3dwiki' => "//$wmgUploadHostname/umemaro3dwiki/e/e4/Featuredmark.png",
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/f/fd/UniversebuildFavicon.png",
 		'utamacrosswiki' => "//$wmgUploadHostname/utamacrosswiki/7/7a/Freyacon.png",
