@@ -6295,6 +6295,7 @@ $wgConf->settings = array(
 		'tulpawiki' => "//$wmgUploadHostname/tulpawiki/1/10/Tulpa.info-Logo.png",
 		'twswiki' => "//$wmgUploadHostname/twswiki/3/34/Tws-favicon.png",
 		'tymyrddinwiki' => "//$wmgUploadHostname/tymyrddinwiki/c/c5/Ty-myrddin-logo-transparant.png",
+		'ubrwikiwiki' => "//$wmgUploadHostname/ubrwikiwiki/2/24/UBR_logo.png",
 		'umpcwiki' => "//$wmgUploadHostname/umpcwiki/5/53/LogoUMPC-spunta.png",
 		'unoitudowiki' => "//$wmgUploadHostname/unoitudowiki/1/1b/Logo_unoi.png",
 		'uprisewiki' => "//$wmgUploadHostname/uprisewiki/2/2e/DotLogo130px.png",
