@@ -2918,6 +2918,7 @@ $wgConf->settings = array(
 		'doinwiki' => true,
 		'doraemonpediawiki' => true,
 		'dwplivewiki' => true,
+		'enmarchewiki' => true,
 		'eternalconfictwiki' => true,
 		'evawiki' => true,
 		'evelopediawiki' => true,
