@@ -4117,6 +4117,9 @@ $wgConf->settings = array(
 		'+cnvwiki' => array(
 			NS_MAIN => true,
 		),
+		'+conductwiki' => array(
+			NS_MAIN => true,
+		),
 		'+eotewiki' => array(
 			NS_MAIN => true,
 		),
