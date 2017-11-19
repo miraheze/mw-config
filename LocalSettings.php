@@ -4019,6 +4019,8 @@ $wgConf->settings = array(
 			'Modelo' => NS_TEMPLATE,
 			'Ficheiro' => NS_FILE,
 			'Axuda' => NS_HELP,
+			'Afbeelding' => NS_FILE,
+			'Overleg_afbeelding' => NS_FILE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
