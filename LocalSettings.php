@@ -2591,6 +2591,7 @@ $wgConf->settings = array(
 		'inazumaelevenwiki' => true,
 		'inebriationconfederationwiki' => true,
 		'infectopedwiki' => true,
+		'innovwikiprotowiki' => true,
 		'integrywiki' => true,
 		'ircwiki' => true,
 		'islamwissenschaftwiki' => true,
