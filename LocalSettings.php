@@ -3603,7 +3603,6 @@ $wgConf->settings = array(
 	// Moderation settings
 	'wgModerationNotificationEnable' => array( 
 		'default' => false, // Disable notifications
-		'scruffywiki' => true,
 		'sdiywiki' => true,
 	),
 	'wgModerationNotificationNewOnly' => array(
@@ -3611,7 +3610,7 @@ $wgConf->settings = array(
 	),
 	'wgModerationEmail' => array(
 		'default' =>  $wgEmergencyContact, // Email address to send notifications
-		'sdiywiki' => admin@sdiy.info,
+		'sdiywiki' => 'admin@sdiy.info',
 	),
 	
 	// MsCatSelect vars
