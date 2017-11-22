@@ -3365,6 +3365,7 @@ $wgConf->settings = array(
 	),
 	'wgEmailConfirmToEdit' => array(
 		'default' => false,
+		'jacksonheightswiki' => true,
 		'nenawikiwiki' => true,
 	),
 
@@ -4799,6 +4800,13 @@ $wgConf->settings = array(
 				'move-subpages' => true,
 			),
 		),
+		'+jacksonheightswiki' => array(
+			'emailconfirmed' => array(
+				'read' => true,
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 		'+jayuwikiwiki' => array(
 			'autoconfirmed' => array(
 				'move' => true,
@@ -5503,6 +5511,11 @@ $wgConf->settings = array(
 			),
 		),
 		'+nenawikiwiki' => array(
+			'emailconfirmed' => array(
+				APCOND_EMAILCONFIRMED,
+			),
+		),
+		'+jacksonheightswiki' => array(
 			'emailconfirmed' => array(
 				APCOND_EMAILCONFIRMED,
 			),
