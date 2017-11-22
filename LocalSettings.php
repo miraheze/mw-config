@@ -3609,7 +3609,7 @@ $wgConf->settings = array(
 		'default' => false, // Notify administrator only about new pages requests
 	),
 	'wgModerationEmail' => array(
-		'default' =>  $wgEmergencyContact, // Email address to send notifications
+		'default' => $wgEmergencyContact, // Email address to send notifications
 		'sdiywiki' => admin@sdiy.info,
 	),
 
