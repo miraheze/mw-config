@@ -1740,10 +1740,8 @@ $wgConf->settings = array(
 	),
 	'wmgUseModeration' => array( // Don't forget to also set the 'moderation' right.
 		'default' => false,
-		'bonobowiki' => true,
 		'nenawikiwiki' => true,
 		'prfmukwiki' => true,
-		'scruffywiki' => true,		
 		'sdiywiki' => true,
 		'test1wiki' => true,
 	),
@@ -4646,11 +4644,6 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
-		'+bonobowiki' => array(
-			'sysop' => array(
-				'moderation' => true,
-			),
-		),
 		'+brynda1231wiki' => array(
 			'sysop' => array(
 				'createpage' => true,
@@ -5025,11 +5018,6 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
-		'+scruffywiki' => array(
-			'sysop' => array(
-				'moderation' => true,
-			),
-		),
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderation' => true,
