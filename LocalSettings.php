@@ -3610,7 +3610,7 @@ $wgConf->settings = array(
 	),
 	'wgModerationEmail' => array(
 		'default' => $wgEmergencyContact, // Email address to send notifications
-		'sdiywiki' => admin@sdiy.info,
+		'sdiywiki' => 'admin@sdiy.info',
 	),
 
 	// MsCatSelect vars
