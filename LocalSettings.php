@@ -3602,7 +3602,6 @@ $wgConf->settings = array(
 	// Moderation settings
 	'wgModerationNotificationEnable' => array( 
 		'default' => false, // Disable notifications
-		'scruffywiki' => true,
 		'sdiywiki' => true,
 	),
 	'wgModerationNotificationNewOnly' => array(
