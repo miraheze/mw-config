@@ -3601,15 +3601,15 @@ $wgConf->settings = array(
 	),
 
 	// Moderation settings
-	wgModerationNotificationEnable' => array( 
+	'wgModerationNotificationEnable' => array( 
 		'default' => false, // Disable notifications
 		'scruffywiki' => true,
 		'sdiywiki' => true,
 	),
-	wgModerationNotificationNewOnly' => array(
+	'wgModerationNotificationNewOnly' => array(
 		'default' => false, // Notify administrator only about new pages requests
 	),
-	wgModerationEmail' => array(
+	'wgModerationEmail' => array(
 		'default' =>  $wgEmergencyContact, // Email address to send notifications
 		'sdiywiki' => admin@sdiy.info,
 	),
