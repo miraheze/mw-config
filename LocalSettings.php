@@ -6234,6 +6234,7 @@ $wgConf->settings = array(
 		'rebelalliancewiki' => "//$wmgUploadHostname/rebelalliancewiki/f/fe/Logo135.png",
 		'reiaasuwiki' => "//$wmgUploadHostname/reiaasuwiki/1/1e/Reiaasu-wiki-logo-1.png",
 		'reservedurablewiki' => "//$wmgUploadHostname/reservedurablewiki/3/37/Logo_sustainable_storage_135_pi.png",
+		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d0/Real_World_Revit.png",
 		'rpgbrigadewiki' => "//$wmgUploadHostname/rpgbrigadewiki/c/c9/Logo.png",
 		'rwdvolvowiki' => "//$wmgUploadHostname/rwdvolvowiki/9/93/Rwdvolvo-135px.png",
 		'sadpepswiki' => "//$wmgUploadHostname/sadpepswiki/f/f7/Mylogo.png",
