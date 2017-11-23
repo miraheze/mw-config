@@ -1811,6 +1811,7 @@ $wgConf->settings = array(
 		'unionnorteamericanawiki' => true,
 		'universebuildwiki' => true,
 		'utamacrosswiki' => true,
+		'valentinaprojectwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
 		'wisdomwikiwiki' => true,
