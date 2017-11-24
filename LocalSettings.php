@@ -542,6 +542,21 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'arefepvawiki' => 'Database migration between our servers',
+		'altaussieruleswiki' => 'Database migration between our servers',
+		'ballaratpubswiki' => 'Database migration between our servers',
+		'bqwiki' => 'Database migration between our servers',
+		'calexitwiki' => 'Database migration between our servers',
+		'fcuwiki' => 'Database migration between our servers',
+		'mikrodevwiki' => 'Database migration between our servers',
+		'ourmxfestwiki' => 'Database migration between our servers',
+		'podpediawiki' => 'Database migration between our servers',
+		'sidemwiki' => 'Database migration between our servers',
+		'speleowiki' => 'Database migration between our servers',
+		'testwiki' => 'Database migration between our servers',
+		'wikivywiki' => 'Database migration between our servers',
+		'zhdelwiki' => 'Database migration between our servers',
+		
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
