@@ -1690,6 +1690,7 @@ $wgConf->settings = array(
 		'podpediawiki' => true,
 		'poserdazfreebieswiki' => true,
 		'puzzlewiki' => true,
+		'sdiywiki' => true,
 		'takethatwikiwiki' => true,
 		'test1wiki' => true,
 		'wikipucwiki' => true,
