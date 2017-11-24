@@ -5891,6 +5891,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
 		'jacksonheightswiki' => "//$wmgUploadHostname/jacksonheightswiki/0/0d/JH-wiki-2.ico",
 		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/f/f4/Jawp2ch_favicon.ico",
+		'jcswiki' => "//$smgUploadHostname/jcswiki/2/2e/JCS-Wiki.png",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
 		'kkandpwiki' => "//$wmgUploadHostname/kkandpwiki/c/ca/Favicon1-1024x1024.png",
 		'korczakwiki' => "//$wmgUploadHostname/korczakwiki/2/2a/Korczak_ikona.ico",
