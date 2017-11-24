@@ -5012,6 +5012,8 @@ $wgConf->settings = array(
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderation' => true,
+				'skip-moderation' => true,
+				'automoderated' => true,
 			),
 		),		
 		'+serinfhospwiki' => array(
