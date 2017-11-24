@@ -3588,6 +3588,19 @@ $wgConf->settings = array(
 		'default' => true,
 		'trexwiki' => false,
 	),
+	
+	// Moderation extension settings
+	'wgModerationNotificationEnable' => array( // Enable or disable notifications. 
+		'default' => false,
+		'sdiywiki' => true,
+	),
+	'wgModerationNotificationNewOnly' => array( // Notify administrator only about new pages requests. 
+		'default' => false,
+	),
+	'wgModerationEmail' => array( // Email to send notifications. 
+		'default' => 'wgEmergencyContact',
+		// 'sdiywiki' => 'admin@sdiy.info',
+	),	
 
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => array(
