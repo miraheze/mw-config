@@ -5013,8 +5013,6 @@ $wgConf->settings = array(
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderation' => true,
-				'skip-moderation' => true,
-				'automoderated' => true,
 			),
 		),		
 		'+serinfhospwiki' => array(
@@ -6228,6 +6226,7 @@ $wgConf->settings = array(
 		'sapperpediawiki' => "//$wmgUploadHostname/sapperpediawiki/f/f8/Sapperpedia_small.png",
 		'saliorpediawiki' => "//$wmgUploadHostname/saliorpediawiki/9/98/BirdRoc.png",
 		'savagewikiwiki' => "//$wmgUploadHostname/savagewikiwiki/9/98/Sav_Wiki_logo.jpg",
+		'scffantasyescwiki' => "$wmgUploadHostname/scffantasyescwiki/3/31/Wiki_Eurovision_Heart_%28Infobox%29.svg.png",
 		'schnellbildungwiki' => "//$wmgUploadHostname/schnellbildungwiki/6/6f/Logo.svg",
 		'scientiawikiwiki' => "//$wmgUploadHostname/scientiawikiwiki/d/d4/Logo.jpg",
 		'scffantasyescwiki' => "//$wmgUploadHostname/scffantasyescwiki/3/31/Wiki_Eurovision_Heart_%28Infobox%29.svg.png",
