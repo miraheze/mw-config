@@ -2739,6 +2739,7 @@ $wgConf->settings = array(
 		'tsponiewiki' => true,
 		'twswiki' => true,
 		'tymyrddinwiki' => true,
+		'ubrwikiwiki' => true,
 		'uoluwiki' => true,
 		'unikumwiki' => true,
 		'unionnorteamericanawiki' => true,
