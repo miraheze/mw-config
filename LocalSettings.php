@@ -867,6 +867,10 @@ $wgConf->settings = array(
 		'+priyowiki' => array(
 			'anon' => true,
 		),
+		'+pythiawiki' => array(
+			'anon' => true,
+			'user' => true,
+		),
 		'+revitwiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -5014,6 +5018,12 @@ $wgConf->settings = array(
  				'unreviewedpages' => true,
  			),
  		),
+		'+pythiawiki' => array(
+			'bureaucrat' => array(
+				'edit' => true,
+				'createpage' => true,
+			),
+		),
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderation' => true,
