@@ -5038,6 +5038,9 @@ $wgConf->settings = array(
 			),
 		),
 		'+sdiywiki' => array(
+			'sysop' => array(
+				'moderator' => true,
+			),			
 			'moderator' => array(
 				'moderation', // Allow moderator to use Special:Moderation
 				'skip-moderation', // Allow moderator to skip moderation
