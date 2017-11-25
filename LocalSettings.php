@@ -181,6 +181,8 @@ define( 'NS_PROOFREAD_PAGE_TALK', 251);
 define( 'NS_PROOFREAD_INDEX', 252);
 define( 'NS_PROOFREAD_INDEX_TALK', 253);
 
+// NS 860, 861, 862, 863 allocated for Item/Item_talk/Property/Property_talk
+
 $wgConf->settings = array(
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
