@@ -4452,13 +4452,6 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
-		'+sdiywiki' => array(
-			'moderators' => array(
-				'moderation', // Allow moderators to use Special:Moderation
-				'skip-moderation', // Allow moderators to skip moderation
-				'automoderated', // Allow moderators to assign/remove "automoderated" flag
-			),
-		),
 		'+testwiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
@@ -5409,13 +5402,6 @@ $wgConf->settings = array(
 				'confirmed',
 				'sysop',
 				'rollbacker',
-			),
-		),
-		'+sdiywiki' => array(
-			'moderators' => array(
-				'moderation', // Allow moderators to use Special:Moderation
-				'skip-moderation', // Allow moderators to skip moderation
-				'automoderated', // Allow moderators to assign/remove "automoderated" flag
 			),
 		),
 		'+serinfhospwiki' => array(
