@@ -5048,7 +5048,6 @@ $wgConf->settings = array(
 			),
 			'moderator' => array(
 				'moderation', // Allow moderator to use Special:Moderation
-				'skip-moderation', // Allow moderator to skip moderation
 				'automoderated', // Allow moderator to assign/remove "automoderated" flag
 			),
 		),		
