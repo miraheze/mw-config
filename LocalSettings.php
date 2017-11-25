@@ -4376,6 +4376,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+sdiywiki' => array(
+			'sysop' => array(
+				'moderator',
+			),
+		),		
 		'+serinfhospwiki' => array(
 			'sysop' => array(
 				'SupportStaff',
@@ -5404,6 +5409,11 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+sdiywiki' => array(
+			'sysop' => array(
+				'moderator',
+			),
+		),		
 		'+serinfhospwiki' => array(
 			'sysop' => array(
 				'SupportStaff',
