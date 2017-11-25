@@ -3597,8 +3597,9 @@ $wgConf->settings = array(
 	'wgModerationNotificationNewOnly' => array( // Notify administrator only about new pages requests. 
 		'default' => false,
 	),
-	'wgModerationEmail' => array( // Email to send notifications. 
+	'wgModerationEmail' => array( // Email to send notifications to. 
 		'default' => 'wgEmergencyContact',
+		 'sdiywiki' => 'admin@sdiy.info',
 	),	
 
 	// MsCatSelect vars
