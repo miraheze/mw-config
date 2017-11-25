@@ -3599,7 +3599,7 @@ $wgConf->settings = array(
 	),
 	'wgModerationEmail' => array( // Email to send notifications to. 
 		'default' => 'wgEmergencyContact',
-		 'sdiywiki' => 'admin@sdiy.info',
+		'sdiywiki' => 'admin@sdiy.info',
 	),	
 
 	// MsCatSelect vars
