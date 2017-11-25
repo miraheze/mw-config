@@ -4560,6 +4560,7 @@ $wgConf->settings = array(
 				'abusefilter-revert' => true,
 				'deletelogentry' => true,
 				'deleterevision' => true,
+				'moderation' => true,
 				'rollback' => true,
 			),
 			'user' => array(
@@ -5043,12 +5044,8 @@ $wgConf->settings = array(
 			),
 		),
 		'+sdiywiki' => array(
-			'sysop' => array(
-				'moderation' => true,
-			),
 			'moderator' => array(
 				'moderation', // Allow moderator to use Special:Moderation
-				'skip-moderation', // Allow moderator to skip moderation
 				'automoderated', // Allow moderator to assign/remove "automoderated" flag
 			),
 		),		
