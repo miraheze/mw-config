@@ -1067,6 +1067,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'test1wiki' => true,
 		'r2wiki' => true,
+		'valentinaprojectwiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseAdminLinks' => array(
@@ -1318,6 +1319,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'dtswiki' => true,
+		'firstroboticswikiwiki' => true,
 		'test1wiki' => true,
 		'knowledgewiki' => true,
 		'macfan4000wiki' => true,
