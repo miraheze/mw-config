@@ -6372,6 +6372,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => "//$wmgUploadHostname/wisdomsandboxwiki/b/be/Sandbox_Logo.png",
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
 		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
+		'zendariwiki' => "//$wmgUploadHostname/zendariwiki/2/2c/Zendari_Logo.png",
 	),
 
 	// TemplateSandbox
