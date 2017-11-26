@@ -18,8 +18,8 @@ call_user_func( function() {
         $wgExtraNamespaces[WB_NS_PROPERTY] = 'Property';
         $wgExtraNamespaces[WB_NS_PROPERTY_TALK] = 'Property_talk';
 
-        $wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = WB_NS_ITEM;
-        $wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
+	$wgWBRepoSettings['entityNamespaces']['item'] = WB_NS_ITEM;
+	$wgWBRepoSettings['entityNamespaces']['property'] = WB_NS_PROPERTY;
 
         $wgWBRepoSettings['sharedCacheKeyPrefix'] = $wgDBname . ':WBL/' . rawurlencode( WBL_VERSION );
 
