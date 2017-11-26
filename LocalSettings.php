@@ -1318,6 +1318,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'dtswiki' => true,
+		'firstroboticswikiwiki' => true,
 		'test1wiki' => true,
 		'knowledgewiki' => true,
 		'macfan4000wiki' => true,
