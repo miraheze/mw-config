@@ -1067,6 +1067,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'test1wiki' => true,
 		'r2wiki' => true,
+		'valentinaprojectwiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseAdminLinks' => array(
