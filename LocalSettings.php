@@ -2285,6 +2285,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'karmazynxyz' => true,
 		'lizhongresearchwiki' => true,
+		'metawiki' => true,
 		'ndwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
