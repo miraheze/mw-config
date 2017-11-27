@@ -6710,11 +6710,13 @@ $wgLocalDatabases = array();
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
-	$wikiDB = explode( '|', $wikiLine, 4 );
-	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
+	$wikiDB = explode( '|', $wikiLine, 6 );
+	list( $DBname, $siteName, $siteLang, $siteLogo, $siteFavicon, $wikiTagList ) = array_pad( $wikiDB, 6, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
+	$wgConf->settings['wgLogo'][$DBname] = $siteLogo;
+	$wgConf->settings['wgFavicon'][$DBname] = $siteFavicon;
 }
 
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
