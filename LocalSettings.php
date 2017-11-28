@@ -170,6 +170,8 @@ define( 'NS_WPIMPORT', 1744);
 define( 'NS_WPIMPORT_TALK', 1745);
 define( 'NS_ARCHIVE', 1746);
 define( 'NS_ARCHIVE_TALK', 1747);
+define( 'NS_WPREDIRECT', 1748);
+define( 'NS_WPREDIRECT_TALK', 1749);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3773,7 +3775,9 @@ $wgConf->settings = array(
 		),
 		'picardwiki' => array(
 			NS_WPIMPORT => 'WPImport',
-			NS_WPIMPORT_TALK => 'WPImport_talk',
+			NS_WPIMPORT_TALK => 'WPImport_Diskussion',
+			NS_WPREDIRECT => 'WPRedirect',
+			NS_WPREDIRECT_TALK => 'WPRedirect_Diskussion',
 		),
 		'ratanpirwiki' => array(
 			NS_PORTAL => 'Portal',
@@ -3974,6 +3978,10 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
+		),
+		'+picardwiki' => array(
+			'NS_USER_PROFILE' => 'Benutzerprofil',
+			'NS_USER_PROFILE_TALK' => 'Benutzerprofil Diskussion',
 		),
 		'+proxybotwiki' => array(
 			'UT' => NS_USER_TALK,
