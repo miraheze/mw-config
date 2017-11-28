@@ -229,6 +229,10 @@ if ( $wgDBname == 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
+if ( $wgDBname == 'zhdelwiki' ) {
+	unset($wgGroupPermissions['autoconfirmed']);
+}
+
 if ( $wgDBname == 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
