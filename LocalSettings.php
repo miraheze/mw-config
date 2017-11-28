@@ -3778,7 +3778,9 @@ $wgConf->settings = array(
 		),
 		'oecumenewiki' => array(
 			NS_ARCHIVE => 'Архив',
-			NS_ARCHIVE_TALK => 'Архив_обсуждение',
+			NS_ARCHIVE_TALK => 'Обсуждение_архива',
+			NS_PORTAL => 'Портал',
+			NS_PORTAL_TALK => 'Обсуждение_портала',
 		),
 		'picardwiki' => array(
 			NS_WPIMPORT => 'WPImport',
