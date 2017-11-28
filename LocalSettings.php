@@ -1743,6 +1743,7 @@ $wgConf->settings = array(
 		'podpediawiki' => true,
 		'puzzlewiki' => true,
 		'test1wiki' => true,
+		'thegreatwarwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 	),
 	'wmgUseMobileFrontend' => array(
@@ -3431,15 +3432,18 @@ $wgConf->settings = array(
 		'default' => true,
 		'allthetropeswiki' => false,
 		'ayrshirewiki' => false,
+		'thegreatwarwiki' => false,
 		'thelonsdalebattalionwiki' => false,
 	),
 	'wgMetrolookUploadButton' => array(
 		'default' => true,
 		'allthetropeswiki' => false,
+		'thegreatwarwiki' => false,
 	),
 	'wgMetrolookBartile' => array(
 		'default' => true,
 		'ayrshirewiki' => false,
+		'thegreatwarwiki' => false,
 		'thelonsdalebattalionwiki' => false,
 	),
 	'wgMetrolookMobile' => array(
@@ -3454,7 +3458,13 @@ $wgConf->settings = array(
 		'default' => true,
 		'ayrshirewiki' => false,
 	),
-
+	'wgMetrolookFeatures' => array(
+		'default' => array( 
+			'collapsiblenav' => array( 'global' => false, 'user' => true ) ),
+		'thegreatwarwiki' => array(
+			'collapsiblenav' => array( 'global' => true, 'user' => true ) ),
+	),
+	
 	// MirahezeMagic
 	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions and https://meta.miraheze.org/wiki/Dormancy_Policy/Exemptions
 	'wgFindInactiveWikisWhitelist' => array(
