@@ -342,6 +342,7 @@ $wgConf->settings = array(
 	),
 	'wgCentralAuthAutoLoginWikis' => array(
 		'default' => array(
+			'adadevelopersacademy.wiki' => 'adadevelopersacademywiki',
 			'allthetropes.org' => 'allthetropeswiki',
 			'www.alwiki.net' => 'alwikiwiki',
 			'antiguabarbudacalypso.com' => 'antiguabarbudacalypsowiki',
@@ -5704,6 +5705,7 @@ $wgConf->settings = array(
 	),
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
+		'adadevelopersacademywiki' => 'https://adadevelopersacademy.wiki',
 		'aksaraywikiwiki' => 'https://www.aksaraywiki.com',
 		'allthetropeswiki' => 'https://allthetropes.org',
 		'alwikiwiki' => 'https://www.alwiki.net',
@@ -6476,6 +6478,7 @@ $wgConf->settings = array(
 	'wgUrlShortenerDomainsWhitelist' => array(
 		'default' => array(
 			'(.*\.)?miraheze\.org',
+			'adadevelopersacademy\.wiki',
 			'allthetropes\.org',
 			'aman\.info\.tm',
 			'antiguabarbudacalypso\.com',
