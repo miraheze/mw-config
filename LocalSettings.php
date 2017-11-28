@@ -172,6 +172,10 @@ define( 'NS_ARCHIVE', 1746);
 define( 'NS_ARCHIVE_TALK', 1747);
 define( 'NS_WPREDIRECT', 1748);
 define( 'NS_WPREDIRECT_TALK', 1749);
+define( 'NS_WALKTHROUGH', 1750);
+define( 'NS_WALKTHROUGH_TALK', 1751);
+define( 'NS_STAFF', 1752);
+define( 'NS_STAFF_TALK', 1753);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -994,6 +998,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 			'editor' => true,
+		),
+		'+yokaiwatchwiki' => array(
+			'anon' => true,
 		),
 		'+zhdelwiki' => array(
 			'anon' => true,
@@ -3908,6 +3915,16 @@ $wgConf->settings = array(
 			NS_SPRITES_TALK => 'Sprites_talk',
 			NS_GALLERY => 'Gallery',
 			NS_GALLERY_TALK => 'Gallery_talk',
+		),
+		'yokaiwatchwiki' => array(
+			NS_WALKTHROUGH => 'Walkthrough',
+			NS_WALKTHROUGH_TALK => 'Walkthrough_talk',
+			NS_GALLERY => 'Gallery',
+			NS_GALLERY_TALK => 'Gallery_talk',
+			NS_POLICY => 'Policy',
+			NS_POLICY_TALK => 'Policy_talk',
+			NS_STAFF => 'Staff',
+			NS_STAFF_TALK => 'Staff_talk',
 		),
 	),
 	'wgContentNamespaces' => array(
