@@ -2869,7 +2869,6 @@ $wgConf->settings = array(
 		'beminwiki' => true,
 		'maiasongcontestwiki' => true,
 		'test1wiki' => true,
-		'viagroupiawiki' => true,
 		'vukufwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
