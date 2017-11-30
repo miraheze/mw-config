@@ -461,8 +461,8 @@ $wgConf->settings = array(
 		'default' => array(
 			"$IP/maintenance/tables.sql",
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
-			"$IP/extensions/AJAXPoll/patches/create-table--ajaxpoll_info.sql",
-			"$IP/extensions/AJAXPoll/patches/create-table--ajaxpoll_vote.sql",
+			"$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_info.sql",
+			"$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_vote.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
 			"$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql",
 			"$IP/extensions/ArticleRatings/ratings.sql",
@@ -517,7 +517,7 @@ $wgConf->settings = array(
 			"$IP/extensions/Translate/sql/translate_sections.sql",
 			"$IP/extensions/Translate/sql/translate_stash.sql",
 			"$IP/extensions/Translate/sql/translate_tm.sql",
-			"$IP/extensions/VoteNY/vote.mysql",
+			"$IP/extensions/VoteNY/sql/vote.mysql",
 			"$IP/extensions/Wikibase/repo/sql/Wikibase.sql",
 			"$IP/extensions/Wikibase/repo/sql/changes.sql",
 			"$IP/extensions/Wikibase/repo/sql/changes_dispatch.sql",
@@ -1661,10 +1661,10 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 	),
 	'wmgUseLoginNotify' => array(
-		'default' => false, // Disabled until 1.30 fix T2188. --Reception123
-		'loginwiki' => false,
-		'metawiki' => false,
-		'test1wiki' => false,
+		'default' => false, 
+		'loginwiki' => true,
+		'metawiki' => true,
+		'test1wiki' => true,
 	),
 	'wmgUseLoopsCombo' => array( // Remember to remove from Variables if the wiki is enabled there
 		'default' => false,
