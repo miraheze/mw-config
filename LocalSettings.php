@@ -774,6 +774,12 @@ $wgConf->settings = array(
 		'+jokowiki' => array(
 			'anon' => true,
 		),
+		'+jwikiwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+karniarutheniawiki' => array(
 			'anon' => true,
 		),
