@@ -3633,6 +3633,9 @@ $wgConf->settings = array(
 		'default' => true,
 		'trexwiki' => false,
 	),
+	'wgMFDefaultSkinClass' => array(
+		'default' => 'SkinMinerva',
+	),
 	
 	// Moderation extension settings
 	'wgModerationNotificationEnable' => array( // Enable or disable notifications. 
