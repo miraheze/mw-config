@@ -6470,6 +6470,7 @@ $wgConf->settings = array(
 		'nenawikiwiki' => 'America/New_York',
 		'ontariobrasswiki' => 'America/Toronto',
 		'proxybotwiki' => 'America/Chicago',
+		'revitwiki' => 'Pacific/Honolulu',
 		'reviwiki' => 'Asia/Seoul',
 		'reviwikiwiki' => 'Asia/Seoul',
 		'thelonsdalebattalionwiki' => 'Europe/London',
