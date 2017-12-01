@@ -5921,6 +5921,7 @@ $wgConf->settings = array(
 		'raymanspeedrunwiki' => 'bootstrapmediawiki',
 		'revitwiki' => 'vector',
 		'thebbwiki' => 'apex',
+		'thegreatwarwiki' => 'metrolook',
 		'thelonsdalebattalionwiki' => 'metrolook',
 	),
 	'wgFavicon' => array(
