@@ -131,7 +131,7 @@ if ( $wmgUseCrossReference ) {
 }
 
 if ( $wmgUseCSS ) {
-	require_once( "$IP/extensions/CSS/CSS.php" );
+	wfLoadExtension( 'CSS' );
 }
 
 if ( $wmgUseCustomHeader ) {
