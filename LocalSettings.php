@@ -4090,6 +4090,10 @@ $wgConf->settings = array(
 			'Катэгорыя' => NS_CATEGORY,
 			'Размовы пра файл' => NS_FILE_TALK,
 			'Размовы пра катэгорыю' => NS_CATEGORY_TALK,
+			'Ofbyld' => NS_FILE,
+			'Ofbyld oerlis' => NS_FILE_TALK,
+			'Kategory' => NS_CATEGORY,
+			'Kategory oerlis' => NS_CATEGORY_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
