@@ -2666,6 +2666,7 @@ $wgConf->settings = array(
 		'menufeedwiki' => true,
 		'meregoswiki' => true,
 		'metawiki' => true,
+		'mikeandchrisproductionswiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 		'miningpromieswiki' => true,
