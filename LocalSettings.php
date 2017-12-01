@@ -4098,6 +4098,8 @@ $wgConf->settings = array(
 			'ფაილის განხილვა' => NS_FILE_TALK,
 			'კატეგორია' => NS_CATEGORY,
 			'კატეგორიის განხილვა' => NS_CATEGORY_TALK,
+			'თარგი' => NS_TEMPLATE,
+			'თარგის განხილვა' => NS_TEMPLATE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
