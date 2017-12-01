@@ -4094,6 +4094,10 @@ $wgConf->settings = array(
 			'Ofbyld oerlis' => NS_FILE_TALK,
 			'Kategory' => NS_CATEGORY,
 			'Kategory oerlis' => NS_CATEGORY_TALK,
+			'ფაილი' => NS_FILE,
+			'ფაილის განხილვა' => NS_FILE_TALK,
+			'კატეგორია' => NS_CATEGORY,
+			'კატეგორიის განხილვა' => NS_CATEGORY_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
