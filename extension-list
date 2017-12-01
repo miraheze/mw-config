@@ -10,7 +10,7 @@ $IP/extensions/AutoCreateCategoryPages/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
-$IP/extensions/CSS/CSS.php
+$IP/extensions/CSS/extension.json
 $IP/extensions/Cargo/extension.json
 $IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
