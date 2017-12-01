@@ -4086,6 +4086,10 @@ $wgConf->settings = array(
 			'Axuda' => NS_HELP,
 			'Afbeelding' => NS_FILE,
 			'Overleg_afbeelding' => NS_FILE_TALK,
+			'Выява' => NS_FILE,
+			'Катэгорыя' => NS_CATEGORY,
+			'Размовы пра файл' => NS_FILE_TALK,
+			'Размовы пра катэгорыю' => NS_CATEGORY_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
