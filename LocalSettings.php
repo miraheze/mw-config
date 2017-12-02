@@ -398,6 +398,7 @@ $wgConf->settings = array(
 			'wiki.labby.io' => 'labbywiki',
 			'wiki.lbcomms.co.za' => 'nextlevelwikiwiki',
 			'wiki.ldmsys.net' => 'itiswiki',
+			'wiki.lingnlang.club' => 'lingnlangwiki'
 			'wiki.lspdfr.de' => 'lspdfrwiki',
 			'wiki.macc.nyc' => 'maccnycwiki',
 			'wiki.make717.org' => 'make717wiki',
@@ -5793,6 +5794,7 @@ $wgConf->settings = array(
 		'kourouklideswiki' => 'https://wiki.kourouklides.com',
 		'kstartupswiki' => 'https://wiki.besuccess.com',
 		'labbywiki' => 'https://wiki.labby.io',
+		'lingnlangwiki' => 'https://wiki.lingnlang.club',
 		'lodgejsnydrwiki' => 'https://lodge.jsnydr.com',
 		'lspdfrwiki' => 'https://wiki.lspdfr.de',
 		'maccnycwiki' => 'https://wiki.macc.nyc',
@@ -6572,6 +6574,7 @@ $wgConf->settings = array(
 			'wiki\.kourouklides\.com',
 			'wiki\.labby\.io',
 			'wiki\.ldmsys\.net',
+			'wiki\.lingnlang\.club',
 			'wiki\.lspdfr\.de',
 			'lodge\.jsnydr\.com',
 			'wiki\.make717\.org',
