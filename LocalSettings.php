@@ -2871,6 +2871,8 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 	),
 	'wmgUseWikibaseRepository' => array(
+		// BEWARE: This breaks Special:SpecialPages!
+		// Explain this before enabling! cf. T2383
 		'default' => false,
 		'ayurbookswiki' => true,
 		'beminwiki' => true,
