@@ -6597,7 +6597,7 @@ $wgConf->settings = array(
 			'reviwiki\.info',
 			'private\.revi.wiki',
 			'wiki\.rpgbrigade\.org',
-			'sdiy\.info'
+			'sdiy\.info',
 			'takethatwiki\.com',
 			'wiki\.teessidehackspace\.org\.uk',
 			'thelonsdalebattalion\.co.uk',
