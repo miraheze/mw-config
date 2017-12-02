@@ -1407,8 +1407,9 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'calexitwiki' => true,
 		'poserdazfreebieswiki' => true,
-		'test1wiki' => true,
 		'sthomaspriwiki' => true,
+		'test1wiki' => true,
+		'tmewiki' => true,
 	),
 	'wmgUseEditcount' => array(
 		'default' => false,
