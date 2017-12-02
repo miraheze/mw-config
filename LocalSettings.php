@@ -378,6 +378,7 @@ $wgConf->settings = array(
 			'reviwiki.info' => 'reviwikiwiki',
 			'sandbox.wisdomwiki.org' => 'wisdomsandboxwiki',
 			'savage-wiki.com' => 'savagewikiwiki',
+			'sdiy.info' => 'sdiywiki',
 			'speleo.wiki' => 'speleowiki',
 			'spiral.wiki' => 'spiralwiki',
 			'takethatwiki.com' => 'takethatwikiwiki',
@@ -5817,6 +5818,7 @@ $wgConf->settings = array(
 		'reviwikiwiki' => 'https://reviwiki.info',
 		'rizalespewiki' => 'https://wiki.rizalespe.com',
 		'savagewikiwiki' => 'https://savage-wiki.com',
+		'sdiywiki' => 'https://sdiy.info',
 		'speleowiki' => 'https://speleo.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
 		'takethatwikiwiki' => 'https://takethatwiki.com',
@@ -6595,6 +6597,7 @@ $wgConf->settings = array(
 			'reviwiki\.info',
 			'private\.revi.wiki',
 			'wiki\.rpgbrigade\.org',
+			'sdiy\.info'
 			'takethatwiki\.com',
 			'wiki\.teessidehackspace\.org\.uk',
 			'thelonsdalebattalion\.co.uk',
