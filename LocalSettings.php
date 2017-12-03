@@ -6628,6 +6628,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => false,
 		'bttestwiki' => true,
 		'isvwiki' => false,
+		'jcswiki' => true,
 		'malaysiawiki' => true,
 		'panoramawiki' => false,
 		'testwiki' => false,
@@ -6674,6 +6675,7 @@ $wgConf->settings = array(
 	'wgVisualEditorShowBetaWelcome' => array(
 		'default' => true,
 		'isvwiki' => false,
+		'jcswiki' => false,
 	),
 	'wgVisualEditorSupportedSkins' => array(
 		'default' => array(),
