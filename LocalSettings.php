@@ -379,6 +379,7 @@ $wgConf->settings = array(
 			'sandbox.wisdomwiki.org' => 'wisdomsandboxwiki',
 			'savage-wiki.com' => 'savagewikiwiki',
 			'sdiy.info' => 'sdiywiki',
+			'www.sdiy.info' => 'sdiywiki',
 			'speleo.wiki' => 'speleowiki',
 			'spiral.wiki' => 'spiralwiki',
 			'takethatwiki.com' => 'takethatwikiwiki',
