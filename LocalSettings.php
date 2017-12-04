@@ -6382,6 +6382,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => "//$wmgUploadHostname/studynotekrwiki/b/b3/Imageedit_6_7597747851.gif",
 		'sumerrawiki' => "//$wmgUploadHostname/sumerrawiki/8/88/Sumerra_Logo_Vertical_large.jpg",
 		'supportdrivenwiki' => "//$wmgUploadHostname/supportdrivenwiki/c/c1/Logo_dark.png",
+		'syscoopwiki' => "//$wmgUploadHostname/syscoopwiki/c/c6/Logo_ensi.jpg",
 		'sysexwiki' => "//$wmgUploadHostname/sysexwiki/1/13/Sysex.png",
 		'takethatwikiwiki' => "//$wmgUploadHostname/takethatwikiwiki/e/e8/Take_That_Wiki_Logo_Small.png",
 		'tmewiki' => "//$wmgUploadHostname/tmewiki/b/bc/Wiki.png",
