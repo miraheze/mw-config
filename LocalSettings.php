@@ -1698,6 +1698,7 @@ $wgConf->settings = array(
 		'howtogettowiki' => true,
 		'jacksonheightswiki' => true,
 		'jayuwikiwiki' => true,
+		'jwwiki' => true,
 		'liesbornwikiwiki' => true,
 		'magnaversewiki' => true,
 		'noalatalawiki' => true,
