@@ -6294,6 +6294,7 @@ $wgConf->settings = array(
 		'mindgearwiki' => "//$wmgUploadHostname/mindgearwiki/3/36/Mind_Gear.png",
 		'mikrodevwiki' => "//$wmgUploadHostname/mikrodevwiki/c/c9/Logo.png",
 		'miraewiki' => "//$wmgUploadHostname/miraewiki/2/22/LogoOfMirae.png",
+		'mncwikipediawiki' "//$wmgUploadHostname/mncwikipediawiki/a/a7/Manju_Gurun_Wiki.png",
 		'moralecwiki' => "//$wmgUploadHostname/moralecwiki/e/e8/Moralec-pluto.png",
 		'musicarchivewiki' => "//$wmgUploadHostname/musicarchivewiki/d/d4/Logo.jpg",
 		'musmyswiki' => "//$wmgUploadHostname/musmyswiki/9/90/Musmys.png",
