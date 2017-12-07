@@ -6300,6 +6300,7 @@ $wgConf->settings = array(
 		'mcwiki' => "//$wmgUploadHostname/mcwiki/b/bc/Wiki.png",
 		'mexasaachenwiki' => "//$wmgUploadHostname/mexasaachenwiki/8/8e/MexAS.png",
 		'mindgearwiki' => "//$wmgUploadHostname/mindgearwiki/3/36/Mind_Gear.png",
+		'mikeandchrisproductions' => "//$wmgUploadHostname/mikeandchrisproductionswiki/thumb/a/aa/MCP_Wiki_Logo.png/135px-MCP_Wiki_Logo.png",
 		'mikrodevwiki' => "//$wmgUploadHostname/mikrodevwiki/c/c9/Logo.png",
 		'miraewiki' => "//$wmgUploadHostname/miraewiki/2/22/LogoOfMirae.png",
 		'mncwikipediawiki' => "//$wmgUploadHostname/mncwikipediawiki/a/a7/Manju_Gurun_Wiki.png",
