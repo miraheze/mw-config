@@ -194,7 +194,7 @@ if ( $wgDBname === 'reviwikiwiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 }
 
-if ( $wgDBname == 'soundboxiki' ) {
+if ( $wgDBname === 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['*']['edit'] = false;
@@ -218,7 +218,7 @@ if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 	$egMapsDefaultService = 'googlemaps3';
 }
 
-if ( $wgDBname == 'trexwiki' ) {
+if ( $wgDBname === 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 	$wgGroupPermissions['sysop']['deletelogentry'] = false;
@@ -229,15 +229,15 @@ if ( $wgDBname == 'trexwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 }
 
-if ( $wgDBname == 'swisscomraidwiki' ) {
+if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
-if ( $wgDBname == 'zhdelwiki' ) {
+if ( $wgDBname === 'zhdelwiki' ) {
 	unset($wgGroupPermissions['autoconfirmed']);
 }
 
-if ( $wgDBname == 'metawiki' ) {
+if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
 	function wfModifyMetaTags( OutputPage $out ) {
@@ -252,7 +252,7 @@ if ( $wgDBname == 'metawiki' ) {
 }
 
 // Depends on $wgContentNamespaces
-if ( $wgDBname == 'abitaregeawiki' ) {
+if ( $wgDBname === 'abitaregeawiki' ) {
 	$wgExemptFromUserRobotsControl = array();
 }
 
