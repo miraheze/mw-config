@@ -6488,6 +6488,7 @@ $wgConf->settings = array(
 		'proxybotwiki' => 'America/Chicago',
 		'revitwiki' => 'Pacific/Honolulu',
 		'reviwiki' => 'Asia/Seoul',
+		'reviwbwiki' => 'Asia/Seoul',
 		'reviwikiwiki' => 'Asia/Seoul',
 		'thelonsdalebattalionwiki' => 'Europe/London',
 		'webtoonwiki' => 'Asia/Seoul',
