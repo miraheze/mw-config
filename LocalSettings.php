@@ -6465,7 +6465,12 @@ $wgConf->settings = array(
 		'webtoonwiki' => 'Asia/Seoul',
 		'wikapediawiki' => 'Asia/Taipei',
 	),
-
+	
+	// Theme
+	'wgDefaultTheme' => array(
+		'default' => "",
+	),
+	
 	// TitleBlacklist
 	'wgTitleBlacklistSources' => array(
 		'default' => array(
