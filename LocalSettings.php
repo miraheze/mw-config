@@ -2880,7 +2880,7 @@ $wgConf->settings = array(
 		'ayurbookswiki' => true,
 		'beminwiki' => true,
 		'maiasongcontestwiki' => true,
-		'reviwiki' => true,
+		'reviwbwiki' => true,
 		'test1wiki' => true,
 		'vukufwiki' => true,
 	),
