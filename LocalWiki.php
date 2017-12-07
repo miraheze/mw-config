@@ -190,6 +190,10 @@ if ( $wgDBname === 'pruebawiki' ) {
 	unset( $wgGroupPermissions['autoreview'] );
 }
 
+if ( $wgDBname === 'reviwikiwiki' ) {
+	$wgGroupPermissions['*']['createtalk'] = false;
+}
+
 if ( $wgDBname == 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
