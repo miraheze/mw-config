@@ -384,6 +384,7 @@ $wgConf->settings = array(
 			'takethatwiki.com' => 'takethatwikiwiki',
 			'wiki.teessidehackspace.org.uk' => 'teessidehackspacewiki',
 			'thelonsdalebattalion.co.uk' => 'thelonsdalebattalionwiki',
+			'wikibase.revi.wiki' => 'reviwbwiki',
 			'wiki.ameciclo.org' => 'ameciclowiki',
 			'wiki.autocountsoft.com' => 'autocountwiki',
 			'wiki.besuccess.com' => 'kstartupswiki',
@@ -5820,6 +5821,7 @@ $wgConf->settings = array(
 		'testwiki' => 'https://publictestwiki.com',
 		'tulpawiki' => 'https://wiki.tulpa.info',
 		'reviwiki' => 'https://private.revi.wiki',
+		'reviwbwiki' => 'https://wikibase.revi.wiki',
 		'reviwikiwiki' => 'https://reviwiki.info',
 		'rizalespewiki' => 'https://wiki.rizalespe.com',
 		'savagewikiwiki' => 'https://savage-wiki.com',
@@ -6627,6 +6629,7 @@ $wgConf->settings = array(
 			'espiral\.org',
 			'spiral\.wiki',
 			'wiki\.coldblooded\.ga',
+			'wikibase\.revi\.wiki',
 		),
 	),
 
