@@ -4112,6 +4112,13 @@ $wgConf->settings = array(
 			'კატეგორიის განხილვა' => NS_CATEGORY_TALK,
 			'თარგი' => NS_TEMPLATE,
 			'თარგის განხილვა' => NS_TEMPLATE_TALK,
+			'Mynd' => NS_FILE,
+			'Myndakjak' => NS_FILE_TALK,
+			'Bólkur' => NS_CATEGORY,
+			'Bólkakjak' => NS_CATEGORY_TALK,
+			'Myndaspjall' => NS_FILE_TALK,
+			'Flokkur' => NS_CATEGORY,
+			'Flokkaspjall' => NS_CATEGORY_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
