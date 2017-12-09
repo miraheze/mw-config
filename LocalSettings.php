@@ -2766,6 +2766,7 @@ $wgConf->settings = array(
 		'tekkenwiki' => true,
 		'teleswikiwiki' => true,
 		'testwiki' => true,
+		'testarkcls' => true,
 		'thebbwiki' => true,
 		'thecscwiki' => true,
 		'thefosterswiki' => true,
