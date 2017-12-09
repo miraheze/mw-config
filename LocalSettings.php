@@ -4478,6 +4478,7 @@ $wgConf->settings = array(
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderator',
+				'automoderated',
 			),
 		),		
 		'+serinfhospwiki' => array(
@@ -5545,6 +5546,7 @@ $wgConf->settings = array(
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderator',
+				'automoderated',				
 			),
 		),		
 		'+serinfhospwiki' => array(
