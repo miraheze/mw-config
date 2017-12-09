@@ -374,6 +374,7 @@ $wgConf->settings = array(
 			'oyeavdelingen.org' => 'oyeavdelingenwiki',
 			'permanentfuturelab.wiki' => 'permanentfuturelabwiki',
 			'private.revi.wiki' => 'reviwiki',
+			'programming.red' => 'programmingredwiki',
 			'publictestwiki.com' => 'testwiki',
 			'reviwiki.info' => 'reviwikiwiki',
 			'sandbox.wisdomwiki.org' => 'wisdomsandboxwiki',
@@ -5825,6 +5826,7 @@ $wgConf->settings = array(
 		'openonderwijswiki' => 'https://www.openonderwijs.org',
 		'oyeavdelingenwiki' => 'https://oyeavdelingen.org',
 		'permanentfuturelabwiki' => 'https://permanentfuturelab.wiki',
+		'programmingredwiki' => 'https://programming.red',
 		'pruebawiki' => 'https://es.publictestwiki.com',
 		'testwiki' => 'https://publictestwiki.com',
 		'tulpawiki' => 'https://wiki.tulpa.info',
@@ -6558,7 +6560,8 @@ $wgConf->settings = array(
 		'pfl2wiki' => true,
 	),
 
-	// UrlShortener
+	// 
+	ortener
 	'wgUrlShortenerTemplate' => array(
 		'default' => '/m/$1',
 	),
@@ -6614,6 +6617,7 @@ $wgConf->settings = array(
 			'www\.openonderwijs\.org',
 			'oyeavdelingen\.org',
 			'permanentfuturelab\.wiki',
+			'programming\.red',
 			'publictestwiki\.com',
 			'reviwiki\.info',
 			'private\.revi.wiki',
