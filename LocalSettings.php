@@ -6398,6 +6398,7 @@ $wgConf->settings = array(
 		'printmakingbewiki' => "//$wmgUploadHostname/printmakingbewiki/2/22/Pmk-logo-wiki-135px.png",
 		'priyowiki' => "//$wmgUploadHostname/priyowiki/c/c9/Logo.png",
 		'procrastipediawiki' => "//$wmgUploadHostname/procrastipediawiki/1/1e/PCPedia_Logo.png",
+		'programmingredwiki' => "//$wmgUploadHostname/programmingredwiki/0/0f/Red-3d-icon-cmyk.jpg",
 		'pruebawiki' => "//$wmgUploadHostname/pruebawiki/7/77/LogoWiki.PNG",
 		'puzzlewiki' => "//$wmgUploadHostname/puzzlewiki/a/a9/PuzzlepediaLogo.png",
 		'qmswiki' => "//$wmgUploadHostname/qmswiki/8/8f/QMS_Logo.png",
