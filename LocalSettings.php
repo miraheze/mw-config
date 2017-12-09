@@ -6560,8 +6560,7 @@ $wgConf->settings = array(
 		'pfl2wiki' => true,
 	),
 
-	// 
-	ortener
+	// UrlShortener
 	'wgUrlShortenerTemplate' => array(
 		'default' => '/m/$1',
 	),
