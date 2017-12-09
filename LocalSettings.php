@@ -4713,6 +4713,7 @@ $wgConf->settings = array(
 				'upload' => true,
 				'writeapi' => true,
 		),
+	),
 		'+bigforestwiki' => array(
 			'autoconfirmed' => array(
 				'rollback' => true,
