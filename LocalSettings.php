@@ -6766,6 +6766,10 @@ $wgConf->settings = array(
 	'wmgPrivateWiki' => array(
 		'default' => false,
 	),
+	
+	'wgDplSettings['allowUnlimitedCategories']' => array(
+		'tmewiki' => true,
+	),
 );
 
 function efGetSiteParams( $conf, $wiki ) {
