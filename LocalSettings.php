@@ -6448,6 +6448,7 @@ $wgConf->settings = array(
 		'syscoopwiki' => "//$wmgUploadHostname/syscoopwiki/c/c6/Logo_ensi.jpg",
 		'sysexwiki' => "//$wmgUploadHostname/sysexwiki/1/13/Sysex.png",
 		'takethatwikiwiki' => "//$wmgUploadHostname/takethatwikiwiki/e/e8/Take_That_Wiki_Logo_Small.png",
+		'talkingtomandfriendswiki' => "//$wmgUploadHostname/talkingtomandfriendswiki/6/6e/Ttafwiki_logo_2.png",
 		'tmewiki' => "//$wmgUploadHostname/tmewiki/b/bc/Wiki.png",
 		'teessidehackspacewiki' => "//$wmgUploadHostname/teessidehackspacewiki/3/34/Teesside-hackspace-logo.svg",
 		'teleswikiwiki' => "//$wmgUploadHostname/teleswikiwiki/b/b6/Teleslogo01.png",
