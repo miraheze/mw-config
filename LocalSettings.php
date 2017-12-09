@@ -6453,6 +6453,7 @@ $wgConf->settings = array(
 		'teessidehackspacewiki' => "//$wmgUploadHostname/teessidehackspacewiki/3/34/Teesside-hackspace-logo.svg",
 		'teleswikiwiki' => "//$wmgUploadHostname/teleswikiwiki/b/b6/Teleslogo01.png",
 		'terriblespacewiki' => "//$wmgUploadHostname/terriblespacewiki/e/eb/Terrible_space_logo.png",
+		'testarkclswiki' => "//$wmgUploadHostname/testarkclswiki/5/5b/ARK_CLS-135x135.png",
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/NewLogo.png",
 		'texwikiwiki' => "//$wmgUploadHostname/texwikiwiki/3/34/Texwikilogo.png",
 		'theavatarchronicleswiki' => "//$wmgUploadHostname/theavatarchronicleswiki/0/05/DragonIcon.svg",
