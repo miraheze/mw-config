@@ -2207,6 +2207,7 @@ $wgConf->settings = array(
 	'wmgUseScore' => array(
 		'default' => false,
 		'garamwiki' => true,
+		'music101wiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseScratchBlocks' => array(
