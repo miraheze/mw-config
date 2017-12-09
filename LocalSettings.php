@@ -625,6 +625,10 @@ $wgConf->settings = array(
 		'+apellidosmurcianoswiki' => array(
 			'anon' => true,
 		),
+		'+autocountwiki' => array(
+			'anon' => true,
+			'user' => true,
+		),
 		'+bitcoindebateswiki' => array(
       			'anon' => true,
 			'user' => true,
@@ -4368,6 +4372,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+autocountwiki' => array(
+			'sysop' => array(
+				'authors',
+			),
+		),
 		'+bigforestwiki' => array(
 			'bureaucrat' => array(
 				'confirmed',
@@ -4677,6 +4686,32 @@ $wgConf->settings = array(
 			'user' => array(
 				'upload_by_url' => true,
 			),
+		),
+		'+autocountwiki' => array(
+			'user' => array(
+				'createtalk' => true,
+			),
+			'authors' => array(
+				'changetags' => true,
+				'applychangetags' => true,
+				'torunblocked' => true,
+				'createtalk' => true,
+				'createpage' => true,
+				'edit' => true,
+				'editcontentmodel' => true,
+				'minoredit' => true,
+				'move-categorypages' => true,
+				'move-rootuserpages' => true,
+				'movefile' => true,
+				'move' => true,
+				'move-subpages' => true,
+				'reupload-shared' => true,
+				'reupload' => true,
+				'purge' => true,
+				'read' => true,
+				'sendemail' => true,
+				'upload' => true,
+				'writeapi' => true,
 		),
 		'+bigforestwiki' => array(
 			'autoconfirmed' => array(
@@ -5360,6 +5395,11 @@ $wgConf->settings = array(
 				'staff',
 				'reviewer',
 				'chatmod',
+			),
+		),
+		'+autocountwiki' => array(
+			'sysop' => array(
+				'authors',
 			),
 		),
 		'+bigforestwiki' => array(

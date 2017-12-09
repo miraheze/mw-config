@@ -68,6 +68,12 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgGroupPermissions['user']['createpage'] = true;
 }
 
+if ( $wgDBname === 'autocountwiki' ) {
+	unset( $wgGroupPermissions['autoconfirmed'] );
+	unset( $wgGroupPermissions['autopatrolled'] );
+
+}
+
 if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
