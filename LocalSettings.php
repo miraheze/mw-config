@@ -5013,6 +5013,14 @@ $wgConf->settings = array(
 				'upload_by_url' => true,
 			),
 		),
+		'+madgendersciencewiki' => array(
+			'scholar' => array(
+				'editprotected' => true,
+			),
+			'*' => array(
+				'edit' => false,
+			),
+		),
 		'+marinebiodiversitymatrixwiki' => array(
 			'member' => array(
 				'createtalk' => true,
