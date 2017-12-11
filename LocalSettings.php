@@ -4126,6 +4126,10 @@ $wgConf->settings = array(
 			'Myndaspjall' => NS_FILE_TALK,
 			'Flokkur' => NS_CATEGORY,
 			'Flokkaspjall' => NS_CATEGORY_TALK,
+			'Fitxategi' => NS_FILE,
+			'Fitxategi_eztabaida' => NS_FILE_TALK,
+			'Txantiloi' => NS_TEMPLATE,
+			'Txantiloi_eztabaida' => NS_TEMPLATE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
