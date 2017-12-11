@@ -1661,6 +1661,7 @@ $wgConf->settings = array(
 		'bpwiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
+		'madgendersciencewiki' => true,
 		'test1wiki' => true,
 		'sidemwiki' => true,
 		'testwiki' => true,
