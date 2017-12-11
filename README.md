@@ -1,3 +1,4 @@
+t
 # Miraheze's MediaWiki configuration
 
 [![Build Status](https://travis-ci.org/miraheze/mw-config.svg?branch=master)](https://travis-ci.org/miraheze/mw-config)
