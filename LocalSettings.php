@@ -4130,6 +4130,12 @@ $wgConf->settings = array(
 			'Fitxategi_eztabaida' => NS_FILE_TALK,
 			'Txantiloi' => NS_TEMPLATE,
 			'Txantiloi_eztabaida' => NS_TEMPLATE_TALK,
+			'Kategória' => NS_CATEGORY,
+			'Kategóriavita' => NS_CATEGORY_TALK,
+			'Fájl' => NS_FILE,
+			'Fájlvita' => NS_FILE_TALK,
+			'Sablon' => NS_TEMPLATE,
+			'Sablonvita' => NS_TEMPLATE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
