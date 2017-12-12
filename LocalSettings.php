@@ -1377,12 +1377,11 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'foundationsofteachingwiki' => true,
 	),
-	'wmgUseDynamicPageList' => array(
+	'wmgUseDynamicPageList' => array( // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
 		'default' => false,
 		'appswiki' => true,
 		'bilgiwiki' => true,
 		'camerainfowiki' => true,
-		'test1wiki' => true,
 		'heistwiki' => true,
 		'hexelswiki' => true,
 		'hydrawikiwiki' => true,
@@ -1400,7 +1399,7 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => true,
 		'chocowiki' => true,
 	),
-	'wmgUseDynamicPageList3' => array(
+	'wmgUseDynamicPageList3' => array( // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
 		'default' => false,
 		'allthetropeswiki' => true,
 		'ayrshirewiki' => true,
