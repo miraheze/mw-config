@@ -131,7 +131,7 @@ if ( $wmgUseCrossReference ) {
 }
 
 if ( $wmgUseCSS ) {
-	require_once( "$IP/extensions/CSS/CSS.php" );
+	wfLoadExtension( 'CSS' );
 }
 
 if ( $wmgUseCustomHeader ) {
@@ -329,6 +329,7 @@ if ( $wmgUseMetrolook ) {
 
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
+	wfLoadSkin( 'MinervaNeue' );
 
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 }
@@ -347,8 +348,8 @@ if ( $wmgUseMonaco ) {
 
 if ( $wmgUseMsPackage ) {
 	wfLoadExtension( 'MsUpload' );
-	require_once( "$IP/extensions/MsLinks/MsLinks.php" );
-	require_once( "$IP/extensions/MsCatSelect/MsCatSelect.php" );
+	wfLoadExtension( 'MsLinks' );
+	wfLoadExtension( 'MsCatSelect' );
 }
 
 if ( $wmgUseMsUpload ) {
@@ -400,7 +401,7 @@ if ( $wmgUseNoTitle ) {
 }
 
 if ( $wmgUseOpenGraphMeta ) {
-	require_once( "$IP/extensions/OpenGraphMeta/OpenGraphMeta.php" );
+	wfLoadExtension( 'OpenGraphMeta' );
 }
 
 if ( $wmgUsePagedTiffHandler ) {
@@ -463,7 +464,7 @@ if ( $wmgUseQuiz ) {
 }
 
 if ( $wmgUseRandomSelection ) {
-	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+	wfLoadExtension( 'RandomSelection' );
 }
 
 if ( $wmgUseRefreshed ) {
@@ -628,7 +629,7 @@ if ( $wmgUseVoteNY ) {
 }
 
 if ( $wmgUseWebChat ) {
-	require_once( "$IP/extensions/WebChat/WebChat.php" );
+	wfLoadExtension( 'WebChat' );
 	$wgWebChatClient = $wmgWebChatClient;
 	$wgWebChatServer = $wmgWebChatServer;
 	$wgWebChatChannel = $wmgWebChatChannel;

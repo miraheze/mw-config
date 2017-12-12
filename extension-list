@@ -10,7 +10,7 @@ $IP/extensions/AutoCreateCategoryPages/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
-$IP/extensions/CSS/CSS.php
+$IP/extensions/CSS/extension.json
 $IP/extensions/Cargo/extension.json
 $IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
@@ -79,8 +79,8 @@ $IP/extensions/MirahezeMagic/extension.json
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/Moderation/extension.json
 $IP/extensions/MsCalendar/extension.json
-$IP/extensions/MsCatSelect/MsCatSelect.php
-$IP/extensions/MsLinks/MsLinks.php
+$IP/extensions/MsCatSelect/extension.json
+$IP/extensions/MsLinks/extension.json
 $IP/extensions/MsUpload/extension.json
 $IP/extensions/MultiBoilerplate/extension.json
 $IP/extensions/MultiUpload/extension.json
@@ -97,7 +97,7 @@ $IP/extensions/NoTitle/NoTitle.php
 $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
-$IP/extensions/OpenGraphMeta/OpenGraphMeta.php
+$IP/extensions/OpenGraphMeta/extension.json
 $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json
 $IP/extensions/PageImages/extension.json
@@ -114,7 +114,7 @@ $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/RSS/extension.json
-$IP/extensions/RandomSelection/RandomSelection.php
+$IP/extensions/RandomSelection/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
@@ -153,7 +153,7 @@ $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/Variables.php
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
-$IP/extensions/WebChat/WebChat.php
+$IP/extensions/WebChat/extension.json
 $IP/extensions/WhoIsWatching/extension.json
 $IP/extensions/Widgets/Widgets.php
 $IP/extensions/WikiEditor/extension.json
@@ -170,6 +170,7 @@ $IP/skins/DarkVector/skin.json
 $IP/skins/DuskToDawn/skin.json
 $IP/skins/Gamepress/skin.json
 $IP/skins/Metrolook/skin.json
+$IP/skins/MinervaNeue/skin.json
 $IP/skins/Modern/skin.json
 $IP/skins/ModernSkylight/skin.json
 $IP/skins/Monaco/monaco.php
