@@ -2580,7 +2580,6 @@ $wgConf->settings = array(
 		'easywikiwiki' => true,
 		'edmundwiki' => true,
 		'ellersliedemowiki' => true,
-		'embersghostsquadwiki' => true,
 		'ernaehrungsrathhwiki' => true,
 		'espiralwiki' => true,
 		'esswaywiki' => true,
