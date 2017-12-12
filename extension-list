@@ -114,7 +114,7 @@ $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/RSS/extension.json
-$IP/extensions/RandomSelection/extension.json
+$IP/extensions/RandomSelection/RandomSelection.php
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
