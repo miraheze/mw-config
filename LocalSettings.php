@@ -2743,6 +2743,7 @@ $wgConf->settings = array(
 		'saharinspacewiki' => true,
 		'savagewikiwiki' => true,
 		'scruffywiki' => true,
+		'schicksalswikiwiki' => true,
 		'sdiywiki' => true,
 		'seawiki' => true,
 		'seldirwiki' => true,
