@@ -6952,23 +6952,23 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 9;
+$wgMajorSiteNoticeID = 10;
 $snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>The elections for the <a href="https://meta.miraheze.org/wiki/Code_of_Conduct/Commission">Code of Conduct Commission</a> have begun. Therefore, all users are invited to <a href="https://meta.miraheze.org/wiki/Code_of_Conduct/Commission/Election/2017">vote for 2 commission members</a> </p></td>
+		<td>Miraheze will upgrade all wikis to the newest version of MediaWiki, <a href="//mediawiki.org/wiki/MediaWiki_1.30">MediaWiki 1.30</a> starting 18:15 UTC. At that time, all wikis will be put in <b>read-only<b> mode, so please make sure to save all your changes before then! If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
 		</tr></tbody></table>
 EOF;
 	 }
 	return true;
 }
-*/
+
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
