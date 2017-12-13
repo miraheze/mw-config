@@ -408,6 +408,7 @@ $wgConf->settings = array(
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.meeusen.net' => 'meeusenwiki',
 			'wiki.rizalespe.com' => 'rizalespewiki',
+			'wiki.teamwizardry.com' => 'teamwizardrywiki',
 			'wiki.tulpa.info' => 'tulpawiki',
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wikiescola.com.br' => 'wikiescolawiki',
@@ -5897,6 +5898,7 @@ $wgConf->settings = array(
 		'speleowiki' => 'https://speleo.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
 		'takethatwikiwiki' => 'https://takethatwiki.com',
+		'teamwizardrywiki' => 'https://wiki.teamwizardry.com',
 		'teessidehackspacewiki' => 'https://wiki.teessidehackspace.org.uk',
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk',
 		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
@@ -6708,6 +6710,7 @@ $wgConf->settings = array(
 			'spiral\.wiki',
 			'wiki\.coldblooded\.ga',
 			'wikibase\.revi\.wiki',
+			'wiki\.teamwizardry\.com',
 		),
 	),
 
