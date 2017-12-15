@@ -4144,6 +4144,12 @@ $wgConf->settings = array(
 			'Fájlvita' => NS_FILE_TALK,
 			'Sablon' => NS_TEMPLATE,
 			'Sablonvita' => NS_TEMPLATE_TALK,
+			'Категорија' => NS_CATEGORY,
+			'Разговор_за_категорија' => NS_CATEGORY_TALK,
+			'Податотека' => NS_FILE,
+			'Разговор_за_податотека' => NS_FILE_TALK,
+			'Шаблон' => NS_TEMPLATE,
+			'Разговор_за_шаблон' => NS_TEMPLATE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
