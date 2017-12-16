@@ -1221,9 +1221,10 @@ $wgConf->settings = array(
 	),
 	'wmgUseCargo' => array(
 		'default' => false,
-		'test1wiki' => true,
+		'bigtoewiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
+		'test1wiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
 		'default' => true,
@@ -1989,6 +1990,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePageForms' => array(
 		'default' => false,
+		'bigtoewiki' => true,
 		'scruffywiki' => true,
 		'serinfhospwiki' => true,
 		'test1wiki' => true,
