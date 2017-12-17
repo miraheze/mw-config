@@ -4158,6 +4158,8 @@ $wgConf->settings = array(
 			'Разговор_за_податотека' => NS_FILE_TALK,
 			'Шаблон' => NS_TEMPLATE,
 			'Разговор_за_шаблон' => NS_TEMPLATE_TALK,
+			'Malline' => NS_TEMPLATE,
+			'Keskustelu_mallineesta' => NS_TEMPLATE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
