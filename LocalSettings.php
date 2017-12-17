@@ -561,6 +561,10 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'houseofettlingarfreyuwiki' => 'Migrating database',
+		'miraewiki' => 'Migrating database',
+		'ordiswiki' => 'Migrating database',
+		'tiandiwiki' => 'Migrating database',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
