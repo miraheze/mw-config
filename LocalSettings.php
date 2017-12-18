@@ -4161,6 +4161,12 @@ $wgConf->settings = array(
 			'Разговор_за_шаблон' => NS_TEMPLATE_TALK,
 			'Malline' => NS_TEMPLATE,
 			'Keskustelu_mallineesta' => NS_TEMPLATE_TALK,
+			'Attēls' => NS_FILE,
+			'Attēla_diskusija' => NS_FILE_TALK,
+			'Veidne' => NS_TEMPLATE,
+			'Veidnes_diskusija' => NS_TEMPLATE_TALK,
+			'Modulis' => WMG_NS_MODULE,
+			'Moduļa_diskusija' => WMG_NS_MODULE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
