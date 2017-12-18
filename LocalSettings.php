@@ -1956,7 +1956,6 @@ $wgConf->settings = array(
 	'wmgUseNewUsersList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
-		'jcswiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseNostalgia' => array(
