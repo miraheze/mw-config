@@ -560,7 +560,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => 'Database updating',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -6999,19 +6999,19 @@ $wgMajorSiteNoticeID = 10;
 $snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Miraheze is currently performing an update to <a href="//mediawiki.org/wiki/MediaWiki_1.30">MediaWiki 1.30</a>. At this time, all wikis are in <b>read-only<b> mode. If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
+		<td>Due to an issue with the upgrade, all wikis are currently in read-only mode to complete some database work. This should not take too long and all wikis should be editable again shortly. We apologize for the inconvinience. </p></td>
 		</tr></tbody></table>
 EOF;
 	 }
 	return true;
 }
-*/
+
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
