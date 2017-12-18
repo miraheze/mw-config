@@ -2037,6 +2037,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'frontdeskswiki' => true,
 		'ggdrwiki' => true,
+		'jcswiki' => true,
 		'lgproduktsupportwiki' => true,
 		'macfan4000wiki' => true,
 		'magnaversewiki' => true,
