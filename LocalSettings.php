@@ -1956,6 +1956,7 @@ $wgConf->settings = array(
 	'wmgUseNewUsersList' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'jcswiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseNostalgia' => array(
@@ -6820,7 +6821,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'coldbloodedwiki' => true,
 		'espiralwiki' => true,
-		'jcswiki' => true,
 		'fbwikiwiki' => true,
 		'isvwiki' => true,
 		'spiralwiki' => true,
