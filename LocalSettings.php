@@ -2903,6 +2903,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'ayurbookswiki' => true,
 		'beminwiki' => true,
+		'bilgiwiki' => true,
 		'maiasongcontestwiki' => true,
 		'reviwbwiki' => true,
 		'test1wiki' => true,
