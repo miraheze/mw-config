@@ -1012,7 +1012,7 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
-		'wikielectionwiki' => array(
+		'+wikielectionwiki' => array(
 			'anon' => true,
 		),
 		'+yoavfreundwiki' => array(
