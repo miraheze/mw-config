@@ -4173,6 +4173,10 @@ $wgConf->settings = array(
 			'Keskustelu_tiedostosta' => NS_FILE_TALK,
 			'Moduuli' => WMG_NS_MODULE,
 			'Keskustelu_moduulista' => WMG_NS_MODULE_TALK,
+			'Vaizdas' => NS_FILE,
+			'Vaizdo_aptarimas' => NS_FILE_TALK,
+			'Šablonas' => NS_TEMPLATE,
+			'Šablono_aptarimas' => NS_TEMPLATE_TALK,
 		),
 	),
 	'+wgNamespaceProtection' => array(
