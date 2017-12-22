@@ -6385,6 +6385,7 @@ $wgConf->settings = array(
 		'geomasterywiki' => "//$wmgUploadHostname/geomasterywiki/d/d4/Logo.jpg",
 		'jokowiki' => "//$wmgUploadHostname/jokowiki/0/0d/Icon_Joko.png",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
+		'kirarafantasiawiki' => "//$wmgUploadHostname/kirarafantasiawiki/b/b4/Kirafanlogo.png",
 		'kkandpwiki' => "//$wmgUploadHostname/kkandpwiki/0/09/Monogram-01.png",
 		'korczakwiki' => "//$wmgUploadHostname/korczakwiki/5/5a/Korczak_Logo.png",
 		'kosmopolitikawiki' => "//$wmgUploadHostname/kosmopolitikawiki/d/db/Kosmopolitika's_Rocket_1.3.png",
