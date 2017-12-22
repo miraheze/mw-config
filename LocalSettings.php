@@ -808,6 +808,9 @@ $wgConf->settings = array(
 		'+lexiquewiki' => array(
 			'anon' => true,
 		),
+		'+madgendersciencewiki' => array(
+			'anon' => true,
+		),
 		'+maiasongcontestwiki' => array(
 			'anon' => true,
 		),
