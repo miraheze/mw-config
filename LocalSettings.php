@@ -5017,9 +5017,6 @@ $wgConf->settings = array(
 			'scholar' => array(
 				'editprotected' => true,
 			),
-			'*' => array(
-				'edit' => false,
-			),
 		),
 		'+marinebiodiversitymatrixwiki' => array(
 			'member' => array(
