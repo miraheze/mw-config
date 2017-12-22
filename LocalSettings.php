@@ -2196,6 +2196,7 @@ $wgConf->settings = array(
 		'sdiywiki' => true,
 		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
+		'thegreatwarwiki' => true,
 	),
 	'wmgUseRSS' => array(
 		'default' => false,
