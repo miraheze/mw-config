@@ -4454,6 +4454,11 @@ $wgConf->settings = array(
 				'chatmod',
 			),
 		),
+		'+madgendersciencewiki' => array(
+			'sysop' => array(
+				'scholar',
+			),
+		),
 		'+metawiki' => array(
 			'sysop' => array(
 				'translationadmin',
@@ -5488,6 +5493,11 @@ $wgConf->settings = array(
 				'staff',
 				'reviewer',
 				'chatmod',
+			),
+		),
+		'+madgendersciencewiki' => array(
+			'sysop' => array(
+				'scholar',
 			),
 		),
 		'+metawiki' => array(
