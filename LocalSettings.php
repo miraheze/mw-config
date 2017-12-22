@@ -4514,6 +4514,11 @@ $wgConf->settings = array(
 				'chatmod',
 			),
 		),
+		'+madgendersciencewiki' => array(
+			'sysop' => array(
+				'scholar',
+			),
+		),
 		'+metawiki' => array(
 			'sysop' => array(
 				'translationadmin',
@@ -5073,6 +5078,11 @@ $wgConf->settings = array(
 				'upload_by_url' => true,
 			),
 		),
+		'+madgendersciencewiki' => array(
+			'scholar' => array(
+				'editprotected' => true,
+			),
+		),
 		'+marinebiodiversitymatrixwiki' => array(
 			'member' => array(
 				'createtalk' => true,
@@ -5543,6 +5553,11 @@ $wgConf->settings = array(
 				'staff',
 				'reviewer',
 				'chatmod',
+			),
+		),
+		'+madgendersciencewiki' => array(
+			'sysop' => array(
+				'scholar',
 			),
 		),
 		'+metawiki' => array(
