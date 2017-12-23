@@ -2688,6 +2688,7 @@ $wgConf->settings = array(
 		'malaysiawiki' => true,
 		'marcoschriekwiki' => true,
 		'marinebiodiversitymatrix' => true,
+		'marioserieswikiwiki' => true,
 		'make717wiki' => true,
 		'maktabawiki' => true,
 		'medergistswiki' => true,
