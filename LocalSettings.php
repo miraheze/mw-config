@@ -1667,6 +1667,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'test1wiki' => true,
 		'reviwiki' => true,
+		'reviwikiwiki' => true,
 	),
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
