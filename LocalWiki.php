@@ -200,6 +200,16 @@ if ( $wgDBname === 'reviwikiwiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 }
 
+if ( $wgDBname === 'sau226wiki' ) {
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
+	$wgGroupPermissions['sysop']['nuke'] = false;
+	$wgGroupPermissions['bureaucrat']['managewiki'] = false;
+	$wgGroupsRemoveFromSelf['consul'][] = 'consul';
+}
+
 if ( $wgDBname === 'soundboxiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = false;
