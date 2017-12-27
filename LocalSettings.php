@@ -5490,7 +5490,6 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
-		'sau226wiki' => array('consul'),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
