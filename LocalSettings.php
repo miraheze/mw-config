@@ -6581,6 +6581,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/2/2f/UniversebuildLogo.png",
 		'utamacrosswiki' => "//$wmgUploadHostname/utamacrosswiki/c/cb/Utamacross_logo.png",
 		'valentinaprojectwiki' => "//$wmgUploadHostname//valentinaprojectwiki/9/9e/Seamly2D_logo_128x128.png",
+		'vandalismwikiwiki' => "//$wmgUploadHostname//vandalismwikiwiki/b/bc/Wiki.png",
 		'velcomwiki' => "//$wmgUploadHostname/velcomwiki/0/0f/Velcom_logo.png",
 		'vgalimentiwiki' => "//$wmgUploadHostname/vgalimentiwiki/f/f9/Vgalimenti-logo.png",
 		'viagroupiawiki' => "//$wmgUploadHostname/viagroupiawiki/2/22/ViagroupiaLogo.png",
