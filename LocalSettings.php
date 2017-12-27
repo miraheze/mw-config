@@ -4544,6 +4544,26 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'commentadmin',
 			),
+		),			
+		'+sau226wiki' => array(
+			'bureaucrat' => array(
+				'testgroup',
+				'bureaucrat',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
+				'consul',
+				'testgroup',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),			
 		),
 		'+sdiywiki' => array(
 			'sysop' => array(
@@ -5244,6 +5264,27 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+				
+		'+sau226wiki' => array(
+			'sysop' => array(
+				'nuke' => false,
+				'editinterface' => false,
+				'globalblock-whitelist' => false,
+				'abusefilter-modify-restricted' => false,
+			'bureaucrat' => array(
+				'nuke' => true,
+				'editinterface' => true,
+				'globalblock-whitelist' => true,
+			),
+			'consul' => array(
+				'abusefilter-modify-restricted' => true,
+				'editinterface' => true,
+				'read' => true,
+			),
+			'testgroup' => array(
+				'read' => true,
+			),
+		),
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderation' => true,
@@ -5449,6 +5490,7 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
+		'sau226wiki' => array('consul'),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -5623,6 +5665,21 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+sau226wiki' => array(
+			'bureaucrat' => array(
+				'testgroup',
+				'bot',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
+				'testgroup',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+		),		
 		'+sdiywiki' => array(
 			'sysop' => array(
 				'moderator',
@@ -6645,6 +6702,7 @@ $wgConf->settings = array(
 		'reviwiki' => 'Asia/Seoul',
 		'reviwbwiki' => 'Asia/Seoul',
 		'reviwikiwiki' => 'Asia/Seoul',
+		'sau226wiki' => 'Australia/Perth',
 		'shortwikiwiki' => 'Asia/Seoul',
 		'thelonsdalebattalionwiki' => 'Europe/London',
 		'webtoonwiki' => 'Asia/Seoul',
