@@ -3465,6 +3465,7 @@ $wgConf->settings = array(
 		'default' => 'bureaucrat',
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
+		'sau226wiki' => 'consul',		
 		'testwiki' => 'consul',
 	),
 
@@ -5266,11 +5267,6 @@ $wgConf->settings = array(
 		),
 				
 		'+sau226wiki' => array(
-			'sysop' => array(
-				'nuke' => false,
-				'editinterface' => false,
-				'globalblock-whitelist' => false,
-				'abusefilter-modify-restricted' => false,
 			'bureaucrat' => array(
 				'nuke' => true,
 				'editinterface' => true,
