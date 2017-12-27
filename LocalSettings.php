@@ -6971,7 +6971,7 @@ $wgConf->settings = array(
 	'wmgPrivateWiki' => array(
 		'default' => false,
 	),
-);
+),
 
 function efGetSiteParams( $conf, $wiki ) {
 	$site = null;
