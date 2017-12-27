@@ -6256,6 +6256,7 @@ $wgConf->settings = array(
 		'universebuildwiki' => "//$wmgUploadHostname/universebuildwiki/f/fd/UniversebuildFavicon.png",
 		'utamacrosswiki' => "//$wmgUploadHostname/utamacrosswiki/7/7a/Freyacon.png",
 		'valentinaprojectwiki' => "//$wmgUploadHostname//valentinaprojectwiki/9/9e/Seamly2D_logo_128x128.png",
+		'vandalismwikiwiki' => "//$wmgUploadHostname//vandalismwikiwiki/6/64/Favicon.ico",
 		'wdbwiki' => "//$wmgUploadHostname/wdbwiki/2/26/Dancing-135px.png",
 		'welcomewikiwiki' => "//$wmgUploadHostname/welcomewikiwiki/6/69/20150913_WelcomeWiki-Logo_Favicon32x32.png",
 		'webflowwiki' => "//$wmgUploadHostname/webflowwiki/6/64/Favicon.ico",
