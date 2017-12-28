@@ -5486,6 +5486,7 @@ $wgConf->settings = array(
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
+		'sau226wiki' => [ 'consul' => [ 'consul' ] ], //T2549
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
