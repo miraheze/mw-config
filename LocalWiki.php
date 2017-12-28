@@ -206,7 +206,6 @@ if ( $wgDBname === 'sau226wiki' ) {
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
 	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
 	$wgGroupPermissions['sysop']['nuke'] = false;
-	$wgGroupsRemoveFromSelf['consul'][] = 'consul';
 }
 
 if ( $wgDBname === 'soundboxiki' ) {
