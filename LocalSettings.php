@@ -3230,6 +3230,7 @@ $wgConf->settings = array(
 	'wgUseInstantCommons' => array(
 		'default' => true,
 		'amaninfowiki' => false,
+		'jcswiki' => false,
 		'pso2wiki' => false,
 		'sidemwiki' => false,
 		'thefosterswiki' => false,
