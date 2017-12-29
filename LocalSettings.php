@@ -653,6 +653,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'editor' => true,
 		),
+		'+cristianopediawiki' => array(
+			'anon' => true,
+		),		
 		'+claneuphoriawiki' => array(
 			'anon' => true,
 			'user' => true,
