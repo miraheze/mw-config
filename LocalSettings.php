@@ -5176,6 +5176,9 @@ $wgConf->settings = array(
 				'interwiki' => true,
 				'oathauth-enable' => true,
 			),
+			'translator' => array(
+				'translate' => true,
+			),
 			'translationadmin' => array(
 				'pagelang' => true,
 				'pagetranslation' => true,
