@@ -2344,6 +2344,7 @@ $wgConf->settings = array(
 		'karmazynxyz' => true,
 		'lizhongresearchwiki' => true,
 		'metawiki' => true,
+		'mpappaswiki' => true,
 		'ndwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
