@@ -5881,6 +5881,10 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
+		'+sau226wiki' => array(
+			'bureaucrat',
+			'consul',
+		),		
 		'+jayuwikiwiki' => array(
 			'editvoter',
 		),
