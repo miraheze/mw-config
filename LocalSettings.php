@@ -563,15 +563,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'aleenghawiki' => 'Database migration',
-		'ciudadciclistawiki' => 'Database migration',
-		'jacksonheightswiki' => 'Database migration',
-		'pathfinderwiki' => 'Database migration',
-		'pluspiwiki' => 'Database migration',
-		'r2wiki' => 'Database migration',
-		'sdiywiki' => 'Database migration',
-		'sentrieswiki' => 'Database migration',
-		'worldpediawiki' => 'Database migration',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
