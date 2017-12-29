@@ -417,7 +417,6 @@ $wgConf->settings = array(
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wikiescola.com.br' => 'wikiescolawiki',
 			'wiki.worlduniversityandschool.org' => 'worlduniversityandschoolwiki',
-			'www.wikiletras.tk' => 'wikiletraswiki',
 			'wikipuk.cl' => 'wikipucwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
 			'histories.wiki' => 'wishcertwiki',
@@ -6065,7 +6064,6 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => 'https://wiki.valentinaproject.org',
 		'wikiescolawiki' => 'https://wikiescola.com.br',
 		'wikikaisagawiki' => 'https://wiki.kaisaga.com',
-		'wikiletraswiki' => 'https://www.wikiletras.tk',
 		'wikipucwiki' => 'https://wikipuk.cl',
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
 		'wisdomsandboxwiki' => 'https://sandbox.wisdomwiki.org',
@@ -6878,7 +6876,6 @@ $wgConf->settings = array(
 			'wiki\.kaisaga.com',
 			'wikiescola\.com\.br',
 			'wiki\.worlduniversityandschool\.org'.
-			'www.wikiletras\.tk',
 			'wikipuk\.cl',
 			'wisdomwiki\.org',
 			'wiki\.wishcert\.com',
