@@ -5490,6 +5490,7 @@ $wgConf->settings = array(
 			'consul' => array(
 				'consul',
 			),
+		 ),	
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
