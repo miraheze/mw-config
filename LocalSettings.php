@@ -6134,7 +6134,7 @@ $wgConf->settings = array(
 		'default' => '/apple-touch-icon.png',
 		'applewikiwiki' => "//$wmgUploadHostname/applewikiwiki/8/89/Facveicon.ICO",
 		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/2/27/Jawp2ch_apple-touch-icon.png",
-		'jcswiki' => "//$wmgUploadHostname/jcswiki/2/2e/JCS-Wiki.png",
+		'jcswiki' => "//$wmgUploadHostname/jcswiki/5/5b/Jcs_app.png",
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/6/64/Favicon.ico",
 		'revitwiki' => "//$wmgUploadHostname/https://static.miraheze.org/revitwiki/4/43/Apple-touch-icon.png",
 	),
