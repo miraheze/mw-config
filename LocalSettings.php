@@ -6153,6 +6153,7 @@ $wgConf->settings = array(
 		'bdorpwiki' => 'erudite',
 		'claneuphoriawiki' => 'gamepress',
 		'corydoctorowwiki' => 'timeless',
+		'cristianopediawiki' => 'timeless',		
 		'cybercrimewiki' => 'modern',
 		'datachronwiki' => 'erudite',
 		'dtswiki' => 'metrolook',
