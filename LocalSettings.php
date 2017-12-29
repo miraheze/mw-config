@@ -4549,6 +4549,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'sysop' => array(
+				'translator',
 				'translationadmin',
 			),
 		),
@@ -5632,6 +5633,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'sysop'	=> array(
+				'translator',
 				'translationadmin',
 			),
 		),
