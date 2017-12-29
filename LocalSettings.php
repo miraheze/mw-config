@@ -5268,12 +5268,15 @@ $wgConf->settings = array(
 				
 		'+sau226wiki' => array(
 			'bureaucrat' => array(
+				'bureaucrat' => true,
 				'nuke' => true,
 				'editinterface' => true,
 				'globalblock-whitelist' => true,
 			),
 			'consul' => array(
 				'abusefilter-modify-restricted' => true,
+				'bureaucrat' => true,
+				'consul' => true,
 				'editinterface' => true,
 				'read' => true,
 			),
