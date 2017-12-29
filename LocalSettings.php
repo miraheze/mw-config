@@ -5918,6 +5918,10 @@ $wgConf->settings = array(
 			'delete',
 			'protect',
 		),
+		'sau226wiki' => array(
+			'delete',
+			'protect',
+		),
 	),
 
 	// Robot policy
