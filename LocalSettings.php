@@ -2622,6 +2622,7 @@ $wgConf->settings = array(
 		'fantasiawiki' => true,
 		'fbwikiwiki' => true,
 		'feuwiki' => true,
+		'fikcyjnatvwiki' => true,
 		'fishpercolatorwiki' => true,
 		'fmbvwiki' => true,
 		'foodsharinghamburgwiki' => true,
