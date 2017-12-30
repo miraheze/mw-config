@@ -616,11 +616,6 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
-		'+allbanks2wiki' => array(
-			'anon' => true,
-			'user' => true,
-			'sysop' => true,
-		),
 		'+antiguabarbudacalypsowiki' => array(
 			'anon' => true,
 		),
@@ -2539,7 +2534,6 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'alanpediawiki' => true,
 		'algopediawiki' => true,
-		'allbanks2wiki' => true,
 		'allthetropeswiki' => true,
 		'alternatehistorywiki' => true,
 		'alwikiwiki' => true,
@@ -4789,16 +4783,6 @@ $wgConf->settings = array(
 				'userrights' => true,
 			),
 		),
-		'+allbanks2wiki' => array(
-			'autoconfirmed' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-			'confirmed' => array(
-				'edit' => false,
-				'createpage' => false,
-			),
-		),
 		'+allthetropeswiki' => array(
 			'sysop' => array(
 				'editothersprofiles' => true,
@@ -6185,7 +6169,6 @@ $wgConf->settings = array(
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/b/be/APfavicon.png",
 		'adiaprojectwiki' => "//$wmgUploadHostname/adiaprojectwiki/9/91/Adiafavicon.png",
 		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/8/84/Rainbowstar.png",
-		'allbanks2wiki' => "//$wmgUploadHostname/allbanks2wiki/7/7f/AllBanks2Logo.png",
 		'aenasanwiki' => "//$wmgUploadHostname/aenasanwiki/e/e6/AEfav.ico",
 		'aidorupediawiki' => "//$wmgUploadHostname/aidorupediawiki/3/33/Idolsonawikiico.png",
 		'alternatehistorywiki' => "//$wmgUploadHostname/alternatehistorywiki/6/64/Favicon.ico",
@@ -6372,7 +6355,6 @@ $wgConf->settings = array(
 		'aleenghawiki' => "//$wmgUploadHostname/aleenghawiki/c/c7/Aleen-gha_d20_Logo.jpg",
 		'algopediawiki' => "//$wmgUploadHostname/algopediawiki/8/88/Algopedia-logo135px.png",
 		'alternatehistorywiki' => "//$wmgUploadHostname/alternatehistorywiki/b/bc/Wiki.png",
-		'allbanks2wiki' => "//$wmgUploadHostname/allbanks2wiki/7/7f/AllBanks2Logo.png",
 		'allthetropeswiki' => "//$wmgUploadHostname/allthetropeswiki/8/86/Logo-Square-v1-1x.png",
 		'alternatehistory' => "//$wmgUploadHostname/alternatehistorywiki/b/bc/Wiki.png",
 		'alwikiwiki' => "//$wmgUploadHostname/alwikiwiki/3/35/WikiLogo.png",
