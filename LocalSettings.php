@@ -5137,6 +5137,15 @@ $wgConf->settings = array(
 			),
 		),
 		'+metawiki' => array(
+			'abuse' => array(
+				'centralauth-lock' => true,
+				'globalblock' => true,
+				'managewiki' => true,
+				'managewiki-restricted' => true,
+				'noratelimit' => true,
+				'userrights' => true,
+				'userrights-interwiki' => true,
+			),
 			'autoconfirmed' => array(
 				'move' => true,
 				'createpage' => true,
