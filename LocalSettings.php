@@ -901,6 +901,9 @@ $wgConf->settings = array(
 			'anon' => true,
 			'user' => true,
 		),
+		'+r2wiki' => array(
+			'anon' => true,
+		),
 		'+revitwiki' => array(
 			'anon' => true,
 			'user' => true,
