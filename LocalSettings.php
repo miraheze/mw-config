@@ -4219,6 +4219,12 @@ $wgConf->settings = array(
 			'Šablonas' => NS_TEMPLATE,
 			'Šablono_aptarimas' => NS_TEMPLATE_TALK,
 		),
+		'+vandalismwikiwiki' => array(
+			'H' => NS_HELP,
+			'HT => NS_HELP_TALK,
+			'VW' => NS_PROJECT,
+			'VT' => NS_PROJECT_TALK,
+		),
 	),
 	'+wgNamespaceProtection' => array(
 		'default' => array(),
