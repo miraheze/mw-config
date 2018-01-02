@@ -2468,6 +2468,7 @@ $wgConf->settings = array(
 		'ircwiki' => true,
 		'jayuwikiwiki' => true,
 		'macfan4000wiki' => true,
+		'mc2wiki' => true,
 		'metawiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
