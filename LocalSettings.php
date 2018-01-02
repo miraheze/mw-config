@@ -4597,6 +4597,7 @@ $wgConf->settings = array(
 				'consul',
 				'testgroup',
 				'sysop',
+				'authenable',
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
@@ -5321,6 +5322,12 @@ $wgConf->settings = array(
 			'testgroup' => array(
 				'read' => true,
 			),
+			'authenable' => array(
+				'oathauth-enable' => true,
+			),
+			'sysadmin' => array(
+				'userrights' => true,
+			),			
 		),
 		'+sdiywiki' => array(
 			'sysop' => array(
@@ -5712,6 +5719,7 @@ $wgConf->settings = array(
 				'bureaucrat',
 				'testgroup',
 				'sysop',
+				'authenable',
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
