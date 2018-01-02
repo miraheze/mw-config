@@ -5955,6 +5955,10 @@ $wgConf->settings = array(
 			'delete',
 			'protect',
 		),
+		'testwiki' => array(
+			'delete',
+			'protect',
+		),
 	),
 
 	// Robot policy
