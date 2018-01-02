@@ -2673,6 +2673,7 @@ $wgConf->settings = array(
 		'infectopedwiki' => true,
 		'innovwikiprotowiki' => true,
 		'integrywiki' => true,
+		'ipolywiki' => true,
 		'ircwiki' => true,
 		'islamwissenschaftwiki' => true,
 		'isvwiki' => true,
