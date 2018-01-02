@@ -201,6 +201,7 @@ if ( $wgDBname === 'reviwikiwiki' ) {
 }
 
 if ( $wgDBname === 'sau226wiki' ) {
+	$wgGroupPermissions['*']['oathauth-enable'] = false;	
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
