@@ -6398,6 +6398,7 @@ $wgConf->settings = array(
 		'bakufuwiki' => "//$wmgUploadHostname/bakufuwiki/b/bc/Wiki.png",
 		'ballaratpubswiki' => "//$wmgUploadHostname/ballaratpubswiki/4/42/Hotels_of_Ballarat_logo.jpg",
 		'bchwiki' => "//$wmgUploadHostname/bchwiki/c/c0/Logo_135.png",
+		'bchplswiki' => "//$wmgUploadHostname/bchplswiki/5/56/Bitcoin-cash-wiki-logo.png",
 		'bdorpwiki' => "//$wmgUploadHostname/bdorpwiki/2/22/Main_page.PNG",
 		'beatstationwiki' => "//$wmgUploadHostname/beatstationwiki/d/da/Wiki_logo2.png",
 		'beminwiki' => "//$wmgUploadHostname/beminwiki/1/11/Beminpedia_logo.png",
