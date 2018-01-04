@@ -3257,6 +3257,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'doinwiki' => false,
 	),
+	'wgVerifyMimeType' => array(
+		'default' => true,
+		'jcswiki' => false,
+	),
 
 	// Flow
 	'wmgFlowDefaultNamespaces' => array(
