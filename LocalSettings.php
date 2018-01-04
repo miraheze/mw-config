@@ -6238,6 +6238,7 @@ $wgConf->settings = array(
 		'cosiadventurewiki' => "//$wmgUploadHostname/cosiadventurewiki/3/3b/Wiki_logo.png",
 		'crankipediawiki' => "//$wmgUploadHostname/crankipediawiki/4/4c/Crankilogo.png",
 		'cssandjsschoolboardwiki' => '//upload.wikimedia.org/wikipedia/commons/2/2b/Page_css_48.png',
+ 		'cristianopediawiki' => "//$wmgUploadHostname/cristianopediawiki/2/23/Biblia_y_cruz.svg",		
 		'datachronwiki' => "//$wmgUploadHostname/datachronwiki/f/f3/1408002974_WS.png",
 		'diavwiki' => "//$wmgUploadHostname/diavwiki/6/64/Favicon.ico",
 		'dditecwiki' => "//$wmgUploadHostname/dditecwiki/8/87/Ddu_logo.png",
