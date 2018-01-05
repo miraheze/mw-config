@@ -176,6 +176,8 @@ define( 'NS_WALKTHROUGH', 1750);
 define( 'NS_WALKTHROUGH_TALK', 1751);
 define( 'NS_STAFF', 1752);
 define( 'NS_STAFF_TALK', 1753);
+define( 'NS_TEMA', 1754);
+define( 'NS_TEMA_TALK', 1755);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1891,6 +1893,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'bttestwiki' => true,
 		'calexitwiki' => true,
+		'cristianopediawiki' => true,
 		'test1wiki' => true,
 		'inazumaelevenwiki' => true,
 		'ircwiki' => true,
@@ -3855,6 +3858,10 @@ $wgConf->settings = array(
 		'claneuphoriawiki' => array(
 			NS_CLAN => 'Clan',
 			NS_CLAN_TALK => 'Clan_talk',
+		),
+		'cristianopediawiki' => array(
+			NS_TEMA => 'Tema',
+			NS_TEMA_TALK => 'Tema discusión',
 		),
 		'developmentwiki' => array(
 			NS_OFFICIAL => 'Official',
