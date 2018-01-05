@@ -6398,6 +6398,7 @@ $wgConf->settings = array(
 		'adiaprojectwiki' => "//$wmgUploadHostname/adiaprojectwiki/8/8b/Adialogo.png",
 		'adnovumwiki' => "//$wmgUploadHostname/adnovumwiki/f/fa/AdnovumRPtemplogo.png",
 		'aenasanwiki' => "//$wmgUploadHostname/aenasanwiki/f/f1/AEicon1.png",
+		'aesbasewiki' => "//$wmgUploadHostname/aesbasewiki/1/15/IconAESBASE.jpg",
 		'aibowiki' => "//$wmgUploadHostname/aibowiki/b/bd/Sonyaibologo.png",
 		'airwiki' => "//$wmgUploadHostname/airwiki/8/8e/Logo-scadta-133x133.gif",
 		'aktposwiki' => "//$wmgUploadHostname/aktposwiki/3/33/Logo-amafuwa.png",
