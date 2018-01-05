@@ -6501,6 +6501,7 @@ $wgConf->settings = array(
 		'grdarchivewiki' => "//$wmgUploadHostname/grdarchivewiki/b/be/Greater_Arms_of_Delvera.png",
 		'grottocenterwiki' => "//$wmgUploadHostname/grottocenterwiki/a/ac/Logo_grottocenter.png",
 		'gugacastwiki' => "//$wmgUploadHostname/gugacastwiki/7/79/Gugacast_Logo_135x135.png",
+		'guiaslocaiswiki' => "//$wmgUploadHostname/guiaslocaiswiki/d/d7/Wiki.jpeg",
 		'gundambiowiki' => "//$wmgUploadHostname/gundambiowiki/b/bc/Wiki.png",
 		'hamfemwiki' => "//$wmgUploadHostname/hamfemwiki/3/33/Hamfem-Logo1.jpg",
 		'hantpediawiki' => "//$wmgUploadHostname/hantpediawiki/b/bc/Wiki.png",
