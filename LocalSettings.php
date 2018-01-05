@@ -843,6 +843,12 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+ncpprcwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+nenawikiwiki' => array(
 			'anon' => true,
 			'user' => true,
