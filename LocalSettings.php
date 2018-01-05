@@ -845,6 +845,7 @@ $wgConf->settings = array(
 			'anon' => true,
 			'user' => true,
 			'editor' => true,
+			'sysop' => true,
 		),
 		'+nenawikiwiki' => array(
 			'anon' => true,
