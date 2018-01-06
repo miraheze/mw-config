@@ -7177,23 +7177,23 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 10;
-$snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
+$wgMajorSiteNoticeID = 11;
+$snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Miraheze is currently performing an update to <a href="//mediawiki.org/wiki/MediaWiki_1.30">MediaWiki 1.30</a>. At this time, all wikis are in <b>read-only<b> mode. If you have any questions regarding this upgrade, please <a href="//meta.miraheze.org/wiki/Help_center">contact us</a>. </p></td>
+		<td>Due to <a href="https://meltdownattack.com/">critical security vulnerabilities</a> outside of our control, Miraheze's server host, RamNode, will be shutting down our servers at approximately 22:00 UTC to perform updates released to mitigate the security vulnerabilities. Miraheze wikis will enter read-only mode at 21:30 UTC in preparation of the downtime. No exact ETA on when we'll be back, but it shouldn't be too long. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
 		</tr></tbody></table>
 EOF;
 	 }
 	return true;
 }
-*/
+
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
