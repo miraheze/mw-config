@@ -564,7 +564,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => "ReadOnly per sitenotice.",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
