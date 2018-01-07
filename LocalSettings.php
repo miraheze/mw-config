@@ -7181,7 +7181,7 @@ $wgMajorSiteNoticeID = 11;
 $snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
@@ -7193,15 +7193,15 @@ EOF;
 	 }
 	return true;
 }
-
+*/
 // Hook so that Terms of Service is included in footer
-/*$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
 	$tpl->set( 'termsofservice', $sk->footerLink( 'termsofservice', 'termsofservicepage' ) );
 	$tpl->data['footerlinks']['places'][] = 'termsofservice';
 	return true;
 }
-*/
+
 // Include other configuration files
 require_once( "/srv/mediawiki/config/Database.php" );
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
