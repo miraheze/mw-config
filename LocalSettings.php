@@ -614,6 +614,12 @@ $wgConf->settings = array(
 		'+adnovumwiki' => array(
 			'anon' => true,
 		),
+		'+aesbasewiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+aleenghawiki' => array(
 			'anon' => true,
 			'user' => true,
