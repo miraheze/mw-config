@@ -6480,6 +6480,7 @@ $wgConf->settings = array(
 		'dcrzonewiki' => "//$wmgUploadHostname/dcrzonewiki/4/4b/Wikilogo.png",
 		'dditecwiki' => "//$wmgUploadHostname/dditecwiki/8/87/Ddu_logo.png",
 		'decisorwiki' => "//$wmgUploadHostname/decisorwiki/8/87/DECISOR135x135.png",
+		'developingspacewiki' => "//$wmgUploadHostname/developingspacewiki/f/f7/Entireverse_wiki.png",
 		'dicficwiki' => "//$wmgUploadHostname/dicficwiki/b/b1/Dicfic-logo.png",
 		'diggywikipolskawiki' => "//$wmgUploadHostname/diggywikipolskawiki/8/81/Logodiggy.png",
 		'doinwiki' => "//$wmgUploadHostname/doinwiki/6/60/Wiki_Logo.png",
