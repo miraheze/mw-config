@@ -6284,6 +6284,7 @@ $wgConf->settings = array(
 		'girlsfrontlinewiki' => "//$wmgUploadHostname/girlsfrontlinewiki/2/2d/GirlsFrontline_logo-16px.jpg",
 		'grandtheftautowiki' => "//$wmgUploadHostname/grandtheftautowiki/c/c7/GrandTheftAutoFavicon.png",
 		'grottocenterwiki' => "//$wmgUploadHostname/grottocenterwiki/6/64/Favicon.ico",
+		'guiaslocaiswiki' => "//$wmgUploadHostname/guiaslocaiswiki/d/d7/Wiki.jpeg",
 		'hamfemwiki' => "//$wmgUploadHostname/hamfemwiki/c/c5/Favicon-16x16.png",
 		'hktransportpediawiki' => "//$wmgUploadHostname/hktransportpediawiki/e/ee/Favicon-20170319060448889.ico",
 		'houseofettlingarfreyuwiki' => "//$wmgUploadHostname/houseofettlingarfreyuwiki/7/70/Shield_Arms_House_Ettlingar_Freyu.png",
