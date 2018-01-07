@@ -564,7 +564,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => "ReadOnly per sitenotice.",
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7195,13 +7195,13 @@ EOF;
 }
 
 // Hook so that Terms of Service is included in footer
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
+/*$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
 	$tpl->set( 'termsofservice', $sk->footerLink( 'termsofservice', 'termsofservicepage' ) );
 	$tpl->data['footerlinks']['places'][] = 'termsofservice';
 	return true;
 }
-
+*/
 // Include other configuration files
 require_once( "/srv/mediawiki/config/Database.php" );
 require_once( "/srv/mediawiki/config/GlobalLogging.php" );
