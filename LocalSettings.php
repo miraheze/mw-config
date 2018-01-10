@@ -2873,6 +2873,7 @@ $wgConf->settings = array(
 		'vicprojectwiki' => true,
 		'victorianrpwiki' => true,
 		'videogameswiki' => true,
+		'vilemaximwiki' => true,
 		'votingwiki' => true,
 		'wabcwiki' => true,
 		'webflowwiki' => true,
