@@ -1826,7 +1826,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'nenawikiwiki' => true,
 		'prfmukwiki' => true,
-		'sdiywiki' => true,
+		'sdiywiki' => false,
 		'test1wiki' => true,
 	),
 	'wmgUseModernSkylight' => array(
