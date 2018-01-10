@@ -6478,6 +6478,7 @@ $wgConf->settings = array(
 		'cvmlabwiki' => "//$wmgUploadHostname/cvmlabwiki/3/3b/Wiki_logo.png",
 		'czechpolicywiki' => "//$wmgUploadHostname/czechpolicywiki/2/20/Plain_logo.png",
 		'dakhilcommunitywiki' => "//$wmgUploadHostname/dakhilcommunitywiki/4/49/Myfile.png",
+		'dariawikiwiki' => "//$wmgUploadHostname/dariawikiwiki/e/e9/Darialogo1.jpg",
 		'datachronwiki' => "//$wmgUploadHostname/datachronwiki/f/f3/1408002974_WS.png",
 		'dcrzonewiki' => "//$wmgUploadHostname/dcrzonewiki/4/4b/Wikilogo.png",
 		'dditecwiki' => "//$wmgUploadHostname/dditecwiki/8/87/Ddu_logo.png",
