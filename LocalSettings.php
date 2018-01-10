@@ -4268,7 +4268,7 @@ $wgConf->settings = array(
 		'+thelonsdalebattalionwiki' => array(
 			NS_GLOSSARY => true,
 		),
-		'+tmewiki' => array (
+		'+tmewiki' => array(
 			NS_CALL_OF_DUTY => true,
 			NS_MINECRAFT => true,
 			NS_SUPER_MARIO_LAND_2 => true,
