@@ -2582,6 +2582,7 @@ $wgConf->settings = array(
 		'ayurbookswiki' => true,
 		'atheneumwiki' => true,
 		'attackontitanwiki' => true,
+		'balcanopediascharlatanicawiki' => true,
 		'bchwiki' => true,
 		'bgowiki' => true,
 		'betapurplewiki' => true,
