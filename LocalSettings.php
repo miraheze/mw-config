@@ -1283,6 +1283,7 @@ $wgConf->settings = array(
 		'recentiawiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
+		'shortwikiwiki' => true,
 		'studynotekrwiki' => true,
 		'viagroupiawiki' => true,
 		'wikapediawiki' => true,
@@ -1663,6 +1664,7 @@ $wgConf->settings = array(
 		'magnaorbiswiki' => true,
 		'pgnwikiwiki' => true,
 		'qmswiki' => true,
+		'shortwikiwiki' => true,
 		'sthomaspriwiki' => true,
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
@@ -1724,6 +1726,7 @@ $wgConf->settings = array(
 		'marcoschriekwiki' => true,
 		'raymanspeedrunwiki' => true,
 		'rpgbrigadewiki' => true,
+		'shortwikiwiki' => true,
 		'sysexwiki' => true,
 	),
 	'wmgUseMagicNoCache' => array(
@@ -3771,6 +3774,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
+		'shortwikiwiki' => true,
 		'showmedicinawiki' => true,
 	),
 
