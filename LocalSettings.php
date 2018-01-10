@@ -4221,7 +4221,7 @@ $wgConf->settings = array(
 		),
 		'+vandalismwikiwiki' => array(
 			'H' => NS_HELP,
-			'HT => NS_HELP_TALK,
+			'HT' => NS_HELP_TALK,
 			'VW' => NS_PROJECT,
 			'VT' => NS_PROJECT_TALK,
 		),
