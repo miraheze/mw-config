@@ -6976,6 +6976,9 @@ $wgConf->settings = array(
 		'+coldbloodedwiki' => array(
 			NS_PROJECT => true,
 		),
+		'+cristianopediawiki' => array(
+			NS_TEMA => true,
+		),		
 		'+espiralwiki' => array(
 			NS_PROJECT => true,
 		),
