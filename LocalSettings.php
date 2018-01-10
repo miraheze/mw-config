@@ -3464,8 +3464,9 @@ $wgConf->settings = array(
 	'+wgUrlProtocols' => array(
 		'default' => array(),
 		// file protocol only allowed on private wikis
-		'gzewiki' => array ( "file://" ),
 		'bchwiki' => array ( "file://" ),
+		'gzewiki' => array ( "file://" ),
+		'kaiwiki' => array ( "file://" ),
 	),
 
 	// Mail
