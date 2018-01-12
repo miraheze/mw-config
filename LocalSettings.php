@@ -6799,6 +6799,7 @@ $wgConf->settings = array(
 		'doraemonpediawiki' => 'Asia/Taipei',
 		'fbwikiwiki' => 'Asia/Seoul',
 		'hantpediawiki' => 'Asia/Taipei',
+		'kaiwiki' => 'Pacific/Honolulu',
 		'kstartupswiki' => 'Asia/Seoul',
 		'libertywiki' => 'Asia/Seoul',
 		'lunfengwiki' => 'Asia/Taipei',
