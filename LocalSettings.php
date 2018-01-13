@@ -3630,6 +3630,7 @@ $wgConf->settings = array(
 			'reviwikiwiki',
 			'sdiywiki',
 			'softwarecrisiswiki',
+			'sonwiki',
 			'spaceechowiki',
 			'spiralwiki',
 			'lothuialethwiki',
