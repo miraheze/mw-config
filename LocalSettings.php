@@ -3042,6 +3042,7 @@ $wgConf->settings = array(
 	'wmgUseYouTube' => array(
 		'default' => false,
 		'1209wiki' => true,
+		'aesbasewiki' => true,
 		'airwiki' => true,
 		'alanpediawiki' => true,
 		'allthetropeswiki' => true,
