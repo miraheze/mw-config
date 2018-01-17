@@ -6681,6 +6681,7 @@ $wgConf->settings = array(
 		'ontariobrasswiki' => "//$wmgUploadHostname/ontariobrasswiki/0/09/Ontariobrass.png",
 		'openkorebrasilwikiwiki' => "//$wmgUploadHostname/openkorebrasilwikiwiki/3/35/WikiLogo.png",
 		'openpokewikiwiki' => "//$wmgUploadHostname/openpokewikiwiki/a/a0/Openpokewiki-logo.svg",
+		'ostravawiki' => "//$wmgUploadHostname/ostravawiki/c/ca/Os.png", 
 		'othermwiki' => "//$wmgUploadHostname/othermwiki/c/c9/Logo.png",
 		'overonwiki' => "//$wmgUploadHostname/overonwiki/2/2e/Overon_Logo.svg",
 		'oyeavdelingenwiki' => "//$wmgUploadHostname/oyeavdelingenwiki/7/7b/OUS_Logo.png",
@@ -6828,6 +6829,7 @@ $wgConf->settings = array(
 		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
 		'zendariwiki' => "//$wmgUploadHostname/zendariwiki/9/91/Zendari_Logo_4by4.png",
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
+		
 	),
 
 	// TemplateSandbox
