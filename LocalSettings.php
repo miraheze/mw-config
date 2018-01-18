@@ -7151,7 +7151,7 @@ $wgConf->settings = array(
 			'Special:CreateAccount',
 		),
 	),
-	
+
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
 		'default' => false,
