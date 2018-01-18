@@ -565,17 +565,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'dariawikiwiki' => "Database migration",
-		'viagroupiawiki' => "Database migration",
-		'truecapitalistwiki' => "Database migration",
-		'emulationwiki' => "Database migration",
-		'cpiwiki' => "Database migration",
-		'ylscwiki' => "Database migration",
-		'hirapediawiki' => "Database migration",
-		'whentheycrywiki' => "Database migration",
-		'utamacrosswiki' => "Database migration",
-		'sumroletaericwiki' => "Database migration",
-
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
