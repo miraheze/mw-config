@@ -373,7 +373,8 @@ $wgWhitelistRead =
 		"Special:UserLogin",
 		"Special:UserLogout",
 		"Special:CreateAccount",
-		"Spezial:Benutzerkonto anlegen"
+		"Spezial:Benutzerkonto anlegen",
+		"特別:アカウント作成"
 );
 
 // Additional wgReadWhitelist changes
