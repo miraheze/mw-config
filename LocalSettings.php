@@ -7156,6 +7156,14 @@ $wgConf->settings = array(
 		'wisdomsandboxwiki' => 'freenodeChat',
 	),
 
+	// WhitelistRead for private wikis
+	'+wgWhitelistRead' => array(
+		'default' => array(),
+		'+jawptestwiki' => array(
+			'Special:CreateAccount',
+		),
+	),
+
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
 		'default' => false,
