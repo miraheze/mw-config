@@ -6841,6 +6841,7 @@ $wgConf->settings = array(
 		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
 		'zendariwiki' => "//$wmgUploadHostname/zendariwiki/9/91/Zendari_Logo_4by4.png",
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
+		'zhdelwiki' => "//$wmgUploadHostname/zhdelwiki/b/b8/Icono_archivo_borrar.png",
 		
 	),
 
