@@ -3116,6 +3116,7 @@ $wgConf->settings = array(
 		'prfmukwiki' => true,
 		'priyowiki' => true,
 		'puzzlewiki' => true,
+		'pwikiwiki' => true,
 		'rpgbrigadewiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
