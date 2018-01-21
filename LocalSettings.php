@@ -1488,6 +1488,11 @@ $wgConf->settings = array(
 		'pruebawiki' => true,
 		'tutorwiki' => true,
 	),
+	'wmgUseElectronPdfService' => array(
+		'default' => false,
+		'jcswiki' => true,
+		'test1wiki' => true,
+	),
 	'wmgUseErudite' => array(
 		'default' => false,
 		'bdorpwiki' => true,

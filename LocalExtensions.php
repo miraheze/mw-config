@@ -178,6 +178,10 @@ if ( $wmgUseEducationProgram ) {
     wfLoadExtension( 'EducationProgram' );
 }
 
+if ( $wmgUseElectronPdfService ) {
+    wfLoadExtension( 'ElectronPdfService' );
+}
+
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }

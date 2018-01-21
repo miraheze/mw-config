@@ -43,6 +43,7 @@ $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
 $IP/extensions/Editcount/extension.json
 $IP/extensions/EducationProgram/extension.json
+$IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php
 $IP/extensions/FeaturedFeeds/extension.json
