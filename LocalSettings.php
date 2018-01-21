@@ -1822,6 +1822,7 @@ $wgConf->settings = array(
 		'applewikiwiki'=> false,
 		'ganeshawiki' => false,
 		'izanagiwiki' => false,
+		'jawptestwiki' => false,
 		'macfan4000wiki' => false,
 		'ndwiki' => false,
 		'permanentfuturelabwiki' => false,
