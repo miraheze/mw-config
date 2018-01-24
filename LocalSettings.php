@@ -568,7 +568,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => 'Our server host is performing hardware maintenance.',
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
