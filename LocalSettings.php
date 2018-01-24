@@ -817,6 +817,12 @@ $wgConf->settings = array(
 		'+kl6fwiki' => array(
 			'anon' => true,
 		),
+		'+kunwokwiki' => array(
+   			'anon' => true, 
+   			'user' => true,   
+   			'editor' => true, 
+   			'sysop' => true,   
+		),
 		'+lexiquewiki' => array(
 			'anon' => true,
 		),
