@@ -1870,6 +1870,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
+		'aesbasewiki' => true,
 		'aerosswiki' => true,
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
