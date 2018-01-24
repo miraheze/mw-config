@@ -2828,6 +2828,7 @@ $wgConf->settings = array(
 		'pfsolutionswiki' => true,
 		'pgnwikiwiki' => true,
 		'plasticssongcontestwiki' => true,
+		'plnonbinarywiki' => true,
 		'pqwiki' => true,
 		'podpediawiki' => true,
 		'politicswiki' => true,
