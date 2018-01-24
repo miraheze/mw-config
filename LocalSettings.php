@@ -2405,6 +2405,7 @@ $wgConf->settings = array(
 		'priyowiki' => true,
 		'programmingreferencewiki' => true,
 		'proxybotwiki' => true,
+		'pwikiwiki' => true,
 		'raspberrywiki' => true,
 		'reviwiki' => true,
 		'reviwikiwiki' => true,
