@@ -2293,6 +2293,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'test1wiki' => true,
 		'idtestwiki' => true,
+		'jawptestwiki' => true,
 		'lfwikiwiki' => true,
 		'nationstateswiki' => true,
 		'podpediawiki' => true,
