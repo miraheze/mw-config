@@ -4513,6 +4513,9 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_USER => true,
 		),
+		'+thegreatwarwiki' => array(
+			NS_MAIN => true,
+		),
 		'+tmewiki' => array(
 			NS_MAIN => true,
 			NS_USER => true,
