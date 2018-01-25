@@ -1018,6 +1018,12 @@ $wgConf->settings = array(
 		'+turkcesozlukwiki' => array(
 			'anon' => true,
 		),
+		'+ubrwikiwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+utamacrosswiki' => array(
 			'anon' => true,
 		),
