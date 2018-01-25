@@ -1071,6 +1071,7 @@ $wgConf->settings = array(
 
 	'wgAllowSlowParserFunctions' => array(
 		'default' => false,
+		'cristianopediawiki' => true,
 		'elarawiki' => true,
 		'trexwiki' => true,
 	),
@@ -1726,6 +1727,7 @@ $wgConf->settings = array(
 		'bpwiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
+		'cristianopediawiki' => true,
 		'madgendersciencewiki' => true,
 		'test1wiki' => true,
 		'sidemwiki' => true,
