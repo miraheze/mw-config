@@ -824,6 +824,9 @@ $wgConf->settings = array(
    			'editor' => true, 
    			'sysop' => true,   
 		),
+		'+lcars47wiki' => array(
+			'anon' => true,
+		),		
 		'+lexiquewiki' => array(
 			'anon' => true,
 		),
