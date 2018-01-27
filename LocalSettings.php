@@ -1753,6 +1753,7 @@ $wgConf->settings = array(
 		'rpgbrigadewiki' => true,
 		'shortwikiwiki' => true,
 		'sysexwiki' => true,
+		'teatraywiki' => true,
 	),
 	'wmgUseMagicNoCache' => array(
 		'default' => false,
@@ -2435,6 +2436,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 		'sysexwiki' => true,
+		'teatraywiki' => true,
 		'tmewiki' => true,
 		'trexwiki' => true,
 		'touhouenginewiki' => true,
