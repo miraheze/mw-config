@@ -159,6 +159,10 @@ if ( $wgDBname === 'kstartupswiki' ) {
 	$wgGroupPermissions['user']['createpage'] = false;
 }
 
+if ( $wgDBname === 'lcars47wiki' ) {
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+}
+
 if ( $wgDBname === 'metawiki' ) {
 	$wgGroupPermissions['user']['torunblocked'] = false;
 	$wgGroupPermissions['*']['translate'] = false;
