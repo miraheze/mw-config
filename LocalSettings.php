@@ -1077,6 +1077,7 @@ $wgConf->settings = array(
 
 	'wgAllowSlowParserFunctions' => array(
 		'default' => false,
+		'cristianopediawiki' => true,
 		'elarawiki' => true,
 		'trexwiki' => true,
 	),
@@ -1732,6 +1733,7 @@ $wgConf->settings = array(
 		'bpwiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
+		'cristianopediawiki' => true,
 		'madgendersciencewiki' => true,
 		'test1wiki' => true,
 		'sidemwiki' => true,
@@ -6377,6 +6379,7 @@ $wgConf->settings = array(
 		'cdcwiki' => "//$wmgUploadHostname/cdcwiki/c/c3/Cd_ts_button_24.png",
 		'changemyorgwiki' => "//$wmgUploadHostname/changemyorgwiki/6/64/Favicon.ico",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
+		'cristianopediawiki' => "//$wmgUploadHostname/cristianopediawiki/2/23/Biblia_y_cruz.svg",
 		'claneuphoriawiki' => "//$wmgUploadHostname/claneuphoriawiki/6/64/Favicon.ico",
 		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/8/8b/CW_favicon.ico",
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/6/64/Favicon.ico",
