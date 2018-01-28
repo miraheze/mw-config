@@ -50,7 +50,6 @@ $wgLBFactoryConf = array(
 		'miraewiki' => 'c2',
 		'musicarchivewiki' => 'c2',
 		'nonbinarywiki' => 'c2',
-		'omnipediawiki' => 'c2',
 		'ourmxfestwiki' => 'c2',
 		'ordiswiki' => 'c2',
 		'pathfinderwiki' => 'c2',
