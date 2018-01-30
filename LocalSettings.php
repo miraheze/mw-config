@@ -1471,6 +1471,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'calexitwiki' => true,
 		'poserdazfreebieswiki' => true,
+		'showroomwiki' => true,
 		'sthomaspriwiki' => true,
 		'test1wiki' => true,
 		'tmewiki' => true,
