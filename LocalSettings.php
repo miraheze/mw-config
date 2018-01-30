@@ -3195,6 +3195,7 @@ $wgConf->settings = array(
 	// Allow External Images
 	'wgAllowExternalImages' => array(
 		'default' => false,
+		'amicitiawiki' => true,
 		'magezwiki' => true,
 		'magnaversewiki' => true,
 		'mikrodevwiki' => true,
