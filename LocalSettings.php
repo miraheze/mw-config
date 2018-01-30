@@ -3391,6 +3391,14 @@ $wgConf->settings = array(
 	'wgUseGlobalSiteCssJs' => array(
 		'default' => false,
 	),
+	
+	//GlobalUserPage
+	'wgGlobalUserPageAPIUrl' => array(
+		'default' => "https://meta.miraheze.org",
+	),
+	'wgGlobalUserPageDBname' => array(
+		'default' => 'metawiki',
+	),
 
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => array(
