@@ -393,7 +393,6 @@ $wgConf->settings = array(
 			'speleo.wiki' => 'speleowiki',
 			'spiral.wiki' => 'spiralwiki',
 			'takethatwiki.com' => 'takethatwikiwiki',
-			'template.wiki' => 'templatewiki',
 			'wiki.teessidehackspace.org.uk' => 'teessidehackspacewiki',
 			'thelonsdalebattalion.co.uk' => 'thelonsdalebattalionwiki',
 			'wikibase.revi.wiki' => 'reviwbwiki',
