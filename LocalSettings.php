@@ -2566,6 +2566,7 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
+		'templatewiki' => true,		
 		'testwiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyoghoulwiki' => true,
