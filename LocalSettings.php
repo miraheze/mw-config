@@ -570,7 +570,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'testwiki' => 'Database maintenance is ongoing until 18:50 UTC.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7370,18 +7369,6 @@ EOF;
 	return true;
 }
 */
-
-if ( $wgDBname == 'testwiki' ) { 
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
-	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
-			$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 18:25 UTC until approx. 18:50 UTC. During this time the wiki will be in read-only mode. Please save your edits before 18:25 UTC!</td>
-			</tr></tbody></table>
-EOF;
-		return true;
-	}
-}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
