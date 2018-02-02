@@ -98,6 +98,9 @@ $wgLBFactoryConf = array(
 		'c2' => array(
 			'db3' => 1,
 		),
+		'c3' => array(
+			'db4' => 1,
+		),
 	),
 	'serverTemplate' => array(
 		'dbname' => $wgDBname,
@@ -108,6 +111,7 @@ $wgLBFactoryConf = array(
 	'hostsByName' => array(
 		'db2' => '81.4.125.112',
 		'db3' => '81.4.127.157',
+		'db4' => '62.212.89.24',
 	),
 	'externalLoads' => array(
 		'echo' => array(
@@ -118,5 +122,6 @@ $wgLBFactoryConf = array(
 	//	'DEFAULT' => '',
 	//	'c1' => 'Maintenance ongoing on the database server.',
 	//	'c2' => 'To avoid data loss, this wiki is in read-only mode.',
+	//	'c3' => 'Maintenance ongoing on the database server.',
 	),
 );
