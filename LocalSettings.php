@@ -570,6 +570,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'testwiki' => 'Database maintenance is ongoing until 18:50 UTC.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
