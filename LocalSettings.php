@@ -3055,7 +3055,6 @@ $wgConf->settings = array(
 		'reviwbwiki' => true,
 		'test1wiki' => true,
 		'vukufwiki' => true,
-		'zendariwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
