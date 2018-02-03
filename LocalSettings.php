@@ -7537,14 +7537,18 @@ EOF;
 }
 */
 
-$dbsForReadOnlyDb4Transfer = array( );
+$dbsForReadOnlyDb4Transfer = array(
+	'worlduniversityandschoolwiki',
+	'tmewiki',
+	'vandalwiki'
+);
 
 if ( in_array( $wgDBname, $dbsForReadOnlyDb4Transfer ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Miraheze will perform database maintenance on this wiki, from 22:20 UTC until approx. 22:40 UTC. During this time the wiki will be in read-only mode. Please save your edits before 22:20 UTC!</td>
+		<td>Miraheze will perform database maintenance on this wiki, from 23:05 UTC until approx. 23:25 UTC. During this time the wiki will be in read-only mode. Please save your edits before 23:05 UTC!</td>
 		</tr></tbody></table>
 EOF;
 		return true;
