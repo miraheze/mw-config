@@ -5,6 +5,8 @@ php:
   - 5.6
   - 7
 script:
+  # PHP Version
+  - php --version
   # Check php script syntax
   - bash .travis.phplint.sh
 
