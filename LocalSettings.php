@@ -1084,6 +1084,10 @@ $wgConf->settings = array(
 		),
 	),
 
+	'$wgEnableScaryTranscluding' => array(
+		 	'templatewiki' => true,
+	),	
+	
 	'wgPFEnableStringFunctions' => array(
 		'default' => false,
 		'marcoschriekwiki' => true,
