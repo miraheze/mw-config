@@ -7537,9 +7537,7 @@ EOF;
 }
 */
 
-$dbsForReadOnlyDb4Transfer = array(
-	'metawiki',
-);
+$dbsForReadOnlyDb4Transfer = array( );
 
 if ( in_array( $wgDBname, $dbsForReadOnlyDb4Transfer ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
@@ -7552,7 +7550,7 @@ EOF;
 		return true;
 	}
 	
-	$wgReadOnly = 'Maintenance ongoing on the database server.';
+	// $wgReadOnly = 'Maintenance ongoing on the database server.';
 }
 
 // Hook so that Terms of Service is included in footer
