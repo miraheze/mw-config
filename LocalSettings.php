@@ -1580,6 +1580,7 @@ $wgConf->settings = array(
 		'gepacobiodivwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'grandtheftautowiki' => true,
+		'infectopedwiki' => true,
 		'ircwiki' => true,
 		'kbrprojectwiki' => true,
 		'korachwiki' => true,
@@ -3261,6 +3262,23 @@ $wgConf->settings = array(
 				'quality' => 1,
 				'levels' => 2,
 				'pristine' => 3,
+			),
+		),
+		'infectopedwiki' => array(
+			'accuracy' => array( 
+				'levels' => 3, 
+				'quality' => 2, 
+				'pristine' => 4,
+			),
+			'depth' => array( 
+				'levels' => 3, 
+				'quality' => 2, 
+				'pristine' => 4,
+			),
+			'tone' => array( 
+				'levels' => 3, 
+				'quality' => 1, 
+				'pristine' => 4,
 			),
 		),
 		'isvwiki' => array(
