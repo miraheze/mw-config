@@ -7519,7 +7519,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 12;
+$wgMajorSiteNoticeID = 13;
 $snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
@@ -7554,7 +7554,7 @@ EOF;
 		return true;
 	}
 	
-	// $wgReadOnly = 'Maintenance ongoing on the database server.';
+	$wgReadOnly = 'Maintenance ongoing on the database server.';
 }
 
 // Hook so that Terms of Service is included in footer
