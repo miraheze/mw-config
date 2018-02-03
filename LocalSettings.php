@@ -178,6 +178,8 @@ define( 'NS_STAFF', 1752);
 define( 'NS_STAFF_TALK', 1753);
 define( 'NS_TEMA', 1754);
 define( 'NS_TEMA_TALK', 1755);
+define( 'NS_PAGE', 1756);
+define( 'NS_PAGE_TALK', 1757);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1084,6 +1086,7 @@ $wgConf->settings = array(
 		'cristianopediawiki' => true,
 		'elarawiki' => true,
 		'trexwiki' => true,
+		'wiki1776wiki' => true,
 	),
 	// Dormancy policy && RC stuff
 	'wgRCMaxAge' => array(
@@ -1647,6 +1650,7 @@ $wgConf->settings = array(
 		'shortwikiwiki' => true,
 		'test1wiki' => true,
 		'unionnorteamericanawiki' => true,
+		'wiki1776wiki' => true,
 	),
 	'wmgUseGroupsSidebar' => array(
 		'default' => false,
@@ -1716,6 +1720,7 @@ $wgConf->settings = array(
 		'vandalismwikiwiki' => true,
 		'victorianrpwiki' => true,
 		'whentheycrywiki' => true,
+		'wiki1776wiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseJavascriptSlideshow' => array(
@@ -1748,6 +1753,7 @@ $wgConf->settings = array(
 		'sidemwiki' => true,
 		'testwiki' => true,
 		'unionnorteamericanawiki' => true,
+		'wiki1776wiki' => true,
 	),
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
@@ -1947,6 +1953,7 @@ $wgConf->settings = array(
 		'vandalismwikiwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
+		'wiki1776wiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1985,6 +1992,7 @@ $wgConf->settings = array(
 		'tokyoghoulwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'whentheycrywiki' => true,
+		'wiki1776wiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
@@ -2965,6 +2973,7 @@ $wgConf->settings = array(
 		'votingwiki' => true,
 		'wabcwiki' => true,
 		'webflowwiki' => true,
+		'wiki1776wiki' => true,
 		'wikibookswiki' => true,
 		'wikicervanteswiki' => true,
 		'wikidolphinhansenwiki' => true,
@@ -4148,6 +4157,12 @@ $wgConf->settings = array(
 			NS_LEGACY => 'Legacy',
 			NS_LEGACY_TALK => 'Legacy_talk',
   		),
+		'wiki1776wiki' => array(
+			NS_TEST => 'Prueba',
+			NS_TEST_TALK => 'Prueba discusión',
+			NS_PAGE => 'Página',
+			NS_PAGE_TALK => 'Página discusión',
+		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
 			NS_LCS_TALK => 'LCS_talk',
@@ -4603,6 +4618,11 @@ $wgConf->settings = array(
 		),
 		'+voidwiki' => array(
 			NS_MAIN => true,
+		),
+		'+wiki1776wiki' => array(
+			NS_MAIN => true,
+			NS_TEST => true,
+			NS_PAGE => true,
 		),
 		'+wisdomwikiwiki' => array(
 			NS_MAIN => true,
