@@ -1272,6 +1272,7 @@ $wgConf->settings = array(
 	'wmgUseCargo' => array(
 		'default' => false,
 		'bigtoewiki' => true,
+		'machiningwiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
 		'templatewiki' => true,
@@ -2133,6 +2134,7 @@ $wgConf->settings = array(
 		'jcswiki' => true,
 		'lgproduktsupportwiki' => true,
 		'macfan4000wiki' => true,
+		'machiningwiki' => true,
 		'magnaversewiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
@@ -4537,6 +4539,10 @@ $wgConf->settings = array(
 			NS_PROJECT => true,
 		),
 		'+jawp2chwiki' => array(
+			NS_TEMPLATE => true,
+		),
+		'+machiningwiki' => array(
+			NS_MAIN => true,
 			NS_TEMPLATE => true,
 		),
 		'+metawiki' => array(
