@@ -7554,12 +7554,12 @@ EOF;
 */
 
 $dbsForReadOnlyDb4Transfer = array(
-	'worlduniversityandschoolwiki',
-	'tmewiki',
-	'vandalwiki'
+//	'worlduniversityandschoolwiki',
+//	'tmewiki',
+//	'vandalwiki'
 );
 
-if ( in_array( $wgDBname, $dbsForReadOnlyDb4Transfer ) ) {
+/*if ( in_array( $wgDBname, $dbsForReadOnlyDb4Transfer ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
@@ -7570,8 +7570,8 @@ EOF;
 		return true;
 	}
 	
-	$wgReadOnly = 'Maintenance ongoing on the database server.';
-}
+	//$wgReadOnly = 'Maintenance ongoing on the database server.';
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
