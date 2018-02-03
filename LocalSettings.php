@@ -830,6 +830,12 @@ $wgConf->settings = array(
 		'+lexiquewiki' => array(
 			'anon' => true,
 		),
+		'+lovesgreatadventurewiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+madgendersciencewiki' => array(
 			'anon' => true,
 		),
