@@ -46,6 +46,7 @@ $wgLBFactoryConf = array(
 		'maiasongcontestwiki' => 'c2',
 		'magnaversewiki' => 'c2',
 		'meregoswiki' => 'c2',
+		'metawiki' => 'c3',
 		'mikrodevwiki' => 'c2',
 		'miraewiki' => 'c2',
 		'musicarchivewiki' => 'c2',
