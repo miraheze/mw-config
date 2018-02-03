@@ -1270,6 +1270,7 @@ $wgConf->settings = array(
 		'bigtoewiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
+		'templatewiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
