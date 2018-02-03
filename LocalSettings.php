@@ -827,6 +827,9 @@ $wgConf->settings = array(
    			'editor' => true, 
    			'sysop' => true,   
 		),
+		'+lcars47wiki' => array(
+			'anon' => true,
+		),
 		'+lexiquewiki' => array(
 			'anon' => true,
 		),
@@ -3649,6 +3652,7 @@ $wgConf->settings = array(
 	),
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
+		'lcars47wiki' => 'manager',
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
 		'sau226wiki' => 'consul',		
@@ -4774,6 +4778,39 @@ $wgConf->settings = array(
 				'reviewer' => true,
 			),
 		),
+		'lcars47wiki' => array(
+			'bureaucrat' => array(
+				'sysop',
+				'bot',				
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),			
+			'devteam' => array(
+				'bot',
+				'bureaucrat',
+				'devteam',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'manager' => array(
+				'bot',
+				'bureaucrat',
+				'devteam',
+				'manager',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),			
+		),
 		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -5352,6 +5389,25 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+lcars47wiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'nuke' => true,
+				'editinterface' => true,
+				'globalblock-whitelist' => true,
+			),
+			'devteam' => array(
+				'abusefilter-modify-restricted' => true,
+				'bureaucrat' => true,
+				'devteam' => true,
+				'editinterface' => true,
+				'read' => true,
+			),
+			'manager' => array(
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,				
+			),
+		),
 		'+macfan4000wiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
@@ -5857,6 +5913,37 @@ $wgConf->settings = array(
 				'reviewer' => true,
 			),
 		),
+		'lcars47wiki' => array(
+			'bureaucrat' => array(
+				'sysop',
+				'bot',				
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),			
+			'devteam' => array(
+				'bot',
+				'bureaucrat',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'manager' => array(
+				'bot',
+				'bureaucrat',
+				'devteam',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),			
+		),
 		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -6145,6 +6232,10 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
+		'+lcars47wiki' => array(
+			'bureaucrat',
+			'devteam',
+		),
 		'+sau226wiki' => array(
 			'bureaucrat',
 			'consul',
@@ -6174,6 +6265,10 @@ $wgConf->settings = array(
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
+		),
+		'lcars47wiki' => array(
+			'delete',
+			'protect',
 		),
 		'pruebawiki' => array(
 			'delete',
