@@ -7567,7 +7567,7 @@ EOF;
 		return true;
 	}
 	
-	// $wgReadOnly = 'Maintenance ongoing on the database server.';
+	$wgReadOnly = 'Maintenance ongoing on the database server.';
 }
 
 // Hook so that Terms of Service is included in footer
