@@ -574,6 +574,14 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'valentinaprojectwiki' => 'Database migration',
+		'madciclistawiki' => 'Database migration',
+		'karniarutheniawiki' => 'Database migration',
+		'songcontestswiki' => 'Database migration',
+		'fourleafficswiki' => 'Database migration',
+		'unionnorteamericanawiki' => 'Database migration',
+		'nvcwiki' => 'Database migration',
+		'ctswiki' => 'Database migration',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
