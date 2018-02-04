@@ -5837,7 +5837,7 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'bureaucrat',
 			),
-		)		
+		),		
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -5936,7 +5936,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'rollbacker',
 			),
-		)		
+		),		
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
