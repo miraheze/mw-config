@@ -1333,6 +1333,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'anuwiki' => true,
+		'harrypotterwiki' => true,		
 		'test1wiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
