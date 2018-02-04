@@ -759,6 +759,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+harrypotterwiki' => array(
+			'anon' => true,
+		),		
 		'+hlptestwiki' => array(
 			'anon' => true,
 		),
