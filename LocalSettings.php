@@ -4781,7 +4781,7 @@ $wgConf->settings = array(
 				'confirmed',
 				'rollbacker',
 			),
-		)		
+		),		
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
