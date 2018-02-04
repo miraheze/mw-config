@@ -178,6 +178,8 @@ define( 'NS_STAFF', 1752);
 define( 'NS_STAFF_TALK', 1753);
 define( 'NS_TEMA', 1754);
 define( 'NS_TEMA_TALK', 1755);
+define( 'NS_PAGE', 1756);
+define( 'NS_PAGE_TALK', 1757);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -359,7 +361,6 @@ $wgConf->settings = array(
 			'b1tes.org' => 'b1teswiki',
 			'bebaskanpengetahuan.org' => 'bpwiki',
 			'bettermedia.info' => 'bettermediawiki',
-			'changemy.org' => 'changemyorgwiki',
 			'dariawiki.org' => 'dariawikiwiki',
 			'disabled.life' => 'disabledlifewiki',
 			'embobada.com' => 'embobadawiki',
@@ -369,6 +370,7 @@ $wgConf->settings = array(
 			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
 			'froggy.info' => 'feuwiki',
 			'gamdug.tk' => 'gamdugwiki',
+			'karagash.info' => 'karagashwiki',
 			'kunwok.org' => 'kunwokwiki',
 			'lodge.jsnydr.com' => 'lodgejsnydrwiki',
 			'madgenderscience.wiki' => 'madgendersciencewiki',
@@ -389,6 +391,7 @@ $wgConf->settings = array(
 			'reviwiki.info' => 'reviwikiwiki',
 			'sandbox.wisdomwiki.org' => 'wisdomsandboxwiki',
 			'savage-wiki.com' => 'savagewikiwiki',
+			'saveta.org' => 'savetawiki',
 			'sdiy.info' => 'sdiywiki',
 			'speleo.wiki' => 'speleowiki',
 			'spiral.wiki' => 'spiralwiki',
@@ -414,7 +417,6 @@ $wgConf->settings = array(
 			'wiki.labby.io' => 'labbywiki',
 			'wiki.lbcomms.co.za' => 'nextlevelwikiwiki',
 			'wiki.ldmsys.net' => 'itiswiki',
-			'wiki.lspdfr.de' => 'lspdfrwiki',
 			'wiki.macc.nyc' => 'maccnycwiki',
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.meeusen.net' => 'meeusenwiki',
@@ -429,6 +431,7 @@ $wgConf->settings = array(
 			'histories.wiki' => 'wishcertwiki',
 			'www.aksaraywiki.com' => 'aksaraywikiwiki',
 			'www.benchaseyt-wiki.tk' => 'benchaseytwiki',
+			'www.splat-teams.com' => 'splatteamswiki',
 			'www.zenbuddhism.info' => 'zenbuddhismwiki',
 		),
 	),
@@ -824,8 +827,17 @@ $wgConf->settings = array(
    			'editor' => true, 
    			'sysop' => true,   
 		),
+		'+lcars47wiki' => array(
+			'anon' => true,
+		),
 		'+lexiquewiki' => array(
 			'anon' => true,
+		),
+		'+lovesgreatadventurewiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
 		),
 		'+madgendersciencewiki' => array(
 			'anon' => true,
@@ -1001,6 +1013,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+templatewiki' => array(
+			'anon' => true,
+		),
 		'+test1wiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -1017,6 +1032,12 @@ $wgConf->settings = array(
 		),
 		'+turkcesozlukwiki' => array(
 			'anon' => true,
+		),
+		'+ubrwikiwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
 		),
 		'+utamacrosswiki' => array(
 			'anon' => true,
@@ -1071,8 +1092,10 @@ $wgConf->settings = array(
 
 	'wgAllowSlowParserFunctions' => array(
 		'default' => false,
+		'cristianopediawiki' => true,
 		'elarawiki' => true,
 		'trexwiki' => true,
+		'wiki1776wiki' => true,
 	),
 	// Dormancy policy && RC stuff
 	'wgRCMaxAge' => array(
@@ -1174,6 +1197,7 @@ $wgConf->settings = array(
 		'inkubatorwiki' => true,
 		'malaysiawiki' => true,
 		'nationstateswiki' => true,
+		'podpediawiki' => true,
 		'shortwikiwiki' => true,
 		'thebbwiki' => true,
 		'wikipucwiki' => true,
@@ -1261,8 +1285,10 @@ $wgConf->settings = array(
 	'wmgUseCargo' => array(
 		'default' => false,
 		'bigtoewiki' => true,
+		'machiningwiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
+		'templatewiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseCategoryTree' => array(
@@ -1297,6 +1323,7 @@ $wgConf->settings = array(
 		'sdiywiki' => true,
 		'shortwikiwiki' => true,
 		'studynotekrwiki' => true,
+		'templatewiki' => true,		
 		'viagroupiawiki' => true,
 		'wikapediawiki' => true,
 		'wisdomwikiwiki' => true,
@@ -1463,6 +1490,7 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'calexitwiki' => true,
 		'poserdazfreebieswiki' => true,
+		'showroomwiki' => true,
 		'sthomaspriwiki' => true,
 		'test1wiki' => true,
 		'tmewiki' => true,
@@ -1566,6 +1594,7 @@ $wgConf->settings = array(
 		'gepacobiodivwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'grandtheftautowiki' => true,
+		'infectopedwiki' => true,
 		'ircwiki' => true,
 		'kbrprojectwiki' => true,
 		'korachwiki' => true,
@@ -1631,6 +1660,7 @@ $wgConf->settings = array(
 		'shortwikiwiki' => true,
 		'test1wiki' => true,
 		'unionnorteamericanawiki' => true,
+		'wiki1776wiki' => true,
 	),
 	'wmgUseGroupsSidebar' => array(
 		'default' => false,
@@ -1700,6 +1730,7 @@ $wgConf->settings = array(
 		'vandalismwikiwiki' => true,
 		'victorianrpwiki' => true,
 		'whentheycrywiki' => true,
+		'wiki1776wiki' => true,
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseJavascriptSlideshow' => array(
@@ -1726,11 +1757,13 @@ $wgConf->settings = array(
 		'bpwiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
+		'cristianopediawiki' => true,
 		'madgendersciencewiki' => true,
 		'test1wiki' => true,
 		'sidemwiki' => true,
 		'testwiki' => true,
 		'unionnorteamericanawiki' => true,
+		'wiki1776wiki' => true,
 	),
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
@@ -1753,6 +1786,7 @@ $wgConf->settings = array(
 		'rpgbrigadewiki' => true,
 		'shortwikiwiki' => true,
 		'sysexwiki' => true,
+		'teatraywiki' => true,
 	),
 	'wmgUseMagicNoCache' => array(
 		'default' => false,
@@ -1801,6 +1835,7 @@ $wgConf->settings = array(
 		'sdiywiki' => true,
 		'shortwikiwiki' => true,
 		'takethatwikiwiki' => true,
+		'templatewiki' => true,		
 		'test1wiki' => true,
 		'wikipucwiki' => true,
 	),
@@ -1928,6 +1963,7 @@ $wgConf->settings = array(
 		'vandalismwikiwiki' => true,
 		'webflowwiki' => true,
 		'whentheycrywiki' => true,
+		'wiki1776wiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -1966,6 +2002,7 @@ $wgConf->settings = array(
 		'tokyoghoulwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'whentheycrywiki' => true,
+		'wiki1776wiki' => true,
 		'youtubewiki' => true,
 	),
 	'wmgUseMultiBoilerplate' => array(
@@ -2115,6 +2152,7 @@ $wgConf->settings = array(
 		'jcswiki' => true,
 		'lgproduktsupportwiki' => true,
 		'macfan4000wiki' => true,
+		'machiningwiki' => true,
 		'magnaversewiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
@@ -2179,6 +2217,7 @@ $wgConf->settings = array(
 		'pgnwikiwiki' => true,
 		'shortwikiwiki' => true,
 		'takethatwikiwiki' => true,
+		'templatewiki' => true,				
 		'thebbwiki' => true,
 		'tutorwiki' => true,
 		'universebuildwiki' => true,
@@ -2272,6 +2311,7 @@ $wgConf->settings = array(
 		'scruffywiki' => true,
 		'sdiywiki' => true,
 		'shortwikiwiki' => true,
+		'templatewiki' => true,				
 		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 		'thegreatwarwiki' => true,
@@ -2293,12 +2333,14 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'test1wiki' => true,
 		'idtestwiki' => true,
+		'jawptestwiki' => true,
 		'lfwikiwiki' => true,
 		'nationstateswiki' => true,
 		'podpediawiki' => true,
 		'puzzlewiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
+		'templatewiki' => true,				
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
@@ -2435,6 +2477,8 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
 		'sysexwiki' => true,
+		'teatraywiki' => true,
+		'templatewiki' => true,				
 		'tmewiki' => true,
 		'trexwiki' => true,
 		'touhouenginewiki' => true,
@@ -2485,6 +2529,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'sdiywiki' => true,
 		'shortwikiwiki' => true,
+		'templatewiki' => true,				
 	),
 	'wmgUseTheme' => array(
 		'default' => false,
@@ -2549,11 +2594,13 @@ $wgConf->settings = array(
 		'r2wiki' => true,
 		'pathfinderwiki' => true,
 		'pgnwikiwiki' => true,
+		'podpediawiki' => true,
 		'rpgbrigadewiki' => true,
 		'shortwikiwiki' => true,
 		'spiralwiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
+		'templatewiki' => true,		
 		'testwiki' => true,
 		'thehushhushsagawiki' => true,
 		'tokyoghoulwiki' => true,
@@ -2651,6 +2698,7 @@ $wgConf->settings = array(
 		'calibrowiki' => true,
 		'cancerwiki' => true,
 		'carelliwiki' => true,
+		'carmeigatwiki' => true,
 		'carvingwiki' => true,
 		'casuarinawiki' => true,
 		'cdcwiki' => true,
@@ -2709,6 +2757,7 @@ $wgConf->settings = array(
 		'foodsharinghamburgwiki' => true,
 		'freeandopenwiki' => true,
 		'freestateofjoneswiki' => true,
+		'frejaerikssonwiki' => true,
 		'ferahistoriawiki' => true,
 		'frontdeskswiki' => true,
 		'fsxworldspainwiki' => true,
@@ -2861,6 +2910,7 @@ $wgConf->settings = array(
 		'rawdatawiki' => true,
 		'raymanspeedrunwiki' => true,
 		'revitwiki' => true,
+		'rigpapariswiki' => true,
 		'rootsandlimbswiki' => true,
 		'rwdvolvowiki' => true,
 		'safiriawiki' => true,
@@ -2890,6 +2940,7 @@ $wgConf->settings = array(
 		'takethatwikiwiki' => true,
 		'tawseelawiki' => true,
 		'techeducationwiki' => true,
+		'templatewiki' => true,				
 		'tcc6640wiki' => true,
 		'tekkenwiki' => true,
 		'teleswikiwiki' => true,
@@ -2933,6 +2984,7 @@ $wgConf->settings = array(
 		'votingwiki' => true,
 		'wabcwiki' => true,
 		'webflowwiki' => true,
+		'wiki1776wiki' => true,
 		'wikibookswiki' => true,
 		'wikicervanteswiki' => true,
 		'wikidolphinhansenwiki' => true,
@@ -3010,6 +3062,7 @@ $wgConf->settings = array(
 		'shortwikiwiki' => true,
 		'soshomophobiewiki' => true,
 		'takethatwikiwiki' => true,
+		'templatewiki' => true,				
 		'test1wiki' => true,
 		'thecscwiki' => true,
 		'wikipucwiki' => true,
@@ -3025,7 +3078,6 @@ $wgConf->settings = array(
 		'reviwbwiki' => true,
 		'test1wiki' => true,
 		'vukufwiki' => true,
-		'zendariwiki' => true,
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
@@ -3174,6 +3226,7 @@ $wgConf->settings = array(
 		'scruffywiki' => '_blank',
 		'sdiywiki' => '_blank',
 		'sylwiki' => '_blank',
+		'templatewiki' => '_blank',		
 		'wisdomwikiwiki' => '_blank',
 		'wisdomsandboxwiki' => '_blank',
 		'yacresourceswiki' => '_blank',
@@ -3183,6 +3236,7 @@ $wgConf->settings = array(
 	// Allow External Images
 	'wgAllowExternalImages' => array(
 		'default' => false,
+		'amicitiawiki' => true,
 		'magezwiki' => true,
 		'magnaversewiki' => true,
 		'mikrodevwiki' => true,
@@ -3230,6 +3284,23 @@ $wgConf->settings = array(
 				'quality' => 1,
 				'levels' => 2,
 				'pristine' => 3,
+			),
+		),
+		'infectopedwiki' => array(
+			'accuracy' => array( 
+				'levels' => 3, 
+				'quality' => 2, 
+				'pristine' => 4,
+			),
+			'depth' => array( 
+				'levels' => 3, 
+				'quality' => 2, 
+				'pristine' => 4,
+			),
+			'tone' => array( 
+				'levels' => 3, 
+				'quality' => 1, 
+				'pristine' => 4,
 			),
 		),
 		'isvwiki' => array(
@@ -3583,6 +3654,7 @@ $wgConf->settings = array(
 	),
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
+		'lcars47wiki' => 'manager',
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
 		'sau226wiki' => 'consul',		
@@ -3673,6 +3745,7 @@ $wgConf->settings = array(
 			'lothuialethwiki',
 			't40wiki',
 			'taliaferrowiki',
+			'templatewiki',
 			'testwiki',
 			'unionnorteamericanawiki',
 			'wrightwiki',
@@ -4096,6 +4169,12 @@ $wgConf->settings = array(
 			NS_LEGACY => 'Legacy',
 			NS_LEGACY_TALK => 'Legacy_talk',
   		),
+		'wiki1776wiki' => array(
+			NS_TEST => 'Prueba',
+			NS_TEST_TALK => 'Prueba discusión',
+			NS_PAGE => 'Página',
+			NS_PAGE_TALK => 'Página discusión',
+		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
 			NS_LCS_TALK => 'LCS_talk',
@@ -4233,12 +4312,14 @@ $wgConf->settings = array(
 			'Ofbyld' => NS_FILE,
 			'ფაილი' => NS_FILE,
 			'Mynd' => NS_FILE,
+			'Talaksan' => NS_FILE,
 			'Lêerbespreking' => NS_FILE_TALK,
 			'Overleg_afbeelding' => NS_FILE_TALK,
 			'Размовы пра файл' => NS_FILE_TALK,
 			'Ofbyld oerlis' => NS_FILE_TALK,
 			'ფაილის განხილვა' => NS_FILE_TALK,
 			'Myndakjak' => NS_FILE_TALK,
+			'Usapang talaksan' => NS_FILE_TALK,
 			'Categorie' => NS_CATEGORY,
 			'Catégorie' => NS_CATEGORY,
 			'Categoría' => NS_CATEGORY,
@@ -4329,6 +4410,8 @@ $wgConf->settings = array(
 			'Thảo_luận_Bản_mẫu' => NS_TEMPLATE_TALK,
 			'Thể_loại' => NS_CATEGORY,
 			'Thảo_luận_Thể_loại' => NS_CATEGORY_TALK,
+			'Padron' => NS_TEMPLATE,
+			'Usapang_padron' => NS_TEMPLATE_TALK,
 		),
 		'+vandalismwikiwiki' => array(
 			'H' => NS_HELP,
@@ -4485,6 +4568,10 @@ $wgConf->settings = array(
 		'+jawp2chwiki' => array(
 			NS_TEMPLATE => true,
 		),
+		'+machiningwiki' => array(
+			NS_MAIN => true,
+			NS_TEMPLATE => true,
+		),
 		'+metawiki' => array(
 			NS_MAIN => true,
 			NS_TECH => true,
@@ -4513,6 +4600,9 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_USER => true,
 		),
+		'+thegreatwarwiki' => array(
+			NS_MAIN => true,
+		),
 		'+tmewiki' => array(
 			NS_MAIN => true,
 			NS_USER => true,
@@ -4540,6 +4630,11 @@ $wgConf->settings = array(
 		),
 		'+voidwiki' => array(
 			NS_MAIN => true,
+		),
+		'+wiki1776wiki' => array(
+			NS_MAIN => true,
+			NS_TEST => true,
+			NS_PAGE => true,
 		),
 		'+wisdomwikiwiki' => array(
 			NS_MAIN => true,
@@ -4684,6 +4779,39 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'reviewer' => true,
 			),
+		),
+		'lcars47wiki' => array(
+			'bureaucrat' => array(
+				'sysop',
+				'bot',				
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),			
+			'devteam' => array(
+				'bot',
+				'bureaucrat',
+				'devteam',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'manager' => array(
+				'bot',
+				'bureaucrat',
+				'devteam',
+				'manager',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),			
 		),
 		'+macfan4000wiki' => array(
 			'sysop' => array(
@@ -5263,6 +5391,25 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+lcars47wiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'nuke' => true,
+				'editinterface' => true,
+				'globalblock-whitelist' => true,
+			),
+			'devteam' => array(
+				'abusefilter-modify-restricted' => true,
+				'bureaucrat' => true,
+				'devteam' => true,
+				'editinterface' => true,
+				'read' => true,
+			),
+			'manager' => array(
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,				
+			),
+		),
 		'+macfan4000wiki' => array(
 			'user' => array(
 				'upload_by_url' => true,
@@ -5768,6 +5915,37 @@ $wgConf->settings = array(
 				'reviewer' => true,
 			),
 		),
+		'lcars47wiki' => array(
+			'bureaucrat' => array(
+				'sysop',
+				'bot',				
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),			
+			'devteam' => array(
+				'bot',
+				'bureaucrat',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'manager' => array(
+				'bot',
+				'bureaucrat',
+				'devteam',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),			
+		),
 		'+macfan4000wiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -6056,6 +6234,10 @@ $wgConf->settings = array(
 			'supervisor',
 			'wikifounder',
 		),
+		'+lcars47wiki' => array(
+			'bureaucrat',
+			'devteam',
+		),
 		'+sau226wiki' => array(
 			'bureaucrat',
 			'consul',
@@ -6085,6 +6267,10 @@ $wgConf->settings = array(
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
+		),
+		'lcars47wiki' => array(
+			'delete',
+			'protect',
 		),
 		'pruebawiki' => array(
 			'delete',
@@ -6164,7 +6350,6 @@ $wgConf->settings = array(
 		'benchaseytwiki' => 'https://www.benchaseyt-wiki.tk',
 		'bettermediawiki' => 'https://bettermedia.info',
 		'bpwiki' => 'https://bebaskanpengetahuan.org',
-		'changemyorgwiki' => 'https://changemy.org',
 		'ciptamediawiki' => 'https://wiki.ciptamedia.org',
 		'clonedeploywiki' => 'https://wiki.clonedeploy.org',
 		'dariawikiwiki' => 'https://dariawiki.org',
@@ -6182,12 +6367,12 @@ $wgConf->settings = array(
 		'itiswiki' => 'https://wiki.ldmsys.net',
 		'jacksonheightswiki' => 'https://wiki.jacksonheights.nyc',
 		'jcswiki' => 'https://wiki.gesamtschule-nordkirchen.de',
+		'karagashwiki' => 'https://karagash.info',
 		'kourouklideswiki' => 'https://wiki.kourouklides.com',
 		'kstartupswiki' => 'https://wiki.besuccess.com',
 		'kunwokwiki' => 'https://kunwok.org',
 		'labbywiki' => 'https://wiki.labby.io',
 		'lodgejsnydrwiki' => 'https://lodge.jsnydr.com',
-		'lspdfrwiki' => 'https://wiki.lspdfr.de',
 		'maccnycwiki' => 'https://wiki.macc.nyc',
 		'madgendersciencewiki' => 'https://madgenderscience.wiki',
 		'make717wiki' => 'https://wiki.make717.org',
@@ -6215,9 +6400,11 @@ $wgConf->settings = array(
 		'reviwikiwiki' => 'https://reviwiki.info',
 		'rizalespewiki' => 'https://wiki.rizalespe.com',
 		'savagewikiwiki' => 'https://savage-wiki.com',
+		'savetawiki' => 'https://saveta.org',
 		'sdiywiki' => 'https://sdiy.info',
 		'speleowiki' => 'https://speleo.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
+		'splatteamswiki' => 'https://www.splat-teams.com',
 		'takethatwikiwiki' => 'https://takethatwiki.com',
 		'teamwizardrywiki' => 'https://wiki.teamwizardry.com',
 		'teessidehackspacewiki' => 'https://wiki.teessidehackspace.org.uk',
@@ -6365,6 +6552,7 @@ $wgConf->settings = array(
 		'cdcwiki' => "//$wmgUploadHostname/cdcwiki/c/c3/Cd_ts_button_24.png",
 		'changemyorgwiki' => "//$wmgUploadHostname/changemyorgwiki/6/64/Favicon.ico",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
+		'cristianopediawiki' => "//$wmgUploadHostname/cristianopediawiki/2/23/Biblia_y_cruz.svg",
 		'claneuphoriawiki' => "//$wmgUploadHostname/claneuphoriawiki/6/64/Favicon.ico",
 		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/8/8b/CW_favicon.ico",
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/6/64/Favicon.ico",
@@ -6402,6 +6590,7 @@ $wgConf->settings = array(
 		'grottocenterwiki' => "//$wmgUploadHostname/grottocenterwiki/6/64/Favicon.ico",
 		'guiaslocaiswiki' => "//$wmgUploadHostname/guiaslocaiswiki/d/d7/Wiki.jpeg",
 		'hamfemwiki' => "//$wmgUploadHostname/hamfemwiki/c/c5/Favicon-16x16.png",
+		'hamimwiki' => "//$wmgUploadHostname/hamimwiki/6/64/Favicon.ico",
 		'hktransportpediawiki' => "//$wmgUploadHostname/hktransportpediawiki/e/ee/Favicon-20170319060448889.ico",
 		'houseofettlingarfreyuwiki' => "//$wmgUploadHostname/houseofettlingarfreyuwiki/7/70/Shield_Arms_House_Ettlingar_Freyu.png",
 		'humorpediawiki' => "//$wmgUploadHostname/humorpediawiki/6/64/Favicon.ico",
@@ -6470,6 +6659,7 @@ $wgConf->settings = array(
 		'sfrepresentuswiki' => "//$wmgUploadHostname/sfrepresentuswiki/5/5c/Favicon_logo.png",
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/c/c4/SHA_Favicon.svg",
 		'shippingandmetawiki' => "//$wmgUploadHostname/shippingandmetawiki/6/64/Favicon.ico",
+		'showroomwiki' => "//$wmgUploadHostname/showroomwiki/2/26/Favicon.png",
 		'sidemwiki' => "//$wmgUploadHostname/sidemwiki/7/76/Sidem-favicon.ico",
 		'sikhwikitestwiki' => "//$wmgUploadHostname/sikhwikitestwiki/9/97/Cover_The_Purpose_of_Your_Life_cropped.jpg",
 		'sirikotwiki' => '//sirikot.com/favicon.png',
@@ -6649,6 +6839,7 @@ $wgConf->settings = array(
 		'guiaslocaiswiki' => "//$wmgUploadHostname/guiaslocaiswiki/d/d7/Wiki.jpeg",
 		'gundambiowiki' => "//$wmgUploadHostname/gundambiowiki/b/bc/Wiki.png",
 		'hamfemwiki' => "//$wmgUploadHostname/hamfemwiki/3/33/Hamfem-Logo1.jpg",
+		'hamimwiki' => "//$wmgUploadHostname/hamimwiki/2/28/Hamimlogo.png",
 		'hantpediawiki' => "//$wmgUploadHostname/hantpediawiki/b/bc/Wiki.png",
 		'heathenwiki' => "//$wmgUploadHostname/heathenwiki/b/b5/HeathenWiki_Logo.png",
 		'heralwikiawiki' => "//$wmgUploadHostname/heralwikiawiki/c/c9/Logo.png",
@@ -6779,11 +6970,10 @@ $wgConf->settings = array(
 		'sapperpediawiki' => "//$wmgUploadHostname/sapperpediawiki/f/f8/Sapperpedia_small.png",
 		'saliorpediawiki' => "//$wmgUploadHostname/saliorpediawiki/9/98/BirdRoc.png",
 		'savagewikiwiki' => "//$wmgUploadHostname/savagewikiwiki/9/98/Sav_Wiki_logo.jpg",
-		'scffantasyescwiki' => "//$wmgUploadHostname/scffantasyescwiki/3/31/Wiki_Eurovision_Heart_%28Infobox%29.svg.png",
+		'scffantasyescwiki' => "//$wmgUploadHostname/scffantasyescwiki/8/82/EurovisionLogo.png",
 		'schnellbildungwiki' => "//$wmgUploadHostname/schnellbildungwiki/6/6f/Logo.svg",
 		'schicksalswikiwiki' => "//$wmgUploadHostname/schicksalswikiwiki/b/bc/Wiki.png",
 		'scientiawikiwiki' => "//$wmgUploadHostname/scientiawikiwiki/d/d4/Logo.jpg",
-		'scffantasyescwiki' => "//$wmgUploadHostname/scffantasyescwiki/3/31/Wiki_Eurovision_Heart_%28Infobox%29.svg.png",
 		'scruffywiki' => "//$wmgUploadHostname/scruffywiki/4/43/Scruffy_logo.png",
 		'sdiywiki' => "//$wmgUploadHostname/sdiywiki/9/92/SDIY_wiki_logo.png",
 		'serinfhospwiki' => "//$wmgUploadHostname/serinfhospwiki/c/c1/Logotype.svg",
@@ -6791,6 +6981,7 @@ $wgConf->settings = array(
 		'shadawiki' => "//$wmgUploadHostname/shadawiki/e/e3/SHA_Wiki_logo.svg",
 		'shippingandmetawiki' => "//$wmgUploadHostname/shippingandmetawiki/7/7d/CSM_Logo.png",
 		'shortwikiwiki' => "//$wmgUploadHostname/shortwikiwiki/3/3e/쇼트로고_2.png",
+		'showroomwiki' => "//$wmgUploadHostname/showroomwiki/e/e0/Arcadis_Logo_small.jpg",
 		'showmedicinawiki' => "//$wmgUploadHostname//showmedicinawiki/4/4b/Show_Medicina.jpg",
 		'sichoeumlonwiki' => "//$wmgUploadHostname/sichoeumlonwiki/b/b6/MyFile.jpeg",
 		'sidemwiki' => "//$wmgUploadHostname/sidemwiki/a/a5/Sidem-logo.png",
@@ -7005,9 +7196,7 @@ $wgConf->settings = array(
 			'athenapedia\.org',
 			'b1tes\.org',
 			'bebaskanpengetahuan\.org',
-			'bettermedia\.info',
 			'boulderwiki\.org',
-			'changemy\.org',
 			'wiki\.ameciclo\.org',
 			'wiki\.autocountsoft\.com',
 			'www\.benchaseyt-wiki\.tk',
@@ -7029,6 +7218,7 @@ $wgConf->settings = array(
 			'wiki\.inebriation-confederation\.com',
 			'haxion\.space',
 			'wiki\.jacksonheights\.nyc',
+			'karagash\.info',
 			'wiki\.kourouklides\.com',
 			'kunwok\.org',
 			'wiki\.labby\.io',
@@ -7058,7 +7248,9 @@ $wgConf->settings = array(
 			'reviwiki\.info',
 			'private\.revi.wiki',
 			'wiki\.rpgbrigade\.org',
+			'saveta\.org',
 			'sdiy\.info',
+			'www\.splat-teams\.com',
 			'takethatwiki\.com',
 			'wiki\.teessidehackspace\.org\.uk',
 			'thelonsdalebattalion\.co.uk',
@@ -7327,7 +7519,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 12;
+$wgMajorSiteNoticeID = 13;
 $snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
@@ -7344,6 +7536,27 @@ EOF;
 	return true;
 }
 */
+
+$dbsForReadOnlyDb4Transfer = array(
+//	'worlduniversityandschoolwiki',
+//	'tmewiki',
+//	'vandalwiki'
+);
+
+/*if ( in_array( $wgDBname, $dbsForReadOnlyDb4Transfer ) ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
+	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
+		$siteNotice .= <<<EOF
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+		<td>Miraheze will perform database maintenance on this wiki, from 23:05 UTC until approx. 23:25 UTC. During this time the wiki will be in read-only mode. Please save your edits before 23:05 UTC!</td>
+		</tr></tbody></table>
+EOF;
+		return true;
+	}
+	
+	//$wgReadOnly = 'Maintenance ongoing on the database server.';
+}*/
+
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
