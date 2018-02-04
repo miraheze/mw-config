@@ -2240,6 +2240,7 @@ $wgConf->settings = array(
 		'eerstelijnszoneswiki' => true,
 		'financialfindswiki' => true,
 		'test1wiki' => true,
+		'harrypotterwiki' => true,		
 		'hasanistanwiki' => true,
 		'infectopedwiki' => true,
 		'nationsglorywiki' => true,
@@ -3658,6 +3659,7 @@ $wgConf->settings = array(
 	),
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
+		'harrypotterwiki' => 'headmaster',		
 		'lcars47wiki' => 'manager',
 		'metawiki' => 'wikicreator',
 		'pruebawiki' => 'consul',
@@ -4771,6 +4773,15 @@ $wgConf->settings = array(
 				'Citizen',
 			),
 		),
+		'+harrypotterwiki' => array(
+			'headmaster' => array(
+				'bureaucrat',
+				'sysop',
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),
+		)		
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
@@ -5290,6 +5301,12 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+harrypotterwiki' => array(
+			'headmaster' => array(
+				'protectsite' => true,
+				'abusefilter-modify-restricted' => true,				
+			),
+		),		
 		'+hasanistanwiki' => array(
 			'user' => array(
 				'chat' => true,
@@ -5815,7 +5832,12 @@ $wgConf->settings = array(
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
-		'default' => array(),	
+		'default' => array(),
+		'+harrypotterwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat',
+			),
+		)		
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
@@ -5906,6 +5928,15 @@ $wgConf->settings = array(
 				'Citizen',
 			),
 		),
+		'+harrypotterwiki' => array(
+			'headmaster' => array(
+				'bureaucrat',
+				'sysop',
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),
+		)		
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
