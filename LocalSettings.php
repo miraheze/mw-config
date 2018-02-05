@@ -6600,6 +6600,7 @@ $wgConf->settings = array(
 		'isvwiki' => "//$wmgUploadHostname/isvwiki/5/53/Med%C5%BEuviki-favicon.ico",
 		'izanagiwiki' => "//$wmgUploadHostname/izanagiwiki/3/35/Favicon_%282%29.ico",
 		'jacksonheightswiki' => "//$wmgUploadHostname/jacksonheightswiki/0/0d/JH-wiki-2.ico",
+		'jadtechwiki' => "//$wmgUploadHostname/jadtechwiki/4/46/WikiFavicon.ico",
 		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/f/f4/Jawp2ch_favicon.ico",
 		'jcswiki' => "//$wmgUploadHostname/jcswiki/2/2e/JCS-Wiki.png",
 		'karniarutheniawiki' => "//$wmgUploadHostname/karniarutheniawiki/1/17/Krlogo.png",
