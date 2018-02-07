@@ -2470,6 +2470,7 @@ $wgConf->settings = array(
 		'scruffywiki' => true,
 		'sdiywiki' => true,
 		'shortwikiwiki' => true,
+		'showroomwiki' => true,
 		'sizzlecookiewiki' => true,
 		'slinxxywiki' => true,
 		'sourcewiki' => true,
