@@ -6916,6 +6916,7 @@ $wgConf->settings = array(
 		'mafiawiki' => "//$wmgUploadHostname/mafiawiki/a/a6/Header.png",
 		'make717wiki' => "//$wmgUploadHostname/make717wiki/thumb/f/fc/Make717_Logo.png/150px-Make717_Logo.png",
 		'maiasongcontestwiki' => "//$wmgUploadHostname/maiasongcontestwiki/b/bc/Sitelogo.png",
+		'makingitpodcastwiki' => "//$wmgUploadHostname/makingitpodcastwiki/2/27/Makingit-podcastlogo.png",
 		'makeiteasyautoswiki' => "//$wmgUploadHostname/makeiteasyautoswiki/0/01/Miea.png",
 		'malaysiawiki' => "//$wmgUploadHostname/malaysiawiki/1/1d/Malaysian_flag_round135.png",
 		'marinebiodiversitymatrixwiki' => "//$wmgUploadHostname/marinebiodiversitymatrixwiki/3/34/IUCN_logo_transparent_WICKI_web.jpg",
