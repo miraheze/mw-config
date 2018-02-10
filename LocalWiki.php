@@ -100,6 +100,12 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
+if ( $wgDBname === 'harrypotterwiki' ) {
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgHiddenPrefs[] = 'collapsiblenav';
+	$wgDefaultUserOptions['collapsiblenav'] = 1;
+}
+
 if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createtalk'] = false;
 	$wgGroupPermissions['*']['createpage'] = true;
