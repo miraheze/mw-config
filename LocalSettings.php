@@ -3042,6 +3042,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'ildrilwiki' => true,
 		'lothuialethwiki' => true,
+		'marioserieswiki' => true,
 		'pnphilotenwiki' => true,
 		'test1wiki' => true,
 		'wisdomwikiwiki' => true,
