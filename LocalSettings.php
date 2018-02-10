@@ -605,6 +605,7 @@ $wgConf->settings = array(
 			'user' => false, // Disables editing by logged in users if set to true
 			'editor' => false, // Creates an 'editor' group assignable by bureaucrats/sysops if set to true
 			'sysop' => false, // Allows sysops to edit if anonymous and logged in users are not allowed to edit.
+			'bureaucrat' => false, // Allows bureaucrats to edit if anonymous, logged in users and sysops are not allowed to edit.
 		),
 		'+690squadronwiki' => array(
 			'anon' => true,
@@ -746,6 +747,11 @@ $wgConf->settings = array(
 		),
 		'+freecollegeprojectwiki' => array(
 			'anon' => true,
+		),
+		'+frejaerikssonwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'bureaucrat' => true,
 		),
 		'+frontdeskswiki' => array(
 			'anon' => true,
