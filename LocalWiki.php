@@ -418,6 +418,11 @@ if ( $wmgEditingMatrix ) {
 		$wgGroupPermissions['sysop']['edit'] = true;
 		$wgGroupPermissions['sysop']['createpage'] = true;
 	}
+	
+	if ( $mhEM['bureaucrat'] ) { // Allows bureaucrats to edit if $mhEM['anon'] and $mhEM['user'] are both set to true
+		$wgGroupPermissions['bureaucrat']['edit'] = true;
+		$wgGroupPermissions['bureaucrat']['createpage'] = true;
+	}
 }
 
 if ( $wmgManageWikiGroup && $wgEnableManageWiki ) { // if set and if enabled
