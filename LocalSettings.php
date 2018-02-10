@@ -2863,6 +2863,7 @@ $wgConf->settings = array(
 		'muckhackwiki' => true,
 		'musicarchivewiki' => true,
 		'musiclibrarywiki' => true,
+		'mustafar29wiki' => true,
 		'mydegreewiki' => true,
 		'mynyddwiki' => true,
 		'n2gowiki' => true,
