@@ -2272,6 +2272,12 @@ $wgConf->settings = array(
 		'shortwikiwiki' => true,
 		'test1wiki' => true,
 	),
+	'wmgUseQuizGame' => array(
+		'default' => false,
+		'allthetropeswiki' => true,
+		'dongyangwiki' => true,
+		'test1wiki' => true,
+	),
 	'wmgUseRandomSelection' => array(
 		'default' => false,
 		'allthetropeswiki' => true,

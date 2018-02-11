@@ -467,6 +467,10 @@ if ( $wmgUseQuiz ) {
 	wfLoadExtension( 'Quiz' );
 }
 
+if ( $wmgUseQuizGame ) {
+	wfLoadExtension( 'QuizGame' );
+}
+
 if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
