@@ -7068,6 +7068,7 @@ $wgConf->settings = array(
 		'tmewiki' => "//$wmgUploadHostname/tmewiki/b/bc/Wiki.png",
 		'teessidehackspacewiki' => "//$wmgUploadHostname/teessidehackspacewiki/3/34/Teesside-hackspace-logo.svg",
 		'teleswikiwiki' => "//$wmgUploadHostname/teleswikiwiki/b/b6/Teleslogo01.png",
+		'templatewiki' => "//$wmgUploadHostname/templatewiki/8/85/200px-Curly_Brackets.png",
 		'terriblespacewiki' => "//$wmgUploadHostname/terriblespacewiki/e/eb/Terrible_space_logo.png",
 		'testarkclswiki' => "//$wmgUploadHostname/testarkclswiki/5/5b/ARK_CLS-135x135.png",
 		'testwiki' => "//$wmgUploadHostname/testwiki/9/99/NewLogo.png",
