@@ -180,6 +180,12 @@ define( 'NS_TEMA', 1754);
 define( 'NS_TEMA_TALK', 1755);
 define( 'NS_PAGE', 1756);
 define( 'NS_PAGE_TALK', 1757);
+define( 'NS_ANEXO', 1758);
+define( 'NS_ANEXO_TALK', 1759);
+define( 'NS_ESTUDIO', 1760);
+define( 'NS_ESTUDIO_TALK', 1761);
+define( 'NS_PRUEBA', 1762);
+define( 'NS_PRUEBA_TALK', 1763);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -1673,6 +1679,7 @@ $wgConf->settings = array(
 		'puzzlewiki' => true,
 		'shortwikiwiki' => true,
 		'test1wiki' => true,
+		'unionwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'wiki1776wiki' => true,
 	),
@@ -1739,6 +1746,7 @@ $wgConf->settings = array(
 		'tiandiwiki' => true,
 		'tmewiki' => true,
 		'travailcollaboratifwiki' => true,
+		'unionwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'universebuildwiki' => true,
 		'vandalismwikiwiki' => true,
@@ -1776,6 +1784,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'sidemwiki' => true,
 		'testwiki' => true,
+		'unionwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'wiki1776wiki' => true,
 	),
@@ -1970,6 +1979,7 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => true,
 		'tmewiki' => true,
 		'uncyclopediawiki' => true,
+		'unionwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'universebuildwiki' => true,
 		'utamacrosswiki' => true,
@@ -2014,6 +2024,7 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => true,
 		'tmewiki' => true,
 		'tokyoghoulwiki' => true,
+		'unionwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'whentheycrywiki' => true,
 		'wiki1776wiki' => true,
@@ -2991,6 +3002,7 @@ $wgConf->settings = array(
 		'ubrwikiwiki' => true,
 		'uoluwiki' => true,
 		'unikumwiki' => true,
+		'unionwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'universebuildwiki' => true,
 		'unowiki' => true,
@@ -4194,6 +4206,13 @@ $wgConf->settings = array(
 			NS_PSEUDO_BASE_MUSIC => '伪基音乐',
 			NS_PSEUDO_BASE_MUSIC_TALK => '伪基音乐谈',
 		),
+		'unionwiki' => array(
+			NS_TEST => 'Prueba',
+			NS_TEST_TALK => 'Prueba discusión',
+			NS_PAGE => 'Página',
+			NS_PAGE_TALK => 'Página discusión',
+			NS_ANEXO => 'Anexo',
+			NS_ANEXO_TALK => 'Anexo_talk',
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
   		 	NS_WNS2_TALK => 'WNS2_talk',
@@ -4211,6 +4230,10 @@ $wgConf->settings = array(
 			NS_TEST_TALK => 'Prueba discusión',
 			NS_PAGE => 'Página',
 			NS_PAGE_TALK => 'Página discusión',
+			NS_ANEXO => 'Anexo',
+			NS_ANEXO_TALK => 'Anexo_talk',
+			NS_ESTUDIO => 'Estudio',
+			NS_ESTUDIO_TALK => 'Estudio_talk',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
