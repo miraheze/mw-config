@@ -4213,6 +4213,7 @@ $wgConf->settings = array(
 			NS_PAGE_TALK => 'Página discusión',
 			NS_ANEXO => 'Anexo',
 			NS_ANEXO_TALK => 'Anexo_talk',
+		),
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
   		 	NS_WNS2_TALK => 'WNS2_talk',
