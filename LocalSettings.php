@@ -1332,6 +1332,7 @@ $wgConf->settings = array(
 		'jayuwikiwiki' => true,
 		'jeongiwiki' => true,
 		'maplewiki' => true,
+		'modularwiki' => true,
 		'newnamlawiki' => true,
 		'oecumenewiki' => true,
 		'particracywikiwiki' => true,
