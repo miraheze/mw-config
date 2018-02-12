@@ -2808,6 +2808,7 @@ $wgConf->settings = array(
 		'gtnhwiki' => true,
 		'gzewiki' => true,
 		'hamfemwiki' => true,
+		'harrypotterwiki' => true,
 		'healthvectorwiki' => true,
 		'hftqmswiki' => true,
 		'historiaalternativawiki' => true,
