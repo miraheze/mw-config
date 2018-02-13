@@ -1299,6 +1299,14 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
 	),
+	'wmgUseCapiunto' => array(
+		'default' => false,
+		'modularwiki' => true,
+		'scruffywiki' => true,
+		'sdiywiki' => true,
+		'templatewiki' => true,
+		'test1wiki' => true,
+	),
 	'wmgUseCargo' => array(
 		'default' => false,
 		'bigtoewiki' => true,
