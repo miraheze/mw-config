@@ -581,8 +581,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'mc2wiki' => 'Database migeration',
-		'templatewiki' => 'Database migration',
 		
 	),
 	'wgSharedDB' => array(
