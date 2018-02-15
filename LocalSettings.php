@@ -2699,6 +2699,7 @@ $wgConf->settings = array(
 		'animationmoviewikiwiki' => true,
 		'apneuverenigingwiki' => true,
 		'appswiki' => true,
+		'arefepva' => true,
 		'artificercreationswiki' => true,
 		'aryamanwiki' => true,
 		'ayrshirewiki' => true,
