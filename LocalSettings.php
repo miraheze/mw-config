@@ -3616,6 +3616,7 @@ $wgConf->settings = array(
 		'mapinfowiki' => 'https://creativecommons.org/licenses/by/4.0/',
 		'metatrekwiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
+		'reviwikiwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr/',
 		'rezeroswiki' => 'https://creativecommons.org/licenses/by-nc-sa/2.0/',
 		'safiriawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 		'schnellbildungwiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
