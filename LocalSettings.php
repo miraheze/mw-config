@@ -581,10 +581,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'zendariwiki' => 'Database migration',
-		'recentiawiki' => 'Database migration',
-		'nextlevelwikiwiki' => 'Database migration',
-		'teriawiki' => 'Database migration',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
