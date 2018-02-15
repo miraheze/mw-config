@@ -582,7 +582,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'supernamuwiki' => 'Database migration',
 		
 	),
 	'wgSharedDB' => array(
