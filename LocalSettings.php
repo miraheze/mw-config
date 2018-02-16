@@ -6790,6 +6790,7 @@ $wgConf->settings = array(
 		'amaninfowiki' => "//$wmgUploadHostname/amaninfowiki/c/c9/Logo.png",
 		'amicitiawiki' => "//$wmgUploadHostname/amicitiawiki/9/9b/Amicitia_logo.png",
 		'animationmoviewikiwiki' => "//$wmgUploadHostname/animationmoviewikiwiki/b/bd/Fdg.PNG",
+		'anjunawiki' => "//$wmgUploadHostname/anjunawiki/thumb/1/19/Formross2_logo.jpg/120px-Formross2_logo.jpg",
 		'anothertimeline2120wiki' => "//$wmgUploadHostname/anothertimeline2120wiki/3/3b/Wiki_logo.png",
 		'apellidosmurcianoswiki' => "//$wmgUploadHostname/apellidosmurcianoswiki/2/27/Amlogo.png",
 		'appswiki' => "//$wmgUploadHostname/appswiki/d/d2/AppediaLogo.png",
