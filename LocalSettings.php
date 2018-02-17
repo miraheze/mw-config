@@ -6833,6 +6833,7 @@ $wgConf->settings = array(
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
 		'calibrowiki' => "//$wmgUploadHostname/calibrowiki/0/01/Calibro-logo.png",
 		'carelliwiki' => "//$wmgUploadHostname/carelliwiki/9/9c/Logo-carelli.png",
+		'carmeigatwiki' => "//$wmgUploadHostname/carmeigatwiki/c/c9/Logo.png",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/5/59/Snowflake135.png",
 		'cdcwiki' => "//$wmgUploadHostname/cdcwiki/9/96/Cd_logo_hd_words_B.png",
 		'changemyorgwiki' => "//$wmgUploadHostname/changemyorgwiki/2/2c/ChangeMyOrgUpdatedLogo.png",
