@@ -4203,7 +4203,7 @@ $wgConf->settings = array(
 			NS_PAGE => 'Página',
 			NS_PAGE_TALK => 'Página discusión',
 			NS_ANEXO => 'Anexo',
-			NS_ANEXO_TALK => 'Anexo_talk',
+			NS_ANEXO_TALK => 'Anexo_discusión',
 		),
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
@@ -4223,9 +4223,9 @@ $wgConf->settings = array(
 			NS_PAGE => 'Página',
 			NS_PAGE_TALK => 'Página discusión',
 			NS_ANEXO => 'Anexo',
-			NS_ANEXO_TALK => 'Anexo_talk',
+			NS_ANEXO_TALK => 'Anexo_discusión',
 			NS_ESTUDIO => 'Estudio',
-			NS_ESTUDIO_TALK => 'Estudio_talk',
+			NS_ESTUDIO_TALK => 'Estudio_discusión',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
