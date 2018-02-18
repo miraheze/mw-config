@@ -1898,6 +1898,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
+		'carmeigatwiki' => false,
 		'ganeshawiki' => false,
 		'izanagiwiki' => false,
 		'jawptestwiki' => false,
