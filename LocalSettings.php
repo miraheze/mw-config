@@ -6268,6 +6268,7 @@ $wgConf->settings = array(
 				array( APCOND_EDITCOUNT, 500),
 				array( APCOND_AGE, 30 * 86400 ),
 			),
+		),
 	),
 	'wgImplicitGroups' => array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
