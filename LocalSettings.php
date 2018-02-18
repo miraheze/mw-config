@@ -666,6 +666,9 @@ $wgConf->settings = array(
 		'+calexitwiki' => array(
 			'anon' => true,
 		),
+		'+carmeigatwiki' => array(
+			'anon' => true,
+		),
 		'+carvingwiki' => array(
 			'anon' => true,
 		),
