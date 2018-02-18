@@ -4842,6 +4842,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+kyivstarwiki' => array(
+			'sysop' => array(
+				'extendedconfirmed',
+			),
+		),
 		'+infectopedwiki' => array(
 			'bureaucrat' => array(
 				'reviewer' => true,
@@ -5459,6 +5464,16 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+kyivstarwiki' => array(
+			'sysop' => array(
+				'extendedconfirmed' => true,
+			),
+			'autopatrolled' => array(
+				'extendedconfirmed' => true,
+			),
+			'bot' => array(
+				'extendedconfirmed' => true,
+			),
 		'+lcars47wiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -5984,6 +5999,11 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+kyivstarwiki' => array(
+			'sysop' => array(
+				'extendedconfirmed',
+			),
+		),
 		'+infectopedwiki' => array(
 			'bureaucrat' => array(
 				'reviewer' => true,
@@ -6242,6 +6262,11 @@ $wgConf->settings = array(
 				APCOND_EMAILCONFIRMED,
 			),
 		),
+		'+kyivstarwiki' => array(
+			'extendedconfirmed' => array(
+				array( APCOND_EDITCOUNT, 500),
+				array( APCOND_AGE, 30 * 86400 ),
+			),
 	),
 	'wgImplicitGroups' => array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
@@ -6307,6 +6332,9 @@ $wgConf->settings = array(
 			'bureaucrat',
 			'supervisor',
 			'wikifounder',
+		),
+		'+kyivstarwiki' => array(
+			'extendedconfirmed',
 		),
 		'+lcars47wiki' => array(
 			'bureaucrat',
