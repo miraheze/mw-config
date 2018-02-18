@@ -5474,6 +5474,7 @@ $wgConf->settings = array(
 			'bot' => array(
 				'extendedconfirmed' => true,
 			),
+		),
 		'+lcars47wiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
