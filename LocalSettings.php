@@ -370,7 +370,6 @@ $wgConf->settings = array(
 			'dariawiki.org' => 'dariawikiwiki',
 			'disabled.life' => 'disabledlifewiki',
 			'embobada.com' => 'embobadawiki',
-			'en.maktaba.co.in' => 'maktabawiki',
 			'es.publictestwiki.com' => 'pruebawiki',
 			'espiral.org' => 'espiralwiki',
 			'fibromyalgia-engineer.com' => 'fibromyalgiaengineerwiki',
@@ -6482,7 +6481,6 @@ $wgConf->settings = array(
 		'madgendersciencewiki' => 'https://madgenderscience.wiki',
 		'make717wiki' => 'https://wiki.make717.org',
 		'marinebiodiversitymatrixwiki' => 'https://marinebiodiversitymatrix.org',
-		'maktabawiki' => 'https://en.maktaba.co.in',
 		'meeusenwiki' => 'https://wiki.meeusen.net',
 		'nenawikiwiki' => 'https://nenawiki.org',
 		'nerdwiki' => 'https://wiki.gamergeeked.us',
@@ -7387,7 +7385,6 @@ $wgConf->settings = array(
 			'wiki\.coldblooded\.ga',
 			'wikibase\.revi\.wiki',
 			'wiki\.teamwizardry\.com',
-			'en\.maktaba\.co\.in',
 		),
 	),
 
