@@ -582,6 +582,9 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'unionwiki' => 'Database migration',
+		'wiki1776wiki' => 'Database migration',
+		'revitwiki' => 'Database migration',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
