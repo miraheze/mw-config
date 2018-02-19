@@ -6872,7 +6872,6 @@ $wgConf->settings = array(
 		'cdcwiki' => "//$wmgUploadHostname/cdcwiki/9/96/Cd_logo_hd_words_B.png",
 		'changemyorgwiki' => "//$wmgUploadHostname/changemyorgwiki/2/2c/ChangeMyOrgUpdatedLogo.png",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
-		'chromiumrosewiki' => "//$wmgUploadHostname/chromiumrosewiki/b/ba/ChromiumRose135x135.png",
 		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/3/39/Cw_logo.png",
 		'clonedeploywiki' => "//$wmgUploadHostname/clonedeploywiki/3/39/Clonedeploy-logo.png",
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/b/bc/Wiki.png",
