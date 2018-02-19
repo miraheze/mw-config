@@ -685,9 +685,6 @@ $wgConf->settings = array(
 			'editor' => true,
 			'sysop' => true,
 		),
-		'+clementsworldbuildingwiki' => array(
-			'anon' => true,
-		),
 		'+clonedeploywiki' => array(
 			'anon' => true,
 		),
@@ -2749,7 +2746,6 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'cristianopediawiki' => true,		
 		'civitaswiki' => true,
-		'clementsworldbuildingwiki' => true,
 		'clicordiwiki' => true,
 		'clonedeploywiki' => true,
 		'cnvwiki' => true,
@@ -4587,9 +4583,6 @@ $wgConf->settings = array(
 			NS_TEMPLATE => true,
 		),
 		'+christipediawiki' => array(
-			NS_MAIN => true,
-		),
-		'+clementsworldbuildingwiki' => array(
 			NS_MAIN => true,
 		),
 		'+cnvwiki' => array(
@@ -6654,7 +6647,6 @@ $wgConf->settings = array(
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
 		'cristianopediawiki' => "//$wmgUploadHostname/cristianopediawiki/2/23/Biblia_y_cruz.svg",
 		'claneuphoriawiki' => "//$wmgUploadHostname/claneuphoriawiki/6/64/Favicon.ico",
-		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/8/8b/CW_favicon.ico",
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/6/64/Favicon.ico",
 		'coldbloodedwiki' => "//$wmgUploadHostname/coldbloodedwiki/6/64/Favicon.ico",
 		'compilerdevwiki' => "//$wmgUploadHostname/compilerdevwiki/c/c9/Logo.png",
@@ -6872,7 +6864,6 @@ $wgConf->settings = array(
 		'cdcwiki' => "//$wmgUploadHostname/cdcwiki/9/96/Cd_logo_hd_words_B.png",
 		'changemyorgwiki' => "//$wmgUploadHostname/changemyorgwiki/2/2c/ChangeMyOrgUpdatedLogo.png",
 		'christipediawiki' => "//$wmgUploadHostname/christipediawiki/e/e7/Logo_Christipedia.jpg",
-		'clementsworldbuildingwiki' => "//$wmgUploadHostname/clementsworldbuildingwiki/3/39/Cw_logo.png",
 		'clonedeploywiki' => "//$wmgUploadHostname/clonedeploywiki/3/39/Clonedeploy-logo.png",
 		'cnvwiki' => "//$wmgUploadHostname/cnvwiki/b/bc/Wiki.png",
 		'coldbloodedwiki' => "//$wmgUploadHostname/coldbloodedwiki/1/12/WikiLogo_135.png",
