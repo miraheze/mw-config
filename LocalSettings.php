@@ -6860,6 +6860,7 @@ $wgConf->settings = array(
 		'bunker401wiki' => "//$wmgUploadHostname/bunker401wiki/7/74/Logo_Bunker_401.png",
 		'calexitwiki' => "//$wmgUploadHostname/calexitwiki/a/ab/Cali-bear-geog-black-small.png",
 		'calibrowiki' => "//$wmgUploadHostname/calibrowiki/0/01/Calibro-logo.png",
+		'capstonecitywiki' => "//$wmgUploadHostname/capstonecitywiki/c/c4/Wikilogo2018-02-19.jpg",
 		'carelliwiki' => "//$wmgUploadHostname/carelliwiki/9/9c/Logo-carelli.png",
 		'carmeigatwiki' => "//$wmgUploadHostname/carmeigatwiki/c/c9/Logo.png",
 		'carvingwiki' => "//$wmgUploadHostname/carvingwiki/5/59/Snowflake135.png",
