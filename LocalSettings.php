@@ -5094,7 +5094,7 @@ $wgConf->settings = array(
 			),
 			'confirmed' => array(
 				'editsemiprotected' => true,
-				'patrol' => true,
+				'autoconfirmed' => true,
 				'skipcaptcha' => true,
 			),
 			'oversight' => array(
