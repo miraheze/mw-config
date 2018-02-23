@@ -582,6 +582,15 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'encyclopaediawiki' => 'Database migration',
+		'diagnostikwiki' => 'Database migration',
+		'summerolympicswiki' => 'Database migration',
+		'ussewiki' => 'Database migration',
+		'pocketmonsterswiki' => 'Database migration',
+		'aerosswiki' => 'Database migration',
+		'scruffy2wiki' => 'Database migration',
+		'networksdatabasewiki' => 'Database migration',
+
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
