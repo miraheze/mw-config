@@ -3991,6 +3991,7 @@ $wgConf->settings = array(
 		'sdiywiki' => true,
 		'shortwikiwiki' => true,
 		'showmedicinawiki' => true,
+		'wixosswiki' => true,
 	),
 
 	'wgMSU_showAutoCat' => array(
