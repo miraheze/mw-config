@@ -2987,6 +2987,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'stjarnfestivalenwiki' => true,
 		'studynotekrwiki' => true,
+		'summerolympicswiki' => true,
 		'takethatwikiwiki' => true,
 		'tawseelawiki' => true,
 		'techeducationwiki' => true,
