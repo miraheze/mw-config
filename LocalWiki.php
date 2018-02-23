@@ -388,7 +388,6 @@ if ( $wmgUseMainPageWhitelist ) {
 			"Hauptseit",
 			"Accueil",
 			"Halaman Utama",
-			"MediaWiki:Common.css",
 			"特別:アカウント作成"
 	);
 }
