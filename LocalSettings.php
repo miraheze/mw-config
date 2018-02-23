@@ -1998,6 +1998,7 @@ $wgConf->settings = array(
 		'wiki1776wiki' => true,
 		'wisdomwikiwiki' => true,
 		'wisdomsandboxwiki' => true,
+		'wixosswiki' => true,
 	),
 	'wmgUseMultimediaViewer' => array(
 		'default' => false,
