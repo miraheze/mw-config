@@ -7249,6 +7249,7 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => 'Europe/London',
 		'webtoonwiki' => 'Asia/Seoul',
 		'wikapediawiki' => 'Asia/Taipei',
+		'wixosswiki' => 'Asia/Shanghai',
 	),
 	
 	// Theme
