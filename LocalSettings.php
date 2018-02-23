@@ -7101,6 +7101,7 @@ $wgConf->settings = array(
 		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d0/Real_World_Revit.png",
 		'rpgbrigadewiki' => "//$wmgUploadHostname/rpgbrigadewiki/c/c9/Logo.png",
 		'rwdvolvowiki' => "//$wmgUploadHostname/rwdvolvowiki/9/93/Rwdvolvo-135px.png",
+		'rwsaleswiki' => "//$wmgUploadHostname/rwsaleswiki/8/88/Rw-logo.png",
 		'sadpepswiki' => "//$wmgUploadHostname/sadpepswiki/f/f7/Mylogo.png",
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
 		'sapperpediawiki' => "//$wmgUploadHostname/sapperpediawiki/f/f8/Sapperpedia_small.png",
@@ -7534,6 +7535,12 @@ $wgConf->settings = array(
 		'pnphilotenwiki' => 'freenodeChat',
 		'wisdomwikiwiki' => 'freenodeChat',
 		'wisdomsandboxwiki' => 'freenodeChat',
+	),
+
+	// Whitelist
+	'wmgUseMainPageWhitelist' => array(
+		'default' => true,
+		'rwsaleswiki' => false,
 	),
 
 	// Empty arrays (do not touch unless you know what you're doing)
