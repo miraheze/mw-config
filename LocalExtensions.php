@@ -75,6 +75,10 @@ if ( $wmgUseCategoryTree ) {
 	wfLoadExtension( 'CategoryTree' );
 }
 
+if ( $wmgUseCapiunto ) {
+	wfLoadExtension( 'Capiunto' );
+}
+
 if ( $wmgUseCentralNotice ) {
 	wfLoadExtension( 'CentralNotice' );
 }
