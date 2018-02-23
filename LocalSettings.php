@@ -2547,6 +2547,7 @@ $wgConf->settings = array(
 		'lunacyindwiki' => true,
 		'magezwiki' => true,
 		'nationstateswiki' => true,
+		'neptuniawikiwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 		'russiawatchwiki' => true,
 		'shortwikiwiki' => true,
