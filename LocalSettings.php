@@ -2828,6 +2828,7 @@ $wgConf->settings = array(
 		'hsoodenwiki' => true,
 		'hytecwiki' => true,
 		'icmscholarswiki' => true,
+		'idwwiki' => true,
 		'ilearnthingswiki' => true,
 		'imstswiki' => true,
 		'inazumaelevenwiki' => true,
