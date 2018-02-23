@@ -1813,6 +1813,7 @@ $wgConf->settings = array(
 		'shortwikiwiki' => true,
 		'sysexwiki' => true,
 		'teatraywiki' => true,
+		'wixosswiki' => true,
 	),
 	'wmgUseMagicNoCache' => array(
 		'default' => false,
