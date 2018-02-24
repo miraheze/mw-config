@@ -294,7 +294,7 @@ $wgWhitelistRead = array(
 );
 
 if ( $wmgUseMainPageWhitelist ) {
-	$wgWhitelistRead[] =
+	$wgWhitelistRead = array_merge( $wgWhitelistRead,
 		array(
 			"Main Page",
 			"Página principal",
@@ -389,6 +389,7 @@ if ( $wmgUseMainPageWhitelist ) {
 			"Accueil",
 			"Halaman Utama",
 			"特別:アカウント作成"
+		)
 	);
 }
 
