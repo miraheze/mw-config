@@ -6577,6 +6577,7 @@ $wgConf->settings = array(
 		'icmscholarswiki' => "//$wmgUploadHostname/icmscholarswiki/6/69/Logo135px.png",
 		'icterwiki' => "//$wmgUploadHostname/icterwiki/a/af/ICTERsmall.png",
 		'imperiuswiki' => "//$wmgUploadHostname/imperiuswiki/9/94/ImperiusLogo.png",
+		'indrikwiki' => "//$wmgUploadHostname/indrikwiki/2/2e/Indriklogo_%28160x160%29.jpg",
 		'ipolywiki' => "//$wmgUploadHostname/ipolywiki/3/33/IPoly_Logo_-SQ-.png",
 		'isvwiki' => "//$wmgUploadHostname/isvwiki/b/bc/Med%C5%BEuviki-logo-latn.svg",
 		'itasiawiki' => "//$wmgUploadHostname/itasiawiki/f/f7/Mylogo.png",
