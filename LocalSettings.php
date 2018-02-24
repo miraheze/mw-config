@@ -3576,6 +3576,7 @@ $wgConf->settings = array(
 			'taliaferrowiki',
 			'templatewiki',
 			'testwiki',
+			'tnoteswiki',
 			'unionnorteamericanawiki',
 			'wrightwiki',
 			'wright000wiki',
