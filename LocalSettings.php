@@ -1543,6 +1543,7 @@ $wgConf->settings = array(
 		'gepacobiodivwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'grandtheftautowiki' => true,
+		'idwwiki' => true,
 		'infectopedwiki' => true,
 		'ircwiki' => true,
 		'kbrprojectwiki' => true,
