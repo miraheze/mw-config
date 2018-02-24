@@ -378,6 +378,7 @@ $wgConf->settings = array(
 			'gamdug.tk' => 'gamdugwiki',
 			'karagash.info' => 'karagashwiki',
 			'lodge.jsnydr.com' => 'lodgejsnydrwiki',
+			'madgenderscience.wiki' => 'madgendersciencewiki',
 			'marinebiodiversitymatrix.org' => 'marinebiodiversitymatrixwiki',
 			'nenawiki.org' => 'nenawikiwiki',
 			'nonbinary.wiki' => 'nonbinarywiki',
@@ -822,6 +823,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'editor' => true,
 			'sysop' => true,
+		),
+		'+madgendersciencewiki' => array(
+			'anon' => true,
 		),
 		'+maiasongcontestwiki' => array(
 			'anon' => true,
@@ -1686,6 +1690,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'christipediawiki' => true,
 		'cristianopediawiki' => true,
+		'madgendersciencewiki' => true,
 		'test1wiki' => true,
 		'sidemwiki' => true,
 		'testwiki' => true,
@@ -2175,6 +2180,7 @@ $wgConf->settings = array(
 		'appswiki' => true,
 		'humorpediawiki' => true,
 		'lingnlangwiki' => true,
+		'madgendersciencewiki' => true,
 		'newnamlawiki' => true,
 		'podpediawiki' => true,
 		'puzzlewiki' => true,
@@ -2992,6 +2998,7 @@ $wgConf->settings = array(
 		'knowledgewiki' => true,
 		'lifewiki' => true,
 		'lexiquewiki' => true,
+		'madgendersciencewiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 		'miraewiki' => true,
@@ -4595,6 +4602,11 @@ $wgConf->settings = array(
 				'chatmod',
 			),
 		),
+		'+madgendersciencewiki' => array(
+			'sysop' => array(
+				'scholar',
+			),
+		),
 		'+metawiki' => array(
 			'sysop' => array(
 				'translator',
@@ -5176,6 +5188,11 @@ $wgConf->settings = array(
 				'upload_by_url' => true,
 			),
 		),
+		'+madgendersciencewiki' => array(
+			'scholar' => array(
+				'editprotected' => true,
+			),
+		),
 		'+marinebiodiversitymatrixwiki' => array(
 			'member' => array(
 				'createtalk' => true,
@@ -5696,6 +5713,11 @@ $wgConf->settings = array(
 				'chatmod',
 			),
 		),
+		'+madgendersciencewiki' => array(
+			'sysop' => array(
+				'scholar',
+			),
+		),
 		'+metawiki' => array(
 			'sysop'	=> array(
 				'translator',
@@ -6109,6 +6131,7 @@ $wgConf->settings = array(
 		'lab612wiki' => 'https://www.lab612.at',
 		'lodgejsnydrwiki' => 'https://lodge.jsnydr.com',
 		'maccnycwiki' => 'https://wiki.macc.nyc',
+		'madgendersciencewiki' => 'https://madgenderscience.wiki',
 		'make717wiki' => 'https://wiki.make717.org',
 		'marinebiodiversitymatrixwiki' => 'https://marinebiodiversitymatrix.org',
 		'meeusenwiki' => 'https://wiki.meeusen.net',
@@ -6329,6 +6352,7 @@ $wgConf->settings = array(
 		'logalnetwiki' => "//$wmgUploadHostname/logalnetwiki/2/26/Favicon.png",
 		'lovesgreatadventurewiki' => "//$wmgUploadHostname/lovesgreatadventurewiki/5/53/Shield_High_Realm2.png",
 		'maccnycwiki' => "//$wmgUploadHostname/maccnycwiki/3/3f/MACC_Logo.png",
+		'madgendersciencewiki' => "//$wmgUploadHostname/madgendersciencewiki/0/01/Mgsfavicon.png",
 		'nationsglorywiki' => "//$wmgUploadHostname/nationsglorywiki/0/04/NationsGlory.png",
 		'nenawikiwiki' => "//$wmgUploadHostname/nenawikiwiki/f/fa/Nena911orange.ico",
 		'newcolumbiawiki' => "//$wmgUploadHostname/newcolumbiawiki/5/5b/Wiki-favicon.png",
@@ -6572,6 +6596,7 @@ $wgConf->settings = array(
 		'lovesgreatadventurewiki' => "//$wmgUploadHostname/lovesgreatadventurewiki/5/53/Shield_High_Realm2.png",
 		'lunfengwiki' => "//$wmgUploadHostname/lunfengwiki/b/bc/Wiki.png",
 		'maccnycwiki' => "//$wmgUploadHostname/maccnycwiki/3/3f/MACC_Logo.png",
+		'madgendersciencewiki' => "//$wmgUploadHostname/madgendersciencewiki/3/3e/Mgslogo_color.png",
 		'make717wiki' => "//$wmgUploadHostname/make717wiki/thumb/f/fc/Make717_Logo.png/150px-Make717_Logo.png",
 		'maiasongcontestwiki' => "//$wmgUploadHostname/maiasongcontestwiki/b/bc/Sitelogo.png",
 		'makingitpodcastwiki' => "//$wmgUploadHostname/makingitpodcastwiki/2/27/Makingit-podcastlogo.png",
