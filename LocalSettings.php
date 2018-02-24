@@ -6646,6 +6646,7 @@ $wgConf->settings = array(
 		'paranormalwiki' => "//$wmgUploadHostname/paranormalwiki/2/2d/Parawiki.png",
 		'particracywikiwiki' => "//$wmgUploadHostname/particracywikiwiki/6/69/Wiki_logo_parti.png",
 		'r2wiki' => "//$wmgUploadHostname/r2wiki/a/a6/Part-up-logo-150x150-mediawiki.png",
+		'papeloriowiki' => "//$wmgUploadHostname/papeloriowiki/2/26/Logo_papelorio.jpg",
 		'patch153wiki' => "//$wmgUploadHostname/patch153wiki/1/1f/ICMS.png",
 		'pculsdwiki' => "//$wmgUploadHostname/pculsdwiki/d/d7/Pculogo.png",
 		'permanentfuturelabwiki' => "//$wmgUploadHostname/permanentfuturelabwiki/c/c0/Permanent-Future-Lab-logo-150x150-mediawiki.png",
