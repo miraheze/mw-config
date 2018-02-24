@@ -409,6 +409,7 @@ $wgConf->settings = array(
 			'wiki.ciptamedia.org' => 'ciptamediawiki',
 			'wiki.drones4nature.info' => 'drones4allwiki',
 			'wiki.dwplive.com' => 'dwplivewiki',
+			'wiki.exnihilolinux.org' => 'exnihilolinuxwiki',
 			'wiki.gamergeeked.us' => 'nerdwiki',
 			'wiki.gesamtschule-nordkirchen.de' => 'jcswiki',
 			'wiki.grottocenter.org' => 'grottocenterwiki',
