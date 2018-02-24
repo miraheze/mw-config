@@ -1221,6 +1221,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'kstartupswiki' => true,
 		'raymanspeedrunwiki' => true,
+		'shortwikiwiki' => true,
 	),
 	'wmgUseMSCalendar' => array(
 		'default' => false,
@@ -1412,6 +1413,7 @@ $wgConf->settings = array(
 		'inkubatorwiki' => true,
 		'isvwiki' => true,
 		'rpgbrigadewiki' => true,
+		'shortwikiwiki' => true,
 		'thebbwiki' => true,
 	),
 	'wmgUseDuplicator' => array(
@@ -1465,6 +1467,7 @@ $wgConf->settings = array(
 		'perpuswiki' => true,
 		'podpediawiki' => true,
 		'puzzlewiki' => true,
+		'shortwikiwiki' => true,
 		'sthomaspriwiki' => true,
 		'trexwiki' => true,
 	),
