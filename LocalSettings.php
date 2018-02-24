@@ -4527,6 +4527,11 @@ $wgConf->settings = array(
 				'voter',
 			),
 		),
+		'+dditecwiki' => array(
+			'sysop' => array(
+				'member',
+			),
+		),
 		'+developmentwiki' => array(
 			'supervisor' => array(
 				'bureaucrat',
@@ -4957,6 +4962,13 @@ $wgConf->settings = array(
 		'+cpiwiki' => array(
 			'sysop' => array(
 				'masseditregex'
+			),
+		),
+		'+dditecwiki' => array(
+			'member' => array(
+				'createtalk' => true,
+				'createpage' => true,
+				'edit' => true,
 			),
 		),
 		'+developmentwiki' => array(
@@ -5638,6 +5650,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'voter',
+			),
+		),
+		'+dditecwiki' => array(
+			'sysop' => array(
+				'member',
 			),
 		),
 		'+developmentwiki' => array(
