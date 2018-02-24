@@ -823,7 +823,7 @@ $wgConf->settings = array(
    			'editor' => true, 
    			'sysop' => true,   
 		),
-		'+lab612wiki' = array(
+		'+lab612wiki' => array(
 			'anon' => true,
 		),
 		'+lcars47wiki' => array(
