@@ -650,6 +650,9 @@ $wgConf->settings = array(
 			'anon' => true,
 			'user' => true,
 		),
+		'+berenwiki' => array(
+			'anon' => true,
+		),
 		'+bitcoindebateswiki' => array(
       			'anon' => true,
 			'user' => true,
