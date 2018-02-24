@@ -1893,6 +1893,7 @@ $wgConf->settings = array(
 		'thelonsdalebattalionwiki' => true,
 		'tmewiki' => true,
 		'uncyclopediawiki' => true,
+		'undisclosedwiki' => true,
 		'unionwiki' => true,
 		'unionnorteamericanawiki' => true,
 		'utamacrosswiki' => true,
