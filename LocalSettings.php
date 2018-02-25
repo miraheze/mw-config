@@ -7245,7 +7245,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 13;
+$wgMajorSiteNoticeID = 14;
 $snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
@@ -7264,24 +7264,24 @@ EOF;
 */
 
 $dbsForReadOnlyDb4Transfer = array(
-//	'worlduniversityandschoolwiki',
-//	'tmewiki',
-//	'vandalwiki'
+	'supernamuwiki',
+	'testwiki',
+	'tmewiki',
+	'vandalwiki',
+	'worlduniversityandschoolwiki'
 );
 
-/*if ( in_array( $wgDBname, $dbsForReadOnlyDb4Transfer ) ) {
+if ( in_array( $wgDBname, $dbsForReadOnlyDb4Transfer ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Miraheze will perform database maintenance on this wiki, from 23:05 UTC until approx. 23:25 UTC. During this time the wiki will be in read-only mode. Please save your edits before 23:05 UTC!</td>
+		<td>Miraheze will perform database maintenance on this wiki, from 16:40 UTC until approx. 17:10 UTC. During this time the wiki will be in read-only mode. Please save your edits before 16:40 UTC!</td>
 		</tr></tbody></table>
 EOF;
 		return true;
 	}
-	
-	//$wgReadOnly = 'Maintenance ongoing on the database server.';
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
