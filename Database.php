@@ -85,14 +85,11 @@ $wgLBFactoryConf = array(
 		'spritopiawiki' => 'c2',
 		'summerolympicswiki' => 'c2',
 		'sumroletaericwiki' => 'c2',
-		'supernamuwiki' => 'c3',
 		'templatewiki' => 'c2',
 		'teriawiki' => 'c2',
-		'testwiki' => 'c3',
 		'thegreatwarwiki' => 'c2',
 		'thelonsdalebattalionwiki' => 'c2',
 		'tiandiwiki' => 'c2',
-		'tmewiki' => 'c3',
 		'truecapitalistwiki' => 'c2',
 		'ubrwikiwiki' => 'c2',
 		'uncyclopediawiki' => 'c2',
@@ -101,14 +98,12 @@ $wgLBFactoryConf = array(
 		'ussewiki' => 'c2',
 		'utamacrosswiki' => 'c2',
 		'valentinaprojectwiki' => 'c2',
-		'vandalwiki' => 'c3',
 		'viagroupiawiki' => 'c2',
 		'whentheycrywiki' => 'c2',
 		'wiki1776wiki' => 'c2',
 		'wikiversitywiki' => 'c2',
 		'wikivywiki' => 'c2',
 		'worldpediawiki' => 'c2',
-		'worlduniversityandschoolwiki' => 'c3',
 		'ylscwiki' => 'c2',
 		'yoavfreundwiki' => 'c2',
 		'yourosongcontestwiki' => 'c2',
@@ -125,9 +120,6 @@ $wgLBFactoryConf = array(
 		'c2' => array(
 			'db3' => 1,
 		),
-		'c3' => array(
-			'db4' => 1,
-		),
 	),
 	'serverTemplate' => array(
 		'dbname' => $wgDBname,
@@ -138,7 +130,6 @@ $wgLBFactoryConf = array(
 	'hostsByName' => array(
 		'db2' => '81.4.125.112',
 		'db3' => '81.4.127.157',
-		'db4' => '62.212.89.24',
 	),
 	'externalLoads' => array(
 		'echo' => array(
