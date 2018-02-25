@@ -6481,6 +6481,7 @@ $wgConf->settings = array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'690squadronwiki' => "//$wmgUploadHostname/690squadronwiki/f/f4/Squadlogo.png",
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/3/3b/Wiki_logo.png",
+		'aapwiki' => "//$wmgUploadHostname/aapwiki/6/61/Aaplogo.jpg",
 		'absurdopediawiki' => "//$wmgUploadHostname/absurdopediawiki/b/bc/Wiki.png",
 		'adadevelopersacademywiki' => "//$wmgUploadHostname/adadevelopersacademywiki/b/bc/ADA_logo_small.png",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/f/f1/APlogo.png",
