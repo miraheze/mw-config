@@ -35,6 +35,19 @@ EOF;
 
 }
 
+// Inactive Wikis
+if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
+
+	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
+	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
+		$siteNotice .= <<<EOF
+			<div class=\"wikitable\" style=\"text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;\"> <span class=\"plainlinks\">[https://meta.miraheze.org/wiki/Stewards%27_noticeboard '''Miraheze Staff'''] has noticed that this wiki has [[Special:RecentChanges|'''no edits''']] or [[Special:Logs|'''logs''']] made within the last 45 days. If you would like to prevent this wiki from being '''closed''', please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the [https://meta.miraheze.org/wiki/Dormancy_Policy '''Dormancy Policy''']. This wiki will then be eligible for adoption by another user. If not adopted and still inactive 135 days from now, this wiki will become eligible for '''deletion'''. Please be sure to familiarize yourself with Miraheze's [https://meta.miraheze.org/wiki/Dormancy_Policy Dormancy Policy]. If there is activity on this wiki you can go on [[MediaWiki:Sitenotice]] and remove this notice yourself. If you have any other questions or concerns, please don't hesitate to [https://meta.miraheze.org/wiki/Stewards%27_noticeboard '''Contact Us'''].</span></div>
+EOF;
+		return true;
+	}
+
+}
+
 // Private Wikis
 if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['read'] = false;
