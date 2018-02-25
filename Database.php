@@ -140,6 +140,5 @@ $wgLBFactoryConf = array(
 	//	'DEFAULT' => '',
 	//	'c1' => 'Maintenance ongoing on the database server.',
 	//	'c2' => 'To avoid data loss, this wiki is in read-only mode.',
-		'c3' => 'Maintenance ongoing on the database server.',
 	),
 );
