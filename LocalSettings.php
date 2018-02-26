@@ -431,7 +431,6 @@ $wgConf->settings = array(
 			'wikipuk.cl' => 'wikipucwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
 			'histories.wiki' => 'wishcertwiki',
-			'www.aksaraywiki.com' => 'aksaraywikiwiki',
 			'www.lab612.at' => 'lab612wiki',
 			'www.splat-teams.com' => 'splatteamswiki',
 			'www.zenbuddhism.info' => 'zenbuddhismwiki',
@@ -6137,7 +6136,6 @@ $wgConf->settings = array(
 	'wgServer' => array(
 		'default' => 'https://$lang.miraheze.org',
 		'adadevelopersacademywiki' => 'https://adadevelopersacademy.wiki',
-		'aksaraywikiwiki' => 'https://www.aksaraywiki.com',
 		'allthetropeswiki' => 'https://allthetropes.org',
 		'alwikiwiki' => 'https://www.alwiki.net',
 		'amaninfowiki' => 'https://aman.info.tm',
@@ -6999,7 +6997,6 @@ $wgConf->settings = array(
 			'sandbox\.wisdomwiki.org',
 			'savage-wiki\.com',
 			'speleo\.wiki',
-			'www\.aksaraywiki\.com',
 			'www\.zenbuddhism\.info',
 			'espiral\.org',
 			'spiral\.wiki',
