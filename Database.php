@@ -80,7 +80,6 @@ $wgLBFactoryConf = array(
 		'sidemwiki' => 'c2',
 		'sirikotwiki' => 'c2',
 		'songcontestswiki' => 'c2',
-		'southparkfanwiki' => 'c3',
 		'speleowiki' => 'c2',
 		'spiralwiki' => 'c2',
 		'spritopiawiki' => 'c2',
