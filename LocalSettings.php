@@ -429,6 +429,7 @@ $wgConf->settings = array(
 			'wiki.valentinaproject.org' => 'valentinaprojectwiki',
 			'wikiescola.com.br' => 'wikiescolawiki',
 			'wiki.worlduniversityandschool.org' => 'worlduniversityandschoolwiki',
+			'wiki.zymonic.com' => 'zymonicwiki',
 			'wikipuk.cl' => 'wikipucwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
 			'histories.wiki' => 'wishcertwiki',
@@ -6218,6 +6219,7 @@ $wgConf->settings = array(
 		'wishcertwiki' => 'https://histories.wiki',
 		'worlduniversityandschoolwiki' => 'https://wiki.worlduniversityandschool.org',
 		'zenbuddhismwiki' => 'https://www.zenbuddhism.info',
+		'zymonicwiki' => 'https://wiki.zymonic.com',
 	),
 	'wgShowHostnames' => array(
 		'default' => true,
@@ -7009,6 +7011,7 @@ $wgConf->settings = array(
 			'savage-wiki\.com',
 			'speleo\.wiki',
 			'www\.zenbuddhism\.info',
+			'wiki\.zymonic\.com',
 			'espiral\.org',
 			'spiral\.wiki',
 			'wiki\.coldblooded\.ga',
