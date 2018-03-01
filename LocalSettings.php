@@ -2209,6 +2209,7 @@ $wgConf->settings = array(
 		'rpgbrigadewiki' => true,
 		'russiawatchwiki' => true,
 		'takethatwikiwiki' => true,
+		'shortwikiwiki' => true,
 		'test1wiki' => true,
 		'themirrorwiki' => true,
 		'tmewiki' => true,
