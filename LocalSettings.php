@@ -6670,6 +6670,7 @@ $wgConf->settings = array(
 		'lingnlangwiki' => "//$wmgUploadHostname/lingnlangwiki/b/bc/Wiki.png",
 		'livesnowmapwiki' => "//$wmgUploadHostname/livesnowmapwiki/2/27/Snowflake.png",
 		'logalnetwiki' => "//$wmgUploadHostname/logalnetwiki/3/35/LN-Icon_135x.png",
+		'lostminecraftminerswiki' => "//$wmgUploadHostname/lostminecraftminerswiki/8/8e/2018Logo_LMM.png",
 		'lovesgreatadventurewiki' => "//$wmgUploadHostname/lovesgreatadventurewiki/5/53/Shield_High_Realm2.png",
 		'lunfengwiki' => "//$wmgUploadHostname/lunfengwiki/b/bc/Wiki.png",
 		'maccnycwiki' => "//$wmgUploadHostname/maccnycwiki/3/3f/MACC_Logo.png",
