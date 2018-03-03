@@ -922,6 +922,11 @@ $wgConf->settings = array(
 			'sysop' => true,
 			'editor' => true,
 		),
+		'+pmavwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+		),			
 		'+pocketmonsterswiki' => array(
 			'anon' => true,
 			'user' => true,
@@ -2778,6 +2783,7 @@ $wgConf->settings = array(
 		'pgnwikiwiki' => true,
 		'plasticssongcontestwiki' => true,
 		'plnonbinarywiki' => true,
+		'pmavwiki' => true,		
 		'podpediawiki' => true,
 		'politicswiki' => true,
 		'puzzlewiki' => true,
