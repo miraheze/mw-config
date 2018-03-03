@@ -2922,6 +2922,7 @@ $wgConf->settings = array(
 		'embobadawiki' => true,
 		'geodatawiki' => true,
 		'gtnhwiki' => true,
+		'harrypotterwiki' => true,
 		'modularwiki' => true,
 		'nationsglorywiki' => true,
 		'plazmaburstwiki' => true,
