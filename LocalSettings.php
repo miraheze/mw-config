@@ -2654,6 +2654,7 @@ $wgConf->settings = array(
 		'fablabesdswiki' => true,
 		'fantasiawiki' => true,
 		'feuwiki' => true,
+		'fgnoteswiki' => true,
 		'fikcyjnatvwiki' => true,
 		'fmbvwiki' => true,
 		'foodsharinghamburgwiki' => true,
