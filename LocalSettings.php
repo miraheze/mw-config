@@ -1711,6 +1711,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'reviwiki' => true,
 		'reviwikiwiki' => true,
+		'shortwikiwiki' => true,
 	),
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
@@ -2813,6 +2814,7 @@ $wgConf->settings = array(
 		'serinfhospwiki' => true,
 		'setonwiki' => true,
 		'shippingandmetawiki' => true,
+		'shortwikiwiki' => true,
 		'showmedicinawiki' => true,
 		'sidemwiki' => true,
 		'simonjonwiki' => true,
