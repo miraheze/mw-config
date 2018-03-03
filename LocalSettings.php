@@ -2797,6 +2797,7 @@ $wgConf->settings = array(
 		'rwsaleswiki' => true,
 		'safiriawiki' => true,
 		'saharinspacewiki' => true,
+		'sapienswiki' => true,
 		'savagewikiwiki' => true,
 		'scruffywiki' => true,
 		'schicksalswikiwiki' => true,
