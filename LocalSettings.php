@@ -2091,6 +2091,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'frontdeskswiki' => true,
 		'ggdrwiki' => true,
+		'jacksonheightswiki' => true,
 		'jcswiki' => true,
 		'lgproduktsupportwiki' => true,
 		'macfan4000wiki' => true,
