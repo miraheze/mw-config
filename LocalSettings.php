@@ -6499,6 +6499,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/2/26/Favicon.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/6/64/Favicon.ico",
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/a/aa/Internet_favicon.png",
+		'worldpediaenwiki' => "//$wmgUploadHostname/worldpediaenwiki/6/64/Favicon.ico",
 		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
 	),
