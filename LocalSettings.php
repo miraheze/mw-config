@@ -6877,6 +6877,7 @@ $wgConf->settings = array(
 		'reviwikiwiki' => 'Asia/Seoul',
 		'sau226wiki' => 'Australia/Perth',
 		'shortwikiwiki' => 'Asia/Seoul',
+		'tensorflowlearningwiki' => 'Asia/Shanghai',
 		'thelonsdalebattalionwiki' => 'Europe/London',
 		'wikapediawiki' => 'Asia/Taipei',
 		'wixosswiki' => 'Asia/Shanghai',
