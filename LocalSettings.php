@@ -2822,6 +2822,7 @@ $wgConf->settings = array(
 		'simonjonwiki' => true,
 		'sirikotwiki' => true,
 		'snowthegamewiki' => true,
+		'socrateswiki' => true,
 		'songcontestswiki' => true,
 		'soshomophobiewiki' => true,
 		'southparkfanwiki' => true,
