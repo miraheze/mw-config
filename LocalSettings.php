@@ -506,6 +506,7 @@ $wgConf->settings = array(
 			"$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
 			"$IP/extensions/Flow/flow.sql",
 			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
+			"$IP/extensions/GlobalPreferences/sql/tables.sql",
 			"$IP/extensions/Math/db/math.mysql.sql",
 			"$IP/extensions/Math/db/mathlatexml.mysql.sql",
 			"$IP/extensions/Math/db/mathoid.mysql.sql",
@@ -3313,7 +3314,22 @@ $wgConf->settings = array(
 	'wgUseGlobalSiteCssJs' => array(
 		'default' => false,
 	),
+	
+	//GlobalPreferences
+	'wgGlobalPreferencesDB' => array(
+		'default' => 'centralauth',
+	),
 
+ 	//GlobalUserPage
+ 	'wgGlobalUserPageAPIUrl' => array(
+		'default' => "https://meta.miraheze.org",
+	),
+	'wgGlobalUserPageDBname' => array(
+		'default' => 'metawiki',
+	),
+	
+	$wgDefaultUserOptions['globaluserpage'] = false;
+	
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => array(
 		'default' => array(),
