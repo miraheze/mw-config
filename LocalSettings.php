@@ -4311,6 +4311,11 @@ $wgConf->settings = array(
 				'edit-talkpages',
 			),
 		),
+		'+whentheycrywiki' => array(
+			NS_USER => array(
+				'edit-userpage',
+			),
+		),
 		'+yeoksawiki' => array(
 			NS_PROJECT => array(
 				'project-edit',
@@ -5607,6 +5612,12 @@ $wgConf->settings = array(
 				'autoconfirmed' => true,
 				'autopatrolled' => true,
 				'editinterface' => true,
+			),
+		),
+		'+whentheycrywiki' => array(
+			'user' => array(
+				'createtalk',
+				'edit-create',
 			),
 		),
 		'+wikipucwiki' => array(
