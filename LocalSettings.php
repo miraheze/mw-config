@@ -3327,10 +3327,7 @@ $wgConf->settings = array(
 	'wgGlobalUserPageDBname' => array(
 		'default' => 'metawiki',
 	),
-	
-	'wgDefaultUserOptions['globaluserpage']' = array(
-		'default' => false',
-	),
+	$wgDefaultUserOptions['globaluserpage'] = false;
 	
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => array(
