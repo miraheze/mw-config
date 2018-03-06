@@ -1423,11 +1423,11 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'ofthevampirewiki' => true,
 	),
-	'wmgUseDonateBoxInSidebar' => array(
-		'default' => false,
-		'metawiki' => true,
-		'test1wiki' => true,
-	),
+//	'wmgUseDonateBoxInSidebar' => array( # Disabled for now --Rececption123
+//		'default' => false,
+//		'metawiki' => true,
+//		'test1wiki' => true,
+//	),
 	'wmgUseDPLForum' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
