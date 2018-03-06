@@ -6644,6 +6644,7 @@ $wgConf->settings = array(
 		'harrypotterwiki' => "//$wmgUploadHostname/harrypotterwiki/e/eb/TheHarryPotterWikiLogo2.png",
 		'heathenwiki' => "//$wmgUploadHostname/heathenwiki/b/b5/HeathenWiki_Logo.png",
 		'heralwikiawiki' => "//$wmgUploadHostname/heralwikiawiki/c/c9/Logo.png",
+		'herbertlawgroupwiki' => "//$wmgUploadHostname/herbertlawgroupwiki/a/a0/LogoResized.png",
 		'hexelswiki' => "//$wmgUploadHostname/hexelswiki/f/ff/Hexlogo135.png",
 		'hktransportpediawiki' => "//$wmgUploadHostname/hktransportpediawiki/6/60/Logo2wiki.PNG",
 		'honkai3rdwiki' => "//$wmgUploadHostname/honkai3rdwiki/8/8e/Hi3_logo.png",
