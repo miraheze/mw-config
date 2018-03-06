@@ -3050,6 +3050,7 @@ $wgConf->settings = array(
 		'n2gowiki' => true,
 		'noalatalawiki' => true,
 		'ontariobrasswiki' => true,
+		'opengovpioneerswiki' => true,
 		'openonderwijswiki' => true,
 		'pfl2wiki' => true,
 		'pgnwikiwiki' => true,
