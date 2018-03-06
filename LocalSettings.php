@@ -1683,6 +1683,7 @@ $wgConf->settings = array(
 		'sthomaspriwiki' => true,
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
+		'tellestiawiki' => true,
 		'tiandiwiki' => true,
 		'tmewiki' => true,
 		'travailcollaboratifwiki' => true,
