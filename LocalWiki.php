@@ -179,6 +179,7 @@ if ( $wgDBname === 'metawiki' ) {
 ">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate to Miraheze via Paypal!">
 </form>'
+
 }
 
 if ( $wgDBname === 'nenawikiwiki' ) {
