@@ -3327,7 +3327,6 @@ $wgConf->settings = array(
 	'wgGlobalUserPageDBname' => array(
 		'default' => 'metawiki',
 	),
-	$wgDefaultUserOptions['globaluserpage'] = false;
 	
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => array(
@@ -7299,6 +7298,7 @@ if ( $wgDBname === 'tmewiki' ) {
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
+$wgDefaultUserOptions['globaluserpage'] = false;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
