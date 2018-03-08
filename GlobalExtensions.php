@@ -18,7 +18,6 @@ wfLoadExtensions( [
 	'Gadgets',
 	'GlobalBlocking',
 	'GlobalCssJs',
-	'GlobalUserPage',
 	'GlobalPreferences',
 	'InputBox',
 	'Interwiki',
