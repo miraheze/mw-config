@@ -3329,7 +3329,7 @@ $wgConf->settings = array(
 
  	//GlobalUserPage
  	'wgGlobalUserPageAPIUrl' => array(
-		'default' => "https://meta.miraheze.org",
+		'default' => 'https://meta.miraheze.org/w/api.php',
 	),
 	'wgGlobalUserPageDBname' => array(
 		'default' => 'metawiki',
