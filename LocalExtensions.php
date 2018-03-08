@@ -254,13 +254,6 @@ if ( $wmgUseGamepress ) {
     wfLoadSkin( 'Gamepress' );
 }
 
-if ( $wmgUseGlobalExtsTemp ) {
-	wfLoadExtensions( [
-		'GlobalPreferences',
-		'GlobalUserPage'
-	] );
-}
-
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }

@@ -3322,23 +3322,19 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	
-	//GlobalPreferences
+	// GlobalPreferences
 	'wgGlobalPreferencesDB' => array(
 		'default' => 'centralauth',
 	),
 
- 	//GlobalUserPage
+ 	// GlobalUserPage
  	'wgGlobalUserPageAPIUrl' => array(
 		'default' => 'https://meta.miraheze.org/w/api.php',
 	),
 	'wgGlobalUserPageDBname' => array(
 		'default' => 'metawiki',
 	),
-	'wmgUseGlobalExtsTemp' => array(
-		'default' => false,
-		'extloadwiki' => true,
-		'southparkfanwiki' => true,
-	),	
+
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => array(
 		'default' => array(),
