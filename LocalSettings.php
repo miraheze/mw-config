@@ -3330,13 +3330,9 @@ $wgConf->settings = array(
  	//GlobalUserPage
  	'wgGlobalUserPageAPIUrl' => array(
 		'default' => 'https://meta.miraheze.org/w/api.php',
-		'extloadwiki' => 'https://extload.miraheze.org/w/api.php',
-		'southparkfanwiki' => 'https://extload.miraheze.org/w/api.php',
 	),
 	'wgGlobalUserPageDBname' => array(
 		'default' => 'metawiki',
-		'extloadwiki' => 'extloadwiki',
-		'southparkfanwiki' => 'extloadwiki',
 	),
 	'wmgUseGlobalExtsTemp' => array(
 		'default' => false,
