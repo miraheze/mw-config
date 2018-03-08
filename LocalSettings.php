@@ -6646,6 +6646,7 @@ $wgConf->settings = array(
 		'gugacastwiki' => "//$wmgUploadHostname/gugacastwiki/7/79/Gugacast_Logo_135x135.png",
 		'guiaslocaiswiki' => "//$wmgUploadHostname/guiaslocaiswiki/d/d7/Wiki.jpeg",
 		'gundambiowiki' => "//$wmgUploadHostname/gundambiowiki/b/bc/Wiki.png",
+		'gulpiewiki' => "//$wmgUploadHostname/gulpiewiki/d/de/Gulpie_logo.png",		
 		'hamfemwiki' => "//$wmgUploadHostname/hamfemwiki/3/33/Hamfem-Logo1.jpg",
 		'hamimwiki' => "//$wmgUploadHostname/hamimwiki/2/28/Hamimlogo.png",
 		'hantpediawiki' => "//$wmgUploadHostname/hantpediawiki/b/bc/Wiki.png",
