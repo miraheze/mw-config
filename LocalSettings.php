@@ -3321,20 +3321,7 @@ $wgConf->settings = array(
 	'wgUseGlobalSiteCssJs' => array(
 		'default' => false,
 	),
-	
-	//GlobalPreferences
-	'wgGlobalPreferencesDB' => array(
-		'default' => 'centralauth',
-	),
 
- 	//GlobalUserPage
- 	'wgGlobalUserPageAPIUrl' => array(
-		'default' => "https://meta.miraheze.org",
-	),
-	'wgGlobalUserPageDBname' => array(
-		'default' => 'metawiki',
-	),
-	
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => array(
 		'default' => array(),
@@ -7307,7 +7294,6 @@ if ( $wgDBname === 'tmewiki' ) {
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
-$wgDefaultUserOptions['globaluserpage'] = false;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
