@@ -2273,12 +2273,14 @@ $wgConf->settings = array(
 	'wmgUseRSS' => array(
 		'default' => false,
 		'emulationwiki' => true,
-		'test1wiki' => true,
 		'lgproduktsupportwiki' => true,
 		'pfl2wiki' => true,
 		'podpediawiki' => true,
 		'speleowiki' => true,
+		'test1wiki' => true,
+		'tmewiki' => true,
 		'tymyrddinwiki' => true,
+		'vandalismwikiwiki' => true,
 	),
 	'wmgUseSandboxLink' => array(
 		'default' => false,
