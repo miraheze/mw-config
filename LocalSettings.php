@@ -1122,6 +1122,7 @@ $wgConf->settings = array(
 //		'claneuphoriawiki' => true,
 //		'test1wiki' => true,
 //		'metaautonomywiki' => true,
+//		'vanderbiltentwiki' => true,
 //		'wisdomwikiwiki' => true,
 //	),
 	'wmgUseAddThis' => array(
@@ -1373,6 +1374,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'thebbwiki' => true,
 		'twelvethfleetwiki' => true,
+		'vanderbiltentwiki' => true,
 	),
 	'wmgUseCreateRedirect' => array(
 		'default' => false,
@@ -2880,6 +2882,7 @@ $wgConf->settings = array(
 		'ussewiki' => true,
 		'valentinaprojectwiki' => true,
 		'vandalismwikiwiki' => true,
+		'vanderbiltentwiki' => true,
 		'vgalimentiwiki' => true,
 		'viagroupiawiki' => true,
 		'vicprojectwiki' => true,
