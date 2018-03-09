@@ -2888,6 +2888,7 @@ $wgConf->settings = array(
 		'volleyballwiki' => true,
 		'votingwiki' => true,
 		'wabcwiki' => true,
+		'whsapushwiki' => true,
 		'wiki1776wiki' => true,
 		'wikidolphinhansenwiki' => true,
 		'wikiescolawiki' => true,
