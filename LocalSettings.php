@@ -2861,6 +2861,7 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'tnoteswiki' => true,
 		'tochkiwiki' => true,
+		'tocgamingprojectwiki' => true,
 		'tokyoghoulwiki' => true,
 		'toppsdigitalcardtraderwiki' => true,
 		'torejorgwiki' => true,
