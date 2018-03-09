@@ -6616,6 +6616,7 @@ $wgConf->settings = array(
 		'colonizemarswiki' => "//$wmgUploadHostname/colonizemarswiki/c/c1/Colonize_logo.png",
 		'consentcraftwiki' => "//$wmgUploadHostname/consentcraftwiki/3/35/Spawnlogo.PNG",
 		'cosiadventurewiki' => "//$wmgUploadHostname/cosiadventurewiki/3/3b/Wiki_logo.png",
+		'cosnwiki' => "//$wmgUploadHostname/cosnwiki/6/6b/Logo_Wiki_CoSN.png",
 		'cpiwiki' => "//$wmgUploadHostname/cpiwiki/0/01/CPI_Alpha_DS_2_160px.png",
 		'csnimsbordeauxwiki' => "//$wmgUploadHostname/csnimsbordeauxwiki/1/1a/Logo_équipe_CSN_IMS_Bordeaux.png",
  		'cristianopediawiki' => "//$wmgUploadHostname/cristianopediawiki/2/23/Biblia_y_cruz.svg",		
