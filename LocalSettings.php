@@ -6759,6 +6759,7 @@ $wgConf->settings = array(
 		'ordiswiki' => "//$wmgUploadHostname/ordiswiki/6/65/OE_Logo.png",
 		'ortuswiki' => "//$wmgUploadHostname/ortuswiki/6/67/Ortica_frame_small.png",
 		'paddelnwiki' => "//$wmgUploadHostname/paddelnwiki/9/9c/GutDrauf.png",
+		'papeloriowiki' => "//$wmgUploadHostname/papeloriowiki/6/63/Logo_papelorio_135.jpg",
 		'paranormalwiki' => "//$wmgUploadHostname/paranormalwiki/2/2d/Parawiki.png",
 		'particracywikiwiki' => "//$wmgUploadHostname/particracywikiwiki/6/69/Wiki_logo_parti.png",
 		'r2wiki' => "//$wmgUploadHostname/r2wiki/a/a6/Part-up-logo-150x150-mediawiki.png",
