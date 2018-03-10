@@ -6862,6 +6862,7 @@ $wgConf->settings = array(
 		'trashpirateswiki' => "//$wmgUploadHostname/trashpirateswiki/0/09/TrashPirateLogo.jpg",
 		'travailcollaboratifwiki' => "//$wmgUploadHostname/travailcollaboratifwiki/8/83/Collaborons.jpg",
 		'trexwiki' => "//$wmgUploadHostname/trexwiki/4/49/Wikit.png",
+		'triforcewikiwiki' => "//$wmgUploadHostname/triforcewikiwiki/8/8f/Triforce_Wiki_Logo.png",
 		'triseptsoloutionswiki' => "//$wmgUploadHostname/triseptsolutionswiki/2/25/Trisept_Logo.png",
 		'trumpwiki' => "//$wmgUploadHostname/trumpwiki/c/c3/Magnifying-logo.jpg",
 		'tudienwiki' => "//$wmgUploadHostname/tudienwiki/f/f0/Ftvh_Avatar.png",
