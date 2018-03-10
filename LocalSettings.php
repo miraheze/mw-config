@@ -1687,6 +1687,7 @@ $wgConf->settings = array(
 		'magnaorbiswiki' => true,
 		'pgnwikiwiki' => true,
 		'qmswiki' => true,
+		'sccwiki' => true,
 		'shortwikiwiki' => true,
 		'sthomaspriwiki' => true,
 		'studynotekrwiki' => true,
