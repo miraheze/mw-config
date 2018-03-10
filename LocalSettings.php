@@ -1260,6 +1260,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCapiunto' => array(
 		'default' => false,
+		'civclassicwiki' => true,
 		'modularwiki' => true,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
