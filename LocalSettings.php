@@ -1675,6 +1675,7 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'bigforestwiki' => true,
 		'bilgiwiki' => true,
+		'civclassicwiki' => true,
 		'creersonarbrewiki' => true,
 		'doinwiki' => true,
 		'dtswiki' => true,
