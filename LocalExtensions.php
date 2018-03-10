@@ -175,19 +175,19 @@ if ( $wmgUseDynamicPageList3 ) {
 }
 
 if ( $wmgUseEditcount ) {
-    wfLoadExtension( 'Editcount' );
+	wfLoadExtension( 'Editcount' );
 }
 
 if ( $wmgUseEditSubpages ) {
-    wfLoadExtension( 'EditSubpages' );
+	wfLoadExtension( 'EditSubpages' );
 }
 
 if ( $wmgUseEducationProgram ) {
-    wfLoadExtension( 'EducationProgram' );
+	wfLoadExtension( 'EducationProgram' );
 }
 
 if ( $wmgUseElectronPdfService ) {
-    wfLoadExtension( 'ElectronPdfService' );
+	wfLoadExtension( 'ElectronPdfService' );
 }
 
 if ( $wmgUseErudite ) {
@@ -215,7 +215,8 @@ if ( $wmgUseFlaggedRevs ) {
 	$wgFlaggedRevsAutopromote = $wmgFlaggedRevsAutopromote;
 	$wgFlaggedRevsAutoReview = $wmgFlaggedRevsAutoReview;
 	$wgFlaggedRevsRestrictionLevels = $wmgFlaggedRevsRestrictionLevels;
-
+	$wgSimpleFlaggedRevsUI = $wmgSimpleFlaggedRevsUI;
+	$wgFlaggedRevsLowProfile = $wmgFlaggedRevsLowProfile;
 }
 
 if ( $wmgUseFlow ) {
