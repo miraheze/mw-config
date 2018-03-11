@@ -3232,6 +3232,14 @@ $wgConf->settings = array(
 		'default' => array( '', 'sysop' ),
 		'pruebawiki' => array( '', 'sysop', 'bureaucrat', 'consul', 'autoconfirmed', 'user' ),
 	),
+	'wmgSimpleFlaggedRevsUI' => array(
+		'default' => true,
+		'infectopedwiki' => false,
+	),
+	'wmgFlaggedRevsLowProfile' => array(
+		'default' => true,
+		'infectopedwiki' => false,
+	),
 
 	// Files
 	'wgEnableUploads' => array(
