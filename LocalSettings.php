@@ -6864,6 +6864,7 @@ $wgConf->settings = array(
 		'thireswiki' => "//$wmgUploadHostname/thireswiki/9/9e/티레스_위키_로고.png",
 		'teireawiki' => "//$wmgUploadHostname/teireawiki/e/e5/Teirea_wiki_logo.png",
 		'texwikiwiki' => "//$wmgUploadHostname/texwikiwiki/e/ed/Texwikilogo2.png",
+		'tiandiwiki' => "//$wmgUploadHostname/tiandiwiki/8/80/Tiandiwikilogo135.png",
 		'tigerpediawiki' => "//$wmgUploadHostname/tigerpediawiki/9/9b/TP_transparent_135.png",
 		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/d/d4/Logo_titrepro.svg",
 		'thoughtonomywikiwiki' => "//$wmgUploadHostname/thoughtonomywikiwiki/8/8c/ThoughtonomyLogo.png",
