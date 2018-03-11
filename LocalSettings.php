@@ -5192,6 +5192,11 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
+		'+jadtechwiki' => array(
+			'bureaucrat' => array(
+				'userrights' => true,
+			),
+		),
 		'+jayuwikiwiki' => array(
 			'autoconfirmed' => array(
 				'move' => true,
