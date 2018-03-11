@@ -2635,6 +2635,7 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'calibrowiki' => true,
 		'cancerwiki' => true,
+		'cantorijwiki' => true,
 		'carelliwiki' => true,
 		'carmeigatwiki' => true,
 		'casuarinawiki' => true,
