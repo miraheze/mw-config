@@ -6644,6 +6644,7 @@ $wgConf->settings = array(
 		'developingspacewiki' => "//$wmgUploadHostname/developingspacewiki/f/f7/Entireverse_wiki.png",
 		'diascwiki' => "//$wmgUploadHostname/diascwiki/8/8f/Diasc.png",
 		'dicficwiki' => "//$wmgUploadHostname/dicficwiki/b/b1/Dicfic-logo.png",
+		'didaprowiki' => "//$wmgUploadHostname/didaprowiki/5/58/LOGORPD-135X135.jpg",
 		'diggywikipolskawiki' => "//$wmgUploadHostname/diggywikipolskawiki/8/81/Logodiggy.png",
 		'doinwiki' => "//$wmgUploadHostname/doinwiki/6/60/Wiki_Logo.png",
 		'drones4allwiki' => "//$wmgUploadHostname/drones4allwiki/6/60/Wiki_Logo.png",
