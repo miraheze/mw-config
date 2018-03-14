@@ -6913,6 +6913,7 @@ $wgConf->settings = array(
 		'zendariwiki' => "//$wmgUploadHostname/zendariwiki/9/91/Zendari_Logo_4by4.png",
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
 		'zhdelwiki' => "//$wmgUploadHostname/zhdelwiki/b/b8/Icono_archivo_borrar.png",
+		'pwscmwwiki' => "//$wmgUploadHostname/pwscmwwiki/9/9e/PWSCWIKILOGO.png
 		
 	),
 
