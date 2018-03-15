@@ -2438,6 +2438,7 @@ $wgConf->settings = array(
 		'tmewiki' => true,
 		'trexwiki' => true,
 		'touhouenginewiki' => true,
+		'turbografx16wiki' => true,
 		'tutorwiki' => true,
 		'valentinaprojectwiki' => true,
 		'vandalismwikiwiki' => true,
