@@ -2533,6 +2533,7 @@ $wgConf->settings = array(
 		'dishwiki' => true,
 		'dongyangwiki' => true,
 		'gontranwiki' => true,
+		'guiaslocaiswiki' => true,
 		'test1wiki' => true,
 		'inazumaelevenwiki' => true,
 		'ircwiki' => true,
