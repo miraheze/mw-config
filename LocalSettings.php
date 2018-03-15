@@ -244,6 +244,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'inazumaelevenwiki' => true,
+		'ipolywiki' => true,
 		'justinbieberwiki' => true,
 		'medicinawiki' => true,
 		'nanatsunotaizaiwiki' => true,
