@@ -1344,6 +1344,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => true,
 		'takethatwikiwiki' => true,
 		'thebbwiki' => true,
+		'turbografx16wiki' => true,
 		'wikidolphinhansenwiki' => true,
 		'wikipucwiki' => true,
 	),
