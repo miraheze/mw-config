@@ -2279,6 +2279,8 @@ $wgConf->settings = array(
 		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 		'thegreatwarwiki' => true,
+		'unionwiki' => true,
+		'wiki1776wiki' => true,
 	),
 	'wmgUseRSS' => array(
 		'default' => false,
