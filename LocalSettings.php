@@ -2218,12 +2218,12 @@ $wgConf->settings = array(
 	),
 	'wmgUseQuizGame' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'dongyangwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseRandomSelection' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'appswiki' => true,
 		'humorpediawiki' => true,
 		'lingnlangwiki' => true,
