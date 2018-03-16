@@ -1421,6 +1421,7 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'girlsfrontlinewiki' => true,
 		'grandtheftautowiki' => true,
+		'shortwikiwiki' => true,
 	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
