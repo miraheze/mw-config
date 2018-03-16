@@ -6915,6 +6915,7 @@ $wgConf->settings = array(
 		'worldpediawiki' => "//$wmgUploadHostname/worldpediawiki/b/bc/Wiki.png",
 		'wikibregiswiki' => "//$wmgUploadHostname/wikibregiswiki/1/1a/Logo_wiki_brégis.jpg",
 		'wikidolphinhansenwiki' => "//$wmgUploadHostname/wikidolphinhansenwiki/b/bf/Dolphin-icon-150.png",
+		'wikipoliticuswiki' => "//$wmgUploadHostname/wikipoliticuswiki/9/94/WikipolisLogo.png",
 		'wikipucwiki' => "//$wmgUploadHostname/wikipucwiki/f/fb/Logo_finito_trans.png",
 		'wisdomwikiwiki' => "//$wmgUploadHostname/wisdomwikiwiki/0/02/WWlogo.png",
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
