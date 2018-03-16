@@ -2222,7 +2222,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseRandomSelection' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'appswiki' => true,
 		'humorpediawiki' => true,
 		'lingnlangwiki' => true,
