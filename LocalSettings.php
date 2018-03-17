@@ -1856,6 +1856,7 @@ $wgConf->settings = array(
 		'izanagiwiki' => false,
 		'jawptestwiki' => false,
 		'macfan4000wiki' => false,
+		'nestartstechwiki' => false, // Re-enable when collapse issue is fixed --Reception123
 		'ndwiki' => false,
 		'permanentfuturelabwiki' => false,
 		'reviwiki' => false,
