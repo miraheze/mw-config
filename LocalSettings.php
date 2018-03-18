@@ -2937,6 +2937,7 @@ $wgConf->settings = array(
 		'yeoksawiki' => true,
 		'ylscwiki' => true,
 		'yourosongcontestwiki' => true,
+		'yourtechnicalservicewiki' => true,
 		'youtubewiki' => true,
 		'chocowiki' => true,
 		'zendariwiki' => true,
