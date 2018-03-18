@@ -1584,6 +1584,7 @@ $wgConf->settings = array(
 		'earthianwiki' => true,
 		'ernaehrungsrathhwiki' => true,
 		'espiralwiki' => true,
+		'fluxordevwiki' => true,
 		'test1wiki' => true,
 		'gepacobiodivwiki' => true,
 		'grandtheftwikiwiki' => true,
@@ -2415,6 +2416,7 @@ $wgConf->settings = array(
 		'doinwiki' => true,
 		'dtswiki' => true,
 		'test1wiki' => true,
+		'fluxordevwiki' => true,
 		'gtnhwiki' => true,
 		'hendrickswiki' => true,
 		'integrawiki' => true,
@@ -4687,6 +4689,9 @@ $wgConf->settings = array(
 				'confirmed',
 				'rollbacker',
 			),
+			'sysop' => array(
+				'widgeteditor'
+			),
 		),		
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
@@ -5817,6 +5822,9 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+			'sysop' => array(
+				'widgeteditor'
 			),
 		),		
 		'+jayuwikiwiki' => array(
