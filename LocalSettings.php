@@ -186,6 +186,8 @@ define( 'NS_ESTUDIO', 1760);
 define( 'NS_ESTUDIO_TALK', 1761);
 define( 'NS_PRUEBA', 1762);
 define( 'NS_PRUEBA_TALK', 1763);
+define( 'NS_SKY', 1764);
+define( 'NS_SKY_TALK', 1765);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -4075,6 +4077,10 @@ $wgConf->settings = array(
 		'vandalismwikiwiki' => array(
 			NS_PROJECT => 'VW',
 			NS_PROJECT_TALK => 'VT',
+		),
+		'vaswiki' => array(
+			NS_SKY => 'Sky',
+			NS_SKY_TALK => 'Sky_talk',
 		),
 		'votingwiki' => array(
 			NS_LEGACY => 'Legacy',
