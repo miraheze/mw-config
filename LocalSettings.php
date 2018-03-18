@@ -186,6 +186,18 @@ define( 'NS_ESTUDIO', 1760);
 define( 'NS_ESTUDIO_TALK', 1761);
 define( 'NS_PRUEBA', 1762);
 define( 'NS_PRUEBA_TALK', 1763);
+define( 'NS_REGISTRO', 1764);
+define( 'NS_REGISTRO_TALK', 1765);
+define( 'NS_LISTA', 1766);
+define( 'NS_LISTA_TALK', 1767);
+define( 'NS_BUG', 1768);
+define( 'NS_BUG_TALK', 1769);
+define( 'NS_PROYECTO', 1770);
+define( 'NS_PROYECTO_TALK', 1771);
+define( 'NS_TALLER', 1772);
+define( 'NS_TALLER_TALK', 1773);
+define( 'NS_MODELO', 1774);
+define( 'NS_MODELO_TALK', 1775);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -4062,11 +4074,23 @@ $wgConf->settings = array(
 		),
 		'unionwiki' => array(
 			NS_TEST => 'Prueba',
-			NS_TEST_TALK => 'Prueba discusión',
+			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
-			NS_PAGE_TALK => 'Página discusión',
+			NS_PAGE_TALK => 'Página_discusión',
 			NS_ANEXO => 'Anexo',
 			NS_ANEXO_TALK => 'Anexo_discusión',
+			NS_REGISTRO => 'Registro',
+			NS_REGISTRO_TALK => 'Registro_discusión',
+			NS_LISTA => 'Lista',
+			NS_LISTA_TALK => 'Lista_discusión',
+			NS_BUG => 'Bug',
+			NS_BUG_TALK => 'Bug_discusión',
+			NS_PROYECTO => 'Proyecto',
+			NS_PROYECTO_TALK => 'Proyecto_discusión',
+			NS_TALLER => 'Taller',
+			NS_TALLER_TALK => 'Taller_discusión',
+			NS_MODELO => 'Modelo',
+			NS_MODELO_TALK => 'Modelo_discusión',
 		),
 		'uwswiki' => array(
  		 	NS_WNS2 => 'WNS2',
@@ -4082,13 +4106,25 @@ $wgConf->settings = array(
   		),
 		'wiki1776wiki' => array(
 			NS_TEST => 'Prueba',
-			NS_TEST_TALK => 'Prueba discusión',
+			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
-			NS_PAGE_TALK => 'Página discusión',
+			NS_PAGE_TALK => 'Página_discusión',
 			NS_ANEXO => 'Anexo',
 			NS_ANEXO_TALK => 'Anexo_discusión',
 			NS_ESTUDIO => 'Estudio',
 			NS_ESTUDIO_TALK => 'Estudio_discusión',
+			NS_REGISTRO => 'Registro',
+			NS_REGISTRO_TALK => 'Registro_discusión',
+			NS_LISTA => 'Lista',
+			NS_LISTA_TALK => 'Lista_discusión',
+			NS_BUG => 'Bug',
+			NS_BUG_TALK => 'Bug_discusión',
+			NS_PROYECTO => 'Proyecto',
+			NS_PROYECTO_TALK => 'Proyecto_discusión',
+			NS_TALLER => 'Taller',
+			NS_TALLER_TALK => 'Taller_discusión',
+			NS_MODELO => 'Modelo',
+			NS_MODELO_TALK => 'Modelo_discusión',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
