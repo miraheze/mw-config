@@ -193,7 +193,7 @@ define( 'NS_LISTA_TALK', 1767);
 define( 'NS_BUG', 1768);
 define( 'NS_BUG_TALK', 1769);
 define( 'NS_PROYECTO', 1770);
-define( 'NS_PROYECTO_TALK', 1771;
+define( 'NS_PROYECTO_TALK', 1771);
 define( 'NS_TALLER', 1772);
 define( 'NS_TALLER_TALK', 1773);
 define( 'NS_MODELO', 1774);
