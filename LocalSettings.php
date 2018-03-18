@@ -4653,6 +4653,9 @@ $wgConf->settings = array(
 				'confirmed',
 				'rollbacker',
 			),
+			'sysop' => array(
+				'widgeteditor'
+			),
 		),		
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
@@ -5783,6 +5786,9 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'confirmed',
 				'rollbacker',
+			),
+			'sysop' => array(
+				'widgeteditor'
 			),
 		),		
 		'+jayuwikiwiki' => array(
