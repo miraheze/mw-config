@@ -460,6 +460,9 @@ $wgConf->settings = array(
 	'wgCentralAuthAutoMigrate' => array(
 		'default' => true,
 	),
+	'wgCentralAuthAutoMigrateNonGlobalAccounts' => array(
+		'default' => true,
+	),
 	'wgCentralAuthCookies' => array(
 		'default' => true,
 	),
@@ -479,6 +482,9 @@ $wgConf->settings = array(
 	),
 	'wgCentralAuthLoginWiki' => array(
 		'default' => 'loginwiki',
+	),
+	'wgCentralAuthPreventUnattached' => array(
+		'default' => true,
 	),
 	'wgCentralAuthSilentLogin' => array(
 		'default' => true,
