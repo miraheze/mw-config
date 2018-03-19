@@ -6970,6 +6970,7 @@ $wgConf->settings = array(
 		'velcomwiki' => "//$wmgUploadHostname/velcomwiki/0/0f/Velcom_logo.png",
 		'vgalimentiwiki' => "//$wmgUploadHostname/vgalimentiwiki/f/f9/Vgalimenti-logo.png",
 		'viagroupiawiki' => "//$wmgUploadHostname/viagroupiawiki/2/22/ViagroupiaLogo.png",
+		'vtkwiki' => "//$wmgUploadHostname/vtkwiki/d/dc/VTK_logo.png",
 		'wabcwiki' => "//$wmgUploadHostname/wabcwiki/2/25/Logowabc.png",
 		'wikid9220wiki' => "//$wmgUploadHostname/wikid9220wiki/1/14/Bloc_Marque_District_9220_135px.png",
 		'wikiletraswiki' => "//$wmgUploadHostname/wikiletraswiki/c/c9/Logo.png",
