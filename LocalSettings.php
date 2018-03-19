@@ -2521,6 +2521,7 @@ $wgConf->settings = array(
 		'corydoctorowwiki' => true,
 		'enmarchewiki' => true,
 		'geirpediawiki' => true,
+		'indrikwiki' => true,
 		'jayuwikiwiki' => true,
 		'jeongiwiki' => true,
 		'podpediawiki' => true,
