@@ -2713,6 +2713,7 @@ $wgConf->settings = array(
 		'frontdeskswiki' => true,
 		'fsxworldspainwiki' => true,
 		'gameonwiki' => true,
+		'garrettcountyguide' => true,
 		'geirpediawiki' => true,
 		'generalistprogramwiki' => true,
 		'generationsbamorowiki' => true,
