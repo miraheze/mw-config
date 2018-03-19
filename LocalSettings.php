@@ -1099,6 +1099,7 @@ $wgConf->settings = array(
 		'cristianopediawiki' => true,
 		'elarawiki' => true,
 		'trexwiki' => true,
+		'unionwiki' => true,
 		'wiki1776wiki' => true,
 	),
 	// Dormancy policy && RC stuff
