@@ -7222,6 +7222,7 @@ $wgConf->settings = array(
 			NS_FILE => true,
 		),
 		'+unionwiki' => array(
+			NS_4 => true,
 			NS_PÁGINA => true,
 			NS_PÁGINA_TALK => true,
 			NS_PRUEBA => true,
@@ -7240,6 +7241,7 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => true,
 		),
 		'+wiki1776wiki' => array(
+			NS_4 => true,
 			NS_PÁGINA => true,
 			NS_PÁGINA_TALK => true,
 			NS_PRUEBA => true,
