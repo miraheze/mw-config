@@ -6993,6 +6993,7 @@ $wgConf->settings = array(
 		'wishwiki' => "//$wmgUploadHostname/wishwiki/c/c6/Tamers_internet.png",
 		'worldpediaenwiki' => "//$wmgUploadHostname/worldpediaenwiki/b/bc/Wiki.png",
 		'worlduniversityandschoolwiki' => "//$wmgUploadHostname/worlduniversityandschoolwiki/6/60/WorldUnivAndSchLogo2017-08-18Wave.png",
+		'yokaiwatchwiki' => "//$wmgUploadHostname/yokaiwatchwiki/0/00/YW_Logo.png",
 		'zendariwiki' => "//$wmgUploadHostname/zendariwiki/9/91/Zendari_Logo_4by4.png",
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
 		'zhdelwiki' => "//$wmgUploadHostname/zhdelwiki/b/b8/Icono_archivo_borrar.png",
