@@ -5397,8 +5397,14 @@ $wgConf->settings = array(
 			),
 			'cvt' => array(
 				'abusefilter-modify-global' => true,
+				'abusefilter-modify' => true,
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-view' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
+				'block' => true,
 			),
 			'proxybot' => array(
 				'editprotected' => true,
