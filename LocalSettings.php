@@ -2291,6 +2291,7 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'bigtoewiki' => true,
 		'calexitwiki' => true,
+		'christipediawiki' => true,
 		'evawiki' => true,
 		'garrettcountyguidewiki' => true,
 		'jayuwikiwiki' => true,
