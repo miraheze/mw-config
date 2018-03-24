@@ -927,6 +927,12 @@ $wgConf->settings = array(
 		'+paddelnwiki' => array(
 			'anon' => true,
 		),
+		'+pb2stofwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+philmont126wiki' => array(
 			'anon' => true,
 			'user' => true,
