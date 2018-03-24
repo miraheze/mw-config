@@ -2077,6 +2077,7 @@ $wgConf->settings = array(
 		'imperiuswiki' => true,
 		'aktposwiki' => true,
 		'alwikiwiki' => true,
+		'blocknetwiki' => true,
 		'civclassicwiki' => true,
 		'developmentwiki' => true,
 		'dtswiki' => true,
