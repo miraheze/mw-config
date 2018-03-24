@@ -2571,6 +2571,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'ayurbookswiki' => true,
 		'bigforestwiki' => true,
+		'blocknetwiki' => true,
 		'calexitwiki' => true,
 		'cpiwiki' => true,
 		'dishwiki' => true,
