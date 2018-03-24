@@ -3035,6 +3035,7 @@ $wgConf->settings = array(
 	'wmgUseWikiForum' => array(
 		'default' => false,
 		'alwikiwiki' => true,
+		'cornettowiki' => true,
 		'entropediawiki' => true,
 		'grandtheftautowiki' => true,
 	  	'knowledgewiki' => true,
