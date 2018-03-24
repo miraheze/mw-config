@@ -1894,6 +1894,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'nenawikiwiki' => true,
 		'sdiywiki' => false,
+		'studentspoweringchangewiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseModernSkylight' => array(
@@ -5606,6 +5607,11 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'block' => true,
 				'blockemail' => true,
+			),
+		),
+		'+studentspoweringchangewiki' => array(
+			'sysop' => array(
+				'moderation' => true,
 			),
 		),
 		'+swisscomraidwiki' => array(
