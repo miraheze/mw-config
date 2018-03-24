@@ -6938,6 +6938,7 @@ $wgConf->settings = array(
 		'stemorgwiki' => "//$wmgUploadHostname/stemorgwiki/3/32/Wiki_logo_fix.png",
 		'sterbalfamilyrecipeswiki' => "//$wmgUploadHostname/sterbalfamilyrecipeswiki/c/c4/Logo-135x135.jpg",
 		'stjarnfestivalenwiki' => "//$wmgUploadHostname/stjarnfestivalenwiki/1/18/Stjärnfestivalen_Logo.png",
+		'studentspoweringchangewiki' => "//$wmgUploadHostname/studentspoweringchangewiki/c/c5/Kite_International_Logo.png",
 		'studynotekrwiki' => "//$wmgUploadHostname/studynotekrwiki/b/b3/Imageedit_6_7597747851.gif",
 		'sumerrawiki' => "//$wmgUploadHostname/sumerrawiki/8/88/Sumerra_Logo_Vertical_large.jpg",
 		'supportdrivenwiki' => "//$wmgUploadHostname/supportdrivenwiki/c/c1/Logo_dark.png",
