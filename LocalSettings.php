@@ -5425,6 +5425,7 @@ $wgConf->settings = array(
 				'editprotected' => true,
 				'globalblock' => true,
 				'block' => true,
+				'centralauth-lock' => true,
 			),
 			'steward' => array(
 				'abusefilter-modify-global' => true,
