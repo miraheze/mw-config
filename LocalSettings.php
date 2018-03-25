@@ -4641,6 +4641,16 @@ $wgConf->settings = array(
 	),
 
 	// Permissions
+	
+	'wgGroupsAddToSelf' => array(
+		'default' => array(),
+		'+metawiki' => array(
+			'cvt' => array(
+				'bot',
+			),
+		),
+	),	
+	
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
@@ -5787,7 +5797,12 @@ $wgConf->settings = array(
 			'bureaucrat' => array(
 				'bureaucrat',
 			),
-		),		
+		),
+		'+metawiki' => array(
+			'cvt' => array(
+				'bot',
+			),
+		),
 	),
 	'wgRemoveGroups' => array(
 		'default' => array(
