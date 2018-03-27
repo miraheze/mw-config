@@ -910,6 +910,12 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+nestartstechwiki' => array(
+			'anon' => true,
+			'user => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+noalatalawiki' => array(
 			'anon' => true,
 		),
