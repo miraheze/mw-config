@@ -912,7 +912,7 @@ $wgConf->settings = array(
 		),
 		'+nestartstechwiki' => array(
 			'anon' => true,
-			'user => true,
+			'user' => true,
 			'editor' => true,
 			'sysop' => true,
 		),
