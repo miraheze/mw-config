@@ -2934,6 +2934,7 @@ $wgConf->settings = array(
 		'thecscwiki' => true,
 		'thefosterswiki' => true,
 		'thehushhushsagawiki' => true,
+		'therubyserverwiki' => true,
 		'theworldwiki' => true,
 		'titaniawiki' => true,
 		'tmewiki' => true,
