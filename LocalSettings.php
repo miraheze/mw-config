@@ -6727,6 +6727,7 @@ $wgConf->settings = array(
 		'asckeyswiki' => "//$wmgUploadHostname/asckeyswiki/a/a3/ASC-logo-135px.jpg",
 		'autocountwiki' => "//$wmgUploadHostname/autocountwiki/d/d4/Logo.jpg",
 		'ayrshirewiki' => "//$wmgUploadHostname/ayrshirewiki/b/bc/Wiki.png",
+		'babelfilmswiki' => "//$wmgUploadHostname/babelfilmswiki/f/fb/New_logo_135px.jpg", 
 		'bakufuwiki' => "//$wmgUploadHostname/bakufuwiki/b/bc/Wiki.png",
 		'ballaratpubswiki' => "//$wmgUploadHostname/ballaratpubswiki/4/42/Hotels_of_Ballarat_logo.jpg",
 		'bchwiki' => "//$wmgUploadHostname/bchwiki/c/c0/Logo_135.png",
