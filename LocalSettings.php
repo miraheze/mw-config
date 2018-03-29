@@ -6778,6 +6778,7 @@ $wgConf->settings = array(
 		'colonizemarswiki' => "//$wmgUploadHostname/colonizemarswiki/c/c1/Colonize_logo.png",
 		'consentcraftwiki' => "//$wmgUploadHostname/consentcraftwiki/3/35/Spawnlogo.PNG",
 		'constancywiki' => "//$wmgUploadHostname/constancywiki/5/57/Wikifix.png",
+		'cornettowiki' => "//$wmgUploadHostname/cornettowiki/6/64/8370C1DD-322A-4AFB-BCA2-5590DF0ACAC2.jpeg",
 		'corydoctorowwiki' => "//$wmgUploadHostname/corydoctorowwiki/6/68/CDwikiLogo1.png",
 		'cosiadventurewiki' => "//$wmgUploadHostname/cosiadventurewiki/3/3b/Wiki_logo.png",
 		'cosnwiki' => "//$wmgUploadHostname/cosnwiki/6/6b/Logo_Wiki_CoSN.png",
