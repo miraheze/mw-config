@@ -1219,6 +1219,7 @@ $wgConf->settings = array(
 		'shortwikiwiki' => true,
 		'thebbwiki' => true,
 		'wikipucwiki' => true,
+		'yourtechnicalservicewiki' => true,
 	),
 	'wmgUseApex' => array(
 		'default' => false,
@@ -2166,6 +2167,7 @@ $wgConf->settings = array(
 		'savagewikiwiki' => true,
 		'speleowiki' => true,
 		'wisdomwikiwiki' => true,
+		'yourtechnicalservicewiki' => true,
 	),
 	'wmgUsePdfHandler' => array(
 		'default' => false,
