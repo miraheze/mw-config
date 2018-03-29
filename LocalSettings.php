@@ -3155,6 +3155,7 @@ $wgConf->settings = array(
 		'thebbwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 		'tmewiki' => true,
+		'truecapitalistwiki' => true, 
 		'uncyclopediawiki' => true,
 		'valentinaprojectwiki' => true,
 		'vandalismwikiwiki' => true,
