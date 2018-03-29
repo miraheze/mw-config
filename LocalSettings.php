@@ -2710,6 +2710,7 @@ $wgConf->settings = array(
 		'cnvwiki' => true,
 		'cogitopediewiki' => true,
 		'coldbloodedwiki' => true,
+		'communitydirectedsupportwiki' => true,
 		'conquestofparadiserpwiki' => true,
 		'corydoctorowwiki' => true,
 		'csnimsbordeauxwiki' => true,
