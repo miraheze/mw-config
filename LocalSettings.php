@@ -3116,6 +3116,7 @@ $wgConf->settings = array(
 		'bunker401wiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
+		'cornettowiki' => true,
 		'corydoctorowwiki' => true,
 		'developmentwiki' => true,
 		'doinwiki' => true,
