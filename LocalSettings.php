@@ -6646,6 +6646,7 @@ $wgConf->settings = array(
 		'pfsolutionswiki' => "//$wmgUploadHostname/pfsolutionswiki/0/0f/PF_Solutions_Icon.ico",
 		'picardwiki' => "//$wmgUploadHostname/picardwiki/8/8f/Picard-Wiki_favicon.png",
 		'plasmawiki' => "//$wmgUploadHostname/plasmawiki/e/e3/PlasmaWiki_Favicon.ico",
+		'plazmaburstwiki' => "//$wmgUploadHostname/plazmaburstwiki/6/64/Favicon.ico",
 		'plnonbinarywiki' => "//$wmgUploadHostname/plnonbinarywiki/7/76/Icon.ico",
 		'pluspiwiki' => "//$wmgUploadHostname/pluspiwiki/6/64/Favicon.ico",
 		'pocketmonsterswiki' => "//$wmgUploadHostname/pocketmonsterswiki/d/d2/PMFavicon.png",
