@@ -2145,6 +2145,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePdfBook' => array( // Does not work when CustomNavBlocks is enabled! --Reception123
 		'default' => false,
+		'bibleotechwiki' => true,
 		'chocowiki' => true,
 		'foundationsofteachingwiki' => true,
 		'ncpprcwiki' => true,
@@ -3118,6 +3119,7 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'animationmoviewikiwiki' => true,
 		'appswiki' => true,
+		'bibleotechwiki' => true,
 		'bigforestwiki' => true,
 		'bilgiwiki' => true,
 		'biuwiki' => true,
