@@ -2620,6 +2620,7 @@ $wgConf->settings = array(
 		'podpediawiki' => true,
 		'rpgbrigadewiki' => true,
 		'shortwikiwiki' => true,
+		'spektrowiki' => true,
 		'spiralwiki' => true,
 		'stellachronicawiki' => true,
 		'studynotekrwiki' => true,
