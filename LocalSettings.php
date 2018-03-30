@@ -2967,6 +2967,7 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => true,
 		'vandalismwikiwiki' => true,
 		'vanderbiltentwiki' => true,
+		'vaswiki' => true,
 		'vgalimentiwiki' => true,
 		'viagroupiawiki' => true,
 		'vicprojectwiki' => true,
