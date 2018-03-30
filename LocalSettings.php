@@ -6688,6 +6688,7 @@ $wgConf->settings = array(
 		'thegreatwarwiki' => "//$wmgUploadHostname/thegreatwarwiki/2/21/SoldiersFavicon.png",
 		'thelonsdalebattalionwiki' => "//$wmgUploadHostname/thelonsdalebattalionwiki/2/21/SoldiersFavicon.png",
 		'themfbclubwiki' => "//$wmgUploadHostname/themfbclubwiki/6/64/Favicon.ico",
+		'therubyserverwiki' => "//$wmgUploadHostname/therubyserverwiki/6/64/Favicon.ico",
 		'titreprovisoirewiki' => "//$wmgUploadHostname/titreprovisoirewiki/0/01/Favicon_titrepro.png",
 		'triseptsoloutionswiki' => "//$wmgUploadHostname/triseptsolutionswiki/c/c4/TriseptFavicon.png",
 		'trumpwiki' => "//$wmgUploadHostname/trumpwiki/a/a9/T-cartoon-face.ico",
