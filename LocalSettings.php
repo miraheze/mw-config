@@ -2558,7 +2558,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTemplateStyles' => array(
 		'default' => false,
-		'extloadwiki' => true,
+		'templatewiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseTheme' => array(
