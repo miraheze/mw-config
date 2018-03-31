@@ -7539,7 +7539,7 @@ foreach ( $wmgClosedDatabasesList as $database ) {
 }
 
 $wmgInactiveDatabasesList = file( "/srv/mediawiki/dblist/inactive.dblist" );
-foreach ( $wmgInactiveDaatabasesList as $database ) {
+foreach ( $wmgInactiveDatabasesList as $database ) {
 	$database = trim( $database );
 	$wgConf->settings['wmgInactiveWiki'][$database] = true;
 }
