@@ -6227,7 +6227,7 @@ $wgConf->settings = array(
 	'wgRelatedArticlesFooterWhitelistedSkins' => array(
 		'default' => 'minerva',
 	        'allthetropeswiki' => 'vector',
-	
+	),
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 		'default' => false,
 		'allthetropeswiki' => '0.01',
