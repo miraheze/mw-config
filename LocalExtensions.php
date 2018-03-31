@@ -564,6 +564,10 @@ if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 }
 
+if ( $wmgUseTemplateStyles ) {
+	wfLoadExtension( 'TemplateStyles' );
+}
+
 if ( $wmgUseTimeless ) {
 	wfLoadSkin( 'Timeless' );
 }

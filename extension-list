@@ -140,6 +140,7 @@ $IP/extensions/Tabber/extension.json
 $IP/extensions/Tabs/Tabs.php
 $IP/extensions/TemplateData/extension.json
 $IP/extensions/TemplateSandbox/extension.json
+$IP/extensions/TemplateStyles/extension.json
 $IP/extensions/TextExtracts/extension.json
 $IP/extensions/Thanks/extension.json
 $IP/extensions/Theme/extension.json
