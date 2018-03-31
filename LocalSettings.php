@@ -7449,6 +7449,9 @@ $wgConf->settings = array(
 	'wmgClosedWiki' => array(
 		'default' => false,
 	),
+	'wmgInactiveWiki' => array(
+		'default' => false,
+	),
 	'wmgPrivateWiki' => array(
 		'default' => false,
 	),
@@ -7513,6 +7516,12 @@ $wmgClosedDatabasesList = file( "/srv/mediawiki/dblist/closed.dblist" );
 foreach ( $wmgClosedDatabasesList as $database ) {
 	$database = trim( $database );
 	$wgConf->settings['wmgClosedWiki'][$database] = true;
+}
+
+$wmgInactiveDatabasesList = file( "/srv/mediawiki/dblist/inactive.dblist" );
+foreach ( $wmgInactiveDaatabasesList as $database ) {
+	$database = trim( $database );
+	$wgConf->settings['wmgInactiveWiki'][$database] = true;
 }
 
 // Hard overrides that don't work when set in $wgConf->settings
