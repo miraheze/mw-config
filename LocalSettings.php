@@ -2555,6 +2555,11 @@ $wgConf->settings = array(
 		'templatewiki' => true,				
 		'test1wiki' => true,
 	),
+	'wmgUseTemplateStyles' => array(
+		'default' => false,
+		'extloadwiki' => true,
+		'test1wiki' => true,
+	),
 	'wmgUseTheme' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
