@@ -7235,7 +7235,7 @@ $wgConf->settings = array(
 			'wiki\.gamergeeked\.us',
 			'wiki\.gesamtschule-nordkirchen\.de',
 			'garrettcountyguide\.com',
-			'give\.effectively.to\',
+			'give\.effectively\.to',
 			'wiki\.grottocenter\.org',
 			'wiki\.gtsc\.vn',
 			'www\.iceposeidonwiki\.com',
