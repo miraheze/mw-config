@@ -2136,7 +2136,6 @@ $wgConf->settings = array(
 	),
 	'wmgUsePageTriage' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'bgowiki' => true,
 		'calexitwiki' => true,
 		'test1wiki' => true,
@@ -2275,6 +2274,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseQuizGame' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'dongyangwiki' => true,
 		'test1wiki' => true,
 	),
@@ -2406,7 +2406,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseSiteScout' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'calexitwiki' => true,
 		'test1wiki' => true,
 	),
@@ -3080,6 +3079,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseWikiForum' => array(
 		'default' => false,
+		'allthetropeswiki' => true,
 		'alwikiwiki' => true,
 		'cornettowiki' => true,
 		'entropediawiki' => true,
