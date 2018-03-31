@@ -2699,6 +2699,7 @@ $wgConf->settings = array(
 		'biblicalwikiwiki' => true,
 		'bibliowiki' => true,
 		'bigforestwiki' => true,
+		'blocknetwiki' => true,
 		'bpawiki' => true,
 		'braindumpwiki' => true,
 		'breedersofthenephelymwiki' => true,
