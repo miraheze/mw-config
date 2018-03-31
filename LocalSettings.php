@@ -2118,6 +2118,7 @@ $wgConf->settings = array(
 	'wmgUsePageForms' => array(
 		'default' => false,
 		'bigtoewiki' => true,
+		'metaldetectorwiki' => true,
 		'scruffywiki' => true,
 		'serinfhospwiki' => true,
 		'test1wiki' => true,
