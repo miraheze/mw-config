@@ -2697,6 +2697,7 @@ $wgConf->settings = array(
 		'aidorupediawiki' => true,
 		'airwiki' => true,
 		'aktposwiki' => true,
+		'alewiki' => true,
 		'algopediawiki' => true,
 		'allthetropeswiki' => true,
 		'alternatehistorywiki' => true,
