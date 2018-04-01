@@ -230,10 +230,12 @@ $wgConf->settings = array(
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
 		'developmentwiki' => 259200, // 3 days * 24 hours * 60 minutes * 60 seconds
+		'marioserieswikiwiki' => 2592000 // 30 days * 24 hours * 60 minutes * 60 seconds 
 		'proxybotwiki' => 604800, // 7 days * 24 hours * 60 minutes * 60 seconds
 	),
 	'wgAutoConfirmCount' => array(
 		'default' => 10,
+		'marioserieswikiwiki' => 500, 
 	),
 
 	// BetaFeatures
