@@ -2817,6 +2817,7 @@ $wgConf->settings = array(
 		'ipolywiki' => true,
 		'ircwiki' => true,
 		'isvwiki' => true,
+		'iubriswiki' => true,
 		'iwnwiki' => true,
 		'izanagiwiki' => true,
 		'jayuwikiwiki' => true,
