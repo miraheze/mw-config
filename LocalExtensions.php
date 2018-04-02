@@ -674,6 +674,10 @@ if ( $wmgUseWikibaseRepository ) {
 	require_once( "/srv/mediawiki/config/Wikibase.php" );
 }
 
+if ( $wmgUseWikiDiscover ) {
+	wfLoadExtension( 'WikiDiscover' );
+}
+
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
 }
