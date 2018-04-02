@@ -7505,7 +7505,10 @@ $wgConf->settings = array(
 	'wgWikiDiscoverPrivateList' => array(
 		'default' => '/srv/mediawiki/dblist/private.dblist',
 	),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6b9ae213f79cb7cf38d0017f975ff2393dbfbbd0
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
 		'default' => false,
