@@ -5,7 +5,7 @@
 // Closed Wikis
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgGroupPermissions['*']['edit'] = false;
-	$wgGroupPermissions['*']F['createaccount'] = false;
+	$wgGroupPermissions['*']['createaccount'] = false;
 	$wgGroupPermissions['*']['autocreateaccount'] = true;
 	$wgGroupPermissions['user']['edit'] = false;
 	$wgGroupPermissions['user']['createaccount'] = false;
