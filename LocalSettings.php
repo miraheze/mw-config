@@ -7490,6 +7490,21 @@ $wgConf->settings = array(
 		'rwsaleswiki' => false,
 	),
 
+
+	// WikiDiscover
+	'wmgUseWikiDiscover' => array(
+		'default' => false, // currently only works on metawiki
+		'metawiki' => true,
+	),
+	'wgWikiDiscoverClosedList => array(
+		'default' => '/srv/mediawiki/dblist/closed.dblist',
+	),
+	'wgWikiDiscoverInactiveList' => array(
+		'default' => '/srv/mediawiki/dblist/inactive.dblist',
+	),
+	'wgWikiDiscoverPrivateList' => array(
+		'default' => '/srv/mediawiki/dblist/private.dblist',
+	),
 	// Empty arrays (do not touch unless you know what you're doing)
 	'wmgClosedWiki' => array(
 		'default' => false,
