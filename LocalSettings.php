@@ -585,6 +585,30 @@ $wgConf->settings = array(
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		),
 	),
+	'wgCreateWikiCategories' => array(
+		'default' => array(
+			'Community' => 'community',
+			'Education' => 'education',
+			'Electronics' => 'eletronics',
+			'Fandom' => 'fandom',
+			'Fantasy' => 'fantasy',
+			'Gaming' => 'gaming',
+			'Geography' => 'geography',
+			'Leisure' => 'leisure',
+			'Literature/Writing' => 'literature',
+			'Medicine/Medical' => 'medical',
+			'Miliary/War' => 'military',
+			'Music' => 'music',
+			'Podcast' => 'podcast',
+			'Religion' => 'religion',
+			'Sofware/Computing' => 'software',
+			'Sports' => 'sport',
+			'Uncategorised' => 'uncategorised',
+		),
+	),
+	'wgCreateWikiUseCategories' => array(
+		'default' => false,
+	),
 	// Cookies extension settings
 	'wgCookieWarningMoreUrl' => array(
 		'default' => false,
