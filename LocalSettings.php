@@ -198,6 +198,8 @@ define( 'NS_TALLER', 1772);
 define( 'NS_TALLER_TALK', 1773);
 define( 'NS_MODELO', 1774);
 define( 'NS_MODELO_TALK', 1775);
+define( 'NS_HANDBOOK', 1776);
+define( 'NS_HANDBOOK_TALK', 1777);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -209,7 +211,7 @@ define( 'NS_PROOFREAD_PAGE_TALK', 251);
 define( 'NS_PROOFREAD_INDEX', 252);
 define( 'NS_PROOFREAD_INDEX_TALK', 253);
 
-// NS 860, 861, 862, 863 allocated for Item/Item_talk/Property/Property_talk
+// NS 860, 861, 862, 863 allocated for Item/Item_talk/Property/Property_talk by Wikibase
 
 $wgConf->settings = array(
 	// AbuseFilter
@@ -4100,6 +4102,10 @@ $wgConf->settings = array(
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
 		),
+		'reviwikiwiki' => array(
+			NS_HANDBOOK => '핸드북',
+			NS_HANDBOOK_TALK => '핸드북토론',
+		),
 		'revitwiki' => array(
 			NS_RGB => 'RGB',
 			NS_RGB_TALK => 'RGB_talk',
@@ -4279,9 +4285,10 @@ $wgConf->settings = array(
 		'default' => array( NS_MAIN ),
 		'+calexitwiki' => array( NS_OPINION, NS_TIMELINE, NS_HISTORICAL_TIMELINE ),
 		'+reviwiki' => array( NS_SERVER ),
+		'+reviwikiwiki' => array ( NS_HANDBOOK ),
 		'+safiriawiki' => array( NS_HOENN ),
 		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA, NS_CIVILIZATION_IV, NS_GAME, NS_IDEA, NS_TIMELINE ),
-	        '+unionwiki' => array( NS_ANEXO ),
+	    '+unionwiki' => array( NS_ANEXO ),
 		'+wiki1776wiki' => array( NS_ANEXO ),
 	),
 	'wgMetaNamespace' => array(
@@ -4351,6 +4358,10 @@ $wgConf->settings = array(
 		),
 		'+proxybotwiki' => array(
 			'UT' => NS_USER_TALK,
+		),
+		'+reviwikiwiki' => array(
+			'Handbook' => NS_HANDBOOK,
+			'Handbook_talk' => NS_HANDBOOK_TALK,
 		),
 		'+studynotekrwiki' => array(
 			'KSN' => NS_KOREAN_STUDY_NOTE,
@@ -4647,6 +4658,7 @@ $wgConf->settings = array(
 		),
 		'+reviwikiwiki' => array(
 			NS_MAIN => true,
+			NS_HANDBOOK => true,
 		),
 		'+rswiki' => array(
 			NS_TEMPLATE => true,
