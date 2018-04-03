@@ -600,6 +600,7 @@ $wgConf->settings = array(
 			'Miliary/War' => 'military',
 			'Music' => 'music',
 			'Podcast' => 'podcast',
+			'Private' => 'private',
 			'Religion' => 'religion',
 			'Sofware/Computing' => 'software',
 			'Sports' => 'sport',
