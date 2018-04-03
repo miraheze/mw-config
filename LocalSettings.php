@@ -4696,13 +4696,30 @@ $wgConf->settings = array(
 			NS_TIMELINE => true,
 			
 		),
+		'+unionwiki' => array(
+			NS_PROJECT => true,
+       		        NS_PAGE => true,
+			NS_TEST => true,
+			NS_REGISTRO => true,
+			NS_LISTA => true,
+			NS_BUG => true,
+			NS_PROYECTO => true,
+			NS_TALLER => true,
+			NS_MODELO => true,
+		),
 		'+voidwiki' => array(
 			NS_MAIN => true,
 		),
 		'+wiki1776wiki' => array(
-			NS_MAIN => true,
+			NS_PROJECT => true,
+       		        NS_PAGE => true,
 			NS_TEST => true,
-			NS_PAGE => true,
+			NS_REGISTRO => true,
+			NS_LISTA => true,
+			NS_BUG => true,
+			NS_PROYECTO => true,
+			NS_TALLER => true,
+			NS_MODELO => true,
 		),
 		'+wisdomwikiwiki' => array(
 			NS_MAIN => true,
