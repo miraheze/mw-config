@@ -607,7 +607,7 @@ $wgConf->settings = array(
 		),
 	),
 	'wgCreateWikiUseCategories' => array(
-		'default' => false,
+		'default' => true,
 	),
 	// Cookies extension settings
 	'wgCookieWarningMoreUrl' => array(
