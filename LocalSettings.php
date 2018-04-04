@@ -2632,6 +2632,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTimeless' => array(
 		'default' => false,
+		'metawiki' => true,
 		'corydoctorowwiki' => true,
 		'cristianopediawiki' => true,		
 		'grandtheftautowiki' => true,
