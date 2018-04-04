@@ -6863,6 +6863,7 @@ $wgConf->settings = array(
 		'betapurplewiki' => "//$wmgUploadHostname/betapurplewiki/0/0e/BetaPurpleLogo.png",
 		'biblicalwikiwiki' => "//$wmgUploadHostname/biblicalwikiwiki/e/e2/WikiLogo.svg",
 		'bigforestwiki' => "//$wmgUploadHostname/bigforestwiki/f/f0/Logo_Candidate.png",
+		'biglakemnhistorywiki' => "//$wmgUploadHostname/biglakemnhistorywiki/9/91/HistoryBigLakeBookCover-150x97.jpg",
 		'blocknetwiki' => "//$wmgUploadHostname/blocknetwiki/f/ff/Xxxxxxxxxx.png",
 		'bloodstainedwiki' => "//$wmgUploadHostname/bloodstainedwiki/7/71/Logo_Icon.png",
 		'bootstrappingwiki' => "//$wmgUploadHostname/bootstrappingwiki/f/fd/Bootstrapping.png",
