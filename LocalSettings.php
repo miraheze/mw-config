@@ -5562,6 +5562,9 @@ $wgConf->settings = array(
 				'translate-import' => true,
 				'translate-manage' => true,
 			),
+			'user' => array(
+				'requestwiki' => true,
+			),
 			'wikicreator' => array(
 				'createwiki' => true,
 			),
