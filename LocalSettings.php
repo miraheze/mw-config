@@ -4698,7 +4698,7 @@ $wgConf->settings = array(
 		),
 		'+unionwiki' => array(
 			NS_PROJECT => true,
-       		        NS_PAGE => true,
+			NS_PAGE => true,
 			NS_TEST => true,
 			NS_REGISTRO => true,
 			NS_LISTA => true,
@@ -4712,7 +4712,7 @@ $wgConf->settings = array(
 		),
 		'+wiki1776wiki' => array(
 			NS_PROJECT => true,
-       		        NS_PAGE => true,
+			NS_PAGE => true,
 			NS_TEST => true,
 			NS_REGISTRO => true,
 			NS_LISTA => true,
