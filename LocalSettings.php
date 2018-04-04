@@ -1061,6 +1061,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+studentwikiwiki' => array(
+			'anon' => true,
+		),
 		'+swisscomraidwiki' => array(
 			'user' => true,
 			'anon' => true,
@@ -2982,6 +2985,7 @@ $wgConf->settings = array(
 		'stellachronicawiki' => true,
 		'sthomaspriwiki' => true,
 		'stjarnfestivalenwiki' => true,
+		'studentwikiwiki' => true,
 		'studynotekrwiki' => true,
 		'summerolympicswiki' => true,
 		'tagwiki' => true,
