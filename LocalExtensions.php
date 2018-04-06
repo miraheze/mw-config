@@ -355,10 +355,6 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
 
-if ( $wmgUseMonaco ) {
-	require_once( "$IP/skins/Monaco/monaco.php" );
-}
-
 if ( $wmgUseMsPackage ) {
 	wfLoadExtension( 'MsUpload' );
 	wfLoadExtension( 'MsLinks' );
