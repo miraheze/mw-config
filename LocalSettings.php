@@ -4766,6 +4766,13 @@ $wgConf->settings = array(
 			NS_TEACHING => true,
 		),
 	),
+	
+	'wgNamespaceContentModels' => array(
+		'default' => array(),
+		'svwiki' => array(
+			NS_MODULE_TALK => flow-board,
+		),
+	),
 
 	// OATHAuth
 	'wgOATHAuthDatabase' => array(
