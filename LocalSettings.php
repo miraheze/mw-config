@@ -1965,11 +1965,6 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'jayuwikiwiki' => true,
 	),
-	'wmgUseMonaco' => array(
-		'default' => false,
-		'allthetropeswiki' => true,
-		'test1wiki' => true,
-	),
 	'wmgUseMsPackage' => array(
 		'default' => false, // do not set this to false without disabling MsUpload on all wikis below
 		'calexitwiki' => true,
