@@ -4770,7 +4770,7 @@ $wgConf->settings = array(
 	'wgNamespaceContentModels' => array(
 		'default' => array(),
 		'isvwiki' => array(
-			NS_MODULE_TALK => 'flow-board',
+			WMG_NS_MODULE_TALK => 'flow-board',
 		),
 	),
 
