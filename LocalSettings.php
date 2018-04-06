@@ -4769,7 +4769,7 @@ $wgConf->settings = array(
 	
 	'wgNamespaceContentModels' => array(
 		'default' => array(),
-		'svwiki' => array(
+		'isvwiki' => array(
 			NS_MODULE_TALK => flow-board,
 		),
 	),
