@@ -3226,6 +3226,7 @@ $wgConf->settings = array(
 		'openonderwijswiki' => true,
 		'pfl2wiki' => true,
 		'pgnwikiwiki' => true,
+		'pieskysoftwiki' => true,
 		'plazmaburstwiki' => true,
 		'podpediawiki' => true,
 		'priyowiki' => true,
