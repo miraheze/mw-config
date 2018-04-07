@@ -4521,12 +4521,6 @@ $wgConf->settings = array(
 	),
 	'+wgNamespaceProtection' => array(
 		'default' => array(),
-		'+isvwiki' => array(
-			// Forum talk
-			111 => array(
-				'editinterface'
-			),
-		),
 		'+nenawikiwiki' => array(
 			NS_MAIN => array(
 				'edit-content-pages',
@@ -5426,6 +5420,7 @@ $wgConf->settings = array(
 			),
 			'autoconfirmed' => array(
 				'move' => true,
+				'flow-hide' => true,
 			),
 			'bot' => array(
 				'autoreview' => true,
