@@ -7145,6 +7145,7 @@ $wgConf->settings = array(
 		'sterbalfamilyrecipeswiki' => "//$wmgUploadHostname/sterbalfamilyrecipeswiki/c/c4/Logo-135x135.jpg",
 		'stjarnfestivalenwiki' => "//$wmgUploadHostname/stjarnfestivalenwiki/1/18/Stjärnfestivalen_Logo.png",
 		'studentspoweringchangewiki' => "//$wmgUploadHostname/studentspoweringchangewiki/c/c5/Kite_International_Logo.png",
+		'studentwikiwiki' => "//$wmgUploadHostname/studentwikiwiki/d/da/Studentwiki.png",
 		'studynotekrwiki' => "//$wmgUploadHostname/studynotekrwiki/b/b3/Imageedit_6_7597747851.gif",
 		'sumerrawiki' => "//$wmgUploadHostname/sumerrawiki/8/88/Sumerra_Logo_Vertical_large.jpg",
 		'supportdrivenwiki' => "//$wmgUploadHostname/supportdrivenwiki/c/c1/Logo_dark.png",
