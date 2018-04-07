@@ -1978,6 +1978,7 @@ $wgConf->settings = array(
 		'aesbasewiki' => true,
 		'aerosswiki' => true,
 		'aktposwiki' => true,
+		'albionwebwiki' => true,
 		'allthetropeswiki' => true,
 		'amaninfowiki' => true,
 		'animationmoviewikiwiki' => true,
