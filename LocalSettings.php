@@ -5431,6 +5431,7 @@ $wgConf->settings = array(
 			'confirmed' => array(
 				'autoconfirmed' => true,
 				'autoreview' => true,
+				'flow-hide' => true,
 				'review' => true,
 				'unreviewedpages' => true,
 				'movefile' => true,
