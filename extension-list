@@ -169,7 +169,6 @@ $IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/YouTube/YouTube.php
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
-$IP/skins/BootstrapMediawiki/bootstrap-mediawiki.php
 $IP/skins/CologneBlue/skin.json
 $IP/skins/DarkVector/skin.json
 $IP/skins/DuskToDawn/skin.json
