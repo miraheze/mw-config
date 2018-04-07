@@ -1313,13 +1313,6 @@ $wgConf->settings = array(
 		'thebbwiki' => true,
 		'wikidolphinhansenwiki' => true,
 	),
-	'wmgUseBootstrapMediawiki' => array(
-		'default' => false,
-		'test1wiki' => true,
-		'kstartupswiki' => true,
-		'raymanspeedrunwiki' => true,
-		'shortwikiwiki' => true,
-	),
 	'wmgUseMSCalendar' => array(
 		'default' => false,
 		'5awiki' => true,
@@ -6674,7 +6667,7 @@ $wgConf->settings = array(
 		'pfsolutionswiki' => 'metrolook',
 		'podpediawiki' => 'metrolook',
 		'puzzlewiki' => 'metrolook',
-		'raymanspeedrunwiki' => 'bootstrapmediawiki',
+		'raymanspeedrunwiki' => 'vector',
 		'revitwiki' => 'vector',
 		'thebbwiki' => 'apex',
 		'thegreatwarwiki' => 'metrolook',
