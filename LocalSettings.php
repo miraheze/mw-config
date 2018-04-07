@@ -2489,6 +2489,7 @@ $wgConf->settings = array(
 	'wmgUseSubPageList3' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'holonetwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseSyntaxHighlight' => array(
@@ -2843,6 +2844,7 @@ $wgConf->settings = array(
 		'hktransportpediawiki' => true,
 		'hlptestwiki' => true,
 		'hobbieswiki' => true,
+		'holonetwiki' => true,
 		'hsoodenwiki' => true,
 		'hytecwiki' => true,
 		'icmscholarswiki' => true,
