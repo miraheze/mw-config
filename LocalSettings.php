@@ -4302,10 +4302,10 @@ $wgConf->settings = array(
 		'+reviwikiwiki' => array ( NS_HANDBOOK ),
 		'+safiriawiki' => array( NS_HOENN ),
 		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA, NS_CIVILIZATION_IV, NS_GAME, NS_IDEA, NS_TIMELINE ),
-	    '+unionwiki' => array( NS_ANEXO ),
+		'+unionwiki' => array( NS_ANEXO ),
 		'+wiki1776wiki' => array( NS_ANEXO ),
 	),
-	'wgMathValidModes' array(
+	'wgMathValidModes' => array(
 		'default' => array( 'png' ),
 	),
 	'wgMetaNamespace' => array(
