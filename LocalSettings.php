@@ -4306,7 +4306,7 @@ $wgConf->settings = array(
 		'+wiki1776wiki' => array( NS_ANEXO ),
 	),
 	'wgMathValidModes' array(
-		'default' => array( 'png' );
+		'default' => array( 'png' ),
 	),
 	'wgMetaNamespace' => array(
 		'default' => null,
