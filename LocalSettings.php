@@ -4305,6 +4305,9 @@ $wgConf->settings = array(
 	    '+unionwiki' => array( NS_ANEXO ),
 		'+wiki1776wiki' => array( NS_ANEXO ),
 	),
+	'wgMathValidModes' array(
+		'default' => array( 'png' );
+	),
 	'wgMetaNamespace' => array(
 		'default' => null,
 		'calexitwiki' => 'CalExit_Wiki',
