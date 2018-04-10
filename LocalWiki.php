@@ -142,6 +142,7 @@ if ( $wgDBname === 'isvwiki' ) {
 	
 	$wgGroupPermissions['*']['editmyusercss'] = false;
 	$wgGroupPermissions['*']['editmyuserjs'] = false;
+	$wgGroupPermissions['*']['flow-hide'] = false;
 	
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['move-subpages'] = false;
