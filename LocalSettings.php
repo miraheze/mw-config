@@ -2938,6 +2938,7 @@ $wgConf->settings = array(
 		'paodeaodawiki' => true,
 		'r2wiki' => true,
 		'patch153wiki' => true,
+		'pb2stofwiki' => true,
 		'peopleshararamwiki' => true,
 		'permanentfuturelabwiki' => true,
 		'petctviewerwiki' => true,
