@@ -8,7 +8,7 @@ Authors of initial version: Southparkfan, John Lewis, Orain contributors
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
 # Load global skins and extensions
-require_once( "/srv/mediawiki/config/GlobalSkins.php" );
+require_once( "/srv/mediawfiki/config/GlobalSkins.php" );
 require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
 
 # Don't allow web access.
@@ -3003,6 +3003,7 @@ $wgConf->settings = array(
 		'studentwikiwiki' => true,
 		'studynotekrwiki' => true,
 		'summerolympicswiki' => true,
+		'svenskabriardklubbenwiki' => true,
 		'tagwiki' => true,
 		'takethatwikiwiki' => true,
 		'tallerdecristianopediawiki' => true,
