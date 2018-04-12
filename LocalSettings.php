@@ -7175,6 +7175,7 @@ $wgConf->settings = array(
 		'studynotekrwiki' => "//$wmgUploadHostname/studynotekrwiki/b/b3/Imageedit_6_7597747851.gif",
 		'sumerrawiki' => "//$wmgUploadHostname/sumerrawiki/8/88/Sumerra_Logo_Vertical_large.jpg",
 		'supportdrivenwiki' => "//$wmgUploadHostname/supportdrivenwiki/c/c1/Logo_dark.png",
+		'svenskabriardklubbenwiki' => "//$wmgUploadHostname/svenskabriardklubbenwiki/6/6b/Afbdlogo_small2.jpg",
 		'syscoopwiki' => "//$wmgUploadHostname/syscoopwiki/c/c6/Logo_ensi.jpg",
 		'sysexwiki' => "//$wmgUploadHostname/sysexwiki/1/13/Sysex.png",
 		'tagwiki' => "//$wmgUploadHostname/tagwiki/6/66/Tag_logo.png",
