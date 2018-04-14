@@ -467,6 +467,7 @@ $wgConf->settings = array(
 			'www.eerstelijnszones.be' => 'eerstelijnszoneswiki',
 			'www.lab612.at' => 'lab612wiki',
 			'www.iceposeidonwiki.com' => 'iceposeidonwiki',
+			'www.schulwiki.de' => 'schulwiki',
 			'www.splat-teams.com' => 'splatteamswiki',
 			'www.zenbuddhism.info' => 'zenbuddhismwiki',
 		),
@@ -6589,6 +6590,7 @@ $wgConf->settings = array(
 		'stjarnfestivalenwiki' => 'https://saf.songcontests.eu',
 		'savagewikiwiki' => 'https://savage-wiki.com',
 		'savetawiki' => 'https://saveta.org',
+		'schulwiki' => 'https://www.schulwiki.de',
 		'sdiywiki' => 'https://sdiy.info',
 		'speleowiki' => 'https://speleo.wiki',
 		'spiralwiki' => 'https://spiral.wiki',
@@ -7477,6 +7479,7 @@ $wgConf->settings = array(
 			'wikibase\.revi\.wiki',
 			'wiki\.teamwizardry\.com',
 			'wiki\.svenskabriardklubben\.se',
+			'www\.schulwiki\.de',
 		),
 	),
 
