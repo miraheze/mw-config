@@ -1953,7 +1953,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
-		'avalicearchiveswiki' => true,
 		'carmeigatwiki' => false,
 		'izanagiwiki' => false,
 		'jawptestwiki' => false,
