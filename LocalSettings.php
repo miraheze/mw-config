@@ -454,7 +454,6 @@ $wgConf->settings = array(
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.meeusen.net' => 'meeusenwiki',
 			'wiki.staraves-no.cz' => 'staravesnowiki',
-			'wiki.svenskabriardklubben.se' => 'svenskabriardklubbenwiki',
 			'wiki.teamwizardry.com' => 'teamwizardrywiki',
 			'wiki.tensorflow.community' => 'tensorflowlearningwiki',
 			'wiki.tulpa.info' => 'tulpawiki',
