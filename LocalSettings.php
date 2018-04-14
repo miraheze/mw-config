@@ -454,6 +454,7 @@ $wgConf->settings = array(
 			'wiki.macc.nyc' => 'maccnycwiki',
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.meeusen.net' => 'meeusenwiki',
+			'www.radviser.org' => 'radviserwiki',
 			'wiki.staraves-no.cz' => 'staravesnowiki',
 			'wiki.teamwizardry.com' => 'teamwizardrywiki',
 			'wiki.tensorflow.community' => 'tensorflowlearningwiki',
@@ -6584,6 +6585,7 @@ $wgConf->settings = array(
 		'programmingredwiki' => 'https://programming.red',
 		'pruebawiki' => 'https://es.publictestwiki.com',
 		'pwikiwiki' => 'https://pwiki.arkcls.com',
+		'radviserwiki' => 'https://www.radviser.org',
 		'testwiki' => 'https://publictestwiki.com',
 		'tulpawiki' => 'https://wiki.tulpa.info',
 		'reviwiki' => 'https://private.revi.wiki',
@@ -7483,6 +7485,7 @@ $wgConf->settings = array(
 			'wiki\.svenskabriardklubben\.se',
 			'www\.schulwiki\.de',
 			'holonet\.pw',
+			'www\.radviser\.org',
 		),
 	),
 
