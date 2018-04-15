@@ -7823,7 +7823,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>We will be setting wiki's into read only mode starting in 30mins to 1hour, we are doing some maintenance which requires read only mode. It should last about 3-5 hours. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+		<td>We will be setting all wiki's into read only mode starting at 18:00 UTC time. We are doing some maintenance which requires read only mode. It should last about 1 hour and 30 mins. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
 		</tr></tbody></table>
 EOF;
 	 }
