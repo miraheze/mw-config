@@ -7816,6 +7816,20 @@ EOF;
 }
 */
 
+// Write your SiteNotice below.  Comment out this section to disable.
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	global $wmgSiteNoticeOptOut, $snImportant;
+	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
+		$siteNotice .= <<<EOF
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+		<td>We will be setting wiki's into read only mode starting in 30mins to 1hour, we are doing some maintenance which requires read only mode. It should last about 3-5 hours. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+		</tr></tbody></table>
+EOF;
+	 }
+	return true;
+}
+
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
