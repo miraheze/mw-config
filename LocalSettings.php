@@ -643,7 +643,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => 'Undergoing some maintenance, should be out of read only mode at about 17:30 UTC or before',
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
