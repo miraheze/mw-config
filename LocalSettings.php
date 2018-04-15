@@ -643,7 +643,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => 'Wiki\'s are undergoing maintenance',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7815,6 +7815,21 @@ EOF;
 	return true;
 }
 */
+
+// Write your SiteNotice below.  Comment out this section to disable.
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	global $wmgSiteNoticeOptOut, $snImportant;
+	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
+		$siteNotice .= <<<EOF
+		<table class="wikitable" style="text-align:center;"><tbody><tr>
+		<td>Our wiki's will be going under maintenance today. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+		</tr></tbody></table>
+EOF;
+	 }
+	return true;
+}
+
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
