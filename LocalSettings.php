@@ -6654,9 +6654,9 @@ $wgConf->settings = array(
 			'edits' => 10,
 		),
 	),
-	'wgUserProfileDisplay['foes']' => array(
-		'default' => true,
-		'avalicearchiveswiki' => false,
+	'wgUserProfileDisplay['friends']' => array(
+		'default' => false,
+		'avalicearchiveswiki' => true,
 		),
 	),
 	'wgUserBoard' => array(
