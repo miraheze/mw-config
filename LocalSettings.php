@@ -6654,6 +6654,21 @@ $wgConf->settings = array(
 			'edits' => 10,
 		),
 	),
+	'wgUserProfileDisplay['foes']' => array(
+		'default' => true,
+		'avalicearchiveswiki' => false,
+		),
+	),
+	'wgUserBoard' => array(
+		'default' => false,
+		'avalicearchiveswiki' => true,
+		),
+	),
+	'wgUserProfileDisplay['board']' => array(
+		'default' => false,
+		'avalicearchiveswiki' => true,
+		),
+	),
 
 	// Statistics
 	'wgArticleCountMethod' => array(
