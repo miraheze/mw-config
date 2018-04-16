@@ -3611,7 +3611,7 @@ $wgConf->settings = array(
 		'rezeroswiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'safiriawiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'schnellbildungwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
-		'jcswiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'schulwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'spiralwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
 		'wisdomwikiwiki' => 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png',
 	),
