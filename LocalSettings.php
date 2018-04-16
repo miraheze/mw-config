@@ -7165,6 +7165,7 @@ $wgConf->settings = array(
 		'safiriawiki' => "//$wmgUploadHostname/safiriawiki/2/24/Newcoa_small.png",
 		'sapperpediawiki' => "//$wmgUploadHostname/sapperpediawiki/f/f8/Sapperpedia_small.png",
 		'savagewikiwiki' => "//$wmgUploadHostname/savagewikiwiki/9/98/Sav_Wiki_logo.jpg",
+		'savetawiki' => "//$wmgUploadHostname/savetawiki/4/44/Savetalogo.png",
 		'scffantasyescwiki' => "//$wmgUploadHostname/scffantasyescwiki/8/82/EurovisionLogo.png",
 		'schnellbildungwiki' => "//$wmgUploadHostname/schnellbildungwiki/6/6f/Logo.svg",
 		'schicksalswikiwiki' => "//$wmgUploadHostname/schicksalswikiwiki/b/bc/Wiki.png",
