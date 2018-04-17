@@ -1450,7 +1450,7 @@ $wgConf->settings = array(
 		'dongyangwiki' => true,
 		'malaysiawiki' => true,
 		'test1wiki' => true,
-		'vandalismwiki' => true,
+		'vandalismwikiwiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
 		'default' => false,
