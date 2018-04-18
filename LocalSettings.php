@@ -7846,7 +7846,7 @@ EOF;
 }
 */
 
-if ( $wgDBname == 'testwiki' ) { 
+if ( $wgDBname == 'test1wiki' ) { 
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
@@ -7855,7 +7855,7 @@ if ( $wgDBname == 'testwiki' ) {
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
 			<td>Miraheze is performing database maintenance on this wiki Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
 			</tr></tbody></table>
-	EOF;
+EOF;
 		 }
 		return true;
 	}
