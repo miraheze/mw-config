@@ -6654,10 +6654,14 @@ $wgConf->settings = array(
 			'edits' => 10,
 		),
 	),
-	'wgUserProfileDisplay['friends']' => array(
-		'default' => false,
-		'avalicearchiveswiki' => true,
-		),
+	'wgUserProfileDisplay' => array(
+        	'default' => array(
+                'friends' => false,
+		'foes' => false,
+      	  	),
+      	  'avalicearchiveswiki' => array(
+      	          'friends' => true,
+     	   	),
 	),
 	'wgUserBoard' => array(
 		'default' => false,
