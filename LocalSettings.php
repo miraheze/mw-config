@@ -1411,6 +1411,9 @@ $wgConf->settings = array(
 		'sdiywiki' => true,
 		'wisdomwikiwiki' => true,
 	),
+	'wmgUseCollection' => array(
+		'default' => false,
+	),
 	'wmgUseComments' => array(
 		'default' => false, // Sysop has 'commentadmin' by default
 		'allthetropeswiki' => true,

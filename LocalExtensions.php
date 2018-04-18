@@ -87,6 +87,10 @@ if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
 
+if ( $wmgUseCollection ) {
+	require_once( "$IP/extensions/Collection/Collection.php" );
+}
+
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
 	$wgGroupPermissions['sysop']['commentadmin'] = true;
