@@ -644,6 +644,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'test1wiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7844,6 +7845,21 @@ EOF;
 	return true;
 }
 */
+
+if ( $wgDBname == 'testwiki' ) { 
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+		global $wmgSiteNoticeOptOut, $snImportant;
+		 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
+			$siteNotice .= <<<EOF
+			<table class="wikitable" style="text-align:center;"><tbody><tr>
+			<td>Miraheze is performing database maintenance on this wiki Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+			</tr></tbody></table>
+	EOF;
+		 }
+		return true;
+	}
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
