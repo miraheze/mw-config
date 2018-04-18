@@ -21,6 +21,7 @@ $IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CollapsibleVector/extension.json
+$IP/extensions/Collection/Collection.php
 $IP/extensions/Comments/extension.json
 $IP/extensions/ConfirmEdit/ReCaptchaNoCaptcha/extension.json
 $IP/extensions/ConfirmEdit/extension.json
