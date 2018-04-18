@@ -7833,7 +7833,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Due to maintenance work on our servers, we have temporarily disabled uploads on all wikis. Images may be unavailable. We apologize for this inconvenience and they should be enabled again shortly. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+		<td>Due to maintenance work on our servers, we have temporarily disabled uploads on all wikis. We apologize for this inconvenience and they should be enabled again shortly. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
 		</tr></tbody></table>
 EOF;
 	 }
