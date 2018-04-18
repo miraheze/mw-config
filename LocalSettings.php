@@ -6654,6 +6654,10 @@ $wgConf->settings = array(
 	),
 
 	// SocialProfile
+	'wgUserBoard' => array(
+		'default' => false,
+		'avalicearchiveswiki' => true,
+	),
 	'wgUserProfileThresholds' => array(
 		'default' => array(
 			'edits' => 0,
@@ -6662,7 +6666,17 @@ $wgConf->settings = array(
 			'edits' => 10,
 		),
 	),
-
+	'wgUserProfileDisplay' => array(
+		'default' => array(
+			'board' => false,
+			'friends' => false,
+			'foes' => false,
+		),
+		'avalicearchiveswiki' => array(
+			'board' => true,
+      	        	'friends' => true,
+		),
+	),
 	// Statistics
 	'wgArticleCountMethod' => array(
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
