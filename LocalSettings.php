@@ -3971,8 +3971,7 @@ $wgConf->settings = array(
 
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => array(
-		'default' => true,
-		'trexwiki' => false,
+		'default' => false,
 	),
 	'wgMFDefaultSkinClass' => array(
 		'default' => 'SkinMinerva',
