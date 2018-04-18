@@ -87,6 +87,7 @@ $wgLBFactoryConf = array(
 		'sumroletaericwiki' => 'c2',
 		'templatewiki' => 'c2',
 		'teriawiki' => 'c2',
+		'test1wiki' => 'c3',
 		'thegreatwarwiki' => 'c2',
 		'thelonsdalebattalionwiki' => 'c2',
 		'tiandiwiki' => 'c2',
