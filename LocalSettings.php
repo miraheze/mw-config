@@ -644,10 +644,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'bpwiki' => true,
-		'buswiki' => true,
-		'ciptamediawiki' => true,
-		'jawp2chwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7850,7 +7846,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'bpwiki' || $wgDBname == 'buswiki' || $wgDBname == 'ciptamediawiki' || $wgDBname == 'jawp2chwiki' ) {
+/*if ( $wgDBname == 'bpwiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
@@ -7860,7 +7856,7 @@ if ( $wgDBname == 'bpwiki' || $wgDBname == 'buswiki' || $wgDBname == 'ciptamedia
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
