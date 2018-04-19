@@ -7846,20 +7846,20 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == 'allthetropeswiki' ) { 
+if ( $wgDBname == 'bpwiki' || $wgDBname == 'buswiki' || $wgDBname == 'ciptamediawiki' || $wgDBname == 'jawp2chwiki' ) { 
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
 		 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is performing database maintenance on this wiki Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+			<td>Miraheze is performing database maintenance on this wiki from 17:35pm UTC until 18:35pm UTC. Therefore there will be downtime around 18:35 UTC and wikis will be read-only starting 18:35 UTC, so make sure to save all your changes before then. ETA is approximately 1 hours from the initial time given.<a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
 			</tr></tbody></table>
 EOF;
 		 }
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
