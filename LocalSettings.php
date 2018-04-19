@@ -7846,20 +7846,20 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'bpwiki' || $wgDBname == 'buswiki' || $wgDBname == 'ciptamediawiki' || $wgDBname == 'jawp2chwiki' ) { 
+/*if ( $wgDBname == 'allthetropeswiki' ) { 
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
 		 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is performing database maintenance on this wiki from 17:30pm UTC until 18:30pm UTC. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+			<td>Miraheze is performing database maintenance on this wiki Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
 			</tr></tbody></table>
 EOF;
 		 }
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
