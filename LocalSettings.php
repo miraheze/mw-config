@@ -644,6 +644,10 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'bpwiki' => true,
+		'buswiki' => true,
+		'ciptamediawiki' => true,
+		'jawp2chwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
