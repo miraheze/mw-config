@@ -7846,17 +7846,14 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'bpwiki' || $wgDBname == 'buswiki' || $wgDBname == 'ciptamediawiki' || $wgDBname == 'jawp2chwiki' ) { 
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
-		global $wmgSiteNoticeOptOut, $snImportant;
-		 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
+if ( $wgDBname == 'bpwiki' || $wgDBname == 'buswiki' || $wgDBname == 'ciptamediawiki' || $wgDBname == 'jawp2chwiki' ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
+	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is performing database maintenance on this wiki. Therefore there will be downtime around 17:40 UTC and wikis will be read-only starting 18:40 UTC, so make sure to save all your changes before then. ETA is approximately 1 hours from the initial time given. Please see <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+			<td>Miraheze will perform database maintenance on this wiki, from 17:40 UTC until approx. 18:50 UTC. During this time the wiki will be in read-only mode. Please save your edits before 17:35 UTC!</td>
 			</tr></tbody></table>
 EOF;
-		 }
 		return true;
 	}
 }
