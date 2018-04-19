@@ -644,7 +644,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'allthetropeswiki' => 'Migrating db from db2 to db4',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7847,7 +7846,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'allthetropeswiki' ) { 
+/*if ( $wgDBname == 'allthetropeswiki' ) { 
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
@@ -7860,7 +7859,7 @@ EOF;
 		 }
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
