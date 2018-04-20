@@ -6937,6 +6937,7 @@ $wgConf->settings = array(
 		'adadevelopersacademywiki' => "//$wmgUploadHostname/adadevelopersacademywiki/b/bc/ADA_logo_small.png",
 		'adiapediawiki' => "//$wmgUploadHostname/adiapediawiki/f/f1/APlogo.png",
 		'adiaprojectwiki' => "//$wmgUploadHostname/adiaprojectwiki/8/8b/Adialogo.png",
+		'adminbuswiki' => "//$wmgUploadHostmame/adminbuswiki/7/7d/Adminbus.png",
 		'adnovumwiki' => "//$wmgUploadHostname/adnovumwiki/f/fa/AdnovumRPtemplogo.png",
 		'aenasanwiki' => "//$wmgUploadHostname/aenasanwiki/f/f1/AEicon1.png",
 		'aesbasewiki' => "//$wmgUploadHostname/aesbasewiki/1/15/IconAESBASE.jpg",
