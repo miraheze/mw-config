@@ -644,7 +644,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'conworldwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7848,7 +7847,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'conworldwiki' ) {
+/*if ( $wgDBname == 'conworldwiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
@@ -7858,7 +7857,7 @@ if ( $wgDBname == 'conworldwiki' ) {
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
