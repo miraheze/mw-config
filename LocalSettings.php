@@ -644,6 +644,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'conworldwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
