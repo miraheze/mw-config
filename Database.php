@@ -97,7 +97,6 @@ $wgLBFactoryConf = array(
 		'ubrwikiwiki' => 'c2',
 		'uncyclopediawiki' => 'c2',
 		'unionwiki' => 'c2',
-		'unionnorteamericanawiki' => 'c2',
 		'ussewiki' => 'c2',
 		'utamacrosswiki' => 'c2',
 		'valentinaprojectwiki' => 'c2',
