@@ -644,6 +644,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'poserdazfreebieswiki' => 'Miraheze is performing database maintenance',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
