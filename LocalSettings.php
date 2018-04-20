@@ -7847,17 +7847,17 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == 'bpwiki' ) {
+if ( $wgDBname == 'conworldwiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 17:40 UTC until approx. 18:50 UTC. During this time the wiki will be in read-only mode. Please save your edits before 17:35 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 19:05 UTC until approx. 19:35 UTC. During this time the wiki will be in read-only mode. Please save your edits before 19:00 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
