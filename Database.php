@@ -25,6 +25,7 @@ $wgLBFactoryConf = array(
 		'ciptamediawiki' => 'c3',
 		'ciudadciclistawiki' => 'c2',
 		'constwiki' => 'c2',
+		'conworldwiki' => 'c3',
 		'cpiwiki' => 'c2',
 		'ctswiki' => 'c2',
 		'dariawikiwiki' => 'c2',
