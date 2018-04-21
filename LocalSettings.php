@@ -7846,17 +7846,32 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == 'poserdazfreebieswiki' ) {
+if ( $wgDBname == 'aleenghawiki' ||
+     $wgDBname == 'altaussieruleswiki' ||
+     $wgDBname == 'arefepvawiki' ||
+     $wgDBname == 'ayrshirewiki' ||
+     $wgDBname == 'ballaratpubswiki' ||
+     $wgDBname == 'beatstationwiki' ||
+     $wgDBname == 'bgowiki' ||
+     $wgDBname == 'bqwiki' ||
+     $wgDBname == 'calexitwiki' ||
+     $wgDBname == 'christianmusictempwiki' ||
+     $wgDBname == 'christianmusicwiki' ||
+     $wgDBname == 'ciudadciclistawiki' ||
+     $wgDBname == 'constwiki' ||
+     $wgDBname == 'conworldwiki' ||
+     $wgDBname == 'cpiwiki'
+) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 21:50 UTC until approx. 20:20 UTC. During this time the wiki will be in read-only mode. Please save your edits before 21:45 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 17:05 UTC until approx. 18:05 UTC. During this time the wiki will be in read-only mode. Please save your edits before 17:00 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
