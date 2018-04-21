@@ -6719,6 +6719,7 @@ $wgConf->settings = array(
 		'cristianopediawiki' => 'timeless',		
 		'dtswiki' => 'metrolook',
 		'garrettcountyguidewiki' => 'metrolook',
+		'gcp711wiki' => 'monobook',
 		'girlsfrontlinewiki' => 'darkvector',
 		'godaigowiki' => 'monobook',
 		'macfan4000wiki' => 'refreshed',
