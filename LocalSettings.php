@@ -7044,6 +7044,7 @@ $wgConf->settings = array(
 		'furbyislandwiki' => "//$wmgUploadHostname/furbyislandwiki/b/bc/Wiki.png",
 		'galenadevwiki' => "//$wmgUploadHostname/galenadevwiki/9/96/Temp_logo1.png",
 		'garrettcountyguidewiki' => "//$wmgUploadHostname/garrettcountyguidewiki/e/e2/GarrettCountyGuideLogo.gif",
+		'gcp711wiki' => "//$wmgUploadHostname/gcp711wiki/2/27/Gcp711logo.png",
 		'genwiki' => "//$wmgUploadHostname/genwiki/0/03/Genesis-logo-reized.png",
 		'geodatawiki' => "//$wmgUploadHostname/geodatawiki/c/c1/GlobeIcon160.png",
 		'girlsfrontlinewiki' => "//$wmgUploadHostname/girlsfrontlinewiki/3/35/GirlsFrontline_logo-135px.jpg",
