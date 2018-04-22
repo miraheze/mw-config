@@ -231,7 +231,6 @@ $wgConf->settings = array(
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
-		'developmentwiki' => 259200, // 3 days * 24 hours * 60 minutes * 60 seconds
 		'marioserieswikiwiki' => 2592000, // 30 days * 24 hours * 60 minutes * 60 seconds 
 		'proxybotwiki' => 604800, // 7 days * 24 hours * 60 minutes * 60 seconds
 	),
@@ -1235,7 +1234,6 @@ $wgConf->settings = array(
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
 		'christipediawiki' => true,
-		'developmentwiki' => true,
 		'dongyangwiki' => true,
 		'ferahistoriawiki' => true,
 		'garrettcountyguidewiki' => true,
@@ -1661,7 +1659,6 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'coldbloodedwiki' => true,
 		'detlefswiki' => true,
-		'developmentwiki' => true,
 		'dicficwiki' => true,
 		'drones4allwiki' => true,
 		'dtswiki' => true,
@@ -1767,7 +1764,6 @@ $wgConf->settings = array(
 		'default' => false,
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
-		'developmentwiki' => true,
 		'test1wiki' => true,
 		'hendrickswiki' => true,
 	),
@@ -2127,18 +2123,14 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
 		'bigforestwiki' => true,
 		'calexitwiki' => true,
-		'developmentwiki' => true,
 		'garrettcountyguidewiki' => true,
 		'test1wiki' => true,
-		'ircwiki' => true,
 		'perpuswiki' => true,
 		'pgnwikiwiki' => true,
 		'puzzlewiki' => true,
 		'shortwikiwiki' => true,
-		'takethatwikiwiki' => true,
 		'thelonsdalebattalionwiki' => true,
 		'trexwiki' => true,
 		'tutorwiki' => true,
@@ -2161,7 +2153,6 @@ $wgConf->settings = array(
 		'avalicearchiveswiki' => true,
 		'blocknetwiki' => true,
 		'civclassicwiki' => true,
-		'developmentwiki' => true,
 		'dtswiki' => true,
 		'garrettcountyguidewiki' => true,
 		'podpediawiki' => true,
@@ -2591,7 +2582,6 @@ $wgConf->settings = array(
 		'aktposwiki' => true,
 		'allthetropeswiki' => true,
 		'bigforestwiki' => true,
-		'developmentwiki' => true,
 		'eternalconficttwiki' => true,
 		'ferahistoriawiki' => true,
 		'hirapediawiki' => true,
@@ -2816,7 +2806,6 @@ $wgConf->settings = array(
 		'cybersecuritywiki' => true,
 		'dalarwiki' => true,
 		'detlefswiki' => true,
-		'developmentwiki' => true,
 		'dicficwiki' => true,
 		'didaprowiki' => true,
 		'dishwiki' => true,
@@ -3232,7 +3221,6 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'cornettowiki' => true,
 		'corydoctorowwiki' => true,
-		'developmentwiki' => true,
 		'doinwiki' => true,
 		'doraemonpediawiki' => true,
 		'dwplivewiki' => true,
@@ -3619,7 +3607,6 @@ $wgConf->settings = array(
 	),
 	'wgRightsPage' => array(
 		'default' => '',
-		'developmentwiki' => 'Official:Copyrights',
 		'diavwiki' => 'Project:Copyrights',
 		'kstartupswiki' => 'Project:저작권',
 		'wisdomwikiwiki' => 'Copyleft',
@@ -4108,10 +4095,6 @@ $wgConf->settings = array(
 		'cristianopediawiki' => array(
 			NS_TEMA => 'Tema',
 			NS_TEMA_TALK => 'Tema discusión',
-		),
-		'developmentwiki' => array(
-			NS_OFFICIAL => 'Official',
-			NS_OFFICIAL_TALK => 'Official_talk',
 		),
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
@@ -4896,21 +4879,6 @@ $wgConf->settings = array(
 				'member',
 			),
 		),
-		'+developmentwiki' => array(
-			'supervisor' => array(
-				'bureaucrat',
-				'sysop',
-				'trusted',
-				'interfaceeditor'
-			),
-			'wikifounder' => array(
-				'supervisor',
-				'bureaucrat',
-				'sysop',
-				'trusted',
-				'interfaceeditor'
-			),
-		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -5336,93 +5304,6 @@ $wgConf->settings = array(
 				'createtalk' => true,
 				'createpage' => true,
 				'edit' => true,
-			),
-		),
-		'+developmentwiki' => array(
-			'steward' => array(
-				'wikifounder' => true,
-				'supervisor' => true,
-				'bureaucrat' => true,
-			),
-			'trusted' => array(
-				'editsemiprotected' => true,
-				'autoconfirmed' => true,
-				'skipcaptcha' => true,
-				'autopatrol' => true,
-				'patrol' => true,
-				'block' => true,
-				'protect' => true,
-				'delete' => true,
-				'move' => true,
-			),
-			'supervisor' => array(
-				'blockemail' => true,
-				'block' => true,
-				'ipblock-exempt' => true,
-				'proxyunbannable' => true,
-				'protect' => true,
-				'managechangetags' => true,
-				'createaccount' => true,
-				'flow-delete' => true,
-				'deletelogentry' => true,
-				'deleterevision' => true,
-				'delete' => true,
-				'globalblock-whitelist' => true,
-				'flow-edit-post' => true,
-				'editusercss' => true,
-				'edituserjs' => true,
-				'editprotected' => true,
-				'editsemiprotected' => true,
-				'editinterface' => true,
-				'autopatrol' => true,
-				'importupload' => true,
-				'import' => true,
-				'flow-lock' => true,
-				'patrol' => true,
-				'markbotedits' => true,
-				'nuke' => true,
-				'mergehistory' => true,
-				'abusefilter-modify' => true,
-				'abusefilter-modify-restricted' => true,
-				'move-categorypages' => true,
-				'movefile' => true,
-				'move' => true,
-				'move-subpages' => true,
-				'move-rootuserpages' => true,
-				'autoconfirmed' => true,
-				'noratelimit' => true,
-				'suppressredirect' => true,
-				'reupload-shared' => true,
-				'override-antispoof' => true,
-				'tboverride' => true,
-				'reupload' => true,
-				'skipcaptcha' => true,
-				'rollback' => true,
-				'abusefilter-revert' => true,
-				'browsearchive' => true,
-				'massmessage' => true,
-				'unblockself' => true,
-				'undelete' => true,
-				'upload' => true,
-				'apihighlimits' => true,
-				'mf-uploadbutton' => true,
-				'unwatchedpages' => true,
-				'deletedhistory' => true,
-				'deletedtext' => true,
-				'spamblacklistlog' => true,
-				'titleblacklistlog' => true,
-				'supervisor' => true,
-			),
-			'bureaucrat' => array(
-				'bureaucrat' => true,
-			),
-			'wikifounder' => array(
-				'wikifounder' => true,
-			),
-			'interfaceeditor' => array(
-				'editprotected' => true,
-				'editsemiprotected' => true,
-				'editinterface' => true,
 			),
 		),
 		'+dpwiki' => array(
@@ -6052,21 +5933,6 @@ $wgConf->settings = array(
 				'member',
 			),
 		),
-		'+developmentwiki' => array(
-			'supervisor' => array(
-				'bureaucrat',
-				'sysop',
-				'trusted',
-				'interfaceeditor'
-			),
-			'wikifounder' => array(
-				'supervisor',
-				'bureaucrat',
-				'sysop',
-				'trusted',
-				'interfaceeditor'
-			),
-		),
 		'+dpwiki' => array(
 			'bureaucrat' => array(
 				'respected',
@@ -6422,11 +6288,6 @@ $wgConf->settings = array(
 		'+testwiki' => array(
 			'bureaucrat',
 			'consul',
-		),
-		'+developmentwiki' => array(
-			'bureaucrat',
-			'supervisor',
-			'wikifounder',
 		),
 		'+kyivstarwiki' => array(
 			'extendedconfirmed',
