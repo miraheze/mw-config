@@ -1018,6 +1018,12 @@ $wgConf->settings = array(
 		'+r2wiki' => array(
 			'anon' => true,
 		),
+		'+radviserwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+revitwiki' => array(
 			'anon' => true,
 			'user' => true,
