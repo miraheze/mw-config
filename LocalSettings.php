@@ -2571,6 +2571,7 @@ $wgConf->settings = array(
 		'touhouenginewiki' => true,
 		'turbografx16wiki' => true,
 		'tutorwiki' => true,
+		'unixhaterswiki' => true,
 		'valentinaprojectwiki' => true,
 		'vandalismwikiwiki' => true,
 		'xdjibiwiki' => true,
