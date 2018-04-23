@@ -7289,7 +7289,6 @@ $wgConf->settings = array(
 			'b1tes\.org',
 			'bconnected\.aidanmarkham\.com',
 			'bebaskanpengetahuan\.org',
-			'boulderwiki\.org',
 			'wiki\.ameciclo\.org',
 			'wiki\.autocountsoft\.com',
 			'wiki\.besuccess\.com',
