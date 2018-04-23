@@ -2690,6 +2690,7 @@ $wgConf->settings = array(
 		'pathfinderwiki' => true,
 		'pgnwikiwiki' => true,
 		'podpediawiki' => true,
+		'reservedurablewiki' => true,
 		'rpgbrigadewiki' => true,
 		'shortwikiwiki' => true,
 		'spektrowiki' => true,
