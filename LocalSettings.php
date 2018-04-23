@@ -7317,7 +7317,6 @@ $wgConf->settings = array(
 			'www\.iceposeidonwiki\.com',
 			'wiki\.inebriation-confederation\.com',
 			'wiki\.itspugle\.ga',
-			'haxion\.space',
 			'wiki\.jacksonheights\.nyc',
 			'karagash\.info',
 			'wiki\.kourouklides\.com',
