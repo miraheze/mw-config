@@ -3237,6 +3237,7 @@ $wgConf->settings = array(
 		'geirpediawiki' => true,
 		'geodatawiki' => true,
 		'geometrydashwiki' => true,
+		'gkatomwiki' => true,
 		'hantpediawiki' => true,
 		'hktransportpediawiki' => true,
 		'holycrosswiki' => true, 
