@@ -7338,7 +7338,6 @@ $wgConf->settings = array(
 			'saf\.songcontests\.eu',
 			'wiki\.staraves-no\.cz',
 			'oecumene\.org',
-			'oneagencydunedin\.wiki',
 			'www\.openonderwijs\.org',
 			'oyeavdelingen\.org',
 			'papelor\.io',
