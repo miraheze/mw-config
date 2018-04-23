@@ -1077,6 +1077,11 @@ $wgConf->settings = array(
 		'+studentwikiwiki' => array(
 			'anon' => true,
 		),
+		'+survivalerawiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+swisscomraidwiki' => array(
 			'user' => true,
 			'anon' => true,
