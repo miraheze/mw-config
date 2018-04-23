@@ -464,7 +464,6 @@ $wgConf->settings = array(
 			'wiki.zymonic.com' => 'zymonicwiki',
 			'wikipuk.cl' => 'wikipucwiki',
 			'wisdomwiki.org' => 'wisdomwikiwiki',
-			'histories.wiki' => 'wishcertwiki',
 			'www.eerstelijnszones.be' => 'eerstelijnszoneswiki',
 			'www.lab612.at' => 'lab612wiki',
 			'www.iceposeidonwiki.com' => 'iceposeidonwiki',
@@ -6492,7 +6491,6 @@ $wgConf->settings = array(
 		'wikigtscwiki' => 'https://wiki.gtsc.vn',
 		'wikipucwiki' => 'https://wikipuk.cl',
 		'wisdomwikiwiki' => 'https://wisdomwiki.org',
-		'wishcertwiki' => 'https://histories.wiki',
 		'worlduniversityandschoolwiki' => 'https://wiki.worlduniversityandschool.org',
 		'yourtechnicalservicewiki' => 'https://en.wikitransparency.org',
 		'zenbuddhismwiki' => 'https://www.zenbuddhism.info',
@@ -7364,7 +7362,6 @@ $wgConf->settings = array(
 			'wiki\.worlduniversityandschool\.org'.
 			'wikipuk\.cl',
 			'wisdomwiki\.org',
-			'wiki\.wishcert\.com',
 			'sandbox\.wisdomwiki.org',
 			'savage-wiki\.com',
 			'speleo\.wiki',
