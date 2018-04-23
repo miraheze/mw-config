@@ -7336,7 +7336,6 @@ $wgConf->settings = array(
 			'wiki\.lbcomms\.co.za',
 			'wiki\.rizalespe\.com',
 			'saf\.songcontests\.eu',
-			'wiki\.simplicitysolutionsgroup\.com',
 			'wiki\.staraves-no\.cz',
 			'oecumene\.org',
 			'oneagencydunedin\.wiki',
