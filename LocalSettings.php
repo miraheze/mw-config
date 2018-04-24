@@ -2853,6 +2853,7 @@ $wgConf->settings = array(
 		'gontranwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'grandtheftautowiki' => true,
+		'graymainewikiwiki' => true,
 		'grdarchivewiki' => true,
 		'gtnhwiki' => true,
 		'gzewiki' => true,
