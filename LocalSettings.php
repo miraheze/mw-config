@@ -2850,6 +2850,7 @@ $wgConf->settings = array(
 		'geresbamyanwiki' => true,
 		'genwiki' => true,
 		'gepacobiodivwiki' => true,
+		'gkatomwiki' => true,
 		'gontranwiki' => true,
 		'grandtheftwikiwiki' => true,
 		'grandtheftautowiki' => true,
