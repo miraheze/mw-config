@@ -864,6 +864,9 @@ $wgConf->settings = array(
 			'editor' => true,
 			'sysop' => true,
 		),
+		'+jadtechwiki' => array(
+			'anon' => true,
+		),
 		'+jokowiki' => array(
 			'anon' => true,
 		),
