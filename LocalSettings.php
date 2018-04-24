@@ -4291,6 +4291,10 @@ $wgConf->settings = array(
 			NS_LEGACY => 'Legacy',
 			NS_LEGACY_TALK => 'Legacy_talk',
   		),
+		'warriorpediawiki' => array(
+		NS_POLICY => 'Policy',
+		NS_POLICY_TALK => 'Policy_talk',
+		),
 		'wiki1776wiki' => array(
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
