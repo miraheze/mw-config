@@ -7149,6 +7149,7 @@ $wgConf->settings = array(
 		'ubrwikiwiki' => "//$wmgUploadHostname/ubrwikiwiki/2/24/UBR_logo.png",
 		'umpcwiki' => "//$wmgUploadHostname/umpcwiki/5/53/LogoUMPC-spunta.png",
 		'unionwiki' => "//$wmgUploadHostname/unionwiki/a/a0/Logo_UnionWiki_en_color_lima_%28transparente%29.svg",
+		'unixhaterswiki' => "//$wmgUploadHostname/unixhaterswiki/6/6d/Ugh.png",
 		'unoitudowiki' => "//$wmgUploadHostname/unoitudowiki/1/1b/Logo_unoi.png",
 		'umemaro3dwiki' => "//$wmgUploadHostname/umemaro3dwiki/b/bc/Wiki.png",
 		'uncyclopediawiki' => "//$wmgUploadHostname/uncyclopediawiki/d/d8/No_picture.png",
