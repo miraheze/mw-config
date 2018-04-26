@@ -641,7 +641,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => "Login will be down as we are doing maintenance on centralauth and login wiki",
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
