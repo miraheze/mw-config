@@ -7710,32 +7710,34 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == 'aleenghawiki' ||
-     $wgDBname == 'altaussieruleswiki' ||
-     $wgDBname == 'arefepvawiki' ||
-     $wgDBname == 'ayrshirewiki' ||
-     $wgDBname == 'ballaratpubswiki' ||
-     $wgDBname == 'beatstationwiki' ||
-     $wgDBname == 'bgowiki' ||
-     $wgDBname == 'bqwiki' ||
-     $wgDBname == 'calexitwiki' ||
-     $wgDBname == 'christianmusictempwiki' ||
-     $wgDBname == 'christianmusicwiki' ||
-     $wgDBname == 'ciudadciclistawiki' ||
-     $wgDBname == 'constwiki' ||
-     $wgDBname == 'conworldwiki' ||
-     $wgDBname == 'cpiwiki'
+if ( $wgDBname == 'aerosswiki' ||
+     $wgDBname == 'bigforestwiki' ||
+     $wgDBname == 'christipediawiki' ||
+     $wgDBname == 'ctswiki' ||
+     $wgDBname == 'dariawikiwiki' ||
+     $wgDBname == 'daesocialwiki' ||
+     $wgDBname == 'diagnostikwiki' ||
+     $wgDBname == 'diggywikipolskawiki' ||
+     $wgDBname == 'emulationwiki' ||
+     $wgDBname == 'encyclopaediawiki' ||
+     $wgDBname == 'extloadwiki' ||
+     $wgDBname == 'fcuwiki' ||
+     $wgDBname == 'fourleafficswiki' ||
+     $wgDBname == 'hellointernetwiki' ||
+     $wgDBname == 'hirapediawiki' ||
+     $wgDBname == 'houseofettlingarfreyuwiki' ||
+     $wgDBname == 'jacksonheightswiki' ||  
 ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 17:05 UTC until approx. 18:05 UTC. During this time the wiki will be in read-only mode. Please save your edits before 17:00 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 11:50 UTC until approx. 12:20 UTC. During this time the wiki will be in read-only mode. Please save your edits before 11:45 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
