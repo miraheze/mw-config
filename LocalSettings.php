@@ -663,7 +663,6 @@ $wgConf->settings = array(
 		'yoavfreundwiki' => true,
 		'yourosongcontestwiki' => true,
 		'zendariwiki' => true,
-		'
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
