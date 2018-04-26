@@ -641,7 +641,7 @@ $wgConf->settings = array(
 		'default' => 'mediawiki',
 	),
 	'wgReadOnly' => array(
-		'default' => "Login will be down as we are doing maintenance on centralauth and login wiki",
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7733,7 +7733,7 @@ if ( $wgDBname == 'testdeletewiki' ||
      $wgDBname == 'yourosongcontestwiki' ||
      $wgDBname == 'zendariwiki' ||
      $wgDBname == 'zhdelwiki'
-) {*/
+) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
@@ -7743,7 +7743,7 @@ if ( $wgDBname == 'testdeletewiki' ||
 EOF;
 		return true;
 	}
-/*}*/
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
