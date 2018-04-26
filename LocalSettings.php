@@ -642,35 +642,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'networksdatabasewiki' => true,
-		'nextlevelwikiwiki' => true,
-		'nonbinarywiki' => true,
-		'nvcwiki' => true,
-		'omnipediawiki' => true,
-		'ordiswiki' => true,
-		'ourmxfestwiki' => true,
-		'plasticssongcontestwiki' => true,
-		'platprojectwiki' => true,
-		'pluspiwiki' => true,
-		'pocketmonsterswiki' => true,
-		'podpediawiki' => true,
-		'r2wiki' => true,
-		'recentiawiki' => true,
-		'revitwiki' => true,
-		'saganbackup' => true,
-		'scruffy2wiki' => true,
-		'sdiywiki' => true,
-		'sentrieswiki' => true,
-		'sidemwiki' => true,
-		'sirikotwiki' => true,
-		'songcontestswiki' => true,
-		'speleowiki' => true,
-		'spiralwiki' => true,
-		'spritopiawiki' => trye,
-		'summerolympicswiki' => true,
-		'sumroletaericwiki' => true,
-		'templatewiki' => true,
-		'teriawiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7739,7 +7710,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'networksdatabasewiki' ||
+/*if ( $wgDBname == 'networksdatabasewiki' ||
      $wgDBname == 'nextlevelwikiwiki' ||
      $wgDBname == 'nonbinarywiki' ||
      $wgDBname == 'nvcwiki' ||
@@ -7778,7 +7749,7 @@ if ( $wgDBname == 'networksdatabasewiki' ||
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
