@@ -6898,6 +6898,7 @@ $wgConf->settings = array(
 		'dicficwiki' => "//$wmgUploadHostname/dicficwiki/b/b1/Dicfic-logo.png",
 		'didaprowiki' => "//$wmgUploadHostname/didaprowiki/5/58/LOGORPD-135X135.jpg",
 		'diggywikipolskawiki' => "//$wmgUploadHostname/diggywikipolskawiki/8/81/Logodiggy.png",
+		'dobotswiki' => "//$wmgUploadHostname/dobotswiki/6/64/Dobotslogo.png",
 		'doinwiki' => "//$wmgUploadHostname/doinwiki/6/60/Wiki_Logo.png",
 		'drones4allwiki' => "//$wmgUploadHostname/drones4allwiki/6/60/Wiki_Logo.png",
 		'dwplivewiki' => "//$wmgUploadHostname/dwplivewiki/c/c0/Logo_135.png",
