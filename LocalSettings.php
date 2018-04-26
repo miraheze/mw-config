@@ -7710,40 +7710,46 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*
-if ( $wgDBname == 'testdeletewiki' ||
-     $wgDBname == 'thegreatwarwiki' ||
-     $wgDBname == 'thelonsdalebattalionwiki' ||
-     $wgDBname == 'tiandiwiki' ||
-     $wgDBname == 'truecapitalistwiki' ||
-     $wgDBname == 'ubrwikiwiki' ||
-     $wgDBname == 'uncyclopediawiki' ||
-     $wgDBname == 'unionwiki' ||
-     $wgDBname == 'ussewiki' ||
-     $wgDBname == 'utamacrosswiki' ||
-     $wgDBname == 'valentinaprojectwiki' ||
-     $wgDBname == 'viagroupiawiki' ||
-     $wgDBname == 'whentheycrywiki' ||
-     $wgDBname == 'wiki1776wiki' ||
-     $wgDBname == 'wikiversitywiki' ||
-     $wgDBname == 'wikivywiki' ||
-     $wgDBname == 'worldpediawiki' ||
-     $wgDBname == 'ylscwiki' ||
-     $wgDBname == 'yoavfreundwiki' ||
-     $wgDBname == 'yourosongcontestwiki' ||
-     $wgDBname == 'zendariwiki' ||
-     $wgDBname == 'zhdelwiki'
+if ( $wgDBname == 'networksdatabasewiki' ||
+     $wgDBname == 'nextlevelwikiwiki' ||
+     $wgDBname == 'nonbinarywiki' ||
+     $wgDBname == 'nvcwiki' ||
+     $wgDBname == 'omnipediawiki' ||
+     $wgDBname == 'ordiswiki' ||
+     $wgDBname == 'ourmxfestwiki' ||
+     $wgDBname == 'plasticssongcontestwiki' ||
+     $wgDBname == 'platprojectwiki' ||
+     $wgDBname == 'pluspiwiki' ||
+     $wgDBname == 'pocketmonsterswiki' ||
+     $wgDBname == 'podpediawiki' ||
+     $wgDBname == 'r2wiki' ||
+     $wgDBname == 'recentiawiki' ||
+     $wgDBname == 'revitwiki' ||
+     $wgDBname == 'saganbackup' ||
+     $wgDBname == 'scruffy2wiki' ||
+     $wgDBname == 'sdiywiki' ||
+     $wgDBname == 'sentrieswiki' ||
+     $wgDBname == 'sidemwiki' ||
+     $wgDBname == 'sirikotwiki' ||
+     $wgDBname == 'songcontestswiki' ||
+     $wgDBname == 'speleowiki' ||
+     $wgDBname == 'spiralwiki' ||
+     $wgDBname == 'spritopiawiki' ||
+     $wgDBname == 'summerolympicswiki' ||
+     $wgDBname == 'sumroletaericwiki' ||
+     $wgDBname == 'templatewiki' ||
+     $wgDBname == 'teriawiki'
 ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 20:05 UTC until approx. 20:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 20:00 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 21:35 UTC until approx. 22:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 21:30 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
