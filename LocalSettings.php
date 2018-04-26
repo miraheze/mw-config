@@ -7742,7 +7742,7 @@ if ( $wgDBname == 'aerosswiki' ||
      $wgDBname == 'hellointernetwiki' ||
      $wgDBname == 'hirapediawiki' ||
      $wgDBname == 'houseofettlingarfreyuwiki' ||
-     $wgDBname == 'jacksonheightswiki' ||  
+     $wgDBname == 'jacksonheightswiki'
 ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
