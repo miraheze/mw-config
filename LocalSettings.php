@@ -6821,7 +6821,6 @@ $wgConf->settings = array(
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'690squadronwiki' => "//$wmgUploadHostname/690squadronwiki/f/f4/Squadlogo.png",
 		'8stationwiki' => "//$wmgUploadHostname/8stationwiki/3/3b/Wiki_logo.png",
 		'aapwiki' => "//$wmgUploadHostname/aapwiki/6/61/Aaplogo.jpg",
@@ -6931,6 +6930,7 @@ $wgConf->settings = array(
 		'evawiki' => "//$wmgUploadHostname/evawiki/e/ec/EVA-Wiki.png",
 		'exercicesdefrancaisprodfrwiki' => "//$wmgUploadHostname/exercicesdefrancaisprodfrwiki/c/c4/Logo_Exercices.jpeg",
 		'eyebobswiki' => "//$wmgUploadHostname/eyebobswiki/0/0d/Eyebobs_logo_Resized.jpg",
+		'faesphere' => "//$wmgUploadHostname/faespherewiki/7/7e/Harita2.jpg",
 		'fablabesdswiki' => "//$wmgUploadHostname/fablabesdswiki/3/3c/CFDS_Logo.svg",
 		'fefoxtttwiki' => "//$wmgUploadHostname/fefoxtttwiki/d/d7/NewIcon.jpg",
 		'feuwiki' => "//$wmgUploadHostname/feuwiki/8/81/Feu-logo.png",
