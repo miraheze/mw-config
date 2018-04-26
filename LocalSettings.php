@@ -642,27 +642,6 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
-		'testdeletewiki' => true,
-		'thegreatwarwiki' => true,
-		'thelonsdalebattalionwiki' => true,
-		'tiandiwiki' => true,
-		'truecapitalistwiki' => true,
-		'ubrwikiwiki' => true,
-		'uncyclopediawiki' => true,
-		'unionwiki' => true,
-		'ussewiki' => true,
-		'utamacrosswiki' => true,
-		'valentinaprojectwiki' => true,
-		'viagroupiawiki' => true,
-		'whentheycrywiki' => true,
-		'wiki1776wiki' => true,
-		'wikiversitywiki' => true,
-		'wikivywiki' => true,
-		'worldpediawiki' => true,
-		'ylscwiki' => true,
-		'yoavfreundwiki' => true,
-		'yourosongcontestwiki' => true,
-		'zendariwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7731,6 +7710,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
+/*
 if ( $wgDBname == 'testdeletewiki' ||
      $wgDBname == 'thegreatwarwiki' ||
      $wgDBname == 'thelonsdalebattalionwiki' ||
@@ -7764,7 +7744,7 @@ EOF;
 		return true;
 	}
 }
-
+*/
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
