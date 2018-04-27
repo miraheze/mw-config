@@ -7718,46 +7718,34 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == 'networksdatabasewiki' ||
-     $wgDBname == 'nextlevelwikiwiki' ||
-     $wgDBname == 'nonbinarywiki' ||
-     $wgDBname == 'nvcwiki' ||
-     $wgDBname == 'omnipediawiki' ||
-     $wgDBname == 'ordiswiki' ||
-     $wgDBname == 'ourmxfestwiki' ||
-     $wgDBname == 'plasticssongcontestwiki' ||
-     $wgDBname == 'platprojectwiki' ||
-     $wgDBname == 'pluspiwiki' ||
-     $wgDBname == 'pocketmonsterswiki' ||
-     $wgDBname == 'podpediawiki' ||
-     $wgDBname == 'r2wiki' ||
-     $wgDBname == 'recentiawiki' ||
-     $wgDBname == 'revitwiki' ||
-     $wgDBname == 'saganbackup' ||
-     $wgDBname == 'scruffy2wiki' ||
-     $wgDBname == 'sdiywiki' ||
-     $wgDBname == 'sentrieswiki' ||
-     $wgDBname == 'sidemwiki' ||
-     $wgDBname == 'sirikotwiki' ||
-     $wgDBname == 'songcontestswiki' ||
-     $wgDBname == 'speleowiki' ||
-     $wgDBname == 'spiralwiki' ||
-     $wgDBname == 'spritopiawiki' ||
-     $wgDBname == 'summerolympicswiki' ||
-     $wgDBname == 'sumroletaericwiki' ||
-     $wgDBname == 'templatewiki' ||
-     $wgDBname == 'teriawiki'
+
+if ( $wgDBname == 'jacksonheightswiki' ||
+     $wgDBname == 'jayuwikiwiki' ||
+     $wgDBname == 'karniarutheniawiki' ||
+     $wgDBname == 'kingkillerwiki' ||
+     $wgDBname == 'librewiki' ||
+     $wgDBname == 'linenwiki' ||
+     $wgDBname == 'lionhearttaleswiki' ||
+     $wgDBname == 'madciclistawiki' ||
+     $wgDBname == 'madgendersciencewiki' ||
+     $wgDBname == 'magnaversewiki' ||
+     $wgDBname == 'maiasongcontestwiki' ||
+     $wgDBname == 'mc2wiki' ||
+     $wgDBname == 'meregoswiki' ||
+     $wgDBname == 'mikrodevwiki' ||
+     $wgDBname == 'miraewiki' ||
+     $wgDBname == 'musicarchivewiki'
 ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 21:35 UTC until approx. 22:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 21:30 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 19:10 UTC until approx. 20:00 UTC. During this time the wiki will be in read-only mode. Please save your edits before 19:05 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
