@@ -643,6 +643,7 @@ $wgConf->settings = array(
 	),
 	'wgReadOnly' => array(
 		'default' => false,
+		'testwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
