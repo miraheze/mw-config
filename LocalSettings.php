@@ -645,22 +645,6 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
-		'aerosswiki' => true,
-		'bigforestwiki' => true,
-		'christipediawiki' => true,
-		'ctswiki' => true,
-		'daesocialwiki' => true,
-		'dariawikiwiki' => true,
-		'diagnostikwiki' => true,
-		'diggywikipolskawiki' => true,
-		'emulationwiki' => true,
-		'encyclopaediawiki' => true,
-		'extloadwiki' => true,
-		'fcuwiki' => true,
-		'fourleafficswiki' => true,
-		'hellointernetwiki' => true,
-		'hirapediawiki' => true,
-		'houseofettlingarfreyuwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7739,7 +7723,7 @@ EOF;
 
 // leaving here as placeholder for future db work
 
-if ( $wgDBname == 'aerosswiki' ||
+/*if ( $wgDBname == 'aerosswiki' ||
      $wgDBname == 'bigforestwiki' ||
      $wgDBname == 'christipediawiki' ||
      $wgDBname == 'ctswiki' ||
@@ -7765,7 +7749,7 @@ if ( $wgDBname == 'aerosswiki' ||
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
