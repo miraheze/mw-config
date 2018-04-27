@@ -641,8 +641,25 @@ $wgConf->settings = array(
 	'wgDBuser' => array(
 		'default' => 'mediawiki',
 	),
+
 	'wgReadOnly' => array(
 		'default' => false,
+		'jacksonheightswiki' => true,
+		'jayuwikiwiki' => true,
+		'karniarutheniawiki' => true,
+		'kingkillerwiki' => true,
+		'librewiki' => true,
+		'linenwiki' => true,
+		'lionhearttaleswiki' => true,
+		'madciclistawiki' => true,
+		'madgendersciencewiki' => true,
+		'magnaversewiki' => true,
+		'maiasongcontestwiki' => true,
+		'mc2wiki' => true,
+		'meregoswiki' => true,
+		'mikrodevwiki' => true,
+		'miraewiki' => true,
+		'musicarchivewiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
