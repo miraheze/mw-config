@@ -454,6 +454,7 @@ $wgConf->settings = array(
 			'wiki.make717.org' => 'make717wiki',
 			'wiki.meeusen.net' => 'meeusenwiki',
 			'wiki.ngscott.net' => 'ngscottwiki',
+			'wiki.ombre.io' => 'ombrewiki',
 			'www.radviser.org' => 'radviserwiki',
 			'wiki.staraves-no.cz' => 'staravesnowiki',
 			'wiki.teamwizardry.com' => 'teamwizardrywiki',
@@ -6475,6 +6476,7 @@ $wgConf->settings = array(
 		'ngscottwiki' => 'https://wiki.ngscott.net',
 		'nonbinarywiki' => 'https://nonbinary.wiki',
 		'oecumenewiki' => 'https://oecumene.org',
+		'ombrewiki' => 'https://wiki.ombre.io',
 		'openonderwijswiki' => 'https://www.openonderwijs.org',
 		'papeloriowiki' => 'https://papelor.io',
 		'penalwikiwiki' => 'https://penalwiki.awiki.org',
@@ -7382,6 +7384,7 @@ $wgConf->settings = array(
 			'wikiescola\.com\.br',
 			'wiki\.worlduniversityandschool\.org'.
 			'wikipuk\.cl',
+			'wiki\.ombre\.io',
 			'wisdomwiki\.org',
 			'sandbox\.wisdomwiki.org',
 			'savage-wiki\.com',
