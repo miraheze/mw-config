@@ -645,6 +645,22 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
+		'aerosswiki' => true,
+		'bigforestwiki' => true,
+		'christipediawiki' => true,
+		'ctswiki' => true,
+		'daesocialwiki' => true,
+		'dariawikiwiki' => true,
+		'diagnostikwiki' => true,
+		'diggywikipolskawiki' => true,
+		'emulationwiki' => true,
+		'encyclopaediawiki' => true,
+		'extloadwiki' => true,
+		'fcuwiki' => true,
+		'fourleafficswiki' => true,
+		'hellointernetwiki' => true,
+		'hirapediawiki' => true,
+		'houseofettlingarfreyuwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
