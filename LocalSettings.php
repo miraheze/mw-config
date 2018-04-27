@@ -7066,6 +7066,7 @@ $wgConf->settings = array(
 	        'pwscmwwiki' => "//$wmgUploadHostname/pwscmwwiki/9/9e/PWSCWIKILOGO.png",
 		'qmswiki' => "//$wmgUploadHostname/qmswiki/8/8f/QMS_Logo.png",
 		'r2wiki' => "//$wmgUploadHostname/r2wiki/a/a6/Part-up-logo-150x150-mediawiki.png",
+		'radviserwiki' => "//$wmgUploadHostname/radviserwiki/b/b0/Radviser_logo.png",
 		'raymanspeedrunwiki' => "//$wmgUploadHostname/raymanspeedrunwiki/0/0e/Rayman_Speedrun_Wiki_Logo.png",
 		'reiaasuwiki' => "//$wmgUploadHostname/reiaasuwiki/1/1e/Reiaasu-wiki-logo-1.png",
 		'reservedurablewiki' => "//$wmgUploadHostname/reservedurablewiki/3/37/Logo_sustainable_storage_135_pi.png",
