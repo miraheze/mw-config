@@ -7104,7 +7104,6 @@ $wgConf->settings = array(
 		'speleowiki' => "//$wmgUploadHostname/speleowiki/c/c3/SpeleoWikiV1.2_135x135.png",
 		'spiralwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Spiral_project_logo.svg/135px-Spiral_project_logo.svg.png',
 		'spritopiawiki' => "//$wmgUploadHostname/spritopiawiki/1/16/YDSf115.png",
-		'stellachronicawiki' => "//$wmgUploadHostname/stellachronicawiki/d/d0/SCLogo2.png",
 		'stemorgwiki' => "//$wmgUploadHostname/stemorgwiki/3/32/Wiki_logo_fix.png",
 		'sterbalfamilyrecipeswiki' => "//$wmgUploadHostname/sterbalfamilyrecipeswiki/c/c4/Logo-135x135.jpg",
 		'stjarnfestivalenwiki' => "//$wmgUploadHostname/stjarnfestivalenwiki/1/18/Stjärnfestivalen_Logo.png",
