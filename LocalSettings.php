@@ -2829,6 +2829,7 @@ $wgConf->settings = array(
 		'detlefswiki' => true,
 		'dicficwiki' => true,
 		'didaprowiki' => true,
+		'discovereachotherwiki' => true,
 		'dishwiki' => true,
 		'doinwiki' => true,
 		'drones4allwiki' => true,
