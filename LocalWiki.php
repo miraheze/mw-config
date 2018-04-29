@@ -138,6 +138,9 @@ if ( $wgDBname === 'ipolywiki' ) {
 }
 
 if ( $wgDBname === 'isvwiki' ) {
+	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
+	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
+
 	$wgSimpleFlaggedRevsUI = false;
 	
 	$wgGroupPermissions['*']['editmyusercss'] = false;
