@@ -6613,7 +6613,7 @@ $wgConf->settings = array(
 		),
 	),
 	'wgCommunityCollectionNamespace' => array(
-		'default' => NS_PROJECT;
+		'default' => NS_PROJECT,
 	),
 	'wgCollectionPortletFormats' => array(
 		'default' => array(
