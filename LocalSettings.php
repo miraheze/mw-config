@@ -1422,7 +1422,8 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseCollection' => array(
-		'default' => false,
+		'default'  => false,
+		'test1wiki' => true,
 	),
 	'wmgUseComments' => array(
 		'default' => false, // Sysop has 'commentadmin' by default
@@ -6604,6 +6605,27 @@ $wgConf->settings = array(
 	),
 	'wgCentralAuthLoginIcon' => array(
 		'default' => '/usr/share/nginx/favicons/default.ico',
+	),
+	'wgCollectionFormatToServeURL' => array(
+		'default' => array(
+			'rdf2latex' => 'https://ocg-lb.miraheze.org',
+			'rdf2text' => 'https://ocg-lb.miraheze.org',
+		),
+	),
+	'wgCommunityCollectionNamespace' => array(
+		'default' => NS_PROJECT;
+	),
+	'wgCollectionPortletFormats' => array(
+		'default' => array(
+			'rdf2latex' => 'PDF',
+			'rdf2text' => 'Plain text',
+		),
+	),
+	'wgCollectionPortletFormats' => array(
+		'default' => array(
+			'rdf2latex',
+			'rdf2text',
+		),
 	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
