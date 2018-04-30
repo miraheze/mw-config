@@ -6627,6 +6627,9 @@ $wgConf->settings = array(
 			'rdf2text',
 		),
 	),
+	'wgCollectionPODPartners' => array(
+		'default' => 'https://ocg-lb.miraheze.org/',
+	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 		'appswiki' => 'metrolook',
