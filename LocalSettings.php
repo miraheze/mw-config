@@ -2816,6 +2816,7 @@ $wgConf->settings = array(
 		'changemyorgwiki' => true,
 		'chimaerawiki' => true,
 		'christipediawiki' => true,
+		'cristianopediawiki' => true,
 		'civclassicwiki' = true,
 		'civitaswiki' => true,
 		'clonedeploywiki' => true,
