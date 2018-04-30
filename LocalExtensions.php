@@ -89,7 +89,12 @@ if ( $wmgUseCollapsibleVector ) {
 
 if ( $wmgUseCollection ) {
 	require_once( "$IP/extensions/Collection/Collection.php" );
-	
+
+	$wgCollectionFormatToServeURL = array(
+		'rdf2latex' => 'https://ocg-lb.miraheze.org',
+		'rdf2text' => 'https://ocg-lb.miraheze.org',
+	);
+
 	$wgCommunityCollectionNamespace = NS_PROJECT;
 
 	$wgCollectionPortletFormats = array(
