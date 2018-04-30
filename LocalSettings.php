@@ -7730,13 +7730,9 @@ EOF;
 if ( $wgDBname == 'allthetropeswiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
-			/*$siteNotice .= <<<EOF
+			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 22:40 UTC until approx. 23:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 22:35 UTC!</td>
-			</tr></tbody></table>*/
-                        $siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki at some point today UTC time. There will be a 30 minute warning before the db maintenance happens. During this time the wiki will be in read-only mode. Please save your edits 5 minutes before the maintenance happens!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 14:30 UTC until approx. 16:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 14:25 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
