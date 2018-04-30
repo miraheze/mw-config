@@ -7727,33 +7727,21 @@ EOF;
 
 // leaving here as placeholder for future db work
 
-/*if ( $wgDBname == 'aerosswiki' ||
-     $wgDBname == 'bigforestwiki' ||
-     $wgDBname == 'christipediawiki' ||
-     $wgDBname == 'ctswiki' ||
-     $wgDBname == 'daesocialwiki' ||
-     $wgDBname == 'dariawikiwiki' ||
-     $wgDBname == 'diagnostikwiki' ||
-     $wgDBname == 'diggywikipolskawiki' ||
-     $wgDBname == 'emulationwiki' ||
-     $wgDBname == 'encyclopaediawiki' ||
-     $wgDBname == 'extloadwiki' ||
-     $wgDBname == 'fcuwiki' ||
-     $wgDBname == 'fourleafficswiki' ||
-     $wgDBname == 'hellointernetwiki' ||
-     $wgDBname == 'hirapediawiki' ||
-     $wgDBname == 'houseofettlingarfreyuwiki'
-) {
+if ( $wgDBname == 'allthetropeswiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
-			$siteNotice .= <<<EOF
+			/*$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
 			<td>Miraheze will perform database maintenance on this wiki, from 22:40 UTC until approx. 23:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 22:35 UTC!</td>
+			</tr></tbody></table>*/
+                        $siteNotice .= <<<EOF
+			<table class="wikitable" style="text-align:center;"><tbody><tr>
+			<td>Miraheze will perform database maintenance on this wiki at some point today UTC time. There will be a 30 minute warning before the db maintenance happens. During this time the wiki will be in read-only mode. Please save your edits 5 minutes before the maintenance happens!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
