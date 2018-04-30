@@ -6627,8 +6627,11 @@ $wgConf->settings = array(
 			'rdf2text',
 		),
 	),
-	'wgCollectionPODPartners' => array(
+	'wgCollectionMWServeURL' => array(
 		'default' => 'https://ocg-lb.miraheze.org/',
+	),
+	'wgCollectionPODPartners' => array(
+		'default' => false,
 	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
