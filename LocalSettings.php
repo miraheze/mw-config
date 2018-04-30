@@ -645,6 +645,7 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
+		'allthetropeswiki' => 'moving to db4',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
