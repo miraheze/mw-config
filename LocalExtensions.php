@@ -89,6 +89,27 @@ if ( $wmgUseCollapsibleVector ) {
 
 if ( $wmgUseCollection ) {
 	require_once( "$IP/extensions/Collection/Collection.php" );
+
+	$wgCollectionFormatToServeURL = array(
+		'rdf2latex' => 'https://ocg-lb.miraheze.org',
+		'rdf2text' => 'https://ocg-lb.miraheze.org',
+	);
+
+	$wgCommunityCollectionNamespace = NS_PROJECT;
+
+	$wgCollectionPortletFormats = array(
+		'rdf2latex' => 'PDF',
+		'rdf2text' => 'Plain text',
+	);
+
+	$wgCollectionPortletFormats = array(
+		'rdf2latex',
+		'rdf2text',
+	);
+
+	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
+
+	$wgCollectionPODPartners = false;
 }
 
 if ( $wmgUseComments ) {

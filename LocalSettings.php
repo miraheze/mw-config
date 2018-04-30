@@ -6606,33 +6606,6 @@ $wgConf->settings = array(
 	'wgCentralAuthLoginIcon' => array(
 		'default' => '/usr/share/nginx/favicons/default.ico',
 	),
-	'wgCollectionFormatToServeURL' => array(
-		'default' => array(
-			'rdf2latex' => 'https://ocg-lb.miraheze.org',
-			'rdf2text' => 'https://ocg-lb.miraheze.org',
-		),
-	),
-	'wgCommunityCollectionNamespace' => array(
-		'default' => NS_PROJECT,
-	),
-	'wgCollectionPortletFormats' => array(
-		'default' => array(
-			'rdf2latex' => 'PDF',
-			'rdf2text' => 'Plain text',
-		),
-	),
-	'wgCollectionPortletFormats' => array(
-		'default' => array(
-			'rdf2latex',
-			'rdf2text',
-		),
-	),
-	'wgCollectionMWServeURL' => array(
-		'default' => 'https://ocg-lb.miraheze.org/',
-	),
-	'wgCollectionPODPartners' => array(
-		'default' => false,
-	),
 	'wgDefaultSkin' => array(
 		'default' => 'vector',
 		'appswiki' => 'metrolook',
