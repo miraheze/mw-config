@@ -2269,6 +2269,10 @@ $wgConf->settings = array(
 		'shortwikiwiki' => true,
 		'undisclosedwiki' => true,
 	),
+	'wmgUsePipeEscape' => array(
+		'default' => false,
+		'test1wiki' => true,
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
