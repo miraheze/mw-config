@@ -630,12 +630,20 @@ if ( $wmgUseVariables ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension ( 'VisualEditor' );
-	
-	$wgVirtualRestConfig['modules']['parsoid'] = array(
+
+	/*$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid-lb.miraheze.org:443',
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
-	);
+	);*/
+
+	$wgVirtualRestConfig['modules']['restbase'] = [
+	  'url' => "http://restbase-lb.miraheze.org",
+	  'domain' => $wmgHostname, 
+	  'parsoidCompat' => false
+	];
+
+	$wgVisualEditorFullRestbaseURL = 'https://'.$wmgHostname.'/api/rest_';
 
 
 	if ( $wmgVisualEditorEnableDefault ) {
