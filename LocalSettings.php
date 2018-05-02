@@ -1845,6 +1845,10 @@ $wgConf->settings = array(
 		'reviwikiwiki' => true,
 		'shortwikiwiki' => true,
 	),
+	 'wmgUseKartographer' => array(
+                'default' => false,
+                'test1wiki' => true,
+	),
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
 		'bpwiki' => true,

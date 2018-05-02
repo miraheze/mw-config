@@ -67,6 +67,7 @@ $IP/extensions/InputBox/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php
 $IP/extensions/Josa/extension.json
+$IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LocalisationUpdate/extension.json

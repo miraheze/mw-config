@@ -305,6 +305,10 @@ if ( $wmgUseJosa ) {
 	wfLoadExtension( 'Josa' );
 }
 
+if ( $wmgUseKartographer ) {
+        wfLoadExtension( 'Kartographer' );
+}
+
 if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
