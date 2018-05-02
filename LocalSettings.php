@@ -2271,6 +2271,7 @@ $wgConf->settings = array(
 	),
 	'wmgUsePipeEscape' => array(
 		'default' => false,
+		'gtnhwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUsePopups' => array(
