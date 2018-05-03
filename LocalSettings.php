@@ -7469,6 +7469,9 @@ $wgConf->settings = array(
 		'+espiralwiki' => array(
 			NS_PROJECT => true,
 		),
+		'+isvwiki' => array(
+			NS_LIBRARY => true,
+		),
 		'+oncprojectwiki' => array(
 			NS_PROJECT => true,
 			NS_TEMPLATE => true,
