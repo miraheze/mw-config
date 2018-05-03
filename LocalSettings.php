@@ -1849,6 +1849,8 @@ $wgConf->settings = array(
                 'default' => false,
 		'isvwiki' => true,
                 'test1wiki' => true,
+		 'unionwiki' => true,
+		 'wiki1776wiki' => true,
 	),
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
