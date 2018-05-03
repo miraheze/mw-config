@@ -264,6 +264,10 @@ if ( $wmgUseGamepress ) {
     wfLoadSkin( 'Gamepress' );
 }
 
+if ( $wmgUseGlobalUserPage ) {
+    wfLoadExtension( 'GlobalUserPage' );
+}
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
