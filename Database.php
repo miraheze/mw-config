@@ -64,7 +64,6 @@ $wgLBFactoryConf = array(
 		'nvcwiki' => 'c1',
 		'ourmxfestwiki' => 'c1',
 		'ordiswiki' => 'c1',
-		'pathfinderwiki' => 'c1',
 		'plasticssongcontestwiki' => 'c1',
 		'platprojectwiki' => 'c1',
 		'pluspiwiki' => 'c1',
