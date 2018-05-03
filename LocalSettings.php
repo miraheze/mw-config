@@ -1733,12 +1733,6 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 		'karmazynxyz' => true,
 	),
-	'wmgUseGlobalUserPage' => array(
-		'default' => false,
-		'metawiki' => true,
-		'test1wiki' => true,
-		'testwiki' => true,
-	),
 	'wmgUseGraph' => array(
 		'default' => false,
 		'appswiki' => true,
