@@ -95,6 +95,8 @@ if ( $wmgUseCollection ) {
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
 	$wgCollectionPODPartners = false;
+	
+	wfLoadExtension( 'ElectronPdfService' );
 }
 
 if ( $wmgUseComments ) {
