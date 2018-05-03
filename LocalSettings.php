@@ -1847,6 +1847,7 @@ $wgConf->settings = array(
 	),
 	 'wmgUseKartographer' => array(
                 'default' => false,
+		'isvwiki' => true,
                 'test1wiki' => true,
 	),
 	'wmgUseLabeledSectionTransclusion' => array(
