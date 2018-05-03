@@ -1425,6 +1425,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCollection' => array(
 		'default'  => false,
+		'mikrodevwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseComments' => array(
@@ -1469,7 +1470,10 @@ $wgConf->settings = array(
 		'vandalismwikiwiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
-		'default' => true,
+		'default' => false,
+		'eerstelijnszoneswiki' => true,
+		'test1wiki' => true,
+		'pgnwikiwiki' => true,
 	),
 	'wmgUseCreatePage' => array(
 		'default' => false,
@@ -1618,7 +1622,6 @@ $wgConf->settings = array(
 	'wmgUseElectronPdfService' => array(
 		'default' => false,
 		'jcswiki' => true,
-		'test1wiki' => true,
 	),
 	'wmgUseErudite' => array(
 		'default' => false,
