@@ -32,7 +32,7 @@ $IP/extensions/CookieWarning/extension.json
 $IP/extensions/CreatePage/CreatePage.php
 $IP/extensions/CreateRedirect/CreateRedirect.php
 $IP/extensions/CreateWiki/extension.json
-$IP/extensions/CrossReference/CrossReference.php
+$IP/extensions/CrossReference/extension.json
 $IP/extensions/CustomHeader/extension.json
 $IP/extensions/DPLForum/extension.json
 $IP/extensions/Disambiguator/extension.json
