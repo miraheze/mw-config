@@ -3381,6 +3381,7 @@ $wgConf->settings = array(
 			NS_TEMPLATE,
 			NS_CATEGORY,
 			WMG_NS_MODULE,
+			NS_LIBRARY,
 		),
 		'trexwiki' => array(
 			NS_ARTIKEL,
@@ -4156,6 +4157,10 @@ $wgConf->settings = array(
 			NS_SELP => "Selp",
 			NS_SELP_TALK => "Selp_talk",
 		),
+		'isvwiki' => array(
+			NS_LIBRARY => 'Sbornik',
+			NS_LIBRARY_TALK => 'Besěda_sbornika',
+		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
@@ -4445,6 +4450,10 @@ $wgConf->settings = array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
 		),
+		'+isvwiki' => array(
+			'Library' => NS_LIBRARY,
+			'Library_talk' => NS_LIBRARY_TALK,
+		),
 		'+picardwiki' => array(
 			'NS_USER_PROFILE' => 'Benutzerprofil',
 			'NS_USER_PROFILE_TALK' => 'Benutzerprofil Diskussion',
@@ -4722,6 +4731,10 @@ $wgConf->settings = array(
 		'+ictjudikaturawiki' => array(
 			NS_MAIN => true,
 		),
+		'+isvwiki' => array(
+			NS_LIBRARY => true,
+			NS_LIBRARY_TALK => true,
+		),
 		'+jawp2chwiki' => array(
 			NS_TEMPLATE => true,
 		),
@@ -4838,6 +4851,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		'isvwiki' => array(
 			WMG_NS_MODULE_TALK => 'flow-board',
+			NS_LIBRARY_TALK => 'flow-board',
 		),
 	),
 
