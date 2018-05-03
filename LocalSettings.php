@@ -1425,6 +1425,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCollection' => array(
 		'default'  => false,
+		'metawiki' => true,
 		'mikrodevwiki' => true,
 		'test1wiki' => true,
 	),
