@@ -7532,14 +7532,14 @@ $wgConf->settings = array(
 	// Protect site config
 	'wgProtectSiteLimit' => array(
 		'default' => '1 week',
-		'infectopedwiki' => 'indefinite',
+		'infectopedwiki' => '10 years',
 		'tnoteswiki' => 'indefinite',
 	),
 	'wgProtectSiteDefaultTimeout' => array(
 		'default' => '1 hour',
-		'infectopedwiki' => '2 hours',
+		'infectopedwiki' => '1 year',
 		'tnoteswiki' => '2 hours',
-	),
+	),		
 
 	// WebChat config
 	'wmgWebChatServer' => array(
