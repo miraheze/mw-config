@@ -3317,6 +3317,7 @@ $wgConf->settings = array(
 		'uncyclopediawiki' => true,
 		'valentinaprojectwiki' => true,
 		'vandalismwikiwiki' => true,
+		'wakeupsuperwiki' => true,
 		'wikapediawiki' => true,
 		'wikiletraswiki' => true,
 		'wikipucwiki' => true,
