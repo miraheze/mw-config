@@ -1469,10 +1469,7 @@ $wgConf->settings = array(
 		'vandalismwikiwiki' => true,
 	),
 	'wmgUseCookieWarning' => array(
-		'default' => false,
-		'eerstelijnszoneswiki' => true,
-		'test1wiki' => true,
-		'pgnwikiwiki' => true,
+		'default' => true,
 	),
 	'wmgUseCreatePage' => array(
 		'default' => false,
