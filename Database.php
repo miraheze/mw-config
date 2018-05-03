@@ -120,9 +120,6 @@ $wgLBFactoryConf = array(
 		'c1' => array(
 			'db2' => 1,
 		),
-		'c2' => array(
-			'db3' => 1,
-		),
 		'c3' => array(
 			'db4' => 1,
 		),
@@ -135,7 +132,6 @@ $wgLBFactoryConf = array(
 	),
 	'hostsByName' => array(
 		'db2' => '81.4.125.112',
-		'db3' => '81.4.127.157',
 		'db4' => '81.4.109.166',
 	),
 	'externalLoads' => array(
