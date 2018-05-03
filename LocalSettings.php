@@ -1423,7 +1423,8 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseCollection' => array(
-		'default'  => false,
+		'default'   => false,
+		'mikrodevwiki'  => true,
 		'test1wiki' => true,
 	),
 	'wmgUseComments' => array(
@@ -1620,6 +1621,7 @@ $wgConf->settings = array(
 	'wmgUseElectronPdfService' => array(
 		'default' => false,
 		'jcswiki' => true,
+		'mikrodevwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseErudite' => array(
