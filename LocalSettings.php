@@ -387,6 +387,7 @@ $wgConf->settings = array(
 			'bebaskanpengetahuan.org' => 'bpwiki',
 			'cornetto.online' => 'cornettowiki',
 			'dariawiki.org' => 'dariawikiwiki',
+			'decrypted.wiki' => 'decryptedwiki',
 			'disabled.life' => 'disabledlifewiki',
 			'embobada.com' => 'embobadawiki',
 			'en.wikitransparency.org' => 'yourtechnicalservicewiki',
@@ -1423,8 +1424,7 @@ $wgConf->settings = array(
 		'wisdomwikiwiki' => true,
 	),
 	'wmgUseCollection' => array(
-		'default'   => false,
-		'mikrodevwiki'  => true,
+		'default'  => false,
 		'test1wiki' => true,
 	),
 	'wmgUseComments' => array(
@@ -1621,7 +1621,6 @@ $wgConf->settings = array(
 	'wmgUseElectronPdfService' => array(
 		'default' => false,
 		'jcswiki' => true,
-		'mikrodevwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseErudite' => array(
@@ -6475,6 +6474,7 @@ $wgConf->settings = array(
 		'consentcraftwiki' => 'https://wiki.consentcraft.uk',
 		'cornettowiki' => 'https://cornetto.online',
 		'dariawikiwiki' => 'https://dariawiki.org',
+		'decryptedwiki' => 'https://decrypted.wiki',
 		'disabledlifewiki' => 'https://disabled.life',
 		'drones4allwiki' => 'https://wiki.drones4nature.info',
 		'dobotswiki' => 'https://wiki.dobots.nl',
@@ -7356,6 +7356,7 @@ $wgConf->settings = array(
 			'wiki\.consentcraft\.uk',
 			'cornetto\.online',
 			'dariawiki\.org',
+			'decrypted\.wiki',
 			'wiki.dobots\.nl',
 			'wiki\.dottorconte\.eu',
 			'wiki\.downhillderelicts\.com',
