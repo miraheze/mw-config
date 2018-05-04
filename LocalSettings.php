@@ -1424,6 +1424,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseCollection' => array(
 		'default'  => false,
+		'macfan4000wiki' => true,
 		'metawiki' => true,
 		'mikrodevwiki' => true,
 		'test1wiki' => true,
@@ -2943,7 +2944,6 @@ $wgConf->settings = array(
 		'lovelivewiki' => true,
 		'lunfengwiki' => true,
 		'maccnycwiki' => true,
-		'macfan4000wiki' => true,
 		'magezwiki' => true,
 		'magnaversewiki' => true,
 		'maiasongcontestwiki' => true,
