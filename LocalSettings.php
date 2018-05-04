@@ -4643,6 +4643,9 @@ $wgConf->settings = array(
 	),
 	'+wgNamespacesToBeSearchedDefault' => array(
 		'default' => array(),
+		'+isvwiki' => array(
+			NS_LIBRARY => true,
+		),
 		'+metawiki' => array(
 			NS_TECH => true,
 		),
