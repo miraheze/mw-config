@@ -122,7 +122,6 @@ if ( $wmgUseCookieWarning ) {
 	wfLoadExtension( 'CookieWarning' );
 	// Geolocate here to determine to whom to show the cookie warning
 	$wgCookieWarningEnabled = true;
-	$wgCookieWarningGeoIPLookup = 'js';
 	// Haha just kidding -- annoy everyone
 }
 
