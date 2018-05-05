@@ -701,7 +701,7 @@ if ( $wmgUsewikihiero ) {
 if ( $wmgUseWikiLove ) {
 	wfLoadExtension( 'WikiLove' );
 	
-	$wgDefaultUserOptions['wikilove-enabled'] = 1;
+	$wgWikiLoveGlobal = true;
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
