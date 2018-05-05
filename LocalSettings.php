@@ -3230,6 +3230,7 @@ $wgConf->settings = array(
 		'corydoctorowwiki' => true,
 		'garrettcountyguidewiki' => true,
 		'macfan4000wiki' => true,
+		'metawiki' => true,
 		'test1wiki' => true,
 		'pgnwikiwiki' => true,
 		'podpediawiki' => true,
