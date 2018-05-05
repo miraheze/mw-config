@@ -2858,6 +2858,7 @@ $wgConf->settings = array(
 		'earthianwiki' => true,
 		'easterwiki' => true,
 		'edmundwiki' => true,
+		'edustudentwiki' => true,
 		'eerstelijnszoneswiki' => true,
 		'ellersliedemowiki' => true,
 		'ernaehrungsrathhwiki' => true,
