@@ -1908,7 +1908,6 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'dongyangwiki' => true,
 		'enmarchewiki' => true,
-		'garrettcountyguidewiki' => true,
 		'howtogettowiki' => true,
 		'jacksonheightswiki' => true,
 		'jayuwikiwiki' => true,
