@@ -1849,7 +1849,8 @@ $wgConf->settings = array(
 	),
 	 'wmgUseKartographer' => array(
                 'default' => false,
-		'isvwiki' => true,
+		'garrettcountyguidewiki' => true,
+		 'isvwiki' => true,
                 'test1wiki' => true,
 		 'unionwiki' => true,
 		 'wiki1776wiki' => true,
