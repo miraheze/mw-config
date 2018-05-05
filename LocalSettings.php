@@ -7113,6 +7113,7 @@ $wgConf->settings = array(
 		'r2wiki' => "//$wmgUploadHostname/r2wiki/a/a6/Part-up-logo-150x150-mediawiki.png",
 		'radviserwiki' => "//$wmgUploadHostname/radviserwiki/b/b0/Radviser_logo.png",
 		'raymanspeedrunwiki' => "//$wmgUploadHostname/raymanspeedrunwiki/0/0e/Rayman_Speedrun_Wiki_Logo.png",
+		'rcpdwiki' => "//$wmgUploadHostname/rcpdwiki/0/03/RCPD_Maltese_Cross.png",
 		'reiaasuwiki' => "//$wmgUploadHostname/reiaasuwiki/1/1e/Reiaasu-wiki-logo-1.png",
 		'reservedurablewiki' => "//$wmgUploadHostname/reservedurablewiki/3/37/Logo_sustainable_storage_135_pi.png",
 		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d0/Real_World_Revit.png",
