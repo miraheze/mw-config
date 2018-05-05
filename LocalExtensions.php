@@ -700,6 +700,8 @@ if ( $wmgUsewikihiero ) {
 
 if ( $wmgUseWikiLove ) {
 	wfLoadExtension( 'WikiLove' );
+	
+	$wgWikiLoveGlobal = true;
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
