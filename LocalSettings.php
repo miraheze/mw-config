@@ -6552,6 +6552,7 @@ $wgConf->settings = array(
 		'svenskabriardklubbenwiki' => 'https://wiki.svenskabriardklubben.se',
 		'takethatwikiwiki' => 'https://takethatwiki.com',
 		'teamwizardrywiki' => 'https://wiki.teamwizardry.com',
+		'techwikiwiki' => 'https://wiki.pupilliam.com',
 		'teessidehackspacewiki' => 'https://wiki.teessidehackspace.org.uk',
 		'tensorflowlearningwiki' => 'https://wiki.tensorflow.community',
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk',
