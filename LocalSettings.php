@@ -3767,10 +3767,6 @@ $wgConf->settings = array(
 		'nenawikiwiki' => true,
 	),
 
-	// Math
-	'wgMathValidModes' => array(
-		'default' => array( 'png' ),
-	),
 	'wgTexvc' => array(
 		'default' => '/usr/bin/texvc',
 	),
