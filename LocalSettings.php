@@ -2858,6 +2858,7 @@ $wgConf->settings = array(
 		'drones4allwiki' => true,
 		'dtswiki' => true,
 		'dwplivewiki' => true,
+		'eaddemoswiki' => true,
 		'earthianwiki' => true,
 		'easterwiki' => true,
 		'edmundwiki' => true,
