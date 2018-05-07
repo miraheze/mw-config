@@ -40,3 +40,7 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr'
 ] );
+
+$wgMathValidModes[] = 'mathml';
+$wgDefaultUserOptions['math'] = 'mathml';
+$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
