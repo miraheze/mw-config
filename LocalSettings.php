@@ -2727,6 +2727,7 @@ $wgConf->settings = array(
 		'nanatsunotaizaiwiki' => true,
 		'nvcwiki' => true,
 		'r2wiki' => true,
+		'rxywiki' => true,
 		'pathfinderwiki' => true,
 		'pgnwikiwiki' => true,
 		'podpediawiki' => true,
