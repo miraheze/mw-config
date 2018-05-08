@@ -25,10 +25,6 @@ $wgLocalVirtualHosts = array( '81.4.125.112' );
 
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 
-$wgMathValidModes[] = 'mathml';
-$wgDefaultUserOptions['math'] = 'mathml';
-$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
-
 // Namespaces (please count upwards from 1600 to avoid any conflicts!)
 define( 'NS_TECH', 1600 );
 define( 'NS_TECH_TALK', 1601 );
