@@ -2938,6 +2938,7 @@ $wgConf->settings = array(
 		'kevincwiki' => true,
 		'kgbwiki' => true,
 		'kinderacicwiki' => true,
+		'klimagruppewiki' => true, 
 		'knowledgewiki' => true,
 		'kozawiki' => true,
 		'krebswiki' => true,
