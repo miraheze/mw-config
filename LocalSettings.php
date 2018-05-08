@@ -7699,13 +7699,6 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 	$wgConf->settings['wmgInactiveWiki'][$database] = true;
 }
 
-if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgMathValidModes[] = 'mathml';
-	$wgDefaultUserOptions['math'] = 'mathml';
-	$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
-	$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
-}
-
 // Hard overrides that don't work when set in $wgConf->settings
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['bigdelete'] = false;
@@ -7716,6 +7709,13 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
+
+if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+	$wgMathValidModes[] = 'mathml';
+	$wgDefaultUserOptions['math'] = 'mathml';
+	$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
+	$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
+}
 
 if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 	unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
