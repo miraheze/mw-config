@@ -1624,8 +1624,6 @@ $wgConf->settings = array(
 	'wmgUseElectronPdfService' => array(
 		'default' => false,
 		'jcswiki' => true,
-		'skgywiki' => true,
-		'spevtwiki' => true,
 	),
 	'wmgUseErudite' => array(
 		'default' => false,
