@@ -7710,13 +7710,6 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
-if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgMathValidModes[] = 'mathml';
-	$wgDefaultUserOptions['math'] = 'mathml';
-	$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
-	$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
-}
-
 if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 	unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
 	$wgCentralAuthCookieDomain = $wmgHostname;
