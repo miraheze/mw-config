@@ -60,6 +60,12 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRemoveGroups['sysop'][] = 'member';
 
 	$wgNoticeProject[] = 'private';
+} else {
+	// Requires the wiki's to be added to the services repo too
+	$wgMathValidModes[] = 'mathml';
+	$wgDefaultUserOptions['math'] = 'mathml';
+	$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
+	$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
 }
 
 // ircrcbot (!=private)
