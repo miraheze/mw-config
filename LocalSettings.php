@@ -3804,6 +3804,17 @@ $wgConf->settings = array(
 		),
 	),
 
+	//math/mathoid
+	'wgMathValidModes[]' => array(
+		'default' => 'mathml',
+	),
+	'wgDefaultUserOptions['math']' => array(
+		'default' => 'mathml',
+	),
+	'wgMathMathMLUrl' array(
+		'default' => 'https://mathoid-lb.miraheze.org/',
+	),
+
 	// Metrolook settings
 	'wgMetrolookDownArrow' => array(
 		'default' => true,
