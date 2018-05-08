@@ -65,8 +65,9 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgMathValidModes[] = 'mathml';
 	$wgDefaultUserOptions['math'] = 'mathml';
 	$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
-	$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
 }
+
+$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
 
 // ircrcbot (!=private)
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
