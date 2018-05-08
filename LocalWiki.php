@@ -60,6 +60,9 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRemoveGroups['sysop'][] = 'member';
 
 	$wgNoticeProject[] = 'private';
+	
+	// To be removed once restbase supports private wiki's
+	$wgDefaultUserOptions['math'] = 'png';
 } else {
 	// Requires the wiki's to be added to the services repo too
 	$wgMathValidModes[] = 'mathml';
