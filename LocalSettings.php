@@ -5044,7 +5044,12 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'commentadmin',
 			),
-		),			
+		),
+		'+radviserwiki' => array(
+			'sysop' =>
+				'editor',
+			),
+		),
 		'+sau226wiki' => array(
 			'bureaucrat' => array(
 				'testgroup',
@@ -6130,6 +6135,11 @@ $wgConf->settings = array(
 				'epinstructor',
 				'epcampus',
 				'eponline',
+			),
+		),
+		'+radviserwiki' => array(
+			'sysop' => array(
+				'editor',
 			),
 		),
 		'+sau226wiki' => array(
