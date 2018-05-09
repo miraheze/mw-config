@@ -7078,6 +7078,7 @@ $wgConf->settings = array(
 		'makeiteasyautoswiki' => "//$wmgUploadHostname/makeiteasyautoswiki/0/01/Miea.png",
 		'malaysiawiki' => "//$wmgUploadHostname/malaysiawiki/1/1d/Malaysian_flag_round135.png",
 		'marinebiodiversitymatrixwiki' => "//$wmgUploadHostname/marinebiodiversitymatrixwiki/3/34/IUCN_logo_transparent_WICKI_web.jpg",
+		'marioserieswikiwiki' => "//$wmgUploadHostname/marioserieswikiwiki/5/5c/Msw_logo.png",
 		'masseffectwiki' => "//$wmgUploadHostname/masseffectwiki/b/bc/Wiki.png",
 		'mawikimaisonwiki' => "//$wmgUploadHostname/mawikimaisonwiki/3/33/Wikihouse.png",
 		'mexasaachenwiki' => "//$wmgUploadHostname/mexasaachenwiki/8/8e/MexAS.png",
