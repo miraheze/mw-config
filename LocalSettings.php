@@ -3553,6 +3553,7 @@ $wgConf->settings = array(
 	'wmgFlowDefaultNamespaces' => array(
 		'default' => true,
 		'nationsglorywiki' => false,
+		'lzhscpwikiwiki' => false,
 	),
 
 	// GlobalBlocking
