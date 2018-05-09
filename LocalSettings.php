@@ -2567,6 +2567,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 		'modularwiki' => true,
 		'mpappaswiki' => true,
+		'myragnarokwiki' => true,
 		'ndwiki' => true,
 		'nextlevelwikiwiki' => true,
 		'noalatalawiki' => true,
