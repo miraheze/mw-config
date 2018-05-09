@@ -1,10 +1,6 @@
 <?php
 
 // Set up extensions for use on wikis that are not global
-//if ( $wmgUseAccessControl ) { // Causes errors with 1.29 --Reception123
-//	require_once( "$IP/extensions/AccessControl/AccessControl.php" );
-//}
-
 if ( $wmgUseAddThis ) {
 	require_once( "$IP/extensions/AddThis/AddThis.php" );
 }
