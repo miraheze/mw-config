@@ -7200,6 +7200,7 @@ $wgConf->settings = array(
 		'thegreatwarwiki' => "//$wmgUploadHostname/thegreatwarwiki/2/22/SoldiersLogo.png",
 		'thelonsdalebattalionwiki' => "//$wmgUploadHostname/thelonsdalebattalionwiki/2/22/SoldiersLogo.png",
 		'themfbclubwiki' => "//$wmgUploadHostname/themfbclubwiki/b/bc/Wiki.png",
+		'theneworderwiki' => "//$wmgUploadHostname/theneworderwiki/5/58/TNO.png",
 		'therubyserverwiki' => "//$wmgUploadHostname/therubyserverwiki/c/c9/Logo.png",
 		'thingexplainerwiki' => "//$wmgUploadHostname/thingexplainerwiki/3/33/Mainpage_logo.png",
 		'thireswiki' => "//$wmgUploadHostname/thireswiki/9/9e/티레스_위키_로고.png",
