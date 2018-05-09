@@ -8,11 +8,7 @@ if ( $wmgUseAddThis ) {
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
-	if ( file_exists("$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php") ) {
-		require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
-	} else {
-		wfLoadExtension( 'AddHTMLMetaAndTitle' );
-	}
+	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
 }
 
 if ( $wmgUseAdminLinks ) {
