@@ -785,6 +785,12 @@ $wgConf->settings = array(
 			'editor' => true,
 			'sysop' => true,
 		),
+		'+disabledpoundwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+drones4allwiki' => array(
 			'anon' => true,
 		),
