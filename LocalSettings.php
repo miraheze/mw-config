@@ -1663,7 +1663,7 @@ $wgConf->settings = array(
 		'tutorwiki' => true,
 	),
 	'wmgUseFlow' => array(
-		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
+		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
 		'690squadronwiki' => true,
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
@@ -2782,7 +2782,7 @@ $wgConf->settings = array(
 		'wikipucwiki' => true,
 	),
 	'wmgUseVisualEditor' => array(
-		'default' => false, // Please make sure parsoid is enabled on the wiki in the parsoid.yaml file in the parsoid repo
+		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
 		'690squadronwiki' => true,
 		'8stationwiki' => true,
 		'adnovumwiki' => true,
@@ -3068,6 +3068,7 @@ $wgConf->settings = array(
 		'tekkenwiki' => true,
 		'teleswikiwiki' => true,
 		'teriawiki' => true,
+		'tesminadventureswiki' => true,
 		'testwiki' => true,
 		'testarkclswiki' => true,
 		'thebbwiki' => true,

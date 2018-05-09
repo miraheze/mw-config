@@ -7,8 +7,8 @@ Below is an example snippet from our LocalSettings.php:
 ```php
     'wmgUseJosa' => array(
         'default' => false,
-        'extloadwiki' => true,
-        'reviwiki' => true,
+        'test1wiki' => true,
+        'reviwiki' => true
     ),
 ```
 
