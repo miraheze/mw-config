@@ -500,6 +500,8 @@ if ( $wmgUseRefreshed ) {
 
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
+
+	$wgRelatedArticlesUseCirrusSearch = false;
 }
 
 if ( $wmgUseReplaceText ) {
