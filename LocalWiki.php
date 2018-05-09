@@ -60,7 +60,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRemoveGroups['sysop'][] = 'member';
 
 	$wgNoticeProject[] = 'private';
-	
+
 	// To be removed once restbase supports private wiki's
 	$wgDefaultUserOptions['math'] = 'png';
 } else {
@@ -152,23 +152,23 @@ if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
 
 	$wgSimpleFlaggedRevsUI = false;
-	
+
 	$wgGroupPermissions['*']['editmyusercss'] = false;
 	$wgGroupPermissions['*']['editmyuserjs'] = false;
 	$wgGroupPermissions['*']['flow-hide'] = false;
-	
+
 	$wgGroupPermissions['user']['move'] = false;
 	$wgGroupPermissions['user']['move-subpages'] = false;
 	$wgGroupPermissions['user']['move-categorypages'] = false;
 	$wgGroupPermissions['user']['movefile'] = false;
-	
+
 	$wgGroupPermissions['autopatrolled']['autopatrol'] = false;
 	$wgGroupPermissions['bot']['autopatrol'] = false;
 	$wgGroupPermissions['sysop']['autopatrol'] = false;
 	$wgGroupPermissions['autopatrolled']['patrol'] = false;
 	$wgGroupPermissions['confirmed']['patrol'] = false;
 	$wgGroupPermissions['sysop']['patrol'] = false;
-	
+
 	unset ( $wgGroupPermissions['autoreview'] );
 	unset ( $wgGroupPermissions['editor'] );
 	unset ( $wgGroupPermissions['reviewer'] );
@@ -242,6 +242,10 @@ if ( $wgDBname === 'pruebawiki' ) {
 	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
 	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
 	unset( $wgGroupPermissions['autoreview'] );
+}
+
+if ( $wgDBname === 'radviserwiki' ) {
+	$wgGroupPermissions['user']['createpage'] = false;
 }
 
 if ( $wgDBname === 'reviwikiwiki' ) {

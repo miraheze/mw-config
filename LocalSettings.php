@@ -1028,9 +1028,6 @@ $wgConf->settings = array(
 		),
 		'+radviserwiki' => array(
 			'anon' => true,
-			'user' => true,
-			'editor' => true,
-			'sysop' => true,
 		),
 		'+revitwiki' => array(
 			'anon' => true,
@@ -1060,7 +1057,7 @@ $wgConf->settings = array(
 		),
 		'+scruffywiki' => array(
 			'anon' => true,
-		),		
+		),
 		'+sdiywiki' => array(
 			'anon' => true,
 		),
@@ -5707,7 +5704,15 @@ $wgConf->settings = array(
 				'createpage' => true,
 			),
 		),
-				
+		'+radviserwiki' => array(
+			'editor' => array(
+				'createpage' => true,
+				'editor' => true,
+			),
+			'sysop' => array(
+				'editor' => true,
+			),
+		),
 		'+sau226wiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat' => true,
@@ -6367,6 +6372,9 @@ $wgConf->settings = array(
 		'+pruebawiki' => array(
 			'bureaucrat',
 			'consul',
+		),
+		'+radviserwiki' => array(
+			'editor',
 		),
 		'+sovereignwiki' => array(
 			'officer',
