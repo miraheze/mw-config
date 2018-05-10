@@ -2842,6 +2842,7 @@ $wgConf->settings = array(
 		'csnimsbordeauxwiki' => true,
 		'cybersecuritywiki' => true,
 		'dalarwiki' => true,
+		'decryptedwiki' => true,
 		'detlefswiki' => true,
 		'dicficwiki' => true,
 		'didaprowiki' => true,
