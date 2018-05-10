@@ -7460,6 +7460,7 @@ $wgConf->settings = array(
 			'savage-wiki\.com',
 			'speleo\.wiki',
 			'www\.zenbuddhism\.info',
+			'wiki\.zymonic\.com',
 			'espiral\.org',
 			'spiral\.wiki',
 			'wikibase\.revi\.wiki',
