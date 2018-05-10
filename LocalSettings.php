@@ -7089,6 +7089,7 @@ $wgConf->settings = array(
 		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/1/14/Mediawiki-icon-135x135.png",
 		'kunwokwiki' => "//$wmgUploadHostname/kunwokwiki/8/8f/Kunwok_135x150.jpg",
 		'kuonsamwiki' => "//$wmgUploadHostname/kuonsamwiki/b/bc/My_Handsome.png",
+		'kyunganwiki' => "//$wmgUploadHostname/kyunganwiki/3/35/경안.png",
 		'lambdawarswiki' => "//$wmgUploadHostname/lambdawarswiki/7/76/LW_logo_mainpage.png",
 		'lanstationwiki' => "//$wmgUploadHostname/lanstationwiki/e/e2/Miniian.png",
 		'lapeninsulewiki' => "//$wmgUploadHostname/lapeninsulewiki/6/66/Constellation_de_la_P%C3%A9ninsule.png",
