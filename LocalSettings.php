@@ -2184,8 +2184,9 @@ $wgConf->settings = array(
 	),
 	'wmgUseOpenGraphMeta' => array(
 		'default' => false,
-		'test1wiki' => true,
 		'extloadwiki' => true,
+		'test1wiki' => true,
+		'tulpawiki' => true,
 	),
 	'wmgUsePagedTiffHandler' => array(
 		'default' => false,
