@@ -647,35 +647,6 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
-		'0x1winwiki' => true,
-		'131parkhurstwiki' => true,
-		'161647y2awiki' => true,
-		'1cewiki' => true,
-		'1sttractionbrigadewiki' => true,
-		'2cvcupfrancewiki' => true,
-		'3dprinterscncwiki' => true,
-		'4mindswiki' => true,
-		'690squadronwiki' => true,
-		'8stationwiki' => true,
-		'99pdwikiwiki' => true,
-		'a360wiki' => true,
-		'aapwiki' => true,
-		'aaupaftlocal6075wiki' => true,
-		'abainnovationwiki' => true,
-		'abhirupghoshwiki' => true,
-		'abitaregeawiki' => true,
-		'absurdopediawiki' => true,
-		'abundancewiki' => true,
-		'abzewiki' => true,
-		'acasrbijawiki' => true,
-		'accademiadellebirrewiki' => true,
-		'access7wiki' => true,
-		'accorderiewiki' => true,
-		'accountingwiki' => true,
-		'acewikiwiki' => true,
-		'achancetopursuewiki' => true,
-		'acprojectwiki' => true,
-		'actartletraswiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -7827,7 +7798,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == '0x1winwiki' ||
+/*if ( $wgDBname == '0x1winwiki' ||
 	$wgDBname == '131parkhurstwiki' ||
 	$wgDBname == '161647y2awiki' ||
 	$wgDBname == '1cewiki' ||
@@ -7865,7 +7836,7 @@ if ( $wgDBname == '0x1winwiki' ||
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
