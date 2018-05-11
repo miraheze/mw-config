@@ -7693,10 +7693,17 @@ $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wikiDB = explode( '|', $wikiLine, 4 );
-	list( $DBname, $siteName, $siteLang, $wikiTagList ) = array_pad( $wikiDB, 4, '' );
+	list( $DBname, $siteName, $siteLang, $siteExtensions ) = array_pad( $wikiDB, 4, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
+
+//	$siteExtensionsArray = explode( ",", $siteExtensions );
+//	foreach ( $wgManageWikiExtensions as $name => $ext ) {
+//		if ( in_array( $name, $siteExtensionsArray ) ) {
+//			$wgConf->settings[$ext['var']]$DBname] = true;
+//		}
+//	}
 }
 
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
