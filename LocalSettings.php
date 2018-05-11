@@ -6935,12 +6935,12 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
 
-//	$siteExtensionsArray = explode( ",", $siteExtensions );
-//	foreach ( $wgManageWikiExtensions as $name => $ext ) {
-//		if ( in_array( $name, $siteExtensionsArray ) ) {
-//			$wgConf->settings[$ext['var']]$DBname] = true;
-//		}
-//	}
+	$siteExtensionsArray = explode( ",", $siteExtensions );
+	foreach ( $wgManageWikiExtensions as $name => $ext ) {
+		if ( in_array( $name, $siteExtensionsArray ) ) {
+			$wgConf->settings[$ext['var']]$DBname] = true;
+		}
+	}
 }
 
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
