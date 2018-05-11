@@ -6938,7 +6938,7 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	$siteExtensionsArray = explode( ",", $siteExtensions );
 	foreach ( $wgManageWikiExtensions as $name => $ext ) {
 		if ( in_array( $name, $siteExtensionsArray ) ) {
-			$wgConf->settings[$ext['var']]$DBname] = true;
+			$wgConf->settings[$ext['var']][$DBname] = true;
 		}
 	}
 }
