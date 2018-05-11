@@ -1417,13 +1417,8 @@ $wgConf->settings = array(
 	'wmgUseHAWelcome' => array(
 		'default' => false,
 	),
-	// Be aware of https://www.mediawiki.org/wiki/Extension:Header_Tabs#Incompatible_extensions
 	'wmgUseHeaderTabs' => array(
 		'default' => false,
-		'bdorpwiki' => true,
-		'dtswiki' => true,
-		'ferahistoriawiki' => true,
-		'test1wiki' => true,
 	),
 	'wmgUseHideSection' => array(
 		'default' => false,
@@ -1451,20 +1446,10 @@ $wgConf->settings = array(
 		'test1wiki' => true,
 	),
 	'wmgUseLoginNotify' => array(
-		'default' => false, 
-	),
-	'wmgUseLoopsCombo' => array( // Remember to remove from Variables if the wiki is enabled there
 		'default' => false,
-		'bigforestwiki' => true,
-		'bgowiki' => true,
-		'eotewiki' => true,
-		'test1wiki' => true,
-		'raymanspeedrunwiki' => true,
-		'rpgbrigadewiki' => true,
-		'shortwikiwiki' => true,
-		'sysexwiki' => true,
-		'teatraywiki' => true,
-		'wixosswiki' => true,
+	),
+	'wmgUseLoopsCombo' => array(
+		'default' => false,
 	),
 	'wmgUseMagicNoCache' => array(
 		'default' => false,
@@ -1545,18 +1530,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseNewUserMessage' => array(
 		'default' => false,
-		'bigforestwiki' => true,
-		'calexitwiki' => true,
-		'garrettcountyguidewiki' => true,
-		'test1wiki' => true,
-		'perpuswiki' => true,
-		'pgnwikiwiki' => true,
-		'puzzlewiki' => true,
-		'shortwikiwiki' => true,
-		'thelonsdalebattalionwiki' => true,
-		'trexwiki' => true,
-		'tutorwiki' => true,
-		'wisdomwikiwiki' => true,
 	),
 	'wmgUseNewUsersList' => array(
 		'default' => false,
@@ -1656,25 +1629,6 @@ $wgConf->settings = array(
 	// sudo -u www-data cp -R /srv/mediawiki/w/extensions/SocialProfile/avatars /srv/mediawiki/w/extensions/SocialProfile/awards /mnt/mediawiki-static/$nameofwiki/
 	'wmgUseSocialProfile' => array(
 		'default' => false,
-		'adnovumwiki' => true,
-		'allthetropeswiki' => true,
-		'appswiki' => true,
-		'avalicearchiveswiki' => true,
-		'calexitwiki' => true,
-		'garrettcountyguidewiki' => true,
-		'test1wiki' => true,
-		'ircwiki' => true,
-		'macfan4000wiki' => true,
-		'masseffectwiki' => true,
-		'micropediawiki' => true,
-		'peopleshararamwiki' => true,
-		'picardwiki' => true,
-		'podpediawiki' => true,
-		'puzzlewiki' => true,
-		'priyowiki' => true,
-		'stellachronicawiki' => true,
-		'takethatwikiwiki' => true,
-		'thebbwiki' => true,
 	),
 	'wmgUseSpoilers' => array(
 		'default' => false,
