@@ -5605,6 +5605,7 @@ $wgConf->settings = array(
 		'vtkwiki' => "//$wmgUploadHostname/vtkwiki/d/dc/VTK_logo.png",
 		'wabcwiki' => "//$wmgUploadHostname/wabcwiki/2/25/Logowabc.png",
 		'wakandawiki' => "//$wmgUploadHostname/wakandawiki/e/e6/Wkd.jpg",
+		'warewikiwiki' => "//$wmgUploadHostname/warewikiwiki/b/b5/Warewiki_135_135px.png",
 		'wiki1776wiki' => "//$wmgUploadHostname/wiki1776wiki/0/04/Logo_Wiki1776_en_color_lima_%28transparente%29.svg",
 		'wikid9220wiki' => "//$wmgUploadHostname/wikid9220wiki/1/14/Bloc_Marque_District_9220_135px.png",
 		'wikiletraswiki' => "//$wmgUploadHostname/wikiletraswiki/c/c9/Logo.png",
