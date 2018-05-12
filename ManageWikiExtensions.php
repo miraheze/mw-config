@@ -176,6 +176,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'description2' => array(
+			'name' => 'Description2',
+			'var' => 'wmgUseDescription2',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'dusktodawn' => array(
 			'name' => 'DuskToDawn (Skin)',
 			'var' => 'wmgUseDuskToDawn',

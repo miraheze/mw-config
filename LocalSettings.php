@@ -1317,6 +1317,9 @@ $wgConf->settings = array(
 	'wmgUseDarkVector' => array(
 		'default' => false,
 	),
+	'wmgUseDescription2' => array(
+		'default' => false,
+	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 	),

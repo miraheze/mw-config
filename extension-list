@@ -34,6 +34,7 @@ $IP/extensions/CreateRedirect/CreateRedirect.php
 $IP/extensions/CreateWiki/extension.json
 $IP/extensions/CrossReference/extension.json
 $IP/extensions/CustomHeader/extension.json
+$IP/extensions/Description2/extension.json
 $IP/extensions/DPLForum/extension.json
 $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json

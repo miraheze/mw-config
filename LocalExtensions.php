@@ -152,6 +152,10 @@ if ( $wmgUseDarkVector ) {
 	wfLoadSkin( 'DarkVector' );
 }
 
+if ( $wmgUseDescription2 ) {
+	wfLoadExtension( 'Description2' );
+}
+
 if ( $wmgUseDismissableSiteNotice ) {
 	wfLoadExtension( 'DismissableSiteNotice' );
 }
