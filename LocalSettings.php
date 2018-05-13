@@ -4724,6 +4724,9 @@ $wgConf->settings = array(
 		'extloadwiki' => true,
 		'youtubewiki' => true,
 	),
+	'wgRelatedArticlesUseCirrusSearch' => array(
+		'default' => false,
+	),
 
 	// Restriction types
 	'+wgRestrictionLevels' => array(
