@@ -4620,7 +4620,11 @@ $wgConf->settings = array(
 		),
 	),
 	'wgRevokePermissions' => array(
-		'default' => array(),
+		'default' => array(
+                        'wikicreator' => array(
+                                'createwiki' => true,
+                        ),
+                ),
 		'loginwiki' => array(
 			'*' => array(
 				'edit' => true,
