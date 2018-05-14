@@ -3,7 +3,7 @@
 $wgLBFactoryConf = array(
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => array(
-	        // 'wiki' => 'db'
+	        // 'wiki' => 'c1'
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array(
@@ -28,7 +28,7 @@ $wgLBFactoryConf = array(
 	),
 	'externalLoads' => array(
 		'echo' => array(
-			'db4' => 1, // should echo c2
+			'db4' => 1, // should echo c1
 		),
 	),
 	'readOnlyBySection' => array(
