@@ -6177,37 +6177,57 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == 'afictionalworldonawiki' ||
-       $wgDBname == 'africavisionwiki' ||
-       $wgDBname == 'afrwiki' ||
-       $wgDBname == 'afterworldwiki' ||
-       $wgDBname == 'ag7732wiki' ||
-       $wgDBname == 'agathachristiewiki' ||
-       $wgDBname == 'agathinonwiki' ||
-       $wgDBname == 'ageloniawiki' ||
-       $wgDBname == 'ageofenlightenmentwiki' ||
-       $wgDBname == 'ageofwushuwiki' ||
-       $wgDBname == 'agriwikiwiki' ||
-       $wgDBname == 'agropediawiki' ||
-       $wgDBname == 'ahabariwiki' ||
-       $wgDBname == 'ahdwiki' ||
-       $wgDBname == 'ahmsaqibwiki' ||
-       $wgDBname == 'aibowiki' ||
-       $wgDBname == 'aidorupediawiki' ||
-       $wgDBname == 'aidyllicwiki' ||
-       $wgDBname == 'aimciawiki' ||
-       $wgDBname == 'airportsofwings900wiki'
+if ( $wgDBname == 'airwiki' ||
+       $wgDBname == 'aistudywiki' ||
+       $wgDBname == 'aiswiki' ||
+       $wgDBname == 'aklassewiki' ||
+       $wgDBname == 'aktposwiki' ||
+       $wgDBname == 'alacritysimwiki' ||
+       $wgDBname == 'alaexploitdbwiki' ||
+       $wgDBname == 'alberhillwiki' ||
+       $wgDBname == 'albionwebwiki' ||
+       $wgDBname == 'albustestwiki' ||
+       $wgDBname == 'alewiki' ||
+       $wgDBname == 'alfrescowiki' ||
+       $wgDBname == 'algopediawiki' ||
+       $wgDBname == 'alifloktawiki' ||
+       $wgDBname == 'alittletroutywiki' ||
+       $wgDBname == 'allsamemonsterswiki' ||
+       $wgDBname == 'allthingswikiwiki' ||
+       $wgDBname == 'almanachdebauswicwiki' ||
+       $wgDBname == 'altenpflegewiki' ||
+       $wgDBname == 'alternatehistorywiki' ||
+       $wgDBname == 'alternatesporthistorywiki' ||
+       $wgDBname == 'alterwikiwiki' ||
+       $wgDBname == 'althistoriawiki' ||
+       $wgDBname == 'altruniversewiki' ||
+       $wgDBname == 'altversewiki' ||
+       $wgDBname == 'alwikiwiki' ||
+       $wgDBname == 'amaninfowiki' ||
+       $wgDBname == 'ambirtestwiki' ||
+       $wgDBname == 'amcdlwiki' ||
+       $wgDBname == 'ameciclowiki' ||
+       $wgDBname == 'amicitiawiki' ||
+       $wgDBname == 'amicsdesmuseucawiki' ||
+       $wgDBname == 'amicsdesmuseuwiki' ||
+       $wgDBname == 'amirampwiki' ||
+       $wgDBname == 'amntwiki' ||
+       $wgDBname == 'amxwikiwiki' ||
+       $wgDBname == 'analogypediawiki' ||
+       $wgDBname == 'anchorhrgwiki' ||
+       $wgDBname == 'andreasalexanderulrichwiki' ||
+       $wgDBname == 'animangamespnpwiki' ||
  ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 14:10 UTC until approx. 14:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 14:05 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 15:20 UTC until approx. 15:50 UTC. During this time the wiki will be in read-only mode. Please save your edits before 15:15 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
