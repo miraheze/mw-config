@@ -6177,7 +6177,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'activistresourceswiki' ||
+/*if ( $wgDBname == 'activistresourceswiki' ||
 	$wgDBname == 'adadevelopersacademywiki' ||
 	$wgDBname == 'adamwiki' ||
 	$wgDBname == 'adantewiki' ||
@@ -6207,7 +6207,7 @@ if ( $wgDBname == 'activistresourceswiki' ||
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
