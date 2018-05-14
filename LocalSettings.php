@@ -6177,40 +6177,31 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == '0x1winwiki' ||
-	$wgDBname == '131parkhurstwiki' ||
-	$wgDBname == '161647y2awiki' ||
-	$wgDBname == '1cewiki' ||
-	$wgDBname == '1sttractionbrigadewiki' ||
-	$wgDBname == '2cvcupfrancewiki' ||
-	$wgDBname == '3dprinterscncwiki' ||
-	$wgDBname == '4mindswiki' ||
-	$wgDBname == '690squadronwiki' ||
-	$wgDBname == '8stationwiki' ||
-	$wgDBname == '99pdwikiwiki' ||
-	$wgDBname == 'a360wiki' ||
-	$wgDBname == 'aapwiki' ||
-	$wgDBname == 'aaupaftlocal6075wiki' ||
-	$wgDBname == 'abainnovationwiki' ||
-	$wgDBname == 'abhirupghoshwiki' ||
-	$wgDBname == 'abitaregeawiki' ||
-	$wgDBname == 'absurdopediawiki' ||
-	$wgDBname == 'abundancewiki' ||
-	$wgDBname == 'abzewiki' ||
-	$wgDBname == 'acasrbijawiki' ||
-	$wgDBname == 'accademiadellebirrewiki' ||
-	$wgDBname == 'access7wiki' ||
-	$wgDBname == 'accorderiewiki' ||
-	$wgDBname == 'accountingwiki' ||
-	$wgDBname == 'acewikiwiki' ||
-	$wgDBname == 'achancetopursuewiki' ||
-	$wgDBname == 'acprojectwiki' ||
-	$wgDBname == 'actartletraswiki') {
+if ( $wgDBname == 'activistresourceswiki' ||
+	$wgDBname == 'adadevelopersacademywiki' ||
+	$wgDBname == 'adamwiki' ||
+	$wgDBname == 'adantewiki' ||
+	$wgDBname == 'addicteddadswiki' ||
+	$wgDBname == 'adiapediawiki' ||
+	$wgDBname == 'adiaprojectwiki' ||
+	$wgDBname == 'adminbookclubwiki' ||
+	$wgDBname == 'adminbuswiki' ||
+	$wgDBname == 'adnovumwiki' ||
+	$wgDBname == 'advantagewiki' ||
+	$wgDBname == 'advisingwiki' ||
+	$wgDBname == 'aemanualwiki' ||
+	$wgDBname == 'aenasanwiki' ||
+	$wgDBname == 'aeromwiki' ||
+	$wgDBname == 'aerossprimewiki' ||
+	$wgDBname == 'aerowikiwiki' ||
+	$wgDBname == 'aesbasewiki' ||
+	$wgDBname == 'aescapeswiki' ||
+	$wgDBname == 'aetheriawiki') {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 15:10 UTC until approx. 15:45 UTC. During this time the wiki will be in read-only mode. Please save your edits before 15:05 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 13:10 UTC until approx. 13:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 13:05 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
