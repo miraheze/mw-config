@@ -647,46 +647,6 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
-		'airwiki' => true,
-		'aistudywiki' => true,
-		'aiswiki' => true,
-		'aklassewiki' => true,
-		'aktposwiki' => true,
-		'alacritysimwiki' => true,
-		'alaexploitdbwiki' => true,
-		'alberhillwiki' => true,
-		'albionwebwiki' => true,
-		'albustestwiki' => true,
-		'alewiki' => true,
-		'alfrescowiki' => true,
-		'algopediawiki' => true,
-		'alifloktawiki' => true,
-		'alittletroutywiki' => true,
-		'allsamemonsterswiki' => true,
-		'allthingswikiwiki' => true,
-		'almanachdebauswicwiki' => true,
-		'altenpflegewiki' => true,
-		'alternatehistorywiki' => true,
-		'alternatesporthistorywiki' => true,
-		'alterwikiwiki' => true,
-		'althistoriawiki' => true,
-		'altruniversewiki' => true,
-		'altversewiki' => true,
-		'alwikiwiki' => true,
-		'amaninfowiki' => true,
-		'ambirtestwiki' => true,
-		'amcdlwiki' => true,
-		'ameciclowiki' => true,
-		'amicitiawiki' => true,
-		'amicsdesmuseucawiki' => true,
-		'amicsdesmuseuwiki' => true,
-		'amirampwiki' => true,
-		'amntwiki' => true,
-		'amxwikiwiki' => true,
-		'analogypediawiki' => true,
-		'anchorhrgwiki' => true,
-		'andreasalexanderulrichwiki' => true,
-		'animangamespnpwiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -6217,7 +6177,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'airwiki' ||
+/*if ( $wgDBname == 'airwiki' ||
        $wgDBname == 'aistudywiki' ||
        $wgDBname == 'aiswiki' ||
        $wgDBname == 'aklassewiki' ||
@@ -6267,7 +6227,7 @@ if ( $wgDBname == 'airwiki' ||
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
