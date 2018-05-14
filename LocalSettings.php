@@ -647,26 +647,6 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
-		'afictionalworldonawiki' => true,
-		'africavisionwiki' => true,
-		'afrwiki' => true,
-		'afterworldwiki' => true,
-		'ag7732wiki' => true,
-		'agathachristiewiki' => true,
-		'agathinonwiki' => true,
-		'ageloniawiki' => true,
-		'ageofenlightenmentwiki' => true,
-		'ageofwushuwiki' => true,
-		'agriwikiwiki' => true,
-		'agropediawiki' => true,
-		'ahabariwiki' => true,
-		'ahdwiki' => true,
-		'ahmsaqibwiki' => true,
-		'aibowiki' => true,
-		'aidorupediawiki' => true,
-		'aidyllicwiki' => true,
-		'aimciawiki' => true,
-		'airportsofwings900wiki' => true,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -6197,7 +6177,7 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-if ( $wgDBname == 'afictionalworldonawiki' ||
+/*if ( $wgDBname == 'afictionalworldonawiki' ||
        $wgDBname == 'africavisionwiki' ||
        $wgDBname == 'afrwiki' ||
        $wgDBname == 'afterworldwiki' ||
@@ -6227,7 +6207,7 @@ if ( $wgDBname == 'afictionalworldonawiki' ||
 EOF;
 		return true;
 	}
-}
+}*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
