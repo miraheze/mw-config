@@ -6216,7 +6216,7 @@ if ( $wgDBname == 'airwiki' ||
        $wgDBname == 'analogypediawiki' ||
        $wgDBname == 'anchorhrgwiki' ||
        $wgDBname == 'andreasalexanderulrichwiki' ||
-       $wgDBname == 'animangamespnpwiki' ||
+       $wgDBname == 'animangamespnpwiki'
  ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
