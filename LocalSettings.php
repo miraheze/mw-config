@@ -6196,7 +6196,8 @@ if ( $wgDBname == 'activistresourceswiki' ||
 	$wgDBname == 'aerowikiwiki' ||
 	$wgDBname == 'aesbasewiki' ||
 	$wgDBname == 'aescapeswiki' ||
-	$wgDBname == 'aetheriawiki') {
+	$wgDBname == 'aetheriawiki'
+ ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
@@ -6206,7 +6207,7 @@ if ( $wgDBname == 'activistresourceswiki' ||
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
