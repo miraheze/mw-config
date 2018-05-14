@@ -249,7 +249,7 @@ $wgLBFactoryConf = array(
 		),
 	),
 	'readOnlyBySection' => array(
-	//	'DEFAULT' => '',
+		'DEFAULT' => 'Maintenance ongoing on the database server.',
 	//	'c1' => 'Maintenance ongoing on the database server.',
 		'c2' => 'Maintenance ongoing on the database server.',
 	),
