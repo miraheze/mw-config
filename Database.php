@@ -3,7 +3,6 @@
 $wgLBFactoryConf = array(
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => array(
-	        // 'wiki' => 'c1'
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array(
@@ -11,9 +10,6 @@ $wgLBFactoryConf = array(
 		),
 		'c1' => array(
 			'db4' => 1,
-		),
-		'c2' => array(
-			'db2' => 1,
 		),
 	),
 	'serverTemplate' => array(
@@ -23,7 +19,6 @@ $wgLBFactoryConf = array(
 		'type' => 'mysql',
 	),
 	'hostsByName' => array(
-		'db2' => '81.4.125.112',
 		'db4' => '81.4.109.166',
 	),
 	'externalLoads' => array(
@@ -32,8 +27,7 @@ $wgLBFactoryConf = array(
 		),
 	),
 	'readOnlyBySection' => array(
-		'DEFAULT' => 'Maintenance ongoing on the database server.',
+	//	'DEFAULT' => 'Maintenance ongoing on the database server.',
 	//	'c1' => 'Maintenance ongoing on the database server.',
-		'c2' => 'Maintenance ongoing on the database server.',
 	),
 );
