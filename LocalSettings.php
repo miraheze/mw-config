@@ -6177,37 +6177,37 @@ EOF;
 */
 
 // leaving here as placeholder for future db work
-/*if ( $wgDBname == 'activistresourceswiki' ||
-	$wgDBname == 'adadevelopersacademywiki' ||
-	$wgDBname == 'adamwiki' ||
-	$wgDBname == 'adantewiki' ||
-	$wgDBname == 'addicteddadswiki' ||
-	$wgDBname == 'adiapediawiki' ||
-	$wgDBname == 'adiaprojectwiki' ||
-	$wgDBname == 'adminbookclubwiki' ||
-	$wgDBname == 'adminbuswiki' ||
-	$wgDBname == 'adnovumwiki' ||
-	$wgDBname == 'advantagewiki' ||
-	$wgDBname == 'advisingwiki' ||
-	$wgDBname == 'aemanualwiki' ||
-	$wgDBname == 'aenasanwiki' ||
-	$wgDBname == 'aeromwiki' ||
-	$wgDBname == 'aerossprimewiki' ||
-	$wgDBname == 'aerowikiwiki' ||
-	$wgDBname == 'aesbasewiki' ||
-	$wgDBname == 'aescapeswiki' ||
-	$wgDBname == 'aetheriawiki'
+if ( $wgDBname == 'afictionalworldonawiki' ||
+       $wgDBname == 'africavisionwiki' ||
+       $wgDBname == 'afrwiki' ||
+       $wgDBname == 'afterworldwiki' ||
+       $wgDBname == 'ag7732wiki' ||
+       $wgDBname == 'agathachristiewiki' ||
+       $wgDBname == 'agathinonwiki' ||
+       $wgDBname == 'ageloniawiki' ||
+       $wgDBname == 'ageofenlightenmentwiki' ||
+       $wgDBname == 'ageofwushuwiki' ||
+       $wgDBname == 'agriwikiwiki' ||
+       $wgDBname == 'agropediawiki' ||
+       $wgDBname == 'ahabariwiki' ||
+       $wgDBname == 'ahdwiki' ||
+       $wgDBname == 'ahmsaqibwiki' ||
+       $wgDBname == 'aibowiki' ||
+       $wgDBname == 'aidorupediawiki' ||
+       $wgDBname == 'aidyllicwiki' ||
+       $wgDBname == 'aimciawiki' ||
+       $wgDBname == 'airportsofwings900wiki'
  ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 13:10 UTC until approx. 13:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 13:05 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 14:10 UTC until approx. 14:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 14:05 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
-}*/
+}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
