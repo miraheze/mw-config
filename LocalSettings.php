@@ -3985,9 +3985,9 @@ $wgConf->settings = array(
 			'user' => array(
 				'requestwiki' => true,
 			),
-			'wikicreator' => array(
+			/*'wikicreator' => array(
 				'createwiki' => true,
-			),
+			),*/
 		),
 		'+nenawikiwiki' => array(
 			'editor' => array(
