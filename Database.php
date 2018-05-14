@@ -3,7 +3,6 @@
 $wgLBFactoryConf = array(
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => array(
-		'default' => 'c1',
 	),
 	'sectionLoads' => array(
 		'DEFAULT' => array(
