@@ -8,6 +8,9 @@ $wgLBFactoryConf = array(
 		'DEFAULT' => array(
 			'db4' => 1,
 		),
+		'c1' => array(
+			'db4' => 1,
+		),
 	),
 	'serverTemplate' => array(
 		'dbname' => $wgDBname,
@@ -20,7 +23,7 @@ $wgLBFactoryConf = array(
 	),
 	'externalLoads' => array(
 		'echo' => array(
-			'db4' => 1,
+			'db4' => 1, // should echo c1
 		),
 	),
 	'readOnlyBySection' => array(
