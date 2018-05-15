@@ -6069,8 +6069,8 @@ $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 require_once( "/srv/mediawiki/config/ManageWikiExtensions.php" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
-	$wikiDB = explode( '|', $wikiLine, 4 );
-	list( $DBname, $siteName, $siteLang, $siteExtensions ) = array_pad( $wikiDB, 4, '' );
+	$wikiDB = explode( '|', $wikiLine, 6 );
+	list( $DBname, $siteName, $siteLang, $siteExtensions ) = array_pad( $wikiDB, 6, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
@@ -6080,6 +6080,11 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 		if ( in_array( $name, $siteExtensionsArray ) ) {
 			$wgConf->settings[$ext['var']][$DBname] = true;
 		}
+	}
+
+	$siteSettingsArray = json_decode( $siteSettings, true );
+	foreach ( $siteSettingsArray as $setVar => $setVal ) {
+		$wgConf->settings[$setVar][$DBname] = $setVal;
 	}
 }
 

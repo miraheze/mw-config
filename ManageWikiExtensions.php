@@ -849,3 +849,12 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 );
+
+// type can be "text" or "select".
+$wgManageWikiSettings = array(
+	'wgLogo' => array(
+		'name' => 'Logo',
+		'requires' => false,
+		'type' => 'text',
+	),
+);
