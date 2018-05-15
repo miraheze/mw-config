@@ -5683,7 +5683,7 @@ require_once( "/srv/mediawiki/config/ManageWikiExtensions.php" );
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wikiDB = explode( '|', $wikiLine, 6 );
-	list( $DBname, $siteName, $siteLang, $siteExtensions ) = array_pad( $wikiDB, 6, '' );
+	list( $DBname, $siteName, $siteLang, $siteExtensions, $siteSettings ) = array_pad( $wikiDB, 6, '' );
 	$wgLocalDatabases[] = $DBname;
 	$wgConf->settings['wgSitename'][$DBname] = $siteName;
 	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
