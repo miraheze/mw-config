@@ -5614,6 +5614,7 @@ $wgConf->settings = array(
 	'wmgUseWikiDiscover' => array(
 		'default' => false, // currently only works on metawiki
 		'metawiki' => true,
+		'test1wiki' => true,
 	),
 	'wgWikiDiscoverClosedList' => array(
 		'default' => '/srv/mediawiki/dblist/closed.dblist',
