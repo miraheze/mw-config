@@ -715,7 +715,7 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'templatestlyes' => array(
+		'templatestyles' => array(
 			'name' => 'Template Styles',
 			'var' => 'wmgUseTemplateStyles',
 			'conflicts' => false,
