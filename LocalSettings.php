@@ -4702,11 +4702,9 @@ $wgConf->settings = array(
 	'wgRelatedArticlesFooterWhitelistedSkins' => array(
 		'default' => array(
 			'minerva',
+			'timeless',
 			'vector',
 		),
-	        //'allthetropeswiki' => array(
-		//	'vector',
-		//),
 	),
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 		'default' => false,
