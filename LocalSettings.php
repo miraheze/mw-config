@@ -1443,6 +1443,7 @@ $wgConf->settings = array(
 		'avalicearchiveswiki' => true,
 		'garrettcountyguidewiki' => true,
 		'gcp711wiki' => true,
+		'guiaslocaiswiki' => true,
 		'test1wiki' => true,
 		'hasanistanwiki' => true,
 		'ircwiki' => true,
