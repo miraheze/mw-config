@@ -4700,8 +4700,13 @@ $wgConf->settings = array(
 
 	// RelatedArticles settings
 	'wgRelatedArticlesFooterWhitelistedSkins' => array(
-		'default' => 'minerva',
-	        'allthetropeswiki' => 'vector',
+		'default' => array(
+			'minerva',
+			'vector',
+		),
+	        //'allthetropeswiki' => array(
+		//	'vector',
+		//),
 	),
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 		'default' => false,
