@@ -396,6 +396,7 @@ $wgConf->settings = array(
 			'froggy.info' => 'feuwiki',
 			'garrettcountyguide.com' => 'garrettcountyguidewiki',
 			'give.effectively.to' => 'givewiki',
+			'guiasdobrasil.com.br' => 'guiaslocaiswiki',
 			'holonet.pw' => 'holonetwiki',
 			'karagash.info' => 'karagashwiki',
 			'kunwok.org' => 'kunwokwiki',
@@ -4887,6 +4888,7 @@ $wgConf->settings = array(
 		'garrettcountyguidewiki' => 'https://garrettcountyguide.com',
 		'givewiki' => 'https://give.effectively.to',
 		'grottocenterwiki' => 'https://wiki.grottocenter.org',
+		'guiaslocaiswiki' => 'https://guiasdobrasil.com.br',
 		'holonetwiki' => 'https://holonet.pw',
 		'iceposeidonwiki' => 'https://www.iceposeidonwiki.com',
 		'inebriationconfederationwiki' => 'https://wiki.inebriation-confederation.com',
@@ -5460,6 +5462,7 @@ $wgConf->settings = array(
 			'www\.schulwiki\.de',
 			'holonet\.pw',
 			'www\.radviser\.org',
+			'guiasdobrasil\.com\.br',
 		),
 	),
 
