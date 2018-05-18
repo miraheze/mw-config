@@ -5790,19 +5790,18 @@ $wgMajorSiteNoticeID = 15;
 $snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Our VPS provider, RamNode, is performing maintenance on one of the servers used to host our VPSes. Therefore there will be downtime around 10:00 UTC and all wikis will be read-only starting 9:30 UTC, so make sure to save all your changes before then. ETA is approximately 2 hours from the initial time given. Please see our <a href="https://www.facebook.com/miraheze/">Facebook</a> or our <a href="https://twitter.com/miraheze">Twitter</a> for more updates.</p></td>
+		<td>Congrats to {{ping|John}} for becoming a steward</td>
 		</tr></tbody></table>
 EOF;
 	 }
 	return true;
 }
-*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
