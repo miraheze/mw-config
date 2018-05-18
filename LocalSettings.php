@@ -5787,7 +5787,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 // Increment this version number whenever you change the site notice
 // and don't comment it out
 $wgMajorSiteNoticeID = 15;
-$snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
+$snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
 /*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -5803,19 +5803,6 @@ EOF;
 	return true;
 }
 */
-
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
- 	global $wgDBname;
-	if ( $wgDBname !== 'rpgbrigadewiki' ) { // Wants to opt out of global sitenotices (T1187)
-		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>There is currently an <a href="https://meta.miraheze.org/wiki/Requests_for_Stewardship#John.27s_Request_for_Stewardship">open Request for Stewardship</a>. All Miraheze users are welcome to comment on this.</td>
-			</tr></tbody></table>
-EOF;
-	}
-	return true;
-}
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
