@@ -5796,7 +5796,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Congrats to {{ping|John}} for becoming a steward</td>
+		<td>Congrats to {{m:ping|John}} for becoming a steward</td>
 		</tr></tbody></table>
 EOF;
 	 }
