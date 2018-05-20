@@ -5257,7 +5257,7 @@ $wgConf->settings = array(
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'elitefestwiki' => "//$wmgUploadHostname/elitefestwiki/8/89/WhatsApp_Image_2018-05-11_at_17.14.35.jpg",
 	),
 
 	// TemplateSandbox
