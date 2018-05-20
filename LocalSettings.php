@@ -5639,9 +5639,10 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
-if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-	unset( $wgCentralAuthCookies );
-	unset( $wgCentralAuthCookieDomain );
+if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+        unset( $wgCentralAuthCookies );
+        unset( $wgCentralAuthCookieDomain ); 
+        unset( $wgCentralAuthLoginWiki );
 }
 
 # Footer icon
