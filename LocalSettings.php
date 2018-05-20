@@ -5641,7 +5641,7 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	unset( $wgCentralAuthCookies );
-	unset( $wgCentralAuthCookieDomain['default'] );
+	unset( $wgCentralAuthCookieDomain );
 }
 
 # Footer icon
