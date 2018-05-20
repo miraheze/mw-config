@@ -5746,6 +5746,7 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 if ( isset( $wgCentralAuthAutoLoginWikis[$wmgHostname] ) ) {
 	unset( $wgCentralAuthAutoLoginWikis[$wmgHostname] );
+	unset( $wgCentralAuthCookies );
 }
 
 # Footer icon
