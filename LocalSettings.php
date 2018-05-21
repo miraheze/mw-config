@@ -5642,8 +5642,7 @@ $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-        unset( $wgCentralAuthCookies );
-        unset( $wgCentralAuthCookieDomain ); 
+        $wgCentralAuthCookieDomain = $wmgHostname;
         unset( $wgCentralAuthLoginWiki );
 }
 
