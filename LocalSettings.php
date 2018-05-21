@@ -5696,7 +5696,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>Due to the GDPR, we will have to enable CookieWarnning on all sites on the 25 may 2018.</td>
+		<td>Due to the GDPR, we will have to enable CookieWarning on all sites. Starting on the 25 May 2018 we will enable this extension globally.</td>
 		</tr></tbody></table>
 EOF;
 	 }
