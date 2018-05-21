@@ -263,7 +263,6 @@ $wgConf->settings = array(
 		'justinbieberwiki' => true,
 		'medicinawiki' => true,
 		'nanatsunotaizaiwiki' => true,
-		'nonbinarywiki' => true,
 		'plazmaburstwiki' => true,
 		'test1wiki' => true,
 		'thehushhushsagawiki' => true,
