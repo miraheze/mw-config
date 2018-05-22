@@ -5108,6 +5108,7 @@ $wgConf->settings = array(
 		'pluspiwiki' => "//$wmgUploadHostname/pluspiwiki/6/64/Favicon.ico",
 		'pocketmonsterswiki' => "//$wmgUploadHostname/pocketmonsterswiki/d/d2/PMFavicon.png",
 		'podpediawiki' => "//$wmgUploadHostname/podpediawiki/0/0e/PodpediaFavicon2.png",
+		'popnmusicwiki' => "//$wmgUploadHostname/popnmusicwiki/6/60/WikiFavicon.png",
 		'puzzlewiki' => "//$wmgUploadHostname/puzzlewiki/0/0d/PuzzlepediaFavicon.png",
 		'pwikiwiki' => "//$wmgUploadHostname/pwikiwiki/8/8c/Arkcls_favicon.ico",
 		'raymanspeedrunwiki' => "//$wmgUploadHostname/raymanspeedrunwiki/0/08/Rayman_Speedrun_Wiki_Favicon.png",
