@@ -554,6 +554,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'pivot' => array(
+			'name' => 'Pivot (skin)',
+			'var' => 'wmgUsePivot',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'popups' => array(
 			'name' => 'Popups',
 			'var' => 'wmgUsePopups',
