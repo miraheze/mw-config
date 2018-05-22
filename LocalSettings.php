@@ -1955,6 +1955,7 @@ $wgConf->settings = array(
 		'spiralwiki' => 'CC0 Public Domain',
 		'tmewiki' => 'Creative Commons Attribution-ShareAlike 4.0 International License',
 		'vandalismwikiwiki' => 'Creative Commons Attribution-ShareAlike 4.0 International License',
+		'warewikiwiki' => 'Creative Commons Attribution-ShareAlike 4.0 International License'
 		'wisdomwikiwiki' => 'Creative Commons Attribution-NonCommercial-NoDerivatives',
 	),
 	'wgRightsUrl' => array(
