@@ -555,7 +555,7 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'pivot' => array(
-			'name' => 'Pivot (skin)',
+			'name' => 'Pivot (Skin)',
 			'var' => 'wmgUsePivot',
 			'conflicts' => false,
 			'requires' => false,
