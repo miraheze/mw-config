@@ -1442,6 +1442,9 @@ $wgConf->settings = array(
 	'wmgUsePipeEscape' => array(
 		'default' => false,
 	),
+	'wmgUsePivot' => array(
+		'default' => false,
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 	),
