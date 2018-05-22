@@ -285,6 +285,15 @@ $wgConf->settings = array(
 		'tokyoghoulwiki' => true,
 		'zharkunuwiki' => true,
 	),
+	'wgPivotDefaultFeatures' => array(
+		'thegreatwarwiki' => array(
+			'usePivotTabs' => true,
+			'showHelpUnderTools' => false,
+			'showRecentChangesUnderTools' => false,
+			'wikiNameDesktop' => 'The Great War 1914-1918',
+			'showFooterIcons' => true,
+		),
+	),
 	'wgEnableRcFiltersBetaFeature' => array(
 		'default' => false,
 		'test1wiki' => true,
