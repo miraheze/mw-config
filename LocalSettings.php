@@ -1990,6 +1990,7 @@ $wgConf->settings = array(
 		'ujhswiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'unjeongwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'vandalismwikiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'warewikiwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'wisdomwikiwiki' => 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
 	),
 
