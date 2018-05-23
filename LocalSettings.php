@@ -4980,7 +4980,7 @@ $wgConf->settings = array(
 		'raymanspeedrunwiki' => 'vector',
 		'revitwiki' => 'vector',
 		'thebbwiki' => 'apex',
-		'thegreatwarwiki' => 'metrolook',
+		'thegreatwarwiki' => 'pivot',
 		'thelonsdalebattalionwiki' => 'metrolook',
 	),
 	'wgFavicon' => array(
