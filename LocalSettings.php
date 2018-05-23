@@ -5709,12 +5709,6 @@ $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
-// Global SiteNotice
-// Increment this version number whenever you change the site notice
-// and don't comment it out
-$wgMajorSiteNoticeID = 20;
-$snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
-
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
