@@ -4960,6 +4960,7 @@ $wgConf->settings = array(
 		'appswiki' => 'metrolook',
 		'avalicearchiveswiki' => 'timeless',
 		'bdorpwiki' => 'erudite',
+		'caedawiki' => 'metrolook',
 		'claneuphoriawiki' => 'gamepress',
 		'corydoctorowwiki' => 'timeless',
 		'cristianopediawiki' => 'timeless',		
