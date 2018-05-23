@@ -134,13 +134,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'cookiewarning' => array(
-			'name' => 'Cookie Warning',
-			'var' => 'wmgUseCookieWarning',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'createpage' => array(
 			'name' => 'CreatePage',
 			'var' => 'wmgUseCreatePage',
