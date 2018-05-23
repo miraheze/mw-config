@@ -11,6 +11,7 @@ wfLoadExtensions( [
 	'Cite',
 	'CiteThisPage',
 	'CodeEditor',
+	'CookieWarning',
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'Disambiguator',
@@ -40,3 +41,7 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr'
 ] );
+
+// Geolocate here to determine to whom to show the cookie warning
+$wgCookieWarningEnabled = true;
+// Haha just kidding -- annoy everyone
