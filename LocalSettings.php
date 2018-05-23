@@ -5721,7 +5721,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	 if ( !$wmgSiteNoticeOptOut || $snImportant ) {
 		$siteNotice .= <<<EOF
 		<table class="wikitable" style="text-align:center;"><tbody><tr>
-		<td>CookieWarning is now enabled. Sorry if the CookieWarning is annoying. :P</td>
+		<td>CookieWarning is now enabled to comply with the General Data Protection Regulation (GDPR).</td>
 		</tr></tbody></table>
 EOF;
 	 }
