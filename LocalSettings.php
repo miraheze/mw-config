@@ -5237,6 +5237,13 @@ $wgConf->settings = array(
 			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
 		),
 	),
+	
+	'wgTidyConfig' => array(
+		'default' => null,
+		'tmewiki' => array(
+			'driver' => 'RemexHtml',
+		),
+	),
 
 	// Translate
 	'wmgTranslateBlacklist' => array(
