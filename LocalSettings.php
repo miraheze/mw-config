@@ -1196,9 +1196,12 @@ $wgConf->settings = array(
 	'wmgUseContributionScores' => array(
 		'default' => false,
 	),
+	// Geolocate here to determine to whom to show the cookie warning
 	'wgCookieWarningEnabled' => array(
-                'default' => true,
-        ),
+		'default' => true,
+	),
+	// Haha just kidding -- annoy everyone
+
 	'wmgUseCreatePage' => array(
 		'default' => false,
 	),
