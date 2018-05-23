@@ -4819,6 +4819,7 @@ $wgConf->settings = array(
 		'marinebiodiversitymatrixwiki' => 'https://marinebiodiversitymatrix.org',
 		'meeusenwiki' => 'https://wiki.meeusen.net',
 		'meregoswiki' => 'https://meregos.com',
+		'mikrodevwiki' => 'https://wiki.mikrodev.com',
 		'morfarkultenwiki' => 'https://morfarkulten.tk',
 		'nenawikiwiki' => 'https://nenawiki.org',
 		'nerdwiki' => 'https://wiki.gamergeeked.us',
@@ -5378,6 +5379,7 @@ $wgConf->settings = array(
 			'www\.radviser\.org',
 			'guiasdobrasil\.com\.br',
 			'enc\.for\.uz',
+			'wiki\.mikrodev\.com',
 		),
 	),
 
