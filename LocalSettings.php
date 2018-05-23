@@ -531,7 +531,7 @@ $wgConf->settings = array(
 	),
 	// Cookies extension settings
 	'wgCookieWarningMoreUrl' => array(
-		'default' => false,
+		'default' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk/wiki/The_Lonsdale_Battalion:Cookies'
 	),
 	'wgCookieSetOnAutoblock' => array(
