@@ -537,6 +537,9 @@ $wgConf->settings = array(
 	'wgCookieSetOnAutoblock' => array(
 		'default' => true,
 	),
+	'wgCookieWarningEnabled' => array(
+		'default' => true,
+	),
 	// Database
 	'wgAllowSchemaUpdates' => array(
 		'default' => false,
@@ -1195,13 +1198,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseContributionScores' => array(
 		'default' => false,
-	),
-	// Geolocate here to determine to whom to show the cookie warning
-	'wgCookieWarningEnabled' => array(
-		'default' => true,
-	),
-	// Haha just kidding -- annoy everyone
-
+        ),
 	'wmgUseCreatePage' => array(
 		'default' => false,
 	),
