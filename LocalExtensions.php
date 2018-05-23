@@ -115,14 +115,6 @@ if ( $wmgUseContributionScores ) {
 	require_once( "$IP/extensions/ContributionScores/ContributionScores.php" );
 }
 
-
-if ( $wmgUseCookieWarning ) {
-	wfLoadExtension( 'CookieWarning' );
-	// Geolocate here to determine to whom to show the cookie warning
-	$wgCookieWarningEnabled = true;
-	// Haha just kidding -- annoy everyone
-}
-
 if ( $wmgUseCreatePage ) {
 	require_once( "$IP/extensions/CreatePage/CreatePage.php" );
 }
