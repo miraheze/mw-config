@@ -291,7 +291,7 @@ $wgConf->settings = array(
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'showFooterIcons' => true
+			'showFooterIcons' => true,
 		),
 	),
 	'wgEnableRcFiltersBetaFeature' => array(
@@ -5159,6 +5159,7 @@ $wgConf->settings = array(
 		'valentinaprojectwiki' => "//$wmgUploadHostname//valentinaprojectwiki/9/9e/Seamly2D_logo_128x128.png",
 		'vandalismwikiwiki' => "//$wmgUploadHostname//vandalismwikiwiki/6/64/Favicon.ico",
 		'wakandawiki' => "//$wmgUploadHostname/wakandawiki/e/e6/Wkd.jpg",
+		'wareswikiwiki' => "//$wmgUploadHostname/warewikiwiki/6/64/Favicon.ico",
 		'wiki1776wiki' => "//$wmgUploadHostname/wiki1776wiki/9/9b/Favicon_Wiki1776_en_color_lima_%28transparente%29.ico",
 		'wikidolphinhansenwiki' => "//$wmgUploadHostname/wikidolphinhansenwiki/b/bf/Dolphin-icon-150.png",
 		"wikiletraswiki" => "//$wmgUploadHostname/wikiletraswiki/2/26/Favicon.png",
