@@ -5171,6 +5171,7 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		"hackwikiwiki" => "//$wmgUploadHostname/hackwikiwiki/3/35/Mywikilogo.png"
 	),
 
 	// TemplateSandbox
