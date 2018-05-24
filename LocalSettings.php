@@ -288,10 +288,11 @@ $wgConf->settings = array(
 	'wgPivotFeaturesDefaults' => array(
 		'thegreatwarwiki' => array(
 			'usePivotTabs' => true,
+			'fixedNavBar' => true,
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'showFooterIcons' => true,
+			'showFooterIcons' => true
 		),
 	),
 	'wgEnableRcFiltersBetaFeature' => array(
