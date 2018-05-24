@@ -291,7 +291,7 @@ $wgConf->settings = array(
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'showFooterIcons' => true,
+			'showFooterIcons' => true
 		),
 	),
 	'wgEnableRcFiltersBetaFeature' => array(
