@@ -285,7 +285,7 @@ $wgConf->settings = array(
 		'tokyoghoulwiki' => true,
 		'zharkunuwiki' => true,
 	),
-	'wgPivotDefaultFeatures' => array(
+	'wgPivotFeaturesDefaults' => array(
 		'thegreatwarwiki' => array(
 			'usePivotTabs' => true,
 			'showHelpUnderTools' => false,
