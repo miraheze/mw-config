@@ -5635,8 +5635,10 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	}
 
 	$siteSettingsArray = json_decode( $siteSettings, true );
-	foreach ( $siteSettingsArray as $setVar => $setVal ) {
-		$wgConf->settings[$setVar][$DBname] = $setVal;
+	if ( is_array( $siteSettingsArray ) || is_object( $siteSettingsArray ) ) {
+		foreach ( $siteSettingsArray as $setVar => $setVal ) {
+			$wgConf->settings[$setVar][$DBname] = $setVal;
+		}
 	}
 }
 
