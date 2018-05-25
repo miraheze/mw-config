@@ -1324,6 +1324,9 @@ $wgConf->settings = array(
 	'wmgUseLabeledSectionTransclusion' => array(
 		'default' => false,
 	),
+	'wmgUseLiberty' => array(
+		'default' => false,
+	),
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
 		'test1wiki' => true,

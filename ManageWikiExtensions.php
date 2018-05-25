@@ -365,6 +365,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'liberty' => array(
+			'name' => 'Liberty (Skin)',
+			'var' => 'wmgUseLiberty',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'loginnotify' => array(
 			'name' => 'Login Notify',
 			'var' => 'wmgUseLoginNotify',

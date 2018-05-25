@@ -309,6 +309,10 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
+if ( $wmgUseLiberty ) {
+	wfLoadSkin( 'liberty' );
+}
+
 if ( $wmgUseLinkSuggest ) {
 	wfLoadExtension( 'LinkSuggest' );
 }
@@ -385,7 +389,7 @@ if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }
 
-if ($wmgUseNews ) {
+if ( $wmgUseNews ) {
 	require_once( "$IP/extensions/News/News.php" );
 }
 
