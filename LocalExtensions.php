@@ -73,10 +73,6 @@ if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
-if ( $wmgUseCentralNotice ) {
-	wfLoadExtension( 'CentralNotice' );
-}
-
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
