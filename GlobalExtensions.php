@@ -7,7 +7,7 @@ wfLoadExtensions( [
 	'Babel',
 	'BetaFeatures',
 	'CentralAuth',
-	'CentralNotice'
+	'CentralNotice',
 	'CheckUser',
 	'Cite',
 	'CiteThisPage',
