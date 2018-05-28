@@ -5160,7 +5160,7 @@ $wgConf->settings = array(
 		'zharkunuwiki' => "//$wmgUploadHostname/zharkunuwiki/4/41/Zharkunu_Logo_-_135.png",
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'sustainablestorage' => "//$wmgUploadHostname/sustainablestoragewiki/3/37/Logo_sustainable_storage_135_pi.png",
 	),
 
 	// TemplateSandbox
