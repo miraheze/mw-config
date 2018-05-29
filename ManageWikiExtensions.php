@@ -10,7 +10,7 @@ $wgManageWikiExtensions = array(
 		),
  		'htmlmetaadntitle' => array(
 			'name' => 'HTML Meta and Title',
-			'var' => 'wmgUseHTMLMetaAndTitle',
+			'var' => 'wmgUseAddHTMLMetaAndTitle',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
