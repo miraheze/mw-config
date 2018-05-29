@@ -1124,6 +1124,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseAddHTMLMetaAndTitle' => array(
 		'default' => false,
+		'alwikiwiki' => true,
 	),
 	'wmgUseAdminLinks' => array(
 		'default' => false,
@@ -1328,6 +1329,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseMaps' => array(
 		'default' => false,
+		'alwikiwiki' => true,
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
