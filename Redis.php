@@ -5,7 +5,7 @@ $wgObjectCaches['redis'] = array(
 	'password' => $wmgRedisPassword,
 );
 
-$wgMainCacheType = 'redis';
+$wgMainCacheType = CACHE_NONE;
 $wgSessionCacheType = 'redis';
 $wgSessionsInObjectCache = true;
 
