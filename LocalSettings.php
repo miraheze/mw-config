@@ -1782,6 +1782,7 @@ $wgConf->settings = array(
 		'+sdiywiki' => array('mid', 'mp3', 'flac', 'fpd', 'oga', 'ogv', 'zip'),
 		'+serinfhospwiki' => array( 'pdf', 'zip' ),
 		'+showroomwiki' => array( 'png', 'gif', 'jpg', 'jpeg', 'doc', 'xls', 'pdf', 'ppt', 'tiff', 'bmp', 'docx', 'xlsx', 'pptx'),
+		'+tagwiki' => array( 'txt', 'apk', 'exe' ),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
 		'+themirrorwiki' => array( 'mp3'),
 		'+tmewiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
