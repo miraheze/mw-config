@@ -852,6 +852,11 @@ $wgManageWikiExtensions = array(
 
 // type can be "text" or "select".
 $wgManageWikiSettings = array(
+	'wgFavicon' => array(
+		'name' => 'Favicon',
+		'requires' => false,
+		'type' => 'text',
+	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,
