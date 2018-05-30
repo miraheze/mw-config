@@ -4977,7 +4977,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'chronomagiawiki' => "//$wmgUploadHostname/chronomagiawiki/e/ec/Chrono_Magia_Logo.png",
 	),
 
 	// TemplateSandbox
