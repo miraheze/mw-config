@@ -540,6 +540,9 @@ $wgConf->settings = array(
 	'wgCookieWarningEnabled' => array(
 		'default' => true,
 	),
+	'wgCookieWarningGeoIPLookup' => array(
+		'default' => 'php',
+	),
 	'wgCookieWarningGeoIp2' => array(
 		'default' => true,
 	),
