@@ -557,7 +557,6 @@ $wgConf->settings = array(
 
 	'wgReadOnly' => array(
 		'default' => false,
-		'nonsensopediawiki' => 'We\'re currently importing data from Wikia. Please wait until import is done.',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
