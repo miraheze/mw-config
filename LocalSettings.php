@@ -3165,7 +3165,13 @@ $wgConf->settings = array(
 		'spiralwiki' => true,
 	),
 
-	//PageTriage
+	// Page Size
+	'wgMaxArticleSize' => array(
+		'default' => '2048',
+		'nonsensopediawiki' => '8192',
+	),
+
+	// PageTriage
 	'wgPageTriageInfinitScrolling' => array(
 		'default' => true,
 	),
