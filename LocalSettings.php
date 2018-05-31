@@ -3168,8 +3168,8 @@ $wgConf->settings = array(
 
 	// Page Size
 	'wgMaxArticleSize' => array(
-		'default' => '2048',
-		'nonsensopediawiki' => '8192',
+		'default' => 2048,
+		'nonsensopediawiki' => 8192,
 	),
 
 	// PageTriage
