@@ -540,6 +540,12 @@ $wgConf->settings = array(
 	'wgCookieWarningEnabled' => array(
 		'default' => true,
 	),
+	'wgCookieWarningGeoIp2' => array(
+		'default' => true,
+	),
+	'wgCookieWarningGeoIp2Path' => array(
+		'default' => '/srv/GeoLite2-City.mmdb',
+	),
 	// Database
 	'wgAllowSchemaUpdates' => array(
 		'default' => false,
