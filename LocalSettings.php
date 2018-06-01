@@ -732,6 +732,12 @@ $wgConf->settings = array(
 			'user' => true,
 			'sysop' => true,
 		),
+		'+ezidiawiki' => array(
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+			'sysop' => true,
+		),
 		'+forexwiki' => array(
 			'anon' => true,
 			'user' => true,
