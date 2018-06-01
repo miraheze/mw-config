@@ -200,6 +200,10 @@ define( 'NS_MODELO', 1774);
 define( 'NS_MODELO_TALK', 1775);
 define( 'NS_HANDBOOK', 1776);
 define( 'NS_HANDBOOK_TALK', 1777);
+define( 'NS_EXTENSION', 1778);
+define( 'NS_EXTENSION_TALK', 1779);
+define( 'NS_SKIN', 1780);
+define( 'NS_SKIN_TALK', 1781);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2432,6 +2436,10 @@ $wgConf->settings = array(
 		'cristianopediawiki' => array(
 			NS_TEMA => 'Tema',
 			NS_TEMA_TALK => 'Tema discusión',
+		),
+		'fawiki' => array(
+			NS_EXTENSION => 'افزونه ',
+			NS_SKIN => 'پوسته',
 		),
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
