@@ -3682,6 +3682,20 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+ezidiawiki' => array(
+			'*' => array(
+				'createpage' => false,
+				'edit' => false,
+			),
+			'Schreiber' => array(
+				'createpage' => true,
+				'edit' => true,
+			),
+			'user' => array(
+				'createpage' => false,
+				'edit' => false,
+			),
+		),
 		'+harrypotterwiki' => array(
 			'headmaster' => array(
 				'protectsite' => true,
