@@ -2439,7 +2439,9 @@ $wgConf->settings = array(
 		),
 		'fawiki' => array(
 			NS_EXTENSION => 'افزونه ',
+			NS_EXTENSION_TALK => 'Extension_talk',
 			NS_SKIN => 'پوسته',
+			NS_SKIN_TALK => 'Skin_talk',
 		),
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
