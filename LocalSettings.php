@@ -5015,6 +5015,7 @@ $wgConf->settings = array(
 	),
 	'wgLogo' => array(
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'altversewiki' => "//$smgUploadHostname/altversewiki/8/8b/Seal_of_the_Constructed_Worlds_Wiki.svg",
 	),
 
 	// TemplateSandbox
