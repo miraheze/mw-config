@@ -4806,6 +4806,7 @@ $wgConf->settings = array(
 		'b1teswiki' => 'https://b1tes.org',
 		'bconnectedwiki' => 'https://bconnected.aidanmarkham.com',
 		'bpwiki' => 'https://bebaskanpengetahuan.org',
+		'campaignlabwiki' => 'https://wiki.campaign-labour.org',
 		'ciptamediawiki' => 'https://wiki.ciptamedia.org',
 		'clonedeploywiki' => 'https://wiki.clonedeploy.org',
 		'consentcraftwiki' => 'https://wiki.consentcraft.uk',
@@ -5232,6 +5233,7 @@ $wgConf->settings = array(
 			'guiasdobrasil\.com\.br',
 			'enc\.for\.uz',
 			'wiki\.mikrodev\.com',
+			'wiki\.campaign-labour\.org',
 		),
 	),
 
