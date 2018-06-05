@@ -197,6 +197,9 @@ if ( $wgDBname === 'lcars47wiki' ) {
 }
 
 if ( $wgDBname === 'metawiki' ) {
+	// this is here but we need to kill it when https://phabricator.wikimedia.org/T191245 is resolved
+	wfLoadExtension( 'SiteMatrix' );
+
 	$wgGroupPermissions['user']['torunblocked'] = false;
 	$wgGroupPermissions['*']['translate'] = false;
 	$wgGroupPermissions['user']['translate'] = false;

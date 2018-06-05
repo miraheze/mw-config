@@ -34,7 +34,6 @@ wfLoadExtensions( [
 	'ParserFunctions',
 	'Poem',
 	'Renameuser',
-	'SiteMatrix',
 	'Timeline',
 	'Thanks',
 	'TitleBlacklist',
