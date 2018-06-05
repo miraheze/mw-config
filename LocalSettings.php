@@ -4813,6 +4813,7 @@ $wgConf->settings = array(
 		'cornettowiki' => 'https://cornetto.online',
 		'dariawikiwiki' => 'https://dariawiki.org',
 		'decryptedwiki' => 'https://decrypted.wiki',
+		'didaprowiki' => 'https://encyclopedie.didactiqueprofessionnelle.org',
 		'disabledlifewiki' => 'https://disabled.life',
 		'drones4allwiki' => 'https://wiki.drones4nature.info',
 		'dobotswiki' => 'https://wiki.dobots.nl',
