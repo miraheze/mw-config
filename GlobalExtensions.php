@@ -11,6 +11,7 @@ wfLoadExtensions( [
 	'CheckUser',
 	'Cite',
 	'CiteThisPage',
+	'CreateWiki',
 	'CodeEditor',
 	'CookieWarning',
 	'ConfirmEdit',

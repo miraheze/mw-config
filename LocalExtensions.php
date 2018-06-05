@@ -119,11 +119,6 @@ if ( $wmgUseCreateRedirect ) {
 	require_once( "$IP/extensions/CreateRedirect/CreateRedirect.php" );
 }
 
-if ( $wmgUseCreateWiki ) {
-	wfLoadExtension( 'CreateWiki' );
-	$wgCreateWikiSQLfiles = $wmgCreateWikiSQLfiles;
-}
-
 if ( $wmgUseCrossReference ) {
 	require_once( "$IP/extensions/CrossReference/CrossReference.php" );
 }
