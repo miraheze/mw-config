@@ -39,6 +39,7 @@ wfLoadExtensions( [
 	'Thanks',
 	'TitleBlacklist',
 	'TorBlock',
+	'WikiDiscover',
 	'WikiEditor',
 	'cldr'
 ] );
