@@ -436,6 +436,15 @@ $wgConf->settings = array(
  	 ),
 
 	// CreateWiki
+	'wgCreateWikiCustomDomainPage' => array(
+		'default' => 'Special:MyLanguage/Custom_domains',
+	),
+	'wgCreateWikiDatabase' => array(
+		'default' => 'metawiki',
+	),
+	'wgCreateWikiEmailNotifications' => array(
+		'default' => true,
+	),
 	'wmgCreateWikiSQLfiles' => array(
 		'default' => array(
 			"$IP/maintenance/tables.sql",
@@ -533,6 +542,22 @@ $wgConf->settings = array(
 	'wgCreateWikiUseCategories' => array(
 		'default' => true,
 	),
+	'wgCreateWikiSubdomain' => array(
+		'default' => 'miraheze.org',
+	),
+	'wgCreateWikiUseClosedWikis' => array(
+		'default' => true,
+	),
+	'wgCreateWikiUseCustomDomains' => array(
+		'default' => true,
+	),
+	'wgCreateWikiUseInactiveWikis' => array(
+		'default' => true,
+	),
+	'wgCreateWikiUsePrivateWikis' => array(
+		'default' => true,
+	),
+
 	// Cookies extension settings
 	'wgCookieWarningMoreUrl' => array(
 		'default' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
@@ -2133,15 +2158,15 @@ $wgConf->settings = array(
 		'thegreatwarwiki' => array(
 			'collapsiblenav' => array( 'global' => true, 'user' => true ) ),
 	),
-	
-	// MirahezeMagic
+
+	// Inactive wikis
 	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions and https://meta.miraheze.org/wiki/Dormancy_Policy/Exemptions
-	'wgFindInactiveWikisWhitelist' => array(
+	'wgCreateWikiInactiveWikisWhitelist' => array(
 		'default' => array(
 			// Exceptions
 			'conductwiki',
 			'cvtwiki',
-			'metawiki', 
+			'metawiki',
 			'staffwiki',
 			'loginwiki',
 			// Exemptions
