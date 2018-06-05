@@ -5235,6 +5235,7 @@ $wgConf->settings = array(
 			'enc\.for\.uz',
 			'wiki\.mikrodev\.com',
 			'wiki\.campaign-labour\.org',
+			'encyclopedie\.didactiqueprofessionnelle\.org',
 		),
 	),
 
