@@ -218,6 +218,11 @@ define( 'NS_PROOFREAD_INDEX_TALK', 253);
 // NS 860, 861, 862, 863 allocated for Item/Item_talk/Property/Property_talk by Wikibase
 
 $wgConf->settings = array(
+	// invalidates user sessions
+	'wgAuthenticationTokenVersion' => array(
+		'default' => '2',
+	),
+
 	// AbuseFilter
 	'wgAbuseFilterCentralDB' => array(
 		'default' => 'metawiki',
