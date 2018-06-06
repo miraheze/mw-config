@@ -18,6 +18,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wmgUploadHostname = "static.miraheze.org";
 
+$wgAuthenticationTokenVersion = '2';
+
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = array( 'wiki' );
