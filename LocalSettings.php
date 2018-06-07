@@ -5044,7 +5044,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'wokeipediawiki' => "//$wmgUploadHostname/wokeipediawiki/c/ce/Wokeipedia_135.png",
 	),
 
 	// TemplateSandbox
