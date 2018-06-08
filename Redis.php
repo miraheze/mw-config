@@ -5,7 +5,11 @@ $wgObjectCaches['redis'] = array(
 	'password' => $wmgRedisPassword,
 );
 
-$wgMainCacheType = 'redis';
+$wgMemCachedServers = array(
+	'127.0.0.1:11211' // 192M local memcached instance
+);
+
+$wgMainCacheType = CACHE_MEMCACHED;
 $wgSessionCacheType = 'redis';
 $wgSessionsInObjectCache = true;
 
