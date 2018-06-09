@@ -1022,6 +1022,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'editor' => true,
 		),
+		'+saoirsewikiwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'bureaucrat' => true,
+		),
 		'+scruffywiki' => array(
 			'anon' => true,
 		),
