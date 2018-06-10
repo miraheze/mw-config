@@ -3893,6 +3893,7 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			'abuse' => array(
 				'centralauth-lock' => true,
+				'centralauth-oversight' => true,				
 				'centralauth-rename' => true,				
 				'globalblock' => true,
 				'managewiki' => true,
