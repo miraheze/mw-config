@@ -1412,6 +1412,7 @@ $wgConf->settings = array(
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
 		'carmeigatwiki' => false,
+		'corydoctorowwiki' => false,
 		'izanagiwiki' => false,
 		'jawptestwiki' => false,
 		'macfan4000wiki' => false,
