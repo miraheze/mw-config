@@ -3894,6 +3894,7 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			'abuse' => array(
 				'centralauth-lock' => true,
+				'centralauth-oversight' => true,				
 				'globalblock' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
