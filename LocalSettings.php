@@ -3232,7 +3232,7 @@ $wgConf->settings = array(
 		'default' => array(),
 		'+metawiki' => array(
 			'cvt' => array(
-				'bot',
+				'flood',
 			),
 		),
 	),	
@@ -3373,6 +3373,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'sysop' => array(
+				'flood',
 				'translator',
 				'translationadmin',
 			),
@@ -3922,6 +3923,9 @@ $wgConf->settings = array(
 				'globalblock' => true,
 				'block' => true,
 			),
+			'flood' => array(
+				'bot' true,
+			),
 			'proxybot' => array(
 				'editprotected' => true,
 				'globalblock' => true,
@@ -4302,7 +4306,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'cvt' => array(
-				'bot',
+				'flood',
 			),
 		),
 	),
@@ -4438,6 +4442,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'sysop'	=> array(
+				'flood',
 				'translator',
 				'translationadmin',
 			),
