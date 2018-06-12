@@ -3924,7 +3924,7 @@ $wgConf->settings = array(
 				'block' => true,
 			),
 			'flood' => array(
-				'bot' true,
+				'bot' => true,
 			),
 			'proxybot' => array(
 				'editprotected' => true,
