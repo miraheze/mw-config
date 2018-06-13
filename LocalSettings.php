@@ -2322,6 +2322,8 @@ $wgConf->settings = array(
 		'ayrshirewiki' => true,
 		'blocknetwiki' => false,
 		'takethatwikiwiki' => false,
+		'tmewiki' => false,
+		'vandalismwikiwiki' => false,
 	),
 	'wgCapitalLinks' => array(
 		'default' => true,
