@@ -231,7 +231,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
-
+	'wgAbuseFilterAnonBlockDuration' => array(
+		'default' => null,
+		'marioserieswiki' => 2592000,
+	),
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
