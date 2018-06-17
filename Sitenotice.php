@@ -12,7 +12,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td>At 22:00 UTC Miraheze will upgrade its wikis to MediaWiki 1.31. During this time all wikis will be put into read-only mode, so be sure to save your edits before 21:30 UTC when the read-only will be set.</td>
+                <td>At 22:00 UTC Miraheze will upgrade its wikis to MediaWiki 1.31. We will set all wikis will be put into read-only mode by 21:30 UTC, so be sure to save your edits before the read-only will be set.</td>
                 </tr></tbody></table>
 EOF;
          }
