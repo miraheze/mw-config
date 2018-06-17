@@ -1948,6 +1948,14 @@ $wgConf->settings = array(
 	'wgInterwikiCentralDB' => array(
 		'default' => 'metawiki',
 	),
+	
+	//Imports
+	'wgImportSources' => array(
+		'default' => array(
+			'meta',
+			'templatewiki',
+		),
+	),
 
 	// Job Queue
 	'wgJobRunRate' => array(
