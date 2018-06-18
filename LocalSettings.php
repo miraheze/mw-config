@@ -1596,6 +1596,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
+		'jadtechwiki' => true,
 	),
 	'wmgUseTimeless' => array(
 		'default' => false,
