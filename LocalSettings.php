@@ -4764,19 +4764,6 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
-		'testwiki' => array(
-			'sysop' => array(
-				# 'nuke' => true, // done in overrides at end of file
-				# 'editinterface' => true, //mistakenly applies to other groups as well
-			),
-		),
-		'zhdelwiki' => array(
-			'autoconfirmed' => array(
-				'editsemiprotected' => true,
-				'autoconfirmed' => true,
-				'skipcaptcha' => true,
-			),
-		),
 	),
 	'wgAutopromote' => array(
 		'default' => array(
