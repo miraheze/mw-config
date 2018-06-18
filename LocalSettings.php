@@ -1416,6 +1416,7 @@ $wgConf->settings = array(
 	'wmgUseMobileFrontend' => array(
 		'default' => true,
 		'carmeigatwiki' => false,
+		'cmgwiki' => false,
 		'corydoctorowwiki' => false,
 		'izanagiwiki' => false,
 		'jawptestwiki' => false,
@@ -1827,6 +1828,7 @@ $wgConf->settings = array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
 		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
+		'+cmgwiki' => array('html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt'),
 		'+csnimsbordeauxwiki' => array( 'docx', 'xlsx', 'pptx', 'pub', 'xps', 'odt', 'ods', 'odp', 'odg', 'otg', 'rar', 'tar', 'gz', 'gz2', 'bz', 'bz2', 'zip', 'ipe', 'dia', 'svg', 'bib', 'add', 'spl', 'cls', 'tex', 'bst', 'sh', 'bat', 'gp', 'dat', 'fig', 'sty', 'py', 'cpp', 'hpp', 'hxx', 'c', 'h', 'mat', 'txt', 'desktop', 'md', 'perf', 'plot', 'data', 'xml', 'html', 'alist' ),
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
 		'+exercicesdefrancaisprodfrwiki' => array('html', 'htm' ),
@@ -2195,6 +2197,7 @@ $wgConf->settings = array(
 			'biblicalwikiwiki',
 			'bitcoindebateswiki',
 			'bpwiki',
+			'cmgwiki',
 			'dditecwiki',
 			'geomasterywiki',
 			'lexiquewiki',
@@ -3336,6 +3339,21 @@ $wgConf->settings = array(
 				'voter',
 			),
 		),
+		'+cmgwiki' => array(
+			'bureaucrat' => array(
+				'bot',
+				'bureaucrat',
+				'sysop',
+				'pm',
+				'member',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+				'gst',
+			),
+		),
 		'+dditecwiki' => array(
 			'sysop' => array(
 				'member',
@@ -3760,6 +3778,22 @@ $wgConf->settings = array(
 		'+brynda1231wiki' => array(
 			'sysop' => array(
 				'createpage' => true,
+			),
+		),
+		'+cmgwiki' => array(
+			'pm' => array(
+				'browsearchive' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'autopatrol' => true,
+				'patrol' => true,
+				'protect' => true,
+				'pm' => true,
+			),
+			'gst' => array(
+				'read' => true,
 			),
 		),
 		'+cpiwiki' => array(
@@ -4407,6 +4441,21 @@ $wgConf->settings = array(
 				'voter',
 			),
 		),
+		'cmgwiki' => array(
+			'bureaucrat' => array(
+				'bot',
+				'bureaucrat',
+				'sysop',
+				'pm',
+				'member',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+				'gst',
+			),
+		),
 		'+dditecwiki' => array(
 			'sysop' => array(
 				'member',
@@ -4772,6 +4821,12 @@ $wgConf->settings = array(
 		'+bigforestwiki' => array(
 			'editvoter',
 		),
+		'+cmgwiki' => array(
+			'bureaucrat',
+			'sysop',
+			'pm',
+			'member',
+		),
 		'+dpwiki' => array(
 			'bureaucrat',
 			'respected',
@@ -4819,6 +4874,10 @@ $wgConf->settings = array(
 	'+wgRestrictionTypes' => array(
 		'default' => array(
 			'delete',
+		),
+		'cmgwiki' => array(
+			'delete',
+			'protect',
 		),
 		'lcars47wiki' => array(
 			'delete',
@@ -5083,6 +5142,7 @@ $wgConf->settings = array(
 		'bdorpwiki' => 'erudite',
 		'caedawiki' => 'metrolook',
 		'claneuphoriawiki' => 'gamepress',
+		'cmgwiki' => 'monobook',
 		'corydoctorowwiki' => 'timeless',
 		'cristianopediawiki' => 'timeless',		
 		'dtswiki' => 'metrolook',
