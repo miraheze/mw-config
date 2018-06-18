@@ -270,10 +270,6 @@ if ( $wmgUseHAWelcome ) {
 
 if ( $wmgUseHeaderTabs ) {
 	wfLoadExtension( 'HeaderTabs' );
-	if ( $wgDBname == 'extloadwiki' ) {
-		// load LC despite SectionHide's strong objections
-		unset( $htUseHistory );
-	}
 }
 
 if ( $wmgUseHideSection ) {

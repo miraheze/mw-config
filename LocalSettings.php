@@ -286,7 +286,6 @@ $wgConf->settings = array(
 		'aerosswiki' => true,
 		'attackontitanwiki' => true,
 		'avalicearchiveswiki' => true,
-		'extloadwiki' => true,
 		'knowledgewiki' => true,
 		'magnaversewiki' => true,
 		'nanatsunotaizaiwiki' => true,
@@ -1155,15 +1154,7 @@ $wgConf->settings = array(
 		'unionwiki' => true,
 		'wiki1776wiki' => true,
 	),
-	// Dormancy policy && RC stuff
-	'wgRCMaxAge' => array(
-		'default' => 180 * 24 * 3600,
-		'allthetropeswiki' => 90 * 24 * 3600,
-		'extloadwiki' => 90 * 24 * 3600,
-		'loginwiki' => 90 * 24 * 3600,
-		'metawiki' => 90 * 24 * 3600,
-		'testwiki' => 90 * 24 * 3600,
-	),
+
 	// Echo
 	'wgEchoCrossWikiNotifications' => array(
 		'default' => true,
@@ -1450,7 +1441,6 @@ $wgConf->settings = array(
 		'calexitwiki' => true,
 		'test1wiki' => true,
 	),
-	// MsUpload is enabled on extloadwiki via MsPackage
 	'wmgUseMsUpload' => array(
 		'default' => false,
 	),
@@ -1935,9 +1925,6 @@ $wgConf->settings = array(
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		),
-		'extloadwiki' => array(
-			'Trope' => 'trope',
-		),
 	),
 
 	// ImageMagick
@@ -2367,15 +2354,14 @@ $wgConf->settings = array(
 	'wgModerationNotificationNewOnly' => array( // Notify administrator only about new pages requests. 
 		'default' => false,
 	),
-	'wgModerationEmail' => array( // Email to send notifications to. 
-		'default' => 'wgEmergencyContact',
+	'wgModerationEmail' => array( // Email to send notifications to.
+		'default' => $wgPasswordSender,
 		'sdiywiki' => 'admin@sdiy.info',
-	),	
+	),
 
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => array(
 		'default' => true,
-		'extloadwiki' => false,
 	),
 
 	// MsUpload settings
@@ -2413,13 +2399,12 @@ $wgConf->settings = array(
 		'default' => false,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
-	), 	
+	),
 
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => array(
 		'calexitwiki' => true,
-		'cristianopediawiki' => true,		
-		'extloadwiki' => true,
+		'cristianopediawiki' => true,
 		'grandtheftautowiki' => true,
 		'knowledgewiki' => true,
 		'thefosterswiki' => true,
@@ -4829,14 +4814,12 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => '0.01',
 		'calexitwiki' => '0.01',
-		'extloadwiki' => '0.01',
 		'youtubewiki' => '0.01',
 	),
 	'wgRelatedArticlesShowReadMore' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'calexitwiki' => true,
-		'extloadwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgRelatedArticlesShowInFooter' => array(
@@ -4844,7 +4827,6 @@ $wgConf->settings = array(
 		'allthetropeswiki' => true,
 		'avalicearchiveswiki' => true,
 		'calexitwiki' => true,
-		'extloadwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgRelatedArticlesUseCirrusSearch' => array(
@@ -5569,7 +5551,6 @@ $wgConf->settings = array(
 	'wmgWebChatServer' => array(
 		'default' => false,
 		'allthetropeswiki' => 'irc.freenode.net',
-		'extloadwiki' => 'irc.freenode.net',
 		'ildrilwiki' => 'irc.sorcery.net',
 		'lothuialethwiki' => 'irc.sorcery.net',
 		'pnphilotenwiki' => 'irc.freenode.net',
@@ -5578,7 +5559,6 @@ $wgConf->settings = array(
 	'wmgWebChatChannel' => array(
 		'default' => false,
 		'allthetropeswiki' => '#miraheze-allthetropes',
-		'extloadwiki' => '#miraheze-staff',
 		'ildrilwiki' => '#Aesir',
 		'lothuialethwiki' => '#Aesir',
 		'pnphilotenwiki' => '#miraheze-pnphiloten',
@@ -5587,7 +5567,6 @@ $wgConf->settings = array(
 	'wmgWebChatClient' => array(
 		'default' => false,
 		'allthetropeswiki' => 'freenodeChat',
-		'extloadwiki' => 'freenodeChat',
 		'ildrilwiki' => 'Mibbit',
 		'lothuialethwiki' => 'Mibbit',
 		'pnphilotenwiki' => 'freenodeChat',
