@@ -95,6 +95,7 @@ $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MwEmbedSupport/extension.json
 $IP/extensions/NativeSvgHandler/NativeSvgHandler.php
 $IP/extensions/NewSignupPage/extension.json
+$IP/extensions/NewUserMessage/extension.json
 $IP/extensions/NewestPages/extension.json
 $IP/extensions/News/News.php
 $IP/extensions/Newsletter/extension.json
