@@ -3,6 +3,7 @@ $wgObjectCaches['redis'] = array(
 	'class' => 'RedisBagOStuff',
 	'servers' => array( '81.4.127.174:6379' ),
 	'password' => $wmgRedisPassword,
+	'persistent' => true,
 );
 
 /*$wgMemCachedServers = array(
