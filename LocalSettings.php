@@ -5108,7 +5108,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'abeldenwiki' => "//$wmgUploadHostname/abeldenwiki/a/a7/State_coat_of_arms_of_Abelden.png",
 	),
 
 	// TemplateSandbox
