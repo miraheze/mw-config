@@ -281,6 +281,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'geodata' => array(
+			'name' => 'GeoData',
+			'var' => 'wmgUseGeoData',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'graph' => array(
 			'name' => 'Graph',
 			'var' => 'wmgUseGraph',
@@ -361,6 +368,13 @@ $wgManageWikiExtensions = array(
 		'labeledsectiontransclusion' => array(
 			'name' => 'LabeledSectionTransclusion',
 			'var' => 'wmgUseLabeledSectionTransclusion',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
+		'liberty' => array(
+			'name' => 'Liberty (Skin)',
+			'var' => 'wmgUseLiberty',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
@@ -459,13 +473,6 @@ $wgManageWikiExtensions = array(
 		'newsletter' => array(
 			'name' => 'Newsletter',
 			'var' => 'wmgUseNewsletter',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
-		'newuserslist' => array(
-			'name' => 'New Users List',
-			'var' => 'wmgUseNewUsersList',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,

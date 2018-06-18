@@ -1,6 +1,6 @@
 $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddThis/AddThis.php
-$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php
+$IP/extensions/AddHTMLMetaAndTitle/extension.json
 $IP/extensions/AdminLinks/AdminLinks.php
 $IP/extensions/ArticleFeedbackv5/extension.json
 $IP/extensions/ArticleRatings/extension.json
@@ -52,6 +52,7 @@ $IP/extensions/FeaturedFeeds/extension.json
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/Flow/extension.json
 $IP/extensions/Gadgets/extension.json
+$IP/extensions/GeoData/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalPreferences/extension.json
@@ -94,8 +95,6 @@ $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MwEmbedSupport/extension.json
 $IP/extensions/NativeSvgHandler/NativeSvgHandler.php
 $IP/extensions/NewSignupPage/extension.json
-$IP/extensions/NewUserMessage/extension.json
-$IP/extensions/NewUsersList/extension.json
 $IP/extensions/NewestPages/extension.json
 $IP/extensions/News/News.php
 $IP/extensions/Newsletter/extension.json
@@ -131,7 +130,6 @@ $IP/extensions/ScratchBlocks/extension.json
 $IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SimpleChanges/SimpleChanges.php
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
-$IP/extensions/SiteMatrix/extension.json
 $IP/extensions/SiteScout/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
 $IP/extensions/SocialProfile/UserWelcome/UserWelcome.php
@@ -177,6 +175,7 @@ $IP/skins/CologneBlue/skin.json
 $IP/skins/DarkVector/skin.json
 $IP/skins/DuskToDawn/skin.json
 $IP/skins/Gamepress/skin.json
+$IP/skins/liberty/skin.json
 $IP/skins/Metrolook/skin.json
 $IP/skins/MinervaNeue/skin.json
 $IP/skins/Modern/skin.json

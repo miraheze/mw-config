@@ -8,7 +8,7 @@ if ( $wmgUseAddThis ) {
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
-	require_once( "$IP/extensions/AddHTMLMetaAndTitle/Add_HTML_Meta_and_Title.php" );
+	wfLoadExtension( 'AddHTMLMetaAndTitle' );
 }
 
 if ( $wmgUseAdminLinks ) {
@@ -248,6 +248,10 @@ if ( $wmgUseGamepress ) {
     wfLoadSkin( 'Gamepress' );
 }
 
+if ( $wmgUseGeoData ) {
+    wfLoadExtension( 'GeoData' );
+}
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
@@ -298,6 +302,10 @@ if ( $wmgUseKartographer ) {
 
 if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
+}
+
+if ( $wmgUseLiberty ) {
+	wfLoadSkin( 'liberty' );
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -376,7 +384,7 @@ if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }
 
-if ($wmgUseNews ) {
+if ( $wmgUseNews ) {
 	require_once( "$IP/extensions/News/News.php" );
 }
 
@@ -391,10 +399,6 @@ if ( $wmgUseNewsletter ) {
 
 if ( $wmgUseNewUserMessage ) {
 	wfLoadExtension( 'NewUserMessage' );
-}
-
-if ( $wmgUseNewUsersList ) {
-	wfLoadExtension( 'NewUsersList' );
 }
 
 if ( $wmgUseNostalgia ) {

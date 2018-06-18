@@ -297,13 +297,14 @@ $wgConf->settings = array(
 		'tokyoghoulwiki' => true,
 		'zharkunuwiki' => true,
 	),
-	'wgPivotDefaultFeatures' => array(
+	'wgPivotFeatures' => array(
 		'thegreatwarwiki' => array(
 			'usePivotTabs' => true,
+			'fixedNavBar' => true,
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'showFooterIcons' => true,
+			'showFooterIcons' => true
 		),
 	),
 	'wgEnableRcFiltersBetaFeature' => array(
@@ -470,6 +471,7 @@ $wgConf->settings = array(
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/Comments/sql/comments.sql",
+			"$IP/extensions/GeoData/sql/db-backed.sql",
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/EducationProgram/sql/EducationProgram.sql",
 			"$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
@@ -494,18 +496,18 @@ $wgConf->settings = array(
 			"$IP/extensions/PageTriage/sql/PageTriageLog.sql",
 			"$IP/extensions/Poll/archives/Poll-install-manual.sql",
 			"$IP/extensions/ProofreadPage/sql/ProofreadIndex.sql",
-			"$IP/extensions/QuizGame/sql/quizgame.sql",	
-			"$IP/extensions/SocialProfile/UserProfile/user_profile.sql",
-			"$IP/extensions/SocialProfile/UserProfile/user_fields_privacy.sql",
-			"$IP/extensions/SocialProfile/UserSystemMessages/user_system_messages.sql",
-			"$IP/extensions/SocialProfile/UserStats/user_points_monthly.sql",
-			"$IP/extensions/SocialProfile/UserStats/user_points_archive.sql",
-			"$IP/extensions/SocialProfile/UserStats/user_points_weekly.sql",
-			"$IP/extensions/SocialProfile/UserStats/user_stats.sql",
-			"$IP/extensions/SocialProfile/SystemGifts/systemgifts.sql",
-			"$IP/extensions/SocialProfile/UserRelationship/user_relationship.sql",
-			"$IP/extensions/SocialProfile/UserGifts/usergifts.sql",
-			"$IP/extensions/SocialProfile/UserBoard/user_board.sql",
+			"$IP/extensions/QuizGame/sql/quizgame.sql",
+			"$IP/extensions/SocialProfile/UserProfile/sql/user_profile.sql",
+			"$IP/extensions/SocialProfile/UserProfile/sql/user_fields_privacy.sql",
+			"$IP/extensions/SocialProfile/UserStats/sql/user_system_messages.sql",
+			"$IP/extensions/SocialProfile/UserStats/sql/user_points_monthly.sql",
+			"$IP/extensions/SocialProfile/UserStats/sql/user_points_archive.sql",
+			"$IP/extensions/SocialProfile/UserStats/sql/user_points_weekly.sql",
+			"$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
+			"$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
+			"$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
+			"$IP/extensions/SocialProfile/UserGifts/sql/usergifts.sql",
+			"$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql",
 			"$IP/extensions/TimedMediaHandler/TimedMediaHandler.sql",
 			"$IP/extensions/TitleKey/titlekey.sql",
 			"$IP/extensions/Translate/sql/revtag.sql",
@@ -605,7 +607,7 @@ $wgConf->settings = array(
 	),
 
 	'wgReadOnly' => array(
-		'default' => "Upgrading to MediaWiki 1.31",
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
@@ -1338,6 +1340,9 @@ $wgConf->settings = array(
 	'wmgUseGamepress' => array(
 		'default' => false,
 	),
+	'wmgUseGeoData' => array(
+		'default' => false,
+	),
 	'wmgUseGraph' => array(
 		'default' => false,
 	),
@@ -1372,6 +1377,9 @@ $wgConf->settings = array(
                 'default' => false,
 	),
 	'wmgUseLabeledSectionTransclusion' => array(
+		'default' => false,
+	),
+	'wmgUseLiberty' => array(
 		'default' => false,
 	),
 	'wmgUseLinkSuggest' => array(
@@ -1465,9 +1473,6 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseNewUserMessage' => array(
-		'default' => false,
-	),
-	'wmgUseNewUsersList' => array(
 		'default' => false,
 	),
 	'wmgUseNostalgia' => array(
@@ -3585,6 +3590,25 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
+		'+test1wiki' => array(
+			'sysop' => array(
+				'reviewer',
+				'widgeteditor',
+				'staff',
+				'commentadmin',
+				'wikicreator',
+				'epcoordinator',
+				'eponline',
+				'epcampus',
+				'epinstructor',
+				'flow-bot',
+				'chatmod',
+				'automoderated',
+				'moderator',
+				'forumadmin',
+				'blockedfromchat',
+			),
+		),
 		'+snowthegamewiki' => array(
 			'bureaucrat' => array(
 				'bot',
@@ -4272,6 +4296,11 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		),
+		'+test1wiki' => array(
+			'sysop' => array(
+				'autoreview' => true,
+			),
+		),
 		'thebbwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
@@ -4646,6 +4675,28 @@ $wgConf->settings = array(
 				'confirmed',
 				'autopatrolled',
 				'rollbacker',
+			),
+		),
+		'+test1wiki' => array(
+			'sysop' => array(
+				'reviewer',
+				'widgeteditor',
+				'staff',
+				'commentadmin',
+				'wikicreator',
+				'epcoordinator',
+				'eponline',
+				'epcampus',
+				'epinstructor',
+				'flow-bot',
+				'chatmod',
+				'automoderated',
+				'moderator',
+				'forumadmin',
+				'blockedfromchat',
+			),
+			'bureaucrat' => array(
+				'bureaucrat'
 			),
 		),
 		'+trexwiki' => array(

@@ -6,7 +6,7 @@ $wgMajorSiteNoticeID = 22;
 $snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wg gHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
         global $wmgSiteNoticeOptOut, $snImportant;
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
@@ -17,5 +17,4 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
          }
         return true;
-}
-*/
+}*/
