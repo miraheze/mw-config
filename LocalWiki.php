@@ -4,24 +4,19 @@
 
 // Closed Wikis
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
-	$wgGroupPermissions['*']['edit'] = false;
-	$wgGroupPermissions['*']['createaccount'] = false;
 	$wgGroupPermissions['*']['autocreateaccount'] = true;
-	$wgGroupPermissions['user']['edit'] = false;
-	$wgGroupPermissions['user']['createaccount'] = false;
-	$wgGroupPermissions['sysop']['createaccount'] = false;
-	$wgGroupPermissions['sysop']['upload'] = false;
-	$wgGroupPermissions['sysop']['delete'] = false;
-	$wgGroupPermissions['sysop']['deletedtext'] = false;
-	$wgGroupPermissions['sysop']['deletedhistory'] = false;
-	$wgGroupPermissions['sysop']['deletelogentry'] = false;
-	$wgGroupPermissions['sysop']['deleterevision'] = false;
-	$wgGroupPermissions['sysop']['undelete'] = false;
-	$wgGroupPermissions['sysop']['import'] = false;
-	$wgGroupPermissions['sysop']['importupload'] = false;
-	$wgGroupPermissions['sysop']['edit'] = false;
-	$wgGroupPermissions['sysop']['block'] = false;
-	$wgGroupPermissions['sysop']['protect'] = false;
+	$wgRevokePermissions = array(
+		'*' => array(
+			'block' => true,
+			'createaccount' => true,
+			'delete' => true,
+			'edit' => true,
+			'protect' => true,
+			'import' => true,
+			'upload' => true,
+			'undelete' => true,
+		),
+	);
 
 	$wgNoticeProject[] = 'closed';
 
@@ -37,7 +32,6 @@ EOF;
 
 // Inactive Wikis
 if ( isset( $wgConf->settings['wmgInactiveWiki'][$wgDBname] ) ) {
-
 	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
 	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
