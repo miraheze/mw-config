@@ -850,7 +850,24 @@ $wgManageWikiExtensions = array(
 		),
 );
 
-// type can be "text" or "select".
+/**
+ * ManageWiki settings are added using the variable below.
+ *
+ * Type can be either: check, list, list-multi, matrix, text, url or wikipage.
+ *
+ * check: adds a checkbox.
+ * list: DO NOT USE.
+ * list-multi: DO NOT USE.
+ * matrix: DO NOT USE.
+ * text: adds a single line text entry.
+ * url: adds a single line text entry which requires a full URL.
+ * wikipage: DO NOT USE.
+ *
+ * Other variables that are required are name and requires.
+ *
+ * name: the displayed name of the setting on Special:ManageWiki.
+ * requires: a text entry of which extension is required for this setting to work.
+ */
 $wgManageWikiSettings = array(
 	'wgFavicon' => array(
 		'name' => 'Favicon',
