@@ -5134,7 +5134,7 @@ $wgConf->settings = array(
 	'wgSquidServers' => array(
 		'default' => array(
 			'107.191.126.23:81', // cp2
-			'81.4.109.133:81' // cp4
+			'81.4.109.133:81', // cp4
 			'172.104.111.8:81', // cp5
 		),
 	),
