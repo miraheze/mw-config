@@ -16,7 +16,6 @@ wfLoadExtensions( [
 	'CookieWarning',
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
-	'CookieWarning',
 	'Disambiguator',
 	'Echo',
 	'Gadgets',
