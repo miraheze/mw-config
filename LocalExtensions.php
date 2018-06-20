@@ -560,7 +560,8 @@ if ( $wmgUseSyntaxHighlight ) {
 
 if ( $wmgUseTabsCombination ) {
 	wfLoadExtension( 'Tabber' );
-	require_once( "$IP/extensions/Tabs/Tabs.php" );
+	
+	wfLoadExtension( 'Tabs' );
 }
 
 if ( $wmgUseTemplateSandbox ) {
