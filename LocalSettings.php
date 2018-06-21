@@ -5189,7 +5189,7 @@ $wgConf->settings = array(
 		'default' => '/favicon.ico',
 	),
 	'wgLogo' => array(
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'gsbwiki' => "//$wmgUploadHostname/gsbwiki/b/b2/GSB_unofficial.png",
 	),
 
 	// TemplateSandbox
