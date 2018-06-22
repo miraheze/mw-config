@@ -1334,6 +1334,12 @@ $wgConf->settings = array(
 	'wmgUseGeoData' => array(
 		'default' => false,
 	),
+	'wmgUseGlobalUserPage' => array(
+		'default' => false,
+		'metawiki' => true,
+		'testwiki' => true,
+		'test1wiki' => true,
+	),
 	'wmgUseGraph' => array(
 		'default' => false,
 	),
