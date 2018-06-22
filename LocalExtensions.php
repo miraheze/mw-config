@@ -252,11 +252,6 @@ if ( $wmgUseGeoData ) {
     wfLoadExtension( 'GeoData' );
 }
 
-if ( $wmgUseGlobalUserPage ) {
-        wfLoadExtension( 'GlobalUserPage' );
-}
-
-
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
