@@ -2193,6 +2193,7 @@ $wgConf->settings = array(
 			'dditecwiki',
 			'geomasterywiki',
 			'lexiquewiki',
+			'linenwiki',
 			'modularwiki',
 			'newarkmanorwiki',
 			'nissanecuwiki',
