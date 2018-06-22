@@ -256,6 +256,7 @@ if ( $wmgUseGlobalUserPage ) {
         wfLoadExtension( 'GlobalUserPage' );
 }
 
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
