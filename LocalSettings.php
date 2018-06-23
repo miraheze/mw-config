@@ -204,6 +204,8 @@ define( 'NS_EXTENSION', 1778);
 define( 'NS_EXTENSION_TALK', 1779);
 define( 'NS_SKIN', 1780);
 define( 'NS_SKIN_TALK', 1781);
+define( 'NS_GAMEPAGE', 1782);
+define( 'NS_GAMEPAGE_TALK', 1783);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2505,6 +2507,10 @@ $wgConf->settings = array(
 			NS_LIBRARY => 'Sbornik',
 			NS_LIBRARY_TALK => 'Besěda_sbornika',
 		),
+		'jadtechwiki' => array(
+			NS_GAMEPAGE => 'Game',
+			NS_GAMEPAGE_TALK => 'Game_talk',
+		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
@@ -3102,6 +3108,10 @@ $wgConf->settings = array(
 		'+isvwiki' => array(
 			NS_LIBRARY => true,
 			NS_LIBRARY_TALK => true,
+		),
+		'+jadtechwiki' => array(
+			NS_GAMEPAGE => true,
+			NS_GAMEPAGE_TALK => true,
 		),
 		'+jawp2chwiki' => array(
 			NS_TEMPLATE => true,
