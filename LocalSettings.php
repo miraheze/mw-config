@@ -5766,6 +5766,7 @@ require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/Redis.php" );
+require_once( __DIR__ . "/FileBackend.php" );
 require_once( "/srv/mediawiki/config/Sitenotice.php" );
 
 // Define last to avoid all dependencies
