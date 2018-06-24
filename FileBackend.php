@@ -46,9 +46,32 @@ $wgLocalFileRepo = [
     'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
     'thumbDir' => "$wgUploadDirectory/thumb",
     'zones'             =>  [
-            'public'  =>  [ 'container' =>  'mw', ],
-            'thumb'   =>  [ 'container' =>  'mw', ],
-            'temp'    =>  [ 'container' =>  'mw', ],
-            'deleted' =>  [ 'container' =>  'mw' ],
+        'public'  =>  [
+            'container' =>  'mw',
+        ],
+        'thumb'   =>  [
+            'container' =>  'mw',
+            'directory' => 'thumb',
+        ],
+        'temp'    =>  [
+            'container' =>  'mw',
+            'directory' => 'temp',
+        ],
+        'deleted' =>  [
+            'container' =>  'mw',
+            'directory' => 'deleted',
+        ],
+        'archive' =>  [
+            'container' =>  'mw',
+            'directory' => 'archive',
+        ],
+        'awards' =>  [
+            'container' =>  'mw',
+            'directory' => 'awards',
+        ],
+        'avatars' =>  [
+            'container' =>  'mw',
+            'directory' => 'avatars',
+        ],
     ],
 ];
