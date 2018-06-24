@@ -1116,7 +1116,7 @@ $wgConf->settings = array(
 			'editor' => true,
 			'sysop' => true,
 		),
-		'wishwiki' => array(
+		'+wishwiki' => array(
 			'anon' => true,
 			'user' => true,
 			'sysop' => true,
