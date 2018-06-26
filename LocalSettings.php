@@ -3869,6 +3869,7 @@ $wgConf->settings = array(
 			'autoconfirmed' => array(
 				'move' => true,
 				'flow-hide' => true,
+				'movestable' => true,
 			),
 			'bot' => array(
 				'autoreview' => true,
