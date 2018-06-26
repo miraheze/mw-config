@@ -146,6 +146,8 @@ if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
 
 	$wgSimpleFlaggedRevsUI = false;
+	
+	$wgDefaultUserOptions['flow-topiclist-sortby'] = 'newest';
 
 	$wgGroupPermissions['*']['editmyusercss'] = false;
 	$wgGroupPermissions['*']['editmyuserjs'] = false;
