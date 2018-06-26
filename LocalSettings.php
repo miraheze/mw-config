@@ -5613,6 +5613,10 @@ $wgConf->settings = array(
 	'wmgPrivateWiki' => array(
 		'default' => false,
 	),
+	'wmgPrivateUpload' => array(
+		'default' => false,
+		'ciptamediawiki' => true,
+	),
 );
 
 function efGetSiteParams( $conf, $wiki ) {
