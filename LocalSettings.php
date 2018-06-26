@@ -3021,6 +3021,7 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			NS_TECH => true,
+			NS_MAIN => true,
 		),
 		'+thelonsdalebattalionwiki' => array(
 			NS_GLOSSARY => true,
