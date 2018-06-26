@@ -5616,6 +5616,14 @@ $wgConf->settings = array(
 	'wmgPrivateWiki' => array(
 		'default' => false,
 	),
+	'wmgPrivateUpload' => array(
+		'default' => false,
+		'ciptamediawiki' => true,
+	),
+	'wmgUseSwiftBackend' => array(
+		'default' => false,
+		'test1wiki' => true,
+	),
 );
 
 function efGetSiteParams( $conf, $wiki ) {
@@ -5769,6 +5777,9 @@ require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/Redis.php" );
+if ( $wmgUseSwiftBackend ) {
+	require_once( "/srv/mediawiki/config/FileBackend.php" );
+}
 require_once( "/srv/mediawiki/config/Sitenotice.php" );
 
 // Define last to avoid all dependencies
