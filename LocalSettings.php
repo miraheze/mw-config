@@ -1966,6 +1966,7 @@ $wgConf->settings = array(
 	// License
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'akancyclopediawiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'adiaprojectwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'ashinawiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png',
 		'cpudevwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png',
@@ -1998,6 +1999,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
+		'akancyclopediawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'adiaprojectwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike',
 		'ashinawiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported',
 		'cpudevwiki' => 'CC0 Public Domain',
@@ -2029,6 +2031,7 @@ $wgConf->settings = array(
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
+		'akancyclopediawiki' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja',
 		'adiaprojectwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'ashinawiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
 		'bigforestwiki' => 'https://creativecommons.org/licenses/by-sa/4.0/',
