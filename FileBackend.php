@@ -2,7 +2,7 @@
 
 $wgFileBackends[] = [
     'class'              => 'SwiftFileBackend',
-    'name'               => $wgDBname,
+    'name'               => 'miraheze-swift',
     'wikiId'             => $wmgPrivateUpload ? "private-$wgDBname" : $wgDBname,
     'lockManager'        => 'nullLockManager',
     'swiftAuthUrl'       => 'http://127.0.0.1:8080/auth',
@@ -36,7 +36,7 @@ $private = $wmgPrivateUpload ? "https://" . $wmgHostname . "/w/img_auth.php" : $
 $wgLocalFileRepo = [
     'class' => 'LocalRepo',
     'name' => 'local',
-    'backend' => $wgDBname,
+    'backend' => 'miraheze-swift',
     'directory' => $wgUploadDirectory,
     'scriptDirUrl' => $wgScriptPath,
     'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $private,
