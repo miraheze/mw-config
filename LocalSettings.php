@@ -2730,8 +2730,8 @@ $wgConf->settings = array(
 		'wikibookwiki' => array(
 			NS_BOOK => 'نسک',
 			NS_BOOK_TALK => 'بحث نسک',
-			NS_BOOK_NAVIGATION => 'ناوبری نسک'
-			NS_BOOK_NAVIGATION_TALK => 'بحث ناوبری نسک ', 
+			NS_BOOK_NAVIGATION => 'ناوبری نسک',
+			NS_BOOK_NAVIGATION_TALK => 'بحث ناوبری نسک', 
 			NS_APPLICATION => 'برنامه',
 			NS_APPLICATION_TALK => 'بحث برنامه',
 		),
