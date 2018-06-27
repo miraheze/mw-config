@@ -18,7 +18,7 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 		),
 	);
 
-	$wgNoticeProject[] = 'closed';
+	$wgNoticeProject = 'closed';
 
 	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
 	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -53,7 +53,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRemoveGroups['bureaucrat'][] = 'member';
 	$wgRemoveGroups['sysop'][] = 'member';
 
-	$wgNoticeProject[] = 'private';
+	$wgNoticeProject = 'private';
 
 	// To be removed once restbase supports private wiki's
 	$wgDefaultUserOptions['math'] = 'png';
