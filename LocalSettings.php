@@ -385,7 +385,7 @@ $wgConf->settings = array(
 		'default' => "//meta.miraheze.org",
 	),
 	'wgNoticeProject' => array(
-		'default' => 'all',
+		'default' => array( 'all' ),
 	),
 
 	// Captcha
