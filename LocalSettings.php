@@ -206,6 +206,12 @@ define( 'NS_SKIN', 1780);
 define( 'NS_SKIN_TALK', 1781);
 define( 'NS_GAMEPAGE', 1782);
 define( 'NS_GAMEPAGE_TALK', 1783);
+define( 'NS_BOOK', 1784);
+define( 'NS_BOOK_TALK', 1785);
+define( 'NS_BOOK_NAVIGATION', 1786);
+define( 'NS_BOOK_NAVIGATION_TALK', 1787);
+define( 'NS_APPLICATION', 1788);
+define( 'NS_APPLICATION_TALK', 1789);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2720,6 +2726,14 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+		),
+		'wikibookwiki' => array(
+			NS_BOOK => 'نسک',
+			NS_BOOK_TALK => 'بحث نسک',
+			NS_BOOK_NAVIGATION => 'ناوبری نسک'
+			NS_BOOK_NAVIGATION_TALK => 'بحث ناوبری نسک ', 
+			NS_APPLICATION => 'برنامه',
+			NS_APPLICATION_TALK => 'بحث برنامه',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
