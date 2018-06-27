@@ -1847,6 +1847,7 @@ $wgConf->settings = array(
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
 		'+themirrorwiki' => array( 'mp3'),
 		'+tmewiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
+		'+unabwiki' => array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'),
 		'+valentinaprojectwiki' => array( 'val', 'vit', 'vst'),
 		'+vandalismwikiwiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
 		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
