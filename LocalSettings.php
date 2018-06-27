@@ -1600,9 +1600,6 @@ $wgConf->settings = array(
 	'wmgUseTimedMediaHandler' => array(
 		'default' => false,
 	),
-	'wmgUseTimeless' => array(
-		'default' => false,
-	),
 	'wmgUseTitleKey' => array(
 		'default' => false,
 	),

@@ -743,13 +743,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'timeless' => array(
-			'name' => 'Timeless (Skin)',
-			'var' => 'wmgUseTimeless',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'titlekey' => array(
 			'name' => 'TitleKey',
 			'var' => 'wmgUseTitleKey',
