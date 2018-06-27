@@ -572,10 +572,6 @@ if ( $wmgUseTemplateStyles ) {
 	wfLoadExtension( 'TemplateStyles' );
 }
 
-if ( $wmgUseTimeless ) {
-	wfLoadSkin( 'Timeless' );
-}
-
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
 	require_once( "$IP/extensions/Translate/Translate.php" );
