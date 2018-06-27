@@ -379,13 +379,13 @@ $wgConf->settings = array(
 		'default' => 'metawiki',
 	),
 	'wgNoticeProjects' => array(
-		'default' => array( 'closed', 'private', 'all' ),
+		'default' => array( 'closed', 'private', 'open' ),
 	),
 	'wgCentralHost' => array(
 		'default' => "//meta.miraheze.org",
 	),
 	'wgNoticeProject' => array(
-		'default' => 'all',
+		'default' => 'open',
 	),
 
 	// Captcha
