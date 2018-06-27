@@ -5008,6 +5008,7 @@ $wgConf->settings = array(
 		'autocountwiki' => 'https://wiki.autocountsoft.com',
 		'b1teswiki' => 'https://b1tes.org',
 		'bconnectedwiki' => 'https://bconnected.aidanmarkham.com',
+		'bonessdivingwiki' => 'https://wiki.bonessdiving.club',
 		'bpwiki' => 'https://bebaskanpengetahuan.org',
 		'campaignlabwiki' => 'https://wiki.campaign-labour.org',
 		'ciptamediawiki' => 'https://wiki.ciptamedia.org',
