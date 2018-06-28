@@ -425,6 +425,49 @@ if ( $wgDBname === 'cvtwiki' ) {
 	$wgWhitelistRead[] = 'CVT action log';
 }
 
+// Licensing variables
+switch ( $wmgWikiLicense ) {
+	case 'arr':
+		$wgRightsIcon = "//$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png";
+		$wgRightsText = 'All Rights Reserved';
+		break;
+	case 'cc-by':
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
+		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
+		break;
+	case 'cc-by-nc':
+		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
+		$wgRightsText = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc/4.0/';
+		break;
+	case 'cc-by-nd':
+		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png';
+		$wgRightsText = 'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nd/4.0/';
+		break;
+	case 'cc-by-sa':
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsText = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/3.0/';
+		break;
+	case 'cc-by-sa-nc':
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
+		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
+		break;
+	case 'cc-by-nc-nd':
+		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png';
+		$wgRightsText = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
+		break;
+	case 'cc-pd':
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
+		$wgRightsText = 'CC0 Public Domain';
+		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
+		break;
+}
+
 // Permission variables
 if ( $wmgEditingMatrix ) {
 	$mhEM = $wmgEditingMatrix;
