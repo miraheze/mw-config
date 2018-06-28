@@ -867,17 +867,20 @@ $wgManageWikiExtensions = array(
  *
  * name: the displayed name of the setting on Special:ManageWiki.
  * requires: a text entry of which extension is required for this setting to work.
+ * overridefault: a string/array override default when no existing value exist.
  */
 $wgManageWikiSettings = array(
 	'wgFavicon' => array(
 		'name' => 'Favicon',
 		'requires' => false,
 		'type' => 'text',
+		'overridedefault' => null,
 	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,
 		'type' => 'text',
+		'overridedefault' => null,
 	),
 	'wmgWikiLicense' => array(
 		'name' => 'Content License',
@@ -894,5 +897,6 @@ $wgManageWikiSettings = array(
 			'Public Domain' => 'cc-pd',
 			'No license provided' => 'empty',
 		),
+		'overridefault' => 'cc-by-sa',
 	),
 );
