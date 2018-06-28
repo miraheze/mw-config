@@ -879,4 +879,20 @@ $wgManageWikiSettings = array(
 		'requires' => false,
 		'type' => 'text',
 	),
+	'wmgWikiLicense' => array(
+		'name' => 'Content License',
+		'requires' => false,
+		'type' => 'select',
+		'options' => array(
+			'arr' => 'All Rights Reserved',
+			'cc-by' => 'Creative Commons BY 4.0',
+			'cc-by-nc' => 'Creative Commons BY-NC 4.0',
+			'cc-by-nd' => 'Creative Commons BY-ND 4.0',
+			'cc-by-sa' => 'Creative Commons BY-SA 4.0',
+			'cc-by-sa-nc' => 'Creative Commons BY-SA-NC 4.0',
+			'cc-by-nc-nd' => 'Creative Commons BY-NC-ND 4.0',
+			'cc-pd' => 'Public Domain',
+			'empty' => 'No license provided',
+		),
+	),
 );

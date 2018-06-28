@@ -1,4 +1,4 @@
-<?php
+v<?php
 
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
@@ -465,6 +465,8 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
 		$wgRightsText = 'CC0 Public Domain';
 		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
+		break;
+	case 'empty':
 		break;
 }
 
