@@ -212,6 +212,12 @@ define( 'NS_BOOK_NAVIGATION', 1786);
 define( 'NS_BOOK_NAVIGATION_TALK', 1787);
 define( 'NS_APPLICATION', 1788);
 define( 'NS_APPLICATION_TALK', 1789);
+define( 'NS_SUMMARY', 1790);
+define( 'NS_SUMMARY_TALK', 1791);
+define( 'NS_MANUAL', 1790);
+define( 'NS_MANUAL_TALK', 1791);
+define( 'NS_API', 1792);
+define( 'NS_API_TALK', 1793);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2409,10 +2415,16 @@ $wgConf->settings = array(
 			NS_TEMA_TALK => 'Tema discusión',
 		),
 		'fawiki' => array(
+			NS_API => 'رابط برنامه‌نویسی',
+			NS_API_TALK => 'بحث رابط برنامه‌نویسی',
 			NS_EXTENSION => 'افزونه ',
 			NS_EXTENSION_TALK => 'Extension_talk',
+			NS_MANUAL => 'نسکچهٔ راهنما',
+			NS_MANUAL_TALK => 'بحث نسکچهٔ راهنما',
 			NS_SKIN => 'پوسته',
 			NS_SKIN_TALK => 'Skin_talk',
+			NS_SUMMERY => 'کوته‌نگاشت',
+			NS_SUMMERY_TALK => 'بحث کوته‌نگاشت',
 		),
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
