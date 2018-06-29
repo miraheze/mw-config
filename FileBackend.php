@@ -3,7 +3,7 @@
 $wgFileBackends[] = [
     'class'              => 'SwiftFileBackend',
     'name'               => 'miraheze-swift',
-    'wikiId'             => $wmgPrivateUpload ? "private-$wgDBname" : $wgDBname,
+    'wikiId'             => $wgDBname,
     'lockManager'        => 'nullLockManager',
     'swiftAuthUrl'       => 'http://127.0.0.1:8080/auth',
     'swiftStorageUrl'    => 'http://127.0.0.1:8080/v1/AUTH_admin',
