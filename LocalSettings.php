@@ -2423,8 +2423,8 @@ $wgConf->settings = array(
 			NS_MANUAL_TALK => 'بحث نسکچهٔ راهنما',
 			NS_SKIN => 'پوسته',
 			NS_SKIN_TALK => 'Skin_talk',
-			NS_SUMMERY => 'کوته‌نگاشت',
-			NS_SUMMERY_TALK => 'بحث کوته‌نگاشت',
+			NS_SUMMARY => 'کوته‌نگاشت',
+			NS_SUMMARY_TALK => 'بحث کوته‌نگاشت',
 		),
 		'humorpediawiki' => array(
 			NS_PORTAL => 'Portal',
