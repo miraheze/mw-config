@@ -1989,7 +1989,7 @@ $wgConf->settings = array(
 		'revitwiki' => '©2013-2018 by Lionel J. Camara (All Rights Reserved)',
 	),
 	'wgRightsUrl' => array(
-		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'default' => 'https://creativecommons.org/licenses/by-sa/3.0/',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
 	),
 	'wmgWikiLicense' => array(
