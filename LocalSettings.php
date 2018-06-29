@@ -1987,10 +1987,12 @@ $wgConf->settings = array(
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'revitwiki' => '©2013-2018 by Lionel J. Camara (All Rights Reserved)',
+		'reviwikiwiki' => 'Creative Commons Attribution Share Alike',
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
+		'reviwikiwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
 	),
 	'wmgWikiLicense' => array(
 		'default' => 'cc-by-sa',
