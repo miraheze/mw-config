@@ -451,6 +451,11 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsText = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
+	case 'cc-by-sa-2-0-kr':
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsText = 'Creative Commons Attribution Share Alike';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
+		break;
 	case 'cc-by-sa-nc':
 		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
 		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
