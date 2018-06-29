@@ -892,6 +892,7 @@ $wgManageWikiSettings = array(
 			'Creative Commons BY-NC 4.0' => 'cc-by-nc',
 			'Creative Commons BY-ND 4.0' => 'cc-by-nd',
 			'Creative Commons BY-SA 4.0' => 'cc-by-sa',
+			'Creative Commons BY-SA 2.0 Korea' => 'cc-by-sa-kr',
 			'Creative Commons BY-SA-NC 4.0' => 'cc-by-sa-nc',
 			'Creative Commons BY-NC-ND 4.0' => 'cc-by-nc-nd',
 			'Public Domain' => 'cc-pd',
