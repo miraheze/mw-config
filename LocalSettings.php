@@ -3236,7 +3236,6 @@ $wgConf->settings = array(
 	),
 
 	// Permissions
-	
 	'wgGroupsAddToSelf' => array(
 		'default' => array(),
 		'+metawiki' => array(
@@ -3245,7 +3244,7 @@ $wgConf->settings = array(
 			),
 		),
 	),	
-	
+
 	'wgAddGroups' => array(
 		'default' => array(
 			'bureaucrat' => array(
@@ -3411,6 +3410,11 @@ $wgConf->settings = array(
 		'+nonbinarywiki' => array(
 			'sysop' => array(
 				'uploader',
+			),
+		),
+		'+nonsensopediawiki' => array(
+			'sysop' => array(
+				'moderator',
 			),
 		),
 		'+podpediawiki' => array(
@@ -4060,6 +4064,25 @@ $wgConf->settings = array(
 				'upload_by_url' => true,
 			),
 		),
+		'+nonsensopediawiki' => array(
+			'moderator' => array(
+				'skipcaptcha' => true,
+				'nominornewtalk' => true,
+				'editsemiprotected' => true,
+				'editprotected' => true,
+				'autoconfirmed' => true,
+				'patrol' => true,
+				'suppressredirect' => true,
+				'deletedtext' => true,
+				'deletedhistory' => true,
+				'browsearchive' => true,
+				'rollback' => true,
+				'delete' => true,
+				'undelete' => true,
+				'protect' => true,
+				'titleblacklistlog' => true,
+			),
+		),
 		'+pgnwikiwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
@@ -4536,6 +4559,11 @@ $wgConf->settings = array(
 		'+nonbinarywiki' => array(
 			'sysop' => array(
 				'uploader',
+			),
+		),
+		'+nonsensopediawiki' => array(
+			'sysop' => array(
+				'moderator',
 			),
 		),
 		'+pruebawiki' => array(
