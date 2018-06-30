@@ -771,6 +771,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'twocolconflict' => array(
+			'name' => 'TwoColConflict',
+			'var' => 'wmgUseTwoColConflict',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'urlgetparameters' => array(
 			'name' => 'UrlGetParamters',
 			'var' => 'wmgUseUrlGetParameters',

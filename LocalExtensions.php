@@ -609,6 +609,10 @@ if ( $wmgUseTweeki ) {
 	wfLoadSkin( 'Tweeki' );
 }
 
+if ( $wmgUseTwoColConflict ) {
+	wfLoadExtension( 'TwoColConflict' );
+}
+
 if ( $wmgUseUrlGetParameters ) {
 	require_once( "$IP/extensions/UrlGetParameters/UrlGetParameters.php" );
 }

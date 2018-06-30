@@ -1618,6 +1618,9 @@ $wgConf->settings = array(
 	'wmgUseTweeki' => array(
 		'default' => false,
 	),
+	'wmgUseTwoColConflict' => array(
+		'default' => false,
+	),
 	'wmgUseUrlGetParameters' => array(
 		'default' => false,
 	),

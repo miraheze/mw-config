@@ -154,6 +154,7 @@ $IP/extensions/TitleKey/extension.json
 $IP/extensions/TocTree/extension.json
 $IP/extensions/TorBlock/extension.json
 $IP/extensions/Translate/Translate.php
+$IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
