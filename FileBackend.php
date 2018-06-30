@@ -5,10 +5,10 @@ $wgFileBackends[] = [
     'name'               => 'miraheze-swift',
     'wikiId'             => $wgDBname,
     'lockManager'        => 'nullLockManager',
-    'swiftAuthUrl'       => 'http://127.0.0.1:8080/auth',
-    'swiftStorageUrl'    => 'http://127.0.0.1:8080/v1/AUTH_admin',
+    'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
+    'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_admin',
     'swiftUser'          => 'admin:admin',
-    'swiftKey'           => 'admin',
+    'swiftKey'           => $wmgSwiftAdminPassword,
     'swiftTempUrlKey'    => 'mirahezeTest',                                                 
     'shardViaHashLevels' => [
         'public'
