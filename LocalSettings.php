@@ -3360,7 +3360,12 @@ $wgConf->settings = array(
 		),
 		'+kyivstarwiki' => array(
 			'sysop' => array(
+				'co',
+				'ceo',
+				'editor',
 				'extendedconfirmed',
+				'sysmag',
+				'trusted',
 			),
 		),
 		'+infectopedwiki' => array(
@@ -3930,14 +3935,61 @@ $wgConf->settings = array(
 			),
 		),
 		'+kyivstarwiki' => array(
+			'co' => array(
+				'editinterface' => true,
+				'co' => true,
+				'ceo' => true,
+				'sysmag' => true,
+				'editprotected' => true,
+				'extendedconfirmed' => true,
+				'editor' => true,
+				'trusted' => true,
+				'reviewer' => true,
+				'protect' => true,
+			),
+			'ceo' => array(
+				'editinterface' => true,
+				'ceo' => true,
+				'sysmag' => true,
+				'editprotected' => true,
+				'extendedconfirmed' => true,
+				'editor' => true,
+				'trusted' => true,
+				'autoreview' => true,
+				'autochecked users' => true,
+				'editors' => true,
+			),
+			'sysmag' => array(
+				'editinterface' => true,
+				'sysmag' => true,
+				'extendedconfirmed' => true,
+				'editor' => true,
+				'trusted' => true,
+			),
 			'sysop' => array(
 				'extendedconfirmed' => true,
+				'editor' => true,
+				'trusted' => true,
+			),
+			'extendedconfirmed' => array(
+				'extendedconfirmed' => true,
+				'editor' => true,
+				'trusted' => true,
+			),
+			'editor' => array(
+				'editor' => true,
+				'trusted' => true,
+			),
+			'trusted' => array(
+				'trusted' => true,
 			),
 			'autopatrolled' => array(
 				'extendedconfirmed' => true,
 			),
 			'bot' => array(
 				'extendedconfirmed' => true,
+				'editor' => true,
+				'trusted' => true,
 			),
 		),
 		'+lcars47wiki' => array(
@@ -4511,7 +4563,12 @@ $wgConf->settings = array(
 		),
 		'+kyivstarwiki' => array(
 			'sysop' => array(
+				'co',
+				'ceo',
+				'editor',
 				'extendedconfirmed',
+				'sysmag',
+				'trusted',
 			),
 		),
 		'+infectopedwiki' => array(
@@ -4783,10 +4840,35 @@ $wgConf->settings = array(
 			),
 		),
 		'+kyivstarwiki' => array(
+			'co' => array(
+				"&",
+				array( APCOND_EDITCOUNT, 3000 ),
+				array( APCOND_AGE, 365 * 86400 ),
+			),
+			'ceo' => array(
+				"&",
+				array( APCOND_EDITCOUNT, 2000 ),
+				array( APCOND_AGE, 275 * 86400 ),
+			),
+			'editor' => array(
+				"&",
+				array( APCOND_EDITCOUNT, 300 ),
+				array( APCOND_AGE, 45 * 86400 ),
+			),
 			'extendedconfirmed' => array(
 				"&",
-				array( APCOND_EDITCOUNT, 500),
-				array( APCOND_AGE, 30 * 86400 ),
+				array( APCOND_EDITCOUNT, 500 ),
+				array( APCOND_AGE, 90 * 86400 ),
+			),
+			'sysmag' => array(
+				"&",
+				array( APCOND_EDITCOUNT, 1000 ),
+				array( APCOND_AGE, 185 * 86400 ),
+			),
+			'trusted' => array(
+				"&",
+				array( APCOND_EDITCOUNT, 50 ),
+				array( APCOND_AGE, 7 * 86400 ),
 			),
 		),
 	),
@@ -4865,7 +4947,12 @@ $wgConf->settings = array(
 			'consul',
 		),
 		'+kyivstarwiki' => array(
+			'co',
+			'ceo',
+			'editor',
 			'extendedconfirmed',
+			'sysmag',
+			'trusted',
 		),
 		'+lcars47wiki' => array(
 			'bureaucrat',
