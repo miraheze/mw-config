@@ -680,6 +680,8 @@ if ( $wmgUseWikibaseRepository ) {
 
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
+
+	$wgAddGroups['bureaucrat'][] = 'forumadmin';
 }
 
 if ( $wmgUsewikihiero ) {
