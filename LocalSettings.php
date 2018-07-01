@@ -218,6 +218,8 @@ define( 'NS_MANUAL', 1790);
 define( 'NS_MANUAL_TALK', 1791);
 define( 'NS_API', 1792);
 define( 'NS_API_TALK', 1793);
+define( 'NS_DATA', 1794);
+define( 'NS_DATA_TALK', 1795);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2454,6 +2456,10 @@ $wgConf->settings = array(
 		'jadtechwiki' => array(
 			NS_GAMEPAGE => 'Game',
 			NS_GAMEPAGE_TALK => 'Game_talk',
+		),
+		'kirarafantasiawiki' => array(
+			NS_DATA => 'Data',
+			NS_DATA_TALK => 'Data_talk',
 		),
 		'metawiki' => array(
 			NS_TECH => 'Tech',
