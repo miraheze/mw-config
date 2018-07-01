@@ -240,6 +240,18 @@ $wgConf->settings = array(
 	),
 
 	// AbuseFilter
+	'wgAbuseFilterActions' => array(
+		'default' => array(
+			'block' => true,
+			'blockautopromote' => true,
+			'degroup' => true,
+			'disallow' => true,
+			'rangeblock' => true,
+			'tag' => true,
+			'throttle' => true,
+			'warn' => true,
+		),
+	),
 	'wgAbuseFilterCentralDB' => array(
 		'default' => 'metawiki',
 	),
@@ -248,8 +260,7 @@ $wgConf->settings = array(
 		'metawiki' => true,
 	),
 	'wgAbuseFilterAnonBlockDuration' => array(
-		'default' => null,
-		'marioserieswiki' => 2592000,
+		'default' => 2592000,
 	),
 
 	// Anti-spam
