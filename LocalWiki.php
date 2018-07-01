@@ -235,6 +235,11 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
 }
 
+if ( $wgDBname === 'olegcinemawiki' ) {
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['user']['reupload'] = false;
+}
+
 if ( $wgDBname === 'pruebawiki' ) {
 	$wgGroupPermissions['sysop']['nuke'] = false;
 	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
