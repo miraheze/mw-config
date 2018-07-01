@@ -3442,6 +3442,16 @@ $wgConf->settings = array(
 				'moderator',
 			),
 		),
+		'+olegcinemawiki' => array(
+			'bureaucrat' => array(
+				'arbcom',
+				'engineer',
+			),
+			'sysop' => array(
+				'closer',
+				'ipblock-exempt',
+			),
+		),
 		'+podpediawiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4155,6 +4165,47 @@ $wgConf->settings = array(
 				'titleblacklistlog' => true,
 			),
 		),
+		'+olegcinemawiki' => array(
+			'arbcom' => array(
+				'browsearchive' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'abusefilter-log-detail' => true,
+			),
+			'closer' => array(
+				'upload' => true,
+				'reupload-own' => true,
+				'move-categorypages' => true,
+				'move-subpages' => true,
+				'suppressredirect' => true,
+				'delete' => true,
+			),
+			'engineer' => array(
+				'oathauth-enable' => true,
+				'tboverride' => true,
+				'editinterface' => true,
+				'noratelimit' => true,
+				'move-categorypages' => true,
+				'move-subpages' => true,
+				'movefile' => true,
+				'suppressredirect' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'editprotected' => true,
+				'editcontentmodel' => true,
+				'apihighlimits' => true,
+				
+			),
+			'ipblock-exempt' => array(
+				'torunblocked' => true,
+				'ipblock-exempt' => true,
+			),
+			'uploader' => array(
+				'upload' => true,
+				'reupload' => true,
+				'reupload-own' => true,
+			),
+		),
 		'+pgnwikiwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
@@ -4643,6 +4694,16 @@ $wgConf->settings = array(
 				'moderator',
 			),
 		),
+		'+olegcinemawiki' => array(
+			'bureaucrat' => array(
+				'arbcom',
+				'engineer',
+			),
+			'sysop' => array(
+				'closer',
+				'ipblock-exempt',
+			),
+		),
 		'+pruebawiki' => array(
 			'sysop' => array(
 				'editor',
@@ -4869,6 +4930,11 @@ $wgConf->settings = array(
 				"&",
 				array( APCOND_EDITCOUNT, 50 ),
 				array( APCOND_AGE, 7 * 86400 ),
+			),
+		),
+		'+olegcinemawiki' => array(
+			'uploader' => array(
+				array( APCOND_AGE, 10 * 86400 ),
 			),
 		),
 	),
