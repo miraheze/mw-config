@@ -4932,11 +4932,6 @@ $wgConf->settings = array(
 				array( APCOND_AGE, 7 * 86400 ),
 			),
 		),
-		'+olegcinemawiki' => array(
-			'uploader' => array(
-				array( APCOND_AGE, 10 * 86400 ),
-			),
-		),
 	),
 	'wgImplicitGroups' => array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
