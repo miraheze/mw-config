@@ -1831,7 +1831,8 @@ $wgConf->settings = array(
 
 	// Files
 	'wgEnableUploads' => array(
-		'default' => true,
+		# disable uploads temp, doing one last sync with swift
+		'default' => false,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
