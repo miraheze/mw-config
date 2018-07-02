@@ -4934,6 +4934,7 @@ $wgConf->settings = array(
 		),
 		'+olegcinemawiki' => array(
 			'uploader' => array(
+				"&",
 				array( APCOND_AGE, 10 * 86400 ),
 			),
 		),
