@@ -5514,6 +5514,7 @@ $wgConf->settings = array(
 			'allthetropes\.org',
 			'aman\.info\.tm',
 			'antiguabarbudacalypso\.com',
+			'astrapedia\.ru'
 			'athenapedia\.org',
 			'b1tes\.org',
 			'bconnected\.aidanmarkham\.com',
