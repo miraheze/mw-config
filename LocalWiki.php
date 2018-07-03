@@ -96,11 +96,6 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
 }
 
-if ( $wgDBname === 'ciptamediawiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
-	$wgUploadPath = "https://ciptamedia.miraheze.org/w/img_auth.php";
-}
-
 if ( $wgDBname === 'brynda1231wiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;

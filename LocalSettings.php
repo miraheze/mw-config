@@ -1832,8 +1832,7 @@ $wgConf->settings = array(
 
 	// Files
 	'wgEnableUploads' => array(
-		# disable uploads temp, doing one last sync with swift
-		'default' => false,
+		'default' => true,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
@@ -5836,8 +5835,7 @@ $wgConf->settings = array(
 		'ciptamediawiki' => true,
 	),
 	'wmgUseSwiftBackend' => array(
-		'default' => false,
-		'test1wiki' => true,
+		'default' => true,
 	),
 );
 
