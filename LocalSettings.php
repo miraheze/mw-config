@@ -5180,6 +5180,7 @@ $wgConf->settings = array(
 		'amaninfowiki' => 'https://aman.info.tm',
 		'ameciclowiki' => 'https://wiki.ameciclo.org',
 		'antiguabarbudacalypsowiki' => 'https://antiguabarbudacalypso.com',
+		'astrapediawiki' => 'https://astrapedia.ru',
 		'athenapediawiki' => 'https://athenapedia.org',
 		'autocountwiki' => 'https://wiki.autocountsoft.com',
 		'b1teswiki' => 'https://b1tes.org',
