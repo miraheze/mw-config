@@ -4,7 +4,7 @@ $wgFileBackends[] = [
     'class'              => 'SwiftFileBackend',
     'name'               => 'miraheze-swift',
     'wikiId'             => $wgDBname,
-    'lockManager'        => 'redisLockManager',
+    'lockManager'        => 'nullLockManager',
     'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
     'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_admin',
     'swiftUser'          => 'admin:admin',
@@ -29,24 +29,6 @@ $wgFileBackends[] = [
     'writeUsers'          => [ 'admin:admin' ],
     //'secureReadUsers'     => [ 'admin:admin' ],
     //'secureWriteUsers'    => [ 'admin:admin' ]
-];
-
-$wmgMirahezeServices = [
-	'rdb1' => '81.4.127.174',
-];
-
-$wgLockManagers[] = [
-	'name'         => 'redisLockManager',
-	'class'        => 'RedisLockManager',
-	'lockServers'  => $wmgMirahezeServices,
-	'srvsByBucket' => [
-		0 => [ 'rdb1' ],
-	],
-	'redisConfig'  => [
-		'connectTimeout' => 2,
-		'readTimeout'    => 2,
-		'password'       => $wmgRedisPassword,
-	]
 ];
 
 $private = $wmgPrivateUpload ? "https://" . $wmgHostname . "/w/img_auth.php" : $wgUploadPath;
