@@ -33,6 +33,7 @@ $wgFileBackends[] = [
 
 $wmgMirahezeServices = [
 	'rdb1' => '81.4.127.174',
+	'rdb2' => '81.4.127.174',
 ];
 
 $wgLockManagers[] = [
@@ -40,11 +41,11 @@ $wgLockManagers[] = [
 	'class'        => 'RedisLockManager',
 	'lockServers'  => $wmgMirahezeServices,
 	'srvsByBucket' => [
-		0 => [ 'rdb1' ],
+		0 => [ 'rdb1', 'rdb2' ],
 	],
 	'redisConfig'  => [
-		'connectTimeout' => 2,
-		'readTimeout'    => 2,
+		'connectTimeout' => 3,
+		'readTimeout'    => 3,
 		'password'       => $wmgRedisPassword,
 	]
 ];
