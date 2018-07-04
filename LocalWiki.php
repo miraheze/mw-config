@@ -112,6 +112,11 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
+if ( $wgDBname === 'ciptamediawiki' ) {
+ 	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
+ 	$wgUploadPath = "https://ciptamedia.miraheze.org/w/img_auth.php";
+}
+
 if ( $wgDBname === 'harrypotterwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgHiddenPrefs[] = 'collapsiblenav';
