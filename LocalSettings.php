@@ -1832,7 +1832,7 @@ $wgConf->settings = array(
 
 	// Files
 	'wgEnableUploads' => array(
-		'default' => true,
+		'default' => false,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
@@ -5835,7 +5835,8 @@ $wgConf->settings = array(
 		'ciptamediawiki' => true,
 	),
 	'wmgUseSwiftBackend' => array(
-		'default' => true,
+		'default' => false,
+		'test1wiki' => true,
 	),
 );
 
