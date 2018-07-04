@@ -9,7 +9,7 @@ $wgFileBackends[] = [
     'swiftStorageUrl'    => 'http://81.4.124.61:8080/v1/AUTH_admin',
     'swiftUser'          => 'admin:admin',
     'swiftKey'           => $wmgSwiftAdminPassword,
-    'swiftTempUrlKey'    => 'mirahezeTest',                                                 
+    #'swiftTempUrlKey'    => 'mirahezeTest',                                                 
     'shardViaHashLevels' => [
         'public'
             => [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
