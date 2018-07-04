@@ -12,7 +12,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td>Uploads are temporarily re-enabled while we resolve complications with a service change relating to images.</td>
+                <td>Uploads are currently still disabled while we resolve complications with a service change relating to images.</td>
                 </tr></tbody></table>
 EOF;
          }
