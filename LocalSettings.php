@@ -5835,7 +5835,7 @@ $wgConf->settings = array(
 		'ciptamediawiki' => true,
 	),
 	'wmgUseSwiftBackend' => array(
-		'default' => false,
+		'default' => true,
 		'test1wiki' => true,
 	),
 );
