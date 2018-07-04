@@ -12,7 +12,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td>We have switched back to nfs due to complications with swift, which we are fixing. We are running low on disk space which is why we are moving to swift. We appologize for any inconvenience.</td>
+                <td>Uploads are temporarily re-enabled while we resolve complications with a service change relating to images.</td>
                 </tr></tbody></table>
 EOF;
          }
