@@ -456,13 +456,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'myvariables' => array(
-			'name' => 'MyVariables',
-			'var' => 'wmgUseMyVariables',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'newestpages' => array(
 			'name' => 'NewestPages',
 			'var' => 'wmgUseNewestPages',

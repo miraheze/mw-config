@@ -94,7 +94,6 @@ $IP/extensions/MultiBoilerplate/extension.json
 $IP/extensions/MultiUpload/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MwEmbedSupport/extension.json
-$IP/extensions/MyVariables/MyVariables.php
 $IP/extensions/NativeSvgHandler/NativeSvgHandler.php
 $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json

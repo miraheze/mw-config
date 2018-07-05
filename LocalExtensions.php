@@ -380,10 +380,6 @@ if ( $wmgUseMultiBoilerplate ) {
 	$wgMultiBoilerplateOptions = false;
 }
 
-if ( $wmgUseMyVariables ) {
-	require_once( "$IP/extensions/MyVariables/MyVariables.php" );
-}
-
 if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }

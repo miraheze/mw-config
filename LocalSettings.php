@@ -1481,9 +1481,6 @@ $wgConf->settings = array(
 	'wmgUseMultiBoilerplate' => array(
 		'default' => false,
 	),
-	'wmgUseMyVariables' => array(
-		'default' => false,
-	),
 	'wmgUseNewestPages' => array(
 		'default' => false,
 	),
