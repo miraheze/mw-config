@@ -493,7 +493,7 @@ if ( $wmgUseQuizGame ) {
 	wfLoadExtension( 'QuizGame' );
 }
 
-if ( $wmgRandomGameUnit ) {
+if ( $wmgUseRandomGameUnit ) {
 	wfLoadExtension( 'RandomGameUnit' );
 }
 
