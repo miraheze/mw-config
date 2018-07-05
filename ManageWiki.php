@@ -457,7 +457,7 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'myvariables' => array(
-			'name' => MyVariables',
+			'name' => 'MyVariables',
 			'var' => 'wmgUseMyVariables',
 			'conflicts' => false,
 			'requires' => false,
