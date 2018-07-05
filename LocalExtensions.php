@@ -89,7 +89,7 @@ if ( $wmgUseCollection ) {
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
 	$wgCollectionPODPartners = false;
-	
+
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
@@ -292,6 +292,10 @@ if ( $wmgUseJosa ) {
 	wfLoadExtension( 'Josa' );
 }
 
+if ( $wmgUseJSBreadCrumbs ) {
+	wfLoadExtension( 'JSBreadCrumbs' );
+}
+
 if ( $wmgUseKartographer ) {
         wfLoadExtension( 'Kartographer' );
 }
@@ -320,7 +324,7 @@ if ( $wmgUseLoopsCombo ) {
 if ( $wmgUseMagicNoCache ) {
 	require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
 }
-	
+
 if ( $wmgUseMaps ) {
 	require_once( "$IP/extensions/Maps/Maps.php" );
 	$egMapsDefaultService = 'openlayers';
@@ -376,6 +380,10 @@ if ( $wmgUseMultiBoilerplate ) {
 	$wgMultiBoilerplateOptions = false;
 }
 
+if ( $wmgUseMyVariables ) {
+	require_once( "$IP/extensions/MyVariables/MyVariables.php" );
+}
+
 if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }
@@ -395,6 +403,10 @@ if ( $wmgUseNewsletter ) {
 
 if ( $wmgUseNewUserMessage ) {
 	wfLoadExtension( 'NewUserMessage' );
+}
+
+if ( $wmgUseNewUserNotif ) {
+	require_once( "$IP/extensions/NewUserNotif/NewUserNotif.php" );
 }
 
 if ( $wmgUseNostalgia ) {
@@ -479,6 +491,10 @@ if ( $wmgUseQuiz ) {
 
 if ( $wmgUseQuizGame ) {
 	wfLoadExtension( 'QuizGame' );
+}
+
+if ( $wmgRandomGameUnit ) {
+	wfLoadExtension( 'RandomGameUnit' );
 }
 
 if ( $wmgUseRandomSelection ) {

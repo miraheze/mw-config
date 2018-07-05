@@ -1392,6 +1392,9 @@ $wgConf->settings = array(
 	'wmgUseJosa' => array(
 		'default' => false,
 	),
+	'wmgUseJSBreadCrumbs' => array(
+		'default' => false,
+	),
 	'wmgUseKartographer' => array(
                 'default' => false,
 	),
@@ -1478,6 +1481,9 @@ $wgConf->settings = array(
 	'wmgUseMultiBoilerplate' => array(
 		'default' => false,
 	),
+	'wmgUseMyVariables' => array(
+		'default' => false,
+	),
 	'wmgUseNewestPages' => array(
 		'default' => false,
 	),
@@ -1491,6 +1497,9 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseNewUserMessage' => array(
+		'default' => false,
+	),
+	'wmgUseNewUserNotif' => array(
 		'default' => false,
 	),
 	'wmgUseNostalgia' => array(
@@ -1546,6 +1555,9 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseQuizGame' => array(
+		'default' => false,
+	),
+	'wmgUseRandomGameUnit' => array(
 		'default' => false,
 	),
 	'wmgUseRandomSelection' => array(

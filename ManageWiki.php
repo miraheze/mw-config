@@ -358,6 +358,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'jsbreadcrumbs' => array(
+			'name' => 'JS BreadCrumbs',
+			'var' => 'wmgUseJSBreadCrumbs',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'kartographer' => array(
 			'name' => 'Kartographer',
 			'var' => 'wmgUseKartographer',
@@ -449,6 +456,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'myvariables' => array(
+			'name' => MyVariables',
+			'var' => 'wmgUseMyVariables',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'newestpages' => array(
 			'name' => 'NewestPages',
 			'var' => 'wmgUseNewestPages',
@@ -481,6 +495,13 @@ $wgManageWikiExtensions = array(
 			'name' => 'New User Message',
 			'var' => 'wmgUseNewUserMessage',
 			'conflicts' => 'flow',
+			'requires' => false,
+			'restricted' => false,
+		),
+		'newusernotif' => array(
+			'name' => 'New User Nofifications',
+			'var' => 'wmgUseNewUserNotif',
+			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
 		),
@@ -599,6 +620,13 @@ $wgManageWikiExtensions = array(
 		'quizgame' => array(
 			'name' => 'Quiz Game',
 			'var' => 'wmgUseQuizGame',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
+		'randomgameunit' => array(
+			'name' => 'RandomGameUnit (SocialProfile)',
+			'var' => 'wmgUseRandomGameUnit',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,

@@ -69,6 +69,7 @@ $IP/extensions/InputBox/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php
 $IP/extensions/Josa/extension.json
+$IP/extensions/JSBreadCrumbs/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LinkSuggest/extension.json
@@ -93,9 +94,11 @@ $IP/extensions/MultiBoilerplate/extension.json
 $IP/extensions/MultiUpload/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MwEmbedSupport/extension.json
+$IP/extensions/MyVariables/MyVariables.php
 $IP/extensions/NativeSvgHandler/NativeSvgHandler.php
 $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json
+$IP/extensions/NewUserNotif/NewUserNotif.php
 $IP/extensions/NewestPages/extension.json
 $IP/extensions/News/News.php
 $IP/extensions/Newsletter/extension.json
@@ -121,6 +124,7 @@ $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/RSS/extension.json
+$IP/extensions/RandomGameUnit/extension.json
 $IP/extensions/RandomSelection/RandomSelection.php
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Renameuser/extension.json
