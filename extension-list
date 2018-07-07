@@ -73,6 +73,7 @@ $IP/extensions/JSBreadCrumbs/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LinkSuggest/extension.json
+$IP/extensions/LinkTarget/LinkTarget.php
 $IP/extensions/LocalisationUpdate/extension.json
 $IP/extensions/LoginNotify/extension.json
 $IP/extensions/Loops/Loops.php

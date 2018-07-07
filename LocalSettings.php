@@ -1408,6 +1408,9 @@ $wgConf->settings = array(
 		'default' => false,
 		'test1wiki' => true,
 	),
+	'wmgUseLinkTarget' => array(
+		'default' => false,
+	),
 	'wmgUseLoginNotify' => array(
 		'default' => false,
 	),

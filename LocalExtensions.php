@@ -312,6 +312,10 @@ if ( $wmgUseLinkSuggest ) {
 	wfLoadExtension( 'LinkSuggest' );
 }
 
+if ( $wmgUseLinkTarget ) {
+	require_once( "$IP/extensions/LinkTarget/LinkTarget.php" );
+}
+
 if ( $wmgUseLoginNotify ) {
 	wfLoadExtension( 'LoginNotify' );
 }

@@ -386,6 +386,13 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'linktarget' => array(
+			'name' => 'LinkTarget'
+			'var' => 'wmgUseLinkTarget'
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'loginnotify' => array(
 			'name' => 'Login Notify',
 			'var' => 'wmgUseLoginNotify',
