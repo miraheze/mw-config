@@ -47,3 +47,4 @@ wfLoadExtensions( [
 
 $wgTimelineFileBackend = 'miraheze-swift';
 
+$wgMathFileBackend = 'miraheze-swift';
