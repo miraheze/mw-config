@@ -387,8 +387,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'linktarget' => array(
-			'name' => 'LinkTarget'
-			'var' => 'wmgUseLinkTarget'
+			'name' => 'LinkTarget',
+			'var' => 'wmgUseLinkTarget',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
