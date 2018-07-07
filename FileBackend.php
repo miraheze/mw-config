@@ -93,5 +93,10 @@ $wgLocalFileRepo = [
             'container' =>  'mw',
             'directory' => 'transcoded',
         ],
+        'timeline-render' =>  [
+            'container' =>  'mw',
+            'directory' => 'timeline',
+        ],
+
     ],
 ];
