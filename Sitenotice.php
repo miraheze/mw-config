@@ -12,7 +12,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td>We are currently adding a new node to increase storage. This may take a while. You may notice images not showing. We apologize for any inconvenience caused by this.</td>
+                <td>We apologize for any inconvenience caused with images not showing in the last few days. We have added our second node and images should be working now.</td>
                 </tr></tbody></table>
 EOF;
          }
