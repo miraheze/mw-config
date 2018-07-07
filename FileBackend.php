@@ -89,6 +89,10 @@ $wgLocalFileRepo = [
             'container' =>  'mw',
             'directory' => 'math',
         ],
+        'math-render' =>  [
+            'container' =>  'mw',
+            'directory' => 'math',
+        ],
         'transcoded' =>  [
             'container' =>  'mw',
             'directory' => 'transcoded',
