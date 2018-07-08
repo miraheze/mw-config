@@ -1581,6 +1581,9 @@ $wgConf->settings = array(
 	'wmgUseScore' => array(
 		'default' => false,
 	),
+	'wgScoreFileBackend' => array(
+	        'default' => 'miraheze-swift',
+	),
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
 		'test1wiki' => true,
