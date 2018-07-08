@@ -5267,6 +5267,7 @@ $wgConf->settings = array(
 		'reviwiki' => 'https://private.revi.wiki',
 		'reviwbwiki' => 'https://wikibase.revi.wiki',
 		'reviwikiwiki' => 'https://reviwiki.info',
+		'rmbrkwiki' => 'https://wiki.rmbrk.sk',
 		'stjarnfestivalenwiki' => 'https://saf.songcontests.eu',
 		'savagewikiwiki' => 'https://savage-wiki.com',
 		'savetawiki' => 'https://saveta.org',
@@ -5613,6 +5614,7 @@ $wgConf->settings = array(
 			'wiki\.worlduniversityandschool\.org'.
 			'wikipuk\.cl',
 			'wiki\.ombre\.io',
+			'wiki.rmbrk\.com',
 			'wisdomwiki\.org',
 			'sandbox\.wisdomwiki.org',
 			'savage-wiki\.com',
