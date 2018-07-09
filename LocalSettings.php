@@ -220,6 +220,12 @@ define( 'NS_API', 1792);
 define( 'NS_API_TALK', 1793);
 define( 'NS_DATA', 1794);
 define( 'NS_DATA_TALK', 1795);
+define( 'NS_DICTIONARY', 1796);
+define( 'NS_DICTIONARY_TALK', 1797);
+define( 'NS_CALENDAR', 1798);
+define( 'NS_CALENDAR_TALK', 1799);
+define( 'NS_ENCYCLOPEDIA', 1800);
+define( 'NS_ENCYCLOPEDIA_TALK', 1801);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2721,6 +2727,12 @@ $wgConf->settings = array(
 			NS_BOOK_NAVIGATION_TALK => 'بحث ناوبری نسک', 
 			NS_APPLICATION => 'برنامه',
 			NS_APPLICATION_TALK => 'بحث برنامه',
+			NS_DICTIONARY => 'واژه نامه',
+			NS_DICTIONARY_TALK => 'بحث واژنامه',
+			NS_CALENDAR => 'گاه‌شمار',
+			NS_CALENDAR_TALK => 'بحث گاه‌شمار',
+			NS_ENCYCLOPEDIA => 'دانش‌نامه',
+			NS_ENCYCLOPEDIA => 'بحث دانش‌نامه',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
