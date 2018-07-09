@@ -740,6 +740,9 @@ $wgConf->settings = array(
 			'user' => true,
 			'editor' => true,
 		),
+		'+civclassicwiki' => array(
+			'anon' => true,
+		),
 		'+cristianopediawiki' => array(
 			'anon' => true,
 		),		
