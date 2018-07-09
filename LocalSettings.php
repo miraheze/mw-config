@@ -5418,6 +5418,7 @@ $wgConf->settings = array(
 		'puzzlewiki' => 'metrolook',
 		'raymanspeedrunwiki' => 'vector',
 		'revitwiki' => 'vector',
+		'ruberwiki' => 'pivot',
 		'thebbwiki' => 'apex',
 		'thegreatwarwiki' => 'pivot',
 		'thelonsdalebattalionwiki' => 'metrolook',
