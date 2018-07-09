@@ -21,8 +21,6 @@ $wgFileBackends[] = [
             => [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
         'deleted'
             => [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-        'timeline'
-            => [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
     ],
     'parallelize'        => 'implicit',
     'cacheAuthInfo'      => true,
@@ -101,6 +99,9 @@ $wgLocalFileRepo = [
             'container' =>  'mw',
             'directory' => 'timeline',
         ],
-
+        'score-render' =>  [
+            'container' =>  'mw',
+            'directory' => 'lilypond',
+        ],
     ],
 ];
