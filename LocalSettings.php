@@ -5017,6 +5017,7 @@ $wgConf->settings = array(
 	'wmgPiwikSiteID' => array(
 		'default' => '1',
 		'allthetropeswiki' => '2',
+		'nonbinarywiki' => '3',
 	),
 
 	// RateLimits
