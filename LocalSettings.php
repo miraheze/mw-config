@@ -3061,7 +3061,9 @@ $wgConf->settings = array(
 		),
 	),
 	'+wgNamespacesWithSubpages' => array(
-		'default' => array(),
+		'default' => array(
+			NS_MAIN => true,
+		),
 		'+adnovumwiki' => array(
 			NS_MAIN => true,
 			NS_USER => true,
