@@ -5883,6 +5883,11 @@ $wgConf->settings = array(
 			'random_picturegame' => false,
 		),
 	),
+	'wgRandomGameDisplay' => array(
+		'default' => array(
+			'random_poll' => false,
+		),
+	),
 );
 
 function efGetSiteParams( $conf, $wiki ) {
