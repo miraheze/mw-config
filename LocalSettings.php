@@ -5878,6 +5878,11 @@ $wgConf->settings = array(
 		'default' => true,
 		'test1wiki' => true,
 	),
+	'wgRandomGameDisplay' => array(
+		'default' => array(
+			'random_picturegame' => false,
+		),
+	),
 );
 
 function efGetSiteParams( $conf, $wiki ) {
