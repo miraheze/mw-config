@@ -1214,6 +1214,10 @@ $wgConf->settings = array(
  		'thelonsdalebattalionwiki' => array(),
  	),
 
+	'wgScoreFileBackend' => array(
+	        'default' => 'miraheze-swift',
+	),
+
 	// Extensions and Skins
 	'wmgUseAddThis' => array(
 		'default' => false,
@@ -1589,9 +1593,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseScore' => array(
 		'default' => false,
-	),
-	'wgScoreFileBackend' => array(
-	        'default' => 'miraheze-swift',
 	),
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
