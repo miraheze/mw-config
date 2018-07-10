@@ -1,5 +1,8 @@
 <?php
 
+$wgScoreFileBackend = 'miraheze-swift';
+$wgSocialProfileFileBackend = 'miraheze-swift';
+
 $wgFileBackends[] = [
     'class'              => 'SwiftFileBackend',
     'name'               => 'miraheze-swift',
