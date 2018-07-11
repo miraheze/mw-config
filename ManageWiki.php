@@ -78,13 +78,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'mscalendar' => array(
-			'name' => 'MsCalendar',
-			'var' => 'wmgUseMSCalendar',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'capiunto' => array(
 			'name' => 'Capiunto',
 			'var' => 'wmgUseCapiunto',
@@ -438,6 +431,13 @@ $wgManageWikiExtensions = array(
 		'modernskylight' => array(
 			'name' => 'ModernSkylight (Skin)',
 			'var' => 'wmgUseModernSkylight',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
+		'mscalendar' => array(
+			'name' => 'MsCalendar',
+			'var' => 'wmgUseMSCalendar',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
