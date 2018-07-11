@@ -213,7 +213,7 @@ $wgManageWikiExtensions = array(
 		),
 		'editcount' => array(
 			'name' => 'EditCount',
-			'var' => 'wmgUseEditCount',
+			'var' => 'wmgUseEditcount',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
