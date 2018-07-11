@@ -30,7 +30,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'apex' => array(
-			'name' => 'Apex (Skin)',
+			'name' => 'Apex',
+			'skin' => true,
 			'var' => 'wmgUseApex',
 			'conflicts' => false,
 			'requires' => false,
@@ -163,7 +164,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'darkvector' => array(
-			'name' => 'DarkVector (Skin)',
+			'name' => 'DarkVector',
+			'skin' => true,
 			'var' => 'wmgUseDarkVector',
 			'conflicts' => false,
 			'requires' => false,
@@ -177,7 +179,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'dusktodawn' => array(
-			'name' => 'DuskToDawn (Skin)',
+			'name' => 'DuskToDawn',
+			'skin' => true,
 			'var' => 'wmgUseDuskToDawn',
 			'conflicts' => false,
 			'requires' => false,
@@ -233,7 +236,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => true,
 		),
 		'erudite' => array(
-			'name' => 'Erudite (Skin)',
+			'name' => 'Erudite',
+			'skin' => true,
 			'var' => 'wmgUseErudite',
 			'conflicts' => false,
 			'requires' => false,
@@ -268,14 +272,16 @@ $wgManageWikiExtensions = array(
 			'restricted' => true,
 		),
 		'foreground' => array(
-			'name' => 'Foreground (Skin)',
+			'name' => 'Foreground',
+			'skin' => true,
 			'var' => 'wmgUseForeground',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
 		),
 		'gamepress' => array(
-			'name' => 'Gamespress (Skin)',
+			'name' => 'Gamepress',
+			'skin' => true,
 			'var' => 'wmgUseGamepress',
 			'conflicts' => false,
 			'requires' => false,
@@ -380,7 +386,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'liberty' => array(
-			'name' => 'Liberty (Skin)',
+			'name' => 'Liberty',
+			'skin' => true,
 			'var' => 'wmgUseLiberty',
 			'conflicts' => false,
 			'requires' => false,
@@ -429,14 +436,16 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'metrolook' => array(
-			'name' => 'Metrolook (Skin)',
+			'name' => 'Metrolook',
+			'skin' => true,
 			'var' => 'wmgUseMetrolook',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
 		),
 		'modernskylight' => array(
-			'name' => 'ModernSkylight (Skin)',
+			'name' => 'ModernSkylight',
+			'skin' => true,
 			'var' => 'wmgUseModernSkylight',
 			'conflicts' => false,
 			'requires' => false,
@@ -576,7 +585,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'pivot' => array(
-			'name' => 'Pivot (Skin)',
+			'name' => 'Pivot',
+			'skin' => true,
 			'var' => 'wmgUsePivot',
 			'conflicts' => false,
 			'requires' => false,
@@ -639,7 +649,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'refreshed' => array(
-			'name' => 'Refreshed (Skin)',
+			'name' => 'Refreshed',
+			'skin' => true,
 			'var' => 'wmgUseRefreshed',
 			'conflicts' => false,
 			'requires' => false,
@@ -793,7 +804,8 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'tweeki' => array(
-			'name' => 'Tweeki (Skin)',
+			'name' => 'Tweeki',
+			'skin' => true,
 			'var' => 'wmgUseTweeki',
 			'conflicts' => false,
 			'requires' => false,
@@ -936,3 +948,4 @@ $wgManageWikiSettings = array(
 		'overridedefault' => 'cc-by-sa',
 	),
 );
+
