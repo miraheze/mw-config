@@ -5877,10 +5877,6 @@ $wgConf->settings = array(
 	'wgRandomGameDisplay' => array(
 		'default' => array(
 			'random_picturegame' => false,
-		),
-	),
-	'wgRandomGameDisplay' => array(
-		'default' => array(
 			'random_poll' => false,
 		),
 	),
