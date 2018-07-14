@@ -470,6 +470,12 @@ $wgConf->settings = array(
 	'wgCommentsDefaultAvatar' => array(
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	),
+	
+	// Comments
+	'wgCommentsInRecentChanges' => array(
+		'default' => false,
+		'newusopediawiki' => true,
+	),
 
 	 // Contribution Scores
 	 'wgContribScoreDisableCache' => array(
