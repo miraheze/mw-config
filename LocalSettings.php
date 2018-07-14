@@ -2705,7 +2705,7 @@ $wgConf->settings = array(
 			NS_LEGACY_TALK => 'Legacy_talk',
   		),
 		'warriorpediawiki' => array(
-			NS_POLICY => 'Policy',
+			NS_POLICY => 'Policy',حث واژنامه
 			NS_POLICY_TALK => 'Policy_talk',
 		),
 		'wiki1776wiki' => array(
@@ -2737,8 +2737,8 @@ $wgConf->settings = array(
 			NS_BOOK_NAVIGATION_TALK => 'بحث ناوبری نسک', 
 			NS_APPLICATION => 'برنامه',
 			NS_APPLICATION_TALK => 'بحث برنامه',
-			NS_DICTIONARY => 'واژه نامه',
-			NS_DICTIONARY_TALK => 'بحث واژنامه',
+			NS_DICTIONARY => 'واژه‌نامه',
+			NS_DICTIONARY_TALK => 'بحث واژه‌نامه',
 			NS_CALENDAR => 'گاه‌شمار',
 			NS_CALENDAR_TALK => 'بحث گاه‌شمار',
 			NS_ENCYCLOPEDIA => 'دانش‌نامه',
