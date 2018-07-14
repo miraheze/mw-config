@@ -18,6 +18,7 @@ $wgLBFactoryConf = array(
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
+		'flags' => DBO_SSL,
 	),
 	'hostsByName' => array(
 		'db4' => '81.4.109.166',
