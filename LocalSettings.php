@@ -2705,7 +2705,7 @@ $wgConf->settings = array(
 			NS_LEGACY_TALK => 'Legacy_talk',
   		),
 		'warriorpediawiki' => array(
-			NS_POLICY => 'Policy',حث واژنامه
+			NS_POLICY => 'Policy',
 			NS_POLICY_TALK => 'Policy_talk',
 		),
 		'wiki1776wiki' => array(
