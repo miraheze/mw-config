@@ -715,6 +715,9 @@ $wgConf->settings = array(
 		'+apellidosmurcianoswiki' => array(
 			'anon' => true,
 		),
+		'+arkorderwiki' => array(
+			'anon' => true,
+		),
 		'+autocountwiki' => array(
 			'anon' => true,
 			'user' => true,
