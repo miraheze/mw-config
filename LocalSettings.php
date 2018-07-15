@@ -645,7 +645,7 @@ $wgConf->settings = array(
 	),
 
 	'wgReadOnly' => array(
-		'default' => false,
+		'default' => 'db maintenance on going',
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
