@@ -8,6 +8,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
  		'htmlmetaadntitle' => array(
 			'name' => 'HTML Meta and Title',
@@ -16,6 +17,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'adminlinks' => array(
 			'name' => 'AdminLinks',
@@ -24,6 +26,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'ajaxpoll' => array(
 			'name' => 'AJAX Poll',
@@ -32,6 +35,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'apex' => array(
 			'name' => 'Apex (Skin)',
@@ -40,6 +44,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'articlefeedbackv5' => array(
 			'name' => 'Article Feedback Tool V5',
@@ -48,6 +53,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'articleratings' => array(
 			'name' => 'Article Ratings',
@@ -56,6 +62,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'articletocategory2' => array(
 			'name' => 'Article To Category 2',
@@ -64,6 +71,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'authorprotect' => array(
 			'name' => 'Author Protect',
@@ -72,6 +80,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'autocreatecategorypages' => array(
 			'name' => 'Auto Create Category Pages',
@@ -80,6 +89,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => '>500 categories',
 			'restricted' => true,
+			'help' => false,
 		),
 		'blogpage' => array(
 			'name' => 'Blog Page',
@@ -88,6 +98,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'capiunto' => array(
 			'name' => 'Capiunto',
@@ -96,6 +107,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'cargo' => array(
 			'name' => 'Cargo',
@@ -104,6 +116,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'charinsert' => array(
 			'name' => 'CharInsert',
@@ -112,6 +125,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'collapsiblevector' => array(
 			'name' => 'Collapsible Vector',
@@ -120,6 +134,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'collection' => array(
 			'name' => 'Collection (PDF)',
@@ -128,6 +143,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => 'services',
 			'restricted' => true,
+			'help' => false,
 		),
 		'comments' => array(
 			'name' => 'Comments',
@@ -136,6 +152,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'contributionscores' => array(
 			'name' => 'ContributionScores',
@@ -144,6 +161,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'createpage' => array(
 			'name' => 'CreatePage',
@@ -152,6 +170,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'createredirect' => array(
 			'name' => 'CreateRedirect',
@@ -160,6 +179,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'crossreference' => array(
 			'name' => 'CrossReference',
@@ -168,6 +188,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'css' => array(
 			'name' => 'CSS',
@@ -176,6 +197,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'darkvector' => array(
 			'name' => 'DarkVector (Skin)',
@@ -184,6 +206,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'description2' => array(
 			'name' => 'Description2',
@@ -192,6 +215,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'dusktodawn' => array(
 			'name' => 'DuskToDawn (Skin)',
@@ -200,6 +224,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'dplforum' => array(
 			'name' => 'DPLForum',
@@ -208,6 +233,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'duplicator' => array(
 			'name' => 'Duplicator',
@@ -216,6 +242,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'dynamicpagelist' => array(
 			'name' => 'DynamicPageList',
@@ -224,6 +251,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => 'dynamicpagelist3',
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'dynamicpagelist3' => array(
 			'name' => 'DynamicPageList3',
@@ -232,6 +260,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => 'dynamicpagelist',
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'editcount' => array(
 			'name' => 'EditCount',
@@ -240,6 +269,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'educationprogram' => array(
 			'name' => 'Education Program',
@@ -248,6 +278,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'electronpdfservice' => array(
 			'name' => 'Electron PDF Service',
@@ -256,6 +287,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => 'services',
 			'restricted' => true,
+			'help' => false,
 		),
 		'erudite' => array(
 			'name' => 'Erudite (Skin)',
@@ -264,6 +296,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'eventlogging' => array(
 			'name' => 'EventLogging',
@@ -272,6 +305,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'fancyboxthumbs' => array(
 			'name' => 'Fancy Box Thumbs',
@@ -280,6 +314,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'flaggedrevs' => array(
 			'name' => 'FlaggedRevs',
@@ -288,6 +323,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'flow' => array(
 			'name' => 'Flow',
@@ -296,6 +332,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => 'services',
 			'restricted' => true,
+			'help' => false,
 		),
 		'foreground' => array(
 			'name' => 'Foreground (Skin)',
@@ -304,6 +341,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'gamepress' => array(
 			'name' => 'Gamespress (Skin)',
@@ -312,6 +350,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'geodata' => array(
 			'name' => 'GeoData',
@@ -320,6 +359,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'graph' => array(
 			'name' => 'Graph',
@@ -328,6 +368,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'groupssidebar' => array(
 			'name' => 'GroupsSidebar',
@@ -336,6 +377,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'guidedtour' => array(
 			'name' => 'GuidedTour',
@@ -344,6 +386,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'hawelcome' => array(
 			'name' => 'HAWelcome',
@@ -352,6 +395,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => 'flow',
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'headertabs' => array(
 			'name' => 'HeaderTabs',
@@ -360,6 +404,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'hidesection' => array(
 			'name' => 'HideSection',
@@ -368,6 +413,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'highlightlinksincategory' => array(
 			'name' => 'HighlightLinksInCategory',
@@ -376,6 +422,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'imagemap' => array(
 			'name' => 'ImageMap',
@@ -384,6 +431,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'javascriptslideshow' => array(
 			'name' => 'Javascript Slidehow',
@@ -392,6 +440,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'josa' => array(
 			'name' => 'Josa',
@@ -400,6 +449,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'jsbreadcrumbs' => array(
 			'name' => 'JS BreadCrumbs',
@@ -408,6 +458,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'kartographer' => array(
 			'name' => 'Kartographer',
@@ -416,6 +467,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'labeledsectiontransclusion' => array(
 			'name' => 'LabeledSectionTransclusion',
@@ -424,6 +476,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'liberty' => array(
 			'name' => 'Liberty (Skin)',
@@ -432,6 +485,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'linktarget' => array(
 			'name' => 'LinkTarget',
@@ -440,6 +494,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'loginnotify' => array(
 			'name' => 'Login Notify',
@@ -448,6 +503,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'loopscombo' => array(
 			'name' => 'Loops',
@@ -456,6 +512,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'magicnocache' => array(
 			'name' => 'MagicNoCache',
@@ -464,6 +521,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'maps' => array(
 			'name' => 'Maps',
@@ -472,6 +530,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'masseditregex' => array(
 			'name' => 'MassEditRegex',
@@ -480,6 +539,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'metrolook' => array(
 			'name' => 'Metrolook (Skin)',
@@ -488,6 +548,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'modernskylight' => array(
 			'name' => 'ModernSkylight (Skin)',
@@ -496,6 +557,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'mscalendar' => array(
 			'name' => 'MsCalendar',
@@ -504,6 +566,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'msupload' => array(
 			'name' => 'MsUpload',
@@ -512,6 +575,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'multimediaviewer' => array(
 			'name' => 'Multimedia Viewer',
@@ -520,6 +584,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'multiboilerplate' => array(
 			'name' => 'MultiBoilerplate',
@@ -528,6 +593,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'newestpages' => array(
 			'name' => 'NewestPages',
@@ -536,6 +602,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'news' => array(
 			'name' => 'News',
@@ -544,6 +611,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'newsignuppage' => array(
 			'name' => 'New Signup Page',
@@ -552,6 +620,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'newsletter' => array(
 			'name' => 'Newsletter',
@@ -560,6 +629,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'newusermessage' => array(
 			'name' => 'New User Message',
@@ -568,6 +638,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => 'flow',
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'newusernotif' => array(
 			'name' => 'New User Nofifications',
@@ -576,6 +647,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'notitle' => array(
 			'name' => 'NoTitle',
@@ -584,6 +656,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'opengraphmeta' => array(
 			'name' => 'OpenGraphMeta',
@@ -592,6 +665,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pagedtiffhandler' => array(
 			'name' => 'PagedTiffHandler',
@@ -600,6 +674,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pageforms' => array(
 			'name' => 'Page Forms',
@@ -608,6 +683,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pagenotice' => array(
 			'name' => 'Page Notice',
@@ -616,6 +692,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pagetriage' => array(
 			'name' => 'Page Triage',
@@ -624,6 +701,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pdfbook' => array(
 			'name' => 'PDFBook',
@@ -632,6 +710,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pdfembed' => array(
 			'name' => 'PDF Embed',
@@ -640,6 +719,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pdfhandler' => array(
 			'name' => 'PDF Handler',
@@ -648,6 +728,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pipeescape' => array(
 			'name' => 'Pipe Escape',
@@ -656,6 +737,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'pivot' => array(
 			'name' => 'Pivot (Skin)',
@@ -664,6 +746,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'popups' => array(
 			'name' => 'Popups',
@@ -672,6 +755,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'poll' => array(
 			'name' => 'Poll',
@@ -680,6 +764,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'proofreadpages' => array(
 			'name' => 'Proofread Pages',
@@ -688,6 +773,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'protectsite' => array(
 			'name' => 'Protect Site',
@@ -696,6 +782,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'quiz' => array(
 			'name' => 'Quiz',
@@ -704,6 +791,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'quizgame' => array(
 			'name' => 'Quiz Game',
@@ -712,6 +800,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'randomgameunit' => array(
 			'name' => 'RandomGameUnit (SocialProfile)',
@@ -720,6 +809,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'randomselection' => array(
 			'name' => 'RandomSelection',
@@ -728,6 +818,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'refreshed' => array(
 			'name' => 'Refreshed (Skin)',
@@ -736,6 +827,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'relatedarticles' => array(
 			'name' => 'Related Articles',
@@ -744,6 +836,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'replacetext' => array(
 			'name' => 'Replace Text',
@@ -752,6 +845,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'rss' => array(
 			'name' => 'RSS',
@@ -760,6 +854,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'sandboxlink' => array(
 			'name' => 'Sandbox Link',
@@ -768,6 +863,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'score' => array(
 			'name' => 'Score',
@@ -776,6 +872,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'simplechanges' => array(
 			'name' => 'Simple Changes',
@@ -784,6 +881,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'simpletooltip' => array(
 			'name' => 'Simple Tooltip',
@@ -792,6 +890,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'sitescout' => array(
 			'name' => 'SiteScout',
@@ -800,6 +899,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'socialprofile' => array(
 			'name' => 'SocialProfile',
@@ -808,6 +908,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => 'file server changes',
 			'restricted' => true,
+			'help' => false,
 		),
 		'spoilers' => array(
 			'name' => 'Spoilers',
@@ -816,6 +917,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'subpagefun' => array(
 			'name' => 'SubPageFun',
@@ -824,6 +926,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'subpagelist3' => array(
 			'name' => 'SubPageList3',
@@ -832,6 +935,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'syntaxhighlight' => array(
 			'name' => 'SyntaxHighlight',
@@ -840,6 +944,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'tabscombination' => array(
 			'name' => 'TabsCombination (Tabber + Tabs)',
@@ -848,6 +953,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'templatesandbox' => array(
 			'name' => 'Template Sandbox',
@@ -856,6 +962,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'templatestyles' => array(
 			'name' => 'Template Styles',
@@ -864,6 +971,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'theme' => array(
 			'name' => 'Theme',
@@ -872,6 +980,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'timedmediahandler' => array(
 			'name' => 'TimedMediaHandler',
@@ -880,6 +989,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'titlekey' => array(
 			'name' => 'TitleKey',
@@ -888,6 +998,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'toctree' => array(
 			'name' => 'TOC Tree',
@@ -896,6 +1007,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'translate' => array(
 			'name' => 'Translate',
@@ -904,6 +1016,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'tweeki' => array(
 			'name' => 'Tweeki (Skin)',
@@ -912,6 +1025,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'twocolconflict' => array(
 			'name' => 'TwoColConflict',
@@ -920,6 +1034,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'urlgetparameters' => array(
 			'name' => 'UrlGetParamters',
@@ -928,6 +1043,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'userwelcome' => array(
 			'name' => 'UserWelcome',
@@ -936,6 +1052,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'variables' => array(
 			'name' => 'Variable',
@@ -944,6 +1061,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'voteny' => array(
 			'name' => 'VoteNY',
@@ -952,6 +1070,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'visualeditor' => array(
 			'name' => 'VisualEditor',
@@ -960,6 +1079,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => 'services',
 			'restricted' => true,
+			'help' => false,
 		),
 		'widgets' => array(
 			'name' => 'Widgets',
@@ -968,6 +1088,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'wikibaserepository' => array(
 			'name' => 'Wikibase (Repository)',
@@ -976,6 +1097,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'wikiforum' => array(
 			'name' => 'WikiForum',
@@ -984,6 +1106,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'wikilove' => array(
 			'name' => 'WikiLove',
@@ -992,6 +1115,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'wikitextloggedinout' => array(
 			'name' => 'WikiText Logged In Out',
@@ -1000,6 +1124,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 		'youtube' => array(
 			'name' => 'YouTube',
@@ -1008,6 +1133,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'help' => false,
 		),
 );
 
@@ -1036,12 +1162,14 @@ $wgManageWikiSettings = array(
 		'requires' => false,
 		'type' => 'text',
 		'overridedefault' => null,
+		'help' => false,
 	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,
 		'type' => 'text',
 		'overridedefault' => null,
+		'help' => false,
 	),
 	'wmgWikiLicense' => array(
 		'name' => 'Content License',
@@ -1060,6 +1188,7 @@ $wgManageWikiSettings = array(
 			'No license provided' => 'empty',
 		),
 		'overridedefault' => 'cc-by-sa',
+		'help' => false,
 	),
 );
 
