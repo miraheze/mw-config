@@ -1036,12 +1036,14 @@ $wgManageWikiSettings = array(
 		'requires' => false,
 		'type' => 'text',
 		'overridedefault' => null,
+                'help' => false,
 	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,
 		'type' => 'text',
 		'overridedefault' => null,
+                'help' => false,
 	),
 	'wmgWikiLicense' => array(
 		'name' => 'Content License',
@@ -1060,6 +1062,7 @@ $wgManageWikiSettings = array(
 			'No license provided' => 'empty',
 		),
 		'overridedefault' => 'cc-by-sa',
+                'help' => false,
 	),
 );
 
