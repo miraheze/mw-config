@@ -1042,7 +1042,7 @@ $wgManageWikiSettings = array(
 			'Timeless' => 'timeless',
 			'Vector' => 'vector',
 		),
-		'overridedefault' => 'Vector',
+		'overridedefault' => 'vector',
                 'help' => false,
 	),
 	'wgFavicon' => array(
