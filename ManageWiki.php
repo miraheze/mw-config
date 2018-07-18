@@ -1011,8 +1011,6 @@ $wgManageWikiExtensions = array(
 		),
 );
 
-
-
 /**
  * ManageWiki settings are added using the variable below.
  *
@@ -1037,7 +1035,13 @@ $wgManageWikiSettings = array(
 		'name' => 'Default Skin',
 		'requires' => false,
 		'type' => 'list',
-		'options' => array(),
+		'options' => array(
+			'CologneBlue' => 'cologneblue',
+			'Modern' => 'Modern',
+			'MonoBook' => 'monobook',
+			'Timeless' => 'Timeless',
+			'Vector' => 'vector',
+		),
 		'overridedefault' => 'vector',
                 'help' => false,
 	),
@@ -1075,69 +1079,3 @@ $wgManageWikiSettings = array(
                 'help' => false,
 	),
 );
-
-if ( $wmgUseApex ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
-}
-
-$wgManageWikiSettings['wgDefaultSkin']['options']['CologneBlue'] = 'cologneblue';
-
-if ( $wmgUseDarkVector ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['DarkVector'] = 'darkvector';
-}
-
-if ( $wmgUseDuskToDawn ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['DuskToDawn'] = 'dusktodawn';
-}
-
-if ( $wmgUseErudite ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Erudite'] = 'erudite';
-}
-
-if ( $wmgUseForeground ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
-}
-
-if ( $wmgUseGamepress ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
-}
-
-if ( $wmgUseLiberty ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
-}
-
-if ( $wmgUseMetrolook ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Metrolook'] = 'metrolook';
-}
-
-if ( $wmgUseMobileFrontend ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
-}
-
-$wgManageWikiSettings['wgDefaultSkin']['options']['Modern'] = 'modern';
-
-if ( $wmgUseModernSkylight ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['ModernSkylight'] = 'modernskylight';
-}
-
-$wgManageWikiSettings['wgDefaultSkin']['options']['MonoBook'] = 'monobook';
-
-if ( $wmgUseNostalgia ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Nostalgia'] = 'nostalgia';
-}
-
-if ( $wmgUsePivot ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Pivot'] = 'pivot';
-}
-
-if ( $wmgUseRefreshed ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Refreshed'] = 'refreshed';
-}
-
-$wgManageWikiSettings['wgDefaultSkin']['options']['Timeless'] = 'timeless';
-
-if ( $wmgUseTweeki ) {
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Tweeki'] = 'tweeki';
-}
-
-$wgManageWikiSettings['wgDefaultSkin']['options']['Vector'] = 'vector';
