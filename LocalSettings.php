@@ -5985,7 +5985,7 @@ $wgGroupPermissions['sysop']['bigdelete'] = false;
 if ( $wmgUseSwiftBackend ) {
 	$wgUploadDirectory = "/srv/files/$wgDBname";
 } else {
-	$wgUploadDirectory = "/srv/mnt/mediawiki-static/$wgDBname";
+	$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 }
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
