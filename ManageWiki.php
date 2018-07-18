@@ -1031,6 +1031,13 @@ $wgManageWikiExtensions = array(
  * overridedefault: a string/array override default when no existing value exist.
  */
 $wgManageWikiSettings = array(
+	'wgDefaultSkin' => array(
+		'name' => 'Default Skin',
+		'requires' => false,
+		'type' => 'text',
+		'overridedefault' => null,
+                'help' => false,
+	),
 	'wgFavicon' => array(
 		'name' => 'Favicon',
 		'requires' => false,
