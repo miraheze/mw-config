@@ -5883,7 +5883,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseSwiftBackend' => array(
 		'default' => true,
-		'test1wiki' => true,
+		'test1wiki' => false,
 	),
 	'wgRandomGameDisplay' => array(
 		'default' => array(
@@ -5982,7 +5982,11 @@ $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['bigdelete'] = false;
 
 // Needs to be set AFTER $wgDBname is set to a correct value
-$wgUploadDirectory = "/srv/files/$wgDBname";
+if ( $wmgUseSwiftBackend ) {
+	$wgUploadDirectory = "/srv/files/$wgDBname";
+} else {
+	$wgUploadDirectory = "/srv/mnt/mediawiki-static/$wgDBname";
+}
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
