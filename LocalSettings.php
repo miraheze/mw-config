@@ -2462,7 +2462,7 @@ $wgConf->settings = array(
 		),
 		'cristianopediawiki' => array(
 			NS_TEMA => 'Tema',
-			NS_TEMA_TALK => 'Tema discusión',
+			NS_TEMA_TALK => 'Tema_discusión',
 		),
 		'fawiki' => array(
 			NS_API => 'رابط برنامه‌نویسی',
@@ -2594,7 +2594,7 @@ $wgConf->settings = array(
 		),
 		'tallerdecristianopediawiki' => array(
 			NS_TEMA => 'Tema',
-			NS_TEMA_TALK => 'Tema discusión',
+			NS_TEMA_TALK => 'Tema_discusión',
 		),
 		'thelonsdalebattalionwiki' => array(
 			NS_GLOSSARY => 'Glossary',
