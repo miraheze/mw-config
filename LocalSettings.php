@@ -5871,7 +5871,7 @@ $wgConf->settings = array(
 		'ciptamediawiki' => true,
 	),
 	'wmgUseSwiftBackend' => array(
-		'default' => true,
+		'default' => false,
 		'test1wiki' => false,
 	),
 	'wgRandomGameDisplay' => array(
