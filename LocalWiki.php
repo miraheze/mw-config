@@ -113,7 +113,11 @@ if ( $wgDBname === 'bigforestwiki' ) {
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
- 	$wgUploadDirectory = "/srv/files/ciptamediawiki";
+	if ( $wmgUseSwiftBackend ) {
+		$wgUploadDirectory = "/srv/files/ciptamediawiki";
+	} else {
+		$wgUploadDirectory = "/srv/mnt/mediawiki-static/private/ciptamediawiki";
+	}
  	$wgUploadPath = "https://ciptamedia.miraheze.org/w/img_auth.php";
 }
 
