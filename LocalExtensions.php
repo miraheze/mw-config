@@ -24,6 +24,8 @@ if ( $wmgUseAJAXPoll ) {
 
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
 }
 
 if ( $wmgUseArticleFeedbackv5 ) {
@@ -133,6 +135,8 @@ if ( $wmgUseCustomHeader ) {
 
 if ( $wmgUseDarkVector ) {
 	wfLoadSkin( 'DarkVector' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['DarkVector'] = 'darkvector';
 }
 
 if ( $wmgUseDescription2 ) {
@@ -145,6 +149,8 @@ if ( $wmgUseDismissableSiteNotice ) {
 
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['DuskToDawn'] = 'dusktodawn';
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
@@ -185,6 +191,8 @@ if ( $wmgUseElectronPdfService ) {
 
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Erudite'] = 'erudite';
 }
 
 if ( $wmgUseEventLogging) {
@@ -242,14 +250,18 @@ if ( $wmgUseFeaturedFeeds ) {
 
 if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
 }
 
 if ( $wmgUseGamepress ) {
-    wfLoadSkin( 'Gamepress' );
+	wfLoadSkin( 'Gamepress' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
 }
 
 if ( $wmgUseGeoData ) {
-    wfLoadExtension( 'GeoData' );
+	wfLoadExtension( 'GeoData' );
 }
 
 if ( $wmgUseGraph ) {
@@ -306,6 +318,8 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 
 if ( $wmgUseLiberty ) {
 	wfLoadSkin( 'liberty' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -347,6 +361,8 @@ if ( $wmgUseMediaWikiChat ) {
 
 if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Metrolook'] = 'metrolook';
 }
 
 if ( $wmgUseMobileFrontend ) {
@@ -354,6 +370,8 @@ if ( $wmgUseMobileFrontend ) {
 	wfLoadSkin( 'MinervaNeue' );
 
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
 }
 
 if ( $wmgUseModeration ) {
@@ -362,6 +380,8 @@ if ( $wmgUseModeration ) {
 
 if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['ModernSkylight'] = 'modernskylight';
 }
 
 if ( $wmgUseMsPackage ) {
@@ -411,6 +431,8 @@ if ( $wmgUseNewUserNotif ) {
 
 if ( $wmgUseNostalgia ) {
 	wfLoadSkin( 'Nostalgia' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Nostalgia'] = 'nostalgia';
 }
 
 if ( $wmgUseNoTitle ) {
@@ -456,6 +478,8 @@ if ( $wmgUsePipeEscape ) {
 
 if ( $wmgUsePivot ) {
 	wfLoadSkin( 'pivot' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Pivot'] = 'pivot';
 }
 
 if ( $wmgUsePoll ) {
@@ -503,6 +527,8 @@ if ( $wmgUseRandomSelection ) {
 
 if ( $wmgUseRefreshed ) {
 	wfLoadSkin( 'Refreshed' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Refreshed'] = 'refreshed';
 }
 
 if ( $wmgUseRelatedArticles ) {
@@ -623,6 +649,8 @@ if ( $wmgUseTocTree ) {
 
 if ( $wmgUseTweeki ) {
 	wfLoadSkin( 'Tweeki' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Tweeki'] = 'tweeki';
 }
 
 if ( $wmgUseTwoColConflict ) {
