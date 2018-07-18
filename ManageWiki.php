@@ -1037,9 +1037,9 @@ $wgManageWikiSettings = array(
 		'type' => 'list',
 		'options' => array(
 			'CologneBlue' => 'cologneblue',
-			'Modern' => 'Modern',
+			'Modern' => 'modern',
 			'MonoBook' => 'monobook',
-			'Timeless' => 'Timeless',
+			'Timeless' => 'timeless',
 			'Vector' => 'vector',
 		),
 		'overridedefault' => 'vector',
