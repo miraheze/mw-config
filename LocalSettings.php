@@ -2353,17 +2353,7 @@ $wgConf->settings = array(
 
 	// MsUpload settings
 	'wgMSU_useDragDrop' => array(
-		'default' => false,
-		'anduinwiki' => true,
-		'bigforestwiki' => true,
-		'calexitwiki' => true,
-		'jayuwikiwiki' => true,
-		'modularwiki' => true,
-		'scruffywiki' => true,
-		'sdiywiki' => true,
-		'shortwikiwiki' => true,
-		'showmedicinawiki' => true,
-		'wixosswiki' => true,
+		'default' => true,
 	),
 
 	'wgMSU_showAutoCat' => array(
