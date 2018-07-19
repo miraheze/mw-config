@@ -12,7 +12,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td>We will be doing image maintenance at 23:00 UTC. You may notice images not appearing. We will be disabling uploads to allow us to move to different software for our file store. We apologize for any inconvenience caused by this.</td>
+                <td>We will be doing image maintenance on the 18, July, 2018 at 23:00 UTC. You may notice images not appearing. We will be disabling uploads to allow us to move to different software for our file store. We apologize for any inconvenience caused by this.</td>
                 </tr></tbody></table>
 EOF;
          }
