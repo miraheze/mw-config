@@ -5971,11 +5971,7 @@ $wgGroupPermissions['bureaucrat']['userrights'] = false;
 $wgGroupPermissions['sysop']['bigdelete'] = false;
 
 // Needs to be set AFTER $wgDBname is set to a correct value
-if ( $wmgUseSwiftBackend ) {
-	$wgUploadDirectory = "/srv/files/$wgDBname";
-} else {
-	$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
-}
+$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
