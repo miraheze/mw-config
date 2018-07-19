@@ -1469,6 +1469,7 @@ $wgConf->settings = array(
 		'carmeigatwiki' => false,
 		'cmgwiki' => false,
 		'corydoctorowwiki' => false,
+		'horizonwiki' => false,
 		'izanagiwiki' => false,
 		'jawptestwiki' => false,
 		'macfan4000wiki' => false,
