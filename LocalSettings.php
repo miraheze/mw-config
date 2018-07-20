@@ -3494,6 +3494,11 @@ $wgConf->settings = array(
 				'chatmod',
 			),
 		),
+		'+marthaspeakswiki' => array(
+			'sysop' => array(
+				'templateeditor',
+			),
+		),
 		'+madgendersciencewiki' => array(
 			'sysop' => array(
 				'scholar',
@@ -3578,6 +3583,11 @@ $wgConf->settings = array(
 		'+ssptopwiki' => array(
 			'sysop' => array(
 				'read-only',
+			),
+		),
+		'+thesciencearchiveswiki' => array(
+			'sysop' => array(
+				'templateeditor',
 			),
 		),
 		'+trexwiki' => array(
@@ -4118,6 +4128,14 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+marthaspeakswiki' => array(
+			'sysop' => array(
+				'templateeditor' => true,
+			),
+			'templateeditor' => array(
+				'templateeditor' => true,
+			),
+		),
 		'+metawiki' => array(
 			'abuse' => array(
 				'centralauth-lock' => true,
@@ -4478,6 +4496,14 @@ $wgConf->settings = array(
 				'commentadmin' => true,
 			),
 		),
+		'+thesciencearchiveswiki' => array(
+			'sysop' => array(
+				'templateeditor' => true,
+			),
+			'templateeditor' => array(
+				'templateeditor' => true,
+			),
+		),
 		'+trexwiki' => array(
 			'co' => array(
 				'co' => true,
@@ -4751,6 +4777,11 @@ $wgConf->settings = array(
 				'scholar',
 			),
 		),
+		'+marthaspeakswiki' => array(
+			'sysop' => array(
+				'templateeditor',
+			),
+		),
 		'+metawiki' => array(
 			'sysop'	=> array(
 				'flood',
@@ -4889,6 +4920,11 @@ $wgConf->settings = array(
 			),
 			'bureaucrat' => array(
 				'bureaucrat'
+			),
+		),
+		'+thesciencearchiveswiki' => array(
+			'sysop' => array(
+				'templateeditor',
 			),
 		),
 		'+trexwiki' => array(
@@ -5106,6 +5142,9 @@ $wgConf->settings = array(
 			'bureaucrat',
 			'devteam',
 		),
+		'+marthaspeakswiki' => array(
+			'templateeditor',
+		),
 		'+sau226wiki' => array(
 			'bureaucrat',
 			'consul',
@@ -5126,6 +5165,9 @@ $wgConf->settings = array(
 		),
 		'+studynotekrwiki' => array(
 			'voter',
+		),
+		'+thesciencearchiveswiki' => array(
+			'templateeditor',
 		),
 		'+trexwiki' => array(
 			'sysmag',
