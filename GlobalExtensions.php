@@ -44,7 +44,3 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr'
 ] );
-
-$wgTimelineFileBackend = 'miraheze-swift';
-
-$wgMathFileBackend = 'miraheze-swift';
