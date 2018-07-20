@@ -3321,6 +3321,7 @@ $wgConf->settings = array(
 	// Pagelang
 	'wgPageLanguageUseDB' => array(
 		'default' => false,
+		'nvcwiki' => true,
 		'spiralwiki' => true,
 	),
 
