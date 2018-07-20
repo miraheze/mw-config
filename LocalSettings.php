@@ -1863,7 +1863,7 @@ $wgConf->settings = array(
 
 	// Files
 	'wgEnableUploads' => array(
-		'default' => false,
+		'default' => true,
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
