@@ -5142,6 +5142,9 @@ $wgConf->settings = array(
 			'bureaucrat',
 			'devteam',
 		),
+		'+marthaspeakswiki' => array(
+			'templateeditor',
+		),
 		'+sau226wiki' => array(
 			'bureaucrat',
 			'consul',
@@ -5162,6 +5165,9 @@ $wgConf->settings = array(
 		),
 		'+studynotekrwiki' => array(
 			'voter',
+		),
+		'+thesciencearchiveswiki' => array(
+			'templateeditor',
 		),
 		'+trexwiki' => array(
 			'sysmag',
