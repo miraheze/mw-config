@@ -4264,6 +4264,11 @@ $wgConf->settings = array(
 				'titleblacklistlog' => true,
 			),
 		),
+		'+nvcwiki' => array(
+			'sysop' => array(
+				'pagelang' => true,
+			),
+		),
 		'+olegcinemawiki' => array(
 			'arbcom' => array(
 				'browsearchive' => true,
