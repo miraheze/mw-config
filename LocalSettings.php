@@ -226,6 +226,8 @@ define( 'NS_CALENDAR', 1798);
 define( 'NS_CALENDAR_TALK', 1799);
 define( 'NS_ENCYCLOPEDIA', 1800);
 define( 'NS_ENCYCLOPEDIA_TALK', 1801);
+define( 'NS_QURAN', 1802);
+define( 'NS_QURAN_TALK', 1803);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2742,6 +2744,10 @@ $wgConf->settings = array(
 			NS_CALENDAR_TALK => 'بحث گاه‌شمار',
 			NS_ENCYCLOPEDIA => 'دانش‌نامه',
 			NS_ENCYCLOPEDIA => 'بحث دانش‌نامه',
+			NS_PORTAL => 'درگاه',
+			NS_PORTAL_TALK => 'بحث درگاه',
+			NS_QURAN => 'قرآن',
+			NS_QURAN_TALK => 'بحث قرآن',
 		),
 		'wisdomwikiwiki' => array(
 			NS_LCS	=> 'LCS',
