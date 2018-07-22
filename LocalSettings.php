@@ -5341,6 +5341,7 @@ $wgConf->settings = array(
 		'taotacwiki' => 'https://wiki.taotac.org',
 		'testwiki' => 'https://publictestwiki.com',
 		'toonpediawiki' => 'https://toonpedia.cf',
+		'ttinfowiki' => 'https://taotac.info',
 		'tulpawiki' => 'https://wiki.tulpa.info',
 		'reviwiki' => 'https://private.revi.wiki',
 		'reviwbwiki' => 'https://wikibase.revi.wiki',
@@ -5657,6 +5658,7 @@ $wgConf->settings = array(
 			'www\.splat-teams\.com',
 			'takethatwiki\.com',
 			'wiki\.taotac.org',
+			'taotac\.info'.
 			'wiki\.teessidehackspace\.org\.uk',
 			'wiki\.tensorflow\.community',
 			'thelonsdalebattalion\.co.uk',
