@@ -1050,14 +1050,14 @@ $wgManageWikiSettings = array(
 		'requires' => false,
 		'type' => 'text',
 		'overridedefault' => null,
-                'help' => false,
+                'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,
 		'type' => 'text',
 		'overridedefault' => null,
-                'help' => false,
+                'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
 	'wmgWikiLicense' => array(
 		'name' => 'Content License',
