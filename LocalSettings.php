@@ -2109,7 +2109,7 @@ $wgConf->settings = array(
 		'sau226wiki' => 'consul',
 		'testwiki' => 'consul',
 	),
-	'wgManageWikiHelpPage' => array(
+	'wgManageWikiHelpUrl' => array(
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
 	),
 
