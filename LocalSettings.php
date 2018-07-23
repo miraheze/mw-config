@@ -1966,7 +1966,7 @@ $wgConf->settings = array(
 	'wgUseGlobalSiteCssJs' => array(
 		'default' => false,
 	),
-	
+
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => array(
 		'default' => 'centralauth',
@@ -2004,7 +2004,7 @@ $wgConf->settings = array(
 	'wgInterwikiCentralDB' => array(
 		'default' => 'metawiki',
 	),
-	
+
 	//Imports
 	'wgImportSources' => array(
 		'default' => array(
@@ -2124,6 +2124,17 @@ $wgConf->settings = array(
 			NS_MAIN,
 			NS_PROJECT,
 		),
+	),
+
+	// MatomoAnalytics
+	'wgMatomoAnalyticsDatabase' => array(
+		'default' => 'metawiki',
+	),
+	'wgMatomoAnalyticsServerURL' => array(
+		'default' => 'https:////piwik.miraheze.org/',
+	),
+	'wgMatomoAnalyticsUseDB' => array(
+		'default' => true,
 	),
 
 	// Metrolook settings
@@ -5075,13 +5086,6 @@ $wgConf->settings = array(
 		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
 	),
 
-	// Piwik settings
-	'wmgPiwikSiteID' => array(
-		'default' => '1',
-		'allthetropeswiki' => '2',
-		'nonbinarywiki' => '3',
-	),
-
 	// RateLimits
 	'+wgRateLimits' => array(
 		'default' => array(),
@@ -6023,6 +6027,7 @@ $wgGroupPermissions['sysop']['bigdelete'] = false;
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
+$wgMatomoAnalyticsSiteID = MatomoAnalytics::getSiteID( $wgDBname );
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );

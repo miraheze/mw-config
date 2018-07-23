@@ -29,6 +29,7 @@ wfLoadExtensions( [
 	'ManageWiki',
 	'MassMessage',
 	'Math',
+	'MatomoAnalytics',
 	'MirahezeMagic',
 	'Nuke',
 	'OATHAuth',
