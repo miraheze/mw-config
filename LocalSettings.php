@@ -6027,7 +6027,7 @@ $wgGroupPermissions['sysop']['bigdelete'] = false;
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
-$wgMatomoAnalyticsSiteID = MatomoAnalytics::getSiteID( $wgDBname );
+//$wgMatomoAnalyticsSiteID = MatomoAnalytics::getSiteID( $wgDBname );
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
