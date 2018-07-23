@@ -2109,6 +2109,9 @@ $wgConf->settings = array(
 		'sau226wiki' => 'consul',
 		'testwiki' => 'consul',
 	),
+	'wgManageWikiHelpPage' => array(
+		'default' => '//meta.miraheze.org/wiki/ManageWiki',
+	),
 
 	// MassMessage
 	'wgAllowGlobalMessaging' => array(
