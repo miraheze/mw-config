@@ -1064,7 +1064,7 @@ $wgManageWikiSettings = array(
 	),
 	'wgServer' => array(
 		'name' => 'Custom Domain',
-		'requires' => 'sysadmin assistance',
+		'requires' => false,
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => null,
