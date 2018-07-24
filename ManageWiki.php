@@ -1088,6 +1088,6 @@ $wgManageWikiSettings = array(
 			'No license provided' => 'empty',
 		),
 		'overridedefault' => 'cc-by-sa',
-                'help' => false,
+		'help' => false,
 	),
 );
