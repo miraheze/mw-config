@@ -1034,6 +1034,7 @@ $wgManageWikiSettings = array(
 	'wgDefaultSkin' => array(
 		'name' => 'Default Skin',
 		'requires' => false,
+		'restricted' => false,
 		'type' => 'list',
 		'options' => array(
 			'CologneBlue' => 'cologneblue',
@@ -1043,25 +1044,28 @@ $wgManageWikiSettings = array(
 			'Vector' => 'vector',
 		),
 		'overridedefault' => 'vector',
-                'help' => false,
+		'help' => false,
 	),
 	'wgFavicon' => array(
 		'name' => 'Favicon',
 		'requires' => false,
+		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
-                'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
+		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,
+		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
-                'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
+		'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
 	'wmgWikiLicense' => array(
 		'name' => 'Content License',
 		'requires' => false,
+		'restricted' => false,
 		'type' => 'list',
 		'options' => array(
 			'All Rights Reserved' => 'arr',
@@ -1076,6 +1080,6 @@ $wgManageWikiSettings = array(
 			'No license provided' => 'empty',
 		),
 		'overridedefault' => 'cc-by-sa',
-                'help' => false,
+		'help' => false,
 	),
 );
