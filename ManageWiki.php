@@ -1062,6 +1062,14 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
+	'wgServer' => array(
+		'name' => 'Custom Domain',
+		'requires' => false,
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => null,
+		'help' => 'This sets your custom domain. Otherwise it defaults to submdomain.miraheze.org.',
+	),
 	'wmgWikiLicense' => array(
 		'name' => 'Content License',
 		'requires' => false,
