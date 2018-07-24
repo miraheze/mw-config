@@ -1062,6 +1062,7 @@ $wgManageWikiSettings = array(
 	'wgServer' => array(
 		'name' => 'Custom Domain',
 		'requires' => 'sysadmin assistance',
+		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => null,
 		'help' => 'This sets your custom domain. Otherwise it defaults to submdomain.miraheze.org.',
