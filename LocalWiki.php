@@ -311,8 +311,7 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgGroupPermissions['*']['writeapi'] = false;
  	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
  	$wgGroupPermissions['*']['viewmywatchlist'] = false;
- 	$wgGroupPermissions['sysop']['importupload'] = false;
- 	$wgGroupPermissions['sysop']['import'] = false;
+	$wgGroupPermissions['*']['oathauth-enable'] = false;
  	$wgGroupPermissions['sysop']['markbotedits'] = false;
  	$wgGroupPermissions['sysop']['mergehistory'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
@@ -321,8 +320,8 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgGroupPermissions['sysop']['override-antispoof'] = false;
  	$wgGroupPermissions['sysop']['editusercss'] = false;
  	$wgGroupPermissions['sysop']['edituserjs'] = false;
+	$wgGroupPermissions['sysop']['edituserjson'] = false;
  	$wgGroupPermissions['sysop']['editinterface'] = false;
- 	$wgGroupPermissions['user']['read'] = true;
  	$wgGroupPermissions['user']['changetags'] = false;
  	$wgGroupPermissions['user']['applychangetags'] = false;
  	$wgGroupPermissions['user']['editcontentmodel'] = false;
@@ -338,10 +337,6 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgGroupPermissions['steward']['centralauth-lock'] = false;
  	$wgGroupPermissions['steward']['centralauth-oversight'] = false;
 	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
- 	$wgAddGroups['sysop'] = array();
- 	$wgRemoveGroups['sysop'] = array();
- 	$wgAddGroups['bureaucrat'] = array();
- 	$wgRemoveGroups['bureaucrat'] = array();
  	unset( $wgGroupPermissions['oversight'] ); // grandfathered into the local "steward" group
 
         $wgExtensionFunctions[] = function() {
