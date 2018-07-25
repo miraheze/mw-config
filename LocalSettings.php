@@ -3758,7 +3758,7 @@ $wgConf->settings = array(
 				'autopatrolled'
 			),
 		),
-		'+weatherwiki' => array(
+		'weatherwiki' => array(
  			'founder' => array(
  				'bureaucrat',
  				'founder',
@@ -5146,7 +5146,7 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
-		'+weatherwiki' => array(
+		'weatherwiki' => array(
  			'founder' => array(
  				'bureaucrat',
 				'sysop',
