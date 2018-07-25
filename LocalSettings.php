@@ -1619,6 +1619,9 @@ $wgConf->settings = array(
 	'wmgUseReplaceText' => array(
 		'default' => false,
 	),
+	'wmgUseRevisionSlider' => array(
+		'default' => false,
+	),
 	'wmgUseRSS' => array(
 		'default' => false,
 	),
