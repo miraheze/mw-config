@@ -657,6 +657,10 @@ if ( $wmgUseTwoColConflict ) {
 	wfLoadExtension( 'TwoColConflict' );
 }
 
+if ( $wmgUseUploadsLink ) {
+	wfLoadExtension( 'UploadsLink' );
+}
+
 if ( $wmgUseUrlGetParameters ) {
 	require_once( "$IP/extensions/UrlGetParameters/UrlGetParameters.php" );
 }

@@ -921,6 +921,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'uploadslink' => array(
+			'name' => 'UploadsLink',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:UploadsLink',
+			'var' => 'wmgUseUploadsLink',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'urlgetparameters' => array(
 			'name' => 'UrlGetParamters',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:UrlGetParameters',
