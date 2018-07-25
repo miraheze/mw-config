@@ -1009,7 +1009,7 @@ $wgManageWikiExtensions = array(
  * Type can be either: check, list, list-multi, matrix, text, url or wikipage.
  *
  * check: adds a checkbox.
- * list: DO NOT USE.
+ * list: adds a list of options (requires: options which is an array in form of display => internal value).
  * list-multi: DO NOT USE.
  * matrix: DO NOT USE.
  * text: adds a single line text entry.
@@ -1021,6 +1021,7 @@ $wgManageWikiExtensions = array(
  * name: the displayed name of the setting on Special:ManageWiki.
  * requires: a text entry of which extension is required for this setting to work.
  * overridedefault: a string/array override default when no existing value exist.
+ * restricted: boolean - requires managewiki-restricted to change.
  */
 $wgManageWikiSettings = array(
 	'wgDefaultSkin' => array(
