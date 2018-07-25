@@ -1457,9 +1457,6 @@ $wgConf->settings = array(
 	'wmgUseLinkTarget' => array(
 		'default' => false,
 	),
-	'wmgUseLoginNotify' => array(
-		'default' => false,
-	),
 	'wmgUseLoopsCombo' => array(
 		'default' => false,
 	),
