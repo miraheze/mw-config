@@ -343,7 +343,6 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgAddGroups['bureaucrat'] = array();
  	$wgRemoveGroups['bureaucrat'] = array();
  	unset( $wgGroupPermissions['oversight'] ); // grandfathered into the local "steward" group
-	unset( $wgGroupPermissions['checkuser'] ); // grandfathered into the local "steward" group
 
         $wgExtensionFunctions[] = function() {
                 if ( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {
