@@ -1341,6 +1341,7 @@ $wgConf->settings = array(
 	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
+		'weatherwiki' => false,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
@@ -1963,6 +1964,7 @@ $wgConf->settings = array(
 	'wgApplyGlobalBlocks' => array(
 		'default' => true,
 		'metawiki' => false,
+		'weatherwiki' => false, // let me do the blocking on my wiki, please.  -Amanda
 	),
 	'wgGlobalBlockingDatabase' => array(
 		'default' => 'centralauth', // use centralauth for global blocks
@@ -2128,6 +2130,7 @@ $wgConf->settings = array(
 		'pruebawiki' => 'consul',
 		'sau226wiki' => 'consul',
 		'testwiki' => 'consul',
+		'weatherwiki' => 'founder',
 	),
 	'wgManageWikiHelpUrl' => array(
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
@@ -3753,6 +3756,25 @@ $wgConf->settings = array(
 				'autopatrolled'
 			),
 		),
+		'+weatherwiki' => array(
+ 			'founder' => array(
+ 				'bot',
+ 				'autopatrolled',
+ 				'rollbacker',
+ 				'confirmed',
+ 				'sysop',
+ 				'bureaucrat',
+ 				'founder',
+ 				'ipblock-exempt',
+ 				'banned',
+ 				'researcher',
+ 				'page-mover',
+ 				'importer',
+ 				'uploader',
+ 				'account-creator',
+ 				'massmessage-sender',
+ 			),
+ 		),	
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4659,6 +4681,95 @@ $wgConf->settings = array(
 				'upload' => true,
 			),
 		),
+			'+weatherwiki' => array(
+ 			'bureaucrat' => array(
+ 				'markbotedits' => true,
+ 				'mergehistory' => true,
+ 				'editcontentmodel' => true,
+ 				'unwatchedpages' => true,
+				'abusefilter-modify-restricted' => true,
+ 				'abusefilter-revert' => true,
+ 			),
+ 			'steward' => array(
+ 				'userrights' => true,
+ 				'userrights-interwiki' => true,
+				'interwiki' => true,
+ 				'hideuser' => true,
+ 				'suppressrevision' => true,
+ 				'suppressionlog' => true,
+ 				'viewsuppressed' => true,
+ 				'checkuser' => true,
+ 				'checkuser-log' => true,
+ 				'renameuser' => true,
+ 				'siteadmin' => true,
+ 				'abusefilter-private' => true,
+ 				'abusefilter-hide-log' => true,
+ 				'abusefilter-hidden-log' => true,
+ 			),
+ 			'researcher' => array(
+ 				'abusefilter-view-private' => true,
+ 				'abusefilter-log-private' => true,
+ 				'titleblacklistlog' => true,
+ 				'autopatrol' => true,
+ 				'browsearchive' => true,
+ 				'deletedhistory' => true,
+ 				'deletedtext' => true,
+ 			),
+ 			'page-mover' => array(
+ 				'move' => true,
+				'move-categorypages' => true,
+ 				'move-subpages' => true,
+ 				'move-rootuserpages' => true,
+				'movefile' => true,
+ 				'suppressredirect' => true,
+ 			),
+			'uploader' => array(
+ 				'upload' => true,
+ 				'reupload' => true,
+ 				'reupload-shared' => true,
+			),
+ 			'importer' => array(
+ 				'import' => true,
+ 				'importupload' => true,
+ 			),
+ 			'sysop' => array(
+ 				'managechangetags' => true,
+ 				'deletechangetags' => true,
+ 				'applychangetags' => true,
+ 				'changetags' => true,
+ 				'massmessage' => true,
+ 			),
+ 			'founder' => array(
+ 				'globalblock-exempt' => true,
+ 				'editinterface' => true,
+ 				'editusercss' => true,
+ 				'edituserjs' => true,
+ 				'protectsite' => true,
+ 				'editprojectpage' => true,
+ 			),
+ 			'user' => array(
+ 				'editmyoptions' => true,
+ 				'editmyprivateinfo' => true,
+ 				'editmyusercss' => true,
+ 				'editmyuserjs' => true,
+ 				'editmywatchlist' => true,
+ 				'viewmyprivateinfo' => true,
+ 				'viewmywatchlist' => true,
+ 				'read' => true,
+ 			),
+ 			'ipblock-exempt' => array(
+ 				'ipblock-exempt' => true,
+ 			),
+ 			'account-creator' => array(
+ 				'override-antispoof' => true,
+ 				'noratelimit' => true,
+ 				'tboverride' => true,
+ 				'tboverride-account' => true,
+ 			),
+ 			'massmessage-sender' => array(
+ 				'massmessage' => true, 
+ 			),
+		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
 		'default' => array(),
@@ -5025,6 +5136,25 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+weatherwiki' => array(
+ 			'founder' => array(
+ 				'bot',
+				'autopatrolled',
+ 				'rollbacker',
+ 				'confirmed',
+ 				'sysop',
+ 				'bureaucrat',
+ 				'founder',
+ 				'ipblock-exempt',
+				'banned',
+ 				'researcher',
+ 				'page-mover',
+ 				'importer',
+ 				'uploader',
+ 				'account-creator',
+ 				'massmessage-sender',
+				
+		),
 	),
 	'wgRevokePermissions' => array(
 		'default' => array(),
@@ -5038,6 +5168,19 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'weatherwiki' => array(
+ 			'banned' => array(
+ 				'editmyoptions' => true,
+ 				'editmyprivateinfo' => true,
+ 				'editmyusercss' => true,
+ 				'editmyuserjs' => true,
+ 				'editmywatchlist' => true,
+ 				'read' => true,
+ 				'writeapi' => true,
+ 				'viewmyprivateinfo' => true,
+ 				'viewmywatchlist' => true,
+ 			),
+ 		),
 	),
 	'wgAutopromote' => array(
 		'default' => array(
