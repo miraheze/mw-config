@@ -492,8 +492,12 @@ $wgConf->settings = array(
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	),
 	
-	// Comments
 	'wgCommentsInRecentChanges' => array(
+		'default' => false,
+		'newusopediawiki' => true,
+	),
+	
+	'wgCommentsSortDescending' => array(
 		'default' => false,
 		'newusopediawiki' => true,
 	),
