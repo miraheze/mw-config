@@ -1011,21 +1011,6 @@ $wgManageWikiExtensions = array(
 		),
 );
 
-$identifiers = DateTimeZone::listIdentifiers(DateTimeZone::ALL);
-
-$timeZoneList = [];
-if ( $identifiers !== false ) {
-	sort( $identifiers );
-
-	foreach ( $identifiers as $identifier ) {
-		$parts = explode( '/', $identifier, 2 );
-		if ( count( $parts ) !== 2 && $parts[2] === 'Etc/Utc' ) {
-			continue;
-		}
-		$timeZoneList[$identifier] = $identifier;
-	}
-}
-
 /**
  * ManageWiki settings are added using the variable below.
  *
@@ -1074,7 +1059,7 @@ $wgManageWikiSettings = array(
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'list',
-		'options' => $timeZoneList,
+		'options' => ManageWiki::getTimezoneList(),
 		'help' => false,
 	),
 	'wgLogo' => array(
