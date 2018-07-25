@@ -26,6 +26,7 @@ wfLoadExtensions( [
 	'InputBox',
 	'Interwiki',
 	'LocalisationUpdate',
+	'LoginNotify',
 	'ManageWiki',
 	'MassMessage',
 	'Math',
