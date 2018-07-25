@@ -1058,8 +1058,7 @@ $wgManageWikiSettings = array(
 		'name' => 'Timezone',
 		'requires' => false,
 		'restricted' => false,
-		'type' => 'list',
-		'options' => ManageWiki::getTimezoneList(),
+		'type' => 'timezone',
 		'help' => false,
 	),
 	'wgLogo' => array(
