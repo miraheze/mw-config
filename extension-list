@@ -74,6 +74,7 @@ $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/LinkTarget.php
+$IP/extensions/Listings/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
 $IP/extensions/LoginNotify/extension.json
 $IP/extensions/Loops/Loops.php
@@ -174,6 +175,7 @@ $IP/extensions/WikiForum/extension.json
 $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikiTextLoggedInOut/extension.json
 $IP/extensions/Wikibase/repo/Wikibase.php
+$IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/YouTube.php
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
