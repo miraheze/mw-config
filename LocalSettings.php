@@ -1457,6 +1457,9 @@ $wgConf->settings = array(
 	'wmgUseLinkTarget' => array(
 		'default' => false,
 	),
+	'wmgUseListings' => array(
+		'default' => false,
+	),
 	'wmgUseLoopsCombo' => array(
 		'default' => false,
 	),
@@ -1724,6 +1727,9 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseWikibaseRepository' => array(
+		'default' => false,
+	),
+	'wmgUseWikidataPageBanner' => array(
 		'default' => false,
 	),
 	'wmgUseWikiForum' => array(

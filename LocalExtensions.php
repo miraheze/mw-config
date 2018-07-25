@@ -330,6 +330,10 @@ if ( $wmgUseLinkTarget ) {
 	require_once( "$IP/extensions/LinkTarget/LinkTarget.php" );
 }
 
+if ( $wmgUseListings ) {
+	wfLoadExtension( 'Listings' );
+}
+
 if ( $wmgUseLoopsCombo ) {
 	require_once( "$IP/extensions/Variables/Variables.php" );
 	require_once( "$IP/extensions/Loops/Loops.php");
@@ -708,6 +712,10 @@ if ( $wmgUseWhoIsWatching ) {
 
 if ( $wmgUseWidgets ) {
 	require_once( "$IP/extensions/Widgets/Widgets.php" );
+}
+
+if ( $wmgUseWikidataPageBanner ) {
+	wfLoadExtension( 'WikidataPageBanner' );
 }
 
 if ( $wmgUseWikibaseRepository ) {
