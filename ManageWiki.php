@@ -441,14 +441,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'loginnotify' => array(
-			'name' => 'Login Notify',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:LoginNotify',
-			'var' => 'wmgUseLoginNotify',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'loopscombo' => array(
 			'name' => 'Loops',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Loops',
