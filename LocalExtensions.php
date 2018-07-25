@@ -541,6 +541,10 @@ if ( $wmgUseReplaceText ) {
 	wfLoadExtension( 'ReplaceText' );
 }
 
+if ( $wmgUseRevisionSlider ) {
+	wfLoadExtension( 'RevisionSlider' );
+}
+
 if ( $wmgUseRSS ) {
 	wfLoadExtension( 'RSS' );
 	$wgRSSUrlWhitelist = array( "*" );

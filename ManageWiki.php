@@ -753,6 +753,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'revisionslider' => array(
+			'name' => 'RevisionSlider',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:RevisionSlider',
+			'var' => 'wmgUseRevisionSlider',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'rss' => array(
 			'name' => 'RSS',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RSS',
