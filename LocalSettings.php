@@ -4745,8 +4745,6 @@ $wgConf->settings = array(
  				'editinterface' => true,
  				'editusercss' => true,
  				'edituserjs' => true,
- 				'protectsite' => true,
- 				'editprojectpage' => true,
  			),
  			'user' => array(
  				'editmyoptions' => true,
