@@ -267,14 +267,32 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
+	'wgAbuseFilterBlockDuration' => array(
+		'default' = 'indefinte',
+		'weatherwiki' = '1 week',
+	),
 	'wgAbuseFilterAnonBlockDuration' => array(
 		'default' => 2592000,
+		'weatherwiki' => '72 hours',
 	),
+	'wgAbuseFilterRestrictions' => array(
+ -		'default' => array(
+ -			'blockautopromote' => true,
+ -			'block' => true,
+ -			'degroup' => true,
+ -			'rangeblock' => true,
+ -		),
+ -		'weatherwiki' => array(
+ -			'blockautopromote' => false,
+ -			'block' => false,
+ -			'degroup' => false,
+ -			'rangeblock' => true,
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => array(
 		'default' => 5,
 		'proxybotwiki' => 7,
+		'weatherwiki' => 6,
 	),
 	'wgAutoConfirmAge' => array(
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
@@ -1206,6 +1224,7 @@ $wgConf->settings = array(
 	// Echo
 	'wgEchoCrossWikiNotifications' => array(
 		'default' => true,
+		'weatherwiki' => false,
 	),
 	'wgEchoUseJobQueue' => array(
 		'default' => true,
@@ -1218,6 +1237,7 @@ $wgConf->settings = array(
 	),
 	'wgEchoUseCrossWikiBetaFeature' => array(
 		'default' => true,
+		'weatherwiki' => false,
 	),
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
  	'wgExemptFromUserRobotsControl' => array(
