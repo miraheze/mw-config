@@ -1051,6 +1051,7 @@ $wgManageWikiSettings = array(
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'timezone',
+		'overridedefault' => 'UTC',
 		'help' => false,
 	),
 	'wgLogo' => array(
