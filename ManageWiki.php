@@ -1069,14 +1069,14 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
-        'wgLocaltimezone' => array(
-                'name' => 'Timezone',
-                'requires' => false,
+	'wgLocaltimezone' => array(
+		'name' => 'Timezone',
+		'requires' => false,
 		'restricted' => false,
-                'type' => 'list',
-                'options' => $timeZoneList,
-                'help' => false,
-        ),
+		'type' => 'list',
+		'options' => $timeZoneList,
+		'help' => false,
+	),
 	'wgLogo' => array(
 		'name' => 'Logo',
 		'requires' => false,
