@@ -6060,6 +6060,14 @@ foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
         }
 }
 
+if ( $wgDBname === 'weatherwiki' ) {
+        $wgExtensionFunctions[] = function() {
+                if ( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {
+                        unset( $GLOBALS['wgGroupPermissions']['checkuser'] );
+                }
+        };
+}
+
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
 foreach ( $wmgPrivateDatabasesList as $database ) {
 	$database = trim( $database );
