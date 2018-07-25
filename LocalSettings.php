@@ -1694,6 +1694,9 @@ $wgConf->settings = array(
 	'wmgUseTwoColConflict' => array(
 		'default' => false,
 	),
+	'wmgUseUploadsLink' => array(
+		'default' => false,
+	),
 	'wmgUseUrlGetParameters' => array(
 		'default' => false,
 	),
