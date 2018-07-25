@@ -4682,7 +4682,7 @@ $wgConf->settings = array(
 				'upload' => true,
 			),
 		),
-			'+weatherwiki' => array(
+		'+weatherwiki' => array(
  			'bureaucrat' => array(
  				'markbotedits' => true,
  				'mergehistory' => true,
@@ -5154,7 +5154,7 @@ $wgConf->settings = array(
  				'uploader',
  				'account-creator',
  				'massmessage-sender',
-				
+			),
 		),
 	),
 	'wgRevokePermissions' => array(
