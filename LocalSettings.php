@@ -268,8 +268,8 @@ $wgConf->settings = array(
 		'metawiki' => true,
 	),
 	'wgAbuseFilterBlockDuration' => array(
-		'default' = 'indefinte',
-		'weatherwiki' = '1 week',
+		'default' => 'indefinte',
+		'weatherwiki' => '1 week',
 	),
 	'wgAbuseFilterAnonBlockDuration' => array(
 		'default' => 2592000,
