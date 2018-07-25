@@ -5395,6 +5395,7 @@ $wgConf->settings = array(
 		'lothuialethwiki' => 'noindex,nofollow',
 		'paddelnwiki' => 'noindex,nofollow',
 		'reviwikiwiki' => 'noindex,nofollow',
+		'zhdelwiki' => 'noindex,nofollow',
 	),
 
 	// RSS Settings
