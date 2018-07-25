@@ -5386,6 +5386,7 @@ $wgConf->settings = array(
 			'delete',
 			'protect',
 		),
+		'weatherwiki' => array(),
 	),
 
 	// Robot policy
