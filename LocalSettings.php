@@ -2242,6 +2242,7 @@ $wgConf->settings = array(
 			'bitcoindebateswiki',
 			'bpwiki',
 			'cmgwiki',
+			'crazybloxianempireinfowiki',
 			'dditecwiki',
 			'geomasterywiki',
 			'lexiquewiki',
