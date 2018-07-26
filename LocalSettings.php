@@ -3570,6 +3570,13 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'templateeditor',
 			),
+			'bureaucrat' => array(
+				'epcoordinator',
+				'epcampus',
+				'eponline',
+				'epinstructor',
+			),
+				
 		),
 		'+madgendersciencewiki' => array(
 			'sysop' => array(
@@ -3660,6 +3667,12 @@ $wgConf->settings = array(
 		'+thesciencearchiveswiki' => array(
 			'sysop' => array(
 				'templateeditor',
+			),
+			'bureaucrat' => array(
+				'epcoordinator',
+				'epcampus',
+				'eponline',
+				'epinstructor',
 			),
 		),
 		'+trexwiki' => array(
@@ -4974,6 +4987,12 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'templateeditor',
 			),
+			'bureaucrat' => array(
+				'epcoordinator',
+				'epcampus',
+				'eponline',
+				'epinstructor',
+			),
 		),
 		'+metawiki' => array(
 			'sysop'	=> array(
@@ -5118,6 +5137,12 @@ $wgConf->settings = array(
 		'+thesciencearchiveswiki' => array(
 			'sysop' => array(
 				'templateeditor',
+			),
+			'bureaucrat' => array(
+				'epcoordinator',
+				'epcampus',
+				'eponline',
+				'epinstructor',
 			),
 		),
 		'+trexwiki' => array(
