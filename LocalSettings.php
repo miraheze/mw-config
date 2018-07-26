@@ -1909,6 +1909,10 @@ $wgConf->settings = array(
 		'ndwiki' => true,
 		'nonbinarywiki' => true,
 	),
+	'wgAllowTitlesInSVG' => array(
+		'default' => false,
+		'vsfan' => true,
+	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
 		'entropediawiki' => true,
