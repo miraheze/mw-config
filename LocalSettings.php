@@ -4773,7 +4773,11 @@ $wgConf->settings = array(
  				'ipblock-exempt' => true,
  			),
  			'massmessage-sender' => array(
- 				'massmessage' => true, 
+ 				'massmessage' => true,
+				'newsletter-create' => true,
+				'newsletter-manage' => true,
+				'newsletter-delete' => true,
+				'newsletter-restore' => true,
  			),
 		),
 	),
