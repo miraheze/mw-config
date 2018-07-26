@@ -1175,6 +1175,9 @@ $wgConf->settings = array(
 		'+utamacrosswiki' => array(
 			'anon' => true,
 		),
+		'+vsfan' => array(
+			'edit' => false,
+		),
 		'+welcomewiki' => array(
 			'anon' => true,
 		),
@@ -1913,6 +1916,10 @@ $wgConf->settings = array(
 		'macfan4000wiki' => true,
 		'ndwiki' => true,
 		'nonbinarywiki' => true,
+	),
+	'wgAllowTitlesInSVG' => array(
+		'default' => false,
+		'vsfan' => true,
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
@@ -4677,33 +4684,6 @@ $wgConf->settings = array(
 				'editinterface' => true,
 			),
 		),
-		'+whentheycrywiki' => array(
-			'user' => array(
-				'createtalk',
-				'edit-create',
-			),
-		),
-		'+wikipucwiki' => array(
-			'*' => array(
-				'ajaxpoll-vote' => true,
-				'ajaxpoll-view-results' => true,
-				'voteny' => true,
-				'upload' => true,
-			),
-		),
-		'+yeoksawiki' => array(
-			'sysop' => array(
-				'project-edit' => true,
-			),
-		),
-		'+zhdelwiki' => array(
-			'confirmed' => array(
-				'createpage' => true,
-				'edit' => true,
-				'move' => true,
-				'upload' => true,
-			),
-		),
 		'+weatherwiki' => array(
  			'bureaucrat' => array(
  				'markbotedits' => true,
@@ -4796,6 +4776,33 @@ $wgConf->settings = array(
  			'massmessage-sender' => array(
  				'massmessage' => true, 
  			),
+		),
+		'+whentheycrywiki' => array(
+			'user' => array(
+				'createtalk',
+				'edit-create',
+			),
+		),
+		'+wikipucwiki' => array(
+			'*' => array(
+				'ajaxpoll-vote' => true,
+				'ajaxpoll-view-results' => true,
+				'voteny' => true,
+				'upload' => true,
+			),
+		),
+		'+yeoksawiki' => array(
+			'sysop' => array(
+				'project-edit' => true,
+			),
+		),
+		'+zhdelwiki' => array(
+			'confirmed' => array(
+				'createpage' => true,
+				'edit' => true,
+				'move' => true,
+				'upload' => true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
