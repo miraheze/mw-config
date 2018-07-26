@@ -54,21 +54,13 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRemoveGroups['sysop'][] = 'member';
 
 	$wgNoticeProject = 'private';
-
-	// use local mathoid for private wiki's
-	$wgMathValidModes[] = 'mathml';
-	$wgDefaultUserOptions['math'] = 'mathml';
-	$wgMathoidCli = ['/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml'];
-	$wgMaxShellMemory = 2097152;
-} else {
-	// use restbase for mathoid (for public wiki's)
-	// Requires the wiki's to be added to the services repo too
-	$wgMathValidModes[] = 'mathml';
-	$wgDefaultUserOptions['math'] = 'mathml';
-	$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
 }
 
-$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
+// use local mathoid install
+$wgMathValidModes[] = 'mathml';
+$wgDefaultUserOptions['math'] = 'mathml';
+$wgMathoidCli = ['/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml'];
+$wgMaxShellMemory = 2097152;
 
 // ircrcbot (!=private)
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
