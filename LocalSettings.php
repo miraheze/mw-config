@@ -1176,7 +1176,7 @@ $wgConf->settings = array(
 			'anon' => true,
 		),
 		'+vsfan' => array(
-			'editor' => true,
+			'anon' => true,
 		),
 		'+welcomewiki' => array(
 			'anon' => true,
