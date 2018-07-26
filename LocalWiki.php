@@ -313,7 +313,6 @@ if ( $wgDBname === 'weatherwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
  	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
  	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
- 	$wgGroupPermissions['sysop']['override-antispoof'] = false;
  	$wgGroupPermissions['sysop']['editusercss'] = false;
  	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['edituserjson'] = false;

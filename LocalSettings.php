@@ -3809,7 +3809,6 @@ $wgConf->settings = array(
 				'rollbacker',
 				'confirmed',
 				'ipblock-exempt',
-				'account-creator',
 				'page-mover',
 				'importer',
 				'uploader',
@@ -4782,12 +4781,6 @@ $wgConf->settings = array(
  			'ipblock-exempt' => array(
  				'ipblock-exempt' => true,
  			),
- 			'account-creator' => array(
- 				'override-antispoof' => true,
- 				'noratelimit' => true,
- 				'tboverride' => true,
- 				'tboverride-account' => true,
- 			),
  			'massmessage-sender' => array(
  				'massmessage' => true, 
  			),
@@ -5210,7 +5203,6 @@ $wgConf->settings = array(
 				'rollbacker',
 				'confirmed',
 				'ipblock-exempt',
-				'account-creator',
 				'page-mover',
 				'importer',
 				'uploader',
