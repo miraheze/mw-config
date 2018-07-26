@@ -1112,6 +1112,11 @@ $wgConf->settings = array(
 			'user' => true,
 			'editor' => true,
 		),
+		'+sharingcvwiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+		),
 		'+softwarecrisiswiki' => array(
 			'anon' => true,
 		),
