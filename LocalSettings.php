@@ -1936,6 +1936,7 @@ $wgConf->settings = array(
 		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
 		'+exercicesdefrancaisprodfrwiki' => array('html', 'htm' ),
 		'+exitsincwiki' => array('txt' ),
+		'+fawiki' => array('ttf', 'eot', 'woff', 'apk'),
 		'+indrikwiki' => array('mp3', 'mus', 'mid' ),
 		'+jadtechwiki' => array('png', 'bmp', 'gif', 'ico', 'ogg', 'mp3', 'svg', 'pdf', 'flac', 'mp4', 'exe', 'zip', 'jpeg', 'jpg'),
 		'+jayuwikiwiki' => array('bmp', 'apng', 'tiff', 'wav', 'mp3', 'oga', 'ogv', 'asv', 'swf', 'wmv'),
