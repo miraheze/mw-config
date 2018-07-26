@@ -55,9 +55,13 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 
 	$wgNoticeProject = 'private';
 
-	// To be removed once restbase supports private wiki's
-	$wgDefaultUserOptions['math'] = 'png';
+	// use local mathoid for private wiki's
+	$wgMathValidModes[] = 'mathml';
+	$wgDefaultUserOptions['math'] = 'mathml';
+	$wgMathoidCli = ['/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml'];
+	$wgMaxShellMemory = 2097152;
 } else {
+	// use restbase for mathoid (for public wiki's)
 	// Requires the wiki's to be added to the services repo too
 	$wgMathValidModes[] = 'mathml';
 	$wgDefaultUserOptions['math'] = 'mathml';
