@@ -12,7 +12,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td><a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Interwiki_links_editing">a Request for Comment</a> regarding interwiki editing, as well as <a href="https://meta.miraheze.org/wiki/Requests for global rights">two requests for CVT</a> All users are invited to comment.</td>
+                <td>Please note that <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Interwiki_links_editing">a Request for Comment</a> regarding interwiki editing, as well as <a href="https://meta.miraheze.org/wiki/Requests for global rights">two requests for CVT</a>. All users are invited to comment.</td>
                 </tr></tbody></table>
 EOF;
          }
