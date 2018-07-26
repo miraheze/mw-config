@@ -4672,31 +4672,9 @@ $wgConf->settings = array(
 				'editinterface' => true,
 			),
 		),
-		'+whentheycrywiki' => array(
-			'user' => array(
-				'createtalk',
-				'edit-create',
-			),
-		),
-		'+wikipucwiki' => array(
+		'+vsfan' => array(
 			'*' => array(
-				'ajaxpoll-vote' => true,
-				'ajaxpoll-view-results' => true,
-				'voteny' => true,
-				'upload' => true,
-			),
-		),
-		'+yeoksawiki' => array(
-			'sysop' => array(
-				'project-edit' => true,
-			),
-		),
-		'+zhdelwiki' => array(
-			'confirmed' => array(
-				'createpage' => true,
-				'edit' => true,
-				'move' => true,
-				'upload' => true,
+				'edit' => false,
 			),
 		),
 		'+weatherwiki' => array(
@@ -4791,6 +4769,33 @@ $wgConf->settings = array(
  			'massmessage-sender' => array(
  				'massmessage' => true, 
  			),
+		),
+		'+whentheycrywiki' => array(
+			'user' => array(
+				'createtalk',
+				'edit-create',
+			),
+		),
+		'+wikipucwiki' => array(
+			'*' => array(
+				'ajaxpoll-vote' => true,
+				'ajaxpoll-view-results' => true,
+				'voteny' => true,
+				'upload' => true,
+			),
+		),
+		'+yeoksawiki' => array(
+			'sysop' => array(
+				'project-edit' => true,
+			),
+		),
+		'+zhdelwiki' => array(
+			'confirmed' => array(
+				'createpage' => true,
+				'edit' => true,
+				'move' => true,
+				'upload' => true,
+			),
 		),
 	),
 	'wgGroupsRemoveFromSelf' => array(
