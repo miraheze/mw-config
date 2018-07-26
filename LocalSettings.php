@@ -1170,6 +1170,9 @@ $wgConf->settings = array(
 		'+utamacrosswiki' => array(
 			'anon' => true,
 		),
+		'+vsfan' => array(
+			'edit' => false,
+		),
 		'+welcomewiki' => array(
 			'anon' => true,
 		),
@@ -4674,11 +4677,6 @@ $wgConf->settings = array(
 				'autoconfirmed' => true,
 				'autopatrolled' => true,
 				'editinterface' => true,
-			),
-		),
-		'+vsfan' => array(
-			'*' => array(
-				'edit' => false,
 			),
 		),
 		'+weatherwiki' => array(
