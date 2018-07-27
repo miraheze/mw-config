@@ -4887,6 +4887,11 @@ $wgConf->settings = array(
 				'gst',
 			),
 		),
+		'+cvtwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat',
+			),
+		),
 		'+dditecwiki' => array(
 			'sysop' => array(
 				'member',
@@ -5093,6 +5098,11 @@ $wgConf->settings = array(
 		'+ssptopwiki' => array(
 			'sysop' => array(
 				'read-only',
+			),
+		),
+		'+staffwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat',
 			),
 		),
 		'+testwiki' => array(
