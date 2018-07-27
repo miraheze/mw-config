@@ -231,6 +231,11 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
 }
 
+if ($wgDBname === 'newusopediawiki' ) {
+	$wgFilterLogTypes['comment'] = false;
+	
+}
+
 if ( $wgDBname === 'olegcinemawiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 	$wgGroupPermissions['user']['reupload'] = false;
