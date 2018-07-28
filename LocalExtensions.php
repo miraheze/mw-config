@@ -2,7 +2,7 @@
 
 // Set up extensions for use on wikis that are not global
 if ( $wmgUseAddThis ) {
-	require_once( "$IP/extensions/AddThis/AddThis.php" );
+	wfLoadExtension( 'AddThis' );
 
 	$wgAddThisHeader = false;
 }
