@@ -6325,14 +6325,6 @@ $wgConf->settings = array(
 	'wmgPrivateWiki' => array(
 		'default' => false,
 	),
-	'wmgPrivateUpload' => array(
-		'default' => false,
-		'ciptamediawiki' => true,
-	),
-	'wmgUseSwiftBackend' => array(
-		'default' => false,
-		'test1wiki' => false,
-	),
 	'wgRandomGameDisplay' => array(
 		'default' => array(
 			'random_picturegame' => false,
@@ -6496,9 +6488,6 @@ require_once( "/srv/mediawiki/config/GlobalLogging.php" );
 require_once( "/srv/mediawiki/config/LocalExtensions.php" );
 require_once( "/srv/mediawiki/config/MissingWiki.php" );
 require_once( "/srv/mediawiki/config/Redis.php" );
-if ( $wmgUseSwiftBackend ) {
-	require_once( "/srv/mediawiki/config/FileBackend.php" );
-}
 require_once( "/srv/mediawiki/config/Sitenotice.php" );
 
 // Define last to avoid all dependencies
