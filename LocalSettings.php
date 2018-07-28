@@ -2193,6 +2193,9 @@ $wgConf->settings = array(
 	'wgMatomoAnalyticsUseDB' => array(
 		'default' => true,
 	),
+	'wgMatomoAnalyticsGlobalID' => array(
+		'default' => 1,
+	),
 
 	// Metrolook settings
 	'wgMetrolookDownArrow' => array(
