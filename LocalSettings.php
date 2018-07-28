@@ -4894,7 +4894,6 @@ $wgConf->settings = array(
 				'oathauth-enable' => true,
  			),
  			'founder' => array(
- 				'globalblock-exempt' => true,
  				'editinterface' => true,
  				'editusercss' => true,
  				'edituserjs' => true,
