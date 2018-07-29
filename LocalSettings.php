@@ -682,6 +682,7 @@ $wgConf->settings = array(
 	'wgMaxImageArea' => array(
 		'default' => '1.25e7',
 		'altversewiki' => '2.5e7',
+		'nonbinarywiki' => '2.5e7',
 	),
 
 	// Delete
