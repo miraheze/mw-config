@@ -61,6 +61,7 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 } else {
 	// use restbase if defined in services.yaml for this wiki otherwise use mathoid local install
 	if ( isset( $wgRestBaseWikiUrls[$wgDBname] ) && $wgRestBaseWikiUrls[$wgDBname] ) {
+		$wgMathMathMLUrl = 'https://mathoid-lb.miraheze.org/';
 		$wgMathFullRestbaseURL = 'https://' . $wmgHostname . '/api/rest_';
 	} else {
 		$wgMathoidCli = ['/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml'];
