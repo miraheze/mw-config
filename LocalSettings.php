@@ -2105,6 +2105,7 @@ $wgConf->settings = array(
 	),
 	'wmgWikiLicense' => array(
 		'default' => 'cc-by-sa',
+		'incubatorwiki' => 'cc-by-sa-3-0',
 	),
 
 	// Links
