@@ -4931,6 +4931,7 @@ $wgConf->settings = array(
  				'abusefilter-private' => true,
  				'abusefilter-hide-log' => true,
  				'abusefilter-hidden-log' => true,
+				'abusefilter-private-log' => true,
 				'oathauth-enable' => true,
  			),
  			'researcher' => array(
