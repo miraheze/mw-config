@@ -113,6 +113,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'codemirror' => array(
+			'name' => 'CodeMirror',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:CodeMirror',
+			'var' => 'wmgUseCodeMirror',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'collapsiblevector' => array(
 			'name' => 'Collapsible Vector',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CollapsibleVector',
