@@ -4012,7 +4012,7 @@ $wgConf->settings = array(
 			),
 		),
 	),
-	'+wgGroupPermissions' => array(
+	'wgGroupPermissions' => array(
 		'default' => array(
 			'*' => array(
 				'abusefilter-log' => true,
