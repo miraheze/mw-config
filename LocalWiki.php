@@ -276,6 +276,14 @@ if ( $wgDBname === 'sthomaspriwiki' ) {
 	$wgGroupPermissions['sysop']['blockemail'] = false;
 }
 
+if ( $wgDBname === 'svwiki' ) {
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['sysop']['globalblock-whitelist'] = false;
+	$wgGroupPermissions['sysop']['ipblock-exempt'] = false;
+	$wgGroupPermissions['sysop']['nuke'] = false;
+}
+
 if ( $wgDBname === 'testwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgGroupPermissions['sysop']['editinterface'] = false;
