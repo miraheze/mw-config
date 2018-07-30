@@ -79,7 +79,6 @@ if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
-
 if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 }
