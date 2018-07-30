@@ -502,8 +502,8 @@ switch ( $wmgWikiLicense ) {
 		break;
 	case 'cc-by-sa-3-0':
 		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgRightsText = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY SA 3.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by/3.0';
+		$wgRightsText = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/3.0';
 		break;
 	case 'cc-by-sa-2-0-kr':
 		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
