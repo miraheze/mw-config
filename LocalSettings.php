@@ -3828,6 +3828,26 @@ $wgConf->settings = array(
 				'read-only',
 			),
 		),
+		'+svwiki' => array(
+			'bureaucrat' => array(
+				'testgroup',
+				'bureaucrat',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
+				'consul',
+				'testgroup',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
+			),
+		),
 		'+thesciencearchiveswiki' => array(
 			'sysop' => array(
 				'templateeditor',
@@ -4739,6 +4759,24 @@ $wgConf->settings = array(
 				'pagelang' => true,
 			),
 		),
+		'+svwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'nuke' => true,
+				'editinterface' => true,
+				'globalblock-whitelist' => true,
+			),
+			'consul' => array(
+				'abusefilter-modify-restricted' => true,
+				'bureaucrat' => true,
+				'consul' => true,
+				'editinterface' => true,
+				'read' => true,
+			),
+			'testgroup' => array(
+				'read' => true,
+			),
+		),
 		'+takethatwikiwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
@@ -5265,6 +5303,21 @@ $wgConf->settings = array(
 		'+staffwiki' => array(
 			'bureaucrat' => array(
 				'bureaucrat',
+			),
+		),
+		'+svwiki' => array(
+			'bureaucrat' => array(
+				'testgroup',
+				'bot',
+			),
+			'consul' => array(
+				'bot',
+				'bureaucrat',
+				'testgroup',
+				'sysop',
+				'confirmed',
+				'autopatrolled',
+				'rollbacker',
 			),
 		),
 		'+testwiki' => array(
