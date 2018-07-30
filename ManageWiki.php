@@ -1113,6 +1113,7 @@ $wgManageWikiSettings = array(
 			'Creative Commons BY 4.0' => 'cc-by',
 			'Creative Commons BY-NC 4.0' => 'cc-by-nc',
 			'Creative Commons BY-ND 4.0' => 'cc-by-nd',
+			'Creative Commons BY-SA 3.0' => 'cc-by-sa-3-0',
 			'Creative Commons BY-SA 4.0' => 'cc-by-sa',
 			'Creative Commons BY-SA 2.0 Korea' => 'cc-by-sa-2-0-kr',
 			'Creative Commons BY-SA-NC 4.0' => 'cc-by-sa-nc',
