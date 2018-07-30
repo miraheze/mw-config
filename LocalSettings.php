@@ -1317,6 +1317,9 @@ $wgConf->settings = array(
 	'wmgUseCharInsert' => array(
 		'default' => false,
 	),
+	'wmgUseCodeMirror' => array(
+		'default' => false,
+	),
 	'wmgUseCollapsibleVector' => array(
 		'default' => false,
 	),
