@@ -485,6 +485,11 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
 		break;
+	case 'cc-by-sa-3-0':
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsText = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY 3.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by/3.0';
+		break;
 	case 'cc-by-nc':
 		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
 		$wgRightsText = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
