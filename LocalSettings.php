@@ -2259,6 +2259,15 @@ $wgConf->settings = array(
 		'thegreatwarwiki' => array(
 			'collapsiblenav' => array( 'global' => true, 'user' => true ) ),
 	),
+	
+	// miraheze specific config
+	'wgServicesRepo' => array(
+		'default' => '/srv/mediawiki/services',
+	),
+	
+	'wgMirahezeServicesExtensions' => array(
+		'default' => [ 'VisualEditor', 'Flow' ],
+	),
 
 	// Inactive wikis
 	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions and https://meta.miraheze.org/wiki/Dormancy_Policy/Exemptions
