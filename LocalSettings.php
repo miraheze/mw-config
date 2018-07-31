@@ -6008,7 +6008,6 @@ $wgConf->settings = array(
 			'oecumene\.org',
 			'www\.openonderwijs\.org',
 			'papelor\.io',
-			'penalwiki\.awiki\.org',
 			'permanentfuturelab\.wiki',
 			'pl\.nonbinary\.wiki',
 			'podpedia\.org',
