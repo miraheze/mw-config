@@ -230,6 +230,21 @@ define( 'NS_ENCYCLOPEDIA', 1800);
 define( 'NS_ENCYCLOPEDIA_TALK', 1801);
 define( 'NS_QURAN', 1802);
 define( 'NS_QURAN_TALK', 1803);
+define( 'NS_CYTATY', 1804);
+define( 'NS_CYTATY_TALK', 1805);
+define( 'NS_NONNEWS', 1806);
+define( 'NS_NONNEWS_TALK', 1807);
+define( 'NS_NONZRODLA', 1808);
+define( 'NS_NONZRODLA_TALK', 1809);
+define( 'NS_SLOWNIK', 1810);
+define( 'NS_SLOWNIK_TALK', 1811);
+define( 'NS_GRA', 1812);
+define( 'NS_GRA_TALK', 1813);
+define( 'NS_PORADNIK', 1814);
+define( 'NS_PORADNIK_TALK', 1815);
+define( 'NS_FORUM', 1816);
+define( 'NS_FORUM_TALK', 1817);
+
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2590,6 +2605,26 @@ $wgConf->settings = array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
 		),
+		'nonsensopediawiki' => array(
+			NS_CYTATY => 'Cytaty', 
+			NS_CYTATY_TALK => 'Cytaty_talk', 
+			NS_NONNEWS => 'NonNews', 
+			NS_NONNEWS_TALK => 'NonNews_talk', 
+			NS_NONZRODLA => 'NonŹródła', 
+			NS_NONZRODLA_TALK => 'NonŹródła)talk', 
+			NS_SLOWNIK => 'Słownik', 
+			NS_SLOWNIK_TALK => 'Słownik_talk', 
+			NS_GRA => 'Gra', 
+			NS_GRA_TALK => 'Gra_talk', 
+			NS_PORTAL => 'Portal', 
+			NS_PORTAL_TALK => 'Portal_talk', 
+			NS_PORADNIK => 'Poradnik', 
+			NS_PORADNIK_TALK => 'Poradnik_talk', 
+			NS_FORUM => 'Forum',
+			NS_FORUM => 'Forum_talk',
+
+		),
+
 		'oecumenewiki' => array(
 			NS_ARCHIVE => 'Архив',
 			NS_ARCHIVE_TALK => 'Обсуждение_архива',
