@@ -4983,7 +4983,6 @@ $wgConf->settings = array(
  			'steward' => array(
  				'userrights' => true,
  				'userrights-interwiki' => true,
-				'interwiki' => true,
  				'hideuser' => true,
  				'suppressrevision' => true,
  				'suppressionlog' => true,
