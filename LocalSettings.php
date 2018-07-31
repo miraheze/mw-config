@@ -242,8 +242,8 @@ define( 'NS_GRA', 1812);
 define( 'NS_GRA_TALK', 1813);
 define( 'NS_PORADNIK', 1814);
 define( 'NS_PORADNIK_TALK', 1815);
-define( 'NS_FORUM', 1816);
-define( 'NS_FORUM_TALK', 1817);
+define( 'NS_PORUM', 1816);
+define( 'NS_PORUM_TALK', 1817);
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
@@ -2608,24 +2608,22 @@ $wgConf->settings = array(
 		),
 		'nonsensopediawiki' => array(
 			NS_CYTATY => 'Cytaty', 
-			NS_CYTATY_TALK => 'Cytaty_talk', 
+			NS_CYTATY_TALK => 'Dyskusja cytatów', 
 			NS_NONNEWS => 'NonNews', 
-			NS_NONNEWS_TALK => 'NonNews_talk', 
+			NS_NONNEWS_TALK => 'Dyskusja NonNews', 
 			NS_NONZRODLA => 'NonŹródła', 
-			NS_NONZRODLA_TALK => 'NonŹródła)talk', 
+			NS_NONZRODLA_TALK => 'Dyskusja NonŹródeł', 
 			NS_SLOWNIK => 'Słownik', 
-			NS_SLOWNIK_TALK => 'Słownik_talk', 
+			NS_SLOWNIK_TALK => 'Dyskusja słownika', 
 			NS_GRA => 'Gra', 
-			NS_GRA_TALK => 'Gra_talk', 
+			NS_GRA_TALK => 'Dyskusja gry', 
 			NS_PORTAL => 'Portal', 
-			NS_PORTAL_TALK => 'Portal_talk', 
+			NS_PORTAL_TALK => 'Dyskusja portalu', 
 			NS_PORADNIK => 'Poradnik', 
-			NS_PORADNIK_TALK => 'Poradnik_talk', 
-			NS_FORUM => 'Forum',
-			NS_FORUM => 'Forum_talk',
-
+			NS_PORADNIK_TALK => 'Dyskusja poradnika', 
+			NS_PORUM => 'Porum',
+			NS_PORUM_TALK => 'Dyskusja Porum',
 		),
-
 		'oecumenewiki' => array(
 			NS_ARCHIVE => 'Архив',
 			NS_ARCHIVE_TALK => 'Обсуждение_архива',
@@ -2906,6 +2904,7 @@ $wgConf->settings = array(
 		'+centralwiki' => array( NS_ANEXO ),
 		'+destinoswiki' => array( NS_ANEXO ),
 		'+mexicopediawiki' => array( NS_ANEXO ),
+		'+nonsensopediawiki' => array( NS_CYTATY, NS_NONNEWS, NS_NONZRODLA, NS_SLOWNIK, NS_GRA, NS_PORADNIK ),
 		'+repositoriowiki' => array( NS_ANEXO, NS_FILE ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+reviwikiwiki' => array ( NS_HANDBOOK ),
