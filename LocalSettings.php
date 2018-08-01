@@ -250,6 +250,8 @@ define( 'NS_MESSAGE_WALL', 1820);
 define( 'NS_MESSAGE_WALL_TALK', 1821);
 define( 'NS_USER_BLOG', 1822);
 define( 'NS_USER_BLOG_TALK', 1823);
+define( 'NS_INCUBATOR', 1824);
+define( 'NS_INCUBATOR_TALK', 1825);
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
@@ -2681,6 +2683,10 @@ $wgConf->settings = array(
 			NS_SELP => "Selp",
 			NS_SELP_TALK => "Selp_talk",
 		),
+		'incubatorwiki' => array(
+			NS_INCUBATOR => 'Incubator',
+			NS_INCUBATOR_TALK => 'Incubator_talk',
+		),
 		'isvwiki' => array(
 			NS_LIBRARY => 'Sbornik',
 			NS_LIBRARY_TALK => 'Besěda_sbornika',
@@ -3171,6 +3177,10 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
+		),
+		'+incubatorwiki' => array(
+			'I' => NS_INCUBATOR,
+			'IT' => NS_INCUBATOR_TALK,
 		),
 		'+isvwiki' => array(
 			'Library' => NS_LIBRARY,
@@ -4481,6 +4491,13 @@ $wgConf->settings = array(
 		'+hasanistanwiki' => array(
 			'user' => array(
 				'chat' => true,
+			),
+		),
+		'+incubatorwiki' => array(
+			'bureaucrat' => array(
+				'upload' => true,
+				'reupload' => true,
+				'reupload-shared' => true,
 			),
 		),
 		'+intpwiki' => array(

@@ -124,6 +124,14 @@ if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = true;
 }
 
+
+if ( $wgDBname === 'incubatorwiki' ) {
+	$wgGroupPermissions['user']['upload'] = false;
+	$wgGroupPermissions['user']['reupload'] = false;
+	$wgGroupPermissions['user']['reupload-shared'] = false;
+	
+}
+
 if ( $wgDBname === 'intpwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['user']['createpage'] = false;
