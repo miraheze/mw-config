@@ -327,6 +327,7 @@ if ( $wgDBname === 'weatherwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
+	$wgGroupPermissions['user']['read'] = true;
  	$wgGroupPermissions['sysop']['markbotedits'] = false;
  	$wgGroupPermissions['sysop']['mergehistory'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
