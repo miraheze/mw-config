@@ -244,6 +244,12 @@ define( 'NS_PORADNIK', 1814);
 define( 'NS_PORADNIK_TALK', 1815);
 define( 'NS_PORUM', 1816);
 define( 'NS_PORUM_TALK', 1817);
+define( 'NS_THREAD', 1818);
+define( 'NS_THREAD_TALK', 1819);
+define( 'NS_MESSAGE_WALL', 1820);
+define( 'NS_MESSAGE_WALL_TALK', 1821);
+define( 'NS_USER_BLOG', 1822);
+define( 'NS_USER_BLOG_TALK', 1823);
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
