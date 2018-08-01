@@ -2099,6 +2099,7 @@ $wgConf->settings = array(
 		),
 		'+incubatorwiki' => array(
 			'wmincubator',
+			'wikiaincubatorplus',
 		),
 	),
 
