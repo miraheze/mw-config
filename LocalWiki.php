@@ -363,7 +363,6 @@ if ( $wgDBname === 'weatherwiki' ) {
 	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
  	unset( $wgGroupPermissions['oversight'] ); // grandfathered into the local "steward" group
 	unset( $wgGroupPermissions['member'] ); // make wiki private for only anon users
-	unset( $wgRestrictionLevels['user'] ); // "allow logged in users" protection level is redundant since anons can't read
 
         $wgExtensionFunctions[] = function() {
                 if ( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {

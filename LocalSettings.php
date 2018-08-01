@@ -5209,7 +5209,7 @@ $wgConf->settings = array(
  				'abusefilter-hidden-log' => true,
 				'abusefilter-private-log' => true,
 				'oathauth-enable' => true,
-				'managewiki-restricted' => true, // enforce logging everything connected to weatherwiki on weatherwiki
+				'managewiki-restricted' => true,
  			),
  			'researcher' => array(
  				'abusefilter-view-private' => true,
@@ -5907,7 +5907,7 @@ $wgConf->settings = array(
 		'+sau226wiki' => array(
 			'bureaucrat',
 			'consul',
-		),		
+		),
 		'+jayuwikiwiki' => array(
 			'editvoter',
 		),
@@ -5934,6 +5934,7 @@ $wgConf->settings = array(
 			'ceo',
 			'co',
 		),
+		'weatherwiki' => array(),
 	),
 
 	'+wgRestrictionTypes' => array(
