@@ -348,12 +348,14 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgGroupPermissions['user']['move-subpages'] = false;
  	$wgGroupPermissions['user']['move-rootuserpages'] = false;
  	$wgGroupPermissions['user']['movefile'] = false;
+	$wgGroupPermissions['user']['user'] = false; // remove permission for allow logged in users protection level
  	$wgGroupPermissions['steward']['globalblock'] = false;
  	$wgGroupPermissions['steward']['centralauth-lock'] = false;
  	$wgGroupPermissions['steward']['centralauth-oversight'] = false;
 	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
  	unset( $wgGroupPermissions['oversight'] ); // grandfathered into the local "steward" group
 	unset( $wgGroupPermissions['member'] ); // make wiki private for only anon users
+	unset( $wgRestrictionLevels['user'] ); // "allow logged in users" protection level is redundant since anons can't read
 
         $wgExtensionFunctions[] = function() {
                 if ( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {
