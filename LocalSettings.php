@@ -3124,6 +3124,7 @@ $wgConf->settings = array(
 	'wgMetaNamespace' => array(
 		'default' => null,
 		'calexitwiki' => 'CalExit_Wiki',
+		'incubatorwiki' => 'Incubator',
 		'jawp2chwiki' => 'まとめwiki',
 		'tmewiki' => 'TME',
 	),
