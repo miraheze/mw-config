@@ -2509,6 +2509,12 @@ $wgConf->settings = array(
 	// Namespaces
 	'wgExtraNamespaces' => array(
 		'default' => array(),
+		'2b2twiki' => array(
+			NS_THREAD => 'Thread',
+			NS_MESSAGE_WALL => 'Message_Wall',
+			NS_USER_BLOG => 'User_Blog',
+			NS_USER_BLOG_TALK => 'User_Blog_Talk',
+		),
 		'adiapediawiki' => array(
 			NS_DICT => 'Dict',
 			NS_DICT_TALK => 'Dict_talk',
