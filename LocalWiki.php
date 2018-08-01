@@ -312,6 +312,9 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 }
 
 if ( $wgDBname === 'weatherwiki' ) {
+	$wgGroupPermissions['*']['createtalk'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
  	$wgGroupPermissions['*']['editmyoptions'] = false;
  	$wgGroupPermissions['*']['editmyprivateinfo'] = false;
  	$wgGroupPermissions['*']['editmyusercss'] = false;
@@ -321,6 +324,9 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
  	$wgGroupPermissions['*']['viewmywatchlist'] = false;
 	$wgGroupPermissions['*']['oathauth-enable'] = false;
+	$wgGroupPermissions['*']['abusefilter-view'] = false;
+	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
  	$wgGroupPermissions['sysop']['markbotedits'] = false;
  	$wgGroupPermissions['sysop']['mergehistory'] = false;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
@@ -346,6 +352,7 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgGroupPermissions['steward']['centralauth-oversight'] = false;
 	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
  	unset( $wgGroupPermissions['oversight'] ); // grandfathered into the local "steward" group
+	unset( $wgGroupPermissions['member'] ); // make wiki private for only anon users
 
         $wgExtensionFunctions[] = function() {
                 if ( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {

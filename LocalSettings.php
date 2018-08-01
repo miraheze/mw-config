@@ -5217,6 +5217,13 @@ $wgConf->settings = array(
 				'oathauth-enable' => true,
  			),
  			'user' => array(
+				'read' => true,
+				'edit' => true,
+				'createpage' => true,
+				'createtalk' => true,
+				'abusefilter-view' => true,
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
  				'editmyoptions' => true,
  				'editmyprivateinfo' => true,
  				'editmyusercss' => true,
@@ -5224,7 +5231,6 @@ $wgConf->settings = array(
  				'editmywatchlist' => true,
  				'viewmyprivateinfo' => true,
  				'viewmywatchlist' => true,
- 				'read' => true,
  			),
  			'ipblock-exempt' => array(
  				'ipblock-exempt' => true,
