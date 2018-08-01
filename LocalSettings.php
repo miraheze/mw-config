@@ -2097,6 +2097,9 @@ $wgConf->settings = array(
 			'meta',
 			'templatewiki',
 		),
+		'+incubatorwiki' => array(
+			'wmincubator',
+		),
 	),
 
 	// Job Queue
