@@ -5908,7 +5908,7 @@ $wgConf->settings = array(
 		'+sau226wiki' => array(
 			'bureaucrat',
 			'consul',
-		),		
+		),
 		'+jayuwikiwiki' => array(
 			'editvoter',
 		),
@@ -5935,6 +5935,7 @@ $wgConf->settings = array(
 			'ceo',
 			'co',
 		),
+		'weatherwiki' => array(),
 	),
 
 	'+wgRestrictionTypes' => array(
