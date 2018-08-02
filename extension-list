@@ -38,6 +38,7 @@ $IP/extensions/CustomHeader/extension.json
 $IP/extensions/Description2/extension.json
 $IP/extensions/DPLForum/extension.json
 $IP/extensions/Disambiguator/extension.json
+$IP/extensions/DiscordNotifications/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
 $IP/extensions/Duplicator/Duplicator.php
 $IP/extensions/DynamicPageList/extension.json
