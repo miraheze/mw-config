@@ -70,6 +70,12 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	);
+	
+	// global ext
+	wfLoadExtension( 'DiscordNotifications' );
+
+	$wgDiscordFromName = $wgSitename;
+	$wgWikiUrl = $wgServer . '/w/';
 }
 
 // Per-wiki overrides
