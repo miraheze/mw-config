@@ -71,7 +71,7 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 		'omit_bots' => true,
 	);
 
-	// global ext
+	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
 
  	$wgDiscordFromName = $wgSitename;
