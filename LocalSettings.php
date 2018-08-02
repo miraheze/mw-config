@@ -4351,6 +4351,26 @@ $wgConf->settings = array(
 				'editothersprofiles' => true,
 			),
 		),
+		'+akancyclopediawiki' => array(
+			'sysop' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+			),
+			'bureaucrat' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+			),
+		),
+		'+ansaikuropediawiki' => array(
+			'sysop' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+			),
+			'bureaucrat' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+			),
+		),
 		'+autocountwiki' => array(
 			'user' => array(
 				'createtalk' => true,
@@ -4817,6 +4837,16 @@ $wgConf->settings = array(
 				'read' => true,
 			),
 		),
+		'+newusopediawiki' => array(
+			'sysop' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+			),
+			'bureaucrat' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+			),
+		),
 		'+nonbinarywiki' => array(
 			'uploader' => array(
 				'upload_by_url' => true,
@@ -4890,6 +4920,16 @@ $wgConf->settings = array(
 		'+pgnwikiwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
+			),
+		),
+		'+piowiki' => array(
+			'sysop' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+			),
+			'bureaucrat' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
 			),
 		),
 		'+plazmaburstwiki' => array(
