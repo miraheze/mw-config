@@ -5210,7 +5210,7 @@ $wgConf->settings = array(
 				'abusefilter-private-log' => true,
 				'oathauth-enable' => true,
 				'managewiki' => true,
-				'managewiki-restricted' => true, // enforce logging everything connected to weatherwiki on weatherwiki
+				'managewiki-restricted' => true,
  			),
  			'researcher' => array(
  				'abusefilter-view-private' => true,
