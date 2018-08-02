@@ -2016,6 +2016,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'jcswiki' => false,
 	),
+	'wgSVGMetadataCutoff' => array(
+		'default' => 262144,
+		'altversewiki' => 568383982929485868,
+	),
 
 	// Flow
 	'wmgFlowDefaultNamespaces' => array(
