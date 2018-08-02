@@ -5209,7 +5209,8 @@ $wgConf->settings = array(
  				'abusefilter-hidden-log' => true,
 				'abusefilter-private-log' => true,
 				'oathauth-enable' => true,
-				'managewiki-restricted' => true,
+				'managewiki' => true,
+				'managewiki-restricted' => true, // enforce logging everything connected to weatherwiki on weatherwiki
  			),
  			'researcher' => array(
  				'abusefilter-view-private' => true,
