@@ -2280,7 +2280,7 @@ $wgConf->settings = array(
 	
 	// miraheze specific config
 	'wgServicesRepo' => array(
-		'default' => '/srv/mediawiki/services',
+		'default' => '/srv/services/services',
 	),
 	
 	'wgMirahezeServicesExtensions' => array(
