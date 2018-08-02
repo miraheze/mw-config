@@ -151,13 +151,6 @@ if ( $wmgUseDismissableSiteNotice ) {
 	wfLoadExtension( 'DismissableSiteNotice' );
 }
 
-if ( $wmgUseDiscordNotifications ) {
-	wfLoadExtension( 'DiscordNotifications' );
-
-	$wgDiscordFromName = $wgSitename;
-	$wgWikiUrl = $wgServer . '/w/';
-}
-
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 
