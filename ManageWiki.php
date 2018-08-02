@@ -201,14 +201,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'discordnotifications' => array(
-			'name' => 'DiscordNotifications',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:DiscordNotifications',
-			'var' => 'wmgUseDiscordNotifications',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'dplforum' => array(
 			'name' => 'DPLForum',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:DPLforum',
