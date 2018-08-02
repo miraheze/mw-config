@@ -2018,7 +2018,7 @@ $wgConf->settings = array(
 	),
 	'wgSVGMetadataCutoff' => array(
 		'default' => 262144,
-		'altversewiki' => 568383982929485868,
+		'altversewiki' => 2147483647,
 	),
 
 	// Flow
