@@ -1390,6 +1390,9 @@ $wgConf->settings = array(
 	'wmgUseDescription2' => array(
 		'default' => false,
 	),
+	'wmgUseDiscordNotifications' => array(
+		'default' => false,
+	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
 		'weatherwiki' => false,
