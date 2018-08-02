@@ -75,6 +75,8 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	wfLoadExtension( 'DiscordNotifications' );
 
  	$wgDiscordFromName = $wgSitename;
+	$wgDiscordShowNewUserEmail = false;
+ 	$wgDiscordShowNewUserIP = false;
  	$wgWikiUrl = $wgServer . '/w/';
 }
 
