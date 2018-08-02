@@ -983,8 +983,9 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:VisualEditor',
 			'var' => 'wmgUseVisualEditor',
 			'conflicts' => false,
-			'requires' => 'Will start working 10-20 mins after enabling.',
+			'requires' => false,
 			'restricted' => false,
+			'help' => 'Will start working 10-20 mins after enabling.',
 		),
 		'widgets' => array(
 			'name' => 'Widgets',
