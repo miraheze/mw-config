@@ -81,6 +81,18 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgGroupPermissions['user']['createpage'] = true;
 }
 
+if ( $wgDBname === 'akancyclopediawiki' ) {
+	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
+	
+}
+
+if ( $wgDBname === 'ansaikuropediawiki' ) {
+	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
+	
+}
+
 if ( $wgDBname === 'autocountwiki' ) {
 	unset( $wgGroupPermissions['autoconfirmed'] );
 	unset( $wgGroupPermissions['autopatrolled'] );
@@ -239,14 +251,22 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 	$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
 }
 
-if ($wgDBname === 'newusopediawiki' ) {
+if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comment'] = false;
+	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
 	
 }
 
 if ( $wgDBname === 'olegcinemawiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 	$wgGroupPermissions['user']['reupload'] = false;
+}
+
+if ( $wgDBname === 'piowiki' ) {
+	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
+	
 }
 
 if ( $wgDBname === 'pruebawiki' ) {
