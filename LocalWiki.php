@@ -128,6 +128,7 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
+// T3416
 if ( $wgDBname === 'centralwiki' ||
      $wgDBname === 'destinoswiki' ||
      $wgDBname === 'ucroniawiki' ||
@@ -137,6 +138,7 @@ if ( $wgDBname === 'centralwiki' ||
      $wgDBname === 'tallercentralwiki'
 ) {
 	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
+
 	$wgGroupPermissions['member'][] = [
 		'editsemiprotected' => true,
 		'autoconfirmed' => true,
@@ -144,7 +146,18 @@ if ( $wgDBname === 'centralwiki' ||
 		'patrol' => true,
 		'autopatrol' => true,
 		'edit pages' => true,
-	);
+	];
+
+	$wgGroupPermissions['*'][] = [
+		'createpage' => false,
+		'edit' => false,
+		'upload' => false,
+	];
+	$wgGroupPermissions['user'][] = [
+		'createpage' => false,
+		'edit' => false,
+		'upload' => false,
+	];
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
