@@ -1679,7 +1679,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseScratchBlocks' => array(
 		'default' => false,
-		'test1wiki' => true,
 	),
 	'wmgUseShortURL' => array(
 		'default' => true,
