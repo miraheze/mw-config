@@ -136,7 +136,15 @@ if ( $wgDBname === 'centralwiki' ||
      $wgDBname === 'repositoriowiki' ||
      $wgDBname === 'tallercentralwiki'
 ) {
-	$wgGroupPermissions[‘membersysop’] = $wgGroupPermissions['sysop'];
+	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
+	$wgGroupPermissions['member'][] = [
+		'editsemiprotected' => true,
+		'autoconfirmed' => true,
+		'skipcaptcha' => true,
+		'patrol' => true,
+		'autopatrol' => true,
+		'edit pages' => true,
+	);
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
