@@ -128,36 +128,57 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
-// T3416
 if ( $wgDBname === 'centralwiki' ||
      $wgDBname === 'destinoswiki' ||
      $wgDBname === 'ucroniawiki' ||
      $wgDBname === 'mexicopediawiki' ||
      $wgDBname === 'apunteswiki' ||
      $wgDBname === 'repositoriowiki' ||
-     $wgDBname === 'tallercentralwiki'
+     $wgDBname === 'tallercentralwiki' ||
+     $wgDBname === 'repositoriowiki'
 ) {
-	$wgGroupPermissions['sysop']['edit'] = true;
-	$wgGroupPermissions['bureaucrat']['edit'] = true;
-	$wgGroupPermissions['bot']['edit'] = true;
-	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
-	$wgAddGroups['bureaucrat'][] = 'membersysop';
-	$wgRemoveGroups['bureaucrat'][] = 'membersysop';
+	// T3415
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBRepo',
+		'name' => 'shared',
+		'directory' => '/mnt/mediawiki-static/repositoriowiki',
+		'url' => $wgSharedUploadPath,
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => $wgSharedThumbnailScriptPath,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'dbType' => $wgDBtype,
+		'dbServer' => $wgDBserver,
+		'dbUser' => $wgDBuser,
+		'dbPassword' => $wgDBpassword,
+		'dbName' => 'repositoriowiki',
+		'dbFlags' => ( $wgDebugDumpSql ? DBO_DEBUG : 0 ) | DBO_DEFAULT + DBO_SSL,
+		'descBaseUrl' => 'https://repositorio.miraheze.org/wiki/File:',
+	];
 
-	$wgGroupPermissions['member']['editsemiprotected'] = true;
-	$wgGroupPermissions['member']['autoconfirmed'] = true;
-	$wgGroupPermissions['member']['skipcaptcha'] = true;
-	$wgGroupPermissions['member']['patrol'] = true;
-	$wgGroupPermissions['member']['autopatrol'] = true;
-	$wgGroupPermissions['member']['edit'] = true;
-	$wgAddGroups['sysop'][] = 'member';
-	$wgRemoveGroups['sysop'][] = 'member';
+	// T3416
+	if ( $wgDBname !== 'repositoriowiki' ) {
+		$wgGroupPermissions['sysop']['edit'] = true;
+		$wgGroupPermissions['bureaucrat']['edit'] = true;
+		$wgGroupPermissions['bot']['edit'] = true;
+		$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
+		$wgAddGroups['bureaucrat'][] = 'membersysop';
+		$wgRemoveGroups['bureaucrat'][] = 'membersysop';
 
-	$wgGroupPermissions['*']['edit'] = false;
-	$wgGroupPermissions['*']['upload'] = false;
+		$wgGroupPermissions['member']['editsemiprotected'] = true;
+		$wgGroupPermissions['member']['autoconfirmed'] = true;
+		$wgGroupPermissions['member']['skipcaptcha'] = true;
+		$wgGroupPermissions['member']['patrol'] = true;
+		$wgGroupPermissions['member']['autopatrol'] = true;
+		$wgGroupPermissions['member']['edit'] = true;
+		$wgAddGroups['sysop'][] = 'member';
+		$wgRemoveGroups['sysop'][] = 'member';
 
-	$wgGroupPermissions['user']['edit'] = false;
-	$wgGroupPermissions['user']['upload'] = false;
+		$wgGroupPermissions['*']['edit'] = false;
+		$wgGroupPermissions['*']['upload'] = false;
+
+		$wgGroupPermissions['user']['edit'] = false;
+		$wgGroupPermissions['user']['upload'] = false;
+	}
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
