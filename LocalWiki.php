@@ -139,26 +139,20 @@ if ( $wgDBname === 'centralwiki' ||
 ) {
 	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
 
-	$wgGroupPermissions['member'] += array(
-		'editsemiprotected' => true,
-		'autoconfirmed' => true,
-		'skipcaptcha' => true,
-		'patrol' => true,
-		'autopatrol' => true,
-		'edit' => true,
-	);
-
-	$wgGroupPermissions['*'] = array(
-		'createpage' => false,
-		'edit' => false,
-		'upload' => false,
-	);
-
-	$wgGroupPermissions['user'] = array(
-		'createpage' => false,
-		'edit' => false,
-		'upload' => false,
-	);
+	$wgGroupPermissions['member']['editsemiprotected'] = true;
+	$wgGroupPermissions['member']['autoconfirmed'] = true;
+	$wgGroupPermissions['member']['skipcaptcha'] = true;
+	$wgGroupPermissions['member']['patrol'] = true;
+	$wgGroupPermissions['member']['autopatrol'] = true;
+	$wgGroupPermissions['member']['edit'] = true;
+	
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['upload'] = false;
+	
+	$wgGroupPermissions['user']['createpage'] = false;
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
