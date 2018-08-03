@@ -142,7 +142,7 @@ if ( $wgDBname === 'centralwiki' ||
 		'class' => 'ForeignDBRepo',
 		'name' => 'shared',
 		'directory' => '/mnt/mediawiki-static/repositoriowiki',
-		'url' => 'https://static.miraheze.org/repositoriowiki/',
+		'url' => 'https://static.miraheze.org/repositoriowiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => $wgSharedThumbnailScriptPath,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
