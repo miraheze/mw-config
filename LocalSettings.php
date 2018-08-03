@@ -6141,10 +6141,6 @@ $wgConf->settings = array(
 	),
 	'wgAppleTouchIcon' => array(
 		'default' => '/apple-touch-icon.png',
-		'jawp2chwiki' => "//$wmgUploadHostname/jawp2chwiki/2/27/Jawp2ch_apple-touch-icon.png",
-		'jcswiki' => "//$wmgUploadHostname/jcswiki/5/5b/Jcs_app.png",
-		'kstartupswiki' => "//$wmgUploadHostname/kstartupswiki/6/64/Favicon.ico",
-		'revitwiki' => "//$wmgUploadHostname/https://static.miraheze.org/revitwiki/4/43/Apple-touch-icon.png",
 	),
 	'wgCentralAuthLoginIcon' => array(
 		'default' => '/usr/share/nginx/favicons/default.ico',

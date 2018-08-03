@@ -1074,6 +1074,14 @@ $wgManageWikiExtensions = array(
  * restricted: boolean - requires managewiki-restricted to change.
  */
 $wgManageWikiSettings = array(
+        'wgAppleTouchIcon' => array(
+                'name' => 'Apple Touch Icon',
+                'requires' => false,
+                'restricted' => false,
+                'type' => 'text',
+                'overridedefault' => null,
+                'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
+        ),
 	'wgDefaultSkin' => array(
 		'name' => 'Default Skin',
 		'requires' => false,
