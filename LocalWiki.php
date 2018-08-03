@@ -153,11 +153,9 @@ if ( $wgDBname === 'centralwiki' ||
 	$wgAddGroups['sysop'][] = 'member';
 	$wgRemoveGroups['sysop'][] = 'member';
 
-	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['upload'] = false;
 
-	$wgGroupPermissions['user']['createpage'] = false;
 	$wgGroupPermissions['user']['edit'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
 }
