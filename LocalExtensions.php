@@ -264,6 +264,10 @@ if ( $wmgUseGamepress ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
 }
 
+if ( $wmgUseGeoCrumbs ) {
+	wfLoadExtension( 'GeoCrumbs' );
+}
+
 if ( $wmgUseGeoData ) {
 	wfLoadExtension( 'GeoData' );
 }
