@@ -2496,7 +2496,6 @@ $wgConf->settings = array(
 	'wgMSU_checkAutoCat' => array(
 		'default' => false,
 		'anduinwiki' => true,
-		'repositoriowiki' => true,
 	),
 
 	'wgMSU_confirmReplace' => array(
