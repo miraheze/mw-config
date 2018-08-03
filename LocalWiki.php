@@ -138,6 +138,8 @@ if ( $wgDBname === 'centralwiki' ||
      $wgDBname === 'tallercentralwiki'
 ) {
 	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
+	$wgAddGroups['bureaucrat'][] = 'membersysop';
+	$wgRemoveGroups['bureaucrat'][] = 'membersysop';
 
 	$wgGroupPermissions['member']['editsemiprotected'] = true;
 	$wgGroupPermissions['member']['autoconfirmed'] = true;
@@ -145,11 +147,13 @@ if ( $wgDBname === 'centralwiki' ||
 	$wgGroupPermissions['member']['patrol'] = true;
 	$wgGroupPermissions['member']['autopatrol'] = true;
 	$wgGroupPermissions['member']['edit'] = true;
-	
+	$wgAddGroups['sysop'][] = 'member';
+	$wgRemoveGroups['sysop'][] = 'member';
+
 	$wgGroupPermissions['*']['createpage'] = false;
 	$wgGroupPermissions['*']['edit'] = false;
 	$wgGroupPermissions['*']['upload'] = false;
-	
+
 	$wgGroupPermissions['user']['createpage'] = false;
 	$wgGroupPermissions['user']['edit'] = false;
 	$wgGroupPermissions['user']['upload'] = false;
