@@ -322,6 +322,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'geocrumbs' => array(
+			'name' => 'GeoCrumbs',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:GeoCrumbs',
+			'var' => 'wmgUseGeoCrumbs',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'geodata' => array(
 			'name' => 'GeoData',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:GeoData',
