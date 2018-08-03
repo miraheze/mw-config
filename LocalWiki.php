@@ -137,6 +137,9 @@ if ( $wgDBname === 'centralwiki' ||
      $wgDBname === 'repositoriowiki' ||
      $wgDBname === 'tallercentralwiki'
 ) {
+	$wgGroupPermissions['sysop']['edit'] = true;
+	$wgGroupPermissions['bureaucrat']['edit'] = true;
+	$wgGroupPermissions['bot']['edit'] = true;
 	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
 	$wgAddGroups['bureaucrat'][] = 'membersysop';
 	$wgRemoveGroups['bureaucrat'][] = 'membersysop';
