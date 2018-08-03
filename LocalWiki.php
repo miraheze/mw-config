@@ -128,6 +128,17 @@ if ( $wgDBname === 'bigforestwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
 }
 
+if ( $wgDBname === 'centralwiki' ||
+     $wgDBname === 'destinoswiki' ||
+     $wgDBname === 'ucroniawiki' ||
+     $wgDBname === 'mexicopediawiki' ||
+     $wgDBname === 'apunteswiki' ||
+     $wgDBname === 'repositoriowiki' ||
+     $wgDBname === 'tallercentralwiki'
+) {
+	$wgGroupPermissions[‘membersysop’] = $wgGroupPermissions['sysop'];
+}
+
 if ( $wgDBname === 'ciptamediawiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
  	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
