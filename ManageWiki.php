@@ -794,6 +794,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'scratchblocks' => array(
+			'name' => 'Score',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:ScratchBlocks',
+			'var' => 'wmgUseScratchBlocks',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'simplechanges' => array(
 			'name' => 'Simple Changes',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SimpleChanges',
