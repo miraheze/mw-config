@@ -139,7 +139,7 @@ if ( $wgDBname === 'centralwiki' ||
 ) {
 	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
 
-	$wgGroupPermissions['member'] = array(
+	$wgGroupPermissions['member'][] = array(
 		'editsemiprotected' => true,
 		'autoconfirmed' => true,
 		'skipcaptcha' => true,
