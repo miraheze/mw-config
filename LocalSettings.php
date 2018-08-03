@@ -1451,6 +1451,9 @@ $wgConf->settings = array(
 	'wmgUseGamepress' => array(
 		'default' => false,
 	),
+	'wmgUseGeoCrumbs' => array(
+		'default' => false,
+	),
 	'wmgUseGeoData' => array(
 		'default' => false,
 	),
