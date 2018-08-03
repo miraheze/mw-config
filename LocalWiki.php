@@ -294,10 +294,10 @@ if ( $wgDBname === 'nenawikiwiki' ) {
 }
 
 if ( $wgDBname === 'newusopediawiki' ) {
-	$wgFilterLogTypes['comment'] = false;
+	$wgFilterLogTypes['comments'] = false;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
-	
+
 }
 
 if ( $wgDBname === 'olegcinemawiki' ) {
