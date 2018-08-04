@@ -139,19 +139,14 @@ if ( $wgDBname === 'centralwiki' ||
 ) {
 	// T3415
 	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBRepo',
+		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared',
 		'directory' => '/mnt/mediawiki-static/repositoriowiki',
 		'url' => 'https://static.miraheze.org/repositoriowiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => $wgSharedThumbnailScriptPath,
+		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'dbType' => $wgDBtype,
-		'dbServer' => $wgDBserver,
-		'dbUser' => $wgDBuser,
-		'dbPassword' => $wgDBpassword,
-		'dbName' => 'repositoriowiki',
-		'dbFlags' => DBO_SSL,
+		'wiki' => 'repositoriowiki',
 		'descBaseUrl' => 'https://repositorio.miraheze.org/wiki/File:',
 	];
 
