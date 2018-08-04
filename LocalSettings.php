@@ -2536,8 +2536,8 @@ $wgConf->settings = array(
 			NS_MESSAGE_WALL_TALK => 'Message_Wall_Talk',
 			NS_USER_BLOG => 'User_Blog',
 			NS_USER_BLOG_TALK => 'User_Blog_Talk',
-			NS_USER_BLOG_COMMENT => 'User Blog comment',
-			NS_USER_BLOG_COMMENT_TALK => 'User Blog comment_talk',
+			NS_USER_BLOG_COMMENT => 'User blog comment',
+			NS_USER_BLOG_COMMENT_TALK => 'User blog comment_talk',
 		),
 		'adiapediawiki' => array(
 			NS_DICT => 'Dict',
