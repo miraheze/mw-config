@@ -1835,6 +1835,7 @@ $wgConf->settings = array(
 	// Allow HTML <img> tag
 	'wgAllowImageTag' => array(
 		'default' => false,
+		'horizonwiki' => true,
 		'magezwiki' => true,
 		'mikrodevwiki' => true,
 		'travailcollaboratifwiki' => true,
