@@ -4,8 +4,6 @@ LocalSettings.php for Miraheze.
 Authors of initial version: Southparkfan, John Lewis, Orain contributors
 */
 
-require_once( "/srv/mediawiki/config/ServicesSettings.php" );
-
 # Load PrivateSettings (e.g. wgDBpassword)
 require_once( "/srv/mediawiki/config/PrivateSettings.php" );
 
