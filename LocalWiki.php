@@ -146,6 +146,7 @@ if ( $wgDBname === 'centralwiki' ||
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
 		'wiki' => 'repositoriowiki',
 		'descBaseUrl' => 'https://repositorio.miraheze.org/wiki/File:',
 	];
