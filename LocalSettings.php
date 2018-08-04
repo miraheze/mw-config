@@ -6985,7 +6985,7 @@ require_once( "/srv/mediawiki/config/Sitenotice.php" );
 // per T3457 - Miraheze Commons
 $wgForeignFileRepos[] = [
 	'class' => 'ForeignDBViaLBRepo',
-	'name' => 'shared',
+	'name' => 'shared-commons',
 	'directory' => '/mnt/mediawiki-static/commonswikiwiki',
 	'url' => 'https://static.miraheze.org/commonswikiwiki',
 	'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
