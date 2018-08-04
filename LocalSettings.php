@@ -1829,6 +1829,7 @@ $wgConf->settings = array(
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
 		'travailcollaboratifwiki' => true,
+		'sitraduwiki' => true,
 	),
 
 	// Allow HTML <img> tag
