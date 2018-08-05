@@ -763,5 +763,5 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 }
 
 if ( $wmgUseYouTube ) {
-	require_once( "$IP/extensions/YouTube/YouTube.php" );
+	wfLoadExtension( 'YouTube' );
 }
