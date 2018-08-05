@@ -2294,6 +2294,7 @@ $wgConf->settings = array(
 	'wgCreateWikiInactiveWikisWhitelist' => array(
 		'default' => array(
 			// Exceptions
+			'commonswikiwiki',
 			'conductwiki',
 			'cvtwiki',
 			'metawiki',
