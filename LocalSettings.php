@@ -4046,6 +4046,13 @@ $wgConf->settings = array(
 				'nenamembers',
 			),
 		),
+		'+newusopediawiki' => array(
+			'bureaucrat' => array(
+				'通常候補者',
+				'技官候補者',
+				'developer',
+			),
+		),
 		'+nonbinarywiki' => array(
 			'sysop' => array(
 				'uploader',
@@ -5623,6 +5630,13 @@ $wgConf->settings = array(
 				'nenamembers',
 			),
 		),
+		'+newusopediawiki' => array(
+			'bureaucrat' => array(
+				'通常候補者',
+				'技官候補者',
+				'developer',
+			),
+		),		
 		'+nonbinarywiki' => array(
 			'sysop' => array(
 				'uploader',
