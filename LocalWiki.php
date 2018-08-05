@@ -154,29 +154,27 @@ if ( $wgDBname === 'centralwiki' ||
 	];
 
 	// T3416
-	if ( $wgDBname !== 'repositoriowiki' ) {
-		$wgGroupPermissions['sysop']['edit'] = true;
-		$wgGroupPermissions['bureaucrat']['edit'] = true;
-		$wgGroupPermissions['bot']['edit'] = true;
-		$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
-		$wgAddGroups['bureaucrat'][] = 'membersysop';
-		$wgRemoveGroups['bureaucrat'][] = 'membersysop';
+	$wgGroupPermissions['sysop']['edit'] = true;
+	$wgGroupPermissions['bureaucrat']['edit'] = true;
+	$wgGroupPermissions['bot']['edit'] = true;
+	$wgGroupPermissions['membersysop'] = $wgGroupPermissions['sysop'];
+	$wgAddGroups['bureaucrat'][] = 'membersysop';
+	$wgRemoveGroups['bureaucrat'][] = 'membersysop';
 
-		$wgGroupPermissions['member']['editsemiprotected'] = true;
-		$wgGroupPermissions['member']['autoconfirmed'] = true;
-		$wgGroupPermissions['member']['skipcaptcha'] = true;
-		$wgGroupPermissions['member']['patrol'] = true;
-		$wgGroupPermissions['member']['autopatrol'] = true;
-		$wgGroupPermissions['member']['edit'] = true;
-		$wgAddGroups['sysop'][] = 'member';
-		$wgRemoveGroups['sysop'][] = 'member';
+	$wgGroupPermissions['member']['editsemiprotected'] = true;
+	$wgGroupPermissions['member']['autoconfirmed'] = true;
+	$wgGroupPermissions['member']['skipcaptcha'] = true;
+	$wgGroupPermissions['member']['patrol'] = true;
+	$wgGroupPermissions['member']['autopatrol'] = true;
+	$wgGroupPermissions['member']['edit'] = true;
+	$wgAddGroups['sysop'][] = 'member';
+	$wgRemoveGroups['sysop'][] = 'member';
 
-		$wgGroupPermissions['*']['edit'] = false;
-		$wgGroupPermissions['*']['upload'] = false;
+	$wgGroupPermissions['*']['edit'] = false;
+	$wgGroupPermissions['*']['upload'] = false;
 
-		$wgGroupPermissions['user']['edit'] = false;
-		$wgGroupPermissions['user']['upload'] = false;
-	}
+	$wgGroupPermissions['user']['edit'] = false;
+	$wgGroupPermissions['user']['upload'] = false;
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
