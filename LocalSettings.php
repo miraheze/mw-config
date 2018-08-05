@@ -7005,7 +7005,7 @@ $wgForeignFileRepos[] = [
 	'transformVia404' => !$wgGenerateThumbnailOnParse,
 	'hasSharedCache' => false,
 	'wiki' => 'commonswikiwiki',
-	'descBaseUrl' => 'https://commonswikiwiki.miraheze.org/wiki/File:',
+	'descBaseUrl' => 'https://commonswiki.miraheze.org/wiki/File:',
 ];
 
 // Define last to avoid all dependencies
