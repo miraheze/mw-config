@@ -6995,6 +6995,7 @@ require_once( "/srv/mediawiki/config/Redis.php" );
 require_once( "/srv/mediawiki/config/Sitenotice.php" );
 
 // per T3457 - Miraheze Commons
+if ( $wgDBname !=== 'comminswikiwiki' ) {
 $wgForeignFileRepos[] = [
 	'class' => 'ForeignDBViaLBRepo',
 	'name' => 'shared-commons',
@@ -7007,6 +7008,7 @@ $wgForeignFileRepos[] = [
 	'wiki' => 'commonswikiwiki',
 	'descBaseUrl' => 'https://commonswiki.miraheze.org/wiki/File:',
 ];
+}
 
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
