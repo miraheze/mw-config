@@ -6995,19 +6995,19 @@ require_once( "/srv/mediawiki/config/Redis.php" );
 require_once( "/srv/mediawiki/config/Sitenotice.php" );
 
 // per T3457 - Miraheze Commons
-if ( $wgDBname !=== 'comminswikiwiki' ) {
-$wgForeignFileRepos[] = [
-	'class' => 'ForeignDBViaLBRepo',
-	'name' => 'shared-commons',
-	'directory' => '/mnt/mediawiki-static/commonswikiwiki',
-	'url' => 'https://static.miraheze.org/commonswikiwiki',
-	'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-	'thumbScriptUrl' => false,
-	'transformVia404' => !$wgGenerateThumbnailOnParse,
-	'hasSharedCache' => false,
-	'wiki' => 'commonswikiwiki',
-	'descBaseUrl' => 'https://commonswiki.miraheze.org/wiki/File:',
-];
+if ( $wgDBname !=== 'commonswikiwiki' ) {
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared-commons',
+		'directory' => '/mnt/mediawiki-static/commonswikiwiki',
+		'url' => 'https://static.miraheze.org/commonswikiwiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
+		'wiki' => 'commonswikiwiki',
+		'descBaseUrl' => 'https://commonswiki.miraheze.org/wiki/File:',
+	];
 }
 
 // Define last to avoid all dependencies
