@@ -469,7 +469,7 @@ if ( $wmgUsePageTriage ) {
 }
 
 if ( $wmgUsePdfBook ) {
-	wfLoadExtension( 'PdfBook/MediaWiki/PdfBook' );
+	wfLoadExtension( 'PdfBook' );
 }
 
 if ( $wmgUsePDFEmbed ) {
