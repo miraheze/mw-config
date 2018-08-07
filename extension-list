@@ -118,7 +118,7 @@ $IP/extensions/PageNotice/PageNotice.php
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
-$IP/extensions/PdfBook/MediaWiki/PdfBook/extension.json
+$IP/extensions/PdfBook/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/PipeEscape/PipeEscape.php
