@@ -516,12 +516,12 @@ $wgConf->settings = array(
 	'wgCommentsDefaultAvatar' => array(
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	),
-	
+
 	'wgCommentsInRecentChanges' => array(
 		'default' => false,
 		'newusopediawiki' => true,
 	),
-	
+
 	'wgCommentsSortDescending' => array(
 		'default' => false,
 		'newusopediawiki' => true,
@@ -5971,6 +5971,11 @@ $wgConf->settings = array(
 				'user' => array( 1, 3600 ),
 			),
 		),
+	),
+
+	// RecentChanges
+	'wgRCMaxAge' => array(
+		'default' => 180 * 24 * 3600,
 	),
 
 	// RelatedArticles settings
