@@ -78,7 +78,7 @@ if ( $wmgUseCapiunto ) {
 if ( $wmgUseChameleon ) {
 	require_once( "$IP/extensions/Bootstrap/Bootstrap.php" );
 	
-	require_once( "$IP/extensions/Chameleon/Chameleon.php" );
+	require_once( "$IP/skins/Chameleon/Chameleon.php" );
 }
 
 if ( $wmgUseCharInsert ) {
