@@ -16,6 +16,7 @@ $IP/extensions/Cargo/extension.json
 $IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
+$IP/extensions/Chameleon/Chameleon.php
 $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/extension.json
 $IP/extensions/Cite/extension.json
@@ -186,7 +187,6 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
-$IP/skins/Chameleon/Chameleon.php
 $IP/skins/CologneBlue/skin.json
 $IP/skins/DarkVector/skin.json
 $IP/skins/DuskToDawn/skin.json
