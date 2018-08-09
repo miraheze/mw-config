@@ -75,12 +75,6 @@ if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
-if ( $wmgUseChameleon ) {
-	require_once( "$IP/extensions/Bootstrap/Bootstrap.php" );
-	
-	require_once( "$IP/extensions/Chameleon/Chameleon.php" );
-}
-
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
