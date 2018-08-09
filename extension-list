@@ -10,11 +10,13 @@ $IP/extensions/AutoCreateCategoryPages/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
+$IP/extensions/Bootstrap/Bootstrap.php
 $IP/extensions/CSS/extension.json
 $IP/extensions/Cargo/extension.json
 $IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
+$IP/extensions/Chameleon/Chameleon.php
 $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/extension.json
 $IP/extensions/Cite/extension.json

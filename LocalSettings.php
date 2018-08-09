@@ -1338,6 +1338,9 @@ $wgConf->settings = array(
 		'default' => true,
 		'whentheycrywiki' => false,
 	),
+	'wmgUseChameleon' => array(
+		'default' => false,
+	),
 	'wmgUseCharInsert' => array(
 		'default' => false,
 	),
