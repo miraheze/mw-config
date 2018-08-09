@@ -105,14 +105,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'chameleon' => array(
-			'name' => 'Chameleon (Skin)',
-			'linkPage' => 'https://mediawiki.org/wiki/Skin:Chameleon',
-			'var' => 'wmgUseChameleon',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'charinsert' => array(
 			'name' => 'CharInsert',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CharInsert',
