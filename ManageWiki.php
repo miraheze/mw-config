@@ -602,6 +602,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'nukedpl' => array(
+			'name' => 'NukeDPL',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:NukeDPL',
+			'var' => 'wmgUseNukeDPL',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'opengraphmeta' => array(
 			'name' => 'OpenGraphMeta',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:OpenGraphMeta',
