@@ -1603,6 +1603,9 @@ $wgConf->settings = array(
 	'wmgUseNoTitle' => array(
 		'default' => false,
 	),
+	'wmgUseNukeDPL' => array(
+		'default' => false,
+	),
 	'wmgUseOpenGraphMeta' => array(
 		'default' => false,
 	),
