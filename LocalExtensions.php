@@ -448,6 +448,10 @@ if ( $wmgUseNoTitle ) {
 	$wgRestrictDisplayTitle = false;
 }
 
+if ( $wmgUseNukeDPL ) {
+	wfLoadExtension( 'NukeDPL' );
+}
+
 if ( $wmgUseOpenGraphMeta ) {
 	wfLoadExtension( 'OpenGraphMeta' );
 }
