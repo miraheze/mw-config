@@ -108,6 +108,7 @@ $IP/extensions/News/News.php
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/NoTitle/NoTitle.php
 $IP/extensions/Nuke/extension.json
+$IP/extensions/NukeDPL/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/OpenGraphMeta/extension.json
