@@ -402,6 +402,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'imagerating' => array(
+			'name' => 'ImageRating',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:ImageRating',
+			'var' => 'wmgUseImageRating',
+			'conflicts' => false,
+			'requires' => 'VoteNY extension',
+			'restricted' => false,
+		),
 		'javascriptslideshow' => array(
 			'name' => 'Javascript Slidehow',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:JavascriptSlideshow',
