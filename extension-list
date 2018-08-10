@@ -68,6 +68,7 @@ $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json
 $IP/extensions/ImageMap/extension.json
+$IP/extensions/ImageRating/extension.json
 $IP/extensions/InputBox/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php

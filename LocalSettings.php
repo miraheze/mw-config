@@ -1479,6 +1479,9 @@ $wgConf->settings = array(
 	'wmgUseImageMap' => array(
 		'default' => false,
 	),
+	'wmgUseImageRating' => array(
+		'default' => false,
+	),
 	'wmgUseJavascriptSlideshow' => array(
 		'default' => false,
 	),
