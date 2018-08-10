@@ -754,6 +754,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'randomimage' => array(
+			'name' => 'RandomImage',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:RandomImage',
+			'var' => 'wmgUseRandomImage',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'randomselection' => array(
 			'name' => 'RandomSelection',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RandomSelection',

@@ -1660,6 +1660,9 @@ $wgConf->settings = array(
 	'wmgUseRandomGameUnit' => array(
 		'default' => false,
 	),
+	'wmgUseRandomImage' => array(
+		'default' => false,
+	),
 	'wmgUseRandomSelection' => array(
 		'default' => false,
 	),
