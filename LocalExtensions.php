@@ -537,6 +537,10 @@ if ( $wmgUseRandomGameUnit ) {
 	wfLoadExtension( 'RandomGameUnit' );
 }
 
+if ( $wmgUseRandomImage ) {
+	wfLoadExtension( 'RandomImage' );
+}
+
 if ( $wmgUseRandomSelection ) {
 	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
 }
