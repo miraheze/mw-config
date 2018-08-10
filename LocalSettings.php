@@ -789,8 +789,8 @@ $wgConf->settings = array(
 		'+bluestonehockleywiki' => array(
 			'anon' => true,
 			'user' => true,
-			'editor' = true,
-			'sysop' = true,
+			'editor' => true,
+			'sysop' => true,
 		),
 		'+caeruleawiki' => array(
 			'anon' => true,
