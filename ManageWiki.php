@@ -407,7 +407,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ImageRating',
 			'var' => 'wmgUseImageRating',
 			'conflicts' => false,
-			'requires' => 'VoteNY extension',
+			'requires' => 'VoteNY',
 			'restricted' => false,
 		),
 		'javascriptslideshow' => array(
