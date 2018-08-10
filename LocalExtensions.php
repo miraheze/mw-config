@@ -304,6 +304,10 @@ if ( $wmgUseImageMap ) {
 	wfLoadExtension( 'ImageMap' );
 }
 
+if ( $wmgUseImageRating ) {
+	wfLoadExtension( 'ImageRating' );
+}
+
 if ( $wmgUseJavascriptSlideshow ) {
 	require_once( "$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php" );
 }
