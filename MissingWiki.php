@@ -1,7 +1,7 @@
 <?php
 
 if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
-    header( "HTTP/1.0 404 Not Found" );
+    header( "HTTP/1.1 404 Not Found" );
     $requestURL = htmlspecialchars( $_SERVER['REQUEST_URI'] );
     date_default_timezone_set( 'UTC' ); // Set to UTC +0
     $fullTimestamp = date( 'Y-m-d H:i:s' );
