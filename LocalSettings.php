@@ -2055,6 +2055,7 @@ $wgConf->settings = array(
 	'wgApplyGlobalBlocks' => array(
 		'default' => true,
 		'metawiki' => false,
+		'weatherwiki' => false, // let me do the blocking on my wiki, please
 	),
 	'wgGlobalBlockingDatabase' => array(
 		'default' => 'centralauth', // use centralauth for global blocks
