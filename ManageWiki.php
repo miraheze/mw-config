@@ -714,6 +714,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'pollny' => array(
+			'name' => 'PollNY',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:PollNY',
+			'var' => 'wmgUsePollNY',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'proofreadpages' => array(
 			'name' => 'Proofread Pages',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ProofreadPage',
