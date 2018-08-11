@@ -268,6 +268,7 @@ if ( $wgDBname === 'lcars47wiki' ) {
 if ( $wgDBname === 'metawiki' ) {
 
 	$wgGroupPermissions['user']['torunblocked'] = false;
+	$wgGroupPermissions['user']['createaccount'] = false;
 	$wgGroupPermissions['*']['translate'] = false;
 	$wgGroupPermissions['user']['translate'] = false;
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';

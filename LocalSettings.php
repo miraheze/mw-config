@@ -4334,6 +4334,7 @@ $wgConf->settings = array(
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
 				'skipcaptcha' => true,
+				'createaccount' => true,
 			),
 			'bureaucrat' => array(
 				'renameuser' => false,
