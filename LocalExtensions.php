@@ -502,6 +502,10 @@ if ( $wmgUsePoll ) {
 	require_once( "$IP/extensions/Poll/Poll.php" );
 }
 
+if ( $wmgUsePollNY ) {
+	wfLoadExtension( 'PollNY' );
+}
+
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
