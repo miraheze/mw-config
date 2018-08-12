@@ -1100,11 +1100,11 @@ $wgManageWikiExtensions = array(
  *
  * check: adds a checkbox.
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
- * list-multi: DO NOT USE.
- * matrix: DO NOT USE.
+ * list-multi: see above, just that multiple can be selected.
+ * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * text: adds a single line text entry.
  * url: adds a single line text entry which requires a full URL.
- * wikipage: DO NOT USE.
+ * wikipage: add a textbox which will return an autocomplete drop-down list of wikipages. Returns standardised MediaWiki pages.
  *
  * Other variables that are required are name and requires.
  *
