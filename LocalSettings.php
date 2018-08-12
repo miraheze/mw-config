@@ -2336,6 +2336,7 @@ $wgConf->settings = array(
 			'newarkmanorwiki',
 			'nissanecuwiki',
 			'noalatalawiki',
+			'openhatchwiki',
 			'proxybotwiki',
 			'reviwiki',
 			'reviwikiwiki',
