@@ -986,6 +986,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'universallanguageselector' => array(
+			'name' => 'UniversalLanguageSelector',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:UniversalLanguageSelector',
+			'var' => 'wmgUseUniversalLanguageSelector',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'uploadslink' => array(
 			'name' => 'UploadsLink',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:UploadsLink',

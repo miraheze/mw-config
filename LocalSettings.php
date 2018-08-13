@@ -1762,6 +1762,9 @@ $wgConf->settings = array(
 	'wmgUseTwoColConflict' => array(
 		'default' => false,
 	),
+	'wmgUseUniversalLanguageSelector' => array(
+		'default' => false,
+	),
 	'wmgUseUploadsLink' => array(
 		'default' => false,
 	),
