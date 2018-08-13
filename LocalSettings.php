@@ -4347,6 +4347,9 @@ $wgConf->settings = array(
 				'skipcaptcha' => true,
 				'createaccount' => true,
 			),
+			'bot' => array(
+				'autopatrol' => true,
+			),
 			'bureaucrat' => array(
 				'renameuser' => false,
 				'userrights' => false,
