@@ -2340,6 +2340,7 @@ $wgConf->settings = array(
 			'proxybotwiki',
 			'reviwiki',
 			'reviwikiwiki',
+			'sawikiwiki',
 			'sdiywiki',
 			'softwarecrisiswiki',
 			'sonwiki',
