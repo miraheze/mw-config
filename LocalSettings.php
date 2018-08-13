@@ -6173,6 +6173,13 @@ $wgConf->settings = array(
 	'wgScribuntoUseCodeEditor' => array(
 		'default' => true,
 	),
+        '+wgScribuntoEngineConf' => array(
+                'default' => array(
+                        'luasandbox' => array(
+                                'cpuLimit' => 10,
+                        ),
+                ),
+        ),
 
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => array(
