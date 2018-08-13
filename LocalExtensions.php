@@ -685,6 +685,10 @@ if ( $wmgUseTwoColConflict ) {
 	wfLoadExtension( 'TwoColConflict' );
 }
 
+if ( $wmgUseUniversalLanguageSelector ) {
+	wfLoadExtension( 'UniversalLanguageSelector' );
+}
+
 if ( $wmgUseUploadsLink ) {
 	wfLoadExtension( 'UploadsLink' );
 }
