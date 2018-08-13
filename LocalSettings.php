@@ -6176,7 +6176,7 @@ $wgConf->settings = array(
 	'wgScribuntoSlowFunctionThreshold' => array(
 		'default' => 0.99,
 	),
-	'+wgScribuntoEngineConf' => array(
+	'wgScribuntoEngineConf' => array(
 		'default' => array(
 			'luasandbox' => array(
 				'cpuLimit' => 10,
