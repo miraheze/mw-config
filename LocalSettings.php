@@ -6173,13 +6173,21 @@ $wgConf->settings = array(
 	'wgScribuntoUseCodeEditor' => array(
 		'default' => true,
 	),
-        '+wgScribuntoEngineConf' => array(
-                'default' => array(
-                        'luasandbox' => array(
-                                'cpuLimit' => 10,
-                        ),
-                ),
-        ),
+	'wgScribuntoSlowFunctionThreshold' => array(
+		'default' => 0.99,
+	),
+	'+wgScribuntoEngineConf' => array(
+		'default' => array(
+			'luasandbox' => array(
+				'cpuLimit' => 10,
+				'maxLangCacheSize' => 200,
+			),
+			'luastandalone' => array(
+				'cpuLimit' => 10,
+				'maxLangCacheSize' => 200,
+			),
+		),
+	),
 
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => array(
