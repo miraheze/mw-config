@@ -4054,11 +4054,6 @@ $wgConf->settings = array(
 				'scholar',
 			),
 		),
-		'+marioserieswikiwiki' => array(
-			'sysop' =>> array(
-				'ipblock-exempt',
-			),
-		),
 		'+metawiki' => array(
 			'sysop' => array(
 				'flood',
@@ -4764,11 +4759,6 @@ $wgConf->settings = array(
 				'createtalk' => true,
 				'createpage' => true,
 				'edit' => true,
-			),
-		),
-		'+marioserieswikiwiki' => array(
-			'ipblock-exempt' => array(
-				'ipblock-exempt' => true,
 			),
 		),
 		'+marthaspeakswiki' => array(
@@ -5647,11 +5637,6 @@ $wgConf->settings = array(
 				'epcampus',
 				'eponline',
 				'epinstructor',
-			),
-		),
-		'+marioserieswikiwiki' => array(
-			'sysop' = array(
-				'iblock-exempt',
 			),
 		),
 		'+metawiki' => array(
