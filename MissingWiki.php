@@ -58,7 +58,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 		<div class="container">
 		  <!-- Jumbotron -->
 		  <div class="jumbotron">
-			<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg"> Wiki not Found</h1>
+			<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg"> 404 Wiki not Found</h1>
 			<p class="lead">We couldn't find the wiki you were looking for on our servers</span></em>.</p>
 			<p><a onclick=javascript:checkSite(); class="btn btn-default btn-lg"><span class="green">Take Me To The Homepage</span></a>
 				<script type="text/javascript">
@@ -75,9 +75,9 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 			<div class="row">
 			  <div class="col-md-6">
 				<h2>What can I do?</h2>
-				<p class="lead">If you're a wiki visitor</p>
+				<p class="lead">If you're a wiki visitor:</p>
 				<p>This wiki does not exist on our servers. You can browse wikis on our network <a href="//meta.miraheze.org/wiki/Special:WikiDiscover">here</a></p>
-				<p class="lead">If you're the wiki owner</p>
+				<p class="lead">If you're the wiki bureaucrat:</p>
 				 <p>If this is a problem, please <a href="https://meta.miraheze.org/wiki/Help_center">contact us</a></p>
 			 </div>
 			</div>
