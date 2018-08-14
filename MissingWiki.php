@@ -30,7 +30,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 			  padding: 10px 0px;
 			}
 			/* Everything but the jumbotron gets side spacing for mobile-first views */
-			.masthead, .body-content, {
+			.masthead, .body-content {
 			  padding-left: 15px;
 			  padding-right: 15px;
 			}
@@ -48,7 +48,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 			.orange {color:#f0ad4e;}
 			.red {color:#d9534f;}
 		</style>
-		<script type="text/javascript">
+		<script>
 		  function loadDomain() {
 			var display = document.getElementById("display-domain");
 			display.innerHTML = document.domain;
@@ -58,10 +58,10 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 		<div class="container">
 		  <!-- Jumbotron -->
 		  <div class="jumbotron">
-			<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg"> 404 Wiki not Found</h1>
-			<p class="lead">We couldn't find the wiki you were looking for on our servers</span></em>.</p>
+			<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg" alt="Miraheze Logo"> 404 Wiki not Found</h1>
+			<p class="lead">We couldn't find the wiki you were looking for on our servers.</p>
 			<p><a onclick=javascript:checkSite(); class="btn btn-default btn-lg"><span class="green">Take Me To The Homepage</span></a>
-				<script type="text/javascript">
+				<script>
 					function checkSite(){
 						var currentSite = window.location.hostname;
 						window.location = "https://meta.miraheze.org";
