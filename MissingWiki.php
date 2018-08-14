@@ -59,7 +59,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 		  <!-- Jumbotron -->
 		  <div class="jumbotron">
 			<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg"> Wiki not Found</h1>
-			<p class="lead">We couldn't find the wii you were looking for on our servers</span></em>.</p>
+			<p class="lead">We couldn't find the wiki you were looking for on our servers</span></em>.</p>
 			<p><a onclick=javascript:checkSite(); class="btn btn-default btn-lg"><span class="green">Take Me To The Homepage</span></a>
 				<script type="text/javascript">
 					function checkSite(){
@@ -73,9 +73,6 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 		<div class="container">
 		  <div class="body-content">
 			<div class="row">
-			  <div class="col-md-6">
-				<a class="twitter-timeline" data-width="500" data-height="350" text-align: center href="https://twitter.com/miraheze?ref_src=twsrc%5Etfw">Tweets by miraheze</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-			  </div>
 			  <div class="col-md-6">
 				<h2>What can I do?</h2>
 				<p class="lead">If you're a wiki visitor</p>
