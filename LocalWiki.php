@@ -183,7 +183,7 @@ if ( $wgDBname === 'ciptamediawiki' ) {
 }
 
 if ( $wgDBname === 'hamzawiki' ) {
-	$wgWhitelistRead = array(
+	 $wgWhitelistRead[] = array(
     		"Rukus"
     ); 
 }
