@@ -248,8 +248,6 @@ define( 'NS_MESSAGE_WALL', 1820);
 define( 'NS_MESSAGE_WALL_TALK', 1821);
 define( 'NS_USER_BLOG', 1822);
 define( 'NS_USER_BLOG_TALK', 1823);
-define( 'NS_INCUBATOR', 1824);
-define( 'NS_INCUBATOR_TALK', 1825);
 define( 'NS_USER_BLOG_COMMENT', 1826);
 define( 'NS_USER_BLOG_COMMENT_TALK', 1827);
 
@@ -3222,10 +3220,6 @@ $wgConf->settings = array(
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
-		),
-		'+incubatorwiki' => array(
-			'I' => NS_INCUBATOR,
-			'IT' => NS_INCUBATOR_TALK,
 		),
 		'+isvwiki' => array(
 			'Library' => NS_LIBRARY,
