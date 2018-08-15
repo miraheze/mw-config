@@ -182,6 +182,12 @@ if ( $wgDBname === 'ciptamediawiki' ) {
  	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 }
 
+if ( $wgDBname === 'hamzawiki' ) {
+	$wgWhitelistRead = array(
+    		"Rukus"
+    ); 
+}
+
 if ( $wgDBname === 'harrypotterwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
 	$wgHiddenPrefs[] = 'collapsiblenav';
