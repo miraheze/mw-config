@@ -2725,10 +2725,6 @@ $wgConf->settings = array(
 			NS_SELP => "Selp",
 			NS_SELP_TALK => "Selp_talk",
 		),
-		'incubatorwiki' => array(
-			NS_INCUBATOR => 'Incubator',
-			NS_INCUBATOR_TALK => 'Incubator_talk',
-		),
 		'isvwiki' => array(
 			NS_LIBRARY => 'Sbornik',
 			NS_LIBRARY_TALK => 'Besěda_sbornika',
