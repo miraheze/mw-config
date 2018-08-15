@@ -1100,7 +1100,7 @@ $wgConf->settings = array(
 		'+quranwiki' => array(
 			'anon' => true,
 			'user' => true,
-			'sysop' true,
+			'sysop' => true,
 		),
 		'+r2wiki' => array(
 			'anon' => true,
