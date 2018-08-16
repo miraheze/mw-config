@@ -1731,8 +1731,8 @@ $wgConf->settings = array(
 	'wmgUseSubPageList3' => array(
 		'default' => false,
 	),
-	'wmgUseSyntaxHighlight' => array(
-		'default' => false,
+	'wgScribuntoUseGeSHi' => array(
+		'default' => true,
 	),
 	// Combo of Tabs + Tabber
 	'wmgUseTabsCombination' => array(
