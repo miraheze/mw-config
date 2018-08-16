@@ -898,14 +898,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'syntaxhighlight' => array(
-			'name' => 'SyntaxHighlight',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:SyntaxHighlight',
-			'var' => 'wmgUseSyntaxHighlight',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'tabscombination' => array(
 			'name' => 'TabsCombination (Tabber + Tabs)',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Tabs',
