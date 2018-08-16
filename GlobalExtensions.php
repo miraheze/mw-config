@@ -38,6 +38,7 @@ wfLoadExtensions( [
 	'ParserFunctions',
 	'Poem',
 	'Renameuser',
+	'SyntaxHighlight_GeSHi',
 	'Timeline',
 	'Thanks',
 	'TitleBlacklist',
