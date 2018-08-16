@@ -590,10 +590,6 @@ if ( $wmgUseSimpleChanges ) {
 	require_once( "$IP/extensions/SimpleChanges/SimpleChanges.php" );
 }
 
-if ( $wmgUseSyntaxHighlight ) {
-        $wgScribuntoUseGeSHi = true;
-}
-
 if ( $wmgUseShortURL ) {
 	wfLoadExtension ( 'UrlShortener' );
 }
@@ -622,10 +618,6 @@ if ( $wmgUseSubpageFun ) {
 
 if ( $wmgUseSubPageList3 ) {
 	wfLoadExtension( 'SubPageList3' );
-}
-
-if ( $wmgUseSyntaxHighlight ) {
-	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
 if ( $wmgUseTabsCombination ) {
