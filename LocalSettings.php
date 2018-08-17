@@ -911,6 +911,11 @@ $wgConf->settings = array(
 		'+gunsensewiki' => array(
 			'anon' => true,
 		),
+		'+hamzawiki' => array( 
+			'anon' => true,
+			'user' => true,
+			'editor' => true,
+		),
 		'+harrypotterwiki' => array(
 			'anon' => true,
 		),		
@@ -1098,7 +1103,7 @@ $wgConf->settings = array(
 		'+quranwiki' => array(
 			'anon' => true,
 			'user' => true,
-			'sysop' => true,
+			'editor' => true,
 		),
 		'+r2wiki' => array(
 			'anon' => true,
