@@ -5929,6 +5929,7 @@ $wgConf->settings = array(
 		'loginwiki' => array(
 			'*' => array(
 				'edit' => true,
+				'move' => true,
 			),
 		),
 		'ssptopwiki' => array(
