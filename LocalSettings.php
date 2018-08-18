@@ -6875,12 +6875,47 @@ $wgConf->settings = array(
 		'pnphilotenwiki' => 'freenodeChat',
 		'wisdomwikiwiki' => 'freenodeChat',
 	),
+	
+	// Wikimedia Incubator Settings
+	
+	'wmincProjects' => array(
+		'default' => array(
+			'p' => 'Wikipedia',
+			'b' => 'Wikibooks',
+			't' => 'Wiktionary',
+			'q' => 'Wikiquote',
+			'n' => 'Wikinews',
+			'y' => 'Wikivoyage',
+			's' => 'Wikisource',
+			'v' => 'Wikiversity',
+		),
+	),
+	'wmincProjectSite' => array(
+		'default' => array(
+			'name' => 'Incubator Plus 2.0',
+			'short' => 'incplus',
+		),
+	),
+	'wmincSisterProjects' => array(
+		'default' => false,
+	),
+	'wmincExistingWikis' => array(
+		'default' => false,
+	),
+	'wmincClosedWikis' => array(
+		'default' => false,
+	),
+	'wmincMultilingualProjects' => array(
+		'default' => false,
+	),
+		
 
 	// Whitelist
 	'wmgUseMainPageWhitelist' => array(
 		'default' => true,
 		'rwsaleswiki' => false,
 	),
+
 
 
 	// WikiDiscover
