@@ -2155,7 +2155,7 @@ $wgConf->settings = array(
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'incubatorwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
-		'jadtechwiki' => //static.miraheze.org/jadtechwiki/d/d8/CopyrightIcon.png',
+		'jadtechwiki' => //$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png',
 		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 	),
 	'wgRightsPage' => array(
