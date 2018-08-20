@@ -2155,6 +2155,7 @@ $wgConf->settings = array(
 	'wgRightsIcon' => array(
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'incubatorwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'jadtechwiki' => '//$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png',
 		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 	),
 	'wgRightsPage' => array(
@@ -2166,12 +2167,14 @@ $wgConf->settings = array(
 	'wgRightsText' => array(
 		'default' => 'Creative Commons Attribution Share Alike',
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
+		'jadtechwiki' => 'Copyright © Jak and Daxter Technical Wiki. All rights reserved.',
 		'revitwiki' => '©2013-2018 by Lionel J. Camara (All Rights Reserved)',
 		'reviwikiwiki' => 'Creative Commons Attribution Share Alike',
 	),
 	'wgRightsUrl' => array(
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
+		'jadtechwiki' => 'https://jadtech.miraheze.org/wiki/MediaWiki:Copyright',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
 		'reviwikiwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
 	),
