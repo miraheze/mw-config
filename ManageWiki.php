@@ -514,6 +514,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'moderation' => array(
+			'name' => 'Moderation',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Moderation',
+			'var' => 'wmgUseModeration',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'modernskylight' => array(
 			'name' => 'ModernSkylight (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Modern_Skylight',
