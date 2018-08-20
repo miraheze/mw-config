@@ -3162,10 +3162,17 @@ $wgConf->settings = array(
 	),
 	'wgMetaNamespace' => array(
 		'default' => null,
+		'apunteswiki' => 'Admin',
 		'calexitwiki' => 'CalExit_Wiki',
+		'centralwiki' => 'Admin',
+		'destinoswiki' => 'Admin',
 		'incubatorwiki' => 'Incubator',
 		'jawp2chwiki' => 'まとめwiki',
+		'mexicopediawiki' => 'Admin',
+		'repositoriowiki' => 'Admin',
+		'tallercentralwiki' => 'Admin',
 		'tmewiki' => 'TME',
+		'ucroniawiki' => 'Admin',
 	),
 	'+wgNamespaceAliases' => array(
 		'default' => array(),
