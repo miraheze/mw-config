@@ -3420,11 +3420,6 @@ $wgConf->settings = array(
 				'edit-userpage',
 			),
 		),
-		'+weatherwiki' => array(
-			NS_PROJECT => array(
-				'editpolicy',
-			),
-		),
 		'+yeoksawiki' => array(
 			NS_PROJECT => array(
 				'project-edit',
@@ -5433,7 +5428,6 @@ $wgConf->settings = array(
  				'changetags' => true,
  				'massmessage' => true,
 				'oathauth-enable' => true,
-				'editpolicy' => true,
  			),
  			'founder' => array(
  				'editinterface' => true,
