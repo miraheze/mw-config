@@ -1076,7 +1076,7 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 		),
 		'wikimediaincubator' => array(
-			'name' => 'WikimediaIncubator',
+			'name' => 'Wikimedia Incubator',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikimediaIncubator',
 			'var' => 'wmgUseWikimediaIncubator',
 			'conflicts' => false,
