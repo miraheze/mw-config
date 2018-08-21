@@ -189,6 +189,7 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
+$IP/extensions/WikimediaIncubator/extension.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/DarkVector/skin.json
 $IP/skins/DuskToDawn/skin.json
