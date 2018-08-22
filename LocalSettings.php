@@ -1859,6 +1859,17 @@ $wgConf->settings = array(
 		'travailcollaboratifwiki' => true,
 		'sitraduwiki' => true,
 	),
+	'wgAllowExternalImagesFrom' => array(
+		'default' => false,
+		'astrobiologywiki' => array(
+			'https://www.science20.com',
+			'https://quora.com',
+		),
+		'doomsdaydebunkedwiki' => array(
+			'https://www.science20.com',
+			'https://quora.com',
+		),
+	),
 
 	// Allow HTML <img> tag
 	'wgAllowImageTag' => array(
