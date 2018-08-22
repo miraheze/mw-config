@@ -5446,6 +5446,7 @@ $wgConf->settings = array(
  				'edituserjs' => true,
 				'edituserjson' => true,
 				'oathauth-enable' => true,
+				'protectsite' => true,
  			),
  			'user' => array(
 				'read' => true,
@@ -6859,11 +6860,13 @@ $wgConf->settings = array(
 		'default' => '1 week',
 		'infectopedwiki' => '10 years',
 		'tnoteswiki' => 'indefinite',
+		'weatherwiki' => 'indefinite',
 	),
 	'wgProtectSiteDefaultTimeout' => array(
 		'default' => '1 hour',
 		'infectopedwiki' => '1 year',
 		'tnoteswiki' => '2 hours',
+		'weatherwiki' => '1 week',
 	),		
 
 	// WebChat config
