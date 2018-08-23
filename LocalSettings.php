@@ -2504,6 +2504,10 @@ $wgConf->settings = array(
 		'default' => true,
 		'dicowiki' => false,
 	),
+	'wgActiveUserDays' => array(
+		'default' => 30,
+		'weatherwiki' => 7,
+	),
 
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => array(
