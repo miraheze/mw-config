@@ -1872,6 +1872,9 @@ $wgConf->settings = array(
 			'https://quora.com',
 			'http://robertinventor.com',
 		),
+		'wiki1776wiki' => array(
+			'https://en.wikipedia.org',
+		),
 	),
 
 	// Allow HTML <img> tag
