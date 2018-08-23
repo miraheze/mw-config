@@ -1260,6 +1260,7 @@ $wgConf->settings = array(
 
 	'wgPFEnableStringFunctions' => array(
 		'default' => false,
+		'rakudaikishiwiki' => true,
 		'realmgrinderwiki' => true,
 	),
 
