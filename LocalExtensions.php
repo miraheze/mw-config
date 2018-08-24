@@ -430,7 +430,6 @@ if ( $wmgUseNewSignupPage ) {
 
 if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
-	$wgGroupPermissions['confirmed']['newsletter-create'] = true;
 }
 
 if ( $wmgUseNewUserMessage ) {
