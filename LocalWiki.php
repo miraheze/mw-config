@@ -443,7 +443,9 @@ if ( $wgDBname === 'weatherwiki' ) {
  	$wgGroupPermissions['user']['move-rootuserpages'] = false;
  	$wgGroupPermissions['user']['movefile'] = false;
 	$wgGroupPermissions['user']['user'] = false; // remove permission for allow logged in users protection level
- 	$wgGroupPermissions['steward']['globalblock'] = false;
+	$wgGroupPermissions['confirmed']['newsletter-create'] = false; // somehow confirmed users got the ability to create newsletters
+	$wgGroupPermissions['autoconfirmed']['createaccount'] = false; // somehow account creation got restricted to autoconfirmed users
+	$wgGroupPermissions['steward']['globalblock'] = false;
  	$wgGroupPermissions['steward']['centralauth-lock'] = false;
  	$wgGroupPermissions['steward']['centralauth-oversight'] = false;
 	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
