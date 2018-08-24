@@ -1865,12 +1865,12 @@ $wgConf->settings = array(
 		'astrobiologywiki' => array(
 			'https://www.science20.com',
 			'https://quora.com',
-			'http://robertinventor.com',
+			'https://robertinventor.com',
 		),
 		'doomsdaydebunkedwiki' => array(
 			'https://www.science20.com',
 			'https://quora.com',
-			'http://robertinventor.com',
+			'https://robertinventor.com',
 		),
 		'wiki1776wiki' => array(
 			'https://en.wikipedia.org',
