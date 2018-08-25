@@ -1406,7 +1406,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseDismissableSiteNotice' => array(
 		'default' => true,
-		'weatherwiki' => false,
 	),
 	'wmgUseDuskToDawn' => array(
 		'default' => false,
