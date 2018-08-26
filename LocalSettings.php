@@ -1552,6 +1552,7 @@ $wgConf->settings = array(
 		'masseffectwiki' => true,
 		'pgnwikiwiki' => true,
 		'podpediawiki' => true,
+		'svwiki' => true,
 		'thebbwiki' => true,
 	),
 	'wmgUseMetrolook' => array(
