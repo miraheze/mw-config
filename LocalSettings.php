@@ -267,7 +267,7 @@ define( 'NS_PROOFREAD_INDEX_TALK', 253);
 $wgConf->settings = array(
 	// invalidates user sessions
 	'wgAuthenticationTokenVersion' => array(
-		'default' => '2',
+		'default' => '3',
 	),
 
 	// AbuseFilter
