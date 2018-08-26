@@ -2352,6 +2352,7 @@ $wgConf->settings = array(
 			'loginwiki',
 			// Exemptions
 			'allthetropeswiki',
+			'ansaikuropediawiki',
 			'biblicalwikiwiki',
 			'bitcoindebateswiki',
 			'bpwiki',
@@ -2365,6 +2366,7 @@ $wgConf->settings = array(
 			'marketingspecialswiki',
 			'modularwiki',
 			'newarkmanorwiki',
+			'newusopediawiki',
 			'nissanecuwiki',
 			'noalatalawiki',
 			'openhatchwiki',
@@ -2383,6 +2385,7 @@ $wgConf->settings = array(
 			'templatewiki',
 			'testwiki',
 			'tnoteswiki',
+			'usopediajunkyardwiki',
 			'wrightwiki',
 			'wright000wiki',
 			'wright001wiki',
