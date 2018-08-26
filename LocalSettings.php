@@ -4208,6 +4208,9 @@ $wgConf->settings = array(
 				'autopatrolled',
 				'rollbacker',
 			),
+			'sysop' => array(
+				'police',
+			),
 		),
 		'+thesciencearchiveswiki' => array(
 			'sysop' => array(
@@ -5255,6 +5258,16 @@ $wgConf->settings = array(
 			),
 			'testgroup' => array(
 				'read' => true,
+			),
+			'police' => array(
+				'block' => true,
+				'blockemail' => true,
+				'protect' => true,
+				'editsemiprotected' => true,
+				'editprotected' => true,
+				'autopatrol' => true,
+				'patrol' => true,
+				'rollback' => true,
 			),
 		),
 		'+takethatwikiwiki' => array(
