@@ -4838,6 +4838,8 @@ $wgConf->settings = array(
 				'move' => true,
 				'createpage' => true,
 				'translate' => true,
+				'mwoauthproposeconsumer' => true,
+				'mwoauthupdateownconsumer' => true,
 			),
 			'cvt' => array(
 				'abusefilter-modify-global' => true,
