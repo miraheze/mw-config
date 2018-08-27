@@ -4600,6 +4600,18 @@ $wgConf->settings = array(
 				'edit' => true,
 			),
 		),
+		'+enigmawiki' => array(
+			'user' => array(
+				'edit' => false,
+			),
+			'scribe' => array(
+				'edit' => true,
+				'upload' => true,
+				'read' => true,
+				'createpage' => true,
+				'createtalk' => true,
+			),
+		),
 		'+harrypotterwiki' => array(
 			'headmaster' => array(
 				'protectsite' => true,
