@@ -6893,6 +6893,7 @@ $wgConf->settings = array(
 	'wgProtectSiteLimit' => array(
 		'default' => '1 week',
 		'infectopedwiki' => '10 years',
+		'campaignlabwiki' => 'indefinite',
 		'tnoteswiki' => 'indefinite',
 		'weatherwiki' => 'indefinite',
 	),
