@@ -4361,7 +4361,6 @@ $wgConf->settings = array(
 				'page-mover',
 				'importer',
 				'uploader',
-				'massmessage-sender',
 			),
 			'bureaucrat' => array(
 				'sysop',
@@ -5498,13 +5497,6 @@ $wgConf->settings = array(
  			'ipblock-exempt' => array(
  				'ipblock-exempt' => true,
  			),
- 			'massmessage-sender' => array(
- 				'massmessage' => true,
-				'newsletter-create' => true,
-				'newsletter-manage' => true,
-				'newsletter-delete' => true,
-				'newsletter-restore' => true,
- 			),
 		),
 		'+whentheycrywiki' => array(
 			'user' => array(
@@ -5967,7 +5959,6 @@ $wgConf->settings = array(
 				'page-mover',
 				'importer',
 				'uploader',
-				'massmessage-sender',
 			),
 			'bureaucrat' => array(
 				'bot',
