@@ -14,7 +14,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 		<meta name="description" content="Wiki not Found">
 		<title>Wiki not Found</title>
 		<!-- Bootstrap core CSS -->
-		<link rel="stylesheet" href="https://static.miraheze.org/static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<style>
 			/* Error Page Inline Styles */
 			body {
