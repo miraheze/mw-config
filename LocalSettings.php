@@ -5416,7 +5416,6 @@ $wgConf->settings = array(
  				'checkuser' => true,
  				'checkuser-log' => true,
  				'renameuser' => true,
- 				'siteadmin' => true,
  				'abusefilter-private' => true,
  				'abusefilter-hide-log' => true,
  				'abusefilter-hidden-log' => true,
