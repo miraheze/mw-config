@@ -4351,7 +4351,6 @@ $wgConf->settings = array(
  				'bureaucrat',
  				'founder',
  				'banned',
- 				'researcher',
  			),
 			'sysop' => array(
 				'autopatrolled',
@@ -5435,16 +5434,6 @@ $wgConf->settings = array(
 				'managewiki' => true,
 				'managewiki-restricted' => true,
  			),
- 			'researcher' => array(
- 				'abusefilter-view-private' => true,
- 				'abusefilter-log-private' => true,
- 				'titleblacklistlog' => true,
- 				'autopatrol' => true,
- 				'browsearchive' => true,
- 				'deletedhistory' => true,
- 				'deletedtext' => true,
-				'oathauth-enable' => true,
- 			),
  			'page-mover' => array(
  				'move' => true,
 				'move-categorypages' => true,
@@ -5949,7 +5938,6 @@ $wgConf->settings = array(
 				'sysop',
  				'founder',
  				'banned',
- 				'researcher',
  			),
 			'sysop' => array(
 				'autopatrolled',
