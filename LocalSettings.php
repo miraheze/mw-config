@@ -2896,6 +2896,10 @@ $wgConf->settings = array(
 			NS_BOILERPLATE => 'Boilerplate',
 			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
 		),
+		'statisticswiki' => array(
+			NS_HUB => 'Hub',
+			NS_HUB_TALK => 'Hub_talk',
+		),
 		'studynotekrwiki' => array(
 			NS_STUDY_NOTE => 'Study note',
 			NS_STUDY_NOTE_TALK => 'Study note_talk',
