@@ -2284,7 +2284,7 @@ $wgConf->settings = array(
 		'default' => 'metawiki',
 	),
 	'wgMatomoAnalyticsServerURL' => array(
-		'default' => 'https://matomo.miraheze.org/',
+		'default' => 'https://piwik.miraheze.org/',
 	),
 	'wgMatomoAnalyticsUseDB' => array(
 		'default' => true,
