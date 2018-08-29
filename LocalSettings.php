@@ -250,6 +250,8 @@ define( 'NS_USER_BLOG', 1822);
 define( 'NS_USER_BLOG_TALK', 1823);
 define( 'NS_USER_BLOG_COMMENT', 1824);
 define( 'NS_USER_BLOG_COMMENT_TALK', 1825);
+define( 'NS_HUB', 1826);
+define( 'NS_HUB_TALK', 1827);
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
