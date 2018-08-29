@@ -424,13 +424,12 @@ if ( $wgDBname === 'weatherwiki' ) {
 	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
  	$wgGroupPermissions['sysop']['markbotedits'] = false;
  	$wgGroupPermissions['sysop']['mergehistory'] = false;
-	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = false;
- 	$wgGroupPermissions['sysop']['abusefilter-revert'] = false;
  	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
  	$wgGroupPermissions['sysop']['editusercss'] = false;
  	$wgGroupPermissions['sysop']['edituserjs'] = false;
 	$wgGroupPermissions['sysop']['edituserjson'] = false;
  	$wgGroupPermissions['sysop']['editinterface'] = false;
+	$wgGroupPermissions['sysop']['unblockself'] = false;
  	$wgGroupPermissions['user']['changetags'] = false;
  	$wgGroupPermissions['user']['applychangetags'] = false;
  	$wgGroupPermissions['user']['editcontentmodel'] = false;
