@@ -250,6 +250,8 @@ define( 'NS_USER_BLOG', 1822);
 define( 'NS_USER_BLOG_TALK', 1823);
 define( 'NS_USER_BLOG_COMMENT', 1824);
 define( 'NS_USER_BLOG_COMMENT_TALK', 1825);
+define( 'NS_HUB', 1826);
+define( 'NS_HUB_TALK', 1827);
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
@@ -2895,6 +2897,10 @@ $wgConf->settings = array(
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_BOILERPLATE => 'Boilerplate',
 			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
+		),
+		'statisticswiki' => array(
+			NS_HUB => 'Hub',
+			NS_HUB_TALK => 'Hub_talk',
 		),
 		'studynotekrwiki' => array(
 			NS_STUDY_NOTE => 'Study note',
