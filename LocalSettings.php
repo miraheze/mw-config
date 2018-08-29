@@ -3929,6 +3929,14 @@ $wgConf->settings = array(
 				'flood',
 			),
 		),
+		'+weatherwiki' => array(
+			'importer' => array(
+				'flood',
+			),
+			'uploader' => array(
+				'flood',
+			),
+		),
 	),	
 
 	'wgAddGroups' => array(
@@ -4360,6 +4368,8 @@ $wgConf->settings = array(
 				'page-mover',
 				'importer',
 				'uploader',
+				'flood',
+				'abusefilter',
 			),
 			'bureaucrat' => array(
 				'sysop',
@@ -5412,9 +5422,8 @@ $wgConf->settings = array(
  				'mergehistory' => true,
  				'editcontentmodel' => true,
  				'unwatchedpages' => true,
-				'abusefilter-modify-restricted' => true,
- 				'abusefilter-revert' => true,
 				'oathauth-enable' => true,
+				'unblockself' => true,
  			),
  			'steward' => array(
  				'userrights' => true,
@@ -5486,6 +5495,14 @@ $wgConf->settings = array(
  			'ipblock-exempt' => array(
  				'ipblock-exempt' => true,
  			),
+			'flood' => array(
+				'bot' => true,
+			),
+			'abusefilter' => array(
+				'abusefilter-modify' => true,
+				'abusefilter-view-private' => true,
+				'abusefilter-log-private' => true,
+			),
 		),
 		'+whentheycrywiki' => array(
 			'user' => array(
@@ -5524,6 +5541,14 @@ $wgConf->settings = array(
 		),
 		'+metawiki' => array(
 			'cvt' => array(
+				'flood',
+			),
+		),
+		'+weatherwiki' => array(
+			'importer' => array(
+				'flood',
+			),
+			'uploader' => array(
 				'flood',
 			),
 		),
@@ -5947,6 +5972,8 @@ $wgConf->settings = array(
 				'page-mover',
 				'importer',
 				'uploader',
+				'flood',
+				'abusefilter',
 			),
 			'bureaucrat' => array(
 				'bot',
