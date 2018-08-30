@@ -4716,7 +4716,7 @@ $wgConf->settings = array(
 				'UserType3' => true,
 			),
 			'UserType4' => array(
-				'UserType4' = true,
+				'UserType4' => true,
 			),
 			'UserType5' => array(
 				'UserType5' => true,
