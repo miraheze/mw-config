@@ -7351,6 +7351,11 @@ if ( $wgDBname !== 'commonswikiwiki' ) {
 	];
 }
 
+// Servers accessible by non cache proxies should not have squid config enabled
+if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
+	$wgUseSquid = false;
+}
+
 // Define last to avoid all dependencies
 require_once( "/srv/mediawiki/config/LocalWiki.php" );
 
