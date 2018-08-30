@@ -6096,6 +6096,42 @@ $wgConf->settings = array(
 				APCOND_EMAILCONFIRMED,
 			),
 		),
+		'+igrovyesistemywiki' => array(
+			'UserType1' => array(
+				array( APCOND_EDITCOUNT, 1),
+				array( APCOND_AGE, 0 ),
+				array( '!', array( APCOND_INGROUPS, 'UserType2' ) ),
+			),
+			'UserType2' => array(
+				array( APCOND_EDITCOUNT, 50),
+				array( APCOND_AGE, 0 ),
+				array( '!', array( APCOND_INGROUPS, 'UserType3' ) ),
+			),
+			'UserType3' => array(
+				array( APCOND_EDITCOUNT, 300),
+				array( APCOND_AGE, 0 ),
+				array( '!', array( APCOND_INGROUPS, 'UserType4' ) ),
+			),
+			'UserType4' => array(
+				array( APCOND_EDITCOUNT, 500),
+				array( APCOND_AGE, 0 ),
+				array( '!', array( APCOND_INGROUPS, 'UserType5' ) ),
+			),
+			'UserType5' => array(
+				array( APCOND_EDITCOUNT, 1000),
+				array( APCOND_AGE, 0 ),
+				array( '!', array( APCOND_INGROUPS, 'UserType6' ) ),
+			),
+			'UserType6' => array(
+				array( APCOND_EDITCOUNT, 2000),
+				array( APCOND_AGE, 0 ),
+				array( '!', array( APCOND_INGROUPS, 'UserType7' ) ),
+			),
+			'UserType7' => array(
+				array( APCOND_EDITCOUNT, 3000),
+				array( APCOND_AGE, 0 ),
+			),
+		),
 		'+jacksonheightswiki' => array(
 			'emailconfirmed' => array(
 				APCOND_EMAILCONFIRMED,
