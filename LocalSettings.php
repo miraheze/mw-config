@@ -4702,9 +4702,9 @@ $wgConf->settings = array(
 				'validate' => true,
 			),
 			'ceo' => array(
-				'bureaucrat',
-				'sysmag',
-				'trusted',
+				'bureaucrat' => true,
+				'sysmag', => true,
+				'trusted', => true,
 			),
 			'UserType1' => array(
 				'UserType1' => true,
