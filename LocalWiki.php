@@ -199,6 +199,9 @@ if ( $wgDBname === 'houseofettlingarfreyuwiki' ) {
 	$wgGroupPermissions['*']['createpage'] = true;
 }
 
+if ( $wgDBname === 'igrovyesistemywiki' ) {
+	$wgGroupPermissions['ceo'] = $wgGroupPermissions['sysop'];
+}
 
 if ( $wgDBname === 'incubatorwiki' ) {
 	$wgGroupPermissions['user']['upload'] = false;
