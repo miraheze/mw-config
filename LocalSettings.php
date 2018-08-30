@@ -4029,7 +4029,28 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'widgeteditor'
 			),
-		),		
+		),
+		'+igrovyesistemywiki' => array(
+			'co' => array(
+				'ceo',
+			)
+			'ceo' => array(
+				'autopatrolled',
+				'bot',
+				'bureaucrat',
+				'confirmed',
+				'sysop',
+				'rollbacker',
+				'sysmag',
+				'editor',
+				'reviewer',
+				'autoreview',
+				'forumadmin',
+			),
+			'bureaucrat' => array(
+				'sysmag',
+			),
+		),	
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
@@ -4637,6 +4658,50 @@ $wgConf->settings = array(
 				'chat' => true,
 			),
 		),
+		'+igrovyesistemywiki' => array(
+			'autopatrolled' => array(
+				'trusted' => true,
+			),
+			'autoreview' => array(
+				'trusted' => true,
+			),
+			'bot' => array(
+				'trusted' => true,
+			),
+			'editor' => array(
+				'trusted' => true,
+			),
+			'reviewer' => array(
+				'trusted' => true,
+			),
+			'co' => array(
+				'co' => true,
+				'ceo' => true,
+				'reviewer' => true,
+				'protect' => true,
+			),
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'nuke' => true,
+				'movefile' => true,
+			),
+			'sysmag' => array(
+				'autoreview' => true,
+				'autoconfirmed' => true,
+				'autopatrolled' => true,
+				'editinterface' => true,
+				'editusercss' => true,
+				'edituserjs' => true,
+				'edituserjson' => true,
+				'sysmag' => true,
+				'trusted' => true,
+			),
+			'sysop' => array(
+				'trusted' => true,
+				'review' => true,
+				'validate' => true,
+			),
+		),	
 		'+incubatorwiki' => array(
 			'bureaucrat' => array(
 				'upload' => true,
