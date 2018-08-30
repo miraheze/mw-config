@@ -1075,14 +1075,6 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
-		'wikimediaincubator' => array(
-			'name' => 'Wikimedia Incubator',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikimediaIncubator',
-			'var' => 'wmgUseWikimediaIncubator',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-		),
 		'wikitextloggedinout' => array(
 			'name' => 'WikiText Logged In Out',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikiTextLoggedInOut',
