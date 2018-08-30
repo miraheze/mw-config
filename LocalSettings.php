@@ -6249,6 +6249,13 @@ $wgConf->settings = array(
 			'bureaucrat',
 			'consul',
 		),
+		'igrovyesistemywiki' => array(
+			'trusted',
+			'sysmag',
+			'bureaucrat',
+			'ceo',
+			'co',
+		),
 		'+kyivstarwiki' => array(
 			'co',
 			'ceo',
