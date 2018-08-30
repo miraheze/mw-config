@@ -4033,7 +4033,7 @@ $wgConf->settings = array(
 		'+igrovyesistemywiki' => array(
 			'co' => array(
 				'ceo',
-			)
+			),
 			'ceo' => array(
 				'autopatrolled',
 				'bot',
