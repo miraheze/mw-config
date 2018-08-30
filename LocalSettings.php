@@ -6131,6 +6131,7 @@ $wgConf->settings = array(
 				array( APCOND_EDITCOUNT, 3000),
 				array( APCOND_AGE, 0 ),
 			),
+		),
 		'+jacksonheightswiki' => array(
 			'emailconfirmed' => array(
 				APCOND_EMAILCONFIRMED,
