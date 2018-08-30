@@ -4706,26 +4706,26 @@ $wgConf->settings = array(
 				'sysmag',
 				'trusted',
 			),
-			'UserType1' = array(
-				'UserType1' = true,
+			'UserType1' => array(
+				'UserType1' => true,
 			),
-			'UserType2' = array(
-				'UserType2' = true,
+			'UserType2' => array(
+				'UserType2' => true,
 			),
-			'UserType3' = array(
-				'UserType3' = true,
+			'UserType3' => array(
+				'UserType3' => true,
 			),
-			'UserType4' = array(
+			'UserType4' => array(
 				'UserType4' = true,
 			),
-			'UserType5' = array(
-				'UserType5' = true,
+			'UserType5' => array(
+				'UserType5' => true,
 			),
-			'UserType6' = array(
-				'UserType6' = true,
+			'UserType6' => array(
+				'UserType6' => true,
 			),
-			'UserType7' = array(
-				'UserType7' = true,
+			'UserType7' => array(
+				'UserType7' => true,
 			),
 		),	
 		'+incubatorwiki' => array(
