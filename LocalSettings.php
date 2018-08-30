@@ -1824,6 +1824,9 @@ $wgConf->settings = array(
 		'default' => false,
 		'test1wiki' => true,
 	),
+	'wmgUseWikimediaIncubator' => array(
+		'default' => false,
+	),
 	'wmgUseWikiLove' => array(
 		'default' => false,
 	),

@@ -769,6 +769,10 @@ if ( $wmgUseWikiLove ) {
 	$wgWikiLoveGlobal = true;
 }
 
+if ( $wmgUseWikimediaIncubator ) {
+	wfLoadExtension( 'WikimediaIncubator' );
+}
+
 if ( $wmgUseWikiTextLoggedInOut ) {
 	wfLoadExtension( 'WikiTextLoggedInOut' );
 }

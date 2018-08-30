@@ -183,6 +183,7 @@ $IP/extensions/WikiDiscover/extension.json
 $IP/extensions/WikiEditor/extension.json
 $IP/extensions/WikiForum/extension.json
 $IP/extensions/WikiLove/extension.json
+$IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikiTextLoggedInOut/extension.json
 $IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/WikidataPageBanner/extension.json
