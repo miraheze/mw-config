@@ -4701,6 +4701,32 @@ $wgConf->settings = array(
 				'review' => true,
 				'validate' => true,
 			),
+			'ceo' => array(
+				'bureaucrat',
+				'sysmag',
+				'trusted',
+			),
+			'UserType1' = array(
+				'UserType1' = true,
+			),
+			'UserType2' = array(
+				'UserType2' = true,
+			),
+			'UserType3' = array(
+				'UserType3' = true,
+			),
+			'UserType4' = array(
+				'UserType4' = true,
+			),
+			'UserType5' = array(
+				'UserType5' = true,
+			),
+			'UserType6' = array(
+				'UserType6' = true,
+			),
+			'UserType7' = array(
+				'UserType7' = true,
+			),
 		),	
 		'+incubatorwiki' => array(
 			'bureaucrat' => array(
@@ -5711,7 +5737,28 @@ $wgConf->settings = array(
 			'sysop' => array(
 				'widgeteditor'
 			),
-		),		
+		),
+		'+igrovyesistemywiki' => array(
+			'co' => array(
+				'ceo',
+			),
+			'ceo' => array(
+				'autopatrolled',
+				'bot',
+				'bureaucrat',
+				'confirmed',
+				'sysop',
+				'rollbacker',
+				'sysmag',
+				'editor',
+				'reviewer',
+				'autoreview',
+				'forumadmin',
+			),
+			'bureaucrat' => array(
+				'sysmag',
+			),
+		),
 		'+jayuwikiwiki' => array(
 			'bureaucrat' => array(
 				'voter',
