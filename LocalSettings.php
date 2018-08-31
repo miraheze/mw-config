@@ -2251,6 +2251,13 @@ $wgConf->settings = array(
 	'wgEnableManageWiki' => array(
 		'default' => true,
 	),
+	'wgManageWikiPermissionsManagement' => array(
+		'default' => false,
+		'metawiki' => true,
+		'testwiki' => true,
+		'test1wiki' => true,
+		'weatherwiki' => true,
+	),
 	'wgManageWikiPermissionsBlacklistRights' => array(
 		'default' => array(
 			'abusefilter-modify-global',
@@ -2306,6 +2313,60 @@ $wgConf->settings = array(
 			'steward'
 		),
 	),
+	
+	'wgManageWikiPermissionsAdditionalRights' => array(
+		'default' => array(
+			'*',
+			'bot',
+			'bureaucrat',
+			'sysop',
+			'autopatrolled',
+			'autoconfirmed',
+			'confirmed',
+			'rollbacker',
+			'user',
+		),
+	),
+	'wgManageWikiPermissionsAdditionalAddGroups' => array(
+		'default' => array(
+			'*',
+			'bot',
+			'bureaucrat',
+			'sysop',
+			'autopatrolled',
+			'autoconfirmed',
+			'confirmed',
+			'rollbacker',
+			'user',
+		),
+	),
+	'wgManageWikiPermissionsAdditionalRemoveGroups' => array(
+		'default' => array(
+			'*',
+			'bot',
+			'bureaucrat',
+			'sysop',
+			'autopatrolled',
+			'autoconfirmed',
+			'confirmed',
+			'rollbacker',
+			'user',
+		),
+	),
+	'wgManageWikiPermissionsBlacklistRename' => array(
+		'default' => array(
+			'*',
+			'bot',
+			'bureaucrat',
+			'sysop',
+			'autopatrolled',
+			'autoconfirmed',
+			'confirmed',
+			'rollbacker',
+			'user',
+		),
+	),
+	
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
 		'harrypotterwiki' => 'headmaster',
