@@ -12,7 +12,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td>Please note that there is currently a <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Future_of_Wikicreators">a Request for Comment</a> regarding the future of wiki creators. All users are invited to comment.</td>
+                <td>Please note that there is currently <a href="https://meta.miraheze.org/wiki/Requests_for_Comment/Future_of_Wikicreators">a Request for Comment</a> regarding the future of wiki creators. All users are invited to comment.</td>
                 </tr></tbody></table>
 EOF;
          }
