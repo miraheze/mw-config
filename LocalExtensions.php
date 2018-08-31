@@ -653,7 +653,6 @@ if ( $wmgUseTheme ) {
 }
 
 if ( $wmgUseTimedMediaHandler ) {
-	wfLoadExtension( 'MwEmbedSupport' );
 	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
