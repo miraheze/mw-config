@@ -7395,6 +7395,7 @@ if ( $wgDBname !== 'commonswikiwiki' ) {
 		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
 		'hasSharedCache' => false,
+		'fetchDescription' => true,
 		'wiki' => 'commonswikiwiki',
 		'descBaseUrl' => 'https://commonswiki.miraheze.org/wiki/File:',
 	];
