@@ -2251,6 +2251,13 @@ $wgConf->settings = array(
 	'wgEnableManageWiki' => array(
 		'default' => true,
 	),
+	'wgManageWikiPermissionsManagement' => array(
+		'default' => false,
+		'metawiki' => true,
+		'testwiki' => true,
+		'test1wiki' => true,
+		'weatherwiki' => true,
+	),
 	'wgManageWikiPermissionsBlacklistRights' => array(
 		'default' => array(
 			'abusefilter-modify-global',
@@ -2306,6 +2313,92 @@ $wgConf->settings = array(
 			'steward'
 		),
 	),
+	
+	'wgManageWikiPermissionsAdditionalRights' => array(
+		'default' => array(
+			'*' => array(
+				'abusefilter-log' => true,
+				'abusefilter-log-detail' => true,
+				'abusefilter-view' => true,
+				'centralauth-autoaccount' => true,
+			),
+			'autopatrolled' => array(
+				'autopatrol' => true,
+				'patrol' => true,
+				'skipcaptcha' => true,
+			),
+			'autoconfirmed' => array(
+				'mwoauthproposeconsumer' => true,
+				'mwoauthupdateownconsumer' => true,
+				'skipcaptcha' => true,
+				'createaccount' => true,
+			),
+			'bot' => array(
+				'autopatrol' => true,
+			),
+			'bureaucrat' => array(
+				'renameuser' => false,
+				'userrights' => false,
+			),
+			'confirmed' => array(
+				'editsemiprotected' => true,
+				'autoconfirmed' => true,
+				'skipcaptcha' => true,
+				),
+			'rollbacker' => array(
+				'rollback' => true,
+			),
+			'sysop' => array(
+				'abusefilter-modify' => true,
+				'abusefilter-modify-restricted' => true,
+				'abusefilter-revert' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'rollback' => true,
+			),
+			'user' => array(
+				'user' => true, // for "Allow logged in users" protection level
+			),
+		),
+	),
+	'wgManageWikiPermissionsAdditionalAddGroups' => array(
+		'default' => array(
+			'bureaucrat' => array(
+				'bot',
+				'bureaucrat',
+				'sysop',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),
+		),
+	),
+	'wgManageWikiPermissionsAdditionalRemoveGroups' => array(
+		'default' => array(
+			'bureaucrat' => array(
+				'bot',
+				'sysop',
+			),
+			'sysop' => array(
+				'autopatrolled',
+				'confirmed',
+				'rollbacker',
+			),
+		),
+	),
+	'wgManageWikiPermissionsBlacklistRename' => array(
+		'default' => array(
+			'*',
+			'bureaucrat',
+			'sysop',
+			'autoconfirmed',
+			'confirmed',
+			'user',
+		),
+	),
+	
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
 		'harrypotterwiki' => 'headmaster',
@@ -3997,19 +4090,7 @@ $wgConf->settings = array(
 		),
 	),	
 
-	'wgAddGroups' => array(
-		'default' => array(
-			'bureaucrat' => array(
-				'bot',
-				'bureaucrat',
-				'sysop',
-			),
-			'sysop' => array(
-				'autopatrolled',
-				'confirmed',
-				'rollbacker',
-			),
-		),
+	'wgAddGroups' => array( // NOTE: Most of these are Managed with wgManageWikiPermissionsAdditionalAddGroups
 		'+allthetropeswiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -4461,37 +4542,8 @@ $wgConf->settings = array(
 			),
 		),
 	),
-	'+wgGroupPermissions' => array(
+	'+wgGroupPermissions' => array( // NOTE: Most of these are Managed with wgManageWikiPermissionsAdditionalRights
 		'default' => array(
-			'*' => array(
-				'abusefilter-log' => true,
-				'abusefilter-log-detail' => true,
-				'abusefilter-view' => true,
-				'centralauth-autoaccount' => true,
-			),
-			'autopatrolled' => array(
-				'autopatrol' => true,
-				'patrol' => true,
-				'skipcaptcha' => true,
-			),
-			'autoconfirmed' => array(
-				'mwoauthproposeconsumer' => true,
-				'mwoauthupdateownconsumer' => true,
-				'skipcaptcha' => true,
-				'createaccount' => true,
-			),
-			'bot' => array(
-				'autopatrol' => true,
-			),
-			'bureaucrat' => array(
-				'renameuser' => false,
-				'userrights' => false,
-			),
-			'confirmed' => array(
-				'editsemiprotected' => true,
-				'autoconfirmed' => true,
-				'skipcaptcha' => true,
-			),
 			'oversight' => array(
 				'abusefilter-hidden-log' => true,
 				'abusefilter-hide-log' => true,
@@ -4503,20 +4555,6 @@ $wgConf->settings = array(
 				'hideuser' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
-			),
-			'rollbacker' => array(
-				'rollback' => true,
-			),
-			'sysop' => array(
-				'abusefilter-modify' => true,
-				'abusefilter-modify-restricted' => true,
-				'abusefilter-revert' => true,
-				'deletelogentry' => true,
-				'deleterevision' => true,
-				'rollback' => true,
-			),
-			'user' => array(
-				'user' => true, // for "Allow logged in users" protection level
 			),
 			'steward' => array(
 				'userrights' => true,
@@ -5702,18 +5740,7 @@ $wgConf->settings = array(
 			),
 		),
 	),
-	'wgRemoveGroups' => array(
-		'default' => array(
-			'bureaucrat' => array(
-				'bot',
-				'sysop',
-			),
-			'sysop' => array(
-				'autopatrolled',
-				'confirmed',
-				'rollbacker',
-			),
-		),
+	'wgRemoveGroups' => array( // NOTE: Most of these are managed with wgManageWikiPermissionsAdditionalAddGroups
 		'+allthetropeswiki' => array(
 			'sysop' => array(
 				'commentadmin',
