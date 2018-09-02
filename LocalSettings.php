@@ -2251,6 +2251,38 @@ $wgConf->settings = array(
 	'wgEnableManageWiki' => array(
 		'default' => true,
 	),
+	'wgManageWikiPermissionsAdditionalAddGroups' => array(
+		'default' => array(),
+	),
+	'wgManageWikiPermissionsAdditionalRights' => array(
+		'default' => array(
+			'checkuser' => array(
+				'checkuser' => true,
+				'checkuser-log' => true,
+			),
+			'oversight' => array(
+				'abusefilter-hidden-log' => true,
+				'abusefilter-hide-log' => true,
+				'browserarchive' => true,
+				'deletedhistory' => true,
+				'deletedtext' => true,
+				'deletelogentry' => true,
+				'deleterevision' => true,
+				'hideuser' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+			),
+			'user' => array(
+				'user' => true,
+			),
+			'steward' => array(
+				'userrights' => true,
+			),
+		),
+	),
+	'wgManageWikiAdditionalRemoveGroups' => array(
+		'default' => array(),
+	),
 	'wgManageWikiPermissionsBlacklistRights' => array(
 		'default' => array(
 			'abusefilter-modify-global',
@@ -2305,6 +2337,11 @@ $wgConf->settings = array(
 			'oversight',
 			'steward'
 		),
+	),
+	'wgManageWikiPermissionsManagement' => array(
+		'default' => false, // do not enable without John's consent and presence (no matter what he says)
+		'test1wiki' => true,
+		'testwiki' => true, // it's called a test wiki so I'm doing a test real deployment here, okay? more will follow
 	),
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
@@ -4385,25 +4422,6 @@ $wgConf->settings = array(
 				'rollbacker',
 			),
 		),
-		'+test1wiki' => array(
-			'sysop' => array(
-				'reviewer',
-				'widgeteditor',
-				'staff',
-				'commentadmin',
-				'wikicreator',
-				'epcoordinator',
-				'eponline',
-				'epcampus',
-				'epinstructor',
-				'flow-bot',
-				'chatmod',
-				'automoderated',
-				'moderator',
-				'forumadmin',
-				'blockedfromchat',
-			),
-		),
 		'+snowthegamewiki' => array(
 			'bureaucrat' => array(
 				'bot',
@@ -5447,29 +5465,6 @@ $wgConf->settings = array(
 				'commentadmin' => true,
 			),
 		),
-		'+testwiki' => array(
-			'bureaucrat' => array(
-				'bureaucrat' => true,
-				'nuke' => true,
-				'editinterface' => true,
-				'globalblock-whitelist' => true,
-			),
-			'consul' => array(
-				'abusefilter-modify-restricted' => true,
-				'bureaucrat' => true,
-				'consul' => true,
-				'editinterface' => true,
-				'read' => true,
-			),
-			'testgroup' => array(
-				'read' => true,
-			),
-		),
-		'+test1wiki' => array(
-			'sysop' => array(
-				'autoreview' => true,
-			),
-		),
 		'thebbwiki' => array(
 			'sysop' => array(
 				'commentadmin' => true,
@@ -6025,43 +6020,6 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'police',
-			),
-		),
-		'+testwiki' => array(
-			'bureaucrat' => array(
-				'testgroup',
-				'bot',
-			),
-			'consul' => array(
-				'bot',
-				'bureaucrat',
-				'testgroup',
-				'sysop',
-				'confirmed',
-				'autopatrolled',
-				'rollbacker',
-			),
-		),
-		'+test1wiki' => array(
-			'sysop' => array(
-				'reviewer',
-				'widgeteditor',
-				'staff',
-				'commentadmin',
-				'wikicreator',
-				'epcoordinator',
-				'eponline',
-				'epcampus',
-				'epinstructor',
-				'flow-bot',
-				'chatmod',
-				'automoderated',
-				'moderator',
-				'forumadmin',
-				'blockedfromchat',
-			),
-			'bureaucrat' => array(
-				'bureaucrat'
 			),
 		),
 		'+thesciencearchiveswiki' => array(
