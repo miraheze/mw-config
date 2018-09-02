@@ -2278,7 +2278,7 @@ $wgConf->settings = array(
 				'userrights' => true,
 			),
 		),
-		'+weatherwiki' => array(
+		'weatherwiki' => array(
 			'steward' => array(
 				'userrights' => true,
 				'userrights-interwiki' => true,
