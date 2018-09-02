@@ -2305,6 +2305,8 @@ $wgConf->settings = array(
 	),
 	'wgManageWikiPermissionsBlacklistRights' => array(
 		'default' => array(
+			'abusefilter-hide-log' => true,
+			'abusefilter-hidden-log' => true,
 			'abusefilter-modify-global',
 			'abusefilter-private',
 			'abusefilter-private-log',
