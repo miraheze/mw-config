@@ -1864,6 +1864,7 @@ $wgConf->settings = array(
 		'mikrodevdocswiki' => true,
 		'travailcollaboratifwiki' => true,
 		'sitraduwiki' => true,
+		'wiki1776wiki' => true,
 	),
 	'wgAllowExternalImagesFrom' => array(
 		'default' => false,
@@ -1877,9 +1878,6 @@ $wgConf->settings = array(
 			'https://quora.com',
 			'https://robertinventor.com',
 		),
-		'wiki1776wiki' => array(
-			'https://en.wikipedia.org',
-		),
 	),
 
 	// Allow HTML <img> tag
@@ -1889,6 +1887,7 @@ $wgConf->settings = array(
 		'magezwiki' => true,
 		'mikrodevwiki' => true,
 		'travailcollaboratifwiki' => true,
+		'wiki1776wiki' => true,
 	),
 
 	// FlaggedRevs
