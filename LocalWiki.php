@@ -406,6 +406,16 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
+if ( $wgDBname === 'weatherwiki' ) {
+	unset( $wgGroupPermissions['oversight'] );
+	
+	$wgExtensionFunctions[] = function() {
+                 if ( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {
+                         unset( $GLOBALS['wgGroupPermissions']['checkuser'] );
+                 }
+         };
+ }
+
 if ( $wgDBname === 'zhdelwiki' ) {
 	unset($wgGroupPermissions['autoconfirmed']);
 }
