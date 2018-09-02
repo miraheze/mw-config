@@ -2279,6 +2279,26 @@ $wgConf->settings = array(
 				'userrights' => true,
 			),
 		),
+		'+weatherwiki' => array(
+			'steward' => array(
+				'userrights' => true,
+				'userrights-interwiki' => true,
+				'hideuser' => true,
+				'suppressrevision' => true,
+				'suppressionlog' => true,
+				'viewsuppressed' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'renameuser' => true,
+				'abusefilter-private' => true,
+				'abusefilter-private-log' => true,
+				'abusefilter-hide-log' => true,
+				'abusefilter-hidden-log' => true,
+				'oauth-enable' => true,
+				'managewiki' => true,
+				'managewiki-restricted' => true,
+			),
+		),
 	),
 	'wgManageWikiAdditionalRemoveGroups' => array(
 		'default' => array(),
@@ -2341,7 +2361,9 @@ $wgConf->settings = array(
 	'wgManageWikiPermissionsManagement' => array(
 		'default' => false, // do not enable without John's consent and presence (no matter what he says)
 		'test1wiki' => true,
-		'testwiki' => true, // it's called a test wiki so I'm doing a test real deployment here, okay? more will follow
+		'testwiki' => true,
+		'weatherwiki' => true,
+		'wiki1776wiki' => true,
 	),
 	'wmgManageWikiGroup' => array( // the usergroup allowed 'managewiki'
 		'default' => 'bureaucrat',
@@ -4451,28 +4473,6 @@ $wgConf->settings = array(
 				'autopatrolled'
 			),
 		),
-		'weatherwiki' => array(
- 			'founder' => array(
- 				'bureaucrat',
- 				'founder',
- 				'banned',
- 			),
-			'sysop' => array(
-				'autopatrolled',
-				'rollbacker',
-				'confirmed',
-				'ipblock-exempt',
-				'page-mover',
-				'importer',
-				'uploader',
-				'flood',
-				'abusefilter',
-			),
-			'bureaucrat' => array(
-				'sysop',
-				'bot',
-			),
- 		),	
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -5560,94 +5560,6 @@ $wgConf->settings = array(
 				'editinterface' => true,
 			),
 		),
-		'+weatherwiki' => array(
- 			'bureaucrat' => array(
- 				'markbotedits' => true,
- 				'mergehistory' => true,
- 				'editcontentmodel' => true,
- 				'unwatchedpages' => true,
-				'oathauth-enable' => true,
-				'unblockself' => true,
- 			),
- 			'steward' => array(
- 				'userrights' => true,
- 				'userrights-interwiki' => true,
- 				'hideuser' => true,
- 				'suppressrevision' => true,
- 				'suppressionlog' => true,
- 				'viewsuppressed' => true,
- 				'checkuser' => true,
- 				'checkuser-log' => true,
- 				'renameuser' => true,
- 				'abusefilter-private' => true,
- 				'abusefilter-hide-log' => true,
- 				'abusefilter-hidden-log' => true,
-				'abusefilter-private-log' => true,
-				'oathauth-enable' => true,
-				'managewiki' => true,
-				'managewiki-restricted' => true,
- 			),
- 			'page-mover' => array(
- 				'move' => true,
-				'move-categorypages' => true,
- 				'move-subpages' => true,
- 				'move-rootuserpages' => true,
-				'movefile' => true,
- 				'suppressredirect' => true,
- 			),
-			'uploader' => array(
- 				'upload' => true,
- 				'reupload' => true,
- 				'reupload-shared' => true,
-			),
- 			'importer' => array(
- 				'import' => true,
- 				'importupload' => true,
- 			),
- 			'sysop' => array(
- 				'managechangetags' => true,
- 				'deletechangetags' => true,
- 				'applychangetags' => true,
- 				'changetags' => true,
- 				'massmessage' => true,
-				'oathauth-enable' => true,
- 			),
- 			'founder' => array(
- 				'editinterface' => true,
- 				'editusercss' => true,
- 				'edituserjs' => true,
-				'edituserjson' => true,
-				'oathauth-enable' => true,
-				'protectsite' => true,
- 			),
- 			'user' => array(
-				'read' => true,
-				'edit' => true,
-				'createpage' => true,
-				'createtalk' => true,
-				'abusefilter-view' => true,
-				'abusefilter-log' => true,
-				'abusefilter-log-detail' => true,
- 				'editmyoptions' => true,
- 				'editmyprivateinfo' => true,
- 				'editmyusercss' => true,
- 				'editmyuserjs' => true,
- 				'editmywatchlist' => true,
- 				'viewmyprivateinfo' => true,
- 				'viewmywatchlist' => true,
- 			),
- 			'ipblock-exempt' => array(
- 				'ipblock-exempt' => true,
- 			),
-			'flood' => array(
-				'bot' => true,
-			),
-			'abusefilter' => array(
-				'abusefilter-modify' => true,
-				'abusefilter-view-private' => true,
-				'abusefilter-log-private' => true,
-			),
-		),
 		'+whentheycrywiki' => array(
 			'user' => array(
 				'createtalk',
@@ -6083,28 +5995,6 @@ $wgConf->settings = array(
 		'+wikidolphinhansenwiki' => array(
 			'sysop' => array(
 				'commentadmin',
-			),
-		),
-		'weatherwiki' => array(
- 			'founder' => array(
- 				'bureaucrat',
-				'sysop',
- 				'founder',
- 				'banned',
- 			),
-			'sysop' => array(
-				'autopatrolled',
-				'rollbacker',
-				'confirmed',
-				'ipblock-exempt',
-				'page-mover',
-				'importer',
-				'uploader',
-				'flood',
-				'abusefilter',
-			),
-			'bureaucrat' => array(
-				'bot',
 			),
 		),
 	),

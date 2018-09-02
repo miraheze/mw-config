@@ -406,59 +406,6 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
-if ( $wgDBname === 'weatherwiki' ) {
-	$wgGroupPermissions['*']['createtalk'] = false;
-	$wgGroupPermissions['*']['createpage'] = false;
-	$wgGroupPermissions['*']['edit'] = false;
- 	$wgGroupPermissions['*']['editmyoptions'] = false;
- 	$wgGroupPermissions['*']['editmyprivateinfo'] = false;
- 	$wgGroupPermissions['*']['editmyusercss'] = false;
- 	$wgGroupPermissions['*']['editmyuserjs'] = false;
- 	$wgGroupPermissions['*']['editmywatchlist'] = false;
- 	$wgGroupPermissions['*']['writeapi'] = false;
- 	$wgGroupPermissions['*']['viewmyprivateinfo'] = false;
- 	$wgGroupPermissions['*']['viewmywatchlist'] = false;
-	$wgGroupPermissions['*']['oathauth-enable'] = false;
-	$wgGroupPermissions['*']['abusefilter-view'] = false;
-	$wgGroupPermissions['*']['abusefilter-log'] = false;
-	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
-	$wgGroupPermissions['user']['read'] = true;
-	$wgGroupPermsisions['bot']['nominornewtalk'] = false;
-	$wgGroupPermissions['bureaucrat']['protectsite'] = false;
- 	$wgGroupPermissions['sysop']['markbotedits'] = false;
- 	$wgGroupPermissions['sysop']['mergehistory'] = false;
- 	$wgGroupPermissions['sysop']['unwatchedpages'] = false;
- 	$wgGroupPermissions['sysop']['editusercss'] = false;
- 	$wgGroupPermissions['sysop']['edituserjs'] = false;
-	$wgGroupPermissions['sysop']['edituserjson'] = false;
- 	$wgGroupPermissions['sysop']['editinterface'] = false;
-	$wgGroupPermissions['sysop']['unblockself'] = false;
- 	$wgGroupPermissions['user']['changetags'] = false;
- 	$wgGroupPermissions['user']['applychangetags'] = false;
- 	$wgGroupPermissions['user']['editcontentmodel'] = false;
- 	$wgGroupPermissions['user']['upload'] = false;
- 	$wgGroupPermissions['user']['reupload'] = false;
- 	$wgGroupPermissions['user']['reupload-shared'] = false;
- 	$wgGroupPermissions['user']['move'] = false;
- 	$wgGroupPermissions['user']['move-categorypages'] = false;
- 	$wgGroupPermissions['user']['move-subpages'] = false;
- 	$wgGroupPermissions['user']['move-rootuserpages'] = false;
- 	$wgGroupPermissions['user']['movefile'] = false;
-	$wgGroupPermissions['user']['user'] = false; // remove permission for allow logged in users protection level
- 	$wgGroupPermissions['steward']['globalblock'] = false;
- 	$wgGroupPermissions['steward']['centralauth-lock'] = false;
- 	$wgGroupPermissions['steward']['centralauth-oversight'] = false;
-	$wgGroupPermissions['steward']['centralauth-unmerge'] = false;
- 	unset( $wgGroupPermissions['oversight'] ); // grandfathered into the local "steward" group
-	unset( $wgGroupPermissions['member'] ); // make wiki private for only anon users
-
-        $wgExtensionFunctions[] = function() {
-                if ( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {
-                        unset( $GLOBALS['wgGroupPermissions']['checkuser'] );
-                }
-        };
-}
-
 if ( $wgDBname === 'zhdelwiki' ) {
 	unset($wgGroupPermissions['autoconfirmed']);
 }
