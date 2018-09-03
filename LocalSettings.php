@@ -4040,6 +4040,12 @@ $wgConf->settings = array(
 	'wgPageTriageInfinitScrolling' => array(
 		'default' => true,
 	),
+	
+	// ParserFunctions
+	'wgPFEnableStringFunctions' => array(
+		'default' => false,
+		'paliwiki' => true,
+	),
 
 	// Permissions
 	'wgGroupsAddToSelf' => array(
