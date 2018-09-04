@@ -680,6 +680,16 @@ $wgConf->settings = array(
 	'wgCookieWarningGeoIp2Path' => array(
 		'default' => '/srv/GeoLite2-City.mmdb',
 	),
+	// RC feed
+	'wgStructuredChangeFiltersShowPreference' => array(
+		'default' => true,
+	),
+	'wgStructuredChangeFiltersShowWatchlistPreference' => array(
+		'default' => true,
+	),
+	'wgStructuredChangeFiltersOnWatchlist' => array(
+		'default' => true,
+	),
 	// Database
 	'wgAllowSchemaUpdates' => array(
 		'default' => false,
