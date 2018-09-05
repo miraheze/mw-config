@@ -2385,6 +2385,7 @@ $wgConf->settings = array(
 			'renameuser',
 			'requestwiki',
 			'siteadmin',
+			'read',
 			'suppressionlog',
 			'suppressrevision',
 			'userrights',
