@@ -2289,37 +2289,18 @@ $wgConf->settings = array(
 				'userrights' => true,
 			),
 		),
-		'metawiki' => array(
-			'autoconfirmed' => array(
-				'move' => true,
-				'createpage' => true,
-				'translate' => true,
-			),
+		'+metawiki' => array(
 			'confirmed' => array(
-				'move' => true,
-				'createpage' => true,
-				'translate' => true,
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
 			),
 			'cvt' => array(
 				'abusefilter-modify-global' => true,
-				'abusefilter-modify' => true,
-				'abusefilter-log' => true,
-				'abusefilter-log-detail' => true,
-				'abusefilter-modify-restricted' => true,
-				'abusefilter-view' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
-				'block' => true,
-			),
-			'flood' => array(
-				'bot' => true,
 			),
 			'proxybot' => array(
-				'editprotected' => true,
 				'globalblock' => true,
-				'block' => true,
 				'centralauth-lock' => true,
 			),
 			'steward' => array(
@@ -2329,24 +2310,12 @@ $wgConf->settings = array(
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
-				'managewiki' => true,
 				'managewiki-restricted' => true,
-				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
 			),
 			'sysop' => array(
 				'interwiki' => true,
-				'oathauth-enable' => true,
-			),
-			'translator' => array(
-				'translate' => true,
-			),
-			'translationadmin' => array(
-				'pagelang' => true,
-				'pagetranslation' => true,
-				'translate-import' => true,
-				'translate-manage' => true,
 			),
 			'user' => array(
 				'requestwiki' => true,
