@@ -2378,7 +2378,6 @@ $wgConf->settings = array(
 			'managewiki-restricted',
 			'managewiki-editdefault',
 			'mwoauthmanageconsumer',
-			'mwoauthmanagemygrants',
 			'mwoauthsuppress',
 			'mwoauthviewprivate',
 			'mwoauthviewsuppressed',
