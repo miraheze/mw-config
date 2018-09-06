@@ -54,13 +54,6 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRemoveGroups['sysop'][] = 'member';
 
 	$wgNoticeProject = 'private';
-
-	if ( !$wgCommandLineMode ) {
-		if ( in_array( $_SERVER['REMOTE_ADDR'], [ '185.52.1.144' ] ) ) {
-			$wgGroupPermissions['*']['read'] = true;
-			$wgGroupPermissions['*']['edit'] = true;
-		}
-	}
 }
 
 // use local mathoid install
