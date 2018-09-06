@@ -2405,6 +2405,9 @@ $wgConf->settings = array(
 			'steward'
 		),
 	),
+	'wgManageWikiPermissionsDefaultPrivateGroup' => array(
+		'default' => 'member',
+	),
 	'wgManageWikiPermissionsManagement' => array(
 		'default' => false, // do not enable without John's consent and presence (no matter what he says)
 		'metawiki' => true,
