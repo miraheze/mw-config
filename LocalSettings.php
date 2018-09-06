@@ -4125,6 +4125,17 @@ $wgConf->settings = array(
 				'commentadmin',
 			),
 		),
+		'+ahmsaqibwiki' => array(
+			'প্রতিষ্ঠাতা' => array(
+				'bot',
+				'bureaucrat',
+				'widgeteditor',
+				'reviewer',
+				'staff',
+				'commentadmin',
+				'forumadmin',
+			),
+		),
 		'+animationmoviewikiwiki' => array(
 			'sysop' => array(
 				'commentadmin',
@@ -5609,6 +5620,17 @@ $wgConf->settings = array(
 		'+allthetropeswiki' => array(
 			'sysop' => array(
 				'commentadmin',
+			),
+		),
+		'+ahmsaqibwiki' => array(
+			'প্রতিষ্ঠাতা' => array(
+				'bot',
+				'bureaucrat',
+				'widgeteditor',
+				'reviewer',
+				'staff',
+				'commentadmin',
+				'forumadmin',
 			),
 		),
 		'+autocountwiki' => array(
