@@ -235,6 +235,13 @@ if ( $wmgUseFlow ) {
 	);
 }
 
+        // test to be reverted and added properly.
+	$wgVirtualRestConfig['modules']['restbase'] = array(
+		'url' => "https://$wmgHostname/api/rest_v1:443",
+		'prefix' => $wgDBname,
+		'forwardCookies' => true,
+	);
+
 if ( $wmgFlowDefaultNamespaces && $wmgUseFlow ) {
 	$wgNamespaceContentModels = array(
 		NS_TALK => 'flow-board',
