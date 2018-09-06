@@ -4249,7 +4249,7 @@ $wgConf->settings = array(
 		),
 		'+infectopedwiki' => array(
 			'bureaucrat' => array(
-				'reviewer' => true,
+				'reviewer',
 			),
 		),
 		'lcars47wiki' => array(
