@@ -6562,7 +6562,6 @@ $wgConf->settings = array(
 			'nenawiki\.org',
 			'wiki\.ngscott\.net',
 			'nonbinary\.wiki',
-			'wiki\.nvda-nl\.org',
 			'wiki\.lbcomms\.co.za',
 			'wiki\.rizalespe\.com',
 			'saf\.songcontests\.eu',
