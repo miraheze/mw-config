@@ -4242,6 +4242,11 @@ $wgConf->settings = array(
 				'trusted',
 			),
 		),
+		'+incubatorwiki' => array(
+			'bureaucrat' => array(
+				'test-sysop',
+			),
+		),
 		'+infectopedwiki' => array(
 			'bureaucrat' => array(
 				'reviewer' => true,
@@ -5787,6 +5792,11 @@ $wgConf->settings = array(
 			),
 			'sysop' => array(
 				'widgeteditor'
+			),
+		),
+		'+incubatorwiki' => array(
+			'bureaucrat' => array(
+				'test-sysop',
 			),
 		),
 		'+igrovyesistemywiki' => array(
