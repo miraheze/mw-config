@@ -3429,6 +3429,8 @@ $wgConf->settings = array(
 		),
 		'+destinoswiki' => array(
 			'D' => NS_PROJECT,
+			'WV' => NS_PROYECTO,
+			'Wikiviajes' => NS_PROYECTO,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
