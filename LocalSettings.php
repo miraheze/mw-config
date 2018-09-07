@@ -4134,6 +4134,7 @@ $wgConf->settings = array(
 				'staff',
 				'commentadmin',
 				'forumadmin',
+				'উইকিপ্রধান',
 			),
 		),
 		'+animationmoviewikiwiki' => array(
@@ -5721,6 +5722,7 @@ $wgConf->settings = array(
 				'staff',
 				'commentadmin',
 				'forumadmin',
+				'উইকিপ্রধান',
 			),
 		),
 		'+autocountwiki' => array(
