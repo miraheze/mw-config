@@ -262,8 +262,8 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ElectronPdfService',
 			'var' => 'wmgUseElectronPDFService',
 			'conflicts' => false,
-			'requires' => 'services',
-			'restricted' => true,
+			'requires' => false
+			'restricted' => false,
 		),
 		'erudite' => array(
 			'name' => 'Erudite (Skin)',
