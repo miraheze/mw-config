@@ -262,7 +262,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ElectronPdfService',
 			'var' => 'wmgUseElectronPDFService',
 			'conflicts' => false,
-			'requires' => false
+			'requires' => false,
 			'restricted' => false,
 		),
 		'erudite' => array(
