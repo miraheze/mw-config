@@ -786,6 +786,12 @@ $wgConf->settings = array(
 		'+arkorderwiki' => array(
 			'anon' => true,
 		),
+		'+ashinawiki' => array(
+			'anon' => true,
+			'user' => true,
+			'sysop' => true,
+			'bureaucrat' => true,
+		),
 		'+autocountwiki' => array(
 			'anon' => true,
 			'user' => true,
