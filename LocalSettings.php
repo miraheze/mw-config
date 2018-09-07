@@ -3386,6 +3386,9 @@ $wgConf->settings = array(
 			'Blurb' => NS_FEATURED,
 			'Blurb_talk' => NS_FEATURED_TALK,
 		),
+		'+apunteswiki' => array(
+			'A' => NS_PROJECT,
+		),
 		'+bigforestwiki' => array(
 			'사' => NS_USER,
 			'큰' => NS_PROJECT,
@@ -3417,9 +3420,15 @@ $wgConf->settings = array(
 			'文庫' => NS_LIBRARY,
 			'文庫討論' => NS_LIBRARY_TALK,
 		),
+		'+centralwiki' => array(
+			'C' => NS_PROJECT,
+		),
 		'+dakhilcommunitywiki' => array(
 			'DC' => NS_MAIN,
 			'DC_talk' => NS_TALK,
+		),
+		'+destinoswiki' => array(
+			'D' => NS_PROJECT,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
@@ -3433,12 +3442,18 @@ $wgConf->settings = array(
 			'Library' => NS_LIBRARY,
 			'Library_talk' => NS_LIBRARY_TALK,
 		),
+		'+mexicopediawiki' => array(
+			'M' => NS_PROJECT,
+		),
 		'+picardwiki' => array(
 			'NS_USER_PROFILE' => 'Benutzerprofil',
 			'NS_USER_PROFILE_TALK' => 'Benutzerprofil Diskussion',
 		),
 		'+proxybotwiki' => array(
 			'UT' => NS_USER_TALK,
+		),
+		'+repositoriowiki' => array(
+			'R' => NS_PROJECT,
 		),
 		'+reviwikiwiki' => array(
 			'Handbook' => NS_HANDBOOK,
@@ -3447,6 +3462,9 @@ $wgConf->settings = array(
 		'+studynotekrwiki' => array(
 			'KSN' => NS_KOREAN_STUDY_NOTE,
 			'KSN_TALK' => NS_KOREAN_STUDY_NOTE_TALK,
+		),
+		'+tallercentralwiki' => array(
+			'TC' => NS_PROJECT,
 		),
 		'+tmewiki' => array(
 			'The_Multilingual_Encyclopedia' => NS_PROJECT,
@@ -3572,6 +3590,9 @@ $wgConf->settings = array(
 			'Thảo_luận_Thể_loại' => NS_CATEGORY_TALK,
 			'Padron' => NS_TEMPLATE,
 			'Usapang_padron' => NS_TEMPLATE_TALK,
+		),
+		'+ucroniawiki' => array(
+			'U' => NS_PROJECT,
 		),
 		'+vandalismwikiwiki' => array(
 			'H' => NS_HELP,
