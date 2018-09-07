@@ -2297,6 +2297,131 @@ $wgConf->settings = array(
 				'userrights' => true,
 			),
 		),
+		'+autocountwiki' => array(
+			'authors' => array(
+				'torunblocked' => true,
+				'read' => true,
+			),
+		),
+		'+bitcoindebateswiki' => array(
+			'emailconfirmed' => array(
+				'read' => true,
+			),
+		),
+		'+cmgwiki' => array(
+			'gst' => array(
+				'read' => true,
+			),
+		),
+		'+dpwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'respected' => true,
+			),
+			'respected' => array(
+				'respected' => true,
+			),
+		),
+		'+enigmawiki' => array(
+			'scribe' => array(
+				'read' => true,
+			),
+		),
+		'+igrovyesistemywiki' => array(
+			'autopatrolled' => array(
+				'trusted' => true,
+			),
+			'autoreview' => array(
+				'trusted' => true,
+			),
+			'bot' => array(
+				'trusted' => true,
+			),
+			'editor' => array(
+				'trusted' => true,
+			),
+			'reviewer' => array(
+				'trusted' => true,
+			),
+			'co' => array(
+				'co' => true,
+				'ceo' => true,
+				'trusted' => true,
+			),
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+				'trusted' => true,
+			),
+			'sysmag' => array(
+				'sysmag' => true,
+				'trusted' => true,
+			),
+			'sysop' => array(
+				'trusted' => true,
+			),
+			'ceo' => array(
+				'bureaucrat' => true,
+				'sysmag' => true,
+				'trusted' => true,
+			),
+			'UserType1' => array(
+				'UserType1' => true,
+			),
+			'UserType2' => array(
+				'UserType2' => true,
+			),
+			'UserType3' => array(
+				'UserType3' => true,
+			),
+			'UserType4' => array(
+				'UserType4' => true,
+			),
+			'UserType5' => array(
+				'UserType5' => true,
+			),
+			'UserType6' => array(
+				'UserType6' => true,
+			),
+			'UserType7' => array(
+				'UserType7' => true,
+			),
+		),
+		'+jacksonheightswiki' => array(
+			'emailconfirmed' => array(
+				'read' => true,
+			),
+		),
+		'+jayuwikiwiki' => array(
+			'sysop' => array(
+				'editvoter' => true,
+			),
+			'voter' => array(
+				'editvoter' => true,
+			),
+		),
+		'+lcars47wiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+			),
+			'devteam' => array(
+				'bureaucrat' => true,
+				'read' => true,
+				'devteam' => true,
+			),
+		),
+		'+marthaspeakswiki' => array(
+			'sysop' => array(
+				'templateeditor' => true,
+			),
+			'templateeditor' => array(
+				'templateeditor' => true,
+			),
+		),
+		'+nenawikiwiki' => array(
+			'emailconfirmed' => array(
+				'read' => true,
+			),
+		),
 		'+metawiki' => array(
 			'confirmed' => array(
 				'mwoauthproposeconsumer' => true,
@@ -2334,6 +2459,116 @@ $wgConf->settings = array(
 				'createwiki' => true,
 			),
 		),
+		'+nonsensopediawiki' => array(
+			'moderator' => array(
+				'skipcaptcha' => true,
+			),
+		),
+		'+pruebawiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+			),
+			'consul' => array(
+				'read' => true,
+				'bureaucrat' => true,
+				'consul' => true,
+				'torunblocked' => true,
+			),
+			'testgroup' => array(
+				'read' => true,
+			),
+		),
+		'+radviserwiki' => array(
+			'editor' => array(
+				'editor' => true,
+			),
+			'sysop' => array(
+				'editor' => true,
+			),
+		),
+		'+sau226wiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+			),
+			'consul' => array(
+				'bureaucrat' => true,
+				'consul' => true,
+				'read' => true,
+			),
+			'testgroup' => array(
+				'read' => true,
+			),
+		),
+		'+serinfhospwiki' => array(
+			'SupportStaff' => array(
+				'read' => true,
+			),
+			'SalesStaff' => array(
+				'read' => true,
+			),
+			'PreSalesStaff' => array(
+				'read' => true,
+			),
+		),
+		'+sovereignwiki' => array(
+			'officer' => array(
+				'read' => true,
+				'officer' => true,
+			),
+			'game-master' => array(
+				'read' => true,
+				'game-master' => true,
+			),
+		),
+		'+ssptopwiki' => array(
+			'read-only' => array(
+				'read' => true,
+			),
+		),
+		'+swisscomraidwiki' => array(
+			'emailconfirmed' => array(
+				'read' => true,
+			),
+		),
+		'+svwiki' => array(
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+			),
+			'consul' => array(
+				'bureaucrat' => true,
+				'consul' => true,
+				'read' => true,
+			),
+			'testgroup' => array(
+				'read' => true,
+			),
+		),
+		'+thesciencearchiveswiki' => array(
+			'sysop' => array(
+				'templateeditor' => true,
+			),
+			'templateeditor' => array(
+				'templateeditor' => true,
+			),
+		),
+		'+trexwiki' => array(
+			'co' => array(
+				'co' => true,
+				'ceo' => true,
+			),
+			'ceo' => array(
+				'ceo' => true,
+				'editors' => true,
+			),
+			'bureaucrat' => array(
+				'bureaucrat' => true,
+			),
+		),
+		'+whentheycrywiki' => array(
+			'user' => array(
+				'edit-create' => true,
+			),
+		),
 		'weatherwiki' => array(
 			'steward' => array(
 				'userrights' => true,
@@ -2352,6 +2587,11 @@ $wgConf->settings = array(
 				'oauth-enable' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
+			),
+		),
+		'+yeoksawiki' => array(
+			'sysop' => array(
+				'project-edit' => true,
 			),
 		),
 	),
