@@ -789,7 +789,6 @@ $wgConf->settings = array(
 		'+ashinawiki' => array(
 			'anon' => true,
 			'user' => true,
-			'editor' => true,
 			'sysop' => true,
 			'bureaucrat' => true,
 		),
