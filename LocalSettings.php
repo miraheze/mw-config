@@ -7233,7 +7233,7 @@ if ( defined( 'MW_DB' ) ) {
 } elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
 } else {
-	$wgDBname = false;
+	$wgDBname = '';
 }
 
 # Initialize dblist
