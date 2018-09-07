@@ -6421,6 +6421,7 @@ $wgConf->settings = array(
 	// Robot policy
 	'wgDefaultRobotPolicy' => array(
 		'default' => 'index,follow',
+		'ashinawiki' => 'noindex,nofollow',
 		'destinoswiki' => 'noindex,nofollow',
 		'foodsharinghamburgwiki' => 'noindex,nofollow',
 		'ildrilwiki' => 'noindex,nofollow',
