@@ -17,6 +17,9 @@ if ( $wmgUseAdminLinks ) {
 
 if ( $wmgUseAJAXPoll ) {
 	wfLoadExtension( 'AJAXPoll' );
+	// Hiding information is not the wiki way
+	$wgGroupPermissions['*']['ajaxpoll-view-results'] = true;
+	$wgGroupPermissions['*']['ajaxpoll-view-results-before-vote'] = true;
 }
 
 if ( $wmgUseApex ) {
@@ -98,6 +101,8 @@ if ( $wmgUseCollection ) {
 
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
+	$wgGroupPermissions['sysop']['commentadmin'] = true;
+
 }
 
 if ( $wmgUseContactPage ) {
@@ -221,6 +226,7 @@ if ( $wmgUseFlaggedRevs ) {
 
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
+	$wgGroupPermissions['bureaucrat']['flow-create-board'] = true;
 
 	$wgVirtualRestConfig['modules']['parsoid'] = array(
 		'url' => 'https://parsoid-lb.miraheze.org:443',
@@ -358,6 +364,7 @@ if ( $wmgUseMaps ) {
 
 if ( $wmgUseMassEditRegex ) {
 	require_once( "$IP/extensions/MassEditRegex/MassEditRegex.php" );
+	$wgGroupPermissions['sysop']['masseditregex'] = true;
 }
 
 if ( $wmgUseMediaWikiChat ) {
@@ -596,6 +603,8 @@ if ( $wmgUseSiteScout ) {
 
 if ( $wmgUseSocialProfile ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
+	unset( $wgGroupPermissions['staff'] );
+	$wgGroupPermissions['sysop']['editothersprofiles'] = true;
 }
 
 if ( $wmgUseSpoilers ) {
@@ -627,6 +636,11 @@ if ( $wmgUseTemplateStyles ) {
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
 	require_once( "$IP/extensions/Translate/Translate.php" );
+	$wgGroupPermissions['sysop']['pagetranslation'] = true;
+	$wgGroupPermissions['sysop']['translate-import'] = true;
+	$wgGroupPermissions['sysop']['translate-manage'] = true;
+	$wgGroupPermissions['*']['translate'] = true;
+	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
@@ -740,6 +754,8 @@ if ( $wmgUseWikibaseRepository ) {
 
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
+
+	$wgAddGroups['bureaucrat'][] = 'forumadmin';
 }
 
 if ( $wmgUsewikihiero ) {
