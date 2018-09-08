@@ -2443,6 +2443,7 @@ $wgConf->settings = array(
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
+				'globalblock' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 				'noratelimit' => true,
