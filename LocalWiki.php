@@ -408,6 +408,7 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 
 if ($wgDBname = 'weatherwiki' ) {
 	$wgAvailableRights[]='edit-restrictednamespace';
+}
 
 if ( $wgDBname === 'zhdelwiki' ) {
 	unset($wgGroupPermissions['autoconfirmed']);
