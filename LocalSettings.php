@@ -2271,6 +2271,9 @@ $wgConf->settings = array(
 	),
 	'wgManageWikiPermissionsAdditionalAddGroups' => array(
 		'default' => array(),
+		'weatherwiki' => array(
+			'extendedconfirmed' => true,
+		),
 	),
 	'wgManageWikiPermissionsAdditionalRights' => array(
 		'default' => array(
@@ -2592,6 +2595,9 @@ $wgConf->settings = array(
 			'extendedconfirmed' => array(
 				'edit-restrictednamespace' => true,
 			),
+			'sysop' => array(
+				'edit-restrictednamespace' => true,
+			),
 		),
 		'+yeoksawiki' => array(
 			'sysop' => array(
@@ -2601,6 +2607,9 @@ $wgConf->settings = array(
 	),
 	'wgManageWikiAdditionalRemoveGroups' => array(
 		'default' => array(),
+		'weatherwiki' => array(
+			'extendedconfirmed' => true,
+		),
 	),
 	'wgManageWikiPermissionsBlacklistRights' => array(
 		'default' => array(
