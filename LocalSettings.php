@@ -2589,6 +2589,9 @@ $wgConf->settings = array(
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 			),
+			'extendedconfirmed' => array(
+				'edit-restrictednamespace' => true,
+			),
 		),
 		'+yeoksawiki' => array(
 			'sysop' => array(
@@ -3881,6 +3884,17 @@ $wgConf->settings = array(
 		'+whentheycrywiki' => array(
 			NS_USER => array(
 				'edit-userpage',
+			),
+		),
+		'+weatherwiki' => array(
+			NS_TEMPLATE => array(
+				'edit-restrictednamespace',
+			),
+			NS_MODULE => array(
+				'edit-restrictednamespace',
+			),
+			NS_PROJECT => array(
+				'edit-restrictednamespace',
 			),
 		),
 		'+yeoksawiki' => array(
@@ -6501,13 +6515,6 @@ $wgConf->settings = array(
 			'uploader' => array(
 				"&",
 				array( APCOND_AGE, 10 * 86400 ),
-			),
-		),
-		'+weatherwiki' => array(
-			'extendedconfirmed' => array(
-				"&",
-				array( APCOND_EDITCOUNT, 100 ),
-				array( APCOND_AGE, 30 * 86400 ),
 			),
 		),
 	),
