@@ -6,11 +6,10 @@ $wgObjectCaches['redis'] = [
 	'persistent' => true,
 ];
 
-if ( wfHostname() == 'test1' ) {
-	$wgMemCachedServers = [
-		'127.0.0.1:11211'
-	];
-}
+
+$wgMemCachedServers = [
+	'127.0.0.1:11211'
+];
 
 $wgMainCacheType = 'redis'; // CACHE_MEMCACHED causes login problems
 $wgSessionCacheType = 'redis';
