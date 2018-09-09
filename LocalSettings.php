@@ -3893,7 +3893,7 @@ $wgConf->settings = array(
 			NS_TEMPLATE => array(
 				'edit-restrictednamespace',
 			),
-			NS_MODULE => array(
+			WMG_NS_MODULE => array(
 				'edit-restrictednamespace',
 			),
 		),
