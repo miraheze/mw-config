@@ -6517,7 +6517,10 @@ $wgConf->settings = array(
 				array( APCOND_AGE, 10 * 86400 ),
 			),
 		),
-		'+weatherwiki' => array(
+	),
+	'wgAutopromoteOnce' => array(
+		'default' => array(),
+		'weatherwiki' => array(
 			'extendedconfirmed' => array(
 				"&",
 				array( APCOND_EDITCOUNT, 100 ),
