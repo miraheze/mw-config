@@ -6505,7 +6505,7 @@ $wgConf->settings = array(
 		),
 		'+weatherwiki' => array(
 			'extendedconfirmed' => array(
-				"&"
+				"&",
 				array( APCOND_EDITCOUNT, 100 ),
 				array( APCOND_AGE, 30 * 86400 ),
 			),
