@@ -2272,7 +2272,9 @@ $wgConf->settings = array(
 	'wgManageWikiPermissionsAdditionalAddGroups' => array(
 		'default' => array(),
 		'weatherwiki' => array(
-			'extendedconfirmed' => true,
+			'sysop' => array(
+				'extendedconfirmed',
+			),
 		),
 	),
 	'wgManageWikiPermissionsAdditionalRights' => array(
@@ -2608,7 +2610,9 @@ $wgConf->settings = array(
 	'wgManageWikiAdditionalRemoveGroups' => array(
 		'default' => array(),
 		'weatherwiki' => array(
-			'extendedconfirmed' => true,
+			'sysop' => array(
+				'extendedconfirmed',
+			),
 		),
 	),
 	'wgManageWikiPermissionsBlacklistRights' => array(
