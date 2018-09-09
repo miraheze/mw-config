@@ -6519,7 +6519,7 @@ $wgConf->settings = array(
 		),
 	),
 	'wgAutopromoteOnce' => array(
-		'default' => array();
+		'default' => array(),
 		'weatherwiki' => array(
 			'extendedconfirmed' => array(
 				"&",
