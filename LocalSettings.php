@@ -6503,6 +6503,13 @@ $wgConf->settings = array(
 				array( APCOND_AGE, 10 * 86400 ),
 			),
 		),
+		'+weatherwiki' => array(
+			'extendedconfirmed' => array(
+				"&",
+				array( APCOND_EDITCOUNT, 100 ),
+				array( APCOND_AGE, 30 * 86400 ),
+			),
+		),
 	),
 	'wgImplicitGroups' => array(
 		'default' => array( '*', 'user', 'autoconfirmed' ),
