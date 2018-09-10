@@ -2585,7 +2585,7 @@ $wgConf->settings = array(
 				'abusefilter-private-log' => true,
 				'abusefilter-hide-log' => true,
 				'abusefilter-hidden-log' => true,
-				'oauth-enable' => true,
+				'oathauth-enable' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 			),
