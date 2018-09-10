@@ -2594,12 +2594,6 @@ $wgConf->settings = array(
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 			),
-			'extendedconfirmed' => array(
-				'edit-restrictednamespace' => true,
-			),
-			'sysop' => array(
-				'edit-restrictednamespace' => true,
-			),
 		),
 		'+yeoksawiki' => array(
 			'sysop' => array(
