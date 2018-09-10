@@ -2593,6 +2593,7 @@ $wgConf->settings = array(
 				'oauth-enable' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
+			),
 		),
 		'+yeoksawiki' => array(
 			'sysop' => array(
