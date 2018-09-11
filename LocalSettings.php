@@ -1728,6 +1728,9 @@ $wgConf->settings = array(
 	'wgEnableManageWiki' => array(
 		'default' => true,
 	),
+	'wgManageWikiCDBDirectory' => array(
+		'default' => '/srv/mediawiki/w/cache/managewiki',
+	),
 	'wgManageWikiPermissionsAdditionalAddGroups' => array(
 		'default' => array(),
 	),
