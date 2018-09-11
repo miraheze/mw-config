@@ -1,14 +1,15 @@
 <?php
-$wgObjectCaches['redis'] = array(
+$wgObjectCaches['redis'] = [
 	'class' => 'RedisBagOStuff',
-	'servers' => array( '81.4.127.174:6379' ),
+	'servers' => [ '81.4.127.174:6379' ],
 	'password' => $wmgRedisPassword,
 	'persistent' => true,
-);
+];
 
-/*$wgMemCachedServers = array(
-	'127.0.0.1:11211' // 192M local memcached instance
-);*/
+
+$wgMemCachedServers = [
+	'127.0.0.1:11211'
+];
 
 $wgMainCacheType = 'redis'; // CACHE_MEMCACHED causes login problems
 $wgSessionCacheType = 'redis';
@@ -18,24 +19,24 @@ $wgMessageCacheType = CACHE_NONE;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
 
-$wgJobTypeConf['default'] = array(
+$wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
 	'redisServer' => '81.4.127.174:6379',
-	'redisConfig' => array(
+	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
-	),
+	],
 	'claimTTL' => 3600,
 	'daemonized' => true,
-);
+];
 
-$wgJobQueueAggregator = array(
+$wgJobQueueAggregator = [
         'class' => 'JobQueueAggregatorRedis',
-        'redisServers' => array( '81.4.127.174:6379', '81.4.127.174:6379' ), // fake misc2 as fallback
-        'redisConfig' => array(
+        'redisServers' => [ '81.4.127.174:6379', '81.4.127.174:6379' ], // fake misc2 as fallback
+        'redisConfig' => [
                 'connectTimeout' => 2,
                 'password' => $wmgRedisPassword,
                 'compression' => 'gzip',
-        )
-);
+        ]
+];
