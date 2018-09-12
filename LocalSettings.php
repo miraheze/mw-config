@@ -252,6 +252,14 @@ define( 'NS_USER_BLOG_COMMENT', 1824);
 define( 'NS_USER_BLOG_COMMENT_TALK', 1825);
 define( 'NS_HUB', 1826);
 define( 'NS_HUB_TALK', 1827);
+define( 'NS_LIST', 1828);
+define( 'NS_LIST_TALK', 1829);
+define( 'NS_LAW', 1830);
+define( 'NS_LAW_AMENDING', 1831);
+define( 'NS_EXECUTIVE_ORDER', 1832);
+define( 'NS_EXECUTIVE_ORDER_TALK', 1833);
+define( 'NS_GROUP', 1834);
+define( 'NS_GROUP_TALK', 1835);
 
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
@@ -2560,6 +2568,16 @@ $wgConf->settings = array(
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
 		),
+		'crazybloxianempireinfowiki' => array(
+			NS_LIST => 'List',
+			NS_LIST_TALK => 'List_talk',
+			NS_LAW => 'Law',
+			NS_LAW_AMENDING => 'Law_amending',
+			NS_EXECUTIVE_ORDER => 'Executive_Order',
+			NS_EXECUTIVE_ORDER_TALK => 'Executive_Order_talk',
+			NS_GROUP => 'Group',
+			NS_GROUP_TALK => 'Group_talk',
+		),	
 		'cristianopediawiki' => array(
 			NS_TEMA => 'Tema',
 			NS_TEMA_TALK => 'Tema_discusión',
