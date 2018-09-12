@@ -163,6 +163,12 @@ if ( $wgDBname === 'weatherwiki' ) {
 	$wgAvailableRights[] = 'edit-restrictednamespace';
 }
 
+if ( $wgDBname === 'wmaucommwiki' ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/wmaucommwiki";
+ 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+}
+
+
 // Depends on $wgContentNamespaces
 if ( $wgDBname === 'abitaregeawiki' ) {
 	$wgExemptFromUserRobotsControl = array();
