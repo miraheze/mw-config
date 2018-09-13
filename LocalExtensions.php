@@ -25,6 +25,10 @@ if ( $wmgUseApex ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
 }
 
+if ( $wmgUseApprovedRevs ) {
+	wfLoadSkin( 'ApprovedRevs' );
+}
+
 if ( $wmgUseArticleFeedbackv5 ) {
 	wfLoadExtension( 'ArticleFeedbackv5' );
 }
