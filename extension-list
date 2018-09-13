@@ -2,6 +2,7 @@ $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddThis/AddThis.php
 $IP/extensions/AddHTMLMetaAndTitle/extension.json
 $IP/extensions/AdminLinks/AdminLinks.php
+$IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/ArticleFeedbackv5/extension.json
 $IP/extensions/ArticleRatings/extension.json
 $IP/extensions/ArticleToCategory2/ArticleToCategory2.php
