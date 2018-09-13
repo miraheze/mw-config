@@ -1163,6 +1163,9 @@ $wgConf->settings = array(
 	'wmgUseProtectSite' => array(
 		'default' => false,
 	),
+	'wmgUsePurge' => array(
+		'default' => false,
+	),
 	'wmgUseQuiz' => array(
 		'default' => false,
 	),
