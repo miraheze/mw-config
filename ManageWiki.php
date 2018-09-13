@@ -41,6 +41,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'approvedrevs' => array(
+			'name' => 'Approved Revs',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Approved Revs',
+			'var' => 'wmgUseApprovedRevs',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'articlefeedbackv5' => array(
 			'name' => 'Article Feedback Tool V5',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleFeedbackv5',
