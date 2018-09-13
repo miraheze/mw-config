@@ -526,7 +526,7 @@ if ( $wmgUseProtectSite ) {
 }
 
 if ( $wmgUsePurge ) {
-	wfLoadExtension( 'Purge' );
+	require_once( "$IP/extensions/Purge/Purge.php" );
 }
 
 if ( $wmgUseQuiz ) {
