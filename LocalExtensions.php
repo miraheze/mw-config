@@ -26,7 +26,7 @@ if ( $wmgUseApex ) {
 }
 
 if ( $wmgUseApprovedRevs ) {
-	wfLoadSkin( 'ApprovedRevs' );
+	wfLoadExtension( 'ApprovedRevs' );
 }
 
 if ( $wmgUseArticleFeedbackv5 ) {
