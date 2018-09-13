@@ -746,6 +746,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'purge' => array(
+			'name' => 'Purge',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Purge',
+			'var' => 'wmgUsePurge',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'quiz' => array(
 			'name' => 'Quiz',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Quiz',

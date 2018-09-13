@@ -525,6 +525,10 @@ if ( $wmgUseProtectSite ) {
 	wfLoadExtension( 'ProtectSite' );
 }
 
+if ( $wmgUsePurge ) {
+	wfLoadExtension( 'Purge' );
+}
+
 if ( $wmgUseQuiz ) {
 	wfLoadExtension( 'Quiz' );
 }
