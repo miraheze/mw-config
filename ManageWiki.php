@@ -43,7 +43,7 @@ $wgManageWikiExtensions = array(
 		),
 		'approvedrevs' => array(
 			'name' => 'Approved Revs',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Approved Revs',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Approved_Revs',
 			'var' => 'wmgUseApprovedRevs',
 			'conflicts' => false,
 			'requires' => false,
