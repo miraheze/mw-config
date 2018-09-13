@@ -812,6 +812,9 @@ $wgConf->settings = array(
 	'wmgUseApex' => array(
 		'default' => false,
 	),
+	'wmgUseApprovedRevs' => array(
+		'default' => false,
+	),
 	'wmgUseArticleFeedbackv5' => array(
 		'default' => false,
 	),
