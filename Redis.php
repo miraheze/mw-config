@@ -7,9 +7,9 @@ $wgObjectCaches['redis'] = [
 ];
 
 
-$wgMemCachedServers = [
+/*$wgMemCachedServers = [
 	'127.0.0.1:11211'
-];
+];*/
 
 $wgMainCacheType = 'redis'; // CACHE_MEMCACHED causes login problems
 $wgSessionCacheType = 'redis';
