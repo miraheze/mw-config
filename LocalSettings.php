@@ -1747,7 +1747,7 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 	'wgManageWikiCDBDirectory' => array(
-		'default' => '/srv/mediawiki/w/cache/managewiki',
+		'default' => '/mnt/mediawiki-static/cdb/managewiki',
 	),
 	'wgManageWikiPermissionsAdditionalAddGroups' => array(
 		'default' => array(),
