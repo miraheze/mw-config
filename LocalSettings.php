@@ -409,7 +409,7 @@ $wgConf->settings = array(
 
 	// Bot passwords
 	'wgBotPasswordsDatabase' => array(
-		'default' => 'centralauth',
+		'default' => 'mhglobal',
 	),
 
 	// Cache
@@ -499,7 +499,7 @@ $wgConf->settings = array(
 		'nenawikiwiki' => false,
 	),
 	'wgCentralAuthDatabase' => array(
-		'default' => 'centralauth',
+		'default' => 'mhglobal',
 	),
 	'wgCentralAuthEnableGlobalRenameRequest' => array(
 		'default' => false,
