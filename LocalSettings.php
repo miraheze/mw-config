@@ -553,6 +553,9 @@ $wgConf->settings = array(
 	'wgCreateWikiEmailNotifications' => array(
 		'default' => true,
 	),
+	'wgCreateWikiNotificationEmail' => array(
+		'default' => 'staff@miraheze.org',
+	),
 	'wgCreateWikiSQLfiles' => array(
 		'default' => array(
 			"$IP/maintenance/tables.sql",
