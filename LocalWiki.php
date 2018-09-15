@@ -162,10 +162,6 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 
 if ( $wgDBname === 'weatherwiki' ) {
 	$wgAvailableRights[] = 'edit-restrictednamespace';
-	$wgAvailableRights[] = 'approverevisions';
-	$wgAvailableRights[] = 'viewlinktolatest';
-	$wgAvailableRights[] = 'viewapprover',
-	$wgAvailableRights[] = 'purge',
 }
 
 if ( $wgDBname === 'wmaucommwiki' ) {
