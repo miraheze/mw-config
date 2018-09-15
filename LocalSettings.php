@@ -724,7 +724,7 @@ $wgConf->settings = array(
 	),
 
 	'wgReadOnly' => array(
-		'default' => 'see sitenotice',
+		'default' => false,
 	),
 	'wgSharedDB' => array(
 		'default' => 'metawiki',
