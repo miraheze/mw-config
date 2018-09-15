@@ -27,6 +27,10 @@ if ( $wmgUseApex ) {
 
 if ( $wmgUseApprovedRevs ) {
 	wfLoadExtension( 'ApprovedRevs' );
+
+	$wgAvailableRights[] = 'approverevisions';
+	$wgAvailableRights[] = 'viewlinktolatest';
+	$wgAvailableRights[] = 'viewapprover';
 }
 
 if ( $wmgUseArticleFeedbackv5 ) {
@@ -527,6 +531,8 @@ if ( $wmgUseProtectSite ) {
 
 if ( $wmgUsePurge ) {
 	require_once( "$IP/extensions/Purge/Purge.php" );
+
+	$wgAvailableRights[] = 'purge';
 }
 
 if ( $wmgUseQuiz ) {
