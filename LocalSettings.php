@@ -2160,7 +2160,7 @@ $wgConf->settings = array(
 
 	// MatomoAnalytics
 	'wgMatomoAnalyticsDatabase' => array(
-		'default' => 'metawiki',
+		'default' => 'mhglobal',
 	),
 	'wgMatomoAnalyticsServerURL' => array(
 		'default' => 'https://matomo.miraheze.org/',
