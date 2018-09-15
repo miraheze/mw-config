@@ -1590,7 +1590,7 @@ $wgConf->settings = array(
 		'weatherwiki' => false, // let me do the blocking on my wiki, please
 	),
 	'wgGlobalBlockingDatabase' => array(
-		'default' => 'mhglobal', // use centralauth for global blocks
+		'default' => 'mhglobal', // use mhglobal for global blocks
 	),
 
 	// GlobalCssJs
