@@ -409,7 +409,7 @@ $wgConf->settings = array(
 
 	// Bot passwords
 	'wgBotPasswordsDatabase' => array(
-		'default' => 'centralauth',
+		'default' => 'mhglobal',
 	),
 
 	// Cache
@@ -499,7 +499,7 @@ $wgConf->settings = array(
 		'nenawikiwiki' => false,
 	),
 	'wgCentralAuthDatabase' => array(
-		'default' => 'centralauth',
+		'default' => 'mhglobal',
 	),
 	'wgCentralAuthEnableGlobalRenameRequest' => array(
 		'default' => false,
@@ -545,7 +545,7 @@ $wgConf->settings = array(
 		'default' => 'Special:MyLanguage/Custom_domains',
 	),
 	'wgCreateWikiDatabase' => array(
-		'default' => 'metawiki',
+		'default' => 'mhglobal',
 	),
 	'wgCreateWikiDBDirectory' => array(
 		'default' => '/srv/mediawiki/dblist',
@@ -1590,7 +1590,7 @@ $wgConf->settings = array(
 		'weatherwiki' => false, // let me do the blocking on my wiki, please
 	),
 	'wgGlobalBlockingDatabase' => array(
-		'default' => 'centralauth', // use centralauth for global blocks
+		'default' => 'mhglobal', // use centralauth for global blocks
 	),
 
 	// GlobalCssJs
@@ -2160,7 +2160,7 @@ $wgConf->settings = array(
 
 	// MatomoAnalytics
 	'wgMatomoAnalyticsDatabase' => array(
-		'default' => 'metawiki',
+		'default' => 'mhglobal',
 	),
 	'wgMatomoAnalyticsServerURL' => array(
 		'default' => 'https://matomo.miraheze.org/',
