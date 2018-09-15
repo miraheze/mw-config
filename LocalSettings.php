@@ -545,7 +545,7 @@ $wgConf->settings = array(
 		'default' => 'Special:MyLanguage/Custom_domains',
 	),
 	'wgCreateWikiDatabase' => array(
-		'default' => 'metawiki',
+		'default' => 'mhglobal',
 	),
 	'wgCreateWikiDBDirectory' => array(
 		'default' => '/srv/mediawiki/dblist',
