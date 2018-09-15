@@ -754,6 +754,9 @@ if ( $wmgUseWikibaseRepository ) {
 
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
+	
+	$wgAvailableRights[] = 'wikiforum-admin';
+	$wgAvailableRights[] = 'wikiforum-moderator';
 }
 
 if ( $wmgUsewikihiero ) {
