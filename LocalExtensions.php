@@ -7,6 +7,9 @@ if ( $wmgUse3D ) {
 	$wg3dProcessor = [
 		'/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/3d2png/3d2png.js'
 	];
+
+	$wgTrustedMediaFormats[] = 'application/sla';
+	$wgFileExtensions[] = 'stl';
 }
 
 if ( $wmgUseAddThis ) {
