@@ -135,7 +135,7 @@ $IP/extensions/Poem/extension.json
 $IP/extensions/RSS/extension.json
 $IP/extensions/RandomGameUnit/extension.json
 $IP/extensions/RandomImage/extension.json
-$IP/extensions/RandomSelection/RandomSelection.php
+$IP/extensions/RandomSelection/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
