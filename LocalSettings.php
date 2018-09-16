@@ -547,6 +547,9 @@ $wgConf->settings = array(
 	'wgCreateWikiDatabase' => array(
 		'default' => 'mhglobal',
 	),
+	'wgCreateWikiGlobalWiki' => array(
+		'default' => 'mhglobal',
+	),
 	'wgCreateWikiDBDirectory' => array(
 		'default' => '/srv/mediawiki/dblist',
 	),
