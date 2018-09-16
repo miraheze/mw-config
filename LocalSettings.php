@@ -1752,9 +1752,6 @@ $wgConf->settings = array(
 	'wgEnableManageWiki' => array(
 		'default' => true,
 	),
-	'wgManageWikiGlobalWiki' => array(
-		'default' => 'metawiki',
-	),
 	'wgManageWikiCDBDirectory' => array(
 		'default' => '/mnt/mediawiki-static/cdb/managewiki',
 	),
