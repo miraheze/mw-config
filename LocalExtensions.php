@@ -552,7 +552,7 @@ if ( $wmgUseRandomImage ) {
 }
 
 if ( $wmgUseRandomSelection ) {
-	require_once( "$IP/extensions/RandomSelection/RandomSelection.php" );
+	wfLoadExtension( 'RandomSelection' );
 }
 
 if ( $wmgUseRefreshed ) {
