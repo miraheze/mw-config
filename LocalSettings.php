@@ -1617,7 +1617,7 @@ $wgConf->settings = array(
 
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => array(
-		'default' => 'mhglobal',
+		'default' => 'centralauth',
 	),
 
  	// GlobalUserPage
