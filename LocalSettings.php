@@ -1614,7 +1614,7 @@ $wgConf->settings = array(
 
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => array(
-		'default' => 'centralauth',
+		'default' => 'mhglobal',
 	),
 
  	// GlobalUserPage
@@ -3687,7 +3687,7 @@ $wgConf->settings = array(
 
 	// OATHAuth
 	'wgOATHAuthDatabase' => array(
-		'default' => 'centralauth',
+		'default' => 'mhglobal',
 	),
 
 	// OAuth
