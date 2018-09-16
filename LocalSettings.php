@@ -703,6 +703,8 @@ $wgConf->settings = array(
 		'destinoswiki' => false,
 		'mexicopediawiki' => false,
 		'repositoriowiki' => false,
+		'reviwiki' => false,
+		'reviwikiwiki' => false,
 		'ucroniawiki' => false,
 	),
 	'wgStructuredChangeFiltersShowWatchlistPreference' => array(
