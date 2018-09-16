@@ -806,6 +806,9 @@ $wgConf->settings = array(
  	),
 
 	// Extensions and Skins
+	'wmgUse3D' => array(
+		'default' => false,
+	),
 	'wmgUseAddThis' => array(
 		'default' => false,
 	),

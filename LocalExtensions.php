@@ -1,6 +1,14 @@
 <?php
 
 // Set up extensions for use on wikis that are not global
+if ( $wmgUse3D ) {
+	wfLoadExtension( '3D' );
+
+	$wg3dProcessor = [
+		'/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/3d2png/3d2png.js'
+	];
+}
+
 if ( $wmgUseAddThis ) {
 	wfLoadExtension( 'AddThis' );
 
@@ -409,6 +417,10 @@ if ( $wmgUseMsUpload ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
+
+	if ( $wmgUse3D ) {
+		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+	}
 }
 
 if ( $wmgUseMultiBoilerplate ) {
