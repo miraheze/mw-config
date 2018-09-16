@@ -1,6 +1,14 @@
 <?php
 
 $wgManageWikiExtensions = array(
+		'3d' => array(
+			'name' => '3D',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:3D',
+			'var' => 'wmgUse3D',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'addthis' => array(
 			'name' => 'AddThis',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:AddThis',
