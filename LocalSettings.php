@@ -2116,6 +2116,7 @@ $wgConf->settings = array(
 			'interwiki',
 			'managewiki-restricted',
 			'managewiki-editdefault',
+			'mwoauthmanagemygrants',
 			'mwoauthsuppress',
 			'mwoauthviewsuppressed',
 			'renameuser',
