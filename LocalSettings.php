@@ -2126,7 +2126,6 @@ $wgConf->settings = array(
 			'suppressrevision',
 			'userrights',
 			'userrights-interwiki',
-			'viewpmlog',
 			'viewsuppressed'
 		),
 	),
