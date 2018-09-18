@@ -2140,7 +2140,7 @@ $wgConf->settings = array(
 				'viewpmlog',
 				'viewsuppressed',
 			),
-			'*' => array (
+			'*' => array(
 				'read',
 				'skipcatcha',
 				'torunblocked',
