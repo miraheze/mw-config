@@ -2404,6 +2404,9 @@ $wgConf->settings = array(
 		'default' => 30,
 		'weatherwiki' => 7,
 	),
+	'wgTOCLocation' => array(
+		'horizonwiki' => 'sidebar',
+	),
 
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => array(
