@@ -4,6 +4,7 @@ require_once( "$IP/extensions/Scribunto/Scribunto.php" );
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
+	'BetaFeatures',
 	'CentralAuth',
 	'CentralNotice',
 	'CheckUser',
@@ -18,6 +19,7 @@ wfLoadExtensions( [
 	'GlobalUserPage',
 	'Interwiki',
 	'LocalisationUpdate',
+	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
 	'MirahezeMagic',
