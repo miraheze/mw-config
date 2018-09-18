@@ -16,6 +16,7 @@ $wgDebugLogGroups = array(
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
+	'MatomoAnalytics' => "$wmgLogDir/debuglogs/MatomoAnalytics.log",
 	'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 	'redis' => "$wmgLogDir/debuglogs/redis.log",
 	'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
