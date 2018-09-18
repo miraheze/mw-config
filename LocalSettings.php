@@ -2096,13 +2096,16 @@ $wgConf->settings = array(
 	),
 	'wgManageWikiPermissionsBlacklistRights' => array(
 		'default' => array(
+			// arrays
+			'any' => array(),
+			'*' => array (),
+
 			'abusefilter-hide-log',
 			'abusefilter-hidden-log',
 			'abusefilter-modify-global',
 			'abusefilter-private',
 			'abusefilter-private-log',
 			'aft-oversighter',
-			'any',
 			'autocreateaccount',
 			'bigdelete',
 			'centralauth-lock',
