@@ -522,6 +522,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'mediawikichat' => array(
+			'name' => 'MediaWikiChat',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:MediaWikiChat',
+			'var' => 'wmgUseMediaWikiChat',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'metrolook' => array(
 			'name' => 'Metrolook (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Metrolook',
