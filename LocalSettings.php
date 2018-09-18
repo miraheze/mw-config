@@ -261,6 +261,25 @@ define( 'NS_EXECUTIVE_ORDER_TALK', 1833);
 define( 'NS_GROUP', 1834);
 define( 'NS_GROUP_TALK', 1835);
 
+define( 'NS_PORTALE', 2000); // Skipping values to 2000 per T3553
+define( 'NS_DISCUSSIONI_PORTALE', 2001);
+define( 'NS_PROGRETTO', 2002);
+define( 'NS_DISCUSSIONI_PROGRETTO', 2010);
+define( 'NS_CIMITERO', 2011);
+define( 'NS_NONNOTIZIE', 2012);
+define( 'NS_DISCUSSIONI_NONNOTIZIE', 2013);
+define( 'NS_NONVOYAGE', 2014);
+define( 'NS_DISCUSSIONI_NONVOYAGE', 2015);
+define( 'NS_NONQUOTE', 2020);
+define( 'NS_DISCUSSIONI_NONQUOTE', 2021);
+define( 'NS_NONDIZIONARiO', 2022);
+define( 'NS_DISCUSSIONI_NONDIZIONARIO', 2023);
+define( 'NS_NONVERSITA', 2024);
+define( 'NS_DISCUSSIONI_NONVERVISTA', 2025);
+define( 'NS_NONSOURCE', 2026);
+define( 'NS_DISCUSSIONI_NONSOURCE', 2027);
+define( 'NS_NONBOOKS', 2028);
+define( 'NS_DISCUSSIONI_NONBOOKS', 2029);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
