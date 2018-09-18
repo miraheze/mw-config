@@ -2139,7 +2139,7 @@ $wgConf->settings = array(
 			),
 			'*' => array(
 				'read',
-				'skipcatcha',
+				'skipcaptcha',
 				'torunblocked',
 			),
 		),
