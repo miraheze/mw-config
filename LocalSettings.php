@@ -2102,6 +2102,7 @@ $wgConf->settings = array(
 			'abusefilter-private',
 			'abusefilter-private-log',
 			'aft-oversighter',
+			'any',
 			'autocreateaccount',
 			'bigdelete',
 			'centralauth-lock',
