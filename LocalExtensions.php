@@ -64,6 +64,10 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 	wfLoadExtension( 'AutoCreateCategoryPages' );
 }
 
+if ( $wmgUseBabel ) {
+	wfLoadExtension( 'Babel' );
+}
+
 if ( $wmgUseBlogPage ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
 	wfLoadExtension( 'BlogPage' );
@@ -93,6 +97,18 @@ if ( $wmgUseCapiunto ) {
 
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
+}
+
+if ( $wmgUseCite ) {
+	wfLoadExtension( 'Cite' );
+}
+
+if ( $wmgUseCiteThisPage ) {
+	wfLoadExtension( 'CiteThisPage' );
+}
+
+if ( $wmgUseCodeEditor ) {
+	wfLoadExtension( 'CodeEditor' );
 }
 
 if ( $wmgUseCodeMirror ) {
@@ -159,6 +175,10 @@ if ( $wmgUseDarkVector ) {
 
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
+}
+
+if ( $wmgUseDisambiguator ) {
+	wfLoadExtension( 'Disambiguator' );
 }
 
 if ( $wmgUseDismissableSiteNotice ) {
@@ -271,6 +291,10 @@ if ( $wmgUseForeground ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
 }
 
+if ( $wmgUseGadgets ) {
+	wfLoadExtension( 'Gadgets' );
+}
+
 if ( $wmgUseGamepress ) {
 	wfLoadSkin( 'Gamepress' );
 
@@ -319,6 +343,10 @@ if ( $wmgUseImageMap ) {
 
 if ( $wmgUseImageRating ) {
 	wfLoadExtension( 'ImageRating' );
+}
+
+if ( $wmgUseInputBox ) {
+	wfLoadExtension( 'InputBox' );
 }
 
 if ( $wmgUseJavascriptSlideshow ) {
@@ -377,6 +405,14 @@ if ( $wmgUseMaps ) {
 
 if ( $wmgUseMassEditRegex ) {
 	require_once( "$IP/extensions/MassEditRegex/MassEditRegex.php" );
+}
+
+if ( $wmgUseMassMessage ) {
+	wfLoadExtension( 'MassMessage' );
+}
+
+if ( $wmgUseMath ) {
+	wfLoadExtension( 'Math' );
 }
 
 if ( $wmgUseMediaWikiChat ) {
@@ -511,6 +547,10 @@ if ( $wmgUsePivot ) {
 	wfLoadSkin( 'pivot' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Pivot'] = 'pivot';
+}
+
+if ( $wmgUsePoem ) {
+	wfLoadExtension( 'Poem' );
 }
 
 if ( $wmgUsePoll ) {
@@ -663,6 +703,10 @@ if ( $wmgUseTranslate ) {
 	$wgULSGeoService = false;
 }
 
+if ( $wmgUseThanks ) {
+	wfLoadExtension( 'Thanks' );
+}
+
 if ( $wmgUseTheme ) {
 	wfLoadExtension( 'Theme' );
 }
@@ -670,6 +714,10 @@ if ( $wmgUseTheme ) {
 if ( $wmgUseTimedMediaHandler ) {
 	wfLoadExtension( 'TimedMediaHandler' );
 	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
+}
+    
+if ( $wmgUseTimeline ) {
+	wfLoadExtension( 'Timeline' );
 }
 
 if ( $wmgUseTitleKey ) {
