@@ -285,6 +285,16 @@ if ( $wmgUseGeoData ) {
 	wfLoadExtension( 'GeoData' );
 }
 
+if ( $wmgUseGettingStarted ) {
+	wfLoadExtension( 'GettingStarted' );
+
+	// Required deps of GettingStarted
+	wfLoadExtension( 'EventLogging' );
+	wfLoadExtension( 'GuidedTour' );
+	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
+	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
+}
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }

@@ -993,6 +993,9 @@ $wgConf->settings = array(
 	'wmgUseGeoData' => array(
 		'default' => false,
 	),
+	'wmgUseGettingStarted' => array(
+		'default' => false,
+	),
 	'wmgUseGraph' => array(
 		'default' => false,
 	),
