@@ -58,6 +58,7 @@ $IP/extensions/Flow/extension.json
 $IP/extensions/Gadgets/extension.json
 $IP/extensions/GeoCrumbs/extension.json
 $IP/extensions/GeoData/extension.json
+$IP/extensions/GettingStarted/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalPreferences/extension.json
