@@ -703,7 +703,7 @@ if ( $wmgUseTranslate ) {
 	$wgULSGeoService = false;
 }
 
-if ( $wmgUseThanks {
+if ( $wmgUseThanks ) {
 	wfLoadExtension( 'Thanks' );
 }
 
