@@ -354,6 +354,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'gettingstarted' => array(
+			'name' => 'GettingStarted',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:GettingStarted',
+			'var' => 'wmgUseGettingStarted',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'graph' => array(
 			'name' => 'Graph',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Graph',
