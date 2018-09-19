@@ -159,6 +159,8 @@ if ( $wmgUseDarkVector ) {
 
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
+
+	$wgEnableMetaDescriptionFunctions = true;
 }
 
 if ( $wmgUseDismissableSiteNotice ) {
