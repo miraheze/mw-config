@@ -164,6 +164,28 @@ if ( $wgDBname === 'weatherwiki' ) {
 	$wgAvailableRights[] = 'edit-restrictednamespace';
 }
 
+if ( $wgDBname === 'wikiageingwiki' ) {
+	$wgForeignFileRepos[] = [
+		'class'                   => 'ForeignAPIRepo',
+		'name'                    => 'arwiki',
+		'apibase'                 => 'https://ar.wikipedia.org/w/api.php',
+		'hashLevels'              => 2,
+		'fetchDescription'        => true,
+		'descriptionCacheExpiry'  => 43200,
+		'apiThumbCacheExpiry'     => 86400,
+	];
+
+	$wgForeignFileRepos[] = [
+		'class'                   => 'ForeignAPIRepo',
+		'name'                    => 'enwiki',
+		'apibase'                 => 'https://en.wikipedia.org/w/api.php',
+		'hashLevels'              => 2,
+		'fetchDescription'        => true,
+		'descriptionCacheExpiry'  => 43200,
+		'apiThumbCacheExpiry'     => 86400,
+	];
+}
+
 if ( $wgDBname === 'wmaucommwiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/wmaucommwiki";
  	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";

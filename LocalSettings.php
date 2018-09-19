@@ -864,6 +864,9 @@ $wgConf->settings = array(
 	'wmgUseBlogPage' => array(
 		'default' => false,
 	),
+	'wmgUseBabel' => array(
+		'default' => false,
+	),
 	'wmgUseMSCalendar' => array(
 		'default' => false,
 	),
@@ -878,6 +881,15 @@ $wgConf->settings = array(
 		'whentheycrywiki' => false,
 	),
 	'wmgUseCharInsert' => array(
+		'default' => false,
+	),
+	'wmgUseCite' => array(
+		'default' => false,
+	),
+	'wmgUseCiteThisPage' => array(
+		'default' => false,
+	),
+	'wmgUseCodeEditor' => array(
 		'default' => false,
 	),
 	'wmgUseCodeMirror' => array(
@@ -925,6 +937,9 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseDescription2' => array(
+		'default' => false,
+	),
+	'wmgUseDisambiguator' => array(
 		'default' => false,
 	),
 	'wmgUseDismissableSiteNotice' => array(
@@ -984,6 +999,9 @@ $wgConf->settings = array(
 	'wmgUseForeground' => array(
 		'default' => false,
 	),
+	'wmgUseGadgets' => array(
+		'default' => false,
+	),
 	'wmgUseGamepress' => array(
 		'default' => false,
 	),
@@ -1018,6 +1036,9 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseImageRating' => array(
+		'default' => false,
+	),
+	'wmgUseInputBox' => array(
 		'default' => false,
 	),
 	'wmgUseJavascriptSlideshow' => array(
@@ -1059,6 +1080,12 @@ $wgConf->settings = array(
 	),
 	'wmgUseMassEditRegex' => array(
 		'default' => false, // sysop is given permission 'masseditregex' by default
+	),
+	'wmgUseMassMessage' => array(
+		'default' => false,
+	),
+	'wmgUseMath' => array(
+		'default' => false,
 	),
 	'wmgUseMediaWikiChat' => array(
 		'default' => false,
@@ -1163,6 +1190,9 @@ $wgConf->settings = array(
 	'wmgUsePivot' => array(
 		'default' => false,
 	),
+	'wmgUsePoem' => array(
+		'default' => false,
+	),
 	'wmgUsePopups' => array(
 		'default' => false,
 	),
@@ -1265,6 +1295,12 @@ $wgConf->settings = array(
 		'default' => false,
 	),
 	'wmgUseTimedMediaHandler' => array(
+		'default' => false,
+	),
+	'wmgUseTimeline' => array(
+		'default' => false,
+	),
+	'wmgUseThanks' => array(
 		'default' => false,
 	),
 	'wmgUseTitleKey' => array(
@@ -1561,6 +1597,7 @@ $wgConf->settings = array(
 		'+valentinaprojectwiki' => array( 'val', 'vit', 'vst'),
 		'+vsfan' =>  array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'webp' ),
 		'+vandalismwikiwiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
+		'+wirtschaftsinformatikhbs' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'docx', 'pptx', 'vsd' ),
 		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
 	),
 	'wgUseInstantCommons' => array(
