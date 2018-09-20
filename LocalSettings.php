@@ -1712,6 +1712,9 @@ $wgConf->settings = array(
 			'wmincubator',
 			'wikiaincubatorplus',
 		),
+		'+weatherwiki' => array(
+			'wikipedia',
+		),
 	),
 
 	// Job Queue
