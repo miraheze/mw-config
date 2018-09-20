@@ -705,7 +705,6 @@ $wgConf->settings = array(
 	),
 	'wgCookieWarningEnabled' => array(
 		'default' => true,
-		'weatherwiki' => false,
 	),
 	'wgCookieWarningGeoIPLookup' => array(
 		'default' => 'php',
