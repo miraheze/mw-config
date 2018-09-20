@@ -701,9 +701,11 @@ $wgConf->settings = array(
 	),
 	'wgCookieSetOnAutoblock' => array(
 		'default' => true,
+		'weatherwiki' => false,
 	),
 	'wgCookieWarningEnabled' => array(
 		'default' => true,
+		'weatherwiki' => false,
 	),
 	'wgCookieWarningGeoIPLookup' => array(
 		'default' => 'php',
