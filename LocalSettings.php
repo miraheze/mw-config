@@ -3999,6 +3999,7 @@ $wgConf->settings = array(
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 		'default' => false,
 		'allthetropeswiki' => '0.01',
+		'avalicearchiveswiki' => '0.01',
 		'calexitwiki' => '0.01',
 		'youtubewiki' => '0.01',
 	),
