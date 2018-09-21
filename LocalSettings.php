@@ -3991,6 +3991,10 @@ $wgConf->settings = array(
 			'timeless',
 			'vector',
 		),
+		'avalicearchiveswiki' => array(
+			'metrolook',
+			'vector',
+		),
 	),
 	'wgRelatedArticlesLoggingSamplingRate' => array(
 		'default' => false,
@@ -4001,6 +4005,7 @@ $wgConf->settings = array(
 	'wgRelatedArticlesShowReadMore' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'avalicearchiveswiki' => true,
 		'calexitwiki' => true,
 		'youtubewiki' => true,
 	),
@@ -4215,7 +4220,6 @@ $wgConf->settings = array(
 	// SocialProfile
 	'wgUserBoard' => array(
 		'default' => false,
-		'avalicearchiveswiki' => true,
 	),
 	'wgUserProfileThresholds' => array(
 		'default' => array(
@@ -4230,10 +4234,6 @@ $wgConf->settings = array(
 			'board' => false,
 			'friends' => false,
 			'foes' => false,
-		),
-		'avalicearchiveswiki' => array(
-			'board' => true,
-      	        	'friends' => true,
 		),
 	),
 	// Statistics
