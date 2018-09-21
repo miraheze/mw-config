@@ -3756,7 +3756,7 @@ $wgConf->settings = array(
 			NS_REGISTRO_TALK => 'flow-board',
 			NS_LISTA_TALK => 'flow-board',
 			NS_BUG_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board'
+			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 		),
