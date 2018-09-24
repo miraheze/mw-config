@@ -2129,6 +2129,7 @@ $wgConf->settings = array(
 				'oathauth-enable' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
+				'bigdelete' => true,
 			),
 		),
 		'+yeoksawiki' => array(
