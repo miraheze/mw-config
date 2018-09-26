@@ -1705,7 +1705,10 @@ $wgConf->settings = array(
 		'default' => 'metawiki',
 	),
 	'wgExtraInterlanguageLinkPrefixes' => array(
-		'tallercentralwiki' => 'voy',
+		'defaul' => array(),
+		'+tallercentralwiki' => array(
+			'voy',
+		),
 	),
 
 	//Imports
