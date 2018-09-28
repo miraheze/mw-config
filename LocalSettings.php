@@ -281,6 +281,8 @@ define( 'NS_DISCUSSIONI_NONSOURCE', 2027);
 define( 'NS_NONBOOKS', 2028);
 define( 'NS_DISCUSSIONI_NONBOOKS', 2029);
 define( 'NS_DISCUSSIONI_CIMITERO', 2030);
+define( 'NS_FANWORK', 2032);
+define( 'NS_FANWORK_TALK', 2033);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2586,6 +2588,10 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+		),
+		'avalicearchiveswiki' => array(
+			NS_FANWORK => 'Fanwork',
+			NS_FANWORK_TALK => 'Fanwork_talk',
 		),
 		'bigforestwiki' => array(
 			NS_QUIZSET => 'Quizset',
