@@ -1070,6 +1070,7 @@ $wgConf->settings = array(
 	'wmgUseLinkSuggest' => array(
 		'default' => false,
 		'test1wiki' => true,
+		'avalicearchiveswiki' => true,
 	),
 	'wmgUseLinkTarget' => array(
 		'default' => false,
@@ -1576,6 +1577,7 @@ $wgConf->settings = array(
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
+		'+avalicearchiveswiki' => array('exe', 'zip', 'css', 'woff', 'woff2', 'ttf' ),
 		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
 		'+bsaikatsuwiki' => array( 'oga', 'ogx' ),
 		'+cmgwiki' => array('html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt'),
