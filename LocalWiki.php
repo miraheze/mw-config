@@ -6,14 +6,11 @@
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 	$wgRevokePermissions = array(
 		'*' => array(
-			'block' => true,
 			'createaccount' => true,
-			'delete' => true,
 			'edit' => true,
 			'protect' => true,
 			'import' => true,
 			'upload' => true,
-			'undelete' => true,
 		),
 	);
 
