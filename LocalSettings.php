@@ -3900,9 +3900,6 @@ $wgConf->settings = array(
 			'importer' => array(
 				'flood',
 			),
-			'uploader' => array(
-				'flood',
-			),
 		),
 	),	
 	'wgGroupsRemoveFromSelf' => array(
@@ -3919,9 +3916,6 @@ $wgConf->settings = array(
 		),
 		'+weatherwiki' => array(
 			'importer' => array(
-				'flood',
-			),
-			'uploader' => array(
 				'flood',
 			),
 		),
