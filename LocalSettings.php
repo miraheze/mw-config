@@ -1562,6 +1562,7 @@ $wgConf->settings = array(
 		'entropediawiki' => true,
 		'macfan4000wiki' => true,
 		'ndwiki' => true,
+		'nerdzonewiki' => true,
 		'nonbinarywiki' => true,
 	),
 	'wgAllowTitlesInSVG' => array(
@@ -1573,6 +1574,7 @@ $wgConf->settings = array(
 		'entropediawiki' => true,
 		'macfan4000wiki' => true,
 		'ndwiki' => true,
+		'nerdzonewiki' => true,
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
