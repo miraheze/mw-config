@@ -309,6 +309,7 @@ $wgConf->settings = array(
 			'blockautopromote' => true,
 			'degroup' => true,
 			'disallow' => true,
+			'flag' => true,
 			'rangeblock' => true,
 			'tag' => true,
 			'throttle' => true,
