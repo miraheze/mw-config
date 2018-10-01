@@ -1303,7 +1303,8 @@ $wgManageWikiSettings = array(
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'section' => 'media'
+		'section' => 'media',
+		'help' => false,
 	),
 	'wgPopupsBetaFeature' => array(
 		'name' => 'Enable Popups Beta Mode',
@@ -1311,7 +1312,8 @@ $wgManageWikiSettings = array(
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'section' => 'media'
+		'section' => 'media',
+		'help' => false,
 	),
 	'wgServer' => array(
 		'name' => 'Custom Domain',
@@ -1347,5 +1349,6 @@ $wgManageWikiSettings = array(
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
+		'help' => false,
 	),
 );
