@@ -1298,7 +1298,7 @@ $wgManageWikiSettings = array(
 		'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
 	'wgMediaViewerIsInBeta' => array(
-		'name' => 'MediaViewerIsInBeta',
+		'name' => 'Enable Media Viewer Beta Mode',
 		'requires' => 'multimediaviewer',
 		'restricted' => false,
 		'type' => 'text',
