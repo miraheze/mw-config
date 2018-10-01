@@ -369,18 +369,6 @@ $wgConf->settings = array(
 	),
 	'wgVisualEditorEnableWikitext' => array(
 		'default' => false,
-		'aerosswiki' => true,
-		'attackontitanwiki' => true,
-		'avalicearchiveswiki' => true,
-		'knowledgewiki' => true,
-		'magnaversewiki' => true,
-		'nanatsunotaizaiwiki' => true,
-		'raymanspeedrunwiki' => true,
-		'test1wiki' => true,
-		'thehushhushsagawiki' => true,
-		'tmewiki' => true,
-		'tokyoghoulwiki' => true,
-		'zharkunuwiki' => true,
 	),
 	'wgPivotFeatures' => array(
 		'thegreatwarwiki' => array(
