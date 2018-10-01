@@ -363,16 +363,6 @@ $wgConf->settings = array(
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => array(
 		'default' => false,
-		'allthetropeswiki' => true,
-		'calexitwiki' => true,
-		'inazumaelevenwiki' => true,
-		'justinbieberwiki' => true,
-		'nanatsunotaizaiwiki' => true,
-		'pruebawiki' => true,
-		'test1wiki' => true,
-		'thehushhushsagawiki' => true,
-		'tokyohoulwiki' => true,
-		'youtubewiki' => true,
 	),
 	'wgPopupsBetaFeature' => array(
 		'default' => false,
