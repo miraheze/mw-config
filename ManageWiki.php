@@ -1339,4 +1339,11 @@ $wgManageWikiSettings = array(
 		'overridedefault' => 'cc-by-sa',
 		'help' => false,
 	),
+	'wgVisualEditorEnableWikitext' => array(
+		'name' => 'Enable VisualEditor Wikitext mode',
+		'requires' => 'visualeditor',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+	),
 );
