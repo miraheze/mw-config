@@ -2245,7 +2245,13 @@ $wgConf->settings = array(
 	'wgMatomoAnalyticsGlobalID' => array(
 		'default' => 1,
 	),
-
+	
+	//MediaWikiChat settings
+	'wgChatMeCommand' => array(
+		'default' => false,
+		'nerdzonewiki' => true,
+	),
+	
 	// Metrolook settings
 	'wgMetrolookDownArrow' => array(
 		'default' => true,
