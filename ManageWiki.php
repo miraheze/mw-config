@@ -1301,7 +1301,7 @@ $wgManageWikiSettings = array(
 		'name' => 'Enable Media Viewer Beta Mode',
 		'requires' => 'multimediaviewer',
 		'restricted' => false,
-		'type' => 'text',
+		'type' => 'check',
 		'overridedefault' => null,
 	),
 	'wgServer' => array(
