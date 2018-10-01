@@ -1304,6 +1304,13 @@ $wgManageWikiSettings = array(
 		'type' => 'check',
 		'overridedefault' => null,
 	),
+	'wgPopupsBetaFeature' => array(
+		'name' => 'Enable Popups Beta Mode',
+		'requires' => 'Popups',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+	),
 	'wgServer' => array(
 		'name' => 'Custom Domain',
 		'requires' => false,
