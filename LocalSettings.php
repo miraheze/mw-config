@@ -3876,6 +3876,7 @@ $wgConf->settings = array(
 	'wgPageLanguageUseDB' => array(
 		'default' => false,
 		'nvcwiki' => true,
+		'nerdzonewiki' => true,
 		'spiralwiki' => true,
 	),
 
