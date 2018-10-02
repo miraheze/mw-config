@@ -109,7 +109,7 @@ $IP/extensions/NewUserNotif/NewUserNotif.php
 $IP/extensions/NewestPages/extension.json
 $IP/extensions/News/News.php
 $IP/extensions/Newsletter/extension.json
-$IP/extensions/NoTitle/NoTitle.php
+$IP/extensions/NoTitle/extension.json
 $IP/extensions/Nuke/extension.json
 $IP/extensions/NukeDPL/extension.json
 $IP/extensions/OATHAuth/extension.json
