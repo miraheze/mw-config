@@ -985,6 +985,10 @@ $wgConf->settings = array(
 	'wmgUseGettingStarted' => array(
 		'default' => false,
 	),
+	'wmgUseGlobalUserPage' => array(
+		'default' => true,
+		'reviwikiwiki' => false, // T3671
+	),
 	'wmgUseGraph' => array(
 		'default' => false,
 	),
