@@ -131,7 +131,7 @@ $IP/extensions/PollNY/extension.json
 $IP/extensions/Popups/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
-$IP/extensions/Purge/extension.json
+$IP/extensions/Purge/Purge.php
 $IP/extensions/Quiz/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/RSS/extension.json
