@@ -405,7 +405,7 @@ if ( $wmgUseLoopsCombo ) {
 }
 
 if ( $wmgUseMagicNoCache ) {
-	require_once( "$IP/extensions/MagicNoCache/MagicNoCache.php" );
+	wfLoadExtension( 'MagicNoCache' );
 }
 
 if ( $wmgUseMaps ) {
