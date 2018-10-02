@@ -16,7 +16,6 @@ wfLoadExtensions( [
 	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalPreferences',
-	'GlobalUserPage',
 	'Interwiki',
 	'LocalisationUpdate',
 	'LoginNotify',

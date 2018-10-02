@@ -321,6 +321,10 @@ if ( $wmgUseGettingStarted ) {
 	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
 }
 
+if ($wmgUseGlobalUserPage ) {
+	wfLoadExtension( 'GlobalUserPage') ;
+}
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
