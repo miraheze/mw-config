@@ -515,7 +515,7 @@ if ( $wmgUseNostalgia ) {
 }
 
 if ( $wmgUseNoTitle ) {
-	require_once( "$IP/extensions/NoTitle/NoTitle.php" );
+	wfLoadExtension( 'NoTitle' );
 	$wgRestrictDisplayTitle = false;
 }
 
