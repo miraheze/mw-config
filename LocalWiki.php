@@ -83,6 +83,7 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
+}
 
 if ( $wgDBname === 'ciptamediawiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
