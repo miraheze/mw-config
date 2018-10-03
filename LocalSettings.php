@@ -3323,10 +3323,8 @@ $wgConf->settings = array(
 		'isvwiki' => array(
 			WMG_NS_MODULE_TALK => 'flow-board',
 			NS_LIBRARY_TALK => 'flow-board',
-			),
 		),
 	),
-
 	// OATHAuth
 	'wgOATHAuthDatabase' => array(
 		'default' => 'mhglobal',
