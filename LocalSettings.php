@@ -2217,6 +2217,10 @@ $wgConf->settings = array(
 	),
 	
 	//MediaWikiChat settings
+	'wgChatLinkUsernames' => array(
+		'default' => false,
+		'nerdzonewiki' => true,
+	),
 	'wgChatMeCommand' => array(
 		'default' => false,
 		'nerdzonewiki' => true,
