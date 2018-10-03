@@ -1250,6 +1250,14 @@ $wgManageWikiExtensions = array(
  * restricted: boolean - requires managewiki-restricted to change.
  */
 $wgManageWikiSettings = array(
+	'wgAllowSlowParserFunctions' => array(
+		'name' => 'Allow slow parser functions',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+		'help' => false,
+	),
         'wgAppleTouchIcon' => array(
                 'name' => 'Apple Touch Icon',
                 'requires' => false,
@@ -1308,7 +1316,7 @@ $wgManageWikiSettings = array(
 	),
 	'wgPFEnableStringFunctions' => array(
 		'name' => 'Enable string function functionality',
-		'requires' => false
+		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
