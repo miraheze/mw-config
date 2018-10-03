@@ -746,10 +746,6 @@ $wgConf->settings = array(
 	),
 	'wgAllowSlowParserFunctions' => array(
 		'default' => false,
-		'cristianopediawiki' => true,
-		'elarawiki' => true,
-		'tallerdecristianopediawiki' => true,
-		'trexwiki' => true,
 	),
 
 	// Echo
