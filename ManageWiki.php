@@ -1289,6 +1289,14 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
+	'wgUseInstantCommons' => array(
+		'name' => 'Enable Wikimedia Commons Files',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
+	),
 	'wgLocaltimezone' => array(
 		'name' => 'Timezone',
 		'requires' => false,
