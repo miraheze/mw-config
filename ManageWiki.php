@@ -1290,7 +1290,7 @@ $wgManageWikiSettings = array(
 		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
 	'wgUseInstantCommons' => array(
-		'name' => 'Enable InstantCommons',
+		'name' => 'Enable Wikimedia Commons Files',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
