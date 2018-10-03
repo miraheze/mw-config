@@ -743,10 +743,6 @@ $wgConf->settings = array(
 	),
 	'wgPFEnableStringFunctions' => array(
 		'default' => false,
-		'ktswiki' => true,
-		'paliwikiwiki' => true,
-		'rakudaikishiwiki' => true,
-		'realmgrinderwiki' => true,
 	),
 	'wgAllowSlowParserFunctions' => array(
 		'default' => false,

@@ -1306,6 +1306,14 @@ $wgManageWikiSettings = array(
 		'section' => 'media',
 		'help' => false,
 	),
+	'wgPFEnableStringFunctions' => array(
+		'name' => 'Enable string function functionality',
+		'requires' => false
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+		'help' => false,
+	),
 	'wgPopupsBetaFeature' => array(
 		'name' => 'Enable Popups Beta Mode',
 		'requires' => 'Popups',
