@@ -1252,7 +1252,7 @@ $wgManageWikiExtensions = array(
 $wgManageWikiSettings = array(
 	'wgAllowSlowParserFunctions' => array(
 		'name' => 'Allow slow parser functions',
-		'requires' => false
+		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
@@ -1316,7 +1316,7 @@ $wgManageWikiSettings = array(
 	),
 	'wgPFEnableStringFunctions' => array(
 		'name' => 'Enable string function functionality',
-		'requires' => false
+		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
