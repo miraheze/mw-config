@@ -307,6 +307,7 @@ if ( $wmgUseMainPageWhitelist ) {
 			"Halaman Utama",
 			"特別:アカウント作成",
 			"Chyba povolení",
+			"Hlavní strana",
 		)
 	);
 }
