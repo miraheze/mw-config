@@ -1308,7 +1308,7 @@ $wgManageWikiSettings = array(
 	),
 	'wgPFEnableStringFunctions' => array(
 		'name' => 'Enable string function functionality',
-		'requires' => 'parserfunctions',
+		'requires' => false
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
