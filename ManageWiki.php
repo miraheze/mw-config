@@ -1290,12 +1290,12 @@ $wgManageWikiSettings = array(
 		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
 	'wgUseInstantCommons' => array(
-		'name' => 'Enable InstantCommons, i.e. the use of Wikimedia Commons as a shared repository',
+		'name' => 'Enable InstantCommons',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'help' => false,
+		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
 	),
 	'wgLocaltimezone' => array(
 		'name' => 'Timezone',
