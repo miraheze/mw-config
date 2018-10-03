@@ -83,31 +83,6 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
-}
-
-if ( $wgDBname === 'centralwiki' ||
-     $wgDBname === 'destinoswiki' ||
-     $wgDBname === 'ucroniawiki' ||
-     $wgDBname === 'mexicopediawiki' ||
-     $wgDBname === 'apunteswiki' ||
-     $wgDBname === 'repositoriowiki' ||
-     $wgDBname === 'tallercentralwiki' ||
-     $wgDBname === 'repositoriowiki'
-) {
-	// T3415
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static/repositoriowiki',
-		'url' => 'https://static.miraheze.org/repositoriowiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'wiki' => 'repositoriowiki',
-		'descBaseUrl' => 'https://repositorio.miraheze.org/wiki/File:',
-	];
-}
 
 if ( $wgDBname === 'ciptamediawiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
