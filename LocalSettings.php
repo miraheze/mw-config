@@ -2522,8 +2522,8 @@ $wgConf->settings = array(
 			NS_FEATURED_TALK => 'Featured_Page_talk',
 		),
 		'avalicearchiveswiki' => array(
-			NS_FANWORK => 'Fanwork',
-			NS_FANWORK_TALK => 'Fanwork_talk',
+			NS_FANWORK => 'Fanbase',
+			NS_FANWORK_TALK => 'Fanbase_talk',
 		),
 		'bigforestwiki' => array(
 			NS_QUIZSET => 'Quizset',
