@@ -1758,6 +1758,12 @@ $wgConf->settings = array(
 	'wgEnableManageWiki' => array(
 		'default' => true,
 	),
+	'wgManageWikiExtensionsDefault' => array(
+		'default' => array(
+			'cite',
+			'citethispage',
+		),
+	),
 	'wgManageWikiCDBDirectory' => array(
 		'default' => '/mnt/mediawiki-static/cdb/managewiki',
 	),
