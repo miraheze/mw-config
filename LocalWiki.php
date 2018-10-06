@@ -104,7 +104,7 @@ if ( $wgDBname === 'centralwiki' ||
 		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
 		'hasSharedCache' => mediatecawiki,
-		'wiki' => 'repositoriowiki',
+		'wiki' => 'mediatecawiki',
 		'descBaseUrl' => 'https://mediateca.miraheze.org/wiki/File:',
 	];
 }
