@@ -84,6 +84,30 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
 }
+if ( $wgDBname === 'centralwiki' ||
+     $wgDBname === 'destinoswiki' ||
+     $wgDBname === 'ucroniaswiki' ||
+     $wgDBname === 'infowiki' ||
+     $wgDBname === 'apunteswiki' ||
+     $wgDBname === 'privadowiki' ||
+     $wgDBname === 'mediatecawiki' ||
+     $wgDBname === 'tallerwiki' ||
+     $wgDBname === 'mediatecawiki'
+) {
+	// per Ucronistaw
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared',
+		'directory' => '/mnt/mediawiki-static/mediatecawiki',
+		'url' => 'https://static.miraheze.org/mediatecawiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => 'mediatecawiki',
+		'wiki' => 'mediatecawiki',
+		'descBaseUrl' => 'https://mediateca.miraheze.org/wiki/File:',
+	];
+}
 
 if ( $wgDBname === 'ciptamediawiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
