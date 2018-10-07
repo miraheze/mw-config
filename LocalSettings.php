@@ -3039,27 +3039,27 @@ $wgConf->settings = array(
 		'default' => array(),
 		'+apunteswiki' => array(
  			'A' => NS_PROJECT,
- 		)
+ 		),
  		'+centralwiki' => array(
  			'C' => NS_PROJECT,
- 		)
+ 		),
  		'+destinoswiki' => array(
  			'D' => NS_PROJECT,
 			'WV' => NS_PROYECTO,
 			'Wikiviajes' => NS_PROYECTO,
- 		)
+ 		),
  		'+infowiki' => array(
  			'I' => NS_PROJECT,
- 		)
+ 		),
  		'+mediatecawiki' => array(
  			'M' => NS_PROJECT,
- 		)
+ 		),
  		'+privadowiki' => array(
  			'P' => NS_PROJECT,
- 		)
+ 		),
  		'+tallerwiki' => array(
  			'T' => NS_PROJECT,
- 		)
+ 		),
  		'+ucroniaswiki' => array(
  			'U' => NS_PROJECT,
 		),
