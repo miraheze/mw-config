@@ -3663,7 +3663,7 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 		),
-		'ucroniawiki' => array(
+		'ucroniaswiki' => array(
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
