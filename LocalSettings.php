@@ -4411,11 +4411,6 @@ $wgConf->settings = array(
 			NS_MAIN => true,
 			NS_USER => true,
 		),
-		'wmgVisualEditorAvailableNamespaces' => array(
- 		'default' => array(
-			NS_MAIN => true,
-			NS_USER => true,
-		),
 		'+apunteswiki' => array(
 			NS_PROJECT => true,
 			NS_PAGE => true,
