@@ -4668,7 +4668,7 @@ $wgConf->settings = array(
 			'random_poll' => false,
 		),
 	),
-),
+);
 
 function efGetSiteParams( $conf, $wiki ) {
 	$site = null;
