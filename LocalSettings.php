@@ -260,6 +260,8 @@ define( 'NS_EXECUTIVE_ORDER', 1832);
 define( 'NS_EXECUTIVE_ORDER_TALK', 1833);
 define( 'NS_GROUP', 1834);
 define( 'NS_GROUP_TALK', 1835);
+define( 'NS_PARAMETER', 1836);
+define( 'NS_PARAMETER_TALK', 1837);
 
 define( 'NS_PORTALE', 2000); // Skipping values to 2000 per T3553
 define( 'NS_DISCUSSIONI_PORTALE', 2001);
@@ -2725,6 +2727,10 @@ $wgConf->settings = array(
 			NS_TEMA => 'Tema',
 			NS_TEMA_TALK => 'Tema_discusión',
 		),
+		'ecoepiwiki' => array(
+			NS_PARAMETER => 'Parameter',
+			NS_PARAMETER_TALK => 'Parameter_talk',
+		),
 		'fawiki' => array(
 			NS_API => 'رابط برنامه‌نویسی',
 			NS_API_TALK => 'بحث رابط برنامه‌نویسی',
@@ -3112,6 +3118,10 @@ $wgConf->settings = array(
 			'DC' => NS_MAIN,
 			'DC_talk' => NS_TALK,
 		),
+		'+ecoepiwiki' => array(
+			'P' => NS_PARAMETER,
+			'PT' => NS_PARAMETER_TALK,
+		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
@@ -3480,6 +3490,10 @@ $wgConf->settings = array(
 		),
 		'+conductwiki' => array(
 			NS_MAIN => true,
+		),
+		'+ecoepiwiki' => array(
+			NS_PARAMETER => true,
+			NS_PARAMETER_TALK => true,
 		),
 		'+eotewiki' => array(
 			NS_MAIN => true,
