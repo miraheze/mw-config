@@ -3120,6 +3120,7 @@ $wgConf->settings = array(
 		),
 		'+ecoepiwiki' => array(
 			'P' => NS_PARAMETER,
+			'PT' => NS_PARAMETER_TALK,
 		),
 		'+humorpediawiki' => array(
 			'HP' => NS_PROJECT,
