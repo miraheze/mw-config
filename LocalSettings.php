@@ -590,6 +590,7 @@ $wgConf->settings = array(
 			"$IP/extensions/PollNY/sql/poll.sql",
 			"$IP/extensions/ProofreadPage/sql/ProofreadIndex.sql",
 			"$IP/extensions/QuizGame/sql/quizgame.sql",
+			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/SocialProfile/UserProfile/sql/user_profile.sql",
 			"$IP/extensions/SocialProfile/UserProfile/sql/user_fields_privacy.sql",
 			"$IP/extensions/SocialProfile/UserStats/sql/user_system_messages.sql",

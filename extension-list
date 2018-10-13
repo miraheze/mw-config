@@ -134,6 +134,7 @@ $IP/extensions/ProtectSite/extension.json
 $IP/extensions/Purge/Purge.php
 $IP/extensions/Quiz/extension.json
 $IP/extensions/Poem/extension.json
+$IP/extensions/RottenLinks/extension.json
 $IP/extensions/RSS/extension.json
 $IP/extensions/RandomGameUnit/extension.json
 $IP/extensions/RandomImage/extension.json

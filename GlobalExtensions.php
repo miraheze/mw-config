@@ -27,6 +27,7 @@ wfLoadExtensions( [
 	'OAuth',
 	'ParserFunctions',
 	'Renameuser',
+	'RottenLinks',
 	'SyntaxHighlight_GeSHi',
 	'TitleBlacklist',
 	'TorBlock',
