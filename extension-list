@@ -2,7 +2,7 @@ $IP/extensions/3D/extension.json
 $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddThis/extension.json
 $IP/extensions/AddHTMLMetaAndTitle/extension.json
-$IP/extensions/AdminLinks/AdminLinks.php
+$IP/extensions/AdminLinks/extension.json
 $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/ArticleFeedbackv5/extension.json
 $IP/extensions/ArticleRatings/extension.json
