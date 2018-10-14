@@ -152,7 +152,7 @@ if ( $wmgUseCreatePage ) {
 }
 
 if ( $wmgUseCreateRedirect ) {
-	require_once( "$IP/extensions/CreateRedirect/CreateRedirect.php" );
+	wfLoadExtension( 'CreateRedirect' );
 }
 
 if ( $wmgUseCrossReference ) {
