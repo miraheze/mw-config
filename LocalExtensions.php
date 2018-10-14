@@ -768,7 +768,7 @@ if ( $wmgUseUrlGetParameters ) {
 
 if ( $wmgUseUserWelcome ) {
 	require_once( "$IP/extensions/SocialProfile/SocialProfile.php" );
-   	require_once( "$IP/extensions/SocialProfile/UserWelcome/UserWelcome.php" );
+	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
 
 if ( $wmgUseVariables ) {
