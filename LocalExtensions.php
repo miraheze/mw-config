@@ -53,7 +53,7 @@ if ( $wmgUseArticleRatings ) {
 }
 
 if ( $wmgUseArticleToCategory2 ) {
-	require_once( "$IP/extensions/ArticleToCategory2/ArticleToCategory2.php" );
+	wfLoadExtension( 'ArticleToCategory2' );
 }
 
 if ( $wmgUseAuthorProtect ) {
