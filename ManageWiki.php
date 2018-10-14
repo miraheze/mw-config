@@ -1294,7 +1294,7 @@ $wgManageWikiSettings = array(
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => null,
+		'overridedefault' => true,
 		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
 	),
 	'wgLocaltimezone' => array(
