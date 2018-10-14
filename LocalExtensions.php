@@ -664,7 +664,7 @@ if ( $wmgUseScore ) {
 }
 
 if ( $wmgUseSimpleChanges ) {
-	require_once( "$IP/extensions/SimpleChanges/SimpleChanges.php" );
+	wfLoadExtension( 'SimpleChanges' );
 }
 
 if ( $wmgUseShortURL ) {
