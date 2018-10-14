@@ -1,6 +1,6 @@
 $IP/extensions/3D/extension.json
 $IP/extensions/AJAXPoll/extension.json
-$IP/extensions/AddThis/AddThis.php
+$IP/extensions/AddThis/extension.json
 $IP/extensions/AddHTMLMetaAndTitle/extension.json
 $IP/extensions/AdminLinks/AdminLinks.php
 $IP/extensions/ApprovedRevs/extension.json
