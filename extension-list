@@ -33,7 +33,7 @@ $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionScores/ContributionScores.php
 $IP/extensions/CookieWarning/extension.json
 $IP/extensions/CreatePage/CreatePage.php
-$IP/extensions/CreateRedirect/CreateRedirect.php
+$IP/extensions/CreateRedirect/extension.json
 $IP/extensions/CreateWiki/extension.json
 $IP/extensions/CrossReference/extension.json
 $IP/extensions/CustomHeader/extension.json
