@@ -57,7 +57,7 @@ if ( $wmgUseArticleToCategory2 ) {
 }
 
 if ( $wmgUseAuthorProtect ) {
-	require_once( "$IP/extensions/AuthorProtect/AuthorProtect.php" );
+	wfLoadExtension( 'AuthorProtect' );
 }
 
 if ( $wmgUseAutoCreateCategoryPages ) {

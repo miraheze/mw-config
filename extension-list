@@ -7,7 +7,7 @@ $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/ArticleFeedbackv5/extension.json
 $IP/extensions/ArticleRatings/extension.json
 $IP/extensions/ArticleToCategory2/extension.json
-$IP/extensions/AuthorProtect/AuthorProtect.php
+$IP/extensions/AuthorProtect/extension.json
 $IP/extensions/AutoCreateCategoryPages/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
