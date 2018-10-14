@@ -23,7 +23,7 @@ if ( $wmgUseAddHTMLMetaAndTitle ) {
 }
 
 if ( $wmgUseAdminLinks ) {
-	require_once( "$IP/extensions/AdminLinks/AdminLinks.php" );
+	wfLoadExtension( 'AdminLinks' );
 }
 
 if ( $wmgUseAJAXPoll ) {
