@@ -1828,6 +1828,30 @@ $wgConf->settings = array(
 		'default' => 0,
 	),
 
+	//Kartographer
+ 	'wgKartographerWikivoyageMode' => array(
+		'default' => false,
+		'apunteswiki' => true,
+		'centralwiki' => true,
+		'destinoswiki' => true,
+		'infowiki' => true,
+		'mediatecawiki' => true,
+		'privadowiki' => true,
+		'tallerwiki' => true,
+		'ucroniaswiki' => true,
+	 ),
+	'wgKartographerUseMarkerStyle' => array(
+		'default' => false,
+		'apunteswiki' => true,
+		'centralwiki' => true,
+		'destinoswiki' => true,
+		'infowiki' => true,
+		'mediatecawiki' => true,
+		'privadowiki' => true,
+		'tallerwiki' => true,
+		'ucroniaswiki' => true,
+	 ),
+
 	// Language
 	'wgLanguageCode' => array( // Hardcode "en"
 		'default' => 'en',
