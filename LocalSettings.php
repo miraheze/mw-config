@@ -262,6 +262,8 @@ define( 'NS_GROUP', 1834);
 define( 'NS_GROUP_TALK', 1835);
 define( 'NS_PARAMETER', 1836);
 define( 'NS_PARAMETER_TALK', 1837);
+define( 'NS_EXAMPLE', 1838);
+define( 'NS_EXAMPLE_TALK', 1839);
 
 define( 'NS_PORTALE', 2000); // Skipping values to 2000 per T3553
 define( 'NS_DISCUSSIONI_PORTALE', 2001);
@@ -2695,6 +2697,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'centralwiki' => array(
 			NS_TEST => 'Prueba',
@@ -2713,6 +2717,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'destinoswiki' => array(
 			NS_TEST => 'Prueba',
@@ -2731,6 +2737,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'infowiki' => array(
 			NS_TEST => 'Prueba',
@@ -2749,6 +2757,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'mediatecawiki' => array(
 			NS_TEST => 'Prueba',
@@ -2767,6 +2777,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'privadowiki' => array(
 			NS_TEST => 'Prueba',
@@ -2785,6 +2797,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'tallerwiki' => array(
 			NS_TEST => 'Prueba',
@@ -2803,6 +2817,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'ucroníaswiki' => array(
 			NS_TEST => 'Prueba',
@@ -2821,6 +2837,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'Taller_discusión',
 			NS_MODELO => 'Modelo',
 			NS_MODELO_TALK => 'Modelo_discusión',
+			NS_EXAMPLE => 'Ejemplo',
+			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
 		'2b2twiki' => array(
 			NS_THREAD => 'Thread',
@@ -3553,6 +3571,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+centralwiki' => array(
 			NS_PROJECT => true,
@@ -3564,6 +3583,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+destinoswiki' => array(
 			NS_PROJECT => true,
@@ -3575,6 +3595,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+infowiki' => array(
 			NS_PROJECT => true,
@@ -3586,6 +3607,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+mediatecawiki' => array(
 			NS_PROJECT => true,
@@ -3597,6 +3619,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+privadowiki' => array(
 			NS_PROJECT => true,
@@ -3608,6 +3631,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+tallerwiki' => array(
 			NS_PROJECT => true,
@@ -3619,6 +3643,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+ucroniaswiki' => array(
 			NS_PROJECT => true,
@@ -3630,6 +3655,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+adnovumwiki' => array(
 			NS_MAIN => true,
@@ -3793,6 +3819,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 		'centralwiki' => array(
 			NS_TEST_TALK => 'flow-board',
@@ -3803,6 +3830,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 		'destinoswiki' => array(
 			NS_TEST_TALK => 'flow-board',
@@ -3813,6 +3841,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 		'infowiki' => array(
 			NS_TEST_TALK => 'flow-board',
@@ -3823,6 +3852,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 		'mediatecawiki' => array(
 			NS_TEST_TALK => 'flow-board',
@@ -3833,6 +3863,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 		'privadowiki' => array(
 			NS_TEST_TALK => 'flow-board',
@@ -3843,6 +3874,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 		'taller' => array(
 			NS_TEST_TALK => 'flow-board',
@@ -3853,6 +3885,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 		'ucroniaswiki' => array(
 			NS_TEST_TALK => 'flow-board',
@@ -3863,6 +3896,7 @@ $wgConf->settings = array(
 			NS_PROYECTO_TALK => 'flow-board',
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
+			NS_EXAMPLE_TALK => 'flow-board',
 		),
 	),
 	// OATHAuth
@@ -4612,6 +4646,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+centralwiki' => array(
 			NS_PROJECT => true,
@@ -4623,6 +4658,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+destinoswiki' => array(
 			NS_PROJECT => true,
@@ -4634,6 +4670,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+infowiki' => array(
 			NS_PROJECT => true,
@@ -4645,6 +4682,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+mediatecawiki' => array(
 			NS_PROJECT => true,
@@ -4656,6 +4694,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+privadowiki' => array(
 			NS_PROJECT => true,
@@ -4667,6 +4706,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+tallerwiki' => array(
 			NS_PROJECT => true,
@@ -4678,6 +4718,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+ucroniaswiki' => array(
 			NS_PROJECT => true,
@@ -4689,6 +4730,7 @@ $wgConf->settings = array(
 			NS_PROYECTO => true,
 			NS_TALLER => true,
 			NS_MODELO => true,
+			NS_EXAMPLE => true,
 	 	 ),
 		'+calexitwiki' => array(
 			NS_DRAFT => true,
