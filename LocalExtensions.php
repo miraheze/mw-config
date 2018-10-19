@@ -413,7 +413,7 @@ if ( $wmgUseMagicNoCache ) {
 }
 
 if ( $wmgUseMaps ) {
-	require_once( "$IP/extensions/Maps/Maps.php" );
+	wfLoadExtension( 'Maps' );
 	$egMapsDefaultService = 'openlayers';
 	$egMapsDisableSmwIntegration = true;
 	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
