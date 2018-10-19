@@ -87,7 +87,7 @@ $IP/extensions/LoginNotify/extension.json
 $IP/extensions/Loops/Loops.php
 $IP/extensions/MagicNoCache/extension.json
 $IP/extensions/ManageWiki/extension.json
-$IP/extensions/Maps/Maps.php
+$IP/extensions/Maps/extension.json
 $IP/extensions/MassEditRegex/MassEditRegex.php
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
