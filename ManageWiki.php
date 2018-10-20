@@ -1390,6 +1390,15 @@ $wgManageWikiSettings = array(
 		'section' => 'media',
 		'help' => 'Allow images and other files to be uploaded through the wiki.',
 	),
+	'wgUseInstantCommons' => array(
+		'name' => 'Enable Wikimedia Commons Files',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
+	),
 	'wgMediaViewerIsInBeta' => array(
 		'name' => 'Enable Media Viewer Beta Mode',
 		'requires' => 'multimediaviewer',
@@ -1407,14 +1416,5 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'section' => 'media',
 		'help' => false,
-	),
-	'wgUseInstantCommons' => array(
-		'name' => 'Enable Wikimedia Commons Files',
-		'requires' => false,
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'media',
-		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
 	),
 );
