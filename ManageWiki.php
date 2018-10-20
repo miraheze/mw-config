@@ -1399,6 +1399,15 @@ $wgManageWikiSettings = array(
 		'section' => 'media',
 		'help' => 'Allow uploads from URLs as well as local files.',
 	),
+	'wgCopyUploadsFromSpecialUpload' => array(
+		'name' => 'Enable File Uploads Through URL on Special:Upload',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Add an interface to Special:Upload to enable uploading from URLs',
+	),
 	'wgUseInstantCommons' => array(
 		'name' => 'Enable Wikimedia Commons Files',
 		'requires' => false,
