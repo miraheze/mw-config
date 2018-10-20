@@ -1390,6 +1390,15 @@ $wgManageWikiSettings = array(
 		'section' => 'media',
 		'help' => 'Allow images and other files to be uploaded through the wiki.',
 	),
+	'wgAllowCopyUploads' => array(
+		'name' => 'Enable File Uploads Through URL',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Allow uploads from URLs as well as local files.',
+	),
 	'wgUseInstantCommons' => array(
 		'name' => 'Enable Wikimedia Commons Files',
 		'requires' => false,
