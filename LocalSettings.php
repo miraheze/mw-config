@@ -1514,11 +1514,6 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
-		'entropediawiki' => true,
-		'macfan4000wiki' => true,
-		'ndwiki' => true,
-		'nerdzonewiki' => true,
-		'nonbinarywiki' => true,
 	),
 	'wgAllowTitlesInSVG' => array(
 		'default' => false,
