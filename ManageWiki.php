@@ -1279,6 +1279,7 @@ $wgManageWikiExtensions = array(
  * restricted: boolean - requires managewiki-restricted to change.
  */
 $wgManageWikiSettings = array(
+	// General
 	'wgAllowSlowParserFunctions' => array(
 		'name' => 'Allow slow parser functions',
 		'requires' => false,
@@ -1318,14 +1319,6 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
-	'wgUseInstantCommons' => array(
-		'name' => 'Enable Wikimedia Commons Files',
-		'requires' => false,
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
-	),
 	'wgLocaltimezone' => array(
 		'name' => 'Timezone',
 		'requires' => false,
@@ -1342,30 +1335,12 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
 	),
-	'wgMediaViewerIsInBeta' => array(
-		'name' => 'Enable Media Viewer Beta Mode',
-		'requires' => 'multimediaviewer',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => null,
-		'section' => 'media',
-		'help' => false,
-	),
 	'wgPFEnableStringFunctions' => array(
 		'name' => 'Enable string function functionality',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'help' => false,
-	),
-	'wgPopupsBetaFeature' => array(
-		'name' => 'Enable Popups Beta Mode',
-		'requires' => 'Popups',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => null,
-		'section' => 'media',
 		'help' => false,
 	),
 	'wgServer' => array(
@@ -1375,6 +1350,14 @@ $wgManageWikiSettings = array(
 		'type' => 'text',
 		'overridedefault' => null,
 		'help' => 'This sets your custom domain. Otherwise it defaults to submdomain.miraheze.org.',
+	),
+	'wgVisualEditorEnableWikitext' => array(
+		'name' => 'Enable VisualEditor Wikitext mode',
+		'requires' => 'visualeditor',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+		'help' => false,
 	),
 	'wmgWikiLicense' => array(
 		'name' => 'Content License',
@@ -1396,12 +1379,42 @@ $wgManageWikiSettings = array(
 		'overridedefault' => 'cc-by-sa',
 		'help' => false,
 	),
-	'wgVisualEditorEnableWikitext' => array(
-		'name' => 'Enable VisualEditor Wikitext mode',
-		'requires' => 'visualeditor',
+
+	// Media/File
+	'wgEnableUploads' => array(
+		'name' => 'Enable File Uploads',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Allow images and other files to be uploaded through the wiki.',
+	),
+	'wgUseInstantCommons' => array(
+		'name' => 'Enable Wikimedia Commons Files',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
+	),
+	'wgMediaViewerIsInBeta' => array(
+		'name' => 'Enable Media Viewer Beta Mode',
+		'requires' => 'multimediaviewer',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
+		'section' => 'media',
+		'help' => false,
+	),
+	'wgPopupsBetaFeature' => array(
+		'name' => 'Enable Popups Beta Mode',
+		'requires' => 'Popups',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+		'section' => 'media',
 		'help' => false,
 	),
 );
