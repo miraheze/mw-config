@@ -1121,7 +1121,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseNostalgia' => array(
 		'default' => false,
-		'test1wiki' => true,
 	),
 	'wmgUseNoTitle' => array(
 		'default' => false,
