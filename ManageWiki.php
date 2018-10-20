@@ -1406,7 +1406,7 @@ $wgManageWikiSettings = array(
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Add an interface to Special:Upload to enable uploading from URLs',
+		'help' => 'Add an interface to Special:Upload to enable uploading from URLs.',
 	),
 	'wgUseInstantCommons' => array(
 		'name' => 'Enable Wikimedia Commons Files',
@@ -1415,7 +1415,16 @@ $wgManageWikiSettings = array(
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'i.e. the use of Wikimedia Commons as a shared repository',
+		'help' => 'i.e. the use of Wikimedia Commons as a shared repository.',
+	),
+	'wgShowArchiveThumbnails' => array(
+		'name' => 'Show Old Thumbnails On Description Page',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Whether to show thumbnails for old images on the image description page.',
 	),
 	'wgMediaViewerIsInBeta' => array(
 		'name' => 'Enable Media Viewer Beta Mode',
