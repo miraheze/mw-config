@@ -807,7 +807,7 @@ if ( $wmgUseWebChat ) {
 	$wgWebChatClient = $wmgWebChatClient;
 	$wgWebChatServer = $wmgWebChatServer;
 	$wgWebChatChannel = $wmgWebChatChannel;
-	$wgWebChatClients['Mibbit']['url'] = '//embed.mibbit.com/index.html';
+	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
 
 }
 
