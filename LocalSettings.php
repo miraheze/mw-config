@@ -1569,7 +1569,6 @@ $wgConf->settings = array(
 	),
 	'wgVerifyMimeType' => array(
 		'default' => true,
-		'jcswiki' => false,
 	),
 	'wgSVGMetadataCutoff' => array(
 		'default' => 262144,
