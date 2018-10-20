@@ -1521,10 +1521,6 @@ $wgConf->settings = array(
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
-		'entropediawiki' => true,
-		'macfan4000wiki' => true,
-		'ndwiki' => true,
-		'nerdzonewiki' => true,
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
