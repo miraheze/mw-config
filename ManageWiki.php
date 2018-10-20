@@ -722,6 +722,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'nostalgia' => array(
+			'name' => 'Nostalgia (Skin)',
+			'linkPage' => 'https://mediawiki.org/wiki/Skin:Nostalgia',
+			'var' => 'wmgUseNostalgia',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'opengraphmeta' => array(
 			'name' => 'OpenGraphMeta',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:OpenGraphMeta',
