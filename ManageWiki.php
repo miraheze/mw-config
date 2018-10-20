@@ -1279,7 +1279,7 @@ $wgManageWikiExtensions = array(
  * restricted: boolean - requires managewiki-restricted to change.
  */
 $wgManageWikiSettings = array(
-	// general
+	// General
 	'wgAllowSlowParserFunctions' => array(
 		'name' => 'Allow slow parser functions',
 		'requires' => false,
