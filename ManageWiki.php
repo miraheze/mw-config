@@ -1219,6 +1219,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'wikimediaincubator' => array(
+			'name' => 'WikimediaIncubator',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikimediaIncubator',
+			'var' => 'wmgUseWikimediaIncubator',
+			'conflicts' => false,
+			'requires' => 'Configuation Change in LocalSettings.php, request this extension on phabricator',
+			'restricted' => true,
+		),
 		'youtube' => array(
 			'name' => 'YouTube',
 			'linkPage' => 'https://github.com/miraheze/YouTube',
