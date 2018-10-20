@@ -1566,7 +1566,6 @@ $wgConf->settings = array(
 	),
 	'wgShowArchiveThumbnails' => array(
 		'default' => true,
-		'doinwiki' => false,
 	),
 	'wgVerifyMimeType' => array(
 		'default' => true,
