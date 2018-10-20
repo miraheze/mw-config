@@ -48,7 +48,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'approvedrevs' => array(
 			'name' => 'Approved Revs',
@@ -241,7 +241,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'description2' => array(
 			'name' => 'Description2',
@@ -282,7 +282,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'dynamicpagelist' => array(
 			'name' => 'DynamicPageList',
@@ -331,7 +331,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'eventlogging' => array(
 			'name' => 'EventLogging',
@@ -373,7 +373,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'gadgets' => array(
 			'name' => 'Gadgets',
@@ -390,7 +390,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'geocrumbs' => array(
 			'name' => 'GeoCrumbs',
@@ -543,7 +543,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'linktarget' => array(
 			'name' => 'LinkTarget',
@@ -624,7 +624,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'modernskylight' => array(
 			'name' => 'ModernSkylight (Skin)',
@@ -633,7 +633,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'mscalendar' => array(
 			'name' => 'MsCalendar',
@@ -738,7 +738,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'opengraphmeta' => array(
 			'name' => 'OpenGraphMeta',
@@ -819,7 +819,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'poem' => array(
 			'name' => 'Poem',
@@ -924,7 +924,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'relatedarticles' => array(
 			'name' => 'Related Articles',
@@ -1125,7 +1125,7 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-			'section' => 'skin',
+			'section' => 'skins',
 		),
 		'twocolconflict' => array(
 			'name' => 'TwoColConflict',
