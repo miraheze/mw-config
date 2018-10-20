@@ -1426,6 +1426,15 @@ $wgManageWikiSettings = array(
 		'section' => 'media',
 		'help' => 'Whether to show thumbnails for old images on the image description page.',
 	),
+	'wgVerifyMimeType' => array(
+		'name' => 'Verify Mime Type',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Determines if the MIME type of uploaded files should be checked.',
+	),
 	'wgMediaViewerIsInBeta' => array(
 		'name' => 'Enable Media Viewer Beta Mode',
 		'requires' => 'multimediaviewer',
