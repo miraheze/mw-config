@@ -264,6 +264,8 @@ define( 'NS_PARAMETER', 1836);
 define( 'NS_PARAMETER_TALK', 1837);
 define( 'NS_EXAMPLE', 1838);
 define( 'NS_EXAMPLE_TALK', 1839);
+define( 'NS_STOREFRONT', 1840);
+define( 'NS_STOREFRONT_TALK', 1841);
 
 define( 'NS_PORTALE', 2000); // Skipping values to 2000 per T3553
 define( 'NS_DISCUSSIONI_PORTALE', 2001);
@@ -2903,6 +2905,8 @@ $wgConf->settings = array(
 			NS_EXECUTIVE_ORDER_TALK => 'Executive_Order_talk',
 			NS_GROUP => 'Group',
 			NS_GROUP_TALK => 'Group_talk',
+			NS_STOREFRONT => 'Storefront',
+			NS_STOREFRONT_TALK => 'Storefront_talk',
 		),	
 		'cristianopediawiki' => array(
 			NS_TEMA => 'Tema',
