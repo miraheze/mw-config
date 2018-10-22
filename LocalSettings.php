@@ -1940,6 +1940,17 @@ $wgConf->settings = array(
 	'wgManageWikiPermissionsAdditionalAddGroups' => array(
 		'default' => array(),
 	),
+	'wgManageWikiPermissionsAdditionalAddGroups' => array(
+		'default' => array(),
+		'hypopediawiki' => array(
+			'chat' => array(
+				'blockedfromchat',
+			),
+			'modchat' => array(
+				'chatmod'
+			),
+		),
+	),
 	'wgManageWikiPermissionsAdditionalRights' => array(
 		'default' => array(
 			'checkuser' => array(
