@@ -1552,6 +1552,7 @@ $wgConf->settings = array(
 		'+showroomwiki' => array( 'png', 'gif', 'jpg', 'jpeg', 'doc', 'xls', 'pdf', 'ppt', 'tiff', 'bmp', 'docx', 'xlsx', 'pptx'),
 		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
 		'+themirrorwiki' => array( 'mp3'),
+		'+thenetwiki' => array( 'zip', 'rar', 'dae'),
 		'+tmewiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
 		'+unabwiki' => array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'),
 		'+valentinaprojectwiki' => array( 'val', 'vit', 'vst'),
