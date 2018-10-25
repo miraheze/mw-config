@@ -1127,9 +1127,9 @@ $wgManageWikiExtensions = array(
 					'user_points_archive' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_archive.sql",
 					'user_points_weekly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_weekly.sql",
 					'user_stats' => "$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
-					'systemgifts' => "$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
+					'user_system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
 					'user_relationship' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
-					'usergifts' => "$IP/extensions/SocialProfile/UserGifts/usergifts.sql",
+					'user_gift' => "$IP/extensions/SocialProfile/UserGifts/usergifts.sql",
 					'user_board' => "$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql"
 				],
 			]
