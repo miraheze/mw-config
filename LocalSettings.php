@@ -4733,7 +4733,18 @@ $wgConf->settings = array(
 		'isvwiki' => true,
 		'spiralwiki' => true,
 	),
-
+        // WikidataPageBanner
+	'wgWPBNamespaces' => array(
+		'default' => array( NS_MAIN ),
+		'+apunteswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+		'+centralwiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+		'+destinoswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+		'+infowiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+		'+mediatecawiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+		'+privadowiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+		'+tallerwiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+		'+ucroniaswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+	
 	// Protect site config
 	'wgProtectSiteLimit' => array(
 		'default' => '1 week',
