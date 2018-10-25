@@ -667,6 +667,7 @@ $wgConf->settings = array(
 	'wgCompressRevisions' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'nonciclopediawiki' => true,
 	),
 	'wgDBadminuser' => array(
 		'default' => 'wikiadmin',
