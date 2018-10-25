@@ -4744,6 +4744,7 @@ $wgConf->settings = array(
 		'+privadowiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
 		'+tallerwiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
 		'+ucroniaswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
+	),
 	
 	// Protect site config
 	'wgProtectSiteLimit' => array(
