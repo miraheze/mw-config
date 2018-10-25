@@ -40,6 +40,12 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'ajaxpoll_info' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_info.sql",
+					'ajaxpoll_vote' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_vote.sql"
+				],
+			]
 		),
 		'apex' => array(
 			'name' => 'Apex (Skin)',
@@ -57,6 +63,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'approved_revs' => "$IP/extensions/ApprovedRevs/sql/ApprovedRevs.sql"
+				],
+			]
 		),
 		'articlefeedbackv5' => array(
 			'name' => 'Article Feedback Tool V5',
@@ -65,6 +76,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
+				],
+			]
 		),
 		'articleratings' => array(
 			'name' => 'Article Ratings',
@@ -73,6 +89,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
+				],
+			]
 		),
 		'articletocategory2' => array(
 			'name' => 'Article To Category 2',
@@ -129,6 +150,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql"
+				],
+			]
 		),
 		'charinsert' => array(
 			'name' => 'CharInsert',
@@ -193,6 +219,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'Comments' => "$IP/extensions/Comments/sql/comments.sql"
+				],
+			]
 		),
 		'contributionscores' => array(
 			'name' => 'ContributionScores',
@@ -315,6 +346,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'ep_students' => "$IP/extensions/EducationProgram/sql/EducationProgram.sql"
+				],
+			]
 		),
 		'electronpdfservice' => array(
 			'name' => 'Electron PDF Service',
@@ -356,6 +392,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'installed' => [
+				'sql' => [
+					'flaggedrevs' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql"
+				],
+			]
 		),
 		'flow' => array(
 			'name' => 'Flow',
@@ -365,6 +406,11 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'help' => 'Will start working 10-20 mins after enabling.',
+			'install' => [
+				'sql' => [
+					'flow_revision' => "$IP/extensions/Flow/flow.sql"
+				],
+			]
 		),
 		'foreground' => array(
 			'name' => 'Foreground (Skin)',
@@ -407,6 +453,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'geo_tags' => "$IP/extensions/GeoData/sql/db_backed.sql"
+				],
+			]
 		),
 		'gettingstarted' => array(
 			'name' => 'GettingStarted',
@@ -608,6 +659,13 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'math' => "$IP/extensions/Math/db/math.mysql.sql",
+					'mathlatexml' => "$IP/extensions/Math/db/mathlatexml.mysql.sql",
+					'mathiod' => "$IP/extensions/Math/db/mathoid.mysql.sql"
+				],
+			]
 		),
 		'mediawikichat' => array(
 			'name' => 'MediaWikiChat',
@@ -616,6 +674,12 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'chat' => "$IP/extensions/MediaWikiChat/sql/chat.sql",
+					'chat_users' => "$IP/extensions/MediaWikiChat/sql/chat_users.sql"
+				],
+			]
 		),
 		'metrolook' => array(
 			'name' => 'Metrolook (Skin)',
@@ -642,6 +706,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'mscal_content' => "$IP/MsCalendar/MsCalendar.sql"
+				],
+			]
 		),
 		'msupload' => array(
 			'name' => 'MsUpload',
@@ -698,6 +767,14 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'nl_issues' => "$IP/extensions/Newsletter/sql/nl_issues.sql",
+					'nl_newsletters' => "$IP/extensions/Newsletter/sql/nl_newsletters.sql",
+					'nl_publishers' => "$IP/extensions/Newsletter/sql/nl_publishers.sql",
+					'nl_subscriptions' => "$IP/extensions/Newsletter/sql/nl_subscriptions.sql"
+				],
+			]
 		),
 		'newusermessage' => array(
 			'name' => 'New User Message',
@@ -779,6 +856,14 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'pagetriage_tags' => "$IP/extensions/PageTriage/sql/PageTriageTags.sql",
+					'pagetriage_page_tags' => "$IP/extensions/PageTriage/sql/PageTriagePageTags.sql",
+					'pagetriage_page' => "$IP/extensions/PageTriage/sql/PageTriagePage.sql",
+					'pagetriage_log' => "$IP/extensions/PageTriage/sql/PageTriageLog.sql"
+				],
+			]
 		),
 		'pdfbook' => array(
 			'name' => 'PDFBook',
@@ -844,6 +929,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'poll' => "$IP/extensions/Poll/archives/Poll-install-manual.sql"
+				],
+			]
 		),
 		'pollny' => array(
 			'name' => 'PollNY',
@@ -852,6 +942,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'poll_question' => "$IP/extensions/PollNY/sql/poll.sql"
+				],
+			]
 		),
 		'proofreadpages' => array(
 			'name' => 'Proofread Pages',
@@ -860,6 +955,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'pr_index' => "$IP/extensions/ProofreadPage/sql/ProofreadIndex.sql"
+				],
+			]
 		),
 		'protectsite' => array(
 			'name' => 'Protect Site',
@@ -892,6 +992,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'quizgame_questions' => "$IP/extensions/QuizGame/sql/quizgame.sql"
+				],
+			]
 		),
 		'randomgameunit' => array(
 			'name' => 'RandomGameUnit (SocialProfile)',
@@ -1013,6 +1118,21 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'user_profile' => "$IP/extensions/SocialProfile/UserProfile/sql/user_profile.sql",
+					'user_fields_privacy' => "$IP/extensions/SocialProfile/UserProfile/sql/user_fields_privacy",
+					'user_system_messages' => "$IP/extensions/SocialProfile/UserStats/sql/user_system_messages.sql",
+					'user_points_monthly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_monthly.sql",
+					'user_points_archive' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_archive.sql",
+					'user_points_weekly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_weekly.sql",
+					'user_stats' => "$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
+					'systemgifts' => "$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
+					'user_relationship' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
+					'usergifts' => "$IP/extensions/SocialProfile/UserGifts/usergifts.sql",
+					'user_board' => "$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql"
+				],
+			]
 		),
 		'spoilers' => array(
 			'name' => 'Spoilers',
@@ -1085,6 +1205,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'transcode' => "$IP/extensions/TimedMediaHandler/TimedMediaHandler.sql"
+				],
+			]
 		),
 		'timeline' => array(
 			'name' => 'Timeline',
@@ -1101,6 +1226,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'titlekey' => "$IP/extensions/TitleKey/titlekey.sql"
+				],
+			]
 		),
 		'toctree' => array(
 			'name' => 'TOC Tree',
@@ -1182,6 +1312,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'Vote' => "$IP/extensions/VoteNY/sql/vote.mysql"
+				],
+			]
 		),
 		'visualeditor' => array(
 			'name' => 'VisualEditor',
@@ -1232,6 +1367,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
+				],
+			]
 		),
 		'wikilove' => array(
 			'name' => 'WikiLove',
@@ -1240,6 +1380,11 @@ $wgManageWikiExtensions = array(
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'wikilove_log' => "$IP/extensions/WikiLove/patches/WikiLoveLog.sql"
+				],
+			]
 		),
 		'wikitextloggedinout' => array(
 			'name' => 'WikiText Logged In Out',
