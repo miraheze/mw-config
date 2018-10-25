@@ -4733,7 +4733,7 @@ $wgConf->settings = array(
 		'isvwiki' => true,
 		'spiralwiki' => true,
 	),
-        // WikidataPageBanner
+	// WikidataPageBanner
 	'wgWPBNamespaces' => array(
 		'default' => array( NS_MAIN ),
 		'+apunteswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
