@@ -668,6 +668,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'nonciclopediawiki' => true,
+		'nonsensopediawiki' => true,
 	),
 	'wgDBadminuser' => array(
 		'default' => 'wikiadmin',
