@@ -2409,6 +2409,7 @@ $wgConf->settings = array(
 			'reviwikiwiki',
 			'sawikiwiki',
 			'sdiywiki',
+			'scruffywiki',
 			'softwarecrisiswiki',
 			'sonwiki',
 			'spaceechowiki',
