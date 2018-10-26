@@ -1129,7 +1129,7 @@ $wgManageWikiExtensions = array(
 					'user_stats' => "$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
 					'user_system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
 					'user_relationship' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
-					'user_gift' => "$IP/extensions/SocialProfile/UserGifts/usergifts.sql",
+					'user_gift' => "$IP/extensions/SocialProfile/UserGifts/sql/usergifts.sql",
 					'user_board' => "$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql"
 				],
 			]
