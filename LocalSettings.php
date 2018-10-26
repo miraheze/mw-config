@@ -1894,6 +1894,9 @@ $wgConf->settings = array(
 	),
 	'wgManageWikiPermissionsAdditionalRights' => array(
 		'default' => array(
+			'*' => array(
+				'centralauth-autoaccount' => true,
+			),
 			'checkuser' => array(
 				'checkuser' => true,
 				'checkuser-log' => true,
