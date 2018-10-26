@@ -132,23 +132,8 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:BlogPage',
 			'var' => 'wmgUseBlogPage',
 			'conflicts' => false,
-			'requires' => false,
+			'requires' => 'socialprofile',
 			'restricted' => false,
-			'install' => [
-				'sql' => [
-					'user_profile' => "$IP/extensions/SocialProfile/UserProfile/sql/user_profile.sql",
-					'user_fields_privacy' => "$IP/extensions/SocialProfile/UserProfile/sql/user_fields_privacy.sql",
-					'user_system_messages' => "$IP/extensions/SocialProfile/UserStats/sql/user_system_messages.sql",
-					'user_points_monthly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_monthly.sql",
-					'user_points_archive' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_archive.sql",
-					'user_points_weekly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_weekly.sql",
-					'user_stats' => "$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
-					'user_system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
-					'user_relationship' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
-					'user_gift' => "$IP/extensions/SocialProfile/UserGifts/usergifts.sql",
-					'user_board' => "$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql"
-				],
-			]
 		),
 		'capiunto' => array(
 			'name' => 'Capiunto',
@@ -1005,7 +990,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:QuizGame',
 			'var' => 'wmgUseQuizGame',
 			'conflicts' => false,
-			'requires' => false,
+			'requires' => 'socialprofile',
 			'restricted' => false,
 			'install' => [
 				'sql' => [
@@ -1018,7 +1003,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RandomGameUnit',
 			'var' => 'wmgUseRandomGameUnit',
 			'conflicts' => false,
-			'requires' => false,
+			'requires' => 'socialprofile',
 			'restricted' => false,
 		),
 		'randomimage' => array(
@@ -1309,23 +1294,8 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:UserWelcome',
 			'var' => 'wmgUseUserWelcome',
 			'conflicts' => false,
-			'requires' => false,
+			'requires' => 'socialprofile',
 			'restricted' => false,
-			'install' => [
-				'sql' => [
-					'user_profile' => "$IP/extensions/SocialProfile/UserProfile/sql/user_profile.sql",
-					'user_fields_privacy' => "$IP/extensions/SocialProfile/UserProfile/sql/user_fields_privacy.sql",
-					'user_system_messages' => "$IP/extensions/SocialProfile/UserStats/sql/user_system_messages.sql",
-					'user_points_monthly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_monthly.sql",
-					'user_points_archive' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_archive.sql",
-					'user_points_weekly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_weekly.sql",
-					'user_stats' => "$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
-					'user_system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
-					'user_relationship' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
-					'user_gift' => "$IP/extensions/SocialProfile/UserGifts/usergifts.sql",
-					'user_board' => "$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql"
-				],
-			]
 		),
 		'variables' => array(
 			'name' => 'Variable',
