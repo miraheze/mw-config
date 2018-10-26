@@ -667,6 +667,7 @@ $wgConf->settings = array(
 	'wgCompressRevisions' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
+		'buswiki' => true,
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
 	),
