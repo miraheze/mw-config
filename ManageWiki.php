@@ -663,7 +663,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'math' => "$IP/extensions/Math/db/math.mysql.sql",
 					'mathlatexml' => "$IP/extensions/Math/db/mathlatexml.mysql.sql",
-					'mathiod' => "$IP/extensions/Math/db/mathoid.mysql.sql"
+					'mathoid' => "$IP/extensions/Math/db/mathoid.mysql.sql"
 				],
 			]
 		),
