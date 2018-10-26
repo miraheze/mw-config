@@ -670,6 +670,7 @@ $wgConf->settings = array(
 		'buswiki' => true,
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
+		'openhatchwiki' => true,
 	),
 	'wgDBadminuser' => array(
 		'default' => 'wikiadmin',
