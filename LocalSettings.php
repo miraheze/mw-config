@@ -1045,7 +1045,6 @@ $wgConf->settings = array(
 	),
 	'wmgUseMsPackage' => array(
 		'default' => false, // do not set this to false without disabling MsUpload on all wikis below
-		'calexitwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseMsUpload' => array(
@@ -2607,7 +2606,6 @@ $wgConf->settings = array(
 
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => array(
-		'calexitwiki' => true,
 		'cristianopediawiki' => true,
 		'grandtheftautowiki' => true,
 		'knowledgewiki' => true,
@@ -2831,18 +2829,6 @@ $wgConf->settings = array(
 			NS_TINYFOREST_TALK => 'Tinyforest_talk',
 			NS_NEWSLINK => 'Newslink',
 			NS_NEWSLINK_TALK => 'Newslink_talk',
-		),
-		'calexitwiki' => array(
-			NS_DRAFT => 'Draft',
-			NS_DRAFT_TALK => 'Draft_talk',
-			NS_HELP => 'Help',
-			NS_HELP_TALK => 'Help_talk',
-			NS_HISTORICAL_TIMELINE => 'Historical Timeline',
-			NS_OPINION => 'Opinion',
-			NS_OPINION_TALK => 'Opinion_talk',
-			NS_PORTAL => 'Portal',
-			NS_PORTAL_TALK => 'Portal_talk',
-			NS_TIMELINE => 'Timeline',
 		),
 		'casuarinawiki' => array(
 			NS_LIBRARY => '圖書館',
@@ -3157,7 +3143,6 @@ $wgConf->settings = array(
 		'+privadowiki' => array( NS_ANEXO ),
 		'+tallerwiki' => array( NS_ANEXO ),
 		'+ucroniaswiki' => array( NS_ANEXO ),
-		'+calexitwiki' => array( NS_OPINION, NS_TIMELINE, NS_HISTORICAL_TIMELINE ),
 		'+nonsensopediawiki' => array( NS_CYTATY, NS_NONNEWS, NS_NONZRODLA, NS_SLOWNIK, NS_GRA, NS_PORADNIK ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+reviwikiwiki' => array ( NS_HANDBOOK ),
@@ -3177,7 +3162,6 @@ $wgConf->settings = array(
 		'privadowiki' => 'Privado',
 		'tallerwiki' => 'Tallerwiki',
 		'ucroniaswiki' => 'Ucronías',
-		'calexitwiki' => 'CalExit_Wiki',
 		'incubatorwiki' => 'Incubator',
 		'jawp2chwiki' => 'まとめwiki',
 		'tmewiki' => 'TME',
@@ -3619,17 +3603,6 @@ $wgConf->settings = array(
 		),
 		'+caeruleawiki' => array(
 			NS_MAIN => true,
-		),
-		'+calexitwiki' => array(
-			NS_DRAFT => true,
-			NS_HELP => true,
-			NS_HISTORICAL_TIMELINE => true,
-			NS_MAIN => true,
-			NS_OPINION => true,
-			NS_PORTAL => true,
-			NS_TEMPLATE => true,
-			NS_TIMELINE => true,
-			NS_USER => true,
 		),
 		'+christipediawiki' => array(
 			NS_MAIN => true,
@@ -4090,21 +4063,18 @@ $wgConf->settings = array(
 		'default' => false,
 		'allthetropeswiki' => '0.01',
 		'avalicearchiveswiki' => '0.01',
-		'calexitwiki' => '0.01',
 		'youtubewiki' => '0.01',
 	),
 	'wgRelatedArticlesShowReadMore' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'avalicearchiveswiki' => true,
-		'calexitwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgRelatedArticlesShowInFooter' => array(
 		'default' => false,
 		'allthetropeswiki' => true,
 		'avalicearchiveswiki' => true,
-		'calexitwiki' => true,
 		'youtubewiki' => true,
 	),
 	'wgRelatedArticlesUseCirrusSearch' => array(
@@ -4678,14 +4648,6 @@ $wgConf->settings = array(
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
 	 	 ),
-		'+calexitwiki' => array(
-			NS_DRAFT => true,
-			NS_HELP => true,
-			NS_HISTORICAL_TIMELINE => true,
-			NS_OPINION => true,
-			NS_TIMELINE => true,
- 			NS_PORTAL => true,
-		),
 		'+cristianopediawiki' => array(
 			NS_TEMA => true,
 		),		
