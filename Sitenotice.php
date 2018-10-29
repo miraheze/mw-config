@@ -2,8 +2,8 @@
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 26;
-$snImportant = false; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
+$wgMajorSiteNoticeID = 28;
+$snImportant = true; // Set to true if the sitenotice should be show regardless of if wikis want it to be shown
 
 // Write your SiteNotice below.  Comment out this section to disable.
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
