@@ -266,6 +266,8 @@ define( 'NS_EXAMPLE', 1838);
 define( 'NS_EXAMPLE_TALK', 1839);
 define( 'NS_STOREFRONT', 1840);
 define( 'NS_STOREFRONT_TALK', 1841);
+define( 'NS_ESSAY', 1842);
+define( 'NS_ESSAY_TALK', 1843);
 
 define( 'NS_PORTALE', 2000); // Skipping values to 2000 per T3553
 define( 'NS_DISCUSSIONI_PORTALE', 2001);
@@ -2902,6 +2904,10 @@ $wgConf->settings = array(
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
 		),
+		'monarchistswiki' => array(
+			NS_ESSAY => 'Essay',
+			NS_ESSAY_TALK => 'Essay_talk',
+		),
 		'noalatalawiki' => array(
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
@@ -3464,6 +3470,9 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			NS_TECH => true,
 		),
+		'+monarchistswiki' => array(
+			NS_ESSAY => true,
+		),
 		'+starmetalwiki' => array(
 			NS_USER => true,
 		),
@@ -3662,6 +3671,9 @@ $wgConf->settings = array(
 		'+metawiki' => array(
 			NS_MAIN => true,
 			NS_TECH => true,
+		),
+		'+monarchistswiki' => array(
+			NS_ESSAY => true,
 		),
 		'+r2wiki' => array(
 			NS_MAIN => true,
