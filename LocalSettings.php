@@ -461,6 +461,9 @@ $wgConf->settings = array(
 	'wgNoticeProject' => array(
 		'default' => 'open',
 	),
+	'wgNoticeUseTranslateExtension' => array(
+		'default' => true,
+	),
 
 	// Captcha
 	'wgCaptchaClass' => array(
