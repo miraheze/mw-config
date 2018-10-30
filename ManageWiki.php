@@ -931,7 +931,9 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 			'install' => [
 				'sql' => [
-					'poll' => "$IP/extensions/Poll/archives/Poll-install-manual.sql"
+					'poll' => "$IP/extensions/Poll/archives/Poll.sql",
+					'poll_answer' => "$IP/extensions/Poll/archives/Poll-answer.sql",
+					'poll_start_log' => "$IP/extensions/Poll/archives/Poll-start-log.sql.sql"
 				],
 			]
 		),
