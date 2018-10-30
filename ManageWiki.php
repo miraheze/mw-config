@@ -116,7 +116,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:AutoCreateCategoryPages',
 			'var' => 'wmgUseAutoCreateCategoryPages',
 			'conflicts' => false,
-			'requires' => '>500 categories',
+			'requires' => false,
 			'restricted' => true,
 		),
 		'babel' => array(
@@ -209,7 +209,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Collection',
 			'var' => 'wmgUseCollection',
 			'conflicts' => false,
-			'requires' => 'services',
+			'requires' => 'electronpdfservice',
 			'restricted' => true,
 		),
 		'comments' => array(
@@ -1407,7 +1407,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikimediaIncubator',
 			'var' => 'wmgUseWikimediaIncubator',
 			'conflicts' => false,
-			'requires' => 'Configuation Change in LocalSettings.php, request this extension on phabricator',
+			'requires' => false, // Configuation Change in LocalSettings.php, request this extension on phabricator
 			'restricted' => true,
 		),
 		'youtube' => array(
