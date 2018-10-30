@@ -994,7 +994,10 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 			'install' => [
 				'sql' => [
-					'quizgame_questions' => "$IP/extensions/QuizGame/sql/quizgame.sql"
+					'quizgame_answers' => "$IP/extensions/QuizGame/sql/quizgame_answers.sql",
+					'quizgame_choice' => "$IP/extensions/QuizGame/sql/quizgame_choice.sql",
+					'quizgame_questions' => "$IP/extensions/QuizGame/sql/quizgame_questions.sql",
+					'quizgame_user_view' => "$IP/extensions/QuizGame/sql/quizgame_user_view.sql"
 				],
 			]
 		),
@@ -1127,9 +1130,12 @@ $wgManageWikiExtensions = array(
 					'user_points_archive' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_archive.sql",
 					'user_points_weekly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_weekly.sql",
 					'user_stats' => "$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
-					'user_system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/systemgifts.sql",
+					'user_system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/user_system_gift.sql",
+					'system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/system_gift.sql",
 					'user_relationship' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
-					'user_gift' => "$IP/extensions/SocialProfile/UserGifts/sql/usergifts.sql",
+					'user_relationship_request' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship_request.sql",
+					'user_gift' => "$IP/extensions/SocialProfile/UserGifts/sql/user_gift.sql",
+					'gift' => "$IP/extensions/SocialProfile/UserGifts/sql/gift.sql",
 					'user_board' => "$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql"
 				],
 			]
