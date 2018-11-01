@@ -400,7 +400,7 @@ if ( $wmgUseLinkTarget ) {
 }
 
 if ( $wmgUseLinkTitles ) {
-	wfLoadExtension( '$wmgUseLinkTitles' );
+	wfLoadExtension( 'LinkTitles' );
 }
 
 if ( $wmgUseListings ) {
