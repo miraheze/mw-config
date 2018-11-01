@@ -996,6 +996,9 @@ $wgConf->settings = array(
 	'wmgUseLinkTarget' => array(
 		'default' => false,
 	),
+	'wmgUseLinkTitles' => array(
+		'default' => false,
+	),
 	'wmgUseListings' => array(
 		'default' => false,
 	),

@@ -604,6 +604,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'linktitles' => array(
+			'name' => 'LinkTitles',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:LinkTitles',
+			'var' => 'wmgUseLinkTitles',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => true,
+		),
 		'listings' => array(
 			'name' => 'Listings',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Listings',

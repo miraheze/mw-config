@@ -399,6 +399,10 @@ if ( $wmgUseLinkTarget ) {
 	require_once( "$IP/extensions/LinkTarget/LinkTarget.php" );
 }
 
+if ( $wmgUseLinkTitles ) {
+	wfLoadExtension( 'LinkTitles' );
+}
+
 if ( $wmgUseListings ) {
 	wfLoadExtension( 'Listings' );
 }
