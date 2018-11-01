@@ -760,6 +760,7 @@ if ( $wmgUseTwoColConflict ) {
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
+	$wgULSGeoService = false;
 }
 
 if ( $wmgUseUploadsLink ) {
