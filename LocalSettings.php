@@ -1740,7 +1740,7 @@ $wgConf->settings = array(
 			's',
 			'alt',
 		),
-		'+ucroníaswiki' => array(
+		'+ucroniaswiki' => array(
 			'ct',
 			'm',
 			'i',
@@ -2770,7 +2770,7 @@ $wgConf->settings = array(
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
-		'ucroníaswiki' => array(
+		'ucroniaswiki' => array(
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
