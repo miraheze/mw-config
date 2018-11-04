@@ -1615,11 +1615,19 @@ $wgManageWikiSettings = array(
 	),
 	'wgPopupsBetaFeature' => array(
 		'name' => 'Enable Popups Beta Mode',
-		'requires' => 'Popups',
+		'requires' => 'popups',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
 		'section' => 'media',
+		'help' => false,
+	),
+	'wmgSiteNoticeOptOut' => array(
+		'name' => 'Opt out of site notices (only show important notices)',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
 		'help' => false,
 	),
 );
