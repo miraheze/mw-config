@@ -458,13 +458,11 @@ $wgConf->settings = array(
 	// 'wiki' => 'wiki'
 	'wgNoticeProject' => array(
 		'default' => 'all',
-		'test1wiki' => 'test1wiki',
 	),
 	// add your wiki in default, then add it to the above config.
 	'wgNoticeProjects' => array(
 		'default' => array (
 			'all'
-			'test1wiki',
 		),
 	),
 	'wgNoticeUseTranslateExtension' => array(
