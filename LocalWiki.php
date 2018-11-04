@@ -17,8 +17,6 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 		),
 	);
 
-	$wgNoticeProject = 'closed';
-
 	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
 	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
