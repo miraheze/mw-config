@@ -4257,8 +4257,6 @@ $wgConf->settings = array(
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => array(
 		'default' => false,
-		'nenawikiwiki' => true,
-		'weatherwiki' => true,
 	),
 
 	// Server
