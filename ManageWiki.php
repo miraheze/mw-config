@@ -1628,6 +1628,6 @@ $wgManageWikiSettings = array(
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'help' => 'Opts your wiki out of global miraheze notices, only showing important notices.',
+		'help' => 'Opts your wiki out of global Miraheze notices, only showing important notices.',
 	),
 );
