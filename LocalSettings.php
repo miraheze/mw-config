@@ -455,14 +455,13 @@ $wgConf->settings = array(
 	'wgCentralHost' => array(
 		'default' => "//meta.miraheze.org",
 	),
-	// 'wiki' => 'wiki'
 	'wgNoticeProject' => array(
 		'default' => 'all',
 	),
-	// add your wiki in default, then add it to the above config.
 	'wgNoticeProjects' => array(
 		'default' => array (
-			'all'
+			'all',
+			'optout',
 		),
 	),
 	'wgNoticeUseTranslateExtension' => array(

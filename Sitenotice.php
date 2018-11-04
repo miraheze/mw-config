@@ -1,4 +1,10 @@
 <?php
+
+if ( $wmgSiteNoticeOptOut ) {
+	// only show important notices when optout
+	$wgNoticeProject = 'optout';
+}
+
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
