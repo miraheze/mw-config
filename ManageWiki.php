@@ -1623,11 +1623,11 @@ $wgManageWikiSettings = array(
 		'help' => false,
 	),
 	'wmgSiteNoticeOptOut' => array(
-		'name' => 'Opt out of site notices (only show important notices)',
+		'name' => 'Opt out of Site Notices',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'help' => false,
+		'help' => 'opts you out of global miraheze notices, only showing important notices',
 	),
 );
