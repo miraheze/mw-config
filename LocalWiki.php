@@ -44,7 +44,6 @@ EOF;
 // Private Wikis
 if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgManageWikiPermissionsAdditionalRights['sysop']['read'] = true;
-	$wgNoticeProject = 'private';
 }
 
 // use local mathoid install
