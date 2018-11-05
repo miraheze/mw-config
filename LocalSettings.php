@@ -4565,12 +4565,6 @@ $wgConf->settings = array(
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => array(
 		'default' => true,
-		'allthetropeswiki' => false,
-		'isvwiki' => false,
-		'jcswiki' => true,
-		'malaysiawiki' => true,
-		'schulwiki' => true,
-		'testwiki' => false,
 	),
 	'wmgVisualEditorAvailableNamespaces' => array(
 		'default' => array(
