@@ -696,8 +696,11 @@ $wgConf->settings = array(
 	'wgSharedTables' => array(
 		'default' => array(),
 	),
+	// TODO use 'SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW'
+	// when upgrading to mw 1.32
 	'wgActorTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_OLD,
+		'metawiki' => MIGRATION_WRITE_BOTH,
 		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	),
 	
