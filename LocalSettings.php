@@ -700,7 +700,7 @@ $wgConf->settings = array(
 	// when upgrading to mw 1.32
 	'wgActorTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_OLD,
-		'metawiki' => MIGRATION_WRITE_BOTH,
+		'metawiki' => MIGRATION_NEW,
 		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	),
 	
