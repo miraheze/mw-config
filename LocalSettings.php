@@ -699,7 +699,7 @@ $wgConf->settings = array(
 	// TODO use 'SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW'
 	// when upgrading to mw 1.32
 	'wgActorTableSchemaMigrationStage' => array(
-		'default' => MIGRATION_OLD,
+		'default' => MIGRATION_WRITE_BOTH,
 		'metawiki' => MIGRATION_NEW,
 		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	),
@@ -4940,6 +4940,10 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
+
+if ( $wgCommandlineMode && ( $wgDBname !== 'test1wiki' || $wgDBname !== 'metawiki' ) ) {
+	$wgActorTableSchemaMigrationStage = MIGRATION_NEW;
+}
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
