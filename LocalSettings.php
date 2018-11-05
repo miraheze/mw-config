@@ -4942,7 +4942,7 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
-if ( $wgCommandLineMode && ( $wgDBname !== 'test1wiki' || $wgDBname !== 'metawiki' ) ) {
+if ( PHP_SAPI === 'cli' && ( $wgDBname !== 'test1wiki' || $wgDBname !== 'metawiki' ) ) {
 	$wgActorTableSchemaMigrationStage = MIGRATION_NEW;
 }
 
