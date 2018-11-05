@@ -4439,7 +4439,6 @@ $wgConf->settings = array(
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => array(
 		'default' => false,
-		'pfl2wiki' => true,
 	),
 
 	// UrlShortener

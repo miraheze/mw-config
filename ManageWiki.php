@@ -1630,4 +1630,12 @@ $wgManageWikiSettings = array(
 		'overridedefault' => false,
 		'help' => 'Opts your wiki out of global Miraheze notices, only showing important notices.',
 	),
+	'wgULSAnonCanChangeLanguage' => array(
+		'name' => 'Allow anonymous users to change language',
+		'requires' => 'universallanguageselector',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'help' => '',
+	),
 );
