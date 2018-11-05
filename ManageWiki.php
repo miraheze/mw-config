@@ -1638,4 +1638,12 @@ $wgManageWikiSettings = array(
 		'overridedefault' => false,
 		'help' => '',
 	),
+	'wmgVisualEditorEnableDefault' => array(
+		'name' => 'Make VisualEditor the default editor for all',
+		'requires' => 'visualeditor',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'help' => '',
+	),
 );
