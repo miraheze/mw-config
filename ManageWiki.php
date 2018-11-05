@@ -1636,6 +1636,6 @@ $wgManageWikiSettings = array(
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'help' => ',
+		'help' => '',
 	),
 );
