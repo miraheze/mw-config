@@ -698,7 +698,7 @@ $wgConf->settings = array(
 	),
 	'wgActorTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_OLD,
-		'test1wik' => MIGRATION_NEW,
+		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	),
 	
 	'wgMaxImageArea' => array(
