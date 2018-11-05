@@ -696,6 +696,10 @@ $wgConf->settings = array(
 	'wgSharedTables' => array(
 		'default' => array(),
 	),
+	'wgActorTableSchemaMigrationStage' => array(
+		'default' => MIGRATION_OLD,
+		'test1wik' => MIGRATION_NEW,
+	),
 	
 	'wgMaxImageArea' => array(
 		'default' => '1.25e7',
