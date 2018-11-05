@@ -4409,9 +4409,8 @@ $wgConf->settings = array(
 	),
 	
 	'wgTidyConfig' => array(
-		'default' => null,
-		'tmewiki' => array(
-			'driver' => 'RemexHtml',
+		'default' => array(
+			'driver' => 'RemexHtml'
 		),
 	),
 
