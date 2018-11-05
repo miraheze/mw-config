@@ -1497,6 +1497,7 @@ $wgConf->settings = array(
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
+		'+50beardsofgreywiki' => array( 'mp4' ),
 		'+amaninfowiki' => array('pcap', 'cap' ),
 		'+avalicearchiveswiki' => array('exe', 'zip', 'css', 'woff', 'woff2', 'ttf' ),
 		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
