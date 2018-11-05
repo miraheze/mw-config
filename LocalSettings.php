@@ -4942,12 +4942,12 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
+$wgConf->wikis = $wgLocalDatabases;
+$wgConf->extractAllGlobals( $wgDBname );
+
 if ( PHP_SAPI === 'cli' && ( $wgDBname !== 'test1wiki' || $wgDBname !== 'metawiki' ) ) {
 	$wgActorTableSchemaMigrationStage = MIGRATION_NEW;
 }
-
-$wgConf->wikis = $wgLocalDatabases;
-$wgConf->extractAllGlobals( $wgDBname );
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
         $wgCentralAuthCookieDomain = $wmgHostname;
