@@ -304,7 +304,7 @@ define( 'NS_PROOFREAD_INDEX_TALK', 253);
 
 // temp hack to prevent log spam
 // remove when we upgrade to mw 1.32
-if ( version_compare( $wgVersion, '1.31c', '<=' ) ) {
+if ( version_compare( $wgVersion, '1.32c', '<' ) ) {
 	define( 'SCHEMA_COMPAT_WRITE_NEW', 'temp' );
 	define( 'SCHEMA_COMPAT_READ_NEW', 'temp' );
 }
