@@ -821,7 +821,7 @@ if ( $wmgUseWhoIsWatching ) {
 }
 
 if ( $wmgUseWidgets ) {
-	require_once( "$IP/extensions/Widgets/Widgets.php" );
+	wfLoadExtension( 'Widgets' );
 }
 
 if ( $wmgUseWikidataPageBanner ) {
