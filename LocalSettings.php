@@ -2836,6 +2836,10 @@ $wgConf->settings = array(
 			NS_FEATURED => 'Featured_Page',
 			NS_FEATURED_TALK => 'Featured_Page_talk',
 		),
+		'arphilosophywiki' => array(
+			NS_TECHDICT => 'Techdict',
+			NS_TECHDICT_TALK => 'Techdict_talk',
+		),
 		'avalicearchiveswiki' => array(
 			NS_FANWORK => 'Fanbase',
 			NS_FANWORK_TALK => 'Fanbase_talk',
