@@ -268,6 +268,8 @@ define( 'NS_STOREFRONT', 1840);
 define( 'NS_STOREFRONT_TALK', 1841);
 define( 'NS_ESSAY', 1842);
 define( 'NS_ESSAY_TALK', 1843);
+define( 'NS_TECHDICT', 1844);
+define( 'NS_TECHDICT_TALK', 1845);
 
 define( 'NS_PORTALE', 2000); // Skipping values to 2000 per T3553
 define( 'NS_DISCUSSIONI_PORTALE', 2001);
@@ -2835,6 +2837,10 @@ $wgConf->settings = array(
 			NS_REVIEWS_TALK => 'Reviews_talk',
 			NS_FEATURED => 'Featured_Page',
 			NS_FEATURED_TALK => 'Featured_Page_talk',
+		),
+		'arphilosophywiki' => array(
+			NS_TECHDICT => 'Techdict',
+			NS_TECHDICT_TALK => 'Techdict_talk',
 		),
 		'avalicearchiveswiki' => array(
 			NS_FANWORK => 'Fanbase',
