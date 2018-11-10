@@ -1646,11 +1646,4 @@ $wgManageWikiSettings = array(
 		'overridedefault' => true,
 		'help' => '',
 	),
-	'wgPageLanguageUseDB' => array(
-		'name' => 'Enable per page language',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'help' => 'Allows to change the page language for MediaWiki pages.',
-	),
 );

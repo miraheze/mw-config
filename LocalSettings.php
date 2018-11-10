@@ -3879,6 +3879,9 @@ $wgConf->settings = array(
 	// Pagelang
 	'wgPageLanguageUseDB' => array(
 		'default' => false,
+		'nvcwiki' => true,
+		'nerdzonewiki' => true,
+		'spiralwiki' => true,
 	),
 
 	// Page Size
