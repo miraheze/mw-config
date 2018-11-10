@@ -3879,6 +3879,7 @@ $wgConf->settings = array(
 	// Pagelang
 	'wgPageLanguageUseDB' => array(
 		'default' => false,
+                'guiaslocaiswiki' => true,
 		'nvcwiki' => true,
 		'nerdzonewiki' => true,
 		'spiralwiki' => true,
