@@ -463,7 +463,7 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 			'install' => [
 				'sql' => [
-					'geo_tags' => "$IP/extensions/GeoData/sql/db_backed.sql"
+					'geo_tags' => "$IP/extensions/GeoData/sql/db-backed.sql"
 				],
 			]
 		),
