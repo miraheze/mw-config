@@ -710,6 +710,7 @@ $wgConf->settings = array(
 	'wgActorTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_NEW,
 		'metawiki' => MIGRATION_NEW,
+		'nonciclopediawiki' => MIGRATION_WRITE_BOTH,
 		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	),
 	
