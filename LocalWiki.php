@@ -114,7 +114,7 @@ if ( $wgDBname === 'ciptamediawiki' ) {
 if ( $wgDBname === 'hamzawiki' ) {
 	 $wgWhitelistRead[] = array(
     		"Rukus"
-    ); 
+    );
 }
 
 if ( $wgDBname === 'harrypotterwiki' ) {
@@ -127,7 +127,7 @@ if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
 
 	$wgSimpleFlaggedRevsUI = false;
-	
+
 	$wgDefaultUserOptions['flow-topiclist-sortby'] = 'newest';
 }
 
@@ -151,6 +151,10 @@ if ( $wgDBname === 'newusopediawiki' ) {
 
 if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 	$egMapsDefaultService = 'googlemaps3';
+}
+
+if ( $wgDBname === 'reviwikiwiki' ) {
+	$wgDefaultUserOptions['usenewrc'] =0;
 }
 
 if ( $wgDBname === 'swisscomraidwiki' ) {
@@ -198,7 +202,7 @@ $wgWhitelistRead = array(
 	"MediaWiki:Common.css",
 	"Special:CentralAutoLogin",
 	"Special:CentralLogin",
-	"Special:ConfirmEmail",	
+	"Special:ConfirmEmail",
 	"Special:Notifications",
 	"Special:ResetPassword",
 	"Special:UserLogin",
