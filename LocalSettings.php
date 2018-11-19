@@ -3556,6 +3556,18 @@ $wgConf->settings = array(
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
 	 	 ),
+		'+crazybloxianempireinfowiki' => array(
+			NS_LIST => true,
+			NS_LIST_TALK => true,
+			NS_STOREFRONT => true,
+			NS_STOREFRONT_TALK => true,
+			NS_LAW => true,
+			NS_LAW_AMENDING => true,
+			NS_EXECUTIVE_ORDER => true,
+			NS_EXECUTIVE_ORDER_TALK => true,
+			NS_GROUP => true,
+			NS_GROUP_TALK => true,
+		),
 		'+destinoswiki' => array(
 			NS_PROJECT => true,
 			NS_PAGE => true,
