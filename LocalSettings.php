@@ -3567,7 +3567,7 @@ $wgConf->settings = array(
 			NS_EXECUTIVE_ORDER_TALK => true,
 			NS_GROUP => true,
 			NS_GROUP_TALK => true,
-		),
+		 ),
 		'+destinoswiki' => array(
 			NS_PROJECT => true,
 			NS_PAGE => true,
