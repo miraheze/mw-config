@@ -1494,6 +1494,13 @@ $wgConf->settings = array(
 	'wgEnableUploads' => array(
 		'default' => true,
 	),
+	// T3797
+	'wgMaxUploadSize' => array(
+		'default' => 262144000,
+	),
+	'wgUploadSizeWarning' => array(
+		'default' => 262144000,
+	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
 	),
