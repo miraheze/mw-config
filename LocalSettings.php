@@ -1061,10 +1061,11 @@ $wgConf->settings = array(
 		'reviwiki' => false,
 		'reviwikiwiki' => false,
 	),
-	'wmgUseModeration' => array( // Don't forget to also set the 'moderation' right.
+	'wmgUseModeration' => array(
 		'default' => false,
 		'nenawikiwiki' => true,
 		'sdiywiki' => false,
+		'socioatlaswiki' => true,
 		'studentspoweringchangewiki' => true,
 		'test1wiki' => true,
 	),
