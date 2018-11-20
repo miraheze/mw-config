@@ -709,8 +709,6 @@ $wgConf->settings = array(
 	// when upgrading to mw 1.32
 	'wgActorTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_NEW,
-		'metawiki' => MIGRATION_NEW,
-		'nonciclopediawiki' => MIGRATION_WRITE_BOTH,
 		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	),
 	
@@ -4983,10 +4981,6 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
-
-if ( PHP_SAPI === 'cli' && ( $wgDBname !== 'test1wiki' || $wgDBname !== 'metawiki' ) ) {
-	$wgActorTableSchemaMigrationStage = MIGRATION_NEW;
-}
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
         $wgCentralAuthCookieDomain = $wmgHostname;
