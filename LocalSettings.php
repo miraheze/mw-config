@@ -3735,7 +3735,7 @@ $wgConf->settings = array(
 			NS_HANDBOOK => true,
 		),
 		'+nonciclopediawiki' => array(
-			NS_CIMITERO =. true,
+			NS_CIMITERO => true,
 		),
 		'+rswiki' => array(
 			NS_TEMPLATE => true,
