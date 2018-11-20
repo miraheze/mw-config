@@ -1065,6 +1065,7 @@ $wgConf->settings = array(
 		'default' => false,
 		'nenawikiwiki' => true,
 		'sdiywiki' => false,
+		'socioatlaswiki' => true,
 		'studentspoweringchangewiki' => true,
 		'test1wiki' => true,
 	),
@@ -2160,6 +2161,11 @@ $wgConf->settings = array(
 			),
 			'PreSalesStaff' => array(
 				'read' => true,
+			),
+		),
+		'+socioatlaswiki' => array(
+			'sysop' => array(
+				'moderation' => true,
 			),
 		),
 		'+sovereignwiki' => array(
