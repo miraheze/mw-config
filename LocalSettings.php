@@ -1061,7 +1061,7 @@ $wgConf->settings = array(
 		'reviwiki' => false,
 		'reviwikiwiki' => false,
 	),
-	'wmgUseModeration' => array( // Don't forget to also set the 'moderation' right.
+	'wmgUseModeration' => array(
 		'default' => false,
 		'nenawikiwiki' => true,
 		'sdiywiki' => false,
@@ -2161,11 +2161,6 @@ $wgConf->settings = array(
 			),
 			'PreSalesStaff' => array(
 				'read' => true,
-			),
-		),
-		'+socioatlaswiki' => array(
-			'sysop' => array(
-				'moderation' => true,
 			),
 		),
 		'+sovereignwiki' => array(
