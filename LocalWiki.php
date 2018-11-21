@@ -210,6 +210,9 @@ $wgWhitelistRead = array(
 	"Special:CreateAccount",
 	"Spezial:Benutzerkonto anlegen",
 	"Special:Interwiki",
+	"Speciale:Interwiki",
+	"Especial:Interwiki",
+	//TODO: add more translations for Special:Interwiki
 );
 
 if ( $wmgUseMainPageWhitelist ) {
