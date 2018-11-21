@@ -209,6 +209,7 @@ $wgWhitelistRead = array(
 	"Special:UserLogout",
 	"Special:CreateAccount",
 	"Spezial:Benutzerkonto anlegen",
+	"Special:Interwiki",
 );
 
 if ( $wmgUseMainPageWhitelist ) {
