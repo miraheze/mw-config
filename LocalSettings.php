@@ -563,6 +563,9 @@ $wgConf->settings = array(
 	'wgCreateWikiDBDirectory' => array(
 		'default' => '/srv/mediawiki/dblist',
 	),
+	'wgCreateWikiCDBDirectory' => array(
+		'default' => '/mnt/mediawiki-static/cdb/createwiki',
+	),
 	'wgCreateWikiEmailNotifications' => array(
 		'default' => true,
 	),
