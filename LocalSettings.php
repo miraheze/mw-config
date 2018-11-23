@@ -1565,6 +1565,7 @@ $wgConf->settings = array(
 	'wgSVGMetadataCutoff' => array(
 		'default' => 262144,
 		'altversewiki' => 13421772,
+		'magnaversewiki' => 13421772,
 	),
 
 	// Flow
