@@ -1924,7 +1924,7 @@ $wgConf->settings = array(
 		),
 	),
 	'wgManageWikiCDBDirectory' => array(
-		'default' => '/mnt/mediawiki-static/cdb/managewiki',
+		'default' => '/srv/mediawiki/w/cache/managewiki',
 	),
 	'wgManageWikiPermissionsAdditionalAddGroups' => array(
 		'default' => array(),
