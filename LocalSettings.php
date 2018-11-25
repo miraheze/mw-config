@@ -2596,6 +2596,9 @@ $wgConf->settings = array(
 	'wgMFDefaultSkinClass' => array(
 		'default' => 'SkinMinerva',
 	),
+	'wgMobileUrlTemplate' => array(
+		'default' => "%h0.m.miraheze.org",
+	),
 	
 	// Moderation extension settings
 	'wgModerationNotificationEnable' => array( // Enable or disable notifications. 
