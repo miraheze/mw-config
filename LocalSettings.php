@@ -1357,6 +1357,7 @@ $wgConf->settings = array(
 		'magnaversewiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
+		'tensegritywiki' => true,
 		'travailcollaboratifwiki' => true,
 		'sitraduwiki' => true,
 	),
