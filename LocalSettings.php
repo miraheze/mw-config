@@ -4925,6 +4925,7 @@ if ( defined( 'MW_DB' ) ) {
 	$wgDBname = MW_DB;
 } elseif ( $wmgHostname === 'meta.miraheze.org' ) {
 	$wgDBname = 'metawiki';
+	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 } elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
 	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
