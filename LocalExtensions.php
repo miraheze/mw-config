@@ -450,6 +450,17 @@ if ( $wmgUseMobileFrontend ) {
 	wfLoadSkin( 'MinervaNeue' );
 
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
+	$wgMFMobileHeader = 'X-Subdomain';
+	$wgMFNoindexPages = false;
+
+	$wgHooks['EnterMobileMode'][] = function () {
+		global $wgIncludeLegacyJavaScript;
+
+		// Disable loading of legacy wikibits in the mobile web experience
+		$wgIncludeLegacyJavaScript = false;
+
+		return true;
+	};
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
 }
