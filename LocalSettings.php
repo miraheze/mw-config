@@ -4920,11 +4920,16 @@ function efGetSiteParams( $conf, $wiki ) {
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
 
+$wmgMobileDevice = false;
+
 # The thing that determines the dbname
 if ( defined( 'MW_DB' ) ) {
 	$wgDBname = MW_DB;
 } elseif ( $wmgHostname === 'meta.miraheze.org' ) {
 	$wgDBname = 'metawiki';
+} elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+	$wgDBname = $matches[1] . 'wiki';
+	$wmgMobileDevice = true;
 } elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
 } else {
