@@ -4926,16 +4926,12 @@ $wgConf->siteParamsCallback = 'efGetSiteParams';
 # The thing that determines the dbname
 if ( defined( 'MW_DB' ) ) {
 	$wgDBname = MW_DB;
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 } elseif ( $wmgHostname === 'meta.miraheze.org' ) {
 	$wgDBname = 'metawiki';
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 } elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 } elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 } else {
 	$wgDBname = '';
 }
@@ -5005,6 +5001,11 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
+if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
+} else if ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
+}
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
         $wgCentralAuthCookieDomain = $wmgHostname;
 	$wgCookieDomain = $wmgHostname;
