@@ -2596,6 +2596,9 @@ $wgConf->settings = array(
 	'wgMFDefaultSkinClass' => array(
 		'default' => 'SkinMinerva',
 	),
+	'wgMobileUrlTemplate' => array(
+		'default' => '',
+	),
 	
 	// Moderation extension settings
 	'wgModerationNotificationEnable' => array( // Enable or disable notifications. 
@@ -4923,6 +4926,7 @@ $wgConf->siteParamsCallback = 'efGetSiteParams';
 # The thing that determines the dbname
 if ( defined( 'MW_DB' ) ) {
 	$wgDBname = MW_DB;
+	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 } elseif ( $wmgHostname === 'meta.miraheze.org' ) {
 	$wgDBname = 'metawiki';
 	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
