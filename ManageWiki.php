@@ -221,7 +221,9 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 			'install' => [
 				'sql' => [
-					'Comments' => "$IP/extensions/Comments/sql/comments.sql"
+					'Comments' => "$IP/extensions/Comments/sql/comments.sql",
+					'Comments_block' => "$IP/extensions/Comments/sql/comments_block.sql",
+					'Comments_Vote' => "$IP/extensions/Comments/sql/comments_vote.sql",
 				],
 			]
 		),
