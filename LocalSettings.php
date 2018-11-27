@@ -1312,6 +1312,9 @@ $wgConf->settings = array(
 	'wmgAllowEntityImport' => array(
 		'default' => false,
 	),
+	'wmgEnableEntitySearchUI' => array(
+		'default' => true,
+	),
 	'wmgUseWikidataPageBanner' => array(
 		'default' => false,
 	),
