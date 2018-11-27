@@ -285,8 +285,8 @@ define( 'NS_NONQUOTE', 2010);
 define( 'NS_DISCUSSIONI_NONQUOTE', 2011);
 define( 'NS_NONDIZIONARiO', 2012);
 define( 'NS_DISCUSSIONI_NONDIZIONARIO', 2013);
-define( 'NS_NONVERSITA', 2014);
-define( 'NS_DISCUSSIONI_NONVERVISTA', 2015);
+define( 'NS_NONIVERSITA', 2014);
+define( 'NS_DISCUSSIONI_NONIVERSITA', 2015);
 define( 'NS_NONSOURCE', 2016);
 define( 'NS_DISCUSSIONI_NONSOURCE', 2017);
 define( 'NS_NONBOOKS', 2018);
@@ -2970,8 +2970,8 @@ $wgConf->settings = array(
 			NS_DISCUSSIONI_NONQUOTE => 'Discussioni_nonquote',
 			NS_NONDIZIONARiO => 'Nondizionario',
 			NS_DISCUSSIONI_NONDIZIONARIO => 'Discussioni_nondizionario',
-			NS_NONVERSITA => 'Nonversità',
-			NS_DISCUSSIONI_NONVERVISTA => 'Discussioni_nonversità',
+			NS_NONIVERSITA => 'Noniversità',
+			NS_DISCUSSIONI_NONIVERSITA => 'Discussioni_noniversità',
 			NS_NONSOURCE => 'Nonsource',
 			NS_DISCUSSIONI_NONSOURCE => 'Discussioni_nonsource',
 			NS_NONBOOKS => 'Nonbooks',
@@ -3759,8 +3759,8 @@ $wgConf->settings = array(
 			NS_DISCUSSIONI_NONQUOTE => true,
 			NS_NONDIZIONARiO => true,
 			NS_DISCUSSIONI_NONDIZIONARIO => true,
-			NS_NONVERSITA => true,
-			NS_DISCUSSIONI_NONVERVISTA => true,
+			NS_NONIVERSITA => true,
+			NS_DISCUSSIONI_NONIVERSITA => true,
 			NS_NONSOURCE => true,
 			NS_DISCUSSIONI_NONSOURCE => true,
 			NS_NONBOOKS => true,
