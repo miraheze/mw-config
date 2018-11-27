@@ -1309,6 +1309,9 @@ $wgConf->settings = array(
 	'wmgUseWikibaseRepository' => array(
 		'default' => false,
 	),
+	'wmgAllowEntityImport' => array(
+		'default' => false,
+	),
 	'wmgUseWikidataPageBanner' => array(
 		'default' => false,
 	),

@@ -1664,4 +1664,12 @@ $wgManageWikiSettings = array(
 		'overridedefault' => false,
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 	),
+	'wmgAllowEntityImport' => array(
+		'name' => 'Allow Entity Import (Wikibase)',
+		'restricted' => false,
+		'requires' => 'wikibaserepository',
+		'type' => 'check',
+		'overridedefault' => false,
+		'help' => 'Allow importing entities via Special:Import and importDump.php.',
+	),
 );
