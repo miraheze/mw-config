@@ -1241,6 +1241,9 @@ $wgConf->settings = array(
 	'wmgUseTemplateStyles' => array(
 		'default' => false,
 	),
+	'wmgUseTemplateWizard' => array(
+		'default' => false,
+	),
 	'wmgUseTheme' => array(
 		'default' => false,
 	),
