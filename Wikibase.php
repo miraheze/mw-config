@@ -1,7 +1,8 @@
 <?php
 call_user_func( function() {
 		global $wgContentHandlerUseDB, $wgExtraNamespaces, $wgWBRepoSettings,
-			$wgDBname, $wgNamespacesToBeSearchedDefault, $wmgAllowEntityImport;
+		$wgDBname, $wgNamespacesToBeSearchedDefault, $wmgAllowEntityImport,
+		$wmgEnableEntitySearchUI;
 
 		$wgContentHandlerUseDB = true;
 
@@ -24,6 +25,8 @@ call_user_func( function() {
 		$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wgDBname . ':WBL/' . rawurlencode( WBL_VERSION );
 
 		$wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
+
+		$wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 
 		$wgNamespacesToBeSearchedDefault[WB_NS_ITEM] = true;
 

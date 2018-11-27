@@ -1672,4 +1672,12 @@ $wgManageWikiSettings = array(
 		'overridedefault' => false,
 		'help' => 'Allow importing entities via Special:Import and importDump.php.',
 	),
+	'wmgEnableEntitySearchUI' => array(
+		'name' => 'Enable Entity Search UI (Wikibase)',
+		'restricted' => false,
+		'requires' => 'wikibaserepository',
+		'type' => 'check',
+		'overridedefault' => true,
+		'help' => 'To determine if entity search UI should be enabled or not.',
+	),
 );
