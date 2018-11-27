@@ -266,8 +266,8 @@ define( 'NS_EXAMPLE', 1838);
 define( 'NS_EXAMPLE_TALK', 1839);
 define( 'NS_STOREFRONT', 1840);
 define( 'NS_STOREFRONT_TALK', 1841);
-define( 'NS_ESSAY', 1842);
-define( 'NS_ESSAY_TALK', 1843);
+define( 'NS_MUSINGS', 1842);
+define( 'NS_MUSINGS_TALK', 1843);
 define( 'NS_TECHDICT', 1844);
 define( 'NS_TECHDICT_TALK', 1845);
 
@@ -2957,8 +2957,8 @@ $wgConf->settings = array(
 			NS_TECH_TALK => 'Tech_talk'
 		),
 		'monarchistswiki' => array(
-			NS_ESSAY => 'Essay',
-			NS_ESSAY_TALK => 'Essay_talk',
+			NS_MUSINGS => 'Musings',
+			NS_MUSINGS_TALK => 'Musings_talk',
 		),
 		'noalatalawiki' => array(
 			NS_PORTAL => 'Portal',
@@ -3523,7 +3523,7 @@ $wgConf->settings = array(
 			NS_TECH => true,
 		),
 		'+monarchistswiki' => array(
-			NS_ESSAY => true,
+			NS_MUSINGS => true,
 		),
 		'+starmetalwiki' => array(
 			NS_USER => true,
@@ -3737,7 +3737,7 @@ $wgConf->settings = array(
 			NS_TECH => true,
 		),
 		'+monarchistswiki' => array(
-			NS_ESSAY => true,
+			NS_MUSINGS => true,
 		),
 		'+r2wiki' => array(
 			NS_MAIN => true,
