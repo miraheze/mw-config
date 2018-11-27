@@ -1208,6 +1208,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'templatewizard' => array(
+			'name' => 'Template Wizard',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:TemplateWizard',
+			'var' => 'wmgUseTemplateWizard',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'theme' => array(
 			'name' => 'Theme',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Theme',
