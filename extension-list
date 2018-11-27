@@ -169,6 +169,7 @@ $IP/extensions/Tabs/extension.json
 $IP/extensions/TemplateData/extension.json
 $IP/extensions/TemplateSandbox/extension.json
 $IP/extensions/TemplateStyles/extension.json
+$IP/extensions/TemplateWizard/extension.json
 $IP/extensions/TextExtracts/extension.json
 $IP/extensions/Thanks/extension.json
 $IP/extensions/Theme/extension.json
