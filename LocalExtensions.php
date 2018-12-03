@@ -868,6 +868,10 @@ if ( $wmgUseWikimediaIncubator ) {
 	wfLoadExtension( 'WikimediaIncubator' );
 }
 
+if ( $wmgUseWikiSeo ) {
+	wfLoadExtension( 'wmgUseWikiSeo' );
+}
+
 if ( $wmgUseWikiTextLoggedInOut ) {
 	wfLoadExtension( 'WikiTextLoggedInOut' );
 }

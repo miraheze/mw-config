@@ -1334,6 +1334,9 @@ $wgConf->settings = array(
 	'wmgUseWikiLove' => array(
 		'default' => false,
 	),
+	'wmgUseWikiSeo' => array(
+		'default' => false,
+	),
 	'wmgUseWikiTextLoggedInOut' => array(
 		'default' => false,
 	),
