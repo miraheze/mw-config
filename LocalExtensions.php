@@ -869,7 +869,7 @@ if ( $wmgUseWikimediaIncubator ) {
 }
 
 if ( $wmgUseWikiSeo ) {
-	wfLoadExtension( 'wmgUseWikiSeo' );
+	wfLoadExtension( 'WikiSEO' );
 }
 
 if ( $wmgUseWikiTextLoggedInOut ) {
