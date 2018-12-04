@@ -4130,6 +4130,17 @@ $wgConf->settings = array(
 		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
 	),
 
+	//Password policy
+	'wgPasswordPolicy' => array(
+		'default' => array(
+			'policies' => array(
+				'default' => array(
+					'MinimalPasswordLength' => 6,
+				),
+			),
+		),
+	),
+
 	// RateLimits
 	'+wgRateLimits' => array(
 		'default' => array(),
