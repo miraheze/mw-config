@@ -4136,6 +4136,26 @@ $wgConf->settings = array(
 			'policies' => array(
 				'default' => array(
 					'MinimalPasswordLength' => 6,
+					'PasswordCannotMatchUsername' => true,
+					'PasswordCannotMatchBlacklist' => true,
+					'MaximalPasswordLength' => 4096,
+				),
+				'bot' => array(
+					'MinimalPasswordLength' => 8,
+					'MinimumPasswordLengthToLogin' => 6,
+					'PasswordCannotMatchUsername' => true,
+				),
+				'sysop' => array(
+					'MinimalPasswordLength' => 8,
+					'MinimumPasswordLengthToLogin' => 6,
+					'PasswordCannotMatchUsername' => true,
+					'PasswordCannotBePopular' => 25,
+				),
+				'bureaucrat' => array(
+					'MinimalPasswordLength' => 8,
+					'MinimumPasswordLengthToLogin' => 6,
+					'PasswordCannotMatchUsername' => true,
+					'PasswordCannotBePopular' => 25,
 				),
 			),
 		),
