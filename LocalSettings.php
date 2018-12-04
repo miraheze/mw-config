@@ -4158,6 +4158,14 @@ $wgConf->settings = array(
 					'PasswordCannotBePopular' => 25,
 				),
 			),
+			'checks' => array(
+				'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
+				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
+				'PasswordCannotMatchUsername' => 'PasswordPolicyChecks::checkPasswordCannotMatchUsername',
+				'PasswordCannotMatchBlacklist' => 'PasswordPolicyChecks::checkPasswordCannotMatchBlacklist',
+				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
+				'PasswordCannotBePopular' => 'PasswordPolicyChecks::checkPopularPasswordBlacklist'
+			),
 		),
 	),
 
