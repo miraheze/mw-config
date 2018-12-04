@@ -4359,17 +4359,6 @@ $wgConf->settings = array(
 		'default' => true,
 	),
 
-	// SiteMatrix
-	'wgSiteMatrixPrivateSites' => array(
-		'default' => "/srv/mediawiki/dblist/private.dblist",
-	),
-	'wgSiteMatrixClosedSites' => array(
-		'default' => "/srv/mediawiki/dblist/closed.dblist",
-	),
-	'wgSiteMatrixSites' => array(
-		'default' => array(),
-	),
-
 	// SiteNotice
 	'wgDismissableSiteNoticeForAnons' => array(
 		'default' => true,
