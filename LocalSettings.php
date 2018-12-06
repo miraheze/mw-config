@@ -712,12 +712,12 @@ $wgConf->settings = array(
 		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 		'test1wiki' => MIGRATION_WRITE_BOTH,
 	),
-	
-	'wgCommentTableSchemaMigrationStage' => array)
+
+	'wgCommentTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_OLD,
 		'test1wiki' => MIGRATION_WRITE_BOTH,
 	),
-	
+
 	'wgMaxImageArea' => array(
 		'default' => '1.25e7',
 		'altversewiki' => '2.5e7',
