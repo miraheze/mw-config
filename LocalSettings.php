@@ -715,7 +715,7 @@ $wgConf->settings = array(
 
 	'wgCommentTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_OLD,
-		'test1wiki' => MIGRATION_WRITE_BOTH,
+		'test1wiki' => MIGRATION_WRITE_NEW,
 	),
 
 	'wgMaxImageArea' => array(
