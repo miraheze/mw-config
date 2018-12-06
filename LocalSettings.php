@@ -1746,6 +1746,11 @@ $wgConf->settings = array(
 			's',
 			'alt',
 		),
+		'+nonciclopediawiki' => array(
+			'dlm',
+			'tlh',
+			'zombie',
+		),
 		'+privadowiki' => array(
 			'ct',
 			'm',
