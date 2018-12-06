@@ -1516,6 +1516,7 @@ $wgConf->settings = array(
 	),
 	'wgAllowCopyUploads' => array(
 		'default' => false,
+		'maiascwiki' => true,
 	),
 	'wgAllowTitlesInSVG' => array(
 		'default' => false,
@@ -1523,6 +1524,7 @@ $wgConf->settings = array(
 	),
 	'wgCopyUploadsFromSpecialUpload' => array(
 		'default' => false,
+		'maiascwiki' => true,
 	),
 	'wgFileExtensions' => array(
 		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
