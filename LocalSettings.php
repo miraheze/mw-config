@@ -709,13 +709,12 @@ $wgConf->settings = array(
 	// when upgrading to mw 1.32
 	'wgActorTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_NEW,
-		'test1wiki' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
-		'test1wiki' => MIGRATION_WRITE_BOTH,
+		'test1wiki' => SCHEMA_COMPAT_NEW,
 	),
 
-	'wgCommentTableSchemaMigrationStage' => array)
+	'wgCommentTableSchemaMigrationStage' => array(
 		'default' => MIGRATION_OLD,
-		'test1wiki' => MIGRATION_WRITE_BOTH,
+		'test1wiki' => MIGRATION_WRITE_NEW,
 	),
 
 	// Uncategorised? [MWCandidate]
