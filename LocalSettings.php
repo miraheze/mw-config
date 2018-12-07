@@ -2678,7 +2678,7 @@ $wgConf->settings = array(
 
 	// MultimediaViewer (not beta) [MWCandidate]
 	'wgMediaViewerEnableByDefault' => array(
-		'default' => flase,
+		'default' => false,
 		'cristianopediawiki' => true,
 		'grandtheftautowiki' => true,
 		'knowledgewiki' => true,
