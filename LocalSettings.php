@@ -713,8 +713,7 @@ $wgConf->settings = array(
 	),
 
 	'wgCommentTableSchemaMigrationStage' => array(
-		'default' => MIGRATION_OLD,
-		'test1wiki' => MIGRATION_WRITE_NEW,
+		'default' => MIGRATION_NEW,
 	),
 
 	// Uncategorised? [MWCandidate]
@@ -5066,9 +5065,7 @@ if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 } else if ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 }
-if ( PHP_SAPI === 'cli' ) {
-	$wgCommentTableSchemaMigrationStage = MIGRATION_NEW;
-}
+
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
         $wgCentralAuthCookieDomain = $wmgHostname;
 	$wgCookieDomain = $wmgHostname;
