@@ -1545,7 +1545,7 @@ $wgManageWikiSettings = array(
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => null,
-		'help' => 'This sets your custom domain. Otherwise it defaults to submdomain.miraheze.org.',
+		'help' => 'This sets your custom domain. Otherwise it defaults to subdomain.miraheze.org.',
 	),
 	'wgMobileUrlTemplate' => array(
 		'name' => 'Mobile Url',
