@@ -951,7 +951,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'poll' => "$IP/extensions/Poll/archives/Poll.sql",
 					'poll_answer' => "$IP/extensions/Poll/archives/Poll-answer.sql",
-					'poll_start_log' => "$IP/extensions/Poll/archives/Poll-start-log.sql.sql"
+					'poll_start_log' => "$IP/extensions/Poll/archives/Poll-start-log.sql"
 				],
 			]
 		),
