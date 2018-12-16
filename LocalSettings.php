@@ -2457,6 +2457,7 @@ $wgConf->settings = array(
 	'wgCreateWikiInactiveWikisWhitelist' => array(
 		'default' => array(
 			// Exceptions
+			'ashinawiki',
 			'commonswikiwiki',
 			'conductwiki',
 			'cvtwiki',
@@ -2473,6 +2474,7 @@ $wgConf->settings = array(
 			'crazybloxianempireinfowiki',
 			'dditecwiki',
 			'geomasterywiki',
+			'ildrilwiki',
 			'incubatorwiki',
 			'lexiquewiki',
 			'librewiki',
