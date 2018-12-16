@@ -295,6 +295,16 @@ define( 'NS_FANWORK', 2020);
 define( 'NS_FANWORK_TALK', 2021);
 define( 'NS_DICTIONARY', 2022);
 define( 'NS_DICTIONARY_TALK', 2023);
+define( 'NS_SOP_ATS_MKW', 2024);
+define( 'NS_SOP_ATS_MKW_TALK', 2025);
+define( 'NS_MOS_MKW', 2026);
+define( 'NS_MOS_MKW_TALK', 2027);
+define( 'NS_LOA', 2028);
+define( 'NS_LOA_TALK', 2029);
+define( 'NS_LOCA_MKW', 2030);
+define( 'NS_LOCA_MKW_TALK', 2031);
+define( 'NS_ARTIKEL', 2032);
+define( 'NS_ARTIKEL_TALK', 2033);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3086,6 +3096,18 @@ $wgConf->settings = array(
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_BOILERPLATE => 'Boilerplate',
 			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
+		),
+		'sopatsmkwwiki' => array(
+			NS_SOP_ATS_MKW => 'SOP ATS MKW',
+			NS_SOP_ATS_MKW_TALK => 'SOP ATS MKW_talk',
+			NS_MOS_MKW => 'MOS MKW',
+			NS_MOS_MKW_TALK => 'MOS MKW_talk',
+			NS_LOA => 'LOA',
+			NS_LOA_TALK => 'LOA_talk',
+			NS_LOCA_MKW => 'LOCA MKW',
+			NS_LOCA_MKW_TALK => 'LOCA MKW_talk',
+			NS_ARTIKEL => 'ARTIKEL',
+			NS_ARTIKEL_TALK => 'ARTIKEL_talk',
 		),
 		'statisticswiki' => array(
 			NS_HUB => 'Hub',
