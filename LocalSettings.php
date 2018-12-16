@@ -293,6 +293,8 @@ define( 'NS_NONBOOKS', 2018);
 define( 'NS_DISCUSSIONI_NONBOOKS', 2019);
 define( 'NS_FANWORK', 2020);
 define( 'NS_FANWORK_TALK', 2021);
+define( 'NS_DICTIONARY', 2022);
+define( 'NS_DICTIONARY_TALK', 2023);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2962,6 +2964,12 @@ $wgConf->settings = array(
 			NS_WORKSHOP_TALK => "Workshop_talk",
 			NS_SELP => "Selp",
 			NS_SELP_TALK => "Selp_talk",
+		),
+		'hypernostalgia' => array(
+			NS_DICTIONARY => 'Dictionary',
+			NS_DICTIONARY_TALK => 'Dictionary_talk',
+			NS_SOURCE => 'Source',
+			NS_SOURCE_TALK => 'Source_talk',
 		),
 		'isvwiki' => array(
 			NS_LIBRARY => 'Sbornik',
