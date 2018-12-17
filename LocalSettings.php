@@ -2973,7 +2973,7 @@ $wgConf->settings = array(
 			NS_SELP => "Selp",
 			NS_SELP_TALK => "Selp_talk",
 		),
-		'hypernostalgia' => array(
+		'hypernostalgiawiki' => array(
 			NS_DICTIONARY => 'Dictionary',
 			NS_DICTIONARY_TALK => 'Dictionary_talk',
 			NS_SOURCE => 'Source',
