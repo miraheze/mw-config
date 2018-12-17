@@ -293,8 +293,6 @@ define( 'NS_NONBOOKS', 2018);
 define( 'NS_DISCUSSIONI_NONBOOKS', 2019);
 define( 'NS_FANWORK', 2020);
 define( 'NS_FANWORK_TALK', 2021);
-define( 'NS_DICTIONARY', 2022);
-define( 'NS_DICTIONARY_TALK', 2023);
 define( 'NS_SOP_ATS_MKW', 2024);
 define( 'NS_SOP_ATS_MKW_TALK', 2025);
 define( 'NS_MOS_MKW', 2026);
@@ -303,8 +301,6 @@ define( 'NS_LOA', 2028);
 define( 'NS_LOA_TALK', 2029);
 define( 'NS_LOCA_MKW', 2030);
 define( 'NS_LOCA_MKW_TALK', 2031);
-define( 'NS_ARTIKEL', 2032);
-define( 'NS_ARTIKEL_TALK', 2033);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
