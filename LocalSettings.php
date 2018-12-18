@@ -4936,7 +4936,9 @@ $wgConf->settings = array(
 		),
 	),
 	'wmincSisterProjects' => array(
-		'default' => array(),
+		'default' => array(
+			'm' => 'Miraheze Meta',
+		),
 	),
 	'wmincExistingWikis' => array(
 		'default' => null,
