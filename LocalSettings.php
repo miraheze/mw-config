@@ -4936,7 +4936,7 @@ $wgConf->settings = array(
 		),
 	),
 	'wmincSisterProjects' => array(
-		'default' => false,
+		'default' => array(),
 	),
 	'wmincExistingWikis' => array(
 		'default' => false,
