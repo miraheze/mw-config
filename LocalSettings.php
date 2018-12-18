@@ -2472,6 +2472,7 @@ $wgConf->settings = array(
 			'geomasterywiki',
 			'ildrilwiki',
 			'incubatorwiki',
+			'ildrilwiki',
 			'lexiquewiki',
 			'librewiki',
 			'linenwiki',
