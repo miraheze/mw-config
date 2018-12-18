@@ -4939,13 +4939,13 @@ $wgConf->settings = array(
 		'default' => array(),
 	),
 	'wmincExistingWikis' => array(
-		'default' => false,
+		'default' => null,
 	),
 	'wmincClosedWikis' => array(
 		'default' => false,
 	),
 	'wmincMultilingualProjects' => array(
-		'default' => false,
+		'default' => array(),
 	),
 
 	// Whitelist [MWCandidate]
