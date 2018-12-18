@@ -132,7 +132,7 @@ $wgManageWikiExtensions = array(
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:BlogPage',
 			'var' => 'wmgUseBlogPage',
 			'conflicts' => false,
-			'requires' => 'socialprofile',
+			'requires' => 'socialprofile,comments',
 			'restricted' => false,
 		),
 		'capiunto' => array(
