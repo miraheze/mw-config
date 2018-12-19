@@ -2329,6 +2329,7 @@ $wgConf->settings = array(
 				'suppressrevision',
 				'userrights',
 				'userrights-interwiki',
+				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
 			),
