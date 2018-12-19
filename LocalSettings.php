@@ -2689,7 +2689,6 @@ $wgConf->settings = array(
 	// MultimediaViewer (not beta) [MWCandidate]
 	'wgMediaViewerEnableByDefault' => array(
 		'default' => false,
-		'cristianopediawiki' => true,
 		'grandtheftautowiki' => true,
 		'knowledgewiki' => true,
 		'thefosterswiki' => true,
@@ -2937,10 +2936,6 @@ $wgConf->settings = array(
 			NS_STOREFRONT => 'Storefront',
 			NS_STOREFRONT_TALK => 'Storefront_talk',
 		),	
-		'cristianopediawiki' => array(
-			NS_TEMA => 'Tema',
-			NS_TEMA_TALK => 'Tema_discusión',
-		),
 		'ecoepiwiki' => array(
 			NS_PARAMETER => 'Parameter',
 			NS_PARAMETER_TALK => 'Parameter_talk',
@@ -3116,10 +3111,6 @@ $wgConf->settings = array(
 			NS_STUDY_NOTE_TALK => 'Study note_talk',
 			NS_EXPLANATION => 'Explanation',
 			NS_EXPLANATION_TALK => 'Explanation_talk',
-		),
-		'tallerdecristianopediawiki' => array(
-			NS_TEMA => 'Tema',
-			NS_TEMA_TALK => 'Tema_discusión',
 		),
 		'thelonsdalebattalionwiki' => array(
 			NS_GLOSSARY => 'Glossary',
@@ -4811,10 +4802,7 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+cristianopediawiki' => array(
-			NS_TEMA => true,
-		),		
+	 	 ),	
 		'+espiralwiki' => array(
 			NS_PROJECT => true,
 		),
@@ -4826,9 +4814,6 @@ $wgConf->settings = array(
 			NS_TEMPLATE => true,
 			NS_CATEGORY => true,
 			NS_FILE => true,
-		),
-		'+tallerdecristianopediawiki' => array(
-			NS_TEMA => true,
 		),
 		'+wisdomwikiwiki' => array(
 			NS_LCS => true,
