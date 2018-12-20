@@ -68,6 +68,8 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
  	$wgWikiUrl = $wgServer . '/w/';
 	$wgDiscordIncomingWebhookUrl =
 		$wmgWikiMirahezeDiscordHook[$wgDBname] ?? $wmgWikiMirahezeDiscordHook['default'];
+	$wgDiscordAdditionalIncomingWebhookUrls = 
+		$wmgWikiMirahezeDiscordHooks[$wgDBname] ?? $wmgWikiMirahezeDiscordHooks['default'];
 }
 
 // Per-wiki overrides
