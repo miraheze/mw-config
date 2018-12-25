@@ -1947,8 +1947,15 @@ $wgConf->settings = array(
 	),
 
 	// ManageWiki [MWExempt]
-	'wgEnableManageWiki' => array(
-		'default' => true,
+	'wgManageWiki' => array(
+		'default' => array(
+			'cdb' => true,
+			'core' => true,
+			'extensions' => true,
+			'namespaces' => false,
+			'permissions' => true,
+			'settings' => true
+		),
 	),
 	'wgManageWikiExtensionsDefault' => array(
 		'default' => array(
@@ -2349,9 +2356,6 @@ $wgConf->settings = array(
 	),
 	'wgManageWikiPermissionsDefaultPrivateGroup' => array(
 		'default' => 'member',
-	),
-	'wgManageWikiPermissionsManagement' => array(
-		'default' => true,
 	),
 	'wgManageWikiHelpUrl' => array(
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
