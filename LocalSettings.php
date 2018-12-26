@@ -1594,6 +1594,10 @@ $wgConf->settings = array(
 		'altversewiki' => 13421772,
 		'magnaversewiki' => 13421772,
 	),
+	'wgSVGConverter' => array(
+		'default' => 'ImageMagick',
+		'arphilosophywiki' => 'inkscape',
+	),
 
 	// Flow [MWCandidate] (MWNamespaces?)
 	'wmgFlowDefaultNamespaces' => array(
