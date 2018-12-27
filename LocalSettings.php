@@ -3098,9 +3098,9 @@ $wgConf->settings = array(
 			NS_BOILERPLATE => 'Boilerplate',
 			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
 		),
-		'slymodding' => array(
+		'slymoddingwiki' => array(
 			NS_TUT => 'Tutorial',
-			NS_TUT => 'Tutorial_talk',
+			NS_TUT_TALK => 'Tutorial_talk',
 		),
 		'sopatsmkwwiki' => array(
 			NS_SOP_ATS_MKW => 'SOP ATS MKW',
