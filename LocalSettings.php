@@ -301,6 +301,8 @@ define( 'NS_LOA', 2028);
 define( 'NS_LOA_TALK', 2029);
 define( 'NS_LOCA_MKW', 2030);
 define( 'NS_LOCA_MKW_TALK', 2031);
+define( 'NS_TUT', 2032);
+define( 'NS_TUT_TALK', 2033);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -3095,6 +3097,10 @@ $wgConf->settings = array(
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_BOILERPLATE => 'Boilerplate',
 			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
+		),
+		'slymodding' => array(
+			NS_TUT => 'Tutorial',
+			NS_TUT => 'Tutorial_talk',
 		),
 		'sopatsmkwwiki' => array(
 			NS_SOP_ATS_MKW => 'SOP ATS MKW',
