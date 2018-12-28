@@ -493,6 +493,12 @@ $wgConf->settings = array(
 	'wgReCaptchaSendRemoteIP' => array(
 		'default' => false,
 	),
+	
+	// Category
+	'wgUseCategoryBrowser' => array(
+		'default' => false,
+		'modesofdiscoursewiki' => true,
+	),
 
 	// CentralAuth [MWExempt]
 	'wgCentralAuthAutoCreateWikis' => array(
