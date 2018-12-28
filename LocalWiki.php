@@ -145,6 +145,23 @@ if ( $wgDBname === 'metawiki' ) {
 	$wgDonateBoxInSidebarContent = '<ul><li><a href="/wiki/Donate">Donate to Miraheze</a></li></ul>';
 }
 
+if ( $wgDBname === 'ndgwiki' ) {
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared-nenawikiwiki',
+		'directory' => '/mnt/mediawiki-static/nenawikiwiki',
+		'url' => 'https://static.miraheze.org/nenawikiwiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => 'nenawikiwiki',
+		'descBaseUrl' => 'https://nenawiki.org/wiki/File:',
+	];
+}
+	
 if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
