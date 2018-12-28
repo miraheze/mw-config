@@ -159,6 +159,7 @@ if ( $wgDBname === 'ndgwiki' ) {
 		'descriptionCacheExpiry' => 86400 * 7,
 		'wiki' => 'nenawikiwiki',
 		'descBaseUrl' => 'https://nenawiki.org/wiki/File:',
+		'scriptDirUrl' => 'https://nenawiki.org/w',
 	];
 }
 	
