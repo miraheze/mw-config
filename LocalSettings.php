@@ -303,6 +303,8 @@ define( 'NS_LOCA_MKW', 2030);
 define( 'NS_LOCA_MKW_TALK', 2031);
 define( 'NS_TUT', 2032);
 define( 'NS_TUT_TALK', 2033);
+define( 'NS_ASPECT', 2034);
+define( 'NS_ASPECT_TALK', 2035);
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
@@ -2818,6 +2820,10 @@ $wgConf->settings = array(
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
 		 ),
+		'modesofdiscoursewiki' => array(
+			NS_ASPECT => 'Aspect',
+			NS_ASPECT_TALK => 'Aspect_talk',
+		),
 		'privadowiki' => array(
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
