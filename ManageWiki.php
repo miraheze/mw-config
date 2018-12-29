@@ -1062,6 +1062,8 @@ $wgManageWikiExtensions = array(
 					'user' => [
 						'permissions' => ['createclass', 'multipageedit']
 					],
+				]
+			]
 		),
 		'pagenotice' => array(
 			'name' => 'Page Notice',
