@@ -356,6 +356,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'dummyfandoommainpagetags' => array(
+			'name' => 'DummyFandoomMainpageTags',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:DummyFandoomMainpageTags',
+			'var' => 'wmgUseDummyFandoomMainpageTags',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'duplicator' => array(
 			'name' => 'Duplicator',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Duplicator',
