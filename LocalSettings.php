@@ -920,6 +920,9 @@ $wgConf->settings = array(
 	'wmgUseDPLForum' => array(
 		'default' => false,
 	),
+	'wmgUseDummyFandoomMainpageTags' => array(
+		'default' => false,
+	),
 	'wmgUseDuplicator' => array(
 		'default' => false,
 	),

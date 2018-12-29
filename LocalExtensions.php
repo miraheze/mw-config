@@ -201,6 +201,10 @@ if ( $wmgUseDPLForum ) {
 	wfLoadExtension( 'DPLForum' );
 }
 
+if ( $wmgUseDummyFandoomMainpageTags ) {
+	wfLoadExtension( 'DummyFandoomMainpageTags' );
+}
+
 if ( $wmgUseDuplicator ) {
 	require_once( "$IP/extensions/Duplicator/Duplicator.php" );
 }
