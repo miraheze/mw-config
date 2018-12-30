@@ -1977,7 +1977,7 @@ $wgConf->settings = array(
 			'cdb' => true,
 			'core' => true,
 			'extensions' => true,
-			'namespaces' => true,
+			'namespaces' => false,
 			'permissions' => true,
 			'settings' => true
 		),
