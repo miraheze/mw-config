@@ -30,6 +30,7 @@ wfLoadExtensions( [
 	'SyntaxHighlight_GeSHi',
 	'TitleBlacklist',
 	'TorBlock',
+	'UserMerge',
 	'WikiDiscover',
 	'WikiEditor',
 	'cldr'
