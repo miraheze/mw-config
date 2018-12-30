@@ -2009,7 +2009,7 @@ $wgConf->settings = array(
 				'user' => true,
 			),
 			'steward' => array(
-				'centralauth-usermerge',
+				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
 			),
