@@ -129,6 +129,7 @@ $IP/extensions/Poem/extension.json
 $IP/extensions/PipeEscape/PipeEscape.php
 $IP/extensions/Poll/Poll.php
 $IP/extensions/PollNY/extension.json
+$IP/extensions/PortableInfobox/extension.json
 $IP/extensions/Popups/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
