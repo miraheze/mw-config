@@ -2348,6 +2348,7 @@ $wgConf->settings = array(
 				'siteadmin',
 				'suppressionlog',
 				'suppressrevision',
+				'usermerge',
 				'userrights',
 				'userrights-interwiki',
 				'viewglobalprivatefiles',
