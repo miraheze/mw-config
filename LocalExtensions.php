@@ -596,6 +596,10 @@ if ( $wmgUsePollNY ) {
 	wfLoadExtension( 'PollNY' );
 }
 
+if ( $wmgUsePortableInfobox ) {
+	wfLoadExtension( 'PortableInfobox' );
+}
+
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
