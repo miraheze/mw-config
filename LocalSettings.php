@@ -2005,6 +2005,7 @@ $wgConf->settings = array(
 				'user' => true,
 			),
 			'steward' => array(
+				'usermerge' => true,
 				'userrights' => true,
 			),
 		),
