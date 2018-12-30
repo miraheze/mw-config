@@ -532,6 +532,10 @@ $wgConf->settings = array(
 		'default' => false,
 		'metawiki' => true,
 	),
+	'wgCentralAuthEnableUserMerge' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
 	'wgCentralAuthLoginWiki' => array(
 		'default' => 'loginwiki',
 	),
