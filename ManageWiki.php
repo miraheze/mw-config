@@ -1208,6 +1208,14 @@ $wgManageWikiExtensions = array(
 				]
 			]
 		),
+		'portableinfobox' => array(
+			'name' => 'PortableInfobox',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:PortableInfobox',
+			'var' => 'wmgUsePortableInfobox',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'proofreadpages' => array(
 			'name' => 'Proofread Pages',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ProofreadPage',
