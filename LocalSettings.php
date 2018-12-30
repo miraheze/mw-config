@@ -1178,6 +1178,9 @@ $wgConf->settings = array(
 	'wmgUsePollNY' => array(
 		'default' => false,
 	),
+	'wmgUsePortableInfobox' => array(
+		'default' => false,
+	),
 	'wmgUseProofreadPage' => array(
 		'default' => false,
 	),
