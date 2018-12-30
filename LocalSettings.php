@@ -2312,6 +2312,7 @@ $wgConf->settings = array(
 				'oathauth-enable' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
+				'usermerge' => true,
 			),
 		),
 		'+yeoksawiki' => array(
