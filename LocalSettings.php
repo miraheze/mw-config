@@ -2373,6 +2373,7 @@ $wgConf->settings = array(
 				'read',
 				'skipcaptcha',
 				'torunblocked',
+				'centralauth-merge',
 			),
 		),
 	),
