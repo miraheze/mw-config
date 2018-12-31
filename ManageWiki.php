@@ -35,12 +35,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'adminlinks',
-						],
+						'permissions' => ['adminlinks'],
 					],
 				],
-			],
+			]
 		),
 		'ajaxpoll' => array(
 			'name' => 'AJAX Poll',
@@ -54,7 +52,7 @@ $wgManageWikiExtensions = array(
 					'ajaxpoll_info' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_info.sql",
 					'ajaxpoll_vote' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_vote.sql"
 				],
-			],
+			]
 		),
 		'apex' => array(
 			'name' => 'Apex (Skin)',
@@ -78,18 +76,13 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'viewapprover',
-							'approverevisions',
-						],
+						'permissions' => ['viewapprover', 'approverevisions']
 					],
 					'*' => [
-						'permissions' => [
-							'viewlinktolatest',
-						],
-					],
-				],
-			],
+						'permissions' => ['viewlinktolatest']
+					]
+				]
+			]
 		),
 		'articlefeedbackv5' => array(
 			'name' => 'Article Feedback Tool V5',
@@ -102,7 +95,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
 				],
-			],
+			]
 		),
 		'articleratings' => array(
 			'name' => 'Article Ratings',
@@ -117,12 +110,10 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'reviewer' => [
-						'permissions' => [
-							'change-rating',
-						],
-					],
-				],
-			],
+						'permissions' => ['change-rating']
+					]
+				]
+			]
 		),
 		'articletocategory2' => array(
 			'name' => 'Article To Category 2',
@@ -142,17 +133,13 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'author',
-						],
+						'permissions' => ['author']
 					],
 					'user' => [
-						'permissions' => [
-							'authorprotect',
-						],
-					],
-				],
-			],
+						'permissions' => ['authorprotect']
+					]
+				]
+			]
 		),
 		'autocreatecategorypages' => array(
 			'name' => 'Auto Create Category Pages',
@@ -180,12 +167,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'user' => [
-						'permissions' => [
-							'createblogpost',
-						],
-					],
-				],
-			],
+						'permissions' => ['createblogpost']
+					]
+				]
+			]
 		),
 		'capiunto' => array(
 			'name' => 'Capiunto',
@@ -208,13 +193,10 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'recreatecargodata',
-							'deletecargodata',
-						],
-					],
-				],
-			],
+						'permissions' => ['recreatecargodata', 'deletecargodata']
+					]
+				]
+			]
 		),
 		'charinsert' => array(
 			'name' => 'CharInsert',
@@ -287,27 +269,19 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'*' => [
-						'permissions' => [
-							'comment',
-						],
+						'permissions' => ['comment']
 					],
 					'autoconfirmed' => [
-						'permissions' => [
-							'commentlinks',
-						],
+						'permissions' => ['commentlinks']
 					],
 					'comentadmin' => [
-						'permissions' => [
-							'commentadmin',
-						],
+						'permissions' => ['commentadmin']
 					],
 					'sysop' => [
-						'permissions' => [
-							'commentadmin',
-						],
-					],
-				],
-			],
+						'permissions' => ['commentadmin']
+					]
+				]
+			]
 		),
 		'contributionscores' => array(
 			'name' => 'ContributionScores',
@@ -400,12 +374,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'user' => [
-						'permissions' => [
-							'duplicate',
-						],
-					],
-				],
-			],
+						'permissions' => ['duplicate']
+					]
+				]
+			]
 		),
 		'dusktodawn' => array(
 			'name' => 'DuskToDawn (Skin)',
@@ -451,7 +423,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'ep_students' => "$IP/extensions/EducationProgram/sql/EducationProgram.sql"
 				],
-			],
+			]
 		),
 		'electronpdfservice' => array(
 			'name' => 'Electron PDF Service',
@@ -513,7 +485,7 @@ $wgManageWikiExtensions = array(
 							'autoconfirmed',
 							'editsemiprotected',
 							'unreviewedpages',
-						],
+						]
 					],
 					'reviewer' => [
 						'permissions' => [
@@ -523,7 +495,7 @@ $wgManageWikiExtensions = array(
 							'autoconfirmed',
 							'editsemiprotected',
 							'unreviewedpages',
-						],
+						]
 					],
 					'sysop' => [
 						'permissions' => [
@@ -531,27 +503,17 @@ $wgManageWikiExtensions = array(
 							'stablesettings',
 							'movestable',
 						],
-						'addgroups' => [
-							'editor',
-							'autoreview',
-						],
-						'removegroups' => [
-							'editor',
-							'autoreview',
-						],
+						'addgroups' => ['editor', 'autoreview'],
+						'removegroups' => ['editor', 'autoreview'],
 					],
 					'autoreview' => [
-						'permissions' => [
-							'autoreview',
-						],
+						'permissions' => ['autoreview']
 					],
 					'bot' => [
-						'permissions' => [
-							'autoreview',
-						],
+						'permissions' => ['autoreview']
 					],
-				],
-			],
+				]
+			]
 		),
 		'flow' => array(
 			'name' => 'Flow',
@@ -567,34 +529,26 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'*' => [
-						'permissions' => [
-							'flow-hide',
-						],
+						'permissions' => ['flow-hide']
 					],
 					'user' => [
-						'permissions' => [
-							'flow-lock',
-						],
+						'permissions' => ['flow-lock']
 					],
 					'sysop' => [
 						'permissions' => [
 							'flow-lock',
 							'flow-delete',
 							'flow-edit-post',
-						],
+						]
 					],
 					'oversight' => [
-						'permissions' => [
-							'flow-suppress',
-						],
+						'permissions' => ['flow-suppress']
 					],
 					'flow-bot' => [
-						'permissions' => [
-							'flow-create-board',
-						],
+						'permissions' => ['flow-create-board']
 					],
-				],
-			],
+				]
+			]
 		),
 		'foreground' => array(
 			'name' => 'Foreground (Skin)',
@@ -641,7 +595,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'geo_tags' => "$IP/extensions/GeoData/sql/db-backed.sql"
 				],
-			],
+			]
 		),
 		'gettingstarted' => array(
 			'name' => 'GettingStarted',
@@ -685,22 +639,16 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'bot' => [
-						'permissions' => [
-							'welcomeexempt',
-						],
+						'permissions' => ['welcomeexempt']
 					],
 					'sysop' => [
-						'permissions' => [
-							'welcomeexempt',
-						],
+						'permissions' => ['welcomeexempt']
 					],
 					'bureaucrat' => [
-						'permissions' => [
-							'welcomeexempt',
-						],
+						'permissions' => ['welcomeexempt']
 					],
-				],
-			],
+				]
+			]
 		),
 		'headertabs' => array(
 			'name' => 'HeaderTabs',
@@ -744,12 +692,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'user' => [
-						'permissions' => [
-							'rateimage',
-						],
-					],
-				],
-			],
+						'permissions' => ['rateimage']
+					]
+				]
+			]
 		),
 		'inputbox' => array(
 			'name' => 'InputBox',
@@ -826,12 +772,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'linktitles-batch',
-						],
-					],
-				],
-			],
+						'permissions' => ['linktitles-batch']
+					]
+				]
+			]
 		),
 		'listings' => array(
 			'name' => 'Listings',
@@ -875,12 +819,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'masseditregex',
-						],
-					],
-				],
-			],
+						'permissions' => ['masseditregex']
+					]
+				]
+			]
 		),
 		'massmessage' => array(
 			'name' => 'MassMessage',
@@ -892,12 +834,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'massmessage',
-						],
-					],
-				],
-			],
+						'permissions' => ['massmessage']
+					]
+				]
+			]
 		),
 		'math' => array(
 			'name' => 'Math',
@@ -912,7 +852,7 @@ $wgManageWikiExtensions = array(
 					'mathlatexml' => "$IP/extensions/Math/db/mathlatexml.mysql.sql",
 					'mathoid' => "$IP/extensions/Math/db/mathoid.mysql.sql"
 				],
-			],
+			]
 		),
 		'mediawikichat' => array(
 			'name' => 'MediaWikiChat',
@@ -928,38 +868,20 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'chatmod' => [
-						'permissions' => [
-							'chat',
-							'modchat',
-						],
-						'addgroups' => [
-							'blockedfromchat',
-						],
-						'removegroups' => [
-							'blockedfromchat',
-						],
+						'permissions' => ['chat', 'modchat'],
+						'addgroups' => ['blockedfromchat'],
+						'removegroups' => ['blockedfromchat'],
 					],
 					'user' => [
-						'permissions' => [
-							'chat',
-						],
+						'permissions' => ['chat']
 					],
 					'sysop' => [
-						'permissions' => [
-							'chat',
-							'modchat',
-						],
-						'addgroups' => [
-							'chatmod',
-							'blockedfromchat',
-						],
-						'removegroups' => [
-							'chatmod',
-							'blockedfromchat',
-						],
+						'permissions' => ['chat', 'modchat'],
+						'addgroups' => ['chatmod', 'blockedfromchat'],
+						'removegroups' => ['chatmod', 'blockedfromchat'],
 					],
-				],
-			],
+				]
+			]
 		),
 		'metrolook' => array(
 			'name' => 'Metrolook (Skin)',
@@ -990,7 +912,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'mscal_content' => "$IP/MsCalendar/MsCalendar.sql"
 				],
-			],
+			]
 		),
 		'msupload' => array(
 			'name' => 'MsUpload',
@@ -1061,10 +983,10 @@ $wgManageWikiExtensions = array(
 							'newsletter-delete',
 							'newsletter-manage',
 							'newsletter-restore',
-						],
-					],
-				],
-			],
+						]
+					]
+				]
+			]
 		),
 		'newusermessage' => array(
 			'name' => 'New User Message',
@@ -1100,12 +1022,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'nukedpl',
-						],
-					],
-				],
-			],
+						'permissions' => ['nukedpl']
+					]
+				]
+			]
 		),
 		'nostalgia' => array(
 			'name' => 'Nostalgia (Skin)',
@@ -1142,23 +1062,16 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'*' => [
-						'permissions' => [
-							'viewedittab',
-						],
+						'permissions' => ['viewedittab']
 					],
 					'sysop' => [
-						'permissions' => [
-							'editrestrictedfields',
-						],
+						'permissions' => ['editrestrictedfields']
 					],
 					'user' => [
-						'permissions' => [
-							'createclass',
-							'multipageedit',
-						],
+						'permissions' => ['createclass', 'multipageedit']
 					],
-				],
-			],
+				]
+			]
 		),
 		'pagenotice' => array(
 			'name' => 'Page Notice',
@@ -1182,7 +1095,7 @@ $wgManageWikiExtensions = array(
 					'pagetriage_page' => "$IP/extensions/PageTriage/sql/PageTriagePage.sql",
 					'pagetriage_log' => "$IP/extensions/PageTriage/sql/PageTriageLog.sql"
 				],
-			],
+			]
 		),
 		'pdfbook' => array(
 			'name' => 'PDFBook',
@@ -1202,12 +1115,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'embed_pdf',
-						],
-					],
-				],
-			],
+						'permissions' => ['embed_pdf']
+					]
+				]
+			]
 		),
 		'pdfhandler' => array(
 			'name' => 'PDF Handler',
@@ -1265,23 +1176,16 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'poll-admin',
-						],
+						'permissions' => ['poll-admin']
 					],
 					'autoconfirmed' => [
-						'permissions' => [
-							'poll-create',
-							'poll-vote',
-						],
+						'permissions' => ['poll-create', 'poll-vote']
 					],
 					'*' => [
-						'permissions' => [
-							'poll-score',
-						],
+						'permissions' => ['poll-score']
 					],
-				],
-			],
+				]
+			]
 		),
 		'pollny' => array(
 			'name' => 'PollNY',
@@ -1296,17 +1200,13 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'*' => [
-						'permissions' => [
-							'pollny-vote',
-						],
+						'permissions' => ['pollny-vote']
 					],
 					'sysop' => [
-						'permissions' => [
-							'polladmin',
-						],
+						'permissions' => ['polladmin']
 					],
-				],
-			],
+				]
+			]
 		),
 		'portableinfobox' => array(
 			'name' => 'PortableInfobox',
@@ -1329,17 +1229,13 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'user' => [
-						'permissions' => [
-							'pagequality',
-						],
+						'permissions' => ['pagequality']
 					],
 					'sysop' => [
-						'permissions' => [
-							'pagequality-admin',
-						],
+						'permissions' => ['pagequality-admin']
 					],
-				],
-			],
+				]
+			]
 		),
 		'protectsite' => array(
 			'name' => 'Protect Site',
@@ -1351,12 +1247,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'bureaucrat' => [
-						'permissions' => [
-							'protectsite',
-						],
-					],
-				],
-			],
+						'permissions' => ['protectsite']
+					]
+				]
+			]
 		),
 		'purge' => array(
 			'name' => 'Purge',
@@ -1390,12 +1284,10 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'quizadmin',
-						],
-					],
-				],
-			],
+						'permissions' => ['quizadmin']
+					]
+				]
+			]
 		),
 		'randomgameunit' => array(
 			'name' => 'RandomGameUnit (SocialProfile)',
@@ -1448,12 +1340,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'replacetext',
-						],
-					],
-				],
-			],
+						'permissions' => ['replacetext']
+					]
+				]
+			]
 		),
 		'revisionslider' => array(
 			'name' => 'RevisionSlider',
@@ -1550,10 +1440,10 @@ $wgManageWikiExtensions = array(
 							'giftadmin',
 							'avatarremove',
 							'editothersprofiles',
-						],
-					],
-				],
-			],
+						]
+					]
+				]
+			]
 		),
 		'spoilers' => array(
 			'name' => 'Spoilers',
@@ -1640,18 +1530,13 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'transcode-reset',
-							'transcode-status',
-						],
+						'permissions' => ['transcode-reset', 'transcode-status']
 					],
 					'autoconfirmed' => [
-						'permissions' => [
-							'transcode-reset',
-						],
+						'permissions' => ['transcode-reset']
 					],
-				],
-			],
+				]
+			]
 		),
 		'timeline' => array(
 			'name' => 'Timeline',
@@ -1672,7 +1557,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'titlekey' => "$IP/extensions/TitleKey/titlekey.sql"
 				],
-			],
+			]
 		),
 		'toctree' => array(
 			'name' => 'TOC Tree',
@@ -1692,24 +1577,16 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'*' => [
-						'permissions' => [
-							'translate',
-						],
+						'permissions' => ['translate']
 					],
 					'sysop' => [
-						'permissions' => [
-							'pagetranslation',
-							'translate-import',
-							'translate-manage',
-						],
+						'permissions' => ['pagetranslation', 'translate-import', 'translate-manage']
 					],
 					'user' => [
-						'permissions' => [
-							'translate-review',
-						],
+						'permissions' => ['translate-review']
 					],
-				],
-			],
+				]
+			]
 		),
 		'tweeki' => array(
 			'name' => 'Tweeki (Skin)',
@@ -1781,12 +1658,10 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'user' => [
-						'permissions' => [
-							'voteny',
-						],
-					],
-				],
-			],
+						'permissions' => ['voteny']
+					]
+				]
+			]
 		),
 		'visualeditor' => array(
 			'name' => 'VisualEditor',
@@ -1807,12 +1682,10 @@ $wgManageWikiExtensions = array(
 			'install' => [
 				'permissions' => [
 					'sysop' => [
-						'permissions' => [
-							'editwidgets',
-						],
-					],
-				],
-			],
+						'permissions' => ['editwidgets']
+					]
+				]
+			]
 		),
 		'wikibaserepository' => array(
 			'name' => 'Wikibase (Repository)',
@@ -1852,27 +1725,17 @@ $wgManageWikiExtensions = array(
 				],
 				'permissions' => [
 					'bureaucrat' => [
-						'addgroups' => [
-							'forumadmin',
-						],
-						'removegroups' => [
-							'forumadmin',
-						],
+						'addgroups' => ['forumadmin'],
+						'removegroups' => ['forumadmin'],
 					],
 					'forumadmin' => [
-						'permissions' => [
-							'wikiforum-admin',
-							'wikiforum-moderator',
-						],
+						'permissions' => ['wikiforum-admin', 'wikiforum-moderator']
 					],
 					'sysop' => [
-						'permissions' => [
-							'wikiforum-admin',
-							'wikiforum-moderator',
-						],
+						'permissions' => ['wikiforum-admin', 'wikiforum-moderator']
 					],
-				],
-			],
+				]
+			]
 		),
 		'wikilove' => array(
 			'name' => 'WikiLove',
@@ -1885,7 +1748,7 @@ $wgManageWikiExtensions = array(
 				'sql' => [
 					'wikilove_log' => "$IP/extensions/WikiLove/patches/WikiLoveLog.sql"
 				],
-			],
+			]
 		),
 		'wikiseo' => array(
 			'name' => 'WikiSEO',
