@@ -3310,7 +3310,10 @@ $wgConf->settings = array(
 		'tmewiki' => 'TME',
 	),
 	'+wgNamespaceAliases' => array(
-		'default' => array(),
+		'default' => array(
+			'Image' => NS_FILE,
+			'Image_talk' => NS_FILE_TALK,
+		),
 		'+apunteswiki' => array(
  			'A' => NS_PROJECT,
  		),
