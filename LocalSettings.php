@@ -316,12 +316,6 @@ define( 'NS_PROOFREAD_PAGE_TALK', 251);
 define( 'NS_PROOFREAD_INDEX', 252);
 define( 'NS_PROOFREAD_INDEX_TALK', 253);
 
-// temp hack to prevent log spam
-// remove when we upgrade to mw 1.32
-if ( version_compare( $wgVersion, '1.32c', '<' ) ) {
-	define( 'SCHEMA_COMPAT_NEW', 'temp' );
-}
-
 // NS 860, 861, 862, 863 allocated for Item/Item_talk/Property/Property_talk by Wikibase
 
 $wgConf->settings = array(
@@ -726,10 +720,9 @@ $wgConf->settings = array(
 	'wgSharedTables' => array(
 		'default' => array(),
 	),
-	// TODO use 'SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW'
-	// when upgrading to mw 1.32
 	'wgActorTableSchemaMigrationStage' => array(
-		'default' => MIGRATION_NEW,
+		'default' => version_compare( $wgVersion, '1.32c', '<' ) ?
+			MIGRATION_NEW : SCHEMA_COMPAT_NEW,
 		'test1wiki' => SCHEMA_COMPAT_NEW,
 	),
 
