@@ -5148,7 +5148,6 @@ if ( $wgDBname === 'tmewiki' ) {
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
-$wgDefaultUserOptions['globaluserpage'] = false;
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
