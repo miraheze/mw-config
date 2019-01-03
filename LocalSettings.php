@@ -4070,12 +4070,6 @@ $wgConf->settings = array(
 	),
 	'wgRevokePermissions' => array(
 		'default' => array(),
-		'loginwiki' => array(
-			'*' => array(
-				'edit' => true,
-				'move' => true,
-			),
-		),
 		'ssptopwiki' => array(
 			'read-only' => array(
 				'edit' => true,
