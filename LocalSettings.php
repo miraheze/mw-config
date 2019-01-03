@@ -1663,10 +1663,10 @@ $wgConf->settings = array(
 
  	// GlobalUserPage [MWExempt]
  	'wgGlobalUserPageAPIUrl' => array(
-		'default' => 'https://meta.miraheze.org/w/api.php',
+		'default' => 'https://login.miraheze.org/w/api.php',
 	),
 	'wgGlobalUserPageDBname' => array(
-		'default' => 'metawiki',
+		'default' => 'loginwiki',
 	),
 
 	// HighlightLinks [MWCandidate]
