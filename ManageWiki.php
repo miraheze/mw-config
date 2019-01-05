@@ -27,7 +27,7 @@ $wgManageWikiExtensions = array(
 		),
 		'adminlinks' => array(
 			'name' => 'AdminLinks',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:AdminLinks',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Admin_Links',
 			'var' => 'wmgUseAdminLinks',
 			'conflicts' => false,
 			'requires' => false,
