@@ -599,7 +599,7 @@ $wgConf->settings = array(
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/Echo/echo.sql",
-			"$IP/extensions/GlobalBlocking/localdb_patches/setup-global_block_whitelist.sql",
+			"$IP/extensions/GlobalBlocking/globalblocking.sql",
 			"$IP/extensions/Moderation/sql/patch-moderation.sql",
 			"$IP/extensions/Moderation/sql/patch-moderation_block.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
