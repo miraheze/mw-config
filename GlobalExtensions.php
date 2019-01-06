@@ -1,5 +1,6 @@
 <?php
 require_once( "$IP/extensions/Scribunto/Scribunto.php" );
+require_once( "$IP/extensions/MobileDetect/MobileDetect.php" );
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
@@ -21,7 +22,6 @@ wfLoadExtensions( [
 	'ManageWiki',
 	'MatomoAnalytics',
 	'MirahezeMagic',
-	'MobileDetect',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
