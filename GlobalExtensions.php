@@ -21,6 +21,7 @@ wfLoadExtensions( [
 	'ManageWiki',
 	'MatomoAnalytics',
 	'MirahezeMagic',
+	'MobileDetect',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
