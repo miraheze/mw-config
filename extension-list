@@ -95,6 +95,7 @@ $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MediaWikiChat/extension.json
 $IP/extensions/MirahezeMagic/extension.json
+$IP/extensions/MobileDetect/MobileDetect.php
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/Moderation/extension.json
 $IP/extensions/MsCalendar/extension.json
