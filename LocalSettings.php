@@ -1691,7 +1691,6 @@ $wgConf->settings = array(
 	),
 	'wgInterwikiCentralDB' => array(
 		'default' => 'metawiki',
-		'iwwiki' => null,
 	),
 	'wgExtraInterlanguageLinkPrefixes' => array(
 		'default' => array(),
@@ -2495,7 +2494,6 @@ $wgConf->settings = array(
 			'metawiki',
 			'staffwiki',
 			'loginwiki',
-			'iwwiki',
 			// Exemptions
 			'allthetropeswiki',
 			'ansaikuropediawiki',
