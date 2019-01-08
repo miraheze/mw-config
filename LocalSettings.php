@@ -2503,6 +2503,7 @@ $wgConf->settings = array(
 			'cmgwiki',
 			'crazybloxianempireinfowiki',
 			'dditecwiki',
+			'familiojwiki',
 			'geomasterywiki',
 			'ildrilwiki',
 			'incubatorwiki',
