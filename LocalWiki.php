@@ -343,7 +343,7 @@ if ( $wgDBname === 'cvtwiki' ) {
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
-		$wgRightsIcon = "//$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png";
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/arr.png';
 		$wgRightsText = 'All Rights Reserved';
 		$wgRightsUrl = false;
 		break;
