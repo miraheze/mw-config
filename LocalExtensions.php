@@ -110,7 +110,7 @@ if ( $wmgUseCiteThisPage ) {
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
 	
-	$wgCitoidServiceUrl = 'https://restbase-lb.miraheze.org/api/rest_v1';
+	$wgCitoidServiceUrl = 'https://restbase-lb.miraheze.org/api/rest_';
 }
 
 if ( $wmgUseCodeEditor ) {
