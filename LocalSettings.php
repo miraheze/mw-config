@@ -978,6 +978,9 @@ $wgConf->settings = array(
 	'wmgUseGamepress' => array(
 		'default' => false,
 	),
+	'wmgUseGenealogy' => array(
+		'default' => false,
+	),
 	'wmgUseGeoCrumbs' => array(
 		'default' => false,
 	),

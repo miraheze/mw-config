@@ -313,6 +313,10 @@ if ( $wmgUseGamepress ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
 }
 
+if ( $wmgUseGenealogy ) {
+	wfLoadExtension( 'Genealogy' );
+}
+
 if ( $wmgUseGeoCrumbs ) {
 	wfLoadExtension( 'GeoCrumbs' );
 }
