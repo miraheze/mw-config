@@ -240,6 +240,14 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 		),
+		'citoid' => array(
+			'name' => 'Citoid',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Citoid',
+			'var' => 'wmgUseCitoid',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'codeeditor' => array(
 			'name' => 'CodeEditor',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CodeEditor',

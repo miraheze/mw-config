@@ -856,6 +856,9 @@ $wgConf->settings = array(
 	'wmgUseCiteThisPage' => array(
 		'default' => false,
 	),
+	'wmgUseCitoid' => array(
+		'default' => false,
+	),
 	'wmgUseCodeEditor' => array(
 		'default' => false,
 	),
