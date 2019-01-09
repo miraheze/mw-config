@@ -107,6 +107,12 @@ if ( $wmgUseCiteThisPage ) {
 	wfLoadExtension( 'CiteThisPage' );
 }
 
+if ( $wmgUseCitoid ) {
+	wfLoadExtension( 'Citoid' );
+	
+	$wgCitoidServiceUrl = 'https://restbase-lb.miraheze.org/api/rest_v1';
+}
+
 if ( $wmgUseCodeEditor ) {
 	wfLoadExtension( 'CodeEditor' );
 }
