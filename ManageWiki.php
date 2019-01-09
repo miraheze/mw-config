@@ -630,6 +630,14 @@ $wgManageWikiExtensions = array(
 			'restricted' => false,
 			'section' => 'skins',
 		),
+		'genealogy' => array(
+			'name' => 'Genealogy',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Genealogy',
+			'var' => 'wmgUseGenealogy',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		),
 		'geocrumbs' => array(
 			'name' => 'GeoCrumbs',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:GeoCrumbs',
