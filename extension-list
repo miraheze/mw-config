@@ -58,6 +58,7 @@ $IP/extensions/FeaturedFeeds/extension.json
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/Flow/extension.json
 $IP/extensions/Gadgets/extension.json
+$IP/extensions/Genealogy/extension.json
 $IP/extensions/GeoCrumbs/extension.json
 $IP/extensions/GeoData/extension.json
 $IP/extensions/GettingStarted/extension.json
