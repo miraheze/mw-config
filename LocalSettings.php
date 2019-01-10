@@ -2031,6 +2031,9 @@ $wgConf->settings = array(
 				'usermerge' => true,
 				'userrights' => true,
 			),
+			'sysops' => array(
+				'interface-admin' => true,
+			),
 		),
 		'+autocountwiki' => array(
 			'authors' => array(
