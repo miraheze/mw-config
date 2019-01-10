@@ -678,6 +678,12 @@ $wgConf->settings = array(
 	'wgCookieWarningGeoIp2Path' => array(
 		'default' => '/srv/GeoLite2-City.mmdb',
 	),
+	
+	// Cookie stuff
+	'wgCookieSetOnIpBlock' => array(
+		'default' => true,
+	),
+
 	// RC feed [MWCandidate]
 	'wgStructuredChangeFiltersShowPreference' => array(
 		'default' => true,
