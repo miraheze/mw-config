@@ -3292,6 +3292,7 @@ $wgConf->settings = array(
 		'+tallerwiki' => array( NS_ANEXO ),
 		'+ucroniaswiki' => array( NS_ANEXO ),
 		'+nonsensopediawiki' => array( NS_CYTATY, NS_NONNEWS, NS_NONZRODLA, NS_SLOWNIK, NS_GRA, NS_PORADNIK ),
+		'+revitwiki' => array( NS_IDEAS ),
 		'+reviwiki' => array( NS_SERVER ),
 		'+reviwikiwiki' => array ( NS_HANDBOOK ),
 		'+safiriawiki' => array( NS_HOENN ),
@@ -3617,6 +3618,9 @@ $wgConf->settings = array(
 		),
 		'+monarchistswiki' => array(
 			NS_MUSINGS => true,
+		),
+		'+revitwiki' => array(
+			NS_IDEAS => true,
 		),
 		'+starmetalwiki' => array(
 			NS_USER => true,
