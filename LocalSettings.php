@@ -1918,7 +1918,7 @@ $wgConf->settings = array(
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'isvwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'jadtechwiki' => 'Copyright © Jak and Daxter Technical Wiki. All rights reserved.',
-		'revitwiki' => '©2013-2018 by Lionel J. Camara (All Rights Reserved)',
+		'revitwiki' => '©2013-2019 by Lionel J. Camara (All Rights Reserved)',
 		'reviwikiwiki' => 'Creative Commons Attribution Share Alike',
 	),
 	'wgRightsUrl' => array(
