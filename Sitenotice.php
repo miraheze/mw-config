@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
          if ( !$wmgSiteNoticeOptOut || $snImportant ) {
                 $siteNotice .= <<<EOF
                 <table class="wikitable" style="text-align:center;"><tbody><tr>
-                <td>At 15:36 UTC Miraheze will disable Uploads on its wikis to perform some maintenance on it’s fileservers. During this time you will not be able to upload files. This will take about 1-3 hours.</td>
+                <td>At 15:36 UTC Miraheze will disable Uploads on its wikis to perform some maintenance on it’s fileservers. During this time you will not be able to upload files. This will take about 1-3 hours. Images may also be temporarily inaccessible.</td>
                 </tr></tbody></table>
 EOF;
          }
