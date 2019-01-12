@@ -2068,7 +2068,7 @@ $wgManageWikiSettings = array(
 	),
 
 	// Media/File
-	'wgEnableUploads' => array(
+	/*'wgEnableUploads' => array(
 		'name' => 'Enable File Uploads',
 		'requires' => false,
 		'restricted' => false,
@@ -2076,7 +2076,7 @@ $wgManageWikiSettings = array(
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'Allow images and other files to be uploaded through the wiki.',
-	),
+	),*/
 	'wgAllowCopyUploads' => array(
 		'name' => 'Enable File Uploads Through URL',
 		'requires' => false,
