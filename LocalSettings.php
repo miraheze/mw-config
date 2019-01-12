@@ -1542,7 +1542,7 @@ $wgConf->settings = array(
 
 	// Files [MWCandidate]
 	'wgEnableUploads' => array(
-		'default' => true,
+		'default' => false,
 	),
 	// T3797
 	'wgMaxUploadSize' => array(
