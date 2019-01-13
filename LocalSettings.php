@@ -2502,6 +2502,7 @@ $wgConf->settings = array(
 			'loginwiki',
 			// Exemptions
 			'allthetropeswiki',
+			'altversewiki',
 			'ansaikuropediawiki',
 			'biblicalwikiwiki',
 			'bitcoindebateswiki',
