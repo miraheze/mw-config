@@ -1575,6 +1575,7 @@ $wgConf->settings = array(
 		'+exercicesdefrancaisprodfrwiki' => array('html', 'htm' ),
 		'+exitsincwiki' => array('txt' ),
 		'+fawiki' => array('ttf', 'eot', 'woff', 'apk'),
+		'+guiasdobrasilwiki' => array('zip', 'tar', 'tar.gz', 'rar', ),
 		'+hypernostalgiawiki' => array('mp4', 'webm', 'ogv', 'mp3'),
 		'+indrikwiki' => array('mp3', 'mus', 'mid' ),
 		'+jadtechwiki' => array('png', 'bmp', 'gif', 'ico', 'ogg', 'mp3', 'svg', 'pdf', 'flac', 'mp4', 'exe', 'zip', 'jpeg', 'jpg'),
