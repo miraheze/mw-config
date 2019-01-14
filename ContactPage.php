@@ -75,3 +75,17 @@ if ( $wgDBname == 'fablabesdswiki' ) {
 		'RLStyleModules' => array(),
 	);
 }
+
+if ( $wgDBName == 'qboxnextwiki' ) {
+	$wgContactConfig['default'] = array(
+		'RecipientUser' => 'A KLERK',
+		'SenderEmail' => $wgPasswordSender,
+		'SenderName' => 'Miraheze No Reply',
+		'RequireDetails' => true,
+		'IncludeIP' => false,
+		'AdditionalFields' => array(),
+		'DisplayFormat' => 'table',
+		'RLModules' => array(),
+		'RLStyleModules' => array(),
+	);
+}
