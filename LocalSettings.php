@@ -880,6 +880,7 @@ $wgConf->settings = array(
 		'christipediawiki' => true,
 		'cdcwiki' => true,
 		'fablabesdswiki' => true,
+		'qboxnextwiki' => true,
 		'test1wiki' => true,
 	),
 	'wmgUseContributionScores' => array(
