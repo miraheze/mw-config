@@ -2672,6 +2672,10 @@ $wgConf->settings = array(
 		'default' => 30,
 		'weatherwiki' => 7,
 	),
+	'wgEnableCanonicalServerLink' => array(
+		'default' => false,
+		'electowikiwiki' => true,
+	),
 
 	// MobileFrontend [MWCandidate]
 	'wmgMFAutodetectMobileView' => array(
