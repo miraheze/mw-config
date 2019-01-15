@@ -76,7 +76,7 @@ if ( $wgDBname == 'fablabesdswiki' ) {
 	);
 }
 
-if ( $wgDBName == 'qboxnextwiki' ) {
+if ( $wgDBname == 'qboxnextwiki' ) {
 	$wgContactConfig['default'] = array(
 		'RecipientUser' => 'A KLERK',
 		'SenderEmail' => $wgPasswordSender,
