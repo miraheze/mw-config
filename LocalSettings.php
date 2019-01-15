@@ -2709,6 +2709,7 @@ $wgConf->settings = array(
 	// MsUpload settings [MWCandidate]
 	'wgMSU_useDragDrop' => array(
 		'default' => true,
+		'weatherwiki' => false,
 	),
 
 	'wgMSU_showAutoCat' => array(
