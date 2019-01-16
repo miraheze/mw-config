@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * ManageWiki extension are added using the variable below.
+ *
+ * name: the displayed name of the setting on Special:ManageWikiExtensions.
+ * linkPage: full url for an information page for the extension.
+ * var: the relevant var that enables the extension.
+ * conflicts: string of extensions that cause this extension to not work.
+ * requires: a text entry of which extension is required for this setting to work.
+ * restricted: boolean - requires managewiki-restricted to change.
+ *
+ * Extensions can provide installation steps as well for extensions.
+ */
 $wgManageWikiExtensions = array(
 		'3d' => array(
 			'name' => '3D',
@@ -1956,6 +1968,8 @@ $wgManageWikiExtensions = array(
  * requires: a text entry of which extension is required for this setting to work.
  * overridedefault: a string/array override default when no existing value exist.
  * restricted: boolean - requires managewiki-restricted to change.
+ * help: string providing help information for the setting.
+ * section: string name of groupings for settings.
  */
 $wgManageWikiSettings = array(
 	// General
