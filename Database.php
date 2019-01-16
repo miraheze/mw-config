@@ -19,9 +19,12 @@ $wgLBFactoryConf = array(
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
 		'flags' => DBO_SSL,
+		'sslCertPath' => '/etc/ssl/certs/wildcard.miraheze.org.crt',
+		'sslKeyPath' => '/etc/ssl/private/wildcard.miraheze.org.key',
 	),
 	'hostsByName' => array(
-		'db4' => '81.4.109.166',
+		// 81.4.109.166
+		'db4' => 'mediawiki-internal-db-master.miraheze.org',
 	),
 	'externalLoads' => array(
 		'echo' => array(
