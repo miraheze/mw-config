@@ -131,16 +131,6 @@ $wgManageWikiExtensions = [
 							'aft-editor',
 						],
 					],
-					'oversight' => [
-						'permissions' => [
-							'aft-reader',
-							'aft-member',
-							'aft-editor',
-							'aft-monitor',
-							'aft-administrator',
-							'aft-oversighter',
-						],
-					],
 					'reviewer' => [
 						'permissions' => [
 							'aft-reader',
