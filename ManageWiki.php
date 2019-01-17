@@ -111,6 +111,13 @@ $wgManageWikiExtensions = [
 			'requires' => false,
 			'restricted' => false,
 			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'adminlinks',
+						],
+					],
+				],
 				'sql' => [
 					'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
 				],
@@ -128,9 +135,64 @@ $wgManageWikiExtensions = [
 					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
 				],
 				'permissions' => [
+					'*' => [
+						'permissions' => [
+							'aft-reader',
+						],
+					],
+					'autoconfirmed' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+						],
+					],
+					'confirmed' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+						],
+					],
+					'oversight' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+							'aft-administrator',
+							'aft-oversighter',
+						],
+					],
 					'reviewer' => [
 						'permissions' => [
-							'change-rating',
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+						],
+					],
+					'rollbacker' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+						],
+					],
+					'sysop' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+							'aft-administrator',
+						],
+					],
+					'user' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
 						],
 					],
 				],
