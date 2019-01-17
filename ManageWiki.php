@@ -111,6 +111,68 @@ $wgManageWikiExtensions = [
 			'requires' => false,
 			'restricted' => false,
 			'install' => [
+				'permissions' => [
+					'*' => [
+						'permissions' => [
+							'aft-reader',
+						],
+					],
+					'autoconfirmed' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+						],
+					],
+					'confirmed' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+						],
+					],
+					'oversight' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+							'aft-administrator',
+							'aft-oversighter',
+						],
+					],
+					'reviewer' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+						],
+					],
+					'rollbacker' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+						],
+					],
+					'sysop' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+							'aft-editor',
+							'aft-monitor',
+							'aft-administrator',
+						],
+					],
+					'user' => [
+						'permissions' => [
+							'aft-reader',
+							'aft-member',
+						],
+					],
+				],
 				'sql' => [
 					'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
 				],
@@ -124,15 +186,15 @@ $wgManageWikiExtensions = [
 			'requires' => false,
 			'restricted' => false,
 			'install' => [
+				'permissions' => [		
+ 					'reviewer' => [		
+ 						'permissions' => [		
+ 							'change-rating',		
+ 						],		
+ 					],		
+ 				],
 				'sql' => [
 					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
-				],
-				'permissions' => [
-					'reviewer' => [
-						'permissions' => [
-							'change-rating',
-						],
-					],
 				],
 			],
 		],
