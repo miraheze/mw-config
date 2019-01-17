@@ -4,8 +4,8 @@
 
 // Closed Wikis
 if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
-	$wgRevokePermissions = array(
-		'*' => array(
+	$wgRevokePermissions = [
+		'*' => [
 			'block' => true,
 			'createaccount' => true,
 			'delete' => true,
@@ -14,8 +14,8 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 			'import' => true,
 			'upload' => true,
 			'undelete' => true,
-		),
-	);
+		],
+	];
 
 	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
 	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -47,26 +47,26 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 // use local mathoid install
 $wgMathValidModes[] = 'mathml';
 $wgDefaultUserOptions['math'] = 'mathml';
-$wgMathoidCli = ['/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml'];
+$wgMathoidCli = [ '/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml' ];
 $wgMaxShellMemory = 2097152;
 
 // ircrcbot (!=private)
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgRCFeeds['irc'] = array(
+	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
 		'uri' => 'udp://185.52.1.76:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
-	);
+	];
 
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
 
- 	$wgDiscordFromName = $wgSitename;
+	$wgDiscordFromName = $wgSitename;
 	$wgDiscordShowNewUserEmail = false;
- 	$wgDiscordShowNewUserIP = false;
- 	$wgWikiUrl = $wgServer . '/w/';
-	$wgDiscordAdditionalIncomingWebhookUrls = 
+	$wgDiscordShowNewUserIP = false;
+	$wgWikiUrl = $wgServer . '/w/';
+	$wgDiscordAdditionalIncomingWebhookUrls =
 		$wmgWikiMirahezeDiscordHooks[$wgDBname] ?? $wmgWikiMirahezeDiscordHooks['default'];
 }
 
@@ -82,14 +82,14 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
 }
 if ( $wgDBname === 'centralwiki' ||
-     $wgDBname === 'destinoswiki' ||
-     $wgDBname === 'ucroniaswiki' ||
-     $wgDBname === 'infowiki' ||
-     $wgDBname === 'apunteswiki' ||
-     $wgDBname === 'privadowiki' ||
-     $wgDBname === 'mediatecawiki' ||
-     $wgDBname === 'tallerwiki' ||
-     $wgDBname === 'mediatecawiki'
+	 $wgDBname === 'destinoswiki' ||
+	 $wgDBname === 'ucroniaswiki' ||
+	 $wgDBname === 'infowiki' ||
+	 $wgDBname === 'apunteswiki' ||
+	 $wgDBname === 'privadowiki' ||
+	 $wgDBname === 'mediatecawiki' ||
+	 $wgDBname === 'tallerwiki' ||
+	 $wgDBname === 'mediatecawiki'
 ) {
 	// per Ucronistaw
 	$wgForeignFileRepos[] = [
@@ -108,13 +108,13 @@ if ( $wgDBname === 'centralwiki' ||
 
 if ( $wgDBname === 'ciptamediawiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
- 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 }
 
 if ( $wgDBname === 'hamzawiki' ) {
-	 $wgWhitelistRead[] = array(
-    		"Rukus"
-    );
+	 $wgWhitelistRead[] = [
+		"Rukus"
+	];
 }
 
 if ( $wgDBname === 'harrypotterwiki' ) {
@@ -162,7 +162,7 @@ if ( $wgDBname === 'ndgwiki' ) {
 		'scriptDirUrl' => 'https://nenawiki.org/w',
 	];
 }
-	
+
 if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
@@ -172,7 +172,7 @@ if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 }
 
 if ( $wgDBname === 'reviwikiwiki' ) {
-	$wgDefaultUserOptions['usenewrc'] =0;
+	$wgDefaultUserOptions['usenewrc'] = 0;
 }
 
 if ( $wgDBname === 'swisscomraidwiki' ) {
@@ -207,16 +207,15 @@ if ( $wgDBname === 'wikiageingwiki' ) {
 
 if ( $wgDBname === 'wmaucommwiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/wmaucommwiki";
- 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 }
-
 
 // Depends on $wgContentNamespaces
 if ( $wgDBname === 'abitaregeawiki' ) {
-	$wgExemptFromUserRobotsControl = array();
+	$wgExemptFromUserRobotsControl = [];
 }
 
-$wgWhitelistRead = array(
+$wgWhitelistRead = [
 	"MediaWiki:Common.css",
 	"Special:CentralAutoLogin",
 	"Special:CentralLogin",
@@ -230,12 +229,12 @@ $wgWhitelistRead = array(
 	"Special:Interwiki",
 	"Speciale:Interwiki",
 	"Especial:Interwiki",
-	//TODO: add more translations for Special:Interwiki
-);
+	// TODO: add more translations for Special:Interwiki
+];
 
 if ( $wmgUseMainPageWhitelist ) {
 	$wgWhitelistRead = array_merge( $wgWhitelistRead,
-		array(
+		[
 			"Main Page",
 			"Página principal",
 			"대문",
@@ -246,25 +245,25 @@ if ( $wmgUseMainPageWhitelist ) {
 			"Strona główna",
 			"עמוד ראשי",
 			"Glavna stranica",
-    			"lipu lawa",
-    			"Pagrindinis puslapis",
-    			"Ape",
-     			"باستى بەت",
-     			"ዋናው ገጽ",
-      			"بألگە أصلی",
-     			"বেটুপাত",
-     			"Галоўная старонка",
+				"lipu lawa",
+				"Pagrindinis puslapis",
+				"Ape",
+				"باستى بەت",
+				"ዋናው ገጽ",
+				"بألگە أصلی",
+				"বেটুপাত",
+				"Галоўная старонка",
 			"Gä nzönî",
-   			"Glavna strana",
-    			"Ñidol Wülngiñ",
+			"Glavna strana",
+				"Ñidol Wülngiñ",
 			"Page Principale",
-    			"मुख्य पानो",
-   			"Башбарак",
-    			"Тĕп страницă",
-    			"Баш бит",
-    			"Ihü Mbu",
-   			"Bwiema peij",
-	    		"Thâu-ia̍h",
+				"मुख्य पानो",
+			"Башбарак",
+				"Тĕп страницă",
+				"Баш бит",
+				"Ihü Mbu",
+			"Bwiema peij",
+				"Thâu-ia̍h",
 			"मुख्यपृष्ठम्",
 			"Nayriri Uñstawi",
 			"Нүр халх",
@@ -331,7 +330,7 @@ if ( $wmgUseMainPageWhitelist ) {
 			"特別:アカウント作成",
 			"Chyba povolení",
 			"Hlavní strana",
-		)
+		]
 	);
 }
 
@@ -368,10 +367,10 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
 	case 'cc-by-sa-3-0':
- 		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
- 		$wgRightsText = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)';
- 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/3.0';
- 		break;
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsText = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/3.0';
+		break;
 	case 'cc-by-sa-2-0-kr':
 		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
 		$wgRightsText = 'Creative Commons BY-SA 2.0 Korea';

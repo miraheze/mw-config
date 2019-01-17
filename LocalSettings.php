@@ -5,11 +5,11 @@ Authors of initial version: Southparkfan, John Lewis, Orain contributors
 */
 
 # Load PrivateSettings (e.g. wgDBpassword)
-require_once( "/srv/mediawiki/config/PrivateSettings.php" );
+require_once "/srv/mediawiki/config/PrivateSettings.php";
 
 # Load global skins and extensions
-require_once( "/srv/mediawiki/config/GlobalSkins.php" );
-require_once( "/srv/mediawiki/config/GlobalExtensions.php" );
+require_once "/srv/mediawiki/config/GlobalSkins.php";
+require_once "/srv/mediawiki/config/GlobalExtensions.php";
 
 # Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
@@ -20,8 +20,8 @@ $wmgUploadHostname = "static.miraheze.org";
 
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
-$wgConf->suffixes = array( 'wiki' );
-$wgLocalVirtualHosts = array( '81.4.109.166' );
+$wgConf->suffixes = [ 'wiki' ];
+$wgLocalVirtualHosts = [ '81.4.109.166' ];
 
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 
@@ -43,7 +43,7 @@ define( 'NS_LEAGUE_TALK', 1613 );
 define( 'NS_SMITE', 1614 );
 define( 'NS_SMITE_TALK', 1615 );
 define( 'NS_SERVER', 1616 );
-define( 'NS_SERVER_TALK', 1617);
+define( 'NS_SERVER_TALK', 1617 );
 define( 'NS_COMIC', 1618 );
 define( 'NS_COMIC_TALK', 1619 );
 define( 'NS_TROPEWORKSHOP', 1620 );
@@ -58,8 +58,8 @@ define( 'NS_CALL_OF_DUTY', 1628 );
 define( 'NS_CALL_OF_DUTY_TALK', 1629 );
 define( 'NS_REVIEWS', 1630 );
 define( 'NS_REVIEWS_TALK', 1631 );
-define( 'NS_TEST', 1632);
-define( 'NS_TEST_TALK', 1633);
+define( 'NS_TEST', 1632 );
+define( 'NS_TEST_TALK', 1633 );
 define( 'NS_MINECRAFT', 1636 );
 define( 'NS_MINECRAFT_TALK', 1637 );
 define( 'NS_SUPER_MARIO_LAND_2', 1638 );
@@ -82,251 +82,251 @@ define( 'NS_LCS', 1654 );
 define( 'NS_LCS_TALK', 1655 );
 define( 'NS_MEDI', 1656 );
 define( 'NS_MEDI_TALK', 1657 );
-define( 'NS_LIBRARY', 1658);
-define( 'NS_LIBRARY_TALK', 1659);
-define( 'NS_TEACHING', 1660);
-define( 'NS_TEACHING_TALK', 1661);
-define( 'NS_BLANK', 1662);
-define( 'NS_BLANK_TALK', 1663);
-define( 'NS_RESEARCH', 1664);
-define( 'NS_RESEARCH_TALK', 1665);
-define( 'NS_ADMIN', 1666);
-define( 'NS_ADMIN_TALK', 1667);
-define( 'NS_WORKSHOP', 1668);
-define( 'NS_WORKSHOP_TALK', 1669);
-define( 'NS_SELP', 1670);
-define( 'NS_SELP_TALK', 1671);
-define( 'NS_STUDY_NOTE', 1672);
-define( 'NS_STUDY_NOTE_TALK', 1673);
-define( 'NS_EXPLANATION', 1674);
-define( 'NS_EXPLANATION_TALK', 1675);
-define( 'NS_KOREAN_STUDY_NOTE', 1676);
-define( 'NS_KOREAN_STUDY_NOTE_TALK', 1677);
-define( 'NS_GLOSSARY', 1678);
-define( 'NS_GLOSSARY_TALK', 1679);
-define( 'NS_SPRITES', 1680);
-define( 'NS_SPRITES_TALK', 1681);
-define( 'NS_GALLERY', 1682);
-define( 'NS_GALLERY_TALK', 1683);
-define( 'NS_HALAMAN', 1684);
-define( 'NS_HALAMAN_TALK', 1685);
-define( 'NS_DICT', 1686);
-define( 'NS_DICT_TALK', 1687);
-define( 'NS_FEATURED', 1688);
-define( 'NS_FEATURED_TALK', 1689);
-define( 'NS_ARTIKEL', 1690);
-define( 'NS_ARTIKEL_TALK', 1691);
-define( 'NS_VIDEO', 1692);
-define( 'NS_VIDEO_TALK', 1693);
-define( 'NS_OPINION', 1694);
-define( 'NS_OPINION_TALK', 1695);
-define( 'NS_TIMELINE', 1696);
-define( 'NS_TIMELINE_TALK', 1697);
-define( 'NS_DRAFT', 1700);
-define( 'NS_DRAFT_TALK', 1701);
-define( 'NS_HISTORICAL_TIMELINE', 1702);
-define( 'NS_HISTORICAL_TIMELINE_TALK', 1703);
-define( 'NS_QUIZSET', 1704);
-define( 'NS_QUIZSET_TALK', 1705);
-define( 'NS_NOTEBOOK', 1706);
-define( 'NS_NOTEBOOK_TALK', 1707);
-define( 'NS_SOURCE', 1708);
-define( 'NS_SOURCE_TALK', 1709);
-define( 'NS_GAME', 1710);
-define( 'NS_GAME_TALK', 1711);
-define( 'NS_PICTUREBOARD', 1712);
-define( 'NS_PICTUREBOARD_TALK', 1713);
-define( 'NS_TINYFOREST', 1714);
-define( 'NS_TINYFOREST_TALK', 1715);
-define( 'NS_WNS2', 1716);
-define( 'NS_WNS2_TALK', 1717);
-define( 'NS_HOWTO', 1718);
-define( 'NS_HOWTO_TALK', 1719);
-define( 'NS_NEWSLINK', 1720);
-define( 'NS_NEWSLINK_TALK', 1721);
-define( 'NS_CIVILIZATION_IV', 1722);
-define( 'NS_CIVILIZATION_IV_TALK', 1723);
-define( 'NS_PSEUDO_NEWS', 1724);
-define( 'NS_PSEUDO_NEWS_TALK', 1725);
-define( 'NS_PSEUDO_BASE_DICTIONARY', 1726);
-define( 'NS_PSEUDO_BASE_DICTIONARY_TALK', 1727);
-define( 'NS_PSEUDO_BASE_LIBRARY', 1728);
-define( 'NS_PSEUDO_BASE_LIBRARY_TALK', 1729);
-define( 'NS_PSEUDO_BASE_MUSIC', 1730);
-define( 'NS_PSEUDO_BASE_MUSIC_TALK', 1731);
-define( 'NS_RGB', 1732);
-define( 'NS_RGB_TALK', 1733);
-define( 'NS_LINESTYLE', 1734);
-define( 'NS_LINESTYLE_TALK', 1735);
-define( 'NS_IDEA', 1736);
-define( 'NS_IDEA_TALK', 1737);
-define( 'NS_POLICY', 1738);
-define( 'NS_POLICY_TALK', 1739);
-define( 'NS_LEGACY', 1740);
-define( 'NS_LEGACY_TALK', 1741);
-define( 'NS_BOILERPLATE', 1742);
-define( 'NS_BOILERPLATE_TALK', 1743);
-define( 'NS_WPIMPORT', 1744);
-define( 'NS_WPIMPORT_TALK', 1745);
-define( 'NS_ARCHIVE', 1746);
-define( 'NS_ARCHIVE_TALK', 1747);
-define( 'NS_WPREDIRECT', 1748);
-define( 'NS_WPREDIRECT_TALK', 1749);
-define( 'NS_WALKTHROUGH', 1750);
-define( 'NS_WALKTHROUGH_TALK', 1751);
-define( 'NS_STAFF', 1752);
-define( 'NS_STAFF_TALK', 1753);
-define( 'NS_TEMA', 1754);
-define( 'NS_TEMA_TALK', 1755);
-define( 'NS_PAGE', 1756);
-define( 'NS_PAGE_TALK', 1757);
-define( 'NS_ANEXO', 1758);
-define( 'NS_ANEXO_TALK', 1759);
-define( 'NS_ESTUDIO', 1760);
-define( 'NS_ESTUDIO_TALK', 1761);
-define( 'NS_PRUEBA', 1762);
-define( 'NS_PRUEBA_TALK', 1763);
-define( 'NS_REGISTRO', 1764);
-define( 'NS_REGISTRO_TALK', 1765);
-define( 'NS_LISTA', 1766);
-define( 'NS_LISTA_TALK', 1767);
-define( 'NS_BUG', 1768);
-define( 'NS_BUG_TALK', 1769);
-define( 'NS_PROYECTO', 1770);
-define( 'NS_PROYECTO_TALK', 1771);
-define( 'NS_TALLER', 1772);
-define( 'NS_TALLER_TALK', 1773);
-define( 'NS_MODELO', 1774);
-define( 'NS_MODELO_TALK', 1775);
-define( 'NS_HANDBOOK', 1776);
-define( 'NS_HANDBOOK_TALK', 1777);
-define( 'NS_EXTENSION', 1778);
-define( 'NS_EXTENSION_TALK', 1779);
-define( 'NS_SKIN', 1780);
-define( 'NS_SKIN_TALK', 1781);
-define( 'NS_GAMEPAGE', 1782);
-define( 'NS_GAMEPAGE_TALK', 1783);
-define( 'NS_BOOK', 1784);
-define( 'NS_BOOK_TALK', 1785);
-define( 'NS_BOOK_NAVIGATION', 1786);
-define( 'NS_BOOK_NAVIGATION_TALK', 1787);
-define( 'NS_APPLICATION', 1788);
-define( 'NS_APPLICATION_TALK', 1789);
-define( 'NS_SUMMARY', 1790);
-define( 'NS_SUMMARY_TALK', 1791);
-define( 'NS_MANUAL', 1790);
-define( 'NS_MANUAL_TALK', 1791);
-define( 'NS_API', 1792);
-define( 'NS_API_TALK', 1793);
-define( 'NS_DATA', 1794);
-define( 'NS_DATA_TALK', 1795);
-define( 'NS_DICTIONARY', 1796);
-define( 'NS_DICTIONARY_TALK', 1797);
-define( 'NS_CALENDAR', 1798);
-define( 'NS_CALENDAR_TALK', 1799);
-define( 'NS_ENCYCLOPEDIA', 1800);
-define( 'NS_ENCYCLOPEDIA_TALK', 1801);
-define( 'NS_QURAN', 1802);
-define( 'NS_QURAN_TALK', 1803);
-define( 'NS_CYTATY', 1804);
-define( 'NS_CYTATY_TALK', 1805);
-define( 'NS_NONNEWS', 1806);
-define( 'NS_NONNEWS_TALK', 1807);
-define( 'NS_NONZRODLA', 1808);
-define( 'NS_NONZRODLA_TALK', 1809);
-define( 'NS_SLOWNIK', 1810);
-define( 'NS_SLOWNIK_TALK', 1811);
-define( 'NS_GRA', 1812);
-define( 'NS_GRA_TALK', 1813);
-define( 'NS_PORADNIK', 1814);
-define( 'NS_PORADNIK_TALK', 1815);
-define( 'NS_PORUM', 1816);
-define( 'NS_PORUM_TALK', 1817);
-define( 'NS_THREAD', 1818);
-define( 'NS_THREAD_TALK', 1819);
-define( 'NS_MESSAGE_WALL', 1820);
-define( 'NS_MESSAGE_WALL_TALK', 1821);
-define( 'NS_USER_BLOG', 1822);
-define( 'NS_USER_BLOG_TALK', 1823);
-define( 'NS_USER_BLOG_COMMENT', 1824);
-define( 'NS_USER_BLOG_COMMENT_TALK', 1825);
-define( 'NS_HUB', 1826);
-define( 'NS_HUB_TALK', 1827);
-define( 'NS_LIST', 1828);
-define( 'NS_LIST_TALK', 1829);
-define( 'NS_LAW', 1830);
-define( 'NS_LAW_AMENDING', 1831);
-define( 'NS_EXECUTIVE_ORDER', 1832);
-define( 'NS_EXECUTIVE_ORDER_TALK', 1833);
-define( 'NS_GROUP', 1834);
-define( 'NS_GROUP_TALK', 1835);
-define( 'NS_PARAMETER', 1836);
-define( 'NS_PARAMETER_TALK', 1837);
-define( 'NS_EXAMPLE', 1838);
-define( 'NS_EXAMPLE_TALK', 1839);
-define( 'NS_STOREFRONT', 1840);
-define( 'NS_STOREFRONT_TALK', 1841);
-define( 'NS_MUSINGS', 1842);
-define( 'NS_MUSINGS_TALK', 1843);
-define( 'NS_TECHDICT', 1844);
-define( 'NS_TECHDICT_TALK', 1845);
+define( 'NS_LIBRARY', 1658 );
+define( 'NS_LIBRARY_TALK', 1659 );
+define( 'NS_TEACHING', 1660 );
+define( 'NS_TEACHING_TALK', 1661 );
+define( 'NS_BLANK', 1662 );
+define( 'NS_BLANK_TALK', 1663 );
+define( 'NS_RESEARCH', 1664 );
+define( 'NS_RESEARCH_TALK', 1665 );
+define( 'NS_ADMIN', 1666 );
+define( 'NS_ADMIN_TALK', 1667 );
+define( 'NS_WORKSHOP', 1668 );
+define( 'NS_WORKSHOP_TALK', 1669 );
+define( 'NS_SELP', 1670 );
+define( 'NS_SELP_TALK', 1671 );
+define( 'NS_STUDY_NOTE', 1672 );
+define( 'NS_STUDY_NOTE_TALK', 1673 );
+define( 'NS_EXPLANATION', 1674 );
+define( 'NS_EXPLANATION_TALK', 1675 );
+define( 'NS_KOREAN_STUDY_NOTE', 1676 );
+define( 'NS_KOREAN_STUDY_NOTE_TALK', 1677 );
+define( 'NS_GLOSSARY', 1678 );
+define( 'NS_GLOSSARY_TALK', 1679 );
+define( 'NS_SPRITES', 1680 );
+define( 'NS_SPRITES_TALK', 1681 );
+define( 'NS_GALLERY', 1682 );
+define( 'NS_GALLERY_TALK', 1683 );
+define( 'NS_HALAMAN', 1684 );
+define( 'NS_HALAMAN_TALK', 1685 );
+define( 'NS_DICT', 1686 );
+define( 'NS_DICT_TALK', 1687 );
+define( 'NS_FEATURED', 1688 );
+define( 'NS_FEATURED_TALK', 1689 );
+define( 'NS_ARTIKEL', 1690 );
+define( 'NS_ARTIKEL_TALK', 1691 );
+define( 'NS_VIDEO', 1692 );
+define( 'NS_VIDEO_TALK', 1693 );
+define( 'NS_OPINION', 1694 );
+define( 'NS_OPINION_TALK', 1695 );
+define( 'NS_TIMELINE', 1696 );
+define( 'NS_TIMELINE_TALK', 1697 );
+define( 'NS_DRAFT', 1700 );
+define( 'NS_DRAFT_TALK', 1701 );
+define( 'NS_HISTORICAL_TIMELINE', 1702 );
+define( 'NS_HISTORICAL_TIMELINE_TALK', 1703 );
+define( 'NS_QUIZSET', 1704 );
+define( 'NS_QUIZSET_TALK', 1705 );
+define( 'NS_NOTEBOOK', 1706 );
+define( 'NS_NOTEBOOK_TALK', 1707 );
+define( 'NS_SOURCE', 1708 );
+define( 'NS_SOURCE_TALK', 1709 );
+define( 'NS_GAME', 1710 );
+define( 'NS_GAME_TALK', 1711 );
+define( 'NS_PICTUREBOARD', 1712 );
+define( 'NS_PICTUREBOARD_TALK', 1713 );
+define( 'NS_TINYFOREST', 1714 );
+define( 'NS_TINYFOREST_TALK', 1715 );
+define( 'NS_WNS2', 1716 );
+define( 'NS_WNS2_TALK', 1717 );
+define( 'NS_HOWTO', 1718 );
+define( 'NS_HOWTO_TALK', 1719 );
+define( 'NS_NEWSLINK', 1720 );
+define( 'NS_NEWSLINK_TALK', 1721 );
+define( 'NS_CIVILIZATION_IV', 1722 );
+define( 'NS_CIVILIZATION_IV_TALK', 1723 );
+define( 'NS_PSEUDO_NEWS', 1724 );
+define( 'NS_PSEUDO_NEWS_TALK', 1725 );
+define( 'NS_PSEUDO_BASE_DICTIONARY', 1726 );
+define( 'NS_PSEUDO_BASE_DICTIONARY_TALK', 1727 );
+define( 'NS_PSEUDO_BASE_LIBRARY', 1728 );
+define( 'NS_PSEUDO_BASE_LIBRARY_TALK', 1729 );
+define( 'NS_PSEUDO_BASE_MUSIC', 1730 );
+define( 'NS_PSEUDO_BASE_MUSIC_TALK', 1731 );
+define( 'NS_RGB', 1732 );
+define( 'NS_RGB_TALK', 1733 );
+define( 'NS_LINESTYLE', 1734 );
+define( 'NS_LINESTYLE_TALK', 1735 );
+define( 'NS_IDEA', 1736 );
+define( 'NS_IDEA_TALK', 1737 );
+define( 'NS_POLICY', 1738 );
+define( 'NS_POLICY_TALK', 1739 );
+define( 'NS_LEGACY', 1740 );
+define( 'NS_LEGACY_TALK', 1741 );
+define( 'NS_BOILERPLATE', 1742 );
+define( 'NS_BOILERPLATE_TALK', 1743 );
+define( 'NS_WPIMPORT', 1744 );
+define( 'NS_WPIMPORT_TALK', 1745 );
+define( 'NS_ARCHIVE', 1746 );
+define( 'NS_ARCHIVE_TALK', 1747 );
+define( 'NS_WPREDIRECT', 1748 );
+define( 'NS_WPREDIRECT_TALK', 1749 );
+define( 'NS_WALKTHROUGH', 1750 );
+define( 'NS_WALKTHROUGH_TALK', 1751 );
+define( 'NS_STAFF', 1752 );
+define( 'NS_STAFF_TALK', 1753 );
+define( 'NS_TEMA', 1754 );
+define( 'NS_TEMA_TALK', 1755 );
+define( 'NS_PAGE', 1756 );
+define( 'NS_PAGE_TALK', 1757 );
+define( 'NS_ANEXO', 1758 );
+define( 'NS_ANEXO_TALK', 1759 );
+define( 'NS_ESTUDIO', 1760 );
+define( 'NS_ESTUDIO_TALK', 1761 );
+define( 'NS_PRUEBA', 1762 );
+define( 'NS_PRUEBA_TALK', 1763 );
+define( 'NS_REGISTRO', 1764 );
+define( 'NS_REGISTRO_TALK', 1765 );
+define( 'NS_LISTA', 1766 );
+define( 'NS_LISTA_TALK', 1767 );
+define( 'NS_BUG', 1768 );
+define( 'NS_BUG_TALK', 1769 );
+define( 'NS_PROYECTO', 1770 );
+define( 'NS_PROYECTO_TALK', 1771 );
+define( 'NS_TALLER', 1772 );
+define( 'NS_TALLER_TALK', 1773 );
+define( 'NS_MODELO', 1774 );
+define( 'NS_MODELO_TALK', 1775 );
+define( 'NS_HANDBOOK', 1776 );
+define( 'NS_HANDBOOK_TALK', 1777 );
+define( 'NS_EXTENSION', 1778 );
+define( 'NS_EXTENSION_TALK', 1779 );
+define( 'NS_SKIN', 1780 );
+define( 'NS_SKIN_TALK', 1781 );
+define( 'NS_GAMEPAGE', 1782 );
+define( 'NS_GAMEPAGE_TALK', 1783 );
+define( 'NS_BOOK', 1784 );
+define( 'NS_BOOK_TALK', 1785 );
+define( 'NS_BOOK_NAVIGATION', 1786 );
+define( 'NS_BOOK_NAVIGATION_TALK', 1787 );
+define( 'NS_APPLICATION', 1788 );
+define( 'NS_APPLICATION_TALK', 1789 );
+define( 'NS_SUMMARY', 1790 );
+define( 'NS_SUMMARY_TALK', 1791 );
+define( 'NS_MANUAL', 1790 );
+define( 'NS_MANUAL_TALK', 1791 );
+define( 'NS_API', 1792 );
+define( 'NS_API_TALK', 1793 );
+define( 'NS_DATA', 1794 );
+define( 'NS_DATA_TALK', 1795 );
+define( 'NS_DICTIONARY', 1796 );
+define( 'NS_DICTIONARY_TALK', 1797 );
+define( 'NS_CALENDAR', 1798 );
+define( 'NS_CALENDAR_TALK', 1799 );
+define( 'NS_ENCYCLOPEDIA', 1800 );
+define( 'NS_ENCYCLOPEDIA_TALK', 1801 );
+define( 'NS_QURAN', 1802 );
+define( 'NS_QURAN_TALK', 1803 );
+define( 'NS_CYTATY', 1804 );
+define( 'NS_CYTATY_TALK', 1805 );
+define( 'NS_NONNEWS', 1806 );
+define( 'NS_NONNEWS_TALK', 1807 );
+define( 'NS_NONZRODLA', 1808 );
+define( 'NS_NONZRODLA_TALK', 1809 );
+define( 'NS_SLOWNIK', 1810 );
+define( 'NS_SLOWNIK_TALK', 1811 );
+define( 'NS_GRA', 1812 );
+define( 'NS_GRA_TALK', 1813 );
+define( 'NS_PORADNIK', 1814 );
+define( 'NS_PORADNIK_TALK', 1815 );
+define( 'NS_PORUM', 1816 );
+define( 'NS_PORUM_TALK', 1817 );
+define( 'NS_THREAD', 1818 );
+define( 'NS_THREAD_TALK', 1819 );
+define( 'NS_MESSAGE_WALL', 1820 );
+define( 'NS_MESSAGE_WALL_TALK', 1821 );
+define( 'NS_USER_BLOG', 1822 );
+define( 'NS_USER_BLOG_TALK', 1823 );
+define( 'NS_USER_BLOG_COMMENT', 1824 );
+define( 'NS_USER_BLOG_COMMENT_TALK', 1825 );
+define( 'NS_HUB', 1826 );
+define( 'NS_HUB_TALK', 1827 );
+define( 'NS_LIST', 1828 );
+define( 'NS_LIST_TALK', 1829 );
+define( 'NS_LAW', 1830 );
+define( 'NS_LAW_AMENDING', 1831 );
+define( 'NS_EXECUTIVE_ORDER', 1832 );
+define( 'NS_EXECUTIVE_ORDER_TALK', 1833 );
+define( 'NS_GROUP', 1834 );
+define( 'NS_GROUP_TALK', 1835 );
+define( 'NS_PARAMETER', 1836 );
+define( 'NS_PARAMETER_TALK', 1837 );
+define( 'NS_EXAMPLE', 1838 );
+define( 'NS_EXAMPLE_TALK', 1839 );
+define( 'NS_STOREFRONT', 1840 );
+define( 'NS_STOREFRONT_TALK', 1841 );
+define( 'NS_MUSINGS', 1842 );
+define( 'NS_MUSINGS_TALK', 1843 );
+define( 'NS_TECHDICT', 1844 );
+define( 'NS_TECHDICT_TALK', 1845 );
 
-define( 'NS_PORTALE', 2000); // Skipping values to 2000 per T3553
-define( 'NS_DISCUSSIONI_PORTALE', 2001);
-define( 'NS_PROGETTO', 2002);
-define( 'NS_DISCUSSIONI_PROGETTO', 2003);
-define( 'NS_CIMITERO', 2004);
-define( 'NS_DISCUSSIONI_CIMITERO', 2005);
-define( 'NS_NONNOTIZIE', 2006);
-define( 'NS_DISCUSSIONI_NONNOTIZIE', 2007);
-define( 'NS_NONVOYAGE', 2008);
-define( 'NS_DISCUSSIONI_NONVOYAGE', 2009);
-define( 'NS_NONQUOTE', 2010);
-define( 'NS_DISCUSSIONI_NONQUOTE', 2011);
-define( 'NS_NONDIZIONARiO', 2012);
-define( 'NS_DISCUSSIONI_NONDIZIONARIO', 2013);
-define( 'NS_NONIVERSITA', 2014);
-define( 'NS_DISCUSSIONI_NONIVERSITA', 2015);
-define( 'NS_NONSOURCE', 2016);
-define( 'NS_DISCUSSIONI_NONSOURCE', 2017);
-define( 'NS_NONBOOKS', 2018);
-define( 'NS_DISCUSSIONI_NONBOOKS', 2019);
-define( 'NS_FANWORK', 2020);
-define( 'NS_FANWORK_TALK', 2021);
-define( 'NS_SOP_ATS_MKW', 2024);
-define( 'NS_SOP_ATS_MKW_TALK', 2025);
-define( 'NS_MOS_MKW', 2026);
-define( 'NS_MOS_MKW_TALK', 2027);
-define( 'NS_LOA', 2028);
-define( 'NS_LOA_TALK', 2029);
-define( 'NS_LOCA_MKW', 2030);
-define( 'NS_LOCA_MKW_TALK', 2031);
-define( 'NS_TUT', 2032);
-define( 'NS_TUT_TALK', 2033);
-define( 'NS_ASPECT', 2034);
-define( 'NS_ASPECT_TALK', 2035);
+define( 'NS_PORTALE', 2000 ); // Skipping values to 2000 per T3553
+define( 'NS_DISCUSSIONI_PORTALE', 2001 );
+define( 'NS_PROGETTO', 2002 );
+define( 'NS_DISCUSSIONI_PROGETTO', 2003 );
+define( 'NS_CIMITERO', 2004 );
+define( 'NS_DISCUSSIONI_CIMITERO', 2005 );
+define( 'NS_NONNOTIZIE', 2006 );
+define( 'NS_DISCUSSIONI_NONNOTIZIE', 2007 );
+define( 'NS_NONVOYAGE', 2008 );
+define( 'NS_DISCUSSIONI_NONVOYAGE', 2009 );
+define( 'NS_NONQUOTE', 2010 );
+define( 'NS_DISCUSSIONI_NONQUOTE', 2011 );
+define( 'NS_NONDIZIONARIO', 2012 );
+define( 'NS_DISCUSSIONI_NONDIZIONARIO', 2013 );
+define( 'NS_NONIVERSITA', 2014 );
+define( 'NS_DISCUSSIONI_NONIVERSITA', 2015 );
+define( 'NS_NONSOURCE', 2016 );
+define( 'NS_DISCUSSIONI_NONSOURCE', 2017 );
+define( 'NS_NONBOOKS', 2018 );
+define( 'NS_DISCUSSIONI_NONBOOKS', 2019 );
+define( 'NS_FANWORK', 2020 );
+define( 'NS_FANWORK_TALK', 2021 );
+define( 'NS_SOP_ATS_MKW', 2024 );
+define( 'NS_SOP_ATS_MKW_TALK', 2025 );
+define( 'NS_MOS_MKW', 2026 );
+define( 'NS_MOS_MKW_TALK', 2027 );
+define( 'NS_LOA', 2028 );
+define( 'NS_LOA_TALK', 2029 );
+define( 'NS_LOCA_MKW', 2030 );
+define( 'NS_LOCA_MKW_TALK', 2031 );
+define( 'NS_TUT', 2032 );
+define( 'NS_TUT_TALK', 2033 );
+define( 'NS_ASPECT', 2034 );
+define( 'NS_ASPECT_TALK', 2035 );
 
 // Refer to NS_MODULE before importing Scribunto (tmewiki)
 define( 'WMG_NS_MODULE', 828 );
 define( 'WMG_NS_MODULE_TALK', 829 );
 
 // Special namespace re-defined
-define( 'NS_PROOFREAD_PAGE', 250);
-define( 'NS_PROOFREAD_PAGE_TALK', 251);
-define( 'NS_PROOFREAD_INDEX', 252);
-define( 'NS_PROOFREAD_INDEX_TALK', 253);
+define( 'NS_PROOFREAD_PAGE', 250 );
+define( 'NS_PROOFREAD_PAGE_TALK', 251 );
+define( 'NS_PROOFREAD_INDEX', 252 );
+define( 'NS_PROOFREAD_INDEX_TALK', 253 );
 
 // NS 860, 861, 862, 863 allocated for Item/Item_talk/Property/Property_talk by Wikibase
 
-$wgConf->settings = array(
+$wgConf->settings = [
 	// invalidates user sessions [MWExempt]
-	'wgAuthenticationTokenVersion' => array(
+	'wgAuthenticationTokenVersion' => [
 		'default' => '3',
-	),
+	],
 
 	// AbuseFilter [MWCandidate]
-	'wgAbuseFilterActions' => array(
-		'default' => array(
+	'wgAbuseFilterActions' => [
+		'default' => [
 			'block' => true,
 			'blockautopromote' => true,
 			'degroup' => true,
@@ -335,257 +335,257 @@ $wgConf->settings = array(
 			'tag' => true,
 			'throttle' => true,
 			'warn' => true,
-		),
-	),
-	'wgAbuseFilterCentralDB' => array(
+		],
+	],
+	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
-	),
-	'wgAbuseFilterIsCentral' => array(
+	],
+	'wgAbuseFilterIsCentral' => [
 		'default' => false,
 		'metawiki' => true,
-	),
-	'wgAbuseFilterBlockDuration' => array(
+	],
+	'wgAbuseFilterBlockDuration' => [
 		'default' => 'indefinte',
 		'weatherwiki' => '1 week',
-	),
-	'wgAbuseFilterAnonBlockDuration' => array(
+	],
+	'wgAbuseFilterAnonBlockDuration' => [
 		'default' => 2592000,
 		'weatherwiki' => '72 hours',
-	),
-	'wgAbuseFilterRestrictions' => array(
- 		'default' => array(
- 			'blockautopromote' => true,
- 			'block' => true,
- 			'degroup' => true,
- 			'rangeblock' => true,
- 		),
- 		'weatherwiki' => array(
- 			'blockautopromote' => false,
+	],
+	'wgAbuseFilterRestrictions' => [
+		'default' => [
+			'blockautopromote' => true,
+			'block' => true,
+			'degroup' => true,
+			'rangeblock' => true,
+		],
+		'weatherwiki' => [
+			'blockautopromote' => false,
 			'block' => false,
- 			'degroup' => false,
- 			'rangeblock' => true,
-		),
-	),
+			'degroup' => false,
+			'rangeblock' => true,
+		],
+	],
 	// Anti-spam [MWCandidate]
-	'wgAccountCreationThrottle' => array(
+	'wgAccountCreationThrottle' => [
 		'default' => 5,
 		'proxybotwiki' => 7,
 		'weatherwiki' => 6,
-	),
-	'wgAutoConfirmAge' => array(
+	],
+	'wgAutoConfirmAge' => [
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
-		'marioserieswikiwiki' => 2592000, // 30 days * 24 hours * 60 minutes * 60 seconds 
+		'marioserieswikiwiki' => 2592000, // 30 days * 24 hours * 60 minutes * 60 seconds
 		'proxybotwiki' => 604800, // 7 days * 24 hours * 60 minutes * 60 seconds
-	),
-	'wgAutoConfirmCount' => array(
+	],
+	'wgAutoConfirmCount' => [
 		'default' => 10,
-		'marioserieswikiwiki' => 500, 
-	),
+		'marioserieswikiwiki' => 500,
+ 	],
 
 	// BetaFeatures [MWCandidate]
-	'wgMediaViewerIsInBeta' => array(
+	'wgMediaViewerIsInBeta' => [
 		'default' => false,
-	),
-	'wgPopupsBetaFeature' => array(
+	],
+	'wgPopupsBetaFeature' => [
 		'default' => false,
-	),
-	'wgVisualEditorEnableWikitext' => array(
+	],
+	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
-	),
-	'wgPivotFeatures' => array(
-		'thegreatwarwiki' => array(
+	],
+	'wgPivotFeatures' => [
+		'thegreatwarwiki' => [
 			'usePivotTabs' => true,
 			'fixedNavBar' => true,
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
 			'showFooterIcons' => true
-		),
-	),
-	'wgEnableRcFiltersBetaFeature' => array(
+		],
+	],
+	'wgEnableRcFiltersBetaFeature' => [
 		'default' => false,
 		'test1wiki' => true,
-	),
+	],
 	// Block [MWCandidate]
-	'wgAutoblockExpiry' => array(
+	'wgAutoblockExpiry' => [
 		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
 		'brynda1231wiki' => 230400, // 64 hours * 60 minutes * 60 seconds
-		'marioserieswiki' => 111600, //31 hours - T1709
-	),
-	'wgBlockAllowsUTEdit' => array(
+		'marioserieswiki' => 111600, // 31 hours - T1709
+	],
+	'wgBlockAllowsUTEdit' => [
 		'default' => true,
-	),
+	],
 
 	// Bot passwords [MWExempt]
-	'wgBotPasswordsDatabase' => array(
+	'wgBotPasswordsDatabase' => [
 		'default' => 'mhglobal',
-	),
+	],
 
 	// Cache [MWExempt]
-	'wgCacheDirectory' => array(
+	'wgCacheDirectory' => [
 		'default' => '/srv/mediawiki/w/cache',
-	),
-	'wgLocalisationCacheConf' => array(
-		'default' => array(
+	],
+	'wgLocalisationCacheConf' => [
+		'default' => [
 			'class' => 'LocalisationCache',
 			'store' => 'files',
 			'storeDirectory' => "$IP/cache/l10n",
 			'manualRecache' => true,
-		),
-	),
-	'wgPreprocessorCacheThreshold' => array(
+		],
+	],
+	'wgPreprocessorCacheThreshold' => [
 		'default' => false,
-	),
-	'wgResourceLoaderMaxage' => array(
-		'default' => array(
-			'versioned' => array(
+	],
+	'wgResourceLoaderMaxage' => [
+		'default' => [
+			'versioned' => [
 				'server' => 12 * 60 * 60, // 12 hours
 				'client' => 1 * 24 * 60 * 60, // 1 day
-			),
-			'unversioned' => array(
+			],
+			'unversioned' => [
 				'server' => 5 * 60, // 5 minutes
 				'client' => 30 * 60, // 30 minutes
-			),
-		),
-	),
-	'wgRevisionCacheExpiry' => array(
+			],
+		],
+	],
+	'wgRevisionCacheExpiry' => [
 		'default' => 0,
-	),
+	],
 
 	// CentralNotice [MWExempt]
-	'wgNoticeInfrastructure' => array(
+	'wgNoticeInfrastructure' => [
 		'default' => false,
 		'metawiki' => true,
-	),
-	'wgCentralSelectedBannerDispatcher' => array(
+	],
+	'wgCentralSelectedBannerDispatcher' => [
 		'default' => "//meta.miraheze.org/w/index.php/Special:BannerLoader",
-	),
-	'wgCentralBannerRecorder' => array(
+	],
+	'wgCentralBannerRecorder' => [
 		'default' => "//meta.miraheze.org/w/index.php/Special:RecordImpression",
-	),
-	'wgCentralDBname' => array(
+	],
+	'wgCentralDBname' => [
 		'default' => 'metawiki',
-	),
-	'wgCentralHost' => array(
+	],
+	'wgCentralHost' => [
 		'default' => "//meta.miraheze.org",
-	),
-	'wgNoticeProject' => array(
+	],
+	'wgNoticeProject' => [
 		'default' => 'all',
-	),
-	'wgNoticeProjects' => array(
-		'default' => array (
+	],
+	'wgNoticeProjects' => [
+		'default' => [
 			'all',
 			'optout',
-		),
-	),
-	'wgNoticeUseTranslateExtension' => array(
+		],
+	],
+	'wgNoticeUseTranslateExtension' => [
 		'default' => true,
-	),
+	],
 
 	// Captcha [MWExempt]
-	'wgCaptchaClass' => array(
+	'wgCaptchaClass' => [
 		'default' => 'ReCaptchaNoCaptcha',
-	),
-	'wgReCaptchaSendRemoteIP' => array(
+	],
+	'wgReCaptchaSendRemoteIP' => [
 		'default' => false,
-	),
-	
+	],
+
 	// Category
-	'wgUseCategoryBrowser' => array(
+	'wgUseCategoryBrowser' => [
 		'default' => false,
 		'modesofdiscoursewiki' => true,
-	),
+	],
 
 	// CentralAuth [MWExempt]
-	'wgCentralAuthAutoCreateWikis' => array(
-		'default' => array( 'loginwiki', 'metawiki' ),
-	),
-	'wgCentralAuthAutoNew' => array(
+	'wgCentralAuthAutoCreateWikis' => [
+		'default' => [ 'loginwiki', 'metawiki' ],
+	],
+	'wgCentralAuthAutoNew' => [
 		'default' => true,
-	),
-	'wgCentralAuthAutoMigrate' => array(
+	],
+	'wgCentralAuthAutoMigrate' => [
 		'default' => true,
-	),
-	'wgCentralAuthAutoMigrateNonGlobalAccounts' => array(
+	],
+	'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
 		'default' => true,
-	),
-	'wgCentralAuthCookies' => array(
+	],
+	'wgCentralAuthCookies' => [
 		'default' => true,
-	),
-	'wgCentralAuthCookieDomain' => array(
+	],
+	'wgCentralAuthCookieDomain' => [
 		'default' => '.miraheze.org',
-	),
-	'wgCentralAuthCreateOnView' => array(
+	],
+	'wgCentralAuthCreateOnView' => [
 		'default' => true,
 		'nenawikiwiki' => false,
-	),
-	'wgCentralAuthDatabase' => array(
+	],
+	'wgCentralAuthDatabase' => [
 		'default' => 'mhglobal',
-	),
-	'wgCentralAuthEnableGlobalRenameRequest' => array(
+	],
+	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => false,
 		'metawiki' => true,
-	),
-	'wgCentralAuthEnableUserMerge' => array(
+	],
+	'wgCentralAuthEnableUserMerge' => [
 		'default' => false,
 		'metawiki' => true,
-	),
-	'wgCentralAuthLoginWiki' => array(
+	],
+	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
-	),
-	'wgCentralAuthPreventUnattached' => array(
+	],
+	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
-	),
-	'wgCentralAuthSilentLogin' => array(
+	],
+	'wgCentralAuthSilentLogin' => [
 		'default' => true,
-	),
+	],
 
 	// CheckUser [MWExempt]
-	'wgCheckUserForceSummary' => array(
+	'wgCheckUserForceSummary' => [
 		'default' => true,
-	),
+	],
 
 	// Comments extension [MWCandidate]
-	'wgCommentsDefaultAvatar' => array(
+	'wgCommentsDefaultAvatar' => [
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
-	),
+	],
 
-	'wgCommentsInRecentChanges' => array(
+	'wgCommentsInRecentChanges' => [
 		'default' => false,
 		'newusopediawiki' => true,
-	),
+	],
 
-	'wgCommentsSortDescending' => array(
+	'wgCommentsSortDescending' => [
 		'default' => false,
 		'newusopediawiki' => true,
-	),
+	],
 
 	 // Contribution Scores [MWCandidate]
-	 'wgContribScoreDisableCache' => array(
- 		 'default' => true,
- 	 ),
+	 'wgContribScoreDisableCache' => [
+		 'default' => true,
+	 ],
 
 	// CreateWiki [MWExempt]
-	'wgCreateWikiCustomDomainPage' => array(
+	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
-	),
-	'wgCreateWikiDatabase' => array(
+	],
+	'wgCreateWikiDatabase' => [
 		'default' => 'mhglobal',
-	),
-	'wgCreateWikiGlobalWiki' => array(
+	],
+	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
-	),
-	'wgCreateWikiDBDirectory' => array(
+	],
+	'wgCreateWikiDBDirectory' => [
 		'default' => '/srv/mediawiki/dblist',
-	),
-	'wgCreateWikiEmailNotifications' => array(
+	],
+	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
-	),
-	'wgCreateWikiNotificationEmail' => array(
+	],
+	'wgCreateWikiNotificationEmail' => [
 		'default' => 'staff@miraheze.org',
-	),
-	'wgCreateWikiSQLfiles' => array(
-		'default' => array(
+	],
+	'wgCreateWikiSQLfiles' => [
+		'default' => [
 			"$IP/maintenance/tables.sql",
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
@@ -608,10 +608,10 @@ $wgConf->settings = array(
 			"$IP/extensions/Translate/sql/translate_stash.sql",
 			"$IP/extensions/Translate/sql/translate_tm.sql",
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
-		),
-	),
-	'wgCreateWikiCategories' => array(
-		'default' => array(
+		],
+	],
+	'wgCreateWikiCategories' => [
+		'default' => [
 			'Community' => 'community',
 			'Education' => 'education',
 			'Electronics' => 'eletronics',
@@ -630,56 +630,56 @@ $wgConf->settings = array(
 			'Software/Computing' => 'software',
 			'Sports' => 'sport',
 			'Uncategorised' => 'uncategorised',
-		),
-	),
-	'wgCreateWikiUseCategories' => array(
+		],
+	],
+	'wgCreateWikiUseCategories' => [
 		'default' => true,
-	),
-	'wgCreateWikiSubdomain' => array(
+	],
+	'wgCreateWikiSubdomain' => [
 		'default' => 'miraheze.org',
-	),
-	'wgCreateWikiUseClosedWikis' => array(
+	],
+	'wgCreateWikiUseClosedWikis' => [
 		'default' => true,
-	),
-	'wgCreateWikiUseCustomDomains' => array(
+	],
+	'wgCreateWikiUseCustomDomains' => [
 		'default' => true,
-	),
-	'wgCreateWikiUseInactiveWikis' => array(
+	],
+	'wgCreateWikiUseInactiveWikis' => [
 		'default' => true,
-	),
-	'wgCreateWikiUsePrivateWikis' => array(
+	],
+	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
-	),
+	],
 
 	// Cookies extension settings [MWCandidate]
-	'wgCookieWarningMoreUrl' => array(
+	'wgCookieWarningMoreUrl' => [
 		'default' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
 		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk/wiki/The_Lonsdale_Battalion:Cookies'
-	),
-	'wgCookieSetOnAutoblock' => array(
+	],
+	'wgCookieSetOnAutoblock' => [
 		'default' => true,
 		'weatherwiki' => false,
-	),
-	'wgCookieWarningEnabled' => array(
+	],
+	'wgCookieWarningEnabled' => [
 		'default' => true,
-	),
-	'wgCookieWarningGeoIPLookup' => array(
+	],
+	'wgCookieWarningGeoIPLookup' => [
 		'default' => 'php',
-	),
-	'wgCookieWarningGeoIp2' => array(
+	],
+	'wgCookieWarningGeoIp2' => [
 		'default' => true,
-	),
-	'wgCookieWarningGeoIp2Path' => array(
+	],
+	'wgCookieWarningGeoIp2Path' => [
 		'default' => '/srv/GeoLite2-City.mmdb',
-	),
-	
+	],
+
 	// Cookie stuff
-	'wgCookieSetOnIpBlock' => array(
+	'wgCookieSetOnIpBlock' => [
 		'default' => true,
-	),
+	],
 
 	// RC feed [MWCandidate]
-	'wgStructuredChangeFiltersShowPreference' => array(
+	'wgStructuredChangeFiltersShowPreference' => [
 		'default' => true,
 		'reviwiki' => false,
 		'reviwikiwiki' => false,
@@ -691,189 +691,189 @@ $wgConf->settings = array(
 		'privadowiki' => false,
 		'tallerwiki' => false,
 		'ucroniaswiki' => false,
-	),
-	'wgStructuredChangeFiltersShowWatchlistPreference' => array(
+	],
+	'wgStructuredChangeFiltersShowWatchlistPreference' => [
 		'default' => true,
-	),
-	'wgStructuredChangeFiltersOnWatchlist' => array(
+	],
+	'wgStructuredChangeFiltersOnWatchlist' => [
 		'default' => true,
-	),
+	],
 	// Database [MWExempt]
-	'wgAllowSchemaUpdates' => array(
+	'wgAllowSchemaUpdates' => [
 		'default' => false,
-	),
-	'wgCompressRevisions' => array(
+	],
+	'wgCompressRevisions' => [
 		'default' => false,
 		'allthetropeswiki' => true,
 		'buswiki' => true,
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
 		'openhatchwiki' => true,
-	),
-	'wgDBadminuser' => array(
+	],
+	'wgDBadminuser' => [
 		'default' => 'wikiadmin',
-	),
-	'wgDBuser' => array(
+	],
+	'wgDBuser' => [
 		'default' => 'mediawiki',
-	),
+	],
 
-	'wgReadOnly' => array(
+	'wgReadOnly' => [
 		'default' => false,
-	),
-	'wgSharedDB' => array(
+	],
+	'wgSharedDB' => [
 		'default' => 'metawiki',
-	),
-	'wgSharedTables' => array(
-		'default' => array(),
-	),
-	'wgActorTableSchemaMigrationStage' => array(
+	],
+	'wgSharedTables' => [
+		'default' => [],
+	],
+	'wgActorTableSchemaMigrationStage' => [
 		'default' => SCHEMA_COMPAT_NEW,
 		'test1wiki' => SCHEMA_COMPAT_NEW,
-	),
+	],
 
-	'wgCommentTableSchemaMigrationStage' => array(
+	'wgCommentTableSchemaMigrationStage' => [
 		'default' => MIGRATION_NEW,
-	),
+	],
 
 	// Uncategorised? [MWCandidate]
-	'wgMaxImageArea' => array(
+	'wgMaxImageArea' => [
 		'default' => '1.25e7',
 		'altversewiki' => '2.5e7',
 		'nonbinarywiki' => '2.5e7',
-	),
+	],
 
 	// Delete [MWExempt]
-	'wgDeleteRevisionsLimit' => array(
+	'wgDeleteRevisionsLimit' => [
 		'default' => '250', // databases don't have much memory - let's not overload them in future
-	),
+	],
 
 	// DJVU [MWExempt]
-	'wgDjvuDump' => array(
+	'wgDjvuDump' => [
 		'default' => '/usr/bin/djvudump',
-	),
-	'wgDjvuRenderer' => array(
+	],
+	'wgDjvuRenderer' => [
 		'default' => '/usr/bin/ddjvu',
-	),
-	'wgDjvuTxt' => array(
+	],
+	'wgDjvuTxt' => [
 		'default' => '/usr/bin/djvutxt',
-	),
+	],
 
 	// ParserFunctions [MW]
-	'wgPFEnableStringFunctions' => array(
+	'wgPFEnableStringFunctions' => [
 		'default' => false,
-	),
-	'wgAllowSlowParserFunctions' => array(
+	],
+	'wgAllowSlowParserFunctions' => [
 		'default' => false,
-	),
+	],
 
 	// Echo [MWCandidate]
-	'wgEchoCrossWikiNotifications' => array(
+	'wgEchoCrossWikiNotifications' => [
 		'default' => true,
 		'weatherwiki' => false,
-	),
-	'wgEchoUseJobQueue' => array(
+	],
+	'wgEchoUseJobQueue' => [
 		'default' => true,
-	),
-	'wgEchoSharedTrackingCluster' => array(
+	],
+	'wgEchoSharedTrackingCluster' => [
 		'default' => 'echo',
-	),
-	'wgEchoSharedTrackingDB' => array(
+	],
+	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki',
-	),
-	'wgEchoUseCrossWikiBetaFeature' => array(
+	],
+	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
 		'weatherwiki' => false,
-	),
+	],
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces) [MWCandidate]
- 	'wgExemptFromUserRobotsControl' => array(
- 		'default' => $wgContentNamespaces,
- 		'thelonsdalebattalionwiki' => array(),
- 	),
+	'wgExemptFromUserRobotsControl' => [
+		'default' => $wgContentNamespaces,
+		'thelonsdalebattalionwiki' => [],
+	],
 
 	// Extensions and Skins [MWCandidate]
-	'wmgUse3D' => array(
+	'wmgUse3D' => [
 		'default' => false,
-	),
-	'wmgUseAddThis' => array(
+	],
+	'wmgUseAddThis' => [
 		'default' => false,
-	),
-	'wmgUseAddHTMLMetaAndTitle' => array(
+	],
+	'wmgUseAddHTMLMetaAndTitle' => [
 		'default' => false,
-	),
-	'wmgUseAdminLinks' => array(
+	],
+	'wmgUseAdminLinks' => [
 		'default' => false,
-	),
-	'wmgUseAJAXPoll' => array(
+	],
+	'wmgUseAJAXPoll' => [
 		'default' => false,
-	),
-	'wmgUseApex' => array(
+	],
+	'wmgUseApex' => [
 		'default' => false,
-	),
-	'wmgUseApprovedRevs' => array(
+	],
+	'wmgUseApprovedRevs' => [
 		'default' => false,
-	),
-	'wmgUseArticleFeedbackv5' => array(
+	],
+	'wmgUseArticleFeedbackv5' => [
 		'default' => false,
-	),
-	'wmgUseArticleRatings' => array(
+	],
+	'wmgUseArticleRatings' => [
 		'default' => false,
-	),
-	'wmgUseArticleToCategory2' => array(
+	],
+	'wmgUseArticleToCategory2' => [
 		'default' => false,
-	),
-	'wmgUseAuthorProtect' => array(
+	],
+	'wmgUseAuthorProtect' => [
 		'default' => false,
-	),
-	'wmgUseAutoCreateCategoryPages' => array(
+	],
+	'wmgUseAutoCreateCategoryPages' => [
 		'default' => false, // DO NOT enable on wikis that have more than 500 categories. See T1230
-	),
-	'wmgUseBlogPage' => array(
+	],
+	'wmgUseBlogPage' => [
 		'default' => false,
-	),
-	'wmgUseBabel' => array(
+	],
+	'wmgUseBabel' => [
 		'default' => false,
-	),
-	'wmgUseMSCalendar' => array(
+	],
+	'wmgUseMSCalendar' => [
 		'default' => false,
-	),
-	'wmgUseCapiunto' => array(
+	],
+	'wmgUseCapiunto' => [
 		'default' => false,
-	),
-	'wmgUseCargo' => array(
+	],
+	'wmgUseCargo' => [
 		'default' => false,
-	),
-	'wmgUseCategoryTree' => array(
+	],
+	'wmgUseCategoryTree' => [
 		'default' => true,
 		'whentheycrywiki' => false,
-	),
-	'wmgUseCharInsert' => array(
+	],
+	'wmgUseCharInsert' => [
 		'default' => false,
-	),
-	'wmgUseCite' => array(
+	],
+	'wmgUseCite' => [
 		'default' => false,
-	),
-	'wmgUseCiteThisPage' => array(
+	],
+	'wmgUseCiteThisPage' => [
 		'default' => false,
-	),
-	'wmgUseCitoid' => array(
+	],
+	'wmgUseCitoid' => [
 		'default' => false,
-	),
-	'wmgUseCodeEditor' => array(
+	],
+	'wmgUseCodeEditor' => [
 		'default' => false,
-	),
-	'wmgUseCodeMirror' => array(
+	],
+	'wmgUseCodeMirror' => [
 		'default' => false,
-	),
-	'wmgUseCollapsibleVector' => array(
+	],
+	'wmgUseCollapsibleVector' => [
 		'default' => false,
-	),
-	'wmgUseCollection' => array(
+	],
+	'wmgUseCollection' => [
 		'default'  => false,
-	),
-	'wmgUseComments' => array(
+	],
+	'wmgUseComments' => [
 		'default' => false, // Sysop has 'commentadmin' by default
-	),
-	'wmgUseContactPage' => array(
+	],
+	'wmgUseContactPage' => [
 		'default' => false, // Add wiki config to ContactPage.php
 		'apellidosmurcianoswiki' => true,
 		'ayrshirewiki' => true,
@@ -882,205 +882,205 @@ $wgConf->settings = array(
 		'fablabesdswiki' => true,
 		'qboxnextwiki' => true,
 		'test1wiki' => true,
-	),
-	'wmgUseContributionScores' => array(
+	],
+	'wmgUseContributionScores' => [
 		'default' => false,
-	),
-	'wmgUseCreatePage' => array(
+	],
+	'wmgUseCreatePage' => [
 		'default' => false,
-	),
-	'wmgUseCreateRedirect' => array(
+	],
+	'wmgUseCreateRedirect' => [
 		'default' => false,
-	),
-	'wmgUseCrossReference' => array(
+	],
+	'wmgUseCrossReference' => [
 		'default' => false,
-	),
-	'wmgUseCSS' => array(
+	],
+	'wmgUseCSS' => [
 		'default' => false,
-	),
-	'wmgUseCustomHeader' => array(
+	],
+	'wmgUseCustomHeader' => [
 		'default' => false,
 		'hlptestwiki' => true,
 		'test1wiki' => true,
-	),
-	'wmgUseDarkVector' => array(
+	],
+	'wmgUseDarkVector' => [
 		'default' => false,
-	),
-	'wmgUseDescription2' => array(
+	],
+	'wmgUseDescription2' => [
 		'default' => false,
-	),
-	'wmgUseDisambiguator' => array(
+	],
+	'wmgUseDisambiguator' => [
 		'default' => false,
-	),
-	'wmgUseDismissableSiteNotice' => array(
+	],
+	'wmgUseDismissableSiteNotice' => [
 		'default' => true,
-	),
-	'wmgUseDuskToDawn' => array(
+	],
+	'wmgUseDuskToDawn' => [
 		'default' => false,
-	),
-	'wmgUseDonateBoxInSidebar' => array( # Disabled for now --Rececption123
+	],
+	'wmgUseDonateBoxInSidebar' => [ # Disabled for now --Rececption123
 		'default' => false,
 		'metawiki' => true,
 		'test1wiki' => true,
-	),
-	'wmgUseDPLForum' => array(
+	],
+	'wmgUseDPLForum' => [
 		'default' => false,
-	),
-	'wmgUseDummyFandoomMainpageTags' => array(
+	],
+	'wmgUseDummyFandoomMainpageTags' => [
 		'default' => false,
-	),
-	'wmgUseDuplicator' => array(
+	],
+	'wmgUseDuplicator' => [
 		'default' => false,
-	),
-	'wmgUseDynamicPageList' => array( // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
+	],
+	'wmgUseDynamicPageList' => [ // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
 		'default' => false,
-	),
-	'wmgUseDynamicPageList3' => array( // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
+	],
+	'wmgUseDynamicPageList3' => [ // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
 		'default' => false,
-	),
-	'wmgUseEditcount' => array(
+	],
+	'wmgUseEditcount' => [
 		'default' => false,
-	),
-	'wmgUseEditSubpages' => array(
+	],
+	'wmgUseEditSubpages' => [
 		'default' => false,
 		'test1wiki' => true,
-	),
-	'wmgUseEducationProgram' => array(
+	],
+	'wmgUseEducationProgram' => [
 		'default' => false,
-	),
-	'wmgUseElectronPdfService' => array(
+	],
+	'wmgUseElectronPdfService' => [
 		'default' => false,
-	),
-	'wmgUseErudite' => array(
+	],
+	'wmgUseErudite' => [
 		'default' => false,
-	),
-	'wmgUseEventLogging' => array(
+	],
+	'wmgUseEventLogging' => [
 		'default' => false,
-	),
-	'wmgUseFancyBoxThumbs' => array(
+	],
+	'wmgUseFancyBoxThumbs' => [
 		'default' => false,
-	),
-	'wmgUseFeaturedFeeds' => array(
+	],
+	'wmgUseFeaturedFeeds' => [
 		'default' => false, // Not enabled anywhere?
-	),
-	'wmgUseFlaggedRevs' => array(
+	],
+	'wmgUseFlaggedRevs' => [
 		'default' => false,
-	),
-	'wmgUseFlow' => array(
+	],
+	'wmgUseFlow' => [
 		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
-	),
-	'wmgUseForeground' => array(
+	],
+	'wmgUseForeground' => [
 		'default' => false,
-	),
-	'wmgUseGadgets' => array(
+	],
+	'wmgUseGadgets' => [
 		'default' => false,
-	),
-	'wmgUseGamepress' => array(
+	],
+	'wmgUseGamepress' => [
 		'default' => false,
-	),
-	'wmgUseGenealogy' => array(
+	],
+	'wmgUseGenealogy' => [
 		'default' => false,
-	),
-	'wmgUseGeoCrumbs' => array(
+	],
+	'wmgUseGeoCrumbs' => [
 		'default' => false,
-	),
-	'wmgUseGeoData' => array(
+	],
+	'wmgUseGeoData' => [
 		'default' => false,
-	),
-	'wmgUseGettingStarted' => array(
+	],
+	'wmgUseGettingStarted' => [
 		'default' => false,
-	),
-	'wmgUseGlobalUserPage' => array(
+	],
+	'wmgUseGlobalUserPage' => [
 		'default' => true,
 		'reviwikiwiki' => false, // T3671
-	),
-	'wmgUseGraph' => array(
+	],
+	'wmgUseGraph' => [
 		'default' => false,
-	),
-	'wmgUseGroupsSidebar' => array(
+	],
+	'wmgUseGroupsSidebar' => [
 		'default' => false,
-	),
-	'wmgUseGuidedTour' => array(
+	],
+	'wmgUseGuidedTour' => [
 		'default' => false,
-	),
-	'wmgUseHAWelcome' => array(
+	],
+	'wmgUseHAWelcome' => [
 		'default' => false,
-	),
-	'wmgUseHeaderTabs' => array(
+	],
+	'wmgUseHeaderTabs' => [
 		'default' => false,
-	),
-	'wmgUseHideSection' => array(
+	],
+	'wmgUseHideSection' => [
 		'default' => false,
-	),
-	'wmgUseHighlightLinksInCategory' => array(
+	],
+	'wmgUseHighlightLinksInCategory' => [
 		'default' => false,
-	),
-	'wmgUseImageMap' => array(
+	],
+	'wmgUseImageMap' => [
 		'default' => false,
-	),
-	'wmgUseImageRating' => array(
+	],
+	'wmgUseImageRating' => [
 		'default' => false,
-	),
-	'wmgUseInputBox' => array(
+	],
+	'wmgUseInputBox' => [
 		'default' => false,
-	),
-	'wmgUseJavascriptSlideshow' => array(
+	],
+	'wmgUseJavascriptSlideshow' => [
 		'default' => false,
-	),
-	'wmgUseJosa' => array(
+	],
+	'wmgUseJosa' => [
 		'default' => false,
-	),
-	'wmgUseJSBreadCrumbs' => array(
+	],
+	'wmgUseJSBreadCrumbs' => [
 		'default' => false,
-	),
-	'wmgUseKartographer' => array(
-                'default' => false,
-	),
-	'wmgUseLabeledSectionTransclusion' => array(
+	],
+	'wmgUseKartographer' => [
 		'default' => false,
-	),
-	'wmgUseLiberty' => array(
+	],
+	'wmgUseLabeledSectionTransclusion' => [
 		'default' => false,
-	),
-	'wmgUseLinkSuggest' => array(
+	],
+	'wmgUseLiberty' => [
+		'default' => false,
+	],
+	'wmgUseLinkSuggest' => [
 		'default' => false,
 		'test1wiki' => true,
 		'avalicearchiveswiki' => true,
-	),
-	'wmgUseLinkTarget' => array(
+	],
+	'wmgUseLinkTarget' => [
 		'default' => false,
-	),
-	'wmgUseLinkTitles' => array(
+	],
+	'wmgUseLinkTitles' => [
 		'default' => false,
-	),
-	'wmgUseListings' => array(
+	],
+	'wmgUseListings' => [
 		'default' => false,
-	),
-	'wmgUseLoopsCombo' => array(
+	],
+	'wmgUseLoopsCombo' => [
 		'default' => false,
-	),
-	'wmgUseMagicNoCache' => array(
+	],
+	'wmgUseMagicNoCache' => [
 		'default' => false,
-	),
-	'wmgUseMaps' => array(
+	],
+	'wmgUseMaps' => [
 		'default' => false,
-	),
-	'wmgUseMassEditRegex' => array(
+	],
+	'wmgUseMassEditRegex' => [
 		'default' => false, // sysop is given permission 'masseditregex' by default
-	),
-	'wmgUseMassMessage' => array(
+	],
+	'wmgUseMassMessage' => [
 		'default' => false,
-	),
-	'wmgUseMath' => array(
+	],
+	'wmgUseMath' => [
 		'default' => false,
-	),
-	'wmgUseMediaWikiChat' => array(
+	],
+	'wmgUseMediaWikiChat' => [
 		'default' => false,
-	),
-	'wmgUseMetrolook' => array(
+	],
+	'wmgUseMetrolook' => [
 		'default' => false,
-	),
-	'wmgUseMobileFrontend' => array(
+	],
+	'wmgUseMobileFrontend' => [
 		'default' => true,
 		'carmeigatwiki' => false,
 		'cmgwiki' => false,
@@ -1093,244 +1093,244 @@ $wgConf->settings = array(
 		'permanentfuturelabwiki' => false,
 		'reviwiki' => false,
 		'reviwikiwiki' => false,
-	),
-	'wmgUseModeration' => array(
+	],
+	'wmgUseModeration' => [
 		'default' => false,
 		'nenawikiwiki' => true,
 		'sdiywiki' => false,
 		'socioatlaswiki' => true,
 		'studentspoweringchangewiki' => true,
 		'test1wiki' => true,
-	),
-	'wmgUseModernSkylight' => array(
+	],
+	'wmgUseModernSkylight' => [
 		'default' => false,
-	),
-	'wmgUseMsPackage' => array(
+	],
+	'wmgUseMsPackage' => [
 		'default' => false, // do not set this to false without disabling MsUpload on all wikis below
 		'test1wiki' => true,
-	),
-	'wmgUseMsUpload' => array(
+	],
+	'wmgUseMsUpload' => [
 		'default' => false,
-	),
-	'wmgUseMultimediaViewer' => array(
+	],
+	'wmgUseMultimediaViewer' => [
 		'default' => false,
-	),
-	'wmgUseMultiBoilerplate' => array(
+	],
+	'wmgUseMultiBoilerplate' => [
 		'default' => false,
-	),
-	'wmgUseNewestPages' => array(
+	],
+	'wmgUseNewestPages' => [
 		'default' => false,
-	),
-	'wmgUseNews' => array(
+	],
+	'wmgUseNews' => [
 		'default' => false,
-	),
-	'wmgUseNewSignupPage' => array(
+	],
+	'wmgUseNewSignupPage' => [
 		'default' => false,
-	),
-	'wmgUseNewsletter' => array(
+	],
+	'wmgUseNewsletter' => [
 		'default' => false,
-	),
-	'wmgUseNewUserMessage' => array(
+	],
+	'wmgUseNewUserMessage' => [
 		'default' => false,
-	),
-	'wmgUseNewUserNotif' => array(
+	],
+	'wmgUseNewUserNotif' => [
 		'default' => false,
-	),
-	'wmgUseNostalgia' => array(
+	],
+	'wmgUseNostalgia' => [
 		'default' => false,
-	),
-	'wmgUseNoTitle' => array(
+	],
+	'wmgUseNoTitle' => [
 		'default' => false,
-	),
-	'wmgUseNukeDPL' => array(
+	],
+	'wmgUseNukeDPL' => [
 		'default' => false,
-	),
-	'wmgUseOpenGraphMeta' => array(
+	],
+	'wmgUseOpenGraphMeta' => [
 		'default' => false,
-	),
-	'wmgUsePagedTiffHandler' => array(
+	],
+	'wmgUsePagedTiffHandler' => [
 		'default' => false,
-	),
-	'wmgUsePageForms' => array(
+	],
+	'wmgUsePageForms' => [
 		'default' => false,
-	),
-	'wmgUsePageNotice' => array(
+	],
+	'wmgUsePageNotice' => [
 		'default' => false,
-	),
-	'wmgUsePageTriage' => array(
+	],
+	'wmgUsePageTriage' => [
 		'default' => false,
-	),
-	'wmgUsePdfBook' => array(
+	],
+	'wmgUsePdfBook' => [
 		'default' => false,
-	),
-	'wmgUsePDFEmbed' => array(
+	],
+	'wmgUsePDFEmbed' => [
 		'default' => false,
-	),
-	'wmgUsePdfHandler' => array(
+	],
+	'wmgUsePdfHandler' => [
 		'default' => false,
-	),
-	'wmgUsePipeEscape' => array(
+	],
+	'wmgUsePipeEscape' => [
 		'default' => false,
-	),
-	'wmgUsePivot' => array(
+	],
+	'wmgUsePivot' => [
 		'default' => false,
-	),
-	'wmgUsePoem' => array(
+	],
+	'wmgUsePoem' => [
 		'default' => false,
-	),
-	'wmgUsePopups' => array(
+	],
+	'wmgUsePopups' => [
 		'default' => false,
-	),
-	'wmgUsePoll' => array(
+	],
+	'wmgUsePoll' => [
 		'default' => false,
-	),
-	'wmgUsePollNY' => array(
+	],
+	'wmgUsePollNY' => [
 		'default' => false,
-	),
-	'wmgUsePortableInfobox' => array(
+	],
+	'wmgUsePortableInfobox' => [
 		'default' => false,
-	),
-	'wmgUseProofreadPage' => array(
+	],
+	'wmgUseProofreadPage' => [
 		'default' => false,
-	),
-	'wmgUseProtectSite' => array(
+	],
+	'wmgUseProtectSite' => [
 		'default' => false,
-	),
-	'wmgUsePurge' => array(
+	],
+	'wmgUsePurge' => [
 		'default' => false,
-	),
-	'wmgUseQuiz' => array(
+	],
+	'wmgUseQuiz' => [
 		'default' => false,
-	),
-	'wmgUseQuizGame' => array(
+	],
+	'wmgUseQuizGame' => [
 		'default' => false,
-	),
-	'wmgUseRandomGameUnit' => array(
+	],
+	'wmgUseRandomGameUnit' => [
 		'default' => false,
-	),
-	'wmgUseRandomImage' => array(
+	],
+	'wmgUseRandomImage' => [
 		'default' => false,
-	),
-	'wmgUseRandomSelection' => array(
+	],
+	'wmgUseRandomSelection' => [
 		'default' => false,
-	),
-	'wmgUseRefreshed' => array(
+	],
+	'wmgUseRefreshed' => [
 		'default' => false,
-	),
-	'wmgUseRelatedArticles' => array(
+	],
+	'wmgUseRelatedArticles' => [
 		'default' => false,
-	),
-	'wmgUseReplaceText' => array(
+	],
+	'wmgUseReplaceText' => [
 		'default' => false,
-	),
-	'wmgUseRevisionSlider' => array(
+	],
+	'wmgUseRevisionSlider' => [
 		'default' => false,
-	),
-	'wmgUseRSS' => array(
+	],
+	'wmgUseRSS' => [
 		'default' => false,
-	),
-	'wmgUseSandboxLink' => array(
+	],
+	'wmgUseSandboxLink' => [
 		'default' => false,
-	),
-	'wmgUseScore' => array(
+	],
+	'wmgUseScore' => [
 		'default' => false,
-	),
-	'wmgUseScratchBlocks' => array(
+	],
+	'wmgUseScratchBlocks' => [
 		'default' => false,
-	),
-	'wmgUseShortURL' => array(
+	],
+	'wmgUseShortURL' => [
 		'default' => true,
 		'macfan4000wiki' => false,
-	),
-	'wmgUseSimpleChanges' => array(
+	],
+	'wmgUseSimpleChanges' => [
 		'default' => false,
-	),
-	'wmgUseSimpleTooltip' => array(
+	],
+	'wmgUseSimpleTooltip' => [
 		'default' => false,
-	),
-	'wmgUseSiteScout' => array(
+	],
+	'wmgUseSiteScout' => [
 		'default' => false,
-	),
+	],
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
 	// Should be this, but change $nameofwiki at the end:
 	// sudo -u www-data cp -R /srv/mediawiki/w/extensions/SocialProfile/avatars /srv/mediawiki/w/extensions/SocialProfile/awards /mnt/mediawiki-static/$nameofwiki/
-	'wmgUseSocialProfile' => array(
+	'wmgUseSocialProfile' => [
 		'default' => false,
-	),
-	'wmgUseSpoilers' => array(
+	],
+	'wmgUseSpoilers' => [
 		'default' => false,
-	),
-	'wmgUseSubpageFun' => array(
+	],
+	'wmgUseSubpageFun' => [
 		'default' => false,
-	),
-	'wmgUseSubPageList3' => array(
+	],
+	'wmgUseSubPageList3' => [
 		'default' => false,
-	),
-	'wgScribuntoUseGeSHi' => array(
+	],
+	'wgScribuntoUseGeSHi' => [
 		'default' => true,
-	),
+	],
 	// Combo of Tabs + Tabber
-	'wmgUseTabsCombination' => array(
+	'wmgUseTabsCombination' => [
 		'default' => false,
-	),
-	'wmgUseTemplateSandbox' => array(
+	],
+	'wmgUseTemplateSandbox' => [
 		'default' => false,
-	),
-	'wmgUseTemplateStyles' => array(
+	],
+	'wmgUseTemplateStyles' => [
 		'default' => false,
-	),
-	'wmgUseTemplateWizard' => array(
+	],
+	'wmgUseTemplateWizard' => [
 		'default' => false,
-	),
-	'wmgUseTheme' => array(
+	],
+	'wmgUseTheme' => [
 		'default' => false,
-	),
-	'wmgUseTimedMediaHandler' => array(
+	],
+	'wmgUseTimedMediaHandler' => [
 		'default' => false,
-	),
-	'wmgUseTimeline' => array(
+	],
+	'wmgUseTimeline' => [
 		'default' => false,
-	),
-	'wmgUseThanks' => array(
+	],
+	'wmgUseThanks' => [
 		'default' => false,
-	),
-	'wmgUseTitleKey' => array(
+	],
+	'wmgUseTitleKey' => [
 		'default' => false,
-	),
-	'wmgUseTocTree' => array(
+	],
+	'wmgUseTocTree' => [
 		'default' => false,
-	),
-	'wmgUseTranslate' => array(
+	],
+	'wmgUseTranslate' => [
 		'default' => false,
-	),
-	'wmgUseTweeki' => array(
+	],
+	'wmgUseTweeki' => [
 		'default' => false,
-	),
-	'wmgUseTwoColConflict' => array(
+	],
+	'wmgUseTwoColConflict' => [
 		'default' => false,
-	),
-	'wmgUseUniversalLanguageSelector' => array(
+	],
+	'wmgUseUniversalLanguageSelector' => [
 		'default' => false,
-	),
-	'wmgUseUploadsLink' => array(
+	],
+	'wmgUseUploadsLink' => [
 		'default' => false,
-	),
-	'wmgUseUrlGetParameters' => array(
+	],
+	'wmgUseUrlGetParameters' => [
 		'default' => false,
-	),
-	'wmgUseUserWelcome' => array(
+	],
+	'wmgUseUserWelcome' => [
 		'default' => false,
-	),
-	'wmgUseVoteNY' => array(
+	],
+	'wmgUseVoteNY' => [
 		'default' => false,
-	),
-	'wmgUseVisualEditor' => array(
+	],
+	'wmgUseVisualEditor' => [
 		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
-	),
-	'wmgUseVariables' => array(
+	],
+	'wmgUseVariables' => [
 		'default' => false,
-	),
-	'wmgUseWebChat' => array(
+	],
+	'wmgUseWebChat' => [
 		'default' => false,
 		'allthetropeswiki' => true,
 		'ildrilwiki' => true,
@@ -1339,51 +1339,51 @@ $wgConf->settings = array(
 		'pnphilotenwiki' => true,
 		'test1wiki' => true,
 		'wisdomwikiwiki' => true,
-	),
-	'wmgUseWhoIsWatching' => array(
+	],
+	'wmgUseWhoIsWatching' => [
 		'default' => false,
 		'test1wiki' => true,
-	),
-	'wmgUseWidgets' => array(
+	],
+	'wmgUseWidgets' => [
 		'default' => false,
-	),
-	'wmgUseWikibaseRepository' => array(
+	],
+	'wmgUseWikibaseRepository' => [
 		'default' => false,
-	),
-	'wmgAllowEntityImport' => array(
+	],
+	'wmgAllowEntityImport' => [
 		'default' => false,
-	),
-	'wmgEnableEntitySearchUI' => array(
+	],
+	'wmgEnableEntitySearchUI' => [
 		'default' => true,
-	),
-	'wmgUseWikidataPageBanner' => array(
+	],
+	'wmgUseWikidataPageBanner' => [
 		'default' => false,
-	),
-	'wmgUseWikiForum' => array(
+	],
+	'wmgUseWikiForum' => [
 		'default' => false,
-	),
-	'wmgUsewikihiero' => array(
+	],
+	'wmgUsewikihiero' => [
 		'default' => false,
 		'test1wiki' => true,
-	),
-	'wmgUseWikimediaIncubator' => array(
+	],
+	'wmgUseWikimediaIncubator' => [
 		'default' => false,
-	),
-	'wmgUseWikiLove' => array(
+	],
+	'wmgUseWikiLove' => [
 		'default' => false,
-	),
-	'wmgUseWikiSeo' => array(
+	],
+	'wmgUseWikiSeo' => [
 		'default' => false,
-	),
-	'wmgUseWikiTextLoggedInOut' => array(
+	],
+	'wmgUseWikiTextLoggedInOut' => [
 		'default' => false,
-	),
-	'wmgUseYouTube' => array(
+	],
+	'wmgUseYouTube' => [
 		'default' => false,
-	),
+	],
 
 	// External link target [MWCandidate]
-	'wgExternalLinkTarget' => array(
+	'wgExternalLinkTarget' => [
 		'default' => false,
 		'cpiwiki' => '_blank',
 		'doinwiki' => '_blank',
@@ -1396,11 +1396,10 @@ $wgConf->settings = array(
 		'templatewiki' => '_blank',
 		'wisdomwikiwiki' => '_blank',
 		'yacresourceswiki' => '_blank',
-	),
-
+	],
 
 	// Allow External Images [MWCandidate]
-	'wgAllowExternalImages' => array(
+	'wgAllowExternalImages' => [
 		'default' => false,
 		'amicitiawiki' => true,
 		'magezwiki' => true,
@@ -1410,105 +1409,105 @@ $wgConf->settings = array(
 		'tensegritywiki' => true,
 		'travailcollaboratifwiki' => true,
 		'sitraduwiki' => true,
-	),
-	'wgAllowExternalImagesFrom' => array(
+	],
+	'wgAllowExternalImagesFrom' => [
 		'default' => false,
-		'astrobiologywiki' => array(
+		'astrobiologywiki' => [
 			'https://www.science20.com',
 			'https://quora.com',
 			'https://robertinventor.com',
-		),
-		'doomsdaydebunkedwiki' => array(
+		],
+		'doomsdaydebunkedwiki' => [
 			'https://www.science20.com',
 			'https://quora.com',
 			'https://robertinventor.com',
-		),
-	),
+		],
+	],
 
 	// Allow HTML <img> tag [MWCandidate]
-	'wgAllowImageTag' => array(
+	'wgAllowImageTag' => [
 		'default' => false,
 		'horizonwiki' => true,
 		'magezwiki' => true,
 		'mikrodevwiki' => true,
 		'travailcollaboratifwiki' => true,
-	),
+	],
 
 	// FlaggedRevs [MWCandidate]
-	'wmgFlaggedRevsNamespaces' => array(
-		'default' => array(
+	'wmgFlaggedRevsNamespaces' => [
+		'default' => [
 			NS_MAIN,
 			NS_FILE,
 			NS_TEMPLATE,
 			NS_HELP,
 			NS_PROJECT,
-		),
-		'isvwiki' => array(
+		],
+		'isvwiki' => [
 			NS_MAIN,
 			NS_FILE,
 			NS_TEMPLATE,
 			NS_CATEGORY,
 			WMG_NS_MODULE,
 			NS_LIBRARY,
-		),
-		'trexwiki' => array(
+		],
+		'trexwiki' => [
 			NS_ARTIKEL,
 			NS_FILE,
 			NS_TEMPLATE,
-		),
-	),
-	'wmgFlaggedRevsProtection' => array(
+		],
+	],
+	'wmgFlaggedRevsProtection' => [
 		'default' => false,
 		'pruebawiki' => true,
-	),
-	'wmgFlaggedRevsTags' => array(
-		'default' => array(
-			'status' => array(
+	],
+	'wmgFlaggedRevsTags' => [
+		'default' => [
+			'status' => [
 				'quality' => 1,
 				'levels' => 2,
 				'pristine' => 3,
-			),
-		),
-		'infectopedwiki' => array(
-			'accuracy' => array(
+			],
+		],
+		'infectopedwiki' => [
+			'accuracy' => [
 				'levels' => 3,
 				'quality' => 2,
 				'pristine' => 4,
-			),
-			'depth' => array(
+			],
+			'depth' => [
 				'levels' => 3,
 				'quality' => 2,
 				'pristine' => 4,
-			),
-			'tone' => array(
+			],
+			'tone' => [
 				'levels' => 3,
 				'quality' => 1,
 				'pristine' => 4,
-			),
-		),
-		'isvwiki' => array(
-			'status' => array(
+			],
+		],
+		'isvwiki' => [
+			'status' => [
 				'levels' => 1,
 				'quality' => 2,
 				'pristine' => 4,
-			),
-		),
-	),
-	'wmgFlaggedRevsTagsRestrictions' => array(
-		'default' => array(
-			'status' => array(
+			],
+		],
+	],
+	'wmgFlaggedRevsTagsRestrictions' => [
+		'default' => [
+			'status' => [
 				'review' => 1,
 				'autoreview' => 1,
-			),
-		),
-	),
-	'wmgFlaggedRevsTagsAuto' => array(
-		'default' => array(
+			],
+		],
+	],
+	'wmgFlaggedRevsTagsAuto' => [
+		'default' => [
 			'status' => 1,
-		),
-	),
-	'wmgFlaggedRevsAutopromote' => array(
-		'default' => array(
+		],
+	],
+	'wmgFlaggedRevsAutopromote' => [
+		'default' => [
 			'days' => 14,
 			'edits' => 100,
 			'excludeLastDays' => 1,
@@ -1520,188 +1519,188 @@ $wgConf->settings = array(
 			'editComments' => 80,
 			'userpageBytes' => 1,
 			'neverBlocked' => true,
-			'maxRevertedEditRatio'=> .05,
-		),
+			'maxRevertedEditRatio' => 0.05,
+		],
 		'isvwiki' => false,
 		'pruebawiki' => false,
-	),
-	'wmgFlaggedRevsAutoReview' => array(
+	],
+	'wmgFlaggedRevsAutoReview' => [
 		'default' => true,
-	),
-	'wmgFlaggedRevsRestrictionLevels' => array(
-		'default' => array( '', 'sysop' ),
-		'pruebawiki' => array( '', 'sysop', 'bureaucrat', 'consul', 'autoconfirmed', 'user' ),
-	),
-	'wmgSimpleFlaggedRevsUI' => array(
-		'default' => true,
-		'infectopedwiki' => false,
-	),
-	'wmgFlaggedRevsLowProfile' => array(
+	],
+	'wmgFlaggedRevsRestrictionLevels' => [
+		'default' => [ '', 'sysop' ],
+		'pruebawiki' => [ '', 'sysop', 'bureaucrat', 'consul', 'autoconfirmed', 'user' ],
+	],
+	'wmgSimpleFlaggedRevsUI' => [
 		'default' => true,
 		'infectopedwiki' => false,
-	),
+	],
+	'wmgFlaggedRevsLowProfile' => [
+		'default' => true,
+		'infectopedwiki' => false,
+	],
 
 	// Files [MWCandidate]
-	'wgEnableUploads' => array(
+	'wgEnableUploads' => [
 		'default' => true,
-	),
+	],
 	// T3797
-	'wgMaxUploadSize' => array(
+	'wgMaxUploadSize' => [
 		'default' => 262144000,
-	),
-	'wgUploadSizeWarning' => array(
+	],
+	'wgUploadSizeWarning' => [
 		'default' => 262144000,
-	),
-	'wgAllowCopyUploads' => array(
+	],
+	'wgAllowCopyUploads' => [
 		'default' => false,
-	),
-	'wgAllowTitlesInSVG' => array(
+	],
+	'wgAllowTitlesInSVG' => [
 		'default' => false,
 		'vsfan' => true,
-	),
-	'wgCopyUploadsFromSpecialUpload' => array(
+	],
+	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
-	),
-	'wgFileExtensions' => array(
-		'default' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ),
-		'+50beardsofgreywiki' => array( 'mp4' ),
-		'+amaninfowiki' => array('pcap', 'cap', 'zip', 'tar', 'tar.gz', 'rar' ),
-		'+avalicearchiveswiki' => array('exe', 'zip', 'css', 'woff', 'woff2', 'ttf' ),
-		'+bigforestwiki' => array( 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ),
-		'+bsaikatsuwiki' => array( 'oga', 'ogx' ),
-		'+cmgwiki' => array('html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt'),
-		'+cmgiwiki' => array('html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'docx', 'doc', 'txt', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt'),
-		'+csnimsbordeauxwiki' => array( 'docx', 'xlsx', 'pptx', 'pub', 'xps', 'odt', 'ods', 'odp', 'odg', 'otg', 'rar', 'tar', 'gz', 'gz2', 'bz', 'bz2', 'zip', 'ipe', 'dia', 'svg', 'bib', 'add', 'spl', 'cls', 'tex', 'bst', 'sh', 'bat', 'gp', 'dat', 'fig', 'sty', 'py', 'cpp', 'hpp', 'hxx', 'c', 'h', 'mat', 'txt', 'desktop', 'md', 'perf', 'plot', 'data', 'xml', 'html', 'alist' ),
-		'+doinwiki' => array('pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ),
-		'+exercicesdefrancaisprodfrwiki' => array('html', 'htm' ),
-		'+exitsincwiki' => array('txt' ),
-		'+fawiki' => array('ttf', 'eot', 'woff', 'apk'),
-		'+guiasdobrasilwiki' => array('zip', 'tar', 'tar.gz', 'rar', ),
-		'+hypernostalgiawiki' => array('mp4', 'webm', 'ogv', 'mp3'),
-		'+indrikwiki' => array('mp3', 'mus', 'mid' ),
-		'+jadtechwiki' => array('png', 'bmp', 'gif', 'ico', 'ogg', 'mp3', 'svg', 'pdf', 'flac', 'mp4', 'exe', 'zip', 'jpeg', 'jpg'),
-		'+jayuwikiwiki' => array('bmp', 'apng', 'tiff', 'wav', 'mp3', 'oga', 'ogv', 'asv', 'swf', 'wmv'),
-		'+jcswiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'ppt', 'pptx', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'zip'),
-		'+modularwiki' => array('mid', 'mp3', 'flac', 'fpd', 'oga', 'ogv'),
-		'+pculsdwiki' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'mp3', 'wma', 'mp4', 'zip', 'rar', 'xlsx', 'ppt', 'docx', 'doc'),
-		'+pfl2wiki' => array('rar' ),
-		'+podpediawiki' => array('mp3', 'zip'),
-		'+qmswiki' => array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'zip'),
-		'+schulwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'ppt', 'pptx', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'zip'),
-		'+scruffywiki' => array('mid', 'mp3', 'flac', 'fpd', 'oga', 'ogv', 'zip'),
-		'+sdiywiki' => array('mid', 'mp3', 'flac', 'fpd', 'oga', 'ogv', 'zip'),
-		'+serinfhospwiki' => array( 'pdf', 'zip' ),
-		'+showroomwiki' => array( 'png', 'gif', 'jpg', 'jpeg', 'doc', 'xls', 'pdf', 'ppt', 'tiff', 'bmp', 'docx', 'xlsx', 'pptx'),
-		'+techeducationwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml'),
-		'+themirrorwiki' => array( 'mp3'),
-		'+thenetwiki' => array( 'zip', 'rar', 'dae'),
-		'+tmewiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
-		'+unabwiki' => array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'),
-		'+valentinaprojectwiki' => array( 'val', 'vit', 'vst'),
-		'+vsfan' =>  array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'webp' ),
-		'+vandalismwikiwiki' => array('tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm'),
-		'+wirtschaftsinformatikhbs' => array( 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'docx', 'pptx', 'vsd' ),
-		'+wisdomwikiwiki' => array( 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip'),
-	),
-	'wgUseInstantCommons' => array(
+	],
+	'wgFileExtensions' => [
+		'default' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ],
+		'+50beardsofgreywiki' => [ 'mp4' ],
+		'+amaninfowiki' => [ 'pcap', 'cap', 'zip', 'tar', 'tar.gz', 'rar' ],
+		'+avalicearchiveswiki' => [ 'exe', 'zip', 'css', 'woff', 'woff2', 'ttf' ],
+		'+bigforestwiki' => [ 'apng', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'doc', 'docx', 'txt', 'rtf', 'htm', 'html', 'xml', 'ppt', 'pptx' ],
+		'+bsaikatsuwiki' => [ 'oga', 'ogx' ],
+		'+cmgwiki' => [ 'html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt' ],
+		'+cmgiwiki' => [ 'html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'docx', 'doc', 'txt', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt' ],
+		'+csnimsbordeauxwiki' => [ 'docx', 'xlsx', 'pptx', 'pub', 'xps', 'odt', 'ods', 'odp', 'odg', 'otg', 'rar', 'tar', 'gz', 'gz2', 'bz', 'bz2', 'zip', 'ipe', 'dia', 'svg', 'bib', 'add', 'spl', 'cls', 'tex', 'bst', 'sh', 'bat', 'gp', 'dat', 'fig', 'sty', 'py', 'cpp', 'hpp', 'hxx', 'c', 'h', 'mat', 'txt', 'desktop', 'md', 'perf', 'plot', 'data', 'xml', 'html', 'alist' ],
+		'+doinwiki' => [ 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ],
+		'+exercicesdefrancaisprodfrwiki' => [ 'html', 'htm' ],
+		'+exitsincwiki' => [ 'txt' ],
+		'+fawiki' => [ 'ttf', 'eot', 'woff', 'apk' ],
+		'+guiasdobrasilwiki' => [ 'zip', 'tar', 'tar.gz', 'rar', ],
+		'+hypernostalgiawiki' => [ 'mp4', 'webm', 'ogv', 'mp3' ],
+		'+indrikwiki' => [ 'mp3', 'mus', 'mid' ],
+		'+jadtechwiki' => [ 'png', 'bmp', 'gif', 'ico', 'ogg', 'mp3', 'svg', 'pdf', 'flac', 'mp4', 'exe', 'zip', 'jpeg', 'jpg' ],
+		'+jayuwikiwiki' => [ 'bmp', 'apng', 'tiff', 'wav', 'mp3', 'oga', 'ogv', 'asv', 'swf', 'wmv' ],
+		'+jcswiki' => [ 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'ppt', 'pptx', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'zip' ],
+		'+modularwiki' => [ 'mid', 'mp3', 'flac', 'fpd', 'oga', 'ogv' ],
+		'+pculsdwiki' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'mp3', 'wma', 'mp4', 'zip', 'rar', 'xlsx', 'ppt', 'docx', 'doc' ],
+		'+pfl2wiki' => [ 'rar' ],
+		'+podpediawiki' => [ 'mp3', 'zip' ],
+		'+qmswiki' => [ 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'zip' ],
+		'+schulwiki' => [ 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'ppt', 'pptx', 'bmp', 'tiff', 'avi', 'mov', 'mp3', 'mp4', 'wma', 'swf', 'zip' ],
+		'+scruffywiki' => [ 'mid', 'mp3', 'flac', 'fpd', 'oga', 'ogv', 'zip' ],
+		'+sdiywiki' => [ 'mid', 'mp3', 'flac', 'fpd', 'oga', 'ogv', 'zip' ],
+		'+serinfhospwiki' => [ 'pdf', 'zip' ],
+		'+showroomwiki' => [ 'png', 'gif', 'jpg', 'jpeg', 'doc', 'xls', 'pdf', 'ppt', 'tiff', 'bmp', 'docx', 'xlsx', 'pptx' ],
+		'+techeducationwiki' => [ 'docx', 'doc', 'odt', 'ods', 'odp', 'ppt', 'xls', 'xlsx','xml' ],
+		'+themirrorwiki' => [ 'mp3' ],
+		'+thenetwiki' => [ 'zip', 'rar', 'dae' ],
+		'+tmewiki' => [ 'tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm' ],
+		'+unabwiki' => [ 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx' ],
+		'+valentinaprojectwiki' => [ 'val', 'vit', 'vst' ],
+		'+vsfan' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'webp' ],
+		'+vandalismwikiwiki' => [ 'tiff', 'tif', 'webp', 'xcf', 'mid', 'ogv', 'oga', 'flac', 'opus', 'wav', 'webm' ],
+		'+wirtschaftsinformatikhbs' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'docx', 'pptx', 'vsd' ],
+		'+wisdomwikiwiki' => [ 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip' ],
+	],
+	'wgUseInstantCommons' => [
 		'default' => true,
-	),
-	'wgEnableImageWhitelist' => array(
+	],
+	'wgEnableImageWhitelist' => [
 		'default' => false,
-	),
-	'wgShowArchiveThumbnails' => array(
+	],
+	'wgShowArchiveThumbnails' => [
 		'default' => true,
-	),
-	'wgVerifyMimeType' => array(
+	],
+	'wgVerifyMimeType' => [
 		'default' => true,
-	),
-	'wgSVGMetadataCutoff' => array(
+	],
+	'wgSVGMetadataCutoff' => [
 		'default' => 262144,
 		'altversewiki' => 13421772,
 		'magnaversewiki' => 13421772,
-	),
-	'wgSVGConverter' => array(
+	],
+	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
 		'arphilosophywiki' => 'inkscape',
 		'ktswiki' => 'inkscape',
-	),
+	],
 
 	// Flow [MWCandidate] (MWNamespaces?)
-	'wmgFlowDefaultNamespaces' => array(
+	'wmgFlowDefaultNamespaces' => [
 		'default' => true,
 		'nationsglorywiki' => false,
 		'lzhscpwikiwiki' => false,
-	),
+	],
 
 	// GlobalBlocking [MWExempt]
-	'wgApplyGlobalBlocks' => array(
+	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		'metawiki' => false,
 		'weatherwiki' => false, // let me do the blocking on my wiki, please
-	),
-	'wgGlobalBlockingDatabase' => array(
+	],
+	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
-	),
+	],
 
 	// GlobalCssJs [MWCandidate]
-	'wgGlobalCssJsConfig' => array(
-		'default' => array(
+	'wgGlobalCssJsConfig' => [
+		'default' => [
 			'wiki' => 'metawiki',
 			'source' => 'metawiki',
-		),
-	),
-	'+wgResourceLoaderSources' => array(
-		'default' => array(
-			'metawiki' => array(
+		],
+	],
+	'+wgResourceLoaderSources' => [
+		'default' => [
+			'metawiki' => [
 				'apiScript' => '//meta.miraheze.org/w/api.php',
 				'loadScript' => '//meta.miraheze.org/w/load.php',
-			),
-		),
-	),
-	'wgUseGlobalSiteCssJs' => array(
+			],
+		],
+	],
+	'wgUseGlobalSiteCssJs' => [
 		'default' => false,
-	),
+	],
 
 	// GlobalPreferences [MWExempt]
-	'wgGlobalPreferencesDB' => array(
+	'wgGlobalPreferencesDB' => [
 		'default' => 'centralauth',
-	),
+	],
 
- 	// GlobalUserPage [MWExempt]
- 	'wgGlobalUserPageAPIUrl' => array(
+	// GlobalUserPage [MWExempt]
+	'wgGlobalUserPageAPIUrl' => [
 		'default' => 'https://login.miraheze.org/w/api.php',
-	),
-	'wgGlobalUserPageDBname' => array(
+	],
+	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
-	),
+	],
 
 	// HighlightLinks [MWCandidate]
-	'wgHighlightLinksInCategory' => array(
-		'default' => array(),
-		'allthetropeswiki' => array(
+	'wgHighlightLinksInCategory' => [
+		'default' => [],
+		'allthetropeswiki' => [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
-		),
-	),
+		],
+	],
 
 	// ImageMagick [MWExempt]
-	'wgUseImageMagick' => array(
+	'wgUseImageMagick' => [
 		'default' => true,
-	),
-	'wgImageMagickCommand' => array(
+	],
+	'wgImageMagickCommand' => [
 		'default' => '/usr/bin/convert',
-	),
+	],
 
 	// Interwiki [MWCandidate]
-	'wgEnableScaryTranscluding' => array(
+	'wgEnableScaryTranscluding' => [
 		'default' => true,
-	),
-	'wgInterwikiCentralDB' => array(
+	],
+	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
-	),
-	'wgExtraInterlanguageLinkPrefixes' => array(
-		'default' => array(),
-		'+apunteswiki' => array(
+	],
+	'wgExtraInterlanguageLinkPrefixes' => [
+		'default' => [],
+		'+apunteswiki' => [
 			'ct',
 			'm',
 			'u',
@@ -1718,8 +1717,8 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-		'+centralwiki' => array(
+		],
+		'+centralwiki' => [
 			'm',
 			'u',
 			'i',
@@ -1736,8 +1735,8 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-		'+destinoswiki' => array(
+		],
+		'+destinoswiki' => [
 			'ct',
 			'm',
 			'u',
@@ -1754,8 +1753,8 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-		'+infowiki' => array(
+		],
+		'+infowiki' => [
 			'ct',
 			'm',
 			'u',
@@ -1772,8 +1771,8 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-		'+mediatecawiki' => array(
+		],
+		'+mediatecawiki' => [
 			'ct',
 			'u',
 			'i',
@@ -1790,13 +1789,13 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-		'+nonciclopediawiki' => array(
+		],
+		'+nonciclopediawiki' => [
 			'dlm',
 			'tlh',
 			'zombie',
-		),
-		'+privadowiki' => array(
+		],
+		'+privadowiki' => [
 			'ct',
 			'm',
 			'u',
@@ -1813,8 +1812,8 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-		'+tallerwiki' => array(
+		],
+		'+tallerwiki' => [
 			'ct',
 			'm',
 			'u',
@@ -1831,8 +1830,8 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-		'+ucroniaswiki' => array(
+		],
+		'+ucroniaswiki' => [
 			'ct',
 			'm',
 			'i',
@@ -1849,31 +1848,31 @@ $wgConf->settings = array(
 			'ver',
 			's',
 			'alt',
-		),
-	),
+		],
+	],
 
-	//Imports [MWCandidate]
-	'wgImportSources' => array(
-		'default' => array(
+	// Imports [MWCandidate]
+	'wgImportSources' => [
+		'default' => [
 			'meta',
 			'templatewiki',
-		),
-		'+incubatorwiki' => array(
+		],
+		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
-		),
-		'+weatherwiki' => array(
+		],
+		'+weatherwiki' => [
 			'wikipedia',
-		),
-	),
+		],
+	],
 
 	// Job Queue [MWExempt]
-	'wgJobRunRate' => array(
+	'wgJobRunRate' => [
 		'default' => 0,
-	),
+	],
 
-	//Kartographer [MWCandidate]
- 	'wgKartographerWikivoyageMode' => array(
+	// Kartographer [MWCandidate]
+	'wgKartographerWikivoyageMode' => [
 		'default' => false,
 		'apunteswiki' => true,
 		'centralwiki' => true,
@@ -1883,8 +1882,8 @@ $wgConf->settings = array(
 		'privadowiki' => true,
 		'tallerwiki' => true,
 		'ucroniaswiki' => true,
-	 ),
-	'wgKartographerUseMarkerStyle' => array(
+	 ],
+	'wgKartographerUseMarkerStyle' => [
 		'default' => false,
 		'apunteswiki' => true,
 		'centralwiki' => true,
@@ -1894,119 +1893,119 @@ $wgConf->settings = array(
 		'privadowiki' => true,
 		'tallerwiki' => true,
 		'ucroniaswiki' => true,
-	 ),
+	 ],
 
 	// Language [MWExempt]
-	'wgLanguageCode' => array( // Hardcode "en"
+	'wgLanguageCode' => [ // Hardcode "en"
 		'default' => 'en',
-	),
+	],
 
 	// License [MW]
-	'wgRightsIcon' => array(
+	'wgRightsIcon' => [
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'incubatorwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'isvwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'jadtechwiki' => "//$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
-	),
-	'wgRightsPage' => array(
+	],
+	'wgRightsPage' => [
 		'default' => '',
 		'diavwiki' => 'Project:Copyrights',
 		'kstartupswiki' => 'Project:저작권',
 		'wisdomwikiwiki' => 'Copyleft',
-	),
-	'wgRightsText' => array(
+	],
+	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'isvwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'jadtechwiki' => 'Copyright © Jak and Daxter Technical Wiki. All rights reserved.',
 		'revitwiki' => '©2013-2019 by Lionel J. Camara (All Rights Reserved)',
 		'reviwikiwiki' => 'Creative Commons Attribution Share Alike',
-	),
-	'wgRightsUrl' => array(
+	],
+	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'isvwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'jadtechwiki' => 'https://jadtech.miraheze.org/wiki/MediaWiki:Copyright',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
 		'reviwikiwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
-	),
-	'wmgWikiLicense' => array(
+	],
+	'wmgWikiLicense' => [
 		'default' => 'cc-by-sa',
-	),
+	],
 
 	// Links [MWExempt]?
-	'+wgUrlProtocols' => array(
-		'default' => array(),
+	'+wgUrlProtocols' => [
+		'default' => [],
 		// file protocol only allowed on private wikis
-		'bchwiki' => array ( "file://" ),
-		'gzewiki' => array ( "file://" ),
-		'kaiwiki' => array ( "file://" ),
-	),
+		'bchwiki' => [ "file://" ],
+		'gzewiki' => [ "file://" ],
+		'kaiwiki' => [ "file://" ],
+	],
 
 	// Mail [MWCandidate]
-	'wgEnableEmail' => array(
+	'wgEnableEmail' => [
 		'default' => true,
-	),
-	'wgPasswordSender' => array(
+	],
+	'wgPasswordSender' => [
 		'default' => 'noreply@miraheze.org',
-	),
-	'wgSMTP' => array(
-		'default' => array(
+	],
+	'wgSMTP' => [
+		'default' => [
 			'host' => 'mail.miraheze.org',
 			'port' => 25,
 			'IDHost' => 'miraheze.org',
 			'auth' => true,
 			'username' => 'noreply',
 			'password' => $wmgSMTPPassword,
-		),
-	),
-	'wgEnotifWatchlist' => array(
+		],
+	],
+	'wgEnotifWatchlist' => [
 		'default' => true,
-	),
-	'wgUserEmailUseReplyTo' => array(
+	],
+	'wgUserEmailUseReplyTo' => [
 		'default' => true,
-	),
-	'wgEmailConfirmToEdit' => array(
+	],
+	'wgEmailConfirmToEdit' => [
 		'default' => false,
 		'jacksonheightswiki' => true,
 		'nenawikiwiki' => true,
-	),
+	],
 
-	'wgTexvc' => array(
+	'wgTexvc' => [
 		'default' => '/usr/bin/texvc',
-	),
+	],
 
 	// ManageWiki [MWExempt]
-	'wgManageWiki' => array(
-		'default' => array(
+	'wgManageWiki' => [
+		'default' => [
 			'cdb' => true,
 			'core' => true,
 			'extensions' => true,
 			'namespaces' => true,
 			'permissions' => true,
 			'settings' => true
-		),
-	),
-	'wgManageWikiExtensionsDefault' => array(
-		'default' => array(
+		],
+	],
+	'wgManageWikiExtensionsDefault' => [
+		'default' => [
 			'cite',
 			'citethispage',
-		),
-	),
-	'wgManageWikiCDBDirectory' => array(
+		],
+	],
+	'wgManageWikiCDBDirectory' => [
 		'default' => '/srv/mediawiki/w/cache/managewiki',
-	),
-	'wgManageWikiPermissionsAdditionalAddGroups' => array(
-		'default' => array(),
-	),
-	'wgManageWikiPermissionsAdditionalRights' => array(
-		'default' => array(
-			'checkuser' => array(
+	],
+	'wgManageWikiPermissionsAdditionalAddGroups' => [
+		'default' => [],
+	],
+	'wgManageWikiPermissionsAdditionalRights' => [
+		'default' => [
+			'checkuser' => [
 				'checkuser' => true,
 				'checkuser-log' => true,
-			),
-			'oversight' => array(
+			],
+			'oversight' => [
 				'abusefilter-hidden-log' => true,
 				'abusefilter-hide-log' => true,
 				'browsearchive' => true,
@@ -2017,156 +2016,156 @@ $wgConf->settings = array(
 				'hideuser' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
-			),
-			'user' => array(
+			],
+			'user' => [
 				'user' => true,
-			),
-			'steward' => array(
+			],
+			'steward' => [
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
-			),
-		),
-		'+autocountwiki' => array(
-			'authors' => array(
+			],
+		],
+		'+autocountwiki' => [
+			'authors' => [
 				'torunblocked' => true,
 				'read' => true,
-			),
-		),
-		'+bitcoindebateswiki' => array(
-			'emailconfirmed' => array(
+			],
+		],
+		'+bitcoindebateswiki' => [
+			'emailconfirmed' => [
 				'read' => true,
-			),
-		),
-		'+cmgwiki' => array(
-			'gst' => array(
+			],
+		],
+		'+cmgwiki' => [
+			'gst' => [
 				'read' => true,
-			),
-		),
-		'+dpwiki' => array(
-			'bureaucrat' => array(
+			],
+		],
+		'+dpwiki' => [
+			'bureaucrat' => [
 				'bureaucrat' => true,
 				'respected' => true,
-			),
-			'respected' => array(
+			],
+			'respected' => [
 				'respected' => true,
-			),
-		),
-		'+enigmawiki' => array(
-			'scribe' => array(
+			],
+		],
+		'+enigmawiki' => [
+			'scribe' => [
 				'read' => true,
-			),
-		),
-		'+igrovyesistemywiki' => array(
-			'autopatrolled' => array(
+			],
+		],
+		'+igrovyesistemywiki' => [
+			'autopatrolled' => [
 				'trusted' => true,
-			),
-			'autoreview' => array(
+			],
+			'autoreview' => [
 				'trusted' => true,
-			),
-			'bot' => array(
+			],
+			'bot' => [
 				'trusted' => true,
-			),
-			'editor' => array(
+			],
+			'editor' => [
 				'trusted' => true,
-			),
-			'reviewer' => array(
+			],
+			'reviewer' => [
 				'trusted' => true,
-			),
-			'co' => array(
+			],
+			'co' => [
 				'co' => true,
 				'ceo' => true,
 				'trusted' => true,
-			),
-			'bureaucrat' => array(
+			],
+			'bureaucrat' => [
 				'bureaucrat' => true,
 				'trusted' => true,
-			),
-			'sysmag' => array(
+			],
+			'sysmag' => [
 				'sysmag' => true,
 				'trusted' => true,
-			),
-			'sysop' => array(
+			],
+			'sysop' => [
 				'trusted' => true,
-			),
-			'ceo' => array(
+			],
+			'ceo' => [
 				'bureaucrat' => true,
 				'sysmag' => true,
 				'trusted' => true,
-			),
-			'UserType1' => array(
+			],
+			'UserType1' => [
 				'UserType1' => true,
-			),
-			'UserType2' => array(
+			],
+			'UserType2' => [
 				'UserType2' => true,
-			),
-			'UserType3' => array(
+			],
+			'UserType3' => [
 				'UserType3' => true,
-			),
-			'UserType4' => array(
+			],
+			'UserType4' => [
 				'UserType4' => true,
-			),
-			'UserType5' => array(
+			],
+			'UserType5' => [
 				'UserType5' => true,
-			),
-			'UserType6' => array(
+			],
+			'UserType6' => [
 				'UserType6' => true,
-			),
-			'UserType7' => array(
+			],
+			'UserType7' => [
 				'UserType7' => true,
-			),
-		),
-		'+jacksonheightswiki' => array(
-			'emailconfirmed' => array(
+			],
+		],
+		'+jacksonheightswiki' => [
+			'emailconfirmed' => [
 				'read' => true,
-			),
-		),
-		'+jayuwikiwiki' => array(
-			'sysop' => array(
+			],
+		],
+		'+jayuwikiwiki' => [
+			'sysop' => [
 				'editvoter' => true,
-			),
-			'voter' => array(
+			],
+			'voter' => [
 				'editvoter' => true,
-			),
-		),
-		'+lcars47wiki' => array(
-			'bureaucrat' => array(
+			],
+		],
+		'+lcars47wiki' => [
+			'bureaucrat' => [
 				'bureaucrat' => true,
-			),
-			'devteam' => array(
+			],
+			'devteam' => [
 				'bureaucrat' => true,
 				'read' => true,
 				'devteam' => true,
-			),
-		),
-		'+marthaspeakswiki' => array(
-			'sysop' => array(
+			],
+		],
+		'+marthaspeakswiki' => [
+			'sysop' => [
 				'templateeditor' => true,
-			),
-			'templateeditor' => array(
+			],
+			'templateeditor' => [
 				'templateeditor' => true,
-			),
-		),
-		'+nenawikiwiki' => array(
-			'emailconfirmed' => array(
+			],
+		],
+		'+nenawikiwiki' => [
+			'emailconfirmed' => [
 				'read' => true,
-			),
-		),
-		'+metawiki' => array(
-			'confirmed' => array(
+			],
+		],
+		'+metawiki' => [
+			'confirmed' => [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
-			),
-			'cvt' => array(
+			],
+			'cvt' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
-			),
-			'proxybot' => array(
+			],
+			'proxybot' => [
 				'globalblock' => true,
 				'centralauth-lock' => true,
-			),
-			'steward' => array(
+			],
+			'steward' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'centralauth-oversight' => true,
@@ -2179,129 +2178,129 @@ $wgConf->settings = array(
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
-			),
-			'sysop' => array(
+			],
+			'sysop' => [
 				'interwiki' => true,
-			),
-			'user' => array(
+			],
+			'user' => [
 				'requestwiki' => true,
-			),
-			'wikicreator' => array(
+			],
+			'wikicreator' => [
 				'createwiki' => true,
-			),
-		),
-		'+nonsensopediawiki' => array(
-			'moderator' => array(
+			],
+		],
+		'+nonsensopediawiki' => [
+			'moderator' => [
 				'skipcaptcha' => true,
-			),
-		),
-		'+pruebawiki' => array(
-			'bureaucrat' => array(
+			],
+		],
+		'+pruebawiki' => [
+			'bureaucrat' => [
 				'bureaucrat' => true,
-			),
-			'consul' => array(
+			],
+			'consul' => [
 				'read' => true,
 				'bureaucrat' => true,
 				'consul' => true,
 				'torunblocked' => true,
-			),
-			'testgroup' => array(
+			],
+			'testgroup' => [
 				'read' => true,
-			),
-		),
-		'+radviserwiki' => array(
-			'editor' => array(
+			],
+		],
+		'+radviserwiki' => [
+			'editor' => [
 				'editor' => true,
-			),
-			'sysop' => array(
+			],
+			'sysop' => [
 				'editor' => true,
-			),
-		),
-		'+sau226wiki' => array(
-			'bureaucrat' => array(
+			],
+		],
+		'+sau226wiki' => [
+			'bureaucrat' => [
 				'bureaucrat' => true,
-			),
-			'consul' => array(
+			],
+			'consul' => [
 				'bureaucrat' => true,
 				'consul' => true,
 				'read' => true,
-			),
-			'testgroup' => array(
+			],
+			'testgroup' => [
 				'read' => true,
-			),
-		),
-		'+serinfhospwiki' => array(
-			'SupportStaff' => array(
+			],
+		],
+		'+serinfhospwiki' => [
+			'SupportStaff' => [
 				'read' => true,
-			),
-			'SalesStaff' => array(
+			],
+			'SalesStaff' => [
 				'read' => true,
-			),
-			'PreSalesStaff' => array(
+			],
+			'PreSalesStaff' => [
 				'read' => true,
-			),
-		),
-		'+sovereignwiki' => array(
-			'officer' => array(
+			],
+		],
+		'+sovereignwiki' => [
+			'officer' => [
 				'read' => true,
 				'officer' => true,
-			),
-			'game-master' => array(
+			],
+			'game-master' => [
 				'read' => true,
 				'game-master' => true,
-			),
-		),
-		'+ssptopwiki' => array(
-			'read-only' => array(
+			],
+		],
+		'+ssptopwiki' => [
+			'read-only' => [
 				'read' => true,
-			),
-		),
-		'+swisscomraidwiki' => array(
-			'emailconfirmed' => array(
+			],
+		],
+		'+swisscomraidwiki' => [
+			'emailconfirmed' => [
 				'read' => true,
-			),
-		),
-		'+svwiki' => array(
-			'bureaucrat' => array(
+			],
+		],
+		'+svwiki' => [
+			'bureaucrat' => [
 				'bureaucrat' => true,
-			),
-			'consul' => array(
+			],
+			'consul' => [
 				'bureaucrat' => true,
 				'consul' => true,
 				'read' => true,
-			),
-			'testgroup' => array(
+			],
+			'testgroup' => [
 				'read' => true,
-			),
-		),
-		'+thesciencearchiveswiki' => array(
-			'sysop' => array(
+			],
+		],
+		'+thesciencearchiveswiki' => [
+			'sysop' => [
 				'templateeditor' => true,
-			),
-			'templateeditor' => array(
+			],
+			'templateeditor' => [
 				'templateeditor' => true,
-			),
-		),
-		'+trexwiki' => array(
-			'co' => array(
+			],
+		],
+		'+trexwiki' => [
+			'co' => [
 				'co' => true,
 				'ceo' => true,
-			),
-			'ceo' => array(
+			],
+			'ceo' => [
 				'ceo' => true,
 				'editors' => true,
-			),
-			'bureaucrat' => array(
+			],
+			'bureaucrat' => [
 				'bureaucrat' => true,
-			),
-		),
-		'+whentheycrywiki' => array(
-			'user' => array(
+			],
+		],
+		'+whentheycrywiki' => [
+			'user' => [
 				'edit-create' => true,
-			),
-		),
-		'weatherwiki' => array(
-			'steward' => array(
+			],
+		],
+		'weatherwiki' => [
+			'steward' => [
 				'userrights' => true,
 				'userrights-interwiki' => true,
 				'hideuser' => true,
@@ -2319,20 +2318,20 @@ $wgConf->settings = array(
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 				'usermerge' => true,
-			),
-		),
-		'+yeoksawiki' => array(
-			'sysop' => array(
+			],
+		],
+		'+yeoksawiki' => [
+			'sysop' => [
 				'project-edit' => true,
-			),
-		),
-	),
-	'wgManageWikiAdditionalRemoveGroups' => array(
-		'default' => array(),
-	),
-	'wgManageWikiPermissionsBlacklistRights' => array(
-		'default' => array(
-			'any' => array(
+			],
+		],
+	],
+	'wgManageWikiAdditionalRemoveGroups' => [
+		'default' => [],
+	],
+	'wgManageWikiPermissionsBlacklistRights' => [
+		'default' => [
+			'any' => [
 				'abusefilter-hide-log',
 				'abusefilter-hidden-log',
 				'abusefilter-modify-global',
@@ -2374,125 +2373,125 @@ $wgConf->settings = array(
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-			),
-			'*' => array(
+			],
+			'*' => [
 				'read',
 				'skipcaptcha',
 				'torunblocked',
 				'centralauth-merge',
-			),
-		),
-	),
-	'wgManageWikiPermissionsBlacklistGroups' => array(
-		'default' => array(
+			],
+		],
+	],
+	'wgManageWikiPermissionsBlacklistGroups' => [
+		'default' => [
 			'checkuser',
 			'oversight',
 			'steward'
-		),
-	),
-	'wgManageWikiPermissionsDefaultPrivateGroup' => array(
+		],
+	],
+	'wgManageWikiPermissionsDefaultPrivateGroup' => [
 		'default' => 'member',
-	),
-	'wgManageWikiHelpUrl' => array(
+	],
+	'wgManageWikiHelpUrl' => [
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
-	),
+	],
 
 	// MassMessage [MWCandidate]
-	'wgAllowGlobalMessaging' => array(
+	'wgAllowGlobalMessaging' => [
 		'default' => false,
 		'metawiki' => true,
-	),
-	'wgNamespacesToPostIn' => array(
-		'default' => array( NS_PROJECT ),
-		'+bgowiki' => array(
+	],
+	'wgNamespacesToPostIn' => [
+		'default' => [ NS_PROJECT ],
+		'+bgowiki' => [
 			NS_MAIN,
 			NS_PROJECT,
-		),
-	),
+		],
+	],
 
 	// MatomoAnalytics [MWExempt]
-	'wgMatomoAnalyticsDatabase' => array(
+	'wgMatomoAnalyticsDatabase' => [
 		'default' => 'mhglobal',
-	),
-	'wgMatomoAnalyticsServerURL' => array(
+	],
+	'wgMatomoAnalyticsServerURL' => [
 		'default' => 'https://matomo.miraheze.org/',
-	),
-	'wgMatomoAnalyticsUseDB' => array(
+	],
+	'wgMatomoAnalyticsUseDB' => [
 		'default' => true,
-	),
-	'wgMatomoAnalyticsGlobalID' => array(
+	],
+	'wgMatomoAnalyticsGlobalID' => [
 		'default' => 1,
-	),
+	],
 
-	//MediaWikiChat settings [MWCandidate]
-	'wgChatLinkUsernames' => array(
+	// MediaWikiChat settings [MWCandidate]
+	'wgChatLinkUsernames' => [
 		'default' => false,
 		'nerdzonewiki' => true,
-	),
-	'wgChatMeCommand' => array(
+	],
+	'wgChatMeCommand' => [
 		'default' => false,
 		'nerdzonewiki' => true,
-	),
+	],
 
 	// Metrolook settings [MWCandidate]
-	'wgMetrolookDownArrow' => array(
+	'wgMetrolookDownArrow' => [
 		'default' => true,
 		'allthetropeswiki' => false,
 		'ayrshirewiki' => false,
 		'thegreatwarwiki' => false,
 		'thelonsdalebattalionwiki' => false,
-	),
-	'wgMetrolookUploadButton' => array(
+	],
+	'wgMetrolookUploadButton' => [
 		'default' => true,
 		'allthetropeswiki' => false,
 		'thegreatwarwiki' => false,
-	),
-	'wgMetrolookBartile' => array(
+	],
+	'wgMetrolookBartile' => [
 		'default' => true,
 		'ayrshirewiki' => false,
 		'thegreatwarwiki' => false,
 		'thelonsdalebattalionwiki' => false,
-	),
-	'wgMetrolookMobile' => array(
+	],
+	'wgMetrolookMobile' => [
 		'default' => true,
 		'ayrshirewiki' => false,
-	),
-	'wgMetrolookUseIconWatch' => array(
+	],
+	'wgMetrolookUseIconWatch' => [
 		'default' => true,
 		'ayrshirewiki' => false,
-	),
-	'wgMetrolookLine' => array(
+	],
+	'wgMetrolookLine' => [
 		'default' => true,
 		'ayrshirewiki' => false,
-	),
-	'wgMetrolookFeatures' => array(
-		'default' => array(
-			'collapsiblenav' => array(
+	],
+	'wgMetrolookFeatures' => [
+		'default' => [
+			'collapsiblenav' => [
 				'global' => false,
 				'user' => true
-			)
-		),
-		'thegreatwarwiki' => array(
-			'collapsiblenav' => array(
+			]
+		],
+		'thegreatwarwiki' => [
+			'collapsiblenav' => [
 				'global' => true,
 				'user' => true
-			)
-		),
-	),
+			]
+		],
+	],
 
 	// miraheze specific config [MWExempt]
-	'wgServicesRepo' => array(
+	'wgServicesRepo' => [
 		'default' => '/srv/services/services',
-	),
+	],
 
-	'wgMirahezeServicesExtensions' => array(
+	'wgMirahezeServicesExtensions' => [
 		'default' => [ 'VisualEditor', 'Flow' ],
-	),
+	],
 
 	// Inactive wikis [MWCandidate]
 	// https://meta.miraheze.org/wiki/Dormancy_Policy/Exceptions and https://meta.miraheze.org/wiki/Dormancy_Policy/Exemptions
-	'wgCreateWikiInactiveWikisWhitelist' => array(
-		'default' => array(
+	'wgCreateWikiInactiveWikisWhitelist' => [
+		'default' => [
 			// Exceptions
 			'ashinawiki',
 			'commonswikiwiki',
@@ -2646,113 +2645,113 @@ $wgConf->settings = array(
 			'wright098wiki',
 			'wright099wiki',
 			'wright100wiki',
-		),
-	),
+		],
+	],
 
 	// Misc. stuff [MWCandidate]
-	'wgSitename' => array(
+	'wgSitename' => [
 		'default' => 'No sitename set!',
-	),
-	'wgAllowDisplayTitle' => array(
+	],
+	'wgAllowDisplayTitle' => [
 		'default' => true,
-	),
-	'wgRestrictDisplayTitle' => array(
+	],
+	'wgRestrictDisplayTitle' => [
 		'default' => true, // Wikis with NoTitle have it set to false
 		'ayrshirewiki' => true,
 		'blocknetwiki' => false,
 		'takethatwikiwiki' => false,
 		'tmewiki' => false,
 		'vandalismwikiwiki' => false,
-	),
-	'wgCapitalLinks' => array(
+	],
+	'wgCapitalLinks' => [
 		'default' => true,
 		'dicowiki' => false,
-	),
-	'wgActiveUserDays' => array(
+	],
+	'wgActiveUserDays' => [
 		'default' => 30,
 		'weatherwiki' => 7,
-	),
-	'wgEnableCanonicalServerLink' => array(
+	],
+	'wgEnableCanonicalServerLink' => [
 		'default' => false,
 		'electowikiwiki' => true,
-	),
+	],
 
 	// MobileFrontend [MWCandidate]
-	'wmgMFAutodetectMobileView' => array(
+	'wmgMFAutodetectMobileView' => [
 		'default' => false,
-	),
-	'wgMFDefaultSkinClass' => array(
+	],
+	'wgMFDefaultSkinClass' => [
 		'default' => 'SkinMinerva',
-	),
-	'wgMobileUrlTemplate' => array(
+	],
+	'wgMobileUrlTemplate' => [
 		'default' => '',
-	),
+	],
 
 	// Moderation extension settings [MWCandidate]
-	'wgModerationNotificationEnable' => array( // Enable or disable notifications. 
+	'wgModerationNotificationEnable' => [ // Enable or disable notifications.
 		'default' => false,
 		'sdiywiki' => true,
-	),
-	'wgModerationNotificationNewOnly' => array( // Notify administrator only about new pages requests. 
+	],
+	'wgModerationNotificationNewOnly' => [ // Notify administrator only about new pages requests.
 		'default' => false,
-	),
-	'wgModerationEmail' => array( // Email to send notifications to.
+	],
+	'wgModerationEmail' => [ // Email to send notifications to.
 		'default' => $wgPasswordSender,
 		'sdiywiki' => 'admin@sdiy.info',
-	),
+	],
 
 	// MsCatSelect vars [MWCandidate]
-	'wgMSCS_WarnNoCategories' => array(
+	'wgMSCS_WarnNoCategories' => [
 		'default' => true,
-	),
+	],
 
 	// MsUpload settings [MWCandidate]
-	'wgMSU_useDragDrop' => array(
+	'wgMSU_useDragDrop' => [
 		'default' => true,
 		'weatherwiki' => false,
-	),
+	],
 
-	'wgMSU_showAutoCat' => array(
+	'wgMSU_showAutoCat' => [
 		'default' => false,
 		'anduinwiki' => true,
-	),
+	],
 
-	'wgMSU_checkAutoCat' => array(
+	'wgMSU_checkAutoCat' => [
 		'default' => false,
 		'anduinwiki' => true,
-	),
+	],
 
-	'wgMSU_confirmReplace' => array(
+	'wgMSU_confirmReplace' => [
 		'default' => false,
 		'anduinwiki' => true,
-	),
+	],
 
 	// MultiBoilerplate settings [MWCandidate]
-	'wgMultiBoilerplateDiplaySpecialPage' => array(
+	'wgMultiBoilerplateDiplaySpecialPage' => [
 		'default' => false,
 		'scruffywiki' => true,
 		'sdiywiki' => true,
-	),
+	],
 
 	// MultimediaViewer (not beta) [MWCandidate]
-	'wgMediaViewerEnableByDefault' => array(
+	'wgMediaViewerEnableByDefault' => [
 		'default' => false,
 		'grandtheftautowiki' => true,
 		'knowledgewiki' => true,
 		'thefosterswiki' => true,
 		'thelonsdalebattalionwiki' => true,
-	),
+	],
 	// MobileFrontend [MWCandidate]
-	'wgMFNoMobilePages' => array(
-		'default' => array(),
-		'alwikiwiki' => array(
+	'wgMFNoMobilePages' => [
+		'default' => [],
+		'alwikiwiki' => [
 			'Main Page',
-		),
-	),
+		],
+	],
 	// Namespaces [MWNamespaces]
-	'wgExtraNamespaces' => array(
-		'default' => array(),
-		'apunteswiki' => array(
+	'wgExtraNamespaces' => [
+		'default' => [],
+		'apunteswiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2771,8 +2770,8 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'centralwiki' => array(
+		 ],
+		'centralwiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2791,8 +2790,8 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'destinoswiki' => array(
+		 ],
+		'destinoswiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2811,8 +2810,8 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'infowiki' => array(
+		 ],
+		'infowiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2831,8 +2830,8 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'mediatecawiki' => array(
+		 ],
+		'mediatecawiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2851,12 +2850,12 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'modesofdiscoursewiki' => array(
+		 ],
+		'modesofdiscoursewiki' => [
 			NS_ASPECT => 'Aspect',
 			NS_ASPECT_TALK => 'Aspect_talk',
-		),
-		'privadowiki' => array(
+		],
+		'privadowiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2875,8 +2874,8 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'tallerwiki' => array(
+		 ],
+		'tallerwiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2895,8 +2894,8 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'ucroniaswiki' => array(
+		 ],
+		'ucroniaswiki' => [
 			NS_TEST => 'Prueba',
 			NS_TEST_TALK => 'Prueba_discusión',
 			NS_PAGE => 'Página',
@@ -2915,8 +2914,8 @@ $wgConf->settings = array(
 			NS_MODELO_TALK => 'Modelo_discusión',
 			NS_EXAMPLE => 'Ejemplo',
 			NS_EXAMPLE_TALK => 'Ejemplo_discusión',
-		 ),
-		'2b2twiki' => array(
+		 ],
+		'2b2twiki' => [
 			NS_THREAD => 'Thread',
 			NS_THREAD_TALK => 'Thread_Talk',
 			NS_MESSAGE_WALL => 'Message_Wall',
@@ -2925,34 +2924,34 @@ $wgConf->settings = array(
 			NS_USER_BLOG_TALK => 'User_Blog_Talk',
 			NS_USER_BLOG_COMMENT => 'User_blog_comment',
 			NS_USER_BLOG_COMMENT_TALK => 'User_blog_comment_talk',
-		),
-		'adiapediawiki' => array(
+		],
+		'adiapediawiki' => [
 			NS_DICT => 'Dict',
 			NS_DICT_TALK => 'Dict_talk',
-		),
-		'adnovumwiki' => array(
+		],
+		'adnovumwiki' => [
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
 			NS_HELP => 'Help',
 			NS_HELP_TALK => 'Help_talk',
-		),
-		'allthetropeswiki' => array(
+		],
+		'allthetropeswiki' => [
 			NS_TROPEWORKSHOP => 'Trope_Workshop',
 			NS_TROPEWORKSHOP_TALK => 'Trope_Workshop_talk',
 			NS_REVIEWS => 'Reviews',
 			NS_REVIEWS_TALK => 'Reviews_talk',
 			NS_FEATURED => 'Featured_Page',
 			NS_FEATURED_TALK => 'Featured_Page_talk',
-		),
-		'arphilosophywiki' => array(
+		],
+		'arphilosophywiki' => [
 			NS_TECHDICT => 'Techdict',
 			NS_TECHDICT_TALK => 'Techdict_talk',
-		),
-		'avalicearchiveswiki' => array(
+		],
+		'avalicearchiveswiki' => [
 			NS_FANWORK => 'Fanbase',
 			NS_FANWORK_TALK => 'Fanbase_talk',
-		),
-		'bigforestwiki' => array(
+		],
+		'bigforestwiki' => [
 			NS_QUIZSET => 'Quizset',
 			NS_QUIZSET_TALK => 'Quizset_talk',
 			NS_NOTEBOOK => 'Notebook',
@@ -2967,16 +2966,16 @@ $wgConf->settings = array(
 			NS_TINYFOREST_TALK => 'Tinyforest_talk',
 			NS_NEWSLINK => 'Newslink',
 			NS_NEWSLINK_TALK => 'Newslink_talk',
-		),
-		'casuarinawiki' => array(
+		],
+		'casuarinawiki' => [
 			NS_LIBRARY => '圖書館',
 			NS_LIBRARY_TALK => '圖書討論',
-		),
-		'claneuphoriawiki' => array(
+		],
+		'claneuphoriawiki' => [
 			NS_CLAN => 'Clan',
 			NS_CLAN_TALK => 'Clan_talk',
-		),
-		'crazybloxianempireinfowiki' => array(
+		],
+		'crazybloxianempireinfowiki' => [
 			NS_LIST => 'List',
 			NS_LIST_TALK => 'List_talk',
 			NS_LAW => 'Law',
@@ -2987,12 +2986,12 @@ $wgConf->settings = array(
 			NS_GROUP_TALK => 'Group_talk',
 			NS_STOREFRONT => 'Storefront',
 			NS_STOREFRONT_TALK => 'Storefront_talk',
-		),	
-		'ecoepiwiki' => array(
+		],
+		'ecoepiwiki' => [
 			NS_PARAMETER => 'Parameter',
 			NS_PARAMETER_TALK => 'Parameter_talk',
-		),
-		'fawiki' => array(
+		],
+		'fawiki' => [
 			NS_API => 'رابط برنامه‌نویسی',
 			NS_API_TALK => 'بحث رابط برنامه‌نویسی',
 			NS_EXTENSION => 'افزونه ',
@@ -3003,14 +3002,14 @@ $wgConf->settings = array(
 			NS_SKIN_TALK => 'Skin_talk',
 			NS_SUMMARY => 'کوته‌نگاشت',
 			NS_SUMMARY_TALK => 'بحث کوته‌نگاشت',
-		),
-		'humorpediawiki' => array(
+		],
+		'humorpediawiki' => [
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
 			NS_HOWTO => 'Howto',
 			NS_HOWTO_TALK => 'Howto_talk',
-		),
-		'hydrawikiwiki' => array(
+		],
+		'hydrawikiwiki' => [
 			NS_RESEARCH => "Research",
 			NS_RESEARCH_TALK => "Research_talk",
 			NS_ADMIN => "Admin",
@@ -3019,38 +3018,38 @@ $wgConf->settings = array(
 			NS_WORKSHOP_TALK => "Workshop_talk",
 			NS_SELP => "Selp",
 			NS_SELP_TALK => "Selp_talk",
-		),
-		'hypernostalgiawiki' => array(
+		],
+		'hypernostalgiawiki' => [
 			NS_DICTIONARY => 'Dictionary',
 			NS_DICTIONARY_TALK => 'Dictionary_talk',
 			NS_SOURCE => 'Source',
 			NS_SOURCE_TALK => 'Source_talk',
-		),
-		'isvwiki' => array(
+		],
+		'isvwiki' => [
 			NS_LIBRARY => 'Sbornik',
 			NS_LIBRARY_TALK => 'Besěda_sbornika',
-		),
-		'jadtechwiki' => array(
+		],
+		'jadtechwiki' => [
 			NS_GAMEPAGE => 'Game',
 			NS_GAMEPAGE_TALK => 'Game_talk',
-		),
-		'kirarafantasiawiki' => array(
+		],
+		'kirarafantasiawiki' => [
 			NS_DATA => 'Data',
 			NS_DATA_TALK => 'Data_talk',
-		),
-		'metawiki' => array(
+		],
+		'metawiki' => [
 			NS_TECH => 'Tech',
 			NS_TECH_TALK => 'Tech_talk'
-		),
-		'monarchistswiki' => array(
+		],
+		'monarchistswiki' => [
 			NS_MUSINGS => 'Musings',
 			NS_MUSINGS_TALK => 'Musings_talk',
-		),
-		'noalatalawiki' => array(
+		],
+		'noalatalawiki' => [
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
-		),
-		'nonciclopediawiki' => array(
+		],
+		'nonciclopediawiki' => [
 			NS_PORTALE => 'Portale',
 			NS_DISCUSSIONI_PORTALE => 'Discussioni_portale',
 			NS_PROGETTO => 'Progetto',
@@ -3071,82 +3070,82 @@ $wgConf->settings = array(
 			NS_DISCUSSIONI_NONSOURCE => 'Discussioni_nonsource',
 			NS_NONBOOKS => 'Nonbooks',
 			NS_DISCUSSIONI_NONBOOKS => 'Discussioni_nonbooks',
-		),
-		'nonsensopediawiki' => array(
-			NS_CYTATY => 'Cytaty', 
-			NS_CYTATY_TALK => 'Dyskusja cytatów', 
-			NS_NONNEWS => 'NonNews', 
-			NS_NONNEWS_TALK => 'Dyskusja NonNews', 
-			NS_NONZRODLA => 'NonŹródła', 
-			NS_NONZRODLA_TALK => 'Dyskusja NonŹródeł', 
-			NS_SLOWNIK => 'Słownik', 
-			NS_SLOWNIK_TALK => 'Dyskusja słownika', 
-			NS_GRA => 'Gra', 
-			NS_GRA_TALK => 'Dyskusja gry', 
-			NS_PORTAL => 'Portal', 
-			NS_PORTAL_TALK => 'Dyskusja portalu', 
-			NS_PORADNIK => 'Poradnik', 
-			NS_PORADNIK_TALK => 'Dyskusja poradnika', 
+		],
+		'nonsensopediawiki' => [
+			NS_CYTATY => 'Cytaty',
+			NS_CYTATY_TALK => 'Dyskusja cytatów',
+			NS_NONNEWS => 'NonNews',
+			NS_NONNEWS_TALK => 'Dyskusja NonNews',
+			NS_NONZRODLA => 'NonŹródła',
+			NS_NONZRODLA_TALK => 'Dyskusja NonŹródeł',
+			NS_SLOWNIK => 'Słownik',
+			NS_SLOWNIK_TALK => 'Dyskusja słownika',
+			NS_GRA => 'Gra',
+			NS_GRA_TALK => 'Dyskusja gry',
+			NS_PORTAL => 'Portal',
+			NS_PORTAL_TALK => 'Dyskusja portalu',
+			NS_PORADNIK => 'Poradnik',
+			NS_PORADNIK_TALK => 'Dyskusja poradnika',
 			NS_PORUM => 'Porum',
 			NS_PORUM_TALK => 'Dyskusja Porum',
-		),
-		'oecumenewiki' => array(
+		],
+		'oecumenewiki' => [
 			NS_ARCHIVE => 'Архив',
 			NS_ARCHIVE_TALK => 'Обсуждение_архива',
 			NS_PORTAL => 'Портал',
 			NS_PORTAL_TALK => 'Обсуждение_портала',
-		),
-		'picardwiki' => array(
+		],
+		'picardwiki' => [
 			NS_WPIMPORT => 'WPImport',
 			NS_WPIMPORT_TALK => 'WPImport_Diskussion',
 			NS_WPREDIRECT => 'WPRedirect',
 			NS_WPREDIRECT_TALK => 'WPRedirect_Diskussion',
-		),
-		'ratanpirwiki' => array(
+		],
+		'ratanpirwiki' => [
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
-		),
-		'reviwiki' => array(
+		],
+		'reviwiki' => [
 			NS_SERVER => 'Server',
 			NS_SERVER_TALK => 'Server_talk',
-		),
-		'reviwikiwiki' => array(
+		],
+		'reviwikiwiki' => [
 			NS_HANDBOOK => '핸드북',
 			NS_HANDBOOK_TALK => '핸드북토론',
-		),
-		'revitwiki' => array(
+		],
+		'revitwiki' => [
 			NS_RGB => 'RGB',
 			NS_RGB_TALK => 'RGB_talk',
 			NS_IDEA => 'IDEA',
 			NS_IDEA_TALK => 'IDEA_talk',
 			NS_LINESTYLE => 'LineStyle',
 			NS_LINESTYLE_TALK => 'LineStyle_talk',
-		),
-		'rpgbrigadewiki' => array(
+		],
+		'rpgbrigadewiki' => [
 			NS_VIDEO => 'Video',
 			NS_VIDEO_TALK => 'Video_talk',
-		),
-		'safiriawiki' => array(
+		],
+		'safiriawiki' => [
 			NS_HOENN => 'Hoenn',
 			NS_HOENN_TALK => 'Hoenn_talk',
-		),
-		'scruffywiki' => array(
+		],
+		'scruffywiki' => [
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_BOILERPLATE => 'Boilerplate',
-			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
-		),
-		'sdiywiki' => array(
+			NS_BOILERPLATE_TALK => 'Boilerplate_talk',
+ 		],
+		'sdiywiki' => [
 			NS_DRAFT => 'Draft',
 			NS_DRAFT_TALK => 'Draft_talk',
 			NS_BOILERPLATE => 'Boilerplate',
-			NS_BOILERPLATE_TALK => 'Boilerplate_talk',			
-		),
-		'slymoddingwiki' => array(
+			NS_BOILERPLATE_TALK => 'Boilerplate_talk',
+ 		],
+		'slymoddingwiki' => [
 			NS_TUT => 'Tutorial',
 			NS_TUT_TALK => 'Tutorial_talk',
-		),
-		'sopatsmkwwiki' => array(
+		],
+		'sopatsmkwwiki' => [
 			NS_SOP_ATS_MKW => 'SOP ATS MKW',
 			NS_SOP_ATS_MKW_TALK => 'SOP ATS MKW_talk',
 			NS_MOS_MKW => 'MOS MKW',
@@ -3157,28 +3156,28 @@ $wgConf->settings = array(
 			NS_LOCA_MKW_TALK => 'LOCA MKW_talk',
 			NS_ARTIKEL => 'ARTIKEL',
 			NS_ARTIKEL_TALK => 'ARTIKEL_talk',
-		),
-		'statisticswiki' => array(
+		],
+		'statisticswiki' => [
 			NS_HUB => 'Hub',
 			NS_HUB_TALK => 'Hub_talk',
-		),
-		'studynotekrwiki' => array(
+		],
+		'studynotekrwiki' => [
 			NS_STUDY_NOTE => 'Study note',
 			NS_STUDY_NOTE_TALK => 'Study note_talk',
 			NS_EXPLANATION => 'Explanation',
 			NS_EXPLANATION_TALK => 'Explanation_talk',
-		),
-		'thelonsdalebattalionwiki' => array(
+		],
+		'thelonsdalebattalionwiki' => [
 			NS_GLOSSARY => 'Glossary',
 			NS_GLOSSARY_TALK => 'Glossary_talk',
-		),
-		'trexwiki' => array(
+		],
+		'trexwiki' => [
 			NS_HALAMAN => 'Halaman',
 			NS_HALAMAN_TALK => 'Permbicaraan_Halaman',
 			NS_ARTIKEL => 'Artikel',
 			NS_ARTIKEL_TALK => 'Artikel_talk',
-		),
-		'tmewiki' => array(
+		],
+		'tmewiki' => [
 			NS_PORTAL => 'Portal',
 			NS_PORTAL_TALK => 'Portal_talk',
 			NS_CALL_OF_DUTY => 'Call_of_Duty',
@@ -3215,8 +3214,8 @@ $wgConf->settings = array(
 			NS_TIMELINE_TALK => 'Timeline_talk',
 			NS_POLICY => 'Policy',
 			NS_POLICY_TALK => 'Policy_talk',
-		),
-		'uncyclopediawiki' => array(
+		],
+		'uncyclopediawiki' => [
 			NS_PSEUDO_NEWS => '伪基新闻',
 			NS_PSEUDO_NEWS_TALK => '伪基新闻谈',
 			NS_PSEUDO_BASE_DICTIONARY => '伪基词典',
@@ -3225,28 +3224,28 @@ $wgConf->settings = array(
 			NS_PSEUDO_BASE_LIBRARY_TALK => '伪基文库谈',
 			NS_PSEUDO_BASE_MUSIC => '伪基音乐',
 			NS_PSEUDO_BASE_MUSIC_TALK => '伪基音乐谈',
-		),
-		'uwswiki' => array(
- 		 	NS_WNS2 => 'WNS2',
-  		 	NS_WNS2_TALK => 'WNS2_talk',
-		),
-		'vandalismwikiwiki' => array(
+		],
+		'uwswiki' => [
+			NS_WNS2 => 'WNS2',
+			NS_WNS2_TALK => 'WNS2_talk',
+		],
+		'vandalismwikiwiki' => [
 			NS_PROJECT => 'VW',
 			NS_PROJECT_TALK => 'VT',
-		),
-		'votingwiki' => array(
+		],
+		'votingwiki' => [
 			NS_LEGACY => 'Legacy',
 			NS_LEGACY_TALK => 'Legacy_talk',
-  		),
-		'warriorpediawiki' => array(
+		],
+		'warriorpediawiki' => [
 			NS_POLICY => 'Policy',
 			NS_POLICY_TALK => 'Policy_talk',
-		),
-		'wikibookwiki' => array(
+		],
+		'wikibookwiki' => [
 			NS_BOOK => 'نسک',
 			NS_BOOK_TALK => 'بحث نسک',
 			NS_BOOK_NAVIGATION => 'ناوبری نسک',
-			NS_BOOK_NAVIGATION_TALK => 'بحث ناوبری نسک', 
+			NS_BOOK_NAVIGATION_TALK => 'بحث ناوبری نسک',
 			NS_APPLICATION => 'برنامه',
 			NS_APPLICATION_TALK => 'بحث برنامه',
 			NS_DICTIONARY => 'واژه‌نامه',
@@ -3259,8 +3258,8 @@ $wgConf->settings = array(
 			NS_PORTAL_TALK => 'بحث درگاه',
 			NS_QURAN => 'قرآن',
 			NS_QURAN_TALK => 'بحث قرآن',
-		),
-		'wisdomwikiwiki' => array(
+		],
+		'wisdomwikiwiki' => [
 			NS_LCS	=> 'LCS',
 			NS_LCS_TALK => 'LCS_talk',
 			NS_MEDI => 'Medi',
@@ -3271,14 +3270,14 @@ $wgConf->settings = array(
 			NS_TEACHING_TALK => 'Teaching_talk',
 			NS_BLANK => 'Blank',
 			NS_BLANK_TALK => 'Blank_talk',
-		),
-		'whentheycrywiki' => array(
+		],
+		'whentheycrywiki' => [
 			NS_SPRITES => 'Sprites',
 			NS_SPRITES_TALK => 'Sprites_talk',
 			NS_GALLERY => 'Gallery',
 			NS_GALLERY_TALK => 'Gallery_talk',
-		),
-		'yokaiwatchwiki' => array(
+		],
+		'yokaiwatchwiki' => [
 			NS_WALKTHROUGH => 'Walkthrough',
 			NS_WALKTHROUGH_TALK => 'Walkthrough_talk',
 			NS_GALLERY => 'Gallery',
@@ -3287,28 +3286,28 @@ $wgConf->settings = array(
 			NS_POLICY_TALK => 'Policy_talk',
 			NS_STAFF => 'Staff',
 			NS_STAFF_TALK => 'Staff_talk',
-		),
-	),
-	'wgContentNamespaces' => array(
-		'default' => array( NS_MAIN ),
-		'+apunteswiki' => array( NS_ANEXO ),
-		'+centralwiki' => array( NS_ANEXO ),
-		'+destinoswiki' => array( NS_ANEXO ),
-		'+infowiki' => array( NS_ANEXO ),
-		'+mediatecawiki' => array( NS_ANEXO ),
-		'+privadowiki' => array( NS_ANEXO ),
-		'+tallerwiki' => array( NS_ANEXO ),
-		'+ucroniaswiki' => array( NS_ANEXO ),
-		'+nonsensopediawiki' => array( NS_CYTATY, NS_NONNEWS, NS_NONZRODLA, NS_SLOWNIK, NS_GRA, NS_PORADNIK ),
-		'+reviwiki' => array( NS_SERVER ),
-		'+reviwikiwiki' => array ( NS_HANDBOOK ),
-		'+safiriawiki' => array( NS_HOENN ),
-		'+tmewiki' => array( NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA, NS_CIVILIZATION_IV, NS_GAME, NS_IDEA, NS_TIMELINE ),
-	),
-	'wgMathValidModes' => array(
-		'default' => array( 'png' ),
-	),
-	'wgMetaNamespace' => array(
+		],
+	],
+	'wgContentNamespaces' => [
+		'default' => [ NS_MAIN ],
+		'+apunteswiki' => [ NS_ANEXO ],
+		'+centralwiki' => [ NS_ANEXO ],
+		'+destinoswiki' => [ NS_ANEXO ],
+		'+infowiki' => [ NS_ANEXO ],
+		'+mediatecawiki' => [ NS_ANEXO ],
+		'+privadowiki' => [ NS_ANEXO ],
+		'+tallerwiki' => [ NS_ANEXO ],
+		'+ucroniaswiki' => [ NS_ANEXO ],
+		'+nonsensopediawiki' => [ NS_CYTATY, NS_NONNEWS, NS_NONZRODLA, NS_SLOWNIK, NS_GRA, NS_PORADNIK ],
+		'+reviwiki' => [ NS_SERVER ],
+		'+reviwikiwiki' => [ NS_HANDBOOK ],
+		'+safiriawiki' => [ NS_HOENN ],
+		'+tmewiki' => [ NS_CALL_OF_DUTY, NS_MINECRAFT, NS_SUPER_MARIO_LAND_2, NS_SUPER_MARIO_WORLD_2, NS_SUPER_MARIO_BROS, NS_SUPER_MARIO_ADVANCE, NS_SUPER_MARIO_ADVANCE_2, NS_SUPER_MARIO_ADVANCE_3, NS_SUPER_MARIO_ADVANCE_4, NS_THE_LEGEND_OF_ZELDA, NS_CIVILIZATION_IV, NS_GAME, NS_IDEA, NS_TIMELINE ],
+	],
+	'wgMathValidModes' => [
+		'default' => [ 'png' ],
+	],
+	'wgMetaNamespace' => [
 		'default' => null,
 		'apunteswiki' => 'Apuntes',
 		'centralwiki' => 'Central',
@@ -3321,53 +3320,53 @@ $wgConf->settings = array(
 		'incubatorwiki' => 'Incubator',
 		'jawp2chwiki' => 'まとめwiki',
 		'tmewiki' => 'TME',
-	),
-	'+wgNamespaceAliases' => array(
-		'default' => array(
+	],
+	'+wgNamespaceAliases' => [
+		'default' => [
 			'Image' => NS_FILE,
 			'Image_talk' => NS_FILE_TALK,
-		),
-		'+apunteswiki' => array(
- 			'A' => NS_PROJECT,
- 		),
- 		'+centralwiki' => array(
- 			'C' => NS_PROJECT,
- 		),
- 		'+destinoswiki' => array(
- 			'D' => NS_PROJECT,
+		],
+		'+apunteswiki' => [
+			'A' => NS_PROJECT,
+		],
+		'+centralwiki' => [
+			'C' => NS_PROJECT,
+		],
+		'+destinoswiki' => [
+			'D' => NS_PROJECT,
 			'WV' => NS_PROYECTO,
 			'Wikiviajes' => NS_PROYECTO,
- 		),
- 		'+infowiki' => array(
- 			'I' => NS_PROJECT,
- 		),
- 		'+mediatecawiki' => array(
- 			'M' => NS_PROJECT,
- 		),
- 		'+privadowiki' => array(
- 			'P' => NS_PROJECT,
- 		),
- 		'+tallerwiki' => array(
- 			'T' => NS_PROJECT,
- 		),
- 		'+ucroniaswiki' => array(
- 			'U' => NS_PROJECT,
-		),
-		'+adnovumwiki' => array(
+		],
+		'+infowiki' => [
+			'I' => NS_PROJECT,
+		],
+		'+mediatecawiki' => [
+			'M' => NS_PROJECT,
+		],
+		'+privadowiki' => [
+			'P' => NS_PROJECT,
+		],
+		'+tallerwiki' => [
+			'T' => NS_PROJECT,
+		],
+		'+ucroniaswiki' => [
+			'U' => NS_PROJECT,
+		],
+		'+adnovumwiki' => [
 			'ARP' => NS_PROJECT,
 			'ARP_talk' => NS_PROJECT_TALK,
 			'H' => NS_HELP,
 			'H_talk' => NS_HELP_TALK,
-		),
-		'+allthetropeswiki' => array(
+		],
+		'+allthetropeswiki' => [
 			'ATT' => NS_PROJECT,
 			'ATT_talk' => NS_PROJECT_TALK,
 			'YKTTW' => NS_TROPEWORKSHOP,
 			'YKTTW_talk' => NS_TROPEWORKSHOP_TALK,
 			'Blurb' => NS_FEATURED,
 			'Blurb_talk' => NS_FEATURED_TALK,
-		),
-		'+bigforestwiki' => array(
+		],
+		'+bigforestwiki' => [
 			'사' => NS_USER,
 			'큰' => NS_PROJECT,
 			'Temp' => NS_TEMPLATE,
@@ -3387,53 +3386,53 @@ $wgConf->settings = array(
 			"분" => NS_CATEGORY,
 			"분토" => NS_CATEGORY_TALK,
 			"뉴스" => NS_NEWSLINK,
-		),
-		'+bpwiki' => array(
+		],
+		'+bpwiki' => [
 			'Halaman' => NS_PROOFREAD_PAGE,
 			'Pembicaraan_Halaman' => NS_PROOFREAD_PAGE_TALK,
 			'Indeks' => NS_PROOFREAD_INDEX,
 			'Pembicaraan_Indeks' => NS_PROOFREAD_INDEX_TALK,
-		),
-		'+casuarinawiki' => array(
+		],
+		'+casuarinawiki' => [
 			'文庫' => NS_LIBRARY,
 			'文庫討論' => NS_LIBRARY_TALK,
-		),
-		'+dakhilcommunitywiki' => array(
+		],
+		'+dakhilcommunitywiki' => [
 			'DC' => NS_MAIN,
 			'DC_talk' => NS_TALK,
-		),
-		'+ecoepiwiki' => array(
+		],
+		'+ecoepiwiki' => [
 			'P' => NS_PARAMETER,
 			'PT' => NS_PARAMETER_TALK,
-		),
-		'+humorpediawiki' => array(
+		],
+		'+humorpediawiki' => [
 			'HP' => NS_PROJECT,
 			'HP_talk' => NS_PROJECT_TALK,
-		),
-		'+incubatorwiki' => array(
+		],
+		'+incubatorwiki' => [
 			'I' => NS_PROJECT,
 			'IT' => NS_PROJECT_TALK,
-		),
-		'+isvwiki' => array(
+		],
+		'+isvwiki' => [
 			'Library' => NS_LIBRARY,
 			'Library_talk' => NS_LIBRARY_TALK,
-		),
-		'+picardwiki' => array(
+		],
+		'+picardwiki' => [
 			'NS_USER_PROFILE' => 'Benutzerprofil',
 			'NS_USER_PROFILE_TALK' => 'Benutzerprofil Diskussion',
-		),
-		'+proxybotwiki' => array(
+		],
+		'+proxybotwiki' => [
 			'UT' => NS_USER_TALK,
-		),
-		'+reviwikiwiki' => array(
+		],
+		'+reviwikiwiki' => [
 			'Handbook' => NS_HANDBOOK,
 			'Handbook_talk' => NS_HANDBOOK_TALK,
-		),
-		'+studynotekrwiki' => array(
+		],
+		'+studynotekrwiki' => [
 			'KSN' => NS_KOREAN_STUDY_NOTE,
 			'KSN_TALK' => NS_KOREAN_STUDY_NOTE_TALK,
-		),
-		'+tmewiki' => array(
+		],
+		'+tmewiki' => [
 			'The_Multilingual_Encyclopedia' => NS_PROJECT,
 			'Projekto' => NS_PROJECT,
 			'The_Multilingual_Encyclopedia_talk' => NS_PROJECT_TALK,
@@ -3488,7 +3487,7 @@ $wgConf->settings = array(
 			'Skabelon' => NS_TEMPLATE,
 			'Kategori' => NS_CATEGORY,
 			'Predefinição' => NS_TEMPLATE,
-			'Imagem' => NS_IMAGE,
+			'Imagem' => NS_FILE,
 			'Kategorie' => NS_CATEGORY,
 			'Kategoriebespreking' => NS_CATEGORY_TALK,
 			'Plantilla' => NS_TEMPLATE,
@@ -3557,82 +3556,82 @@ $wgConf->settings = array(
 			'Thảo_luận_Thể_loại' => NS_CATEGORY_TALK,
 			'Padron' => NS_TEMPLATE,
 			'Usapang_padron' => NS_TEMPLATE_TALK,
-		),
-		'+vandalismwikiwiki' => array(
+		],
+		'+vandalismwikiwiki' => [
 			'H' => NS_HELP,
 			'HT' => NS_HELP_TALK,
 			'VW' => NS_PROJECT,
 			'VT' => NS_PROJECT_TALK,
-		),
-	),
-	'+wgNamespaceProtection' => array(
-		'default' => array(),
-		'+nenawikiwiki' => array(
-			NS_MAIN => array(
+		],
+	],
+	'+wgNamespaceProtection' => [
+		'default' => [],
+		'+nenawikiwiki' => [
+			NS_MAIN => [
 				'edit-content-pages',
-			),
-			NS_USER => array(
+			],
+			NS_USER => [
 				'edit-content-pages',
-			),
-			NS_PROJECT => array(
+			],
+			NS_PROJECT => [
 				'edit-content-pages',
-			),
-			NS_FILE => array(
+			],
+			NS_FILE => [
 				'edit-content-pages',
-			),
-			NS_TEMPLATE => array(
+			],
+			NS_TEMPLATE => [
 				'edit-content-pages',
-			),
-			NS_HELP => array(
+			],
+			NS_HELP => [
 				'edit-admin-pages',
-			),
-			NS_CATEGORY => array(
+			],
+			NS_CATEGORY => [
 				'edit-content-pages',
-			),
-			NS_TALK => array(
+			],
+			NS_TALK => [
 				'edit-talkpages',
-			),
-		),
-		'+whentheycrywiki' => array(
-			NS_USER => array(
+			],
+		],
+		'+whentheycrywiki' => [
+			NS_USER => [
 				'edit-userpage',
-			),
-		),
-		'+weatherwiki' => array(
-			NS_PROJECT => array(
+			],
+		],
+		'+weatherwiki' => [
+			NS_PROJECT => [
 				'edit-restrictednamespace',
-			),
-			NS_TEMPLATE => array(
+			],
+			NS_TEMPLATE => [
 				'edit-restrictednamespace',
-			),
-			WMG_NS_MODULE => array(
+			],
+			WMG_NS_MODULE => [
 				'edit-restrictednamespace',
-			),
-		),
-		'+yeoksawiki' => array(
-			NS_PROJECT => array(
+			],
+		],
+		'+yeoksawiki' => [
+			NS_PROJECT => [
 				'project-edit',
-			),
-		),
-	),
-	'+wgNamespacesToBeSearchedDefault' => array(
-		'default' => array(),
-		'+isvwiki' => array(
+			],
+		],
+	],
+	'+wgNamespacesToBeSearchedDefault' => [
+		'default' => [],
+		'+isvwiki' => [
 			NS_LIBRARY => true,
-		),
-		'+metawiki' => array(
+		],
+		'+metawiki' => [
 			NS_TECH => true,
-		),
-		'+monarchistswiki' => array(
+		],
+		'+monarchistswiki' => [
 			NS_MUSINGS => true,
-		),
-		'+starmetalwiki' => array(
+		],
+		'+starmetalwiki' => [
 			NS_USER => true,
-		),
-		'+thelonsdalebattalionwiki' => array(
+		],
+		'+thelonsdalebattalionwiki' => [
 			NS_GLOSSARY => true,
-		),
-		'+tmewiki' => array(
+		],
+		'+tmewiki' => [
 			NS_CALL_OF_DUTY => true,
 			NS_MINECRAFT => true,
 			NS_SUPER_MARIO_LAND_2 => true,
@@ -3647,13 +3646,13 @@ $wgConf->settings = array(
 			NS_GAME => true,
 			NS_IDEA => true,
 			NS_TIMELINE => true,
-		),
-	),
-	'+wgNamespacesWithSubpages' => array(
-		'default' => array(
+		],
+	],
+	'+wgNamespacesWithSubpages' => [
+		'default' => [
 			NS_MAIN => true,
-		),
-		'+apunteswiki' => array(
+		],
+		'+apunteswiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3664,8 +3663,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+centralwiki' => array(
+		 ],
+		'+centralwiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3676,8 +3675,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+crazybloxianempireinfowiki' => array(
+		 ],
+		'+crazybloxianempireinfowiki' => [
 			NS_LIST => true,
 			NS_LIST_TALK => true,
 			NS_STOREFRONT => true,
@@ -3688,8 +3687,8 @@ $wgConf->settings = array(
 			NS_EXECUTIVE_ORDER_TALK => true,
 			NS_GROUP => true,
 			NS_GROUP_TALK => true,
-		 ),
-		'+destinoswiki' => array(
+		 ],
+		'+destinoswiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3700,8 +3699,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+infowiki' => array(
+		 ],
+		'+infowiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3712,8 +3711,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+mediatecawiki' => array(
+		 ],
+		'+mediatecawiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3724,8 +3723,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+privadowiki' => array(
+		 ],
+		'+privadowiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3736,8 +3735,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+tallerwiki' => array(
+		 ],
+		'+tallerwiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3748,8 +3747,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+ucroniaswiki' => array(
+		 ],
+		'+ucroniaswiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -3760,44 +3759,44 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+adnovumwiki' => array(
+		 ],
+		'+adnovumwiki' => [
 			NS_MAIN => true,
 			NS_USER => true,
 			NS_TEMPLATE => true,
 			NS_PORTAL => true,
 			NS_HELP => true,
-		),
-		'+allthetropeswiki' => array(
+		],
+		'+allthetropeswiki' => [
 			NS_MAIN => true,
 			NS_TROPEWORKSHOP => true,
-		),
-		'+alwikiwiki' => array(
+		],
+		'+alwikiwiki' => [
 			NS_MAIN => true,
-		),
-		'+caeruleawiki' => array(
+		],
+		'+caeruleawiki' => [
 			NS_MAIN => true,
-		),
-		'+christipediawiki' => array(
+		],
+		'+christipediawiki' => [
 			NS_MAIN => true,
-		),
-		'+cnvwiki' => array(
+		],
+		'+cnvwiki' => [
 			NS_MAIN => true,
-		),
-		'+conductwiki' => array(
+		],
+		'+conductwiki' => [
 			NS_MAIN => true,
-		),
-		'+ecoepiwiki' => array(
+		],
+		'+ecoepiwiki' => [
 			NS_PARAMETER => true,
 			NS_PARAMETER_TALK => true,
-		),
-		'+eotewiki' => array(
+		],
+		'+eotewiki' => [
 			NS_MAIN => true,
-		),
-		'+hobbieswiki' => array(
+		],
+		'+hobbieswiki' => [
 			NS_MAIN => true,
-		),
-		'+humorpediawiki' => array(
+		],
+		'+humorpediawiki' => [
 			NS_MAIN => true,
 			NS_TALK => true,
 			NS_USER => true,
@@ -3814,47 +3813,47 @@ $wgConf->settings = array(
 			NS_HELP_TALK => true,
 			NS_CATEGORY => true,
 			NS_CATEGORY_TALK => true,
-		),
-		'+ictjudikaturawiki' => array(
+		],
+		'+ictjudikaturawiki' => [
 			NS_MAIN => true,
-		),
-		'+isvwiki' => array(
+		],
+		'+isvwiki' => [
 			NS_LIBRARY => true,
 			NS_LIBRARY_TALK => true,
-		),
-		'+jadtechwiki' => array(
+		],
+		'+jadtechwiki' => [
 			NS_GAMEPAGE => true,
 			NS_GAMEPAGE_TALK => true,
-		),
-		'+jawp2chwiki' => array(
+		],
+		'+jawp2chwiki' => [
 			NS_TEMPLATE => true,
-		),
-		'+machiningwiki' => array(
+		],
+		'+machiningwiki' => [
 			NS_MAIN => true,
 			NS_TEMPLATE => true,
-		),
-		'+metawiki' => array(
+		],
+		'+metawiki' => [
 			NS_MAIN => true,
 			NS_TECH => true,
-		),
-		'+monarchistswiki' => array(
+		],
+		'+monarchistswiki' => [
 			NS_MUSINGS => true,
-		),
-		'+r2wiki' => array(
+		],
+		'+r2wiki' => [
 			NS_MAIN => true,
-		),
-		'+raymanspeedrunwiki' => array(
+		],
+		'+raymanspeedrunwiki' => [
 			NS_MAIN => true,
-		),
-		'+reviwiki' => array(
+		],
+		'+reviwiki' => [
 			NS_MAIN => true,
 			NS_SERVER => true,
-		),
-		'+reviwikiwiki' => array(
+		],
+		'+reviwikiwiki' => [
 			NS_MAIN => true,
 			NS_HANDBOOK => true,
-		),
-		'+nonciclopediawiki' => array(
+		],
+		'+nonciclopediawiki' => [
 			NS_PORTALE => true,
 			NS_DISCUSSIONI_PORTALE => true,
 			NS_PROGETTO => true,
@@ -3875,22 +3874,22 @@ $wgConf->settings = array(
 			NS_DISCUSSIONI_NONSOURCE => true,
 			NS_NONBOOKS => true,
 			NS_DISCUSSIONI_NONBOOKS => true,
-		),
-		'+rswiki' => array(
+		],
+		'+rswiki' => [
 			NS_TEMPLATE => true,
-		),
-		'+safiriawiki' => array(
+		],
+		'+safiriawiki' => [
 			NS_MAIN => true,
 			NS_HOENN => true,
-		),
-		'+sidemwiki' => array(
+		],
+		'+sidemwiki' => [
 			NS_MAIN => true,
 			NS_USER => true,
-		),
-		'+thegreatwarwiki' => array(
+		],
+		'+thegreatwarwiki' => [
 			NS_MAIN => true,
-		),
-		'+tmewiki' => array(
+		],
+		'+tmewiki' => [
 			NS_MAIN => true,
 			NS_USER => true,
 			NS_PROJECT => true,
@@ -3910,25 +3909,25 @@ $wgConf->settings = array(
 			NS_GAME => true,
 			NS_IDEA => true,
 			NS_TIMELINE => true,
-		),
-		'+voidwiki' => array(
+		],
+		'+voidwiki' => [
 			NS_MAIN => true,
-		),
-		'+wisdomwikiwiki' => array(
+		],
+		'+wisdomwikiwiki' => [
 			NS_MAIN => true,
 			NS_LCS => true,
 			NS_LIBRARY => true,
 			NS_TEACHING => true,
-		),
-	),
-	
-	'wgNamespaceContentModels' => array(
-		'default' => array(),
-		'isvwiki' => array(
+		],
+	],
+
+	'wgNamespaceContentModels' => [
+		'default' => [],
+		'isvwiki' => [
 			WMG_NS_MODULE_TALK => 'flow-board',
 			NS_LIBRARY_TALK => 'flow-board',
-		),
-		'apunteswiki' => array(
+		],
+		'apunteswiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -3938,8 +3937,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-		'centralwiki' => array(
+		],
+		'centralwiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -3949,8 +3948,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-		'destinoswiki' => array(
+		],
+		'destinoswiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -3960,8 +3959,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-		'infowiki' => array(
+		],
+		'infowiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -3971,8 +3970,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-		'mediatecawiki' => array(
+		],
+		'mediatecawiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -3982,8 +3981,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-		'privadowiki' => array(
+		],
+		'privadowiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -3993,8 +3992,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-		'taller' => array(
+		],
+		'taller' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -4004,8 +4003,8 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-		'ucroniaswiki' => array(
+		],
+		'ucroniaswiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
 			NS_ANEXO_TALK => 'flow-board',
@@ -4015,407 +4014,407 @@ $wgConf->settings = array(
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
-		),
-	),
+		],
+	],
 	// OATHAuth [MWExempt]
-	'wgOATHAuthDatabase' => array(
+	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
-	),
+	],
 
 	// OAuth [MWExempt]
-	'wgMWOAuthCentralWiki' => array(
+	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
-	),
-	'wgMWOAuthSharedUserSource' => array(
+	],
+	'wgMWOAuthSharedUserSource' => [
 		'default' => 'CentralAuth',
-	),
-	'wgMWOAuthSecureTokenTransfer' => array(
+	],
+	'wgMWOAuthSecureTokenTransfer' => [
 		'default' => true,
-	),
+	],
 
 	// Pagelang [MW]
-	'wgPageLanguageUseDB' => array(
+	'wgPageLanguageUseDB' => [
 		'default' => false,
-	),
+	],
 
 	// Page Size [MWCandidate]
-	'wgMaxArticleSize' => array(
+	'wgMaxArticleSize' => [
 		'default' => 2048,
 		'nonsensopediawiki' => 8192,
-	),
+	],
 
 	// PageTriage [MWCandidate]
-	'wgPageTriageInfinitScrolling' => array(
+	'wgPageTriageInfinitScrolling' => [
 		'default' => true,
-	),
+	],
 
 	// Permissions [MWPermissions]
-	'wgGroupsAddToSelf' => array(
-		'default' => array(),
-		'+metawiki' => array(
-			'cvt' => array(
+	'wgGroupsAddToSelf' => [
+		'default' => [],
+		'+metawiki' => [
+			'cvt' => [
 				'flood',
-			),
-		),
-		'+weatherwiki' => array(
-			'importer' => array(
+			],
+		],
+		'+weatherwiki' => [
+			'importer' => [
 				'flood',
-			),
-		),
-	),
-	'wgGroupsRemoveFromSelf' => array(
-		'default' => array(),
-		'+harrypotterwiki' => array(
-			'bureaucrat' => array(
+			],
+		],
+	],
+	'wgGroupsRemoveFromSelf' => [
+		'default' => [],
+		'+harrypotterwiki' => [
+			'bureaucrat' => [
 				'bureaucrat',
-			),
-		),
-		'+metawiki' => array(
-			'cvt' => array(
+			],
+		],
+		'+metawiki' => [
+			'cvt' => [
 				'flood',
-			),
-		),
-		'+weatherwiki' => array(
-			'importer' => array(
+			],
+		],
+		'+weatherwiki' => [
+			'importer' => [
 				'flood',
-			),
-		),
-	),
-	'wgRevokePermissions' => array(
-		'default' => array(),
-		'ssptopwiki' => array(
-			'read-only' => array(
+			],
+		],
+	],
+	'wgRevokePermissions' => [
+		'default' => [],
+		'ssptopwiki' => [
+			'read-only' => [
 				'edit' => true,
-			),
-		),
-		'weatherwiki' => array(
- 			'banned' => array(
- 				'editmyoptions' => true,
- 				'editmyprivateinfo' => true,
- 				'editmyusercss' => true,
- 				'editmyuserjs' => true,
- 				'editmywatchlist' => true,
- 				'read' => true,
- 				'writeapi' => true,
- 				'viewmyprivateinfo' => true,
- 				'viewmywatchlist' => true,
- 			),
- 		),
-	),
-	'wgAutopromote' => array(
-		'default' => array(
-			'autoconfirmed' => array(
+			],
+		],
+		'weatherwiki' => [
+			'banned' => [
+				'editmyoptions' => true,
+				'editmyprivateinfo' => true,
+				'editmyusercss' => true,
+				'editmyuserjs' => true,
+				'editmywatchlist' => true,
+				'read' => true,
+				'writeapi' => true,
+				'viewmyprivateinfo' => true,
+				'viewmywatchlist' => true,
+			],
+		],
+	],
+	'wgAutopromote' => [
+		'default' => [
+			'autoconfirmed' => [
 				"&",
-				array( APCOND_EDITCOUNT, &$wgAutoConfirmCount ),
-				array( APCOND_AGE, &$wgAutoConfirmAge ),
-			),
-		),
-		'+bitcoindebateswiki' => array(
-			'emailconfirmed' => array(
+				[ APCOND_EDITCOUNT, &$wgAutoConfirmCount ],
+				[ APCOND_AGE, &$wgAutoConfirmAge ],
+			],
+		],
+		'+bitcoindebateswiki' => [
+			'emailconfirmed' => [
 				APCOND_EMAILCONFIRMED,
-			),
-		),
-		'+nenawikiwiki' => array(
-			'emailconfirmed' => array(
+			],
+		],
+		'+nenawikiwiki' => [
+			'emailconfirmed' => [
 				APCOND_EMAILCONFIRMED,
-			),
-		),
-		'+igrovyesistemywiki' => array(
-			'UserType1' => array(
+			],
+		],
+		'+igrovyesistemywiki' => [
+			'UserType1' => [
 				"&",
-				array( APCOND_EDITCOUNT, 1),
-				array( APCOND_AGE, 0 ),
-				array( '!', array( APCOND_INGROUPS, 'UserType2' ) ),
-			),
-			'UserType2' => array(
+				[ APCOND_EDITCOUNT, 1 ],
+				[ APCOND_AGE, 0 ],
+				[ '!', [ APCOND_INGROUPS, 'UserType2' ] ],
+			],
+			'UserType2' => [
 				"&",
-				array( APCOND_EDITCOUNT, 50),
-				array( APCOND_AGE, 0 ),
-				array( '!', array( APCOND_INGROUPS, 'UserType3' ) ),
-			),
-			'UserType3' => array(
+				[ APCOND_EDITCOUNT, 50 ],
+				[ APCOND_AGE, 0 ],
+				[ '!', [ APCOND_INGROUPS, 'UserType3' ] ],
+			],
+			'UserType3' => [
 				"&",
-				array( APCOND_EDITCOUNT, 300),
-				array( APCOND_AGE, 0 ),
-				array( '!', array( APCOND_INGROUPS, 'UserType4' ) ),
-			),
-			'UserType4' => array(
+				[ APCOND_EDITCOUNT, 300 ],
+				[ APCOND_AGE, 0 ],
+				[ '!', [ APCOND_INGROUPS, 'UserType4' ] ],
+			],
+			'UserType4' => [
 				"&",
-				array( APCOND_EDITCOUNT, 500),
-				array( APCOND_AGE, 0 ),
-				array( '!', array( APCOND_INGROUPS, 'UserType5' ) ),
-			),
-			'UserType5' => array(
+				[ APCOND_EDITCOUNT, 500 ],
+				[ APCOND_AGE, 0 ],
+				[ '!', [ APCOND_INGROUPS, 'UserType5' ] ],
+			],
+			'UserType5' => [
 				"&",
-				array( APCOND_EDITCOUNT, 1000),
-				array( APCOND_AGE, 0 ),
-				array( '!', array( APCOND_INGROUPS, 'UserType6' ) ),
-			),
-			'UserType6' => array(
+				[ APCOND_EDITCOUNT, 1000 ],
+				[ APCOND_AGE, 0 ],
+				[ '!', [ APCOND_INGROUPS, 'UserType6' ] ],
+			],
+			'UserType6' => [
 				"&",
-				array( APCOND_EDITCOUNT, 2000),
-				array( APCOND_AGE, 0 ),
-				array( '!', array( APCOND_INGROUPS, 'UserType7' ) ),
-			),
-			'UserType7' => array(
+				[ APCOND_EDITCOUNT, 2000 ],
+				[ APCOND_AGE, 0 ],
+				[ '!', [ APCOND_INGROUPS, 'UserType7' ] ],
+			],
+			'UserType7' => [
 				"&",
-				array( APCOND_EDITCOUNT, 3000),
-				array( APCOND_AGE, 0 ),
-			),
-		),
-		'+jacksonheightswiki' => array(
-			'emailconfirmed' => array(
+				[ APCOND_EDITCOUNT, 3000 ],
+				[ APCOND_AGE, 0 ],
+			],
+		],
+		'+jacksonheightswiki' => [
+			'emailconfirmed' => [
 				APCOND_EMAILCONFIRMED,
-			),
-		),
-		'+kyivstarwiki' => array(
-			'co' => array(
+			],
+		],
+		'+kyivstarwiki' => [
+			'co' => [
 				"&",
-				array( APCOND_EDITCOUNT, 3000 ),
-				array( APCOND_AGE, 365 * 86400 ),
-			),
-			'ceo' => array(
+				[ APCOND_EDITCOUNT, 3000 ],
+				[ APCOND_AGE, 365 * 86400 ],
+			],
+			'ceo' => [
 				"&",
-				array( APCOND_EDITCOUNT, 2000 ),
-				array( APCOND_AGE, 275 * 86400 ),
-			),
-			'editor' => array(
+				[ APCOND_EDITCOUNT, 2000 ],
+				[ APCOND_AGE, 275 * 86400 ],
+			],
+			'editor' => [
 				"&",
-				array( APCOND_EDITCOUNT, 300 ),
-				array( APCOND_AGE, 45 * 86400 ),
-			),
-			'extendedconfirmed' => array(
+				[ APCOND_EDITCOUNT, 300 ],
+				[ APCOND_AGE, 45 * 86400 ],
+			],
+			'extendedconfirmed' => [
 				"&",
-				array( APCOND_EDITCOUNT, 500 ),
-				array( APCOND_AGE, 90 * 86400 ),
-			),
-			'sysmag' => array(
+				[ APCOND_EDITCOUNT, 500 ],
+				[ APCOND_AGE, 90 * 86400 ],
+			],
+			'sysmag' => [
 				"&",
-				array( APCOND_EDITCOUNT, 1000 ),
-				array( APCOND_AGE, 185 * 86400 ),
-			),
-			'trusted' => array(
+				[ APCOND_EDITCOUNT, 1000 ],
+				[ APCOND_AGE, 185 * 86400 ],
+			],
+			'trusted' => [
 				"&",
-				array( APCOND_EDITCOUNT, 50 ),
-				array( APCOND_AGE, 7 * 86400 ),
-			),
-		),
-		'+olegcinemawiki' => array(
-			'uploader' => array(
+				[ APCOND_EDITCOUNT, 50 ],
+				[ APCOND_AGE, 7 * 86400 ],
+			],
+		],
+		'+olegcinemawiki' => [
+			'uploader' => [
 				"&",
-				array( APCOND_AGE, 10 * 86400 ),
-			),
-		),
-	),
-	'wgAutopromoteOnce' => array(
-		'default' => array(),
-		'weatherwiki' => array(
-			'extendedconfirmed' => array(
+				[ APCOND_AGE, 10 * 86400 ],
+			],
+		],
+	],
+	'wgAutopromoteOnce' => [
+		'default' => [],
+		'weatherwiki' => [
+			'extendedconfirmed' => [
 				"&",
-				array( APCOND_EDITCOUNT, 100 ),
-				array( APCOND_AGE, 30 * 86400 ),
-			),
-		),
-	),
-	'wgImplicitGroups' => array(
-		'default' => array( '*', 'user', 'autoconfirmed' ),
-		'bitcoindebateswiki' => array( '*', 'user', 'autoconfirmed', 'emailconfirmed' ),
-	),
+				[ APCOND_EDITCOUNT, 100 ],
+				[ APCOND_AGE, 30 * 86400 ],
+			],
+		],
+	],
+	'wgImplicitGroups' => [
+		'default' => [ '*', 'user', 'autoconfirmed' ],
+		'bitcoindebateswiki' => [ '*', 'user', 'autoconfirmed', 'emailconfirmed' ],
+	],
 
-	//Password policy [MWExempt]
-	'wgPasswordPolicy' => array(
-		'default' => array(
-			'policies' => array(
-				'default' => array(
+	// Password policy [MWExempt]
+	'wgPasswordPolicy' => [
+		'default' => [
+			'policies' => [
+				'default' => [
 					'MinimalPasswordLength' => 6,
 					'PasswordCannotMatchUsername' => true,
 					'PasswordCannotMatchBlacklist' => true,
 					'MaximalPasswordLength' => 4096,
-				),
-				'bot' => array(
+				],
+				'bot' => [
 					'MinimalPasswordLength' => 8,
 					'MinimumPasswordLengthToLogin' => 6,
 					'PasswordCannotMatchUsername' => true,
-				),
-				'sysop' => array(
-					'MinimalPasswordLength' => 8,
-					'MinimumPasswordLengthToLogin' => 6,
-					'PasswordCannotMatchUsername' => true,
-					'PasswordCannotBePopular' => 25,
-				),
-				'bureaucrat' => array(
+				],
+				'sysop' => [
 					'MinimalPasswordLength' => 8,
 					'MinimumPasswordLengthToLogin' => 6,
 					'PasswordCannotMatchUsername' => true,
 					'PasswordCannotBePopular' => 25,
-				),
-			),
-			'checks' => array(
+				],
+				'bureaucrat' => [
+					'MinimalPasswordLength' => 8,
+					'MinimumPasswordLengthToLogin' => 6,
+					'PasswordCannotMatchUsername' => true,
+					'PasswordCannotBePopular' => 25,
+				],
+			],
+			'checks' => [
 				'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
 				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
 				'PasswordCannotMatchUsername' => 'PasswordPolicyChecks::checkPasswordCannotMatchUsername',
 				'PasswordCannotMatchBlacklist' => 'PasswordPolicyChecks::checkPasswordCannotMatchBlacklist',
 				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
 				'PasswordCannotBePopular' => 'PasswordPolicyChecks::checkPopularPasswordBlacklist'
-			),
-		),
-	),
+			],
+		],
+	],
 
 	// RateLimits [MWExempt]
-	'+wgRateLimits' => array(
-		'default' => array(),
-		'metawiki' => array(
-			'requestwiki' => array(
-				'user' => array( 1, 3600 ),
-			),
-		),
-	),
+	'+wgRateLimits' => [
+		'default' => [],
+		'metawiki' => [
+			'requestwiki' => [
+				'user' => [ 1, 3600 ],
+			],
+		],
+	],
 
 	// RecentChanges [MWCandidate]
-	'wgRCMaxAge' => array(
+	'wgRCMaxAge' => [
 		'default' => 180 * 24 * 3600,
-	),
+	],
 
 	// RelatedArticles settings [MWCandidate]
-	'wgRelatedArticlesFooterWhitelistedSkins' => array(
-		'default' => array(
+	'wgRelatedArticlesFooterWhitelistedSkins' => [
+		'default' => [
 			'minerva',
 			'timeless',
 			'vector',
-		),
-		'avalicearchiveswiki' => array(
+		],
+		'avalicearchiveswiki' => [
 			'metrolook',
 			'vector',
-		),
-	),
-	'wgRelatedArticlesLoggingSamplingRate' => array(
+		],
+	],
+	'wgRelatedArticlesLoggingSamplingRate' => [
 		'default' => false,
 		'allthetropeswiki' => '0.01',
 		'avalicearchiveswiki' => '0.01',
 		'youtubewiki' => '0.01',
-	),
-	'wgRelatedArticlesShowReadMore' => array(
+	],
+	'wgRelatedArticlesShowReadMore' => [
 		'default' => false,
 		'allthetropeswiki' => true,
 		'avalicearchiveswiki' => true,
 		'youtubewiki' => true,
-	),
-	'wgRelatedArticlesShowInFooter' => array(
+	],
+	'wgRelatedArticlesShowInFooter' => [
 		'default' => false,
 		'allthetropeswiki' => true,
 		'avalicearchiveswiki' => true,
 		'youtubewiki' => true,
-	),
-	'wgRelatedArticlesUseCirrusSearch' => array(
+	],
+	'wgRelatedArticlesUseCirrusSearch' => [
 		'default' => false,
-	),
+	],
 
 	// Restriction types [MWCandidate]
-	'+wgRestrictionLevels' => array(
-		'default' => array(
+	'+wgRestrictionLevels' => [
+		'default' => [
 			'user',
-		),
-		'+bigforestwiki' => array(
+		],
+		'+bigforestwiki' => [
 			'editvoter',
-		),
-		'+cmgwiki' => array(
+		],
+		'+cmgwiki' => [
 			'bureaucrat',
 			'sysop',
 			'pm',
 			'member',
-		),
-		'+dpwiki' => array(
+		],
+		'+dpwiki' => [
 			'bureaucrat',
 			'respected',
-		),
-		'+testwiki' => array(
+		],
+		'+testwiki' => [
 			'bureaucrat',
 			'consul',
-		),
-		'igrovyesistemywiki' => array(
+		],
+		'igrovyesistemywiki' => [
 			'trusted',
 			'sysmag',
 			'bureaucrat',
 			'ceo',
 			'co',
-		),
-		'+kyivstarwiki' => array(
+		],
+		'+kyivstarwiki' => [
 			'co',
 			'ceo',
 			'editor',
 			'extendedconfirmed',
 			'sysmag',
 			'trusted',
-		),
-		'+lcars47wiki' => array(
+		],
+		'+lcars47wiki' => [
 			'bureaucrat',
 			'devteam',
-		),
-		'+marthaspeakswiki' => array(
+		],
+		'+marthaspeakswiki' => [
 			'templateeditor',
-		),
-		'+sau226wiki' => array(
+		],
+		'+sau226wiki' => [
 			'bureaucrat',
 			'consul',
-		),
-		'+jayuwikiwiki' => array(
+		],
+		'+jayuwikiwiki' => [
 			'editvoter',
-		),
-		'+pruebawiki' => array(
+		],
+		'+pruebawiki' => [
 			'bureaucrat',
 			'consul',
-		),
-		'+radviserwiki' => array(
+		],
+		'+radviserwiki' => [
 			'editor',
-		),
-		'+sovereignwiki' => array(
+		],
+		'+sovereignwiki' => [
 			'officer',
 			'game-master',
-		),
-		'+studynotekrwiki' => array(
+		],
+		'+studynotekrwiki' => [
 			'voter',
-		),
-		'+thesciencearchiveswiki' => array(
+		],
+		'+thesciencearchiveswiki' => [
 			'templateeditor',
-		),
-		'+trexwiki' => array(
+		],
+		'+trexwiki' => [
 			'sysmag',
 			'bureaucrat',
 			'ceo',
 			'co',
-		),
-		'weatherwiki' => array(),
-	),
+		],
+		'weatherwiki' => [],
+	],
 
-	'+wgRestrictionTypes' => array(
-		'default' => array(
+	'+wgRestrictionTypes' => [
+		'default' => [
 			'delete',
-		),
-		'cmgwiki' => array(
-			'delete',
-			'protect',
-		),
-		'lcars47wiki' => array(
+		],
+		'cmgwiki' => [
 			'delete',
 			'protect',
-		),
-		'pruebawiki' => array(
+		],
+		'lcars47wiki' => [
 			'delete',
 			'protect',
-		),
-		'sau226wiki' => array(
+		],
+		'pruebawiki' => [
 			'delete',
 			'protect',
-		),
-		'testwiki' => array(
+		],
+		'sau226wiki' => [
 			'delete',
 			'protect',
-		),
-		'weatherwiki' => array(),
-	),
+		],
+		'testwiki' => [
+			'delete',
+			'protect',
+		],
+		'weatherwiki' => [],
+	],
 
 	// Robot policy [MWCandidate]
-	'wgDefaultRobotPolicy' => array(
+	'wgDefaultRobotPolicy' => [
 		'default' => 'index,follow',
 		'ashinawiki' => 'noindex,nofollow',
 		'destinoswiki' => 'noindex,nofollow',
@@ -4426,219 +4425,219 @@ $wgConf->settings = array(
 		'paddelnwiki' => 'noindex,nofollow',
 		'reviwikiwiki' => 'noindex,nofollow',
 		'zhdelwiki' => 'noindex,nofollow',
-	),
+	],
 
 	// RSS Settings [MWCandidate]
-	'wgRSSCacheAge' => array(
+	'wgRSSCacheAge' => [
 		'default' => '3600'
-	),
-	'wgRSSProxy' => array(
+	],
+	'wgRSSProxy' => [
 		'default' => false,
-	),
-	'wgRSSDateDefaultFormat' => array(
+	],
+	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s'
-	),
+	],
 
 	// Scribunto [MWCandidate]
-	'wgCodeEditorEnableCore' => array(
+	'wgCodeEditorEnableCore' => [
 		'default' => true,
-	),
-	'wgScribuntoUseCodeEditor' => array(
+	],
+	'wgScribuntoUseCodeEditor' => [
 		'default' => true,
-	),
-	'wgScribuntoSlowFunctionThreshold' => array(
+	],
+	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
-	),
-	'wgScribuntoEngineConf' => array(
-		'default' => array(
-			'luasandbox' => array(
+	],
+	'wgScribuntoEngineConf' => [
+		'default' => [
+			'luasandbox' => [
 				'cpuLimit' => 10,
 				'maxLangCacheSize' => 200,
-			),
-			'luastandalone' => array(
+			],
+			'luastandalone' => [
 				'cpuLimit' => 10,
 				'maxLangCacheSize' => 200,
-			),
-		),
-	),
+			],
+		],
+	],
 
 	// Site notice opt out [MW]
-	'wmgSiteNoticeOptOut' => array(
+	'wmgSiteNoticeOptOut' => [
 		'default' => false,
-	),
+	],
 
 	// Server [MWExempt]
-	'wgArticlePath' => array(
+	'wgArticlePath' => [
 		'default' => '/wiki/$1',
-	),
-	'wgDisableOutputCompression' => array(
+	],
+	'wgDisableOutputCompression' => [
 		'default' => true,
-	),
-	'wgScriptExtension' => array(
+	],
+	'wgScriptExtension' => [
 		'default' => '.php',
-	),
-	'wgScriptPath' => array(
+	],
+	'wgScriptPath' => [
 		'default' => '/w',
-	),
-	'wgServer' => array(
+	],
+	'wgServer' => [
 		'default' => 'https://$lang.miraheze.org',
-	),
-	'wgShowHostnames' => array(
+	],
+	'wgShowHostnames' => [
 		'default' => true,
-	),
-	'wgUsePathInfo' => array(
+	],
+	'wgUsePathInfo' => [
 		'default' => true,
-	),
+	],
 
 	// SiteNotice [MWCandidate]
-	'wgDismissableSiteNoticeForAnons' => array(
+	'wgDismissableSiteNoticeForAnons' => [
 		'default' => true,
-	),
+	],
 
 	// SocialProfile [MWCandidate]
-	'wgUserBoard' => array(
+	'wgUserBoard' => [
 		'default' => false,
-	),
-	'wgUserProfileThresholds' => array(
-		'default' => array(
+	],
+	'wgUserProfileThresholds' => [
+		'default' => [
 			'edits' => 0,
-		),
-		'allthetropes' => array(
+		],
+		'allthetropes' => [
 			'edits' => 10,
-		),
-	),
-	'wgUserProfileDisplay' => array(
-		'default' => array(
+		],
+	],
+	'wgUserProfileDisplay' => [
+		'default' => [
 			'board' => false,
 			'friends' => false,
 			'foes' => false,
-		),
-	),
+		],
+	],
 
 	// Statistics [MWCandidate]
-	'wgArticleCountMethod' => array(
+	'wgArticleCountMethod' => [
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'fourleafficswiki' => 'any',
 		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
-	),
+	],
 
 	// Squid (aka Varnish) [MWExempt]
-	'wgUseSquid' => array(
+	'wgUseSquid' => [
 		'default' => true,
-	),
-	'wgSquidServers' => array(
-		'default' => array(
+	],
+	'wgSquidServers' => [
+		'default' => [
 			'107.191.126.23:81', // cp2
 			'81.4.109.133:81', // cp4
 			'172.104.111.8:81', // cp5
-		),
-	),
+		],
+	],
 
 	// Style [MWCandidate]
-	'wgAllowUserCss' => array(
+	'wgAllowUserCss' => [
 		'default' => true,
-	),
-	'wgAllowUserJs' => array(
+	],
+	'wgAllowUserJs' => [
 		'default' => true,
-	),
-	'wgAppleTouchIcon' => array(
+	],
+	'wgAppleTouchIcon' => [
 		'default' => '/apple-touch-icon.png',
-	),
-	'wgCentralAuthLoginIcon' => array(
+	],
+	'wgCentralAuthLoginIcon' => [
 		'default' => '/usr/share/nginx/favicons/default.ico',
-	),
-	'wgDefaultSkin' => array(
+	],
+	'wgDefaultSkin' => [
 		'default' => 'vector',
-	),
-	'wgFavicon' => array(
+	],
+	'wgFavicon' => [
 		'default' => '/favicon.ico',
-	),
-	'wgLogo' => array(
+	],
+	'wgLogo' => [
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
-	),
+	],
 
 	// TemplateSandbox [MWCandidate] (MWNamespaces?)
-	'wgTemplateSandboxEditNamespaces' => array(
-		'default' => array(
+	'wgTemplateSandboxEditNamespaces' => [
+		'default' => [
 			NS_TEMPLATE,
 			WMG_NS_MODULE
-		)
-	),
+		]
+	],
 
 	// Timezone [MW]
-	'wgLocaltimezone' => array(
+	'wgLocaltimezone' => [
 		'default' => 'UTC',
-	),
+	],
 
 	// Theme [MWCandidate]
-	'wgDefaultTheme' => array(
+	'wgDefaultTheme' => [
 		'default' => "",
-	),
+	],
 
 	// TitleBlacklist [MWExempt]
-	'wgTitleBlacklistSources' => array(
-		'default' => array(
+	'wgTitleBlacklistSources' => [
+		'default' => [
 			'type' => 'url',
 			'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
-		),
-		'meta' => array(
+		],
+		'meta' => [
 			'type' => 'url',
 			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
-		),
-	),
-	'wgTitleBlacklistUsernameSources' => array(
-		'default' => array(
+		],
+	],
+	'wgTitleBlacklistUsernameSources' => [
+		'default' => [
 			'type' => 'url',
 			'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
-		),
-		'meta' => array(
+		],
+		'meta' => [
 			'type' => 'url',
 			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
-		),
-	),
-	'wgTidyConfig' => array(
-		'default' => array(
+		],
+	],
+	'wgTidyConfig' => [
+		'default' => [
 			'driver' => 'RemexHtml'
-		),
-	),
+		],
+	],
 
 	// Translate [MWCandidate]
-	'wmgTranslateBlacklist' => array(
-		'default' => array(),
-		'metawiki' => array(
-			'*' => array(
+	'wmgTranslateBlacklist' => [
+		'default' => [],
+		'metawiki' => [
+			'*' => [
 				'en' => 'English is the source language.',
-			),
-		),
-		'spiralwiki' => array(
-			'*' => array(
+			],
+		],
+		'spiralwiki' => [
+			'*' => [
 				'en' => 'English is the source language.',
-			),
-		),
-	),
-	'wmgTranslateTranslationServices' => array(
-		'default' => array(),
-	),
-	'wmgTranslateDocumentationLanguageCode' => array(
+			],
+		],
+	],
+	'wmgTranslateTranslationServices' => [
+		'default' => [],
+	],
+	'wmgTranslateDocumentationLanguageCode' => [
 		'default' => false,
 		'nvcwiki' => 'qqq',
-	),
+	],
 
 	// UniversalLanguageSelector [MWCandidate]
-	'wgULSAnonCanChangeLanguage' => array(
+	'wgULSAnonCanChangeLanguage' => [
 		'default' => false,
-	),
+	],
 
 	// UrlShortener [MWExempt]
-	'wgUrlShortenerTemplate' => array(
+	'wgUrlShortenerTemplate' => [
 		'default' => '/m/$1',
-	),
-	'wgUrlShortenerDBName' => array(
+	],
+	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
-	),
-	'wgUrlShortenerDomainsWhitelist' => array(
-		'default' => array(
+	],
+	'wgUrlShortenerDomainsWhitelist' => [
+		'default' => [
 			'(.*\.)?miraheze\.org',
 			'adadevelopersacademy\.wiki',
 			'allthetropes\.org',
@@ -4716,7 +4715,7 @@ $wgConf->settings = array(
 			'www\.splat-teams\.com',
 			'takethatwiki\.com',
 			'wiki\.taotac.org',
-			'taotac\.info'.
+			'taotac\.info' .
 			'wiki\.teessidehackspace\.org\.uk',
 			'wiki\.tensorflow\.community',
 			'thelonsdalebattalion\.co.uk',
@@ -4725,7 +4724,7 @@ $wgConf->settings = array(
 			'wiki\.valentinaproject.org',
 			'wiki\.kaisaga.com',
 			'wikiescola\.com\.br',
-			'wiki\.worlduniversityandschool\.org'.
+			'wiki\.worlduniversityandschool\.org' .
 			'wikipuk\.cl',
 			'wiki\.ombre\.io',
 			'wiki.rmbrk\.com',
@@ -4748,19 +4747,19 @@ $wgConf->settings = array(
 			'wiki\.mikrodev\.com',
 			'wiki\.campaign-labour\.org',
 			'encyclopedie\.didactiqueprofessionnelle\.org',
-		),
-	),
+		],
+	],
 
 	// VisualEditor [MWCandidate]
-	'wmgVisualEditorEnableDefault' => array(
+	'wmgVisualEditorEnableDefault' => [
 		'default' => true,
-	),
-	'wmgVisualEditorAvailableNamespaces' => array(
-		'default' => array(
+	],
+	'wmgVisualEditorAvailableNamespaces' => [
+		'default' => [
 			NS_MAIN => true,
 			NS_USER => true,
-		),
-		'+apunteswiki' => array(
+		],
+		'+apunteswiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4771,8 +4770,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+centralwiki' => array(
+		 ],
+		'+centralwiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4783,8 +4782,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+destinoswiki' => array(
+		 ],
+		'+destinoswiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4795,8 +4794,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+infowiki' => array(
+		 ],
+		'+infowiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4807,8 +4806,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+mediatecawiki' => array(
+		 ],
+		'+mediatecawiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4819,8 +4818,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+privadowiki' => array(
+		 ],
+		'+privadowiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4831,8 +4830,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+tallerwiki' => array(
+		 ],
+		'+tallerwiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4843,8 +4842,8 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),
-		'+ucroniaswiki' => array(
+		 ],
+		'+ucroniaswiki' => [
 			NS_PROJECT => true,
 			NS_PAGE => true,
 			NS_ANEXO => true,
@@ -4855,28 +4854,28 @@ $wgConf->settings = array(
 			NS_TALLER => true,
 			NS_MODELO => true,
 			NS_EXAMPLE => true,
-	 	 ),	
-		'+espiralwiki' => array(
+		 ],
+		'+espiralwiki' => [
 			NS_PROJECT => true,
-		),
-		'+isvwiki' => array(
+		],
+		'+isvwiki' => [
 			NS_LIBRARY => true,
-		),
-		'+oncprojectwiki' => array(
+		],
+		'+oncprojectwiki' => [
 			NS_PROJECT => true,
 			NS_TEMPLATE => true,
 			NS_CATEGORY => true,
 			NS_FILE => true,
-		),
-		'+wisdomwikiwiki' => array(
+		],
+		'+wisdomwikiwiki' => [
 			NS_LCS => true,
 			NS_MEDI => true,
 			NS_LIBRARY => true,
 			NS_TEACHING => true,
 			NS_BLANK => true,
-		),
-	),
-	'wgVisualEditorShowBetaWelcome' => array(
+		],
+	],
+	'wgVisualEditorShowBetaWelcome' => [
 		'default' => true,
 		'isvwiki' => false,
 		'jcswiki' => false,
@@ -4888,75 +4887,75 @@ $wgConf->settings = array(
 		'privadowiki' => false,
 		'tallerwiki' => false,
 		'ucroniaswiki' => false,
-	),
-	'wgVisualEditorSupportedSkins' => array(
-		'default' => array(),
-		'permanentfuturelabwiki' => array( 'foreground' ),
-		'pfsolutions' => array( 'metrolook' ),
-	),
-	'wgVisualEditorUseSingleEditTab' => array(
+	],
+	'wgVisualEditorSupportedSkins' => [
+		'default' => [],
+		'permanentfuturelabwiki' => [ 'foreground' ],
+		'pfsolutions' => [ 'metrolook' ],
+	],
+	'wgVisualEditorUseSingleEditTab' => [
 		'default' => false,
 		'espiralwiki' => true,
 		'isvwiki' => true,
 		'spiralwiki' => true,
-	),
+	],
 	// WikidataPageBanner [MWCandidate]
-	'wgWPBNamespaces' => array(
-		'default' => array( NS_MAIN ),
-		'+apunteswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-		'+centralwiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-		'+destinoswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-		'+infowiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-		'+mediatecawiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-		'+privadowiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-		'+tallerwiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-		'+ucroniaswiki' => array( NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ),
-	),
+	'wgWPBNamespaces' => [
+		'default' => [ NS_MAIN ],
+		'+apunteswiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+		'+centralwiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+		'+destinoswiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+		'+infowiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+		'+mediatecawiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+		'+privadowiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+		'+tallerwiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+		'+ucroniaswiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
+	],
 
 	// Protect site config [MWCandidate]
-	'wgProtectSiteLimit' => array(
+	'wgProtectSiteLimit' => [
 		'default' => '1 week',
 		'infectopedwiki' => '10 years',
 		'campaignlabwiki' => 'indefinite',
 		'tnoteswiki' => 'indefinite',
 		'weatherwiki' => 'indefinite',
-	),
-	'wgProtectSiteDefaultTimeout' => array(
+	],
+	'wgProtectSiteDefaultTimeout' => [
 		'default' => '1 hour',
 		'infectopedwiki' => '1 year',
 		'tnoteswiki' => '2 hours',
 		'weatherwiki' => '1 week',
-	),
+	],
 
 	// WebChat config [MWCandidate]
-	'wmgWebChatServer' => array(
+	'wmgWebChatServer' => [
 		'default' => false,
 		'allthetropeswiki' => 'irc.freenode.net',
 		'ildrilwiki' => 'irc.sorcery.net',
 		'lothuialethwiki' => 'irc.sorcery.net',
 		'pnphilotenwiki' => 'irc.freenode.net',
 		'wisdomwikiwiki' => 'irc.freenode.net',
-	),
-	'wmgWebChatChannel' => array(
+	],
+	'wmgWebChatChannel' => [
 		'default' => false,
 		'allthetropeswiki' => '#miraheze-allthetropes',
 		'ildrilwiki' => '#Aesir',
 		'lothuialethwiki' => '#Aesir',
 		'pnphilotenwiki' => '#miraheze-pnphiloten',
 		'wisdomwikiwiki' => '#miraheze-wisdomwiki',
-	),
-	'wmgWebChatClient' => array(
+	],
+	'wmgWebChatClient' => [
 		'default' => false,
 		'allthetropeswiki' => 'freenodeChat',
 		'ildrilwiki' => 'Mibbit',
 		'lothuialethwiki' => 'Mibbit',
 		'pnphilotenwiki' => 'freenodeChat',
 		'wisdomwikiwiki' => 'freenodeChat',
-	),
+	],
 
 	// Wikimedia Incubator Settings [MWExempt?]
-	'wmincProjects' => array(
-		'default' => array(
+	'wmincProjects' => [
+		'default' => [
 			'p' => 'Wikipedia',
 			'b' => 'Wikibooks',
 			't' => 'Wiktionary',
@@ -4965,65 +4964,65 @@ $wgConf->settings = array(
 			'y' => 'Wikivoyage',
 			's' => 'Wikisource',
 			'v' => 'Wikiversity',
-		),
-	),
-	'wmincProjectSite' => array(
-		'default' => array(
+		],
+	],
+	'wmincProjectSite' => [
+		'default' => [
 			'name' => 'Incubator Plus 2.0',
 			'short' => 'incplus',
-		),
-	),
-	'wmincSisterProjects' => array(
-		'default' => array(
+		],
+	],
+	'wmincSisterProjects' => [
+		'default' => [
 			'm' => 'Miraheze Meta',
-		),
-	),
-	'wmincExistingWikis' => array(
+		],
+	],
+	'wmincExistingWikis' => [
 		'default' => null,
-	),
-	'wmincClosedWikis' => array(
+	],
+	'wmincClosedWikis' => [
 		'default' => false,
-	),
-	'wmincMultilingualProjects' => array(
-		'default' => array(),
-	),
+	],
+	'wmincMultilingualProjects' => [
+		'default' => [],
+	],
 
 	// Whitelist [MWCandidate]
-	'wmgUseMainPageWhitelist' => array(
+	'wmgUseMainPageWhitelist' => [
 		'default' => true,
 		'rwsaleswiki' => false,
-	),
+	],
 
 	// WikiDiscover [MWExempt]
-	'wgWikiDiscoverClosedList' => array(
+	'wgWikiDiscoverClosedList' => [
 		'default' => '/srv/mediawiki/dblist/closed.dblist',
-	),
-	'wgWikiDiscoverInactiveList' => array(
+	],
+	'wgWikiDiscoverInactiveList' => [
 		'default' => '/srv/mediawiki/dblist/inactive.dblist',
-	),
-	'wgWikiDiscoverPrivateList' => array(
+	],
+	'wgWikiDiscoverPrivateList' => [
 		'default' => '/srv/mediawiki/dblist/private.dblist',
-	),
+	],
 
 	// Empty arrays (do not touch unless you know what you're doing)
-	'wmgClosedWiki' => array(
+	'wmgClosedWiki' => [
 		'default' => false,
-	),
-	'wmgInactiveWiki' => array(
+	],
+	'wmgInactiveWiki' => [
 		'default' => false,
-	),
-	'wmgPrivateWiki' => array(
+	],
+	'wmgPrivateWiki' => [
 		'default' => false,
-	),
+	],
 
 	// Uncategorised [MWCandidate]
-	'wgRandomGameDisplay' => array(
-		'default' => array(
+	'wgRandomGameDisplay' => [
+		'default' => [
 			'random_picturegame' => false,
 			'random_poll' => false,
-		),
-	),
-);
+		],
+	],
+];
 
 function efGetSiteParams( $conf, $wiki ) {
 	$site = null;
@@ -5035,16 +5034,16 @@ function efGetSiteParams( $conf, $wiki ) {
 			break;
 		}
 	}
-	return array(
+	return [
 		'suffix' => $site,
 		'lang' => $lang,
-		'params' => array(
+		'params' => [
 			'lang' => $lang,
 			'site' => $site,
 			'wiki' => $wiki,
-		),
-		'tags' => array(),
-	);
+		],
+		'tags' => [],
+	];
 }
 
 $wgConf->siteParamsCallback = 'efGetSiteParams';
@@ -5063,11 +5062,11 @@ if ( defined( 'MW_DB' ) ) {
 }
 
 # Initialize dblist
-$wgLocalDatabases = array();
+$wgLocalDatabases = [];
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 // ManageWiki settings
-require_once( "/srv/mediawiki/config/ManageWiki.php" );
+require_once "/srv/mediawiki/config/ManageWiki.php";
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wikiDB = explode( '|', $wikiLine, 6 );
@@ -5097,9 +5096,10 @@ foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
 			$wgDBname = $value;
 		}
 	}
-        if ( $val === 'https://' . $wmgHostname ) {
-            $wgDBname = $name;
-        }
+
+	if ( $val === 'https://' . $wmgHostname ) {
+		$wgDBname = $name;
+	}
 }
 
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
@@ -5129,36 +5129,36 @@ $wgConf->extractAllGlobals( $wgDBname );
 
 if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
-} else if ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+} elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 }
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-        $wgCentralAuthCookieDomain = $wmgHostname;
+	$wgCentralAuthCookieDomain = $wmgHostname;
 	$wgCookieDomain = $wmgHostname;
 }
 
 # Footer icon
-$wgFooterIcons['poweredby']['miraheze'] = array(
+$wgFooterIcons['poweredby']['miraheze'] = [
 	'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
 	'url' => 'https://meta.miraheze.org/wiki/',
 	'alt' => 'Miraheze Wiki Hosting',
-);
+];
 
 if ( $wgDBname === 'permanentfuturelabwiki' ) {
-	$wgFooterIcons['poweredby']['wikiapiary'] = array(
+	$wgFooterIcons['poweredby']['wikiapiary'] = [
 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
 		'alt' => 'Monitored by WikiApiary',
-	);
+	];
 }
 
 if ( $wgDBname === 'tmewiki' ) {
-	$wgFooterIcons['poweredby']['wikiapiary'] = array(
-    		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-    		'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
-    		'alt' => 'Monitored by WikiApiary',
-	);
+	$wgFooterIcons['poweredby']['wikiapiary'] = [
+			'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+			'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
+			'alt' => 'Monitored by WikiApiary',
+	];
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
@@ -5183,12 +5183,12 @@ function lfTOSLink( $sk, &$tpl ) {
 }
 
 // Include other configuration files
-require_once( "/srv/mediawiki/config/Database.php" );
-require_once( "/srv/mediawiki/config/GlobalLogging.php" );
-require_once( "/srv/mediawiki/config/LocalExtensions.php" );
-require_once( "/srv/mediawiki/config/MissingWiki.php" );
-require_once( "/srv/mediawiki/config/Redis.php" );
-require_once( "/srv/mediawiki/config/Sitenotice.php" );
+require_once "/srv/mediawiki/config/Database.php";
+require_once "/srv/mediawiki/config/GlobalLogging.php";
+require_once "/srv/mediawiki/config/LocalExtensions.php";
+require_once "/srv/mediawiki/config/MissingWiki.php";
+require_once "/srv/mediawiki/config/Redis.php";
+require_once "/srv/mediawiki/config/Sitenotice.php";
 
 // per T3457 - Miraheze Commons
 if ( $wgDBname !== 'commonswikiwiki' ) {
@@ -5214,9 +5214,9 @@ if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
 }
 
 // Define last to avoid all dependencies
-require_once( "/srv/mediawiki/config/LocalWiki.php" );
+require_once "/srv/mediawiki/config/LocalWiki.php";
 
 // Define last - Extension message files for loading extensions
 if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
-	require_once( "/srv/mediawiki/config/ExtensionMessageFiles.php" );
+	require_once "/srv/mediawiki/config/ExtensionMessageFiles.php";
 }

@@ -1,91 +1,91 @@
 <?php
 
 if ( $wgDBname == 'apellidosmurcianoswiki' ) {
-	$wgContactConfig['default'] = array(
+	$wgContactConfig['default'] = [
 		'RecipientUser' => 'Lorenzolaxmonzon',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
-		'AdditionalFields' => array(),
+		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
-		'RLModules' => array(),
-		'RLStyleModules' => array(),
-	);
+		'RLModules' => [],
+		'RLStyleModules' => [],
+	];
 }
 
 if ( $wgDBname == 'ayrshirewiki' ) {
-	$wgContactConfig['default'] = array(
+	$wgContactConfig['default'] = [
 		'RecipientUser' => 'Gordonuk',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
-		'AdditionalFields' => array(),
+		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
-		'RLModules' => array(),
-		'RLStyleModules' => array(),
-	);
+		'RLModules' => [],
+		'RLStyleModules' => [],
+	];
 }
 
 if ( $wgDBname == 'cdcwiki' ) {
-	$wgContactConfig['default'] = array(
+	$wgContactConfig['default'] = [
 		'RecipientUser' => 'NonstickRon',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // Lets not do this ever for privacy (unless offical forms)
-		'AdditionalFields' => array(),
+		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
-		'RLModules' => array(),
-		'RLStyleModules' => array(),
-	);
+		'RLModules' => [],
+		'RLStyleModules' => [],
+	];
 }
 
 if ( $wgDBname == 'christipediawiki' ) {
-	$wgContactConfig['default'] = array(
+	$wgContactConfig['default'] = [
 		'RecipientUser' => 'Kees Langeveld',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
-		'AdditionalFields' => array(),
+		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
-		'RLModules' => array(),
-		'RLStyleModules' => array(),
-	);
+		'RLModules' => [],
+		'RLStyleModules' => [],
+	];
 }
 
 if ( $wgDBname == 'fablabesdswiki' ) {
-	$wgContactConfig['default'] = array(
+	$wgContactConfig['default'] = [
 		'RecipientUser' => 'Contact COOP FabLab ESDS',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Ne pas répondre FabLab ESDS',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
-		'AdditionalFields' => array(
-			'TitreArticleDemande' => array(
+		'AdditionalFields' => [
+			'TitreArticleDemande' => [
 				'label' => 'Titre de l\'article demandé (si c\'est la cas)',
 				'type' => 'text',
 				'required' => false,  // Either "true" or "false" as required
-			),
-		),
+			],
+		],
 		'DisplayFormat' => 'table',
-		'RLModules' => array(),
-		'RLStyleModules' => array(),
-	);
+		'RLModules' => [],
+		'RLStyleModules' => [],
+	];
 }
 
 if ( $wgDBname == 'qboxnextwiki' ) {
-	$wgContactConfig['default'] = array(
+	$wgContactConfig['default'] = [
 		'RecipientUser' => 'A KLERK',
 		'SenderEmail' => $wgPasswordSender,
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false,
-		'AdditionalFields' => array(),
+		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
-		'RLModules' => array(),
-		'RLStyleModules' => array(),
-	);
+		'RLModules' => [],
+		'RLStyleModules' => [],
+	];
 }

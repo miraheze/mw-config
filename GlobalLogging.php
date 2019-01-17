@@ -4,7 +4,7 @@ $wmgLogDir = "/var/log/mediawiki";
 $wgDebugLogFile = "$wmgLogDir/$wmgHostname.log";
 $wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
 
-$wgDebugLogGroups = array(
+$wgDebugLogGroups = [
 	'404' => "$wmgLogDir/debuglogs/404.log",
 	'api' => "$wmgLogDir/debuglogs/api.log",
 	'captcha' => "$wmgLogDir/debuglogs/captcha.log",
@@ -21,7 +21,7 @@ $wgDebugLogGroups = array(
 	'redis' => "$wmgLogDir/debuglogs/redis.log",
 	'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
 	'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
-);
+];
 
 if ( $wgCommandLineMode ) {
 	error_reporting( -1 );

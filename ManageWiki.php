@@ -12,32 +12,32 @@
  *
  * Extensions can provide installation steps as well for extensions.
  */
-$wgManageWikiExtensions = array(
-		'3d' => array(
+$wgManageWikiExtensions = [
+		'3d' => [
 			'name' => '3D',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:3D',
 			'var' => 'wmgUse3D',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'addthis' => array(
+		],
+		'addthis' => [
 			'name' => 'AddThis',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:AddThis',
 			'var' => 'wmgUseAddThis',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
- 		'htmlmetaadntitle' => array(
+		],
+		'htmlmetaadntitle' => [
 			'name' => 'HTML Meta and Title',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Add_HTML_Meta_and_Title',
 			'var' => 'wmgUseAddHTMLMetaAndTitle',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'adminlinks' => array(
+		],
+		'adminlinks' => [
 			'name' => 'AdminLinks',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Admin_Links',
 			'var' => 'wmgUseAdminLinks',
@@ -53,8 +53,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'ajaxpoll' => array(
+		],
+		'ajaxpoll' => [
 			'name' => 'AJAX Poll',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:AJAXPoll',
 			'var' => 'wmgUseAJAXPoll',
@@ -67,8 +67,8 @@ $wgManageWikiExtensions = array(
 					'ajaxpoll_vote' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_vote.sql"
 				],
 			],
-		),
-		'apex' => array(
+		],
+		'apex' => [
 			'name' => 'Apex (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Apex',
 			'var' => 'wmgUseApex',
@@ -76,8 +76,8 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'approvedrevs' => array(
+		],
+		'approvedrevs' => [
 			'name' => 'Approved Revs',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Approved_Revs',
 			'var' => 'wmgUseApprovedRevs',
@@ -102,8 +102,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'articlefeedbackv5' => array(
+		],
+		'articlefeedbackv5' => [
 			'name' => 'Article Feedback Tool V5',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleFeedbackv5',
 			'var' => 'wmgUseArticleFeedbackv5',
@@ -115,8 +115,8 @@ $wgManageWikiExtensions = array(
 					'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
 				],
 			],
-		),
-		'articleratings' => array(
+		],
+		'articleratings' => [
 			'name' => 'Article Ratings',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleRatings',
 			'var' => 'wmgUseArticleRatings',
@@ -135,16 +135,16 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'articletocategory2' => array(
+		],
+		'articletocategory2' => [
 			'name' => 'Article To Category 2',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleToCategory2',
 			'var' => 'wmgUseArticleToCategory2',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'authorprotect' => array(
+		],
+		'authorprotect' => [
 			'name' => 'Author Protect',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:AuthorProtect',
 			'var' => 'wmgUseAuthorProtect',
@@ -165,24 +165,24 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'autocreatecategorypages' => array(
+		],
+		'autocreatecategorypages' => [
 			'name' => 'Auto Create Category Pages',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:AutoCreateCategoryPages',
 			'var' => 'wmgUseAutoCreateCategoryPages',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => true,
-		),
-		'babel' => array(
+		],
+		'babel' => [
 			'name' => 'Babel',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Babel',
 			'var' => 'wmgUseBabel',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'blogpage' => array(
+		],
+		'blogpage' => [
 			'name' => 'Blog Page',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:BlogPage',
 			'var' => 'wmgUseBlogPage',
@@ -198,16 +198,16 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'capiunto' => array(
+		],
+		'capiunto' => [
 			'name' => 'Capiunto',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Capiunto',
 			'var' => 'wmgUseCapiunto',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'cargo' => array(
+		],
+		'cargo' => [
 			'name' => 'Cargo',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Cargo',
 			'var' => 'wmgUseCargo',
@@ -227,72 +227,72 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'charinsert' => array(
+		],
+		'charinsert' => [
 			'name' => 'CharInsert',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CharInsert',
 			'var' => 'wmgUseCharInsert',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'cite' => array(
+		],
+		'cite' => [
 			'name' => 'Cite',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Cite',
 			'var' => 'wmgUseCite',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'citethispage' => array(
+		],
+		'citethispage' => [
 			'name' => 'CiteThisPage',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CiteThisPage',
 			'var' => 'wmgUseCiteThisPage',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'citoid' => array(
+		],
+		'citoid' => [
 			'name' => 'Citoid',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Citoid',
 			'var' => 'wmgUseCitoid',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'codeeditor' => array(
+		],
+		'codeeditor' => [
 			'name' => 'CodeEditor',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CodeEditor',
 			'var' => 'wmgUseCodeEditor',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'codemirror' => array(
+		],
+		'codemirror' => [
 			'name' => 'CodeMirror',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CodeMirror',
 			'var' => 'wmgUseCodeMirror',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'collapsiblevector' => array(
+		],
+		'collapsiblevector' => [
 			'name' => 'Collapsible Vector',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CollapsibleVector',
 			'var' => 'wmgUseCollapsibleVector',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'collection' => array(
+		],
+		'collection' => [
 			'name' => 'Collection (PDF)',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Collection',
 			'var' => 'wmgUseCollection',
 			'conflicts' => false,
 			'requires' => 'electronpdfservice',
 			'restricted' => true,
-		),
-		'comments' => array(
+		],
+		'comments' => [
 			'name' => 'Comments',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Comments',
 			'var' => 'wmgUseComments',
@@ -328,48 +328,48 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'contributionscores' => array(
+		],
+		'contributionscores' => [
 			'name' => 'ContributionScores',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ContributionScores',
 			'var' => 'wmgUseContributionScores',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'createpage' => array(
+		],
+		'createpage' => [
 			'name' => 'CreatePage',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CreatePage',
 			'var' => 'wmgUseCreatePage',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'createredirect' => array(
+		],
+		'createredirect' => [
 			'name' => 'CreateRedirect',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CreateRedirect',
 			'var' => 'wmgUseCreateRedirect',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'crossreference' => array(
+		],
+		'crossreference' => [
 			'name' => 'CrossReference',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CrossReference',
 			'var' => 'wmgUseCrossReference',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'css' => array(
+		],
+		'css' => [
 			'name' => 'CSS',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CSS',
 			'var' => 'wmgUseCSS',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'darkvector' => array(
+		],
+		'darkvector' => [
 			'name' => 'DarkVector (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:DarkVector',
 			'var' => 'wmgUseDarkVector',
@@ -377,40 +377,40 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'description2' => array(
+		],
+		'description2' => [
 			'name' => 'Description2',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Description2',
 			'var' => 'wmgUseDescription2',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'disambiguator' => array(
+		],
+		'disambiguator' => [
 			'name' => 'Disambiguator',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Disambiguator',
 			'var' => 'wmgUseDisambiguator',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'dplforum' => array(
+		],
+		'dplforum' => [
 			'name' => 'DPLForum',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:DPLforum',
 			'var' => 'wmgUseDPLForum',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'dummyfandoommainpagetags' => array(
+		],
+		'dummyfandoommainpagetags' => [
 			'name' => 'DummyFandoomMainpageTags',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:DummyFandoomMainpageTags',
 			'var' => 'wmgUseDummyFandoomMainpageTags',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'duplicator' => array(
+		],
+		'duplicator' => [
 			'name' => 'Duplicator',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Duplicator',
 			'var' => 'wmgUseDuplicator',
@@ -426,8 +426,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'dusktodawn' => array(
+		],
+		'dusktodawn' => [
 			'name' => 'DuskToDawn (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:DuskToDawn',
 			'var' => 'wmgUseDuskToDawn',
@@ -435,32 +435,32 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'dynamicpagelist' => array(
+		],
+		'dynamicpagelist' => [
 			'name' => 'DynamicPageList',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:DynamicPageList_(Wikimedia)',
 			'var' => 'wmgUseDynamicPageList',
 			'conflicts' => 'dynamicpagelist3',
 			'requires' => false,
 			'restricted' => false,
-		),
-		'dynamicpagelist3' => array(
+		],
+		'dynamicpagelist3' => [
 			'name' => 'DynamicPageList3',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:DynamicPageList3',
 			'var' => 'wmgUseDynamicPageList3',
 			'conflicts' => 'dynamicpagelist',
 			'requires' => false,
 			'restricted' => false,
-		),
-		'editcount' => array(
+		],
+		'editcount' => [
 			'name' => 'EditCount',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Editcount',
 			'var' => 'wmgUseEditcount',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'educationprogram' => array(
+		],
+		'educationprogram' => [
 			'name' => 'Education Program',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:EducationProgram',
 			'var' => 'wmgUseEducationProgram',
@@ -472,16 +472,16 @@ $wgManageWikiExtensions = array(
 					'ep_students' => "$IP/extensions/EducationProgram/sql/EducationProgram.sql"
 				],
 			],
-		),
-		'electronpdfservice' => array(
+		],
+		'electronpdfservice' => [
 			'name' => 'Electron PDF Service',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ElectronPdfService',
 			'var' => 'wmgUseElectronPDFService',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'erudite' => array(
+		],
+		'erudite' => [
 			'name' => 'Erudite (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Erudite',
 			'var' => 'wmgUseErudite',
@@ -489,24 +489,24 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'eventlogging' => array(
+		],
+		'eventlogging' => [
 			'name' => 'EventLogging',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:EventLogging',
 			'var' => 'wmgUseEventLogging',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'fancyboxthumbs' => array(
+		],
+		'fancyboxthumbs' => [
 			'name' => 'Fancy Box Thumbs',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:FancyBoxThumbs',
 			'var' => 'wmgUseFancyBoxThumbs',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'flaggedrevs' => array(
+		],
+		'flaggedrevs' => [
 			'name' => 'FlaggedRevs',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:FlaggedRevs',
 			'var' => 'wmgUseFlaggedRevs',
@@ -572,8 +572,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'flow' => array(
+		],
+		'flow' => [
 			'name' => 'Flow',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:StructuredDiscussions',
 			'var' => 'wmgUseFlow',
@@ -615,8 +615,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'foreground' => array(
+		],
+		'foreground' => [
 			'name' => 'Foreground (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Foreground',
 			'var' => 'wmgUseForeground',
@@ -624,16 +624,16 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'gadgets' => array(
+		],
+		'gadgets' => [
 			'name' => 'Gadgets',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Gadgets',
 			'var' => 'wmgUseGadgets',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'gamepress' => array(
+		],
+		'gamepress' => [
 			'name' => 'Gamespress (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Gamepress',
 			'var' => 'wmgUseGamepress',
@@ -641,24 +641,24 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'genealogy' => array(
+		],
+		'genealogy' => [
 			'name' => 'Genealogy',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Genealogy',
 			'var' => 'wmgUseGenealogy',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'geocrumbs' => array(
+		],
+		'geocrumbs' => [
 			'name' => 'GeoCrumbs',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:GeoCrumbs',
 			'var' => 'wmgUseGeoCrumbs',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'geodata' => array(
+		],
+		'geodata' => [
 			'name' => 'GeoData',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:GeoData',
 			'var' => 'wmgUseGeoData',
@@ -670,40 +670,40 @@ $wgManageWikiExtensions = array(
 					'geo_tags' => "$IP/extensions/GeoData/sql/db-backed.sql"
 				],
 			],
-		),
-		'gettingstarted' => array(
+		],
+		'gettingstarted' => [
 			'name' => 'GettingStarted',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:GettingStarted',
 			'var' => 'wmgUseGettingStarted',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'graph' => array(
+		],
+		'graph' => [
 			'name' => 'Graph',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Graph',
 			'var' => 'wmgUseGraph',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'groupssidebar' => array(
+		],
+		'groupssidebar' => [
 			'name' => 'GroupsSidebar',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:GroupsSidebar',
 			'var' => 'wmgUseGroupsSidebar',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'guidedtour' => array(
+		],
+		'guidedtour' => [
 			'name' => 'GuidedTour',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:GuidedTour',
 			'var' => 'wmgUseGuidedTour',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'hawelcome' => array(
+		],
+		'hawelcome' => [
 			'name' => 'HAWelcome',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:HAWelcome',
 			'var' => 'wmgUseHAWelcome',
@@ -729,40 +729,40 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'headertabs' => array(
+		],
+		'headertabs' => [
 			'name' => 'HeaderTabs',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:HeaderTabs',
 			'var' => 'wmgUseHeaderTabs',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'hidesection' => array(
+		],
+		'hidesection' => [
 			'name' => 'HideSection',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:HideSection',
 			'var' => 'wmgUseHideSection',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'highlightlinksincategory' => array(
+		],
+		'highlightlinksincategory' => [
 			'name' => 'HighlightLinksInCategory',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Highlight_Links_in_Category',
 			'var' => 'wmgUseHighlightLinksInCategory',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'imagemap' => array(
+		],
+		'imagemap' => [
 			'name' => 'ImageMap',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ImageMap',
 			'var' => 'wmgUseImageMap',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'imagerating' => array(
+		],
+		'imagerating' => [
 			'name' => 'ImageRating',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ImageRating',
 			'var' => 'wmgUseImageRating',
@@ -778,56 +778,56 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'inputbox' => array(
+		],
+		'inputbox' => [
 			'name' => 'InputBox',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:InputBox',
 			'var' => 'wmgUseInputBox',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'javascriptslideshow' => array(
+		],
+		'javascriptslideshow' => [
 			'name' => 'Javascript Slidehow',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:JavascriptSlideshow',
 			'var' => 'wmgUseJavascriptSlideshow',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'josa' => array(
+		],
+		'josa' => [
 			'name' => 'Josa',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Josa',
 			'var' => 'wmgUseJosa',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'jsbreadcrumbs' => array(
+		],
+		'jsbreadcrumbs' => [
 			'name' => 'JS BreadCrumbs',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:JSBreadCrumbs',
 			'var' => 'wmgUseJSBreadCrumbs',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'kartographer' => array(
+		],
+		'kartographer' => [
 			'name' => 'Kartographer',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Kartographer',
 			'var' => 'wmgUseKartographer',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'labeledsectiontransclusion' => array(
+		],
+		'labeledsectiontransclusion' => [
 			'name' => 'LabeledSectionTransclusion',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:LabeledSectionTransclusion',
 			'var' => 'wmgUseLabeledSectionTransclusion',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'liberty' => array(
+		],
+		'liberty' => [
 			'name' => 'Liberty (Skin)',
 			'linkPage' => 'https://github.com/librewiki/liberty-skin',
 			'var' => 'wmgUseLiberty',
@@ -835,16 +835,16 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'linktarget' => array(
+		],
+		'linktarget' => [
 			'name' => 'LinkTarget',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:LinkTarget',
 			'var' => 'wmgUseLinkTarget',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'linktitles' => array(
+		],
+		'linktitles' => [
 			'name' => 'LinkTitles',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:LinkTitles',
 			'var' => 'wmgUseLinkTitles',
@@ -860,40 +860,40 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'listings' => array(
+		],
+		'listings' => [
 			'name' => 'Listings',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Listings',
 			'var' => 'wmgUseListings',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'loopscombo' => array(
+		],
+		'loopscombo' => [
 			'name' => 'Loops',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Loops',
 			'var' => 'wmgUseLoopsCombo',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'magicnocache' => array(
+		],
+		'magicnocache' => [
 			'name' => 'MagicNoCache',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MagicNoCache',
 			'var' => 'wmgUseMagicNoCache',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'maps' => array(
+		],
+		'maps' => [
 			'name' => 'Maps',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Maps',
 			'var' => 'wmgUseMaps',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'masseditregex' => array(
+		],
+		'masseditregex' => [
 			'name' => 'MassEditRegex',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MassEditRegex',
 			'var' => 'wmgUseMassEditRegex',
@@ -909,8 +909,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'massmessage' => array(
+		],
+		'massmessage' => [
 			'name' => 'MassMessage',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MassMessage',
 			'var' => 'wmgUseMassMessage',
@@ -926,8 +926,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'math' => array(
+		],
+		'math' => [
 			'name' => 'Math',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Math',
 			'var' => 'wmgUseMath',
@@ -941,8 +941,8 @@ $wgManageWikiExtensions = array(
 					'mathoid' => "$IP/extensions/Math/db/mathoid.mysql.sql"
 				],
 			],
-		),
-		'mediawikichat' => array(
+		],
+		'mediawikichat' => [
 			'name' => 'MediaWikiChat',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MediaWikiChat',
 			'var' => 'wmgUseMediaWikiChat',
@@ -988,8 +988,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'metrolook' => array(
+		],
+		'metrolook' => [
 			'name' => 'Metrolook (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Metrolook',
 			'var' => 'wmgUseMetrolook',
@@ -997,8 +997,8 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'modernskylight' => array(
+		],
+		'modernskylight' => [
 			'name' => 'ModernSkylight (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Modern_Skylight',
 			'var' => 'wmgUseModernSkylight',
@@ -1006,8 +1006,8 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'mscalendar' => array(
+		],
+		'mscalendar' => [
 			'name' => 'MsCalendar',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MsCalendar',
 			'var' => 'wmgUseMSCalendar',
@@ -1019,56 +1019,56 @@ $wgManageWikiExtensions = array(
 					'mscal_content' => "$IP/MsCalendar/MsCalendar.sql"
 				],
 			],
-		),
-		'msupload' => array(
+		],
+		'msupload' => [
 			'name' => 'MsUpload',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MsUpload',
 			'var' => 'wmgUseMsUpload',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'multimediaviewer' => array(
+		],
+		'multimediaviewer' => [
 			'name' => 'Multimedia Viewer',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MultimediaViewer',
 			'var' => 'wmgUseMultimediaViewer',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'multiboilerplate' => array(
+		],
+		'multiboilerplate' => [
 			'name' => 'MultiBoilerplate',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MultiBoilerplate',
 			'var' => 'wmgUseMultiBoilerplate',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'newestpages' => array(
+		],
+		'newestpages' => [
 			'name' => 'NewestPages',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:NewestPages',
 			'var' => 'wmgUseNewestPages',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'news' => array(
+		],
+		'news' => [
 			'name' => 'News',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:News',
 			'var' => 'wmgUseNews',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'newsignuppage' => array(
+		],
+		'newsignuppage' => [
 			'name' => 'New Signup Page',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:NewSignupPage',
 			'var' => 'wmgUseNewSignupPage',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'newsletter' => array(
+		],
+		'newsletter' => [
 			'name' => 'Newsletter',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Newsletter',
 			'var' => 'wmgUseNewsletter',
@@ -1093,32 +1093,32 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'newusermessage' => array(
+		],
+		'newusermessage' => [
 			'name' => 'New User Message',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:NewUserMessage',
 			'var' => 'wmgUseNewUserMessage',
 			'conflicts' => 'flow',
 			'requires' => false,
 			'restricted' => false,
-		),
-		'newusernotif' => array(
+		],
+		'newusernotif' => [
 			'name' => 'New User Nofifications',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:NewUserNotif',
 			'var' => 'wmgUseNewUserNotif',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'notitle' => array(
+		],
+		'notitle' => [
 			'name' => 'NoTitle',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:NoTitle',
 			'var' => 'wmgUseNoTitle',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'nukedpl' => array(
+		],
+		'nukedpl' => [
 			'name' => 'NukeDPL',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:NukeDPL',
 			'var' => 'wmgUseNukeDPL',
@@ -1134,8 +1134,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'nostalgia' => array(
+		],
+		'nostalgia' => [
 			'name' => 'Nostalgia (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Nostalgia',
 			'var' => 'wmgUseNostalgia',
@@ -1143,24 +1143,24 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'opengraphmeta' => array(
+		],
+		'opengraphmeta' => [
 			'name' => 'OpenGraphMeta',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:OpenGraphMeta',
 			'var' => 'wmgUseOpenGraphMeta',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'pagedtiffhandler' => array(
+		],
+		'pagedtiffhandler' => [
 			'name' => 'PagedTiffHandler',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PagedTiffHandler',
 			'var' => 'wmgUsePagedTiffHandler',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'pageforms' => array(
+		],
+		'pageforms' => [
 			'name' => 'Page Forms',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PageForms',
 			'var' => 'wmgUsePageForms',
@@ -1187,16 +1187,16 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'pagenotice' => array(
+		],
+		'pagenotice' => [
 			'name' => 'Page Notice',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PageNotice',
 			'var' => 'wmgUsePageNotice',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'pagetriage' => array(
+		],
+		'pagetriage' => [
 			'name' => 'Page Triage',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PageTriage',
 			'var' => 'wmgUsePageTriage',
@@ -1211,16 +1211,16 @@ $wgManageWikiExtensions = array(
 					'pagetriage_log' => "$IP/extensions/PageTriage/sql/PageTriageLog.sql"
 				],
 			],
-		),
-		'pdfbook' => array(
+		],
+		'pdfbook' => [
 			'name' => 'PDFBook',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PdfBook',
 			'var' => 'wmgUsePDFBook',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'pdfembed' => array(
+		],
+		'pdfembed' => [
 			'name' => 'PDF Embed',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PDFEmbed',
 			'var' => 'wmgUsePDFEmbed',
@@ -1236,24 +1236,24 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'pdfhandler' => array(
+		],
+		'pdfhandler' => [
 			'name' => 'PDF Handler',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PDFHandler',
 			'var' => 'wmgUsePDFHandler',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'pipeescape' => array(
+		],
+		'pipeescape' => [
 			'name' => 'Pipe Escape',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PipeEscape',
 			'var' => 'wmgUsePipeEscape',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'pivot' => array(
+		],
+		'pivot' => [
 			'name' => 'Pivot (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Pivot',
 			'var' => 'wmgUsePivot',
@@ -1261,24 +1261,24 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'poem' => array(
+		],
+		'poem' => [
 			'name' => 'Poem',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Poem',
 			'var' => 'wmgUsePoem',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'popups' => array(
+		],
+		'popups' => [
 			'name' => 'Popups',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Popups',
 			'var' => 'wmgUsePopups',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'poll' => array(
+		],
+		'poll' => [
 			'name' => 'Poll',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Poll',
 			'var' => 'wmgUsePoll',
@@ -1310,8 +1310,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'pollny' => array(
+		],
+		'pollny' => [
 			'name' => 'PollNY',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PollNY',
 			'var' => 'wmgUsePollNY',
@@ -1335,16 +1335,16 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'portableinfobox' => array(
+		],
+		'portableinfobox' => [
 			'name' => 'PortableInfobox',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PortableInfobox',
 			'var' => 'wmgUsePortableInfobox',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'proofreadpages' => array(
+		],
+		'proofreadpages' => [
 			'name' => 'Proofread Pages',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ProofreadPage',
 			'var' => 'wmgUseProofreadPage',
@@ -1368,8 +1368,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'protectsite' => array(
+		],
+		'protectsite' => [
 			'name' => 'Protect Site',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ProtectSite',
 			'var' => 'wmgUseProtectSite',
@@ -1385,24 +1385,24 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'purge' => array(
+		],
+		'purge' => [
 			'name' => 'Purge',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Purge',
 			'var' => 'wmgUsePurge',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'quiz' => array(
+		],
+		'quiz' => [
 			'name' => 'Quiz',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Quiz',
 			'var' => 'wmgUseQuiz',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'quizgame' => array(
+		],
+		'quizgame' => [
 			'name' => 'Quiz Game (SocialProfile)',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:QuizGame',
 			'var' => 'wmgUseQuizGame',
@@ -1424,32 +1424,32 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'randomgameunit' => array(
+		],
+		'randomgameunit' => [
 			'name' => 'RandomGameUnit (SocialProfile)',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RandomGameUnit',
 			'var' => 'wmgUseRandomGameUnit',
 			'conflicts' => false,
 			'requires' => 'socialprofile',
 			'restricted' => false,
-		),
-		'randomimage' => array(
+		],
+		'randomimage' => [
 			'name' => 'RandomImage',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RandomImage',
 			'var' => 'wmgUseRandomImage',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'randomselection' => array(
+		],
+		'randomselection' => [
 			'name' => 'RandomSelection',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RandomSelection',
 			'var' => 'wmgUseRandomSelection',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'refreshed' => array(
+		],
+		'refreshed' => [
 			'name' => 'Refreshed (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Refreshed',
 			'var' => 'wmgUseRefreshed',
@@ -1457,16 +1457,16 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'relatedarticles' => array(
+		],
+		'relatedarticles' => [
 			'name' => 'Related Articles',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RelatedArticles',
 			'var' => 'wmgUseRelatedArticles',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'replacetext' => array(
+		],
+		'replacetext' => [
 			'name' => 'Replace Text',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ReplaceText',
 			'var' => 'wmgUseReplaceText',
@@ -1482,72 +1482,72 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'revisionslider' => array(
+		],
+		'revisionslider' => [
 			'name' => 'RevisionSlider',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RevisionSlider',
 			'var' => 'wmgUseRevisionSlider',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'rss' => array(
+		],
+		'rss' => [
 			'name' => 'RSS',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:RSS',
 			'var' => 'wmgUseRSS',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'sandboxlink' => array(
+		],
+		'sandboxlink' => [
 			'name' => 'Sandbox Link',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SandboxLink',
 			'var' => 'wmgUseSandboxLink',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'score' => array(
+		],
+		'score' => [
 			'name' => 'Score',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Score',
 			'var' => 'wmgUseScore',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'scratchblocks' => array(
+		],
+		'scratchblocks' => [
 			'name' => 'ScratchBlocks',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ScratchBlocks',
 			'var' => 'wmgUseScratchBlocks',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'simplechanges' => array(
+		],
+		'simplechanges' => [
 			'name' => 'Simple Changes',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SimpleChanges',
 			'var' => 'wmgUseSimpleChanges',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'simpletooltip' => array(
+		],
+		'simpletooltip' => [
 			'name' => 'Simple Tooltip',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SimpleTooltip',
 			'var' => 'wmgUseSimpleTooltip',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'sitescout' => array(
+		],
+		'sitescout' => [
 			'name' => 'SiteScout',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SiteScout',
 			'var' => 'wmgUseSiteScout',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'socialprofile' => array(
+		],
+		'socialprofile' => [
 			'name' => 'SocialProfile',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SocialProfile',
 			'var' => 'wmgUseSocialProfile',
@@ -1582,80 +1582,80 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'spoilers' => array(
+		],
+		'spoilers' => [
 			'name' => 'Spoilers',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Spoilers',
 			'var' => 'wmgUseSpoilers',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'subpagefun' => array(
+		],
+		'subpagefun' => [
 			'name' => 'SubPageFun',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Subpage_Fun',
 			'var' => 'wmgUseSubpageFun',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'subpagelist3' => array(
+		],
+		'subpagelist3' => [
 			'name' => 'SubPageList3',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SubPageList3',
 			'var' => 'wmgUseSubPageList3',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'tabscombination' => array(
+		],
+		'tabscombination' => [
 			'name' => 'TabsCombination (Tabber + Tabs)',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Tabs',
 			'var' => 'wmgUseTabsCombination',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'templatesandbox' => array(
+		],
+		'templatesandbox' => [
 			'name' => 'Template Sandbox',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TemplateSandbox',
 			'var' => 'wmgUseTemplateSandbox',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'templatestyles' => array(
+		],
+		'templatestyles' => [
 			'name' => 'Template Styles',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TemplateStyles',
 			'var' => 'wmgUseTemplateStyles',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'templatewizard' => array(
+		],
+		'templatewizard' => [
 			'name' => 'Template Wizard',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TemplateWizard',
 			'var' => 'wmgUseTemplateWizard',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'theme' => array(
+		],
+		'theme' => [
 			'name' => 'Theme',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Theme',
 			'var' => 'wmgUseTheme',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'thanks' => array(
+		],
+		'thanks' => [
 			'name' => 'Thanks',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Thanks',
 			'var' => 'wmgUseThanks',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'timedmediahandler' => array(
+		],
+		'timedmediahandler' => [
 			'name' => 'TimedMediaHandler',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TimedMediaHandler',
 			'var' => 'wmgUseTimedMediaHandler',
@@ -1680,16 +1680,16 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'timeline' => array(
+		],
+		'timeline' => [
 			'name' => 'Timeline',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Timeline',
 			'var' => 'wmgUseTimeline',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'titlekey' => array(
+		],
+		'titlekey' => [
 			'name' => 'TitleKey',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TitleKey',
 			'var' => 'wmgUseTitleKey',
@@ -1701,16 +1701,16 @@ $wgManageWikiExtensions = array(
 					'titlekey' => "$IP/extensions/TitleKey/titlekey.sql"
 				],
 			],
-		),
-		'toctree' => array(
+		],
+		'toctree' => [
 			'name' => 'TOC Tree',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TocTree',
 			'var' => 'wmgUseTocTree',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'translate' => array(
+		],
+		'translate' => [
 			'name' => 'Translate',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Translate',
 			'var' => 'wmgUseTranslate',
@@ -1738,8 +1738,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'tweeki' => array(
+		],
+		'tweeki' => [
 			'name' => 'Tweeki (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Tweeki',
 			'var' => 'wmgUseTweeki',
@@ -1747,56 +1747,56 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'section' => 'skins',
-		),
-		'twocolconflict' => array(
+		],
+		'twocolconflict' => [
 			'name' => 'TwoColConflict',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TwoColConflict',
 			'var' => 'wmgUseTwoColConflict',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'universallanguageselector' => array(
+		],
+		'universallanguageselector' => [
 			'name' => 'UniversalLanguageSelector',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:UniversalLanguageSelector',
 			'var' => 'wmgUseUniversalLanguageSelector',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'uploadslink' => array(
+		],
+		'uploadslink' => [
 			'name' => 'UploadsLink',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:UploadsLink',
 			'var' => 'wmgUseUploadsLink',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'urlgetparameters' => array(
+		],
+		'urlgetparameters' => [
 			'name' => 'UrlGetParamters',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:UrlGetParameters',
 			'var' => 'wmgUseUrlGetParameters',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'userwelcome' => array(
+		],
+		'userwelcome' => [
 			'name' => 'UserWelcome',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:UserWelcome',
 			'var' => 'wmgUseUserWelcome',
 			'conflicts' => false,
 			'requires' => 'socialprofile',
 			'restricted' => false,
-		),
-		'variables' => array(
+		],
+		'variables' => [
 			'name' => 'Variable',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Variables',
 			'var' => 'wmgUseVariables',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'voteny' => array(
+		],
+		'voteny' => [
 			'name' => 'VoteNY',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:VoteNY',
 			'var' => 'wmgUseVoteNY',
@@ -1815,8 +1815,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'visualeditor' => array(
+		],
+		'visualeditor' => [
 			'name' => 'VisualEditor',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:VisualEditor',
 			'var' => 'wmgUseVisualEditor',
@@ -1824,8 +1824,8 @@ $wgManageWikiExtensions = array(
 			'requires' => false,
 			'restricted' => false,
 			'help' => 'Will start working 10-20 mins after enabling.',
-		),
-		'widgets' => array(
+		],
+		'widgets' => [
 			'name' => 'Widgets',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Widgets',
 			'var' => 'wmgUseWidgets',
@@ -1841,8 +1841,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'wikibaserepository' => array(
+		],
+		'wikibaserepository' => [
 			'name' => 'Wikibase (Repository)',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Wikibase',
 			'var' => 'wmgUseWikibaseRepository',
@@ -1858,16 +1858,16 @@ $wgManageWikiExtensions = array(
 					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql"
 				],
 			],
-		),
-		'wikidatapagebanner' => array(
+		],
+		'wikidatapagebanner' => [
 			'name' => 'WikidataPageBanner',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikidataPageBanner',
 			'var' => 'wmgUseWikidataPageBanner',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'wikiforum' => array(
+		],
+		'wikiforum' => [
 			'name' => 'WikiForum',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikiForum',
 			'var' => 'wmgUseWikiForum',
@@ -1901,8 +1901,8 @@ $wgManageWikiExtensions = array(
 					],
 				],
 			],
-		),
-		'wikilove' => array(
+		],
+		'wikilove' => [
 			'name' => 'WikiLove',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikiLove',
 			'var' => 'wmgUseWikiLove',
@@ -1914,40 +1914,40 @@ $wgManageWikiExtensions = array(
 					'wikilove_log' => "$IP/extensions/WikiLove/patches/WikiLoveLog.sql"
 				],
 			],
-		),
-		'wikiseo' => array(
+		],
+		'wikiseo' => [
 			'name' => 'WikiSEO',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikiSEO',
 			'var' => 'wmgUseWikiSeo',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'wikitextloggedinout' => array(
+		],
+		'wikitextloggedinout' => [
 			'name' => 'WikiText Logged In Out',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikiTextLoggedInOut',
 			'var' => 'wmgUseWikiTextLoggedInOut',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-		'wikimediaincubator' => array(
+		],
+		'wikimediaincubator' => [
 			'name' => 'WikimediaIncubator',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikimediaIncubator',
 			'var' => 'wmgUseWikimediaIncubator',
 			'conflicts' => false,
 			'requires' => false, // Configuation Change in LocalSettings.php, request this extension on phabricator
 			'restricted' => true,
-		),
-		'youtube' => array(
+		],
+		'youtube' => [
 			'name' => 'YouTube',
 			'linkPage' => 'https://github.com/miraheze/YouTube',
 			'var' => 'wmgUseYouTube',
 			'conflicts' => false,
 			'requires' => false,
 			'restricted' => false,
-		),
-);
+		],
+];
 
 /**
  * ManageWiki settings are added using the variable below.
@@ -1971,101 +1971,101 @@ $wgManageWikiExtensions = array(
  * help: string providing help information for the setting.
  * section: string name of groupings for settings.
  */
-$wgManageWikiSettings = array(
+$wgManageWikiSettings = [
 	// General
-	'wgAllowSlowParserFunctions' => array(
+	'wgAllowSlowParserFunctions' => [
 		'name' => 'Allow slow parser functions',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
 		'help' => false,
-	),
-        'wgAppleTouchIcon' => array(
-                'name' => 'Apple Touch Icon',
-                'requires' => false,
-                'restricted' => false,
-                'type' => 'text',
-                'overridedefault' => null,
-                'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
-        ),
-	'wgDefaultSkin' => array(
+	],
+	'wgAppleTouchIcon' => [
+			'name' => 'Apple Touch Icon',
+			'requires' => false,
+			'restricted' => false,
+			'type' => 'text',
+			'overridedefault' => null,
+			'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
+	],
+	'wgDefaultSkin' => [
 		'name' => 'Default Skin',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'list',
-		'options' => array(
+		'options' => [
 			'CologneBlue' => 'cologneblue',
 			'Modern' => 'modern',
 			'MonoBook' => 'monobook',
 			'Timeless' => 'timeless',
 			'Vector' => 'vector',
-		),
+		],
 		'overridedefault' => 'vector',
 		'help' => false,
-	),
-	'wgFavicon' => array(
+	],
+	'wgFavicon' => [
 		'name' => 'Favicon',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
 		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
-	),
-	'wgLocaltimezone' => array(
+	],
+	'wgLocaltimezone' => [
 		'name' => 'Timezone',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'timezone',
 		'overridedefault' => 'UTC',
 		'help' => false,
-	),
-	'wgLogo' => array(
+	],
+	'wgLogo' => [
 		'name' => 'Logo',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
 		'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
-	),
-	'wgPFEnableStringFunctions' => array(
+	],
+	'wgPFEnableStringFunctions' => [
 		'name' => 'Enable string function functionality',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
 		'help' => false,
-	),
-	'wgServer' => array(
+	],
+	'wgServer' => [
 		'name' => 'Custom Domain',
 		'requires' => false,
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => null,
 		'help' => 'This sets your custom domain. Otherwise it defaults to subdomain.miraheze.org.',
-	),
-	'wgMobileUrlTemplate' => array(
+	],
+	'wgMobileUrlTemplate' => [
 		'name' => 'Mobile Url',
 		'requires' => false,
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => '',
 		'help' => 'This sets your mobile url. Defaults to <domain>.',
-	),
-	'wgVisualEditorEnableWikitext' => array(
+	],
+	'wgVisualEditorEnableWikitext' => [
 		'name' => 'Enable VisualEditor Wikitext mode',
 		'requires' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
 		'help' => false,
-	),
-	'wmgWikiLicense' => array(
+	],
+	'wmgWikiLicense' => [
 		'name' => 'Content License',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'list',
-		'options' => array(
+		'options' => [
 			'All Rights Reserved' => 'arr',
 			'Creative Commons BY 4.0' => 'cc-by',
 			'Creative Commons BY-NC 4.0' => 'cc-by-nc',
@@ -2076,13 +2076,13 @@ $wgManageWikiSettings = array(
 			'Creative Commons BY-NC-ND 4.0' => 'cc-by-nc-nd',
 			'Public Domain' => 'cc-pd',
 			'No license provided' => 'empty',
-		),
+		],
 		'overridedefault' => 'cc-by-sa',
 		'help' => false,
-	),
+	],
 
 	// Media/File
-	'wgEnableUploads' => array(
+	'wgEnableUploads' => [
 		'name' => 'Enable File Uploads',
 		'requires' => false,
 		'restricted' => false,
@@ -2090,8 +2090,8 @@ $wgManageWikiSettings = array(
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'Allow images and other files to be uploaded through the wiki.',
-	),
-	'wgAllowCopyUploads' => array(
+	],
+	'wgAllowCopyUploads' => [
 		'name' => 'Enable File Uploads Through URL',
 		'requires' => false,
 		'restricted' => false,
@@ -2099,8 +2099,8 @@ $wgManageWikiSettings = array(
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Allow uploads from URLs as well as local files.',
-	),
-	'wgCopyUploadsFromSpecialUpload' => array(
+	],
+	'wgCopyUploadsFromSpecialUpload' => [
 		'name' => 'Enable File Uploads Through URL on Special:Upload',
 		'requires' => false,
 		'restricted' => false,
@@ -2108,8 +2108,8 @@ $wgManageWikiSettings = array(
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Add an interface to Special:Upload to enable uploading from URLs.',
-	),
-	'wgUseInstantCommons' => array(
+	],
+	'wgUseInstantCommons' => [
 		'name' => 'Enable Wikimedia Commons Files',
 		'requires' => false,
 		'restricted' => false,
@@ -2117,8 +2117,8 @@ $wgManageWikiSettings = array(
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'i.e. the use of Wikimedia Commons as a shared repository.',
-	),
-	'wgShowArchiveThumbnails' => array(
+	],
+	'wgShowArchiveThumbnails' => [
 		'name' => 'Show Old Thumbnails On Description Page',
 		'requires' => false,
 		'restricted' => false,
@@ -2126,8 +2126,8 @@ $wgManageWikiSettings = array(
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'Whether to show thumbnails for old images on the image description page.',
-	),
-	'wgMediaViewerIsInBeta' => array(
+	],
+	'wgMediaViewerIsInBeta' => [
 		'name' => 'Enable Media Viewer Beta Mode',
 		'requires' => 'multimediaviewer',
 		'restricted' => false,
@@ -2135,8 +2135,8 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'section' => 'media',
 		'help' => false,
-	),
-	'wgPopupsBetaFeature' => array(
+	],
+	'wgPopupsBetaFeature' => [
 		'name' => 'Enable Popups Beta Mode',
 		'requires' => 'popups',
 		'restricted' => false,
@@ -2144,53 +2144,53 @@ $wgManageWikiSettings = array(
 		'overridedefault' => null,
 		'section' => 'media',
 		'help' => false,
-	),
-	'wmgSiteNoticeOptOut' => array(
+	],
+	'wmgSiteNoticeOptOut' => [
 		'name' => 'Opt out of global Miraheze notices',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
 		'help' => 'Opts your wiki out of global Miraheze notices, only showing important notices.',
-	),
-	'wgULSAnonCanChangeLanguage' => array(
+	],
+	'wgULSAnonCanChangeLanguage' => [
 		'name' => 'Allow anonymous users to change language',
 		'requires' => 'universallanguageselector',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
 		'help' => '',
-	),
-	'wmgVisualEditorEnableDefault' => array(
+	],
+	'wmgVisualEditorEnableDefault' => [
 		'name' => 'Make VisualEditor the default editor for all',
 		'requires' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
 		'help' => '',
-	),
-	'wgPageLanguageUseDB' => array(
+	],
+	'wgPageLanguageUseDB' => [
 		'name' => 'Enable per page language',
 		'restricted' => false,
 		'requires' => false,
 		'type' => 'check',
 		'overridedefault' => false,
 		'help' => 'Allows to change the page language for MediaWiki pages.',
-	),
-	'wmgAllowEntityImport' => array(
+	],
+	'wmgAllowEntityImport' => [
 		'name' => 'Allow Entity Import (Wikibase)',
 		'restricted' => false,
 		'requires' => 'wikibaserepository',
 		'type' => 'check',
 		'overridedefault' => false,
 		'help' => 'Allow importing entities via Special:Import and importDump.php.',
-	),
-	'wmgEnableEntitySearchUI' => array(
+	],
+	'wmgEnableEntitySearchUI' => [
 		'name' => 'Enable Entity Search UI (Wikibase)',
 		'restricted' => false,
 		'requires' => 'wikibaserepository',
 		'type' => 'check',
 		'overridedefault' => true,
 		'help' => 'To determine if entity search UI should be enabled or not.',
-	),
-);
+	],
+];

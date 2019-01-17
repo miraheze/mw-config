@@ -6,7 +6,6 @@ $wgObjectCaches['redis'] = [
 	'persistent' => true,
 ];
 
-
 /*$wgMemCachedServers = [
 	'127.0.0.1:11211'
 ];*/
@@ -32,11 +31,11 @@ $wgJobTypeConf['default'] = [
 ];
 
 $wgJobQueueAggregator = [
-        'class' => 'JobQueueAggregatorRedis',
-        'redisServers' => [ '81.4.127.174:6379', '81.4.127.174:6379' ], // fake misc2 as fallback
-        'redisConfig' => [
-                'connectTimeout' => 2,
-                'password' => $wmgRedisPassword,
-                'compression' => 'gzip',
-        ]
+	'class' => 'JobQueueAggregatorRedis',
+	'redisServers' => [ '81.4.127.174:6379', '81.4.127.174:6379' ], // fake misc2 as fallback
+	'redisConfig' => [
+		'connectTimeout' => 2,
+		'password' => $wmgRedisPassword,
+		'compression' => 'gzip',
+	]
 ];

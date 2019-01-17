@@ -1,19 +1,19 @@
 <?php
 
-$wgLBFactoryConf = array(
+$wgLBFactoryConf = [
 	'class' => 'LBFactoryMulti',
-	'sectionsByDB' => array(
+	'sectionsByDB' => [
 		// 'wiki' => 'c1'
-	),
-	'sectionLoads' => array(
-		'DEFAULT' => array(
+	],
+	'sectionLoads' => [
+		'DEFAULT' => [
 			'db4' => 1,
-		),
-		'c1' => array(
+		],
+		'c1' => [
 			'db4' => 1,
-		),
-	),
-	'serverTemplate' => array(
+		],
+	],
+	'serverTemplate' => [
 		'dbname' => $wgDBname,
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
@@ -21,18 +21,18 @@ $wgLBFactoryConf = array(
 		'flags' => DBO_SSL,
 		'sslCertPath' => '/etc/ssl/certs/wildcard.miraheze.org.crt',
 		'sslKeyPath' => '/etc/ssl/private/wildcard.miraheze.org.key',
-	),
-	'hostsByName' => array(
+	],
+	'hostsByName' => [
 		// 81.4.109.166
 		'db4' => 'mediawiki-internal-db-master.miraheze.org',
-	),
-	'externalLoads' => array(
-		'echo' => array(
+	],
+	'externalLoads' => [
+		'echo' => [
 			'db4' => 1, // should echo c1
-		),
-	),
-	'readOnlyBySection' => array(
-	//	'DEFAULT' => 'Maintenance ongoing on the database server.',
-	//	'c1' => 'Maintenance ongoing on the database server.',
-	),
-);
+		],
+	],
+	'readOnlyBySection' => [
+	// 'DEFAULT' => 'Maintenance ongoing on the database server.',
+	// 'c1' => 'Maintenance ongoing on the database server.',
+	],
+];

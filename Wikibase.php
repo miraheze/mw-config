@@ -1,5 +1,5 @@
 <?php
-call_user_func( function() {
+call_user_func( function () {
 		global $wgContentHandlerUseDB, $wgExtraNamespaces, $wgWBRepoSettings,
 		$wgDBname, $wgNamespacesToBeSearchedDefault, $wmgAllowEntityImport,
 		$wmgEnableEntitySearchUI;
@@ -30,14 +30,14 @@ call_user_func( function() {
 
 		$wgNamespacesToBeSearchedDefault[WB_NS_ITEM] = true;
 
-		$wgWBRepoSettings['siteLinkGroups'] = array(
+		$wgWBRepoSettings['siteLinkGroups'] = [
 				'wikipedia',
 				'wikinews',
 				'wikiquote',
 				'wikisource',
 				'wikivoyage',
 				'special'
-		);
+		];
 
-		$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons', 'wikidata' );
+		$wgWBRepoSettings['specialSiteLinkGroups'] = [ 'commons', 'wikidata' ];
 } );
