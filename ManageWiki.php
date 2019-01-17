@@ -186,6 +186,13 @@ $wgManageWikiExtensions = [
 			'requires' => false,
 			'restricted' => false,
 			'install' => [
+				'permissions' => [		
+ 					'reviewer' => [		
+ 						'permissions' => [		
+ 							'change-rating',		
+ 						],		
+ 					],		
+ 				],
 				'sql' => [
 					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
 				],
