@@ -112,29 +112,6 @@ $wgManageWikiExtensions = [
 			'restricted' => false,
 			'install' => [
 				'permissions' => [
-					'sysop' => [
-						'permissions' => [
-							'adminlinks',
-						],
-					],
-				],
-				'sql' => [
-					'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
-				],
-			],
-		],
-		'articleratings' => [
-			'name' => 'Article Ratings',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleRatings',
-			'var' => 'wmgUseArticleRatings',
-			'conflicts' => false,
-			'requires' => false,
-			'restricted' => false,
-			'install' => [
-				'sql' => [
-					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
-				],
-				'permissions' => [
 					'*' => [
 						'permissions' => [
 							'aft-reader',
@@ -195,6 +172,22 @@ $wgManageWikiExtensions = [
 							'aft-member',
 						],
 					],
+				],
+				'sql' => [
+					'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
+				],
+			],
+		],
+		'articleratings' => [
+			'name' => 'Article Ratings',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleRatings',
+			'var' => 'wmgUseArticleRatings',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+			'install' => [
+				'sql' => [
+					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
 				],
 			],
 		],
