@@ -83,7 +83,14 @@ if ( $wgDBname == 'qboxnextwiki' ) {
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false,
-		'AdditionalFields' => [],
+		'AdditionalFields' => [
+			'Text' => [
+				'label-message' => 'emailmessage',
+				'type' => 'textarea',
+				'rows' => 20,
+				'required' => true,
+			]
+		],
 		'DisplayFormat' => 'table',
 		'RLModules' => [],
 		'RLStyleModules' => [],
