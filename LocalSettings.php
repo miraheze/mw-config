@@ -2675,6 +2675,10 @@ $wgConf->settings = [
 		'default' => false,
 		'electowikiwiki' => true,
 	],
+	'wgPageCreationLog' => [
+		'default' => true,
+		'weatherwiki' => false,
+	],
 
 	// MobileFrontend [MWCandidate]
 	'wmgMFAutodetectMobileView' => [
