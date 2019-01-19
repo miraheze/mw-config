@@ -988,7 +988,6 @@ $wgManageWikiExtensions = [
 			'restricted' => false,
 			'install' => [
 				'sql' => [
-					'math' => "$IP/extensions/Math/db/math.mysql.sql",
 					'mathlatexml' => "$IP/extensions/Math/db/mathlatexml.mysql.sql",
 					'mathoid' => "$IP/extensions/Math/db/mathoid.mysql.sql"
 				],
