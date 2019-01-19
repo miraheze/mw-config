@@ -2677,7 +2677,6 @@ $wgConf->settings = [
 	],
 	'wgPageCreationLog' => [
 		'default' => true,
-		'weatherwiki' => false,
 	],
 
 	// MobileFrontend [MWCandidate]
