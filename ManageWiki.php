@@ -2245,4 +2245,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'help' => 'To determine if entity search UI should be enabled or not.',
 	],
+	'wgPageCreationLog' => [
+		'name' => 'Page Creation Log',
+		'restricted' => false,
+		'requires' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
+	],
 ];
