@@ -1638,9 +1638,6 @@ $wgConf->settings = [
 		'metawiki' => false,
 		'weatherwiki' => false, // let me do the blocking on my wiki, please
 	],
-	'wgGlobalBlockingDatabase' => [
-		'default' => 'mhglobal', // use mhglobal for global blocks
-	],
 
 	// GlobalCssJs [MWCandidate]
 	'wgGlobalCssJsConfig' => [
