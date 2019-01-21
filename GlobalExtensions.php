@@ -36,6 +36,3 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr'
 ] );
-
-$wgGlobalBlockingDatabase = 'mhglobal';
-
