@@ -10,8 +10,8 @@ $wgObjectCaches['redis'] = [
 	'127.0.0.1:11211'
 ];*/
 
-$wgMainCacheType = DB_CACHE;
-$wgSessionCacheType = DB_CACHE;
+$wgMainCacheType = CACHE_DB;
+$wgSessionCacheType = CACHE_DB;
 $wgSessionsInObjectCache = true;
 
 $wgMessageCacheType = CACHE_NONE;
