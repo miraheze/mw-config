@@ -2771,11 +2771,7 @@ $wgConf->settings = [
 		],
 	],
 	'wgRevokePermissions' => [
-		'default' => [
-			'*' => [
-				'editothersprofiles' => true,
-			],
-		],
+		'default' => [],
 		'ssptopwiki' => [
 			'read-only' => [
 				'edit' => true,
