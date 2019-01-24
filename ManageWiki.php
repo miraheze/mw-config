@@ -1627,8 +1627,7 @@ $wgManageWikiExtensions = [
 						'permissions' => [
 							'awardsmanage',
 							'giftadmin',
-							'avatarremove',
-							'editothersprofiles',
+							'avatarremove'
 						],
 					],
 				],

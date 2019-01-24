@@ -2348,6 +2348,7 @@ $wgConf->settings = [
 				'checkuser',
 				'checkuser-log',
 				'createwiki',
+				'editothersprofiles',
 				'flow-suppress',
 				'globalblock',
 				'globalblock-exempt',
