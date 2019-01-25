@@ -1067,7 +1067,7 @@ $wgManageWikiExtensions = [
 			'restricted' => false,
 			'install' => [
 				'sql' => [
-					'mscal_content' => "$IP/MsCalendar/MsCalendar.sql"
+					'mscal_content' => "$IP/extensions/MsCalendar/MsCalendar.sql"
 				],
 			],
 		],
