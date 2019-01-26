@@ -3017,9 +3017,8 @@ $wgConf->settings = [
 			'bureaucrat',
 			'respected',
 		],
-		'+testwiki' => [
+		'+hypopedia' => [
 			'bureaucrat',
-			'consul',
 		],
 		'igrovyesistemywiki' => [
 			'trusted',
@@ -3063,6 +3062,10 @@ $wgConf->settings = [
 		],
 		'+studynotekrwiki' => [
 			'voter',
+		],
+		'+testwiki' => [
+			'bureaucrat',
+			'consul',
 		],
 		'+thesciencearchiveswiki' => [
 			'templateeditor',
