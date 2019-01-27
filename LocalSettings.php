@@ -3017,7 +3017,7 @@ $wgConf->settings = [
 			'bureaucrat',
 			'respected',
 		],
-		'+hypopedia' => [
+		'+hypopediawiki' => [
 			'bureaucrat',
 		],
 		'igrovyesistemywiki' => [
