@@ -220,6 +220,7 @@ $wgWhitelistRead = [
 	"Special:CentralAutoLogin",
 	"Special:CentralLogin",
 	"Special:ConfirmEmail",
+	"Spécial:Créer un compte",
 	"Special:Notifications",
 	"Special:ResetPassword",
 	"Special:UserLogin",
