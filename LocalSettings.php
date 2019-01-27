@@ -1381,6 +1381,24 @@ $wgConf->settings = [
 	'wmgUseYouTube' => [
 		'default' => false,
 	],
+	
+	// TemplateStyles config
+	'wgTemplateStylesAllowedUrls' => [
+		'default' => [
+			'audio' => [
+				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+			],
+			'image' => [
+				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+			],
+			'svg' => [
+				'<^(?:https:)?\/\/upload\\.wikimedia\\.org/wikipedia\/commons\/[^?#]*\\.svg(?:[?#]|$)>',
+			],
+			'font' => [],
+			'namespace' => [ '<.>' ],
+			'css' => [],
+		],
+	],
 
 	// External link target [MWCandidate]
 	'wgExternalLinkTarget' => [
