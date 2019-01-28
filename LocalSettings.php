@@ -1384,6 +1384,7 @@ $wgConf->settings = [
 	
 	// TemplateStyles config
 	'wgTemplateStylesAllowedUrls' => [
+		// Remove when https://gerrit.wikimedia.org/r/486828/ is merged
 		'default' => [
 			'audio' => [
 				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
