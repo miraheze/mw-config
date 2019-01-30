@@ -2075,6 +2075,11 @@ $wgConf->settings = [
 				'read' => true,
 			],
 		],
+		'+hypopediawiki' => [
+			'bureaucrat' => [
+				'bureaucrat' => true,
+			],
+		],
 		'+igrovyesistemywiki' => [
 			'autopatrolled' => [
 				'trusted' => true,
