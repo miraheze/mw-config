@@ -31,13 +31,8 @@ call_user_func( function () {
 		$wgNamespacesToBeSearchedDefault[WB_NS_ITEM] = true;
 
 		$wgWBRepoSettings['siteLinkGroups'] = [
-				'wikipedia',
-				'wikinews',
-				'wikiquote',
-				'wikisource',
-				'wikivoyage',
-				'special'
+				'miraheze',
 		];
 
-		$wgWBRepoSettings['specialSiteLinkGroups'] = [ 'commons', 'wikidata' ];
+		$wgWBRepoSettings['specialSiteLinkGroups'] = [];
 } );
