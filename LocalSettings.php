@@ -644,6 +644,9 @@ $wgConf->settings = [
 	'wgCreateWikiUseCustomDomains' => [
 		'default' => true,
 	],
+	'wgCreateWikiUseEchoNotifications' => [
+		'default' => true,
+	],
 	'wgCreateWikiUseInactiveWikis' => [
 		'default' => true,
 	],
