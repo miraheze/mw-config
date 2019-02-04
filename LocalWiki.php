@@ -395,3 +395,32 @@ switch ( $wmgWikiLicense ) {
 	case 'empty':
 		break;
 }
+
+if ( $wgDBname === 'gyaanipediawiki' ||
+	 $wgDBname === 'higyaanipediawiki' ||
+	 $wgDBname === 'bngyaanipediawiki' ||
+	 $wgDBname === 'tegyaanipediawiki' ||
+	 $wgDBname === 'tagyaanipediawiki' ||
+	 $wgDBname === 'mrgyaanipediawiki' ||
+	 $wgDBname === 'gugyaanipediawiki' ||
+	 $wgDBname === 'pagyaanipediawiki' ||
+	 $wgDBname === 'kngyaanipediawiki' ||
+	 $wgDBname === 'maigyaanipediawiki' ||
+	 $wgDBname === 'bhgyaanipediawiki' ||
+	 $wgDBname === 'asgyaanipediawiki' ||
+	 $wgDBname === 'mlgyaanipediawiki'
+) {
+	// per Ucronistaw
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared',
+		'directory' => '/mnt/mediawiki-static/commonsgyaanipediawiki',
+		'url' => 'https://static.miraheze.org/commonsgyaanipediawiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => 'commonsgyaanipediawiki',
+		'wiki' => 'commonsgyaanipediawiki',
+		'descBaseUrl' => 'https://commonsgyaanipedia.miraheze.org/wiki/File:',
+	];
+}
