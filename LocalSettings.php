@@ -3146,6 +3146,12 @@ $wgConf->settings = [
 		'reviwikiwiki' => 'noindex,nofollow',
 		'zhdelwiki' => 'noindex,nofollow',
 	],
+	'wgNamespaceRobotPolicies' => [
+		'default' => [],
+		'taswinwiki' => [
+			'NS_TEMPLATE' => 'noindex,nofollow',
+		],
+	],
 
 	// RSS Settings [MWCandidate]
 	'wgRSSCacheAge' => [
