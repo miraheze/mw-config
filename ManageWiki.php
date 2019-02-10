@@ -309,7 +309,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Citoid',
 			'var' => 'wmgUseCitoid',
 			'conflicts' => false,
-			'requires' => false,
+			'requires' => 'cite',
 			'restricted' => false,
 		],
 		'codeeditor' => [
