@@ -2095,12 +2095,12 @@ $wgManageWikiSettings = [
 		'help' => 'This sets your custom domain. Otherwise it defaults to subdomain.miraheze.org.',
 	],
 	'wgMobileUrlTemplate' => [
-		'name' => 'Mobile Url',
+		'name' => 'Mobile URL',
 		'requires' => false,
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => '',
-		'help' => 'This sets your mobile url. Defaults to <domain>.',
+		'help' => 'This sets your mobile URL. Defaults to [domain].',
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'name' => 'Enable VisualEditor Wikitext mode',
