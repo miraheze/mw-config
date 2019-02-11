@@ -2556,7 +2556,7 @@ $wgConf->settings = [
 		'default' => 'SkinMinerva',
 	],
 	'wgMobileUrlTemplate' => [
-		'default' => '',
+		'default' => '%h0.m.miraheze.org',
 	],
 
 	// Moderation extension settings [MWCandidate]
@@ -3853,12 +3853,6 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
-
-if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
-} elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
-}
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgCentralAuthCookieDomain = $wmgHostname;
