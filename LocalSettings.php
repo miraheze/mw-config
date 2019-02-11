@@ -1096,6 +1096,7 @@ $wgConf->settings = [
 		'permanentfuturelabwiki' => false,
 		'reviwiki' => false,
 		'reviwikiwiki' => false,
+		'zerorangerwiki' => false,
 	],
 	'wmgUseModeration' => [
 		'default' => false,
