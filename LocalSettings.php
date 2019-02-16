@@ -1714,6 +1714,34 @@ $wgConf->settings = [
 		'default' => '/usr/bin/convert',
 	],
 
+	// IncidentReporting [MWExempt]
+	'wgIncidentReportingDatabase' => [
+		'default' => 'incidents',
+	],
+	'wgIncidentReportingServices' => [
+		'default' => [
+			'Bacula' => 'https://meta.miraheze.org/wiki/Tech:Bacula',
+			'DNS' => 'https://meta.miraheze.org/wiki/Tech:DNS',
+			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
+			'Icinga' => 'https://meta.miraheze.org/wiki/Tech:Icinga',
+			'LizardFS' => false,
+			'Mail' => 'https://meta.miraheze.org/wiki/Tech:Mail',
+			'MariaDB' => 'https://meta.miraheze.org/wiki/Tech:MariaDB',
+			'Matomo' => 'https://meta.miraheze.org/wiki/Tech:Matomo',
+			'MediaWiki' => 'https://meta.miraheze.org/wiki/Tech:MediaWiki_appserver',
+			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
+			'Parsoid' => 'https://meta.miraheze.org/wiki/Tech:Parsoid',
+			'Phabricator' => 'https://meta.miraheze.org/wiki/Tech:Phabricator',
+			'PuppetServer' => 'https://meta.miraheze.org/wiki/Tech:Puppet',
+			'Redis' => 'https://meta.miraheze.org/wiki/Tech:Redis',
+			'Salt' => 'https://meta.miraheze.org/wiki/Tech:Salt',
+			'Varnish' => 'https://meta.miraheze.org/wiki/Tech:Varnish',
+		],
+	],
+	'wgIncidentReportingTaskUrl' => [
+		'default' => 'https://phabricator.miraheze.org/',
+	],
+
 	// Interwiki [MWCandidate]
 	'wgEnableScaryTranscluding' => [
 		'default' => true,
