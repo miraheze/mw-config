@@ -2,7 +2,7 @@
 call_user_func( function () {
 		global $wgContentHandlerUseDB, $wgExtraNamespaces, $wgWBRepoSettings,
 		$wgDBname, $wgNamespacesToBeSearchedDefault, $wmgAllowEntityImport,
-		$wmgEnableEntitySearchUI;
+		$wmgEnableEntitySearchUI, $wgWBClientSettings;
 
 		$wgContentHandlerUseDB = true;
 
@@ -30,6 +30,18 @@ call_user_func( function () {
 
 		$wgNamespacesToBeSearchedDefault[WB_NS_ITEM] = true;
 	
-		$wgWBRepoSettings['siteLinkGroups'] = [];
+		$wgWBRepoSettings['siteLinkGroups'] = [
+			'miraheze'
+		];
 		$wgWBRepoSettings['specialSiteLinkGroups'] = [];
+	
+		if ( $wgDBname === 'ffgxvwiki' ) {
+			$wgWBClientSettings['repoUrl'] = 'https://ffgxv.miraheze.org';
+			$wgWBClientSettings['repoScriptPath'] = '/w';
+			$wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
+			$wgWBClientSettings['siteGlobalID'] = 'ffgxvwiki';
+			$wgWBClientSettings['repoDatabase'] = 'ffgxvwiki';
+			$wgWBClientSettings['changesDatabase'] = 'ffgxvwiki';
+			$wgWBClientSettings['siteGroup'] = 'miraheze';
+		}
 } );
