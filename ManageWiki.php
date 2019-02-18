@@ -1910,6 +1910,19 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'wikibaseclient' => [
+			'name' => 'Wikibase (Client)',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Wikibase',
+			'var' => 'wmgUseWikibaseClient',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => true,
+			'install' => [
+				'sql' => [
+					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
+				],
+			],
+		],
 		'wikidatapagebanner' => [
 			'name' => 'WikidataPageBanner',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikidataPageBanner',
