@@ -43,5 +43,9 @@ call_user_func( function () {
 			$wgWBClientSettings['repoDatabase'] = 'ffgxvwiki';
 			$wgWBClientSettings['changesDatabase'] = 'ffgxvwiki';
 			$wgWBClientSettings['siteGroup'] = 'miraheze';
+			$wgWBClientSettings['repoNamespaces'] = [
+				'wikibase-item' => 'Item',
+				'wikibase-property' => 'Property'
+			];
 		}
 } );
