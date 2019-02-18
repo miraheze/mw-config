@@ -86,7 +86,7 @@ $wgManageWikiExtensions = [
 			'restricted' => false,
 			'install' => [
 				'sql' => [
-					'approved_revs_files' => "$IP/extensions/ApprovedRevs/sql/ApprovedFiles.sql"
+					'approved_revs_files' => "$IP/extensions/ApprovedRevs/sql/ApprovedFiles.sql",
 					'approved_revs' => "$IP/extensions/ApprovedRevs/sql/ApprovedRevs.sql"
 				],
 				'permissions' => [
