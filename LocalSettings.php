@@ -1354,6 +1354,11 @@ $wgConf->settings = [
 	'wmgUseWikibaseRepository' => [
 		'default' => false,
 	],
+	// Do not put in ManageWiki
+	'wmgUseWikibaseRepository' => [
+		'default' => false,
+		'ffgxvwiki' => true,
+	],
 	'wmgAllowEntityImport' => [
 		'default' => false,
 	],
