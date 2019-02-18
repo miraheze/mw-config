@@ -1354,6 +1354,9 @@ $wgConf->settings = [
 	'wmgUseWikibaseRepository' => [
 		'default' => false,
 	],
+	'wmgUseWikibaseClient' => [
+		'default' => false,
+	],
 	'wmgAllowEntityImport' => [
 		'default' => false,
 	],
