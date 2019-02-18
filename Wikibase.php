@@ -15,7 +15,7 @@ call_user_func( function () {
 		define( 'WB_NS_PROPERTY_TALK', $baseNs + 3 );
 
 		$wgExtraNamespaces[WB_NS_ITEM] = 'Item';
-		$wgExtraNamespaces[WB_NS_ITEM_TALK] = 'Item_talk';
+		$wgExtraNamespaces[WB_NSsiteLinkGroups_ITEM_TALK] = 'Item_talk';
 		$wgExtraNamespaces[WB_NS_PROPERTY] = 'Property';
 		$wgExtraNamespaces[WB_NS_PROPERTY_TALK] = 'Property_talk';
 
@@ -29,15 +29,6 @@ call_user_func( function () {
 		$wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 
 		$wgNamespacesToBeSearchedDefault[WB_NS_ITEM] = true;
-
-		$wgWBRepoSettings['siteLinkGroups'] = [
-				'wikipedia',
-				'wikinews',
-				'wikiquote',
-				'wikisource',
-				'wikivoyage',
-				'special'
-		];
 	
 		$wgWBRepoSettings['siteLinkGroups'] = [];
 		$wgWBRepoSettings['specialSiteLinkGroups'] = [];
