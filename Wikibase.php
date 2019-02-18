@@ -38,6 +38,7 @@ call_user_func( function () {
 				'wikivoyage',
 				'special'
 		];
-
-		$wgWBRepoSettings['specialSiteLinkGroups'] = [ 'commons', 'wikidata' ];
+	
+		$wgWBRepoSettings['siteLinkGroups'] = [];
+		$wgWBRepoSettings['specialSiteLinkGroups'] = [];
 } );
