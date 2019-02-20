@@ -1149,6 +1149,9 @@ $wgConf->settings = [
 	'wmgUseNukeDPL' => [
 		'default' => false,
 	],
+	'wmgUseNumberedHeadings' => [
+		'default' => false,
+	],
 	'wmgUseOpenGraphMeta' => [
 		'default' => false,
 	],

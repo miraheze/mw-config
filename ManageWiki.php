@@ -1187,6 +1187,14 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'numberedheadings' => [
+			'name' => 'NumberedHeadings',
+			'linkPage' => 'https://mediawiki.org/wiki/NumberedHeadings',
+			'var' => 'wmgUseNumberedHeadings',
+			'conflicts' => false,
+			'requires' => false,
+			'restricted' => false,
+		],
 		'nostalgia' => [
 			'name' => 'Nostalgia (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Nostalgia',

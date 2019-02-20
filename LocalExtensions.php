@@ -552,6 +552,10 @@ if ( $wmgUseNukeDPL ) {
 	wfLoadExtension( 'NukeDPL' );
 }
 
+if ( $wmgUseNumberedHeadings ) {
+	wfLoadExtension( 'NumberedHeadings' );
+}
+
 if ( $wmgUseOpenGraphMeta ) {
 	wfLoadExtension( 'OpenGraphMeta' );
 }
