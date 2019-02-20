@@ -1193,7 +1193,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseNumberedHeadings',
 			'conflicts' => false,
 			'requires' => false,
-			'restricted' => false,
+			'restricted' => true,
 		],
 		'nostalgia' => [
 			'name' => 'Nostalgia (Skin)',
