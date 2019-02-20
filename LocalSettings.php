@@ -1599,6 +1599,7 @@ $wgConf->settings = [
 		'+exitsincwiki' => [ 'txt' ],
 		'+fawiki' => [ 'ttf', 'eot', 'woff', 'apk' ],
 		'+guiaslocaiswiki' => [ 'zip', 'tar', 'tar.gz', 'rar', ],
+		'+histo28wiki' => [ 'webm' ],
 		'+hypernostalgiawiki' => [ 'mp4', 'webm', 'ogv', 'mp3' ],
 		'+indrikwiki' => [ 'mp3', 'mus', 'mid' ],
 		'+jadtechwiki' => [ 'png', 'bmp', 'gif', 'ico', 'ogg', 'mp3', 'svg', 'pdf', 'flac', 'mp4', 'exe', 'zip', 'jpeg', 'jpg' ],
