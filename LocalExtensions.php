@@ -572,10 +572,6 @@ if ( $wmgUsePageTriage ) {
 	wfLoadExtension( 'PageTriage' );
 }
 
-if ( $wmgUsePdfBook ) {
-	wfLoadExtension( 'PdfBook' );
-}
-
 if ( $wmgUsePDFEmbed ) {
 	wfLoadExtension( 'PDFEmbed' );
 }
