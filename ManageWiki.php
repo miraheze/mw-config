@@ -2081,7 +2081,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'Whether to show old thumbnails be displayed on the image\'s description page.',
+		'help' => 'Whether to show thumbnails for old images on the image\'s description page.',
 	],
 	'wgMediaViewerIsInBeta' => [
 		'name' => 'Enable Media Viewer Beta Mode',
