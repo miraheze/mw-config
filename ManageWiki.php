@@ -1965,7 +1965,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'timezone',
 		'overridedefault' => 'UTC',
-		'help' => 'This will adapt your wikis clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
+		'help' => 'This will adapt your wikis time over clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
 	],
 	'wgLogo' => [
 		'name' => 'Logo',
@@ -2025,7 +2025,7 @@ $wgManageWikiSettings = [
 			'No license provided' => 'empty',
 		],
 		'overridedefault' => 'cc-by-sa',
-		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly. For more information, go to freedomdefined.org/Licenses.',
+		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly.',
 	],
 
 	// Media/File
