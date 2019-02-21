@@ -2099,7 +2099,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => null,
 		'section' => 'media',
-		'help' => 'This enables Popups as a beta feature, rather then showing it to all users.',
+		'help' => 'This enables Popups as a beta feature, rather than showing it to all users.',
 	],
 	'wmgSiteNoticeOptOut' => [
 		'name' => 'Opt out of global Miraheze notices',
