@@ -1926,7 +1926,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'help' => 'Parser functions are "magic words" that return a value or function, such as time, site details or page names. Example: {{PAGENAME}} outputs ManageWiki - the current page. Read more here.',
+		'help' => 'Parser functions are "magic words" that return a value or function, such as time, site details or page names.',
 	],
 	'wgAppleTouchIcon' => [
 			'name' => 'Apple Touch Icon',
