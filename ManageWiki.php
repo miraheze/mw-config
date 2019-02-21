@@ -1926,7 +1926,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'help' => false,
+		'help' => 'Parser functions are "magic words" that return a value or function, such as time, site details or page names. Example: {{PAGENAME}} outputs ManageWiki - the current page. Read more here.',
 	],
 	'wgAppleTouchIcon' => [
 			'name' => 'Apple Touch Icon',
@@ -1934,7 +1934,7 @@ $wgManageWikiSettings = [
 			'restricted' => false,
 			'type' => 'text',
 			'overridedefault' => null,
-			'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
+			'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
 	],
 	'wgDefaultSkin' => [
 		'name' => 'Default Skin',
@@ -1949,7 +1949,7 @@ $wgManageWikiSettings = [
 			'Vector' => 'vector',
 		],
 		'overridedefault' => 'vector',
-		'help' => false,
+		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
@@ -1957,7 +1957,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
-		'help' => 'Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
+		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can add one.',
 	],
 	'wgLocaltimezone' => [
 		'name' => 'Timezone',
@@ -1965,7 +1965,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'timezone',
 		'overridedefault' => 'UTC',
-		'help' => false,
+		'help' => 'This will adapt your wikis clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
 	],
 	'wgLogo' => [
 		'name' => 'Logo',
@@ -1973,7 +1973,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
-		'help' => 'The logo should be smaller than 135x135 in order for it to display properly. Format example: //static.miraheze.org/metawiki//3/35/Miraheze_Logo.svg',
+		'help' => 'This will replace Miraheze\'s default logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can change it.',
 	],
 	'wgPFEnableStringFunctions' => [
 		'name' => 'Enable string function functionality',
@@ -1981,7 +1981,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'help' => false,
+		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in Mediawiki\'s documentation page https://www.mediawiki.org/wiki/Module:String.',
 	],
 	'wgServer' => [
 		'name' => 'Custom Domain',
@@ -1989,7 +1989,7 @@ $wgManageWikiSettings = [
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => null,
-		'help' => 'This sets your custom domain. Otherwise it defaults to subdomain.miraheze.org.',
+		'help' => 'By default your wiki is available at https://yourwiki.miraheze.org - a subdomain of Miraheze but you can request us to redirect your wiki to a domain you own. Right now is not yet possible to do it without assistance from our sysadmins, but you can learn more here https://meta.miraheze.org/wiki/Custom_domains',
 	],
 	'wgMobileUrlTemplate' => [
 		'name' => 'Mobile URL',
@@ -2005,7 +2005,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
-		'help' => false,
+		'help' => 'This option allow you to read Wikitext syntax on VisualEditor.',
 	],
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
@@ -2025,7 +2025,7 @@ $wgManageWikiSettings = [
 			'No license provided' => 'empty',
 		],
 		'overridedefault' => 'cc-by-sa',
-		'help' => false,
+		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly. For more information, go to freedomdefined.org/Licenses.',
 	],
 
 	// Media/File
@@ -2036,7 +2036,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'Allow images and other files to be uploaded through the wiki.',
+		'help' => 'Check or uncheck this option if you want to enable or disable the upload of files on your wiki.',
 	],
 	'wgAllowCopyUploads' => [
 		'name' => 'Enable File Uploads Through URL',
@@ -2045,7 +2045,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Allow uploads from URLs as well as local files.',
+		'help' => 'By default Miraheze enables file upload only from a local media but with this option you can upload files remotely from other sites.',
 	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'name' => 'Enable File Uploads Through URL on Special:Upload',
@@ -2054,7 +2054,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Add an interface to Special:Upload to enable uploading from URLs.',
+		'help' => 'This option adds a textbox on Special:Upload enabling you to upload files from any URL.',
 	],
 	'wgUseInstantCommons' => [
 		'name' => 'Enable Wikimedia Commons Files',
@@ -2063,7 +2063,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'i.e. the use of Wikimedia Commons as a shared repository.',
+		'help' => 'This option allows you to use the Wikimedia Commons file database on your wiki.',
 	],
 	'wgMirahezeCommons' => [
 		'name' => 'Enable Miraheze Commons (linking to commonswiki.miraheze.org)',
@@ -2072,7 +2072,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'i.e. the use of Miraheze Commons as a shared repository. Similar to Wikimedia Commons.',
+		'help' => 'This option allows you to use the Miraheze Commons file database on your wiki.',
 	],
 	'wgShowArchiveThumbnails' => [
 		'name' => 'Show Old Thumbnails On Description Page',
@@ -2081,7 +2081,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'Whether to show thumbnails for old images on the image description page.',
+		'help' => 'Whether should old thumbnails be displayed on the image\'s detail page.',
 	],
 	'wgMediaViewerIsInBeta' => [
 		'name' => 'Enable Media Viewer Beta Mode',
