@@ -1632,6 +1632,9 @@ $wgConf->settings = [
 	'wgUseInstantCommons' => [
 		'default' => true,
 	],
+	'wgMirahezeCommons' => [
+		'default' => true,
+	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
