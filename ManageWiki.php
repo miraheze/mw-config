@@ -213,7 +213,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:AutoCreateCategoryPages',
 			'var' => 'wmgUseAutoCreateCategoryPages',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
 		],
 		'babel' => [
 			'name' => 'Babel',
