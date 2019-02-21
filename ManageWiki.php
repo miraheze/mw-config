@@ -2065,6 +2065,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'i.e. the use of Wikimedia Commons as a shared repository.',
 	],
+	'wgMirahezeCommons' => [
+		'name' => 'Enable Miraheze Commons (linking to commonswiki.miraheze.org)',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'i.e. the use of Miraheze Commons as a shared repository. Similar to Wikimedia Commons.',
+	],
 	'wgShowArchiveThumbnails' => [
 		'name' => 'Show Old Thumbnails On Description Page',
 		'requires' => false,
