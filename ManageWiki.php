@@ -2115,7 +2115,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'help' => 'This setting allows anonymous users to change the language for them selfs.',
+		'help' => 'Enabling allowing anonymous users to control the language they view the wiki in.',
 	],
 	'wmgVisualEditorEnableDefault' => [
 		'name' => 'Make VisualEditor the default editor for all',
