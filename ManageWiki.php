@@ -1929,12 +1929,12 @@ $wgManageWikiSettings = [
 		'help' => 'Parser functions are "magic words" that return a value or function, such as time, site details or page names.',
 	],
 	'wgAppleTouchIcon' => [
-			'name' => 'Apple Touch Icon',
-			'requires' => false,
-			'restricted' => false,
-			'type' => 'text',
-			'overridedefault' => null,
-			'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
+		'name' => 'Apple Touch Icon',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => null,
+		'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
 	],
 	'wgDefaultSkin' => [
 		'name' => 'Default Skin',
@@ -2090,7 +2090,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => null,
 		'section' => 'media',
-		'help' => false,
+		'help' => 'This makes Media Viewer a beta feature thus this will not be enabled for all users.',
 	],
 	'wgPopupsBetaFeature' => [
 		'name' => 'Enable Popups Beta Mode',
@@ -2099,7 +2099,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => null,
 		'section' => 'media',
-		'help' => false,
+		'help' => 'This enables Popups as a beta feature, rather then showing it to all users.',
 	],
 	'wmgSiteNoticeOptOut' => [
 		'name' => 'Opt out of global Miraheze notices',
@@ -2115,7 +2115,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'help' => '',
+		'help' => 'This setting allows anonymous users to change the language for them selfs.',
 	],
 	'wmgVisualEditorEnableDefault' => [
 		'name' => 'Make VisualEditor the default editor for all',
@@ -2123,7 +2123,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'help' => '',
+		'help' => 'This will make VisualEditor the default edit for all.',
 	],
 	'wgPageLanguageUseDB' => [
 		'name' => 'Enable per page language',
