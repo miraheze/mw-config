@@ -233,7 +233,9 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [
 				'extensions' => [
+					'comments',
 					'socialprofile',
+					'voteny',
 				],
 			],
 			'install' => [
