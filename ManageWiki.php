@@ -2106,9 +2106,9 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'integer',
 		'minint' => 0,
-		'maxint' => 10000000000,
+		'maxint' => 315360000,
 		'overridedefault' => 86400,
-		'help' => 'Number of seconds before autoblock entries expire',
+		'help' => 'Number of seconds before autoblock entries expire. Minmum value allowed is 0 where as maxmium is 10 years (315360000).',
 	],
 
 	// Media/File
