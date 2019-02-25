@@ -1001,11 +1001,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Moderation',
 			'var' => 'wmgUseModeration',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 			'install' => [
 				'sql' => [
 					'moderation' => "$IP/extensions/Moderation/sql/patch-moderation.sql",
