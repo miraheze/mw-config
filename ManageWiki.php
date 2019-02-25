@@ -996,6 +996,23 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'moderation' => [
+			'name' => 'Moderation',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Moderation',
+			'var' => 'wmgUseModeration',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+			'install' => [
+				'sql' => [
+					'moderation' => "$IP/extensions/Moderation/sql/patch-moderation.sql",
+					'moderation_block' => "$IP/extensions/Moderation/sql/patch-moderation_block.sql"
+				],
+			],
+		],
 		'modernskylight' => [
 			'name' => 'ModernSkylight (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Modern_Skylight',
