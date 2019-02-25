@@ -366,7 +366,7 @@ $wgConf->settings = [
 			'rangeblock' => true,
 		],
 	],
-	// Anti-spam
+	// Anti-spam [MWCandidate]
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 		'proxybotwiki' => 7,
