@@ -594,8 +594,6 @@ $wgConf->settings = [
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/GlobalBlocking/globalblocking.sql",
-			"$IP/extensions/Moderation/sql/patch-moderation.sql",
-			"$IP/extensions/Moderation/sql/patch-moderation_block.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/Translate/sql/revtag.sql",
@@ -1101,11 +1099,6 @@ $wgConf->settings = [
 	],
 	'wmgUseModeration' => [
 		'default' => false,
-		'nenawikiwiki' => true,
-		'sdiywiki' => false,
-		'socioatlaswiki' => true,
-		'studentspoweringchangewiki' => true,
-		'test1wiki' => true,
 	],
 	'wmgUseModernSkylight' => [
 		'default' => false,
