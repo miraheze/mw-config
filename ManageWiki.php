@@ -2172,4 +2172,31 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'This enables Popups as a beta feature, rather than showing it to all users.',
 	],
+	
+	// Anti-Spam
+	'wgAbuseFilterActions' => [
+		'name' => 'AbuseFilter Actions',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'list-multi',
+		'options' => [
+			'Block' => 'block',
+			'BlockAutopromote' => 'blockautopromote',
+			'Degroup' => 'degroup',
+			'Disallow' => 'disallow',
+			'Tag' => 'tag',
+			'Throttle' => 'throttle',
+			'Warn' => 'warn',
+		],
+		'overridedefault' => [
+			'block' => true,
+			'blockautopromote' => true,
+			'degroup' => true,
+			'disallow' => true,
+			'tag' => true,
+			'throttle' => true,
+			'warn' => true,
+		],
+		'help' => 'The possible actions that can be taken by abuse filters. When adding a new action, check if it is restricted in $wgAbuseFilterRestrictions and, if it is, don\'t forget to add the abusefilter-modify-restricted right to the appropriate user groups.',
+	],
 ];
