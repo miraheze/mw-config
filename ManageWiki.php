@@ -2099,6 +2099,18 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
 	],
 
+	// Anti-Spam
+	'wgAutoblockExpiry' => [
+		'name' => 'Autoblock Expiry',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 10000000000,
+		'overridedefault' => 86400,
+		'help' => 'Number of seconds before autoblock entries expire',
+	],
+
 	// Media/File
 	'wgEnableUploads' => [
 		'name' => 'Enable File Uploads',
