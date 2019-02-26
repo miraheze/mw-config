@@ -2108,6 +2108,7 @@ $wgManageWikiSettings = [
 		'minint' => 0,
 		'maxint' => 315360000,
 		'overridedefault' => 86400,
+		'section' => 'anti-spam',
 		'help' => 'Number of seconds before autoblock entries expire. Minmum value allowed is 0 where as maxmium is 10 years (315360000).',
 	],
 
