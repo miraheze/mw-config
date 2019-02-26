@@ -2100,6 +2100,32 @@ $wgManageWikiSettings = [
 	],
 
 	// Anti-Spam
+	'wgAbuseFilterActions' => [
+		'name' => 'AbuseFilter Actions',
+		'requires' => false,
+		'restricted' => false,
+		'type' => 'list-multi',
+		'options' => [
+			'Block' => 'block',
+			'BlockAutopromote' => 'blockautopromote',
+			'Degroup' => 'degroup',
+			'Disallow' => 'disallow',
+			'Tag' => 'tag',
+			'Throttle' => 'throttle',
+			'Warn' => 'warn',
+		],
+		'overridedefault' => [
+			'block',
+			'blockautopromote',
+			'degroup',
+			'disallow',
+			'tag',
+			'throttle',
+			'warn',
+		],
+		'section' => 'anti-spam',
+		'help' => 'The possible actions that can be taken by abuse filters. When adding a new action, check if it is restricted in $wgAbuseFilterRestrictions and, if it is, don\'t forget to add the abusefilter-modify-restricted right to the appropriate user groups.',
+	],
 	'wgAutoblockExpiry' => [
 		'name' => 'Autoblock Expiry',
 		'requires' => false,
