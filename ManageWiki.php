@@ -1914,9 +1914,10 @@ $wgManageWikiExtensions = [
 /**
  * ManageWiki settings are added using the variable below.
  *
- * Type can be either: check, list, list-multi, matrix, text, url or wikipage.
+ * Type can be either: check, integer, list, list-multi, matrix, text, url or wikipage.
  *
  * check: adds a checkbox.
+ * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values)
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
@@ -1924,10 +1925,10 @@ $wgManageWikiExtensions = [
  * url: adds a single line text entry which requires a full URL.
  * wikipage: add a textbox which will return an autocomplete drop-down list of wikipages. Returns standardised MediaWiki pages.
  *
- * Other variables that are required are name and requires.
+ * Other variables that are required are name and from.
  *
  * name: the displayed name of the setting on Special:ManageWiki.
- * requires: a text entry of which extension is required for this setting to work.
+ * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
  * overridedefault: a string/array override default when no existing value exist.
  * restricted: boolean - requires managewiki-restricted to change.
  * help: string providing help information for the setting.
@@ -1937,7 +1938,7 @@ $wgManageWikiSettings = [
 	// General
 	'wgAllowSlowParserFunctions' => [
 		'name' => 'Allow slow parser functions',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
@@ -1945,7 +1946,7 @@ $wgManageWikiSettings = [
 	],
 	'wgAppleTouchIcon' => [
 		'name' => 'Apple Touch Icon',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
@@ -1953,7 +1954,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDefaultSkin' => [
 		'name' => 'Default Skin',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'list',
 		'options' => [
@@ -1968,7 +1969,7 @@ $wgManageWikiSettings = [
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
@@ -1976,7 +1977,7 @@ $wgManageWikiSettings = [
 	],
 	'wgLocaltimezone' => [
 		'name' => 'Timezone',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'timezone',
 		'overridedefault' => 'UTC',
@@ -1984,7 +1985,7 @@ $wgManageWikiSettings = [
 	],
 	'wgLogo' => [
 		'name' => 'Logo',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
@@ -1992,7 +1993,7 @@ $wgManageWikiSettings = [
 	],
 	'wgPFEnableStringFunctions' => [
 		'name' => 'Enable string function functionality',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
@@ -2000,7 +2001,7 @@ $wgManageWikiSettings = [
 	],
 	'wgServer' => [
 		'name' => 'Custom Domain',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => null,
@@ -2008,7 +2009,7 @@ $wgManageWikiSettings = [
 	],
 	'wgMobileUrlTemplate' => [
 		'name' => 'Mobile URL',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => '',
@@ -2016,7 +2017,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'name' => 'Enable VisualEditor Wikitext mode',
-		'requires' => 'visualeditor',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
@@ -2024,7 +2025,7 @@ $wgManageWikiSettings = [
 	],
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'list',
 		'options' => [
@@ -2044,7 +2045,7 @@ $wgManageWikiSettings = [
 	],
 	'wmgSiteNoticeOptOut' => [
 		'name' => 'Opt out of global Miraheze notices',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -2052,7 +2053,7 @@ $wgManageWikiSettings = [
 	],
 	'wgULSAnonCanChangeLanguage' => [
 		'name' => 'Allow anonymous users to change language',
-		'requires' => 'universallanguageselector',
+		'from' => 'universallanguageselector',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -2060,7 +2061,7 @@ $wgManageWikiSettings = [
 	],
 	'wmgVisualEditorEnableDefault' => [
 		'name' => 'Make VisualEditor the default editor for all',
-		'requires' => 'visualeditor',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -2069,7 +2070,7 @@ $wgManageWikiSettings = [
 	'wgPageLanguageUseDB' => [
 		'name' => 'Enable per page language',
 		'restricted' => false,
-		'requires' => false,
+		'from' => 'mediawiki',
 		'type' => 'check',
 		'overridedefault' => false,
 		'help' => 'Allows to change the page language for MediaWiki pages.',
@@ -2077,7 +2078,7 @@ $wgManageWikiSettings = [
 	'wmgAllowEntityImport' => [
 		'name' => 'Allow Entity Import (Wikibase)',
 		'restricted' => false,
-		'requires' => 'wikibaserepository',
+		'from' => 'wikibaserepository',
 		'type' => 'check',
 		'overridedefault' => false,
 		'help' => 'Allow importing entities via Special:Import and importDump.php.',
@@ -2085,7 +2086,7 @@ $wgManageWikiSettings = [
 	'wmgEnableEntitySearchUI' => [
 		'name' => 'Enable Entity Search UI (Wikibase)',
 		'restricted' => false,
-		'requires' => 'wikibaserepository',
+		'from' => 'wikibaserepository',
 		'type' => 'check',
 		'overridedefault' => true,
 		'help' => 'To determine if entity search UI should be enabled or not.',
@@ -2093,7 +2094,7 @@ $wgManageWikiSettings = [
 	'wgPageCreationLog' => [
 		'name' => 'Page Creation Log',
 		'restricted' => false,
-		'requires' => false,
+		'from' => 'mediawiki',
 		'type' => 'check',
 		'overridedefault' => true,
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
@@ -2102,7 +2103,7 @@ $wgManageWikiSettings = [
 	// Anti-Spam
 	'wgAutoblockExpiry' => [
 		'name' => 'Autoblock Expiry',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'integer',
 		'minint' => 0,
@@ -2115,7 +2116,7 @@ $wgManageWikiSettings = [
 	// Media/File
 	'wgEnableUploads' => [
 		'name' => 'Enable File Uploads',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -2124,7 +2125,7 @@ $wgManageWikiSettings = [
 	],
 	'wgAllowCopyUploads' => [
 		'name' => 'Enable File Uploads Through URL',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -2133,7 +2134,7 @@ $wgManageWikiSettings = [
 	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'name' => 'Enable File Uploads Through URL on Special:Upload',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -2142,7 +2143,7 @@ $wgManageWikiSettings = [
 	],
 	'wgUseInstantCommons' => [
 		'name' => 'Enable Wikimedia Commons Files',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -2151,7 +2152,7 @@ $wgManageWikiSettings = [
 	],
 	'wgMirahezeCommons' => [
 		'name' => 'Enable Miraheze Commons (linking to commonswiki.miraheze.org)',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -2160,7 +2161,7 @@ $wgManageWikiSettings = [
 	],
 	'wgShowArchiveThumbnails' => [
 		'name' => 'Show Old Thumbnails On Description Page',
-		'requires' => false,
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -2169,7 +2170,7 @@ $wgManageWikiSettings = [
 	],
 	'wgMediaViewerIsInBeta' => [
 		'name' => 'Enable Media Viewer Beta Mode',
-		'requires' => 'multimediaviewer',
+		'from' => 'multimediaviewer',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
@@ -2178,7 +2179,7 @@ $wgManageWikiSettings = [
 	],
 	'wgPopupsBetaFeature' => [
 		'name' => 'Enable Popups Beta Mode',
-		'requires' => 'popups',
+		'from' => 'popups',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
