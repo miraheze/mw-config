@@ -707,6 +707,7 @@ $wgConf->settings = [
 		'default' => false,
 		'allthetropeswiki' => true,
 		'baobabarchiveswiki' => true,
+		'beidipediawiki' => true,
 		'buswiki' => true,
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
