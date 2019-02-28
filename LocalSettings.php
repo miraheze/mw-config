@@ -376,10 +376,12 @@ $wgConf->settings = [
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
 		'marioserieswikiwiki' => 2592000, // 30 days * 24 hours * 60 minutes * 60 seconds
 		'proxybotwiki' => 604800, // 7 days * 24 hours * 60 minutes * 60 seconds
+		'uncyclopedia2wiki' => 5 * 86400,
 	],
 	'wgAutoConfirmCount' => [
 		'default' => 10,
 		'marioserieswikiwiki' => 500,
+		'uncyclopedia2wiki' => 25,
  	],
 
 	// BetaFeatures [MWCandidate]
@@ -2953,13 +2955,6 @@ $wgConf->settings = [
 			'uploader' => [
 				"&",
 				[ APCOND_AGE, 10 * 86400 ],
-			],
-		],
-		'+uncyclopedia2wiki' => [
-			'autoconfirmed' => [
-				"&",
-				[ APCOND_AGE, 5 * 86400 ],
-				[ APCOND_EDITCOUNT, 25 ],
 			],
 		],
 	],
