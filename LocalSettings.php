@@ -705,6 +705,7 @@ $wgConf->settings = [
 	],
 	'wgCompressRevisions' => [
 		'default' => false,
+		'absurdopediawiki' => true,
 		'allthetropeswiki' => true,
 		'baobabarchiveswiki' => true,
 		'beidipediawiki' => true,
