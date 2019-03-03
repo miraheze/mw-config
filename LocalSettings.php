@@ -553,6 +553,7 @@ $wgConf->settings = [
 	'wgCommentsInRecentChanges' => [
 		'default' => false,
 		'newusopediawiki' => true,
+		'simswiki' => true,
 	],
 
 	'wgCommentsSortDescending' => [
