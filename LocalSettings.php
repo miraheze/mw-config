@@ -3029,6 +3029,16 @@ $wgConf->settings = [
 	'wgRCMaxAge' => [
 		'default' => 180 * 24 * 3600,
 	],
+	'wgRCLinkDays' => [
+		'defualt' => [ 1, 3, 7, 14, 30 ],
+		'apunteswiki' => [ 1, 3, 7, 14, 30, 180 ],
+		'centralwiki' => [ 1, 3, 7, 14, 30, 180 ],
+		'infowiki' => [ 1, 3, 7, 14, 30, 180 ],
+		'mediatecawiki' => [ 1, 3, 7, 14, 30, 180 ],
+		'privadowiki' => [ 1, 3, 7, 14, 30, 180 ],
+		'tallerwiki' => [ 1, 3, 7, 14, 30, 180 ],
+		'ucroniaswiki' => [ 1, 3, 7, 14, 30, 180 ],
+	],
 
 	// RelatedArticles settings [MWCandidate]
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
