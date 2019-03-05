@@ -876,6 +876,7 @@ if ( $wmgUseWikiForum ) {
 
 	$wgAvailableRights[] = 'wikiforum-admin';
 	$wgAvailableRights[] = 'wikiforum-moderator';
+	$wgCaptchaTriggers['wikiforum'] = true;
 }
 
 if ( $wmgUsewikihiero ) {
