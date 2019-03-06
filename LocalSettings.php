@@ -10,7 +10,7 @@ require_once "/srv/mediawiki/config/PrivateSettings.php";
 # Load global skins and extensions
 require_once "/srv/mediawiki/config/GlobalSkins.php";
 require_once "/srv/mediawiki/config/GlobalExtensions.php";
-
+w
 # Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
@@ -1595,6 +1595,7 @@ $wgConf->settings = [
 		'+cmgwiki' => [ 'html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt' ],
 		'+cmgiwiki' => [ 'html', 'htm', 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'docx', 'doc', 'txt', 'zip', 'py', 'js', 'php', 'tar', 'gz', 'crt' ],
 		'+csnimsbordeauxwiki' => [ 'docx', 'xlsx', 'pptx', 'pub', 'xps', 'odt', 'ods', 'odp', 'odg', 'otg', 'rar', 'tar', 'gz', 'gz2', 'bz', 'bz2', 'zip', 'ipe', 'dia', 'svg', 'bib', 'add', 'spl', 'cls', 'tex', 'bst', 'sh', 'bat', 'gp', 'dat', 'fig', 'sty', 'py', 'cpp', 'hpp', 'hxx', 'c', 'h', 'mat', 'txt', 'desktop', 'md', 'perf', 'plot', 'data', 'xml', 'html', 'alist' ],
+		'+concordancewiki' => [ 'ttf', 'otf', 'woff' ],
 		'+doinwiki' => [ 'pdf', 'ppt', 'pptx', 'xls', 'xlxs', 'zip' ],
 		'+exercicesdefrancaisprodfrwiki' => [ 'html', 'htm' ],
 		'+exitsincwiki' => [ 'txt' ],
