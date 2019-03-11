@@ -2196,4 +2196,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'This enables Popups as a beta feature, rather than showing it to all users.',
 	],
+	
+	// Search/ElasticSearch
+	'wgDisableSearchUpdate' => [
+		'name' => 'Disable Search Updates',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'search',
+		'help' => 'Weather to disable updating search index to run scripts to index, for elasticsearch.',
+	],
 ];
