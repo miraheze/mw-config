@@ -795,10 +795,9 @@ $wgConf->settings = [
 		'thelonsdalebattalionwiki' => [],
 	],
 	
-	// ElasticSearch [MWExempt]
+	// ElasticSearch
 	'wgDisableSearchUpdate' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 
 
