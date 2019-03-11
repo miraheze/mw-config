@@ -799,6 +799,9 @@ $wgConf->settings = [
 	'wgDisableSearchUpdate' => [
 		'default' => false,
 	],
+	'wmgSearchType' => [
+		'default' => false,
+	],
 
 
 	// Extensions and Skins [MWCandidate]
