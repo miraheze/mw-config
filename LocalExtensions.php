@@ -101,6 +101,8 @@ if ( $wmgUseCharInsert ) {
 
 if ( $wmgUseCirrusSearch ) {
 	require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
+
+	wfLoadExtension( 'Elastica' );
 }
 
 if ( $wmgUseCite ) {
@@ -237,10 +239,6 @@ if ( $wmgUseEditSubpages ) {
 
 if ( $wmgUseEducationProgram ) {
 	wfLoadExtension( 'EducationProgram' );
-}
-
-if ( $wmgUseElastica ) {
-	wfLoadExtension( 'Elastica' );
 }
 
 if ( $wmgUseElectronPdfService ) {
