@@ -854,6 +854,9 @@ $wgConf->settings = [
 	'wmgUseCharInsert' => [
 		'default' => false,
 	],
+	'wmgUseCirrusSearch' => [
+		'default' => false,
+	],
 	'wmgUseCite' => [
 		'default' => false,
 	],
@@ -951,6 +954,9 @@ $wgConf->settings = [
 		'test1wiki' => true,
 	],
 	'wmgUseEducationProgram' => [
+		'default' => false,
+	],
+	'wmgUseElastica' => [
 		'default' => false,
 	],
 	'wmgUseElectronPdfService' => [
