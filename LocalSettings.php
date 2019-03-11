@@ -800,6 +800,10 @@ $wgConf->settings = [
 		'default' => false,
 		'test1wiki' => true,
 	],
+	'wmgSearchType' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 
 
 	// Extensions and Skins [MWCandidate]
