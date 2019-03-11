@@ -803,8 +803,11 @@ $wgConf->settings = [
 			'port' => 443,
 		]
 	],
-		
-		
+	'wgDisableSearchUpdate' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
+
 
 	// Extensions and Skins [MWCandidate]
 	'wmgUse3D' => [
