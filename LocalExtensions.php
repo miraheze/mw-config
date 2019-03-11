@@ -103,6 +103,16 @@ if ( $wmgUseCirrusSearch ) {
 	require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
 
 	wfLoadExtension( 'Elastica' );
+
+	$wgCirrusSearchClusters = [
+		'default' => [
+			[
+				'host' => 'elasticsearch-lb.miraheze.org',
+				'transport' => 'Https',
+				'port' => '443',
+			],
+		],
+	];
 }
 
 if ( $wmgUseCite ) {
