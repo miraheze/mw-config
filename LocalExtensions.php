@@ -100,7 +100,7 @@ if ( $wmgUseCharInsert ) {
 }
 
 if ( $wmgUseCirrusSearch ) {
-	wfLoadExtension( 'CirrusSearch' );
+	require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
 }
 
 if ( $wmgUseCite ) {
