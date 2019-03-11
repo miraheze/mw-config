@@ -795,7 +795,7 @@ $wgConf->settings = [
 		'thelonsdalebattalionwiki' => [],
 	],
 	
-	// search
+	// ElasticSearch [MWExempt]
 	'wgCirrusSearchServers' => [
 		'default' => [
 			'host' => 'elasticsearch1.miraheze.org',
