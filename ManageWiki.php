@@ -2207,4 +2207,14 @@ $wgManageWikiSettings = [
 		'section' => 'search',
 		'help' => 'Weather to disable updating search index to run scripts to index, for elasticsearch.',
 	],
+
+	'wmgSearchType' => [
+		'name' => 'Search Type (Enables ElasticSearch)',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'search',
+		'help' => 'Weather to use ElasticSearch or mw built in search.',
+	],
 ];
