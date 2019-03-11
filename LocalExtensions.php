@@ -99,6 +99,10 @@ if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
+if ( $wmgUseCirrusSearch ) {
+	wfLoadExtension( 'CirrusSearch' );
+}
+
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
 }
@@ -233,6 +237,10 @@ if ( $wmgUseEditSubpages ) {
 
 if ( $wmgUseEducationProgram ) {
 	wfLoadExtension( 'EducationProgram' );
+}
+
+if ( $wmgUseElastica ) {
+	wfLoadExtension( 'Elastica' );
 }
 
 if ( $wmgUseElectronPdfService ) {
