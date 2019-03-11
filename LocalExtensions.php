@@ -113,6 +113,10 @@ if ( $wmgUseCirrusSearch ) {
 			],
 		],
 	];
+
+	if ( $wmgSearchType ) {
+		$wgSearchType = 'CirrusSearch';
+	}
 }
 
 if ( $wmgUseCite ) {
