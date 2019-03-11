@@ -800,7 +800,7 @@ $wgConf->settings = [
 		'default' => [
 			'host' => 'elasticsearch-lb.miraheze.org',
 			'transport' => 'Https',
-			'port' => 9243,
+			'port' => 443,
 		]
 	],
 		
