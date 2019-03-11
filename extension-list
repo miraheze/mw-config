@@ -19,6 +19,7 @@ $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
 $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/extension.json
+$IP/extensions/CirrusSearch/CirrusSearch.php
 $IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json
 $IP/extensions/Citoid/extension.json
@@ -52,6 +53,7 @@ $IP/extensions/EditSubpages/extension.json
 $IP/extensions/Editcount/extension.json
 $IP/extensions/EducationProgram/extension.json
 $IP/extensions/ElectronPdfService/extension.json
+$IP/extensions/Elastica/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php
 $IP/extensions/FeaturedFeeds/extension.json
