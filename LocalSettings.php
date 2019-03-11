@@ -956,9 +956,6 @@ $wgConf->settings = [
 	'wmgUseEducationProgram' => [
 		'default' => false,
 	],
-	'wmgUseElastica' => [
-		'default' => false,
-	],
 	'wmgUseElectronPdfService' => [
 		'default' => false,
 	],
