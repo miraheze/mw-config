@@ -867,6 +867,7 @@ $wgConf->settings = [
 	],
 	'wmgUseCirrusSearch' => [
 		'default' => false,
+		'test1wiki' => true,
 	],
 	'wmgUseCite' => [
 		'default' => false,
