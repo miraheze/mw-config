@@ -796,13 +796,6 @@ $wgConf->settings = [
 	],
 	
 	// ElasticSearch [MWExempt]
-	'wgCirrusSearchServers' => [
-		'default' => [
-			'host' => 'elasticsearch-lb.miraheze.org',
-			'transport' => 'Https',
-			'port' => 443,
-		]
-	],
 	'wgDisableSearchUpdate' => [
 		'default' => false,
 		'test1wiki' => true,
