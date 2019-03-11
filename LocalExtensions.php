@@ -99,6 +99,12 @@ if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
+if ( $wmgUseCirrusSearch ) {
+	require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
+
+	wfLoadExtension( 'Elastica' );
+}
+
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
 }

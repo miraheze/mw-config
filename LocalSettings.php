@@ -794,6 +794,17 @@ $wgConf->settings = [
 		'default' => $wgContentNamespaces,
 		'thelonsdalebattalionwiki' => [],
 	],
+	
+	// ElasticSearch [MWExempt]
+	'wgCirrusSearchServers' => [
+		'default' => [
+			'host' => 'elasticsearch1.miraheze.org',
+			'transport' => 'Https',
+			'port' => 9243,
+		]
+	],
+		
+		
 
 	// Extensions and Skins [MWCandidate]
 	'wmgUse3D' => [
@@ -852,6 +863,9 @@ $wgConf->settings = [
 		'whentheycrywiki' => false,
 	],
 	'wmgUseCharInsert' => [
+		'default' => false,
+	],
+	'wmgUseCirrusSearch' => [
 		'default' => false,
 	],
 	'wmgUseCite' => [
