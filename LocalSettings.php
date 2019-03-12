@@ -798,6 +798,7 @@ $wgConf->settings = [
 	// ElasticSearch [MWExempt]
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
+		'metawiki' => true,
 		'test1wiki' => false,
 	],
 	'wmgSearchType' => [
@@ -867,6 +868,7 @@ $wgConf->settings = [
 	],
 	'wmgUseCirrusSearch' => [
 		'default' => false,
+		'metawiki' => true,
 		'test1wiki' => true,
 	],
 	'wmgUseCite' => [
@@ -3987,9 +3989,9 @@ if ( $wgDBname === 'permanentfuturelabwiki' ) {
 
 if ( $wgDBname === 'tmewiki' ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
-			'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-			'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
-			'alt' => 'Monitored by WikiApiary',
+		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+		'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
+		'alt' => 'Monitored by WikiApiary',
 	];
 }
 
