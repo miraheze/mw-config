@@ -117,6 +117,12 @@ if ( $wmgUseCirrusSearch ) {
 	if ( $wmgSearchType ) {
 		$wgSearchType = 'CirrusSearch';
 	}
+	
+	if ( $wmgDisableSearchUpdate ) {
+		$wgDisableSearchUpdate = true;
+	} else {
+		$wgDisableSearchUpdate = false;
+	}
 }
 
 if ( $wmgUseCite ) {
