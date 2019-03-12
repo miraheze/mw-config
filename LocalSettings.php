@@ -801,6 +801,7 @@ $wgConf->settings = [
 	],
 	'wmgSearchType' => [
 		'default' => false,
+		'metawiki' => true,
 		'test1wiki' => true,
 	],
 
