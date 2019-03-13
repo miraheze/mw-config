@@ -798,6 +798,7 @@ $wgConf->settings = [
 	// ElasticSearch [MWExempt]
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
+		'allthetropeswiki' => true,
 	],
 	'wmgSearchType' => [
 		'default' => false,
@@ -868,6 +869,7 @@ $wgConf->settings = [
 	],
 	'wmgUseCirrusSearch' => [
 		'default' => false,
+		'allthetropeswiki' => true,
 		'metawiki' => true,
 		'nonsensopediawiki' => true,
 		'test1wiki' => true,
