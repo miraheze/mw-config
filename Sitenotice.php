@@ -8,7 +8,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 32;
+$wgMajorSiteNoticeID = 33;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 /*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -23,7 +23,7 @@ EOF;
 	return true;
 }*/
 
-if ( $wgDBname === 'metawiki' ) {
+if ( $wgDBname === 'nonsensopediawiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
