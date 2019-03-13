@@ -802,6 +802,7 @@ $wgConf->settings = [
 	'wmgSearchType' => [
 		'default' => false,
 		'metawiki' => true,
+		'nonsensopediawiki' => true,
 		'test1wiki' => true,
 	],
 
