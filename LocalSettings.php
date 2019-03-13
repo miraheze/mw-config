@@ -798,7 +798,6 @@ $wgConf->settings = [
 	// ElasticSearch [MWExempt]
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
-		'nonsensopediawiki' => true,
 	],
 	'wmgSearchType' => [
 		'default' => false,
