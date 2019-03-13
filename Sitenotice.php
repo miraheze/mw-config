@@ -23,7 +23,7 @@ EOF;
 	return true;
 }*/
 
-if ( $wgDBname === 'nonsensopediawiki' ) {
+if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
