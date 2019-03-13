@@ -23,8 +23,6 @@ EOF;
 	return true;
 }*/
 
-// At this moment we are frequently moving wikis to elasticsearch, thus keeping this here for ease
-/*
 if ( $wgDBname === 'nonsensopediawiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -36,4 +34,4 @@ if ( $wgDBname === 'nonsensopediawiki' ) {
 EOF;
 		return true;
 	}
-}*/
+}
