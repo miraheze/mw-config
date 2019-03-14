@@ -17,7 +17,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is currently low on storage for uploads. Because of this most upload attempts will fail. We appigize for this.</td>
+			<td>Miraheze is currently low on storage for uploads. Because of this most upload attempts will fail. We apologize for this.</td>
 			</tr></tbody></table>
 EOF;
 	return true;
