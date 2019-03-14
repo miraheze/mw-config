@@ -3963,6 +3963,10 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
+if (php_sapi_name() === 'cli' && $wgDBname === 'allthetropeswiki' ) {
+	$wmgUseFlow = false;
+}
+
 if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
 } elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
