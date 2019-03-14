@@ -13,7 +13,7 @@ $wgMajorSiteNoticeID = 34;
 // Write your SiteNotice below.  Comment out this section to disable.
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
+	global $wmgSiteNoticeOptOut, $snImportant, $wgDBname;
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
