@@ -20,18 +20,14 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 			<td>Miraheze is currently low on storage for uploads. Because of this most upload attempts will fail. We apologize for this.</td>
 			</tr></tbody></table>
 EOF;
-	return true;
-}
 
-if ( $wgDBname === 'allthetropeswiki' ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
-
+	if ( $wgDBname === 'allthetropeswiki' ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
 			<td>Miraheze is currently performing maintenance that might affect the search functionality on this wiki. We are sorry for the inconvenience.</td>
 			</tr></tbody></table>
 EOF;
-		return true;
 	}
+
+	return true;
 }
