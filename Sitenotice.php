@@ -8,20 +8,20 @@ if ( $wmgSiteNoticeOptOut ) {
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 33;
+$wgMajorSiteNoticeID = 34;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td></td>
+			<td>Miraheze is currently low on storage for uploads. Because of this most upload attempts will fail. We appigize for this.</td>
 			</tr></tbody></table>
 EOF;
 	return true;
-}*/
+}
 
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
