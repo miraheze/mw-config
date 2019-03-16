@@ -20,7 +20,6 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 			<td>Miraheze is currently low on storage for uploads. Because of this most upload attempts will fail. We apologize for this.</td>
 			</tr></tbody></table>
 EOF;
-	}
 
 	return true;
 }
