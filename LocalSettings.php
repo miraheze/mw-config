@@ -396,7 +396,7 @@ $wgConf->settings = [
 		'kakukokkawiki' => true,
 		'tallerwikiwiki' => true,
 	],
-	'wgVisualEditorEnableDiffPageBetaFeature    ' => [
+	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
 		'kakukokkawiki' => true,
 	],
