@@ -393,6 +393,12 @@ $wgConf->settings = [
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
+		'kakukokkawiki' => true,
+		'tallerwikiwiki' => true,
+	],
+	'wgVisualEditorEnableDiffPageBetaFeature    ' => [
+		'default' => false,
+		'kakukokkawiki' => true,
 	],
 	'wgPivotFeatures' => [
 		'thegreatwarwiki' => [
