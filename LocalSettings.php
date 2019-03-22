@@ -393,8 +393,6 @@ $wgConf->settings = [
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
-		'kakukokkawiki' => true,
-		'tallerwiki' => true,
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
@@ -2650,6 +2648,8 @@ $wgConf->settings = [
 	'wgMSU_showAutoCat' => [
 		'default' => false,
 		'anduinwiki' => true,
+		'anotheredenwiki' => true,
+		'browndustwiki' => true,
 	],
 
 	'wgMSU_checkAutoCat' => [
