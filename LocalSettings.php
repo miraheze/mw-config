@@ -394,7 +394,7 @@ $wgConf->settings = [
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
 		'kakukokkawiki' => true,
-		'tallerwikiwiki' => true,
+		'tallerwiki' => true,
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
