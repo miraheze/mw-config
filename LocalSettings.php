@@ -2590,6 +2590,7 @@ $wgConf->settings = [
 		'ayrshirewiki' => true,
 		'blocknetwiki' => false,
 		'takethatwikiwiki' => false,
+		'thenationstatewiki' => false,
 		'tmewiki' => false,
 		'uncyclopedia2wiki' => false,
 		'vandalismwikiwiki' => false,
