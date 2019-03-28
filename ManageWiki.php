@@ -1303,7 +1303,9 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'poll_question' => "$IP/extensions/PollNY/sql/poll.sql"
+					'poll_choice' => "$IP/extensions/PollNY/sql/poll_choice.sql",
+					'poll_question' => "$IP/extensions/PollNY/sql/poll_question.sql",
+					'poll_user_vote' => "$IP/extensions/PollNY/sql/poll_user_vote.sql",
 				],
 				'permissions' => [
 					'*' => [
