@@ -562,6 +562,7 @@ $wgConf->settings = [
 
 	'wgCommentsSortDescending' => [
 		'default' => false,
+		'giantesswiki' => true,
 		'newusopediawiki' => true,
 	],
 
