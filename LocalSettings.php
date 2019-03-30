@@ -776,10 +776,9 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// Echo [MWCandidate]
+	// Echo [MW]
 	'wgEchoCrossWikiNotifications' => [
 		'default' => true,
-		'weatherwiki' => false,
 	],
 	'wgEchoUseJobQueue' => [
 		'default' => true,
@@ -793,6 +792,9 @@ $wgConf->settings = [
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
 		'weatherwiki' => false,
+	],
+	'wgEchoMentionStatusNotifications' => [
+		'default' => true,
 	],
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces) [MWCandidate]
 	'wgExemptFromUserRobotsControl' => [

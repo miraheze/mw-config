@@ -2198,4 +2198,33 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'This enables Popups as a beta feature, rather than showing it to all users.',
 	],
+
+	// Notification
+	'wgEchoCrossWikiNotifications' => [
+		'name' => 'Echo Cross Wiki Notifications',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Whether to enable the cross-wiki notifications feature.',
+	],
+	'wgEchoUseCrossWikiBetaFeature' => [
+		'name' => 'Echo Use Cross Wiki BetaFeature',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Feature flag for the cross-wiki notifications beta feature.',
+	],
+	'wgEchoMentionStatusNotifications' => [
+		'name' => 'Echo Mention Status Notifications',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Enable mention success/failure notifications.',
+	],
 ];
