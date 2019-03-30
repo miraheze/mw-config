@@ -205,6 +205,50 @@ if ( $wmgUseDarkVector ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['DarkVector'] = 'darkvector';
 }
 
+/**
+ * This is a global extension, but we define the config here.
+ */
+if ( $wmgUseDataDump) {
+	wfLoadExtension( 'DataDump' );
+
+	$wgDataDumpDirectory = '/mnt/mediawiki-static/private/dumps/';
+
+	$wgDataDump = [
+		'xml' => [
+			'file_ending' => '.xml.gz',
+			'generate' => [
+			    'type' => 'mwscript',
+			    'script' => "$IP/maintenance/dumpBackup.php",
+			    'options' => [
+				'--full',
+				"--output=gzip:${wgDataDumpDirectory}" . '${filename}',
+			    ],
+			],
+			'permissions' => [
+				'view' => 'view-dump',
+				'generate' => 'generate-dump',
+				'delete' => 'delete-dump',
+			],
+		],
+		'image' => [
+			'file_ending' => '.zip',
+			'permissions' => [
+				'view' => [
+					'view-dump'
+				],
+				'generate' => [
+					'generate-dump-restricted'
+				],
+			],
+		],
+	];
+
+	$wgAvailableRights[] = 'view-dump';
+	$wgAvailableRights[] = 'generate-dump';
+	$wgAvailableRights[] = 'delete-dump';
+}
+
+
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
 
