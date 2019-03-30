@@ -776,10 +776,9 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// Echo [MWCandidate]
+	// Echo [MW]
 	'wgEchoCrossWikiNotifications' => [
 		'default' => true,
-		'weatherwiki' => false,
 	],
 	'wgEchoUseJobQueue' => [
 		'default' => true,
