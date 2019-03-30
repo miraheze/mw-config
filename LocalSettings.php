@@ -2708,10 +2708,6 @@ $wgConf->settings = [
 	],
 	'wgNamespaceContentModels' => [
 		'default' => [],
-		'isvwiki' => [
-			WMG_NS_MODULE_TALK => 'flow-board',
-			NS_LIBRARY_TALK => 'flow-board',
-		],
 		'apunteswiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
@@ -2755,6 +2751,10 @@ $wgConf->settings = [
 			NS_TALLER_TALK => 'flow-board',
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
+		],
+		'isvwiki' => [
+			WMG_NS_MODULE_TALK => 'flow-board',
+			NS_LIBRARY_TALK => 'flow-board',
 		],
 		'mediatecawiki' => [
 			NS_TEST_TALK => 'flow-board',
