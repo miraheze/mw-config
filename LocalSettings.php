@@ -2767,6 +2767,9 @@ $wgConf->settings = [
 			NS_MODELO_TALK => 'flow-board',
 			NS_EXAMPLE_TALK => 'flow-board',
 		],
+		'monarchistswiki' => [
+			NS_MUSINGS_TALK => 'flow-board',
+		],
 		'privadowiki' => [
 			NS_TEST_TALK => 'flow-board',
 			NS_PAGE_TALK => 'flow-board',
