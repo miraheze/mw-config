@@ -791,7 +791,6 @@ $wgConf->settings = [
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
-		'weatherwiki' => false,
 	],
 	'wgEchoMentionStatusNotifications' => [
 		'default' => true,
