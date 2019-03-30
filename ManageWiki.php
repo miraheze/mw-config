@@ -2207,7 +2207,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Enable mention success/failure notifications',
+		'help' => 'Whether to enable the cross-wiki notifications feature.',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'name' => 'Echo Use Cross Wiki BetaFeature',
@@ -2216,7 +2216,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Feature flag for the cross-wiki notifications beta feature',
+		'help' => 'Feature flag for the cross-wiki notifications beta feature.',
 	],
 	'wgEchoMentionStatusNotifications' => [
 		'name' => 'Echo Mention Status Notifications',
@@ -2225,6 +2225,6 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Enable mention success/failure notifications',
+		'help' => 'Enable mention success/failure notifications.',
 	],
 ];
