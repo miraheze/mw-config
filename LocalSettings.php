@@ -794,6 +794,9 @@ $wgConf->settings = [
 		'default' => true,
 		'weatherwiki' => false,
 	],
+	'wgEchoMentionStatusNotifications' => [
+		'default' => true,
+	],
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces) [MWCandidate]
 	'wgExemptFromUserRobotsControl' => [
 		'default' => $wgContentNamespaces,
