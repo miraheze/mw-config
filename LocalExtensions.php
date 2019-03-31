@@ -217,13 +217,13 @@ if ( $wmgUseDataDump ) {
 		'xml' => [
 			'file_ending' => '.xml.gz',
 			'generate' => [
-			    'type' => 'mwscript',
-			    'script' => "$IP/maintenance/dumpBackup.php",
-			    'options' => [
+				'type' => 'mwscript',
+				'script' => "$IP/maintenance/dumpBackup.php",
+				'options' => [
 				'--full',
 				'--output',
 				"gzip:${wgDataDumpDirectory}" . '${filename}',
-			    ],
+				],
 			],
 			'permissions' => [
 				'view' => 'view-dump',
@@ -234,13 +234,13 @@ if ( $wmgUseDataDump ) {
 		'image' => [
 			'file_ending' => '.zip',
 			'generate' => [
-			    'type' => 'script',
-			    'script' => '/usr/bin/zip',
-			    'options' => [
+				'type' => 'script',
+				'script' => '/usr/bin/zip',
+				'options' => [
 				'-r',
 				'/mnt/mediawiki-static/private/dumps/${filename}',
 				"/mnt/mediawiki-static/${wgDBname}/"
-			    ],
+				],
 			],
 			'permissions' => [
 				'view' => 'view-dump',
