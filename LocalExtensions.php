@@ -225,6 +225,7 @@ if ( $wmgUseDataDump ) {
 					"gzip:${wgDataDumpDirectory}" . '${filename}',
 				],
 			],
+			'limit' => 1,
 			'permissions' => [
 				'view' => 'view-dump',
 				'generate' => 'generate-dump',
@@ -235,13 +236,14 @@ if ( $wmgUseDataDump ) {
 			'file_ending' => '.zip',
 			'generate' => [
 				'type' => 'script',
-				'script' => [ '/usr/bin/zip' ],
+				'script' => '/usr/bin/zip',
 				'options' => [
 					'-r',
 					'/mnt/mediawiki-static/private/dumps/${filename}',
 					"/mnt/mediawiki-static/${wgDBname}/"
 				],
 			],
+			'limit' => 1,
 			'permissions' => [
 				'view' => 'view-dump',
 				'generate' => 'managewiki-restricted',
