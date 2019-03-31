@@ -235,11 +235,11 @@ if ( $wmgUseDataDump ) {
 			'file_ending' => '.zip',
 			'generate' => [
 			    'type' => 'script',
-			    'script' => '/usr/local/bin/dumpsImageBackup.sh',
+			    'script' => '/usr/bin/zip',
 			    'options' => [
-				'-i',
-				'-w',
-				$wgDBname,
+				'-r',
+				'/mnt/mediawiki-static/dumps/${filename}',
+				"/mnt/mediawiki-static/${wgDBname}/"
 			    ],
 			],
 			'permissions' => [
