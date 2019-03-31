@@ -208,7 +208,7 @@ if ( $wmgUseDarkVector ) {
 /**
  * This is a global extension, but we define the config here.
  */
-if ( $wmgUseDataDump) {
+if ( $wmgUseDataDump ) {
 	wfLoadExtension( 'DataDump' );
 
 	$wgDataDumpDirectory = '/mnt/mediawiki-static/private/dumps/';
