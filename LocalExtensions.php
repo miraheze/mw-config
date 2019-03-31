@@ -255,7 +255,6 @@ if ( $wmgUseDataDump ) {
 	$wgAvailableRights[] = 'delete-dump';
 }
 
-
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
 
