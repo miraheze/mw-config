@@ -232,13 +232,19 @@ if ( $wmgUseDataDump) {
 		],
 		'image' => [
 			'file_ending' => '.zip',
+			'generate' => [
+			    'type' => 'script',
+			    'script' => '/usr/local/bin/dumpsImageBackup.sh',
+			    'options' => [
+				'-i',
+				'-w',
+				$wgDBname,
+			    ],
+			],
 			'permissions' => [
-				'view' => [
-					'view-dump'
-				],
-				'generate' => [
-					'generate-dump-restricted'
-				],
+				'view' => 'view-dump',
+				'generate' => 'managewiki-restricted',
+				'delete' => 'delete-dump',
 			],
 		],
 	];
