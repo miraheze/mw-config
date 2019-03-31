@@ -221,7 +221,8 @@ if ( $wmgUseDataDump ) {
 			    'script' => "$IP/maintenance/dumpBackup.php",
 			    'options' => [
 				'--full',
-				"--output=gzip:${wgDataDumpDirectory}" . '${filename}',
+				'--output',
+				"gzip:${wgDataDumpDirectory}" . '${filename}',
 			    ],
 			],
 			'permissions' => [
@@ -237,7 +238,8 @@ if ( $wmgUseDataDump ) {
 			    'script' => '/usr/local/bin/dumpsImageBackup.sh',
 			    'options' => [
 				'-i',
-				'-w', $wgDBname,
+				'-w',
+				$wgDBname,
 			    ],
 			],
 			'permissions' => [
