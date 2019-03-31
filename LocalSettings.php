@@ -598,6 +598,7 @@ $wgConf->settings = [
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
+			"$IP/extensions/DataDump/sql/data_dump.sql",
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/GlobalBlocking/globalblocking.sql",
 			"$IP/extensions/OAuth/backend/schema/mysql/OAuth.sql",
@@ -936,6 +937,9 @@ $wgConf->settings = [
 	],
 	'wmgUseDarkVector' => [
 		'default' => false,
+	],
+	'wmgUseDataDump' => [
+		'default' => true,
 	],
 	'wmgUseDescription2' => [
 		'default' => false,
