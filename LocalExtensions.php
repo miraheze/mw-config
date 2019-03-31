@@ -220,9 +220,9 @@ if ( $wmgUseDataDump ) {
 				'type' => 'mwscript',
 				'script' => "$IP/maintenance/dumpBackup.php",
 				'options' => [
-				'--full',
-				'--output',
-				"gzip:${wgDataDumpDirectory}" . '${filename}',
+					'--full',
+					'--output',
+					"gzip:${wgDataDumpDirectory}" . '${filename}',
 				],
 			],
 			'permissions' => [
@@ -237,9 +237,9 @@ if ( $wmgUseDataDump ) {
 				'type' => 'script',
 				'script' => '/usr/bin/zip',
 				'options' => [
-				'-r',
-				'/mnt/mediawiki-static/private/dumps/${filename}',
-				"/mnt/mediawiki-static/${wgDBname}/"
+					'-r',
+					'/mnt/mediawiki-static/private/dumps/${filename}',
+					"/mnt/mediawiki-static/${wgDBname}/"
 				],
 			],
 			'permissions' => [
