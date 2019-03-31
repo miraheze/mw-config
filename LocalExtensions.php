@@ -12,7 +12,7 @@ if ( $wmgUse3D ) {
 	$wgFileExtensions[] = 'stl';
 }
 
-if ( $wmgUseAddThis ) {d
+if ( $wmgUseAddThis ) {
 	wfLoadExtension( 'AddThis' );
 
 	$wgAddThisHeader = false;
