@@ -937,6 +937,9 @@ $wgConf->settings = [
 	'wmgUseDarkVector' => [
 		'default' => false,
 	],
+	'wmgUseDataDump' => [
+		'default' => true,
+	],
 	'wmgUseDescription2' => [
 		'default' => false,
 	],
