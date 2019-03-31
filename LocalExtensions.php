@@ -237,8 +237,7 @@ if ( $wmgUseDataDump ) {
 			    'script' => '/usr/local/bin/dumpsImageBackup.sh',
 			    'options' => [
 				'-i',
-				'-w',
-				$wgDBname,
+				'-w', $wgDBname,
 			    ],
 			],
 			'permissions' => [
