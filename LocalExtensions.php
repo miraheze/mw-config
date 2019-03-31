@@ -12,7 +12,7 @@ if ( $wmgUse3D ) {
 	$wgFileExtensions[] = 'stl';
 }
 
-if ( $wmgUseAddThis ) {
+if ( $wmgUseAddThis ) {d
 	wfLoadExtension( 'AddThis' );
 
 	$wgAddThisHeader = false;
@@ -235,7 +235,7 @@ if ( $wmgUseDataDump ) {
 			'file_ending' => '.zip',
 			'generate' => [
 				'type' => 'script',
-				'script' => '/usr/bin/zip',
+				'script' => [ '/usr/bin/zip' ],
 				'options' => [
 					'-r',
 					'/mnt/mediawiki-static/private/dumps/${filename}',
