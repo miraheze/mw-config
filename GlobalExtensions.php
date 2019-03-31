@@ -12,7 +12,6 @@ wfLoadExtensions( [
 	'CookieWarning',
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
-	'DataDump',
 	'Echo',
 	'GlobalBlocking',
 	'GlobalCssJs',
