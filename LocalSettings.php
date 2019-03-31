@@ -753,6 +753,10 @@ $wgConf->settings = [
 		'nonbinarywiki' => '2.5e7',
 	],
 
+	'wgMaxShellWallClockTime' => [
+		'default' => 21600
+	],
+
 	// Delete [MWExempt]
 	'wgDeleteRevisionsLimit' => [
 		'default' => '250', // databases don't have much memory - let's not overload them in future
