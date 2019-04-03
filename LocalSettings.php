@@ -854,6 +854,7 @@ $wgConf->settings = [
 	],
 	'wmgUseBlogPage' => [
 		'default' => false,
+		'cloudytheology' => true,		
 	],
 	'wmgUseBabel' => [
 		'default' => false,
@@ -904,6 +905,7 @@ $wgConf->settings = [
 	],
 	'wmgUseComments' => [
 		'default' => false, // Sysop has 'commentadmin' by default
+		'cloudytheology' => true,
 	],
 	'wmgUseContactPage' => [
 		'default' => false, // Add wiki config to ContactPage.php
