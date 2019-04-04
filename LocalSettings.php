@@ -1460,6 +1460,7 @@ $wgConf->settings = [
 		'magnaversewiki' => true,
 		'mikrodevwiki' => true,
 		'mikrodevdocswiki' => true,
+		'piratapentewiki' => true,
 		'tensegritywiki' => true,
 		'travailcollaboratifwiki' => true,
 		'sitraduwiki' => true,
