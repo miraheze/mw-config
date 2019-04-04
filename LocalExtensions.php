@@ -239,7 +239,7 @@ if ( $wmgUseDataDump ) {
 				'script' => '/usr/bin/zip',
 				'options' => [
 					'-r',
-					'/mnt/mediawiki-static/private/dumps/${filename}',
+					$wgDataDumpDirectory . '${filename}',
 					"/mnt/mediawiki-static/${wgDBname}/"
 				],
 			],
