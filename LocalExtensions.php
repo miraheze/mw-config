@@ -211,7 +211,7 @@ if ( $wmgUseDarkVector ) {
 if ( $wmgUseDataDump ) {
 	wfLoadExtension( 'DataDump' );
 
-	$wgDataDumpDirectory = '/mnt/mediawiki-static/private/dumps/';
+	$wgDataDumpDirectory = '/mnt/mediawiki-static/private/dumps/' . $wgDBname;
 
 	$wgDataDump = [
 		'xml' => [
