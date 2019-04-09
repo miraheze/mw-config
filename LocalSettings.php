@@ -3269,7 +3269,7 @@ $wgConf->settings = [
 		'nonsensopediawiki' => 'CirrusSearch',
 		'test1wiki' => 'CirrusSearch',
 	],
-	'wgCirrusSearchClusters' =>
+	'wgCirrusSearchClusters' => [
 		'default' => [
 			'default' => [
 				[
