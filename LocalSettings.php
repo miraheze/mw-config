@@ -801,19 +801,6 @@ $wgConf->settings = [
 		'default' => $wgContentNamespaces,
 		'thelonsdalebattalionwiki' => [],
 	],
-	
-	// ElasticSearch [MWExempt]
-	'wmgDisableSearchUpdate' => [
-		'default' => false,
-	],
-	'wmgSearchType' => [
-		'default' => false,
-		'allthetropeswiki' => true,
-		'metawiki' => true,
-		'nonsensopediawiki' => true,
-		'test1wiki' => true,
-	],
-
 
 	// Extensions and Skins [MWCandidate]
 	'wmgUse3D' => [
@@ -873,13 +860,6 @@ $wgConf->settings = [
 	],
 	'wmgUseCharInsert' => [
 		'default' => false,
-	],
-	'wmgUseCirrusSearch' => [
-		'default' => false,
-		'allthetropeswiki' => true,
-		'metawiki' => true,
-		'nonsensopediawiki' => true,
-		'test1wiki' => true,
 	],
 	'wmgUseCite' => [
 		'default' => false,
@@ -3278,6 +3258,18 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
+	// ElasticSearch [MWCandidate?]
+	'wgDisableSearchUpdate' => [
+		'default' => false,
+	],
+	'wgSearchType' => [
+		'default' => null,
+		'allthetropeswiki' => 'CirrusSearch',
+		'metawiki' => 'CirrusSearch',
+		'nonsensopediawiki' => 'CirrusSearch',
+		'test1wiki' => 'CirrusSearch',
+	],
+	
 	// Server [MWExempt]
 	'wgArticlePath' => [
 		'default' => '/wiki/$1',
