@@ -99,32 +99,6 @@ if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
-if ( $wmgUseCirrusSearch ) {
-	require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
-
-	wfLoadExtension( 'Elastica' );
-
-	$wgCirrusSearchClusters = [
-		'default' => [
-			[
-				'host' => 'elasticsearch-lb.miraheze.org',
-				'transport' => 'Https',
-				'port' => '443',
-			],
-		],
-	];
-
-	if ( $wmgSearchType ) {
-		$wgSearchType = 'CirrusSearch';
-	}
-	
-	if ( $wmgDisableSearchUpdate ) {
-		$wgDisableSearchUpdate = true;
-	} else {
-		$wgDisableSearchUpdate = false;
-	}
-}
-
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
 }
