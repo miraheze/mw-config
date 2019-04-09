@@ -3258,16 +3258,12 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// ElasticSearch [MWCandidate?]
+	// ElasticSearch [MWExempt]
 	'wgDisableSearchUpdate' => [
 		'default' => false,
 	],
 	'wgSearchType' => [
-		'default' => null,
-		'allthetropeswiki' => 'CirrusSearch',
-		'metawiki' => 'CirrusSearch',
-		'nonsensopediawiki' => 'CirrusSearch',
-		'test1wiki' => 'CirrusSearch',
+		'default' => 'SearchMySQL',
 	],
 	'wgCirrusSearchClusters' => [
 		'default' => [
