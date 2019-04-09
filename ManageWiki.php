@@ -2001,6 +2001,14 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in Mediawiki\'s documentation page https://www.mediawiki.org/wiki/Module:String.',
 	],
+	'wgSearchType' => [
+		'name' => 'Search Type',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridefault' => null,
+		'help' => 'This is the search engine used currently in use by your wiki.',
+	],
 	'wgServer' => [
 		'name' => 'Custom Domain',
 		'from' => 'mediawiki',
