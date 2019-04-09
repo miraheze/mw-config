@@ -3269,6 +3269,17 @@ $wgConf->settings = [
 		'nonsensopediawiki' => 'CirrusSearch',
 		'test1wiki' => 'CirrusSearch',
 	],
+	'wgCirrusSearchClusters' =>
+		'default' => [
+			'default' => [
+				[
+					'host' => 'elasticsearch-lb.miraheze.org',
+					'transport' => 'Https',
+					'port' => '443',
+				],
+			],
+		],
+	],
 	
 	// Server [MWExempt]
 	'wgArticlePath' => [
