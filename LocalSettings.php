@@ -412,7 +412,7 @@ $wgConf->settings = [
 		'default' => false,
 		'test1wiki' => true,
 	],
-	// Block
+	// Block [MWCandidate]
 	'wgAutoblockExpiry' => [
 		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
 	],
@@ -1595,7 +1595,7 @@ $wgConf->settings = [
 		'infectopedwiki' => false,
 	],
 
-	// Files
+	// Files [MWCandidate]
 	'wgEnableUploads' => [
 		'default' => true,
 	],
