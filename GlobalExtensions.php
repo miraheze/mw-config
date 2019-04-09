@@ -1,6 +1,7 @@
 <?php
 require_once "$IP/extensions/Scribunto/Scribunto.php";
 require_once "$IP/extensions/MobileDetect/MobileDetect.php";
+require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
@@ -13,6 +14,7 @@ wfLoadExtensions( [
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'Echo',
+	'Elastica',
 	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalPreferences',
