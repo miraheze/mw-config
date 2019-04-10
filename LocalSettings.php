@@ -3719,16 +3719,6 @@ $wgConf->settings = [
 	],
 	'wgVisualEditorShowBetaWelcome' => [
 		'default' => true,
-		'isvwiki' => false,
-		'jcswiki' => false,
-		'apunteswiki' => false,
-		'centralwiki' => false,
-		'destinoswiki' => false,
-		'infowiki' => false,
-		'mediatecawiki' => false,
-		'privadowiki' => false,
-		'tallerwiki' => false,
-		'ucroniaswiki' => false,
 	],
 	'wgVisualEditorSupportedSkins' => [
 		'default' => [],
