@@ -381,12 +381,11 @@ $wgConf->settings = [
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
 	],
-	'wgVisualEditorEnableWikitext' => [
+	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'default' => false,
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
-		'kakukokkawiki' => true,
 	],
 	'wgPivotFeatures' => [
 		'thegreatwarwiki' => [
@@ -3714,6 +3713,9 @@ $wgConf->settings = [
 			NS_TEACHING => true,
 			NS_BLANK => true,
 		],
+	],
+	'wgVisualEditorEnableWikitext' => [
+		'default' => false,
 	],
 	'wgVisualEditorShowBetaWelcome' => [
 		'default' => true,
