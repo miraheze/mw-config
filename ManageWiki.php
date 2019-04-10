@@ -2173,6 +2173,15 @@ $wgManageWikiSettings = [
 		'section' => 'beta',
 		'help' => 'Will register a preference with BetaFeatures if set to \"true\".',
 	],
+	'wgVisualEditorEnableDiffPageBetaFeature' => [
+		'name' => 'VisualEditor Enable Diff Page Beta Feature',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'beta',
+		'help' => 'Enable the new visual mode as a beta feature on revision difference pages.',
+	],
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'name' => 'wgVisualEditor Enable Wikitext Beta Feature',
 		'from' => 'mediawiki',
@@ -2182,14 +2191,14 @@ $wgManageWikiSettings = [
 		'section' => 'beta',
 		'help' => 'Enable the new wikitext mode inside the visual editor as a beta feature. It has many of the tools present in the visual editor, uses a similar design, and allows better switching between the two.',
 	],
-	'wgVisualEditorEnableDiffPageBetaFeature' => [
-		'name' => 'VisualEditor Enable Diff Page Beta Feature',
+	'wgVisualEditorShowBetaWelcome' => [
+		'name' => 'Enable VisualEditor Show Beta Welcome',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'beta',
-		'help' => 'Enable the new visual mode as a beta feature on revision difference pages.',
+		'help' => 'Shows a beta welcome for users of VisualEditor.',
 	],
 
 	// Media/File
@@ -2275,15 +2284,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Whether to enable the cross-wiki notifications feature.',
-	],
-	'wgEchoUseCrossWikiBetaFeature' => [
-		'name' => 'Echo Use Cross Wiki BetaFeature',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'notifications',
-		'help' => 'Feature flag for the cross-wiki notifications beta feature.',
 	],
 	'wgEchoMentionStatusNotifications' => [
 		'name' => 'Echo Mention Status Notifications',
