@@ -2174,7 +2174,7 @@ $wgManageWikiSettings = [
 		'help' => 'Will register a preference with BetaFeatures if set to \"true\".',
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
-		'name' => 'VisualEditor Enable Diff Page Beta Feature',
+		'name' => 'Enable VisualEditor Diff Page Beta Feature',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
@@ -2183,7 +2183,7 @@ $wgManageWikiSettings = [
 		'help' => 'Enable the new visual mode as a beta feature on revision difference pages.',
 	],
 	'wgVisualEditorEnableWikitextBetaFeature' => [
-		'name' => 'wgVisualEditor Enable Wikitext Beta Feature',
+		'name' => 'Enable VisualEditor Wikitext Beta Feature',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
