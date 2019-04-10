@@ -640,15 +640,14 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
-	// Cookies extension settings [MWCandidate]
+	// Cookies extension settings [MW]
 	'wgCookieWarningMoreUrl' => [
 		'default' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
-		'thelonsdalebattalionwiki' => 'https://thelonsdalebattalion.co.uk/wiki/The_Lonsdale_Battalion:Cookies'
 	],
 	'wgCookieSetOnAutoblock' => [
 		'default' => true,
-		'weatherwiki' => false,
 	],
+	// Cookies extension settings [MWExempt]
 	'wgCookieWarningEnabled' => [
 		'default' => true,
 	],
@@ -662,7 +661,7 @@ $wgConf->settings = [
 		'default' => '/srv/GeoLite2-City.mmdb',
 	],
 
-	// Cookie stuff
+	// Cookie stuff [MW
 	'wgCookieSetOnIpBlock' => [
 		'default' => true,
 	],

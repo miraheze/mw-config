@@ -2162,6 +2162,24 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Allows the blocking user to grant talk page edit access for the blocked user',
 	],
+	'wgCookieSetOnAutoblock' => [
+		'name' => 'Cookie set on autoblock',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'anti-spam',
+		'help' => 'Determines whether to set a cookie when a user is autoblocked. Doing so means that a blocked user, even after logging out and moving to a new IP address, will still be blocked.',
+	],
+	'wgCookieSetOnIpBlock' => [
+		'name' => 'Cookie set on IP block',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'anti-spam',
+		'help' => 'Determines whether to set a cookie when an IP user is blocked. Doing so means that a blocked user, even after moving to a new IP address, will still be blocked.',
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
@@ -2305,6 +2323,14 @@ $wgManageWikiSettings = [
 	],
 
 	// Notification
+	'wgCookieWarningMoreUrl' => [
+		'name' => 'CookieWarning More Url',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
+		'help' => 'Set the URL to your \'More Information\' page.',
+	],
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
 		'from' => 'mediawiki',
