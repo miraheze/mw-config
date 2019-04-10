@@ -534,21 +534,17 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
-	// Comments extension [MWCandidate]
+	// Comments extension [MW]
 	'wgCommentsDefaultAvatar' => [
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
 	],
 
 	'wgCommentsInRecentChanges' => [
 		'default' => false,
-		'newusopediawiki' => true,
-		'simswiki' => true,
 	],
 
 	'wgCommentsSortDescending' => [
 		'default' => false,
-		'giantesswiki' => true,
-		'newusopediawiki' => true,
 	],
 
 	 // Contribution Scores [MWCandidate]
