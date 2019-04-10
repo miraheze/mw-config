@@ -366,7 +366,7 @@ $wgConf->settings = [
 			'rangeblock' => true,
 		],
 	],
-	// Anti-spam
+	// Anti-spam [MW]
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
@@ -377,7 +377,7 @@ $wgConf->settings = [
 		'default' => 10,
  	],
 
-	// BetaFeatures [MWCandidate]
+	// BetaFeatures [MW]
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
 	],
