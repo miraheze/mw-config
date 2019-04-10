@@ -381,15 +381,11 @@ $wgConf->settings = [
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
 	],
-	'wgPopupsBetaFeature' => [
-		'default' => false,
-	],
-	'wgVisualEditorEnableWikitext' => [
+	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'default' => false,
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
-		'kakukokkawiki' => true,
 	],
 	'wgPivotFeatures' => [
 		'thegreatwarwiki' => [
@@ -400,10 +396,6 @@ $wgConf->settings = [
 			'wikiNameDesktop' => 'The Great War 1914-1918',
 			'showFooterIcons' => true
 		],
-	],
-	'wgEnableRcFiltersBetaFeature' => [
-		'default' => false,
-		'test1wiki' => true,
 	],
 	// Block [MWCandidate]
 	'wgAutoblockExpiry' => [
@@ -3722,18 +3714,11 @@ $wgConf->settings = [
 			NS_BLANK => true,
 		],
 	],
+	'wgVisualEditorEnableWikitext' => [
+		'default' => false,
+	],
 	'wgVisualEditorShowBetaWelcome' => [
 		'default' => true,
-		'isvwiki' => false,
-		'jcswiki' => false,
-		'apunteswiki' => false,
-		'centralwiki' => false,
-		'destinoswiki' => false,
-		'infowiki' => false,
-		'mediatecawiki' => false,
-		'privadowiki' => false,
-		'tallerwiki' => false,
-		'ucroniaswiki' => false,
 	],
 	'wgVisualEditorSupportedSkins' => [
 		'default' => [],
