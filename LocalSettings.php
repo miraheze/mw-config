@@ -547,7 +547,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	 // Contribution Scores [MWCandidate]
+	 // Contribution Scores [MWExempt]
 	 'wgContribScoreDisableCache' => [
 		 'default' => true,
 	 ],
