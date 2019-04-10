@@ -2154,6 +2154,17 @@ $wgManageWikiSettings = [
 		'help' => 'Number of edits an account requires before it is autoconfirmed.',
 	],
 
+	// Beta Feature related stuff
+	'wgMediaViewerIsInBeta' => [
+		'name' => 'Enable Media Viewer Beta',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'beta',
+		'help' => 'Will register a preference with BetaFeatures if set to \"true\".',
+	],
+
 	// Media/File
 	'wgEnableUploads' => [
 		'name' => 'Enable File Uploads',
