@@ -2210,6 +2210,26 @@ $wgManageWikiSettings = [
 		'help' => 'Shows a beta welcome for users of VisualEditor.',
 	],
 
+	// Editing
+	'wgCommentsInRecentChanges' => [
+		'name' => 'Enable Comments In RecentChanges',
+		'from' => 'comments',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Shows comments in the RecentChanges special page.',
+	],
+	'wgCommentsSortDescending' => [
+		'name' => ' Sort Comments by Descending',
+		'from' => 'comments',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'This sorts comments by descending date, with the new comment box and most recent comments at the top when enabled.',
+	],
+
 	// Media/File
 	'wgEnableUploads' => [
 		'name' => 'Enable File Uploads',
