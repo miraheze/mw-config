@@ -372,9 +372,6 @@ $wgConf->settings = [
 	],
 	'wgAutoConfirmAge' => [
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
-		'marioserieswikiwiki' => 2592000, // 30 days * 24 hours * 60 minutes * 60 seconds
-		'proxybotwiki' => 604800, // 7 days * 24 hours * 60 minutes * 60 seconds
-		'uncyclopedia2wiki' => 5 * 86400,
 	],
 	'wgAutoConfirmCount' => [
 		'default' => 10,

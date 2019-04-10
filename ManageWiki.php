@@ -2135,6 +2135,17 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Number of accounts each IP address may create, 0 to disable.',
 	],
+	'wgAutoConfirmAge' => [
+		'name' => 'Auto Confirm Age',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 90000000000,
+		'overridedefault' => 345600,
+		'section' => 'anti-spam',
+		'help' => 'Number of seconds an account is required to age before it\'s given the implicit \'autoconfirmed\' group membership.',
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
