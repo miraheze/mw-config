@@ -369,8 +369,6 @@ $wgConf->settings = [
 	// Anti-spam [MWCandidate]
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
-		'proxybotwiki' => 7,
-		'weatherwiki' => 6,
 	],
 	'wgAutoConfirmAge' => [
 		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
