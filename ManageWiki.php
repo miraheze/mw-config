@@ -2155,6 +2155,15 @@ $wgManageWikiSettings = [
 	],
 
 	// Beta Feature related stuff
+	'wgEchoUseCrossWikiBetaFeature' => [
+		'name' => 'Enable Echo Cross Wiki Beta Feature',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'beta',
+		'help' => 'Feature flag for the cross-wiki notifications beta feature.',
+	],
 	'wgMediaViewerIsInBeta' => [
 		'name' => 'Enable Media Viewer Beta',
 		'from' => 'mediawiki',
