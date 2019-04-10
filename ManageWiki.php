@@ -2144,6 +2144,15 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Number of seconds an account is required to age before it\'s given the implicit \'autoconfirmed\' group membership.',
 	],
+	'wgAutoConfirmCount' => [
+		'name' => 'Auto Confirm Count',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'integer',
+		'overridedefault' => 10,
+		'section' => 'anti-spam',
+		'help' => 'Number of edits an account requires before it is autoconfirmed.',
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
