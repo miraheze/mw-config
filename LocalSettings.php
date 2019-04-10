@@ -865,13 +865,6 @@ $wgConf->settings = [
 	],
 	'wmgUseContactPage' => [
 		'default' => false, // Add wiki config to ContactPage.php
-		'apellidosmurcianoswiki' => true,
-		'ayrshirewiki' => true,
-		'christipediawiki' => true,
-		'cdcwiki' => true,
-		'fablabesdswiki' => true,
-		'qboxnextwiki' => true,
-		'test1wiki' => true,
 	],
 	'wmgUseContributionScores' => [
 		'default' => false,

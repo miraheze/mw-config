@@ -376,6 +376,18 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		// When enabling this, add the wiki to ContactPage.php
+		'contactpage' => [
+			'name' => 'ContactPage',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:ContactPage',
+			'var' => 'wmgUseContactPage',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'contributionscores' => [
 			'name' => 'ContributionScores',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:ContributionScores',
