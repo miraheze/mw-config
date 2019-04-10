@@ -661,31 +661,11 @@ $wgConf->settings = [
 		'default' => '/srv/GeoLite2-City.mmdb',
 	],
 
-	// Cookie stuff [MW
+	// Cookie stuff [MW]
 	'wgCookieSetOnIpBlock' => [
 		'default' => true,
 	],
 
-	// RC feed [MWCandidate]
-	'wgStructuredChangeFiltersShowPreference' => [
-		'default' => true,
-		'reviwiki' => false,
-		'reviwikiwiki' => false,
-		'apunteswiki' => false,
-		'centralwiki' => false,
-		'destinoswiki' => false,
-		'infowiki' => false,
-		'mediatecawiki' => false,
-		'privadowiki' => false,
-		'tallerwiki' => false,
-		'ucroniaswiki' => false,
-	],
-	'wgStructuredChangeFiltersShowWatchlistPreference' => [
-		'default' => true,
-	],
-	'wgStructuredChangeFiltersOnWatchlist' => [
-		'default' => true,
-	],
 	// Database [MWExempt]
 	'wgAllowSchemaUpdates' => [
 		'default' => false,
