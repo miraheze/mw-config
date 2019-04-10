@@ -2124,6 +2124,15 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Number of seconds before autoblock entries expire. Minmum value allowed is 0 where as maxmium is 10 years (315360000).',
 	],
+	'wgAccountCreationThrottle' => [
+		'name' => 'Account Creation Throttle',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => 5,
+		'section' => 'anti-spam',
+		'help' => 'Number of accounts each IP address may create, 0 to disable.',
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
