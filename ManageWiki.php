@@ -2154,13 +2154,13 @@ $wgManageWikiSettings = [
 		'help' => 'Number of edits an account requires before it is autoconfirmed.',
 	],
 	'wgBlockAllowsUTEdit' => [
-		'name' => 'Block Allows UT Edit',
+		'name' => 'Allows blocking users to restrict talk page accesst',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'anti-spam',
-		'help' => 'Allow blocked users to edit their talk pages.',
+		'help' => 'Allows the blocking user to grant talk page edit access for the blocked user',
 	],
 
 	// Beta Feature related stuff
