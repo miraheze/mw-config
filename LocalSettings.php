@@ -381,9 +381,6 @@ $wgConf->settings = [
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
 	],
-	'wgPopupsBetaFeature' => [
-		'default' => false,
-	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
 	],
@@ -400,10 +397,6 @@ $wgConf->settings = [
 			'wikiNameDesktop' => 'The Great War 1914-1918',
 			'showFooterIcons' => true
 		],
-	],
-	'wgEnableRcFiltersBetaFeature' => [
-		'default' => false,
-		'test1wiki' => true,
 	],
 	// Block [MWCandidate]
 	'wgAutoblockExpiry' => [
