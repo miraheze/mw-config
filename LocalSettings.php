@@ -397,7 +397,7 @@ $wgConf->settings = [
 			'showFooterIcons' => true
 		],
 	],
-	// Block [MWCandidate]
+	// Block [MW]
 	'wgAutoblockExpiry' => [
 		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
 	],

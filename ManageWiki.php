@@ -2153,6 +2153,15 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Number of edits an account requires before it is autoconfirmed.',
 	],
+	'wgBlockAllowsUTEdit' => [
+		'name' => 'Block Allows UT Edit',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'anti-spam',
+		'help' => 'Allow blocked users to edit their talk pages.',
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
