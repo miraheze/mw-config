@@ -366,7 +366,7 @@ $wgConf->settings = [
 			'rangeblock' => true,
 		],
 	],
-	// Anti-spam [MWCandidate]
+	// Anti-spam
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
@@ -375,8 +375,6 @@ $wgConf->settings = [
 	],
 	'wgAutoConfirmCount' => [
 		'default' => 10,
-		'marioserieswikiwiki' => 500,
-		'uncyclopedia2wiki' => 25,
  	],
 
 	// BetaFeatures [MWCandidate]
