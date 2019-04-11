@@ -870,6 +870,7 @@ $wgConf->settings = [
 		'christipediawiki' => true,
 		'cdcwiki' => true,
 		'fablabesdswiki' => true,
+		'guiaslocaiswiki' => true,
 		'qboxnextwiki' => true,
 		'test1wiki' => true,
 	],
