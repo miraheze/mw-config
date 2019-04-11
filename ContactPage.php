@@ -76,6 +76,20 @@ if ( $wgDBname == 'fablabesdswiki' ) {
 	];
 }
 
+if ( $wgDBname == 'guiaslocaiswiki' ) {
+	$wgContactConfig['default'] = [
+		'RecipientUser' => 'Eduaddad',
+		'SenderEmail' => $wgPasswordSender,
+		'SenderName' => 'Miraheze No Reply',
+		'RequireDetails' => true,
+		'IncludeIP' => false, // No privy
+		'AdditionalFields' => [],
+		'DisplayFormat' => 'table',
+		'RLModules' => [],
+		'RLStyleModules' => [],
+	];
+}
+
 if ( $wgDBname == 'qboxnextwiki' ) {
 	$wgContactConfig['default'] = [
 		'RecipientUser' => 'A KLERK',
