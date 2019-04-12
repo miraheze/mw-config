@@ -953,7 +953,7 @@ $wgConf->settings = [
 	],
 	'wgExtraSignatureNamespaces' => [
 		'default' => [],
-		'nonciclopediawiki' => [ NS_HELP, NS_PROJECT],
+		'nonciclopediawiki' => [ NS_HELP, NS_PROJECT ],
 	],
 	'wmgUseFancyBoxThumbs' => [
 		'default' => false,
