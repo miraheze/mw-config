@@ -951,8 +951,9 @@ $wgConf->settings = [
 	'wmgUseEventLogging' => [
 		'default' => false,
 	],
-	'$wgExtraSignatureNamespaces' => [
-		'nonciclopediawiki' => [NS_HELP, NS_PROJECT],
+	'wgExtraSignatureNamespaces' => [
+		'default' => [],
+		'nonciclopediawiki' => [ NS_HELP, NS_PROJECT],
 	],
 	'wmgUseFancyBoxThumbs' => [
 		'default' => false,
