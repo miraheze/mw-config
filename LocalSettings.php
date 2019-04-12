@@ -2656,12 +2656,12 @@ $wgConf->settings = [
 		'default' => [ 'png' ],
 	],
 	// Namespaces [MWNamespaces]
-		'wgExtraSignatureNamespaces' => [
+	'wgExtraSignatureNamespaces' => [
 		'default' => [],
 		'nonciclopediawiki' => [
-			                NS_HELP, 
-					NS_PROJECT 
-		                        ],
+			NS_HELP,
+			NS_PROJECT,
+		],
 	],
 	'wgMetaNamespace' => [
 		'default' => null,
