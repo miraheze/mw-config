@@ -951,11 +951,6 @@ $wgConf->settings = [
 	'wmgUseEventLogging' => [
 		'default' => false,
 	],
-	'wgExtraSignatureNamespaces' => [
-		'default' => [],
-		'nonciclopediawiki' => [ NS_HELP, 
-					NS_PROJECT ],
-	],
 	'wmgUseFancyBoxThumbs' => [
 		'default' => false,
 	],
@@ -2661,6 +2656,11 @@ $wgConf->settings = [
 		'default' => [ 'png' ],
 	],
 	// Namespaces [MWNamespaces]
+		'wgExtraSignatureNamespaces' => [
+		'default' => [],
+		'nonciclopediawiki' => [ NS_HELP, 
+					NS_PROJECT ],
+	],
 	'wgMetaNamespace' => [
 		'default' => null,
 		'apunteswiki' => 'Apuntes',
