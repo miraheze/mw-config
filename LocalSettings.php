@@ -2658,8 +2658,10 @@ $wgConf->settings = [
 	// Namespaces [MWNamespaces]
 		'wgExtraSignatureNamespaces' => [
 		'default' => [],
-		'nonciclopediawiki' => [ NS_HELP, 
-					NS_PROJECT ],
+		'nonciclopediawiki' => [
+			                NS_HELP, 
+					NS_PROJECT 
+		                        ],
 	],
 	'wgMetaNamespace' => [
 		'default' => null,
