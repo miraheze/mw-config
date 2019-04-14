@@ -1104,7 +1104,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'newusernotif' => [
-			'name' => 'New User Nofifications',
+			'name' => 'New User Email Notification',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:NewUserNotif',
 			'var' => 'wmgUseNewUserNotif',
 			'conflicts' => false,
