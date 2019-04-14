@@ -3568,6 +3568,7 @@ $wgConf->settings = [
 			'wiki\.campaign-labour\.org',
 			'encyclopedie\.didactiqueprofessionnelle\.org',
 			'www\.thesimswiki\.com',
+			'nonciclopedia\.org',
 		],
 	],
 
