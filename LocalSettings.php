@@ -2049,6 +2049,9 @@ $wgConf->settings = [
 	],
 	'wgManageWikiPermissionsAdditionalRights' => [
 		'default' => [
+			'*' => [
+				'read' => true,
+			],
 			'checkuser' => [
 				'checkuser' => true,
 				'checkuser-log' => true,
