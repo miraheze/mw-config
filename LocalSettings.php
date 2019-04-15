@@ -706,11 +706,6 @@ $wgConf->settings = [
 		'default' => MIGRATION_NEW,
 	],
 
-	// Uncategorised? [MW]
-	'wgMaxImageArea' => [
-		'default' => '1.25e7',
-	],
-
 	// Delete [MWExempt]
 	'wgDeleteRevisionsLimit' => [
 		'default' => '250', // databases don't have much memory - let's not overload them in future
@@ -1620,6 +1615,9 @@ $wgConf->settings = [
 	],
 	'wgUseInstantCommons' => [
 		'default' => true,
+	],
+	'wgMaxImageArea' => [
+		'default' => '1.25e7',
 	],
 	'wgMirahezeCommons' => [
 		'default' => true,
