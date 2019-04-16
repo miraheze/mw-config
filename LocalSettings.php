@@ -1397,15 +1397,6 @@ $wgConf->settings = [
 	// Allow External Images [MWCandidate]
 	'wgAllowExternalImages' => [
 		'default' => false,
-		'amicitiawiki' => true,
-		'magezwiki' => true,
-		'magnaversewiki' => true,
-		'mikrodevwiki' => true,
-		'mikrodevdocswiki' => true,
-		'piratapentewiki' => true,
-		'tensegritywiki' => true,
-		'travailcollaboratifwiki' => true,
-		'sitraduwiki' => true,
 	],
 	'wgAllowExternalImagesFrom' => [
 		'default' => false,
