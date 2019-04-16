@@ -2376,7 +2376,7 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => 'ImageMagick',
 		'section' => 'media',
-		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG.',
+		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG. You may want to choose inkscape if your SVG->PNG conversion results in a black image.',
 	],
 
 	// Notification
