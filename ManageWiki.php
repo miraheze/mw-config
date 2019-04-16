@@ -2365,6 +2365,19 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Whether to show thumbnails for old images on the image description page.',
 	],
+	'wgSVGConverter' => [
+		'name' => 'SVG Converter',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'Inkscape' => 'inkscape',
+			'ImageMagic' => 'ImageMagick',
+		],
+		'overridedefault' => 'ImageMagick',
+		'section' => 'media',
+		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG.',
+	],
 
 	// Notification
 	'wgCookieWarningMoreUrl' => [

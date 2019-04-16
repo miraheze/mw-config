@@ -1609,8 +1609,6 @@ $wgConf->settings = [
 	],
 	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
-		'arphilosophywiki' => 'inkscape',
-		'ktswiki' => 'inkscape',
 	],
 
 	// Flow [MWCandidate] (MWNamespaces?)
