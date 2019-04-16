@@ -2356,6 +2356,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Allow img tag to be used in wikitext.',
 	],
+	'wgShowArchiveThumbnails' => [
+		'name' => 'Show Archive Thumbnails',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Whether to show thumbnails for old images on the image description page.',
+	],
 
 	// Notification
 	'wgCookieWarningMoreUrl' => [
