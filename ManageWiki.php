@@ -2329,6 +2329,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Whether to show thumbnails for old images on the image\'s description page.',
 	],
+	'wgAllowExternalImages' => [
+		'name' => 'Allow External Images',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
+	],
 	'wgMediaViewerIsInBeta' => [
 		'name' => 'Enable Media Viewer Beta Mode',
 		'from' => 'multimediaviewer',
