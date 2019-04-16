@@ -2261,6 +2261,7 @@ $wgManageWikiSettings = [
 			'Default' => false,
 		],
 		'overridedefault' => false,
+		'section' => 'links',
 		'help' => 'Set a default target for external links.',
 	],
 
@@ -2271,6 +2272,7 @@ $wgManageWikiSettings = [
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => '1.25e7',
+		'section' => 'media',
 		'help' => 'Specify\'s the max pixels you can have in a image.',
 	],
 	'wgEnableUploads' => [
