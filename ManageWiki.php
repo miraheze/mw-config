@@ -2354,7 +2354,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Allow <img> tag to be used in wikitext.',
+		'help' => 'Allow <pre><img></pre> tag to be used in wikitext.',
 	],
 
 	// Notification
