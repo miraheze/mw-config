@@ -2250,6 +2250,20 @@ $wgManageWikiSettings = [
 		'help' => 'This sorts comments by descending date, with the new comment box and most recent comments at the top when enabled.',
 	],
 
+	// Links
+	'wgExternalLinkTarget' => [
+		'name' => 'External Link Target',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'Blank' => '_blank',
+			'Default' => false,
+		],
+		'overridedefault' => false,
+		'help' => 'Set a default target for external links.',
+	],
+
 	// Media/File
 	'wgMaxImageArea' => [
 		'name' => 'Max Image Area',
