@@ -908,6 +908,9 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
+
+	// Load TemplateData
+	wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseVoteNY ) {

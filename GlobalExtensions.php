@@ -30,7 +30,6 @@ wfLoadExtensions( [
 	'Renameuser',
 	'RottenLinks',
 	'SyntaxHighlight_GeSHi',
-	'TemplateData',
 	'TitleBlacklist',
 	'TorBlock',
 	'UserMerge',
