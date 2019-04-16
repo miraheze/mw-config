@@ -2334,7 +2334,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
 	],
