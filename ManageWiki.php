@@ -2355,6 +2355,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
+		'section' => 'notifications',
 		'help' => 'Set the URL to your \'More Information\' page.',
 	],
 	'wgEchoCrossWikiNotifications' => [
