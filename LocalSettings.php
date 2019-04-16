@@ -1389,21 +1389,9 @@ $wgConf->settings = [
 		],
 	],
 
-	// External link target [MWCandidate]
+	// External link target [MW]
 	'wgExternalLinkTarget' => [
 		'default' => false,
-		'cpiwiki' => '_blank',
-		'doinwiki' => '_blank',
-		'forexwiki' => '_blank',
-		'modularwiki' => true,
-		'nenawikiwiki' => '_blank',
-		'scruffywiki' => '_blank',
-		'sdiywiki' => '_blank',
-		'sylwiki' => '_blank',
-		'templatewiki' => '_blank',
-		'uncyclopedia2wiki' => '_blank',
-		'wisdomwikiwiki' => '_blank',
-		'yacresourceswiki' => '_blank',
 	],
 
 	// Allow External Images [MWCandidate]
