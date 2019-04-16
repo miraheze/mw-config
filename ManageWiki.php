@@ -2372,7 +2372,7 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => [
 			'Inkscape' => 'inkscape',
-			'ImageMagic' => 'ImageMagick',
+			'ImageMagick' => 'ImageMagick',
 		],
 		'overridedefault' => 'ImageMagick',
 		'section' => 'media',
