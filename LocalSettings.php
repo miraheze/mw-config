@@ -1412,13 +1412,9 @@ $wgConf->settings = [
 		],
 	],
 
-	// Allow HTML <img> tag [MWCandidate]
+	// Allow HTML <img> tag [MW]
 	'wgAllowImageTag' => [
 		'default' => false,
-		'horizonwiki' => true,
-		'magezwiki' => true,
-		'mikrodevwiki' => true,
-		'travailcollaboratifwiki' => true,
 	],
 
 	// FlaggedRevs [MWCandidate]
