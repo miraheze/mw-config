@@ -822,6 +822,8 @@ if ( $wmgUseTemplateStyles ) {
 
 if ( $wmgUseTemplateWizard ) {
 	wfLoadExtension( 'TemplateWizard' );
+
+        wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseTranslate ) {
