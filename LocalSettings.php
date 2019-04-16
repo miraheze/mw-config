@@ -1538,10 +1538,6 @@ $wgConf->settings = [
 	'wgAllowCopyUploads' => [
 		'default' => false,
 	],
-	'wgAllowTitlesInSVG' => [
-		'default' => false,
-		'vsfan' => true,
-	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
 	],
