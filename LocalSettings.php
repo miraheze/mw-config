@@ -1866,7 +1866,7 @@ $wgConf->settings = [
 		],
 	],
 
-	// Imports [MWCandidate]
+	// Imports [MWExempt]
 	'wgImportSources' => [
 		'default' => [
 			'meta',
