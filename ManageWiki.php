@@ -2275,15 +2275,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Media/File
-	'wgMaxImageArea' => [
-		'name' => 'Max Image Area',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => '1.25e7',
-		'section' => 'media',
-		'help' => 'Specify\'s the max pixels you can have in a image.',
-	],
 	'wgEnableUploads' => [
 		'name' => 'Enable File Uploads',
 		'from' => 'mediawiki',
@@ -2292,6 +2283,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'Check or uncheck this option if you want to enable or disable the upload of files on your wiki.',
+	],
+	'wgMaxImageArea' => [
+		'name' => 'Max Image Area',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => '1.25e7',
+		'section' => 'media',
+		'help' => 'Specify\'s the max pixels you can have in a image.',
 	],
 	'wgAllowCopyUploads' => [
 		'name' => 'Enable File Uploads Through URL',
