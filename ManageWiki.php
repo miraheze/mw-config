@@ -2372,11 +2372,11 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => [
 			'Inkscape' => 'inkscape',
-			'Default' => 'ImageMagick',
+			'ImageMagic' => 'ImageMagick',
 		],
 		'overridedefault' => 'ImageMagick',
 		'section' => 'media',
-		'help' => 'A key from $wgSVGConverters to use as converter.',
+		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG.',
 	],
 
 	// Notification
