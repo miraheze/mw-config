@@ -680,6 +680,7 @@ $wgConf->settings = [
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
 		'openhatchwiki' => true,
+		'trollpastauncensoredwiki' => true,
 	],
 	'wgDBadminuser' => [
 		'default' => 'wikiadmin',
