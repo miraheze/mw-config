@@ -61,7 +61,8 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 		'omit_bots' => true,
 	];
 
-	// global extension
+	// global extension	
+	/* Disable per T4306??
 	wfLoadExtension( 'DiscordNotifications' );
 
 	$wgDiscordFromName = $wgSitename;
@@ -70,6 +71,7 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgWikiUrl = $wgServer . '/w/';
 	$wgDiscordAdditionalIncomingWebhookUrls =
 		$wmgWikiMirahezeDiscordHooks[$wgDBname] ?? $wmgWikiMirahezeDiscordHooks['default'];
+	*/
 }
 
 // Per-wiki overrides
