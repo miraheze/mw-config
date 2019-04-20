@@ -2396,6 +2396,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG. You may want to choose inkscape if your SVG->PNG conversion results in a black image.',
 	],
+	'wgEnableImageWhitelist' => [
+		'name' => 'Enable Image Whitelist',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Enables an on-wiki external image whitelist. This only takes effect if "Allow External Images" is false.',
+	],
 
 	// Notification
 	'wgCookieWarningMoreUrl' => [
