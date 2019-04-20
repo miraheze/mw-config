@@ -1796,8 +1796,8 @@ $wgManageWikiExtensions = [
 					'Widget_talk' => [
 						'id' => 275,
 						'searchable' => 0,
-						'subpages' => 0,
-						'protection' => 'editwidgets',
+						'subpages' => 1,
+						'protection' => '',
 						'content' => 0,
 						'aliases' => [],
 					],
