@@ -1784,6 +1784,24 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [
+				'namespaces' => [
+					'Widget' => [
+						'id' => 274,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => 'editwidgets',
+						'content' => 0,
+						'aliases' => [],
+					],
+					'Widget_talk' => [
+						'id' => 275,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+					],
+				],	
 				'permissions' => [
 					'sysop' => [
 						'permissions' => [
