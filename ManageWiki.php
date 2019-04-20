@@ -2405,6 +2405,28 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Enables an on-wiki external image whitelist. You can access this at "MediaWiki:External image whitelist". This only takes effect if "Allow External Images" is false.',
 	],
+	'wgAutoConfirmCount' => [
+		'name' => 'Auto Confirm Count',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 900000000,
+		'overridedefault' => 10,
+		'section' => 'anti-spam',
+		'help' => 'Number of edits an account requires before it is autoconfirmed.',
+	],
+	'wgSVGMetadataCutoff' => [
+		'name' => 'SVG Metadata Cutoff',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 90000000,
+		'overridedefault' => 262144,
+		'section' => 'media',
+		'help' => 'Don\'t read SVG metadata beyond this point.',
+	],
 
 	// Notification
 	'wgCookieWarningMoreUrl' => [
