@@ -1605,8 +1605,6 @@ $wgConf->settings = [
 	],
 	'wgSVGMetadataCutoff' => [
 		'default' => 262144,
-		'altversewiki' => 13421772,
-		'magnaversewiki' => 13421772,
 	],
 	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
