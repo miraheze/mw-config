@@ -1525,23 +1525,25 @@ $wgConf->settings = [
 		'infectopedwiki' => false,
 	],
 
-	// Files [MWCandidate]
+	// Files [MW]
 	'wgEnableUploads' => [
 		'default' => true,
 	],
-	// T3797
+	// T3797 [MWExempt]
 	'wgMaxUploadSize' => [
 		'default' => 262144000,
 	],
 	'wgUploadSizeWarning' => [
 		'default' => 262144000,
 	],
+	// [MW]
 	'wgAllowCopyUploads' => [
 		'default' => false,
 	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
 	],
+	// [MWCandidate]
 	'wgFileExtensions' => [
 		'default' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ],
 		'+50beardsofgreywiki' => [ 'mp4' ],
@@ -1585,6 +1587,7 @@ $wgConf->settings = [
 		'+wirtschaftsinformatikhbs' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu', 'docx', 'pptx', 'vsd' ],
 		'+wisdomwikiwiki' => [ 'docx', 'doc', 'odt', 'ods', 'odp', 'xls', 'xlsx', 'txt', 'rtf', 'zip' ],
 	],
+	// [MW]
 	'wgUseInstantCommons' => [
 		'default' => true,
 	],
@@ -1594,20 +1597,25 @@ $wgConf->settings = [
 	'wgMirahezeCommons' => [
 		'default' => true,
 	],
+	// [MWCandidate]
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
+	// [MW]
 	'wgShowArchiveThumbnails' => [
 		'default' => true,
 	],
+	// [MWExempt]
 	'wgVerifyMimeType' => [
 		'default' => true,
 	],
+	// [MWCandidate]
 	'wgSVGMetadataCutoff' => [
 		'default' => 262144,
 		'altversewiki' => 13421772,
 		'magnaversewiki' => 13421772,
 	],
+	// [MW]
 	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
 	],
