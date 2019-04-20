@@ -2403,7 +2403,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Enables an on-wiki external image whitelist. This only takes effect if "Allow External Images" is false.',
+		'help' => 'Enables an on-wiki external image whitelist. You can access this at "MediaWiki:External image whitelist". This only takes effect if "Allow External Images" is false.',
 	],
 
 	// Notification
