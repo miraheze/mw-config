@@ -2062,13 +2062,33 @@ $wgManageWikiSettings = [
 		'help' => 'Enable the new wikitext mode inside the visual editor as a beta feature. It has many of the tools present in the visual editor, uses a similar design, and allows better switching between the two.',
 	],
 	'wgVisualEditorShowBetaWelcome' => [
-		'name' => 'Enable VisualEditor Show Beta Welcome',
+		'name' => 'Chat Link to Usernames',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'beta',
 		'help' => 'Shows a beta welcome for users of VisualEditor.',
+	],
+
+	// Chat
+	'wgChatLinkUsernames' => [
+		'name' => 'Chat Link to Usernames',
+		'from' => 'mediawikichat',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'chat',
+		'help' => 'Link to user pages in the main chat window.',
+	],
+	'wgChatMeCommand' => [
+		'name' => 'Chat Me Command',
+		'from' => 'mediawikichat',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'chat',
+		'help' => 'Enable "/me <text>" command that prints a status-type message.',
 	],
 
 	// Editing
