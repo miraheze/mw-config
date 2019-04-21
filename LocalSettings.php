@@ -1886,7 +1886,7 @@ $wgConf->settings = [
 		'default' => 0,
 	],
 
-	// Kartographer [MWCandidate]
+	// Kartographer [MW]
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
 	 ],
@@ -1942,7 +1942,7 @@ $wgConf->settings = [
 		'kaiwiki' => [ "file://" ],
 	],
 
-	// Mail [MWCandidate]
+	// Mail [MWExempt]
 	'wgEnableEmail' => [
 		'default' => true,
 	],
