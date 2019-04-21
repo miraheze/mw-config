@@ -2238,6 +2238,26 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 	],
+  
+	// Maps (E.G navigation)
+	'wgKartographerWikivoyageMode' => [
+		'name' => 'Kartographer Wikivoyage Mode',
+		'restricted' => false,
+		'from' => 'kartographer',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'maps',
+		'help' => 'Enables Wikivoyage mode.',
+	],
+	'wgKartographerUseMarkerStyle' => [
+		'name' => 'Kartographer Use Marker Style',
+		'restricted' => false,
+		'from' => 'kartographer',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'maps',
+		'help' => 'Allows Kartographer to extract CSS style to be used by the link from the GeoJSON.',
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
