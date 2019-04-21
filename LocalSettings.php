@@ -2440,36 +2440,24 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// Metrolook settings [MWCandidate]
+	// Metrolook settings [MW]
 	'wgMetrolookDownArrow' => [
 		'default' => true,
-		'allthetropeswiki' => false,
-		'ayrshirewiki' => false,
-		'thegreatwarwiki' => false,
-		'thelonsdalebattalionwiki' => false,
 	],
 	'wgMetrolookUploadButton' => [
 		'default' => true,
-		'allthetropeswiki' => false,
-		'thegreatwarwiki' => false,
 	],
 	'wgMetrolookBartile' => [
 		'default' => true,
-		'ayrshirewiki' => false,
-		'thegreatwarwiki' => false,
-		'thelonsdalebattalionwiki' => false,
 	],
 	'wgMetrolookMobile' => [
 		'default' => true,
-		'ayrshirewiki' => false,
 	],
 	'wgMetrolookUseIconWatch' => [
 		'default' => true,
-		'ayrshirewiki' => false,
 	],
 	'wgMetrolookLine' => [
 		'default' => true,
-		'ayrshirewiki' => false,
 	],
 	'wgMetrolookFeatures' => [
 		'default' => [
