@@ -2071,6 +2071,26 @@ $wgManageWikiSettings = [
 		'help' => 'Shows a beta welcome for users of VisualEditor.',
 	],
 
+	// Chat
+	'wgChatLinkUsernames' => [
+		'name' => 'Chat Link to Usernames',
+		'from' => 'mediawikichat',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'chat',
+		'help' => 'Link to user pages in the main chat window.',
+	],
+	'wgChatMeCommand' => [
+		'name' => 'Chat Me Command',
+		'from' => 'mediawikichat',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'chat',
+		'help' => 'Enable "/me <text>" command that prints a status-type message.',
+	],
+
 	// Editing
 	'wmgWikiLicense' => [
 		'name' => 'Content License',

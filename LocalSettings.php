@@ -2432,15 +2432,12 @@ $wgConf->settings = [
 		'default' => 1,
 	],
 
-	// MediaWikiChat settings [MWCandidate]
+	// MediaWikiChat settings [MW]
 	'wgChatLinkUsernames' => [
 		'default' => false,
-		'nerdzonewiki' => true,
-		'uncyclopedia2wiki' => true,
 	],
 	'wgChatMeCommand' => [
 		'default' => false,
-		'nerdzonewiki' => true,
 	],
 
 	// Metrolook settings [MWCandidate]
