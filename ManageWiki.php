@@ -2387,6 +2387,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
+		'section' => 'notifications',
 		'help' => 'Opts your wiki out of global Miraheze notices, only showing important notices.',
 	],
 
@@ -2455,6 +2456,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
+		'section' => 'styling',
 		'help' => 'This will replace Miraheze\'s default logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can change it.',
 	],
 	'wgFavicon' => [
@@ -2463,6 +2465,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
+		'section' => 'styling',
 		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can add one.',
 	],
 	'wgAppleTouchIcon' => [
@@ -2471,6 +2474,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => null,
+		'section' => 'styling',
 		'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
 	],
 ];
