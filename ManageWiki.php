@@ -2268,13 +2268,22 @@ $wgManageWikiSettings = [
 		'help' => 'Shows comments in the RecentChanges special page.',
 	],
 	'wgCommentsSortDescending' => [
-		'name' => ' Sort Comments by Descending',
+		'name' => 'Sort Comments by Descending',
 		'from' => 'comments',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'This sorts comments by descending date, with the new comment box and most recent comments at the top when enabled.',
+	],
+	'wgEnableScaryTranscluding' => [
+		'name' => 'Enable Scary Transcluding',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Allow templates to be imported/transcluded from another wiki.',
 	],
 
 	// Links
