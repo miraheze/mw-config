@@ -1806,6 +1806,7 @@ $wgConf->settings = [
 		],
 		'+nonciclopediawiki' => [
 			'dlm',
+			'olb',
 			'tlh',
 			'zombie',
 		],
