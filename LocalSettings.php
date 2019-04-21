@@ -1889,25 +1889,9 @@ $wgConf->settings = [
 	// Kartographer [MWCandidate]
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
-		'apunteswiki' => true,
-		'centralwiki' => true,
-		'destinoswiki' => true,
-		'infowiki' => true,
-		'mediatecawiki' => true,
-		'privadowiki' => true,
-		'tallerwiki' => true,
-		'ucroniaswiki' => true,
 	 ],
 	'wgKartographerUseMarkerStyle' => [
 		'default' => false,
-		'apunteswiki' => true,
-		'centralwiki' => true,
-		'destinoswiki' => true,
-		'infowiki' => true,
-		'mediatecawiki' => true,
-		'privadowiki' => true,
-		'tallerwiki' => true,
-		'ucroniaswiki' => true,
 	 ],
 
 	// Language [MWExempt]
