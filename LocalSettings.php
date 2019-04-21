@@ -2483,7 +2483,7 @@ $wgConf->settings = [
 		'default' => [ 'VisualEditor', 'Flow' ],
 	],
 
-	// Misc. stuff [MWCandidate]
+	// Misc. stuff [MW]
 	'wgSitename' => [
 		'default' => 'No sitename set!',
 	],
@@ -2492,25 +2492,15 @@ $wgConf->settings = [
 	],
 	'wgRestrictDisplayTitle' => [
 		'default' => true, // Wikis with NoTitle have it set to false
-		'ayrshirewiki' => true,
-		'blocknetwiki' => false,
-		'takethatwikiwiki' => false,
-		'thenationstatewiki' => false,
-		'tmewiki' => false,
-		'uncyclopedia2wiki' => false,
-		'vandalismwikiwiki' => false,
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
-		'dicowiki' => false,
 	],
 	'wgActiveUserDays' => [
 		'default' => 30,
-		'weatherwiki' => 7,
 	],
 	'wgEnableCanonicalServerLink' => [
 		'default' => false,
-		'electowikiwiki' => true,
 	],
 	'wgPageCreationLog' => [
 		'default' => true,
