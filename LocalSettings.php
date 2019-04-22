@@ -2739,34 +2739,9 @@ $wgConf->settings = [
 	// Permissions [MWPermissions]
 	'wgGroupsAddToSelf' => [
 		'default' => [],
-		'+metawiki' => [
-			'cvt' => [
-				'flood',
-			],
-		],
-		'+weatherwiki' => [
-			'importer' => [
-				'flood',
-			],
-		],
 	],
 	'wgGroupsRemoveFromSelf' => [
 		'default' => [],
-		'+harrypotterwiki' => [
-			'bureaucrat' => [
-				'bureaucrat',
-			],
-		],
-		'+metawiki' => [
-			'cvt' => [
-				'flood',
-			],
-		],
-		'+weatherwiki' => [
-			'importer' => [
-				'flood',
-			],
-		],
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
