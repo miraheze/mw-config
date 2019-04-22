@@ -370,12 +370,6 @@ $wgConf->settings = [
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
-	'wgAutoConfirmAge' => [
-		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
-	],
-	'wgAutoConfirmCount' => [
-		'default' => 10,
- 	],
 
 	// BetaFeatures [MW]
 	'wgMediaViewerIsInBeta' => [
