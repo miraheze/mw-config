@@ -1994,6 +1994,15 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Determines whether to set a cookie when an IP user is blocked. Doing so means that a blocked user, even after moving to a new IP address, will still be blocked.',
 	],
+	'wgEmailConfirmToEdit' => [
+		'name' => 'Email Confirm To Edit',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'Require users to confirm email address before they can edit. This effectively disables ip editing.',
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [

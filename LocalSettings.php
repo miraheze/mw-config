@@ -1963,8 +1963,6 @@ $wgConf->settings = [
 	],
 	'wgEmailConfirmToEdit' => [
 		'default' => false,
-		'jacksonheightswiki' => true,
-		'nenawikiwiki' => true,
 	],
 
 	// ManageWiki [MWExempt]
