@@ -1967,10 +1967,6 @@ $wgConf->settings = [
 		'nenawikiwiki' => true,
 	],
 
-	'wgTexvc' => [
-		'default' => '/usr/bin/texvc',
-	],
-
 	// ManageWiki [MWExempt]
 	'wgManageWiki' => [
 		'default' => [
