@@ -2428,6 +2428,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Enables an on-wiki external image whitelist. You can access this at "MediaWiki:External image whitelist". This only takes effect if "Allow External Images" is false.',
 	],
+	'wgMediaViewerEnableByDefault' => [
+		'name' => 'MediaViewer Enable By Default',
+		'from' => 'multimediaviewer',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'This enables MediaViewer for everyone.',
+	],
 
 	// Notification
 	'wgCookieWarningMoreUrl' => [

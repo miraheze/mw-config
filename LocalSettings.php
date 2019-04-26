@@ -2556,13 +2556,9 @@ $wgConf->settings = [
 		'sdiywiki' => true,
 	],
 
-	// MultimediaViewer (not beta) [MWCandidate]
+	// MultimediaViewer (not beta) [MW]
 	'wgMediaViewerEnableByDefault' => [
 		'default' => false,
-		'grandtheftautowiki' => true,
-		'knowledgewiki' => true,
-		'thefosterswiki' => true,
-		'thelonsdalebattalionwiki' => true,
 	],
 	// MobileFrontend [MWCandidate]
 	'wgMFNoMobilePages' => [
