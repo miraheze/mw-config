@@ -2507,17 +2507,18 @@ $wgConf->settings = [
 		'default' => '',
 	],
 
-	// Moderation extension settings [MWCandidate]
-	'wgModerationNotificationEnable' => [ // Enable or disable notifications.
-		'default' => false,
-		'sdiywiki' => true,
-	],
-	'wgModerationNotificationNewOnly' => [ // Notify administrator only about new pages requests.
+	// Moderation extension settings [MW]
+	// Enable or disable notifications.
+	'wgModerationNotificationEnable' => [
 		'default' => false,
 	],
-	'wgModerationEmail' => [ // Email to send notifications to.
+	// Notify administrator only about new pages requests.
+	'wgModerationNotificationNewOnly' => [
+		'default' => false,
+	],
+	// Email to send notifications to.
+	'wgModerationEmail' => [
 		'default' => $wgPasswordSender,
-		'sdiywiki' => 'admin@sdiy.info',
 	],
 
 	// MsCatSelect vars [MWCandidate]

@@ -2466,6 +2466,24 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Opts your wiki out of global Miraheze notices, only showing important notices.',
 	],
+	'wgModerationNotificationEnable' => [
+		'name' => 'Moderation Notification Enable',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'If set, notification email will be sent to "Moderation Email" each time an edit is queued for moderation.',
+	],
+	'wgModerationNotificationNewOnly' => [
+		'name' => 'Moderation Notification New Only',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'If set, only notify about new pages (but not about edits in existing pages).',
+	],
 
 	// Restricted (where settings that are restricted go)
 	'wgServer' => [
@@ -2485,6 +2503,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'restricted',
 		'help' => 'This sets your mobile URL. Defaults to [domain].',
+	],
+	'wgModerationEmail' => [
+		'name' => 'Moderation Email',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => $wgPasswordSender,
+		'section' => 'restricted',
+		'help' => 'Sets the email for notifications to go to.',
 	],
 	'wgAccountCreationThrottle' => [
 		'name' => 'Account Creation Throttle',
