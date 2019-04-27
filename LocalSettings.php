@@ -2930,6 +2930,7 @@ $wgConf->settings = [
 	],
 
 	// RelatedArticles settings [MWCandidate]
+        // Should be moved to ManageWiki once T4327 is resolved.
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'default' => [
 			'minerva',
