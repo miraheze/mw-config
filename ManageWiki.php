@@ -2558,7 +2558,7 @@ $wgManageWikiSettings = [
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'name' => 'RelatedArticles Use CirrusSearch',
-		'from' => 'relatedarticles',
+		'from' => 'mediawiki',
 		'restricted' => true,
 		'type' => 'check',
 		'overridedefault' => false,
