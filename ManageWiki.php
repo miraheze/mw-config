@@ -2556,6 +2556,15 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'Maximum page size in kilobytes.',
 	],
+	'wgRelatedArticlesUseCirrusSearch' => [
+		'name' => 'RelatedArticles Use CirrusSearch',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'restricted',
+		'help' => 'This should only be enabled if the wiki uses CirrusSearch.',
+	],
 
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
