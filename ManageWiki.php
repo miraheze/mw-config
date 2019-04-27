@@ -2655,4 +2655,22 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
 	],
+	'wgRelatedArticlesFooterWhitelistedSkins' => [
+		'name' => 'RelatedArticles Footer Whitelisted Skins',
+		'from' => 'relatedarticles',
+		'restricted' => false,
+		'type' => 'list-multi',
+		'options' => [
+			'Minerva' => 'minerva',
+			'Timeless' => 'timeless',
+			'Vector' => 'vector'
+		],
+		'overridedefault' => [
+			'minerva',
+			'timeless',
+			'vector'
+		],
+		'section' => 'styling',
+		'help' => 'List of skin names (e.g. "minerva", "vector") where related articles will be shown in the footer.',
+	],
 ];

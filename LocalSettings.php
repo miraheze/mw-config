@@ -2929,15 +2929,11 @@ $wgConf->settings = [
 		'ucroniaswiki' => [ 1, 3, 7, 14, 30, 180 ],
 	],
 
-	// RelatedArticles settings [MWCandidate]
+	// RelatedArticles settings [MW]
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'default' => [
 			'minerva',
 			'timeless',
-			'vector',
-		],
-		'avalicearchiveswiki' => [
-			'metrolook',
 			'vector',
 		],
 	],
