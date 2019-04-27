@@ -47,7 +47,6 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 }
 
 // use local mathoid install
-$wgMathValidModes[] = 'mathml';
 $wgDefaultUserOptions['math'] = 'mathml';
 $wgMathoidCli = [ '/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml' ];
 $wgMaxShellMemory = 2097152;

@@ -2567,9 +2567,9 @@ $wgConf->settings = [
 			'Main Page',
 		],
 	],
-	// Math [MWCandidate]
+	// Math [MWExempt]
 	'wgMathValidModes' => [
-		'default' => [ 'png' ],
+		'default' => [ 'mathml' ],
 	],
 	// Namespaces [MWNamespaces]
 	'wgExtraSignatureNamespaces' => [
