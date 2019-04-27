@@ -2718,11 +2718,6 @@ $wgConf->settings = [
 		'nonsensopediawiki' => 8192,
 	],
 
-	// PageTriage [MWCandidate]
-	'wgPageTriageInfinitScrolling' => [
-		'default' => true,
-	],
-
 	// Permissions [MWPermissions]
 	'wgGroupsAddToSelf' => [
 		'default' => [],
