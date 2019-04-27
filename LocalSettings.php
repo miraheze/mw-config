@@ -2712,10 +2712,9 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// Page Size [MWCandidate]
+	// Page Size [MW]
 	'wgMaxArticleSize' => [
 		'default' => 2048,
-		'nonsensopediawiki' => 8192,
 	],
 
 	// Permissions [MWPermissions]

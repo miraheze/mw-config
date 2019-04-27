@@ -2544,6 +2544,18 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'Don\'t read SVG metadata beyond this point.',
 	],
+	// If necessary we can increase maxint.
+	'wgMaxArticleSize' => [
+		'name' => 'Max Article Size',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 10000,
+		'overridedefault' => 2048,
+		'section' => 'restricted',
+		'help' => 'Maximum page size in kilobytes.',
+	],
 
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
