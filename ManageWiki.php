@@ -2661,6 +2661,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'list-multi',
 		'options' => [
+			'Metrolook' => 'metrolook',
 			'Minerva' => 'minerva',
 			'Timeless' => 'timeless',
 			'Vector' => 'vector'
