@@ -2941,18 +2941,6 @@ $wgConf->settings = [
 			'vector',
 		],
 	],
-	'wgRelatedArticlesShowReadMore' => [
-		'default' => false,
-		'allthetropeswiki' => true,
-		'avalicearchiveswiki' => true,
-		'youtubewiki' => true,
-	],
-	'wgRelatedArticlesShowInFooter' => [
-		'default' => false,
-		'allthetropeswiki' => true,
-		'avalicearchiveswiki' => true,
-		'youtubewiki' => true,
-	],
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'default' => false,
 	],
