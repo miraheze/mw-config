@@ -2941,12 +2941,6 @@ $wgConf->settings = [
 			'vector',
 		],
 	],
-	'wgRelatedArticlesLoggingSamplingRate' => [
-		'default' => false,
-		'allthetropeswiki' => '0.01',
-		'avalicearchiveswiki' => '0.01',
-		'youtubewiki' => '0.01',
-	],
 	'wgRelatedArticlesShowReadMore' => [
 		'default' => false,
 		'allthetropeswiki' => true,
