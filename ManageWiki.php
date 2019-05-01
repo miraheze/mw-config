@@ -1966,6 +1966,7 @@ $wgManageWikiSettings = [
 	// Anti-Spam
 	'wgAbuseFilterActions' => [
 		'name' => 'AbuseFilter Actions',
+		'from' => 'mediawiki',
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'list-multi-bool',
