@@ -324,7 +324,7 @@ $wgConf->settings = [
 		'default' => '3',
 	],
 
-	// AbuseFilter [MWCandidate]
+	// AbuseFilter [MW]
 	'wgAbuseFilterActions' => [
 		'default' => [
 			'block' => true,
