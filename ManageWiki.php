@@ -61,6 +61,14 @@ $wgManageWikiExtensions = [
 					'ajaxpoll_info' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_info.sql",
 					'ajaxpoll_vote' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_vote.sql"
 				],
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'ajaxpoll-vote',
+							'ajaxpoll-view-results',
+						],
+					],
+				],
 			],
 		],
 		'apex' => [
