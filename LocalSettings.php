@@ -1875,6 +1875,9 @@ $wgConf->settings = [
 		'+weatherwiki' => [
 			'wikipedia',
 		],
+		'+zhdelwiki' => [
+			'wikipedia',
+		],
 	],
 
 	// Job Queue [MWExempt]
