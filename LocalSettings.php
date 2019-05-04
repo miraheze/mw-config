@@ -2502,7 +2502,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
-	// MobileFrontend [MWCandidate]
+	// MobileFrontend [MW]
 	'wmgMFAutodetectMobileView' => [
 		'default' => false,
 	],
