@@ -1970,6 +1970,15 @@ $wgManageWikiSettings = [
 		'requires' => false,
 		'restricted' => false,
 		'type' => 'list-multi-bool',
+		'allopts' => [
+			'block',
+			'blockautopromote',
+			'degroup',
+			'disallow',
+			'tag',
+			'throttle',
+			'warn',
+		],
 		'options' => [
 			'Block' => 'block',
 			'BlockAutopromote' => 'blockautopromote',
