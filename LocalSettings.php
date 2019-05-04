@@ -3746,7 +3746,8 @@ $wgLocalDatabases = [];
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
 
 // ManageWiki settings
-require_once "/srv/mediawiki/config/ManageWiki.php";
+require_once __DIR__ . "/ManageWikiExtensions.php";
+require_once __DIR__ . "/ManageWikiSettings.php";
 
 foreach ( $wmgDatabaseList as $wikiLine ) {
 	$wikiDB = explode( '|', $wikiLine, 6 );
