@@ -1085,9 +1085,11 @@ $wgConf->settings = [
 	'wmgUseModernSkylight' => [
 		'default' => false,
 	],
-	'wmgUseMsPackage' => [
-		'default' => false, // do not set this to false without disabling MsUpload on all wikis below
-		'test1wiki' => true,
+	'wmgUseMsCatSelect' => [
+		'default' => false,
+	],
+	'wmgUseMsLinks' => [
+		'default' => false,
 	],
 	'wmgUseMsUpload' => [
 		'default' => false,
