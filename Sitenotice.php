@@ -20,7 +20,7 @@ if ( $wmgSearchType ) {
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
 				<td>Miraheze will perform maintenance related to the search functionality of this wiki at 21:50 UTC. The maintenance will take about 5 minutes. During this maintenance window you may not be able to use the search box.</td>
 				</tr></tbody></table>
-	EOF;
+EOF;
 
 		return true;
 	}
