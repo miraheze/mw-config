@@ -1037,6 +1037,20 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'mscatselect' => [
+			'name' => 'MsCatSelect',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:MsCatSelect',
+			'var' => 'wmgUseMsCatSelect',
+			'conflicts' => false,
+			'requires' => [],
+		],
+		'mslinks' => [
+			'name' => 'MsLinks',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:MsLinks',
+			'var' => 'wmgUseMsLinks',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'msupload' => [
 			'name' => 'MsUpload',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MsUpload',
@@ -2284,6 +2298,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
 	],
+	'wgMSCS_WarnNoCategories' => [
+		'name' => 'MsCatSelect warn no categories',
+		'restricted' => false,
+		'from' => 'mscatselect',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'By default, if you try to save a page that has no categories assigned, MsCatSelect will ask for confirmation. If you wish to avoid this, keep this setting unset.',
+	],
 
 	// Links
 	'wgExternalLinkTarget' => [
@@ -2472,6 +2495,42 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'This enables MediaViewer for everyone.',
+	],
+	'wgMSU_checkAutoCat' => [
+		'name' => 'MsUpload check auto cat',
+		'from' => 'msupload',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'If set, sets the checkbox for adding a category to a page by default.',
+	],
+	'wgMSU_confirmReplace' => [
+		'name' => 'MsUpload confirm replace',
+		'from' => 'msupload',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'If set, shows the "Replace file" checkbox.',
+	],
+	'wgMSU_showAutoCat' => [
+		'name' => 'MsUpload show auto cat',
+		'from' => 'msupload',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'If set, files uploaded while editing a category page will be added to that category.',
+	],
+	'wgMSU_useDragDrop' => [
+		'name' => 'MsUpload use drag and drop',
+		'from' => 'msupload',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'If set, the drag & drop area will be shown.',
 	],
 
 	// Notification

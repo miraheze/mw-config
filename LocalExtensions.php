@@ -567,10 +567,12 @@ if ( $wmgUseModernSkylight ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['ModernSkylight'] = 'modernskylight';
 }
 
-if ( $wmgUseMsPackage ) {
-	wfLoadExtension( 'MsUpload' );
-	wfLoadExtension( 'MsLinks' );
+if ( $wmgUseMsCatSelect ) {
 	wfLoadExtension( 'MsCatSelect' );
+}
+
+if ( $wmgUseMsLinks ) {
+	wfLoadExtension( 'MsLinks' );
 }
 
 if ( $wmgUseMsUpload ) {
