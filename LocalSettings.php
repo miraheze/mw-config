@@ -2551,11 +2551,9 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// MultiBoilerplate settings [MWCandidate]
+	// MultiBoilerplate settings [MW]
 	'wgMultiBoilerplateDiplaySpecialPage' => [
 		'default' => false,
-		'scruffywiki' => true,
-		'sdiywiki' => true,
 	],
 
 	// MultimediaViewer (not beta) [MW]
