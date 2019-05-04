@@ -1877,7 +1877,7 @@ $wgConf->settings = [
 		],
 		'+zhdelwiki' => [
 			'wikipedia',
-			'zhwwikipedia',
+			'zhwikipedia',
 		],
 	],
 
