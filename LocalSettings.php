@@ -1085,9 +1085,11 @@ $wgConf->settings = [
 	'wmgUseModernSkylight' => [
 		'default' => false,
 	],
-	'wmgUseMsPackage' => [
-		'default' => false, // do not set this to false without disabling MsUpload on all wikis below
-		'test1wiki' => true,
+	'wmgUseMsCatSelect' => [
+		'default' => false,
+	],
+	'wmgUseMsLinks' => [
+		'default' => false,
 	],
 	'wmgUseMsUpload' => [
 		'default' => false,
@@ -2527,32 +2529,26 @@ $wgConf->settings = [
 		'default' => $wgPasswordSender,
 	],
 
-	// MsCatSelect vars [MWCandidate]
+	// MsCatSelect vars [MW]
 	'wgMSCS_WarnNoCategories' => [
 		'default' => true,
 	],
 
-	// MsUpload settings [MWCandidate]
+	// MsUpload settings [MW]
 	'wgMSU_useDragDrop' => [
 		'default' => true,
-		'weatherwiki' => false,
 	],
 
 	'wgMSU_showAutoCat' => [
 		'default' => false,
-		'anduinwiki' => true,
-		'anotheredenwiki' => true,
-		'browndustwiki' => true,
 	],
 
 	'wgMSU_checkAutoCat' => [
 		'default' => false,
-		'anduinwiki' => true,
 	],
 
 	'wgMSU_confirmReplace' => [
 		'default' => false,
-		'anduinwiki' => true,
 	],
 
 	// MultiBoilerplate settings [MWCandidate]
