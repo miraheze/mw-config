@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
 /**
  * ManageWiki extensions and skins are added using the variable below.
  *
