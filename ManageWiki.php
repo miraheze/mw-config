@@ -2284,6 +2284,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
 	],
+	'wgMSCS_WarnNoCategories' => [
+		'name' => 'MsCatSelect warn no categories',
+		'restricted' => false,
+		'from' => 'mscatselect',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
+	],
 
 	// Links
 	'wgExternalLinkTarget' => [
