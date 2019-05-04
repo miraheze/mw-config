@@ -1946,6 +1946,8 @@ $wgConf->settings = [
 	'wgEnableEmail' => [
 		'default' => true,
 	],
+	// When changing the default,
+	// also updated ManageWiki.php ("Moderation Email") with the new default.
 	'wgPasswordSender' => [
 		'default' => 'noreply@miraheze.org',
 	],

@@ -2545,7 +2545,8 @@ $wgManageWikiSettings = [
 		'from' => 'moderation',
 		'restricted' => true,
 		'type' => 'text',
-		'overridedefault' => $wgPasswordSender,
+		// Must match wgPasswordSender from LocalSettings.php
+		'overridedefault' => 'noreply@miraheze.org',
 		'section' => 'restricted',
 		'help' => 'Sets the email for notifications to go to.',
 	],
