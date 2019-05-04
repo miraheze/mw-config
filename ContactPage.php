@@ -7,6 +7,7 @@ if ( $wgDBname == 'apellidosmurcianoswiki' ) {
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
+		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
 		'RLModules' => [],
@@ -21,6 +22,7 @@ if ( $wgDBname == 'ayrshirewiki' ) {
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
+		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
 		'RLModules' => [],
@@ -35,6 +37,7 @@ if ( $wgDBname == 'cdcwiki' ) {
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // Lets not do this ever for privacy (unless offical forms)
+		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
 		'RLModules' => [],
@@ -49,6 +52,7 @@ if ( $wgDBname == 'christipediawiki' ) {
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
+		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
 		'RLModules' => [],
@@ -63,6 +67,7 @@ if ( $wgDBname == 'fablabesdswiki' ) {
 		'SenderName' => 'Ne pas répondre FabLab ESDS',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
+		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [
 			'TitreArticleDemande' => [
 				'label' => 'Titre de l\'article demandé (si c\'est la cas)',
@@ -83,6 +88,7 @@ if ( $wgDBname == 'guiaslocaiswiki' ) {
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false, // No privy
+		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [],
 		'DisplayFormat' => 'table',
 		'RLModules' => [],
@@ -97,6 +103,7 @@ if ( $wgDBname == 'qboxnextwiki' ) {
 		'SenderName' => 'Miraheze No Reply',
 		'RequireDetails' => true,
 		'IncludeIP' => false,
+		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [
 			'Text' => [
 				'label-message' => 'emailmessage',
