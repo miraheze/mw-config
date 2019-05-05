@@ -899,6 +899,9 @@ $wgConf->settings = [
 	'wmgUseDismissableSiteNotice' => [
 		'default' => true,
 	],
+	'wmgUseDisplayTitle' => [
+		'default' => false,
+	],
 	'wmgUseDuskToDawn' => [
 		'default' => false,
 	],

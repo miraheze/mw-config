@@ -267,6 +267,10 @@ if ( $wmgUseDisambiguator ) {
 	wfLoadExtension( 'Disambiguator' );
 }
 
+if ( $wmgUseDisplayTitle ) {
+	wfLoadExtension( 'DisplayTitle' );
+}
+
 if ( $wmgUseDismissableSiteNotice ) {
 	wfLoadExtension( 'DismissableSiteNotice' );
 }

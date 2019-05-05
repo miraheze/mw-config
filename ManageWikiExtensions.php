@@ -441,6 +441,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'displaytitle' => [
+			'name' => 'DisplayTitle',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:DisplayTitle',
+			'var' => 'wmgUseDisplayTitle',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'dplforum' => [
 			'name' => 'DPLForum',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:DPLforum',
