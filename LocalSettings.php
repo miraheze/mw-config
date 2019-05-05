@@ -3025,19 +3025,11 @@ $wgConf->settings = [
 		],
 	],
 
-	// Robot policy [MWCandidate]
+	// Robot policy [MW]
 	'wgDefaultRobotPolicy' => [
 		'default' => 'index,follow',
-		'ashinawiki' => 'noindex,nofollow',
-		'destinoswiki' => 'noindex,nofollow',
-		'foodsharinghamburgwiki' => 'noindex,nofollow',
-		'ildrilwiki' => 'noindex,nofollow',
-		'librewiki' => 'noindex,nofollow',
-		'lothuialethwiki' => 'noindex,nofollow',
-		'paddelnwiki' => 'noindex,nofollow',
-		'reviwikiwiki' => 'noindex,nofollow',
-		'zhdelwiki' => 'noindex,nofollow',
 	],
+	// Robot policy [MWNCandidate]
 	'wgNamespaceRobotPolicies' => [
 		'default' => [],
 		'taswinwiki' => [
