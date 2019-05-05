@@ -208,6 +208,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly.',
 	],
+	'wgRCMaxAge' => [
+		'name' => 'RecentChanges max age',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => 180 * 24 * 3600,
+		'section' => 'edit',
+		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will go.',
+	],
 	'wgActiveUserDays' => [
 		'name' => 'Active User Days',
 		'from' => 'mediawiki',
@@ -218,6 +227,25 @@ $wgManageWikiSettings = [
 		'overridedefault' => 30,
 		'section' => 'edit',
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
+	],
+	'wgRestrictionTypes' => [
+		'name' => 'Restriction Types',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'list-multi',
+		'options' => [
+			'Create' => 'create',
+			'Delete' => 'delete',
+			'Edit' => 'edit',
+			'Move' => 'move',
+			'Protect' => 'protect',
+			'Upload' => 'upload',
+		],
+		'overridedefault' => [
+			'delete',
+		],
+		'section' => 'edit',
+		'help' => 'Actions that can be restricted',
 	],
 	'wgCommentsInRecentChanges' => [
 		'name' => 'Enable Comments In RecentChanges',
@@ -353,15 +381,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'By default, if you try to save a page that has no categories assigned, MsCatSelect will ask for confirmation. If you wish to avoid this, unset this option.',
-	],
-	'wgRCMaxAge' => [
-		'name' => 'RecentChanges max age',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'text',
-		'overridedefault' => 180 * 24 * 3600,
-		'section' => 'edit',
-		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will go.',
 	],
 	'wgRCLinkDays' => [
 		'name' => 'RecentChanges link days',
