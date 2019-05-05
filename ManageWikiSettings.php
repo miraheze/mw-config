@@ -710,6 +710,15 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'This sets your mobile URL. Defaults to [domain].',
 	],
+	'wgDefaultRobotPolicy' => [
+		'name' => 'Default Robot Policy',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => 'index,follow',
+		'section' => 'restricted',
+		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
+	],
 	'wgModerationEmail' => [
 		'name' => 'Moderation Email',
 		'from' => 'moderation',
@@ -798,15 +807,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'section' => 'styling',
 		'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
-	],
-	'wgDefaultRobotPolicy' => [
-		'name' => 'Default Robot Policy',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'text',
-		'overridedefault' => 'index,follow',
-		'section' => 'styling',
-		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
 	],
 	'wmgMFAutodetectMobileView' => [
 		'name' => 'MobileFrontend Autodetect Mobile View',
