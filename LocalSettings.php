@@ -3048,13 +3048,14 @@ $wgConf->settings = [
 		'default' => 'Y-m-d H:i:s'
 	],
 
-	// Scribunto [MWCandidate]
+	// Scribunto [MW]
 	'wgCodeEditorEnableCore' => [
 		'default' => true,
 	],
 	'wgScribuntoUseCodeEditor' => [
 		'default' => true,
 	],
+	// [MWExempt]
 	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
 	],
