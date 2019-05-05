@@ -3015,9 +3015,13 @@ $wgConf->settings = [
 	],
 
 	// [MW]
-	'+wgRestrictionTypes' => [
+	'wgRestrictionTypes' => [
 		'default' => [
+			'create',
 			'delete',
+			'edit',
+			'move',
+			'upload',
 		],
 	],
 

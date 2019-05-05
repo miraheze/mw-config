@@ -242,7 +242,11 @@ $wgManageWikiSettings = [
 			'Upload' => 'upload',
 		],
 		'overridedefault' => [
+			'create',
 			'delete',
+			'edit',
+			'move',
+			'upload',
 		],
 		'section' => 'edit',
 		'help' => 'Actions that can be restricted.',
