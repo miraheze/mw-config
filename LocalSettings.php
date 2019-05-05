@@ -3014,31 +3014,11 @@ $wgConf->settings = [
 		'weatherwiki' => [],
 	],
 
+	// [MW]
 	'+wgRestrictionTypes' => [
 		'default' => [
 			'delete',
 		],
-		'cmgwiki' => [
-			'delete',
-			'protect',
-		],
-		'lcars47wiki' => [
-			'delete',
-			'protect',
-		],
-		'pruebawiki' => [
-			'delete',
-			'protect',
-		],
-		'sau226wiki' => [
-			'delete',
-			'protect',
-		],
-		'testwiki' => [
-			'delete',
-			'protect',
-		],
-		'weatherwiki' => [],
 	],
 
 	// Robot policy [MWCandidate]
