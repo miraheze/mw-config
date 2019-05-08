@@ -1029,8 +1029,6 @@ $wgConf->settings = [
 	],
 	'wmgUseLinkSuggest' => [
 		'default' => false,
-		'test1wiki' => true,
-		'avalicearchiveswiki' => true,
 	],
 	'wmgUseLinkTarget' => [
 		'default' => false,

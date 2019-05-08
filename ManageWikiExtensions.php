@@ -872,6 +872,13 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'linksuggest' => [
+			'name' => 'LinkSuggest',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:LinkSuggest',
+			'var' => 'wmgUseLinkSuggest',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'linktarget' => [
 			'name' => 'LinkTarget',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:LinkTarget',
