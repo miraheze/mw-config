@@ -720,13 +720,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'globaluserpage' => [
-			'name' => 'GlobalUserPage',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:GlobalUserPage',
-			'var' => 'wmgUseGlobalUserPage',
-			'conflicts' => false,
-			'requires' => [],
-		],
 		'graph' => [
 			'name' => 'Graph',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Graph',
