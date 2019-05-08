@@ -1065,18 +1065,6 @@ $wgConf->settings = [
 	],
 	'wmgUseMobileFrontend' => [
 		'default' => true,
-		'carmeigatwiki' => false,
-		'cmgwiki' => false,
-		'corydoctorowwiki' => false,
-		'horizonwiki' => false,
-		'izanagiwiki' => false,
-		'jawptestwiki' => false,
-		'nestartstechwiki' => false, // Re-enable when collapse issue is fixed --Reception123
-		'ndwiki' => false,
-		'permanentfuturelabwiki' => false,
-		'reviwiki' => false,
-		'reviwikiwiki' => false,
-		'zerorangerwiki' => false,
 	],
 	'wmgUseModeration' => [
 		'default' => false,
