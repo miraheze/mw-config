@@ -1033,6 +1033,13 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'MobileFrontend' => [
+			'name' => 'MobileFrontend',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:MobileFrontend',
+			'var' => 'wmgUseMobileFrontend',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'moderation' => [
 			'name' => 'Moderation',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Moderation',
