@@ -185,6 +185,37 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'Enable "/me <text>" command that prints a status-type message.',
 	],
+	'wmgWebChatServer' => [
+		'name' => 'WebChat Server',
+		'from' => 'webchat',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '',
+		'section' => 'chat',
+		'help' => 'IRC Server to connect to, not required when using the freenodeChat web client.',
+	],
+	'wmgWebChatChannel' => [
+		'name' => 'WebChat Channel',
+		'from' => 'webchat',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '',
+		'section' => 'chat',
+		'help' => 'Channel to connect to.',
+	],
+	'wmgWebChatClient' => [
+		'name' => 'WebChat Client',
+		'from' => 'webchat',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'Freenode' => 'freenodeChat',
+			'Other Server' => 'Mibbit',
+		],
+		'overridedefault' => 'freenodeChat',
+		'section' => 'chat',
+		'help' => 'This sets the web client to use. If you are not using Freenode, select Other Server.',
+	],
 
 	// Editing
 	'wmgWikiLicense' => [
