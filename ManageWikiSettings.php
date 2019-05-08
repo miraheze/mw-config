@@ -1045,15 +1045,6 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'if set, will add to the wiki a page named Special:Boilerplates that shows the currently configured boilerplates.',
 	],
-	'wmgUseGlobalUserPage' => [
-		'name' => 'GlobalUserPage',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'This config enables GlobalUserPage, see https://www.mediawiki.org/wiki/Extension:GlobalUserPage.',
-	],
 	'wmgUseMobileFrontend' => [
 		'name' => 'MobileFrontend',
 		'from' => 'mediawiki',
@@ -1061,6 +1052,6 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'This config enables MobileFrontend, see https://www.mediawiki.org/wiki/Extension:MobileFrontend.',
+		'help' => 'This config enables MobileFrontend, see https://www.mediawiki.org/wiki/Extension:MobileFrontend',
 	],
 ];
