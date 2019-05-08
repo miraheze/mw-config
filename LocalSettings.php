@@ -1934,6 +1934,8 @@ $wgConf->settings = [
 		'default' => [
 			'cite',
 			'citethispage',
+                        'globaluserpage',
+                        'mobilefrontend',
 		],
 	],
 	'wgManageWikiCDBDirectory' => [
