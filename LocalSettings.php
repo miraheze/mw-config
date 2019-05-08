@@ -1301,13 +1301,6 @@ $wgConf->settings = [
 	],
 	'wmgUseWebChat' => [
 		'default' => false,
-		'allthetropeswiki' => true,
-		'ildrilwiki' => true,
-		'lothuialethwiki' => true,
-		'marioserieswiki' => true,
-		'pnphilotenwiki' => true,
-		'test1wiki' => true,
-		'wisdomwikiwiki' => true,
 	],
 	'wmgUseWhoIsWatching' => [
 		'default' => false,
@@ -3523,30 +3516,15 @@ $wgConf->settings = [
 		'weatherwiki' => '1 week',
 	],
 
-	// WebChat config [MWCandidate]
+	// WebChat config [MW]
 	'wmgWebChatServer' => [
 		'default' => false,
-		'allthetropeswiki' => 'irc.freenode.net',
-		'ildrilwiki' => 'irc.sorcery.net',
-		'lothuialethwiki' => 'irc.sorcery.net',
-		'pnphilotenwiki' => 'irc.freenode.net',
-		'wisdomwikiwiki' => 'irc.freenode.net',
 	],
 	'wmgWebChatChannel' => [
 		'default' => false,
-		'allthetropeswiki' => '#miraheze-allthetropes',
-		'ildrilwiki' => '#Aesir',
-		'lothuialethwiki' => '#Aesir',
-		'pnphilotenwiki' => '#miraheze-pnphiloten',
-		'wisdomwikiwiki' => '#miraheze-wisdomwiki',
 	],
 	'wmgWebChatClient' => [
 		'default' => false,
-		'allthetropeswiki' => 'freenodeChat',
-		'ildrilwiki' => 'Mibbit',
-		'lothuialethwiki' => 'Mibbit',
-		'pnphilotenwiki' => 'freenodeChat',
-		'wisdomwikiwiki' => 'freenodeChat',
 	],
 
 	// Wikimedia Incubator Settings [MWExempt?]

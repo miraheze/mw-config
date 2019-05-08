@@ -1835,6 +1835,13 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'help' => 'Will start working 10-20 mins after enabling.',
 		],
+		'webchat' => [
+			'name' => 'WebChat',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:WebChat',
+			'var' => 'wmgUseWebChat',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'widgets' => [
 			'name' => 'Widgets',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Widgets',
