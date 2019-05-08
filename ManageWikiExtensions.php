@@ -507,6 +507,14 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'editsubpages' => [
+			'name' => 'Edit Subpages',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:EditSubpages',
+			'var' => 'wmgUseEditSubpages',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [],
+		],
 		'educationprogram' => [
 			'name' => 'Education Program',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:EducationProgram',

@@ -930,7 +930,6 @@ $wgConf->settings = [
 	],
 	'wmgUseEditSubpages' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUseEducationProgram' => [
 		'default' => false,
