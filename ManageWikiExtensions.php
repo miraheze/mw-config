@@ -934,6 +934,14 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'mask' => [
+			'name' => 'Mask (Skin)',
+			'linkPage' => 'https://mediawiki.org/wiki/Skin:Mask',
+			'var' => 'wmgUseMask',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'masseditregex' => [
 			'name' => 'MassEditRegex',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:MassEditRegex',

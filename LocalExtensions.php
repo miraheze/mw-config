@@ -515,6 +515,12 @@ if ( $wmgUseMaps ) {
 	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
 }
 
+if ( $wmgUseMask ) {
+	wfLoadSkin( 'Mask' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Mask'] = 'mask';
+}
+
 if ( $wmgUseMassEditRegex ) {
 	require_once "$IP/extensions/MassEditRegex/MassEditRegex.php";
 }

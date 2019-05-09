@@ -1044,6 +1044,9 @@ $wgConf->settings = [
 	'wmgUseMaps' => [
 		'default' => false,
 	],
+	'wmgUseMask' => [
+		'default' => false,
+	],
 	'wmgUseMassEditRegex' => [
 		'default' => false, // sysop is given permission 'masseditregex' by default
 	],
