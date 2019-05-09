@@ -1908,6 +1908,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'wikicategorytagcloud' => [
+			'name' => 'WikiCategoryTagCloud',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikiCategoryTagCloud',
+			'var' => 'wmgUseWikiCategoryTagCloud',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'wikidatapagebanner' => [
 			'name' => 'WikidataPageBanner',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:WikidataPageBanner',

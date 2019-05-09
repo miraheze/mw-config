@@ -938,6 +938,10 @@ if ( $wmgUseWidgets ) {
 	wfLoadExtension( 'Widgets' );
 }
 
+if ( $wmgUseWikiCategoryTagCloud ) {
+	wfLoadExtension( 'WikiCategoryTagCloud' );
+}
+
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
