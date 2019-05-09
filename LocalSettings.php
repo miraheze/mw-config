@@ -879,11 +879,6 @@ $wgConf->settings = [
 	'wmgUseCSS' => [
 		'default' => false,
 	],
-	'wmgUseCustomHeader' => [
-		'default' => false,
-		'hlptestwiki' => true,
-		'test1wiki' => true,
-	],
 	'wmgUseDarkVector' => [
 		'default' => false,
 	],

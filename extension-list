@@ -38,7 +38,6 @@ $IP/extensions/CreatePage/CreatePage.php
 $IP/extensions/CreateRedirect/extension.json
 $IP/extensions/CreateWiki/extension.json
 $IP/extensions/CrossReference/extension.json
-$IP/extensions/CustomHeader/extension.json
 $IP/extensions/DataDump/extension.json
 $IP/extensions/Description2/extension.json
 $IP/extensions/DPLForum/extension.json

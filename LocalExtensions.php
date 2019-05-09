@@ -195,10 +195,6 @@ if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
 }
 
-if ( $wmgUseCustomHeader ) {
-	wfLoadExtension( 'CustomHeader' );
-}
-
 if ( $wmgUseDarkVector ) {
 	wfLoadSkin( 'DarkVector' );
 
