@@ -1317,6 +1317,9 @@ $wgConf->settings = [
 	'wmgEnableEntitySearchUI' => [
 		'default' => true,
 	],
+	'wmgUseWikiCategoryTagCloud' => [
+		'default' => false,
+	],
 	'wmgUseWikidataPageBanner' => [
 		'default' => false,
 	],

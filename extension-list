@@ -199,6 +199,7 @@ $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
 $IP/extensions/WhoIsWatching/extension.json
 $IP/extensions/Widgets/extension.json
+$IP/extensions/WikiCategoryTagCloud/extension.json
 $IP/extensions/WikiDiscover/extension.json
 $IP/extensions/WikiEditor/extension.json
 $IP/extensions/WikiForum/extension.json
