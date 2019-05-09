@@ -739,6 +739,15 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'If set, only notify about new pages (but not about edits in existing pages).',
 	],
+	'wgDismissableSiteNoticeForAnons' => [
+		'name' => 'Dismissable Site Notice For Anons',
+		'from' => 'dismissablesitenotice',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the sitenotice shown. ',
+	],
 
 	// Restricted (where settings that are restricted go)
 	'wgServer' => [

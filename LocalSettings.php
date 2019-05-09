@@ -3036,7 +3036,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
-	// SiteNotice [MWCandidate]
+	// SiteNotice [MW]
 	'wgDismissableSiteNoticeForAnons' => [
 		'default' => true,
 	],
