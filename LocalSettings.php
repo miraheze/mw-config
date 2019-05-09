@@ -763,7 +763,7 @@ $wgConf->settings = [
 	],
 
 
-	// Extensions and Skins [MWCandidate]
+	// Extensions and Skins [MW]
 	'wmgUse3D' => [
 		'default' => false,
 	],
