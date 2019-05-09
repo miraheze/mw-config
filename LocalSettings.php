@@ -2973,7 +2973,7 @@ $wgConf->settings = [
 		],
 	],
 
-	// RSS Settings [MWCandidate]
+	// RSS Settings [MWExempt]
 	'wgRSSCacheAge' => [
 		'default' => '3600'
 	],
