@@ -356,6 +356,8 @@ if ( $wmgUseFlow ) {
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
 	];
+
+	$wgManageWikiPermissionsAdditionalRights['oversight']['flow-suppress'] = true;
 }
 
 if ( $wmgFlowDefaultNamespaces && $wmgUseFlow ) {

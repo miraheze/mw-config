@@ -651,11 +651,6 @@ $wgManageWikiExtensions = [
 							'flow-edit-post',
 						],
 					],
-					'oversight' => [
-						'permissions' => [
-							'flow-suppress',
-						],
-					],
 					'flow-bot' => [
 						'permissions' => [
 							'flow-create-board',
