@@ -458,6 +458,24 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Set this to use it when editing Module pages.',
 	],
+	'wgMetaNamespace' => [
+		'name' => 'Meta Namespace',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'edit',
+		'help' => 'Name used for the meta namespace. Note that the namespace must either exist in ManageWikiNamespaces.',
+	],
+	'wgMetaNamespaceTalk' => [
+		'name' => 'Meta Namespace Talk',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'edit',
+		'help' => 'Name of the project talk namespace. Note that the namespace must either exist in ManageWikiNamespaces.',
+	],
 
 	// Links
 	'wgExternalLinkTarget' => [

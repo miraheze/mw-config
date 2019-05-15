@@ -2524,17 +2524,9 @@ $wgConf->settings = [
 	],
 	'wgMetaNamespace' => [
 		'default' => null,
-		'apunteswiki' => 'Apuntes',
-		'centralwiki' => 'Central',
-		'destinoswiki' => 'Destinos',
-		'infowiki' => 'Info',
-		'mediatecawiki' => 'Mediateca',
-		'privadowiki' => 'Privado',
-		'tallerwiki' => 'Tallerwiki',
-		'ucroniaswiki' => 'Ucronías',
-		'incubatorwiki' => 'Incubator',
-		'jawp2chwiki' => 'まとめwiki',
-		'tmewiki' => 'TME',
+	],
+	'wgMetaNamespaceTalk' => [
+		'default' => null,
 	],
 	'wgNamespaceContentModels' => [
 		'default' => [],
