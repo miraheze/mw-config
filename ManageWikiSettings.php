@@ -1110,7 +1110,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'Allow user Cascading Style Sheets (CSS). For example MediaWiki:<user>.css.',
+		'help' => 'Allow user Cascading Style Sheets (CSS). For example User:<user>/*.css.',
 	],
 	'wgAllowUserJs' => [
 		'name' => 'Allow User Js',
@@ -1119,6 +1119,6 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'Allow user JavaScript pages. For example MediaWiki:<user>.js.',
+		'help' => 'Allow user JavaScript pages. For example User:<user>/*.js.',
 	],
 ];
