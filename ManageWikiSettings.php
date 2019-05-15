@@ -465,7 +465,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'edit',
-		'help' => 'Name used for the meta namespace. Note that the namespace must either exist in ManageWikiNamespaces.',
+		'help' => 'Name used for the meta namespace. Note that the namespace must exist in ManageWikiNamespaces.',
 	],
 	'wgMetaNamespaceTalk' => [
 		'name' => 'Meta Namespace Talk',
@@ -474,7 +474,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'edit',
-		'help' => 'Name of the project talk namespace. Note that the namespace must either exist in ManageWikiNamespaces.',
+		'help' => 'Name of the project talk namespace. Note that the namespace must exist in ManageWikiNamespaces.',
 	],
 
 	// Links
