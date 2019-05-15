@@ -1121,4 +1121,13 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Allow user JavaScript pages. For example User:<user>/*.js.',
 	],
+	'wgDefaultTheme' => [
+		'name' => 'Default Theme',
+		'from' => 'theme',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => 'default',
+		'section' => 'styling',
+		'help' => 'Sets which theme is displayed by default when users visit your wiki.',
+	],
 ];
