@@ -1103,4 +1103,22 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'if set, will add to the wiki a page named Special:Boilerplates that shows the currently configured boilerplates.',
 	],
+	'wgAllowUserCss' => [
+		'name' => 'Allow User Css',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Allow user Cascading Style Sheets (CSS). For example MediaWiki:<user>.css.',
+	],
+	'wgAllowUserJs' => [
+		'name' => 'Allow User Js',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Allow user JavaScript pages. For example MediaWiki:<user>.js.',
+	],
 ];
