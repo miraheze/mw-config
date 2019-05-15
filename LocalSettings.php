@@ -3122,7 +3122,7 @@ $wgConf->settings = [
 		],
 	],
 
-	// Style [MWCandidate]
+	// Style [MW]
 	'wgAllowUserCss' => [
 		'default' => true,
 	],
@@ -3158,7 +3158,7 @@ $wgConf->settings = [
 		'default' => 'UTC',
 	],
 
-	// Theme [MWCandidate]
+	// Theme [MW]
 	'wgDefaultTheme' => [
 		'default' => "",
 	],
