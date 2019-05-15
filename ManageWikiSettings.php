@@ -1,5 +1,14 @@
 <?php
 
+// Used by wgDefaultSkin and wgTheme
+$skinOptions = [
+	'CologneBlue' => 'cologneblue',
+	'Modern' => 'modern',
+	'MonoBook' => 'monobook',
+	'Timeless' => 'timeless',
+	'Vector' => 'vector',
+];
+
 /**
  * ManageWiki settings are added using the variable below.
  *
@@ -974,13 +983,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'list',
-		'options' => [
-			'CologneBlue' => 'cologneblue',
-			'Modern' => 'modern',
-			'MonoBook' => 'monobook',
-			'Timeless' => 'timeless',
-			'Vector' => 'vector',
-		],
+		'options' => $skinOptions,
 		'overridedefault' => 'vector',
 		'section' => 'styling',
 		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
@@ -1120,5 +1123,17 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Allow user JavaScript pages. For example User:<user>/*.js.',
+	],
+	'wgDefaultTheme' => [
+		'name' => 'Default Theme',
+		'from' => 'theme',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => $skinOptions + [
+			'Default' => 'default',
+                ],
+		'overridedefault' => 'default',
+		'section' => 'styling',
+		'help' => 'Sets which theme is displayed by default when users visit your wiki.',
 	],
 ];
