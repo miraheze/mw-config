@@ -1616,6 +1616,11 @@ $wgConf->settings = [
 	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
+		'weatherwiki' => [
+			'founder' => [
+				'banned',
+			],
+		],
 	],
 	'wgManageWikiPermissionsAdditionalRights' => [
 		'default' => [
@@ -1954,6 +1959,11 @@ $wgConf->settings = [
 	],
 	'wgManageWikiAdditionalRemoveGroups' => [
 		'default' => [],
+		'weatherwiki' => [
+			'founder' => [
+				'banned',
+			],
+		],
 	],
 	'wgManageWikiPermissionsBlacklistRights' => [
 		'default' => [
@@ -2019,6 +2029,7 @@ $wgConf->settings = [
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
 		'default' => 'member',
+		'weatherwiki' => 'user',
 	],
 	'wgManageWikiHelpUrl' => [
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
@@ -2240,6 +2251,7 @@ $wgConf->settings = [
 				'editmyusercss' => true,
 				'editmyuserjs' => true,
 				'editmywatchlist' => true,
+				'edit' => true,
 				'read' => true,
 				'writeapi' => true,
 				'viewmyprivateinfo' => true,
