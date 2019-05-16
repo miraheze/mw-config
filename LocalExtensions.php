@@ -42,6 +42,13 @@ if ( $wmgUseApprovedRevs ) {
 	$wgAvailableRights[] = 'approverevisions';
 	$wgAvailableRights[] = 'viewlinktolatest';
 	$wgAvailableRights[] = 'viewapprover';
+
+	$wgManageWikiNamespacesAdditional['egApprovedRevsEnabledNamespaces'] = [
+		'name' => 'Enable ApprovedRevs in this namespace?',
+		'main' => true,
+		'talk' => true,
+		'overridedefault' => false
+	];
 }
 
 if ( $wmgUseArticleFeedbackv5 ) {
