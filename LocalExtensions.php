@@ -162,7 +162,7 @@ if ( $wmgUseCollapsibleVector ) {
 if ( $wmgUseCollection ) {
 	require_once "$IP/extensions/Collection/Collection.php";
 
-	$wgCommunityCollectionNamespace = NS_PROJECT;
+	$wgCommunityCollectionNamespace = 5;
 
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
@@ -373,19 +373,6 @@ if ( $wmgUseFlow ) {
 
 	$wgManageWikiPermissionsAdditionalRights['oversight']['flow-suppress'] = true;
 	$wgManageWikiNamespacesExtraContentModels['Flow'] = 'flow-board';
-}
-
-if ( $wmgFlowDefaultNamespaces && $wmgUseFlow ) {
-	$wgNamespaceContentModels = [
-		NS_TALK => 'flow-board',
-		NS_USER_TALK => 'flow-board',
-		NS_PROJECT_TALK => 'flow-board',
-		NS_FILE_TALK => 'flow-board',
-		NS_MEDIAWIKI_TALK => 'flow-board',
-		NS_TEMPLATE_TALK => 'flow-board',
-		NS_HELP_TALK => 'flow-board',
-		NS_CATEGORY_TALK => 'flow-board',
-	] + $wgNamespaceContentModels;
 }
 
 if ( $wmgUseFeaturedFeeds ) {
@@ -729,13 +716,13 @@ if ( $wmgUsePopups ) {
 if ( $wmgUseProofreadPage ) {
 	wfLoadExtension( 'ProofreadPage' );
 
-	$wgExtraNamespaces[NS_PROOFREAD_PAGE] = 'Page';
-	$wgExtraNamespaces[NS_PROOFREAD_PAGE_TALK] = 'Page_talk';
-	$wgExtraNamespaces[NS_PROOFREAD_INDEX] = 'Index';
-	$wgExtraNamespaces[NS_PROOFREAD_INDEX_TALK] = 'Index_talk';
+	$wgExtraNamespaces[250] = 'Page';
+	$wgExtraNamespaces[251] = 'Page_talk';
+	$wgExtraNamespaces[252] = 'Index';
+	$wgExtraNamespaces[253] = 'Index_talk';
 	$wgProofreadPageNamespaceIds = [
-		'index' => NS_PROOFREAD_INDEX,
-		'page' => NS_PROOFREAD_PAGE
+		'index' => 252,
+		'page' => 250
 	];
 }
 

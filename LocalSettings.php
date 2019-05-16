@@ -1234,13 +1234,6 @@ $wgConf->settings = [
 		'default' => 'ImageMagick',
 	],
 
-	// Flow [MWCandidate] (MWNamespaces?)
-	'wmgFlowDefaultNamespaces' => [
-		'default' => true,
-		'nationsglorywiki' => false,
-		'lzhscpwikiwiki' => false,
-	],
-
 	// GlobalBlocking [MWExempt]
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
