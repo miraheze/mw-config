@@ -337,7 +337,6 @@ if ( $wmgUseFancyBoxThumbs ) {
 if ( $wmgUseFlaggedRevs ) {
 	require_once "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
 
-	$wgFlaggedRevsNamespaces = $wmgFlaggedRevsNamespaces;
 	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
 	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
 	$wgFlaggedRevsTagsRestrictions = $wmgFlaggedRevsTagsRestrictions;
@@ -347,6 +346,13 @@ if ( $wmgUseFlaggedRevs ) {
 	$wgFlaggedRevsRestrictionLevels = $wmgFlaggedRevsRestrictionLevels;
 	$wgSimpleFlaggedRevsUI = $wmgSimpleFlaggedRevsUI;
 	$wgFlaggedRevsLowProfile = $wmgFlaggedRevsLowProfile;
+
+	$wgManageWikiNamespacesAdditional['wgFlaggedRevsNamespaces'] = [
+		'name' => 'Enable FlaggedRevs in this namespace?',
+		'main' => true,
+		'talk' => false,
+		'overridedefault' => false
+	];
 }
 
 if ( $wmgUseFlow ) {
@@ -359,6 +365,7 @@ if ( $wmgUseFlow ) {
 	];
 
 	$wgManageWikiPermissionsAdditionalRights['oversight']['flow-suppress'] = true;
+	$wgManageWikiNamespacesExtraContentModels['Flow'] = 'flow-board';
 }
 
 if ( $wmgFlowDefaultNamespaces && $wmgUseFlow ) {
@@ -530,6 +537,13 @@ if ( $wmgUseMassEditRegex ) {
 
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
+
+	$wgManageWikiNamespacesAdditional['wgNamespacesToPostIn'] = [
+		'name' => 'Can MassMessage post messages in this namespace?',
+		'main' => true,
+		'talk' => false,
+		'overridedefault' => false
+	];
 }
 
 if ( $wmgUseMath ) {
@@ -825,6 +839,13 @@ if ( $wmgUseTabsCombination ) {
 
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
+
+	$wgManageWikiNamespacesAdditional['wgTemplateSandboxEditNamespaces'] = [
+		'name' => 'Can TemplateSandbox be used in this namespace?',
+		'main' => true,
+		'talk' => true,
+		'overridedefault' => false
+	];
 }
 
 if ( $wmgUseTemplateStyles ) {
@@ -920,7 +941,12 @@ if ( $wmgUseVisualEditor ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 	}
 
-	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
+	$wgManageWikiNamespacesAdditional['wgVisualEditorAvailableNamespaces'] = [
+		'name' => 'Enable VisualEditor in this namespace?',
+		'main' => true,
+		'talk' => true,
+		'overridedefault' => false
+	];
 
 	// Load TemplateData
 	wfLoadExtension( 'TemplateData' );
@@ -953,6 +979,13 @@ if ( $wmgUseWikiCategoryTagCloud ) {
 
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
+
+	$wgManageWikiNamespacesAdditional['wgWPBNamespaces'] = [
+		'name' => 'Enable WikidataPageBanner in this namespace?',
+		'main' => true,
+		'talk' => true,
+		'overridedefault' => false
+	];
 }
 
 if ( $wmgUseWikibaseRepository ) {

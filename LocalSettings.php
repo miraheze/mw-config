@@ -25,299 +25,6 @@ $wgLocalVirtualHosts = [ '81.4.109.166' ];
 
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 
-// Namespaces (please do not add anything here unless absoluely necessary!)
-define( 'NS_TECH', 1600 );
-define( 'NS_TECH_TALK', 1601 );
-define( 'NS_HL2RP', 1602 );
-define( 'NS_HL2RP_TALK', 1603 );
-define( 'NS_ARP', 1604 );
-define( 'NS_ARP_TALK', 1605 );
-define( 'NS_EVENT', 1606 );
-define( 'NS_EVENT_TALK', 1607 );
-define( 'NS_CLAN', 1608 );
-define( 'NS_CLAN_TALK', 1609 );
-define( 'NS_POE', 1610 );
-define( 'NS_POE_TALK', 1611 );
-define( 'NS_LEAGUE', 1612 );
-define( 'NS_LEAGUE_TALK', 1613 );
-define( 'NS_SMITE', 1614 );
-define( 'NS_SMITE_TALK', 1615 );
-define( 'NS_SERVER', 1616 );
-define( 'NS_SERVER_TALK', 1617 );
-define( 'NS_COMIC', 1618 );
-define( 'NS_COMIC_TALK', 1619 );
-define( 'NS_TROPEWORKSHOP', 1620 );
-define( 'NS_TROPEWORKSHOP_TALK', 1621 );
-define( 'NS_HOENN', 1622 );
-define( 'NS_HOENN_TALK', 1623 );
-define( 'NS_OFFICIAL', 1624 );
-define( 'NS_OFFICIAL_TALK', 1625 );
-define( 'NS_PORTAL', 1626 );
-define( 'NS_PORTAL_TALK', 1627 );
-define( 'NS_CALL_OF_DUTY', 1628 );
-define( 'NS_CALL_OF_DUTY_TALK', 1629 );
-define( 'NS_REVIEWS', 1630 );
-define( 'NS_REVIEWS_TALK', 1631 );
-define( 'NS_TEST', 1632 );
-define( 'NS_TEST_TALK', 1633 );
-define( 'NS_MINECRAFT', 1636 );
-define( 'NS_MINECRAFT_TALK', 1637 );
-define( 'NS_SUPER_MARIO_LAND_2', 1638 );
-define( 'NS_SUPER_MARIO_LAND_2_TALK', 1639 );
-define( 'NS_SUPER_MARIO_WORLD_2', 1640 );
-define( 'NS_SUPER_MARIO_WORLD_2_TALK', 1641 );
-define( 'NS_SUPER_MARIO_BROS', 1642 );
-define( 'NS_SUPER_MARIO_BROS_TALK', 1643 );
-define( 'NS_SUPER_MARIO_ADVANCE', 1644 );
-define( 'NS_SUPER_MARIO_ADVANCE_TALK', 1645 );
-define( 'NS_SUPER_MARIO_ADVANCE_2', 1646 );
-define( 'NS_SUPER_MARIO_ADVANCE_2_TALK', 1647 );
-define( 'NS_SUPER_MARIO_ADVANCE_3', 1648 );
-define( 'NS_SUPER_MARIO_ADVANCE_3_TALK', 1649 );
-define( 'NS_SUPER_MARIO_ADVANCE_4', 1650 );
-define( 'NS_SUPER_MARIO_ADVANCE_4_TALK', 1651 );
-define( 'NS_THE_LEGEND_OF_ZELDA', 1652 );
-define( 'NS_THE_LEGEND_OF_ZELDA_TALK', 1653 );
-define( 'NS_LCS', 1654 );
-define( 'NS_LCS_TALK', 1655 );
-define( 'NS_MEDI', 1656 );
-define( 'NS_MEDI_TALK', 1657 );
-define( 'NS_LIBRARY', 1658 );
-define( 'NS_LIBRARY_TALK', 1659 );
-define( 'NS_TEACHING', 1660 );
-define( 'NS_TEACHING_TALK', 1661 );
-define( 'NS_BLANK', 1662 );
-define( 'NS_BLANK_TALK', 1663 );
-define( 'NS_RESEARCH', 1664 );
-define( 'NS_RESEARCH_TALK', 1665 );
-define( 'NS_ADMIN', 1666 );
-define( 'NS_ADMIN_TALK', 1667 );
-define( 'NS_WORKSHOP', 1668 );
-define( 'NS_WORKSHOP_TALK', 1669 );
-define( 'NS_SELP', 1670 );
-define( 'NS_SELP_TALK', 1671 );
-define( 'NS_STUDY_NOTE', 1672 );
-define( 'NS_STUDY_NOTE_TALK', 1673 );
-define( 'NS_EXPLANATION', 1674 );
-define( 'NS_EXPLANATION_TALK', 1675 );
-define( 'NS_KOREAN_STUDY_NOTE', 1676 );
-define( 'NS_KOREAN_STUDY_NOTE_TALK', 1677 );
-define( 'NS_GLOSSARY', 1678 );
-define( 'NS_GLOSSARY_TALK', 1679 );
-define( 'NS_SPRITES', 1680 );
-define( 'NS_SPRITES_TALK', 1681 );
-define( 'NS_GALLERY', 1682 );
-define( 'NS_GALLERY_TALK', 1683 );
-define( 'NS_HALAMAN', 1684 );
-define( 'NS_HALAMAN_TALK', 1685 );
-define( 'NS_DICT', 1686 );
-define( 'NS_DICT_TALK', 1687 );
-define( 'NS_FEATURED', 1688 );
-define( 'NS_FEATURED_TALK', 1689 );
-define( 'NS_ARTIKEL', 1690 );
-define( 'NS_ARTIKEL_TALK', 1691 );
-define( 'NS_VIDEO', 1692 );
-define( 'NS_VIDEO_TALK', 1693 );
-define( 'NS_OPINION', 1694 );
-define( 'NS_OPINION_TALK', 1695 );
-define( 'NS_TIMELINE', 1696 );
-define( 'NS_TIMELINE_TALK', 1697 );
-define( 'NS_DRAFT', 1700 );
-define( 'NS_DRAFT_TALK', 1701 );
-define( 'NS_HISTORICAL_TIMELINE', 1702 );
-define( 'NS_HISTORICAL_TIMELINE_TALK', 1703 );
-define( 'NS_QUIZSET', 1704 );
-define( 'NS_QUIZSET_TALK', 1705 );
-define( 'NS_NOTEBOOK', 1706 );
-define( 'NS_NOTEBOOK_TALK', 1707 );
-define( 'NS_SOURCE', 1708 );
-define( 'NS_SOURCE_TALK', 1709 );
-define( 'NS_GAME', 1710 );
-define( 'NS_GAME_TALK', 1711 );
-define( 'NS_PICTUREBOARD', 1712 );
-define( 'NS_PICTUREBOARD_TALK', 1713 );
-define( 'NS_TINYFOREST', 1714 );
-define( 'NS_TINYFOREST_TALK', 1715 );
-define( 'NS_WNS2', 1716 );
-define( 'NS_WNS2_TALK', 1717 );
-define( 'NS_HOWTO', 1718 );
-define( 'NS_HOWTO_TALK', 1719 );
-define( 'NS_NEWSLINK', 1720 );
-define( 'NS_NEWSLINK_TALK', 1721 );
-define( 'NS_CIVILIZATION_IV', 1722 );
-define( 'NS_CIVILIZATION_IV_TALK', 1723 );
-define( 'NS_PSEUDO_NEWS', 1724 );
-define( 'NS_PSEUDO_NEWS_TALK', 1725 );
-define( 'NS_PSEUDO_BASE_DICTIONARY', 1726 );
-define( 'NS_PSEUDO_BASE_DICTIONARY_TALK', 1727 );
-define( 'NS_PSEUDO_BASE_LIBRARY', 1728 );
-define( 'NS_PSEUDO_BASE_LIBRARY_TALK', 1729 );
-define( 'NS_PSEUDO_BASE_MUSIC', 1730 );
-define( 'NS_PSEUDO_BASE_MUSIC_TALK', 1731 );
-define( 'NS_RGB', 1732 );
-define( 'NS_RGB_TALK', 1733 );
-define( 'NS_LINESTYLE', 1734 );
-define( 'NS_LINESTYLE_TALK', 1735 );
-define( 'NS_IDEA', 1736 );
-define( 'NS_IDEA_TALK', 1737 );
-define( 'NS_POLICY', 1738 );
-define( 'NS_POLICY_TALK', 1739 );
-define( 'NS_LEGACY', 1740 );
-define( 'NS_LEGACY_TALK', 1741 );
-define( 'NS_BOILERPLATE', 1742 );
-define( 'NS_BOILERPLATE_TALK', 1743 );
-define( 'NS_WPIMPORT', 1744 );
-define( 'NS_WPIMPORT_TALK', 1745 );
-define( 'NS_ARCHIVE', 1746 );
-define( 'NS_ARCHIVE_TALK', 1747 );
-define( 'NS_WPREDIRECT', 1748 );
-define( 'NS_WPREDIRECT_TALK', 1749 );
-define( 'NS_WALKTHROUGH', 1750 );
-define( 'NS_WALKTHROUGH_TALK', 1751 );
-define( 'NS_STAFF', 1752 );
-define( 'NS_STAFF_TALK', 1753 );
-define( 'NS_TEMA', 1754 );
-define( 'NS_TEMA_TALK', 1755 );
-define( 'NS_PAGE', 1756 );
-define( 'NS_PAGE_TALK', 1757 );
-define( 'NS_ANEXO', 1758 );
-define( 'NS_ANEXO_TALK', 1759 );
-define( 'NS_ESTUDIO', 1760 );
-define( 'NS_ESTUDIO_TALK', 1761 );
-define( 'NS_PRUEBA', 1762 );
-define( 'NS_PRUEBA_TALK', 1763 );
-define( 'NS_REGISTRO', 1764 );
-define( 'NS_REGISTRO_TALK', 1765 );
-define( 'NS_LISTA', 1766 );
-define( 'NS_LISTA_TALK', 1767 );
-define( 'NS_BUG', 1768 );
-define( 'NS_BUG_TALK', 1769 );
-define( 'NS_PROYECTO', 1770 );
-define( 'NS_PROYECTO_TALK', 1771 );
-define( 'NS_TALLER', 1772 );
-define( 'NS_TALLER_TALK', 1773 );
-define( 'NS_MODELO', 1774 );
-define( 'NS_MODELO_TALK', 1775 );
-define( 'NS_HANDBOOK', 1776 );
-define( 'NS_HANDBOOK_TALK', 1777 );
-define( 'NS_EXTENSION', 1778 );
-define( 'NS_EXTENSION_TALK', 1779 );
-define( 'NS_SKIN', 1780 );
-define( 'NS_SKIN_TALK', 1781 );
-define( 'NS_GAMEPAGE', 1782 );
-define( 'NS_GAMEPAGE_TALK', 1783 );
-define( 'NS_BOOK', 1784 );
-define( 'NS_BOOK_TALK', 1785 );
-define( 'NS_BOOK_NAVIGATION', 1786 );
-define( 'NS_BOOK_NAVIGATION_TALK', 1787 );
-define( 'NS_APPLICATION', 1788 );
-define( 'NS_APPLICATION_TALK', 1789 );
-define( 'NS_SUMMARY', 1790 );
-define( 'NS_SUMMARY_TALK', 1791 );
-define( 'NS_MANUAL', 1790 );
-define( 'NS_MANUAL_TALK', 1791 );
-define( 'NS_API', 1792 );
-define( 'NS_API_TALK', 1793 );
-define( 'NS_DATA', 1794 );
-define( 'NS_DATA_TALK', 1795 );
-define( 'NS_DICTIONARY', 1796 );
-define( 'NS_DICTIONARY_TALK', 1797 );
-define( 'NS_CALENDAR', 1798 );
-define( 'NS_CALENDAR_TALK', 1799 );
-define( 'NS_ENCYCLOPEDIA', 1800 );
-define( 'NS_ENCYCLOPEDIA_TALK', 1801 );
-define( 'NS_QURAN', 1802 );
-define( 'NS_QURAN_TALK', 1803 );
-define( 'NS_CYTATY', 1804 );
-define( 'NS_CYTATY_TALK', 1805 );
-define( 'NS_NONNEWS', 1806 );
-define( 'NS_NONNEWS_TALK', 1807 );
-define( 'NS_NONZRODLA', 1808 );
-define( 'NS_NONZRODLA_TALK', 1809 );
-define( 'NS_SLOWNIK', 1810 );
-define( 'NS_SLOWNIK_TALK', 1811 );
-define( 'NS_GRA', 1812 );
-define( 'NS_GRA_TALK', 1813 );
-define( 'NS_PORADNIK', 1814 );
-define( 'NS_PORADNIK_TALK', 1815 );
-define( 'NS_PORUM', 1816 );
-define( 'NS_PORUM_TALK', 1817 );
-define( 'NS_THREAD', 1818 );
-define( 'NS_THREAD_TALK', 1819 );
-define( 'NS_MESSAGE_WALL', 1820 );
-define( 'NS_MESSAGE_WALL_TALK', 1821 );
-define( 'NS_USER_BLOG', 1822 );
-define( 'NS_USER_BLOG_TALK', 1823 );
-define( 'NS_USER_BLOG_COMMENT', 1824 );
-define( 'NS_USER_BLOG_COMMENT_TALK', 1825 );
-define( 'NS_HUB', 1826 );
-define( 'NS_HUB_TALK', 1827 );
-define( 'NS_LIST', 1828 );
-define( 'NS_LIST_TALK', 1829 );
-define( 'NS_LAW', 1830 );
-define( 'NS_LAW_AMENDING', 1831 );
-define( 'NS_EXECUTIVE_ORDER', 1832 );
-define( 'NS_EXECUTIVE_ORDER_TALK', 1833 );
-define( 'NS_GROUP', 1834 );
-define( 'NS_GROUP_TALK', 1835 );
-define( 'NS_PARAMETER', 1836 );
-define( 'NS_PARAMETER_TALK', 1837 );
-define( 'NS_EXAMPLE', 1838 );
-define( 'NS_EXAMPLE_TALK', 1839 );
-define( 'NS_STOREFRONT', 1840 );
-define( 'NS_STOREFRONT_TALK', 1841 );
-define( 'NS_MUSINGS', 1842 );
-define( 'NS_MUSINGS_TALK', 1843 );
-define( 'NS_TECHDICT', 1844 );
-define( 'NS_TECHDICT_TALK', 1845 );
-
-define( 'NS_PORTALE', 2000 ); // Skipping values to 2000 per T3553
-define( 'NS_DISCUSSIONI_PORTALE', 2001 );
-define( 'NS_PROGETTO', 2002 );
-define( 'NS_DISCUSSIONI_PROGETTO', 2003 );
-define( 'NS_CIMITERO', 2004 );
-define( 'NS_DISCUSSIONI_CIMITERO', 2005 );
-define( 'NS_NONNOTIZIE', 2006 );
-define( 'NS_DISCUSSIONI_NONNOTIZIE', 2007 );
-define( 'NS_NONVOYAGE', 2008 );
-define( 'NS_DISCUSSIONI_NONVOYAGE', 2009 );
-define( 'NS_NONQUOTE', 2010 );
-define( 'NS_DISCUSSIONI_NONQUOTE', 2011 );
-define( 'NS_NONDIZIONARIO', 2012 );
-define( 'NS_DISCUSSIONI_NONDIZIONARIO', 2013 );
-define( 'NS_NONIVERSITA', 2014 );
-define( 'NS_DISCUSSIONI_NONIVERSITA', 2015 );
-define( 'NS_NONSOURCE', 2016 );
-define( 'NS_DISCUSSIONI_NONSOURCE', 2017 );
-define( 'NS_NONBOOKS', 2018 );
-define( 'NS_DISCUSSIONI_NONBOOKS', 2019 );
-define( 'NS_FANWORK', 2020 );
-define( 'NS_FANWORK_TALK', 2021 );
-define( 'NS_SOP_ATS_MKW', 2024 );
-define( 'NS_SOP_ATS_MKW_TALK', 2025 );
-define( 'NS_MOS_MKW', 2026 );
-define( 'NS_MOS_MKW_TALK', 2027 );
-define( 'NS_LOA', 2028 );
-define( 'NS_LOA_TALK', 2029 );
-define( 'NS_LOCA_MKW', 2030 );
-define( 'NS_LOCA_MKW_TALK', 2031 );
-define( 'NS_TUT', 2032 );
-define( 'NS_TUT_TALK', 2033 );
-define( 'NS_ASPECT', 2034 );
-define( 'NS_ASPECT_TALK', 2035 );
-
-// Refer to NS_MODULE before importing Scribunto (tmewiki)
-define( 'WMG_NS_MODULE', 828 );
-define( 'WMG_NS_MODULE_TALK', 829 );
-
-// Special namespace re-defined
-define( 'NS_PROOFREAD_PAGE', 250 );
-define( 'NS_PROOFREAD_PAGE_TALK', 251 );
-define( 'NS_PROOFREAD_INDEX', 252 );
-define( 'NS_PROOFREAD_INDEX_TALK', 253 );
-
-// NS 860, 861, 862, 863 allocated for Item/Item_talk/Property/Property_talk by Wikibase
-
 $wgConf->settings = [
 	// invalidates user sessions [MWExempt]
 	'wgAuthenticationTokenVersion' => [
@@ -1348,7 +1055,7 @@ $wgConf->settings = [
 	'wmgUseYouTube' => [
 		'default' => false,
 	],
-	
+
 	// TemplateStyles config
 	'wgTemplateStylesAllowedUrls' => [
 		// Remove when https://gerrit.wikimedia.org/r/486828/ is merged
@@ -1397,28 +1104,6 @@ $wgConf->settings = [
 	],
 
 	// FlaggedRevs [MWCandidate]
-	'wmgFlaggedRevsNamespaces' => [
-		'default' => [
-			NS_MAIN,
-			NS_FILE,
-			NS_TEMPLATE,
-			NS_HELP,
-			NS_PROJECT,
-		],
-		'isvwiki' => [
-			NS_MAIN,
-			NS_FILE,
-			NS_TEMPLATE,
-			NS_CATEGORY,
-			WMG_NS_MODULE,
-			NS_LIBRARY,
-		],
-		'trexwiki' => [
-			NS_ARTIKEL,
-			NS_FILE,
-			NS_TEMPLATE,
-		],
-	],
 	'wmgFlaggedRevsProtection' => [
 		'default' => false,
 		'pruebawiki' => true,
@@ -2346,17 +2031,10 @@ $wgConf->settings = [
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
 	],
 
-	// MassMessage [MWCandidate]
+	// MassMessage [MWExempt]
 	'wgAllowGlobalMessaging' => [
 		'default' => false,
 		'metawiki' => true,
-	],
-	'wgNamespacesToPostIn' => [
-		'default' => [ NS_PROJECT ],
-		'+bgowiki' => [
-			NS_MAIN,
-			NS_PROJECT,
-		],
 	],
 
 	// MatomoAnalytics [MWExempt]
@@ -2515,117 +2193,13 @@ $wgConf->settings = [
 		'default' => [ 'mathml' ],
 	],
 	// Namespaces [MWNamespaces]
-	'wgExtraSignatureNamespaces' => [
-		'default' => [],
-		'nonciclopediawiki' => [
-			NS_HELP,
-			NS_PROJECT,
-		],
-	],
 	'wgMetaNamespace' => [
 		'default' => null,
 	],
 	'wgMetaNamespaceTalk' => [
 		'default' => null,
 	],
-	'wgNamespaceContentModels' => [
-		'default' => [],
-		'apunteswiki' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-		'centralwiki' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-		'destinoswiki' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-		'infowiki' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-		'isvwiki' => [
-			WMG_NS_MODULE_TALK => 'flow-board',
-			NS_LIBRARY_TALK => 'flow-board',
-		],
-		'mediatecawiki' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-		'monarchistswiki' => [
-			NS_MUSINGS_TALK => 'flow-board',
-		],
-		'privadowiki' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-		'taller' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-		'ucroniaswiki' => [
-			NS_TEST_TALK => 'flow-board',
-			NS_PAGE_TALK => 'flow-board',
-			NS_ANEXO_TALK => 'flow-board',
-			NS_REGISTRO_TALK => 'flow-board',
-			NS_LISTA_TALK => 'flow-board',
-			NS_PROYECTO_TALK => 'flow-board',
-			NS_TALLER_TALK => 'flow-board',
-			NS_MODELO_TALK => 'flow-board',
-			NS_EXAMPLE_TALK => 'flow-board',
-		],
-	],
+
 	// OATHAuth [MWExempt]
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
@@ -3145,14 +2719,6 @@ $wgConf->settings = [
 		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 	],
 
-	// TemplateSandbox [MWCandidate] (MWNamespaces?)
-	'wgTemplateSandboxEditNamespaces' => [
-		'default' => [
-			NS_TEMPLATE,
-			WMG_NS_MODULE
-		]
-	],
-
 	// Timezone [MW]
 	'wgLocaltimezone' => [
 		'default' => 'UTC',
@@ -3344,127 +2910,6 @@ $wgConf->settings = [
 	'wmgVisualEditorEnableDefault' => [
 		'default' => true,
 	],
-	'wmgVisualEditorAvailableNamespaces' => [
-		'default' => [
-			NS_MAIN => true,
-			NS_USER => true,
-		],
-		'+apunteswiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+centralwiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+destinoswiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+infowiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+mediatecawiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+privadowiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+tallerwiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+ucroniaswiki' => [
-			NS_PROJECT => true,
-			NS_PAGE => true,
-			NS_ANEXO => true,
-			NS_TEST => true,
-			NS_REGISTRO => true,
-			NS_LISTA => true,
-			NS_PROYECTO => true,
-			NS_TALLER => true,
-			NS_MODELO => true,
-			NS_EXAMPLE => true,
-		 ],
-		'+espiralwiki' => [
-			NS_PROJECT => true,
-		],
-		'+isvwiki' => [
-			NS_LIBRARY => true,
-		],
-		'+oncprojectwiki' => [
-			NS_PROJECT => true,
-			NS_TEMPLATE => true,
-			NS_CATEGORY => true,
-			NS_FILE => true,
-		],
-		'+wisdomwikiwiki' => [
-			NS_LCS => true,
-			NS_MEDI => true,
-			NS_LIBRARY => true,
-			NS_TEACHING => true,
-			NS_BLANK => true,
-		],
-	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
 	],
@@ -3481,18 +2926,6 @@ $wgConf->settings = [
 		'espiralwiki' => true,
 		'isvwiki' => true,
 		'spiralwiki' => true,
-	],
-	// WikidataPageBanner [MWCandidate]
-	'wgWPBNamespaces' => [
-		'default' => [ NS_MAIN ],
-		'+apunteswiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
-		'+centralwiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
-		'+destinoswiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
-		'+infowiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
-		'+mediatecawiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
-		'+privadowiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
-		'+tallerwiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
-		'+ucroniaswiki' => [ NS_REGISTRO, NS_PROYECTO, NS_TALLER, NS_EXAMPLE ],
 	],
 
 	// Protect site config [MWCandidate]
