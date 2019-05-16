@@ -1957,7 +1957,7 @@ $wgConf->settings = [
 			],
 		],
 	],
-	'wgManageWikiAdditionalRemoveGroups' => [
+	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
 		'default' => [],
 		'weatherwiki' => [
 			'founder' => [
