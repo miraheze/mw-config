@@ -2810,19 +2810,12 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// Protect site config [MWCandidate]
+	// Protect site config [MW]
 	'wgProtectSiteLimit' => [
 		'default' => '1 week',
-		'infectopedwiki' => '10 years',
-		'campaignlabwiki' => 'indefinite',
-		'tnoteswiki' => 'indefinite',
-		'weatherwiki' => 'indefinite',
 	],
 	'wgProtectSiteDefaultTimeout' => [
 		'default' => '1 hour',
-		'infectopedwiki' => '1 year',
-		'tnoteswiki' => '2 hours',
-		'weatherwiki' => '1 week',
 	],
 
 	// WebChat config [MW]

@@ -118,6 +118,24 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Require users to confirm email address before they can edit. This effectively disables ip editing.',
 	],
+	'wgProtectSiteLimit' => [
+		'name' => 'Protect Site Limit',
+		'from' => 'protectsite',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '1 week',
+		'section' => 'anti-spam',
+		'help' => 'Maximum time allowed for protection of the site.',
+	],
+	'wgProtectSiteDefaultTimeout' => [
+		'name' => 'ProtectSite Default Timeout',
+		'from' => 'protectsite',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '1 hour',
+		'section' => 'anti-spam',
+		'help' => 'Default timeout, 1 hour by default.',
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
