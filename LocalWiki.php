@@ -89,7 +89,8 @@ if ( $wgDBname === 'centralwiki' ||
 	 $wgDBname === 'privadowiki' ||
 	 $wgDBname === 'mediatecawiki' ||
 	 $wgDBname === 'tallerwiki' ||
-	 $wgDBname === 'mediatecawiki'
+	 $wgDBname === 'mediatecawiki' ||
+	 $wgDBname === 'hispanowiki'
 ) {
 	// per Ucronistaw
 	$wgForeignFileRepos[] = [
