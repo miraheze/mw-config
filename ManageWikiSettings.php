@@ -359,6 +359,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'This option allow you to read Wikitext syntax on VisualEditor.',
 	],
+	'wgVisualEditorUseSingleEditTab' => [
+		'name' => 'VisualEditor Use Single Edit Tab',
+		'from' => 'visualeditor',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Show\'s only the "edit" tab. Uses VisualEditor by default if "Make VisualEditor the default editor for all" is set, otherwise defaults to Wikitext.',
+	],
 	'wgAllowSlowParserFunctions' => [
 		'name' => 'Allow slow parser functions',
 		'from' => 'mediawiki',

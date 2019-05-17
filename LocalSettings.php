@@ -2796,7 +2796,7 @@ $wgConf->settings = [
 		],
 	],
 
-	// VisualEditor [MWCandidate]
+	// VisualEditor [MW]
 	'wmgVisualEditorEnableDefault' => [
 		'default' => true,
 	],
@@ -2808,9 +2808,6 @@ $wgConf->settings = [
 	],
 	'wgVisualEditorUseSingleEditTab' => [
 		'default' => false,
-		'espiralwiki' => true,
-		'isvwiki' => true,
-		'spiralwiki' => true,
 	],
 
 	// Protect site config [MWCandidate]
