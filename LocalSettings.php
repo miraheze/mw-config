@@ -2806,11 +2806,6 @@ $wgConf->settings = [
 	'wgVisualEditorShowBetaWelcome' => [
 		'default' => true,
 	],
-	'wgVisualEditorSupportedSkins' => [
-		'default' => [],
-		'permanentfuturelabwiki' => [ 'foreground' ],
-		'pfsolutions' => [ 'metrolook' ],
-	],
 	'wgVisualEditorUseSingleEditTab' => [
 		'default' => false,
 		'espiralwiki' => true,
