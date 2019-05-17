@@ -680,7 +680,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgUseGlobalUserPage' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wmgUseGraph' => [
 		'default' => false,
