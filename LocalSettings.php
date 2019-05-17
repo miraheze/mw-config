@@ -2668,7 +2668,7 @@ $wgConf->settings = [
 		'nvcwiki' => 'qqq',
 	],
 
-	// UniversalLanguageSelector [MWCandidate]
+	// UniversalLanguageSelector [MW]
 	'wgULSAnonCanChangeLanguage' => [
 		'default' => false,
 	],
