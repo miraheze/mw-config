@@ -1276,7 +1276,7 @@ $wgConf->settings = [
 		'default' => 'loginwiki',
 	],
 
-	// HighlightLinks [MWCandidate]
+	// HighlightLinks [MW]
 	'wgHighlightLinksInCategory' => [
 		'default' => [],
 		'allthetropeswiki' => [
