@@ -1244,7 +1244,7 @@ $wgConf->settings = [
 		'default' => 'mhglobal', // use mhglobal for global blocks
 	],
 
-	// GlobalCssJs [MWCandidate]
+	// GlobalCssJs [MWExempt]
 	'wgGlobalCssJsConfig' => [
 		'default' => [
 			'wiki' => 'metawiki',
