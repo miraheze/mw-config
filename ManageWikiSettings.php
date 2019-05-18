@@ -527,6 +527,29 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Name of the project talk namespace. Note that the namespace must exist in ManageWikiNamespaces.',
 	],
+	'wgRandomGameDisplay' => [
+		'name' => 'Random Game Display',
+		'from' => 'randomgameunit',
+		'restricted' => false,
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'random_poll',
+			'random_picturegame',
+			'random_quiz',
+		],
+		'options' => [
+			'Poll' => 'random_poll',
+			'PictureGame' => 'random_picturegame',
+			'Quiz' => 'random_quiz',
+		],
+		'overridedefault' => [
+			'random_picturegame' => false,
+			'random_poll' => false,
+			'random_quiz' => false,
+		],
+		'section' => 'edit',
+		'help' => 'Controls what games are enabled.',
+	],
 
 	// Links
 	'wgExternalLinkTarget' => [
