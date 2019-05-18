@@ -2514,7 +2514,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
-	// SocialProfile [MWCandidate]
+	// SocialProfile [MW]
 	'wgUserBoard' => [
 		'default' => false,
 	],
