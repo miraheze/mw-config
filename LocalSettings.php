@@ -297,6 +297,14 @@ $wgConf->settings = [
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		],
 	],
+	'wgCreateWikiStateDays' => [
+		'default' => [
+			'inactive' => 45,
+			'closed' => 15,
+			'removed' => 120,
+			'deleted' => 14
+		],
+	],
 	'wgCreateWikiCategories' => [
 		'default' => [
 			'Community' => 'community',
