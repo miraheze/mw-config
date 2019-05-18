@@ -1106,7 +1106,6 @@ $wgConf->settings = [
 	// FlaggedRevs [MWCandidate]
 	'wmgFlaggedRevsProtection' => [
 		'default' => false,
-		'pruebawiki' => true,
 	],
 	'wmgFlaggedRevsTags' => [
 		'default' => [

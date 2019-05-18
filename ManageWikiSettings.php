@@ -151,6 +151,15 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Default timeout, 1 hour by default.',
 	],
+	'wmgFlaggedRevsProtection' => [
+		'name' => 'Flagged Revs Protection',
+		'from' => 'flaggedrevs',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'This enables Flagged Revs Protection.',
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
