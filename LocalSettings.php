@@ -2863,12 +2863,6 @@ $wgConf->settings = [
 		'default' => [],
 	],
 
-	// Whitelist [MWCandidate]
-	'wmgUseMainPageWhitelist' => [
-		'default' => true,
-		'rwsaleswiki' => false,
-	],
-
 	// WikiDiscover [MWExempt]
 	'wgWikiDiscoverClosedList' => [
 		'default' => '/srv/mediawiki/dblist/closed.dblist',
