@@ -389,6 +389,7 @@ $wgConf->settings = [
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
 		'openhatchwiki' => true,
+		'thelastsovereignwiki' => true,
 		'trollpastawiki' => true,
 		'trollpastauncensoredwiki' => true,
 	],
