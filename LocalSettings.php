@@ -383,6 +383,7 @@ $wgConf->settings = [
 		'default' => false,
 		'absurdopediawiki' => true,
 		'allthetropeswiki' => true,
+		'animebathswiki' => true,
 		'baobabarchiveswiki' => true,
 		'beidipediawiki' => true,
 		'buswiki' => true,
