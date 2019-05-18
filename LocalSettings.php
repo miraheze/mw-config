@@ -452,7 +452,7 @@ $wgConf->settings = [
 	'wgEchoMentionStatusNotifications' => [
 		'default' => true,
 	],
-	// Exempt from Robot Control (INDEX/NOINDEX namespaces) [MWCandidate]
+	// Exempt from Robot Control (INDEX/NOINDEX namespaces) [MW]
 	'wgExemptFromUserRobotsControl' => [
 		'default' => $wgContentNamespaces,
 		'thelonsdalebattalionwiki' => [],
