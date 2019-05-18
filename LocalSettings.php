@@ -390,6 +390,7 @@ $wgConf->settings = [
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
 		'openhatchwiki' => true,
+		'simswiki' => true,
 		'thelastsovereignwiki' => true,
 		'trollpastawiki' => true,
 		'trollpastauncensoredwiki' => true,
