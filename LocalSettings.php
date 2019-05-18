@@ -2885,11 +2885,12 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// Uncategorised [MWCandidate]
+	// Uncategorised [MW]
 	'wgRandomGameDisplay' => [
 		'default' => [
 			'random_picturegame' => false,
 			'random_poll' => false,
+			'random_quiz' => false,
 		],
 	],
 ];
