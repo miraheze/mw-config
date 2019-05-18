@@ -1080,7 +1080,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// Allow External Images [MWCandidate]
+	// Allow External Images [MW]
 	'wgAllowExternalImages' => [
 		'default' => false,
 	],
