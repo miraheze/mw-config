@@ -159,6 +159,42 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'This enables Flagged Revs Protection.',
 	],
+	'wgFlaggedRevsAutoReview' => [
+		'name' => 'FlaggedRevs Auto Review',
+		'from' => 'flaggedrevs',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'No Auto-Review' => 0,
+			'Changes' => 1,
+			'Creation' => 2,
+			'Changes and Creation' => 3,
+		],
+		'overridedefault' => 3,
+		'section' => 'anti-spam',
+		'help' => 'Auto-review settings for edits/new pages.',
+	],
+	'wgFlaggedRevsRestrictionLevels' => [
+		'name' => 'FlaggedRevs Restriction Levels',
+		'from' => 'flaggedrevs',
+		'restricted' => false,
+		'type' => 'list-multi',
+		'options' => [
+			'autoconfirmed' => 'autoconfirmed',
+			'bureaucrat' => 'bureaucrat',
+			'consul' => 'consul',
+			'No Restriction' => '',
+			'sysop' => 'sysop',
+			'user' => 'user',
+		],
+		'overridedefault' => [
+			'',
+			'sysop',
+		],
+		'section' => 'anti-spam',
+		'help' => 'Restriction levels for "autoreview"/"review" rights.',
+	],
+  wgFlaggedRevsRestrictionLevels
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
