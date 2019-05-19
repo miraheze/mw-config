@@ -660,6 +660,20 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'This will adapt your wikis time over clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
 	],
+	'wmgTranslateDocumentationLanguageCode' => [
+		'name' => 'Translate Documentation Language Code',
+		'from' => 'translate',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'Default' => false,
+			'Info' => 'info',
+			'qqq' => 'qqq',
+		],
+		'overridedefault' => false,
+		'section' => 'localisation',
+		'help' => 'Language code for message documentation.',
+	],
 	'wgULSAnonCanChangeLanguage' => [
 		'name' => 'Allow anonymous users to change language',
 		'from' => 'universallanguageselector',
