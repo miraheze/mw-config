@@ -2445,6 +2445,11 @@ $wgConf->settings = [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 		],
 	],
+  
+	// Referrer Policy [MWExempt]
+	'wgReferrerPolicy' => 
+		'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ],
+	],
 
 	// RSS Settings [MWExempt]
 	'wgRSSCacheAge' => [
