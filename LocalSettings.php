@@ -2675,7 +2675,6 @@ $wgConf->settings = [
 	],
 	'wmgTranslateDocumentationLanguageCode' => [
 		'default' => false,
-		'nvcwiki' => 'qqq',
 	],
 
 	// UniversalLanguageSelector [MW]
