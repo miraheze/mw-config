@@ -2446,6 +2446,11 @@ $wgConf->settings = [
 		],
 	],
 
+	// Referrer Policy [MWExempt]
+	'wgReferrerPolicy' => [
+		'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ],
+	],
+
 	// RSS Settings [MWExempt]
 	'wgRSSCacheAge' => [
 		'default' => '3600'
