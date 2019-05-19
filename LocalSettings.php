@@ -17,7 +17,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 $wmgUploadHostname = "static.miraheze.org";
-
+pol
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = [ 'wiki' ];
@@ -2444,6 +2444,11 @@ $wgConf->settings = [
 		'taswinwiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 		],
+	],
+  
+	// Referrer Policy [MWExempt]
+	'wgReferrerPolicy' => 
+		'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ],
 	],
 
 	// RSS Settings [MWExempt]

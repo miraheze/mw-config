@@ -43,6 +43,7 @@ EOF;
 if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgManageWikiPermissionsAdditionalRights['sysop']['read'] = true;
 	$wgManageWikiPermissionsAdditionalRights['*']['read'] = false;
+        $wgReferrerPolicy = 'no-referrer';
 }
 
 // use local mathoid install
