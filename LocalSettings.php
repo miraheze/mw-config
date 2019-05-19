@@ -1114,7 +1114,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// FlaggedRevs [MWCandidate]
+	// FlaggedRevs [MW]
 	'wmgFlaggedRevsProtection' => [
 		'default' => false,
 	],
@@ -1183,19 +1183,16 @@ $wgConf->settings = [
 		'pruebawiki' => false,
 	],
 	'wmgFlaggedRevsAutoReview' => [
-		'default' => true,
+		'default' => 3,
 	],
 	'wmgFlaggedRevsRestrictionLevels' => [
 		'default' => [ '', 'sysop' ],
-		'pruebawiki' => [ '', 'sysop', 'bureaucrat', 'consul', 'autoconfirmed', 'user' ],
 	],
 	'wmgSimpleFlaggedRevsUI' => [
-		'default' => true,
-		'infectopedwiki' => false,
+		'default' => false,
 	],
 	'wmgFlaggedRevsLowProfile' => [
-		'default' => true,
-		'infectopedwiki' => false,
+		'default' => false,
 	],
 
 	// Files [MW]
