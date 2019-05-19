@@ -1183,7 +1183,7 @@ $wgConf->settings = [
 		'pruebawiki' => false,
 	],
 	'wmgFlaggedRevsAutoReview' => [
-		'default' => true,
+		'default' => 3,
 	],
 	'wmgFlaggedRevsRestrictionLevels' => [
 		'default' => [ '', 'sysop' ],
