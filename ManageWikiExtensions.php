@@ -1860,7 +1860,7 @@ $wgManageWikiExtensions = [
 						'protection' => 'editwidgets',
 						'content' => 0,
 						'aliases' => [],
-						'content' => 'wikitext',
+						'contentmodel' => 'wikitext',
 						'additional' => []
 					],
 					'Widget_talk' => [
@@ -1870,7 +1870,7 @@ $wgManageWikiExtensions = [
 						'protection' => '',
 						'content' => 0,
 						'aliases' => [],
-						'content' => 'wikitext',
+						'contentmodel' => 'wikitext',
 						'additional' => []
 					],
 				],
