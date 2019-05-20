@@ -1860,6 +1860,8 @@ $wgManageWikiExtensions = [
 						'protection' => 'editwidgets',
 						'content' => 0,
 						'aliases' => [],
+						'content' => 'wikitext',
+						'additional' => []
 					],
 					'Widget_talk' => [
 						'id' => 275,
@@ -1868,8 +1870,10 @@ $wgManageWikiExtensions = [
 						'protection' => '',
 						'content' => 0,
 						'aliases' => [],
+						'content' => 'wikitext',
+						'additional' => []
 					],
-				],	
+				],
 				'permissions' => [
 					'sysop' => [
 						'permissions' => [
