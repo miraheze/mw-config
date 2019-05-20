@@ -48,7 +48,7 @@ if ( $wmgUseApprovedRevs ) {
 		'name' => 'Enable ApprovedRevs in this namespace?',
 		'main' => true,
 		'talk' => true,
-		'vestyle' => false,
+		'vestyle' => true,
 		'overridedefault' => false
 	];
 }
