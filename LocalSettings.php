@@ -383,12 +383,15 @@ $wgConf->settings = [
 		'default' => false,
 		'absurdopediawiki' => true,
 		'allthetropeswiki' => true,
+		'animebathswiki' => true,
 		'baobabarchiveswiki' => true,
 		'beidipediawiki' => true,
 		'buswiki' => true,
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
 		'openhatchwiki' => true,
+		'simswiki' => true,
+		'thelastsovereignwiki' => true,
 		'trollpastawiki' => true,
 		'trollpastauncensoredwiki' => true,
 	],
@@ -1111,7 +1114,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-	// FlaggedRevs [MWCandidate]
+	// FlaggedRevs [MW]
 	'wmgFlaggedRevsProtection' => [
 		'default' => false,
 	],
@@ -1180,19 +1183,16 @@ $wgConf->settings = [
 		'pruebawiki' => false,
 	],
 	'wmgFlaggedRevsAutoReview' => [
-		'default' => true,
+		'default' => 3,
 	],
 	'wmgFlaggedRevsRestrictionLevels' => [
 		'default' => [ '', 'sysop' ],
-		'pruebawiki' => [ '', 'sysop', 'bureaucrat', 'consul', 'autoconfirmed', 'user' ],
 	],
 	'wmgSimpleFlaggedRevsUI' => [
-		'default' => true,
-		'infectopedwiki' => false,
+		'default' => false,
 	],
 	'wmgFlaggedRevsLowProfile' => [
-		'default' => true,
-		'infectopedwiki' => false,
+		'default' => false,
 	],
 
 	// Files [MW]
@@ -2443,6 +2443,11 @@ $wgConf->settings = [
 		],
 	],
 
+	// Referrer Policy [MWExempt]
+	'wgReferrerPolicy' => [
+		'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ],
+	],
+
 	// RSS Settings [MWExempt]
 	'wgRSSCacheAge' => [
 		'default' => '3600'
@@ -2511,7 +2516,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
-	// SocialProfile [MWCandidate]
+	// SocialProfile [MW]
 	'wgUserBoard' => [
 		'default' => false,
 	],
@@ -2672,7 +2677,6 @@ $wgConf->settings = [
 	],
 	'wmgTranslateDocumentationLanguageCode' => [
 		'default' => false,
-		'nvcwiki' => 'qqq',
 	],
 
 	// UniversalLanguageSelector [MW]
