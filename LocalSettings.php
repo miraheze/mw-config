@@ -1632,6 +1632,7 @@ $wgConf->settings = [
 	'wgManageWikiPermissionsAdditionalRights' => [
 		'default' => [
 			'*' => [
+				'autocreateaccount' => true,
 				'read' => true,
 			],
 			'checkuser' => [
