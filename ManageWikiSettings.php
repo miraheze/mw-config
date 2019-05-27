@@ -788,15 +788,6 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Check or uncheck this option if you want to enable or disable the upload of files on your wiki.',
 	],
-	'wgMaxImageArea' => [
-		'name' => 'Max Image Area',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => '1.25e7',
-		'section' => 'media',
-		'help' => 'Specify\'s the max pixels you can have in a image.',
-	],
 	'wgAllowCopyUploads' => [
 		'name' => 'Enable File Uploads Through URL',
 		'from' => 'mediawiki',
@@ -1064,6 +1055,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => 2048,
 		'section' => 'restricted',
 		'help' => 'Maximum page size in kilobytes.',
+	],
+	'wgMaxImageArea' => [
+		'name' => 'Max Image Area',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => '1.25e7',
+		'section' => 'restricted',
+		'help' => 'Specify\'s the max pixels you can have in a image.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
