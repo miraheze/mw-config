@@ -404,7 +404,7 @@ $wgConf->settings = [
 	],
 
 	'wgReadOnly' => [
-		'default' => false,
+		'default' => 'Miraheze is performing maintenance whcih requires us to put all wikis into read only.',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
