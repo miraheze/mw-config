@@ -1312,6 +1312,7 @@ $wgConf->settings = [
 			'Matomo' => 'https://meta.miraheze.org/wiki/Tech:Matomo',
 			'MediaWiki' => 'https://meta.miraheze.org/wiki/Tech:MediaWiki_appserver',
 			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
+			'NGINX' => 'https://meta.miraheze.org/wiki/Tech:Nginx',
 			'Parsoid' => 'https://meta.miraheze.org/wiki/Tech:Parsoid',
 			'Phabricator' => 'https://meta.miraheze.org/wiki/Tech:Phabricator',
 			'Puppet Server' => 'https://meta.miraheze.org/wiki/Tech:Puppet',
