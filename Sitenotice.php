@@ -11,15 +11,17 @@ if ( $wmgSiteNoticeOptOut ) {
 $wgMajorSiteNoticeID = 36;
 
 // Write your SiteNotice below.  Comment out this section to disable.
+/*
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform maintenance on our servers starting at 21:30 UTC time. We expect the maintenance window to only be 2 hours long. You may notice 503's and file's that look like they have gone missing. This is all expected.</td>
+			<td>Miraheze will perform maintenance related to the search functionality of this wiki at 22:40 UTC. The maintenance will take about 30 minutes. During this maintenance window you may not be able to use the search box.</td>
 			</tr></tbody></table>
 EOF;
 
 	return true;
 }
+*/
