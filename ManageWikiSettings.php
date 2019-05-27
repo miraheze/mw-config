@@ -1065,6 +1065,24 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'Specify\'s the max pixels you can have in a image.',
 	],
+	'wmgDisableSearchUpdate' => [
+		'name' => 'Disable Search Update',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'If you\'ve disabled search semi-permanently, this also disables updates to the table.',
+	],
+	'wmgSearchType' => [
+		'name' => 'Search Type',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Type of search used for the wiki. (e.g CirrusSearch)',
+	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
 		'name' => 'File Extensions',
