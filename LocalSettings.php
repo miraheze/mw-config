@@ -2022,6 +2022,7 @@ $wgConf->settings = [
 				'skipcaptcha',
 				'torunblocked',
 				'centralauth-merge',
+				'generate-dump',
 			],
 		],
 	],
