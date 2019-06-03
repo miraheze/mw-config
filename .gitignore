@@ -1,2 +1,14 @@
 PrivateSettings.php 
 ExtensionMessageFiles.php
+
+# Building & testing
+/composer.lock
+/docs
+/node_modules
+/vendor
+
+# Operating systems
+## Mac OS X
+.DS_Store
+## Windows
+Thumbs.db
