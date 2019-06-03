@@ -5,7 +5,7 @@ Authors of initial version: Southparkfan, John Lewis, Orain contributors
 */
 
 # Load PrivateSettings (e.g. wgDBpassword)
-require_once "/srv/mediawiki/concomrpfig/PrivateSettings.php";
+require_once "/srv/mediawiki/config/PrivateSettings.php";
 
 # Load global skins and extensions
 require_once "/srv/mediawiki/config/GlobalSkins.php";
