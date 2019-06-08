@@ -482,6 +482,8 @@ if ( $wmgUseJSBreadCrumbs ) {
 }
 
 if ( $wmgUseKartographer ) {
+	wfLoadExtension( 'JsonConfig' );
+
 	wfLoadExtension( 'Kartographer' );
 }
 
