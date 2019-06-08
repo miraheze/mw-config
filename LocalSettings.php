@@ -105,6 +105,9 @@ $wgConf->settings = [
 	'wgBlockAllowsUTEdit' => [
 		'default' => true,
 	],
+	'wgEnableBlockNoticeStats' => [
+		'default' => false,
+	],
 
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
