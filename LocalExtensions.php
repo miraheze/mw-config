@@ -229,7 +229,6 @@ if ( $wmgUseDataDump ) {
 				'options' => [
 					'--full',
 					'--logs',
-					'--include-files',
 					'--uploads',
 					'--output',
 					"gzip:${wgDataDumpDirectory}" . '${filename}',
