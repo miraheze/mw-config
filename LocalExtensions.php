@@ -228,6 +228,9 @@ if ( $wmgUseDataDump ) {
 				'script' => "$IP/maintenance/dumpBackup.php",
 				'options' => [
 					'--full',
+					'--logs',
+					'--include-files',
+					'--uploads',
 					'--output',
 					"gzip:${wgDataDumpDirectory}" . '${filename}',
 				],
