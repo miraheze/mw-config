@@ -1,5 +1,7 @@
 <?php
 
+
+
 if ( $wgDBname == 'apellidosmurcianoswiki' ) {
 	$wgContactConfig['default'] = [
 		'RecipientUser' => 'Lorenzolaxmonzon',
