@@ -1054,13 +1054,32 @@ $wgManageWikiExtensions = [
 					'moderation_block' => "$IP/extensions/Moderation/sql/patch-moderation_block.sql"
 				],
 				'permissions' => [
+					'automoderated' => [
+						'permissions' => [
+							'skip-moderation',
+							'skip-move-moderation',
+						],
+					],
 					'bot' => [
 						'permissions' => [
 							'skip-moderation',
 							'skip-move-moderation',
 						],
 					],
+					'moderator' => [
+						'permissions' => [
+							'moderation',
+						],
+					],
 					'sysop' => [
+						'addgroups' => [
+							'automoderated',
+							'moderator',
+						],
+						'removegroups' => [
+							'automoderated',
+							'moderator',
+						],
 						'permissions' => [
 							'skip-moderation',
 							'skip-move-moderation',
