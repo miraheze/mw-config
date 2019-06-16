@@ -2004,6 +2004,7 @@ $wgConf->settings = [
 				'interwiki',
 				'managewiki-restricted',
 				'managewiki-editdefault',
+				'moderation-checkuser',
 				'mwoauthmanageconsumer',
 				'mwoauthmanagemygrants',
 				'mwoauthsuppress',
