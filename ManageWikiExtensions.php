@@ -1053,6 +1053,21 @@ $wgManageWikiExtensions = [
 					'moderation' => "$IP/extensions/Moderation/sql/patch-moderation.sql",
 					'moderation_block' => "$IP/extensions/Moderation/sql/patch-moderation_block.sql"
 				],
+				'permissions' => [
+					'bot' => [
+						'permissions' => [
+							'skip-moderation',
+							'skip-move-moderation',
+						],
+					],
+					'sysop' => [
+						'permissions' => [
+							'skip-moderation',
+							'skip-move-moderation',
+							'moderation',
+						],
+					],
+				],
 			],
 		],
 		'modernskylight' => [
