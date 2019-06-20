@@ -2365,6 +2365,11 @@ $wgConf->settings = [
 		],
 	],
 
+	// RottenLinks
+	'wgRottenLinksCurlTimeout' => [
+		'default' => 10,
+	],
+
 	// Robot policy
 	'wgDefaultRobotPolicy' => [
 		'default' => 'index,follow',
