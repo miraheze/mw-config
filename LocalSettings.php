@@ -534,6 +534,9 @@ $wgConf->settings = [
 	'wmgUseCargo' => [
 		'default' => false,
 	],
+	'wmgUseCategorySortHeaders' => [
+		'default' => false,
+	],
 	'wmgUseCategoryTree' => [
 		'default' => true,
 		'whentheycrywiki' => false,

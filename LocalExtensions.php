@@ -97,6 +97,10 @@ if ( $wmgUseCargo ) {
 	$wgCargoDBpassword = $wgDBpassword;
 }
 
+if ( $wmgUseCategorySortHeaders ) {
+	wfLoadExtension( 'CategorySortHeaders' );
+}
+
 if ( $wmgUseCategoryTree ) {
 	wfLoadExtension( 'CategoryTree' );
 }

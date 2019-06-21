@@ -283,6 +283,14 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'categorysortheaders' => [
+			'name' => 'CategorySortHeaders',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:CategorySortHeaders',
+			'var' => 'wmgUseCategorySortHeaders',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [],
+		],
 		'charinsert' => [
 			'name' => 'CharInsert',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CharInsert',
