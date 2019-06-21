@@ -538,8 +538,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgUseCategoryTree' => [
-		'default' => true,
-		'whentheycrywiki' => false,
+		'default' => false,
 	],
 	'wmgUseCharInsert' => [
 		'default' => false,
@@ -1616,10 +1615,11 @@ $wgConf->settings = [
 	],
 	'wgManageWikiExtensionsDefault' => [
 		'default' => [
+			'categorytree',
 			'cite',
 			'citethispage',
-                        'globaluserpage',
-                        'mobilefrontend',
+			'globaluserpage',
+			'mobilefrontend',
 		],
 	],
 	'wgManageWikiCDBDirectory' => [

@@ -291,6 +291,14 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [],
 		],
+		'categorytree' => [
+			'name' => 'CategoryTree',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:CategoryTree',
+			'var' => 'wmgUseCategoryTree',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [],
+		],
 		'charinsert' => [
 			'name' => 'CharInsert',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:CharInsert',
