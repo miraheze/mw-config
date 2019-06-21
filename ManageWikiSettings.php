@@ -708,9 +708,9 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'from' => 'mediawiki',
 		'type' => 'integer',
-		'minint' => 10,
+		'minint' => 5,
 		'maxint' => 120,
-		'overridedefault' => 30,
+		'overridedefault' => 10,
 		'section' => 'links',
 		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 10. Max: 120.'
 	],
