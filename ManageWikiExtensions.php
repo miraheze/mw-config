@@ -1609,6 +1609,37 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'scribunto' => [
+			'name' => 'Scribunto',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Scribunto',
+			'var' => 'wmgUseScribunto',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'namespaces' => [
+					'Module' => [
+						'id' => 828,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Module_talk' => [
+						'id' => 829,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
+			],
+		],
 		'simplechanges' => [
 			'name' => 'Simple Changes',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SimpleChanges',

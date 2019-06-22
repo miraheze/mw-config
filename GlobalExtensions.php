@@ -1,5 +1,4 @@
 <?php
-require_once "$IP/extensions/Scribunto/Scribunto.php";
 require_once "$IP/extensions/MobileDetect/MobileDetect.php";
 wfLoadExtensions( [
 	'AbuseFilter',

@@ -926,6 +926,9 @@ $wgConf->settings = [
 	'wmgUseScratchBlocks' => [
 		'default' => false,
 	],
+	'wmgUseScribunto' => [
+		'default' => false,
+	],
 	'wmgUseShortURL' => [
 		'default' => true,
 		'macfan4000wiki' => false,
@@ -1620,6 +1623,7 @@ $wgConf->settings = [
 			'citethispage',
 			'globaluserpage',
 			'mobilefrontend',
+			'scribunto',
 		],
 	],
 	'wgManageWikiCDBDirectory' => [
