@@ -320,14 +320,15 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'cirrussearch' => [
-			'name' => 'CirrusSearch',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:CirrusSearch',
-			'var' => 'wmgUseCirrusSearch',
+		'citoid' => [
+			'name' => 'Citoid',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Citoid',
+			'var' => 'wmgUseCitoid',
 			'conflicts' => false,
 			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
+				'extensions' => [
+					'cite',
+					'visualeditor',
 				],
 			],
 		],
