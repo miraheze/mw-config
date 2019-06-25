@@ -477,6 +477,7 @@ $wgConf->settings = [
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
+		'buswiki' => true,
 	],
 	'wmgSearchType' => [
 		'default' => false,
