@@ -476,7 +476,12 @@ $wgConf->settings = [
 	],
 	'wmgSearchType' => [
 		'default' => false,
+		'allthetropeswiki' => true,
+		'metawiki' => true,
+		'nonsensopediawiki' => true,
+		'test1wiki' => true,
 	],
+
 
 	// Extensions and Skins
 	'wmgUse3D' => [
