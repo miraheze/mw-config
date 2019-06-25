@@ -11,7 +11,7 @@ require_once "/srv/mediawiki/config/PrivateSettings.php";
 require_once "/srv/mediawiki/config/GlobalSkins.php";
 require_once "/srv/mediawiki/config/GlobalExtensions.php";
 
-# Don't allow web access.
+# Don't allow web access.w
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
@@ -481,8 +481,10 @@ $wgConf->settings = [
 	'wmgSearchType' => [
 		'default' => false,
 		'allthetropeswiki' => true,
+		'isvwiki' => true,
 		'metawiki' => true,
 		'nonsensopediawiki' => true,
+		'pointmanwiki' => true,
 		'test1wiki' => true,
 	],
 
