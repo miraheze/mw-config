@@ -473,11 +473,10 @@ $wgConf->settings = [
 		'default' => $wgContentNamespaces,
 		'thelonsdalebattalionwiki' => [],
 	],
-	
+
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
-		'buswiki' => true,
 	],
 	'wmgSearchType' => [
 		'default' => false,
