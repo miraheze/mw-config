@@ -477,6 +477,7 @@ $wgConf->settings = [
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
+		'buswiki' => true,
 	],
 	'wmgSearchType' => [
 		'default' => false,
@@ -553,6 +554,7 @@ $wgConf->settings = [
 	'wmgUseCirrusSearch' => [
 		'default' => false,
 		'allthetropeswiki' => true,
+		'buswiki' => true,
 		'isvwiki' => true,
 		'metawiki' => true,
 		'nonsensopediawiki' => true,
