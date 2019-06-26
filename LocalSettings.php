@@ -1635,6 +1635,11 @@ $wgConf->settings = [
 	'wgManageWikiCDBDirectory' => [
 		'default' => '/srv/mediawiki/w/cache/managewiki',
 	],
+	'wgManageWikiNamespacesExtraContentModels' => [
+		'default' => [
+			'Scribunto' => 'Scribunto',
+		],
+	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
 		'weatherwiki' => [
