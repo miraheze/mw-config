@@ -472,7 +472,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'edit',
-		'help' => 'Show\'s only the "edit" tab. Uses VisualEditor by default if "Make VisualEditor the default editor for all" is set, otherwise defaults to Wikitext.',
+		'help' => 'Shows only the "edit" tab. Uses VisualEditor by default if "Make VisualEditor the default editor for all" is set, otherwise defaults to Wikitext.',
 	],
 	'wgAllowSlowParserFunctions' => [
 		'name' => 'Allow slow parser functions',
@@ -630,7 +630,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'edit',
-		'help' => 'Display\'s UserBoard-related things on social profile pages.',
+		'help' => 'Displays UserBoard-related things on social profile pages.',
 	],
 	'wgUserProfileDisplay' => [
 		'name' => 'User Profile Display',
@@ -688,6 +688,23 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Enables default stuff to display on social profile pages by default',
 	],
+    'wgWikiForumLogsInRC' => [
+        'name' => 'Display WikiForum logs in RecentChanges',
+        'from' => 'wikiforum',
+        'type' => 'check',
+        'restricted' => false,
+        'overridedefault' => true,
+        'section' => 'edit',
+        'help' => 'Toggles the display of WikiForum logs in Special:RecentChanges',
+    ],
+    'wgWikiForumAllowAnonymous' => [
+        'name' => 'WikiForum Allow Anonymous',
+        'from' => 'wikiforum',
+        'type' => 'check',
+        'restricted' => false,
+        'section' => 'edit',
+        'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
+    ],
 
 	// Links
 	'wgExternalLinkTarget' => [
@@ -1063,7 +1080,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => '1.25e7',
 		'section' => 'restricted',
-		'help' => 'Specify\'s the max pixels you can have in a image.',
+		'help' => 'Specifys the max pixels you can have in a image.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
