@@ -1239,7 +1239,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'f this is not set, then no device detection will be occur.',
+		'help' => 'If this is not set, then no device detection will be occur.',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
