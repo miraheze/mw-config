@@ -688,23 +688,23 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Enables default stuff to display on social profile pages by default',
 	],
-    'wgWikiForumLogsInRC' => [
-        'name' => 'Display WikiForum logs in RecentChanges',
-        'from' => 'wikiforum',
-        'type' => 'check',
-        'restricted' => false,
-        'overridedefault' => true,
-        'section' => 'edit',
-        'help' => 'Toggles the display of WikiForum logs in Special:RecentChanges',
-    ],
-    'wgWikiForumAllowAnonymous' => [
-        'name' => 'WikiForum Allow Anonymous',
-        'from' => 'wikiforum',
-        'type' => 'check',
-        'restricted' => false,
-        'section' => 'edit',
-        'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
-    ],
+	'wgWikiForumLogsInRC' => [
+		'name' => 'Display WikiForum logs in RecentChanges',
+		'from' => 'wikiforum',
+		'type' => 'check',
+		'restricted' => false,
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Toggles the display of WikiForum logs in Special:RecentChanges',
+	],
+	'wgWikiForumAllowAnonymous' => [
+		'name' => 'WikiForum Allow Anonymous',
+		'from' => 'wikiforum',
+		'type' => 'check',
+		'restricted' => false,
+		'section' => 'edit',
+		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
+	],
 
 	// Links
 	'wgExternalLinkTarget' => [
@@ -1365,7 +1365,7 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => $skinOptions + [
 			'Default' => 'default',
-                ],
+		],
 		'overridedefault' => 'default',
 		'section' => 'styling',
 		'help' => 'Sets which theme is displayed by default when users visit your wiki.',
