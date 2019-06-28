@@ -79,7 +79,7 @@ $wgManageWikiSettings = [
 		'maxint' => 315360000,
 		'overridedefault' => 86400,
 		'section' => 'anti-spam',
-		'help' => 'Number of seconds before autoblock entries expire. Minmum value allowed is 0 where as maxmium is 10 years (315360000).',
+		'help' => 'Number of seconds before autoblock entries expire. Minimum value allowed is 0 where as maximum is 10 years (315360000).',
 	],
 	'wgBlockAllowsUTEdit' => [
 		'name' => 'Allows blocking users to restrict talk page accesst',
@@ -115,7 +115,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'anti-spam',
-		'help' => 'Require users to confirm email address before they can edit. This effectively disables ip editing.',
+		'help' => 'Require users to confirm email address before they can edit. This effectively disables IP editing.',
 	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
@@ -490,7 +490,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => null,
 		'section' => 'edit',
-		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in Mediawiki\'s documentation page https://www.mediawiki.org/wiki/Module:String.',
+		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s documentation page https://www.mediawiki.org/wiki/Module:String.',
 	],
 	'wmgAllowEntityImport' => [
 		'name' => 'Allow Entity Import (Wikibase)',
@@ -830,7 +830,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'This option allows you to use the Wikimedia Commons file database on your wiki.',
+		'help' => 'This option allows you to use the WikiMedia Commons file database on your wiki.',
 	],
 	'wgMirahezeCommons' => [
 		'name' => 'Enable Miraheze Commons (linking to commonswiki.miraheze.org)',
@@ -888,7 +888,7 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => 'ImageMagick',
 		'section' => 'media',
-		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG. You may want to choose inkscape if your SVG->PNG conversion results in a black image.',
+		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG. You may want to choose Inkscape if your SVG->PNG conversion results in a black image.',
 	],
 	'wgMediaViewerEnableByDefault' => [
 		'name' => 'MediaViewer Enable By Default',
@@ -998,7 +998,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the sitenotice shown. ',
+		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown. ',
 	],
 
 	// Restricted (where settings that are restricted go)
@@ -1080,7 +1080,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => '1.25e7',
 		'section' => 'restricted',
-		'help' => 'Specifys the max pixels you can have in a image.',
+		'help' => 'Specifies the max pixels you can have in a image.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
