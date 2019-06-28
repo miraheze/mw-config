@@ -1660,6 +1660,9 @@ $wgConf->settings = [
 				'checkuser' => true,
 				'checkuser-log' => true,
 			],
+			'interwiki-admin' => [
+				'interwiki' => true
+			],
 			'oversight' => [
 				'abusefilter-hidden-log' => true,
 				'abusefilter-hide-log' => true,
