@@ -702,6 +702,7 @@ $wgManageWikiSettings = [
 		'from' => 'wikiforum',
 		'type' => 'check',
 		'restricted' => false,
+		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
 	],
