@@ -2412,7 +2412,7 @@ $wgConf->settings = [
 		],
 		'+quircwiki' => [
 			'editstaffprotected',
-		]
+		],
 		'+sau226wiki' => [
 			'bureaucrat',
 			'consul',
