@@ -1871,6 +1871,11 @@ $wgConf->settings = [
 				'read' => true,
 			],
 		],
+		'+quircwiki' => [
+			'QuIRC_Staff' => [
+				'editstaffprotected' => true,
+			],
+		],
 		'+radviserwiki' => [
 			'editor' => [
 				'editor' => true,
