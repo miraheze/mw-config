@@ -207,23 +207,6 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'For visitors, only show tags/icons for unreviewed/outdated pages when enabled.',
 	],
-	'wgRestrictionLevels' => [
-		'name' => 'Restriction Levels',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'usergroups',
-		'options' => [
-			'No Restriction' => '',
-		],
-		'overridedefault' => [
-			'',
-			'autoconfirmed',
-			'sysop',
-			'user',
-		],
-		'section' => 'anti-spam',
-		'help' => 'Set of permission keys that can be selected on the "page protection" page.',
-	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [

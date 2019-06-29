@@ -2368,13 +2368,83 @@ $wgConf->settings = [
 	],
 
 	// Restriction types
-	'wgRestrictionLevels' => [
+	'+wgRestrictionLevels' => [
 		'default' => [
-			'',
-			'autoconfirmed',
-			'sysop',
 			'user',
 		],
+		'+bigforestwiki' => [
+			'editvoter',
+		],
+		'+cmgwiki' => [
+			'bureaucrat',
+			'sysop',
+			'pm',
+			'member',
+		],
+		'+dpwiki' => [
+			'bureaucrat',
+			'respected',
+		],
+		'+hypopediawiki' => [
+			'bureaucrat',
+		],
+		'igrovyesistemywiki' => [
+			'trusted',
+			'sysmag',
+			'bureaucrat',
+			'ceo',
+			'co',
+		],
+		'+kyivstarwiki' => [
+			'co',
+			'ceo',
+			'editor',
+			'extendedconfirmed',
+			'sysmag',
+			'trusted',
+		],
+		'+lcars47wiki' => [
+			'bureaucrat',
+			'devteam',
+		],
+		'+marthaspeakswiki' => [
+			'templateeditor',
+		],
+		'+sau226wiki' => [
+			'bureaucrat',
+			'consul',
+		],
+		'+jayuwikiwiki' => [
+			'editvoter',
+		],
+		'+pruebawiki' => [
+			'bureaucrat',
+			'consul',
+		],
+		'+radviserwiki' => [
+			'editor',
+		],
+		'+sovereignwiki' => [
+			'officer',
+			'game-master',
+		],
+		'+studynotekrwiki' => [
+			'voter',
+		],
+		'+testwiki' => [
+			'bureaucrat',
+			'consul',
+		],
+		'+thesciencearchiveswiki' => [
+			'templateeditor',
+		],
+		'+trexwiki' => [
+			'sysmag',
+			'bureaucrat',
+			'ceo',
+			'co',
+		],
+		'weatherwiki' => [],
 	],
 
 	//
