@@ -1941,6 +1941,11 @@ $wgConf->settings = [
 				'read' => true,
 			],
 		],
+		'+testwiki' => [
+			'consul' => [
+				'consul' => true,
+			],
+		],
 		'+thesciencearchiveswiki' => [
 			'sysop' => [
 				'templateeditor' => true,
