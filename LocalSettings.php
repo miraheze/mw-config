@@ -2803,6 +2803,14 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
+	// WikiForum settings
+	'wgWikiForumAllowAnonymous' => [
+		'default' => true,
+	],
+	'wgWikiForumLogsInRC' => [
+		'default' => true,
+	],
+
 	// Wikimedia Incubator Settings
 	'wmincProjects' => [
 		'default' => [
