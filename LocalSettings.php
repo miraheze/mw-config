@@ -2410,6 +2410,9 @@ $wgConf->settings = [
 		'+marthaspeakswiki' => [
 			'templateeditor',
 		],
+		'+quircwiki' => [
+			'editstaffprotected',
+		]
 		'+sau226wiki' => [
 			'bureaucrat',
 			'consul',
