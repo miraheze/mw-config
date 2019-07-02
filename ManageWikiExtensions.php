@@ -470,22 +470,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'duplicator' => [
-			'name' => 'Duplicator',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Duplicator',
-			'var' => 'wmgUseDuplicator',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [
-				'permissions' => [
-					'user' => [
-						'permissions' => [
-							'duplicate',
-						],
-					],
-				],
-			],
-		],
 		'dusktodawn' => [
 			'name' => 'DuskToDawn (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:DuskToDawn',

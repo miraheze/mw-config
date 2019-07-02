@@ -298,10 +298,6 @@ if ( $wmgUseDummyFandoomMainpageTags ) {
 	wfLoadExtension( 'DummyFandoomMainpageTags' );
 }
 
-if ( $wmgUseDuplicator ) {
-	require_once "$IP/extensions/Duplicator/Duplicator.php";
-}
-
 if ( $wmgUseDynamicPageList ) {
 	wfLoadExtension( 'DynamicPageList' );
 }

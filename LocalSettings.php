@@ -641,9 +641,6 @@ $wgConf->settings = [
 	'wmgUseDummyFandoomMainpageTags' => [
 		'default' => false,
 	],
-	'wmgUseDuplicator' => [
-		'default' => false,
-	],
 	'wmgUseDynamicPageList' => [ // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
 		'default' => false,
 	],
