@@ -209,13 +209,6 @@ if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
 }
 
-if ( $wmgUseDarkVector ) {
-	wfLoadSkin( 'DarkVector' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['DarkVector'] = 'darkvector';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['DarkVector'] = 'darkvector';
-}
-
 /**
  * This is a global extension, but we define the config here.
  */

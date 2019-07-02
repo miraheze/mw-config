@@ -612,9 +612,6 @@ $wgConf->settings = [
 	'wmgUseCSS' => [
 		'default' => false,
 	],
-	'wmgUseDarkVector' => [
-		'default' => false,
-	],
 	'wmgUseDataDump' => [
 		'default' => true,
 	],

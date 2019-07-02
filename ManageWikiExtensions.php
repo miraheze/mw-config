@@ -435,14 +435,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'darkvector' => [
-			'name' => 'DarkVector (Skin)',
-			'linkPage' => 'https://mediawiki.org/wiki/Skin:DarkVector',
-			'var' => 'wmgUseDarkVector',
-			'conflicts' => false,
-			'requires' => [],
-			'section' => 'skins',
-		],
 		'description2' => [
 			'name' => 'Description2',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Description2',
