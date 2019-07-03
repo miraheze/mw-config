@@ -108,6 +108,11 @@ $wgConf->settings = [
 	'wgEnableBlockNoticeStats' => [
 		'default' => false,
 	],
+	'wgEnablePartialBlocks' => [
+		'default' => false,
+		'quircwiki' => true,
+		'bipolartownwiki' => true,
+	],
 
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
