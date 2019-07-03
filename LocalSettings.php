@@ -108,6 +108,9 @@ $wgConf->settings = [
 	'wgEnableBlockNoticeStats' => [
 		'default' => false,
 	],
+	'wgEnablePartialBlocks' => [
+		'default' => true,
+	],
 
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
