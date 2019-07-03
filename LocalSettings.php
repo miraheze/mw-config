@@ -112,6 +112,7 @@ $wgConf->settings = [
 		'default' => false,
 		'quircwiki' => true,
 		'bipolartownwiki' => true,
+		'publictestwiki' => true,
 	],
 
 	// Bot passwords
