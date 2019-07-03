@@ -109,10 +109,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wgEnablePartialBlocks' => [
-		'default' => false,
-		'quircwiki' => true,
-		'bipolartownwiki' => true,
-		'publictestwiki' => true,
+		'default' => true,
 	],
 
 	// Bot passwords
