@@ -1963,10 +1963,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'wikiforum_category' => "$IP/extensions/WikiForum/sql/wikiforum.sql",
-					'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql",
-					'wikiforum_threads' => "$IP/extensions/WikiForum/sql/wikiforum.sql",
-					'wikiforum_replies' => "$IP/extensions/WikiForum/sql/wikiforum.sql",
+					'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
 				],
 				'permissions' => [
 					'bureaucrat' => [
