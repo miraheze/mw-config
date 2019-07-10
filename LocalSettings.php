@@ -480,7 +480,14 @@ $wgConf->settings = [
 
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
-		'default' => false,
+		'default' => true,
+		'allthetropeswiki' => false,
+		'buswiki' => false,
+		'isvwiki' => false,
+		'metawiki' => false,
+		'nonsensopediawiki' => false,
+		'pointmanwiki' => false,
+		'test1wiki' => false,
 	],
 	'wmgSearchType' => [
 		'default' => false,
