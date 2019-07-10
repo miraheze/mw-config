@@ -483,14 +483,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgSearchType' => [
-		'default' => false,
-		'allthetropeswiki' => true,
-		'buswiki' => true,
-		'isvwiki' => true,
-		'metawiki' => true,
-		'nonsensopediawiki' => true,
-		'pointmanwiki' => true,
-		'test1wiki' => true,
+		'default' => true,
 	],
 
 
