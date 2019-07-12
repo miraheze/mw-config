@@ -128,6 +128,17 @@ if ( $wmgUseCirrusSearch ) {
 		],
 	];
 
+	$wgCirrusSearchAllowLeadingWildcard = false;
+	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
+	$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '15s';
+	$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 50;
+	$wgCirrusSearchSearchShardTimeout[ 'default' ] = '10s';
+	$wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 40;
+	$wgCirrusSearchReplicas = '0-0';
+	$wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 2;
+	$wgCirrusSearchConnectionAttempts = 3;
+	$wgCirrusSearchMasterTimeout = '5m';
+
 	if ( $wmgSearchType ) {
 		$wgSearchType = 'CirrusSearch';
 	}
