@@ -21,7 +21,7 @@ $val = [
 	'test1wiki',
 ];
 
-if ( in_array( $wgDBname, $val ) ) {
+/*if ( in_array( $wgDBname, $val ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
@@ -34,4 +34,4 @@ EOF;
 
 		return true;
 	}
-}
+}*/
