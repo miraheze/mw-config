@@ -556,7 +556,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgUseCirrusSearch' => [
-		'default' => true,
+		'default' => false,
 		'allthetropeswiki' => true,
 		'buswiki' => true,
 		'isvwiki' => true,
