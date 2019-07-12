@@ -1,6 +1,6 @@
 <?php
 
-if ( php_sapi_name() === 'cli' ) {
+if ( php_sapi_name() !== 'cli' ) {
 	$wgObjectCaches['redis'] = [
 		'class' => 'RedisBagOStuff',
 		'servers' => [ '81.4.127.174:6379' ],
@@ -22,7 +22,7 @@ $wgUseLocalMessageCache = true; // may be required for $wgMessageCacheType = fal
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
 
-if ( php_sapi_name() === 'cli' ) {
+if ( php_sapi_name() !== 'cli' ) {
 	$wgJobTypeConf['default'] = [
 		'class' => 'JobQueueRedis',
 		'redisServer' => '81.4.127.174:6379',
