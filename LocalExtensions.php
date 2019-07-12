@@ -128,11 +128,11 @@ if ( $wmgUseCirrusSearch ) {
 		],
 	];
 
-	if ( $wmgSearchType ) {
+	if ( isset( $wmgSearchType ) && $wmgSearchType ) {
 		$wgSearchType = 'CirrusSearch';
 	}
 	
-	if ( $wmgDisableSearchUpdate ) {
+	if ( isset( $wmgDisableSearchUpdate ) && $wmgDisableSearchUpdate  ) {
 		$wgDisableSearchUpdate = true;
 	} else {
 		$wgDisableSearchUpdate = false;
