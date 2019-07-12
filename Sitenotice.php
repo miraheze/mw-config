@@ -21,17 +21,17 @@ $val = [
 	'test1wiki',
 ];
 
-/*if ( in_array( $wgDBname, $val ) ) {
+if ( in_array( $wgDBname, $val ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td>Miraheze will be doing ElasticSearch maintenance at 21:30 UTC to 23:30 UTC. During this period, searching may not work.</td>
+				<td>Miraheze is doing some ElasticSearch maintenance. During this time searching may not work. We apologise for any inconvenience caused by this.</td>
 				</tr></tbody></table>
 EOF;
 
 		return true;
 	}
-}*/
+}
