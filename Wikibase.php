@@ -48,4 +48,18 @@ call_user_func( function () {
 				'wikibase-property' => 'Property'
 			];
 		}
+
+		if ( $wgDBname === 'testwiki' ) {
+			$wgWBClientSettings['repoUrl'] = 'https://test1.miraheze.org';
+			$wgWBClientSettings['repoScriptPath'] = '/w';
+			$wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
+			$wgWBClientSettings['siteGlobalID'] = 'test1wiki';
+			$wgWBClientSettings['repoDatabase'] = 'test1wiki';
+			$wgWBClientSettings['changesDatabase'] = 'test1wiki';
+			$wgWBClientSettings['siteGroup'] = 'miraheze';
+			$wgWBClientSettings['repoNamespaces'] = [
+				'wikibase-item' => 'Item',
+				'wikibase-property' => 'Property'
+			];
+		}
 } );
