@@ -1595,6 +1595,17 @@ $wgConf->settings = [
 				'read' => true,
 			],
 		],
+		'+cyclonepediawiki' => [
+			'bureaucrat' => [
+				'bureaucrat',
+			],
+			'extendedconfirmed' => [
+				'extendedconfirmed' => true,
+			],
+			'sysop' => [
+				'extendedconfirmed' => true,
+			],
+		],
 		'+dpwiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -2285,6 +2296,10 @@ $wgConf->settings = [
 			'sysop',
 			'pm',
 			'member',
+		],
+		'+cyclonepediawiki' => [
+			'bureaucrat',
+			'extendedconfirmed',
 		],
 		'+dpwiki' => [
 			'bureaucrat',
