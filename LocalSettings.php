@@ -2298,7 +2298,7 @@ $wgConf->settings = [
 			'member',
 		],
 		'+cyclonepediawiki' => [
-			'bureaucrat'
+			'bureaucrat',
 			'extendedconfirmed',
 		],
 		'+dpwiki' => [
