@@ -1597,7 +1597,7 @@ $wgConf->settings = [
 		],
 		'+cyclonepediawiki' => [
 			'bureaucrat' => [
-				'bureaucrat',
+				'bureaucrat' => true,
 			],
 			'extendedconfirmed' => [
 				'extendedconfirmed' => true,
