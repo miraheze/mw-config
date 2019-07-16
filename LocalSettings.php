@@ -2079,7 +2079,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgRCWatchCategoryMembership' => [
-		'deafult' => false,
+		'default' => false,
 	],
 
 	// MobileFrontend
