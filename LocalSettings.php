@@ -2078,6 +2078,9 @@ $wgConf->settings = [
 	'wgPageCreationLog' => [
 		'default' => true,
 	],
+	'wgRCWatchCategoryMembership' => [
+		'deafult' => false,
+	],
 
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => [
