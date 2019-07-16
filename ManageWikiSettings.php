@@ -689,7 +689,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
 	],
-
+	'wgRCWatchCategoryMembership' => [
+		'name' => 'Treat Category Membership as a RecentChange'
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'restricted' => false,
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Shows changes to category membership as an action in Special:RecentChanges'
+	],
 	// Links
 	'wgExternalLinkTarget' => [
 		'name' => 'External Link Target',
