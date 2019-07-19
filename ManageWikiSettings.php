@@ -705,7 +705,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'overridedefault' => true,
 		'section' => 'edit',
-		'help' => 'Require new revisions to be manually approved even if made by an administrator',
+		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
 	],
 	
 	// Links
