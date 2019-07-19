@@ -1784,7 +1784,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'tweeki' => [
-			'name' => 'Tweeki (Skin)',
+			'name' => 'Tweeki (Skin) - Note: Causes mobile view not to work!',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Tweeki',
 			'var' => 'wmgUseTweeki',
 			'conflicts' => false,
