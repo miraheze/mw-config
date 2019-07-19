@@ -2081,6 +2081,9 @@ $wgConf->settings = [
 	'wgRCWatchCategoryMembership' => [
 		'default' => false,
 	],
+	'wgApprovedRevsAutomaticApprovals' => [
+		'default' => true, // Disable in ManageWiki to require all edits, even those by admins, to be approved
+	],
 
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => [
