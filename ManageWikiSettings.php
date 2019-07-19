@@ -703,7 +703,7 @@ $wgManageWikiSettings = [
 		'from' => 'approvedrevs',
 		'type' => 'check',
 		'restricted' => false,
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
 	],
