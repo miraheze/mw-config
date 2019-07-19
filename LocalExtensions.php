@@ -121,7 +121,7 @@ if ( $wmgUseCirrusSearch ) {
 	$wgCirrusSearchClusters = [
 		'default' => [
 			[
-				'host' => 'elasticsearch-lb.miraheze.org',
+				'host' => 'es-lb.miraheze.org',
 				'transport' => 'Https',
 				'port' => '443',
 			],
@@ -139,7 +139,7 @@ if ( $wmgUseCirrusSearch ) {
 	$wgCirrusSearchConnectionAttempts = 3;
 	$wgCirrusSearchMasterTimeout = '5m';
 	
-	$wgCirrusSearchShardCount = [ 'content' => 2, 'general' => 2, 'archive' => 2, 'titlesuggest' => 2 ];
+	$wgCirrusSearchShardCount = [ 'content' => 1, 'general' => 1, 'archive' => 1, 'titlesuggest' => 1 ];
 
 	if ( $wmgSearchType ) {
 		$wgSearchType = 'CirrusSearch';
