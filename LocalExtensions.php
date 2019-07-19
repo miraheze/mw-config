@@ -139,7 +139,7 @@ if ( $wmgUseCirrusSearch ) {
 	$wgCirrusSearchConnectionAttempts = 3;
 	$wgCirrusSearchMasterTimeout = '5m';
 	
-	$wgCirrusSearchShardCount = [ 'content' => 1, 'general' => 1, 'archive' => 1, 'titlesuggest' => 1 ];
+	$wgCirrusSearchShardCount = [ 'content' => 2, 'general' => 2, 'archive' => 2, 'titlesuggest' => 2 ];
 
 	if ( $wmgSearchType ) {
 		$wgSearchType = 'CirrusSearch';
