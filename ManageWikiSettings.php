@@ -698,6 +698,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Shows changes to category membership as an action in Special:RecentChanges',
 	],
+	'wgApprovedRevsAutomaticApprovals' => [
+		'name' => 'Disable automatic revision approvals',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'restricted' => false,
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Require new revisions to be manually approved even if made by an administrator',
+	],
 	
 	// Links
 	'wgExternalLinkTarget' => [
