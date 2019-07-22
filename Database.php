@@ -28,7 +28,7 @@ $wgLBFactoryConf = [
 	'hostsByName' => [
 		// 81.4.109.166
 		'db4' => 'mediawiki-internal-db-master.miraheze.org',
-		// 168.235.110.65
+		// 168.235.110.50
 		'db5' => 'mediawiki-internal-db-master-db5.miraheze.org',
 	],
 	'externalLoads' => [
