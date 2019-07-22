@@ -12,6 +12,9 @@ $wgLBFactoryConf = [
 		'c1' => [
 			'db4' => 1,
 		],
+		'c2' => [
+			'db5' => 1,
+		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -25,14 +28,17 @@ $wgLBFactoryConf = [
 	'hostsByName' => [
 		// 81.4.109.166
 		'db4' => 'mediawiki-internal-db-master.miraheze.org',
+		// 168.235.110.50
+		'db5' => 'mediawiki-internal-db-master-db5.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
 			'db4' => 1, // should echo c1
+			'db5' => 1, // should echo c2
 		],
 	],
 	'readOnlyBySection' => [
-	// 'DEFAULT' => 'Maintenance ongoing on the database server.',
-	// 'c1' => 'Maintenance ongoing on the database server.',
+		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
+		// 'c1' => 'Maintenance ongoing on the database server.',
 	],
 ];
