@@ -698,7 +698,7 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Shows changes to category membership as an action in Special:RecentChanges',
 	],
-	'wgApprovedRevsAutomaticApprovals' => [
+	'egApprovedRevsAutomaticApprovals' => [
 		'name' => 'Automatically approve new revisions',
 		'from' => 'approvedrevs',
 		'type' => 'check',
