@@ -53,11 +53,6 @@ if ( $wmgUseApprovedRevs ) {
 	];
 }
 
-if ( $wmgUseArticleFeedbackv5 ) {
-	wfLoadExtension( 'ArticleFeedbackv5' );
-	$wgManageWikiPermissionsAdditionalRights['oversight']['aft-oversighter'] = true;
-}
-
 if ( $wmgUseArticleRatings ) {
 	wfLoadExtension( 'ArticleRatings' );
 }
