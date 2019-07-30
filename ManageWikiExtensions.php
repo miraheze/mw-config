@@ -1350,15 +1350,11 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		
-					],
-					'autoconfirmed' => [
-						'permission
 		'pollny' => [
 			'name' => 'PollNY',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PollNY',
 			'var' => 'wmgUsePollNY',
-			'conflicts' => 'poll',
+			'conflicts' => false,
 			'requires' => [],
 			'install' => [
 				'sql' => [
