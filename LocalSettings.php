@@ -516,9 +516,6 @@ $wgConf->settings = [
 	'wmgUseApprovedRevs' => [
 		'default' => false,
 	],
-	'wmgUseArticleFeedbackv5' => [
-		'default' => false,
-	],
 	'wmgUseArticleRatings' => [
 		'default' => false,
 	],
