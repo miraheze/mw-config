@@ -1544,8 +1544,8 @@ $wgConf->settings = [
 				'banned',
 			],
 		],
-		'quircwiki' => [
-			'Bureaucrats' => [
+		'rf1botwiki' => [
+			'bureaucrat' => [
 				'Repo_Maintainer',
 			],
 		],
@@ -1922,8 +1922,8 @@ $wgConf->settings = [
 				'banned',
 			],
 		],
-		'quircwiki' => [
-			'Bureaucrats' => [
+		'rf1botwiki' => [
+			'bureaucrat' => [
 				'Repo_Maintainer',
 			],
 		],
