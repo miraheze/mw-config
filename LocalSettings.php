@@ -1544,6 +1544,11 @@ $wgConf->settings = [
 				'banned',
 			],
 		],
+		'quircwiki' => [
+			'Bureaucrats' => [
+				'Repo_Maintainer',
+			],
+		],
 	],
 	'wgManageWikiPermissionsAdditionalRights' => [
 		'default' => [
@@ -1915,6 +1920,11 @@ $wgConf->settings = [
 		'weatherwiki' => [
 			'founder' => [
 				'banned',
+			],
+		],
+		'quircwiki' => [
+			'Bureaucrats' => [
+				'Repo_Maintainer',
 			],
 		],
 	],
