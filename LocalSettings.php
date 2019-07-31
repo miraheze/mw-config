@@ -1793,8 +1793,8 @@ $wgConf->settings = [
 		'+rf1botwiki' => [
 			'Repo_Maintainer' => [
 				'editrepos' => true,
-				],
 			],
+		],
 		'+sau226wiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
