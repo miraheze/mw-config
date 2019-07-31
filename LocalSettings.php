@@ -1790,6 +1790,11 @@ $wgConf->settings = [
 				'editor' => true,
 			],
 		],
+		'+rf1botwiki' => [
+			'Repo_Maintainer' => [
+				'editrepos' => true,
+			],
+		],
 		'+sau226wiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -2339,6 +2344,9 @@ $wgConf->settings = [
 		],
 		'+quircwiki' => [
 			'editstaffprotected',
+		],
+		'+rf1botwiki' => [
+			'editrepos',
 		],
 		'+sau226wiki' => [
 			'bureaucrat',
