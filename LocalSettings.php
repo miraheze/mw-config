@@ -2346,7 +2346,7 @@ $wgConf->settings = [
 			'editstaffprotected',
 		],
 		'+rf1botwiki' => [
-			'editrepo',
+			'editrepos',
 		],
 		'+sau226wiki' => [
 			'bureaucrat',
