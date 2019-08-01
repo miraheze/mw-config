@@ -484,7 +484,6 @@ $wgConf->settings = [
 	],
 	'wmgSearchType' => [
 		'default' => false,
-		'isvwiki' => true,
 		'nonsensopediawiki' => true,
 		'pointmanwiki' => true,
 		'test1wiki' => true,
@@ -555,7 +554,6 @@ $wgConf->settings = [
 	'wmgUseCirrusSearch' => [
 		'default' => false,
 		'buswiki' => true,
-		'isvwiki' => true,
 		'nonsensopediawiki' => true,
 		'pointmanwiki' => true,
 		'test1wiki' => true,
