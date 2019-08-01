@@ -12,9 +12,9 @@ $wgLBFactoryConf = [
 		'c1' => [
 			'db4' => 1,
 		],
-//		'c2' => [
-//			'db5' => 1,
-//		],
+		'c2' => [
+			'db5' => 1,
+		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -28,8 +28,8 @@ $wgLBFactoryConf = [
 	'hostsByName' => [
 		// 81.4.109.166
 		'db4' => 'mediawiki-internal-db-master.miraheze.org',
-		// 168.235.110.50
-//		'db5' => 'mediawiki-internal-db-master-db5.miraheze.org',
+		// 185.52.1.89
+		'db5' => 'mediawiki-internal-db-master-db5.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
