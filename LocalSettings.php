@@ -553,7 +553,6 @@ $wgConf->settings = [
 	],
 	'wmgUseCirrusSearch' => [
 		'default' => false,
-		'buswiki' => true,
 		'nonsensopediawiki' => true,
 		'pointmanwiki' => true,
 		'test1wiki' => true,
