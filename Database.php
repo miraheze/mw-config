@@ -34,7 +34,6 @@ $wgLBFactoryConf = [
 	'externalLoads' => [
 		'echo' => [
 			'db4' => 1, // should echo c1
-//			'db5' => 1, // should echo c2
 		],
 	],
 	'readOnlyBySection' => [
