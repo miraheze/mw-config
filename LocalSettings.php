@@ -260,6 +260,10 @@ $wgConf->settings = [
 	 ],
 
 	// CreateWiki
+	'wgCreateWikiDatabaseClusters' => [
+		'db4',
+		'db5',
+	],
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
 	],
