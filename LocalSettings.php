@@ -484,7 +484,6 @@ $wgConf->settings = [
 	],
 	'wmgSearchType' => [
 		'default' => false,
-		'nonsensopediawiki' => true,
 		'pointmanwiki' => true,
 		'test1wiki' => true,
 	],
