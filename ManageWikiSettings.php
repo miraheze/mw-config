@@ -1251,15 +1251,6 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
 	],
-	'wmgMFAutodetectMobileView' => [
-		'name' => 'MobileFrontend Autodetect Mobile View',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'If this is not set, then no device detection will be occur.',
-	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
 		'from' => 'metrolook',
