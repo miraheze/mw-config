@@ -484,8 +484,6 @@ $wgConf->settings = [
 	],
 	'wmgSearchType' => [
 		'default' => false,
-		'pointmanwiki' => true,
-		'test1wiki' => true,
 	],
 
 
@@ -552,8 +550,6 @@ $wgConf->settings = [
 	],
 	'wmgUseCirrusSearch' => [
 		'default' => false,
-		'pointmanwiki' => true,
-		'test1wiki' => true,
 	],
 	'wmgUseCite' => [
 		'default' => false,
