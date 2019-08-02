@@ -2552,6 +2552,7 @@ $wgConf->settings = [
 		'hrfwiki2' => 'any',
 		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
+		'nonciclopediawiki' => 'any',
 	],
 
 	// Squid (aka Varnish)
