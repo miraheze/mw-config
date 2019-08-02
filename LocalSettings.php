@@ -2548,6 +2548,7 @@ $wgConf->settings = [
 	'wgArticleCountMethod' => [
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'fourleafficswiki' => 'any',
+		'gfiwiki' => 'any',
 		'hrfwiki2' => 'any',
 		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
