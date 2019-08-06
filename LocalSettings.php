@@ -867,9 +867,6 @@ $wgConf->settings = [
 	'wmgUsePopups' => [
 		'default' => false,
 	],
-	'wmgUsePoll' => [
-		'default' => false,
-	],
 	'wmgUsePollNY' => [
 		'default' => false,
 	],

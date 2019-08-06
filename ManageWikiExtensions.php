@@ -1350,43 +1350,11 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'poll' => [
-			'name' => 'Poll',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Poll',
-			'var' => 'wmgUsePoll',
-			'conflicts' => 'pollny',
-			'requires' => [],
-			'install' => [
-				'sql' => [
-					'poll' => "$IP/extensions/Poll/archives/Poll.sql",
-					'poll_answer' => "$IP/extensions/Poll/archives/Poll-answer.sql",
-					'poll_start_log' => "$IP/extensions/Poll/archives/Poll-start-log.sql"
-				],
-				'permissions' => [
-					'sysop' => [
-						'permissions' => [
-							'poll-admin',
-						],
-					],
-					'autoconfirmed' => [
-						'permissions' => [
-							'poll-create',
-							'poll-vote',
-						],
-					],
-					'*' => [
-						'permissions' => [
-							'poll-score',
-						],
-					],
-				],
-			],
-		],
 		'pollny' => [
 			'name' => 'PollNY',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PollNY',
 			'var' => 'wmgUsePollNY',
-			'conflicts' => 'poll',
+			'conflicts' => false,
 			'requires' => [],
 			'install' => [
 				'sql' => [
