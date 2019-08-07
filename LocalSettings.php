@@ -395,6 +395,7 @@ $wgConf->settings = [
 		'beidipediawiki' => true,
 		'buswiki' => true,
 		'commonwealthwiki' => true,
+		'crystalmaidenswiki' => true,
 		'cwarswiki' => true,
 		'evilbabeswiki' => true,
 		'incubatorwiki' => true,
