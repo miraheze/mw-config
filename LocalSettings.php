@@ -701,6 +701,18 @@ $wgConf->settings = [
 	'wmgUseHideSection' => [
 		'default' => false,
 	],
+	$wgHideSectionImages = [
+		'default' => [
+			"show" => "https://upload.wikimedia.org/wikipedia/commons/b/bc/Vector_right_arrow_link.png ",
+			"hide" => "https://upload.wikimedia.org/wikipedia/commons/2/27/Vector_down_arrow_link.png ",
+			"location" => "begin" # or "end"
+		],
+		'cikansaiwiki' => [
+			"show" => "https://static.miraheze.org/cikansaiwiki/4/43/HideSectionDOWN.png ",
+			"hide" => "https://static.miraheze.org/cikansaiwiki/b/bd/HideSectionUP.png ",
+			"location" => "end"
+		],
+	],
 	'wmgUseHighlightLinksInCategory' => [
 		'default' => false,
 	],
