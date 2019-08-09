@@ -82,7 +82,7 @@ $wgManageWikiSettings = [
 		'help' => 'Number of seconds before autoblock entries expire. Minimum value allowed is 0 where as maximum is 10 years (315360000).',
 	],
 	'wgBlockAllowsUTEdit' => [
-		'name' => 'Allows blocking users to restrict talk page accesst',
+		'name' => 'Allows blocking users to restrict talk page access',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
