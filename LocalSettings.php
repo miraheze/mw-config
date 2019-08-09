@@ -2819,7 +2819,7 @@ $wgConf->settings = [
 			'random_quiz' => false,
 		],
 	],
-];
+],
 
 function efGetSiteParams( $conf, $wiki ) {
 	$site = null;
