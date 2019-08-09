@@ -1268,7 +1268,16 @@ $wgConf->settings = [
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
 	],
-
+	
+	//HideSection
+	'wgHideSectionImages' => [
+		'default' => false,
+		'cikansaiwiki' => [
+			'show' => 'https://static.miraheze.org/cikansaiwiki/4/43/HideSectionDOWN.png',
+			'hide' => 'https://static.miraheze.org/cikansaiwiki/b/bd/HideSectionUP.png',
+			'location' => 'end'
+		],
+	],
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => [
 		'default' => [],
