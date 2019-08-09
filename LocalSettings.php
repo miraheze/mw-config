@@ -1853,6 +1853,7 @@ $wgConf->settings = [
 		'+whentheycrywiki' => [
 			'user' => [
 				'edit-create' => true,
+			],
 		],
 		'+yeoksawiki' => [
 			'sysop' => [
@@ -2819,7 +2820,7 @@ $wgConf->settings = [
 			'random_quiz' => false,
 		],
 	],
-],
+];
 
 function efGetSiteParams( $conf, $wiki ) {
 	$site = null;
