@@ -180,10 +180,6 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
-if ( $wgDBname === 'weatherwiki' ) {
-	$wgAvailableRights[] = 'edit-restrictednamespace';
-}
-
 if ( $wgDBname === 'wikiageingwiki' ) {
 	$wgForeignFileRepos[] = [
 		'class'                   => 'ForeignAPIRepo',

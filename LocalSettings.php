@@ -53,23 +53,15 @@ $wgConf->settings = [
 	],
 	'wgAbuseFilterBlockDuration' => [
 		'default' => 'indefinte',
-		'weatherwiki' => '1 week',
 	],
 	'wgAbuseFilterAnonBlockDuration' => [
 		'default' => 2592000,
-		'weatherwiki' => '72 hours',
 	],
 	'wgAbuseFilterRestrictions' => [
 		'default' => [
 			'blockautopromote' => true,
 			'block' => true,
 			'degroup' => true,
-			'rangeblock' => true,
-		],
-		'weatherwiki' => [
-			'blockautopromote' => false,
-			'block' => false,
-			'degroup' => false,
 			'rangeblock' => true,
 		],
 	],
@@ -1240,7 +1232,6 @@ $wgConf->settings = [
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		'metawiki' => false,
-		'weatherwiki' => false, // let me do the blocking on my wiki, please
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
@@ -1394,9 +1385,6 @@ $wgConf->settings = [
 			'wmincubator',
 			'wikiaincubatorplus',
 		],
-		'+weatherwiki' => [
-			'wikipedia',
-		],
 		'+zhdelwiki' => [
 			'wikipedia',
 			'zhwikipedia',
@@ -1523,11 +1511,6 @@ $wgConf->settings = [
 	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
-		'weatherwiki' => [
-			'founder' => [
-				'banned',
-			],
-		],
 		'rf1botwiki' => [
 			'bureaucrat' => [
 				'Repo_Maintainer',
@@ -1872,27 +1855,6 @@ $wgConf->settings = [
 				'edit-create' => true,
 			],
 		],
-		'weatherwiki' => [
-			'steward' => [
-				'userrights' => true,
-				'userrights-interwiki' => true,
-				'hideuser' => true,
-				'suppressrevision' => true,
-				'suppressionlog' => true,
-				'viewsuppressed' => true,
-				'checkuser' => true,
-				'checkuser-log' => true,
-				'renameuser' => true,
-				'abusefilter-private' => true,
-				'abusefilter-private-log' => true,
-				'abusefilter-hide-log' => true,
-				'abusefilter-hidden-log' => true,
-				'oathauth-enable' => true,
-				'managewiki' => true,
-				'managewiki-restricted' => true,
-				'usermerge' => true,
-			],
-		],
 		'+yeoksawiki' => [
 			'sysop' => [
 				'project-edit' => true,
@@ -1901,11 +1863,6 @@ $wgConf->settings = [
 	],
 	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
 		'default' => [],
-		'weatherwiki' => [
-			'founder' => [
-				'banned',
-			],
-		],
 		'rf1botwiki' => [
 			'bureaucrat' => [
 				'Repo_Maintainer',
@@ -1978,7 +1935,6 @@ $wgConf->settings = [
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
 		'default' => 'member',
-		'weatherwiki' => 'user',
 	],
 	'wgManageWikiHelpUrl' => [
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
@@ -2200,20 +2156,6 @@ $wgConf->settings = [
 				'edit' => true,
 			],
 		],
-		'weatherwiki' => [
-			'banned' => [
-				'editmyoptions' => true,
-				'editmyprivateinfo' => true,
-				'editmyusercss' => true,
-				'editmyuserjs' => true,
-				'editmywatchlist' => true,
-				'edit' => true,
-				'read' => true,
-				'writeapi' => true,
-				'viewmyprivateinfo' => true,
-				'viewmywatchlist' => true,
-			],
-		],
 	],
 	'wgImplicitGroups' => [
 		'default' => [ '*', 'user', 'autoconfirmed' ],
@@ -2376,7 +2318,6 @@ $wgConf->settings = [
 			'ceo',
 			'co',
 		],
-		'weatherwiki' => [],
 	],
 
 	//
