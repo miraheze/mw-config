@@ -701,7 +701,7 @@ $wgConf->settings = [
 	'wmgUseHideSection' => [
 		'default' => false,
 	],
-	'wgHideSectionImages' = [
+	'wgHideSectionImages' => [
 		'default' => false,
 		'cikansaiwiki' => [
 			"show" => "https://static.miraheze.org/cikansaiwiki/4/43/HideSectionDOWN.png",
