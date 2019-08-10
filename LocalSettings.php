@@ -793,6 +793,7 @@ $wgConf->settings = [
 	],
 	'wmgUseMultiBoilerplate' => [
 		'default' => false,
+		'sidemwiki'=> true,
 	],
 	'wmgUseNewestPages' => [
 		'default' => false,
@@ -2100,6 +2101,7 @@ $wgConf->settings = [
 	// MultiBoilerplate settings
 	'wgMultiBoilerplateDiplaySpecialPage' => [
 		'default' => false,
+		'sidemwiki' => true,
 	],
 
 	// MultimediaViewer (not beta)
