@@ -572,7 +572,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'edit',
-		'help' => 'Name used for the meta namespace. Note that the namespace must exist in ManageWiki/namespaces.',
+		'help' => 'Name used for the project namespace. Note that the namespace must exist in ManageWiki/namespaces.',
 	],
 	'wgMetaNamespaceTalk' => [
 		'name' => 'Meta Namespace Talk',
