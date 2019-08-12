@@ -765,7 +765,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'localisation',
-		'help' => 'Enabling allowing anonymous users to control the language they view the wiki in.',
+		'help' => 'Enabling allows anonymous users to control the language they view the wiki in.',
 	],
 	'wgPageLanguageUseDB' => [
 		'name' => 'Enable per page language',
