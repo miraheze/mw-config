@@ -1687,14 +1687,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'tweeki' => [
-			'name' => 'Tweeki (Skin) - Note: Causes mobile view not to work!',
-			'linkPage' => 'https://mediawiki.org/wiki/Skin:Tweeki',
-			'var' => 'wmgUseTweeki',
-			'conflicts' => false,
-			'requires' => [],
-			'section' => 'skins',
-		],
 		'twocolconflict' => [
 			'name' => 'TwoColConflict',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:TwoColConflict',
