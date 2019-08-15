@@ -835,7 +835,7 @@ $wgManageWikiSettings = [
 		'help' => 'This option allows you to use the WikiMedia Commons file database on your wiki.',
 	],
 	'wgMirahezeCommons' => [
-		'name' => 'Enable Miraheze Commons (linking to commonswiki.miraheze.org)',
+		'name' => 'Enable Miraheze Commons (linking to commons.miraheze.org)',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
