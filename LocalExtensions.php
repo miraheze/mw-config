@@ -624,6 +624,10 @@ if ( $wmgUseMultiBoilerplate ) {
 	$wgMultiBoilerplateOptions = false;
 }
 
+if ( $wmgUseMyVariables ) {
+	wfLoadExtension( 'MyVariables' );
+}
+
 if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }
