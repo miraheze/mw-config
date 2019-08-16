@@ -1078,7 +1078,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:MyVariables',
 			'var' => 'wmgUseMyVariables',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
 		],
 		'newestpages' => [
 			'name' => 'NewestPages',
