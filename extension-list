@@ -110,6 +110,7 @@ $IP/extensions/MsUpload/extension.json
 $IP/extensions/MultiBoilerplate/extension.json
 $IP/extensions/MultiUpload/extension.json
 $IP/extensions/MultimediaViewer/extension.json
+$IP/extensions/MyVariables/extension.json
 $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/NewUserNotif/NewUserNotif.php
