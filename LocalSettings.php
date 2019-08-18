@@ -409,6 +409,7 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
+		'testwiki' => 'Database migration in progress',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
@@ -2984,6 +2985,23 @@ $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
+
+// Placeholder for DB migrations
+/*
+if ( $wgDBname == 'testdeletewiki' ||
+     $wgDBname == 'testdelete2wiki' ||
+) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
+	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
+			$siteNotice .= <<<EOF
+			<table class="wikitable" style="text-align:center;"><tbody><tr>
+			<td>Miraheze will perform database maintenance on this wiki, from 16:45 UTC until approx. 17:30 UTC. During this time the wiki will be in read-only mode. Please save your edits before 16:40 UTC!</td>
+			</tr></tbody></table>
+EOF;
+		return true;
+	}
+}
+*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
