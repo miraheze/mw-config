@@ -3,7 +3,7 @@
 $wgLBFactoryConf = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => [
-		'testwiki' => 'c1'
+		'testwiki' => 'c2'
 	],
 	'sectionLoads' => [
 		'DEFAULT' => [
