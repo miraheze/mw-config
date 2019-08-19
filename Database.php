@@ -3,7 +3,8 @@
 $wgLBFactoryConf = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => [
-		'testwiki' => 'c2'
+		'frikipediawiki' => 'c2',
+		'testwiki' => 'c2',
 	],
 	'sectionLoads' => [
 		'DEFAULT' => [
