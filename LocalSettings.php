@@ -409,7 +409,6 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
-		'frikipediawiki' => 'Database migration in progress.',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
