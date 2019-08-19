@@ -2986,7 +2986,7 @@ $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
-
+/*
 if ( $wgDBname == 'frikipediawiki') {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
@@ -2998,7 +2998,7 @@ EOF;
 		return true;
 	}
 }
-
+*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
