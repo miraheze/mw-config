@@ -2314,6 +2314,9 @@ $wgConf->settings = [
 		'taswinwiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 		],
+		'horizonwiki' => [
+			'NSMAIN' => 'index,follow'
+		],
 	],
 
 	// Referrer Policy
