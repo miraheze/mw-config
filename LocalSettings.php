@@ -2315,7 +2315,7 @@ $wgConf->settings = [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 		],
 		'horizonwiki' => [
-			'NSMAIN' => 'index,follow'
+			'NS_MAIN' => 'index,follow'
 		],
 	],
 
