@@ -611,6 +611,7 @@ $wgConf->settings = [
 	],
 	'wmgUseDisqusTag' => [
 		'default' => false,
+		'test1wiki' => true,
 	],
 	'wmgUseDuskToDawn' => [
 		'default' => false,
@@ -835,6 +836,7 @@ $wgConf->settings = [
 	],
 	'wmgUsePageDisqus' => [
 		'default' => false,
+		'test1wiki' => true,
 	],
 	'wmgUsePagedTiffHandler' => [
 		'default' => false,
@@ -935,6 +937,7 @@ $wgConf->settings = [
 	],
 	'wmgUseSoftRedirector' => [
 		'default' => false,
+		'test1wiki' => true,
 	],
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
 	// Should be this, but change $nameofwiki at the end:
@@ -947,6 +950,7 @@ $wgConf->settings = [
 	],
 	'wmgUseStopForumSpam' => [
 		'default' => false,
+		'test1wiki' => true,
 	],
 	'wmgUseSubpageFun' => [
 		'default' => false,
