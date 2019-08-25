@@ -1370,8 +1370,12 @@ $wgManageWikiSettings = [
 		'from' => 'theme',
 		'restricted' => false,
 		'type' => 'list',
-		'options' => $skinOptions + [
+		'options' => [
 			'Default' => 'default',
+			'Dark (Monobook and Vector only)' => 'dark',
+			'Deepsea (Vector only)' => 'deepsea',
+			'Ping (Monobook only)' => 'pink',
+			'Stellarbook (Monobook only)' => 'stellarbook',
 		],
 		'overridedefault' => 'default',
 		'section' => 'styling',
