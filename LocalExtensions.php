@@ -560,7 +560,6 @@ if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Metrolook'] = 'metrolook';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Metrolook'] = 'metrolook';
 }
 
 if ( $wmgUseMobileFrontend ) {
@@ -581,7 +580,6 @@ if ( $wmgUseMobileFrontend ) {
 	};
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['MinervaNeue'] = 'minerva';
 }
 
 if ( $wmgUseModeration ) {
@@ -592,7 +590,6 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['ModernSkylight'] = 'modernskylight';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['ModernSkylight'] = 'modernskylight';
 }
 
 if ( $wmgUseMsCatSelect ) {
@@ -653,7 +650,6 @@ if ( $wmgUseNostalgia ) {
 	wfLoadSkin( 'Nostalgia' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Nostalgia'] = 'nostalgia';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Nostalgia'] = 'nostalgia';
 }
 
 if ( $wmgUseNoTitle ) {
@@ -708,7 +704,6 @@ if ( $wmgUsePivot ) {
 	wfLoadSkin( 'pivot' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Pivot'] = 'pivot';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Pivot'] = 'pivot';
 }
 
 if ( $wmgUsePoem ) {
@@ -776,7 +771,6 @@ if ( $wmgUseRefreshed ) {
 	wfLoadSkin( 'Refreshed' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Refreshed'] = 'refreshed';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Refreshed'] = 'refreshed';
 }
 
 if ( $wmgUseRelatedArticles ) {
@@ -917,7 +911,6 @@ if ( $wmgUseTweeki ) {
 	wfLoadSkin( 'Tweeki' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Tweeki'] = 'tweeki';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Tweeki'] = 'tweeki';
 }
 
 if ( $wmgUseTwoColConflict ) {
