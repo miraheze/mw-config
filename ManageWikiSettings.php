@@ -1371,7 +1371,7 @@ $wgManageWikiSettings = [
 			'Default' => 'default',
 			'Dark (Monobook and Vector only)' => 'dark',
 			'Deepsea (Vector only)' => 'deepsea',
-			'Ping (Monobook only)' => 'pink',
+			'Pink (Monobook only)' => 'pink',
 			'Stellarbook (Monobook only)' => 'stellarbook',
 		],
 		'overridedefault' => 'default',
