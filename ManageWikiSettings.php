@@ -1077,12 +1077,12 @@ $wgManageWikiSettings = [
 	],
 	'wgPageDisqusShortname' => [
 		'name' => 'Page DisqusShortname',
-		'from' => 'pagedisqus',
+		'from' => 'mediawiki',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'restricted',
-		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the extension.',
+		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
