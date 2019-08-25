@@ -1598,11 +1598,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:StopForumSpam',
 			'var' => 'wmgUseStopForumSpam',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 		],
 		'subpagefun' => [
 			'name' => 'SubPageFun',
