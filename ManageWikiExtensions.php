@@ -1546,11 +1546,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SoftRedirector',
 			'var' => 'wmgUseSoftRedirector',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 		 ],
 		'socialprofile' => [
 			'name' => 'SocialProfile',
