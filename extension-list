@@ -160,7 +160,7 @@ $IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
 $IP/extensions/SiteScout/extension.json
-$IP/extensions/SoftRedirector/extension.json
+#$IP/extensions/SoftRedirector/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
 $IP/extensions/SocialProfile/SystemGifts/extension.json
 $IP/extensions/SocialProfile/UserActivity/extension.json
