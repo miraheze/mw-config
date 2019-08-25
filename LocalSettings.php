@@ -609,6 +609,10 @@ $wgConf->settings = [
 	'wmgUseDisplayTitle' => [
 		'default' => false,
 	],
+	'wmgUseDisqusTag' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	'wmgUseDuskToDawn' => [
 		'default' => false,
 	],
@@ -830,6 +834,10 @@ $wgConf->settings = [
 	'wmgUseOpenGraphMeta' => [
 		'default' => false,
 	],
+	'wmgUsePageDisqus' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	'wmgUsePagedTiffHandler' => [
 		'default' => false,
 	],
@@ -927,6 +935,10 @@ $wgConf->settings = [
 	'wmgUseSiteScout' => [
 		'default' => false,
 	],
+	'wmgUseSoftRedirector' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
 	// Should be this, but change $nameofwiki at the end:
 	// sudo -u www-data cp -R /srv/mediawiki/w/extensions/SocialProfile/avatars /srv/mediawiki/w/extensions/SocialProfile/awards /mnt/mediawiki-static/$nameofwiki/
@@ -935,6 +947,10 @@ $wgConf->settings = [
 	],
 	'wmgUseSpoilers' => [
 		'default' => false,
+	],
+	'wmgUseStopForumSpam' => [
+		'default' => false,
+		'test1wiki' => true,
 	],
 	'wmgUseSubpageFun' => [
 		'default' => false,

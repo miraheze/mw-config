@@ -406,6 +406,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'disqustag' => [
+			'name' => 'DisqusTag',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:DisqusTag',
+			'var' => 'wmgUseDisqusTag',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'dusktodawn' => [
 			'name' => 'DuskToDawn (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:DuskToDawn',
@@ -1185,6 +1196,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'pagedisqus' => [
+			'name' => 'PageDisqus',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:PageDisqus',
+			'var' => 'wmgUsePageDisqus',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'pagedtiffhandler' => [
 			'name' => 'PagedTiffHandler',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PagedTiffHandler',
@@ -1518,6 +1540,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'softredirector' => [
+			'name' => 'SoftRedirector',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:SoftRedirector',
+			'var' => 'wmgUseSoftRedirector',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'socialprofile' => [
 			'name' => 'SocialProfile',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SocialProfile',
@@ -1558,6 +1591,17 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSpoilers',
 			'conflicts' => false,
 			'requires' => [],
+		],
+		'stopforumspam' => [
+			'name' => 'StopForumSpam',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:StopForumSpam',
+			'var' => 'wmgUseStopForumSpam',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
 		],
 		'subpagefun' => [
 			'name' => 'SubPageFun',

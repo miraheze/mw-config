@@ -284,6 +284,10 @@ if ( $wmgUseDismissableSiteNotice ) {
 	wfLoadExtension( 'DismissableSiteNotice' );
 }
 
+if ( $wmgUseDisqusTag ) {
+	wfLoadExtension( 'DisqusTag' );
+}
+
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 
@@ -675,6 +679,9 @@ if ( $wmgUseNumberedHeadings ) {
 if ( $wmgUseOpenGraphMeta ) {
 	wfLoadExtension( 'OpenGraphMeta' );
 }
+if ( $wmgUsePageDisqus ) {
+	wfLoadExtension( 'PageDisqus' );
+}
 
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
@@ -826,12 +833,20 @@ if ( $wmgUseSiteScout ) {
 	wfLoadExtension( 'SiteScout' );
 }
 
+if ( $wmgUseSoftRedirector) {
+	wfLoadExtension( 'SoftRedirector' );
+}
+
 if ( $wmgUseSocialProfile ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 }
 
 if ( $wmgUseSpoilers ) {
 	wfLoadExtension( 'Spoilers' );
+}
+
+if ( $wmgUseStopForumSpam ) {
+	wfLoadExtension( 'StopForumSpam' );
 }
 
 if ( $wmgUseSubpageFun ) {

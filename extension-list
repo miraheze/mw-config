@@ -44,6 +44,7 @@ $IP/extensions/DPLForum/extension.json
 $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DiscordNotifications/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
+$IP/extensions/DisqusTag/extension.json
 $IP/extensions/DisplayTitle/extension.json
 $IP/extensions/DummyFandoomMainpageTags/extension.json
 $IP/extensions/DynamicPageList/extension.json
@@ -124,6 +125,7 @@ $IP/extensions/NumberedHeadings/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/OpenGraphMeta/extension.json
+$IP/extensions/PageDisqus/extension.json
 $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json
 $IP/extensions/PageImages/extension.json
@@ -158,6 +160,7 @@ $IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
 $IP/extensions/SiteScout/extension.json
+$IP/extensions/SoftRedirector/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
 $IP/extensions/SocialProfile/SystemGifts/extension.json
 $IP/extensions/SocialProfile/UserActivity/extension.json
@@ -168,6 +171,7 @@ $IP/extensions/SocialProfile/UserStats/extension.json
 $IP/extensions/SocialProfile/UserWelcome/extension.json
 $IP/extensions/SpamBlacklist/extension.json
 $IP/extensions/Spoilers/extension.json
+$IP/extensions/StopForumSpam/extension.json
 $IP/extensions/SubPageList3/extension.json
 $IP/extensions/SubpageFun/SubpageFun.php
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
