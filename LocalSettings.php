@@ -936,6 +936,7 @@ $wgConf->settings = [
 	],
 	'wmgUseSoftRedirector' => [
 		'default' => false,
+		'test1wiki' => true,
 	],
 	// Requires copying of two directories: https://www.mediawiki.org/wiki/Extension:SocialProfile#Directories
 	// Should be this, but change $nameofwiki at the end:
