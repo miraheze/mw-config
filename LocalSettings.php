@@ -836,7 +836,6 @@ $wgConf->settings = [
 	],
 	'wmgUsePageDisqus' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUsePagedTiffHandler' => [
 		'default' => false,
