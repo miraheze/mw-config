@@ -34,7 +34,6 @@ if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Apex'] = 'apex';
 }
 
 if ( $wmgUseApprovedRevs ) {
@@ -292,7 +291,6 @@ if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['DuskToDawn'] = 'dusktodawn';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['DuskToDawn'] = 'dusktodawn';
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
@@ -335,7 +333,6 @@ if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Erudite'] = 'erudite';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Erudite'] = 'erudite';
 }
 
 if ( $wmgUseEventLogging ) {
@@ -391,7 +388,6 @@ if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Foreground'] = 'foreground';
 }
 
 if ( $wmgUseGadgets ) {
@@ -402,7 +398,6 @@ if ( $wmgUseGamepress ) {
 	wfLoadSkin( 'Gamepress' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Gamepress'] = 'gamepress';
 }
 
 if ( $wmgUseGenealogy ) {
@@ -497,7 +492,6 @@ if ( $wmgUseLiberty ) {
 	wfLoadSkin( 'liberty' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Liberty'] = 'liberty';
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -536,7 +530,6 @@ if ( $wmgUseMask ) {
 	wfLoadSkin( 'Mask' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Mask'] = 'mask';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Mask'] = 'mask';
 }
 
 if ( $wmgUseMassEditRegex ) {
