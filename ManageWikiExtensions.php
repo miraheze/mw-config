@@ -406,7 +406,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'DisqusTag' => [
+		'disqustag' => [
 			'name' => 'DisqusTag',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:DisqusTag',
 			'var' => 'wmgUseDisqusTag',
@@ -1196,7 +1196,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'PageDisqus' => [
+		'pagedisqus' => [
 			'name' => 'PageDisqus',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:PageDisqus',
 			'var' => 'wmgUsePageDisqus',
@@ -1540,7 +1540,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'SoftRedirector' => [
+		'softredirector' => [
 			'name' => 'SoftRedirector',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SoftRedirector',
 			'var' => 'wmgUseSoftRedirector',
@@ -1592,7 +1592,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'StopForumSpam' => [
+		'stopforumspam' => [
 			'name' => 'StopForumSpam',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:StopForumSpam',
 			'var' => 'wmgUseStopForumSpam',
