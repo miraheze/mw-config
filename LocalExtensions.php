@@ -34,7 +34,6 @@ if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Apex'] = 'apex';
 }
 
 if ( $wmgUseApprovedRevs ) {
@@ -292,7 +291,6 @@ if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['DuskToDawn'] = 'dusktodawn';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['DuskToDawn'] = 'dusktodawn';
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
@@ -335,7 +333,6 @@ if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Erudite'] = 'erudite';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Erudite'] = 'erudite';
 }
 
 if ( $wmgUseEventLogging ) {
@@ -391,7 +388,6 @@ if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Foreground'] = 'foreground';
 }
 
 if ( $wmgUseGadgets ) {
@@ -402,7 +398,6 @@ if ( $wmgUseGamepress ) {
 	wfLoadSkin( 'Gamepress' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Gamepress'] = 'gamepress';
 }
 
 if ( $wmgUseGenealogy ) {
@@ -497,7 +492,6 @@ if ( $wmgUseLiberty ) {
 	wfLoadSkin( 'liberty' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Liberty'] = 'liberty';
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -536,7 +530,6 @@ if ( $wmgUseMask ) {
 	wfLoadSkin( 'Mask' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Mask'] = 'mask';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Mask'] = 'mask';
 }
 
 if ( $wmgUseMassEditRegex ) {
@@ -567,7 +560,6 @@ if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Metrolook'] = 'metrolook';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Metrolook'] = 'metrolook';
 }
 
 if ( $wmgUseMobileFrontend ) {
@@ -588,7 +580,6 @@ if ( $wmgUseMobileFrontend ) {
 	};
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['MinervaNeue'] = 'minerva';
 }
 
 if ( $wmgUseModeration ) {
@@ -599,7 +590,6 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['ModernSkylight'] = 'modernskylight';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['ModernSkylight'] = 'modernskylight';
 }
 
 if ( $wmgUseMsCatSelect ) {
@@ -660,7 +650,6 @@ if ( $wmgUseNostalgia ) {
 	wfLoadSkin( 'Nostalgia' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Nostalgia'] = 'nostalgia';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Nostalgia'] = 'nostalgia';
 }
 
 if ( $wmgUseNoTitle ) {
@@ -715,7 +704,6 @@ if ( $wmgUsePivot ) {
 	wfLoadSkin( 'pivot' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Pivot'] = 'pivot';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Pivot'] = 'pivot';
 }
 
 if ( $wmgUsePoem ) {
@@ -783,7 +771,6 @@ if ( $wmgUseRefreshed ) {
 	wfLoadSkin( 'Refreshed' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Refreshed'] = 'refreshed';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Refreshed'] = 'refreshed';
 }
 
 if ( $wmgUseRelatedArticles ) {
@@ -924,7 +911,6 @@ if ( $wmgUseTweeki ) {
 	wfLoadSkin( 'Tweeki' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Tweeki'] = 'tweeki';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Tweeki'] = 'tweeki';
 }
 
 if ( $wmgUseTwoColConflict ) {

@@ -1,14 +1,5 @@
 <?php
 
-// Used by wgDefaultSkin and wgTheme
-$skinOptions = [
-	'CologneBlue' => 'cologneblue',
-	'Modern' => 'modern',
-	'MonoBook' => 'monobook',
-	'Timeless' => 'timeless',
-	'Vector' => 'vector',
-];
-
 /**
  * ManageWiki settings are added using the variable below.
  *
@@ -1233,7 +1224,13 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'list',
-		'options' => $skinOptions,
+		'options' => [
+			'CologneBlue' => 'cologneblue',
+			'Modern' => 'modern',
+			'MonoBook' => 'monobook',
+			'Timeless' => 'timeless',
+			'Vector' => 'vector',
+		],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
 		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
@@ -1370,8 +1367,12 @@ $wgManageWikiSettings = [
 		'from' => 'theme',
 		'restricted' => false,
 		'type' => 'list',
-		'options' => $skinOptions + [
+		'options' => [
 			'Default' => 'default',
+			'Dark (Monobook and Vector only)' => 'dark',
+			'Deepsea (Vector only)' => 'deepsea',
+			'Pink (Monobook only)' => 'pink',
+			'Stellarbook (Monobook only)' => 'stellarbook',
 		],
 		'overridedefault' => 'default',
 		'section' => 'styling',
