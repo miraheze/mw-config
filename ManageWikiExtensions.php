@@ -178,6 +178,7 @@ $wgManageWikiExtensions = [
 			'requires' => [
 				'extensions' => [
 					'comments',
+					'pollny',
 					'socialprofile',
 					'voteny',
 				],
