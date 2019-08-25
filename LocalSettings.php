@@ -2120,6 +2120,11 @@ $wgConf->settings = [
 	'wgPageLanguageUseDB' => [
 		'default' => false,
 	],
+	
+	// Used for the PageDisqus extension
+	'wgPageDisqusShortname' => [
+		'default' => null,
+	],
 
 	// Page Size
 	'wgMaxArticleSize' => [
