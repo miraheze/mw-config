@@ -1540,17 +1540,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'softredirector' => [
-			'name' => 'SoftRedirector',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:SoftRedirector',
-			'var' => 'wmgUseSoftRedirector',
-			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
-		],
+		// 'softredirector' => [
+		//	'name' => 'SoftRedirector',
+		//	'linkPage' => 'https://mediawiki.org/wiki/Extension:SoftRedirector',
+		//	'var' => 'wmgUseSoftRedirector',
+		//	'conflicts' => false,
+		//	'requires' => [
+		//		'permissions' => [
+		//			'managewiki-restricted',
+		//		],
+		//	],
+		// ],
 		'socialprofile' => [
 			'name' => 'SocialProfile',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:SocialProfile',
