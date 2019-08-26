@@ -72,6 +72,11 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 		$wmgWikiMirahezeDiscordHooks[$wgDBname] ?? $wmgWikiMirahezeDiscordHooks['default'];
 }
 
+// CookieWarning exempt ElectronPdfService
+if ($_SERVER['REMOTE_ADDR'] === '185.52.1.71') {
+        $wgCookieWarningEnabled = false;
+}
+
 // Per-wiki overrides
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
