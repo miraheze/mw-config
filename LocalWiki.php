@@ -73,7 +73,7 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 }
 
 // CookieWarning exempt ElectronPdfService
-if ($_SERVER['HTTP_X_REAL_IP'] === '185.52.1.71') {
+if ($_SERVER['REMOTE_ADDR'] === '185.52.1.71') {
         $wgCookieWarningEnabled = false;
 }
 
