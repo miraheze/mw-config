@@ -1378,4 +1378,13 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Sets which theme is displayed by default when users visit your wiki.',
 	],
+	'wgManageWikiForceSidebarLinks' => [
+		'name' => 'Force ManageWiki side bar links',
+		'from' => 'managewiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Force the display of ManageWiki links in the sidebar for all users. The link text will differ for nonprivileged users.',
+	],
 ];
