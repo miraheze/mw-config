@@ -1923,6 +1923,9 @@ $wgConf->settings = [
 	'wgManageWikiHelpUrl' => [
 		'default' => '//meta.miraheze.org/wiki/ManageWiki',
 	],
+	'wgManageWikiForceSidebarLinks' => [
+		'default' => false,
+	],
 
 	// MassMessage
 	'wgAllowGlobalMessaging' => [
