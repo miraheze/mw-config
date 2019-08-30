@@ -775,7 +775,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgUseMobileFrontend' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wmgUseModeration' => [
 		'default' => false,
