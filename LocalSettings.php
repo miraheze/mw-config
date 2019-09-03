@@ -1119,12 +1119,12 @@ $wgConf->settings = [
 	],
 	'egApprovedRevsEnabledNamespaces' => [
  		'valkyrienskieswiki' => [
-			'NS_MAIN' => false,
-			'NS_USER' => false,
- 			'NS_FILE' => false,
-			'NS_TEMPLATE' = false,
-			'NS_HELP' = false,
-			'NS_PROJECT' = false
+			NS_MAIN => false,
+			NS_USER => false,
+ 			NS_FILE => false,
+			NS_TEMPLATE => false,
+			NS_HELP => false,
+			NS_PROJECT => false
 		],
 	],
 
