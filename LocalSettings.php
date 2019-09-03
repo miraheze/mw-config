@@ -2913,7 +2913,12 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 }
 
 // Needs to be set AFTER $wgDBname is set to a correct value
-$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
+// We check i the mount is readable.
+if ( is_readable( '/mnt/mediawiki-static' ) ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
+} else {
+	$wgUploadDirectory = '/mnt/nonexistent';
+}
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
