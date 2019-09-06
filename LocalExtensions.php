@@ -152,7 +152,7 @@ if ( $wmgUseCiteThisPage ) {
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
 
-	$wgCitoidServiceUrl = "https://{$wmgHostname}/api/rest_";
+	$wgCitoidFullRestbaseURL = "https://{$wmgHostname}/api/rest_";
 }
 
 if ( $wmgUseCodeEditor ) {
