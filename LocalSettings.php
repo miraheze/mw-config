@@ -2390,6 +2390,11 @@ $wgConf->settings = [
 			],
 		],
 	],
+	'wgNamespaceContentModels' => [
+		'default' => [
+			'NS_MODULE' => 'wikitext'
+		]
+	]
 
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => [
