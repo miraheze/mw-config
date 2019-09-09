@@ -2485,6 +2485,10 @@ $wgConf->settings = [
 			'quiz_created' => 20,
 		],
 	],
+	'wgFriendingEnabled' => [
+		'default' => true,
+		'allthetropeswiki' => false,
+	],
 
 	// Statistics
 	'wgArticleCountMethod' => [
