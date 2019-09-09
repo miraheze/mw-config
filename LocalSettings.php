@@ -2489,17 +2489,6 @@ $wgConf->settings = [
 		'default' => true,
 		'allthetropeswiki' => false,
 	],
-	
-	'wgUserProfileDisplay' => [
-		'default' => [
-			'friends' => true,
-			'foes' => true,
-		],
-		'allthetropeswiki' => [
-			'friends' => false,
-			'foes' => false,
-		],
-	],
 
 	// Statistics
 	'wgArticleCountMethod' => [
