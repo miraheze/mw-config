@@ -2442,10 +2442,6 @@ $wgConf->settings = [
 			'friends' => false,
 			'foes' => false,
 		],
-		'test1wiki' => [
-			'friends' => true,
-			'foes' => true,
-		],	
 	],
 	'wgUserStatsPointValues' => [
 		'default' => [
