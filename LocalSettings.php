@@ -2139,6 +2139,11 @@ $wgConf->settings = [
 		'default' => null,
 	],
 
+	// Used for the DisqusTag extension
+	'wgDisqusShortname' => [
+		'default' => null,
+	],
+
 	// Page Size
 	'wgMaxArticleSize' => [
 		'default' => 2048,
