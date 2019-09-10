@@ -22,5 +22,6 @@ notifications:
   email:
     recipients:
       - southparkfan@miraheze.org
+      - rhinosf1@miraheze.org
     on_success: change
     on_failure: always
