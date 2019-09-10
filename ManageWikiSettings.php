@@ -1143,6 +1143,7 @@ $wgManageWikiSettings = [
 			'mp3' => 'mp3',
 			'mp4' => 'mp4',
 			'mus' => 'mus',
+			'naf' => 'naf',
 			'nes' => 'nes',
 			'nsf' => 'nsf',
 			'odg' => 'odg',
