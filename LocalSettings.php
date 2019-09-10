@@ -2489,7 +2489,13 @@ $wgConf->settings = [
 		'default' => true,
 		'allthetropeswiki' => false,
 	],
-
+	'wgUserProfileDisplay' => [
+		'default' => [],
+		'test1wiki' => [
+			'friends' => false,
+			'foes' => false,
+		],
+	],
 	// Statistics
 	'wgArticleCountMethod' => [
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
