@@ -409,6 +409,7 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
+		'openhatchwiki' => 'Database migration in progress',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
