@@ -2992,7 +2992,7 @@ if ( $wgDBname == 'openhatchwiki') {
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 06:20 UTC until approximately 06:50 UTC. During this time this wiki will be in read-only mode. Please save your edits before 17:10 UTC!</td>
+			<td>Miraheze will perform database maintenance on this wiki, from 06:20 UTC until approximately 06:50 UTC. During this time this wiki will be in read-only mode. Please save your edits before 06:20 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
