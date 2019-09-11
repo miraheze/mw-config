@@ -409,7 +409,6 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
-		'openhatchwiki' => 'Database migration in progress',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
@@ -2987,7 +2986,7 @@ $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
-
+/*
 if ( $wgDBname == 'openhatchwiki') {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
@@ -2999,7 +2998,7 @@ EOF;
 		return true;
 	}
 }
-
+*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
