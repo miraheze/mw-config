@@ -1719,6 +1719,7 @@ $wgConf->settings = [
 			],
 			'user' => [
 				'requestwiki' => true,
+				'mwoauthmanagemygrants' => true,
 			],
 			'wikicreator' => [
 				'createwiki' => true,
