@@ -1537,6 +1537,7 @@ $wgConf->settings = [
 				'suppressrevision' => true,
 			],
 			'user' => [
+				'mwoauthmanagemygrants' => true,
 				'user' => true,
 			],
 			'steward' => [
@@ -1719,7 +1720,6 @@ $wgConf->settings = [
 			],
 			'user' => [
 				'requestwiki' => true,
-				'mwoauthmanagemygrants' => true,
 			],
 			'wikicreator' => [
 				'createwiki' => true,
