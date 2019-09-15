@@ -424,6 +424,11 @@ $wgConf->settings = [
 	'wgCommentTableSchemaMigrationStage' => [
 		'default' => MIGRATION_NEW,
 	],
+	//CommonsMetadata
+	'wgCommonsMetadataForceRecalculate' => [
+		'default' => false,
+		'test1wiki' => true,
+	]
 
 	// Delete
 	'wgDeleteRevisionsLimit' => [
@@ -496,6 +501,10 @@ $wgConf->settings = [
 	'wmgUseAdminLinks' => [
 		'default' => false,
 	],
+	'wmgUseAdvancedSearch' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	'wmgUseAJAXPoll' => [
 		'default' => false,
 	],
@@ -567,6 +576,10 @@ $wgConf->settings = [
 	],
 	'wmgUseComments' => [
 		'default' => false, // Sysop has 'commentadmin' by default
+	],
+	'wmgUseCommonsMetadata' => [
+		'default' => false,
+		'test1wiki' => true,
 	],
 	'wmgUseContactPage' => [
 		'default' => false, // Add wiki config to ContactPage.php
@@ -971,6 +984,10 @@ $wgConf->settings = [
 	],
 	'wmgUseTemplateWizard' => [
 		'default' => false,
+	],
+	'wmgUseTextExtracts' => [
+		'default' => false,
+		'test1wiki' => true,
 	],
 	'wmgUseTheme' => [
 		'default' => false,
