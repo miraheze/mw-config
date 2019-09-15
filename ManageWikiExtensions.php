@@ -55,11 +55,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:AdvancedSearch',
 			'var' => 'wmgUseAdvancedSearch',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 		],
 		'ajaxpoll' => [
 			'name' => 'AJAX Poll',
@@ -353,11 +349,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:CommonsMetadata',
 			'var' => 'wmgUseCommonsMetadata',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 		],
 		'contributionscores' => [
 			'name' => 'ContributionScores',
@@ -1665,12 +1657,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TextExtracts',
 			'var' => 'wmgUseTextExtracts',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
-		],
+			'requires' => [],
 		'theme' => [
 			'name' => 'Theme',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Theme',
