@@ -3,7 +3,7 @@ $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddThis/extension.json
 $IP/extensions/AddHTMLMetaAndTitle/extension.json
 $IP/extensions/AdminLinks/extension.json
-$IP/extensions/AdvancedSearch.json
+$IP/extensions/AdvancedSearch/extension.json
 $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/ArticleRatings/extension.json
 $IP/extensions/ArticleToCategory2/extension.json
@@ -31,7 +31,7 @@ $IP/extensions/Collection/Collection.php
 $IP/extensions/Comments/extension.json
 $IP/extensions/ConfirmEdit/ReCaptchaNoCaptcha/extension.json
 $IP/extensions/ConfirmEdit/extension.json
-$IP/extensions/CommonsMetadata.json
+$IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionScores/ContributionScores.php
