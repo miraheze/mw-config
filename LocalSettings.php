@@ -426,7 +426,7 @@ $wgConf->settings = [
 	],
 	//CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
-		'default' => true,
+		'default' => false,
 	],
 
 	// Delete
