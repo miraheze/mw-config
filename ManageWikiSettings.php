@@ -927,6 +927,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Set this to true to force CommonsMetadata to parse the description page of the image and extract the metadata when using images from other wikis.'
+	],
 
 	// Notification
 	'wgCookieWarningMoreUrl' => [
