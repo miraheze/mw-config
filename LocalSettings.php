@@ -427,7 +427,6 @@ $wgConf->settings = [
 	//CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 
 	// Delete
@@ -503,7 +502,6 @@ $wgConf->settings = [
 	],
 	'wmgUseAdvancedSearch' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUseAJAXPoll' => [
 		'default' => false,
@@ -579,7 +577,6 @@ $wgConf->settings = [
 	],
 	'wmgUseCommonsMetadata' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUseContactPage' => [
 		'default' => false, // Add wiki config to ContactPage.php
@@ -987,7 +984,6 @@ $wgConf->settings = [
 	],
 	'wmgUseTextExtracts' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUseTheme' => [
 		'default' => false,

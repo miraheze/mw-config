@@ -919,6 +919,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'If set, the drag & drop area will be shown.',
 	],
+	'wgCommonsMetadataForceRecalculate' => [
+		'name' => 'Force Remote Image Description Parsing',
+		'from' => 'commonsmetadata',
+		'restricted' => false,
+		'type' => false,
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Set this to true to force CommonsMetadata to parse the description page of the image and extract the metadata when using images from other wikis.'
+	],
 
 	// Notification
 	'wgCookieWarningMoreUrl' => [
