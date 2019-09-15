@@ -428,7 +428,7 @@ $wgConf->settings = [
 	'wgCommonsMetadataForceRecalculate' => [
 		'default' => false,
 		'test1wiki' => true,
-	]
+	],
 
 	// Delete
 	'wgDeleteRevisionsLimit' => [
