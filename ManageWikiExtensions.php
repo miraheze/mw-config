@@ -1658,6 +1658,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTextExtracts',
 			'conflicts' => false,
 			'requires' => [],
+		],
 		'theme' => [
 			'name' => 'Theme',
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Theme',
