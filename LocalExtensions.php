@@ -26,6 +26,10 @@ if ( $wmgUseAdminLinks ) {
 	wfLoadExtension( 'AdminLinks' );
 }
 
+if ( $wmgUseAdvancedSearch ) {
+	wfLoadExtension( 'AdvancedSearch' );
+}
+
 if ( $wmgUseAJAXPoll ) {
 	wfLoadExtension( 'AJAXPoll' );
 }
@@ -181,6 +185,10 @@ if ( $wmgUseCollection ) {
 
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
+}
+
+if ( $wmgUseCommonsMetadata ) {
+	wfLoadExtension( 'CommonsMetadata' );
 }
 
 if ( $wmgUseContactPage ) {
@@ -873,6 +881,10 @@ if ( $wmgUseTemplateWizard ) {
 	wfLoadExtension( 'TemplateWizard' );
 
         wfLoadExtension( 'TemplateData' );
+}
+
+if ( $wmgUseTextExtracts ) {
+	wfLoadExtension( 'TextExtracts' );
 }
 
 if ( $wmgUseTranslate ) {
