@@ -2948,7 +2948,7 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
-if ( $wgDBname === 'allthetropeswiki' || $wgDBname === 'metawiki' || $wgDBname === 'loginwiki') {
+if ( $wgDBname === 'allthetropeswiki' || $wgDBname === 'metawiki' || $wgDBname === 'loginwiki' || $wgDBname === 'nonciclopediawiki') {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 } else {
