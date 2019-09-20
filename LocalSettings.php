@@ -3006,19 +3006,18 @@ $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
-/*
-if ( $wgDBname == 'openhatchwiki') {
+
+if ( $wgDBname === 'allthetropeswiki' || 'nonciclopediawiki' || 'nonsensopediawiki' || 'baobabarchiveswiki') {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform database maintenance on this wiki, from 06:20 UTC until approximately 06:50 UTC. During this time this wiki will be in read-only mode. Please save your edits before 06:20 UTC!</td>
+			<td>Miraheze will be conducting emergency maintenance between 09:00 UTC and 11:00 UTC on September 21. During this maintenance window this wiki may be put in read-only mode. Please save your edits before 09:00 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
 }
-*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
