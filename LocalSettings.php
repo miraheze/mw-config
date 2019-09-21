@@ -3006,7 +3006,7 @@ $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
-
+/*
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgReadOnly = 'Miraheze is conducting emergency maintenance.';
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
@@ -3019,7 +3019,7 @@ EOF;
 		return true;
 	}
 }
-
+*/
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
 function lfTOSLink( $sk, &$tpl ) {
