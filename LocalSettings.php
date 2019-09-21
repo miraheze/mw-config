@@ -3007,7 +3007,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
 
-if ( $wgDBname === 'allthetropeswiki' || $wgDBname === 'nonciclopediawiki' || $wgDBname === 'nonsensopediawiki' || $wgDBname ==='baobabarchiveswiki') {
+if ( $wgDBname === 'allthetropeswiki' || $wgDBname === 'nonciclopediawiki' || $wgDBname === 'nonsensopediawiki' ) {
 	$wgReadOnly = 'Miraheze is conducting emergency maintenance.';
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
