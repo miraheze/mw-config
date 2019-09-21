@@ -15,28 +15,28 @@
 $wgManageWikiExtensions = [
 		'3d' => [
 			'name' => '3D',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:3D',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:3D',
 			'var' => 'wmgUse3D',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'addthis' => [
 			'name' => 'AddThis',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:AddThis',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:AddThis',
 			'var' => 'wmgUseAddThis',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'htmlmetaadntitle' => [
 			'name' => 'HTML Meta and Title',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Add_HTML_Meta_and_Title',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Add_HTML_Meta_and_Title',
 			'var' => 'wmgUseAddHTMLMetaAndTitle',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'adminlinks' => [
 			'name' => 'AdminLinks',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Admin_Links',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Admin_Links',
 			'var' => 'wmgUseAdminLinks',
 			'conflicts' => false,
 			'requires' => [],
@@ -52,14 +52,14 @@ $wgManageWikiExtensions = [
 		],
 		'advancedsearch' => [
 			'name' => 'AdvancedSearch',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:AdvancedSearch',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AdvancedSearch',
 			'var' => 'wmgUseAdvancedSearch',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'ajaxpoll' => [
 			'name' => 'AJAX Poll',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:AJAXPoll',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:AJAXPoll',
 			'var' => 'wmgUseAJAXPoll',
 			'conflicts' => false,
 			'requires' => [],
@@ -80,7 +80,7 @@ $wgManageWikiExtensions = [
 		],
 		'apex' => [
 			'name' => 'Apex (Skin)',
-			'linkPage' => 'https://mediawiki.org/wiki/Skin:Apex',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
 			'var' => 'wmgUseApex',
 			'conflicts' => false,
 			'requires' => [],
@@ -88,7 +88,7 @@ $wgManageWikiExtensions = [
 		],
 		'approvedrevs' => [
 			'name' => 'Approved Revs',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Approved_Revs',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Approved_Revs',
 			'var' => 'wmgUseApprovedRevs',
 			'conflicts' => false,
 			'requires' => [],
@@ -114,7 +114,7 @@ $wgManageWikiExtensions = [
 		],
 		'articleratings' => [
 			'name' => 'Article Ratings',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleRatings',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleRatings',
 			'var' => 'wmgUseArticleRatings',
 			'conflicts' => false,
 			'requires' => [],
@@ -133,14 +133,14 @@ $wgManageWikiExtensions = [
 		],
 		'articletocategory2' => [
 			'name' => 'Article To Category 2',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:ArticleToCategory2',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleToCategory2',
 			'var' => 'wmgUseArticleToCategory2',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'authorprotect' => [
 			'name' => 'Author Protect',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:AuthorProtect',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:AuthorProtect',
 			'var' => 'wmgUseAuthorProtect',
 			'conflicts' => false,
 			'requires' => [],
@@ -161,7 +161,7 @@ $wgManageWikiExtensions = [
 		],
 		'autocreatecategorypages' => [
 			'name' => 'Auto Create Category Pages',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:AutoCreateCategoryPages',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:AutoCreateCategoryPages',
 			'var' => 'wmgUseAutoCreateCategoryPages',
 			'conflicts' => false,
 			'requires' => [
@@ -172,14 +172,14 @@ $wgManageWikiExtensions = [
 		],
 		'babel' => [
 			'name' => 'Babel',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Babel',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Babel',
 			'var' => 'wmgUseBabel',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'blogpage' => [
 			'name' => 'Blog Page',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:BlogPage',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:BlogPage',
 			'var' => 'wmgUseBlogPage',
 			'conflicts' => false,
 			'requires' => [
@@ -202,7 +202,7 @@ $wgManageWikiExtensions = [
 		],
 		'capiunto' => [
 			'name' => 'Capiunto',
-			'linkPage' => 'https://mediawiki.org/wiki/Extension:Capiunto',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Capiunto',
 			'var' => 'wmgUseCapiunto',
 			'conflicts' => false,
 			'requires' => [],
