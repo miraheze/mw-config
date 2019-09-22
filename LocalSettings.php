@@ -2948,7 +2948,16 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 // Needs to be set AFTER $wgDBname is set to a correct value
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 
-if ( $wgDBname === 'allthetropeswiki' || $wgDBname === 'metawiki' || $wgDBname === 'loginwiki' || $wgDBname === 'nonciclopediawiki' || $wgDBname === 'anotheredenwiki' || $wgDBname === 'sidemwiki' || gethostname() === 'test1.miraheze.org') {
+if ( $wgDBname === 'allthetropeswiki' ||
+	$wgDBname === 'metawiki' ||
+	$wgDBname === 'loginwiki' ||
+	$wgDBname === 'nonciclopediawiki' ||
+	$wgDBname === 'anotheredenwiki' ||
+	$wgDBname === 'sidemwiki' ||
+	$wgDBname === 'browndustwiki' ||
+	// When proxying through test1 we want to see all wikis use the new mount
+	gethostname() === 'test1.miraheze.org'
+) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 } else {
