@@ -2960,6 +2960,7 @@ if ($wgDBname === 'loginwiki') {
 	$wgDBname === 'browndustwiki' ||
 	$wgDBname === 'fapceowiki' ||
 	$wgDBname === 'breedersofthenephelymwiki' ||
+	$wgDBname === 'cwarswiki' ||
 	// When proxying through test1 we want to see all wikis use the new mount
 	gethostname() === 'test1.miraheze.org'
 ) {
