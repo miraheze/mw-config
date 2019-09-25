@@ -2950,7 +2950,7 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 if ($wgDBname === 'loginwiki') {
-	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
+	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgUploadDirectory = "/mnt/$wgDBname";
 } else if ( $wgDBname === 'allthetropeswiki' ||
 	$wgDBname === 'metawiki' ||
