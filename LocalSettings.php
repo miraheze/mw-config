@@ -709,6 +709,9 @@ $wgConf->settings = [
 	'wmgUseHAWelcome' => [
 		'default' => false,
 	],
+	'wmgUseHeaderFooter' => [
+		'default' => false,
+	],
 	'wmgUseHeaderTabs' => [
 		'default' => false,
 	],
