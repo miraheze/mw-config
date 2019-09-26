@@ -75,6 +75,7 @@ $IP/extensions/Graph/extension.json
 $IP/extensions/GroupsSidebar/GroupsSidebar.php
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/HAWelcome/extension.json
+$IP/extensions/HeaderFooter/extension.json
 $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json

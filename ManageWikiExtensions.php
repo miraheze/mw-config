@@ -723,6 +723,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'headerfooter' => [
+			'name' => 'HeaderFooter',
+			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:HeaderFooter',
+			'var' => 'wmgUseHeaderFooter',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'headertabs' => [
 			'name' => 'HeaderTabs',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:HeaderTabs',
