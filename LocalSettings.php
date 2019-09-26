@@ -2946,17 +2946,12 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 }
 
 // Needs to be set AFTER $wgDBname is set to a correct value
-$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
+$wgUploadPath = "https://static.miraheze.org/$wgDBname";
+$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 if ( $wgDBname === 'loginwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgUploadDirectory = "/sr /$wgDBname";
-} else if ( $wgDBname !== 'sidemwiki' &&
-	$wgDBname !== 'cwarswiki'
-) {
-	$wgUploadPath = "https://static.miraheze.org/$wgDBname";
-	$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 }
 
 $wgConf->wikis = $wgLocalDatabases;
