@@ -2952,15 +2952,15 @@ $wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 if ( $wgDBname === 'loginwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgUploadDirectory = "/mnt/$wgDBname";
-} else if ( $wgDBname !== 'allthetropeswiki' ||
-	$wgDBname !== 'metawiki' ||
-	$wgDBname !== 'nonciclopediawiki' ||
-	$wgDBname !== 'anotheredenwiki' ||
-	$wgDBname !== 'sidemwiki' ||
-	$wgDBname !== 'browndustwiki' ||
-	$wgDBname !== 'fapceowiki' ||
-	$wgDBname !== 'breedersofthenephelymwiki' ||
-	$wgDBname !== 'cwarswiki' ||
+} else if ( $wgDBname !== 'allthetropeswiki' &&
+	$wgDBname !== 'metawiki' &&
+	$wgDBname !== 'nonciclopediawiki' &&
+	$wgDBname !== 'anotheredenwiki' &&
+	$wgDBname !== 'sidemwiki' &&
+	$wgDBname !== 'browndustwiki' &&
+	$wgDBname !== 'fapceowiki' &&
+	$wgDBname !== 'breedersofthenephelymwiki' &&
+	$wgDBname !== 'cwarswiki' &&
 	// When proxying through test1 we want to see all wikis use the new mount
 	gethostname() !== 'test1.miraheze.org'
 ) {
