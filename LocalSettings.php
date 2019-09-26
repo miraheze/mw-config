@@ -2954,7 +2954,6 @@ if ( $wgDBname === 'loginwiki' ) {
 	$wgUploadDirectory = "/sr /$wgDBname";
 } else if ( $wgDBname !== 'allthetropeswiki' &&
 	$wgDBname !== 'nonciclopediawiki' &&
-	$wgDBname !== 'anotheredenwiki' &&
 	$wgDBname !== 'sidemwiki' &&
 	$wgDBname !== 'browndustwiki' &&
 	$wgDBname !== 'fapceowiki' &&
