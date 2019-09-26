@@ -2951,7 +2951,7 @@ $wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 
 if ( $wgDBname === 'loginwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgUploadDirectory = "/mnt/$wgDBname";
+	$wgUploadDirectory = "/sr /$wgDBname";
 } else if ( $wgDBname !== 'allthetropeswiki' &&
 	$wgDBname !== 'metawiki' &&
 	$wgDBname !== 'nonciclopediawiki' &&
