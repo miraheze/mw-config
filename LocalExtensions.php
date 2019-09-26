@@ -453,6 +453,10 @@ if ( $wmgUseHAWelcome ) {
 	wfLoadExtension( 'HAWelcome' );
 }
 
+if ( $wmgUseHeaderFooter ) {
+	wfLoadExtension( 'HeaderFooter' );
+}
+
 if ( $wmgUseHeaderTabs ) {
 	wfLoadExtension( 'HeaderTabs' );
 }
