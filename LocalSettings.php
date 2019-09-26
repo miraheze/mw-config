@@ -2953,7 +2953,6 @@ if ( $wgDBname === 'loginwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgUploadDirectory = "/sr /$wgDBname";
 } else if ( $wgDBname !== 'sidemwiki' &&
-	$wgDBname !== 'browndustwiki' &&
 	$wgDBname !== 'fapceowiki' &&
 	$wgDBname !== 'breedersofthenephelymwiki' &&
 	$wgDBname !== 'cwarswiki'
