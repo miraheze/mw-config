@@ -2946,26 +2946,26 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 }
 
 // Needs to be set AFTER $wgDBname is set to a correct value
-$wgUploadPath = "https://static.miraheze.org/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
+$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
+$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 
-if ($wgDBname === 'loginwiki') {
+if ( $wgDBname === 'loginwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgUploadDirectory = "/mnt/$wgDBname";
-} else if ( $wgDBname === 'allthetropeswiki' ||
-	$wgDBname === 'metawiki' ||
-	$wgDBname === 'nonciclopediawiki' ||
-	$wgDBname === 'anotheredenwiki' ||
-	$wgDBname === 'sidemwiki' ||
-	$wgDBname === 'browndustwiki' ||
-	$wgDBname === 'fapceowiki' ||
-	$wgDBname === 'breedersofthenephelymwiki' ||
-	$wgDBname === 'cwarswiki' ||
+} else if ( $wgDBname !== 'allthetropeswiki' ||
+	$wgDBname !== 'metawiki' ||
+	$wgDBname !== 'nonciclopediawiki' ||
+	$wgDBname !== 'anotheredenwiki' ||
+	$wgDBname !== 'sidemwiki' ||
+	$wgDBname !== 'browndustwiki' ||
+	$wgDBname !== 'fapceowiki' ||
+	$wgDBname !== 'breedersofthenephelymwiki' ||
+	$wgDBname !== 'cwarswiki' ||
 	// When proxying through test1 we want to see all wikis use the new mount
-	gethostname() === 'test1.miraheze.org'
+	gethostname() !== 'test1.miraheze.org'
 ) {
-	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
-	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
+	$wgUploadPath = "https://static.miraheze.org/$wgDBname";
+	$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 }
 
 $wgConf->wikis = $wgLocalDatabases;
