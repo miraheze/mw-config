@@ -51,6 +51,7 @@ if ( $wmgUseApprovedRevs ) {
 		'name' => 'Enable ApprovedRevs in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => true,
 		'overridedefault' => false
 	];
@@ -370,6 +371,7 @@ if ( $wmgUseFlaggedRevs ) {
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'main' => true,
 		'talk' => false,
+		'blacklisted' => [ 8 ],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
@@ -558,6 +560,7 @@ if ( $wmgUseMassMessage ) {
 		'name' => 'Can MassMessage post messages in this namespace?',
 		'main' => true,
 		'talk' => false,
+		'blacklisted' => [],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
@@ -872,6 +875,7 @@ if ( $wmgUseTemplateSandbox ) {
 		'name' => 'Can TemplateSandbox be used in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
@@ -978,6 +982,7 @@ if ( $wmgUseVisualEditor ) {
 		'name' => 'Enable VisualEditor in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => true,
 		'overridedefault' => false
 	];
@@ -1018,6 +1023,7 @@ if ( $wmgUseWikidataPageBanner ) {
 		'name' => 'Enable WikidataPageBanner in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
