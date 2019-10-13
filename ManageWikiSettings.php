@@ -816,14 +816,14 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'This option adds a textbox on Special:Upload enabling you to upload files from any URL.',
 	],
-	'wgUseInstantCommons' => [
+	'wgUseInstantCommonsCached' => [
 		'name' => 'Enable Wikimedia Commons Files',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'This option allows you to use the WikiMedia Commons file database on your wiki.',
+		'help' => 'This option allows you to use the Wikimedia Commons file database on your wiki.',
 	],
 	'wgMirahezeCommons' => [
 		'name' => 'Enable Miraheze Commons (linking to commons.miraheze.org)',
