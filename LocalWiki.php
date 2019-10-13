@@ -281,3 +281,36 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 		'descBaseUrl' => 'https://commonsgyaanipedia.miraheze.org/wiki/File:',
 	];
 }
+
+// Experimenting caching commons for these 10 wikis
+if ( in_array( [
+		'allthetropeswiki',
+		'animeshoes',
+		'anotheredenwiki',
+		'crappygameswiki',
+		'cwarswiki',
+		'fapceowiki',
+		'giantesswiki',
+		'nonciclopediawiki',
+		'unmusicfestwiki',
+		'wikiaiwiki'
+	],
+	$wgDBname
+) ) {
+	// Disable non cached version
+	$wgUseInstantCommons = false;
+
+	// Ensure we cache
+ 	$wgForeignFileRepos[] = [
+ 		'class' => ForeignAPIRepo::class,
+ 		'name' => 'wikimediacommons',
+ 		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+ 		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
+ 		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
+ 		'hashLevels' => 2,
+ 		'transformVia404' => true,
+ 		'fetchDescription' => true,
+ 		'descriptionCacheExpiry' => 43200,
+ 		'apiThumbCacheExpiry' => 900,
+ 	];
+}
