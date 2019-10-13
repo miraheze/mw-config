@@ -1246,7 +1246,11 @@ $wgConf->settings = [
 	'wgFileExtensions' => [
 		'default' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ],
 	],
+	// Replaced with wgUseInstantCommonsCached for miraheze use
 	'wgUseInstantCommons' => [
+		'default' => false,
+	],
+	'wgUseInstantCommonsCached' => [
 		'default' => true,
 	],
 	'wgMaxImageArea' => [
@@ -3038,7 +3042,7 @@ require_once "/srv/mediawiki/config/MissingWiki.php";
 require_once "/srv/mediawiki/config/Redis.php";
 require_once "/srv/mediawiki/config/Sitenotice.php";
 
-if ( $wgUseInstantCommons ) {
+if ( $wgUseInstantCommonsCached ) {
 	// Ensure we cache
 	$wgForeignFileRepos[] = [
 		'class' => ForeignAPIRepo::class,
