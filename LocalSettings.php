@@ -1251,7 +1251,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wgUseInstantCommonsCached' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgMaxImageArea' => [
 		'default' => '1.25e7',
