@@ -3038,6 +3038,22 @@ require_once "/srv/mediawiki/config/MissingWiki.php";
 require_once "/srv/mediawiki/config/Redis.php";
 require_once "/srv/mediawiki/config/Sitenotice.php";
 
+if ( $wgUseInstantCommons ) {
+	// Ensure we cache
+	$wgForeignFileRepos[] = [
+		'class' => ForeignAPIRepo::class,
+		'name' => 'wikimediacommons',
+		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
+		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
+		'hashLevels' => 2,
+		'transformVia404' => true,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 43200,
+		'apiThumbCacheExpiry' => 86400,
+	];
+}
+
 // per T3457 - Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
