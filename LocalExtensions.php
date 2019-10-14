@@ -74,7 +74,7 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 }
 
 if ( $wmgUseAutoCreatePage ) {
-	wfLoadExtension( 'AutoCreatePage' );
+	require_once "$IP/extensions/AutoCreatePage/AutoCreatePage.php";
 }
 
 
