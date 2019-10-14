@@ -3062,7 +3062,7 @@ if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
 }
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
-if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
+if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] === 1 ) {
         $wgProfiler['class'] = 'ProfilerXhprof';
         $wgProfiler['output'] = [ 'ProfilerOutputText' ];
         $wgProfiler['visible'] = false;
