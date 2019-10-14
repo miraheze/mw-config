@@ -178,9 +178,9 @@ $wgManageWikiExtensions = [
 			'requires' => [
 				'permissions' => [
 					'mangewiki-restricted',
+				],
+			],
 		],
-	],
-],
 		'babel' => [
 			'name' => 'Babel',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Babel',
