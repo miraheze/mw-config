@@ -3062,14 +3062,15 @@ if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
 }
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
-if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
+// Disabled because it seems to be causing performance issues (how ironic)
+/* if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
         $wgProfiler['class'] = 'ProfilerXhprof';
         $wgProfiler['output'] = [ 'ProfilerOutputText' ];
         $wgProfiler['visible'] = false;
 
 	// Prevent cache
         $wgUseSquid = false;
-}
+} */
 
 // Define last to avoid all dependencies
 require_once "/srv/mediawiki/config/LocalWiki.php";
