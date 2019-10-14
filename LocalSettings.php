@@ -524,6 +524,10 @@ $wgConf->settings = [
 	'wmgUseAutoCreateCategoryPages' => [
 		'default' => false, // DO NOT enable on wikis that have more than 500 categories. See T1230
 	],
+	'wmgUseAutoCreatePage' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	'wmgUseBlogPage' => [
 		'default' => false,
 	],

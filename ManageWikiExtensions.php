@@ -170,6 +170,17 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'autocreatepages' => [
+			'name' => 'Auto Create Pages',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:AutoCreatePage',
+			'var' => 'wmgUseAutoCreatePage',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'mangewiki-restricted',
+		],
+	],
+],
 		'babel' => [
 			'name' => 'Babel',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Babel',
