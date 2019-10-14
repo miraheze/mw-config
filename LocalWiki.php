@@ -297,7 +297,7 @@ if ( in_array( [
 	],
 	[
 		$wgDBname
-	],
+	]
 ) ) {
 	// Disable non cached version
 	$wgUseInstantCommons = false;
