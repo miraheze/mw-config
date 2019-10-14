@@ -295,7 +295,9 @@ if ( in_array( [
 		'unmusicfestwiki',
 		'wikiaiwiki'
 	],
-	$wgDBname
+	[
+		$wgDBname
+	],
 ) ) {
 	// Disable non cached version
 	$wgUseInstantCommons = false;
