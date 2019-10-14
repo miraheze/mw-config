@@ -526,7 +526,7 @@ $wgConf->settings = [
 	],
 	'wmgUseAutoCreatePage' => [
 		'default' => false,
-		'test1wiki' => false,
+		'test1wiki' => true,
 	],
 	'wmgUseBlogPage' => [
 		'default' => false,
