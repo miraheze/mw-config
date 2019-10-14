@@ -73,6 +73,11 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 	wfLoadExtension( 'AutoCreateCategoryPages' );
 }
 
+if ( $wmgAutoCreatePage ) {
+	wfLoadExtension( 'AutoCreatePage' );
+}
+
+
 if ( $wmgUseBabel ) {
 	wfLoadExtension( 'Babel' );
 }
