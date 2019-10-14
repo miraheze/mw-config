@@ -177,7 +177,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [
 				'permissions' => [
-				'mangewiki-restricted',
+					'mangewiki-restricted',
 		],
 	],
 ],
