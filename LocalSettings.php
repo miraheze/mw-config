@@ -2952,11 +2952,6 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
-if ( $wgDBname === 'loginwiki' ) {
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgUploadDirectory = "/sr /$wgDBname";
-}
-
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
