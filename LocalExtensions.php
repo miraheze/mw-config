@@ -73,7 +73,7 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 	wfLoadExtension( 'AutoCreateCategoryPages' );
 }
 
-if ( $wmgAutoCreatePage ) {
+if ( $wmgUseAutoCreatePage ) {
 	wfLoadExtension( 'AutoCreatePage' );
 }
 
