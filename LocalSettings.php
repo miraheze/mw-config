@@ -2958,6 +2958,16 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
+if ( in_array( 
+	$wgDBname,
+	[
+		'metawiki'
+	]
+) ) {
+	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
+	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
+}
+
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
 
