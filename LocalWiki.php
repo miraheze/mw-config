@@ -287,7 +287,7 @@ if ( in_array(
 	$wgDBname,
 	[
 		'allthetropeswiki',
-		'animeshoes',
+		'animeshoeswiki',
 		'anotheredenwiki',
 		'crappygameswiki',
 		'cwarswiki',
