@@ -283,22 +283,18 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 }
 
 // Experimenting caching commons for these 10 wikis
-if ( in_array( [
-		'allthetropeswiki',
-		'animeshoes',
-		'anotheredenwiki',
-		'crappygameswiki',
-		'cwarswiki',
-		'fapceowiki',
-		'giantesswiki',
-		'nonciclopediawiki',
-		'unmusicfestwiki',
-		'wikiaiwiki'
-	],
-	[
-		$wgDBname
-	]
-) ) {
+if (
+	$wgDBname === 'allthetropeswiki' ||
+	$wgDBname === 'animeshoes' ||
+	$wgDBname === 'anotheredenwiki' ||
+	$wgDBname === 'crappygameswiki' ||
+	$wgDBname === 'cwarswiki' ||
+	$wgDBname === 'fapceowiki' ||
+	$wgDBname === 'giantesswiki' ||
+	$wgDBname === 'nonciclopediawiki' ||
+	$wgDBname === 'unmusicfestwiki' ||
+	$wgDBname === 'wikiaiwiki'
+) {
 	// Disable non cached version
 	$wgUseInstantCommons = false;
 
