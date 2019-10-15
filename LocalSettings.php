@@ -750,7 +750,7 @@ $wgConf->settings = [
 	],
 	'wmgUseLastModified' => [
 		'default' => false,
-		'test1wiki' => true,
+		'test1wiki' => false,
 	],
 	'wmgUseLiberty' => [
 		'default' => false,
