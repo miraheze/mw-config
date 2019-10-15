@@ -113,7 +113,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'articleratings' => [
-			'name' => 'Articlae Ratings',
+			'name' => 'Article Ratings',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleRatings',
 			'var' => 'wmgUseArticleRatings',
 			'conflicts' => false,
