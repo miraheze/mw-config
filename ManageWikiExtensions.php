@@ -832,11 +832,8 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:LastModified',
 			'var' => 'wmgUseLastModified',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted'],
-				],
-			],
+			'requires' => [],
+		],
 		'liberty' => [
 			'name' => 'Liberty (Skin)',
 			'linkPage' => 'https://github.com/librewiki/liberty-skin',
