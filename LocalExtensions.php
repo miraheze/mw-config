@@ -510,6 +510,10 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
+if ($wmgUseLastModified) {
+	wfLoadExtension( 'LastModified');
+}
+
 if ( $wmgUseLiberty ) {
 	wfLoadSkin( 'liberty' );
 

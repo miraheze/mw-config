@@ -113,7 +113,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'articleratings' => [
-			'name' => 'Article Ratings',
+			'name' => 'Articlae Ratings',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleRatings',
 			'var' => 'wmgUseArticleRatings',
 			'conflicts' => false,
@@ -827,6 +827,16 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'lastmodified' => [
+			'name' => 'Last Modified',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:LastModified',
+			'var' => 'wmgUseLastModified',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted'],
+				],
+			],
 		'liberty' => [
 			'name' => 'Liberty (Skin)',
 			'linkPage' => 'https://github.com/librewiki/liberty-skin',

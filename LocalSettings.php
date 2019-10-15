@@ -748,6 +748,10 @@ $wgConf->settings = [
 	'wmgUseLabeledSectionTransclusion' => [
 		'default' => false,
 	],
+	'wmgUseLastModified' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	'wmgUseLiberty' => [
 		'default' => false,
 	],

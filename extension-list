@@ -90,6 +90,7 @@ $IP/extensions/JSBreadCrumbs/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
+$IP/extensions/LastModified/LastModified.php
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/LinkTarget.php
 $IP/extensions/LinkTitles/extension.json
