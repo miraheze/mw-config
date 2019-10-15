@@ -282,18 +282,23 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 	];
 }
 
-// Experimenting caching commons for these 10 wikis
+// Experimenting caching Wikimedia Commons (upstream T235551)
 if ( in_array( 
 	$wgDBname,
 	[
+		'2b2twiki',
 		'allthetropeswiki',
+		'animatedmusclewomenwiki',
 		'animeshoeswiki',
 		'anotheredenwiki',
+		'atrociousyoutuberswiki',
 		'crappygameswiki',
 		'cwarswiki',
 		'fapceowiki',
 		'giantesswiki',
 		'nonciclopediawiki',
+		'terribletvshowswiki',
+		'toxicfandomsandhatedomswiki',
 		'unmusicfestwiki',
 		'wikiaiwiki'
 	]
@@ -312,6 +317,6 @@ if ( in_array(
  		'transformVia404' => true,
  		'fetchDescription' => true,
  		'descriptionCacheExpiry' => 43200,
- 		'apiThumbCacheExpiry' => 900,
+ 		'apiThumbCacheExpiry' => 7200, // 2 hours
  	];
 }
