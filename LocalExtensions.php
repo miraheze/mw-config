@@ -511,7 +511,7 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 }
 
 if ($wmgUseLastModified) {
-	wfLoadExtension( 'LastModified');
+	require_once "$IP/extensions/LastModified/LastModified.php";
 }
 
 if ( $wmgUseLiberty ) {
