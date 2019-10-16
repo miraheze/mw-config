@@ -1248,6 +1248,9 @@ $wgConf->settings = [
 	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
 	],
+	'wgGenerateThumbnailOnParse' => [
+		'default' => false,
+	],
 	// Must be kept insync with wgFileExtensions in ManageWikiSettings.php
 	'wgFileExtensions' => [
 		'default' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ],
