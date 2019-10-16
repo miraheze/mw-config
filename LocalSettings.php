@@ -2961,6 +2961,7 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 if ( in_array( 
 	$wgDBname,
 	[
+		'anothereden',
 		'metawiki',
 		'unmusicfestwiki'
 	]
