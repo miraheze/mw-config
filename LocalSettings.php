@@ -3022,7 +3022,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
-$wgLocalFileRepo['transformVia404'] = true;
+$wgLocalFileRepo[]['transformVia404'] = true;
 
 $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 
