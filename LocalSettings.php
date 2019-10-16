@@ -2966,6 +2966,7 @@ if ( in_array(
 		'anothereden',
 		'loginwiki',
 		'metawiki',
+		'terribletvshowswiki',
 		'unmusicfestwiki'
 	]
 ) ) {
