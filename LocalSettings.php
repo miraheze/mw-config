@@ -2961,7 +2961,8 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 if ( in_array( 
 	$wgDBname,
 	[
-		'metawiki'
+		'metawiki',
+		'unmusicfestwiki'
 	]
 ) ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
