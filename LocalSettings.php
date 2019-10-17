@@ -600,7 +600,6 @@ $wgConf->settings = [
 	],
 	'wmgUseCreatePageUw' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUseCreateRedirect' => [
 		'default' => false,
