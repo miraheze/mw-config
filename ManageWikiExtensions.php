@@ -380,6 +380,7 @@ $wgManageWikiExtensions = [
 				'requires' => [
 					'permissions' => [
 						'managewiki-restricted',
+					],
 				],
 			],
 		],
