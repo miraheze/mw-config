@@ -377,10 +377,9 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:CreatePageUw',
 			'var' => 'wmgUseCreatePageUw',
 			'conflicts' => false,
-				'requires' => [
-					'permissions' => [
-						'managewiki-restricted',
-					],
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
 				],
 			],
 		],
