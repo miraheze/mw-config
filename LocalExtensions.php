@@ -212,7 +212,9 @@ if ( $wmgUseContributionScores ) {
 if ( $wmgUseCreatePage ) {
 	require_once "$IP/extensions/CreatePage/CreatePage.php";
 }
-
+if ( $wmgUseCreatePageUw ) {
+	wfLoadExtension( 'CreatePageUw' );
+}
 if ( $wmgUseCreateRedirect ) {
 	wfLoadExtension( 'CreateRedirect' );
 }

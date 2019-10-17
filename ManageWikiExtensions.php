@@ -372,6 +372,18 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'createpageuw' => [
+			'name' => 'CreatePageUw',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:CreatePageUw',
+			'var' => 'wmgUseCreatePageUw',
+			'conflicts' => false,
+			'requires' =>
+				'requires' => [
+					'permissions' => [
+						'managewiki-restricted',
+				],
+			],
+		],
 		'createredirect' => [
 			'name' => 'CreateRedirect',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:CreateRedirect',
