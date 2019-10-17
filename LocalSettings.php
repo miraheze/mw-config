@@ -2965,10 +2965,8 @@ if ( in_array(
 	$wgDBname,
 	[
 		'2b2twiki',
-		'allthetropeswiki',
 		'anothereden',
 		'loginwiki',
-		'metawiki',
 		'terribletvshowswiki',
 		'unmusicfestwiki'
 	]
