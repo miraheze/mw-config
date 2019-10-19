@@ -1438,8 +1438,6 @@ $wgConf->settings = [
 	// License
 	'wgRightsIcon' => [
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
-		'incubatorwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
-		'isvwiki' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'jadtechwiki' => "//$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 	],
