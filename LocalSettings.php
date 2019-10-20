@@ -3061,7 +3061,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 86400 * 7,
 		'wiki' => 'commonswiki',
-		'descBaseUrl' => 'https://commonswiki.miraheze.org/wiki/File:',
+		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
 	];
 }
 
