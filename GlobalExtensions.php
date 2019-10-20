@@ -27,6 +27,7 @@ wfLoadExtensions( [
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
+	'ParsoidBatchAPI',
 	'Renameuser',
 	'RottenLinks',
 	'SyntaxHighlight_GeSHi',
