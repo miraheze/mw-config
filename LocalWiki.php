@@ -126,6 +126,24 @@ if ( $wgDBname === 'metawiki' ) {
 	$wgDonateBoxInSidebarContent = '<ul><li><a href="/wiki/Donate">Donate to Miraheze</a></li></ul>';
 }
 
+if ( $wgDBname === 'nbdbwiki' ) {
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared-nenawikiwiki',
+		'directory' => '/mnt/mediawiki-static/nonbinarywiki',
+		'url' => 'https://static.miraheze.org/nonbinarywiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => 'nonbinarywiki',
+		'descBaseUrl' => 'https://nonbinary.wiki/wiki/File:',
+		'scriptDirUrl' => 'https://nonbinary.wiki/w',
+	];
+}
+
 if ( $wgDBname === 'ndgwiki' ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
