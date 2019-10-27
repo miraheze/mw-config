@@ -299,3 +299,8 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 		'descBaseUrl' => 'https://commonsgyaanipedia.miraheze.org/wiki/File:',
 	];
 }
+
+if ( $wgDBname === 'staffwiki' ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/staffwiki";
+	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+}
