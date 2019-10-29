@@ -1875,6 +1875,19 @@ $wgConf->settings = [
 				'bureaucrat' => true,
 			],
 		],
+		'vnenderbot' => [
+			'templateeditor' => [
+					     'template' => true,
+			],
+			'extendedconfirmed' => [
+					        'extendedconfirmed' => true,
+			],
+			'owner' => [
+				   'template' => true,
+				   'extendedconfirmed' => true,
+				   'owner' => true,
+				],
+		],
 		'+whentheycrywiki' => [
 			'user' => [
 				'edit-create' => true,
@@ -2355,6 +2368,11 @@ $wgConf->settings = [
 			'bureaucrat',
 			'ceo',
 			'co',
+		],
+		'+vnenderbotwik' => [
+			'template',
+			'extendedconfirmed',
+			'owner'
 		],
 	],
 	'wgRestrictionTypes' => [
