@@ -1882,7 +1882,7 @@ $wgConf->settings = [
 			'extendedconfirmed' => [
 					        'extendedconfirmed' => true,
 			],
-			'owner' => [
+			'Owner' => [
 				   'template' => true,
 				   'extendedconfirmed' => true,
 				   'owner' => true,
