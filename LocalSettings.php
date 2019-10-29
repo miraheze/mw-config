@@ -1877,11 +1877,15 @@ $wgConf->settings = [
 		],
 		'vnenderbot' => [
 			'templateeditor' => [
-						'template' => true,
+					     'template' => true,
 			],
 			'extendedconfirmed' => [
-						'extendedconfirmed' => true,
+					        'extendedconfirmed' => true,
 			],
+			'owner' => [
+				   'template' => true,
+				   'extendedconfirmed' => true,
+				],
 		],
 		'+whentheycrywiki' => [
 			'user' => [
