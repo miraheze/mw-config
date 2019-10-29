@@ -90,6 +90,7 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 if ( $wgDBname === 'ciptamediawiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgGenerateThumbnailOnParse = true;
 }
 
 if ( $wgDBname === 'hamzawiki' ) {
@@ -308,4 +309,5 @@ if ( $wgDBname === 'rhinosf1wiki' ) {
 if ( $wgDBname === 'staffwiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/staffwiki";
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgGenerateThumbnailOnParse = true;
 }
