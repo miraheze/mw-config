@@ -1875,7 +1875,7 @@ $wgConf->settings = [
 				'bureaucrat' => true,
 			],
 		],
-		'vnenderbot' => [
+		'vnenderbotwiki' => [
 			'templateeditor' => [
 					     'template' => true,
 			],
