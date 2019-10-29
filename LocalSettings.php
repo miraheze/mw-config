@@ -1885,6 +1885,7 @@ $wgConf->settings = [
 			'owner' => [
 				   'template' => true,
 				   'extendedconfirmed' => true,
+				   'owner' => true,
 				],
 		],
 		'+whentheycrywiki' => [
@@ -2371,6 +2372,7 @@ $wgConf->settings = [
 		'+vnenderbotwik' => [
 			'template',
 			'extendedconfirmed',
+			'owner'
 		],
 	],
 	'wgRestrictionTypes' => [
