@@ -164,7 +164,7 @@ $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/ScratchBlocks/extension.json
-$IP/extensions/Scribunto/Scribunto.php
+$IP/extensions/Scribunto/extension.json
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
 $IP/extensions/SiteScout/extension.json
