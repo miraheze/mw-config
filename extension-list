@@ -205,7 +205,7 @@ $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UserMerge/extension.json
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
-$IP/extensions/Variables/Variables.php
+$IP/extensions/Variables/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
