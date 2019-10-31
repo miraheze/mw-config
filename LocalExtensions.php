@@ -539,11 +539,7 @@ if ( $wmgUseListings ) {
 }
 
 if ( $wmgUseLoopsCombo ) {
-	if ( version_compare( $wgVersion, '1.33', '<=' ) ) {
-		require_once "$IP/extensions/Loops/Loops.php";
-	} else {
-		wfLoadExtension( 'Loops' );
-	}
+	wfLoadExtension( 'Loops' );
 }
 
 if ( $wmgUseMagicNoCache ) {
