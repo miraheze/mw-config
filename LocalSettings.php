@@ -2369,7 +2369,7 @@ $wgConf->settings = [
 			'ceo',
 			'co',
 		],
-		'+vnenderbotwik' => [
+		'+vnenderbotwiki' => [
 			'template',
 			'extendedconfirmed',
 			'owner'
