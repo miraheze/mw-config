@@ -539,8 +539,7 @@ if ( $wmgUseListings ) {
 }
 
 if ( $wmgUseLoopsCombo ) {
-	wfLoadExtension( 'Variables' );
-	require_once "$IP/extensions/Loops/Loops.php";
+	wfLoadExtension( 'Loops' );
 }
 
 if ( $wmgUseMagicNoCache ) {
