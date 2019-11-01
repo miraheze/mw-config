@@ -400,6 +400,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'darkmode' => [
+			'name' => 'DarkMode',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:DarkMode',
+			'var' => 'wmgUseDarkMode',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'description2' => [
 			'name' => 'Description2',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Description2',
