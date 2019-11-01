@@ -1507,17 +1507,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'recentchangeslogfilter' => [
-			'name' => 'RecentChangesLogFilter',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:RecentChangesLogFilter',
-			'var' => 'wmgUseRecentChangesLogFilter',
-			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
-		],
 		'refreshed' => [
 			'name' => 'Refreshed (Skin)',
 			'linkPage' => 'https://mediawiki.org/wiki/Skin:Refreshed',
