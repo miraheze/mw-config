@@ -2556,10 +2556,23 @@ $wgConf->settings = [
 	],
 
 	// Squid (aka Varnish)
+	// Deprecated (1.33)
 	'wgUseSquid' => [
 		'default' => true,
 	],
 	'wgSquidServers' => [
+		'default' => [
+			'107.191.126.23:81', // cp2
+			'128.199.139.216:81', // cp3
+			'81.4.109.133:81', // cp4
+		],
+	],
+
+	// Vanish (MW 1.34+)
+	'wgUseCdn' => [
+		'default' => true,
+	],
+	'wgCdnServers' => [
 		'default' => [
 			'107.191.126.23:81', // cp2
 			'128.199.139.216:81', // cp3
