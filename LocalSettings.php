@@ -1520,6 +1520,7 @@ $wgConf->settings = [
 			'categorytree',
 			'cite',
 			'citethispage',
+			'darkmode',
 			'globaluserpage',
 			'mobilefrontend',
 		],
