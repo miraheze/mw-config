@@ -805,9 +805,6 @@ if ( $wmgUseRefreshed ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Refreshed'] = 'refreshed';
 }
 
-if ( $wmgUseRecentChangesLogFilter ){
-	wfLoadExtension( 'RecentChangesLogFilter' );
-}
 
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );

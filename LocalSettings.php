@@ -926,10 +926,6 @@ $wgConf->settings = [
 	'wmgUseRefreshed' => [
 		'default' => false,
 	],
-	'wmgUseRecentChangesLogFilter' => [ 
-		'default' => false,
-		'test1wiki' => true,
-	],
 	'wmgUseRelatedArticles' => [
 		'default' => false,
 	],
