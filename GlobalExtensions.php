@@ -11,6 +11,7 @@ wfLoadExtensions( [
 	'CookieWarning',
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
+	'DarkMode',
 	'Echo',
 	'GlobalBlocking',
 	'GlobalCssJs',
