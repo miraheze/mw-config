@@ -405,11 +405,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:DarkMode',
 			'var' => 'wmgUseDarkMode',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 		],
 		'description2' => [
 			'name' => 'Description2',
