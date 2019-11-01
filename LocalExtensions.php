@@ -227,6 +227,10 @@ if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
 }
 
+if ( $wmgUseDarkMode ) {
+	wfLoadExtension( 'DarkMode' );
+}
+
 /**
  * This is a global extension, but we define the config here.
  */
