@@ -3096,9 +3096,10 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	];
 }
 
-// Servers accessible by non cache proxies should not have squid config enabled
+// Servers accessible by non cache proxies should not have squid/cdn config enabled
 if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
 	$wgUseSquid = false;
+	$wgUseCdn = false;
 }
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
