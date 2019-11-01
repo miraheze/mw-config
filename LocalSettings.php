@@ -2550,8 +2550,8 @@ $wgConf->settings = [
 		],
 	],
 
-	// Vanish (MW 1.34)
-	'UseCdn' => [
+	// Vanish (MW 1.34+)
+	'wgUseCdn' => [
 		'default' => true,
 	],
 	'wgCdnServers' => [
