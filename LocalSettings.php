@@ -611,7 +611,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgUseDarkMode' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wmgUseDataDump' => [
 		'default' => true,
