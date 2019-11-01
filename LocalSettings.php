@@ -610,6 +610,10 @@ $wgConf->settings = [
 	'wmgUseCSS' => [
 		'default' => false,
 	],
+	'wmgUseDarkMode' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	'wmgUseDataDump' => [
 		'default' => true,
 	],
