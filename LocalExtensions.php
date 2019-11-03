@@ -393,8 +393,10 @@ if ( $wmgUseFlow ) {
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
+		'domain' => $wgServer,
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
+		'restbaseCompat' => false,
 	];
 
 	$wgManageWikiPermissionsAdditionalRights['oversight']['flow-suppress'] = true;
@@ -982,8 +984,10 @@ if ( $wmgUseVisualEditor ) {
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
+		'domain' => $wgServer,
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
+		'restbaseCompat' => false,
 	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
