@@ -399,6 +399,7 @@ $wgConf->settings = [
 		'thelastsovereignwiki' => true,
 		'trollpastawiki' => true,
 		'trollpastauncensoredwiki' => true,
+		'uncyclomirror' => true,
 	],
 	'wgDBadminuser' => [
 		'default' => 'wikiadmin',
