@@ -77,7 +77,6 @@ if ( $wmgUseAutoCreatePage ) {
 	require_once "$IP/extensions/AutoCreatePage/AutoCreatePage.php";
 }
 
-
 if ( $wmgUseBabel ) {
 	wfLoadExtension( 'Babel' );
 }
@@ -137,13 +136,13 @@ if ( $wmgUseCirrusSearch ) {
 	$wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 2;
 	$wgCirrusSearchConnectionAttempts = 3;
 	$wgCirrusSearchMasterTimeout = '5m';
-	
+
 	$wgCirrusSearchShardCount = [ 'content' => 2, 'general' => 2, 'archive' => 2, 'titlesuggest' => 2 ];
 
 	if ( $wmgSearchType ) {
 		$wgSearchType = 'CirrusSearch';
 	}
-	
+
 	if ( $wmgDisableSearchUpdate ) {
 		$wgDisableSearchUpdate = true;
 	} else {
@@ -411,6 +410,10 @@ if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
+}
+
+if ( $wmgUseFontAwesome ) {
+	wfLoadExtension( 'FontAwesome' );
 }
 
 if ( $wmgUseGadgets ) {

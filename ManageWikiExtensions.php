@@ -642,6 +642,18 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'fontawesome' => [
+			'name' => 'FontAwesome',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:FontAwesome',
+			'var' => 'wmgUseFontAwesome',
+			'conflicts' => false,
+			'requires' =>
+				'requires' => [
+					'permissions' => [
+						'managewiki-restricted',
+				],
+			],
+		],
 		'gadgets' => [
 			'name' => 'Gadgets',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Gadgets',

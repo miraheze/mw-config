@@ -686,6 +686,10 @@ $wgConf->settings = [
 	'wmgUseForeground' => [
 		'default' => false,
 	],
+	'wmgUseFontAwesome' => [
+		'default' => false,
+		'test1wiki' => true,
+	],
 	'wmgUseGadgets' => [
 		'default' => false,
 	],
@@ -1327,7 +1331,7 @@ $wgConf->settings = [
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
 	],
-	
+
 	//HideSection
 	'wgHideSectionImages' => [
 		'default' => false,
@@ -2182,7 +2186,7 @@ $wgConf->settings = [
 	'wgPageLanguageUseDB' => [
 		'default' => false,
 	],
-	
+
 	// Used for the PageDisqus extension
 	'wgPageDisqusShortname' => [
 		'default' => null,
@@ -3109,7 +3113,7 @@ if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
 // Disabled on production hosts because it seems to be causing performance issues (how ironic)
-if ( 
+if (
 	isset( $_GET['forceprofile'] )
 	&& $_GET['forceprofile'] == 1
 	&& wfHostname() === 'test1'
