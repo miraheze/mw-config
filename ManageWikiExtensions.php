@@ -648,11 +648,11 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseFontAwesome',
 			'conflicts' => false,
 			'requires' => [
-					'permissions' => [
-						'managewiki-restricted',
-					],
+				'permissions' => [
+					'managewiki-restricted',
 				],
 			],
+		],
 		'gadgets' => [
 			'name' => 'Gadgets',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:Gadgets',
