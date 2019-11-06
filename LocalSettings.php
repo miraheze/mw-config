@@ -1853,6 +1853,10 @@ $wgConf->settings = [
 		'+testwiki' => [
 			'consul' => [
 				'consul' => true,
+				'bureaucrat' => true,
+			],
+			'bureaucrat' => [
+				'bureaucrat' => true,
 			],
 		],
 		'+thesciencearchiveswiki' => [
