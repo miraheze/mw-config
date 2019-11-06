@@ -647,7 +647,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:FontAwesome',
 			'var' => 'wmgUseFontAwesome',
 			'conflicts' => false,
-			'requires' =>
+			'requires' => [
 				'requires' => [
 					'permissions' => [
 						'managewiki-restricted',
