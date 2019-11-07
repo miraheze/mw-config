@@ -688,7 +688,6 @@ $wgConf->settings = [
 	],
 	'wmgUseFontAwesome' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUseGadgets' => [
 		'default' => false,
