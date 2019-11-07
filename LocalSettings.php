@@ -3105,7 +3105,8 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 }
 
 // Servers accessible by non cache proxies should not have squid/cdn config enabled
-if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
+if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ||
+     !preg_match( "/^lizardfs6*/", wfHostname() ) ) {
 	$wgUseSquid = false;
 	$wgUseCdn = false;
 }
