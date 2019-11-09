@@ -3,6 +3,7 @@ require_once "$IP/extensions/MobileDetect/MobileDetect.php";
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
+	'Babel',
 	'BetaFeatures',
 	'CentralAuth',
 	'CentralNotice',
