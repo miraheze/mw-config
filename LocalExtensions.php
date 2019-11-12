@@ -761,6 +761,10 @@ if ( $wmgUsePopups ) {
 	wfLoadExtension( 'TextExtracts' );
 }
 
+if ( $wmgUsePreloader ) {
+	wfLoadExtension( 'Preloader' );
+}
+
 if ( $wmgUseProofreadPage ) {
 	wfLoadExtension( 'ProofreadPage' );
 

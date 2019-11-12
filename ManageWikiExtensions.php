@@ -119,12 +119,12 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [
-				'permissions' => [		
- 					'reviewer' => [		
- 						'permissions' => [		
- 							'change-rating',		
- 						],		
- 					],		
+				'permissions' => [
+ 					'reviewer' => [
+ 						'permissions' => [
+ 							'change-rating',
+ 						],
+ 					],
  				],
 				'sql' => [
 					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
@@ -1405,6 +1405,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'preloader' => [
+			'name' => 'Preloader',
+			'linkPage' => 'https://mediawiki.org/wiki/Extension:Preloader',
+			'var' => 'wmgUsePreloader',
+			'conflicts' => false,
+			'requires' => [
+				'premissions' => [
+					 'managewiki-restricted'
+					],
+				],
+			],
 		'proofreadpages' => [
 			'name' => 'Proofread Pages',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:ProofreadPage',

@@ -487,7 +487,12 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
-
+	// Preloader
+	'wgPreloaderSource' => [
+		'default' => [
+ 			0 => 'Template:Boilerplate',
+ 		],
+ 	],
 	// Extensions and Skins
 	'wmgUse3D' => [
 		'default' => false,
@@ -902,6 +907,10 @@ $wgConf->settings = [
 	'wmgUsePortableInfobox' => [
 		'default' => false,
 	],
+	'wmgUsePreloader' => [
+		'default' => false,
+		'test1wiki' => true,
+	]
 	'wmgUseProofreadPage' => [
 		'default' => false,
 	],
