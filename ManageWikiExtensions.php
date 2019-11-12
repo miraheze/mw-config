@@ -1410,12 +1410,13 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://mediawiki.org/wiki/Extension:Preloader',
 			'var' => 'wmgUsePreloader',
 			'conflicts' => false,
+			'install' => [],
 			'requires' => [
-				'premissions' => [
-					 'managewiki-restricted'
-					],
+				'permissions' => [
+					'managewiki-restricted',
 				],
 			],
+		],
 		'proofreadpages' => [
 			'name' => 'Proofread Pages',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:ProofreadPage',
