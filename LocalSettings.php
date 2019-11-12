@@ -909,7 +909,6 @@ $wgConf->settings = [
 	],
 	'wmgUsePreloader' => [
 		'default' => false,
-		'test1wiki' => true,
 	],
 	'wmgUseProofreadPage' => [
 		'default' => false,
