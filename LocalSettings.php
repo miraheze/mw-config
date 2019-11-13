@@ -3014,7 +3014,7 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 // Temporarily testing a new file storage system
-if ( $wgDBname === 'allthetropeswiki' || $wgDBname === 'metawiki' || $wgDBname === 'testwiki' || $wgDBname === 'unmusicfestwiki' || $wgDBname === 'cwarswiki' || $wgDBname === 'fapceowiki' || $wgDBname === 'nonciclopediawiki' ) {
+if ( $wgDBname === 'allthetropeswiki' || $wgDBname === 'metawiki' || $wgDBname === 'testwiki' || $wgDBname === 'unmusicfestwiki' || $wgDBname === 'cwarswiki' || $wgDBname === 'fapceowiki' || $wgDBname === 'nonciclopediawiki' || $wgDBname === 'sidemwiki' ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 }
