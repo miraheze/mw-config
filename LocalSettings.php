@@ -3014,7 +3014,7 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 // Temporarily testing a new file storage system
-if ( preg_match( '/^a/', $wgDBname ||
+if ( preg_match( '/^a/', $wgDBname ) ||
     $wgDBname === 'metawiki' ||
     $wgDBname === 'testwiki' ||
     $wgDBname === 'unmusicfestwiki' ||
