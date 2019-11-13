@@ -3023,7 +3023,8 @@ if ( $wgDBname === 'allthetropeswiki' ||
     $wgDBname === 'nonciclopediawiki' ||
     $wgDBname === 'sidemwiki' ||
     $wgDBname === 'browndustwiki' ||
-    $wgDBname === 'breedersofthenephelymwiki'
+    $wgDBname === 'breedersofthenephelymwiki' ||
+    $wgDBname === 'anotheredenwiki'
 ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
