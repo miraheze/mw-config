@@ -3023,7 +3023,6 @@ if ( substr( $wgDBname, 0, 1 ) === 'a' ||
     $wgDBname === 'metawiki' ||
     $wgDBname === 'testwiki' ||
     $wgDBname === 'unmusicfestwiki' ||
-    $wgDBname === 'fapceowiki' ||
     $wgDBname === 'nonciclopediawiki' ||
     $wgDBname === 'sidemwiki'
 ) {
