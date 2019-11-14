@@ -3016,10 +3016,10 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 // Temporarily testing a new file storage system
 if ( substr( $wgDBname, 0, 1 ) === 'a' ||
     substr( $wgDBname, 0, 1 ) === 'b' ||
+    substr( $wgDBname, 0, 1 ) === 'c' ||
     $wgDBname === 'metawiki' ||
     $wgDBname === 'testwiki' ||
     $wgDBname === 'unmusicfestwiki' ||
-    $wgDBname === 'cwarswiki' ||
     $wgDBname === 'fapceowiki' ||
     $wgDBname === 'nonciclopediawiki' ||
     $wgDBname === 'sidemwiki'
