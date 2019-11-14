@@ -3015,15 +3015,14 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 // Temporarily testing a new file storage system
 if ( substr( $wgDBname, 0, 1 ) === 'a' ||
+    substr( $wgDBname, 0, 1 ) === 'b' ||
     $wgDBname === 'metawiki' ||
     $wgDBname === 'testwiki' ||
     $wgDBname === 'unmusicfestwiki' ||
     $wgDBname === 'cwarswiki' ||
     $wgDBname === 'fapceowiki' ||
     $wgDBname === 'nonciclopediawiki' ||
-    $wgDBname === 'sidemwiki' ||
-    $wgDBname === 'browndustwiki' ||
-    $wgDBname === 'breedersofthenephelymwiki'
+    $wgDBname === 'sidemwiki'
 ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
