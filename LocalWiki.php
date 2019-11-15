@@ -290,7 +290,7 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static/commonsgyaanipediawiki',
+		'directory' => '/mnt/mediawiki-static-new/commonsgyaanipediawiki',
 		'url' => 'https://static.miraheze.org/commonsgyaanipediawiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
