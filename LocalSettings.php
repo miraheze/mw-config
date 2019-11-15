@@ -3116,7 +3116,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared-commons',
-		'directory' => '/mnt/mediawiki-static/commonswiki',
+		'directory' => '/mnt/mediawiki-static-new/commonswiki',
 		'url' => 'https://static.miraheze.org/commonswiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
