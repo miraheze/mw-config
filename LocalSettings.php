@@ -3026,10 +3026,10 @@ if ( substr( $wgDBname, 0, 1 ) === 'a' ||
     substr( $wgDBname, 0, 1 ) === 'j' ||
     substr( $wgDBname, 0, 1 ) === 'k' ||
     substr( $wgDBname, 0, 1 ) === 'l' ||
+    substr( $wgDBname, 0, 1 ) === 'n' ||
     $wgDBname === 'metawiki' ||
     $wgDBname === 'testwiki' ||
     $wgDBname === 'unmusicfestwiki' ||
-    $wgDBname === 'nonciclopediawiki' ||
     $wgDBname === 'sidemwiki'
 ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
