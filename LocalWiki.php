@@ -304,6 +304,7 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 if ( $wgDBname === 'rhinosf1wiki' ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/rhinosf1wiki";
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgGenerateThumbnailOnParse = true;
 }
 
 if ( $wgDBname === 'staffwiki' ) {
