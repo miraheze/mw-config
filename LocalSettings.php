@@ -3031,6 +3031,7 @@ if ( substr( $wgDBname, 0, 1 ) === 'a' ||
     substr( $wgDBname, 0, 1 ) === 'o' ||
     substr( $wgDBname, 0, 1 ) === 'p' ||
     substr( $wgDBname, 0, 1 ) === 'q' ||
+    substr( $wgDBname, 0, 1 ) === 'r' ||
     $wgDBname === 'testwiki' ||
     $wgDBname === 'unmusicfestwiki' ||
     $wgDBname === 'sidemwiki'
