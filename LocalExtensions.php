@@ -236,7 +236,7 @@ if ( $wmgUseDarkMode ) {
 if ( $wmgUseDataDump ) {
 	wfLoadExtension( 'DataDump' );
 
-	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/${wgDBname}/";
+	$wgDataDumpDirectory = "/mnt/mediawiki-static-new/private/dumps/${wgDBname}/";
 
 	$wgDataDump = [
 		'xml' => [
@@ -267,7 +267,7 @@ if ( $wmgUseDataDump ) {
 				'options' => [
 					'-r',
 					$wgDataDumpDirectory . '${filename}',
-					"/mnt/mediawiki-static/${wgDBname}/"
+					"/mnt/mediawiki-static-new/${wgDBname}/"
 				],
 			],
 			'limit' => 1,
