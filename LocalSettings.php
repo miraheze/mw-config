@@ -3010,7 +3010,7 @@ foreach ( $wmgInactiveDatabasesList as $database ) {
 }
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
+$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
@@ -3098,7 +3098,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared-commons',
-		'directory' => '/mnt/mediawiki-static-new/commonswiki',
+		'directory' => '/mnt/mediawiki-static/commonswiki',
 		'url' => 'https://static.miraheze.org/commonswiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
