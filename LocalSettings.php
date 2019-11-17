@@ -3034,7 +3034,7 @@ if ( substr( $wgDBname, 0, 1 ) !== 'a' ||
     substr( $wgDBname, 0, 1 ) !== 'r' ||
     substr( $wgDBname, 0, 1 ) !== 's' ||
     substr( $wgDBname, 0, 1 ) !== 't' ||
-    $wgDBname !== 'unmusicfestwiki'
+    substr( $wgDBname, 0, 1 ) !== 'u'
 ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
