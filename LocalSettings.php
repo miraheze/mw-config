@@ -3014,26 +3014,26 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 
 // Temporarily testing a new file storage system
-if ( substr( $wgDBname, 0, 1 ) !== 'a' ||
-    substr( $wgDBname, 0, 1 ) !== 'b' ||
-    substr( $wgDBname, 0, 1 ) !== 'c' ||
-    substr( $wgDBname, 0, 1 ) !== 'd' ||
-    substr( $wgDBname, 0, 1 ) !== 'e' ||
-    substr( $wgDBname, 0, 1 ) !== 'f' ||
-    substr( $wgDBname, 0, 1 ) !== 'g' ||
-    substr( $wgDBname, 0, 1 ) !== 'h' ||
-    substr( $wgDBname, 0, 1 ) !== 'i' ||
-    substr( $wgDBname, 0, 1 ) !== 'j' ||
-    substr( $wgDBname, 0, 1 ) !== 'k' ||
-    substr( $wgDBname, 0, 1 ) !== 'l' ||
-    substr( $wgDBname, 0, 1 ) !== 'n' ||
-    substr( $wgDBname, 0, 1 ) !== 'm' ||
-    substr( $wgDBname, 0, 1 ) !== 'o' ||
-    substr( $wgDBname, 0, 1 ) !== 'p' ||
-    substr( $wgDBname, 0, 1 ) !== 'q' ||
-    substr( $wgDBname, 0, 1 ) !== 'r' ||
-    substr( $wgDBname, 0, 1 ) !== 's' ||
-    substr( $wgDBname, 0, 1 ) !== 't' ||
+if ( substr( $wgDBname, 0, 1 ) !== 'a' &&
+    substr( $wgDBname, 0, 1 ) !== 'b' &&
+    substr( $wgDBname, 0, 1 ) !== 'c' &&
+    substr( $wgDBname, 0, 1 ) !== 'd' &&
+    substr( $wgDBname, 0, 1 ) !== 'e' &&
+    substr( $wgDBname, 0, 1 ) !== 'f' &&
+    substr( $wgDBname, 0, 1 ) !== 'g' &&
+    substr( $wgDBname, 0, 1 ) !== 'h' &&
+    substr( $wgDBname, 0, 1 ) !== 'i' &&
+    substr( $wgDBname, 0, 1 ) !== 'j' &&
+    substr( $wgDBname, 0, 1 ) !== 'k' &&
+    substr( $wgDBname, 0, 1 ) !== 'l' &&
+    substr( $wgDBname, 0, 1 ) !== 'n' &&
+    substr( $wgDBname, 0, 1 ) !== 'm' &&
+    substr( $wgDBname, 0, 1 ) !== 'o' &&
+    substr( $wgDBname, 0, 1 ) !== 'p' &&
+    substr( $wgDBname, 0, 1 ) !== 'q' &&
+    substr( $wgDBname, 0, 1 ) !== 'r' &&
+    substr( $wgDBname, 0, 1 ) !== 's' &&
+    substr( $wgDBname, 0, 1 ) !== 't' &&
     substr( $wgDBname, 0, 1 ) !== 'u'
 ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
