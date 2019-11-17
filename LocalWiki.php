@@ -88,7 +88,7 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 }
 
 if ( $wgDBname === 'ciptamediawiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static-new/private/ciptamediawiki";
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
@@ -131,7 +131,7 @@ if ( $wgDBname === 'nbdbwiki' ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared-nenawikiwiki',
-		'directory' => '/mnt/mediawiki-static-new/nonbinarywiki',
+		'directory' => '/mnt/mediawiki-static/nonbinarywiki',
 		'url' => 'https://static.miraheze.org/nonbinarywiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
@@ -149,7 +149,7 @@ if ( $wgDBname === 'ndgwiki' ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared-nenawikiwiki',
-		'directory' => '/mnt/mediawiki-static-new/nenawikiwiki',
+		'directory' => '/mnt/mediawiki-static/nenawikiwiki',
 		'url' => 'https://static.miraheze.org/nenawikiwiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
@@ -285,7 +285,7 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static-new/commonsgyaanipediawiki',
+		'directory' => '/mnt/mediawiki-static/commonsgyaanipediawiki',
 		'url' => 'https://static.miraheze.org/commonsgyaanipediawiki',
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
@@ -297,13 +297,13 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 }
 
 if ( $wgDBname === 'rhinosf1wiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static-new/private/rhinosf1wiki";
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/rhinosf1wiki";
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
 
 if ( $wgDBname === 'staffwiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static-new/private/staffwiki";
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/staffwiki";
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
