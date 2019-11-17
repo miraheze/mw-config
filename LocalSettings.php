@@ -3037,7 +3037,8 @@ if ( substr( $wgDBname, 0, 1 ) !== 'a' &&
     substr( $wgDBname, 0, 1 ) !== 'u' &&
     substr( $wgDBname, 0, 1 ) !== 'v' &&
     substr( $wgDBname, 0, 1 ) !== 'w' &&
-    substr( $wgDBname, 0, 1 ) !== 'x'
+    substr( $wgDBname, 0, 1 ) !== 'x' &&
+    substr( $wgDBname, 0, 1 ) !== 'y'
 ) {
 	$wgUploadPath = "https://static-temp.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
