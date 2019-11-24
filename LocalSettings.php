@@ -3140,3 +3140,8 @@ require_once "/srv/mediawiki/config/LocalWiki.php";
 if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once "/srv/mediawiki/config/ExtensionMessageFiles.php";
 }
+
+$wgRestrictionLevels [] = 'steward';
+$wgGroupPermissions ['steward']['steward'] = true;
+
+}
