@@ -146,16 +146,16 @@ $wgConf->settings = [
 		'metawiki' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
-		'default' => "//meta.miraheze.org/w/index.php/Special:BannerLoader",
+		'default' => "https://meta.miraheze.org/w/index.php/Special:BannerLoader",
 	],
 	'wgCentralBannerRecorder' => [
-		'default' => "//meta.miraheze.org/w/index.php/Special:RecordImpression",
+		'default' => "https://meta.miraheze.org/w/index.php/Special:RecordImpression",
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
 	],
 	'wgCentralHost' => [
-		'default' => "//meta.miraheze.org",
+		'default' => "https://meta.miraheze.org",
 	],
 	'wgNoticeProject' => [
 		'default' => 'all',
@@ -1449,8 +1449,8 @@ $wgConf->settings = [
 	// License
 	'wgRightsIcon' => [
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
-		'jadtechwiki' => "//$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
-		'revitwiki' => "//$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
+		'jadtechwiki' => "https://$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
+		'revitwiki' => "https://$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 	],
 	'wgRightsPage' => [
 		'default' => '',
@@ -2616,7 +2616,7 @@ $wgConf->settings = [
 		'default' => '/favicon.ico',
 	],
 	'wgLogo' => [
-		'default' => "//$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'default' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 	],
 
 	// Timezone
