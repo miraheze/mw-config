@@ -340,10 +340,6 @@ if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
 }
 
-if ( $wmgUseEducationProgram ) {
-	wfLoadExtension( 'EducationProgram' );
-}
-
 if ( $wmgUseElectronPdfService ) {
 	wfLoadExtension( 'ElectronPdfService' );
 }
