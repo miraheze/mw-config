@@ -673,9 +673,6 @@ $wgConf->settings = [
 	'wmgUseEditSubpages' => [
 		'default' => false,
 	],
-	'wmgUseEducationProgram' => [
-		'default' => false,
-	],
 	'wmgUseElectronPdfService' => [
 		'default' => false,
 	],
