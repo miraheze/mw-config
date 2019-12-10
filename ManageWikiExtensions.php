@@ -490,18 +490,6 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [],
 		],
-		'educationprogram' => [
-			'name' => 'Education Program',
-			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:EducationProgram',
-			'var' => 'wmgUseEducationProgram',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [
-				'sql' => [
-					'ep_students' => "$IP/extensions/EducationProgram/sql/EducationProgram.sql"
-				],
-			],
-		],
 		'electronpdfservice' => [
 			'name' => 'Electron PDF Service',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:ElectronPdfService',
