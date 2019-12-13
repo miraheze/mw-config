@@ -2305,9 +2305,11 @@ $wgConf->settings = [
 	],
 
 	// Restriction types
-	'+wgRestrictionLevels' => [
+	'wgRestrictionLevels' => [
 		'default' => [
 			'user',
+			'autoconfirmed',
+			'sysop'
 		],
 		'+bigforestwiki' => [
 			'editvoter',
@@ -2399,11 +2401,12 @@ $wgConf->settings = [
 	],
 	'wgRestrictionTypes' => [
 		'default' => [
+			'create',
 			'edit',
 			'move',
-			'create',
 			'upload',
 			'delete',
+			'protect'
 		],
 	],
 
