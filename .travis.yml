@@ -1,6 +1,5 @@
-dist: xenial
-
 language: php
+dist: bionic
 
 php:
   - 7.3
