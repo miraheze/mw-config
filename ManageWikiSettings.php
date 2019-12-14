@@ -377,12 +377,12 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'list-multi',
 		'options' => [
-			'1' => 1,
-			'3' => 3,
-			'7' => 7,
-			'14' => 14,
-			'30' => 30,
-			'180' => 180,
+			'1 (86400 seconds)' => 1,
+			'3 (259200 seconds)' => 3,
+			'7 (604800 seconds)' => 7,
+			'14 (1209600 seconds)' => 14,
+			'30 (2592000 seconds)' => 30,
+			'180 (15552000 seconds)' => 180,
 		],
 		'overridedefault' => [
 			1,
