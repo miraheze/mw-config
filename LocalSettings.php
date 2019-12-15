@@ -2307,6 +2307,7 @@ $wgConf->settings = [
 	// Restriction types
 	'wgRestrictionLevels' => [
 		'default' => [
+			'',
 			'user',
 			'autoconfirmed',
 			'sysop'
