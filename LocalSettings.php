@@ -2305,7 +2305,7 @@ $wgConf->settings = [
 	],
 
 	// Restriction types
-	'wgRestrictionLevels' => [
+	'+wgRestrictionLevels' => [
 		'default' => [
 			'',
 			'user',
