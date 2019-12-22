@@ -227,20 +227,6 @@ $wgManageWikiSettings = [
 		'section' => 'beta',
 		'help' => 'This enables Popups as a beta feature, rather than showing it to all users.',
 	],
-	'wgPopupsGateway' => [
-		'name' => 'Popups Gateway',
-		'from' => 'popups',
-		'restricted' => false,
-		'type' => 'list',
-		'options' => [
-			'MediaWiki API Plain' => 'mwApiPlain',
-			'RESTBase Plain' => 'restbasePlain',
-			'RESTBase HTML' => 'restbaseHTML',
-		],
-		'overridedefault' => 'mwApiPlain',
-		'section' => 'beta',
-		'help' => 'This changes the gateway to use when fetching Popups data.',
-	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'name' => 'Enable VisualEditor Diff Page Beta Feature',
 		'from' => 'mediawiki',
