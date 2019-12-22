@@ -409,7 +409,7 @@ $wgConf->settings = [
 	],
 
 	'wgReadOnly' => [
-		'default' => false,
+		'default' => 'MediaWiki 1.34 upgrade in progress',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
