@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will upgrading to MediaWiki 1.34 at 21:38 UTC! Please save your edits 5 minutes before.</td>
+			<td>Miraheze will be upgrading to MediaWiki 1.34 at 21:38 UTC! Please save your edits 5 minutes before.</td>
 			</tr></tbody></table>
 EOF;
 
