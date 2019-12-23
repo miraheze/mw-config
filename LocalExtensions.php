@@ -38,6 +38,11 @@ if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
+	
+	$wgApexLogo = [
+		'1x' => $wgLogo,
+		'2x' => $wgLogo,
+	];
 }
 
 if ( $wmgUseApprovedRevs ) {
