@@ -282,7 +282,7 @@ $wgConf->settings = [
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
 			"$IP/extensions/GlobalBlocking/sql/globalblocks.sql",
-			"$IP/extensions/OAuth/chema/mysql/OAuth.sql",
+			"$IP/extensions/OAuth/schema/mysql/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/Translate/sql/revtag.sql",
 			"$IP/extensions/Translate/sql/translate_groupreviews.sql",
