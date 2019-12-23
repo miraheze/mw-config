@@ -348,6 +348,17 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
 	],
+	'wgMaxCredits' => [
+		'name' => 'Editing attribution',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => -1,
+		'maxint' => 0,
+		'overridedefault' => 0,
+		'section' => 'edit',
+		'help' => 'Set this to the number of authors that you want to be credited below an article text (in the footer).',
+	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
 		'from' => 'mediawiki',
