@@ -487,6 +487,15 @@ $wgConf->settings = [
 	'wmgSearchType' => [
 		'default' => false,
 	],
+        
+	// ExtraSignatureNamespaces
+	$wgManageWikiNamespacesAdditional['wgExtraSignatureNamespaces'] = [
+ 		'name' => 'Enable gExtraSignatureNamespaces in this namespace?',
+		'main' => false,
+		'talk' => true,
+		'blacklisted' => [],
+	];
+}
 
 	// Preloader
 	'wgPreloaderSource' => [
