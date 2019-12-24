@@ -1,7 +1,7 @@
 <?php
 $wgObjectCaches['redis'] = [
 	'class' => 'RedisBagOStuff',
-	'servers' => [ '81.4.127.174:6379' ],
+	'servers' => [ '127.0.0.1:22121' ],
 	'password' => $wmgRedisPassword,
 	'persistent' => true,
 ];
@@ -21,7 +21,7 @@ $wgLanguageConverterCacheType = CACHE_DB;
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => '81.4.127.174:6379',
+	'redisServer' => '127.0.0.1:22121',
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
@@ -33,7 +33,7 @@ $wgJobTypeConf['default'] = [
 
 $wgJobQueueAggregator = [
 	'class' => 'JobQueueAggregatorRedis',
-	'redisServers' => [ '81.4.127.174:6379', '81.4.127.174:6379' ], // fake misc2 as fallback
+	'redisServers' => [ '127.0.0.1:22121', '127.0.0.1:22121' ], // fake misc2 as fallback
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
