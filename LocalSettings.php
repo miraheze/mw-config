@@ -446,6 +446,11 @@ $wgConf->settings = [
 	'wgDjvuTxt' => [
 		'default' => '/usr/bin/djvutxt',
 	],
+	
+	// TimedMediaHandler config
+	'wgFFmpegLocation' => [
+		'default' => '/usr/bin/ffmpeg',
+	],
 
 	// ParserFunctions
 	'wgPFEnableStringFunctions' => [
