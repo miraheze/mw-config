@@ -505,13 +505,6 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
-		'eventlogging' => [
-			'name' => 'EventLogging',
-			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:EventLogging',
-			'var' => 'wmgUseEventLogging',
-			'conflicts' => false,
-			'requires' => [],
-		],
 		'fancyboxthumbs' => [
 			'name' => 'Fancy Box Thumbs',
 			'linkPage' => 'https://mediawiki.org/wiki/Special:MyLanguage/Extension:FancyBoxThumbs',

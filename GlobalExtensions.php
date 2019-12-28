@@ -12,6 +12,8 @@ wfLoadExtensions( [
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'Echo',
+	// Required by CentralNotice
+	'EventLogging',
 	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalPreferences',
