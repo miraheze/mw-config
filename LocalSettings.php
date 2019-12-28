@@ -685,9 +685,6 @@ $wgConf->settings = [
 	'wmgUseErudite' => [
 		'default' => false,
 	],
-	'wmgUseEventLogging' => [
-		'default' => false,
-	],
 	'wmgUseFancyBoxThumbs' => [
 		'default' => false,
 	],
