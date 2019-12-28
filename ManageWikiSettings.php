@@ -70,7 +70,7 @@ $wgManageWikiSettings = [
 		'maxint' => 315360000,
 		'overridedefault' => 86400,
 		'section' => 'anti-spam',
-		'help' => 'Number of seconds before autoblock entries expire. Minimum value allowed is 0 where as maximum is 10 years (315360000).',
+		'help' => 'Number of seconds before autoblock entries expire. Minimum value allowed: 0, default: 1 day (86400), maximum: 10 years (315360000).',
 	],
 	'wgBlockAllowsUTEdit' => [
 		'name' => 'Allows blocking users to restrict talk page access',
