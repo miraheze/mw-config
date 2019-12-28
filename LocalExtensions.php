@@ -355,12 +355,6 @@ if ( $wmgUseErudite ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Erudite'] = 'erudite';
 }
 
-if ( $wmgUseEventLogging ) {
-	wfLoadExtension( 'EventLogging' );
-	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
-	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
-}
-
 if ( $wmgUseFancyBoxThumbs ) {
 	require_once "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php";
 }
@@ -446,10 +440,7 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 
 	// Required deps of GettingStarted
-	wfLoadExtension( 'EventLogging' );
 	wfLoadExtension( 'GuidedTour' );
-	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
-	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
 }
 
 if ( $wmgUseGlobalUserPage ) {
