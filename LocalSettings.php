@@ -1994,7 +1994,7 @@ $wgConf->settings = [
 		'default' => [
 			'checkuser',
 			'oversight',
-			'steward'
+			'steward',
 			'staff',
 		],
 	],
