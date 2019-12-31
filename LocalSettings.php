@@ -1953,6 +1953,7 @@ $wgConf->settings = [
 				'createwiki',
 				'editincidents',
 				'editothersprofiles',
+				'editothersprofiles-private',
 				'flow-suppress',
 				'globalblock',
 				'globalblock-exempt',
@@ -1994,6 +1995,7 @@ $wgConf->settings = [
 			'checkuser',
 			'oversight',
 			'steward'
+			'staff',
 		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
