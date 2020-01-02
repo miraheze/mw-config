@@ -3001,7 +3001,7 @@ foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
 		$wgDBname = $name;
 		// There is an issue where setting it staticly (e.g *.m.*) would not generate
 		// a mobile link. Workaround this by using %h0.m.%h1.%h2.
-		if ( preg_match( '/^(.+)\.m\.(.+)$/', $mobileDomain, $matches ) ) {
+		if ( $mobileDomain && preg_match( '/^(.+)\.m\.(.+)$/', $mobileDomain, $matches ) ) {
 			$middleMobile = '%h0.m.%h1.%h2';
 		}
 	}
