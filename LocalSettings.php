@@ -2991,8 +2991,8 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 }
 
 foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
-	$mobileDomain = isset( $wgConf->settings['wgMobileUrlTemplate'][$name] )
-		&& $wgConf->settings['wgMobileUrlTemplate'][$name];
+	$mobileDomain = isset( $wgConf->settings['wgMobileUrlTemplate'][$name] ) ?
+		$wgConf->settings['wgMobileUrlTemplate'][$name] : false;
 	if ( $val === 'https://' . $wmgHostname || $mobileDomain === $wmgHostname ) {
 		$wgDBname = $name;
 	}
