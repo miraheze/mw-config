@@ -2034,6 +2034,9 @@ $wgConf->settings = [
 	'wgMatomoAnalyticsGlobalID' => [
 		'default' => 1,
 	],
+	'wgMatomoAnalyticsDisableCookie' => [
+		'default' => true,
+	],
 
 	// MediaWikiChat settings
 	'wgChatLinkUsernames' => [
