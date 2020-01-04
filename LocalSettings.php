@@ -2082,7 +2082,7 @@ $wgConf->settings = [
 
 	'wgMinervaEnableSiteNotice' => [
 		'default' => true,
-	]
+	],
 
 	// miraheze specific config
 	'wgServicesRepo' => [
