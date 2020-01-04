@@ -1340,7 +1340,7 @@ $wgManageWikiSettings = [
 	],
 	'wgMinervaEnableSiteNotice ' => [
 		'name' => 'Minerva Sitenotice',
-		'from' => 'minerva',
+		'from' => 'mobilefrontend',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
