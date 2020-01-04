@@ -1190,6 +1190,7 @@ $wgManageWikiSettings = [
 			'py' => 'py',
 			'rar' => 'rar',
 			'rtf' => 'rtf',
+			'sfnt' => 'sfnt',
 			'sh' => 'sh',
 			'smc' => 'smc',
 			'spc' => 'spc',
