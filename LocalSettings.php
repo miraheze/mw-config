@@ -2080,6 +2080,10 @@ $wgConf->settings = [
 		],
 	],
 
+	'wgMinervaEnableSiteNotice' => [
+		'default' => true,
+	],
+
 	// miraheze specific config
 	'wgServicesRepo' => [
 		'default' => '/srv/services/services',
