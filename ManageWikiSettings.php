@@ -357,7 +357,16 @@ $wgManageWikiSettings = [
 		'maxint' => 0,
 		'overridedefault' => 0,
 		'section' => 'edit',
-		'help' => 'Set this to the number of authors that you want to be credited below an article text (in the footer).',
+		'help' => 'Number of editors to attribute.',
+	],
+	'wgShowCreditsIfMax' => [
+		'name' => 'Editing attribution',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'integer',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Show more authors.',
 	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
