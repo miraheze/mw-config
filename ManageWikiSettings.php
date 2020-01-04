@@ -1338,7 +1338,7 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
 	],
-	'wgMinervaEnableSiteNotice ' => [
+	'wgMinervaEnableSiteNotice' => [
 		'name' => 'Minerva Sitenotice',
 		'from' => 'mobilefrontend',
 		'restricted' => false,
