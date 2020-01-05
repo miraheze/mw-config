@@ -305,7 +305,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'collection' => [
-			'name' => 'Collection/Electron (PDF)',
+			'name' => 'Collection + Electron (PDF)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Collection',
 			'var' => 'wmgUseCollection',
 			'conflicts' => false,
