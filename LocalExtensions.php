@@ -345,10 +345,6 @@ if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
 }
 
-if ( $wmgUseElectronPdfService ) {
-	wfLoadExtension( 'ElectronPdfService' );
-}
-
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 
