@@ -165,7 +165,7 @@ if ( $wmgUseCiteThisPage ) {
 
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
-
+wmgUseCollection
 	$wgCitoidFullRestbaseURL = "https://{$wmgHostname}/api/rest_";
 }
 
@@ -343,10 +343,6 @@ if ( $wmgUseEditcount ) {
 
 if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
-}
-
-if ( $wmgUseElectronPdfService ) {
-	wfLoadExtension( 'ElectronPdfService' );
 }
 
 if ( $wmgUseErudite ) {
