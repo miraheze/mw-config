@@ -907,6 +907,15 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Opts your wiki out of global Miraheze notices, only showing important notices.',
 	],
+	'wgMinervaEnableSiteNotice' => [
+		'name' => 'Minerva Sitenotice',
+		'from' => 'mobilefrontend',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Display the Sitenotice on the Minerva skin.',
+	],
 	'wgModerationNotificationEnable' => [
 		'name' => 'Moderation Notification Enable',
 		'from' => 'moderation',
@@ -1337,15 +1346,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
-	],
-	'wgMinervaEnableSiteNotice' => [
-		'name' => 'Minerva Sitenotice',
-		'from' => 'mobilefrontend',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Display the Sitenotice on the Minerva skin.',
 	],
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
