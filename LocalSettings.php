@@ -2081,7 +2081,7 @@ $wgConf->settings = [
 	],
 
 	'wgMinervaEnableSiteNotice' => [
-		'default' => false,
+		'default' => true,
 	],
 
 	// miraheze specific config
