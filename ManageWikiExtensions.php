@@ -305,15 +305,11 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'collection' => [
-			'name' => 'Collection (PDF)',
+			'name' => 'Collection/Electron (PDF)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Collection',
 			'var' => 'wmgUseCollection',
 			'conflicts' => false,
-			'requires' => [
-				'extensions' => [
-					'electronpdfservice',
-				],
-			],
+			'requires' => [],
 		],
 		'comments' => [
 			'name' => 'Comments',
@@ -489,13 +485,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [],
-		],
-		'electronpdfservice' => [
-			'name' => 'Electron PDF Service',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ElectronPdfService',
-			'var' => 'wmgUseElectronPDFService',
-			'conflicts' => false,
-			'requires' => [],
 		],
 		'erudite' => [
 			'name' => 'Erudite (Skin)',
