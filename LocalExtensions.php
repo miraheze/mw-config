@@ -165,7 +165,7 @@ if ( $wmgUseCiteThisPage ) {
 
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
-wmgUseCollection
+
 	$wgCitoidFullRestbaseURL = "https://{$wmgHostname}/api/rest_";
 }
 
