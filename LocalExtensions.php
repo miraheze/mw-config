@@ -609,14 +609,6 @@ if ( $wmgUseMobileFrontend ) {
 	};
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
-	
-	if ( $wmgMobileSiteNotice ) {
-		$wgMinervaEnableSiteNotice = true;
-		$wgMFEnableSiteNotice = true;
-	} else {
-		$wgMinervaEnableSiteNotice = false;
-		$wgMFEnableSiteNotice = false;
-	}
 }
 
 if ( $wmgUseModeration ) {

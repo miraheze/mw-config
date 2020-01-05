@@ -2080,7 +2080,7 @@ $wgConf->settings = [
 		],
 	],
 
-	'wmgMobileSiteNotice' => [
+	'wgMinervaEnableSiteNotice' => [
 		'default' => false,
 	],
 
