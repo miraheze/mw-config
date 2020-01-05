@@ -934,16 +934,7 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown. ',
 	],
-	'wmgMobileSiteNotice' => [
-		'name' => 'Mobile Sitenotice',
-		'from' => 'mobilefrontend',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'notifications',
-		'help' => 'Display the Sitenotice on the Minerva skin (For Mobiles).',
-	],
-
+	
 	// Recent changes
 	'wgRCMaxAge' => [
 		'name' => 'RecentChanges max age',
@@ -1346,6 +1337,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
+	],
+	'wgMinervaEnableSiteNotice' => [
+		'name' => 'Minerva Sitenotice',
+		'from' => 'mobilefrontend',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Display the Sitenotice on the Minerva skin.',
 	],
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
