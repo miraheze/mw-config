@@ -1344,7 +1344,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'notifications',
 		'help' => 'Display the Sitenotice on the Minerva skin.',
 	],
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
