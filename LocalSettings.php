@@ -1423,6 +1423,14 @@ $wgConf->settings = [
 			'tlh',
 			'zombie',
 		],
+		'+hispanowiki' => [
+			'w',
+			'v',
+			'n',
+			'u',
+			'd',
+			'c',
+		],
 	],
 
 	// Imports
