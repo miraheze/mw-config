@@ -1430,8 +1430,16 @@ $wgConf->settings = [
 			'u',
 			'd',
 			'c',
+			'commons',
 		],
 	],
+		'+ucroniaswiki' => [
+			'w',
+			'h',
+			'd',
+			'c',
+			'commons',
+		],
 
 	// Imports
 	'wgImportSources' => [
