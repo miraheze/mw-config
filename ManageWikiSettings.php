@@ -941,7 +941,16 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown. ',
+		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
+	],
+	'wgDiscordNotificationNewUser' => [
+		'name' => 'Discord Notification New User',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Notify on new user added into MediaWiki.',
 	],
 	
 	// Recent changes
