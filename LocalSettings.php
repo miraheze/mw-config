@@ -452,6 +452,11 @@ $wgConf->settings = [
 		'default' => '/usr/bin/ffmpeg',
 	],
 	
+	// Discord
+	'wgDiscordNotificationNewUser' => [
+		'default' => true,
+	],
+	
 	# Download from https://www.stopforumspam.com/downloads (recommended listed_ip_30_all.zip)
 	# for ipv4 + ipv6 combined.
 	# TODO: Setup cron to update this automatically.
