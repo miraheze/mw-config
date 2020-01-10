@@ -6,11 +6,11 @@ $wgObjectCaches['redis'] = [
 	'persistent' => true,
 ];
 
-/*$wgMemCachedServers = [
+$wgMemCachedServers = [
 	'127.0.0.1:11211'
-];*/
+];
 
-$wgMainCacheType = 'redis';
+$wgMainCacheType = CACHE_MEMCACHED;
 $wgSessionCacheType = 'redis';
 $wgSessionsInObjectCache = true;
 
