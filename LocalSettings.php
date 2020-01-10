@@ -1436,9 +1436,7 @@ $wgConf->settings = [
 		'+ucroniaswiki' => [
 			'w',
 			'h',
-			'd',
-			'c',
-			'commons',
+			'alt',
 		],
 
 	// Imports
