@@ -6,6 +6,7 @@ $wgObjectCaches['redis-local'] = [
 	'servers' => [ '127.0.0.1:6379' ],
 	'password' => $wmgRedisPassword,
 	'persistent' => true,
+	'loggroup' => 'redis',
 ];
 
 // misc2 (used for sessions)
@@ -14,6 +15,7 @@ $wgObjectCaches['redis-central'] = [
 	'servers' => [ '127.0.0.1:22121' ],
 	'password' => $wmgRedisPassword,
 	'persistent' => true,
+	'loggroup' => 'redis',
 ];
 
 /*$wgMemCachedServers = [
