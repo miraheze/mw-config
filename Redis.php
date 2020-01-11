@@ -3,7 +3,7 @@
 // Locally hosted and used for object caching
 $wgObjectCaches['redis-local'] = [
 	'class' => 'RedisBagOStuff',
-	'servers' => [ '81.4.127.174:6379' ],
+	'servers' => [ '127.0.0.1:6379' ],
 	'password' => $wmgRedisPassword,
 	'persistent' => true,
 ];
