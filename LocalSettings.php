@@ -268,7 +268,7 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'wgCreateWikiNotificationEmail' => [
-		'default' => 'staff@miraheze.org',
+		'default' => 'tech@miraheze.org',
 	],
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
