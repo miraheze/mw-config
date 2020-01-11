@@ -20,7 +20,7 @@ $wgObjectCaches['redis-central'] = [
 	'127.0.0.1:11211'
 ];*/
 
-$wgMainCacheType = 'redis-local';
+$wgMainCacheType = 'redis-central';
 $wgSessionCacheType = 'redis-central';
 $wgSessionsInObjectCache = true;
 
