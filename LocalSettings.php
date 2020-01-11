@@ -3159,7 +3159,7 @@ if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ||
 if (
 	isset( $_GET['forceprofile'] )
 	&& $_GET['forceprofile'] == 1
-	&& wfHostname() === 'test1'
+	&& wfHostname() === 'test1.miraheze.org'
 ) {
         $wgProfiler['class'] = 'ProfilerXhprof';
         $wgProfiler['output'] = [ 'ProfilerOutputText' ];
