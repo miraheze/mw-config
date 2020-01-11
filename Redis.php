@@ -1,17 +1,27 @@
 <?php
-$wgObjectCaches['redis'] = [
+
+// Locally hosted and used for object caching
+$wgObjectCaches['redis-local'] = [
+	'class' => 'RedisBagOStuff',
+	'servers' => [ '127.0.0.1:6379' ],
+	'password' => $wmgRedisPassword,
+	'persistent' => true,
+];
+
+// misc2 (used for sessions)
+$wgObjectCaches['redis-central'] = [
 	'class' => 'RedisBagOStuff',
 	'servers' => [ '127.0.0.1:22121' ],
 	'password' => $wmgRedisPassword,
 	'persistent' => true,
 ];
 
-$wgMemCachedServers = [
+/*$wgMemCachedServers = [
 	'127.0.0.1:11211'
-];
+];*/
 
-$wgMainCacheType = CACHE_MEMCACHED;
-$wgSessionCacheType = 'redis';
+$wgMainCacheType = 'redis-local';
+$wgSessionCacheType = 'redis-central';
 $wgSessionsInObjectCache = true;
 
 $wgMessageCacheType = CACHE_NONE;
