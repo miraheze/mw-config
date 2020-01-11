@@ -8,6 +8,7 @@ $wgObjectCaches['redis-local'] = [
 	'persistent' => true,
 	'loggroup' => 'redis',
 	'reportDupes' => false,
+	'connectTimeout' => 2,
 ];
 
 // misc2 (used for sessions)
@@ -18,6 +19,7 @@ $wgObjectCaches['redis-central'] = [
 	'persistent' => true,
 	'loggroup' => 'redis',
 	'reportDupes' => false,
+	'connectTimeout' => 3,
 ];
 
 /*$wgMemCachedServers = [
