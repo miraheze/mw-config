@@ -13,7 +13,7 @@ $wgObjectCaches['redis-local'] = [
 // misc2 (used for sessions)
 $wgObjectCaches['redis-central'] = [
 	'class' => 'RedisBagOStuff',
-	'servers' => [ '127.0.0.1:22121' ],
+	'servers' => [ '/run/nutcracker/nutcracker.sock' ],
 	'password' => $wmgRedisPassword,
 	'persistent' => true,
 	'loggroup' => 'redis',
