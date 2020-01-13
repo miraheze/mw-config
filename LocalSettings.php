@@ -69,11 +69,12 @@ $wgConf->settings = [
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
+	// https://www.mediawiki.org/wiki/Extension:SpamBlacklist#Blacklist_syntax
 	'wgBlacklistSettings' => [
 		'default' => [
 			'spam' => [
 				'files' => [
-					'https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
+					'https://meta.miraheze.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
 				],
 			],
 		],
