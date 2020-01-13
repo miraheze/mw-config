@@ -32,6 +32,7 @@ wfLoadExtensions( [
 	'Renameuser',
 	'RottenLinks',
 	'Scribunto',
+	'SpamBlacklist',
 	'SyntaxHighlight_GeSHi',
 	'TitleBlacklist',
 	'TorBlock',
