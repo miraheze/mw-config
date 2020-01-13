@@ -69,6 +69,15 @@ $wgConf->settings = [
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
+	'wgBlacklistSettings' => [
+		'default' => [
+			'spam' => [
+				'files' => [
+					'https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
+				],
+			],
+		],
+	],
 
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
