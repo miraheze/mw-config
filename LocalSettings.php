@@ -2989,6 +2989,7 @@ if ( defined( 'MW_DB' ) ) {
 # Initialize dblist
 $wgLocalDatabases = [];
 $wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
+$wmgDeleteDatabaseList = file( "/srv/mediawiki/dblist/deleted.dblist" );
 
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
@@ -3014,6 +3015,10 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 			$wgConf->settings[$setVar][$DBname] = $setVal;
 		}
 	}
+}
+
+foreach ( $wmgDeletedDatabaseList as $wikiLine ) {
+	$wgLocalDatabases[] = $wikiLine;
 }
 
 $middleMobile = false;
