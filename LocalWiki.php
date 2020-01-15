@@ -51,6 +51,16 @@ $wgDefaultUserOptions['math'] = 'mathml';
 $wgMathoidCli = [ '/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml' ];
 $wgMaxShellMemory = 2097152;
 
+// Core config
+$wgManageWikiNamespacesAdditional['wgExtraSignatureNamespaces'] = [
+	'name' => ' Enable "Signature" button on the edit toolbar under both main and talk pages.',
+	'main' => true,
+	'talk' => true,
+	'blacklisted' => [],
+	'vestyle' => false,
+	'overridedefault' => []
+];
+
 // ircrcbot (!=private)
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRCFeeds['irc'] = [
