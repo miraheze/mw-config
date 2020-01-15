@@ -3017,8 +3017,11 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 	}
 }
 
-foreach ( $wmgDeletedDatabaseList as $wikiLine ) {
-	$wgLocalDatabases[] = $wikiLine;
+if ( php_sapi_name() == 'cli' ) {
+	// Only do this if using cli
+	foreach ( $wmgDeletedDatabaseList as $wikiLine ) {
+		$wgLocalDatabases[] = $wikiLine;
+	}
 }
 
 $middleMobile = false;
