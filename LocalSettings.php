@@ -2026,6 +2026,19 @@ $wgConf->settings = [
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
 	],
+	'wgManageWikiNamespacesAdditional' => [
+		'default' => [
+			// Core config
+			'wgExtraSignatureNamespaces' => [
+				'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
+				'main' => true,
+				'talk' => true,
+				'blacklisted' => [],
+				'vestyle' => false,
+				'overridedefault' => [],
+			],
+		],
+	],
 
 	// MassMessage
 	'wgAllowGlobalMessaging' => [
@@ -3186,16 +3199,6 @@ if (
 	// Prevent cache (better be safe than sorry)
         $wgUseSquid = false;
 }
-
-// Core config
-$wgManageWikiNamespacesAdditional['wgExtraSignatureNamespaces'] = [
-	'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
-	'main' => true,
-	'talk' => true,
-	'blacklisted' => [],
-	'vestyle' => false,
-	'overridedefault' => []
-];
 
 // Define last to avoid all dependencies
 require_once "/srv/mediawiki/config/LocalWiki.php";
