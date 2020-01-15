@@ -530,6 +530,11 @@ $wgConf->settings = [
 		'default' => 110,
 	],
 
+	// https://www.mediawiki.org/wiki/Manual:$wgMiserMode
+	'wgMiserMode' => [
+		'default' => true,
+	],
+
 	// Extensions and Skins
 	'wmgUse3D' => [
 		'default' => false,
