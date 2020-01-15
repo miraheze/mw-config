@@ -3032,7 +3032,7 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 
 if ( php_sapi_name() == 'cli' ) {
 	// Only do this if using cli
-	foreach ( $wmgDeletedDatabaseList as $wikiLine ) {
+	foreach ( $wmgDeleteDatabaseList as $wikiLine ) {
 		$wgLocalDatabases[] = $wikiLine;
 	}
 }
