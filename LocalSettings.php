@@ -3189,7 +3189,7 @@ if (
 
 // Core config
 $wgManageWikiNamespacesAdditional['wgExtraSignatureNamespaces'] = [
-	'name' => ' Enable "Signature" button on the edit toolbar under both main and talk pages.',
+	'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
 	'main' => true,
 	'talk' => true,
 	'blacklisted' => [],
