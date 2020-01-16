@@ -401,6 +401,9 @@ if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
+	$wgForegroundFeatures = array( 
+                          'navbarIcon' => true,
+		);
 }
 
 if ( $wmgUseFontAwesome ) {
