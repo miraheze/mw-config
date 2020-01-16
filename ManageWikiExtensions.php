@@ -1812,6 +1812,22 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'urlshortener' => [
+			'name' => 'UrlShortener',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UrlShortener',
+			'var' => 'wmgUseShortURL',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'urlshortener-create-url',
+							'urlshortener-manage-url',
+						],
+					],
+				],
+			],
+		],
 		'userwelcome' => [
 			'name' => 'UserWelcome',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UserWelcome',
