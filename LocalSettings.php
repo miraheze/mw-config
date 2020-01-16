@@ -985,9 +985,6 @@ $wgConf->settings = [
 	'wmgUseScratchBlocks' => [
 		'default' => false,
 	],
-	'wmgUseUrlShortener' => [
-		'default' => false,
-	],
 	'wmgUseSimpleChanges' => [
 		'default' => false,
 	],
@@ -1072,6 +1069,9 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgUseUrlGetParameters' => [
+		'default' => false,
+	],
+	'wmgUseUrlShortener' => [
 		'default' => false,
 	],
 	'wmgUseUserWelcome' => [
