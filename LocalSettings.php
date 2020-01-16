@@ -303,7 +303,6 @@ $wgConf->settings = [
 			"$IP/extensions/Translate/sql/translate_sections.sql",
 			"$IP/extensions/Translate/sql/translate_stash.sql",
 			"$IP/extensions/Translate/sql/translate_tm.sql",
-			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		],
 	],
 	'wgCreateWikiStateDays' => [
