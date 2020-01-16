@@ -986,7 +986,7 @@ $wgConf->settings = [
 	'wmgUseScratchBlocks' => [
 		'default' => false,
 	],
-	'wmgUseShortURL' => [
+	'wmgUseUrlShortener' => [
 		'default' => false,
 	],
 	'wmgUseSimpleChanges' => [
