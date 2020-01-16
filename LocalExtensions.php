@@ -838,10 +838,6 @@ if ( $wmgUseSimpleChanges ) {
 	wfLoadExtension( 'SimpleChanges' );
 }
 
-if ( $wmgUseShortURL ) {
-	wfLoadExtension( 'UrlShortener' );
-}
-
 if ( $wmgUseSimpleTooltip ) {
 	require_once "$IP/extensions/SimpleTooltip/SimpleTooltip.php";
 }
@@ -963,6 +959,10 @@ if ( $wmgUseUploadsLink ) {
 
 if ( $wmgUseUrlGetParameters ) {
 	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
+}
+
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
 }
 
 if ( $wmgUseUserWelcome ) {
