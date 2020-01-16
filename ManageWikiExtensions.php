@@ -1818,6 +1818,9 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUrlShortener',
 			'conflicts' => false,
 			'requires' => [
+				'sql' => [
+					'urlshortcodes' => "$IP/extensions/UrlShortener/schemas/urlshortcodes.sql",
+				],
 				'permissions' => [
 					'sysop' => [
 						'permissions' => [
