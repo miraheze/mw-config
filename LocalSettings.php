@@ -987,8 +987,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgUseShortURL' => [
-		'default' => true,
-		'macfan4000wiki' => false,
+		'default' => false,
 	],
 	'wmgUseSimpleChanges' => [
 		'default' => false,
@@ -1563,6 +1562,7 @@ $wgConf->settings = [
 			'darkmode',
 			'globaluserpage',
 			'mobilefrontend',
+			'urlshortener',
 		],
 	],
 	'wgManageWikiCDBDirectory' => [
