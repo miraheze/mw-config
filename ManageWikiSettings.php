@@ -376,7 +376,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Allow templates to be imported/transcluded from another wiki.',
 	],
