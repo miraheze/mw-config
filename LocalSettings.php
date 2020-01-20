@@ -1432,12 +1432,12 @@ $wgConf->settings = [
 			'c',
 			'commons',
 		],
-	],
 		'+ucroniaswiki' => [
 			'w',
 			'h',
 			'alt',
 		],
+	],
 
 	// Imports
 	'wgImportSources' => [
