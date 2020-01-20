@@ -307,3 +307,9 @@ if ( $wgDBname === 'staffwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
+
+if ( $wgDBname === 'stateofwiki' ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/stateofwiki";
+	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgGenerateThumbnailOnParse = true;
+}
