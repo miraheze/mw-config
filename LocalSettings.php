@@ -1438,6 +1438,20 @@ $wgConf->settings = [
 			'tlh',
 			'zombie',
 		],
+		'+hispanowiki' => [
+			'w',
+			'v',
+			'n',
+			'u',
+			'd',
+			'c',
+			'commons',
+		],
+		'+ucroniaswiki' => [
+			'w',
+			'h',
+			'alt',
+		],
 	],
 
 	// Imports
