@@ -2007,6 +2007,7 @@ $wgConf->settings = [
 				'renameuser',
 				'requestwiki',
 				'siteadmin',
+				'stopforumspam',
 				'suppressionlog',
 				'suppressrevision',
 				'usermerge',
