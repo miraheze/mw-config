@@ -2905,6 +2905,7 @@ $wgConf->settings = [
 	// WikiForum settings
 	'wgWikiForumAllowAnonymous' => [
 		'default' => true,
+		'allthetropeswiki' => false,
 	],
 	'wgWikiForumLogsInRC' => [
 		'default' => true,
