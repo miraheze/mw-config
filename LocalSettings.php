@@ -2002,7 +2002,7 @@ $wgConf->settings = [
 				'mwoauthsuppress',
 				'mwoauthviewprivate',
 				'mwoauthviewsuppressed',
-				'oauth-disable-for-user',
+				'oauthauth-disable-for-user',
 				'renameuser',
 				'requestwiki',
 				'siteadmin',
