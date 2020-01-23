@@ -1774,6 +1774,17 @@ $wgManageWikiExtensions = [
 						],
 					],
 				],
+				'sql' => [
+					'revtag' => "$IP/extensions/Translate/sql/revtag.sql",
+					'translate_groupreviews' => "$IP/extensions/Translate/sql/translate_groupreviews.sql",
+					'translate_groupstats' => "$IP/extensions/Translate/sql/translate_groupstats.sql",
+					'translate_messageindex' => "$IP/extensions/Translate/sql/translate_messageindex.sql",
+					'translate_metadata' => "$IP/extensions/Translate/sql/translate_metadata.sql",
+					'translate_reviews' => "$IP/extensions/Translate/sql/translate_reviews.sql",
+					'translate_sections' => "$IP/extensions/Translate/sql/translate_sections.sql",
+					'translate_stash' => "$IP/extensions/Translate/sql/translate_stash.sql",
+					'translate_tms' => "$IP/extensions/Translate/sql/translate_tm.sql",
+				],
 			],
 		],
 		'tweeki' => [
