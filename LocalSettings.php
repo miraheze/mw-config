@@ -6,7 +6,7 @@ Authors of initial version: Southparkfan, John Lewis, Orain contributors
 
 # Load PrivateSettings (e.g. wgDBpassword)
 require_once "/srv/mediawiki/config/PrivateSettings.php";
-
+wgArticleCountMethod
 # Load global skins and extensions
 require_once "/srv/mediawiki/config/GlobalSkins.php";
 require_once "/srv/mediawiki/config/GlobalExtensions.php";
@@ -2627,6 +2627,7 @@ $wgConf->settings = [
 		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
 		'nonciclopediawiki' => 'any',
+		'simswiki' => 'any',
 	],
 
 	// Squid (aka Varnish)
