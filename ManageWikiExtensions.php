@@ -960,6 +960,11 @@ $wgManageWikiExtensions = [
 					'chat_users' => "$IP/extensions/MediaWikiChat/sql/chat_users.sql"
 				],
 				'permissions' => [
+					'blockedfromchat' => [
+						'permissions' => [
+							'viewmyprivateinfo',
+						],
+					],
 					'chatmod' => [
 						'permissions' => [
 							'chat',
