@@ -402,6 +402,7 @@ $wgConf->settings = [
 		'trollpastawiki' => true,
 		'trollpastauncensoredwiki' => true,
 		'uncyclomirror' => true,
+		'ungamewiki' => true,
 	],
 	'wgDBadminuser' => [
 		'default' => 'wikiadmin',
