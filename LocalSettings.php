@@ -402,7 +402,7 @@ $wgConf->settings = [
 		'thelastsovereignwiki' => true,
 		'trollpastawiki' => true,
 		'trollpastauncensoredwiki' => true,
-		'uncyclomirror' => true,
+		'uncyclomirrorwiki' => true,
 		'ungamewiki' => true,
 	],
 	'wgDBadminuser' => [
