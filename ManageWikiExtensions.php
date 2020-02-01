@@ -784,7 +784,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'javascriptslideshow' => [
-			'name' => 'Javascript Slidehow',
+			'name' => 'Javascript Slideshow',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:JavascriptSlideshow',
 			'var' => 'wmgUseJavascriptSlideshow',
 			'conflicts' => false,
