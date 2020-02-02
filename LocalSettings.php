@@ -2038,7 +2038,7 @@ $wgConf->settings = [
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
 	],
-	'+wgManageWikiNamespacesAdditional' => [
+	'wgManageWikiNamespacesAdditional' => [
 		'default' => [
 			// Core config
 			'wgExtraSignatureNamespaces' => [
