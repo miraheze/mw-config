@@ -1,7 +1,6 @@
 <?php
 $wmgLogDir = "/var/log/mediawiki";
 
-$wgDebugLogFile = "$wmgLogDir/$wmgHostname.log";
 $wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
 
 $wgDebugLogGroups = [
