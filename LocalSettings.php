@@ -1807,6 +1807,7 @@ $wgConf->settings = [
 		'+nenawikiwiki' => [
 			'editor' => [
 				'edit-content-pages' => true,
+				'edit-talkpage' => true,
 			],
 		],
 		'+nonsensopediawiki' => [
