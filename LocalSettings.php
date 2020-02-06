@@ -1809,6 +1809,9 @@ $wgConf->settings = [
 				'edit-content-pages' => true,
 				'edit-talkpage' => true,
 			],
+			'nenamembers' => [
+				'edit-talkpage' => true,
+			],
 		],
 		'+nonsensopediawiki' => [
 			'moderator' => [
