@@ -1804,6 +1804,18 @@ $wgConf->settings = [
 				'createwiki' => true,
 			],
 		],
+		'+nenawikiwiki' => [
+			'editor' => [
+				'edit-content-pages' => true,
+				'edit-talkpage' => true,
+			],
+			'nenamembers' => [
+				'edit-talkpage' => true,
+			],
+			'sysop' => [
+				'edit-admin-pages' => true,
+			],
+		],
 		'+nonsensopediawiki' => [
 			'moderator' => [
 				'skipcaptcha' => true,
