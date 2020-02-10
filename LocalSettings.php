@@ -607,6 +607,10 @@ $wgConf->settings = [
 	'wmgUseCodeMirror' => [
 		'default' => false,
 	],
+	// GDPR requires this notice
+	'wmgCookieWarningEnabled' => [
+		'default' => true,
+	],
 	'wmgUseCollapsibleVector' => [
 		'default' => false,
 	],
