@@ -608,7 +608,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	// GDPR requires this notice
-	'wmgCookieWarningEnabled' => [
+	'wmgUseCookieWarning' => [
 		'default' => true,
 	],
 	'wmgUseCollapsibleVector' => [
