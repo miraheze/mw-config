@@ -633,10 +633,6 @@ $wgConf->settings = [
 	'wmgUseContributionScores' => [
 		'default' => false,
 	],
-	// GDPR requires this notice
-	'wmgUseCookieWarning' => [
-		'default' => true,
-	],
 	'wmgUseCreatePage' => [
 		'default' => false,
 	],
