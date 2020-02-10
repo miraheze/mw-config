@@ -177,6 +177,10 @@ if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 }
 
+if ( $wmgCookieWarningEnabled ) {
+	wfLoadExtension( 'CookieWarning' );
+}
+
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
