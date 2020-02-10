@@ -8,6 +8,7 @@ wfLoadExtensions( [
 	'CentralNotice',
 	'CheckUser',
 	'CreateWiki',
+	'CookieWarning',
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'Echo',
