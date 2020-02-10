@@ -607,10 +607,6 @@ $wgConf->settings = [
 	'wmgUseCodeMirror' => [
 		'default' => false,
 	],
-	// GDPR requires this notice
-	'wmgUseCookieWarning' => [
-		'default' => true,
-	],
 	'wmgUseCollapsibleVector' => [
 		'default' => false,
 	],
@@ -636,6 +632,10 @@ $wgConf->settings = [
 	],
 	'wmgUseContributionScores' => [
 		'default' => false,
+	],
+	// GDPR requires this notice
+	'wmgUseCookieWarning' => [
+		'default' => true,
 	],
 	'wmgUseCreatePage' => [
 		'default' => false,
