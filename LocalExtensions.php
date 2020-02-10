@@ -177,10 +177,6 @@ if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 }
 
-if ( $wmgUseCookieWarning ) {
-	wfLoadExtension( 'CookieWarning' );
-}
-
 if ( $wmgUseCollapsibleVector ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
@@ -215,6 +211,10 @@ if ( $wmgUseContactPage ) {
 
 if ( $wmgUseContributionScores ) {
 	require_once "$IP/extensions/ContributionScores/ContributionScores.php";
+}
+
+if ( $wmgUseCookieWarning ) {
+	wfLoadExtension( 'CookieWarning' );
 }
 
 if ( $wmgUseCreatePage ) {
