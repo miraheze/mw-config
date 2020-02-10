@@ -177,7 +177,7 @@ if ( $wmgUseCodeMirror ) {
 	wfLoadExtension( 'CodeMirror' );
 }
 
-if ( $wmgCookieWarningEnabled ) {
+if ( $wmgUseCookieWarning ) {
 	wfLoadExtension( 'CookieWarning' );
 }
 
