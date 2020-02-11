@@ -2058,7 +2058,7 @@ $wgConf->settings = [
 				'main' => true,
 				'talk' => true,
 				'blacklisted' => [],
-				'vestyle' => false,
+				'vestyle' => true,
 				'overridedefault' => [],
 			],
 		],
