@@ -33,7 +33,7 @@ $wgLBFactoryConf = [
 	],
 	'hostsByName' => [
 		'db4' => $wmgUseNewServers ?
-			'db4.miraheze.org' : 'db6.miraheze.org',
+			'db6.miraheze.org' : 'db4.miraheze.org',
 		'db5' => 'db5.miraheze.org',
 	],
 	'externalLoads' => [
