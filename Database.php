@@ -10,6 +10,7 @@ $wgLBFactoryConf = [
 		'nonsensopediawiki' => 'c2',
 		'testwiki' => 'c2',
 		'uncyclomirrorwiki' => 'c2',
+		'zhdelwiki' => 'c2',
 	],
 	'sectionLoads' => [
 		'DEFAULT' => [
