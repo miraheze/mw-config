@@ -33,7 +33,12 @@ $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
 
-$redisLocal = $wmgUseNewServers ? '51.89.160.131:6379' : '81.4.127.174:6379';
+if ( preg_match( "/^jobrunner[0-9]*/", wfHostname() ) ) {
+	$redisLocal = '127.0.0.1:6379';
+} else {
+	$redisLocal = $wmgUseNewServers ? '51.89.160.131:6379' : '81.4.127.174:6379';
+}
+
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
 	'redisServer' => $redisLocal,
