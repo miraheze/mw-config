@@ -3158,13 +3158,13 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
 
-if ( $wgDBname === 'zhdelwiki' ) {
-	$wgReadOnly = 'Miraheze is conducting a database migration.';
+if ( $wgDBname === 'toxicfandomsandhatedomswiki' ) {
+//	$wgReadOnly = 'Miraheze is conducting a database migration.';
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be performing database maintenance on this wiki from 15:40 UTC until approximately 16:30 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 15:40 UTC!</td>
+			<td>Miraheze will be performing database maintenance on this wiki from 16:00 UTC until approximately 16:20 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 16:00 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
