@@ -9,6 +9,7 @@ $wgLBFactoryConf = [
 		'nonciclopediawiki' => 'c2',
 		'nonsensopediawiki' => 'c2',
 		'testwiki' => 'c2',
+		'toxicfandomsandhatedomswiki' = > 'c2',
 		'uncyclomirrorwiki' => 'c2',
 		'zhdelwiki' => 'c2',
 	],
