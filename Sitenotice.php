@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be doing server maintenance from 19:00 UTC (Friday 14th 2020) to 02:00 UTC on Saturday 15th 2020. During this maintenance window some services may not work properly or operate in read-only mode. Please save your edits locally before submitting them!</td>
+			<td>Miraheze will be doing server maintenance from 19:00 UTC (Friday 14th 2020) to 02:00 UTC (Saturday 15th 2020). During this maintenance window some services may not work properly or operate in read-only mode. Please save your edits locally before submitting them!</td>
 			</tr></tbody></table>
 EOF;
 
