@@ -2039,6 +2039,7 @@ $wgConf->settings = [
 			'oversight',
 			'steward',
 			'staff',
+			'interwiki-admin',
 		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
