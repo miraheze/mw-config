@@ -1786,7 +1786,7 @@ $wgConf->settings = [
 				'centralauth-oversight' => true,
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
-				'createwiki' => true,
+				'createwiki' => false, // Disabled for database migration --Reception123
 				'globalblock' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
@@ -1801,7 +1801,7 @@ $wgConf->settings = [
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
-				'createwiki' => true,
+				'createwiki' => false, // Disabled for database migration --Reception123
 			],
 		],
 		'+nenawikiwiki' => [
