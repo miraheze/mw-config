@@ -416,7 +416,6 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
-		'allthetropeswiki' => 'Database still be migrated to new server.',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
