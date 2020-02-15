@@ -7,10 +7,10 @@ $wgLBFactoryConf = [
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db6' => 1,
+			'db4' => 1,
 		],
 		'c1' => [
-			'db6' => 1,
+			'db4' => 1,
 		],
 		'c2' => [
  			'db5' => 1,
@@ -26,12 +26,12 @@ $wgLBFactoryConf = [
 		'sslKeyPath' => '/etc/ssl/private/wildcard.miraheze.org.key',
 	],
 	'hostsByName' => [
-		'db6' => 'db6.miraheze.org',
+		'db4' => 'db4.miraheze.org',
 		'db5' => 'db5.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
-			'db6' => 1, // should echo c1
+			'db4' => 1, // should echo c1
 		],
 	],
 	'readOnlyBySection' => [
