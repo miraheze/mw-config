@@ -4,6 +4,14 @@ $wgLBFactoryConf = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => [
  		'allthetropeswiki' => 'c2',
+		'baobabarchiveswiki' => 'c2',
+ 		'frikipediawiki' => 'c2',
+ 		'nonciclopediawiki' => 'c2',
+ 		'nonsensopediawiki' => 'c2',
+ 		'testwiki' => 'c2',
+ 		'toxicfandomsandhatedomswiki' => 'c2',
+ 		'uncyclomirrorwiki' => 'c2',
+ 		'zhdelwiki' => 'c2',
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
