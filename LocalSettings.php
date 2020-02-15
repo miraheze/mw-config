@@ -416,6 +416,10 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
+		'allthetropeswiki' => 'Database still be migrated to new server.',
+		'baobabarchiveswiki' => 'Database still be migrated to new server.',
+		'frikipediawiki' => 'Database still be migrated to new server.',
+		'nonciclopediawiki' => 'Database still be migrated to new server.',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
