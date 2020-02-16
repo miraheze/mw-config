@@ -34,7 +34,8 @@ $wgLBFactoryConf = [
 		'sslKeyPath' => '/etc/ssl/private/wildcard.miraheze.org.key',
 	],
 	'hostsByName' => [
-		'db4' => 'db4.miraheze.org',
+		'db6' => $wmgUseNewServers ?
+ 			'db6.miraheze.org' : 'db4.miraheze.org',
 		'db5' => 'db5.miraheze.org',
 	],
 	'externalLoads' => [
