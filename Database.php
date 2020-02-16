@@ -29,7 +29,7 @@ $wgLBFactoryConf = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		'flags' => DBO_SSL | DBO_COMPRESS,
+		'flags' => DBO_DEFAULT | DBO_SSL | DBO_COMPRESS,
 		'sslCertPath' => '/etc/ssl/certs/wildcard.miraheze.org.crt',
 		'sslKeyPath' => '/etc/ssl/private/wildcard.miraheze.org.key',
 	],
