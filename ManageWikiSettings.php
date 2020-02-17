@@ -323,6 +323,7 @@ $wgManageWikiSettings = [
 			'Creative Commons BY-NC-ND 4.0' => 'cc-by-nc-nd',
 			'Public Domain' => 'cc-pd',
 			'No license provided' => 'empty',
+                        'GNU General Public V3' => 'gpl-v3',
 		],
 		'overridedefault' => 'cc-by-sa',
 		'section' => 'edit',
