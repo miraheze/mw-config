@@ -263,13 +263,13 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsText = 'CC0 Public Domain';
 		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
-	case 'empty':
-		break;
         case 'gpl-v3':
                 $wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
                 $wgRightsText = 'GPLv3';
                 $wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
                 break;
+	case 'empty':
+		break;
 }
 
 if ( $wgDBname === 'gyaanipediawiki' ||
