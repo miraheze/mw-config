@@ -265,8 +265,11 @@ switch ( $wmgWikiLicense ) {
 		break;
 	case 'empty':
 		break;
-        case 'gpl':
-                $wgRightsIcon =
+        case 'gpl-v3':
+                $wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+                $wgRightsText = 'GPLv3';
+                $wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
+                break;
 }
 
 if ( $wgDBname === 'gyaanipediawiki' ||
