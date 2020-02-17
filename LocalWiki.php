@@ -265,6 +265,8 @@ switch ( $wmgWikiLicense ) {
 		break;
 	case 'empty':
 		break;
+        case 'gpl':
+                $wgRightsIcon =
 }
 
 if ( $wgDBname === 'gyaanipediawiki' ||
