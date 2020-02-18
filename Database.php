@@ -8,7 +8,7 @@ $wgLBFactoryConf = [
  		'frikipediawiki' => 'c2',
  		'nonciclopediawiki' => 'c2',
  		'nonsensopediawiki' => 'c2',
- 		'testwiki' => 'c2',
+ 		'testwiki' => 'c3',
  		'toxicfandomsandhatedomswiki' => 'c2',
  		'uncyclomirrorwiki' => 'c2',
  		'zhdelwiki' => 'c2',
@@ -23,6 +23,9 @@ $wgLBFactoryConf = [
 		'c2' => [
  			'db5' => 1,
  		],
+		'c3' => [
+ 			'db7' => 1,
+ 		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -34,9 +37,9 @@ $wgLBFactoryConf = [
 		'sslKeyPath' => '/etc/ssl/private/wildcard.miraheze.org.key',
 	],
 	'hostsByName' => [
-		'db4' => $wmgUseNewServers ?
- 			'db6.miraheze.org' : 'db4.miraheze.org',
+		'db4' => 'db4.miraheze.org',
 		'db5' => 'db5.miraheze.org',
+		'db7' => 'db7.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
@@ -47,5 +50,6 @@ $wgLBFactoryConf = [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
 		// 'c1' => 'Maintenance ongoing on the database server.',
 		// 'c2' => 'Maintenance ongoing on the database server.',
+		// 'c3' => 'Maintenance ongoing on the database server.',
 	],
 ];
