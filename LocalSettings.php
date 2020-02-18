@@ -416,6 +416,7 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
+		'testwiki' => 'Migration to new infrastructure in progress',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
