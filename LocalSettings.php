@@ -517,14 +517,6 @@ $wgConf->settings = [
  		],
  	],
 
-	// HTTP config
-	'wgHTTPTimeout' => [
-		'default' => 110,
-	],
-	'wgHTTPConnectTimeout' => [
-		'default' => 110,
-	],
-
 	// Extensions and Skins
 	'wmgUse3D' => [
 		'default' => false,
