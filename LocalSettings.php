@@ -416,6 +416,7 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
+		'onepiecewiki' => 'Switch over to new infra in progress.',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
