@@ -416,8 +416,6 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
-		'nbdbwiki' => 'Switch over to new infra in progress',
-		'nonbinarywiki' => 'Switch over to new infra in progress',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
