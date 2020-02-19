@@ -8,6 +8,7 @@ $wgLBFactoryConf = [
 		'concordancewiki' => 'c3',
 		'dreamversewiki' => 'c3',
  		'frikipediawiki' => 'c2',
+		'hispanowiki' => 'c3',
 		'nbdbwiki' => 'c3',
 		'nonbinarywiki' => 'c3',
  		'nonciclopediawiki' => 'c2',
