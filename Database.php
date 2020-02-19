@@ -11,6 +11,7 @@ $wgLBFactoryConf = [
 		'nonbinarywiki' => 'c3',
  		'nonciclopediawiki' => 'c2',
  		'nonsensopediawiki' => 'c2',
+		'onepiecewiki' => 'c3',
 		'rotompediawiki' => 'c3',
  		'testwiki' => 'c3',
  		'toxicfandomsandhatedomswiki' => 'c2',
