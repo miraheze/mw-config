@@ -17,6 +17,7 @@ $wgLBFactoryConf = [
 		'rotompediawiki' => 'c3',
  		'testwiki' => 'c3',
  		'toxicfandomsandhatedomswiki' => 'c2',
+		'ucroniaswiki' => 'c3',
  		'uncyclomirrorwiki' => 'c2',
  		'zhdelwiki' => 'c2',
  	],
