@@ -5,6 +5,7 @@ $wgLBFactoryConf = [
 	'sectionsByDB' => [
  		'allthetropeswiki' => 'c2',
 		'baobabarchiveswiki' => 'c2',
+		'centralauth' => 'c1',
 		'concordancewiki' => 'c3',
 		'dreamversewiki' => 'c3',
  		'frikipediawiki' => 'c2',
