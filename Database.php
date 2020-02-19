@@ -24,7 +24,7 @@ $wgLBFactoryConf = [
  			'db5' => 1,
  		],
 		'c3' => [
- 			'db7' => 1,
+ 			'db6' => 1,
  		],
 	],
 	'serverTemplate' => [
@@ -39,7 +39,7 @@ $wgLBFactoryConf = [
 	'hostsByName' => [
 		'db4' => 'db4.miraheze.org',
 		'db5' => 'db5.miraheze.org',
-		'db7' => 'db7.miraheze.org',
+		'db6' => 'db6.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
