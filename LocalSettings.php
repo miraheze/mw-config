@@ -2527,6 +2527,11 @@ $wgConf->settings = [
 			],
 		],
 	],
+	
+	'wgExpensiveParserFunctionLimit' => [
+		'default' => 99, //per https://www.mediawiki.org/wiki/Manual:$wgExpensiveParserFunctionLimit
+		'metawiki' => 150,
+	],
 
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => [
