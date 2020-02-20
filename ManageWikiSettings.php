@@ -1261,6 +1261,17 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
 	],
+	'wgExpensiveParserFunctionLimit' => [
+		'name' => 'Expensive Parser Function Limit',
+		'restricted' => true,
+		'from' => 'mediawiki',
+		'type' => 'integer',
+		'minint' => 50,
+		'maxint' => 500,
+		'overridedefault' => 99,
+		'section' => 'restricted',
+		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500.'
+	],
 
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
