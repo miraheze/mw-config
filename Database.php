@@ -4,6 +4,7 @@ $wgLBFactoryConf = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => [
  		'allthetropeswiki' => 'c2',
+		'altversewiki' => 'c3',
 		'anotheredenwiki' => 'c3',
 		'baobabarchiveswiki' => 'c2',
 		'centralauth' => 'c1',
