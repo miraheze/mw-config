@@ -416,6 +416,7 @@ $wgConf->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
+		'altversewiki' => 'Migrating to new infra',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
