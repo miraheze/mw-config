@@ -3159,20 +3159,20 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
 
-/*
-if ( $wgDBname === 'ungamewiki' ) {
+
+if ( $wgDBname === 'browndustwiki' ) {
 	$wgReadOnly = 'Miraheze is conducting a database migration.';
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be performing database maintenance on this wiki from 12:00 UTC until approximately 12:10 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 16:00 UTC!</td>
+			<td>Miraheze will be performing database maintenance on this wiki from 10:00 UTC until approximately 10:10 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 10:00 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
 }
-*/
+
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
