@@ -55,7 +55,7 @@ $wgMaxShellMemory = 2097152;
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
-		'uri' => 'udp://185.52.1.76:5070',
+		'uri' => 'udp://51.89.160.138:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	];
