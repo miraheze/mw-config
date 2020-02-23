@@ -2635,6 +2635,7 @@ $wgConf->settings = [
 		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
 		'fourleafficswiki' => 'any',
 		'gfiwiki' => 'any',
+		'hispanowiki' => 'any',
 		'hrfwiki2' => 'any',
 		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
