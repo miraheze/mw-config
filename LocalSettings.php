@@ -2641,6 +2641,7 @@ $wgConf->settings = [
 		'lothuialethwiki' => 'any',
 		'nonciclopediawiki' => 'any',
 		'simswiki' => 'any',
+		'ucroniaswiki' => 'any',
 	],
 
 	// Squid (aka Varnish)
