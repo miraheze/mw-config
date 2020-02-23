@@ -73,7 +73,7 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 }
 
 // CookieWarning exempt ElectronPdfService
-if ( isset( $_SERVER['REMOTE_ADDR'] ) && ( $_SERVER['REMOTE_ADDR'] === '185.52.1.71' || $_SERVER['REMOTE_ADDR'] === '2a00:d880:11::75' ) ) {
+if ( isset( $_SERVER['REMOTE_ADDR'] ) && ( $_SERVER['REMOTE_ADDR'] === '51.89.160.132' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1056::7' || $_SERVER['REMOTE_ADDR'] === '51.89.160.141' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:105a::9' ) ) {
         $wgCookieWarningEnabled = false;
 }
 
