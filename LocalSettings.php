@@ -1984,7 +1984,6 @@ $wgConf->settings = [
 				'checkuser-log',
 				'createwiki',
 				'editincidents',
-				'editothersprofiles',
 				'editothersprofiles-private',
 				'flow-suppress',
 				'globalblock',
