@@ -59,7 +59,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 		  <div class="jumbotron">
 			<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg" alt="Miraheze Logo"> 404 Wiki not Found</h1>
 			<p class="lead">We couldn't find the wiki you were looking for on our servers.</p>
-			<p><a onclick=javascript:checkSite(); class="btn btn-default btn-lg"><span class="green">Take Me To The Homepage</span></a>
+			<p><a onclick=javascript:checkSite(); class="btn btn-default btn-lg"><span class="green">Take me to Miraheze Meta</span></a>
 				<script>
 					function checkSite(){
 						var currentSite = window.location.hostname;
