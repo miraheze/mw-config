@@ -397,6 +397,7 @@ $wgConf->settings = [
 		'metawiki' => true,
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
+		'onepiecewiki' => true,
 		'openhatchwiki' => true,
 		'quircwiki' => true,
 		'simswiki' => true,
