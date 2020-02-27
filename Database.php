@@ -21,6 +21,7 @@ $wgLBFactoryConf = [
 		'onepiecebountyrushwiki' => 'c3',
 		'proxybotwiki' => 'c3',
 		'rotompediawiki' => 'c3',
+		'simswiki' => 'c2',
  		'testwiki' => 'c3',
  		'toxicfandomsandhatedomswiki' => 'c2',
 		'ucroniaswiki' => 'c3',
