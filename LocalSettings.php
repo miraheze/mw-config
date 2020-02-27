@@ -3161,7 +3161,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
 
-
+/*
 if ( $wgDBname === 'simswiki' ) {
 	$wgReadOnly = 'Miraheze is conducting a database migration.';
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
@@ -3174,7 +3174,7 @@ EOF;
 		return true;
 	}
 }
-
+*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
