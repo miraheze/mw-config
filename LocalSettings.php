@@ -404,6 +404,7 @@ $wgConf->settings = [
 		'quircwiki' => true,
 		'simswiki' => true,
 		'thelastsovereignwiki' => true,
+		'tmewiki' => true,
 		'toxicfandomsandhatedomswiki' => true,
 		'trollpastawiki' => true,
 		'trollpastauncensoredwiki' => true,
