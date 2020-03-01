@@ -385,6 +385,7 @@ $wgConf->settings = [
 		'allthetropeswiki' => true,
 		'altversewiki' => true,
 		'americangirldollswiki' => true,
+		'animatedfeetwiki' => true,
 		'animebathswiki' => true,
 		'baobabarchiveswiki' => true,
 		'beidipediawiki' => true,
