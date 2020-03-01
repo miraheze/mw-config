@@ -3161,20 +3161,19 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
 
-/*
-if ( $wgDBname === 'simswiki' ) {
+if ( $wgDBname === 'epochlorewiki' ) {
 	$wgReadOnly = 'Miraheze is conducting a database migration.';
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be performing database maintenance on this wiki from 11:30 UTC until approximately 11:40 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 11:30 UTC!</td>
+			<td>Miraheze will be performing database maintenance on this wiki from 11:00 UTC until approximately 11:10 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 11:00 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
 }
-*/
+
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
