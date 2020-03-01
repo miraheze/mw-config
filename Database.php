@@ -19,6 +19,7 @@ $wgLBFactoryConf = [
  		'nonsensopediawiki' => 'c2',
 		'onepiecewiki' => 'c3',
 		'onepiecebountyrushwiki' => 'c3',
+		'openhatchwiki' => 'c2',
 		'proxybotwiki' => 'c3',
 		'rotompediawiki' => 'c3',
 		'simswiki' => 'c2',
