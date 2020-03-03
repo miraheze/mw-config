@@ -1548,6 +1548,9 @@ $wgConf->settings = [
 	'wgEmailConfirmToEdit' => [
 		'default' => false,
 	],
+	'wgEmergencyContact' => [
+		'default' => 'noreply@miraheze.org',
+	],
 
 	// ManageWiki
 	'wgManageWiki' => [
