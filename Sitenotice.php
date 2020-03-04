@@ -69,7 +69,7 @@ $list = [
 	'nonsensopediawiki',
 ];
 
-if ( in_array( $wgDBname, $list ) {
+if ( in_array( $wgDBname, $list ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
