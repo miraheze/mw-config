@@ -89,7 +89,7 @@ EOF;
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td>Miraheze is intending to move this wiki to new infrastructure on Saturday, March 8th 2020. You will still be able to read but won’t be able to edit between the times of 13:00 UTC and 23:00 UTC.</td>
+				<td>Miraheze is intending to move this wiki to new infrastructure on Sunday, March 8th 2020. You will still be able to read but won’t be able to edit between the times of 13:00 UTC and 23:00 UTC.</td>
 				</tr></tbody></table>
 EOF;
 
