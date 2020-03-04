@@ -340,6 +340,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
 	],
+	'wgShowCreditsIfMax' => [
+		'name' => 'Editing attribution',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Show more authors.',
+	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
 		'from' => 'mediawiki',
@@ -1113,6 +1122,17 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
+	],
+	'wgMaxCredits' => [
+		'name' => 'Editing attribution',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'integer',
+		'minint' => -1,
+		'maxint' => 25,
+		'overridedefault' => 0,
+		'section' => 'restricted',
+		'help' => 'Number of editors to attribute.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [

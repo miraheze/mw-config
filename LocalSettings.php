@@ -1281,6 +1281,13 @@ $wgConf->settings = [
 	'wmgFlaggedRevsLowProfile' => [
 		'default' => false,
 	],
+	
+	'wgMaxCredits' => [
+		'default' => 0,
+	],
+	'wgShowCreditsIfMax' => [
+		'default' => true,
+	],
 
 	// Files
 	'wgEnableUploads' => [
