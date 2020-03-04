@@ -12,17 +12,87 @@ $wgMajorSiteNoticeID = 41;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
+$list = [
+	'buswiki',
+	'pathofexilewiki',
+	'tmewiki',
+	'vsrecommendedgameswiki',
+	'animatedfeetwiki',
+	'crappygameswiki',
+	'anglishwiki',
+	'trollpastawiki',
+	'poserdazfreebieswiki',
+	'nltramswiki',
+	'beidipediawiki',
+	'nilamwikiubzx217c40wiki',
+	'bluepageswiki',
+	'awfulmovieswiki',
+	'uncyclopediawiki',
+	'tolololpediawiki',
+	'platprojectwiki',
+	'trollpastawikiwiki',
+	'ansaikuropediawiki',
+	'pluspiwiki',
+	'csydeswiki',
+	'atrociousyoutuberswiki',
+	'anterrawiki',
+	'jayuvandalwiki',
+	'ciptamediawiki',
+	'bpwiki',
+	'terribletvshowswiki',
+	'osaindexwiki',
+	'newusopediawiki',
+	'mc2wiki',
+	'jawp2chwiki',
+	'sumroletaericwiki',
+	'sidemwiki',
+	'ranchstorywiki',
+	'maiasongcontestwiki',
+	'awesomegameswiki',
+	'animebathswiki',
+	'americangirldollswiki',
+	'schattenvonskeloswiki',
+	's23wiki',
+	'libertygamewiki',
+	'healthyfandomsandandhatedomwiki',
+	'gyaanipediawiki',
+	'bigforestwiki',
+	'2b2twiki',
+	'simswiki',
+	'frikipediawiki',
+	'uncyclomirrorwiki',
+	'baobabarchiveswiki',
+	'zhdelwiki',
+	'allthetropeswiki',
+	'nonciclopediawiki',
+	'toxicfandomsandhatedomswiki',
+	'nonsensopediawiki',
+];
 
-	$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be migrating to the new infrastructure.
-			We will be doing the larger wikis on March 6th 2020 (Friday) starting from 7pm UTC and lasting till 11PM UTC. Other wikis will be done on March 8, 2020 - 13:00 until 23:00 UTC.
-			Wikis will be up the entire time (read only). You can see if one of your wikis is counted as large at <a href="https://meta.miraheze.org/wiki/User:Paladox/Migration_2020-03-06_list">large wikis migration list</a>.</td>
-			</tr></tbody></table>
+if ( in_array( $wgDBname, $list ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+		global $wmgSiteNoticeOptOut, $snImportant;
+
+		$siteNotice .= <<<EOF
+				<table class="wikitable" style="text-align:center;"><tbody><tr>
+				<td>Miraheze is intending to move this wiki to new infrastructure on Friday, March 6th 2020. You will still be able to read but won’t be able to edit between the times of 19:00 UTC and 23:00 UTC.</td>
+				</tr></tbody></table>
 EOF;
 
-	return true;
+		return true;
+	}
+} else {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+		global $wmgSiteNoticeOptOut, $snImportant;
+
+		$siteNotice .= <<<EOF
+				<table class="wikitable" style="text-align:center;"><tbody><tr>
+				<td>Miraheze is intending to move this wiki to new infrastructure on Saturday, March 8th 2020. You will still be able to read but won’t be able to edit between the times of 13:00 UTC and 23:00 UTC.</td>
+				</tr></tbody></table>
+EOF;
+
+		return true;
+	}
 }
