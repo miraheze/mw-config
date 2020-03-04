@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be trying the migration to the new infrastructure again, this time with differences and a longer maintenance window.
+			<td>Miraheze will be migrating to the new infrastructure, this time with differences and a longer maintenance window.
 			We will be doing the larger wikis on March 6th 2020 (Friday) starting from 7pm UTC and lasting till 11PM UTC. Other wikis will be done on March 8, 2020 - 13:00 until 23:00 UTC.
 			Wikis will be up the entire time (read only). You can see if one of your wikis is counted as large at <a href="https://meta.miraheze.org/wiki/User:Paladox/Migration_2020-03-06_list">large wikis migration list</a>.</td>
 			</tr></tbody></table>
