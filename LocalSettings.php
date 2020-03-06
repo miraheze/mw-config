@@ -2513,6 +2513,17 @@ $wgConf->settings = [
 		'horizonwiki' => [
 			'NS_MAIN' => 'index,follow'
 		],
+		'hispanowiki' => [
+			'NS_TEMPLATE' => 'noindex,nofollow',
+			'NS_GUÍA' => 'noindex,nofollow',
+			'NS_WIKIPEDIA' => 'noindex,nofollow',
+			'NS_PROPUESTA' => 'noindex,nofollow',
+			'NS_NOTICIA' => 'noindex,nofollow',
+		],
+		'ucroniaswiki' => [
+			'NS_TEMPLATE' => 'noindex,nofollow',
+			'NS_ANEXO' => 'index,follow',
+		],
 	],
 
 	// Referrer Policy
