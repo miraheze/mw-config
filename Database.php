@@ -85,9 +85,6 @@ $wgLBFactoryConf = [
 		'c1' => [
 			'db4' => 1,
 		],
-		'c2' => [
- 			'db5' => 1,
- 		],
 		'c3' => [
  			'db6' => 1,
  		],
@@ -103,7 +100,6 @@ $wgLBFactoryConf = [
 	],
 	'hostsByName' => [
 		'db4' => 'db4.miraheze.org',
-		'db5' => 'db5.miraheze.org',
 		'db6' => 'db6.miraheze.org',
 	],
 	'externalLoads' => [
@@ -114,7 +110,6 @@ $wgLBFactoryConf = [
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
 		// 'c1' => 'Maintenance ongoing on the database server.',
-		// 'c2' => 'Maintenance ongoing on the database server.',
 		// 'c3' => 'Maintenance ongoing on the database server.',
 	],
 ];
