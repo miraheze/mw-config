@@ -2942,7 +2942,7 @@ $wgConf->settings = [
 		'default' => false,
 	],
 	'wmgWebChatClient' => [
-		'default' => false,
+		'default' => 'freenodeChat',
 	],
 
 	// WikiForum settings
