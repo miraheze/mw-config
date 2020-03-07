@@ -21,6 +21,7 @@ $wgLBFactoryConf = [
 		'staffwiki' => 'c3',
  		'testwiki' => 'c3',
 		'ucroniaswiki' => 'c3',
+		'unmusicfestwiki' => 'c3',
 		
 		// large wikis
 		'buswiki' => 'c3',
