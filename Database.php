@@ -72,9 +72,9 @@ $wgLBFactoryConf = [
 		'pluspiwiki' => 'c4',
 		'csydeswiki' => 'c4',
 		'atrociousyoutuberswiki' => 'c4',
+		'nonciclopediawiki' => 'c4',
 		
 		// TEMP for migration
-		'nonciclopediawiki' => 'c5',
 		'toxicfandomsandhatedomswiki' => 'c5',
 		'nonsensopediawiki' => 'c5',
  	],
