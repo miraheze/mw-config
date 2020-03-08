@@ -13,7 +13,6 @@ $wgMajorSiteNoticeID = 42;
 // Write your SiteNotice below.  Comment out this section to disable.
 
 $list = [
-	'nonciclopediawiki',
 	'toxicfandomsandhatedomswiki',
 	'nonsensopediawiki',
 ];
