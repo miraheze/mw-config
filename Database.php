@@ -73,9 +73,9 @@ $wgLBFactoryConf = [
 		'csydeswiki' => 'c4',
 		'atrociousyoutuberswiki' => 'c4',
 		'nonciclopediawiki' => 'c4',
+		'toxicfandomsandhatedomswiki' => 'c4',
 		
 		// TEMP for migration
-		'toxicfandomsandhatedomswiki' => 'c5',
 		'nonsensopediawiki' => 'c5',
  	],
 	'sectionLoads' => [
