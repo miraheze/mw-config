@@ -69,8 +69,8 @@ $list = [
 	'nonsensopediawiki',
 ];
 
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
+function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
 	$siteNotice .= <<<EOF
