@@ -8,7 +8,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 41;
+$wgMajorSiteNoticeID = 42;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 
@@ -68,6 +68,19 @@ $list = [
 	'toxicfandomsandhatedomswiki',
 	'nonsensopediawiki',
 ];
+
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	global $wmgSiteNoticeOptOut, $snImportant;
+
+	$siteNotice .= <<<EOF
+			<table class="wikitable" style="text-align:center;"><tbody><tr>
+			<td>Maintenance will be performed on the database servers. As such, the wikis are unavailable between 16:30 and 16:45 UTC. Please save your edits <b>before</b> 16:30 UTC!</td>
+			</tr></tbody></table>
+EOF;
+
+	return true;
+}
 
 if ( !in_array( $wgDBname, $list ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
