@@ -33,11 +33,7 @@ $wgLBFactoryConf = [
 		'baobabarchiveswiki' => 'c4',
 		'zhdelwiki' => 'c4',
 		'allthetropeswiki' => 'c4',
-		'nonciclopediawiki' => 'c4',
-		'toxicfandomsandhatedomswiki' => 'c4',
-		'nonsensopediawiki' => 'c4',
-
-		// db7
+		
 		'altversewiki' => 'c4',
 		'anotheredenwiki' => 'c4',
 		'concordancewiki' => 'c4',
@@ -76,6 +72,11 @@ $wgLBFactoryConf = [
 		'pluspiwiki' => 'c4',
 		'csydeswiki' => 'c4',
 		'atrociousyoutuberswiki' => 'c4',
+		
+		// TEMP for migration
+		'nonciclopediawiki' => 'c5',
+		'toxicfandomsandhatedomswiki' => 'c5',
+		'nonsensopediawiki' => 'c5',
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
@@ -85,6 +86,9 @@ $wgLBFactoryConf = [
 			'db4' => 1,
 		],
 		'c4' => [
+ 			'db7' => 1,
+ 		],
+		'c5' => [
  			'db7' => 1,
  		],
 	],
@@ -109,6 +113,7 @@ $wgLBFactoryConf = [
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
 		// 'c1' => 'Maintenance ongoing on the database server.',
-		'c4' => 'Maintenance ongoing on the database server.',
+		// 'c4' => 'Maintenance ongoing on the database server.',
+		'c5' => 'Maintenance ongoing on the database server.',
 	],
 ];
