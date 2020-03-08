@@ -110,6 +110,6 @@ $wgLBFactoryConf = [
 	'readOnlyBySection' => [
 		'DEFAULT' => 'Maintenance ongoing on the database server.',
 		'c1' => 'Maintenance ongoing on the database server.',
-		// 'c3' => 'Maintenance ongoing on the database server.',
+		'c3' => 'Maintenance ongoing on the database server.',
 	],
 ];
