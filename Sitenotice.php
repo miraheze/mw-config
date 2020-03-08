@@ -69,19 +69,6 @@ $list = [
 	'nonsensopediawiki',
 ];
 
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
-function onSiteNoticeAfter2( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
-
-	$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Maintenance will be performed on the database servers. As such, the wikis are unavailable between 16:30 and 16:45 UTC. Please save your edits <b>before</b> 16:30 UTC!</td>
-			</tr></tbody></table>
-EOF;
-
-	return true;
-}
-
 if ( !in_array( $wgDBname, $list ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
