@@ -74,9 +74,7 @@ $wgLBFactoryConf = [
 		'atrociousyoutuberswiki' => 'c4',
 		'nonciclopediawiki' => 'c4',
 		'toxicfandomsandhatedomswiki' => 'c4',
-		
-		// TEMP for migration
-		'nonsensopediawiki' => 'c5',
+		'nonsensopediawiki' => 'c4',
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
@@ -86,9 +84,6 @@ $wgLBFactoryConf = [
 			'db4' => 1,
 		],
 		'c4' => [
- 			'db7' => 1,
- 		],
-		'c5' => [
  			'db7' => 1,
  		],
 	],
@@ -114,6 +109,5 @@ $wgLBFactoryConf = [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
 		// 'c1' => 'Maintenance ongoing on the database server.',
 		// 'c4' => 'Maintenance ongoing on the database server.',
-		'c5' => 'Maintenance ongoing on the database server.',
 	],
 ];
