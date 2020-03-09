@@ -4,7 +4,6 @@ dist: bionic
 php:
   - 7.3
   - 7.2
-  - 7.1
 
 script:
   # Check php script syntax
