@@ -23,5 +23,4 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 EOF;
 
 		return true;
-	}
 }
