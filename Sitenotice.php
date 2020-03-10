@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>The maintenance window for the migration is over. Miraheze is sorry for the issues that popped up after the migration.</td>
+			<td>Miraheze is doing maintenance on the file backend. During this time you will not be able to upload files.</td>
 			</tr></tbody></table>
 EOF;
 
