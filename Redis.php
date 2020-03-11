@@ -26,7 +26,7 @@ $wgLanguageConverterCacheType = CACHE_DB;
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => $wmgUseNewServers ? '51.89.160.135:6379' : '81.4.127.174:6379',
+	'redisServer' => '51.89.160.135:6379',
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
