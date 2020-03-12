@@ -334,7 +334,7 @@ $wgManageWikiExtensions = [
 							'commentlinks',
 						],
 					],
-					'comentadmin' => [
+					'commentadmin' => [
 						'permissions' => [
 							'commentadmin',
 						],
