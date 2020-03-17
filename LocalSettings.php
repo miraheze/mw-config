@@ -2494,6 +2494,14 @@ $wgConf->settings = [
 			'delete',
 		],
 	],
+	
+	'wgHTTPTimeout' => [
+		'default' => 60,
+	],
+	
+	'wgHTTPConnectTimeout' => [
+		'default' => 60,
+	],
 
 	// RottenLinks
 	'wgRottenLinksCurlTimeout' => [
