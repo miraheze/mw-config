@@ -33,7 +33,8 @@ $wgLBFactoryConf = [
 		'baobabarchiveswiki' => 'c4',
 		'zhdelwiki' => 'c4',
 		'allthetropeswiki' => 'c4',
-		
+
+		'test2wiki' => 'c4',
 		'altversewiki' => 'c4',
 		'anotheredenwiki' => 'c4',
 		'concordancewiki' => 'c4',
