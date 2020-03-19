@@ -434,7 +434,6 @@ $wgConf->settings = [
 	],
 	'wgActorTableSchemaMigrationStage' => [
 		'default' => SCHEMA_COMPAT_NEW,
-		'test1wiki' => SCHEMA_COMPAT_NEW,
 	],
 
 	'wgCommentTableSchemaMigrationStage' => [
@@ -629,7 +628,7 @@ $wgConf->settings = [
 		'fablabesdswiki' => true,
 		'guiaslocaiswiki' => true,
 		'qboxnextwiki' => true,
-		'test1wiki' => true,
+		'test2wiki' => true,
 	],
 	'wmgUseContributionScores' => [
 		'default' => false,
@@ -669,7 +668,7 @@ $wgConf->settings = [
 	],
 	'wmgUseDisqusTag' => [
 		'default' => false,
-		'test1wiki' => true,
+		'test2wiki' => true,
 	],
 	'wmgUseDuskToDawn' => [
 		'default' => false,
@@ -677,7 +676,7 @@ $wgConf->settings = [
 	'wmgUseDonateBoxInSidebar' => [ # Disabled for now --Rececption123
 		'default' => false,
 		'metawiki' => true,
-		'test1wiki' => true,
+		'test2wiki' => true,
 	],
 	'wmgUseDPLForum' => [
 		'default' => false,
@@ -1009,7 +1008,7 @@ $wgConf->settings = [
 	],
 	'wmgUseStopForumSpam' => [
 		'default' => false,
-		'test1wiki' => true,
+		'test2wiki' => true,
 	],
 	'wmgUseSubpageFun' => [
 		'default' => false,
@@ -1089,7 +1088,7 @@ $wgConf->settings = [
 	],
 	'wmgUseWhoIsWatching' => [
 		'default' => false,
-		'test1wiki' => true,
+		'test2wiki' => true,
 	],
 	'wmgUseWidgets' => [
 		'default' => false,
@@ -1117,7 +1116,7 @@ $wgConf->settings = [
 	],
 	'wmgUsewikihiero' => [
 		'default' => false,
-		'test1wiki' => true,
+		'test2twiki' => true,
 	],
 	'wmgUseWikimediaIncubator' => [
 		'default' => false,

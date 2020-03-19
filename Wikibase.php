@@ -49,7 +49,7 @@ call_user_func( function () {
 			];
 		}
 
-		if ( $wgDBname === 'test1wiki' ) {
+		if ( $wgDBname === 'test2wiki' ) {
 			$wgWBClientSettings['repoUrl'] = 'https://test1.miraheze.org';
 			$wgWBClientSettings['repoScriptPath'] = '/w';
 			$wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
