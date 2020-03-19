@@ -193,6 +193,11 @@ $wgConf->settings = [
 		'default' => false,
 		'modesofdiscoursewiki' => true,
 	],
+	
+	'wgCategoryPagingLimit' => [
+		'default' => 200,
+		'nenawikiwiki' => 1500,
+	],
 
 	// CentralAuth
 	'wgCentralAuthAutoCreateWikis' => [
