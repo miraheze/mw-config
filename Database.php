@@ -78,6 +78,7 @@ $wgLBFactoryConf = [
 		'nonsensopediawiki' => 'c4',
 		
 		'nenawikiwiki' => 'c4',
+		'ndgwiki' => 'c4',
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
