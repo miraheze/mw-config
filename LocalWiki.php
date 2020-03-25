@@ -318,3 +318,9 @@ if ( $wgDBname === 'stateofwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
+
+if ( $wgDBname === 'mikekilitterboxwiki' ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/mikekilitterboxwiki";
+	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgGenerateThumbnailOnParse = true;
+}
