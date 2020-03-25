@@ -3281,3 +3281,20 @@ require_once "/srv/mediawiki/config/LocalWiki.php";
 if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once "/srv/mediawiki/config/ExtensionMessageFiles.php";
 }
+
+if ( PHP_SAPI !== 'cli' ) {
+	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
+	switch ( $host ) {
+		case 'jobrunner1.miraheze.org':
+			$limit = 1200;
+			break;
+		default:
+			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+				$limit = 110;
+			} else {
+				$limit = 60;
+			}
+	}
+
+	set_time_limit( $limit );
+}
