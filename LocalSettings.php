@@ -3295,4 +3295,6 @@ if ( PHP_SAPI !== 'cli' ) {
 				$limit = 60;
 			}
 	}
+
+	set_time_limit( $limit );
 }
