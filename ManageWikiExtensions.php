@@ -1633,22 +1633,23 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'spritesheet' => [
-			'name' => 'SpriteSheet',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpriteSheet',
-			'var' => 'wmgUseSpriteSheet',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [
-				'sql' => [
-					'spritesheet_table_spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
-					'spritesheet_table_spritename_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename_rev.sql",
-					'spritesheet_table_spritesheet' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet.sql",
-					'spritesheet_table_spritesheet_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet_rev.sql"
-
-				],
-			],
-		],
+//		DISABLED UNTIL 1.34 FIX. DO NOT ENABLE. --Reception123
+//		'spritesheet' => [
+//			'name' => 'SpriteSheet',
+//			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpriteSheet',
+//			'var' => 'wmgUseSpriteSheet',
+//			'conflicts' => false,
+//			'requires' => [],
+//			'install' => [
+//				'sql' => [
+//					'spritesheet_table_spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
+//					'spritesheet_table_spritename_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename_rev.sql",
+//					'spritesheet_table_spritesheet' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet.sql",
+//					'spritesheet_table_spritesheet_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet_rev.sql"
+//
+//				],
+//			],
+//		],
 		'stopforumspam' => [
 			'name' => 'StopForumSpam',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StopForumSpam',
