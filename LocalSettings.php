@@ -1006,6 +1006,9 @@ $wgConf->settings = [
 	'wmgUseSpoilers' => [
 		'default' => false,
 	],
+	'wmgUseSpriteSheet' => [
+		'default' => false,
+	],
 	'wmgUseStopForumSpam' => [
 		'default' => false,
 		'test2wiki' => true,

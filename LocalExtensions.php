@@ -862,6 +862,10 @@ if ( $wmgUseSpoilers ) {
 	wfLoadExtension( 'Spoilers' );
 }
 
+if ( $wmgUseSpriteSheet ) {
+	wfLoadExtension( 'SpriteSheet' );
+}
+
 if ( $wmgUseStopForumSpam ) {
 	wfLoadExtension( 'StopForumSpam' );
 }

@@ -1633,6 +1633,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'spritesheet' => [
+			'name' => 'SpriteSheet',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpriteSheet',
+			'var' => 'wmgUseSpriteSheet',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'stopforumspam' => [
 			'name' => 'StopForumSpam',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StopForumSpam',
