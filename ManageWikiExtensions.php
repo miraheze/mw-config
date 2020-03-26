@@ -1639,6 +1639,15 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSpriteSheet',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'sql' => [
+					'spritesheet_table_spritename.sql' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
+					'spritesheet_table_spritename_rev.sql' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename_rev.sql",
+					'spritesheet_table_spritesheet.sql' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet.sql",
+					'spritesheet_table_spritesheet_rev.sql' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet_rev.sql"
+
+				],
+			],
 		],
 		'stopforumspam' => [
 			'name' => 'StopForumSpam',
