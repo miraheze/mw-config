@@ -90,6 +90,9 @@ $wgLBFactoryConf = [
 		'c4' => [
  			'db7' => 1,
  		],
+		'c5' => [
+ 			'dbt1' => 1,
+ 		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -103,6 +106,7 @@ $wgLBFactoryConf = [
 	'hostsByName' => [
 		'db4' => 'db4.miraheze.org',
 		'db7' => 'db7.miraheze.org',
+		'dbt1' => 'dbt1.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
