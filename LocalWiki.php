@@ -24,6 +24,8 @@ if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
 EOF;
 		return true;
 	}
+	
+	$wgReadOnly = 'Maintenance in progress';
 
 }
 
