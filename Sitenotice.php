@@ -12,7 +12,7 @@ $wgMajorSiteNoticeID = 43;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 
-if ( isset( $wgLBFactoryConf[$wgDBname] ) && ($wgLBFactoryConf[$wgDBname] != 'c4' || $wgLBFactoryConf[$wgDBname] != 'c5') ) {
+if ( !isset( $wgLBFactoryConf['sectionsByDB'][$wgDBname] ) ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
