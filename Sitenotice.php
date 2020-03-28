@@ -19,7 +19,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is doing maintenance on db at 17:00 UTC. This will last till 22:00 UTC. During this time your wiki will be in read only. Please save edits 5 minutes before.</td>
+			<td>Miraheze is doing maintenance on DB at 20:00 UTC. This will last until approximately 02:00 UTC. During this time your wiki may be in read only mode. Please save edits 5 minutes before. We apologize that we are doing another migration, but it is necessary in order to reduce the recent slow loading times.</td>
 			</tr></tbody></table>
 EOF;
 
