@@ -1813,7 +1813,7 @@ $wgConf->settings = [
 				'centralauth-oversight' => true,
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
-				'createwiki' => true,
+				'createwiki' => false,
 				'globalblock' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
@@ -1828,7 +1828,7 @@ $wgConf->settings = [
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
-				'createwiki' => true,
+				'createwiki' => false,
 			],
 		],
 		'+nenawikiwiki' => [
