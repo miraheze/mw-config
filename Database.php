@@ -542,7 +542,6 @@ $wgLBFactoryConf = [
 		'freedomwiki' => 'c5',
 		'freerealmswiki' => 'c5',
 		'frenchwiki' => 'c5',
-		'frikipediawiki' => 'c5',
 		'frischwiki' => 'c5',
 		'ftc8438wiki' => 'c5',
 		'ftprwiki' => 'c5',
