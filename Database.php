@@ -39,7 +39,6 @@ $wgLBFactoryConf = [
 		'anotheredenwiki' => 'c4',
 		'concordancewiki' => 'c4',
 		'dreamversewiki' => 'c4',
-		'hispanowiki' => 'c4',
 		'nbdbwiki' => 'c4',
 		'nonbinarywiki' => 'c4',
 		'onepiecewiki' => 'c4',
