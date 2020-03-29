@@ -49,7 +49,6 @@ $wgLBFactoryConf = [
 		'rotompediawiki' => 'c4',
 		'staffwiki' => 'c4',
 		'testwiki' => 'c4',
-		'ucroniaswiki' => 'c4',
 		'buswiki' => 'c4',
 		'pathofexilewiki' => 'c4',
 		'tmewiki' => 'c4',
