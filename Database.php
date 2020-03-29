@@ -44,7 +44,6 @@ $wgLBFactoryConf = [
 		'onepiecewiki' => 'c4',
 		'onepiecebountyrushwiki' => 'c4',
 		'openhatchwiki' => 'c4',
-		'privadowiki' => 'c4',
 		'proxybotwiki' => 'c4',
 		'rotompediawiki' => 'c4',
 		'staffwiki' => 'c4',
