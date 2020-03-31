@@ -1192,20 +1192,6 @@ $wgConf->settings = [
 			NS_HELP => false,
 			NS_PROJECT => false
 		],
- 		'hispanowiki' => [
-			NS_USER => false,
- 			NS_FILE => false,
-			NS_TEMPLATE => false,
-			NS_HELP => false,
-			NS_PROJECT => false
-		],
- 		'ucroniaswiki' => [
-			NS_USER => false,
- 			NS_FILE => false,
-			NS_TEMPLATE => false,
-			NS_HELP => false,
-			NS_PROJECT => false
-		],
 	],
 
 	// FlaggedRevs
@@ -1459,16 +1445,14 @@ $wgConf->settings = [
 		],
 		'+hispanowiki' => [
 			'w',
+		],
+		'+privadowiki' => [
+			'w',
 			'v',
 			'n',
-			'u',
-			'd',
-			'c',
-			'commons',
 		],
 		'+ucroniaswiki' => [
 			'w',
-			'h',
 			'alt',
 		],
 	],
@@ -2698,6 +2682,7 @@ $wgConf->settings = [
 		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
 		'nonciclopediawiki' => 'any',
+		'privadowiki' => 'any',
 		'simswiki' => 'any',
 		'ucroniaswiki' => 'any',
 	],
