@@ -21,6 +21,7 @@ $wgDebugLogGroups = [
 	'redis' => "$wmgLogDir/debuglogs/redis.log",
 	'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
 	'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
+	'VisualEditor' => "$wmgLogDir/debuglogs/VisualEditor.log",
 ];
 
 if ( $wgCommandLineMode ) {
