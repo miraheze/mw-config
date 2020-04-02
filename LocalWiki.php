@@ -103,6 +103,10 @@ if ( $wgDBname === 'harrypotterwiki' ) {
 	$wgDefaultUserOptions['collapsiblenav'] = 1;
 }
 
+if ( $wgDBname === 'indoctrinatedwiki' ) {
+	$wgMobileUrlTemplate = '';
+}
+
 if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
