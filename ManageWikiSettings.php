@@ -1034,15 +1034,6 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'By default your wiki is available at https://yourwiki.miraheze.org - a subdomain of Miraheze but you can request us to redirect your wiki to a domain you own. Right now is not yet possible to do it without assistance from our sysadmins, but you can learn more here https://meta.miraheze.org/wiki/Custom_domains',
 	],
-	'wgMobileUrlTemplate' => [
-		'name' => 'Mobile URL',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => '',
-		'section' => 'restricted',
-		'help' => 'This sets your mobile URL. Defaults to [domain].',
-	],
 	'wgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
 		'from' => 'mediawiki',
