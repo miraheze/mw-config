@@ -649,7 +649,22 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
 	],
-	
+		
+	'wgCategoryTreeDefaultMode' => [
+		'name' => 'Category Tree Default Mode',
+		'restricted' => false,
+		'type' => 'list',
+		'overridefault' => false,
+		'section' => 'edit',
+		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag.'
+		'options' => [
+			'Category' => 0,
+			'Pages' => 10,
+			'All' => 20,
+			'Parents' => 100,
+			]
+		]
+		
 	// Links
 	'wgExternalLinkTarget' => [
 		'name' => 'External Link Target',
@@ -718,7 +733,7 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 	],
-
+	
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
 		'name' => 'Kartographer Wikivoyage Mode',
