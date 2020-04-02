@@ -2190,9 +2190,6 @@ $wgConf->settings = [
 	'wgMFDefaultSkinClass' => [
 		'default' => 'SkinMinerva',
 	],
-	'wgMobileUrlTemplate' => [
-		'default' => '',
-	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
@@ -3138,6 +3135,9 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
+
+
+$wgMobileUrlTemplate = $wmgHostname;
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgCentralAuthCookieDomain = $wmgHostname;
