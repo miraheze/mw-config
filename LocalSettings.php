@@ -1208,17 +1208,17 @@ $wgConf->settings = [
 		],
 		'infectopedwiki' => [
 			'accuracy' => [
-				'levels' => 3,
+				'levels' => 4,
 				'quality' => 2,
 				'pristine' => 4,
 			],
 			'depth' => [
-				'levels' => 3,
+				'levels' => 4,
 				'quality' => 2,
 				'pristine' => 4,
 			],
 			'tone' => [
-				'levels' => 3,
+				'levels' => 4,
 				'quality' => 1,
 				'pristine' => 4,
 			],
