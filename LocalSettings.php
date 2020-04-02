@@ -3110,15 +3110,8 @@ $middleMobile = false;
 // TODO: Convert this so that we use the url to find the wikiname,
 // will lead to performance increase as we won't need to foreach.
 foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
-	$mobileDomain = isset( $wgConf->settings['wgMobileUrlTemplate'][$name] ) ?
-		$wgConf->settings['wgMobileUrlTemplate'][$name] : false;
-	if ( $val === 'https://' . $wmgHostname || $mobileDomain === $wmgHostname ) {
+	if ( $val === 'https://' . $wmgHostname) {
 		$wgDBname = $name;
-		// There is an issue where setting it staticly (e.g *.m.*) would not generate
-		// a mobile link. Workaround this by using %h0.m.%h1.%h2.
-		if ( $mobileDomain && preg_match( '/^(.+)\.m\.(.+)$/', $mobileDomain, $matches ) ) {
-			$middleMobile = '%h0.m.%h1.%h2';
-		}
 	}
 }
 
@@ -3145,16 +3138,6 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgConf->wikis = $wgLocalDatabases;
 $wgConf->extractAllGlobals( $wgDBname );
-
-if ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
-} elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-	$wgMobileUrlTemplate = '%h0.m.miraheze.org';
-}
-
-if ( $middleMobile ) {
-	$wgMobileUrlTemplate = $middleMobile;
-}
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgCentralAuthCookieDomain = $wmgHostname;
