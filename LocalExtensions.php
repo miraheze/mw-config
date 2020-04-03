@@ -594,6 +594,7 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
+	$wgMFStopRedirectCookieHost = $wmgHostname;
 
 	$wgHooks['EnterMobileMode'][] = function () {
 		global $wgIncludeLegacyJavaScript;
