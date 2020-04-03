@@ -50,12 +50,12 @@ call_user_func( function () {
 		}
 
 		if ( $wgDBname === 'test2wiki' ) {
-			$wgWBClientSettings['repoUrl'] = 'https://test1.miraheze.org';
+			$wgWBClientSettings['repoUrl'] = 'https://test2.miraheze.org';
 			$wgWBClientSettings['repoScriptPath'] = '/w';
 			$wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
-			$wgWBClientSettings['siteGlobalID'] = 'test1wiki';
-			$wgWBClientSettings['repoDatabase'] = 'test1wiki';
-			$wgWBClientSettings['changesDatabase'] = 'test1wiki';
+			$wgWBClientSettings['siteGlobalID'] = 'test2wiki';
+			$wgWBClientSettings['repoDatabase'] = 'test2wiki';
+			$wgWBClientSettings['changesDatabase'] = 'test2wiki';
 			$wgWBClientSettings['siteGroup'] = 'miraheze';
 			$wgWBClientSettings['repoNamespaces'] = [
 				'wikibase-item' => 'Item',
