@@ -1456,4 +1456,13 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Force the display of ManageWiki links in the sidebar for all users. The link text will differ for nonprivileged users.',
 	],
+	'wmgShowPopupsByDefault' => [
+		'name' => 'Show Popups by default',
+		'from' => 'popups',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'When enabled, this shows Popups by default.',
+	],
 ];

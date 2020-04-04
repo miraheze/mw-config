@@ -517,6 +517,10 @@ $wgConf->settings = [
 	'wmgSearchType' => [
 		'default' => false,
 	],
+	
+	'wmgShowPopupsByDefault' => [
+		'default' => false,
+	],
 
 	// Preloader
 	'wgPreloaderSource' => [
