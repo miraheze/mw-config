@@ -748,6 +748,13 @@ if ( $wmgUsePopups ) {
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
 	wfLoadExtension( 'TextExtracts' );
+	
+	if ( $wmgShowPopupsByDefault ) {
+		$wgPopupsHideOptInOnPreferencesPage = true;
+		$wgPopupsOptInDefaultState = '1';
+		$wgPopupsOptInStateForNewAccounts = '1';
+		$wgPopupsReferencePreviewsBetaFeature = false;
+	}
 }
 
 if ( $wmgUsePreloader ) {
