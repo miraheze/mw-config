@@ -543,6 +543,21 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Name of the project talk namespace. Note that the namespace must exist in ManageWiki/namespaces.',
 	],
+	'wgCategoryTreeDefaultMode' => [
+		'name' => 'Category Tree Default Mode',
+		'from' => 'categorytree',
+		'restricted' => false,
+		'type' => 'list',
+		'overridefault' => false,
+		'section' => 'edit',
+		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag.',
+		'options' => [
+			'Category' => 0,
+			'Pages' => 10,
+			'All' => 20,
+			'Parents' => 100,
+			],
+		],
 	'wgRandomGameDisplay' => [
 		'name' => 'Random Game Display',
 		'from' => 'randomgameunit',
@@ -649,21 +664,6 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
 	],
-	
-	'wgCategoryTreeDefaultMode' => [
-		'name' => 'Category Tree Default Mode',
-		'restricted' => false,
-		'type' => 'list',
-		'overridefault' => false,
-		'section' => 'edit',
-		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag.',
-		'options' => [
-			'Category' => 0,
-			'Pages' => 10,
-			'All' => 20,
-			'Parents' => 100,
-			],
-		],
 	
 	// Links
 	'wgExternalLinkTarget' => [
