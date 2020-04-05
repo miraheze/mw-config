@@ -149,6 +149,11 @@ $wgConf->settings = [
 	'wgRevisionCacheExpiry' => [
 		'default' => 0,
 	],
+	
+	// CategoryTree 
+	'wgCategoryTreeDefaultMode' => [
+		'default' => 0,
+	],
 
 	// CentralNotice
 	'wgNoticeInfrastructure' => [
