@@ -2612,9 +2612,6 @@ $settings = [
 	'wgCodeEditorEnableCore' => [
 		'default' => true,
 	],
-	'wgScribuntoDefaultEngine' => [
-		'default' => 'luaautodetect',
-	],
 	'wgScribuntoUseCodeEditor' => [
 		'default' => true,
 	],
@@ -2630,6 +2627,9 @@ $settings = [
 			'luastandalone' => [
 				'cpuLimit' => 10,
 				'maxLangCacheSize' => 200,
+			],
+			'luaautodetect' => [
+				'factory' => 'Scribunto_LuaEngine::newAutodetectEngine',
 			],
 		],
 	],
