@@ -3,7 +3,7 @@
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
 // Closed Wikis
-if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
+if ( $cwClosed ) {
 	$settings['wgRevokePermissions']['default'] = [
 		'*' => [
 			'block' => true,
@@ -27,7 +27,7 @@ EOF;
 }
 
 // Inactive Wikis
-if ( isset( $wgConf->settings['wmgInactiveWiki'][$wgDBname] ) ) {
+if ( $cwInactive ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
 	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
@@ -39,14 +39,11 @@ EOF;
 }
 
 // Private Wikis
-if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+if ( $cwPrivate ) {
 	$settings['wgManageWikiPermissionsAdditionalRights']['default']['sysop']['read'] = true;
 	$settings['wgManageWikiPermissionsAdditionalRights']['default']['*']['read'] = false;
         $settings['wgReferrerPolicy']['default'] = 'no-referrer';
-}
-
-// ircrcbot (!=private)
-if ( !isset( $wgConf->settings['wcPrivateWiki'][$wgDBname] ) ) {
+} else {
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
 		'uri' => 'udp://51.89.160.138:5070',

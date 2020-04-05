@@ -4,6 +4,11 @@
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
 
+// Initialise WI
+require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
+$wgCreateWikiCacheDirectory = '/srv/mediawiki/w/cache';
+$wi = new WikiInitialise();
+
 // Load PrivateSettings (e.g. wgDBpassword)
 require_once "/srv/mediawiki/config/PrivateSettings.php";
 
@@ -3087,9 +3092,24 @@ $settings = [
 	],
 ];
 
+$wi->setVariables(
+	'/srv/mediawiki/w/cache/',
+	$settings,
+	[
+		'wiki'
+	],
+	[
+		'miraheze.org' => 'wiki'
+	]
+);
+
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
+
+$wi->readCache();
+$wgConf = $wi->config;
+$wgConf->extractAllGlobals( $wi->dbname );
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
@@ -3164,3 +3184,5 @@ require_once "/srv/mediawiki/config/LocalWiki.php";
 if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once "/srv/mediawiki/config/ExtensionMessageFiles.php";
 }
+
+$wgConf->extractAllGlobals( $wi->dbname );
