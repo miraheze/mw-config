@@ -2612,6 +2612,9 @@ $settings = [
 	'wgCodeEditorEnableCore' => [
 		'default' => true,
 	],
+	'wgScribuntoDefaultEngine' => [
+		'default' => 'luaautodetect',
+	],
 	'wgScribuntoUseCodeEditor' => [
 		'default' => true,
 	],
