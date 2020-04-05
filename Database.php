@@ -49,7 +49,6 @@ $wgLBFactoryConf = [
 		'staffwiki' => 'c4',
 		'testwiki' => 'c4',
 		'buswiki' => 'c4',
-		'pathofexilewiki' => 'c4',
 		'tmewiki' => 'c4',
 		'vsrecommendedgameswiki' => 'c4',
 		'animatedfeetwiki' => 'c4',
