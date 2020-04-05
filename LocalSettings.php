@@ -2664,9 +2664,6 @@ $settings = [
 	'wgScriptPath' => [
 		'default' => '/w',
 	],
-	'wgServer' => [
-		'default' => 'https://$lang.miraheze.org',
-	],
 	'wgShowHostnames' => [
 		'default' => true,
 	],
@@ -3196,6 +3193,16 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once "/srv/mediawiki/config/ExtensionMessageFiles.php";
 }
 
-$wi->config->settings = $settings;
+$wi->setVariables(
+	'/srv/mediawiki/w/cache/',
+	$settings,
+	[
+		'wiki'
+	],
+	[
+		'miraheze.org' => 'wiki'
+	]
+);
+$wi->readCache();
 $wgConf = $wi->config;
 $wgConf->extractAllGlobals( $wi->dbname );

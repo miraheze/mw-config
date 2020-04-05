@@ -998,10 +998,8 @@ if ( $wmgUseVisualEditor ) {
 	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
-		$settings['+wgDefaultUserOptions']['default'][] = [
-			'visualeditor-enable' => 1,
-			'visualeditor-editor' => 'visualeditor'
-		];
+		$settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
 	} else {
 		$settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
