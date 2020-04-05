@@ -556,8 +556,8 @@ $wgManageWikiSettings = [
 			'Pages' => 10,
 			'All' => 20,
 			'Parents' => 100,
-			],
 		],
+	],
 	'wgRandomGameDisplay' => [
 		'name' => 'Random Game Display',
 		'from' => 'randomgameunit',
