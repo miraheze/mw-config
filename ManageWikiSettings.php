@@ -597,6 +597,7 @@ $wgManageWikiSettings = [
 		'type' => 'list-multi-bool',
 		'allopts' => [
 			'activity',
+			'articles', // Blog
 			'avatar',
 			'awards',
 			'board',
@@ -613,6 +614,7 @@ $wgManageWikiSettings = [
 		],
 		'options' => [
 			'Activity' => 'activity',
+			'Articles' => 'articles', // Blog
 			'Avatar' => 'avatar',
 			'Awards' => 'awards',
 			'Board' => 'board',
@@ -629,6 +631,7 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => [
 			'activity' => false,
+			'articles' => true, // Blog
 			'avatar' => true,
 			'awards' => true,
 			'board' => false,
