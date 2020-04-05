@@ -166,7 +166,7 @@ if ( $wmgUseCiteThisPage ) {
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
 
-	$wgCitoidFullRestbaseURL = "https://{$wmgHostname}/{$wmgHostname}/";
+	$wgCitoidFullRestbaseURL = "https://{$wi->hostname}/{$wi->hostname}/";
 }
 
 if ( $wmgUseCodeEditor ) {
@@ -594,7 +594,7 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
-	$wgMFStopRedirectCookieHost = $wmgHostname;
+	$wgMFStopRedirectCookieHost = $wi->hostname;
 
 	$wgHooks['EnterMobileMode'][] = function () {
 		global $wgIncludeLegacyJavaScript;
@@ -998,12 +998,12 @@ if ( $wmgUseVisualEditor ) {
 	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
-		$settings['wgDefaultUserOptions']['default'] = [
+		$settings['+wgDefaultUserOptions']['default'][] = [
 			'visualeditor-enable' => 1,
 			'visualeditor-editor' => 'visualeditor'
 		];
 	} else {
-		$settings['wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+		$settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
 
 	$settings['wgManageWikiNamespacesAdditional']['default']['wgVisualEditorAvailableNamespaces'] = [

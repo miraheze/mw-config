@@ -3108,15 +3108,14 @@ require_once __DIR__ . "/ManageWikiExtensions.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
 
 $wi->readCache();
-$wgConf = $wi->config;
-$wgConf->extractAllGlobals( $wi->dbname );
+$wi->config->extractAllGlobals( $wi->dbname );
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$settings['wgCentralAuthCookieDomain'][$wgDBname] = $wi->hostname;
-	$settings['wgCookieDomain']['default'][$wgDBname] = $wi->hostname;
+	$settings['wgCookieDomain'][$wgDBname] = $wi->hostname;
 }
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
@@ -3185,4 +3184,6 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once "/srv/mediawiki/config/ExtensionMessageFiles.php";
 }
 
+$wi->config->settings = $settings;
+$wgConf = $wi->config;
 $wgConf->extractAllGlobals( $wi->dbname );
