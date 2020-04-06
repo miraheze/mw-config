@@ -2337,7 +2337,7 @@ $settings = [
 
 	// Used for the DisqusTag extension
 	'wgDisqusShortname' => [
-		'default' => null,
+		'default' => '',
 	],
 
 	// Page Size
