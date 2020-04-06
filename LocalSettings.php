@@ -2303,10 +2303,10 @@ $settings = [
 
 	// Namespaces
 	'wgMetaNamespace' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgMetaNamespaceTalk' => [
-		'default' => null,
+		'default' => false,
 	],
 
 	// OATHAuth
@@ -2331,13 +2331,13 @@ $settings = [
 	],
 
 	// Used for the PageDisqus extension
-	'wgPageDisqusShortname' => [
-		'default' => null,
+	'DisqusShortname' => [
+		'default' => false,
 	],
 
 	// Used for the DisqusTag extension
 	'wgDisqusShortname' => [
-		'default' => null,
+		'default' => '',
 	],
 
 	// Page Size
