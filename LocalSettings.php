@@ -669,6 +669,9 @@ $wgConf->settings = [
 	'wmgUseDisambiguator' => [
 		'default' => false,
 	],
+	'wmgUseDiscussionTools' => [
+		'default' => false,
+	],
 	'wmgUseDismissableSiteNotice' => [
 		'default' => true,
 	],
