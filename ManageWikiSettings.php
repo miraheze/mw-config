@@ -6,7 +6,7 @@
  * Type can be either: check, integer, list, list-multi, matrix, text, url or wikipage.
  *
  * check: adds a checkbox.
- * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values)
+ * integer: adds a textbox with integer validation (requires: minint anwgDisqusShortnamed maxint which are minimum and maximum integer values)
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
