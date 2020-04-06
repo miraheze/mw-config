@@ -2439,9 +2439,6 @@ $settings = [
 			'timeless',
 			'vector',
 		],
-		'allthetropeswiki' => [
-			'minerva'
-		]
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'default' => false,
