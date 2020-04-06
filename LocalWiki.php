@@ -27,7 +27,7 @@ EOF;
 }
 
 // Inactive Wikis
-if ( $cwInactive ) {
+if ( $cwInactive && $cwInactive != 'exempt' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
 	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF

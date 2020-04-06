@@ -1144,7 +1144,7 @@ $settings = [
 	'wmgUseYouTube' => [
 		'default' => false,
 	],
-	'+wgExtensionEntryPointListFiles' => [
+	'wgExtensionEntryPointListFiles' => [
 		'default' => '/srv/mediawiki/config/extension-list'
 	],
 
@@ -2445,7 +2445,7 @@ $settings = [
 	],
 
 	// Restriction types
-	'+wgRestrictionLevels' => [
+	'wgRestrictionLevels' => [
 		'default' => [
 			'',
 			'user',
