@@ -2331,8 +2331,8 @@ $settings = [
 	],
 
 	// Used for the PageDisqus extension
-	'wgPageDisqusShortname' => [
-		'default' => null,
+	'DisqusShortname' => [
+		'default' => false,
 	],
 
 	// Used for the DisqusTag extension
