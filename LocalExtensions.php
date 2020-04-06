@@ -294,7 +294,9 @@ if ( $wmgUseDescription2 ) {
 
 	$wgEnableMetaDescriptionFunctions = true;
 }
-
+if ( $wmgUseDiscussionTools ) {
+	wfLoadExtension( 'DiscussioonToools');
+}
 if ( $wmgUseDisambiguator ) {
 	wfLoadExtension( 'Disambiguator' );
 }
