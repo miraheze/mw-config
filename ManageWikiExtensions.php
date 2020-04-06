@@ -438,6 +438,20 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'discussiontools' => [
+			'name' => 'DiscussionTools',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DiscussionTools',
+			'var' => 'wmgUseDiscussionTools',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+				'extensions' => [
+					'visualeditor',
+				],
+			],
+		],
 		'disqustag' => [
 			'name' => 'DisqusTag',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DisqusTag',
