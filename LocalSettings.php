@@ -2303,10 +2303,10 @@ $settings = [
 
 	// Namespaces
 	'wgMetaNamespace' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgMetaNamespaceTalk' => [
-		'default' => null,
+		'default' => false,
 	],
 
 	// OATHAuth
