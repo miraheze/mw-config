@@ -451,7 +451,7 @@ $wgConf->settings = [
 
 	// Delete
 	'wgDeleteRevisionsLimit' => [
-		'default' => '250', // databases don't have much memory - let's not overload them in future
+		'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1k T5287
 	],
 
 	// DJVU
