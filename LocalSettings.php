@@ -2660,6 +2660,9 @@ $settings = [
 	'wgScriptPath' => [
 		'default' => '/w',
 	],
+	'wgServer' => [
+		'default' => 'https://meta.miraheze.org',
+	],
 	'wgShowHostnames' => [
 		'default' => true,
 	],
