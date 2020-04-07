@@ -3155,9 +3155,12 @@ function lfTOSLink( $sk, &$tpl ) {
 require_once "/srv/mediawiki/config/Database.php";
 require_once "/srv/mediawiki/config/GlobalLogging.php";
 require_once "/srv/mediawiki/config/LocalExtensions.php";
-require_once "/srv/mediawiki/config/MissingWiki.php";
 require_once "/srv/mediawiki/config/Redis.php";
 require_once "/srv/mediawiki/config/Sitenotice.php";
+
+if ( $wi->missing ) {
+	require_once '/srv/mediawiki/config/MissingWiki.php';
+}
 
 // per T3457 - Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
