@@ -1611,7 +1611,6 @@ $settings = [
 	// ManageWiki
 	'wgManageWiki' => [
 		'default' => [
-			'cdb' => true,
 			'core' => true,
 			'extensions' => true,
 			'namespaces' => true,
