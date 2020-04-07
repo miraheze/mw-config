@@ -75,7 +75,7 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
 	$settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
@@ -87,14 +87,14 @@ if ( $wgDBname === 'hamzawiki' ) {
 
 if ( $wgDBname === 'harrypotterwiki' ) {
 	$wgHiddenPrefs[] = 'collapsiblenav';
-	$settings['wgDefaultUserOptions']['default']['collapsiblenav'] = 1;
+	$settings['+wgDefaultUserOptions']['default']['collapsiblenav'] = 1;
 }
 
 if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
 	$settings['wgExtraInterlanguageLinkPrefixes']['default'] = [ 'd' ];
 
-	$settings['wgDefaultUserOptions']['default']['flow-topiclist-sortby'] = 'newest';
+	$settings['+wgDefaultUserOptions']['default']['flow-topiclist-sortby'] = 'newest';
 }
 
 if ( $wgDBname === 'metawiki' ) {
