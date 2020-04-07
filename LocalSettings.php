@@ -3196,7 +3196,7 @@ if ( $wmgPrivateWiki = true ) {
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Due to a large change in our infrastructure that didn't go as planned, for a few hours earlier today private wikis may have been accessible to users who accessed them at that time even if they were not authorized. We deeply apologize for this issue and we assure you that it has been fixed and that something like this will not happen again.</td>
+			<td>Due to a large change in our infrastructure that didn't go as planned, for a few hours earlier today private wikis may have been accessible to users at that time even if they were not authorized. <br> We deeply apologize for this issue. We would also like to take this opportunity to assure you that we have now fixed the issue and that this will not happen again.</td>
 			</tr></tbody></table>
 EOF;
 		return true;
