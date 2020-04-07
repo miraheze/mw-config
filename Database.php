@@ -1,6 +1,6 @@
 <?php
 
-$settings['wgLBFactoryConf']['default'] = [
+$wgLBFactoryConf = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => [
 		// large wikis
