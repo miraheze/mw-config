@@ -1,29 +1,31 @@
 <?php
 /*
- * LocalSettings.php for Miraheze.
- * Authors of initial version: Southparkfan, John Lewis, Orain contributors
- */
+LocalSettings.php for Miraheze.
+Authors of initial version: Southparkfan, John Lewis, Orain contributors
+*/
 
-// Initialise WI
-require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
-$wgCreateWikiCacheDirectory = '/srv/mediawiki/w/cache';
-$wi = new WikiInitialise();
-
-// Load PrivateSettings (e.g. wgDBpassword)
+# Load PrivateSettings (e.g. wgDBpassword)
 require_once "/srv/mediawiki/config/PrivateSettings.php";
 
-// Load global skins and extensions
+# Load global skins and extensions
 require_once "/srv/mediawiki/config/GlobalSkins.php";
 require_once "/srv/mediawiki/config/GlobalExtensions.php";
 
-// Don't allow web access.
+# Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
 $wmgUploadHostname = "static.miraheze.org";
 
-$settings = [
+# Initialize $wgConf
+$wgConf = new SiteConfiguration;
+$wgConf->suffixes = [ 'wiki' ];
+$wgLocalVirtualHosts = [ '81.4.109.166' ];
+
+$wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
+
+$wgConf->settings = [
 	// invalidates user sessions
 	'wgAuthenticationTokenVersion' => [
 		'default' => '3',
@@ -63,7 +65,6 @@ $settings = [
 			'rangeblock' => true,
 		],
 	],
-
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
@@ -99,7 +100,6 @@ $settings = [
 			'showFooterIcons' => true
 		],
 	],
-
 	// Block
 	'wgAutoblockExpiry' => [
 		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
@@ -149,8 +149,8 @@ $settings = [
 	'wgRevisionCacheExpiry' => [
 		'default' => 0,
 	],
-
-	// CategoryTree
+	
+	// CategoryTree 
 	'wgCategoryTreeDefaultMode' => [
 		'default' => 0,
 	],
@@ -198,6 +198,7 @@ $settings = [
 		'default' => false,
 		'modesofdiscoursewiki' => true,
 	],
+	
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
 		'nenawikiwiki' => 1500,
@@ -260,6 +261,7 @@ $settings = [
 	'wgCommentsInRecentChanges' => [
 		'default' => false,
 	],
+
 	'wgCommentsSortDescending' => [
 		'default' => false,
 	],
@@ -364,6 +366,7 @@ $settings = [
 	'wgCookieSetOnAutoblock' => [
 		'default' => true,
 	],
+	// Cookies extension settings
 	'wgCookieWarningEnabled' => [
 		'default' => true,
 	],
@@ -376,6 +379,8 @@ $settings = [
 	'wgCookieWarningGeoIp2Path' => [
 		'default' => '/srv/GeoLite2-City.mmdb',
 	],
+
+	// Cookie stuff
 	'wgCookieSetOnIpBlock' => [
 		'default' => true,
 	],
@@ -439,7 +444,6 @@ $settings = [
 	'wgCommentTableSchemaMigrationStage' => [
 		'default' => MIGRATION_NEW,
 	],
-
 	//CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
 		'default' => false,
@@ -460,20 +464,20 @@ $settings = [
 	'wgDjvuTxt' => [
 		'default' => '/usr/bin/djvutxt',
 	],
-
+	
 	// TimedMediaHandler config
 	'wgFFmpegLocation' => [
 		'default' => '/usr/bin/ffmpeg',
 	],
-
+	
 	// Discord
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
 	],
-
-	// Download from https://www.stopforumspam.com/downloads (recommended listed_ip_30_all.zip)
-	// for ipv4 + ipv6 combined.
-	// TODO: Setup cron to update this automatically.
+	
+	# Download from https://www.stopforumspam.com/downloads (recommended listed_ip_30_all.zip)
+	# for ipv4 + ipv6 combined.
+	# TODO: Setup cron to update this automatically.
 	'wgSFSIPListLocation' => [
 		'default' => '/mnt/mediawiki-static/private/stopforumspam/listed_ip_30_ipv46_all.txt',
 	],
@@ -505,11 +509,9 @@ $settings = [
 	'wgEchoMentionStatusNotifications' => [
 		'default' => true,
 	],
-
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
 	'wgExemptFromUserRobotsControl' => [
 		'default' => $wgContentNamespaces,
-		'abitaregeawiki' => [],
 		'thelonsdalebattalionwiki' => [],
 	],
 
@@ -520,8 +522,7 @@ $settings = [
 	'wmgSearchType' => [
 		'default' => false,
 	],
-
-	// Popups
+	
 	'wmgShowPopupsByDefault' => [
 		'default' => false,
 	],
@@ -1144,11 +1145,6 @@ $settings = [
 	'wmgUseYouTube' => [
 		'default' => false,
 	],
-	'+wgExtensionEntryPointListFiles' => [
-		'default' => [
-			'/srv/mediawiki/config/extension-list'
-		],
-	],
 
 	// TemplateStyles config
 	'wgTemplateStylesAllowedUrls' => [
@@ -1287,39 +1283,7 @@ $settings = [
 	'wmgFlaggedRevsLowProfile' => [
 		'default' => false,
 	],
-
-	// Footers
-	'+wgFooterIcons' => [
-		'default' => [
-			'poweredby' => [
-				'miraheze' => [
-					'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
-					'url' => 'https://meta.miraheze.org/wiki/',
-					'alt' => 'Miraheze Wiki Hosting'
-				]
-			]
-		],
-		'+permanentfuturelabwiki' => [
-			'poweredby' => [
-				'wikiapiary' => [
-					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-					'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
-					'alt' => 'Monitored by WikiApiary'
-				]
-			]
-		],
-		'+tmewiki' => [
-			'poweredby' => [
-				'wikiapiary' => [
-					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-					'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
-					'alt' => 'Monitored by WikiApiary'
-				]
-			]
-		]
-	],
-
-	// Credits
+	
 	'wgMaxCredits' => [
 		'default' => 0,
 	],
@@ -1426,7 +1390,6 @@ $settings = [
 			'location' => 'end'
 		],
 	],
-
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => [
 		'default' => [],
@@ -1613,6 +1576,7 @@ $settings = [
 	// ManageWiki
 	'wgManageWiki' => [
 		'default' => [
+			'cdb' => true,
 			'core' => true,
 			'extensions' => true,
 			'namespaces' => true,
@@ -2185,7 +2149,6 @@ $settings = [
 		],
 	],
 
-	// Minerva
 	'wgMinervaEnableSiteNotice' => [
 		'default' => true,
 	],
@@ -2194,6 +2157,7 @@ $settings = [
 	'wgServicesRepo' => [
 		'default' => '/srv/services/services',
 	],
+
 	'wgMirahezeServicesExtensions' => [
 		'default' => [ 'VisualEditor', 'Flow' ],
 	],
@@ -2262,12 +2226,15 @@ $settings = [
 	'wgMSU_useDragDrop' => [
 		'default' => true,
 	],
+
 	'wgMSU_showAutoCat' => [
 		'default' => false,
 	],
+
 	'wgMSU_checkAutoCat' => [
 		'default' => false,
 	],
+
 	'wgMSU_confirmReplace' => [
 		'default' => false,
 	],
@@ -2281,7 +2248,6 @@ $settings = [
 	'wgMediaViewerEnableByDefault' => [
 		'default' => false,
 	],
-
 	// MobileFrontend
 	'wgMFNoMobilePages' => [
 		'default' => [],
@@ -2289,25 +2255,16 @@ $settings = [
 			'Main Page',
 		],
 	],
-
 	// Math
-	'wgMathoidCli' => [
-		'default' => [
-			'/srv/mathoid/cli.js',
-			'-c',
-			'/etc/mathoid/config.yaml'
-		]
-	],
 	'wgMathValidModes' => [
 		'default' => [ 'mathml' ],
 	],
-
 	// Namespaces
 	'wgMetaNamespace' => [
-		'default' => false,
+		'default' => null,
 	],
 	'wgMetaNamespaceTalk' => [
-		'default' => false,
+		'default' => null,
 	],
 
 	// OATHAuth
@@ -2333,12 +2290,12 @@ $settings = [
 
 	// Used for the PageDisqus extension
 	'wgPageDisqusShortname' => [
-		'default' => false,
+		'default' => null,
 	],
 
 	// Used for the DisqusTag extension
 	'wgDisqusShortname' => [
-		'default' => '',
+		'default' => null,
 	],
 
 	// Page Size
@@ -2405,16 +2362,6 @@ $settings = [
 		],
 	],
 
-	// Preferences
-	'+wgDefaultUserOptions' => [
-		'default' => [
-			'enotifwatchlistpages' => 0,
-			'math' => 'mathml',
-			'usebetatoolbar' => 1,
-			'usebetatoolbar-cgd' => 1
-		]
-	],
-
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
@@ -2446,7 +2393,7 @@ $settings = [
 	],
 
 	// Restriction types
-	'wgRestrictionLevels' => [
+	'+wgRestrictionLevels' => [
 		'default' => [
 			'',
 			'user',
@@ -2561,6 +2508,7 @@ $settings = [
 	'wgDefaultRobotPolicy' => [
 		'default' => 'index,follow',
 	],
+	// Robot policy
 	'wgNamespaceRobotPolicies' => [
 		'default' => [],
 		'taswinwiki' => [
@@ -2613,33 +2561,23 @@ $settings = [
 	'wgScribuntoUseCodeEditor' => [
 		'default' => true,
 	],
+	//
 	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
 	],
 	'wgScribuntoEngineConf' => [
 		'default' => [
 			'luasandbox' => [
-				'class' => "Scribunto_LuaSandboxEngine",
-				'memoryLimit' => 52428800,
 				'cpuLimit' => 10,
-				'profilerPeriod' => 0.02,
-				'allowEnvFuncs' => false,
-				'maxLangCacheSize' => 200
+				'maxLangCacheSize' => 200,
 			],
 			'luastandalone' => [
-				'class' => "Scribunto_LuaStandaloneEngine",
-				'errorFile' => null,
-				'luaPath' => null,
-				'memoryLimit' => 52428800,
 				'cpuLimit' => 10,
-				'allowEnvFuncs' => false,
-				'maxLangCacheSize' => 200
-			],
-			'luaautodetect' => [
-				'factory' => 'Scribunto_LuaEngine::newAutodetectEngine',
+				'maxLangCacheSize' => 200,
 			],
 		],
 	],
+	
 	'wgExpensiveParserFunctionLimit' => [
 		'default' => 99, //per https://www.mediawiki.org/wiki/Manual:$wgExpensiveParserFunctionLimit
 	],
@@ -2663,18 +2601,13 @@ $settings = [
 		'default' => '/w',
 	],
 	'wgServer' => [
-		'default' => 'https://meta.miraheze.org',
+		'default' => 'https://$lang.miraheze.org',
 	],
 	'wgShowHostnames' => [
 		'default' => true,
 	],
 	'wgUsePathInfo' => [
 		'default' => true,
-	],
-
-	// Shell
-	'wgMaxShellMemory' => [
-		'default' => 2097152
 	],
 
 	// SiteNotice
@@ -2696,21 +2629,9 @@ $settings = [
 	],
 	'wgUserProfileDisplay' => [
 		'default' => [
-			'activity' => false,
-			'articles' => true, // Blog
-			'avatar' => true,
-			'awards' => true,
 			'board' => false,
-			'custom' => true,
-			'foes' => false,
 			'friends' => false,
-			'games' => false,
-			'gifts' => true,
-			'interests' => true,
-			'personal' => true,
-			'profile' => true,
-			'stats' => false,
-			'userboxes' => false,
+			'foes' => false,
 		],
 	],
 	'wgUserStatsPointValues' => [
@@ -2773,6 +2694,20 @@ $settings = [
 		'privadowiki' => 'any',
 		'simswiki' => 'any',
 		'ucroniaswiki' => 'any',
+	],
+
+	// Squid (aka Varnish)
+	// Deprecated (1.33)
+	'wgUseSquid' => [
+		'default' => true,
+	],
+	'wgSquidServers' => [
+		'default' => [
+			'128.199.139.216:81', // cp3
+			'51.77.107.210:81', // cp6
+			'51.89.160.142:81', // cp7
+			'51.161.32.127:81', // cp8
+		],
 	],
 
 	// Vanish (MW 1.34+)
@@ -2867,16 +2802,6 @@ $settings = [
 	],
 	'wmgTranslateDocumentationLanguageCode' => [
 		'default' => false,
-	],
-
-	// Uploads
-	'wmgPrivateUploads' => [
-		'default' => false,
-		'ciptamediawiki' => true,
-		'rhinosf1wiki' => true,
-		'staffwiki' => true,
-		'stateofwiki' => true,
-		'mikekilitterboxwiki' => true
 	],
 
 	// UniversalLanguageSelector
@@ -3093,14 +3018,14 @@ $settings = [
 		'default' => '/srv/mediawiki/dblist/private.dblist',
 	],
 
-	// CreateWiki Defined Special Variables
-	'cwClosed' => [
+	// Empty arrays (do not touch unless you know what you're doing)
+	'wmgClosedWiki' => [
 		'default' => false,
 	],
-	'cwInactive' => [
+	'wmgInactiveWiki' => [
 		'default' => false,
 	],
-	'cwPrivate' => [
+	'wmgPrivateWiki' => [
 		'default' => false,
 	],
 
@@ -3114,38 +3039,172 @@ $settings = [
 	],
 ];
 
-$wi->setVariables(
-	'/srv/mediawiki/w/cache/',
-	$settings,
-	[
-		'wiki'
-	],
-	[
-		'miraheze.org' => 'wiki'
-	]
-);
+function efGetSiteParams( $conf, $wiki ) {
+	$site = null;
+	$lang = null;
+	foreach ( $conf->suffixes as $suffix ) {
+		if ( substr( $wiki, -strlen( $suffix ) ) == $suffix ) {
+			$site = $suffix;
+			$lang = substr( $wiki, 0, -strlen( $suffix ) );
+			break;
+		}
+	}
+	return [
+		'suffix' => $site,
+		'lang' => $lang,
+		'params' => [
+			'lang' => $lang,
+			'site' => $site,
+			'wiki' => $wiki,
+		],
+		'tags' => [],
+	];
+}
+
+$wgConf->siteParamsCallback = 'efGetSiteParams';
+
+# The thing that determines the dbname
+if ( defined( 'MW_DB' ) ) {
+	$wgDBname = MW_DB;
+} elseif ( $wmgHostname === 'meta.miraheze.org' ) {
+	$wgDBname = 'metawiki';
+} elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+	$wgDBname = $matches[1] . 'wiki';
+} elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+	$wgDBname = $matches[1] . 'wiki';
+} else {
+	$wgDBname = '';
+}
+
+# Initialize dblist
+$wgLocalDatabases = [];
+$wmgDatabaseList = file( "/srv/mediawiki/dblist/all.dblist" );
+$wmgDeleteDatabaseList = file( "/srv/mediawiki/dblist/deleted.dblist" );
 
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
 
-$wi->readCache();
-$wi->config->extractAllGlobals( $wi->dbname );
+foreach ( $wmgDatabaseList as $wikiLine ) {
+	$wikiDB = explode( '|', $wikiLine, 6 );
+	list( $DBname, $siteName, $siteLang, $siteExtensions, $siteSettings ) = array_pad( $wikiDB, 6, '' );
+	$wgLocalDatabases[] = $DBname;
+	$wgConf->settings['wgSitename'][$DBname] = $siteName;
+	$wgConf->settings['wgLanguageCode'][$DBname] = $siteLang;
+
+	$siteExtensionsArray = explode( ",", $siteExtensions );
+	foreach ( $wgManageWikiExtensions as $name => $ext ) {
+		if ( in_array( $name, $siteExtensionsArray ) ) {
+			$wgConf->settings[$ext['var']][$DBname] = true;
+		}
+	}
+
+	$siteSettingsArray = json_decode( $siteSettings, true );
+	if ( is_array( $siteSettingsArray ) || is_object( $siteSettingsArray ) ) {
+		foreach ( $siteSettingsArray as $setVar => $setVal ) {
+			$wgConf->settings[$setVar][$DBname] = $setVal;
+		}
+	}
+}
+
+if ( php_sapi_name() == 'cli' ) {
+	// Only do this if using cli
+	foreach ( $wmgDeleteDatabaseList as $wikiLine ) {
+		$wgLocalDatabases[] = $wikiLine;
+	}
+}
+
+$middleMobile = false;
+
+// TODO: Convert this so that we use the url to find the wikiname,
+// will lead to performance increase as we won't need to foreach.
+foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
+	if ( $val === 'https://' . $wmgHostname) {
+		$wgDBname = $name;
+	}
+}
+
+$wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
+foreach ( $wmgPrivateDatabasesList as $database ) {
+	$database = trim( $database );
+	$wgConf->settings['wmgPrivateWiki'][$database] = true;
+}
+
+$wmgClosedDatabasesList = file( "/srv/mediawiki/dblist/closed.dblist" );
+foreach ( $wmgClosedDatabasesList as $database ) {
+	$database = trim( $database );
+	$wgConf->settings['wmgClosedWiki'][$database] = true;
+}
+
+$wmgInactiveDatabasesList = file( "/srv/mediawiki/dblist/inactive.dblist" );
+foreach ( $wmgInactiveDatabasesList as $database ) {
+	$database = trim( $database );
+	$wgConf->settings['wmgInactiveWiki'][$database] = true;
+}
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
-if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
-	$settings['wgCentralAuthCookieDomain'][$wgDBname] = $wi->hostname;
-	$settings['wgCookieDomain'][$wgDBname] = $wi->hostname;
+$wgConf->wikis = $wgLocalDatabases;
+$wgConf->extractAllGlobals( $wgDBname );
+
+if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
+	$wgCentralAuthCookieDomain = $wmgHostname;
+	$wgCookieDomain = $wmgHostname;
 }
 
-if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
-	$settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
+# Footer icon
+$wgFooterIcons['poweredby']['miraheze'] = [
+	'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
+	'url' => 'https://meta.miraheze.org/wiki/',
+	'alt' => 'Miraheze Wiki Hosting',
+];
+
+if ( $wgDBname === 'permanentfuturelabwiki' ) {
+	$wgFooterIcons['poweredby']['wikiapiary'] = [
+		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+		'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
+		'alt' => 'Monitored by WikiApiary',
+	];
 }
+
+if ( $wgDBname === 'tmewiki' ) {
+	$wgFooterIcons['poweredby']['wikiapiary'] = [
+		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+		'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
+		'alt' => 'Monitored by WikiApiary',
+	];
+}
+
+$wgDefaultUserOptions['enotifwatchlistpages'] = 0;
+$wgDefaultUserOptions['usebetatoolbar'] = 1;
+$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
+
+if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
+	$wgLocalisationCacheConf['manualRecache'] = false;
+}
+
+$wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
+
+// Placeholder for DB migrations
+/*
+if ( $wgDBname === 'openhatchwiki' ) {
+	$wgReadOnly = 'Miraheze is conducting a database migration.';
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
+	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
+			$siteNotice .= <<<EOF
+			<table class="wikitable" style="text-align:center;"><tbody><tr>
+			<td>Miraheze will be performing database maintenance on this wiki from 11:10 UTC until approximately 11:30 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 11:10 UTC!</td>
+			</tr></tbody></table>
+EOF;
+		return true;
+	}
+}
+}*/
+
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
@@ -3159,12 +3218,9 @@ function lfTOSLink( $sk, &$tpl ) {
 require_once "/srv/mediawiki/config/Database.php";
 require_once "/srv/mediawiki/config/GlobalLogging.php";
 require_once "/srv/mediawiki/config/LocalExtensions.php";
+require_once "/srv/mediawiki/config/MissingWiki.php";
 require_once "/srv/mediawiki/config/Redis.php";
 require_once "/srv/mediawiki/config/Sitenotice.php";
-
-if ( $wi->missing ) {
-	require_once '/srv/mediawiki/config/MissingWiki.php';
-}
 
 // per T3457 - Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
@@ -3186,7 +3242,8 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 
 // Servers accessible by non cache proxies should not have squid/cdn config enabled
 if ( !preg_match( "/^mw[0-9]*/", wfHostname() ) ) {
-	$settings['wgUseCdn']['default'] = false;
+	$wgUseSquid = false;
+	$wgUseCdn = false;
 }
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
@@ -3199,6 +3256,9 @@ if (
         $wgProfiler['class'] = 'ProfilerXhprof';
         $wgProfiler['output'] = [ 'ProfilerOutputText' ];
         $wgProfiler['visible'] = false;
+
+	// Prevent cache (better be safe than sorry)
+        $wgUseSquid = false;
 }
 
 // Define last to avoid all dependencies
@@ -3209,16 +3269,19 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once "/srv/mediawiki/config/ExtensionMessageFiles.php";
 }
 
-$wi->setVariables(
-	'/srv/mediawiki/w/cache/',
-	$settings,
-	[
-		'wiki'
-	],
-	[
-		'miraheze.org' => 'wiki'
-	]
-);
-$wi->readCache();
-$wgConf = $wi->config;
-$wgConf->extractAllGlobals( $wi->dbname );
+if ( PHP_SAPI !== 'cli' ) {
+	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
+	switch ( $host ) {
+		case 'jobrunner1.miraheze.org':
+			$limit = 1200;
+			break;
+		default:
+			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+				$limit = 110;
+			} else {
+				$limit = 60;
+			}
+	}
+
+	set_time_limit( $limit );
+}
