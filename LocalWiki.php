@@ -3,8 +3,8 @@
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
 // Closed Wikis
-if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
-	$wgRevokePermissions = [
+if ( $cwClosed ) {
+	$settings['wgRevokePermissions']['default'] = [
 		'*' => [
 			'block' => true,
 			'createaccount' => true,
@@ -27,7 +27,7 @@ EOF;
 }
 
 // Inactive Wikis
-if ( isset( $wgConf->settings['wmgInactiveWiki'][$wgDBname] ) ) {
+if ( $cwInactive && $cwInactive != 'exempt' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
 	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
@@ -39,19 +39,11 @@ EOF;
 }
 
 // Private Wikis
-if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgManageWikiPermissionsAdditionalRights['sysop']['read'] = true;
-	$wgManageWikiPermissionsAdditionalRights['*']['read'] = false;
-        $wgReferrerPolicy = 'no-referrer';
-}
-
-// use local mathoid install
-$wgDefaultUserOptions['math'] = 'mathml';
-$wgMathoidCli = [ '/srv/mathoid/cli.js', '-c', '/etc/mathoid/config.yaml' ];
-$wgMaxShellMemory = 2097152;
-
-// ircrcbot (!=private)
-if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+if ( $cwPrivate ) {
+	$settings['wgManageWikiPermissionsAdditionalRights']['default']['sysop']['read'] = true;
+	$settings['wgManageWikiPermissionsAdditionalRights']['default']['*']['read'] = false;
+        $settings['wgReferrerPolicy']['default'] = 'no-referrer';
+} else {
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
 		'uri' => 'udp://51.89.160.138:5070',
@@ -73,12 +65,7 @@ if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) && ( $_SERVER['REMOTE_ADDR'] === '51.89.160.132' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1056::7' || $_SERVER['REMOTE_ADDR'] === '51.89.160.141' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:105a::9' ) ) {
-        $wgCookieWarningEnabled = false;
-}
-
-// Per-wiki overrides
-if ( $wgDBname === 'allthetropeswiki' ) {
-	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
+        $settings['wgCookieWarningEnabled']['default'] = false;
 }
 
 if ( $wgDBname === 'ayrshirewiki' ) {
@@ -86,10 +73,10 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
 }
 
-if ( $wgDBname === 'ciptamediawiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
+if ( $wmgPrivateUploads ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
+	$settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
 if ( $wgDBname === 'hamzawiki' ) {
@@ -100,16 +87,14 @@ if ( $wgDBname === 'hamzawiki' ) {
 
 if ( $wgDBname === 'harrypotterwiki' ) {
 	$wgHiddenPrefs[] = 'collapsiblenav';
-	$wgDefaultUserOptions['collapsiblenav'] = 1;
+	$settings['+wgDefaultUserOptions']['default']['collapsiblenav'] = 1;
 }
 
 if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
-	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
+	$settings['wgExtraInterlanguageLinkPrefixes']['default'] = [ 'd' ];
 
-	$wgSimpleFlaggedRevsUI = false;
-
-	$wgDefaultUserOptions['flow-topiclist-sortby'] = 'newest';
+	$settings['+wgDefaultUserOptions']['default']['flow-topiclist-sortby'] = 'newest';
 }
 
 if ( $wgDBname === 'metawiki' ) {
@@ -171,7 +156,7 @@ if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 }
 
 if ( $wgDBname === 'reviwikiwiki' ) {
-	$wgDefaultUserOptions['usenewrc'] = 0;
+	$settings['wgDefaultUserOptions']['default']['usenewrc'] = 0;
 }
 
 if ( $wgDBname === 'swisscomraidwiki' ) {
@@ -200,11 +185,6 @@ if ( $wgDBname === 'wikiageingwiki' ) {
 	];
 }
 
-// Depends on $wgContentNamespaces
-if ( $wgDBname === 'abitaregeawiki' ) {
-	$wgExemptFromUserRobotsControl = [];
-}
-
 // Additional wgReadWhitelist changes
 if ( $wgDBname === 'cvtwiki' ) {
 	$wgWhitelistRead[] = 'CVT action log';
@@ -213,59 +193,59 @@ if ( $wgDBname === 'cvtwiki' ) {
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/arr.png';
-		$wgRightsText = 'All Rights Reserved';
-		$wgRightsUrl = false;
+		$settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/arr.png';
+		$settings['wgRightsText']['default'] = 'All Rights Reserved';
+		$settings['wgRightsUrl']['default'] = false;
 		break;
 	case 'cc-by':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
-		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
+		$settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by/4.0';
 		break;
 	case 'cc-by-nc':
-		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
-		$wgRightsText = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc/4.0/';
+		$settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc/4.0/';
 		break;
 	case 'cc-by-nd':
-		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png';
-		$wgRightsText = 'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nd/4.0/';
+		$settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nd/4.0/';
 		break;
 	case 'cc-by-sa':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgRightsText = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
+		$settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
 	case 'cc-by-sa-3-0':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgRightsText = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/3.0';
+		$settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/3.0';
 		break;
 	case 'cc-by-sa-2-0-kr':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgRightsText = 'Creative Commons BY-SA 2.0 Korea';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
+		$settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons BY-SA 2.0 Korea';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
 		break;
 	case 'cc-by-sa-nc':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
-		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
+		$settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 		break;
 	case 'cc-by-nc-nd':
-		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png';
-		$wgRightsText = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
+		$settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png';
+		$settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
 		break;
 	case 'cc-pd':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
-		$wgRightsText = 'CC0 Public Domain';
-		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
+		$settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
+		$settings['wgRightsText']['default'] = 'CC0 Public Domain';
+		$settings['wgRightsUrl']['default'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
         case 'gpl-v3':
-                $wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
-                $wgRightsText = 'GPLv3';
-                $wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
+                $settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+                $settings['wgRightsText']['default'] = 'GPLv3';
+                $settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
                 break;
 	case 'empty':
 		break;
@@ -298,28 +278,4 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 		'wiki' => 'commonsgyaanipediawiki',
 		'descBaseUrl' => 'https://commonsgyaanipedia.miraheze.org/wiki/File:',
 	];
-}
-
-if ( $wgDBname === 'rhinosf1wiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/rhinosf1wiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
-}
-
-if ( $wgDBname === 'staffwiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/staffwiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
-}
-
-if ( $wgDBname === 'stateofwiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/stateofwiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
-}
-
-if ( $wgDBname === 'mikekilitterboxwiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/mikekilitterboxwiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
 }
