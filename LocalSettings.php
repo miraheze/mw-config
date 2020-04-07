@@ -1144,8 +1144,10 @@ $settings = [
 	'wmgUseYouTube' => [
 		'default' => false,
 	],
-	'wgExtensionEntryPointListFiles' => [
-		'default' => '/srv/mediawiki/config/extension-list'
+	'+wgExtensionEntryPointListFiles' => [
+		'default' => [
+			'/srv/mediawiki/config/extension-list'
+		],
 	],
 
 	// TemplateStyles config
