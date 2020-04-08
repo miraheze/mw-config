@@ -2697,6 +2697,11 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
+	// Shell
+ 	'wgMaxShellMemory' => [
+ 		'default' => 2097152
+ 	],
+
 	// SiteNotice
 	'wgDismissableSiteNoticeForAnons' => [
 		'default' => true,
