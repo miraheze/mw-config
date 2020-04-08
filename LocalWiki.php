@@ -323,3 +323,13 @@ if ( $wgDBname === 'mikekilitterboxwiki' ) {
 	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
+
+if ( $wgDBname === 'pluspiwiki' ) {
+	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
+	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
+
+		$out->addMeta( 'yandex-verification', '12535' );
+
+		return true;
+	}
+}
