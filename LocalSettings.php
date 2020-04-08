@@ -2581,13 +2581,26 @@ $wgConf->settings = [
 	'wgScribuntoEngineConf' => [
 		'default' => [
 			'luasandbox' => [
-				'cpuLimit' => 10,
-				'maxLangCacheSize' => 200,
+				'class' => "Scribunto_LuaSandboxEngine",
+ 				'memoryLimit' => 52428800,
+ 				'cpuLimit' => 10,
+				'profilerPeriod' => 0.02,
+ 				'allowEnvFuncs' => false,
+ 				'maxLangCacheSize' => 200
 			],
 			'luastandalone' => [
+				'class' => "Scribunto_LuaStandaloneEngine",
+ 				'errorFile' => null,
+ 				'luaPath' => null,
+ 				'memoryLimit' => 52428800,
 				'cpuLimit' => 10,
-				'maxLangCacheSize' => 200,
+				'profilerPeriod' => 0.02,
+ 				'allowEnvFuncs' => false,
+ 				'maxLangCacheSize' => 200
 			],
+			'luaautodetect' => [
+ 				'factory' => 'Scribunto_LuaEngine::newAutodetectEngine',
+ 			],
 		],
 	],
 	
