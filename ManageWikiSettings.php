@@ -218,15 +218,6 @@ $wgManageWikiSettings = [
 		'section' => 'beta',
 		'help' => 'This makes Media Viewer a beta feature thus this will not be enabled for all users.',
 	],
-	'wgPopupsBetaFeature' => [
-		'name' => 'Enable Popups Beta Mode',
-		'from' => 'popups',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => null,
-		'section' => 'beta',
-		'help' => 'This enables Popups as a beta feature, rather than showing it to all users.',
-	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'name' => 'Enable VisualEditor Diff Page Beta Feature',
 		'from' => 'mediawiki',
