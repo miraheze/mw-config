@@ -3205,14 +3205,6 @@ if ( php_sapi_name() == 'cli' ) {
 	}
 }
 
-// TODO: Convert this so that we use the url to find the wikiname,
-// will lead to performance increase as we won't need to foreach.
-foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
-	if ( $val === 'https://' . $wmgHostname) {
-		$wgDBname = $name;
-	}
-}
-
 $wmgPrivateDatabasesList = file( "/srv/mediawiki/dblist/private.dblist" );
 foreach ( $wmgPrivateDatabasesList as $database ) {
 	$database = trim( $database );
