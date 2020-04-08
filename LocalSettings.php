@@ -2757,20 +2757,6 @@ $wgConf->settings = [
 		'ucroniaswiki' => 'any',
 	],
 
-	// Squid (aka Varnish)
-	// Deprecated (1.33)
-	'wgUseSquid' => [
-		'default' => true,
-	],
-	'wgSquidServers' => [
-		'default' => [
-			'128.199.139.216:81', // cp3
-			'51.77.107.210:81', // cp6
-			'51.89.160.142:81', // cp7
-			'51.161.32.127:81', // cp8
-		],
-	],
-
 	// Vanish (MW 1.34+)
 	'wgUseCdn' => [
 		'default' => true,
