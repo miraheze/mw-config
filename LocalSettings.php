@@ -2851,6 +2851,16 @@ $wgConf->settings = [
 		'default' => false,
 	],
 
+	// Uploads
+ 	'wmgPrivateUploads' => [
+ 		'default' => false,
+ 		'ciptamediawiki' => true,
+ 		'rhinosf1wiki' => true,
+ 		'staffwiki' => true,
+ 		'stateofwiki' => true,
+ 		'mikekilitterboxwiki' => true
+ 	],
+
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => [
 		'default' => false,

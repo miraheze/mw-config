@@ -86,9 +86,9 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
 }
 
-if ( $wgDBname === 'ciptamediawiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/ciptamediawiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
+if ( $wmgPrivateUploads ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+	$wgUploadPath = "https://{$wmgHostname}/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
 
@@ -298,28 +298,4 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 		'wiki' => 'commonsgyaanipediawiki',
 		'descBaseUrl' => 'https://commonsgyaanipedia.miraheze.org/wiki/File:',
 	];
-}
-
-if ( $wgDBname === 'rhinosf1wiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/rhinosf1wiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
-}
-
-if ( $wgDBname === 'staffwiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/staffwiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
-}
-
-if ( $wgDBname === 'stateofwiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/stateofwiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
-}
-
-if ( $wgDBname === 'mikekilitterboxwiki' ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/mikekilitterboxwiki";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
 }
