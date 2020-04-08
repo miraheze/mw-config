@@ -2409,6 +2409,16 @@ $wgConf->settings = [
 		],
 	],
 
+	// Preferences
+ 	'+wgDefaultUserOptions' => [
+ 		'default' => [
+ 			'enotifwatchlistpages' => 0,
+ 			'math' => 'mathml',
+ 			'usebetatoolbar' => 1,
+ 			'usebetatoolbar-cgd' => 1
+ 		]
+ 	],
+
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
@@ -3246,10 +3256,6 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgCentralAuthCookieDomain = $wmgHostname;
 	$wgCookieDomain = $wmgHostname;
 }
-
-$wgDefaultUserOptions['enotifwatchlistpages'] = 0;
-$wgDefaultUserOptions['usebetatoolbar'] = 1;
-$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
