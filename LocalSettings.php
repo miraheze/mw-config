@@ -1283,7 +1283,38 @@ $wgConf->settings = [
 	'wmgFlaggedRevsLowProfile' => [
 		'default' => false,
 	],
-	
+
+	// Footers
+ 	'+wgFooterIcons' => [
+ 		'default' => [
+ 			'poweredby' => [
+ 				'miraheze' => [
+ 					'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
+ 					'url' => 'https://meta.miraheze.org/wiki/',
+ 					'alt' => 'Miraheze Wiki Hosting'
+ 				]
+ 			]
+ 		],
+ 		'+permanentfuturelabwiki' => [
+ 			'poweredby' => [
+ 				'wikiapiary' => [
+ 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 					'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
+ 					'alt' => 'Monitored by WikiApiary'
+ 				]
+ 			]
+ 		],
+ 		'+tmewiki' => [
+ 			'poweredby' => [
+ 				'wikiapiary' => [
+ 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 					'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
+ 					'alt' => 'Monitored by WikiApiary'
+ 				]
+ 			]
+ 		]
+ 	],
+
 	'wgMaxCredits' => [
 		'default' => 0,
 	],
@@ -3206,29 +3237,6 @@ $wgConf->extractAllGlobals( $wgDBname );
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgCentralAuthCookieDomain = $wmgHostname;
 	$wgCookieDomain = $wmgHostname;
-}
-
-# Footer icon
-$wgFooterIcons['poweredby']['miraheze'] = [
-	'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
-	'url' => 'https://meta.miraheze.org/wiki/',
-	'alt' => 'Miraheze Wiki Hosting',
-];
-
-if ( $wgDBname === 'permanentfuturelabwiki' ) {
-	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-		'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
-		'alt' => 'Monitored by WikiApiary',
-	];
-}
-
-if ( $wgDBname === 'tmewiki' ) {
-	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-		'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
-		'alt' => 'Monitored by WikiApiary',
-	];
 }
 
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
