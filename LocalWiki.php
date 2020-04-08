@@ -88,7 +88,6 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://$wmgHostname/w/img_auth.php";
 	$wgUploadPath = "https://{$wmgHostname}/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
