@@ -3156,8 +3156,6 @@ if ( defined( 'MW_DB' ) ) {
 	$wgDBname = MW_DB;
 } elseif ( $wmgHostname === 'meta.miraheze.org' ) {
 	$wgDBname = 'metawiki';
-} elseif ( preg_match( '/^(.*)\.m\.miraheze\.org$/', $wmgHostname, $matches ) ) {
-	$wgDBname = $matches[1] . 'wiki';
 } elseif ( preg_match( '/^(.*)\.miraheze\.org$/', $wmgHostname, $matches ) ) {
 	$wgDBname = $matches[1] . 'wiki';
 } else {
