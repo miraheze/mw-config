@@ -2591,6 +2591,29 @@ $wgConf->settings = [
 		],
 	],
 	
+	// WikiSEO configs
+	'wgTwitterCardType' => [
+		'default' => null,
+	],
+	'wgGoogleSiteVerificationKey' => [
+		'default' => null,
+	],
+	'wgBingSiteVerificationKey' => [
+		'default' => null,
+	],
+	'wgFacebookAppId' => [
+		'default' => null,
+	],
+	'wgYandexSiteVerificationKey' => [
+		'default' => null,
+	],
+	'wgAlexaSiteVerificationKey' => [
+		'default' => null,
+	],
+	'wgPinterestSiteVerificationKey' => [
+		'default' => null,
+	],
+
 	'wgExpensiveParserFunctionLimit' => [
 		'default' => 99, //per https://www.mediawiki.org/wiki/Manual:$wgExpensiveParserFunctionLimit
 	],
