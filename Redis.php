@@ -10,9 +10,6 @@ $wgObjectCaches['redis-central'] = [
 	'reportDupes' => false,
 ];
 
-/*$wgMemCachedServers = [
-	'127.0.0.1:11211'
-];*/
 
 $wgMainCacheType = 'redis-central';
 $wgSessionCacheType = 'redis-central';
