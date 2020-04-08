@@ -3301,7 +3301,7 @@ if (
         $wgProfiler['visible'] = false;
 
 	// Prevent cache (better be safe than sorry)
-        $wgUseSquid = false;
+        $wgUseCdn = false;
 }
 
 // Define last to avoid all dependencies
