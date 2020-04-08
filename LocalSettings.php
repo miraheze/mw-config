@@ -2678,9 +2678,21 @@ $wgConf->settings = [
 	],
 	'wgUserProfileDisplay' => [
 		'default' => [
+			'activity' => false,
+ 			'articles' => true, // Blog
+ 			'avatar' => true,
+ 			'awards' => true,
 			'board' => false,
-			'friends' => false,
+			'custom' => true,
 			'foes' => false,
+			'friends' => false,
+ 			'games' => false,
+ 			'gifts' => true,
+ 			'interests' => true,
+ 			'personal' => true,
+ 			'profile' => true,
+ 			'stats' => false,
+ 			'userboxes' => false,
 		],
 	],
 	'wgUserStatsPointValues' => [
