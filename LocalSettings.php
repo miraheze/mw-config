@@ -21,7 +21,7 @@ $wmgUploadHostname = "static.miraheze.org";
 # Initialize $wgConf
 $wgConf = new SiteConfiguration;
 $wgConf->suffixes = [ 'wiki' ];
-$wgLocalVirtualHosts = [ '81.4.109.166' ];
+$wgLocalVirtualHosts = [ '51.77.109.151' ];
 
 $wmgHostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'undefined';
 
