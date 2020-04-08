@@ -47,7 +47,6 @@ if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
 
 // use local mathoid install
 $wgDefaultUserOptions['math'] = 'mathml';
-$wgMaxShellMemory = 2097152;
 
 // ircrcbot (!=private)
 if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
