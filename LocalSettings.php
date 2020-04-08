@@ -3190,6 +3190,12 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 		foreach ( $siteSettingsArray as $setVar => $setVal ) {
 			$wgConf->settings[$setVar][$DBname] = $setVal;
 		}
+
+		
+		if ( isset( $siteSettingsArray['wgServer'] ) &&
+			    $siteSettingsArray['wgServer'] === 'https://' . $wmgHostname ) {
+			$wgDBname = $DBname;
+		}
 	}
 }
 
@@ -3197,14 +3203,6 @@ if ( php_sapi_name() == 'cli' ) {
 	// Only do this if using cli
 	foreach ( $wmgDeleteDatabaseList as $wikiLine ) {
 		$wgLocalDatabases[] = $wikiLine;
-	}
-}
-
-// TODO: Convert this so that we use the url to find the wikiname,
-// will lead to performance increase as we won't need to foreach.
-foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
-	if ( $val === 'https://' . $wmgHostname) {
-		$wgDBname = $name;
 	}
 }
 
