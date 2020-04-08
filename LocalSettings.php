@@ -1978,6 +1978,15 @@ $wgConf->settings = [
 				'edit-create' => true,
 			],
 		],
+		'+wikitestwiki' => [
+			'consul' => [
+				'consul' => true,
+				'bureaucrat' => true,
+				],
+			'bureaucrat' => [
+				'bureaucrat' => true,
+				],
+		],
 		'+yeoksawiki' => [
 			'sysop' => [
 				'project-edit' => true,
@@ -2399,6 +2408,10 @@ $wgConf->settings = [
 			'user',
 			'autoconfirmed',
 			'sysop'
+		],
+		'+wikitestwiki' => [
+			'bureaucrat',
+			'consul',
 		],
 		'+bigforestwiki' => [
 			'editvoter',
