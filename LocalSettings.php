@@ -3178,6 +3178,7 @@ $middleMobile = false;
 foreach ( $wgConf->settings['wgServer'] as $name => $val ) {
 	if ( $val === 'https://' . $wmgHostname) {
 		$wgDBname = $name;
+		break;
 	}
 }
 
