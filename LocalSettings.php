@@ -3191,7 +3191,7 @@ foreach ( $wmgDatabaseList as $wikiLine ) {
 			$wgConf->settings[$setVar][$DBname] = $setVal;
 
 			if ( isset( $setVar['wgServer'] ) &&
-			    $setVar['wgServer'] === 'https://' . $wmgHostname ) {
+				    $setVar['wgServer'] === 'https://' . $wmgHostname ) {
 				$wgDBname = $DBname;
 			}
 		}
