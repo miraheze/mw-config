@@ -2654,7 +2654,7 @@ $wgConf->settings = [
 	
 	// WikiSEO configs
 	'wgTwitterCardType' => [
-		'default' => 'summery_large_image',
+		'default' => 'summary_large_image',
 	],
 	'wgGoogleSiteVerificationKey' => [
 		'default' => null,
