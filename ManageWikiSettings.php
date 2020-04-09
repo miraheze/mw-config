@@ -667,8 +667,8 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Type of twitter card to use.',
 		'options' => [
-			'Summary' => 'summery',
-			'Summary large image' => 'summary_large_image',
+			'Summery' => 'summery',
+			'Summery large image' => 'summary_large_image',
 		],
 	],
 	'wgGoogleSiteVerificationKey' => [
