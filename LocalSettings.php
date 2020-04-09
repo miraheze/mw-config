@@ -3267,18 +3267,20 @@ $wgExtensionEntryPointListFiles[] = "/srv/mediawiki/config/extension-list";
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Placeholder for DB migrations
-
-if ( $wmgPrivateWiki == true ) {
+/*
+if ( $wgDBname === 'openhatchwiki' ) {
+	$wgReadOnly = 'Miraheze is conducting a database migration.';
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
 	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Due to a large change in our infrastructure that didn't go as planned, for a few hours earlier today private wikis may have been accessible to users at that time even if they were not authorized. <br> We deeply apologize for this issue. We would also like to take this opportunity to assure you that we have now fixed the issue and that this will not happen again.</td>
+			<td>Miraheze will be performing database maintenance on this wiki from 11:10 UTC until approximately 11:30 UTC today. During this maintenance time this wiki will be put in read-only mode. Please save your edits before 11:10 UTC!</td>
 			</tr></tbody></table>
 EOF;
 		return true;
 	}
 }
+*/
 
 // Hook so that Terms of Service is included in footer
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
