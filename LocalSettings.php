@@ -639,9 +639,7 @@ $wgConf->settings = [
 		'ayrshirewiki' => true,
 		'christipediawiki' => true,
 		'cdcwiki' => true,
-		'fablabesdswiki' => true,
 		'guiaslocaiswiki' => true,
-		'qboxnextwiki' => true,
 		'test2wiki' => true,
 	],
 	'wmgUseContributionScores' => [
