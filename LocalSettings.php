@@ -79,7 +79,12 @@ $wgConf->settings = [
 			],
 		],
 	],
-
+	
+	// Cargo
+	'wgCargoGoogleMapsKey' => [ 
+		'default' => $wmgMapsGMaps3ApiKey 
+	],
+	
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
@@ -1202,7 +1207,7 @@ $wgConf->settings = [
 			NS_PROJECT => false
 		],
 	],
-
+	
 	// FlaggedRevs
 	'wmgFlaggedRevsProtection' => [
 		'default' => false,
