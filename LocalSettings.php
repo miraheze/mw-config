@@ -79,7 +79,12 @@ $wgConf->settings = [
 			],
 		],
 	],
-
+	
+	//Cargo
+	'wgCargoGoogleMapsKey' => [ 
+		'default' => $wmgMapsGMaps3ApiKey 
+	],
+	
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
@@ -975,7 +980,7 @@ $wgConf->settings = [
 	'wmgUseReplaceText' => [
 		'default' => false,
 	],
-	'wmgUseRevisionSlider' => [
+ 	'wmgUseRevisionSlider' => [
 		'default' => false,
 	],
 	'wmgUseRSS' => [
@@ -1203,6 +1208,9 @@ $wgConf->settings = [
 		],
 	],
 
+	// Cargo
+	'wgCargoGoogleMapsKey' = "<%= @googlemaps_key %>"
+	
 	// FlaggedRevs
 	'wmgFlaggedRevsProtection' => [
 		'default' => false,
