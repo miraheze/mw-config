@@ -60,27 +60,6 @@ if ( $wgDBname == 'christipediawiki' ) {
 	];
 }
 
-if ( $wgDBname == 'fablabesdswiki' ) {
-	$wgContactConfig['default'] = [
-		'RecipientUser' => 'Contact COOP FabLab ESDS',
-		'SenderEmail' => $wgPasswordSender,
-		'SenderName' => 'Ne pas répondre FabLab ESDS',
-		'RequireDetails' => true,
-		'IncludeIP' => false, // No privy
-		'MustBeLoggedIn' => false,
-		'AdditionalFields' => [
-			'TitreArticleDemande' => [
-				'label' => 'Titre de l\'article demandé (si c\'est la cas)',
-				'type' => 'text',
-				'required' => false,  // Either "true" or "false" as required
-			],
-		],
-		'DisplayFormat' => 'table',
-		'RLModules' => [],
-		'RLStyleModules' => [],
-	];
-}
-
 if ( $wgDBname == 'guiaslocaiswiki' ) {
 	$wgContactConfig['default'] = [
 		'RecipientUser' => 'Eduaddad',
@@ -90,28 +69,6 @@ if ( $wgDBname == 'guiaslocaiswiki' ) {
 		'IncludeIP' => false, // No privy
 		'MustBeLoggedIn' => false,
 		'AdditionalFields' => [],
-		'DisplayFormat' => 'table',
-		'RLModules' => [],
-		'RLStyleModules' => [],
-	];
-}
-
-if ( $wgDBname == 'qboxnextwiki' ) {
-	$wgContactConfig['default'] = [
-		'RecipientUser' => 'A KLERK',
-		'SenderEmail' => $wgPasswordSender,
-		'SenderName' => 'Miraheze No Reply',
-		'RequireDetails' => true,
-		'IncludeIP' => false,
-		'MustBeLoggedIn' => false,
-		'AdditionalFields' => [
-			'Text' => [
-				'label-message' => 'emailmessage',
-				'type' => 'textarea',
-				'rows' => 20,
-				'required' => true,
-			]
-		],
 		'DisplayFormat' => 'table',
 		'RLModules' => [],
 		'RLStyleModules' => [],
