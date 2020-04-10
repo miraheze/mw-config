@@ -80,7 +80,7 @@ $wgConf->settings = [
 		],
 	],
 	
-	//Cargo
+	// Cargo
 	'wgCargoGoogleMapsKey' => [ 
 		'default' => $wmgMapsGMaps3ApiKey 
 	],
@@ -980,7 +980,7 @@ $wgConf->settings = [
 	'wmgUseReplaceText' => [
 		'default' => false,
 	],
- 	'wmgUseRevisionSlider' => [
+	'wmgUseRevisionSlider' => [
 		'default' => false,
 	],
 	'wmgUseRSS' => [
@@ -1207,9 +1207,6 @@ $wgConf->settings = [
 			NS_PROJECT => false
 		],
 	],
-
-	// Cargo
-	'wgCargoGoogleMapsKey' = "<%= @googlemaps_key %>"
 	
 	// FlaggedRevs
 	'wmgFlaggedRevsProtection' => [
