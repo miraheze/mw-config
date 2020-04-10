@@ -85,7 +85,7 @@ $wgConf->settings = [
 		'default' => $wmgMapsGMaps3ApiKey 
 	],
 	
-	// Cargo
+	// PageForms
 	'wgPageFormsGoogleMapsKey' => [ 
 		'default' => $wmgMapsGMaps3ApiKey 
 	],
