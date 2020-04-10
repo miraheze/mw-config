@@ -85,6 +85,11 @@ $wgConf->settings = [
 		'default' => $wmgMapsGMaps3ApiKey 
 	],
 	
+	// Cargo
+	'wgPageFormsGoogleMapsKey' => [ 
+		'default' => $wmgMapsGMaps3ApiKey 
+	],
+	
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
