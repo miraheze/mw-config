@@ -2672,20 +2672,6 @@ $wgConf->settings = [
 		],
 	],
 	
-	// SlackNotifications
-	'wgSlackFromName' => [
-		'default' => $wgSitename,
-	],
-	'wgWikiUrl' => [
-		'default' => 'https://$wmgHostname/"',
-	],
-	'wgWikiUrlEnding' => [
-		'default' => 'w/index.php?title=',
-	],
-	'wgSlackIncomingWebhookUrl' => [
-		'default' => 'wmgWikiMirahezeDiscordHooks',
-	],
-	
 	// WikiSEO configs
 	'wgTwitterCardType' => [
 		'default' => 'summary_large_image',
