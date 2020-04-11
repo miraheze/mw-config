@@ -873,8 +873,8 @@ if ( $wmgUseSiteScout ) {
 if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
 	$wgSlackFromName = $wgSitename;
-	$wgWikiUrlEnding = "w/index.php?title=";
-	$wgWikiUrl = $wgServer . '/';
+	$wgWikiUrlEnding = 'index.php?title=';
+	$wgWikiUrl = $wgServer . '/w/';
 	$wgSlackIncomingWebhookUrl =
 		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
 }
