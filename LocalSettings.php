@@ -728,6 +728,9 @@ $wgConf->settings = [
 	'wmgUseFlow' => [
 		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
 	],
+	'wmgUseForcePreview' => [
+		'default' => false,
+	],
 	'wmgUseForeground' => [
 		'default' => false,
 	],

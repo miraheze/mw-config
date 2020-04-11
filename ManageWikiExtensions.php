@@ -612,6 +612,22 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'forcepreview' => [
+			'name' => 'ForcePreview',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ForcePreview',
+			'var' => 'wmgUseForcePreview',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'forcepreviewexempt',
+						],
+					],
+				],
+			],
+		],
 		'fontawesome' => [
 			'name' => 'FontAwesome',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:FontAwesome',
