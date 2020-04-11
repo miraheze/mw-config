@@ -1540,11 +1540,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:RegexFunctions',
 			'var' => 'wmgUseRegexFunctions',
 			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 		],
 		'relatedarticles' => [
 			'name' => 'Related Articles',
