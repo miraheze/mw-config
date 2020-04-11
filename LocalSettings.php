@@ -986,6 +986,9 @@ $wgConf->settings = [
 	'wmgUseRefreshed' => [
 		'default' => false,
 	],
+	'wmgUseRegexFunctions' => [
+		'default' => false,
+	],
 	'wmgUseRelatedArticles' => [
 		'default' => false,
 	],
