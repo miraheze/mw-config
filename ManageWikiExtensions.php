@@ -1535,6 +1535,17 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'regexfunctions' => [
+			'name' => 'RegexFunctions',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:RegexFunctions',
+			'var' => 'wmgUseRegexFunctions',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'relatedarticles' => [
 			'name' => 'Related Articles',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RelatedArticles',
