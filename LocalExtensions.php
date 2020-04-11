@@ -1126,3 +1126,8 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 if ( $wmgUseYouTube ) {
 	wfLoadExtension( 'YouTube' );
 }
+
+if ( $wmgUseRegexFunctions) {
+	wfLoadExtension( 'RegexFunctions' );
+}
+	
