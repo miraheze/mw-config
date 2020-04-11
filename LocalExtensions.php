@@ -397,6 +397,10 @@ if ( $wmgUseFeaturedFeeds ) {
 	wfLoadExtension( 'FeaturedFeeds' );
 }
 
+if ( $wmgUseForcePreview) {
+	wfLoadExtension( 'ForcePreview' );
+}
+
 if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 
