@@ -9,7 +9,6 @@ if ( $wmgUse3D ) {
 	];
 
 	$wgTrustedMediaFormats[] = 'application/sla';
-	$wgFileExtensions[] = 'stl';
 }
 
 if ( $wmgUseAddThis ) {
@@ -52,7 +51,7 @@ if ( $wmgUseApprovedRevs ) {
 	$wgAvailableRights[] = 'viewlinktolatest';
 	$wgAvailableRights[] = 'viewapprover';
 
-	$wgManageWikiNamespacesAdditional['egApprovedRevsEnabledNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['egApprovedRevsEnabledNamespaces'] = [
 		'name' => 'Enable ApprovedRevs in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -166,7 +165,7 @@ if ( $wmgUseCiteThisPage ) {
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
 
-	$wgCitoidFullRestbaseURL = "https://{$wmgHostname}/{$wmgHostname}/";
+	$wgCitoidFullRestbaseURL = "https://{$wi->hostname}/{$wi->hostname}/";
 }
 
 if ( $wmgUseCodeEditor ) {
@@ -368,7 +367,7 @@ if ( $wmgUseFlaggedRevs ) {
 	$wgSimpleFlaggedRevsUI = $wmgSimpleFlaggedRevsUI;
 	$wgFlaggedRevsLowProfile = $wmgFlaggedRevsLowProfile;
 
-	$wgManageWikiNamespacesAdditional['wgFlaggedRevsNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgFlaggedRevsNamespaces'] = [
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'main' => true,
 		'talk' => false,
@@ -389,8 +388,8 @@ if ( $wmgUseFlow ) {
 		'restbaseCompat' => false,
 	];
 
-	$wgManageWikiPermissionsAdditionalRights['oversight']['flow-suppress'] = true;
-	$wgManageWikiNamespacesExtraContentModels['Flow'] = 'flow-board';
+	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
+	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
 
 if ( $wmgUseFeaturedFeeds ) {
@@ -575,7 +574,7 @@ if ( $wmgUseMassEditRegex ) {
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
 
-	$wgManageWikiNamespacesAdditional['wgNamespacesToPostIn'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgNamespacesToPostIn'] = [
 		'name' => 'Can MassMessage post messages in this namespace?',
 		'main' => true,
 		'talk' => false,
@@ -606,7 +605,7 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
-	$wgMFStopRedirectCookieHost = $wmgHostname;
+	$wgMFStopRedirectCookieHost = $wi->hostname;
 
 	$wgHooks['EnterMobileMode'][] = function () {
 		global $wgIncludeLegacyJavaScript;
@@ -692,7 +691,7 @@ if ( $wmgUseNostalgia ) {
 
 if ( $wmgUseNoTitle ) {
 	wfLoadExtension( 'NoTitle' );
-	$wgRestrictDisplayTitle = false;
+	$wi->config->settings['wgRestrictDisplayTitle']['default'] = false;
 }
 
 if ( $wmgUseNukeDPL ) {
@@ -907,7 +906,7 @@ if ( $wmgUseTabsCombination ) {
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 
-	$wgManageWikiNamespacesAdditional['wgTemplateSandboxEditNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgTemplateSandboxEditNamespaces'] = [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -1010,13 +1009,13 @@ if ( $wmgUseVisualEditor ) {
 	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
-		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		$wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
 	} else {
-		$wgDefaultUserOptions['visualeditor-enable'] = 0;
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
 
-	$wgManageWikiNamespacesAdditional['wgVisualEditorAvailableNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgVisualEditorAvailableNamespaces'] = [
 		'name' => 'Enable VisualEditor in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -1057,7 +1056,7 @@ if ( $wmgUseWikiCategoryTagCloud ) {
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 
-	$wgManageWikiNamespacesAdditional['wgWPBNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgWPBNamespaces'] = [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -1119,4 +1118,4 @@ if ( $wmgUseYouTube ) {
 if ( $wmgUseRegexFunctions) {
 	require_once "$IP/extensions/RegexFunctions/RegexFunctions.php";
 }
-	
+
