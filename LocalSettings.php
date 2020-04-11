@@ -806,6 +806,9 @@ $wgConf->settings = [
 	'wmgUseLabeledSectionTransclusion' => [
 		'default' => false,
 	],
+	'wmgUseLanguageSelector' => [
+		'default' => false,
+	],
 	'wmgUseLastModified' => [
 		'default' => false,
 	],

@@ -513,6 +513,10 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
+if ($wmgUseLanguageSelector) {
+	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
+}
+
 if ($wmgUseLastModified) {
 	require_once "$IP/extensions/LastModified/LastModified.php";
 }
