@@ -1117,6 +1117,6 @@ if ( $wmgUseYouTube ) {
 }
 
 if ( $wmgUseRegexFunctions) {
-	wfLoadExtension( 'RegexFunctions' );
+	require_once "$IP/extensions/RegexFunctions/RegexFunctions.php;
 }
 	
