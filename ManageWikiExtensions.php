@@ -1619,7 +1619,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:SlackNotifications',
 			'var' => 'wmgUseSlackNotifications',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
 		],
 		'softredirector' => [
 			'name' => 'SoftRedirector',
