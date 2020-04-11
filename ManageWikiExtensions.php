@@ -674,6 +674,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'googledocs4mw' => [
+			'name' => 'GoogleDocs4MW',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleDocs4MW',
+			'var' => 'wmgUseGoogleDocs4MW',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'graph' => [
 			'name' => 'Graph',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Graph',
