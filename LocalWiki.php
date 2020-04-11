@@ -3,8 +3,8 @@
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
 // Closed Wikis
-if ( isset( $wgConf->settings['wmgClosedWiki'][$wgDBname] ) ) {
-	$wgRevokePermissions = [
+if ( $cwClosed ) {
+	$wi->config->settings['wgRevokePermissions']['default'] = [
 		'*' => [
 			'block' => true,
 			'createaccount' => true,
@@ -27,7 +27,7 @@ EOF;
 }
 
 // Inactive Wikis
-if ( isset( $wgConf->settings['wmgInactiveWiki'][$wgDBname] ) ) {
+if ( $cwInactive ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
 	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
@@ -38,15 +38,8 @@ EOF;
 
 }
 
-// Private Wikis
-if ( isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
-	$wgManageWikiPermissionsAdditionalRights['sysop']['read'] = true;
-	$wgManageWikiPermissionsAdditionalRights['*']['read'] = false;
-	$wgReferrerPolicy = 'no-referrer';
-}
-
-// ircrcbot (!=private)
-if ( !isset( $wgConf->settings['wmgPrivateWiki'][$wgDBname] ) ) {
+// Public Wikis
+if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
 		'uri' => 'udp://51.89.160.138:5070',
@@ -84,7 +77,7 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://{$wmgHostname}/w/img_auth.php";
+	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
 }
 

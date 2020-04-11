@@ -1,6 +1,6 @@
 <?php
 
-if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
+if ( !$wgCommandLineMode ) {
 	header( "HTTP/1.1 404 Not Found" );
 	$requestURL = htmlspecialchars( $_SERVER['REQUEST_URI'] );
 	date_default_timezone_set( 'UTC' ); // Set to UTC +0
@@ -83,7 +83,7 @@ if ( !in_array( $wgDBname, $wgLocalDatabases ) && !$wgCommandLineMode ) {
 	</html>
 EOF;
 	die( 1 );
-} elseif ( !in_array( $wgDBname, $wgLocalDatabases ) && $wgCommandLineMode ) {
+} else {
 	// $wgDBname will always be set to a string, even if the --wiki parameter was not passed to a script.
 	echo "The wiki database '$wgDBname' was not found." . PHP_EOL;
 }
