@@ -22,7 +22,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wmgUploadHostname = "static.miraheze.org";
 
-$wgConf->config->settings = [
+$wi->config->settings = [
 	// invalidates user sessions
 	'wgAuthenticationTokenVersion' => [
 		'default' => '3',
@@ -3212,7 +3212,6 @@ function lfTOSLink( $sk, &$tpl ) {
 require_once( '/srv/mediawiki/config/Database.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
-require_once( '/srv/mediawiki/config/MissingWiki.php' );
 require_once( '/srv/mediawiki/config/Redis.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
 
