@@ -875,6 +875,8 @@ if ( $wmgUseSlackNotifications ) {
 	$wgSlackFromName = $wgSitename;
 	$wgWikiUrlEnding = 'index.php?title=';
 	$wgWikiUrl = $wgServer . '/w/';
+	$wgSlackShowNewUserEmail  = false;
+	$wgSlackShowNewUserIP = false;
 	$wgSlackIncomingWebhookUrl =
 		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
 }
