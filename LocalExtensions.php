@@ -13,7 +13,7 @@ if ( $wmgUse3D ) {
 }
 
 if ( $wmgUseAddThis ) {
-	wfLoadExtension( 'AddThFis' );
+	wfLoadExtension( 'AddThis' );
 
 	$wgAddThisHeader = false;
 }
