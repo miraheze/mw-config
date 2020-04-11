@@ -1020,6 +1020,9 @@ $wgConf->settings = [
 	'wmgUseSiteScout' => [
 		'default' => false,
 	],
+	'wmgUseSlackNotifications' => [
+		'default' => false,
+	],
 	'wmgUseSoftRedirector' => [
 		'default' => false,
 	],
@@ -2667,6 +2670,20 @@ $wgConf->settings = [
  				'factory' => 'Scribunto_LuaEngine::newAutodetectEngine',
  			],
 		],
+	],
+	
+	// SlackNotifications
+	'wgSlackFromName' => [
+		'default' => $wgSitename,
+	],
+	'wgWikiUrl' => [
+		'default' => 'https://$wmgHostname/"',
+	],
+	'wgWikiUrlEnding' => [
+		'default' => 'w/index.php?title=',
+	],
+	'wgSlackIncomingWebhookUrl' => [
+		'default' => 'wmgWikiMirahezeDiscordHooks',
 	],
 	
 	// WikiSEO configs

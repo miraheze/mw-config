@@ -870,6 +870,11 @@ if ( $wmgUseSiteScout ) {
 	wfLoadExtension( 'SiteScout' );
 }
 
+if ( $wmgUseSlackNotifications ) {
+	wfLoadExtension( 'SlackNotifications' );
+
+}
+
 if ( $wmgUseSoftRedirector) {
 	wfLoadExtension( 'SoftRedirector' );
 }
