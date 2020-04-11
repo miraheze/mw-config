@@ -74,6 +74,7 @@ $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalPreferences/extension.json
 $IP/extensions/GlobalUserPage/extension.json
+$IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/Graph/extension.json
 $IP/extensions/GroupsSidebar/GroupsSidebar.php
 $IP/extensions/GuidedTour/extension.json
@@ -92,6 +93,7 @@ $IP/extensions/JSBreadCrumbs/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
+$IP/extensions/LanguageSelector/LanguageSelector.php
 $IP/extensions/LastModified/LastModified.php
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/LinkTarget.php

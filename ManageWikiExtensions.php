@@ -825,6 +825,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'languageselector' => [
+			'name' => 'LanguageSelector',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LanguageSelector',
+			'var' => 'wmgUseLanguageSelector',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'lastmodified' => [
 			'name' => 'Last Modified',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:LastModified',
