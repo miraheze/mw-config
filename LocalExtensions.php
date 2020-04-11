@@ -13,7 +13,7 @@ if ( $wmgUse3D ) {
 }
 
 if ( $wmgUseAddThis ) {
-	wfLoadExtension( 'AddThis' );
+	wfLoadExtension( 'AddThFis' );
 
 	$wgAddThisHeader = false;
 }
@@ -1117,6 +1117,6 @@ if ( $wmgUseYouTube ) {
 }
 
 if ( $wmgUseRegexFunctions) {
-	require_once "$IP/extensions/RegexFunctions/RegexFunctions.php;
+	require_once "$IP/extensions/RegexFunctions/RegexFunctions.php";
 }
 	
