@@ -443,6 +443,10 @@ if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
 }
 
+if ( $wmgUseGoogleDocs4MW ) {
+	wfLoadExtension( 'GoogleDocs4MW' );
+}
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }

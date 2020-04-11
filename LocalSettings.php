@@ -755,6 +755,9 @@ $wgConf->settings = [
 	'wmgUseGlobalUserPage' => [
 		'default' => false,
 	],
+	'wmggUseGoogleDocs4MW' => [
+		'default' => false,
+	],
 	'wmgUseGraph' => [
 		'default' => false,
 	],
