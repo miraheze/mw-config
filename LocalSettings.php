@@ -285,6 +285,11 @@ $wi->config->settings = [
 		 'default' => true,
 	 ],
 
+	// Cookies
+	'wgCookieDomain' => [
+		'default' => '.miraheze.org'
+	],
+
 	// CreateWiki
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
