@@ -225,6 +225,11 @@ $wgManageWikiExtensions = [
 					'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql"
 				],
 				'permissions' => [
+					'*' => [
+						'permissions' => [
+							'runcargoqueries',
+						],
+					],
 					'sysop' => [
 						'permissions' => [
 							'recreatecargodata',
