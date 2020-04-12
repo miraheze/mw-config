@@ -1083,15 +1083,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Restricted (where settings that are restricted go)
-	'wgServer' => [
-		'name' => 'Custom Domain',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => null,
-		'section' => 'restricted',
-		'help' => 'By default your wiki is available at https://yourwiki.miraheze.org - a subdomain of Miraheze but you can request us to redirect your wiki to a domain you own. Right now is not yet possible to do it without assistance from our sysadmins, but you can learn more here https://meta.miraheze.org/wiki/Custom_domains',
-	],
 	'wgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
 		'from' => 'mediawiki',
