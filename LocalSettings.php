@@ -3178,7 +3178,7 @@ $wi->setVariables(
 	]
 );
 
-if ( !preg_match( '/^(.*)\.miraheze\org$/', $wi->hostname, $matches ) ) {
+if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 	$wi->config->settings['wgCookieDomain'][$wi->dbname] = $wi->hostname;
 }
