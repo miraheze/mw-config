@@ -25,7 +25,7 @@ $wmgUploadHostname = "static.miraheze.org";
 $wi->config->settings = [
 	// invalidates user sessions
 	'wgAuthenticationTokenVersion' => [
-		'default' => '3',
+		'default' => '4',
 	],
 
 	// AbuseFilter
