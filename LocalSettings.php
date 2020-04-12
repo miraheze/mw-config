@@ -2144,7 +2144,7 @@ $wi->config->settings = [
 				'main' => true,
 				'talk' => false,
 				'blacklisted' => [],
-				'vestyle' => true,
+				'vestyle' => false,
 				'overridedefault' => [],
 			],
 		],
