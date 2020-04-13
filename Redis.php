@@ -20,10 +20,12 @@ $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
 
+$wmgRedisJobrunnerIp = '51.89.160.135';
+$wmgRedisJobrunnerPort = '6379';
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => '51.89.160.135:6379',
+	'redisServer' => "{$wmgRedisJobrunnerIp}:{$wmgRedisJobrunnerPort}",
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
@@ -35,7 +37,10 @@ $wgJobTypeConf['default'] = [
 
 $wgJobQueueAggregator = [
 	'class' => 'JobQueueAggregatorRedis',
-	'redisServers' => [ '51.89.160.135:6379', '51.89.160.135:6379' ], // fake redis fallback
+	'redisServers' => [
+		"{$wmgRedisJobrunnerIp}:{$wmgRedisJobrunnerPort}",
+		"{$wmgRedisJobrunnerIp}:{$wmgRedisJobrunnerPort}"
+	], // fake redis fallback
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
