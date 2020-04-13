@@ -2443,6 +2443,20 @@ $wi->config->settings = [
  		]
  	],
 
+	// Redis
+	'wmgRedisSettings' => [
+		'default' => [
+			'cache' => [
+				'server'   => '/run/nutcracker/nutcracker.sock',
+				'password' => $wmgRedisPassword,
+			],
+			'jobrunner' => [
+				'server'   => '51.89.160.135:6379',
+				'password' => $wmgRedisPassword,
+			],
+		],
+	],
+
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],

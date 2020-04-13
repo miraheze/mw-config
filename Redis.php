@@ -3,8 +3,8 @@
 // Locally hosted and used for object caching
 $wgObjectCaches['redis-central'] = [
 	'class' => 'RedisBagOStuff',
-	'servers' => [ '/run/nutcracker/nutcracker.sock' ],
-	'password' => $wmgRedisPassword,
+	'servers' => [ $wmgRedisSettings['cache']['server'] ],
+	'password' => $wmgRedisSettings['cache']['password'],
 	'persistent' => true,
 	'loggroup' => 'redis',
 	'reportDupes' => false,
@@ -20,13 +20,12 @@ $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
 
-
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => '51.89.160.135:6379',
+	'redisServer' => $wmgRedisSettings['jobrunner']['server'],
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'password' => $wmgRedisPassword,
+		'password' => $wmgRedisSettings['jobrunner']['password'],
 		'compression' => 'gzip',
 	],
 	'claimTTL' => 3600,
@@ -35,10 +34,13 @@ $wgJobTypeConf['default'] = [
 
 $wgJobQueueAggregator = [
 	'class' => 'JobQueueAggregatorRedis',
-	'redisServers' => [ '51.89.160.135:6379', '51.89.160.135:6379' ], // fake redis fallback
+	'redisServers' => [
+		$wmgRedisSettings['jobrunner']['server'],
+		$wmgRedisSettings['jobrunner']['server']
+	], // fake redis fallback
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'password' => $wmgRedisPassword,
+		'password' => $wmgRedisSettings['jobrunner']['password'],
 		'compression' => 'gzip',
 	]
 ];
