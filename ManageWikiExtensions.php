@@ -1992,6 +1992,48 @@ $wgManageWikiExtensions = [
 					'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/changes_subscription.sql",
 					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql"
 				],
+				'namespaces' => [
+					'Item' => [
+						'id' => 860,
+						'searchable' => 1,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Item_talk' => [
+						'id' => 861,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Property' => [
+						'id' => 862,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'cotentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Property_talk' => [
+						'id' => 863,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					]
+				]
 			],
 		],
 		'wikibaseclient' => [
