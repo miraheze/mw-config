@@ -1545,11 +1545,6 @@ $wi->config->settings = [
 		],
 	],
 
-	// Job Queue
-	'wgJobRunRate' => [
-		'default' => 0,
-	],
-
 	// Kartographer
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
