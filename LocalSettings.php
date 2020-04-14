@@ -2735,6 +2735,9 @@ $wi->config->settings = [
 	'wgScriptPath' => [
 		'default' => '/w',
 	],
+	'wgServer' => [
+ 		'default' => 'https://miraheze.org',
+ 	],
 	'wgShowHostnames' => [
 		'default' => true,
 	],
