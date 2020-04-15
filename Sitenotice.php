@@ -12,7 +12,7 @@ $wgMajorSiteNoticeID = 44;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
@@ -24,4 +24,4 @@ EOF;
 
 		return true;
 }
-*/
+
