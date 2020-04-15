@@ -23,7 +23,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wmgUploadHostname = "static.miraheze.org";
 
 $wi->config->settings = [
-	// invalidates user sessions
+	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '4',
 	],
