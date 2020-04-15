@@ -192,10 +192,6 @@ if ( $wmgUseCollection ) {
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
-if ( $wmgUseCommentStreams ) {
-	wfLoadExtension ( 'CommentStreams' );
-}
-
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
 }
@@ -999,10 +995,6 @@ if ( $wmgUseUserWelcome ) {
 
 if ( $wmgUseVariables ) {
 	wfLoadExtension( 'Variables' );
-}
-
-if ( $wmgUseVEForAll ) {
-	wfLoadExtension ( 'VEForAll' );
 }
 
 if ( $wmgUseVisualEditor ) {
