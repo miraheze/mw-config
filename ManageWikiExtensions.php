@@ -316,20 +316,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'commentstreams' => [
-			'name' => 'CommentStreams',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CommentStreams',
-			'var' => 'wmgUseCommentStreams',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [
-				'sql' => [
-					'commentData' => "$IP/extensions/CommentStreams/sql/commentData.sql",
-					'votes' => "$IP/extensions/CommentStreams/sql/votes.sql",
-					'watch' => "$IP/extensions/CommentStreams/sql/watch.sql",
-				],
-			],
-		],
 		'comments' => [
 			'name' => 'Comments',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Comments',
@@ -1919,12 +1905,6 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseVariables',
 			'conflicts' => false,
 			'requires' => [],
-		],
-		'veforall' => [
-			'name' => 'VEForAll',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VEForAll',
-			'var' => 'wmgUseVEForAll',
-			'conflicts' => false,
 		],
 		'voteny' => [
 			'name' => 'VoteNY',

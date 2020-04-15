@@ -644,9 +644,6 @@ $wi->config->settings = [
 	'wmgUseCollection' => [
 		'default'  => false,
 	],
-	'wmgUseCommentStreams' => [
-		'default' => false,
-	],
 	'wmgUseComments' => [
 		'default' => false, // Sysop has 'commentadmin' by default
 	],
@@ -1119,9 +1116,6 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseUserWelcome' => [
-		'default' => false,
-	],
-	'wmgUseVEForAll' => [
 		'default' => false,
 	],
 	'wmgUseVoteNY' => [

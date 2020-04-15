@@ -29,7 +29,6 @@ $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CollapsibleVector/extension.json
 $IP/extensions/Collection/Collection.php
-$IP/extensions/CommentStreams/extension.json
 $IP/extensions/Comments/extension.json
 $IP/extensions/ConfirmEdit/ReCaptchaNoCaptcha/extension.json
 $IP/extensions/ConfirmEdit/extension.json
@@ -212,7 +211,6 @@ $IP/extensions/UserMerge/extension.json
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/extension.json
-$IP/extensions/VEForAll/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
