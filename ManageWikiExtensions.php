@@ -583,6 +583,28 @@ $wgManageWikiExtensions = [
 				'sql' => [
 					'flow_revision' => "$IP/extensions/Flow/flow.sql"
 				],
+				'namespaces' => [
+					'Topic' => [
+						'id' => 2600,
+						'searchable' => 1,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'flow-board',
+						'additional' => []
+					],
+					'Topic_talk' => [
+						'id' => 2601,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
 				'permissions' => [
 					'*' => [
 						'permissions' => [
