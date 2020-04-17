@@ -1409,7 +1409,8 @@ $wi->config->settings = [
 		'neobulbawiki' => [
 			'enableTabs' => true,
 			'navbarIcon' => true,
-			'showFooterIcons' => true
+			'showFooterIcons' => true,
+			'wikiname' => ''
 		],
 		'rotompediawiki' => [
 			'navbarIcon' => true,
