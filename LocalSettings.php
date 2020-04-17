@@ -1403,6 +1403,16 @@ $wi->config->settings = [
 		'default' => 'ImageMagick',
 	],
 
+	// Foreground
+	'wgForegroundFeatures' => [
+		'default' => [],
+		'neobulbawiki' => [
+			'enableTabs' => true,
+			'navbarIcon' => true,
+			'showFooterIcons' => true
+		]
+	],
+
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
