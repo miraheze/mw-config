@@ -1410,6 +1410,9 @@ $wi->config->settings = [
 			'enableTabs' => true,
 			'navbarIcon' => true,
 			'showFooterIcons' => true
+		],
+		'rotompediawiki' => [
+			'navbarIcon' => true,
 		]
 	],
 
