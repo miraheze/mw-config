@@ -428,6 +428,7 @@ $wi->config->settings = [
 		'cwarswiki' => true,
 		'evilbabeswiki' => true,
 		'incubatorwiki' => true,
+		'libertygamewiki' => true,
 		'metawiki' => true,
 		'nonciclopediawiki' => true,
 		'nonsensopediawiki' => true,
