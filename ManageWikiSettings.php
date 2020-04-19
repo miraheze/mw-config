@@ -297,6 +297,47 @@ $wgManageWikiSettings = [
 		'help' => 'This sets the web client to use. If you are not using Freenode, select Other Server.',
 	],
 
+	// CommentStream
+	'wgCommentStreamsNewestStreamsOnTop' => [
+		'name' => 'Order of comments',
+		'from' => 'CommentStream',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'CommentStream',
+		'help' => 'Comments streams will be displayed with the newest comment stream on top',
+	],
+	
+	'wgCommentStreamsUserAvatarPropertyName' => [
+		'name' => 'Enable avatar on comments',
+		'from' => 'CommentStream',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+		'section' => 'CommentStream',
+		'help' => 'If SocialProfile is enabled, it will display an avatar',
+	],
+	
+	'wgCommentStreamsEnableVoting' => [
+		'name' => 'Enable voting on comments',
+		'from' => 'CommentStream',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'CommentStream',
+		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
+	],
+	
+	'wgCommentStreamsModeratorFastDelet' => [
+		'name' => '',
+		'from' => 'CommentStream',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'CommentStream',
+		'help' => 'allows users with csdelete right to delete a comment and all of its replies in one action rather than having to individually delete all of the replies first.',
+	],
+	
 	// Editing
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
