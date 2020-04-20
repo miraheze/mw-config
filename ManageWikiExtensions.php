@@ -415,6 +415,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'datatransfer' => [
+			'name' => 'DataTransfer',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:DataTransfer',
+			'var' => 'wmgUseDataTransfer',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'darkmode' => [
 			'name' => 'DarkMode',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:DarkMode',

@@ -292,6 +292,10 @@ if ( $wmgUseDataDump ) {
 	$wgAvailableRights[] = 'delete-dump';
 }
 
+if ( $wmgUseDataTransfer ) {
+	wfLoadExtension( 'DataTransfer' );
+}
+
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
 
