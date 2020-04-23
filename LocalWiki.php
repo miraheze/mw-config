@@ -92,8 +92,6 @@ if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
 
 	$wgSimpleFlaggedRevsUI = false;
-
-	$wgDefaultUserOptions['flow-topiclist-sortby'] = 'newest';
 }
 
 if ( $wgDBname === 'metawiki' ) {
