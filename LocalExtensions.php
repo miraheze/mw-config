@@ -502,7 +502,7 @@ if ( $wmgUseInputBox ) {
 }
 
 if ( $wmgUseJavascriptSlideshow ) {
-	require_once "$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php";
+	wfLoadExtension( 'JavascriptSlideshow' );
 }
 
 if ( $wmgUseJosa ) {
