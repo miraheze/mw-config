@@ -212,7 +212,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Bootstrap',
 			'var' => 'wmgUseDataTransfer',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
 		],
 		'capiunto' => [
 			'name' => 'Capiunto',
