@@ -180,13 +180,13 @@ if ( $wmgUseCollapsibleVector ) {
 }
 
 if ( $wmgUseCollection ) {
-	require_once "$IP/extensions/Collection/Collection.php";
+	wfLoadExtension( 'Collection' );
 
 	$wgCommunityCollectionNamespace = 5;
 
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
-	$wgCollectionPODPartners = false;
+	$wgCollectionPODPartners = [];
 
 	wfLoadExtension( 'ElectronPdfService' );
 }
