@@ -362,7 +362,7 @@ if ( $wmgUseFancyBoxThumbs ) {
 }
 
 if ( $wmgUseFlaggedRevs ) {
-	require_once "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
+	wfLoadExtension( 'FlaggedRevs' );
 
 	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
 	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
