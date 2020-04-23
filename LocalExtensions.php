@@ -326,7 +326,7 @@ if ( $wmgUseDuskToDawn ) {
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
-	wfLoadSkin( 'DonateBoxInSidebar' );
+	wfLoadExtension( 'DonateBoxInSidebar' );
 }
 
 if ( $wmgUseDPLForum ) {
