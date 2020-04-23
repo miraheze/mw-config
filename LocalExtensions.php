@@ -90,7 +90,7 @@ if ( $wmgUseBlogPage ) {
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
-if ( $wmgUseBootStrap ) {
+if ( $wmgUseBootstrap ) {
 	wfLoadExtension( 'Bootstrap' );
 };
 
