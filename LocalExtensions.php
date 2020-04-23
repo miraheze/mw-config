@@ -218,11 +218,9 @@ if ( $wmgUseContributionScores ) {
 if ( $wmgUseCreatePage ) {
 	require_once "$IP/extensions/CreatePage/CreatePage.php";
 }
-
 if ( $wmgUseCreatePageUw ) {
 	wfLoadExtension( 'CreatePageUw' );
 }
-
 if ( $wmgUseCreateRedirect ) {
 	wfLoadExtension( 'CreateRedirect' );
 }
@@ -326,7 +324,7 @@ if ( $wmgUseDuskToDawn ) {
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
-	wfLoadSkin( 'DonateBoxInSidebar' );
+	require_once "$IP/extensions/DonateBoxInSidebar/DonateBoxInSidebar.php";
 }
 
 if ( $wmgUseDPLForum ) {
