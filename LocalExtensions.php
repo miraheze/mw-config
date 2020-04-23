@@ -92,15 +92,6 @@ if ( $wmgUseBlogPage ) {
 
 if ( $wmgUseBootStrap ) {
 	wfLoadExtension( 'BlogPage' );
-	$wgHooks['SetupAfterCache'][] = function(){
-	\Bootstrap\BootstrapManager::getInstance()->addAllBootstrapModules();
-	return true;
-	};
-	$wgHooks['ParserAfterParse'][]=function( Parser &$parser, &$text, StripState &$stripState ){
-	$parser->getOutput()->addModuleStyles( 'ext.bootstrap.styles' );
-	$parser->getOutput()->addModules( 'ext.bootstrap.scripts' );
-	return true;
-	};
 };
 
 if ( $wmgUseMSCalendar ) {
