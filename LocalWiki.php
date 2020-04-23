@@ -180,7 +180,7 @@ if ( $wgDBname === 'wikiageingwiki' ) {
 
 // Depends on $wgContentNamespaces
 if ( $wgDBname === 'abitaregeawiki' ) {
-	$wgExemptFromUserRobotsControl = [];
+	$wi->config->settings['wgExemptFromUserRobotsControl']['default'] = [];
 }
 
 // Additional wgReadWhitelist changes
