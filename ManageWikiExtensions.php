@@ -207,6 +207,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'Bootstrap' => [
+			'name' => 'Bootstrap',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Bootstrap',
+			'var' => 'wmgUseDataTransfer',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'capiunto' => [
 			'name' => 'Capiunto',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Capiunto',
