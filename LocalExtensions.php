@@ -91,7 +91,7 @@ if ( $wmgUseBlogPage ) {
 }
 
 if ( $wmgUseBootStrap ) {
-	wfLoadExtension( 'BlogPage' );
+	wfLoadExtension( 'Bootstrap' );
 };
 
 if ( $wmgUseMSCalendar ) {
