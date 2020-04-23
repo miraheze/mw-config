@@ -2469,10 +2469,10 @@ $wi->config->settings = [
  			'usebetatoolbar' => 1,
  			'usebetatoolbar-cgd' => 1
  		],
-		'isvwiki' => [
+		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
-		'reviwikiwiki' => [
+		'+reviwikiwiki' => [
 			'usenewrc' => 0
 		],
  	],
