@@ -71,8 +71,8 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 }
 
 if ( $wgDBname === 'ayrshirewiki' ) {
-	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
-	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
+	$wgSpecialPages['MapEditor'] = 'SpecialMapEditor';
+	$wgSpecialPageGroups['MapEditor'] = 'maps';
 }
 
 if ( $wmgPrivateUploads ) {
