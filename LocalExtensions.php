@@ -86,7 +86,6 @@ if ( $wmgUseBabel ) {
 }
 
 if ( $wmgUseBlogPage ) {
-	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'BlogPage' );
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
