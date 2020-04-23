@@ -29,7 +29,7 @@ $IP/extensions/Citoid/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CollapsibleVector/extension.json
-$IP/extensions/Collection/Collection.php
+$IP/extensions/Collection/extension.json
 $IP/extensions/CommentStreams/extension.json
 $IP/extensions/Comments/extension.json
 $IP/extensions/ConfirmEdit/ReCaptchaNoCaptcha/extension.json
@@ -65,7 +65,7 @@ $IP/extensions/Elastica/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php
 $IP/extensions/FeaturedFeeds/extension.json
-$IP/extensions/FlaggedRevs/FlaggedRevs.php
+$IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/ForcePreview/extension.json
 $IP/extensions/FontAwesome/extension.json
@@ -142,7 +142,7 @@ $IP/extensions/PageDisqus/extension.json
 $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json
 $IP/extensions/PageImages/extension.json
-$IP/extensions/PageNotice/PageNotice.php
+$IP/extensions/PageNotice/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
