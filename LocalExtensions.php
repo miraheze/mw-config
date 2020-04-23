@@ -227,7 +227,7 @@ if ( $wmgUseCreateRedirect ) {
 }
 
 if ( $wmgUseCrossReference ) {
-	require_once "$IP/extensions/CrossReference/CrossReference.php";
+	wfLoadExtension( 'CrossReference' );
 }
 
 if ( $wmgUseCSS ) {
