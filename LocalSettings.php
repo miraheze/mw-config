@@ -2471,7 +2471,10 @@ $wi->config->settings = [
  		],
 		'isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
-		]
+		],
+		'reviwikiwiki' => [
+			'usenewrc' => 0
+		],
  	],
 
 	// Redis
