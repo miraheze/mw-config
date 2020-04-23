@@ -2468,7 +2468,10 @@ $wi->config->settings = [
  			'math' => 'mathml',
  			'usebetatoolbar' => 1,
  			'usebetatoolbar-cgd' => 1
- 		]
+ 		],
+		'isvwiki' => [
+			'flow-topiclist-sortby' => 'newest',
+		]
  	],
 
 	// Redis
