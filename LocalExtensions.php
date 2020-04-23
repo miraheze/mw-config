@@ -725,7 +725,7 @@ if ( $wmgUsePageForms ) {
 }
 
 if ( $wmgUsePageNotice ) {
-	require_once "$IP/extensions/PageNotice/PageNotice.php";
+	wfLoadExtension( 'PageNotice' );
 }
 
 if ( $wmgUsePageTriage ) {
