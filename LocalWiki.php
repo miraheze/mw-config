@@ -152,10 +152,6 @@ if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 	$egMapsDefaultService = 'googlemaps3';
 }
 
-if ( $wgDBname === 'reviwikiwiki' ) {
-	$wgDefaultUserOptions['usenewrc'] = 0;
-}
-
 if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
