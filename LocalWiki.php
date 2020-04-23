@@ -87,11 +87,6 @@ if ( $wgDBname === 'hamzawiki' ) {
 	];
 }
 
-if ( $wgDBname === 'harrypotterwiki' ) {
-	$wgHiddenPrefs[] = 'collapsiblenav';
-	$wgDefaultUserOptions['collapsiblenav'] = 1;
-}
-
 if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
