@@ -78,7 +78,7 @@ if ( $wgDBname === 'ayrshirewiki' ) {
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
 	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
+	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
 if ( $wgDBname === 'hamzawiki' ) {
