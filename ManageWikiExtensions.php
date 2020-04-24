@@ -2077,7 +2077,7 @@ $wgManageWikiExtensions = [
 						'protection' => '',
 						'content' => 0,
 						'aliases' => [],
-						'cotentmodel' => 'wikitext',
+						'contentmodel' => 'wikitext',
 						'additional' => []
 					],
 					'Property_talk' => [
