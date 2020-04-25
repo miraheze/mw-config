@@ -289,7 +289,7 @@ if ( $wmgUseDataDump ) {
 			],
 		],
 		'managewiki_backup' => [
-			'file_ending' => '.zip',
+			'file_ending' => '.json',
 			'generate' => [
 				'type' => 'script',
 				'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
