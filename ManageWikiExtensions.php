@@ -1736,8 +1736,6 @@ $wgManageWikiExtensions = [
 //				'sql' => [
 //					'spritesheet_table_spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
 //					'spritesheet_table_spritename_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename_rev.sql",
-//					'spritesheet_table_spritesheet' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet.sql",
-//					'spritesheet_table_spritesheet_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet_rev.sql"
 //
 //				],
 //			],
