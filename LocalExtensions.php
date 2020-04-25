@@ -288,6 +288,23 @@ if ( $wmgUseDataDump ) {
 				'delete' => 'delete-dump',
 			],
 		],
+		'managewiki_backup' => [
+			'file_ending' => '.zip',
+			'generate' => [
+				'type' => 'script',
+				'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+				'options' => [
+					'--filename',
+					'${filename}'
+				],
+			],
+			'limit' => 1,
+			'permissions' => [
+				'view' => 'view-dump',
+				'generate' => 'generate-dump',
+				'delete' => 'delete-dump',
+			],
+		],
 	];
 
 	$wgAvailableRights[] = 'view-dump';
