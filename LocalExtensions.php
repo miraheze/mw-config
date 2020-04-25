@@ -247,7 +247,7 @@ if ( $wmgUseDarkMode ) {
 if ( $wmgUseDataDump ) {
 	wfLoadExtension( 'DataDump' );
 
-	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/${wgDBname}/";
+	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wgDBname}/";
 
 	$wgDataDump = [
 		'xml' => [
@@ -260,7 +260,7 @@ if ( $wmgUseDataDump ) {
 					'--logs',
 					'--uploads',
 					'--output',
-					"gzip:${wgDataDumpDirectory}" . '${filename}',
+					"gzip:{$wgDataDumpDirectory}" . '${filename}',
 				],
 			],
 			'limit' => 1,
@@ -278,7 +278,7 @@ if ( $wmgUseDataDump ) {
 				'options' => [
 					'-r',
 					$wgDataDumpDirectory . '${filename}',
-					"/mnt/mediawiki-static/${wgDBname}/"
+					"/mnt/mediawiki-static/{$wgDBname}/"
 				],
 			],
 			'limit' => 1,
