@@ -1733,8 +1733,10 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'spritesheet_table_spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
-					'spritesheet_table_spritename_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename_rev.sql",
+					'spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
+					'spritename_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename_rev.sql",
+					'spritesheet' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet.sql",
+					'spritesheet_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet_rev.sql"
 
 				],
 			],
