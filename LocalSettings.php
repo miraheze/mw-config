@@ -641,6 +641,7 @@ $wi->config->settings = [
 	],
 	'wmgUseCodeMirror' => [
 		'default' => false,
+		'solarawiki' => true,
 	],
 	'wmgUseCollapsibleVector' => [
 		'default' => false,
