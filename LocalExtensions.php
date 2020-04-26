@@ -194,7 +194,7 @@ if ( $wmgUseCollection ) {
 
 if ( $wmgUseCommentStreams ) {
 	wfLoadExtension ( 'CommentStreams' );
-	$wi->config->settings['wgManageWikiNamespacesAdditional']'default']['wgCommentStreamsAllowedNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgCommentStreamsAllowedNamespaces'] = [
 		'name' => 'Can CommentStreams in this namespace?',
 		'main' => true,
 		'talk' => true,
