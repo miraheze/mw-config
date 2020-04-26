@@ -601,7 +601,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'flow' => [
-			'name' => 'Flow',
+			'name' => 'Flow (StructuredDiscussions)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredDiscussions',
 			'var' => 'wmgUseFlow',
 			'conflicts' => false,
