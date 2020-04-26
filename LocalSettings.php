@@ -2478,6 +2478,9 @@ $wi->config->settings = [
 		'+reviwikiwiki' => [
 			'usenewrc' => 0
 		],
+		'+solarawiki' => [
+			'usecodemirror' => 1,
+		],
  	],
 
 	// Redis
