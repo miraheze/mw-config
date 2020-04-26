@@ -194,6 +194,21 @@ if ( $wmgUseCollection ) {
 
 if ( $wmgUseCommentStreams ) {
 	wfLoadExtension ( 'CommentStreams' );
+	$wi->config->settings['wgCommentStreamsAllowedNamespaces']['default'] = [
+		'name' => 'Can CommentStreams in this namespace?',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'vestyle' => false,
+		'overridedefault' => -1
+	];
+	$wi->config->settings['wgCommentStreamsEnableTalk']['default'] = [
+		'name' => 'Can CommentStreams in this talk namespace?',
+		'talk' => true,
+		'blacklisted' => [],
+		'vestyle' => false,
+		'overridedefault' => false
+	];
 }
 
 if ( $wmgUseComments ) {
