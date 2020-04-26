@@ -329,7 +329,7 @@ $wgManageWikiSettings = [
 	],
 	
 	'wgCommentStreamsModeratorFastDelet' => [
-		'name' => '',
+		'name' => 'Deletion of comments by Moderator',
 		'from' => 'CommentStream',
 		'restricted' => false,
 		'type' => 'check',
