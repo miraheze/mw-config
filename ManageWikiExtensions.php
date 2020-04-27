@@ -422,6 +422,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'calendar-wikivoyage' => [
+			'name' => 'Calendar-Wikivoyage',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Calendar-Wikivoyage',
+			'var' => 'wmgUseCalendarWikivoyage',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'datatransfer' => [
 			'name' => 'DataTransfer',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:DataTransfer',
