@@ -94,7 +94,7 @@ if ( $wmgUseBootstrap ) {
 	wfLoadExtension( 'Bootstrap' );
 };
 
-if ( $wmgUseMSCalendar ) {
+if ( $wmgUseMS ) {
 	wfLoadExtension( 'MsCalendar' );
 }
 
@@ -238,7 +238,7 @@ if ( $wmgUseCSS ) {
 }
 
 if ( $wmgUseCalendarWikivoyage ) {
-	wfLoadExtension( 'Calendar' )
+	wfLoadExtension( 'Calendar' );
 }
 
 if ( $wmgUseDarkMode ) {
