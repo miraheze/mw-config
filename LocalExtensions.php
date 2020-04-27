@@ -94,7 +94,7 @@ if ( $wmgUseBootstrap ) {
 	wfLoadExtension( 'Bootstrap' );
 };
 
-if ( $wmgUseMS ) {
+if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
 
