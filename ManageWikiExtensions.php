@@ -2105,8 +2105,8 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseWikibaseClient',
 			'conflicts' => false,
 			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
+				'extensions' => [
+					'wikibaserepository',
 				],
 			],
 			'install' => [
