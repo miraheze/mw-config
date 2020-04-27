@@ -684,6 +684,9 @@ $wi->config->settings = [
 	'wmgUseCSS' => [
 		'default' => false,
 	],
+	'wmgUseCalendarWikivoyage' => [
+		'default' => false,
+	],
 	'wmgUseDarkMode' => [
 		'default' => false,
 	],
