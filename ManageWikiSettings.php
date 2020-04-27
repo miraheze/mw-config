@@ -305,7 +305,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'CommentStream',
-		'help' => 'Comments streams will be displayed with the newest comment stream on top',
+		'help' => 'Show newer comments first',
 	],
 	
 	'wgCommentStreamsUserAvatarPropertyName' => [
@@ -328,7 +328,7 @@ $wgManageWikiSettings = [
 		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
 	],
 	
-	'wgCommentStreamsModeratorFastDelet' => [
+	'wgCommentStreamsModeratorFastDelete' => [
 		'name' => 'Deletion of comments by Moderator',
 		'from' => 'CommentStream',
 		'restricted' => false,
