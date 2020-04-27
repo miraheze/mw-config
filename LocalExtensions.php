@@ -203,7 +203,7 @@ if ( $wmgUseCommentStreams ) {
 		'overridedefault' => -1
 	];
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgCommentStreamsEnableTalk'] = [
-		'name' => 'Can comments in this talk namespace?',
+		'name' => 'Can comments appear in the talk namespace?',
 		'talk' => true,
 		'blacklisted' => [],
 		'vestyle' => false,
