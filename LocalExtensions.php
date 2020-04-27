@@ -237,10 +237,6 @@ if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
 }
 
-if ( $wmgUseCalendarWikivoyage ) {
-	wfLoadExtension( 'Calendar' )
-}
-
 if ( $wmgUseDarkMode ) {
 	wfLoadExtension( 'DarkMode' );
 }
