@@ -214,6 +214,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'calendar-wikivoyage' => [
+			'name' => 'Calendar-Wikivoyage',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Calendar-Wikivoyage',
+			'var' => 'wmgUseCalendarWikivoyage',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'capiunto' => [
 			'name' => 'Capiunto',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Capiunto',
@@ -419,13 +426,6 @@ $wgManageWikiExtensions = [
 			'name' => 'CSS',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CSS',
 			'var' => 'wmgUseCSS',
-			'conflicts' => false,
-			'requires' => [],
-		],
-		'calendar-wikivoyage' => [
-			'name' => 'Calendar-Wikivoyage',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Calendar-Wikivoyage',
-			'var' => 'wmgUseCalendarWikivoyage',
 			'conflicts' => false,
 			'requires' => [],
 		],
