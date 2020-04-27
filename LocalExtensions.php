@@ -18,7 +18,7 @@ if ( $wmgUseAddThis ) {
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
-	wfLoadExtension( 'AddHTMLMetaAndTitle' );
+	wfLoadExtension( 'AddHTMLMetaAndTitle' )
 }
 
 if ( $wmgUseAdminLinks ) {
