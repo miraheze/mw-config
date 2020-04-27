@@ -1159,12 +1159,6 @@ $wi->config->settings = [
 	'wmgUseWikibaseClient' => [
 		'default' => false,
 	],
-	'wmgAllowEntityImport' => [
-		'default' => false,
-	],
-	'wmgEnableEntitySearchUI' => [
-		'default' => true,
-	],
 	'wmgUseWikiCategoryTagCloud' => [
 		'default' => false,
 	],
@@ -3156,6 +3150,34 @@ $wi->config->settings = [
 		'default' => 'freenodeChat',
 	],
 
+	// Wikibase
+	'+wgWBRepoSettings' => [
+		'default' => [
+			'entityNamespaces' => [
+				'item' => 860,
+				'property' => 862
+			],
+			'allowEntityImport' => false,
+			'enableEntitySearchUI' => true,
+			'siteLinkGroups' => [
+				'miraheze'
+			],
+			'specialSiteLinkGroups' => []
+		],
+		'+degreesoflewditywiki' => [
+			'enableEntitySearchUI' => false
+		]
+	],
+	'+wgWBClientSettings' => [
+		'default' => [
+			'siteGroup' => 'miraheze',
+			'repoNamespaces' => [
+				'wikibase-item' => 'Item',
+				'wikibase-property' => 'Property'
+			]
+		]
+	],
+
 	// WikiForum settings
 	'wgWikiForumAllowAnonymous' => [
 		'default' => true,
@@ -3252,6 +3274,11 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 if ( !preg_match( '/^mw[0-9]*/', wfHostname() ) ) {
 	$wi->config->settings['wgUseCdn']['default'] = false;
 }
+
+// Wikibase setting that depend on $wi
+$wi->config->settings['+wgWBClientSettings']['default']['repoUrl'] = 'https://' . $wi->hostname;
+$wi->config->settings['+wgWBClientSettings']['default']['repoDatabase'] = $wi->dbname;
+$wi->config->settings['+wgWBClientSettings']['default']['changesDatabase'] = $wi->dbname;
 
 $wi->readCache();
 $wi->config->extractAllGlobals( $wi->dbname );

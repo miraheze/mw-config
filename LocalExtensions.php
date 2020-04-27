@@ -1112,11 +1112,6 @@ if ( $wmgUseWikibaseClient ) {
 	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
 }
 
-if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
-	// Includes Wikibase Configuration. There is a global and per-wiki system here.
-	require_once "/srv/mediawiki/config/Wikibase.php";
-}
-
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
 
