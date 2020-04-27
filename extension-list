@@ -15,6 +15,7 @@ $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
 $IP/extensions/Bootstrap/extension.json
 $IP/extensions/CSS/extension.json
+$IP/extensions/Calendar/extension.json
 $IP/extensions/Cargo/extension.json
 $IP/extensions/CategorySortHeaders/CategorySortHeaders.php
 $IP/extensions/CategoryTree/extension.json
@@ -44,7 +45,6 @@ $IP/extensions/CreatePageUw/extension.json
 $IP/extensions/CreateRedirect/extension.json
 $IP/extensions/CreateWiki/extension.json
 $IP/extensions/CrossReference/extension.json
-$IP/extensions/Calendar/extension.json
 $IP/extensions/DarkMode/extension.json
 $IP/extensions/DataDump/extension.json
 $IP/extensions/DataTransfer/extension.json
