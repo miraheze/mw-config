@@ -1471,6 +1471,11 @@ $wi->config->settings = [
 	'wgGlobalPreferencesDB' => [
 		'default' => 'centralauth',
 	],
+	
+	// GlobalUsage
+	'wgGlobalUsageDatabase' => [
+		'default' => 'commonswiki',
+	],
 
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
