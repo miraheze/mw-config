@@ -783,6 +783,9 @@ $wi->config->settings = [
 	'wmgUseGettingStarted' => [
 		'default' => false,
 	],
+	'wmgUseGlobalUsage' => [
+		'default' => false,
+	],
 	'wmgUseGlobalUserPage' => [
 		'default' => false,
 	],
