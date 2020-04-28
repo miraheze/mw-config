@@ -478,6 +478,11 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
+if ( $wmgUseGlobalUsage ) {
+	wfLoadExtension( 'GlobalUsage' );
+	$wgGlobalUsageDatabase = 'commonswiki';
+}
+
 if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
 }
