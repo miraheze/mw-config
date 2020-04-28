@@ -478,10 +478,6 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
-if ( $wmgUseGlobalUsage ) {
-	wfLoadExtension( 'GlobalUsage' );
-}
-
 if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
 }
