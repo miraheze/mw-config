@@ -752,6 +752,18 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'globalusage' => [
+			'name' => 'GlobalUsage',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GlobalUsage',
+			'var' => 'wmgUseGlobalUsage',
+			'conflicts' => false,
+			// Sysadmins feel free to remove restriction after testing
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'globaluserpage' => [
 			'name' => 'GlobalUserPage',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GlobalUserPage',
