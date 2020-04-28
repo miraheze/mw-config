@@ -732,6 +732,9 @@ $wi->config->settings = [
 	'wmgUseDynamicPageList3' => [ // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
 		'default' => false,
 	],
+	'wmgUseDynamicSidebar' => [
+		'default' => false,
+	],
 	'wmgUseEditcount' => [
 		'default' => false,
 	],

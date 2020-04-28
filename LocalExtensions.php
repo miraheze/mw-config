@@ -368,6 +368,10 @@ if ( $wmgUseDynamicPageList3 ) {
 	wfLoadExtension( 'DynamicPageList3' );
 }
 
+if ( $wmgUseDynamicSidebar ) {
+	wfLoadExtension( 'DynamicSidebar' );
+}
+
 if ( $wmgUseEditcount ) {
 	wfLoadExtension( 'Editcount' );
 }

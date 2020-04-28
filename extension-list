@@ -58,6 +58,7 @@ $IP/extensions/DisplayTitle/extension.json
 $IP/extensions/DummyFandoomMainpageTags/extension.json
 $IP/extensions/DynamicPageList/extension.json
 $IP/extensions/DynamicPageList3/extension.json
+$IP/extensions/DynamicSidebar/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
 $IP/extensions/Editcount/extension.json
