@@ -140,7 +140,7 @@ $wi->config->settings = [
 			'manualRecache' => true,
 		],
 	],
-	'+wgExtensionEntryPointListFiles' =>  [
+	'wgExtensionEntryPointListFiles' =>  [
 		'default' => [
 			'/srv/mediawiki/config/extension-list'
 		],
