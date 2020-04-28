@@ -480,7 +480,6 @@ if ( $wmgUseGettingStarted ) {
 
 if ( $wmgUseGlobalUsage ) {
 	wfLoadExtension( 'GlobalUsage' );
-	$wgGlobalUsageDatabase = 'commonswiki';
 }
 
 if ( $wmgUseGlobalUserPage ) {
