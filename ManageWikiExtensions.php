@@ -511,6 +511,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => 'dynamicpagelist',
 			'requires' => [],
 		],
+		'dynamicsidebar' => [
+			'name' => 'DynamicSidebar',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicSidebar',
+			'var' => 'wmgUseDynamicSidebar',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'editcount' => [
 			'name' => 'EditCount',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Editcount',
