@@ -479,7 +479,7 @@ if ( $wmgUseGettingStarted ) {
 }
 
 
-if ( $wgMirahezeCommons ) {
+if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
