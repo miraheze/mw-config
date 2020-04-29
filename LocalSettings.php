@@ -62,6 +62,9 @@ $wi->config->settings = [
 			'rangeblock' => true,
 		],
 	],
+	'wgAbuseFilterNotifications' => [
+		'default' => 'udp',
+	],
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
