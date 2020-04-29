@@ -85,7 +85,7 @@ if ( !$cwPrivate ) {
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 	    ( $_SERVER['REMOTE_ADDR'] === '51.89.160.132' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1056::7' || $_SERVER['REMOTE_ADDR'] === '51.89.160.141' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:105a::9' ) ) {
-        $wgCookieWarningEnabled = false;
+	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
 // Per-wiki overrides
@@ -94,14 +94,14 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 }
 
 if ( $wgDBname === 'ayrshirewiki' ) {
-	$GLOBALS['wgSpecialPages']['MapEditor'] = 'SpecialMapEditor';
-	$GLOBALS['wgSpecialPageGroups']['MapEditor'] = 'maps';
+	$wgSpecialPages['MapEditor'] = 'SpecialMapEditor';
+	$wgSpecialPageGroups['MapEditor'] = 'maps';
 }
 
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
 	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
+	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
 if ( $wgDBname === 'hamzawiki' ) {
@@ -110,18 +110,11 @@ if ( $wgDBname === 'hamzawiki' ) {
 	];
 }
 
-if ( $wgDBname === 'harrypotterwiki' ) {
-	$wgHiddenPrefs[] = 'collapsiblenav';
-	$wgDefaultUserOptions['collapsiblenav'] = 1;
-}
-
 if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
 
 	$wgSimpleFlaggedRevsUI = false;
-
-	$wgDefaultUserOptions['flow-topiclist-sortby'] = 'newest';
 }
 
 if ( $wgDBname === 'metawiki' ) {
@@ -182,10 +175,6 @@ if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 	$egMapsDefaultService = 'googlemaps3';
 }
 
-if ( $wgDBname === 'reviwikiwiki' ) {
-	$wgDefaultUserOptions['usenewrc'] = 0;
-}
-
 if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
@@ -214,7 +203,7 @@ if ( $wgDBname === 'wikiageingwiki' ) {
 
 // Depends on $wgContentNamespaces
 if ( $wgDBname === 'abitaregeawiki' ) {
-	$wgExemptFromUserRobotsControl = [];
+	$wi->config->settings['wgExemptFromUserRobotsControl']['default'] = [];
 }
 
 // Additional wgReadWhitelist changes
