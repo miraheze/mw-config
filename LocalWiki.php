@@ -17,13 +17,24 @@ if ( $cwClosed ) {
 		],
 	];
 
+if ( $cwPrivate ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
 	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
-			<div class=\"wikitable\" style=\"text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;\"> <span class=\"plainlinks\">This wiki has been closed because there have been <b>no edits</b> or <b>logs</b> made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to <a href="https://meta.miraheze.org/wiki/Requests_for_adoption">Requests for adoption</a> and make a request. If this wiki is not adopted within 6 months it may be deleted. Note: If you are a bureaucrat on this wiki you can go to Special:ManageWiki and uncheck the "closed" box to reopen it. </span></div>
+			<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks">This wiki has been closed because there have been <b>no edits</b> or <b>logs</b> made within the last 60 days. Since this wiki is private, it may not be adopted as a public wiki would be. If this wiki is not reopened within 6 months it may be deleted. Note: If you are a bureaucrat on this wiki you can go to Special:ManageWiki and uncheck the "closed" box to reopen it. If you have a question or request please ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards noticeboard</a>. </span></div>
 EOF;
 		return true;
+		}
 	}
+else {
+	$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
+	function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
+		$siteNotice .= <<<EOF
+			<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks">This wiki has been closed because there have been <b>no edits</b> or <b>logs</b> made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to <a href="https://meta.miraheze.org/wiki/Requests_for_adoption">Requests for adoption</a> and make a request. If this wiki is not adopted within 6 months it may be deleted. Note: If you are a bureaucrat on this wiki you can go to Special:ManageWiki and uncheck the "closed" box to reopen it. </span></div>
+EOF;
+		return true;
+		}
+	}	
 }
 
 // Inactive Wikis
