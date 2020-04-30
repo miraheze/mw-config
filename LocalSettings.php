@@ -2774,6 +2774,7 @@ $wi->config->settings = [
 	// Server
 	'wgArticlePath' => [
 		'default' => '/wiki/$1',
+		'solarawiki' => '/$1',
 	],
 	'wgDisableOutputCompression' => [
 		'default' => true,
