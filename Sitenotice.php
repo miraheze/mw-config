@@ -27,14 +27,14 @@ EOF;
 */
 
 // Specific wiki sitenotices
-if ( $wmgUseSocialProfile ) {
+if ( $wmgUseComments ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Due to a recent update of SocialProfile, some wikis may experience issues with comments and user profiles. We are aware of these issues and are looking into them. Thank you for your patience and we apologize for the incovenience. </td>
+			<td>Due to a recent update of Comments, some wikis may experience issues with comments. We are aware of these issues and are looking into them. Thank you for your patience and we apologize for the incovenience. </td>
 			</tr></tbody></table>
 EOF;
 		return true;
