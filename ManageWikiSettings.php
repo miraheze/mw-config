@@ -1235,6 +1235,7 @@ $wgManageWikiSettings = [
 			'jpeg' => 'jpeg',
 			'jpg' => 'jpg',
 			'js' => 'js',
+			'm4a' => 'm4a',
 			'mat' => 'mat',
 			'mbz' => 'mbz',
 			'md' => 'md',
