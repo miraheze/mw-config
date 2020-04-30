@@ -2153,6 +2153,7 @@ $wi->config->settings = [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
+				'oathauth-verify-user'
 			],
 			'*' => [
 				'read',
