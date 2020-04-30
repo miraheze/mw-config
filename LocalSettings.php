@@ -2140,6 +2140,7 @@ $wi->config->settings = [
 				'mwoauthviewprivate',
 				'mwoauthviewsuppressed',
 				'oathauth-disable-for-user',
+				'oathauth-verify-user',
 				'oathauth-view-log',
 				'renameuser',
 				'requestwiki',
@@ -2153,7 +2154,6 @@ $wi->config->settings = [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-				'oathauth-verify-user',
 			],
 			'*' => [
 				'read',
