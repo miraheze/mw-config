@@ -93,8 +93,12 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
 		'flags' => DBO_SSL | DBO_COMPRESS,
-		'sslCertPath' => '/etc/ssl/certs/wildcard.miraheze.org.crt',
-		'sslKeyPath' => '/etc/ssl/private/wildcard.miraheze.org.key',
+		// MediaWiki checks if the certificate presented by MariaDB is signed
+		// by the certificate authority listed in 'sslCAFile'. In emergencies
+		// this could be set to /etc/ssl/certs/ca-certificates.crt (all trusted
+		// CAs), but setting this to one CA reduces attack vector and CAs
+		// to dig through when checking the certificate provided by MariaDB.
+		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
 		'dbt1' => 'dbt1.miraheze.org',
