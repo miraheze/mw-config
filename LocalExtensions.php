@@ -207,7 +207,7 @@ if ( $wmgUseCommentStreams ) {
 		'talk' => true,
 		'blacklisted' => [],
 		'vestyle' => false,
-		'overridedefault' => false
+		'overridedefault' => false,
 	];
 }
 
