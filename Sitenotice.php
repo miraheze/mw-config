@@ -27,6 +27,7 @@ EOF;
 */
 
 // Specific wiki sitenotices
+/*
 if ( $wmgUseComments ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -40,4 +41,4 @@ EOF;
 		return true;
 	}
 }
-		
+*/	
