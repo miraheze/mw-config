@@ -424,7 +424,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => null,
 		'section' => 'edit',
-		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s documentation page https://www.mediawiki.org/wiki/Module:String.',
+		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s <a href="https://www.mediawiki.org/wiki/Module:String">documentation page</a>',
 	],
 	'wmgAllowEntityImport' => [
 		'name' => 'Allow Entity Import (Wikibase)',
@@ -1362,7 +1362,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can change it.',
+		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it.',
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
@@ -1371,7 +1371,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'styling',
-		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can add one.',
+		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can add one.',
 	],
 	'wgAppleTouchIcon' => [
 		'name' => 'Apple Touch Icon',
@@ -1380,7 +1380,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'styling',
-		'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
+		'help' => 'Favicon for Apple mobile devices. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> on how you can add one.',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
