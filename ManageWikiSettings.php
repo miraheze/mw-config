@@ -1407,7 +1407,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from <a href="MediaWiki:Metrolook-tiles">MediaWiki:Metrolook-tiles</a>. If "Metrolook Down Arrow" is not set and "Metrolook Bartile" is not set, then the tile menu will be generated from <a href="MediaWiki:Metrolook-tiles-second">MediaWiki:Metrolook-tiles-second</a>.',
+		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from <a href="MediaWiki:Metrolook-tiles">/wiki/MediaWiki:Metrolook-tiles</a>. If "Metrolook Down Arrow" is not set and "Metrolook Bartile" is not set, then the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles-second">MediaWiki:Metrolook-tiles-second</a>.',
 	],
 	'wgMetrolookMobile' => [
 		'name' => 'Metrolook Mobile',
