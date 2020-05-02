@@ -436,7 +436,7 @@ $wgManageWikiSettings = [
 		'help' => 'Allow importing entities via Special:Import and importDump.php.',
 	],
 	'wmgEnableEntitySearchUI' => [
-		'name' => 'Enable Entity Search UI (Wikibase)',
+		'name' => 'Disable Entity Search UI (Wikibase)',
 		'restricted' => false,
 		'from' => 'wikibaserepository',
 		'type' => 'check',
