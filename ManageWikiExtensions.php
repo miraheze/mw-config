@@ -172,7 +172,7 @@ $wgManageWikiExtensions = [
 		],
 		'autocreatepages' => [
 			'name' => 'Auto Create Pages',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:AutoCreatePage',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AutoCreatePage',
 			'var' => 'wmgUseAutoCreatePage',
 			'conflicts' => false,
 			'requires' => [],
@@ -209,7 +209,7 @@ $wgManageWikiExtensions = [
 		],
 		'Bootstrap' => [
 			'name' => 'Bootstrap',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Bootstrap',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Bootstrap',
 			'var' => 'wmgUseBootstrap',
 			'conflicts' => false,
 			'requires' => [],
@@ -403,7 +403,7 @@ $wgManageWikiExtensions = [
 		],
 		'createpageuw' => [
 			'name' => 'CreatePageUw',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:CreatePageUw',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CreatePageUw',
 			'var' => 'wmgUseCreatePageUw',
 			'conflicts' => false,
 			'requires' => [],
@@ -431,14 +431,14 @@ $wgManageWikiExtensions = [
 		],
 		'datatransfer' => [
 			'name' => 'DataTransfer',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:DataTransfer',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DataTransfer',
 			'var' => 'wmgUseDataTransfer',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'darkmode' => [
 			'name' => 'DarkMode',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:DarkMode',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DarkMode',
 			'var' => 'wmgUseDarkMode',
 			'conflicts' => false,
 			'requires' => [],
@@ -699,7 +699,7 @@ $wgManageWikiExtensions = [
 		],
 		'fontawesome' => [
 			'name' => 'FontAwesome',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:FontAwesome',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FontAwesome',
 			'var' => 'wmgUseFontAwesome',
 			'conflicts' => false,
 			'requires' => [],
@@ -919,7 +919,7 @@ $wgManageWikiExtensions = [
 		],
 		'lastmodified' => [
 			'name' => 'Last Modified',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:LastModified',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LastModified',
 			'var' => 'wmgUseLastModified',
 			'conflicts' => false,
 			'requires' => [],
@@ -1307,7 +1307,7 @@ $wgManageWikiExtensions = [
 		],
 		'numberedheadings' => [
 			'name' => 'NumberedHeadings',
-			'linkPage' => 'https://www.mediawiki.org/wiki/NumberedHeadings',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NumberedHeadings',
 			'var' => 'wmgUseNumberedHeadings',
 			'conflicts' => false,
 			'requires' => [],
@@ -1481,7 +1481,7 @@ $wgManageWikiExtensions = [
 		],
 		'preloader' => [
 			'name' => 'Preloader',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Preloader',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Preloader',
 			'var' => 'wmgUsePreloader',
 			'conflicts' => false,
 			'install' => [],
@@ -1606,7 +1606,7 @@ $wgManageWikiExtensions = [
 		],
 		'regexfunctions' => [
 			'name' => 'RegexFunctions',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:RegexFunctions',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
 			'var' => 'wmgUseRegexFunctions',
 			'conflicts' => false,
 			'requires' => [],
