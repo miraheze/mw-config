@@ -2746,6 +2746,7 @@ $wi->config->settings = [
 	],
 	'wgGoogleSiteVerificationKey' => [
 		'default' => null,
+		'solarawiki' => 'sw0cMjkH6nsUhFJh2kDFQQsqzjagTlFfrbYCIJCJb0Q',
 	],
 	'wgBingSiteVerificationKey' => [
 		'default' => null,
