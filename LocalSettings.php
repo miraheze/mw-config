@@ -2381,12 +2381,12 @@ $wi->config->settings = [
 	
 	// New User Email Notification
 	
-	$wgNewUserNotifEmailTargets = array(
-		'default' = array(),
-		'femmanwiki' = array(
+	$wgNewUserNotifEmailTargets => array[
+		'default' => array[],
+		'femmanwiki' => array[
 			'gustav@nyvell.net',
-		),
-	),
+		],
+	],
 
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
