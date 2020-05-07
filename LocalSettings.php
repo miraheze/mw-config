@@ -2378,6 +2378,13 @@ $wi->config->settings = [
 	'wgMathValidModes' => [
 		'default' => [ 'mathml' ],
 	],
+	
+	// New User Email Notification
+	
+	'wgNewUserNotifEmailTargets' => [
+		'default' => [],
+		'femmanwiki' => [ 'gustav@nyvell.net' ],
+	],
 
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
