@@ -2,7 +2,7 @@
 
 if ( $wmgSiteNoticeOptOut ) {
 	// only show important notices when optout
-	$wi->config->settings['$wgNoticeProject']['default'] = 'optout';
+	$wi->config->settings['wgNoticeProject']['default'] = 'optout';
 }
 
 // Global SiteNotice
