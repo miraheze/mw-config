@@ -80,6 +80,10 @@ $wi->config->settings = [
 			],
 		],
 	],
+	'$wgEmailConfirmToEdit' => [
+		'default' => false,
+		'templatewiki' => true,
+	],
 
 	// Cargo
 	'wgCargoGoogleMapsKey' => [
