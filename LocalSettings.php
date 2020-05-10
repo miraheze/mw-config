@@ -1602,6 +1602,7 @@ $wi->config->settings = [
 	// License
 	'wgRightsIcon' => [
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'freesoftwarepediawiki' => 'https://upload.wikimedia.org/wikipedia/commons/4/42/GFDL_Logo.svg',
 		'jadtechwiki' => "https://$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'revitwiki' => "https://$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 	],
@@ -1613,6 +1614,7 @@ $wi->config->settings = [
 	],
 	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
+		'freesoftwarepediawiki' => 'GNU Free Documentation License',
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'isvwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'jadtechwiki' => 'Copyright © Jak and Daxter Technical Wiki. All rights reserved.',
@@ -1623,6 +1625,7 @@ $wi->config->settings = [
 	],
 	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'freesoftwarepediawiki' => 'http://www.gnu.org/licenses/fdl-1.3.html',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'isvwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'jadtechwiki' => 'https://jadtech.miraheze.org/wiki/MediaWiki:Copyright',
