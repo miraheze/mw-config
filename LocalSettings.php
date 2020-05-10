@@ -501,6 +501,11 @@ $wi->config->settings = [
 		'default' => true,
 	],
 
+	// Display Title
+	'wgDisplayTitleHideSubtitle' => [
+		'default' => false,
+	],
+
 	// Download from https://www.stopforumspam.com/downloads (recommended listed_ip_30_all.zip)
 	// for ipv4 + ipv6 combined.
 	// TODO: Setup cron to update this automatically.

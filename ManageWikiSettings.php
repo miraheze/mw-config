@@ -462,6 +462,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Restrict {{DISPLAYTITLE}} to titles that normalize to the same canonical database key. Wikis with NoTitle extension installed have this config unset.',
 	],
+	'wgDisplayTitleHideSubtitle' => [
+		'name' => 'Don\'t display the page\'s original title below the display title',
+		'restricted' => false,
+		'from' => 'displaytitle',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Set this to hide the page\'s original title as a subtitle below the title bar, shown by the Display Title extension.',
+	],
 	'wgCapitalLinks' => [
 		'name' => 'Capital Links',
 		'restricted' => false,
