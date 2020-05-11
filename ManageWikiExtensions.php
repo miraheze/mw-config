@@ -27,8 +27,8 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'htmlmetaadntitle' => [
-			'name' => 'HTML Meta and Title',
+		'addhtmlmetaadntitle' => [
+			'name' => 'Add HTML Meta and Title',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Add_HTML_Meta_and_Title',
 			'var' => 'wmgUseAddHTMLMetaAndTitle',
 			'conflicts' => false,
