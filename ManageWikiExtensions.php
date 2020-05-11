@@ -535,7 +535,7 @@ $wgManageWikiExtensions = [
 		],
 		'erudite' => [
 			'name' => 'Erudite (Skin)',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Erudite',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Erudite',
 			'var' => 'wmgUseErudite',
 			'conflicts' => false,
 			'requires' => [],
@@ -550,7 +550,7 @@ $wgManageWikiExtensions = [
 		],
 		'femiwiki' => [
 			'name' => 'Femiwiki (Skin)',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Femiwiki',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Femiwiki',
 			'var' => 'wmgUseFemiwiki',
 			'conflicts' => false,
 			'requires' => [],
