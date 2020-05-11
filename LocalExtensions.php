@@ -390,6 +390,12 @@ if ( $wmgUseFancyBoxThumbs ) {
 	require_once "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php";
 }
 
+if ( $wmgUseFemiwiki ) {
+	wfLoadSkin( 'Femiwiki' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Femiwiki'] = 'femiwiki';
+}
+
 if ( $wmgUseFlaggedRevs ) {
 	wfLoadExtension( 'FlaggedRevs' );
 
