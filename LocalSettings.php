@@ -758,6 +758,9 @@ $wi->config->settings = [
 	'wmgUseFeaturedFeeds' => [
 		'default' => false, // Not enabled anywhere?
 	],
+	'wmgUseFemiwiki' => [
+		'default' => false,
+	],
 	'wmgUseFlaggedRevs' => [
 		'default' => false,
 	],
