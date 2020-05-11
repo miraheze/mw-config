@@ -1251,6 +1251,7 @@ $wgManageWikiSettings = [
 			'mhtml' => 'mhtml',
 			'mid' => 'mid',
 			'midi' => 'midi',
+			'mkv' => 'mkv',
 			'mov' => 'mov',
 			'mp3' => 'mp3',
 			'mp4' => 'mp4',
