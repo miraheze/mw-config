@@ -548,6 +548,14 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'femiwiki' => [
+			'name' => 'Femiwiki (Skin)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Femiwiki',
+			'var' => 'wmgUseFemiwiki',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'flaggedrevs' => [
 			'name' => 'FlaggedRevs',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FlaggedRevs',
