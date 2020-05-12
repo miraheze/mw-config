@@ -295,7 +295,7 @@ $wi->config->settings = [
 
 	// CreateWiki
 	'CreateWikiBlacklistedSubdomains' => [
-		'default' => '^(wiki|www|wikis)+$',
+		'default' => '^(wiki|www|wikis|misc1.*|db.*|cp.*|mw.*|jobrunner.*|gluster.*|ns.*|bacula.*|misc.*|mail.*|mw.*|mon1|lizardfs.*|swift1|swift2|rdb.*|phab.*|services1|services2|puppet.*|test2)+$',
 	],
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
