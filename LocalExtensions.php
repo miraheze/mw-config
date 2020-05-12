@@ -913,6 +913,13 @@ if ( $wmgUseSiteScout ) {
 
 if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
+	$wgSlackFromName = $wgSitename;
+	$wgWikiUrlEnding = 'index.php?title=';
+	$wgWikiUrl = $wgServer . '/w/';
+	$wgSlackShowNewUserEmail = false;
+	$wgSlackShowNewUserIP = false;
+	$wgSlackIncomingWebhookUrl =
+		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
 }
 
 if ( $wmgUseSoftRedirector) {
