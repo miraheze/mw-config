@@ -1062,6 +1062,9 @@ $wi->config->settings = [
 	'wmgUseSiteScout' => [
 		'default' => false,
 	],
+	'wmgUseSlackNotifications' => [
+		'default' => false,
+	],
 	'wmgUseSoftRedirector' => [
 		'default' => false,
 	],
