@@ -241,6 +241,10 @@ if ( $wmgUseCalendarWikivoyage ) {
 	wfLoadExtension( 'Calendar' );
 }
 
+if ( $wmgUseCitizen ) {
+	wfLoadSkin( 'Citizen' );
+}
+
 if ( $wmgUseDarkMode ) {
 	wfLoadExtension( 'DarkMode' );
 }
