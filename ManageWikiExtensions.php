@@ -295,11 +295,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Citizen',
 			'var' => 'wmgUseCitizen',
 			'conflicts' => false,
-			'requires' => [				
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 			'section' => 'skins',
 		],
 		'citoid' => [
