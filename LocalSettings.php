@@ -644,6 +644,9 @@ $wi->config->settings = [
 	'wmgUseCiteThisPage' => [
 		'default' => false,
 	],
+	'wmgUseCitizen' => [
+		'default' => false,
+	],
 	'wmgUseCitoid' => [
 		'default' => false,
 	],

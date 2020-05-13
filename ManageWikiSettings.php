@@ -1263,6 +1263,7 @@ $wgManageWikiSettings = [
 			'odp' => 'odp',
 			'ods' => 'ods',
 			'odt' => 'odt',
+			'off' => 'off',
 			'oga' => 'oga',
 			'ogg' => 'ogg',
 			'ogv' => 'ogv',
