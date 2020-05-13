@@ -680,8 +680,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 				'mwscript' => [
-					'extensions/flow/maintenance/flowCreateTemplates.php' => [
-						],
+					'$IP/extensions/flow/maintenance/flowCreateTemplates.php' => [],
 				],
 			],
 		],
@@ -2074,7 +2073,7 @@ $wgManageWikiExtensions = [
 				'sql' => [
 					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
 				'mwscript' => [
-						'extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable' => [
+						'$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable' => [
 							],
 					],
 				],
