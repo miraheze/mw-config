@@ -679,6 +679,10 @@ $wgManageWikiExtensions = [
 						],
 					],
 				],
+				'mwscript' => [
+					'extensions/flow/maintenance/flowCreateTemplates.php' => [
+						],
+				],
 			],
 		],
 		'foreground' => [
@@ -2056,6 +2060,26 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'wikibaseclient' => [
+			'name' => 'Wikibase (Client)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase',
+			'var' => 'wmgUseWikibaseClient',
+			'conflicts' => false,
+			'requires' => [
+				'extensions' => [
+					'wikibaserepository',
+				],
+			],
+			'install' => [
+				'sql' => [
+					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
+				'mwscript' => [
+						'extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable' => [
+							],
+					],
+				],
+			],
+		],
 		'wikibaserepository' => [
 			'name' => 'Wikibase (Repository)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase',
@@ -2112,22 +2136,6 @@ $wgManageWikiExtensions = [
 						'additional' => []
 					]
 				]
-			],
-		],
-		'wikibaseclient' => [
-			'name' => 'Wikibase (Client)',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase',
-			'var' => 'wmgUseWikibaseClient',
-			'conflicts' => false,
-			'requires' => [
-				'extensions' => [
-					'wikibaserepository',
-				],
-			],
-			'install' => [
-				'sql' => [
-					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
-				],
 			],
 		],
 		'wikicategorytagcloud' => [
