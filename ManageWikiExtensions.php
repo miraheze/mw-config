@@ -687,6 +687,9 @@ $wgManageWikiExtensions = [
 						],
 					],
 				],
+				'mwscript' => [
+ 					'$IP/extensions/Flow/maintenance/FlowCreateTemplates.php' => [],
+				],
 			],
 		],
 		'foreground' => [
