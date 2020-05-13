@@ -290,6 +290,14 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'citizen' => [
+			'name' => 'Citizen (Skin)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Citizen',
+			'var' => 'wmgUseCitizen',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'citoid' => [
 			'name' => 'Citoid',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Citoid',
