@@ -2080,9 +2080,9 @@ $wgManageWikiExtensions = [
 			'install' => [
 				'sql' => [
 					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
+				],
 				'mwscript' => [
 						'$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php' => [],
-					],
 				],
 			],
 		],
