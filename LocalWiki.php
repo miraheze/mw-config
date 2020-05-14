@@ -64,7 +64,7 @@ if ( !$cwPrivate ) {
 	$wgDiscordShowNewUserEmail = false;
 	$wgDiscordShowNewUserIP = false;
 	$wgDiscordNotificationsShowSuppressed = false;
-	$wgWikiUrl = $wgServer . '/w/';
+	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
 	$wgDiscordAdditionalIncomingWebhookUrls =
 		$wmgWikiMirahezeDiscordHooks[$wgDBname] ?? $wmgWikiMirahezeDiscordHooks['default'];
 }
