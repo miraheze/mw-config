@@ -916,6 +916,17 @@ if ( $wmgUseSiteScout ) {
 	wfLoadExtension( 'SiteScout' );
 }
 
+if ( $wmgUseSlackNotifications ) {
+	wfLoadExtension( 'SlackNotifications' );
+	$wgSlackFromName = $wgSitename;
+	$wgSlackNotificationWikiUrlEnding = 'index.php?title=';
+	$wgSlackNotificationWikiUrl = $wgServer . '/w/';
+	$wgSlackShowNewUserEmail = false;
+	$wgSlackShowNewUserIP = false;
+	$wgSlackIncomingWebhookUrl =
+		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
+}
+
 if ( $wmgUseSoftRedirector) {
 	wfLoadExtension( 'SoftRedirector' );
 }
