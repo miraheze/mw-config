@@ -636,7 +636,11 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseMediaWikiChat ) {
 	wfLoadExtension( 'MediaWikiChat' );
-	$wgRevokePermissions['blockedfromchat']['chat'] = true;
+	$wi->config->settings['wgRevokePermissions']['default'] = [
+		'blockedfromchat' => [
+			'chat' => true,
+		],
+	];
 }
 
 if ( $wmgUseMetrolook ) {
