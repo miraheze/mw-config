@@ -108,6 +108,8 @@ if ( $wmgUseCategorySortHeaders ) {
 
 if ( $wmgUseCategoryTree ) {
 	wfLoadExtension( 'CategoryTree' );
+	
+	$wgCategoryTreeCategoryPageOptions['mode'] = $wgCategoryTreeDefaultMode;
 }
 
 if ( $wmgUseCapiunto ) {
