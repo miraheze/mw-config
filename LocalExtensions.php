@@ -1128,6 +1128,9 @@ if ( $wmgUseWikidataPageBanner ) {
 	];
 }
 
+$wgEnableWikibaseRepo = false;
+$wgEnableWikibaseClient = false;
+
 if ( $wmgUseWikibaseRepository ) {
 	$wgEnableWikibaseRepo = true;
 	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
