@@ -171,6 +171,9 @@ $wi->config->settings = [
 	'wgCategoryTreeDefaultMode' => [
 		'default' => 0,
 	],
+	'wgCategoryTreeCategoryPageMode' => [
+		'default' => 0,
+	],
 
 	// CentralNotice
 	'wgNoticeInfrastructure' => [
