@@ -27,7 +27,6 @@ $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
 if ( in_array( $wi->dbname, [ 'hispanowiki', 'privadowiki', 'hispano76wiki', 'ucroniaswiki' ] ) ) {
-	$wgWBRepoSettings['sharedCacheKeyPrefix'] = 'hispanowiki' . ':WBL/' . rawurlencode( WBL_VERSION );
 	$wgWBClientSettings['repoUrl'] = 'https://hispano.miraheze.org';
 	$wgWBClientSettings['repoDatabase'] = 'hispanowiki';
 	$wgWBClientSettings['changesDatabase'] = 'hispanowiki';
