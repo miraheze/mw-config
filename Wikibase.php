@@ -30,5 +30,4 @@ if ( in_array( $wi->dbname, [ 'hispanowiki', 'privadowiki', 'hispano76wiki', 'uc
 	$wgWBClientSettings['repoUrl'] = 'https://hispano.miraheze.org';
 	$wgWBClientSettings['repoDatabase'] = 'hispanowiki';
 	$wgWBClientSettings['changesDatabase'] = 'hispanowiki';
-	$wgWBClientSettings['siteGlobalID'] = 'hispanowiki';
 }
