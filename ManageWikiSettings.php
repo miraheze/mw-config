@@ -532,7 +532,22 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'overridedefault' => 0,
 		'section' => 'edit',
-		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag.',
+		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag. You also need to set "Category Tree Category Page Mode" if you select the page mode.',
+		'options' => [
+			'Category' => 0,
+			'Pages' => 10,
+			'All' => 20,
+			'Parents' => 100,
+		],
+	],
+	'wgCategoryTreeCategoryPageMode' => [
+		'name' => 'Category Tree Category Page Mode',
+		'from' => 'categorytree',
+		'restricted' => false,
+		'type' => 'list',
+		'overridedefault' => 0,
+		'section' => 'edit',
+		'help' => 'The mode to use when rendering trees on category pages.',
 		'options' => [
 			'Category' => 0,
 			'Pages' => 10,
