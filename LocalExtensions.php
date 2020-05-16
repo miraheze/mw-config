@@ -243,6 +243,7 @@ if ( $wmgUseCalendarWikivoyage ) {
 
 if ( $wmgUseCitizen ) {
 	wfLoadSkin( 'Citizen' );
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Citizen'] = 'citizen';
 }
 
 if ( $wmgUseDarkMode ) {
