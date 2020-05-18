@@ -363,7 +363,7 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 	],
 	'wgCommentStreamsEnableTalk' => [
-		'name' => 'Enable in talk namespaces',
+		'name' => 'CommentStreams Enable Talk',
 		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
