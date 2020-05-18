@@ -296,7 +296,6 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'This sets the web client to use. If you are not using Freenode, select Other Server.',
 	],
-	
 	// Editing
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
