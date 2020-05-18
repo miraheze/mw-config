@@ -204,6 +204,7 @@ if ( $wmgUseCommentStreams ) {
 	];
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgCommentStreamsEnableTalk'] = [
 		'name' => 'Can comments appear in the talk namespace?',
+		'main' => false,
 		'talk' => true,
 		'blacklisted' => [],
 		'vestyle' => false,
