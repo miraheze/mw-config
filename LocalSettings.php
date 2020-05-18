@@ -1572,6 +1572,7 @@ $wi->config->settings = [
 			'zombie',
 		],
 		'+hispanowiki' => [
+			'u',
 			'w',
 		],
 		'+privadowiki' => [
@@ -1580,6 +1581,7 @@ $wi->config->settings = [
 			'n',
 		],
 		'+ucroniaswiki' => [
+			'h',
 			'w',
 			'alt',
 		],
@@ -2702,12 +2704,6 @@ $wi->config->settings = [
 			'NS_MEDIAWIKI' => 'noindex,nofollow',
 			'NS_USER' => 'noindex,nofollow',
 		],
-		'privadowiki' => [
-			'NS_TEMPLATE' => 'noindex,nofollow',
-			'NS_MODULE' => 'noindex,nofollow',
-			'NS_MEDIAWIKI' => 'noindex,nofollow',
-			'NS_USER' => 'noindex,nofollow',
-		],
 		'ucroniaswiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 			'NS_MODULE' => 'noindex,nofollow',
@@ -2919,6 +2915,7 @@ $wi->config->settings = [
 		'fourleafficswiki' => 'any',
 		'gfiwiki' => 'any',
 		'hispanowiki' => 'any',
+		'hispano76wiki' => 'any',
 		'hrfwiki2' => 'any',
 		'ildrilwiki' => 'any',
 		'lothuialethwiki' => 'any',
