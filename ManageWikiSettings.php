@@ -372,7 +372,7 @@ $wgManageWikiSettings = [
 		'help' => 'Enable in talk namespaces',
 	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
-		'name' => 'Order of comments',
+		'name' => 'Order of commentstreams',
 		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
@@ -381,7 +381,7 @@ $wgManageWikiSettings = [
 		'help' => 'Show newer comments first',
 	],
 	'wgCommentStreamsUserAvatarPropertyName' => [
-		'name' => 'Enable avatar on comments',
+		'name' => 'Enable avatar on commentstreams',
 		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
@@ -390,7 +390,7 @@ $wgManageWikiSettings = [
 		'help' => 'If SocialProfile is enabled, it will display an avatar',
 	],
 	'wgCommentStreamsEnableVoting' => [
-		'name' => 'Enable voting on comments',
+		'name' => 'Enable voting on commentstreams',
 		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
@@ -399,7 +399,7 @@ $wgManageWikiSettings = [
 		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
 	],	
 	'wgCommentStreamsModeratorFastDelete' => [
-		'name' => 'Deletion of comments by Moderator',
+		'name' => 'Deletion of commentstreams by Moderator',
 		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
