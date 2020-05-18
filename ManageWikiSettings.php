@@ -365,7 +365,7 @@ $wgManageWikiSettings = [
 	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
 		'name' => 'Order of comments',
-		'from' => 'Commentstreams',
+		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -374,7 +374,7 @@ $wgManageWikiSettings = [
 	],
 	'wgCommentStreamsUserAvatarPropertyName' => [
 		'name' => 'Enable avatar on comments',
-		'from' => 'Commentstreams',
+		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => null,
@@ -383,7 +383,7 @@ $wgManageWikiSettings = [
 	],
 	'wgCommentStreamsEnableVoting' => [
 		'name' => 'Enable voting on comments',
-		'from' => 'Commentstreams',
+		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -392,7 +392,7 @@ $wgManageWikiSettings = [
 	],	
 	'wgCommentStreamsModeratorFastDelete' => [
 		'name' => 'Deletion of comments by Moderator',
-		'from' => 'Commentstreams',
+		'from' => 'commentstreams',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
