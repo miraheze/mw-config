@@ -292,6 +292,7 @@ $wi->config->settings = [
 	],
 	'wgCommentStreamsModeratorFastDelete' => [
 		'default' => false,
+	],
 
 	 // Contribution Scores
 	 'wgContribScoreDisableCache' => [
