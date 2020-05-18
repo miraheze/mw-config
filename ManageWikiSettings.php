@@ -372,7 +372,6 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Show newer comments first',
 	],
-	
 	'wgCommentStreamsUserAvatarPropertyName' => [
 		'name' => 'Enable avatar on comments',
 		'from' => 'Commentstreams',
@@ -390,8 +389,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
-	],
-	
+	],	
 	'wgCommentStreamsModeratorFastDelete' => [
 		'name' => 'Deletion of comments by Moderator',
 		'from' => 'Commentstreams',
