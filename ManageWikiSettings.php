@@ -362,6 +362,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Actions that can be restricted.',
 	],
+	'wgCommentStreamsEnableTalk' => [
+		'name' => 'Enable in talk namespaces',
+		'from' => 'commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Enable in talk namespaces',
+	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
 		'name' => 'Order of comments',
 		'from' => 'commentstreams',
