@@ -280,6 +280,19 @@ $wi->config->settings = [
 		'default' => false,
 	],
 
+	// CommentStreams extension
+	'wgCommentStreamsNewestStreamsOnTop' => [
+		'default' => false,
+	],
+	'wgCommentStreamsUserAvatarPropertyName' => [
+		'default' => null,
+	],
+	'wgCommentStreamsEnableVoting' => [
+		'default' => false,
+	],
+	'wgCommentStreamsModeratorFastDelete' => [
+		'default' => false,
+
 	 // Contribution Scores
 	 'wgContribScoreDisableCache' => [
 		 'default' => true,
