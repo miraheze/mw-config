@@ -281,6 +281,9 @@ $wi->config->settings = [
 	],
 
 	// CommentStreams extension
+	'wgCommentStreamsEnableTalk' => [
+		'default' => false,
+	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
 		'default' => false,
 	],
