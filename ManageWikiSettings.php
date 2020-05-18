@@ -296,47 +296,6 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'This sets the web client to use. If you are not using Freenode, select Other Server.',
 	],
-
-	// CommentStream
-	'wgCommentStreamsNewestStreamsOnTop' => [
-		'name' => 'Order of comments',
-		'from' => 'CommentStreams',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'CommentStreams',
-		'help' => 'Show newer comments first',
-	],
-	
-	'wgCommentStreamsUserAvatarPropertyName' => [
-		'name' => 'Enable avatar on comments',
-		'from' => 'CommentStreams',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => null,
-		'section' => 'CommentStreams',
-		'help' => 'If SocialProfile is enabled, it will display an avatar',
-	],
-	
-	'wgCommentStreamsEnableVoting' => [
-		'name' => 'Enable voting on comments',
-		'from' => 'CommentStreams',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'CommentStreams',
-		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
-	],
-	
-	'wgCommentStreamsModeratorFastDelete' => [
-		'name' => 'Deletion of comments by Moderator',
-		'from' => 'CommentStreams',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'CommentStreams',
-		'help' => 'allows users with csdelete right to delete a comment and all of its replies in one action rather than having to individually delete all of the replies first.',
-	],
 	
 	// Editing
 	'wmgWikiLicense' => [
@@ -403,6 +362,44 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'edit',
 		'help' => 'Actions that can be restricted.',
+	],
+	'wgCommentStreamsNewestStreamsOnTop' => [
+		'name' => 'Order of comments',
+		'from' => 'Commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Show newer comments first',
+	],
+	
+	'wgCommentStreamsUserAvatarPropertyName' => [
+		'name' => 'Enable avatar on comments',
+		'from' => 'Commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => null,
+		'section' => 'edit',
+		'help' => 'If SocialProfile is enabled, it will display an avatar',
+	],
+	'wgCommentStreamsEnableVoting' => [
+		'name' => 'Enable voting on comments',
+		'from' => 'Commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
+	],
+	
+	'wgCommentStreamsModeratorFastDelete' => [
+		'name' => 'Deletion of comments by Moderator',
+		'from' => 'Commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'allows users with csdelete right to delete a comment and all of its replies in one action rather than having to individually delete all of the replies first.',
 	],
 	'wgCommentsSortDescending' => [
 		'name' => 'Sort Comments by Descending',
