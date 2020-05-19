@@ -775,15 +775,6 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Site verification key for Pinterest Console.',
 	],
-	'wmgUseYandexTranslate' => [
-		'name' => 'Use Yandex Machine Translation on Special:Translate',
-		'from' => 'translate',
-		'restricted' => 'false',
-		'type' => 'check'
-		'overridedefault' => false,
-		'section' => 'edit',
-		'help' => 'Adds suggestions from Yandex to Special:Translate',
-	],
 	// Links
 	'wgExternalLinkTarget' => [
 		'name' => 'External Link Target',
@@ -852,7 +843,15 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 	],
-
+	'wmgUseYandexTranslate' => [
+		'name' => 'Use Yandex Machine Translation on Special:Translate',
+		'from' => 'translate',
+		'restricted' => 'false',
+		'type' => 'check'
+		'overridedefault' => false,
+		'section' => 'localisation',
+		'help' => 'Adds suggestions from Yandex to Special:Translate',
+	],
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
 		'name' => 'Kartographer Wikivoyage Mode',
