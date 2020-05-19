@@ -3035,7 +3035,9 @@ $wi->config->settings = [
 	'wmgTranslateDocumentationLanguageCode' => [
 		'default' => false,
 	],
-
+	'wmgUseYandexTranslate' => [
+		'default' => false,
+	],
 	// Uploads
  	'wmgPrivateUploads' => [
  		'default' => false,
