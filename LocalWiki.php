@@ -288,14 +288,14 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 	];
 }
 
-if ( $wmgUseYandexTranslate == True ) {
-	$wgTranslateTranslationServices['Yandex'] = array(
+if ( $wmgUseYandexTranslate ) {
+	$wgTranslateTranslationServices['Yandex'] = [
         'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
         'key' => $wmgYandexTranslationKey,
         'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
         'timeout' => 3,
-        'langorder' => array( 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ),
+        'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
         'langlimit' => 1,
         'type' => 'yandex',
-);
+	];
 }
