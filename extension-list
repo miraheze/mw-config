@@ -176,7 +176,6 @@ $IP/extensions/ScratchBlocks/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
-$IP/extensions/SiteScout/extension.json
 $IP/extensions/SlackNotifications/extension.json
 $IP/extensions/SoftRedirector/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
