@@ -291,7 +291,7 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 if ( $wmgUseYandexTranslate == True ) {
 	$wgTranslateTranslationServices['Yandex'] = array(
         'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
-        'key' => null,
+        'key' => $wmgYandexTranslationKey,
         'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
         'timeout' => 3,
         'langorder' => array( 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ),
