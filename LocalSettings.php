@@ -1085,9 +1085,6 @@ $wi->config->settings = [
 	'wmgUseSimpleTooltip' => [
 		'default' => false,
 	],
-	'wmgUseSiteScout' => [
-		'default' => false,
-	],
 	'wmgUseSlackNotifications' => [
 		'default' => false,
 	],
