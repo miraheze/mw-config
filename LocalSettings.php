@@ -1413,6 +1413,11 @@ $wi->config->settings = [
 		'default' => true,
 	],
 
+	// https://www.mediawiki.org/wiki/Skin:Liberty
+	'wgLibertyUseGravatar' => [
+		'default' => false,
+	],
+
 	// Files
 	'wgEnableUploads' => [
 		'default' => true,
