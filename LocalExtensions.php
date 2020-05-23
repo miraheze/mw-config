@@ -921,10 +921,6 @@ if ( $wmgUseSimpleTooltip ) {
 	require_once "$IP/extensions/SimpleTooltip/SimpleTooltip.php";
 }
 
-if ( $wmgUseSiteScout ) {
-	wfLoadExtension( 'SiteScout' );
-}
-
 if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
 	$wgSlackFromName = $wgSitename;

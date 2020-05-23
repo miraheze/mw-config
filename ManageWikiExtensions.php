@@ -1702,13 +1702,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'sitescout' => [
-			'name' => 'SiteScout',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SiteScout',
-			'var' => 'wmgUseSiteScout',
-			'conflicts' => false,
-			'requires' => [],
-		],
 		'slacknotifications' => [
 			'name' => 'SlackNotifications',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SlackNotifications',
