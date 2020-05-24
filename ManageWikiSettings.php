@@ -995,6 +995,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'If set, the drag & drop area will be shown.',
 	],
+	'wgMaxImageArea' => [
+		'name' => 'Max Image Area',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '1.25e7',
+		'section' => 'media',
+		'help' => 'Specifies the max pixels you can have in a image.',
+	],
 	'wgCommonsMetadataForceRecalculate' => [
 		'name' => 'Force Remote Image Description Parsing',
 		'from' => 'commonsmetadata',
@@ -1202,15 +1211,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 2048,
 		'section' => 'restricted',
 		'help' => 'Maximum page size in kilobytes.',
-	],
-	'wgMaxImageArea' => [
-		'name' => 'Max Image Area',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => '1.25e7',
-		'section' => 'restricted',
-		'help' => 'Specifies the max pixels you can have in a image.',
 	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
