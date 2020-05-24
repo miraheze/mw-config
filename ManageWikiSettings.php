@@ -3,16 +3,26 @@
 /**
  * ManageWiki settings are added using the variable below.
  *
- * Type can be either: check, integer, list, list-multi, matrix, text, url or wikipage.
+ * Type can be either:
  *
  * check: adds a checkbox.
- * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values)
+ * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
+ * language: adds a dropdown for language selection (all which are known to MediaWiki).
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
+ * list-multi-bool: see above, just outputs are $this => $bool.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
+ * namespace: adds dropdown to select one namespace.
+ * namespaces: see above, except multiple namespaces.
  * text: adds a single line text entry.
+ * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
+ * user: adds an autocomplete text box to select a single user on the wiki.
+ * users: see above, except multiple users.
+ * usergroups: adds a drop down selection box for selecting multiple user groups.
+ * userrights: adds a drop down selection box for selecting multiple user rights.
  * wikipage: add a textbox which will return an autocomplete drop-down list of wikipages. Returns standardised MediaWiki pages.
+ * wikipages: see above, except multiple wikipages.
  *
  * Other variables that are required are name and from.
  *
@@ -397,7 +407,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
-	],	
+	],
 	'wgCommentStreamsModeratorFastDelete' => [
 		'name' => 'CommentStreams Moderator Fast Delete',
 		'from' => 'commentstreams',
@@ -469,24 +479,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'section' => 'edit',
 		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s <a href="https://www.mediawiki.org/wiki/Module:String">documentation page</a>',
-	],
-	'wmgAllowEntityImport' => [
-		'name' => 'Allow Entity Import (Wikibase)',
-		'restricted' => false,
-		'from' => 'wikibaserepository',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'edit',
-		'help' => 'Allow importing entities via Special:Import and importDump.php.',
-	],
-	'wmgEnableEntitySearchUI' => [
-		'name' => 'Enable Entity Search UI (Wikibase)',
-		'restricted' => false,
-		'from' => 'wikibaserepository',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'edit',
-		'help' => 'To determine if entity search UI should be enabled or not.',
 	],
 	'wgAllowDisplayTitle' => [
 		'name' => 'Allow Display Title',
@@ -1095,7 +1087,7 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
 	],
-	
+
 	// Recent changes
 	'wgRCMaxAge' => [
 		'name' => 'RecentChanges max age',
@@ -1592,5 +1584,34 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'When enabled, this shows Popups by default.',
+	],
+
+	// Wikibase
+	'wmgWikibaseRepoUrl' => [
+		'name' => 'Repository URL',
+		'restricted' => false,
+		'from' => 'wikibaseclient',
+		'type' => 'text',
+		'overridedefault' => 'https://' . $wi->hostname,
+		'section' => 'wikibase',
+		'help' => 'URL of the Wikibase repository the client should connect to.'
+	],
+	'wmgAllowEntityImport' => [
+		'name' => 'Allow Entity Import',
+		'restricted' => false,
+		'from' => 'wikibaserepository',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Allow importing entities via Special:Import and importDump.php.',
+	],
+	'wmgEnableEntitySearchUI' => [
+		'name' => 'Enable Entity Search UI',
+		'restricted' => false,
+		'from' => 'wikibaserepository',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'wikibase',
+		'help' => 'To determine if entity search UI should be enabled or not.',
 	],
 ];
