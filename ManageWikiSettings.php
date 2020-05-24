@@ -1214,10 +1214,10 @@ $wgManageWikiSettings = [
 	'wgMaxImageArea' => [
 		'name' => 'Max Image Area',
 		'from' => 'mediawiki',
-		'restricted' => true,
+		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '1.25e7',
-		'section' => 'restricted',
+		'section' => 'media',
 		'help' => 'Specifies the max pixels you can have in a image.',
 	],
 	'wgDisqusShortname' => [
