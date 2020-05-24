@@ -1585,7 +1585,7 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'When enabled, this shows Popups by default.',
 	],
-
+ /*
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
 		'name' => 'Repository URL',
@@ -1613,5 +1613,5 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'wikibase',
 		'help' => 'To determine if entity search UI should be enabled or not.',
-	],
+	], */
 ];
