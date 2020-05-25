@@ -3175,6 +3175,7 @@ $wi->config->settings = [
 			'encyclopedie\.didactiqueprofessionnelle\.org',
 			'www\.thesimswiki\.com',
 			'nonciclopedia\.org',
+			'spcodex\.wiki',
 		],
 	],
 
