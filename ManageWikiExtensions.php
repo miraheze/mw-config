@@ -1248,13 +1248,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'news' => [
-			'name' => 'News',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:News',
-			'var' => 'wmgUseNews',
-			'conflicts' => false,
-			'requires' => [],
-		],
 		'newsignuppage' => [
 			'name' => 'New Signup Page',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NewSignupPage',
