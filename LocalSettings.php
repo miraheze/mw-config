@@ -952,9 +952,6 @@ $wi->config->settings = [
 	'wmgUseNewestPages' => [
 		'default' => false,
 	],
-	'wmgUseNews' => [
-		'default' => false,
-	],
 	'wmgUseNewSignupPage' => [
 		'default' => false,
 	],
