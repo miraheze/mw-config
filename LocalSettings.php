@@ -1934,7 +1934,7 @@ $wi->config->settings = [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
 			],
-			'cvt' => [
+			'globalsysop' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
