@@ -985,8 +985,6 @@ if ( $wmgUseTemplateStyles ) {
 
 if ( $wmgUseTemplateWizard ) {
 	wfLoadExtension( 'TemplateWizard' );
-
-        wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseTextExtracts ) {
@@ -1090,9 +1088,6 @@ if ( $wmgUseVisualEditor ) {
 		'vestyle' => true,
 		'overridedefault' => false
 	];
-
-	// Load TemplateData
-	wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseVoteNY ) {
