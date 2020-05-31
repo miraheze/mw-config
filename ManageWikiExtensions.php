@@ -1799,6 +1799,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'templatedata' => [
+			'name' => 'Template Data',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TemplateData',
+			'var' => 'wmgUseTemplateData',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'templatesandbox' => [
 			'name' => 'Template Sandbox',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TemplateSandbox',

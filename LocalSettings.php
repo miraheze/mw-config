@@ -1117,6 +1117,9 @@ $wi->config->settings = [
 	'wmgUseTabsCombination' => [
 		'default' => false,
 	],
+	'wmgUseTemplateData' => [
+		'default' => false,
+	],
 	'wmgUseTemplateSandbox' => [
 		'default' => false,
 	],
