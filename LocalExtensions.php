@@ -962,6 +962,10 @@ if ( $wmgUseTabsCombination ) {
 	wfLoadExtension( 'Tabs' );
 }
 
+if ( $wmgUseTemplateData ) {
+        wfLoadExtension( 'TemplateData' );
+}
+	
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 
