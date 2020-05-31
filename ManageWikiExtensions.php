@@ -1825,11 +1825,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TemplateWizard',
 			'var' => 'wmgUseTemplateWizard',
 			'conflicts' => false,
-			'requires' => [
-				'extensions' => [
-					'templatedata',
-				],
-			],
+			'requires' => [],
 		],
 		'textextracts' => [
 			'name' => 'TextExtracts',
@@ -2027,11 +2023,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VisualEditor',
 			'var' => 'wmgUseVisualEditor',
 			'conflicts' => false,
-			'requires' => [
-				'extensions' => [
-					'templatedata',
-				],
-			],
+			'requires' => [],
 			'help' => 'Will start working 10-20 mins after enabling.',
 		],
 		'webchat' => [
