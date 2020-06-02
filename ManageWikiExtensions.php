@@ -1705,7 +1705,7 @@ $wgManageWikiExtensions = [
 						'managewiki-restricted',
 				],
 			],
-		],		
+		],
 		'softredirector' => [
 			'name' => 'SoftRedirector',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SoftRedirector',
@@ -2145,8 +2145,20 @@ $wgManageWikiExtensions = [
 						'contentmodel' => 'wikitext',
 						'additional' => []
 					]
+				],
+				'settings' => [
+					'wmgWikibaseRepoUrl' => 'https://' . $wi->hostname,
+					'wmgWikibaseItemNamespaceID' => 860,
+					'wmgWikibasePropertyNamespaceID' => 862
 				]
 			],
+			'remove' => [
+				'settings' => [
+					'wmgWikibaseRepoUrl' => 'https://wikidata.org',
+					'wmgWikibaseItemNamespaceID' => 0,
+					'wmgWikibasePropertyNamespaceID' => 120
+				]
+			]
 		],
 		'wikicategorytagcloud' => [
 			'name' => 'WikiCategoryTagCloud',

@@ -1199,12 +1199,6 @@ $wi->config->settings = [
 	'wmgUseWikibaseClient' => [
 		'default' => false,
 	],
-	'wmgAllowEntityImport' => [
-		'default' => false,
-	],
-	'wmgEnableEntitySearchUI' => [
-		'default' => true,
-	],
 	'wmgUseWikiCategoryTagCloud' => [
 		'default' => false,
 	],
@@ -2422,9 +2416,9 @@ $wi->config->settings = [
 	'wgMathValidModes' => [
 		'default' => [ 'mathml' ],
 	],
-	
+
 	// New User Email Notification
-	
+
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
 		'femmanwiki' => [ 'gustav@nyvell.net' ],
@@ -3201,6 +3195,23 @@ $wi->config->settings = [
 		'default' => '1 hour',
 	],
 
+	// Wikibase
+	'wmgAllowEntityImport' => [
+		'default' => false,
+	],
+	'wmgEnableEntitySearchUI' => [
+		'default' => true,
+	],
+	'wmgWikibaseRepoUrl' => [
+		'default' => 'https://wikidata.org'
+	],
+	'wmgWikibaseItemNamespaceID' => [
+		'default' => 0
+	],
+	'wmgWikibasePropertyNamespaceID' => [
+		'default' => 120
+	],
+
 	// WebChat config
 	'wmgWebChatServer' => [
 		'default' => false,
@@ -3296,6 +3307,7 @@ $wi->setVariables(
 	]
 );
 
+// Start settings requiring access to variables
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 	$wi->config->settings['wgCookieDomain'][$wi->dbname] = $wi->hostname;
@@ -3308,6 +3320,9 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 if ( !preg_match( '/^mw[0-9]*/', wfHostname() ) ) {
 	$wi->config->settings['wgUseCdn']['default'] = false;
 }
+
+$wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
+// End settings requiring access to variables
 
 $wi->readCache();
 $wi->config->extractAllGlobals( $wi->dbname );

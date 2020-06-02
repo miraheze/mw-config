@@ -15,9 +15,20 @@ $wgWBRepoSettings['siteLinkGroups'] = [
 ];
 $wgWBRepoSettings['specialSiteLinkGroups'] = [];
 
-$wgWBClientSettings['repoUrl'] = 'https://' . $wi->hostname;
-$wgWBClientSettings['repoDatabase'] = $wi->dbname;
-$wgWBClientSettings['changesDatabase'] = $wi->dbname;
+$wgWBClientSettings['repoUrl'] = $wmgWikibaseRepoUrl;
+$wgWBClientSettings['repoDatabase'] = $wmgWikibaseRepoDatabase;
+$wgWBClientSettings['changesDatabase'] = $wmgWikibaseRepoDatabase;
+$wgWBClientSettings['repository'] = [
+	'' => [
+		'repoDatabase' => $wmgWikibaseRepoDatabase,
+		'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+		'entityNamespaces' => [
+			'item' => $wmgWikibaseItemNamespaceID,
+			'property' => $wmgWikibasePropertyNamespaceID
+		],
+		'prefixMappings' => []
+	]
+];
 $wgWBClientSettings['siteGlobalID'] = $wi->dbname;
 $wgWBClientSettings['repoScriptPath'] = '/w';
 $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';

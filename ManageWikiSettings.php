@@ -1585,16 +1585,25 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'When enabled, this shows Popups by default.',
 	],
- /*
+
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
 		'name' => 'Repository URL',
 		'restricted' => false,
 		'from' => 'wikibaseclient',
-		'type' => 'text',
-		'overridedefault' => 'https://' . $wi->hostname,
+		'type' => 'url',
+		'overridedefault' => 'https://wikidata.org',
 		'section' => 'wikibase',
 		'help' => 'URL of the Wikibase repository the client should connect to.'
+	],
+	'wmgWikibaseRepoDatabase' => [
+		'name' => 'Repository Database',
+		'restricted' => false,
+		'from' => 'wikibaseclient',
+		'type' => 'databases',
+		'overridedefault' => $wi->dbname,
+		'section' => 'wikibase',
+		'help' => 'Database identifier of the repository being used. If unknown, select the identifier for this wiki.'
 	],
 	'wmgAllowEntityImport' => [
 		'name' => 'Allow Entity Import',
@@ -1613,5 +1622,27 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'wikibase',
 		'help' => 'To determine if entity search UI should be enabled or not.',
-	], */
+	],
+	'wmgWikibaseItemNamespaceID' => [
+		'name' => 'Item Namespace ID',
+		'from' => 'wikibaseclient',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 0,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Item namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+	],
+	'wmgWikibasePropertuNamespaceID' => [
+		'name' => 'Property Namespace ID',
+		'from' => 'wikibaseclient',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 120,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Propertu namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+	]
 ];
