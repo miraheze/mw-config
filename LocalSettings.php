@@ -1584,6 +1584,12 @@ $wi->config->settings = [
 			'tlh',
 			'zombie',
 		],
+		'+commonswiki' => [
+			'wikimediacommons',
+			'w',
+			'eswiki',
+			'wikispecies',
+		],
 		'+hispanowiki' => [
 			'u',
 			'w',
