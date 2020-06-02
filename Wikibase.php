@@ -42,9 +42,3 @@ $wgWBClientSettings['siteLinksGroups'] = [
 ];
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
-
-if ( in_array( $wi->dbname, [ 'hispanowiki', 'privadowiki', 'hispano76wiki', 'ucroniaswiki' ] ) ) {
-	$wgWBClientSettings['repoUrl'] = 'https://hispano.miraheze.org';
-	$wgWBClientSettings['repoDatabase'] = 'hispanowiki';
-	$wgWBClientSettings['changesDatabase'] = 'hispanowiki';
-}

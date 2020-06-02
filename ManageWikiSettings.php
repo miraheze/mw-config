@@ -1643,6 +1643,6 @@ $wgManageWikiSettings = [
 		'maxint' => 9999,
 		'overridedefault' => 120,
 		'section' => 'wikibase',
-		'help' => 'Namespace ID of the Propertu namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+		'help' => 'Namespace ID of the Property namespace on the upstream Wikibase installation. Leave as-is if unsure.',
 	]
 ];

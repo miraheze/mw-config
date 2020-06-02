@@ -2076,11 +2076,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase',
 			'var' => 'wmgUseWikibaseClient',
 			'conflicts' => false,
-			'requires' => [
-				'extensions' => [
-					'wikibaserepository',
-				],
-			],
+			'requires' => [],
 			'install' => [
 				'sql' => [
 					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
