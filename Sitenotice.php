@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze plans to do database maintenance at 19:00 UTC time. This maintenance will last for an hour. During this time you won't be able to view your wiki. We apologise for any inconvenience.</td>
+			<td>Miraheze plans to do database maintenance at 19:00 UTC time. This maintenance will take between 30 and 60 minutes. During this time you won't be able to view your wiki. We apologise for any inconvenience.</td>
 			</tr></tbody></table>
 EOF;
 		return true;
