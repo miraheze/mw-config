@@ -26,7 +26,9 @@ $wgWBClientSettings['repositories'] = [
 			'item' => $wmgWikibaseItemNamespaceID,
 			'property' => $wmgWikibasePropertyNamespaceID
 		],
-		'prefixMappings' => []
+		'prefixMapping' => [
+			'' => ''
+		]
 	]
 ];
 $wgWBClientSettings['siteGlobalID'] = $wi->dbname;
