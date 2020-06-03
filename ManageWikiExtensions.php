@@ -2080,6 +2080,11 @@ $wgManageWikiExtensions = [
 			'install' => [
 				'sql' => [
 					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
+					'wb_terms' => "$IP/extensions/Wikibase/repo/sql/Wikibase.sql",
+					'wb_changes' => "$IP/extensions/Wikibase/repo/sql/changes.sql",
+					'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/changes_dispatch.sql",
+					'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/changes_subscription.sql",
+					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql"
 				],
 				'mwscript' => [
 						'$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php' => [],
