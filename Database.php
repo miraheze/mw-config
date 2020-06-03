@@ -98,7 +98,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		// this could be set to /etc/ssl/certs/ca-certificates.crt (all trusted
 		// CAs), but setting this to one CA reduces attack vector and CAs
 		// to dig through when checking the certificate provided by MariaDB.
-		'sslCAFile' => '/etc/ssl/certs/LetsEncrypt.crt',
+		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
 		'dbt1' => 'dbt1.miraheze.org',
