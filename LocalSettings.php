@@ -1461,7 +1461,7 @@ $wi->config->settings = [
 	// Foreground
 	'wgForegroundFeatures' => [
 		'default' => [],
-		'neobulbawiki' => [
+		'marionetworkwiki' => [
 			'enableTabs' => true,
 			'navbarIcon' => true,
 			'showFooterIcons' => true,
