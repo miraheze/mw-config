@@ -1462,17 +1462,6 @@ $wi->config->settings = [
 	'wgForegroundFeatures' => [
 		'default' => [],
 		'marionetworkwiki' => [
-			'showActionsForAnon' => true,
-			'NavWrapperType' => 'divonly',
-			'showHelpUnderTools' => true,
-			'showRecentChangesUnderTools' => true,
-			'enableTabs' => true,
-			'wikiName' => &$GLOBALS['wgSitename'],
-			'navbarIcon' => true,
-			'IeEdgeCode' => 1,
-			'showFooterIcons' => true,
-		],
-		'neobulbawiki' => [
 			'enableTabs' => true,
 			'navbarIcon' => true,
 			'showFooterIcons' => true,
