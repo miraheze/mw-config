@@ -2328,6 +2328,10 @@ $wi->config->settings = [
 	'wgRestrictDisplayTitle' => [
 		'default' => true, // Wikis with NoTitle have it set to false
 	],
+	'wgAllowExternalImagesFrom' => [
+		'default' => '',
+		'nonbinarywiki' => 'static.miraheze.org',
+	],
 	'wgCapitalLinks' => [
 		'default' => true,
 	],
