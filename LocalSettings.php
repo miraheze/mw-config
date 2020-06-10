@@ -2155,6 +2155,8 @@ $wi->config->settings = [
 				'abusefilter-modify-global',
 				'abusefilter-private',
 				'abusefilter-private-log',
+				'abusefilter-privatedetails',
+				'abusefilter-privatedetails-log',
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
