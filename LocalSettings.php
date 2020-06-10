@@ -65,6 +65,12 @@ $wi->config->settings = [
 	'wgAbuseFilterNotifications' => [
 		'default' => 'udp',
 	],
+	'wgAbuseFilterLogPrivateDetailsAccess' => [
+		'default' => true,
+	],
+	'wgAbuseFilterPrivateDetailsForceReason' => [
+		'default' => true,
+	],
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
