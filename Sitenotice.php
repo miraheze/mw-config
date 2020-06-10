@@ -172,7 +172,7 @@ $snWikis = [
 	'zhinawikiwiki'
 ];
 // Specific wiki sitenotices
-if ( $snWikis ) {
+if ( in_array( $wgDBname, $snWikis ) ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
