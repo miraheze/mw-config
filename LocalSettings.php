@@ -2183,6 +2183,7 @@ $wi->config->settings = [
 				'globalgrouppermissions',
 				'hideuser',
 				'interwiki',
+				'investigate',
 				'managewiki-restricted',
 				'managewiki-editdefault',
 				'moderation-checkuser',
