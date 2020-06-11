@@ -2339,7 +2339,7 @@ $wi->config->settings = [
 	],
 	'wgAllowExternalImagesFrom' => [
 		'default' => '',
-		'nonbinarywiki' => 'static.miraheze.org',
+		'nonbinarywiki' => 'https://static.miraheze.org/',
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
