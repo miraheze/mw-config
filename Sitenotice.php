@@ -134,15 +134,15 @@ $snWikis = [
 ];
 // Specific wiki sitenotices
 if ( in_array( $wgDBname, $snWikis ) ) {
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
+	function onSiteNoticeAfter2( &$siteNotice, $skin ) {
+		global $wmgSiteNoticeOptOut, $snImportant;
 
-	$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Due to a permission being missed to be blacklisted, it is possible that during past months users holding rights on the wiki may have had access to private AbuseFilter logs. This has now been corrected. They would have had access to IPs when registered users triggerd an abuse filter. See <a href="https://meta.miraheze.org/wiki/2020-06-11_Security_Disclosure">Security Disclosure</a>.</td>
-			</tr></tbody></table>
+		$siteNotice .= <<<EOF
+				<table class="wikitable" style="text-align:center;"><tbody><tr>
+				<td>Due to a permission being missed to be blacklisted, it is possible that during past months users holding rights on the wiki may have had access to private AbuseFilter logs. This has now been corrected. They would have had access to IPs when registered users triggerd an abuse filter. See <a href="https://meta.miraheze.org/wiki/2020-06-11_Security_Disclosure">Security Disclosure</a>.</td>
+				</tr></tbody></table>
 EOF;
-		return true;
+			return true;
 	}
 }
