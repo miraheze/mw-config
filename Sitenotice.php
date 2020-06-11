@@ -12,7 +12,7 @@ $wgMajorSiteNoticeID = 44;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
@@ -22,8 +22,8 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 			</tr></tbody></table>
 EOF;
 
-		return true;
-}
+	return true;
+}*/
 
 $snWikis = [
 	'archiopediawiki',
