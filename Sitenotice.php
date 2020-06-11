@@ -141,7 +141,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Due to a missed blacklist of some permissions, it is possible that during past months users holding rights on the wiki may have had access to private AbuseFilter logs. This has now been correct. They would have had access to IPs when registered users triggerd an abuse filter.</td>
+			<td>Due to a permission being missed to be blacklisted, it is possible that during past months users holding rights on the wiki may have had access to private AbuseFilter logs. This has now been correct. They would have had access to IPs when registered users triggerd an abuse filter.</td>
 			</tr></tbody></table>
 EOF;
 		return true;
