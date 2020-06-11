@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be doing database maintenance at 23:00 UTC time. During this time you may find your wiki inaccessible or read only. Please save your edits 5 minutes before.</td>
+			<td>Miraheze will be doing database maintenance at 23:00 UTC time. The maintenance will last 1 hour and you may find that the wiki inaccessible or read only during this time. Please save your edits 5 minutes before.</td>
 			</tr></tbody></table>
 EOF;
 
