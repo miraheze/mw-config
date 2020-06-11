@@ -78,10 +78,10 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db8' => 1,
+			'db9' => 1,
 		],
 		'c1' => [
-			'db8' => 1,
+			'db9' => 1,
 		],
 		'c4' => [
  			'db6' => 1,
@@ -101,12 +101,12 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		'db8' => 'db8.miraheze.org',
+		'db9' => 'db9.miraheze.org',
 		'db6' => 'db6.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
-			'db8' => 1, // should echo c1
+			'db9' => 1, // should echo c1
 		],
 	],
 	'readOnlyBySection' => [
