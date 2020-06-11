@@ -12,19 +12,18 @@ $wgMajorSiteNoticeID = 44;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 
-/* $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Due to a recent change, some users may experience login issues, to correct them please follow the steps outlined at <a href="https://meta.miraheze.org/m/4FU">https://meta.miraheze.org/m/4FU</a>.</td>
+			<td>Miraheze will be doing database maintenance at 23:00 UTC time. During this time you may find your wiki inaccessible or read only. Please save your edits 5 minutes before.</td>
 			</tr></tbody></table>
 EOF;
 
 		return true;
 }
-*/
 
 $snWikis = [
 	'archiopediawiki',
