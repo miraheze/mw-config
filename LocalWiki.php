@@ -166,6 +166,15 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
 
+if ( $wgDBname === 'simcitywiki' ) {
+	unset($wgGroupPermissions['oversight']);
+	unset($wgGroupPermissions['interwiki-admin']);
+	$wgExtensionFunctions[] = function() {
+    if( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {
+        unset( $GLOBALS['wgGroupPermissions']['checkuser'] );
+    }
+}
+
 if ( $wgDBname === 'wikiageingwiki' ) {
 	$wgForeignFileRepos[] = [
 		'class'                   => 'ForeignAPIRepo',

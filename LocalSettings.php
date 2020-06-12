@@ -1482,6 +1482,7 @@ $wi->config->settings = [
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		'metawiki' => false,
+		'simcitywiki' => false, // let me do the blocking on my wiki, please
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
@@ -1621,6 +1622,9 @@ $wi->config->settings = [
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
+		],
+		'+simcitywiki' => [
+			'wikipedia',
 		],
 		'+zhdelwiki' => [
 			'wikipedia',
@@ -2049,6 +2053,23 @@ $wi->config->settings = [
 			],
 			'PreSalesStaff' => [
 				'read' => true,
+			],
+		],
+		'+simcitywiki' => [
+			'steward' => [
+				'hideuser' => true,
+				'abusefilter-hide-log' => true,
+				'abusefilter-hidden-log' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+				'viewsuppressed' => true,
+				'interwiki' => true,
+				'centralauth-rename' => true,
+				'renameuser' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'managewiki-restricted' => true,
+				'bigdelete' => true,
 			],
 		],
 		'+sovereignwiki' => [
@@ -2676,6 +2697,10 @@ $wi->config->settings = [
 		],
 		'+radviserwiki' => [
 			'editor',
+		],
+		'simcitywiki' => [
+			'autoconfirmed',
+			'sysop',
 		],
 		'+sovereignwiki' => [
 			'officer',
