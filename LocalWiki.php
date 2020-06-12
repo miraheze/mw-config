@@ -167,12 +167,9 @@ if ( $wgDBname === 'swisscomraidwiki' ) {
 }
 
 if ( $wgDBname === 'simcitywiki' ) {
-	unset($wgGroupPermissions['oversight']);
-	unset($wgGroupPermissions['interwiki-admin']);
-	$wgExtensionFunctions[] = function() {
-    if( array_key_exists( 'checkuser', $GLOBALS['wgGroupPermissions'] ) ) {
-        unset( $GLOBALS['wgGroupPermissions']['checkuser'] );
-    }
+	unset( $wgGroupPermissions['oversight'] );
+	unset( $wgGroupPermissions['interwiki-admin'] );
+	unset( $wgGroupPermissions['checkuser'] );
 }
 
 if ( $wgDBname === 'wikiageingwiki' ) {
