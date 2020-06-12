@@ -2055,7 +2055,7 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
-		'+simcitywiki' => [
+		'simcitywiki' => [
 			'steward' => [
 				'hideuser' => true,
 				'abusefilter-hide-log' => true,
