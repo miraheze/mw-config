@@ -1665,6 +1665,8 @@ $wi->config->settings = [
 	],
 	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
+		'airforcewiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
+		'armywiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'freesoftwarepediawiki' => 'GNU Free Documentation License',
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'isvwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -1677,6 +1679,8 @@ $wi->config->settings = [
 	],
 	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'airforcewiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
+		'armywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'freesoftwarepediawiki' => 'http://www.gnu.org/licenses/fdl-1.3.html',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'isvwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
