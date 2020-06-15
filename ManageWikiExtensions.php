@@ -1997,7 +1997,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VEForAll',
 			'var' => 'wmgUseVEForAll',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'visualeditor',
+				],
+			],
 		],
 		'voteny' => [
 			'name' => 'VoteNY',
