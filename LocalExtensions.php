@@ -808,9 +808,9 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
+	wfLoadExtension( 'TextExtracts' );
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
-	wfLoadExtension( 'TextExtracts' );
 	
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
