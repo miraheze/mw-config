@@ -2219,6 +2219,7 @@ $wi->config->settings = [
 				'mwoauthsuppress',
 				'mwoauthviewprivate',
 				'mwoauthviewsuppressed',
+				'oathauth-api-all',
 				'oathauth-disable-for-user',
 				'oathauth-verify-user',
 				'oathauth-view-log',
