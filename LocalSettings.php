@@ -3439,7 +3439,7 @@ if (
         $wgProfiler['visible'] = false;
 
 	// Prevent cache (better be safe than sorry)
-        $wgUseCdn = false;
+        $wi->config->settings['wgUseCdn']['default'] = false;
 }
 
 // Define last to avoid all dependencies
