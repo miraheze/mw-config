@@ -342,8 +342,7 @@ $wgManageWikiExtensions = [
 			'name' => 'CommentStreams',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CommentStreams',
 			'var' => 'wmgUseCommentStreams',
-			// Revert when https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/CommentStreams/+/606820/ is merged and deployed.
-			'conflicts' => 'comments',
+			'conflicts' => false,
 			'requires' => [],
 			'install' => [
 				'sql' => [
@@ -357,8 +356,7 @@ $wgManageWikiExtensions = [
 			'name' => 'Comments',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Comments',
 			'var' => 'wmgUseComments',
-			// Revert when https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/CommentStreams/+/606820/ is merged and deployed.
-			'conflicts' => 'commentstreams',
+			'conflicts' => false,
 			'requires' => [],
 			'install' => [
 				'sql' => [
