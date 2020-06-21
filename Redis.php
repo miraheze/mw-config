@@ -31,16 +31,3 @@ $wgJobTypeConf['default'] = [
 	'claimTTL' => 3600,
 	'daemonized' => true,
 ];
-
-$wgJobQueueAggregator = [
-	'class' => 'JobQueueAggregatorRedis',
-	'redisServers' => [
-		$wmgRedisSettings['jobrunner']['server'],
-		$wmgRedisSettings['jobrunner']['server']
-	], // fake redis fallback
-	'redisConfig' => [
-		'connectTimeout' => 2,
-		'password' => $wmgRedisSettings['jobrunner']['password'],
-		'compression' => 'gzip',
-	]
-];
