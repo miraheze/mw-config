@@ -384,6 +384,7 @@ $wi->config->settings = [
 			'Military/War' => 'military',
 			'Music' => 'music',
 			'Podcast' => 'podcast',
+			'Politics' => 'politics',
 			'Private' => 'private',
 			'Religion' => 'religion',
 			'Software/Computing' => 'software',
