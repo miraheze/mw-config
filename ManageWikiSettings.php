@@ -1118,6 +1118,8 @@ $wgManageWikiSettings = [
 			'7 (604800 seconds)' => 7,
 			'14 (1209600 seconds)' => 14,
 			'30 (2592000 seconds)' => 30,
+			'60 (5184000 seconds)' => 60,
+			'90 (7776000 seconds)' => 90,
 			'180 (15552000 seconds)' => 180,
 		],
 		'overridedefault' => [
