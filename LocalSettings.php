@@ -3044,7 +3044,7 @@ $wi->config->settings = [
 			'type' => 'url',
 			'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
 		],
-		'meta' => [
+		'+meta' => [
 			'type' => 'url',
 			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
 		],
@@ -3054,7 +3054,7 @@ $wi->config->settings = [
 			'type' => 'url',
 			'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
 		],
-		'meta' => [
+		'+meta' => [
 			'type' => 'url',
 			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
 		],
