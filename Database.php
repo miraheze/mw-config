@@ -78,7 +78,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db7' => 1,
+			'db9' => 1,
 		],
 		'c1' => [
 			'db9' => 1,
