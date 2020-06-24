@@ -3045,8 +3045,6 @@ $wi->config->settings = [
 				'type' => 'url',
 				'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
 			],
-		],
-		'+metawiki' => [
 			'meta' => [
 				'type' => 'url',
 				'src'  => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
@@ -3055,12 +3053,14 @@ $wi->config->settings = [
 	],
 	'wgTitleBlacklistUsernameSources' => [
 		'default' => [
-			'type' => 'url',
-			'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
-		],
-		'+meta' => [
-			'type' => 'url',
-			'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
+			'default' => [
+				'type' => 'url',
+				'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
+			],
+			'meta' => [
+				'type' => 'url',
+				'src'  => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
+			],
 		],
 	],
 	'wgTidyConfig' => [
