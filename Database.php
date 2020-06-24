@@ -78,13 +78,13 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
  	],
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db9' => 1,
+			'db7' => 1,
 		],
 		'c1' => [
 			'db9' => 1,
 		],
 		'c4' => [
- 			'db6' => 1,
+ 			'db7' => 1,
  		],
 	],
 	'serverTemplate' => [
@@ -102,7 +102,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	],
 	'hostsByName' => [
 		'db9' => 'db9.miraheze.org',
-		'db6' => 'db6.miraheze.org',
+		'db7' => 'db7.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
