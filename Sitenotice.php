@@ -24,7 +24,7 @@ EOF;
 
 	return true;
 }*/
-
+/*
 $snWikis = [
 	'archiopediawiki',
 	'astanuwiki',
@@ -146,3 +146,4 @@ EOF;
 			return true;
 	}
 }
+*/
