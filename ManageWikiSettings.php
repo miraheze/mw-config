@@ -790,7 +790,7 @@ $wgManageWikiSettings = [
 		'maxint' => 120,
 		'overridedefault' => 10,
 		'section' => 'links',
-		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 10. Max: 120.'
+		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.'
 	],
 
 	// Localisation (E.G i18n/timezone etc)
