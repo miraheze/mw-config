@@ -688,7 +688,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 				'mwscript' => [
- 					'$IP/extensions/Flow/maintenance/FlowCreateTemplates.php' => [],
+ 					"$IP/extensions/Flow/maintenance/FlowCreateTemplates.php" => [],
 				],
 			],
 		],
@@ -2091,7 +2091,7 @@ $wgManageWikiExtensions = [
 					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql"
 				],
 				'mwscript' => [
-						'$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php' => [],
+						"$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php" => [],
 				],
 			],
 		],
