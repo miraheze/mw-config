@@ -3326,6 +3326,15 @@ $wi->config->settings = [
 	],
 
 	// WikiDiscover
+	'wgWikiDiscoverClosedList' => [
+		'default' => '/srv/mediawiki/dblist/closed.dblist',
+	],
+	'wgWikiDiscoverInactiveList' => [
+		'default' => '/srv/mediawiki/dblist/inactive.dblist',
+	],
+	'wgWikiDiscoverPrivateList' => [
+		'default' => '/srv/mediawiki/dblist/private.dblist',
+	],
 	'wgWikiDiscoverSubdomain' => [
 		'default' => '.miraheze.org',
 	],
