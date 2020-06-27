@@ -3335,6 +3335,9 @@ $wi->config->settings = [
 	'wgWikiDiscoverPrivateList' => [
 		'default' => '/srv/mediawiki/dblist/private.dblist',
 	],
+	'wgWikiDiscoverSubdomain' => [
+		'default' => '.miraheze.org',
+	],
 
 	// CreateWiki Defined Special Variables
 	'cwClosed' => [
