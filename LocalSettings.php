@@ -2403,7 +2403,7 @@ $wi->config->settings = [
 			"application/pdf",
 		],
 		'+polytopewiki' => [
-			MEDIATYPE_PLAINTEXT,
+			MEDIATYPE_TEXT,
 		],
 	],
 
