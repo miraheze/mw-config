@@ -3055,14 +3055,8 @@ $wi->config->settings = [
 	],
 	'wgTitleBlacklistUsernameSources' => [
 		'default' => [
-			'default' => [
-				'type' => 'url',
-				'src'  => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
-			],
-			'meta' => [
-				'type' => 'url',
-				'src'  => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Titleblacklist&action=raw',
-			],
+			'default',
+			'meta',
 		],
 	],
 	'wgTidyConfig' => [
