@@ -3054,7 +3054,7 @@ $wi->config->settings = [
 		'default' => '*',
 	],
 	'wgTitleBlacklistLogHits' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgTitleBlacklistBlockAutoAccountCreation' => [
 		'default' => false,
