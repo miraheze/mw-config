@@ -2234,6 +2234,7 @@ $wi->config->settings = [
 				'stopforumspam',
 				'suppressionlog',
 				'suppressrevision',
+				'titleblacklistlog',
 				'usermerge',
 				'userrights',
 				'userrights-interwiki',
