@@ -2394,21 +2394,7 @@ $wi->config->settings = [
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
 	],
-	'wgDefaultUserOptions' => [
-		'default' => [
-			'usecodemirror' => 0,
-			'visualeditor-newwikitext' => 0,
-		],
-		'dcwiki' => [
-			'usecodemirror' => 1,
-			'visualeditor-newwikitext' => 1,
-		],
-	],
-	'wgHiddenPrefs' => [
-		'default' => '',
-		'dcwiki' => 'visualeditor-newwikitext',
-	],
-
+	
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => [
 		'default' => false,
@@ -2603,7 +2589,15 @@ $wi->config->settings = [
 		'+solarawiki' => [
 			'usecodemirror' => 1,
 		],
- 	],
+		'+dcwiki' => [
+			'usecodemirror' => 1,
+			'visualeditor-newwikitext' => 1,
+		],
+	],
+	'wgHiddenPrefs' => [
+		'default' => '',
+		'dcwiki' => 'visualeditor-newwikitext',
+	],
 
 	// Redis
 	'wmgRedisSettings' => [
