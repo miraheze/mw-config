@@ -1774,6 +1774,11 @@ $wi->config->settings = [
 				'Repo_Maintainer',
 			],
 		],
+		'simcitywiki' => [
+			'founder' => [
+				'banned',
+			],
+		],
 	],
 	'wgManageWikiPermissionsAdditionalRights' => [
 		'default' => [
@@ -2079,6 +2084,14 @@ $wi->config->settings = [
 				'checkuser-log' => true,
 				'managewiki-restricted' => true,
 				'bigdelete' => true,
+				'userrights' => true,
+				'usermerge' => true,
+				'centralauth-usermerge' => true,
+				'oathauth-api-all' => true,
+				'oathauth-enable' => true,
+				'oathauth-disable-for-user' => true,
+				'oathauth-verify-user' => true,
+				'oathauth-view-log' => true,
 			],
 		],
 		'+sovereignwiki' => [
@@ -2182,6 +2195,11 @@ $wi->config->settings = [
 		'rf1botwiki' => [
 			'bureaucrat' => [
 				'Repo_Maintainer',
+			],
+		],
+		'simcitywiki' => [
+			'founder' => [
+				'banned',
 			],
 		],
 	],
@@ -2525,6 +2543,17 @@ $wi->config->settings = [
 		'ssptopwiki' => [
 			'read-only' => [
 				'edit' => true,
+			],
+		],
+		'simcitywiki' => [
+			'banned' => [
+				'read' => true,
+				'createaccount' => true,
+				'viewmywatchlist' => true,
+				'viewmyprivateinfo' => true,
+				'editmywatchlist' => true,
+				'editmyoptions' => true,
+				'editmyprivateinfo' => true,
 			],
 		],
 	],
