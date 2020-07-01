@@ -2094,7 +2094,6 @@ $wi->config->settings = [
 				'oathauth-view-log' => true,
 			],
 			'user' => [],
-			],
 		],
 		'+sovereignwiki' => [
 			'officer' => [
