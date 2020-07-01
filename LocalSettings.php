@@ -2093,6 +2093,8 @@ $wi->config->settings = [
 				'oathauth-verify-user' => true,
 				'oathauth-view-log' => true,
 			],
+			'user' => [],
+			],
 		],
 		'+sovereignwiki' => [
 			'officer' => [
