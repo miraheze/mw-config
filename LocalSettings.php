@@ -2394,6 +2394,18 @@ $wi->config->settings = [
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
 	],
+	'wgTrustedMediaFormats' => [
+		'default' => [
+			MEDIATYPE_BITMAP,
+			MEDIATYPE_AUDIO,
+			MEDIATYPE_VIDEO,
+			"image/svg+xml",
+			"application/pdf",
+		],
+		'+polytopewiki' => [
+			MEDIATYPE_TEXT,
+		],
+	],
 
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => [
