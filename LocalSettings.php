@@ -2394,7 +2394,6 @@ $wi->config->settings = [
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
 	],
-	
 	// MobileFrontend
 	'wmgMFAutodetectMobileView' => [
 		'default' => false,
