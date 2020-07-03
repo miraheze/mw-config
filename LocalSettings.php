@@ -2087,11 +2087,7 @@ $wi->config->settings = [
 				'userrights' => true,
 				'usermerge' => true,
 				'centralauth-usermerge' => true,
-				'oathauth-api-all' => true,
 				'oathauth-enable' => true,
-				'oathauth-disable-for-user' => true,
-				'oathauth-verify-user' => true,
-				'oathauth-view-log' => true,
 			],
 			'user' => [
 				'mwoauthmanagemygrants' => true,
