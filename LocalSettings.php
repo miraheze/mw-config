@@ -1175,6 +1175,9 @@ $wi->config->settings = [
 	'wmgUseUrlGetParameters' => [
 		'default' => false,
 	],
+	'wmgUseUserFunctions' => [
+		'default' => false,
+	],
 	'wmgUseUserWelcome' => [
 		'default' => false,
 	],
@@ -3242,6 +3245,11 @@ $wi->config->settings = [
 			'nonciclopedia\.org',
 			'spcodex\.wiki',
 		],
+	],
+	
+	// UserFunctions
+	'wgUFEnablePersonalDataFunctions' => [
+		'default' => false, // DO NOT set to true under any circumstances --Reception123
 	],
 
 	// VisualEditor

@@ -1974,6 +1974,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'userfunctions' => [
+			'name' => 'UserFunctions',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UserFunctions',
+			'var' => 'wmgUseUserFunctions',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'userwelcome' => [
 			'name' => 'UserWelcome',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UserWelcome',
