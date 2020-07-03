@@ -1051,6 +1051,10 @@ if ( $wmgUseUrlGetParameters ) {
 	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
 }
 
+if ( $wmgUseUserFunctions ) {
+	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+}
+
 if ( $wmgUseUserWelcome ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
