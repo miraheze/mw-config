@@ -1706,6 +1706,11 @@ $wi->config->settings = [
 		'gzewiki' => [ "file://" ],
 		'kaiwiki' => [ "file://" ],
 	],
+	
+	// LiliPond 
+	'wgScoreLilyPond' => [
+		'default' => '/dev/null',
+	],
 
 	// Mail
 	'wgEnableEmail' => [
