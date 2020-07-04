@@ -2609,7 +2609,15 @@ $wi->config->settings = [
 		'+solarawiki' => [
 			'usecodemirror' => 1,
 		],
- 	],
+		'+dcwiki' => [
+			'usecodemirror' => 1,
+			'visualeditor-newwikitext' => 1,
+		],
+	],
+	'wgHiddenPrefs' => [
+		'default' => '',
+		'dcwiki' => 'visualeditor-newwikitext',
+	],
 
 	// Redis
 	'wmgRedisSettings' => [
