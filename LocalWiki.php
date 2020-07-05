@@ -294,10 +294,6 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 	];
 }
 
-if ( $wgDBname === 'dcwiki' ) {
-	 $wgHiddenPrefs[] = 'visualeditor-newwikitext';
-}
-
 if ( $wmgUseYandexTranslate ) {
 	$wgTranslateTranslationServices['Yandex'] = [
         'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',

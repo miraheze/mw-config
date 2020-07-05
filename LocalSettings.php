@@ -2614,6 +2614,10 @@ $wi->config->settings = [
 			'visualeditor-newwikitext' => 1,
 		],
 	],
+	'wgHiddenPrefs' => [
+		'default' => '',
+		'dcwiki' => 'visualeditor-newwikitext',
+	],
 
 	// Redis
 	'wmgRedisSettings' => [
