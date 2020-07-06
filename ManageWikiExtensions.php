@@ -1497,11 +1497,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePreloader',
 			'conflicts' => false,
 			'install' => [],
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
+			'requires' => [],
 		],
 		'proofreadpages' => [
 			'name' => 'Proofread Pages',
