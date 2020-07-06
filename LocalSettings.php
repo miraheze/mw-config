@@ -2614,11 +2614,19 @@ $wi->config->settings = [
 		'+dcwiki' => [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
+			'visualeditor-enable' => 1,
+			'usebetatoolbar' => 1,
 		],
 	],
 	'+wgHiddenPrefs' => [
 		'default' => [],
-		'dcwiki' => [ 'visualeditor-newwikitext' ],
+		'dcwiki' => [ 
+			'visualeditor-newwikitext',
+			'visualeditor-tabs',
+			'visualeditor-enable',
+			'usebetatoolbar',
+			
+		],
 	],
 
 	// Redis
