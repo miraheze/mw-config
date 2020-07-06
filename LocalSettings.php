@@ -2943,6 +2943,17 @@ $wi->config->settings = [
 	'wgDismissableSiteNoticeForAnons' => [
 		'default' => true,
 	],
+	
+	// Skins
+	'wgSkipSkins' => [
+		'default' => [],
+		'dcwiki' => [
+			'cologneblue',
+			'modern',
+			'monobook',
+			'vector',
+		],
+	],
 
 	// SocialProfile
 	'wgUserBoard' => [
