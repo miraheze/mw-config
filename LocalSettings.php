@@ -525,6 +525,10 @@ $wi->config->settings = [
 	'wgFFmpegLocation' => [
 		'default' => '/usr/bin/ffmpeg',
 	],
+	'wgTmhEnableMp4Uploads' => [
+		'default' => false,
+		'dcwiki' => true,
+	],
 
 	// Discord
 	'wgDiscordNotificationNewUser' => [
@@ -2616,13 +2620,13 @@ $wi->config->settings = [
 			'visualeditor-newwikitext' => 1,
 			'visualeditor-enable' => 1,
 			'usebetatoolbar' => 1,
+			'visualeditor-enable-experimental' => 1,
 		],
 	],
 	'+wgHiddenPrefs' => [
 		'default' => [],
 		'dcwiki' => [ 
 			'visualeditor-newwikitext',
-			'visualeditor-tabs',
 			'visualeditor-enable',
 			'usebetatoolbar',
 			
@@ -2937,6 +2941,17 @@ $wi->config->settings = [
 	// SiteNotice
 	'wgDismissableSiteNoticeForAnons' => [
 		'default' => true,
+	],
+	
+	// Skins
+	'wgSkipSkins' => [
+		'default' => [],
+		'dcwiki' => [
+			'cologneblue',
+			'modern',
+			'monobook',
+			'vector',
+		],
 	],
 
 	// SocialProfile
