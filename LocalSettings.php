@@ -2627,7 +2627,6 @@ $wi->config->settings = [
 		'default' => [],
 		'dcwiki' => [ 
 			'visualeditor-newwikitext',
-			'visualeditor-tabs',
 			'visualeditor-enable',
 			'usebetatoolbar',
 			
