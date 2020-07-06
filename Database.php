@@ -34,7 +34,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'zhdelwiki' => 'c4',
 		'allthetropeswiki' => 'c4',
 
-		'test2wiki' => 'c4',
+		'test2wiki' => 'c5',
 		'altversewiki' => 'c4',
 		'anotheredenwiki' => 'c4',
 		'concordancewiki' => 'c4',
@@ -86,6 +86,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'c4' => [
  			'db7' => 1,
  		],
+		'c5' => [
+ 			'db11' => 1,
+ 		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -103,6 +106,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'hostsByName' => [
 		'db9' => 'db9.miraheze.org',
 		'db7' => 'db7.miraheze.org',
+		'db11' => 'db11.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
