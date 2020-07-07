@@ -177,7 +177,7 @@ $wi->config->settings = [
 		'allthetropeswiki' => true,
 		'nonciclopediawiki' => true,
 		'simswiki' => true,
-		'thefinalrumble' => true,
+		'thefinalrumblewiki' => true,
 		'loginwiki' => true,
 		'testwiki' => true,
 	],
