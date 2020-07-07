@@ -148,7 +148,7 @@ EOF;
 }
 */
 
-$db = $wgLBFactoryConf['sectionsByDB'][$wgDBname];
+$db = $wi->config->settings['wgLBFactoryConf']['default']['sectionsByDB'][$wgDBname];
 if ( isset( $db ) && $db == 'c4' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter3';
 	function onSiteNoticeAfter3( &$siteNotice, $skin ) {
