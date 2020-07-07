@@ -162,6 +162,12 @@ if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 	$egMapsDefaultService = 'googlemaps3';
 }
 
+if ( $wgDBname === 'swiki' ) {
+	 $wgWhitelistRead[] = [
+		"メインページ/ja"
+	];
+}
+
 if ( $wgDBname === 'swisscomraidwiki' ) {
 	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
 }
