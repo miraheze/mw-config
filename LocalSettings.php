@@ -2709,6 +2709,9 @@ $wi->config->settings = [
 			'pm',
 			'member',
 		],
+		'+csydeswiki' => [
+			'author',
+		],
 		'+cyclonepediawiki' => [
 			'bureaucrat',
 			'extendedconfirmed',
