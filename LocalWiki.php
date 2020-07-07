@@ -306,6 +306,6 @@ if ( $wmgUseYandexTranslate ) {
 	];
 }
 
-    if ( $wmgUseAuthorProtect ) {
+if ( $wmgUseAuthorProtect ) {
         $wgRestrictionLevels[] = 'author';
-    }
+}
