@@ -71,7 +71,6 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'atrociousyoutuberswiki' => 'c4',
 		'nonciclopediawiki' => 'c4',
 		'toxicfandomsandhatedomswiki' => 'c4',
-		'nonsensopediawiki' => 'c4',
 
 		'nenawikiwiki' => 'c4',
 		'ndgwiki' => 'c4',
