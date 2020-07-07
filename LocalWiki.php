@@ -33,7 +33,7 @@ EOF;
 EOF;
 			return true;
 		}
-	}	
+	}
 }
 
 // Inactive Wikis
