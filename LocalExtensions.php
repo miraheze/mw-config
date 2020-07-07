@@ -71,6 +71,7 @@ if ( $wmgUseArticleToCategory2 ) {
 
 if ( $wmgUseAuthorProtect ) {
 	wfLoadExtension( 'AuthorProtect' );
+	$wgRestrictionLevels[] = 'author';
 }
 
 if ( $wmgUseAutoCreateCategoryPages ) {
