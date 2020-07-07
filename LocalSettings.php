@@ -2690,7 +2690,7 @@ $wi->config->settings = [
 
 	// Restriction types
 	'+wgRestrictionLevels' => [
-		'default' => [
+		'+default' => [
 			'user',
 		],
 		'+wikitestwiki' => [
