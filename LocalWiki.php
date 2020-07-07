@@ -311,3 +311,18 @@ if ( $wmgUseYandexTranslate ) {
         'type' => 'yandex',
 	];
 }
+
+if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared',
+		'directory' => '/mnt/mediawiki-static/intercriaturaswiki',
+		'url' => 'https://static.miraheze.org/intercriaturaswiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => 'intercriaturaswiki',
+		'wiki' => 'intercriaturaswiki',
+		'descBaseUrl' => 'https://intercriaturas.miraheze.org/wiki/File:',
+	];
+}
