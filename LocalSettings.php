@@ -2690,12 +2690,6 @@ $wi->config->settings = [
 
 	// Restriction types
 	'+wgRestrictionLevels' => [
-		'default' => [
-			'',
-			'user',
-			'autoconfirmed',
-			'sysop'
-		],
 		'+wikitestwiki' => [
 			'bureaucrat',
 			'consul',
