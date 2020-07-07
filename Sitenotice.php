@@ -147,3 +147,18 @@ EOF;
 	}
 }
 */
+
+$db = $wgLBFactoryConf['sectionsByDB'][$wgDBname];
+if ( isset( $db ) && $db == 'c4' ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter3';
+	function onSiteNoticeAfter3( &$siteNotice, $skin ) {
+		global $wmgSiteNoticeOptOut, $snImportant;
+
+		$siteNotice .= <<<EOF
+				<table class="wikitable" style="text-align:center;"><tbody><tr>
+				<td>Miraheze plans to do database maintenance at 10pm UTC time. Please save your edits at least 5 minutes before. The maintenance will last 5 minutes.</td>
+				</tr></tbody></table>
+EOF;
+			return true;
+	}
+}
