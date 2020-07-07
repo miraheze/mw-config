@@ -2777,6 +2777,9 @@ $wi->config->settings = [
 			'bureaucrat',
 			'consul',
 		],
+		'+test2wiki' => [
+			'author',
+		],
 		'+thesciencearchiveswiki' => [
 			'templateeditor',
 		],
