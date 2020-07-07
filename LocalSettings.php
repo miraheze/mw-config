@@ -3491,7 +3491,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 if (
 	isset( $_GET['forceprofile'] )
 	&& $_GET['forceprofile'] == 1
-	&& wfHostname() === 'test2.miraheze.org'
+	&& wfHostname() === 'test2'
 ) {
         $wgProfiler['class'] = 'ProfilerXhprof';
         $wgProfiler['output'] = [ 'ProfilerOutputText' ];
