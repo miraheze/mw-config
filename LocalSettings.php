@@ -172,6 +172,15 @@ $wi->config->settings = [
 	'wgRevisionCacheExpiry' => [
 		'default' => 0,
 	],
+	'wgEnableSidebarCache' => [
+		'default' => false,
+		'allthetropeswiki' => true,
+		'nonciclopediawiki' => true,
+		'simswiki' => true,
+		'thefinalrumblewiki' => true,
+		'loginwiki' => true,
+		'testwiki' => true,
+	],
 
 	// CategoryTree
 	'wgCategoryTreeDefaultMode' => [
