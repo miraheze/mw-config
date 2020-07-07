@@ -305,7 +305,3 @@ if ( $wmgUseYandexTranslate ) {
         'type' => 'yandex',
 	];
 }
-
-if ( $wmgUseAuthorProtect ) {
-        $wgRestrictionLevels[] = 'author';
-}
