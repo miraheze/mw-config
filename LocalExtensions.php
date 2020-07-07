@@ -71,6 +71,7 @@ if ( $wmgUseArticleToCategory2 ) {
 
 if ( $wmgUseAuthorProtect ) {
 	wfLoadExtension( 'AuthorProtect' );
+	$wi->config->settings['wgRestrictionLevels']['default'][] = 'author';
 }
 
 if ( $wmgUseAutoCreateCategoryPages ) {
