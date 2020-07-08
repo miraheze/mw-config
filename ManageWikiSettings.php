@@ -462,6 +462,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Shows only the "edit" tab. Uses VisualEditor by default if "Make VisualEditor the default editor for all" is set, otherwise defaults to Wikitext.',
 	],
+	'wgVisualEditorEnableDiffPage' => [
+		'name' => 'Enable VisualEditor Diff Page',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'check',
+		'help' => 'Enable the new visual mode on revision difference pages by default (not Beta).',
+	],
 	'wgAllowSlowParserFunctions' => [
 		'name' => 'Allow slow parser functions',
 		'from' => 'mediawiki',
