@@ -18,7 +18,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will be doing emergency database maintenance starting at 20:40 UTC time.</td>
+			<td>Miraheze needs to perform emergency maintenance on one of its database clusters. To do that, one of the servers must be restarted. Maintenance is scheduled between July 8, 20:45 UTC and 21:15 UTC. Please save your edits before 20:45 UTC!</td>
 			</tr></tbody></table>
 EOF;
 
