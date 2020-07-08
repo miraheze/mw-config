@@ -2967,7 +2967,7 @@ $wi->config->settings = [
 	],
 	
 	// Skins
-	'wgSkipSkins' => [
+	'+wgSkipSkins' => [
 		'default' => [],
 		'dcwiki' => [
 			'cologneblue',
