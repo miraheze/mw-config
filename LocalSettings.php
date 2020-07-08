@@ -2630,13 +2630,17 @@ $wi->config->settings = [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
 			'visualeditor-enable' => 1,
-			'usebetatoolbar' => 1,
+			'usebetatoolbar' => 0,
 			'visualeditor-enable-experimental' => 1,
 		],
 	],
 	'+wgHiddenPrefs' => [
 		'default' => [],
 		'dcwiki' => [ 
+			'math',
+			'multimediaviewer-enable',
+			'skin',
+			'visualeditor-betatempdisable',
 			'visualeditor-newwikitext',
 			'visualeditor-enable',
 			'usebetatoolbar',
@@ -3314,6 +3318,16 @@ $wi->config->settings = [
 	],
 	'wgVisualEditorUseSingleEditTab' => [
 		'default' => false,
+	],
+	'wgVisualEditorAvailableContentModels' => [
+		'default' => [
+			'wikitext' => 'article',
+		],
+		'dcwiki' => [
+			'wikitext' => 'article',
+			'javascript' => 'javascript',
+			'css' => 'css',
+		],
 	],
 
 	// Protect site config
