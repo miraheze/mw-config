@@ -2631,7 +2631,7 @@ $wi->config->settings = [
 			'visualeditor-newwikitext' => 1,
 			'visualeditor-enable' => 1,
 			'usebetatoolbar' => 0,
-			'usebetatoolbar-cgd' => 0
+			'usebetatoolbar-cgd' => 0,
 			'visualeditor-enable-experimental' => 1,
 		],
 	],
