@@ -8,7 +8,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 45;
+$wgMajorSiteNoticeID = 46;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 
