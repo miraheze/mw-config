@@ -3325,8 +3325,9 @@ $wi->config->settings = [
 		],
 		'dcwiki' => [
 			'wikitext' => 'article',
-			'javascript' => 'javascript',
-			'css' => 'css',
+			'javascript' => 'article',
+			'css' => 'article',
+			'scribunto' => 'article',
 		],
 	],
 	'wgVisualEditorEnableDiffPage' => [
