@@ -3329,6 +3329,9 @@ $wi->config->settings = [
 			'css' => 'css',
 		],
 	],
+	'wgVisualEditorEnableDiffPage' => [
+		'default' => false,
+	],
 
 	// Protect site config
 	'wgProtectSiteLimit' => [
