@@ -1785,6 +1785,7 @@ $wi->config->settings = [
 			'darkmode',
 			'globaluserpage',
 			'mobilefrontend',
+			'syntaxhighlight_geshi',
 		],
 	],
 	'wgManageWikiCDBDirectory' => [
