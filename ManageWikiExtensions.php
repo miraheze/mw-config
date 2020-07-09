@@ -1791,7 +1791,7 @@ $wgManageWikiExtensions = [
 		'syntaxhighlight_geshi' => [
 			'name' => 'SyntaxHighlight_GeSHi',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SyntaxHighlight_GeSHi',
-			'var' => 'wmgUseSyntaxHighlight_GeSHi',
+			'var' => 'wmgUseSyntaxHighlightGeSHi',
 			'conflicts' => false,
 			'requires' => [],
 		],
