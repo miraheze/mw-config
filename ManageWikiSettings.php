@@ -468,7 +468,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'section' => 'check',
+		'section' => 'edit',
 		'help' => 'Enable the new visual mode on revision difference pages by default (not Beta).',
 	],
 	'wgAllowSlowParserFunctions' => [
