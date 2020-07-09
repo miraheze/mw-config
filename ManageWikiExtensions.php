@@ -1788,6 +1788,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'syntaxhighlight_geshi' => [
+			'name' => 'SyntaxHighlight_GeSHi',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SyntaxHighlight_GeSHi',
+			'var' => 'wmgUseSyntaxHighlight_GeSHi',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'tabscombination' => [
 			'name' => 'TabsCombination (Tabber + Tabs)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabs',
