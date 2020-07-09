@@ -1131,7 +1131,7 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseSyntaxHighlightGeSHi' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgScribuntoUseGeSHi' => [
 		'default' => true,
