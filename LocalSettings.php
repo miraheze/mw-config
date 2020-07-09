@@ -2892,6 +2892,12 @@ $wi->config->settings = [
 			'NS_MEDIAWIKI' => 'noindex,nofollow',
 			'NS_USER' => 'noindex,nofollow',
 		],
+		'privadowiki' => [
+			'NS_TEMPLATE' => 'noindex,nofollow',
+			'NS_MODULE' => 'noindex,nofollow',
+			'NS_MEDIAWIKI' => 'noindex,nofollow',
+			'NS_USER' => 'noindex,nofollow',
+		],
 		'ucroniaswiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 			'NS_MODULE' => 'noindex,nofollow',
