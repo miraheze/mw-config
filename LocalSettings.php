@@ -1529,7 +1529,7 @@ $wi->config->settings = [
 
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => [
-		'default' => 'centralauth',
+		'default' => 'mhglobal',
 	],
 
 	// GlobalUserPage
