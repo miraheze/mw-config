@@ -1130,6 +1130,9 @@ $wi->config->settings = [
 	'wmgUseSubPageList3' => [
 		'default' => false,
 	],
+	'wmgUseSyntaxHighlightGeSHi' => [
+		'default' => true,
+	],
 	'wgScribuntoUseGeSHi' => [
 		'default' => true,
 	],
@@ -1782,6 +1785,7 @@ $wi->config->settings = [
 			'darkmode',
 			'globaluserpage',
 			'mobilefrontend',
+			'syntaxhighlight_geshi',
 		],
 	],
 	'wgManageWikiCDBDirectory' => [

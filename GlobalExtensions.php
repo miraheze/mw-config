@@ -33,7 +33,6 @@ wfLoadExtensions( [
 	'RottenLinks',
 	'Scribunto',
 	'SpamBlacklist',
-	'SyntaxHighlight_GeSHi',
 	'TitleBlacklist',
 	'TorBlock',
 	'UserMerge',

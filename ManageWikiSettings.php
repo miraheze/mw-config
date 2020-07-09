@@ -570,6 +570,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Set this to use it when editing Module pages.',
 	],
+	'wgScribuntoUseGeSHi' => [
+		'name' => 'Scribunto Use GeSHi (SyntaxHighlight_GeSHi)',
+		'restricted' => false,
+		'from' => 'syntaxhighlight_geshi',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Use SyntaxHighlight_GeSHi extension to highlight syntax.',
+	],
 	'wgCategoryTreeDefaultMode' => [
 		'name' => 'Category Tree Default Mode',
 		'from' => 'categorytree',

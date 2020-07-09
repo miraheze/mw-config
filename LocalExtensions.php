@@ -956,6 +956,10 @@ if ( $wmgUseSubPageList3 ) {
 	wfLoadExtension( 'SubPageList3' );
 }
 
+if ( $wmgUseSyntaxHighlightGeSHi ) {
+	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+}
+
 if ( $wmgUseTabsCombination ) {
 	wfLoadExtension( 'Tabber' );
 
