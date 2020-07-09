@@ -748,7 +748,7 @@ $wi->config->settings = [
 		'default' => true,
 	],
 	'wmgUseDataTransfer' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wmgUseDescription2' => [
 		'default' => false,
