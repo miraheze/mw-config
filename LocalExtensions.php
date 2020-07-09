@@ -956,7 +956,7 @@ if ( $wmgUseSubPageList3 ) {
 	wfLoadExtension( 'SubPageList3' );
 }
 
-if ( $wmgUseSyntaxHighlight_GeSHi ) {
+if ( $wmgUseSyntaxHighlightGeSHi ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
