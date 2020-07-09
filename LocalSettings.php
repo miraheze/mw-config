@@ -1130,6 +1130,9 @@ $wi->config->settings = [
 	'wmgUseSubPageList3' => [
 		'default' => false,
 	],
+	'wmgUseSyntaxHighlight_GeSHi' => [
+		'default' => true,
+	],
 	'wgScribuntoUseGeSHi' => [
 		'default' => true,
 	],
