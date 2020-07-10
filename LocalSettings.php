@@ -903,6 +903,9 @@ $wi->config->settings = [
 	'wmgUseLiberty' => [
 		'default' => false,
 	],
+	'wmgUseLingo' => [
+		'default' => false,
+	],
 	'wmgUseLinkSuggest' => [
 		'default' => false,
 	],

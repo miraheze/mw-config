@@ -585,6 +585,10 @@ if ( $wmgUseLiberty ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
 }
 
+if ( $wmgUseLingo ) {
+	wfLoadExtension( 'Lingo' );
+}
+
 if ( $wmgUseLinkSuggest ) {
 	wfLoadExtension( 'LinkSuggest' );
 }

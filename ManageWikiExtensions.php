@@ -951,6 +951,13 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'lingo' => [
+			'name' => 'Lingo',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Lingo',
+			'var' => 'wmgUseLingo',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'linksuggest' => [
 			'name' => 'LinkSuggest',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkSuggest',
