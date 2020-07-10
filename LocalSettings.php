@@ -1500,14 +1500,7 @@ $wi->config->settings = [
 	
 	// Gallery Options
 	'wgGalleryOptions' => [
-		'default' => [
-			'imagesPerRow' => 0, 
-			'imageWidth' => 120, 
-			'imageHeight' => 120, 
-			'captionLength' => true, 
-			'showBytes' => true,
-    			'mode' => 'traditional', 
-		],
+		'default' => [],
 		'dcwiki' => [
 			'imagesPerRow' => 0, 
 			'imageWidth' => 120, 
