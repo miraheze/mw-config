@@ -1176,6 +1176,9 @@ $wi->config->settings = [
 	'wmgUseTranslate' => [
 		'default' => false,
 	],
+	'wmgUseTreeAndMenu' => [
+		'default' => false,
+	],
 	'wmgUseTweeki' => [
 		'default' => false,
 	],
