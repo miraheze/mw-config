@@ -1499,7 +1499,7 @@ $wi->config->settings = [
 	],
 	
 	// Gallery Options
-	'wgGalleryOptions' => [
+	'+wgGalleryOptions' => [
 		'default' => [],
 		'dcwiki' => [
 			'imagesPerRow' => 0, 
