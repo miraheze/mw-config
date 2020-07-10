@@ -1941,6 +1941,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'treeandmenu' => [
+			'name' => 'TreeAndMenu',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TreeAndMenu',
+			'var' => 'wmgUseTreeAndMenu',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'tweeki' => [
 			'name' => 'Tweeki (Skin) - Note: Causes mobile view not to work!',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Tweeki',
