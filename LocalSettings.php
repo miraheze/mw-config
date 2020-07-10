@@ -536,7 +536,7 @@ $wi->config->settings = [
 	],
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
-		'dcwiki' => true,
+		'dcmultiversewiki' => true,
 	],
 
 	// Discord
@@ -1504,7 +1504,7 @@ $wi->config->settings = [
 	// Gallery Options
 	'+wgGalleryOptions' => [
 		'default' => [],
-		'dcwiki' => [
+		'dcmultiversewiki' => [
 			'imagesPerRow' => 0, 
 			'imageWidth' => 120, 
 			'imageHeight' => 120,
@@ -2675,7 +2675,7 @@ $wi->config->settings = [
 		'+solarawiki' => [
 			'usecodemirror' => 1,
 		],
-		'+dcwiki' => [
+		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
 			'visualeditor-enable' => 1,
@@ -2686,7 +2686,7 @@ $wi->config->settings = [
 	],
 	'+wgHiddenPrefs' => [
 		'default' => [],
-		'dcwiki' => [ 
+		'dcmultiversewiki' => [ 
 			'math',
 			'multimediaviewer-enable',
 			'skin',
@@ -3024,7 +3024,7 @@ $wi->config->settings = [
 	// Skins
 	'+wgSkipSkins' => [
 		'default' => [],
-		'dcwiki' => [
+		'dcmultiversewiki' => [
 			'cologneblue',
 			'modern',
 			'monobook',
@@ -3380,7 +3380,7 @@ $wi->config->settings = [
 		'default' => [
 			'wikitext' => 'article',
 		],
-		'dcwiki' => [
+		'dcmultiversewiki' => [
 			'wikitext' => 'article',
 			'javascript' => 'article',
 			'css' => 'article',
@@ -3392,7 +3392,7 @@ $wi->config->settings = [
 	],
 	'wgVisualEditorEnableVisualSectionEditing' => [
 		'default' => false,
-		'dcwiki' => 'mobile',
+		'dcmultiversewiki' => 'mobile',
 	],
 
 	// Protect site config
