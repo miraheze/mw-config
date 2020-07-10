@@ -3388,6 +3388,10 @@ $wi->config->settings = [
 	'wgVisualEditorEnableDiffPage' => [
 		'default' => false,
 	],
+	'wgVisualEditorEnableVisualSectionEditing' => [
+		'default' => false,
+		'dcwiki' => 'mobile',
+	],
 
 	// Protect site config
 	'wgProtectSiteLimit' => [
