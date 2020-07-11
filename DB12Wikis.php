@@ -2127,7 +2127,6 @@ $db12 = [
 	'umpcwiki' => 'c3',
 	'unblockedwikiwiki' => 'c3',
 	'uncyc2wiki' => 'c3',
-	'uncyclomirrorwiki' => 'c3',
 	'uncyclowikidatabasewiki' => 'c3',
 	'unfixedwiki' => 'c3',
 	'unianarchyminecraftwiki' => 'c3',
