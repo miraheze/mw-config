@@ -326,3 +326,9 @@ if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
 		'descBaseUrl' => 'https://intercriaturas.miraheze.org/wiki/File:',
 	];
 }
+
+require_once( '/srv/mediawiki/config/DB12Wikis.php' );
+
+foreach ( array_keys( $db12 ) as $db ) {
+	$wi->config->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
+}
