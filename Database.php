@@ -1,5 +1,7 @@
 <?php
 
+require_once( '/srv/mediawiki/config/DB12Wikis.php' );
+
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => [
@@ -34,7 +36,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'zhdelwiki' => 'c4',
 		'allthetropeswiki' => 'c4',
 
-		'test2wiki' => 'c5',
+		'test2wiki' => 'c6',
 		'altversewiki' => 'c4',
 		'anotheredenwiki' => 'c4',
 		'concordancewiki' => 'c4',
@@ -74,7 +76,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 
 		'nenawikiwiki' => 'c4',
 		'ndgwiki' => 'c4',
- 	],
+ 	] + $db12,
 	'sectionLoads' => [
 		'DEFAULT' => [
 			'db9' => 1,
@@ -87,6 +89,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
  		],
 		'c5' => [
  			'db11' => 1,
+ 		],
+		'c6' => [
+ 			'db12' => 1,
  		],
 	],
 	'serverTemplate' => [
@@ -104,8 +109,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	],
 	'hostsByName' => [
 		'db9' => 'db9.miraheze.org',
-		'db13' => 'db13.miraheze.org',
 		'db11' => 'db11.miraheze.org',
+		'db12' => 'db11.miraheze.org',
+		'db13' => 'db13.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
@@ -113,9 +119,10 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		],
 	],
 	'readOnlyBySection' => [
-		//'DEFAULT' => 'Maintenance ongoing on the database server.',
-		//'c1' => 'Maintenance ongoing on the database server.',
-		//'c4' => 'Maintenance ongoing on the database server.',
-		//'c5' => 'Maintenance ongoing on the database server.',
+		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
+		// 'c1' => 'Maintenance ongoing on the database server.',
+		// 'c4' => 'Maintenance ongoing on the database server.',
+		// 'c5' => 'Maintenance ongoing on the database server.',
+		// 'c6' => 'Maintenance ongoing on the database server.',
 	],
 ];
