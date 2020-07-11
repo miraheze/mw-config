@@ -722,7 +722,6 @@ $db12 = [
 	'freedomwiki' => 'c3',
 	'freerealmswiki' => 'c3',
 	'freevandalismwiki' => 'c3',
-	'frikipediawiki' => 'c3',
 	'frischwiki' => 'c3',
 	'frostcomputerlabswiki' => 'c3',
 	'frostproofwiki' => 'c3',
