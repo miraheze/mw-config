@@ -34,7 +34,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'zhdelwiki' => 'c4',
 		'allthetropeswiki' => 'c4',
 
-		'test2wiki' => 'c2',
+		'test2wiki' => 'c3',
 		'altversewiki' => 'c4',
 		'anotheredenwiki' => 'c4',
 		'concordancewiki' => 'c4',
