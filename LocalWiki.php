@@ -329,6 +329,6 @@ if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
 
 require_once( '/srv/mediawiki/config/DB12Wikis.php' );
 
-if ( $db12[$wgDBname] ?? false ) {
-	$wi->config->settings['wgReadOnly']['default'] = 'Database maintenance in progess';
+foreach ( array_keys( $db12 ) as $db ) {
+	$wi->config->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
 }
