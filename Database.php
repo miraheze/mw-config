@@ -76,7 +76,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 
 		'nenawikiwiki' => 'c4',
 		'ndgwiki' => 'c4',
- 	] + $db12,
+ 	],
 	'sectionLoads' => [
 		'DEFAULT' => [
 			'db9' => 1,
