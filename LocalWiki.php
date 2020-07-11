@@ -331,17 +331,4 @@ require_once( '/srv/mediawiki/config/DB12Wikis.php' );
 
 foreach ( array_keys( $db12 ) as $db ) {
 	$wi->config->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
-
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
-		global $wmgSiteNoticeOptOut, $snImportant;
-
-		$siteNotice .= <<<EOF
-				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td>Miraheze is currently migrating this wiki database to another server.</td>
-				</tr></tbody></table>
-EOF;
-
-		return true;
-	}
 }
