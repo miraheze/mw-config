@@ -495,6 +495,7 @@ $wi->config->settings = [
 
 	'wgReadOnly' => [
 		'default' => false,
+		'test2wiki' => 'Database migration in progress.',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
