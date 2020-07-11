@@ -36,7 +36,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'zhdelwiki' => 'c4',
 		'allthetropeswiki' => 'c4',
 
-		'test2wiki' => 'c6',
+		'test2wiki' => 'c3',
 		'altversewiki' => 'c4',
 		'anotheredenwiki' => 'c4',
 		'concordancewiki' => 'c4',
@@ -84,14 +84,14 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'c1' => [
 			'db9' => 1,
 		],
-		'c4' => [
- 			'db13' => 1,
- 		],
-		'c5' => [
+		'c2' => [
  			'db11' => 1,
  		],
-		'c6' => [
+		'c3' => [
  			'db12' => 1,
+ 		],
+		'c4' => [
+ 			'db13' => 1,
  		],
 	],
 	'serverTemplate' => [
@@ -110,7 +110,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'hostsByName' => [
 		'db9' => 'db9.miraheze.org',
 		'db11' => 'db11.miraheze.org',
-		'db12' => 'db11.miraheze.org',
+		'db12' => 'db12.miraheze.org',
 		'db13' => 'db13.miraheze.org',
 	],
 	'externalLoads' => [
@@ -121,8 +121,8 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
 		// 'c1' => 'Maintenance ongoing on the database server.',
+		// 'c2' => 'Maintenance ongoing on the database server.',
+		// 'c3' => 'Maintenance ongoing on the database server.',
 		// 'c4' => 'Maintenance ongoing on the database server.',
-		// 'c5' => 'Maintenance ongoing on the database server.',
-		// 'c6' => 'Maintenance ongoing on the database server.',
 	],
 ];
