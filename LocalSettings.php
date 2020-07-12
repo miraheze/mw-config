@@ -338,6 +338,11 @@ $wi->config->settings = [
 	'wgCreateWikiDatabase' => [
 		'default' => 'mhglobal',
 	],
+	'wgCreateWikiDatabaseClusters' => [
+		'default' => [
+			'c1'
+		]
+	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
 	],
@@ -1503,17 +1508,17 @@ $wi->config->settings = [
 			'navbarIcon' => true,
 		]
 	],
-	
+
 	// Gallery Options
 	'+wgGalleryOptions' => [
 		'default' => [],
 		'dcmultiversewiki' => [
-			'imagesPerRow' => 0, 
-			'imageWidth' => 120, 
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
 			'imageHeight' => 120,
 			'captionLength' => true,
-			'showBytes' => true, 
-			'showDimensions' => true, 
+			'showBytes' => true,
+			'showDimensions' => true,
 			'mode' => 'packed',
 		],
 	],
@@ -1749,8 +1754,8 @@ $wi->config->settings = [
 		'gzewiki' => [ "file://" ],
 		'kaiwiki' => [ "file://" ],
 	],
-	
-	// LiliPond 
+
+	// LiliPond
 	'wgScoreLilyPond' => [
 		'default' => '/dev/null',
 	],
@@ -2689,7 +2694,7 @@ $wi->config->settings = [
 	],
 	'+wgHiddenPrefs' => [
 		'default' => [],
-		'dcmultiversewiki' => [ 
+		'dcmultiversewiki' => [
 			'math',
 			'multimediaviewer-enable',
 			'skin',
@@ -2698,7 +2703,7 @@ $wi->config->settings = [
 			'visualeditor-newwikitext',
 			'visualeditor-enable',
 			'usebetatoolbar-cgd',
-			
+
 		],
 	],
 
@@ -3023,7 +3028,7 @@ $wi->config->settings = [
 	'wgDismissableSiteNoticeForAnons' => [
 		'default' => true,
 	],
-	
+
 	// Skins
 	'+wgSkipSkins' => [
 		'default' => [],
@@ -3360,7 +3365,7 @@ $wi->config->settings = [
 			'spcodex\.wiki',
 		],
 	],
-	
+
 	// UserFunctions
 	'wgUFEnablePersonalDataFunctions' => [
 		'default' => false, // DO NOT set to true under any circumstances --Reception123
