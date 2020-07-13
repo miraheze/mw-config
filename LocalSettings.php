@@ -330,6 +330,9 @@ $wi->config->settings = [
 	'wgCookieSameSite' => [
 		'default' => 'None'
 	],
+	'wgUseSameSiteLegacyCookies' => [
+		'default' => true
+	],
 
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
