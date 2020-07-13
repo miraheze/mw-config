@@ -5,7 +5,7 @@
  */
 
 // Initialise WikiInitialise
-require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
+require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikifInitialise.php' );
 $wi = new WikiInitialise();
 
 // Load PrivateSettings (e.g. wgDBpassword)
@@ -2919,7 +2919,7 @@ $wi->config->settings = [
 
 	// Referrer Policy
 	'wgReferrerPolicy' => [
-		'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ],
+		'default' => [ 'origin-when-cross-origin', 'origin' ],
 	],
 
 	// RSS Settings
