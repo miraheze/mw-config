@@ -3514,6 +3514,10 @@ $wi->config->settings = [
 			'random_quiz' => false,
 		],
 	],
+
+	'wgForceHTTPS' => [
+		'default' => true,
+	],
 ];
 
 $wi->setVariables(
