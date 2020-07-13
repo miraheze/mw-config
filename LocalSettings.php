@@ -2919,7 +2919,7 @@ $wi->config->settings = [
 
 	// Referrer Policy
 	'wgReferrerPolicy' => [
-		'default' => [ 'origin-when-cross-origin', 'origin-when-crossorigin', 'origin' ],
+		'default' => [ 'origin-when-cross-origin', 'origin' ],
 	],
 
 	// RSS Settings
