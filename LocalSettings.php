@@ -327,6 +327,9 @@ $wi->config->settings = [
 	'wgCookieDomain' => [
 		'default' => '.miraheze.org'
 	],
+	'wgCookieSameSite' => [
+		'default' => 'None'
+	],
 
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
