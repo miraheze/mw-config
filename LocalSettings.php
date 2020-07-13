@@ -5,7 +5,7 @@
  */
 
 // Initialise WikiInitialise
-require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikifInitialise.php' );
+require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
 
 // Load PrivateSettings (e.g. wgDBpassword)
