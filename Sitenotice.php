@@ -25,18 +25,15 @@ EOF;
 	return true;
 }*/
 
-if ( isset( $wi->config->settings['wgLBFactoryConf']['default']['sectionsByDB'][$wgDBname] ) &&
-	$wi->config->settings['wgLBFactoryConf']['default']['sectionsByDB'][$wgDBname] === 'c1' ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
-		global $wmgSiteNoticeOptOut, $snImportant;
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	global $wmgSiteNoticeOptOut, $snImportant;
 
-		$siteNotice .= <<<EOF
- 				<table class="wikitable" style="text-align:center;"><tbody><tr>
- 				<td>Miraheze plans to do database maintenance at 21:00 UTC time. It is expected to last 6 hours, during this time your wiki may turn into read only mode.</td>
- 				</tr></tbody></table>
+	$siteNotice .= <<<EOF
+ 			<table class="wikitable" style="text-align:center;"><tbody><tr>
+ 			<td>Miraheze plans to do database maintenance at 21:00 UTC time. It is expected to last 6 hours, during this time your wiki may turn into read only mode.</td>
+ 			</tr></tbody></table>
 EOF;
 
- 		return true;
-	}
+ 	return true;
 }
