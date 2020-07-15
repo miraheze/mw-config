@@ -346,7 +346,7 @@ $wi->config->settings = [
 	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
-			'c1'
+			'c3'
 		]
 	],
 	'wgCreateWikiGlobalWiki' => [
