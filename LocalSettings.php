@@ -2051,7 +2051,7 @@ $wi->config->settings = [
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
-				'createwiki' => true,
+				'createwiki' => false,
 			],
 		],
 		'+nenawikiwiki' => [
