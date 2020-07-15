@@ -5,10 +5,10 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db9' => 1,
+			'db11' => 1,
 		],
 		'c1' => [
-			'db9' => 1,
+			'db11' => 1,
 		],
 		'c2' => [
  			'db11' => 1,
@@ -34,14 +34,13 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		'db9' => 'db9.miraheze.org',
 		'db11' => 'db11.miraheze.org',
 		'db12' => 'db12.miraheze.org',
 		'db13' => 'db13.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
-			'db9' => 1, // should echo c1
+			'db11' => 1, // should echo c1
 		],
 	],
 	'readOnlyBySection' => [
