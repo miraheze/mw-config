@@ -332,3 +332,5 @@ require_once( '/srv/mediawiki/config/TempDBList.php' );
 foreach ( $dbTempList1 as $db ) {
 	$wi->config->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
 }
+
+$wi->config->settings['wgReadOnly']['mhglobal'] = 'Database maintenance in progess';
