@@ -2,7 +2,7 @@
 
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
-	'sectionsByDB' => $wi->wikiDBClusters + [ 'mhglobal' => 'c2', ]
+	'sectionsByDB' => $wi->wikiDBClusters + [ 'mhglobal' => 'c2', ],
 	'sectionLoads' => [
 		'DEFAULT' => [
 			'db9' => 1,
