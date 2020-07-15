@@ -329,10 +329,6 @@ if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
 
 require_once( '/srv/mediawiki/config/TempDBList.php' );
 
-foreach ( $dbTempList3 as $db ) {
-	$wi->config->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
-}
-
-foreach ( $dbTempList4 as $db ) {
+foreach ( $dbTempList5 as $db ) {
 	$wi->config->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
 }
