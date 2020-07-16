@@ -24,16 +24,3 @@ EOF;
 
 	return true;
 }*/
-
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
-
-	$siteNotice .= <<<EOF
- 			<table class="wikitable" style="text-align:center;"><tbody><tr>
- 			<td>Miraheze plans to perform database maintenance at 21:00 UTC time. It is expected to last 6 hours, during this time your wiki may be placed into read only mode temporarily.</td>
- 			</tr></tbody></table>
-EOF;
-
- 	return true;
-}
