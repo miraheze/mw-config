@@ -173,13 +173,7 @@ $wi->config->settings = [
 		'default' => 0,
 	],
 	'wgEnableSidebarCache' => [
-		'default' => false,
-		'allthetropeswiki' => true,
-		'nonciclopediawiki' => true,
-		'simswiki' => true,
-		'thefinalrumblewiki' => true,
-		'loginwiki' => true,
-		'testwiki' => true,
+		'default' => true,
 	],
 
 	// CategoryTree
@@ -521,6 +515,7 @@ $wi->config->settings = [
 	'wgCommentTableSchemaMigrationStage' => [
 		'default' => MIGRATION_NEW,
 	],
+
 	//CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
 		'default' => false,
@@ -595,6 +590,7 @@ $wi->config->settings = [
 	'wgEchoMentionStatusNotifications' => [
 		'default' => true,
 	],
+
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
 	'wgExemptFromUserRobotsControl' => [
 		'default' => $wgContentNamespaces,
