@@ -80,11 +80,6 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
 }
 
-if ( $wgDBname === 'ayrshirewiki' ) {
-	$wgSpecialPages['MapEditor'] = 'SpecialMapEditor';
-	$wgSpecialPageGroups['MapEditor'] = 'maps';
-}
-
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
 	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
@@ -176,28 +171,6 @@ if ( $wgDBname === 'simcitywiki' ) {
 	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgGroupPermissions['interwiki-admin'] );
 	unset( $wgGroupPermissions['checkuser'] );
-}
-
-if ( $wgDBname === 'wikiageingwiki' ) {
-	$wgForeignFileRepos[] = [
-		'class'                   => 'ForeignAPIRepo',
-		'name'                    => 'arwiki',
-		'apibase'                 => 'https://ar.wikipedia.org/w/api.php',
-		'hashLevels'              => 2,
-		'fetchDescription'        => true,
-		'descriptionCacheExpiry'  => 43200,
-		'apiThumbCacheExpiry'     => 86400,
-	];
-
-	$wgForeignFileRepos[] = [
-		'class'                   => 'ForeignAPIRepo',
-		'name'                    => 'enwiki',
-		'apibase'                 => 'https://en.wikipedia.org/w/api.php',
-		'hashLevels'              => 2,
-		'fetchDescription'        => true,
-		'descriptionCacheExpiry'  => 43200,
-		'apiThumbCacheExpiry'     => 86400,
-	];
 }
 
 // Depends on $wgContentNamespaces
