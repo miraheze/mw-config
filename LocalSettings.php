@@ -173,7 +173,7 @@ $wi->config->settings = [
 		'default' => 0,
 	],
 	'wgEnableSidebarCache' => [
-		'default' => true,
+		'default' => false,
 	],
 
 	// CategoryTree
