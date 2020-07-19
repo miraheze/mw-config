@@ -479,7 +479,6 @@ $wi->config->settings = [
 		'libertygamewiki' => true,
 		'metawiki' => true,
 		'nonciclopediawiki' => true,
-		'nonsensopediawiki' => true,
 		'onepiecewiki' => true,
 		'openhatchwiki' => true,
 		'quircwiki' => true,
@@ -2062,11 +2061,6 @@ $wi->config->settings = [
 			],
 			'sysop' => [
 				'edit-admin-pages' => true,
-			],
-		],
-		'+nonsensopediawiki' => [
-			'moderator' => [
-				'skipcaptcha' => true,
 			],
 		],
 		'+pruebawiki' => [
