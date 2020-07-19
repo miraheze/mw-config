@@ -483,6 +483,7 @@ $wi->config->settings = [
 		'onepiecewiki' => true,
 		'openhatchwiki' => true,
 		'quircwiki' => true,
+		'ranchstorywiki' => true,
 		'simswiki' => true,
 		'thelastsovereignwiki' => true,
 		'tmewiki' => true,
