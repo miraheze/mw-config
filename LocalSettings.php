@@ -2695,7 +2695,6 @@ $wi->config->settings = [
 		'dcmultiversewiki' => [
 			'math',
 			'multimediaviewer-enable',
-			'skin',
 			'visualeditor-betatempdisable',
 			'flow-visualeditor',
 			'visualeditor-newwikitext',
