@@ -21,7 +21,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
 				<td style="font-size:125%">Miraheze celebrates its fifth birthday today. <a href="https://meta.miraheze.org/wiki/Miraheze-5-year">Come celebrate with us! 🎈</a></a></td>
 				</tr></tbody></table>
-	EOF;
+EOF;
 
 		return true;
 	}
