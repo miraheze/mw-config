@@ -80,6 +80,10 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
 }
 
+if ( $wgDBname === 'dcmultiversewiki' ) {
+        $wgMFAutodetectMobileView = false;
+}
+
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
 	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
