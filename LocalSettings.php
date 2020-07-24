@@ -3361,6 +3361,7 @@ $wi->config->settings = [
 			'www\.thesimswiki\.com',
 			'nonciclopedia\.org',
 			'spcodex\.wiki',
+			'vedopedia\.witches-empire\.com',
 		],
 	],
 
