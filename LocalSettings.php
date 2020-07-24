@@ -1756,6 +1756,7 @@ $wi->config->settings = [
 		'bchwiki' => [ "file://" ],
 		'gzewiki' => [ "file://" ],
 		'kaiwiki' => [ "file://" ],
+		'vtwiki' => [ "discord://" ],
 	],
 
 	// LiliPond
