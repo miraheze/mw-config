@@ -2694,13 +2694,13 @@ $wi->config->settings = [
 	'+wgHiddenPrefs' => [
 		'default' => [],
 		'dcmultiversewiki' => [
+			'managewikisidebar',
 			'math',
 			'multimediaviewer-enable',
 			'visualeditor-betatempdisable',
 			'flow-visualeditor',
 			'visualeditor-newwikitext',
 			'visualeditor-enable',
-			'usebetatoolbar-cgd',
 
 		],
 	],
@@ -3030,12 +3030,6 @@ $wi->config->settings = [
 	// Skins
 	'+wgSkipSkins' => [
 		'default' => [],
-		'dcmultiversewiki' => [
-			'cologneblue',
-			'modern',
-			'monobook',
-			'vector',
-		],
 	],
 
 	// SocialProfile
