@@ -2881,26 +2881,28 @@ $wi->config->settings = [
 	],
 	// Robot policy
 	'wgNamespaceRobotPolicies' => [
-		'default' => [],
-		'taswinwiki' => [
+		'default' => [
+			'NS_SPECIAL' => 'noindex',
+		],
+		'+taswinwiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 		],
-		'horizonwiki' => [
+		'+horizonwiki' => [
 			'NS_MAIN' => 'index,follow'
 		],
-		'hispanowiki' => [
+		'+hispanowiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 			'NS_MODULE' => 'noindex,nofollow',
 			'NS_MEDIAWIKI' => 'noindex,nofollow',
 			'NS_USER' => 'noindex,nofollow',
 		],
-		'privadowiki' => [
+		'+privadowiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 			'NS_MODULE' => 'noindex,nofollow',
 			'NS_MEDIAWIKI' => 'noindex,nofollow',
 			'NS_USER' => 'noindex,nofollow',
 		],
-		'ucroniaswiki' => [
+		'+ucroniaswiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
 			'NS_MODULE' => 'noindex,nofollow',
 			'NS_MEDIAWIKI' => 'noindex,nofollow',
