@@ -1727,6 +1727,7 @@ $wi->config->settings = [
 		'wikidemocracywiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'wikigrowthwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'wikilexiconwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
+		'worldtrainwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 	],
 	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
@@ -1744,6 +1745,7 @@ $wi->config->settings = [
 		'wikidemocracywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'wikigrowthwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'wikilexiconwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
+		'worldtrainwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 	],
 	'wmgWikiLicense' => [
 		'default' => 'cc-by-sa',
