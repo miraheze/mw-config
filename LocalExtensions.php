@@ -653,6 +653,10 @@ if ( $wmgUseMediaWikiChat ) {
 	$wi->config->settings['wgRevokePermissions']['default']['blockedfromchat']['chat'] = true;
 }
 
+if ( $wmgUseMermaid ) {
+	wfLoadExtension( 'Mermaid' );
+}
+
 if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 

@@ -1124,6 +1124,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'mermaid' => [
+			'name' => 'Mermaid',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Mermaid',
+			'var' => 'wmgUseMermaid',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'metrolook' => [
 			'name' => 'Metrolook (Skin)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Metrolook',
