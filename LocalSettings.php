@@ -1562,6 +1562,11 @@ $wi->config->settings = [
 	'wgGlobalPreferencesDB' => [
 		'default' => 'mhglobal',
 	],
+	
+	// GlobalUsage
+	'wgGlobalUsageDatabase' => [
+		'default' => 'commonswiki',
+	],
 
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [

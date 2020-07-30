@@ -498,6 +498,11 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
+
+if ( $wgMirahezeCommons && !$cwPrivate ) {
+	wfLoadExtension( 'GlobalUsage' );
+}
+
 if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
 }

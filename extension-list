@@ -79,6 +79,7 @@ $IP/extensions/GettingStarted/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalPreferences/extension.json
+$IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
 $IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/Graph/extension.json
