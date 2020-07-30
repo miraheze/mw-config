@@ -1847,6 +1847,11 @@ $wi->config->settings = [
 				'banned',
 			],
 		],
+		'sesupportwiki' => [
+			'sysop' => [
+				'editor',
+			],
+		],
 	],
 	'wgManageWikiPermissionsAdditionalRights' => [
 		'default' => [
@@ -2119,6 +2124,14 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
+		'+sespportwiki' => [
+			'editor' => [
+				'editor' => true,
+			],
+			'sysop' => [
+				'editor' => true,
+			],
+		],
 		'+serinfhospwiki' => [
 			'SupportStaff' => [
 				'read' => true,
@@ -2257,6 +2270,11 @@ $wi->config->settings = [
 		'rf1botwiki' => [
 			'bureaucrat' => [
 				'Repo_Maintainer',
+			],
+		],
+		'sesupportwiki' => [
+			'sysop' => [
+				'editor',
 			],
 		],
 		'simcitywiki' => [
@@ -2834,6 +2852,9 @@ $wi->config->settings = [
 			'consul',
 		],
 		'+radviserwiki' => [
+			'editor',
+		],
+		'+sesupportwiki' => [
 			'editor',
 		],
 		'simcitywiki' => [
