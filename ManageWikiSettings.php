@@ -3,16 +3,26 @@
 /**
  * ManageWiki settings are added using the variable below.
  *
- * Type can be either: check, integer, list, list-multi, matrix, text, url or wikipage.
+ * Type can be either:
  *
  * check: adds a checkbox.
- * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values)
+ * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
+ * language: adds a dropdown for language selection (all which are known to MediaWiki).
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
+ * list-multi-bool: see above, just outputs are $this => $bool.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
+ * namespace: adds dropdown to select one namespace.
+ * namespaces: see above, except multiple namespaces.
  * text: adds a single line text entry.
+ * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
+ * user: adds an autocomplete text box to select a single user on the wiki.
+ * users: see above, except multiple users.
+ * usergroups: adds a drop down selection box for selecting multiple user groups.
+ * userrights: adds a drop down selection box for selecting multiple user rights.
  * wikipage: add a textbox which will return an autocomplete drop-down list of wikipages. Returns standardised MediaWiki pages.
+ * wikipages: see above, except multiple wikipages.
  *
  * Other variables that are required are name and from.
  *
@@ -218,15 +228,6 @@ $wgManageWikiSettings = [
 		'section' => 'beta',
 		'help' => 'This makes Media Viewer a beta feature thus this will not be enabled for all users.',
 	],
-	'wgPopupsBetaFeature' => [
-		'name' => 'Enable Popups Beta Mode',
-		'from' => 'popups',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => null,
-		'section' => 'beta',
-		'help' => 'This enables Popups as a beta feature, rather than showing it to all users.',
-	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'name' => 'Enable VisualEditor Diff Page Beta Feature',
 		'from' => 'mediawiki',
@@ -305,7 +306,6 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'This sets the web client to use. If you are not using Freenode, select Other Server.',
 	],
-
 	// Editing
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
@@ -372,6 +372,51 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Actions that can be restricted.',
 	],
+	'wgCommentStreamsEnableTalk' => [
+		'name' => 'CommentStreams Enable Talk',
+		'from' => 'commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Enable in talk namespaces',
+	],
+	'wgCommentStreamsNewestStreamsOnTop' => [
+		'name' => 'CommentStreams Newest Streams On Top',
+		'from' => 'commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Show newer comments first',
+	],
+	'wgCommentStreamsUserAvatarPropertyName' => [
+		'name' => 'CommentStreams User Avatar Property Name',
+		'from' => 'commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'If SocialProfile is enabled, it will display an avatar',
+	],
+	'wgCommentStreamsEnableVoting' => [
+		'name' => 'CommentStreams Enable Voting',
+		'from' => 'commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
+	],
+	'wgCommentStreamsModeratorFastDelete' => [
+		'name' => 'CommentStreams Moderator Fast Delete',
+		'from' => 'commentstreams',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'allows users with csdelete right to delete a comment and all of its replies in one action rather than having to individually delete all of the replies first.',
+	],
 	'wgCommentsSortDescending' => [
 		'name' => 'Sort Comments by Descending',
 		'from' => 'comments',
@@ -404,7 +449,7 @@ $wgManageWikiSettings = [
 		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'This option allow you to read Wikitext syntax on VisualEditor.',
 	],
@@ -417,12 +462,21 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Shows only the "edit" tab. Uses VisualEditor by default if "Make VisualEditor the default editor for all" is set, otherwise defaults to Wikitext.',
 	],
+	'wgVisualEditorEnableDiffPage' => [
+		'name' => 'Enable VisualEditor Diff Page',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Enable the new visual mode on revision difference pages by default (not Beta).',
+	],
 	'wgAllowSlowParserFunctions' => [
 		'name' => 'Allow slow parser functions',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'Parser functions are "magic words" that return a value or function, such as time, site details or page names.',
 	],
@@ -431,27 +485,9 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => null,
-		'section' => 'edit',
-		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s documentation page https://www.mediawiki.org/wiki/Module:String.',
-	],
-	'wmgAllowEntityImport' => [
-		'name' => 'Allow Entity Import (Wikibase)',
-		'restricted' => false,
-		'from' => 'wikibaserepository',
-		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'edit',
-		'help' => 'Allow importing entities via Special:Import and importDump.php.',
-	],
-	'wmgEnableEntitySearchUI' => [
-		'name' => 'Enable Entity Search UI (Wikibase)',
-		'restricted' => false,
-		'from' => 'wikibaserepository',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'edit',
-		'help' => 'To determine if entity search UI should be enabled or not.',
+		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s <a href="https://www.mediawiki.org/wiki/Module:String">documentation page</a>',
 	],
 	'wgAllowDisplayTitle' => [
 		'name' => 'Allow Display Title',
@@ -470,6 +506,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Restrict {{DISPLAYTITLE}} to titles that normalize to the same canonical database key. Wikis with NoTitle extension installed have this config unset.',
+	],
+	'wgDisplayTitleHideSubtitle' => [
+		'name' => 'Don\'t display the page\'s original title below the display title',
+		'restricted' => false,
+		'from' => 'displaytitle',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Set this to hide the page\'s original title as a subtitle below the title bar, shown by the Display Title extension.',
 	],
 	'wgCapitalLinks' => [
 		'name' => 'Capital Links',
@@ -525,32 +570,38 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Set this to use it when editing Module pages.',
 	],
-	'wgMetaNamespace' => [
-		'name' => 'Meta Namespace',
-		'from' => 'mediawiki',
+	'wgScribuntoUseGeSHi' => [
+		'name' => 'Scribunto Use GeSHi (SyntaxHighlight_GeSHi)',
 		'restricted' => false,
-		'type' => 'text',
-		'overridedefault' => null,
+		'from' => 'syntaxhighlight_geshi',
+		'type' => 'check',
+		'overridedefault' => true,
 		'section' => 'edit',
-		'help' => 'Name used for the project namespace. Note that the namespace must exist in ManageWiki/namespaces.',
-	],
-	'wgMetaNamespaceTalk' => [
-		'name' => 'Meta Namespace Talk',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'text',
-		'overridedefault' => null,
-		'section' => 'edit',
-		'help' => 'Name of the project talk namespace. Note that the namespace must exist in ManageWiki/namespaces.',
+		'help' => 'Use SyntaxHighlight_GeSHi extension to highlight syntax.',
 	],
 	'wgCategoryTreeDefaultMode' => [
 		'name' => 'Category Tree Default Mode',
 		'from' => 'categorytree',
 		'restricted' => false,
 		'type' => 'list',
-		'overridefault' => false,
+		'overridedefault' => 0,
 		'section' => 'edit',
-		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag.',
+		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag. You also need to set "Category Tree Category Page Mode" if you select the page mode.',
+		'options' => [
+			'Category' => 0,
+			'Pages' => 10,
+			'All' => 20,
+			'Parents' => 100,
+		],
+	],
+	'wgCategoryTreeCategoryPageMode' => [
+		'name' => 'Category Tree Category Page Mode',
+		'from' => 'categorytree',
+		'restricted' => false,
+		'type' => 'list',
+		'overridedefault' => 0,
+		'section' => 'edit',
+		'help' => 'The mode to use when rendering trees on category pages.',
 		'options' => [
 			'Category' => 0,
 			'Pages' => 10,
@@ -597,6 +648,7 @@ $wgManageWikiSettings = [
 		'type' => 'list-multi-bool',
 		'allopts' => [
 			'activity',
+			'articles',
 			'avatar',
 			'awards',
 			'board',
@@ -613,6 +665,7 @@ $wgManageWikiSettings = [
 		],
 		'options' => [
 			'Activity' => 'activity',
+			'Articles' => 'articles',
 			'Avatar' => 'avatar',
 			'Awards' => 'awards',
 			'Board' => 'board',
@@ -629,6 +682,7 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => [
 			'activity' => false,
+			'articles' => true,
 			'avatar' => true,
 			'awards' => true,
 			'board' => false,
@@ -664,7 +718,73 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
 	],
-	
+	'wgTwitterCardType' => [
+		'name' => 'Twitter Card Type (WikiSEO)',
+		'from' => 'wikiseo',
+		'restricted' => false,
+		'type' => 'list',
+		'overridedefault' => 'summery_large_image',
+		'section' => 'edit',
+		'help' => 'Type of twitter card to use.',
+		'options' => [
+			'Summary' => 'summary',
+			'Summary large image' => 'summary_large_image',
+		],
+	],
+	'wgGoogleSiteVerificationKey' => [
+		'name' => 'Google Site Verification Key (WikiSEO)',
+		'from' => 'wikiseo',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Site verification key for Google Search Console.',
+	],
+	'wgBingSiteVerificationKey' => [
+		'name' => 'Bing Site Verification Key (WikiSEO)',
+		'from' => 'wikiseo',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Site verification key for Bing Webmaster Center.',
+	],
+	'wgFacebookAppId' => [
+		'name' => 'Facebook App Id (WikiSEO)',
+		'from' => 'wikiseo',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'App Id for Facebook Insights.',
+	],
+	'wgYandexSiteVerificationKey' => [
+		'name' => 'Yandex Site Verification Key (WikiSEO)',
+		'from' => 'wikiseo',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Site verification key for Yandex Webmasters.',
+	],
+	'wgAlexaSiteVerificationKey' => [
+		'name' => 'Alexa Site Verification Key (WikiSEO)',
+		'from' => 'wikiseo',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Site verification key for Alexa Console.',
+	],
+	'wgPinterestSiteVerificationKey' => [
+		'name' => 'Pinterest Site Verification Key (WikiSEO)',
+		'from' => 'wikiseo',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Site verification key for Pinterest Console.',
+	],
 	// Links
 	'wgExternalLinkTarget' => [
 		'name' => 'External Link Target',
@@ -688,7 +808,7 @@ $wgManageWikiSettings = [
 		'maxint' => 120,
 		'overridedefault' => 10,
 		'section' => 'links',
-		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 10. Max: 120.'
+		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.'
 	],
 
 	// Localisation (E.G i18n/timezone etc)
@@ -733,7 +853,15 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 	],
-
+	'wmgUseYandexTranslate' => [
+		'name' => 'Use Yandex Machine Translation on Special:Translate',
+		'from' => 'translate',
+		'restricted' => 'false',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'localisation',
+		'help' => 'Adds suggestions from Yandex to Special:Translate',
+	],
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
 		'name' => 'Kartographer Wikivoyage Mode',
@@ -885,6 +1013,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'If set, the drag & drop area will be shown.',
 	],
+	'wgMaxImageArea' => [
+		'name' => 'Max Image Area',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '1.25e7',
+		'section' => 'media',
+		'help' => 'Specifies the max pixels you can have in a image.',
+	],
 	'wgCommonsMetadataForceRecalculate' => [
 		'name' => 'Force Remote Image Description Parsing',
 		'from' => 'commonsmetadata',
@@ -977,13 +1114,15 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
 	],
-	
+
 	// Recent changes
 	'wgRCMaxAge' => [
 		'name' => 'RecentChanges max age',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'text',
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 15552000,
 		'overridedefault' => 180 * 24 * 3600,
 		'section' => 'recentchanges',
 		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will go.',
@@ -999,6 +1138,8 @@ $wgManageWikiSettings = [
 			'7 (604800 seconds)' => 7,
 			'14 (1209600 seconds)' => 14,
 			'30 (2592000 seconds)' => 30,
+			'60 (5184000 seconds)' => 60,
+			'90 (7776000 seconds)' => 90,
 			'180 (15552000 seconds)' => 180,
 		],
 		'overridedefault' => [
@@ -1040,15 +1181,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Restricted (where settings that are restricted go)
-	'wgServer' => [
-		'name' => 'Custom Domain',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => null,
-		'section' => 'restricted',
-		'help' => 'By default your wiki is available at https://yourwiki.miraheze.org - a subdomain of Miraheze but you can request us to redirect your wiki to a domain you own. Right now is not yet possible to do it without assistance from our sysadmins, but you can learn more here https://meta.miraheze.org/wiki/Custom_domains',
-	],
 	'wgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
 		'from' => 'mediawiki',
@@ -1102,21 +1234,12 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'Maximum page size in kilobytes.',
 	],
-	'wgMaxImageArea' => [
-		'name' => 'Max Image Area',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => '1.25e7',
-		'section' => 'restricted',
-		'help' => 'Specifies the max pixels you can have in a image.',
-	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
 		'from' => 'mediawiki',
 		'restricted' => true,
 		'type' => 'text',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the DisqusTag extension.',
 	],
@@ -1125,7 +1248,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => true,
 		'type' => 'text',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
 	],
@@ -1201,12 +1324,14 @@ $wgManageWikiSettings = [
 			'jpeg' => 'jpeg',
 			'jpg' => 'jpg',
 			'js' => 'js',
+			'm4a' => 'm4a',
 			'mat' => 'mat',
 			'mbz' => 'mbz',
 			'md' => 'md',
 			'mhtml' => 'mhtml',
 			'mid' => 'mid',
 			'midi' => 'midi',
+			'mkv' => 'mkv',
 			'mov' => 'mov',
 			'mp3' => 'mp3',
 			'mp4' => 'mp4',
@@ -1218,6 +1343,7 @@ $wgManageWikiSettings = [
 			'odp' => 'odp',
 			'ods' => 'ods',
 			'odt' => 'odt',
+			'off' => 'off',
 			'oga' => 'oga',
 			'ogg' => 'ogg',
 			'ogv' => 'ogv',
@@ -1245,6 +1371,7 @@ $wgManageWikiSettings = [
 			'smc' => 'smc',
 			'spc' => 'spc',
 			'spl' => 'spl',
+			'stl' => 'stl',
 			'sty' => 'sty',
 			'svg' => 'svg',
 			'swf' => 'swf',
@@ -1324,27 +1451,27 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'text',
-		'overridedefault' => null,
+		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can change it.',
+		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it.',
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'text',
-		'overridedefault' => null,
+		'overridedefault' => '/favicon.ico',
 		'section' => 'styling',
-		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F for how you can add one.',
+		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can add one.',
 	],
 	'wgAppleTouchIcon' => [
 		'name' => 'Apple Touch Icon',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'text',
-		'overridedefault' => null,
+		'overridedefault' => '/apple-touch-icon.png',
 		'section' => 'styling',
-		'help' => 'Favicon for Apple mobile devices. See https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F on how you can add one.',
+		'help' => 'Favicon for Apple mobile devices. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> on how you can add one.',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
@@ -1371,7 +1498,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from [[MediaWiki:Metrolook-tiles]]. If "Metrolook Down Arrow" is not set and "Metrolook Bartile" is not set, then the tile menu will be generated from [[MediaWiki:Metrolook-tiles-second]].',
+		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles">MediaWiki:Metrolook-tiles</a>. If "Metrolook Down Arrow" is not set and "Metrolook Bartile" is not set, then the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles-second">MediaWiki:Metrolook-tiles-second</a>.',
 	],
 	'wgMetrolookMobile' => [
 		'name' => 'Metrolook Mobile',
@@ -1480,4 +1607,64 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'When enabled, this shows Popups by default.',
 	],
+
+	// Wikibase
+	'wmgWikibaseRepoUrl' => [
+		'name' => 'Repository URL',
+		'restricted' => false,
+		'from' => 'wikibaseclient',
+		'type' => 'url',
+		'overridedefault' => 'https://wikidata.org',
+		'section' => 'wikibase',
+		'help' => 'URL of the Wikibase repository the client should connect to.'
+	],
+	'wmgWikibaseRepoDatabase' => [
+		'name' => 'Repository Database',
+		'restricted' => false,
+		'from' => 'wikibaseclient',
+		'type' => 'databases',
+		'overridedefault' => $wi->dbname,
+		'section' => 'wikibase',
+		'help' => 'Database identifier of the repository being used. If unknown, select the identifier for this wiki.'
+	],
+	'wmgAllowEntityImport' => [
+		'name' => 'Allow Entity Import',
+		'restricted' => false,
+		'from' => 'wikibaserepository',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Allow importing entities via Special:Import and importDump.php.',
+	],
+	'wmgEnableEntitySearchUI' => [
+		'name' => 'Enable Entity Search UI',
+		'restricted' => false,
+		'from' => 'wikibaserepository',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'wikibase',
+		'help' => 'To determine if entity search UI should be enabled or not.',
+	],
+	'wmgWikibaseItemNamespaceID' => [
+		'name' => 'Item Namespace ID',
+		'from' => 'wikibaseclient',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 0,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Item namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+	],
+	'wmgWikibasePropertuNamespaceID' => [
+		'name' => 'Property Namespace ID',
+		'from' => 'wikibaseclient',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 120,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Property namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+	]
 ];

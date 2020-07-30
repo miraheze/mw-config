@@ -1,9 +1,9 @@
 <?php
 $wmgLogDir = "/var/log/mediawiki";
 
-$wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
+$wi->config->settings['wgDBerrorLog']['default'] = "$wmgLogDir/debuglogs/database.log";
 
-$wgDebugLogGroups = [
+$wi->config->settings['wgDebugLogGroups']['default'] = [
 	'404' => "$wmgLogDir/debuglogs/404.log",
 	'api' => "$wmgLogDir/debuglogs/api.log",
 	'captcha' => "$wmgLogDir/debuglogs/captcha.log",

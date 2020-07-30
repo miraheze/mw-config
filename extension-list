@@ -13,7 +13,9 @@ $IP/extensions/AutoCreatePage/AutoCreatePage.php
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
+$IP/extensions/Bootstrap/extension.json
 $IP/extensions/CSS/extension.json
+$IP/extensions/Calendar/extension.json
 $IP/extensions/Cargo/extension.json
 $IP/extensions/CategorySortHeaders/CategorySortHeaders.php
 $IP/extensions/CategoryTree/extension.json
@@ -28,7 +30,8 @@ $IP/extensions/Citoid/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CollapsibleVector/extension.json
-$IP/extensions/Collection/Collection.php
+$IP/extensions/Collection/extension.json
+$IP/extensions/CommentStreams/extension.json
 $IP/extensions/Comments/extension.json
 $IP/extensions/ConfirmEdit/ReCaptchaNoCaptcha/extension.json
 $IP/extensions/ConfirmEdit/extension.json
@@ -44,6 +47,7 @@ $IP/extensions/CreateWiki/extension.json
 $IP/extensions/CrossReference/extension.json
 $IP/extensions/DarkMode/extension.json
 $IP/extensions/DataDump/extension.json
+$IP/extensions/DataTransfer/extension.json
 $IP/extensions/Description2/extension.json
 $IP/extensions/DPLForum/extension.json
 $IP/extensions/Disambiguator/extension.json
@@ -55,6 +59,7 @@ $IP/extensions/DisplayTitle/extension.json
 $IP/extensions/DummyFandoomMainpageTags/extension.json
 $IP/extensions/DynamicPageList/extension.json
 $IP/extensions/DynamicPageList3/extension.json
+$IP/extensions/DynamicSidebar/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
 $IP/extensions/Editcount/extension.json
@@ -63,8 +68,9 @@ $IP/extensions/Elastica/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php
 $IP/extensions/FeaturedFeeds/extension.json
-$IP/extensions/FlaggedRevs/FlaggedRevs.php
+$IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
+$IP/extensions/ForcePreview/extension.json
 $IP/extensions/FontAwesome/extension.json
 $IP/extensions/Gadgets/extension.json
 $IP/extensions/Genealogy/extension.json
@@ -74,7 +80,9 @@ $IP/extensions/GettingStarted/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalPreferences/extension.json
+$IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
+$IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/Graph/extension.json
 $IP/extensions/GroupsSidebar/GroupsSidebar.php
 $IP/extensions/GuidedTour/extension.json
@@ -87,13 +95,15 @@ $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageRating/extension.json
 $IP/extensions/InputBox/extension.json
 $IP/extensions/Interwiki/extension.json
-$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php
+$IP/extensions/JavascriptSlideshow/extension.json
 $IP/extensions/Josa/extension.json
 $IP/extensions/JSBreadCrumbs/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LastModified/LastModified.php
+$IP/extensions/LanguageSelector/LanguageSelector.php
+$IP/extensions/Lingo/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/LinkTarget.php
 $IP/extensions/LinkTitles/extension.json
@@ -108,6 +118,7 @@ $IP/extensions/MassEditRegex/MassEditRegex.php
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MediaWikiChat/extension.json
+$IP/extensions/Mermaid/extension.json
 $IP/extensions/MirahezeMagic/extension.json
 $IP/extensions/MobileDetect/MobileDetect.php
 $IP/extensions/MobileFrontend/extension.json
@@ -124,7 +135,6 @@ $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/NewUserNotif/NewUserNotif.php
 $IP/extensions/NewestPages/extension.json
-$IP/extensions/News/News.php
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/NoTitle/extension.json
 $IP/extensions/Nuke/extension.json
@@ -137,7 +147,7 @@ $IP/extensions/PageDisqus/extension.json
 $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json
 $IP/extensions/PageImages/extension.json
-$IP/extensions/PageNotice/PageNotice.php
+$IP/extensions/PageNotice/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
@@ -169,7 +179,7 @@ $IP/extensions/ScratchBlocks/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
-$IP/extensions/SiteScout/extension.json
+$IP/extensions/SlackNotifications/extension.json
 $IP/extensions/SoftRedirector/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
 $IP/extensions/SocialProfile/SystemGifts/extension.json
@@ -202,13 +212,16 @@ $IP/extensions/TitleKey/extension.json
 $IP/extensions/TocTree/extension.json
 $IP/extensions/TorBlock/extension.json
 $IP/extensions/Translate/Translate.php
+$IP/extensions/TreeAndMenu/extension.json
 $IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UserMerge/extension.json
+$IP/extensions/UserFunctions/UserFunctions.php
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/extension.json
+$IP/extensions/VEForAll/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
@@ -228,8 +241,10 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
+$IP/skins/Citizen/skin.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/DuskToDawn/skin.json
+$IP/skins/Femiwiki/skin.json
 $IP/skins/Gamepress/skin.json
 $IP/skins/liberty/skin.json
 $IP/skins/Mask/skin.json
@@ -248,3 +263,4 @@ $IP/skins/erudite/skin.json
 $IP/skins/foreground/skin.json
 $IP/skins/pivot/skin.json
 $IP/extensions/Preloader/extension.json
+$IP/extensions/RegexFunctions/RegexFunctions.php

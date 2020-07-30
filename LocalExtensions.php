@@ -8,8 +8,7 @@ if ( $wmgUse3D ) {
 		'/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/3d2png/3d2png.js'
 	];
 
-	$wgTrustedMediaFormats[] = 'application/sla';
-	$wgFileExtensions[] = 'stl';
+	$wi->config->settings['wgTrustedMediaFormats']['default'][] = 'application/sla';
 }
 
 if ( $wmgUseAddThis ) {
@@ -52,7 +51,7 @@ if ( $wmgUseApprovedRevs ) {
 	$wgAvailableRights[] = 'viewlinktolatest';
 	$wgAvailableRights[] = 'viewapprover';
 
-	$wgManageWikiNamespacesAdditional['egApprovedRevsEnabledNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['egApprovedRevsEnabledNamespaces'] = [
 		'name' => 'Enable ApprovedRevs in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -72,6 +71,7 @@ if ( $wmgUseArticleToCategory2 ) {
 
 if ( $wmgUseAuthorProtect ) {
 	wfLoadExtension( 'AuthorProtect' );
+	$wi->config->settings['wgRestrictionLevels']['default'][] = 'author';
 }
 
 if ( $wmgUseAutoCreateCategoryPages ) {
@@ -87,10 +87,13 @@ if ( $wmgUseBabel ) {
 }
 
 if ( $wmgUseBlogPage ) {
-	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'BlogPage' );
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
+
+if ( $wmgUseBootstrap ) {
+	wfLoadExtension( 'Bootstrap' );
+};
 
 if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
@@ -166,7 +169,7 @@ if ( $wmgUseCiteThisPage ) {
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
 
-	$wgCitoidFullRestbaseURL = "https://{$wmgHostname}/{$wmgHostname}/";
+    $wgCitoidFullRestbaseURL = "https://{$wi->hostname}/{$wi->hostname}/";
 }
 
 if ( $wmgUseCodeEditor ) {
@@ -182,15 +185,27 @@ if ( $wmgUseCollapsibleVector ) {
 }
 
 if ( $wmgUseCollection ) {
-	require_once "$IP/extensions/Collection/Collection.php";
+	wfLoadExtension( 'Collection' );
 
 	$wgCommunityCollectionNamespace = 5;
 
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
-	$wgCollectionPODPartners = false;
+	$wgCollectionPODPartners = [];
 
 	wfLoadExtension( 'ElectronPdfService' );
+}
+
+if ( $wmgUseCommentStreams ) {
+	wfLoadExtension ( 'CommentStreams' );
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgCommentStreamsAllowedNamespaces'] = [
+		'name' => 'Can comments appear in this namespace?',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'vestyle' => false,
+		'overridedefault' => null,
+	];
 }
 
 if ( $wmgUseComments ) {
@@ -224,11 +239,20 @@ if ( $wmgUseCreateRedirect ) {
 }
 
 if ( $wmgUseCrossReference ) {
-	require_once "$IP/extensions/CrossReference/CrossReference.php";
+	wfLoadExtension( 'CrossReference' );
 }
 
 if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
+}
+
+if ( $wmgUseCalendarWikivoyage ) {
+	wfLoadExtension( 'Calendar' );
+}
+
+if ( $wmgUseCitizen ) {
+	wfLoadSkin( 'Citizen' );
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Citizen'] = 'citizen';
 }
 
 if ( $wmgUseDarkMode ) {
@@ -241,7 +265,7 @@ if ( $wmgUseDarkMode ) {
 if ( $wmgUseDataDump ) {
 	wfLoadExtension( 'DataDump' );
 
-	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/${wgDBname}/";
+	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wgDBname}/";
 
 	$wgDataDump = [
 		'xml' => [
@@ -254,7 +278,7 @@ if ( $wmgUseDataDump ) {
 					'--logs',
 					'--uploads',
 					'--output',
-					"gzip:${wgDataDumpDirectory}" . '${filename}',
+					"gzip:{$wgDataDumpDirectory}" . '${filename}',
 				],
 			],
 			'limit' => 1,
@@ -272,7 +296,24 @@ if ( $wmgUseDataDump ) {
 				'options' => [
 					'-r',
 					$wgDataDumpDirectory . '${filename}',
-					"/mnt/mediawiki-static/${wgDBname}/"
+					"/mnt/mediawiki-static/{$wgDBname}/"
+				],
+			],
+			'limit' => 1,
+			'permissions' => [
+				'view' => 'view-dump',
+				'generate' => 'generate-dump',
+				'delete' => 'delete-dump',
+			],
+		],
+		'managewiki_backup' => [
+			'file_ending' => '.json',
+			'generate' => [
+				'type' => 'mwscript',
+				'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+				'options' => [
+					'--filename',
+					'${filename}'
 				],
 			],
 			'limit' => 1,
@@ -287,6 +328,10 @@ if ( $wmgUseDataDump ) {
 	$wgAvailableRights[] = 'view-dump';
 	$wgAvailableRights[] = 'generate-dump';
 	$wgAvailableRights[] = 'delete-dump';
+}
+
+if ( $wmgUseDataTransfer ) {
+	wfLoadExtension( 'DataTransfer' );
 }
 
 if ( $wmgUseDescription2 ) {
@@ -339,6 +384,10 @@ if ( $wmgUseDynamicPageList3 ) {
 	wfLoadExtension( 'DynamicPageList3' );
 }
 
+if ( $wmgUseDynamicSidebar ) {
+	wfLoadExtension( 'DynamicSidebar' );
+}
+
 if ( $wmgUseEditcount ) {
 	wfLoadExtension( 'Editcount' );
 }
@@ -357,8 +406,14 @@ if ( $wmgUseFancyBoxThumbs ) {
 	require_once "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php";
 }
 
+if ( $wmgUseFemiwiki ) {
+	wfLoadSkin( 'Femiwiki' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Femiwiki'] = 'femiwiki';
+}
+
 if ( $wmgUseFlaggedRevs ) {
-	require_once "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
+	wfLoadExtension( 'FlaggedRevs' );
 
 	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
 	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
@@ -370,7 +425,7 @@ if ( $wmgUseFlaggedRevs ) {
 	$wgSimpleFlaggedRevsUI = $wmgSimpleFlaggedRevsUI;
 	$wgFlaggedRevsLowProfile = $wmgFlaggedRevsLowProfile;
 
-	$wgManageWikiNamespacesAdditional['wgFlaggedRevsNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgFlaggedRevsNamespaces'] = [
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'main' => true,
 		'talk' => false,
@@ -391,12 +446,16 @@ if ( $wmgUseFlow ) {
 		'restbaseCompat' => false,
 	];
 
-	$wgManageWikiPermissionsAdditionalRights['oversight']['flow-suppress'] = true;
-	$wgManageWikiNamespacesExtraContentModels['Flow'] = 'flow-board';
+	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
+	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
 
 if ( $wmgUseFeaturedFeeds ) {
 	wfLoadExtension( 'FeaturedFeeds' );
+}
+
+if ( $wmgUseForcePreview) {
+	wfLoadExtension( 'ForcePreview' );
 }
 
 if ( $wmgUseForeground ) {
@@ -441,8 +500,17 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
+
+if ( $wgMirahezeCommons && !$cwPrivate ) {
+	wfLoadExtension( 'GlobalUsage' );
+}
+
 if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
+}
+
+if ( $wmgUseGoogleDocs4MW ) {
+	wfLoadExtension( 'GoogleDocs4MW' );
 }
 
 if ( $wmgUseGraph ) {
@@ -490,7 +558,7 @@ if ( $wmgUseInputBox ) {
 }
 
 if ( $wmgUseJavascriptSlideshow ) {
-	require_once "$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php";
+	wfLoadExtension( 'JavascriptSlideshow' );
 }
 
 if ( $wmgUseJosa ) {
@@ -511,6 +579,10 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
+if ($wmgUseLanguageSelector) {
+	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
+}
+
 if ($wmgUseLastModified) {
 	require_once "$IP/extensions/LastModified/LastModified.php";
 }
@@ -519,6 +591,10 @@ if ( $wmgUseLiberty ) {
 	wfLoadSkin( 'liberty' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
+}
+
+if ( $wmgUseLingo ) {
+	wfLoadExtension( 'Lingo' );
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -565,7 +641,7 @@ if ( $wmgUseMassEditRegex ) {
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
 
-	$wgManageWikiNamespacesAdditional['wgNamespacesToPostIn'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgNamespacesToPostIn'] = [
 		'name' => 'Can MassMessage post messages in this namespace?',
 		'main' => true,
 		'talk' => false,
@@ -581,6 +657,11 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseMediaWikiChat ) {
 	wfLoadExtension( 'MediaWikiChat' );
+	$wi->config->settings['wgRevokePermissions']['default']['blockedfromchat']['chat'] = true;
+}
+
+if ( $wmgUseMermaid ) {
+	wfLoadExtension( 'Mermaid' );
 }
 
 if ( $wmgUseMetrolook ) {
@@ -596,7 +677,7 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
-	$wgMFStopRedirectCookieHost = $wmgHostname;
+	$wgMFStopRedirectCookieHost = $wi->hostname;
 
 	$wgHooks['EnterMobileMode'][] = function () {
 		global $wgIncludeLegacyJavaScript;
@@ -654,10 +735,6 @@ if ( $wmgUseNewestPages ) {
 	wfLoadExtension( 'NewestPages' );
 }
 
-if ( $wmgUseNews ) {
-	require_once "$IP/extensions/News/News.php";
-}
-
 if ( $wmgUseNewSignupPage ) {
 	wfLoadExtension( 'NewSignupPage' );
 }
@@ -682,7 +759,7 @@ if ( $wmgUseNostalgia ) {
 
 if ( $wmgUseNoTitle ) {
 	wfLoadExtension( 'NoTitle' );
-	$wgRestrictDisplayTitle = false;
+	$wi->config->settings['wgRestrictDisplayTitle']['default'] = false;
 }
 
 if ( $wmgUseNukeDPL ) {
@@ -709,7 +786,7 @@ if ( $wmgUsePageForms ) {
 }
 
 if ( $wmgUsePageNotice ) {
-	require_once "$IP/extensions/PageNotice/PageNotice.php";
+	wfLoadExtension( 'PageNotice' );
 }
 
 if ( $wmgUsePageTriage ) {
@@ -747,9 +824,10 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
+	wfLoadExtension( 'TextExtracts' );
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
-	wfLoadExtension( 'TextExtracts' );
+	wfLoadExtension( 'TextExtracts' )
 	
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
@@ -856,8 +934,19 @@ if ( $wmgUseSimpleTooltip ) {
 	require_once "$IP/extensions/SimpleTooltip/SimpleTooltip.php";
 }
 
-if ( $wmgUseSiteScout ) {
-	wfLoadExtension( 'SiteScout' );
+if ( $wmgUseSlackNotifications ) {
+	wfLoadExtension( 'SlackNotifications' );
+	$wgSlackFromName = $wgSitename;
+	$wgSlackNotificationWikiUrlEnding = 'index.php?title=';
+	$wgSlackNotificationWikiUrl = $wgServer . '/w/';
+	$wgSlackShowNewUserEmail = false;
+	$wgSlackShowNewUserIP = false;
+	$wgSlackIncomingWebhookUrl =
+		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
+}
+
+if ( $wmgUseSoftRedirector) {
+	wfLoadExtension( 'SoftRedirector' );
 }
 
 if ( $wmgUseSoftRedirector) {
@@ -888,16 +977,24 @@ if ( $wmgUseSubPageList3 ) {
 	wfLoadExtension( 'SubPageList3' );
 }
 
+if ( $wmgUseSyntaxHighlightGeSHi ) {
+	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+}
+
 if ( $wmgUseTabsCombination ) {
 	wfLoadExtension( 'Tabber' );
 
 	wfLoadExtension( 'Tabs' );
 }
 
+if ( $wmgUseTemplateData ) {
+        wfLoadExtension( 'TemplateData' );
+}
+	
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 
-	$wgManageWikiNamespacesAdditional['wgTemplateSandboxEditNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgTemplateSandboxEditNamespaces'] = [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -929,6 +1026,10 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
 	require_once "/srv/mediawiki/config/TranslateConfigHack.php";
 	$wgULSGeoService = false;
+}
+
+if ( $wmgUseTreeAndMenu ) {
+	wfLoadExtension( 'TreeAndMenu' );
 }
 
 if ( $wmgUseThanks ) {
@@ -979,6 +1080,10 @@ if ( $wmgUseUrlGetParameters ) {
 	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
 }
 
+if ( $wmgUseUserFunctions ) {
+	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+}
+
 if ( $wmgUseUserWelcome ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
@@ -986,6 +1091,10 @@ if ( $wmgUseUserWelcome ) {
 
 if ( $wmgUseVariables ) {
 	wfLoadExtension( 'Variables' );
+}
+
+if ( $wmgUseVEForAll ) {
+	wfLoadExtension ( 'VEForAll' );
 }
 
 if ( $wmgUseVisualEditor ) {
@@ -1000,13 +1109,13 @@ if ( $wmgUseVisualEditor ) {
 	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
-		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		$wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
 	} else {
-		$wgDefaultUserOptions['visualeditor-enable'] = 0;
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
 
-	$wgManageWikiNamespacesAdditional['wgVisualEditorAvailableNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgVisualEditorAvailableNamespaces'] = [
 		'name' => 'Enable VisualEditor in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -1047,7 +1156,7 @@ if ( $wmgUseWikiCategoryTagCloud ) {
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 
-	$wgManageWikiNamespacesAdditional['wgWPBNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgWPBNamespaces'] = [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
 		'main' => true,
 		'talk' => true,
@@ -1056,6 +1165,9 @@ if ( $wmgUseWikidataPageBanner ) {
 		'overridedefault' => false
 	];
 }
+
+$wgEnableWikibaseRepo = false;
+$wgEnableWikibaseClient = false;
 
 if ( $wmgUseWikibaseRepository ) {
 	$wgEnableWikibaseRepo = true;
@@ -1105,3 +1217,8 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 if ( $wmgUseYouTube ) {
 	wfLoadExtension( 'YouTube' );
 }
+
+if ( $wmgUseRegexFunctions) {
+	require_once "$IP/extensions/RegexFunctions/RegexFunctions.php";
+}
+

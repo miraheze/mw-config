@@ -2,25 +2,28 @@
 
 if ( $wmgSiteNoticeOptOut ) {
 	// only show important notices when optout
-	$wgNoticeProject = 'optout';
+	$wi->config->settings['wgNoticeProject']['default'] = 'optout';
 }
 
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 43;
+$wgMajorSiteNoticeID = 48;
 
 // Write your SiteNotice below.  Comment out this section to disable.
+/*
+if ( !$wmgSiteNoticeOptOut ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+		global $wmgSiteNoticeOptOut, $snImportant;
 
-/*$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
-
-	$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze is doing maintenance on DB at 20:00 UTC. This will last until approximately 02:00 UTC. During this time your wiki may be in read only mode. Please save edits 5 minutes before. We apologise that we are doing another migration, but it is necessary in order to reduce the recent slow loading times.</td>
-			</tr></tbody></table>
+		$siteNotice .= <<<EOF
+				<table class="wikitable" style="text-align:center;"><tbody><tr>
+				<td style="font-size:125%">Miraheze celebrates its fifth birthday today. <a href="https://meta.miraheze.org/wiki/Miraheze-5-year">Come celebrate with us! 🎈</a></a></td>
+				</tr></tbody></table>
 EOF;
 
 		return true;
-}*/
+	}
+}
+*/
