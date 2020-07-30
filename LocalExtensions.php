@@ -8,8 +8,7 @@ if ( $wmgUse3D ) {
 		'/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/3d2png/3d2png.js'
 	];
 
-	$wgTrustedMediaFormats[] = 'application/sla';
-	$wgFileExtensions[] = 'stl';
+	$wi->config->settings['wgTrustedMediaFormats']['default'][] = 'application/sla';
 }
 
 if ( $wmgUseAddThis ) {
@@ -26,6 +25,10 @@ if ( $wmgUseAdminLinks ) {
 	wfLoadExtension( 'AdminLinks' );
 }
 
+if ( $wmgUseAdvancedSearch ) {
+	wfLoadExtension( 'AdvancedSearch' );
+}
+
 if ( $wmgUseAJAXPoll ) {
 	wfLoadExtension( 'AJAXPoll' );
 }
@@ -34,7 +37,11 @@ if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Apex'] = 'apex';
+	
+	$wgApexLogo = [
+		'1x' => $wgLogo,
+		'2x' => $wgLogo,
+	];
 }
 
 if ( $wmgUseApprovedRevs ) {
@@ -44,18 +51,14 @@ if ( $wmgUseApprovedRevs ) {
 	$wgAvailableRights[] = 'viewlinktolatest';
 	$wgAvailableRights[] = 'viewapprover';
 
-	$wgManageWikiNamespacesAdditional['egApprovedRevsEnabledNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['egApprovedRevsEnabledNamespaces'] = [
 		'name' => 'Enable ApprovedRevs in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => true,
 		'overridedefault' => false
 	];
-}
-
-if ( $wmgUseArticleFeedbackv5 ) {
-	wfLoadExtension( 'ArticleFeedbackv5' );
-	$wgManageWikiPermissionsAdditionalRights['oversight']['aft-oversighter'] = true;
 }
 
 if ( $wmgUseArticleRatings ) {
@@ -68,10 +71,15 @@ if ( $wmgUseArticleToCategory2 ) {
 
 if ( $wmgUseAuthorProtect ) {
 	wfLoadExtension( 'AuthorProtect' );
+	$wi->config->settings['wgRestrictionLevels']['default'][] = 'author';
 }
 
 if ( $wmgUseAutoCreateCategoryPages ) {
 	wfLoadExtension( 'AutoCreateCategoryPages' );
+}
+
+if ( $wmgUseAutoCreatePage ) {
+	require_once "$IP/extensions/AutoCreatePage/AutoCreatePage.php";
 }
 
 if ( $wmgUseBabel ) {
@@ -79,10 +87,13 @@ if ( $wmgUseBabel ) {
 }
 
 if ( $wmgUseBlogPage ) {
-	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'BlogPage' );
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
+
+if ( $wmgUseBootstrap ) {
+	wfLoadExtension( 'Bootstrap' );
+};
 
 if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
@@ -90,11 +101,6 @@ if ( $wmgUseMSCalendar ) {
 
 if ( $wmgUseCargo ) {
 	wfLoadExtension( 'Cargo' );
-	$wgCargoDBname = $wgDBname;
-	$wgCargoDBtype = $wgDBtype;
-	$wgCargoDBserver = "81.4.109.166";
-	$wgCargoDBuser = $wgDBuser;
-	$wgCargoDBpassword = $wgDBpassword;
 }
 
 if ( $wmgUseCategorySortHeaders ) {
@@ -121,17 +127,30 @@ if ( $wmgUseCirrusSearch ) {
 	$wgCirrusSearchClusters = [
 		'default' => [
 			[
-				'host' => 'elasticsearch-lb.miraheze.org',
+				'host' => 'es-lb.miraheze.org',
 				'transport' => 'Https',
 				'port' => '443',
 			],
 		],
 	];
 
+	$wgCirrusSearchAllowLeadingWildcard = false;
+	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
+	$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '15s';
+	$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 50;
+	$wgCirrusSearchSearchShardTimeout[ 'default' ] = '10s';
+	$wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 40;
+	$wgCirrusSearchReplicas = '0-0';
+	$wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 2;
+	$wgCirrusSearchConnectionAttempts = 3;
+	$wgCirrusSearchMasterTimeout = '5m';
+
+	$wgCirrusSearchShardCount = [ 'content' => 2, 'general' => 2, 'archive' => 2, 'titlesuggest' => 2 ];
+
 	if ( $wmgSearchType ) {
 		$wgSearchType = 'CirrusSearch';
 	}
-	
+
 	if ( $wmgDisableSearchUpdate ) {
 		$wgDisableSearchUpdate = true;
 	} else {
@@ -150,7 +169,7 @@ if ( $wmgUseCiteThisPage ) {
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
 
-	$wgCitoidServiceUrl = "https://{$wmgHostname}/api/rest_";
+	$wgCitoidFullRestbaseURL = "https://{$wi->hostname}/{$wi->hostname}/";
 }
 
 if ( $wmgUseCodeEditor ) {
@@ -166,19 +185,35 @@ if ( $wmgUseCollapsibleVector ) {
 }
 
 if ( $wmgUseCollection ) {
-	require_once "$IP/extensions/Collection/Collection.php";
+	wfLoadExtension( 'Collection' );
 
 	$wgCommunityCollectionNamespace = 5;
 
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
-	$wgCollectionPODPartners = false;
+	$wgCollectionPODPartners = [];
 
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
+if ( $wmgUseCommentStreams ) {
+	wfLoadExtension ( 'CommentStreams' );
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgCommentStreamsAllowedNamespaces'] = [
+		'name' => 'Can comments appear in this namespace?',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'vestyle' => false,
+		'overridedefault' => null,
+	];
+}
+
 if ( $wmgUseComments ) {
 	wfLoadExtension( 'Comments' );
+}
+
+if ( $wmgUseCommonsMetadata ) {
+	wfLoadExtension( 'CommonsMetadata' );
 }
 
 if ( $wmgUseContactPage ) {
@@ -196,24 +231,32 @@ if ( $wmgUseContributionScores ) {
 if ( $wmgUseCreatePage ) {
 	require_once "$IP/extensions/CreatePage/CreatePage.php";
 }
-
+if ( $wmgUseCreatePageUw ) {
+	wfLoadExtension( 'CreatePageUw' );
+}
 if ( $wmgUseCreateRedirect ) {
 	wfLoadExtension( 'CreateRedirect' );
 }
 
 if ( $wmgUseCrossReference ) {
-	require_once "$IP/extensions/CrossReference/CrossReference.php";
+	wfLoadExtension( 'CrossReference' );
 }
 
 if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
 }
 
-if ( $wmgUseDarkVector ) {
-	wfLoadSkin( 'DarkVector' );
+if ( $wmgUseCalendarWikivoyage ) {
+	wfLoadExtension( 'Calendar' );
+}
 
-	$wgManageWikiSettings['wgDefaultSkin']['options']['DarkVector'] = 'darkvector';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['DarkVector'] = 'darkvector';
+if ( $wmgUseCitizen ) {
+	wfLoadSkin( 'Citizen' );
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Citizen'] = 'citizen';
+}
+
+if ( $wmgUseDarkMode ) {
+	wfLoadExtension( 'DarkMode' );
 }
 
 /**
@@ -222,7 +265,7 @@ if ( $wmgUseDarkVector ) {
 if ( $wmgUseDataDump ) {
 	wfLoadExtension( 'DataDump' );
 
-	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/${wgDBname}/";
+	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wgDBname}/";
 
 	$wgDataDump = [
 		'xml' => [
@@ -232,8 +275,10 @@ if ( $wmgUseDataDump ) {
 				'script' => "$IP/maintenance/dumpBackup.php",
 				'options' => [
 					'--full',
+					'--logs',
+					'--uploads',
 					'--output',
-					"gzip:${wgDataDumpDirectory}" . '${filename}',
+					"gzip:{$wgDataDumpDirectory}" . '${filename}',
 				],
 			],
 			'limit' => 1,
@@ -251,13 +296,30 @@ if ( $wmgUseDataDump ) {
 				'options' => [
 					'-r',
 					$wgDataDumpDirectory . '${filename}',
-					"/mnt/mediawiki-static/${wgDBname}/"
+					"/mnt/mediawiki-static/{$wgDBname}/"
 				],
 			],
 			'limit' => 1,
 			'permissions' => [
 				'view' => 'view-dump',
-				'generate' => 'managewiki-restricted',
+				'generate' => 'generate-dump',
+				'delete' => 'delete-dump',
+			],
+		],
+		'managewiki_backup' => [
+			'file_ending' => '.json',
+			'generate' => [
+				'type' => 'mwscript',
+				'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+				'options' => [
+					'--filename',
+					'${filename}'
+				],
+			],
+			'limit' => 1,
+			'permissions' => [
+				'view' => 'view-dump',
+				'generate' => 'generate-dump',
 				'delete' => 'delete-dump',
 			],
 		],
@@ -266,6 +328,10 @@ if ( $wmgUseDataDump ) {
 	$wgAvailableRights[] = 'view-dump';
 	$wgAvailableRights[] = 'generate-dump';
 	$wgAvailableRights[] = 'delete-dump';
+}
+
+if ( $wmgUseDataTransfer ) {
+	wfLoadExtension( 'DataTransfer' );
 }
 
 if ( $wmgUseDescription2 ) {
@@ -286,11 +352,14 @@ if ( $wmgUseDismissableSiteNotice ) {
 	wfLoadExtension( 'DismissableSiteNotice' );
 }
 
+if ( $wmgUseDisqusTag ) {
+	wfLoadExtension( 'DisqusTag' );
+}
+
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['DuskToDawn'] = 'dusktodawn';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['DuskToDawn'] = 'dusktodawn';
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
@@ -305,16 +374,16 @@ if ( $wmgUseDummyFandoomMainpageTags ) {
 	wfLoadExtension( 'DummyFandoomMainpageTags' );
 }
 
-if ( $wmgUseDuplicator ) {
-	require_once "$IP/extensions/Duplicator/Duplicator.php";
-}
-
 if ( $wmgUseDynamicPageList ) {
 	wfLoadExtension( 'DynamicPageList' );
 }
 
 if ( $wmgUseDynamicPageList3 ) {
 	wfLoadExtension( 'DynamicPageList3' );
+}
+
+if ( $wmgUseDynamicSidebar ) {
+	wfLoadExtension( 'DynamicSidebar' );
 }
 
 if ( $wmgUseEditcount ) {
@@ -325,33 +394,24 @@ if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
 }
 
-if ( $wmgUseEducationProgram ) {
-	wfLoadExtension( 'EducationProgram' );
-}
-
-if ( $wmgUseElectronPdfService ) {
-	wfLoadExtension( 'ElectronPdfService' );
-}
-
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Erudite'] = 'erudite';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Erudite'] = 'erudite';
-}
-
-if ( $wmgUseEventLogging ) {
-	wfLoadExtension( 'EventLogging' );
-	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
-	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
 	require_once "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php";
 }
 
+if ( $wmgUseFemiwiki ) {
+	wfLoadSkin( 'Femiwiki' );
+
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Femiwiki'] = 'femiwiki';
+}
+
 if ( $wmgUseFlaggedRevs ) {
-	require_once "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
+	wfLoadExtension( 'FlaggedRevs' );
 
 	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
 	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
@@ -363,10 +423,11 @@ if ( $wmgUseFlaggedRevs ) {
 	$wgSimpleFlaggedRevsUI = $wmgSimpleFlaggedRevsUI;
 	$wgFlaggedRevsLowProfile = $wmgFlaggedRevsLowProfile;
 
-	$wgManageWikiNamespacesAdditional['wgFlaggedRevsNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgFlaggedRevsNamespaces'] = [
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'main' => true,
 		'talk' => false,
+		'blacklisted' => [ 8 ],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
@@ -377,23 +438,32 @@ if ( $wmgUseFlow ) {
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
+		'domain' => $wgServer,
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
+		'restbaseCompat' => false,
 	];
 
-	$wgManageWikiPermissionsAdditionalRights['oversight']['flow-suppress'] = true;
-	$wgManageWikiNamespacesExtraContentModels['Flow'] = 'flow-board';
+	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
+	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
 
 if ( $wmgUseFeaturedFeeds ) {
 	wfLoadExtension( 'FeaturedFeeds' );
 }
 
+if ( $wmgUseForcePreview) {
+	wfLoadExtension( 'ForcePreview' );
+}
+
 if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Foreground'] = 'foreground';
+}
+
+if ( $wmgUseFontAwesome ) {
+	wfLoadExtension( 'FontAwesome' );
 }
 
 if ( $wmgUseGadgets ) {
@@ -404,7 +474,9 @@ if ( $wmgUseGamepress ) {
 	wfLoadSkin( 'Gamepress' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Gamepress'] = 'gamepress';
+	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
+	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
+	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
 }
 
 if ( $wmgUseGenealogy ) {
@@ -423,14 +495,20 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 
 	// Required deps of GettingStarted
-	wfLoadExtension( 'EventLogging' );
 	wfLoadExtension( 'GuidedTour' );
-	$wgEventLoggingBaseUri = 'http://localhost:8080/event.gif';
-	$wgEventLoggingFile = '$wmgLogDir/debuglogs/events.log';
+}
+
+
+if ( $wgMirahezeCommons && !$cwPrivate ) {
+	wfLoadExtension( 'GlobalUsage' );
 }
 
 if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
+}
+
+if ( $wmgUseGoogleDocs4MW ) {
+	wfLoadExtension( 'GoogleDocs4MW' );
 }
 
 if ( $wmgUseGraph ) {
@@ -447,6 +525,10 @@ if ( $wmgUseGuidedTour ) {
 
 if ( $wmgUseHAWelcome ) {
 	wfLoadExtension( 'HAWelcome' );
+}
+
+if ( $wmgUseHeaderFooter ) {
+	wfLoadExtension( 'HeaderFooter' );
 }
 
 if ( $wmgUseHeaderTabs ) {
@@ -474,7 +556,7 @@ if ( $wmgUseInputBox ) {
 }
 
 if ( $wmgUseJavascriptSlideshow ) {
-	require_once "$IP/extensions/JavascriptSlideshow/JavascriptSlideshow.php";
+	wfLoadExtension( 'JavascriptSlideshow' );
 }
 
 if ( $wmgUseJosa ) {
@@ -495,11 +577,22 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
+if ($wmgUseLanguageSelector) {
+	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
+}
+
+if ($wmgUseLastModified) {
+	require_once "$IP/extensions/LastModified/LastModified.php";
+}
+
 if ( $wmgUseLiberty ) {
 	wfLoadSkin( 'liberty' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Liberty'] = 'liberty';
+}
+
+if ( $wmgUseLingo ) {
+	wfLoadExtension( 'Lingo' );
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -519,8 +612,7 @@ if ( $wmgUseListings ) {
 }
 
 if ( $wmgUseLoopsCombo ) {
-	require_once "$IP/extensions/Variables/Variables.php";
-	require_once "$IP/extensions/Loops/Loops.php";
+	wfLoadExtension( 'Loops' );
 }
 
 if ( $wmgUseMagicNoCache ) {
@@ -538,7 +630,6 @@ if ( $wmgUseMask ) {
 	wfLoadSkin( 'Mask' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Mask'] = 'mask';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Mask'] = 'mask';
 }
 
 if ( $wmgUseMassEditRegex ) {
@@ -548,10 +639,11 @@ if ( $wmgUseMassEditRegex ) {
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
 
-	$wgManageWikiNamespacesAdditional['wgNamespacesToPostIn'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgNamespacesToPostIn'] = [
 		'name' => 'Can MassMessage post messages in this namespace?',
 		'main' => true,
 		'talk' => false,
+		'blacklisted' => [],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
@@ -563,13 +655,17 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseMediaWikiChat ) {
 	wfLoadExtension( 'MediaWikiChat' );
+	$wi->config->settings['wgRevokePermissions']['default']['blockedfromchat']['chat'] = true;
+}
+
+if ( $wmgUseMermaid ) {
+	wfLoadExtension( 'Mermaid' );
 }
 
 if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Metrolook'] = 'metrolook';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Metrolook'] = 'metrolook';
 }
 
 if ( $wmgUseMobileFrontend ) {
@@ -579,6 +675,7 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
+	$wgMFStopRedirectCookieHost = $wi->hostname;
 
 	$wgHooks['EnterMobileMode'][] = function () {
 		global $wgIncludeLegacyJavaScript;
@@ -590,7 +687,6 @@ if ( $wmgUseMobileFrontend ) {
 	};
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['MinervaNeue'] = 'minerva';
 }
 
 if ( $wmgUseModeration ) {
@@ -601,7 +697,6 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['ModernSkylight'] = 'modernskylight';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['ModernSkylight'] = 'modernskylight';
 }
 
 if ( $wmgUseMsCatSelect ) {
@@ -630,12 +725,12 @@ if ( $wmgUseMultiBoilerplate ) {
 	$wgMultiBoilerplateOptions = false;
 }
 
-if ( $wmgUseNewestPages ) {
-	wfLoadExtension( 'NewestPages' );
+if ( $wmgUseMyVariables ) {
+	wfLoadExtension( 'MyVariables' );
 }
 
-if ( $wmgUseNews ) {
-	require_once "$IP/extensions/News/News.php";
+if ( $wmgUseNewestPages ) {
+	wfLoadExtension( 'NewestPages' );
 }
 
 if ( $wmgUseNewSignupPage ) {
@@ -658,12 +753,11 @@ if ( $wmgUseNostalgia ) {
 	wfLoadSkin( 'Nostalgia' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Nostalgia'] = 'nostalgia';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Nostalgia'] = 'nostalgia';
 }
 
 if ( $wmgUseNoTitle ) {
 	wfLoadExtension( 'NoTitle' );
-	$wgRestrictDisplayTitle = false;
+	$wi->config->settings['wgRestrictDisplayTitle']['default'] = false;
 }
 
 if ( $wmgUseNukeDPL ) {
@@ -677,6 +771,9 @@ if ( $wmgUseNumberedHeadings ) {
 if ( $wmgUseOpenGraphMeta ) {
 	wfLoadExtension( 'OpenGraphMeta' );
 }
+if ( $wmgUsePageDisqus ) {
+	wfLoadExtension( 'PageDisqus' );
+}
 
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
@@ -687,7 +784,7 @@ if ( $wmgUsePageForms ) {
 }
 
 if ( $wmgUsePageNotice ) {
-	require_once "$IP/extensions/PageNotice/PageNotice.php";
+	wfLoadExtension( 'PageNotice' );
 }
 
 if ( $wmgUsePageTriage ) {
@@ -710,13 +807,11 @@ if ( $wmgUsePivot ) {
 	wfLoadSkin( 'pivot' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Pivot'] = 'pivot';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Pivot'] = 'pivot';
 }
 
 if ( $wmgUsePoem ) {
 	wfLoadExtension( 'Poem' );
 }
-
 
 if ( $wmgUsePollNY ) {
 	wfLoadExtension( 'PollNY' );
@@ -727,9 +822,20 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
+	wfLoadExtension( 'TextExtracts' );
 	wfLoadExtension( 'PageImages' );
 	wfLoadExtension( 'Popups' );
-	wfLoadExtension( 'TextExtracts' );
+	
+	if ( $wmgShowPopupsByDefault ) {
+		$wgPopupsHideOptInOnPreferencesPage = true;
+		$wgPopupsOptInDefaultState = '1';
+		$wgPopupsOptInStateForNewAccounts = '1';
+		$wgPopupsReferencePreviewsBetaFeature = false;
+	}
+}
+
+if ( $wmgUsePreloader ) {
+	wfLoadExtension( 'Preloader' );
 }
 
 if ( $wmgUseProofreadPage ) {
@@ -779,8 +885,8 @@ if ( $wmgUseRefreshed ) {
 	wfLoadSkin( 'Refreshed' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Refreshed'] = 'refreshed';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Refreshed'] = 'refreshed';
 }
+
 
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
@@ -825,8 +931,19 @@ if ( $wmgUseSimpleTooltip ) {
 	require_once "$IP/extensions/SimpleTooltip/SimpleTooltip.php";
 }
 
-if ( $wmgUseSiteScout ) {
-	wfLoadExtension( 'SiteScout' );
+if ( $wmgUseSlackNotifications ) {
+	wfLoadExtension( 'SlackNotifications' );
+	$wgSlackFromName = $wgSitename;
+	$wgSlackNotificationWikiUrlEnding = 'index.php?title=';
+	$wgSlackNotificationWikiUrl = $wgServer . '/w/';
+	$wgSlackShowNewUserEmail = false;
+	$wgSlackShowNewUserIP = false;
+	$wgSlackIncomingWebhookUrl =
+		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
+}
+
+if ( $wmgUseSoftRedirector) {
+	wfLoadExtension( 'SoftRedirector' );
 }
 
 if ( $wmgUseSocialProfile ) {
@@ -837,6 +954,14 @@ if ( $wmgUseSpoilers ) {
 	wfLoadExtension( 'Spoilers' );
 }
 
+if ( $wmgUseSpriteSheet ) {
+	wfLoadExtension( 'SpriteSheet' );
+}
+
+if ( $wmgUseStopForumSpam ) {
+	wfLoadExtension( 'StopForumSpam' );
+}
+
 if ( $wmgUseSubpageFun ) {
 	require_once "$IP/extensions/SubpageFun/SubpageFun.php";
 }
@@ -845,19 +970,28 @@ if ( $wmgUseSubPageList3 ) {
 	wfLoadExtension( 'SubPageList3' );
 }
 
+if ( $wmgUseSyntaxHighlightGeSHi ) {
+	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
+}
+
 if ( $wmgUseTabsCombination ) {
 	wfLoadExtension( 'Tabber' );
 
 	wfLoadExtension( 'Tabs' );
 }
 
+if ( $wmgUseTemplateData ) {
+        wfLoadExtension( 'TemplateData' );
+}
+	
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 
-	$wgManageWikiNamespacesAdditional['wgTemplateSandboxEditNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgTemplateSandboxEditNamespaces'] = [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
@@ -873,6 +1007,10 @@ if ( $wmgUseTemplateWizard ) {
         wfLoadExtension( 'TemplateData' );
 }
 
+if ( $wmgUseTextExtracts ) {
+	wfLoadExtension( 'TextExtracts' );
+}
+
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
 	require_once "$IP/extensions/Translate/Translate.php";
@@ -881,6 +1019,10 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
 	require_once "/srv/mediawiki/config/TranslateConfigHack.php";
 	$wgULSGeoService = false;
+}
+
+if ( $wmgUseTreeAndMenu ) {
+	wfLoadExtension( 'TreeAndMenu' );
 }
 
 if ( $wmgUseThanks ) {
@@ -912,7 +1054,6 @@ if ( $wmgUseTweeki ) {
 	wfLoadSkin( 'Tweeki' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Tweeki'] = 'tweeki';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Tweeki'] = 'tweeki';
 }
 
 if ( $wmgUseTwoColConflict ) {
@@ -932,13 +1073,21 @@ if ( $wmgUseUrlGetParameters ) {
 	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
 }
 
+if ( $wmgUseUserFunctions ) {
+	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+}
+
 if ( $wmgUseUserWelcome ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
 
 if ( $wmgUseVariables ) {
-	require_once "$IP/extensions/Variables/Variables.php";
+	wfLoadExtension( 'Variables' );
+}
+
+if ( $wmgUseVEForAll ) {
+	wfLoadExtension ( 'VEForAll' );
 }
 
 if ( $wmgUseVisualEditor ) {
@@ -946,21 +1095,24 @@ if ( $wmgUseVisualEditor ) {
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
+		'domain' => $wgServer,
 		'prefix' => $wgDBname,
 		'forwardCookies' => true,
+		'restbaseCompat' => false,
 	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
-		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		$wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
 	} else {
-		$wgDefaultUserOptions['visualeditor-enable'] = 0;
+		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
 
-	$wgManageWikiNamespacesAdditional['wgVisualEditorAvailableNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgVisualEditorAvailableNamespaces'] = [
 		'name' => 'Enable VisualEditor in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => true,
 		'overridedefault' => false
 	];
@@ -997,14 +1149,18 @@ if ( $wmgUseWikiCategoryTagCloud ) {
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 
-	$wgManageWikiNamespacesAdditional['wgWPBNamespaces'] = [
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgWPBNamespaces'] = [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
 		'main' => true,
 		'talk' => true,
+		'blacklisted' => [],
 		'vestyle' => false,
 		'overridedefault' => false
 	];
 }
+
+$wgEnableWikibaseRepo = false;
+$wgEnableWikibaseClient = false;
 
 if ( $wmgUseWikibaseRepository ) {
 	$wgEnableWikibaseRepo = true;
@@ -1054,3 +1210,8 @@ if ( $wmgUseWikiTextLoggedInOut ) {
 if ( $wmgUseYouTube ) {
 	wfLoadExtension( 'YouTube' );
 }
+
+if ( $wmgUseRegexFunctions) {
+	require_once "$IP/extensions/RegexFunctions/RegexFunctions.php";
+}
+

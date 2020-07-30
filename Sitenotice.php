@@ -2,26 +2,28 @@
 
 if ( $wmgSiteNoticeOptOut ) {
 	// only show important notices when optout
-	$wgNoticeProject = 'optout';
+	$wi->config->settings['wgNoticeProject']['default'] = 'optout';
 }
 
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 36;
+$wgMajorSiteNoticeID = 48;
 
 // Write your SiteNotice below.  Comment out this section to disable.
 /*
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
+if ( !$wmgSiteNoticeOptOut ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+		global $wmgSiteNoticeOptOut, $snImportant;
 
-	$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Miraheze will perform maintenance related to the search functionality of this wiki at 22:40 UTC. The maintenance will take about 30 minutes. During this maintenance window you may not be able to use the search box.</td>
-			</tr></tbody></table>
+		$siteNotice .= <<<EOF
+				<table class="wikitable" style="text-align:center;"><tbody><tr>
+				<td style="font-size:125%">Miraheze celebrates its fifth birthday today. <a href="https://meta.miraheze.org/wiki/Miraheze-5-year">Come celebrate with us! 🎈</a></a></td>
+				</tr></tbody></table>
 EOF;
 
-	return true;
+		return true;
+	}
 }
 */

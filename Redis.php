@@ -1,42 +1,33 @@
 <?php
-$wgObjectCaches['redis'] = [
+
+// Locally hosted and used for object caching
+$wgObjectCaches['redis-central'] = [
 	'class' => 'RedisBagOStuff',
-	'servers' => [ '81.4.127.174:6379' ],
-	'password' => $wmgRedisPassword,
+	'servers' => [ $wmgRedisSettings['cache']['server'] ],
+	'password' => $wmgRedisSettings['cache']['password'],
 	'persistent' => true,
+	'loggroup' => 'redis',
+	'reportDupes' => false,
 ];
 
-/*$wgMemCachedServers = [
-	'127.0.0.1:11211'
-];*/
 
-$wgMainCacheType = 'redis';
-$wgSessionCacheType = 'redis';
+$wgMainCacheType = 'redis-central';
+$wgSessionCacheType = 'redis-central';
 $wgSessionsInObjectCache = true;
 
-$wgMessageCacheType = CACHE_NONE;
-$wgUseLocalMessageCache = true; // may be required for $wgMessageCacheType = false?
+$wgMessageCacheType = CACHE_DB;
+$wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => '81.4.127.174:6379',
+	'redisServer' => $wmgRedisSettings['jobrunner']['server'],
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'password' => $wmgRedisPassword,
+		'password' => $wmgRedisSettings['jobrunner']['password'],
 		'compression' => 'gzip',
 	],
 	'claimTTL' => 3600,
 	'daemonized' => true,
-];
-
-$wgJobQueueAggregator = [
-	'class' => 'JobQueueAggregatorRedis',
-	'redisServers' => [ '81.4.127.174:6379', '81.4.127.174:6379' ], // fake misc2 as fallback
-	'redisConfig' => [
-		'connectTimeout' => 2,
-		'password' => $wmgRedisPassword,
-		'compression' => 'gzip',
-	]
 ];

@@ -1,10 +1,9 @@
 <?php
 $wmgLogDir = "/var/log/mediawiki";
 
-$wgDebugLogFile = "$wmgLogDir/$wmgHostname.log";
-$wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
+$wi->config->settings['wgDBerrorLog']['default'] = "$wmgLogDir/debuglogs/database.log";
 
-$wgDebugLogGroups = [
+$wi->config->settings['wgDebugLogGroups']['default'] = [
 	'404' => "$wmgLogDir/debuglogs/404.log",
 	'api' => "$wmgLogDir/debuglogs/api.log",
 	'captcha' => "$wmgLogDir/debuglogs/captcha.log",
@@ -17,10 +16,12 @@ $wgDebugLogGroups = [
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
 	'MatomoAnalytics' => "$wmgLogDir/debuglogs/MatomoAnalytics.log",
+	'ManageWiki' => "$wmgLogDir/debuglogs/ManageWiki.log",
 	'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 	'redis' => "$wmgLogDir/debuglogs/redis.log",
 	'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
 	'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
+	'VisualEditor' => "$wmgLogDir/debuglogs/VisualEditor.log",
 ];
 
 if ( $wgCommandLineMode ) {

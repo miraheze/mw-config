@@ -1,5 +1,4 @@
 <?php
-require_once "$IP/extensions/Scribunto/Scribunto.php";
 require_once "$IP/extensions/MobileDetect/MobileDetect.php";
 wfLoadExtensions( [
 	'AbuseFilter',
@@ -13,6 +12,8 @@ wfLoadExtensions( [
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'Echo',
+	// Required by CentralNotice
+	'EventLogging',
 	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalPreferences',
@@ -27,9 +28,11 @@ wfLoadExtensions( [
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
+	'ParsoidBatchAPI',
 	'Renameuser',
 	'RottenLinks',
-	'SyntaxHighlight_GeSHi',
+	'Scribunto',
+	'SpamBlacklist',
 	'TitleBlacklist',
 	'TorBlock',
 	'UserMerge',
