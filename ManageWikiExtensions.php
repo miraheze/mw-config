@@ -1970,6 +1970,13 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'twittertag' => [
+			'name' => 'TwitterTag',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TwitterTag',
+			'var' => 'wmgUseTwitterTag',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'twocolconflict' => [
 			'name' => 'TwoColConflict',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TwoColConflict',
