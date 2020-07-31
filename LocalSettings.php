@@ -1196,6 +1196,9 @@ $wi->config->settings = [
 	'wmgUseTweeki' => [
 		'default' => false,
 	],
+	'wmgUseTwitterTag' => [
+		'default' => false,
+	],
 	'wmgUseTwoColConflict' => [
 		'default' => false,
 	],

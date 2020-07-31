@@ -1056,6 +1056,10 @@ if ( $wmgUseTweeki ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Tweeki'] = 'tweeki';
 }
 
+if ( $wmgUseTwitterTag ) {
+	wfLoadExtension( 'TwitterTag' );
+}
+
 if ( $wmgUseTwoColConflict ) {
 	wfLoadExtension( 'TwoColConflict' );
 }
