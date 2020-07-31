@@ -1689,6 +1689,9 @@ $wi->config->settings = [
 			'wikipedia',
 			'zhwikipedia',
 		],
+		'+metawiki' => [
+			'wikipedia',
+		],
 	],
 
 	// Job Queue
