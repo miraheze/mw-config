@@ -304,12 +304,12 @@ if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
 	];
 }
 
-if ( $wgDBname === 'test2wiki' ) {
+if ( $wgDBname === 'erislywiki' ) { // T5981
 	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
 	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
 	// $out is an instance of the OutputPage object.
 	// Add a meta tag
-	$out->addMeta( 'PreMiD_Present', 'test' );
+	$out->addMeta( 'PreMiD_Presence', 'Erisly' );
 
 	// Required return value of a hook function.
 	return true;
