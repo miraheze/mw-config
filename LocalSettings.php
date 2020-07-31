@@ -1682,6 +1682,9 @@ $wi->config->settings = [
 			'wmincubator',
 			'wikiaincubatorplus',
 		],
+		'+metawiki' => [
+			'wikipedia',
+		], 
 		'+simcitywiki' => [
 			'wikipedia',
 		],
