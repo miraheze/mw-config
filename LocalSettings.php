@@ -1693,7 +1693,7 @@ $wi->config->settings = [
 
 	// Job Queue
 	'wgJobRunRate' => [
-		'default' => 0,
+		'default' => 0.25,
 	],
 
 	// Kartographer
