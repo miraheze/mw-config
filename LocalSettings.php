@@ -2124,7 +2124,7 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
-		'+sespportwiki' => [
+		'+sesupportwiki' => [
 			'editor' => [
 				'editor' => true,
 			],
