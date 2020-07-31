@@ -1685,6 +1685,9 @@ $wi->config->settings = [
 		'+metawiki' => [
 			'wikipedia',
 		], 
+		'+sesupportwiki' => [
+			'mrjaroslavikwiki',
+		], 
 		'+simcitywiki' => [
 			'wikipedia',
 		],
