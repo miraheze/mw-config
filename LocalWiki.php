@@ -303,3 +303,15 @@ if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
 		'descBaseUrl' => 'https://intercriaturas.miraheze.org/wiki/File:',
 	];
 }
+
+if ( $wgDBname === 'test2wiki' ) {
+	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
+	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
+	// $out is an instance of the OutputPage object.
+	// Add a meta tag
+	$out->addMeta( 'PreMiD_Present', 'test' );
+
+	// Required return value of a hook function.
+	return true;
+	}
+}
