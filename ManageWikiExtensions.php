@@ -1687,7 +1687,6 @@ $wgManageWikiExtensions = [
 					'managewiki-restricted', // T5863
 				],
 			],
-			'requires' => [],
 		],
 		'scratchblocks' => [
 			'name' => 'ScratchBlocks',
