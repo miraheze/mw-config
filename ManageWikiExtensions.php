@@ -1682,6 +1682,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Score',
 			'var' => 'wmgUseScore',
 			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted', // T5863
+				],
+			],
 			'requires' => [],
 		],
 		'scratchblocks' => [
