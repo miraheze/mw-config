@@ -1423,6 +1423,15 @@ $wi->config->settings = [
  				]
  			]
  		],
+		 '+circleyversewiki' => [
+ 			'poweredby' => [
+ 				'wikiapiary' => [
+ 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 					'url' => 'https://wikiapiary.com/wiki/Circleyverse_Wiki',
+ 					'alt' => 'Monitored by WikiApiary'
+ 				]
+ 			]
+ 		],
  		'+permanentfuturelabwiki' => [
  			'poweredby' => [
  				'wikiapiary' => [
