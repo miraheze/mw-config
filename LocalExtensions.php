@@ -689,6 +689,10 @@ if ( $wmgUseMobileFrontend ) {
 	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
 }
 
+if ( $wmgUseMobileTabsPlugin ) {
+	wfLoadExtension( 'MobileTabsPlugin' );
+}
+
 if ( $wmgUseModeration ) {
 	wfLoadExtension( 'Moderation' );
 }
