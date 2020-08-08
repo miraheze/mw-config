@@ -1146,6 +1146,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'mobiletabsplugin' => [
+			'name' => 'MobileTabsPlugin',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileTabsPlugin',
+			'var' => 'wmgUseMobileTabsPlugin',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'moderation' => [
 			'name' => 'Moderation',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Moderation',

@@ -959,6 +959,9 @@ $wi->config->settings = [
 	'wmgUseMobileFrontend' => [
 		'default' => false,
 	],
+	'wmgUseMobileTabsPlugin' => [
+		'default' => false,
+	],
 	'wmgUseModeration' => [
 		'default' => false,
 	],
