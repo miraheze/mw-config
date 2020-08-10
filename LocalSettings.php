@@ -1703,6 +1703,11 @@ $wi->config->settings = [
 		'+simcitywiki' => [
 			'wikipedia',
 		],
+		'wikitrashwiki' => [
+			'wikipedia' => [
+				'it',
+			],
+		],
 		'+zhdelwiki' => [
 			'wikipedia',
 			'zhwikipedia',
