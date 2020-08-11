@@ -2085,6 +2085,7 @@ $wi->config->settings = [
 			],
 			'sysop' => [
 				'interwiki' => true,
+				'skipcaptcha' => true,
 			],
 			'user' => [
 				'requestwiki' => true,
