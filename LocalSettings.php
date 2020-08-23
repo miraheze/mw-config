@@ -1438,6 +1438,24 @@ $wi->config->settings = [
  					'alt' => 'Monitored by WikiApiary'
  				]
  			]
+		 ],
+ 		'+ficreationwiki' => [
+ 			'poweredby' => [
+ 				'wikiapiary' => [
+ 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 					'url' => 'https://wikiapiary.com/wiki/Ficreation',
+ 					'alt' => 'Monitored by WikiApiary'
+ 				]
+ 			]
+		],
+ 		'+kbosfunnieswiki' => [
+ 			'poweredby' => [
+ 				'wikiapiary' => [
+ 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 					'url' => 'https://wikiapiary.com/wiki/Kbos funnies',
+ 					'alt' => 'Monitored by WikiApiary'
+ 				]
+ 			]
  		],
  		'+permanentfuturelabwiki' => [
  			'poweredby' => [
