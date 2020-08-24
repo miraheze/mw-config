@@ -1452,7 +1452,7 @@ $wi->config->settings = [
  			'poweredby' => [
  				'wikiapiary' => [
  					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 					'url' => 'https://wikiapiary.com/wiki/Kbos funnies',
+ 					'url' => 'https://wikiapiary.com/wiki/Kbos_funnies',
  					'alt' => 'Monitored by WikiApiary'
  				]
  			]
