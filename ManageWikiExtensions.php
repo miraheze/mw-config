@@ -1125,7 +1125,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'medik' => [
-			'name' => 'Medik',
+			'name' => 'Medik (Skin)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Medik',
 			'var' => 'wmgUseMedik',
 			'conflicts' => false,
