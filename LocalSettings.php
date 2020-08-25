@@ -2463,6 +2463,19 @@ $wi->config->settings = [
 		'default' => false,
 	],
 
+	//Medik settings
+	'wgMedikShowLogo' => [
+                'default' => false,
+                'marionetworkwiki' => 'main',
+	],
+	'wgMedikContentWidth' => [
+                'default' => false,
+                'marionetworkwiki' => 'full',
+	],
+	'wgMedikColor' => [
+                'default' => false,
+                'marionetworkwiki' => '#ca0019',
+	],
 	// Metrolook settings
 	'wgMetrolookDownArrow' => [
 		'default' => true,
