@@ -660,6 +660,7 @@ if ( $wmgUseMediaWikiChat ) {
 
 if ( $wmgUseMedik ) {
 	wfLoadSkin( 'Medik' );
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Medik'] = 'medik';
 }
 
 if ( $wmgUseMermaid ) {
