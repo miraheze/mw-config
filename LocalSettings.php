@@ -954,6 +954,9 @@ $wi->config->settings = [
 	'wmgUseMediaWikiChat' => [
 		'default' => false,
 	],
+        'wmgUseMedik' => [
+		'default' => false,
+	],
 	'wmgUseMermaid' => [
 		'default' => false,
 	],
