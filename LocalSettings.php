@@ -954,9 +954,6 @@ $wi->config->settings = [
 	'wmgUseMediaWikiChat' => [
 		'default' => false,
 	],
-	'wmgUseMedik' => [
-		'default' => false,
-	],
 	'wmgUseMermaid' => [
 		'default' => false,
 	],
@@ -2462,7 +2459,19 @@ $wi->config->settings = [
 	'wgChatMeCommand' => [
 		'default' => false,
 	],
-
+        //Medik settings
+        'wgMedikShowLogo' => [
+                'default' => false,
+                'marionetworkwiki' => 'main',
+        ],
+        'wgMedikContentWidth' => [
+                'default' => false,
+                'marionetworkwiki' => 'full',
+        ],
+        'wgMedikColor' => [
+                'default' => false,
+                'marionetworkwiki' => '#ca0019',
+        ],
 	// Metrolook settings
 	'wgMetrolookDownArrow' => [
 		'default' => true,
