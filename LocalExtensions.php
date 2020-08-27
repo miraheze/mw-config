@@ -567,6 +567,10 @@ if ( $wmgUseJSBreadCrumbs ) {
 	wfLoadExtension( 'JSBreadCrumbs' );
 }
 
+if ( $wmgUseJsCalendar ) {
+	wfLoadExtension( 'JsCalendar' );
+}
+
 if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'JsonConfig' );
 

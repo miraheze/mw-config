@@ -900,6 +900,9 @@ $wi->config->settings = [
 	'wmgUseJSBreadCrumbs' => [
 		'default' => false,
 	],
+	'wmgUseJsCalendar' => [
+		'default' => false,
+	],
 	'wmgUseKartographer' => [
 		'default' => false,
 	],

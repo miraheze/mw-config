@@ -915,6 +915,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'jscalendar' => [
+			'name' => 'JsCalendar',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:JsCalendar',
+			'var' => 'wmgUseJsCalendar',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'kartographer' => [
 			'name' => 'Kartographer',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Kartographer',

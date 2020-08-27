@@ -97,6 +97,7 @@ $IP/extensions/Interwiki/extension.json
 $IP/extensions/JavascriptSlideshow/extension.json
 $IP/extensions/Josa/extension.json
 $IP/extensions/JSBreadCrumbs/extension.json
+$IP/extensions/JsCalendar/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
