@@ -2976,6 +2976,14 @@ $wi->config->settings = [
 			'owner'
 		],
 	],
+
+	'wgRestrictionLevels' => [
+		'default' => [
+			'',
+			'autoconfirmed',
+			'sysop'
+		],
+	],
 	'wgRestrictionTypes' => [
 		'default' => [
 			'create',
