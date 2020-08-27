@@ -356,6 +356,7 @@ $wgManageWikiSettings = [
 		'type' => 'usergroups',
 		'overridedefault' => [
 			'',
+			'user',
 			'autoconfirmed',
 			'sysop',
 		],
