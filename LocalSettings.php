@@ -553,6 +553,7 @@ $wi->config->settings = [
 	// Discord
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
+		'jadtechwiki' => false,
 	],
 
 	// Display Title
