@@ -2799,6 +2799,11 @@ $wi->config->settings = [
 			'usebetatoolbar-cgd' => 0,
 			'visualeditor-enable-experimental' => 1,
 		],
+		'+yablestudiowiki' => [
+			'visualeditor-newwikitext' => 1,
+			'visualeditor-enable' => 1,
+			'visualeditor-tabs' => 'multi-tab',
+		],
 	],
 	'+wgHiddenPrefs' => [
 		'default' => [],
