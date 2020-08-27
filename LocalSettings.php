@@ -2600,7 +2600,7 @@ $wi->config->settings = [
 	'wgModerationIgnoredInNamespaces' => [
 		'default' = [],
 		'talenteddeviantswiki' => [
-			NS_USER
+			NS_USER,
 		],
 	],
 	'wgModerationOnlyInNamespaces' => [
