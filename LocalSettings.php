@@ -2598,7 +2598,7 @@ $wi->config->settings = [
 		'default' => $wgPasswordSender,
 	],
 	'wgModerationIgnoredInNamespaces' => [
-		'default' = [],
+		'default' => [],
 		'talenteddeviantswiki' => [
 			NS_USER,
 		],
