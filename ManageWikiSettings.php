@@ -354,6 +354,9 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'usergroups',
+		'options' => [
+			'no protection' => '',
+		],
 		'overridedefault' => [
 			'',
 			'user',
