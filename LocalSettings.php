@@ -2597,6 +2597,19 @@ $wi->config->settings = [
 	'wgModerationEmail' => [
 		'default' => $wgPasswordSender,
 	],
+	'wgModerationIgnoredInNamespaces' => [
+		'default' => [],
+		'talenteddeviantswiki' => [
+			NS_USER,
+		],
+	],
+	'wgModerationOnlyInNamespaces' => [
+		'default' => [],
+		'talenteddeviantswiki' => [
+			NS_MAIN, 
+			NS_FILE
+		],
+	],
 
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => [
