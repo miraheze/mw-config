@@ -353,7 +353,7 @@ $wgManageWikiSettings = [
 		'name' => 'Restriction Levels',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'usergroups',
+		'type' => 'userrights',
 		'options' => [
 			'no protection' => '',
 		],
