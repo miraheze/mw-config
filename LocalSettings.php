@@ -736,6 +736,9 @@ $wi->config->settings = [
 	'wmgUseContributionScores' => [
 		'default' => false,
 	],
+	'wmgUseCosmos' => [
+		'default' => false,
+	],
 	'wmgUseCreatePage' => [
 		'default' => false,
 	],
