@@ -179,7 +179,47 @@ $wi->config->settings = [
 	'wgEnableSidebarCache' => [
 		'default' => false,
 	],
-
+	// Cosmos settings
+	'wgCosmosBannerLogo' => [
+		'default' => null,
+	],
+	'wgCosmosWikiHeaderWordmark' => [
+		'default' => null,
+	],
+	'wgCosmosWikiHeaderBackgroundImage' => [
+		'default' => null,
+	],
+	'wgCosmosSocialProfileModernTabs' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileRoundAvatar' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileShowEditCount' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileAllowBio' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileShowGroupTags' => [
+		'default' => true,
+	],
+	'wgCosmosUseSocialProfileAvatar' => [
+		'default' => true,
+	],
+	'wgCosmosProfileTagGroups' => [
+		'default' => [
+			'bureaucrat',
+			'bot',
+			'sysop',
+			'interface-admin',
+			'suppressor'
+		],
+	],
+	'wgCosmosNumberofGroupTags' => [
+		'default' => 2,
+	],
+	
 	// CategoryTree
 	'wgCategoryTreeDefaultMode' => [
 		'default' => 0,
