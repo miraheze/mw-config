@@ -1620,6 +1620,15 @@ $wi->config->settings = [
 		'default' => 'loginwiki',
 	],
 
+	// Grant Permissions for BotPasswords and OAuth
+	'+wgGrantPermissions' => [
+		'default' => [
+			'basic' => [
+				'user' => true,
+			],
+		],
+	],
+
 	//HideSection
 	'wgHideSectionImages' => [
 		'default' => false,
