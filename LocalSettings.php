@@ -2860,7 +2860,7 @@ $wi->config->settings = [
 		'default' => 180 * 24 * 3600,
 	],
 	'wgRCLinkDays' => [
-		'defualt' => [ 1, 3, 7, 14, 30 ],
+		'default' => [ 1, 3, 7, 14, 30 ],
 	],
 
 	// RelatedArticles settings
