@@ -1546,7 +1546,7 @@ $wgManageWikiSettings = [
 		'help' => 'Show user group tags on profile pages for the Cosmos skin when social profile is enabled.',
 	],
 	'wgCosmosUseSocialProfileAvatar' => [
-		'name' => 'Cosmos Use Social Profile Avatee',
+		'name' => 'Cosmos Use Social Profile Avatar',
 		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'check',
