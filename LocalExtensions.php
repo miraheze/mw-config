@@ -230,6 +230,7 @@ if ( $wmgUseContributionScores ) {
 
 if ( $wmgUseCosmos ){
 	wfLoadSkin( 'Cosmos' );
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Cosmos'] = 'cosmos';
 }
 
 if ( $wmgUseCreatePage ) {
