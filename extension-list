@@ -245,6 +245,7 @@ $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
 $IP/skins/Citizen/skin.json
 $IP/skins/CologneBlue/skin.json
+$IP/skins/Cosmos/skin.json
 $IP/skins/DuskToDawn/skin.json
 $IP/skins/Femiwiki/skin.json
 $IP/skins/Gamepress/skin.json

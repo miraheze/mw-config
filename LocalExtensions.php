@@ -228,6 +228,10 @@ if ( $wmgUseContributionScores ) {
 	require_once "$IP/extensions/ContributionScores/ContributionScores.php";
 }
 
+if ( $wmgUseCosmos ){
+	wfLoadSkin( 'Cosmos' );
+}
+
 if ( $wmgUseCreatePage ) {
 	require_once "$IP/extensions/CreatePage/CreatePage.php";
 }

@@ -402,6 +402,14 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'cosmos' => [
+			'name' => 'Cosmos (Skin)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cosmos',
+			'var' => 'wmgUseCosmos',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'createpage' => [
 			'name' => 'CreatePage',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CreatePage',
