@@ -2869,6 +2869,9 @@ $wi->config->settings = [
 			'visualeditor-enable',
 
 		],
+		'marionetworkwiki' => [
+			'skin',
+		],
 	],
 
 	// Redis
@@ -3206,7 +3209,8 @@ $wi->config->settings = [
 			'modern',
 			'monobook',
 			'vector',
-			'timeless' 
+			'timeless',
+			'minerva'
 		],
 	],
 
