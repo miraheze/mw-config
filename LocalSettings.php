@@ -217,7 +217,7 @@ $wi->config->settings = [
 		],
 	],
 	'wgCosmosNumberofGroupTags' => [
-		'default' => 2,
+		'default' => null,
 	],
 	
 	// CategoryTree
