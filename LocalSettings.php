@@ -686,6 +686,9 @@ $wi->config->settings = [
 	'wmgUseApprovedRevs' => [
 		'default' => false,
 	],
+	'wmgUseArrays' => [
+		'default' => false,
+	],
 	'wmgUseArticleRatings' => [
 		'default' => false,
 	],

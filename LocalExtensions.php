@@ -61,6 +61,10 @@ if ( $wmgUseApprovedRevs ) {
 	];
 }
 
+if ( $wmgUseArrays ) {
+	wfLoadExtension( 'Arrays' );
+}
+
 if ( $wmgUseArticleRatings ) {
 	wfLoadExtension( 'ArticleRatings' );
 }

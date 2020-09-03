@@ -112,6 +112,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'arrays' => [
+			'name' => 'Arrays',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Arrays',
+			'var' => 'wmgUseArrays',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'articleratings' => [
 			'name' => 'Article Ratings',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleRatings',
