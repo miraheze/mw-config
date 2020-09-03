@@ -2869,6 +2869,9 @@ $wi->config->settings = [
 			'visualeditor-enable',
 
 		],
+		'marionetworkwiki' => [
+			'skin',
+		],
 	],
 
 	// Redis
@@ -3201,6 +3204,15 @@ $wi->config->settings = [
 	// Skins
 	'+wgSkipSkins' => [
 		'default' => [],
+		'marionetworkwiki' => [
+			'cologneblue',
+			'modern',
+			'monobook',
+			'vector',
+			'timeless',
+			'minerva',
+			'minervaneue'
+		],
 	],
 
 	// SocialProfile
