@@ -1507,7 +1507,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PollNY',
 			'var' => 'wmgUsePollNY',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'socialprofile',
+				],
+			],
 			'install' => [
 				'sql' => [
 					'poll_choice' => "$IP/extensions/PollNY/sql/poll_choice.sql",
