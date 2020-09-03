@@ -3210,7 +3210,8 @@ $wi->config->settings = [
 			'monobook',
 			'vector',
 			'timeless',
-			'minerva'
+			'minerva',
+			'minervaneue'
 		],
 	],
 
