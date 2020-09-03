@@ -190,22 +190,22 @@ $wi->config->settings = [
 		'default' => null,
 	],
 	'wgCosmosSocialProfileModernTabs' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCosmosSocialProfileRoundAvatar' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCosmosSocialProfileShowEditCount' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCosmosSocialProfileAllowBio' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCosmosSocialProfileShowGroupTags' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCosmosUseSocialProfileAvatar' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCosmosProfileTagGroups' => [
 		'default' => [
