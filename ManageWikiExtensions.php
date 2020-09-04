@@ -1028,6 +1028,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'lunarfunctions' => [
+			'name' => 'LunarFunctions',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LunarFunctions',
+			'var' => 'wmgUseLunarFunctions',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'magicnocache' => [
 			'name' => 'MagicNoCache',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNoCache',
