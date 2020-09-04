@@ -175,6 +175,7 @@ $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
 $IP/extensions/RevisionSlider/extension.json
+$IP/extensions/RightFunctions/extension.json
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/ScratchBlocks/extension.json
