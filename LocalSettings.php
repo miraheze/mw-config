@@ -983,6 +983,9 @@ $wi->config->settings = [
 	'wmgUseLoopsCombo' => [
 		'default' => false,
 	],
+	'wmgUseLunarFunctions' => [
+		'default' => false,
+	],
 	'wmgUseMagicNoCache' => [
 		'default' => false,
 	],
