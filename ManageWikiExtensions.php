@@ -1704,6 +1704,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'rightfunctions' => [
+			'name' => 'RightFunctions',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RightFunctions',
+			'var' => 'wmgUseRightFunctions',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'rss' => [
 			'name' => 'RSS',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RSS',
