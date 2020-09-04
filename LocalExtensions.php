@@ -628,6 +628,10 @@ if ( $wmgUseLoopsCombo ) {
 	wfLoadExtension( 'Loops' );
 }
 
+if ( $wmgUseLunarFunctions ) {
+	wfLoadExtension( 'LunarFunctions' );
+}
+
 if ( $wmgUseMagicNoCache ) {
 	wfLoadExtension( 'MagicNoCache' );
 }
