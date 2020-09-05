@@ -49,6 +49,7 @@ $IP/extensions/CrossReference/extension.json
 $IP/extensions/DarkMode/extension.json
 $IP/extensions/DataDump/extension.json
 $IP/extensions/DataTransfer/extension.json
+$IP/extensions/DeleteUserPages/extension.json
 $IP/extensions/Description2/extension.json
 $IP/extensions/DPLForum/extension.json
 $IP/extensions/Disambiguator/extension.json
