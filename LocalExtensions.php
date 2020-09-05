@@ -343,6 +343,10 @@ if ( $wmgUseDataTransfer ) {
 	wfLoadExtension( 'DataTransfer' );
 }
 
+if ( $wmgUseDeleteUserPages ) {
+	wfLoadExtension( 'DeleteUserPages' );
+}
+
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
 
