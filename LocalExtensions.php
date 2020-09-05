@@ -924,6 +924,10 @@ if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
 }
 
+if ( $wmgUseRightFunctions ) {
+	require_once "$IP/extensions/RightFunctions/RightFunctions.php";
+}
+
 if ( $wmgUseRSS ) {
 	wfLoadExtension( 'RSS' );
 	$wgRSSUrlWhitelist = [ "*" ];

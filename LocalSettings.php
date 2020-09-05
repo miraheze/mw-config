@@ -1154,6 +1154,9 @@ $wi->config->settings = [
 	'wmgUseRevisionSlider' => [
 		'default' => false,
 	],
+	'wmgUseRightFunctions' => [
+		'default' => false,
+	],
 	'wmgUseRSS' => [
 		'default' => false,
 	],
