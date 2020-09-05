@@ -809,6 +809,9 @@ $wi->config->settings = [
 	'wmgUseDataTransfer' => [
 		'default' => false,
 	],
+	'wmgUseDeleteUserPages' => [
+		'default' => false,
+	],
 	'wmgUseDescription2' => [
 		'default' => false,
 	],
