@@ -925,7 +925,7 @@ if ( $wmgUseRevisionSlider ) {
 }
 
 if ( $wmgUseRightFunctions ) {
-	wfLoadExtension( 'RightFunctions' );
+	require_once "$IP/extensions/RightFunctions/RightFunctions.php";
 }
 
 if ( $wmgUseRSS ) {
