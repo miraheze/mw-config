@@ -146,6 +146,7 @@ $IP/extensions/NumberedHeadings/extension.json
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/OpenGraphMeta/extension.json
+$IP/extensions/OrphanedTalkPages/extension.json
 $IP/extensions/PageDisqus/extension.json
 $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json
