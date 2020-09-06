@@ -1407,6 +1407,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'orphanedtalkpages' => [
+			'name' => 'OrphanedTalkPages',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OrphanedTalkPages',
+			'var' => 'wmgUseOrphanedTalkPages',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'pagedisqus' => [
 			'name' => 'PageDisqus',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageDisqus',
