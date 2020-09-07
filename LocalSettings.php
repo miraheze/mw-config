@@ -300,6 +300,7 @@ $wi->config->settings = [
 	],
 	'wgCentralAuthCreateOnView' => [
 		'default' => true,
+		'cwarswiki' => false,
 		'nenawikiwiki' => false,
 	],
 	'wgCentralAuthDatabase' => [
