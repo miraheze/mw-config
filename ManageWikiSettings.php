@@ -1500,6 +1500,15 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Add an image to set as the background image for the wiki header in the Cosmos skin.',
 	],
+	'wgCosmosMainBackgroundColor' => [
+		'name' => 'Cosmos Main Background Color',
+		'from' => 'cosmos',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '#1A1A1A',
+		'section' => 'styling',
+		'help' => 'Add a color name, hex or RGB code to set as the background color for the wiki body in the Cosmos skin.',
+	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'name' => 'Cosmos Modern Profile Tabs',
 		'from' => 'cosmos',
