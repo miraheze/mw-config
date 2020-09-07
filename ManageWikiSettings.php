@@ -1578,11 +1578,11 @@ $wgManageWikiSettings = [
 		'help' => 'Make the background for the cosmos skin "position: fixed"?',
 	],
 	'wgCosmosUseMessageforToolbar' => [
-		'name' => 'Cosmos Background Image Position',
+		'name' => 'Cosmos Toolbar Message',
 		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'cosmos',
 		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar?',
 	],
