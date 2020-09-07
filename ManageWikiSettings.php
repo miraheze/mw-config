@@ -1500,7 +1500,7 @@ $wgManageWikiSettings = [
 		'section' => 'cosmos',
 		'help' => 'Add an image to set as the background image for the wiki&#39;s body of the Cosmos skin.',
 	],
-	'wgCosmosBackgroundImage' => [
+	'wgCosmosBackgroundImageSize' => [
 		'name' => 'Cosmos Background Image Size',
 		'from' => 'cosmos',
 		'restricted' => false,
