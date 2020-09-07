@@ -190,7 +190,7 @@ $wi->config->settings = [
 		'default' => null,
 	],
 	'wgCosmosMainBackgroundColor' => [
-		'default' => null,
+		'default' => '#1A1A1A',
 	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'default' => false,
