@@ -189,6 +189,9 @@ $wi->config->settings = [
 	'wgCosmosWikiHeaderBackgroundImage' => [
 		'default' => null,
 	],
+	'wgCosmosMainBackgroundColor' => [
+		'default' => null,
+	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'default' => false,
 	],
@@ -212,8 +215,7 @@ $wi->config->settings = [
 			'bureaucrat',
 			'bot',
 			'sysop',
-			'interface-admin',
-			'suppressor'
+			'interface-admin'
 		],
 	],
 	'wgCosmosNumberofGroupTags' => [
