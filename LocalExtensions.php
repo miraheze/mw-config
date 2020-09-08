@@ -305,7 +305,17 @@ if ( $wmgUseDataDump ) {
 				'options' => [
 					'-r',
 					$wgDataDumpDirectory . '${filename}',
-					"/mnt/mediawiki-static/{$wgDBname}/"
+					"/mnt/mediawiki-static/{$wgDBname}/",
+					"-x",
+					"mnt/mediawiki-static/{$wgDBname}/archive/*",
+					"-x",
+					"mnt/mediawiki-static/{$wgDBname}/deleted/*",
+					"-x",
+					"mnt/mediawiki-static/{$wgDBname}/lockdir/*",
+					"-x",
+					"mnt/mediawiki-static/{$wgDBname}/temp/*",
+					"-x",
+					"mnt/mediawiki-static/{$wgDBname}/thumb/*",
 				],
 			],
 			'limit' => 1,
