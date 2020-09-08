@@ -1353,7 +1353,7 @@ $wi->config->settings = [
 	'wmgUseWikiForum' => [
 		'default' => false,
 	],
-	'wmgUseWikiHiero' => [
+	'wmgUsewikihiero' => [
 		'default' => false,
 	],
 	'wmgUseWikimediaIncubator' => [
