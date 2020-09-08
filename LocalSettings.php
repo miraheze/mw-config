@@ -208,31 +208,31 @@ $wi->config->settings = [
 		'default' => '#006cb0',
 	],
 	'wgCosmosBackgroundImageNorepeat' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosBackgroundImageFixed' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosUseMessageforToolbar' => [
 		'default' => false,
 	],
 	'wgCosmosSocialProfileModernTabs' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosSocialProfileRoundAvatar' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosSocialProfileShowEditCount' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosSocialProfileAllowBio' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosSocialProfileShowGroupTags' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosUseSocialProfileAvatar' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCosmosProfileTagGroups' => [
 		'default' => [
