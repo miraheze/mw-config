@@ -2584,11 +2584,9 @@ $wi->config->settings = [
 
 	'wgMetaNamespace' => [
 		'default' => null,
-		'privacywiki' => 'Meta',
 	],
-	'wgmespaceTalk' => [
+	'wgMetaNamespaceTalk' => [
 		'default' => null,
-		'privacywiki' => 'Meta_talk',
 	],
 
 	// Metrolook settings
