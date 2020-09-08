@@ -2581,6 +2581,16 @@ $wi->config->settings = [
 		'default' => false,
 		'marionetworkwiki' => true,
 	],
+
+	'wgMetaNamespace' => [
+		'default' => null,
+		'privacywiki' => 'Meta',
+	],
+	'wgmespaceTalk' => [
+		'default' => null,
+		'privacywiki' => 'Meta_talk',
+	],
+
 	// Metrolook settings
 	'wgMetrolookDownArrow' => [
 		'default' => true,
