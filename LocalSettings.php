@@ -2574,6 +2574,14 @@ $wi->config->settings = [
                 'default' => false,
                 'marionetworkwiki' => '#ca0019',
 	],
+	'wgMedikLogoWidth' => [
+		'default' => 'null',
+		'marionetworkwiki' => '210px',
+	],
+	'wgMedikUseLogoWithoutText' => [
+		'default' => false,
+		'marionetworkwiki' => true,
+	],
 	// Metrolook settings
 	'wgMetrolookDownArrow' => [
 		'default' => true,
