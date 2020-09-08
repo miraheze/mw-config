@@ -1224,7 +1224,7 @@ if ( $wmgUseWikiForum ) {
 	$wgCaptchaTriggers['wikiforum'] = true;
 }
 
-if ( $wmgUseWikiHiero ) {
+if ( $wmgUsewikihiero ) {
 	wfLoadExtension( 'wikihiero' );
 }
 
