@@ -1355,7 +1355,6 @@ $wi->config->settings = [
 	],
 	'wmgUsewikihiero' => [
 		'default' => false,
-		'test2twiki' => true,
 	],
 	'wmgUseWikimediaIncubator' => [
 		'default' => false,

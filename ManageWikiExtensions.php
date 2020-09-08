@@ -2327,6 +2327,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'wikihiero' => [
+			'name' => 'WikiHiero',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiHiero',
+			'var' => 'wmgUsewikihiero',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'wikilove' => [
 			'name' => 'WikiLove',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiLove',
