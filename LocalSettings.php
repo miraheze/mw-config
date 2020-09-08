@@ -186,11 +186,35 @@ $wi->config->settings = [
 	'wgCosmosWikiHeaderWordmark' => [
 		'default' => null,
 	],
-	'wgCosmosWikiHeaderBackgroundImage' => [
+	'wgCosmosWikiHeaderWordmark' => [
 		'default' => null,
+	],
+	'wgCosmosBackgroundImage' => [
+		'default' => null,
+	],
+	'wgCosmosBackgroundImageSize' => [
+		'default' => 'cover',
 	],
 	'wgCosmosMainBackgroundColor' => [
 		'default' => '#1A1A1A',
+	],
+	'wgCosmosContentBackgroundColor' => [
+		'default' => '#000',
+	],
+	'wgCosmosBannerBackgroundColor' => [
+		'default' => '#001e3b',
+	],
+	'wgCosmosLinkColor' => [
+		'default' => '#006cb0',
+	],
+	'wgCosmosBackgroundImageNorepeat' => [
+		'default' => false,
+	],
+	'wgCosmosBackgroundImageFixed' => [
+		'default' => false,
+	],
+	'wgCosmosUseMessageforToolbar' => [
+		'default' => false,
 	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'default' => false,
@@ -220,6 +244,9 @@ $wi->config->settings = [
 	],
 	'wgCosmosNumberofGroupTags' => [
 		'default' => 2,
+	],
+	'wgCosmosContentOpacityLevel' => [
+		'default' => 100,
 	],
 	
 	// CategoryTree
