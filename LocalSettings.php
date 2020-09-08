@@ -1079,6 +1079,9 @@ $wi->config->settings = [
 	'wmgUseOpenGraphMeta' => [
 		'default' => false,
 	],
+	'wmgUseOrphanedTalkPages' => [
+		'default' => false,
+	],
 	'wmgUsePageDisqus' => [
 		'default' => false,
 	],

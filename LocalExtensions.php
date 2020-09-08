@@ -797,6 +797,11 @@ if ( $wmgUseNumberedHeadings ) {
 if ( $wmgUseOpenGraphMeta ) {
 	wfLoadExtension( 'OpenGraphMeta' );
 }
+
+if ( $wmgUseOrphanedTalkPages ) {
+	wfLoadExtension( 'OrphanedTalkPages' );
+}
+
 if ( $wmgUsePageDisqus ) {
 	wfLoadExtension( 'PageDisqus' );
 }
