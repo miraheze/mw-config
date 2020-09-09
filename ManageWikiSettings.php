@@ -1479,7 +1479,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'url',
 		'overridedefault' => null,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add a logo to appear in the top banner on the Cosmos skin.',
 	],
 	'wgCosmosWikiHeaderWordmark' => [
@@ -1488,7 +1488,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'url',
 		'overridedefault' => null,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add a wordmark to appear in the wiki header on the Cosmos skin.',
 	],
 	'wgCosmosBackgroundImage' => [
@@ -1497,7 +1497,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'url',
 		'overridedefault' => null,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add an image to set as the background image for the wiki&#39;s body of the Cosmos skin.',
 	],
 	'wgCosmosBackgroundImageSize' => [
@@ -1511,7 +1511,7 @@ $wgManageWikiSettings = [
 			'cover' => 'cover',
 		],
 		'overridedefault' => 'cover',
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add an image to set as the background image for the wiki&#39;s body of the Cosmos skin.',
 	],
 	'wgCosmosWikiHeaderBackgroundImage' => [
@@ -1520,7 +1520,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'url',
 		'overridedefault' => null,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add an image to set as the background image for the wiki header in the Cosmos skin.',
 	],
 	'wgCosmosMainBackgroundColor' => [
@@ -1529,7 +1529,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '#1A1A1A',
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add a color name, hex or RGB code to set as the background color for the wiki body of the Cosmos skin.',
 	],
 	'wgCosmosContentBackgroundColor' => [
@@ -1538,7 +1538,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '#000',
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add a color name, hex or RGB code to set as the background color for the content area of the Cosmos skin.',
 	],
 	'wgCosmosBannerBackgroundColor' => [
@@ -1547,7 +1547,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '#001e3b',
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add a color name, hex or RGB code to set as the background color for the top banner of the Cosmos skin.',
 	],
 	'wgCosmosLinkColor' => [
@@ -1556,7 +1556,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '#006cb0',
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Add a color name, hex or RGB code to set as the link color for the Cosmos skin.',
 	],
 	'wgCosmosBackgroundImageNorepeat' => [
@@ -1565,7 +1565,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Repeat the background for the cosmos skin?',
 	],
 	'wgCosmosBackgroundImageFixed' => [
@@ -1574,7 +1574,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Make the background for the cosmos skin "position: fixed"?',
 	],
 	'wgCosmosUseMessageforToolbar' => [
@@ -1583,7 +1583,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar?',
 	],
 	'wgCosmosSocialProfileModernTabs' => [
@@ -1592,7 +1592,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Modern profile tabs for the Cosmos skin when social profile is enabled.',
 	],
 	'wgCosmosSocialProfileRoundAvatar' => [
@@ -1601,7 +1601,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Make avatar round on profile pages for the Cosmos skin when social profile is enabled.',
 	],
 	'wgCosmosSocialProfileShowEditCount' => [
@@ -1610,7 +1610,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Show edit count on profile pages for the Cosmos skin when social profile is enabled.',
 	],
 	'wgCosmosSocialProfileAllowBio' => [
@@ -1619,7 +1619,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Allow users to add a bio on profile pages for the Cosmos skin when social profile is enabled.',
 	],
 	'wgCosmosSocialProfileShowGroupTags' => [
@@ -1628,7 +1628,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Show user group tags on profile pages for the Cosmos skin when social profile is enabled.',
 	],
 	'wgCosmosUseSocialProfileAvatar' => [
@@ -1637,7 +1637,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Use social profile avatar in the top banner for the Cosmos skin when social profile is enabled.',
 	],
 	'wgCosmosProfileTagGroups' => [
@@ -1651,7 +1651,7 @@ $wgManageWikiSettings = [
 			'sysop',
 			'interface-admin'
 		],
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'User groups to show on profile pages for the Cosmos skin when social profile is enabled. They will be shown in order of priority.',
 	],
 	'wgCosmosNumberofGroupTags' => [
@@ -1662,7 +1662,7 @@ $wgManageWikiSettings = [
 		'minint' => 1,
 		'maxint' => 5,
 		'overridedefault' => 2,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Number of user group tags to show on profile pages for the Cosmos skin when social profile and the profile group tags are enabled. Min. 1; Max. 5.',
 	],
 	'wgCosmosContentOpacityLevel' => [
@@ -1673,7 +1673,7 @@ $wgManageWikiSettings = [
 		'minint' => 0,
 		'maxint' => 100,
 		'overridedefault' => 100,
-		'section' => 'styling',
+		'section' => 'cosmos',
 		'help' => 'Set the opacity level of the content area and custom sidebar for the Cosmos skin in precentage',
 	],
 	'wgMetrolookDownArrow' => [
