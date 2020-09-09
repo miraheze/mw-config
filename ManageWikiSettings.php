@@ -511,6 +511,7 @@ $wgManageWikiSettings = [
 		'section' => 'cosmos',
 		'help' => 'Set the opacity level of the content area and custom sidebar for the Cosmos skin in precentage',
 	],
+	
 	// Editing
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
