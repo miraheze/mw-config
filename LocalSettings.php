@@ -460,7 +460,7 @@ $wi->config->settings = [
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
-			'Automotive' => 'automotive'
+			'Automotive' => 'automotive',
 			'Community' => 'community',
 			'Education' => 'education',
 			'Electronics' => 'electronics',
