@@ -804,6 +804,10 @@ if ( $wmgUseNumberedHeadings ) {
 	wfLoadExtension( 'NumberedHeadings' );
 }
 
+if ( $wmgUseNumberText ) {
+	require_once "$IP/extensions/Numbertext/Numbertext.php";
+}
+
 if ( $wmgUseOpenGraphMeta ) {
 	wfLoadExtension( 'OpenGraphMeta' );
 }
