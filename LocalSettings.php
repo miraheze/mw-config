@@ -3188,11 +3188,12 @@ $wi->config->settings = [
 	// SimpleChanges
 	'wgSimpleChangesOnlyContentNamespaces' => [
 		'default' => false,
-		'phereonwiki' => true,
+	],
+	'wgSimpleChangesOnlyLatest' => [
+		'default' => true,
 	],
 	'wgSimpleChangesShowUser' => [
 		'default' => false,
-		'phereonwiki' => true,
 	],
 
 	// WikiSEO configs
