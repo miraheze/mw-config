@@ -324,7 +324,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => null,
 		'section' => 'cosmos',
-		'help' => 'Add a wordmark to appear in the wiki header on the Cosmos skin.',
+		'help' => 'Add a wordmark to appear in the wiki header on the Cosmos skin. Not setting this will default the logo to <code>$wgLogo</code>',
 	],
 	'wgCosmosBackgroundImage' => [
 		'name' => 'Cosmos Background Image',
@@ -347,7 +347,7 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => 'cover',
 		'section' => 'cosmos',
-		'help' => 'Add an image to set as the background image for the wiki&#39;s body of the Cosmos skin.',
+		'help' => 'Add an image to set as the background image for the wiki&apos;s body of the Cosmos skin.',
 	],
 	'wgCosmosWikiHeaderBackgroundImage' => [
 		'name' => 'Cosmos Wiki Header Background Image',
@@ -356,7 +356,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => null,
 		'section' => 'cosmos',
-		'help' => 'Add an image to set as the background image for the wiki header in the Cosmos skin.',
+		'help' => 'Add a background image for the wiki header of the Cosmos skin.',
 	],
 	'wgCosmosMainBackgroundColor' => [
 		'name' => 'Cosmos Main Background Color',
@@ -413,13 +413,13 @@ $wgManageWikiSettings = [
 		'help' => 'Make the background for the cosmos skin "position: fixed"?',
 	],
 	'wgCosmosUseMessageforToolbar' => [
-		'name' => 'Cosmos Toolbar Message',
+		'name' => 'Replace Cosmos Toolbar with Message',
 		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'cosmos',
-		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar?',
+		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar? Not checking this will make the contents of MediaWiki:Cosmos-toolbar be appended to the toolbar tather than replacing it.',
 	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'name' => 'Cosmos Modern Profile Tabs',
