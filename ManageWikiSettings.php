@@ -838,6 +838,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Controls what games are enabled.',
 	],
+	'wgUFEnablePersonalDataFunctions' => [
+		'name' => 'Enable Personal Data Functions for the User Functions extension',
+		'restricted' => false,
+		'from' => 'userfunctions',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Enables the usage of the following functions: #realname, #username, #useremail, #nickname and #ip',
+	],
 	'wgUserBoard' => [
 		'name' => 'User Board',
 		'restricted' => false,
