@@ -143,6 +143,7 @@ $IP/extensions/NoTitle/extension.json
 $IP/extensions/Nuke/extension.json
 $IP/extensions/NukeDPL/extension.json
 $IP/extensions/NumberedHeadings/extension.json
+$IP/extensions/Numbertext/Numbertext.php
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/OpenGraphMeta/extension.json
