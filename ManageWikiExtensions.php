@@ -1345,6 +1345,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'numbertext' => [
+			'name' => 'Numbertext',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Numbertext',
+			'var' => 'wmgUseNumberText',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'nostalgia' => [
 			'name' => 'Nostalgia (Skin)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Nostalgia',
