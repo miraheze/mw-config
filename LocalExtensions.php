@@ -804,7 +804,7 @@ if ( $wmgUseNumberedHeadings ) {
 	wfLoadExtension( 'NumberedHeadings' );
 }
 
-if ( $wmgUseNumberText ) {
+if ( $wmgUseNumbertext ) {
 	require_once "$IP/extensions/Numbertext/Numbertext.php";
 }
 
