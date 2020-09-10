@@ -419,7 +419,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'cosmos',
-		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar? Not checking this will make the contents of MediaWiki:Cosmos-toolbar be appended to the toolbar tather than replacing it.',
+		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar? Not checking this will make the contents of MediaWiki:Cosmos-toolbar be appended to the toolbar rather than replacing it.',
 	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'name' => 'Cosmos Modern Profile Tabs',
