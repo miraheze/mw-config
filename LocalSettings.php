@@ -464,6 +464,7 @@ $wi->config->settings = [
 			'Community' => 'community',
 			'Education' => 'education',
 			'Electronics' => 'electronics',
+			'Entertainment' => 'entertainment',
 			'Fandom' => 'fandom',
 			'Fantasy' => 'fantasy',
 			'Gaming' => 'gaming',
