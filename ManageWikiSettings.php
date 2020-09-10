@@ -1412,6 +1412,7 @@ $wgManageWikiSettings = [
 		'section' => 'recentchanges',
 		'help' => 'Shows the user name of the user who made the change',
 	],
+
 	// Restricted (where settings that are restricted go)
 	'wgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
