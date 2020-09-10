@@ -460,10 +460,9 @@ $wi->config->settings = [
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
-			'Automotive' => 'automotive',
 			'Community' => 'community',
 			'Education' => 'education',
-			'Electronics' => 'electronics',
+			'Electronics' => 'eletronics',
 			'Fandom' => 'fandom',
 			'Fantasy' => 'fantasy',
 			'Gaming' => 'gaming',
@@ -3275,7 +3274,12 @@ $wi->config->settings = [
 			'minervaneue'
 		],
 	],
-
+	
+	//userFunctions
+        'wgUFEnablePersonalDataFunctions' => [
+		'default' => false,
+	],
+	
 	// SocialProfile
 	'wgUserBoard' => [
 		'default' => false,
