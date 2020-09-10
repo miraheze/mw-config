@@ -3185,6 +3185,16 @@ $wi->config->settings = [
 		],
 	],
 
+	// SimpleChanges
+	'wgSimpleChangesOnlyContentNamespaces' => [
+		'default' => false,
+		'phereonwiki' => true,
+	],
+	'wgSimpleChangesShowUser' => [
+		'default' => false,
+		'phereonwiki' => true,
+	],
+
 	// WikiSEO configs
 	'wgTwitterCardType' => [
 		'default' => 'summary_large_image',
