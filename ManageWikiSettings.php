@@ -1385,7 +1385,33 @@ $wgManageWikiSettings = [
 		'section' => 'recentchanges',
 		'help' => 'Shows changes to category membership as an action in Special:RecentChanges',
 	],
-
+	'wgSimpleChangesOnlyContentNamespaces' => [
+		'name' => 'Display only content namespaces for Simple Changes',
+		'from' => 'simplechanges',
+		'type' => 'check',
+		'restricted' => false,
+		'overridedefault' => false,
+		'section' => 'recentchanges',
+		'help' => 'Restricts the list to display only content namespaces',
+	],
+	'wgSimpleChangesOnlyLatest' => [
+		'name' => 'Prevent duplicate titles appearing for Simple Changes',
+		'from' => 'simplechanges',
+		'type' => 'check',
+		'restricted' => false,
+		'overridedefault' => true,
+		'section' => 'recentchanges',
+		'help' => 'Avoids duplicate titles showing up in the list by only showing changes that match each page&apos;s most recent revision',
+	],
+	'wgSimpleChangesShowUser' => [
+		'name' => 'Display the user name of the user who made the change for Simple Changes',
+		'from' => 'simplechanges',
+		'type' => 'check',
+		'restricted' => false,
+		'overridedefault' => false,
+		'section' => 'recentchanges',
+		'help' => 'Shows the user name of the user who made the change',
+	],
 	// Restricted (where settings that are restricted go)
 	'wgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
