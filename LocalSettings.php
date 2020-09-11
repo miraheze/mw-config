@@ -204,8 +204,20 @@ $wi->config->settings = [
 	'wgCosmosBannerBackgroundColor' => [
 		'default' => '#001e3b',
 	],
+	'wgCosmosHeaderBackgroundColor' => [
+		'default' => '#001e3b',
+	],
 	'wgCosmosLinkColor' => [
 		'default' => '#006cb0',
+	],
+	'wgCosmosButtonColor' => [
+		'default' => '#012E59',
+	],
+	'wgCosmosToolbarColor' => [
+		'default' => '#001e3b',
+	],
+	'wgCosmosFooterColor' => [
+		'default' => '#141414',
 	],
 	'wgCosmosBackgroundImageNorepeat' => [
 		'default' => true,
