@@ -1347,6 +1347,15 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
 	],
+	'wgDiscordNotificationBlockedUser' => [
+		'name' => 'Discord Notification Blocked User',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Notify on user or IP blocked in MediaWiki.',
+	],
 	'wgDiscordNotificationNewUser' => [
 		'name' => 'Discord Notification New User',
 		'from' => 'mediawiki',
