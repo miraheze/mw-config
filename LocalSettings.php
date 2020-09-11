@@ -635,9 +635,11 @@ $wi->config->settings = [
 	],
 
 	// Discord
+	'wgDiscordNotificationBlockedUser' => [
+		'default' => true,
+	],
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
-		'jadtechwiki' => false,
 	],
 
 	// Display Title
