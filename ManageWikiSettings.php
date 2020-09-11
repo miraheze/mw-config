@@ -386,7 +386,7 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the background color for the top banner of the Cosmos skin.',
 	],
 	'wgCosmosWikiHeaderBackgroundColor' => [
-		'name' => 'Cosmos Header Background Color',
+		'name' => 'Cosmos Wiki Header Background Color',
 		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'text',
