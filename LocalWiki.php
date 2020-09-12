@@ -67,6 +67,10 @@ if ( !$cwPrivate ) {
 	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
 	$wgDiscordAdditionalIncomingWebhookUrls =
 		$wmgWikiMirahezeDiscordHooks[$wgDBname] ?? $wmgWikiMirahezeDiscordHooks['default'];
+} else {
+	$wgWhitelistRead[] = [
+		'Special:OAuth'
+	];
 }
 
 // CookieWarning exempt ElectronPdfService
