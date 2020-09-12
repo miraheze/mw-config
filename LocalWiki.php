@@ -65,12 +65,9 @@ if ( !$cwPrivate ) {
 	$wgDiscordShowNewUserIP = false;
 	$wgDiscordNotificationsShowSuppressed = false;
 	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
-	$wgDiscordAdditionalIncomingWebhookUrls =
-		$wmgWikiMirahezeDiscordHooks[$wgDBname] ?? $wmgWikiMirahezeDiscordHooks['default'];
+	$wgDiscordAdditionalIncomingWebhookUrls = ( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ?? $wmgWikiMirahezeDiscordHooks['default'];
 } else {
-	$wgWhitelistRead[] = [
-		'Special:OAuth'
-	];
+	$wgWhitelistRead[] = 'Special:OAuth';
 }
 
 // CookieWarning exempt ElectronPdfService
@@ -95,9 +92,7 @@ if ( $wmgPrivateUploads ) {
 }
 
 if ( $wgDBname === 'hamzawiki' ) {
-	 $wgWhitelistRead[] = [
-		"Rukus"
-	];
+	 $wgWhitelistRead[] = 'Rukus';
 }
 
 if ( $wgDBname === 'isvwiki' ) {
@@ -166,9 +161,7 @@ if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 }
 
 if ( $wgDBname === 'swiki' ) {
-	 $wgWhitelistRead[] = [
-		"メインページ/ja"
-	];
+	 $wgWhitelistRead[] = 'メインページ/ja';
 }
 
 if ( $wgDBname === 'swisscomraidwiki' ) {
