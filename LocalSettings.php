@@ -1394,12 +1394,15 @@ $wi->config->settings = [
 		'default' => [
 			'audio' => [
 				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+				'<^(?:https:)?\/\/static\\.miraheze.org\\.org\/>',
 			],
 			'image' => [
 				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+				'<^(?:https:)?\/\/static\\.miraheze.org\\.org\/>',
 			],
 			'svg' => [
 				'<^(?:https:)?\/\/upload\\.wikimedia\\.org/wikipedia\/commons\/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?\/\/static\\.miraheze.org\\.org\/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [ '<.>' ],
