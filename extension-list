@@ -109,6 +109,7 @@ $IP/extensions/Lingo/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/LinkTarget.php
 $IP/extensions/LinkTitles/extension.json
+$IP/extensions/Linter/extension.json
 $IP/extensions/Listings/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
 $IP/extensions/LoginNotify/extension.json
