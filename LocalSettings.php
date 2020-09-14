@@ -219,6 +219,9 @@ $wi->config->settings = [
 	'wgCosmosFooterColor' => [
 		'default' => '#141414',
 	],
+	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
+		'default' => true,
+	],
 	'wgCosmosBackgroundImageNorepeat' => [
 		'default' => true,
 	],

@@ -430,6 +430,15 @@ $wgManageWikiSettings = [
 		'section' => 'cosmos',
 		'help' => 'Add a color name or hex code to set as the footer background color for the Cosmos skin.',
 	],
+	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
+		'name' => 'Enable Europa Theme for Infoboxes on Cosmos',
+		'from' => 'cosmos',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'cosmos',
+		'help' => 'Enable the Europa theme on infoboxes when using the Cosmos skin, if you have the PortableInfobox extension enabled.',
+	],
 	'wgCosmosBackgroundImageNorepeat' => [
 		'name' => 'Cosmos Background Image Repeat',
 		'from' => 'cosmos',
