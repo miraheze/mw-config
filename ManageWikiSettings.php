@@ -431,7 +431,7 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the footer background color for the Cosmos skin.',
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
-		'name' => 'Enable Europa Theme for Infoboxes',
+		'name' => 'Enable Europa Theme for Infoboxes on Cosmos',
 		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'check',
