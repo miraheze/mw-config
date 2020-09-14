@@ -483,6 +483,7 @@ $wi->config->settings = [
 			'Geography' => 'geography',
 			'Leisure' => 'leisure',
 			'Literature/Writing' => 'literature',
+			'Media/Journalism' => 'media',
 			'Medicine/Medical' => 'medical',
 			'Military/War' => 'military',
 			'Music' => 'music',
