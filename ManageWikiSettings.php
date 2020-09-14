@@ -458,13 +458,13 @@ $wgManageWikiSettings = [
 		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar? Not checking this will make the contents of MediaWiki:Cosmos-toolbar be appended to the toolbar rather than replacing it.',
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
-		'name' => 'Enable Europa Theme on Portable Infoboxes',
+		'name' => 'Enable Europa Theme for Infoboxes',
 		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'cosmos',
-		'help' => 'Enable the Europa theme on Portable Infoboxes, if you have the Portable Infobox extension enabled.',
+		'help' => 'Enable the Europa theme on infoboxes, if you have the PortableInfobox extension enabled.',
 	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'name' => 'Cosmos Modern Profile Tabs',
