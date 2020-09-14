@@ -430,6 +430,15 @@ $wgManageWikiSettings = [
 		'section' => 'cosmos',
 		'help' => 'Add a color name or hex code to set as the footer background color for the Cosmos skin.',
 	],
+	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
+		'name' => 'Enable Europa Theme for Infoboxes',
+		'from' => 'cosmos',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'cosmos',
+		'help' => 'Enable the Europa theme on infoboxes when using the Cosmos skin, if you have the PortableInfobox extension enabled.',
+	],
 	'wgCosmosBackgroundImageNorepeat' => [
 		'name' => 'Cosmos Background Image Repeat',
 		'from' => 'cosmos',
@@ -456,15 +465,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'cosmos',
 		'help' => 'Replace the existing floating toolbar with the contents of MediaWiki:Cosmos-toolbar? Not checking this will make the contents of MediaWiki:Cosmos-toolbar be appended to the toolbar rather than replacing it.',
-	],
-	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
-		'name' => 'Enable Europa Theme for Infoboxes',
-		'from' => 'cosmos',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'cosmos',
-		'help' => 'Enable the Europa theme on infoboxes, if you have the PortableInfobox extension enabled.',
 	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'name' => 'Cosmos Modern Profile Tabs',
