@@ -1037,6 +1037,11 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLinter',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'sql' => [
+					'linter' => "$IP/extensions/Linter/sql/tables-generated.sql"
+				],
+			],
 		],
 		'listings' => [
 			'name' => 'Listings',
