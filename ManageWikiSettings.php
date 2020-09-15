@@ -1376,7 +1376,7 @@ $wgManageWikiSettings = [
 	],
 	'wgHAWelcomeWelcomeUsername' => [
 		'name' => 'HAWelcome Welcome Username',
-		'from' => 'HAWelcome',
+		'from' => 'hawelcome',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => $wgSitename,
@@ -1385,7 +1385,7 @@ $wgManageWikiSettings = [
 	],
 	'wgHAWelcomeStaffGroupName' => [
 		'name' => 'HAWelcome Staff Group Name',
-		'from' => 'HAWelcome',
+		'from' => 'hawelcome',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => 'sysop',
@@ -1394,7 +1394,7 @@ $wgManageWikiSettings = [
 	],
 	'wgHAWelcomeSignatureFromPreferences' => [
 		'name' => 'HAWelcome Signature From Preferences',
-		'from' => 'HAWelcome',
+		'from' => 'hawelcome',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
