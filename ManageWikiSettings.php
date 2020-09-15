@@ -1283,7 +1283,7 @@ $wgManageWikiSettings = [
 		'help' => 'Set this to true to force CommonsMetadata to parse the description page of the image and extract the metadata when using images from other wikis.'
 	],
 
-	// Notification
+	// Notifications
 	'wgCookieWarningMoreUrl' => [
 		'name' => 'CookieWarning More Url',
 		'from' => 'mediawiki',
@@ -1373,6 +1373,33 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
+	],
+	'wgHAWelcomeWelcomeUsername' => [
+		'name' => 'HAWelcome Welcome Username',
+		'from' => 'HAWelcome',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => $wgSitename,
+		'section' => 'notifications',
+		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit.',
+	],
+	'wgHAWelcomeStaffGroupName' => [
+		'name' => 'HAWelcome Staff Group Name',
+		'from' => 'HAWelcome',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => 'sysop',
+		'section' => 'notifications',
+		'help' => 'The name of the group that can serve as a fallback when no sysops have been active in the last 60 days.',
+	],
+	'wgHAWelcomeSignatureFromPreferences' => [
+		'name' => 'HAWelcome Signature From Preferences',
+		'from' => 'HAWelcome',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
 	],
 
 	// Recent changes
