@@ -1732,8 +1732,19 @@ $wi->config->settings = [
 			],
 		],
 	],
-
-	//HideSection
+	
+	// HAWelcome
+	'wgHAWelcomeWelcomeUsername' => [
+		'default' => $wgSitename,
+	],
+	'wgHAWelcomeStaffGroupName' => [
+		'default' => 'sysop',
+	],
+	'wgHAWelcomeSignatureFromPreferences' => [
+		'default' => false,
+	],
+	
+	// HideSection
 	'wgHideSectionImages' => [
 		'default' => false,
 		'cikansaiwiki' => [
