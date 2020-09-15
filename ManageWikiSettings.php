@@ -1374,15 +1374,6 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
 	],
-	'wgHAWelcomeWelcomeUsername' => [
-		'name' => 'HAWelcome Welcome Username',
-		'from' => 'hawelcome',
-		'restricted' => false,
-		'type' => 'text',
-		'overridedefault' => $wgSitename,
-		'section' => 'notifications',
-		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit.',
-	],
 	'wgHAWelcomeStaffGroupName' => [
 		'name' => 'HAWelcome Staff Group Name',
 		'from' => 'hawelcome',
@@ -1576,6 +1567,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => 0,
 		'section' => 'restricted',
 		'help' => 'Number of editors to attribute.',
+	],
+	'wgHAWelcomeWelcomeUsername' => [
+		'name' => 'HAWelcome Welcome Username',
+		'from' => 'hawelcome',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => $wgSitename,
+		'section' => 'restricted',
+		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
