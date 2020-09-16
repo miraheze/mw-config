@@ -1031,6 +1031,18 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'linter' => [
+			'name' => 'Linter',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Linter',
+			'var' => 'wmgUseLinter',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'linter' => "$IP/extensions/Linter/sql/linter.sql"
+				],
+			],
+		],
 		'listings' => [
 			'name' => 'Listings',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Listings',

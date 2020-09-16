@@ -634,6 +634,10 @@ if ( $wmgUseLinkTitles ) {
 	wfLoadExtension( 'LinkTitles' );
 }
 
+if ( $wmgUseLinter ) {
+	wfLoadExtension( 'Linter' );
+}
+
 if ( $wmgUseListings ) {
 	wfLoadExtension( 'Listings' );
 }

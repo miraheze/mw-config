@@ -1030,6 +1030,9 @@ $wi->config->settings = [
 	'wmgUseLinkTitles' => [
 		'default' => false,
 	],
+	'wmgUseLinter' => [
+		'default' => false,
+	],
 	'wmgUseListings' => [
 		'default' => false,
 	],
