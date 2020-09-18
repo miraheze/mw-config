@@ -636,6 +636,15 @@ if ( $wmgUseLinkTitles ) {
 
 if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
+	
+	$wgLinterSubmitterWhitelist = [
+		'127.0.0.1' => true,
+		'::1' => true,
+		'51.89.160.132' => true,
+		'2001:41d0:800:1056::7' => true,
+		'51.89.160.141' => true,
+		'2001:41d0:800:105a::9' => true,
+	];
 }
 
 if ( $wmgUseListings ) {
