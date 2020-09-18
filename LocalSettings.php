@@ -2019,9 +2019,19 @@ $wi->config->settings = [
 	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
+		'hypopediawiki' => [
+			'leader' => [
+				'banned',
+			],
+		],
 		'rf1botwiki' => [
 			'bureaucrat' => [
 				'Repo_Maintainer',
+			],
+		],
+		'scratchpadwiki' => [
+			'leader' => [
+				'banned',
 			],
 		],
 		'simcitywiki' => [
@@ -2086,17 +2096,6 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
-		'+cyclonepediawiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'extendedconfirmed' => [
-				'extendedconfirmed' => true,
-			],
-			'sysop' => [
-				'extendedconfirmed' => true,
-			],
-		],
 		'+dpwiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -2114,6 +2113,36 @@ $wi->config->settings = [
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
+			],
+			'extendedconfirmed' => [
+				'extendedconfirmed' => true,
+			],
+			'leader' => [
+				'leader' => true,
+			],
+			'steward' => [
+				'hideuser' => true,
+				'abusefilter-hide-log' => true,
+				'abusefilter-hidden-log' => true,
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+				'viewsuppressed' => true,
+				'interwiki' => true,
+				'centralauth-rename' => true,
+				'renameuser' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'managewiki-restricted' => true,
+				'bigdelete' => true,
+				'userrights' => true,
+				'usermerge' => true,
+				'centralauth-usermerge' => true,
+				'oathauth-enable' => true,
+			],
+			'sysop' => [
+				'extendedconfirmed' => true,
 			],
 		],
 		'+igrovyesistemywiki' => [
@@ -2306,6 +2335,41 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
+		'+scratchpadwiki' => [
+			'bureaucrat' => [
+				'bureaucrat' => true,
+			],
+			'extendedconfirmed' => [
+				'extendedconfirmed' => true,
+			],
+			'leader' => [
+				'leader' => true,
+			],
+			'steward' => [
+				'hideuser' => true,
+				'abusefilter-hide-log' => true,
+				'abusefilter-hidden-log' => true,
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true,
+				'suppressionlog' => true,
+				'suppressrevision' => true,
+				'viewsuppressed' => true,
+				'interwiki' => true,
+				'centralauth-rename' => true,
+				'renameuser' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'managewiki-restricted' => true,
+				'bigdelete' => true,
+				'userrights' => true,
+				'usermerge' => true,
+				'centralauth-usermerge' => true,
+				'oathauth-enable' => true,
+			],
+			'sysop' => [
+				'extendedconfirmed' => true,
+			],
+		],
 		'+sesupportwiki' => [
 			'editor' => [
 				'editor' => true,
@@ -2449,9 +2513,19 @@ $wi->config->settings = [
 	],
 	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
 		'default' => [],
+		'hypopediawiki' => [
+			'leader' => [
+				'banned',
+			],
+		],
 		'rf1botwiki' => [
 			'bureaucrat' => [
 				'Repo_Maintainer',
+			],
+		],
+		'scratchpadwiki' => [
+			'leader' => [
+				'banned',
 			],
 		],
 		'sesupportwiki' => [
@@ -2848,9 +2922,31 @@ $wi->config->settings = [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
+		'hypopediawiki' => [
+			'banned' => [
+				'read' => true,
+				'createaccount' => true,
+				'viewmywatchlist' => true,
+				'viewmyprivateinfo' => true,
+				'editmywatchlist' => true,
+				'editmyoptions' => true,
+				'editmyprivateinfo' => true,
+			],
+		],
 		'ssptopwiki' => [
 			'read-only' => [
 				'edit' => true,
+			],
+		],
+		'scratchpadwiki' => [
+			'banned' => [
+				'read' => true,
+				'createaccount' => true,
+				'viewmywatchlist' => true,
+				'viewmyprivateinfo' => true,
+				'editmywatchlist' => true,
+				'editmyoptions' => true,
+				'editmyprivateinfo' => true,
 			],
 		],
 		'simcitywiki' => [
@@ -3025,16 +3121,14 @@ $wi->config->settings = [
 		'+csydeswiki' => [
 			'author',
 		],
-		'+cyclonepediawiki' => [
-			'bureaucrat',
-			'extendedconfirmed',
-		],
 		'+dpwiki' => [
 			'bureaucrat',
 			'respected',
 		],
 		'+hypopediawiki' => [
 			'bureaucrat',
+			'extendedconfirmed',
+			'leader',
 		],
 		'igrovyesistemywiki' => [
 			'trusted',
@@ -3077,6 +3171,11 @@ $wi->config->settings = [
 		],
 		'+radviserwiki' => [
 			'editor',
+		],
+		'+scratchpadwiki' => [
+			'bureaucrat',
+			'extendedconfirmed',
+			'leader',
 		],
 		'+sesupportwiki' => [
 			'editor',
