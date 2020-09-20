@@ -202,7 +202,7 @@ $wi->config->settings = [
 		'default' => '#ffffff',
 	],
 	'wgCosmosBannerBackgroundColor' => [
-		'default' => '#ffffff',
+		'default' => '#c0c0c0',
 	],
 	'wgCosmosWikiHeaderBackgroundColor' => [
 		'default' => '#c0c0c0',
