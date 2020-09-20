@@ -199,25 +199,25 @@ $wi->config->settings = [
 		'default' => '#1A1A1A',
 	],
 	'wgCosmosContentBackgroundColor' => [
-		'default' => '#000',
+		'default' => '#ffffff',
 	],
 	'wgCosmosBannerBackgroundColor' => [
-		'default' => '#001e3b',
+		'default' => '#ffffff',
 	],
 	'wgCosmosWikiHeaderBackgroundColor' => [
-		'default' => '#001e3b',
+		'default' => '#c0c0c0',
 	],
 	'wgCosmosLinkColor' => [
-		'default' => '#006cb0',
+		'default' => '#0645ad',
 	],
 	'wgCosmosButtonColor' => [
-		'default' => '#012E59',
+		'default' => '#c0c0c0',
 	],
 	'wgCosmosToolbarColor' => [
-		'default' => '#001e3b',
+		'default' => '#000000',
 	],
 	'wgCosmosFooterColor' => [
-		'default' => '#141414',
+		'default' => '#c0c0c0',
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
 		'default' => true,
