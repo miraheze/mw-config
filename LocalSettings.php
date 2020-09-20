@@ -484,6 +484,7 @@ $wi->config->settings = [
 			'Fantasy' => 'fantasy',
 			'Gaming' => 'gaming',
 			'Geography' => 'geography',
+			'History' => 'history',
 			'Leisure' => 'leisure',
 			'Literature/Writing' => 'literature',
 			'Media/Journalism' => 'media',
