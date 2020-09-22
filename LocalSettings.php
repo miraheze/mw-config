@@ -1004,6 +1004,9 @@ $wi->config->settings = [
 	'wmgUseJsCalendar' => [
 		'default' => false,
 	],
+	'wmgUseJsonConfig' => [
+		'default' => false,
+	],
 	'wmgUseKartographer' => [
 		'default' => false,
 	],
