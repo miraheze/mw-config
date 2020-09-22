@@ -105,6 +105,11 @@ $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LanguageSelector/LanguageSelector.php
 $IP/extensions/LastModified/LastModified.php
+$IP/extensions/LDAPAuthentication2/extension.json
+$IP/extensions/LDAPAuthorization/extension.json
+$IP/extensions/LDAPGroups/extension.json
+$IP/extensions/LDAPProvider/extension.json
+$IP/extensions/LDAPUserInfo/extension.json
 $IP/extensions/Lingo/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/LinkTarget.php
@@ -158,8 +163,9 @@ $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
-$IP/extensions/Poem/extension.json
 $IP/extensions/PipeEscape/PipeEscape.php
+$IP/extensions/PluggableAuth/extension.json
+$IP/extensions/Poem/extension.json
 $IP/extensions/PollNY/extension.json
 $IP/extensions/PortableInfobox/extension.json
 $IP/extensions/Popups/extension.json
