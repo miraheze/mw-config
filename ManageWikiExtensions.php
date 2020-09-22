@@ -954,6 +954,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'jsonconfig' => [
+			'name' => 'JsonConfig',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:JsonConfig',
+			'var' => 'wmgUseJsonConfig',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'kartographer' => [
 			'name' => 'Kartographer',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Kartographer',

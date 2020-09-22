@@ -594,6 +594,10 @@ if ( $wmgUseJsCalendar ) {
 	wfLoadExtension( 'JsCalendar' );
 }
 
+if ( $wmgUseJsonConfig ) {
+	wfLoadExtension( 'JsonConfig' );
+}
+
 if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'JsonConfig' );
 
