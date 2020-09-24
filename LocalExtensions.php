@@ -103,6 +103,10 @@ if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
 
+if ( $wmgUseCentralAuth ) {
+	wfLoadExtension( 'CentralAuth' );
+}
+
 if ( $wmgUseCargo ) {
 	wfLoadExtension( 'Cargo' );
 }
@@ -608,12 +612,23 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
-if ($wmgUseLanguageSelector) {
+if ( $wmgUseLanguageSelector ) {
 	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
 }
 
-if ($wmgUseLastModified) {
+if ( $wmgUseLastModified ) {
 	require_once "$IP/extensions/LastModified/LastModified.php";
+}
+
+if ( $wmgUseLdap ) {
+	wfLoadExtensions( [
+		'LDAPAuthentication2',
+		'LDAPAuthorization',
+		'LDAPGroups',
+		'LDAPProvider',
+		'LDAPUserInfo',
+		'PluggableAuth'
+	] );
 }
 
 if ( $wmgUseLiberty ) {
