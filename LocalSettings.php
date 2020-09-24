@@ -779,6 +779,11 @@ $wi->config->settings = [
 	'wmgUseCategoryTree' => [
 		'default' => false,
 	],
+	// Must be on at all times except for ldapwikiwiki
+	'wmgUseCentralAuth' => [
+		'default' => true,
+		'ldapwikiwiki' => false,
+	],
 	'wmgUseCharInsert' => [
 		'default' => false,
 	],
@@ -1015,6 +1020,10 @@ $wi->config->settings = [
 	],
 	'wmgUseLastModified' => [
 		'default' => false,
+	],
+	'wmgUseLdap' => [
+		'default' => false,
+		'ldapwikiwiki' => true,
 	],
 	'wmgUseLiberty' => [
 		'default' => false,
