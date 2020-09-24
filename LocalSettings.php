@@ -767,6 +767,11 @@ $wi->config->settings = [
 	'wmgUseMSCalendar' => [
 		'default' => false,
 	],
+	// Must be on at all times except for ldapwikiwiki
+	'wmgUseCentralAuth' => [
+		'default' => true,
+		'ldapwikiwiki' => false,
+	],
 	'wmgUseCapiunto' => [
 		'default' => false,
 	],
@@ -778,11 +783,6 @@ $wi->config->settings = [
 	],
 	'wmgUseCategoryTree' => [
 		'default' => false,
-	],
-	// Must be on at all times except for ldapwikiwiki
-	'wmgUseCentralAuth' => [
-		'default' => true,
-		'ldapwikiwiki' => false,
 	],
 	'wmgUseCharInsert' => [
 		'default' => false,
