@@ -4,7 +4,6 @@ wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
 	'BetaFeatures',
-	'CentralAuth',
 	'CentralNotice',
 	'CheckUser',
 	'CreateWiki',
