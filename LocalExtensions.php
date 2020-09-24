@@ -629,6 +629,84 @@ if ( $wmgUseLdap ) {
 		'LDAPUserInfo',
 		'PluggableAuth'
 	] );
+
+	$LDAPProviderDomainConfigProvider = function() {
+		$config = [
+			'LDAP' => [
+				'connection' => [
+					'server' => 'ldap1.miraheze.org',
+					'enctype' => 'ssl',
+					'user' => "cn=write-user,dc=miraheze,dc=org",
+					'pass' => $wmgLdapPassword,
+					'options' => [
+						'LDAP_OPT_DEREF' => 1
+					],
+					'basedn' => 'dc=miraheze,dc=org',
+					'groupbasedn' => 'dc=miraheze,dc=org',
+					'userbasedn' => 'dc=miraheze,dc=org',
+					'searchattribute' => 'uid',
+					//"searchstring" => "uid=USER-NAME,dc=example,dc=com",
+					'usernameattribute' => 'uid',
+					'realnameattribute' => 'cn',
+					'emailattribute' => 'mail'
+				]
+			]
+		];
+
+		return new \MediaWiki\Extension\LDAPProvider\DomainConfigProvider\InlinePHPArray( $config );
+	};
+
+$LDAPProviderDomainConfigProvider = function()
+{
+	$config =
+	[
+		"miraheze.org" =>
+		[
+			"connection" =>
+			[
+				"server" => "ldap1.miraheze.org",
+				"user" => "cn=write-user,dc=miraheze,dc=org",
+				"pass" => $wmgLdapPassword,
+				"basedn" => "dc=miraheze,dc=org",
+				"groupbasedn" => "dc=example,dc=com",
+				"userbasedn" => "dc=example,dc=com",
+				"searchattribute" => "samaccountname",
+				"searchstring" => "USER-NAME@example.com",
+				"usernameattribute" => "uid",
+				"realnameattribute" => "cn",
+				"emailattribute" => "mail",
+				"grouprequest" => "MediaWiki\\Extension\\LDAPProvider\\UserGroupsRequest\\GroupMember::factory"
+			],
+			"authorization" =>
+			[
+				"rules" =>
+				[
+					"groups" =>
+					[
+						"required" => [ "cn=Developers,cn=Users,dc=example,dc=com" ]
+					]
+				]
+			],
+			"groupsync" =>
+			[
+				"mechanism" => "mappedgroups",
+				"mapping" =>
+				[
+					"sysop" => "cn=Developers,cn=Users,dc=example,dc=com",
+					"bureaucrat" => "cn=Developers,cn=Users,dc=example,dc=com"
+				]
+			],
+			"userinfo" =>
+			[
+				"email" => "mail",
+				"realname" => "cn",
+				"properties.gender" => "gender"
+			]
+		]
+	];
+
+	return new \MediaWiki\Extension\LDAPProvider\DomainConfigProvider\InlinePHPArray( $config );
+};
 }
 
 if ( $wmgUseLiberty ) {
