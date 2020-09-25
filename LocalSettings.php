@@ -1612,6 +1612,7 @@ $wi->config->settings = [
 
 	'wgMaxCredits' => [
 		'default' => 0,
+		'+testwiki' => -1,
 	],
 	'wgShowCreditsIfMax' => [
 		'default' => true,
