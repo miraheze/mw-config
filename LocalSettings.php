@@ -179,6 +179,12 @@ $wi->config->settings = [
 	'wgEnableSidebarCache' => [
 		'default' => false,
 	],
+	
+	// Category Collation
+	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change 
+		'default' => 'uppercase',
+		'holidayswiki' => 'numeric',
+	],
 	// Cosmos settings
 	'wgCosmosBannerLogo' => [
 		'default' => null,
