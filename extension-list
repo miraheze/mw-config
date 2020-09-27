@@ -105,7 +105,7 @@ $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LanguageSelector/LanguageSelector.php
 $IP/extensions/LastModified/LastModified.php
-$IP/extensions/LdapAuthentication/extension.json
+$IP/extensions/LdapAuthentication/LdapAuthentication.php
 $IP/extensions/Lingo/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/LinkTarget.php
