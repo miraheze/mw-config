@@ -81,6 +81,14 @@ if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
 }
 
+if ( $wgDBname === 'cineastaswiki' ) {
+	$wgWhitelistRead[] = 'Projectos resultantes';
+	$wgWhitelistRead[] = 'Actores';
+	$wgWhitelistRead[] = 'Pós-produção';
+	$wgWhitelistRead[] = 'Produtoras do Norte';
+	$wgWhitelistRead[] = 'Programas e aplicações grátis';
+}
+
 if ( $wgDBname === 'dcmultiversewiki' ) {
         $wgMFAutodetectMobileView = false;
 }
