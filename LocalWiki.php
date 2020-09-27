@@ -89,6 +89,10 @@ if ( $wgDBname === 'cineastaswiki' ) {
 	$wgWhitelistRead[] = 'Programas e aplicações grátis';
 }
 
+if ( $wgDBname === 'cvtwiki' ) {
+	$wgWhitelistRead[] = 'CVT action log';
+}
+
 if ( $wgDBname === 'dcmultiversewiki' ) {
         $wgMFAutodetectMobileView = false;
 }
@@ -185,11 +189,6 @@ if ( $wgDBname === 'simcitywiki' ) {
 // Depends on $wgContentNamespaces
 if ( $wgDBname === 'abitaregeawiki' ) {
 	$wi->config->settings['wgExemptFromUserRobotsControl']['default'] = [];
-}
-
-// Additional wgReadWhitelist changes
-if ( $wgDBname === 'cvtwiki' ) {
-	$wgWhitelistRead[] = 'CVT action log';
 }
 
 // Licensing variables
