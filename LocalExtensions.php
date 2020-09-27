@@ -635,11 +635,13 @@ if ( $wmgUseLdap ) {
 	];
 	$wgLDAPDomainNames = [ 'miraheze' ];
 	$wgLDAPServerNames = [ 'miraheze' => 'ldap1.miraheze.org' ];
+	$wgLDAPPort = [ 'company.local' => 389 ];
+	$wgLDAPEncryptionType = [ 'miraheze' => 'tls' ];
+
 
 	$wgLDAPSearchAttributes = [ 'miraheze' => 'cn:caseExactMatch:' ];
 	$wgLDAPBaseDNs = [ 'miraheze' => 'dc=miraheze,dc=org' ];
 	$wgLDAPUserBaseDNs = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
-	$wgLDAPEncryptionType = [ 'miraheze' => 'tls' ];
 	$wgLDAPWriterDN = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
 	$wgLDAPWriterPassword = [ 'miraheze' => $wmgLdapPassword ];
 	$wgLDAPWriteLocation = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
