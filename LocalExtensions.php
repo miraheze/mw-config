@@ -622,7 +622,7 @@ if ( $wmgUseLastModified ) {
 }
 
 if ( $wmgUseLdap ) {
-	wfLoadExtension( 'LdapAuthentication' );
+	require_once "$IP/extensions/LdapAuthentication/LdapAuthentication.php";
 
 	$wgAuthManagerAutoConfig['primaryauth'] += [
 		LdapPrimaryAuthenticationProvider::class => [
