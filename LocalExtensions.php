@@ -603,9 +603,10 @@ if ( $wmgUseJsonConfig ) {
 }
 
 if ( $wmgUseKartographer ) {
-	wfLoadExtension( 'JsonConfig' );
-
-	wfLoadExtension( 'Kartographer' );
+	wfLoadExtensions( [
+		'JsonConfig',
+		'Kartographer'
+	] );
 }
 
 if ( $wmgUseLabeledSectionTransclusion ) {
@@ -621,14 +622,38 @@ if ( $wmgUseLastModified ) {
 }
 
 if ( $wmgUseLdap ) {
-	wfLoadExtensions( [
-		'LDAPAuthentication2',
-		'LDAPAuthorization',
-		'LDAPGroups',
-		'LDAPProvider',
-		'LDAPUserInfo',
-		'PluggableAuth'
-	] );
+	wfLoadExtension( 'LdapAuthentication' );
+
+	$wgAuthManagerAutoConfig['primaryauth'] += [
+		LdapPrimaryAuthenticationProvider::class => [
+			'class' => LdapPrimaryAuthenticationProvider::class,
+			'args' => [ [
+				'authoritative' => true, // don't allow local non-LDAP accounts
+			] ],
+			'sort' => 50, // must be smaller than local pw provider
+		],
+	];
+	$wgLDAPDomainNames = [ 'miraheze' ];
+	$wgLDAPServerNames = [ 'miraheze' => 'ldap1.miraheze.org' ];
+
+	$wgLDAPSearchAttributes = [ 'miraheze' => 'cn:caseExactMatch:' ];
+	$wgLDAPBaseDNs = [ 'miraheze' => 'dc=miraheze,dc=org' ];
+	$wgLDAPUserBaseDNs = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
+	$wgLDAPEncryptionType = [ 'miraheze' => 'tls' ];
+	$wgLDAPWriterDN = array( 'ldap' => 'cn=write-user,dc=miraheze,dc=org' );
+	$wgLDAPWriterPassword = array( 'ldap' => $wmgLdapPassword );
+	$wgLDAPWriteLocation = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
+	$wgLDAPAddLDAPUsers = [ 'miraheze' => true ];
+	$wgLDAPUpdateLDAP = [ 'miraheze' => true ];
+	$wgLDAPPasswordHash = [ 'miraheze' => 'clear' ];
+	// 'invaliddomain' is set to true so that mail password options
+	// will be available on user creation and password mailing
+	// Force strict mode. T218589
+	// $wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
+	$wgLDAPPreferences = [ 'miraheze' => [ "email" => "mail" ] ];
+	$wgLDAPUseFetchedUsername = [ 'miraheze' => true ];
+	$wgLDAPLowerCaseUsernameScheme = [ 'miraheze' => false, 'invaliddomain' => false ];
+	$wgLDAPLowerCaseUsername = [ 'miraheze' => false, 'invaliddomain' => false ];
 
 	$LDAPProviderDomainConfigProvider = function() {
 		$config = [
