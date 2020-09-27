@@ -640,8 +640,8 @@ if ( $wmgUseLdap ) {
 	$wgLDAPBaseDNs = [ 'miraheze' => 'dc=miraheze,dc=org' ];
 	$wgLDAPUserBaseDNs = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
 	$wgLDAPEncryptionType = [ 'miraheze' => 'tls' ];
-	$wgLDAPWriterDN = array( 'ldap' => 'cn=write-user,dc=miraheze,dc=org' );
-	$wgLDAPWriterPassword = array( 'ldap' => $wmgLdapPassword );
+	$wgLDAPWriterDN = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
+	$wgLDAPWriterPassword = [ 'miraheze' => $wmgLdapPassword ];
 	$wgLDAPWriteLocation = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
 	$wgLDAPAddLDAPUsers = [ 'miraheze' => true ];
 	$wgLDAPUpdateLDAP = [ 'miraheze' => true ];
