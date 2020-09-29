@@ -37,7 +37,7 @@ if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 
 	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
-	
+
 	$wgApexLogo = [
 		'1x' => $wgLogo,
 		'2x' => $wgLogo,
@@ -638,9 +638,11 @@ if ( $wmgUseLdap ) {
 	$wgLDAPEncryptionType = [ 'miraheze' => 'ssl' ];
 
 
-	$wgLDAPSearchAttributes = [ 'miraheze' => 'cn:caseExactMatch:' ];
+	$wgLDAPSearchAttributes = [ 'miraheze' => 'uid' ];
 	$wgLDAPBaseDNs = [ 'miraheze' => 'dc=miraheze,dc=org' ];
 	$wgLDAPUserBaseDNs = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
+	$wgLDAPProxyAgent = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
+	$wgLDAPProxyAgentPassword = [ 'miraheze' => $wmgLdapPassword ];
 	$wgLDAPWriterDN = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
 	$wgLDAPWriterPassword = [ 'miraheze' => $wmgLdapPassword ];
 	$wgLDAPWriteLocation = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
@@ -655,6 +657,10 @@ if ( $wmgUseLdap ) {
 	$wgLDAPUseFetchedUsername = [ 'miraheze' => true ];
 	$wgLDAPLowerCaseUsernameScheme = [ 'miraheze' => false, 'invaliddomain' => false ];
 	$wgLDAPLowerCaseUsername = [ 'miraheze' => false, 'invaliddomain' => false ];
+
+	$wgLDAPOptions = [ 'miraheze' => [ "LDAP_OPT_X_TLS_CACERTFILE" => '/etc/ssl/certs/Sectigo.crt' ] ];
+
+	// $wgLDAPDebug = 5;
 }
 
 if ( $wmgUseLiberty ) {
