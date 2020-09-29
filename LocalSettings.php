@@ -2840,6 +2840,7 @@ $wi->config->settings = [
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
+		'ldapwikiwiki' => 'ldapwikiwiki',
 	],
 	'wgMWOAuthSharedUserSource' => [
 		'default' => 'CentralAuth',
