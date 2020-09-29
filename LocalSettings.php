@@ -2835,12 +2835,12 @@ $wi->config->settings = [
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
+		'ldapwikiwiki' => 'ldapwikiwiki',
 	],
 
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
-		'ldapwikiwiki' => 'ldapwikiwiki',
 	],
 	'wgMWOAuthSharedUserSource' => [
 		'default' => 'CentralAuth',
