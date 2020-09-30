@@ -1741,6 +1741,7 @@ $wi->config->settings = [
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => [
 		'default' => 'mhglobal',
+		'ldapwikiwiki' => 'ldapwikiwiki',
 	],
 	
 	// GlobalUsage
