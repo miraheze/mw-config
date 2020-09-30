@@ -2227,6 +2227,11 @@ $wi->config->settings = [
 				'devteam' => true,
 			],
 		],
+		'+ldapwikiwiki' => [
+			'sysop' => [
+				'managewiki-restricted' => true,
+			],
+		],
 		'+marthaspeakswiki' => [
 			'sysop' => [
 				'templateeditor' => true,
