@@ -653,7 +653,12 @@ if ( $wmgUseLdap ) {
 	// will be available on user creation and password mailing
 	// Force strict mode. T218589
 	// $wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
-	$wgLDAPPreferences = [ 'miraheze' => [ "email" => "mail" ] ];
+	$wgLDAPPreferences = [
+		'miraheze' => [
+			'email' => 'mail',
+			'realname' => 'givenName',
+		]
+	];
 	$wgLDAPUseFetchedUsername = [ 'miraheze' => true ];
 	$wgLDAPLowerCaseUsernameScheme = [ 'miraheze' => false, 'invaliddomain' => false ];
 	$wgLDAPLowerCaseUsername = [ 'miraheze' => false, 'invaliddomain' => false ];
