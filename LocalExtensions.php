@@ -648,7 +648,7 @@ if ( $wmgUseLdap ) {
 	$wgLDAPWriteLocation = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
 	$wgLDAPAddLDAPUsers = [ 'miraheze' => true ];
 	$wgLDAPUpdateLDAP = [ 'miraheze' => true ];
-	$wgLDAPPasswordHash = [ 'miraheze' => 'clear' ];
+	$wgLDAPPasswordHash = [];
 	// 'invaliddomain' is set to true so that mail password options
 	// will be available on user creation and password mailing
 	// Force strict mode. T218589
