@@ -14,6 +14,7 @@ $wi->config->settings['wgDebugLogGroups']['default'] = [
 	'error' => "$wmgLogDir/debuglogs/php-error.log",
 	'exception' => "$wmgLogDir/debuglogs/exception.log",
 	'exec' => "$wmgLogDir/debuglogs/exec.log",
+	'ldap' => "$wmgLogDir/debuglogs/ldap.log",
 	'Math' => "$wmgLogDir/debuglogs/Math.log",
 	'MatomoAnalytics' => "$wmgLogDir/debuglogs/MatomoAnalytics.log",
 	'ManageWiki' => "$wmgLogDir/debuglogs/ManageWiki.log",
