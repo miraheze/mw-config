@@ -3059,9 +3059,6 @@ $wi->config->settings = [
 			'pm',
 			'member',
 		],
-		'+csydeswiki' => [
-			'author',
-		],
 		'+cyclonepediawiki' => [
 			'bureaucrat',
 			'extendedconfirmed',
@@ -3132,9 +3129,6 @@ $wi->config->settings = [
 		'+testwiki' => [
 			'bureaucrat',
 			'consul',
-		],
-		'+test2wiki' => [
-			'author',
 		],
 		'+thesciencearchiveswiki' => [
 			'templateeditor',
