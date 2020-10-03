@@ -541,7 +541,7 @@ $wi->config->settings = [
 		'default' => true,
 	],
 	'wgCookieWarningGeoIPLookup' => [
-		'default' => 'php',
+		'default' => 'js',
 	],
 	'wgCookieWarningGeoIp2' => [
 		'default' => true,
