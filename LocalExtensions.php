@@ -10,6 +10,8 @@ if ( $wmgUse3D ) {
 
 	$wi->config->settings['wgFileExtensions']['default'][] = 'stl';
 
+	$wgManageWikiSettings['wgFileExtensions']['overridedefault'][] = 'stl';
+
 	$wi->config->settings['wgTrustedMediaFormats']['default'][] = 'application/sla';
 }
 
