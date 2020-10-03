@@ -1728,6 +1728,7 @@ $wgManageWikiSettings = [
 			'ogg',
 			'pdf',
 			'png',
+			'stl',
 			'svg',
 		],
 		'section' => 'restricted',
