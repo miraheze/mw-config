@@ -8,6 +8,10 @@ if ( $wmgUse3D ) {
 		'/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/3d2png/3d2png.js'
 	];
 
+	$wgManageWikiSettings['wgFileExtensions']['overridedefault'][] = 'stl';
+
+	$wi->config->settings['wgFileExtensions']['default'][] = 'stl';
+
 	$wi->config->settings['wgTrustedMediaFormats']['default'][] = 'application/sla';
 }
 
