@@ -653,6 +653,9 @@ $wi->config->settings = [
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
 	],
+	'wgDiscordShowNewUserFullName' => [
+		'default' => false,
+	],
 
 	// Display Title
 	'wgDisplayTitleHideSubtitle' => [
