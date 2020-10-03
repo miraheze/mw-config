@@ -313,7 +313,7 @@ if ( $wmgUseDataDump ) {
 				'options' => [
 					'-zcvf',
 					$wgDataDumpDirectory . '${filename}',
-					"/mnt/mediawiki-static/{$wgDBname}/",
+					"/mnt/mediawiki-static/{$wgDBname}",
 					"--exclude",
 					"mnt/mediawiki-static/{$wgDBname}/archive",
 					"--exclude",
