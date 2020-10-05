@@ -90,6 +90,11 @@ $wi->config->settings = [
 		'default' => false,
 		'metawiki' => true,
 	],
+	'wgTitleBlacklistLogHits' => [
+		'default' => false,
+		'loginwiki' => true,
+		'metawiki' => true,
+	],
 
 	// Cargo
 	'wgCargoGoogleMapsKey' => [
