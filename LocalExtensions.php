@@ -1131,7 +1131,7 @@ if ( $wmgUseTextExtracts ) {
 
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
-	require_once "$IP/extensions/Translate/Translate.php";
+	wfLoadExtension( 'Translate' );
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
