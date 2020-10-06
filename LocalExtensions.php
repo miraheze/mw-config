@@ -1139,6 +1139,10 @@ if ( $wmgUseTranslate ) {
 	$wgULSGeoService = false;
 }
 
+if ( $wmgUseTranslationNotifications ) {
+	wfLoadExtension( 'TranslationNotifications' );
+}
+
 if ( $wmgUseTreeAndMenu ) {
 	wfLoadExtension( 'TreeAndMenu' );
 }
