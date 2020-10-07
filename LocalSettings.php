@@ -496,6 +496,7 @@ $wi->config->settings = [
 			'Gaming' => 'gaming',
 			'Geography' => 'geography',
 			'History' => 'history',
+			'Humour/Satire' => 'humour',
 			'Language/Linguistics' => 'langling',
 			'Leisure' => 'leisure',
 			'Literature/Writing' => 'literature',
