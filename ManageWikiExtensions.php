@@ -2050,6 +2050,26 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'translationnotifications' => [
+			'name' => 'TranslationNotifications',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TranslationNotifications',
+			'var' => 'wmgUseTranslationNotifications',
+			'conflicts' => false,
+			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'translate-manage',
+						],
+					],
+				],
+			],
+			'requires' => [
+				'extensions' => [
+					'translate',
+				],
+			],
+		],
 		'treeandmenu' => [
 			'name' => 'TreeAndMenu',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TreeAndMenu',

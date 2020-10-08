@@ -219,6 +219,7 @@ $IP/extensions/TitleKey/extension.json
 $IP/extensions/TocTree/extension.json
 $IP/extensions/TorBlock/extension.json
 $IP/extensions/Translate/extension.json
+$IP/extensions/TranslationNotifications/extension.json
 $IP/extensions/TreeAndMenu/extension.json
 $IP/extensions/TwitterTag/extension.json
 $IP/extensions/TwoColConflict/extension.json
