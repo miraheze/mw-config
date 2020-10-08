@@ -2077,6 +2077,14 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'truglass' => [
+			'name' => 'Truglass (Skin)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Truglass',
+			'var' => 'wmgUseTruglass',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'tweeki' => [
 			'name' => 'Tweeki (Skin) - Note: Causes mobile view not to work!',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Tweeki',

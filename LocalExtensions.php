@@ -1147,6 +1147,12 @@ if ( $wmgUseTreeAndMenu ) {
 	wfLoadExtension( 'TreeAndMenu' );
 }
 
+if ( $wmgUseTruglass) {
+	wfLoadSkin( 'Truglass' );
+	
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Truglass'] = 'truglass';
+}
+
 if ( $wmgUseThanks ) {
 	wfLoadExtension( 'Thanks' );
 }

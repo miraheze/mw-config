@@ -1347,6 +1347,9 @@ $wi->config->settings = [
 	'wmgUseTreeAndMenu' => [
 		'default' => false,
 	],
+	'wmgUseTruglass' => [
+		'default' => false,
+	],
 	'wmgUseTweeki' => [
 		'default' => false,
 	],
