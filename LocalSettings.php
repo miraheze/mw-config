@@ -3515,6 +3515,11 @@ $wi->config->settings = [
 				'en' => 'English is the source language.',
 			],
 		],
+		'minecraftathomewiki' => [
+			'*' => [
+				'en-gb' => 'This variant of English is not allowed to be translated.',
+			],
+		],
 		'spiralwiki' => [
 			'*' => [
 				'en' => 'English is the source language.',
