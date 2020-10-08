@@ -26,7 +26,7 @@ if ( wfHostname() === 'test2' ) {
 				'handlers' => [
 					'syslog' => [
 						'class' => \MediaWiki\Logger\Monolog\SyslogHandler::class,
-						'formatter' => 'cee',
+						'formatter' => 'logstash',
 						'args' => [
 							'mediawiki', // tag
 							'127.0.0.1', // local syslog-ng daemon
@@ -44,8 +44,8 @@ if ( wfHostname() === 'test2' ) {
 					],
 				],
 				'formatters' => [
-					'cee' => [
-						'class' => \MediaWiki\Logger\Monolog\CeeFormatter::class,
+					'logstash' => [
+						'class' => \Monolog\Formatter\LogstashFormatter::class,
 						'args' => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
 					],
 				],
