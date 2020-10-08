@@ -2078,7 +2078,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'truglass' => [
-			'name' => 'Truglass',
+			'name' => 'Truglass (Skin)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Truglass',
 			'var' => 'wmgUseTruglass',
 			'conflicts' => false,
