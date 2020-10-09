@@ -662,68 +662,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'flow' => [
-			'name' => 'Flow (StructuredDiscussions)',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredDiscussions',
-			'var' => 'wmgUseFlow',
-			'conflicts' => false,
-			'requires' => [],
-			'help' => 'Will start working 10-20 mins after enabling.',
-			'install' => [
-				'sql' => [
-					'flow_revision' => "$IP/extensions/Flow/flow.sql"
-				],
-				'namespaces' => [
-					'Topic' => [
-						'id' => 2600,
-						'searchable' => 1,
-						'subpages' => 0,
-						'protection' => '',
-						'content' => 0,
-						'aliases' => [],
-						'contentmodel' => 'flow-board',
-						'additional' => []
-					],
-					'Topic_talk' => [
-						'id' => 2601,
-						'searchable' => 0,
-						'subpages' => 0,
-						'protection' => '',
-						'content' => 0,
-						'aliases' => [],
-						'contentmodel' => 'wikitext',
-						'additional' => []
-					],
-				],
-				'permissions' => [
-					'*' => [
-						'permissions' => [
-							'flow-hide',
-						],
-					],
-					'user' => [
-						'permissions' => [
-							'flow-lock',
-						],
-					],
-					'sysop' => [
-						'permissions' => [
-							'flow-lock',
-							'flow-delete',
-							'flow-edit-post',
-						],
-					],
-					'flow-bot' => [
-						'permissions' => [
-							'flow-create-board',
-						],
-					],
-				],
-				'mwscript' => [
- 					"$IP/extensions/Flow/maintenance/FlowCreateTemplates.php" => [],
-				],
-			],
-		],
 		'foreground' => [
 			'name' => 'Foreground (Skin)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Foreground',
@@ -1882,6 +1820,68 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseStopForumSpam',
 			'conflicts' => false,
 			'requires' => [],
+		],
+		'flow' => [
+			'name' => 'StructuredDiscussions (Flow)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredDiscussions',
+			'var' => 'wmgUseFlow',
+			'conflicts' => false,
+			'requires' => [],
+			'help' => 'Will start working 10-20 mins after enabling.',
+			'install' => [
+				'sql' => [
+					'flow_revision' => "$IP/extensions/Flow/flow.sql"
+				],
+				'namespaces' => [
+					'Topic' => [
+						'id' => 2600,
+						'searchable' => 1,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'flow-board',
+						'additional' => []
+					],
+					'Topic_talk' => [
+						'id' => 2601,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
+				'permissions' => [
+					'*' => [
+						'permissions' => [
+							'flow-hide',
+						],
+					],
+					'user' => [
+						'permissions' => [
+							'flow-lock',
+						],
+					],
+					'sysop' => [
+						'permissions' => [
+							'flow-lock',
+							'flow-delete',
+							'flow-edit-post',
+						],
+					],
+					'flow-bot' => [
+						'permissions' => [
+							'flow-create-board',
+						],
+					],
+				],
+				'mwscript' => [
+ 					"$IP/extensions/Flow/maintenance/FlowCreateTemplates.php" => [],
+				],
+			],
 		],
 		'subpagefun' => [
 			'name' => 'SubPageFun',
