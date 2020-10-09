@@ -29,7 +29,7 @@ wfLoadExtensions( [
 	'ParserFunctions',
 	'ParsoidBatchAPI',
 	'Renameuser',
-	'RottenLinks',
+	// 'RottenLinks',
 	'Scribunto',
 	'SpamBlacklist',
 	'TitleBlacklist',
