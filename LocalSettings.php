@@ -1588,6 +1588,15 @@ $wi->config->settings = [
  				]
  			]
 		 ],
+		  '+closinglogosgroupwiki' => [
+ 			'poweredby' => [
+ 				'wikiapiary' => [
+ 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 					'url' => 'https://wikiapiary.com/wiki/CLG_Wiki',
+ 					'alt' => 'Monitored by WikiApiary'
+ 				]
+ 			]
+		 ],
  		'+ficreationwiki' => [
  			'poweredby' => [
  				'wikiapiary' => [
