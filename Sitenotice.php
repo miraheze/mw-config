@@ -18,7 +18,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Miraheze plans to do database maintenance on Ocotober 13th at 20:00 UTC time to 22:00 UTC. Please save edits 5 minutes before hand.</td>
+				<td style="font-size:125%">Miraheze plans to do database maintenance on October 13th at 20:00 UTC time to 22:00 UTC. Please save edits 5 minutes before hand.</td>
 				</tr></tbody></table>
 EOF;
 
