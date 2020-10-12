@@ -11,7 +11,6 @@ if ( $wmgSiteNoticeOptOut ) {
 $wgMajorSiteNoticeID = 48;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-/*
 if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -19,11 +18,10 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Miraheze celebrates its fifth birthday today. <a href="https://meta.miraheze.org/wiki/Miraheze-5-year">Come celebrate with us! 🎈</a></a></td>
+				<td style="font-size:125%">Miraheze plans to do database maintenance on Ocotober 13th at 20:00 UTC time to 22:00 UTC. Please save edits 5 minutes before hand.</td>
 				</tr></tbody></table>
 EOF;
 
 		return true;
 	}
 }
-*/
