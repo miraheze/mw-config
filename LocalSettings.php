@@ -456,6 +456,7 @@ $wi->config->settings = [
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'tech@miraheze.org',
 	],
+	// Must update the location for 1.35.
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
 			"$IP/maintenance/tables.sql",
@@ -469,6 +470,21 @@ $wi->config->settings = [
 			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
 			"$IP/extensions/GlobalBlocking/sql/globalblocks.sql",
 			"$IP/extensions/OAuth/schema/mysql/OAuth.sql",
+			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
+			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
+		],
+		'test2wiki' => [
+			"$IP/maintenance/tables.sql",
+			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
+			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
+			"$IP/extensions/CheckUser/cu_log.sql",
+			"$IP/extensions/CheckUser/cu_changes.sql",
+			"$IP/extensions/DataDump/sql/data_dump.sql",
+			"$IP/extensions/Echo/echo.sql",
+			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
+			"$IP/extensions/GlobalBlocking/sql/globalblocks.sql",
+			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		],
