@@ -606,7 +606,7 @@ $wi->config->settings = [
 	],
 
 	'wgReadOnly' => [
-		'default' => 'Database maintenance in progress',
+		'default' => false,
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
