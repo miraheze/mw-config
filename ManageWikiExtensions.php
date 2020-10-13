@@ -2000,7 +2000,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'titlekey' => "$IP/extensions/TitleKey/titlekey.sql"
+					'titlekey' => "$IP/extensions/TitleKey/sql/titlekey.sql"
 				],
 			],
 		],
