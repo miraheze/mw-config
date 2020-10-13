@@ -190,6 +190,11 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseBabel',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'sql' => [
+					'babel' => "$IP/extensions/Babel/babel.sql"
+				],
+			],
 		],
 		'blogpage' => [
 			'name' => 'Blog Page',
