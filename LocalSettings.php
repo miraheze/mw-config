@@ -177,6 +177,10 @@ $wi->config->settings = [
 				'client' => 30 * 60, // 30 minutes
 			],
 		],
+		'test2wiki' => [
+			'versioned' => 12 * 60 * 60,
+			'unversioned' => 5 * 60,
+		],
 	],
 	'wgRevisionCacheExpiry' => [
 		'default' => 0,
