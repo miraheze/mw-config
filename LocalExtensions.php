@@ -970,7 +970,7 @@ if ( $wmgUseProtectSite ) {
 }
 
 if ( $wmgUsePurge ) {
-	require_once "$IP/extensions/Purge/Purge.php";
+	wfLoadExtension( 'Purge' );
 
 	$wgAvailableRights[] = 'purge';
 }
