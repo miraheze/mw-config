@@ -13,8 +13,6 @@ wfLoadExtensions( [
 	'Echo',
 	// Required by CentralNotice
 	'EventLogging',
-	// Required by EventLogging
-	'EventStreamConfig',
 	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalPreferences',
