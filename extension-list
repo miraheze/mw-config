@@ -222,7 +222,6 @@ $IP/extensions/TorBlock/extension.json
 $IP/extensions/Translate/extension.json
 $IP/extensions/TranslationNotifications/extension.json
 $IP/extensions/TreeAndMenu/extension.json
-$IP/extensions/Truglass/extension.json
 $IP/extensions/TwitterTag/extension.json
 $IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
@@ -269,6 +268,7 @@ $IP/skins/MonoBook/skin.json
 $IP/skins/Nostalgia/skin.json
 $IP/skins/Refreshed/skin.json
 $IP/skins/Timeless/skin.json
+$IP/skins/Truglass/extension.json
 $IP/skins/Tweeki/skin.json
 $IP/skins/Vector/skin.json
 $IP/skins/apex/skin.json
