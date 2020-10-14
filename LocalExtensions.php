@@ -132,7 +132,7 @@ if ( $wmgUseCharInsert ) {
 }
 
 if ( $wmgUseCirrusSearch ) {
-	require_once "$IP/extensions/CirrusSearch/CirrusSearch.php";
+	wfLoadExtension( 'CirrusSearch' );
 
 	wfLoadExtension( 'Elastica' );
 
