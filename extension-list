@@ -276,4 +276,4 @@ $IP/skins/erudite/skin.json
 $IP/skins/foreground/skin.json
 $IP/skins/pivot/skin.json
 $IP/extensions/Preloader/extension.json
-$IP/extensions/RegexFunctions/RegexFunctions.php
+$IP/extensions/RegexFunctions/extension.json
