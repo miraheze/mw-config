@@ -2,6 +2,71 @@
 
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
+if ( version_compare( $wgVersion, '1.35', '>=' ) ) {
+	$wi->config->settings['wgPasswordPolicy']['default'] = [
+		'policies' => [
+			'default' => [
+				'MinimalPasswordLength' => [
+					'value' => 6,
+					'suggestChangeOnLogin' => true
+				],
+				'PasswordCannotMatchUsername' => [
+					'value' => true,
+					'suggestChangeOnLogin' => true
+				],
+				'PasswordCannotBeSubstringInUsername' => [
+					'value' => true,
+					'suggestChangeOnLogin' => true
+				],
+				'PasswordCannotMatchDefaults' => [
+					'value' => true,
+					'suggestChangeOnLogin' => true
+				],
+				'MaximalPasswordLength' => [
+					'value' => 4096,
+					'suggestChangeOnLogin' => true
+				],
+				'PasswordNotInCommonList' => [
+					'value' => true,
+					'suggestChangeOnLogin' => true
+				],
+			],
+			'bot' => [
+				'MinimalPasswordLength' => 8,
+				'MinimumPasswordLengthToLogin' => 6,
+				'PasswordCannotMatchUsername' => true,
+			],
+			'sysop' => [
+				'MinimalPasswordLength' => 8,
+				'MinimumPasswordLengthToLogin' => 6,
+				'PasswordCannotMatchUsername' => [
+					'value' => true,
+					'suggestChangeOnLogin' => true
+				],
+				'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList'
+			],
+			'bureaucrat' => [
+				'MinimalPasswordLength' => 8,
+				'MinimumPasswordLengthToLogin' => 6,
+				'PasswordCannotMatchUsername' => true,
+				'PasswordCannotBePopular' => 25,
+			],
+		],
+		'checks' => [
+			'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
+			'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
+			'PasswordCannotMatchUsername' => 'PasswordPolicyChecks::checkPasswordCannotMatchUsername',
+			'PasswordCannotBeSubstringInUsername' =>
+				'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
+			'PasswordCannotMatchBlacklist' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
+			'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
+			'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
+			'PasswordNotInLargeBlacklist' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
+			'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
+		],
+	];
+}
+
 // Closed Wikis
 if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
