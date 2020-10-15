@@ -1343,7 +1343,7 @@ if ( $wmgUseYouTube ) {
 	wfLoadExtension( 'YouTube' );
 }
 
-if ( $wmgUseRegexFunctions) {
+if ( $wmgUseRegexFunctions ) {
 	wfLoadExtension( 'RegexFunctions' );
 }
 
