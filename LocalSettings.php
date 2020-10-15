@@ -168,16 +168,6 @@ $wi->config->settings = [
 	],
 	'wgResourceLoaderMaxage' => [
 		'default' => [
-			'versioned' => [
-				'server' => 12 * 60 * 60, // 12 hours
-				'client' => 1 * 24 * 60 * 60, // 1 day
-			],
-			'unversioned' => [
-				'server' => 5 * 60, // 5 minutes
-				'client' => 30 * 60, // 30 minutes
-			],
-		],
-		'test2wiki' => [
 			'versioned' => 12 * 60 * 60,
 			'unversioned' => 5 * 60,
 		],

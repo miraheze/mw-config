@@ -1,11 +1,6 @@
 <?php
 require_once "$IP/extensions/MobileDetect/MobileDetect.php";
 
-if ( version_compare( $wgVersion, '1.35', '>=' ) ) {
-	// Required by EventLogging
-	wfLoadExtension( 'EventStreamConfig' );
-}
-
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
@@ -19,6 +14,8 @@ wfLoadExtensions( [
 	'Echo',
 	// Required by CentralNotice
 	'EventLogging',
+	// Required by EventLogging
+	'EventStreamConfig',
 	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalPreferences',
