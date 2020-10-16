@@ -210,6 +210,28 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'install' => [
+				'namespaces' => [
+					'Blog' => [
+						'id' => 500,
+						'searchable' => 1,
+						'subpages' => 0,
+						'protection' => 'edit',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Blog_talk' => [
+						'id' => 501,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
 				'permissions' => [
 					'user' => [
 						'permissions' => [
