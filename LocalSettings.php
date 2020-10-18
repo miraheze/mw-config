@@ -857,9 +857,6 @@ $wi->config->settings = [
 	'wmgUseCreateRedirect' => [
 		'default' => false,
 	],
-	'wmgUseCrossReference' => [
-		'default' => false,
-	],
 	'wmgUseCSS' => [
 		'default' => false,
 	],
