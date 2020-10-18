@@ -1309,7 +1309,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'mscal_content' => "$IP/extensions/MsCalendar/MsCalendar.sql"
+					'mscal_content' => "$IP/extensions/MsCalendar/sql/MsCalendar.sql"
 				],
 			],
 		],
@@ -2027,7 +2027,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'titlekey' => "$IP/extensions/TitleKey/titlekey.sql"
+					'titlekey' => "$IP/extensions/TitleKey/sql/titlekey.sql"
 				],
 			],
 		],
