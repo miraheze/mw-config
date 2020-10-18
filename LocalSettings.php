@@ -3909,7 +3909,6 @@ function onLfTOSLink(
 	array &$footerItems
 ) {
 	if ( $key === 'places' ) {
-		$href = Skin::makeInternalOrExternalUrl( 'Special:MyLanguage/Wikidata:Data_access' );
 		$footerItems['termsofservice'] = $skin->footerLink( 'termsofservice', 'termsofservicepage' )
 	}
 }
