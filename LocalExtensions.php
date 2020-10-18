@@ -1081,7 +1081,7 @@ if ( $wmgUseStopForumSpam ) {
 }
 
 if ( $wmgUseSubpageFun ) {
-	require_once "$IP/extensions/SubpageFun/SubpageFun.php";
+	wfLoadExtension( 'SubpageFun' );
 }
 
 if ( $wmgUseSubPageList3 ) {
