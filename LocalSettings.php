@@ -3909,7 +3909,7 @@ function onLfTOSLink(
 	array &$footerItems
 ) {
 	if ( $key === 'places' ) {
-		$footerItems['termsofservice'] = $skin->footerLink( 'termsofservice', 'termsofservicepage' )
+		$footerItems['termsofservice'] = $skin->footerLink( 'termsofservice', 'termsofservicepage' );
 	}
 }
 
