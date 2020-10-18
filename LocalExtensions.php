@@ -733,7 +733,7 @@ if ( $wmgUseMask ) {
 }
 
 if ( $wmgUseMassEditRegex ) {
-	require_once "$IP/extensions/MassEditRegex/MassEditRegex.php";
+	wfLoadExtension( 'MassEditRegex' );
 }
 
 if ( $wmgUseMassMessage ) {
