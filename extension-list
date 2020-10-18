@@ -119,7 +119,7 @@ $IP/extensions/Loops/extension.json
 $IP/extensions/MagicNoCache/extension.json
 $IP/extensions/ManageWiki/extension.json
 $IP/extensions/Maps/extension.json
-$IP/extensions/MassEditRegex/MassEditRegex.php
+$IP/extensions/MassEditRegex/extension.json
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MediaWikiChat/extension.json
