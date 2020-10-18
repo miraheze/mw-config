@@ -202,7 +202,7 @@ $IP/extensions/Spoilers/extension.json
 $IP/extensions/SpriteSheet/extension.json
 $IP/extensions/StopForumSpam/extension.json
 $IP/extensions/SubPageList3/extension.json
-$IP/extensions/SubpageFun/SubpageFun.php
+$IP/extensions/SubpageFun/extension.json
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
 $IP/extensions/Tabber/extension.json
 $IP/extensions/Tabs/extension.json
