@@ -3902,11 +3902,16 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Hook so that Terms of Service is included in footer
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
-function lfTOSLink( $sk, &$tpl ) {
-	$tpl->set( 'termsofservice', $sk->footerLink( 'termsofservice', 'termsofservicepage' ) );
-	$tpl->data['footerlinks']['places'][] = 'termsofservice';
-	return true;
+$wgHooks['SkinAddFooterLinks'][] = 'onLfTOSLink';
+function onLfTOSLink(
+	Skin $skin,
+	string $key,
+	array &$footerItems
+) {
+	if ( $key === 'places' ) {
+		$href = Skin::makeInternalOrExternalUrl( 'Special:MyLanguage/Wikidata:Data_access' );
+		$footerItems['termsofservice'] = $skin->footerLink( 'termsofservice', 'termsofservicepage' )
+	}
 }
 
 // Include other configuration files
