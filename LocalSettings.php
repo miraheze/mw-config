@@ -3574,6 +3574,9 @@ $wi->config->settings = [
 	'wgULSAnonCanChangeLanguage' => [
 		'default' => false,
 	],
+	'wgULSLanguageDetection' => [
+		'default' => false,
+	],
 
 	// UrlShortener
 	'wgUrlShortenerTemplate' => [
