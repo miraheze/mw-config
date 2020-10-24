@@ -848,6 +848,8 @@ if ( $wmgUseNewSignupPage ) {
 
 if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
+	
+	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Newsletter'] = 'NewsletterContent';
 }
 
 if ( $wmgUseNewUserMessage ) {
