@@ -1376,16 +1376,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [
-				'permissions' => [
-					'sysop' => [
-						'permissions' => [
-							'newsletter-create',
-							'newsletter-delete',
-							'newsletter-manage',
-							'newsletter-restore',
-						],
-					],
-				],
 				'namespaces' => [
 					'Newsletter' => [
 						'id' => 5500,
@@ -1406,6 +1396,16 @@ $wgManageWikiExtensions = [
 						'aliases' => [],
 						'contentmodel' => 'wikitext',
 						'additional' => []
+					],
+				],
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'newsletter-create',
+							'newsletter-delete',
+							'newsletter-manage',
+							'newsletter-restore',
+						],
 					],
 				],
 				'sql' => [
