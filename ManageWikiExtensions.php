@@ -1376,11 +1376,27 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [
-				'sql' => [
-					'nl_issues' => "$IP/extensions/Newsletter/sql/nl_issues.sql",
-					'nl_newsletters' => "$IP/extensions/Newsletter/sql/nl_newsletters.sql",
-					'nl_publishers' => "$IP/extensions/Newsletter/sql/nl_publishers.sql",
-					'nl_subscriptions' => "$IP/extensions/Newsletter/sql/nl_subscriptions.sql"
+				'namespaces' => [
+					'Newsletter' => [
+						'id' => 5500,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => 'newsletter-manage',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'NewsletterContent',
+						'additional' => []
+					],
+					'Newsletter_talk' => [
+						'id' => 5501,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
 				],
 				'permissions' => [
 					'sysop' => [
@@ -1391,6 +1407,12 @@ $wgManageWikiExtensions = [
 							'newsletter-restore',
 						],
 					],
+				],
+				'sql' => [
+					'nl_issues' => "$IP/extensions/Newsletter/sql/nl_issues.sql",
+					'nl_newsletters' => "$IP/extensions/Newsletter/sql/nl_newsletters.sql",
+					'nl_publishers' => "$IP/extensions/Newsletter/sql/nl_publishers.sql",
+					'nl_subscriptions' => "$IP/extensions/Newsletter/sql/nl_subscriptions.sql"
 				],
 			],
 		],
