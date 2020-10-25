@@ -538,6 +538,10 @@ $wi->config->settings = [
 	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
 	],
+	
+	'wgCreateWikiUseJobQueue' => [
+		'default' => true,
+	],
 
 	// Cookies extension settings
 	'wgCookieWarningMoreUrl' => [
