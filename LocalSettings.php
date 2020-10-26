@@ -528,6 +528,10 @@ $wi->config->settings = [
 	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
 	],
+	
+	'wgCreateWikiUseJobQueue' => [
+		'default' => true,
+	],
 
 	// Cookies extension settings
 	'wgCookieWarningMoreUrl' => [
@@ -3582,6 +3586,9 @@ $wi->config->settings = [
 
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => [
+		'default' => false,
+	],
+	'wgULSLanguageDetection' => [
 		'default' => false,
 	],
 
