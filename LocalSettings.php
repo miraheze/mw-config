@@ -2678,7 +2678,7 @@ $wi->config->settings = [
 		'marionetworkwiki' => '#ca0019',
 	],
 	'wgMedikLogoWidth' => [
-		'default' => 'null',
+		'default' => null,
 		'lakehubwiki' => '199px',
 		'marionetworkwiki' => '210px',
 	],
@@ -3499,6 +3499,12 @@ $wi->config->settings = [
 	],
 	'wgLogo' => [
 		'default' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+	],
+
+	// Timeless
+	'wgTimelessWordmark' => [
+		'default' => null,
+		'closinglogosgroupwiki' => 'CLGHorizontal.png',
 	],
 
 	// Timezone
