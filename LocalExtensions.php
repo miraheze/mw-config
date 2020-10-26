@@ -1039,12 +1039,16 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseSimpleChanges ) {
-	wfLoadExtension( 'SimpleChanges' );
-}
-
 if ( $wmgUseShortURL ) {
 	wfLoadExtension( 'UrlShortener' );
+}
+
+if ( $wmgUseSimpleBlogPage ) {
+	require_once "$IP/extensions/SimpleBlogPage/SimpleBlogPage.php";
+}
+
+if ( $wmgUseSimpleChanges ) {
+	wfLoadExtension( 'SimpleChanges' );
 }
 
 if ( $wmgUseSimpleTooltip ) {
