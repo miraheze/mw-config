@@ -2270,6 +2270,48 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'video' => [
+			'name' => 'Video',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Video',
+			'var' => 'wmgUseVideo',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'oldvideo' => "$IP/extensions/Video/sql/oldvideo.sql",
+					'video' => "$IP/extensions/Video/sql/video.sql",
+				],
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'addvideo',
+						],
+					],
+				],
+				'namespaces' => [
+					'Video' => [
+						'id' => 400,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => 'addvideo',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Video_talk' => [
+						'id' => 401,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
+			],
+		],
 		'visualeditor' => [
 			'name' => 'VisualEditor',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VisualEditor',
