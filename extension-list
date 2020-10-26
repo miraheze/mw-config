@@ -185,6 +185,7 @@ $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/ScratchBlocks/extension.json
 $IP/extensions/Scribunto/extension.json
+$IP/extensions/SimpleBlogPage/SimpleBlogPage.php
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
 $IP/extensions/SlackNotifications/extension.json

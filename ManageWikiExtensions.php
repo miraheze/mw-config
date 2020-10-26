@@ -200,7 +200,7 @@ $wgManageWikiExtensions = [
 			'name' => 'Blog Page',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:BlogPage',
 			'var' => 'wmgUseBlogPage',
-			'conflicts' => false,
+			'conflicts' => 'simpleblogpage',
 			'requires' => [
 				'extensions' => [
 					'comments',
@@ -1834,6 +1834,44 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseScratchBlocks',
 			'conflicts' => false,
 			'requires' => [],
+		],
+		'simpleblogpage' => [
+			'name' => 'SimpleBlogPage',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleBlogPage',
+			'var' => 'wmgUseSimpleBlogPage',
+			'conflicts' => 'blogpage',
+			'requires' => [],
+			'install' => [
+				'namespaces' => [
+					'Blog' => [
+						'id' => 500,
+						'searchable' => 1,
+						'subpages' => 1,
+						'protection' => 'edit',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Blog_talk' => [
+						'id' => 501,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'createblogpost',
+						],
+					],
+				],
+			],
 		],
 		'simplechanges' => [
 			'name' => 'Simple Changes',
