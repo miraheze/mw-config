@@ -10,6 +10,7 @@ $wgWBRepoSettings['entityNamespaces']['property'] = 862;
 $wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( WBL_VERSION );
 $wgWBRepoSettings['allowEntityImport'] = false;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
+$wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
 ];
