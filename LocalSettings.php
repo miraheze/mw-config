@@ -3765,6 +3765,10 @@ $wi->config->settings = [
 	'wmgEnableEntitySearchUI' => [
 		'default' => true,
 	],
+	'wmgFederatedPropertiesEnabled' => [
+		'default' => false,
+		'paikallishistoriawikiwiki' => true,
+	],
 	'wmgWikibaseRepoUrl' => [
 		'default' => 'https://wikidata.org'
 	],
