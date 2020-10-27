@@ -371,6 +371,10 @@ if ( $wmgUseDisambiguator ) {
 	wfLoadExtension( 'Disambiguator' );
 }
 
+if ( $wmgUseDiscussionTools ) {
+	wfLoadExtension( 'DiscussionTools' );
+}
+
 if ( $wmgUseDisplayTitle ) {
 	wfLoadExtension( 'DisplayTitle' );
 }
