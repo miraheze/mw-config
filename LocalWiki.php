@@ -89,6 +89,10 @@ if ( $wgDBname === 'cineastaswiki' ) {
 	$wgWhitelistRead[] = 'Programas e aplicações grátis';
 }
 
+if ( $wgDBname === 'csydeswiki' ) {
+	wfLoadExtension ( 'HAWelcome' ); //T6272
+}
+
 if ( $wgDBname === 'cvtwiki' ) {
 	$wgWhitelistRead[] = 'CVT action log';
 }
