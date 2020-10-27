@@ -1224,6 +1224,10 @@ if ( $wmgUseVEForAll ) {
 	wfLoadExtension ( 'VEForAll' );
 }
 
+if ( $wmgUseVideo ) {
+	wfLoadExtension ( 'Video' );
+}
+
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 

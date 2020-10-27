@@ -1381,6 +1381,9 @@ $wi->config->settings = [
 	'wmgUseVoteNY' => [
 		'default' => false,
 	],
+	'wmgUseVideo' => [
+		'default' => false,
+	],
 	'wmgUseVisualEditor' => [
 		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
 	],
