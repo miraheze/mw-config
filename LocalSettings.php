@@ -3766,7 +3766,7 @@ $wi->config->settings = [
 		'default' => true,
 	],
 	'wmgFederatedPropertiesEnabled' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wmgWikibaseRepoUrl' => [
 		'default' => 'https://wikidata.org'
