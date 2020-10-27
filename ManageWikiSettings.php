@@ -1961,6 +1961,15 @@ $wgManageWikiSettings = [
 		'section' => 'wikibase',
 		'help' => 'To determine if entity search UI should be enabled or not.',
 	],
+	'wmgFederatedPropertiesEnabled' => [
+		'name' => 'Enable Federated Properties',
+		'restricted' => false,
+		'from' => 'wikibaserepository',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'wikibase',
+		'help' => 'To determine if federated properties should be enabled or not.',
+	],
 	'wmgWikibaseItemNamespaceID' => [
 		'name' => 'Item Namespace ID',
 		'from' => 'wikibaseclient',
