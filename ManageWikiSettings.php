@@ -1966,7 +1966,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'from' => 'wikibaserepository',
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'wikibase',
 		'help' => 'To determine if federated properties should be enabled or not.',
 	],
