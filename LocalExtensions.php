@@ -255,10 +255,6 @@ if ( $wmgUseCreateRedirect ) {
 	wfLoadExtension( 'CreateRedirect' );
 }
 
-if ( $wmgUseCrossReference ) {
-	wfLoadExtension( 'CrossReference' );
-}
-
 if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
 }
@@ -588,6 +584,10 @@ if ( $wmgUseInputBox ) {
 
 if ( $wmgUseJavascriptSlideshow ) {
 	wfLoadExtension( 'JavascriptSlideshow' );
+	// This config has been removed from 1.35, but this config
+	// is checked within JavascriptSlideshow. So hack
+	// around this by setting it.
+	$wgHtml5 = true;
 }
 
 if ( $wmgUseJosa ) {
@@ -733,7 +733,7 @@ if ( $wmgUseMask ) {
 }
 
 if ( $wmgUseMassEditRegex ) {
-	require_once "$IP/extensions/MassEditRegex/MassEditRegex.php";
+	wfLoadExtension( 'MassEditRegex' );
 }
 
 if ( $wmgUseMassMessage ) {
@@ -1039,12 +1039,16 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseSimpleChanges ) {
-	wfLoadExtension( 'SimpleChanges' );
-}
-
 if ( $wmgUseShortURL ) {
 	wfLoadExtension( 'UrlShortener' );
+}
+
+if ( $wmgUseSimpleBlogPage ) {
+	require_once "$IP/extensions/SimpleBlogPage/SimpleBlogPage.php";
+}
+
+if ( $wmgUseSimpleChanges ) {
+	wfLoadExtension( 'SimpleChanges' );
 }
 
 if ( $wmgUseSimpleTooltip ) {
@@ -1083,7 +1087,7 @@ if ( $wmgUseStopForumSpam ) {
 }
 
 if ( $wmgUseSubpageFun ) {
-	require_once "$IP/extensions/SubpageFun/SubpageFun.php";
+	wfLoadExtension( 'SubpageFun' );
 }
 
 if ( $wmgUseSubPageList3 ) {
@@ -1224,6 +1228,10 @@ if ( $wmgUseVEForAll ) {
 	wfLoadExtension ( 'VEForAll' );
 }
 
+if ( $wmgUseVideo ) {
+	wfLoadExtension ( 'Video' );
+}
+
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
@@ -1345,7 +1353,7 @@ if ( $wmgUseYouTube ) {
 	wfLoadExtension( 'YouTube' );
 }
 
-if ( $wmgUseRegexFunctions) {
-	require_once "$IP/extensions/RegexFunctions/RegexFunctions.php";
+if ( $wmgUseRegexFunctions ) {
+	wfLoadExtension( 'RegexFunctions' );
 }
 

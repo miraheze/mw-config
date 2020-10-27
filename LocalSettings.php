@@ -168,16 +168,6 @@ $wi->config->settings = [
 	],
 	'wgResourceLoaderMaxage' => [
 		'default' => [
-			'versioned' => [
-				'server' => 12 * 60 * 60, // 12 hours
-				'client' => 1 * 24 * 60 * 60, // 1 day
-			],
-			'unversioned' => [
-				'server' => 5 * 60, // 5 minutes
-				'client' => 30 * 60, // 30 minutes
-			],
-		],
-		'test2wiki' => [
 			'versioned' => 12 * 60 * 60,
 			'unversioned' => 5 * 60,
 		],
@@ -472,7 +462,7 @@ $wi->config->settings = [
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
 			"$IP/extensions/GlobalBlocking/sql/globalblocks.sql",
-			"$IP/extensions/OAuth/schema/mysql/OAuth.sql",
+			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
 		],
@@ -1269,6 +1259,9 @@ $wi->config->settings = [
 		'default' => true,
 		'macfan4000wiki' => false,
 	],
+	'wmgUseSimpleBlogPage' => [
+		'default' => false,
+	],
 	'wmgUseSimpleChanges' => [
 		'default' => false,
 	],
@@ -1386,6 +1379,9 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseVoteNY' => [
+		'default' => false,
+	],
+	'wmgUseVideo' => [
 		'default' => false,
 	],
 	'wmgUseVisualEditor' => [
@@ -2949,36 +2945,56 @@ $wi->config->settings = [
 		'default' => [
 			'policies' => [
 				'default' => [
-					'MinimalPasswordLength' => 6,
-					'PasswordCannotMatchUsername' => true,
-					'PasswordCannotMatchBlacklist' => true,
-					'MaximalPasswordLength' => 4096,
+					'MinimalPasswordLength' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 				'bot' => [
-					'MinimalPasswordLength' => 8,
-					'MinimumPasswordLengthToLogin' => 6,
-					'PasswordCannotMatchUsername' => true,
+					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 				'sysop' => [
-					'MinimalPasswordLength' => 8,
-					'MinimumPasswordLengthToLogin' => 6,
-					'PasswordCannotMatchUsername' => true,
-					'PasswordCannotBePopular' => 25,
+					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 				'bureaucrat' => [
-					'MinimalPasswordLength' => 8,
-					'MinimumPasswordLengthToLogin' => 6,
-					'PasswordCannotMatchUsername' => true,
-					'PasswordCannotBePopular' => 25,
+					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 			],
 			'checks' => [
 				'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
 				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
 				'PasswordCannotMatchUsername' => 'PasswordPolicyChecks::checkPasswordCannotMatchUsername',
-				'PasswordCannotMatchBlacklist' => 'PasswordPolicyChecks::checkPasswordCannotMatchBlacklist',
+				'PasswordCannotBeSubstringInUsername' =>
+					'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
+				'PasswordCannotMatchBlacklist' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
+				'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
 				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
-				'PasswordCannotBePopular' => 'PasswordPolicyChecks::checkPopularPasswordBlacklist'
+				'PasswordNotInLargeBlacklist' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
+				'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
 			],
 		],
 	],
@@ -3908,11 +3924,15 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Hook so that Terms of Service is included in footer
-$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfTOSLink';
-function lfTOSLink( $sk, &$tpl ) {
-	$tpl->set( 'termsofservice', $sk->footerLink( 'termsofservice', 'termsofservicepage' ) );
-	$tpl->data['footerlinks']['places'][] = 'termsofservice';
-	return true;
+$wgHooks['SkinAddFooterLinks'][] = 'onLfTOSLink';
+function onLfTOSLink(
+	Skin $skin,
+	string $key,
+	array &$footerItems
+) {
+	if ( $key === 'places' ) {
+		$footerItems['termsofservice'] = $skin->footerLink( 'termsofservice', 'termsofservicepage' );
+	}
 }
 
 // Include other configuration files

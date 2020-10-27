@@ -7,7 +7,7 @@
 
 $wgWBRepoSettings['entityNamespaces']['item'] = 860;
 $wgWBRepoSettings['entityNamespaces']['property'] = 862;
-$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( WBL_VERSION );
+$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( $wgVersion );
 $wgWBRepoSettings['allowEntityImport'] = false;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;

@@ -200,7 +200,7 @@ $wgManageWikiExtensions = [
 			'name' => 'Blog Page',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:BlogPage',
 			'var' => 'wmgUseBlogPage',
-			'conflicts' => false,
+			'conflicts' => 'simpleblogpage',
 			'requires' => [
 				'extensions' => [
 					'comments',
@@ -462,13 +462,6 @@ $wgManageWikiExtensions = [
 			'name' => 'CreateRedirect',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CreateRedirect',
 			'var' => 'wmgUseCreateRedirect',
-			'conflicts' => false,
-			'requires' => [],
-		],
-		'crossreference' => [
-			'name' => 'CrossReference',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CrossReference',
-			'var' => 'wmgUseCrossReference',
 			'conflicts' => false,
 			'requires' => [],
 		],
@@ -1309,7 +1302,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'mscal_content' => "$IP/extensions/MsCalendar/MsCalendar.sql"
+					'mscal_content' => "$IP/extensions/MsCalendar/sql/MsCalendar.sql"
 				],
 			],
 		],
@@ -1835,6 +1828,44 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'simpleblogpage' => [
+			'name' => 'SimpleBlogPage',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleBlogPage',
+			'var' => 'wmgUseSimpleBlogPage',
+			'conflicts' => 'blogpage',
+			'requires' => [],
+			'install' => [
+				'namespaces' => [
+					'Blog' => [
+						'id' => 500,
+						'searchable' => 1,
+						'subpages' => 1,
+						'protection' => 'edit',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Blog_talk' => [
+						'id' => 501,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'createblogpost',
+						],
+					],
+				],
+			],
+		],
 		'simplechanges' => [
 			'name' => 'Simple Changes',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleChanges',
@@ -2049,7 +2080,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'titlekey' => "$IP/extensions/TitleKey/titlekey.sql"
+					'titlekey' => "$IP/extensions/TitleKey/sql/titlekey.sql"
 				],
 			],
 		],
@@ -2228,6 +2259,48 @@ $wgManageWikiExtensions = [
 						'permissions' => [
 							'voteny',
 						],
+					],
+				],
+			],
+		],
+		'video' => [
+			'name' => 'Video',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Video',
+			'var' => 'wmgUseVideo',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'oldvideo' => "$IP/extensions/Video/sql/oldvideo.sql",
+					'video' => "$IP/extensions/Video/sql/video.sql",
+				],
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'addvideo',
+						],
+					],
+				],
+				'namespaces' => [
+					'Video' => [
+						'id' => 400,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => 'addvideo',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Video_talk' => [
+						'id' => 401,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
 					],
 				],
 			],

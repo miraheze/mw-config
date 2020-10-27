@@ -45,7 +45,6 @@ $IP/extensions/CreatePage/CreatePage.php
 $IP/extensions/CreatePageUw/extension.json
 $IP/extensions/CreateRedirect/extension.json
 $IP/extensions/CreateWiki/extension.json
-$IP/extensions/CrossReference/extension.json
 $IP/extensions/DarkMode/extension.json
 $IP/extensions/DataDump/extension.json
 $IP/extensions/DataTransfer/extension.json
@@ -119,7 +118,7 @@ $IP/extensions/Loops/extension.json
 $IP/extensions/MagicNoCache/extension.json
 $IP/extensions/ManageWiki/extension.json
 $IP/extensions/Maps/extension.json
-$IP/extensions/MassEditRegex/MassEditRegex.php
+$IP/extensions/MassEditRegex/extension.json
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MediaWikiChat/extension.json
@@ -185,6 +184,7 @@ $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/ScratchBlocks/extension.json
 $IP/extensions/Scribunto/extension.json
+$IP/extensions/SimpleBlogPage/SimpleBlogPage.php
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
 $IP/extensions/SlackNotifications/extension.json
@@ -202,7 +202,7 @@ $IP/extensions/Spoilers/extension.json
 $IP/extensions/SpriteSheet/extension.json
 $IP/extensions/StopForumSpam/extension.json
 $IP/extensions/SubPageList3/extension.json
-$IP/extensions/SubpageFun/SubpageFun.php
+$IP/extensions/SubpageFun/extension.json
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
 $IP/extensions/Tabber/extension.json
 $IP/extensions/Tabs/extension.json
@@ -232,6 +232,7 @@ $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/extension.json
 $IP/extensions/VEForAll/extension.json
+$IP/extensions/Video/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
@@ -276,4 +277,4 @@ $IP/skins/erudite/skin.json
 $IP/skins/foreground/skin.json
 $IP/skins/pivot/skin.json
 $IP/extensions/Preloader/extension.json
-$IP/extensions/RegexFunctions/RegexFunctions.php
+$IP/extensions/RegexFunctions/extension.json
