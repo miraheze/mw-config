@@ -28,8 +28,8 @@ EOF;
 
 // Specific wiki sitenotice
 if ( $wmgUseCrossReference ) {
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-function onSiteNoticeAfter( &$siteNotice, $skin ) {
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
+function onSiteNoticeAfter2( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
 
 	$siteNotice .= <<<EOF
@@ -38,5 +38,5 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 			</tr></tbody></table>
 EOF;
 		return true;
-	}
+}
 }
