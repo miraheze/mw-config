@@ -3908,6 +3908,9 @@ if ( !preg_match( '/^mw[0-9]*/', wfHostname() ) ) {
 }
 
 $wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
+// sets wgThumbPath, we fetch wgScriptPath from wgConf.
+$scriptPath = $wi->config->settings['wgScriptPath']['default'];
+$wi->config->settings['wgThumbPath']['default'] = "$scriptPath/thumb_handler.php";
 // End settings requiring access to variables
 
 $wi->readCache();
