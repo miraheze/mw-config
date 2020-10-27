@@ -3765,6 +3765,9 @@ $wi->config->settings = [
 	'wmgEnableEntitySearchUI' => [
 		'default' => true,
 	],
+	'wmgFederatedPropertiesEnabled' => [
+		'default' => true,
+	],
 	'wmgWikibaseRepoUrl' => [
 		'default' => 'https://wikidata.org'
 	],
