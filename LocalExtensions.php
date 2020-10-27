@@ -584,6 +584,10 @@ if ( $wmgUseInputBox ) {
 
 if ( $wmgUseJavascriptSlideshow ) {
 	wfLoadExtension( 'JavascriptSlideshow' );
+	// This config has been removed from 1.35, but this config
+	// is checked within JavascriptSlideshow. So hack
+	// around this by setting it.
+	$wgHtml5 = true;
 }
 
 if ( $wmgUseJosa ) {
