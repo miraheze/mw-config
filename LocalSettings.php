@@ -3767,7 +3767,6 @@ $wi->config->settings = [
 	],
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
-		'paikallishistoriawikiwiki' => true,
 	],
 	'wmgWikibaseRepoUrl' => [
 		'default' => 'https://wikidata.org'
