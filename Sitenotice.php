@@ -11,7 +11,7 @@ if ( $wmgSiteNoticeOptOut ) {
 $wgMajorSiteNoticeID = 49;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-if ( !$wmgSiteNoticeOptOut ) {
+/*if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
@@ -24,19 +24,4 @@ EOF;
 
 		return true;
 	}
-}
-
-// Specific wiki sitenotice
-if ( $wmgUseCrossReference ) {
-$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter2';
-function onSiteNoticeAfter2( &$siteNotice, $skin ) {
-	global $wmgSiteNoticeOptOut, $snImportant;
-
-	$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Unfortunately, the CrossReference extension is no longer maintained since 2018 and is not compatible with the newest version of MediaWiki. Therefore, CrossReference will be removed from all wikis at the same time as the upgrade. We apologize for the incovenience caused by this removal. </td>
-			</tr></tbody></table>
-EOF;
-		return true;
-}
-}
+}*/
