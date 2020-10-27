@@ -465,13 +465,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'crossreference' => [
-			'name' => 'CrossReference',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CrossReference',
-			'var' => 'wmgUseCrossReference',
-			'conflicts' => false,
-			'requires' => [],
-		],
 		'css' => [
 			'name' => 'CSS',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CSS',
