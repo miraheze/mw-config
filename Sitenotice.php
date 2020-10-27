@@ -34,7 +34,7 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td>Unfortuantely, the CrossReference extension is no longer maintained since 2018 and is not compatible with the newest version of MediaWiki. Therefore, the CrossReference will be removed from all wikis at the same time as the upgrade. We apologize for the incovenience caused by this removal. </td>
+			<td>Unfortunately, the CrossReference extension is no longer maintained since 2018 and is not compatible with the newest version of MediaWiki. Therefore, CrossReference will be removed from all wikis at the same time as the upgrade. We apologize for the incovenience caused by this removal. </td>
 			</tr></tbody></table>
 EOF;
 		return true;
