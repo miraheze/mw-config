@@ -255,10 +255,6 @@ if ( $wmgUseCreateRedirect ) {
 	wfLoadExtension( 'CreateRedirect' );
 }
 
-if ( $wmgUseCrossReference ) {
-	wfLoadExtension( 'CrossReference' );
-}
-
 if ( $wmgUseCSS ) {
 	wfLoadExtension( 'CSS' );
 }
