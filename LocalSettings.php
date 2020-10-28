@@ -453,6 +453,7 @@ $wi->config->settings = [
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
 			"$IP/maintenance/tables.sql",
+			"$IP/maintenance/tables-generated.sql",
 			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
