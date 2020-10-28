@@ -3612,7 +3612,7 @@ $wi->config->settings = [
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
 	],
-	'wgUrlShortenerDomainsWhitelist' => [
+	'wgUrlShortenerAllowedDomains' => [
 		'default' => [
 			'(.*\.)?miraheze\.org',
 			'adadevelopersacademy\.wiki',
