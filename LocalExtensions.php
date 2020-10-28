@@ -186,6 +186,7 @@ if ( $wmgUseCitoid ) {
 
 if ( $wmgUseCleanChanges ) {
 	wfLoadExtension( 'CleanChanges' );
+	$wi->config->settings['+wgDefaultUserOptions']['default']['usenewrc'] = 1;
 }
 
 if ( $wmgUseCodeEditor ) {
