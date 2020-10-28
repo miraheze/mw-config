@@ -3522,6 +3522,9 @@ $wi->config->settings = [
 	'wgLogo' => [
 		'default' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 	],
+	'wgWordmark' => [
+		'default' => null,
+	],
 
 	// Timeless
 	'wgTimelessWordmark' => [
