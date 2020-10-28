@@ -79,12 +79,15 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
-	'wordmark' => [
+];
+
+if ( $wgWordmark ) {
+	$wgLogos['wordmark'] = [
 		'src' => $wgWordmark,
 		'width' => $wgWordmarkWidth,
 		'height' => $wgWordmarkHeight,
-	],
-];
+	];
+}
 
 // Per-wiki overrides
 if ( $wgDBname === 'allthetropeswiki' ) {
