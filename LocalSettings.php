@@ -2718,8 +2718,12 @@ $wi->config->settings = [
 		],
 	],
 
+	// Minerva settings
 	'wgMinervaEnableSiteNotice' => [
 		'default' => true,
+	],
+	'wgMinervaAlwaysShowLanguageButton' => [
+		'default' => false,
 	],
 
 	// miraheze specific config
