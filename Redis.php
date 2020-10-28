@@ -15,7 +15,7 @@ $wgMainCacheType = 'redis-central';
 $wgSessionCacheType = 'redis-central';
 $wgSessionsInObjectCache = true;
 
-$wgMessageCacheType = CACHE_DB;
+$wgMessageCacheType = CACHE_NONE;
 $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
