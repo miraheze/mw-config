@@ -817,6 +817,9 @@ $wi->config->settings = [
 	'wmgUseCitoid' => [
 		'default' => false,
 	],
+	'wmgUseCleanChanges' => [
+		'default' => false,
+	],
 	'wmgUseCodeEditor' => [
 		'default' => false,
 	],
