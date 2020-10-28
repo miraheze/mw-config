@@ -80,13 +80,9 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 $wgLogos = [
 	'1x' => $wgLogo,
 	'wordmark' => [
-
 		'src' => $wgWordmark,
-
 		'width' => 116,
-
 		'height' => 18,
-
 	],
 ];
 
