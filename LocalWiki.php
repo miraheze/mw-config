@@ -81,8 +81,8 @@ $wgLogos = [
 	'1x' => $wgLogo,
 	'wordmark' => [
 		'src' => $wgWordmark,
-		'width' => 116,
-		'height' => 18,
+		'width' => $wgWordmarkWidth,
+		'height' => $wgWordmarkHeight,
 	],
 ];
 
