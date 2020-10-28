@@ -860,6 +860,11 @@ if ( $wmgUseNewUserNotif ) {
 	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
 }
 
+if ( $wmgUseNimbus ){
+	wfLoadSkin( 'Nimbus' );
+	$wgManageWikiSettings['wgDefaultSkin']['options']['Nimbus'] = 'nimbus';
+}
+
 if ( $wmgUseNostalgia ) {
 	wfLoadSkin( 'Nostalgia' );
 
