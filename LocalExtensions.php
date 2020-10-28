@@ -1176,6 +1176,10 @@ if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'Timeline' );
 }
 
+if ( $wmgUseTimeMachine ) {
+	wfLoadExtension( 'TimeMachine' );
+}
+
 if ( $wmgUseTitleKey ) {
 	wfLoadExtension( 'TitleKey' );
 }
