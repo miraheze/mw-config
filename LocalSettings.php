@@ -3729,9 +3729,6 @@ $wi->config->settings = [
 			'vedopedia\.witches-empire\.com',
 		],
 	],
-	'wgUrlShortenerAllowedDomains' => [
-		'default' => []
-	],
 
 	// UserFunctions
 	'wgUFEnablePersonalDataFunctions' => [
