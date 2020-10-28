@@ -2146,6 +2146,7 @@ $wgManageWikiExtensions = [
 			],
 			'requires' => [
 				'extensions' => [
+					'massmessage',
 					'translate',
 				],
 			],
