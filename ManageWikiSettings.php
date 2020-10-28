@@ -1805,7 +1805,7 @@ $wgManageWikiSettings = [
 		'type' => 'integer',
 		'overridedefault' => 116,
 		'section' => 'styling',
-		'help' => 'This will set the width value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin's copyright wordmark, this should be set to "116"',
+		'help' => 'This will set the width value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "116"',
 	],
 	'wgWordmarkHeight' => [
 		'name' => 'Wordmark height',
@@ -1814,7 +1814,7 @@ $wgManageWikiSettings = [
 		'type' => 'integer',
 		'overridedefault' => 18,
 		'section' => 'styling',
-		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin's copyright wordmark, this should be set to "18"',
+		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "18"',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
