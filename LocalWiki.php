@@ -76,6 +76,16 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
+// $wgLogos
+$wgLogos = [
+	'1x' => $wgLogo,
+	'wordmark' => [
+		'src' => $wgWordmark,
+		'width' => $wgWordmarkWidth,
+		'height' => $wgWordmarkHeight,
+	],
+];
+
 // Per-wiki overrides
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
