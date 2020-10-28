@@ -81,7 +81,7 @@ $wgLogos = [
 	'1x' => $wgLogo,
 ];
 
-if ( $wgWordmark ) {
+if ( isset( $wgWordmark ) && $wgWordmark ) {
 	$wgLogos['wordmark'] = [
 		'src' => $wgWordmark,
 		'width' => $wgWordmarkWidth,
