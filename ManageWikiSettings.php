@@ -1766,7 +1766,7 @@ $wgManageWikiSettings = [
 		'name' => 'Logo',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'url',
+		'type' => 'text',
 		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
 		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Sets the value of <code>$wgLogos[&#39;1x&#39;]</code>.',
