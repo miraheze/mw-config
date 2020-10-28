@@ -1453,6 +1453,14 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'nimbus' => [
+			'name' => 'Nimbus (Skin)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Nimbus',
+			'var' => 'wmgUseNimbus',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'nostalgia' => [
 			'name' => 'Nostalgia (Skin)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Nostalgia',
