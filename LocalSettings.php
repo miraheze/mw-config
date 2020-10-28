@@ -1005,6 +1005,9 @@ $wi->config->settings = [
 	'wmgUseNewUserNotif' => [
 		'default' => false,
 	],
+	'wmgUseNimbus' => [
+		'default' => false,
+	],
 	'wmgUseNostalgia' => [
 		'default' => false,
 	],
