@@ -18,7 +18,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Miraheze has upgraded to the latest version of MediaWiki (1.35)! However, if you experience any issues, please do let us know on <a href="https://phabricator.miraheze.org/">Phabricator<a></a>.</td>
+				<td style="font-size:125%">Miraheze has upgraded to the latest version of MediaWiki (1.35)! However, if you experience any issues, please do let us know on <a href="https://phabricator.miraheze.org/">Phabricator</a>.</td>
 				</tr></tbody></table>
 EOF;
 
