@@ -215,6 +215,7 @@ $IP/extensions/Thanks/extension.json
 $IP/extensions/Theme/extension.json
 $IP/extensions/TimedMediaHandler/extension.json
 $IP/extensions/Timeline/extension.json
+$IP/extensions/TimeMachine/extension.json
 $IP/extensions/TitleBlacklist/extension.json
 $IP/extensions/TitleKey/extension.json
 $IP/extensions/TocTree/extension.json
