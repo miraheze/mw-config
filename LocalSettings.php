@@ -3522,6 +3522,12 @@ $wi->config->settings = [
 	'wgWordmark' => [
 		'default' => null,
 	],
+	'wgWordmarkHeight' => [
+		'default' => 18,
+	],
+	'wgWordmarkWidth' => [
+		'default' => 116,
+	],
 
 	// Timeless
 	'wgTimelessWordmark' => [
