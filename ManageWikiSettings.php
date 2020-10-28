@@ -1769,7 +1769,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Sets the value of <code>$wgLogos['1x']</code>.',
+		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Sets the value of <code>$wgLogos[&#39;1x&#39;]</code>.',
 	],
 	'wgWordmark' => [
 		'name' => 'Wordmark',
@@ -1778,7 +1778,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => null,
 		'section' => 'styling',
-		'help' => 'This will set the value of <code>$wgLogos['wordmark']['src']</code>. Also used as the copyright wordmark for the Minerva skin.',
+		'help' => 'This will set the value of <code>$wgLogos[&#39;wordmark&#39;][&#39;src&#39;]</code>. Also used as the copyright wordmark for the Minerva skin.',
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
