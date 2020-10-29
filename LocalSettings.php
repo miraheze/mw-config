@@ -3010,15 +3010,6 @@ $wi->config->settings = [
  			'usebetatoolbar' => 1,
  			'usebetatoolbar-cgd' => 1
  		],
-		'+isvwiki' => [
-			'flow-topiclist-sortby' => 'newest',
-		],
-		'+reviwikiwiki' => [
-			'usenewrc' => 0
-		],
-		'+solarawiki' => [
-			'usecodemirror' => 1,
-		],
 		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
@@ -3026,6 +3017,18 @@ $wi->config->settings = [
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 			'visualeditor-enable-experimental' => 1,
+		],
+		'+isvwiki' => [
+			'flow-topiclist-sortby' => 'newest',
+		],
+		'+minecraftathomewiki' => [
+			'enotifwatchlistpages' => 0,
+		],
+		'+reviwikiwiki' => [
+			'usenewrc' => 0
+		],
+		'+solarawiki' => [
+			'usecodemirror' => 1,
 		],
 		'+yablestudiowiki' => [
 			'visualeditor-newwikitext' => 1,
