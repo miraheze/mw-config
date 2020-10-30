@@ -2008,7 +2008,7 @@ $wgManageWikiSettings = [
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Item namespace on the upstream Wikibase installation. Leave as-is if unsure.',
 	],
-	'wmgWikibasePropertuNamespaceID' => [
+	'wmgWikibasePropertyNamespaceID' => [
 		'name' => 'Property Namespace ID',
 		'from' => 'wikibaseclient',
 		'restricted' => false,
