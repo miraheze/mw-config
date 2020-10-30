@@ -1253,6 +1253,9 @@ $wi->config->settings = [
 	'wmgUseScratchBlocks' => [
 		'default' => false,
 	],
+	'wmgUseScribunto' => [
+		'default' => false,
+	],
 	'wmgUseShortURL' => [
 		'default' => true,
 		'macfan4000wiki' => false,
@@ -2062,6 +2065,7 @@ $wi->config->settings = [
 			'darkmode',
 			'globaluserpage',
 			'mobilefrontend',
+			'scribunto',
 			'syntaxhighlight_geshi',
 		],
 	],
