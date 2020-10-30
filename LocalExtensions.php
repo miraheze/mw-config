@@ -1041,6 +1041,8 @@ if ( $wmgUseScore ) {
 
 if ( $wmgUseScribunto ) {
 	wfLoadExtension( 'Scribunto' );
+
+	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Scribunto'] = 'Scribunto';
 }
 
 if ( $wmgUseShortURL ) {
