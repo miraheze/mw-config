@@ -33,7 +33,6 @@ wfLoadExtensions( [
 	'ParsoidBatchAPI',
 	'Renameuser',
 	'RottenLinks',
-	'Scribunto',
 	'SpamBlacklist',
 	'TitleBlacklist',
 	'TorBlock',
