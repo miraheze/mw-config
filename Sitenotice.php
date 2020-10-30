@@ -9,7 +9,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // Increment this version number whenever you change the site notice
 // and don't comment it out
 $wgMajorSiteNoticeID = 50;
-
+/*
 // Write your SiteNotice below.  Comment out this section to disable.
 if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -25,3 +25,4 @@ EOF;
 		return true;
 	}
 }
+*/
