@@ -1828,6 +1828,36 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'scribunto' => [
+			'name' => 'Scribunto',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Scribunto',
+			'var' => 'wmgUseScribunto',
+			'conflicts' => false,
+			'requires' => [
+				'namespaces' => [
+					'Module' => [
+						'id' => 828,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'Scribunto',
+						'additional' => []
+					],
+					'Module_talk' => [
+						'id' => 829,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
+			],
+		],
 		'simpleblogpage' => [
 			'name' => 'SimpleBlogPage',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleBlogPage',
