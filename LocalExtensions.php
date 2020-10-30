@@ -1039,6 +1039,10 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
+if ( $wmgUseScribunto ) {
+	wfLoadExtension( 'Scribunto' );
+}
+
 if ( $wmgUseShortURL ) {
 	wfLoadExtension( 'UrlShortener' );
 }
