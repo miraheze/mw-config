@@ -2073,9 +2073,7 @@ $wi->config->settings = [
 		'default' => '/srv/mediawiki/w/cache/managewiki',
 	],
 	'wgManageWikiNamespacesExtraContentModels' => [
-		'default' => [
-			'Scribunto' => 'Scribunto',
-		],
+		'default' => [],
 	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
