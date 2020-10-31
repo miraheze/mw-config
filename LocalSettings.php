@@ -117,13 +117,35 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wgPivotFeatures' => [
-		'thegreatwarwiki' => [
-			'usePivotTabs' => true,
+		'default' => [
+			'showActionsForAnon' => true,
+			'fixedNavBar' => false,
+			'usePivotTabs' => false,
+			'showHelpUnderTools' => true,
+			'showRecentChangesUnderTools' => true,
+			'wikiName' => $wgSitename,
+			'wikiNameDesktop' => $wgSitename,
+			'navbarIcon' => false,
+			'preloadFontAwesome' => false,
+			'showFooterIcons' => true,
+			'addThisPUBID' => '',
+			'useAddThisShare' => '',
+			'useAddThisFollow' => ''
+		],
+		'+thegreatwarwiki' => [
+			'showActionsForAnon' => true,
 			'fixedNavBar' => true,
+			'usePivotTabs' => true,
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
+			'wikiName' => $wgSitename,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'showFooterIcons' => true
+			'navbarIcon' => false,
+			'preloadFontAwesome' => false,
+			'showFooterIcons' => true,
+			'addThisPUBID' => '',
+			'useAddThisShare' => '',
+			'useAddThisFollow' => ''
 		],
 	],
 
@@ -318,7 +340,6 @@ $wi->config->settings = [
 	// Category
 	'wgUseCategoryBrowser' => [
 		'default' => false,
-		'modesofdiscoursewiki' => true,
 	],
 
 	'wgCategoryPagingLimit' => [
@@ -328,7 +349,10 @@ $wi->config->settings = [
 
 	// CentralAuth
 	'wgCentralAuthAutoCreateWikis' => [
-		'default' => [ 'loginwiki', 'metawiki' ],
+		'default' => [ 
+			'loginwiki', 
+			'metawiki' 
+		],
 	],
 	'wgCentralAuthAutoNew' => [
 		'default' => true,
@@ -566,19 +590,16 @@ $wi->config->settings = [
 	],
 	'wgCompressRevisions' => [
 		'default' => false,
-		'absurdopediawiki' => true,
 		'allthetropeswiki' => true,
 		'altversewiki' => true,
 		'americangirldollswiki' => true,
-		'animatedfeetwiki' => true,
 		'animebathswiki' => true,
-		'baobabarchiveswiki' => true,
 		'beidipediawiki' => true,
 		'buswiki' => true,
 		'commonwealthwiki' => true,
 		'crappygameswiki' => true,
-		'crystalmaidenswiki' => true,
 		'cwarswiki' => true,
+		'drawnfeetwiki' => true,
 		'evilbabeswiki' => true,
 		'incubatorwiki' => true,
 		'libertygamewiki' => true,
@@ -591,9 +612,7 @@ $wi->config->settings = [
 		'simswiki' => true,
 		'thelastsovereignwiki' => true,
 		'tmewiki' => true,
-		'toxicfandomsandhatedomswiki' => true,
-		'trollpastawiki' => true,
-		'trollpastauncensoredwiki' => true,
+		'toxicfandomsandhatedomswiki' => true, // locked wiki
 		'uncyclomirrorwiki' => true,
 		'ungamewiki' => true,
 	],
@@ -843,10 +862,7 @@ $wi->config->settings = [
 	],
 	'wmgUseContactPage' => [
 		'default' => false, // Add wiki config to ContactPage.php
-		'apellidosmurcianoswiki' => true,
-		'ayrshirewiki' => true,
 		'christipediawiki' => true,
-		'cdcwiki' => true,
 		'guiaslocaiswiki' => true,
 		'test2wiki' => true,
 	],
@@ -1491,6 +1507,14 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'egApprovedRevsEnabledNamespaces' => [
+ 		'default' => [
+			NS_MAIN => true,
+			NS_USER => true,
+ 			NS_FILE => true,
+			NS_TEMPLATE => true,
+			NS_HELP => true,
+			NS_PROJECT => true
+		],
  		'valkyrienskieswiki' => [
 			NS_MAIN => false,
 			NS_USER => false,
@@ -1818,11 +1842,6 @@ $wi->config->settings = [
 	// HideSection
 	'wgHideSectionImages' => [
 		'default' => false,
-		'cikansaiwiki' => [
-			'show' => 'https://static.miraheze.org/cikansaiwiki/4/43/HideSectionDOWN.png',
-			'hide' => 'https://static.miraheze.org/cikansaiwiki/b/bd/HideSectionUP.png',
-			'location' => 'end'
-		],
 	],
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => [
@@ -1966,7 +1985,6 @@ $wi->config->settings = [
 	'wgRightsPage' => [
 		'default' => '',
 		'diavwiki' => 'Project:Copyrights',
-		'kstartupswiki' => 'Project:저작권',
 		'wisdomwikiwiki' => 'Copyleft',
 	],
 	'wgRightsText' => [
@@ -2013,7 +2031,6 @@ $wi->config->settings = [
 	'+wgUrlProtocols' => [
 		'default' => [],
 		// file protocol only allowed on private wikis
-		'bchwiki' => [ "file://" ],
 		'gzewiki' => [ "file://" ],
 		'kaiwiki' => [ "file://" ],
 		'vtwiki' => [ "discord://" ],
@@ -2152,31 +2169,6 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
-		'+cyclonepediawiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'extendedconfirmed' => [
-				'extendedconfirmed' => true,
-			],
-			'sysop' => [
-				'extendedconfirmed' => true,
-			],
-		],
-		'+dpwiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-				'respected' => true,
-			],
-			'respected' => [
-				'respected' => true,
-			],
-		],
-		'+enigmawiki' => [
-			'scribe' => [
-				'read' => true,
-			],
-		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -2246,40 +2238,9 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
-		'+jayuwikiwiki' => [
-			'sysop' => [
-				'editvoter' => true,
-			],
-			'voter' => [
-				'editvoter' => true,
-			],
-		],
-		'+lcars47wiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'devteam' => [
-				'bureaucrat' => true,
-				'read' => true,
-				'devteam' => true,
-			],
-		],
 		'+ldapwikiwiki' => [
 			'sysop' => [
 				'managewiki-restricted' => true,
-			],
-		],
-		'+marthaspeakswiki' => [
-			'sysop' => [
-				'templateeditor' => true,
-			],
-			'templateeditor' => [
-				'templateeditor' => true,
-			],
-		],
-		'+nenawikiwiki' => [
-			'emailconfirmed' => [
-				'read' => true,
 			],
 		],
 		'+metawiki' => [
@@ -2325,6 +2286,9 @@ $wi->config->settings = [
 				'edit-content-pages' => true,
 				'edit-talkpage' => true,
 			],
+			'emailconfirmed' => [
+				'read' => true,
+			],
 			'nenamembers' => [
 				'edit-talkpage' => true,
 			],
@@ -2351,30 +2315,9 @@ $wi->config->settings = [
 				'editstaffprotected' => true,
 			],
 		],
-		'+radviserwiki' => [
-			'editor' => [
-				'editor' => true,
-			],
-			'sysop' => [
-				'editor' => true,
-			],
-		],
 		'+rf1botwiki' => [
 			'Repo_Maintainer' => [
 				'editrepos' => true,
-			],
-		],
-		'+sau226wiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'consul' => [
-				'bureaucrat' => true,
-				'consul' => true,
-				'read' => true,
-			],
-			'testgroup' => [
-				'read' => true,
 			],
 		],
 		'+sesupportwiki' => [
@@ -2383,17 +2326,6 @@ $wi->config->settings = [
 			],
 			'sysop' => [
 				'editor' => true,
-			],
-		],
-		'+serinfhospwiki' => [
-			'SupportStaff' => [
-				'read' => true,
-			],
-			'SalesStaff' => [
-				'read' => true,
-			],
-			'PreSalesStaff' => [
-				'read' => true,
 			],
 		],
 		'simcitywiki' => [
@@ -2422,39 +2354,6 @@ $wi->config->settings = [
 				'mwoauthmanagemygrants' => true,
 			],
 		],
-		'+sovereignwiki' => [
-			'officer' => [
-				'read' => true,
-				'officer' => true,
-			],
-			'game-master' => [
-				'read' => true,
-				'game-master' => true,
-			],
-		],
-		'+ssptopwiki' => [
-			'read-only' => [
-				'read' => true,
-			],
-		],
-		'+swisscomraidwiki' => [
-			'emailconfirmed' => [
-				'read' => true,
-			],
-		],
-		'+svwiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'consul' => [
-				'bureaucrat' => true,
-				'consul' => true,
-				'read' => true,
-			],
-			'testgroup' => [
-				'read' => true,
-			],
-		],
 		'+testwiki' => [
 			'consul' => [
 				'consul' => true,
@@ -2472,31 +2371,18 @@ $wi->config->settings = [
 				'templateeditor' => true,
 			],
 		],
-		'+trexwiki' => [
-			'co' => [
-				'co' => true,
-				'ceo' => true,
-			],
-			'ceo' => [
-				'ceo' => true,
-				'editors' => true,
-			],
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
-					     'template' => true,
+					  'template' => true,
 			],
 			'extendedconfirmed' => [
-					        'extendedconfirmed' => true,
+					     'extendedconfirmed' => true,
 			],
 			'Owner' => [
-				   'template' => true,
-				   'extendedconfirmed' => true,
-				   'owner' => true,
-				],
+				'template' => true,
+				'extendedconfirmed' => true,
+				'owner' => true,
+			],
 		],
 		'+whentheycrywiki' => [
 			'user' => [
@@ -2507,14 +2393,9 @@ $wi->config->settings = [
 			'consul' => [
 				'consul' => true,
 				'bureaucrat' => true,
-				],
+			],
 			'bureaucrat' => [
 				'bureaucrat' => true,
-				],
-		],
-		'+yeoksawiki' => [
-			'sysop' => [
-				'project-edit' => true,
 			],
 		],
 	],
@@ -2861,9 +2742,6 @@ $wi->config->settings = [
 	// MobileFrontend
 	'wgMFNoMobilePages' => [
 		'default' => [],
-		'alwikiwiki' => [
-			'Main Page',
-		],
 	],
 	// Math
 	'wgMathoidCli' => [
@@ -2931,11 +2809,6 @@ $wi->config->settings = [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
-		'ssptopwiki' => [
-			'read-only' => [
-				'edit' => true,
-			],
-		],
 		'simcitywiki' => [
 			'banned' => [
 				'read' => true,
@@ -3128,14 +3001,6 @@ $wi->config->settings = [
 			'pm',
 			'member',
 		],
-		'+cyclonepediawiki' => [
-			'bureaucrat',
-			'extendedconfirmed',
-		],
-		'+dpwiki' => [
-			'bureaucrat',
-			'respected',
-		],
 		'+hypopediawiki' => [
 			'bureaucrat',
 		],
@@ -3146,40 +3011,15 @@ $wi->config->settings = [
 			'ceo',
 			'co',
 		],
-		'+kyivstarwiki' => [
-			'co',
-			'ceo',
-			'editor',
-			'extendedconfirmed',
-			'sysmag',
-			'trusted',
-		],
-		'+lcars47wiki' => [
-			'bureaucrat',
-			'devteam',
-		],
-		'+marthaspeakswiki' => [
-			'templateeditor',
-		],
 		'+quircwiki' => [
 			'editstaffprotected',
 		],
 		'+rf1botwiki' => [
 			'editrepos',
 		],
-		'+sau226wiki' => [
-			'bureaucrat',
-			'consul',
-		],
-		'+jayuwikiwiki' => [
-			'editvoter',
-		],
 		'+pruebawiki' => [
 			'bureaucrat',
 			'consul',
-		],
-		'+radviserwiki' => [
-			'editor',
 		],
 		'+sesupportwiki' => [
 			'editor',
@@ -3188,25 +3028,12 @@ $wi->config->settings = [
 			'autoconfirmed',
 			'sysop',
 		],
-		'+sovereignwiki' => [
-			'officer',
-			'game-master',
-		],
-		'+studynotekrwiki' => [
-			'voter',
-		],
 		'+testwiki' => [
 			'bureaucrat',
 			'consul',
 		],
 		'+thesciencearchiveswiki' => [
 			'templateeditor',
-		],
-		'+trexwiki' => [
-			'sysmag',
-			'bureaucrat',
-			'ceo',
-			'co',
 		],
 		'+vnenderbotwiki' => [
 			'template',
@@ -3455,26 +3282,6 @@ $wi->config->settings = [
 			'quiz_points' => 0,
 			'quiz_created' => 0,
 		],
-		'uncyclopedia2wiki' => [
-			'edit' => 50,
-			'vote' => 10,
-			'comment' => 0,
-			'comment_plus' => 40,
-			'comment_ignored' => -10,
-			'opinions_created' => 0,
-			'opinions_pub' => 10,
-			'referral_complete' => 0,
-			'friend' => 100,
-			'foe' => 0,
-			'gift_rec' => 25,
-			'gift_sent' => 10,
-			'points_winner_weekly' => 0,
-			'points_winner_monthly' => 0,
-			'user_image' => 1000,
-			'poll_vote' => 10,
-			'quiz_points' => 50,
-			'quiz_created' => 20,
-		],
 	],
 	'wgFriendingEnabled' => [
 		'default' => true,
@@ -3488,9 +3295,8 @@ $wi->config->settings = [
 		'gfiwiki' => 'any',
 		'hispanowiki' => 'any',
 		'hispano76wiki' => 'any',
-		'hrfwiki2' => 'any',
+		'hrfwiki2wiki' => 'any',
 		'ildrilwiki' => 'any',
-		'lothuialethwiki' => 'any',
 		'nonciclopediawiki' => 'any',
 		'privadowiki' => 'any',
 		'simswiki' => 'any',
@@ -3645,7 +3451,6 @@ $wi->config->settings = [
 			'(.*\.)?miraheze\.org',
 			'adadevelopersacademy\.wiki',
 			'allthetropes\.org',
-			'aman\.info\.tm',
 			'antiguabarbudacalypso\.com',
 			'astrapedia\.ru',
 			'athenapedia\.org',
@@ -3791,8 +3596,7 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wgVisualEditorEnableVisualSectionEditing' => [
-		'default' => false,
-		'dcmultiversewiki' => 'mobile',
+		'default' => 'mobile',
 	],
 
 	// Protect site config
