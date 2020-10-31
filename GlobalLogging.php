@@ -73,7 +73,7 @@ if ( wfHostname() === 'test2' ) {
 		'MatomoAnalytics' => "$wmgLogDir/debuglogs/MatomoAnalytics.log",
 		'ManageWiki' => "$wmgLogDir/debuglogs/ManageWiki.log",
 		'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
-		'redis' => "$wmgLogDir/debuglogs/redis.log",
+		// 'redis' => "$wmgLogDir/debuglogs/redis.log",
 		'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
 		'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 		'VisualEditor' => "$wmgLogDir/debuglogs/VisualEditor.log",
