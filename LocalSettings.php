@@ -3293,6 +3293,9 @@ $wi->config->settings = [
 	'wgWordmarkWidth' => [
 		'default' => 116,
 	],
+	'wmgWikiapiaryFooterPageName' => [
+		'default' => null,
+	],
 
 	// Timeless
 	'wgTimelessWordmark' => [
