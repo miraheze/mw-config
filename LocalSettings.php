@@ -2152,31 +2152,6 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
-		'+cyclonepediawiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'extendedconfirmed' => [
-				'extendedconfirmed' => true,
-			],
-			'sysop' => [
-				'extendedconfirmed' => true,
-			],
-		],
-		'+dpwiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-				'respected' => true,
-			],
-			'respected' => [
-				'respected' => true,
-			],
-		],
-		'+enigmawiki' => [
-			'scribe' => [
-				'read' => true,
-			],
-		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -2246,40 +2221,9 @@ $wi->config->settings = [
 				'read' => true,
 			],
 		],
-		'+jayuwikiwiki' => [
-			'sysop' => [
-				'editvoter' => true,
-			],
-			'voter' => [
-				'editvoter' => true,
-			],
-		],
-		'+lcars47wiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'devteam' => [
-				'bureaucrat' => true,
-				'read' => true,
-				'devteam' => true,
-			],
-		],
 		'+ldapwikiwiki' => [
 			'sysop' => [
 				'managewiki-restricted' => true,
-			],
-		],
-		'+marthaspeakswiki' => [
-			'sysop' => [
-				'templateeditor' => true,
-			],
-			'templateeditor' => [
-				'templateeditor' => true,
-			],
-		],
-		'+nenawikiwiki' => [
-			'emailconfirmed' => [
-				'read' => true,
 			],
 		],
 		'+metawiki' => [
@@ -2325,6 +2269,9 @@ $wi->config->settings = [
 				'edit-content-pages' => true,
 				'edit-talkpage' => true,
 			],
+			'emailconfirmed' => [
+				'read' => true,
+			],
 			'nenamembers' => [
 				'edit-talkpage' => true,
 			],
@@ -2351,30 +2298,9 @@ $wi->config->settings = [
 				'editstaffprotected' => true,
 			],
 		],
-		'+radviserwiki' => [
-			'editor' => [
-				'editor' => true,
-			],
-			'sysop' => [
-				'editor' => true,
-			],
-		],
 		'+rf1botwiki' => [
 			'Repo_Maintainer' => [
 				'editrepos' => true,
-			],
-		],
-		'+sau226wiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'consul' => [
-				'bureaucrat' => true,
-				'consul' => true,
-				'read' => true,
-			],
-			'testgroup' => [
-				'read' => true,
 			],
 		],
 		'+sesupportwiki' => [
@@ -2383,17 +2309,6 @@ $wi->config->settings = [
 			],
 			'sysop' => [
 				'editor' => true,
-			],
-		],
-		'+serinfhospwiki' => [
-			'SupportStaff' => [
-				'read' => true,
-			],
-			'SalesStaff' => [
-				'read' => true,
-			],
-			'PreSalesStaff' => [
-				'read' => true,
 			],
 		],
 		'simcitywiki' => [
@@ -2422,39 +2337,6 @@ $wi->config->settings = [
 				'mwoauthmanagemygrants' => true,
 			],
 		],
-		'+sovereignwiki' => [
-			'officer' => [
-				'read' => true,
-				'officer' => true,
-			],
-			'game-master' => [
-				'read' => true,
-				'game-master' => true,
-			],
-		],
-		'+ssptopwiki' => [
-			'read-only' => [
-				'read' => true,
-			],
-		],
-		'+swisscomraidwiki' => [
-			'emailconfirmed' => [
-				'read' => true,
-			],
-		],
-		'+svwiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'consul' => [
-				'bureaucrat' => true,
-				'consul' => true,
-				'read' => true,
-			],
-			'testgroup' => [
-				'read' => true,
-			],
-		],
 		'+testwiki' => [
 			'consul' => [
 				'consul' => true,
@@ -2472,31 +2354,18 @@ $wi->config->settings = [
 				'templateeditor' => true,
 			],
 		],
-		'+trexwiki' => [
-			'co' => [
-				'co' => true,
-				'ceo' => true,
-			],
-			'ceo' => [
-				'ceo' => true,
-				'editors' => true,
-			],
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
-					     'template' => true,
+					  'template' => true,
 			],
 			'extendedconfirmed' => [
-					        'extendedconfirmed' => true,
+					     'extendedconfirmed' => true,
 			],
 			'Owner' => [
-				   'template' => true,
-				   'extendedconfirmed' => true,
-				   'owner' => true,
-				],
+				'template' => true,
+				'extendedconfirmed' => true,
+				'owner' => true,
+			],
 		],
 		'+whentheycrywiki' => [
 			'user' => [
@@ -2507,14 +2376,9 @@ $wi->config->settings = [
 			'consul' => [
 				'consul' => true,
 				'bureaucrat' => true,
-				],
+			],
 			'bureaucrat' => [
 				'bureaucrat' => true,
-				],
-		],
-		'+yeoksawiki' => [
-			'sysop' => [
-				'project-edit' => true,
 			],
 		],
 	],
@@ -3127,14 +2991,6 @@ $wi->config->settings = [
 			'sysop',
 			'pm',
 			'member',
-		],
-		'+cyclonepediawiki' => [
-			'bureaucrat',
-			'extendedconfirmed',
-		],
-		'+dpwiki' => [
-			'bureaucrat',
-			'respected',
 		],
 		'+hypopediawiki' => [
 			'bureaucrat',
