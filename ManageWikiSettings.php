@@ -1950,6 +1950,15 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'When enabled, this shows Popups by default.',
 	],
+	'wmgWikiapiaryFooterPageName' => [
+		'name' => 'Powered by Wiki Apiary footer',
+		'from' => 'managewiki',
+		'restricted' => false,
+		'type' => 'text'
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'In order to enable Wiki Apiary footers',
+	],
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
