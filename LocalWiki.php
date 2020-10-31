@@ -120,10 +120,6 @@ if ( $wmgPrivateUploads ) {
 	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
-if ( $wgDBname === 'hamzawiki' ) {
-	 $wgWhitelistRead[] = 'Rukus';
-}
-
 if ( $wgDBname === 'isvwiki' ) {
 	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
 	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
@@ -193,19 +189,10 @@ if ( $wgDBname === 'swiki' ) {
 	 $wgWhitelistRead[] = 'メインページ/ja';
 }
 
-if ( $wgDBname === 'swisscomraidwiki' ) {
-	$wgAutopromote['emailconfirmed'] = APCOND_EMAILCONFIRMED;
-}
-
 if ( $wgDBname === 'simcitywiki' ) {
 	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgGroupPermissions['interwiki-admin'] );
 	unset( $wgGroupPermissions['checkuser'] );
-}
-
-// Depends on $wgContentNamespaces
-if ( $wgDBname === 'abitaregeawiki' ) {
-	$wi->config->settings['wgExemptFromUserRobotsControl']['default'] = [];
 }
 
 // Licensing variables
@@ -271,17 +258,8 @@ switch ( $wmgWikiLicense ) {
 
 if ( $wgDBname === 'gyaanipediawiki' ||
 	 $wgDBname === 'higyaanipediawiki' ||
-	 $wgDBname === 'bngyaanipediawiki' ||
-	 $wgDBname === 'tegyaanipediawiki' ||
-	 $wgDBname === 'tagyaanipediawiki' ||
 	 $wgDBname === 'mrgyaanipediawiki' ||
-	 $wgDBname === 'gugyaanipediawiki' ||
-	 $wgDBname === 'pagyaanipediawiki' ||
-	 $wgDBname === 'kngyaanipediawiki' ||
-	 $wgDBname === 'maigyaanipediawiki' ||
-	 $wgDBname === 'bhgyaanipediawiki' ||
-	 $wgDBname === 'asgyaanipediawiki' ||
-	 $wgDBname === 'mlgyaanipediawiki'
+	 $wgDBname === 'pagyaanipediawiki'
 ) {
 	// per Ucronistaw
 	$wgForeignFileRepos[] = [
