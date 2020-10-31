@@ -794,6 +794,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'googlenewssitemap' => [
+			'name' => 'GoogleNewsSitemap',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleNewsSitemap',
+			'var' => 'wmgUseGoogleNewsSitemap',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'graph' => [
 			'name' => 'Graph',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Graph',
