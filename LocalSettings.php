@@ -1616,60 +1616,6 @@ $wi->config->settings = [
  					'alt' => 'Miraheze Wiki Hosting'
  				]
  			]
- 		],
-		 '+circleyversewiki' => [
- 			'poweredby' => [
- 				'wikiapiary' => [
- 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 					'url' => 'https://wikiapiary.com/wiki/Circleyverse_Wiki',
- 					'alt' => 'Monitored by WikiApiary'
- 				]
- 			]
-		 ],
-		  '+closinglogosgroupwiki' => [
- 			'poweredby' => [
- 				'wikiapiary' => [
- 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 					'url' => 'https://wikiapiary.com/wiki/CLG_Wiki',
- 					'alt' => 'Monitored by WikiApiary'
- 				]
- 			]
-		 ],
- 		'+ficreationwiki' => [
- 			'poweredby' => [
- 				'wikiapiary' => [
- 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 					'url' => 'https://wikiapiary.com/wiki/Ficreation',
- 					'alt' => 'Monitored by WikiApiary'
- 				]
- 			]
-		],
- 		'+kbosfunnieswiki' => [
- 			'poweredby' => [
- 				'wikiapiary' => [
- 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 					'url' => 'https://wikiapiary.com/wiki/Kbos_funnies',
- 					'alt' => 'Monitored by WikiApiary'
- 				]
- 			]
- 		],
- 		'+permanentfuturelabwiki' => [
- 			'poweredby' => [
- 				'wikiapiary' => [
- 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 					'url' => 'https://wikiapiary.com/wiki/Permanent_Future_Lab',
- 					'alt' => 'Monitored by WikiApiary'
- 				]
- 			]
- 		],
- 		'+tmewiki' => [
- 			'poweredby' => [
- 				'wikiapiary' => [
- 					'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 					'url' => 'https://wikiapiary.com/wiki/The_Multilingual_Encyclopedia_(miraheze.org)',
- 					'alt' => 'Monitored by WikiApiary'
- 				]
- 			]
  		]
  	],
 
