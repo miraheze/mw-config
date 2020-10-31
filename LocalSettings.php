@@ -117,13 +117,35 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wgPivotFeatures' => [
+		'default' => [
+			'showActionsForAnon' => true,
+			'fixedNavBar' => false,
+			'usePivotTabs' => false,
+			'showHelpUnderTools' => true,
+			'showRecentChangesUnderTools' => true,
+			'wikiName' => $wgSitename,
+			'wikiNameDesktop' => $wgSitename,
+			'navbarIcon' => false,
+			'preloadFontAwesome' => false,
+			'showFooterIcons' => true,
+			'addThisPUBID' => '',
+			'useAddThisShare' => '',
+			'useAddThisFollow' => ''
+		],
 		'thegreatwarwiki' => [
-			'usePivotTabs' => true,
+			'showActionsForAnon' => true,
 			'fixedNavBar' => true,
+			'usePivotTabs' => true,
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
+			'wikiName' => $wgSitename,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'showFooterIcons' => true
+			'navbarIcon' => false,
+			'preloadFontAwesome' => false,
+			'showFooterIcons' => true,
+			'addThisPUBID' => '',
+			'useAddThisShare' => '',
+			'useAddThisFollow' => ''
 		],
 	],
 
@@ -318,7 +340,6 @@ $wi->config->settings = [
 	// Category
 	'wgUseCategoryBrowser' => [
 		'default' => false,
-		'modesofdiscoursewiki' => true,
 	],
 
 	'wgCategoryPagingLimit' => [
@@ -328,7 +349,10 @@ $wi->config->settings = [
 
 	// CentralAuth
 	'wgCentralAuthAutoCreateWikis' => [
-		'default' => [ 'loginwiki', 'metawiki' ],
+		'default' => [ 
+			'loginwiki', 
+			'metawiki' 
+		],
 	],
 	'wgCentralAuthAutoNew' => [
 		'default' => true,
@@ -1961,7 +1985,6 @@ $wi->config->settings = [
 	'wgRightsPage' => [
 		'default' => '',
 		'diavwiki' => 'Project:Copyrights',
-		'kstartupswiki' => 'Project:저작권',
 		'wisdomwikiwiki' => 'Copyleft',
 	],
 	'wgRightsText' => [
