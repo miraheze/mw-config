@@ -2795,11 +2795,6 @@ $wi->config->settings = [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
-		'ssptopwiki' => [
-			'read-only' => [
-				'edit' => true,
-			],
-		],
 		'simcitywiki' => [
 			'banned' => [
 				'read' => true,
@@ -3010,32 +3005,15 @@ $wi->config->settings = [
 			'sysmag',
 			'trusted',
 		],
-		'+lcars47wiki' => [
-			'bureaucrat',
-			'devteam',
-		],
-		'+marthaspeakswiki' => [
-			'templateeditor',
-		],
 		'+quircwiki' => [
 			'editstaffprotected',
 		],
 		'+rf1botwiki' => [
 			'editrepos',
 		],
-		'+sau226wiki' => [
-			'bureaucrat',
-			'consul',
-		],
-		'+jayuwikiwiki' => [
-			'editvoter',
-		],
 		'+pruebawiki' => [
 			'bureaucrat',
 			'consul',
-		],
-		'+radviserwiki' => [
-			'editor',
 		],
 		'+sesupportwiki' => [
 			'editor',
@@ -3043,10 +3021,6 @@ $wi->config->settings = [
 		'simcitywiki' => [
 			'autoconfirmed',
 			'sysop',
-		],
-		'+sovereignwiki' => [
-			'officer',
-			'game-master',
 		],
 		'+studynotekrwiki' => [
 			'voter',
@@ -3057,12 +3031,6 @@ $wi->config->settings = [
 		],
 		'+thesciencearchiveswiki' => [
 			'templateeditor',
-		],
-		'+trexwiki' => [
-			'sysmag',
-			'bureaucrat',
-			'ceo',
-			'co',
 		],
 		'+vnenderbotwiki' => [
 			'template',
@@ -3310,26 +3278,6 @@ $wi->config->settings = [
 			'poll_vote' => 0,
 			'quiz_points' => 0,
 			'quiz_created' => 0,
-		],
-		'uncyclopedia2wiki' => [
-			'edit' => 50,
-			'vote' => 10,
-			'comment' => 0,
-			'comment_plus' => 40,
-			'comment_ignored' => -10,
-			'opinions_created' => 0,
-			'opinions_pub' => 10,
-			'referral_complete' => 0,
-			'friend' => 100,
-			'foe' => 0,
-			'gift_rec' => 25,
-			'gift_sent' => 10,
-			'points_winner_weekly' => 0,
-			'points_winner_monthly' => 0,
-			'user_image' => 1000,
-			'poll_vote' => 10,
-			'quiz_points' => 50,
-			'quiz_created' => 20,
 		],
 	],
 	'wgFriendingEnabled' => [
