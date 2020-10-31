@@ -547,6 +547,10 @@ if ( $wmgUseGoogleDocs4MW ) {
 	wfLoadExtension( 'GoogleDocs4MW' );
 }
 
+if ( $wmgUseGoogleNewsSitemap ) {
+	wfLoadExtension( 'GoogleNewsSitemap' );
+}
+
 if ( $wmgUseGraph ) {
 	wfLoadExtension( 'Graph' );
 }
