@@ -184,6 +184,11 @@ if ( $wmgUseCitoid ) {
 	$wgCitoidFullRestbaseURL = "https://{$wi->hostname}/{$wi->hostname}/";
 }
 
+if ( $wmgUseCleanChanges ) {
+	wfLoadExtension( 'CleanChanges' );
+	$wi->config->settings['+wgDefaultUserOptions']['default']['usenewrc'] = 1;
+}
+
 if ( $wmgUseCodeEditor ) {
 	wfLoadExtension( 'CodeEditor' );
 }

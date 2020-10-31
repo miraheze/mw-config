@@ -344,6 +344,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'cleanchanges' => [
+			'name' => 'CleanChanges',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CleanChanges',
+			'var' => 'wmgUseCleanChanges',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'codeeditor' => [
 			'name' => 'CodeEditor',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CodeEditor',
