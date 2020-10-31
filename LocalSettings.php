@@ -566,19 +566,16 @@ $wi->config->settings = [
 	],
 	'wgCompressRevisions' => [
 		'default' => false,
-		'absurdopediawiki' => true,
 		'allthetropeswiki' => true,
 		'altversewiki' => true,
 		'americangirldollswiki' => true,
-		'animatedfeetwiki' => true,
 		'animebathswiki' => true,
-		'baobabarchiveswiki' => true,
 		'beidipediawiki' => true,
 		'buswiki' => true,
 		'commonwealthwiki' => true,
 		'crappygameswiki' => true,
-		'crystalmaidenswiki' => true,
 		'cwarswiki' => true,
+		'drawnfeetwiki' => true,
 		'evilbabeswiki' => true,
 		'incubatorwiki' => true,
 		'libertygamewiki' => true,
@@ -591,9 +588,7 @@ $wi->config->settings = [
 		'simswiki' => true,
 		'thelastsovereignwiki' => true,
 		'tmewiki' => true,
-		'toxicfandomsandhatedomswiki' => true,
-		'trollpastawiki' => true,
-		'trollpastauncensoredwiki' => true,
+		'toxicfandomsandhatedomswiki' => true, // locked wiki
 		'uncyclomirrorwiki' => true,
 		'ungamewiki' => true,
 	],
@@ -843,10 +838,7 @@ $wi->config->settings = [
 	],
 	'wmgUseContactPage' => [
 		'default' => false, // Add wiki config to ContactPage.php
-		'apellidosmurcianoswiki' => true,
-		'ayrshirewiki' => true,
 		'christipediawiki' => true,
-		'cdcwiki' => true,
 		'guiaslocaiswiki' => true,
 		'test2wiki' => true,
 	],
@@ -1491,6 +1483,14 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'egApprovedRevsEnabledNamespaces' => [
+ 		'default' => [
+			NS_MAIN => true,
+			NS_USER => true,
+ 			NS_FILE => true,
+			NS_TEMPLATE => true,
+			NS_HELP => true,
+			NS_PROJECT => true
+		],
  		'valkyrienskieswiki' => [
 			NS_MAIN => false,
 			NS_USER => false,
@@ -1818,11 +1818,6 @@ $wi->config->settings = [
 	// HideSection
 	'wgHideSectionImages' => [
 		'default' => false,
-		'cikansaiwiki' => [
-			'show' => 'https://static.miraheze.org/cikansaiwiki/4/43/HideSectionDOWN.png',
-			'hide' => 'https://static.miraheze.org/cikansaiwiki/b/bd/HideSectionUP.png',
-			'location' => 'end'
-		],
 	],
 	// HighlightLinks
 	'wgHighlightLinksInCategory' => [
@@ -2013,7 +2008,6 @@ $wi->config->settings = [
 	'+wgUrlProtocols' => [
 		'default' => [],
 		// file protocol only allowed on private wikis
-		'bchwiki' => [ "file://" ],
 		'gzewiki' => [ "file://" ],
 		'kaiwiki' => [ "file://" ],
 		'vtwiki' => [ "discord://" ],
@@ -2725,9 +2719,6 @@ $wi->config->settings = [
 	// MobileFrontend
 	'wgMFNoMobilePages' => [
 		'default' => [],
-		'alwikiwiki' => [
-			'Main Page',
-		],
 	],
 	// Math
 	'wgMathoidCli' => [
@@ -2997,14 +2988,6 @@ $wi->config->settings = [
 			'ceo',
 			'co',
 		],
-		'+kyivstarwiki' => [
-			'co',
-			'ceo',
-			'editor',
-			'extendedconfirmed',
-			'sysmag',
-			'trusted',
-		],
 		'+quircwiki' => [
 			'editstaffprotected',
 		],
@@ -3021,9 +3004,6 @@ $wi->config->settings = [
 		'simcitywiki' => [
 			'autoconfirmed',
 			'sysop',
-		],
-		'+studynotekrwiki' => [
-			'voter',
 		],
 		'+testwiki' => [
 			'bureaucrat',
@@ -3292,9 +3272,8 @@ $wi->config->settings = [
 		'gfiwiki' => 'any',
 		'hispanowiki' => 'any',
 		'hispano76wiki' => 'any',
-		'hrfwiki2' => 'any',
+		'hrfwiki2wiki' => 'any',
 		'ildrilwiki' => 'any',
-		'lothuialethwiki' => 'any',
 		'nonciclopediawiki' => 'any',
 		'privadowiki' => 'any',
 		'simswiki' => 'any',
@@ -3449,7 +3428,6 @@ $wi->config->settings = [
 			'(.*\.)?miraheze\.org',
 			'adadevelopersacademy\.wiki',
 			'allthetropes\.org',
-			'aman\.info\.tm',
 			'antiguabarbudacalypso\.com',
 			'astrapedia\.ru',
 			'athenapedia\.org',
@@ -3595,8 +3573,7 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wgVisualEditorEnableVisualSectionEditing' => [
-		'default' => false,
-		'dcmultiversewiki' => 'mobile',
+		'default' => 'mobile',
 	],
 
 	// Protect site config
