@@ -89,6 +89,16 @@ if ( isset( $wgWordmark ) && $wgWordmark ) {
 	];
 }
 
+if ( $wmgWikiapiaryFooterPageName ) {
+    '+wgFooterIcons' => [
+        'poweredby' => [
+            'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+            'url' => 'https://wikiapiary.com/wiki/' . $wmgWikiapiaryFooterPageName,
+            'alt' => 'Monitored by WikiApiary'
+        ];
+    ];
+}
+
 // Per-wiki overrides
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
