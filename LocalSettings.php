@@ -132,7 +132,7 @@ $wi->config->settings = [
 			'useAddThisShare' => '',
 			'useAddThisFollow' => ''
 		],
-		'thegreatwarwiki' => [
+		'+thegreatwarwiki' => [
 			'showActionsForAnon' => true,
 			'fixedNavBar' => true,
 			'usePivotTabs' => true,
