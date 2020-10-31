@@ -90,13 +90,8 @@ if ( isset( $wgWordmark ) && $wgWordmark ) {
 }
 
 if ( $wmgWikiapiaryFooterPageName ) {
- 	$wi->config->settings['+wgFooterIcons']['default'] = [
+ 	$wi->config->settings['+wgFooterIcons']['+default'] = [
  	 	'poweredby' => [
- 			'miraheze' => [
- 				'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
- 				'url' => 'https://meta.miraheze.org/wiki/',
- 				'alt' => 'Miraheze Wiki Hosting'
- 			],
  			'wikiapiary' => [
  				'src' => "https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png",
  				'url' => "https://wikiapiary.com/wiki/$wmgWikiapiaryFooterPageName",
