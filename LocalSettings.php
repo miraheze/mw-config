@@ -889,6 +889,9 @@ $wi->config->settings = [
 	'wmgUseDisambiguator' => [
 		'default' => false,
 	],
+	'wmgUseDiscussionTools' => [
+		'default' => false,
+	],
 	'wmgUseDismissableSiteNotice' => [
 		'default' => true,
 	],

@@ -524,6 +524,18 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'discussiontools' => [
+			'name' => 'DiscussionTools',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DiscussionTools',
+			'var' => 'wmgUseDiscussionTools',
+			'conflicts' => false,
+			'requires' => [
+				'extensions' => [
+					'linter',
+					'visualeditor',
+				],
+			],
+		],
 		'displaytitle' => [
 			'name' => 'DisplayTitle',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DisplayTitle',
