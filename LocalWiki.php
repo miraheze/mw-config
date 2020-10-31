@@ -343,6 +343,6 @@ if ( $wmgWikiapiaryFooterPageName ) {
             'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
             'url' => 'https://wikiapiary.com/wiki/Circleyverse_Wiki' + $wmgWikiapiaryFooterPageName,
             'alt' => 'Monitored by WikiApiary'
-        ]
-    ]
+        ];
+    ];
 }
