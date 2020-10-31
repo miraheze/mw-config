@@ -616,10 +616,7 @@ if ( $wmgUseJsonConfig ) {
 }
 
 if ( $wmgUseKartographer ) {
-	wfLoadExtensions( [
-		'JsonConfig',
-		'Kartographer'
-	] );
+	wfLoadExtension( 'Kartographer' );
 }
 
 if ( $wmgUseLabeledSectionTransclusion ) {

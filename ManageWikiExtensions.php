@@ -943,7 +943,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Kartographer',
 			'var' => 'wmgUseKartographer',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'jsonconfig',
+				],
+			],
 		],
 		'labeledsectiontransclusion' => [
 			'name' => 'LabeledSectionTransclusion',
