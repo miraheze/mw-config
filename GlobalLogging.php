@@ -75,7 +75,7 @@ if ( wfHostname() === 'test2' ) {
 		'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 		'redis' => [
 			'destination' => "$wmgLogDir/debuglogs/redis.log",
-			'level' => 'error',
+			'level' => \Psr\Log\LogLevel::WARNING,
 		],
 		'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
 		'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
