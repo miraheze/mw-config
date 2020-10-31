@@ -1334,6 +1334,9 @@ $wi->config->settings = [
 	'wmgUseThanks' => [
 		'default' => false,
 	],
+	'wmgUseTimeMachine' => [
+		'default' => false,
+	],
 	'wmgUseTitleKey' => [
 		'default' => false,
 	],

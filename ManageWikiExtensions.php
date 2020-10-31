@@ -2079,6 +2079,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'timemachine' => [
+			'name' => 'TimeMachine',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimeMachine',
+			'var' => 'wmgUseTimeMachine',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'titlekey' => [
 			'name' => 'TitleKey',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TitleKey',
