@@ -90,13 +90,15 @@ if ( isset( $wgWordmark ) && $wgWordmark ) {
 }
 
 if ( $wmgWikiapiaryFooterPageName ) {
-    '+wgFooterIcons' => [
-        'poweredby' => [
-            'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
-            'url' => 'https://wikiapiary.com/wiki/' . $wmgWikiapiaryFooterPageName,
-            'alt' => 'Monitored by WikiApiary'
-        ];
-    ];
+ 	'+wgFooterIcons' => [
+ 	 	'poweredby' => [
+ 			'wikiapiary' => [
+ 				'src' => "https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png",
+ 				'url' => "https://wikiapiary.com/wiki/$wmgWikiapiaryFooterPageName",
+ 				'alt' => "Monitored by WikiApiary"
+ 			]
+ 		]
+ 	];
 }
 
 // Per-wiki overrides
@@ -113,7 +115,7 @@ if ( $wgDBname === 'cineastaswiki' ) {
 }
 
 if ( $wgDBname === 'csydeswiki' ) {
-	wfLoadExtension ( 'HAWelcome' ); //T6272
+	wfLoadExtension ( 'HAWelcome' ); // T6272
 }
 
 if ( $wgDBname === 'cvtwiki' ) {
