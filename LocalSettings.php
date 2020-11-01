@@ -998,6 +998,9 @@ $wi->config->settings = [
 	'wmgUseGoogleDocs4MW' => [
 		'default' => false,
 	],
+	'wmgUseGoogleNewsSitemap' => [
+		'default' => false,
+	],
 	'wmgUseGraph' => [
 		'default' => false,
 	],
