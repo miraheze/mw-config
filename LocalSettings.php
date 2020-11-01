@@ -1618,6 +1618,9 @@ $wi->config->settings = [
  			]
  		]
  	],
+	'wmgWikiapiaryFooterPageName' => [
+		'default' => null,
+	],
 
 	'wgMaxCredits' => [
 		'default' => 0,
