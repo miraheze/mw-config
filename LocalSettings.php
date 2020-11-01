@@ -2037,7 +2037,6 @@ $wi->config->settings = [
 			'categorytree',
 			'cite',
 			'citethispage',
-			'darkmode',
 			'globaluserpage',
 			'mobilefrontend',
 			'syntaxhighlight_geshi',
