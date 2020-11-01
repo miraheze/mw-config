@@ -88,11 +88,11 @@ if ( isset( $wgWordmark ) && $wgWordmark ) {
 		'height' => $wgWordmarkHeight,
 	];
 }
-
+ 
 if ( isset( $wmgWikiapiaryFooterPageName ) && (bool)$wmgWikiapiaryFooterPageName ) {
  	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
  		'src' => "https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png",
- 		'url' => "https://wikiapiary.com/wiki/$wmgWikiapiaryFooterPageName",
+ 		'url' => "https://wikiapiary.com/wiki/{str_replace('%20', '_', urlencode($wmgWikiapiaryFooterPageName))}",
  		'alt' => "Monitored by WikiApiary"
  	];
 }
