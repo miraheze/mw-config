@@ -499,16 +499,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDeleteUserPages',
 			'conflicts' => false,
 			'requires' => [],
-			'install' => [
-				'permissions' => [
-					'user' => [
-						'permissions' => [
-							'delete-rootuserpages',
-							'delete-usersubpages'
-						],
-					],
-				],
-			],
+			'install' => [],
 		],
 		'description2' => [
 			'name' => 'Description2',
