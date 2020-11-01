@@ -1821,7 +1821,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'text',
-		'overridedefault' => null,
+		'overridedefault' => '',
 		'section' => 'styling',
 		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
 	],
