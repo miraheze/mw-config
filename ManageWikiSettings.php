@@ -1794,7 +1794,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'url',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'This will set the value of <code>$wgLogos[&#39;wordmark&#39;][&#39;src&#39;]</code>. Also used as the copyright wordmark for the Minerva skin.',
 	],
