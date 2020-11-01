@@ -1799,7 +1799,7 @@ $wgManageWikiSettings = [
 		'help' => 'This will set the value of <code>$wgLogos[&#39;wordmark&#39;][&#39;src&#39;]</code>. Also used as the copyright wordmark for the Minerva skin.',
 	],
 	'wgWordmarkWidth' => [
-		'name' => 'Wordmark width',
+		'name' => 'Wordmark Width',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'integer',
@@ -1808,13 +1808,22 @@ $wgManageWikiSettings = [
 		'help' => 'This will set the width value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "116"',
 	],
 	'wgWordmarkHeight' => [
-		'name' => 'Wordmark height',
+		'name' => 'Wordmark Height',
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'integer',
 		'overridedefault' => 18,
 		'section' => 'styling',
 		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "18"',
+	],
+	'wmgWikiapiaryFooterPageName' => [
+		'name' => 'Wikiapiary Footer Page Name',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'styling',
+		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
