@@ -2620,7 +2620,7 @@ $wi->config->settings = [
 	],
 
 	// MobileFrontend
-	'wmgMFAutodetectMobileView' => [
+	'wgMFAutodetectMobileView' => [
 		'default' => false,
 	],
 	'wgMFDefaultSkinClass' => [
@@ -3338,7 +3338,7 @@ $wi->config->settings = [
 	],
 
 	// Translate
-	'wmgTranslateBlacklist' => [
+	'wgTranslateBlacklist' => [
 		'default' => [],
 		'metawiki' => [
 			'*' => [
@@ -3356,10 +3356,10 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wmgTranslateTranslationServices' => [
+	'wgTranslateTranslationServices' => [
 		'default' => [],
 	],
-	'wmgTranslateDocumentationLanguageCode' => [
+	'wgTranslateDocumentationLanguageCode' => [
 		'default' => false,
 		'metawiki' => 'qqq',
 	],
@@ -3577,13 +3577,13 @@ $wi->config->settings = [
 	],
 
 	// WebChat config
-	'wmgWebChatServer' => [
+	'wgWebChatServer' => [
 		'default' => false,
 	],
-	'wmgWebChatChannel' => [
+	'wgWebChatChannel' => [
 		'default' => false,
 	],
-	'wmgWebChatClient' => [
+	'wgWebChatClient' => [
 		'default' => 'freenodeChat',
 	],
 
