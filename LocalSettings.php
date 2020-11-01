@@ -3291,7 +3291,7 @@ $wi->config->settings = [
 		'default' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 	],
 	'wgWordmark' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgWordmarkHeight' => [
 		'default' => 18,
