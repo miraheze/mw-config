@@ -1917,21 +1917,21 @@ $wi->config->settings = [
 	],
 	'wgJsonConfigs' => [
 		'default' => [
-			'Tabular.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".tab", and contain at least one symbol
-				'pattern' => '/.\.tab$/',
-				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
-				'store' => false,
-				'license' => 'CC0-1.0',
-				'isLocal' => false,
-			],
 			'Map.JsonConfig' => [
 				'namespace' => 486,
 				'nsName' => 'Data',
 				// page name must end in ".map", and contain at least one symbol
 				'pattern' => '/.\.map$/',
+				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
+				'store' => false,
+				'license' => 'CC0-1.0',
+				'isLocal' => false,
+			],
+			'Tabular.JsonConfig' => [
+				'namespace' => 486,
+				'nsName' => 'Data',
+				// page name must end in ".tab", and contain at least one symbol
+				'pattern' => '/.\.tab$/',
 				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
 				'store' => false,
 				'license' => 'CC0-1.0',
@@ -1939,22 +1939,22 @@ $wi->config->settings = [
 			],
 		],
 		'+commonswiki' => [
-			'Tabular.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".tab", and contain at least one symbol
-				'pattern' => '/.\.tab$/',
-				'remote' => [ 'url' => false ],
-				'store' => true,
-				'license' => 'CC0-1.0',
-				'isLocal' => false,
-			],
 			'Map.JsonConfig' => [
 				'namespace' => 486,
 				'nsName' => 'Data',
 				// page name must end in ".map", and contain at least one symbol
 				'pattern' => '/.\.map$/',
 				'remote' => [ 'url' => false ], 
+				'store' => true,
+				'license' => 'CC0-1.0',
+				'isLocal' => false,
+			],
+			'Tabular.JsonConfig' => [
+				'namespace' => 486,
+				'nsName' => 'Data',
+				// page name must end in ".tab", and contain at least one symbol
+				'pattern' => '/.\.tab$/',
+				'remote' => [ 'url' => false ],
 				'store' => true,
 				'license' => 'CC0-1.0',
 				'isLocal' => false,
@@ -1968,6 +1968,7 @@ $wi->config->settings = [
 	'wgJsonConfigModels' => [
 		'default' => [
 			'Map.JsonConfig' => 'JsonConfig\JCMapDataContent',
+			'Tabular.JsonConfig' => 'JsonConfig\JCTabularContent',
 		],
 	],
 
