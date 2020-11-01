@@ -3361,7 +3361,6 @@ $wi->config->settings = [
 	],
 	'wgTranslateDocumentationLanguageCode' => [
 		'default' => false,
-		'metawiki' => 'qqq',
 	],
 	'wmgUseYandexTranslate' => [
 		'default' => false,
