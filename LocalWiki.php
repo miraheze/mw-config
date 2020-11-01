@@ -89,10 +89,11 @@ if ( isset( $wgWordmark ) && $wgWordmark ) {
 	];
 }
 
-if ( isset( $wmgWikiapiaryFooterPageName ) && (bool)$wmgWikiapiaryFooterPageName ) {
+$footerName = $wi->config->settings['wmgWikiapiaryFooterPageName']['default'];
+if ( (bool)$footerName ) {
  	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
  		'src' => "https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png",
- 		'url' => "https://wikiapiary.com/wiki/$wmgWikiapiaryFooterPageName",
+ 		'url' => "https://wikiapiary.com/wiki/$footerName",
  		'alt' => "Monitored by WikiApiary"
  	];
 }
