@@ -783,7 +783,6 @@ if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 	wfLoadSkin( 'MinervaNeue' );
 
-	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
@@ -1149,9 +1148,6 @@ if ( $wmgUseTextExtracts ) {
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
 	wfLoadExtension( 'Translate' );
-	$wgTranslateBlacklist = $wmgTranslateBlacklist;
-	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
-	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
 	require_once "/srv/mediawiki/config/TranslateConfigHack.php";
 	$wgULSGeoService = false;
 }
@@ -1284,9 +1280,6 @@ if ( $wmgUseVoteNY ) {
 
 if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
-	$wgWebChatClient = $wmgWebChatClient;
-	$wgWebChatServer = $wmgWebChatServer;
-	$wgWebChatChannel = $wmgWebChatChannel;
 	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
 
 }
