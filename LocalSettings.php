@@ -3001,58 +3001,6 @@ $wi->config->settings = [
 			'autoconfirmed',
 			'sysop'
 		],
-		'+wikitestwiki' => [
-			'bureaucrat',
-			'consul',
-		],
-		'+bigforestwiki' => [
-			'editvoter',
-		],
-		'+cmgwiki' => [
-			'bureaucrat',
-			'sysop',
-			'pm',
-			'member',
-		],
-		'+hypopediawiki' => [
-			'bureaucrat',
-		],
-		'igrovyesistemywiki' => [
-			'trusted',
-			'sysmag',
-			'bureaucrat',
-			'ceo',
-			'co',
-		],
-		'+quircwiki' => [
-			'editstaffprotected',
-		],
-		'+rf1botwiki' => [
-			'editrepos',
-		],
-		'+pruebawiki' => [
-			'bureaucrat',
-			'consul',
-		],
-		'+sesupportwiki' => [
-			'editor',
-		],
-		'simcitywiki' => [
-			'autoconfirmed',
-			'sysop',
-		],
-		'+testwiki' => [
-			'bureaucrat',
-			'consul',
-		],
-		'+thesciencearchiveswiki' => [
-			'templateeditor',
-		],
-		'+vnenderbotwiki' => [
-			'template',
-			'extendedconfirmed',
-			'owner'
-		],
 	],
 	'wgRestrictionTypes' => [
 		'default' => [
