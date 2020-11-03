@@ -102,7 +102,7 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 if( strpos( $wgServer, 'miraheze.org' ) === false ) {
  	$wi->config->settings['wgUrlShortenerAllowedDomains']['+default'] += [
 		preg_quote($wgServer),
-	],
+	];
 }
 
 // Per-wiki overrides
