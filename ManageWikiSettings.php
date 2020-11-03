@@ -615,7 +615,7 @@ $wgManageWikiSettings = [
 			'sysop'
 		],
 		'section' => 'edit',
-		'help' => 'Set of permission keys that can be selected on the "page protection" page. Can be set to userrights or usergroups. Userrights take priority over usergroups in the event of a name conflict.',
+		'help' => 'Set of permission keys that can be selected on the "page protection" page. Must be set to usergroups not userrights.',
 	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
