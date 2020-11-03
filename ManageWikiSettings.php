@@ -600,6 +600,23 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Show more authors.',
 	],
+	'wgRestrictionLevels' => [
+		'name' => 'Restriction Levels',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'usergroups',
+		'options' => [
+			'No Restriction' => '',
+		],
+		'overridedefault' => [
+			'',
+			'user',
+			'autoconfirmed',
+			'sysop'
+		],
+		'section' => 'edit',
+		'help' => 'Set of permission keys that can be selected on the "page protection" page. Can be set to userrights or usergroups. Userrights take priority over usergroups in the event of a name conflict.',
+	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
 		'from' => 'mediawiki',
