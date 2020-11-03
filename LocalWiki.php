@@ -89,6 +89,16 @@ if ( $wgWordmark ) {
 	];
 }
 
+// $wgRestrictionLevels
+foreach ( $wgRestrictionLevels as $value ) {
+	// Check if $wgRestrictionLevels[$value] equals the value of a user right first
+	if( !in_array( MediaWikiServices::getInstance()->getPermissionManager()->getAllPermissions(), $value ) ) {
+		$wi->config->settings['wgManageWikiPermissionsAdditionalRights'][+$wi->dbname][$value] = [
+			$value => true,
+		];
+	}
+}
+
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
  	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
  		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
