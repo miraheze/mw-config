@@ -3469,16 +3469,12 @@ $wi->config->settings = [
 			'wiki\.ciptamedia\.org',
 			'dariawiki\.org',
 			'froggy\.info',
-			'wiki\.gesamtschule-nordkirchen\.de', // checked
+			'wiki\.gesamtschule-nordkirchen\.de',
 			'wiki\.grottocenter\.org',
-			'wiki\.gtsc\.vn',
-			'www\.iceposeidonwiki\.com',
-			'wiki\.inebriation-confederation\.com',
 			'wiki\.jacksonheights\.nyc',
-			'karagash\.info',
 			'wiki\.kourouklides\.com',
 			'kunwok\.org',
-			'www\.lab612\.at',
+			'www\.lab612\.at', // checked
 			'wiki\.ldmsys\.net',
 			'wiki\.lostminecraftminers\.org',
 			'lodge\.jsnydr\.com',
