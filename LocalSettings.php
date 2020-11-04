@@ -1600,7 +1600,12 @@ $wi->config->settings = [
 		'default' => 3,
 	],
 	'wmgFlaggedRevsRestrictionLevels' => [
-		'default' => [ '', 'sysop' ],
+		'default' => [
+			'',
+			'user',
+			'autoconfirmed',
+			'sysop'
+		],
 	],
 	'wmgSimpleFlaggedRevsUI' => [
 		'default' => false,
