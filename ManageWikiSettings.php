@@ -185,7 +185,9 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => [
 			'',
-			'sysop',
+			'user',
+			'autoconfirmed',
+			'sysop'
 		],
 		'section' => 'anti-spam',
 		'help' => 'Restriction levels for "autoreview"/"review" rights.',
