@@ -1918,6 +1918,7 @@ $wi->config->settings = [
 	'wgJsonConfigEnableLuaSupport' => [
 		'default' => true,
 	],
+/*
 	'wgJsonConfigs' => [
 		'default' => [
 			'Map.JsonConfig' => [
@@ -1974,7 +1975,7 @@ $wi->config->settings = [
 			'Tabular.JsonConfig' => 'JsonConfig\JCTabularContent',
 		],
 	],
-
+*/
 	// Kartographer
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
