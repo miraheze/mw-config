@@ -1926,7 +1926,6 @@ $wi->config->settings = [
 				// page name must end in ".map", and contain at least one symbol
 				'pattern' => '/.\.map$/',
 				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
-				'store' => false,
 				'license' => 'CC-BY-SA 4.0',
 				'isLocal' => false,
 			],
@@ -1936,7 +1935,6 @@ $wi->config->settings = [
 				// page name must end in ".tab", and contain at least one symbol
 				'pattern' => '/.\.tab$/',
 				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
-				'store' => false,
 				'license' => 'CC-BY-SA 4.0',
 				'isLocal' => false,
 			],
