@@ -76,6 +76,13 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
+// $wmgFlaggedRevsRestrictionLevels
+foreach ( $wmgFlaggedRevsRestrictionLevels as $value ) {
+	$wi->config->settings['wgManageWikiPermissionsAdditionalRights'][+$wi->dbname][$value] = [
+		$value => true,
+	];
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
