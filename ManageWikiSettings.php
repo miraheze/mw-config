@@ -1289,7 +1289,7 @@ $wgManageWikiSettings = [
 		'from' => 'contactpage',
 		'restricted' => false,
 		'type' => 'text',
-		'overridedefault' => null,
+		'overridedefault' => User::newFromId(2), // Username of wiki founder
 		'section' => 'notifications',
 		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
 	],
