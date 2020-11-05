@@ -206,6 +206,36 @@ $wi->config->settings = [
 		'default' => 'uppercase',
 		'holidayswiki' => 'numeric',
 	],
+	
+	// ContactPage
+	'wgContactConfig' => [
+		'default' => [],
+		'christipediawiki' => [
+			'RecipientUser' => 'Kees Langeveld',
+			'SenderEmail' => $wgPasswordSender,
+			'SenderName' => 'Miraheze No Reply',
+			'RequireDetails' => true,
+			'IncludeIP' => false, // Should never be set to true
+			'MustBeLoggedIn' => false,
+			'AdditionalFields' => [],
+			'DisplayFormat' => 'table',
+			'RLModules' => [],
+			'RLStyleModules' => [],
+		],
+		'guiaslocaiswiki' => [
+			'RecipientUser' => 'Eduaddad',
+			'SenderEmail' => $wgPasswordSender,
+			'SenderName' => 'Miraheze No Reply',
+			'RequireDetails' => true,
+			'IncludeIP' => false, // Should never be set to true
+			'MustBeLoggedIn' => false,
+			'AdditionalFields' => [],
+			'DisplayFormat' => 'table',
+			'RLModules' => [],
+			'RLStyleModules' => [],
+		],
+	],
+	
 	// Cosmos settings
 	'wgCosmosBannerLogo' => [
 		'default' => null,
