@@ -76,6 +76,11 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
+// $wmgContactPageRecipientUser
+if( $wmgContactPageRecipientUser ) {
+	$wi->config->settings['wgContactConfig']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
@@ -89,6 +94,7 @@ if ( $wgWordmark ) {
 	];
 }
 
+// $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
  	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
  		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
