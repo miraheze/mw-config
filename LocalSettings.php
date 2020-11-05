@@ -224,7 +224,7 @@ $wi->config->settings = [
 	],
 	'wmgContactPageRecipientUser' => [
 		'default' => null,
-	]
+	],
 	
 	// Cosmos settings
 	'wgCosmosBannerLogo' => [
