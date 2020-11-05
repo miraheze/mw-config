@@ -463,6 +463,10 @@ $wi->config->settings = [
 			'c4',
 		]
 	],
+	// Use if you want to stop wikis being created on this cluster
+	'wgCreateWikiDatabaseClustersInactive' => [
+		'default' => []
+	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
 	],
