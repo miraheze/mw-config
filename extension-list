@@ -14,7 +14,6 @@ $IP/extensions/AutoCreatePage/AutoCreatePage.php
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
-$IP/extensions/Bootstrap/extension.json
 $IP/extensions/CSS/extension.json
 $IP/extensions/Calendar/extension.json
 $IP/extensions/Cargo/extension.json
