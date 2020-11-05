@@ -209,21 +209,8 @@ $wi->config->settings = [
 	
 	// ContactPage
 	'wgContactConfig' => [
-		'default' => [],
-		'christipediawiki' => [
-			'RecipientUser' => 'Kees Langeveld',
-			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Miraheze No Reply',
-			'RequireDetails' => true,
-			'IncludeIP' => false, // Should never be set to true
-			'MustBeLoggedIn' => false,
-			'AdditionalFields' => [],
-			'DisplayFormat' => 'table',
-			'RLModules' => [],
-			'RLStyleModules' => [],
-		],
-		'guiaslocaiswiki' => [
-			'RecipientUser' => 'Eduaddad',
+		'default' => [
+			'RecipientUser' => User::newFromId(2), // Username of wiki founder
 			'SenderEmail' => $wgPasswordSender,
 			'SenderName' => 'Miraheze No Reply',
 			'RequireDetails' => true,
@@ -896,10 +883,7 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseContactPage' => [
-		'default' => false, // Add wiki config to ContactPage.php
-		'christipediawiki' => true,
-		'guiaslocaiswiki' => true,
-		'test2wiki' => true,
+		'default' => false,
 	],
 	'wmgUseContributionScores' => [
 		'default' => false,
