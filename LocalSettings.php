@@ -223,7 +223,7 @@ $wi->config->settings = [
 		],
 	],
 	'wmgContactPageRecipientUser' => [
-		'default' => null,
+		'default' => User::newFromId(2), // Username of wiki founder
 	],
 	
 	// Cosmos settings
