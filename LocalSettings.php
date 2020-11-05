@@ -800,9 +800,6 @@ $wi->config->settings = [
 	'wmgUseBabel' => [
 		'default' => false,
 	],
-	'wmgUseBootstrap' => [
-		'default' => false,
-	],
 	'wmgUseMSCalendar' => [
 		'default' => false,
 	],
