@@ -151,7 +151,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Default timeout, 1 hour by default.',
 	],
-	'wmgFlaggedRevsProtection' => [
+	'wgFlaggedRevsProtection' => [
 		'name' => 'Flagged Revs Protection',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -160,7 +160,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'This enables Flagged Revs Protection.',
 	],
-	'wmgFlaggedRevsAutoReview' => [
+	'wgFlaggedRevsAutoReview' => [
 		'name' => 'FlaggedRevs Auto Review',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -175,7 +175,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Auto-review settings for edits/new pages.',
 	],
-	'wmgFlaggedRevsRestrictionLevels' => [
+	'wgFlaggedRevsRestrictionLevels' => [
 		'name' => 'FlaggedRevs Restriction Levels',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -185,12 +185,14 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => [
 			'',
-			'sysop',
+			'user',
+			'autoconfirmed',
+			'sysop'
 		],
 		'section' => 'anti-spam',
 		'help' => 'Restriction levels for "autoreview"/"review" rights.',
 	],
-	'wmgSimpleFlaggedRevsUI' => [
+	'wgSimpleFlaggedRevsUI' => [
 		'name' => 'Simple FlaggedRevs UI',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -199,7 +201,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'When enabled, this will only distinguish "checked", "quality", and unreviewed.',
 	],
-	'wmgFlaggedRevsLowProfile' => [
+	'wgFlaggedRevsLowProfile' => [
 		'name' => 'FlaggedRevs Low Profile',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
