@@ -450,16 +450,6 @@ if ( $wmgUseFemiwiki ) {
 if ( $wmgUseFlaggedRevs ) {
 	wfLoadExtension( 'FlaggedRevs' );
 
-	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
-	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
-	$wgFlaggedRevsTagsRestrictions = $wmgFlaggedRevsTagsRestrictions;
-	$wgFlaggedRevsTagsAuto = $wmgFlaggedRevsTagsAuto;
-	$wgFlaggedRevsAutopromote = $wmgFlaggedRevsAutopromote;
-	$wgFlaggedRevsAutoReview = $wmgFlaggedRevsAutoReview;
-	$wgFlaggedRevsRestrictionLevels = $wmgFlaggedRevsRestrictionLevels;
-	$wgSimpleFlaggedRevsUI = $wmgSimpleFlaggedRevsUI;
-	$wgFlaggedRevsLowProfile = $wmgFlaggedRevsLowProfile;
-
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgFlaggedRevsNamespaces'] = [
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'main' => true,
