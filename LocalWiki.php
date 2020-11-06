@@ -99,9 +99,9 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 }
 
 // $wgUrlShortenerAllowedDomains
-if( strpos( $wgServer, 'miraheze.org' ) === false ) {
+if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
  	$wi->config->settings['wgUrlShortenerAllowedDomains']['+default'] += [
-		preg_quote($wgServer),
+		preg_quote( $wi->hostname ),
 	];
 }
 
