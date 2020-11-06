@@ -1249,14 +1249,27 @@ if ( $wmgUseVideo ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
+	if ( !$cwPrivate ) {
+		$wgVisualEditorParsoidAutoConfig = false;
 
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://parsoid-lb.miraheze.org:443',
-		'domain' => $wgServer,
-		'prefix' => $wgDBname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-	];
+		$wgVirtualRestConfig['modules']['restbase'] = [
+ 			'url' => "https://restbase-lb.miraheze.org",
+			'domain' => $wgServer,
+			'parsoidCompat' => false,
+		];
+
+		$wgVisualEditorFullRestbaseURL = "https://restbase-lb.miraheze.org/";
+	} else {
+		$wgVirtualRestConfig['modules']['parsoid'] = [
+			'url' => 'https://parsoid-lb.miraheze.org:443',
+			'domain' => $wgServer,
+			'prefix' => $wgDBname,
+			'forwardCookies' => true,
+			'restbaseCompat' => false,
+		];
+	}
+
+	
 
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
