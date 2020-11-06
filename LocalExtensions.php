@@ -99,10 +99,6 @@ if ( $wmgUseBlogPage ) {
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
-if ( $wmgUseBootstrap ) {
-	wfLoadExtension( 'Bootstrap' );
-};
-
 if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }

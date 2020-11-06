@@ -241,13 +241,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'Bootstrap' => [
-			'name' => 'Bootstrap',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Bootstrap',
-			'var' => 'wmgUseBootstrap',
-			'conflicts' => false,
-			'requires' => [],
-		],
 		'calendar-wikivoyage' => [
 			'name' => 'Calendar-Wikivoyage',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Calendar-Wikivoyage',
