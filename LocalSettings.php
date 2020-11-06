@@ -3748,7 +3748,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
 }
 
-if ( !preg_match( '/^mw[0-9]*/', wfHostname() ) ) {
+if ( !preg_match( '/^(mw[0-9]|jobrunner[0-9])*/', wfHostname() ) ) {
 	$wi->config->settings['wgUseCdn']['default'] = false;
 }
 
