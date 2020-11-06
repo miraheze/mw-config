@@ -1390,22 +1390,23 @@ $wi->config->settings = [
 
 	// TemplateStyles config
 	'wgTemplateStylesAllowedUrls' => [
-		// Remove when https://gerrit.wikimedia.org/r/486828/ is merged
 		'default' => [
 			'audio' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
-				'<^(?:https:)?\/\/static\\.miraheze.org\\.org\/>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+				'<^(?:https:)?//static\\.miraheze\\.org/>',
 			],
 			'image' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
-				'<^(?:https:)?\/\/static\\.miraheze.org\\.org\/>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+				'<^(?:https:)?//static\\.miraheze\\.org/>',
 			],
 			'svg' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org/wikipedia\/commons\/[^?#]*\\.svg(?:[?#]|$)>',
-				'<^(?:https:)?\/\/static\\.miraheze.org\\.org\/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
-			'namespace' => [ '<.>' ],
+			'namespace' => [ 
+				'<.>', 
+			],
 			'css' => [],
 		],
 	],
