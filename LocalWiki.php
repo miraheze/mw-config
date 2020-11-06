@@ -100,7 +100,8 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 
 // $wgUrlShortenerAllowedDomains
 if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
-	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] = array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( $wi->hostname ) ] );
+	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
+		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
 // Per-wiki overrides
