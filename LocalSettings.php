@@ -3767,7 +3767,7 @@ require_once __DIR__ . "/ManageWikiSettings.php";
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
-
+$wgTmpDirectory = "{$wgUploadDirectory}/temp";
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
