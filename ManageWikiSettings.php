@@ -7,7 +7,7 @@
  *
  * check: adds a checkbox.
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
- * language: adds a dropdown for language selection (all which are known to MediaWiki).
+ * language: adds a dropdown for language selection (all which are known to MediaWiki).f
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
  * list-multi-bool: see above, just outputs are $this => $bool.
@@ -1750,14 +1750,8 @@ $wgManageWikiSettings = [
 		'name' => 'Default Skin',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'list',
-		'options' => [
-			'CologneBlue' => 'cologneblue',
-			'Modern' => 'modern',
-			'MonoBook' => 'monobook',
-			'Timeless' => 'timeless',
-			'Vector' => 'vector',
-		],
+		'type' => 'skins',
+		'options' => [],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
 		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
