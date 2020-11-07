@@ -3241,8 +3241,7 @@ $wi->config->settings = [
 			'monobook',
 			'vector',
 			'timeless',
-			'minerva',
-			'minervaneue'
+			'minerva'
 		],
 	],
 
