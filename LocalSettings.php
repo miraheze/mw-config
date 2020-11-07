@@ -2528,6 +2528,17 @@ $wi->config->settings = [
 				'vestyle' => false,
 				'overridedefault' => [],
 			],
+			'wgCapitalLinkOverrides' => [
+				'name' => 'Force the first letter of links to capitals? Overrides $wgCapitalLinks for this namespace.',
+				'main' => true,
+				'talk' => false,
+				'blacklisted' => [
+					2,
+					8,
+				],
+				'vestyle' => true,
+				'overridedefault' => [],
+			],
 		],
 	],
 
