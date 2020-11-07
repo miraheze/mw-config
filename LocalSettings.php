@@ -8,7 +8,7 @@
 require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
 
-// Load PrivateSettings (e.g. wgDBpassword)
+// Load PrivateSettings (e.g. $wgDBpassword)
 require_once( '/srv/mediawiki/config/PrivateSettings.php' );
 
 // Load global skins and extensions
@@ -2526,6 +2526,17 @@ $wi->config->settings = [
 				'talk' => false,
 				'blacklisted' => [],
 				'vestyle' => false,
+				'overridedefault' => [],
+			],
+			'wgCapitalLinkOverrides' => [
+				'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
+				'main' => true,
+				'talk' => false,
+				'blacklisted' => [
+					2,
+					8,
+				],
+				'vestyle' => true,
 				'overridedefault' => [],
 			],
 		],
