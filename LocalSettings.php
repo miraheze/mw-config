@@ -3543,13 +3543,13 @@ $wi->config->settings = [
 	],
 
 	// WebChat config
-	'wmgWebChatServer' => [
+	'wgWebChatServer' => [
 		'default' => false,
 	],
-	'wmgWebChatChannel' => [
+	'wgWebChatChannel' => [
 		'default' => false,
 	],
-	'wmgWebChatClient' => [
+	'wgWebChatClient' => [
 		'default' => 'freenodeChat',
 	],
 
