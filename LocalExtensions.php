@@ -784,7 +784,6 @@ if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 	wfLoadSkin( 'MinervaNeue' );
 
-	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
