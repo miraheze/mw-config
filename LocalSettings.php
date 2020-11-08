@@ -1878,6 +1878,9 @@ $wi->config->settings = [
 			'v',
 			'n',
 		],
+		'+testwiki' => [
+			'simple',
+		],
 		'+ucroniaswiki' => [
 			'h',
 			'w',
