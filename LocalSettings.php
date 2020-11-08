@@ -3660,10 +3660,6 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
 }
 
-if ( !preg_match( '/^(mw[0-9]|jobrunner[0-9]|test[0-9])*/', wfHostname() ) ) {
-	$wi->config->settings['wgUseCdn']['default'] = false;
-}
-
 $wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
 // sets wgThumbPath, we fetch wgScriptPath from wgConf.
 $scriptPath = $wi->config->settings['wgScriptPath']['default'];
