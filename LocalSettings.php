@@ -2783,10 +2783,15 @@ $wi->config->settings = [
 	],
 
 	// New User Email Notification
-
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
 		'femmanwiki' => [ 'gustav@nyvell.net' ],
+	],
+
+	// NewUserMessage configs
+	'wgNewUserMessageOnAutoCreate' => [
+		'default' => false,
+		'nmfwikiwiki' = true,
 	],
 
 	// OATHAuth
