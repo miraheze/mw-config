@@ -1856,7 +1856,9 @@ $wi->config->settings = [
 		'default' => 'metawiki',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
-		'default' => [],
+		'default' => [
+			'simple',	
+		],
 		'+nonciclopediawiki' => [
 			'dlm',
 			'olb',
@@ -1877,6 +1879,9 @@ $wi->config->settings = [
 			'w',
 			'v',
 			'n',
+		],
+		'+testwiki' => [
+			'simple',
 		],
 		'+ucroniaswiki' => [
 			'h',
@@ -2783,12 +2788,17 @@ $wi->config->settings = [
 	],
 
 	// New User Email Notification
-
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
 		'femmanwiki' => [ 'gustav@nyvell.net' ],
 	],
-
+	
+	// NewUserMessage configs	
+	'wgNewUserMessageOnAutoCreate' => [	
+		'default' => false,	
+		'nmfwikiwiki' => true,	
+	],
+	
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
@@ -3252,8 +3262,7 @@ $wi->config->settings = [
 			'monobook',
 			'vector',
 			'timeless',
-			'minerva',
-			'minervaneue'
+			'minerva'
 		],
 	],
 
@@ -3650,10 +3659,6 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
-}
-
-if ( !preg_match( '/^(mw[0-9]|jobrunner[0-9])*/', wfHostname() ) ) {
-	$wi->config->settings['wgUseCdn']['default'] = false;
 }
 
 $wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
