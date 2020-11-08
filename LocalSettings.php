@@ -1535,10 +1535,10 @@ $wi->config->settings = [
 	],
 
 	// FlaggedRevs
-	'wmgFlaggedRevsProtection' => [
+	'wgFlaggedRevsProtection' => [
 		'default' => false,
 	],
-	'wmgFlaggedRevsTags' => [
+	'wgFlaggedRevsTags' => [
 		'default' => [
 			'status' => [
 				'quality' => 1,
@@ -1571,7 +1571,7 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wmgFlaggedRevsTagsRestrictions' => [
+	'wgFlaggedRevsTagsRestrictions' => [
 		'default' => [
 			'status' => [
 				'review' => 1,
@@ -1579,12 +1579,12 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wmgFlaggedRevsTagsAuto' => [
+	'wgFlaggedRevsTagsAuto' => [
 		'default' => [
 			'status' => 1,
 		],
 	],
-	'wmgFlaggedRevsAutopromote' => [
+	'wgFlaggedRevsAutopromote' => [
 		'default' => [
 			'days' => 14,
 			'edits' => 100,
@@ -1602,16 +1602,16 @@ $wi->config->settings = [
 		'isvwiki' => false,
 		'pruebawiki' => false,
 	],
-	'wmgFlaggedRevsAutoReview' => [
+	'wgFlaggedRevsAutoReview' => [
 		'default' => 3,
 	],
-	'wmgFlaggedRevsRestrictionLevels' => [
+	'wgFlaggedRevsRestrictionLevels' => [
 		'default' => [ '', 'sysop' ],
 	],
-	'wmgSimpleFlaggedRevsUI' => [
+	'wgSimpleFlaggedRevsUI' => [
 		'default' => false,
 	],
-	'wmgFlaggedRevsLowProfile' => [
+	'wgFlaggedRevsLowProfile' => [
 		'default' => false,
 	],
 
