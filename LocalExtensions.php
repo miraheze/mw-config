@@ -1123,9 +1123,6 @@ if ( $wmgUseTranslate ) {
 		'Translate',
 	] );
 
-	$wgTranslateBlacklist = $wmgTranslateBlacklist;
-	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
-	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
 	$wgULSGeoService = false;
 }
 

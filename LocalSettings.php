@@ -3425,7 +3425,7 @@ $wi->config->settings = [
 	],
 
 	// Translate
-	'wmgTranslateBlacklist' => [
+	'wgTranslateBlacklist' => [
 		'default' => [],
 		'metawiki' => [
 			'*' => [
@@ -3443,15 +3443,16 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wmgTranslateTranslationServices' => [
+	'wgTranslateTranslationServices' => [
 		'default' => [],
 	],
-	'wmgTranslateDocumentationLanguageCode' => [
+	'wgTranslateDocumentationLanguageCode' => [
 		'default' => false,
 	],
 	'wmgUseYandexTranslate' => [
 		'default' => false,
 	],
+
 	// Uploads
  	'wmgPrivateUploads' => [
  		'default' => false,
