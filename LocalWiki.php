@@ -96,6 +96,15 @@ if ( $wgWordmark ) {
 	];
 }
 
+// $wgFooterIcons
+if ( (bool)$wmgWikiapiaryFooterPageName ) {
+ 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
+ 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
+ 		'alt' => 'Monitored by WikiApiary'
+ 	];
+}
+
 // $wgRestrictionLevels
 foreach ( $wgRestrictionLevels as $value ) {
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights'][+$wi->dbname][$value] = [
@@ -103,12 +112,10 @@ foreach ( $wgRestrictionLevels as $value ) {
 	];
 }
 
-if ( (bool)$wmgWikiapiaryFooterPageName ) {
- 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
- 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
- 		'alt' => 'Monitored by WikiApiary'
- 	];
+// $wgUrlShortenerAllowedDomains
+if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
+	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
+		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
 // Per-wiki overrides
@@ -130,10 +137,6 @@ if ( $wgDBname === 'csydeswiki' ) {
 
 if ( $wgDBname === 'cvtwiki' ) {
 	$wgWhitelistRead[] = 'CVT action log';
-}
-
-if ( $wgDBname === 'dcmultiversewiki' ) {
-        $wgMFAutodetectMobileView = false;
 }
 
 if ( $wmgPrivateUploads ) {

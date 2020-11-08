@@ -8,7 +8,7 @@
 require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
 
-// Load PrivateSettings (e.g. wgDBpassword)
+// Load PrivateSettings (e.g. $wgDBpassword)
 require_once( '/srv/mediawiki/config/PrivateSettings.php' );
 
 // Load global skins and extensions
@@ -459,8 +459,13 @@ $wi->config->settings = [
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'c2',
-			'c3'
+			'c3',
+			'c4',
 		]
+	],
+	// Use if you want to stop wikis being created on this cluster
+	'wgCreateWikiDatabaseClustersInactive' => [
+		'default' => []
 	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
@@ -793,9 +798,6 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseBabel' => [
-		'default' => false,
-	],
-	'wmgUseBootstrap' => [
 		'default' => false,
 	],
 	'wmgUseMSCalendar' => [
@@ -1465,19 +1467,23 @@ $wi->config->settings = [
 
 	// TemplateStyles config
 	'wgTemplateStylesAllowedUrls' => [
-		// Remove when https://gerrit.wikimedia.org/r/486828/ is merged
 		'default' => [
 			'audio' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+				'<^(?:https:)?//static\\.miraheze\\.org/>',
 			],
 			'image' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+				'<^(?:https:)?//static\\.miraheze\\.org/>',
 			],
 			'svg' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org/wikipedia\/commons\/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
-			'namespace' => [ '<.>' ],
+			'namespace' => [ 
+				'<.>', 
+			],
 			'css' => [],
 		],
 	],
@@ -1855,7 +1861,9 @@ $wi->config->settings = [
 		'default' => 'metawiki',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
-		'default' => [],
+		'default' => [
+			'simple',	
+		],
 		'+nonciclopediawiki' => [
 			'dlm',
 			'olb',
@@ -1876,6 +1884,9 @@ $wi->config->settings = [
 			'w',
 			'v',
 			'n',
+		],
+		'+testwiki' => [
+			'simple',
 		],
 		'+ucroniaswiki' => [
 			'h',
@@ -1931,7 +1942,6 @@ $wi->config->settings = [
 				// page name must end in ".map", and contain at least one symbol
 				'pattern' => '/.\.map$/',
 				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
-				'store' => false,
 				'license' => 'CC-BY-SA 4.0',
 				'isLocal' => false,
 			],
@@ -1941,7 +1951,6 @@ $wi->config->settings = [
 				// page name must end in ".tab", and contain at least one symbol
 				'pattern' => '/.\.tab$/',
 				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
-				'store' => false,
 				'license' => 'CC-BY-SA 4.0',
 				'isLocal' => false,
 			],
@@ -1979,7 +1988,6 @@ $wi->config->settings = [
 			'Tabular.JsonConfig' => 'JsonConfig\JCTabularContent',
 		],
 	],
-
 	// Kartographer
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
@@ -2530,6 +2538,17 @@ $wi->config->settings = [
 				'vestyle' => false,
 				'overridedefault' => [],
 			],
+			'wgCapitalLinkOverrides' => [
+				'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
+				'main' => true,
+				'talk' => false,
+				'blacklisted' => [
+					2,
+					8,
+				],
+				'vestyle' => true,
+				'overridedefault' => [],
+			],
 		],
 	],
 
@@ -2774,12 +2793,17 @@ $wi->config->settings = [
 	],
 
 	// New User Email Notification
-
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
 		'femmanwiki' => [ 'gustav@nyvell.net' ],
 	],
-
+	
+	// NewUserMessage configs	
+	'wgNewUserMessageOnAutoCreate' => [	
+		'default' => false,	
+		'nmfwikiwiki' => true,	
+	],
+	
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
@@ -3191,8 +3215,7 @@ $wi->config->settings = [
 			'monobook',
 			'vector',
 			'timeless',
-			'minerva',
-			'minervaneue'
+			'minerva'
 		],
 	],
 
@@ -3378,7 +3401,6 @@ $wi->config->settings = [
 	],
 	'wmgTranslateDocumentationLanguageCode' => [
 		'default' => false,
-		'metawiki' => 'qqq',
 	],
 	'wmgUseYandexTranslate' => [
 		'default' => false,
@@ -3415,117 +3437,6 @@ $wi->config->settings = [
 	'wgUrlShortenerAllowedDomains' => [
 		'default' => [
 			'(.*\.)?miraheze\.org',
-			'adadevelopersacademy\.wiki',
-			'allthetropes\.org',
-			'antiguabarbudacalypso\.com',
-			'astrapedia\.ru',
-			'athenapedia\.org',
-			'b1tes\.org',
-			'bconnected\.aidanmarkham\.com',
-			'bebaskanpengetahuan\.org',
-			'wiki\.ameciclo\.org',
-			'wiki\.autocountsoft\.com',
-			'wiki\.besuccess\.com',
-			'wiki\.clonedeploy\.org',
-			'wiki\.ciptamedia\.org',
-			'wiki\.consentcraft\.uk',
-			'cornetto\.online',
-			'dariawiki\.org',
-			'decrypted\.wiki',
-			'wiki.dobots\.nl',
-			'wiki\.dottorconte\.eu',
-			'wiki\.downhillderelicts\.com',
-			'wiki\.drones4nature\.info',
-			'wiki\.dwplive\.com',
-			'www\.eerstelijnszones\.be',
-			'embobada\.com',
-			'wiki\.exnihilolinux\.org',
-			'froggy\.info',
-			'fibromyalgia-engineer\.com',
-			'fikcyjnatv\.pl',
-			'wiki\.gamergeeked\.us',
-			'wiki\.gesamtschule-nordkirchen\.de',
-			'garrettcountyguide\.com',
-			'give\.effectively\.to',
-			'wiki\.grottocenter\.org',
-			'wiki\.gtsc\.vn',
-			'www\.iceposeidonwiki\.com',
-			'wiki\.inebriation-confederation\.com',
-			'wiki\.jacksonheights\.nyc',
-			'karagash\.info',
-			'wiki\.kourouklides\.com',
-			'kunwok\.org',
-			'www\.lab612\.at',
-			'wiki\.ldmsys\.net',
-			'wiki\.lostminecraftminers\.org',
-			'lodge\.jsnydr\.com',
-			'wiki\.make717\.org',
-			'wiki\.macc\.nyc',
-			'madgenderscience\.wiki',
-			'marinebiodiversitymatrix\.org',
-			'meregos\.com',
-			'nenawiki\.org',
-			'wiki\.ngscott\.net',
-			'nonbinary\.wiki',
-			'wiki\.lbcomms\.co.za',
-			'wiki\.rizalespe\.com',
-			'saf\.songcontests\.eu',
-			'wiki\.staraves-no\.cz',
-			'wiki.pupilliam\.com',
-			'oecumene\.org',
-			'www\.openonderwijs\.org',
-			'papelor\.io',
-			'permanentfuturelab\.wiki',
-			'pl\.nonbinary\.wiki',
-			'podpedia\.org',
-			'programming\.red',
-			'publictestwiki\.com',
-			'pwiki.arkcls.com',
-			'reviwiki\.info',
-			'russopedia\.info',
-			'private\.revi.wiki',
-			'saveta\.org',
-			'sdiy\.info',
-			'studentwiki\.ddns\.net',
-			'www\.splat-teams\.com',
-			'takethatwiki\.com',
-			'wiki\.taotac.org',
-			'taotac\.info' .
-			'wiki\.teessidehackspace\.org\.uk',
-			'wiki\.tensorflow\.community',
-			'thelonsdalebattalion\.co.uk',
-			'toonpedia\.cf',
-			'wiki\.tulpa\.info',
-			'wiki\.valentinaproject.org',
-			'wiki\.kaisaga.com',
-			'wikiescola\.com\.br',
-			'wiki\.worlduniversityandschool\.org' .
-			'wikipuk\.cl',
-			'wiki\.ombre\.io',
-			'wiki.rmbrk\.com',
-			'wisdomwiki\.org',
-			'sandbox\.wisdomwiki.org',
-			'savage-wiki\.com',
-			'speleo\.wiki',
-			'www\.zenbuddhism\.info',
-			'wiki\.zymonic\.com',
-			'espiral\.org',
-			'spiral\.wiki',
-			'wikibase\.revi\.wiki',
-			'wiki\.teamwizardry\.com',
-			'wiki\.svenskabriardklubben\.se',
-			'www\.schulwiki\.de',
-			'holonet\.pw',
-			'guiasdobrasil\.com\.br',
-			'enc\.for\.uz',
-			'docs\.websmart\.media',
-			'wiki\.mikrodev\.com',
-			'wiki\.campaign-labour\.org',
-			'encyclopedie\.didactiqueprofessionnelle\.org',
-			'www\.thesimswiki\.com',
-			'nonciclopedia\.org',
-			'spcodex\.wiki',
-			'vedopedia\.witches-empire\.com',
 		],
 	],
 
@@ -3700,10 +3611,6 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
-}
-
-if ( !preg_match( '/^mw[0-9]*/', wfHostname() ) ) {
-	$wi->config->settings['wgUseCdn']['default'] = false;
 }
 
 $wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;

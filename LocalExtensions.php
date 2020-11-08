@@ -40,8 +40,6 @@ if ( $wmgUseAJAXPoll ) {
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Apex'] = 'apex';
-
 	$wgApexLogo = [
 		'1x' => $wgLogo,
 		'2x' => $wgLogo,
@@ -99,10 +97,6 @@ if ( $wmgUseBlogPage ) {
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
-if ( $wmgUseBootstrap ) {
-	wfLoadExtension( 'Bootstrap' );
-};
-
 if ( $wmgUseMSCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
@@ -132,9 +126,10 @@ if ( $wmgUseCharInsert ) {
 }
 
 if ( $wmgUseCirrusSearch ) {
-	wfLoadExtension( 'CirrusSearch' );
-
-	wfLoadExtension( 'Elastica' );
+	wfLoadExtensions( [
+		'CirrusSearch',
+		'Elastica',
+	] );
 
 	$wgCirrusSearchClusters = [
 		'default' => [
@@ -247,7 +242,6 @@ if ( $wmgUseContributionScores ) {
 
 if ( $wmgUseCosmos ){
 	wfLoadSkin( 'Cosmos' );
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Cosmos'] = 'cosmos';
 }
 
 if ( $wmgUseCreatePage ) {
@@ -270,7 +264,6 @@ if ( $wmgUseCalendarWikivoyage ) {
 
 if ( $wmgUseCitizen ) {
 	wfLoadSkin( 'Citizen' );
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Citizen'] = 'citizen';
 }
 
 if ( $wmgUseDarkMode ) {
@@ -394,8 +387,6 @@ if ( $wmgUseDisqusTag ) {
 
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['DuskToDawn'] = 'dusktodawn';
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
@@ -432,8 +423,6 @@ if ( $wmgUseEditSubpages ) {
 
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Erudite'] = 'erudite';
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
@@ -442,8 +431,6 @@ if ( $wmgUseFancyBoxThumbs ) {
 
 if ( $wmgUseFemiwiki ) {
 	wfLoadSkin( 'Femiwiki' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Femiwiki'] = 'femiwiki';
 }
 
 if ( $wmgUseFlaggedRevs ) {
@@ -494,8 +481,6 @@ if ( $wmgUseForcePreview) {
 
 if ( $wmgUseForeground ) {
 	wfLoadSkin( 'foreground' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Foreground'] = 'foreground';
 }
 
 if ( $wmgUseFontAwesome ) {
@@ -509,7 +494,6 @@ if ( $wmgUseGadgets ) {
 if ( $wmgUseGamepress ) {
 	wfLoadSkin( 'Gamepress' );
 
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Gamepress'] = 'gamepress';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
@@ -684,8 +668,6 @@ if ( $wmgUseLdap ) {
 
 if ( $wmgUseLiberty ) {
 	wfLoadSkin( 'liberty' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Liberty'] = 'liberty';
 }
 
 if ( $wmgUseLingo ) {
@@ -738,8 +720,6 @@ if ( $wmgUseMaps ) {
 
 if ( $wmgUseMask ) {
 	wfLoadSkin( 'Mask' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Mask'] = 'mask';
 }
 
 if ( $wmgUseMassEditRegex ) {
@@ -770,7 +750,6 @@ if ( $wmgUseMediaWikiChat ) {
 
 if ( $wmgUseMedik ) {
 	wfLoadSkin( 'Medik' );
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Medik'] = 'medik';
 }
 
 if ( $wmgUseMermaid ) {
@@ -779,8 +758,6 @@ if ( $wmgUseMermaid ) {
 
 if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Metrolook'] = 'metrolook';
 }
 
 if ( $wmgUseMobileFrontend ) {
@@ -800,8 +777,6 @@ if ( $wmgUseMobileFrontend ) {
 
 		return true;
 	};
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['MinervaNeue'] = 'minerva';
 }
 
 if ( $wmgUseMobileTabsPlugin ) {
@@ -814,8 +789,6 @@ if ( $wmgUseModeration ) {
 
 if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['ModernSkylight'] = 'modernskylight';
 }
 
 if ( $wmgUseMsCatSelect ) {
@@ -872,13 +845,10 @@ if ( $wmgUseNewUserNotif ) {
 
 if ( $wmgUseNimbus ){
 	wfLoadSkin( 'Nimbus' );
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Nimbus'] = 'nimbus';
 }
 
 if ( $wmgUseNostalgia ) {
 	wfLoadSkin( 'Nostalgia' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Nostalgia'] = 'nostalgia';
 }
 
 if ( $wmgUseNoTitle ) {
@@ -936,8 +906,6 @@ if ( $wmgUsePipeEscape ) {
 
 if ( $wmgUsePivot ) {
 	wfLoadSkin( 'pivot' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Pivot'] = 'pivot';
 }
 
 if ( $wmgUsePoem ) {
@@ -953,9 +921,11 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
-	wfLoadExtension( 'TextExtracts' );
-	wfLoadExtension( 'PageImages' );
-	wfLoadExtension( 'Popups' );
+	wfLoadExtensions( [
+		'TextExtracts',
+		'PageImages',
+		'Popups',
+	] );
 	
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
@@ -1014,8 +984,6 @@ if ( $wmgUseRandomSelection ) {
 
 if ( $wmgUseRefreshed ) {
 	wfLoadSkin( 'Refreshed' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Refreshed'] = 'refreshed';
 }
 
 
@@ -1151,12 +1119,14 @@ if ( $wmgUseTextExtracts ) {
 }
 
 if ( $wmgUseTranslate ) {
-	wfLoadExtension( 'UniversalLanguageSelector' );
-	wfLoadExtension( 'Translate' );
+	wfLoadExtensions( [
+		'UniversalLanguageSelector',
+		'Translate',
+	] );
+
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
-	require_once "/srv/mediawiki/config/TranslateConfigHack.php";
 	$wgULSGeoService = false;
 }
 
@@ -1170,8 +1140,6 @@ if ( $wmgUseTreeAndMenu ) {
 
 if ( $wmgUseTruglass) {
 	wfLoadSkin( 'Truglass' );
-	
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Truglass'] = 'truglass';
 }
 
 if ( $wmgUseThanks ) {
@@ -1205,8 +1173,6 @@ if ( $wmgUseTocTree ) {
 
 if ( $wmgUseTweeki ) {
 	wfLoadSkin( 'Tweeki' );
-
-	$wgManageWikiSettings['wgDefaultSkin']['options']['Tweeki'] = 'tweeki';
 }
 
 if ( $wmgUseTwitterTag ) {
@@ -1252,7 +1218,10 @@ if ( $wmgUseVideo ) {
 }
 
 if ( $wmgUseVisualEditor ) {
-	wfLoadExtension( 'VisualEditor' );
+	wfLoadExtensions( [
+		'VisualEditor',
+		'TemplateData',
+	] );
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
@@ -1277,9 +1246,6 @@ if ( $wmgUseVisualEditor ) {
 		'vestyle' => true,
 		'overridedefault' => false
 	];
-
-	// Load TemplateData
-	wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseVoteNY ) {
