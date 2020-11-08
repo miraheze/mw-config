@@ -1290,9 +1290,6 @@ if ( $wmgUseVoteNY ) {
 
 if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
-	$wgWebChatClient = $wmgWebChatClient;
-	$wgWebChatServer = $wmgWebChatServer;
-	$wgWebChatChannel = $wmgWebChatChannel;
 	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
 
 }
