@@ -1856,7 +1856,9 @@ $wi->config->settings = [
 		'default' => 'metawiki',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
-		'default' => [],
+		'default' => [
+			'simple',	
+		],
 		'+nonciclopediawiki' => [
 			'dlm',
 			'olb',
