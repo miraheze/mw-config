@@ -7,7 +7,7 @@
  *
  * check: adds a checkbox.
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
- * language: adds a dropdown for language selection (all which are known to MediaWiki).f
+ * language: adds a dropdown for language selection (all which are known to MediaWiki).
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
  * list-multi-bool: see above, just outputs are $this => $bool.
