@@ -2698,7 +2698,7 @@ $wi->config->settings = [
 	],
 
 	// MobileFrontend
-	'wmgMFAutodetectMobileView' => [
+	'wgMFAutodetectMobileView' => [
 		'default' => false,
 	],
 	'wgMFDefaultSkinClass' => [
