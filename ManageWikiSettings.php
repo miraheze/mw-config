@@ -6,6 +6,8 @@
  * Type can be either:
  *
  * check: adds a checkbox.
+ * databases: adds a drop down selection box for selecting a database.
+ * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
  * language: adds a dropdown for language selection (all which are known to MediaWiki).
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
@@ -14,6 +16,7 @@
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * namespace: adds dropdown to select one namespace.
  * namespaces: see above, except multiple namespaces.
+ * skins: adds a drop down selection box for an enabled skin.
  * text: adds a single line text entry.
  * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
