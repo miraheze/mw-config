@@ -128,9 +128,10 @@ if ( $wmgUseCharInsert ) {
 }
 
 if ( $wmgUseCirrusSearch ) {
-	wfLoadExtension( 'CirrusSearch' );
-
-	wfLoadExtension( 'Elastica' );
+	wfLoadExtensions( [
+		'CirrusSearch',
+		'Elastica',
+	] );
 
 	$wgCirrusSearchClusters = [
 		'default' => [
@@ -949,9 +950,11 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
-	wfLoadExtension( 'TextExtracts' );
-	wfLoadExtension( 'PageImages' );
-	wfLoadExtension( 'Popups' );
+	wfLoadExtensions( [
+		'TextExtracts',
+		'PageImages',
+		'Popups',
+	] );
 	
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
@@ -1147,8 +1150,11 @@ if ( $wmgUseTextExtracts ) {
 }
 
 if ( $wmgUseTranslate ) {
-	wfLoadExtension( 'UniversalLanguageSelector' );
-	wfLoadExtension( 'Translate' );
+	wfLoadExtensions( [
+		'UniversalLanguageSelector',
+		'Translate',
+	] );
+
 	$wgTranslateBlacklist = $wmgTranslateBlacklist;
 	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
 	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
@@ -1248,7 +1254,10 @@ if ( $wmgUseVideo ) {
 }
 
 if ( $wmgUseVisualEditor ) {
-	wfLoadExtension( 'VisualEditor' );
+	wfLoadExtensions( [
+		'VisualEditor',
+		'TemplateData',
+	] );
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
@@ -1273,9 +1282,6 @@ if ( $wmgUseVisualEditor ) {
 		'vestyle' => true,
 		'overridedefault' => false
 	];
-
-	// Load TemplateData
-	wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseVoteNY ) {
