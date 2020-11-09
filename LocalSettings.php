@@ -1609,10 +1609,10 @@ $wi->config->settings = [
 		'default' => [ '', 'sysop' ],
 	],
 	'wgSimpleFlaggedRevsUI' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgFlaggedRevsLowProfile' => [
-		'default' => true,
+		'default' => false,
 	],
 
 	// Footers
@@ -3260,16 +3260,8 @@ $wi->config->settings = [
 	],
 
 	// Skins
-	'+wgSkipSkins' => [
+	'wgSkipSkins' => [
 		'default' => [],
-		'marionetworkwiki' => [
-			'cologneblue',
-			'modern',
-			'monobook',
-			'vector',
-			'timeless',
-			'minerva'
-		],
 	],
 
 	// SocialProfile
