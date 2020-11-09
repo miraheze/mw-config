@@ -3260,16 +3260,8 @@ $wi->config->settings = [
 	],
 
 	// Skins
-	'+wgSkipSkins' => [
+	'wgSkipSkins' => [
 		'default' => [],
-		'marionetworkwiki' => [
-			'cologneblue',
-			'modern',
-			'monobook',
-			'vector',
-			'timeless',
-			'minerva'
-		],
 	],
 
 	// SocialProfile
