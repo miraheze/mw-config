@@ -586,7 +586,7 @@ $wi->config->settings = [
 
 	// Cookie stuff
 	'wgCookieSetOnIpBlock' => [
-		'default' => false,
+		'default' => true,
 	],
 
 	// Database
