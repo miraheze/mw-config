@@ -1309,6 +1309,15 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Set the URL to your \'More Information\' page.',
 	],
+	'wgUsersNotifiedOnAllChanges' => [
+		'name' => 'Users Notified On All Changes',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'users',
+		'overridedefault' => [],
+		'section' => 'notifications',
+		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
+	],	
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
 		'from' => 'mediawiki',
