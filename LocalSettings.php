@@ -1609,10 +1609,10 @@ $wi->config->settings = [
 		'default' => [ '', 'sysop' ],
 	],
 	'wgSimpleFlaggedRevsUI' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgFlaggedRevsLowProfile' => [
-		'default' => false,
+		'default' => true,
 	],
 
 	// Footers
