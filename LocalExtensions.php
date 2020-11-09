@@ -436,16 +436,6 @@ if ( $wmgUseFemiwiki ) {
 if ( $wmgUseFlaggedRevs ) {
 	wfLoadExtension( 'FlaggedRevs' );
 
-	$wgFlaggedRevsProtection = $wmgFlaggedRevsProtection;
-	$wgFlaggedRevsTags = $wmgFlaggedRevsTags;
-	$wgFlaggedRevsTagsRestrictions = $wmgFlaggedRevsTagsRestrictions;
-	$wgFlaggedRevsTagsAuto = $wmgFlaggedRevsTagsAuto;
-	$wgFlaggedRevsAutopromote = $wmgFlaggedRevsAutopromote;
-	$wgFlaggedRevsAutoReview = $wmgFlaggedRevsAutoReview;
-	$wgFlaggedRevsRestrictionLevels = $wmgFlaggedRevsRestrictionLevels;
-	$wgSimpleFlaggedRevsUI = $wmgSimpleFlaggedRevsUI;
-	$wgFlaggedRevsLowProfile = $wmgFlaggedRevsLowProfile;
-
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgFlaggedRevsNamespaces'] = [
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'main' => true,
@@ -764,7 +754,6 @@ if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 	wfLoadSkin( 'MinervaNeue' );
 
-	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
@@ -1124,9 +1113,6 @@ if ( $wmgUseTranslate ) {
 		'Translate',
 	] );
 
-	$wgTranslateBlacklist = $wmgTranslateBlacklist;
-	$wgTranslateTranslationServices = $wmgTranslateTranslationServices;
-	$wgTranslateDocumentationLanguageCode = $wmgTranslateDocumentationLanguageCode;
 	$wgULSGeoService = false;
 }
 
@@ -1254,9 +1240,6 @@ if ( $wmgUseVoteNY ) {
 
 if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
-	$wgWebChatClient = $wmgWebChatClient;
-	$wgWebChatServer = $wmgWebChatServer;
-	$wgWebChatChannel = $wmgWebChatChannel;
 	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
 
 }

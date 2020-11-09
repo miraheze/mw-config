@@ -154,7 +154,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Default timeout, 1 hour by default.',
 	],
-	'wmgFlaggedRevsProtection' => [
+	'wgFlaggedRevsProtection' => [
 		'name' => 'Flagged Revs Protection',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -163,7 +163,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'This enables Flagged Revs Protection.',
 	],
-	'wmgFlaggedRevsAutoReview' => [
+	'wgFlaggedRevsAutoReview' => [
 		'name' => 'FlaggedRevs Auto Review',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -178,7 +178,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Auto-review settings for edits/new pages.',
 	],
-	'wmgFlaggedRevsRestrictionLevels' => [
+	'wgFlaggedRevsRestrictionLevels' => [
 		'name' => 'FlaggedRevs Restriction Levels',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -195,7 +195,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Restriction levels for "autoreview"/"review" rights.',
 	],
-	'wmgSimpleFlaggedRevsUI' => [
+	'wgSimpleFlaggedRevsUI' => [
 		'name' => 'Simple FlaggedRevs UI',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -204,7 +204,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'When enabled, this will only distinguish "checked", "quality", and unreviewed.',
 	],
-	'wmgFlaggedRevsLowProfile' => [
+	'wgFlaggedRevsLowProfile' => [
 		'name' => 'FlaggedRevs Low Profile',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -280,7 +280,7 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'Enable "/me <text>" command that prints a status-type message.',
 	],
-	'wmgWebChatServer' => [
+	'wgWebChatServer' => [
 		'name' => 'WebChat Server',
 		'from' => 'webchat',
 		'restricted' => false,
@@ -289,7 +289,7 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'IRC Server to connect to, not required when using the freenodeChat web client.',
 	],
-	'wmgWebChatChannel' => [
+	'wgWebChatChannel' => [
 		'name' => 'WebChat Channel',
 		'from' => 'webchat',
 		'restricted' => false,
@@ -298,7 +298,7 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'Channel to connect to.',
 	],
-	'wmgWebChatClient' => [
+	'wgWebChatClient' => [
 		'name' => 'WebChat Client',
 		'from' => 'webchat',
 		'restricted' => false,
@@ -1094,7 +1094,7 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'This will adapt your wikis time over clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
 	],
-	'wmgTranslateDocumentationLanguageCode' => [
+	'wgTranslateDocumentationLanguageCode' => [
 		'name' => 'Translate Documentation Language Code',
 		'from' => 'translate',
 		'restricted' => false,
