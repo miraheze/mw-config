@@ -3007,7 +3007,7 @@ $wi->config->settings = [
 	],
 
 	// RecentChanges
-	'$wmgRCMaxAge' => [
+	'wmgRCMaxAge' => [
 		'default' => 180,
 	],
 	'wgRCLinkDays' => [
