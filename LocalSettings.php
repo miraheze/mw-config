@@ -2799,6 +2799,11 @@ $wi->config->settings = [
 		'nmfwikiwiki' => true,	
 	],
 	
+	// Users Notified On All Changes
+	'wgUsersNotifiedOnAllChanges' => [
+		'default' => [],
+	],
+	
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
