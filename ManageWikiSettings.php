@@ -1403,10 +1403,10 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'integer',
 		'minint' => 1,
-		'maxint' => 15552000,
-		'overridedefault' => 180 * 24 * 3600,
+		'maxint' => 720,
+		'overridedefault' => 180,
 		'section' => 'recentchanges',
-		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will go.',
+		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many days will go.',
 	],
 	'wgRCLinkDays' => [
 		'name' => 'RecentChanges link days',
