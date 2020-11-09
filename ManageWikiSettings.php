@@ -1284,7 +1284,7 @@ $wgManageWikiSettings = [
 	],
 
 	// Notifications
-	'wmgContactPageRecipientUser' => [
+	'wgContactPageRecipientUser' => [
 		'name' => 'Contact Page Recipient User',
 		'from' => 'contactpage',
 		'restricted' => false,
