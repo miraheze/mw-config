@@ -1397,7 +1397,7 @@ $wgManageWikiSettings = [
 	],
 
 	// Recent changes
-	'wgRCMaxAge' => [
+	'wmgRCMaxAge' => [
 		'name' => 'RecentChanges max age',
 		'from' => 'mediawiki',
 		'restricted' => false,
