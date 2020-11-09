@@ -603,6 +603,19 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Show more authors.',
 	],
+	'wgImplicitGroups' => [
+		'name' => 'Implicit Groups',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'usergroups',
+		'overridedefault' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+		'section' => 'edit',
+		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
+	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
 		'from' => 'mediawiki',
