@@ -99,7 +99,7 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 }
 
 // $wgRCMaxAge
-$wgRCMaxAge = strtotime($wgRCMaxAge . $wgRCMaxAge === 1 ? 'day' : 'days', 0);  // Convert to seconds
+$wgRCMaxAge = ceil($wgRCMaxAge/86400);  // Convert to seconds
 
 // $wgUrlShortenerAllowedDomains
 if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
