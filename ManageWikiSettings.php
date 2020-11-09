@@ -16,7 +16,8 @@
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * namespace: adds dropdown to select one namespace.
  * namespaces: see above, except multiple namespaces.
- * skins: adds a drop down selection box for an enabled skin.
+ * skin: adds a drop down selection box for selecting a single enabled skin.
+ * skins: adds a drop down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
  * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
@@ -1775,7 +1776,7 @@ $wgManageWikiSettings = [
 		'name' => 'Default Skin',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'skins',
+		'type' => 'skin',
 		'options' => [],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
