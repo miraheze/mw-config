@@ -154,7 +154,7 @@ $wi->config->settings = [
 		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
 	],
 	'wgBlockAllowsUTEdit' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgEnableBlockNoticeStats' => [
 		'default' => false,
