@@ -222,7 +222,7 @@ $wi->config->settings = [
 			'RLStyleModules' => [],
 		],
 	],
-	'wmgContactPageRecipientUser' => [
+	'wgContactPageRecipientUser' => [
 		'default' => User::newFromId(2), // Username of wiki founder
 	],
 	
