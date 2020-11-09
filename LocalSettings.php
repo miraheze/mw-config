@@ -8,7 +8,7 @@
 require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
 
-// Load PrivateSettings (e.g. wgDBpassword)
+// Load PrivateSettings (e.g. $wgDBpassword)
 require_once( '/srv/mediawiki/config/PrivateSettings.php' );
 
 // Load global skins and extensions
@@ -1467,19 +1467,23 @@ $wi->config->settings = [
 
 	// TemplateStyles config
 	'wgTemplateStylesAllowedUrls' => [
-		// Remove when https://gerrit.wikimedia.org/r/486828/ is merged
 		'default' => [
 			'audio' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+				'<^(?:https:)?//static\\.miraheze\\.org/>',
 			],
 			'image' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org\/wikipedia\/commons\/>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
+				'<^(?:https:)?//static\\.miraheze\\.org/>',
 			],
 			'svg' => [
-				'<^(?:https:)?\/\/upload\\.wikimedia\\.org/wikipedia\/commons\/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
-			'namespace' => [ '<.>' ],
+			'namespace' => [ 
+				'<.>', 
+			],
 			'css' => [],
 		],
 	],
@@ -1531,10 +1535,10 @@ $wi->config->settings = [
 	],
 
 	// FlaggedRevs
-	'wmgFlaggedRevsProtection' => [
+	'wgFlaggedRevsProtection' => [
 		'default' => false,
 	],
-	'wmgFlaggedRevsTags' => [
+	'wgFlaggedRevsTags' => [
 		'default' => [
 			'status' => [
 				'quality' => 1,
@@ -1567,7 +1571,7 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wmgFlaggedRevsTagsRestrictions' => [
+	'wgFlaggedRevsTagsRestrictions' => [
 		'default' => [
 			'status' => [
 				'review' => 1,
@@ -1575,12 +1579,12 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wmgFlaggedRevsTagsAuto' => [
+	'wgFlaggedRevsTagsAuto' => [
 		'default' => [
 			'status' => 1,
 		],
 	],
-	'wmgFlaggedRevsAutopromote' => [
+	'wgFlaggedRevsAutopromote' => [
 		'default' => [
 			'days' => 14,
 			'edits' => 100,
@@ -1598,16 +1602,16 @@ $wi->config->settings = [
 		'isvwiki' => false,
 		'pruebawiki' => false,
 	],
-	'wmgFlaggedRevsAutoReview' => [
+	'wgFlaggedRevsAutoReview' => [
 		'default' => 3,
 	],
-	'wmgFlaggedRevsRestrictionLevels' => [
+	'wgFlaggedRevsRestrictionLevels' => [
 		'default' => [ '', 'sysop' ],
 	],
-	'wmgSimpleFlaggedRevsUI' => [
+	'wgSimpleFlaggedRevsUI' => [
 		'default' => false,
 	],
-	'wmgFlaggedRevsLowProfile' => [
+	'wgFlaggedRevsLowProfile' => [
 		'default' => false,
 	],
 
@@ -1852,7 +1856,9 @@ $wi->config->settings = [
 		'default' => 'metawiki',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
-		'default' => [],
+		'default' => [
+			'simple',	
+		],
 		'+nonciclopediawiki' => [
 			'dlm',
 			'olb',
@@ -1873,6 +1879,9 @@ $wi->config->settings = [
 			'w',
 			'v',
 			'n',
+		],
+		'+testwiki' => [
+			'simple',
 		],
 		'+ucroniaswiki' => [
 			'h',
@@ -2524,6 +2533,17 @@ $wi->config->settings = [
 				'vestyle' => false,
 				'overridedefault' => [],
 			],
+			'wgCapitalLinkOverrides' => [
+				'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
+				'main' => true,
+				'talk' => false,
+				'blacklisted' => [
+					2,
+					8,
+				],
+				'vestyle' => true,
+				'overridedefault' => [],
+			],
 		],
 	],
 
@@ -2683,7 +2703,7 @@ $wi->config->settings = [
 	],
 
 	// MobileFrontend
-	'wmgMFAutodetectMobileView' => [
+	'wgMFAutodetectMobileView' => [
 		'default' => false,
 	],
 	'wgMFDefaultSkinClass' => [
@@ -2768,12 +2788,17 @@ $wi->config->settings = [
 	],
 
 	// New User Email Notification
-
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
 		'femmanwiki' => [ 'gustav@nyvell.net' ],
 	],
-
+	
+	// NewUserMessage configs	
+	'wgNewUserMessageOnAutoCreate' => [	
+		'default' => false,	
+		'nmfwikiwiki' => true,	
+	],
+	
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
@@ -3237,8 +3262,7 @@ $wi->config->settings = [
 			'monobook',
 			'vector',
 			'timeless',
-			'minerva',
-			'minervaneue'
+			'minerva'
 		],
 	],
 
@@ -3401,7 +3425,7 @@ $wi->config->settings = [
 	],
 
 	// Translate
-	'wmgTranslateBlacklist' => [
+	'wgTranslateBlacklist' => [
 		'default' => [],
 		'metawiki' => [
 			'*' => [
@@ -3419,16 +3443,16 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wmgTranslateTranslationServices' => [
+	'wgTranslateTranslationServices' => [
 		'default' => [],
 	],
-	'wmgTranslateDocumentationLanguageCode' => [
+	'wgTranslateDocumentationLanguageCode' => [
 		'default' => false,
-		'metawiki' => 'qqq',
 	],
 	'wmgUseYandexTranslate' => [
 		'default' => false,
 	],
+
 	// Uploads
  	'wmgPrivateUploads' => [
  		'default' => false,
@@ -3529,13 +3553,13 @@ $wi->config->settings = [
 	],
 
 	// WebChat config
-	'wmgWebChatServer' => [
+	'wgWebChatServer' => [
 		'default' => false,
 	],
-	'wmgWebChatChannel' => [
+	'wgWebChatChannel' => [
 		'default' => false,
 	],
-	'wmgWebChatClient' => [
+	'wgWebChatClient' => [
 		'default' => 'freenodeChat',
 	],
 
@@ -3635,10 +3659,6 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
-}
-
-if ( !preg_match( '/^(mw[0-9]|jobrunner[0-9])*/', wfHostname() ) ) {
-	$wi->config->settings['wgUseCdn']['default'] = false;
 }
 
 $wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
