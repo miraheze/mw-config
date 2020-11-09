@@ -1907,13 +1907,8 @@ $wgManageWikiSettings = [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
 		'from' => 'relatedarticles',
 		'restricted' => false,
-		'type' => 'list-multi',
-		'options' => [
-			'Metrolook' => 'metrolook',
-			'Minerva' => 'minerva',
-			'Timeless' => 'timeless',
-			'Vector' => 'vector'
-		],
+		'type' => 'skins',
+		'options' => [],
 		'overridedefault' => [
 			'minerva',
 			'timeless',
