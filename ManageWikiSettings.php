@@ -336,7 +336,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => null,
 		'section' => 'cosmos',
-		'help' => 'Add an image to set as the background image for the wiki&#39;s body of the Cosmos skin.',
+		'help' => 'Add an image to set as the background image for the wiki\'s body of the Cosmos skin.',
 	],
 	'wgCosmosBackgroundImageSize' => [
 		'name' => 'Cosmos Background Image Size',
@@ -1766,7 +1766,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Sets the value of <code>$wgLogos[&#39;1x&#39;]</code>.',
+		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
@@ -1793,7 +1793,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'This will set the value of <code>$wgLogos[&#39;wordmark&#39;][&#39;src&#39;]</code>. Also used as the copyright wordmark for the Minerva skin.',
+		'help' => 'This will set the value of <code>$wgLogos[\'wordmark\'][\'src\']</code>. Also used as the copyright wordmark for the Minerva skin.',
 	],
 	'wgWordmarkWidth' => [
 		'name' => 'Wordmark Width',
