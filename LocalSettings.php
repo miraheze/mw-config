@@ -3501,7 +3501,7 @@ $wi->config->settings = [
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
