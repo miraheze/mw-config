@@ -2859,8 +2859,17 @@ $wi->config->settings = [
 		],
 	],
 	'wgImplicitGroups' => [
-		'default' => [ '*', 'user', 'autoconfirmed' ],
-		'bitcoindebateswiki' => [ '*', 'user', 'autoconfirmed', 'emailconfirmed' ],
+		'default' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+		'bitcoindebateswiki' => [
+			'*',
+			'user',
+			'autoconfirmed',
+			'emailconfirmed'
+		],
 	],
 
 	// Password policy
