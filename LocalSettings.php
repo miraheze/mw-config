@@ -2864,12 +2864,6 @@ $wi->config->settings = [
 			'user',
 			'autoconfirmed'
 		],
-		'bitcoindebateswiki' => [
-			'*',
-			'user',
-			'autoconfirmed',
-			'emailconfirmed'
-		],
 	],
 
 	// Password policy
