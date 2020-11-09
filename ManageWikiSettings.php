@@ -1782,6 +1782,16 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
 	],
+	'wgSkipSkins' => [
+		'name' => 'Skip Skins',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'skins',
+		'options' => [],
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Array of skins to remove as a choice from user preferences.',
+	],
 	'wgLogo' => [
 		'name' => 'Logo',
 		'from' => 'mediawiki',
