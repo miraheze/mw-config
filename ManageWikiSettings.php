@@ -1314,7 +1314,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'users',
-		'overridedefault' => false,
+		'overridedefault' => [],
 		'section' => 'notifications',
 		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
 	],	
