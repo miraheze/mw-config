@@ -568,7 +568,7 @@ $wi->config->settings = [
 		'default' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
 	],
 	'wgCookieSetOnAutoblock' => [
-		'default' => true,
+		'default' => false,
 	],
 	// Cookies extension settings
 	'wgCookieWarningEnabled' => [
