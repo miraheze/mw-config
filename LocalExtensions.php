@@ -58,8 +58,13 @@ if ( $wmgUseApprovedRevs ) {
 		'type' => 'vestyle',
 		'main' => true,
 		'talk' => true,
-		'blacklisted' => [],
-		'overridedefault' => false
+		'blacklisted' => [
+			8,
+			9,
+			14,
+			15,
+		],
+		'overridedefault' => true
 	];
 }
 
