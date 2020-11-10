@@ -928,7 +928,7 @@ if ( $wmgUsePreloader ) {
 	wfLoadExtension( 'Preloader' );
 	
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgPreloaderSource'] = [
-		'name' => 'Can TemplateSandbox be used in this namespace?',
+		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
 		'type' => 'text',
 		'main' => true,
 		'talk' => false,
