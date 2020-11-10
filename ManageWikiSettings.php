@@ -589,6 +589,10 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'list',
+		'options' => [
+			'Link' => 'link',
+			'Any' => 'any',
+		],
 		'overridedefault' => 'link',
 		'section' => 'edit',
 		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
