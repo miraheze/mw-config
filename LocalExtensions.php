@@ -55,10 +55,10 @@ if ( $wmgUseApprovedRevs ) {
 
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['egApprovedRevsEnabledNamespaces'] = [
 		'name' => 'Enable ApprovedRevs in this namespace?',
+		'type' => 'vestyle',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'vestyle' => true,
 		'overridedefault' => false
 	];
 }
@@ -212,10 +212,10 @@ if ( $wmgUseCommentStreams ) {
 	wfLoadExtension ( 'CommentStreams' );
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgCommentStreamsAllowedNamespaces'] = [
 		'name' => 'Can comments appear in this namespace?',
+		'type' => 'check',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'vestyle' => false,
 		'overridedefault' => null,
 	];
 }
@@ -438,10 +438,10 @@ if ( $wmgUseFlaggedRevs ) {
 
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgFlaggedRevsNamespaces'] = [
 		'name' => 'Enable FlaggedRevs in this namespace?',
+		'type' => 'check',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [ 8 ],
-		'vestyle' => false,
 		'overridedefault' => false
 	];
 }
@@ -721,10 +721,10 @@ if ( $wmgUseMassMessage ) {
 
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgNamespacesToPostIn'] = [
 		'name' => 'Can MassMessage post messages in this namespace?',
+		'type' => 'check',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
-		'vestyle' => false,
 		'overridedefault' => false
 	];
 }
@@ -1085,10 +1085,10 @@ if ( $wmgUseTemplateSandbox ) {
 
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgTemplateSandboxEditNamespaces'] = [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
+		'type' => 'check',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'vestyle' => false,
 		'overridedefault' => false
 	];
 }
@@ -1226,10 +1226,10 @@ if ( $wmgUseVisualEditor ) {
 
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgVisualEditorAvailableNamespaces'] = [
 		'name' => 'Enable VisualEditor in this namespace?',
+		'type' => 'vestyle',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'vestyle' => true,
 		'overridedefault' => false
 	];
 }
@@ -1261,10 +1261,10 @@ if ( $wmgUseWikidataPageBanner ) {
 
 	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgWPBNamespaces'] = [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
+		'type' => 'check',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'vestyle' => false,
 		'overridedefault' => false
 	];
 }
