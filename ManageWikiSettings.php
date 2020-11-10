@@ -585,23 +585,23 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly.',
 	],
-	'wgArticleCountMethod' => [	
-		'name' => 'Article Count Method',	
-		'from' => 'mediawiki',	
-		'restricted' => false,	
-		'type' => 'list',	
-		'options' => [	
-			'Link' => 'link',	
-			'Any' => 'any',	
-		],	
-		'overridedefault' => 'link',	
-		'section' => 'edit',	
-		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',	
-		'script' => [	
- 			"$IP/maintenance/updateArticleCount.php" => [	
-				'update' => false,	
-			],	
-		],	
+	'wgArticleCountMethod' => [
+		'name' => 'Article Count Method',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'Link' => 'link',
+			'Any' => 'any',
+		],
+		'overridedefault' => 'link',
+		'section' => 'edit',
+		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
+		'script' => [
+ 			"$IP/maintenance/updateArticleCount.php" => [
+				'update' => false,
+			],
+		],
 	],
 	'wgActiveUserDays' => [
 		'name' => 'Active User Days',
