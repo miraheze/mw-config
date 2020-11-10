@@ -1665,7 +1665,17 @@ $wi->config->settings = [
 	],
 	// Must be kept insync with wgFileExtensions in ManageWikiSettings.php
 	'wgFileExtensions' => [
-		'default' => [ 'gif', 'ico', 'jpeg', 'jpg', 'ogg', 'png', 'svg', 'pdf', 'djvu' ],
+		'default' => [
+			'gif',
+			'ico',
+			'jpeg',
+			'jpg',
+			'ogg',
+			'png',
+			'svg',
+			'pdf',
+			'djvu'
+		],
 	],
 	'wgUseInstantCommons' => [
 		'default' => true,
@@ -1879,9 +1889,6 @@ $wi->config->settings = [
 			'w',
 			'v',
 			'n',
-		],
-		'+testwiki' => [
-			'simple',
 		],
 		'+ucroniaswiki' => [
 			'h',
