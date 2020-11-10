@@ -202,9 +202,8 @@ $wi->config->settings = [
 	],
 	
 	// Category Collation
-	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change 
+	'wgCategoryCollation' => [
 		'default' => 'uppercase',
-		'holidayswiki' => 'numeric',
 	],
 	// Cosmos settings
 	'wgCosmosBannerLogo' => [
