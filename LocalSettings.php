@@ -1524,14 +1524,6 @@ $wi->config->settings = [
 			NS_HELP => true,
 			NS_PROJECT => true
 		],
- 		'valkyrienskieswiki' => [
-			NS_MAIN => false,
-			NS_USER => false,
- 			NS_FILE => false,
-			NS_TEMPLATE => false,
-			NS_HELP => false,
-			NS_PROJECT => false
-		],
 	],
 
 	// FlaggedRevs
