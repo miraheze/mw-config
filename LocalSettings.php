@@ -1614,10 +1614,10 @@ $wi->config->settings = [
 		],
 	],
 	'wgSimpleFlaggedRevsUI' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgFlaggedRevsLowProfile' => [
-		'default' => false,
+		'default' => true,
 	],
 
 	// Footers
@@ -2804,6 +2804,11 @@ $wi->config->settings = [
 		'nmfwikiwiki' => true,	
 	],
 	
+	// Users Notified On All Changes
+	'wgUsersNotifiedOnAllChanges' => [
+		'default' => [],
+	],
+	
 	// OATHAuth
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
@@ -2864,8 +2869,11 @@ $wi->config->settings = [
 		],
 	],
 	'wgImplicitGroups' => [
-		'default' => [ '*', 'user', 'autoconfirmed' ],
-		'bitcoindebateswiki' => [ '*', 'user', 'autoconfirmed', 'emailconfirmed' ],
+		'default' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
 	],
 
 	// Password policy
@@ -2938,7 +2946,6 @@ $wi->config->settings = [
 		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
-			'visualeditor-enable' => 1,
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 			'visualeditor-enable-experimental' => 1,
@@ -2957,7 +2964,6 @@ $wi->config->settings = [
 		],
 		'+yablestudiowiki' => [
 			'visualeditor-newwikitext' => 1,
-			'visualeditor-enable' => 1,
 			'visualeditor-tabs' => 'multi-tab',
 		],
 	],

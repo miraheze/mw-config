@@ -16,7 +16,8 @@
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * namespace: adds dropdown to select one namespace.
  * namespaces: see above, except multiple namespaces.
- * skins: adds a drop down selection box for an enabled skin.
+ * skin: adds a drop down selection box for selecting a single enabled skin.
+ * skins: adds a drop down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
  * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
@@ -338,7 +339,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => null,
 		'section' => 'cosmos',
-		'help' => 'Add an image to set as the background image for the wiki&#39;s body of the Cosmos skin.',
+		'help' => 'Add an image to set as the background image for the wiki\'s body of the Cosmos skin.',
 	],
 	'wgCosmosBackgroundImageSize' => [
 		'name' => 'Cosmos Background Image Size',
@@ -645,6 +646,19 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Actions that can be restricted.',
 	],
+	'wgImplicitGroups' => [
+		'name' => 'Implicit Groups',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'usergroups',
+		'overridedefault' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+		'section' => 'edit',
+		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
+  ],
 	'wgCommentStreamsEnableTalk' => [
 		'name' => 'CommentStreams Enable Talk',
 		'from' => 'commentstreams',
@@ -1315,6 +1329,15 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Set the URL to your \'More Information\' page.',
 	],
+	'wgUsersNotifiedOnAllChanges' => [
+		'name' => 'Users Notified On All Changes',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'users',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
+	],	
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
 		'from' => 'mediawiki',
@@ -1772,7 +1795,7 @@ $wgManageWikiSettings = [
 		'name' => 'Default Skin',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'skins',
+		'type' => 'skin',
 		'options' => [],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
@@ -1785,7 +1808,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Sets the value of <code>$wgLogos[&#39;1x&#39;]</code>.',
+		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
@@ -1812,7 +1835,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'This will set the value of <code>$wgLogos[&#39;wordmark&#39;][&#39;src&#39;]</code>. Also used as the copyright wordmark for the Minerva skin.',
+		'help' => 'This will set the value of <code>$wgLogos[\'wordmark\'][\'src\']</code>. Also used as the copyright wordmark for the Minerva skin.',
 	],
 	'wgWordmarkWidth' => [
 		'name' => 'Wordmark Width',
@@ -1903,13 +1926,8 @@ $wgManageWikiSettings = [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
 		'from' => 'relatedarticles',
 		'restricted' => false,
-		'type' => 'list-multi',
-		'options' => [
-			'Metrolook' => 'metrolook',
-			'Minerva' => 'minerva',
-			'Timeless' => 'timeless',
-			'Vector' => 'vector'
-		],
+		'type' => 'skins',
+		'options' => [],
 		'overridedefault' => [
 			'minerva',
 			'timeless',
