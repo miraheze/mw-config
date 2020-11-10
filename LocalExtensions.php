@@ -926,6 +926,17 @@ if ( $wmgUsePopups ) {
 
 if ( $wmgUsePreloader ) {
 	wfLoadExtension( 'Preloader' );
+	
+	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgPreloaderSource'] = [
+		'name' => 'Can TemplateSandbox be used in this namespace?',
+		'type' => 'text',
+		'main' => true,
+		'talk' => false,
+		'blacklisted' => [],
+		'overridedefault' => [
+			0 => 'Template:Boilerplate',
+		]
+	];
 }
 
 if ( $wmgUseProofreadPage ) {
