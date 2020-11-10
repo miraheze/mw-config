@@ -3347,17 +3347,7 @@ $wi->config->settings = [
 
 	// Statistics
 	'wgArticleCountMethod' => [
-		'default' => 'link', // To update it, you will need to run the maintenance/updateArticleCount.php script
-		'fourleafficswiki' => 'any',
-		'gfiwiki' => 'any',
-		'hispanowiki' => 'any',
-		'hispano76wiki' => 'any',
-		'hrfwiki2wiki' => 'any',
-		'ildrilwiki' => 'any',
-		'nonciclopediawiki' => 'any',
-		'privadowiki' => 'any',
-		'simswiki' => 'any',
-		'ucroniaswiki' => 'any',
+		'default' => 'link',
 	],
 
 	// Vanish (MW 1.34+)
