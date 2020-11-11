@@ -1,21 +1,21 @@
 <?php
 /**
- * ManageWiki settings are added using the variable below.
+ * Additional settings to add to ManageWikiNamespaces are added using the variable below.
  *
  * Type can be either:
  *
- * check: adds a checkbox.
- * text: adds a single line text entry.
- * vestyle:
+ * check: adds a checkbox. Format: $var = $namespace_id;
+ * text: adds a single line text entry. Format: [$var][$namespace_id] = $val;
+ * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
  *
  * Other variables that are required are name and from.
  *
  * name: the displayed name of the setting on Special:ManageWiki.
  * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
- * main:
- * talk:
- * blacklisted: 
- * overridedefault: a string/array override default when no existing value exist.
+ * main: true or false. If false, this config will not appear for main namespaces.
+ * talk: true or false. If false, this config will not appear for talk namespaces.
+ * blacklisted: array of namespace ids to blacklist the config from.
+ * overridedefault: a string/array override default when no existing value exist. Allows for namespace specific overrides with [ $ns_id => $value ] format.
  */
 $wgManageWikiNamespacesAdditional = [
 	'wgExtraSignatureNamespaces' => [
