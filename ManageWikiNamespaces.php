@@ -105,6 +105,7 @@ $wgManageWikiNamespacesAdditional = [
 	'wgPreloaderSource' => [
 		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
 		'type' => 'text',
+		'from' => 'preloader',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
