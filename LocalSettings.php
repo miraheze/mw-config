@@ -3659,6 +3659,7 @@ $wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
+require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
