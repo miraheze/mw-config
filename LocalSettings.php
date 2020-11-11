@@ -1717,7 +1717,7 @@ $wi->config->settings = [
 	],
 
 	// Gallery Options
-	'+wgGalleryOptions' => [
+	'wgGalleryOptions' => [
 		'default' => [
 			'imagesPerRow' => 0,
 			'imageWidth' => 120,
