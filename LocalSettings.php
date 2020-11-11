@@ -2529,31 +2529,7 @@ $wi->config->settings = [
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
 	],
-	'wgManageWikiNamespacesAdditional' => [
-		'default' => [
-			// Core config
-			'wgExtraSignatureNamespaces' => [
-				'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
-				'type' => 'check',
-				'main' => true,
-				'talk' => false,
-				'blacklisted' => [],
-				'overridedefault' => [],
-			],
-			'wgCapitalLinkOverrides' => [
-				'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
-				'type' => 'vestyle',
-				'main' => true,
-				'talk' => false,
-				'blacklisted' => [
-					2,
-					8,
-				],
-				'overridedefault' => [],
-			],
-		],
-	],
-
+	
 	// MassMessage
 	'wgAllowGlobalMessaging' => [
 		'default' => false,
@@ -2735,9 +2711,6 @@ $wi->config->settings = [
 	],
 	'wgModerationIgnoredInNamespaces' => [
 		'default' => [],
-		'talenteddeviantswiki' => [
-			NS_USER,
-		],
 	],
 	'wgModerationOnlyInNamespaces' => [
 		'default' => [],
@@ -3675,6 +3648,7 @@ $wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
+require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
