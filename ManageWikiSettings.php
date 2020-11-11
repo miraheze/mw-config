@@ -1439,6 +1439,17 @@ $wgManageWikiSettings = [
 		'section' => 'preferences',
 		'help' => 'An array of preferences to hide from Special:Preferences.',
 	],
+	'wgSkipSkins' => [
+		'name' => 'Skip Skins',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'skins',
+		'whitelistSkipSkins' => true,
+		'options' => [],
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'Array of skins to remove as a choice from user\'s preferences.',
+	],
 	'wmgVisualEditorEnableDefault' => [
 		'name' => 'Make VisualEditor the default editor for all',
 		'from' => 'visualeditor',
@@ -1810,7 +1821,7 @@ $wgManageWikiSettings = [
 		'options' => [],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
-		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
+		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
 	],
 	'wgLogo' => [
 		'name' => 'Logo',
