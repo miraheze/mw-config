@@ -110,5 +110,6 @@ $wgManageWikiNamespacesAdditional = [
 		'blacklisted' => [],
 		'overridedefault' => [
 			0 => 'Template:Boilerplate',
+		],
 	],
 ];
