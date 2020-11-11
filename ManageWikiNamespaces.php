@@ -102,4 +102,13 @@ $wgManageWikiNamespacesAdditional = [
 		'blacklisted' => [],
 		'overridedefault' => false
 	],
+	'wgPreloaderSource' => [
+		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
+		'type' => 'text',
+		'main' => true,
+		'talk' => false,
+		'blacklisted' => [],
+		'overridedefault' => [
+			0 => 'Template:Boilerplate',
+	],
 ];
