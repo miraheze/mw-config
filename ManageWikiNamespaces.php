@@ -1,5 +1,22 @@
 <?php
-
+/**
+ * ManageWiki settings are added using the variable below.
+ *
+ * Type can be either:
+ *
+ * check: adds a checkbox.
+ * text: adds a single line text entry.
+ * vestyle:
+ *
+ * Other variables that are required are name and from.
+ *
+ * name: the displayed name of the setting on Special:ManageWiki.
+ * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
+ * main:
+ * talk:
+ * blacklisted: 
+ * overridedefault: a string/array override default when no existing value exist.
+ */
 $wgManageWikiNamespacesAdditional = [
 	'wgExtraSignatureNamespaces' => [
 		'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
