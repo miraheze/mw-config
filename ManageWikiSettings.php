@@ -16,6 +16,7 @@
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * namespace: adds dropdown to select one namespace.
  * namespaces: see above, except multiple namespaces.
+ * preferences: adds a drop down selection box for selecting multiple user preferences.
  * skin: adds a drop down selection box for selecting a single enabled skin.
  * skins: adds a drop down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
@@ -720,15 +721,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Allow templates to be imported/transcluded from another wiki.',
-	],
-	'wmgVisualEditorEnableDefault' => [
-		'name' => 'Make VisualEditor the default editor for all',
-		'from' => 'visualeditor',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'edit',
-		'help' => 'This will make VisualEditor the default edit for all.',
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'name' => 'Enable VisualEditor Wikitext mode',
@@ -1435,6 +1427,26 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
+	],
+	
+	// Preferences
+	'wgHiddenPrefs' => [
+		'name' => 'Hidden Preferences',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'preferences',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'An array of preferences to hide from Special:Preferences.',
+	],
+	'wmgVisualEditorEnableDefault' => [
+		'name' => 'Make VisualEditor the default editor for all',
+		'from' => 'visualeditor',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'preferences',
+		'help' => 'This will make VisualEditor the default edit for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
 	],
 
 	// Recent changes
