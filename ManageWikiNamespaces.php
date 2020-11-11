@@ -84,5 +84,5 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false
-	];
+	],
 ];
