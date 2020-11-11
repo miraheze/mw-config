@@ -57,7 +57,7 @@ $wgManageWikiNamespacesAdditional = [
 		'blacklisted' => [],
 		'overridedefault' => false
 	],
-	'wgCommentStreamsAllowedNamespaces' = [
+	'wgCommentStreamsAllowedNamespaces' => [
 		'name' => 'Can comments appear in this namespace?',
 		'type' => 'check',
 		'from' => 'commentstreams',
@@ -66,7 +66,7 @@ $wgManageWikiNamespacesAdditional = [
 		'blacklisted' => [],
 		'overridedefault' => null,
 	],
-	'wgFlaggedRevsNamespaces' = [
+	'wgFlaggedRevsNamespaces' => [
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'type' => 'check',
 		'from' => 'flaggedrevs',
@@ -75,7 +75,7 @@ $wgManageWikiNamespacesAdditional = [
 		'blacklisted' => [ 8 ],
 		'overridedefault' => false
 	],
-	'wgVisualEditorAvailableNamespaces' = [
+	'wgVisualEditorAvailableNamespaces' => [
 		'name' => 'Enable VisualEditor in this namespace?',
 		'type' => 'vestyle',
 		'from' => 'visualeditor',
@@ -84,7 +84,7 @@ $wgManageWikiNamespacesAdditional = [
 		'blacklisted' => [],
 		'overridedefault' => false
 	],
-	'wgNamespacesToPostIn' = [
+	'wgNamespacesToPostIn' => [
 		'name' => 'Can MassMessage post messages in this namespace?',
 		'type' => 'check',
 		'from' => 'massmessage',
@@ -93,7 +93,7 @@ $wgManageWikiNamespacesAdditional = [
 		'blacklisted' => [],
 		'overridedefault' => false
 	],
-	'wgTemplateSandboxEditNamespaces' = [
+	'wgTemplateSandboxEditNamespaces' => [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
 		'type' => 'check',
 		'from' => 'templatesandbox',
