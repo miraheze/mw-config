@@ -45,8 +45,13 @@ $wgManageWikiNamespacesAdditional = [
 		'from' => 'approvedrevs',
 		'main' => true,
 		'talk' => true,
-		'blacklisted' => [],
-		'overridedefault' => false
+		'blacklisted' => [
+			8,
+			9,
+			14,
+			15,
+		],
+		'overridedefault' => true
 	],
 	'wgWPBNamespaces' => [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
