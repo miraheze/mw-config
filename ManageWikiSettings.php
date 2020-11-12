@@ -1644,6 +1644,15 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit.',
 	],
+	'wgCompressRevisions' => [
+		'name' => 'Compress Revisions',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Compress new page revisions if possible.',
+	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
 		'name' => 'File Extensions',
