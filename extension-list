@@ -240,7 +240,6 @@ $IP/extensions/Video/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
-$IP/extensions/WhoIsWatching/extension.json
 $IP/extensions/Widgets/extension.json
 $IP/extensions/WikiCategoryTagCloud/extension.json
 $IP/extensions/WikiDiscover/extension.json
