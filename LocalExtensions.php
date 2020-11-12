@@ -1191,10 +1191,6 @@ if ( $wmgUseWebChat ) {
 
 }
 
-if ( $wmgUseWhoIsWatching ) {
-	wfLoadExtension( 'WhoIsWatching' );
-}
-
 if ( $wmgUseWidgets ) {
 	wfLoadExtension( 'Widgets' );
 }
