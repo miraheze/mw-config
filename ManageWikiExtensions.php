@@ -793,6 +793,7 @@ $wgManageWikiExtensions = [
 			'requires' => [
 				'extensions' => [
 					'jsonconfig',
+					'codeeditor',
 				],
 			],
 		],
