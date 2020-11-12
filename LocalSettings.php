@@ -1423,10 +1423,6 @@ $wi->config->settings = [
 	'wmgUseWebChat' => [
 		'default' => false,
 	],
-	'wmgUseWhoIsWatching' => [
-		'default' => false,
-		'test2wiki' => true,
-	],
 	'wmgUseWidgets' => [
 		'default' => false,
 	],
