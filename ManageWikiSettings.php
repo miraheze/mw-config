@@ -1608,7 +1608,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
-		'from' => 'mediawiki',
+		'from' => 'disqustag',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => false,
@@ -1617,7 +1617,7 @@ $wgManageWikiSettings = [
 	],
 	'wgPageDisqusShortname' => [
 		'name' => 'Page DisqusShortname',
-		'from' => 'mediawiki',
+		'from' => 'disqustag',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => false,
