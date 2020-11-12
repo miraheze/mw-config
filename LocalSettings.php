@@ -918,7 +918,6 @@ $wi->config->settings = [
 	],
 	'wmgUseDisqusTag' => [
 		'default' => false,
-		'test2wiki' => true,
 	],
 	'wmgUseDuskToDawn' => [
 		'default' => false,
