@@ -105,7 +105,6 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 }
 
 // Per-wiki overrides
-
 if ( $wgDBname === 'cineastaswiki' ) {
 	$wgWhitelistRead[] = 'Projectos resultantes';
 	$wgWhitelistRead[] = 'Actores';
