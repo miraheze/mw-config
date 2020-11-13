@@ -1652,6 +1652,11 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'Compress new page revisions if possible.',
+		'script' => [
+ 			"$IP/maintenance/compressOld.php" => [
+				'type' => 'gzip',
+			],
+		],
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
