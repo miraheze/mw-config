@@ -614,6 +614,17 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
 	],
+	'wgCategoryPagingLimit' => [
+		'name' => 'Category Paging Limit',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 25,
+		'maxint' => 5000,
+		'overridedefault' => 200,
+		'section' => 'edit',
+		'help' => 'Paging limit for items in categories.',
+	],
 	'wgShowCreditsIfMax' => [
 		'name' => 'Editing attribution',
 		'from' => 'mediawiki',
