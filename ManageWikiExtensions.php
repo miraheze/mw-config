@@ -486,14 +486,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'deleteuserpages' => [
-			'name' => 'DeleteUserPages',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DeleteUserPages',
-			'var' => 'wmgUseDeleteUserPages',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [],
-		],
 		'description2' => [
 			'name' => 'Description2',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Description2',
