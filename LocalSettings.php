@@ -2936,21 +2936,8 @@ $wi->config->settings = [
 			'visualeditor-tabs' => 'multi-tab',
 		],
 	],
-	'+wgHiddenPrefs' => [
+	'wgHiddenPrefs' => [
 		'default' => [],
-		'dcmultiversewiki' => [
-			'managewikisidebar',
-			'math',
-			'multimediaviewer-enable',
-			'visualeditor-betatempdisable',
-			'flow-visualeditor',
-			'visualeditor-newwikitext',
-			'visualeditor-enable',
-
-		],
-		'marionetworkwiki' => [
-			'skin',
-		],
 	],
 
 	// Redis
