@@ -105,9 +105,6 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 }
 
 // Per-wiki overrides
-if ( $wgDBname === 'allthetropeswiki' ) {
-	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
-}
 
 if ( $wgDBname === 'cineastaswiki' ) {
 	$wgWhitelistRead[] = 'Projectos resultantes';
