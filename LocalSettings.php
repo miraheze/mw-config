@@ -344,7 +344,6 @@ $wi->config->settings = [
 
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
-		'nenawikiwiki' => 1500,
 	],
 
 	// CentralAuth
