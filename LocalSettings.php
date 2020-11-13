@@ -1315,7 +1315,6 @@ $wi->config->settings = [
 	],
 	'wmgUseStopForumSpam' => [
 		'default' => false,
-		'test2wiki' => true,
 	],
 	'wmgUseSubpageFun' => [
 		'default' => false,
