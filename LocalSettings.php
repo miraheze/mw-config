@@ -3336,7 +3336,6 @@ $wi->config->settings = [
 	// Timeless
 	'wgTimelessWordmark' => [
 		'default' => null,
-		'closinglogosgroupwiki' => 'CLGHorizontal.png',
 	],
 
 	// Timezone
