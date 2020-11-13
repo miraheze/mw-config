@@ -1233,6 +1233,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Allow img tag to be used in wikitext.',
 	],
+	'wgTmhEnableMp4Uploads' => [
+		'name' => 'TimedMediaHandler Enable Mp4 Uploads',
+		'from' => 'timedmediahandler',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Allows to upload Mp4 files.',
+	],
 	'wgSVGConverter' => [
 		'name' => 'SVG Converter',
 		'from' => 'mediawiki',
