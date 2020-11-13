@@ -3334,6 +3334,12 @@ $wi->config->settings = [
 	],
 
 	// Timeless
+	'wgTimelessBackdropImage' => [
+		'default' => 'cat.svg',
+	],
+	'wgTimelessLogo' => [
+		'default' => null,
+	],
 	'wgTimelessWordmark' => [
 		'default' => null,
 	],
