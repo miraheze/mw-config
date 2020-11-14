@@ -1904,7 +1904,6 @@ $wi->config->settings = [
 				'nsName' => 'Data',
 				// page name must end in ".map", and contain at least one symbol
 				'pattern' => '/.\.map$/',
-				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
 				'license' => 'CC-BY-SA 4.0',
 				'isLocal' => false,
 			],
@@ -1913,29 +1912,6 @@ $wi->config->settings = [
 				'nsName' => 'Data',
 				// page name must end in ".tab", and contain at least one symbol
 				'pattern' => '/.\.tab$/',
-				'remote' => [ 'url' => 'https://commons.miraheze.org/w/api.php' ],
-				'license' => 'CC-BY-SA 4.0',
-				'isLocal' => false,
-			],
-		],
-		'+commonswiki' => [
-			'Map.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".map", and contain at least one symbol
-				'pattern' => '/.\.map$/',
-				'remote' => [ 'url' => false ], 
-				'store' => true,
-				'license' => 'CC-BY-SA 4.0',
-				'isLocal' => false,
-			],
-			'Tabular.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".tab", and contain at least one symbol
-				'pattern' => '/.\.tab$/',
-				'remote' => [ 'url' => false ],
-				'store' => true,
 				'license' => 'CC-BY-SA 4.0',
 				'isLocal' => false,
 			],
