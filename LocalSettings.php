@@ -663,7 +663,6 @@ $wi->config->settings = [
 	],
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
-		'dcmultiversewiki' => true,
 	],
 
 	// Discord

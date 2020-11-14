@@ -1800,6 +1800,15 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
 	],
+	'wgTmhEnableMp4Uploads' => [
+		'name' => 'TimedMediaHandler Enable Mp4 Uploads',
+		'from' => 'timedmediahandler',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Allows to upload Mp4 files.',
+	],
 	'wgExpensiveParserFunctionLimit' => [
 		'name' => 'Expensive Parser Function Limit',
 		'restricted' => true,
