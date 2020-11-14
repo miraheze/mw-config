@@ -418,6 +418,13 @@ if ( $wmgUseFemiwiki ) {
 
 if ( $wmgUseFlaggedRevs ) {
 	wfLoadExtension( 'FlaggedRevs' );
+
+	// $wmgFlaggedRevsRestrictionLevels
+	foreach ( $wmgFlaggedRevsRestrictionLevels as $value ) {
+		$wi->config->settings['wgManageWikiPermissionsAdditionalRights'][+$wi->dbname][$value] = [
+			$value => true,
+		];
+	}
 }
 
 if ( $wmgUseFlow ) {
