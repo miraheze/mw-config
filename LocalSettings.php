@@ -2916,7 +2916,7 @@ $wi->config->settings = [
 	'wgRCLinkDays' => [
 		'default' => [ 1, 3, 7, 14, 30 ],
 	],
-	
+
 	// RelatedArticles settings
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'default' => [
