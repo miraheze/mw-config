@@ -2558,17 +2558,20 @@ $wi->config->settings = [
 	],
 
 	// Medik settings
-	'wgMedikShowLogo' => [
-		'default' => false,
+	'wgMedikColor' => [
+		'default' => '#FFBE00',
 	],
 	'wgMedikContentWidth' => [
-		'default' => false,
-	],
-	'wgMedikColor' => [
-		'default' => false,
+		'default' => 'default',
 	],
 	'wgMedikLogoWidth' => [
-		'default' => null,
+		'default' => 'default',
+	],
+	'wgMedikResponsive' => [
+		'default' => true,
+	],
+	'wgMedikShowLogo' => [
+		'default' => 'none',
 	],
 	'wgMedikUseLogoWithoutText' => [
 		'default' => false,
