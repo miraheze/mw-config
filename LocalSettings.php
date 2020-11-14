@@ -635,15 +635,8 @@ $wi->config->settings = [
 	'wgSharedTables' => [
 		'default' => [],
 	],
-	'wgActorTableSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_NEW,
-	],
 
-	'wgCommentTableSchemaMigrationStage' => [
-		'default' => MIGRATION_NEW,
-	],
-
-	//CommonsMetadata
+	// CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
 		'default' => false,
 	],
@@ -3336,9 +3329,14 @@ $wi->config->settings = [
 	],
 
 	// Timeless
+	'wgTimelessBackdropImage' => [
+		'default' => 'cat.svg',
+	],
+	'wgTimelessLogo' => [
+		'default' => null,
+	],
 	'wgTimelessWordmark' => [
 		'default' => null,
-		'closinglogosgroupwiki' => 'CLGHorizontal.png',
 	],
 
 	// Timezone
