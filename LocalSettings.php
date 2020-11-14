@@ -2916,6 +2916,9 @@ $wi->config->settings = [
 	'wgRCLinkDays' => [
 		'default' => [ 1, 3, 7, 14, 30 ],
 	],
+	'wgRCLinkLimits' => [
+		'default' => [ 50, 100, 250, 500 ],
+	],
 
 	// RelatedArticles settings
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
