@@ -1233,15 +1233,6 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Allow img tag to be used in wikitext.',
 	],
-	'wgTmhEnableMp4Uploads' => [
-		'name' => 'TimedMediaHandler Enable Mp4 Uploads',
-		'from' => 'timedmediahandler',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'media',
-		'help' => 'Allows to upload Mp4 files.',
-	],
 	'wgSVGConverter' => [
 		'name' => 'SVG Converter',
 		'from' => 'mediawiki',
@@ -1808,6 +1799,15 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'restricted',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
+	],
+	'wgTmhEnableMp4Uploads' => [
+		'name' => 'TimedMediaHandler Enable Mp4 Uploads',
+		'from' => 'timedmediahandler',
+		'restricted' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Allows to upload Mp4 files.',
 	],
 	'wgExpensiveParserFunctionLimit' => [
 		'name' => 'Expensive Parser Function Limit',
