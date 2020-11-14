@@ -1526,6 +1526,7 @@ $wgManageWikiSettings = [
 			'60 (5184000 seconds)' => 60,
 			'90 (7776000 seconds)' => 90,
 			'180 (15552000 seconds)' => 180,
+			'360 (31104000 seconds)' => 360,
 		],
 		'overridedefault' => [ 1, 3, 7, 14, 30 ],
 		'section' => 'recentchanges',
