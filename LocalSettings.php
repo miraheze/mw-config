@@ -2907,6 +2907,9 @@ $wi->config->settings = [
 	],
 
 	// RecentChanges
+	'wgFeedLimit' => [
+		'default' => 50,
+	],
 	'wgRCMaxAge' => [
 		'default' => 180 * 24 * 3600,
 	],
