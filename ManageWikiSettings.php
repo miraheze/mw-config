@@ -1113,6 +1113,15 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Language code for message documentation.',
 	],
+	'wgMinervaAlwaysShowLanguageButton' => [
+		'name' => 'Minerva Always Show Language Button',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Whether to show the language switcher button even if no languages are available for the page.',
+	],
 	'wgULSAnonCanChangeLanguage' => [
 		'name' => 'Allow anonymous users to change language',
 		'from' => 'universallanguageselector',
@@ -1943,15 +1952,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
-	],
-	'wgMinervaAlwaysShowLanguageButton' => [
-		'name' => 'Minerva Always Show Language Button',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Whether to show the language switcher button even if no languages are available for the page.',
 	],
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
