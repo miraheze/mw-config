@@ -3255,7 +3255,6 @@ $wi->config->settings = [
 	],
 	'wgFriendingEnabled' => [
 		'default' => true,
-		'allthetropeswiki' => false,
 	],
 
 	// Statistics

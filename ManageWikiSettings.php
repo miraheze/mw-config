@@ -910,6 +910,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Controls what games are enabled.',
 	],
+	'wgFriendingEnabled' => [
+		'name' => 'Friending Enabled',
+		'restricted' => false,
+		'from' => 'socialprofile',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Decides whether to enable friending or not.',
+	],
 	'wgUserBoard' => [
 		'name' => 'User Board',
 		'restricted' => false,
