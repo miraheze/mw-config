@@ -635,15 +635,8 @@ $wi->config->settings = [
 	'wgSharedTables' => [
 		'default' => [],
 	],
-	'wgActorTableSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_NEW,
-	],
 
-	'wgCommentTableSchemaMigrationStage' => [
-		'default' => MIGRATION_NEW,
-	],
-
-	//CommonsMetadata
+	// CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
 		'default' => false,
 	],
