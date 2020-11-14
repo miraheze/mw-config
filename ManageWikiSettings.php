@@ -6,6 +6,8 @@
  * Type can be either:
  *
  * check: adds a checkbox.
+ * databases: adds a drop down selection box for selecting a database.
+ * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
  * language: adds a dropdown for language selection (all which are known to MediaWiki).
  * list: adds a list of options (requires: options which is an array in form of display => internal value).
@@ -14,6 +16,9 @@
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * namespace: adds dropdown to select one namespace.
  * namespaces: see above, except multiple namespaces.
+ * preferences: adds a drop down selection box for selecting multiple user preferences.
+ * skin: adds a drop down selection box for selecting a single enabled skin.
+ * skins: adds a drop down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
  * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
@@ -151,7 +156,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Default timeout, 1 hour by default.',
 	],
-	'wmgFlaggedRevsProtection' => [
+	'wgFlaggedRevsProtection' => [
 		'name' => 'Flagged Revs Protection',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -160,7 +165,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'This enables Flagged Revs Protection.',
 	],
-	'wmgFlaggedRevsAutoReview' => [
+	'wgFlaggedRevsAutoReview' => [
 		'name' => 'FlaggedRevs Auto Review',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -175,7 +180,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Auto-review settings for edits/new pages.',
 	],
-	'wmgFlaggedRevsRestrictionLevels' => [
+	'wgFlaggedRevsRestrictionLevels' => [
 		'name' => 'FlaggedRevs Restriction Levels',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -190,7 +195,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'Restriction levels for "autoreview"/"review" rights.',
 	],
-	'wmgSimpleFlaggedRevsUI' => [
+	'wgSimpleFlaggedRevsUI' => [
 		'name' => 'Simple FlaggedRevs UI',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -199,7 +204,7 @@ $wgManageWikiSettings = [
 		'section' => 'anti-spam',
 		'help' => 'When enabled, this will only distinguish "checked", "quality", and unreviewed.',
 	],
-	'wmgFlaggedRevsLowProfile' => [
+	'wgFlaggedRevsLowProfile' => [
 		'name' => 'FlaggedRevs Low Profile',
 		'from' => 'flaggedrevs',
 		'restricted' => false,
@@ -275,7 +280,7 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'Enable "/me <text>" command that prints a status-type message.',
 	],
-	'wmgWebChatServer' => [
+	'wgWebChatServer' => [
 		'name' => 'WebChat Server',
 		'from' => 'webchat',
 		'restricted' => false,
@@ -284,7 +289,7 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'IRC Server to connect to, not required when using the freenodeChat web client.',
 	],
-	'wmgWebChatChannel' => [
+	'wgWebChatChannel' => [
 		'name' => 'WebChat Channel',
 		'from' => 'webchat',
 		'restricted' => false,
@@ -293,7 +298,7 @@ $wgManageWikiSettings = [
 		'section' => 'chat',
 		'help' => 'Channel to connect to.',
 	],
-	'wmgWebChatClient' => [
+	'wgWebChatClient' => [
 		'name' => 'WebChat Client',
 		'from' => 'webchat',
 		'restricted' => false,
@@ -333,7 +338,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => null,
 		'section' => 'cosmos',
-		'help' => 'Add an image to set as the background image for the wiki&#39;s body of the Cosmos skin.',
+		'help' => 'Add an image to set as the background image for the wiki\'s body of the Cosmos skin.',
 	],
 	'wgCosmosBackgroundImageSize' => [
 		'name' => 'Cosmos Background Image Size',
@@ -580,6 +585,24 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly.',
 	],
+	'wgArticleCountMethod' => [
+		'name' => 'Article Count Method',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'Link' => 'link',
+			'Any' => 'any',
+		],
+		'overridedefault' => 'link',
+		'section' => 'edit',
+		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
+		'script' => [
+ 			"$IP/maintenance/updateArticleCount.php" => [
+				'update' => false,
+			],
+		],
+	],
 	'wgActiveUserDays' => [
 		'name' => 'Active User Days',
 		'from' => 'mediawiki',
@@ -599,6 +622,19 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Show more authors.',
+	],
+	'wgImplicitGroups' => [
+		'name' => 'Implicit Groups',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'usergroups',
+		'overridedefault' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+		'section' => 'edit',
+		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
 	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
@@ -685,15 +721,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Allow templates to be imported/transcluded from another wiki.',
-	],
-	'wmgVisualEditorEnableDefault' => [
-		'name' => 'Make VisualEditor the default editor for all',
-		'from' => 'visualeditor',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'edit',
-		'help' => 'This will make VisualEditor the default edit for all.',
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'name' => 'Enable VisualEditor Wikitext mode',
@@ -1072,7 +1099,7 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'This will adapt your wikis time over clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
 	],
-	'wmgTranslateDocumentationLanguageCode' => [
+	'wgTranslateDocumentationLanguageCode' => [
 		'name' => 'Translate Documentation Language Code',
 		'from' => 'translate',
 		'restricted' => false,
@@ -1302,6 +1329,15 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Set the URL to your \'More Information\' page.',
 	],
+	'wgUsersNotifiedOnAllChanges' => [
+		'name' => 'Users Notified On All Changes',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'users',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
+	],	
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
 		'from' => 'mediawiki',
@@ -1400,6 +1436,37 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
+	],
+	
+	// Preferences
+	'wgHiddenPrefs' => [
+		'name' => 'Hidden Preferences',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'preferences',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'An array of preferences to hide from Special:Preferences.',
+	],
+	'wgSkipSkins' => [
+		'name' => 'Skip Skins',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'skins',
+		'whitelistSkipSkins' => true,
+		'options' => [],
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'Array of skins to remove as a choice from user\'s preferences.',
+	],
+	'wmgVisualEditorEnableDefault' => [
+		'name' => 'Make VisualEditor the default editor for all',
+		'from' => 'visualeditor',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'preferences',
+		'help' => 'This will make VisualEditor the default edit for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
 	],
 
 	// Recent changes
@@ -1550,7 +1617,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
-		'from' => 'mediawiki',
+		'from' => 'disqustag',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => false,
@@ -1559,7 +1626,7 @@ $wgManageWikiSettings = [
 	],
 	'wgPageDisqusShortname' => [
 		'name' => 'Page DisqusShortname',
-		'from' => 'mediawiki',
+		'from' => 'disqustag',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => false,
@@ -1759,17 +1826,11 @@ $wgManageWikiSettings = [
 		'name' => 'Default Skin',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'list',
-		'options' => [
-			'CologneBlue' => 'cologneblue',
-			'Modern' => 'modern',
-			'MonoBook' => 'monobook',
-			'Timeless' => 'timeless',
-			'Vector' => 'vector',
-		],
+		'type' => 'skin',
+		'options' => [],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
-		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
+		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
 	],
 	'wgLogo' => [
 		'name' => 'Logo',
@@ -1778,7 +1839,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Sets the value of <code>$wgLogos[&#39;1x&#39;]</code>.',
+		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
@@ -1805,7 +1866,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'This will set the value of <code>$wgLogos[&#39;wordmark&#39;][&#39;src&#39;]</code>. Also used as the copyright wordmark for the Minerva skin.',
+		'help' => 'This will set the value of <code>$wgLogos[\'wordmark\'][\'src\']</code>. Also used as the copyright wordmark for the Minerva skin.',
 	],
 	'wgWordmarkWidth' => [
 		'name' => 'Wordmark Width',
@@ -1837,6 +1898,33 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'styling',
 		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
+	],
+	'wgTimelessBackdropImage' => [
+		'name' => 'Timeless Backdrop Image',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => 'cat.svg',
+		'section' => 'styling',
+		'help' => 'Set to the filename, excluding the File namespace, of a background image to use for the Timeless skin.',
+	],
+	'wgTimelessLogo' => [
+		'name' => 'Timeless Logo',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'styling',
+		'help' => 'Set to the filename, excluding the File namespace, of a logo to use for the Timeless skin.',
+	],
+	'wgTimelessWordmark' => [
+		'name' => 'Timeless Wordmark',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'styling',
+		'help' => 'Set to the filename, excluding the File namespace, of a wordmark to use for the Timeless skin.',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
@@ -1896,13 +1984,8 @@ $wgManageWikiSettings = [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
 		'from' => 'relatedarticles',
 		'restricted' => false,
-		'type' => 'list-multi',
-		'options' => [
-			'Metrolook' => 'metrolook',
-			'Minerva' => 'minerva',
-			'Timeless' => 'timeless',
-			'Vector' => 'vector'
-		],
+		'type' => 'skins',
+		'options' => [],
 		'overridedefault' => [
 			'minerva',
 			'timeless',

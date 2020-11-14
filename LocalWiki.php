@@ -103,11 +103,13 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
  	];
 }
 
-// Per-wiki overrides
-if ( $wgDBname === 'allthetropeswiki' ) {
-	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
+// $wgUrlShortenerAllowedDomains
+if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
+	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
+		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
+// Per-wiki overrides
 if ( $wgDBname === 'cineastaswiki' ) {
 	$wgWhitelistRead[] = 'Projectos resultantes';
 	$wgWhitelistRead[] = 'Actores';
@@ -122,10 +124,6 @@ if ( $wgDBname === 'csydeswiki' ) {
 
 if ( $wgDBname === 'cvtwiki' ) {
 	$wgWhitelistRead[] = 'CVT action log';
-}
-
-if ( $wgDBname === 'dcmultiversewiki' ) {
-        $wgMFAutodetectMobileView = false;
 }
 
 if ( $wmgPrivateUploads ) {

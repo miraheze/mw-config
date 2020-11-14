@@ -5,11 +5,15 @@ So, you want to contribute to our MediaWiki configuration? That's nice, welcome!
 Below is an example snippet from our LocalSettings.php:
 
 ```php
-    'wmgUseJosa' => array(
-        'default' => false,
-        'test1wiki' => true,
-        'reviwiki' => true
-    ),
+ 	// Uploads
+ 	'wmgPrivateUploads' => [
+ 		'default' => false,
+ 		'ciptamediawiki' => true,
+ 		'rhinosf1wiki' => true,
+ 		'staffwiki' => true,
+ 		'stateofwiki' => true,
+ 		'mikekilitterboxwiki' => true
+ 	],
 ```
 
 We use tabs with indent size 8 - if you use the GitHub editor this styling will be automatically applied.
