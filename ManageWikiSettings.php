@@ -1119,7 +1119,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'styling',
+		'section' => 'localisation',
 		'help' => 'Whether to show the language switcher button even if no languages are available for the page.',
 	],
 	'wgULSAnonCanChangeLanguage' => [
