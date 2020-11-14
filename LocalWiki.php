@@ -285,13 +285,13 @@ if ( $wgDBname === 'gyaanipediawiki' ||
 
 if ( $wmgUseYandexTranslate ) {
 	$wgTranslateTranslationServices['Yandex'] = [
-        'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
-        'key' => $wmgYandexTranslationKey,
-        'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
-        'timeout' => 3,
-        'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
-        'langlimit' => 1,
-        'type' => 'yandex',
+		'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
+		'key' => $wmgYandexTranslationKey,
+		'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
+		'timeout' => 3,
+		'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
+		'langlimit' => 1,
+		'type' => 'yandex',
 	];
 }
 
@@ -313,11 +313,23 @@ if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
 if ( $wgDBname === 'erislywiki' ) { // T5981
 	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
 	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
-	// $out is an instance of the OutputPage object.
-	// Add a meta tag
-	$out->addMeta( 'PreMiD_Presence', 'Erisly' );
+		// $out is an instance of the OutputPage object.
+		// Add a meta tag
+		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
 
-	// Required return value of a hook function.
-	return true;
+		// Required return value of a hook function.
+		return true;
 	}
+}
+
+if ( $wgDBname === 'commonswiki' ) {
+	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
+	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
+} else {
+	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
+		'url' => 'https://commons.miraheze.org/w/api.php'
+	];
+	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
+		'url' => 'https://commons.miraheze.org/w/api.php'
+	];
 }
