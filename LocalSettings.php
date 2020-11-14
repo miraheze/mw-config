@@ -2591,7 +2591,6 @@ $wi->config->settings = [
 	],
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'default' => true,
-		'solarawiki' => false,
 	],
 
 	// Miraheze specific config

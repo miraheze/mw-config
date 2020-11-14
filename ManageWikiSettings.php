@@ -1113,6 +1113,15 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Language code for message documentation.',
 	],
+	'wgMinervaAlwaysShowLanguageButton' => [
+		'name' => 'Minerva Always Show Language Button',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'localisation',
+		'help' => 'Whether to show the language switcher button even if no languages are available for the page.',
+	],
 	'wgULSAnonCanChangeLanguage' => [
 		'name' => 'Allow anonymous users to change language',
 		'from' => 'universallanguageselector',
