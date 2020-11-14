@@ -1490,6 +1490,17 @@ $wgManageWikiSettings = [
 	],
 
 	// Recent changes
+	'wgFeedLimit' => [
+		'name' => 'Feed Limit',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 5000,
+		'overridedefault' => 50,
+		'section' => 'recentchanges',
+		'help' => 'Set maximum number of results to return in syndication feeds (RSS, Atom) for eg Recentchanges, Newpages. Min. 1, Max. 5,000',
+	],
 	'wgRCMaxAge' => [
 		'name' => 'RecentChanges max age',
 		'from' => 'mediawiki',
