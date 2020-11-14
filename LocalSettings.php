@@ -2560,28 +2560,18 @@ $wi->config->settings = [
 	// Medik settings
 	'wgMedikShowLogo' => [
 		'default' => false,
-		'lakehubwiki' => 'main',
-		'marionetworkwiki' => 'main',
 	],
 	'wgMedikContentWidth' => [
 		'default' => false,
-		'lakehubwiki' => 'full',
-		'marionetworkwiki' => 'full',
 	],
 	'wgMedikColor' => [
 		'default' => false,
-		'lakehubwiki' => '#000',
-		'marionetworkwiki' => '#ca0019',
 	],
 	'wgMedikLogoWidth' => [
 		'default' => null,
-		'lakehubwiki' => '199px',
-		'marionetworkwiki' => '210px',
 	],
 	'wgMedikUseLogoWithoutText' => [
 		'default' => false,
-		'lakehubwiki' => true,
-		'marionetworkwiki' => true,
 	],
 
 	// Metrolook settings
