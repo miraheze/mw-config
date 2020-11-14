@@ -16,6 +16,7 @@
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * namespace: adds dropdown to select one namespace.
  * namespaces: see above, except multiple namespaces.
+ * preferences: adds a drop down selection box for selecting multiple user preferences.
  * skin: adds a drop down selection box for selecting a single enabled skin.
  * skins: adds a drop down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
@@ -586,6 +587,24 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly.',
 	],
+	'wgArticleCountMethod' => [
+		'name' => 'Article Count Method',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'Link' => 'link',
+			'Any' => 'any',
+		],
+		'overridedefault' => 'link',
+		'section' => 'edit',
+		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
+		'script' => [
+ 			"$IP/maintenance/updateArticleCount.php" => [
+				'update' => false,
+			],
+		],
+	],
 	'wgActiveUserDays' => [
 		'name' => 'Active User Days',
 		'from' => 'mediawiki',
@@ -721,15 +740,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Allow templates to be imported/transcluded from another wiki.',
-	],
-	'wmgVisualEditorEnableDefault' => [
-		'name' => 'Make VisualEditor the default editor for all',
-		'from' => 'visualeditor',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'edit',
-		'help' => 'This will make VisualEditor the default edit for all.',
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'name' => 'Enable VisualEditor Wikitext mode',
@@ -1437,6 +1447,37 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
 	],
+	
+	// Preferences
+	'wgHiddenPrefs' => [
+		'name' => 'Hidden Preferences',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'preferences',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'An array of preferences to hide from Special:Preferences.',
+	],
+	'wgSkipSkins' => [
+		'name' => 'Skip Skins',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'skins',
+		'whitelistSkipSkins' => true,
+		'options' => [],
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'Array of skins to remove as a choice from user\'s preferences.',
+	],
+	'wmgVisualEditorEnableDefault' => [
+		'name' => 'Make VisualEditor the default editor for all',
+		'from' => 'visualeditor',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'preferences',
+		'help' => 'This will make VisualEditor the default edit for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
+	],
 
 	// Recent changes
 	'wgRCMaxAge' => [
@@ -1586,7 +1627,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
-		'from' => 'mediawiki',
+		'from' => 'disqustag',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => false,
@@ -1595,7 +1636,7 @@ $wgManageWikiSettings = [
 	],
 	'wgPageDisqusShortname' => [
 		'name' => 'Page DisqusShortname',
-		'from' => 'mediawiki',
+		'from' => 'disqustag',
 		'restricted' => true,
 		'type' => 'text',
 		'overridedefault' => false,
@@ -1799,7 +1840,7 @@ $wgManageWikiSettings = [
 		'options' => [],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
-		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences.',
+		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
 	],
 	'wgLogo' => [
 		'name' => 'Logo',

@@ -52,15 +52,6 @@ if ( $wmgUseApprovedRevs ) {
 	$wgAvailableRights[] = 'approverevisions';
 	$wgAvailableRights[] = 'viewlinktolatest';
 	$wgAvailableRights[] = 'viewapprover';
-
-	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['egApprovedRevsEnabledNamespaces'] = [
-		'name' => 'Enable ApprovedRevs in this namespace?',
-		'main' => true,
-		'talk' => true,
-		'blacklisted' => [],
-		'vestyle' => true,
-		'overridedefault' => false
-	];
 }
 
 if ( $wmgUseArrays ) {
@@ -210,14 +201,6 @@ if ( $wmgUseCollection ) {
 
 if ( $wmgUseCommentStreams ) {
 	wfLoadExtension ( 'CommentStreams' );
-	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgCommentStreamsAllowedNamespaces'] = [
-		'name' => 'Can comments appear in this namespace?',
-		'main' => true,
-		'talk' => true,
-		'blacklisted' => [],
-		'vestyle' => false,
-		'overridedefault' => null,
-	];
 }
 
 if ( $wmgUseComments ) {
@@ -435,15 +418,6 @@ if ( $wmgUseFemiwiki ) {
 
 if ( $wmgUseFlaggedRevs ) {
 	wfLoadExtension( 'FlaggedRevs' );
-
-	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgFlaggedRevsNamespaces'] = [
-		'name' => 'Enable FlaggedRevs in this namespace?',
-		'main' => true,
-		'talk' => false,
-		'blacklisted' => [ 8 ],
-		'vestyle' => false,
-		'overridedefault' => false
-	];
 }
 
 if ( $wmgUseFlow ) {
@@ -718,15 +692,6 @@ if ( $wmgUseMassEditRegex ) {
 
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
-
-	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgNamespacesToPostIn'] = [
-		'name' => 'Can MassMessage post messages in this namespace?',
-		'main' => true,
-		'talk' => false,
-		'blacklisted' => [],
-		'vestyle' => false,
-		'overridedefault' => false
-	];
 }
 
 if ( $wmgUseMath ) {
@@ -1082,15 +1047,6 @@ if ( $wmgUseTemplateData ) {
 	
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
-
-	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgTemplateSandboxEditNamespaces'] = [
-		'name' => 'Can TemplateSandbox be used in this namespace?',
-		'main' => true,
-		'talk' => true,
-		'blacklisted' => [],
-		'vestyle' => false,
-		'overridedefault' => false
-	];
 }
 
 if ( $wmgUseTemplateStyles ) {
@@ -1223,15 +1179,6 @@ if ( $wmgUseVisualEditor ) {
 	} else {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
-
-	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgVisualEditorAvailableNamespaces'] = [
-		'name' => 'Enable VisualEditor in this namespace?',
-		'main' => true,
-		'talk' => true,
-		'blacklisted' => [],
-		'vestyle' => true,
-		'overridedefault' => false
-	];
 }
 
 if ( $wmgUseVoteNY ) {
@@ -1244,10 +1191,6 @@ if ( $wmgUseWebChat ) {
 
 }
 
-if ( $wmgUseWhoIsWatching ) {
-	wfLoadExtension( 'WhoIsWatching' );
-}
-
 if ( $wmgUseWidgets ) {
 	wfLoadExtension( 'Widgets' );
 }
@@ -1258,15 +1201,6 @@ if ( $wmgUseWikiCategoryTagCloud ) {
 
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
-
-	$wi->config->settings['wgManageWikiNamespacesAdditional']['default']['wgWPBNamespaces'] = [
-		'name' => 'Enable WikidataPageBanner in this namespace?',
-		'main' => true,
-		'talk' => true,
-		'blacklisted' => [],
-		'vestyle' => false,
-		'overridedefault' => false
-	];
 }
 
 $wgEnableWikibaseRepo = false;
