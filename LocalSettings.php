@@ -2907,13 +2907,16 @@ $wi->config->settings = [
 	],
 
 	// RecentChanges
+	'wgFeedLimit' => [
+		'default' => 50,
+	],
 	'wgRCMaxAge' => [
 		'default' => 180 * 24 * 3600,
 	],
 	'wgRCLinkDays' => [
 		'default' => [ 1, 3, 7, 14, 30 ],
 	],
-
+	
 	// RelatedArticles settings
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'default' => [
