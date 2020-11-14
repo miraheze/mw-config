@@ -1651,7 +1651,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'restricted',
-		'help' => 'Compress new page revisions if possible. System administrators: after enabling this, don't forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki wikidatabase --type gzip</code>.',
+		'help' => 'Compress new page revisions if possible. System administrators: after enabling this, don\'t forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki wikidatabase --type gzip</code>.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
