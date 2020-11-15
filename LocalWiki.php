@@ -78,7 +78,7 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 
 // $wmgContactPageRecipientUser
 if( $wmgContactPageRecipientUser ) {
-	$wi->config->settings['wgContactConfig']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
+	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
 // $wgLogos
