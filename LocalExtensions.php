@@ -211,7 +211,7 @@ if ( $wmgUseCommonsMetadata ) {
 	wfLoadExtension( 'CommonsMetadata' );
 }
 
-if ( $wmgUseContactPage ) {
+if ( $wmgUseContactPage && $wmgContactPageRecipientUser ) {
 	wfLoadExtension( 'ContactPage' );
 }
 
