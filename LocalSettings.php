@@ -222,6 +222,9 @@ $wi->config->settings = [
 			'RLStyleModules' => [],
 		],
 	],
+	'wmgContactPageRecipientUser' => [
+		'default' => null,
+	],
 
 	// Cosmos settings
 	'wgCosmosBannerLogo' => [
