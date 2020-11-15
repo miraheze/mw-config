@@ -430,7 +430,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'contactpage' => [
-			'name' => 'ContactPage <br/> <small>Remember to set <code>$wmgContactPageRecipientUser</code> in <a href="/wiki/Special:ManageWiki/settings">Special:ManageWiki/settings</a>.</small>',
+			'name' => 'ContactPage <br/> <small>(Remember to set <code>$wmgContactPageRecipientUser</code> in Special:ManageWiki/settings)</small>',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ContactPage',
 			'var' => 'wmgUseContactPage',
 			'conflicts' => false,
