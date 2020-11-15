@@ -76,6 +76,11 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
+// $wgContactPageRecipientUser
+if( $wgContactPageRecipientUser ) {
+	$wi->config->settings['wgContactConfig']['default']['RecipientUser'] = $wgContactPageRecipientUser;
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
