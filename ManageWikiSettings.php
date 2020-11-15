@@ -1340,6 +1340,15 @@ $wgManageWikiSettings = [
 	],
 
 	// Notifications
+	'wmgContactPageRecipientUser' => [
+		'name' => 'Contact Page Recipient User',
+		'from' => 'contactpage',
+		'restricted' => false,
+		'type' => 'user',
+		'overridedefault' => null,
+		'section' => 'notifications',
+		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
+	],
 	'wgCookieWarningMoreUrl' => [
 		'name' => 'CookieWarning More Url',
 		'from' => 'mediawiki',
