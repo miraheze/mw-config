@@ -1860,20 +1860,6 @@ $wi->config->settings = [
 			'eswiki',
 			'wikispecies',
 		],
-		'+hispanowiki' => [
-			'u',
-			'w',
-		],
-		'+privadowiki' => [
-			'w',
-			'v',
-			'n',
-		],
-		'+ucroniaswiki' => [
-			'h',
-			'w',
-			'alt',
-		],
 	],
 
 	// Imports
@@ -3040,12 +3026,6 @@ $wi->config->settings = [
 		],
 		'+horizonwiki' => [
 			'NS_MAIN' => 'index,follow'
-		],
-		'+hispanowiki' => [
-			'NS_TEMPLATE' => 'noindex,nofollow',
-			'NS_MODULE' => 'noindex,nofollow',
-			'NS_MEDIAWIKI' => 'noindex,nofollow',
-			'NS_USER' => 'noindex,nofollow',
 		],
 		'+ucroniaswiki' => [
 			'NS_TEMPLATE' => 'noindex,nofollow',
