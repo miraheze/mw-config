@@ -207,22 +207,6 @@ $wi->config->settings = [
 		'holidayswiki' => 'numeric',
 	],
 
-	// ContactPage
-	'wgContactConfig' => [
-		'default' => [
-			'RecipientUser' => null, // Username of wiki requester
-			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Miraheze No Reply',
-			'RequireDetails' => true,
-			'IncludeIP' => false, // Should never be set to true
-			'MustBeLoggedIn' => false,
-			'AdditionalFields' => [],
-			'DisplayFormat' => 'table',
-			'RLModules' => [],
-			'RLStyleModules' => [],
-		],
-	],
-
 	// Cosmos settings
 	'wgCosmosBannerLogo' => [
 		'default' => null,
@@ -842,7 +826,10 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseContactPage' => [
-		'default' => false,
+		'default' => false, // Add wiki config to ContactPage.php
+		'christipediawiki' => true,
+		'guiaslocaiswiki' => true,
+		'test2wiki' => true,
 	],
 	'wmgUseContributionScores' => [
 		'default' => false,
