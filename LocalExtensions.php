@@ -213,6 +213,10 @@ if ( $wmgUseCommonsMetadata ) {
 
 if ( $wmgUseContactPage ) {
 	wfLoadExtension( 'ContactPage' );
+
+	// Contact Page is a fairly complex (well long) extension to configure.
+	// All config should be in the file below on a wikidb basis.
+	require_once "/srv/mediawiki/config/ContactPage.php";
 }
 
 if ( $wmgUseContributionScores ) {
