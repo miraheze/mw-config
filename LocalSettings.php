@@ -210,7 +210,7 @@ $wi->config->settings = [
 	// ContactPage
 	'wgContactConfig' => [
 		'default' => [
-			'RecipientUser' => null, // Username of wiki requester
+			'RecipientUser' => User::newFromId(2)->getName(), // Username of wiki requester
 			'SenderEmail' => $wgPasswordSender,
 			'SenderName' => 'Miraheze No Reply',
 			'RequireDetails' => true,
@@ -223,7 +223,7 @@ $wi->config->settings = [
 		],
 	],
 	'wmgContactPageRecipientUser' => [
-		'default' => null,
+		'default' => User::newFromId(2)->getName(), // Username of wiki requester,
 	],
 
 	// Cosmos settings
