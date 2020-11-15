@@ -1978,9 +1978,9 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'list',
 		'options' => [
-			'none',
-			'main',
-			'sidebar'
+			'none' => 'none',
+			'main' => 'main',
+			'sidebar' => 'sidebar'
 		],
 		'overridedefault' => 'none',
 		'section' => 'styling',
@@ -1993,7 +1993,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => 'default',
 		'section' => 'styling',
-		'help' => 'Width of the logo in the main navbar (i.e. you have to set <code>$wgMedikShowLogo<code> to <code>\'main\'</code> first).',
+		'help' => 'Width of the logo in the main navbar (i.e. you have to set <code>$wgMedikShowLogo</code> to <code>\'main\'</code> first).',
 	],
 	'wgMedikUseLogoWithoutText' => [
 		'name' => 'Medik Use Logo Without Text',
@@ -2019,8 +2019,8 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'list',
 		'options' => [
-			'default',
-			'full'
+			'default' => 'default',
+			'full' => 'full'
 		],
 		'overridedefault' => 'default',
 		'section' => 'styling',
