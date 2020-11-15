@@ -3426,17 +3426,6 @@ $wi->config->settings = [
 	'wgVisualEditorUseSingleEditTab' => [
 		'default' => false,
 	],
-	'wgVisualEditorAvailableContentModels' => [
-		'default' => [
-			'wikitext' => 'article',
-		],
-		'dcmultiversewiki' => [
-			'wikitext' => 'article',
-			'javascript' => 'article',
-			'css' => 'article',
-			'scribunto' => 'article',
-		],
-	],
 	'wgVisualEditorEnableDiffPage' => [
 		'default' => false,
 	],
