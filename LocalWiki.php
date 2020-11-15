@@ -77,6 +77,7 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 }
 
 // $wgContactPageRecipientUser
+$wi->config->settings['wgContactPageRecipientUser']['default'] = User::newFromId(2)->getName();
 if( $wgContactPageRecipientUser ) {
 	$wi->config->settings['wgContactConfig']['default']['RecipientUser'] = $wgContactPageRecipientUser;
 }
