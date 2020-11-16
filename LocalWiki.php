@@ -210,7 +210,7 @@ if ( $wgDBname === 'simcitywiki' ) {
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/All_rights_reserved_logo.svg/32px-All_rights_reserved_logo.svg.png';
+		$wi->config->settings['wgRightsIcon']['default'] = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/License_icon-copyright-88x31.svg/88px-License_icon-copyright-88x31.svg.png';
 		$wi->config->settings['wgRightsText']['default'] = 'All Rights Reserved';
 		$wi->config->settings['wgRightsUrl']['default'] = false;
 		break;
