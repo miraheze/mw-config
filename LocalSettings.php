@@ -225,7 +225,7 @@ $wi->config->settings = [
 		],
 	],
 	'wmgContactPageRecipientUser' => [
-		'default' => null,
+		'default' => false,
 	],
 
 	// Cosmos settings

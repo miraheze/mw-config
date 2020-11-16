@@ -1345,7 +1345,7 @@ $wgManageWikiSettings = [
 		'from' => 'contactpage',
 		'restricted' => false,
 		'type' => 'user',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
 	],
