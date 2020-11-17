@@ -932,7 +932,7 @@ $wgManageWikiSettings = [
 	],
 	'wgUserBoard' => [
 		'name' => 'User Board',
-		'restricted' => false,
+		'restricted' => true,
 		'from' => 'socialprofile',
 		'type' => 'check',
 		'overridedefault' => false,
@@ -949,7 +949,7 @@ $wgManageWikiSettings = [
 			'articles',
 			'avatar',
 			'awards',
-			'board',
+			/*'board',*/
 			'custom',
 			'foes',
 			'friends',
