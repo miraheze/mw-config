@@ -2012,8 +2012,8 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'syntaxhighlight_geshi' => [
-			'name' => 'SyntaxHighlight_GeSHi',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SyntaxHighlight_GeSHi',
+			'name' => 'SyntaxHighlight',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SyntaxHighlight',
 			'var' => 'wmgUseSyntaxHighlightGeSHi',
 			'conflicts' => false,
 			'requires' => [],
