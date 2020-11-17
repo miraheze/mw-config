@@ -3180,7 +3180,7 @@ $wi->config->settings = [
 		'default' => [
 			'edits' => 0,
 		],
-		'allthetropes' => [
+		'allthetropeswiki' => [
 			'edits' => 10,
 		],
 	],
