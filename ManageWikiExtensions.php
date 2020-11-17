@@ -2154,7 +2154,7 @@ $wgManageWikiExtensions = [
 					],
 					'user' => [
 						'permissions' => [
-							'translate-review',
+							'translate-messagereview',
 						],
 					],
 				],
