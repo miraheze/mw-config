@@ -190,6 +190,7 @@ $IP/extensions/SimpleBlogPage/SimpleBlogPage.php
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
 $IP/extensions/SlackNotifications/extension.json
+$IP/extensions/SnapProjectEmbed/extension.json
 $IP/extensions/SoftRedirector/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
 $IP/extensions/SocialProfile/SystemGifts/extension.json
