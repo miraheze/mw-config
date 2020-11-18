@@ -1863,6 +1863,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'snapprojectembed' => [
+			'name' => 'SnapProjectEmbed',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SnapProjectEmbed',
+			'var' => 'wmgUseSnapProjectEmbed',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'softredirector' => [
 			'name' => 'SoftRedirector',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SoftRedirector',
