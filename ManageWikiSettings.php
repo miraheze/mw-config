@@ -1776,6 +1776,7 @@ $wgManageWikiSettings = [
 			'ini' => 'ini',
 			'ipe' => 'ipe',
 			'ips' => 'ips',
+			'jfif' => 'jfif',
 			'jpeg' => 'jpeg',
 			'jpg' => 'jpg',
 			'js' => 'js',
