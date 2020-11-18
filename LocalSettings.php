@@ -217,7 +217,14 @@ $wi->config->settings = [
 				'RequireDetails' => true,
 				'IncludeIP' => false, // Should never be set to true
 				'MustBeLoggedIn' => false,
-				'AdditionalFields' => [],
+				'AdditionalFields' => [
+					'Text' => [
+						'label-message' => 'emailmessage',
+						'type' => 'textarea',
+						'rows' => 20,
+						'required' => true,
+					],
+				],
 				'DisplayFormat' => 'table',
 				'RLModules' => [],
 				'RLStyleModules' => [],
