@@ -999,7 +999,11 @@ if ( $wmgUseSlackNotifications ) {
 		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
 }
 
-if ( $wmgUseSoftRedirector) {
+if ( $wmgUseSnapProjectEmbed ) {
+	wfLoadExtension( 'SnapProjectEmbed' );
+}
+
+if ( $wmgUseSoftRedirector ) {
 	wfLoadExtension( 'SoftRedirector' );
 }
 
