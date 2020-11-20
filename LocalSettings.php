@@ -2507,7 +2507,9 @@ $wi->config->settings = [
 	
 	// MediaModeration settings
 	'wgMediaModerationRecipientList' => [
-		'default' => 'owen@miraheze.org',
+		'default' => [
+			'owen@miraheze.org',
+		],
 	],
 	'wgMediaModerationFrom' => [
 		'default' => 'noreply@miraheze.org',
