@@ -123,6 +123,7 @@ $IP/extensions/Maps/extension.json
 $IP/extensions/MassEditRegex/extension.json
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
+$IP/extensions/MediaModeration/extension.json
 $IP/extensions/MediaWikiChat/extension.json
 $IP/extensions/Mermaid/extension.json
 $IP/extensions/MirahezeMagic/extension.json

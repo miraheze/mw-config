@@ -25,6 +25,7 @@ wfLoadExtensions( [
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
+	'MediaModeration',
 	'MirahezeMagic',
 	'Nuke',
 	'OATHAuth',

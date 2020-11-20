@@ -2504,6 +2504,17 @@ $wi->config->settings = [
 	'wgMatomoAnalyticsDisableCookie' => [
 		'default' => true,
 	],
+	
+	// MediaModeration settings
+	'wgMediaModerationRecipientList' => [
+		'default' => 'owen@miraheze.org',
+	],
+	'wgMediaModerationFrom' => [
+		'default' => 'noreply@miraheze.org',
+	],
+	'wgMediaModerationCheckOnUpload' => [
+		'default' => true,
+	],
 
 	// MediaWikiChat settings
 	'wgChatLinkUsernames' => [
