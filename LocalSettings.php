@@ -3027,6 +3027,9 @@ $wi->config->settings = [
 	'wgDefaultRobotPolicy' => [
 		'default' => 'index,follow',
 	],
+	'wmgDefaultRobotPolicy' => [
+		'default' => [ 'index', 'follow' ],
+	],
 	'wgNamespaceRobotPolicies' => [
 		'default' => [
 			'NS_SPECIAL' => 'noindex',
