@@ -875,10 +875,7 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
-	wfLoadExtensions( [
-		'TextExtracts',
-		'Popups',
-	] );
+	wfLoadExtensions( 'Popups' );
 	
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
