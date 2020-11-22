@@ -188,15 +188,16 @@ if ( $wmgUseCollapsibleVector ) {
 }
 
 if ( $wmgUseCollection ) {
-	wfLoadExtension( 'Collection' );
+	wfLoadExtensions( [
+		'Collection',
+		'ElectronPdfService',
+	] );
 
 	$wgCommunityCollectionNamespace = 5;
 
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
 	$wgCollectionPODPartners = [];
-
-	wfLoadExtension( 'ElectronPdfService' );
 }
 
 if ( $wmgUseCommentStreams ) {
@@ -472,12 +473,11 @@ if ( $wmgUseGeoData ) {
 }
 
 if ( $wmgUseGettingStarted ) {
-	wfLoadExtension( 'GettingStarted' );
-
-	// Required deps of GettingStarted
-	wfLoadExtension( 'GuidedTour' );
+	wfLoadExtensions( [
+		'GettingStarted',
+		'GuidedTour',
+	] );
 }
-
 
 if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
@@ -936,7 +936,6 @@ if ( $wmgUseRefreshed ) {
 	wfLoadSkin( 'Refreshed' );
 }
 
-
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 
@@ -1036,9 +1035,10 @@ if ( $wmgUseSyntaxHighlightGeSHi ) {
 }
 
 if ( $wmgUseTabsCombination ) {
-	wfLoadExtension( 'Tabber' );
-
-	wfLoadExtension( 'Tabs' );
+	wfLoadExtensions( [
+		'Tabber',
+		'Tabs',
+	] );
 }
 
 if ( $wmgUseTemplateData ) {
@@ -1054,9 +1054,10 @@ if ( $wmgUseTemplateStyles ) {
 }
 
 if ( $wmgUseTemplateWizard ) {
-	wfLoadExtension( 'TemplateWizard' );
-
-        wfLoadExtension( 'TemplateData' );
+	wfLoadExtensions( [
+		'TemplateWizard',
+		'TemplateData',
+	] );
 }
 
 if ( $wmgUseTextExtracts ) {
@@ -1258,4 +1259,3 @@ if ( $wmgUseYouTube ) {
 if ( $wmgUseRegexFunctions ) {
 	wfLoadExtension( 'RegexFunctions' );
 }
-
