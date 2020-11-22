@@ -1492,6 +1492,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'pageimages' => [
+			'name' => 'Page Images',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageImages',
+			'var' => 'wmgUsePageImages',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'pagenotice' => [
 			'name' => 'Page Notice',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageNotice',
@@ -1564,7 +1571,10 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Popups',
 			'var' => 'wmgUsePopups',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'pageimages',
+				],
 		],
 		'pollny' => [
 			'name' => 'PollNY',
