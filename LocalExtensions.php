@@ -1051,6 +1051,8 @@ if ( $wmgUseTemplateSandbox ) {
 
 if ( $wmgUseTemplateStyles ) {
 	wfLoadExtension( 'TemplateStyles' );
+	
+	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['TemplateStyles'] = 'sanitized-css';
 }
 
 if ( $wmgUseTemplateWizard ) {
