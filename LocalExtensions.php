@@ -875,7 +875,7 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
-	wfLoadExtensions( 'Popups' );
+	wfLoadExtension( 'Popups' );
 	
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
