@@ -2301,6 +2301,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [
 				'extensions' => [
+					[ 'commentstreams', 'pageforms' ],
 					'visualeditor',
 				],
 			],
