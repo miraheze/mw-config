@@ -877,7 +877,6 @@ if ( $wmgUsePortableInfobox ) {
 if ( $wmgUsePopups ) {
 	wfLoadExtensions( [
 		'TextExtracts',
-		'PageImages',
 		'Popups',
 	] );
 	
