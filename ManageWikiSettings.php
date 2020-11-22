@@ -631,8 +631,9 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'list-multi',
 		'options' => [
-			'all' => 'all',
 			'noindex' => 'noindex',
+			'index' => 'index',
+			'follow' => 'follow',
 			'nofollow' => 'nofollow',
 			'none' => 'none',
 			'noarchive' => 'noarchive',
@@ -642,7 +643,6 @@ $wgManageWikiSettings = [
 			'max-image-preview:large' => 'max-image-preview:large',
 			'notranslate' => 'notranslate',
 			'noimageindex' => 'noimageindex',
-			
 		],
 		'overridedefault' => [ 'index', 'follow' ],
 		'section' => 'edit',
