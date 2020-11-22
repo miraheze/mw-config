@@ -1,7 +1,7 @@
 <?php
 
 // Only enable if syslog-ng is deployed on the server
-if ( $wmgCentralLoggingSystem ) {
+if ( wfHostname() === $wmgCentralLoggingSystem ) {
 	$wi->config->settings['wgMWLoggerDefaultSpi']['default'] = [
 		'class' => \MediaWiki\Logger\MonologSpi::class,
 		'args' => [
