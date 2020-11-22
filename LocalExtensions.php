@@ -834,6 +834,10 @@ if ( $wmgUsePageForms ) {
 	wfLoadExtension( 'PageForms' );
 }
 
+if ( $wmgUsePageImages ) {
+	wfLoadExtension( 'PageImages' );
+}
+
 if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
 }
@@ -873,7 +877,6 @@ if ( $wmgUsePortableInfobox ) {
 if ( $wmgUsePopups ) {
 	wfLoadExtensions( [
 		'TextExtracts',
-		'PageImages',
 		'Popups',
 	] );
 	

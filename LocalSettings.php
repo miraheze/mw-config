@@ -1183,6 +1183,9 @@ $wi->config->settings = [
 	'wmgUsePageForms' => [
 		'default' => false,
 	],
+	'wmgUsePageImages' => [
+		'default' => false,
+	],
 	'wmgUsePageNotice' => [
 		'default' => false,
 	],
