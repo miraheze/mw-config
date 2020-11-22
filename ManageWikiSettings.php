@@ -625,6 +625,29 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Paging limit for items in categories.',
 	],
+	'wmgDefaultRobotPolicy' => [
+		'name' => 'Default Robot Policy',
+		'from' => 'mediawiki',
+		'restricted' => false,
+		'type' => 'list-multi',
+		'options' => [
+			'all' => 'all',
+			'noindex' => 'noindex',
+			'nofollow' => 'nofollow',
+			'none' => 'none',
+			'noarchive' => 'noarchive',
+			'nosnippet' => 'nosnippet',
+			'max-image-preview:none' => 'max-image-preview:none',
+			'max-image-preview:standard' => 'max-image-preview:standard',
+			'max-image-preview:large' => 'max-image-preview:large',
+			'notranslate' => 'notranslate',
+			'noimageindex' => 'noimageindex',
+			
+		],
+		'overridedefault' => [ 'index', 'follow' ],
+		'section' => 'edit',
+		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
+	],
 	'wgShowCreditsIfMax' => [
 		'name' => 'Editing attribution',
 		'from' => 'mediawiki',
@@ -1617,15 +1640,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Restricted (where settings that are restricted go)
-	'wgDefaultRobotPolicy' => [
-		'name' => 'Default Robot Policy',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => 'index,follow',
-		'section' => 'restricted',
-		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
-	],
 	'wgModerationEmail' => [
 		'name' => 'Moderation Email',
 		'from' => 'moderation',
