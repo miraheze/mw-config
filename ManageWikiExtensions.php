@@ -1574,6 +1574,7 @@ $wgManageWikiExtensions = [
 			'requires' => [
 				'extensions' => [
 					'pageimages',
+					'textextracts',
 				],
 			],
 		],
