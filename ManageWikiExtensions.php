@@ -1575,6 +1575,7 @@ $wgManageWikiExtensions = [
 				'extensions' => [
 					'pageimages',
 				],
+			],
 		],
 		'pollny' => [
 			'name' => 'PollNY',
