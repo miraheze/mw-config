@@ -1571,11 +1571,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Popups',
 			'var' => 'wmgUsePopups',
 			'conflicts' => false,
-			'requires' => [
-				'extensions' => [
-					'pageimages',
-				],
-			],
+			'requires' => [],
 		],
 		'pollny' => [
 			'name' => 'PollNY',
