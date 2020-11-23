@@ -2,6 +2,7 @@
 
 $hosts = [
  	'jobrunner1',
+	'jobrunner2',
  	'test2'
  ];
 
