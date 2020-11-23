@@ -1,7 +1,12 @@
 <?php
 
+$hosts = [
+ 	'jobrunner1',
+ 	'test2'
+ ];
+
 // Only enable if syslog-ng is deployed on the server
-if ( wfHostname() === 'test2' ) {
+if ( in_array( wfHostname(), $hosts ) ) {
 	$wi->config->settings['wgMWLoggerDefaultSpi']['default'] = [
 		'class' => \MediaWiki\Logger\MonologSpi::class,
 		'args' => [
