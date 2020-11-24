@@ -3273,6 +3273,9 @@ $wi->config->settings = [
 	'wgDefaultSkin' => [
 		'default' => 'vector',
 	],
+	'wgFallbackSkin' => [
+		'default' => 'vector',
+	],
 	'wgFavicon' => [
 		'default' => '/favicon.ico',
 	],
