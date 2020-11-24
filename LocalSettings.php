@@ -2640,8 +2640,8 @@ $wi->config->settings = [
 	'wgMFAutodetectMobileView' => [
 		'default' => false,
 	],
-	'wgMFDefaultSkinClass' => [
-		'default' => 'SkinMinerva',
+	'wgDefaultMobileSkin' => [
+		'default' => 'minerva',
 	],
 	'wgMobileUrlTemplate' => [
 		'default' => '',
