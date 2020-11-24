@@ -3353,11 +3353,14 @@ $wi->config->settings = [
 			],
 		],
 	],
-	'wgTranslateTranslationServices' => [
-		'default' => [],
-	],
 	'wgTranslateDocumentationLanguageCode' => [
 		'default' => false,
+	],
+	'wgTranslatePageTranslationULS' => [
+		'default' => false,
+	],
+	'wgTranslateTranslationServices' => [
+		'default' => [],
 	],
 	'wmgUseYandexTranslate' => [
 		'default' => false,
@@ -3379,6 +3382,9 @@ $wi->config->settings = [
 	],
 	'wgULSLanguageDetection' => [
 		'default' => false,
+	],
+	'wgULSPosition' => [
+		'default' => 'personal',
 	],
 
 	// UrlShortener
