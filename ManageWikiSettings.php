@@ -1929,7 +1929,17 @@ $wgManageWikiSettings = [
 		'options' => [],
 		'overridedefault' => 'vector',
 		'section' => 'styling',
-		'help' => 'This change the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
+		'help' => 'Changes the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
+	],
+	'wgDefaultMobileSkin' => [
+		'name' => 'Default Mobile Skin',
+		'from' => 'mobilefrontend',
+		'restricted' => false,
+		'type' => 'skin',
+		'options' => [],
+		'overridedefault' => 'minerva',
+		'section' => 'styling',
+		'help' => 'Changes the default mobile skin to be used by the Mobile Frontend extension. Some skins may not be compatable.',
 	],
 	'wgLogo' => [
 		'name' => 'Logo',
