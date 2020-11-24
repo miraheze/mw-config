@@ -2881,9 +2881,6 @@ $wi->config->settings = [
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
-		'+minecraftathomewiki' => [
-			'enotifwatchlistpages' => 0,
-		],
 		'+reviwikiwiki' => [
 			'usenewrc' => 0
 		],
