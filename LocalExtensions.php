@@ -718,15 +718,6 @@ if ( $wmgUseMobileFrontend ) {
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
-
-	$wgHooks['EnterMobileMode'][] = function () {
-		global $wgIncludeLegacyJavaScript;
-
-		// Disable loading of legacy wikibits in the mobile web experience
-		$wgIncludeLegacyJavaScript = false;
-
-		return true;
-	};
 }
 
 if ( $wmgUseMobileTabsPlugin ) {
