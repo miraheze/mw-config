@@ -1133,6 +1133,16 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Language code for message documentation.',
 	],
+	'wgTranslatePageTranslationULS' => [
+		'name' => 'Translate Page Translation ULS',
+		'from' => 'translate',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'localisation',
+		'help' => 'When user changes interface language via ULS, should we also switch the language of the translatable page?',
+	],
+	
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'name' => 'Minerva Always Show Language Button',
 		'from' => 'mediawiki',
@@ -1143,13 +1153,26 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to show the language switcher button even if no languages are available for the page.',
 	],
 	'wgULSAnonCanChangeLanguage' => [
-		'name' => 'Allow anonymous users to change language',
+		'name' => 'ULS Anon Can Change Language',
 		'from' => 'universallanguageselector',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Enabling allows anonymous users to control the language they view the wiki in.',
+	],
+	'wgULSPosition' => [
+		'name' => 'ULS Position',
+		'from' => 'universallanguageselector',
+		'restricted' => false,
+		'type' => 'list',
+		'options' => [
+			'interlanguage' => 'interlanguage',
+			'personal' => 'personal',
+		],
+		'overridedefault' => 'personal',
+		'section' => 'localisation',
+		'help' => 'The location and the form of the language selection trigger.',
 	],
 	'wgPageLanguageUseDB' => [
 		'name' => 'Enable per page language',
