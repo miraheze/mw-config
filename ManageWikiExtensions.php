@@ -1189,12 +1189,24 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'minervaneue' => [
+			'name' => 'MinervaNeue (Skin)',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Minerva_Neue',
+			'var' => 'wmgUseMinervaNeue',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'mobilefrontend' => [
 			'name' => 'MobileFrontend',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend',
 			'var' => 'wmgUseMobileFrontend',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'minervaneue',
+				],
+			],
 		],
 		'mobiletabsplugin' => [
 			'name' => 'MobileTabsPlugin',
