@@ -769,7 +769,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GettingStarted',
 			'var' => 'wmgUseGettingStarted',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'guidedtour',
+				],
+			],
 		],
 		'globaluserpage' => [
 			'name' => 'GlobalUserPage',
