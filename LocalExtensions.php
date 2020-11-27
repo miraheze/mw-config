@@ -370,7 +370,7 @@ if ( $wmgUseDuskToDawn ) {
 }
 
 if ( $wmgUseDonateBoxInSidebar ) {
-	wfLoadExtension( 'DonateBoxInSidebar' );
+	require_once "$IP/extensions/DonateBoxInSidebar/DonateBoxInSidebar.php";
 }
 
 if ( $wmgUseDPLForum ) {
