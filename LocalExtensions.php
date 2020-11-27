@@ -473,10 +473,7 @@ if ( $wmgUseGeoData ) {
 }
 
 if ( $wmgUseGettingStarted ) {
-	wfLoadExtensions( [
-		'GettingStarted',
-		'GuidedTour',
-	] );
+	wfLoadExtension( 'GettingStarted' );
 }
 
 if ( $wgMirahezeCommons && !$cwPrivate ) {
