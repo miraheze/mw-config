@@ -1042,10 +1042,7 @@ if ( $wmgUseTemplateStyles ) {
 }
 
 if ( $wmgUseTemplateWizard ) {
-	wfLoadExtensions( [
-		'TemplateWizard',
-		'TemplateData',
-	] );
+	wfLoadExtension( 'TemplateWizard' );
 }
 
 if ( $wmgUseTextExtracts ) {
