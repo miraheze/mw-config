@@ -962,7 +962,7 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseShortURL ) {
+if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 }
 
