@@ -2269,6 +2269,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'urlshortener' => [
+			'name' => 'UrlShortener',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UrlShortener',
+			'var' => 'wmgUseUrlShortener',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'userfunctions' => [
 			'name' => 'UserFunctions',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UserFunctions',
