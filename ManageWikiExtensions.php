@@ -975,7 +975,7 @@ $wgManageWikiExtensions = [
 		],
 		'liberty' => [
 			'name' => 'Liberty (Skin)',
-			'linkPage' => 'https://github.com/librewiki/liberty-skin',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Liberty',
 			'var' => 'wmgUseLiberty',
 			'conflicts' => false,
 			'requires' => [],
