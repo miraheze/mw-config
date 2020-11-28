@@ -2086,7 +2086,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TemplateWizard',
 			'var' => 'wmgUseTemplateWizard',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+ 				'extensions' => [
+ 					'templatedata',
+ 				],
+ 			],
 		],
 		'textextracts' => [
 			'name' => 'TextExtracts',
