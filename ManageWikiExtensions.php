@@ -2564,6 +2564,12 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'wikieditor' => [
+			'name' => 'WikiEditor',
+			'linkpage' => 'https://www.mediawiki.org/wiki/Extension:WikiEditor',
+			'var' => 'wmgUseWikiEdior',
+			'conflicts' => false,
+			'requires' => [],
 		'wikiforum' => [
 			'name' => 'WikiForum',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
