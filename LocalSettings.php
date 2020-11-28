@@ -877,9 +877,6 @@ $wi->config->settings = [
 	'wmgUseDarkMode' => [
 		'default' => false,
 	],
-	'wmgUseDataDump' => [
-		'default' => true,
-	],
 	'wmgUseDataTransfer' => [
 		'default' => false,
 	],
