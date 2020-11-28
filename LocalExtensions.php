@@ -369,10 +369,6 @@ if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 }
 
-if ( $wmgUseDonateBoxInSidebar ) {
-	require_once "$IP/extensions/DonateBoxInSidebar/DonateBoxInSidebar.php";
-}
-
 if ( $wmgUseDPLForum ) {
 	wfLoadExtension( 'DPLForum' );
 }
