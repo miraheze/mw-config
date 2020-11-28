@@ -2089,6 +2089,7 @@ $wgManageWikiExtensions = [
 			'requires' => [
 			         'extensions' => [
 					'wikieditor',
+					'templatedata',
 				],
 		],
 		'textextracts' => [
