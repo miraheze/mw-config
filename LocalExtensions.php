@@ -1053,7 +1053,10 @@ if ( $wmgUseTextExtracts ) {
 }
 
 if ( $wmgUseTranslate ) {
-	wfLoadExtension( 'Translate' );
+	wfLoadExtensions( [
+		'UniversalLanguageSelector',
+		'Translate',
+	] );
 
 	$wgULSGeoService = false;
 }
