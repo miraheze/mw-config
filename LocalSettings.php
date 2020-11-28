@@ -1273,9 +1273,8 @@ $wi->config->settings = [
 	'wmgUseScratchBlocks' => [
 		'default' => false,
 	],
-	'wmgUseShortURL' => [
-		'default' => true,
-		'macfan4000wiki' => false,
+	'wmgUseUrlShortener' => [
+		'default' => false,
 	],
 	'wmgUseSimpleBlogPage' => [
 		'default' => false,
@@ -2075,6 +2074,7 @@ $wi->config->settings = [
 			'globaluserpage',
 			'mobilefrontend',
 			'syntaxhighlight_geshi',
+			'urlshortener',
 		],
 	],
 	'wgManageWikiCDBDirectory' => [
