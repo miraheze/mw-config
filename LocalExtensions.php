@@ -713,6 +713,7 @@ if ( $wmgUseMetrolook ) {
 
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
+	wfLoadSkin( 'MinervaNeue' );
 
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
