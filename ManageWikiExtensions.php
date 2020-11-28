@@ -2164,7 +2164,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Translate',
 			'var' => 'wmgUseTranslate',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'universallanguageselector',
+				],
+			],
 			'install' => [
 				'permissions' => [
 					'*' => [
