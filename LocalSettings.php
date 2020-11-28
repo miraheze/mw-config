@@ -1097,6 +1097,9 @@ $wi->config->settings = [
 	'wmgUseMetrolook' => [
 		'default' => false,
 	],
+	'wmgUseMinervaNeue' => [
+		'default' => false,
+	],
 	'wmgUseMobileFrontend' => [
 		'default' => false,
 	],
@@ -2069,6 +2072,7 @@ $wi->config->settings = [
 			'citethispage',
 			'darkmode',
 			'globaluserpage',
+			'minervaneue',
 			'mobilefrontend',
 			'syntaxhighlight_geshi',
 			'urlshortener',
