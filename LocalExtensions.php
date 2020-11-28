@@ -201,7 +201,7 @@ if ( $wmgUseCollection ) {
 }
 
 if ( $wmgUseCommentStreams ) {
-	wfLoadExtension ( 'CommentStreams' );
+	wfLoadExtension( 'CommentStreams' );
 }
 
 if ( $wmgUseComments ) {
@@ -1064,18 +1064,15 @@ if ( $wmgUseVariables ) {
 }
 
 if ( $wmgUseVEForAll ) {
-	wfLoadExtension ( 'VEForAll' );
+	wfLoadExtension( 'VEForAll' );
 }
 
 if ( $wmgUseVideo ) {
-	wfLoadExtension ( 'Video' );
+	wfLoadExtension( 'Video' );
 }
 
 if ( $wmgUseVisualEditor ) {
-	wfLoadExtensions( [
-		'VisualEditor',
-		'TemplateData',
-	] );
+	wfLoadExtension( 'VisualEditor' );
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
