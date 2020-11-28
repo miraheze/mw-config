@@ -910,10 +910,10 @@ $wi->config->settings = [
 	'wmgUseDummyFandoomMainpageTags' => [
 		'default' => false,
 	],
-	'wmgUseDynamicPageList' => [ // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
+	'wmgUseDynamicPageList' => [
 		'default' => false,
 	],
-	'wmgUseDynamicPageList3' => [ // DynamicPageList and DynamicPageList3 should NOT be enabled together; they do not work together
+	'wmgUseDynamicPageList3' => [
 		'default' => false,
 	],
 	'wmgUseDynamicSidebar' => [
