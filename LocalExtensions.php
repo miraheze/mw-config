@@ -210,13 +210,6 @@ if ( $wmgUseDarkMode ) {
 	wfLoadExtension( 'DarkMode' );
 }
 
-/**
- * This is a global extension, but we define the config here.
- */
-if ( $wmgUseDataDump ) {
-	wfLoadExtension( 'DataDump' );
-}
-
 if ( $wmgUseDataTransfer ) {
 	wfLoadExtension( 'DataTransfer' );
 }
