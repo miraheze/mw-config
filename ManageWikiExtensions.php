@@ -2656,5 +2656,5 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseYouTube',
 			'conflicts' => false,
 			'requires' => [],
-		],
+		]
 ];
