@@ -1431,6 +1431,9 @@ $wi->config->settings = [
 	'wmgUseWikimediaIncubator' => [
 		'default' => false,
 	],
+	'wmgUseWikiEditor' => [
+		'default' => false,
+	],
 	'wmgUseWikiLove' => [
 		'default' => false,
 	],
