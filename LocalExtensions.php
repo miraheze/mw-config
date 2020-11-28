@@ -116,46 +116,6 @@ if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
-if ( $wmgUseCirrusSearch ) {
-	wfLoadExtensions( [
-		'CirrusSearch',
-		'Elastica',
-	] );
-
-	$wgCirrusSearchClusters = [
-		'default' => [
-			[
-				'host' => 'es-lb.miraheze.org',
-				'transport' => 'Https',
-				'port' => '443',
-			],
-		],
-	];
-
-	$wgCirrusSearchAllowLeadingWildcard = false;
-	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
-	$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '15s';
-	$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 50;
-	$wgCirrusSearchSearchShardTimeout[ 'default' ] = '10s';
-	$wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 40;
-	$wgCirrusSearchReplicas = '0-0';
-	$wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 2;
-	$wgCirrusSearchConnectionAttempts = 3;
-	$wgCirrusSearchMasterTimeout = '5m';
-
-	$wgCirrusSearchShardCount = [ 'content' => 2, 'general' => 2, 'archive' => 2, 'titlesuggest' => 2 ];
-
-	if ( $wmgSearchType ) {
-		$wgSearchType = 'CirrusSearch';
-	}
-
-	if ( $wmgDisableSearchUpdate ) {
-		$wgDisableSearchUpdate = true;
-	} else {
-		$wgDisableSearchUpdate = false;
-	}
-}
-
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
 }

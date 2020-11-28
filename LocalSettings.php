@@ -814,9 +814,6 @@ $wi->config->settings = [
 	'wmgUseCharInsert' => [
 		'default' => false,
 	],
-	'wmgUseCirrusSearch' => [
-		'default' => false,
-	],
 	'wmgUseCite' => [
 		'default' => false,
 	],
