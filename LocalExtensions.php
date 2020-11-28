@@ -1086,6 +1086,10 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 	require_once "/srv/mediawiki/config/Wikibase.php";
 }
 
+if ( $wmgUseWikiEditor ) {
+	wfLoadExtension( 'WikiEditor' );
+}
+
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
 
