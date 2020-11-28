@@ -372,7 +372,7 @@ if ( $wmgUseGraph ) {
 }
 
 if ( $wmgUseGroupsSidebar ) {
-	require_once "$IP/extensions/GroupsSidebar/GroupsSidebar.php";
+	wfLoadExtension( 'GroupsSidebar' );
 }
 
 if ( $wmgUseGuidedTour ) {
@@ -452,7 +452,7 @@ if ( $wmgUseLastModified ) {
 }
 
 if ( $wmgUseLdap ) {
-	require_once "$IP/extensions/LdapAuthentication/LdapAuthentication.php";
+	wfLoadExtension( 'LdapAuthentication' );
 
 	$wgAuthManagerAutoConfig['primaryauth'] += [
 		LdapPrimaryAuthenticationProvider::class => [
