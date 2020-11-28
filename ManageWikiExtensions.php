@@ -2391,7 +2391,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VisualEditor',
 			'var' => 'wmgUseVisualEditor',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'templatedata',
+				],
+			],
 			'help' => 'Will start working 10-20 mins after enabling.',
 		],
 		'webchat' => [
