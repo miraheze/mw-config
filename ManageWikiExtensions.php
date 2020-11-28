@@ -79,7 +79,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'apex' => [
-			'name' => 'Apex (Skin)',
+			'name' => 'Apex',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
 			'var' => 'wmgUseApex',
 			'conflicts' => false,
@@ -318,7 +318,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'citizen' => [
-			'name' => 'Citizen (Skin)',
+			'name' => 'Citizen',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Citizen',
 			'var' => 'wmgUseCitizen',
 			'conflicts' => false,
@@ -444,7 +444,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'cosmos' => [
-			'name' => 'Cosmos (Skin)',
+			'name' => 'Cosmos',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cosmos',
 			'var' => 'wmgUseCosmos',
 			'conflicts' => false,
@@ -560,7 +560,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'dusktodawn' => [
-			'name' => 'DuskToDawn (Skin)',
+			'name' => 'DuskToDawn',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:DuskToDawn',
 			'var' => 'wmgUseDuskToDawn',
 			'conflicts' => false,
@@ -604,7 +604,7 @@ $wgManageWikiExtensions = [
 			'install' => [],
 		],
 		'erudite' => [
-			'name' => 'Erudite (Skin)',
+			'name' => 'Erudite',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Erudite',
 			'var' => 'wmgUseErudite',
 			'conflicts' => false,
@@ -619,7 +619,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'femiwiki' => [
-			'name' => 'Femiwiki (Skin)',
+			'name' => 'Femiwiki',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Femiwiki',
 			'var' => 'wmgUseFemiwiki',
 			'conflicts' => false,
@@ -693,7 +693,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'foreground' => [
-			'name' => 'Foreground (Skin)',
+			'name' => 'Foreground',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Foreground',
 			'var' => 'wmgUseForeground',
 			'conflicts' => false,
@@ -731,7 +731,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'gamepress' => [
-			'name' => 'Gamespress (Skin)',
+			'name' => 'Gamespress',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Gamepress',
 			'var' => 'wmgUseGamepress',
 			'conflicts' => false,
@@ -978,7 +978,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'liberty' => [
-			'name' => 'Liberty (Skin)',
+			'name' => 'Liberty',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Liberty',
 			'var' => 'wmgUseLiberty',
 			'conflicts' => false,
@@ -1067,7 +1067,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'mask' => [
-			'name' => 'Mask (Skin)',
+			'name' => 'Mask',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Mask',
 			'var' => 'wmgUseMask',
 			'conflicts' => false,
@@ -1171,7 +1171,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'medik' => [
-			'name' => 'Medik (Skin)',
+			'name' => 'Medik',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Medik',
 			'var' => 'wmgUseMedik',
 			'conflicts' => false,
@@ -1186,7 +1186,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'metrolook' => [
-			'name' => 'Metrolook (Skin)',
+			'name' => 'Metrolook',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Metrolook',
 			'var' => 'wmgUseMetrolook',
 			'conflicts' => false,
@@ -1194,7 +1194,7 @@ $wgManageWikiExtensions = [
 			'section' => 'skins',
 		],
 		'minervaneue' => [
-			'name' => 'MinervaNeue (Skin)',
+			'name' => 'MinervaNeue',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Minerva_Neue',
 			'var' => 'wmgUseMinervaNeue',
 			'conflicts' => false,
@@ -1267,7 +1267,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'modernskylight' => [
-			'name' => 'ModernSkylight (Skin)',
+			'name' => 'ModernSkylight',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Modern_Skylight',
 			'var' => 'wmgUseModernSkylight',
 			'conflicts' => false,
@@ -1434,7 +1434,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'nimbus' => [
-			'name' => 'Nimbus (Skin)',
+			'name' => 'Nimbus',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Nimbus',
 			'var' => 'wmgUseNimbus',
 			'conflicts' => false,
@@ -1442,7 +1442,7 @@ $wgManageWikiExtensions = [
 			'section' => 'skins',
 		],
 		'nostalgia' => [
-			'name' => 'Nostalgia (Skin)',
+			'name' => 'Nostalgia',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Nostalgia',
 			'var' => 'wmgUseNostalgia',
 			'conflicts' => false,
@@ -1568,7 +1568,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'pivot' => [
-			'name' => 'Pivot (Skin)',
+			'name' => 'Pivot',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Pivot',
 			'var' => 'wmgUsePivot',
 			'conflicts' => false,
@@ -1745,7 +1745,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'refreshed' => [
-			'name' => 'Refreshed (Skin)',
+			'name' => 'Refreshed',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Refreshed',
 			'var' => 'wmgUseRefreshed',
 			'conflicts' => false,
@@ -2243,7 +2243,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'truglass' => [
-			'name' => 'Truglass (Skin)',
+			'name' => 'Truglass',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Truglass',
 			'var' => 'wmgUseTruglass',
 			'conflicts' => false,
@@ -2251,7 +2251,7 @@ $wgManageWikiExtensions = [
 			'section' => 'skins',
 		],
 		'tweeki' => [
-			'name' => 'Tweeki (Skin) - Note: Causes mobile view not to work!',
+			'name' => 'Tweeki - Note: Causes mobile view not to work!',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Tweeki',
 			'var' => 'wmgUseTweeki',
 			'conflicts' => false,
