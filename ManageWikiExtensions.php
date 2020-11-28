@@ -1204,7 +1204,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [
 				'extensions' => [
-					'minervaneue',
+					// 'minervaneue',
 				],
 			],
 		],
