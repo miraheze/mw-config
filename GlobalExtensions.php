@@ -11,6 +11,7 @@ wfLoadExtensions( [
 	'CookieWarning',
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
+	'DataDump',
 	'Echo',
 	// Required by CentralNotice
 	'EventLogging',
