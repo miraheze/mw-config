@@ -2287,7 +2287,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'urlgetparameters' => [
-			'name' => 'UrlGetParamters',
+			'name' => 'UrlGetParameters',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UrlGetParameters',
 			'var' => 'wmgUseUrlGetParameters',
 			'conflicts' => false,
