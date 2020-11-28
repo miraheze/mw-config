@@ -923,6 +923,7 @@ if ( $wmgUseTemplateWizard ) {
 	wfLoadExtensions( [
 		'TemplateWizard',
 		'TemplateData',
+		'WikiEditor';
 	] );
 }
 
