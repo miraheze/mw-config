@@ -907,11 +907,6 @@ $wi->config->settings = [
 	'wmgUseDuskToDawn' => [
 		'default' => false,
 	],
-	'wmgUseDonateBoxInSidebar' => [ # Disabled for now --Rececption123
-		'default' => false,
-		'metawiki' => true,
-		'test2wiki' => true,
-	],
 	'wmgUseDPLForum' => [
 		'default' => false,
 	],
