@@ -583,6 +583,10 @@ if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 }
 
+if ( $wmgUseMinervaNeue ) {
+	wfLoadSkin( 'MinervaNeue' );
+}
+
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 
