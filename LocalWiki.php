@@ -104,6 +104,29 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
+// VisualEditor
+if ( $wmgUseVisualEditor ) {
+	if ( !$cwPrivate ) {
+		$wgVisualEditorParsoidAutoConfig = false;
+
+		$wgVirtualRestConfig['modules']['restbase'] = [
+ 			'url' => "https://restbase-lb.miraheze.org",
+			'domain' => $wgServer,
+			'parsoidCompat' => false,
+		];
+
+		$wgVisualEditorFullRestbaseURL = "https://restbase-lb.miraheze.org/";
+	} else {
+		$wgVirtualRestConfig['modules']['parsoid'] = [
+			'url' => 'https://parsoid-lb.miraheze.org:443',
+			'domain' => $wgServer,
+			'prefix' => $wgDBname,
+			'forwardCookies' => true,
+			'restbaseCompat' => false,
+		];
+	}
+}
+
 // Per-wiki overrides
 if ( $wgDBname === 'allthetropeswiki' ) {
 	$wgRelatedArticlesFooterBlacklistedSkins = [ "minerva" ];
