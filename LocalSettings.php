@@ -3548,7 +3548,10 @@ $wi->config->settings = [
 		'default' => true,
 	],
 
-	// Channels for logs
+	// Logging configuation (Graylog)
+	'wgMWLoggerDefaultSpi' => [
+		'default' => [],
+	],
 	'wmgMonologChannels' => [
 		'default' => [
 			'404' => 'debug',
