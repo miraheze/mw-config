@@ -1,8 +1,9 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use Monolog\Handler\WhatFailureGroupHandler;
 
-$wmgUseGraylogHost = '/^(jobrunner.*|test.*)/';
+$wmgUseGraylogHost = '/^(jobrunner[0-9]|test[0-9])/';
 if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 	// Monolog logging configuration
 
@@ -39,7 +40,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 	}
 
 	$wmgMonologHandlers['what-debug'] = [
-		'class'     => \Monolog\Handler\WhatFailureGroupHandler::class,
+		'class'     => WhatFailureGroupHandler::class,
 		'formatter' => 'logstash',
 		'args' => [
 			function () {
@@ -129,13 +130,12 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		}
 
 		if ( $handlers ) {
-			// https://phabricator.wikimedia.org/T118057:
 			// wrap the collection of handlers in a WhatFailureGroupHandler
 			// to swallow any exceptions that might leak out otherwise
 			$failureGroupHandler = 'failuregroup|' . implode( '|', $handlers );
 			if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
 				$wmgMonologConfig['handlers'][$failureGroupHandler] = [
-					'class' => \Monolog\Handler\WhatFailureGroupHandler::class,
+					'class' => WhatFailureGroupHandler::class,
 					'args' => [
 						function () use ( $handlers ) {
 							$provider = LoggerFactory::getProvider();
@@ -163,7 +163,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		}
 	}
 
-	$wgMWLoggerDefaultSpi = [
+	$wi->config->settings['wgMWLoggerDefaultSpi']['default'] = [
 		'class' => \MediaWiki\Logger\MonologSpi::class,
 		'args' => [ $wmgMonologConfig ],
 	];
