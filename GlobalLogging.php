@@ -2,7 +2,7 @@
 
 use MediaWiki\Logger\LoggerFactory;
 
-$wmgUseGraylogHost = '/(jobrunner.*|test.*)/';
+$wmgUseGraylogHost = '/^(jobrunner.*|test.*)/';
 if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 	// Monolog logging configuration
 
