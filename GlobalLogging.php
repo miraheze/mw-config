@@ -123,7 +123,8 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		}
 
 		if ( $handlers ) {
-			// T118057: wrap the collection of handlers in a WhatFailureGroupHandler
+			// https://phabricator.wikimedia.org/T118057:
+			// wrap the collection of handlers in a WhatFailureGroupHandler
 			// to swallow any exceptions that might leak out otherwise
 			$failureGroupHandler = 'failuregroup|' . implode( '|', $handlers );
 			if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
