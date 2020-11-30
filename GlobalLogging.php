@@ -5,6 +5,9 @@ use Monolog\Handler\WhatFailureGroupHandler;
 
 $wmgUseGraylogHost = '/^(jobrunner[0-9]|test[0-9])/';
 if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
+	use MediaWiki\Logger\LoggerFactory;
+	use Monolog\Handler\WhatFailureGroupHandler;
+
 	// Monolog logging configuration
 
 	$wmgMonologProcessors = [
