@@ -3547,7 +3547,9 @@ $wi->config->settings = [
 
 	// Logging configuation (Graylog)
 	'wgMWLoggerDefaultSpi' => [
-		'default' => [],
+		'default' => [
+			'class' => \MediaWiki\Logger\LegacySpi::class,
+		],
 	],
 	'wmgMonologChannels' => [
 		'default' => [
