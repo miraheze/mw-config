@@ -61,7 +61,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		'loggers' => [
 			// Template for all undefined log channels
 			'@default' => [
-				'handlers' => 'what-debug',
+				'handlers' => [ 'what-debug' ],
 				'processors' => array_keys( $wmgMonologProcessors ),
 				'calls' => $wmgMonologLoggerCalls,
 			],
