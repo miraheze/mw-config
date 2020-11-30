@@ -22,11 +22,6 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		'blackhole' => [
 			'class' => \Monolog\Handler\NullHandler::class,
 		],
-		'wgDebugLogFile' => [
-			'class'     => \MediaWiki\Logger\Monolog\LegacyHandler::class,
-			'args'      => [ $wgDebugLogFile ],
-			'formatter' => 'line',
-		],
 	];
 
 	foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
@@ -43,6 +38,17 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		];
 	}
 
+	$wmgMonologHandlers['what-debug'] = [
+		'class'     => \Monolog\Handler\WhatFailureGroupHandler::class,,
+		'formatter' => 'logstash',
+		'args' => [
+			function () {
+				$provider = \MediaWiki\Logger\LoggerFactory::getProvider();
+				return array_map( [ $provider, 'getHandler' ], [ 'graylog-debug' ] );
+			}
+		],
+	];
+
 	// Post construction calls to make for new Logger instances
 	$wmgMonologLoggerCalls = [
 		// Bug: T99581 - force logger timezone to UTC
@@ -55,7 +61,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		'loggers' => [
 			// Template for all undefined log channels
 			'@default' => [
-				'handlers' => 'logstash-debug',
+				'handlers' => 'what-debug',
 				'processors' => array_keys( $wmgMonologProcessors ),
 				'calls' => $wmgMonologLoggerCalls,
 			],
