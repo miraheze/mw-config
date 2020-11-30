@@ -39,7 +39,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 	}
 
 	$wmgMonologHandlers['what-debug'] = [
-		'class'     => \Monolog\Handler\WhatFailureGroupHandler::class,,
+		'class'     => \Monolog\Handler\WhatFailureGroupHandler::class,
 		'formatter' => 'logstash',
 		'args' => [
 			function () {
