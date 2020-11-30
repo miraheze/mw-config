@@ -98,6 +98,13 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
  	];
 }
 
+// $wmgFlaggedRevsRestrictionLevels
+foreach ( $wmgFlaggedRevsRestrictionLevels as $value ) {
+	$wi->config->settings['wgManageWikiPermissionsAdditionalRights'][+$wi->dbname][$value] = [
+		$value => true,
+	];
+}
+
 // $wgRestrictionLevels
 foreach ( $wgRestrictionLevels as $value ) {
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights'][+$wi->dbname][$value] = [
