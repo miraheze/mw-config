@@ -32,7 +32,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 				'mediawiki', // tag
 				'127.0.0.1', // host
 				10514,       // port
-				null,        // facility
+				LOG_USER,    // facility
 				$logLevel,   // log level threshold
 			],
 		];
@@ -43,7 +43,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 		'formatter' => 'logstash',
 		'args' => [
 			function () {
-				$provider = \MediaWiki\Logger\LoggerFactory::getProvider();
+				$provider = LoggerFactory::getProvider();
 				return array_map( [ $provider, 'getHandler' ], [ 'graylog-debug' ] );
 			}
 		],
