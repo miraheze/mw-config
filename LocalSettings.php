@@ -648,6 +648,17 @@ $wi->config->settings = [
 		'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1k T5287
 	],
 
+	// DynamicPageList (Wikimedia)
+	'wgDLPAllowUnlimitedResults' => [
+		'default' => false,
+		'thewhiteroomwiki' => true,
+	],
+
+	'wgDLPAllowUnlimitedCategories' => [
+		'default' => false,
+		'thewhiteroomwiki' => true,
+	],
+
 	// DJVU
 	'wgDjvuDump' => [
 		'default' => '/usr/bin/djvudump',
