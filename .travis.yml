@@ -1,19 +1,1 @@
-language: php
-dist: bionic
 
-php:
-  - 7.4
-  - 7.3
-
-script:
-  # Check php script syntax
-  - bash .travis.phplint.sh
-
-notifications:
-  irc:
-    channels:
-      - "chat.freenode.net#miraheze"
-    on_success: change
-    on_failure: always
-    template:
-      - "%{repository}/%{branch}/%{commit} - %{author} %{message} %{build_url}"
