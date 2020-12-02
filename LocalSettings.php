@@ -3607,7 +3607,7 @@ $wi->config->settings = [
 			'formatnum' => 'info',
 			'FSFileBackend' => 'debug',
 			'GettingStarted' => 'debug',
-			'GlobalTitleFail' => [ 'sample' => 10000 ],
+			'GlobalTitleFail' => [ 'sample' => 1000 ],
 			'GlobalWatchlist' => 'debug',
 			'headers-sent' => 'debug',
 			'HttpError' => 'error', // Only log http errors with a 500+ code
@@ -3669,7 +3669,7 @@ $wi->config->settings = [
 			'updateTranstagOnNullRevisions' => 'debug',
 			'upload' => 'debug',
 			'VisualEditor' => 'debug',
-			'wfDebug' => [ 'sample' => 10000 ],
+			'wfDebug' => [ 'sample' => 1000 ],
 			'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 			'Wikibase' => 'warning',
 			'Wikibase.NewItemIdFormatter' => 'debug',
