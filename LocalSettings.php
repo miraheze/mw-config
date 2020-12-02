@@ -660,10 +660,10 @@ $wi->config->settings = [
 	],
 	
 	// DynamicPageList
-	'wgDLPAllowUnlimitedResults' => [
+	'wgDLPAllowUnlimitedCategories' => [
 		'default' => false,
 	],
-	'wgDLPAllowUnlimitedCategories' => [
+	'wgDLPAllowUnlimitedResults' => [
 		'default' => false,
 	],
 
