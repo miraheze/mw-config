@@ -92,6 +92,7 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 			[
 				'graylog' => 'debug',
 				'buffer' => false,
+				'sample' => false,
 			],
 			$opts
 		);
@@ -104,6 +105,29 @@ if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 			$graylogHandler = "graylog-{$level}";
 			if ( isset( $wmgMonologHandlers[ $graylogHandler ] ) ) {
 				$handlers[] = $graylogHandler;
+			}
+		}
+
+		if ( $opts['sample'] ) {
+			$sample = $opts['sample'];
+			foreach ( $handlers as $idx => $handlerName ) {
+				$sampledHandler = "{$handlerName}-sampled-{$sample}";
+				if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
+					// Register a handler that will sample the event stream and
+					// pass events on to $handlerName for storage
+					$wmgMonologConfig['handlers'][$sampledHandler] = [
+						'class' => \Monolog\Handler\SamplingHandler::class,
+						'args' => [
+							function () use ( $handlerName ) {
+								return LoggerFactory::getProvider()->getHandler(
+									$handlerName
+								);
+							},
+							$sample,
+						],
+					];
+				}
+				$handlers[$idx] = $sampledHandler;
 			}
 		}
 
