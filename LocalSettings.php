@@ -3599,7 +3599,7 @@ $wi->config->settings = [
 			'formatnum' => 'info',
 			'FSFileBackend' => 'debug',
 			'GettingStarted' => 'debug',
-			// 'GlobalTitleFail' => [ 'sample' => 10000 ],
+			'GlobalTitleFail' => [ 'sample' => 10000 ],
 			'GlobalWatchlist' => 'debug',
 			'headers-sent' => 'debug',
 			'HttpError' => 'error', // Only log http errors with a 500+ code
