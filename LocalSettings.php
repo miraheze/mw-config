@@ -3581,6 +3581,7 @@ $wi->config->settings = [
 			'CentralAuthUserMerge' => 'debug',
 			'CentralNotice' => 'debug',
 			'cite' => 'debug',
+			'cookie' => 'error',
 			'collection' => 'debug',
 			'CreateWiki' => 'debug',
 			'DBConnection' => 'error',
@@ -3612,6 +3613,7 @@ $wi->config->settings = [
 			'headers-sent' => 'debug',
 			'HttpError' => 'error', // Only log http errors with a 500+ code
 			// 'JobExecutor' => [ 'logstash' => 'warning' ],
+			'localisation' => 'info',
 			'ldap' => 'warning',
 			'Linter' => 'debug',
 			'LocalFile' => 'debug',
