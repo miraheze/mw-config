@@ -3661,6 +3661,7 @@ $wi->config->settings = [
 			'updateTranstagOnNullRevisions' => 'debug',
 			'upload' => 'debug',
 			'VisualEditor' => 'debug',
+			'wfDebug' => false,
 			'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 			'Wikibase' => 'warning',
 			'Wikibase.NewItemIdFormatter' => 'debug',
