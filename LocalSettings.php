@@ -658,6 +658,14 @@ $wi->config->settings = [
 	'wgDjvuTxt' => [
 		'default' => '/usr/bin/djvutxt',
 	],
+	
+	// DynamicPageList
+	'wgDLPAllowUnlimitedResults' => [
+		'default' => false,
+	],
+	'wgDLPAllowUnlimitedCategories' => [
+		'default' => false,
+	],
 
 	// TimedMediaHandler config
 	'wgFFmpegLocation' => [
