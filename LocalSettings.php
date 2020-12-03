@@ -3580,6 +3580,7 @@ $wi->config->settings = [
 			'CentralAuth' => 'debug',
 			'CentralAuthRename' => 'debug',
 			'CentralAuthUserMerge' => 'debug',
+			'CentralAuthVerbose' => 'error',
 			'CentralNotice' => 'debug',
 			'cite' => 'debug',
 			'cookie' => 'error',
