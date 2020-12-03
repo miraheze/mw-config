@@ -3602,7 +3602,7 @@ $wi->config->settings = [
 			'EventLogging' => false,
 			'EventStreamConfig' => false,
 			'exception' => 'debug',
-			// 'exception-json' => [ 'graylog' => false ],
+			'exception-json' => 'error',
 			'exec' => 'debug',
 			'export' => 'debug',
 			'ExternalStore' => 'debug',
