@@ -3595,6 +3595,7 @@ $wi->config->settings = [
 			'DeferredUpdates' => 'error',
 			'deprecated' => 'debug',
 			'diff' => 'debug',
+			'DuplicateParse' => false,
 			'editpage' => 'warning',
 			'Echo' => 'debug',
 			'EventLogging' => false,
