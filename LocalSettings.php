@@ -3583,6 +3583,7 @@ $wi->config->settings = [
 			'CentralAuthVerbose' => 'error',
 			'CentralNotice' => 'debug',
 			'cite' => 'debug',
+			'ContentHandler' => 'error',
 			'cookie' => 'error',
 			'collection' => 'debug',
 			'CreateWiki' => 'debug',
