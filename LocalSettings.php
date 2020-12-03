@@ -3671,6 +3671,7 @@ $wi->config->settings = [
 			'UpdateRepo' => 'debug',
 			'updateTranstagOnNullRevisions' => 'debug',
 			'upload' => 'debug',
+			'UserOptionsManager' => 'info',
 			'VisualEditor' => 'debug',
 			'wfDebug' => [ 'sample' => 1000 ],
 			'wfLogDBError' => 'debug', // Former $wgDBerrorLog
