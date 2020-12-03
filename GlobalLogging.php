@@ -3,7 +3,7 @@
 use MediaWiki\Logger\LoggerFactory;
 use Monolog\Handler\WhatFailureGroupHandler;
 
-$wmgUseGraylogHost = '/^(jobrunner[0-9]|mw[45]|test[0-9])/';
+$wmgUseGraylogHost = '/^(jobrunner[0-9]|mw[0-9]|test[0-9])/';
 if ( preg_match( $wmgUseGraylogHost, wfHostname(), $matches ) ) {
 	// Monolog logging configuration
 
