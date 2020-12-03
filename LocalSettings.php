@@ -3567,7 +3567,8 @@ $wi->config->settings = [
 			'api' => 'debug',
 			'api-feature-usage' => 'debug',
 			'api-readonly' => 'debug',
-			'api-request' => [ 'graylog' => 'debug', 'buffer' => true ],
+			// When using this, use buffer.
+			'api-request' => false,
 			'api-warning' => 'debug',
 			'authentication' => 'info',
 			'authevents' => 'info',
@@ -3657,7 +3658,7 @@ $wi->config->settings = [
 			'slow-parse' => 'debug',
 			'SpamBlacklistHit' => 'debug',
 			'SpamRegex' => 'debug',
-			'SQLBagOStuff' => 'debug',
+			'SQLBagOStuff' => 'info',
 			'StashEdit' => 'debug',
 			'texvc' => 'debug',
 			'throttler' => 'info',
