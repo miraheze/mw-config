@@ -3827,7 +3827,7 @@ function onLfDonateLink(
 	array &$footerItems
 ) {
     if ( $key === 'places' ) {
-		$footerItems['donate'] = $skin->footerLink( 'donate', 'donatepage' );
+		$footerItems['donate'] = $skin->footerLink( 'miraheze-donate', 'miraheze-donatepage' );
     }
 	
 }
