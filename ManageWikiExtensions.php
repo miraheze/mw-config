@@ -35,7 +35,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'adminlinks' => [
-			'name' => 'AdminLinks',
+			'name' => 'Admin Links',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Admin_Links',
 			'var' => 'wmgUseAdminLinks',
 			'conflicts' => false,
@@ -168,7 +168,7 @@ $wgManageWikiExtensions = [
 		],
 		'autocreatecategorypages' => [
 			'name' => 'Auto Create Category Pages',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AutoCreateCategoryPages',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Auto_Create_Category_Pages',
 			'var' => 'wmgUseAutoCreateCategoryPages',
 			'conflicts' => false,
 			'requires' => [
@@ -319,7 +319,7 @@ $wgManageWikiExtensions = [
 		],
 		'citizen' => [
 			'name' => 'Citizen',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Citizen',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Citizen',
 			'var' => 'wmgUseCitizen',
 			'conflicts' => false,
 			'requires' => [],
@@ -327,7 +327,7 @@ $wgManageWikiExtensions = [
 		],
 		'citoid' => [
 			'name' => 'Citoid',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Citoid',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Citoid',
 			'var' => 'wmgUseCitoid',
 			'conflicts' => false,
 			'requires' => [
@@ -437,8 +437,8 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'contributionscores' => [
-			'name' => 'ContributionScores',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ContributionScores',
+			'name' => 'Contribution Scores',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Contribution_Scores',
 			'var' => 'wmgUseContributionScores',
 			'conflicts' => false,
 			'requires' => [],
@@ -452,8 +452,8 @@ $wgManageWikiExtensions = [
 			'section' => 'skins',
 		],
 		'createpage' => [
-			'name' => 'CreatePage',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CreatePage',
+			'name' => 'Create Page',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Create_Page',
 			'var' => 'wmgUseCreatePage',
 			'conflicts' => false,
 			'requires' => [],
@@ -480,8 +480,8 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'datatransfer' => [
-			'name' => 'DataTransfer',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DataTransfer',
+			'name' => 'Data Transfer',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Data_Transfer',
 			'var' => 'wmgUseDataTransfer',
 			'conflicts' => false,
 			'requires' => [],
@@ -528,8 +528,8 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'displaytitle' => [
-			'name' => 'DisplayTitle',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DisplayTitle',
+			'name' => 'Display Title',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Display_Title',
 			'var' => 'wmgUseDisplayTitle',
 			'conflicts' => false,
 			'requires' => [],
@@ -561,7 +561,7 @@ $wgManageWikiExtensions = [
 		],
 		'dusktodawn' => [
 			'name' => 'DuskToDawn',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:DuskToDawn',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:DuskToDawn',
 			'var' => 'wmgUseDuskToDawn',
 			'conflicts' => false,
 			'requires' => [],
@@ -585,6 +585,13 @@ $wgManageWikiExtensions = [
 			'name' => 'DynamicSidebar',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicSidebar',
 			'var' => 'wmgUseDynamicSidebar',
+			'conflicts' => false,
+			'requires' => [],
+		],
+		'timeline' => [
+			'name' => 'EasyTimeline',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EasyTimeline',
+			'var' => 'wmgUseTimeline',
 			'conflicts' => false,
 			'requires' => [],
 		],
@@ -694,7 +701,7 @@ $wgManageWikiExtensions = [
 		],
 		'foreground' => [
 			'name' => 'Foreground',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Foreground',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Foreground',
 			'var' => 'wmgUseForeground',
 			'conflicts' => false,
 			'requires' => [],
@@ -731,8 +738,8 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'gamepress' => [
-			'name' => 'Gamespress',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Gamepress',
+			'name' => 'Gamepress',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
 			'var' => 'wmgUseGamepress',
 			'conflicts' => false,
 			'requires' => [],
@@ -849,15 +856,15 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'headerfooter' => [
-			'name' => 'HeaderFooter',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HeaderFooter',
+			'name' => 'Header Footer',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Header_Footer',
 			'var' => 'wmgUseHeaderFooter',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'headertabs' => [
-			'name' => 'HeaderTabs',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HeaderTabs',
+			'name' => 'Header Tabs',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Header_Tabs',
 			'var' => 'wmgUseHeaderTabs',
 			'conflicts' => false,
 			'requires' => [],
@@ -870,7 +877,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'highlightlinksincategory' => [
-			'name' => 'HighlightLinksInCategory',
+			'name' => 'Highlight Links In Category',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Highlight_Links_in_Category',
 			'var' => 'wmgUseHighlightLinksInCategory',
 			'conflicts' => false,
@@ -957,8 +964,8 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'labeledsectiontransclusion' => [
-			'name' => 'LabeledSectionTransclusion',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LabeledSectionTransclusion',
+			'name' => 'Labeled Section Transclusion',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Labeled_Section_Transclusion',
 			'var' => 'wmgUseLabeledSectionTransclusion',
 			'conflicts' => false,
 			'requires' => [],
@@ -1068,7 +1075,7 @@ $wgManageWikiExtensions = [
 		],
 		'mask' => [
 			'name' => 'Mask',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Mask',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mask',
 			'var' => 'wmgUseMask',
 			'conflicts' => false,
 			'requires' => [],
@@ -1172,7 +1179,7 @@ $wgManageWikiExtensions = [
 		],
 		'medik' => [
 			'name' => 'Medik',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Medik',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Medik',
 			'var' => 'wmgUseMedik',
 			'conflicts' => false,
 			'requires' => [],
@@ -1180,14 +1187,14 @@ $wgManageWikiExtensions = [
 		],
 		'mermaid' => [
 			'name' => 'Mermaid',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Mermaid',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Mermaid',
 			'var' => 'wmgUseMermaid',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'metrolook' => [
 			'name' => 'Metrolook',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Metrolook',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Metrolook',
 			'var' => 'wmgUseMetrolook',
 			'conflicts' => false,
 			'requires' => [],
@@ -1195,7 +1202,7 @@ $wgManageWikiExtensions = [
 		],
 		'minervaneue' => [
 			'name' => 'MinervaNeue',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Minerva_Neue',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Minerva_Neue',
 			'var' => 'wmgUseMinervaNeue',
 			'conflicts' => false,
 			'requires' => [],
@@ -1214,7 +1221,7 @@ $wgManageWikiExtensions = [
 		],
 		'mobiletabsplugin' => [
 			'name' => 'MobileTabsPlugin',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileTabsPlugin',
+			'linkPage' => 'https://github.com/fuerthwiki/MobileTabsPlugin',
 			'var' => 'wmgUseMobileTabsPlugin',
 			'conflicts' => false,
 			'requires' => [],
@@ -1267,8 +1274,8 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'modernskylight' => [
-			'name' => 'ModernSkylight',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Modern_Skylight',
+			'name' => 'Modern Skylight',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Modern_Skylight',
 			'var' => 'wmgUseModernSkylight',
 			'conflicts' => false,
 			'requires' => [],
@@ -1329,8 +1336,8 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'newestpages' => [
-			'name' => 'NewestPages',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NewestPages',
+			'name' => 'Newest Pages',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Newest_Pages',
 			'var' => 'wmgUseNewestPages',
 			'conflicts' => false,
 			'requires' => [],
@@ -1398,7 +1405,7 @@ $wgManageWikiExtensions = [
 		],
 		'newusernotif' => [
 			'name' => 'New User Email Notification',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NewUserNotif',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:New_User_Email_Notification',
 			'var' => 'wmgUseNewUserNotif',
 			'conflicts' => false,
 			'requires' => [],
@@ -1435,7 +1442,7 @@ $wgManageWikiExtensions = [
 		],
 		'nimbus' => [
 			'name' => 'Nimbus',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Nimbus',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nimbus',
 			'var' => 'wmgUseNimbus',
 			'conflicts' => false,
 			'requires' => [],
@@ -1443,7 +1450,7 @@ $wgManageWikiExtensions = [
 		],
 		'nostalgia' => [
 			'name' => 'Nostalgia',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Nostalgia',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nostalgia',
 			'var' => 'wmgUseNostalgia',
 			'conflicts' => false,
 			'requires' => [],
@@ -1483,7 +1490,7 @@ $wgManageWikiExtensions = [
 		],
 		'pageforms' => [
 			'name' => 'Page Forms',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageForms',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Forms',
 			'var' => 'wmgUsePageForms',
 			'conflicts' => false,
 			'requires' => [],
@@ -1537,6 +1544,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'twocolconflict' => [
+			'name' => 'Paragraph-based Edit Conflict Interface',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Paragraph-based_Edit_Conflict_Interface',
+			'var' => 'wmgUseTwoColConflict',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'pdfembed' => [
 			'name' => 'PDF Embed',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PDFEmbed',
@@ -1555,21 +1569,21 @@ $wgManageWikiExtensions = [
 		],
 		'pdfhandler' => [
 			'name' => 'PDF Handler',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PDFHandler',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfHandler',
 			'var' => 'wmgUsePDFHandler',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'pipeescape' => [
 			'name' => 'Pipe Escape',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PipeEscape',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Pipe_Escape',
 			'var' => 'wmgUsePipeEscape',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'pivot' => [
 			'name' => 'Pivot',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Pivot',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Pivot',
 			'var' => 'wmgUsePivot',
 			'conflicts' => false,
 			'requires' => [],
@@ -1640,8 +1654,8 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'proofreadpages' => [
-			'name' => 'Proofread Pages',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ProofreadPage',
+			'name' => 'Proofread Page',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Proofread_Page',
 			'var' => 'wmgUseProofreadPage',
 			'conflicts' => false,
 			'requires' => [],
@@ -1746,7 +1760,7 @@ $wgManageWikiExtensions = [
 		],
 		'refreshed' => [
 			'name' => 'Refreshed',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Refreshed',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Refreshed',
 			'var' => 'wmgUseRefreshed',
 			'conflicts' => false,
 			'requires' => [],
@@ -1768,7 +1782,7 @@ $wgManageWikiExtensions = [
 		],
 		'replacetext' => [
 			'name' => 'Replace Text',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ReplaceText',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
 			'var' => 'wmgUseReplaceText',
 			'conflicts' => false,
 			'requires' => [],
@@ -2138,13 +2152,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'timeline' => [
-			'name' => 'Timeline',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Timeline',
-			'var' => 'wmgUseTimeline',
-			'conflicts' => false,
-			'requires' => [],
-		],
 		'timemachine' => [
 			'name' => 'TimeMachine',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimeMachine',
@@ -2216,7 +2223,7 @@ $wgManageWikiExtensions = [
 		],
 		'translationnotifications' => [
 			'name' => 'TranslationNotifications',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TranslationNotifications',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TranslationNotifications',
 			'var' => 'wmgUseTranslationNotifications',
 			'conflicts' => false,
 			'install' => [
@@ -2237,14 +2244,14 @@ $wgManageWikiExtensions = [
 		],
 		'treeandmenu' => [
 			'name' => 'TreeAndMenu',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TreeAndMenu',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TreeAndMenu',
 			'var' => 'wmgUseTreeAndMenu',
 			'conflicts' => false,
 			'requires' => [],
 		],
 		'truglass' => [
 			'name' => 'Truglass',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Truglass',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Truglass',
 			'var' => 'wmgUseTruglass',
 			'conflicts' => false,
 			'requires' => [],
@@ -2252,7 +2259,7 @@ $wgManageWikiExtensions = [
 		],
 		'tweeki' => [
 			'name' => 'Tweeki - Note: Causes mobile view not to work!',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Skin:Tweeki',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Tweeki',
 			'var' => 'wmgUseTweeki',
 			'conflicts' => false,
 			'requires' => [],
@@ -2260,15 +2267,8 @@ $wgManageWikiExtensions = [
 		],
 		'twittertag' => [
 			'name' => 'TwitterTag',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Extension:TwitterTag',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TwitterTag',
 			'var' => 'wmgUseTwitterTag',
-			'conflicts' => false,
-			'requires' => [],
-		],
-		'twocolconflict' => [
-			'name' => 'TwoColConflict',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TwoColConflict',
-			'var' => 'wmgUseTwoColConflict',
 			'conflicts' => false,
 			'requires' => [],
 		],
@@ -2457,7 +2457,7 @@ $wgManageWikiExtensions = [
 		],
 		'wikibaseclient' => [
 			'name' => 'Wikibase (Client)',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Client',
 			'var' => 'wmgUseWikibaseClient',
 			'conflicts' => false,
 			'requires' => [],
@@ -2477,7 +2477,7 @@ $wgManageWikiExtensions = [
 		],
 		'wikibaserepository' => [
 			'name' => 'Wikibase (Repository)',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Repository',
 			'var' => 'wmgUseWikibaseRepository',
 			'conflicts' => false,
 			'requires' => [],
