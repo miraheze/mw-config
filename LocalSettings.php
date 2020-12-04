@@ -3819,6 +3819,19 @@ function onLfTOSLink(
 	}
 }
 
+// Hook so that the Donate link is included in footer
+$wgHooks['SkinAddFooterLinks'][] = 'onLfDonateLink';
+function onLfDonateLink(
+	Skin $skin,
+	string $key,
+	array &$footerItems
+) {
+    if ( $key === 'places' ) {
+		$footerItems['donate'] = $skin->footerLink( 'donate', 'donatepage' );
+    }
+	
+}
+
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
