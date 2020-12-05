@@ -590,7 +590,7 @@ $wgManageWikiSettings = [
 			'Any' => 'any',
 		],
 		'overridedefault' => 'link',
-		'section' => 'edit',
+		'section' => 'links',
 		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
 		'script' => [
  			"$IP/maintenance/updateArticleCount.php" => [
@@ -622,7 +622,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'type' => 'check',
 		'overridedefault' => false,
-		'section' => 'edit',
+		'section' => 'links',
 		'help' => 'Output a <link rel="canonical"> tag on every page indicating the canonical server which should be used, i.e. $wgServer or $wgCanonicalServer.',
 	],
 	'wgExternalLinkTarget' => [
@@ -1986,7 +1986,7 @@ $wgManageWikiSettings = [
 		'minint' => 0,
 		'maxint' => 100,
 		'overridedefault' => 100,
-		'section' => 'cosmos',
+		'section' => 'styling',
 		'help' => 'Set the opacity level of the content area and custom sidebar for the Cosmos skin in precentage',
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
