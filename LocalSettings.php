@@ -627,12 +627,8 @@ $wi->config->settings = [
 	'wgDBuser' => [
 		'default' => 'mediawiki',
 	],
-
 	'wgReadOnly' => [
 		'default' => false,
-	],
-	'wgSharedDB' => [
-		'default' => 'metawiki',
 	],
 	'wgSharedTables' => [
 		'default' => [],
