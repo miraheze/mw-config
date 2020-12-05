@@ -492,7 +492,7 @@ $wgManageWikiSettings = [
 			'No license provided' => 'empty',
 		],
 		'overridedefault' => 'cc-by-sa',
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly.',
 	],
 	'wgActiveUserDays' => [
@@ -503,7 +503,7 @@ $wgManageWikiSettings = [
 		'minint' => 0,
 		'maxint' => 400,
 		'overridedefault' => 30,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
 	],
 	'wgShowCreditsIfMax' => [
@@ -512,7 +512,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'Show more authors.',
 	],
 	'wgVisualEditorEnableWikitext' => [
@@ -521,7 +521,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'This option allow you to read Wikitext syntax on VisualEditor.',
 	],
 	'wgVisualEditorUseSingleEditTab' => [
@@ -530,7 +530,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'Shows only the "edit" tab. Uses VisualEditor by default if "Make VisualEditor the default editor for all" is set, otherwise defaults to Wikitext.',
 	],
 	'wgVisualEditorEnableDiffPage' => [
@@ -539,7 +539,7 @@ $wgManageWikiSettings = [
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'Enable the new visual mode on revision difference pages by default (not Beta).',
 	],
 	'wgCodeEditorEnableCore' => [
@@ -548,7 +548,7 @@ $wgManageWikiSettings = [
 		'from' => 'codeeditor',
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'To disable the editor on JavaScript and CSS pages in the MediaWiki, User and other core namespaces, unset this option.',
 	],
 	'wgScribuntoUseCodeEditor' => [
@@ -557,7 +557,7 @@ $wgManageWikiSettings = [
 		'from' => 'codeeditor',
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'Set this to use it when editing Module pages.',
 	],
 	'wgScribuntoUseGeSHi' => [
@@ -566,7 +566,7 @@ $wgManageWikiSettings = [
 		'from' => 'syntaxhighlight_geshi',
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'Use SyntaxHighlight_GeSHi extension to highlight syntax.',
 	],
 	'wgPageCreationLog' => [
@@ -575,10 +575,9 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'edit',
+		'section' => 'editing',
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
 	],
-
 
 	// Links
 	'wgArticleCountMethod' => [
