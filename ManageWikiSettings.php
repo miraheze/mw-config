@@ -472,7 +472,7 @@ $wgManageWikiSettings = [
 		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
 	],
 	
-	// Editing
+	// Edit
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
 		'from' => 'mediawiki',
@@ -2198,15 +2198,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'default',
 		'section' => 'styling',
 		'help' => 'Sets which theme is displayed by default when users visit your wiki.',
-	],
-	'wgManageWikiForceSidebarLinks' => [
-		'name' => 'Force ManageWiki side bar links',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'Force the display of ManageWiki links in the sidebar for all users. The link text will differ for nonprivileged users.',
 	],
 	'wmgShowPopupsByDefault' => [
 		'name' => 'Show Popups by default',
