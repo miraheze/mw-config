@@ -1834,7 +1834,7 @@ $wgManageWikiSettings = [
 		'maxint' => 9999,
 		'overridedefault' => 116,
 		'section' => 'styling',
-		'help' => 'This will set the width value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "116".',
+		'help' => 'This will set the width value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "116"',
 	],
 	'wgWordmarkHeight' => [
 		'name' => 'Wordmark Height',
