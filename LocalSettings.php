@@ -3519,17 +3519,6 @@ $wi->config->settings = [
 		'default' => [],
 	],
 
-	// WikiDiscover
-	'wgWikiDiscoverClosedList' => [
-		'default' => '/srv/mediawiki/dblist/closed.dblist',
-	],
-	'wgWikiDiscoverInactiveList' => [
-		'default' => '/srv/mediawiki/dblist/inactive.dblist',
-	],
-	'wgWikiDiscoverPrivateList' => [
-		'default' => '/srv/mediawiki/dblist/private.dblist',
-	],
-
 	// CreateWiki Defined Special Variables
 	'cwClosed' => [
 		'default' => false,
