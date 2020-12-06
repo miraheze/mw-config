@@ -3796,31 +3796,6 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
-// Hook so that Terms of Service is included in footer
-$wgHooks['SkinAddFooterLinks'][] = 'onLfTOSLink';
-function onLfTOSLink(
-	Skin $skin,
-	string $key,
-	array &$footerItems
-) {
-	if ( $key === 'places' ) {
-		$footerItems['termsofservice'] = $skin->footerLink( 'termsofservice', 'termsofservicepage' );
-	}
-}
-
-// Hook so that the Donate link is included in footer
-$wgHooks['SkinAddFooterLinks'][] = 'onLfDonateLink';
-function onLfDonateLink(
-	Skin $skin,
-	string $key,
-	array &$footerItems
-) {
-    if ( $key === 'places' ) {
-		$footerItems['donate'] = $skin->footerLink( 'miraheze-donate', 'miraheze-donatepage' );
-    }
-	
-}
-
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
