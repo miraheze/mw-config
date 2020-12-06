@@ -18,7 +18,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">If you experence login issues, please delete your cookies. If you persist to have issues, please go to Special:UserLogout and then re-delete the cookies and try and login again. If you continue to still have issues please let us know at <a href="https://meta.miraheze.org/wiki/Community_noticeboard">Community noticeboard</A></td>
+				<td style="font-size:125%">If you experence login issues, please delete your cookies. If you persist to have issues, please go to Special:UserLogout and then re-delete the cookies and try and login again. If you continue to still have issues please let us know at <a href="https://meta.miraheze.org/wiki/Community_noticeboard">Community noticeboard</a></td>
 				</tr></tbody></table>
 EOF;
 
