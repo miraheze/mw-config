@@ -1503,10 +1503,6 @@ $wi->config->settings = [
 		'default' => '',
 	],
 
-	// Allow HTML <img> tag
-	'wgAllowImageTag' => [
-		'default' => false,
-	],
 	'egApprovedRevsEnabledNamespaces' => [
  		'default' => [
 			NS_MAIN => true,

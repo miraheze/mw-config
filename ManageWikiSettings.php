@@ -883,15 +883,6 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
 	],
-	'wgAllowImageTag' => [
-		'name' => 'Allow Image Tag',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'media',
-		'help' => 'Allow img tag to be used in wikitext.',
-	],
 	'wgSVGConverter' => [
 		'name' => 'SVG Converter',
 		'from' => 'mediawiki',
