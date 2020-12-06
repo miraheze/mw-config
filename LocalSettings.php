@@ -3667,7 +3667,7 @@ $wi->config->settings = [
 			'upload' => 'debug',
 			'UserOptionsManager' => 'info',
 			'VisualEditor' => 'debug',
-			'wfDebug' => [ 'sample' => 1000 ],
+			'wfDebug' => [ 'sample' => 10000 ],
 			'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 			'Wikibase' => 'warning',
 			'Wikibase.NewItemIdFormatter' => 'debug',
