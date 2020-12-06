@@ -462,8 +462,10 @@ $wi->config->settings = [
 	 ],
 
 	// Cookies
+
+	// Keep this set to use the current domain
 	'wgCookieDomain' => [
-		'default' => '.miraheze.org'
+		'default' => ''
 	],
 	'wgCookieSameSite' => [
 		'default' => 'None'
@@ -3687,7 +3689,6 @@ $wi->setVariables(
 // Start settings requiring access to variables
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
-	$wi->config->settings['wgCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
