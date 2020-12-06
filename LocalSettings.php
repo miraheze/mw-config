@@ -462,6 +462,8 @@ $wi->config->settings = [
 	 ],
 
 	// Cookies
+
+	// Keep this set to use the current domain
 	'wgCookieDomain' => [
 		'default' => ''
 	],
@@ -3683,8 +3685,6 @@ $wi->setVariables(
 		'miraheze.org' => 'wiki'
 	]
 );
-
-$wi->config->settings['wgCookieDomain'][$wi->dbname] = $wi->hostname;
 
 // Start settings requiring access to variables
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
