@@ -3630,6 +3630,7 @@ $wi->config->settings = [
 			'OutputBuffer' => false,
 			'PageTriage' => false,
 			'PageViewInfo' => false,
+			'Parser' => false,
 			'ParserCache' => false,
 			'preferences' => false,
 			'purge' => false,
