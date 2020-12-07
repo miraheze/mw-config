@@ -1107,7 +1107,7 @@ if ( $wmgUseRegexFunctions ) {
 // If Flow / VisualEditor are used, use the Parsoid php extension
 if ( $wmgUseFlow || $wmgUseVisualEditor ) {
 	// Required for Flow to work with rest.php
-	wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
+	wfLoadExtension( 'Parsoid', '/srv/mediawiki/w/vendor/wikimedia/parsoid/extension.json' );
 
 	// Automatically uses the local rest.php (hence url isn't set).
 	// We need to set 'forwardCookies' for private wikis and
