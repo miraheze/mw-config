@@ -56,13 +56,6 @@ if ( !$cwPrivate ) {
 
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
-
-	$wgDiscordFromName = $wgSitename;
-	$wgDiscordShowNewUserEmail = false;
-	$wgDiscordShowNewUserIP = false;
-	$wgDiscordNotificationsShowSuppressed = false;
-	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
-	$wgDiscordAdditionalIncomingWebhookUrls = ( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ?? $wmgWikiMirahezeDiscordHooks['default'];
 } else {
 	$wgWhitelistRead[] = 'Special:OAuth';
 }
