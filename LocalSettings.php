@@ -692,6 +692,21 @@ $wi->config->settings = [
 	],
 	
 	// Slack
+	'wgSlackFromName' => [
+		'default' => '',
+	],
+	'wgSlackNotificationWikiUrl' => [
+		'default' => '',
+	],
+	'wgSlackNotificationWikiUrlEnding' => [
+		'default' => 'index.php?title=',
+	],
+	'wgSlackShowNewUserEmail' => [
+		'default' => '',
+	],
+	'wgSlackShowNewUserIP' => [
+		'default' => 'index.php?title=',
+	],
 	'wgSlackIncomingWebhookUrl' => [
 		'default' => [],
 	],
