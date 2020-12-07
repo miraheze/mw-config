@@ -3580,7 +3580,6 @@ $wi->config->settings = [
 			'DBQuery' => false,
 			'DBReplication' => false,
 			'DBTransaction' => false,
-			'DEBUG' => false,
 			'DeferredUpdates' => false,
 			'deprecated' => 'debug',
 			'diff' => 'debug',
