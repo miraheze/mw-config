@@ -3586,6 +3586,7 @@ $wi->config->settings = [
 			'editpage' => false,
 			'Echo' => 'debug',
 			'error' => 'debug',
+			'error-json' => false,
 			'EventLogging' => false,
 			'EventStreamConfig' => false,
 			'exception' => 'debug',
