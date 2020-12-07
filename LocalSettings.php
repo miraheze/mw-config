@@ -712,6 +712,9 @@ $wi->config->settings += [
 	'wgDiscordShowNewUserFullName' => [
 		'default' => false,
 	],
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'default' => [],
+	],
 
 	// Slack
 	'wgSlackFromName' => [
@@ -728,6 +731,9 @@ $wi->config->settings += [
 	],
 	'wgSlackShowNewUserIP' => [
 		'default' => false,
+	],
+	'wgSlackIncomingWebhookUrl' => [
+		'default' => [],
 	],
 
 	// Display Title
