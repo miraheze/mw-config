@@ -1105,12 +1105,12 @@ if ( $wmgUseRegexFunctions ) {
 }
 
 // If Flow / VisualEditor are used, use the Parsoid php extension
-
-if ( $wmgUseFlow | $wmgUseVisualEditor ) {
+if ( $wmgUseFlow || $wmgUseVisualEditor ) {
+	// Required for Flow to work with rest.php
 	wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
-	
+
+	// Automatically uses the local rest.php
 	$wgVirtualRestConfig['modules']['parsoid'] = [
- 		'url' => 'https://meta.miraheze.org/w/rest.php',
  		'domain' => $wgServer,
  		'prefix' => $wgDBname,
  		'forwardCookies' => true,
