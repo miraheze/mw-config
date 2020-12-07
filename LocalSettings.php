@@ -688,6 +688,21 @@ $wi->config->settings += [
 	],
 
 	// Discord
+	'wgDiscordFromName' => [
+		'default' => '',
+	],
+	'wgDiscordShowNewUserEmail' => [
+		'default' => false,
+	],
+	'wgDiscordShowNewUserIP' => [
+		'default' => false,
+	],
+	'wgDiscordNotificationsShowSuppressed' => [
+		'default' => false,
+	],
+	'wgDiscordNotificationWikiUrl' => [
+		'default' => '',
+	],
 	'wgDiscordNotificationBlockedUser' => [
 		'default' => true,
 	],
@@ -696,6 +711,29 @@ $wi->config->settings += [
 	],
 	'wgDiscordShowNewUserFullName' => [
 		'default' => false,
+	],
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'default' => [],
+	],
+
+	// Slack
+	'wgSlackFromName' => [
+		'default' => '',
+	],
+	'wgSlackNotificationWikiUrlEnding' => [
+		'default' => 'index.php?title=',
+	],
+	'wgSlackNotificationWikiUrl' => [
+		'default' => '',
+	],
+	'wgSlackShowNewUserEmail' => [
+		'default' => false,
+	],
+	'wgSlackShowNewUserIP' => [
+		'default' => false,
+	],
+	'wgSlackIncomingWebhookUrl' => [
+		'default' => [],
 	],
 
 	// Display Title

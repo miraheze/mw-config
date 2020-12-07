@@ -56,13 +56,6 @@ if ( !$cwPrivate ) {
 
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
-
-	$wgDiscordFromName = $wgSitename;
-	$wgDiscordShowNewUserEmail = false;
-	$wgDiscordShowNewUserIP = false;
-	$wgDiscordNotificationsShowSuppressed = false;
-	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
-	$wgDiscordAdditionalIncomingWebhookUrls = ( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ?? $wmgWikiMirahezeDiscordHooks['default'];
 } else {
 	$wgWhitelistRead[] = 'Special:OAuth';
 }
@@ -367,4 +360,26 @@ if ( $wgDBname === 'commonswiki' ) {
 	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
+}
+
+// Discord
+$wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
+$wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
+$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
+if ( isset( $wmgWikiMirahezeDiscordHooks[ $wgDBname ] ) ) {
+	$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = array_merge(
+		$wmgWikiMirahezeDiscordHooks['default'],
+		$wmgWikiMirahezeDiscordHooks[ $wgDBname ]
+	);
+}
+
+// Slack
+$wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
+$wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
+$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
+if ( isset( $wmgWikiMirahezeSlackHooks[ $wgDBname ] ) ) {
+	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = array_merge(
+		$wmgWikiMirahezeSlackHooks['default'],
+		$wmgWikiMirahezeSlackHooks[ $wgDBname ]
+	);
 }
