@@ -14,7 +14,6 @@ $IP/extensions/AutoCreatePage/AutoCreatePage.php
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
-$IP/extensions/Bootstrap/extension.json
 $IP/extensions/CSS/extension.json
 $IP/extensions/Calendar/extension.json
 $IP/extensions/Cargo/extension.json
@@ -24,7 +23,6 @@ $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
 $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/extension.json
-$IP/extensions/CirrusSearch/extension.json
 $IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json
 $IP/extensions/Citoid/extension.json
@@ -66,7 +64,6 @@ $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
 $IP/extensions/Editcount/extension.json
 $IP/extensions/ElectronPdfService/extension.json
-$IP/extensions/Elastica/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
 $IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php
@@ -191,6 +188,7 @@ $IP/extensions/SimpleBlogPage/SimpleBlogPage.php
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/SimpleTooltip.php
 $IP/extensions/SlackNotifications/extension.json
+$IP/extensions/SnapProjectEmbed/extension.json
 $IP/extensions/SoftRedirector/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
 $IP/extensions/SocialProfile/SystemGifts/extension.json

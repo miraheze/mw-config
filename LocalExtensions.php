@@ -116,46 +116,6 @@ if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
-if ( $wmgUseCirrusSearch ) {
-	wfLoadExtensions( [
-		'CirrusSearch',
-		'Elastica',
-	] );
-
-	$wgCirrusSearchClusters = [
-		'default' => [
-			[
-				'host' => 'es-lb.miraheze.org',
-				'transport' => 'Https',
-				'port' => '443',
-			],
-		],
-	];
-
-	$wgCirrusSearchAllowLeadingWildcard = false;
-	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
-	$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '15s';
-	$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 50;
-	$wgCirrusSearchSearchShardTimeout[ 'default' ] = '10s';
-	$wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 40;
-	$wgCirrusSearchReplicas = '0-0';
-	$wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 2;
-	$wgCirrusSearchConnectionAttempts = 3;
-	$wgCirrusSearchMasterTimeout = '5m';
-
-	$wgCirrusSearchShardCount = [ 'content' => 2, 'general' => 2, 'archive' => 2, 'titlesuggest' => 2 ];
-
-	if ( $wmgSearchType ) {
-		$wgSearchType = 'CirrusSearch';
-	}
-
-	if ( $wmgDisableSearchUpdate ) {
-		$wgDisableSearchUpdate = true;
-	} else {
-		$wgDisableSearchUpdate = false;
-	}
-}
-
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
 }
@@ -188,19 +148,20 @@ if ( $wmgUseCollapsibleVector ) {
 }
 
 if ( $wmgUseCollection ) {
-	wfLoadExtension( 'Collection' );
+	wfLoadExtensions( [
+		'Collection',
+		'ElectronPdfService',
+	] );
 
 	$wgCommunityCollectionNamespace = 5;
 
 	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
 
 	$wgCollectionPODPartners = [];
-
-	wfLoadExtension( 'ElectronPdfService' );
 }
 
 if ( $wmgUseCommentStreams ) {
-	wfLoadExtension ( 'CommentStreams' );
+	wfLoadExtension( 'CommentStreams' );
 }
 
 if ( $wmgUseComments ) {
@@ -213,10 +174,6 @@ if ( $wmgUseCommonsMetadata ) {
 
 if ( $wmgUseContactPage ) {
 	wfLoadExtension( 'ContactPage' );
-
-	// Contact Page is a fairly complex (well long) extension to configure.
-	// All config should be in the file below on a wikidb basis.
-	require_once "/srv/mediawiki/config/ContactPage.php";
 }
 
 if ( $wmgUseContributionScores ) {
@@ -251,87 +208,6 @@ if ( $wmgUseCitizen ) {
 
 if ( $wmgUseDarkMode ) {
 	wfLoadExtension( 'DarkMode' );
-}
-
-/**
- * This is a global extension, but we define the config here.
- */
-if ( $wmgUseDataDump ) {
-	wfLoadExtension( 'DataDump' );
-
-	$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wgDBname}/";
-
-	$wgDataDump = [
-		'xml' => [
-			'file_ending' => '.xml.gz',
-			'generate' => [
-				'type' => 'mwscript',
-				'script' => "$IP/maintenance/dumpBackup.php",
-				'options' => [
-					'--full',
-					'--logs',
-					'--uploads',
-					'--output',
-					"gzip:{$wgDataDumpDirectory}" . '${filename}',
-				],
-			],
-			'limit' => 1,
-			'permissions' => [
-				'view' => 'view-dump',
-				'generate' => 'generate-dump',
-				'delete' => 'delete-dump',
-			],
-		],
-		'image' => [
-			'file_ending' => '.tar.gz',
-			'generate' => [
-				'type' => 'script',
-				'script' => '/usr/bin/tar',
-				'options' => [
-					'--exclude',
-					"/mnt/mediawiki-static/{$wgDBname}/archive",
-					'--exclude',
-					"/mnt/mediawiki-static/{$wgDBname}/deleted",
-					'--exclude',
-					"/mnt/mediawiki-static/{$wgDBname}/lockdir",
-					'--exclude',
-					"/mnt/mediawiki-static/{$wgDBname}/temp",
-					'--exclude',
-					"/mnt/mediawiki-static/{$wgDBname}/thumb",
-					'-zcvf',
-					$wgDataDumpDirectory . '${filename}',
-					"/mnt/mediawiki-static/{$wgDBname}/"
-				],
-			],
-			'limit' => 1,
-			'permissions' => [
-				'view' => 'view-dump',
-				'generate' => 'generate-dump',
-				'delete' => 'delete-dump',
-			],
-		],
-		'managewiki_backup' => [
-			'file_ending' => '.json',
-			'generate' => [
-				'type' => 'mwscript',
-				'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
-				'options' => [
-					'--filename',
-					'${filename}'
-				],
-			],
-			'limit' => 1,
-			'permissions' => [
-				'view' => 'view-dump',
-				'generate' => 'generate-dump',
-				'delete' => 'delete-dump',
-			],
-		],
-	];
-
-	$wgAvailableRights[] = 'view-dump';
-	$wgAvailableRights[] = 'generate-dump';
-	$wgAvailableRights[] = 'delete-dump';
 }
 
 if ( $wmgUseDataTransfer ) {
@@ -370,10 +246,6 @@ if ( $wmgUseDisqusTag ) {
 
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
-}
-
-if ( $wmgUseDonateBoxInSidebar ) {
-	require_once "$IP/extensions/DonateBoxInSidebar/DonateBoxInSidebar.php";
 }
 
 if ( $wmgUseDPLForum ) {
@@ -477,11 +349,7 @@ if ( $wmgUseGeoData ) {
 
 if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
-
-	// Required deps of GettingStarted
-	wfLoadExtension( 'GuidedTour' );
 }
-
 
 if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
@@ -504,7 +372,7 @@ if ( $wmgUseGraph ) {
 }
 
 if ( $wmgUseGroupsSidebar ) {
-	require_once "$IP/extensions/GroupsSidebar/GroupsSidebar.php";
+	wfLoadExtension( 'GroupsSidebar' );
 }
 
 if ( $wmgUseGuidedTour ) {
@@ -584,7 +452,7 @@ if ( $wmgUseLastModified ) {
 }
 
 if ( $wmgUseLdap ) {
-	require_once "$IP/extensions/LdapAuthentication/LdapAuthentication.php";
+	wfLoadExtension( 'LdapAuthentication' );
 
 	$wgAuthManagerAutoConfig['primaryauth'] += [
 		LdapPrimaryAuthenticationProvider::class => [
@@ -715,22 +583,16 @@ if ( $wmgUseMetrolook ) {
 	wfLoadSkin( 'Metrolook' );
 }
 
+if ( $wmgUseMinervaNeue ) {
+	wfLoadSkin( 'MinervaNeue' );
+}
+
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
-	wfLoadSkin( 'MinervaNeue' );
 
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
-
-	$wgHooks['EnterMobileMode'][] = function () {
-		global $wgIncludeLegacyJavaScript;
-
-		// Disable loading of legacy wikibits in the mobile web experience
-		$wgIncludeLegacyJavaScript = false;
-
-		return true;
-	};
 }
 
 if ( $wmgUseMobileTabsPlugin ) {
@@ -838,6 +700,10 @@ if ( $wmgUsePageForms ) {
 	wfLoadExtension( 'PageForms' );
 }
 
+if ( $wmgUsePageImages ) {
+	wfLoadExtension( 'PageImages' );
+}
+
 if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
 }
@@ -875,11 +741,7 @@ if ( $wmgUsePortableInfobox ) {
 }
 
 if ( $wmgUsePopups ) {
-	wfLoadExtensions( [
-		'TextExtracts',
-		'PageImages',
-		'Popups',
-	] );
+	wfLoadExtension( 'Popups' );
 	
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
@@ -940,7 +802,6 @@ if ( $wmgUseRefreshed ) {
 	wfLoadSkin( 'Refreshed' );
 }
 
-
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 
@@ -976,7 +837,7 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseShortURL ) {
+if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 }
 
@@ -1003,7 +864,11 @@ if ( $wmgUseSlackNotifications ) {
 		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
 }
 
-if ( $wmgUseSoftRedirector) {
+if ( $wmgUseSnapProjectEmbed ) {
+	wfLoadExtension( 'SnapProjectEmbed' );
+}
+
+if ( $wmgUseSoftRedirector ) {
 	wfLoadExtension( 'SoftRedirector' );
 }
 
@@ -1036,9 +901,10 @@ if ( $wmgUseSyntaxHighlightGeSHi ) {
 }
 
 if ( $wmgUseTabsCombination ) {
-	wfLoadExtension( 'Tabber' );
-
-	wfLoadExtension( 'Tabs' );
+	wfLoadExtensions( [
+		'Tabber',
+		'Tabs',
+	] );
 }
 
 if ( $wmgUseTemplateData ) {
@@ -1055,8 +921,6 @@ if ( $wmgUseTemplateStyles ) {
 
 if ( $wmgUseTemplateWizard ) {
 	wfLoadExtension( 'TemplateWizard' );
-
-        wfLoadExtension( 'TemplateData' );
 }
 
 if ( $wmgUseTextExtracts ) {
@@ -1152,18 +1016,15 @@ if ( $wmgUseVariables ) {
 }
 
 if ( $wmgUseVEForAll ) {
-	wfLoadExtension ( 'VEForAll' );
+	wfLoadExtension( 'VEForAll' );
 }
 
 if ( $wmgUseVideo ) {
-	wfLoadExtension ( 'Video' );
+	wfLoadExtension( 'Video' );
 }
 
 if ( $wmgUseVisualEditor ) {
-	wfLoadExtensions( [
-		'VisualEditor',
-		'TemplateData',
-	] );
+	wfLoadExtension( 'VisualEditor' );
 
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => 'https://parsoid-lb.miraheze.org:443',
@@ -1258,4 +1119,3 @@ if ( $wmgUseYouTube ) {
 if ( $wmgUseRegexFunctions ) {
 	wfLoadExtension( 'RegexFunctions' );
 }
-
