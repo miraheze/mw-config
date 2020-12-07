@@ -62,7 +62,9 @@ if ( !$cwPrivate ) {
 	$wgDiscordShowNewUserIP = false;
 	$wgDiscordNotificationsShowSuppressed = false;
 	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
-	$wgDiscordAdditionalIncomingWebhookUrls = ( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ?? $wmgWikiMirahezeDiscordHooks['default'];
+	if ( isset( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ) {
+		$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']["+$wgDBname"] = $wmgWikiMirahezeDiscordHooks[$wgDBname];
+	}
 } else {
 	$wgWhitelistRead[] = 'Special:OAuth';
 }
