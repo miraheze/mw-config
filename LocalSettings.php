@@ -22,7 +22,17 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wmgUploadHostname = "static.miraheze.org";
 
-$wi->config->settings = [
+$wi->setVariables(
+	'/srv/mediawiki/w/cache',
+	[
+		'wiki'
+	],
+	[
+		'miraheze.org' => 'wiki'
+	]
+);
+
+$wi->config->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '4',
@@ -202,7 +212,7 @@ $wi->config->settings = [
 	],
 
 	// Category Collation
-	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change 
+	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
 		'default' => 'uppercase',
 		'holidayswiki' => 'numeric',
 	],
@@ -379,7 +389,7 @@ $wi->config->settings = [
 	'wgCentralAuthAutoCreateWikis' => [
 		'default' => [
 			'loginwiki',
-			'metawiki' 
+			'metawiki'
 		],
 	],
 	'wgCentralAuthAutoNew' => [
@@ -586,7 +596,7 @@ $wi->config->settings = [
 	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
 	],
-	
+
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
 	],
@@ -660,7 +670,7 @@ $wi->config->settings = [
 	'wgDjvuTxt' => [
 		'default' => '/usr/bin/djvutxt',
 	],
-	
+
 	// DynamicPageList
 	'wgDLPAllowUnlimitedCategories' => [
 		'default' => false,
@@ -1927,7 +1937,7 @@ $wi->config->settings = [
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
-			'simple',	
+			'simple',
 		],
 		'+nonciclopediawiki' => [
 			'dlm',
@@ -2784,7 +2794,7 @@ $wi->config->settings = [
  		]
  	],
 	'wgMathValidModes' => [
-		'default' => [ 
+		'default' => [
 			'mathml'
 		],
 	],
@@ -2797,10 +2807,10 @@ $wi->config->settings = [
 		],
 	],
 
-	// NewUserMessage configs	
-	'wgNewUserMessageOnAutoCreate' => [	
-		'default' => false,	
-		'nmfwikiwiki' => true,	
+	// NewUserMessage configs
+	'wgNewUserMessageOnAutoCreate' => [
+		'default' => false,
+		'nmfwikiwiki' => true,
 	],
 
 	// Users Notified On All Changes
@@ -3233,6 +3243,9 @@ $wi->config->settings = [
 	'wgShowHostnames' => [
 		'default' => true,
 	],
+	'wgThumbPath' => [
+		'default' => '/w/thumb_handler.php'
+	],
 	'wgUsePathInfo' => [
 		'default' => true,
 	],
@@ -3520,6 +3533,9 @@ $wi->config->settings = [
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
 	],
+	'wmgWikibaseRepoDatabase' => [
+		'default' => $wi->dbname
+	],
 	'wmgWikibaseRepoUrl' => [
 		'default' => 'https://wikidata.org'
 	],
@@ -3748,17 +3764,7 @@ $wi->config->settings = [
 	],
 ];
 
-$wi->setVariables(
-	'/srv/mediawiki/w/cache',
-	[
-		'wiki'
-	],
-	[
-		'miraheze.org' => 'wiki'
-	]
-);
-
-// Start settings requiring access to variables
+// Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
@@ -3766,11 +3772,6 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
 }
-
-$wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
-// sets wgThumbPath, we fetch wgScriptPath from wgConf.
-$scriptPath = $wi->config->settings['wgScriptPath']['default'];
-$wi->config->settings['wgThumbPath']['default'] = "$scriptPath/thumb_handler.php";
 
 // DumpDump rights
 $wgAvailableRights[] = 'view-dump';
