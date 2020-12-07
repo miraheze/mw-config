@@ -372,6 +372,8 @@ if ( $wgDBname === 'commonswiki' ) {
 	];
 }
 
+$wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
+$wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
 $wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks['default'];
 if ( isset( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ) {
 	$wi->config->settings['wgSlackIncomingWebhookUrl']["+{$wgDBname}"] = $wmgWikiMirahezeSlackHooks[$wgDBname];
