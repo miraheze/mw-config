@@ -361,3 +361,8 @@ if ( $wgDBname === 'commonswiki' ) {
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 }
+
+$wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
+$wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
+$wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
+$wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
