@@ -3650,6 +3650,7 @@ $wi->config->settings = [
 			'session-ip' => false,
 			'SimpleAntiSpam' => false,
 			'slow-parse' => false,
+			'SpamBlacklist' => false,
 			'SpamBlacklistHit' => false,
 			'SpamRegex' => false,
 			'SQLBagOStuff' => false,
