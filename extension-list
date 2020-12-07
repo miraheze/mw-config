@@ -157,7 +157,6 @@ $IP/extensions/PageNotice/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
-$IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/PipeEscape/PipeEscape.php
 $IP/extensions/Poem/extension.json
