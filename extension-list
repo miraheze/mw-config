@@ -163,6 +163,7 @@ $IP/extensions/Poem/extension.json
 $IP/extensions/PollNY/extension.json
 $IP/extensions/PortableInfobox/extension.json
 $IP/extensions/Popups/extension.json
+$IP/extensions/Preloader/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
 $IP/extensions/Purge/extension.json
@@ -174,6 +175,7 @@ $IP/extensions/RSS/extension.json
 $IP/extensions/RandomGameUnit/extension.json
 $IP/extensions/RandomImage/extension.json
 $IP/extensions/RandomSelection/extension.json
+$IP/extensions/RegexFunctions/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
@@ -277,5 +279,5 @@ $IP/skins/apex/skin.json
 $IP/skins/erudite/skin.json
 $IP/skins/foreground/skin.json
 $IP/skins/pivot/skin.json
-$IP/extensions/Preloader/extension.json
-$IP/extensions/RegexFunctions/extension.json
+$IP/vendor/wikimedia/parsoid/extension.json
+
