@@ -1510,7 +1510,7 @@ $wgManageWikiSettings = [
 	],
 
 	// SEO
-  'wmgDefaultRobotPolicy' => [
+	'wmgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
 		'from' => 'mediawiki',
 		'restricted' => false,
