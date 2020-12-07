@@ -295,12 +295,6 @@ if ( $wmgUseFlaggedRevs ) {
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 
-        wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );"
-
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => $wgServer . $wgScriptPath . '/rest.php',
-	];
-
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
 	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
@@ -1108,4 +1102,18 @@ if ( $wmgUseYouTube ) {
 
 if ( $wmgUseRegexFunctions ) {
 	wfLoadExtension( 'RegexFunctions' );
+}
+
+// If Flow / VisualEditor are used, use the Parsoid php extension
+
+if ( $wmgUseFlow | $wmgUseVisualEditor ) {
+	wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
+	
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+ 		'url' => 'https://meta.miraheze.org/w/rest.php',
+ 		'domain' => $wgServer,
+ 		'prefix' => $wgDBname,
+ 		'forwardCookies' => true,
+ 		'restbaseCompat' => false,
+ 	];
 }
