@@ -295,6 +295,14 @@ if ( $wmgUseFlaggedRevs ) {
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+		'url' => 'https://parsoid-lb.miraheze.org:443',
+		'domain' => $wgServer,
+		'prefix' => $wgDBname,
+		'forwardCookies' => true,
+		'restbaseCompat' => false,
+	];
+
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
 	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
@@ -1017,6 +1025,14 @@ if ( $wmgUseVideo ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
+
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+		'url' => 'https://parsoid-lb.miraheze.org:443',
+		'domain' => $wgServer,
+		'prefix' => $wgDBname,
+		'forwardCookies' => true,
+		'restbaseCompat' => false,
+	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
