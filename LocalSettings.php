@@ -3571,6 +3571,7 @@ $wi->config->settings = [
 			'CentralNotice' => false,
 			'cite' => false,
 			'ContentHandler' => false,
+			'CookieWarning' => false,
 			'cookie' => false,
 			'collection' => 'debug',
 			'CreateWiki' => 'debug',
