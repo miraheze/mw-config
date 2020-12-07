@@ -852,8 +852,10 @@ if ( $wmgUseSlackNotifications ) {
 	$wgSlackNotificationWikiUrl = $wgServer . '/w/';
 	$wgSlackShowNewUserEmail = false;
 	$wgSlackShowNewUserIP = false;
-	$wgSlackIncomingWebhookUrl =
-		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
+	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks['default'];
+	if ( isset( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ) {
+		$wi->config->settings['wgSlackIncomingWebhookUrl']["+$wgDBname"] = $wmgWikiMirahezeSlackHooks[$wgDBname];
+	}
 }
 
 if ( $wmgUseSnapProjectEmbed ) {
