@@ -3583,6 +3583,7 @@ $wi->config->settings = [
 			'deprecated' => 'debug',
 			'diff' => 'debug',
 			'DuplicateParse' => false,
+			'dynamic-sidebar' => false,
 			'editpage' => false,
 			'Echo' => 'debug',
 			'error' => 'debug',
