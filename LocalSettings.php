@@ -3772,9 +3772,7 @@ $wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
 $scriptPath = $wi->config->settings['wgScriptPath']['default'];
 $wi->config->settings['wgThumbPath']['default'] = "$scriptPath/thumb_handler.php";
 
-// Data Dump
-
-// User rights we have created above.
+// DumpDump rights
 $wgAvailableRights[] = 'view-dump';
 $wgAvailableRights[] = 'generate-dump';
 $wgAvailableRights[] = 'delete-dump';
