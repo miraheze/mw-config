@@ -1499,10 +1499,76 @@ $wi->config->settings = [
 
 	// DataDump
 	'wgDataDump' => [
-		'default' => [],
+		'default' => [
+			'xml' => [
+				'file_ending' => '.xml.gz',
+				'generate' => [
+					'type' => 'mwscript',
+					'script' => "$IP/maintenance/dumpBackup.php",
+					'options' => [
+						'--full',
+						'--logs',
+						'--uploads',
+						'--output',
+						"gzip:/mnt/mediawiki-static/private/dumps/{$wi->dbname}/" . '${filename}',
+					],
+				],
+				'limit' => 1,
+				'permissions' => [
+					'view' => 'view-dump',
+					'generate' => 'generate-dump',
+					'delete' => 'delete-dump',
+				],
+			],
+			'image' => [
+				'file_ending' => '.tar.gz',
+				'generate' => [
+					'type' => 'script',
+					'script' => '/usr/bin/tar',
+					'options' => [
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/archive",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/deleted",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/lockdir",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/temp",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/thumb",
+						'-zcvf',
+						"/mnt/mediawiki-static/private/dumps/{$wi->dbname}/" . '${filename}',
+						"/mnt/mediawiki-static/{$wi->dbname}/"
+					],
+				],
+				'limit' => 1,
+				'permissions' => [
+					'view' => 'view-dump',
+					'generate' => 'generate-dump',
+					'delete' => 'delete-dump',
+				],
+			],
+			'managewiki_backup' => [
+				'file_ending' => '.json',
+				'generate' => [
+					'type' => 'mwscript',
+					'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+					'options' => [
+						'--filename',
+						'${filename}'
+					],
+				],
+				'limit' => 1,
+				'permissions' => [
+					'view' => 'view-dump',
+					'generate' => 'generate-dump',
+					'delete' => 'delete-dump',
+				],
+			],
+		],
 	],
 	'wgDataDumpDirectory' => [
-		'default' => '',
+		'default' => "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/",
 	],
 
 	'egApprovedRevsEnabledNamespaces' => [
@@ -3707,76 +3773,6 @@ $scriptPath = $wi->config->settings['wgScriptPath']['default'];
 $wi->config->settings['wgThumbPath']['default'] = "$scriptPath/thumb_handler.php";
 
 // Data Dump
-$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
-
-$dumpDirectory = $wi->config->settings['wgDataDumpDirectory']['default'];
-$wi->config->settings['wgDataDump']['default'] = [
-	'xml' => [
-		'file_ending' => '.xml.gz',
-		'generate' => [
-			'type' => 'mwscript',
-			'script' => "$IP/maintenance/dumpBackup.php",
-			'options' => [
-				'--full',
-				'--logs',
-				'--uploads',
-				'--output',
-				"gzip:{$dumpDirectory}" . '${filename}',
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	],
-	'image' => [
-		'file_ending' => '.tar.gz',
-		'generate' => [
-			'type' => 'script',
-			'script' => '/usr/bin/tar',
-			'options' => [
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/archive",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/deleted",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/lockdir",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/temp",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/thumb",
-				'-zcvf',
-				$dumpDirectory . '${filename}',
-				"/mnt/mediawiki-static/{$wi->dbname}/"
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	],
-	'managewiki_backup' => [
-		'file_ending' => '.json',
-		'generate' => [
-			'type' => 'mwscript',
-			'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
-			'options' => [
-				'--filename',
-				'${filename}'
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	],
-];
 
 // User rights we have created above.
 $wgAvailableRights[] = 'view-dump';
