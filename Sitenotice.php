@@ -8,8 +8,8 @@ if ( $wmgSiteNoticeOptOut ) {
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 50;
-/*
+$wgMajorSiteNoticeID = 51;
+
 // Write your SiteNotice below.  Comment out this section to disable.
 if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -18,11 +18,10 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Miraheze has upgraded to the latest version of MediaWiki (1.35)! However, if you experience any issues, please do let us know on <a href="https://phabricator.miraheze.org/">Phabricator</a>.</td>
+				<td style="font-size:125%">If you experence login issues, please delete your cookies. If you persist to have issues, please go to Special:UserLogout and then re-delete the cookies and try and login again. If you continue to still have issues please let us know at <a href="https://meta.miraheze.org/wiki/Community_noticeboard">Community noticeboard</a></td>
 				</tr></tbody></table>
 EOF;
 
 		return true;
 	}
 }
-*/
