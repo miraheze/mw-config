@@ -378,8 +378,5 @@ $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
 $wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
 if ( isset( $wmgWikiMirahezeSlackHooks[ $wgDBname ] ) ) {
-	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = array_merge(
-		$wmgWikiMirahezeSlackHooks['default'],
-		$wmgWikiMirahezeSlackHooks[ $wgDBname ]
-	);
+	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks[ $wgDBname ];
 }
