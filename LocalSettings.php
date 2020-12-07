@@ -733,7 +733,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgSlackIncomingWebhookUrl' => [
-		'default' => [],
+		'default' => '',
 	],
 
 	// Display Title
