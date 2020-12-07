@@ -64,7 +64,7 @@ if ( !$cwPrivate ) {
 	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
 	$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
 	if ( isset( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ) {
-		$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']["+$wgDBname"] = $wmgWikiMirahezeDiscordHooks[$wgDBname];
+		$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']["+{$wgDBname}"] = $wmgWikiMirahezeDiscordHooks[$wgDBname];
 	}
 } else {
 	$wgWhitelistRead[] = 'Special:OAuth';
@@ -370,4 +370,9 @@ if ( $wgDBname === 'commonswiki' ) {
 	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
+}
+
+$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks['default'];
+if ( isset( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ) {
+	$wi->config->settings['wgSlackIncomingWebhookUrl']["+{$wgDBname}"] = $wmgWikiMirahezeSlackHooks[$wgDBname];
 }
