@@ -1026,6 +1026,14 @@ if ( $wmgUseVideo ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+		'url' => 'https://parsoid-lb.miraheze.org:443',
+		'domain' => $wgServer,
+		'prefix' => $wgDBname,
+		'forwardCookies' => true,
+		'restbaseCompat' => false,
+	];
+
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
