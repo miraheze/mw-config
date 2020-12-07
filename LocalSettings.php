@@ -3665,6 +3665,7 @@ $wi->config->settings = [
 			'upload' => false,
 			'UserOptionsManager' => false,
 			'VisualEditor' => 'debug',
+			'warning' => false,
 			'wfDebug' => false,
 			'wfLogDBError' => false, // Former $wgDBerrorLog
 			'Wikibase' => false,
