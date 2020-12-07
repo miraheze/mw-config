@@ -999,7 +999,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseFlow' => [
-		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
+		'default' => false,
 	],
 	'wmgUseForcePreview' => [
 		'default' => false,
@@ -1454,7 +1454,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseVisualEditor' => [
-		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
+		'default' => false,
 	],
 	'wmgUseVariables' => [
 		'default' => false,
@@ -2699,13 +2699,6 @@ $wi->config->settings += [
 	// Miraheze specific config
 	'wgServicesRepo' => [
 		'default' => '/srv/services/services',
-	],
-
-	'wgMirahezeServicesExtensions' => [
-		'default' => [
-			'VisualEditor',
-			'Flow'
-		],
 	],
 
 	// Misc. stuff
