@@ -687,6 +687,14 @@ $wi->config->settings = [
 	'wgDiscordShowNewUserFullName' => [
 		'default' => false,
 	],
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'default' => [],
+	],
+	
+	// Slack
+	'wgSlackIncomingWebhookUrl' => [
+		'default' => [],
+	],
 
 	// Display Title
 	'wgDisplayTitleHideSubtitle' => [
