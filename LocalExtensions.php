@@ -847,15 +847,6 @@ if ( $wmgUseSimpleTooltip ) {
 
 if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
-	$wgSlackFromName = $wgSitename;
-	$wgSlackNotificationWikiUrlEnding = 'index.php?title=';
-	$wgSlackNotificationWikiUrl = $wgServer . '/w/';
-	$wgSlackShowNewUserEmail = false;
-	$wgSlackShowNewUserIP = false;
-	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks['default'];
-	if ( isset( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ) {
-		$wi->config->settings['wgSlackIncomingWebhookUrl']["+$wgDBname"] = $wmgWikiMirahezeSlackHooks[$wgDBname];
-	}
 }
 
 if ( $wmgUseSnapProjectEmbed ) {
