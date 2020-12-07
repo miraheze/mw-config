@@ -295,14 +295,6 @@ if ( $wmgUseFlaggedRevs ) {
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://parsoid-lb.miraheze.org:443',
-		'domain' => $wgServer,
-		'prefix' => $wgDBname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-	];
-
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
 	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
@@ -1026,14 +1018,6 @@ if ( $wmgUseVideo ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://parsoid-lb.miraheze.org:443',
-		'domain' => $wgServer,
-		'prefix' => $wgDBname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-	];
-
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
@@ -1118,4 +1102,20 @@ if ( $wmgUseYouTube ) {
 
 if ( $wmgUseRegexFunctions ) {
 	wfLoadExtension( 'RegexFunctions' );
+}
+
+// If Flow / VisualEditor are used, use the Parsoid php extension
+if ( $wmgUseFlow || $wmgUseVisualEditor ) {
+	// Required for Flow to work with rest.php
+	wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );
+
+	// Automatically uses the local rest.php (hence url isn't set).
+	// We need to set 'forwardCookies' for private wikis and
+	// for pages restricted by protection.
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+ 		'domain' => $wgServer,
+ 		'prefix' => $wgDBname,
+ 		'forwardCookies' => true,
+ 		'restbaseCompat' => false,
+ 	];
 }
