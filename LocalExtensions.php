@@ -295,12 +295,10 @@ if ( $wmgUseFlaggedRevs ) {
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 
+        wfLoadExtension( 'Parsoid', 'vendor/wikimedia/parsoid/extension.json' );"
+
 	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://parsoid-lb.miraheze.org:443',
-		'domain' => $wgServer,
-		'prefix' => $wgDBname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
+		'url' => $wgServer . $wgScriptPath . '/rest.php',
 	];
 
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
@@ -1025,14 +1023,6 @@ if ( $wmgUseVideo ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
-
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://parsoid-lb.miraheze.org:443',
-		'domain' => $wgServer,
-		'prefix' => $wgDBname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-	];
 
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
