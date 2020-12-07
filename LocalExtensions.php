@@ -1097,8 +1097,8 @@ if ( $wmgUseRegexFunctions ) {
 	wfLoadExtension( 'RegexFunctions' );
 }
 
-// If Flow / VisualEditor are used, use the Parsoid php extension
-if ( $wmgUseFlow || $wmgUseVisualEditor ) {
+// If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
+if ( $wmgUseFlow || $wmgUseVisualEditor ||  $wmgUseLinter ) {
 	// Required for Flow to work with rest.php
 	wfLoadExtension( 'Parsoid', '/srv/mediawiki/w/vendor/wikimedia/parsoid/extension.json' );
 
