@@ -3716,6 +3716,7 @@ $wi->config->settings += [
 			'formatnum' => false,
 			'FSFileBackend' => false,
 			'GettingStarted' => false,
+			'gitinfo' => false,
 			'GlobalTitleFail' => false,
 			'GlobalWatchlist' => false,
 			'headers-sent' => false,
