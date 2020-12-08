@@ -3776,6 +3776,7 @@ $wi->config->settings += [
 			'SpamBlacklistHit' => false,
 			'SpamRegex' => false,
 			'SQLBagOStuff' => false,
+			'squid' => false,
 			'StashEdit' => false,
 			'texvc' => false,
 			'throttler' => false,
