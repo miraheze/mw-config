@@ -1305,6 +1305,9 @@ $wi->config->settings += [
 	'wmgUseReplaceText' => [
 		'default' => false,
 	],
+	'wmgUseReport' => [
+		'default' => false,
+	],
 	'wmgUseRevisionSlider' => [
 		'default' => false,
 	],
