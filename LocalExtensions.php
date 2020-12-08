@@ -1112,6 +1112,7 @@ if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
 	// We need to set 'forwardCookies' for private wikis and
 	// for pages restricted by protection.
 	$wgVirtualRestConfig['modules']['parsoid'] = [
+                'url' => "$wgServer/w/rest.php",
  		'domain' => $wgServer,
  		'prefix' => $wgDBname,
  		'forwardCookies' => true,
