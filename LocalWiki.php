@@ -137,11 +137,16 @@ if ( $wgDBname === 'metawiki' ) {
 		$out->addMeta( 'revisit-after', '2 days' );
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
-	
+
 	$wgHooks['SkinBuildSidebar'][] = 'wfDonateLink';
-	
+
 	function wfDonateLink( $skin, &$bar ) {
-		$bar['donate'] = '<ul><li><a href="/wiki/Donate">Donate to Miraheze</a></li></ul>';
+		$bar['donate'][] = [
+			'text'  => $skin->msg( 'miraheze-donate' ),
+			'href'  => "/wiki/{$skin->msg( 'miraheze-donatepage' )}",
+			'title' => $skin->msg( 'miraheze-donate' ),
+			'id'    => 'n-donate',
+		];
 	}
 }
 
