@@ -1568,9 +1568,9 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'pdfhandler' => [
-			'name' => 'PDF Handler',
+			'name' => 'Pdf Handler',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfHandler',
-			'var' => 'wmgUsePDFHandler',
+			'var' => 'wmgUsePdfHandler',
 			'conflicts' => false,
 			'requires' => [],
 		],
