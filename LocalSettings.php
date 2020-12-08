@@ -3681,6 +3681,7 @@ $wi->config->settings += [
 			'cache-cookies' => false,
 			'caches' => false,
 			'captcha' => 'debug',
+			'cargo' => false,
 			'CentralAuth' => 'debug',
 			'CentralAuthRename' => false,
 			'CentralAuthUserMerge' => false,
