@@ -143,7 +143,7 @@ if ( $wgDBname === 'metawiki' ) {
 	function wfDonateLink( $skin, &$bar ) {
 		$bar['donate'][] = [
 			'text'  => $skin->msg( 'miraheze-donate' ),
-			'href'  => "/wiki/{$skin->msg( 'miraheze-donatepage' )}",
+			'href'  => '/wiki/Donate',
 			'title' => $skin->msg( 'miraheze-donate' ),
 			'id'    => 'n-donate',
 		];
