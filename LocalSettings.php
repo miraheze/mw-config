@@ -3779,6 +3779,7 @@ $wi->config->settings += [
 			'throttler' => false,
 			'thumbnail' => 'debug',
 			'thumbnailaccess' => false,
+			'TitleBlacklist' => false,
 			'TitleBlacklist-cache' => false,
 			'torblock' => false,
 			'TranslationNotifications.Jobs' => false,
