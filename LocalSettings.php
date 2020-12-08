@@ -3746,6 +3746,7 @@ $wi->config->settings += [
 			'NewUserMessage' => false,
 			'OAuth' => 'info',
 			'objectcache' => false,
+			'OldRevisionImporter' => false,
 			'OutputBuffer' => false,
 			'PageTriage' => false,
 			'PageViewInfo' => false,
