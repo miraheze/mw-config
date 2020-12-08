@@ -3676,6 +3676,7 @@ $wi->config->settings += [
 			'BlockManager' => false,
 			'BounceHandler' => false,
 			'cache-cookies' => false,
+			'caches' => false,
 			'captcha' => 'debug',
 			'CentralAuth' => 'debug',
 			'CentralAuthRename' => false,
