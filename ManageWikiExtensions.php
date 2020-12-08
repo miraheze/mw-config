@@ -1796,6 +1796,30 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'report' => [
+			'name' => 'Report',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Report',
+			'var' => 'wmgUseReport',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'report_table' => "$IP/extensions/Report/sql/table.sql",
+				],
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'report',
+						],
+					],
+					'sysop' => [
+						'permissions' => [
+							'handle-reports',
+						],
+					],
+				],
+			],
+		],
 		'revisionslider' => [
 			'name' => 'RevisionSlider',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RevisionSlider',
