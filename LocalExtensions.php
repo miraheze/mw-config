@@ -1102,16 +1102,11 @@ if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
 	// Required for Flow to work with rest.php
 	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
 
-	if ( $wmgUseFlow ) {
-		$wgFlowParsoidURL = "$wgServer/w/rest.php";
-		$wgFlowParsoidPrefix = $wgDBname;
-		$wgFlowParsoidTimeout = 50;
-	}
-
 	// Automatically uses the local rest.php (hence url isn't set).
 	// We need to set 'forwardCookies' for private wikis and
 	// for pages restricted by protection.
 	$wgVirtualRestConfig['modules']['parsoid'] = [
+		'url' => "$wgServer/w/rest.php",
  		'domain' => $wgServer,
  		'prefix' => $wgDBname,
  		'forwardCookies' => true,
