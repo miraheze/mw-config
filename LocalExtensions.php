@@ -804,6 +804,10 @@ if ( $wmgUseReplaceText ) {
 	wfLoadExtension( 'ReplaceText' );
 }
 
+if ( $wmgUseReport ) {
+	wfLoadExtension( 'Report' );
+}
+
 if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
 }
