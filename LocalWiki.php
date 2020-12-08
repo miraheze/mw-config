@@ -341,6 +341,21 @@ if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
 	];
 }
 
+if ( $wgDBname === 'wildterra2enwiki' ) {
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared',
+		'directory' => '/mnt/mediawiki-static/wildterra2wiki',
+		'url' => 'https://static.miraheze.org/wildterra2wiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => 'wildterra2wiki',
+		'wiki' => 'wildterra2wiki',
+		'descBaseUrl' => 'https://wildterra2.miraheze.org/wiki/File:',
+	];
+}
+
 if ( $wgDBname === 'erislywiki' ) { // T5981
 	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
 	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
