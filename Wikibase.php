@@ -2,46 +2,47 @@
 
 // Documentation for Wikibase: https://www.mediawiki.org/wiki/Wikibase/Installation/Advanced_configuration#Configuration
 
-// You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repoDatabase'] and $wgWBClientSettings['changesDatabase']
+// You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repositories']['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$wgWBRepoSettings['entityNamespaces']['item'] = 860;
-$wgWBRepoSettings['entityNamespaces']['property'] = 862;
-$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( $wgVersion );
-$wgWBRepoSettings['allowEntityImport'] = false;
-$wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
-$wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
-$wgWBRepoSettings['siteLinkGroups'] = [
-	'miraheze'
+$wgWBRepoSettings = [
+	'entityNamespaces' => [
+		'item' => 860,
+		'property' => 862,
+	],
+	'sharedCacheKeyPrefix' => $wi->dbname . ':WBL',
+	'allowEntityImport' => $wmgAllowEntityImport,
+	'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
+	'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
 ];
-$wgWBRepoSettings['specialSiteLinkGroups'] = [];
 
-$wgWBClientSettings['repoUrl'] = $wmgWikibaseRepoUrl;
-$wgWBClientSettings['repoDatabase'] = $wmgWikibaseRepoDatabase;
-$wgWBClientSettings['changesDatabase'] = $wmgWikibaseRepoDatabase;
-$wgWBClientSettings['repositories'] = [
-	'' => [
-		'repoDatabase' => $wmgWikibaseRepoDatabase,
-		'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
-		'entityNamespaces' => [
-			'item' => $wmgWikibaseItemNamespaceID,
-			'property' => $wmgWikibasePropertyNamespaceID
+$wgWBClientSettings = [
+	'repoUrl' => $wmgWikibaseRepoUrl,
+	'changesDatabase' => $wmgWikibaseRepoDatabase,
+	'repositories' => [
+		'' => [
+			'repoDatabase' => $wmgWikibaseRepoDatabase,
+			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+			'entityNamespaces' => [
+				'item' => $wmgWikibaseItemNamespaceID,
+				'property' => $wmgWikibasePropertyNamespaceID,
+			],
+			'prefixMapping' => [
+				'' => '',
+			],
 		],
-		'prefixMapping' => [
-			'' => ''
-		]
-	]
+	],
+	'siteGlobalID' => $wi->dbname,
+	'repoScriptPath' => '/w',
+	'repoArticlePath' => '/wiki/$1',
+	'siteGroup' => 'miraheze',
+	'repoNamespaces' => [
+		'item' => '',
+		'property' => 'Property',
+	],
+	'siteLinksGroups' => [
+		'miraheze',
+	],
+	'purgeCacheBatchSize' => 100,
+	'recentChangesBatchSize' => 100,
 ];
-$wgWBClientSettings['siteGlobalID'] = $wi->dbname;
-$wgWBClientSettings['repoScriptPath'] = '/w';
-$wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
-$wgWBClientSettings['siteGroup'] = 'miraheze';
-$wgWBClientSettings['repoNamespaces'] = [
-	'wikibase-item' => 'Item',
-	'wikibase-property' => 'Property'
-];
-$wgWBClientSettings['siteLinksGroups'] = [
-	'miraheze'
-];
-$wgWBClientSettings['purgeCacheBatchSize'] = 100;
-$wgWBClientSettings['recentChangesBatchSize'] = 100;
