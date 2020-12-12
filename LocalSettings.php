@@ -2628,6 +2628,12 @@ $wi->config->settings += [
 	'wgMatomoAnalyticsDisableCookie' => [
 		'default' => true,
 	],
+	'wgMatomoAnalyticsDisableCookie' => [
+		'default' => true,
+	],
+	'wgMatomoAnalyticsForceGetRequest' => [
+		'default' => true,
+	],
 
 	// MediaWikiChat settings
 	'wgChatLinkUsernames' => [
