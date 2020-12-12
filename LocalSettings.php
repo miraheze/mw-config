@@ -2752,7 +2752,7 @@ $wi->config->settings += [
 
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgDefaultMobileSkin' => [
 		'default' => 'minerva',
