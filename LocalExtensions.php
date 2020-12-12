@@ -710,6 +710,8 @@ if ( $wmgUsePDFEmbed ) {
 
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
+	
+	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
 if ( $wmgUsePipeEscape ) {
