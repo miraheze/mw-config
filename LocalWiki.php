@@ -122,13 +122,6 @@ if ( $wmgPrivateUploads ) {
 	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
-if ( $wgDBname === 'isvwiki' ) {
-	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
-	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
-
-	$wgSimpleFlaggedRevsUI = false;
-}
-
 if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
