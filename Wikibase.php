@@ -5,7 +5,7 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repositories']['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$wgWBRepoSettings = [
+$wgWBRepoSettings += [
 	'entityNamespaces' => [
 		'item' => 860,
 		'property' => 862,
@@ -16,7 +16,7 @@ $wgWBRepoSettings = [
 	'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
 ];
 
-$wgWBClientSettings = [
+$wgWBClientSettings += [
 	'repoUrl' => $wmgWikibaseRepoUrl,
 	'changesDatabase' => $wmgWikibaseRepoDatabase,
 	'repositories' => [
