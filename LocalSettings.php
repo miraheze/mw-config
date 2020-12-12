@@ -2733,9 +2733,14 @@ $wi->config->settings += [
 	'wgRCWatchCategoryMembership' => [
 		'default' => false,
 	],
-	// Disable in ManageWiki to require all edits, even those by admins, to be approved
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
+	],
+	'wgFragmentMode' => [
+		'default' => [
+			'html5',
+			'legacy'
+		],
 	],
 	'wgTrustedMediaFormats' => [
 		'default' => [
