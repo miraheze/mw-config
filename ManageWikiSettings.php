@@ -280,7 +280,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'name' => 'Enable VisualEditor Diff Page Beta Feature',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -289,7 +289,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'name' => 'Enable VisualEditor Wikitext Beta Feature',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -298,7 +298,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorShowBetaWelcome' => [
 		'name' => 'Enable VisualEditor Show Beta Welcome',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -535,7 +535,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorEnableDiffPage' => [
 		'name' => 'Enable VisualEditor Diff Page',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -561,7 +561,7 @@ $wgManageWikiSettings = [
 		'help' => 'Set this to use it when editing Module pages.',
 	],
 	'wgScribuntoUseGeSHi' => [
-		'name' => 'Scribunto Use GeSHi (SyntaxHighlight_GeSHi)',
+		'name' => 'Scribunto Use GeSHi (SyntaxHighlight)',
 		'restricted' => false,
 		'from' => 'syntaxhighlight_geshi',
 		'type' => 'check',
@@ -687,7 +687,7 @@ $wgManageWikiSettings = [
 	
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'name' => 'Minerva Always Show Language Button',
-		'from' => 'mediawiki',
+		'from' => 'minervaneue',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1017,7 +1017,7 @@ $wgManageWikiSettings = [
 	],
 	'wgMinervaEnableSiteNotice' => [
 		'name' => 'Minerva Sitenotice',
-		'from' => 'mobilefrontend',
+		'from' => 'minervaneue',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1044,7 +1044,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDismissableSiteNoticeForAnons' => [
 		'name' => 'Dismissable Site Notice For Anons',
-		'from' => 'dismissablesitenotice',
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
