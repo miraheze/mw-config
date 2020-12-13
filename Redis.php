@@ -18,7 +18,7 @@ $wgSessionsInObjectCache = true;
 $wgMessageCacheType = CACHE_DB;
 $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
-$wgLanguageConverterCacheType = 'redis-central';
+$wgLanguageConverterCacheType = CACHE_DB;
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
