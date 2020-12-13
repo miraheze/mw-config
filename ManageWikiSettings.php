@@ -1116,7 +1116,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'preferences',
-		'help' => 'This will make VisualEditor the default edit for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
+		'help' => 'This will make VisualEditor the default editor for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
 	],
 
 	// Recent changes
