@@ -83,7 +83,9 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 // $wgForeignFileRepos
 if ( $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
 	if ( !$wmgSharedUploadBaseUrl || $wmgSharedUploadBaseUrl === $wmgSharedUploadDBname ) {
-		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadDBname}.miraheze.org";
+		$wmgSharedUploadSubdomain = substr($wmgSharedUploadDBname, 0, -4);
+
+		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadSubdomain}.miraheze.org";
 	}
 
 	$wgForeignFileRepos[] = [
