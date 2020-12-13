@@ -639,7 +639,6 @@ $wi->config->settings += [
 	'wgDBuser' => [
 		'default' => 'mediawiki',
 	],
-
 	'wgReadOnly' => [
 		'default' => false,
 	],
@@ -3500,6 +3499,12 @@ $wi->config->settings += [
  		'stateofwiki' => true,
  		'mikekilitterboxwiki' => true
  	],
+	'wmgSharedUploadBaseUrl' => [
+		'default' => null,
+	],
+	'wmgSharedUploadDBname' => [
+		'default' => null,
+	],
 
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => [
