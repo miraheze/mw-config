@@ -1237,7 +1237,7 @@ $wgManageWikiSettings = [
 		'help' => 'Shows the user name of the user who made the change',
 	],
 
-	// Restricted (where settings that are restricted go)
+	// Restricted (settings that require the managewiki-restricted right)
 	'wgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
 		'from' => 'mediawiki',
