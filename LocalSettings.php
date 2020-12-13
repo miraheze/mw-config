@@ -2007,6 +2007,10 @@ $wi->config->settings += [
 		'+metawiki' => [
 			'wikipedia',
 		],
+		'+mrjaroslavikwiki' => [
+			'wikipedia',
+			'cswikipedia',
+		],
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
