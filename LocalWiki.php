@@ -81,28 +81,27 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 }
 
 // $wgForeignFileRepos
-if ( $wgSharedUploadDBname && in_array( $wgSharedUploadDBname, $wgLocalDatabases ) ) {
-	if ( !$wgSharedUploadBaseUrl || $wgSharedUploadBaseUrl === $wgSharedUploadDBname ) {
-		$wgSharedUploadBaseUrl = "{$wgSharedUploadDBname}.miraheze.org";
+if ( $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
+	if ( !$wmgSharedUploadBaseUrl || $wmgSharedUploadBaseUrl === $wmgSharedUploadDBname ) {
+		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadDBname}.miraheze.org";
 	}
 
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
-		'name' => "shared-{$wgSharedUploadDBname}",
-		'directory' => "/mnt/mediawiki-static/{$wgSharedUploadDBname}",
-		'url' => "https://static.miraheze.org/{$wgSharedUploadDBname}",
+		'name' => "shared-{$wmgSharedUploadDBname}",
+		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
+		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
 		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
 		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
 		'hasSharedCache' => false,
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => $wgSharedUploadDBname,
-		'descBaseUrl' => "https://{$wgSharedUploadBaseUrl}/wiki/File:",
-		'scriptDirUrl' => "https://{$wgSharedUploadBaseUrl}/w",
+		'wiki' => $wmgSharedUploadDBname,
+		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
 	];
 }
-
 
 // $wgLogos
 $wgLogos = [
