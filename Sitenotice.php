@@ -11,7 +11,7 @@ if ( $wmgSiteNoticeOptOut ) {
 $wgMajorSiteNoticeID = 50;
 
 // Write your SiteNotice below.  Comment out this section to disable.
-if ( !$wmgSiteNoticeOptOut && $wi->wikiDBClusters[$wgDBname] === 'c4' ?? null ) {
+if ( $wi->wikiDBClusters[$wgDBname] === 'c4' ?? null ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
