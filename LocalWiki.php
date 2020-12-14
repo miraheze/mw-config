@@ -18,7 +18,7 @@ if ( $cwClosed ) {
 		],
 	];
 
-if ( $cwClosed && wmgUseCommnents ) {
+if ( $cwClosed && wmgUseComments ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
 		'*' => [
 			'comment' => true,
