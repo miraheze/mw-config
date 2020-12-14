@@ -2010,7 +2010,10 @@ $wi->config->settings += [
 			'wikipedia',
 		],
 		'+mrjaroslavikwiki' => [
-		        'wikipedia' => [ 'cs', 'en' ],
+		        'wikipedia' => [
+                                 'cs',
+                                 'en', 
+                          ],
 		],
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
