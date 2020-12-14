@@ -16,6 +16,10 @@ if ( $cwClosed ) {
 			'undelete' => true,
 		],
 	];
+	
+	if ( $wmgUseComments ) {
+		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
+	}
 
 	if ( $cwPrivate ) {
 		$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
