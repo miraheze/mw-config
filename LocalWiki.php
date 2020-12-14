@@ -7,6 +7,7 @@ if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
 		'*' => [
 			'block' => true,
+                        'comment' => true,
 			'createaccount' => true,
 			'delete' => true,
 			'edit' => true,
