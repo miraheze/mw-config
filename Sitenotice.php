@@ -10,7 +10,6 @@ if ( $wmgSiteNoticeOptOut ) {
 // and don't comment it out
 $wgMajorSiteNoticeID = 50;
 
-
 // Write your SiteNotice below.  Comment out this section to disable.
 if ( !$wmgSiteNoticeOptOut && $wi->wikiDBClusters[$wgDBname] === 'c4' ?? null ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -26,4 +25,3 @@ EOF;
 		return true;
 	}
 }
-
