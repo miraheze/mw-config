@@ -18,6 +18,13 @@ if ( $cwClosed ) {
 		],
 	];
 
+if ( $cwClosed && wmgUseCommnents ) {
+	$wi->config->settings['wgRevokePermissions']['default'] = [
+		'*' => [
+			'comment' => true,
+		],
+	];
+
 	if ( $cwPrivate ) {
 		$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
 		function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
