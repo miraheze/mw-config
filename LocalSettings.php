@@ -3009,6 +3009,7 @@ $wi->config->settings += [
 			'flow-topiclist-sortby' => 'newest',
 		],
 		'+reviwikiwiki' => [
+			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0
 		],
 		'+solarawiki' => [
