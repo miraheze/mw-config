@@ -3828,8 +3828,6 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
 }
 
-wgDefaultUserOptions
-
 // DumpDump rights
 $wgAvailableRights[] = 'view-dump';
 $wgAvailableRights[] = 'generate-dump';
