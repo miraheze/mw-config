@@ -16,7 +16,7 @@ if ( $cwClosed ) {
 			'undelete' => true,
 		],
 	];
-	
+
 	if ( $wmgUseComments ) {
 		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
@@ -192,6 +192,10 @@ if ( $wgDBname === 'ndgwiki' ) {
 
 if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
+}
+
+if ( $wgDBname === 'reviwikiwiki' ) {
+	$wgDefaultUserOptions['usenewrc'] =0;
 }
 
 if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
