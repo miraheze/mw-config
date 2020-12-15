@@ -2991,7 +2991,7 @@ $wi->config->settings += [
 	],
 
 	// Preferences
- 	'+wgDefaultUserOptions' => [
+ 	'wmgDefaultUserOptions' => [
  		'default' => [
  			'enotifwatchlistpages' => 0,
  			'math' => 'mathml',
