@@ -3713,7 +3713,7 @@ $wi->config->settings += [
 			'DBReplication' => false,
 			'DBTransaction' => false,
 			'DeferredUpdates' => false,
-			'deprecated' => 'debug',
+			'deprecated' => [ 'graylog' => 'debug', 'sample' => 10000 ],
 			'diff' => 'debug',
 			'DuplicateParse' => false,
 			'dynamic-sidebar' => false,
