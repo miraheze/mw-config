@@ -3828,6 +3828,8 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
 }
 
+wgDefaultUserOptions
+
 // DumpDump rights
 $wgAvailableRights[] = 'view-dump';
 $wgAvailableRights[] = 'generate-dump';
@@ -3842,6 +3844,10 @@ $wi->config->extractAllGlobals( $wi->dbname );
 require_once __DIR__ . "/ManageWikiExtensions.php";
 require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
+
+// Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
+//we have to work around this by creating a local config and merging.
+$wgDefaultUserOptions = array_merge( $wgDefaultUserOptions, $wmgDefaultUserOptions );
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
