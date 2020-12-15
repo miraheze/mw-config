@@ -3754,6 +3754,7 @@ $wi->config->settings += [
 			'MassMessage' => false,
 			'Math' => 'debug',
 			'MatomoAnalytics' => 'debug',
+			'Mime' => false,
 			'message-format' => false,
 			'MessageCache' => false,
 			'MessageCacheError' => false,
