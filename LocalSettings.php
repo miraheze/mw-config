@@ -486,7 +486,7 @@ $wi->config->settings += [
 
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
-		'default' => '/^(subdomain\d{1,2}|community\d{1,2}|testwiki\d{1,2}|wikitest\d{1,2}|help\d{1,2}|noc|sandbox\d{1,2}|outreach|gazeteer|gazetteer|wikitech|wiki|www|wikis|misc\d{1,2}|db\d{1,2}|cp\d{1,2}|mw\d{1,2}|jobrunner\d{1,2}|gluster\d{1,2}|ns\d{1,2}|bacula\d{1,2}|misc\d{1,2}|mail\d{1,2}|mw\d{1,2}|ldap\d{1,2}|cloud\d{1,2}|mon\d{1,2}|lizardfs\d{1,2}|rdb\d{1,2}|phab\d{1,2}|services\d{1,2}|puppet\d{1,2}|test\d{1,2})+$/',
+		'default' => '/^(subdomain\d{1,2}|prueba\d{1,2}|community\d{1,2}|testwiki\d{1,2}|wikitest\d{1,2}|help\d{1,2}|noc|sandbox\d{1,2}|outreach|gazeteer|gazetteer|wikitech|wiki|www|wikis|misc\d{1,2}|db\d{1,2}|cp\d{1,2}|mw\d{1,2}|jobrunner\d{1,2}|gluster\d{1,2}|ns\d{1,2}|bacula\d{1,2}|misc\d{1,2}|mail\d{1,2}|mw\d{1,2}|ldap\d{1,2}|cloud\d{1,2}|mon\d{1,2}|lizardfs\d{1,2}|rdb\d{1,2}|phab\d{1,2}|services\d{1,2}|puppet\d{1,2}|test\d{1,2})+$/',
 	],
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
