@@ -3096,6 +3096,10 @@ $wi->config->settings += [
 			'member',
 		],
 		'+hypopediawiki' => [
+			'',
+			'user',
+			'autoconfirmed',
+			'sysop',
 			'bureaucrat',
 		],
 		'igrovyesistemywiki' => [
