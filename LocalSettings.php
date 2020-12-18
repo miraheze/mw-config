@@ -3691,6 +3691,7 @@ $wi->config->settings += [
 			'authevents' => false,
 			'autoloader' => false,
 			'BlockManager' => false,
+			'BlogPage' => false,
 			'BounceHandler' => false,
 			'cache-cookies' => false,
 			'caches' => false,
