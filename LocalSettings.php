@@ -3852,7 +3852,7 @@ $wgDefaultUserOptions = array_merge( $wgDefaultUserOptions, $wmgDefaultUserOptio
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
-$wgTmpDirectory = '/mnt/mediawiki-static/private/temp';
+$wgTmpDirectory = "/mnt/mediawiki-static/private/temp/$wgDBname";
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
