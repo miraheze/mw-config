@@ -2,9 +2,9 @@
 /**
  * Additional settings to add to ManageWikiNamespaces are added using the variable below.
  *
- * Type can be either:
+ * Type can be one of:
  *
- * check: adds a checkbox. Format: $var = $namespace_id;
+ * check: adds a checkbox. Format: $var[] = $namespace_id;
  * text: adds a single line text entry. Format: [$var][$namespace_id] = $val;
  * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
  *
@@ -15,8 +15,11 @@
  * main: true or false. If false, this config will not appear for main namespaces.
  * talk: true or false. If false, this config will not appear for talk namespaces.
  * blacklisted: array of namespace ids to blacklist the config from.
- * overridedefault: a string/array override default when no existing value exist. Allows for namespace specific overrides with [ $ns_id => $value ] format.
+ * overridedefault: override default when no existing value exist. Can be a boolean, string, or array.
+ * overridedefault[$namespace_id => $val]: namespace specific overrides. Also required a default key. See below.
+ * overridedefault['default' => $val]: required when using namespace specific overrides. Sets a default for all other namespaces, which is not using the overrides set.
  */
+
 $wgManageWikiNamespacesAdditional = [
 	'wgExtraSignatureNamespaces' => [
 		'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
@@ -51,7 +54,7 @@ $wgManageWikiNamespacesAdditional = [
 			14,
 			15,
 		],
-		'overridedefault' => true
+		'overridedefault' => true,
 	],
 	'wgWPBNamespaces' => [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
@@ -60,7 +63,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'overridedefault' => false
+		'overridedefault' => false,
 	],
 	'wgCommentStreamsAllowedNamespaces' => [
 		'name' => 'Can comments appear in this namespace?',
@@ -78,7 +81,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [ 8 ],
-		'overridedefault' => false
+		'overridedefault' => false,
 	],
 	'wgVisualEditorAvailableNamespaces' => [
 		'name' => 'Enable VisualEditor in this namespace?',
@@ -87,7 +90,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'overridedefault' => false
+		'overridedefault' => false,
 	],
 	'wgNamespacesToPostIn' => [
 		'name' => 'Can MassMessage post messages in this namespace?',
@@ -96,7 +99,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
-		'overridedefault' => false
+		'overridedefault' => false,
 	],
 	'wgTemplateSandboxEditNamespaces' => [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
@@ -105,7 +108,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
-		'overridedefault' => false
+		'overridedefault' => false,
 	],
 	'wgPreloaderSource' => [
 		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
