@@ -5,7 +5,6 @@ $wgObjectCaches['redis-central'] = [
 	'class' => 'RedisBagOStuff',
 	'servers' => [ $wmgRedisSettings['cache']['server'] ],
 	'password' => $wmgRedisSettings['cache']['password'],
-	'persistent' => true,
 	'loggroup' => 'redis',
 	'reportDupes' => false,
 ];
