@@ -386,6 +386,10 @@ if ( $wgDBname === 'commonswiki' ) {
 	];
 }
 
+if ( $wgDBname === 'r4356thwiki' ) {
+	$wgWhitelistRead[] = 'R4356th Wiki:Copyrights';
+}
+
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
