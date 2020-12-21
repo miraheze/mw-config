@@ -2018,7 +2018,7 @@ $wi->config->settings += [
 		'+r4356thwiki' => [
 			'scratchwiki',
 			'snapwiki',
-		]
+		],
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
