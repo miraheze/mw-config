@@ -2015,6 +2015,10 @@ $wi->config->settings += [
                                  'en', 
                           ],
 		],
+		'+r4356thwiki' => [
+			'scratchwiki',
+			'snapwiki'
+		]
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
