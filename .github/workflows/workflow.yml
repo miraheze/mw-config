@@ -23,7 +23,7 @@ jobs:
       - name: The build has passed
         uses: rectalogic/notify-irc@v1
       - uses: technote-space/workflow-conclusion-action@v2
-        if: env.WORKFLOW_CONCLUSION == 'success'
+        if: ${{ env.WORKFLOW_CONCLUSION }} == 'success'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github-notifier
