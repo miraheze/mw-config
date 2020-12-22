@@ -21,14 +21,15 @@ jobs:
         run: |
           bash phplint.sh
   notify:
+    name: IRC notifications
     needs: build
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
       - name: The build has passed
-      - uses: technote-space/workflow-conclusion-action@v2
+        uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
-        if: env.WORKFLOW_CONCLUSION == 'success' || env.WORKFLOW_CONCLUSION == 'failure' || env.WORKFLOW_CONCLUSION == 'cancelled'
+        if: ${{ env.WORKFLOW_CONCLUSION }} == 'success'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github-notifier
