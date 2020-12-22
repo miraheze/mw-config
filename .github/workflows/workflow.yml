@@ -1,8 +1,10 @@
-on: push
+on: 
+  create:
+  push:
+  pull_request:
 
 jobs:
   build:
-    if: github.event_name == 'create'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,7 +23,7 @@ jobs:
   notify-irc:
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ always() }}
+    if: github.event_name == 'pull_request'
     steps:
       - name: success
         uses: technote-space/workflow-conclusion-action@v2
