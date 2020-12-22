@@ -1,11 +1,25 @@
-on:
-  create:
-  push:
-  pull_request:
+on: push
 
 jobs:
+  build:
+    if: github.event_name == 'create'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.3']
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: PHP ${{ matrix.php }} 
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }} 
+      - name: Run tests
+        run: |
+          bash phplint.sh
   notify-irc:
-    #needs: build
+    needs: build
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
@@ -36,3 +50,4 @@ jobs:
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
+
