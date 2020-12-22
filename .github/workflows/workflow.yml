@@ -21,7 +21,7 @@ jobs:
         run: |
           bash phplint.sh
       - name: The build has passed
-      - uses: rectalogic/notify-irc@v1
+        uses: rectalogic/notify-irc@v1
       - uses: technote-space/workflow-conclusion-action@v2
         if: env.WORKFLOW_CONCLUSION == 'success' || env.WORKFLOW_CONCLUSION == 'failure' || env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
