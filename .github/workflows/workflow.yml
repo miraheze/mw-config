@@ -4,7 +4,42 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-create:
+    if: github.event_name == 'create'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.3']
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: PHP ${{ matrix.php }} 
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }} 
+      - name: Run tests
+        run: |
+          bash phplint.sh
+  build-push:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.3']
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: PHP ${{ matrix.php }} 
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }} 
+      - name: Run tests
+        run: |
+          bash phplint.sh
+  build-pull_request:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,7 +56,10 @@ jobs:
         run: |
           bash phplint.sh
   notify-irc:
-    needs: build
+    needs:
+      - build-create
+      - build-push
+      - build-pull_request
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
