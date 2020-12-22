@@ -20,28 +20,27 @@ jobs:
       - name: Run tests
         run: |
           bash phplint.sh
-      - name: irc push
+      - name: The build has passed
         uses: rectalogic/notify-irc@v1
-        if: github.event_name == 'push'
+        if: ${{ success() }}
         with:
           channel: "#miraheze"
           nickname: miraheze-github-notifier
           message: |
-            ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
-            ${{ join(github.event.commits.*.message) }}
-      - name: irc pull request
+            ${{ github.actor }} the build has passed
+      - name: The build has failed
         uses: rectalogic/notify-irc@v1
-        if: github.event_name == 'pull_request'
+        if: ${{ failure() }}
         with:
           channel: "#miraheze"
           nickname: miraheze-github-notifier
           message: |
-            ${{ github.actor }} opened PR ${{ github.event.html_url }}
-      - name: irc tag created
+            ${{ github.actor }} the build has failed
+      - name: The build has been cancelled
         uses: rectalogic/notify-irc@v1
-        if: github.event_name == 'create' && github.event.ref_type == 'tag'
+        if: ${{ cancelled() }}
         with:
           channel: "#miraheze"
           nickname: miraheze-github-notifier
           message: |
-            ${{ github.actor }} tagged ${{ github.repository }} ${{ github.event.ref }}
+            ${{ github.actor }} the build has been cancelled
