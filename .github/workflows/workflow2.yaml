@@ -5,7 +5,7 @@ on:
 
 jobs:
   notify-irc:
-    needs: build
+    #needs: build
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
