@@ -24,8 +24,8 @@ jobs:
         uses: rectalogic/notify-irc@v1
         if: github.event_name == 'push'
         with:
-          channel: "#mychannel"
-          nickname: my-github-notifier
+          channel: "#miraheze"
+          nickname: miraheze-github-notifier
           message: |
             ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
             ${{ join(github.event.commits.*.message) }}
@@ -33,15 +33,15 @@ jobs:
         uses: rectalogic/notify-irc@v1
         if: github.event_name == 'pull_request'
         with:
-          channel: "#mychannel"
-          nickname: my-github-notifier
+          channel: "#miraheze"
+          nickname: miraheze-github-notifier
           message: |
             ${{ github.actor }} opened PR ${{ github.event.html_url }}
       - name: irc tag created
         uses: rectalogic/notify-irc@v1
         if: github.event_name == 'create' && github.event.ref_type == 'tag'
         with:
-          channel: "#mychannel"
-          nickname: my-github-notifier
+          channel: "#miraheze"
+          nickname: miraheze-github-notifier
           message: |
             ${{ github.actor }} tagged ${{ github.repository }} ${{ github.event.ref }}
