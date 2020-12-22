@@ -23,10 +23,11 @@ jobs:
   notify-irc:
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: ${{ always() }}
     steps:
       - name: success
         uses: technote-space/workflow-conclusion-action@v2
+      - uses: lewagon/wait-on-check-action@master
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
@@ -36,6 +37,7 @@ jobs:
             ${{ github.repository }} - ${{ github.actor }} The build passed.
       - name: failure
         uses: technote-space/workflow-conclusion-action@v2
+      - uses: lewagon/wait-on-check-action@master
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
@@ -45,6 +47,7 @@ jobs:
             ${{ github.repository }} - ${{ github.actor }} the build has errored.
       - name: cancelled
         uses: technote-space/workflow-conclusion-action@v2
+      - uses: lewagon/wait-on-check-action@master
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
