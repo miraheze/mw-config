@@ -15,7 +15,6 @@ jobs:
           submodules: true
       - name: PHP ${{ matrix.php }} 
         uses: shivammathur/setup-php@v2
-      - uses: lewagon/wait-on-check-action@master
         with:
           php-version: ${{ matrix.php }} 
       - name: Run tests
@@ -26,15 +25,17 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
+      - uses: technote-space/workflow-conclusion-action@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 5
       - name: success
-        uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
-          message: |
-            ${{ github.repository }} - ${{ github.actor }} The build passed.
+          message: ${{ github.repository }} - ${{ github.actor }} The build passed.
       - name: failure
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
@@ -42,8 +43,7 @@ jobs:
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
-          message: |
-            ${{ github.repository }} - ${{ github.actor }} the build has errored.
+          message: ${{ github.repository }} - ${{ github.actor }} the build has errored.
       - name: cancelled
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
@@ -51,6 +51,5 @@ jobs:
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
-          message: |
-            ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
+          message: ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
 
