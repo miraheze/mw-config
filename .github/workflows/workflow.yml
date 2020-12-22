@@ -1,3 +1,4 @@
+name: Continuous integration
 on:
   push:
   pull_request:
