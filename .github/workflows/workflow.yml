@@ -21,32 +21,32 @@ jobs:
         run: |
           bash phplint.sh
   notify:
-        needs: build
-        runs-on: ubuntu-latest
-        if: ${{ always() }}
-        steps:
-          - name: The build has passed
-          - uses: technote-space/workflow-conclusion-action@v2
-          - uses: rectalogic/notify-irc@v1
-            if: env.WORKFLOW_CONCLUSION == 'success' || env.WORKFLOW_CONCLUSION == 'failure' || env.WORKFLOW_CONCLUSION == 'cancelled'
-            with:
-              channel: "#mediawiki-cosmos"
-              nickname: miraheze-github-notifier
-              message: |
-                ${{ github.actor }} the build has ${{ env.WORKFLOW_CONCLUSION }}
-          - name: The build has failed
-            uses: rectalogic/notify-irc@v1
-            if: ${{ failure() }}
-            with:
-              channel: "#mediawiki-cosmos"
-              nickname: miraheze-github-notifier
-              message: |
-                ${{ github.actor }} the build has failed
-          - name: The build has been cancelled
-            uses: rectalogic/notify-irc@v1
-            if: ${{ cancelled() }}
-            with:
-              channel: "#mediawiki-cosmos"
-              nickname: miraheze-github-notifier
-              message: |
-                ${{ github.actor }} the build has been cancelled
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: The build has passed
+      - uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'success' || env.WORKFLOW_CONCLUSION == 'failure' || env.WORKFLOW_CONCLUSION == 'cancelled'
+        with:
+          channel: "#mediawiki-cosmos"
+          nickname: miraheze-github-notifier
+          message: |
+            ${{ github.actor }} the build has ${{ env.WORKFLOW_CONCLUSION }}
+      - name: The build has failed
+        uses: rectalogic/notify-irc@v1
+        if: ${{ failure() }}
+        with:
+          channel: "#mediawiki-cosmos"
+          nickname: miraheze-github-notifier
+          message: |
+            ${{ github.actor }} the build has failed
+      - name: The build has been cancelled
+        uses: rectalogic/notify-irc@v1
+        if: ${{ cancelled() }}
+        with:
+          channel: "#mediawiki-cosmos"
+          nickname: miraheze-github-notifier
+          message: |
+            ${{ github.actor }} the build has been cancelled
