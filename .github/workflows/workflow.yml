@@ -25,11 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
-      - uses: technote-space/workflow-conclusion-action@v2
+      - name: success
+        uses: technote-space/workflow-conclusion-action@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 5
-      - name: success
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
