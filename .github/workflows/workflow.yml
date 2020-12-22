@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ['7.3', '7.4']
+        php: ['7.3']
     steps:
       - uses: actions/checkout@v2
         with:
@@ -20,7 +20,7 @@ jobs:
       - name: Run tests
         run: |
           bash phplint.sh
-  notify:
+  notify-irc:
     needs: build
     runs-on: ubuntu-latest
     if: ${{ always() }}
