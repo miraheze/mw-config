@@ -1188,6 +1188,9 @@ $wi->config->settings = [
 	'wmgUseNumberedHeadings' => [
 		'default' => false,
 	],
+	'wmgUseNumberText' => [
+		'default' => false,
+	],
 	'wmgUseOpenGraphMeta' => [
 		'default' => false,
 	],
