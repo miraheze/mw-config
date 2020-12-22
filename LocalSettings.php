@@ -3916,14 +3916,12 @@ if ( PHP_SAPI !== 'cli' ) {
 	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
 	switch ( $host ) {
 		case 'jobrunner1.miraheze.org':
-			$limit = 1200;
-			break;
 		case 'jobrunner2.miraheze.org':
 			$limit = 1200;
 			break;
 		default:
 			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-				$limit = 110;
+				$limit = 200;
 			} else {
 				$limit = 60;
 			}
