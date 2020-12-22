@@ -1,4 +1,6 @@
+name: Continuous integration
 on:
+  create:
   push:
   pull_request:
 
@@ -7,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ['7.3', '7.4']
+        php: ['7.3']
     steps:
       - uses: actions/checkout@v2
         with:
@@ -19,3 +21,35 @@ jobs:
       - name: Run tests
         run: |
           bash phplint.sh
+  notify-irc:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: success
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'success'
+        with:
+          channel: "#miraheze"
+          nickname: miraheze-github
+          message: |
+            ${{ github.repository }} - ${{ github.actor }} The build passed.
+      - name: failure
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'failure'
+        with:
+          channel: "#miraheze"
+          nickname: miraheze-github
+          message: |
+            ${{ github.repository }} - ${{ github.actor }} the build has errored.
+      - name: cancelled
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'cancelled'
+        with:
+          channel: "#miraheze"
+          nickname: miraheze-github
+          message: |
+            ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
