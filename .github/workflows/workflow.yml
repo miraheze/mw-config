@@ -28,16 +28,16 @@ jobs:
       - name: success
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
-        if: ${{ env.WORKFLOW_CONCLUSION }} == 'success'
+        if: ${{ env.WORKFLOW_CONCLUSION }} === 'success'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
-            ${{ github.repository }} - ${{ github.actor }} The build passed. ${{ github.event_path }}
+            ${{ github.repository }} - ${{ github.actor }} The build passed. ${{ github.event.html_url }}
       - name: failure
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
-        if: ${{ env.WORKFLOW_CONCLUSION }} == 'failure'
+        if: ${{ env.WORKFLOW_CONCLUSION }} === 'failure'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
@@ -46,7 +46,7 @@ jobs:
       - name: cancelled
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
-        if: ${{ env.WORKFLOW_CONCLUSION }} == 'cancelled'
+        if: ${{ env.WORKFLOW_CONCLUSION }} === 'cancelled'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
