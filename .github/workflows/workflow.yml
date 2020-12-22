@@ -26,10 +26,11 @@ jobs:
     if: ${{ always() }}
     steps:
       - name: success
-        uses: technote-space/workflow-conclusion-action@v2
+        uses: lewagon/wait-on-check-action@master
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 5
+      - uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
