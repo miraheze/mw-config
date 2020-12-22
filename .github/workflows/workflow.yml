@@ -22,7 +22,6 @@ jobs:
           bash phplint.sh
 
   irc:
-        name: IRC Notifications
         needs: build
         runs-on: ubuntu-latest
         if: ${{ always() }}
