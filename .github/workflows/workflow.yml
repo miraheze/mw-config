@@ -27,9 +27,9 @@ jobs:
         runs-on: ubuntu-latest
         if: ${{ always() }}
         steps:
+          - name: The build has passed
           - uses: technote-space/workflow-conclusion-action@v2
           - uses: rectalogic/notify-irc@v1
-          - name: The build has passed
             if: env.WORKFLOW_CONCLUSION == 'success' || env.WORKFLOW_CONCLUSION == 'failure' || env.WORKFLOW_CONCLUSION == 'cancelled'
             with:
               channel: "#mediawiki-cosmos"
