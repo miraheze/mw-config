@@ -23,12 +23,12 @@ jobs:
       - name: The build has passed
         uses: rectalogic/notify-irc@v1
       - uses: technote-space/workflow-conclusion-action@v2
-        if: env.WORKFLOW_CONCLUSION == 'success' || env.WORKFLOW_CONCLUSION == 'failure' || env.WORKFLOW_CONCLUSION == 'cancelled'
+        if: ${{ env.WORKFLOW_CONCLUSION }} == 'success' || ${{ env.WORKFLOW_CONCLUSION }} == 'failure' || ${{ env.WORKFLOW_CONCLUSION }} == 'cancelled'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github-notifier
           message: |
-            ${{ github.actor }} the build has ${{ env.WORKFLOW_CONCLUSION }}
+            ${{ github.actor }} the build has ${{ env.WORKFLOW_CONCLUSION }}.
       - name: The build has failed
         uses: rectalogic/notify-irc@v1
         if: ${{ failure() }}
