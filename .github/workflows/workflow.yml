@@ -37,7 +37,7 @@ jobs:
               message: |
                 ${{ github.actor }} the build has ${{ env.WORKFLOW_CONCLUSION }}
           - name: The build has failed
-          - uses: rectalogic/notify-irc@v1
+            uses: rectalogic/notify-irc@v1
             if: ${{ failure() }}
             with:
               channel: "#mediawiki-cosmos"
@@ -45,7 +45,7 @@ jobs:
               message: |
                 ${{ github.actor }} the build has failed
           - name: The build has been cancelled
-          - uses: rectalogic/notify-irc@v1
+            uses: rectalogic/notify-irc@v1
             if: ${{ cancelled() }}
             with:
               channel: "#mediawiki-cosmos"
