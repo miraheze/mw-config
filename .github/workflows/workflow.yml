@@ -15,6 +15,7 @@ jobs:
           submodules: true
       - name: PHP ${{ matrix.php }} 
         uses: shivammathur/setup-php@v2
+      - uses: lewagon/wait-on-check-action@master
         with:
           php-version: ${{ matrix.php }} 
       - name: Run tests
@@ -27,7 +28,6 @@ jobs:
     steps:
       - name: success
         uses: technote-space/workflow-conclusion-action@v2
-      - uses: lewagon/wait-on-check-action@master
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
@@ -37,7 +37,6 @@ jobs:
             ${{ github.repository }} - ${{ github.actor }} The build passed.
       - name: failure
         uses: technote-space/workflow-conclusion-action@v2
-      - uses: lewagon/wait-on-check-action@master
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
@@ -47,7 +46,6 @@ jobs:
             ${{ github.repository }} - ${{ github.actor }} the build has errored.
       - name: cancelled
         uses: technote-space/workflow-conclusion-action@v2
-      - uses: lewagon/wait-on-check-action@master
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
