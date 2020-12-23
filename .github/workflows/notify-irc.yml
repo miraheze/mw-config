@@ -2,8 +2,6 @@ name: notify-irc
 on:
   workflow_run:
     workflows: ["Continuous integration"]
-    types: completed
-
 jobs:
   notify-irc:
     runs-on: ubuntu-latest
