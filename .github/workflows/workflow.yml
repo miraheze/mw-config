@@ -26,28 +26,33 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
+      - name: Wait for build to succeed
+        uses: fountainhead/action-wait-for-check@v1.0.0
+        id: wait-for-build
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          checkName: build
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
       - name: success
-        uses: technote-space/workflow-conclusion-action@v2
-      - uses: rectalogic/notify-irc@v1
-        if: env.WORKFLOW_CONCLUSION == 'success'
+        if: steps.wait-for-build.outputs.conclusion == 'success'
+        uses: rectalogic/notify-irc@v1
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} The build passed.
       - name: failure
-        uses: technote-space/workflow-conclusion-action@v2
-      - uses: rectalogic/notify-irc@v1
-        if: env.WORKFLOW_CONCLUSION == 'failure'
+        if: steps.wait-for-build.outputs.conclusion == 'failure'
+        uses: rectalogic/notify-irc@v1
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has errored.
       - name: cancelled
-        uses: technote-space/workflow-conclusion-action@v2
-      - uses: rectalogic/notify-irc@v1
-        if: env.WORKFLOW_CONCLUSION == 'cancelled'
+        if: steps.wait-for-build.outputs.conclusion == 'cancelled'
+        uses: rectalogic/notify-irc@v1
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
