@@ -1,0 +1,53 @@
+name: Continuous integration
+on:
+  create:
+  push:
+  pull_request:
+    types: opened
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.3']
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: PHP ${{ matrix.php }} 
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }} 
+      - name: Run tests
+        run: |
+          bash phplint.sh
+  notify-irc:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ always() && github.repository_owner == 'miraheze' }}
+    steps:
+      - name: succeeded
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'success'
+        with:
+          channel: "#miraheze"
+          nickname: miraheze-github
+          message: ${{ github.repository }} - ${{ github.actor }} the build passed.
+      - name: failed
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'failure'
+        with:
+          channel: "#miraheze"
+          nickname: miraheze-github
+          message: ${{ github.repository }} - ${{ github.actor }} the build has errored.
+      - name: cancelled
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'cancelled'
+        with:
+          channel: "#miraheze"
+          nickname: miraheze-github
+          message: ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
