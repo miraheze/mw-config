@@ -1743,6 +1743,12 @@ $wi->config->settings += [
 	],
 
 	// https://www.mediawiki.org/wiki/Skin:Liberty
+	'wgLibertyMainColor' => [
+		'default' => '#4188F1',
+	],
+	'wgLibertySecondColor' => [
+		'default' => '#2774DC',
+	],
 	'wgLibertyUseGravatar' => [
 		'default' => false,
 	],
