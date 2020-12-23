@@ -1,4 +1,5 @@
-on: 
+name: Continuous integration
+on:
   create:
   push:
   pull_request:
@@ -26,13 +27,14 @@ jobs:
     if: ${{ always() }}
     steps:
       - name: success
-      - uses: technote-space/workflow-conclusion-action@v2
+        uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
-          message: ${{ github.repository }} - ${{ github.actor }} The build passed.
+          message: |
+            ${{ github.repository }} - ${{ github.actor }} The build passed.
       - name: failure
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
@@ -40,7 +42,8 @@ jobs:
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
-          message: ${{ github.repository }} - ${{ github.actor }} the build has errored.
+          message: |
+            ${{ github.repository }} - ${{ github.actor }} the build has errored.
       - name: cancelled
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
@@ -48,5 +51,5 @@ jobs:
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
-          message: ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
-
+          message: |
+            ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
