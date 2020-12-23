@@ -24,7 +24,7 @@ jobs:
   notify-irc:
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ always() }}
+    if: github.event_name == 'push'
     steps:
       - name: success
         uses: technote-space/workflow-conclusion-action@v2
