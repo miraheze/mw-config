@@ -2,8 +2,9 @@ name: Continuous integration
 on:
   create:
   push:
+    types: '!created'
   pull_request:
-    types: [created]    
+    types: 'created'
 
 jobs:
   build:
