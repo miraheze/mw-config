@@ -1033,10 +1033,6 @@ if ( $wmgUseWebChat ) {
 
 }
 
-if ( $wmgUseWidgets ) {
-	wfLoadExtension( 'Widgets' );
-}
-
 if ( $wmgUseWikiCategoryTagCloud ) {
 	wfLoadExtension( 'WikiCategoryTagCloud' );
 }
