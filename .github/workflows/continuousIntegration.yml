@@ -35,7 +35,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
-          channel: "#mediawiki-cosmos"
+          channel: "#miraheze"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} The build passed.
@@ -44,7 +44,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
-          channel: "#mediawiki-cosmos"
+          channel: "#miraheze"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has errored.
@@ -53,7 +53,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
-          channel: "#mediawiki-cosmos"
+          channel: "#miraheze"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
