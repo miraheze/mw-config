@@ -27,22 +27,22 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository_owner == 'miraheze'
     steps:
-      - name: success
+      - name: succeeded
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
           channel: "#miraheze"
-          nickname: miraheze-github
+          nickname: miraheze-github_
           message: |
             ${{ github.repository }} - ${{ github.actor }} The build passed.
-      - name: failure
+      - name: failed
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
           channel: "#miraheze"
-          nickname: miraheze-github
+          nickname: miraheze-github_
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has errored.
       - name: cancelled
@@ -51,6 +51,6 @@ jobs:
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
           channel: "#miraheze"
-          nickname: miraheze-github
+          nickname: miraheze-github_
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
