@@ -1,12 +1,9 @@
 name: Continuous integration
 on:
   create:
-    branches: 'Universal-Omega/*'
   push:
-    branches: 'Universal-Omega/*'
   pull_request:
-    types: [created]
-    branches: 'Universal-Omega/*' 
+    types: opened
 
 jobs:
   build:
@@ -28,7 +25,7 @@ jobs:
   notify-irc:
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ always() }}
+    if: github.repository_owner == 'miraheze'
     steps:
       - name: success
         uses: technote-space/workflow-conclusion-action@v2
