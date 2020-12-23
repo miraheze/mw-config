@@ -1,5 +1,4 @@
 <?php
-
 /**
  * ManageWiki settings are added using the variable below.
  *
@@ -38,6 +37,7 @@
  * help: string providing help information for the setting.
  * section: string name of groupings for settings.
  */
+
 $wgManageWikiSettings = [
 	// Anti-Spam
 	'wgAbuseFilterActions' => [
@@ -277,6 +277,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'beta',
 		'help' => 'This makes Media Viewer a beta feature thus this will not be enabled for all users.',
+	],
+	'wgPopupsReferencePreviewsBetaFeature' => [
+		'name' => 'Popups Reference Previews Beta Feature',
+		'from' => 'popups',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'beta',
+		'help' => 'Whether Reference Previews should be available as a Beta feature. If false, Reference Previews are enabled for all users by default.',
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'name' => 'Enable VisualEditor Diff Page Beta Feature',
@@ -578,6 +587,15 @@ $wgManageWikiSettings = [
 		'section' => 'edit',
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
 	],
+	'wgPopupsOptInDefaultState' => [
+		'name' => 'Popups Opt In Default State',
+		'from' => 'popups',
+		'restricted' => false,
+		'type' => 'integer',
+		'overridedefault' => 0,
+		'section' => 'beta',
+		'help' => 'Default Page Previews visibility. Has to be a string as a compatibility with beta feature settings.',
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
@@ -649,7 +667,6 @@ $wgManageWikiSettings = [
 		'section' => 'links',
 		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.'
 	],
-	
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
@@ -734,6 +751,7 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Adds suggestions from Yandex to Special:Translate',
 	],
+
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
 		'name' => 'Kartographer Wikivoyage Mode',
@@ -1117,6 +1135,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'preferences',
 		'help' => 'This will make VisualEditor the default editor for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
+	],
+	'wgPopupsHideOptInOnPreferencesPage' => [
+		'name' => 'Popups Hide Opt In On Preferences Page',
+		'from' => 'popups',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'Whether the option to enable/disable Page Previews should be hidden on Preferences page. Please note if PopupsBetaFeature is set to true this option will be always hidden.',
 	],
 
 	// Recent changes
