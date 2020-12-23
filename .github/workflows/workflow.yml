@@ -1,12 +1,12 @@
 name: Continuous integration
 on:
   create:
-    branches: 'Universal-Omega/*'
+    branches: 'Universal-Omega/**'
   push:
-    branches: 'Universal-Omega/*'
+    branches: 'Universal-Omega/**'
   pull_request:
     types: [created]
-    branches: 'Universal-Omega/*' 
+    branches: 'Universal-Omega/**' 
 
 jobs:
   build:
