@@ -2442,11 +2442,15 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'widgets' => [
-			'name' => 'Widgets',
+			'name' => 'Widgets (Disabled)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Widgets',
 			'var' => 'wmgUseWidgets',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			],
 			'install' => [
 				'namespaces' => [
 					'Widget' => [
