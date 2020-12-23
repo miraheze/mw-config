@@ -126,6 +126,9 @@ $wi->config->settings += [
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
 	],
+	'wgPopupsReferencePreviewsBetaFeature' => [
+		'default' => true,
+	],
 	'wgPivotFeatures' => [
 		'default' => [
 			'showActionsForAnon' => true,
@@ -794,13 +797,6 @@ $wi->config->settings += [
 	'wmgShowPopupsByDefault' => [
 		'default' => false,
 	],
-
-	// Preloader
-	'wgPreloaderSource' => [
-		'default' => [
- 			0 => 'Template:Boilerplate',
- 		],
- 	],
 
 	// Extensions and Skins
 	'wmgUse3D' => [
@@ -2990,6 +2986,14 @@ $wi->config->settings += [
 			],
 		],
 	],
+	
+	// Popups
+	'wgPopupsHideOptInOnPreferencesPage' => [
+		'default' => false,
+	],
+	'wgPopupsOptInDefaultState' => [
+		'default' => 0,
+	],
 
 	// Preferences
  	'wmgDefaultUserOptions' => [
@@ -3024,6 +3028,13 @@ $wi->config->settings += [
 	'wgHiddenPrefs' => [
 		'default' => [],
 	],
+
+	// Preloader
+	'wgPreloaderSource' => [
+		'default' => [
+ 			0 => 'Template:Boilerplate',
+ 		],
+ 	],
 
 	// Redis
 	'wmgRedisSettings' => [
