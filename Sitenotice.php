@@ -17,7 +17,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Following last night's emergency maintenance and the removal of [[:mediawikiwiki:Extension:Widgets|Widgets]]. Miraheze has released a [[:m:23-12-2020 Security Disclosure|Security Disclosure]]. Apologies for any inconvenience.</td>
+				<td style="font-size:125%">Following last night's emergency maintenance and the removal of <a href="https://mediawiki.org/wiki/Extension:Widgets">Widgets</a>. Miraheze has released a <a href="https://meta.miraheze.org/wiki/23-12-2020_Security_Disclosure">Security Disclosure</a>. Apologies for any inconvenience.</td>
 				</tr></tbody></table>
 EOF;
 
