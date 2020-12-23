@@ -30,7 +30,7 @@ jobs:
         id: wait-for-build
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          checkName: build
+          checkName: Continuous integration / build (7.3) (push)
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: success
