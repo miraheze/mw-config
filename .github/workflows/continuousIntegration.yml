@@ -1,8 +1,12 @@
 name: Continuous integration
 on:
   create:
+    branches: 'Universal-Omega/*'
   push:
+    branches: 'Universal-Omega/*'
   pull_request:
+    types: [created]
+    branches: 'Universal-Omega/*' 
 
 jobs:
   build:
@@ -24,14 +28,14 @@ jobs:
   notify-irc:
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: ${{ always() }}
     steps:
       - name: success
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
-          channel: "#miraheze"
+          channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} The build passed.
@@ -40,7 +44,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
-          channel: "#miraheze"
+          channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has errored.
@@ -49,7 +53,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
-          channel: "#miraheze"
+          channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
