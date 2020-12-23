@@ -17,11 +17,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }} 
-      - uses: lewagon/wait-on-check-action@master
-        with:
-          ref: test
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 5
       - name: Run tests
         run: |
           bash phplint.sh
