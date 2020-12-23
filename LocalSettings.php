@@ -36,7 +36,7 @@ $wi->config->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '4',
-	]
+	],
 
 	// AbuseFilter
 	'wgAbuseFilterActions' => [
