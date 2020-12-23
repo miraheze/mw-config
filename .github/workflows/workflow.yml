@@ -31,7 +31,6 @@ jobs:
         id: wait-for-build
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          checkName: build
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: success
@@ -42,7 +41,7 @@ jobs:
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} The build passed.
-      - name: failure
+      - name: failed
         if: steps.wait-for-build.outputs.conclusion == 'failure'
         uses: rectalogic/notify-irc@v1
         with:
