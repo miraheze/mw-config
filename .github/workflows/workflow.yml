@@ -3,6 +3,7 @@ on:
   create:
   push:
   pull_request:
+    types: [created]
 
 jobs:
   build:
@@ -22,36 +23,32 @@ jobs:
         run: |
           bash phplint.sh
   notify-irc:
+    needs: build
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
-      - name: Wait for build to succeed
-        uses: fountainhead/action-wait-for-check@v1.0.0
-        id: wait-for-build
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          checkName: Continuous integration / build (7.3) (push)
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-
       - name: success
-        if: steps.wait-for-build.outputs.conclusion == 'success'
-        uses: rectalogic/notify-irc@v1
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'success'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} The build passed.
-      - name: failed
-        if: steps.wait-for-build.outputs.conclusion == 'failure'
-        uses: rectalogic/notify-irc@v1
+      - name: failure
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
           message: |
             ${{ github.repository }} - ${{ github.actor }} the build has errored.
       - name: cancelled
-        if: steps.wait-for-build.outputs.conclusion == 'cancelled'
-        uses: rectalogic/notify-irc@v1
+        uses: technote-space/workflow-conclusion-action@v2
+      - uses: rectalogic/notify-irc@v1
+        if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
           channel: "#mediawiki-cosmos"
           nickname: miraheze-github
