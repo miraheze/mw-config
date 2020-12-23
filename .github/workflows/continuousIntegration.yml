@@ -3,7 +3,7 @@ on:
   create:
   push:
   pull_request:
-    types: opened
+    types: [opened, synchronize]
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
   notify-irc:
     needs: build
     runs-on: ubuntu-latest
-    if: ${{ always() && github.repository_owner == 'miraheze' }}
+    if: ${{ always() && github.repository_owner == 'miraheze' && ( github.ref	== 'refs/heads/master' || github.event_name == 'pull_request' ) }}
     steps:
       - name: succeeded
         uses: technote-space/workflow-conclusion-action@v2
