@@ -22,7 +22,6 @@ jobs:
         run: |
           bash phplint.sh
   notify-irc:
-    needs: build
     runs-on: ubuntu-latest
     if: ${{ always() }}
     steps:
@@ -31,6 +30,7 @@ jobs:
         id: wait-for-build
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          checkName: build
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: success
