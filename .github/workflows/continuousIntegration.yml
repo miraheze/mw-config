@@ -34,7 +34,7 @@ jobs:
         with:
           channel: "#miraheze"
           nickname: miraheze-github
-          message: ${{ github.repository }} - ${{ github.actor }} The build passed.
+          message: ${{ github.repository }} - ${{ github.actor }} the build passed.
       - name: failed
         uses: technote-space/workflow-conclusion-action@v2
       - uses: rectalogic/notify-irc@v1
