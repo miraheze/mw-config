@@ -1463,9 +1463,6 @@ $wi->config->settings += [
 	'wmgUseWebChat' => [
 		'default' => false,
 	],
-	'wmgUseWidgets' => [
-		'default' => false,
-	],
 	'wmgUseWikibaseRepository' => [
 		'default' => false,
 	],

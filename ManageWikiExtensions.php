@@ -2441,48 +2441,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-		'widgets' => [
-			'name' => 'Widgets (Disabled)',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Widgets',
-			'var' => 'wmgUseWidgets',
-			'conflicts' => false,
-			'requires' => [
-				'permissions' => [
-					'managewiki-restricted',
-				],
-			],
-			'install' => [
-				'namespaces' => [
-					'Widget' => [
-						'id' => 274,
-						'searchable' => 0,
-						'subpages' => 0,
-						'protection' => 'editwidgets',
-						'content' => 0,
-						'aliases' => [],
-						'contentmodel' => 'wikitext',
-						'additional' => []
-					],
-					'Widget_talk' => [
-						'id' => 275,
-						'searchable' => 0,
-						'subpages' => 1,
-						'protection' => '',
-						'content' => 0,
-						'aliases' => [],
-						'contentmodel' => 'wikitext',
-						'additional' => []
-					],
-				],
-				'permissions' => [
-					'sysop' => [
-						'permissions' => [
-							'editwidgets',
-						],
-					],
-				],
-			],
-		],
 		'wikibaseclient' => [
 			'name' => 'Wikibase (Client)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Client',
