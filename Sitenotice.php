@@ -19,8 +19,6 @@ $wgMajorSiteNoticeID = 52;
 				<table class="wikitable" style="text-align:center;"><tbody><tr>
 				<td style="font-size:125%">Following the emergency maintenance on 22nd December and the removal of <a href="https://mediawiki.org/wiki/Extension:Widgets">Widgets</a>. Miraheze has released a <a href="https://meta.miraheze.org/wiki/23-12-2020_Security_Disclosure">Security Disclosure</a>. Apologies for any inconvenience.</td>
 				</tr></tbody></table>
-EOF;
-
-		return true;
+		EOF;
 	}
 } */
