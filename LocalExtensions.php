@@ -1000,10 +1000,6 @@ if ( $wmgUseUserWelcome ) {
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
 
-if ( $wmgUseValidator ) {
-	require_once( "$IP/extensions/Validator/Validator.php" );
-}
-
 if ( $wmgUseVariables ) {
 	wfLoadExtension( 'Variables' );
 }
