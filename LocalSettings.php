@@ -3680,6 +3680,9 @@ $wi->config->settings += [
 	],
 
 	// Logging configuation (Graylog)
+	'wmgLogToDisk' => [
+		'default' => false,
+	],
 	'wgMWLoggerDefaultSpi' => [
 		'default' => [
 			'class' => \MediaWiki\Logger\LegacySpi::class,
