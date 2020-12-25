@@ -234,7 +234,6 @@ $IP/extensions/UserMerge/extension.json
 $IP/extensions/UserFunctions/UserFunctions.php
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
-$IP/extensions/Validator/Validator.php
 $IP/extensions/Variables/extension.json
 $IP/extensions/VEForAll/extension.json
 $IP/extensions/Video/extension.json
