@@ -2074,13 +2074,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgKartographerMapServer' => [
-		'default' => 'https://tile.openstreetmap.org',
-	],
-	'wgKartographerDfltStyle' => [
-		'default' => null,
-	],
-	'wgKartographerStyles' => [
-		'default' => [],
+		'default' => 'https://tiles.wmflabs.org',
 	],
 
 	// Language
