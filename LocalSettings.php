@@ -2074,7 +2074,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgKartographerMapServer' => [
-		//'default' => 'https://tile.openstreetmap.org',
+		'default' => '/',
 	],
 	'wgKartographerDfltStyle' => [
 		'default' => '/tile.openstreetmap.org',
