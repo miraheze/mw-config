@@ -2073,6 +2073,9 @@ $wi->config->settings += [
 	'wgKartographerUseMarkerStyle' => [
 		'default' => false,
 	 ],
+	'wgKartographerMapServer' => [
+		'default' => 'https://a.tile.openstreetmap.org',
+	],
 
 	// Language
 	'wgLanguageCode' => [ // Hardcode "en"
