@@ -8,17 +8,16 @@ if ( $wmgSiteNoticeOptOut ) {
 // Global SiteNotice
 // Increment this version number whenever you change the site notice
 // and don't comment it out
-$wgMajorSiteNoticeID = 54;
+$wgMajorSiteNoticeID = 55;
 
-/*if ( !$wmgSiteNoticeOptOut ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
-		global $wmgSiteNoticeOptOut, $snImportant;
-
-		$siteNotice .= <<<EOF
-				<table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Miraheze will be performing maintenance between 20:45 and 20:55 UTC (this was 21:35 in the previous notice, has been corrected now). You may encounter some errors during this maintenance window. Please save your edits before 20:35 UTC!</td>
-				</tr></tbody></table>
-		EOF;
-	}
-}*/
+// if ( !$wmgSiteNoticeOptOut ) {
+$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
+function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	global $wmgSiteNoticeOptOut, $snImportant;
+	$siteNotice .= <<<EOF
+			<table class="wikitable" style="text-align:center;"><tbody><tr>
+			<td style="font-size:125%">Miraheze has updated the recent <a href="https://meta.miraheze.org/wiki/23-12-2020_Security_Disclosure">Security Disclosure</a> to advise ALL users immediately reset their passwords and 2FA tokens for Miraheze Wikis.</td>
+			</tr></tbody></table>
+EOF;
+	return true;
+}
