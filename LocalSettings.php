@@ -2080,7 +2080,7 @@ $wi->config->settings += [
 		'default' => '',
 	],
 	'wgKartographerStyles' => [
-		'default' => [],
+		'default' => [ '' ],
 	],
 
 	// Language
