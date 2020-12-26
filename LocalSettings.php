@@ -2074,11 +2074,11 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgKartographerMapServer' => [
-		'default' => 'https://tile.openstreetmap.org',
+		//'default' => 'https://tile.openstreetmap.org',
 	],
-	/*'wgKartographerDfltStyle' => [
-		'default' => '',
-	],*/
+	'wgKartographerDfltStyle' => [
+		'default' => '/tile.openstreetmap.org',
+	],
 	'wgKartographerStyles' => [
 		'default' => [],
 	],
