@@ -45,9 +45,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	],
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
-		'c1' => 'Maintenance ongoing on the database server.',
-		'c2' => 'Maintenance ongoing on the database server.',
-		'c3' => 'Maintenance ongoing on the database server.',
-		'c4' => 'Maintenance ongoing on the database server.',
+		//'c1' => 'Maintenance ongoing on the database server.',
+		//'c2' => 'Maintenance ongoing on the database server.',
+		//'c3' => 'Maintenance ongoing on the database server.',
+		//'c4' => 'Maintenance ongoing on the database server.',
 	],
 ];
