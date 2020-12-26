@@ -2076,11 +2076,11 @@ $wi->config->settings += [
 	'wgKartographerMapServer' => [
 		'default' => 'https://tiles.wmflabs.org',
 	],
-	'wgKartographerStyles' => [
-		'default' => [ "osm" ],
-	],
 	'wgKartographerDfltStyle' => [
 		'default' => 'osm',
+	],
+	'wgKartographerStyles' => [
+		'default' => [ "osm" ],
 	],
 
 	// Language
