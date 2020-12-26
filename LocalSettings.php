@@ -2069,10 +2069,13 @@ $wi->config->settings += [
 	// Kartographer
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
-	 ],
+	],
 	'wgKartographerUseMarkerStyle' => [
 		'default' => false,
-	 ],
+	],
+	'wgKartographerMapServer' => [
+		'default' => 'https://a.tile.openstreetmap.org',
+	],
 
 	// Language
 	'wgLanguageCode' => [ // Hardcode "en"
