@@ -1,5 +1,4 @@
 <?php
-
 /**
  * ManageWiki settings are added using the variable below.
  *
@@ -38,6 +37,7 @@
  * help: string providing help information for the setting.
  * section: string name of groupings for settings.
  */
+
 $wgManageWikiSettings = [
 	// Anti-Spam
 	'wgAbuseFilterActions' => [
@@ -1354,7 +1354,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'restricted',
-		'help' => 'The database name for the wiki to use as the file repository.',
+		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
