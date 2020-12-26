@@ -56,6 +56,7 @@ EOF;
 		}
 	}
 }
+$wgKartographerDfltStyle = false;
 unset($wgKartographerDfltStyle);
 // Public Wikis
 if ( !$cwPrivate ) {
