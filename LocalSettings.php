@@ -2080,7 +2080,7 @@ $wi->config->settings += [
 		'default' => 'osm',
 	],
 	'wgKartographerStyles' => [
-		'default' => [],
+		'default' => [ 'osm' ],
 	],
 
 	// Language
