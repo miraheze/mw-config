@@ -3791,7 +3791,7 @@ $wi->config->settings += [
 			'readinglists' => false,
 			'recursion-guard' => false,
 			'RecursiveLinkPurge' => false,
-			'redis' => 'warning', // Debug sprews too much information
+			'redis' => [ 'graylog' => 'warning', 'sample' => 20 ], // Debug sprews too much information + sample (otherwise you'll get 2 million+ messages in a few minutes)
 			'Renameuser' => false,
 			'resourceloader' => false,
 			'ResourceLoaderImage' => false,
