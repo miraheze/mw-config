@@ -19,5 +19,4 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 			<td style="font-size:125%">Miraheze has updated the recent <a href="https://meta.miraheze.org/wiki/23-12-2020_Security_Disclosure">Security Disclosure</a> to advise ALL users immediately reset their passwords and 2FA tokens for Miraheze Wikis.</td>
 			</tr></tbody></table>
 EOF;
-	return true;
-}
+// }
