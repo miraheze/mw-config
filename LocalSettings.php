@@ -2074,13 +2074,13 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgKartographerMapServer' => [
-		'default' => 'https://maps.wikimedia.org',
+		'default' => 'https://tile.openstreetmap.org/',
 	],
 	'wgKartographerDfltStyle' => [
 		'default' => 'osm',
 	],
 	'wgKartographerStyles' => [
-		'default' => [ 'osm' ],
+		'default' => [],
 	],
 
 	// Language
