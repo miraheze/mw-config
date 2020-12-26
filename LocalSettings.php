@@ -2076,12 +2076,7 @@ $wi->config->settings += [
 	'wgKartographerMapServer' => [
 		'default' => 'tile.openstreetmap.org',
 	],
-	'wgKartographerDfltStyle' => [
-		'default' => 'osm',
-	],
-	'wgKartographerStyles' => [
-		'default' => [ 'osm' ],
-	],
+	
 
 	// Language
 	'wgLanguageCode' => [ // Hardcode "en"
