@@ -10,7 +10,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // and don't comment it out
 $wgMajorSiteNoticeID = 54;
 
-if ( !$wmgSiteNoticeOptOut ) {
+/*if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
@@ -21,4 +21,4 @@ if ( !$wmgSiteNoticeOptOut ) {
 				</tr></tbody></table>
 		EOF;
 	}
-}
+}*/
