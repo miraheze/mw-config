@@ -2323,6 +2323,25 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUrlShortener',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'sql' => [
+					'Vote' => "$IP/extensions/VoteNY/sql/vote.mysql"
+				],
+				'permissions' => [
+					'*' => [
+						'permissions' => [
+							'urlshortener-create-url',
+						],
+					],
+					'sysop' => [
+						'permissions' => [
+							'urlshortener-create-url',
+							'urlshortener-manage-url',
+							'urlshortener-view-log',
+						],
+					],
+				],
+			],
 		],
 		'userfunctions' => [
 			'name' => 'UserFunctions',
