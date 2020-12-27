@@ -2025,6 +2025,9 @@ $wi->config->settings += [
 		'+simcitywiki' => [
 			'wikipedia',
 		],
+		'+snapwikiwiki' => [
+			'scratchwiki',
+		],
 		'wikitrashwiki' => [
 			'wikipedia' => [
 				'it',
