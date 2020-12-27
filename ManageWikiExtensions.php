@@ -2325,11 +2325,6 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'permissions' => [
-					'*' => [
-						'permissions' => [
-							'urlshortener-create-url',
-						],
-					],
 					'sysop' => [
 						'permissions' => [
 							'urlshortener-create-url',
