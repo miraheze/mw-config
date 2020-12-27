@@ -93,9 +93,9 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 }
 
 // $wgForeignFileRepos
-if ( $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
+if ( isset( $wmgSharedUploadDBname ) && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
 	if ( !$wmgSharedUploadBaseUrl || $wmgSharedUploadBaseUrl === $wmgSharedUploadDBname ) {
-		$wmgSharedUploadSubdomain = substr($wmgSharedUploadDBname, 0, -4);
+		$wmgSharedUploadSubdomain = substr( $wmgSharedUploadDBname, 0, -4 );
 
 		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadSubdomain}.miraheze.org";
 	}
