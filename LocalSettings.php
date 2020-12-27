@@ -3160,7 +3160,10 @@ $wi->config->settings += [
 		'+vnenderbotwiki' => [
 			'template',
 			'extendedconfirmed',
-			'owner'
+			'owner',
+		],
+		'+devwiki' => [
+			'editinterface'	
 		],
 	],
 	'wgRestrictionTypes' => [
