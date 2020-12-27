@@ -331,10 +331,6 @@ if ( $wgDBname === 'r4356thwiki' ) {
 	$wgWhitelistRead[] = 'R4356th Wiki:Copyrights';
 }
 
-if ( $wgDBname === 'metawiki' ) {
-	$wgAvailableRights[] = 'editwidgets';
-}
-
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
