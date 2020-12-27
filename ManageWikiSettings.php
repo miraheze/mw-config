@@ -1374,7 +1374,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'restricted',
-		'help' => 'The domain name (if a custom domain), or the database name (if not) for the wiki to use as the file repository. Do not include https:// or any paths.',
+		'help' => 'The domain name for the wiki to use as the file repository. Leave empty unless it is a custom domain. By default will be the miraheze subdomain of whatever <code>$wmgSharedUploadDBname</code> is set to below. Do not include https:// or any paths.',
 	],
 	'wmgSharedUploadDBname' => [
 		'name' => 'Shared Upload Database Name',
@@ -1383,7 +1383,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => null,
 		'section' => 'restricted',
-		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki.',
+		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. Does nothing if the value is not a valid Miraheze-hosted wiki database.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
