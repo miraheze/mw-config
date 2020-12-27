@@ -2324,9 +2324,6 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [
-				'sql' => [
-					'Vote' => "$IP/extensions/VoteNY/sql/vote.mysql"
-				],
 				'permissions' => [
 					'*' => [
 						'permissions' => [
