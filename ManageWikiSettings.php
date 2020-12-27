@@ -1367,6 +1367,24 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'Compress new page revisions if possible. System administrators: after enabling this, don\'t forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki wikidatabase --type gzip</code>.',
 	],
+	'wmgSharedUploadBaseUrl' => [
+		'name' => 'Shared Upload Base Url',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'restricted',
+		'help' => 'The domain name (if a custom domain), or the database name (if not) for the wiki to use as the file repository. Do not include https:// or any paths.',
+	],
+	'wmgSharedUploadDBname' => [
+		'name' => 'Shared Upload Database Name',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'restricted',
+		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki.',
+	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
 		'name' => 'File Extensions',

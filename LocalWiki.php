@@ -83,6 +83,40 @@ if( $wmgContactPageRecipientUser ) {
 	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
+// $wgFooterIcons
+if ( (bool)$wmgWikiapiaryFooterPageName ) {
+ 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
+ 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
+ 		'alt' => 'Monitored by WikiApiary'
+ 	];
+}
+
+// $wgForeignFileRepos
+if ( $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
+	if ( !$wmgSharedUploadBaseUrl || $wmgSharedUploadBaseUrl === $wmgSharedUploadDBname ) {
+		$wmgSharedUploadSubdomain = substr($wmgSharedUploadDBname, 0, -4);
+
+		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadSubdomain}.miraheze.org";
+	}
+
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => "shared-{$wmgSharedUploadDBname}",
+		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
+		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => $wmgSharedUploadDBname,
+		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
+	];
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
@@ -94,15 +128,6 @@ if ( $wgWordmark ) {
 		'width' => $wgWordmarkWidth,
 		'height' => $wgWordmarkHeight,
 	];
-}
-
-// $wgFooterIcons
-if ( (bool)$wmgWikiapiaryFooterPageName ) {
- 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
- 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
- 		'alt' => 'Monitored by WikiApiary'
- 	];
 }
 
 // $wgUrlShortenerAllowedDomains
@@ -153,42 +178,6 @@ if ( $wgDBname === 'metawiki' ) {
 			'id'    => 'n-donate',
 		];
 	}
-}
-
-if ( $wgDBname === 'nbdbwiki' ) {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared-nenawikiwiki',
-		'directory' => '/mnt/mediawiki-static/nonbinarywiki',
-		'url' => 'https://static.miraheze.org/nonbinarywiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'nonbinarywiki',
-		'descBaseUrl' => 'https://nonbinary.wiki/wiki/File:',
-		'scriptDirUrl' => 'https://nonbinary.wiki/w',
-	];
-}
-
-if ( $wgDBname === 'ndgwiki' ) {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared-nenawikiwiki',
-		'directory' => '/mnt/mediawiki-static/nenawikiwiki',
-		'url' => 'https://static.miraheze.org/nenawikiwiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'nenawikiwiki',
-		'descBaseUrl' => 'https://nenawiki.org/wiki/File:',
-		'scriptDirUrl' => 'https://nenawiki.org/w',
-	];
 }
 
 if ( $wgDBname === 'newusopediawiki' ) {
@@ -304,25 +293,6 @@ switch ( $wmgWikiLicense ) {
 		break;
 }
 
-if ( $wgDBname === 'gyaanipediawiki' ||
-	 $wgDBname === 'higyaanipediawiki' ||
-	 $wgDBname === 'mrgyaanipediawiki' ||
-	 $wgDBname === 'pagyaanipediawiki'
-) {
-	// per Ucronistaw
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static/commonsgyaanipediawiki',
-		'url' => 'https://static.miraheze.org/commonsgyaanipediawiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => 'commonsgyaanipediawiki',
-		'wiki' => 'commonsgyaanipediawiki',
-		'descBaseUrl' => 'https://commonsgyaanipedia.miraheze.org/wiki/File:',
-	];
-}
 
 if ( $wmgUseYandexTranslate ) {
 	$wgTranslateTranslationServices['Yandex'] = [
@@ -333,36 +303,6 @@ if ( $wmgUseYandexTranslate ) {
 		'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
 		'langlimit' => 1,
 		'type' => 'yandex',
-	];
-}
-
-if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static/intercriaturaswiki',
-		'url' => 'https://static.miraheze.org/intercriaturaswiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => 'intercriaturaswiki',
-		'wiki' => 'intercriaturaswiki',
-		'descBaseUrl' => 'https://intercriaturas.miraheze.org/wiki/File:',
-	];
-}
-
-if ( $wgDBname === 'wildterra2enwiki' ) {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static/wildterra2wiki',
-		'url' => 'https://static.miraheze.org/wildterra2wiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => 'wildterra2wiki',
-		'wiki' => 'wildterra2wiki',
-		'descBaseUrl' => 'https://wildterra2.miraheze.org/wiki/File:',
 	];
 }
 
