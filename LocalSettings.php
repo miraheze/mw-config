@@ -2002,6 +2002,14 @@ $wi->config->settings += [
 			'meta',
 			'templatewiki',
 		],
+		'+batfamilywiki' => [
+			'batmanwiki',
+			'batmanwikifandom',
+		],
+		'+batmanwiki' => [
+			'batfamilywiki',
+			'batmanwikifandom',
+		],
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
