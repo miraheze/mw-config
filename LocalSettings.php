@@ -3538,10 +3538,10 @@ $wi->config->settings += [
  		'mikekilitterboxwiki' => true
  	],
 	'wmgSharedUploadBaseUrl' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wmgSharedUploadDBname' => [
-		'default' => null,
+		'default' => false,
 	],
 
 	// UniversalLanguageSelector
