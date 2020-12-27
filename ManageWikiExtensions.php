@@ -2323,6 +2323,17 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUrlShortener',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'urlshortener-create-url',
+							'urlshortener-manage-url',
+							'urlshortener-view-log',
+						],
+					],
+				],
+			],
 		],
 		'userfunctions' => [
 			'name' => 'UserFunctions',
