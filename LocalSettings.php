@@ -1972,17 +1972,28 @@ $wi->config->settings += [
 		'default' => [
 			'simple',
 		],
+		'+commonswiki' => [
+			'wikimediacommons',
+			'w',
+			'eswiki',
+			'wikispecies',
+		],
+		'+isvwiki' => [
+			'd',
+		],
 		'+nonciclopediawiki' => [
 			'dlm',
 			'olb',
 			'tlh',
 			'zombie',
 		],
-		'+commonswiki' => [
-			'wikimediacommons',
-			'w',
-			'eswiki',
-			'wikispecies',
+	],
+	'wgExtraLanguageNames' => [
+		'default' => [],
+		'isvwiki' => [
+			'isv' => [
+				'Medžuslovjansky',
+			],
 		],
 	],
 
