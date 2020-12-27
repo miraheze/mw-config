@@ -2294,6 +2294,11 @@ $wi->config->settings += [
 				'read' => true,
 			],
 		],
+		'+devwiki' => [
+			'interface-admin' => [
+				'editrepos' => true,
+			],
+		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -3122,6 +3127,9 @@ $wi->config->settings += [
 			'sysop',
 			'pm',
 			'member',
+		],
+		'+devwiki' => [
+			'editrepos',
 		],
 		'+hypopediawiki' => [
 			'bureaucrat',
