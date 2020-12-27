@@ -189,7 +189,7 @@ $wi->config->settings['wgMWLoggerDefaultSpi']['default'] = [
 	'args' => [ $wmgMonologConfig ],
 ];
 
-if ( $wmgLogToDisk ) {
+if ( $wmgLogToDisk || $wgDBname == 'test2wiki' ) {
 	$wmgLogDir = "/var/log/mediawiki";
 
 	$wi->config->settings['wgDBerrorLog']['default'] = "$wmgLogDir/debuglogs/database.log";
