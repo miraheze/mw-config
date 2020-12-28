@@ -2089,6 +2089,9 @@ $wi->config->settings += [
 	'wgKartographerDfltStyle' => [
 		'default' => '.',
 	],
+	'wgKartographerSrcsetScales' => [
+		'default' => false,
+	],
 	'wgKartographerStyles' => [
 		'default' => [],
 	],
