@@ -990,15 +990,6 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
 	],
-	'wgCookieWarningMoreUrl' => [
-		'name' => 'CookieWarning More Url',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'text',
-		'overridedefault' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
-		'section' => 'notifications',
-		'help' => 'Set the URL to your \'More Information\' page.',
-	],
 	'wgUsersNotifiedOnAllChanges' => [
 		'name' => 'Users Notified On All Changes',
 		'from' => 'mediawiki',
@@ -1384,6 +1375,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. Does nothing if the value is not a valid Miraheze-hosted wiki database.',
+	],
+	'wgCookieWarningMoreUrl' => [
+		'name' => 'CookieWarning More Url',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
+		'section' => 'restricted',
+		'help' => 'Set the URL to your \'More Information\' page.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
