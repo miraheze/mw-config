@@ -599,7 +599,7 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
 
-if ( $wmgUseMSCalendar ) {
+if ( $wmgUseMsCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
 
