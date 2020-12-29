@@ -62,6 +62,7 @@ $IP/extensions/DynamicPageList3/extension.json
 $IP/extensions/DynamicSidebar/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
+$IP/extensions/EditNotify/extension.json
 $IP/extensions/Editcount/extension.json
 $IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EventLogging/extension.json
