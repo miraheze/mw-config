@@ -533,8 +533,6 @@ $wi->config->settings += [
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/DataDump/sql/data_dump.sql",
 			"$IP/extensions/Echo/echo.sql",
-			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
-			"$IP/extensions/GlobalBlocking/sql/globalblocks.sql",
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
