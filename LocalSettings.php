@@ -845,9 +845,6 @@ $wi->config->settings += [
 	'wmgUseBabel' => [
 		'default' => false,
 	],
-	'wmgUseMSCalendar' => [
-		'default' => false,
-	],
 	// Must be on at all times except for ldapwikiwiki
 	'wmgUseCentralAuth' => [
 		'default' => true,
@@ -974,6 +971,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseEditcount' => [
+		'default' => false,
+	],
+	'wmgUseEditNotify' => [
 		'default' => false,
 	],
 	'wmgUseEditSubpages' => [
@@ -1164,6 +1164,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseModernSkylight' => [
+		'default' => false,
+	],
+	'wmgUseMsCalendar' => [
 		'default' => false,
 	],
 	'wmgUseMsCatSelect' => [
