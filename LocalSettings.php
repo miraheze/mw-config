@@ -1443,6 +1443,9 @@ $wi->config->settings += [
 	'wmgUseUserWelcome' => [
 		'default' => false,
 	],
+	'wmgUseValidator' => [
+		'default' => false,
+	],
 	'wmgUseVEForAll' => [
 		'default' => false,
 	],

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * ManageWiki extensions and skins are added using the variable below.
  *
@@ -12,6 +11,7 @@
  *
  * Extensions can provide installation steps as well for extensions, this includes skins.
  */
+
 $wgManageWikiExtensions = [
 		'3d' => [
 			'name' => '3D',
@@ -2350,6 +2350,17 @@ $wgManageWikiExtensions = [
 			'requires' => [
 				'extensions' => [
 					'socialprofile',
+				],
+			],
+		],
+		'validator' => [
+			'name' => 'Validator',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Validator',
+			'var' => 'wmgUseValidator',
+			'conflicts' => false,
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted',
 				],
 			],
 		],
