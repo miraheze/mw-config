@@ -28,7 +28,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
-		'overridedefault' => [],
+		'overridedefault' => false,
 	],
 	'wgCapitalLinkOverrides' => [
 		'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
@@ -40,7 +40,7 @@ $wgManageWikiNamespacesAdditional = [
 			2,
 			8,
 		],
-		'overridedefault' => [],
+		'overridedefault' => false,
 	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'name' => 'Enable ApprovedRevs in this namespace?',
