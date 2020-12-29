@@ -88,10 +88,6 @@ if ( $wmgUseBlogPage ) {
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
-if ( $wmgUseMSCalendar ) {
-	wfLoadExtension( 'MsCalendar' );
-}
-
 if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 }
@@ -270,6 +266,10 @@ if ( $wmgUseDynamicSidebar ) {
 
 if ( $wmgUseEditcount ) {
 	wfLoadExtension( 'Editcount' );
+}
+
+if ( $wmgUseEditNotify ) {
+	wfLoadExtension( 'EditNotify' );
 }
 
 if ( $wmgUseEditSubpages ) {
@@ -597,6 +597,10 @@ if ( $wmgUseModeration ) {
 
 if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
+}
+
+if ( $wmgUseMSCalendar ) {
+	wfLoadExtension( 'MsCalendar' );
 }
 
 if ( $wmgUseMsCatSelect ) {
