@@ -1335,6 +1335,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'multilanguagemanager' => [
+			'name' => 'MultiLanguageManager',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MultiLanguageManager',
+			'var' => 'wmgUseMultiLanguageManager',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'myvariables' => [
 			'name' => 'MyVariables',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MyVariables',
