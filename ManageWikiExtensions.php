@@ -602,6 +602,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'editnotify' => [
+			'name' => 'EditNotify',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
+			'var' => 'wmgUseEditNotify',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'editsubpages' => [
 			'name' => 'Edit Subpages',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages',
@@ -1284,7 +1291,7 @@ $wgManageWikiExtensions = [
 		'mscalendar' => [
 			'name' => 'MsCalendar',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MsCalendar',
-			'var' => 'wmgUseMSCalendar',
+			'var' => 'wmgUseMsCalendar',
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [
