@@ -782,6 +782,7 @@ $wi->config->settings += [
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
 	'wgExemptFromUserRobotsControl' => [
 		'default' => $wgContentNamespaces,
+		'reviwikiwiki' => [],
 		'thelonsdalebattalionwiki' => [],
 	],
 
@@ -2025,7 +2026,7 @@ $wi->config->settings += [
 		'+mrjaroslavikwiki' => [
 		        'wikipedia' => [
                                  'cs',
-                                 'en', 
+                                 'en',
                           ],
 		],
 		'+r4356thwiki' => [
@@ -3021,7 +3022,7 @@ $wi->config->settings += [
 			],
 		],
 	],
-	
+
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
 		'default' => false,
@@ -3182,7 +3183,7 @@ $wi->config->settings += [
 			'owner',
 		],
 		'+devwiki' => [
-			'editinterface'	
+			'editinterface'
 		],
 	],
 	'wgRestrictionTypes' => [
