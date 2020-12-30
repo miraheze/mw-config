@@ -1,5 +1,4 @@
 <?php
-
 /**
  * ManageWiki extensions and skins are added using the variable below.
  *
@@ -12,6 +11,7 @@
  *
  * Extensions can provide installation steps as well for extensions, this includes skins.
  */
+
 $wgManageWikiExtensions = [
 		'3d' => [
 			'name' => '3D',
@@ -599,6 +599,13 @@ $wgManageWikiExtensions = [
 			'name' => 'EditCount',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Editcount',
 			'var' => 'wmgUseEditcount',
+			'conflicts' => false,
+			'requires' => [],
+		],
+		'editnotify' => [
+			'name' => 'EditNotify',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
+			'var' => 'wmgUseEditNotify',
 			'conflicts' => false,
 			'requires' => [],
 		],
@@ -1284,7 +1291,7 @@ $wgManageWikiExtensions = [
 		'mscalendar' => [
 			'name' => 'MsCalendar',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MsCalendar',
-			'var' => 'wmgUseMSCalendar',
+			'var' => 'wmgUseMsCalendar',
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [
@@ -1568,9 +1575,9 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'pdfhandler' => [
-			'name' => 'PDF Handler',
+			'name' => 'Pdf Handler',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfHandler',
-			'var' => 'wmgUsePDFHandler',
+			'var' => 'wmgUsePdfHandler',
 			'conflicts' => false,
 			'requires' => [],
 		],
@@ -1791,6 +1798,30 @@ $wgManageWikiExtensions = [
 					'sysop' => [
 						'permissions' => [
 							'replacetext',
+						],
+					],
+				],
+			],
+		],
+		'report' => [
+			'name' => 'Report',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Report',
+			'var' => 'wmgUseReport',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'report_table' => "$IP/extensions/Report/sql/table.sql",
+				],
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'report',
+						],
+					],
+					'sysop' => [
+						'permissions' => [
+							'handle-reports',
 						],
 					],
 				],
@@ -2299,6 +2330,17 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUrlShortener',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'urlshortener-create-url',
+							'urlshortener-manage-url',
+							'urlshortener-view-log',
+						],
+					],
+				],
+			],
 		],
 		'userfunctions' => [
 			'name' => 'UserFunctions',
@@ -2317,6 +2359,13 @@ $wgManageWikiExtensions = [
 					'socialprofile',
 				],
 			],
+		],
+		'validator' => [
+			'name' => 'Validator',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Validator',
+			'var' => 'wmgUseValidator',
+			'conflicts' => false,
+			'requires' => [],
 		],
 		'variables' => [
 			'name' => 'Variable',
@@ -2416,44 +2465,6 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseWebChat',
 			'conflicts' => false,
 			'requires' => [],
-		],
-		'widgets' => [
-			'name' => 'Widgets',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Widgets',
-			'var' => 'wmgUseWidgets',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [
-				'namespaces' => [
-					'Widget' => [
-						'id' => 274,
-						'searchable' => 0,
-						'subpages' => 0,
-						'protection' => 'editwidgets',
-						'content' => 0,
-						'aliases' => [],
-						'contentmodel' => 'wikitext',
-						'additional' => []
-					],
-					'Widget_talk' => [
-						'id' => 275,
-						'searchable' => 0,
-						'subpages' => 1,
-						'protection' => '',
-						'content' => 0,
-						'aliases' => [],
-						'contentmodel' => 'wikitext',
-						'additional' => []
-					],
-				],
-				'permissions' => [
-					'sysop' => [
-						'permissions' => [
-							'editwidgets',
-						],
-					],
-				],
-			],
 		],
 		'wikibaseclient' => [
 			'name' => 'Wikibase (Client)',

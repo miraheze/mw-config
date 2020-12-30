@@ -62,6 +62,7 @@ $IP/extensions/DynamicPageList3/extension.json
 $IP/extensions/DynamicSidebar/extension.json
 $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
+$IP/extensions/EditNotify/extension.json
 $IP/extensions/Editcount/extension.json
 $IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EventLogging/extension.json
@@ -133,7 +134,6 @@ $IP/extensions/MsCatSelect/extension.json
 $IP/extensions/MsLinks/extension.json
 $IP/extensions/MsUpload/extension.json
 $IP/extensions/MultiBoilerplate/extension.json
-$IP/extensions/MultiUpload/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MyVariables/extension.json
 $IP/extensions/NewSignupPage/extension.json
@@ -157,13 +157,13 @@ $IP/extensions/PageNotice/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
-$IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/PipeEscape/PipeEscape.php
 $IP/extensions/Poem/extension.json
 $IP/extensions/PollNY/extension.json
 $IP/extensions/PortableInfobox/extension.json
 $IP/extensions/Popups/extension.json
+$IP/extensions/Preloader/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
 $IP/extensions/Purge/extension.json
@@ -175,9 +175,11 @@ $IP/extensions/RSS/extension.json
 $IP/extensions/RandomGameUnit/extension.json
 $IP/extensions/RandomImage/extension.json
 $IP/extensions/RandomSelection/extension.json
+$IP/extensions/RegexFunctions/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
+$IP/extensions/Report/extension.json
 $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/RightFunctions/RightFunctions.php
 $IP/extensions/SandboxLink/extension.json
@@ -232,13 +234,13 @@ $IP/extensions/UserMerge/extension.json
 $IP/extensions/UserFunctions/UserFunctions.php
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
+$IP/extensions/Validator/Validator.php
 $IP/extensions/Variables/extension.json
 $IP/extensions/VEForAll/extension.json
 $IP/extensions/Video/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
-$IP/extensions/Widgets/extension.json
 $IP/extensions/WikiCategoryTagCloud/extension.json
 $IP/extensions/WikiDiscover/extension.json
 $IP/extensions/WikiEditor/extension.json
@@ -278,5 +280,3 @@ $IP/skins/apex/skin.json
 $IP/skins/erudite/skin.json
 $IP/skins/foreground/skin.json
 $IP/skins/pivot/skin.json
-$IP/extensions/Preloader/extension.json
-$IP/extensions/RegexFunctions/extension.json
