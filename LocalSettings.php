@@ -1184,6 +1184,9 @@ $wi->config->settings += [
 	'wmgUseMultiBoilerplate' => [
 		'default' => false,
 	],
+	'wmgUseMultiLanguageManager' => [
+		'default' => false,
+	],
 	'wmgUseMyVariables' => [
 		'default' => false,
 	],
