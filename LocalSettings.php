@@ -2007,6 +2007,14 @@ $wi->config->settings += [
 			'meta',
 			'templatewiki',
 		],
+		'+batfamilywiki' => [
+			'batmanwiki',
+			'batmanwikifandom',
+		],
+		'+batmanwiki' => [
+			'batfamilywiki',
+			'batmanwikifandom',
+		],
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
@@ -2029,6 +2037,9 @@ $wi->config->settings += [
 		],
 		'+simcitywiki' => [
 			'wikipedia',
+		],
+		'+snapwikiwiki' => [
+			'scratchwiki',
 		],
 		'wikitrashwiki' => [
 			'wikipedia' => [
