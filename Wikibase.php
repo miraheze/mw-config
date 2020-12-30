@@ -10,8 +10,8 @@ $wgWBRepoSettings += [
 		'item' => 860,
 		'property' => 862,
 	],
-	'sharedCacheKeyPrefix' => $wi->dbname . ':WBL',
-	'allowEntityImport' => $wmgAllowEntityImport,
+	'sharedCacheKeyPrefix' => $wi->dbname . ':WBL/' . rawurlencode( $wgVersion ),
+	'allowEntityImport' => false,
 	'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
 	'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
 	'siteLinkGroups' => [
@@ -29,8 +29,8 @@ $wgWBClientSettings += [
 			'repoDatabase' => $wmgWikibaseRepoDatabase,
 			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
 			'entityNamespaces' => [
-				'item' => $wmgWikibaseItemNamespaceID,
-				'property' => $wmgWikibasePropertyNamespaceID,
+				'wikibase-item' => 'Item',
+				'wikibase-property' => 'Property',
 			],
 			'prefixMapping' => [
 				'' => '',
