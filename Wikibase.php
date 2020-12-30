@@ -21,15 +21,14 @@ $wi->config->settings['+wgWBRepoSettings']['default'] = [
 
 $wi->config->settings['+wgWBClientSettings']['default'] = [
 	'repoUrl' => $wmgWikibaseRepoUrl,
-	'repoDatabase' => $wmgWikibaseRepoDatabase,
 	'changesDatabase' => $wmgWikibaseRepoDatabase,
 	'repositories' => [
 		'' => [
 			'repoDatabase' => $wmgWikibaseRepoDatabase,
 			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
 			'entityNamespaces' => [
-				'wikibase-item' => 'Item',
-				'wikibase-property' => 'Property',
+				'item' => '',
+				'property' => 'Property',
 			],
 			'prefixMapping' => [
 				'' => '',
