@@ -22,6 +22,7 @@ $wgWBRepoSettings += [
 
 $wgWBClientSettings += [
 	'repoUrl' => $wmgWikibaseRepoUrl,
+	'repoDatabase' => $wmgWikibaseRepoDatabase,
 	'changesDatabase' => $wmgWikibaseRepoDatabase,
 	'repositories' => [
 		'' => [
