@@ -16,6 +16,10 @@ if ( $cwClosed ) {
 			'undelete' => true,
 		],
 	];
+	
+	if ( $wmgUseComments ) {
+		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
+	}
 
 	if ( $cwPrivate ) {
 		$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
@@ -36,13 +40,21 @@ EOF;
 
 // Inactive Wikis
 if ( $cwInactive && (string)$cwInactive != 'exempt' ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
-	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
-		$siteNotice .= <<<EOF
-			<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will then be eligible for adoption by another user. If not adopted and still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If there is activity on this wiki you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
+	if ( $cwPrivate ) {
+	        $wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
+	        function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
+		        $siteNotice .= <<<EOF
+			<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will not be eligible for adoption by another user even after it is closed since it is private. If this wiki is still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
 EOF;
 	}
-
+} else {
+	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
+	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
+		        $siteNotice .= <<<EOF
+			<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will then be eligible for adoption by another user. If not adopted and still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
+EOF;
+		}
+	}
 }
 
 // Public Wikis
@@ -56,13 +68,6 @@ if ( !$cwPrivate ) {
 
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
-
-	$wgDiscordFromName = $wgSitename;
-	$wgDiscordShowNewUserEmail = false;
-	$wgDiscordShowNewUserIP = false;
-	$wgDiscordNotificationsShowSuppressed = false;
-	$wgDiscordNotificationWikiUrl = $wgServer . '/w/';
-	$wgDiscordAdditionalIncomingWebhookUrls = ( $wmgWikiMirahezeDiscordHooks[$wgDBname] ) ?? $wmgWikiMirahezeDiscordHooks['default'];
 } else {
 	$wgWhitelistRead[] = 'Special:OAuth';
 }
@@ -83,6 +88,40 @@ if( $wmgContactPageRecipientUser ) {
 	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
+// $wgFooterIcons
+if ( (bool)$wmgWikiapiaryFooterPageName ) {
+ 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
+ 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+ 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
+ 		'alt' => 'Monitored by WikiApiary'
+ 	];
+}
+
+// $wgForeignFileRepos
+if ( $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
+	if ( !$wmgSharedUploadBaseUrl || $wmgSharedUploadBaseUrl === $wmgSharedUploadDBname ) {
+		$wmgSharedUploadSubdomain = substr($wmgSharedUploadDBname, 0, -4);
+
+		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadSubdomain}.miraheze.org";
+	}
+
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => "shared-{$wmgSharedUploadDBname}",
+		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
+		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => $wmgSharedUploadDBname,
+		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
+	];
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
@@ -94,15 +133,6 @@ if ( $wgWordmark ) {
 		'width' => $wgWordmarkWidth,
 		'height' => $wgWordmarkHeight,
 	];
-}
-
-// $wgFooterIcons
-if ( (bool)$wmgWikiapiaryFooterPageName ) {
- 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
- 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
- 		'alt' => 'Monitored by WikiApiary'
- 	];
 }
 
 // $wgUrlShortenerAllowedDomains
@@ -134,13 +164,6 @@ if ( $wmgPrivateUploads ) {
 	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
-if ( $wgDBname === 'isvwiki' ) {
-	$wgExtraLanguageNames['isv'] = 'Medžuslovjansky';
-	$wgExtraInterlanguageLinkPrefixes = [ 'd' ];
-
-	$wgSimpleFlaggedRevsUI = false;
-}
-
 if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
@@ -149,48 +172,17 @@ if ( $wgDBname === 'metawiki' ) {
 		$out->addMeta( 'revisit-after', '2 days' );
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
-	
+
 	$wgHooks['SkinBuildSidebar'][] = 'wfDonateLink';
-	
+
 	function wfDonateLink( $skin, &$bar ) {
-		$bar['donate'] = '<ul><li><a href="/wiki/Donate">Donate to Miraheze</a></li></ul>';
+		$bar['donate'][] = [
+			'text'  => $skin->msg( 'miraheze-donate' ),
+			'href'  => '/wiki/Donate',
+			'title' => $skin->msg( 'miraheze-donate' ),
+			'id'    => 'n-donate',
+		];
 	}
-}
-
-if ( $wgDBname === 'nbdbwiki' ) {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared-nenawikiwiki',
-		'directory' => '/mnt/mediawiki-static/nonbinarywiki',
-		'url' => 'https://static.miraheze.org/nonbinarywiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'nonbinarywiki',
-		'descBaseUrl' => 'https://nonbinary.wiki/wiki/File:',
-		'scriptDirUrl' => 'https://nonbinary.wiki/w',
-	];
-}
-
-if ( $wgDBname === 'ndgwiki' ) {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared-nenawikiwiki',
-		'directory' => '/mnt/mediawiki-static/nenawikiwiki',
-		'url' => 'https://static.miraheze.org/nenawikiwiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'nenawikiwiki',
-		'descBaseUrl' => 'https://nenawiki.org/wiki/File:',
-		'scriptDirUrl' => 'https://nenawiki.org/w',
-	];
 }
 
 if ( $wgDBname === 'newusopediawiki' ) {
@@ -306,25 +298,6 @@ switch ( $wmgWikiLicense ) {
 		break;
 }
 
-if ( $wgDBname === 'gyaanipediawiki' ||
-	 $wgDBname === 'higyaanipediawiki' ||
-	 $wgDBname === 'mrgyaanipediawiki' ||
-	 $wgDBname === 'pagyaanipediawiki'
-) {
-	// per Ucronistaw
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static/commonsgyaanipediawiki',
-		'url' => 'https://static.miraheze.org/commonsgyaanipediawiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => 'commonsgyaanipediawiki',
-		'wiki' => 'commonsgyaanipediawiki',
-		'descBaseUrl' => 'https://commonsgyaanipedia.miraheze.org/wiki/File:',
-	];
-}
 
 if ( $wmgUseYandexTranslate ) {
 	$wgTranslateTranslationServices['Yandex'] = [
@@ -335,21 +308,6 @@ if ( $wmgUseYandexTranslate ) {
 		'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
 		'langlimit' => 1,
 		'type' => 'yandex',
-	];
-}
-
-if ( $wgDBname === 'tuscriaturaswiki' || $wgDBname === 'yourcreatureswiki') {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared',
-		'directory' => '/mnt/mediawiki-static/intercriaturaswiki',
-		'url' => 'https://static.miraheze.org/intercriaturaswiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => 'intercriaturaswiki',
-		'wiki' => 'intercriaturaswiki',
-		'descBaseUrl' => 'https://intercriaturas.miraheze.org/wiki/File:',
 	];
 }
 
@@ -372,4 +330,27 @@ if ( $wgDBname === 'commonswiki' ) {
 	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
+}
+
+if ( $wgDBname === 'r4356thwiki' ) {
+	$wgWhitelistRead[] = 'R4356th Wiki:Copyrights';
+}
+
+// Discord
+$wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
+$wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
+$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
+if ( isset( $wmgWikiMirahezeDiscordHooks[ $wgDBname ] ) ) {
+	$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = array_merge(
+		$wmgWikiMirahezeDiscordHooks['default'],
+		$wmgWikiMirahezeDiscordHooks[ $wgDBname ]
+	);
+}
+
+// Slack
+$wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
+$wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
+$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
+if ( isset( $wmgWikiMirahezeSlackHooks[ $wgDBname ] ) ) {
+	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks[ $wgDBname ];
 }

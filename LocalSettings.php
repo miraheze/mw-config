@@ -22,7 +22,17 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wmgUploadHostname = "static.miraheze.org";
 
-$wi->config->settings = [
+$wi->setVariables(
+	'/srv/mediawiki/w/cache',
+	[
+		'wiki'
+	],
+	[
+		'miraheze.org' => 'wiki'
+	]
+);
+
+$wi->config->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '4',
@@ -116,6 +126,9 @@ $wi->config->settings = [
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
 	],
+	'wgPopupsReferencePreviewsBetaFeature' => [
+		'default' => true,
+	],
 	'wgPivotFeatures' => [
 		'default' => [
 			'showActionsForAnon' => true,
@@ -202,7 +215,7 @@ $wi->config->settings = [
 	],
 
 	// Category Collation
-	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change 
+	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
 		'default' => 'uppercase',
 		'holidayswiki' => 'numeric',
 	],
@@ -379,7 +392,7 @@ $wi->config->settings = [
 	'wgCentralAuthAutoCreateWikis' => [
 		'default' => [
 			'loginwiki',
-			'metawiki' 
+			'metawiki'
 		],
 	],
 	'wgCentralAuthAutoNew' => [
@@ -476,7 +489,7 @@ $wi->config->settings = [
 
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
-		'default' => '/^(subdomain\d{1,2}|community\d{1,2}|testwiki\d{1,2}|wikitest\d{1,2}|help\d{1,2}|noc|sandbox\d{1,2}|outreach|gazeteer|gazetteer|wikitech|wiki|www|wikis|misc\d{1,2}|db\d{1,2}|cp\d{1,2}|mw\d{1,2}|jobrunner\d{1,2}|gluster\d{1,2}|ns\d{1,2}|bacula\d{1,2}|misc\d{1,2}|mail\d{1,2}|mw\d{1,2}|ldap\d{1,2}|cloud\d{1,2}|mon\d{1,2}|lizardfs\d{1,2}|rdb\d{1,2}|phab\d{1,2}|services\d{1,2}|puppet\d{1,2}|test\d{1,2})+$/',
+		'default' => '/^(subdomain\d{1,2}|prueba\d{1,2}|community\d{1,2}|testwiki\d{1,2}|wikitest\d{1,2}|help\d{1,2}|noc|sandbox\d{1,2}|outreach|gazeteer|gazetteer|wikitech|wiki|www|wikis|misc\d{1,2}|db\d{1,2}|cp\d{1,2}|mw\d{1,2}|jobrunner\d{1,2}|gluster\d{1,2}|ns\d{1,2}|bacula\d{1,2}|misc\d{1,2}|mail\d{1,2}|mw\d{1,2}|ldap\d{1,2}|cloud\d{1,2}|mon\d{1,2}|lizardfs\d{1,2}|rdb\d{1,2}|phab\d{1,2}|services\d{1,2}|puppet\d{1,2}|test\d{1,2})+$/',
 	],
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
@@ -493,7 +506,9 @@ $wi->config->settings = [
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
-		'default' => []
+		'default' => [
+			'c1',
+		]
 	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
@@ -519,7 +534,6 @@ $wi->config->settings = [
 			"$IP/extensions/DataDump/sql/data_dump.sql",
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
-			"$IP/extensions/GlobalBlocking/sql/globalblocks.sql",
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
@@ -586,7 +600,7 @@ $wi->config->settings = [
 	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
 	],
-	
+
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
 	],
@@ -629,7 +643,6 @@ $wi->config->settings = [
 	'wgDBuser' => [
 		'default' => 'mediawiki',
 	],
-
 	'wgReadOnly' => [
 		'default' => false,
 	],
@@ -660,7 +673,7 @@ $wi->config->settings = [
 	'wgDjvuTxt' => [
 		'default' => '/usr/bin/djvutxt',
 	],
-	
+
 	// DynamicPageList
 	'wgDLPAllowUnlimitedCategories' => [
 		'default' => false,
@@ -678,6 +691,21 @@ $wi->config->settings = [
 	],
 
 	// Discord
+	'wgDiscordFromName' => [
+		'default' => '',
+	],
+	'wgDiscordShowNewUserEmail' => [
+		'default' => false,
+	],
+	'wgDiscordShowNewUserIP' => [
+		'default' => false,
+	],
+	'wgDiscordNotificationsShowSuppressed' => [
+		'default' => false,
+	],
+	'wgDiscordNotificationWikiUrl' => [
+		'default' => '',
+	],
 	'wgDiscordNotificationBlockedUser' => [
 		'default' => true,
 	],
@@ -686,6 +714,29 @@ $wi->config->settings = [
 	],
 	'wgDiscordShowNewUserFullName' => [
 		'default' => false,
+	],
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'default' => [],
+	],
+
+	// Slack
+	'wgSlackFromName' => [
+		'default' => '',
+	],
+	'wgSlackNotificationWikiUrlEnding' => [
+		'default' => 'index.php?title=',
+	],
+	'wgSlackNotificationWikiUrl' => [
+		'default' => '',
+	],
+	'wgSlackShowNewUserEmail' => [
+		'default' => false,
+	],
+	'wgSlackShowNewUserIP' => [
+		'default' => false,
+	],
+	'wgSlackIncomingWebhookUrl' => [
+		'default' => '',
 	],
 
 	// Display Title
@@ -745,13 +796,6 @@ $wi->config->settings = [
 		'default' => false,
 	],
 
-	// Preloader
-	'wgPreloaderSource' => [
-		'default' => [
- 			0 => 'Template:Boilerplate',
- 		],
- 	],
-
 	// Extensions and Skins
 	'wmgUse3D' => [
 		'default' => false,
@@ -799,9 +843,6 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseBabel' => [
-		'default' => false,
-	],
-	'wmgUseMSCalendar' => [
 		'default' => false,
 	],
 	// Must be on at all times except for ldapwikiwiki
@@ -932,6 +973,9 @@ $wi->config->settings = [
 	'wmgUseEditcount' => [
 		'default' => false,
 	],
+	'wmgUseEditNotify' => [
+		'default' => false,
+	],
 	'wmgUseEditSubpages' => [
 		'default' => false,
 	],
@@ -951,7 +995,7 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseFlow' => [
-		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
+		'default' => false,
 	],
 	'wmgUseForcePreview' => [
 		'default' => false,
@@ -1122,6 +1166,9 @@ $wi->config->settings = [
 	'wmgUseModernSkylight' => [
 		'default' => false,
 	],
+	'wmgUseMsCalendar' => [
+		'default' => false,
+	],
 	'wmgUseMsCatSelect' => [
 		'default' => false,
 	],
@@ -1255,6 +1302,9 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseReplaceText' => [
+		'default' => false,
+	],
+	'wmgUseReport' => [
 		'default' => false,
 	],
 	'wmgUseRevisionSlider' => [
@@ -1396,6 +1446,9 @@ $wi->config->settings = [
 	'wmgUseUserWelcome' => [
 		'default' => false,
 	],
+	'wmgUseValidator' => [
+		'default' => false,
+	],
 	'wmgUseVEForAll' => [
 		'default' => false,
 	],
@@ -1406,15 +1459,12 @@ $wi->config->settings = [
 		'default' => false,
 	],
 	'wmgUseVisualEditor' => [
-		'default' => false, // Please make sure MediaWiki services is enabled on the wiki in the services.yaml file in the services repo
+		'default' => false,
 	],
 	'wmgUseVariables' => [
 		'default' => false,
 	],
 	'wmgUseWebChat' => [
-		'default' => false,
-	],
-	'wmgUseWidgets' => [
 		'default' => false,
 	],
 	'wmgUseWikibaseRepository' => [
@@ -1499,10 +1549,76 @@ $wi->config->settings = [
 
 	// DataDump
 	'wgDataDump' => [
-		'default' => [],
+		'default' => [
+			'xml' => [
+				'file_ending' => '.xml.gz',
+				'generate' => [
+					'type' => 'mwscript',
+					'script' => "$IP/maintenance/dumpBackup.php",
+					'options' => [
+						'--full',
+						'--logs',
+						'--uploads',
+						'--output',
+						"gzip:/mnt/mediawiki-static/private/dumps/{$wi->dbname}/" . '${filename}',
+					],
+				],
+				'limit' => 1,
+				'permissions' => [
+					'view' => 'view-dump',
+					'generate' => 'generate-dump',
+					'delete' => 'delete-dump',
+				],
+			],
+			'image' => [
+				'file_ending' => '.tar.gz',
+				'generate' => [
+					'type' => 'script',
+					'script' => '/usr/bin/tar',
+					'options' => [
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/archive",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/deleted",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/lockdir",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/temp",
+						'--exclude',
+						"/mnt/mediawiki-static/{$wi->dbname}/thumb",
+						'-zcvf',
+						"/mnt/mediawiki-static/private/dumps/{$wi->dbname}/" . '${filename}',
+						"/mnt/mediawiki-static/{$wi->dbname}/"
+					],
+				],
+				'limit' => 1,
+				'permissions' => [
+					'view' => 'view-dump',
+					'generate' => 'generate-dump',
+					'delete' => 'delete-dump',
+				],
+			],
+			'managewiki_backup' => [
+				'file_ending' => '.json',
+				'generate' => [
+					'type' => 'mwscript',
+					'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+					'options' => [
+						'--filename',
+						'${filename}'
+					],
+				],
+				'limit' => 1,
+				'permissions' => [
+					'view' => 'view-dump',
+					'generate' => 'generate-dump',
+					'delete' => 'delete-dump',
+				],
+			],
+		],
 	],
 	'wgDataDumpDirectory' => [
-		'default' => '',
+		'default' => "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/",
 	],
 
 	'egApprovedRevsEnabledNamespaces' => [
@@ -1624,6 +1740,12 @@ $wi->config->settings = [
 	],
 
 	// https://www.mediawiki.org/wiki/Skin:Liberty
+	'wgLibertyMainColor' => [
+		'default' => '#4188F1',
+	],
+	'wgLibertySecondColor' => [
+		'default' => '#2774DC',
+	],
 	'wgLibertyUseGravatar' => [
 		'default' => false,
 	],
@@ -1713,15 +1835,6 @@ $wi->config->settings = [
 			'mode' => 'traditional',
 		],
 		'dcmultiversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'mcuwiki' => [
 			'imagesPerRow' => 0,
 			'imageWidth' => 120,
 			'imageHeight' => 120,
@@ -1861,7 +1974,16 @@ $wi->config->settings = [
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
-			'simple',	
+			'simple',
+		],
+		'+commonswiki' => [
+			'wikimediacommons',
+			'w',
+			'eswiki',
+			'wikispecies',
+		],
+		'+isvwiki' => [
+			'd',
 		],
 		'+nonciclopediawiki' => [
 			'dlm',
@@ -1869,11 +1991,13 @@ $wi->config->settings = [
 			'tlh',
 			'zombie',
 		],
-		'+commonswiki' => [
-			'wikimediacommons',
-			'w',
-			'eswiki',
-			'wikispecies',
+	],
+	'wgExtraLanguageNames' => [
+		'default' => [],
+		'isvwiki' => [
+			'isv' => [
+				'Medžuslovjansky',
+			],
 		],
 	],
 
@@ -1889,6 +2013,16 @@ $wi->config->settings = [
 		],
 		'+metawiki' => [
 			'wikipedia',
+		],
+		'+mrjaroslavikwiki' => [
+		        'wikipedia' => [
+                                 'cs',
+                                 'en', 
+                          ],
+		],
+		'+r4356thwiki' => [
+			'scratchwiki',
+			'snapwiki',
 		],
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
@@ -1950,10 +2084,22 @@ $wi->config->settings = [
 	// Kartographer
 	'wgKartographerWikivoyageMode' => [
 		'default' => false,
-	 ],
+	],
 	'wgKartographerUseMarkerStyle' => [
 		'default' => false,
-	 ],
+	],
+	'wgKartographerMapServer' => [
+		'default' => 'https://tile.openstreetmap.org',
+	],
+	'wgKartographerDfltStyle' => [
+		'default' => '.',
+	],
+	'wgKartographerSrcsetScales' => [
+		'default' => false,
+	],
+	'wgKartographerStyles' => [
+		'default' => [],
+	],
 
 	// Language
 	'wgLanguageCode' => [ // Hardcode "en"
@@ -2587,13 +2733,6 @@ $wi->config->settings = [
 		'default' => '/srv/services/services',
 	],
 
-	'wgMirahezeServicesExtensions' => [
-		'default' => [
-			'VisualEditor',
-			'Flow'
-		],
-	],
-
 	// Misc. stuff
 	'wgSitename' => [
 		'default' => 'No sitename set!',
@@ -2623,9 +2762,14 @@ $wi->config->settings = [
 	'wgRCWatchCategoryMembership' => [
 		'default' => false,
 	],
-	// Disable in ManageWiki to require all edits, even those by admins, to be approved
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
+	],
+	'wgFragmentMode' => [
+		'default' => [
+			'html5',
+			'legacy'
+		],
 	],
 	'wgTrustedMediaFormats' => [
 		'default' => [
@@ -2718,7 +2862,7 @@ $wi->config->settings = [
  		]
  	],
 	'wgMathValidModes' => [
-		'default' => [ 
+		'default' => [
 			'mathml'
 		],
 	],
@@ -2731,10 +2875,10 @@ $wi->config->settings = [
 		],
 	],
 
-	// NewUserMessage configs	
-	'wgNewUserMessageOnAutoCreate' => [	
-		'default' => false,	
-		'nmfwikiwiki' => true,	
+	// NewUserMessage configs
+	'wgNewUserMessageOnAutoCreate' => [
+		'default' => false,
+		'nmfwikiwiki' => true,
 	],
 
 	// Users Notified On All Changes
@@ -2866,9 +3010,17 @@ $wi->config->settings = [
 			],
 		],
 	],
+	
+	// Popups
+	'wgPopupsHideOptInOnPreferencesPage' => [
+		'default' => false,
+	],
+	'wgPopupsOptInDefaultState' => [
+		'default' => 0,
+	],
 
 	// Preferences
- 	'+wgDefaultUserOptions' => [
+ 	'wmgDefaultUserOptions' => [
  		'default' => [
  			'enotifwatchlistpages' => 0,
  			'math' => 'mathml',
@@ -2886,6 +3038,7 @@ $wi->config->settings = [
 			'flow-topiclist-sortby' => 'newest',
 		],
 		'+reviwikiwiki' => [
+			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0
 		],
 		'+solarawiki' => [
@@ -2899,6 +3052,13 @@ $wi->config->settings = [
 	'wgHiddenPrefs' => [
 		'default' => [],
 	],
+
+	// Preloader
+	'wgPreloaderSource' => [
+		'default' => [
+ 			0 => 'Template:Boilerplate',
+ 		],
+ 	],
 
 	// Redis
 	'wmgRedisSettings' => [
@@ -3008,7 +3168,10 @@ $wi->config->settings = [
 		'+vnenderbotwiki' => [
 			'template',
 			'extendedconfirmed',
-			'owner'
+			'owner',
+		],
+		'+devwiki' => [
+			'editinterface'	
 		],
 	],
 	'wgRestrictionTypes' => [
@@ -3169,6 +3332,9 @@ $wi->config->settings = [
  	],
 	'wgShowHostnames' => [
 		'default' => true,
+	],
+	'wgThumbPath' => [
+		'default' => '/w/thumb_handler.php'
 	],
 	'wgUsePathInfo' => [
 		'default' => true,
@@ -3385,6 +3551,12 @@ $wi->config->settings = [
  		'stateofwiki' => true,
  		'mikekilitterboxwiki' => true
  	],
+	'wmgSharedUploadBaseUrl' => [
+		'default' => false,
+	],
+	'wmgSharedUploadDBname' => [
+		'default' => false,
+	],
 
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => [
@@ -3456,6 +3628,9 @@ $wi->config->settings = [
 	],
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
+	],
+	'wmgWikibaseRepoDatabase' => [
+		'default' => $wi->dbname
 	],
 	'wmgWikibaseRepoUrl' => [
 		'default' => 'https://wikidata.org'
@@ -3544,6 +3719,9 @@ $wi->config->settings = [
 	],
 
 	// Logging configuation (Graylog)
+	'wmgLogToDisk' => [
+		'default' => false,
+	],
 	'wgMWLoggerDefaultSpi' => [
 		'default' => [
 			'class' => \MediaWiki\Logger\LegacySpi::class,
@@ -3552,144 +3730,150 @@ $wi->config->settings = [
 	'wmgMonologChannels' => [
 		'default' => [
 			'404' => 'debug',
-			'AbuseFilter' => 'debug',
-			'antispoof' => 'debug',
+			'AbuseFilter' => false,
+			'antispoof' => false,
 			'api' => 'debug',
-			'api-feature-usage' => 'debug',
-			'api-readonly' => 'debug',
+			'api-feature-usage' => false,
+			'api-readonly' => false,
 			// When using this, use buffer.
 			'api-request' => false,
-			'api-warning' => 'debug',
-			'authentication' => 'info',
-			'authevents' => 'info',
-			'autoloader' => 'debug',
-			'BlockManager' => 'info',
-			'BounceHandler' => 'debug',
-			'cache-cookies' => 'debug',
+			'api-warning' => false,
+			'authentication' => false,
+			'authevents' => false,
+			'autoloader' => false,
+			'BlockManager' => false,
+			'BlogPage' => false,
+			'BounceHandler' => false,
+			'cache-cookies' => false,
+			'caches' => false,
 			'captcha' => 'debug',
+			'cargo' => false,
 			'CentralAuth' => 'debug',
-			'CentralAuthRename' => 'debug',
-			'CentralAuthUserMerge' => 'debug',
-			'CentralAuthVerbose' => 'error',
-			'CentralNotice' => 'debug',
-			'cite' => 'debug',
-			'ContentHandler' => 'error',
-			'cookie' => 'error',
+			'CentralAuthRename' => false,
+			'CentralAuthUserMerge' => false,
+			'CentralAuthVerbose' => false,
+			'CentralNotice' => false,
+			'cite' => false,
+			'ContentHandler' => false,
+			'CookieWarning' => false,
+			'cookie' => false,
 			'collection' => 'debug',
 			'CreateWiki' => 'debug',
-			'DBConnection' => 'error',
-			'DBPerformance' => 'debug',
-			'DBQuery' => 'warning',
-			'DBReplication' => 'warning',
-			'DBTransaction' => 'debug',
-			'DeferredUpdates' => 'error',
-			'deprecated' => 'debug',
+			'DBConnection' => false,
+			'DBPerformance' => false,
+			'DBQuery' => false,
+			'DBReplication' => false,
+			'DBTransaction' => false,
+			'DeferredUpdates' => false,
+			'deprecated' => [ 'graylog' => 'debug', 'sample' => 10000 ],
 			'diff' => 'debug',
 			'DuplicateParse' => false,
-			'editpage' => 'warning',
+			'dynamic-sidebar' => false,
+			'editpage' => false,
 			'Echo' => 'debug',
 			'error' => 'debug',
+			'error-json' => false,
 			'EventLogging' => false,
 			'EventStreamConfig' => false,
 			'exception' => 'debug',
 			'exception-json' => false,
 			'exec' => 'debug',
-			'export' => 'debug',
-			'ExternalStore' => 'debug',
+			'export' => false,
+			'ExternalStore' => false,
 			'fatal' => 'debug',
-			'FileImporter' => 'debug',
-			'FileOperation' => 'debug',
+			'FileImporter' => false,
+			'FileOperation' => false,
 			'Flow' => 'debug',
-			'formatnum' => 'info',
-			'FSFileBackend' => 'debug',
-			'GettingStarted' => 'debug',
-			'GlobalTitleFail' => [ 'graylog' => 'error', 'sample' => 10000 ],
-			'GlobalWatchlist' => 'debug',
-			'headers-sent' => 'debug',
+			'formatnum' => false,
+			'FSFileBackend' => false,
+			'GettingStarted' => false,
+			'gitinfo' => false,
+			'GlobalTitleFail' => false,
+			'GlobalWatchlist' => false,
+			'headers-sent' => false,
+			'http' => false,
 			'HttpError' => 'error', // Only log http errors with a 500+ code
 			// 'JobExecutor' => [ 'logstash' => 'warning' ],
-			'localisation' => 'info',
+			'localisation' => false,
 			'ldap' => 'warning',
-			'Linter' => 'debug',
-			'LocalFile' => 'debug',
-			'localhost' => 'debug',
-			'LockManager' => 'warning',
-			'logging' => 'debug',
-			'LoginNotify' => 'debug',
+			'Linter' => false,
+			'LocalFile' => false,
+			'localhost' => false,
+			'LockManager' => false,
+			'logging' => false,
+			'LoginNotify' => false,
 			'ManageWiki' => 'debug',
-			'MassMessage' => 'debug',
-			'Math' => 'info',
+			'MassMessage' => false,
+			'Math' => 'debug',
 			'MatomoAnalytics' => 'debug',
-			'message-format' => 'warning',
-			'MessageCache' => 'info',
-			'MessageCacheError' => 'debug',
-			'mobile' => 'debug',
-			'NewUserMessage' => 'debug',
+			'Mime' => false,
+			'message-format' => false,
+			'MessageCache' => false,
+			'MessageCacheError' => false,
+			'mobile' => false,
+			'NewUserMessage' => false,
 			'OAuth' => 'info',
-			'objectcache' => 'warning',
-			'OutputBuffer' => 'debug',
-			'PageTriage' => 'debug',
-			'PageViewInfo' => 'info',
-			'ParserCache' => 'warning',
-			'preferences' => 'info',
-			'purge' => 'debug',
-			'query' => 'debug',
-			'ratelimit' => 'debug',
-			'readinglists' => 'warning',
-			'recursion-guard' => 'debug',
-			'RecursiveLinkPurge' => 'debug',
-			'redis' => 'warning', // Debug sprews too much information
-			'Renameuser' => 'debug',
-			'resourceloader' => 'info',
-			'ResourceLoaderImage' => 'debug',
-			'RevisionStore' => 'info',
-			// 'runJobs' => [ 'logstash' => 'warning' ],
-			'SaveParse' => 'debug',
-			'security' => 'debug',
-			'session' => 'info',
-			'session-ip' => 'info',
-			'SimpleAntiSpam' => 'debug',
-			'slow-parse' => 'debug',
-			'SpamBlacklistHit' => 'debug',
-			'SpamRegex' => 'debug',
-			'SQLBagOStuff' => 'info',
-			'StashEdit' => 'debug',
-			'texvc' => 'debug',
-			'throttler' => 'info',
+			'objectcache' => false,
+			'OldRevisionImporter' => false,
+			'OutputBuffer' => false,
+			'PageTriage' => false,
+			'PageViewInfo' => false,
+			'Parser' => false,
+			'ParserCache' => false,
+			'preferences' => false,
+			'purge' => false,
+			'query' => false,
+			'ratelimit' => false,
+			'readinglists' => false,
+			'recursion-guard' => false,
+			'RecursiveLinkPurge' => false,
+			'redis' => [ 'graylog' => 'warning', 'sample' => 20 ], // Debug sprews too much information + sample (otherwise you'll get 2 million+ messages in a few minutes)
+			'Renameuser' => false,
+			'resourceloader' => false,
+			'ResourceLoaderImage' => false,
+			'RevisionStore' => false,
+			'runJobs' => false,
+			'SaveParse' => false,
+			'security' => false,
+			'session' => false,
+			'session-ip' => false,
+			'SimpleAntiSpam' => false,
+			'slow-parse' => false,
+			'SocialProfile' => false,
+			'SpamBlacklist' => false,
+			'SpamBlacklistHit' => false,
+			'SpamRegex' => false,
+			'SQLBagOStuff' => false,
+			'squid' => false,
+			'StashEdit' => false,
+			'texvc' => false,
+			'throttler' => false,
 			'thumbnail' => 'debug',
-			'thumbnailaccess' => 'debug',
-			'TitleBlacklist-cache' => 'debug',
-			'torblock' => 'debug',
-			'TranslationNotifications.Jobs' => 'debug',
-			'Translate.Jobs' => 'debug',
-			'Translate' => 'debug',
-			'UpdateRepo' => 'debug',
-			'updateTranstagOnNullRevisions' => 'debug',
-			'upload' => 'debug',
-			'UserOptionsManager' => 'info',
+			'thumbnailaccess' => false,
+			'TitleBlacklist' => false,
+			'TitleBlacklist-cache' => false,
+			'torblock' => false,
+			'TranslationNotifications.Jobs' => false,
+			'Translate.Jobs' => false,
+			'Translate' => false,
+			'UpdateRepo' => false,
+			'updateTranstagOnNullRevisions' => false,
+			'upload' => false,
+			'UserOptionsManager' => false,
 			'VisualEditor' => 'debug',
-			'wfDebug' => [ 'sample' => 10000 ],
-			'wfLogDBError' => 'debug', // Former $wgDBerrorLog
-			'Wikibase' => 'warning',
-			'Wikibase.NewItemIdFormatter' => 'debug',
-			'WikibaseQualityConstraints' => 'debug',
-			'xff' => 'debug',
-			'XMP' => 'warning',
+			'warning' => false,
+			'wfDebug' => false,
+			'wfLogDBError' => false, // Former $wgDBerrorLog
+			'Wikibase' => false,
+			'Wikibase.NewItemIdFormatter' => false,
+			'WikibaseQualityConstraints' => false,
+			'xff' => false,
+			'XMP' => false,
 		],
 	],
 ];
 
-$wi->setVariables(
-	'/srv/mediawiki/w/cache',
-	[
-		'wiki'
-	],
-	[
-		'miraheze.org' => 'wiki'
-	]
-);
-
-// Start settings requiring access to variables
+// Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
@@ -3698,84 +3882,7 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
 }
 
-$wi->config->settings['wmgWikibaseRepoDatabase']['default'] = $wi->dbname;
-// sets wgThumbPath, we fetch wgScriptPath from wgConf.
-$scriptPath = $wi->config->settings['wgScriptPath']['default'];
-$wi->config->settings['wgThumbPath']['default'] = "$scriptPath/thumb_handler.php";
-
-// Data Dump
-$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
-
-$dumpDirectory = $wi->config->settings['wgDataDumpDirectory']['default'];
-$wi->config->settings['wgDataDump']['default'] = [
-	'xml' => [
-		'file_ending' => '.xml.gz',
-		'generate' => [
-			'type' => 'mwscript',
-			'script' => "$IP/maintenance/dumpBackup.php",
-			'options' => [
-				'--full',
-				'--logs',
-				'--uploads',
-				'--output',
-				"gzip:{$dumpDirectory}" . '${filename}',
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	],
-	'image' => [
-		'file_ending' => '.tar.gz',
-		'generate' => [
-			'type' => 'script',
-			'script' => '/usr/bin/tar',
-			'options' => [
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/archive",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/deleted",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/lockdir",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/temp",
-				'--exclude',
-				"/mnt/mediawiki-static/{$wi->dbname}/thumb",
-				'-zcvf',
-				$dumpDirectory . '${filename}',
-				"/mnt/mediawiki-static/{$wi->dbname}/"
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	],
-	'managewiki_backup' => [
-		'file_ending' => '.json',
-		'generate' => [
-			'type' => 'mwscript',
-			'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
-			'options' => [
-				'--filename',
-				'${filename}'
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	],
-];
-
-// User rights we have created above.
+// DumpDump rights
 $wgAvailableRights[] = 'view-dump';
 $wgAvailableRights[] = 'generate-dump';
 $wgAvailableRights[] = 'delete-dump';
@@ -3789,6 +3896,10 @@ $wi->config->extractAllGlobals( $wi->dbname );
 require_once __DIR__ . "/ManageWikiExtensions.php";
 require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
+
+// Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
+//we have to work around this by creating a local config and merging.
+$wgDefaultUserOptions = array_merge( $wgDefaultUserOptions, $wmgDefaultUserOptions );
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
@@ -3846,26 +3957,6 @@ require_once( '/srv/mediawiki/config/LocalWiki.php' );
 // Define last - Extension message files for loading extensions
 if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once( '/srv/mediawiki/config/ExtensionMessageFiles.php' );
-}
-
-if ( PHP_SAPI !== 'cli' ) {
-	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
-	switch ( $host ) {
-		case 'jobrunner1.miraheze.org':
-			$limit = 1200;
-			break;
-		case 'jobrunner2.miraheze.org':
-			$limit = 1200;
-			break;
-		default:
-			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-				$limit = 110;
-			} else {
-				$limit = 60;
-			}
-	}
-
-	set_time_limit( $limit );
 }
 
 // Last Stuff

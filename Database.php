@@ -25,7 +25,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		'flags' => DBO_SSL | DBO_COMPRESS,
+		'flags' => DBO_SSL,
 		// MediaWiki checks if the certificate presented by MariaDB is signed
 		// by the certificate authority listed in 'sslCAFile'. In emergencies
 		// this could be set to /etc/ssl/certs/ca-certificates.crt (all trusted
@@ -45,9 +45,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	],
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
-		// 'c1' => 'Maintenance ongoing on the database server.',
-		// 'c2' => 'Maintenance ongoing on the database server.',
-		// 'c3' => 'Maintenance ongoing on the database server.',
-		// 'c4' => 'Maintenance ongoing on the database server.',
+		//'c1' => 'Maintenance ongoing on the database server.',
+		//'c2' => 'Maintenance ongoing on the database server.',
+		//'c3' => 'Maintenance ongoing on the database server.',
+		//'c4' => 'Maintenance ongoing on the database server.',
 	],
 ];

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * ManageWiki settings are added using the variable below.
  *
@@ -38,6 +37,7 @@
  * help: string providing help information for the setting.
  * section: string name of groupings for settings.
  */
+
 $wgManageWikiSettings = [
 	// Anti-Spam
 	'wgAbuseFilterActions' => [
@@ -278,9 +278,18 @@ $wgManageWikiSettings = [
 		'section' => 'beta',
 		'help' => 'This makes Media Viewer a beta feature thus this will not be enabled for all users.',
 	],
+	'wgPopupsReferencePreviewsBetaFeature' => [
+		'name' => 'Popups Reference Previews Beta Feature',
+		'from' => 'popups',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'beta',
+		'help' => 'Whether Reference Previews should be available as a Beta feature. If false, Reference Previews are enabled for all users by default.',
+	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'name' => 'Enable VisualEditor Diff Page Beta Feature',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -289,7 +298,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'name' => 'Enable VisualEditor Wikitext Beta Feature',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -298,7 +307,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorShowBetaWelcome' => [
 		'name' => 'Enable VisualEditor Show Beta Welcome',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -468,7 +477,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'restricted' => false,
 		'overridedefault' => true,
-		'section' => 'edit',
+		'section' => 'discussion',
 		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
 	],
 	
@@ -535,7 +544,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVisualEditorEnableDiffPage' => [
 		'name' => 'Enable VisualEditor Diff Page',
-		'from' => 'mediawiki',
+		'from' => 'visualeditor',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -561,7 +570,7 @@ $wgManageWikiSettings = [
 		'help' => 'Set this to use it when editing Module pages.',
 	],
 	'wgScribuntoUseGeSHi' => [
-		'name' => 'Scribunto Use GeSHi (SyntaxHighlight_GeSHi)',
+		'name' => 'Scribunto Use GeSHi (SyntaxHighlight)',
 		'restricted' => false,
 		'from' => 'syntaxhighlight_geshi',
 		'type' => 'check',
@@ -577,6 +586,17 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
+	],
+	'wgPopupsOptInDefaultState' => [
+		'name' => 'Popups Opt In Default State',
+		'from' => 'popups',
+		'restricted' => false,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 1,
+		'overridedefault' => 0,
+		'section' => 'beta',
+		'help' => 'Default Page Previews visibility. Has to be a string as a compatibility with beta feature settings.',
 	],
 
 	// Links
@@ -649,7 +669,6 @@ $wgManageWikiSettings = [
 		'section' => 'links',
 		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.'
 	],
-	
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
@@ -687,7 +706,7 @@ $wgManageWikiSettings = [
 	
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'name' => 'Minerva Always Show Language Button',
-		'from' => 'mediawiki',
+		'from' => 'minervaneue',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -734,6 +753,7 @@ $wgManageWikiSettings = [
 		'section' => 'localisation',
 		'help' => 'Adds suggestions from Yandex to Special:Translate',
 	],
+
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
 		'name' => 'Kartographer Wikivoyage Mode',
@@ -970,15 +990,6 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
 	],
-	'wgCookieWarningMoreUrl' => [
-		'name' => 'CookieWarning More Url',
-		'from' => 'mediawiki',
-		'restricted' => false,
-		'type' => 'text',
-		'overridedefault' => 'https://meta.miraheze.org/wiki/Privacy_Policy#4._Cookies',
-		'section' => 'notifications',
-		'help' => 'Set the URL to your \'More Information\' page.',
-	],
 	'wgUsersNotifiedOnAllChanges' => [
 		'name' => 'Users Notified On All Changes',
 		'from' => 'mediawiki',
@@ -1017,7 +1028,7 @@ $wgManageWikiSettings = [
 	],
 	'wgMinervaEnableSiteNotice' => [
 		'name' => 'Minerva Sitenotice',
-		'from' => 'mobilefrontend',
+		'from' => 'minervaneue',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1044,7 +1055,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDismissableSiteNoticeForAnons' => [
 		'name' => 'Dismissable Site Notice For Anons',
-		'from' => 'dismissablesitenotice',
+		'from' => 'mediawiki',
 		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1116,7 +1127,16 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'preferences',
-		'help' => 'This will make VisualEditor the default edit for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
+		'help' => 'This will make VisualEditor the default editor for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
+	],
+	'wgPopupsHideOptInOnPreferencesPage' => [
+		'name' => 'Popups Hide Opt In On Preferences Page',
+		'from' => 'popups',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'Whether the option to enable/disable Page Previews should be hidden on Preferences page. Please note if PopupsBetaFeature is set to true this option will be always hidden.',
 	],
 
 	// Recent changes
@@ -1237,7 +1257,16 @@ $wgManageWikiSettings = [
 		'help' => 'Shows the user name of the user who made the change',
 	],
 
-	// Restricted (where settings that are restricted go)
+	// Restricted (settings that require the managewiki-restricted right)
+	'wgDefaultRobotPolicy' => [
+		'name' => 'Default Robot Policy',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => 'index,follow',
+		'section' => 'restricted',
+		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
+	],
 	'wgModerationEmail' => [
 		'name' => 'Moderation Email',
 		'from' => 'moderation',
@@ -1328,6 +1357,24 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'Compress new page revisions if possible. System administrators: after enabling this, don\'t forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki wikidatabase --type gzip</code>.',
+	],
+	'wmgSharedUploadBaseUrl' => [
+		'name' => 'Shared Upload Base Url',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'The domain name for the wiki to use as the file repository. Leave empty unless it is a custom domain. By default will be the miraheze subdomain of whatever <code>$wmgSharedUploadDBname</code> is set to below. Do not include https:// or any paths.',
+	],
+	'wmgSharedUploadDBname' => [
+		'name' => 'Shared Upload Database Name',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. Does nothing if the value is not a valid Miraheze-hosted wiki database.',
 	],
 	// Default list must be kept insync with wgFileExtensions in LocalSettings.php
 	'wgFileExtensions' => [
@@ -1895,29 +1942,29 @@ $wgManageWikiSettings = [
 	],
 	'wgCosmosMainBackgroundColor' => [
 		'name' => 'Cosmos Main Background Color',
-		'from' => 'styling',
+		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '#1A1A1A',
-		'section' => 'cosmos',
+		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the background color for the wiki body of the Cosmos skin.',
 	],
 	'wgCosmosContentBackgroundColor' => [
 		'name' => 'Cosmos Content Background Color',
-		'from' => 'styling',
+		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '#ffffff',
-		'section' => 'cosmos',
+		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the background color for the content area of the Cosmos skin.',
 	],
 	'wgCosmosBannerBackgroundColor' => [
 		'name' => 'Cosmos Banner Background Color',
-		'from' => 'styling',
+		'from' => 'cosmos',
 		'restricted' => false,
 		'type' => 'text',
 		'overridedefault' => '#c0c0c0',
-		'section' => 'cosmos',
+		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the background color for the top banner of the Cosmos skin.',
 	],
 	'wgCosmosWikiHeaderBackgroundColor' => [
@@ -2002,6 +2049,24 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Enable the Europa theme on infoboxes when using the Cosmos skin, if you have the PortableInfobox extension enabled.',
+	],
+	'wgLibertyMainColor' => [
+		'name' => 'Liberty Main Color',
+		'from' => 'liberty',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '#4188F1',
+		'section' => 'styling',
+		'help' => 'Theme-color configurations, main color of site.',
+	],
+	'wgLibertySecondColor' => [
+		'name' => 'Liberty Second Color',
+		'from' => 'liberty',
+		'restricted' => false,
+		'type' => 'text',
+		'overridedefault' => '#2774DC',
+		'section' => 'styling',
+		'help' => 'Configuration for secondary color of site.',
 	],
 	'wgMedikColor' => [
 		'name' => 'Medik Color',
