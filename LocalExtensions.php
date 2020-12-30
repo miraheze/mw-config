@@ -629,6 +629,10 @@ if ( $wmgUseMultiBoilerplate ) {
 	$wgMultiBoilerplateOptions = false;
 }
 
+if ( $wmgUseMultiLanguageManager ) {
+	wfLoadExtension( 'MultiLanguageManager' );
+}
+
 if ( $wmgUseMyVariables ) {
 	wfLoadExtension( 'MyVariables' );
 }
