@@ -4,7 +4,7 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repositories']['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$this->wgWBClientSettings += [
+(array)$wgWBClientSettings += [
 			'repoUrl' => $wmgWikibaseRepoUrl,
 			'changesDatabase' => $wmgWikibaseRepoDatabase,
 			'repositories' => [
@@ -35,7 +35,7 @@ $this->wgWBClientSettings += [
 			'recentChangesBatchSize' => 100,
 			'disabledDataTypes' => [],
 		];
-	$this->wgWBRepoSettings += [
+	(array)$wgWBRepoSettings += [
 			'entityNamespaces' => [
 				'item' => 860,
 				'property' => 862,
