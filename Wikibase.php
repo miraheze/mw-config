@@ -4,6 +4,8 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repositories']['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
+global $wgWBRepoSettings, $wgWBClientSettings;
+
 $wgWBRepoSettings = array_merge( $wgWBRepoSettings, [
 	'entityNamespaces' => [
 		'item' => 860,
