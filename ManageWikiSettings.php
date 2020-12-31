@@ -1548,18 +1548,17 @@ $wgManageWikiSettings = [
 	],
 
 	// SEO
-	'wmgDefaultRobotPolicy' => [
+	'wgDefaultRobotPolicy' => [
 		'name' => 'Default Robot Policy',
 		'from' => 'mediawiki',
 		'restricted' => false,
-		'type' => 'list-multi',
+		'type' => 'list',
 		'options' => [
-			'index' => 'index',
-			'follow' => 'follow',
-			'noindex' => 'noindex',
-			'nofollow' => 'nofollow',
+			'index,follow' => 'index,follow',
+			'noindex,nofollow' => 'noindex,nofollow',
+			'index,nofollow' => 'index,nofollow',
 		],
-		'overridedefault' => [ 'index', 'follow' ],
+		'overridedefault' => 'index,follow',
 		'section' => 'seo',
 		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
 	],
