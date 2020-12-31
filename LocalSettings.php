@@ -501,13 +501,13 @@ $wi->config->settings += [
 		'default' => [
 			'c2',
 			'c3',
-			'c4',
 		]
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
+			'c4',
 		]
 	],
 	'wgCreateWikiGlobalWiki' => [
