@@ -50,8 +50,5 @@ $wi->config->settings['wmgWBClientSettings']['default'] = [
 	'recentChangesBatchSize' => 100,
 ];
 
-$wgWBRepoSettings += $wmgWBRepoSettings;
 $wgWBRepoSettings = array_merge( $wgWBRepoSettings, $wmgWBRepoSettings );
-
-$wgWBClientSettings += $wmgWBClientSettings;
 $wgWBClientSettings = array_merge( $wgWBClientSettings, $wmgWBClientSettings );
