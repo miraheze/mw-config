@@ -2210,16 +2210,13 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'translate' => [
-			'name' => 'Translate (Tempoarily restricted for extension update)',
+			'name' => 'Translate',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Translate',
 			'var' => 'wmgUseTranslate',
 			'conflicts' => false,
 			'requires' => [
 				'extensions' => [
 					'universallanguageselector',
-				],
-				'permissions' => [
-					'managewiki-restricted',
 				],
 			],
 			'install' => [
