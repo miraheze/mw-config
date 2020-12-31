@@ -4,7 +4,7 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repositories']['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$wmgWBRepoSettings = [
+$wgWBRepoSettings = array_merge( $wgWBRepoSettings, [
 	'entityNamespaces' => [
 		'item' => 860,
 		'property' => 862,
@@ -17,9 +17,9 @@ $wmgWBRepoSettings = [
 		'miraheze',	
 	],	
 	'specialSiteLinkGroups' => [],
-];
+] );
 
-$wmgWBClientSettings = [
+$wgWBClientSettings = array_merge( $wgWBClientSettings, [
 	'repoUrl' => $wmgWikibaseRepoUrl,
 	'changesDatabase' => $wmgWikibaseRepoDatabase,
 	'repositories' => [
@@ -48,6 +48,4 @@ $wmgWBClientSettings = [
 	],
 	'purgeCacheBatchSize' => 100,
 	'recentChangesBatchSize' => 100,
-];
-$wgWBRepoSettings = array_merge( $wgWBRepoSettings, $wmgWBRepoSettings );
-$wgWBClientSettings = array_merge( $wgWBClientSettings, $wmgWBClientSettings );
+] );
