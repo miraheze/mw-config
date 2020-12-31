@@ -35,6 +35,7 @@ $wi->config->settings += [
 			],
 			'purgeCacheBatchSize' => 100,
 			'recentChangesBatchSize' => 100,
+			'disabledDataTypes' => [],
 		],
 	],
 	'wgWBRepoSettings' => [
