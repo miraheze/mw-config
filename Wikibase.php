@@ -48,7 +48,7 @@ $wi->config->settings += [
 			'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
 			'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
 			'siteLinkGroups' => [	
-				'miraheze',	
+			#	'miraheze',	
 			],	
 			'specialSiteLinkGroups' => [],
 		],
