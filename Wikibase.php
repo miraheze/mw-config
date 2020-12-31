@@ -52,6 +52,7 @@ $wi->config->settings += [
 				'miraheze',	
 			],	
 			'specialSiteLinkGroups' => [],
+			'disabledDataTypes' => [],
 		],
 	],
 ];
