@@ -1258,15 +1258,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Restricted (settings that require the managewiki-restricted right)
-	'wgDefaultRobotPolicy' => [
-		'name' => 'Default Robot Policy',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'text',
-		'overridedefault' => 'index,follow',
-		'section' => 'restricted',
-		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
-	],
 	'wgModerationEmail' => [
 		'name' => 'Moderation Email',
 		'from' => 'moderation',
