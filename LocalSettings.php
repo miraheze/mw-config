@@ -2033,6 +2033,12 @@ $wi->config->settings += [
 			'scratchwiki',
 			'snapwiki',
 		],
+		'+reviwikiwiki' => [
+			'wikipedia' => [
+				'en',
+				'ko'
+			],
+		],
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
