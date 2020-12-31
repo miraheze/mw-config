@@ -2290,7 +2290,7 @@ $wgManageWikiExtensions = [
 			'section' => 'skins',
 		],
 		'tweeki' => [
-			'name' => 'Tweeki - Note: Causes mobile view not to work!',
+			'name' => 'Tweeki',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Tweeki',
 			'var' => 'wmgUseTweeki',
 			'conflicts' => false,
