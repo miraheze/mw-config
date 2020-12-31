@@ -51,4 +51,7 @@ $wi->config->settings['wmgWBClientSettings']['default'] = [
 ];
 
 $wgWBRepoSettings += $wmgWBRepoSettings;
+$wgWBRepoSettings = array_merge( $wgWBRepoSettings, $wmgWBRepoSettings );
+
 $wgWBClientSettings += $wmgWBClientSettings;
+$wgWBClientSettings = array_merge( $wgWBClientSettings, $wmgWBClientSettings );
