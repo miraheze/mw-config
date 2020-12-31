@@ -3558,6 +3558,12 @@ $wi->config->settings += [
 	],
 
 	// Wikibase
+	'wgWBClientSettings' => [
+		'default' => [],
+	],
+	'wgWBRepoSettings' => [
+		'default' => [],
+	],
 	'wmgAllowEntityImport' => [
 		'default' => false,
 	],
