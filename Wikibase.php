@@ -4,7 +4,7 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repositories']['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$wi->config->settings['wgWBRepoSettings']['default'] += [
+$wi->config->settings['wgWBRepoSettings']['default'] = [
 	'entityNamespaces' => [
 		'item' => 860,
 		'property' => 862,
@@ -19,7 +19,7 @@ $wi->config->settings['wgWBRepoSettings']['default'] += [
 	'specialSiteLinkGroups' => [],
 ];
 
-$wi->config->settings['wgWBClientSettings']['default'] += [
+$wi->config->settings['wgWBClientSettings']['default'] = [
 	'repoUrl' => $wmgWikibaseRepoUrl,
 	'changesDatabase' => $wmgWikibaseRepoDatabase,
 	'repositories' => [
