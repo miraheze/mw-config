@@ -13,6 +13,10 @@ $wi->config->settings['+wgWBRepoSettings']['default'] = [
 	'allowEntityImport' => $wmgAllowEntityImport,
 	'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
 	'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
+	'siteLinkGroups' => [	
+		'miraheze',	
+	],	
+	'specialSiteLinkGroups' => [],
 ];
 
 $wi->config->settings['+wgWBClientSettings']['default'] = [
