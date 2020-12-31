@@ -99,53 +99,6 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
-// Wikibase
-$wi->config->settings['+wgWBRepoSettings']['default'] = [
-	'entityNamespaces' => [
-		'item' => 860,
-		'property' => 862,
-	],
-	'sharedCacheKeyPrefix' => $wi->dbname . ':WBL',
-	'allowEntityImport' => $wmgAllowEntityImport,
-	'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
-	'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
-	'siteLinkGroups' => [	
-		'miraheze',	
-	],	
-	'specialSiteLinkGroups' => [],
-];
-
-$wi->config->settings['+wgWBClientSettings']['default'] = [
-	'repoUrl' => $wmgWikibaseRepoUrl,
-	'changesDatabase' => $wmgWikibaseRepoDatabase,
-	'repositories' => [
-		'' => [
-			'repoDatabase' => $wmgWikibaseRepoDatabase,
-			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
-			'entityNamespaces' => [
-				'item' => '',
-				'property' => 'Property',
-			],
-			'prefixMapping' => [
-				'' => '',
-			],
-		],
-	],
-	'siteGlobalID' => $wi->dbname,
-	'repoScriptPath' => '/w',
-	'repoArticlePath' => '/wiki/$1',
-	'siteGroup' => 'miraheze',
-	'repoNamespaces' => [
-		'item' => '',
-		'property' => 'Property',
-	],
-	'siteLinksGroups' => [
-		'miraheze',
-	],
-	'purgeCacheBatchSize' => 100,
-	'recentChangesBatchSize' => 100,
-];
-
 // Per-wiki overrides
 if ( $wgDBname === 'cineastaswiki' ) {
 	$wgWhitelistRead[] = 'Projectos resultantes';
