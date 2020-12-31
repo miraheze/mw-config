@@ -4,48 +4,53 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repositories']['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$wi->config->settings ['wgWBRepoSettings']['+default'] = [
-	'entityNamespaces' => [
-		'item' => 860,
-		'property' => 862,
-	],
-	'sharedCacheKeyPrefix' => $wi->dbname . ':WBL',
-	'allowEntityImport' => $wmgAllowEntityImport,
-	'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
-	'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
-	'siteLinkGroups' => [	
-		'miraheze',	
-	],	
-	'specialSiteLinkGroups' => [],
-];
-
-$wi->config->settings['+wgWBClientSettings']['default'] = [
-	'repoUrl' => $wmgWikibaseRepoUrl,
-	'changesDatabase' => $wmgWikibaseRepoDatabase,
-	'repositories' => [
-		'' => [
-			'repoDatabase' => $wmgWikibaseRepoDatabase,
-			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
-			'entityNamespaces' => [
+$wi->config->settings += [
+	'+wgWBClientSettings' => [
+		'default' => [
+			'repoUrl' => $wmgWikibaseRepoUrl,
+			'changesDatabase' => $wmgWikibaseRepoDatabase,
+			'repositories' => [
+				'' => [
+					'repoDatabase' => $wmgWikibaseRepoDatabase,
+					'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+					'entityNamespaces' => [
+						'item' => '',
+						'property' => 'Property',
+					],
+					'prefixMapping' => [
+						'' => '',
+					],
+				],
+			],
+			'siteGlobalID' => $wi->dbname,
+			'repoScriptPath' => '/w',
+			'repoArticlePath' => '/wiki/$1',
+			'siteGroup' => 'miraheze',
+			'repoNamespaces' => [
 				'item' => '',
 				'property' => 'Property',
 			],
-			'prefixMapping' => [
-				'' => '',
+			'siteLinksGroups' => [
+				'miraheze',
 			],
+			'purgeCacheBatchSize' => 100,
+			'recentChangesBatchSize' => 100,
 		],
 	],
-	'siteGlobalID' => $wi->dbname,
-	'repoScriptPath' => '/w',
-	'repoArticlePath' => '/wiki/$1',
-	'siteGroup' => 'miraheze',
-	'repoNamespaces' => [
-		'item' => '',
-		'property' => 'Property',
+	'+wgWBRepoSettings' => [
+		'default' => [
+			'entityNamespaces' => [
+				'item' => 860,
+				'property' => 862,
+			],
+			'sharedCacheKeyPrefix' => $wi->dbname . ':WBL',
+			'allowEntityImport' => $wmgAllowEntityImport,
+			'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
+			'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
+			'siteLinkGroups' => [	
+				'miraheze',	
+			],	
+			'specialSiteLinkGroups' => [],
+		],
 	],
-	'siteLinksGroups' => [
-		'miraheze',
-	],
-	'purgeCacheBatchSize' => 100,
-	'recentChangesBatchSize' => 100,
 ];
