@@ -3558,6 +3558,12 @@ $wi->config->settings += [
 	],
 
 	// Wikibase
+	'+wgWBClientSettings' => [
+		'default' => [],
+	],
+	'+wgWBRepoSettings' => [
+		'default' => [],
+	],
 	'wmgAllowEntityImport' => [
 		'default' => false,
 	],
@@ -3567,23 +3573,17 @@ $wi->config->settings += [
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
 	],
-	'wmgWBClientSettings' => [
-		'default' => false,
-	],
-	'wmgWBRepoSettings' => [
-		'default' => false,
-	],
 	'wmgWikibaseRepoDatabase' => [
-		'default' => $wi->dbname
+		'default' => $wi->dbname,
 	],
 	'wmgWikibaseRepoUrl' => [
-		'default' => 'https://wikidata.org'
+		'default' => 'https://wikidata.org',
 	],
 	'wmgWikibaseItemNamespaceID' => [
-		'default' => 0
+		'default' => 0,
 	],
 	'wmgWikibasePropertyNamespaceID' => [
-		'default' => 120
+		'default' => 120,
 	],
 
 	// WebChat config
