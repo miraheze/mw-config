@@ -83,6 +83,11 @@ if( $wmgContactPageRecipientUser ) {
 	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
+// $wgDefaultRobotPolicy
+if( $wmgDefaultRobotPolicy ) {
+	$wi->config->settings['wgDefaultRobotPolicy']['default'] = implode( ',', $wmgDefaultRobotPolicy );
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
  	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
