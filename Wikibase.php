@@ -49,6 +49,7 @@ $wi->config->settings['wmgWBClientSettings']['default'] = [
 	'purgeCacheBatchSize' => 100,
 	'recentChangesBatchSize' => 100,
 ];
-
+$wgWBRepoSettings[] = false;
 $wgWBRepoSettings = array_merge( $wgWBRepoSettings, $wmgWBRepoSettings );
+$wgWBClientSettings[] = false;
 $wgWBClientSettings = array_merge( $wgWBClientSettings, $wmgWBClientSettings );
