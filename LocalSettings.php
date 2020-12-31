@@ -3639,16 +3639,16 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgWikibaseRepoDatabase' => [
-		'default' => $wi->dbname,
+		'default' => $wi->dbname
 	],
 	'wmgWikibaseRepoUrl' => [
-		'default' => 'https://wikidata.org',
+		'default' => 'https://wikidata.org'
 	],
 	'wmgWikibaseItemNamespaceID' => [
-		'default' => 0,
+		'default' => 0
 	],
 	'wmgWikibasePropertyNamespaceID' => [
-		'default' => 120,
+		'default' => 120
 	],
 
 	// WebChat config
