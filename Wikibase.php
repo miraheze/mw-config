@@ -5,7 +5,7 @@
 // on the wiki.
 
 $wi->config->settings += [
-	'+wgWBClientSettings' => [
+	'wgWBClientSettings' => [
 		'default' => [
 			'repoUrl' => $wmgWikibaseRepoUrl,
 			'changesDatabase' => $wmgWikibaseRepoDatabase,
@@ -37,7 +37,7 @@ $wi->config->settings += [
 			'recentChangesBatchSize' => 100,
 		],
 	],
-	'+wgWBRepoSettings' => [
+	'wgWBRepoSettings' => [
 		'default' => [
 			'entityNamespaces' => [
 				'item' => 860,
@@ -48,7 +48,7 @@ $wi->config->settings += [
 			'enableEntitySearchUI' => $wmgEnableEntitySearchUI,
 			'federatedPropertiesEnabled' => $wmgFederatedPropertiesEnabled,
 			'siteLinkGroups' => [	
-			#	'miraheze',	
+				'miraheze',	
 			],	
 			'specialSiteLinkGroups' => [],
 		],
