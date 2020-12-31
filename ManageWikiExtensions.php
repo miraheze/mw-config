@@ -2241,6 +2241,7 @@ $wgManageWikiExtensions = [
 				],
 				'sql' => [
 					'revtag' => "$IP/extensions/Translate/sql/revtag.sql",
+					'translate_cache' => "$IP/extensions/Translate/sql/translate_cache.sql",
 					'translate_groupreviews' => "$IP/extensions/Translate/sql/translate_groupreviews.sql",
 					'translate_groupstats' => "$IP/extensions/Translate/sql/translate_groupstats.sql",
 					'translate_messageindex' => "$IP/extensions/Translate/sql/translate_messageindex.sql",
