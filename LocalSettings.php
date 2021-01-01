@@ -3952,17 +3952,15 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
 // Disabled on production hosts because it seems to be causing performance issues (how ironic)
-if (
-	isset( $_GET['forceprofile'] )
-	&& $_GET['forceprofile'] == 1
-	&& wfHostname() === 'test2'
-) {
-	$wgProfiler['class'] = 'ProfilerXhprof';
-	$wgProfiler['output'] = [ 'ProfilerOutputText' ];
-	$wgProfiler['visible'] = false;
-
+if ( wfHostname() === 'test2' ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
+
+	if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
+		$wgProfiler['class'] = 'ProfilerXhprof';
+		$wgProfiler['output'] = [ 'ProfilerOutputText' ];
+		$wgProfiler['visible'] = false;
+	}
 }
 
 // Define last to avoid all dependencies
