@@ -1771,18 +1771,17 @@ $wi->config->settings += [
 	'wgGenerateThumbnailOnParse' => [
 		'default' => false,
 	],
-	// Must be kept insync with wgFileExtensions in ManageWikiSettings.php
 	'wgFileExtensions' => [
 		'default' => [
+			'djvu',
 			'gif',
 			'ico',
-			'jpeg',
 			'jpg',
+			'jpeg',
 			'ogg',
+			'pdf',
 			'png',
 			'svg',
-			'pdf',
-			'djvu'
 		],
 	],
 	'wgUseInstantCommons' => [
