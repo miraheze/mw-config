@@ -1427,12 +1427,12 @@ $wgManageWikiSettings = [
 	'wgMaxCredits' => [
 		'name' => 'Editing attribution',
 		'from' => 'mediawiki',
-		'restricted' => false,
+		'restricted' => true,
 		'type' => 'integer',
 		'minint' => -1,
 		'maxint' => 25,
 		'overridedefault' => 0,
-		'section' => 'edit',
+		'section' => 'restricted',
 		'help' => 'Number of editors to attribute.',
 	],
 	'wgDisqusShortname' => [
