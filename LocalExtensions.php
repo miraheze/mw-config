@@ -997,7 +997,6 @@ if ( $wmgUseUserFunctions ) {
 }
 
 if ( $wmgUseUserWelcome ) {
-	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
 
