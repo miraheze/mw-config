@@ -3805,7 +3805,7 @@ $wi->config->settings += [
 			'GlobalTitleFail' => false,
 			'GlobalWatchlist' => false,
 			'headers-sent' => false,
-			'http' => 'debug',
+			'http' => 'warning',
 			'HttpError' => 'error', // Only log http errors with a 500+ code
 			// 'JobExecutor' => [ 'logstash' => 'warning' ],
 			'localisation' => false,
