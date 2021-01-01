@@ -626,6 +626,9 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'links',
 		'help' => 'Unset this to avoid forcing the first letter of links to capitals.',
+		'script' => [
+ 			"$IP/maintenance/cleanupCaps.php" => [],
+		],
 	],
 	'wgDisplayTitleHideSubtitle' => [
 		'name' => 'Don\'t display the page\'s original title below the display title',
@@ -1128,6 +1131,15 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
 	],
+	'wgTmhEnableMp4Uploads' => [
+		'name' => 'TimedMediaHandler Enable Mp4 Uploads',
+		'from' => 'timedmediahandler',
+		'restricted' => false,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Allows to upload Mp4 files.',
+	],
 
 	// Notifications
 	'wmgContactPageRecipientUser' => [
@@ -1183,24 +1195,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Display the Sitenotice on the Minerva skin.',
-	],
-	'wgModerationNotificationEnable' => [
-		'name' => 'Moderation Notification Enable',
-		'from' => 'moderation',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'notifications',
-		'help' => 'If set, notification email will be sent to "Moderation Email" each time an edit is queued for moderation.',
-	],
-	'wgModerationNotificationNewOnly' => [
-		'name' => 'Moderation Notification New Only',
-		'from' => 'moderation',
-		'restricted' => false,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'notifications',
-		'help' => 'If set, only notify about new pages (but not about edits in existing pages).',
 	],
 	'wgDismissableSiteNoticeForAnons' => [
 		'name' => 'Dismissable Site Notice For Anons',
@@ -1407,27 +1401,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Restricted (settings that require the managewiki-restricted right)
-	'wgModerationEmail' => [
-		'name' => 'Moderation Email',
-		'from' => 'moderation',
-		'restricted' => true,
-		'type' => 'text',
-		// Must match wgPasswordSender from LocalSettings.php
-		'overridedefault' => 'noreply@miraheze.org',
-		'section' => 'restricted',
-		'help' => 'Sets the email for notifications to go to.',
-	],
-	'wgAccountCreationThrottle' => [
-		'name' => 'Account Creation Throttle',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'integer',
-		'minint' => 0,
-		'maxint' => 900000000,
-		'overridedefault' => 5,
-		'section' => 'restricted',
-		'help' => 'Number of accounts each IP address may create, 0 to disable.',
-	],
 	'wgSVGMetadataCutoff' => [
 		'name' => 'SVG Metadata Cutoff',
 		'from' => 'mediawiki',
@@ -1451,6 +1424,17 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'Maximum page size in kilobytes.',
 	],
+	'wgMaxCredits' => [
+		'name' => 'Editing attribution',
+		'from' => 'mediawiki',
+		'restricted' => true,
+		'type' => 'integer',
+		'minint' => -1,
+		'maxint' => 25,
+		'overridedefault' => 0,
+		'section' => 'restricted',
+		'help' => 'Number of editors to attribute.',
+	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
 		'from' => 'disqustag',
@@ -1469,17 +1453,6 @@ $wgManageWikiSettings = [
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
 	],
-	'wgMaxCredits' => [
-		'name' => 'Editing attribution',
-		'from' => 'mediawiki',
-		'restricted' => true,
-		'type' => 'integer',
-		'minint' => -1,
-		'maxint' => 25,
-		'overridedefault' => 0,
-		'section' => 'restricted',
-		'help' => 'Number of editors to attribute.',
-	],
 	'wgHAWelcomeWelcomeUsername' => [
 		'name' => 'HAWelcome Welcome Username',
 		'from' => 'hawelcome',
@@ -1496,7 +1469,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'restricted',
-		'help' => 'Compress new page revisions if possible. System administrators: after enabling this, don\'t forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki wikidatabase --type gzip</code>.',
+		'help' => "Compress new page revisions if possible. System administrators: after enabling this, don\'t forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki={$wi->dbname} --type=gzip</code>.",
 	],
 	'wmgSharedUploadBaseUrl' => [
 		'name' => 'Shared Upload Base Url',
@@ -1515,15 +1488,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. Does nothing if the value is not a valid Miraheze-hosted wiki database.',
-	],
-	'wgTmhEnableMp4Uploads' => [
-		'name' => 'TimedMediaHandler Enable Mp4 Uploads',
-		'from' => 'timedmediahandler',
-		'restricted' => true,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'Allows to upload Mp4 files.',
 	],
 	'wgExpensiveParserFunctionLimit' => [
 		'name' => 'Expensive Parser Function Limit',
