@@ -750,7 +750,7 @@ $wgManageWikiSettings = [
 	'wmgUseYandexTranslate' => [
 		'name' => 'Use Yandex Machine Translation on Special:Translate',
 		'from' => 'translate',
-		'restricted' => 'false',
+		'restricted' => false,
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'localisation',
@@ -859,7 +859,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'By default Miraheze enables file upload only from a local media but with this option you can upload files remotely from other sites.',
+		'help' => 'By default, Miraheze enables file upload only from a local media but with this option you can upload files remotely from other sites.',
 	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'name' => 'Enable File Uploads Through URL on Special:Upload',
