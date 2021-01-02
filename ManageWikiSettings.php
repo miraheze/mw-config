@@ -1469,7 +1469,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'restricted',
-		'help' => "Compress new page revisions if possible. System administrators: after enabling this, don\'t forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki={$wi->dbname} --type=gzip</code>.",
+		'help' => "Compress new page revisions if possible. System administrators: after enabling this, don't forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki={$wi->dbname} --type=gzip</code>.",
 	],
 	'wmgSharedUploadBaseUrl' => [
 		'name' => 'Shared Upload Base Url',
