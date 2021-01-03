@@ -340,6 +340,7 @@ $wgManageWikiExtensions = [
 					'cite',
 					'visualeditor',
 				],
+				'visibility' => 'public',
 			],
 		],
 		'cleanchanges' => [
@@ -375,7 +376,9 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Collection',
 			'var' => 'wmgUseCollection',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'visibility' => 'public',
+			],
 		],
 		'commentstreams' => [
 			'name' => 'CommentStreams',
