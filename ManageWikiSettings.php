@@ -1250,6 +1250,19 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	
+	// Permissions
+	'wgWhitelistRead' => [
+		'name' => 'Whitelist Read',
+		'from' => 'mediawiki',
+		'type' => 'wikipages',
+		'overridedefault' => false,
+		'section' => 'permissions',
+		'help' => 'Pages anyone may view.',
+		'requires' => [
+			'visibility' => 'private',
+		],
+	],
+	
 	// Preferences
 	'wgHiddenPrefs' => [
 		'name' => 'Hidden Preferences',
