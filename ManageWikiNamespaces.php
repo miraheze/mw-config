@@ -18,7 +18,15 @@
  * overridedefault: override default when no existing value exist. Can be a boolean, string, or array.
  * overridedefault[$namespace_id => $val]: namespace specific overrides. Also required a default key. See below.
  * overridedefault['default' => $val]: required when using namespace specific overrides. Sets a default for all other namespaces, which is not using the overrides set.
- * requires: a text entry of which extension is required for this setting to work.
+ * requires: an array, string, or integer. See below for available types that can be used here.
+ *
+ * 'requires' can be one of:
+ *
+ * articles: max integer amount of articles a wiki may have in order to be able to modify this setting.
+ * extensions: array of extensions that must be enabled in order to modify this setting. Diffrent from 'from'. Only use if requires more then one extension.
+ * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
+ * permissions: array of permissions a user must have to be able to modify this setting. Regardless of this setting, a user must always have the managewiki permission.
+ * visibility: can be either 'private' or 'public'. If set to 'private' this setting will only appear on private wikis. If set to 'public' it will only appear on public wikis.
  */
 
 $wgManageWikiNamespacesAdditional = [
