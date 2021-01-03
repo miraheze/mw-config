@@ -29,6 +29,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'requires' => [],
 	],
 	'wgCapitalLinkOverrides' => [
 		'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
@@ -41,6 +42,7 @@ $wgManageWikiNamespacesAdditional = [
 			8,
 		],
 		'overridedefault' => false,
+		'requires' => [],
 	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'name' => 'Enable ApprovedRevs in this namespace?',
@@ -55,6 +57,7 @@ $wgManageWikiNamespacesAdditional = [
 			15,
 		],
 		'overridedefault' => true,
+		'requires' => [],
 	],
 	'wgWPBNamespaces' => [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
@@ -64,6 +67,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'requires' => [],
 	],
 	'wgCommentStreamsAllowedNamespaces' => [
 		'name' => 'Can comments appear in this namespace?',
@@ -73,6 +77,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => null,
+		'requires' => [],
 	],
 	'wgFlaggedRevsNamespaces' => [
 		'name' => 'Enable FlaggedRevs in this namespace?',
@@ -82,6 +87,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'blacklisted' => [ 8 ],
 		'overridedefault' => false,
+		'requires' => [],
 	],
 	'wgVisualEditorAvailableNamespaces' => [
 		'name' => 'Enable VisualEditor in this namespace?',
@@ -91,6 +97,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'requires' => [],
 	],
 	'wgNamespacesToPostIn' => [
 		'name' => 'Can MassMessage post messages in this namespace?',
@@ -100,6 +107,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'requires' => [],
 	],
 	'wgTemplateSandboxEditNamespaces' => [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
@@ -109,6 +117,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'requires' => [],
 	],
 	'wgPreloaderSource' => [
 		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
@@ -121,5 +130,6 @@ $wgManageWikiNamespacesAdditional = [
 			0 => 'Template:Boilerplate',
 			'default' => false,
 		],
+		'requires' => [],
 	],
 ];
