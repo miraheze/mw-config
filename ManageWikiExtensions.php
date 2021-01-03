@@ -15,8 +15,6 @@
  * pages: max integer amount of pages a wiki may have in order to enable this extension.
  * permissions: array of permissions a user must have to be able to enable this extension. Regardless of this value, a user must always have the managewiki permission.
  * visibility: can be either 'private' or 'public'. If set to 'private' this extension may only be enabled on private wikis. If set to 'public' it can only be enabled on public wikis.
- *
- * Extensions can provide installation steps as well for extensions, this includes skins.
  */
 
 $wgManageWikiExtensions = [
