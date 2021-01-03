@@ -2800,6 +2800,9 @@ $wi->config->settings += [
 			MEDIATYPE_TEXT,
 		],
 	],
+	'+wgWhitelistRead' => [
+		'default' => [],
+	],
 
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
