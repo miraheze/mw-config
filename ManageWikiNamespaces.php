@@ -23,9 +23,9 @@
  * 'requires' can be one of:
  *
  * articles: max integer amount of articles a wiki may have in order to be able to modify this setting.
- * extensions: array of extensions that must be enabled in order to modify this setting. Diffrent from 'from'. Only use if requires more then one extension.
+ * extensions: array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if requires more then one extension.
  * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
- * permissions: array of permissions a user must have to be able to modify this setting. Regardless of this setting, a user must always have the managewiki permission.
+ * permissions: array of permissions a user must have to be able to modify this setting. Regardless of this value, a user must always have the managewiki permission.
  * visibility: can be either 'private' or 'public'. If set to 'private' this setting will only appear on private wikis. If set to 'public' it will only appear on public wikis.
  */
 
