@@ -36,6 +36,7 @@
  * restricted: boolean - requires managewiki-restricted to change.
  * help: string providing help information for the setting.
  * section: string name of groupings for settings.
+ * requires: a text entry of which extension is required for this setting to work.
  */
 
 $wgManageWikiSettings = [
@@ -75,6 +76,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'anti-spam',
 		'help' => 'The possible actions that can be taken by abuse filters. When adding a new action, check if it is restricted in $wgAbuseFilterRestrictions and, if it is, don\'t forget to add the abusefilter-modify-restricted right to the appropriate user groups.',
+		'requires' => [],
 	],
 	'wgAutoblockExpiry' => [
 		'name' => 'Autoblock Expiry',
@@ -86,6 +88,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 86400,
 		'section' => 'anti-spam',
 		'help' => 'Number of seconds before autoblock entries expire. Minimum value allowed: 0, default: 1 day (86400), maximum: 10 years (315360000).',
+		'requires' => [],
 	],
 	'wgBlockAllowsUTEdit' => [
 		'name' => 'Allows blocking users to restrict talk page access',
@@ -95,6 +98,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'Allows the blocking user to grant talk page edit access for the blocked user',
+		'requires' => [],
 	],
 	'wgCookieSetOnAutoblock' => [
 		'name' => 'Cookie set on autoblock',
@@ -104,6 +108,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'Determines whether to set a cookie when a user is autoblocked. Doing so means that a blocked user, even after logging out and moving to a new IP address, will still be blocked.',
+		'requires' => [],
 	],
 	'wgCookieSetOnIpBlock' => [
 		'name' => 'Cookie set on IP block',
@@ -113,6 +118,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'Determines whether to set a cookie when an IP user is blocked. Doing so means that a blocked user, even after moving to a new IP address, will still be blocked.',
+		'requires' => [],
 	],
 	'wgEmailConfirmToEdit' => [
 		'name' => 'Email Confirm To Edit',
@@ -122,6 +128,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'anti-spam',
 		'help' => 'Require users to confirm email address before they can edit. This effectively disables IP editing.',
+		'requires' => [],
 	],
 	'wgRestrictionTypes' => [
 		'name' => 'Restriction Types',
@@ -145,6 +152,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'anti-spam',
 		'help' => 'Actions that can be restricted.',
+		'requires' => [],
 	],
 	'wgImplicitGroups' => [
 		'name' => 'Implicit Groups',
@@ -158,6 +166,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'anti-spam',
 		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
+		'requires' => [],
 	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
@@ -172,6 +181,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '1 week',
 		'section' => 'anti-spam',
 		'help' => 'Maximum time allowed for protection of the site.',
+		'requires' => [],
 	],
 	'wgProtectSiteDefaultTimeout' => [
 		'name' => 'ProtectSite Default Timeout',
@@ -191,6 +201,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '1 hour',
 		'section' => 'anti-spam',
 		'help' => 'Default timeout, 1 hour by default.',
+		'requires' => [],
 	],
 	'egApprovedRevsAutomaticApprovals' => [
 		'name' => 'Automatically approve new revisions',
@@ -200,6 +211,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
+		'requires' => [],
 	],
 	'wgFlaggedRevsProtection' => [
 		'name' => 'Flagged Revs Protection',
@@ -209,6 +221,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'anti-spam',
 		'help' => 'This enables Flagged Revs Protection.',
+		'requires' => [],
 	],
 	'wgFlaggedRevsAutoReview' => [
 		'name' => 'FlaggedRevs Auto Review',
@@ -224,6 +237,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 3,
 		'section' => 'anti-spam',
 		'help' => 'Auto-review settings for edits/new pages.',
+		'requires' => [],
 	],
 	'wgFlaggedRevsRestrictionLevels' => [
 		'name' => 'FlaggedRevs Restriction Levels',
@@ -239,6 +253,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'anti-spam',
 		'help' => 'Restriction levels for "autoreview"/"review" rights.',
+		'requires' => [],
 	],
 	'wgSimpleFlaggedRevsUI' => [
 		'name' => 'Simple FlaggedRevs UI',
@@ -248,6 +263,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'When enabled, this will only distinguish "checked", "quality", and unreviewed.',
+		'requires' => [],
 	],
 	'wgFlaggedRevsLowProfile' => [
 		'name' => 'FlaggedRevs Low Profile',
@@ -257,6 +273,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'For visitors, only show tags/icons for unreviewed/outdated pages when enabled.',
+		'requires' => [],
 	],
 
 	// Beta Feature related stuff
@@ -268,6 +285,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'beta',
 		'help' => 'Feature flag for the cross-wiki notifications beta feature.',
+		'requires' => [],
 	],
 	'wgMediaViewerIsInBeta' => [
 		'name' => 'Enable Media Viewer Beta Mode',
@@ -277,6 +295,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'beta',
 		'help' => 'This makes Media Viewer a beta feature thus this will not be enabled for all users.',
+		'requires' => [],
 	],
 	'wgPopupsReferencePreviewsBetaFeature' => [
 		'name' => 'Popups Reference Previews Beta Feature',
@@ -286,6 +305,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'beta',
 		'help' => 'Whether Reference Previews should be available as a Beta feature. If false, Reference Previews are enabled for all users by default.',
+		'requires' => [],
 	],
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'name' => 'Enable VisualEditor Diff Page Beta Feature',
@@ -295,6 +315,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'beta',
 		'help' => 'Enable the new visual mode as a beta feature on revision difference pages.',
+		'requires' => [],
 	],
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'name' => 'Enable VisualEditor Wikitext Beta Feature',
@@ -304,6 +325,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'beta',
 		'help' => 'Enable the new wikitext mode inside the visual editor as a beta feature. It has many of the tools present in the visual editor, uses a similar design, and allows better switching between the two.',
+		'requires' => [],
 	],
 	'wgVisualEditorShowBetaWelcome' => [
 		'name' => 'Enable VisualEditor Show Beta Welcome',
@@ -313,6 +335,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'beta',
 		'help' => 'Shows a beta welcome for users of VisualEditor.',
+		'requires' => [],
 	],
 	
 	// Categories
@@ -326,6 +349,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 200,
 		'section' => 'categories',
 		'help' => 'Paging limit for items in categories.',
+		'requires' => [],
 	],
 	'wgMSCS_WarnNoCategories' => [
 		'name' => 'MsCatSelect warn no categories',
@@ -335,6 +359,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'categories',
 		'help' => 'By default, if you try to save a page that has no categories assigned, MsCatSelect will ask for confirmation. If you wish to avoid this, unset this option.',
+		'requires' => [],
 	],
 	'wgCategoryTreeDefaultMode' => [
 		'name' => 'Category Tree Default Mode',
@@ -343,13 +368,14 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'overridedefault' => 0,
 		'section' => 'categories',
-		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag. You also need to set "Category Tree Category Page Mode" if you select the page mode.',
 		'options' => [
 			'Category' => 0,
 			'Pages' => 10,
 			'All' => 20,
 			'Parents' => 100,
 		],
+		'help' => 'the default mode to use when no mode attribute is specified in a <categorytree> tag. You also need to set "Category Tree Category Page Mode" if you select the page mode.',
+		'requires' => [],
 	],
 	'wgCategoryTreeCategoryPageMode' => [
 		'name' => 'Category Tree Category Page Mode',
@@ -358,13 +384,14 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'overridedefault' => 0,
 		'section' => 'categories',
-		'help' => 'The mode to use when rendering trees on category pages.',
 		'options' => [
 			'Category' => 0,
 			'Pages' => 10,
 			'All' => 20,
 			'Parents' => 100,
 		],
+		'help' => 'The mode to use when rendering trees on category pages.',
+		'requires' => [],
 	],
 
 	// Discussion
@@ -376,6 +403,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'discussion',
 		'help' => 'Link to user pages in the main chat window.',
+		'requires' => [],
 	],
 	'wgChatMeCommand' => [
 		'name' => 'Chat Me Command',
@@ -385,6 +413,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'discussion',
 		'help' => 'Enable "/me <text>" command that prints a status-type message.',
+		'requires' => [],
 	],
 	'wgCommentStreamsEnableTalk' => [
 		'name' => 'CommentStreams Enable Talk',
@@ -394,6 +423,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'discussion',
 		'help' => 'Enable in talk namespaces',
+		'requires' => [],
 	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
 		'name' => 'CommentStreams Newest Streams On Top',
@@ -403,6 +433,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'discussion',
 		'help' => 'Show newer comments first',
+		'requires' => [],
 	],
 	'wgCommentStreamsUserAvatarPropertyName' => [
 		'name' => 'CommentStreams User Avatar Property Name',
@@ -412,6 +443,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'discussion',
 		'help' => 'If SocialProfile is enabled, it will display an avatar',
+		'requires' => [],
 	],
 	'wgCommentStreamsEnableVoting' => [
 		'name' => 'CommentStreams Enable Voting',
@@ -421,6 +453,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'discussion',
 		'help' => 'Allows logged in users to vote thumbs up, thumbs down, or neither on top level comments.',
+		'requires' => [],
 	],
 	'wgCommentStreamsModeratorFastDelete' => [
 		'name' => 'CommentStreams Moderator Fast Delete',
@@ -430,6 +463,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'discussion',
 		'help' => 'allows users with csdelete right to delete a comment and all of its replies in one action rather than having to individually delete all of the replies first.',
+		'requires' => [],
 	],
 	'wgCommentsSortDescending' => [
 		'name' => 'Sort Comments by Descending',
@@ -439,6 +473,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'discussion',
 		'help' => 'This sorts comments by descending date, with the new comment box and most recent comments at the top when enabled.',
+		'requires' => [],
 	],
 	'wgWebChatServer' => [
 		'name' => 'WebChat Server',
@@ -448,6 +483,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'discussion',
 		'help' => 'IRC Server to connect to, not required when using the freenodeChat web client.',
+		'requires' => [],
 	],
 	'wgWebChatChannel' => [
 		'name' => 'WebChat Channel',
@@ -457,6 +493,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'discussion',
 		'help' => 'Channel to connect to.',
+		'requires' => [],
 	],
 	'wgWebChatClient' => [
 		'name' => 'WebChat Client',
@@ -470,6 +507,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'freenodeChat',
 		'section' => 'discussion',
 		'help' => 'This sets the web client to use. If you are not using Freenode, select Other Server.',
+		'requires' => [],
 	],
 	'wgWikiForumAllowAnonymous' => [
 		'name' => 'WikiForum Allow Anonymous',
@@ -479,6 +517,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'discussion',
 		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
+		'requires' => [],
 	],
 	
 	// Edit
@@ -503,6 +542,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'cc-by-sa',
 		'section' => 'edit',
 		'help' => 'Each wiki on Miraheze is by default licensed under CC-BY-SA 4.0 although this can be changed to another supported license. If you would like to release the contributions on your wiki under another license, please let us know so that we can make it available to you. Be aware that changing the license on your wiki can have an impact on your community and should not be done lightly.',
+		'requires' => [],
 	],
 	'wgActiveUserDays' => [
 		'name' => 'Active User Days',
@@ -514,6 +554,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 30,
 		'section' => 'edit',
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
+		'requires' => [],
 	],
 	'wgShowCreditsIfMax' => [
 		'name' => 'Editing attribution',
@@ -523,6 +564,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Show more authors.',
+		'requires' => [],
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'name' => 'Enable VisualEditor Wikitext mode',
@@ -532,6 +574,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'This option allow you to read Wikitext syntax on VisualEditor.',
+		'requires' => [],
 	],
 	'wgVisualEditorUseSingleEditTab' => [
 		'name' => 'VisualEditor Use Single Edit Tab',
@@ -541,6 +584,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'Shows only the "edit" tab. Uses VisualEditor by default if "Make VisualEditor the default editor for all" is set, otherwise defaults to Wikitext.',
+		'requires' => [],
 	],
 	'wgVisualEditorEnableDiffPage' => [
 		'name' => 'Enable VisualEditor Diff Page',
@@ -550,6 +594,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'Enable the new visual mode on revision difference pages by default (not Beta).',
+		'requires' => [],
 	],
 	'wgCodeEditorEnableCore' => [
 		'name' => 'CodeEditor Enable Core',
@@ -559,6 +604,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'To disable the editor on JavaScript and CSS pages in the MediaWiki, User and other core namespaces, unset this option.',
+		'requires' => [],
 	],
 	'wgScribuntoUseCodeEditor' => [
 		'name' => 'Scribunto Use CodeEditor',
@@ -568,6 +614,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Set this to use it when editing Module pages.',
+		'requires' => [],
 	],
 	'wgScribuntoUseGeSHi' => [
 		'name' => 'Scribunto Use GeSHi (SyntaxHighlight)',
@@ -577,6 +624,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Use SyntaxHighlight_GeSHi extension to highlight syntax.',
+		'requires' => [],
 	],
 	'wgPageCreationLog' => [
 		'name' => 'Page Creation Log',
@@ -586,6 +634,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'edit',
 		'help' => 'Whether to maintain a log of new page creations, which can be viewed at Special:Log/create.',
+		'requires' => [],
 	],
 	'wgPopupsOptInDefaultState' => [
 		'name' => 'Popups Opt In Default State',
@@ -597,6 +646,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 0,
 		'section' => 'beta',
 		'help' => 'Default Page Previews visibility. Has to be a string as a compatibility with beta feature settings.',
+		'requires' => [],
 	],
 
 	// Links
@@ -612,6 +662,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'link',
 		'section' => 'links',
 		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
+		'requires' => [],
 		'script' => [
  			"$IP/maintenance/updateArticleCount.php" => [
 				'update' => false,
@@ -626,6 +677,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'links',
 		'help' => 'Unset this to avoid forcing the first letter of links to capitals.',
+		'requires' => [],
 		'script' => [
  			"$IP/maintenance/cleanupCaps.php" => [],
 		],
@@ -638,6 +690,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'links',
 		'help' => 'Set this to hide the page\'s original title as a subtitle below the title bar, shown by the Display Title extension.',
+		'requires' => [],
 	],
 	'wgEnableCanonicalServerLink' => [
 		'name' => 'Enable Canonical Server Link',
@@ -647,6 +700,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'links',
 		'help' => 'Output a <link rel="canonical"> tag on every page indicating the canonical server which should be used, i.e. $wgServer or $wgCanonicalServer.',
+		'requires' => [],
 	],
 	'wgExternalLinkTarget' => [
 		'name' => 'External Link Target',
@@ -660,6 +714,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'links',
 		'help' => 'Set a default target for external links.',
+		'requires' => [],
 	],
 	'wgRottenLinksCurlTimeout' => [
 		'name' => 'RottenLinks Timeout Threshold',
@@ -670,7 +725,8 @@ $wgManageWikiSettings = [
 		'maxint' => 120,
 		'overridedefault' => 10,
 		'section' => 'links',
-		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.'
+		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.',
+		'requires' => [],
 	],
 
 	// Localisation (E.G i18n/timezone etc)
@@ -682,6 +738,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'UTC',
 		'section' => 'localisation',
 		'help' => 'This will adapt your wikis time over clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
+		'requires' => [],
 	],
 	'wgTranslateDocumentationLanguageCode' => [
 		'name' => 'Translate Documentation Language Code',
@@ -696,6 +753,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Language code for message documentation.',
+		'requires' => [],
 	],
 	'wgTranslatePageTranslationULS' => [
 		'name' => 'Translate Page Translation ULS',
@@ -705,6 +763,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'When user changes interface language via ULS, should we also switch the language of the translatable page?',
+		'requires' => [],
 	],
 	
 	'wgMinervaAlwaysShowLanguageButton' => [
@@ -715,6 +774,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'localisation',
 		'help' => 'Whether to show the language switcher button even if no languages are available for the page.',
+		'requires' => [],
 	],
 	'wgULSAnonCanChangeLanguage' => [
 		'name' => 'ULS Anon Can Change Language',
@@ -724,6 +784,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Enabling allows anonymous users to control the language they view the wiki in.',
+		'requires' => [],
 	],
 	'wgULSPosition' => [
 		'name' => 'ULS Position',
@@ -737,6 +798,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'personal',
 		'section' => 'localisation',
 		'help' => 'The location and the form of the language selection trigger.',
+		'requires' => [],
 	],
 	'wgPageLanguageUseDB' => [
 		'name' => 'Enable per page language',
@@ -746,6 +808,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
+		'requires' => [],
 	],
 	'wmgUseYandexTranslate' => [
 		'name' => 'Use Yandex Machine Translation on Special:Translate',
@@ -755,6 +818,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Adds suggestions from Yandex to Special:Translate',
+		'requires' => [],
 	],
 
 	// Maps (E.G navigation)
@@ -766,6 +830,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'maps',
 		'help' => 'Enables Wikivoyage mode.',
+		'requires' => [],
 	],
 	'wgKartographerUseMarkerStyle' => [
 		'name' => 'Kartographer Use Marker Style',
@@ -775,6 +840,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'maps',
 		'help' => 'Allows Kartographer to extract CSS style to be used by the link from the GeoJSON.',
+		'requires' => [],
 	],
 
 	// Parser Functions
@@ -786,6 +852,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
 		'help' => 'Allows unlimited results with DynamicPageList (Wikimedia).',
+		'requires' => [],
 	],
 	'wgDLPAllowUnlimitedCategories' => [
 		'name' => 'DLP Allow Unlimited Categories',
@@ -795,6 +862,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
 		'help' => 'Allows unlimited categories with DynamicPageList (Wikimedia).',
+		'requires' => [],
 	],
 	'wgEnableScaryTranscluding' => [
 		'name' => 'Enable Scary Transcluding',
@@ -804,6 +872,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
 		'help' => 'Allow templates to be imported/transcluded from another wiki.',
+		'requires' => [],
 	],
 	'wgAllowSlowParserFunctions' => [
 		'name' => 'Allow slow parser functions',
@@ -813,6 +882,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
 		'help' => 'Parser functions are "magic words" that return a value or function, such as time, site details or page names.',
+		'requires' => [],
 	],
 	'wgPFEnableStringFunctions' => [
 		'name' => 'Enable string function functionality',
@@ -822,6 +892,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
 		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s <a href="https://www.mediawiki.org/wiki/Module:String">documentation page</a>',
+		'requires' => [],
 	],
 	'wgAllowDisplayTitle' => [
 		'name' => 'Allow Display Title',
@@ -831,6 +902,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
 		'help' => 'Allows use of {{DISPLAYTITLE}} magic word.',
+		'requires' => [],
 	],
 	'wgRestrictDisplayTitle' => [
 		'name' => 'Restrict Display Title',
@@ -840,6 +912,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
 		'help' => 'Restrict {{DISPLAYTITLE}} to titles that normalize to the same canonical database key. Wikis with NoTitle extension installed have this config unset.',
+		'requires' => [],
 	],
 
 	// Media/File
@@ -851,6 +924,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'Check or uncheck this option if you want to enable or disable the upload of files on your wiki.',
+		'requires' => [],
 	],
 	'wgAllowCopyUploads' => [
 		'name' => 'Enable File Uploads Through URL',
@@ -860,6 +934,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'By default, Miraheze enables file upload only from a local media but with this option you can upload files remotely from other sites.',
+		'requires' => [],
 	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'name' => 'Enable File Uploads Through URL on Special:Upload',
@@ -869,6 +944,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'This option adds a textbox on Special:Upload enabling you to upload files from any URL.',
+		'requires' => [],
 	],
 	'wgUseInstantCommons' => [
 		'name' => 'Enable Wikimedia Commons Files',
@@ -878,6 +954,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'This option allows you to use the WikiMedia Commons file database on your wiki.',
+		'requires' => [],
 	],
 	'wgMirahezeCommons' => [
 		'name' => 'Enable Miraheze Commons (linking to commons.miraheze.org)',
@@ -887,6 +964,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'This option allows you to use the Miraheze Commons file database on your wiki.',
+		'requires' => [],
 	],
 	'wgShowArchiveThumbnails' => [
 		'name' => 'Show Old Thumbnails On Description Page',
@@ -896,6 +974,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'Whether to show thumbnails for old images on the image\'s description page.',
+		'requires' => [],
 	],
 	'wgAllowExternalImages' => [
 		'name' => 'Allow External Images',
@@ -905,6 +984,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
+		'requires' => [],
 	],
 	'wgSVGConverter' => [
 		'name' => 'SVG Converter',
@@ -918,6 +998,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'ImageMagick',
 		'section' => 'media',
 		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG. You may want to choose Inkscape if your SVG->PNG conversion results in a black image.',
+		'requires' => [],
 	],
 	'wgMediaViewerEnableByDefault' => [
 		'name' => 'MediaViewer Enable By Default',
@@ -927,6 +1008,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'This enables MediaViewer for everyone.',
+		'requires' => [],
 	],
 	'wgMSU_checkAutoCat' => [
 		'name' => 'MsUpload check auto cat',
@@ -936,6 +1018,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'If set, sets the checkbox for adding a category to a page by default.',
+		'requires' => [],
 	],
 	'wgMSU_confirmReplace' => [
 		'name' => 'MsUpload confirm replace',
@@ -945,6 +1028,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'If set, shows the "Replace file" checkbox.',
+		'requires' => [],
 	],
 	'wgMSU_showAutoCat' => [
 		'name' => 'MsUpload show auto cat',
@@ -954,6 +1038,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'If set, files uploaded while editing a category page will be added to that category.',
+		'requires' => [],
 	],
 	'wgMSU_useDragDrop' => [
 		'name' => 'MsUpload use drag and drop',
@@ -963,6 +1048,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'media',
 		'help' => 'If set, the drag & drop area will be shown.',
+		'requires' => [],
 	],
 	'wgMaxImageArea' => [
 		'name' => 'Max Image Area',
@@ -972,6 +1058,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '1.25e7',
 		'section' => 'media',
 		'help' => 'Specifies the max pixels you can have in a image.',
+		'requires' => [],
 	],
 	'wgCommonsMetadataForceRecalculate' => [
 		'name' => 'Force Remote Image Description Parsing',
@@ -980,7 +1067,8 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Set this to true to force CommonsMetadata to parse the description page of the image and extract the metadata when using images from other wikis.'
+		'help' => 'Set this to true to force CommonsMetadata to parse the description page of the image and extract the metadata when using images from other wikis.',
+		'requires' => [],
 	],
 	'wgFileExtensions' => [
 		'name' => 'File Extensions',
@@ -1130,6 +1218,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'media',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
+		'requires' => [],
 	],
 	'wgTmhEnableMp4Uploads' => [
 		'name' => 'TimedMediaHandler Enable Mp4 Uploads',
@@ -1139,6 +1228,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Allows to upload Mp4 files.',
+		'requires' => [],
 	],
 
 	// Notifications
@@ -1150,6 +1240,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
+		'requires' => [],
 	],
 	'wgUsersNotifiedOnAllChanges' => [
 		'name' => 'Users Notified On All Changes',
@@ -1159,6 +1250,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
+		'requires' => [],
 	],	
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
@@ -1168,6 +1260,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Whether to enable the cross-wiki notifications feature.',
+		'requires' => [],
 	],
 	'wgEchoMentionStatusNotifications' => [
 		'name' => 'Echo Mention Status Notifications',
@@ -1177,6 +1270,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Enable mention success/failure notifications.',
+		'requires' => [],
 	],
 	'wmgSiteNoticeOptOut' => [
 		'name' => 'Opt out of global Miraheze notices',
@@ -1186,6 +1280,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'Opts your wiki out of global Miraheze notices, only showing important notices.',
+		'requires' => [],
 	],
 	'wgMinervaEnableSiteNotice' => [
 		'name' => 'Minerva Sitenotice',
@@ -1195,6 +1290,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Display the Sitenotice on the Minerva skin.',
+		'requires' => [],
 	],
 	'wgDismissableSiteNoticeForAnons' => [
 		'name' => 'Dismissable Site Notice For Anons',
@@ -1204,6 +1300,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
+		'requires' => [],
 	],
 	'wgDiscordNotificationBlockedUser' => [
 		'name' => 'Discord Notification Blocked User',
@@ -1213,6 +1310,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on user or IP blocked in MediaWiki.',
+		'requires' => [],
 	],
 	'wgDiscordNotificationNewUser' => [
 		'name' => 'Discord Notification New User',
@@ -1222,6 +1320,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
+		'requires' => [],
 	],
 	'wgHAWelcomeStaffGroupName' => [
 		'name' => 'HAWelcome Staff Group Name',
@@ -1231,6 +1330,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'sysop',
 		'section' => 'notifications',
 		'help' => 'The name of the group that can serve as a fallback when no sysops have been active in the last 60 days.',
+		'requires' => [],
 	],
 	'wgHAWelcomeSignatureFromPreferences' => [
 		'name' => 'HAWelcome Signature From Preferences',
@@ -1240,6 +1340,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
+		'requires' => [],
 	],
 	
 	// Preferences
@@ -1251,6 +1352,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'preferences',
 		'help' => 'An array of preferences to hide from Special:Preferences.',
+		'requires' => [],
 	],
 	'wgSkipSkins' => [
 		'name' => 'Skip Skins',
@@ -1262,6 +1364,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'preferences',
 		'help' => 'Array of skins to remove as a choice from user\'s preferences.',
+		'requires' => [],
 	],
 	'wmgVisualEditorEnableDefault' => [
 		'name' => 'Make VisualEditor the default editor for all',
@@ -1271,6 +1374,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'preferences',
 		'help' => 'This will make VisualEditor the default editor for all. Sets <code>$wgDefaultUserOptions[\'visualeditor-enable\'] = 1;</code> and <code>$wgDefaultUserOptions[\'visualeditor-editor\'] = \'visualeditor\';</code>',
+		'requires' => [],
 	],
 	'wgPopupsHideOptInOnPreferencesPage' => [
 		'name' => 'Popups Hide Opt In On Preferences Page',
@@ -1280,6 +1384,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'preferences',
 		'help' => 'Whether the option to enable/disable Page Previews should be hidden on Preferences page. Please note if PopupsBetaFeature is set to true this option will be always hidden.',
+		'requires' => [],
 	],
 
 	// Recent changes
@@ -1293,6 +1398,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 50,
 		'section' => 'recentchanges',
 		'help' => 'Set maximum number of results to return in syndication feeds (RSS, Atom) for eg Recentchanges, Newpages. Min. 1, Max. 5,000',
+		'requires' => [],
 	],
 	'wgRCMaxAge' => [
 		'name' => 'RecentChanges max age',
@@ -1304,6 +1410,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 180 * 24 * 3600,
 		'section' => 'recentchanges',
 		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will go.',
+		'requires' => [],
 	],
 	'wgRCLinkDays' => [
 		'name' => 'RecentChanges Link Days',
@@ -1324,6 +1431,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => [ 1, 3, 7, 14, 30 ],
 		'section' => 'recentchanges',
 		'help' => 'List days options to list in the Special:Recentchanges and Special:Recentchangeslinked pages.',
+		'requires' => [],
 	],
 	'wgRCLinkLimits' => [
 		'name' => 'RecentChanges Link Limits',
@@ -1344,6 +1452,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => [ 50, 100, 250, 500 ],
 		'section' => 'recentchanges',
 		'help' => 'List changes limits options to list in the Special:Recentchanges and Special:Recentchangeslinked pages.',
+		'requires' => [],
 	],
 	'wgCommentsInRecentChanges' => [
 		'name' => 'Enable Comments In RecentChanges',
@@ -1353,6 +1462,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'recentchanges',
 		'help' => 'Shows comments in the RecentChanges special page.',
+		'requires' => [],
 	],
 	'wgWikiForumLogsInRC' => [
 		'name' => 'Display WikiForum logs in RecentChanges',
@@ -1362,6 +1472,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'recentchanges',
 		'help' => 'Toggles the display of WikiForum logs in Special:RecentChanges',
+		'requires' => [],
 	],
 	'wgRCWatchCategoryMembership' => [
 		'name' => 'Treat Category Membership as a RecentChange',
@@ -1371,6 +1482,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'recentchanges',
 		'help' => 'Shows changes to category membership as an action in Special:RecentChanges',
+		'requires' => [],
 	],
 	'wgSimpleChangesOnlyContentNamespaces' => [
 		'name' => 'Display only content namespaces for Simple Changes',
@@ -1380,6 +1492,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'recentchanges',
 		'help' => 'Restricts the list to display only content namespaces',
+		'requires' => [],
 	],
 	'wgSimpleChangesOnlyLatest' => [
 		'name' => 'Prevent duplicate titles appearing for Simple Changes',
@@ -1389,6 +1502,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'recentchanges',
 		'help' => 'Avoids duplicate titles showing up in the list by only showing changes that match each page&apos;s most recent revision',
+		'requires' => [],
 	],
 	'wgSimpleChangesShowUser' => [
 		'name' => 'Display the user name of the user who made the change for Simple Changes',
@@ -1398,6 +1512,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'recentchanges',
 		'help' => 'Shows the user name of the user who made the change',
+		'requires' => [],
 	],
 
 	// Restricted (settings that require the managewiki-restricted right)
@@ -1411,6 +1526,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 262144,
 		'section' => 'restricted',
 		'help' => 'Don\'t read SVG metadata beyond this point.',
+		'requires' => [],
 	],
 	// If necessary we can increase maxint.
 	'wgMaxArticleSize' => [
@@ -1423,6 +1539,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 2048,
 		'section' => 'restricted',
 		'help' => 'Maximum page size in kilobytes.',
+		'requires' => [],
 	],
 	'wgMaxCredits' => [
 		'name' => 'Editing attribution',
@@ -1434,6 +1551,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 0,
 		'section' => 'restricted',
 		'help' => 'Number of editors to attribute.',
+		'requires' => [],
 	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
@@ -1443,6 +1561,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the DisqusTag extension.',
+		'requires' => [],
 	],
 	'wgPageDisqusShortname' => [
 		'name' => 'Page DisqusShortname',
@@ -1452,6 +1571,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
+		'requires' => [],
 	],
 	'wgHAWelcomeWelcomeUsername' => [
 		'name' => 'HAWelcome Welcome Username',
@@ -1461,6 +1581,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => $wgSitename,
 		'section' => 'restricted',
 		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit.',
+		'requires' => [],
 	],
 	'wgCompressRevisions' => [
 		'name' => 'Compress Revisions',
@@ -1470,6 +1591,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => "Compress new page revisions if possible. System administrators: after enabling this, don't forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki={$wi->dbname} --type=gzip</code>.",
+		'requires' => [],
 	],
 	'wmgSharedUploadBaseUrl' => [
 		'name' => 'Shared Upload Base Url',
@@ -1479,6 +1601,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The domain name for the wiki to use as the file repository. Leave empty unless it is a custom domain. By default will be the miraheze subdomain of whatever <code>$wmgSharedUploadDBname</code> is set to below. Do not include https:// or any paths.',
+		'requires' => [],
 	],
 	'wmgSharedUploadDBname' => [
 		'name' => 'Shared Upload Database Name',
@@ -1488,6 +1611,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. Does nothing if the value is not a valid Miraheze-hosted wiki database.',
+		'requires' => [],
 	],
 	'wgExpensiveParserFunctionLimit' => [
 		'name' => 'Expensive Parser Function Limit',
@@ -1498,7 +1622,8 @@ $wgManageWikiSettings = [
 		'maxint' => 500,
 		'overridedefault' => 99,
 		'section' => 'restricted',
-		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500.'
+		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500.',
+		'requires' => [],
 	],
 
 	// SEO
@@ -1515,6 +1640,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'index,follow',
 		'section' => 'seo',
 		'help' => 'Allows specifying the default robot policy for all pages on the wiki.',
+		'requires' => [],
 	],
 	'wgTwitterCardType' => [
 		'name' => 'Twitter Card Type (WikiSEO)',
@@ -1523,11 +1649,12 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'overridedefault' => 'summery_large_image',
 		'section' => 'seo',
-		'help' => 'Type of twitter card to use.',
 		'options' => [
 			'Summary' => 'summary',
 			'Summary large image' => 'summary_large_image',
 		],
+		'help' => 'Type of twitter card to use.',
+		'requires' => [],
 	],
 	'wgGoogleSiteVerificationKey' => [
 		'name' => 'Google Site Verification Key (WikiSEO)',
@@ -1537,6 +1664,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'seo',
 		'help' => 'Site verification key for Google Search Console.',
+		'requires' => [],
 	],
 	'wgBingSiteVerificationKey' => [
 		'name' => 'Bing Site Verification Key (WikiSEO)',
@@ -1546,6 +1674,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'seo',
 		'help' => 'Site verification key for Bing Webmaster Center.',
+		'requires' => [],
 	],
 	'wgFacebookAppId' => [
 		'name' => 'Facebook App Id (WikiSEO)',
@@ -1555,6 +1684,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'seo',
 		'help' => 'App Id for Facebook Insights.',
+		'requires' => [],
 	],
 	'wgYandexSiteVerificationKey' => [
 		'name' => 'Yandex Site Verification Key (WikiSEO)',
@@ -1564,6 +1694,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'seo',
 		'help' => 'Site verification key for Yandex Webmasters.',
+		'requires' => [],
 	],
 	'wgAlexaSiteVerificationKey' => [
 		'name' => 'Alexa Site Verification Key (WikiSEO)',
@@ -1573,6 +1704,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'seo',
 		'help' => 'Site verification key for Alexa Console.',
+		'requires' => [],
 	],
 	'wgPinterestSiteVerificationKey' => [
 		'name' => 'Pinterest Site Verification Key (WikiSEO)',
@@ -1582,6 +1714,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'seo',
 		'help' => 'Site verification key for Pinterest Console.',
+		'requires' => [],
 	],
 
 	// SocialTools
@@ -1593,6 +1726,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Modern profile tabs for the Cosmos skin when social profile is enabled.',
+		'requires' => [],
 	],
 	'wgCosmosSocialProfileRoundAvatar' => [
 		'name' => 'Cosmos Round Avatar',
@@ -1602,6 +1736,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Make avatar round on profile pages for the Cosmos skin when social profile is enabled.',
+		'requires' => [],
 	],
 	'wgCosmosSocialProfileShowEditCount' => [
 		'name' => 'Cosmos Show Edit Count',
@@ -1611,6 +1746,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Show edit count on profile pages for the Cosmos skin when social profile is enabled.',
+		'requires' => [],
 	],
 	'wgCosmosSocialProfileShowGroupTags' => [
 		'name' => 'Cosmos Enable Group Tags',
@@ -1620,6 +1756,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Show user group tags on profile pages for the Cosmos skin when social profile is enabled.',
+		'requires' => [],
 	],
 	'wgCosmosUseSocialProfileAvatar' => [
 		'name' => 'Cosmos Use Social Profile Avatar',
@@ -1629,6 +1766,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Use social profile avatar in the top banner for the Cosmos skin when social profile is enabled.',
+		'requires' => [],
 	],
 	'wgCosmosProfileTagGroups' => [
 		'name' => 'Cosmos User Group Tags',
@@ -1643,6 +1781,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'socialtools',
 		'help' => 'User groups to show on profile pages for the Cosmos skin when social profile is enabled. They will be shown in order of priority.',
+		'requires' => [],
 	],
 	'wgCosmosNumberofGroupTags' => [
 		'name' => 'Cosmos Number of Group Tags',
@@ -1654,6 +1793,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 2,
 		'section' => 'socialtools',
 		'help' => 'Number of user group tags to show on profile pages for the Cosmos skin when social profile and the profile group tags are enabled. Min. 1; Max. 5.',
+		'requires' => [],
 	],
 	'wgRandomGameDisplay' => [
 		'name' => 'Random Game Display',
@@ -1677,6 +1817,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'socialtools',
 		'help' => 'Controls what games are enabled.',
+		'requires' => [],
 	],
 	'wgFriendingEnabled' => [
 		'name' => 'Friending Enabled',
@@ -1686,6 +1827,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Decides whether to enable friending or not.',
+		'requires' => [],
 	],
 	'wgUserBoard' => [
 		'name' => 'User Board',
@@ -1695,6 +1837,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'socialtools',
 		'help' => 'Displays UserBoard-related things on social profile pages.',
+		'requires' => [],
 	],
 	'wgUserProfileDisplay' => [
 		'name' => 'User Profile Display',
@@ -1754,6 +1897,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'socialtools',
 		'help' => 'Enables default stuff to display on social profile pages by default',
+		'requires' => [],
 	],
 	
 	// Styling (E.G skins/logos etc)
@@ -1766,6 +1910,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'vector',
 		'section' => 'styling',
 		'help' => 'Changes the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
+		'requires' => [],
 	],
 	'wgDefaultMobileSkin' => [
 		'name' => 'Default Mobile Skin',
@@ -1776,6 +1921,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'minerva',
 		'section' => 'styling',
 		'help' => 'Changes the default mobile skin to be used by the Mobile Frontend extension. Some skins may not be compatable.',
+		'requires' => [],
 	],
 	'wgLogo' => [
 		'name' => 'Logo',
@@ -1785,6 +1931,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
 		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
+		'requires' => [],
 	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
@@ -1794,6 +1941,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '/favicon.ico',
 		'section' => 'styling',
 		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can add one.',
+		'requires' => [],
 	],
 	'wgAppleTouchIcon' => [
 		'name' => 'Apple Touch Icon',
@@ -1803,6 +1951,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '/apple-touch-icon.png',
 		'section' => 'styling',
 		'help' => 'Favicon for Apple mobile devices. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> on how you can add one.',
+		'requires' => [],
 	],
 	'wgWordmark' => [
 		'name' => 'Wordmark',
@@ -1812,6 +1961,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'This will set the value of <code>$wgLogos[\'wordmark\'][\'src\']</code>. Also used as wordmark for the Minerva and Cosmos skins.',
+		'requires' => [],
 	],
 	'wgWordmarkWidth' => [
 		'name' => 'Wordmark Width',
@@ -1823,6 +1973,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 116,
 		'section' => 'styling',
 		'help' => 'This will set the width value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "116"',
+		'requires' => [],
 	],
 	'wgWordmarkHeight' => [
 		'name' => 'Wordmark Height',
@@ -1834,6 +1985,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 18,
 		'section' => 'styling',
 		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "18"',
+		'requires' => [],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'name' => 'Wikiapiary Footer Page Name',
@@ -1843,6 +1995,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'styling',
 		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
+		'requires' => [],
 	],
 	'wgCosmosBackgroundImage' => [
 		'name' => 'Cosmos Background Image',
@@ -1852,6 +2005,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'section' => 'styling',
 		'help' => 'Add an image to set as the background image for the wiki\'s body of the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosBackgroundImageSize' => [
 		'name' => 'Cosmos Background Image Size',
@@ -1866,6 +2020,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'cover',
 		'section' => 'styling',
 		'help' => 'Add an image to set as the background image for the wiki&apos;s body of the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosWikiHeaderBackgroundImage' => [
 		'name' => 'Cosmos Wiki Header Background Image',
@@ -1875,6 +2030,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'section' => 'styling',
 		'help' => 'Add a background image for the wiki header of the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosMainBackgroundColor' => [
 		'name' => 'Cosmos Main Background Color',
@@ -1884,6 +2040,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#1A1A1A',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the background color for the wiki body of the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosContentBackgroundColor' => [
 		'name' => 'Cosmos Content Background Color',
@@ -1893,6 +2050,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#ffffff',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the background color for the content area of the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosBannerBackgroundColor' => [
 		'name' => 'Cosmos Banner Background Color',
@@ -1902,6 +2060,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#c0c0c0',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the background color for the top banner of the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosWikiHeaderBackgroundColor' => [
 		'name' => 'Cosmos Wiki Header Background Color',
@@ -1911,6 +2070,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#c0c0c0',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the background color of the wiki navigation header on the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosLinkColor' => [
 		'name' => 'Cosmos Link Color',
@@ -1920,6 +2080,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#0645ad',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the link color for the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosButtonColor' => [
 		'name' => 'Cosmos Button Color',
@@ -1929,6 +2090,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#c0c0c0',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the button background color for the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosToolbarColor' => [
 		'name' => 'Cosmos Toolbar Color',
@@ -1938,6 +2100,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#000000',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the toolbar background color for the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosFooterColor' => [
 		'name' => 'Cosmos Footer Color',
@@ -1947,6 +2110,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#c0c0c0',
 		'section' => 'styling',
 		'help' => 'Add a color name or hex code to set as the footer background color for the Cosmos skin.',
+		'requires' => [],
 	],
 	'wgCosmosBackgroundImageNorepeat' => [
 		'name' => 'Cosmos Background Image Repeat',
@@ -1956,6 +2120,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Repeat the background for the cosmos skin?',
+		'requires' => [],
 	],
 	'wgCosmosBackgroundImageFixed' => [
 		'name' => 'Cosmos Background Image Position',
@@ -1965,6 +2130,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Make the background for the cosmos skin "position: fixed"?',
+		'requires' => [],
 	],
 	'wgCosmosContentOpacityLevel' => [
 		'name' => 'Cosmos Content Opacity Level',
@@ -1976,6 +2142,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 100,
 		'section' => 'styling',
 		'help' => 'Set the opacity level of the content area and custom sidebar for the Cosmos skin in precentage',
+		'requires' => [],
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
 		'name' => 'Enable Europa Theme for Infoboxes on Cosmos',
@@ -1985,6 +2152,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Enable the Europa theme on infoboxes when using the Cosmos skin, if you have the PortableInfobox extension enabled.',
+		'requires' => [],
 	],
 	'wgLibertyMainColor' => [
 		'name' => 'Liberty Main Color',
@@ -1994,6 +2162,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#4188F1',
 		'section' => 'styling',
 		'help' => 'Theme-color configurations, main color of site.',
+		'requires' => [],
 	],
 	'wgLibertySecondColor' => [
 		'name' => 'Liberty Second Color',
@@ -2003,6 +2172,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#2774DC',
 		'section' => 'styling',
 		'help' => 'Configuration for secondary color of site.',
+		'requires' => [],
 	],
 	'wgMedikColor' => [
 		'name' => 'Medik Color',
@@ -2012,6 +2182,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#FFBE00',
 		'section' => 'styling',
 		'help' => 'The Medik color scheme (navbar background, underlines etc.).',
+		'requires' => [],
 	],
 	'wgMedikShowLogo' => [
 		'name' => 'Medik Show Logo',
@@ -2026,6 +2197,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'none',
 		'section' => 'styling',
 		'help' => 'Show logo in the navbar or in the sidebar. By default, the logo is hidden.',
+		'requires' => [],
 	],
 	'wgMedikLogoWidth' => [
 		'name' => 'Medik Logo Width',
@@ -2035,6 +2207,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'default',
 		'section' => 'styling',
 		'help' => 'Width of the logo in the main navbar (i.e. you have to set <code>$wgMedikShowLogo</code> to <code>\'main\'</code> first).',
+		'requires' => [],
 	],
 	'wgMedikUseLogoWithoutText' => [
 		'name' => 'Medik Use Logo Without Text',
@@ -2044,6 +2217,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Use only logo and hide the site name in the left upper corner of the wiki.',
+		'requires' => [],
 	],
 	'wgMedikResponsive' => [
 		'name' => 'Medik Responsive',
@@ -2053,6 +2227,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'If you need to disable the responsiveness of the skin (i.e. you don\'t want the skin to adjust to the screen size), set this to false.',
+		'requires' => [],
 	],
 	'wgMedikContentWidth' => [
 		'name' => 'Medik Content Width',
@@ -2066,6 +2241,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'default',
 		'section' => 'styling',
 		'help' => 'At large screens, the main content container (with articles, texts, etc.) is 9/12 of the screen width and sidebar menu takes 2/12 of the screen width. It means that 1/12 of the screen width on the right side remains white. This is the default and looks good. But there can be cases when you need your wiki to extend to the full width of the screen even on the large screens. Then you can and set this to \'full\'. Then the main content container will take 10/12 of the screen width (and 2/12 remain for the sidebar menu).',
+		'requires' => [],
 	],
 	'wgTimelessBackdropImage' => [
 		'name' => 'Timeless Backdrop Image',
@@ -2075,6 +2251,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'cat.svg',
 		'section' => 'styling',
 		'help' => 'Set to the filename, excluding the File namespace, of a background image to use for the Timeless skin.',
+		'requires' => [],
 	],
 	'wgTimelessLogo' => [
 		'name' => 'Timeless Logo',
@@ -2084,6 +2261,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'section' => 'styling',
 		'help' => 'Set to the filename, excluding the File namespace, of a logo to use for the Timeless skin.',
+		'requires' => [],
 	],
 	'wgTimelessWordmark' => [
 		'name' => 'Timeless Wordmark',
@@ -2093,6 +2271,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => null,
 		'section' => 'styling',
 		'help' => 'Set to the filename, excluding the File namespace, of a wordmark to use for the Timeless skin.',
+		'requires' => [],
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
@@ -2102,6 +2281,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'This configuration variable has to be true for the tiles to be generated.',
+		'requires' => [],
 	],
 	'wgMetrolookUploadButton' => [
 		'name' => 'Metrolook Upload Button',
@@ -2111,6 +2291,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'When enabled, an "Upload file" link is generated in the top menu bar, before the content-specific action links ("History", "Discussion", etc.)',
+		'requires' => [],
 	],
 	'wgMetrolookBartile' => [
 		'name' => 'Metrolook Bartile',
@@ -2120,6 +2301,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles">MediaWiki:Metrolook-tiles</a>. If "Metrolook Down Arrow" is not set and "Metrolook Bartile" is not set, then the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles-second">MediaWiki:Metrolook-tiles-second</a>.',
+		'requires' => [],
 	],
 	'wgMetrolookMobile' => [
 		'name' => 'Metrolook Mobile',
@@ -2129,6 +2311,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'When enabled, makes the UI responsive on mobiles.',
+		'requires' => [],
 	],
 	'wgMetrolookUseIconWatch' => [
 		'name' => 'Metrolook Use Icon Watch',
@@ -2138,6 +2321,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'When enabled, it uses an icon for the watch/unwatch button.',
+		'requires' => [],
 	],
 	'wgMetrolookLine' => [
 		'name' => 'Metrolook Line',
@@ -2147,6 +2331,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
+		'requires' => [],
 	],
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
@@ -2161,6 +2346,7 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'styling',
 		'help' => 'List of skin names (e.g. "minerva", "vector") where related articles will be shown in the footer.',
+		'requires' => [],
 	],
 	'wgMultiBoilerplateDiplaySpecialPage' => [
 		'name' => 'MultiBoilerplate Diplay SpecialPage',
@@ -2170,6 +2356,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'if set, will add to the wiki a page named Special:Boilerplates that shows the currently configured boilerplates.',
+		'requires' => [],
 	],
 	'wgAllowUserCss' => [
 		'name' => 'Allow User Css',
@@ -2179,6 +2366,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Allow user Cascading Style Sheets (CSS). For example User:<user>/*.css.',
+		'requires' => [],
 	],
 	'wgAllowUserJs' => [
 		'name' => 'Allow User Js',
@@ -2188,6 +2376,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Allow user JavaScript pages. For example User:<user>/*.js.',
+		'requires' => [],
 	],
 	'wgDefaultTheme' => [
 		'name' => 'Default Theme',
@@ -2204,6 +2393,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'default',
 		'section' => 'styling',
 		'help' => 'Sets which theme is displayed by default when users visit your wiki.',
+		'requires' => [],
 	],
 	'wmgShowPopupsByDefault' => [
 		'name' => 'Show Popups by default',
@@ -2213,6 +2403,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'When enabled, this shows Popups by default.',
+		'requires' => [],
 	],
 
 	// Wikibase
@@ -2223,7 +2414,8 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => 'https://wikidata.org',
 		'section' => 'wikibase',
-		'help' => 'URL of the Wikibase repository the client should connect to.'
+		'help' => 'URL of the Wikibase repository the client should connect to.',
+		'requires' => [],
 	],
 	'wmgWikibaseRepoDatabase' => [
 		'name' => 'Repository Database',
@@ -2232,7 +2424,8 @@ $wgManageWikiSettings = [
 		'type' => 'databases',
 		'overridedefault' => $wi->dbname,
 		'section' => 'wikibase',
-		'help' => 'Database identifier of the repository being used. If unknown, select the identifier for this wiki.'
+		'help' => 'Database identifier of the repository being used. If unknown, select the identifier for this wiki.',
+		'requires' => [],
 	],
 	'wmgAllowEntityImport' => [
 		'name' => 'Allow Entity Import',
@@ -2242,6 +2435,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'wikibase',
 		'help' => 'Allow importing entities via Special:Import and importDump.php.',
+		'requires' => [],
 	],
 	'wmgEnableEntitySearchUI' => [
 		'name' => 'Enable Entity Search UI',
@@ -2251,6 +2445,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'wikibase',
 		'help' => 'To determine if entity search UI should be enabled or not.',
+		'requires' => [],
 	],
 	'wmgFederatedPropertiesEnabled' => [
 		'name' => 'Enable Federated Properties',
@@ -2260,6 +2455,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'wikibase',
 		'help' => 'To determine if federated properties should be enabled or not.',
+		'requires' => [],
 	],
 	'wmgWikibaseItemNamespaceID' => [
 		'name' => 'Item Namespace ID',
@@ -2271,6 +2467,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 0,
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Item namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+		'requires' => [],
 	],
 	'wmgWikibasePropertyNamespaceID' => [
 		'name' => 'Property Namespace ID',
@@ -2282,5 +2479,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 120,
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Property namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+		'requires' => [],
 	]
 ];
