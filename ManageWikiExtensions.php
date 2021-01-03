@@ -7,7 +7,6 @@
  * var: the relevant var that enables the extension.
  * conflicts: string of extensions that cause this extension to not work.
  * requires: a text entry of which extension is required for this setting to work.
- * restricted: boolean - requires managewiki-restricted to change.
  *
  * Extensions can provide installation steps as well for extensions, this includes skins.
  */
