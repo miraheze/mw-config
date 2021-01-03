@@ -136,21 +136,8 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
-// Per-wiki overrides
-if ( $wgDBname === 'cineastaswiki' ) {
-	$wgWhitelistRead[] = 'Projectos resultantes';
-	$wgWhitelistRead[] = 'Actores';
-	$wgWhitelistRead[] = 'Pós-produção';
-	$wgWhitelistRead[] = 'Produtoras do Norte';
-	$wgWhitelistRead[] = 'Programas e aplicações grátis';
-}
-
 if ( $wgDBname === 'csydeswiki' ) {
 	wfLoadExtension ( 'HAWelcome' ); // T6272
-}
-
-if ( $wgDBname === 'cvtwiki' ) {
-	$wgWhitelistRead[] = 'CVT action log';
 }
 
 if ( $wmgPrivateUploads ) {
@@ -186,44 +173,6 @@ if ( $wgDBname === 'newusopediawiki' ) {
 
 if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
 	$egMapsDefaultService = 'googlemaps3';
-}
-
-if ( $wgDBname === 'swiki' ) {
-     $wgWhitelistRead = array_merge( $wgWhitelistRead, [
-         'メインページ/ja',
-         'Special:Translate',
-         '特別:翻訳', '特別:履歴',
-         'メインページ/it',
-         'メインページ/id',
-         'メインページ/en-gb',
-         'メインページ/en-ca',
-         'メインページ/ko',
-         'メインページ/zh',
-         'メインページ/fr',
-         'メインページ/cy',
-         'メインページ/eo',
-         'メインページ/nl',
-         'メインページ/lb',
-         'メインページ/de',
-         'メインページ/hu',
-         'メインページ/pt',
-         'メインページ/ru',
-         'メインページ/sr',
-         'メインページ/tt',
-         'メインページ/th',
-         'メインページ/hi',
-         'メインページ/yue',
-         'Main Page',
-         'Main page',
-         '特別:携帯機器メニュー',
-         '特別:不正なページ名',
-         'Project:About',
-         'Project:Test',
-         'Test',
-         'Project:Disclaimers',
-         '特別:アカウント統一管理',
-         '特別:個人設定'
-     ] );
 }
 
 if ( $wgDBname === 'simcitywiki' ) {
@@ -325,10 +274,6 @@ if ( $wgDBname === 'commonswiki' ) {
 	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
-}
-
-if ( $wgDBname === 'r4356thwiki' ) {
-	$wgWhitelistRead[] = 'R4356th Wiki:Copyrights';
 }
 
 // Discord
