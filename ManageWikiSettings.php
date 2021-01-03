@@ -1410,11 +1410,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 262144,
 		'section' => 'restricted',
 		'help' => 'Don\'t read SVG metadata beyond this point.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	// If necessary we can increase maxint.
 	'wgMaxArticleSize' => [
@@ -1426,11 +1422,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 2048,
 		'section' => 'restricted',
 		'help' => 'Maximum page size in kilobytes.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wgMaxCredits' => [
 		'name' => 'Editing attribution',
@@ -1441,11 +1433,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 0,
 		'section' => 'restricted',
 		'help' => 'Number of editors to attribute.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wgDisqusShortname' => [
 		'name' => 'Disqus Shortname',
@@ -1454,11 +1442,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the DisqusTag extension.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wgPageDisqusShortname' => [
 		'name' => 'Page DisqusShortname',
@@ -1467,11 +1451,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wgHAWelcomeWelcomeUsername' => [
 		'name' => 'HAWelcome Welcome Username',
@@ -1480,11 +1460,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => $wgSitename,
 		'section' => 'restricted',
 		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wgCompressRevisions' => [
 		'name' => 'Compress Revisions',
@@ -1493,11 +1469,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => "Compress new page revisions if possible. System administrators: after enabling this, don't forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki={$wi->dbname} --type=gzip</code>.",
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wmgSharedUploadBaseUrl' => [
 		'name' => 'Shared Upload Base Url',
@@ -1506,11 +1478,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The domain name for the wiki to use as the file repository. Leave empty unless it is a custom domain. By default will be the miraheze subdomain of whatever <code>$wmgSharedUploadDBname</code> is set to below. Do not include https:// or any paths.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wmgSharedUploadDBname' => [
 		'name' => 'Shared Upload Database Name',
@@ -1519,11 +1487,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. Does nothing if the value is not a valid Miraheze-hosted wiki database.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 	'wgExpensiveParserFunctionLimit' => [
 		'name' => 'Expensive Parser Function Limit',
@@ -1534,11 +1498,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 99,
 		'section' => 'restricted',
 		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 
 	// SEO
