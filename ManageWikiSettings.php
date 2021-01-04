@@ -1640,7 +1640,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Modern profile tabs for the Cosmos skin when social profile is enabled.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
 	],
 	'wgCosmosSocialProfileRoundAvatar' => [
 		'name' => 'Cosmos Round Avatar',
@@ -1649,7 +1654,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Make avatar round on profile pages for the Cosmos skin when social profile is enabled.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
 	],
 	'wgCosmosSocialProfileShowEditCount' => [
 		'name' => 'Cosmos Show Edit Count',
@@ -1658,7 +1668,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Show edit count on profile pages for the Cosmos skin when social profile is enabled.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
 	],
 	'wgCosmosSocialProfileShowGroupTags' => [
 		'name' => 'Cosmos Enable Group Tags',
@@ -1667,7 +1682,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Show user group tags on profile pages for the Cosmos skin when social profile is enabled.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
 	],
 	'wgCosmosUseSocialProfileAvatar' => [
 		'name' => 'Cosmos Use Social Profile Avatar',
@@ -1676,7 +1696,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Use social profile avatar in the top banner for the Cosmos skin when social profile is enabled.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
 	],
 	'wgCosmosProfileTagGroups' => [
 		'name' => 'Cosmos User Group Tags',
@@ -1690,7 +1715,12 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'socialtools',
 		'help' => 'User groups to show on profile pages for the Cosmos skin when social profile is enabled. They will be shown in order of priority.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
 	],
 	'wgCosmosNumberofGroupTags' => [
 		'name' => 'Cosmos Number of Group Tags',
@@ -1701,7 +1731,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => 2,
 		'section' => 'socialtools',
 		'help' => 'Number of user group tags to show on profile pages for the Cosmos skin when social profile and the profile group tags are enabled. Min. 1; Max. 5.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
 	],
 	'wgRandomGameDisplay' => [
 		'name' => 'Random Game Display',
@@ -2032,7 +2067,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Enable the Europa theme on infoboxes when using the Cosmos skin, if you have the PortableInfobox extension enabled.',
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'portableinfobox',
+			],
+		],
 	],
 	'wgLibertyMainColor' => [
 		'name' => 'Liberty Main Color',
