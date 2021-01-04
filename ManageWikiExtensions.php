@@ -2586,11 +2586,15 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'wikiforum' => [
-			'name' => 'WikiForum',
+			'name' => 'WikiForum (Disabled - T6686)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 			'var' => 'wmgUseWikiForum',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'permissions' => [
+					'managewiki-restricted', // T6686
+				],
+			],
 			'install' => [
 				'sql' => [
 					'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
