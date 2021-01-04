@@ -2800,7 +2800,7 @@ $wi->config->settings += [
 			MEDIATYPE_TEXT,
 		],
 	],
-	'+wgWhitelistRead' => [
+	'wgWhitelistRead' => [
 		'default' => [],
 	],
 
