@@ -69,7 +69,7 @@ if ( !$cwPrivate ) {
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
 } else {
-	$wgWhitelistRead = explode( "\n", $wgWhitelistRead );
+	explode( "\n", $wgWhitelistRead );
 	$wgWhitelistRead[] = 'Special:OAuth';
 }
 
