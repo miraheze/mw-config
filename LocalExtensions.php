@@ -88,10 +88,6 @@ if ( $wmgUseBlogPage ) {
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
-if ( $wmgUseMSCalendar ) {
-	wfLoadExtension( 'MsCalendar' );
-}
-
 if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 }
@@ -272,6 +268,10 @@ if ( $wmgUseEditcount ) {
 	wfLoadExtension( 'Editcount' );
 }
 
+if ( $wmgUseEditNotify ) {
+	wfLoadExtension( 'EditNotify' );
+}
+
 if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
 }
@@ -294,14 +294,6 @@ if ( $wmgUseFlaggedRevs ) {
 
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
-
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://parsoid-lb.miraheze.org:443',
-		'domain' => $wgServer,
-		'prefix' => $wgDBname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-	];
 
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
 	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
@@ -607,6 +599,10 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
 
+if ( $wmgUseMsCalendar ) {
+	wfLoadExtension( 'MsCalendar' );
+}
+
 if ( $wmgUseMsCatSelect ) {
 	wfLoadExtension( 'MsCatSelect' );
 }
@@ -812,6 +808,10 @@ if ( $wmgUseReplaceText ) {
 	wfLoadExtension( 'ReplaceText' );
 }
 
+if ( $wmgUseReport ) {
+	wfLoadExtension( 'Report' );
+}
+
 if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
 }
@@ -855,13 +855,6 @@ if ( $wmgUseSimpleTooltip ) {
 
 if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
-	$wgSlackFromName = $wgSitename;
-	$wgSlackNotificationWikiUrlEnding = 'index.php?title=';
-	$wgSlackNotificationWikiUrl = $wgServer . '/w/';
-	$wgSlackShowNewUserEmail = false;
-	$wgSlackShowNewUserIP = false;
-	$wgSlackIncomingWebhookUrl =
-		$wmgWikiMirahezeSlackHooks[$wgDBname] ?? $wmgWikiMirahezeSlackHooks['default'];
 }
 
 if ( $wmgUseSnapProjectEmbed ) {
@@ -920,10 +913,7 @@ if ( $wmgUseTemplateStyles ) {
 }
 
 if ( $wmgUseTemplateWizard ) {
-	wfLoadExtensions( [
-		'TemplateWizard',
-		'TemplateData',
-	] );
+	wfLoadExtension( 'TemplateWizard' );
 }
 
 if ( $wmgUseTextExtracts ) {
@@ -931,10 +921,7 @@ if ( $wmgUseTextExtracts ) {
 }
 
 if ( $wmgUseTranslate ) {
-	wfLoadExtensions( [
-		'UniversalLanguageSelector',
-		'Translate',
-	] );
+	wfLoadExtension( 'Translate' );
 
 	$wgULSGeoService = false;
 }
@@ -1010,8 +997,11 @@ if ( $wmgUseUserFunctions ) {
 }
 
 if ( $wmgUseUserWelcome ) {
-	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
+}
+
+if ( $wmgUseValidator ) {
+	require_once( "$IP/extensions/Validator/Validator.php" );
 }
 
 if ( $wmgUseVariables ) {
@@ -1029,14 +1019,6 @@ if ( $wmgUseVideo ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://parsoid-lb.miraheze.org:443',
-		'domain' => $wgServer,
-		'prefix' => $wgDBname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-	];
-
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
@@ -1053,10 +1035,6 @@ if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
 	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
 
-}
-
-if ( $wmgUseWidgets ) {
-	wfLoadExtension( 'Widgets' );
 }
 
 if ( $wmgUseWikiCategoryTagCloud ) {
@@ -1086,7 +1064,7 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 }
 
 if ( $wmgUseWikiForum ) {
-	wfLoadExtension( 'WikiForum' );
+	//wfLoadExtension( 'WikiForum' );
 
 	$wgAvailableRights[] = 'wikiforum-admin';
 	$wgAvailableRights[] = 'wikiforum-moderator';
@@ -1121,4 +1099,21 @@ if ( $wmgUseYouTube ) {
 
 if ( $wmgUseRegexFunctions ) {
 	wfLoadExtension( 'RegexFunctions' );
+}
+
+// If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
+if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
+	// Required for Flow to work with rest.php
+	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
+
+	// Automatically uses the local rest.php (hence url isn't set).
+	// We need to set 'forwardCookies' for private wikis and
+	// for pages restricted by protection.
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+                'url' => "$wgServer/w/rest.php",
+ 		'domain' => $wgServer,
+ 		'prefix' => $wgDBname,
+ 		'forwardCookies' => true,
+ 		'restbaseCompat' => false,
+ 	];
 }
