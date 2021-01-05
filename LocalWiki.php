@@ -68,10 +68,10 @@ if ( !$cwPrivate ) {
 
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
+} else {
+	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
+	$wgWhitelistRead[] = "Special:OAuth";
 }
-
-$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
-$wgWhitelistRead[] = "Special:OAuth";
 
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
