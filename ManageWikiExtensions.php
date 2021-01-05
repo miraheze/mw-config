@@ -2571,6 +2571,30 @@ $wgManageWikiExtensions = [
 				]
 			]
 		],
+	        'wikibasequalityconstraints' => [
+			'name' => 'WikibaseQualityConstraints',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikibaseQualityConstraints',
+			'var' => 'wmgUseWikibaseQualityConstraints',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'wbqc_create' => "$IP/extensions/WikibaseQualityConstraints/repo/sq/create_wbqc_constraints.sql",
+					'wbqc_constraint_id' => "$IP/extensions/WikibaseQualityConstraints/repo/sq/patch-wbqc_constraints-constraint_id.sql",
+					'wbqc_constraints_guid_uniq' => "$IP/extensions/WikibaseQualityConstraints/repo/sq/patch-wbqc_constraints-wbqc_constraints_guid_uniq.sql",
+				],
+			],
+		],
+	        'wikibaselexeme' => [
+			'name' => 'WikibaseLexeme',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikibaseLexeme',
+			'var' => 'wmgUseWikibaseLexeme',
+			'conflicts' => false,
+			'requires' => [
+				'extensions' => [
+					'wikibaserepository',
+					'universallanguageselector',
+				],	
 		'wikicategorytagcloud' => [
 			'name' => 'WikiCategoryTagCloud',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiCategoryTagCloud',
