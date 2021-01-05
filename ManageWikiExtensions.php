@@ -2595,6 +2595,7 @@ $wgManageWikiExtensions = [
 					'wikibaserepository',
 					'universallanguageselector',
 				],	
+			],
 		],
 		'wikicategorytagcloud' => [
 			'name' => 'WikiCategoryTagCloud',
