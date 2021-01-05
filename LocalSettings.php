@@ -2800,8 +2800,8 @@ $wi->config->settings += [
 			MEDIATYPE_TEXT,
 		],
 	],
-	'wgWhitelistRead' => [
-		'default' => [],
+	'wmgWhitelistRead' => [
+		'default' => false,
 	],
 
 	// MobileFrontend
