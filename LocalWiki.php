@@ -69,7 +69,8 @@ if ( !$cwPrivate ) {
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
 } else {
-	$wgWhitelistRead += 'Special:OAuth';
+	$wgWhitelistRead = explode( "\n", $wgWhitelistRead );
+	$wgWhitelistRead[] = 'Special:OAuth';
 }
 
 // CookieWarning exempt ElectronPdfService
@@ -137,7 +138,7 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 }
 
 if ( $wgDBname === 'csydeswiki' ) {
-	wfLoadExtension ( 'HAWelcome' ); // T6272
+	wfLoadExtension( 'HAWelcome' ); // T6272
 }
 
 if ( $wmgPrivateUploads ) {
