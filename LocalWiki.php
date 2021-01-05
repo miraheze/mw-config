@@ -69,7 +69,7 @@ if ( !$cwPrivate ) {
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
 } else {
-	$wgWhitelistRead[] = 'Special:OAuth';
+	$wgWhitelistRead += 'Special:OAuth';
 }
 
 // CookieWarning exempt ElectronPdfService
