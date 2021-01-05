@@ -1251,7 +1251,7 @@ $wgManageWikiSettings = [
 	],
 	
 	// Permissions
-	'wgWhitelistRead' => [
+	'wmgWhitelistRead' => [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
 		'type' => 'wikipages',
