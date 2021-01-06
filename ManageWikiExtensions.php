@@ -2579,9 +2579,9 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'wbqc_create' => "$IP/extensions/WikibaseQualityConstraints/repo/sql/create_wbqc_constraints.sql",
-					'wbqc_constraint_id' => "$IP/extensions/WikibaseQualityConstraints/repo/sql/patch-wbqc_constraints-constraint_id.sql",
-					'wbqc_constraints_guid_uniq' => "$IP/extensions/WikibaseQualityConstraints/repo/sql/patch-wbqc_constraints-wbqc_constraints_guid_uniq.sql",
+					'wbqc_create' => "$IP/extensions/WikibaseQualityConstraints/sql/create_wbqc_constraints.sql",
+					'wbqc_constraint_id' => "$IP/extensions/WikibaseQualityConstraints/sql/patch-wbqc_constraints-constraint_id.sql",
+					'wbqc_constraints_guid_uniq' => "$IP/extensions/WikibaseQualityConstraints/sql/patch-wbqc_constraints-wbqc_constraints_guid_uniq.sql",
 				],
 			],
 		],
