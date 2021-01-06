@@ -1255,6 +1255,7 @@ $wgManageWikiSettings = [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
 		'type' => 'wikipages',
+		'exists' => false,
 		'overridedefault' => false,
 		'section' => 'permissions',
 		'help' => 'Pages anyone may view.',
