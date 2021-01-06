@@ -1474,10 +1474,10 @@ $wi->config->settings += [
 	'wmgUseWikibaseLexeme' => [
 		'default' => false,
 	],
-	'wmgUseWikibaseRepository' => [
+	'wmgUseWikibaseQualityConstraints' => [
 		'default' => false,
 	],
-	'wmgUseWikibaseQualityConstraints' => [
+	'wmgUseWikibaseRepository' => [
 		'default' => false,
 	],
 	'wmgUseWikiCategoryTagCloud' => [
