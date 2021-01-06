@@ -1468,10 +1468,16 @@ $wi->config->settings += [
 	'wmgUseWebChat' => [
 		'default' => false,
 	],
+	'wmgUseWikibaseClient' => [
+		'default' => false,
+	],
+	'wmgUseWikibaseLexeme' => [
+		'default' => false,
+	],
 	'wmgUseWikibaseRepository' => [
 		'default' => false,
 	],
-	'wmgUseWikibaseClient' => [
+	'wmgUseWikibaseQualityConstraints' => [
 		'default' => false,
 	],
 	'wmgUseWikiCategoryTagCloud' => [
