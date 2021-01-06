@@ -2,14 +2,6 @@
 /**
  * Additional settings to add to ManageWikiNamespaces are added using the variable below.
  *
- * Type can be one of:
- *
- * check: adds a checkbox. Format: $var[] = $namespace_id;
- * text: adds a single line text entry. Format: [$var][$namespace_id] = $val;
- * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
- *
- * Other variables that are required are name and from.
- *
  * name: the displayed name of the setting on Special:ManageWiki.
  * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
  * main: true or false. If false, this config will not appear for main namespaces.
@@ -20,8 +12,15 @@
  * overridedefault['default' => $val]: required when using namespace specific overrides. Sets a default for all other namespaces, which is not using the overrides set.
  * requires: an array, string, or integer. See below for available types that can be used here.
  *
+ * 'type' can be one of:
+ *
+ * check: adds a checkbox. Format: $var[] = $namespace_id;
+ * text: adds a single line text entry. Format: [$var][$namespace_id] = $val;
+ * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
+ *
  * 'requires' can be one of:
  *
+ * activeusers: max integer amount of active users a wiki may have in order to be able to modify this setting.
  * articles: max integer amount of articles a wiki may have in order to be able to modify this setting.
  * extensions: array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if requires more then one extension.
  * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
