@@ -1063,6 +1063,14 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 	require_once "/srv/mediawiki/config/Wikibase.php";
 }
 
+if ( $wmgUseWikibaseQualityConstraints ) {
+	wfLoadExtension( 'WikibaseQualityConstraints' );
+}
+
+if ( $wmgUseWikibaseLexeme ) {
+	wfLoadExtension( 'WikibaseLexeme' );
+}
+
 if ( $wmgUseWikiForum ) {
 	//wfLoadExtension( 'WikiForum' );
 
