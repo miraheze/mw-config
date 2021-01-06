@@ -2,6 +2,14 @@
 /**
  * ManageWiki settings are added using the variable below.
  *
+ * name: the displayed name of the setting on Special:ManageWiki.
+ * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
+ * type: configuration type. See below for available options.
+ * overridedefault: a string/array override default when no existing value exist.
+ * help: string providing help information for the setting.
+ * section: string name of groupings for settings.
+ * requires: an array, string, or integer. See below for available types that can be used here.
+ *
  * Type can be either:
  *
  * check: adds a checkbox.
@@ -28,17 +36,9 @@
  * wikipage: add a textbox which will return an autocomplete drop-down list of wikipages. Returns standardised MediaWiki pages.
  * wikipages: see above, except multiple wikipages.
  *
- * Other variables that are required are name and from.
- *
- * name: the displayed name of the setting on Special:ManageWiki.
- * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
- * overridedefault: a string/array override default when no existing value exist.
- * help: string providing help information for the setting.
- * section: string name of groupings for settings.
- * requires: an array, string, or integer. See below for available types that can be used here.
- *
  * 'requires' can be one of:
  *
+ * activeusers: max integer amount of active users a wiki may have in order to be able to modify this setting.
  * articles: max integer amount of articles a wiki may have in order to be able to modify this setting.
  * extensions: array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if requires more then one extension.
  * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
