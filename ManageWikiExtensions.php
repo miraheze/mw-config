@@ -10,7 +10,8 @@
  *
  * 'requires' can be one of:
  *
- * articles: max integer amount of articles a wiki may have in order to be able to enable this extension.
+ * activeusers: max integer amount of active users a wiki may have in order to enable this extension.
+ * articles: max integer amount of articles a wiki may have in order to enable this extension.
  * extensions: array of other extensions that must be enabled in order to enable this extension.
  * pages: max integer amount of pages a wiki may have in order to enable this extension.
  * permissions: array of permissions a user must have to be able to enable this extension. Regardless of this value, a user must always have the managewiki permission.
