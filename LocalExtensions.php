@@ -1048,27 +1048,27 @@ if ( $wmgUseWikidataPageBanner ) {
 $wgEnableWikibaseRepo = false;
 $wgEnableWikibaseClient = false;
 
-if ( $wmgUseWikibaseRepository ) {
-	$wgEnableWikibaseRepo = true;
-	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
-}
-
 if ( $wmgUseWikibaseClient ) {
 	$wgEnableWikibaseClient = true;
 	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
 }
 
-if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
-	// Includes Wikibase Configuration. There is a global and per-wiki system here.
-	require_once "/srv/mediawiki/config/Wikibase.php";
+if ( $wmgUseWikibaseLexeme ) {
+	wfLoadExtension( 'WikibaseLexeme' );
 }
 
 if ( $wmgUseWikibaseQualityConstraints ) {
 	wfLoadExtension( 'WikibaseQualityConstraints' );
 }
 
-if ( $wmgUseWikibaseLexeme ) {
-	wfLoadExtension( 'WikibaseLexeme' );
+if ( $wmgUseWikibaseRepository ) {
+	$wgEnableWikibaseRepo = true;
+	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+}
+
+if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
+	// Includes Wikibase Configuration. There is a global and per-wiki system here.
+	require_once "/srv/mediawiki/config/Wikibase.php";
 }
 
 if ( $wmgUseWikiForum ) {
