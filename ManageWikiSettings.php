@@ -10,7 +10,7 @@
  * section: string name of groupings for settings.
  * requires: an array, string, or integer. See below for available types that can be used here.
  *
- * Type can be either:
+ * 'type' can be either:
  *
  * check: adds a checkbox.
  * databases: adds a drop down selection box for selecting a database.
