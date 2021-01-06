@@ -1537,10 +1537,10 @@ $wgManageWikiSettings = [
 	'wmgSharedUploadDBname' => [
 		'name' => 'Shared Upload Database Name',
 		'from' => 'mediawiki',
-		'type' => 'text',
+		'type' => 'databases',
 		'overridedefault' => false,
 		'section' => 'restricted',
-		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. Does nothing if the value is not a valid Miraheze-hosted wiki database.',
+		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. This value must be a valid Miraheze-hosted wiki database.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2333,7 +2333,7 @@ $wgManageWikiSettings = [
 		'type' => 'databases',
 		'overridedefault' => $wi->dbname,
 		'section' => 'wikibase',
-		'help' => 'Database identifier of the repository being used. If unknown, select the identifier for this wiki.',
+		'help' => 'Database identifier of the repository being used. This value must be a valid Miraheze-hosted wiki database.',
 		'requires' => [],
 	],
 	'wmgAllowEntityImport' => [
