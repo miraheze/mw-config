@@ -4,6 +4,7 @@
  *
  * name: the displayed name of the setting on Special:ManageWiki.
  * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
+ * type: configuration type. See below for available options.
  * main: true or false. If false, this config will not appear for main namespaces.
  * talk: true or false. If false, this config will not appear for talk namespaces.
  * blacklisted: array of namespace ids to blacklist the config from.
@@ -31,8 +32,8 @@
 $wgManageWikiNamespacesAdditional = [
 	'wgExtraSignatureNamespaces' => [
 		'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
-		'type' => 'check',
 		'from' => 'mediawiki',
+		'type' => 'check',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
@@ -41,8 +42,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgCapitalLinkOverrides' => [
 		'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
-		'type' => 'vestyle',
 		'from' => 'mediawiki',
+		'type' => 'vestyle',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [
@@ -54,8 +55,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'name' => 'Enable ApprovedRevs in this namespace?',
-		'type' => 'vestyle',
 		'from' => 'approvedrevs',
+		'type' => 'vestyle',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [
@@ -69,8 +70,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgWPBNamespaces' => [
 		'name' => 'Enable WikidataPageBanner in this namespace?',
-		'type' => 'check',
 		'from' => 'wikidatapagebanner',
+		'type' => 'check',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
@@ -79,8 +80,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgCommentStreamsAllowedNamespaces' => [
 		'name' => 'Can comments appear in this namespace?',
-		'type' => 'check',
 		'from' => 'commentstreams',
+		'type' => 'check',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
@@ -89,8 +90,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgFlaggedRevsNamespaces' => [
 		'name' => 'Enable FlaggedRevs in this namespace?',
-		'type' => 'check',
 		'from' => 'flaggedrevs',
+		'type' => 'check',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [ 8 ],
@@ -99,8 +100,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgVisualEditorAvailableNamespaces' => [
 		'name' => 'Enable VisualEditor in this namespace?',
-		'type' => 'vestyle',
 		'from' => 'visualeditor',
+		'type' => 'vestyle',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
@@ -109,8 +110,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgNamespacesToPostIn' => [
 		'name' => 'Can MassMessage post messages in this namespace?',
-		'type' => 'check',
 		'from' => 'massmessage',
+		'type' => 'check',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
@@ -119,8 +120,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgTemplateSandboxEditNamespaces' => [
 		'name' => 'Can TemplateSandbox be used in this namespace?',
-		'type' => 'check',
 		'from' => 'templatesandbox',
+		'type' => 'check',
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
@@ -129,8 +130,8 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgPreloaderSource' => [
 		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
-		'type' => 'text',
 		'from' => 'preloader',
+		'type' => 'text',
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
