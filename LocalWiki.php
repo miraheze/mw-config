@@ -182,14 +182,6 @@ if ( $wgDBname === 'simcitywiki' ) {
 	unset( $wgGroupPermissions['checkuser'] );
 }
 
-if ( $wgDBname === 'snapwikiwiki' ) {
-	
-	$wgTranslateFuzzyBotName = 'TranslateExtension';
-	$wgTranslateSupportUrl = [
-		'page' => 'Snap! Wiki:Translation Administrators\' Noticeboard'
-	];
-}
-
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
