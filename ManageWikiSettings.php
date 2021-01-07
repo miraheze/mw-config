@@ -154,19 +154,6 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 		'requires' => [],
 	],
-	'wgImplicitGroups' => [
-		'name' => 'Implicit Groups',
-		'from' => 'mediawiki',
-		'type' => 'usergroups',
-		'overridedefault' => [
-			'*',
-			'user',
-			'autoconfirmed'
-		],
-		'section' => 'anti-spam',
-		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
-		'requires' => [],
-	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
 		'from' => 'protectsite',
@@ -1251,6 +1238,19 @@ $wgManageWikiSettings = [
 	],
 	
 	// Permissions
+	'wgImplicitGroups' => [
+		'name' => 'Implicit Groups',
+		'from' => 'mediawiki',
+		'type' => 'usergroups',
+		'overridedefault' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+		'section' => 'permissions',
+		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
+		'requires' => [],
+	],
 	'wmgWhitelistRead' => [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
