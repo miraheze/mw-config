@@ -183,7 +183,7 @@ if ( $wgDBname === 'simcitywiki' ) {
 }
 
 if ( $wgDBname === 'snapwikiwiki' ) {
-	$wgTranslateDocumentationLanguageCode = 'qqq';
+	
 	$wgTranslateFuzzyBotName = 'TranslateExtension';
 	$wgTranslateSupportUrl = [
 		'page' => 'Snap! Wiki:Translation Administrators\' Noticeboard'
