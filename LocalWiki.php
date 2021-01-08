@@ -131,7 +131,20 @@ if ( $wgWordmark ) {
 	];
 }
 
-//$wmgUseYandexTranslate
+// $wmgPrivateUploads
+if ( $wmgPrivateUploads ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
+	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
+}
+
+// $wgUrlShortenerAllowedDomains
+if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
+	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
+		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
+}
+
+// $wmgUseYandexTranslate
 if ( $wmgUseYandexTranslate ) {
 	$wgTranslateTranslationServices['Yandex'] = [
 		'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
@@ -144,20 +157,8 @@ if ( $wmgUseYandexTranslate ) {
 	];
 }
 
-// $wgUrlShortenerAllowedDomains
-if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
-	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
-		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
-}
-
 if ( $wgDBname === 'csydeswiki' ) {
 	wfLoadExtension( 'HAWelcome' ); // T6272
-}
-
-if ( $wmgPrivateUploads ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
 if ( $wgDBname === 'metawiki' ) {
