@@ -537,7 +537,7 @@ if ( $wmgUseMagicNoCache ) {
 
 if ( $wmgUseMaps ) {
 	wfLoadExtension( 'Maps' );
-	$egMapsDefaultService = 'openlayers';
+	$egMapsDefaultService = 'leaflet';
 	$egMapsDisableSmwIntegration = true;
 	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
 }
