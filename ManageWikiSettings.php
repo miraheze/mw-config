@@ -220,21 +220,6 @@ $wgManageWikiSettings = [
 		'help' => 'Auto-review settings for edits/new pages.',
 		'requires' => [],
 	],
-	'wgFlaggedRevsRestrictionLevels' => [
-		'name' => 'FlaggedRevs Restriction Levels',
-		'from' => 'flaggedrevs',
-		'type' => 'usergroups',
-		'options' => [
-			'No Restriction' => '',
-		],
-		'overridedefault' => [
-			'',
-			'sysop',
-		],
-		'section' => 'anti-spam',
-		'help' => 'Restriction levels for "autoreview"/"review" rights.',
-		'requires' => [],
-	],
 	'wgSimpleFlaggedRevsUI' => [
 		'name' => 'Simple FlaggedRevs UI',
 		'from' => 'flaggedrevs',
