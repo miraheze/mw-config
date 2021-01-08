@@ -539,7 +539,6 @@ if ( $wmgUseMaps ) {
 	wfLoadExtension( 'Maps' );
 	$egMapsDefaultService = 'leaflet';
 	$egMapsDisableSmwIntegration = true;
-	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
 }
 
 if ( $wmgUseMask ) {
