@@ -131,6 +131,19 @@ if ( $wgWordmark ) {
 	];
 }
 
+//$wmgUseYandexTranslate
+if ( $wmgUseYandexTranslate ) {
+	$wgTranslateTranslationServices['Yandex'] = [
+		'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
+		'key' => $wmgYandexTranslationKey,
+		'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
+		'timeout' => 3,
+		'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
+		'langlimit' => 1,
+		'type' => 'yandex',
+	];
+}
+
 // $wgUrlShortenerAllowedDomains
 if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
@@ -237,19 +250,6 @@ switch ( $wmgWikiLicense ) {
                 break;
 	case 'empty':
 		break;
-}
-
-
-if ( $wmgUseYandexTranslate ) {
-	$wgTranslateTranslationServices['Yandex'] = [
-		'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
-		'key' => $wmgYandexTranslationKey,
-		'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
-		'timeout' => 3,
-		'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
-		'langlimit' => 1,
-		'type' => 'yandex',
-	];
 }
 
 if ( $wgDBname === 'erislywiki' ) { // T5981
