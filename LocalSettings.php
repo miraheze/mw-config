@@ -2657,6 +2657,13 @@ $wi->config->settings += [
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
 	],
+	
+	// Maps
+	'egMapsAvailableServices' =>
+		'default' => [
+			'leaflet',
+		],
+	],
 
 	// MassMessage
 	'wgAllowGlobalMessaging' => [
