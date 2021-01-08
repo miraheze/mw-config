@@ -106,11 +106,6 @@ $wi->config->settings += [
 		'metawiki' => true,
 	],
 
-	// PageForms
-	'wgPageFormsGoogleMapsKey' => [
-		'default' => $wmgMapsGMaps3ApiKey
-	],
-
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
