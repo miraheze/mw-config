@@ -172,10 +172,6 @@ if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
 
-if ( $wgDBname === 'thelonsdalebattalionwiki' ) {
-	$egMapsDefaultService = 'googlemaps3';
-}
-
 if ( $wgDBname === 'simcitywiki' ) {
 	unset( $wgGroupPermissions['oversight'] );
 	unset( $wgGroupPermissions['interwiki-admin'] );
