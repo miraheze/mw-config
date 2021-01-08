@@ -106,11 +106,6 @@ $wi->config->settings += [
 		'metawiki' => true,
 	],
 
-	// Cargo
-	'wgCargoGoogleMapsKey' => [
-		'default' => $wmgMapsGMaps3ApiKey
-	],
-
 	// PageForms
 	'wgPageFormsGoogleMapsKey' => [
 		'default' => $wmgMapsGMaps3ApiKey
