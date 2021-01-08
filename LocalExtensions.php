@@ -1071,7 +1071,7 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 }
 
 if ( $wmgUseWikiForum ) {
-	//wfLoadExtension( 'WikiForum' );
+	wfLoadExtension( 'WikiForum' );
 
 	$wgAvailableRights[] = 'wikiforum-admin';
 	$wgAvailableRights[] = 'wikiforum-moderator';
