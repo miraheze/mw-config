@@ -2001,7 +2001,9 @@ $wi->config->settings += [
 	'wgImportSources' => [
 		'default' => [
 			'meta',
+			'loginwiki',
 			'templatewiki',
+			'wikipedia',
 		],
 		'+batfamilywiki' => [
 			'batmanwiki',
@@ -2014,9 +2016,6 @@ $wi->config->settings += [
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
-		],
-		'+metawiki' => [
-			'wikipedia',
 		],
 		'+mrjaroslavikwiki' => [
 		        'wikipedia' => [
@@ -2037,9 +2036,6 @@ $wi->config->settings += [
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
-		'+simcitywiki' => [
-			'wikipedia',
-		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
 		],
@@ -2049,7 +2045,6 @@ $wi->config->settings += [
 			],
 		],
 		'+zhdelwiki' => [
-			'wikipedia',
 			'zhwikipedia',
 		],
 	],
