@@ -2659,7 +2659,7 @@ $wi->config->settings += [
 	],
 	
 	// Maps
-	'egMapsAvailableServices' =>
+	'egMapsAvailableServices' => [
 		'default' => [
 			'leaflet',
 		],
