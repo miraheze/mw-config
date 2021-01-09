@@ -1545,7 +1545,7 @@ $wi->config->settings += [
 			'https://quora.com',
 			'https://robertinventor.com',
 		],
-		'nonbinarywik' => [
+		'nonbinarywiki' => [
 			'https://static.miraheze.org/',
 		],
 	],
