@@ -883,6 +883,9 @@ $wi->config->settings += [
 	'wmgUseCollection' => [
 		'default' => false,
 	],
+	'wmgUseCommentbox' => [
+		'default' => false,
+	],
 	'wmgUseCommentStreams' => [
 		'default' => false,
 	],
