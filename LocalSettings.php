@@ -1535,11 +1535,6 @@ $wi->config->settings += [
 	],
 	'wgAllowExternalImagesFrom' => [
 		'default' => false,
-		'astrobiologywiki' => [
-			'https://www.science20.com',
-			'https://quora.com',
-			'https://robertinventor.com',
-		],
 	],
 
 	// DataDump
