@@ -199,6 +199,18 @@ if ( $wgDBname === 'simcitywiki' ) {
 	unset( $wgGroupPermissions['checkuser'] );
 }
 
+if ( $wgDBname === 'commonswiki' ) {
+	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
+	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
+} else {
+	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
+		'url' => 'https://commons.miraheze.org/w/api.php'
+	];
+	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
+		'url' => 'https://commons.miraheze.org/w/api.php'
+	];
+}
+
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
@@ -258,18 +270,6 @@ switch ( $wmgWikiLicense ) {
                 break;
 	case 'empty':
 		break;
-}
-
-if ( $wgDBname === 'commonswiki' ) {
-	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
-	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
-} else {
-	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
-		'url' => 'https://commons.miraheze.org/w/api.php'
-	];
-	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
-		'url' => 'https://commons.miraheze.org/w/api.php'
-	];
 }
 
 // Discord
