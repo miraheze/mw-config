@@ -1,6 +1,6 @@
 # Miraheze's MediaWiki Configuration
 
-[![Build Status](https://travis-ci.org/miraheze/mw-config.svg?branch=master)](https://travis-ci.org/miraheze/mw-config)
+![Continuous integration](https://github.com/miraheze/mw-config/workflows/Continuous%20integration/badge.svg)
 
 [Miraheze](https://meta.miraheze.org/) is a non-profit wiki farm that provides free MediaWiki hosting. Miraheze is powered by volunteers only, and we believe our code should be open source.
 
