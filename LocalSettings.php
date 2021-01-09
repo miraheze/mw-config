@@ -590,7 +590,6 @@ $wi->config->settings += [
 	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
 	],
-
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
 	],
@@ -1834,7 +1833,7 @@ $wi->config->settings += [
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		'metawiki' => false,
-		'simcitywiki' => false, // let me do the blocking on my wiki, please
+		'simcitywiki' => false,
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
@@ -2028,7 +2027,7 @@ $wi->config->settings += [
 		'+snapwikiwiki' => [
 			'scratchwiki',
 		],
-		'wikitrashwiki' => [
+		'+wikitrashwiki' => [
 			'wikipedia' => [
 				'it',
 			],
@@ -2173,8 +2172,6 @@ $wi->config->settings += [
 	'wgEnableEmail' => [
 		'default' => true,
 	],
-	// When changing the default,
-	// also updated ManageWiki.php ("Moderation Email") with the new default.
 	'wgPasswordSender' => [
 		'default' => 'noreply@miraheze.org',
 	],
@@ -3127,7 +3124,7 @@ $wi->config->settings += [
 		'+hypopediawiki' => [
 			'bureaucrat',
 		],
-		'igrovyesistemywiki' => [
+		'+igrovyesistemywiki' => [
 			'trusted',
 			'sysmag',
 			'bureaucrat',
