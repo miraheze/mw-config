@@ -1685,7 +1685,6 @@ $wi->config->settings += [
 			'maxRevertedEditRatio' => 0.05,
 		],
 		'isvwiki' => false,
-		'pruebawiki' => false,
 	],
 	'wgFlaggedRevsAutoReview' => [
 		'default' => 3,
@@ -2427,20 +2426,6 @@ $wi->config->settings += [
 				'edit-admin-pages' => true,
 			],
 		],
-		'+pruebawiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'consul' => [
-				'read' => true,
-				'bureaucrat' => true,
-				'consul' => true,
-				'torunblocked' => true,
-			],
-			'testgroup' => [
-				'read' => true,
-			],
-		],
 		'+quircwiki' => [
 			'QuIRC_Staff' => [
 				'editstaffprotected' => true,
@@ -3154,10 +3139,6 @@ $wi->config->settings += [
 		],
 		'+rf1botwiki' => [
 			'editrepos',
-		],
-		'+pruebawiki' => [
-			'bureaucrat',
-			'consul',
 		],
 		'+sesupportwiki' => [
 			'editor',
