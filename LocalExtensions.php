@@ -156,6 +156,10 @@ if ( $wmgUseCollection ) {
 	$wgCollectionPODPartners = [];
 }
 
+if ( $wmgUseCommentbox ) {
+	wfLoadExtension( 'Commentbox' );
+}
+
 if ( $wmgUseCommentStreams ) {
 	wfLoadExtension( 'CommentStreams' );
 }
