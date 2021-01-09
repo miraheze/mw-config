@@ -158,6 +158,16 @@ if ( $wmgUseYandexTranslate ) {
 }
 
 // Per-wiki settings
+
+if ( $wgDBname === 'erislywiki' ) {
+	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
+	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
+		// $out is an instance of the OutputPage object.
+		// Add a meta tag
+		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
+	}
+}
+
 if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
@@ -248,15 +258,6 @@ switch ( $wmgWikiLicense ) {
                 break;
 	case 'empty':
 		break;
-}
-
-if ( $wgDBname === 'erislywiki' ) { // T5981
-	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
-	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
-		// $out is an instance of the OutputPage object.
-		// Add a meta tag
-		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
-	}
 }
 
 if ( $wgDBname === 'commonswiki' ) {
