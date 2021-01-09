@@ -381,6 +381,13 @@ $wgManageWikiExtensions = [
 				'visibility' => 'public',
 			],
 		],
+		'commentbox' => [
+			'name' => 'Commentbox',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Commentbox',
+			'var' => 'wmgUseCommentbox',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'commentstreams' => [
 			'name' => 'CommentStreams',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CommentStreams',
