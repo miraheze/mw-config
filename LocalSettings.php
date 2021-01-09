@@ -1533,9 +1533,6 @@ $wi->config->settings += [
 	'wgAllowExternalImages' => [
 		'default' => false,
 	],
-	'wgAllowExternalImagesFrom' => [
-		'default' => false,
-	],
 
 	// DataDump
 	'wgDataDump' => [
