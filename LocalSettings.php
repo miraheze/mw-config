@@ -2789,6 +2789,10 @@ $wi->config->settings += [
 			'legacy'
 		],
 	],
+	'wgNativeImageLazyLoading' => [
+		'default' => false,
+		'idolish7wiki' => true,
+	],	
 	'wgTrustedMediaFormats' => [
 		'default' => [
 			MEDIATYPE_BITMAP,
