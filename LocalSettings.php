@@ -1545,9 +1545,6 @@ $wi->config->settings += [
 			'https://quora.com',
 			'https://robertinventor.com',
 		],
-		'nonbinarywiki' => [
-			'https://static.miraheze.org/',
-		],
 	],
 
 	// DataDump
