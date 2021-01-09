@@ -157,6 +157,7 @@ if ( $wmgUseYandexTranslate ) {
 	];
 }
 
+// Per-wiki settings
 if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
