@@ -3936,24 +3936,6 @@ if ( $wi->missing ) {
 	require_once( '/srv/mediawiki/config/MissingWiki.php' );
 }
 
-// per T3457 - Miraheze Commons
-if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
-	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared-commons',
-		'directory' => '/mnt/mediawiki-static/commonswiki',
-		'url' => 'https://static.miraheze.org/commonswiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'commonswiki',
-		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
-	];
-}
-
 // When using ?forceprofile=1, a profile can be found as an HTML comment
 // Disabled on production hosts because it seems to be causing performance issues (how ironic)
 if ( wfHostname() === 'test2' ) {
