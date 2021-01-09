@@ -3540,6 +3540,9 @@ $wi->config->settings += [
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
 	],
+	'wgUrlShortenerDomainsWhitelist' => [	
+		'default' => [],
+	],
 	'wgUrlShortenerAllowedDomains' => [
 		'default' => [
 			'(.*\.)?miraheze\.org',
