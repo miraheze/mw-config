@@ -157,10 +157,6 @@ if ( $wmgUseYandexTranslate ) {
 	];
 }
 
-if ( $wgDBname === 'csydeswiki' ) {
-	wfLoadExtension( 'HAWelcome' ); // T6272
-}
-
 if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
 
