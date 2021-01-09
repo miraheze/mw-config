@@ -2112,12 +2112,9 @@ $wi->config->settings += [
 	'wgRightsPage' => [
 		'default' => '',
 		'diavwiki' => 'Project:Copyrights',
-		'wisdomwikiwiki' => 'Copyleft',
 	],
 	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
-		'airforcewiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
-		'armywiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'freesoftwarepediawiki' => 'GNU Free Documentation License',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2134,8 +2131,6 @@ $wi->config->settings += [
 	],
 	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-		'airforcewiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
-		'armywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'freesoftwarepediawiki' => 'http://www.gnu.org/licenses/fdl-1.3.html',
 		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
@@ -2500,15 +2495,6 @@ $wi->config->settings += [
 		'+whentheycrywiki' => [
 			'user' => [
 				'edit-create' => true,
-			],
-		],
-		'+wikitestwiki' => [
-			'consul' => [
-				'consul' => true,
-				'bureaucrat' => true,
-			],
-			'bureaucrat' => [
-				'bureaucrat' => true,
 			],
 		],
 	],
@@ -3108,10 +3094,6 @@ $wi->config->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-		'+wikitestwiki' => [
-			'bureaucrat',
-			'consul',
-		],
 		'+bigforestwiki' => [
 			'editvoter',
 		],
@@ -3531,7 +3513,6 @@ $wi->config->settings += [
  		'ciptamediawiki' => true,
  		'rhinosf1wiki' => true,
  		'staffwiki' => true,
- 		'stateofwiki' => true,
  		'mikekilitterboxwiki' => true
  	],
 	'wmgSharedUploadBaseUrl' => [
