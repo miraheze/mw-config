@@ -2618,7 +2618,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'wikiforum' => [
-			'name' => 'WikiForum (Tempoarily Restricted)',
+			'name' => 'WikiForum (Temporarily Restricted)',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 			'var' => 'wmgUseWikiForum',
 			'conflicts' => false,
