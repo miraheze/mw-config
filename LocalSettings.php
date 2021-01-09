@@ -1540,11 +1540,6 @@ $wi->config->settings += [
 			'https://quora.com',
 			'https://robertinventor.com',
 		],
-		'doomsdaydebunkedwiki' => [
-			'https://www.science20.com',
-			'https://quora.com',
-			'https://robertinventor.com',
-		],
 	],
 
 	// DataDump
