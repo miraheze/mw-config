@@ -978,9 +978,6 @@ $wi->config->settings += [
 	'wmgUseFancyBoxThumbs' => [
 		'default' => false,
 	],
-	'wmgUseFeaturedFeeds' => [
-		'default' => false, // Not enabled anywhere?
-	],
 	'wmgUseFemiwiki' => [
 		'default' => false,
 	],
