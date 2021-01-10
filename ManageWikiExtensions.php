@@ -1722,6 +1722,15 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePurge',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'permissions' => [
+					'user' => [
+						'permissions' => [
+							'purge',
+						],
+					],
+				],
+			],
 		],
 		'quiz' => [
 			'name' => 'Quiz',
