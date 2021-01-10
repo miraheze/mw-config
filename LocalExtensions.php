@@ -303,10 +303,6 @@ if ( $wmgUseFlow ) {
 	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
 
-if ( $wmgUseFeaturedFeeds ) {
-	wfLoadExtension( 'FeaturedFeeds' );
-}
-
 if ( $wmgUseForcePreview) {
 	wfLoadExtension( 'ForcePreview' );
 }
