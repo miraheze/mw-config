@@ -177,7 +177,8 @@ $wi->config->settings += [
 	],
 	'wgLocalisationCacheConf' => [
 		'default' => [
-			'storeClass' => LCStoreCDB::class,
+			'class' => 'LocalisationCache',
+			'store' => 'files',
 			'storeDirectory' => "$IP/cache/l10n",
 			'manualRecache' => true,
 		],
