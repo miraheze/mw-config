@@ -491,13 +491,14 @@ $wi->config->settings += [
 		'default' => [
 			'c2',
 			'c3',
-			'c4',
+			// 'c4', // temporarily disabled for db13 import to dbbackup1
 		]
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
+			'c4', // temporary for db13 import to dbbackup1
 		]
 	],
 	'wgCreateWikiGlobalWiki' => [
