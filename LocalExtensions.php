@@ -761,8 +761,6 @@ if ( $wmgUseProtectSite ) {
 
 if ( $wmgUsePurge ) {
 	wfLoadExtension( 'Purge' );
-
-	$wgAvailableRights[] = 'purge';
 }
 
 if ( $wmgUseQuiz ) {
