@@ -175,10 +175,9 @@ $wi->config->settings += [
 	'wgCacheDirectory' => [
 		'default' => '/srv/mediawiki/w/cache',
 	],
-	'wgLocalisationCacheConf' => [
+	'+wgLocalisationCacheConf' => [
 		'default' => [
-			'class' => 'LocalisationCache',
-			'store' => 'files',
+			'storeClass' => LCStoreCDB::class,
 			'storeDirectory' => "$IP/cache/l10n",
 			'manualRecache' => true,
 		],
