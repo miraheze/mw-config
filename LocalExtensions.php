@@ -495,11 +495,7 @@ if ( $wmgUseLinkSuggest ) {
 }
 
 if ( $wmgUseLinkTarget ) {
-	if ( file_exists( "$IP/extensions/LinkTarget/LinkTarget.php" ) ) {
-		require_once "$IP/extensions/LinkTarget/LinkTarget.php";
-	} else {
-		wfLoadExtension ('LinkTarget' );
-	}
+	wfLoadExtension ( 'LinkTarget' );
 }
 
 if ( $wmgUseLinkTitles ) {
