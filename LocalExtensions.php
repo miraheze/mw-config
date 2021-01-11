@@ -236,10 +236,6 @@ if ( $wmgUseDisplayTitle ) {
 	wfLoadExtension( 'DisplayTitle' );
 }
 
-if ( $wmgUseDismissableSiteNotice ) {
-	wfLoadExtension( 'DismissableSiteNotice' );
-}
-
 if ( $wmgUseDisqusTag ) {
 	wfLoadExtension( 'DisqusTag' );
 }

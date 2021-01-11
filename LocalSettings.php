@@ -936,9 +936,6 @@ $wi->config->settings += [
 	'wmgUseDiscussionTools' => [
 		'default' => false,
 	],
-	'wmgUseDismissableSiteNotice' => [
-		'default' => true,
-	],
 	'wmgUseDisplayTitle' => [
 		'default' => false,
 	],

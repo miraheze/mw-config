@@ -12,6 +12,7 @@ wfLoadExtensions( [
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'DataDump',
+	'DismissableSiteNotice',
 	'Echo',
 	// Required by CentralNotice
 	'EventLogging',
