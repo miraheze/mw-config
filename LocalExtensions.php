@@ -48,10 +48,6 @@ if ( $wmgUseApex ) {
 
 if ( $wmgUseApprovedRevs ) {
 	wfLoadExtension( 'ApprovedRevs' );
-
-	$wgAvailableRights[] = 'approverevisions';
-	$wgAvailableRights[] = 'viewlinktolatest';
-	$wgAvailableRights[] = 'viewapprover';
 }
 
 if ( $wmgUseArrays ) {
@@ -1069,8 +1065,6 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
 
-	$wgAvailableRights[] = 'wikiforum-admin';
-	$wgAvailableRights[] = 'wikiforum-moderator';
 	$wgCaptchaTriggers['wikiforum'] = true;
 }
 
