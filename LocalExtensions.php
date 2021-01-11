@@ -503,7 +503,7 @@ if ( $wmgUseLinkSuggest ) {
 }
 
 if ( $wmgUseLinkTarget ) {
-	require_once "$IP/extensions/LinkTarget/LinkTarget.php";
+	wfLoadExtension ('LinkTarget' );
 }
 
 if ( $wmgUseLinkTitles ) {
