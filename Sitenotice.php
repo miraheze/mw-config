@@ -10,7 +10,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // and don't comment it out
 $wgMajorSiteNoticeID = 55;
 
-// if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
@@ -19,4 +19,4 @@ function onSiteNoticeAfter( &$siteNotice, $skin ) {
 			<td style="font-size:125%">Miraheze has updated the recent <a href="https://meta.miraheze.org/wiki/23-12-2020_Security_Disclosure">Security Disclosure</a> to strongly advise ALL users immediately reset their passwords and 2FA tokens for Miraheze Wikis.</td>
 			</tr></tbody></table>
 EOF;
-}
+} */
