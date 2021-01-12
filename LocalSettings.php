@@ -488,7 +488,7 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
-			// 'c2',
+			'c2',
 			'c3',
 			'c4',
 		]
@@ -497,7 +497,6 @@ $wi->config->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
-			'c2', // temporarily halt wiki creation for backup
 		]
 	],
 	'wgCreateWikiGlobalWiki' => [
