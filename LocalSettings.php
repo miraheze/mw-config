@@ -511,6 +511,9 @@ $wi->config->settings += [
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'tech@miraheze.org',
 	],
+	'wgCreateWikiPersistentModelFile' => [
+		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
+	],
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
 			"$IP/maintenance/tables.sql",
