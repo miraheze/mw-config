@@ -141,4 +141,14 @@ $wgManageWikiNamespacesAdditional = [
 		],
 		'requires' => [],
 	],
+	'wgARENamespaces' => [
+		'name' => 'Enable Article Ratings in this namespace',
+		'from' => 'articleratings',
+		'type' => 'check',
+		'main' => true,
+		'talk' => false,
+		'blacklisted' => [],
+		'overridedefault' => false,
+		'requires' => [],
+	],
 ];
