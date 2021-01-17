@@ -566,6 +566,7 @@ $wi->config->settings += [
 			'Politics' => 'politics',
 			'Private' => 'private',
 			'Religion' => 'religion',
+			'Science' => 'science',
 			'Software/Computing' => 'software',
 			'Sports' => 'sport',
 			'Uncategorised' => 'uncategorised',
