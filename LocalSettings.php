@@ -298,6 +298,9 @@ $wi->config->settings += [
 	'wgCosmosSocialProfileAllowBio' => [
 		'default' => true,
 	],
+	'wgCosmosSocialProfileFollowBioRedirects' => [
+		'default' => false,
+	],
 	'wgCosmosSocialProfileShowGroupTags' => [
 		'default' => true,
 	],
