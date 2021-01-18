@@ -2058,7 +2058,7 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the footer background color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosBackgroundImageRepeat' => [
+	'wgCosmosBackgroundImageNorepeat' => [
 		'name' => 'Cosmos Background Image Repeat',
 		'from' => 'cosmos',
 		'type' => 'check',
