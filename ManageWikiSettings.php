@@ -1717,7 +1717,7 @@ $wgManageWikiSettings = [
 		],
 	],
 	'wgCosmosSocialProfileFollowBioRedirects' => [
-		'name' => 'Cosmos Folow Bio Redirects',
+		'name' => 'Cosmos Follow Bio Redirects',
 		'from' => 'cosmos',
 		'type' => 'check',
 		'overridedefault' => false,
