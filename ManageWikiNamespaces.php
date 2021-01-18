@@ -128,19 +128,6 @@ $wgManageWikiNamespacesAdditional = [
 		'overridedefault' => false,
 		'requires' => [],
 	],
-	'wgPreloaderSource' => [
-		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
-		'from' => 'preloader',
-		'type' => 'text',
-		'main' => true,
-		'talk' => false,
-		'blacklisted' => [],
-		'overridedefault' => [
-			0 => 'Template:Boilerplate',
-			'default' => false,
-		],
-		'requires' => [],
-	],
 	'wgARENamespaces' => [
 		'name' => 'Enable Article Ratings in this namespace',
 		'from' => 'articleratings',
@@ -152,6 +139,19 @@ $wgManageWikiNamespacesAdditional = [
 			array_fill_keys( $wgContentNamespaces, true ),
 			[ 'default' => false ]
 		),
+		'requires' => [],
+	],
+	'wgPreloaderSource' => [
+		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
+		'from' => 'preloader',
+		'type' => 'text',
+		'main' => true,
+		'talk' => false,
+		'blacklisted' => [],
+		'overridedefault' => [
+			0 => 'Template:Boilerplate',
+			'default' => false,
+		],
 		'requires' => [],
 	],
 ];
