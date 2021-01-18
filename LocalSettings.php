@@ -1789,6 +1789,12 @@ $wi->config->settings += [
 	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
 	],
+	'wgUploadNavigationUrl' => [
+		'default' => false,
+	],
+	'wgUploadMissingFileUrl' => [
+		'default' => false,
+	],
 
 	// Foreground
 	'wgForegroundFeatures' => [
