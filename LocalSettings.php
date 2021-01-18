@@ -286,9 +286,6 @@ $wi->config->settings += [
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
 	],
-	'wgCosmosUseMessageforToolbar' => [
-		'default' => false,
-	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'default' => true,
 	],
