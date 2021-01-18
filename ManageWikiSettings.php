@@ -1532,6 +1532,32 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgUploadMissingFileUrl' => [
+		'name' => 'Upload Missing File Url',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Point wikilinks to missing files ("red file links") to a custom URL.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	'wgUploadNavigationUrl' => [
+		'name' => 'Upload Navigation Url',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Point the upload navigation link in the sidebar to a custom URL.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
 	'wgExpensiveParserFunctionLimit' => [
 		'name' => 'Expensive Parser Function Limit',
 		'from' => 'mediawiki',
