@@ -280,7 +280,7 @@ $wi->config->settings += [
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
 		'default' => true,
 	],
-	'wgCosmosBackgroundImageRepeat' => [
+	'wgCosmosBackgroundImageNorepeat' => [
 		'default' => false,
 	],
 	'wgCosmosBackgroundImageFixed' => [
