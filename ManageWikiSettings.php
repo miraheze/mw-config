@@ -1716,6 +1716,20 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgCosmosSocialProfileFollowBioRedirects' => [
+		'name' => 'Cosmos Folow Bio Redirects',
+		'from' => 'cosmos',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'socialtools',
+		'help' => 'Follow redirects from Special:MyPage/bio and display the redirect target as bio instead? (experimental)',
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
+	],
 	'wgCosmosSocialProfileShowGroupTags' => [
 		'name' => 'Cosmos Enable Group Tags',
 		'from' => 'cosmos',
