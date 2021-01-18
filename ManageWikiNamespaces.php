@@ -148,7 +148,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
-		'overridedefault' => false,
+		'overridedefault' => array_fill_keys( $wgContentNamespaces, true ),
 		'requires' => [],
 	],
 ];
