@@ -1702,6 +1702,20 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgCosmosSocialProfileAllowBio' => [
+		'name' => 'Cosmos Allow Bio',
+		'from' => 'cosmos',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'socialtools',
+		'help' => 'Allow users to add a bio from Special:MyPage/bio and display it on their user page?',
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
+	],
 	'wgCosmosSocialProfileShowGroupTags' => [
 		'name' => 'Cosmos Enable Group Tags',
 		'from' => 'cosmos',
