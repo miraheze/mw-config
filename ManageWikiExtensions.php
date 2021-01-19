@@ -2532,6 +2532,17 @@ $wgManageWikiExtensions = [
 					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql",
 					'wbt_property_terms' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
 				],
+				'permissions' => [
+					'*' => [
+						'permissions' => [
+							'item-term',
+							'property-term',
+							'item-merge',
+							'item-redirect',
+							'property-create',
+						],
+					],
+				],
 				'namespaces' => [
 					'Item' => [
 						'id' => 860,
