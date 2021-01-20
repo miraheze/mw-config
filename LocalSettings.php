@@ -244,7 +244,7 @@ $wi->config->settings += [
 	'wgCosmosWikiHeaderWordmark' => [
 		'default' => false,
 	],
-	'wgCosmosWikiHeaderWordmark' => [
+	'wgCosmosWordmark' => [
 		'default' => false,
 	],
 	'wgCosmosBackgroundImage' => [
@@ -268,13 +268,13 @@ $wi->config->settings += [
 	'wgCosmosLinkColor' => [
 		'default' => '#0645ad',
 	],
-	'wgCosmosButtonColor' => [
+	'wgCosmosButtonBackgroundColor' => [
 		'default' => '#c0c0c0',
 	],
-	'wgCosmosToolbarColor' => [
+	'wgCosmosToolbarBackgroundColor' => [
 		'default' => '#000000',
 	],
-	'wgCosmosFooterColor' => [
+	'wgCosmosFooterBackgroundColor' => [
 		'default' => '#c0c0c0',
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
