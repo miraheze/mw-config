@@ -238,9 +238,6 @@ $wi->config->settings += [
 	],
 
 	// Cosmos settings
-	'wgCosmosWikiHeaderWordmark' => [
-		'default' => false,
-	],
 	'wgCosmosWordmark' => [
 		'default' => false,
 	],
