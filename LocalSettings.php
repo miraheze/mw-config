@@ -239,16 +239,16 @@ $wi->config->settings += [
 
 	// Cosmos settings
 	'wgCosmosBannerLogo' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgCosmosWikiHeaderWordmark' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgCosmosWikiHeaderWordmark' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgCosmosBackgroundImage' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgCosmosBackgroundImageSize' => [
 		'default' => 'cover',
