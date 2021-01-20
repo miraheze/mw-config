@@ -2564,6 +2564,7 @@ $wi->config->settings += [
 				'stopforumspam',
 				'suppressionlog',
 				'suppressrevision',
+				'themedesigner',
 				'titleblacklistlog',
 				'usermerge',
 				'userrights',
