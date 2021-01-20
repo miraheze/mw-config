@@ -2059,8 +2059,8 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the link color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosButtonColor' => [
-		'name' => 'Cosmos Button Color',
+	'wgCosmosButtonBackgroundColor' => [
+		'name' => 'Cosmos Button Background Color',
 		'from' => 'cosmos',
 		'type' => 'text',
 		'overridedefault' => '#c0c0c0',
@@ -2068,8 +2068,8 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the button background color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosToolbarColor' => [
-		'name' => 'Cosmos Toolbar Color',
+	'wgCosmosToolbarBackgroundColor' => [
+		'name' => 'Cosmos Toolbar Background Color',
 		'from' => 'cosmos',
 		'type' => 'text',
 		'overridedefault' => '#000000',
@@ -2077,8 +2077,8 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the toolbar background color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosFooterColor' => [
-		'name' => 'Cosmos Footer Color',
+	'wgCosmosFooterBackgroundColor' => [
+		'name' => 'Cosmos Footer Background Color',
 		'from' => 'cosmos',
 		'type' => 'text',
 		'overridedefault' => '#c0c0c0',
