@@ -38,7 +38,6 @@ $IP/extensions/ConfirmEdit/ReCaptchaNoCaptcha/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ContactPage/extension.json
-$IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionScores/ContributionScores.php
 $IP/extensions/CookieWarning/extension.json
 $IP/extensions/CreatePage/CreatePage.php
