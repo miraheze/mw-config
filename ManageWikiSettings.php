@@ -1470,7 +1470,7 @@ $wgManageWikiSettings = [
 		],
 	],
 	'wgPageDisqusShortname' => [
-		'name' => 'Page DisqusShortname',
+		'name' => 'PageDisqus Shortname',
 		'from' => 'pagedisqus',
 		'type' => 'text',
 		'overridedefault' => false,
