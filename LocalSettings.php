@@ -623,6 +623,9 @@ $wi->config->settings += [
 	'wgCompressRevisions' => [
 		'default' => false,
 	],
+	'wgCreateWikiCollation' => [
+		'default' => 'DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci',
+	],
 	'wgDBTableOptions' => [
 		'default' => 'ENGINE=InnoDB, DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci',
 	],
