@@ -2096,7 +2096,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgCosmosBackgroundImageFixed' => [
-		'name' => 'Cosmos Background Image Position',
+		'name' => 'Cosmos Background Image Fixed',
 		'from' => 'cosmos',
 		'type' => 'check',
 		'overridedefault' => true,
