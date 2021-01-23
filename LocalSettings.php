@@ -623,6 +623,9 @@ $wi->config->settings += [
 	'wgCompressRevisions' => [
 		'default' => false,
 	],
+	'wgDBTableOptions' => [
+		'default' => 'ENGINE=InnoDB, DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci',
+	]
 	'wgDBadminuser' => [
 		'default' => 'wikiadmin',
 	],
