@@ -1768,6 +1768,19 @@ $wi->config->settings += [
 	'wgMirahezeCommons' => [
 		'default' => true,
 	],
+	// Only the board and SRE are allowed access
+	// DO NOT ADD UNAUTHORISED USERS
+	'wgMirahezeStaffAccessIds' => [
+		'default' => [
+			1, // John (SRE)
+			2, // Southparkfan (SRE and Board)
+			19, // Reception123 (SRE)
+			5258, // Void (Board)
+			13554, // Paladox (SRE)
+			24689, // RobLa (Board)
+			73651, // Owen (Board)
+		],
+	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
