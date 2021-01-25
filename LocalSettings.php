@@ -1775,10 +1775,14 @@ $wi->config->settings += [
 			1, // John (SRE)
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
+			1032, // NDKilla (SRE)
 			5258, // Void (Board)
+			9736, // Zppix (MediaWiki)
 			13554, // Paladox (SRE)
 			24689, // RobLa (Board)
+			57564, // RhinosF1 (MediaWiki)
 			73651, // Owen (Board)
+			96304, // Universal Omega (MediaWiki)
 		],
 	],
 	'wgEnableImageWhitelist' => [
