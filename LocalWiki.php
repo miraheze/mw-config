@@ -176,9 +176,12 @@ if ( $wmgUseYandexTranslate ) {
 }
 
 // Per-wiki settings
+
+//T5981
 if ( $wgDBname === 'erislywiki' ) {
-	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
-	function onOutputPageParserOutput( OutputPage &$out ) {
+	$wgHooks['BeforePageDisplay'][] = 'addPreMidmetatag';
+	
+	function addPreMidmetatag( OutputPage $out ) {
 		// $out is an instance of the OutputPage object.
 		// Add a meta tag
 		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
