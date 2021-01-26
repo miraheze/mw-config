@@ -178,7 +178,7 @@ if ( $wmgUseYandexTranslate ) {
 // Per-wiki settings
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
-	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
+	function onOutputPageParserOutput( OutputPage &$out ) {
 		// $out is an instance of the OutputPage object.
 		// Add a meta tag
 		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
