@@ -1600,6 +1600,9 @@ $wi->config->settings += [
 	'wgDataDumpDirectory' => [
 		'default' => "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/",
 	],
+	'wgDataDumpDownloadUrl' => [
+		'default' => "https://static.miraheze.org/{$wi->dbname}/dumps/\$\{filename\}",
+	],
 
 	'egApprovedRevsEnabledNamespaces' => [
  		'default' => [
