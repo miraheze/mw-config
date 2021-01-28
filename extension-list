@@ -114,6 +114,7 @@ $IP/extensions/Linter/extension.json
 $IP/extensions/Listings/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
 $IP/extensions/LoginNotify/extension.json
+$IP/extensions/LogoFunctions/extension.json
 $IP/extensions/Loops/extension.json
 $IP/extensions/MagicNoCache/extension.json
 $IP/extensions/ManageWiki/extension.json
