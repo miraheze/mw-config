@@ -1540,7 +1540,7 @@ $wi->config->settings += [
 						'--logs',
 						'--uploads',
 						'--output',
-						"gzip:/mnt/mediawiki-static/{$wi->dbname}/dumps/" . '${filename}',
+						'gzip:${dir}${filename}',
 					],
 				],
 				'limit' => 1,
