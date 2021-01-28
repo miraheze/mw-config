@@ -1598,7 +1598,10 @@ $wi->config->settings += [
 		],
 	],
 	'wgDataDumpDirectory' => [
-		'default' => "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/",
+		'default' => "/mnt/mediawiki-static/{$wi->dbname}/dumps/",
+	],
+	'wgDataDumpDownloadUrl' => [
+		'default' => "https://static.miraheze.org/{$wi->dbname}/dumps/\${filename}",
 	],
 
 	'egApprovedRevsEnabledNamespaces' => [

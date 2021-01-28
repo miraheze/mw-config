@@ -69,6 +69,9 @@ if ( !$cwPrivate ) {
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
 } else {
+	$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
+	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
+	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
 	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
 	$wgWhitelistRead[] = "Special:OAuth";
 }
