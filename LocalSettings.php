@@ -686,6 +686,9 @@ $wi->config->settings += [
 	'wgDiscordShowNewUserIP' => [
 		'default' => false,
 	],
+	'wgDiscordIgnoreMinorEdits' => [
+		'default' => false,
+	],
 	'wgDiscordNotificationsShowSuppressed' => [
 		'default' => false,
 	],

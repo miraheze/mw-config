@@ -1187,6 +1187,15 @@ $wgManageWikiSettings = [
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
 		'requires' => [],
 	],
+	'wgDiscordIgnoreMinorEdits' => [
+		'name' => 'Discord Notification Ignore Minor Edits',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'Ignore Minor Edits from Discord feeds',
+		'requires' => [],
+	],
 	'wgDiscordNotificationBlockedUser' => [
 		'name' => 'Discord Notification Blocked User',
 		'from' => 'mediawiki',
