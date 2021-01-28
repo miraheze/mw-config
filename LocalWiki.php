@@ -80,6 +80,85 @@ if ( !$cwPrivate ) {
 	$wgWhitelistRead[] = "Special:OAuth";
 }
 
+// $wmgPrivateUploads
+if ( $wmgPrivateUploads ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
+	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
+}
+
+// DataDump
+$dataDumpDirectory = $wi->config->settings['wgDataDumpDirectory']['default'];
+$wi->config->settings['wgDataDump']['default'] = [
+	'xml' => [
+		'file_ending' => '.xml.gz',
+		'generate' => [
+			'type' => 'mwscript',
+			'script' => "$IP/maintenance/dumpBackup.php",
+			'options' => [
+				'--full',
+				'--logs',
+				'--uploads',
+				'--output',
+				"gzip:{$dataDumpDirectory}" . '${filename}',
+			],
+		],
+		'limit' => 1,
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+	],
+	'image' => [
+		'file_ending' => '.tar.gz',
+		'generate' => [
+			'type' => 'script',
+			'script' => '/usr/bin/tar',
+			'options' => [
+				'--exclude',
+				"{$wgUploadDirectory}/archive",
+				'--exclude',
+				"{$wgUploadDirectory}/deleted",
+				'--exclude',
+				"{$wgUploadDirectory}/lockdir",
+				'--exclude',
+				"{$wgUploadDirectory}/temp",
+				'--exclude',
+				"{$wgUploadDirectory}/thumb",
+				'--exclude',
+				"{$wgUploadDirectory}/dumps",
+				'-zcvf',
+				$dataDumpDirectory . '${filename}',
+				$wgUploadDirectory
+			],
+		],
+		'limit' => 1,
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+	],
+	'managewiki_backup' => [
+		'file_ending' => '.json',
+		'generate' => [
+			'type' => 'mwscript',
+			'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+			'options' => [
+				'--filename',
+				'${filename}'
+			],
+		],
+		'limit' => 1,
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+	],
+];
+
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
 	    ( $_SERVER['REMOTE_ADDR'] === '51.89.160.132' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1056::7' || $_SERVER['REMOTE_ADDR'] === '51.89.160.141' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:105a::9' ) ) {
@@ -154,13 +233,6 @@ if ( $wgWordmark ) {
 		'width' => $wgWordmarkWidth,
 		'height' => $wgWordmarkHeight,
 	];
-}
-
-// $wmgPrivateUploads
-if ( $wmgPrivateUploads ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
 // $wgUrlShortenerAllowedDomains
