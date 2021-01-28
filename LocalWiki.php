@@ -59,6 +59,9 @@ EOF;
 
 // Public Wikis
 if ( !$cwPrivate ) {
+	$wi->config->settings['wgDataDump']['default']['xml']['generate'] = preg_replace( '/\$\{dir\}/im', $wgDataDumpDirectory, $wgDataDump );
+	$wi->config->settings['wgDataDump']['default']['image']['generate'] = preg_replace( '/\$\{dir\}/im', $wgDataDumpDirectory, $wgDataDump );
+
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
 		'uri' => 'udp://51.89.160.138:5070',
@@ -71,8 +74,12 @@ if ( !$cwPrivate ) {
 } else {
 	if ( $wmgPrivateUploads ) {
 		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
+		$wi->config->settings['wgDataDump']['default']['xml']['generate'] = preg_replace( '/\$\{dir\}/im', $wi->config->settings['wgDataDumpDirectory']['default'], $wgDataDump );
+		$wi->config->settings['wgDataDump']['default']['image']['generate'] = preg_replace( '/\$\{dir\}/im', $wi->config->settings['wgDataDumpDirectory']['default'], $wgDataDump );
 	} else {
 		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
+		$wi->config->settings['wgDataDump']['default']['xml']['generate'] = preg_replace( '/\$\{dir\}/im', $wi->config->settings['wgDataDumpDirectory']['default'], $wgDataDump );
+		$wi->config->settings['wgDataDump']['default']['image']['generate'] = preg_replace( '/\$\{dir\}/im', $wi->config->settings['wgDataDumpDirectory']['default'], $wgDataDump );
 	}
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
