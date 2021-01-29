@@ -1187,6 +1187,15 @@ $wgManageWikiSettings = [
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
 		'requires' => [],
 	],
+	'wgDiscordAvatarUrl' => [
+		'name' => 'Discord Notification Avatar URL',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
+		'requires' => [],
+	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'name' => 'Discord Notification Ignore Minor Edits',
 		'from' => 'mediawiki',
