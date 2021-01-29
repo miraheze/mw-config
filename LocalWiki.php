@@ -2,6 +2,13 @@
 
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
+// Support migration to new volume
+if ( false /*preg_match( '/^(a)(.+)wiki$/', $wi->dbname )*/ ) {
+	$wmgUploadHostname = 'static-new.miraheze.org';
+	$wgUploadPath = "https://static-new.miraheze.org/$wgDBname";
+	$wgUploadDirectory = "/mnt/mediawiki-static2/$wgDBname";
+}
+
 // Closed Wikis
 if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
