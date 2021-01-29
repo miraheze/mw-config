@@ -1194,7 +1194,9 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'notifications',
 		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
-		'requires' => [],
+		'requires' => [
+			'visibility' => 'public',
+		],
 	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'name' => 'Discord Notification Ignore Minor Edits',
@@ -1203,7 +1205,9 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'Ignore Minor Edits from Discord feeds',
-		'requires' => [],
+		'requires' => [
+			'visibility' => 'public',
+		],
 	],
 	'wgDiscordNotificationBlockedUser' => [
 		'name' => 'Discord Notification Blocked User',
@@ -1212,7 +1216,9 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on user or IP blocked in MediaWiki.',
-		'requires' => [],
+		'requires' => [
+			'visibility' => 'public',
+		],
 	],
 	'wgDiscordNotificationNewUser' => [
 		'name' => 'Discord Notification New User',
@@ -1221,7 +1227,9 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
-		'requires' => [],
+		'requires' => [
+			'visibility' => 'public',
+		],
 	],
 	'wgHAWelcomeStaffGroupName' => [
 		'name' => 'HAWelcome Staff Group Name',
