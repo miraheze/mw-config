@@ -680,6 +680,9 @@ $wi->config->settings += [
 	'wgDiscordFromName' => [
 		'default' => '',
 	],
+	'wgDiscordAvatarUrl' => [
+		'default' => '',
+	],
 	'wgDiscordShowNewUserEmail' => [
 		'default' => false,
 	],
