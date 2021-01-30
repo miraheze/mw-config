@@ -711,7 +711,7 @@ $wi->config->settings += [
 		'default' => [],
 	],
 	'wmgDiscordIncomingWebhookUrl' => [
-		'default' => [],
+		'default' => false,
 	],
 
 	// Slack
@@ -731,7 +731,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgSlackIncomingWebhookUrl' => [
-		'default' => '',
+		'default' => false,
 	],
 
 	// Display Title
