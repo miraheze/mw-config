@@ -369,8 +369,6 @@ $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '
 $wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = $wmgGlobalMirahezeDiscordWebhookUrl;
 $wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls'][$wgDBname] = $wmgDiscordIncomingWebhookUrl;
 
-
-
 // Slack
 $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
