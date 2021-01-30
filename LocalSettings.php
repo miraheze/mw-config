@@ -710,7 +710,7 @@ $wi->config->settings += [
 	'wgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
 	],
-	'wmgDiscordAdditionalIncomingWebhookUrls' => [
+	'wmgDiscordIncomingWebhookUrl' => [
 		'default' => [],
 	],
 
