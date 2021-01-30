@@ -341,7 +341,9 @@ $wgManageWikiExtensions = [
 					'cite',
 					'visualeditor',
 				],
-				'visibility' => 'public',
+				'visibility' => [
+					'state' => 'public',
+				],
 			],
 		],
 		'cleanchanges' => [
@@ -378,7 +380,9 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCollection',
 			'conflicts' => false,
 			'requires' => [
-				'visibility' => 'public',
+				'visibility' => [
+					'state' => 'public',
+				],
 			],
 		],
 		'commentbox' => [
