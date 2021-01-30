@@ -367,17 +367,7 @@ switch ( $wmgWikiLicense ) {
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
 $wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
-if ( isset( $wmgWikiMirahezeDiscordHooks[ $wgDBname ] ) ) {
-	$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = array_merge(
-		$wmgWikiMirahezeDiscordHooks['default'],
-		$wmgWikiMirahezeDiscordHooks[ $wgDBname ]
-	);
-}
 
 // Slack
 $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
-$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks['default'];
-if ( isset( $wmgWikiMirahezeSlackHooks[ $wgDBname ] ) ) {
-	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks[ $wgDBname ];
-}
