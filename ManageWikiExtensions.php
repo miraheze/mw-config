@@ -1967,8 +1967,8 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSlackNotifications',
 			'conflicts' => false,
 			'requires' => [
-					'permissions' => [
-						'managewiki-restricted',
+				'visibility' => [
+					'state' => 'public',
 				],
 			],
 		],
