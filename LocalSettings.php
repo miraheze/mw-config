@@ -707,6 +707,9 @@ $wi->config->settings += [
 	'wgDiscordShowNewUserFullName' => [
 		'default' => false,
 	],
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'default' => [],
+	],
 	'wmgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
 	],
