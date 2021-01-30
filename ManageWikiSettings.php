@@ -1187,6 +1187,22 @@ $wgManageWikiSettings = [
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
 		'requires' => [],
 	],
+	'wgDiscordIncomingWebhookUrl' => [
+		'name' => 'Discord Incoming Webhook URL',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'URL of the Discord webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+				'permissions' => [
+					'managewiki',
+				],
+			],
+		],
+	],
 	'wgDiscordAvatarUrl' => [
 		'name' => 'Discord Notification Avatar URL',
 		'from' => 'mediawiki',
@@ -1195,7 +1211,9 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
 		'requires' => [
-			'visibility' => 'public',
+			'visibility' => [
+				'state' => 'public',
+			],
 		],
 	],
 	'wgDiscordIgnoreMinorEdits' => [
@@ -1206,7 +1224,9 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Ignore Minor Edits from Discord feeds',
 		'requires' => [
-			'visibility' => 'public',
+			'visibility' => [
+				'state' => 'public',
+			],
 		],
 	],
 	'wgDiscordNotificationBlockedUser' => [
@@ -1217,7 +1237,9 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Notify on user or IP blocked in MediaWiki.',
 		'requires' => [
-			'visibility' => 'public',
+			'visibility' => [
+				'state' => 'public',
+			],
 		],
 	],
 	'wgDiscordNotificationNewUser' => [
@@ -1228,7 +1250,25 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
 		'requires' => [
-			'visibility' => 'public',
+			'visibility' => [
+				'state' => 'public',
+			],
+		],
+	],
+	'wgSlackIncomingWebhookUrl' => [
+		'name' => 'Slack Incoming Webhook URL',
+		'from' => 'slacknotifications',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'URL of the Slack webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+				'permissions' => [
+					'managewiki',
+				],
+			],
 		],
 	],
 	'wgHAWelcomeStaffGroupName' => [
@@ -1273,7 +1313,9 @@ $wgManageWikiSettings = [
 		'section' => 'permissions',
 		'help' => 'Pages anyone may view.',
 		'requires' => [
-			'visibility' => 'private',
+			'visibility' => [
+				'state' => 'private',
+			],
 		],
 	],
 	

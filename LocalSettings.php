@@ -710,6 +710,9 @@ $wi->config->settings += [
 	'wgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
 	],
+	'wgDiscordIncomingWebhookUrl' => [
+		'default' => '',
+	],
 
 	// Slack
 	'wgSlackFromName' => [
