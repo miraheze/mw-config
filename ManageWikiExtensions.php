@@ -341,7 +341,9 @@ $wgManageWikiExtensions = [
 					'cite',
 					'visualeditor',
 				],
-				'visibility' => 'public',
+				'visibility' => [
+					'state' => 'public',
+				],
 			],
 		],
 		'cleanchanges' => [
@@ -378,7 +380,9 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCollection',
 			'conflicts' => false,
 			'requires' => [
-				'visibility' => 'public',
+				'visibility' => [
+					'state' => 'public',
+				],
 			],
 		],
 		'commentbox' => [
@@ -1072,6 +1076,13 @@ $wgManageWikiExtensions = [
 			'name' => 'Listings',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Listings',
 			'var' => 'wmgUseListings',
+			'conflicts' => false,
+			'requires' => [],
+		],
+	        'logofunctions' => [
+			'name' => 'LogoFunctions',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LogoFunctions',
+			'var' => 'wmgUseLogoFunctions',
 			'conflicts' => false,
 			'requires' => [],
 		],
@@ -1956,8 +1967,8 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSlackNotifications',
 			'conflicts' => false,
 			'requires' => [
-					'permissions' => [
-						'managewiki-restricted',
+				'visibility' => [
+					'state' => 'public',
 				],
 			],
 		],
@@ -2531,6 +2542,17 @@ $wgManageWikiExtensions = [
 					'wbt_type' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
 					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql",
 					'wbt_property_terms' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
+				],
+				'permissions' => [
+					'*' => [
+						'permissions' => [
+							'item-term',
+							'property-term',
+							'item-merge',
+							'item-redirect',
+							'property-create',
+						],
+					],
 				],
 				'namespaces' => [
 					'Item' => [

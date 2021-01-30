@@ -238,17 +238,11 @@ $wi->config->settings += [
 	],
 
 	// Cosmos settings
-	'wgCosmosBannerLogo' => [
-		'default' => null,
-	],
-	'wgCosmosWikiHeaderWordmark' => [
-		'default' => null,
-	],
-	'wgCosmosWikiHeaderWordmark' => [
-		'default' => null,
+	'wgCosmosWordmark' => [
+		'default' => false,
 	],
 	'wgCosmosBackgroundImage' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgCosmosBackgroundImageSize' => [
 		'default' => 'cover',
@@ -268,26 +262,23 @@ $wi->config->settings += [
 	'wgCosmosLinkColor' => [
 		'default' => '#0645ad',
 	],
-	'wgCosmosButtonColor' => [
+	'wgCosmosButtonBackgroundColor' => [
 		'default' => '#c0c0c0',
 	],
-	'wgCosmosToolbarColor' => [
+	'wgCosmosToolbarBackgroundColor' => [
 		'default' => '#000000',
 	],
-	'wgCosmosFooterColor' => [
+	'wgCosmosFooterBackgroundColor' => [
 		'default' => '#c0c0c0',
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
 		'default' => true,
 	],
-	'wgCosmosBackgroundImageNorepeat' => [
-		'default' => true,
+	'wgCosmosBackgroundImageRepeat' => [
+		'default' => false,
 	],
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
-	],
-	'wgCosmosUseMessageforToolbar' => [
-		'default' => false,
 	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'default' => true,
@@ -300,6 +291,9 @@ $wi->config->settings += [
 	],
 	'wgCosmosSocialProfileAllowBio' => [
 		'default' => true,
+	],
+	'wgCosmosSocialProfileFollowBioRedirects' => [
+		'default' => false,
 	],
 	'wgCosmosSocialProfileShowGroupTags' => [
 		'default' => true,
@@ -511,6 +505,9 @@ $wi->config->settings += [
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'tech@miraheze.org',
 	],
+	'wgCreateWikiPersistentModelFile' => [
+		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
+	],
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
 			"$IP/maintenance/tables.sql",
@@ -563,6 +560,7 @@ $wi->config->settings += [
 			'Politics' => 'politics',
 			'Private' => 'private',
 			'Religion' => 'religion',
+			'Science' => 'science',
 			'Software/Computing' => 'software',
 			'Sports' => 'sport',
 			'Uncategorised' => 'uncategorised',
@@ -682,10 +680,16 @@ $wi->config->settings += [
 	'wgDiscordFromName' => [
 		'default' => '',
 	],
+	'wgDiscordAvatarUrl' => [
+		'default' => '',
+	],
 	'wgDiscordShowNewUserEmail' => [
 		'default' => false,
 	],
 	'wgDiscordShowNewUserIP' => [
+		'default' => false,
+	],
+	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
 	],
 	'wgDiscordNotificationsShowSuppressed' => [
@@ -705,6 +709,9 @@ $wi->config->settings += [
 	],
 	'wgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
+	],
+	'wgDiscordIncomingWebhookUrl' => [
+		'default' => '',
 	],
 
 	// Slack
@@ -1102,6 +1109,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseListings' => [
+		'default' => false,
+	],
+	'wmgUseLogoFunctions' => [
 		'default' => false,
 	],
 	'wmgUseLoopsCombo' => [
@@ -1528,76 +1538,13 @@ $wi->config->settings += [
 
 	// DataDump
 	'wgDataDump' => [
-		'default' => [
-			'xml' => [
-				'file_ending' => '.xml.gz',
-				'generate' => [
-					'type' => 'mwscript',
-					'script' => "$IP/maintenance/dumpBackup.php",
-					'options' => [
-						'--full',
-						'--logs',
-						'--uploads',
-						'--output',
-						"gzip:/mnt/mediawiki-static/private/dumps/{$wi->dbname}/" . '${filename}',
-					],
-				],
-				'limit' => 1,
-				'permissions' => [
-					'view' => 'view-dump',
-					'generate' => 'generate-dump',
-					'delete' => 'delete-dump',
-				],
-			],
-			'image' => [
-				'file_ending' => '.tar.gz',
-				'generate' => [
-					'type' => 'script',
-					'script' => '/usr/bin/tar',
-					'options' => [
-						'--exclude',
-						"/mnt/mediawiki-static/{$wi->dbname}/archive",
-						'--exclude',
-						"/mnt/mediawiki-static/{$wi->dbname}/deleted",
-						'--exclude',
-						"/mnt/mediawiki-static/{$wi->dbname}/lockdir",
-						'--exclude',
-						"/mnt/mediawiki-static/{$wi->dbname}/temp",
-						'--exclude',
-						"/mnt/mediawiki-static/{$wi->dbname}/thumb",
-						'-zcvf',
-						"/mnt/mediawiki-static/private/dumps/{$wi->dbname}/" . '${filename}',
-						"/mnt/mediawiki-static/{$wi->dbname}/"
-					],
-				],
-				'limit' => 1,
-				'permissions' => [
-					'view' => 'view-dump',
-					'generate' => 'generate-dump',
-					'delete' => 'delete-dump',
-				],
-			],
-			'managewiki_backup' => [
-				'file_ending' => '.json',
-				'generate' => [
-					'type' => 'mwscript',
-					'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
-					'options' => [
-						'--filename',
-						'${filename}'
-					],
-				],
-				'limit' => 1,
-				'permissions' => [
-					'view' => 'view-dump',
-					'generate' => 'generate-dump',
-					'delete' => 'delete-dump',
-				],
-			],
-		],
+		'default' => []
 	],
 	'wgDataDumpDirectory' => [
-		'default' => "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/",
+		'default' => "/mnt/mediawiki-static/{$wi->dbname}/dumps/",
+	],
+	'wgDataDumpDownloadUrl' => [
+		'default' => "https://static.miraheze.org/{$wi->dbname}/dumps/\${filename}",
 	],
 
 	'egApprovedRevsEnabledNamespaces' => [
@@ -1770,6 +1717,23 @@ $wi->config->settings += [
 	'wgMirahezeCommons' => [
 		'default' => true,
 	],
+	// Only the board and SRE are allowed access
+	// DO NOT ADD UNAUTHORISED USERS
+	'wgMirahezeStaffAccessIds' => [
+		'default' => [
+			1, // John (SRE)
+			2, // Southparkfan (SRE and Board)
+			19, // Reception123 (SRE)
+			1032, // NDKilla (SRE)
+			5258, // Void (Board)
+			9736, // Zppix (MediaWiki)
+			13554, // Paladox (SRE)
+			24689, // RobLa (Board)
+			57564, // RhinosF1 (MediaWiki)
+			73651, // Owen (Board)
+			96304, // Universal Omega (MediaWiki)
+		],
+	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
@@ -1785,10 +1749,28 @@ $wi->config->settings += [
 	'wgSVGConverter' => [
 		'default' => 'ImageMagick',
 	],
+	'wgUploadMissingFileUrl' => [
+		'default' => false,
+	],
+	'wgUploadNavigationUrl' => [
+		'default' => false,
+	],
 
 	// Foreground
 	'wgForegroundFeatures' => [
 		'default' => [],
+		'egoishwiki' => [
+			'showActionsForAnon' => false,
+			'NavWrapperType' => 'divonly',
+			'showHelpUnderTools' => false,
+			'showRecentChangesUnderTools' => true,
+			'enableTabs' => true,
+			'wikiName' => '',
+			'navbarIcon' => true,
+			'IeEdgeCode' => 1,
+			'showFooterIcons' => 0,
+			'addThisFollowPUBID' => ''
+		],
 		'marionetworkwiki' => [
 			'enableTabs' => true,
 			'navbarIcon' => true,
@@ -2110,6 +2092,7 @@ $wi->config->settings += [
 		'default' => 'Creative Commons Attribution Share Alike',
 		'freesoftwarepediawiki' => 'GNU Free Documentation License',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
+		'exstatiowiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'isvwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'jadtechwiki' => 'Copyright © Jak and Daxter Technical Wiki. All rights reserved.',
@@ -2126,6 +2109,7 @@ $wi->config->settings += [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'freesoftwarepediawiki' => 'http://www.gnu.org/licenses/fdl-1.3.html',
 		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
+		'exstatiowiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'isvwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'jadtechwiki' => 'https://jadtech.miraheze.org/wiki/MediaWiki:Copyright',
@@ -2558,6 +2542,7 @@ $wi->config->settings += [
 				'stopforumspam',
 				'suppressionlog',
 				'suppressrevision',
+				'themedesigner',
 				'titleblacklistlog',
 				'usermerge',
 				'userrights',
@@ -2572,6 +2557,13 @@ $wi->config->settings += [
 				'torunblocked',
 				'centralauth-merge',
 				'generate-dump',
+				'editsitecss',
+				'editsitejson',
+				'editsitejs',
+				'editusercss',
+				'edituserjson',
+				'edituserjs',
+				'managewiki',
 			],
 		],
 	],

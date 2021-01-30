@@ -69,9 +69,95 @@ if ( !$cwPrivate ) {
 	// global extension
 	wfLoadExtension( 'DiscordNotifications' );
 } else {
+	if ( $wmgPrivateUploads ) {
+		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
+	} else {
+		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
+	}
+	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
+	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
 	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
 	$wgWhitelistRead[] = "Special:OAuth";
 }
+
+// $wmgPrivateUploads
+if ( $wmgPrivateUploads ) {
+	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
+	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
+}
+
+// DataDump
+$dataDumpDirectory = $wi->config->settings['wgDataDumpDirectory']['default'];
+$wi->config->settings['wgDataDump']['default'] = [
+	'xml' => [
+		'file_ending' => '.xml.gz',
+		'generate' => [
+			'type' => 'mwscript',
+			'script' => "$IP/maintenance/dumpBackup.php",
+			'options' => [
+				'--full',
+				'--logs',
+				'--uploads',
+				'--output',
+				"gzip:{$dataDumpDirectory}" . '${filename}',
+			],
+		],
+		'limit' => 1,
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+	],
+	'image' => [
+		'file_ending' => '.tar.gz',
+		'generate' => [
+			'type' => 'script',
+			'script' => '/usr/bin/tar',
+			'options' => [
+				'--exclude',
+				"{$wgUploadDirectory}/archive",
+				'--exclude',
+				"{$wgUploadDirectory}/deleted",
+				'--exclude',
+				"{$wgUploadDirectory}/lockdir",
+				'--exclude',
+				"{$wgUploadDirectory}/temp",
+				'--exclude',
+				"{$wgUploadDirectory}/thumb",
+				'--exclude',
+				"{$wgUploadDirectory}/dumps",
+				'-zcvf',
+				$dataDumpDirectory . '${filename}',
+				$wgUploadDirectory
+			],
+		],
+		'limit' => 1,
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+	],
+	'managewiki_backup' => [
+		'file_ending' => '.json',
+		'generate' => [
+			'type' => 'mwscript',
+			'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+			'options' => [
+				'--filename',
+				'${filename}'
+			],
+		],
+		'limit' => 1,
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+	],
+];
 
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
@@ -147,13 +233,6 @@ if ( $wgWordmark ) {
 		'width' => $wgWordmarkWidth,
 		'height' => $wgWordmarkHeight,
 	];
-}
-
-// $wmgPrivateUploads
-if ( $wmgPrivateUploads ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
 // $wgUrlShortenerAllowedDomains
@@ -255,11 +334,6 @@ switch ( $wmgWikiLicense ) {
 		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
 		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
-	case 'cc-by-sa-3-0':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/3.0';
-		break;
 	case 'cc-by-sa-2-0-kr':
 		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
 		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons BY-SA 2.0 Korea';
@@ -292,18 +366,8 @@ switch ( $wmgWikiLicense ) {
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
-$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
-if ( isset( $wmgWikiMirahezeDiscordHooks[ $wgDBname ] ) ) {
-	$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = array_merge(
-		$wmgWikiMirahezeDiscordHooks['default'],
-		$wmgWikiMirahezeDiscordHooks[ $wgDBname ]
-	);
-}
+$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = [ $wmgGlobalDiscordWebhookUrl ];
 
 // Slack
 $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
-$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeDiscordHooks['default'];
-if ( isset( $wmgWikiMirahezeSlackHooks[ $wgDBname ] ) ) {
-	$wi->config->settings['wgSlackIncomingWebhookUrl']['default'] = $wmgWikiMirahezeSlackHooks[ $wgDBname ];
-}

@@ -128,6 +128,19 @@ $wgManageWikiNamespacesAdditional = [
 		'overridedefault' => false,
 		'requires' => [],
 	],
+	'wgARENamespaces' => [
+		'name' => 'Enable Article Ratings in this namespace',
+		'from' => 'articleratings',
+		'type' => 'check',
+		'main' => true,
+		'talk' => false,
+		'blacklisted' => [],
+		'overridedefault' => array_merge(
+			array_fill_keys( $wgContentNamespaces, true ),
+			[ 'default' => false ]
+		),
+		'requires' => [],
+	],
 	'wgPreloaderSource' => [
 		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
 		'from' => 'preloader',

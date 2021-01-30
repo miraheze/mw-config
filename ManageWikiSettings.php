@@ -973,6 +973,7 @@ $wgManageWikiSettings = [
 			'apng' => 'apng',
 			'asv' => 'asv',
 			'avi' => 'avi',
+			'bfwav' => 'bfwav',
 			'bib' => 'bib',
 			'bmp' => 'bmp',
 			'bnk' => 'bnk',
@@ -1088,6 +1089,7 @@ $wgManageWikiSettings = [
 			'woff' => 'woff',
 			'woff2' => 'woff2',
 			'xcf' => 'xcf',
+			'xdelta' => 'xdelta',
 			'xls' => 'xls',
 			'xlsx' => 'xlsx',
 			'xlxs' => 'xlxs',
@@ -1185,6 +1187,48 @@ $wgManageWikiSettings = [
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
 		'requires' => [],
 	],
+	'wgDiscordIncomingWebhookUrl' => [
+		'name' => 'Discord Incoming Webhook URL',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'URL of the Discord webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+				'permissions' => [
+					'managewiki',
+				],
+			],
+		],
+	],
+	'wgDiscordAvatarUrl' => [
+		'name' => 'Discord Notification Avatar URL',
+		'from' => 'mediawiki',
+		'type' => 'url',
+		'overridedefault' => '',
+		'section' => 'notifications',
+		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+			],
+		],
+	],
+	'wgDiscordIgnoreMinorEdits' => [
+		'name' => 'Discord Notification Ignore Minor Edits',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'Ignore Minor Edits from Discord feeds',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+			],
+		],
+	],
 	'wgDiscordNotificationBlockedUser' => [
 		'name' => 'Discord Notification Blocked User',
 		'from' => 'mediawiki',
@@ -1192,7 +1236,11 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on user or IP blocked in MediaWiki.',
-		'requires' => [],
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+			],
+		],
 	],
 	'wgDiscordNotificationNewUser' => [
 		'name' => 'Discord Notification New User',
@@ -1201,7 +1249,27 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
-		'requires' => [],
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+			],
+		],
+	],
+	'wgSlackIncomingWebhookUrl' => [
+		'name' => 'Slack Incoming Webhook URL',
+		'from' => 'slacknotifications',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'URL of the Slack webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+				'permissions' => [
+					'managewiki',
+				],
+			],
+		],
 	],
 	'wgHAWelcomeStaffGroupName' => [
 		'name' => 'HAWelcome Staff Group Name',
@@ -1245,7 +1313,9 @@ $wgManageWikiSettings = [
 		'section' => 'permissions',
 		'help' => 'Pages anyone may view.',
 		'requires' => [
-			'visibility' => 'private',
+			'visibility' => [
+				'state' => 'private',
+			],
 		],
 	],
 	
@@ -1468,8 +1538,8 @@ $wgManageWikiSettings = [
 		],
 	],
 	'wgPageDisqusShortname' => [
-		'name' => 'Page DisqusShortname',
-		'from' => 'disqustag',
+		'name' => 'PageDisqus Shortname',
+		'from' => 'pagedisqus',
 		'type' => 'text',
 		'overridedefault' => false,
 		'section' => 'restricted',
@@ -1526,6 +1596,32 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. This value must be a valid Miraheze-hosted wiki database.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	'wgUploadMissingFileUrl' => [
+		'name' => 'Upload Missing File Url',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Point wikilinks to missing files ("red file links") to a custom URL.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	'wgUploadNavigationUrl' => [
+		'name' => 'Upload Navigation Url',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Point the upload navigation link in the sidebar to a custom URL.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -1667,6 +1763,34 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Show edit count on profile pages for the Cosmos skin when social profile is enabled.',
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
+	],
+	'wgCosmosSocialProfileAllowBio' => [
+		'name' => 'Cosmos Allow Bio',
+		'from' => 'cosmos',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'socialtools',
+		'help' => 'Allow users to add a bio from Special:MyPage/bio and display it on their user page?',
+		'requires' => [
+			'extensions' => [
+				'cosmos',
+				'socialprofile',
+			],
+		],
+	],
+	'wgCosmosSocialProfileFollowBioRedirects' => [
+		'name' => 'Cosmos Follow Bio Redirects',
+		'from' => 'cosmos',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'socialtools',
+		'help' => 'Follow redirects from Special:MyPage/bio and display the redirect target as bio instead? (experimental)',
 		'requires' => [
 			'extensions' => [
 				'cosmos',
@@ -1930,7 +2054,7 @@ $wgManageWikiSettings = [
 		'name' => 'Cosmos Background Image',
 		'from' => 'cosmos',
 		'type' => 'url',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Add an image to set as the background image for the wiki\'s body of the Cosmos skin.',
 		'requires' => [],
@@ -1953,7 +2077,7 @@ $wgManageWikiSettings = [
 		'name' => 'Cosmos Wiki Header Background Image',
 		'from' => 'cosmos',
 		'type' => 'url',
-		'overridedefault' => null,
+		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Add a background image for the wiki header of the Cosmos skin.',
 		'requires' => [],
@@ -2003,8 +2127,8 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the link color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosButtonColor' => [
-		'name' => 'Cosmos Button Color',
+	'wgCosmosButtonBackgroundColor' => [
+		'name' => 'Cosmos Button Background Color',
 		'from' => 'cosmos',
 		'type' => 'text',
 		'overridedefault' => '#c0c0c0',
@@ -2012,8 +2136,8 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the button background color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosToolbarColor' => [
-		'name' => 'Cosmos Toolbar Color',
+	'wgCosmosToolbarBackgroundColor' => [
+		'name' => 'Cosmos Toolbar Background Color',
 		'from' => 'cosmos',
 		'type' => 'text',
 		'overridedefault' => '#000000',
@@ -2021,8 +2145,8 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the toolbar background color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosFooterColor' => [
-		'name' => 'Cosmos Footer Color',
+	'wgCosmosFooterBackgroundColor' => [
+		'name' => 'Cosmos Footer Background Color',
 		'from' => 'cosmos',
 		'type' => 'text',
 		'overridedefault' => '#c0c0c0',
@@ -2030,17 +2154,17 @@ $wgManageWikiSettings = [
 		'help' => 'Add a color name or hex code to set as the footer background color for the Cosmos skin.',
 		'requires' => [],
 	],
-	'wgCosmosBackgroundImageNorepeat' => [
+	'wgCosmosBackgroundImageRepeat' => [
 		'name' => 'Cosmos Background Image Repeat',
 		'from' => 'cosmos',
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Repeat the background for the cosmos skin?',
 		'requires' => [],
 	],
 	'wgCosmosBackgroundImageFixed' => [
-		'name' => 'Cosmos Background Image Position',
+		'name' => 'Cosmos Background Image Fixed',
 		'from' => 'cosmos',
 		'type' => 'check',
 		'overridedefault' => true,
