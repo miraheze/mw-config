@@ -1756,6 +1756,18 @@ $wi->config->settings += [
 	// Foreground
 	'wgForegroundFeatures' => [
 		'default' => [],
+		'egoishwiki' => [
+			'showActionsForAnon' => false,
+			'NavWrapperType' => 'divonly',
+			'showHelpUnderTools' => false,
+			'showRecentChangesUnderTools' => true,
+			'enableTabs' => true,
+			'wikiName' => '',
+			'navbarIcon' => true,
+			'IeEdgeCode' => 1,
+			'showFooterIcons' => 0,
+			'addThisFollowPUBID' => ''
+		],
 		'marionetworkwiki' => [
 			'enableTabs' => true,
 			'navbarIcon' => true,
