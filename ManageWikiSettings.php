@@ -1193,7 +1193,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => false,
 		'section' => 'notifications',
-		'help' => 'URL of the Discord webhook URL to send notifications to. This value will be hidden to all users except those with the managewiki right.',
+		'help' => 'URL of the Discord webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
 		'requires' => [
 			'visibility' => [
 				'state' => 'public',
@@ -1252,6 +1252,22 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'visibility' => [
 				'state' => 'public',
+			],
+		],
+	],
+	'wgSlackIncomingWebhookUrl' => [
+		'name' => 'Slack Incoming Webhook URL',
+		'from' => 'slacknotifications',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'URL of the Slack webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+				'permissions' => [
+					'managewiki',
+				],
 			],
 		],
 	],
