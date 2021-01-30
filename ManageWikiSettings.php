@@ -1187,7 +1187,7 @@ $wgManageWikiSettings = [
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
 		'requires' => [],
 	],
-	'wmgDiscordIncomingWebhookUrl' => [
+	'wgDiscordIncomingWebhookUrl' => [
 		'name' => 'Discord Incoming Webhook URL',
 		'from' => 'mediawiki',
 		'type' => 'text',
