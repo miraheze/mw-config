@@ -519,6 +519,10 @@ if ( $wmgUseListings ) {
 	wfLoadExtension( 'Listings' );
 }
 
+if ( $wmgUseLogoFunctions ) {
+	wfLoadExtension( 'LogoFunctions' );
+}
+
 if ( $wmgUseLoopsCombo ) {
 	wfLoadExtension( 'Loops' );
 }

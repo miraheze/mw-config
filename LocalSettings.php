@@ -1108,6 +1108,9 @@ $wi->config->settings += [
 	'wmgUseListings' => [
 		'default' => false,
 	],
+	'wmgUseLogoFunctions' => [
+		'default' => false,
+	],
 	'wmgUseLoopsCombo' => [
 		'default' => false,
 	],
