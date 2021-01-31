@@ -1270,6 +1270,9 @@ $wi->config->settings += [
 	'wmgUseProtectSite' => [
 		'default' => false,
 	],
+	'wmgUseProtectionIndicator' => [
+		'default' => false,
+	],
 	'wmgUsePurge' => [
 		'default' => false,
 	],

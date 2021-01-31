@@ -763,6 +763,10 @@ if ( $wmgUseProtectSite ) {
 	wfLoadExtension( 'ProtectSite' );
 }
 
+if ( $wmgUseProtectionIndicator ) {
+	wfLoadExtension( 'ProtectionIndicator' );
+}
+
 if ( $wmgUsePurge ) {
 	wfLoadExtension( 'Purge' );
 }
