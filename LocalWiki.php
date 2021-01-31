@@ -48,18 +48,20 @@ EOF;
 // Inactive Wikis
 if ( $cwInactive && (string)$cwInactive != 'exempt' ) {
 	if ( $cwPrivate ) {
-	        $wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
-	        function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
-		        $siteNotice .= <<<EOF
-			<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will not be eligible for adoption by another user even after it is closed since it is private. If this wiki is still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
-EOF;
-	}
-} else {
-	$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
-	function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
-		        $siteNotice .= <<<EOF
-			<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will then be eligible for adoption by another user. If not adopted and still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
-EOF;
+		$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
+
+		function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
+			$siteNotice .= <<<EOF
+				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will not be eligible for adoption by another user even after it is closed since it is private. If this wiki is still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
+			EOF;
+		}
+	} else {
+		$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
+
+		function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
+			$siteNotice .= <<<EOF
+				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will then be eligible for adoption by another user. If not adopted and still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
+			EOF;
 		}
 	}
 }
@@ -167,7 +169,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
-	    ( $_SERVER['REMOTE_ADDR'] === '51.89.160.132' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1056::7' || $_SERVER['REMOTE_ADDR'] === '51.89.160.141' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:105a::9' ) ) {
+		( $_SERVER['REMOTE_ADDR'] === '51.89.160.132' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1056::7' || $_SERVER['REMOTE_ADDR'] === '51.89.160.141' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:105a::9' ) ) {
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
@@ -290,10 +292,10 @@ if ( $wgDBname === 'metawiki' ) {
 
 	function onSkinBuildSidebar( $skin, &$bar ) {
 		$bar['donate'][] = [
-			'text'  => $skin->msg( 'miraheze-donate' ),
-			'href'  => '/wiki/Donate',
+			'text' => $skin->msg( 'miraheze-donate' ),
+			'href' => '/wiki/Donate',
 			'title' => $skin->msg( 'miraheze-donate' ),
-			'id'    => 'n-donate',
+			'id' => 'n-donate',
 		];
 	}
 }
@@ -367,11 +369,11 @@ switch ( $wmgWikiLicense ) {
 		$wi->config->settings['wgRightsText']['default'] = 'CC0 Public Domain';
 		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
-        case 'gpl-v3':
-                $wi->config->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
-                $wi->config->settings['wgRightsText']['default'] = 'GPLv3';
-                $wi->config->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
-                break;
+	case 'gpl-v3':
+		$wi->config->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+		$wi->config->settings['wgRightsText']['default'] = 'GPLv3';
+		$wi->config->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
+		break;
 	case 'empty':
 		break;
 }
