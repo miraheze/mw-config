@@ -1711,6 +1711,14 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'protectionindicator' => [
+			'name' => 'ProtectionIndicator',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ProtectionIndicator',
+			'var' => 'wmgUseProtectionIndicator',
+			'conflicts' => false,
+			'install' => [],
+			'requires' => [],
+		],
 		'protectsite' => [
 			'name' => 'Protect Site',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ProtectSite',
