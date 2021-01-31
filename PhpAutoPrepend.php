@@ -12,12 +12,15 @@ if ( PHP_SAPI === 'fpm-fcgi' ) {
  */
 function mirahezeSetTimeLimit() {
 	global $wmgTimeLimit;
+
 	if ( PHP_SAPI === 'cli' ) {
 		// The time limit should already be zero, and Maintenance.php should set it to zero
 		$wmgTimeLimit = 0;
 		return;
 	}
+
 	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
+
 	switch ( $host ) {
 		case 'jobrunner1.miraheze.org':
 		case 'jobrunner2.miraheze.org':
@@ -32,7 +35,7 @@ function mirahezeSetTimeLimit() {
 			}
 	}
 
-    set_time_limit( $wmgTimeLimit );
+	set_time_limit( $wmgTimeLimit );
 }
 
 mirahezeSetTimeLimit();
