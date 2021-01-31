@@ -1014,6 +1014,9 @@ $wi->config->settings += [
 	'wmgUseGeoData' => [
 		'default' => false,
 	],
+	'wmgUseGeoGebra' => [
+		'default' => false,
+	],
 	'wmgUseGettingStarted' => [
 		'default' => false,
 	],
