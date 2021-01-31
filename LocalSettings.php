@@ -1267,10 +1267,10 @@ $wi->config->settings += [
 	'wmgUseProofreadPage' => [
 		'default' => false,
 	],
-	'wmgUseProtectionIndicator' => [
-		'default' => false
-	],
 	'wmgUseProtectSite' => [
+		'default' => false,
+	],
+	'wmgUseProtectionIndicator' => [
 		'default' => false,
 	],
 	'wmgUsePurge' => [
