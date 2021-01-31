@@ -759,6 +759,10 @@ if ( $wmgUseProofreadPage ) {
 	];
 }
 
+if ( $wmgUseProtectionIndicator ) {
+	wfLoadExtension( 'ProtectionIndicator' );
+}
+
 if ( $wmgUseProtectSite ) {
 	wfLoadExtension( 'ProtectSite' );
 }
