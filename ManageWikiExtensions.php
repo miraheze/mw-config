@@ -798,6 +798,13 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'geogebra' => [
+			'name' => 'GeoGebra',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GeoGebra',
+			'var' => 'wmgUseGeoGebra',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'gettingstarted' => [
 			'name' => 'GettingStarted',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GettingStarted',

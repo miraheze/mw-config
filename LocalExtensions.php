@@ -331,6 +331,10 @@ if ( $wmgUseGeoData ) {
 	wfLoadExtension( 'GeoData' );
 }
 
+if ( $wmgUseGeoGebra ) {
+	wfLoadExtension( 'GeoGebra' );
+}
+
 if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 }
