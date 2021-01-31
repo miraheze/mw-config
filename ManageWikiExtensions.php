@@ -1966,11 +1966,7 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SlackNotifications',
 			'var' => 'wmgUseSlackNotifications',
 			'conflicts' => false,
-			'requires' => [
-				'visibility' => [
-					'state' => 'public',
-				],
-			],
+			'requires' => [],
 		],
 		'snapprojectembed' => [
 			'name' => 'Snap! Project Embed',
