@@ -1086,7 +1086,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
-	        'logofunctions' => [
+		'logofunctions' => [
 			'name' => 'LogoFunctions',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LogoFunctions',
 			'var' => 'wmgUseLogoFunctions',
