@@ -12,6 +12,7 @@ wfLoadExtensions( [
 	'ConfirmEdit',
 	'ConfirmEdit/ReCaptchaNoCaptcha',
 	'DataDump',
+	'DiscordNotifications',
 	'DismissableSiteNotice',
 	'Echo',
 	// Required by CentralNotice
