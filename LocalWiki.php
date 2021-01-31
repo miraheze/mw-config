@@ -129,7 +129,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 				"{$wgUploadDirectory}/dumps",
 				'-zcvf',
 				$dataDumpDirectory . '${filename}',
-				$wgUploadDirectory
+				"{$wgUploadDirectory}/"
 			],
 		],
 		'limit' => 1,
