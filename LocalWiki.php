@@ -6,7 +6,7 @@
 if ( false /*preg_match( '/^(a)(.+)wiki$/', $wi->dbname )*/ ) {
 	$wmgUploadHostname = 'static-new.miraheze.org';
 	$wgUploadPath = "https://static-new.miraheze.org/$wgDBname";
-	$wgUploadDirectory = "/mnt/mediawiki-static2/$wgDBname";
+	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 }
 
 // Closed Wikis
