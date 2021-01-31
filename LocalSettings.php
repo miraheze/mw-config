@@ -315,6 +315,22 @@ $wi->config->settings += [
 	'wgCosmosContentOpacityLevel' => [
 		'default' => 100,
 	],
+	'CosmosEnabledRailModules' => [
+		'default' => [
+			'recentchanges' => 'normal',
+			'interface' => [
+				'cosmos-customsidebar' => 'normal',
+				'cosmos-stickysidebar' => 'sticky',
+			],
+		],
+		'thewhiteroomwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-customsidebar' => 'normal',
+				'cosmos-stickysidebar' => 'sticky',
+			],
+		],
+	],
 
 	// CategoryTree
 	'wgCategoryTreeDefaultMode' => [
