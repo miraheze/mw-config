@@ -315,7 +315,7 @@ $wi->config->settings += [
 	'wgCosmosContentOpacityLevel' => [
 		'default' => 100,
 	],
-	'CosmosEnabledRailModules' => [
+	'wgCosmosEnabledRailModules' => [
 		'default' => [
 			'recentchanges' => 'normal',
 			'interface' => [
