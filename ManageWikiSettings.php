@@ -1196,7 +1196,6 @@ $wgManageWikiSettings = [
 		'help' => 'URL of the Discord webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
 		'requires' => [
 			'visibility' => [
-				'state' => 'public',
 				'permissions' => [
 					'managewiki',
 				],
@@ -1210,11 +1209,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'notifications',
 		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
-		'requires' => [
-			'visibility' => [
-				'state' => 'public',
-			],
-		],
+		'requires' => [],
 	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'name' => 'Discord Notification Ignore Minor Edits',
@@ -1223,11 +1218,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'notifications',
 		'help' => 'Ignore Minor Edits from Discord feeds',
-		'requires' => [
-			'visibility' => [
-				'state' => 'public',
-			],
-		],
+		'requires' => [],
 	],
 	'wgDiscordNotificationBlockedUser' => [
 		'name' => 'Discord Notification Blocked User',
@@ -1236,11 +1227,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on user or IP blocked in MediaWiki.',
-		'requires' => [
-			'visibility' => [
-				'state' => 'public',
-			],
-		],
+		'requires' => [],
 	],
 	'wgDiscordNotificationNewUser' => [
 		'name' => 'Discord Notification New User',
@@ -1249,11 +1236,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'notifications',
 		'help' => 'Notify on new user added into MediaWiki.',
-		'requires' => [
-			'visibility' => [
-				'state' => 'public',
-			],
-		],
+		'requires' => [],
 	],
 	'wgSlackIncomingWebhookUrl' => [
 		'name' => 'Slack Incoming Webhook URL',
@@ -1264,7 +1247,6 @@ $wgManageWikiSettings = [
 		'help' => 'URL of the Slack webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
 		'requires' => [
 			'visibility' => [
-				'state' => 'public',
 				'permissions' => [
 					'managewiki',
 				],
