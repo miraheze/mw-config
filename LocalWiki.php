@@ -66,8 +66,7 @@ if ( !$cwPrivate ) {
 		'omit_bots' => true,
 	];
 
-	// global extension
-	wfLoadExtension( 'DiscordNotifications' );
+	$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = [ $wmgGlobalDiscordWebhookUrl ];
 } else {
 	if ( $wmgPrivateUploads ) {
 		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
@@ -366,7 +365,6 @@ switch ( $wmgWikiLicense ) {
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
-$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = [ $wmgGlobalDiscordWebhookUrl ];
 
 // Slack
 $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
