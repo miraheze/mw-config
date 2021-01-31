@@ -902,7 +902,7 @@ if ( $wmgUseTabsCombination ) {
 }
 
 if ( $wmgUseTemplateData ) {
-        wfLoadExtension( 'TemplateData' );
+	wfLoadExtension( 'TemplateData' );
 }
 	
 if ( $wmgUseTemplateSandbox ) {
@@ -1117,7 +1117,7 @@ if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
 	// We need to set 'forwardCookies' for private wikis and
 	// for pages restricted by protection.
 	$wgVirtualRestConfig['modules']['parsoid'] = [
-                'url' => "$wgServer/w/rest.php",
+ 		'url' => "$wgServer/w/rest.php",
  		'domain' => $wgServer,
  		'prefix' => $wgDBname,
  		'forwardCookies' => true,
