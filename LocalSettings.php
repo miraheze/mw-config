@@ -2003,10 +2003,10 @@ $wi->config->settings += [
 			'wikiaincubatorplus',
 		],
 		'+mrjaroslavikwiki' => [
-		        'wikipedia' => [
-                                 'cs',
-                                 'en',
-                          ],
+			'wikipedia' => [
+				'cs',
+				'en',
+			],
 		],
 		'+r4356thwiki' => [
 			'scratchwiki',
