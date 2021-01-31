@@ -166,6 +166,7 @@ $IP/extensions/Popups/extension.json
 $IP/extensions/Preloader/extension.json
 $IP/extensions/ProofreadPage/extension.json
 $IP/extensions/ProtectSite/extension.json
+$IP/extensions/ProtectionIndicator/extension.json
 $IP/extensions/Purge/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/QuizGame/extension.json
