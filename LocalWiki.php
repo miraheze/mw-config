@@ -254,39 +254,34 @@ if ( $wmgUseYandexTranslate ) {
 }
 
 // Per-wiki settings
-
-//T5981
 if ( $wgDBname === 'erislywiki' ) {
-	$wgHooks['BeforePageDisplay'][] = 'addPreMidmetatag';
+	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 	
-	function addPreMidmetatag( OutputPage $out ) {
-		// $out is an instance of the OutputPage object.
-		// Add a meta tag
+	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
 	}
 }
 
-// T6764
 if ( $wgDBname === 'linkwikiwiki' ) {
-	$wgHooks['BeforePageDisplay'][] = 'addNaverVerificationKey';
+	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 	
-	function addNaverVerificationKey ( OutputPage $out ) {
+	function onBeforePageDisplay ( OutputPage $out ) {
 		$out->addMeta( 'naver-site-verification', '42e328a7c17f55beed38a6ad399777b6de20d6b9' );
 	}
 }
 
 if ( $wgDBname === 'metawiki' ) {
-	$wgHooks['BeforePageDisplay'][] = 'wfModifyMetaTags';
+	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
-	function wfModifyMetaTags( OutputPage $out ) {
+	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
 		$out->addMeta( 'revisit-after', '2 days' );
 		$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 	}
 
-	$wgHooks['SkinBuildSidebar'][] = 'wfDonateLink';
+	$wgHooks['SkinBuildSidebar'][] = 'onSkinBuildSidebar';
 
-	function wfDonateLink( $skin, &$bar ) {
+	function onSkinBuildSidebar( $skin, &$bar ) {
 		$bar['donate'][] = [
 			'text'  => $skin->msg( 'miraheze-donate' ),
 			'href'  => '/wiki/Donate',
