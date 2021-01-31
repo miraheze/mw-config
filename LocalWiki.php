@@ -254,12 +254,24 @@ if ( $wmgUseYandexTranslate ) {
 }
 
 // Per-wiki settings
+
+//T5981
 if ( $wgDBname === 'erislywiki' ) {
-	$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
-	function onOutputPageParserOutput( OutputPage &$out, ParserOutput $parseroutput ) {
+	$wgHooks['BeforePageDisplay'][] = 'addPreMidmetatag';
+	
+	function addPreMidmetatag( OutputPage $out ) {
 		// $out is an instance of the OutputPage object.
 		// Add a meta tag
 		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
+	}
+}
+
+// T6764
+if ( $wgDBname === 'linkwikiwiki' ) {
+	$wgHooks['BeforePageDisplay'][] = 'addNaverVerificationKey';
+	
+	function addNaverVerificationKey ( OutputPage $out ) {
+		$out->addMeta( 'naver-site-verification', '42e328a7c17f55beed38a6ad399777b6de20d6b9' );
 	}
 }
 
