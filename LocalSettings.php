@@ -312,6 +312,8 @@ $wi->config->settings += [
 		'default' => [
 			'recentchanges' => 'normal',
 			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
 				'cosmos-customsidebar' => 'normal',
 				'cosmos-stickysidebar' => 'sticky',
 			],
