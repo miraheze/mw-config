@@ -22,8 +22,8 @@ function mirahezeSetTimeLimit() {
 	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
 
 	switch ( $host ) {
-		case 'jobrunner1.miraheze.org':
-		case 'jobrunner2.miraheze.org':
+		case 'jobrunner3.miraheze.org':
+		case 'jobrunner4.miraheze.org':
 			$wmgTimeLimit = 1200;
 			break;
 
