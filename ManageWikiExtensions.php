@@ -1862,7 +1862,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'report_table' => "$IP/extensions/Report/sql/table.sql",
+					'report_reports' => "$IP/extensions/Report/sql/table.sql",
 				],
 				'permissions' => [
 					'user' => [
