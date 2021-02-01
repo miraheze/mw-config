@@ -175,13 +175,6 @@ $wi->config->settings += [
 	'wgCacheDirectory' => [
 		'default' => '/srv/mediawiki/w/cache',
 	],
-	'+wgLocalisationCacheConf' => [
-		'default' => [
-			'storeClass' => LCStoreCDB::class,
-			'storeDirectory' => "$IP/cache/l10n",
-			'manualRecache' => true,
-		],
-	],
 	'wgExtensionEntryPointListFiles' => [
 		'default' => [
 			'/srv/mediawiki/config/extension-list'
@@ -3869,6 +3862,10 @@ $wgDefaultUserOptions = array_merge( $wgDefaultUserOptions, $wmgDefaultUserOptio
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
+
+$wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
+$wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
+$wgLocalisationCacheConf['manualRecache'] = true;
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
