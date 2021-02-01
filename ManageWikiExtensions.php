@@ -2416,7 +2416,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 		],
 		'variables' => [
-			'name' => 'Variable',
+			'name' => 'Variables',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Variables',
 			'var' => 'wmgUseVariables',
 			'conflicts' => false,
