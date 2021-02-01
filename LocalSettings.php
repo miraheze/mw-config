@@ -32,6 +32,11 @@ $wi->setVariables(
 	]
 );
 
+// Support migration to new volume
+if ( preg_match( '/^(a)(.+)wiki$/', $wi->dbname ) ) {
+	$wmgUploadHostname = 'static-new.miraheze.org';
+}
+
 $wi->config->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -3858,6 +3863,12 @@ $wgDefaultUserOptions = array_merge( $wgDefaultUserOptions, $wmgDefaultUserOptio
 
 $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
+
+// Support migration to new volume
+if ( preg_match( '/^(a)(.+)wiki$/', $wi->dbname ) ) {
+	$wgUploadPath = "https://static-new.miraheze.org/$wgDBname";
+	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
+}
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
