@@ -318,6 +318,13 @@ $wi->config->settings += [
 				'cosmos-stickysidebar' => 'sticky',
 			],
 		],
+		'agentsofshieldwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-customsidebar' => 'normal',
+				'cosmos-stickysidebar' => 'sticky',
+			],
+		],
 		'thewhiteroomwiki' => [
 			'recentchanges' => false,
 			'interface' => [
