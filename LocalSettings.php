@@ -3842,10 +3842,6 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
-	$wi->config->settings['wgLocalisationCacheConf']['default']['manualRecache'] = false;
-}
-
 // End settings requiring access to variables
 
 $wi->readCache();
@@ -3866,6 +3862,10 @@ $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
+
+if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
+	$wgLocalisationCacheConf['manualRecache'] = false;
+}
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
