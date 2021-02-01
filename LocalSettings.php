@@ -318,32 +318,14 @@ $wi->config->settings += [
 				'cosmos-stickysidebar' => 'sticky',
 			],
 		],
-		'agentsofshieldwiki' => [
+		'+agentsofshieldwiki' => [
 			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-				'cosmos-customsidebar' => 'normal',
-				'cosmos-stickysidebar' => 'sticky',
-			],
 		],
-		'thewhiteroomwiki' => [
+		'+thewhiteroomwiki' => [
 			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-				'cosmos-customsidebar' => 'normal',
-				'cosmos-stickysidebar' => 'sticky',
-			],
 		],
-		'wandavisionwiki' => [
+		'+wandavisionwiki' => [
 			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-				'cosmos-customsidebar' => 'normal',
-				'cosmos-stickysidebar' => 'sticky',
-			],
 		],
 	],
 
