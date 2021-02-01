@@ -332,6 +332,13 @@ $wi->config->settings += [
 				'cosmos-stickysidebar' => 'sticky',
 			],
 		],
+		'wandavisionwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-customsidebar' => 'normal',
+				'cosmos-stickysidebar' => 'sticky',
+			],
+		],
 	],
 
 	// CategoryTree
