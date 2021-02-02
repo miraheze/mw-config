@@ -829,7 +829,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => '<b>File uploads have been disabled until further notice due to ongoing maintenance. Please see the global sitenotice on any Miraheze wiki for more information.</b>',
+		'help' => '<b>File uploads have been disabled until further notice due to an ongoing maintenance. Please see the global sitenotice on any Miraheze wiki for more information.</b>',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
