@@ -1,41 +1,169 @@
-<?php
+There is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm one
 
-// Open logs and set the syslog.ident to a sensible value on php-fpm
-if ( PHP_SAPI === 'fpm-fcgi' ) {
-	openlog( 'php7.3-fpm', LOG_ODELAY, LOG_DAEMON );
-}
+My mother was a tailor
+She sewed my new blue jeans
+My father was a gamblin' man
+Down in New Orleans
 
-/**
- * Configure timeouts. These should be slightly less than the Apache timeouts,
- * so that the slightly more informative PHP error message is delivered to the
- * user, and so that we can verify that PHP timeouts actually exist (T97192).
- */
-function mirahezeSetTimeLimit() {
-	global $wmgTimeLimit;
+Now the only thing a gambler needs
+Is a suitcase and trunk
+And the only time he's satisfied
+Is when he's on a drunk
 
-	if ( PHP_SAPI === 'cli' ) {
-		// The time limit should already be zero, and Maintenance.php should set it to zero
-		$wmgTimeLimit = 0;
-		return;
-	}
+Oh mother tell your children
+Not to do what I have done
+Spend your lives in sin and misery
+In the House of the Rising Sun
 
-	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
+Well, I got one foot on the platform
+The other foot on the train
+I'm goin' back to New Orleans
+To wear that ball and chain
 
-	switch ( $host ) {
-		case 'jobrunner1.miraheze.org':
-		case 'jobrunner2.miraheze.org':
-			$wmgTimeLimit = 1200;
-			break;
+Well, there is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm oneThere is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm one
 
-		default:
-			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-				$wmgTimeLimit = 200;
-			} else {
-				$wmgTimeLimit = 60;
-			}
-	}
+My mother was a tailor
+She sewed my new blue jeans
+My father was a gamblin' man
+Down in New Orleans
 
-	set_time_limit( $wmgTimeLimit );
-}
+Now the only thing a gambler needs
+Is a suitcase and trunk
+And the only time he's satisfied
+Is when he's on a drunk
 
-mirahezeSetTimeLimit();
+Oh mother tell your children
+Not to do what I have done
+Spend your lives in sin and misery
+In the House of the Rising Sun
+
+Well, I got one foot on the platform
+The other foot on the train
+I'm goin' back to New Orleans
+To wear that ball and chain
+
+Well, there is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm oneThere is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm one
+
+My mother was a tailor
+She sewed my new blue jeans
+My father was a gamblin' man
+Down in New Orleans
+
+Now the only thing a gambler needs
+Is a suitcase and trunk
+And the only time he's satisfied
+Is when he's on a drunk
+
+Oh mother tell your children
+Not to do what I have done
+Spend your lives in sin and misery
+In the House of the Rising Sun
+
+Well, I got one foot on the platform
+The other foot on the train
+I'm goin' back to New Orleans
+To wear that ball and chain
+
+Well, there is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm oneThere is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm one
+
+My mother was a tailor
+She sewed my new blue jeans
+My father was a gamblin' man
+Down in New Orleans
+
+Now the only thing a gambler needs
+Is a suitcase and trunk
+And the only time he's satisfied
+Is when he's on a drunk
+
+Oh mother tell your children
+Not to do what I have done
+Spend your lives in sin and misery
+In the House of the Rising Sun
+
+Well, I got one foot on the platform
+The other foot on the train
+I'm goin' back to New Orleans
+To wear that ball and chain
+
+Well, there is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm oneThere is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm one
+
+My mother was a tailor
+She sewed my new blue jeans
+My father was a gamblin' man
+Down in New Orleans
+
+Now the only thing a gambler needs
+Is a suitcase and trunk
+And the only time he's satisfied
+Is when he's on a drunk
+
+Oh mother tell your children
+Not to do what I have done
+Spend your lives in sin and misery
+In the House of the Rising Sun
+
+Well, I got one foot on the platform
+The other foot on the train
+I'm goin' back to New Orleans
+To wear that ball and chain
+
+Well, there is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm oneThere is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm one
+
+My mother was a tailor
+She sewed my new blue jeans
+My father was a gamblin' man
+Down in New Orleans
+
+Now the only thing a gambler needs
+Is a suitcase and trunk
+And the only time he's satisfied
+Is when he's on a drunk
+
+Oh mother tell your children
+Not to do what I have done
+Spend your lives in sin and misery
+In the House of the Rising Sun
+
+Well, I got one foot on the platform
+The other foot on the train
+I'm goin' back to New Orleans
+To wear that ball and chain
+
+Well, there is a house in New Orleans
+They call the Rising Sun
+And it's been the ruin of many a poor boy
+And God I know I'm one
