@@ -1,6 +1,6 @@
 <?php
 
-if ( $wmgSiteNoticeOptOut ) {
+/* if ( $wmgSiteNoticeOptOut ) {
 	// only show important notices when optout
 	$wi->config->settings['wgNoticeProject']['default'] = 'optout';
 }
@@ -21,4 +21,4 @@ if ( !$wmgSiteNoticeOptOut ) {
 			</tr></tbody></table>
 		EOF;
 	}
-}
+} */
