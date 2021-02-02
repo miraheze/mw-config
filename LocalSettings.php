@@ -1714,7 +1714,7 @@ $wi->config->settings += [
 
 	// Files
 	'wgEnableUploads' => [
-		'default' => true,
+		'default' => false,
 	],
 	// T3797
 	'wgMaxUploadSize' => [
