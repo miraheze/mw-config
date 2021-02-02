@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 56;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%">Miraheze is in the process of migrating its technical infrastructure, as a result, file uploads have been disabled on all Miraheze wikis until further notice. We hope to get file uploads re-enabled as soon as possible. Thank you for your patience and we apologize for the inconvenience.</td>
+			<td style="font-size:125%">Miraheze is in the process of migrating its technical infrastructure to <a href="https://www.ovhcloud.com/en-gb/bare-metal/advance/adv-2/" target="_blank">new, upgraded, and improved servers</a>, so file uploads have been disabled on all wikis while this migration takes place. We understand the disruption this causes, and anticipate being able to enable file uploads as soon as possible. Thank you for your patience.</td>
 			</tr></tbody></table>
 		EOF;
 	}
