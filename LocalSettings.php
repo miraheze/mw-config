@@ -1583,6 +1583,9 @@ $wi->config->settings += [
 	'wgDataDumpDownloadUrl' => [
 		'default' => "https://static.miraheze.org/{$wi->dbname}/dumps/\${filename}",
 	],
+	'wgDataDumpDisableGenerate' => [
+		'default' => true,
+	],
 
 	'egApprovedRevsEnabledNamespaces' => [
  		'default' => [
