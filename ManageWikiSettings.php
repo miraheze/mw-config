@@ -829,7 +829,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => '<b>File uploads have been disabled until further notice due to an ongoing maintenance. Please see the global sitenotice on any Miraheze wiki for more information.</b>  Check or uncheck this option if you want to enable or disable the upload of files on your wiki.',
+		'help' => 'Check or uncheck this option if you want to enable or disable the upload of files on your wiki.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
