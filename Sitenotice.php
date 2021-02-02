@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 56;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%">Miraheze is in the process of migrating its technical infrastructure, so file uploads have been disabled on all Miraheze wikis until further notice. We apologize for any inconvenience. Thank you for your patience and we hope to get uploads re-enabled as soon as possible.</td>
+			<td style="font-size:125%">Miraheze is in the process of migrating its technical infrastructure, so file uploads have been disabled on all Miraheze wikis until further notice. We hope to get file uploads re-enabled as soon as possible. Thank you for your patience and we apologize for the inconvenience.</td>
 			</tr></tbody></table>
 		EOF;
 	}
