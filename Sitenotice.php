@@ -17,7 +17,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%">Miraheze is working to resolve file upload issues. We apologies for any inconvenience caused.</td>
+			<td style="font-size:125%">We are aware of issues where some wikis are unable to upload files, or are experiencing issues in thumbnail rendering. We are trying to resolve this as fast as we can, but we don't currently have an estimated time as to when this will be resolved. We apologise for the inconvenience this may cause, and thank you for your patience.</td>
 			</tr></tbody></table>
 		EOF;
 	}
