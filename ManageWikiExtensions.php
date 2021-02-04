@@ -6,7 +6,8 @@
  * linkPage: full url for an information page for the extension.
  * var: the relevant var that enables the extension.
  * conflicts: string of extensions that cause this extension to not work.
- * requires: an array, string, or integer. See below for available types that can be used here.
+ * requires: an array. See below for available options.
+ * install: an array. See below for available options.
  *
  * 'requires' can be one of:
  *
@@ -16,6 +17,15 @@
  * pages: max integer amount of pages a wiki may have in order to enable this extension.
  * permissions: array of permissions a user must have to be able to enable this extension. Regardless of this value, a user must always have the managewiki permission.
  * visibility['state']: can be either 'private' or 'public'. If set to 'private' this extension can only be enabled on private wikis. If set to 'public' it can only be enabled on public wikis.
+ *
+ * 'install' can be one of:
+ *
+ * files: array, mapped to location => source.
+ * mwscript: array, mapped to script path => array of options.
+ * namespaces: array of which namespaces to install with extension.
+ * permissions: array of which permissions to install with extension.
+ * settings: array of ManageWikiSettings to modify even the extension is enabled, mapped var => value.
+ * sql: array of sql files to install with extension, mapped table name => sql file path.
  */
 
 $wgManageWikiExtensions = [
