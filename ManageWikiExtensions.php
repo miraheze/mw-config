@@ -615,6 +615,11 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDynamicPageList3',
 			'conflicts' => 'dynamicpagelist',
 			'requires' => [],
+			'install' => [
+				'mwscript' => [
+ 					"$IP/extensions/DynamicPageList3/classes/db/CreateTemplateUpdateMaintenance.php" => [],
+				],
+			],
 		],
 		'dynamicsidebar' => [
 			'name' => 'DynamicSidebar',
