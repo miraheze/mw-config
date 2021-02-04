@@ -822,6 +822,9 @@ $wi->config->settings += [
 	'wmgShowPopupsByDefault' => [
 		'default' => false,
 	],
+	'wgWatchlistExpiry' => [
+		'default' => false,
+	],
 
 	// Extensions and Skins
 	'wmgUse3D' => [
