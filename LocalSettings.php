@@ -3891,12 +3891,6 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
-// Varnish
-
-// We set wgInternalServer to wgServer as we need this to get purging working.
-// https://www.mediawiki.org/wiki/Manual:$wgInternalServer
-$wgInternalServer = $wgServer;
-
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
