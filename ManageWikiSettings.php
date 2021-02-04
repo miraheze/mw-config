@@ -579,10 +579,10 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgWatchlistExpiry' => [
-		'name' => 'Watchlist Expiry',
+		'name' => 'Allow Watchlist Expiry Time',
 		'from' => 'mediawiki',
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'edit',
 		'help' => 'Whether to allow users to select a expiry time when adding an item to their watchlist',
 		'requires' => [],
