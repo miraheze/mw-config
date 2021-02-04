@@ -3,7 +3,7 @@
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
 // Support migration to new volume
-if ( preg_match( '/^(a|b|c|d|e|f|g|h|i)(.+)wiki$/', $wi->dbname ) || $wi->dbname === 'dreamversewiki' ) {
+if ( preg_match( '/^(a|b|c|d|e|f|g|h|i|k)(.+)wiki$/', $wi->dbname ) ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 }
 
