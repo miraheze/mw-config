@@ -3893,7 +3893,7 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Varnish
 
-// We set $wgInternalServer to wgServer as we need this to get purging working.
+// We set wgInternalServer to wgServer as we need this to get purging working.
 // https://www.mediawiki.org/wiki/Manual:$wgInternalServer
 $wgInternalServer = $wgServer;
 
