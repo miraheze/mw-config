@@ -24,7 +24,7 @@
  * mwscript: array, mapped to script path => array of options.
  * namespaces: array of which namespaces to install with extension.
  * permissions: array of which permissions to install with extension.
- * settings: array of ManageWikiSettings to modify even the extension is enabled, mapped var => value.
+ * settings: array of ManageWikiSettings to modify when the extension is enabled, mapped variable => value.
  * sql: array of sql files to install with extension, mapped table name => sql file path.
  */
 
