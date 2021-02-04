@@ -35,6 +35,11 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUse3D',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'settings' => [
+					'wgFileExtensions' => array_merge( $wgFileExtensions, [ 'stl' ] ),
+				],
+			],
 		],
 		'addthis' => [
 			'name' => 'AddThis',
