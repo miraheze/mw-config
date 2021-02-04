@@ -578,6 +578,15 @@ $wgManageWikiSettings = [
 		'help' => 'Default Page Previews visibility. Has to be a string as a compatibility with beta feature settings.',
 		'requires' => [],
 	],
+	'wgWatchlistExpiry' => [
+		'name' => 'Watchlist Expiry',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Whether to allow users to select a expiry time when adding an item to their watchlist',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
