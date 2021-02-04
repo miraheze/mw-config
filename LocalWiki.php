@@ -4,8 +4,6 @@
 
 // Support migration to new volume
 if ( preg_match( '/^(a|b|c|e|f|g|h|i)(.+)wiki$/', $wi->dbname ) || $wi->dbname === 'dreamversewiki' ) {
-	$wmgUploadHostname = 'static-new.miraheze.org';
-	$wgUploadPath = "https://static-new.miraheze.org/$wgDBname";
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
 }
 
