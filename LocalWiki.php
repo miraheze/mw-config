@@ -32,14 +32,14 @@ if ( $cwClosed ) {
 		function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/0/02/Wiki_lock.png" align="left" style="width:80px;height:90px";>This wiki has been closed because there have been <b>no edits</b> or <b>logs</b> made within the last 60 days. Since this wiki is private, it may not be adopted as a public wiki would be. If this wiki is not reopened within 6 months it may be deleted. Note: If you are a bureaucrat on this wiki you can go to <a href="/wiki/Special:ManageWiki">Special:ManageWiki</a> and uncheck the "closed" box to reopen it. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
-EOF;
+			EOF;
 		}
 	} else {
 		$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
 		function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
 			$siteNotice .= <<<EOF
 				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/0/02/Wiki_lock.png" align="left" style="width:80px;height:90px";>This wiki has been closed because there have been <b>no edits</b> or <b>logs</b> made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to <a href="https://meta.miraheze.org/wiki/Requests_for_adoption">Requests for adoption</a> and make a request. If this wiki is not adopted within 6 months it may be deleted. Note: If you are a bureaucrat on this wiki you can go to <a href="/wiki/Special:ManageWiki">Special:ManageWiki</a> and uncheck the "closed" box to reopen it. </span></div>
-EOF;
+			EOF;
 		}
 	}
 }
@@ -81,6 +81,7 @@ if ( !$cwPrivate ) {
 	} else {
 		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
 	}
+
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
 	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
