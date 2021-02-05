@@ -3079,7 +3079,7 @@ $wi->config->settings += [
 				'password' => $wmgRedisPassword,
 			],
 			'jobrunner' => [
-				'server' => '51.89.160.135:6379',
+				'server' => '51.195.236.220:6379',
 				'password' => $wmgRedisPassword,
 			],
 		],
