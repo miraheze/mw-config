@@ -8,6 +8,7 @@
  * conflicts: string of extensions that cause this extension to not work.
  * requires: an array. See below for available options.
  * install: an array. See below for available options.
+ * remove: an array. See install for available options.
  *
  * 'requires' can be one of:
  *
@@ -18,11 +19,11 @@
  * permissions: array of permissions a user must have to be able to enable this extension. Regardless of this value, a user must always have the managewiki permission.
  * visibility['state']: can be either 'private' or 'public'. If set to 'private' this extension can only be enabled on private wikis. If set to 'public' it can only be enabled on public wikis.
  *
- * 'install' can be one of:
+ * 'install'/'remove' can be one of:
  *
  * files: array, mapped to location => source.
  * mwscript: array, mapped to script path => array of options.
- * namespaces: array of which namespaces to install with extension.
+ * namespaces: array of which namespaces and namespace data to install with extension; 'remove' only needs namespace ID.
  * permissions: array of which permissions to install with extension.
  * settings: array of ManageWikiSettings to modify when the extension is enabled, mapped variable => value.
  * sql: array of sql files to install with extension, mapped table name => sql file path.
