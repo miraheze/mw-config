@@ -63,7 +63,7 @@ if ( $cwInactive && (string)$cwInactive != 'exempt' ) {
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
-		'uri' => 'udp://51.89.160.138:5070',
+		'uri' => 'udp://51.195.236.249:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	];
@@ -163,7 +163,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
-		( $_SERVER['REMOTE_ADDR'] === '51.89.160.132' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1056::7' || $_SERVER['REMOTE_ADDR'] === '51.89.160.141' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:105a::9' ) ) {
+		( $_SERVER['REMOTE_ADDR'] === '51.195.236.212' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:178a::10' || $_SERVER['REMOTE_ADDR'] === '51.195.236.246' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1bbd::13' ) ) {
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
