@@ -5,6 +5,7 @@
 // Support migration to new volume
 if ( preg_match( '/^(a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u)(.+)wiki$/', $wi->dbname ) ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
+	$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static-new/{$wi->dbname}/dumps/";
 }
 
 // Closed Wikis
