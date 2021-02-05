@@ -2,12 +2,6 @@
 
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
-// Support migration to new volume
-if ( preg_match( '/^(a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|x|y|z)(.+)wiki$/', $wi->dbname ) ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static-new/$wgDBname";
-	$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static-new/{$wi->dbname}/dumps/";
-}
-
 // Closed Wikis
 if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
