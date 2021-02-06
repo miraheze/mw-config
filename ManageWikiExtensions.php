@@ -2659,7 +2659,11 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikibaseQualityConstraints',
 			'var' => 'wmgUseWikibaseQualityConstraints',
 			'conflicts' => false,
-			'requires' => [],
+			'requires' => [
+				'extensions' => [
+					'wikibaserepository',
+				],	
+			],
 			'install' => [
 				'sql' => [
 					'wbqc_constraints' => "$IP/extensions/WikibaseQualityConstraints/sql/create_wbqc_constraints.sql",
