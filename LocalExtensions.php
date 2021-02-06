@@ -448,7 +448,7 @@ if ( $wmgUseLdap ) {
 		],
 	];
 	$wgLDAPDomainNames = [ 'miraheze' ];
-	$wgLDAPServerNames = [ 'miraheze' => 'ldap1.miraheze.org' ];
+	$wgLDAPServerNames = [ 'miraheze' => 'ldap2.miraheze.org' ];
 	$wgLDAPEncryptionType = [ 'miraheze' => 'ssl' ];
 
 
