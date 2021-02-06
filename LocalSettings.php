@@ -3917,7 +3917,7 @@ if ( $wi->missing ) {
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
 // Disabled on production hosts because it seems to be causing performance issues (how ironic)
-if ( wfHostname() === 'test2' ) {
+if ( wfHostname() === 'test3' ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
 
