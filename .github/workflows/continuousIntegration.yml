@@ -32,7 +32,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
-          channel: "#miraheze"
+          channel: "#miraheze-sre"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build passed.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}
@@ -41,7 +41,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
-          channel: "#miraheze"
+          channel: "#miraheze-sre"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build has errored.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}
@@ -50,7 +50,7 @@ jobs:
       - uses: rectalogic/notify-irc@v1
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
-          channel: "#miraheze"
+          channel: "#miraheze-sre"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}
