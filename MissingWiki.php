@@ -65,7 +65,7 @@ if ( !$wgCommandLineMode ) {
 					<p class="lead">If you're a wiki visitor:</p>
 					<p>This wiki does not exist on our servers. You can browse wikis on our network <a href="//meta.miraheze.org/wiki/Special:WikiDiscover">here</a> or <a href="https://archive.org/search.php?query=miraheze">view archive.org archives</a>.</p>
 					<p class="lead">If you're the wiki bureaucrat:</p>
-					<p>If this is a problem, please <a href="https://meta.miraheze.org/wiki/Help_center">contact us</a></p>
+					<p>If this is a problem, please <a href="https://meta.miraheze.org/wiki/Help_center">contact us</a>.</p>
 				</div>
 			</div>
 		</div>
