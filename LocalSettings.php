@@ -699,6 +699,13 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// DynamicPageList3
+	'wgDplSettings' => [
+		'allowUnlimitedCategories' => [
+			'default' => false,
+		],
+	],
+
 	// TimedMediaHandler config
 	'wgFFmpegLocation' => [
 		'default' => '/usr/bin/ffmpeg',
