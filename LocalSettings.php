@@ -701,8 +701,8 @@ $wi->config->settings += [
 
 	// DynamicPageList3
 	'wgDplSettings' => [
-		'allowUnlimitedCategories' => [
-			'default' => false,
+		'default' => [
+			'allowUnlimitedCategories' => false,
 		],
 	],
 
