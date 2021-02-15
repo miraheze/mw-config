@@ -196,6 +196,30 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// Cargo
+	'wgCargoFileDataColumns' => [
+		'default' => [],
+		'egoishwiki' => [
+			'mediaType',
+			'path',
+			'lastUploadDate',
+			'fullText',
+			'numPages',
+		],
+	],
+	'wgCargoPageDataColumns' => [
+		'default' => [],
+		'egoishwiki' => [
+			'creationDate',
+			'modificationDate',
+			'creator',
+			'fullText',
+			'categories',
+			'numRevisions',
+			'isRedirect',
+		],
+	],
+
 	// Category Collation
 	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
 		'default' => 'uppercase',
