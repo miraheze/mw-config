@@ -728,6 +728,9 @@ $wi->config->settings += [
 		'default' => [
 			'allowUnlimitedCategories' => false,
 		],
+		'traceprojectwikiwiki' => [
+			'allowUnlimitedCategories' => true,
+		],
 	],
 
 	// TimedMediaHandler config
