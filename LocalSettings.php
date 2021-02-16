@@ -723,16 +723,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
-	// DynamicPageList3
-	'wgDplSettings' => [
-		'default' => [
-			'allowUnlimitedCategories' => false,
-		],
-		'traceprojectwikiwiki' => [
-			'allowUnlimitedCategories' => true,
-		],
-	],
-
 	// TimedMediaHandler config
 	'wgFFmpegLocation' => [
 		'default' => '/usr/bin/ffmpeg',

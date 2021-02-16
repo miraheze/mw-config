@@ -304,6 +304,10 @@ if ( $wgDBname === 'simcitywiki' ) {
 	unset( $wgGroupPermissions['checkuser'] );
 }
 
+if ( $wgDBname === 'traceprojectwikiwiki' ) {
+	$wgDplSettings['allowUnlimitedCategories'] = true;
+}
+
 if ( $wgDBname === 'commonswiki' ) {
 	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
 	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
