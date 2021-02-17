@@ -3097,7 +3097,7 @@ $wi->config->settings += [
 	'wmgRedisSettings' => [
 		'default' => [
 			'cache' => [
-				'server' => '/run/nutcracker/nutcracker.sock',
+				'server' => '51.195.236.223:6379',
 				'password' => $wmgRedisPassword,
 			],
 			'jobrunner' => [
