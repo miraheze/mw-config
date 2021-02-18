@@ -3326,6 +3326,9 @@ $wi->config->settings += [
 	'wgPinterestSiteVerificationKey' => [
 		'default' => null,
 	],
+	'wgWikiSeoDisableLogoFallbackImage' => [
+		'default' => false,
+	],
 
 	'wgExpensiveParserFunctionLimit' => [
 		'default' => 99, //per https://www.mediawiki.org/wiki/Manual:$wgExpensiveParserFunctionLimit
