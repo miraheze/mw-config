@@ -3929,7 +3929,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 }
 
 $wmgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
-if ( $wmgUsersNotifiedOnAllChanges )
+if ( $wmgUsersNotifiedOnAllChanges ) {
 	$wgUsersNotifiedOnAllChanges = $wmgUsersNotifiedOnAllChanges;
 }
 
