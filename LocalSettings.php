@@ -2915,8 +2915,8 @@ $wi->config->settings += [
 	],
 
 	// Users Notified On All Changes
-	'wgUsersNotifiedOnAllChanges' => [
-		'default' => [],
+	'wmgUsersNotifiedOnAllChanges' => [
+		'default' => '',
 	],
 
 	// OATHAuth
@@ -3927,6 +3927,8 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
+
+$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
