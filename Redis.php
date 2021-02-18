@@ -10,8 +10,8 @@ $wgObjectCaches['redis-central'] = [
 ];
 
 $wgMemCachedServers = [
- 	'51.195.236.245:11211'
- ];
+	'51.195.236.245:11211'
+];
 
 $wgMainCacheType = 'redis-central';
 $wgSessionCacheType = 'redis-central';
