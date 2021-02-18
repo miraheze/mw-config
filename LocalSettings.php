@@ -3924,6 +3924,10 @@ if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
+if ( extension_loaded( 'wikidiff2' ) ) {
+	$wgDiff = false;
+}
+
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
