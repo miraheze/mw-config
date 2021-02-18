@@ -2916,7 +2916,7 @@ $wi->config->settings += [
 
 	// Users Notified On All Changes
 	'wmgUsersNotifiedOnAllChanges' => [
-		'default' => [],
+		'default' => '',
 	],
 
 	// OATHAuth
