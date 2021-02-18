@@ -13,8 +13,8 @@ $wgMemCachedServers = [
 	'51.195.236.245:11211'
 ];
 
-$wgMainCacheType = 'redis-central';
-$wgSessionCacheType = 'redis-central';
+$wgMainCacheType = CACHE_MEMCACHED;
+$wgSessionCacheType = CACHE_MEMCACHED;
 $wgSessionsInObjectCache = true;
 
 $wgMessageCacheType = CACHE_DB;
