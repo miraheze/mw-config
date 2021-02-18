@@ -3928,9 +3928,8 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-$wmgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
 if ( $wmgUsersNotifiedOnAllChanges ) {
-	$wgUsersNotifiedOnAllChanges = $wmgUsersNotifiedOnAllChanges;
+	$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
 }
 
 // Fonts
