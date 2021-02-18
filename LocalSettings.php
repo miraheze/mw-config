@@ -3928,7 +3928,10 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
+$wmgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
+if ( $wmgUsersNotifiedOnAllChanges )
+	$wgUsersNotifiedOnAllChanges = $wmgUsersNotifiedOnAllChanges;
+}
 
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
