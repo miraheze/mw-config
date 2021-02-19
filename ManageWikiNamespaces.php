@@ -46,7 +46,7 @@ $wgManageWikiNamespacesAdditional = [
 		'requires' => [],
 	],
 	'wgCapitalLinkOverrides' => [
-		'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace.',
+		'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace. Warning: This may break your existing wiki links.',
 		'from' => 'mediawiki',
 		'type' => 'vestyle',
 		'main' => true,
