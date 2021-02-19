@@ -618,11 +618,8 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'links',
-		'help' => 'Unset this to avoid forcing the first letter of links to capitals.',
+		'help' => 'Unset this to avoid forcing the first letter of links to capitals. Warning: This may break your existing wiki links.',
 		'requires' => [],
-		'script' => [
- 			"$IP/maintenance/cleanupCaps.php" => [],
-		],
 	],
 	'wgDisplayTitleHideSubtitle' => [
 		'name' => 'Don\'t display the page\'s original title below the display title',
