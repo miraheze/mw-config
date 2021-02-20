@@ -58,6 +58,16 @@ $wgManageWikiNamespacesAdditional = [
 		'overridedefault' => false,
 		'requires' => [],
 	],
+	'wgNoFollowNsExceptions' => [
+		'name' => 'Enable if the rel="nofollow" attribute should not be used for external links in this namespace, even if $wgNoFollowLinks is enabled.',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'overridedefault' => false,
+		'requires' => [],
+	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'name' => 'Enable ApprovedRevs in this namespace?',
 		'from' => 'approvedrevs',
