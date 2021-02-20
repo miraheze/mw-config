@@ -652,6 +652,15 @@ $wgManageWikiSettings = [
 		'help' => 'Set a default target for external links.',
 		'requires' => [],
 	],
+	'wgNoFollowLinks' => [
+		'name' => 'NoFollow Links',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'links',
+		'help' => 'If enabled, external links in wikitext will be given the <code>rel="nofollow"</code> attribute.',
+		'requires' => [],
+	],
 	'wgRottenLinksCurlTimeout' => [
 		'name' => 'RottenLinks Timeout Threshold',
 		'from' => 'mediawiki',
