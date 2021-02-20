@@ -1719,6 +1719,15 @@ $wgManageWikiSettings = [
 		'help' => 'Site verification key for Pinterest Console.',
 		'requires' => [],
 	],
+	'wgWikiSeoDisableLogoFallbackImage' => [
+		'name' => 'Disable Logo Fallback Image (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'Disable setting the logo as the fallback SEO image if no image was provided.',
+		'requires' => [],
+	],
 
 	// SocialTools
 	'wgCosmosSocialProfileModernTabs' => [
