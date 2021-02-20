@@ -2918,6 +2918,9 @@ $wi->config->settings += [
 	'wgNoFollowLinks' => [
 		'default' => true,
 	],
+	'wgNoFollowNsExceptions' => [
+		'default' => [],
+	],
 
 	// Users Notified On All Changes
 	'wmgUsersNotifiedOnAllChanges' => [
