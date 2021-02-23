@@ -360,15 +360,6 @@ $wi->config->settings += [
 				'cosmos-stickysidebar' => 'sticky',
 			],
 		],
-		'wandavisionwiki' => [
-			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-				'cosmos-customsidebar' => 'normal',
-				'cosmos-stickysidebar' => 'sticky',
-			],
-		],
 	],
 
 	// CategoryTree
