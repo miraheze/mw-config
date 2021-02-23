@@ -338,8 +338,6 @@ $wi->config->settings += [
 			'interface' => [
 				'cosmos-custom-rail-module' => 'normal',
 				'cosmos-custom-sticky-rail-module' => 'sticky',
-				'cosmos-customsidebar' => 'normal',
-				'cosmos-stickysidebar' => 'sticky',
 			],
 		],
 		'agentsofshieldwiki' => [
@@ -347,8 +345,6 @@ $wi->config->settings += [
 			'interface' => [
 				'cosmos-custom-rail-module' => 'normal',
 				'cosmos-custom-sticky-rail-module' => 'sticky',
-				'cosmos-customsidebar' => 'normal',
-				'cosmos-stickysidebar' => 'sticky',
 			],
 		],
 		'thewhiteroomwiki' => [
@@ -356,8 +352,6 @@ $wi->config->settings += [
 			'interface' => [
 				'cosmos-custom-rail-module' => 'normal',
 				'cosmos-custom-sticky-rail-module' => 'sticky',
-				'cosmos-customsidebar' => 'normal',
-				'cosmos-stickysidebar' => 'sticky',
 			],
 		],
 	],
