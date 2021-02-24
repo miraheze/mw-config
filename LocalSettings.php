@@ -3287,25 +3287,25 @@ $wi->config->settings += [
 		'default' => 'summary_large_image',
 	],
 	'wgGoogleSiteVerificationKey' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgBingSiteVerificationKey' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgFacebookAppId' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgYandexSiteVerificationKey' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgAlexaSiteVerificationKey' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgPinterestSiteVerificationKey' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgNaverSiteVerificationKey' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wgWikiSeoDisableLogoFallbackImage' => [
 		'default' => false,
