@@ -3304,6 +3304,9 @@ $wi->config->settings += [
 	'wgPinterestSiteVerificationKey' => [
 		'default' => null,
 	],
+	'wgNaverSiteVerificationKey' => [
+		'default' => null,
+	],
 	'wgWikiSeoDisableLogoFallbackImage' => [
 		'default' => false,
 	],
