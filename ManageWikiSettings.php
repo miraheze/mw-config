@@ -1720,12 +1720,12 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgNaverSiteVerificationKey' => [
-		'name' => 'Pinterest Site Verification Key (WikiSEO)',
+		'name' => 'Naver Site Verification Key (WikiSEO)',
 		'from' => 'wikiseo',
 		'type' => 'text',
 		'overridedefault' => false,
 		'section' => 'seo',
-		'help' => 'Site verification key for Pinterest Console.',
+		'help' => 'Site verification key for Naver.',
 		'requires' => [],
 	],
 	'wgWikiSeoDisableLogoFallbackImage' => [
