@@ -1457,6 +1457,16 @@ $wgManageWikiExtensions = [
 					'nl_subscriptions' => "$IP/extensions/Newsletter/sql/nl_subscriptions.sql"
 				],
 			],
+			'remove' => [
+				'namespaces' => [
+					'Newsletter' => [
+						'id' => 5500,
+					],
+					'Newsletter_talk' => [
+						'id' => 5501,
+					],
+				],
+			],
 		],
 		'newusermessage' => [
 			'name' => 'New User Message',
@@ -2142,6 +2152,16 @@ $wgManageWikiExtensions = [
 				],
 				'mwscript' => [
  					"$IP/extensions/Flow/maintenance/FlowCreateTemplates.php" => [],
+				],
+			],
+			'remove' => [
+				'namespaces' => [
+					'Topic' => [
+						'id' => 2600,
+					],
+					'Topic_talk' => [
+						'id' => 2601,
+					],
 				],
 			],
 		],
