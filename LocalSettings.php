@@ -2891,6 +2891,14 @@ $wi->config->settings += [
 		'default' => false,
 		'nmfwikiwiki' => true,
 	],
+	
+	// nofollow links
+	'wgNoFollowLinks' => [
+		'default' => true,
+	],
+	'wgNoFollowNsExceptions' => [
+		'default' => [],
+	],
 
 	// Users Notified On All Changes
 	'wmgUsersNotifiedOnAllChanges' => [
