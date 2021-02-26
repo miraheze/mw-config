@@ -3129,6 +3129,11 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// ReplaceText
+	'wgReplaceTextResultsLimit' => [
+		'default' => 250,
+	],
+
 	// Restriction types
 	'wgRestrictionLevels' => [
 		'default' => [
