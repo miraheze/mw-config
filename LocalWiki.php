@@ -264,14 +264,6 @@ if ( $wgDBname === 'erislywiki' ) {
 	}
 }
 
-if ( $wgDBname === 'linkwikiwiki' ) {
-	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-	
-	function onBeforePageDisplay ( OutputPage $out ) {
-		$out->addMeta( 'naver-site-verification', '42e328a7c17f55beed38a6ad399777b6de20d6b9' );
-	}
-}
-
 if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
