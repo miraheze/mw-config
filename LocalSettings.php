@@ -3929,9 +3929,9 @@ putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
+require_once( '/srv/mediawiki/config/GlobalCache.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
-require_once( '/srv/mediawiki/config/Redis.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
 
 if ( $wi->missing ) {
