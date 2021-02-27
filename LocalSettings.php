@@ -3825,7 +3825,7 @@ $wi->config->settings += [
 			'Math' => 'info',
 			'MatomoAnalytics' => 'debug',
 			'Mime' => false,
-			'memcached' => [ 'graylog' => 'info' ], // Debug sprews too much information + sample (otherwise you'll get 2 million+ messages in a few minutes)
+			'memcached' => [ 'graylog' => 'error' ], // Debug sprews too much information + sample (otherwise you'll get 2 million+ messages in a few minutes)
 			'message-format' => false,
 			'MessageCache' => false,
 			'MessageCacheError' => false,
