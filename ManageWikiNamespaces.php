@@ -11,6 +11,7 @@
  * overridedefault: override default when no existing value exist. Can be a boolean, string, or array.
  * overridedefault[$namespace_id => $val]: namespace specific overrides. Also required a default key. See below.
  * overridedefault['default' => $val]: required when using namespace specific overrides. Sets a default for all other namespaces, which is not using the overrides set.
+ * help: string providing help information for the setting.
  * requires: an array, string, or integer. See below for available types that can be used here.
  *
  * 'type' can be one of:
