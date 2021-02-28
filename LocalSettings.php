@@ -1848,7 +1848,6 @@ $wi->config->settings += [
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		'metawiki' => false,
-		'simcitywiki' => false,
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
@@ -2257,11 +2256,6 @@ $wi->config->settings += [
 				'Repo_Maintainer',
 			],
 		],
-		'simcitywiki' => [
-			'founder' => [
-				'banned',
-			],
-		],
 		'sesupportwiki' => [
 			'sysop' => [
 				'editor',
@@ -2464,32 +2458,6 @@ $wi->config->settings += [
 				'editor' => true,
 			],
 		],
-		'simcitywiki' => [
-			'steward' => [
-				'hideuser' => true,
-				'abusefilter-hide-log' => true,
-				'abusefilter-hidden-log' => true,
-				'abusefilter-privatedetails' => true,
-				'abusefilter-privatedetails-log' => true,
-				'suppressionlog' => true,
-				'suppressrevision' => true,
-				'viewsuppressed' => true,
-				'interwiki' => true,
-				'centralauth-rename' => true,
-				'renameuser' => true,
-				'checkuser' => true,
-				'checkuser-log' => true,
-				'managewiki-restricted' => true,
-				'bigdelete' => true,
-				'userrights' => true,
-				'usermerge' => true,
-				'centralauth-usermerge' => true,
-				'oathauth-enable' => true,
-			],
-			'user' => [
-				'mwoauthmanagemygrants' => true,
-			],
-		],
 		'+testwiki' => [
 			'consul' => [
 				'consul' => true,
@@ -2536,11 +2504,6 @@ $wi->config->settings += [
 		'sesupportwiki' => [
 			'sysop' => [
 				'editor',
-			],
-		],
-		'simcitywiki' => [
-			'founder' => [
-				'banned',
 			],
 		],
 	],
@@ -2956,17 +2919,6 @@ $wi->config->settings += [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
-		'simcitywiki' => [
-			'banned' => [
-				'read' => true,
-				'createaccount' => true,
-				'viewmywatchlist' => true,
-				'viewmyprivateinfo' => true,
-				'editmywatchlist' => true,
-				'editmyoptions' => true,
-				'editmyprivateinfo' => true,
-			],
-		],
 	],
 	'wgImplicitGroups' => [
 		'default' => [
@@ -3173,10 +3125,6 @@ $wi->config->settings += [
 		],
 		'+sesupportwiki' => [
 			'editor',
-		],
-		'simcitywiki' => [
-			'autoconfirmed',
-			'sysop',
 		],
 		'+testwiki' => [
 			'bureaucrat',
