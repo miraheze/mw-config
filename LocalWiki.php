@@ -289,12 +289,6 @@ if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
 
-if ( $wgDBname === 'simcitywiki' ) {
-	unset( $wgGroupPermissions['oversight'] );
-	unset( $wgGroupPermissions['interwiki-admin'] );
-	unset( $wgGroupPermissions['checkuser'] );
-}
-
 if ( $wgDBname === 'traceprojectwikiwiki' ) {
 	$wgDplSettings['allowUnlimitedCategories'] = true;
 }
