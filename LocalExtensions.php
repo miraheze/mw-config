@@ -169,7 +169,7 @@ if ( $wmgUseContactPage ) {
 }
 
 if ( $wmgUseContributionScores ) {
-	require_once "$IP/extensions/ContributionScores/ContributionScores.php";
+	wfLoadExtension( 'ContributionScores' );
 }
 
 if ( $wmgUseCosmos ){
