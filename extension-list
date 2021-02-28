@@ -80,6 +80,7 @@ $IP/extensions/GeoGebra/extension.json
 $IP/extensions/GettingStarted/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
+$IP/extensions/GlobalNewFiles/extension.json
 $IP/extensions/GlobalPreferences/extension.json
 $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json

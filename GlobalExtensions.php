@@ -21,6 +21,7 @@ wfLoadExtensions( [
 	'EventStreamConfig',
 	'GlobalBlocking',
 	'GlobalCssJs',
+	'GlobalNewFiles',
 	'GlobalPreferences',
 	'IncidentReporting',
 	'Interwiki',
