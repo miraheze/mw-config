@@ -2660,8 +2660,11 @@ $wi->config->settings += [
 	'wgMatomoAnalyticsUseDB' => [
 		'default' => true,
 	],
+	'wgMatomoAnalyticsSiteID' => [
+		'default' => 8590,
+	],
 	'wgMatomoAnalyticsGlobalID' => [
-		'default' => 1,
+		'default' => 8590,
 	],
 	'wgMatomoAnalyticsDisableCookie' => [
 		'default' => true,
