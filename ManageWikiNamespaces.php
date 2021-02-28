@@ -2,7 +2,7 @@
 /**
  * Additional settings to add to ManageWikiNamespaces are added using the variable below.
  *
- * name: the displayed name of the setting on Special:ManageWiki.
+ * name: the displayed name of the setting on Special:ManageWiki/namespaces.
  * from: a text entry of which extension is required for this setting to work. If added by MediaWiki or a 'global' extension, use 'mediawiki'.
  * type: configuration type. See below for available options.
  * main: true or false. If false, this config will not appear for main namespaces.
