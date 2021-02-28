@@ -507,6 +507,9 @@ $wi->config->settings += [
 	'wgCreateWikiBlacklistedSubdomains' => [
 		'default' => '/^(subdomain\d{1,2}|example\d{1,2}|betameta\d{1,2}|beta\d{1,2}|prueba\d{1,2}|community\d{1,2}|testwiki\d{1,2}|wikitest\d{1,2}|help\d{1,2}|noc|sandbox\d{1,2}|outreach|gazeteer|gazetteer|wikitech|wiki|www|wikis|misc\d{1,2}|db\d{1,2}|cp\d{1,2}|mw\d{1,2}|jobrunner\d{1,2}|gluster\d{1,2}|ns\d{1,2}|bacula\d{1,2}|misc\d{1,2}|mail\d{1,2}|mw\d{1,2}|ldap\d{1,2}|cloud\d{1,2}|mon\d{1,2}|lizardfs\d{1,2}|rdb\d{1,2}|phab\d{1,2}|services\d{1,2}|puppet\d{1,2}|test\d{1,2}|dbbackup\d{1,2}|graylog\d{1,2}|mem\d{1,2}|miraheze\d{1,2})+$/',
 	],
+	'wgCreateWikiCannedResponses' => [
+		'default' => false,
+	],
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
 	],
@@ -540,6 +543,25 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiPersistentModelFile' => [
 		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
+	],
+	'wgCreateWikiPurposes' => [
+		'default' => [
+			'Alternate history wiki',
+			'Class or group project education wiki',
+			'Curriculum resource wiki',
+			'Documentation (hardware) wiki',
+			'Documentation (software) wiki',
+			'Encyclopedia (general) wiki',
+			'Encyclopedia (specialized) wiki',
+			'Eurovision-style song contest statistics tracking wiki',
+			'Fictional worldbuilding/constructed world wiki',
+			'Minecraft server wiki',
+			'Organization (coordination) wiki',
+			'Political simulation wiki',
+			'Roleplaying game wiki',
+			'Video game (specified video game) information wiki',
+			'Video game (broad genre or video game series) information wiki',
+		],
 	],
 	'wgCreateWikiShowBiographicalOption' => [
 		'default' => true,
