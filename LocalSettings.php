@@ -541,6 +541,9 @@ $wi->config->settings += [
 	'wgCreateWikiPersistentModelFile' => [
 		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
 	],
+	'wgCreateWikiShowBiographicalOption' => [
+		'default' => true,
+	],
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
 			"$IP/maintenance/tables.sql",
