@@ -44,6 +44,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgCapitalLinkOverrides' => [
@@ -57,6 +58,7 @@ $wgManageWikiNamespacesAdditional = [
 			8,
 		],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgNoFollowNsExceptions' => [
@@ -67,6 +69,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'egApprovedRevsEnabledNamespaces' => [
@@ -82,6 +85,7 @@ $wgManageWikiNamespacesAdditional = [
 			15,
 		],
 		'overridedefault' => true,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgWPBNamespaces' => [
@@ -92,6 +96,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgCommentStreamsAllowedNamespaces' => [
@@ -102,6 +107,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => null,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgFlaggedRevsNamespaces' => [
@@ -112,6 +118,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'blacklisted' => [ 8 ],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgVisualEditorAvailableNamespaces' => [
@@ -122,6 +129,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgNamespacesToPostIn' => [
@@ -132,6 +140,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgTemplateSandboxEditNamespaces' => [
@@ -142,6 +151,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'blacklisted' => [],
 		'overridedefault' => false,
+		'help' => '',
 		'requires' => [],
 	],
 	'wgARENamespaces' => [
@@ -155,6 +165,7 @@ $wgManageWikiNamespacesAdditional = [
 			array_fill_keys( $wgContentNamespaces, true ),
 			[ 'default' => false ]
 		),
+		'help' => '',
 		'requires' => [],
 	],
 	'wgPreloaderSource' => [
@@ -168,6 +179,7 @@ $wgManageWikiNamespacesAdditional = [
 			0 => 'Template:Boilerplate',
 			'default' => false,
 		],
+		'help' => '',
 		'requires' => [],
 	],
 ];
