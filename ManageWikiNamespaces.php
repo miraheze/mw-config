@@ -37,7 +37,7 @@
 
 $wgManageWikiNamespacesAdditional = [
 	'wgExtraSignatureNamespaces' => [
-		'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages.',
+		'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages?',
 		'from' => 'mediawiki',
 		'type' => 'check',
 		'main' => true,
@@ -48,7 +48,7 @@ $wgManageWikiNamespacesAdditional = [
 		'requires' => [],
 	],
 	'wgCapitalLinkOverrides' => [
-		'name' => 'Force the first letter of links to capitals. Overrides $wgCapitalLinks for this namespace. Warning: This may break your existing wiki links.',
+		'name' => 'Force the first letter of links to capitals.',
 		'from' => 'mediawiki',
 		'type' => 'vestyle',
 		'main' => true,
@@ -58,7 +58,7 @@ $wgManageWikiNamespacesAdditional = [
 			8,
 		],
 		'overridedefault' => false,
-		'help' => '',
+		'help' => 'Overrides $wgCapitalLinks for this namespace. Warning: This may break your existing wiki links.',
 		'requires' => [],
 	],
 	'wgNoFollowNsExceptions' => [
@@ -155,7 +155,7 @@ $wgManageWikiNamespacesAdditional = [
 		'requires' => [],
 	],
 	'wgARENamespaces' => [
-		'name' => 'Enable Article Ratings in this namespace',
+		'name' => 'Enable Article Ratings in this namespace?',
 		'from' => 'articleratings',
 		'type' => 'check',
 		'main' => true,
@@ -169,7 +169,7 @@ $wgManageWikiNamespacesAdditional = [
 		'requires' => [],
 	],
 	'wgPreloaderSource' => [
-		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace. ($wgPreloaderSource)',
+		'name' => 'Name of the page (including page\'s namespace) to use as the source for Preloader in this namespace.',
 		'from' => 'preloader',
 		'type' => 'text',
 		'main' => true,
