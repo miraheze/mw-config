@@ -1076,6 +1076,7 @@ $wgManageWikiSettings = [
 			'ogg' => 'ogg',
 			'ogv' => 'ogv',
 			'ogx' => 'ogx',
+			'opk' => 'opk',
 			'opus' => 'opus',
 			'otf' => 'otf',
 			'otg' => 'otg',
