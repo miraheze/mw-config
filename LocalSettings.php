@@ -3562,7 +3562,7 @@ $wi->config->settings += [
 	
 	// Vector
 	'wgVectorDefaultSkinVersion' => [
-		'default' => 1,
+		'default' => '1',
 	],
 
 	// VisualEditor
