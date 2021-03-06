@@ -363,6 +363,10 @@ if ( $wmgUseGuidedTour ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
+if ( $wmgUseHasSomeColours ) {
+	wfLoadSkin( 'HasSomeColours' );
+}
+
 if ( $wmgUseHAWelcome ) {
 	wfLoadExtension( 'HAWelcome' );
 }
