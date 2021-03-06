@@ -285,6 +285,10 @@ if ( $wgDBname === 'metawiki' ) {
 	}
 }
 
+if ( $wgDBname === 'nbdbwiki' ) {
+	$wgWBRepoSettings['formatterUrlProperty'] = 'P39';
+}
+
 if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
