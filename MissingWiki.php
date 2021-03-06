@@ -14,7 +14,7 @@ if ( !$wgCommandLineMode ) {
 			<meta name="description" content="Wiki not Found">
 			<title>Wiki not Found</title>
 			<!-- Bootstrap core CSS -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 			<style>
 				/* Error Page Inline Styles */
 				body {
