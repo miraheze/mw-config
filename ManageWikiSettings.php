@@ -2391,6 +2391,19 @@ $wgManageWikiSettings = [
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
 		'requires' => [],
 	],
+	'wgVectorDefaultSkinVersion' => [
+		'name' => 'Vector Default Skin Version',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'options' => [
+			'Legacy' => '1',
+			'New' => '2',
+		],
+		'overridedefault' => '1',
+		'section' => 'styling',
+		'help' => 'The version of the Vector skin to use as the default.',
+		'requires' => [],
+	],
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'name' => 'RelatedArticles Footer Whitelisted Skins',
 		'from' => 'relatedarticles',

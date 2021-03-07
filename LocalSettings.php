@@ -3562,6 +3562,11 @@ $wi->config->settings += [
 	'wgUFEnablePersonalDataFunctions' => [
 		'default' => false, // DO NOT set to true under any circumstances --Reception123
 	],
+	
+	// Vector
+	'wgVectorDefaultSkinVersion' => [
+		'default' => '1',
+	],
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
