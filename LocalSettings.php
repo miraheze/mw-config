@@ -508,7 +508,21 @@ $wi->config->settings += [
 		'default' => '/^(subdomain\d{1,2}|example\d{1,2}|betameta\d{1,2}|beta\d{1,2}|prueba\d{1,2}|community\d{1,2}|testwiki\d{1,2}|wikitest\d{1,2}|help\d{1,2}|noc|sandbox\d{1,2}|outreach|gazeteer|gazetteer|wikitech|wiki|www|wikis|misc\d{1,2}|db\d{1,2}|cp\d{1,2}|mw\d{1,2}|jobrunner\d{1,2}|gluster\d{1,2}|ns\d{1,2}|bacula\d{1,2}|misc\d{1,2}|mail\d{1,2}|mw\d{1,2}|ldap\d{1,2}|cloud\d{1,2}|mon\d{1,2}|lizardfs\d{1,2}|rdb\d{1,2}|phab\d{1,2}|services\d{1,2}|puppet\d{1,2}|test\d{1,2}|dbbackup\d{1,2}|graylog\d{1,2}|mem\d{1,2}|miraheze\d{1,2})+$/',
 	],
 	'wgCreateWikiCannedResponses' => [
-		'default' => false,
+		'default' => [
+			// Decline reasons:
+			'Please use Public Test Wiki, https://publictestwiki.com, to test the administrator and bureaucrat tools. You should review and follow all TestWiki:Policies, especially TestWiki:Testing policy and TestWiki:Main policy, reverting all tests you perform in the reverse order which you performed them. Request permissions at TestWiki:Request permissions. Thanks.',
+			'Can you give us a few more details on the purpose for, scope of, and topic of your wiki, and briefly describe some of your wiki\'s content in approximately 2-3 sentences? Additionally can you elaborate on your wiki\'s scope and topical focus a bit further? A few sentences describing the scope of your wiki and the sort of content it will contain should be helpful. Please go back into your original request and add to, but do not replace, your existing description. Thanks.',
+			'Wiki database name and subdomain already exists. Please visit the local wiki and reach out to a local bureaucrat to edit and/or request any permissions you may require. If bureaucrats are not active on the wiki after a reasonable period of time, please see Stewards\' noticeboard. Thanks.',
+			'Wiki database name and subdomain already exists, but had been deleted in accordance with Dormancy Policy. I will request a Steward to undelete it for you. When it has been undeleted an reopened, please visit the local wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity; if you require a Dormancy Policy exemption, you should review the policy and request it once you wiki has at least 40-60 content pages. Thank you.',
+			'Declining as a duplicate request, which has needs more information. Please do not edit this request and instead go back into your original request. Also, please do not submit duplicate requests. Thanks.',
+			'Declining per Content Policy provision, "Miraheze does not host wikis with the sole purpose to spread unsubstantiated insult, hate or rumours against a person or group of people."',
+			'Declining per Content Policy provision, "A wiki must not create problems which make it difficult for other wikis."',
+
+			// Approval reasons:
+			'Perfect. Clear purpose, scope, and topic. Approved as a non-exclusive, community-made and -run public wiki so described. Please be advised this approval does not preclude other wikis from being approved and created that share this topic, provided they aren\'t 95-100% content forks of your wiki. Please ensure your wiki complies with all aspects of Content Policy at all times.',
+			'Pretty good. Purpose and description are a bit vague, but there is nonetheless a clear enough purpose, scope, and/or  topic here. Approved as a non-exclusive, community-made and -run public wiki so described. Please be advised this approval does not preclude other wikis from being approved and created that share this topic, provided they aren\'t 95-100% content forks of your wiki. Please ensure your wiki complies with all aspects of Content Policy at all times.',
+			'Okay-ish. Description doesn\'t meet our requirements, but in this case the sitename, URL, and categorisation suggest this is a informational wiki made clear by the preceding fields, and it is conditionally approved as such. Please be advised that if your wiki deviates too much from this approval, remedial action can be taken by a steward, if necessary, and that this approval does not preclude approval of similar wikis sharing this likely topic. Please ensure your wiki complies with all aspects of Content Policy at all times.',
+		],
 	],
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
