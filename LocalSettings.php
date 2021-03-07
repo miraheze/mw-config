@@ -558,7 +558,7 @@ $wi->config->settings += [
 	'wgCreateWikiPersistentModelFile' => [
 		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
 	],
-	'wgCreateWikiPurposes' => [
+	/*'wgCreateWikiPurposes' => [
 		'default' => [
 			'Alternate history wiki' => 'Alternate history wiki',
 			'Class or group project education wiki' => 'Class or group project education wiki',
@@ -576,7 +576,7 @@ $wi->config->settings += [
 			'Video game (specified video game) information wiki' => 'Video game (specified video game) information wiki',
 			'Video game (broad genre or video game series) information wiki' => 'Video game (broad genre or video game series) information wiki',
 		],
-	],
+	],*/
 	'wgCreateWikiShowBiographicalOption' => [
 		'default' => true,
 	],
