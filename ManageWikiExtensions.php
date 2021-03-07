@@ -890,6 +890,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseHasSomeColours',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'skins',
 		],
 		'hawelcome' => [
 			'name' => 'HAWelcome',
