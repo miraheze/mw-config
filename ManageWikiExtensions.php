@@ -884,6 +884,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'hassomecolours' => [
+			'name' => 'HasSomeColours',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:HasSomeColours',
+			'var' => 'wmgUseHasSomeColours',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'hawelcome' => [
 			'name' => 'HAWelcome',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HAWelcome',

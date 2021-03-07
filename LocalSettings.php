@@ -1074,6 +1074,9 @@ $wi->config->settings += [
 	'wmgUseGuidedTour' => [
 		'default' => false,
 	],
+	'wmgUseHasSomeColours' => [
+		'default' => false,
+	],
 	'wmgUseHAWelcome' => [
 		'default' => false,
 	],
