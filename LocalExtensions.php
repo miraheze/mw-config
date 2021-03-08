@@ -290,6 +290,8 @@ if ( $wmgUseFlaggedRevs ) {
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 
+	$wmgUseParsoid = true;
+
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
 }
 
@@ -514,6 +516,8 @@ if ( $wmgUseLinkTitles ) {
 
 if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
+
+	$wmgUseParsoid = true;
 	
 	$wgLinterSubmitterWhitelist = [
 		'127.0.0.1' => true,
@@ -1032,6 +1036,8 @@ if ( $wmgUseVideo ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
+	$wmgUseParsoid = true;
+
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
@@ -1124,7 +1130,7 @@ if ( $wmgUseRegexFunctions ) {
 }
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
-if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
+if ( $wmgUseParsoid ) {
 	// Required for Flow to work with rest.php
 	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
 
