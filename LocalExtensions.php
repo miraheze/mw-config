@@ -60,6 +60,7 @@ if ( $wmgUseArticleToCategory2 ) {
 
 if ( $wmgUseAuthorProtect ) {
 	wfLoadExtension( 'AuthorProtect' );
+
 	$wi->config->settings['wgRestrictionLevels']['default'][] = 'author';
 }
 
@@ -77,6 +78,7 @@ if ( $wmgUseBabel ) {
 
 if ( $wmgUseBlogPage ) {
 	wfLoadExtension( 'BlogPage' );
+
 	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
@@ -120,6 +122,7 @@ if ( $wmgUseCitoid ) {
 
 if ( $wmgUseCleanChanges ) {
 	wfLoadExtension( 'CleanChanges' );
+
 	$wi->config->settings['+wgDefaultUserOptions']['default']['usenewrc'] = 1;
 }
 
@@ -400,6 +403,7 @@ if ( $wmgUseInputBox ) {
 
 if ( $wmgUseJavascriptSlideshow ) {
 	wfLoadExtension( 'JavascriptSlideshow' );
+
 	// This config has been removed from 1.35, but this config
 	// is checked within JavascriptSlideshow. So hack
 	// around this by setting it.
@@ -450,6 +454,7 @@ if ( $wmgUseLdap ) {
 			'sort' => 50, // must be smaller than local pw provider
 		],
 	];
+
 	$wgLDAPDomainNames = [ 'miraheze' ];
 	$wgLDAPServerNames = [ 'miraheze' => 'ldap2.miraheze.org' ];
 	$wgLDAPEncryptionType = [ 'miraheze' => 'ssl' ];
@@ -466,6 +471,7 @@ if ( $wmgUseLdap ) {
 	$wgLDAPAddLDAPUsers = [ 'miraheze' => true ];
 	$wgLDAPUpdateLDAP = [ 'miraheze' => true ];
 	$wgLDAPPasswordHash = [ 'miraheze' => 'ssha' ];
+
 	// 'invaliddomain' is set to true so that mail password options
 	// will be available on user creation and password mailing
 	// Force strict mode. T218589
@@ -476,6 +482,7 @@ if ( $wmgUseLdap ) {
 			'realname' => 'givenName',
 		]
 	];
+
 	$wgLDAPUseFetchedUsername = [ 'miraheze' => true ];
 	$wgLDAPLowerCaseUsernameScheme = [ 'miraheze' => false, 'invaliddomain' => false ];
 	$wgLDAPLowerCaseUsername = [ 'miraheze' => false, 'invaliddomain' => false ];
@@ -536,6 +543,7 @@ if ( $wmgUseMagicNoCache ) {
 
 if ( $wmgUseMaps ) {
 	wfLoadExtension( 'Maps' );
+
 	$egMapsDefaultService = 'leaflet';
 	$egMapsDisableSmwIntegration = true;
 }
@@ -558,6 +566,7 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseMediaWikiChat ) {
 	wfLoadExtension( 'MediaWikiChat' );
+
 	$wi->config->settings['wgRevokePermissions']['default']['blockedfromchat']['chat'] = true;
 }
 
@@ -623,6 +632,7 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUseMultiBoilerplate ) {
 	wfLoadExtension( 'MultiBoilerplate' );
+
 	$wgMultiBoilerplateDisplaySpecialPage = true;
 	$wgMultiBoilerplateOptions = false;
 }
@@ -661,6 +671,7 @@ if ( $wmgUseNostalgia ) {
 
 if ( $wmgUseNoTitle ) {
 	wfLoadExtension( 'NoTitle' );
+
 	$wi->config->settings['wgRestrictDisplayTitle']['default'] = false;
 }
 
@@ -754,6 +765,7 @@ if ( $wmgUseProofreadPage ) {
 	$wgExtraNamespaces[251] = 'Page_talk';
 	$wgExtraNamespaces[252] = 'Index';
 	$wgExtraNamespaces[253] = 'Index_talk';
+
 	$wgProofreadPageNamespaceIds = [
 		'index' => 252,
 		'page' => 250
@@ -820,6 +832,7 @@ if ( $wmgUseRightFunctions ) {
 
 if ( $wmgUseRSS ) {
 	wfLoadExtension( 'RSS' );
+
 	$wgRSSUrlWhitelist = [ "*" ];
 }
 
@@ -946,6 +959,7 @@ if ( $wmgUseTheme ) {
 
 if ( $wmgUseTimedMediaHandler ) {
 	wfLoadExtension( 'TimedMediaHandler' );
+
 	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
 
@@ -979,6 +993,7 @@ if ( $wmgUseTwoColConflict ) {
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
+
 	$wgULSGeoService = false;
 }
 
@@ -1031,6 +1046,7 @@ if ( $wmgUseVoteNY ) {
 
 if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
+
 	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
 
 }
@@ -1048,6 +1064,7 @@ $wgEnableWikibaseClient = false;
 
 if ( $wmgUseWikibaseClient ) {
 	$wgEnableWikibaseClient = true;
+
 	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
 }
 
@@ -1061,6 +1078,7 @@ if ( $wmgUseWikibaseQualityConstraints ) {
 
 if ( $wmgUseWikibaseRepository ) {
 	$wgEnableWikibaseRepo = true;
+
 	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
 }
 
