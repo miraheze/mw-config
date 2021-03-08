@@ -56,7 +56,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'constant' => true,
 		'blacklisted' => array_diff( array_keys( $wgExtraNamespaces ), [ NS_PROJECT_TALK ] ),
-		'overridedefault' => str_replace( ' ', '_', "{$wgMetaNamespace}_talk" ),
+		'overridedefault' => str_replace( ' ', '_', "{$wgSitename}_talk" ),
 		'help' => '',
 		'requires' => [],
 	],
