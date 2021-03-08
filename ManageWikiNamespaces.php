@@ -218,7 +218,10 @@ $wgManageWikiNamespacesAdditional = [
 			'noindex,nofollow' => 'noindex,nofollow',
 			'index,nofollow' => 'index,nofollow',
 		],
-		'overridedefault' => 'index,follow',
+		'overridedefault' => [
+			NS_SPECIAL => 'noindex',
+			'default' => $wgDefaultRobotPolicy,
+		],
 		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
 		'requires' => [],
 	],
