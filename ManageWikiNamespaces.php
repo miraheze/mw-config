@@ -206,4 +206,20 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgNamespaceRobotPolicies' => [
+		'name' => 'What should the robot policy for this namespace be?',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'main' => true,
+		'talk' => false,
+		'blacklisted' => [],
+		'options' => [
+			'index,follow' => 'index,follow',
+			'noindex,nofollow' => 'noindex,nofollow',
+			'index,nofollow' => 'index,nofollow',
+		],
+		'overridedefault' => 'index,follow',
+		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
+		'requires' => [],
+	],
 ];
