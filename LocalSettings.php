@@ -2331,9 +2331,6 @@ $wi->config->settings += [
 	'wgManageWikiCDBDirectory' => [
 		'default' => '/srv/mediawiki/w/cache/managewiki',
 	],
-	'wgManageWikiNamespacesExtraContentModels' => [
-		'default' => [],
-	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
 		'rf1botwiki' => [
