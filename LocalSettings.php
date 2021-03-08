@@ -550,6 +550,7 @@ $wi->config->settings += [
 			'miraheze\d{1,2}',
 		],
 	],
+        /*
 	'wgCreateWikiCannedResponses' => [
 		'default' => [
 			// Decline reasons:
@@ -567,6 +568,7 @@ $wi->config->settings += [
 			'Okay request.' => 'Okay-ish. Description doesn\'t meet our requirements, but in this case the sitename, URL, and categorisation suggest this is a informational wiki made clear by the preceding fields, and it is conditionally approved as such. Please be advised that if your wiki deviates too much from this approval, remedial action can be taken by a steward, if necessary, and that this approval does not preclude approval of similar wikis sharing this likely topic. Please ensure your wiki complies with all aspects of Content Policy at all times.',
 		],
 	],
+        */
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
 	],
