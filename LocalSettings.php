@@ -1363,6 +1363,9 @@ $wi->config->settings += [
 	'wmgUsePageTriage' => [
 		'default' => false,
 	],
+	'wmgUseParsoid'=> [
+		'default' => false,
+	],
 	'wmgUsePDFEmbed' => [
 		'default' => false,
 	],
