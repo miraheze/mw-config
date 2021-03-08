@@ -82,7 +82,7 @@ $wgManageWikiNamespacesAdditional = [
 			8,
 		],
 		'overridedefault' => false,
-		'help' => 'Overrides $wgCapitalLinks for this namespace. Warning: This may break your existing wiki links.',
+		'help' => 'Overrides <code>$wgCapitalLinks</code> for this namespace. Warning: This may break your existing wiki links.',
 		'requires' => [],
 	],
 	'wgNoFollowNsExceptions' => [
