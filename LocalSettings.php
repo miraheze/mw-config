@@ -3248,19 +3248,6 @@ $wi->config->settings += [
 		'default' => [
 			'NS_SPECIAL' => 'noindex',
 		],
-		'+taswinwiki' => [
-			'NS_TEMPLATE' => 'noindex,nofollow',
-		],
-		'+horizonwiki' => [
-			'NS_MAIN' => 'index,follow'
-		],
-		'+ucroniaswiki' => [
-			'NS_TEMPLATE' => 'noindex,nofollow',
-			'NS_MODULE' => 'noindex,nofollow',
-			'NS_MEDIAWIKI' => 'noindex,nofollow',
-			'NS_USER' => 'noindex,nofollow',
-			'NS_ANEXO' => 'index,follow',
-		],
 	],
 
 	// Referrer Policy
