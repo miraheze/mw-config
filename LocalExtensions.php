@@ -290,7 +290,7 @@ if ( $wmgUseFlaggedRevs ) {
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 
-	$wmgUseParsoid = true;
+	$wi->config->settings['wmgUseParsoid']['default'] = true;
 
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
 }
@@ -517,7 +517,7 @@ if ( $wmgUseLinkTitles ) {
 if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 
-	$wmgUseParsoid = true;
+	$wi->config->settings['wmgUseParsoid']['default'] = true;
 	
 	$wgLinterSubmitterWhitelist = [
 		'127.0.0.1' => true,
@@ -1036,7 +1036,7 @@ if ( $wmgUseVideo ) {
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
 
-	$wmgUseParsoid = true;
+	$wi->config->settings['wmgUseParsoid']['default'] = true;
 
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
