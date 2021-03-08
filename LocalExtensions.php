@@ -288,7 +288,6 @@ if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 
 	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
-	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
 }
 
 if ( $wmgUseForcePreview) {
@@ -642,8 +641,6 @@ if ( $wmgUseNewSignupPage ) {
 
 if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
-	
-	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Newsletter'] = 'NewsletterContent';
 }
 
 if ( $wmgUseNewUserMessage ) {
