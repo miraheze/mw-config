@@ -276,9 +276,9 @@ if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['SkinBuildSidebar'][] = 'onSkinBuildSidebar';
 
 	function onSkinBuildSidebar( $skin, &$bar ) {
-		$bar['donate'][] = [
+		$bar['miraheze-sidebar-donate'][] = [
 			'text' => $skin->msg( 'miraheze-donate' ),
-			'href' => '/wiki/Donate',
+			'href' => '/wiki/Special:MyLanguage/Donate',
 			'title' => $skin->msg( 'miraheze-donate' ),
 			'id' => 'n-donate',
 		];
