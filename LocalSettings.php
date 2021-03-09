@@ -3232,8 +3232,6 @@ $wi->config->settings += [
 			'edit',
 			'move',
 			'upload',
-			'delete',
-			'protect'
 		],
 	],
 
