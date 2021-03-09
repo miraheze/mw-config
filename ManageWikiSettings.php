@@ -147,6 +147,7 @@ $wgManageWikiSettings = [
 			'Upload' => 'upload',
 			'Delete' => 'delete',
 			'Protect' => 'protect',
+			'Edit Content Model' => 'editcontentmodel',
 		],
 		'overridedefault' => [
 			'edit',
