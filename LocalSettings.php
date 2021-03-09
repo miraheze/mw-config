@@ -1985,7 +1985,7 @@ $wi->config->settings += [
 				'user' => true,
 			],
 		],
-		'ahinfoboxeswiki' => [
+		'+ahinfoboxeswiki' => [
 			'editprotected' => [
 				'editrollbackprotected' => true,
 				'edittemplateprotected' => true,
