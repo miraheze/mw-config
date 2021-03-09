@@ -150,11 +150,10 @@ $wgManageWikiSettings = [
 			'Edit Content Model' => 'editcontentmodel',
 		],
 		'overridedefault' => [
+			'create',
 			'edit',
 			'move',
-			'create',
 			'upload',
-			'delete',
 		],
 		'section' => 'anti-spam',
 		'help' => 'Actions that can be restricted.',
