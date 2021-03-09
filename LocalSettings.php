@@ -2399,14 +2399,6 @@ $wi->config->settings += [
 				'userrights' => true,
 			],
 		],
-		'+ahinfoboxeswiki' => [
-			'bureaucrat' => [
-				'editrollbackprotected' => true,
-				'edittemplateprotected' => true,
-				'editrestrictedtemplateprotected' => true,
-				'editimportprotected' => true,
-			],
-		],
 		'+autocountwiki' => [
 			'authors' => [
 				'torunblocked' => true,
