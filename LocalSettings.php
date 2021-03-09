@@ -1985,6 +1985,24 @@ $wi->config->settings += [
 				'user' => true,
 			],
 		],
+		'ahinfoboxeswiki' => [
+			'editprotected' => [
+				'editrollbackprotected' => true,
+				'edittemplateprotected' => true,
+				'editrestrictedtemplateprotected' => true,
+				'editimportprotected' => true,
+			],
+			'import' => [
+				'import' => true,
+				'importupload' => true,
+			],
+		],
+	],
+	'+wgGrantPermissionGroups' => [
+		'default' => [],
+		'ahinfoboxeswiki' => [
+			'import' => 'administration',
+		],
 	],
 
 	// HAWelcome
@@ -2379,6 +2397,14 @@ $wi->config->settings += [
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
+			],
+		],
+		'+ahinfoboxeswiki' => [
+			'bureaucrat' => [
+				'editrollbackprotected' => true,
+				'edittemplateprotected' => true,
+				'editrestrictedtemplateprotected' => true,
+				'editimportprotected' => true,
 			],
 		],
 		'+autocountwiki' => [
@@ -3181,6 +3207,12 @@ $wi->config->settings += [
 			'user',
 			'autoconfirmed',
 			'sysop'
+		],
+		'+ahinfoboxeswiki' => [
+			'editrollbackprotected',
+			'edittemplateprotected',
+			'editrestrictedtemplateprotected',
+			'editimportprotected',
 		],
 		'+bigforestwiki' => [
 			'editvoter',
