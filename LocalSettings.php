@@ -126,8 +126,8 @@ $wi->config->settings += [
 			'usePivotTabs' => false,
 			'showHelpUnderTools' => true,
 			'showRecentChangesUnderTools' => true,
-			'wikiName' => $wgSitename,
-			'wikiNameDesktop' => $wgSitename,
+			'wikiName' => $wi->sitename,
+			'wikiNameDesktop' => $wi->sitename,
 			'navbarIcon' => false,
 			'preloadFontAwesome' => false,
 			'showFooterIcons' => true,
@@ -141,7 +141,7 @@ $wi->config->settings += [
 			'usePivotTabs' => true,
 			'showHelpUnderTools' => false,
 			'showRecentChangesUnderTools' => false,
-			'wikiName' => $wgSitename,
+			'wikiName' => $wi->sitename,
 			'wikiNameDesktop' => 'The Great War 1914-1918',
 			'navbarIcon' => false,
 			'preloadFontAwesome' => false,
@@ -2007,7 +2007,7 @@ $wi->config->settings += [
 
 	// HAWelcome
 	'wgHAWelcomeWelcomeUsername' => [
-		'default' => $wgSitename,
+		'default' => $wi->sitename,
 	],
 	'wgHAWelcomeStaffGroupName' => [
 		'default' => 'sysop',
