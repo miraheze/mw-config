@@ -3260,6 +3260,17 @@ $wi->config->settings += [
 			'protect'
 		],
 	],
+	
+	// Rights
+	'+wgAvailableRights' => [
+		'default' => [],
+		'ahinfoboxeswiki' => [
+			'editrollbackprotected',
+			'edittemplateprotected',
+			'editrestrictedtemplateprotected',
+			'editimportprotected',
+		],
+	],
 
 	// RottenLinks
 	'wgRottenLinksCurlTimeout' => [
