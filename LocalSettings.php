@@ -809,6 +809,24 @@ $wi->config->settings += [
 	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
 	],
+	'wgDiscordIncludePageUrls' => [
+		'default' => true,
+	],
+	'wgDiscordIncludeUserUrls' => [
+		'default' => true,
+	],
+	'wgDiscordIncludeDiffSize' => [
+		'default' => true,
+	],
+	'wgDiscordNotificationMovedArticle' => [
+		'default' => true,
+	],
+	'wgDiscordNotificationFileUpload' => [
+		'default' => true,
+	],
+	'wgDiscordNotificationProtectedArticle' => [
+		'default' => true,
+	],
 	'wgDiscordNotificationsShowSuppressed' => [
 		'default' => false,
 	],
