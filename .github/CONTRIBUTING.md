@@ -22,6 +22,7 @@ If you would like to add configuration options or extensions/skins to ManageWiki
   * Update LocalSettings.php to add `$wmgUseExtension` type config to it.
   * Update LocalExtensions.php to add the `wfLoadExtension`, `wfLoadSkin`, or `require_once` to it. Always use `wfLoad` if extension/skin.json exists, otherwise use `require_once` when it doesn't. Follow the other examples.
   * Update extension-list. Only needed if the extension or skin has an i18n directory. Add the path to the entry point file (extension/skin.json or the PHP entry point, that require_once would link to in LocalExtensions.php). Order alphabetically.
+  * Add any necessary configuration variables to LocalExtensions.php, LocalSettings.php, LocalWiki.php, ManageWikiSettings.php, or ManageWikiNamespaces.php. Add to whichever is most appropriate.
 * Make sure to look at the comment at the top of ManageWikiSettings.php, ManageWikiNamespaces.php, or ManageWikiExtensions.php for additional documentation.
 
 We use tabs with indent size 8 - if you use the GitHub editor this styling will be automatically applied.
