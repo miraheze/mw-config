@@ -1985,6 +1985,24 @@ $wi->config->settings += [
 				'user' => true,
 			],
 		],
+		'+ahinfoboxeswiki' => [
+			'editprotected' => [
+				'editrollbackprotected' => true,
+				'edittemplateprotected' => true,
+				'editrestrictedtemplateprotected' => true,
+				'editimportprotected' => true,
+			],
+			'import' => [
+				'import' => true,
+				'importupload' => true,
+			],
+		],
+	],
+	'+wgGrantPermissionGroups' => [
+		'default' => [],
+		'ahinfoboxeswiki' => [
+			'import' => 'administration',
+		],
 	],
 
 	// HAWelcome
@@ -3182,6 +3200,12 @@ $wi->config->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
+		'+ahinfoboxeswiki' => [
+			'editrollbackprotected',
+			'edittemplateprotected',
+			'editrestrictedtemplateprotected',
+			'editimportprotected',
+		],
 		'+bigforestwiki' => [
 			'editvoter',
 		],
@@ -3232,6 +3256,17 @@ $wi->config->settings += [
 			'edit',
 			'move',
 			'upload',
+		],
+	],
+	
+	// Rights
+	'+wgAvailableRights' => [
+		'default' => [],
+		'ahinfoboxeswiki' => [
+			'editrollbackprotected',
+			'edittemplateprotected',
+			'editrestrictedtemplateprotected',
+			'editimportprotected',
 		],
 	],
 
