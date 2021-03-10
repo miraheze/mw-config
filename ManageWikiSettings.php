@@ -1538,7 +1538,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgDisqusShortname' => [
+	'egDisqusShortname' => [
 		'name' => 'Disqus Shortname',
 		'from' => 'disqustag',
 		'type' => 'text',

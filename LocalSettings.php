@@ -2985,7 +2985,7 @@ $wi->config->settings += [
 	],
 
 	// Used for the DisqusTag extension
-	'wgDisqusShortname' => [
+	'egDisqusShortname' => [
 		'default' => null,
 	],
 
