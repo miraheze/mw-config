@@ -567,7 +567,7 @@ $wi->config->settings += [
 			'Duplicate request' => 'Declining as a duplicate request, which needs more information. Please do not edit this request and instead go back into your original request. Also, please do not submit duplicate requests. Thank you.',
 			'Content Policy (unsubstantiated insult)' => 'Declining per Content Policy provision, "Miraheze does not host wikis with the sole purpose to spread unsubstantiated insult, hate or rumours against a person or group of people." Thank you for understanding.',
 			'Content Policy (makes it difficult for other wikis)' => 'Declining per Content Policy provision, "A wiki must not create problems which make it difficult for other wikis." Thank you for understanding.',	
-			'Duplicate wiki' => 'Your proposed wiki appears to duplicate, either substantially or entirely, the content of an existing wiki (see the "request comments" tab for one or more link(s) to the existing wiki(s)). Can you please describe in a few more sentences by adding to, but not replacing, your existing description, the scope and focus for your wiki, and also assure us that your wiki will not be a complete or substantial duplication? Thank you.',
+			'Duplicate wiki' => 'Your proposed wiki appears to duplicate, either substantially or entirely, the content of an existing wiki (see the "Request Comments" tab for one or more link(s) to the existing wiki(s)). Could you please describe in a few more sentences by adding to, but not replacing, your existing description, the scope and focus for your wiki, and also assure us that your wiki will not be a complete or substantial duplication? Thank you.',
 		],
 	],
 	'wgCreateWikiCustomDomainPage' => [
