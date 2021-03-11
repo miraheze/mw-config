@@ -20,7 +20,6 @@
  * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
  * 
  * [$var][$namespace_id] = $val format:
- * text: adds a single line text entry.
  * database: adds a drop down selection box for selecting a database.
  * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
