@@ -2131,6 +2131,9 @@ $wi->config->settings += [
 			'templatewiki',
 			'wikipedia',
 		],
+		'+ahinfoboxeswiki' => [
+			'wikimediacommons',
+		],
 		'+batfamilywiki' => [
 			'batmanwiki',
 			'batmanwikifandom',
