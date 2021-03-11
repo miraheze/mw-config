@@ -20,7 +20,7 @@
  * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
  * 
  * [$var][$namespace_id] = $val format:
- * text: adds a single line text entry. Format: [$var][$namespace_id] = $val;
+ * text: adds a single line text entry.
  *
  * 'requires' can be one of:
  *
