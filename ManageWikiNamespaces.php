@@ -17,8 +17,10 @@
  * 'type' can be one of:
  *
  * check: adds a checkbox. Format: $var[] = $namespace_id;
- * text: adds a single line text entry. Format: [$var][$namespace_id] = $val;
  * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
+ * 
+ * [$var][$namespace_id] = $val format:
+ * text: adds a single line text entry. Format: [$var][$namespace_id] = $val;
  *
  * 'requires' can be one of:
  *
