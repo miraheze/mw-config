@@ -1624,7 +1624,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => $wgSitename,
 		'section' => 'restricted',
-		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit.',
+		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit. Note: this should not be set to the same name of an existing user.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
