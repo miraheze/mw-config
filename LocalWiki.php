@@ -161,8 +161,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 ];
 
 // CookieWarning exempt ElectronPdfService
-if ( isset( $_SERVER['REMOTE_ADDR'] ) &&
-		( $_SERVER['REMOTE_ADDR'] === '51.195.236.212' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:178a::10' || $_SERVER['REMOTE_ADDR'] === '51.195.236.246' || $_SERVER['REMOTE_ADDR'] === '2001:41d0:800:1bbd::13' ) ) {
+if ( isset( $_SERVER['REMOTE_ADDR'] ) && in_array( $_SERVER['REMOTE_ADDR'], [ '51.195.236.212', '2001:41d0:800:178a::10', '51.195.236.246', '2001:41d0:800:1bbd::13' ] ) ) {
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
