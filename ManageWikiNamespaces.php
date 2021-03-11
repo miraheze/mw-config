@@ -7,6 +7,7 @@
  * type: configuration type. See below for available options.
  * main: true or false. If false, this config will not appear for main namespaces.
  * talk: true or false. If false, this config will not appear for talk namespaces.
+ * constant: true or false. If true, the format will be $var = $val. Used for configuration options that don't apply to specific namespace(s). Doesn't work with the 'check' or 'vestyle' types.
  * blacklisted: array of namespace ids to blacklist the config from.
  * overridedefault: override default when no existing value exist. Can be a boolean, string, or array.
  * overridedefault[$namespace_id => $val]: namespace specific overrides. Also required a default key. See below.
