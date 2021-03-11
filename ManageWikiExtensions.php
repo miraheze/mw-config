@@ -1142,6 +1142,30 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMaps',
 			'conflicts' => false,
 			'requires' => [],
+			'install' => [
+				'namespaces' => [
+					'GeoJson' => [
+						'id' => 420,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 1,
+						'aliases' => [],
+						'contentmodel' => 'GeoJson',
+						'additional' => []
+					],
+					'GeoJson_talk' => [
+						'id' => 421,
+						'searchable' => 0,
+						'subpages' => 1,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
+			],
 		],
 		'mask' => [
 			'name' => 'Mask',
