@@ -13,7 +13,7 @@
  * 'type' can be one of:
  *
  * check: adds a checkbox.
- * database: adds a drop down selection box for selecting a database.
+ * database: adds a textbox with input validation, verifying that its value is a valid database name.
  * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
  * language: adds a dropdown for language selection (all which are known to MediaWiki).
