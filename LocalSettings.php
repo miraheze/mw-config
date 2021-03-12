@@ -3384,6 +3384,9 @@ $wi->config->settings += [
 			'pm',
 			'member',
 		],
+		'+devwiki' => [
+			'editinterface',
+		],
 		'+hypopediawiki' => [
 			'bureaucrat',
 		],
@@ -3414,9 +3417,6 @@ $wi->config->settings += [
 			'template',
 			'extendedconfirmed',
 			'owner',
-		],
-		'+devwiki' => [
-			'editinterface',
 		],
 		'+wmgUseAuthorProtect' => [
 			'author',
