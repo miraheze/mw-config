@@ -3,18 +3,10 @@
 // Set up extensions for use on wikis that are not global
 if ( $wmgUse3D ) {
 	wfLoadExtension( '3D' );
-
-	$wg3dProcessor = [
-		'/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/3d2png/3d2png.js'
-	];
-
-	$wi->config->settings['wgTrustedMediaFormats']['default'][] = 'application/sla';
 }
 
 if ( $wmgUseAddThis ) {
 	wfLoadExtension( 'AddThis' );
-
-	$wgAddThisHeader = false;
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
@@ -60,8 +52,6 @@ if ( $wmgUseArticleToCategory2 ) {
 
 if ( $wmgUseAuthorProtect ) {
 	wfLoadExtension( 'AuthorProtect' );
-
-	$wi->config->settings['wgRestrictionLevels']['default'][] = 'author';
 }
 
 if ( $wmgUseAutoCreateCategoryPages ) {
@@ -78,8 +68,6 @@ if ( $wmgUseBabel ) {
 
 if ( $wmgUseBlogPage ) {
 	wfLoadExtension( 'BlogPage' );
-
-	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
 if ( $wmgUseCentralAuth ) {
@@ -116,14 +104,10 @@ if ( $wmgUseCiteThisPage ) {
 
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
-
-	$wgCitoidFullRestbaseURL = "https://{$wi->hostname}/{$wi->hostname}/";
 }
 
 if ( $wmgUseCleanChanges ) {
 	wfLoadExtension( 'CleanChanges' );
-
-	$wi->config->settings['+wgDefaultUserOptions']['default']['usenewrc'] = 1;
 }
 
 if ( $wmgUseCodeEditor ) {
@@ -143,12 +127,6 @@ if ( $wmgUseCollection ) {
 		'Collection',
 		'ElectronPdfService',
 	] );
-
-	$wgCommunityCollectionNamespace = 5;
-
-	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
-
-	$wgCollectionPODPartners = [];
 }
 
 if ( $wmgUseCommentbox ) {
@@ -215,8 +193,6 @@ if ( $wmgUseDeleteUserPages ) {
 
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
-
-	$wgEnableMetaDescriptionFunctions = true;
 }
 
 if ( $wmgUseDisambiguator ) {
@@ -289,8 +265,6 @@ if ( $wmgUseFlaggedRevs ) {
 
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
-
-	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
 }
 
 if ( $wmgUseForcePreview) {
@@ -405,11 +379,6 @@ if ( $wmgUseInputBox ) {
 
 if ( $wmgUseJavascriptSlideshow ) {
 	wfLoadExtension( 'JavascriptSlideshow' );
-
-	// This config has been removed from 1.35, but this config
-	// is checked within JavascriptSlideshow. So hack
-	// around this by setting it.
-	$wgHtml5 = true;
 }
 
 if ( $wmgUseJosa ) {
@@ -516,15 +485,6 @@ if ( $wmgUseLinkTitles ) {
 
 if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
-	
-	$wgLinterSubmitterWhitelist = [
-		'127.0.0.1' => true,
-		'::1' => true,
-		'51.195.236.212' => true,
-		'2001:41d0:800:178a::10' => true,
-		'51.195.236.246' => true,
-		'2001:41d0:800:1bbd::13' => true,
-	];
 }
 
 if ( $wmgUseListings ) {
@@ -545,9 +505,6 @@ if ( $wmgUseMagicNoCache ) {
 
 if ( $wmgUseMaps ) {
 	wfLoadExtension( 'Maps' );
-
-	$egMapsDefaultService = 'leaflet';
-	$egMapsDisableSmwIntegration = true;
 }
 
 if ( $wmgUseMask ) {
@@ -568,8 +525,6 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseMediaWikiChat ) {
 	wfLoadExtension( 'MediaWikiChat' );
-
-	$wi->config->settings['wgRevokePermissions']['default']['blockedfromchat']['chat'] = true;
 }
 
 if ( $wmgUseMedik ) {
@@ -590,10 +545,6 @@ if ( $wmgUseMinervaNeue ) {
 
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
-
-	$wgMFMobileHeader = 'X-Subdomain';
-	$wgMFNoindexPages = false;
-	$wgMFStopRedirectCookieHost = $wi->hostname;
 }
 
 if ( $wmgUseMobileTabsPlugin ) {
@@ -634,9 +585,6 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUseMultiBoilerplate ) {
 	wfLoadExtension( 'MultiBoilerplate' );
-
-	$wgMultiBoilerplateDisplaySpecialPage = true;
-	$wgMultiBoilerplateOptions = false;
 }
 
 if ( $wmgUseMyVariables ) {
@@ -673,8 +621,6 @@ if ( $wmgUseNostalgia ) {
 
 if ( $wmgUseNoTitle ) {
 	wfLoadExtension( 'NoTitle' );
-
-	$wi->config->settings['wgRestrictDisplayTitle']['default'] = false;
 }
 
 if ( $wmgUseNukeDPL ) {
@@ -812,8 +758,6 @@ if ( $wmgUseRefreshed ) {
 
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
-
-	$wgRelatedArticlesUseCirrusSearch = false;
 }
 
 if ( $wmgUseReplaceText ) {
@@ -935,8 +879,6 @@ if ( $wmgUseTextExtracts ) {
 
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'Translate' );
-
-	$wgULSGeoService = false;
 }
 
 if ( $wmgUseTranslationNotifications ) {
@@ -961,8 +903,6 @@ if ( $wmgUseTheme ) {
 
 if ( $wmgUseTimedMediaHandler ) {
 	wfLoadExtension( 'TimedMediaHandler' );
-
-	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
 
 if ( $wmgUseTimeline ) {
@@ -995,8 +935,6 @@ if ( $wmgUseTwoColConflict ) {
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
-
-	$wgULSGeoService = false;
 }
 
 if ( $wmgUseUploadsLink ) {
@@ -1048,9 +986,6 @@ if ( $wmgUseVoteNY ) {
 
 if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
-
-	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
-
 }
 
 if ( $wmgUseWikiCategoryTagCloud ) {
@@ -1061,12 +996,7 @@ if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
 
-$wgEnableWikibaseRepo = false;
-$wgEnableWikibaseClient = false;
-
 if ( $wmgUseWikibaseClient ) {
-	$wgEnableWikibaseClient = true;
-
 	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
 }
 
@@ -1079,8 +1009,6 @@ if ( $wmgUseWikibaseQualityConstraints ) {
 }
 
 if ( $wmgUseWikibaseRepository ) {
-	$wgEnableWikibaseRepo = true;
-
 	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
 }
 
@@ -1091,8 +1019,6 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 
 if ( $wmgUseWikiForum ) {
 	wfLoadExtension( 'WikiForum' );
-
-	$wgCaptchaTriggers['wikiforum'] = true;
 }
 
 if ( $wmgUsewikihiero ) {
@@ -1101,8 +1027,6 @@ if ( $wmgUsewikihiero ) {
 
 if ( $wmgUseWikiLove ) {
 	wfLoadExtension( 'WikiLove' );
-
-	$wgWikiLoveGlobal = true;
 }
 
 if ( $wmgUseWikimediaIncubator ) {
@@ -1129,15 +1053,4 @@ if ( $wmgUseRegexFunctions ) {
 if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
 	// Required for Flow to work with rest.php
 	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
-
-	// Automatically uses the local rest.php (hence url isn't set).
-	// We need to set 'forwardCookies' for private wikis and
-	// for pages restricted by protection.
-	$wgVirtualRestConfig['modules']['parsoid'] = [
- 		'url' => "$wgServer/w/rest.php",
- 		'domain' => $wgServer,
- 		'prefix' => $wgDBname,
- 		'forwardCookies' => true,
- 		'restbaseCompat' => false,
- 	];
 }
