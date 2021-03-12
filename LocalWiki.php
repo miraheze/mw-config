@@ -20,44 +20,8 @@ if ( $cwClosed ) {
 	if ( $wmgUseComments ) {
 		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
-
-	if ( $cwPrivate ) {
-		$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
-		function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
-			$siteNotice .= <<<EOF
-				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/0/02/Wiki_lock.png" align="left" style="width:80px;height:90px";>This wiki has been closed because there have been <b>no edits</b> or <b>logs</b> made within the last 60 days. Since this wiki is private, it may not be adopted as a public wiki would be. If this wiki is not reopened within 6 months it may be deleted. Note: If you are a bureaucrat on this wiki you can go to <a href="/wiki/Special:ManageWiki">Special:ManageWiki</a> and uncheck the "closed" box to reopen it. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
-			EOF;
-		}
-	} else {
-		$wgHooks['SiteNoticeAfter'][] = 'onClosedSiteNoticeAfter';
-		function onClosedSiteNoticeAfter( &$siteNotice, $skin ) {
-			$siteNotice .= <<<EOF
-				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/0/02/Wiki_lock.png" align="left" style="width:80px;height:90px";>This wiki has been closed because there have been <b>no edits</b> or <b>logs</b> made within the last 60 days. This wiki is now eligible for being adopted. To adopt this wiki please go to <a href="https://meta.miraheze.org/wiki/Requests_for_adoption">Requests for adoption</a> and make a request. If this wiki is not adopted within 6 months it may be deleted. Note: If you are a bureaucrat on this wiki you can go to <a href="/wiki/Special:ManageWiki">Special:ManageWiki</a> and uncheck the "closed" box to reopen it. </span></div>
-			EOF;
-		}
-	}
 }
 
-// Inactive Wikis
-if ( $cwInactive && (string)$cwInactive != 'exempt' ) {
-	if ( $cwPrivate ) {
-		$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
-
-		function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
-			$siteNotice .= <<<EOF
-				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will not be eligible for adoption by another user even after it is closed since it is private. If this wiki is still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
-			EOF;
-		}
-	} else {
-		$wgHooks['SiteNoticeAfter'][] = 'onInactiveSiteNoticeAfter';
-
-		function onInactiveSiteNoticeAfter( &$siteNotice, $skin ) {
-			$siteNotice .= <<<EOF
-				<div class="wikitable" style="text-align: center; width: 90%; margin-left: auto; margin-right:auto; padding: 15px; border: 4px solid black; background-color: #EEE;"> <span class="plainlinks"> <img src="https://static.miraheze.org/metawiki/5/5f/Out_of_date_clock_icon.png" align="left" style="width:80px;height:90px";>This wiki has <b>no edits</b> or <b>logs</b> made within the last 45 days, therefore it is marked as <b><u>inactive</b></u>. If you would like to prevent this wiki from being <b>closed</b>, please start showing signs of activity here. If there are no signs of this wiki being used within the next 15 days, this wiki may be closed per the <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. This wiki will then be eligible for adoption by another user. If not adopted and still inactive 135 days from now, this wiki will become eligible for <b>deletion</b>. Please be sure to familiarize yourself with Miraheze's <a href="https://meta.miraheze.org/wiki/Dormancy_Policy">Dormancy Policy</a>. If you are a bureaucrat, you can go to <u><a href="/wiki/Special:ManageWiki">Special:ManageWiki</a></u> and uncheck "inactive" yourself. If you have any other questions or concerns, please don't hesitate to ask at <a href="https://meta.miraheze.org/wiki/Stewards%27_noticeboard">Stewards' noticeboard</a>. </span></div>
-			EOF;
-		}
-	}
-}
 
 // Public Wikis
 if ( !$cwPrivate ) {
