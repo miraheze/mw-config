@@ -285,12 +285,6 @@ if ( $wmgUseGadgets ) {
 
 if ( $wmgUseGamepress ) {
 	wfLoadSkin( 'Gamepress' );
-
-	if ( $wmgUseTheme ) {
-		$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
-		$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
-		$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
-	}
 }
 
 if ( $wmgUseGenealogy ) {
