@@ -1765,7 +1765,7 @@ $wgManageWikiExtensions = [
 						'protection' => '',
 						'content' => 0,
 						'aliases' => [],
-						'contentmodel' => 'wikitext',
+						'contentmodel' => 'proofread-page',
 						'additional' => []
 					],
 					'Page_talk' => [
@@ -1785,7 +1785,7 @@ $wgManageWikiExtensions = [
 						'protection' => '',
 						'content' => 0,
 						'aliases' => [],
-						'contentmodel' => 'wikitext',
+						'contentmodel' => 'proofread-index',
 						'additional' => []
 					],
 					'Index_talk' => [
