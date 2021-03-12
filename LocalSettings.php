@@ -3914,7 +3914,7 @@ $wi->config->settings += [
 	],
 	'+wgWebChatClients' => [
 		'wmgUseWebChat' => [
-			'Mibbit' =>
+			'Mibbit' => [
 				'url' => 'https://embed.mibbit.com/index.html',
 			],
 		],
