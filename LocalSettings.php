@@ -38,6 +38,17 @@ $wi->config->settings += [
 		'default' => '4',
 	],
 
+	// 3D
+	'wg3dProcessor' =>
+		'wmgUse3D' => [ 
+			'/usr/bin/xvfb-run',
+			'-a',
+			'-s',
+			'-ac -screen 0 1280x1024x24',
+			'/srv/3d2png/3d2png.js',
+		],
+	],
+
 	// AbuseFilter
 	'wgAbuseFilterActions' => [
 		'default' => [
@@ -80,6 +91,11 @@ $wi->config->settings += [
 	],
 	'wgAbuseFilterPrivateDetailsForceReason' => [
 		'default' => true,
+	],
+
+	// AddThis
+	'wgAddThisHeader' => [
+		'wmgUseAddThis' => false,	
 	],
 
 	// Anti-spam
@@ -149,6 +165,13 @@ $wi->config->settings += [
 			'addThisPUBID' => '',
 			'useAddThisShare' => '',
 			'useAddThisFollow' => ''
+		],
+	],
+
+	// BlogPage
+	'+wgBlogPageDisplay' => [
+		'wmgUseBlogPage' => [
+			'comments_of_day' => false,
 		],
 	],
 
@@ -252,6 +275,22 @@ $wi->config->settings += [
 	],
 	'wmgContactPageRecipientUser' => [
 		'default' => false,
+	],
+
+	// Citoid
+	'wgCitoidFullRestbaseURL' => [
+		'wmgUseCitoid' => "https://{$wi->hostname}/{$wi->hostname}/",
+	],
+
+	// Collection
+	'wgCommunityCollectionNamespace' => [
+		'wmgUseCollection' => 5,
+	],
+	'wgCollectionMWServeURL' => [
+		'wmgUseCollection' => 'https://ocg-lb.miraheze.org',
+	],
+	'wgCollectionPODPartners' => [
+		'wmgUseCollection' => [],
 	],
 
 	// Cosmos settings
@@ -393,6 +432,11 @@ $wi->config->settings += [
 	],
 	'wgReCaptchaSendRemoteIP' => [
 		'default' => false,
+	],
+	'+wgCaptchaTriggers' => [
+		'wmgUseWikiForum' => [
+			'wikiforum' => true,	
+		],
 	],
 
 	// Category
@@ -761,6 +805,11 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// Description2
+	'wgEnableMetaDescriptionFunctions' => [
+		'wmgUseDescription2' => true,
+	],
+
 	// Delete
 	'wgDeleteRevisionsLimit' => [
 		'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1k T5287
@@ -788,6 +837,9 @@ $wi->config->settings += [
 	// TimedMediaHandler config
 	'wgFFmpegLocation' => [
 		'default' => '/usr/bin/ffmpeg',
+	],
+	'wgFFmpeg2theoraLocation' => [
+		'wmgUseTimedMediaHandler' => '/usr/bin/ffmpeg2theora',
 	],
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
@@ -887,6 +939,43 @@ $wi->config->settings += [
 	],
 	'wgAllowSlowParserFunctions' => [
 		'default' => false,
+	],
+
+	// Parsoid
+	'+wgVirtualRestConfig' => [
+		'wmgUseFlow' => [
+			'modules' => [
+				'parsoid' => [
+					'url' => "https://{$wi->hostname}/w/rest.php",
+ 					'domain' => "https://{$wi->hostname}",
+ 					'prefix' => $wi->dbname,
+ 					'forwardCookies' => true,
+ 					'restbaseCompat' => false,
+				],
+			],
+		],
+		'wmgUseLinter' => [
+			'modules' => [
+				'parsoid' => [
+					'url' => "https://{$wi->hostname}/w/rest.php",
+ 					'domain' => "https://{$wi->hostname}",
+ 					'prefix' => $wi->dbname,
+ 					'forwardCookies' => true,
+ 					'restbaseCompat' => false,
+				],
+			],
+		],
+		'wmgUseVisualEditor' => [
+			'modules' => [
+				'parsoid' => [
+					'url' => "https://{$wi->hostname}/w/rest.php",
+ 					'domain' => "https://{$wi->hostname}",
+ 					'prefix' => $wi->dbname,
+ 					'forwardCookies' => true,
+ 					'restbaseCompat' => false,
+				],
+			],
+		],
 	],
 
 	// Echo
@@ -2178,6 +2267,11 @@ $wi->config->settings += [
 		],
 	],
 
+	// JavascriptSlideshow
+	'wgHtml5' => [
+		'wmgUseJavascriptSlideshow' => true,	
+	],
+
 	// Job Queue
 	'wgJobRunRate' => [
 		'default' => 0,
@@ -2314,6 +2408,18 @@ $wi->config->settings += [
 	// LiliPond
 	'wgScoreLilyPond' => [
 		'default' => '/dev/null',
+	],
+
+	// Linter
+	'wgLinterSubmitterWhitelist' => [
+		'wmgUseLinter' => [
+			'127.0.0.1' => true,
+			'::1' => true,
+			'51.195.236.212' => true,
+			'2001:41d0:800:178a::10' => true,
+			'51.195.236.246' => true,
+			'2001:41d0:800:1bbd::13' => true,
+		],
 	],
 
 	// Mail
@@ -2616,6 +2722,11 @@ $wi->config->settings += [
 				'edit-create' => true,
 			],
 		],
+		'+wmgUseFlow' => [
+			'oversight' => [
+				'flow-suppress' => true,
+			],
+		],
 	],
 	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
 		'default' => [],
@@ -2729,6 +2840,12 @@ $wi->config->settings += [
 			'leaflet',
 		],
 	],
+	'egMapsDefaultService' => [
+		'wmgUseMaps' => 'leaflet',
+	],
+	'egMapsDisableSmwIntegration' => [
+		'wmgUseMaps' => true,
+	],
 
 	// MassMessage
 	'wgAllowGlobalMessaging' => [
@@ -2839,7 +2956,8 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgRestrictDisplayTitle' => [
-		'default' => true, // Wikis with NoTitle have it set to false
+		'default' => true,
+		'wmgUseNoTitle' => false,
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
@@ -2880,6 +2998,9 @@ $wi->config->settings += [
 		'+polytopewiki' => [
 			MEDIATYPE_TEXT,
 		],
+		'+wmgUse3D' => [
+			'application/sla',
+		],
 	],
 	'wmgWhitelistRead' => [
 		'default' => false,
@@ -2894,6 +3015,15 @@ $wi->config->settings += [
 	],
 	'wgMobileUrlTemplate' => [
 		'default' => '',
+	],
+	'wgMFMobileHeader' => [
+		'wmgUseMobileFrontend' => 'X-Subdomain',
+	],
+	'wgMFNoindexPages' => [
+		'wmgUseMobileFrontend' => false,
+	],
+	'wgMFStopRedirectCookieHost' => [
+		'wmgUseMobileFrontend' => $wi->hostname,
 	],
 
 	// Moderation extension settings
@@ -2966,6 +3096,14 @@ $wi->config->settings += [
 		'default' => [
 			'mathml'
 		],
+	],
+
+	// MultiBoilerplate
+	'wgMultiBoilerplateDisplaySpecialPage' => [
+		'wmgUseMultiBoilerplate' => true,
+	],
+	'wgMultiBoilerplateOptions' => [
+		'wmgUseMultiBoilerplate' => false,
 	],
 
 	// New User Email Notification
@@ -3042,6 +3180,11 @@ $wi->config->settings += [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
+		'+wmgUseMediaWikiChat' => [
+			'blockedfromchat' => [
+				'chat' => true,	
+			],
+		],
 	],
 	'wgImplicitGroups' => [
 		'default' => [
@@ -3146,6 +3289,9 @@ $wi->config->settings += [
 			'visualeditor-newwikitext' => 1,
 			'visualeditor-tabs' => 'multi-tab',
 		],
+		'+wmgUseCleanChanges' => [
+			'usenewrc' => 1,
+		],
 	],
 	'wgHiddenPrefs' => [
 		'default' => [],
@@ -3205,7 +3351,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
-		'default' => false,
+		'wmgUseRelatedArticles' => false,
 	],
 
 	// ReplaceText
@@ -3268,7 +3414,10 @@ $wi->config->settings += [
 			'owner',
 		],
 		'+devwiki' => [
-			'editinterface'
+			'editinterface',
+		],
+		'+wmgUseAuthorProtect' => [
+			'author',
 		],
 	],
 	'wgRestrictionTypes' => [
@@ -3663,6 +3812,10 @@ $wi->config->settings += [
 	'wgULSPosition' => [
 		'default' => 'personal',
 	],
+	'wgULSGeoService' => [
+		'wmgUseTranslate' => false,
+		'wmgUseUniversalLanguageSelector' => false,
+	],
 
 	// UrlShortener
 	'wgUrlShortenerTemplate' => [
@@ -3740,6 +3893,14 @@ $wi->config->settings += [
 	'wmgWikibasePropertyNamespaceID' => [
 		'default' => 120
 	],
+	'wgEnableWikibaseClient' => [
+		'default' => false,
+		'wmgUseWikibaseClient' => true,
+	],
+	'wgEnableWikibaseRepo' => [
+		'default' => false,
+		'wmgUseWikibaseRepository' => true,
+	],
 
 	// WebChat config
 	'wgWebChatServer' => [
@@ -3751,13 +3912,25 @@ $wi->config->settings += [
 	'wgWebChatClient' => [
 		'default' => 'freenodeChat',
 	],
+	'+wgWebChatClients' => [
+		'wmgUseWebChat' => [
+			'Mibbit' =>
+				'url' => 'https://embed.mibbit.com/index.html',
+			],
+		],
+	],
 
-	// WikiForum settings
+	// WikiForum
 	'wgWikiForumAllowAnonymous' => [
 		'default' => true,
 	],
 	'wgWikiForumLogsInRC' => [
 		'default' => true,
+	],
+
+	// WikiLove
+	'wgWikiLoveGlobal' => [
+		'wmgUseWikiLove' => true,	
 	],
 
 	// Wikimedia Incubator Settings
