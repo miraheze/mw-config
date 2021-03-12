@@ -169,8 +169,8 @@ $wi->config->settings += [
 	],
 
 	// BlogPage
-	'+wgBlogPageDisplay' => [
-		'wmgUseBlogPage' => [
+	'wgBlogPageDisplay' => [
+		'+wmgUseBlogPage' => [
 			'comments_of_day' => false,
 		],
 	],
@@ -433,9 +433,8 @@ $wi->config->settings += [
 	'wgReCaptchaSendRemoteIP' => [
 		'default' => false,
 	],
-	'+wgCaptchaTriggers' => [
-		'default' => [],
-		'wmgUseWikiForum' => [
+	'wgCaptchaTriggers' => [
+		'+wmgUseWikiForum' => [
 			'wikiforum' => true,	
 		],
 	],
