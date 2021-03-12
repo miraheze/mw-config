@@ -168,13 +168,6 @@ $wi->config->settings += [
 		],
 	],
 
-	// BlogPage
-	'wgBlogPageDisplay' => [
-		'+wmgUseBlogPage' => [
-			'comments_of_day' => false,
-		],
-	],
-
 	// Block
 	'wgAutoblockExpiry' => [
 		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
@@ -434,6 +427,15 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgCaptchaTriggers' => [
+		'default' => [
+			'edit' => false,
+			'create' => false,
+			'sendemail' => false,
+			'addurl' => true,
+			'createaccount' => true,
+			'badlogin' => true,
+			'badloginperuser' => true	
+		],
 		'+wmgUseWikiForum' => [
 			'wikiforum' => true,	
 		],
