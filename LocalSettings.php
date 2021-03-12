@@ -434,6 +434,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'+wgCaptchaTriggers' => [
+		'default' => [],
 		'wmgUseWikiForum' => [
 			'wikiforum' => true,	
 		],
