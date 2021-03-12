@@ -702,11 +702,6 @@ if ( $wmgUsePreloader ) {
 
 if ( $wmgUseProofreadPage ) {
 	wfLoadExtension( 'ProofreadPage' );
-
-	$wgExtraNamespaces[250] = 'Page';
-	$wgExtraNamespaces[251] = 'Page_talk';
-	$wgExtraNamespaces[252] = 'Index';
-	$wgExtraNamespaces[253] = 'Index_talk';
 }
 
 if ( $wmgUseProtectSite ) {

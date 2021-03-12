@@ -1757,6 +1757,48 @@ $wgManageWikiExtensions = [
 				'sql' => [
 					'pr_index' => "$IP/extensions/ProofreadPage/sql/ProofreadIndex.sql"
 				],
+				'namespaces' => [
+					'Page' => [
+						'id' => 250,
+						'searchable' => 1,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'proofread-page',
+						'additional' => []
+					],
+					'Page_talk' => [
+						'id' => 251,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+					'Index' => [
+						'id' => 252,
+						'searchable' => 1,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'proofread-index',
+						'additional' => []
+					],
+					'Index_talk' => [
+						'id' => 253,
+						'searchable' => 0,
+						'subpages' => 0,
+						'protection' => '',
+						'content' => 0,
+						'aliases' => [],
+						'contentmodel' => 'wikitext',
+						'additional' => []
+					],
+				],
 				'permissions' => [
 					'user' => [
 						'permissions' => [
