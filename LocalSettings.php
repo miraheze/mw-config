@@ -39,7 +39,7 @@ $wi->config->settings += [
 	],
 
 	// 3D
-	'wg3dProcessor' =>
+	'wg3dProcessor' => [
 		'wmgUse3D' => [ 
 			'/usr/bin/xvfb-run',
 			'-a',
