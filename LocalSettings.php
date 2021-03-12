@@ -3305,6 +3305,14 @@ $wi->config->settings += [
  			0 => 'Template:Boilerplate',
  		],
  	],
+	
+	// ProofreadPage
+	'wgProofreadPageNamespaceIds' => [
+		'wmgUseProofreadPage' => [
+			'index' => 252,
+			'page' => 250,
+		],
+	],
 
 	// Redis
 	'wmgRedisSettings' => [

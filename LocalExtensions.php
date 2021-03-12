@@ -713,11 +713,6 @@ if ( $wmgUseProofreadPage ) {
 	$wgExtraNamespaces[251] = 'Page_talk';
 	$wgExtraNamespaces[252] = 'Index';
 	$wgExtraNamespaces[253] = 'Index_talk';
-
-	$wgProofreadPageNamespaceIds = [
-		'index' => 252,
-		'page' => 250
-	];
 }
 
 if ( $wmgUseProtectSite ) {
