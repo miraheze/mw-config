@@ -2025,7 +2025,7 @@ $wi->config->settings += [
 
 	// HAWelcome
 	'wgHAWelcomeWelcomeUsername' => [
-		'default' => $wi->sitename,
+		'default' => 'HAWelcome',
 	],
 	'wgHAWelcomeStaffGroupName' => [
 		'default' => 'sysop',
