@@ -3912,13 +3912,6 @@ $wi->config->settings += [
 	'wgWebChatClient' => [
 		'default' => 'freenodeChat',
 	],
-	'+wgWebChatClients' => [
-		'wmgUseWebChat' => [
-			'Mibbit' => [
-				'url' => 'https://embed.mibbit.com/index.html',
-			],
-		],
-	],
 
 	// WikiForum
 	'wgWikiForumAllowAnonymous' => [
