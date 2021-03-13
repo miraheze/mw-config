@@ -1192,11 +1192,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Whether to enable shared uploads from the wiki specified in <code>$wmgSharedUploadDBname</code>.',
-		'requires' => [
-			'settings' => [
-				'dbname' => $wmgSharedUploadDBname ?: '<code>$wmgSharedUploadDBname</code>',
-				'setting' => 'wmgSharedUploadClientDBname',
-				'value' => $wi->dbname,
+		'requires' => [ [
+				'settings' => [
+					'dbname' => $wmgSharedUploadDBname ?: '<code>$wmgSharedUploadDBname</code>',
+					'setting' => 'wmgSharedUploadClientDBname',
+					'value' => $wi->dbname,
+				],
+				'permissions' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 	],
