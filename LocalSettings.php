@@ -3587,6 +3587,11 @@ $wi->config->settings += [
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s'
 	],
+	'wgRSSUrlWhitelist' => [
+		'wmgUseRSS' => [
+			"*"
+		],
+	],
 
 	// Scribunto
 	'wgCodeEditorEnableCore' => [
