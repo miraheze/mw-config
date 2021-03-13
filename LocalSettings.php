@@ -550,6 +550,7 @@ $wi->config->settings += [
 			'miraheze\d{1,2}',
 		],
 	],
+	
 	'wgCreateWikiCannedResponses' => [
 		'default' => [
 			// Approval reasons:
@@ -570,6 +571,7 @@ $wi->config->settings += [
 			'Duplicate wiki' => 'Your proposed wiki appears to duplicate, either substantially or entirely, the content of an existing wiki (see the "Request Comments" tab for one or more link(s) to the existing wiki(s)). Could you please describe in a few more sentences by adding to, but not replacing, your existing description, the scope and focus for your wiki, and also assure us that your wiki will not be a complete or substantial duplication? Thank you.',
 		],
 	],
+	
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
 	],
