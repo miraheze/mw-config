@@ -4303,31 +4303,6 @@ if ( $wmgUsersNotifiedOnAllChanges ) {
 	$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
 }
 
-if ( $wmgUseMultimediaViewer && $wmgUse3D ) {
-	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
-}
-
-if ( $wmgUseApex ) {
-	$wgApexLogo = [
-		'1x' => $wgLogo,
-		'2x' => $wgLogo,
-	];
-}
-
-if ( $wmgShowPopupsByDefault ) {
-	$wgPopupsHideOptInOnPreferencesPage = true;
-	$wgPopupsOptInDefaultState = '1';
-	$wgPopupsOptInStateForNewAccounts = '1';
-	$wgPopupsReferencePreviewsBetaFeature = false;
-}
-
-if ( $wmgVisualEditorEnableDefault ) {
-	$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-	$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
-} else {
-	$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
-}
-
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
@@ -4337,18 +4312,6 @@ require_once( '/srv/mediawiki/config/GlobalCache.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
-
-if ( $wmgUseLdap ) {
-	$wgAuthManagerAutoConfig['primaryauth'] += [	
-		LdapPrimaryAuthenticationProvider::class => [	
-			'class' => LdapPrimaryAuthenticationProvider::class,	
-			'args' => [ [	
-				'authoritative' => true, // don't allow local non-LDAP accounts	
-			] ],	
-			'sort' => 50, // must be smaller than local pw provider	
-		],	
-	];
-}
 
 if ( $wi->missing ) {
 	require_once( '/srv/mediawiki/config/MissingWiki.php' );
