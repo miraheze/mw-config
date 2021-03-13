@@ -45,3 +45,9 @@ $wgWBClientSettings['siteLinksGroups'] = [
 ];
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
+
+
+// Per-wiki
+if ( $wgDBname === 'nbdbwiki' ) {
+	$wgWBRepoSettings['formatterUrlProperty'] = 'P39';
+}
