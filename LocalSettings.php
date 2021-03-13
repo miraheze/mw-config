@@ -3805,10 +3805,16 @@ $wi->config->settings += [
  		'staffwiki' => true,
  		'mikekilitterboxwiki' => true
  	],
+	'wmgEnableSharedUploads' => [
+		'default' => false,
+	],
 	'wmgSharedUploadBaseUrl' => [
 		'default' => false,
 	],
 	'wmgSharedUploadDBname' => [
+		'default' => false,
+	],
+	'wmgSharedUploadClientDBname' => [
 		'default' => false,
 	],
 

@@ -1154,6 +1154,70 @@ $wgManageWikiSettings = [
 		'help' => 'Allows to upload Mp4 files.',
 		'requires' => [],
 	],
+	'wmgSharedUploadBaseUrl' => [
+		'name' => 'Shared Upload Base Url',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'The domain name for the wiki to use as the file repository. Leave empty unless it is a custom domain. By default will be the miraheze subdomain of whatever <code>$wmgSharedUploadDBname</code> is set to below. Do not include https:// or any paths.',
+		'requires' => [],
+	],
+	'wmgSharedUploadClientDBname' => [
+		'name' => 'Shared Upload Client Database Name',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'The database name for the wiki to allow to use this wiki as the file repository for that wiki. This value must be a valid Miraheze-hosted wiki database.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'public',
+			],
+		],
+	],
+	'wmgSharedUploadDBname' => [
+		'name' => 'Shared Upload Database Name',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'The database name for the wiki to use as the file repository. This value must be a valid Miraheze-hosted wiki database. The databse in this field will be used for granting permission from the client database. This <b>can not</b> be a private wiki database.',
+		'requires' => [],
+	],
+	'wmgEnableSharedUploads' => [
+		'name' => 'Enable Shared Uploads',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Whether to enable shared uploads from the wiki specified in <code>$wmgSharedUploadDBname</code>.',
+		'requires' => [
+			'settings' => [
+				'dbname' => $wmgSharedUploadDBname ?: '<code>$wmgSharedUploadDBname</code>',
+				'setting' => 'wmgSharedUploadClientDBname',
+				'value' => $wi->dbname,
+			],
+		],
+	],
+	'wgUploadMissingFileUrl' => [
+		'name' => 'Upload Missing File Url',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Point wikilinks to missing files ("red file links") to a custom URL.',
+		'requires' => [],
+	],
+	'wgUploadNavigationUrl' => [
+		'name' => 'Upload Navigation Url',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Point the upload navigation link in the sidebar to a custom URL.',
+		'requires' => [],
+	],
 
 	// Notifications
 	'wmgContactPageRecipientUser' => [
@@ -1638,58 +1702,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'restricted',
 		'help' => "Compress new page revisions if possible. System administrators: after enabling this, don't forget to manually run <code>sudo -u www-data php /srv/mediawiki/w/maintenance/storage/compressOld.php --wiki={$wi->dbname} --type=gzip</code>.",
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
-	'wmgSharedUploadBaseUrl' => [
-		'name' => 'Shared Upload Base Url',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'The domain name for the wiki to use as the file repository. Leave empty unless it is a custom domain. By default will be the miraheze subdomain of whatever <code>$wmgSharedUploadDBname</code> is set to below. Do not include https:// or any paths.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
-	'wmgSharedUploadDBname' => [
-		'name' => 'Shared Upload Database Name',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'The database name for the wiki to use as the file repository. DO NOT ever set this to a private wiki. This value must be a valid Miraheze-hosted wiki database.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
-	'wgUploadMissingFileUrl' => [
-		'name' => 'Upload Missing File Url',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'Point wikilinks to missing files ("red file links") to a custom URL.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
-	'wgUploadNavigationUrl' => [
-		'name' => 'Upload Navigation Url',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'Point the upload navigation link in the sidebar to a custom URL.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',

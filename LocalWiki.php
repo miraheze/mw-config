@@ -144,7 +144,7 @@ if ( (bool)$wmgWikiapiaryFooterPageName ) {
 }
 
 // $wgForeignFileRepos
-if ( $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
+if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) {
 	if ( !$wmgSharedUploadBaseUrl || $wmgSharedUploadBaseUrl === $wmgSharedUploadDBname ) {
 		$wmgSharedUploadSubdomain = substr( $wmgSharedUploadDBname, 0, -4 );
 
