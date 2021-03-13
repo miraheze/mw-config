@@ -1197,10 +1197,6 @@ $wgManageWikiSettings = [
 				'dbname' => $wmgSharedUploadDBname ?: '<code>$wmgSharedUploadDBname</code>',
 				'setting' => 'wmgSharedUploadClientDBname',
 				'value' => $wi->dbname,
-			], [
-				'permissions' => [
-					'managewiki-restricted',
-				],
 			],
 		],
 	],
