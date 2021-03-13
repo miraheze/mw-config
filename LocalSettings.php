@@ -2335,8 +2335,112 @@ $wi->config->settings += [
 	],
 
 	// Language
-	'wgLanguageCode' => [ // Hardcode "en"
+	'wgLanguageCode' => [
 		'default' => 'en',
+	],
+	
+	// LDAP
+	'wgLDAPDomainNames' => [
+		'ldapwikiwiki' => [
+			'miraheze',
+		],
+	],
+	'wgLDAPServerNames' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'ldap2.miraheze.org',
+		],
+	],
+	'wgLDAPEncryptionType' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'ssl',
+		],
+	],
+	'wgLDAPSearchAttributes' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'uid',
+		],
+	],
+	'wgLDAPBaseDNs' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'dc=miraheze,dc=org',
+		],
+	],
+	'wgLDAPUserBaseDNs' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+		],
+	],
+	'wgLDAPProxyAgent' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+		],
+	],
+	'wgLDAPProxyAgentPassword' => [
+		'ldapwikiwiki' => [
+			'miraheze' => $wmgLdapPassword,
+		],
+	],
+	'wgLDAPWriterDN' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+		],
+	],
+	'wgLDAPWriterPassword' => [
+		'ldapwikiwiki' => [
+			'miraheze' => $wmgLdapPassword,
+		],
+	],
+	'wgLDAPWriteLocation' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+		],
+	],
+	'wgLDAPAddLDAPUsers' => [
+		'ldapwikiwiki' => [
+			'miraheze' => true,
+		],
+	],
+	'wgLDAPUpdateLDAP' => [
+		'ldapwikiwiki' => [
+			'miraheze' => true,
+		],
+	],
+	'wgLDAPPasswordHash' => [
+		'ldapwikiwiki' => [
+			'miraheze' => 'ssha',
+		],
+	],
+	'wgLDAPPreferences' => [
+		'ldapwikiwiki' => [
+			'miraheze' => [
+				'email' => 'mail',
+				'realname' => 'givenName',
+			],
+		],
+	],
+	'wgLDAPUseFetchedUsername' => [
+		'ldapwikiwiki' => [
+			'miraheze' => true,
+		],
+	],
+	'wgLDAPLowerCaseUsernameScheme' => [
+		'ldapwikiwiki' => [
+			'miraheze' => false,
+			'invaliddomain' => false,
+		],
+	],
+	'wgLDAPLowerCaseUsername' => [
+		'ldapwikiwiki' => [
+			'miraheze' => false,
+			'invaliddomain' => false,
+		],
+	],
+	'wgLDAPOptions' => [
+		'ldapwikiwiki' => [
+			'miraheze' => [
+				"LDAP_OPT_X_TLS_CACERTFILE" => '/etc/ssl/certs/Sectigo.crt',
+			],
+		],
 	],
 
 	// License
@@ -3861,7 +3965,8 @@ $wi->config->settings += [
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
-		'default' => true,
+		'default' => false,
+		'wmgUseVisualEditor' => true,
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
@@ -4193,6 +4298,31 @@ if ( $wmgUsersNotifiedOnAllChanges ) {
 	$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
 }
 
+if ( $wmgUseMultimediaViewer && $wmgUse3D ) {
+	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+}
+
+if ( $wmgUseApex ) {
+	$wgApexLogo = [
+		'1x' => $wgLogo,
+		'2x' => $wgLogo,
+	];
+}
+
+if ( $wmgShowPopupsByDefault ) {
+	$wgPopupsHideOptInOnPreferencesPage = true;
+	$wgPopupsOptInDefaultState = '1';
+	$wgPopupsOptInStateForNewAccounts = '1';
+	$wgPopupsReferencePreviewsBetaFeature = false;
+}
+
+if ( $wmgVisualEditorEnableDefault ) {
+	$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+	$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
+} else {
+	$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+}
+
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
@@ -4202,6 +4332,18 @@ require_once( '/srv/mediawiki/config/GlobalCache.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
+
+if ( $wmgUseLdap ) {
+	$wgAuthManagerAutoConfig['primaryauth'] += [	
+		LdapPrimaryAuthenticationProvider::class => [	
+			'class' => LdapPrimaryAuthenticationProvider::class,	
+			'args' => [ [	
+				'authoritative' => true, // don't allow local non-LDAP accounts	
+			] ],	
+			'sort' => 50, // must be smaller than local pw provider	
+		],	
+	];
+}
 
 if ( $wi->missing ) {
 	require_once( '/srv/mediawiki/config/MissingWiki.php' );
