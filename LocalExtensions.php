@@ -27,6 +27,11 @@ if ( $wmgUseAJAXPoll ) {
 
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
+	
+	$wgApexLogo = [
+		'1x' => $wgLogo,
+		'2x' => $wgLogo,
+	];
 }
 
 if ( $wmgUseApprovedRevs ) {
@@ -404,6 +409,16 @@ if ( $wmgUseLastModified ) {
 
 if ( $wmgUseLdap ) {
 	wfLoadExtension( 'LdapAuthentication' );
+	
+	$wgAuthManagerAutoConfig['primaryauth'] += [	
+		LdapPrimaryAuthenticationProvider::class => [	
+			'class' => LdapPrimaryAuthenticationProvider::class,	
+			'args' => [ [	
+				'authoritative' => true, // don't allow local non-LDAP accounts	
+			] ],	
+			'sort' => 50, // must be smaller than local pw provider	
+		],	
+	];
 }
 
 if ( $wmgUseLiberty ) {
@@ -520,6 +535,10 @@ if ( $wmgUseMsUpload ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
+	
+	if ( $wmgUse3D ) {
+		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+	}
 }
 
 if ( $wmgUseMultiBoilerplate ) {
@@ -632,6 +651,13 @@ if ( $wmgUsePortableInfobox ) {
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
+	
+	if ( $wmgShowPopupsByDefault ) {
+		$wgPopupsHideOptInOnPreferencesPage = true;
+		$wgPopupsOptInDefaultState = '1';
+		$wgPopupsOptInStateForNewAccounts = '1';
+		$wgPopupsReferencePreviewsBetaFeature = false;
+	}
 }
 
 if ( $wmgUsePreloader ) {
@@ -891,6 +917,13 @@ if ( $wmgUseVideo ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
+	
+	if ( $wmgVisualEditorEnableDefault ) {
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
+	} else {
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+	}
 }
 
 if ( $wmgUseVoteNY ) {
