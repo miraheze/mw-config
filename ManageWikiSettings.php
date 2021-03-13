@@ -1182,7 +1182,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'The database name for the wiki to use as the file repository. This value must be a valid Miraheze-hosted wiki database.',
+		'help' => 'The database name for the wiki to use as the file repository. This value must be a valid Miraheze-hosted wiki database. The databse in this field will be used for granting permission from the client database. This <b>can not</b> be a private wiki database.',
 		'requires' => [],
 	],
 	'wmgEnableSharedUploads' => [
@@ -1194,7 +1194,7 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to enable shared uploads from the wiki specified in <code>$wmgSharedUploadDBname</code>.',
 		'requires' => [
 			'settings' => [
-				'dbname' => $wmgSharedUploadDBname,
+				'dbname' => $wmgSharedUploadDBname ?: '<code>$wmgSharedUploadDBname</code>',
 				'setting' => 'wmgSharedUploadClientDBname',
 				'value' => $wi->dbname,
 			],
