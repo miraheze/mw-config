@@ -3589,7 +3589,7 @@ $wi->config->settings += [
 	],
 	'wgRSSUrlWhitelist' => [
 		'wmgUseRSS' => [
-			"*"
+			"*",
 		],
 	],
 
