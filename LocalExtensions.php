@@ -27,11 +27,6 @@ if ( $wmgUseAJAXPoll ) {
 
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
-
-	$wgApexLogo = [
-		'1x' => $wgLogo,
-		'2x' => $wgLogo,
-	];
 }
 
 if ( $wmgUseApprovedRevs ) {
@@ -409,52 +404,6 @@ if ( $wmgUseLastModified ) {
 
 if ( $wmgUseLdap ) {
 	wfLoadExtension( 'LdapAuthentication' );
-
-	$wgAuthManagerAutoConfig['primaryauth'] += [
-		LdapPrimaryAuthenticationProvider::class => [
-			'class' => LdapPrimaryAuthenticationProvider::class,
-			'args' => [ [
-				'authoritative' => true, // don't allow local non-LDAP accounts
-			] ],
-			'sort' => 50, // must be smaller than local pw provider
-		],
-	];
-
-	$wgLDAPDomainNames = [ 'miraheze' ];
-	$wgLDAPServerNames = [ 'miraheze' => 'ldap2.miraheze.org' ];
-	$wgLDAPEncryptionType = [ 'miraheze' => 'ssl' ];
-
-
-	$wgLDAPSearchAttributes = [ 'miraheze' => 'uid' ];
-	$wgLDAPBaseDNs = [ 'miraheze' => 'dc=miraheze,dc=org' ];
-	$wgLDAPUserBaseDNs = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
-	$wgLDAPProxyAgent = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
-	$wgLDAPProxyAgentPassword = [ 'miraheze' => $wmgLdapPassword ];
-	$wgLDAPWriterDN = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
-	$wgLDAPWriterPassword = [ 'miraheze' => $wmgLdapPassword ];
-	$wgLDAPWriteLocation = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
-	$wgLDAPAddLDAPUsers = [ 'miraheze' => true ];
-	$wgLDAPUpdateLDAP = [ 'miraheze' => true ];
-	$wgLDAPPasswordHash = [ 'miraheze' => 'ssha' ];
-
-	// 'invaliddomain' is set to true so that mail password options
-	// will be available on user creation and password mailing
-	// Force strict mode. T218589
-	// $wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
-	$wgLDAPPreferences = [
-		'miraheze' => [
-			'email' => 'mail',
-			'realname' => 'givenName',
-		]
-	];
-
-	$wgLDAPUseFetchedUsername = [ 'miraheze' => true ];
-	$wgLDAPLowerCaseUsernameScheme = [ 'miraheze' => false, 'invaliddomain' => false ];
-	$wgLDAPLowerCaseUsername = [ 'miraheze' => false, 'invaliddomain' => false ];
-
-	$wgLDAPOptions = [ 'miraheze' => [ "LDAP_OPT_X_TLS_CACERTFILE" => '/etc/ssl/certs/Sectigo.crt' ] ];
-
-	// $wgLDAPDebug = 5;
 }
 
 if ( $wmgUseLiberty ) {
@@ -571,10 +520,6 @@ if ( $wmgUseMsUpload ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
-
-	if ( $wmgUse3D ) {
-		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
-	}
 }
 
 if ( $wmgUseMultiBoilerplate ) {
@@ -687,13 +632,6 @@ if ( $wmgUsePortableInfobox ) {
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
-	
-	if ( $wmgShowPopupsByDefault ) {
-		$wgPopupsHideOptInOnPreferencesPage = true;
-		$wgPopupsOptInDefaultState = '1';
-		$wgPopupsOptInStateForNewAccounts = '1';
-		$wgPopupsReferencePreviewsBetaFeature = false;
-	}
 }
 
 if ( $wmgUsePreloader ) {
@@ -762,8 +700,6 @@ if ( $wmgUseRightFunctions ) {
 
 if ( $wmgUseRSS ) {
 	wfLoadExtension( 'RSS' );
-
-	$wgRSSUrlWhitelist = [ "*" ];
 }
 
 if ( $wmgUseSandboxLink ) {
@@ -955,13 +891,6 @@ if ( $wmgUseVideo ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
-
-	if ( $wmgVisualEditorEnableDefault ) {
-		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
-	} else {
-		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
-	}
 }
 
 if ( $wmgUseVoteNY ) {
@@ -1035,6 +964,5 @@ if ( $wmgUseRegexFunctions ) {
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
 if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
-	// Required for Flow to work with rest.php
 	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
 }
