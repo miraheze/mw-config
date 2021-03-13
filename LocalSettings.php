@@ -4322,10 +4322,10 @@ if ( $wmgShowPopupsByDefault ) {
 }
 
 if ( $wmgVisualEditorEnableDefault ) {
-	$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-	$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
+	$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+	$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
 } else {
-	$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+	$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 }
 
 // Fonts
