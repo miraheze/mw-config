@@ -3814,6 +3814,9 @@ $wi->config->settings += [
 	'wmgSharedUploadDBname' => [
 		'default' => false,
 	],
+	'wmgSharedUploadClientDBname' => [
+		'default' => false,
+	],
 
 	// UniversalLanguageSelector
 	'wgULSAnonCanChangeLanguage' => [
