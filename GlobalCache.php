@@ -1,20 +1,25 @@
 <?php
 
-// Locally hosted and used for object caching
-$wgObjectCaches['redis-central'] = [
-	'class' => 'RedisBagOStuff',
-	'servers' => [ $wmgRedisSettings['cache']['server'] ],
-	'password' => $wmgRedisSettings['cache']['password'],
-	'loggroup' => 'redis',
-	'reportDupes' => false,
+$wgMemCachedPersistent = false;
+
+// Set timeout to 250ms (in microseconds)
+$wgMemCachedTimeout = 0.25 * 1e6;
+
+$wgObjectCaches['memcached-pecl'] = [
+	'class'                => 'MemcachedPeclBagOStuff',
+	'serializer'           => 'php',
+	'persistent'           => false,
+	'servers'              => [ $wmgCacheSettings['memcached']['server'] ],
+	// Effectively disable the failure limit (0 is invalid)
+	'server_failure_limit' => 1e9,
+	// Effectively disable the retry timeout
+	'retry_timeout'        => -1,
+	'loggroup'             => 'memcached',
+	'timeout'              => $wgMemCachedTimeout,
 ];
 
-$wgMemCachedServers = [
-	'51.195.236.245:11211'
-];
-
-$wgMainCacheType = CACHE_MEMCACHED;
-$wgSessionCacheType = CACHE_MEMCACHED;
+$wgMainCacheType = 'memcached-pecl';
+$wgSessionCacheType = 'memcached-pecl';
 $wgSessionsInObjectCache = true;
 
 $wgMessageCacheType = CACHE_DB;
@@ -22,12 +27,13 @@ $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = CACHE_DB;
 
+$jobrunnerSettings = $wmgCacheSettings['jobrunner'];
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => $wmgRedisSettings['jobrunner']['server'],
+	'redisServer' => $jobrunnerSettings['server'],
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'password' => $wmgRedisSettings['jobrunner']['password'],
+		'password' => $jobrunnerSettings['password'],
 		'compression' => 'gzip',
 	],
 	'claimTTL' => 3600,
