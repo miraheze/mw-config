@@ -3420,11 +3420,10 @@ $wi->config->settings += [
 	],
 
 	// Redis
-	'wmgRedisSettings' => [
+	'wmgCacheSettings' => [
 		'default' => [
-			'cache' => [
-				'server' => '51.195.236.223:6379',
-				'password' => $wmgRedisPassword,
+			'memcached' => [
+				'server' => '51.195.236.245:11211',
 			],
 			'jobrunner' => [
 				'server' => '51.195.236.220:6379',
