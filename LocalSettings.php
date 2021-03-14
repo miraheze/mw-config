@@ -701,7 +701,7 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
-			'Art & Arcitecture' => 'artarc',
+			'Art & Architecture' => 'artarc',
 			'Automotive' => 'automotive',
 			'Community' => 'community',
 			'Education' => 'education',
