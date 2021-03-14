@@ -3410,7 +3410,7 @@ $wi->config->settings += [
  			0 => 'Template:Boilerplate',
  		],
  	],
-	
+
 	// ProofreadPage
 	'wgProofreadPageNamespaceIds' => [
 		'wmgUseProofreadPage' => [
