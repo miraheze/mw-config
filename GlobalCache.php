@@ -5,8 +5,8 @@ $wgMemCachedPersistent = false;
 // Set timeout to 250ms (in microseconds)
 $wgMemCachedTimeout = 0.25 * 1e6;
 
-$wgObjectCaches['memcached'] = [
-	'class'                => 'MemcachedPhpBagOStuff',
+$wgObjectCaches['memcached-pecl'] = [
+	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
 	'servers'              => [ $wmgCacheSettings['memcached']['server'] ],
@@ -18,8 +18,8 @@ $wgObjectCaches['memcached'] = [
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
-$wgMainCacheType = 'memcached';
-$wgSessionCacheType = 'memcached';
+$wgMainCacheType = 'memcached-pecl';
+$wgSessionCacheType = 'memcached-pecl';
 $wgSessionsInObjectCache = true;
 
 $wgMessageCacheType = CACHE_DB;
