@@ -2517,6 +2517,17 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'variableslua' => [
+			'name' => 'VariablesLua',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VariablesLua',
+			'var' => 'wmgUseVariablesLua',
+			'conflicts' => false,
+			'requires' => [
+				'extensions' => [
+					'variables',
+				],
+			],
+		],
 		'veforall' => [
 			'name' => 'VEForAll',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VEForAll',
