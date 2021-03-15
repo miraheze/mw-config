@@ -3423,7 +3423,7 @@ $wi->config->settings += [
 	'wmgCacheSettings' => [
 		'default' => [
 			'memcached' => [
-				'server' => '127.0.0.1:11212',
+				'server' => '51.195.236.245:11211',
 			],
 			'jobrunner' => [
 				'server' => '51.195.236.220:6379',
