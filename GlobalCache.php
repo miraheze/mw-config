@@ -8,7 +8,7 @@ $wgMemCachedTimeout = 0.5 * 1e6;
 $wgObjectCaches['memcached-pecl'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
-	'persistent'           => false,
+	'persistent'           => true,
 	'servers'              => [ $wmgCacheSettings['memcached']['server'] ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
