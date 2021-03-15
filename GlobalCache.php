@@ -2,8 +2,8 @@
 
 $wgMemCachedPersistent = false;
 
-// Set timeout to 250ms (in microseconds)
-$wgMemCachedTimeout = 0.25 * 1e6;
+// Set timeout to 500ms (in microseconds)
+$wgMemCachedTimeout = 0.5 * 1e6;
 
 $wgObjectCaches['memcached-pecl'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
