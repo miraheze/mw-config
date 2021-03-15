@@ -239,6 +239,7 @@ $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Validator/Validator.php
 $IP/extensions/Variables/extension.json
+$IP/extensions/VariablesLua/extension.json
 $IP/extensions/VEForAll/extension.json
 $IP/extensions/Video/extension.json
 $IP/extensions/VisualEditor/extension.json
