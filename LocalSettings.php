@@ -3560,8 +3560,8 @@ $wi->config->settings += [
 	],
 	'wgRottenLinksExcludeWebsites' => [
 		'default' => [
-			'http://localhost',
-			'http://127.0.0.1',
+			'localhost',
+			'127.0.0.1',
 		],
 	],
 
