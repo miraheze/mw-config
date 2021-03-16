@@ -3558,6 +3558,12 @@ $wi->config->settings += [
 	'wgRottenLinksCurlTimeout' => [
 		'default' => 10,
 	],
+	'wgRottenLinksExcludeWebsites' => [
+		'default' => [
+			'localhost',
+			'127.0.0.1',
+		],
+	],
 
 	// Robot policy
 	'wgDefaultRobotPolicy' => [
