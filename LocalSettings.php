@@ -2210,9 +2210,7 @@ $wi->config->settings += [
 	'wgExtraLanguageNames' => [
 		'default' => [],
 		'isvwiki' => [
-			'isv' => [
-				'Medžuslovjansky',
-			],
+			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
 	],
 
