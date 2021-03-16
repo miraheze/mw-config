@@ -666,6 +666,7 @@ $wi->config->settings += [
 			'Roleplaying game wiki' => 'Roleplaying game wiki',
 			'Video game (specified video game) information wiki' => 'Video game (specified video game) information wiki',
 			'Video game (broad genre or video game series) information wiki' => 'Video game (broad genre or video game series) information wiki',
+			'None of the above' => 'None of the above',
 		],
 	],
 	'wgCreateWikiShowBiographicalOption' => [
