@@ -243,6 +243,24 @@ $wgManageWikiSettings = [
 		'help' => 'For visitors, only show tags/icons for unreviewed/outdated pages when enabled.',
 		'requires' => [],
 	],
+	'wgModerationPreviewLink' => [
+		'name' => 'Moderation Preview Link',
+		'from' => 'moderation',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'If enabled, Preview link is shown for pending edits. Normally you shouldn\'t enable this (when following Best Practices, approval/rejection depends on content, not formatting).',
+		'requires' => [],
+	],
+	'wgModerationEnableEditChange' => [
+		'name' => 'Moderation Enable Edit Change',
+		'from' => 'moderation',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'If enabled, moderators are allowed to edit pending changes before approving. DANGEROUS: moderator can accidentally delete the text of pending change. Enable this only when you use Moderation for pre-publish review.',
+		'requires' => [],
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
