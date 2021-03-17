@@ -426,7 +426,7 @@ $wgManageWikiExtensions = [
 			'name' => 'Comments',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Comments',
 			'var' => 'wmgUseComments',
-			'conflicts' => false,
+			'conflicts' => 'protectionindicator',
 			'requires' => [],
 			'install' => [
 				'sql' => [
@@ -1833,7 +1833,7 @@ $wgManageWikiExtensions = [
 			'name' => 'ProtectionIndicator',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ProtectionIndicator',
 			'var' => 'wmgUseProtectionIndicator',
-			'conflicts' => false,
+			'conflicts' => 'comments',
 			'install' => [],
 			'requires' => [],
 		],
