@@ -3446,7 +3446,10 @@ $wi->config->settings += [
 		'default' => [
 			'memcached' => [
 				'server' => [
-					'51.195.236.245:11211'
+					// Sessions and Object cache (mem2)
+					'51.195.236.245:11211',
+					// Parser and Message cache (mem1)
+					'51.195.236.223:11211'
 				],
 			],
 			'jobrunner' => [
