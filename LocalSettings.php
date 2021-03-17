@@ -2108,6 +2108,11 @@ $wi->config->settings += [
 				'importupload' => true,
 			],
 		],
+		'+simulatorwiki' => [
+			'editprotected' => [
+				'editfragment' => true,
+			],
+		],
 	],
 	'+wgGrantPermissionGroups' => [
 		'default' => [],
@@ -3150,6 +3155,9 @@ $wi->config->settings += [
 	],
 	'wgModerationOnlyInNamespaces' => [
 		'default' => [],
+		'simulatorwiki' => [
+			3000,
+		],
 		'talenteddeviantswiki' => [
 			NS_MAIN,
 			NS_FILE
@@ -3286,6 +3294,11 @@ $wi->config->settings += [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
+		'+simulatorwiki' => [
+			'moderated' => [
+				'skip-moderation' => true,	
+			],
+		],
 		'+wmgUseMediaWikiChat' => [
 			'blockedfromchat' => [
 				'chat' => true,	
@@ -3550,6 +3563,9 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+		'simulatorwiki' => [
+			'editfragment',
 		],
 	],
 
