@@ -31,14 +31,14 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
-$wgMainCacheType = 'memcached-mem-2';
-$wgSessionCacheType = 'memcached-mem-2';
+$wgMainCacheType = 'memcached-mem-1';
+$wgSessionCacheType = 'memcached-mem-1';
 $wgSessionsInObjectCache = true;
 
-$wgMessageCacheType = 'memcached-mem-2';
+$wgMessageCacheType = 'memcached-mem-1';
 $wgUseLocalMessageCache = true;
-$wgParserCacheType = 'memcached-mem-2';
-$wgLanguageConverterCacheType = 'memcached-mem-2';
+$wgParserCacheType = 'memcached-mem-1';
+$wgLanguageConverterCacheType = 'memcached-mem-1';
 
 $jobrunnerSettings = $wmgCacheSettings['jobrunner'];
 $wgJobTypeConf['default'] = [
