@@ -9,7 +9,7 @@ $wgObjectCaches['memcached'] = [
 	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgCacheSettings['memcached']['server'] ],
+	'servers'              => [ $wmgCacheSettings['memcached']['server'][0] ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
