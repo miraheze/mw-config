@@ -5,7 +5,6 @@ $wgMemCachedPersistent = false;
 // Set timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
 
-
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
