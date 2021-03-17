@@ -727,6 +727,7 @@ $wi->config->settings += [
 			'Religion' => 'religion',
 			'Science' => 'science',
 			'Software/Computing' => 'software',
+			'Song Contest' => 'songcontest',
 			'Sports' => 'sport',
 			'Uncategorised' => 'uncategorised',
 		],
