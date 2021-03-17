@@ -3150,6 +3150,12 @@ $wi->config->settings += [
 	'wgModerationEmail' => [
 		'default' => $wgPasswordSender,
 	],
+	'wgModerationPreviewLink' => [
+		'default' => false,
+	],
+	'wgModerationEnableEditChange' => [
+		'default' => false,
+	],
 	'wgModerationIgnoredInNamespaces' => [
 		'default' => [],
 	],
