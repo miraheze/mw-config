@@ -907,6 +907,10 @@ if ( $wmgUseVariables ) {
 	wfLoadExtension( 'Variables' );
 }
 
+if ( $wmgUseVariablesLua ) {
+	wfLoadExtension( 'VariablesLua' );
+}
+
 if ( $wmgUseVEForAll ) {
 	wfLoadExtension( 'VEForAll' );
 }

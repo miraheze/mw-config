@@ -1701,6 +1701,9 @@ $wi->config->settings += [
 	'wmgUseVariables' => [
 		'default' => false,
 	],
+	'wmgUseVariablesLua' => [
+		'default' => false,
+	],
 	'wmgUseWebChat' => [
 		'default' => false,
 	],
