@@ -1,7 +1,7 @@
 <?php
 
 if ( !$wgCommandLineMode ) {
-	header( "HTTP/1.1 404 Not Found" );
+	http_response_code( 404 );
 	$requestURL = htmlspecialchars( $_SERVER['REQUEST_URI'] );
 	date_default_timezone_set( 'UTC' ); // Set to UTC +0
 	$fullTimestamp = date( 'Y-m-d H:i:s' );
@@ -51,7 +51,7 @@ if ( !$wgCommandLineMode ) {
 		<div class="container">
 			<!-- Jumbotron -->
 			<div class="jumbotron">
-				<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg" alt="Miraheze Logo"> 404 Wiki not Found</h1>
+				<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg" alt="Miraheze Logo">404 Wiki not Found</h1>
 				<p class="lead">We couldn't find the wiki you were looking for on our servers.</p>
 				<p>
 					<a href="https://meta.miraheze.org" class="btn btn-lg btn-outline-success" role="button">Take me to Miraheze Meta</a>
