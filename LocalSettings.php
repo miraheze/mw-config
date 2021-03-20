@@ -20,6 +20,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
+$wgPasswordSender = 'noreply@miraheze.org';
+
 $wmgUploadHostname = "static.miraheze.org";
 
 $wi->setVariables(
@@ -2540,9 +2542,6 @@ $wi->config->settings += [
 	// Mail
 	'wgEnableEmail' => [
 		'default' => true,
-	],
-	'wgPasswordSender' => [
-		'default' => 'noreply@miraheze.org',
 	],
 	'wgSMTP' => [
 		'default' => [
