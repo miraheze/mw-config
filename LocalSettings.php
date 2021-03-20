@@ -22,7 +22,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
-$wmgUploadHostname = "static.miraheze.org";
+$wmgUploadHostname = 'static.miraheze.org';
 
 $wi->setVariables(
 	'/srv/mediawiki/w/cache',
