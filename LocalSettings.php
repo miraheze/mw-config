@@ -1864,9 +1864,9 @@ $wi->config->settings += [
 			5258, // Void (Board)
 			13554, // Paladox (SRE)
 			24689, // RobLa (Board)
-			57564, // RhinosF1 (MediaWiki)
+			57564, // RhinosF1 (SRE)
 			73651, // Owen (Board)
-			96304, // Universal Omega (MediaWiki)
+			96304, // Universal Omega (SRE)
 		],
 	],
 	'wgEnableImageWhitelist' => [
