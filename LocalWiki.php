@@ -52,6 +52,10 @@ if ( $wmgPrivateUploads ) {
 	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
 }
 
+if ( $wmgUsersNotifiedOnAllChanges ) {
+	$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
+}
+
 // DataDump
 $dataDumpDirectory = $wi->config->settings['wgDataDumpDirectory']['default'];
 $wi->config->settings['wgDataDump']['default'] = [
