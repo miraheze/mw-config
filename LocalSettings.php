@@ -963,7 +963,7 @@ $wi->config->settings += [
 	
 	// HTTP
 	'wgHTTPConnectTimeout' => [
-		'default' => 3,
+		'default' => 3.0,
 	],
 	'wgHTTPTimeout' => [
 		'default' => 20,
