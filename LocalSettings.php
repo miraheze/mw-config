@@ -960,7 +960,15 @@ $wi->config->settings += [
 	'wgWatchlistExpiry' => [
 		'default' => false,
 	],
-
+	
+	// HTTP
+	'wgHTTPConnectTimeout' => [
+		'default' => 3,
+	],
+	'$wgHTTPTimeout' => [
+		'default' => 20,
+	],
+	
 	// Extensions and Skins
 	'wmgUse3D' => [
 		'default' => false,
