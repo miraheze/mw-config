@@ -965,7 +965,7 @@ $wi->config->settings += [
 	'wgHTTPConnectTimeout' => [
 		'default' => 3,
 	],
-	'$wgHTTPTimeout' => [
+	'wgHTTPTimeout' => [
 		'default' => 20,
 	],
 	
