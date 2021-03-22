@@ -618,7 +618,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'mwscript' => [
- 					"$IP/extensions/DynamicPageList3/classes/db/CreateTemplateUpdateMaintenance.php" => [],
+ 					"$IP/extensions/DynamicPageList3/maintenance/createTemplate.php" => [],
 				],
 			],
 		],
