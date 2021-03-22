@@ -2809,6 +2809,7 @@ $wi->config->settings += [
 				'suppressrevision',
 				'themedesigner',
 				'titleblacklistlog',
+				'updatepoints',
 				'usermerge',
 				'userrights',
 				'userrights-interwiki',
@@ -3529,6 +3530,9 @@ $wi->config->settings += [
 		],
 		'simulatorwiki' => [
 			'editfragment',
+		],
+		'wmgUseSocialProfile' => [
+			'updatepoints',
 		],
 	],
 
