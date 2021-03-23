@@ -378,6 +378,26 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
+	// Citizen
+	'wgCitizenThemeDefault' => [
+		'default' => 'auto',
+	],
+	'wgCitizenEnableCollapsibleSections' => [
+		'default' => true,
+	],
+	'wgCitizenShowPageTools' => [
+		'default' => true,
+	],
+	'wgCitizenEnableDrawerSubSearch' => [
+		'default' => false,
+	],
+	'wgCitizenPortalAttach' => [
+		'default' => 'first',
+	],
+	'wgCitizenThemeColor' => [
+		'default' => '#131a21',
+	],
+
 	// Citoid
 	'wgCitoidFullRestbaseURL' => [
 		'wmgUseCitoid' => "https://{$wi->hostname}/{$wi->hostname}/",
