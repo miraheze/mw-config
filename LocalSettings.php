@@ -2085,7 +2085,7 @@ $wi->config->settings += [
 	'wgUseImageMagick' => [
 		'default' => true,
 	],
-	'wgImageMagickCommand' => [
+	'wgImageMagickConvertCommand' => [
 		'default' => '/usr/bin/convert',
 	],
 
