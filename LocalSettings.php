@@ -3056,7 +3056,7 @@ $wi->config->settings += [
 		'idolish7wiki' => true,
 	],
 	'wgShellRestrictionMethod' => [
-		'default' => 'autodetect',
+		'default' => 'firejail',
 	],
 	'wmgWhitelistRead' => [
 		'default' => false,
