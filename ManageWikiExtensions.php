@@ -1645,6 +1645,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'pdfbook' => [
+			'name' => 'PdfBook',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfBook',
+			'var' => 'wmgUsePdfBook',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'pdfembed' => [
 			'name' => 'PDF Embed',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PDFEmbed',
