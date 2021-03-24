@@ -2026,6 +2026,13 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 		],
+		'shortdescription' => [
+			'name' => 'ShortDescription',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ShortDescription',
+			'var' => 'wmgUseShortDescription',
+			'conflicts' => false,
+			'requires' => [],
+		],
 		'simpleblogpage' => [
 			'name' => 'SimpleBlogPage',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleBlogPage',

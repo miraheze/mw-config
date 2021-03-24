@@ -1537,6 +1537,9 @@ $wi->config->settings += [
 	'wmgUseUrlShortener' => [
 		'default' => false,
 	],
+	'wmgUseShortDescription' => [
+		'default' => false,
+	],
 	'wmgUseSimpleBlogPage' => [
 		'default' => false,
 	],
