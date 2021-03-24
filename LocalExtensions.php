@@ -748,6 +748,10 @@ if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 }
 
+if ( $wmgUseShortDescription ) {
+	wfLoadExtension( 'ShortDescription' );
+}
+
 if ( $wmgUseSimpleBlogPage ) {
 	require_once "$IP/extensions/SimpleBlogPage/SimpleBlogPage.php";
 }
