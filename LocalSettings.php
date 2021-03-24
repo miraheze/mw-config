@@ -1444,6 +1444,9 @@ $wi->config->settings += [
 	'wmgUsePageTriage' => [
 		'default' => false,
 	],
+	'wmgUsePdfBook' => [
+		'default' => false,
+	],
 	'wmgUsePDFEmbed' => [
 		'default' => false,
 	],
