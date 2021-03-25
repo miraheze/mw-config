@@ -698,6 +698,7 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
+			'None of the above' => 'None of the above',
 			'Alternate history wiki' => 'Alternate history wiki',
 			'Class or group project education wiki' => 'Class or group project education wiki',
 			'Curriculum resource wiki' => 'Curriculum resource wiki',
@@ -713,7 +714,6 @@ $wi->config->settings += [
 			'Roleplaying game wiki' => 'Roleplaying game wiki',
 			'Video game (specified video game) information wiki' => 'Video game (specified video game) information wiki',
 			'Video game (broad genre or video game series) information wiki' => 'Video game (broad genre or video game series) information wiki',
-			'None of the above' => 'None of the above',
 		],
 	],
 	'wgCreateWikiShowBiographicalOption' => [
