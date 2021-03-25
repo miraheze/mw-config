@@ -2106,6 +2106,7 @@ $wi->config->settings += [
 			'MariaDB' => 'https://meta.miraheze.org/wiki/Tech:MariaDB',
 			'Matomo' => 'https://meta.miraheze.org/wiki/Tech:Matomo',
 			'MediaWiki' => 'https://meta.miraheze.org/wiki/Tech:MediaWiki_appserver',
+			'Memcached' => 'https://meta.miraheze.org/wiki/Tech:Memcached',
 			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
 			'NGINX' => 'https://meta.miraheze.org/wiki/Tech:Nginx',
 			'Parsoid' => 'https://meta.miraheze.org/wiki/Tech:Parsoid',
