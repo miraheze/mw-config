@@ -2086,7 +2086,7 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgImageMagickConvertCommand' => [
-		'default' => '/usr/bin/convert',
+		'default' => '/usr/local/bin/mediawiki-firejail-convert',
 	],
 
 	// IncidentReporting
@@ -3054,6 +3054,9 @@ $wi->config->settings += [
 	'wgNativeImageLazyLoading' => [
 		'default' => false,
 		'idolish7wiki' => true,
+	],
+	'wgShellRestrictionMethod' => [
+		'default' => 'firejail',
 	],
 	'wmgWhitelistRead' => [
 		'default' => false,
