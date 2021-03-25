@@ -3275,6 +3275,14 @@ $wi->config->settings += [
 		],
 	],
 
+	// PdfHandler
+	'wgPdfProcessor' => [
+		'default' => '/usr/local/bin/mediawiki-firejail-ghostscript',
+	],
+	'wgPdfPostProcessor' => [
+		'default' => '/usr/local/bin/mediawiki-firejail-convert',
+	],
+
 	// Permissions
 	'wgGroupsAddToSelf' => [
 		'default' => [],
