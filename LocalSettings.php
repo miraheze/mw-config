@@ -751,6 +751,7 @@ $wi->config->settings += [
 		'default' => [
 			'Art & Architecture' => 'artarc',
 			'Automotive' => 'automotive',
+			'Business & Finance' => 'businessfinance',
 			'Community' => 'community',
 			'Education' => 'education',
 			'Electronics' => 'electronics',
