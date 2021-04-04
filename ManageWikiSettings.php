@@ -1483,7 +1483,6 @@ $wgManageWikiSettings = [
 		'name' => 'Skip Skins',
 		'from' => 'mediawiki',
 		'type' => 'skins',
-		'whitelistSkipSkins' => true,
 		'options' => [],
 		'overridedefault' => false,
 		'section' => 'preferences',
