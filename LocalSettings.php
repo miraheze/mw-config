@@ -2401,6 +2401,7 @@ $wi->config->settings += [
 	],
 	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
+		'cvswiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'freesoftwarepediawiki' => 'GNU Free Documentation License',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'exstatiowiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2421,6 +2422,7 @@ $wi->config->settings += [
 	],
 	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'cvswiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'freesoftwarepediawiki' => 'http://www.gnu.org/licenses/fdl-1.3.html',
 		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'exstatiowiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
