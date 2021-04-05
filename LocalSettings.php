@@ -2463,6 +2463,10 @@ $wi->config->settings += [
 	],
 	
 	// LinkTitles
+	'wgLinkTitlesFirstOnly' => [
+		'default' => true,
+		'simulatorwiki' => false,
+	],
 	'wgLinkTitlesParseOnEdit' => [
 		'default' => true,
 		'simulatorwiki' => false,
