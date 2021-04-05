@@ -2475,13 +2475,13 @@ $wi->config->settings += [
 		'default' => [],
 		'simulatorwiki' => [
 			NS_MAIN,
-			3000
+			3000,
 		],
 	],
 	'wgLinkTitlesTargetNamespaces' => [
 		'default' => [],
 		'simulatorwiki' => [
-			NS_MAIN
+			NS_MAIN,
 		],
 	],
 
