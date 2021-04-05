@@ -2046,12 +2046,20 @@ $wi->config->settings += [
 		'+simulatorwiki' => [
 			'editprotected' => [
 				'editfragment' => true,
+				'edittemplate' => true,
+			],
+			'import' => [
+				'import' => true,
+				'importupload' => true,
 			],
 		],
 	],
 	'+wgGrantPermissionGroups' => [
 		'default' => [],
 		'ahinfoboxeswiki' => [
+			'import' => 'administration',
+		],
+		'simulatorwiki' => [
 			'import' => 'administration',
 		],
 	],
@@ -2452,6 +2460,29 @@ $wi->config->settings += [
 		'gzewiki' => [ "file://" ],
 		'kaiwiki' => [ "file://" ],
 		'vtwiki' => [ "discord://" ],
+	],
+	
+	// LinkTitles
+	'wgLinkTitlesParseOnEdit' => [
+		'default' => true,
+		'simulatorwiki' => false,
+	],
+	'wgLinkTitlesSameNamespace' => [
+		'default' => true,
+		'simulatorwiki' => false,
+	],
+	'wgLinkTitlesSourceNamespaces' => [
+		'default' => [],
+		'simulatorwiki' => [
+			NS_MAIN,
+			3000,
+		],
+	],
+	'wgLinkTitlesTargetNamespaces' => [
+		'default' => [],
+		'simulatorwiki' => [
+			NS_MAIN,
+		],
 	],
 
 	// LiliPond
@@ -3534,6 +3565,9 @@ $wi->config->settings += [
 		'+sesupportwiki' => [
 			'editor',
 		],
+		'+simulatorwiki' => [
+			'edittemplate',
+		],
 		'+testwiki' => [
 			'bureaucrat',
 			'consul',
@@ -3570,6 +3604,7 @@ $wi->config->settings += [
 		],
 		'simulatorwiki' => [
 			'editfragment',
+			'edittemplate',
 		],
 		'wmgUseSocialProfile' => [
 			'updatepoints',
