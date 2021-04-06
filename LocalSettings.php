@@ -2168,6 +2168,7 @@ $wi->config->settings += [
 		'default' => [
 			'meta',
 			'loginwiki',
+			'mw',
 			'templatewiki',
 			'wikipedia',
 		],
@@ -2185,9 +2186,6 @@ $wi->config->settings += [
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
-		],
-		'+memeswiki' => [
-			'mw',
 		],
 		'+mrjaroslavikwiki' => [
 			'wikipedia' => [
