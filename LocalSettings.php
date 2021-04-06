@@ -2168,6 +2168,7 @@ $wi->config->settings += [
 		'default' => [
 			'meta',
 			'loginwiki',
+			'mw',
 			'templatewiki',
 			'wikipedia',
 		],
