@@ -2186,6 +2186,9 @@ $wi->config->settings += [
 			'wmincubator',
 			'wikiaincubatorplus',
 		],
+		'+memeswiki' => [
+			'mw',
+		],
 		'+mrjaroslavikwiki' => [
 			'wikipedia' => [
 				'cs',
