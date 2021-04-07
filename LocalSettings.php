@@ -1741,9 +1741,7 @@ $wi->config->settings += [
 	'wgFlaggedRevsTags' => [
 		'default' => [
 			'status' => [
-				'quality' => 1,
 				'levels' => 2,
-				'pristine' => 3,
 			],
 		],
 		'infectopedwiki' => [
