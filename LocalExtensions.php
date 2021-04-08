@@ -158,7 +158,7 @@ if ( $wmgUseCosmos ){
 }
 
 if ( $wmgUseCreatePage ) {
-	require_once "$IP/extensions/CreatePage/CreatePage.php";
+	wfLoadExtension( 'CreatePage' );
 }
 if ( $wmgUseCreatePageUw ) {
 	wfLoadExtension( 'CreatePageUw' );
