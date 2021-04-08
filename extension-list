@@ -255,8 +255,8 @@ $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikiSEO/extension.json
 $IP/extensions/WikiTextLoggedInOut/extension.json
-$IP/extensions/Wikibase/client/WikibaseClient.php
-$IP/extensions/Wikibase/repo/Wikibase.php
+$IP/extensions/Wikibase/extension-client.json
+$IP/extensions/Wikibase/extension-repo.json
 $IP/extensions/WikibaseLexeme/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
