@@ -214,7 +214,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'babel' => "$IP/extensions/Babel/babel.sql"
+					'babel' => "$IP/extensions/Babel/sql/tables-generated.sql"
 				],
 			],
 		],
@@ -1104,7 +1104,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'linter' => "$IP/extensions/Linter/sql/linter.sql"
+					'linter' => "$IP/extensions/Linter/sql/tables-generated.sql"
 				],
 			],
 		],
@@ -2832,7 +2832,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'wikilove_log' => "$IP/extensions/WikiLove/patches/WikiLoveLog.sql"
+					'wikilove_log' => "$IP/extensions/WikiLove/patches/tables-generated.sql"
 				],
 			],
 		],
