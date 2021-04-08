@@ -1762,7 +1762,7 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'pr_index' => "$IP/extensions/ProofreadPage/sql/ProofreadIndex.sql"
+					'pr_index' => "$IP/extensions/ProofreadPage/sql/tables-generated.sql"
 				],
 				'namespaces' => [
 					'Page' => [
