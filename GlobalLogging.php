@@ -69,7 +69,7 @@ $wmgMonologConfig = [
 	'formatters' => [
 		'logstash' => [
 			'class' => \Monolog\Formatter\LogstashFormatter::class,
-			'args' => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+			'args' => [ 'mediawiki', php_uname( 'n' ), '', '', 1 ],
 		],
 	],
 ];
