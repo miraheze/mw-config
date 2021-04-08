@@ -1426,7 +1426,7 @@ $wgManageWikiExtensions = [
 			'name' => 'MyVariables',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MyVariables',
 			'var' => 'wmgUseMyVariables',
-			'conflicts' => false,
+			'conflicts' => 'approvedrevs', // https://phabricator.wikimedia.org/T279617
 			'requires' => [],
 		],
 		'newestpages' => [
