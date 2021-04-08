@@ -404,7 +404,7 @@ if ( $wmgUseLanguageSelector ) {
 }
 
 if ( $wmgUseLastModified ) {
-	require_once "$IP/extensions/LastModified/LastModified.php";
+	wfLoadExtension( 'LastModified' );
 }
 
 if ( $wmgUseLdap ) {
