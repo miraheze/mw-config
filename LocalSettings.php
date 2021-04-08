@@ -723,7 +723,7 @@ $wi->config->settings += [
 		'default' => [
 			"$IP/maintenance/tables.sql",
 			"$IP/maintenance/tables-generated.sql",
-			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+			"$IP/extensions/AbuseFilter/db_patches/mysql/abusefilter.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
 			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
@@ -733,7 +733,7 @@ $wi->config->settings += [
 			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
+			"$IP/extensions/UrlShortener/schemas/tables-generated.sql"
 		],
 	],
 	'wgCreateWikiStateDays' => [
