@@ -1770,12 +1770,6 @@ $wi->config->settings += [
 				'pristine' => 4,
 			],
 		],
-		'test3wiki' => [
-			'status' => [
-				'levels' => 2,
-				
-			],
-		],
 	],
 	'wgFlaggedRevsTagsRestrictions' => [
 		'default' => [
