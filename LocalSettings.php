@@ -4423,6 +4423,12 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 // Fonts
 putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
 
+// Varnish
+
+// We set wgInternalServer to wgServer as we need this to get purging working (we convert wgServer from https:// to http://).
+// https://www.mediawiki.org/wiki/Manual:$wgInternalServer
+$wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
+
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
 require_once( '/srv/mediawiki/config/GlobalCache.php' );
