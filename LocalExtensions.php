@@ -955,7 +955,7 @@ if ( $wmgUseWikidataPageBanner ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 }
 
 if ( $wmgUseWikibaseLexeme ) {
@@ -967,7 +967,7 @@ if ( $wmgUseWikibaseQualityConstraints ) {
 }
 
 if ( $wmgUseWikibaseRepository ) {
-	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
 }
 
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
