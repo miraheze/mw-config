@@ -2642,12 +2642,13 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/entity_usage.sql",
-					'wb_terms' => "$IP/extensions/Wikibase/repo/sql/Wikibase.sql",
-					'wb_changes' => "$IP/extensions/Wikibase/repo/sql/changes.sql",
-					'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/changes_dispatch.sql",
-					'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/changes_subscription.sql",
-					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql"
+					'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/mysql/entity_usage.sql",
+					'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
+					'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
+					'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
+					'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_dispatch.sql",
+					'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
+					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql"
 				],
 				'mwscript' => [
 						"$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php" => [],
@@ -2662,17 +2663,18 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'sql' => [
-					'wb_changes' => "$IP/extensions/Wikibase/repo/sql/changes.sql",
-					'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/changes_dispatch.sql",
-					'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/changes_subscription.sql",
-					'wbt_item_terms' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
-					'wb_terms' => "$IP/extensions/Wikibase/repo/sql/Wikibase.sql",
-					'wbt_term_in_lang' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
-					'wbt_text_in_lang' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
-					'wbt_text' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
-					'wbt_type' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
-					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/wb_property_info.sql",
-					'wbt_property_terms' => "$IP/extensions/Wikibase/repo/sql/AddNormalizedTermsTablesDDL.sql",
+					'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
+					'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_dispatch.sql",
+					'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
+					'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
+					'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
+					'wbt_item_terms' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
+					'wbt_term_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
+					'wbt_text_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
+					'wbt_text' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
+					'wbt_type' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
+					'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql",
+					'wbt_property_terms' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 				],
 				'permissions' => [
 					'*' => [
@@ -2765,7 +2767,7 @@ $wgManageWikiExtensions = [
 			],
 			'install' => [
 				'sql' => [
-					'wbqc_constraints' => "$IP/extensions/WikibaseQualityConstraints/sql/create_wbqc_constraints.sql",
+					'wbqc_constraints' => "$IP/extensions/WikibaseQualityConstraints/sql/mysql/tables-generated.sql",
 				],
 			],
 		],
