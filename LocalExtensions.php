@@ -158,7 +158,7 @@ if ( $wmgUseCosmos ){
 }
 
 if ( $wmgUseCreatePage ) {
-	require_once "$IP/extensions/CreatePage/CreatePage.php";
+	wfLoadExtension( 'CreatePage' );
 }
 if ( $wmgUseCreatePageUw ) {
 	wfLoadExtension( 'CreatePageUw' );
@@ -404,7 +404,7 @@ if ( $wmgUseLanguageSelector ) {
 }
 
 if ( $wmgUseLastModified ) {
-	require_once "$IP/extensions/LastModified/LastModified.php";
+	wfLoadExtension( 'LastModified' );
 }
 
 if ( $wmgUseLdap ) {
@@ -725,7 +725,7 @@ if ( $wmgUseRevisionSlider ) {
 }
 
 if ( $wmgUseRightFunctions ) {
-	require_once "$IP/extensions/RightFunctions/RightFunctions.php";
+	wfLoadExtension( 'RightFunctions' );
 }
 
 if ( $wmgUseRSS ) {
@@ -955,7 +955,7 @@ if ( $wmgUseWikidataPageBanner ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 }
 
 if ( $wmgUseWikibaseLexeme ) {
@@ -967,7 +967,7 @@ if ( $wmgUseWikibaseQualityConstraints ) {
 }
 
 if ( $wmgUseWikibaseRepository ) {
-	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
 }
 
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
