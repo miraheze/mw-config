@@ -4172,7 +4172,19 @@ $wi->config->settings += [
 	'wmincMultilingualProjects' => [
 		'default' => [],
 	],
-
+	'wmincTestWikiNamespaces' => [
+		'default' => [
+			NS_MAIN, NS_TALK,
+			NS_TEMPLATE, NS_TEMPLATE_TALK,
+			NS_CATEGORY, NS_CATEGORY_TALK,
+			828, 829 // NS_MODULE, NS_MODULE_TALK
+		],
+		'idiotpediaincubatorwiki' => [
+			NS_MAIN, NS_TALK,
+			NS_CATEGORY, NS_CATEGORY_TALK,
+			828, 829 // NS_MODULE, NS_MODULE_TALK
+		],
+	],
 	// WikiLove
 	'wgWikiLoveGlobal' => [
 		'wmgUseWikiLove' => true,	
