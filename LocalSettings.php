@@ -4318,6 +4318,7 @@ $wi->config->settings += [
 			'http' => 'warning',
 			'HttpError' => 'error', // Only log http errors with a 500+ code
 			// 'JobExecutor' => [ 'logstash' => 'warning' ],
+			'JobQueueRedis' => 'debug',
 			'localisation' => false,
 			'ldap' => 'warning',
 			'Linter' => false,
