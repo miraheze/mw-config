@@ -2178,10 +2178,12 @@ $wi->config->settings += [
 		'+batfamilywiki' => [
 			'batmanwiki',
 			'batmanwikifandom',
+			'd',
 		],
 		'+batmanwiki' => [
 			'batfamilywiki',
 			'batmanwikifandom',
+			'd',
 		],
 		'+incubatorwiki' => [
 			'wmincubator',
@@ -2208,6 +2210,7 @@ $wi->config->settings += [
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
+			'd',
 		],
 		'+wikitrashwiki' => [
 			'wikipedia' => [
