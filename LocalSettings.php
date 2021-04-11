@@ -583,6 +583,27 @@ $wi->config->settings += [
 				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 		],
+		'batfamilywiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
+		'batmanwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
+		'snapwikiwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
 		'thewhiteroomwiki' => [
 			'recentchanges' => false,
 			'interface' => [
