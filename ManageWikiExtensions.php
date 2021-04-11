@@ -41,6 +41,7 @@ $wgManageWikiExtensions = [
 					'wgFileExtensions' => array_merge( $wgFileExtensions, [ 'stl' ] ),
 				],
 			],
+			'section' => 'mediahandlers',
 		],
 		'addthis' => [
 			'name' => 'AddThis',
@@ -48,6 +49,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseAddThis',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'htmlmetaadntitle' => [
 			'name' => 'Add HTML Meta and Title',
@@ -55,6 +57,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseAddHTMLMetaAndTitle',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'adminlinks' => [
 			'name' => 'Admin Links',
@@ -71,6 +74,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'advancedsearch' => [
 			'name' => 'AdvancedSearch',
@@ -78,6 +82,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseAdvancedSearch',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'ajaxpoll' => [
 			'name' => 'AJAX Poll',
@@ -99,6 +104,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'apex' => [
 			'name' => 'Apex',
@@ -133,6 +139,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'arrays' => [
 			'name' => 'Arrays',
@@ -140,6 +147,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseArrays',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'articleratings' => [
 			'name' => 'Article Ratings',
@@ -159,6 +167,7 @@ $wgManageWikiExtensions = [
 					'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
 				],
 			],
+			'section' => 'other',
 		],
 		'articletocategory2' => [
 			'name' => 'Article To Category 2',
@@ -166,6 +175,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseArticleToCategory2',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'authorprotect' => [
 			'name' => 'Author Protect',
@@ -187,6 +197,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'antispam',
 		],
 		'autocreatecategorypages' => [
 			'name' => 'Auto Create Category Pages',
@@ -198,6 +209,7 @@ $wgManageWikiExtensions = [
 					'managewiki-restricted',
 				],
 			],
+			'section' => 'other',
 		],
 		'autocreatepages' => [
 			'name' => 'Auto Create Pages',
@@ -205,6 +217,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseAutoCreatePage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'babel' => [
 			'name' => 'Babel',
@@ -217,6 +230,7 @@ $wgManageWikiExtensions = [
 					'babel' => "$IP/extensions/Babel/babel.sql"
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'blogpage' => [
 			'name' => 'Blog Page',
@@ -262,6 +276,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'calendar-wikivoyage' => [
 			'name' => 'Calendar-Wikivoyage',
@@ -269,6 +284,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCalendarWikivoyage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'capiunto' => [
 			'name' => 'Capiunto',
@@ -276,6 +292,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCapiunto',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'cargo' => [
 			'name' => 'Cargo',
@@ -301,6 +318,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'categorysortheaders' => [
 			'name' => 'CategorySortHeaders',
@@ -309,6 +327,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [],
+			'section' => 'other',
 		],
 		'categorytree' => [
 			'name' => 'CategoryTree',
@@ -317,6 +336,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [],
+			'section' => 'parserhooks',
 		],
 		'charinsert' => [
 			'name' => 'CharInsert',
@@ -324,6 +344,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCharInsert',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'cite' => [
 			'name' => 'Cite',
@@ -331,6 +352,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCite',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'citethispage' => [
 			'name' => 'CiteThisPage',
@@ -338,6 +360,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCiteThisPage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'citizen' => [
 			'name' => 'Citizen',
@@ -361,6 +384,7 @@ $wgManageWikiExtensions = [
 					'state' => 'public',
 				],
 			],
+			'section' => 'other',
 		],
 		'cleanchanges' => [
 			'name' => 'CleanChanges',
@@ -368,6 +392,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCleanChanges',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'codeeditor' => [
 			'name' => 'CodeEditor',
@@ -375,6 +400,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCodeEditor',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'editors',
 		],
 		'codemirror' => [
 			'name' => 'CodeMirror',
@@ -382,6 +408,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCodeMirror',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'editors',
 		],
 		'collapsiblevector' => [
 			'name' => 'Collapsible Vector',
@@ -389,6 +416,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCollapsibleVector',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'collection' => [
 			'name' => 'Collection + Electron (PDF)',
@@ -400,6 +428,7 @@ $wgManageWikiExtensions = [
 					'state' => 'public',
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'commentbox' => [
 			'name' => 'Commentbox',
@@ -407,6 +436,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCommentbox',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'commentstreams' => [
 			'name' => 'CommentStreams',
@@ -421,6 +451,7 @@ $wgManageWikiExtensions = [
 					'watch' => "$IP/extensions/CommentStreams/sql/watch.sql",
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'comments' => [
 			'name' => 'Comments',
@@ -457,6 +488,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'commonsmetadata' => [
 			'name' => 'CommonsMetadata',
@@ -464,6 +496,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCommonsMetadata',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'contactpage' => [
 			'name' => 'ContactPage',
@@ -471,6 +504,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseContactPage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'contributionscores' => [
 			'name' => 'Contribution Scores',
@@ -478,6 +512,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseContributionScores',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'cosmos' => [
 			'name' => 'Cosmos',
@@ -493,6 +528,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCreatePage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'createpageuw' => [
 			'name' => 'CreatePageUw',
@@ -500,6 +536,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCreatePageUw',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'createredirect' => [
 			'name' => 'CreateRedirect',
@@ -507,6 +544,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCreateRedirect',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'css' => [
 			'name' => 'CSS',
@@ -514,6 +552,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseCSS',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'datatransfer' => [
 			'name' => 'Data Transfer',
@@ -521,6 +560,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDataTransfer',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'darkmode' => [
 			'name' => 'DarkMode',
@@ -528,6 +568,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDarkMode',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'deleteuserpages' => [
 			'name' => 'DeleteUserPages',
@@ -536,6 +577,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [],
+			'section' => 'other',
 		],
 		'description2' => [
 			'name' => 'Description2',
@@ -543,6 +585,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDescription2',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'disambiguator' => [
 			'name' => 'Disambiguator',
@@ -550,6 +593,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDisambiguator',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'discussiontools' => [
 			'name' => 'DiscussionTools',
@@ -562,6 +606,7 @@ $wgManageWikiExtensions = [
 					'visualeditor',
 				],
 			],
+			'section' => 'other',
 		],
 		'displaytitle' => [
 			'name' => 'Display Title',
@@ -569,6 +614,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDisplayTitle',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'dplforum' => [
 			'name' => 'DPLForum',
@@ -576,6 +622,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDPLForum',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'dummyfandoommainpagetags' => [
 			'name' => 'DummyFandoomMainpageTags',
@@ -583,6 +630,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDummyFandoomMainpageTags',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'disqustag' => [
 			'name' => 'DisqusTag',
@@ -594,6 +642,7 @@ $wgManageWikiExtensions = [
 					'managewiki-restricted',
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'dusktodawn' => [
 			'name' => 'DuskToDawn',
@@ -609,6 +658,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDynamicPageList',
 			'conflicts' => 'dynamicpagelist3',
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'dynamicpagelist3' => [
 			'name' => 'DynamicPageList3',
@@ -621,6 +671,7 @@ $wgManageWikiExtensions = [
  					"$IP/extensions/DynamicPageList3/maintenance/createTemplate.php" => [],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'dynamicsidebar' => [
 			'name' => 'DynamicSidebar',
@@ -628,6 +679,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseDynamicSidebar',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'timeline' => [
 			'name' => 'EasyTimeline',
@@ -635,6 +687,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTimeline',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'editcount' => [
 			'name' => 'EditCount',
@@ -642,6 +695,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseEditcount',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'editnotify' => [
 			'name' => 'EditNotify',
@@ -649,6 +703,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseEditNotify',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'editsubpages' => [
 			'name' => 'Edit Subpages',
@@ -657,6 +712,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'install' => [],
+			'section' => 'other',
 		],
 		'erudite' => [
 			'name' => 'Erudite',
@@ -672,6 +728,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseFancyBoxThumbs',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'femiwiki' => [
 			'name' => 'Femiwiki',
@@ -746,6 +803,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'foreground' => [
 			'name' => 'Foreground',
@@ -770,6 +828,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'fontawesome' => [
 			'name' => 'FontAwesome',
@@ -777,6 +836,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseFontAwesome',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'gadgets' => [
 			'name' => 'Gadgets',
@@ -784,6 +844,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGadgets',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'gamepress' => [
 			'name' => 'Gamepress',
@@ -799,6 +860,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGenealogy',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'geocrumbs' => [
 			'name' => 'GeoCrumbs',
@@ -806,6 +868,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGeoCrumbs',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'geodata' => [
 			'name' => 'GeoData',
@@ -818,6 +881,7 @@ $wgManageWikiExtensions = [
 					'geo_tags' => "$IP/extensions/GeoData/sql/db-backed.sql"
 				],
 			],
+			'section' => 'other',
 		],
 		'geogebra' => [
 			'name' => 'GeoGebra',
@@ -825,6 +889,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGeoGebra',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'gettingstarted' => [
 			'name' => 'GettingStarted',
@@ -836,6 +901,7 @@ $wgManageWikiExtensions = [
 					'guidedtour',
 				],
 			],
+			'section' => 'api',
 		],
 		'globaluserpage' => [
 			'name' => 'GlobalUserPage',
@@ -843,6 +909,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGlobalUserPage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'googledocs4mw' => [
 			'name' => 'GoogleDocs4MW',
@@ -850,6 +917,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGoogleDocs4MW',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'googlenewssitemap' => [
 			'name' => 'GoogleNewsSitemap',
@@ -857,6 +925,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGoogleNewsSitemap',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'graph' => [
 			'name' => 'Graph',
@@ -869,6 +938,7 @@ $wgManageWikiExtensions = [
 					'codeeditor',
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'groupssidebar' => [
 			'name' => 'GroupsSidebar',
@@ -876,6 +946,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGroupsSidebar',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'guidedtour' => [
 			'name' => 'GuidedTour',
@@ -883,6 +954,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseGuidedTour',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'hassomecolours' => [
 			'name' => 'HasSomeColours',
@@ -917,6 +989,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'headerfooter' => [
 			'name' => 'Header Footer',
@@ -924,6 +997,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseHeaderFooter',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'headertabs' => [
 			'name' => 'Header Tabs',
@@ -931,6 +1005,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseHeaderTabs',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'hidesection' => [
 			'name' => 'HideSection',
@@ -938,6 +1013,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseHideSection',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'highlightlinksincategory' => [
 			'name' => 'Highlight Links In Category',
@@ -945,6 +1021,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseHighlightLinksInCategory',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'imagemap' => [
 			'name' => 'ImageMap',
@@ -952,6 +1029,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseImageMap',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'imagerating' => [
 			'name' => 'ImageRating',
@@ -972,6 +1050,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'inputbox' => [
 			'name' => 'InputBox',
@@ -979,6 +1058,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseInputBox',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'javascriptslideshow' => [
 			'name' => 'Javascript Slideshow',
@@ -986,6 +1066,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseJavascriptSlideshow',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'josa' => [
 			'name' => 'Josa',
@@ -993,6 +1074,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseJosa',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'jsbreadcrumbs' => [
 			'name' => 'JS BreadCrumbs',
@@ -1000,6 +1082,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseJSBreadCrumbs',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'jscalendar' => [
 			'name' => 'JsCalendar',
@@ -1007,6 +1090,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseJsCalendar',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'jsonconfig' => [
 			'name' => 'JsonConfig',
@@ -1014,6 +1098,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseJsonConfig',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'kartographer' => [
 			'name' => 'Kartographer',
@@ -1025,6 +1110,7 @@ $wgManageWikiExtensions = [
 					'jsonconfig',
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'labeledsectiontransclusion' => [
 			'name' => 'Labeled Section Transclusion',
@@ -1032,6 +1118,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLabeledSectionTransclusion',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'languageselector' => [
 			'name' => 'LanguageSelector',
@@ -1039,6 +1126,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLanguageSelector',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'lastmodified' => [
 			'name' => 'Last Modified',
@@ -1046,6 +1134,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLastModified',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'liberty' => [
 			'name' => 'Liberty',
@@ -1061,6 +1150,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLingo',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'linksuggest' => [
 			'name' => 'LinkSuggest',
@@ -1068,6 +1158,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLinkSuggest',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'linktarget' => [
 			'name' => 'LinkTarget',
@@ -1075,6 +1166,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLinkTarget',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'linktitles' => [
 			'name' => 'LinkTitles',
@@ -1095,6 +1187,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'linter' => [
 			'name' => 'Linter',
@@ -1107,6 +1200,7 @@ $wgManageWikiExtensions = [
 					'linter' => "$IP/extensions/Linter/sql/linter.sql"
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'listings' => [
 			'name' => 'Listings',
@@ -1114,6 +1208,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseListings',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'logofunctions' => [
 			'name' => 'LogoFunctions',
@@ -1121,6 +1216,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLogoFunctions',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'loopscombo' => [
 			'name' => 'Loops',
@@ -1128,6 +1224,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseLoopsCombo',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'magicnocache' => [
 			'name' => 'MagicNoCache',
@@ -1135,6 +1232,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMagicNoCache',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'maps' => [
 			'name' => 'Maps',
@@ -1166,6 +1264,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'mask' => [
 			'name' => 'Mask',
@@ -1190,6 +1289,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'massmessage' => [
 			'name' => 'MassMessage',
@@ -1206,6 +1306,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'math' => [
 			'name' => 'Math',
@@ -1219,6 +1320,7 @@ $wgManageWikiExtensions = [
 					'mathoid' => "$IP/extensions/Math/db/mathoid.mysql.sql"
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'mediawikichat' => [
 			'name' => 'MediaWikiChat',
@@ -1270,6 +1372,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'medik' => [
 			'name' => 'Medik',
@@ -1285,6 +1388,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMermaid',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'metrolook' => [
 			'name' => 'Metrolook',
@@ -1312,6 +1416,7 @@ $wgManageWikiExtensions = [
 					'minervaneue',
 				],
 			],
+			'section' => 'other',
 		],
 		'mobiletabsplugin' => [
 			'name' => 'MobileTabsPlugin',
@@ -1319,6 +1424,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMobileTabsPlugin',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'moderation' => [
 			'name' => 'Moderation',
@@ -1366,6 +1472,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'antispam',
 		],
 		'modernskylight' => [
 			'name' => 'Modern Skylight',
@@ -1386,6 +1493,7 @@ $wgManageWikiExtensions = [
 					'mscal_content' => "$IP/extensions/MsCalendar/sql/MsCalendar.sql"
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'mscatselect' => [
 			'name' => 'MsCatSelect',
@@ -1393,6 +1501,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMsCatSelect',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'mslinks' => [
 			'name' => 'MsLinks',
@@ -1400,6 +1509,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMsLinks',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'msupload' => [
 			'name' => 'MsUpload',
@@ -1407,6 +1517,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMsUpload',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'multimediaviewer' => [
 			'name' => 'Multimedia Viewer',
@@ -1414,6 +1525,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMultimediaViewer',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'multiboilerplate' => [
 			'name' => 'MultiBoilerplate',
@@ -1421,6 +1533,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMultiBoilerplate',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'myvariables' => [
 			'name' => 'MyVariables',
@@ -1428,6 +1541,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseMyVariables',
 			'conflicts' => 'approvedrevs', // https://phabricator.wikimedia.org/T279617
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'newestpages' => [
 			'name' => 'Newest Pages',
@@ -1435,6 +1549,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseNewestPages',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'newsignuppage' => [
 			'name' => 'New Signup Page',
@@ -1442,6 +1557,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseNewSignupPage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'newsletter' => [
 			'name' => 'Newsletter',
@@ -1489,6 +1605,7 @@ $wgManageWikiExtensions = [
 					'nl_subscriptions' => "$IP/extensions/Newsletter/sql/nl_subscriptions.sql"
 				],
 			],
+			'section' => 'other',
 		],
 		'newusermessage' => [
 			'name' => 'New User Message',
@@ -1496,6 +1613,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseNewUserMessage',
 			'conflicts' => 'flow',
 			'requires' => [],
+			'section' => 'other',
 		],
 		'newusernotif' => [
 			'name' => 'New User Email Notification',
@@ -1503,6 +1621,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseNewUserNotif',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'notitle' => [
 			'name' => 'NoTitle',
@@ -1510,6 +1629,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseNoTitle',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'nukedpl' => [
 			'name' => 'NukeDPL',
@@ -1526,6 +1646,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'numberedheadings' => [
 			'name' => 'NumberedHeadings',
@@ -1533,6 +1654,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseNumberedHeadings',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'nimbus' => [
 			'name' => 'Nimbus',
@@ -1556,6 +1678,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseOpenGraphMeta',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'orphanedtalkpages' => [
 			'name' => 'OrphanedTalkPages',
@@ -1563,6 +1686,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseOrphanedTalkPages',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'pagedisqus' => [
 			'name' => 'PageDisqus',
@@ -1574,6 +1698,7 @@ $wgManageWikiExtensions = [
 					'managewiki-restricted',
 				],
 			],
+			'section' => 'other',
 		],
 		'pagedtiffhandler' => [
 			'name' => 'PagedTiffHandler',
@@ -1581,6 +1706,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePagedTiffHandler',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'mediahandlers',
 		],
 		'pageforms' => [
 			'name' => 'Page Forms',
@@ -1608,6 +1734,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'pageimages' => [
 			'name' => 'Page Images',
@@ -1615,6 +1742,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePageImages',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'api',
 		],
 		'pagenotice' => [
 			'name' => 'Page Notice',
@@ -1622,6 +1750,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePageNotice',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'pagetriage' => [
 			'name' => 'Page Triage',
@@ -1637,6 +1766,7 @@ $wgManageWikiExtensions = [
 					'pagetriage_log' => "$IP/extensions/PageTriage/sql/PageTriageLog.sql"
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'twocolconflict' => [
 			'name' => 'Paragraph-based Edit Conflict Interface',
@@ -1644,6 +1774,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTwoColConflict',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'pdfbook' => [
 			'name' => 'PdfBook',
@@ -1651,6 +1782,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePdfBook',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'pdfembed' => [
 			'name' => 'PDF Embed',
@@ -1667,6 +1799,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'pdfhandler' => [
 			'name' => 'Pdf Handler',
@@ -1674,6 +1807,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePdfHandler',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'mediahandlers',
 		],
 		'pipeescape' => [
 			'name' => 'Pipe Escape',
@@ -1681,6 +1815,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePipeEscape',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'pivot' => [
 			'name' => 'Pivot',
@@ -1696,6 +1831,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePoem',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'popups' => [
 			'name' => 'Popups',
@@ -1708,6 +1844,7 @@ $wgManageWikiExtensions = [
 					'textextracts',
 				],
 			],
+			'section' => 'other',
 		],
 		'pollny' => [
 			'name' => 'PollNY',
@@ -1738,6 +1875,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'portableinfobox' => [
 			'name' => 'PortableInfobox',
@@ -1745,6 +1883,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsePortableInfobox',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'preloader' => [
 			'name' => 'Preloader',
@@ -1753,6 +1892,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'install' => [],
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'proofreadpages' => [
 			'name' => 'Proofread Page',
@@ -1819,6 +1959,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'protectsite' => [
 			'name' => 'Protect Site',
@@ -1835,6 +1976,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'protectionindicator' => [
 			'name' => 'ProtectionIndicator',
@@ -1843,6 +1985,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => 'comments',
 			'install' => [],
 			'requires' => [],
+			'section' => 'other',
 		],
 		'purge' => [
 			'name' => 'Purge',
@@ -1859,6 +2002,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'quiz' => [
 			'name' => 'Quiz',
@@ -1866,6 +2010,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseQuiz',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'quizgame' => [
 			'name' => 'Quiz Game (SocialProfile)',
@@ -1892,6 +2037,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'randomgameunit' => [
 			'name' => 'RandomGameUnit (SocialProfile)',
@@ -1903,6 +2049,7 @@ $wgManageWikiExtensions = [
 					'socialprofile',
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'randomimage' => [
 			'name' => 'RandomImage',
@@ -1910,6 +2057,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseRandomImage',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'randomselection' => [
 			'name' => 'RandomSelection',
@@ -1917,6 +2065,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseRandomSelection',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'refreshed' => [
 			'name' => 'Refreshed',
@@ -1932,6 +2081,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseRegexFunctions',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'relatedarticles' => [
 			'name' => 'Related Articles',
@@ -1939,6 +2089,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseRelatedArticles',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'replacetext' => [
 			'name' => 'Replace Text',
@@ -1955,6 +2106,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'report' => [
 			'name' => 'Report',
@@ -1979,6 +2131,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'revisionslider' => [
 			'name' => 'RevisionSlider',
@@ -1986,6 +2139,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseRevisionSlider',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'rightfunctions' => [
 			'name' => 'RightFunctions',
@@ -1993,6 +2147,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseRightFunctions',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'rss' => [
 			'name' => 'RSS',
@@ -2000,6 +2155,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseRSS',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'sandboxlink' => [
 			'name' => 'Sandbox Link',
@@ -2007,6 +2163,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSandboxLink',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'score' => [
 			'name' => 'Score (Disabled -- See T5863)',
@@ -2018,6 +2175,7 @@ $wgManageWikiExtensions = [
 					'managewiki-restricted', // T5863
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'scratchblocks' => [
 			'name' => 'ScratchBlocks',
@@ -2025,6 +2183,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseScratchBlocks',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'shortdescription' => [
 			'name' => 'ShortDescription',
@@ -2032,6 +2191,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseShortDescription',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'api',
 		],
 		'simpleblogpage' => [
 			'name' => 'SimpleBlogPage',
@@ -2070,6 +2230,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'simplechanges' => [
 			'name' => 'Simple Changes',
@@ -2077,6 +2238,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSimpleChanges',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'simpletooltip' => [
 			'name' => 'Simple Tooltip',
@@ -2084,6 +2246,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSimpleTooltip',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'slacknotifications' => [
 			'name' => 'SlackNotifications',
@@ -2091,6 +2254,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSlackNotifications',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'snapprojectembed' => [
 			'name' => 'Snap! Project Embed',
@@ -2098,6 +2262,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSnapProjectEmbed',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'softredirector' => [
 			'name' => 'SoftRedirector',
@@ -2105,6 +2270,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSoftRedirector',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		 ],
 		'socialprofile' => [
 			'name' => 'SocialProfile',
@@ -2140,6 +2306,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'spoilers' => [
 			'name' => 'Spoilers',
@@ -2147,6 +2314,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSpoilers',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'spritesheet' => [
 			'name' => 'SpriteSheet',
@@ -2163,6 +2331,7 @@ $wgManageWikiExtensions = [
 
 				],
 			],
+			'section' => 'other',
 		],
 		'stopforumspam' => [
 			'name' => 'StopForumSpam',
@@ -2170,6 +2339,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseStopForumSpam',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'antispam',
 		],
 		'flow' => [
 			'name' => 'StructuredDiscussions (Flow)',
@@ -2232,6 +2402,7 @@ $wgManageWikiExtensions = [
  					"$IP/extensions/Flow/maintenance/FlowCreateTemplates.php" => [],
 				],
 			],
+			'section' => 'other',
 		],
 		'subpagefun' => [
 			'name' => 'SubPageFun',
@@ -2239,6 +2410,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSubpageFun',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'subpagelist3' => [
 			'name' => 'SubPageList3',
@@ -2246,6 +2418,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSubPageList3',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'syntaxhighlight_geshi' => [
 			'name' => 'SyntaxHighlight',
@@ -2253,6 +2426,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseSyntaxHighlightGeSHi',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'tabscombination' => [
 			'name' => 'TabsCombination (Tabber + Tabs)',
@@ -2260,6 +2434,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTabsCombination',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'templatedata' => [
 			'name' => 'Template Data',
@@ -2267,6 +2442,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTemplateData',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'templatesandbox' => [
 			'name' => 'Template Sandbox',
@@ -2274,6 +2450,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTemplateSandbox',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'templatestyles' => [
 			'name' => 'Template Styles',
@@ -2281,6 +2458,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTemplateStyles',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'templatewizard' => [
 			'name' => 'Template Wizard',
@@ -2292,6 +2470,7 @@ $wgManageWikiExtensions = [
  					'templatedata',
  				],
  			],
+			'section' => 'other',
 		],
 		'textextracts' => [
 			'name' => 'TextExtracts',
@@ -2299,6 +2478,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTextExtracts',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'theme' => [
 			'name' => 'Theme',
@@ -2306,6 +2486,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTheme',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'thanks' => [
 			'name' => 'Thanks',
@@ -2313,6 +2494,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseThanks',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'timedmediahandler' => [
 			'name' => 'TimedMediaHandler',
@@ -2338,6 +2520,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'mediahandlers',
 		],
 		'timemachine' => [
 			'name' => 'TimeMachine',
@@ -2345,6 +2528,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTimeMachine',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'titlekey' => [
 			'name' => 'TitleKey',
@@ -2357,6 +2541,7 @@ $wgManageWikiExtensions = [
 					'titlekey' => "$IP/extensions/TitleKey/sql/titlekey.sql"
 				],
 			],
+			'section' => 'other',
 		],
 		'toctree' => [
 			'name' => 'TOC Tree',
@@ -2364,6 +2549,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTocTree',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'translate' => [
 			'name' => 'Translate',
@@ -2408,6 +2594,7 @@ $wgManageWikiExtensions = [
 					'translate_tms' => "$IP/extensions/Translate/sql/translate_tm.sql",
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'translationnotifications' => [
 			'name' => 'TranslationNotifications',
@@ -2429,6 +2616,7 @@ $wgManageWikiExtensions = [
 					'translate',
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'treeandmenu' => [
 			'name' => 'TreeAndMenu',
@@ -2436,6 +2624,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTreeAndMenu',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'truglass' => [
 			'name' => 'Truglass',
@@ -2459,6 +2648,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseTwitterTag',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'universallanguageselector' => [
 			'name' => 'UniversalLanguageSelector',
@@ -2466,6 +2656,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUniversalLanguageSelector',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'uploadslink' => [
 			'name' => 'UploadsLink',
@@ -2473,6 +2664,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUploadsLink',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'urlgetparameters' => [
 			'name' => 'UrlGetParameters',
@@ -2480,6 +2672,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUrlGetParameters',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'urlshortener' => [
 			'name' => 'UrlShortener',
@@ -2498,6 +2691,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'userfunctions' => [
 			'name' => 'UserFunctions',
@@ -2505,6 +2699,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUserFunctions',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'userwelcome' => [
 			'name' => 'UserWelcome',
@@ -2516,6 +2711,7 @@ $wgManageWikiExtensions = [
 					'socialprofile',
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'validator' => [
 			'name' => 'Validator',
@@ -2523,6 +2719,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseValidator',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'variables' => [
 			'name' => 'Variables',
@@ -2530,6 +2727,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseVariables',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'variableslua' => [
 			'name' => 'VariablesLua',
@@ -2541,6 +2739,7 @@ $wgManageWikiExtensions = [
 					'variables',
 				],
 			],
+			'section' => 'other',
 		],
 		'veforall' => [
 			'name' => 'VEForAll',
@@ -2553,6 +2752,7 @@ $wgManageWikiExtensions = [
 					'visualeditor',
 				],
 			],
+			'section' => 'other',
 		],
 		'voteny' => [
 			'name' => 'VoteNY',
@@ -2572,6 +2772,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'parserhooks',
 		],
 		'video' => [
 			'name' => 'Video',
@@ -2614,6 +2815,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'specialpages',
 		],
 		'visualeditor' => [
 			'name' => 'VisualEditor',
@@ -2626,6 +2828,7 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'help' => 'Will start working 10-20 mins after enabling.',
+			'section' => 'editors',
 		],
 		'webchat' => [
 			'name' => 'WebChat',
@@ -2633,6 +2836,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseWebChat',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'specialpages',
 		],
 		'wikibaseclient' => [
 			'name' => 'Wikibase (Client)',
@@ -2653,6 +2857,7 @@ $wgManageWikiExtensions = [
 						"$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php" => [],
 				],
 			],
+			'section' => 'other',
 		],
 		'wikibaserepository' => [
 			'name' => 'Wikibase (Repository)',
@@ -2739,7 +2944,8 @@ $wgManageWikiExtensions = [
 					'wmgWikibaseItemNamespaceID' => 0,
 					'wmgWikibasePropertyNamespaceID' => 120
 				]
-			]
+			],
+			'section' => 'other',
 		],
 		'wikibaselexeme' => [
 			'name' => 'WikibaseLexeme',
@@ -2752,6 +2958,7 @@ $wgManageWikiExtensions = [
 					'universallanguageselector',
 				],	
 			],
+			'section' => 'other',
 		],
 		'wikibasequalityconstraints' => [
 			'name' => 'WikibaseQualityConstraints',
@@ -2768,6 +2975,7 @@ $wgManageWikiExtensions = [
 					'wbqc_constraints' => "$IP/extensions/WikibaseQualityConstraints/sql/create_wbqc_constraints.sql",
 				],
 			],
+			'section' => 'other',
 		],
 		'wikicategorytagcloud' => [
 			'name' => 'WikiCategoryTagCloud',
@@ -2775,6 +2983,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseWikiCategoryTagCloud',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'wikidatapagebanner' => [
 			'name' => 'WikidataPageBanner',
@@ -2782,6 +2991,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseWikidataPageBanner',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
 		],
 		'wikiforum' => [
 			'name' => 'WikiForum',
@@ -2816,6 +3026,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
+			'section' => 'other',
 		],
 		'wikihiero' => [
 			'name' => 'WikiHiero',
@@ -2823,6 +3034,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUsewikihiero',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'wikilove' => [
 			'name' => 'WikiLove',
@@ -2835,6 +3047,7 @@ $wgManageWikiExtensions = [
 					'wikilove_log' => "$IP/extensions/WikiLove/patches/WikiLoveLog.sql"
 				],
 			],
+			'section' => 'other',
 		],
 		'wikiseo' => [
 			'name' => 'WikiSEO',
@@ -2842,6 +3055,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseWikiSeo',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'wikitextloggedinout' => [
 			'name' => 'WikiText Logged In Out',
@@ -2849,6 +3063,7 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseWikiTextLoggedInOut',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 		'wikimediaincubator' => [
 			'name' => 'WikimediaIncubator',
@@ -2861,6 +3076,7 @@ $wgManageWikiExtensions = [
 					'managewiki-restricted',
 				],
 			],
+			'section' => 'other',
 		],
 		'youtube' => [
 			'name' => 'YouTube',
@@ -2868,5 +3084,6 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseYouTube',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'parserhooks',
 		],
 ];
