@@ -2573,7 +2573,6 @@ $wi->config->settings += [
 			'categorytree',
 			'cite',
 			'citethispage',
-			'darkmode',
 			'globaluserpage',
 			'minervaneue',
 			'mobilefrontend',
