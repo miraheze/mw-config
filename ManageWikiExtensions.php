@@ -31,86 +31,6 @@
  */
 
 $wgManageWikiExtensions = [
-		// Anti-spam
-		'authorprotect' => [
-			'name' => 'Author Protect',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AuthorProtect',
-			'var' => 'wmgUseAuthorProtect',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [
-				'permissions' => [
-					'sysop' => [
-						'permissions' => [
-							'author',
-						],
-					],
-					'user' => [
-						'permissions' => [
-							'authorprotect',
-						],
-					],
-				],
-			],
-			'section' => 'antispam',
-		],
-		'moderation' => [
-			'name' => 'Moderation',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Moderation',
-			'var' => 'wmgUseModeration',
-			'conflicts' => false,
-			'requires' => [],
-			'install' => [
-				'sql' => [
-					'moderation' => "$IP/extensions/Moderation/sql/patch-moderation.sql",
-					'moderation_block' => "$IP/extensions/Moderation/sql/patch-moderation_block.sql"
-				],
-				'permissions' => [
-					'automoderated' => [
-						'permissions' => [
-							'skip-moderation',
-							'skip-move-moderation',
-						],
-					],
-					'bot' => [
-						'permissions' => [
-							'skip-moderation',
-							'skip-move-moderation',
-						],
-					],
-					'moderator' => [
-						'permissions' => [
-							'moderation',
-						],
-					],
-					'sysop' => [
-						'addgroups' => [
-							'automoderated',
-							'moderator',
-						],
-						'removegroups' => [
-							'automoderated',
-							'moderator',
-						],
-						'permissions' => [
-							'skip-moderation',
-							'skip-move-moderation',
-							'moderation',
-						],
-					],
-				],
-			],
-			'section' => 'antispam',
-		],
-		'stopforumspam' => [
-			'name' => 'StopForumSpam',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StopForumSpam',
-			'var' => 'wmgUseStopForumSpam',
-			'conflicts' => false,
-			'requires' => [],
-			'section' => 'antispam',
-		],
-
 		// API
 		'gettingstarted' => [
 			'name' => 'GettingStarted',
@@ -1126,6 +1046,86 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'section' => 'parserhooks',
+		],
+
+		// Spam prevention
+		'authorprotect' => [
+			'name' => 'Author Protect',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AuthorProtect',
+			'var' => 'wmgUseAuthorProtect',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'author',
+						],
+					],
+					'user' => [
+						'permissions' => [
+							'authorprotect',
+						],
+					],
+				],
+			],
+			'section' => 'antispam',
+		],
+		'moderation' => [
+			'name' => 'Moderation',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Moderation',
+			'var' => 'wmgUseModeration',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'moderation' => "$IP/extensions/Moderation/sql/patch-moderation.sql",
+					'moderation_block' => "$IP/extensions/Moderation/sql/patch-moderation_block.sql"
+				],
+				'permissions' => [
+					'automoderated' => [
+						'permissions' => [
+							'skip-moderation',
+							'skip-move-moderation',
+						],
+					],
+					'bot' => [
+						'permissions' => [
+							'skip-moderation',
+							'skip-move-moderation',
+						],
+					],
+					'moderator' => [
+						'permissions' => [
+							'moderation',
+						],
+					],
+					'sysop' => [
+						'addgroups' => [
+							'automoderated',
+							'moderator',
+						],
+						'removegroups' => [
+							'automoderated',
+							'moderator',
+						],
+						'permissions' => [
+							'skip-moderation',
+							'skip-move-moderation',
+							'moderation',
+						],
+					],
+				],
+			],
+			'section' => 'antispam',
+		],
+		'stopforumspam' => [
+			'name' => 'StopForumSpam',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StopForumSpam',
+			'var' => 'wmgUseStopForumSpam',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'antispam',
 		],
 
 		// Special pages
