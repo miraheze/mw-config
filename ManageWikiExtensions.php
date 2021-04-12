@@ -9,7 +9,7 @@
  * requires: an array. See below for available options.
  * install: an array. See below for available options.
  * remove: an array. See install for available options.
- * section: the name of the appropriate tab that the extension should be in.
+ * section: string name of groupings for extension.
  *
  * 'requires' can be one of:
  *
