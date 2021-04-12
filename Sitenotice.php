@@ -24,6 +24,7 @@ $wgMajorSiteNoticeID = 56;
 	}
 } */
 
+/*
 // Specific wiki sitenotice
 if ( $wmgUseApprovedRevs && $wmgUseMyVariables ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -38,3 +39,4 @@ EOF;
 		return true;
 	}
 }
+*/
