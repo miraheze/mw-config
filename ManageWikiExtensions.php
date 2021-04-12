@@ -9,6 +9,7 @@
  * requires: an array. See below for available options.
  * install: an array. See below for available options.
  * remove: an array. See install for available options.
+ * section: the name of the appropriate tab that the extension should be in.
  *
  * 'requires' can be one of:
  *
@@ -776,7 +777,7 @@ $wgManageWikiExtensions = [
 			'name' => 'MyVariables',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MyVariables',
 			'var' => 'wmgUseMyVariables',
-			'conflicts' => 'approvedrevs', // https://phabricator.wikimedia.org/T279617
+			'conflicts' => 'approvedrevs',
 			'requires' => [],
 			'section' => 'parserhooks',
 		],
@@ -929,7 +930,7 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [
 				'permissions' => [
-					'managewiki-restricted', // T5863
+					'managewiki-restricted',
 				],
 			],
 			'section' => 'parserhooks',
@@ -3093,7 +3094,6 @@ $wgManageWikiExtensions = [
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikimediaIncubator',
 			'var' => 'wmgUseWikimediaIncubator',
 			'conflicts' => false,
-			// Configuation Change in LocalSettings.php, request this extension on phabricator
 			'requires' => [
 				'permissions' => [
 					'managewiki-restricted',
