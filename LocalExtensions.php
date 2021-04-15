@@ -566,7 +566,7 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseNewUserNotif ) {
-	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
+	wfLoadExtension( 'NewUserNotif' );
 }
 
 if ( $wmgUseNimbus ){
