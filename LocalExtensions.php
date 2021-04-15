@@ -634,7 +634,7 @@ if ( $wmgUsePdfHandler ) {
 }
 
 if ( $wmgUsePipeEscape ) {
-	require_once "$IP/extensions/PipeEscape/PipeEscape.php";
+	wfLoadExtension( 'PipeEscape' );
 }
 
 if ( $wmgUsePivot ) {
