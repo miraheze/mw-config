@@ -1990,7 +1990,7 @@ $wi->config->settings += [
 		'+dcmultiversewiki' => [
 			'mode' => 'packed',
 		],
-		'theboyswiki' => [
+		'+theboyswiki' => [
 			'mode' => 'packed',
 		],
 	],
