@@ -1762,33 +1762,17 @@ $wi->config->settings += [
 	'wgFlaggedRevsTags' => [
 		'default' => [
 			'status' => [
-				'quality' => 1,
 				'levels' => 2,
-				'pristine' => 3,
 			],
 		],
 		'infectopedwiki' => [
 			'accuracy' => [
 				'levels' => 4,
-				'quality' => 2,
-				'pristine' => 4,
-			],
-			'depth' => [
-				'levels' => 4,
-				'quality' => 2,
-				'pristine' => 4,
-			],
-			'tone' => [
-				'levels' => 4,
-				'quality' => 1,
-				'pristine' => 4,
 			],
 		],
 		'isvwiki' => [
 			'status' => [
 				'levels' => 1,
-				'quality' => 2,
-				'pristine' => 4,
 			],
 		],
 	],
