@@ -2657,6 +2657,11 @@ $wi->config->settings += [
 				'read' => true,
 			],
 		],
+		'+documentcontrolwiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -3584,6 +3589,9 @@ $wi->config->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
+		'+documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+hypopediawiki' => [
 			'bureaucrat',
 		],
@@ -3639,6 +3647,9 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+		'+documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'simulatorwiki' => [
 			'editfragment',
