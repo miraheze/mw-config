@@ -40,7 +40,7 @@ $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContributionScores/extension.json
 $IP/extensions/CookieWarning/extension.json
-$IP/extensions/CreatePage/CreatePage.php
+$IP/extensions/CreatePage/extension.json
 $IP/extensions/CreatePageUw/extension.json
 $IP/extensions/CreateRedirect/extension.json
 $IP/extensions/CreateWiki/extension.json
@@ -106,8 +106,8 @@ $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LanguageSelector/LanguageSelector.php
-$IP/extensions/LastModified/LastModified.php
-$IP/extensions/LdapAuthentication/LdapAuthentication.php
+$IP/extensions/LastModified/extension.json
+$IP/extensions/LdapAuthentication/extension.json
 $IP/extensions/Lingo/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/extension.json
@@ -185,7 +185,7 @@ $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
 $IP/extensions/Report/extension.json
 $IP/extensions/RevisionSlider/extension.json
-$IP/extensions/RightFunctions/RightFunctions.php
+$IP/extensions/RightFunctions/extension.json
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/ScratchBlocks/extension.json
@@ -256,8 +256,8 @@ $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikiSEO/extension.json
 $IP/extensions/WikiTextLoggedInOut/extension.json
-$IP/extensions/Wikibase/client/WikibaseClient.php
-$IP/extensions/Wikibase/repo/Wikibase.php
+$IP/extensions/Wikibase/extension-client.json
+$IP/extensions/Wikibase/extension-repo.json
 $IP/extensions/WikibaseLexeme/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
