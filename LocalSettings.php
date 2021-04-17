@@ -2658,7 +2658,7 @@ $wi->config->settings += [
 			],
 		],
 		'+famepediawiki' => [
-			'Extendeconfirmed' => [
+			'Extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
 		],
