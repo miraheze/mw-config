@@ -583,6 +583,27 @@ $wi->config->settings += [
 				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 		],
+		'batfamilywiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
+		'batmanwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
+		'snapwikiwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
 		'thewhiteroomwiki' => [
 			'recentchanges' => false,
 			'interface' => [
@@ -1959,6 +1980,15 @@ $wi->config->settings += [
 			'showDimensions' => true,
 			'mode' => 'packed',
 		],
+		'theboyswiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'packed',
+		],
 	],
 
 	// GlobalBlocking
@@ -2162,10 +2192,12 @@ $wi->config->settings += [
 		'+batfamilywiki' => [
 			'batmanwiki',
 			'batmanwikifandom',
+			'd',
 		],
 		'+batmanwiki' => [
 			'batfamilywiki',
 			'batmanwikifandom',
+			'd',
 		],
 		'+incubatorwiki' => [
 			'wmincubator',
@@ -2192,6 +2224,7 @@ $wi->config->settings += [
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
+			'd',
 		],
 		'+wikitrashwiki' => [
 			'wikipedia' => [
@@ -4156,7 +4189,19 @@ $wi->config->settings += [
 	'wmincMultilingualProjects' => [
 		'default' => [],
 	],
-
+	'wmincTestWikiNamespaces' => [
+		'default' => [
+			NS_MAIN, NS_TALK,
+			NS_TEMPLATE, NS_TEMPLATE_TALK,
+			NS_CATEGORY, NS_CATEGORY_TALK,
+			828, 829 // NS_MODULE, NS_MODULE_TALK
+		],
+		'idiotpediaincubatorwiki' => [
+			NS_MAIN, NS_TALK,
+			NS_CATEGORY, NS_CATEGORY_TALK,
+			828, 829 // NS_MODULE, NS_MODULE_TALK
+		],
+	],
 	// WikiLove
 	'wgWikiLoveGlobal' => [
 		'wmgUseWikiLove' => true,	
@@ -4290,6 +4335,7 @@ $wi->config->settings += [
 			'http' => 'warning',
 			'HttpError' => 'error', // Only log http errors with a 500+ code
 			// 'JobExecutor' => [ 'logstash' => 'warning' ],
+			'JobQueueRedis' => 'debug',
 			'localisation' => false,
 			'ldap' => 'warning',
 			'Linter' => false,
