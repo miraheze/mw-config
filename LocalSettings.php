@@ -1987,10 +1987,22 @@ $wi->config->settings += [
 			'showDimensions' => true,
 			'mode' => 'traditional',
 		],
-		'+dcmultiversewiki' => [
+		'dcmultiversewiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
 			'mode' => 'packed',
 		],
-		'+theboyswiki' => [
+		'theboyswiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
 			'mode' => 'packed',
 		],
 	],
