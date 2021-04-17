@@ -3648,7 +3648,7 @@ $wi->config->settings += [
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
 		],
-		'+documentcontrolwiki' => [
+		'documentcontrolwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'simulatorwiki' => [
