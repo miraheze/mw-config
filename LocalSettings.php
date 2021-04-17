@@ -2657,6 +2657,11 @@ $wi->config->settings += [
 				'read' => true,
 			],
 		],
+		'+famepediawiki' => [
+			'Extendeconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -3584,6 +3589,9 @@ $wi->config->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
+		'+famepediawiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+hypopediawiki' => [
 			'bureaucrat',
 		],
@@ -3639,6 +3647,9 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+		'famepediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'simulatorwiki' => [
 			'editfragment',
