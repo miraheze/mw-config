@@ -1205,6 +1205,15 @@ $wgManageWikiExtensions = [
 			'conflicts' => false,
 			'requires' => [],
 			'section' => 'specialpages',
+			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'datatransferimport',
+						]
+					]
+				],
+			],
 		],
 		'editcount' => [
 			'name' => 'EditCount',
