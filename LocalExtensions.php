@@ -761,7 +761,7 @@ if ( $wmgUseSimpleChanges ) {
 }
 
 if ( $wmgUseSimpleTooltip ) {
-	wfLoadExtension( 'SimpleTooltip' );
+	require_once "$IP/extensions/SimpleTooltip/SimpleTooltip.php";
 }
 
 if ( $wmgUseSlackNotifications ) {
