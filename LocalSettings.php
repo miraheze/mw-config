@@ -3595,6 +3595,7 @@ $wi->config->settings += [
 			'editinterface',
 		],
 		'+documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'+famepediawiki' => [
 			'editextendedconfirmedprotected',
