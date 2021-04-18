@@ -2771,6 +2771,7 @@ $wgManageWikiExtensions = [
 					'*' => [
 						'permissions' => [
 							'flow-hide',
+							'writeapi',
 						],
 					],
 					'user' => [
