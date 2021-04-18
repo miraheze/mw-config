@@ -2662,6 +2662,11 @@ $wi->config->settings += [
 				'editextendedconfirmedprotected' => true,
 			],
 		],
+    '+famepediawiki' => [
+			'Extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -3590,6 +3595,8 @@ $wi->config->settings += [
 			'editinterface',
 		],
 		'+documentcontrolwiki' => [
+		],
+		'+famepediawiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'+hypopediawiki' => [
@@ -3649,6 +3656,9 @@ $wi->config->settings += [
 			'editimportprotected',
 		],
 		'documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
+		],
+		'famepediawiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'simulatorwiki' => [
