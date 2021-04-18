@@ -2662,7 +2662,7 @@ $wi->config->settings += [
 				'editextendedconfirmedprotected' => true,
 			],
 		],
-    '+famepediawiki' => [
+    		'+famepediawiki' => [
 			'Extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
