@@ -400,7 +400,7 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 }
 
 if ( $wmgUseLanguageSelector ) {
-	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
+	wfLoadExtension( 'LanguageSelector' );
 }
 
 if ( $wmgUseLastModified ) {
