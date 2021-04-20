@@ -79,7 +79,7 @@ if ( $wmgUseCargo ) {
 }
 
 if ( $wmgUseCategorySortHeaders ) {
-	require_once "$IP/extensions/CategorySortHeaders/CategorySortHeaders.php";
+	wfLoadExtension( 'CategorySortHeaders' );
 }
 
 if ( $wmgUseCategoryTree ) {
