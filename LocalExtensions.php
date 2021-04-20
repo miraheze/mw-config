@@ -566,7 +566,7 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseNewUserNotif ) {
-	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
+	wfLoadExtension( 'NewUserNotif' );
 }
 
 if ( $wmgUseNimbus ){
@@ -634,7 +634,7 @@ if ( $wmgUsePdfHandler ) {
 }
 
 if ( $wmgUsePipeEscape ) {
-	require_once "$IP/extensions/PipeEscape/PipeEscape.php";
+	wfLoadExtension( 'PipeEscape' );
 }
 
 if ( $wmgUsePivot ) {
@@ -737,7 +737,7 @@ if ( $wmgUseSandboxLink ) {
 }
 
 if ( $wmgUseScratchBlocks ) {
-	wfLoadExtension( "ScratchBlocks" );
+	wfLoadExtension( 'ScratchBlocks' );
 }
 
 if ( $wmgUseScore ) {
@@ -896,11 +896,11 @@ if ( $wmgUseUploadsLink ) {
 }
 
 if ( $wmgUseUrlGetParameters ) {
-	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
+	wfLoadExtension( 'UrlGetParameters' );
 }
 
 if ( $wmgUseUserFunctions ) {
-	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+	wfLoadExtension( 'UserFunctions' );
 }
 
 if ( $wmgUseUserWelcome ) {

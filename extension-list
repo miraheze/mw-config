@@ -140,7 +140,7 @@ $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MyVariables/extension.json
 $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json
-$IP/extensions/NewUserNotif/NewUserNotif.php
+$IP/extensions/NewUserNotif/extension.json
 $IP/extensions/NewestPages/extension.json
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/NoTitle/extension.json
@@ -161,7 +161,7 @@ $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/PdfHandler/extension.json
-$IP/extensions/PipeEscape/PipeEscape.php
+$IP/extensions/PipeEscape/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/PollNY/extension.json
 $IP/extensions/PortableInfobox/extension.json
@@ -237,8 +237,8 @@ $IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UserMerge/extension.json
-$IP/extensions/UserFunctions/UserFunctions.php
-$IP/extensions/UrlGetParameters/UrlGetParameters.php
+$IP/extensions/UrlGetParameters/extension.json
+$IP/extensions/UserFunctions/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Validator/Validator.php
 $IP/extensions/Variables/extension.json
