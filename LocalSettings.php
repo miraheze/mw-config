@@ -2657,7 +2657,12 @@ $wi->config->settings += [
 				'read' => true,
 			],
 		],
-		'+famepediawiki' => [
+		'+documentcontrolwiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
+    		'+famepediawiki' => [
 			'Extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
@@ -3589,6 +3594,9 @@ $wi->config->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
+		'+documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+famepediawiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -3647,6 +3655,9 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+		'documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
