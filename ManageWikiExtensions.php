@@ -2446,7 +2446,7 @@ $wgManageWikiExtensions = [
 			'install' => [
 				'sql' => [
 					'page_assessments' => "$IP/extensions/PageAssessments/sql/create-table--page_assessments.sql",
-					'page_assessments_projects' => "$IP/extensions/PageAssessments/sql/create-table--page_assessments_projects.sql"
+					'page_assessments_projects' => "$IP/extensions/PageAssessments/sql/create-table--page_assessments_projects.sql",
 				],
 			'section' => 'other',
 		],
