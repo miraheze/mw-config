@@ -2437,6 +2437,20 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'other',
 		],
+		'pageassessments' => [
+			'name' => 'PageAssessments',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageAssessments',
+			'var' => 'wmgUsePageAssessments',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'page_assessments' => "$IP/extensions/PageAssessments/db/addReviewsTable.sql",
+					'page_assessments_projects' => "$IP/extensions/PageAssessments/db/addProjectsTable.sql"
+				],
+			],
+			'section' => 'other',
+		],
 		'pagedisqus' => [
 			'name' => 'PageDisqus',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageDisqus',

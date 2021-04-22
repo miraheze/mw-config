@@ -1448,6 +1448,9 @@ $wi->config->settings += [
 	'wmgUseOrphanedTalkPages' => [
 		'default' => false,
 	],
+	'wmgUsePageAssessments' => [
+		'default' => false,
+	],
 	'wmgUsePageDisqus' => [
 		'default' => false,
 	],
