@@ -193,7 +193,7 @@ $IP/extensions/ScratchBlocks/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/ShortDescription/extension.json
-$IP/extensions/SimpleBlogPage/SimpleBlogPage.php
+$IP/extensions/SimpleBlogPage/extension.json
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/extension.json
 $IP/extensions/SlackNotifications/extension.json
