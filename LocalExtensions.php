@@ -597,6 +597,10 @@ if ( $wmgUseOrphanedTalkPages ) {
 	wfLoadExtension( 'OrphanedTalkPages' );
 }
 
+if ( $wmgUsePageAssessments ) {
+	wfLoadExtension( 'PageAssessments' );
+}
+
 if ( $wmgUsePageDisqus ) {
 	wfLoadExtension( 'PageDisqus' );
 }
