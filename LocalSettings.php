@@ -3166,6 +3166,10 @@ $wi->config->settings += [
 	'wgMFStopRedirectCookieHost' => [
 		'wmgUseMobileFrontend' => $wi->hostname,
 	],
+	'wgMFSiteStylesRenderBlocking' => [
+		'default' => false,
+		'testwiki' => true,
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
