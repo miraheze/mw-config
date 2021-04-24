@@ -4156,7 +4156,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgEnableEntitySearchUI' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
