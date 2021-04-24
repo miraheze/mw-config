@@ -4043,9 +4043,6 @@ $wi->config->settings += [
 	'wgTranslateTranslationServices' => [
 		'default' => [],
 	],
-	'wmgUseYandexTranslate' => [
-		'default' => false,
-	],
 
 	// Uploads
  	'wmgPrivateUploads' => [
