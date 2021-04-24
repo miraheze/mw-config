@@ -67,7 +67,7 @@ $IP/extensions/Editcount/extension.json
 $IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
-$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php
+$IP/extensions/FancyBoxThumbs/extension.json
 $IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/ForcePreview/extension.json
