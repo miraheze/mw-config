@@ -252,7 +252,7 @@ if ( $wmgUseErudite ) {
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
-	wfLoadExtension( 'FancyBoxThumbs' );
+	require_once "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php";
 }
 
 if ( $wmgUseFemiwiki ) {
