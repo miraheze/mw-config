@@ -757,7 +757,7 @@ if ( $wmgUseShortDescription ) {
 }
 
 if ( $wmgUseSimpleBlogPage ) {
-	require_once "$IP/extensions/SimpleBlogPage/SimpleBlogPage.php";
+	wfLoadExtension( 'SimpleBlogPage' );
 }
 
 if ( $wmgUseSimpleChanges ) {
