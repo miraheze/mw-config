@@ -741,7 +741,7 @@ if ( $wmgUseSandboxLink ) {
 }
 
 if ( $wmgUseScratchBlocks ) {
-	wfLoadExtension( "mw-ScratchBlocks4" );
+	wfLoadExtension( 'mw-ScratchBlocks4' );
 }
 
 if ( $wmgUseScore ) {
