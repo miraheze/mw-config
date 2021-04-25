@@ -189,7 +189,7 @@ $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/RightFunctions/RightFunctions.php
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
-$IP/extensions/ScratchBlocks/extension.json
+$IP/extensions/mw-ScratchBlocks4/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/ShortDescription/extension.json
