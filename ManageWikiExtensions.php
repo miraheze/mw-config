@@ -856,7 +856,7 @@ $wgManageWikiExtensions = [
 			'section' => 'parserhooks',
 		],
 		'scratchblocks' => [
-			'name' => 'ScratchBlocks',
+			'name' => 'ScratchBlocks4',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ScratchBlocks',
 			'var' => 'wmgUseScratchBlocks',
 			'conflicts' => false,
