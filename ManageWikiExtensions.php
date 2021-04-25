@@ -2876,14 +2876,6 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'other',
 		],
-		'validator' => [
-			'name' => 'Validator',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Validator',
-			'var' => 'wmgUseValidator',
-			'conflicts' => false,
-			'requires' => [],
-			'section' => 'other',
-		],
 		'variables' => [
 			'name' => 'Variables',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Variables',
