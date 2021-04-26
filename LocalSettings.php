@@ -3452,7 +3452,7 @@ $wi->config->settings += [
 			],
 		],
 	],
-	'wgCentralAuthGlobalPasswordPolicies' 		
+	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
 			'policies' => [
 				'default' => [
