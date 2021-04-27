@@ -59,7 +59,7 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 }
 
 if ( $wmgUseAutoCreatePage ) {
-	require_once "$IP/extensions/AutoCreatePage/AutoCreatePage.php";
+	wfLoadExtension( 'AutoCreatePage' );
 }
 
 if ( $wmgUseBabel ) {
@@ -932,7 +932,7 @@ if ( $wmgUseVisualEditor ) {
 	
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
 	} else {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
@@ -1009,5 +1009,5 @@ if ( $wmgUseRegexFunctions ) {
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
 if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
-	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
+	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }
