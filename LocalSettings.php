@@ -3452,6 +3452,39 @@ $wi->config->settings += [
 			],
 		],
 	],
+	'wgCentralAuthGlobalPasswordPolicies' => [
+				'default' => [
+					'default' => [
+						'MinimalPasswordLength' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					],
+					'steward' => [
+						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					],
+					'sysadmin' => [
+						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						],
+					],
+				],
 
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
