@@ -3484,6 +3484,7 @@ $wi->config->settings += [
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						],
 					],
+				],
 
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
