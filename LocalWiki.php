@@ -2,6 +2,9 @@
 
 // All group of wikis/tag specific things should go at the top. Below the file, custom wiki config starts.
 
+// Temporary 
+$wgAPIListModules['wikiconfig'] = 'ApiQueryDisabled';
+
 // Closed Wikis
 if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
