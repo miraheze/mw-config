@@ -2623,7 +2623,7 @@ $wgManageWikiSettings = [
 		'type' => 'integer',
 		'overridedefault' => 3.0,
 		'section' => 'styling',
-		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.'.
+		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.',
 		'requires' => [],
 	],	
 
