@@ -279,6 +279,7 @@ $wi->config->settings += [
 	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
 		'default' => 'uppercase',
 		'holidayswiki' => 'numeric',
+		'wmgUseCategorySortHeaders' => 'CustomHeaderCollation',
 	],
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
