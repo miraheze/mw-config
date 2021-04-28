@@ -3493,6 +3493,9 @@ $wi->config->settings += [
  			'usebetatoolbar' => 1,
  			'usebetatoolbar-cgd' => 1
  		],
+		'+bioencyclopediawiki' => [
+			'usenewrc' => 0
+		],
 		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
