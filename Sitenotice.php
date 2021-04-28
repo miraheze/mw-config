@@ -26,7 +26,7 @@ $wgMajorSiteNoticeID = 56;
 
 
 // Specific wiki sitenotice
-if ( $wgDiscordIncomingWebhookUrl && $wgSlackIncomingWebhookUrl ) {
+if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
 	global $wmgSiteNoticeOptOut, $snImportant;
