@@ -104,7 +104,7 @@ $wi->config->settings += [
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
-	// https://www.mediawiki.org/wiki/Extension:SpamBlacklist#Blacklist_syntax
+	// https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpamBlacklist#Block_list_syntax
 	'wgBlacklistSettings' => [
 		'default' => [
 			'spam' => [
@@ -1845,7 +1845,7 @@ $wi->config->settings += [
  			'poweredby' => [
  				'miraheze' => [
  					'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
- 					'url' => 'https://meta.miraheze.org/wiki/',
+ 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
  					'alt' => 'Miraheze Wiki Hosting'
  				]
  			]
@@ -1862,7 +1862,7 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
-	// https://www.mediawiki.org/wiki/Skin:Liberty
+	// Liberty
 	'wgLibertyMainColor' => [
 		'default' => '#4188F1',
 	],
@@ -2134,26 +2134,26 @@ $wi->config->settings += [
 	],
 	'wgIncidentReportingServices' => [
 		'default' => [
-			'Bacula' => 'https://meta.miraheze.org/wiki/Tech:Bacula',
-			'DNS' => 'https://meta.miraheze.org/wiki/Tech:DNS',
-			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
-			'Grafana' => 'https://meta.miraheze.org/wiki/Tech:Grafana',
-			'Icinga' => 'https://meta.miraheze.org/wiki/Tech:Icinga',
-			'LizardFS' => 'https://meta.miraheze.org/wiki/Tech:Lizardfs',
-			'Mail' => 'https://meta.miraheze.org/wiki/Tech:Mail',
-			'MariaDB' => 'https://meta.miraheze.org/wiki/Tech:MariaDB',
-			'Matomo' => 'https://meta.miraheze.org/wiki/Tech:Matomo',
-			'MediaWiki' => 'https://meta.miraheze.org/wiki/Tech:MediaWiki_appserver',
-			'Memcached' => 'https://meta.miraheze.org/wiki/Tech:Memcached',
-			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
-			'NGINX' => 'https://meta.miraheze.org/wiki/Tech:Nginx',
-			'Parsoid' => 'https://meta.miraheze.org/wiki/Tech:Parsoid',
-			'Phabricator' => 'https://meta.miraheze.org/wiki/Tech:Phabricator',
-			'Puppet Server' => 'https://meta.miraheze.org/wiki/Tech:Puppet',
-			'Redis' => 'https://meta.miraheze.org/wiki/Tech:Redis',
-			'Salt' => 'https://meta.miraheze.org/wiki/Tech:Salt',
+			'Bacula' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Bacula',
+			'DNS' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:DNS',
+			'Ganglia' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Ganglia',
+			'Grafana' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Grafana',
+			'Icinga' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Icinga',
+			'LizardFS' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Lizardfs',
+			'Mail' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Mail',
+			'MariaDB' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:MariaDB',
+			'Matomo' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Matomo',
+			'MediaWiki' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:MediaWiki_appserver',
+			'Memcached' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Memcached',
+			'NFS' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:NFS',
+			'NGINX' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Nginx',
+			'Parsoid' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Parsoid',
+			'Phabricator' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Phabricator',
+			'Puppet Server' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Puppet',
+			'Redis' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Redis',
+			'Salt' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Salt',
 			'Service Providers' => false,
-			'Varnish' => 'https://meta.miraheze.org/wiki/Tech:Varnish',
+			'Varnish' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Varnish',
 		],
 	],
 	'wgIncidentReportingTaskUrl' => [
@@ -2955,7 +2955,7 @@ $wi->config->settings += [
 		'default' => 'member',
 	],
 	'wgManageWikiHelpUrl' => [
-		'default' => '//meta.miraheze.org/wiki/ManageWiki',
+		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
 	],
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
