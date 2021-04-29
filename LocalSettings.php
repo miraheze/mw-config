@@ -104,7 +104,7 @@ $wi->config->settings += [
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
-	// https://www.mediawiki.org/wiki/Extension:SpamBlacklist#Blacklist_syntax
+	// https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpamBlacklist#Block_list_syntax
 	'wgBlacklistSettings' => [
 		'default' => [
 			'spam' => [
@@ -1845,7 +1845,7 @@ $wi->config->settings += [
  			'poweredby' => [
  				'miraheze' => [
  					'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
- 					'url' => 'https://meta.miraheze.org/wiki/',
+ 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
  					'alt' => 'Miraheze Wiki Hosting'
  				]
  			]
@@ -1862,7 +1862,7 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
-	// https://www.mediawiki.org/wiki/Skin:Liberty
+	// Liberty
 	'wgLibertyMainColor' => [
 		'default' => '#4188F1',
 	],
@@ -2955,7 +2955,7 @@ $wi->config->settings += [
 		'default' => 'member',
 	],
 	'wgManageWikiHelpUrl' => [
-		'default' => '//meta.miraheze.org/wiki/ManageWiki',
+		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
 	],
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
