@@ -109,23 +109,6 @@ $wi->config->settings['wgDataDump']['default'] = [
 			'delete' => 'delete-dump',
 		],
 	],
-	'managewiki_backup' => [
-		'file_ending' => '.json',
-		'generate' => [
-			'type' => 'mwscript',
-			'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
-			'options' => [
-				'--filename',
-				'${filename}'
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	],
 ];
 
 // CookieWarning exempt ElectronPdfService
