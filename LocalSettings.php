@@ -598,6 +598,13 @@ $wi->config->settings += [
 				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 		],
+		'malwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
 		'snapwikiwiki' => [
 			'recentchanges' => false,
 			'interface' => [
