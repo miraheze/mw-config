@@ -3685,9 +3685,7 @@ $wi->config->settings += [
 	
 	// Rights
 	'+wgAvailableRights' => [
-		'default' => [
-			'watched-person',
-		],
+		'default' => [],
 		'ahinfoboxeswiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
@@ -3699,6 +3697,9 @@ $wi->config->settings += [
 		],
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'metawiki' => [
+			'watched-person',
 		],
 		'simulatorwiki' => [
 			'editfragment',
