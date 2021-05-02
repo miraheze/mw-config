@@ -2932,6 +2932,7 @@ $wi->config->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
+				'watched-person',
 			],
 			'*' => [
 				'read',
@@ -3684,7 +3685,9 @@ $wi->config->settings += [
 	
 	// Rights
 	'+wgAvailableRights' => [
-		'default' => [],
+		'default' => [
+			'watched-person',
+		],
 		'ahinfoboxeswiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
@@ -4488,6 +4491,14 @@ $wi->config->settings += [
 		],
 	],
 ];
+
+// Email notifications on privileged actions configuration
+'wgMirahezeMagicLogEmailConditions' => [
+	'default' => [
+		'right' => 'watched-person',
+		'email' => 'reception123@miraheze.org', // Temporarily set to my email for testing purposes
+	],
+],
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
