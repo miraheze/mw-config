@@ -4495,9 +4495,9 @@ $wi->config->settings += [
 // Email notifications on privileged actions configuration
 'wgMirahezeMagicLogEmailConditions' => [
 	'default' => [
-		'watched-person' => [
-			'right' => 'watched-person',
-			'email' => 'reception123@miraheze.org', // Temporarily set to my email for testing purposes
+		'trustandsafety' => [
+			'group' => 'trustandsafety', 
+			'email' => 'owen@miraheze.org',
 			],
 		],
 	],
