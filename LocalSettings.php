@@ -2932,6 +2932,7 @@ $wi->config->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
+				'watched-person',
 			],
 			'*' => [
 				'read',
@@ -3696,6 +3697,9 @@ $wi->config->settings += [
 		],
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'metawiki' => [
+			'watched-person',
 		],
 		'simulatorwiki' => [
 			'editfragment',
@@ -4485,6 +4489,16 @@ $wi->config->settings += [
 			'WikibaseQualityConstraints' => false,
 			'xff' => false,
 			'XMP' => false,
+		],
+	],
+
+// Email notifications on privileged actions configuration
+'wgMirahezeMagicLogEmailConditions' => [
+	'default' => [
+		'watched-person' => [
+			'right' => 'watched-person',
+			'email' => 'reception123@miraheze.org', // Temporarily set to my email for testing purposes
+			],
 		],
 	],
 ];
