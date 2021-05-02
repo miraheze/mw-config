@@ -4492,12 +4492,12 @@ $wi->config->settings += [
 		],
 	],
 
-// Email notifications on privileged actions configuration
-'wgMirahezeMagicLogEmailConditions' => [
-	'default' => [
-		'trustandsafety' => [
-			'group' => 'trustandsafety', 
-			'email' => 'owen@miraheze.org',
+	// Email notifications on privileged actions configuration
+	'wgMirahezeMagicLogEmailConditions' => [
+		'default' => [
+			'trustandsafety' => [
+				'group' => 'trustandsafety', 
+				'email' => 'owen@miraheze.org',
 			],
 		],
 	],
