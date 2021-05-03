@@ -1926,7 +1926,6 @@ $wi->config->settings += [
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
-			1, // John (SRE)
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
 			5258, // Void (Board)
