@@ -4339,11 +4339,6 @@ $wi->config->settings += [
 	'wmgLogToDisk' => [
 		'default' => false,
 	],
-	'wgMWLoggerDefaultSpi' => [
-		'default' => [
-			'class' => \MediaWiki\Logger\LegacySpi::class,
-		],
-	],
 	'wmgMonologChannels' => [
 		'default' => [
 			'404' => 'debug',

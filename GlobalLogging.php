@@ -6,14 +6,14 @@ use Monolog\Handler\WhatFailureGroupHandler;
 // Monolog logging configuration
 
 $wmgMonologProcessors = [
+	'wiki' => [
+		'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
+	],
 	'psr' => [
 		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 	],
 	'web' => [
 		'class' => \Monolog\Processor\WebProcessor::class,
-	],
-	'wiki' => [
-		'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
 	],
 ];
 
@@ -68,7 +68,7 @@ $wmgMonologConfig = [
 	'handlers' => $wmgMonologHandlers,
 	'formatters' => [
 		'logstash' => [
-			'class' => \Monolog\Formatter\LogstashFormatter::class,
+			'class' => \MediaWiki\Logger\Monolog\LogstashFormatter::class,
 			'args' => [ 'mediawiki', php_uname( 'n' ), '', '', 1 ],
 		],
 	],
