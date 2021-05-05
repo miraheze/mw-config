@@ -3749,7 +3749,7 @@ $wi->config->settings += [
 	
 	// ScratchBlocks
 	'wgScratchBlocks4BlockVersion' => [
-		'default' => '3',
+		'default' => 3,
 	],
 
 	// Scribunto
