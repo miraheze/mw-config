@@ -1794,8 +1794,8 @@ $wi->config->settings += [
 		],
 		'isvwiki' => [
 			'status' => [
+				'quality' => 1,
 				'levels' => 1,
-				'quality' => 2,
 				'pristine' => 4,
 			],
 		],
