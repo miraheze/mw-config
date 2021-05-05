@@ -1140,6 +1140,9 @@ $wi->config->settings += [
 	'wmgUseCosmos' => [
 		'default' => false,
 	],
+	'wmgUseCreatedPagesList' => [
+		'default' => false,
+	],
 	'wmgUseCreatePage' => [
 		'default' => false,
 	],
