@@ -3478,6 +3478,16 @@ $wi->config->settings += [
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						],
+					'trustandsafety' => [
+						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						],
 					],
 				],
 
