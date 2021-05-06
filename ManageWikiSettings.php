@@ -2136,7 +2136,7 @@ $wgManageWikiSettings = [
 		'type' => 'url',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'This will set the value of <code>$wgLogos[\'wordmark\'][\'src\']</code>. Also used as wordmark for the Minerva and Cosmos skins.',
+		'help' => 'This will set the value of <code>$wgLogos[\'wordmark\'][\'src\']</code>. Also used as wordmark for the various skins: Minerva copyright wordmark, Timeless mobile wordmark, modern Vector wordmark, and Cosmos wordmark. May be used elsewhere also.',
 		'requires' => [],
 	],
 	'wgWordmarkWidth' => [
