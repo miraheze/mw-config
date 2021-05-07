@@ -222,11 +222,6 @@ if ( $wmgUseYandexTranslate ) {
 	];
 }
 
-// Default ManageWikiExtensions variable values
-foreach ( $wgManageWikiExtensions as $extension => $options ) {
-	$wi->config->settings[ $options['var'] ]['default'] = false;
-}
-
 // Per-wiki settings
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
