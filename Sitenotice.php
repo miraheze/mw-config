@@ -27,6 +27,7 @@ $wgMajorSiteNoticeID = 56;
 // Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
 // or Google will use the sitenotice for their search result snippet.
 // Specific wiki sitenotice
+/*
 if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
 $wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -40,4 +41,4 @@ EOF;
 		return true;
 	}
 }
-
+*/
