@@ -3797,15 +3797,20 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-// End settings requiring access to variables
-
-$wi->readCache();
-$wi->config->extractAllGlobals( $wi->dbname );
-
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
 require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
+
+// Default ManageWikiExtensions variable values
+foreach ( $wgManageWikiExtensions as $extension => $options ) {
+	$wi->config->settings[ $options['var'] ]['default'] = false;
+}
+
+// End settings requiring access to variables
+
+$wi->readCache();
+$wi->config->extractAllGlobals( $wi->dbname );
 
 // Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
 //we have to work around this by creating a local config and merging.
