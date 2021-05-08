@@ -2124,6 +2124,9 @@ $wi->config->settings += [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		],
+		'vgportdbwiki' => [
+			'Unverified_Games' => 'unverified',
+		],
 	],
 
 	// ImageMagick
