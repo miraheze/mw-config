@@ -2949,7 +2949,6 @@ $wi->config->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-				'watched-person',
 			],
 			'*' => [
 				'read',
@@ -3732,9 +3731,6 @@ $wi->config->settings += [
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
-		],
-		'metawiki' => [
-			'watched-person',
 		],
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
