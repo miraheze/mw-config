@@ -2671,10 +2671,16 @@ $wi->config->settings += [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
+			'templateeditor' => [
+				'edittemplateprotected' => true,
+			],
 		],
     		'+famepediawiki' => [
 			'Extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
+			],
+			'templateeditor' => [
+				'edittemplateprotected' => true,
 			],
 		],
 		'+hypopediawiki' => [
@@ -3644,9 +3650,11 @@ $wi->config->settings += [
 		],
 		'+documentcontrolwiki' => [
 			'editextendedconfirmedprotected',
+			'edittemplateprotected',
 		],
 		'+famepediawiki' => [
 			'editextendedconfirmedprotected',
+			'edittemplateprotected',
 		],
 		'+hypopediawiki' => [
 			'bureaucrat',
@@ -3706,9 +3714,11 @@ $wi->config->settings += [
 		],
 		'documentcontrolwiki' => [
 			'editextendedconfirmedprotected',
+			'edittemplateprotected',
 		],
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
+			'edittemplateprotected',
 		],
 		'metawiki' => [
 			'watched-person',
