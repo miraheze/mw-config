@@ -2795,6 +2795,15 @@ $wi->config->settings += [
 				'createwiki' => true,
 			],
 		],
+    		'+naasgamelandwiki' => [
+			'bot' => [
+				'editarchiveprotected' => true,
+			],
+			'cocreator' => [
+				'editarchiveprotected' => true,
+				'editofficialprotected' => true,
+			],
+		],
 		'+nenawikiwiki' => [
 			'editor' => [
 				'edit-content-pages' => true,
@@ -3666,6 +3675,10 @@ $wi->config->settings += [
 			'ceo',
 			'co',
 		],
+		'+naasgamelandwiki' => [
+			'editarchiveprotected',
+			'editofficialprotected',
+		],
 		'+quircwiki' => [
 			'editstaffprotected',
 		],
@@ -3722,6 +3735,10 @@ $wi->config->settings += [
 		],
 		'metawiki' => [
 			'watched-person',
+		],
+		'naasgamelandwiki' => [
+			'editarchiveprotected',
+			'editofficialprotected',
 		],
 		'simulatorwiki' => [
 			'editfragment',
