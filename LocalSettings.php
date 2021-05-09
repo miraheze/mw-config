@@ -2757,6 +2757,14 @@ $wi->config->settings += [
 				'managewiki-restricted' => true,
 			],
 		],
+    		'+memeswiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'templateeditor' => [
+				'edittemplateprotected' => true,
+			],
+		],
 		'+metawiki' => [
 			'confirmed' => [
 				'mwoauthproposeconsumer' => true,
@@ -3674,6 +3682,10 @@ $wi->config->settings += [
 			'ceo',
 			'co',
 		],
+		'+memeswiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
 		'+naasgamelandwiki' => [
 			'editarchiveprotected',
 			'editofficialprotected',
@@ -3729,6 +3741,10 @@ $wi->config->settings += [
 			'edittemplateprotected',
 		],
 		'famepediawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'memeswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
