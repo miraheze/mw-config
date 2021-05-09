@@ -2957,7 +2957,6 @@ $wi->config->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-				'watched-person',
 			],
 			'*' => [
 				'read',
@@ -3748,9 +3747,6 @@ $wi->config->settings += [
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
-		],
-		'metawiki' => [
-			'watched-person',
 		],
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
