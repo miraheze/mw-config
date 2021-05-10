@@ -2650,6 +2650,11 @@ $wi->config->settings += [
 			'user' => [
 				'mwoauthmanagemygrants' => true,
 				'user' => true,
+				'editmyoptions' => true,
+				'editmyprivateinfo => true,
+				'editmywatchlist => true,
+				'viewmyprivateinfo => true, 
+				'viewmywatchlist => true,
 			],
 			'steward' => [
 				'centralauth-usermerge' => true,
@@ -2984,6 +2989,13 @@ $wi->config->settings += [
 				'viewmywatchlist',
 				'managewiki',
 
+			],
+			'user' => [
+				'editmyoptions', 
+				'editmyprivateinfo', 
+				'editmywatchlist', 
+				'viewmyprivateinfo', 
+				'viewmywatchlist',
 			],
 		],
 	],
