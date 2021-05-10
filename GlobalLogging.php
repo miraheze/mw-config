@@ -23,6 +23,7 @@ $wmgMonologProcessors = [
 
 				return $record;
 			}
+		}
 	],
 ];
 
