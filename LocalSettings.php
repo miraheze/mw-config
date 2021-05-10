@@ -2624,6 +2624,7 @@ $wi->config->settings += [
 			'*' => [
 				'autocreateaccount' => true,
 				'read' => true,
+				'oathauth-enable' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
