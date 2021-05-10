@@ -2973,7 +2973,14 @@ $wi->config->settings += [
 				'editusercss',
 				'edituserjson',
 				'edituserjs',
+				'editmyoptions', 
+				'editmyprivateinfo', 
+				'editmywatchlist', 
+				'viewmyprivateinfo', 
+				'viewmywatchlist',
+				'oathauth-enable'
 				'managewiki',
+
 			],
 		],
 	],
