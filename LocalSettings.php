@@ -2624,6 +2624,7 @@ $wi->config->settings += [
 			'*' => [
 				'autocreateaccount' => true,
 				'read' => true,
+				'oathauth-enable' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
@@ -2942,6 +2943,7 @@ $wi->config->settings += [
 				'mwoauthviewprivate',
 				'mwoauthviewsuppressed',
 				'oathauth-api-all',
+				'oathauth-enable',
 				'oathauth-disable-for-user',
 				'oathauth-verify-user',
 				'oathauth-view-log',
@@ -2973,7 +2975,13 @@ $wi->config->settings += [
 				'editusercss',
 				'edituserjson',
 				'edituserjs',
+				'editmyoptions', 
+				'editmyprivateinfo', 
+				'editmywatchlist', 
+				'viewmyprivateinfo', 
+				'viewmywatchlist',
 				'managewiki',
+
 			],
 		],
 	],
