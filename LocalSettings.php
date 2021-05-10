@@ -2942,6 +2942,7 @@ $wi->config->settings += [
 				'mwoauthviewprivate',
 				'mwoauthviewsuppressed',
 				'oathauth-api-all',
+				'oathauth-enable',
 				'oathauth-disable-for-user',
 				'oathauth-verify-user',
 				'oathauth-view-log',
@@ -2978,7 +2979,6 @@ $wi->config->settings += [
 				'editmywatchlist', 
 				'viewmyprivateinfo', 
 				'viewmywatchlist',
-				'oathauth-enable'
 				'managewiki',
 
 			],
