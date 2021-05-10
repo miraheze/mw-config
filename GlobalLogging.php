@@ -15,6 +15,16 @@ $wmgMonologProcessors = [
 	'web' => [
 		'class' => \Monolog\Processor\WebProcessor::class,
 	],
+	'mhconfig' => [
+		'factory' => function () {
+			return function ( array $record ) {
+				global $wgLBFactoryConf, $wgDBname;
+				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
+
+				return $record;
+			};
+		}
+	],
 ];
 
 $wmgMonologHandlers = [
