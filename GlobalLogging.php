@@ -19,7 +19,7 @@ $wmgMonologProcessors = [
 		'factory' => function () {
 			return function ( array $record ) {
 				global $wgLBFactoryConf, $wgDBname;
-				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c3';
+				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
 
 				return $record;
 			};
