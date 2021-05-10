@@ -265,6 +265,16 @@ if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
 
+if ( $wgDBname === 'samskritavyakaranamwiki' ) {
+	$wgHooks['BeforePageDisplay'][] = 'wfAddSidebarTree';
+	function wfAddSidebarTree( $out, $skin ) {
+	$title = Title::newFromText( 'SidebarTree', NS_MEDIAWIKI );
+	$article = new Article( $title );
+	$html = $out->parseAsContent( $article->getPage()->getContent()->getNativeData() );
+	$out->addHTML( "<div id=\"wikitext-sidebar\">$html</div>" );
+	return true;
+}
+
 if ( $wgDBname === 'traceprojectwikiwiki' ) {
 	$wgDplSettings['allowUnlimitedCategories'] = true;
 }
