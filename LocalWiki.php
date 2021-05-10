@@ -273,6 +273,7 @@ if ( $wgDBname === 'samskritavyakaranamwiki' ) {
 	$html = $out->parseAsContent( $article->getPage()->getContent()->getNativeData() );
 	$out->addHTML( "<div id=\"wikitext-sidebar\">$html</div>" );
 	return true;
+	}
 }
 
 if ( $wgDBname === 'traceprojectwikiwiki' ) {
