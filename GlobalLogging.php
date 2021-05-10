@@ -22,6 +22,7 @@ $wmgMonologProcessors = [
 				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c3';
 
 				return $record;
+			}
 	],
 ];
 
