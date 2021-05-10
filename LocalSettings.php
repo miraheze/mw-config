@@ -2625,8 +2625,8 @@ $wi->config->settings += [
 				'autocreateaccount' => true,
 				'read' => true,
 				'oathauth-enable' => true,
-				'editmyprivateinfo', 
-				'viewmyprivateinfo', 
+				'editmyprivateinfo' => true,
+				'viewmyprivateinfo' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
