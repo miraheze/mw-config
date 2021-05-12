@@ -2604,9 +2604,6 @@ $wi->config->settings += [
 			'urlshortener',
 		],
 	],
-	'wgManageWikiCDBDirectory' => [
-		'default' => '/srv/mediawiki/w/cache/managewiki',
-	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
 		'rf1botwiki' => [
