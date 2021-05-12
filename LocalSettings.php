@@ -1933,6 +1933,7 @@ $wi->config->settings += [
 			24689, // RobLa (Board)
 			57564, // RhinosF1 (SRE)
 			73651, // Owen (Board)
+			96304, // Universal Omega (SRE)
 		],
 	],
 	'wgEnableImageWhitelist' => [
