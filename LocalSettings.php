@@ -774,7 +774,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgCreateWikiCacheDirectory' => [
-		'default' => '/srv/mediawiki/w/cache'
+		'default' => '/srv/mediawiki/cache'
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
