@@ -10,7 +10,7 @@ $IP/extensions/ArticleRatings/extension.json
 $IP/extensions/ArticleToCategory2/extension.json
 $IP/extensions/AuthorProtect/extension.json
 $IP/extensions/AutoCreateCategoryPages/extension.json
-$IP/extensions/AutoCreatePage/AutoCreatePage.php
+$IP/extensions/AutoCreatePage/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
@@ -67,7 +67,7 @@ $IP/extensions/Editcount/extension.json
 $IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
-$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php
+$IP/extensions/FancyBoxThumbs/extension.json
 $IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/ForcePreview/extension.json
@@ -151,6 +151,7 @@ $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/OpenGraphMeta/extension.json
 $IP/extensions/OrphanedTalkPages/extension.json
+$IP/extensions/PageAssessments/extension.json
 $IP/extensions/PageDisqus/extension.json
 $IP/extensions/PdfBook/extension.json
 $IP/extensions/PDFEmbed/extension.json
@@ -188,13 +189,13 @@ $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/RightFunctions/extension.json
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
-$IP/extensions/ScratchBlocks/extension.json
+$IP/extensions/mw-ScratchBlocks4/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/ShortDescription/extension.json
-$IP/extensions/SimpleBlogPage/SimpleBlogPage.php
+$IP/extensions/SimpleBlogPage/extension.json
 $IP/extensions/SimpleChanges/extension.json
-$IP/extensions/SimpleTooltip/SimpleTooltip.php
+$IP/extensions/SimpleTooltip/extension.json
 $IP/extensions/SlackNotifications/extension.json
 $IP/extensions/SnapProjectEmbed/extension.json
 $IP/extensions/SoftRedirector/extension.json
@@ -240,7 +241,6 @@ $IP/extensions/UserMerge/extension.json
 $IP/extensions/UrlGetParameters/extension.json
 $IP/extensions/UserFunctions/extension.json
 $IP/extensions/UrlShortener/extension.json
-$IP/extensions/Validator/Validator.php
 $IP/extensions/Variables/extension.json
 $IP/extensions/VariablesLua/extension.json
 $IP/extensions/VEForAll/extension.json

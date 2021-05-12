@@ -59,7 +59,7 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 }
 
 if ( $wmgUseAutoCreatePage ) {
-	require_once "$IP/extensions/AutoCreatePage/AutoCreatePage.php";
+	wfLoadExtension( 'AutoCreatePage' );
 }
 
 if ( $wmgUseBabel ) {
@@ -252,7 +252,7 @@ if ( $wmgUseErudite ) {
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
-	require_once "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php";
+	wfLoadExtension( 'FancyBoxThumbs' );
 }
 
 if ( $wmgUseFemiwiki ) {
@@ -597,6 +597,10 @@ if ( $wmgUseOrphanedTalkPages ) {
 	wfLoadExtension( 'OrphanedTalkPages' );
 }
 
+if ( $wmgUsePageAssessments ) {
+	wfLoadExtension( 'PageAssessments' );
+}
+
 if ( $wmgUsePageDisqus ) {
 	wfLoadExtension( 'PageDisqus' );
 }
@@ -737,7 +741,7 @@ if ( $wmgUseSandboxLink ) {
 }
 
 if ( $wmgUseScratchBlocks ) {
-	wfLoadExtension( 'ScratchBlocks' );
+	wfLoadExtension( 'mw-ScratchBlocks4' );
 }
 
 if ( $wmgUseScore ) {
@@ -753,7 +757,7 @@ if ( $wmgUseShortDescription ) {
 }
 
 if ( $wmgUseSimpleBlogPage ) {
-	require_once "$IP/extensions/SimpleBlogPage/SimpleBlogPage.php";
+	wfLoadExtension( 'SimpleBlogPage' );
 }
 
 if ( $wmgUseSimpleChanges ) {
@@ -761,7 +765,7 @@ if ( $wmgUseSimpleChanges ) {
 }
 
 if ( $wmgUseSimpleTooltip ) {
-	require_once "$IP/extensions/SimpleTooltip/SimpleTooltip.php";
+	wfLoadExtension( 'SimpleTooltip' );
 }
 
 if ( $wmgUseSlackNotifications ) {
@@ -907,10 +911,6 @@ if ( $wmgUseUserWelcome ) {
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
 
-if ( $wmgUseValidator ) {
-	require_once( "$IP/extensions/Validator/Validator.php" );
-}
-
 if ( $wmgUseVariables ) {
 	wfLoadExtension( 'Variables' );
 }
@@ -932,7 +932,7 @@ if ( $wmgUseVisualEditor ) {
 	
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
 	} else {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
@@ -1009,5 +1009,5 @@ if ( $wmgUseRegexFunctions ) {
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
 if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
-	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
+	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }

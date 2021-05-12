@@ -6,14 +6,24 @@ use Monolog\Handler\WhatFailureGroupHandler;
 // Monolog logging configuration
 
 $wmgMonologProcessors = [
+	'wiki' => [
+		'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
+	],
 	'psr' => [
 		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
 	],
 	'web' => [
 		'class' => \Monolog\Processor\WebProcessor::class,
 	],
-	'wiki' => [
-		'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
+	'mhconfig' => [
+		'factory' => function () {
+			return function ( array $record ) {
+				global $wgLBFactoryConf, $wgDBname;
+				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
+
+				return $record;
+			};
+		}
 	],
 ];
 
@@ -68,7 +78,7 @@ $wmgMonologConfig = [
 	'handlers' => $wmgMonologHandlers,
 	'formatters' => [
 		'logstash' => [
-			'class' => \Monolog\Formatter\LogstashFormatter::class,
+			'class' => \MediaWiki\Logger\Monolog\LogstashFormatter::class,
 			'args' => [ 'mediawiki', php_uname( 'n' ), '', '', 1 ],
 		],
 	],

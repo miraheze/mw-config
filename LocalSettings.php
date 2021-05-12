@@ -104,7 +104,7 @@ $wi->config->settings += [
 	'wgAccountCreationThrottle' => [
 		'default' => 5,
 	],
-	// https://www.mediawiki.org/wiki/Extension:SpamBlacklist#Blacklist_syntax
+	// https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpamBlacklist#Block_list_syntax
 	'wgBlacklistSettings' => [
 		'default' => [
 			'spam' => [
@@ -279,6 +279,7 @@ $wi->config->settings += [
 	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
 		'default' => 'uppercase',
 		'holidayswiki' => 'numeric',
+		'wmgUseCategorySortHeaders' => 'CustomHeaderCollation',
 	],
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
@@ -591,6 +592,13 @@ $wi->config->settings += [
 			],
 		],
 		'batmanwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
+		'malwiki' => [
 			'recentchanges' => false,
 			'interface' => [
 				'cosmos-custom-rail-module' => 'normal',
@@ -1448,6 +1456,9 @@ $wi->config->settings += [
 	'wmgUseOrphanedTalkPages' => [
 		'default' => false,
 	],
+	'wmgUsePageAssessments' => [
+		'default' => false,
+	],
 	'wmgUsePageDisqus' => [
 		'default' => false,
 	],
@@ -1680,9 +1691,6 @@ $wi->config->settings += [
 	'wmgUseUserWelcome' => [
 		'default' => false,
 	],
-	'wmgUseValidator' => [
-		'default' => false,
-	],
 	'wmgUseVEForAll' => [
 		'default' => false,
 	],
@@ -1828,7 +1836,7 @@ $wi->config->settings += [
  			'poweredby' => [
  				'miraheze' => [
  					'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
- 					'url' => 'https://meta.miraheze.org/wiki/',
+ 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
  					'alt' => 'Miraheze Wiki Hosting'
  				]
  			]
@@ -1845,7 +1853,7 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
-	// https://www.mediawiki.org/wiki/Skin:Liberty
+	// Liberty
 	'wgLibertyMainColor' => [
 		'default' => '#4188F1',
 	],
@@ -1902,7 +1910,6 @@ $wi->config->settings += [
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
-			1, // John (SRE)
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
 			5258, // Void (Board)
@@ -1910,6 +1917,7 @@ $wi->config->settings += [
 			24689, // RobLa (Board)
 			57564, // RhinosF1 (SRE)
 			73651, // Owen (Board)
+			96304, // Universal Omega (SRE)
 		],
 	],
 	'wgEnableImageWhitelist' => [
@@ -2101,6 +2109,9 @@ $wi->config->settings += [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		],
+		'vgportdbwiki' => [
+			'Unverified_Games' => 'unverified',
+		],
 	],
 
 	// ImageMagick
@@ -2221,6 +2232,9 @@ $wi->config->settings += [
 		],
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
+		],
+		'+snapdatawiki' => [
+			'd',
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
@@ -2595,6 +2609,9 @@ $wi->config->settings += [
 			'*' => [
 				'autocreateaccount' => true,
 				'read' => true,
+				'oathauth-enable' => true,
+				'editmyprivateinfo' => true,
+				'viewmyprivateinfo' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
@@ -2639,6 +2656,22 @@ $wi->config->settings += [
 		'+cmgwiki' => [
 			'gst' => [
 				'read' => true,
+			],
+		],
+		'+documentcontrolwiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'templateeditor' => [
+				'edittemplateprotected' => true,
+			],
+		],
+    		'+famepediawiki' => [
+			'Extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'templateeditor' => [
+				'edittemplateprotected' => true,
 			],
 		],
 		'+hypopediawiki' => [
@@ -2715,6 +2748,14 @@ $wi->config->settings += [
 				'managewiki-restricted' => true,
 			],
 		],
+    		'+memeswiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'templateeditor' => [
+				'edittemplateprotected' => true,
+			],
+		],
 		'+metawiki' => [
 			'confirmed' => [
 				'mwoauthproposeconsumer' => true,
@@ -2751,6 +2792,15 @@ $wi->config->settings += [
 			],
 			'wikicreator' => [
 				'createwiki' => true,
+			],
+		],
+    		'+naasgamelandwiki' => [
+			'bot' => [
+				'editarchiveprotected' => true,
+			],
+			'cocreator' => [
+				'editarchiveprotected' => true,
+				'editofficialprotected' => true,
 			],
 		],
 		'+nenawikiwiki' => [
@@ -2880,6 +2930,7 @@ $wi->config->settings += [
 				'mwoauthviewprivate',
 				'mwoauthviewsuppressed',
 				'oathauth-api-all',
+				'oathauth-enable',
 				'oathauth-disable-for-user',
 				'oathauth-verify-user',
 				'oathauth-view-log',
@@ -2911,7 +2962,13 @@ $wi->config->settings += [
 				'editusercss',
 				'edituserjson',
 				'edituserjs',
+				'editmyoptions', 
+				'editmyprivateinfo', 
+				'editmywatchlist', 
+				'viewmyprivateinfo', 
+				'viewmywatchlist',
 				'managewiki',
+
 			],
 		],
 	],
@@ -2928,7 +2985,7 @@ $wi->config->settings += [
 		'default' => 'member',
 	],
 	'wgManageWikiHelpUrl' => [
-		'default' => '//meta.miraheze.org/wiki/ManageWiki',
+		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
 	],
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
@@ -3422,6 +3479,40 @@ $wi->config->settings += [
 			],
 		],
 	],
+	'wgCentralAuthGlobalPasswordPolicies' => [
+				'default' => [
+					'steward' => [
+						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+					],
+					'sysadmin' => [
+						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						],
+					'trustandsafety' => [
+						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+						],
+					],
+				],
 
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
@@ -3439,6 +3530,9 @@ $wi->config->settings += [
  			'usebetatoolbar' => 1,
  			'usebetatoolbar-cgd' => 1
  		],
+		'+bioencyclopediawiki' => [
+			'usenewrc' => 0
+		],
 		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
@@ -3568,6 +3662,14 @@ $wi->config->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
+		'+documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'+famepediawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
 		'+hypopediawiki' => [
 			'bureaucrat',
 		],
@@ -3577,6 +3679,14 @@ $wi->config->settings += [
 			'bureaucrat',
 			'ceo',
 			'co',
+		],
+		'+memeswiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'+naasgamelandwiki' => [
+			'editarchiveprotected',
+			'editofficialprotected',
 		],
 		'+quircwiki' => [
 			'editstaffprotected',
@@ -3623,6 +3733,22 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+		'documentcontrolwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'famepediawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'memeswiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'naasgamelandwiki' => [
+			'editarchiveprotected',
+			'editofficialprotected',
 		],
 		'simulatorwiki' => [
 			'editfragment',
@@ -4111,7 +4237,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgEnableEntitySearchUI' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
@@ -4263,11 +4389,6 @@ $wi->config->settings += [
 	'wmgLogToDisk' => [
 		'default' => false,
 	],
-	'wgMWLoggerDefaultSpi' => [
-		'default' => [
-			'class' => \MediaWiki\Logger\LegacySpi::class,
-		],
-	],
 	'wmgMonologChannels' => [
 		'default' => [
 			'404' => 'debug',
@@ -4412,6 +4533,16 @@ $wi->config->settings += [
 			'WikibaseQualityConstraints' => false,
 			'xff' => false,
 			'XMP' => false,
+		],
+	],
+
+	// Email notifications on privileged actions configuration
+	'wgMirahezeMagicLogEmailConditions' => [
+		'default' => [
+			'trustandsafety' => [
+				'group' => 'trustandsafety', 
+				'email' => 'owen@miraheze.org',
+			],
 		],
 	],
 ];

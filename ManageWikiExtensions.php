@@ -856,7 +856,7 @@ $wgManageWikiExtensions = [
 			'section' => 'parserhooks',
 		],
 		'scratchblocks' => [
-			'name' => 'ScratchBlocks',
+			'name' => 'ScratchBlocks4',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ScratchBlocks',
 			'var' => 'wmgUseScratchBlocks',
 			'conflicts' => false,
@@ -2437,6 +2437,20 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'other',
 		],
+		'pageassessments' => [
+			'name' => 'PageAssessments',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageAssessments',
+			'var' => 'wmgUsePageAssessments',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'sql' => [
+					'page_assessments' => "$IP/extensions/PageAssessments/db/addReviewsTable.sql",
+					'page_assessments_projects' => "$IP/extensions/PageAssessments/db/addProjectsTable.sql"
+				],
+			],
+			'section' => 'other',
+		],
 		'pagedisqus' => [
 			'name' => 'PageDisqus',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageDisqus',
@@ -2634,8 +2648,8 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'install' => [
 				'namespaces' => [
-					'Blog' => [
-						'id' => 500,
+					'User_blog' => [
+						'id' => 502,
 						'searchable' => 1,
 						'subpages' => 1,
 						'protection' => 'edit',
@@ -2644,8 +2658,8 @@ $wgManageWikiExtensions = [
 						'contentmodel' => 'wikitext',
 						'additional' => []
 					],
-					'Blog_talk' => [
-						'id' => 501,
+					'User_blog_talk' => [
+						'id' => 503,
 						'searchable' => 0,
 						'subpages' => 1,
 						'protection' => '',
@@ -2858,14 +2872,6 @@ $wgManageWikiExtensions = [
 			'name' => 'UploadsLink',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UploadsLink',
 			'var' => 'wmgUseUploadsLink',
-			'conflicts' => false,
-			'requires' => [],
-			'section' => 'other',
-		],
-		'validator' => [
-			'name' => 'Validator',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Validator',
-			'var' => 'wmgUseValidator',
 			'conflicts' => false,
 			'requires' => [],
 			'section' => 'other',
