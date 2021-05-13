@@ -2212,6 +2212,7 @@ $wi->config->settings += [
 			'mw',
 			'templatewiki',
 			'wikipedia',
+			'metawikimedia',
 		],
 		'+ahinfoboxeswiki' => [
 			'wikimediacommons',
