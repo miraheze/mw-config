@@ -1,31 +1,31 @@
 <?php
 
 // Set up extensions for use on wikis that are not global
-if ( $wmgUse3D ) {
+if ( $wmgUse3D ?? false ) {
 	wfLoadExtension( '3D' );
 }
 
-if ( $wmgUseAddThis ) {
+if ( $wmgUseAddThis ?? false ) {
 	wfLoadExtension( 'AddThis' );
 }
 
-if ( $wmgUseAddHTMLMetaAndTitle ) {
+if ( $wmgUseAddHTMLMetaAndTitle ?? false ) {
 	wfLoadExtension( 'AddHTMLMetaAndTitle' );
 }
 
-if ( $wmgUseAdminLinks ) {
+if ( $wmgUseAdminLinks ?? false ) {
 	wfLoadExtension( 'AdminLinks' );
 }
 
-if ( $wmgUseAdvancedSearch ) {
+if ( $wmgUseAdvancedSearch ?? false ) {
 	wfLoadExtension( 'AdvancedSearch' );
 }
 
-if ( $wmgUseAJAXPoll ) {
+if ( $wmgUseAJAXPoll ?? false ) {
 	wfLoadExtension( 'AJAXPoll' );
 }
 
-if ( $wmgUseApex ) {
+if ( $wmgUseApex ?? false ) {
 	wfLoadSkin( 'apex' );
 	
 	$wgApexLogo = [
@@ -34,39 +34,39 @@ if ( $wmgUseApex ) {
 	];
 }
 
-if ( $wmgUseApprovedRevs ) {
+if ( $wmgUseApprovedRevs ?? false ) {
 	wfLoadExtension( 'ApprovedRevs' );
 }
 
-if ( $wmgUseArrays ) {
+if ( $wmgUseArrays ?? false ) {
 	wfLoadExtension( 'Arrays' );
 }
 
-if ( $wmgUseArticleRatings ) {
+if ( $wmgUseArticleRatings ?? false ) {
 	wfLoadExtension( 'ArticleRatings' );
 }
 
-if ( $wmgUseArticleToCategory2 ) {
+if ( $wmgUseArticleToCategory2 ?? false ) {
 	wfLoadExtension( 'ArticleToCategory2' );
 }
 
-if ( $wmgUseAuthorProtect ) {
+if ( $wmgUseAuthorProtect ?? false ) {
 	wfLoadExtension( 'AuthorProtect' );
 }
 
-if ( $wmgUseAutoCreateCategoryPages ) {
+if ( $wmgUseAutoCreateCategoryPages ?? false ) {
 	wfLoadExtension( 'AutoCreateCategoryPages' );
 }
 
-if ( $wmgUseAutoCreatePage ) {
+if ( $wmgUseAutoCreatePage ?? false ) {
 	wfLoadExtension( 'AutoCreatePage' );
 }
 
-if ( $wmgUseBabel ) {
+if ( $wmgUseBabel ?? false ) {
 	wfLoadExtension( 'Babel' );
 }
 
-if ( $wmgUseBlogPage ) {
+if ( $wmgUseBlogPage ?? false ) {
 	wfLoadExtension( 'BlogPage' );
 }
 
@@ -74,336 +74,336 @@ if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 }
 
-if ( $wmgUseCargo ) {
+if ( $wmgUseCargo ?? false ) {
 	wfLoadExtension( 'Cargo' );
 }
 
-if ( $wmgUseCategorySortHeaders ) {
+if ( $wmgUseCategorySortHeaders ?? false ) {
 	require_once "$IP/extensions/CategorySortHeaders/CategorySortHeaders.php";
 }
 
-if ( $wmgUseCategoryTree ) {
+if ( $wmgUseCategoryTree ?? false ) {
 	wfLoadExtension( 'CategoryTree' );
 }
 
-if ( $wmgUseCapiunto ) {
+if ( $wmgUseCapiunto ?? false ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
-if ( $wmgUseCharInsert ) {
+if ( $wmgUseCharInsert ?? false ) {
 	wfLoadExtension( 'CharInsert' );
 }
 
-if ( $wmgUseCite ) {
+if ( $wmgUseCite ?? false ) {
 	wfLoadExtension( 'Cite' );
 }
 
-if ( $wmgUseCiteThisPage ) {
+if ( $wmgUseCiteThisPage ?? false ) {
 	wfLoadExtension( 'CiteThisPage' );
 }
 
-if ( $wmgUseCitoid ) {
+if ( $wmgUseCitoid ?? false ) {
 	wfLoadExtension( 'Citoid' );
 }
 
-if ( $wmgUseCleanChanges ) {
+if ( $wmgUseCleanChanges ?? false ) {
 	wfLoadExtension( 'CleanChanges' );
 }
 
-if ( $wmgUseCodeEditor ) {
+if ( $wmgUseCodeEditor ?? false ) {
 	wfLoadExtension( 'CodeEditor' );
 }
 
-if ( $wmgUseCodeMirror ) {
+if ( $wmgUseCodeMirror ?? false ) {
 	wfLoadExtension( 'CodeMirror' );
 }
 
-if ( $wmgUseCollapsibleVector ) {
+if ( $wmgUseCollapsibleVector ?? false ) {
 	wfLoadExtension( 'CollapsibleVector' );
 }
 
-if ( $wmgUseCollection ) {
+if ( $wmgUseCollection ?? false ) {
 	wfLoadExtensions( [
 		'Collection',
 		'ElectronPdfService',
 	] );
 }
 
-if ( $wmgUseCommentbox ) {
+if ( $wmgUseCommentbox ?? false ) {
 	wfLoadExtension( 'Commentbox' );
 }
 
-if ( $wmgUseCommentStreams ) {
+if ( $wmgUseCommentStreams ?? false ) {
 	wfLoadExtension( 'CommentStreams' );
 }
 
-if ( $wmgUseComments ) {
+if ( $wmgUseComments ?? false ) {
 	wfLoadExtension( 'Comments' );
 }
 
-if ( $wmgUseCommonsMetadata ) {
+if ( $wmgUseCommonsMetadata ?? false ) {
 	wfLoadExtension( 'CommonsMetadata' );
 }
 
-if ( $wmgUseContactPage ) {
+if ( $wmgUseContactPage ?? false ) {
 	wfLoadExtension( 'ContactPage' );
 }
 
-if ( $wmgUseContributionScores ) {
+if ( $wmgUseContributionScores ?? false ) {
 	wfLoadExtension( 'ContributionScores' );
 }
 
-if ( $wmgUseCosmos ){
+if ( $wmgUseCosmos ?? false ) {
 	wfLoadSkin( 'Cosmos' );
 }
 
-if ( $wmgUseCreatePage ) {
+if ( $wmgUseCreatePage ?? false ) {
 	require_once "$IP/extensions/CreatePage/CreatePage.php";
 }
-if ( $wmgUseCreatePageUw ) {
+if ( $wmgUseCreatePageUw ?? false ) {
 	wfLoadExtension( 'CreatePageUw' );
 }
-if ( $wmgUseCreateRedirect ) {
+if ( $wmgUseCreateRedirect ?? false ) {
 	wfLoadExtension( 'CreateRedirect' );
 }
 
-if ( $wmgUseCSS ) {
+if ( $wmgUseCSS ?? false ) {
 	wfLoadExtension( 'CSS' );
 }
 
-if ( $wmgUseCalendarWikivoyage ) {
+if ( $wmgUseCalendarWikivoyage ?? false ) {
 	wfLoadExtension( 'Calendar' );
 }
 
-if ( $wmgUseCitizen ) {
+if ( $wmgUseCitizen ?? false ) {
 	wfLoadSkin( 'Citizen' );
 }
 
-if ( $wmgUseDarkMode ) {
+if ( $wmgUseDarkMode ?? false ) {
 	wfLoadExtension( 'DarkMode' );
 }
 
-if ( $wmgUseDataTransfer ) {
+if ( $wmgUseDataTransfer ?? false ) {
 	wfLoadExtension( 'DataTransfer' );
 }
 
-if ( $wmgUseDeleteUserPages ) {
+if ( $wmgUseDeleteUserPages ?? false ) {
 	wfLoadExtension( 'DeleteUserPages' );
 }
 
-if ( $wmgUseDescription2 ) {
+if ( $wmgUseDescription2 ?? false ) {
 	wfLoadExtension( 'Description2' );
 }
 
-if ( $wmgUseDisambiguator ) {
+if ( $wmgUseDisambiguator ?? false ) {
 	wfLoadExtension( 'Disambiguator' );
 }
 
-if ( $wmgUseDiscussionTools ) {
+if ( $wmgUseDiscussionTools ?? false ) {
 	wfLoadExtension( 'DiscussionTools' );
 }
 
-if ( $wmgUseDisplayTitle ) {
+if ( $wmgUseDisplayTitle ?? false ) {
 	wfLoadExtension( 'DisplayTitle' );
 }
 
-if ( $wmgUseDisqusTag ) {
+if ( $wmgUseDisqusTag ?? false ) {
 	wfLoadExtension( 'DisqusTag' );
 }
 
-if ( $wmgUseDuskToDawn ) {
+if ( $wmgUseDuskToDawn ?? false ) {
 	wfLoadSkin( 'DuskToDawn' );
 }
 
-if ( $wmgUseDPLForum ) {
+if ( $wmgUseDPLForum ?? false ) {
 	wfLoadExtension( 'DPLForum' );
 }
 
-if ( $wmgUseDummyFandoomMainpageTags ) {
+if ( $wmgUseDummyFandoomMainpageTags ?? false ) {
 	wfLoadExtension( 'DummyFandoomMainpageTags' );
 }
 
-if ( $wmgUseDynamicPageList ) {
+if ( $wmgUseDynamicPageList ?? false ) {
 	wfLoadExtension( 'DynamicPageList' );
 }
 
-if ( $wmgUseDynamicPageList3 ) {
+if ( $wmgUseDynamicPageList3 ?? false ) {
 	wfLoadExtension( 'DynamicPageList3' );
 }
 
-if ( $wmgUseDynamicSidebar ) {
+if ( $wmgUseDynamicSidebar ?? false ) {
 	wfLoadExtension( 'DynamicSidebar' );
 }
 
-if ( $wmgUseEditcount ) {
+if ( $wmgUseEditcount ?? false ) {
 	wfLoadExtension( 'Editcount' );
 }
 
-if ( $wmgUseEditNotify ) {
+if ( $wmgUseEditNotify ?? false ) {
 	wfLoadExtension( 'EditNotify' );
 }
 
-if ( $wmgUseEditSubpages ) {
+if ( $wmgUseEditSubpages ?? false ) {
 	wfLoadExtension( 'EditSubpages' );
 }
 
-if ( $wmgUseErudite ) {
+if ( $wmgUseErudite ?? false ) {
 	wfLoadSkin( 'erudite' );
 }
 
-if ( $wmgUseFancyBoxThumbs ) {
+if ( $wmgUseFancyBoxThumbs ?? false ) {
 	wfLoadExtension( 'FancyBoxThumbs' );
 }
 
-if ( $wmgUseFemiwiki ) {
+if ( $wmgUseFemiwiki ?? false ) {
 	wfLoadSkin( 'Femiwiki' );
 }
 
-if ( $wmgUseFlaggedRevs ) {
+if ( $wmgUseFlaggedRevs ?? false ) {
 	wfLoadExtension( 'FlaggedRevs' );
 }
 
-if ( $wmgUseFlow ) {
+if ( $wmgUseFlow ?? false ) {
 	wfLoadExtension( 'Flow' );
 }
 
-if ( $wmgUseForcePreview) {
+if ( $wmgUseForcePreview?? false ) {
 	wfLoadExtension( 'ForcePreview' );
 }
 
-if ( $wmgUseForeground ) {
+if ( $wmgUseForeground ?? false ) {
 	wfLoadSkin( 'foreground' );
 }
 
-if ( $wmgUseFontAwesome ) {
+if ( $wmgUseFontAwesome ?? false ) {
 	wfLoadExtension( 'FontAwesome' );
 }
 
-if ( $wmgUseGadgets ) {
+if ( $wmgUseGadgets ?? false ) {
 	wfLoadExtension( 'Gadgets' );
 }
 
-if ( $wmgUseGamepress ) {
+if ( $wmgUseGamepress ?? false ) {
 	wfLoadSkin( 'Gamepress' );
 }
 
-if ( $wmgUseGenealogy ) {
+if ( $wmgUseGenealogy ?? false ) {
 	wfLoadExtension( 'Genealogy' );
 }
 
-if ( $wmgUseGeoCrumbs ) {
+if ( $wmgUseGeoCrumbs ?? false ) {
 	wfLoadExtension( 'GeoCrumbs' );
 }
 
-if ( $wmgUseGeoData ) {
+if ( $wmgUseGeoData ?? false ) {
 	wfLoadExtension( 'GeoData' );
 }
 
-if ( $wmgUseGeoGebra ) {
+if ( $wmgUseGeoGebra ?? false ) {
 	wfLoadExtension( 'GeoGebra' );
 }
 
-if ( $wmgUseGettingStarted ) {
+if ( $wmgUseGettingStarted ?? false ) {
 	wfLoadExtension( 'GettingStarted' );
 }
 
-if ( $wgMirahezeCommons && !$cwPrivate ) {
+if ( $wgMirahezeCommons && !$cwPrivate ?? false ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
-if ( $wmgUseGlobalUserPage ) {
+if ( $wmgUseGlobalUserPage ?? false ) {
 	wfLoadExtension( 'GlobalUserPage' );
 }
 
-if ( $wmgUseGoogleDocs4MW ) {
+if ( $wmgUseGoogleDocs4MW ?? false ) {
 	wfLoadExtension( 'GoogleDocs4MW' );
 }
 
-if ( $wmgUseGoogleNewsSitemap ) {
+if ( $wmgUseGoogleNewsSitemap ?? false ) {
 	wfLoadExtension( 'GoogleNewsSitemap' );
 }
 
-if ( $wmgUseGraph ) {
+if ( $wmgUseGraph ?? false ) {
 	wfLoadExtension( 'Graph' );
 }
 
-if ( $wmgUseGroupsSidebar ) {
+if ( $wmgUseGroupsSidebar ?? false ) {
 	wfLoadExtension( 'GroupsSidebar' );
 }
 
-if ( $wmgUseGuidedTour ) {
+if ( $wmgUseGuidedTour ?? false ) {
 	wfLoadExtension( 'GuidedTour' );
 }
 
-if ( $wmgUseHasSomeColours ) {
+if ( $wmgUseHasSomeColours ?? false ) {
 	wfLoadSkin( 'HasSomeColours' );
 }
 
-if ( $wmgUseHAWelcome ) {
+if ( $wmgUseHAWelcome ?? false ) {
 	wfLoadExtension( 'HAWelcome' );
 }
 
-if ( $wmgUseHeaderFooter ) {
+if ( $wmgUseHeaderFooter ?? false ) {
 	wfLoadExtension( 'HeaderFooter' );
 }
 
-if ( $wmgUseHeaderTabs ) {
+if ( $wmgUseHeaderTabs ?? false ) {
 	wfLoadExtension( 'HeaderTabs' );
 }
 
-if ( $wmgUseHideSection ) {
+if ( $wmgUseHideSection ?? false ) {
 	wfLoadExtension( 'HideSection' );
 }
 
-if ( $wmgUseHighlightLinksInCategory ) {
+if ( $wmgUseHighlightLinksInCategory ?? false ) {
 	wfLoadExtension( 'HighlightLinksInCategory' );
 }
 
-if ( $wmgUseImageMap ) {
+if ( $wmgUseImageMap ?? false ) {
 	wfLoadExtension( 'ImageMap' );
 }
 
-if ( $wmgUseImageRating ) {
+if ( $wmgUseImageRating ?? false ) {
 	wfLoadExtension( 'ImageRating' );
 }
 
-if ( $wmgUseInputBox ) {
+if ( $wmgUseInputBox ?? false ) {
 	wfLoadExtension( 'InputBox' );
 }
 
-if ( $wmgUseJavascriptSlideshow ) {
+if ( $wmgUseJavascriptSlideshow ?? false ) {
 	wfLoadExtension( 'JavascriptSlideshow' );
 }
 
-if ( $wmgUseJosa ) {
+if ( $wmgUseJosa ?? false ) {
 	wfLoadExtension( 'Josa' );
 }
 
-if ( $wmgUseJSBreadCrumbs ) {
+if ( $wmgUseJSBreadCrumbs ?? false ) {
 	wfLoadExtension( 'JSBreadCrumbs' );
 }
 
-if ( $wmgUseJsCalendar ) {
+if ( $wmgUseJsCalendar ?? false ) {
 	wfLoadExtension( 'JsCalendar' );
 }
 
-if ( $wmgUseJsonConfig ) {
+if ( $wmgUseJsonConfig ?? false ) {
 	wfLoadExtension( 'JsonConfig' );
 }
 
-if ( $wmgUseKartographer ) {
+if ( $wmgUseKartographer ?? false ) {
 	wfLoadExtension( 'Kartographer' );
 }
 
-if ( $wmgUseLabeledSectionTransclusion ) {
+if ( $wmgUseLabeledSectionTransclusion ?? false ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
-if ( $wmgUseLanguageSelector ) {
+if ( $wmgUseLanguageSelector ?? false ) {
 	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
 }
 
-if ( $wmgUseLastModified ) {
+if ( $wmgUseLastModified ?? false ) {
 	require_once "$IP/extensions/LastModified/LastModified.php";
 }
 
@@ -421,246 +421,246 @@ if ( $wmgUseLdap ) {
 	];
 }
 
-if ( $wmgUseLiberty ) {
+if ( $wmgUseLiberty ?? false ) {
 	wfLoadSkin( 'liberty' );
 }
 
-if ( $wmgUseLingo ) {
+if ( $wmgUseLingo ?? false ) {
 	wfLoadExtension( 'Lingo' );
 }
 
-if ( $wmgUseLinkSuggest ) {
+if ( $wmgUseLinkSuggest ?? false ) {
 	wfLoadExtension( 'LinkSuggest' );
 }
 
-if ( $wmgUseLinkTarget ) {
+if ( $wmgUseLinkTarget ?? false ) {
 	wfLoadExtension ( 'LinkTarget' );
 }
 
-if ( $wmgUseLinkTitles ) {
+if ( $wmgUseLinkTitles ?? false ) {
 	wfLoadExtension( 'LinkTitles' );
 }
 
-if ( $wmgUseLinter ) {
+if ( $wmgUseLinter ?? false ) {
 	wfLoadExtension( 'Linter' );
 }
 
-if ( $wmgUseListings ) {
+if ( $wmgUseListings ?? false ) {
 	wfLoadExtension( 'Listings' );
 }
 
-if ( $wmgUseLogoFunctions ) {
+if ( $wmgUseLogoFunctions ?? false ) {
 	wfLoadExtension( 'LogoFunctions' );
 }
 
-if ( $wmgUseLoopsCombo ) {
+if ( $wmgUseLoopsCombo ?? false ) {
 	wfLoadExtension( 'Loops' );
 }
 
-if ( $wmgUseMagicNoCache ) {
+if ( $wmgUseMagicNoCache ?? false ) {
 	wfLoadExtension( 'MagicNoCache' );
 }
 
-if ( $wmgUseMaps ) {
+if ( $wmgUseMaps ?? false ) {
 	wfLoadExtension( 'Maps' );
 }
 
-if ( $wmgUseMask ) {
+if ( $wmgUseMask ?? false ) {
 	wfLoadSkin( 'Mask' );
 }
 
-if ( $wmgUseMassEditRegex ) {
+if ( $wmgUseMassEditRegex ?? false ) {
 	wfLoadExtension( 'MassEditRegex' );
 }
 
-if ( $wmgUseMassMessage ) {
+if ( $wmgUseMassMessage ?? false ) {
 	wfLoadExtension( 'MassMessage' );
 }
 
-if ( $wmgUseMath ) {
+if ( $wmgUseMath ?? false ) {
 	wfLoadExtension( 'Math' );
 }
 
-if ( $wmgUseMediaWikiChat ) {
+if ( $wmgUseMediaWikiChat ?? false ) {
 	wfLoadExtension( 'MediaWikiChat' );
 }
 
-if ( $wmgUseMedik ) {
+if ( $wmgUseMedik ?? false ) {
 	wfLoadSkin( 'Medik' );
 }
 
-if ( $wmgUseMermaid ) {
+if ( $wmgUseMermaid ?? false ) {
 	wfLoadExtension( 'Mermaid' );
 }
 
-if ( $wmgUseMetrolook ) {
+if ( $wmgUseMetrolook ?? false ) {
 	wfLoadSkin( 'Metrolook' );
 }
 
-if ( $wmgUseMinervaNeue ) {
+if ( $wmgUseMinervaNeue ?? false ) {
 	wfLoadSkin( 'MinervaNeue' );
 }
 
-if ( $wmgUseMobileFrontend ) {
+if ( $wmgUseMobileFrontend ?? false ) {
 	wfLoadExtension( 'MobileFrontend' );
 }
 
-if ( $wmgUseMobileTabsPlugin ) {
+if ( $wmgUseMobileTabsPlugin ?? false ) {
 	wfLoadExtension( 'MobileTabsPlugin' );
 }
 
-if ( $wmgUseModeration ) {
+if ( $wmgUseModeration ?? false ) {
 	wfLoadExtension( 'Moderation' );
 }
 
-if ( $wmgUseModernSkylight ) {
+if ( $wmgUseModernSkylight ?? false ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
 
-if ( $wmgUseMsCalendar ) {
+if ( $wmgUseMsCalendar ?? false ) {
 	wfLoadExtension( 'MsCalendar' );
 }
 
-if ( $wmgUseMsCatSelect ) {
+if ( $wmgUseMsCatSelect ?? false ) {
 	wfLoadExtension( 'MsCatSelect' );
 }
 
-if ( $wmgUseMsLinks ) {
+if ( $wmgUseMsLinks ?? false ) {
 	wfLoadExtension( 'MsLinks' );
 }
 
-if ( $wmgUseMsUpload ) {
+if ( $wmgUseMsUpload ?? false ) {
 	wfLoadExtension( 'MsUpload' );
 }
 
-if ( $wmgUseMultimediaViewer ) {
+if ( $wmgUseMultimediaViewer ?? false ) {
 	wfLoadExtension( 'MultimediaViewer' );
 	
-	if ( $wmgUse3D ) {
+	if ( $wmgUse3D ?? false ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 	}
 }
 
-if ( $wmgUseMultiBoilerplate ) {
+if ( $wmgUseMultiBoilerplate ?? false ) {
 	wfLoadExtension( 'MultiBoilerplate' );
 }
 
-if ( $wmgUseMyVariables ) {
+if ( $wmgUseMyVariables ?? false ) {
 	wfLoadExtension( 'MyVariables' );
 }
 
-if ( $wmgUseNewestPages ) {
+if ( $wmgUseNewestPages ?? false ) {
 	wfLoadExtension( 'NewestPages' );
 }
 
-if ( $wmgUseNewSignupPage ) {
+if ( $wmgUseNewSignupPage ?? false ) {
 	wfLoadExtension( 'NewSignupPage' );
 }
 
-if ( $wmgUseNewsletter ) {
+if ( $wmgUseNewsletter ?? false ) {
 	wfLoadExtension( 'Newsletter' );
 }
 
-if ( $wmgUseNewUserMessage ) {
+if ( $wmgUseNewUserMessage ?? false ) {
 	wfLoadExtension( 'NewUserMessage' );
 }
 
-if ( $wmgUseNewUserNotif ) {
+if ( $wmgUseNewUserNotif ?? false ) {
 	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
 }
 
-if ( $wmgUseNimbus ){
+if ( $wmgUseNimbus ?? false ) {
 	wfLoadSkin( 'Nimbus' );
 }
 
-if ( $wmgUseNostalgia ) {
+if ( $wmgUseNostalgia ?? false ) {
 	wfLoadSkin( 'Nostalgia' );
 }
 
-if ( $wmgUseNoTitle ) {
+if ( $wmgUseNoTitle ?? false ) {
 	wfLoadExtension( 'NoTitle' );
 }
 
-if ( $wmgUseNukeDPL ) {
+if ( $wmgUseNukeDPL ?? false ) {
 	wfLoadExtension( 'NukeDPL' );
 }
 
-if ( $wmgUseNumberedHeadings ) {
+if ( $wmgUseNumberedHeadings ?? false ) {
 	wfLoadExtension( 'NumberedHeadings' );
 }
 
-if ( $wmgUseOpenGraphMeta ) {
+if ( $wmgUseOpenGraphMeta ?? false ) {
 	wfLoadExtension( 'OpenGraphMeta' );
 }
 
-if ( $wmgUseOrphanedTalkPages ) {
+if ( $wmgUseOrphanedTalkPages ?? false ) {
 	wfLoadExtension( 'OrphanedTalkPages' );
 }
 
-if ( $wmgUsePageAssessments ) {
+if ( $wmgUsePageAssessments ?? false ) {
 	wfLoadExtension( 'PageAssessments' );
 }
 
-if ( $wmgUsePageDisqus ) {
+if ( $wmgUsePageDisqus ?? false ) {
 	wfLoadExtension( 'PageDisqus' );
 }
 
-if ( $wmgUsePagedTiffHandler ) {
+if ( $wmgUsePagedTiffHandler ?? false ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 }
 
-if ( $wmgUsePageForms ) {
+if ( $wmgUsePageForms ?? false ) {
 	wfLoadExtension( 'PageForms' );
 }
 
-if ( $wmgUsePageImages ) {
+if ( $wmgUsePageImages ?? false ) {
 	wfLoadExtension( 'PageImages' );
 }
 
-if ( $wmgUsePageNotice ) {
+if ( $wmgUsePageNotice ?? false ) {
 	wfLoadExtension( 'PageNotice' );
 }
 
-if ( $wmgUsePageTriage ) {
+if ( $wmgUsePageTriage ?? false ) {
 	wfLoadExtension( 'PageTriage' );
 }
 
-if ( $wmgUsePdfBook ) {
+if ( $wmgUsePdfBook ?? false ) {
 	wfLoadExtension( 'PdfBook' );
 }
 
-if ( $wmgUsePDFEmbed ) {
+if ( $wmgUsePDFEmbed ?? false ) {
 	wfLoadExtension( 'PDFEmbed' );
 }
 
-if ( $wmgUsePdfHandler ) {
+if ( $wmgUsePdfHandler ?? false ) {
 	wfLoadExtension( 'PdfHandler' );
 }
 
-if ( $wmgUsePipeEscape ) {
+if ( $wmgUsePipeEscape ?? false ) {
 	require_once "$IP/extensions/PipeEscape/PipeEscape.php";
 }
 
-if ( $wmgUsePivot ) {
+if ( $wmgUsePivot ?? false ) {
 	wfLoadSkin( 'pivot' );
 }
 
-if ( $wmgUsePoem ) {
+if ( $wmgUsePoem ?? false ) {
 	wfLoadExtension( 'Poem' );
 }
 
-if ( $wmgUsePollNY ) {
+if ( $wmgUsePollNY ?? false ) {
 	wfLoadExtension( 'PollNY' );
 }
 
-if ( $wmgUsePortableInfobox ) {
+if ( $wmgUsePortableInfobox ?? false ) {
 	wfLoadExtension( 'PortableInfobox' );
 }
 
-if ( $wmgUsePopups ) {
+if ( $wmgUsePopups ?? false ) {
 	wfLoadExtension( 'Popups' );
 	
-	if ( $wmgShowPopupsByDefault ) {
+	if ( $wmgShowPopupsByDefault ?? false ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
 		$wgPopupsOptInDefaultState = '1';
 		$wgPopupsOptInStateForNewAccounts = '1';
@@ -668,269 +668,269 @@ if ( $wmgUsePopups ) {
 	}
 }
 
-if ( $wmgUsePreloader ) {
+if ( $wmgUsePreloader ?? false ) {
 	wfLoadExtension( 'Preloader' );
 }
 
-if ( $wmgUseProofreadPage ) {
+if ( $wmgUseProofreadPage ?? false ) {
 	wfLoadExtension( 'ProofreadPage' );
 }
 
-if ( $wmgUseProtectSite ) {
+if ( $wmgUseProtectSite ?? false ) {
 	wfLoadExtension( 'ProtectSite' );
 }
 
-if ( $wmgUseProtectionIndicator ) {
+if ( $wmgUseProtectionIndicator ?? false ) {
 	wfLoadExtension( 'ProtectionIndicator' );
 }
 
-if ( $wmgUsePurge ) {
+if ( $wmgUsePurge ?? false ) {
 	wfLoadExtension( 'Purge' );
 }
 
-if ( $wmgUseQuiz ) {
+if ( $wmgUseQuiz ?? false ) {
 	wfLoadExtension( 'Quiz' );
 }
 
-if ( $wmgUseQuizGame ) {
+if ( $wmgUseQuizGame ?? false ) {
 	wfLoadExtension( 'QuizGame' );
 }
 
-if ( $wmgUseRandomGameUnit ) {
+if ( $wmgUseRandomGameUnit ?? false ) {
 	wfLoadExtension( 'RandomGameUnit' );
 }
 
-if ( $wmgUseRandomImage ) {
+if ( $wmgUseRandomImage ?? false ) {
 	wfLoadExtension( 'RandomImage' );
 }
 
-if ( $wmgUseRandomSelection ) {
+if ( $wmgUseRandomSelection ?? false ) {
 	wfLoadExtension( 'RandomSelection' );
 }
 
-if ( $wmgUseRefreshed ) {
+if ( $wmgUseRefreshed ?? false ) {
 	wfLoadSkin( 'Refreshed' );
 }
 
-if ( $wmgUseRelatedArticles ) {
+if ( $wmgUseRelatedArticles ?? false ) {
 	wfLoadExtension( 'RelatedArticles' );
 }
 
-if ( $wmgUseReplaceText ) {
+if ( $wmgUseReplaceText ?? false ) {
 	wfLoadExtension( 'ReplaceText' );
 }
 
-if ( $wmgUseReport ) {
+if ( $wmgUseReport ?? false ) {
 	wfLoadExtension( 'Report' );
 }
 
-if ( $wmgUseRevisionSlider ) {
+if ( $wmgUseRevisionSlider ?? false ) {
 	wfLoadExtension( 'RevisionSlider' );
 }
 
-if ( $wmgUseRightFunctions ) {
+if ( $wmgUseRightFunctions ?? false ) {
 	require_once "$IP/extensions/RightFunctions/RightFunctions.php";
 }
 
-if ( $wmgUseRSS ) {
+if ( $wmgUseRSS ?? false ) {
 	wfLoadExtension( 'RSS' );
 }
 
-if ( $wmgUseSandboxLink ) {
+if ( $wmgUseSandboxLink ?? false ) {
 	wfLoadExtension( 'SandboxLink' );
 }
 
-if ( $wmgUseScratchBlocks ) {
+if ( $wmgUseScratchBlocks ?? false ) {
 	wfLoadExtension( 'mw-ScratchBlocks4' );
 }
 
-if ( $wmgUseScore ) {
+if ( $wmgUseScore ?? false ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseUrlShortener ) {
+if ( $wmgUseUrlShortener ?? false ) {
 	wfLoadExtension( 'UrlShortener' );
 }
 
-if ( $wmgUseShortDescription ) {
+if ( $wmgUseShortDescription ?? false ) {
 	wfLoadExtension( 'ShortDescription' );
 }
 
-if ( $wmgUseSimpleBlogPage ) {
+if ( $wmgUseSimpleBlogPage ?? false ) {
 	wfLoadExtension( 'SimpleBlogPage' );
 }
 
-if ( $wmgUseSimpleChanges ) {
+if ( $wmgUseSimpleChanges ?? false ) {
 	wfLoadExtension( 'SimpleChanges' );
 }
 
-if ( $wmgUseSimpleTooltip ) {
+if ( $wmgUseSimpleTooltip ?? false ) {
 	wfLoadExtension( 'SimpleTooltip' );
 }
 
-if ( $wmgUseSlackNotifications ) {
+if ( $wmgUseSlackNotifications ?? false ) {
 	wfLoadExtension( 'SlackNotifications' );
 }
 
-if ( $wmgUseSnapProjectEmbed ) {
+if ( $wmgUseSnapProjectEmbed ?? false ) {
 	wfLoadExtension( 'SnapProjectEmbed' );
 }
 
-if ( $wmgUseSoftRedirector ) {
+if ( $wmgUseSoftRedirector ?? false ) {
 	wfLoadExtension( 'SoftRedirector' );
 }
 
-if ( $wmgUseSocialProfile ) {
+if ( $wmgUseSocialProfile ?? false ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 }
 
-if ( $wmgUseSpoilers ) {
+if ( $wmgUseSpoilers ?? false ) {
 	wfLoadExtension( 'Spoilers' );
 }
 
-if ( $wmgUseSpriteSheet ) {
+if ( $wmgUseSpriteSheet ?? false ) {
 	wfLoadExtension( 'SpriteSheet' );
 }
 
-if ( $wmgUseStopForumSpam ) {
+if ( $wmgUseStopForumSpam ?? false ) {
 	wfLoadExtension( 'StopForumSpam' );
 }
 
-if ( $wmgUseSubpageFun ) {
+if ( $wmgUseSubpageFun ?? false ) {
 	wfLoadExtension( 'SubpageFun' );
 }
 
-if ( $wmgUseSubPageList3 ) {
+if ( $wmgUseSubPageList3 ?? false ) {
 	wfLoadExtension( 'SubPageList3' );
 }
 
-if ( $wmgUseSyntaxHighlightGeSHi ) {
+if ( $wmgUseSyntaxHighlightGeSHi ?? false ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
-if ( $wmgUseTabsCombination ) {
+if ( $wmgUseTabsCombination ?? false ) {
 	wfLoadExtensions( [
 		'Tabber',
 		'Tabs',
 	] );
 }
 
-if ( $wmgUseTemplateData ) {
+if ( $wmgUseTemplateData ?? false ) {
 	wfLoadExtension( 'TemplateData' );
 }
 	
-if ( $wmgUseTemplateSandbox ) {
+if ( $wmgUseTemplateSandbox ?? false ) {
 	wfLoadExtension( 'TemplateSandbox' );
 }
 
-if ( $wmgUseTemplateStyles ) {
+if ( $wmgUseTemplateStyles ?? false ) {
 	wfLoadExtension( 'TemplateStyles' );
 }
 
-if ( $wmgUseTemplateWizard ) {
+if ( $wmgUseTemplateWizard ?? false ) {
 	wfLoadExtension( 'TemplateWizard' );
 }
 
-if ( $wmgUseTextExtracts ) {
+if ( $wmgUseTextExtracts ?? false ) {
 	wfLoadExtension( 'TextExtracts' );
 }
 
-if ( $wmgUseTranslate ) {
+if ( $wmgUseTranslate ?? false ) {
 	wfLoadExtension( 'Translate' );
 }
 
-if ( $wmgUseTranslationNotifications ) {
+if ( $wmgUseTranslationNotifications ?? false ) {
 	wfLoadExtension( 'TranslationNotifications' );
 }
 
-if ( $wmgUseTreeAndMenu ) {
+if ( $wmgUseTreeAndMenu ?? false ) {
 	wfLoadExtension( 'TreeAndMenu' );
 }
 
-if ( $wmgUseTruglass) {
+if ( $wmgUseTruglass?? false ) {
 	wfLoadSkin( 'Truglass' );
 }
 
-if ( $wmgUseThanks ) {
+if ( $wmgUseThanks ?? false ) {
 	wfLoadExtension( 'Thanks' );
 }
 
-if ( $wmgUseTheme ) {
+if ( $wmgUseTheme ?? false ) {
 	wfLoadExtension( 'Theme' );
 }
 
-if ( $wmgUseTimedMediaHandler ) {
+if ( $wmgUseTimedMediaHandler ?? false ) {
 	wfLoadExtension( 'TimedMediaHandler' );
 }
 
-if ( $wmgUseTimeline ) {
+if ( $wmgUseTimeline ?? false ) {
 	wfLoadExtension( 'Timeline' );
 }
 
-if ( $wmgUseTimeMachine ) {
+if ( $wmgUseTimeMachine ?? false ) {
 	wfLoadExtension( 'TimeMachine' );
 }
 
-if ( $wmgUseTitleKey ) {
+if ( $wmgUseTitleKey ?? false ) {
 	wfLoadExtension( 'TitleKey' );
 }
 
-if ( $wmgUseTocTree ) {
+if ( $wmgUseTocTree ?? false ) {
 	wfLoadExtension( 'TocTree' );
 }
 
-if ( $wmgUseTweeki ) {
+if ( $wmgUseTweeki ?? false ) {
 	wfLoadSkin( 'Tweeki' );
 }
 
-if ( $wmgUseTwitterTag ) {
+if ( $wmgUseTwitterTag ?? false ) {
 	wfLoadExtension( 'TwitterTag' );
 }
 
-if ( $wmgUseTwoColConflict ) {
+if ( $wmgUseTwoColConflict ?? false ) {
 	wfLoadExtension( 'TwoColConflict' );
 }
 
-if ( $wmgUseUniversalLanguageSelector ) {
+if ( $wmgUseUniversalLanguageSelector ?? false ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
 }
 
-if ( $wmgUseUploadsLink ) {
+if ( $wmgUseUploadsLink ?? false ) {
 	wfLoadExtension( 'UploadsLink' );
 }
 
-if ( $wmgUseUrlGetParameters ) {
+if ( $wmgUseUrlGetParameters ?? false ) {
 	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
 }
 
-if ( $wmgUseUserFunctions ) {
+if ( $wmgUseUserFunctions ?? false ) {
 	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
 }
 
-if ( $wmgUseUserWelcome ) {
+if ( $wmgUseUserWelcome ?? false ) {
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
 
-if ( $wmgUseVariables ) {
+if ( $wmgUseVariables ?? false ) {
 	wfLoadExtension( 'Variables' );
 }
 
-if ( $wmgUseVariablesLua ) {
+if ( $wmgUseVariablesLua ?? false ) {
 	wfLoadExtension( 'VariablesLua' );
 }
 
-if ( $wmgUseVEForAll ) {
+if ( $wmgUseVEForAll ?? false ) {
 	wfLoadExtension( 'VEForAll' );
 }
 
-if ( $wmgUseVideo ) {
+if ( $wmgUseVideo ?? false ) {
 	wfLoadExtension( 'Video' );
 }
 
-if ( $wmgUseVisualEditor ) {
+if ( $wmgUseVisualEditor ?? false ) {
 	wfLoadExtension( 'VisualEditor' );
 	
-	if ( $wmgVisualEditorEnableDefault ) {
+	if ( $wmgVisualEditorEnableDefault ?? false ) {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
 	} else {
@@ -938,76 +938,76 @@ if ( $wmgUseVisualEditor ) {
 	}
 }
 
-if ( $wmgUseVoteNY ) {
+if ( $wmgUseVoteNY ?? false ) {
 	wfLoadExtension( 'VoteNY' );
 }
 
-if ( $wmgUseWebChat ) {
+if ( $wmgUseWebChat ?? false ) {
 	wfLoadExtension( 'WebChat' );
 }
 
-if ( $wmgUseWikiCategoryTagCloud ) {
+if ( $wmgUseWikiCategoryTagCloud ?? false ) {
 	wfLoadExtension( 'WikiCategoryTagCloud' );
 }
 
-if ( $wmgUseWikidataPageBanner ) {
+if ( $wmgUseWikidataPageBanner ?? false ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
 
-if ( $wmgUseWikibaseClient ) {
+if ( $wmgUseWikibaseClient ?? false ) {
 	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
 }
 
-if ( $wmgUseWikibaseLexeme ) {
+if ( $wmgUseWikibaseLexeme ?? false ) {
 	wfLoadExtension( 'WikibaseLexeme' );
 }
 
-if ( $wmgUseWikibaseQualityConstraints ) {
+if ( $wmgUseWikibaseQualityConstraints ?? false ) {
 	wfLoadExtension( 'WikibaseQualityConstraints' );
 }
 
-if ( $wmgUseWikibaseRepository ) {
+if ( $wmgUseWikibaseRepository ?? false ) {
 	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
 }
 
-if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
+if ( $wmgUseWikibaseRepository ?? false || $wmgUseWikibaseClient ?? false ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once "/srv/mediawiki/config/Wikibase.php";
 }
 
-if ( $wmgUseWikiForum ) {
+if ( $wmgUseWikiForum ?? false ) {
 	wfLoadExtension( 'WikiForum' );
 }
 
-if ( $wmgUsewikihiero ) {
+if ( $wmgUsewikihiero ?? false ) {
 	wfLoadExtension( 'wikihiero' );
 }
 
-if ( $wmgUseWikiLove ) {
+if ( $wmgUseWikiLove ?? false ) {
 	wfLoadExtension( 'WikiLove' );
 }
 
-if ( $wmgUseWikimediaIncubator ) {
+if ( $wmgUseWikimediaIncubator ?? false ) {
 	wfLoadExtension( 'WikimediaIncubator' );
 }
 
-if ( $wmgUseWikiSeo ) {
+if ( $wmgUseWikiSeo ?? false ) {
 	wfLoadExtension( 'WikiSEO' );
 }
 
-if ( $wmgUseWikiTextLoggedInOut ) {
+if ( $wmgUseWikiTextLoggedInOut ?? false ) {
 	wfLoadExtension( 'WikiTextLoggedInOut' );
 }
 
-if ( $wmgUseYouTube ) {
+if ( $wmgUseYouTube ?? false ) {
 	wfLoadExtension( 'YouTube' );
 }
 
-if ( $wmgUseRegexFunctions ) {
+if ( $wmgUseRegexFunctions ?? false ) {
 	wfLoadExtension( 'RegexFunctions' );
 }
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
-if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
+if ( $wmgUseFlow ?? false || $wmgUseVisualEditor ?? false || $wmgUseLinter ?? false ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }
