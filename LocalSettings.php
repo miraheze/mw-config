@@ -2655,6 +2655,11 @@ $wi->config->settings += [
 				'userrights' => true,
 			],
 		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+autocountwiki' => [
 			'authors' => [
 				'torunblocked' => true,
@@ -3657,6 +3662,11 @@ $wi->config->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+ahinfoboxeswiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
@@ -3741,6 +3751,11 @@ $wi->config->settings += [
 	// Rights
 	'+wgAvailableRights' => [
 		'default' => [],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'ahinfoboxeswiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
