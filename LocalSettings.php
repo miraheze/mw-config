@@ -2655,6 +2655,11 @@ $wi->config->settings += [
 				'userrights' => true,
 			],
 		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+autocountwiki' => [
 			'authors' => [
 				'torunblocked' => true,
@@ -3663,6 +3668,11 @@ $wi->config->settings += [
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
 		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+bigforestwiki' => [
 			'editvoter',
 		],
@@ -3746,6 +3756,9 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+    		'allpediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'documentcontrolwiki' => [
 			'editextendedconfirmedprotected',
