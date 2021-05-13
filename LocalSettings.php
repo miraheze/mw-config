@@ -2932,6 +2932,7 @@ $wi->config->settings += [
 				'editincidents',
 				'editothersprofiles-private',
 				'flow-suppress',
+				'generate-random-hash',
 				'globalblock',
 				'globalblock-exempt',
 				'globalgroupmembership',
@@ -3637,7 +3638,7 @@ $wi->config->settings += [
 		'default' => [ 50, 100, 250, 500 ],
 	],
 
-	// RelatedArticles settings
+	// RelatedArticles
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'default' => [
 			'minerva',
@@ -3647,6 +3648,17 @@ $wi->config->settings += [
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'wmgUseRelatedArticles' => false,
+	],
+
+	// RemovePII
+	'wgRemovePIIHashPrefixOptions' => [
+		'default' => [
+			'Trust and Safety' => 'MirahezeGDPR_',
+			'Stewards' => 'Vanished user ',
+		],
+	],
+	'wgRemovePIIHashPrefix' => [
+		'default' => 'MirahezeGDPR_',
 	],
 
 	// ReplaceText
