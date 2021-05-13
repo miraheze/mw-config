@@ -3662,16 +3662,16 @@ $wi->config->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-    		'+allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'+ahinfoboxeswiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
 		],
 		'+bigforestwiki' => [
 			'editvoter',
@@ -3751,16 +3751,16 @@ $wi->config->settings += [
 	// Rights
 	'+wgAvailableRights' => [
 		'default' => [],
-    		'+allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'ahinfoboxeswiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
 		],
 		'documentcontrolwiki' => [
 			'editextendedconfirmedprotected',
