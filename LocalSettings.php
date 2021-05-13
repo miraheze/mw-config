@@ -3758,9 +3758,7 @@ $wi->config->settings += [
 			'editimportprotected',
 		],
     		'allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
+			'editextendedconfirmedprotected',
 		],
 		'documentcontrolwiki' => [
 			'editextendedconfirmedprotected',
