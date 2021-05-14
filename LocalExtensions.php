@@ -911,6 +911,10 @@ if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 }
 
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
+}
+
 if ( $wmgUseUserFunctions ) {
 	wfLoadExtension( 'UserFunctions' );
 }
