@@ -84,6 +84,7 @@ $IP/extensions/GlobalNewFiles/extension.json
 $IP/extensions/GlobalPreferences/extension.json
 $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
+$IP/extensions/GlobalWatchlist/extension.json
 $IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
