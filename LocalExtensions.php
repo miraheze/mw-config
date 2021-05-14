@@ -153,7 +153,7 @@ if ( $wmgUseContributionScores ) {
 	wfLoadExtension( 'ContributionScores' );
 }
 
-if ( $wmgUseCosmos ){
+if ( $wmgUseCosmos ) {
 	wfLoadSkin( 'Cosmos' );
 }
 
@@ -573,7 +573,7 @@ if ( $wmgUseNewUserNotif ) {
 	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
 }
 
-if ( $wmgUseNimbus ){
+if ( $wmgUseNimbus ) {
 	wfLoadSkin( 'Nimbus' );
 }
 
@@ -752,10 +752,6 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseUrlShortener ) {
-	wfLoadExtension( 'UrlShortener' );
-}
-
 if ( $wmgUseShortDescription ) {
 	wfLoadExtension( 'ShortDescription' );
 }
@@ -905,6 +901,10 @@ if ( $wmgUseUploadsLink ) {
 
 if ( $wmgUseUrlGetParameters ) {
 	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
+}
+
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
 }
 
 if ( $wmgUseUserFunctions ) {
