@@ -275,6 +275,7 @@ if ( $wgDBname === 'newusopediawiki' ) {
 
 if ( $wgDBname === 'traceprojectwikiwiki' ) {
 	$wgDplSettings['allowUnlimitedCategories'] = true;
+	$wgDplSettings['allowUnlimitedResults'] = true;
 }
 
 if ( $wgDBname === 'commonswiki' ) {
