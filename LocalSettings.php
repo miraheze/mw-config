@@ -1399,6 +1399,9 @@ $wi->config->settings += [
 	'wmgUseModernSkylight' => [
 		'default' => false,
 	],
+	'wmgUseMonaco' => [
+		'default' => false,
+	],
 	'wmgUseMsCalendar' => [
 		'default' => false,
 	],
