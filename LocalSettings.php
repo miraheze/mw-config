@@ -1399,6 +1399,9 @@ $wi->config->settings += [
 	'wmgUseModernSkylight' => [
 		'default' => false,
 	],
+	'wmgUseMonaco' => [
+		'default' => false,
+	],
 	'wmgUseMsCalendar' => [
 		'default' => false,
 	],
@@ -2196,6 +2199,7 @@ $wi->config->settings += [
 			'mw',
 			'templatewiki',
 			'wikipedia',
+			'metawikimedia',
 		],
 		'+ahinfoboxeswiki' => [
 			'wikimediacommons',
@@ -2639,6 +2643,11 @@ $wi->config->settings += [
 				'userrights' => true,
 			],
 		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+autocountwiki' => [
 			'authors' => [
 				'torunblocked' => true,
@@ -2911,6 +2920,7 @@ $wi->config->settings += [
 				'editincidents',
 				'editothersprofiles-private',
 				'flow-suppress',
+				'generate-random-hash',
 				'globalblock',
 				'globalblock-exempt',
 				'globalgroupmembership',
@@ -3616,7 +3626,7 @@ $wi->config->settings += [
 		'default' => [ 50, 100, 250, 500 ],
 	],
 
-	// RelatedArticles settings
+	// RelatedArticles
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'default' => [
 			'minerva',
@@ -3626,6 +3636,17 @@ $wi->config->settings += [
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'wmgUseRelatedArticles' => false,
+	],
+
+	// RemovePII
+	'wgRemovePIIHashPrefixOptions' => [
+		'default' => [
+			'Trust and Safety' => 'MirahezeGDPR_',
+			'Stewards' => 'Vanished user ',
+		],
+	],
+	'wgRemovePIIHashPrefix' => [
+		'default' => 'MirahezeGDPR_',
 	],
 
 	// ReplaceText
@@ -3646,6 +3667,11 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
 		],
 		'+bigforestwiki' => [
 			'editvoter',
@@ -3730,6 +3756,9 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+    		'allpediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'documentcontrolwiki' => [
 			'editextendedconfirmedprotected',

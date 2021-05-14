@@ -153,7 +153,7 @@ if ( $wmgUseContributionScores ) {
 	wfLoadExtension( 'ContributionScores' );
 }
 
-if ( $wmgUseCosmos ){
+if ( $wmgUseCosmos ) {
 	wfLoadSkin( 'Cosmos' );
 }
 
@@ -517,6 +517,10 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
 
+if ( $wmgUseMonaco ) {
+	wfLoadSkin( 'Monaco' );
+}
+
 if ( $wmgUseMsCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
@@ -569,7 +573,7 @@ if ( $wmgUseNewUserNotif ) {
 	wfLoadExtension( 'NewUserNotif' );
 }
 
-if ( $wmgUseNimbus ){
+if ( $wmgUseNimbus ) {
 	wfLoadSkin( 'Nimbus' );
 }
 
@@ -748,10 +752,6 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseUrlShortener ) {
-	wfLoadExtension( 'UrlShortener' );
-}
-
 if ( $wmgUseShortDescription ) {
 	wfLoadExtension( 'ShortDescription' );
 }
@@ -901,6 +901,10 @@ if ( $wmgUseUploadsLink ) {
 
 if ( $wmgUseUrlGetParameters ) {
 	wfLoadExtension( 'UrlGetParameters' );
+}
+
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
 }
 
 if ( $wmgUseUserFunctions ) {

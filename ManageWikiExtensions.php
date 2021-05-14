@@ -1864,6 +1864,14 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
+		'monaco' => [
+			'name' => 'Monaco',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Monaco',
+			'var' => 'wmgUseMonaco',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'skins',
+		],
 		'nimbus' => [
 			'name' => 'Nimbus',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nimbus',

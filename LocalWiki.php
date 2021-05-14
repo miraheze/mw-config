@@ -261,6 +261,14 @@ if ( $wgDBname === 'pokemundowiki') {
 	}
 }
 
+if ( $wgDBname === 'snapwikiwiki' ) {
+	$wgHooks['BeforePageDisplay'][] = 'addViewport';
+	
+	function addViewport( OutputPage $out ) {
+		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
+	}
+}
+
 if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
