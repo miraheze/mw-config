@@ -2884,6 +2884,23 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'other',
 		],
+		'userpageeditprotection' => [
+			'name' => 'UserPageEditProtection',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UserPageEditProtection',
+			'var' => 'wmgUseUserPageEditProtection',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'editalluserpages',
+						],
+					],
+				],
+			],
+			'section' => 'other',
+		],
 		'variables' => [
 			'name' => 'Variables',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Variables',
