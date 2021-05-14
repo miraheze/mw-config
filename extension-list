@@ -84,6 +84,7 @@ $IP/extensions/GlobalNewFiles/extension.json
 $IP/extensions/GlobalPreferences/extension.json
 $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
+$IP/extensions/GlobalWatchlist/extension.json
 $IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
@@ -241,6 +242,7 @@ $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UserMerge/extension.json
 $IP/extensions/UrlGetParameters/extension.json
 $IP/extensions/UserFunctions/extension.json
+$IP/extensions/UserPageEditProtection/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/extension.json
 $IP/extensions/VariablesLua/extension.json

@@ -315,6 +315,10 @@ if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
 }
 
+if ( $wmgUseGlobalWatchlist ) {
+	wfLoadExtension( 'GlobalWatchlist' );
+}
+
 if ( $wmgUseGoogleDocs4MW ) {
 	wfLoadExtension( 'GoogleDocs4MW' );
 }
@@ -909,6 +913,10 @@ if ( $wmgUseUrlShortener ) {
 
 if ( $wmgUseUserFunctions ) {
 	wfLoadExtension( 'UserFunctions' );
+}
+
+if ( $wmgUseUserPageEditProtection ) {
+	wfLoadExtension( 'UserPageEditProtection' );
 }
 
 if ( $wmgUseUserWelcome ) {

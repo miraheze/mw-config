@@ -1254,6 +1254,10 @@ $wi->config->settings += [
 	'wmgUseGlobalUserPage' => [
 		'default' => false,
 	],
+	'wmgUseGlobalWatchlist' => [
+		'default' => false,
+		'metawiki' => true,
+	],
 	'wmgUseGoogleDocs4MW' => [
 		'default' => false,
 	],
@@ -1689,6 +1693,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseUserFunctions' => [
+		'default' => false,
+	],
+	'wmgUseUserPageEditProtection' => [
 		'default' => false,
 	],
 	'wmgUseUserWelcome' => [
