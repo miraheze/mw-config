@@ -911,6 +911,10 @@ if ( $wmgUseUserFunctions ) {
 	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
 }
 
+if ( $wmgUseUserPageEditProtection ) {
+	wfLoadExtension( 'UserPageEditProtection' );
+}
+
 if ( $wmgUseUserWelcome ) {
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
