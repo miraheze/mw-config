@@ -315,6 +315,10 @@ if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
 }
 
+if ( $wmgUseGlobalWatchlist ) {
+	wfLoadExtension( 'GlobalWatchlist' );
+}
+
 if ( $wmgUseGoogleDocs4MW ) {
 	wfLoadExtension( 'GoogleDocs4MW' );
 }
