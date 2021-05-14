@@ -517,6 +517,10 @@ if ( $wmgUseModernSkylight ) {
 	wfLoadSkin( 'ModernSkylight' );
 }
 
+if ( $wmgUseMonaco ) {
+	wfLoadSkin( 'Monaco' );
+}
+
 if ( $wmgUseMsCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
