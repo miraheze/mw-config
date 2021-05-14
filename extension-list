@@ -240,6 +240,7 @@ $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UserMerge/extension.json
 $IP/extensions/UserFunctions/UserFunctions.php
+$IP/extensions/UserPageEditProtection/extension.json
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/extension.json

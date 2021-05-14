@@ -1691,6 +1691,9 @@ $wi->config->settings += [
 	'wmgUseUserFunctions' => [
 		'default' => false,
 	],
+	'wmgUseUserPageEditProtection' => [
+		'default' => false,
+	],
 	'wmgUseUserWelcome' => [
 		'default' => false,
 	],
