@@ -223,6 +223,11 @@ if ( $wmgUseYandexTranslate ) {
 }
 
 // Per-wiki settings
+if ( $wgDBname === 'dcmultiversewiki' ) {
+	$wgDplSettings['allowUnlimitedCategories'] = true;
+	$wgDplSettings['allowUnlimitedResults'] = true;
+}
+
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 	
