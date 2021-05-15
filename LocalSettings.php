@@ -1256,7 +1256,7 @@ $wi->config->settings += [
 	],
 	'wmgUseGlobalWatchlist' => [
 		'default' => false,
-		'metawiki' => true,
+		'loginwiki' => true,
 	],
 	'wmgUseGoogleDocs4MW' => [
 		'default' => false,
