@@ -123,7 +123,7 @@ $wi->config->settings += [
 		'loginwiki' => true,
 		'metawiki' => true,
 	],
-
+ 
 	// ApprovedRevs
 	'egApprovedRevsEnabledNamespaces' => [
  		'default' => [
