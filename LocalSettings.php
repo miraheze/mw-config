@@ -720,7 +720,7 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgCreateWikiNotificationEmail' => [
-		'default' => 'tech@miraheze.org',
+		'default' => 'sre@miraheze.org',
 	],
 	'wgCreateWikiPersistentModelFile' => [
 		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
