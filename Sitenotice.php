@@ -18,7 +18,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%">Miraheze will be doing some maintenace on our file storage. During this process images may be unavailable and you will not be able to upload images. Maintenance will last for 30 minutes and start at 20:00 UTC time on Thursday 20th.</td>
+			<td style="font-size:125%">Miraheze will be performing maintenance on May 20th, 2021 between 20:00 UTC and 20:30 UTC. During this maintenance window you will not be able to view or upload images or videos.</td>
 			</tr></tbody></table>
 		EOF;
 	}
