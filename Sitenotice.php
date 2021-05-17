@@ -10,7 +10,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // and don't comment it out
 $wgMajorSiteNoticeID = 56;
 
-/* if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -18,11 +18,11 @@ $wgMajorSiteNoticeID = 56;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%">We are aware of issues where some wikis are unable to upload files, or are experiencing issues in thumbnail rendering. We are trying to resolve this as fast as we can, but we don't currently have an estimated time as to when this will be resolved. We apologise for the inconvenience this may cause, and thank you for your patience.</td>
+			<td style="font-size:125%">Miraheze will be doing some maintenace on our file storage. During this process images may be unavailable and you will not be able to upload images. Maintenance will last for 30 minutes and start at 20:00 UTC time on Thursday 20th.</td>
 			</tr></tbody></table>
 		EOF;
 	}
-} */
+}
 
 // Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
 // or Google will use the sitenotice for their search result snippet.
