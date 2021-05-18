@@ -2948,6 +2948,7 @@ $wi->config->settings += [
 				'globalblock-exempt',
 				'globalgroupmembership',
 				'globalgrouppermissions',
+				'handle-pii',
 				'hideuser',
 				'interwiki',
 				'investigate',
