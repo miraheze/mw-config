@@ -88,7 +88,6 @@ $wgManageWikiExtensions = [
 					'templatedata',
 				],
 			],
-			'help' => 'Will start working 10-20 mins after enabling.',
 			'section' => 'editors',
 		],
 
@@ -2762,7 +2761,6 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseFlow',
 			'conflicts' => false,
 			'requires' => [],
-			'help' => 'Will start working 10-20 mins after enabling.',
 			'install' => [
 				'sql' => [
 					'flow_revision' => "$IP/extensions/Flow/flow.sql"
