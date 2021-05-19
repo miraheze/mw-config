@@ -33,6 +33,7 @@ jobs:
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
           channel: "#miraheze-sre"
+          server: "irc.libera.chat"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build passed.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}
@@ -52,6 +53,7 @@ jobs:
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
           channel: "#miraheze-sre"
+          server: "irc.libera.chat"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}
