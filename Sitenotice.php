@@ -10,7 +10,7 @@ if ( $wmgSiteNoticeOptOut ) {
 // and don't comment it out
 $wgMajorSiteNoticeID = 57;
 
-if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -22,7 +22,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 			</tr></tbody></table>
 		EOF;
 	}
-}
+} */
 
 // Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
 // or Google will use the sitenotice for their search result snippet.
