@@ -2651,6 +2651,15 @@ $wgManageWikiSettings = [
 		'help' => 'Allow importing entities via Special:Import and importDump.php.',
 		'requires' => [],
 	],
+	'wmgCanonicalUriProperty' => [
+		'name' => 'Canonical Uri Property',
+		'from' => 'wikibaserepository',
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'wikibase',
+		'help' => 'Property to be used on properties that defines a URI pattern which is used to link external identifiers in RDF and other exports.',
+		'requires' => [],
+	],
 	'wmgEnableEntitySearchUI' => [
 		'name' => 'Enable Entity Search UI',
 		'from' => 'wikibaserepository',
@@ -2667,6 +2676,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'wikibase',
 		'help' => 'To determine if federated properties should be enabled or not.',
+		'requires' => [],
+	],
+	'wmgFormatterUrlProperty' => [
+		'name' => 'Formatter Url Property',
+		'from' => 'wikibaserepository',
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'wikibase',
+		'help' => 'Property to be used on properties that defines a formatter URL which is used to link external identifiers.',
 		'requires' => [],
 	],
 	'wmgWikibaseItemNamespaceID' => [

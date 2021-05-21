@@ -11,6 +11,9 @@ $wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
+$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty;
+$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty;
+
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
 ];
@@ -46,8 +49,26 @@ $wgWBClientSettings['siteLinksGroups'] = [
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
-
 // Per-wiki
-if ( $wgDBname === 'nbdbwiki' ) {
-	$wgWBRepoSettings['formatterUrlProperty'] = 'P39';
+if ( $wgDBname === 'documentcontrolwiki' ) {
+	$wgWBRepoSettings['statementSections'] = [
+		'item' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [
+					'external-id',
+				],
+			],
+		],
+		'property' => [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [
+					'P142',
+				],
+			],
+		],
+	];
 }
