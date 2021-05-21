@@ -79,6 +79,36 @@ $wi->config->settings['wgDataDump']['default'] = [
 			'delete' => 'delete-dump',
 		],
 	],
+	'xml-namespace' => [
+		'file_ending' => '.xml.gz',
+		'generate' => [
+			'type' => 'mwscript',
+			'script' => "$IP/maintenance/dumpBackup.php",
+			'options' => [
+				'--full',
+				'--logs',
+				'--uploads',
+				'--output',
+				"gzip:{$dataDumpDirectory}" . '${filename}',
+			],
+			'arguments' => [
+			    '--filter=namespace:'
+			]
+		],
+		'limit' => 1, 
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+		'htmlform' => [
+		    'name' => 'namespaceselect',
+		    'type' => 'namespaceselect',
+		    'exists' => true,
+		    'value' => '--filter=namespace:',
+		    'hide-if' => [ '!==', 'generatedumptype', 'xml-namespace' ]
+		],
+	],
 	'image' => [
 		'file_ending' => '.tar.gz',
 		'generate' => [
