@@ -4287,11 +4287,17 @@ $wi->config->settings += [
 	'wmgAllowEntityImport' => [
 		'default' => false,
 	],
+	'wmgCanonicalUriProperty' => [
+		'default' => null,
+	],
 	'wmgEnableEntitySearchUI' => [
 		'default' => false,
 	],
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
+	],
+	'wmgFormatterUrlProperty' => [
+		'default' => null,
 	],
 	'wmgWikibaseRepoDatabase' => [
 		'default' => $wi->dbname
