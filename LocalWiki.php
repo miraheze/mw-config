@@ -92,7 +92,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 				"gzip:{$dataDumpDirectory}" . '${filename}',
 			],
 			'arguments' => [
-			    '--filter=namespace:' => '--filter=namespace:'
+				'--filter=namespace:'
 			]
 		],
 		'limit' => 1, 
