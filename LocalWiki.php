@@ -102,11 +102,12 @@ $wi->config->settings['wgDataDump']['default'] = [
 			'delete' => 'delete-dump',
 		],
 		'htmlform' => [
-		    'name' => 'namespaceselect',
-		    'type' => 'namespaceselect',
-		    'exists' => true,
-		    'value' => '',
-		    'hide-if' => [ '!==', 'generatedumptype', 'xml' ]
+			'name' => 'namespaceselect',
+			'type' => 'namespaceselect',
+			'exists' => true,
+			'value' => '',
+			'noArgsValue' => 'all',
+			'hide-if' => [ '!==', 'generatedumptype', 'xml' ]
 		],
 	],
 	'image' => [
