@@ -75,7 +75,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 				'--namespaces'
 			]
 		],
-		'limit' => 1, 
+		'limit' => 1,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
