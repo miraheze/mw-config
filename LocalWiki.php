@@ -71,12 +71,22 @@ $wi->config->settings['wgDataDump']['default'] = [
 				'--output',
 				"gzip:{$dataDumpDirectory}" . '${filename}',
 			],
+			'arguments' => [
+				'--namespaces'
+			],
 		],
 		'limit' => 1,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
 			'delete' => 'delete-dump',
+		],
+		'htmlform' => [
+			'name' => 'namespaceselect',
+			'type' => 'namespaceselect',
+			'exists' => true,
+			'noArgsValue' => 'all',
+			'hide-if' => [ '!==', 'generatedumptype', 'xml' ]
 		],
 	],
 	'image' => [
