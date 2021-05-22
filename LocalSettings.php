@@ -720,7 +720,7 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgCreateWikiNotificationEmail' => [
-		'default' => 'tech@miraheze.org',
+		'default' => 'sre@miraheze.org',
 	],
 	'wgCreateWikiPersistentModelFile' => [
 		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
@@ -1256,7 +1256,7 @@ $wi->config->settings += [
 	],
 	'wmgUseGlobalWatchlist' => [
 		'default' => false,
-		'metawiki' => true,
+		'loginwiki' => true,
 	],
 	'wmgUseGoogleDocs4MW' => [
 		'default' => false,
@@ -2932,6 +2932,7 @@ $wi->config->settings += [
 				'globalblock-exempt',
 				'globalgroupmembership',
 				'globalgrouppermissions',
+				'handle-pii',
 				'hideuser',
 				'interwiki',
 				'investigate',
@@ -4228,6 +4229,7 @@ $wi->config->settings += [
 			'51.195.236.219:81', // cp10
 			'51.195.236.250:81', // cp11
 			'51.222.25.132:81', // cp12
+			'51.38.69.175:81', // cp13
 		],
 	],
 	
@@ -4269,11 +4271,17 @@ $wi->config->settings += [
 	'wmgAllowEntityImport' => [
 		'default' => false,
 	],
+	'wmgCanonicalUriProperty' => [
+		'default' => null,
+	],
 	'wmgEnableEntitySearchUI' => [
 		'default' => false,
 	],
 	'wmgFederatedPropertiesEnabled' => [
 		'default' => false,
+	],
+	'wmgFormatterUrlProperty' => [
+		'default' => null,
 	],
 	'wmgWikibaseRepoDatabase' => [
 		'default' => $wi->dbname

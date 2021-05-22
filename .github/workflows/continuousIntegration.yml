@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ['7.3', '8.0']
+        php: ['7.3']
     steps:
       - uses: actions/checkout@v2
         with:
@@ -33,6 +33,7 @@ jobs:
         if: env.WORKFLOW_CONCLUSION == 'success'
         with:
           channel: "#miraheze-sre"
+          server: "irc.libera.chat"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build passed.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}
@@ -42,6 +43,7 @@ jobs:
         if: env.WORKFLOW_CONCLUSION == 'failure'
         with:
           channel: "#miraheze-sre"
+          server: "irc.libera.chat"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build has errored.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}
@@ -51,6 +53,7 @@ jobs:
         if: env.WORKFLOW_CONCLUSION == 'cancelled'
         with:
           channel: "#miraheze-sre"
+          server: "irc.libera.chat"
           nickname: miraheze-github
           message: ${{ github.repository }} - ${{ github.actor }} the build has been cancelled.
           sasl_password: ${{ secrets.IRC_MIRAHEZEBOTS }}

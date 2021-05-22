@@ -54,7 +54,7 @@ if ( !$wgCommandLineMode ) {
 				<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg" alt="Miraheze Logo">404 Wiki not Found</h1>
 				<p class="lead">We couldn't find the wiki you were looking for on our servers.</p>
 				<p>
-					<a href="https://meta.miraheze.org" class="btn btn-lg btn-outline-success" role="button">Take me to Miraheze Meta</a>
+					<a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze" class="btn btn-lg btn-outline-success" role="button">Take me to Miraheze Meta</a>
 				</p>
 			</div>
 		</div>
@@ -63,9 +63,9 @@ if ( !$wgCommandLineMode ) {
 				<div style="text-align:center;">
 					<h2>What can I do?</h2>
 					<p class="lead">If you're a wiki visitor:</p>
-					<p>This wiki does not exist on our servers. You can browse wikis on our network <a href="//meta.miraheze.org/wiki/Special:WikiDiscover">here</a> or <a href="https://archive.org/search.php?query=miraheze">view archive.org archives</a>.</p>
+					<p>This wiki does not exist on our servers. You can browse wikis on our network <a href="https://meta.miraheze.org/wiki/Special:WikiDiscover">here</a> or <a href="https://archive.org/search.php?query=miraheze">view archive.org archives</a>.</p>
 					<p class="lead">If you're the wiki bureaucrat:</p>
-					<p>If this is a problem, please <a href="https://meta.miraheze.org/wiki/Help_center">contact us</a>.</p>
+					<p>If this is a problem, please <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Help_center">contact us</a>.</p>
 				</div>
 			</div>
 		</div>
