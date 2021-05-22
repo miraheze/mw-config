@@ -79,7 +79,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 			'delete' => 'delete-dump',
 		],
 	],
-	'xml-namespace' => [
+	'xml' => [
 		'file_ending' => '.xml.gz',
 		'generate' => [
 			'type' => 'mwscript',
