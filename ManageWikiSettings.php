@@ -776,15 +776,6 @@ $wgManageWikiSettings = [
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 		'requires' => [],
 	],
-	'wmgUseYandexTranslate' => [
-		'name' => 'Use Yandex Machine Translation on Special:Translate',
-		'from' => 'translate',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'localisation',
-		'help' => 'Adds suggestions from Yandex to Special:Translate',
-		'requires' => [],
-	],
 
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
@@ -2622,6 +2613,17 @@ $wgManageWikiSettings = [
 		'help' => 'When enabled, this shows Popups by default.',
 		'requires' => [],
 	],
+	'wgScratchBlocks4BlockVersion' => [
+		'name' => 'Default Scratch Blocks version',
+		'from' => 'scratchblocks',
+		'type' => 'integer',
+		'minint' => 2,
+		'maxint' => 3,
+		'overridedefault' => 3,
+		'section' => 'styling',
+		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.',
+		'requires' => [],
+	],	
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [

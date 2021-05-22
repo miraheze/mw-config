@@ -71,12 +71,23 @@ $wi->config->settings['wgDataDump']['default'] = [
 				'--output',
 				"gzip:{$dataDumpDirectory}" . '${filename}',
 			],
+			'arguments' => [
+				'--namespaces'
+			],
 		],
 		'limit' => 1,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
 			'delete' => 'delete-dump',
+		],
+		'htmlform' => [
+			'name' => 'namespaceselect',
+			'type' => 'namespaceselect',
+			'exists' => true,
+			'noArgsValue' => 'all',
+			'hide-if' => [ '!==', 'generatedumptype', 'xml' ],
+			'label-message' => 'datadump-namespaceselect-label'
 		],
 	],
 	'image' => [
@@ -207,19 +218,6 @@ if ( $wgWordmark ) {
 if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
-}
-
-// $wmgUseYandexTranslate
-if ( $wmgUseYandexTranslate ) {
-	$wgTranslateTranslationServices['Yandex'] = [
-		'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
-		'key' => $wmgYandexTranslationKey,
-		'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
-		'timeout' => 3,
-		'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
-		'langlimit' => 1,
-		'type' => 'yandex',
-	];
 }
 
 // Per-wiki settings

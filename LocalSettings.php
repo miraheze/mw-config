@@ -3837,6 +3837,11 @@ $wi->config->settings += [
 			"*",
 		],
 	],
+	
+	// ScratchBlocks
+	'wgScratchBlocks4BlockVersion' => [
+		'default' => 3,
+	],
 
 	// Scribunto
 	'wgCodeEditorEnableCore' => [
@@ -4157,9 +4162,6 @@ $wi->config->settings += [
 	],
 	'wgTranslateTranslationServices' => [
 		'default' => [],
-	],
-	'wmgUseYandexTranslate' => [
-		'default' => false,
 	],
 
 	// Uploads
