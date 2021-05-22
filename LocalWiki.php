@@ -106,7 +106,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 		    'type' => 'namespaceselect',
 		    'exists' => true,
 		    'value' => '',
-		    'hide-if' => [ '!==', 'generatedumptype', 'xml-namespace' ]
+		    'hide-if' => [ '!==', 'generatedumptype', 'xml' ]
 		],
 	],
 	'image' => [
