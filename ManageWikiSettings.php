@@ -776,15 +776,6 @@ $wgManageWikiSettings = [
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 		'requires' => [],
 	],
-	'wmgUseYandexTranslate' => [
-		'name' => 'Use Yandex Machine Translation on Special:Translate',
-		'from' => 'translate',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'localisation',
-		'help' => 'Adds suggestions from Yandex to Special:Translate',
-		'requires' => [],
-	],
 
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [

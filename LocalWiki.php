@@ -220,19 +220,6 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
-// $wmgUseYandexTranslate
-if ( $wmgUseYandexTranslate ) {
-	$wgTranslateTranslationServices['Yandex'] = [
-		'url' => 'https://translate.yandex.net/api/v1.5/tr.json/translate',
-		'key' => $wmgYandexTranslationKey,
-		'pairs' => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs',
-		'timeout' => 3,
-		'langorder' => [ 'en', 'ru', 'uk', 'de', 'fr', 'pl', 'it', 'es', 'tr' ],
-		'langlimit' => 1,
-		'type' => 'yandex',
-	];
-}
-
 // Per-wiki settings
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
