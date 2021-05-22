@@ -73,7 +73,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 			],
 			'arguments' => [
 				'--namespaces'
-			]
+			],
 		],
 		'limit' => 1,
 		'permissions' => [
