@@ -3698,9 +3698,7 @@ $wi->config->settings += [
 			'editimportprotected',
 		],
     		'+allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
+			'editextendedconfirmedprotected',
 		],
 		'+bigforestwiki' => [
 			'editvoter',
