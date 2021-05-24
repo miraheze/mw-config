@@ -2761,6 +2761,11 @@ $wi->config->settings += [
 				'managewiki-restricted' => true,
 			],
 		],
+		'+lhmnwiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
     		'+memeswiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
@@ -3444,7 +3449,6 @@ $wi->config->settings += [
 				'default' => [
 					'MinimalPasswordLength' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3454,7 +3458,6 @@ $wi->config->settings += [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3464,7 +3467,6 @@ $wi->config->settings += [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3474,7 +3476,6 @@ $wi->config->settings += [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3486,10 +3487,8 @@ $wi->config->settings += [
 				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
 				'PasswordCannotMatchUsername' => 'PasswordPolicyChecks::checkPasswordCannotMatchUsername',
 				'PasswordCannotBeSubstringInUsername' => 'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
-				'PasswordCannotMatchBlacklist' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
 				'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
 				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
-				'PasswordNotInLargeBlacklist' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
 				'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
 			],
 		],
@@ -3500,7 +3499,6 @@ $wi->config->settings += [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3510,24 +3508,22 @@ $wi->config->settings += [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						],
+					],
 					'trustandsafety' => [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						],
 					],
 				],
+			],
 
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
@@ -3677,9 +3673,7 @@ $wi->config->settings += [
 			'editimportprotected',
 		],
     		'+allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
+			'editextendedconfirmedprotected',
 		],
 		'+bigforestwiki' => [
 			'editvoter',
@@ -3710,6 +3704,9 @@ $wi->config->settings += [
 			'bureaucrat',
 			'ceo',
 			'co',
+		],
+		'+lhmnwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
@@ -3775,6 +3772,9 @@ $wi->config->settings += [
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'lhmnwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
