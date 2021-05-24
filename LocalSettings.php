@@ -2777,6 +2777,11 @@ $wi->config->settings += [
 				'managewiki-restricted' => true,
 			],
 		],
+		'+lhmnwiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
     		'+memeswiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
@@ -3727,6 +3732,9 @@ $wi->config->settings += [
 			'ceo',
 			'co',
 		],
+		'+lhmnwiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -3791,6 +3799,9 @@ $wi->config->settings += [
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'lhmnwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
