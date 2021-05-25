@@ -11,8 +11,8 @@ $wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
-$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty;
-$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty;
+$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ? $wmgFormatterUrlProperty : null;
+$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ? $wmgCanonicalUriProperty : null;
 
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
