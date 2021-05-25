@@ -4299,7 +4299,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgFormatterUrlProperty' => [
-		'default' => null,
+		'default' => false,
 	],
 	'wmgWikibaseRepoDatabase' => [
 		'default' => $wi->dbname
