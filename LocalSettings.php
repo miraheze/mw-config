@@ -4290,7 +4290,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgCanonicalUriProperty' => [
-		'default' => null,
+		'default' => '',
 	],
 	'wmgEnableEntitySearchUI' => [
 		'default' => false,
@@ -4299,7 +4299,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgFormatterUrlProperty' => [
-		'default' => false,
+		'default' => '',
 	],
 	'wmgWikibaseRepoDatabase' => [
 		'default' => $wi->dbname
