@@ -2552,6 +2552,9 @@ $wi->config->settings += [
 	'wgScoreLilyPond' => [
 		'default' => '/dev/null',
 	],
+	'wgScoreDisableExec' => [
+		'default' => true,
+	],
 
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
