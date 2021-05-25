@@ -4671,6 +4671,7 @@ if ( wfHostname() === 'test3' ) {
 	if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
 		$wgProfiler['output'] = [ 'ProfilerOutputText' ];
+		$wgProfiler['flags'] = TIDEWAYS_XHPROF_FLAGS_CPU;
 		$wgProfiler['visible'] = false;
 	}
 }
