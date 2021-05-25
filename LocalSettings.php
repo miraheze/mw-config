@@ -4492,6 +4492,7 @@ $wi->config->settings += [
 			'dynamic-sidebar' => false,
 			'editpage' => false,
 			'Echo' => 'debug',
+			'EditConflict' => 'error',
 			'EditConstraintRunner' => 'error',
 			'error' => 'debug',
 			'error-json' => false,
