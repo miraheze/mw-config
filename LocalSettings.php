@@ -378,6 +378,9 @@ $wi->config->settings += [
 	'wgCheckUserForceSummary' => [
 		'default' => true,
 	],
+	'wgCheckUserEnableSpecialInvestigate' => [
+		'default' => true,
+	],
 
 	// Citizen
 	'wgCitizenThemeDefault' => [
