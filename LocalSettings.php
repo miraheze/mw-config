@@ -2710,6 +2710,9 @@ $wi->config->settings += [
 			'bureaucrat' => [
 				'bureaucrat' => true,
 			],
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
 		],
 		'+igrovyesistemywiki' => [
 			'autopatrolled' => [
@@ -3716,6 +3719,7 @@ $wi->config->settings += [
 		],
 		'+hypopediawiki' => [
 			'bureaucrat',
+			'editextendedconfirmedprotected',
 		],
 		'+igrovyesistemywiki' => [
 			'trusted',
@@ -3791,6 +3795,9 @@ $wi->config->settings += [
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'hypopediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'lhmnwiki' => [
 			'editextendedconfirmedprotected',
