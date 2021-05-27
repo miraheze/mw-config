@@ -4247,6 +4247,11 @@ $wi->config->settings += [
 		'default' => false, // DO NOT set to true under any circumstances --Reception123
 	],
 
+	// UserPageEditProtection
+	'wgOnlyUserEditUserPage' => [
+		'wmgUseUserPageEditProtection' => true,
+	],
+
 	// Vanish (MW 1.34+)
 	'wgUseCdn' => [
 		'default' => true,
