@@ -4339,13 +4339,40 @@ $wi->config->settings += [
 
 	// WebChat
 	'wgWebChatServer' => [
-		'default' => 'irc.libera.chat:+6697',
+		'default' => false,
 	],
 	'wgWebChatChannel' => [
 		'default' => false,
 	],
 	'wgWebChatClient' => [
-		'default' => 'Mibbit',
+		'default' => 'liberaChat',
+	],
+	'wgWebChatClients' => [
+		'default' => [
+			'Mibbit' => [
+				'url' => '//embed.mibbit.com/index.html',
+				'parameters' => [
+					'noServerMotd' => 'true',
+					'server' => '$$$server$$$',
+					'channel' => '$$$channel$$$',
+					'nick' => '$$$nick$$$',
+				],
+			],
+			'liberaChat' => [
+				'url' => '//kiwiirc.com/nextclient/irc.libera.chat/',
+				'parameters' => [
+					'channels' => '$$$channel$$$',
+					'nick' => '$$$nick$$$',
+				],
+			],
+			'freenodeChat' => [
+				'url' => '//webchat.freenode.net/',
+				'parameters' => [
+					'channels' => '$$$channel$$$',
+					'nick' => '$$$nick$$$',
+				],
+			],
+		],
 	],
 
 	// WikiForum
