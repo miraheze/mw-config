@@ -4337,15 +4337,15 @@ $wi->config->settings += [
 		'wmgUseWikibaseRepository' => true,
 	],
 
-	// WebChat config
+	// WebChat
 	'wgWebChatServer' => [
-		'default' => false,
+		'default' => 'irc.libera.chat:+6697',
 	],
 	'wgWebChatChannel' => [
 		'default' => false,
 	],
 	'wgWebChatClient' => [
-		'default' => 'freenodeChat',
+		'default' => 'Mibbit',
 	],
 
 	// WikiForum
