@@ -2664,6 +2664,7 @@ $wi->config->settings += [
 				'user' => true,
 			],
 			'steward' => [
+				'centralauth-createlocal' => true,
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
@@ -2943,6 +2944,7 @@ $wi->config->settings += [
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
+				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-oversight',
 				'centralauth-rename',
@@ -3010,7 +3012,6 @@ $wi->config->settings += [
 				'viewmyprivateinfo', 
 				'viewmywatchlist',
 				'managewiki',
-
 			],
 		],
 	],
