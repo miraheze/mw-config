@@ -2137,6 +2137,7 @@ $wi->config->settings += [
 		],
 		'vgportdbwiki' => [
 			'Unverified_Games' => 'unverified',
+			'Incomplete_Pages' => 'unverified',
 		],
 	],
 
@@ -4114,6 +4115,10 @@ $wi->config->settings += [
 	],
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
+	],
+	'wgTmhEnableMp3Uploads' => [
+		'default' => false,
+		'vgportdbwiki' => true,
 	],
 
 	// Timeless
