@@ -2137,6 +2137,7 @@ $wi->config->settings += [
 		],
 		'vgportdbwiki' => [
 			'Unverified_Games' => 'unverified',
+			'Incomplete_Pages' => 'unverified',
 		],
 	],
 
