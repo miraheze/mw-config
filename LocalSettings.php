@@ -4116,10 +4116,6 @@ $wi->config->settings += [
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
 	],
-	'wgTmhEnableMp3Uploads' => [
-		'default' => false,
-		'vgportdbwiki' => true,
-	],
 
 	// Timeless
 	'wgTimelessBackdropImage' => [
