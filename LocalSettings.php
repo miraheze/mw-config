@@ -2659,15 +2659,18 @@ $wi->config->settings += [
 				'suppressionlog' => true,
 				'suppressrevision' => true,
 			],
-			'user' => [
-				'mwoauthmanagemygrants' => true,
-				'user' => true,
-			],
 			'steward' => [
 				'centralauth-createlocal' => true,
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
+			],
+			'sysop' => [
+				'centralauth-createlocal' => false,
+			],
+			'user' => [
+				'mwoauthmanagemygrants' => true,
+				'user' => true,
 			],
 		],
     		'+allpediawiki' => [
