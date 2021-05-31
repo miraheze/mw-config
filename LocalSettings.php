@@ -2124,6 +2124,7 @@ $wi->config->settings += [
 		],
 		'vgportdbwiki' => [
 			'Unverified_Games' => 'unverified',
+			'Incomplete_Pages' => 'unverified',
 		],
 	],
 
@@ -2696,6 +2697,9 @@ $wi->config->settings += [
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
+			],
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
 			],
 		],
 		'+igrovyesistemywiki' => [
@@ -3703,6 +3707,7 @@ $wi->config->settings += [
 		],
 		'+hypopediawiki' => [
 			'bureaucrat',
+			'editextendedconfirmedprotected',
 		],
 		'+igrovyesistemywiki' => [
 			'trusted',
@@ -3778,6 +3783,9 @@ $wi->config->settings += [
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'hypopediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'lhmnwiki' => [
 			'editextendedconfirmedprotected',
@@ -4227,6 +4235,11 @@ $wi->config->settings += [
 		'default' => false, // DO NOT set to true under any circumstances --Reception123
 	],
 
+	// UserPageEditProtection
+	'wgOnlyUserEditUserPage' => [
+		'wmgUseUserPageEditProtection' => true,
+	],
+
 	// Vanish (MW 1.34+)
 	'wgUseCdn' => [
 		'default' => true,
@@ -4234,8 +4247,8 @@ $wi->config->settings += [
 	'wgCdnServers' => [
 		'default' => [
 			'128.199.139.216:81', // cp3
-			'51.195.236.219:81', // cp10
-			'51.195.236.250:81', // cp11
+			// '51.195.236.219:81', // cp10
+			// '51.195.236.250:81', // cp11
 			'51.222.25.132:81', // cp12
 			'51.38.69.175:81', // cp13
 		],
