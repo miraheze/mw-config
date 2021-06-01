@@ -2079,7 +2079,7 @@ $wi->config->settings += [
 				'user' => true,
 			],
 		],
-		'+ahinfoboxeswiki' => [
+		'+althistorywiki' => [
 			'editprotected' => [
 				'editrollbackprotected' => true,
 				'edittemplateprotected' => true,
@@ -2104,7 +2104,7 @@ $wi->config->settings += [
 	],
 	'+wgGrantPermissionGroups' => [
 		'default' => [],
-		'ahinfoboxeswiki' => [
+		'althistorywiki' => [
 			'import' => 'administration',
 		],
 		'simulatorwiki' => [
@@ -2225,7 +2225,7 @@ $wi->config->settings += [
 			'wikipedia',
 			'metawikimedia',
 		],
-		'+ahinfoboxeswiki' => [
+		'+althistorywiki' => [
 			'wikimediacommons',
 		],
 		'+batfamilywiki' => [
@@ -3690,14 +3690,14 @@ $wi->config->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-		'+ahinfoboxeswiki' => [
+    		'+allpediawiki' => [
+			'editextendedconfirmedprotected',
+		],
+		'+althistorywiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
-		],
-    		'+allpediawiki' => [
-			'editextendedconfirmedprotected',
 		],
 		'+bigforestwiki' => [
 			'editvoter',
@@ -3781,14 +3781,14 @@ $wi->config->settings += [
 	// Rights
 	'+wgAvailableRights' => [
 		'default' => [],
-		'ahinfoboxeswiki' => [
+    		'allpediawiki' => [
+			'editextendedconfirmedprotected',
+		],
+		'althistorywiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
-		],
-    		'allpediawiki' => [
-			'editextendedconfirmedprotected',
 		],
 		'documentcontrolwiki' => [
 			'editextendedconfirmedprotected',
