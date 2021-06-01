@@ -1400,9 +1400,6 @@ $wi->config->settings += [
 	'wmgUseModeration' => [
 		'default' => false,
 	],
-	'wmgUseModernSkylight' => [
-		'default' => false,
-	],
 	'wmgUseMonaco' => [
 		'default' => false,
 	],
