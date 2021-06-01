@@ -2250,6 +2250,7 @@ $wi->config->settings += [
 		],
 		'+snapdatawiki' => [
 			'd',
+			'snapwiki',
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
