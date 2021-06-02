@@ -562,7 +562,7 @@ $wi->config->settings += [
 	'wgCosmosUseSocialProfileAvatar' => [
 		'default' => true,
 	],
-	'wgCosmosProfileTagGroups' => [
+	'wgCosmosSocialProfileTagGroups' => [
 		'default' => [
 			'bureaucrat',
 			'bot',
@@ -570,7 +570,7 @@ $wi->config->settings += [
 			'interface-admin'
 		],
 	],
-	'wgCosmosNumberofGroupTags' => [
+	'wgCosmosSocialProfileNumberofGroupTags' => [
 		'default' => 2,
 	],
 	'wgCosmosContentOpacityLevel' => [
