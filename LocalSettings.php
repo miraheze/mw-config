@@ -4359,7 +4359,7 @@ $wi->config->settings += [
 				],
 			],
 			'liberaChat' => [
-				'url' => '//kiwiirc.com/nextclient/irc.libera.chat/',
+				'url' => '//web.libera.chat/',
 				'parameters' => [
 					'channels' => '$$$channel$$$',
 					'nick' => '$$$nick$$$',
