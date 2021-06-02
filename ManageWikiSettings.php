@@ -1940,7 +1940,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgCosmosProfileTagGroups' => [
+	'wgCosmosSocialProfileTagGroups' => [
 		'name' => 'Cosmos User Group Tags',
 		'from' => 'cosmos',
 		'type' => 'usergroups',
@@ -1959,7 +1959,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgCosmosNumberofGroupTags' => [
+	'wgCosmosSocialProfileNumberofGroupTags' => [
 		'name' => 'Cosmos Number of Group Tags',
 		'from' => 'cosmos',
 		'type' => 'integer',
