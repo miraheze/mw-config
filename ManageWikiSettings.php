@@ -477,11 +477,11 @@ $wgManageWikiSettings = [
 		'from' => 'webchat',
 		'type' => 'list',
 		'options' => [
-			'Libera' => 'liberaChat',
+			'Libera' => 'LiberaChat',
 			'Freenode' => 'freenodeChat',
 			'Other Server' => 'Mibbit',
 		],
-		'overridedefault' => 'liberaChat',
+		'overridedefault' => 'LiberaChat',
 		'section' => 'discussion',
 		'help' => 'This sets the web client to use. If you are not using Libera or Freenode, select Other Server.',
 		'requires' => [],
