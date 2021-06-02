@@ -4345,7 +4345,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgWebChatClient' => [
-		'default' => 'liberaChat',
+		'default' => 'LiberaChat',
 	],
 	'wgWebChatClients' => [
 		'default' => [
@@ -4358,7 +4358,7 @@ $wi->config->settings += [
 					'nick' => '$$$nick$$$',
 				],
 			],
-			'liberaChat' => [
+			'LiberaChat' => [
 				'url' => '//web.libera.chat/',
 				'parameters' => [
 					'channels' => '$$$channel$$$',
