@@ -517,10 +517,6 @@ if ( $wmgUseModeration ) {
 	wfLoadExtension( 'Moderation' );
 }
 
-if ( $wmgUseModernSkylight ) {
-	wfLoadSkin( 'ModernSkylight' );
-}
-
 if ( $wmgUseMonaco ) {
 	wfLoadSkin( 'Monaco' );
 }

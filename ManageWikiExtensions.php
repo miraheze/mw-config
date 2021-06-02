@@ -1855,14 +1855,6 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
-		'modernskylight' => [
-			'name' => 'Modern Skylight',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Modern_Skylight',
-			'var' => 'wmgUseModernSkylight',
-			'conflicts' => false,
-			'requires' => [],
-			'section' => 'skins',
-		],
 		'monaco' => [
 			'name' => 'Monaco',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Monaco',
