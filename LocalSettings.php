@@ -3830,6 +3830,7 @@ $wi->config->settings += [
 		'snapwikiwiki' => [
 			'smerge.imp.fu-berlin.de',
 			'www.hinkler.com.au',
+		],
 	],
 
 	// Robot policy
