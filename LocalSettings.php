@@ -4126,6 +4126,11 @@ $wi->config->settings += [
 		'default' => null,
 	],
 
+	// Timeline
+	'wgTimelineFontDirectory' => [
+		'default' => '/usr/share/fonts/truetype/freefont',
+	],
+
 	// Timezone
 	'wgLocaltimezone' => [
 		'default' => 'UTC',
