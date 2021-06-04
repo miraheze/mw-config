@@ -3831,6 +3831,10 @@ $wi->config->settings += [
 			'localhost',
 			'127.0.0.1',
 		],
+		'+snapwikiwiki' => [
+			'smerge.imp.fu-berlin.de',
+			'www.hinkler.com.au',
+		],
 	],
 
 	// Robot policy
