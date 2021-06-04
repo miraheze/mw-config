@@ -4361,14 +4361,14 @@ $wi->config->settings += [
 			'LiberaChat' => [
 				'url' => '//web.libera.chat/',
 				'parameters' => [
-					'channels' => '$$$channel$$$',
+					'channel' => '$$$channel$$$',
 					'nick' => '$$$nick$$$',
 				],
 			],
 			'freenodeChat' => [
 				'url' => '//webchat.freenode.net/',
 				'parameters' => [
-					'channels' => '$$$channel$$$',
+					'channel' => '$$$channel$$$',
 					'nick' => '$$$nick$$$',
 				],
 			],
