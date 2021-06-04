@@ -2234,6 +2234,10 @@ $wi->config->settings += [
 			'batfamilywiki',
 			'batmanwikifandom',
 			'd',
+			
+		],
+		'+hypixelwiki' => [
+			'hypixelwikifandom',
 		],
 		'+incubatorwiki' => [
 			'wmincubator',
