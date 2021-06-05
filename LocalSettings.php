@@ -4335,6 +4335,12 @@ $wi->config->settings += [
 	'wmgWikibasePropertyNamespaceID' => [
 		'default' => 120
 	],
+	'wmgWikibaseRepoItemNamespaceID' => [
+		'default' => 860
+	],
+	'wmgWikibaseRepoPropertyNamespaceID' => [
+		'default' => 862
+	],
 	'wgEnableWikibaseClient' => [
 		'default' => false,
 		'wmgUseWikibaseClient' => true,

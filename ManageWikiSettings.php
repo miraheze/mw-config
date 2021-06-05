@@ -2713,6 +2713,28 @@ $wgManageWikiSettings = [
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Property namespace on the upstream Wikibase installation. Leave as-is if unsure.',
 		'requires' => [],
+	],
+	'wmgWikibaseRepoItemNamespaceID' => [
+		'name' => 'Repository Item Namespace ID',
+		'from' => 'wikibaserepository',
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 860,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Item namespace for Wikibase Repository.',
+		'requires' => [],
+	],
+	'wmgWikibasePropertyNamespaceID' => [
+		'name' => 'Repository Property Namespace ID',
+		'from' => 'wikibaserepository',
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 862,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Property namespace for Wikibase Repository.',
+		'requires' => [],
 	]
 ];
 
