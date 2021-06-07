@@ -2660,13 +2660,9 @@ $wi->config->settings += [
 				'suppressrevision' => true,
 			],
 			'steward' => [
-				'centralauth-createlocal' => true,
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
-			],
-			'sysop' => [
-				'centralauth-createlocal' => false,
 			],
 			'user' => [
 				'mwoauthmanagemygrants' => true,
