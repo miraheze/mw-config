@@ -153,7 +153,7 @@ if ( $wmgUseContributionScores ) {
 	wfLoadExtension( 'ContributionScores' );
 }
 
-if ( $wmgUseCosmos ){
+if ( $wmgUseCosmos ) {
 	wfLoadSkin( 'Cosmos' );
 }
 
@@ -313,6 +313,10 @@ if ( $wgMirahezeCommons && !$cwPrivate ) {
 
 if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
+}
+
+if ( $wmgUseGlobalWatchlist ) {
+	wfLoadExtension( 'GlobalWatchlist' );
 }
 
 if ( $wmgUseGoogleDocs4MW ) {
@@ -513,8 +517,8 @@ if ( $wmgUseModeration ) {
 	wfLoadExtension( 'Moderation' );
 }
 
-if ( $wmgUseModernSkylight ) {
-	wfLoadSkin( 'ModernSkylight' );
+if ( $wmgUseMonaco ) {
+	wfLoadSkin( 'Monaco' );
 }
 
 if ( $wmgUseMsCalendar ) {
@@ -569,7 +573,7 @@ if ( $wmgUseNewUserNotif ) {
 	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
 }
 
-if ( $wmgUseNimbus ){
+if ( $wmgUseNimbus ) {
 	wfLoadSkin( 'Nimbus' );
 }
 
@@ -748,10 +752,6 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseUrlShortener ) {
-	wfLoadExtension( 'UrlShortener' );
-}
-
 if ( $wmgUseShortDescription ) {
 	wfLoadExtension( 'ShortDescription' );
 }
@@ -903,8 +903,16 @@ if ( $wmgUseUrlGetParameters ) {
 	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
 }
 
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
+}
+
 if ( $wmgUseUserFunctions ) {
 	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+}
+
+if ( $wmgUseUserPageEditProtection ) {
+	wfLoadExtension( 'UserPageEditProtection' );
 }
 
 if ( $wmgUseUserWelcome ) {

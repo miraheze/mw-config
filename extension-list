@@ -84,6 +84,7 @@ $IP/extensions/GlobalNewFiles/extension.json
 $IP/extensions/GlobalPreferences/extension.json
 $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
+$IP/extensions/GlobalWatchlist/extension.json
 $IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
@@ -182,6 +183,7 @@ $IP/extensions/RandomImage/extension.json
 $IP/extensions/RandomSelection/extension.json
 $IP/extensions/RegexFunctions/extension.json
 $IP/extensions/RelatedArticles/extension.json
+$IP/extensions/RemovePII/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
 $IP/extensions/Report/extension.json
@@ -238,8 +240,9 @@ $IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UserMerge/extension.json
-$IP/extensions/UserFunctions/UserFunctions.php
 $IP/extensions/UrlGetParameters/UrlGetParameters.php
+$IP/extensions/UserFunctions/UserFunctions.php
+$IP/extensions/UserPageEditProtection/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/extension.json
 $IP/extensions/VariablesLua/extension.json
@@ -276,7 +279,7 @@ $IP/skins/Medik/skin.json
 $IP/skins/Metrolook/skin.json
 $IP/skins/MinervaNeue/skin.json
 $IP/skins/Modern/skin.json
-$IP/skins/ModernSkylight/skin.json
+$IP/skins/Monaco/skin.json
 $IP/skins/MonoBook/skin.json
 $IP/skins/Nimbus/skin.json
 $IP/skins/Nostalgia/skin.json

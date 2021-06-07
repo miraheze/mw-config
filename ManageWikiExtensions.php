@@ -88,7 +88,6 @@ $wgManageWikiExtensions = [
 					'templatedata',
 				],
 			],
-			'help' => 'Will start working 10-20 mins after enabling.',
 			'section' => 'editors',
 		],
 
@@ -1856,10 +1855,10 @@ $wgManageWikiExtensions = [
 			'requires' => [],
 			'section' => 'skins',
 		],
-		'modernskylight' => [
-			'name' => 'Modern Skylight',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Modern_Skylight',
-			'var' => 'wmgUseModernSkylight',
+		'monaco' => [
+			'name' => 'Monaco',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Monaco',
+			'var' => 'wmgUseMonaco',
 			'conflicts' => false,
 			'requires' => [],
 			'section' => 'skins',
@@ -2754,7 +2753,6 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseFlow',
 			'conflicts' => false,
 			'requires' => [],
-			'help' => 'Will start working 10-20 mins after enabling.',
 			'install' => [
 				'sql' => [
 					'flow_revision' => "$IP/extensions/Flow/flow.sql"
@@ -2874,6 +2872,23 @@ $wgManageWikiExtensions = [
 			'var' => 'wmgUseUploadsLink',
 			'conflicts' => false,
 			'requires' => [],
+			'section' => 'other',
+		],
+		'userpageeditprotection' => [
+			'name' => 'UserPageEditProtection',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UserPageEditProtection',
+			'var' => 'wmgUseUserPageEditProtection',
+			'conflicts' => false,
+			'requires' => [],
+			'install' => [
+				'permissions' => [
+					'sysop' => [
+						'permissions' => [
+							'editalluserpages',
+						],
+					],
+				],
+			],
 			'section' => 'other',
 		],
 		'variables' => [

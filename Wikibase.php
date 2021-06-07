@@ -5,12 +5,15 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$wgWBRepoSettings['entityNamespaces']['item'] = 860;
-$wgWBRepoSettings['entityNamespaces']['property'] = 862;
+$wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
+$wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyNamespaceID;
 $wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( $wgVersion );
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
+$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ? $wmgFormatterUrlProperty : null;
+$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ? $wmgCanonicalUriProperty : null;
+
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
 ];
@@ -46,8 +49,26 @@ $wgWBClientSettings['siteLinksGroups'] = [
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
-
 // Per-wiki
-if ( $wgDBname === 'nbdbwiki' ) {
-	$wgWBRepoSettings['formatterUrlProperty'] = 'P39';
+if ( $wgDBname === 'documentcontrolwiki' ) {
+	$wgWBRepoSettings['statementSections'] = [
+		'item' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [
+					'external-id',
+				],
+			],
+		],
+		'property' => [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [
+					'P142',
+				],
+			],
+		],
+	];
 }

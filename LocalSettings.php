@@ -562,7 +562,7 @@ $wi->config->settings += [
 	'wgCosmosUseSocialProfileAvatar' => [
 		'default' => true,
 	],
-	'wgCosmosProfileTagGroups' => [
+	'wgCosmosSocialProfileTagGroups' => [
 		'default' => [
 			'bureaucrat',
 			'bot',
@@ -570,7 +570,7 @@ $wi->config->settings += [
 			'interface-admin'
 		],
 	],
-	'wgCosmosNumberofGroupTags' => [
+	'wgCosmosSocialProfileNumberofGroupTags' => [
 		'default' => 2,
 	],
 	'wgCosmosContentOpacityLevel' => [
@@ -720,7 +720,7 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgCreateWikiNotificationEmail' => [
-		'default' => 'tech@miraheze.org',
+		'default' => 'sre@miraheze.org',
 	],
 	'wgCreateWikiPersistentModelFile' => [
 		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
@@ -1254,6 +1254,10 @@ $wi->config->settings += [
 	'wmgUseGlobalUserPage' => [
 		'default' => false,
 	],
+	'wmgUseGlobalWatchlist' => [
+		'default' => false,
+		'loginwiki' => true,
+	],
 	'wmgUseGoogleDocs4MW' => [
 		'default' => false,
 	],
@@ -1396,7 +1400,7 @@ $wi->config->settings += [
 	'wmgUseModeration' => [
 		'default' => false,
 	],
-	'wmgUseModernSkylight' => [
+	'wmgUseMonaco' => [
 		'default' => false,
 	],
 	'wmgUseMsCalendar' => [
@@ -1686,6 +1690,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseUserFunctions' => [
+		'default' => false,
+	],
+	'wmgUseUserPageEditProtection' => [
 		'default' => false,
 	],
 	'wmgUseUserWelcome' => [
@@ -2069,7 +2076,7 @@ $wi->config->settings += [
 				'user' => true,
 			],
 		],
-		'+ahinfoboxeswiki' => [
+		'+althistorywiki' => [
 			'editprotected' => [
 				'editrollbackprotected' => true,
 				'edittemplateprotected' => true,
@@ -2094,7 +2101,7 @@ $wi->config->settings += [
 	],
 	'+wgGrantPermissionGroups' => [
 		'default' => [],
-		'ahinfoboxeswiki' => [
+		'althistorywiki' => [
 			'import' => 'administration',
 		],
 		'simulatorwiki' => [
@@ -2127,6 +2134,7 @@ $wi->config->settings += [
 		],
 		'vgportdbwiki' => [
 			'Unverified_Games' => 'unverified',
+			'Incomplete_Pages' => 'unverified',
 		],
 	],
 
@@ -2212,8 +2220,9 @@ $wi->config->settings += [
 			'mw',
 			'templatewiki',
 			'wikipedia',
+			'metawikimedia',
 		],
-		'+ahinfoboxeswiki' => [
+		'+althistorywiki' => [
 			'wikimediacommons',
 		],
 		'+batfamilywiki' => [
@@ -2225,6 +2234,10 @@ $wi->config->settings += [
 			'batfamilywiki',
 			'batmanwikifandom',
 			'd',
+			
+		],
+		'+hypixelwiki' => [
+			'hypixelwikifandom',
 		],
 		'+incubatorwiki' => [
 			'wmincubator',
@@ -2251,6 +2264,7 @@ $wi->config->settings += [
 		],
 		'+snapdatawiki' => [
 			'd',
+			'snapwiki',
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
@@ -2541,6 +2555,9 @@ $wi->config->settings += [
 	'wgScoreLilyPond' => [
 		'default' => '/dev/null',
 	],
+	'wgScoreDisableExec' => [
+		'default' => true,
+	],
 
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
@@ -2658,6 +2675,11 @@ $wi->config->settings += [
 				'userrights' => true,
 			],
 		],
+    		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+autocountwiki' => [
 			'authors' => [
 				'torunblocked' => true,
@@ -2693,6 +2715,9 @@ $wi->config->settings += [
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
+			],
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
 			],
 		],
 		'+igrovyesistemywiki' => [
@@ -2762,6 +2787,11 @@ $wi->config->settings += [
 		'+ldapwikiwiki' => [
 			'sysop' => [
 				'managewiki-restricted' => true,
+			],
+		],
+		'+lhmnwiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
 			],
 		],
     		'+memeswiki' => [
@@ -2930,10 +2960,12 @@ $wi->config->settings += [
 				'editincidents',
 				'editothersprofiles-private',
 				'flow-suppress',
+				'generate-random-hash',
 				'globalblock',
 				'globalblock-exempt',
 				'globalgroupmembership',
 				'globalgrouppermissions',
+				'handle-pii',
 				'hideuser',
 				'interwiki',
 				'investigate',
@@ -3445,7 +3477,6 @@ $wi->config->settings += [
 				'default' => [
 					'MinimalPasswordLength' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3455,7 +3486,6 @@ $wi->config->settings += [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3465,7 +3495,6 @@ $wi->config->settings += [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3475,7 +3504,6 @@ $wi->config->settings += [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3487,10 +3515,8 @@ $wi->config->settings += [
 				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
 				'PasswordCannotMatchUsername' => 'PasswordPolicyChecks::checkPasswordCannotMatchUsername',
 				'PasswordCannotBeSubstringInUsername' => 'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
-				'PasswordCannotMatchBlacklist' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
 				'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
 				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
-				'PasswordNotInLargeBlacklist' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
 				'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
 			],
 		],
@@ -3501,7 +3527,6 @@ $wi->config->settings += [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3511,24 +3536,22 @@ $wi->config->settings += [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						],
+					],
 					'trustandsafety' => [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchBlacklist' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						],
 					],
 				],
+			],
 
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
@@ -3635,7 +3658,7 @@ $wi->config->settings += [
 		'default' => [ 50, 100, 250, 500 ],
 	],
 
-	// RelatedArticles settings
+	// RelatedArticles
 	'wgRelatedArticlesFooterWhitelistedSkins' => [
 		'default' => [
 			'minerva',
@@ -3645,6 +3668,17 @@ $wi->config->settings += [
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'wmgUseRelatedArticles' => false,
+	],
+
+	// RemovePII
+	'wgRemovePIIHashPrefixOptions' => [
+		'default' => [
+			'Trust and Safety' => 'MirahezeGDPR_',
+			'Stewards' => 'Vanished user ',
+		],
+	],
+	'wgRemovePIIHashPrefix' => [
+		'default' => 'MirahezeGDPR_',
 	],
 
 	// ReplaceText
@@ -3660,7 +3694,10 @@ $wi->config->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-		'+ahinfoboxeswiki' => [
+    		'+allpediawiki' => [
+			'editextendedconfirmedprotected',
+		],
+		'+althistorywiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
@@ -3688,6 +3725,7 @@ $wi->config->settings += [
 		],
 		'+hypopediawiki' => [
 			'bureaucrat',
+			'editextendedconfirmedprotected',
 		],
 		'+igrovyesistemywiki' => [
 			'trusted',
@@ -3695,6 +3733,9 @@ $wi->config->settings += [
 			'bureaucrat',
 			'ceo',
 			'co',
+		],
+		'+lhmnwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
@@ -3744,7 +3785,10 @@ $wi->config->settings += [
 	// Rights
 	'+wgAvailableRights' => [
 		'default' => [],
-		'ahinfoboxeswiki' => [
+    		'allpediawiki' => [
+			'editextendedconfirmedprotected',
+		],
+		'althistorywiki' => [
 			'editrollbackprotected',
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
@@ -3757,6 +3801,12 @@ $wi->config->settings += [
 		'famepediawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'hypopediawiki' => [
+			'editextendedconfirmedprotected',
+		],
+		'lhmnwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
@@ -3783,6 +3833,10 @@ $wi->config->settings += [
 		'default' => [
 			'localhost',
 			'127.0.0.1',
+		],
+		'+snapwikiwiki' => [
+			'smerge.imp.fu-berlin.de',
+			'www.hinkler.com.au',
 		],
 	],
 
@@ -3818,6 +3872,11 @@ $wi->config->settings += [
 		'wmgUseRSS' => [
 			"*",
 		],
+	],
+	
+	// ScratchBlocks
+	'wgScratchBlocks4BlockVersion' => [
+		'default' => 3,
 	],
 
 	// Scribunto
@@ -4140,9 +4199,6 @@ $wi->config->settings += [
 	'wgTranslateTranslationServices' => [
 		'default' => [],
 	],
-	'wmgUseYandexTranslate' => [
-		'default' => false,
-	],
 
 	// Uploads
  	'wmgPrivateUploads' => [
@@ -4201,6 +4257,11 @@ $wi->config->settings += [
 		'default' => false, // DO NOT set to true under any circumstances --Reception123
 	],
 
+	// UserPageEditProtection
+	'wgOnlyUserEditUserPage' => [
+		'wmgUseUserPageEditProtection' => true,
+	],
+
 	// Vanish (MW 1.34+)
 	'wgUseCdn' => [
 		'default' => true,
@@ -4208,9 +4269,10 @@ $wi->config->settings += [
 	'wgCdnServers' => [
 		'default' => [
 			'128.199.139.216:81', // cp3
-			'51.195.236.219:81', // cp10
-			'51.195.236.250:81', // cp11
+			// '51.195.236.219:81', // cp10
+			// '51.195.236.250:81', // cp11
 			'51.222.25.132:81', // cp12
+			'51.38.69.175:81', // cp13
 		],
 	],
 	
@@ -4252,10 +4314,16 @@ $wi->config->settings += [
 	'wmgAllowEntityImport' => [
 		'default' => false,
 	],
+	'wmgCanonicalUriProperty' => [
+		'default' => false,
+	],
 	'wmgEnableEntitySearchUI' => [
 		'default' => false,
 	],
 	'wmgFederatedPropertiesEnabled' => [
+		'default' => false,
+	],
+	'wmgFormatterUrlProperty' => [
 		'default' => false,
 	],
 	'wmgWikibaseRepoDatabase' => [
@@ -4269,6 +4337,12 @@ $wi->config->settings += [
 	],
 	'wmgWikibasePropertyNamespaceID' => [
 		'default' => 120
+	],
+	'wmgWikibaseRepoItemNamespaceID' => [
+		'default' => 860
+	],
+	'wmgWikibaseRepoPropertyNamespaceID' => [
+		'default' => 862
 	],
 	'wgEnableWikibaseClient' => [
 		'default' => false,
@@ -4449,6 +4523,8 @@ $wi->config->settings += [
 			'dynamic-sidebar' => false,
 			'editpage' => false,
 			'Echo' => 'debug',
+			'EditConflict' => 'error',
+			'EditConstraintRunner' => 'error',
 			'error' => 'debug',
 			'error-json' => false,
 			'EventLogging' => false,
@@ -4626,6 +4702,7 @@ if ( wfHostname() === 'test3' ) {
 	if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
 		$wgProfiler['output'] = [ 'ProfilerOutputText' ];
+		$wgProfiler['flags'] = TIDEWAYS_XHPROF_FLAGS_CPU;
 		$wgProfiler['visible'] = false;
 	}
 }

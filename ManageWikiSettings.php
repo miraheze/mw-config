@@ -776,15 +776,6 @@ $wgManageWikiSettings = [
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 		'requires' => [],
 	],
-	'wmgUseYandexTranslate' => [
-		'name' => 'Use Yandex Machine Translation on Special:Translate',
-		'from' => 'translate',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'localisation',
-		'help' => 'Adds suggestions from Yandex to Special:Translate',
-		'requires' => [],
-	],
 
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
@@ -1078,6 +1069,9 @@ $wgManageWikiSettings = [
 			'md' => 'md',
 			'mid' => 'mid',
 			'midi' => 'midi',
+			'mma' => 'mma',
+			'mmf' => 'mmf',
+			'mmt' => 'mmt',
 			'mkv' => 'mkv',
 			'mod' => 'mod',
 			'mov' => 'mov',
@@ -1946,7 +1940,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgCosmosProfileTagGroups' => [
+	'wgCosmosSocialProfileTagGroups' => [
 		'name' => 'Cosmos User Group Tags',
 		'from' => 'cosmos',
 		'type' => 'usergroups',
@@ -1965,7 +1959,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgCosmosNumberofGroupTags' => [
+	'wgCosmosSocialProfileNumberofGroupTags' => [
 		'name' => 'Cosmos Number of Group Tags',
 		'from' => 'cosmos',
 		'type' => 'integer',
@@ -2622,6 +2616,17 @@ $wgManageWikiSettings = [
 		'help' => 'When enabled, this shows Popups by default.',
 		'requires' => [],
 	],
+	'wgScratchBlocks4BlockVersion' => [
+		'name' => 'Default Scratch Blocks version',
+		'from' => 'scratchblocks',
+		'type' => 'integer',
+		'minint' => 2,
+		'maxint' => 3,
+		'overridedefault' => 3,
+		'section' => 'styling',
+		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.',
+		'requires' => [],
+	],	
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
@@ -2651,6 +2656,15 @@ $wgManageWikiSettings = [
 		'help' => 'Allow importing entities via Special:Import and importDump.php.',
 		'requires' => [],
 	],
+	'wmgCanonicalUriProperty' => [
+		'name' => 'Canonical Uri Property',
+		'from' => 'wikibaserepository',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Property to be used on properties that defines a URI pattern which is used to link external identifiers in RDF and other exports.',
+		'requires' => [],
+	],
 	'wmgEnableEntitySearchUI' => [
 		'name' => 'Enable Entity Search UI',
 		'from' => 'wikibaserepository',
@@ -2667,6 +2681,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'wikibase',
 		'help' => 'To determine if federated properties should be enabled or not.',
+		'requires' => [],
+	],
+	'wmgFormatterUrlProperty' => [
+		'name' => 'Formatter Url Property',
+		'from' => 'wikibaserepository',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Property to be used on properties that defines a formatter URL which is used to link external identifiers.',
 		'requires' => [],
 	],
 	'wmgWikibaseItemNamespaceID' => [
@@ -2689,6 +2712,28 @@ $wgManageWikiSettings = [
 		'overridedefault' => 120,
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Property namespace on the upstream Wikibase installation. Leave as-is if unsure.',
+		'requires' => [],
+	],
+	'wmgWikibaseRepoItemNamespaceID' => [
+		'name' => 'Repository Item Namespace ID',
+		'from' => 'wikibaserepository',
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 860,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Item namespace for Wikibase Repository.',
+		'requires' => [],
+	],
+	'wmgWikibasePropertyNamespaceID' => [
+		'name' => 'Repository Property Namespace ID',
+		'from' => 'wikibaserepository',
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 9999,
+		'overridedefault' => 862,
+		'section' => 'wikibase',
+		'help' => 'Namespace ID of the Property namespace for Wikibase Repository.',
 		'requires' => [],
 	]
 ];
