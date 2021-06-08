@@ -157,6 +157,10 @@ if ( $wmgUseCosmos ) {
 	wfLoadSkin( 'Cosmos' );
 }
 
+if ( $wmgUseCountDownClock ) {
+	wfLoadExtension( 'CountDownClock' );
+}
+
 if ( $wmgUseCreatePage ) {
 	require_once "$IP/extensions/CreatePage/CreatePage.php";
 }
