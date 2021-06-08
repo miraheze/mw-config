@@ -2662,14 +2662,14 @@ $wi->config->settings += [
 				'suppressionlog' => true,
 				'suppressrevision' => true,
 			],
-			'user' => [
-				'mwoauthmanagemygrants' => true,
-				'user' => true,
-			],
 			'steward' => [
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
+			],
+			'user' => [
+				'mwoauthmanagemygrants' => true,
+				'user' => true,
 			],
 		],
     		'+allpediawiki' => [
@@ -2946,6 +2946,7 @@ $wi->config->settings += [
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
+				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-oversight',
 				'centralauth-rename',
@@ -3013,7 +3014,6 @@ $wi->config->settings += [
 				'viewmyprivateinfo', 
 				'viewmywatchlist',
 				'managewiki',
-
 			],
 		],
 	],
