@@ -1143,6 +1143,9 @@ $wi->config->settings += [
 	'wmgUseCosmos' => [
 		'default' => false,
 	],
+	'wmgUseCountDownClock' => [
+		'default' => false,
+	],
 	'wmgUseCreatePage' => [
 		'default' => false,
 	],
