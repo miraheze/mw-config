@@ -338,6 +338,14 @@ $wgManageWikiExtensions = [
 			],
 			'section' => 'parserhooks',
 		],
+		'countdownclock' => [
+			'name' => 'CountDownClock',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CountDownClock',
+			'var' => 'wmgUseCountDownClock',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'parserhooks',
+		],
 		'createpage' => [
 			'name' => 'Create Page',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Create_Page',
