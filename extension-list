@@ -40,6 +40,7 @@ $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContributionScores/extension.json
 $IP/extensions/CookieWarning/extension.json
+$IP/extensions/CountDownClock/extension.json
 $IP/extensions/CreatePage/CreatePage.php
 $IP/extensions/CreatePageUw/extension.json
 $IP/extensions/CreateRedirect/extension.json
@@ -267,7 +268,6 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
-$IP/extensions/CountDownClock/extension.json
 $IP/skins/Citizen/skin.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/Cosmos/skin.json
