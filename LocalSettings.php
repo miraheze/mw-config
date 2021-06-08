@@ -2221,6 +2221,10 @@ $wi->config->settings += [
 			'batfamilywiki',
 			'batmanwikifandom',
 			'd',
+			
+		],
+		'+hypixelwiki' => [
+			'hypixelwikifandom',
 		],
 		'+incubatorwiki' => [
 			'wmincubator',
@@ -2645,14 +2649,14 @@ $wi->config->settings += [
 				'suppressionlog' => true,
 				'suppressrevision' => true,
 			],
-			'user' => [
-				'mwoauthmanagemygrants' => true,
-				'user' => true,
-			],
 			'steward' => [
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
+			],
+			'user' => [
+				'mwoauthmanagemygrants' => true,
+				'user' => true,
 			],
 		],
     		'+allpediawiki' => [
@@ -2929,6 +2933,7 @@ $wi->config->settings += [
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
+				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-oversight',
 				'centralauth-rename',
@@ -2996,7 +3001,6 @@ $wi->config->settings += [
 				'viewmyprivateinfo', 
 				'viewmywatchlist',
 				'managewiki',
-
 			],
 		],
 	],
@@ -3814,6 +3818,10 @@ $wi->config->settings += [
 			'localhost',
 			'127.0.0.1',
 		],
+		'+snapwikiwiki' => [
+			'smerge.imp.fu-berlin.de',
+			'www.hinkler.com.au',
+		],
 	],
 
 	// Robot policy
@@ -4318,6 +4326,12 @@ $wi->config->settings += [
 	],
 	'wmgWikibasePropertyNamespaceID' => [
 		'default' => 120
+	],
+	'wmgWikibaseRepoItemNamespaceID' => [
+		'default' => 860
+	],
+	'wmgWikibaseRepoPropertyNamespaceID' => [
+		'default' => 862
 	],
 	'wgEnableWikibaseClient' => [
 		'default' => false,
