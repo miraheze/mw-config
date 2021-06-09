@@ -864,6 +864,9 @@ $wi->config->settings += [
 	'wgDBuser' => [
 		'default' => 'mediawiki',
 	],
+	'wgMiserMode' => [
+		'default' => true,
+	],
 	'wgReadOnly' => [
 		'default' => false,
 	],
