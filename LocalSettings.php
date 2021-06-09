@@ -1941,7 +1941,7 @@ $wi->config->settings += [
 			5258, // Void (Board)
 			13554, // Paladox (SRE)
 			24689, // RobLa (Board)
-			57564, // RhinosF1 (SRE)
+			243629, // Samuel (Miraheze) - (RhinosF1 (SRE))
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 		],
