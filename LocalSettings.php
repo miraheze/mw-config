@@ -621,6 +621,11 @@ $wi->config->settings += [
 		],
 	],
 
+	// temporary - DO NOT set to any wikis to true -- Universal Omega
+	'wgCosmosEnableWantedPages' => [
+		'default' => false,
+	],
+
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
 		'default' => [
