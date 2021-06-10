@@ -974,6 +974,10 @@ if ( $wmgUseWikibaseLexeme ) {
 	wfLoadExtension( 'WikibaseLexeme' );
 }
 
+if ( $wmgUseWikibaseLocalMedia ) {
+       wfLoadExtension( 'WikibaseLocalMedia' )
+}
+
 if ( $wmgUseWikibaseQualityConstraints ) {
 	wfLoadExtension( 'WikibaseQualityConstraints' );
 }
