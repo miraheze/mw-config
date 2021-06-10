@@ -263,6 +263,7 @@ $IP/extensions/WikiTextLoggedInOut/extension.json
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/WikibaseLexeme/extension.json
+$IP/extensions/WikibaseLocalMedia/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
