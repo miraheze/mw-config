@@ -3219,7 +3219,6 @@ $wi->config->settings += [
 	],
 	'wgNativeImageLazyLoading' => [
 		'default' => false,
-		'idolish7wiki' => true,
 	],
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
