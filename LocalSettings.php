@@ -378,6 +378,9 @@ $wi->config->settings += [
 	'wgCheckUserForceSummary' => [
 		'default' => true,
 	],
+	'wgCheckUserEnableSpecialInvestigate' => [
+		'default' => true,
+	],
 
 	// Citizen
 	'wgCitizenThemeDefault' => [
@@ -755,17 +758,17 @@ $wi->config->settings += [
 		'default' => [
 			"$IP/maintenance/tables.sql",
 			"$IP/maintenance/tables-generated.sql",
-			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+			"$IP/extensions/AbuseFilter/db_patches/mysql/abusefilter.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
-			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
+			"$IP/extensions/BetaFeatures/sql/tables-generated.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/DataDump/sql/data_dump.sql",
 			"$IP/extensions/Echo/echo.sql",
-			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
+			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
+			"$IP/extensions/UrlShortener/schemas/tables-generated.sql"
 		],
 	],
 	'wgCreateWikiStateDays' => [
@@ -1783,33 +1786,17 @@ $wi->config->settings += [
 	'wgFlaggedRevsTags' => [
 		'default' => [
 			'status' => [
-				'quality' => 1,
 				'levels' => 2,
-				'pristine' => 3,
 			],
 		],
 		'infectopedwiki' => [
 			'accuracy' => [
 				'levels' => 4,
-				'quality' => 2,
-				'pristine' => 4,
-			],
-			'depth' => [
-				'levels' => 4,
-				'quality' => 2,
-				'pristine' => 4,
-			],
-			'tone' => [
-				'levels' => 4,
-				'quality' => 1,
-				'pristine' => 4,
 			],
 		],
 		'isvwiki' => [
 			'status' => [
 				'levels' => 1,
-				'quality' => 2,
-				'pristine' => 4,
 			],
 		],
 	],
@@ -4137,6 +4124,11 @@ $wi->config->settings += [
 	],
 	'wgTimelessWordmark' => [
 		'default' => null,
+	],
+
+	// Timeline
+	'wgTimelineFontDirectory' => [
+		'default' => '/usr/share/fonts/truetype/freefont',
 	],
 
 	// Timezone
