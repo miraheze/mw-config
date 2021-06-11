@@ -975,7 +975,7 @@ if ( $wmgUseWikibaseLexeme ) {
 }
 
 if ( $wmgUseWikibaseLocalMedia ) {
-       wfLoadExtension( 'WikibaseLocalMedia' )
+       wfLoadExtension( 'WikibaseLocalMedia' );
 }
 
 if ( $wmgUseWikibaseQualityConstraints ) {
