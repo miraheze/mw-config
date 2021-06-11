@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 57;
 */
 
 # Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -23,11 +23,12 @@ $wgMajorSiteNoticeID = 57;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze will be performing maintenance on May 20th, 2021 between 20:00 UTC and 20:30 UTC. During this maintenance window, you will not be able to view or upload images or videos.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze plans to upgrade to the latest version of MediaWiki (1.36) tomorrow (Saturday) from 19:00 UTC time to approximately 21:00 UTC. Editing wikis will not be possible during this time. Please make sure to save your edits 5 minutes before the upgrade begins.
+</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
-} */
+}
 
 # Specific wiki SiteNotice
 /* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
