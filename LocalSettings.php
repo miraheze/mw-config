@@ -874,6 +874,7 @@ $wi->config->settings += [
 		'r4356thwiki' => true,
 		'snapwikiwiki' => true,
 		'test3wiki' => true,
+		'testwiki' => true,
 		'theboyswiki' => true,
 	],
 	'wgReadOnly' => [
