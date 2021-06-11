@@ -865,7 +865,16 @@ $wi->config->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgMiserMode' => [
-		'default' => true,
+		'default' => false,
+		'batmanwiki' => true,
+		'cosmoswiki' => true,
+		'darkangelwiki' => true,
+		'dcmultiversewiki' => true,
+		'metawiki' => true,
+		'r4356thwiki' => true,
+		'snapwikiwiki' => true,
+		'test3wiki' => true,
+		'theboyswiki' => true,
 	],
 	'wgReadOnly' => [
 		'default' => false,
