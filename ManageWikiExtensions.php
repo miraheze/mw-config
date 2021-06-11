@@ -3054,6 +3054,18 @@ $wgManageWikiExtensions = [
 			],
 			'section' => 'other',
 		],
+		'wikibaselocalmedia' => [
+			'name' => 'WikibaseLocalMedia',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikibaseLocalMedia',
+			'var' => 'wmgUseWikibaseLocalMedia',
+			'conflicts' => false,
+			'requires' => [
+				'extensions' => [
+					'wikibaserepository',
+				],	
+			],
+			'section' => 'other',
+		],
 		'wikibasequalityconstraints' => [
 			'name' => 'WikibaseQualityConstraints',
 			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikibaseQualityConstraints',
