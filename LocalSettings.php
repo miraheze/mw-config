@@ -623,6 +623,9 @@ $wi->config->settings += [
 			],
 		],
 	],
+	'wgCosmosEnableWantedPages' => [
+		'default' => false,
+	],
 
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
@@ -1928,7 +1931,7 @@ $wi->config->settings += [
 			5258, // Void (Board)
 			13554, // Paladox (SRE)
 			24689, // RobLa (Board)
-			57564, // RhinosF1 (SRE)
+			243629, // Samuel (Miraheze) - (RhinosF1 (SRE))
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 		],
@@ -3201,7 +3204,6 @@ $wi->config->settings += [
 	],
 	'wgNativeImageLazyLoading' => [
 		'default' => false,
-		'idolish7wiki' => true,
 	],
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',

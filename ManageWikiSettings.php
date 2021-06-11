@@ -926,6 +926,15 @@ $wgManageWikiSettings = [
 		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
 		'requires' => [],
 	],
+	'wgNativeImageLazyLoading' => [
+		'name' => 'Native Image Lazy Loading',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Toggles native image lazy loading, via the "loading" attribute.',
+		'requires' => [],
+	],
 	'wgSVGConverter' => [
 		'name' => 'SVG Converter',
 		'from' => 'mediawiki',
