@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 57;
 */
 
 # Global SiteNotice
- if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -27,7 +27,7 @@ $wgMajorSiteNoticeID = 57;
 			</tr></tbody></table>
 		EOF;
 	}
-} 
+} */
 
 # Specific wiki SiteNotice
 /* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
