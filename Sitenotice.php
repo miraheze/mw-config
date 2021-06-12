@@ -30,7 +30,7 @@ $wgMajorSiteNoticeID = 57;
 } 
 
 # Specific wiki SiteNotice
-/* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
+ if ( $wmgUseDiscussionTools ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -38,8 +38,8 @@ $wgMajorSiteNoticeID = 57;
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td>Unfortunately, between 3 January 2021 and 28 April 2021, Discord & Slack Webhook URLs were available via the MediaWiki API due to <a href="https://github.com/miraheze/ManageWiki/security/advisories/GHSA-jmc9-rv2f-g8vv">GHSA-jmc9-rv2f-g8vv</a>. We advise you to consider resetting and replacing your Discord or Slack webhook via Special:ManageWiki/settings.</td>
+				<td>Unfortunately, Miraheze has had to temporarily disable the DiscussionTools extension due to it causing an error with MediaWiki 1.36 - A fix has been submitted for review, and the extension will be re-enabled ASAP.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
-} */
+} 
