@@ -871,7 +871,7 @@ $wi->config->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => 'Upgrading to MediaWiki 1.36',
+		'default' => false,
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
