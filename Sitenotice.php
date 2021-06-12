@@ -23,7 +23,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.36.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.36.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task. Additionally and unfortunately, Miraheze has had to temporarily disable the <a href="https://www.mediawiki.org/wiki/Extension:DiscussionTools" target="_blank">DiscussionTools</a> extension due a technical issue with compatibility. A patch has been submitted for review, and it will be reenabled as soon as possible. Thank you</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
