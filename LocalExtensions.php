@@ -204,7 +204,7 @@ if ( $wmgUseDisambiguator ) {
 }
 
 if ( $wmgUseDiscussionTools ) {
-	# wfLoadExtension( 'DiscussionTools' );
+	wfLoadExtension( 'DiscussionTools' );
 }
 
 if ( $wmgUseDisplayTitle ) {
