@@ -207,7 +207,7 @@ $wgLogos = [
 ];
 
 if ( $wgIcon ) {
-	$wgLogos['icon'] = $wgicon;
+	$wgLogos['icon'] = $wgIcon;
 }
 
 if ( $wgWordmark ) {
