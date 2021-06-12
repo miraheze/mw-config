@@ -2164,6 +2164,15 @@ $wgManageWikiSettings = [
 		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "18"',
 		'requires' => [],
 	],
+	'wgIcon' => [
+		'name' => 'Icon',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'A version of the logo without wordmark and tagline.',
+		'requires' => [],
+	],
 	'wmgWikiapiaryFooterPageName' => [
 		'name' => 'Wikiapiary Footer Page Name',
 		'from' => 'mediawiki',
