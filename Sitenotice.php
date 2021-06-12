@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 57;
+$wgMajorSiteNoticeID = 58;
 
 /**
 * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 57;
 */
 
 # Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -23,11 +23,11 @@ $wgMajorSiteNoticeID = 57;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze plans to upgrade to the latest version of MediaWiki (1.36) on Saturday (12 June, 2021) from 19:00 UTC time to approximately 21:00 UTC. Editing wikis will not be possible during this time. Please make sure to save your edits 5 minutes before the upgrade begins.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.36.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
-} */
+}
 
 # Specific wiki SiteNotice
 /* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
