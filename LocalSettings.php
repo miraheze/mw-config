@@ -870,6 +870,19 @@ $wi->config->settings += [
 	'wgDBuser' => [
 		'default' => 'mediawiki',
 	],
+	'wgMiserMode' => [
+		'default' => false,
+		'batmanwiki' => true,
+		'cosmoswiki' => true,
+		'darkangelwiki' => true,
+		'dcmultiversewiki' => true,
+		'metawiki' => true,
+		'r4356thwiki' => true,
+		'snapwikiwiki' => true,
+		'test3wiki' => true,
+		'testwiki' => true,
+		'theboyswiki' => true,
+	],
 	'wgReadOnly' => [
 		'default' => false,
 	],
