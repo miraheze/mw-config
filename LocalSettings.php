@@ -1947,7 +1947,6 @@ $wi->config->settings += [
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
 			5258, // Void (Board)
-			13554, // Paladox (SRE)
 			24689, // RobLa (Board)
 			243629, // Samuel (Miraheze) - (RhinosF1 (SRE))
 			73651, // Owen (Board)
