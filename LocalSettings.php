@@ -4365,13 +4365,6 @@ $wi->config->settings += [
 					'nick' => '$$$nick$$$',
 				],
 			],
-			'freenodeChat' => [
-				'url' => '//webchat.freenode.net/',
-				'parameters' => [
-					'channel' => '$$$channel$$$',
-					'nick' => '$$$nick$$$',
-				],
-			],
 		],
 	],
 
