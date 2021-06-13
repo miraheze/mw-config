@@ -1,34 +1,34 @@
 <?php
 /**
-* ManageWiki extensions and skins are added using the variable below.
-*
-* name: the displayed name of the setting on Special:ManageWikiExtensions.
-* linkPage: full url for an information page for the extension.
-* var: the relevant var that enables the extension.
-* conflicts: string of extensions that cause this extension to not work.
-* requires: an array. See below for available options.
-* install: an array. See below for available options.
-* remove: an array. See install for available options.
-* section: string name of groupings for extension.
-*
-* 'requires' can be one of:
-*
-* activeusers: max integer amount of active users a wiki may have in order to enable this extension.
-* articles: max integer amount of articles a wiki may have in order to enable this extension.
-* extensions: array of other extensions that must be enabled in order to enable this extension.
-* pages: max integer amount of pages a wiki may have in order to enable this extension.
-* permissions: array of permissions a user must have to be able to enable this extension. Regardless of this value, a user must always have the managewiki permission.
-* visibility['state']: can be either 'private' or 'public'. If set to 'private' this extension can only be enabled on private wikis. If set to 'public' it can only be enabled on public wikis.
-*
-* 'install'/'remove' can be one of:
-*
-* files: array, mapped to location => source.
-* mwscript: array, mapped to script path => array of options.
-* namespaces: array of which namespaces and namespace data to install with extension; 'remove' only needs namespace ID.
-* permissions: array of which permissions to install with extension.
-* settings: array of ManageWikiSettings to modify when the extension is enabled, mapped variable => value.
-* sql: array of sql files to install with extension, mapped table name => sql file path.
-*/
+ * ManageWiki extensions and skins are added using the variable below.
+ *
+ * name: the displayed name of the setting on Special:ManageWikiExtensions.
+ * linkPage: full url for an information page for the extension.
+ * var: the relevant var that enables the extension.
+ * conflicts: string of extensions that cause this extension to not work.
+ * requires: an array. See below for available options.
+ * install: an array. See below for available options.
+ * remove: an array. See install for available options.
+ * section: string name of groupings for extension.
+ *
+ * 'requires' can be one of:
+ *
+ * activeusers: max integer amount of active users a wiki may have in order to enable this extension.
+ * articles: max integer amount of articles a wiki may have in order to enable this extension.
+ * extensions: array of other extensions that must be enabled in order to enable this extension.
+ * pages: max integer amount of pages a wiki may have in order to enable this extension.
+ * permissions: array of permissions a user must have to be able to enable this extension. Regardless of this value, a user must always have the managewiki permission.
+ * visibility['state']: can be either 'private' or 'public'. If set to 'private' this extension can only be enabled on private wikis. If set to 'public' it can only be enabled on public wikis.
+ *
+ * 'install'/'remove' can be one of:
+ *
+ * files: array, mapped to location => source.
+ * mwscript: array, mapped to script path => array of options.
+ * namespaces: array of which namespaces and namespace data to install with extension; 'remove' only needs namespace ID.
+ * permissions: array of which permissions to install with extension.
+ * settings: array of ManageWikiSettings to modify when the extension is enabled, mapped variable => value.
+ * sql: array of sql files to install with extension, mapped table name => sql file path.
+ */
 
 $wgManageWikiExtensions = [
 	// API
