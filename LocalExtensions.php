@@ -79,7 +79,7 @@ if ( $wmgUseCargo ) {
 }
 
 if ( $wmgUseCategorySortHeaders ) {
-	require_once "$IP/extensions/CategorySortHeaders/CategorySortHeaders.php";
+	wfLoadExtension( 'CategorySortHeaders' );
 }
 
 if ( $wmgUseCategoryTree ) {
@@ -162,7 +162,7 @@ if ( $wmgUseCountDownClock ) {
 }
 
 if ( $wmgUseCreatePage ) {
-	require_once "$IP/extensions/CreatePage/CreatePage.php";
+	wfLoadExtension( 'CreatePage' );
 }
 if ( $wmgUseCreatePageUw ) {
 	wfLoadExtension( 'CreatePageUw' );
@@ -408,11 +408,11 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 }
 
 if ( $wmgUseLanguageSelector ) {
-	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
+	wfLoadExtension( 'LanguageSelector' );
 }
 
 if ( $wmgUseLastModified ) {
-	require_once "$IP/extensions/LastModified/LastModified.php";
+	wfLoadExtension( 'LastModified' );
 }
 
 if ( $wmgUseLdap ) {
@@ -574,7 +574,7 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseNewUserNotif ) {
-	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
+	wfLoadExtension( 'NewUserNotif' );
 }
 
 if ( $wmgUseNimbus ) {
@@ -646,7 +646,7 @@ if ( $wmgUsePdfHandler ) {
 }
 
 if ( $wmgUsePipeEscape ) {
-	require_once "$IP/extensions/PipeEscape/PipeEscape.php";
+	wfLoadExtension( 'PipeEscape' );
 }
 
 if ( $wmgUsePivot ) {
@@ -737,7 +737,7 @@ if ( $wmgUseRevisionSlider ) {
 }
 
 if ( $wmgUseRightFunctions ) {
-	require_once "$IP/extensions/RightFunctions/RightFunctions.php";
+	wfLoadExtension( 'RightFunctions' );
 }
 
 if ( $wmgUseRSS ) {
@@ -904,7 +904,7 @@ if ( $wmgUseUploadsLink ) {
 }
 
 if ( $wmgUseUrlGetParameters ) {
-	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
+	wfLoadExtension( 'UrlGetParameters' );
 }
 
 if ( $wmgUseUrlShortener ) {
@@ -912,7 +912,7 @@ if ( $wmgUseUrlShortener ) {
 }
 
 if ( $wmgUseUserFunctions ) {
-	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+	wfLoadExtension( 'UserFunctions' );
 }
 
 if ( $wmgUseUserPageEditProtection ) {
@@ -967,7 +967,7 @@ if ( $wmgUseWikidataPageBanner ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 }
 
 if ( $wmgUseWikibaseLexeme ) {
@@ -983,7 +983,7 @@ if ( $wmgUseWikibaseQualityConstraints ) {
 }
 
 if ( $wmgUseWikibaseRepository ) {
-	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
 }
 
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {

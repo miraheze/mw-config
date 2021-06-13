@@ -206,6 +206,10 @@ $wgLogos = [
 	'1x' => $wgLogo,
 ];
 
+if ( $wgIcon ) {
+	$wgLogos['icon'] = $wgIcon;
+}
+
 if ( $wgWordmark ) {
 	$wgLogos['wordmark'] = [
 		'src' => $wgWordmark,

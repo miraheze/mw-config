@@ -926,6 +926,15 @@ $wgManageWikiSettings = [
 		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
 		'requires' => [],
 	],
+	'wgNativeImageLazyLoading' => [
+		'name' => 'Native Image Lazy Loading',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Toggles native image lazy loading, via the "loading" attribute.',
+		'requires' => [],
+	],
 	'wgSVGConverter' => [
 		'name' => 'SVG Converter',
 		'from' => 'mediawiki',
@@ -2153,6 +2162,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => 18,
 		'section' => 'styling',
 		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "18"',
+		'requires' => [],
+	],
+	'wgIcon' => [
+		'name' => 'Icon',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'A version of the logo without wordmark and tagline.',
 		'requires' => [],
 	],
 	'wmgWikiapiaryFooterPageName' => [
