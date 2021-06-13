@@ -129,7 +129,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'transcode' => "$IP/extensions/TimedMediaHandler/sql/TimedMediaHandler.sql"
+				'transcode' => "$IP/extensions/TimedMediaHandler/sql/tables-generated.sql"
 			],
 			'permissions' => [
 				'sysop' => [
