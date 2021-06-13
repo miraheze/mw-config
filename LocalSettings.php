@@ -625,6 +625,8 @@ $wi->config->settings += [
 	],
 	'wgCosmosEnableWantedPages' => [
 		'default' => false,
+		'batmanwiki' => true,
+		'snapwikiwiki' => true,
 	],
 
 	// CreateWiki
