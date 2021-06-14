@@ -434,7 +434,8 @@ if ( $wmgUseLiberty ) {
 }
 
 if ( $wmgUseLingo ) {
-	wfLoadExtension( 'Lingo' );
+	// Disabled, see T7472
+	#wfLoadExtension( 'Lingo' );
 }
 
 if ( $wmgUseLinkSuggest ) {
