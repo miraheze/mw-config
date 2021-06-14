@@ -4368,7 +4368,7 @@ $wi->config->settings += [
 		'wmgUseWikibaseRepository' => true,
 	],
 
-	// WebChat
+	// WebChat config
 	'wgWebChatServer' => [
 		'default' => false,
 	],
@@ -4376,27 +4376,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgWebChatClient' => [
-		'default' => 'LiberaChat',
-	],
-	'wgWebChatClients' => [
-		'default' => [
-			'Mibbit' => [
-				'url' => '//embed.mibbit.com/index.html',
-				'parameters' => [
-					'noServerMotd' => 'true',
-					'server' => '$$$server$$$',
-					'channel' => '$$$channel$$$',
-					'nick' => '$$$nick$$$',
-				],
-			],
-			'LiberaChat' => [
-				'url' => '//web.libera.chat/',
-				'parameters' => [
-					'channel' => '$$$channel$$$',
-					'nick' => '$$$nick$$$',
-				],
-			],
-		],
+		'default' => 'freenodeChat',
 	],
 
 	// WikiForum
