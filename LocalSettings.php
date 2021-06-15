@@ -1752,6 +1752,9 @@ $wi->config->settings += [
 	'wmgUseWikibaseLexeme' => [
 		'default' => false,
 	],
+	'wmgUseWikibaseLocalMedia' => [
+		'default' => false,
+	],
 	'wmgUseWikibaseQualityConstraints' => [
 		'default' => false,
 	],
