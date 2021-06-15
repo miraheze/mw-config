@@ -3058,7 +3058,7 @@ $wgManageWikiExtensions = [
 	],
 	'wikibaselocalmedia' => [
 		'name' => 'WikibaseLocalMedia',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase Local Media',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Local_Media',
 		'var' => 'wmgUseWikibaseLocalMedia',
 		'conflicts' => false,
 		'requires' => [
