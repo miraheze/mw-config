@@ -748,6 +748,7 @@ $wi->config->settings += [
 			'Organization (coordination) wiki' => 'Organization (coordination) wiki',
 			'Political simulation wiki' => 'Political simulation wiki',
 			'Roleplaying game wiki' => 'Roleplaying game wiki',
+			'Reception wiki' => 'Reception wiki',
 			'Video game (specified video game) information wiki' => 'Video game (specified video game) information wiki',
 			'Video game (broad genre or video game series) information wiki' => 'Video game (broad genre or video game series) information wiki',
 			'None of the above' => 'None of the above',
