@@ -386,18 +386,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'disqustag' => [
-		'name' => 'DisqusTag',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DisqusTag',
-		'var' => 'wmgUseDisqusTag',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'dynamicpagelist' => [
 		'name' => 'DynamicPageList',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList_(Wikimedia)',
@@ -2454,18 +2442,6 @@ $wgManageWikiExtensions = [
 			'sql' => [
 				'page_assessments' => "$IP/extensions/PageAssessments/db/addReviewsTable.sql",
 				'page_assessments_projects' => "$IP/extensions/PageAssessments/db/addProjectsTable.sql"
-			],
-		],
-		'section' => 'other',
-	],
-	'pagedisqus' => [
-		'name' => 'PageDisqus',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageDisqus',
-		'var' => 'wmgUsePageDisqus',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
 			],
 		],
 		'section' => 'other',
