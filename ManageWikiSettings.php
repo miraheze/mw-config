@@ -1849,6 +1849,34 @@ $wgManageWikiSettings = [
 		'help' => 'Disable setting the logo as the fallback SEO image if no image was provided.',
 		'requires' => [],
 	],
+	'wgWikiSeoEnableAutoDescription' => [
+		'name' => 'Enable Auto Description (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'Enable to try to request a description from textextracts, if no description was given, or the description key is set to \'textextracts\'.',
+		'requires' => [
+			'extensions' => [
+				'textextracts',
+				'wikiseo',
+			],
+		],
+	],
+	'wgWikiSeoTryCleanAutoDescription' => [
+		'name' => 'Try Clean Auto Description (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'Enable if WikiSEO should try to remove dangling sentences when using descriptions from textextracts.',
+		'requires' => [
+			'extensions' => [
+				'textextracts',
+				'wikiseo',
+			],
+		],
+	],
 
 	// SocialTools
 	'wgCosmosSocialProfileModernTabs' => [
