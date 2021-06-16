@@ -976,11 +976,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
-	// DisqusTag
-	'egDisqusShortname' => [
-		'default' => '',
-	],
-
 	// DJVU
 	'wgDjvuDump' => [
 		'default' => '/usr/bin/djvudump',
@@ -1203,9 +1198,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseDisplayTitle' => [
-		'default' => false,
-	],
-	'wmgUseDisqusTag' => [
 		'default' => false,
 	],
 	'wmgUseDuskToDawn' => [
@@ -1490,9 +1482,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUsePageAssessments' => [
-		'default' => false,
-	],
-	'wmgUsePageDisqus' => [
 		'default' => false,
 	],
 	'wmgUsePagedTiffHandler' => [
@@ -3386,11 +3375,6 @@ $wi->config->settings += [
 	],
 	'wgMWOAuthSecureTokenTransfer' => [
 		'default' => true,
-	],
-
-	// PageDisqus
-	'wgPageDisqusShortname' => [
-		'default' => '',
 	],
 
 	// Pagelang
