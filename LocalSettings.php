@@ -381,6 +381,9 @@ $wi->config->settings += [
 	'wgCheckUserEnableSpecialInvestigate' => [
 		'default' => true,
 	],
+	'wgCheckUserLogLogins' => [
+		'default' => true,
+	],
 
 	// Citizen
 	'wgCitizenThemeDefault' => [
