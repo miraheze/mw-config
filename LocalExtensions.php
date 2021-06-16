@@ -211,10 +211,6 @@ if ( $wmgUseDisplayTitle ) {
 	wfLoadExtension( 'DisplayTitle' );
 }
 
-if ( $wmgUseDisqusTag ) {
-	wfLoadExtension( 'DisqusTag' );
-}
-
 if ( $wmgUseDuskToDawn ) {
 	wfLoadSkin( 'DuskToDawn' );
 }
@@ -608,10 +604,6 @@ if ( $wmgUseOrphanedTalkPages ) {
 
 if ( $wmgUsePageAssessments ) {
 	wfLoadExtension( 'PageAssessments' );
-}
-
-if ( $wmgUsePageDisqus ) {
-	wfLoadExtension( 'PageDisqus' );
 }
 
 if ( $wmgUsePagedTiffHandler ) {
