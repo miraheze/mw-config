@@ -55,7 +55,6 @@ $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DiscordNotifications/extension.json
 $IP/extensions/DiscussionTools/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
-$IP/extensions/DisqusTag/extension.json
 $IP/extensions/DisplayTitle/extension.json
 $IP/extensions/DummyFandoomMainpageTags/extension.json
 $IP/extensions/DynamicPageList/extension.json
@@ -154,7 +153,6 @@ $IP/extensions/OAuth/extension.json
 $IP/extensions/OpenGraphMeta/extension.json
 $IP/extensions/OrphanedTalkPages/extension.json
 $IP/extensions/PageAssessments/extension.json
-$IP/extensions/PageDisqus/extension.json
 $IP/extensions/PdfBook/extension.json
 $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json

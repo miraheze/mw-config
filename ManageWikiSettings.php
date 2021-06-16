@@ -1681,32 +1681,6 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'egDisqusShortname' => [
-		'name' => 'Disqus Shortname',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the DisqusTag extension.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
-	'wgPageDisqusShortname' => [
-		'name' => 'PageDisqus Shortname',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
 	'wgHAWelcomeWelcomeUsername' => [
 		'name' => 'HAWelcome Welcome Username',
 		'from' => 'hawelcome',
