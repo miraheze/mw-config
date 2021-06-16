@@ -384,6 +384,25 @@ $wi->config->settings += [
 	'wgCheckUserLogLogins' => [
 		'default' => true,
 	],
+	'wgCheckUserCAtoollink' => [
+		'default' => 'loginwiki',
+	],
+	'wgCheckUserGBtoollink' => [
+		'default' => [
+			'centralDB' => 'loginwiki',
+			'groups' => [
+				'checkuser',
+			],
+		],
+	],
+	'wgCheckUserCAMultiLock' => [
+		'default' => [
+			'centralDB' => 'loginwiki',
+			'groups' => [
+				'checkuser',
+			],
+		],
+	],
 
 	// Citizen
 	'wgCitizenThemeDefault' => [
