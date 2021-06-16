@@ -4468,6 +4468,12 @@ $wi->config->settings += [
 	'wgWikiSeoDisableLogoFallbackImage' => [
 		'default' => false,
 	],
+	'wgWikiSeoEnableAutoDescription' => [
+		'default' => false,
+	],
+	'wgWikiSeoTryCleanAutoDescription' => [
+		'default' => false,
+	],
 
 	// CreateWiki Defined Special Variables
 	'cwClosed' => [
