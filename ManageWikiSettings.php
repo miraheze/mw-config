@@ -478,6 +478,7 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => [
 			'Freenode' => 'freenodeChat',
+			'Libera' => 'LiberaChat',
 			'Other Server' => 'Mibbit',
 		],
 		'overridedefault' => 'freenodeChat',
