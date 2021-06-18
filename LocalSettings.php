@@ -1093,6 +1093,9 @@ $wi->config->settings += [
 	'wmgUseBabel' => [
 		'default' => false,
 	],
+	'wmgUseBlueSky' => [
+		'default' => false,
+	],
 	// Must be on at all times except for ldapwikiwiki
 	'wmgUseCentralAuth' => [
 		'default' => true,
