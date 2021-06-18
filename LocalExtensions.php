@@ -70,6 +70,10 @@ if ( $wmgUseBlogPage ) {
 	wfLoadExtension( 'BlogPage' );
 }
 
+if ( $wmgUseBlueSky ) {
+	wfLoadSkin( 'BlueSky' );
+}
+
 if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 }
