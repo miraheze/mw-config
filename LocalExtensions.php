@@ -3,22 +3,10 @@
 // Set up extensions for use on wikis that are not global
 if ( $wmgUse3D ) {
 	wfLoadExtension( '3D' );
-
-	$wg3dProcessor = [
-		'/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/3d2png/3d2png.js'
-	];
-
-	$wgManageWikiSettings['wgFileExtensions']['overridedefault'][] = 'stl';
-
-	$wi->config->settings['wgFileExtensions']['default'][] = 'stl';
-
-	$wi->config->settings['wgTrustedMediaFormats']['default'][] = 'application/sla';
 }
 
 if ( $wmgUseAddThis ) {
 	wfLoadExtension( 'AddThis' );
-
-	$wgAddThisHeader = false;
 }
 
 if ( $wmgUseAddHTMLMetaAndTitle ) {
@@ -39,7 +27,7 @@ if ( $wmgUseAJAXPoll ) {
 
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
-
+	
 	$wgApexLogo = [
 		'1x' => $wgLogo,
 		'2x' => $wgLogo,
@@ -48,10 +36,6 @@ if ( $wmgUseApex ) {
 
 if ( $wmgUseApprovedRevs ) {
 	wfLoadExtension( 'ApprovedRevs' );
-
-	$wgAvailableRights[] = 'approverevisions';
-	$wgAvailableRights[] = 'viewlinktolatest';
-	$wgAvailableRights[] = 'viewapprover';
 }
 
 if ( $wmgUseArrays ) {
@@ -68,7 +52,6 @@ if ( $wmgUseArticleToCategory2 ) {
 
 if ( $wmgUseAuthorProtect ) {
 	wfLoadExtension( 'AuthorProtect' );
-	$wi->config->settings['wgRestrictionLevels']['default'][] = 'author';
 }
 
 if ( $wmgUseAutoCreateCategoryPages ) {
@@ -76,7 +59,7 @@ if ( $wmgUseAutoCreateCategoryPages ) {
 }
 
 if ( $wmgUseAutoCreatePage ) {
-	require_once "$IP/extensions/AutoCreatePage/AutoCreatePage.php";
+	wfLoadExtension( 'AutoCreatePage' );
 }
 
 if ( $wmgUseBabel ) {
@@ -85,7 +68,6 @@ if ( $wmgUseBabel ) {
 
 if ( $wmgUseBlogPage ) {
 	wfLoadExtension( 'BlogPage' );
-	$wgBlogPageDisplay['comments_of_day'] = false;
 }
 
 if ( $wmgUseCentralAuth ) {
@@ -97,7 +79,7 @@ if ( $wmgUseCargo ) {
 }
 
 if ( $wmgUseCategorySortHeaders ) {
-	require_once "$IP/extensions/CategorySortHeaders/CategorySortHeaders.php";
+	wfLoadExtension( 'CategorySortHeaders' );
 }
 
 if ( $wmgUseCategoryTree ) {
@@ -122,13 +104,10 @@ if ( $wmgUseCiteThisPage ) {
 
 if ( $wmgUseCitoid ) {
 	wfLoadExtension( 'Citoid' );
-
-	$wgCitoidFullRestbaseURL = "https://{$wi->hostname}/{$wi->hostname}/";
 }
 
 if ( $wmgUseCleanChanges ) {
 	wfLoadExtension( 'CleanChanges' );
-	$wi->config->settings['+wgDefaultUserOptions']['default']['usenewrc'] = 1;
 }
 
 if ( $wmgUseCodeEditor ) {
@@ -148,12 +127,10 @@ if ( $wmgUseCollection ) {
 		'Collection',
 		'ElectronPdfService',
 	] );
+}
 
-	$wgCommunityCollectionNamespace = 5;
-
-	$wgCollectionMWServeURL = 'https://ocg-lb.miraheze.org';
-
-	$wgCollectionPODPartners = [];
+if ( $wmgUseCommentbox ) {
+	wfLoadExtension( 'Commentbox' );
 }
 
 if ( $wmgUseCommentStreams ) {
@@ -173,15 +150,19 @@ if ( $wmgUseContactPage ) {
 }
 
 if ( $wmgUseContributionScores ) {
-	require_once "$IP/extensions/ContributionScores/ContributionScores.php";
+	wfLoadExtension( 'ContributionScores' );
 }
 
-if ( $wmgUseCosmos ){
+if ( $wmgUseCosmos ) {
 	wfLoadSkin( 'Cosmos' );
 }
 
+if ( $wmgUseCountDownClock ) {
+	wfLoadExtension( 'CountDownClock' );
+}
+
 if ( $wmgUseCreatePage ) {
-	require_once "$IP/extensions/CreatePage/CreatePage.php";
+	wfLoadExtension( 'CreatePage' );
 }
 if ( $wmgUseCreatePageUw ) {
 	wfLoadExtension( 'CreatePageUw' );
@@ -216,8 +197,6 @@ if ( $wmgUseDeleteUserPages ) {
 
 if ( $wmgUseDescription2 ) {
 	wfLoadExtension( 'Description2' );
-
-	$wgEnableMetaDescriptionFunctions = true;
 }
 
 if ( $wmgUseDisambiguator ) {
@@ -230,14 +209,6 @@ if ( $wmgUseDiscussionTools ) {
 
 if ( $wmgUseDisplayTitle ) {
 	wfLoadExtension( 'DisplayTitle' );
-}
-
-if ( $wmgUseDismissableSiteNotice ) {
-	wfLoadExtension( 'DismissableSiteNotice' );
-}
-
-if ( $wmgUseDisqusTag ) {
-	wfLoadExtension( 'DisqusTag' );
 }
 
 if ( $wmgUseDuskToDawn ) {
@@ -281,7 +252,7 @@ if ( $wmgUseErudite ) {
 }
 
 if ( $wmgUseFancyBoxThumbs ) {
-	require_once "$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php";
+	wfLoadExtension( 'FancyBoxThumbs' );
 }
 
 if ( $wmgUseFemiwiki ) {
@@ -294,13 +265,6 @@ if ( $wmgUseFlaggedRevs ) {
 
 if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
-
-	$wi->config->settings['wgManageWikiPermissionsAdditionalRights']['default']['oversight']['flow-suppress'] = true;
-	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Flow'] = 'flow-board';
-}
-
-if ( $wmgUseFeaturedFeeds ) {
-	wfLoadExtension( 'FeaturedFeeds' );
 }
 
 if ( $wmgUseForcePreview) {
@@ -321,10 +285,6 @@ if ( $wmgUseGadgets ) {
 
 if ( $wmgUseGamepress ) {
 	wfLoadSkin( 'Gamepress' );
-
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
-	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
 }
 
 if ( $wmgUseGenealogy ) {
@@ -339,6 +299,10 @@ if ( $wmgUseGeoData ) {
 	wfLoadExtension( 'GeoData' );
 }
 
+if ( $wmgUseGeoGebra ) {
+	wfLoadExtension( 'GeoGebra' );
+}
+
 if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 }
@@ -349,6 +313,10 @@ if ( $wgMirahezeCommons && !$cwPrivate ) {
 
 if ( $wmgUseGlobalUserPage ) {
 	wfLoadExtension( 'GlobalUserPage' );
+}
+
+if ( $wmgUseGlobalWatchlist ) {
+	wfLoadExtension( 'GlobalWatchlist' );
 }
 
 if ( $wmgUseGoogleDocs4MW ) {
@@ -369,6 +337,10 @@ if ( $wmgUseGroupsSidebar ) {
 
 if ( $wmgUseGuidedTour ) {
 	wfLoadExtension( 'GuidedTour' );
+}
+
+if ( $wmgUseHasSomeColours ) {
+	wfLoadSkin( 'HasSomeColours' );
 }
 
 if ( $wmgUseHAWelcome ) {
@@ -405,10 +377,6 @@ if ( $wmgUseInputBox ) {
 
 if ( $wmgUseJavascriptSlideshow ) {
 	wfLoadExtension( 'JavascriptSlideshow' );
-	// This config has been removed from 1.35, but this config
-	// is checked within JavascriptSlideshow. So hack
-	// around this by setting it.
-	$wgHtml5 = true;
 }
 
 if ( $wmgUseJosa ) {
@@ -436,58 +404,25 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 }
 
 if ( $wmgUseLanguageSelector ) {
-	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
+	wfLoadExtension( 'LanguageSelector' );
 }
 
 if ( $wmgUseLastModified ) {
-	require_once "$IP/extensions/LastModified/LastModified.php";
+	wfLoadExtension( 'LastModified' );
 }
 
 if ( $wmgUseLdap ) {
 	wfLoadExtension( 'LdapAuthentication' );
-
-	$wgAuthManagerAutoConfig['primaryauth'] += [
-		LdapPrimaryAuthenticationProvider::class => [
-			'class' => LdapPrimaryAuthenticationProvider::class,
-			'args' => [ [
-				'authoritative' => true, // don't allow local non-LDAP accounts
-			] ],
-			'sort' => 50, // must be smaller than local pw provider
-		],
+	
+	$wgAuthManagerAutoConfig['primaryauth'] += [	
+		LdapPrimaryAuthenticationProvider::class => [	
+			'class' => LdapPrimaryAuthenticationProvider::class,	
+			'args' => [ [	
+				'authoritative' => true, // don't allow local non-LDAP accounts	
+			] ],	
+			'sort' => 50, // must be smaller than local pw provider	
+		],	
 	];
-	$wgLDAPDomainNames = [ 'miraheze' ];
-	$wgLDAPServerNames = [ 'miraheze' => 'ldap1.miraheze.org' ];
-	$wgLDAPEncryptionType = [ 'miraheze' => 'ssl' ];
-
-
-	$wgLDAPSearchAttributes = [ 'miraheze' => 'uid' ];
-	$wgLDAPBaseDNs = [ 'miraheze' => 'dc=miraheze,dc=org' ];
-	$wgLDAPUserBaseDNs = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
-	$wgLDAPProxyAgent = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
-	$wgLDAPProxyAgentPassword = [ 'miraheze' => $wmgLdapPassword ];
-	$wgLDAPWriterDN = [ 'miraheze' => 'cn=write-user,dc=miraheze,dc=org' ];
-	$wgLDAPWriterPassword = [ 'miraheze' => $wmgLdapPassword ];
-	$wgLDAPWriteLocation = [ 'miraheze' => 'ou=people,dc=miraheze,dc=org' ];
-	$wgLDAPAddLDAPUsers = [ 'miraheze' => true ];
-	$wgLDAPUpdateLDAP = [ 'miraheze' => true ];
-	$wgLDAPPasswordHash = [ 'miraheze' => 'ssha' ];
-	// 'invaliddomain' is set to true so that mail password options
-	// will be available on user creation and password mailing
-	// Force strict mode. T218589
-	// $wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
-	$wgLDAPPreferences = [
-		'miraheze' => [
-			'email' => 'mail',
-			'realname' => 'givenName',
-		]
-	];
-	$wgLDAPUseFetchedUsername = [ 'miraheze' => true ];
-	$wgLDAPLowerCaseUsernameScheme = [ 'miraheze' => false, 'invaliddomain' => false ];
-	$wgLDAPLowerCaseUsername = [ 'miraheze' => false, 'invaliddomain' => false ];
-
-	$wgLDAPOptions = [ 'miraheze' => [ "LDAP_OPT_X_TLS_CACERTFILE" => '/etc/ssl/certs/Sectigo.crt' ] ];
-
-	// $wgLDAPDebug = 5;
 }
 
 if ( $wmgUseLiberty ) {
@@ -495,7 +430,8 @@ if ( $wmgUseLiberty ) {
 }
 
 if ( $wmgUseLingo ) {
-	wfLoadExtension( 'Lingo' );
+	// Disabled, see T7472
+	#wfLoadExtension( 'Lingo' );
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -503,7 +439,7 @@ if ( $wmgUseLinkSuggest ) {
 }
 
 if ( $wmgUseLinkTarget ) {
-	require_once "$IP/extensions/LinkTarget/LinkTarget.php";
+	wfLoadExtension ( 'LinkTarget' );
 }
 
 if ( $wmgUseLinkTitles ) {
@@ -512,19 +448,14 @@ if ( $wmgUseLinkTitles ) {
 
 if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
-	
-	$wgLinterSubmitterWhitelist = [
-		'127.0.0.1' => true,
-		'::1' => true,
-		'51.89.160.132' => true,
-		'2001:41d0:800:1056::7' => true,
-		'51.89.160.141' => true,
-		'2001:41d0:800:105a::9' => true,
-	];
 }
 
 if ( $wmgUseListings ) {
 	wfLoadExtension( 'Listings' );
+}
+
+if ( $wmgUseLogoFunctions ) {
+	wfLoadExtension( 'LogoFunctions' );
 }
 
 if ( $wmgUseLoopsCombo ) {
@@ -537,9 +468,6 @@ if ( $wmgUseMagicNoCache ) {
 
 if ( $wmgUseMaps ) {
 	wfLoadExtension( 'Maps' );
-	$egMapsDefaultService = 'openlayers';
-	$egMapsDisableSmwIntegration = true;
-	$egMapsGMaps3ApiKey = $wmgMapsGMaps3ApiKey;
 }
 
 if ( $wmgUseMask ) {
@@ -560,7 +488,6 @@ if ( $wmgUseMath ) {
 
 if ( $wmgUseMediaWikiChat ) {
 	wfLoadExtension( 'MediaWikiChat' );
-	$wi->config->settings['wgRevokePermissions']['default']['blockedfromchat']['chat'] = true;
 }
 
 if ( $wmgUseMedik ) {
@@ -581,10 +508,6 @@ if ( $wmgUseMinervaNeue ) {
 
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
-
-	$wgMFMobileHeader = 'X-Subdomain';
-	$wgMFNoindexPages = false;
-	$wgMFStopRedirectCookieHost = $wi->hostname;
 }
 
 if ( $wmgUseMobileTabsPlugin ) {
@@ -595,8 +518,8 @@ if ( $wmgUseModeration ) {
 	wfLoadExtension( 'Moderation' );
 }
 
-if ( $wmgUseModernSkylight ) {
-	wfLoadSkin( 'ModernSkylight' );
+if ( $wmgUseMonaco ) {
+	wfLoadSkin( 'Monaco' );
 }
 
 if ( $wmgUseMsCalendar ) {
@@ -617,7 +540,7 @@ if ( $wmgUseMsUpload ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
-
+	
 	if ( $wmgUse3D ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 	}
@@ -625,8 +548,6 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUseMultiBoilerplate ) {
 	wfLoadExtension( 'MultiBoilerplate' );
-	$wgMultiBoilerplateDisplaySpecialPage = true;
-	$wgMultiBoilerplateOptions = false;
 }
 
 if ( $wmgUseMyVariables ) {
@@ -643,8 +564,6 @@ if ( $wmgUseNewSignupPage ) {
 
 if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
-	
-	$wi->config->settings['wgManageWikiNamespacesExtraContentModels']['default']['Newsletter'] = 'NewsletterContent';
 }
 
 if ( $wmgUseNewUserMessage ) {
@@ -652,10 +571,10 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseNewUserNotif ) {
-	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
+	wfLoadExtension( 'NewUserNotif' );
 }
 
-if ( $wmgUseNimbus ){
+if ( $wmgUseNimbus ) {
 	wfLoadSkin( 'Nimbus' );
 }
 
@@ -665,7 +584,6 @@ if ( $wmgUseNostalgia ) {
 
 if ( $wmgUseNoTitle ) {
 	wfLoadExtension( 'NoTitle' );
-	$wi->config->settings['wgRestrictDisplayTitle']['default'] = false;
 }
 
 if ( $wmgUseNukeDPL ) {
@@ -684,8 +602,8 @@ if ( $wmgUseOrphanedTalkPages ) {
 	wfLoadExtension( 'OrphanedTalkPages' );
 }
 
-if ( $wmgUsePageDisqus ) {
-	wfLoadExtension( 'PageDisqus' );
+if ( $wmgUsePageAssessments ) {
+	wfLoadExtension( 'PageAssessments' );
 }
 
 if ( $wmgUsePagedTiffHandler ) {
@@ -708,6 +626,10 @@ if ( $wmgUsePageTriage ) {
 	wfLoadExtension( 'PageTriage' );
 }
 
+if ( $wmgUsePdfBook ) {
+	wfLoadExtension( 'PdfBook' );
+}
+
 if ( $wmgUsePDFEmbed ) {
 	wfLoadExtension( 'PDFEmbed' );
 }
@@ -717,7 +639,7 @@ if ( $wmgUsePdfHandler ) {
 }
 
 if ( $wmgUsePipeEscape ) {
-	require_once "$IP/extensions/PipeEscape/PipeEscape.php";
+	wfLoadExtension( 'PipeEscape' );
 }
 
 if ( $wmgUsePivot ) {
@@ -753,25 +675,18 @@ if ( $wmgUsePreloader ) {
 
 if ( $wmgUseProofreadPage ) {
 	wfLoadExtension( 'ProofreadPage' );
-
-	$wgExtraNamespaces[250] = 'Page';
-	$wgExtraNamespaces[251] = 'Page_talk';
-	$wgExtraNamespaces[252] = 'Index';
-	$wgExtraNamespaces[253] = 'Index_talk';
-	$wgProofreadPageNamespaceIds = [
-		'index' => 252,
-		'page' => 250
-	];
 }
 
 if ( $wmgUseProtectSite ) {
 	wfLoadExtension( 'ProtectSite' );
 }
 
+if ( $wmgUseProtectionIndicator ) {
+	wfLoadExtension( 'ProtectionIndicator' );
+}
+
 if ( $wmgUsePurge ) {
 	wfLoadExtension( 'Purge' );
-
-	$wgAvailableRights[] = 'purge';
 }
 
 if ( $wmgUseQuiz ) {
@@ -800,8 +715,6 @@ if ( $wmgUseRefreshed ) {
 
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
-
-	$wgRelatedArticlesUseCirrusSearch = false;
 }
 
 if ( $wmgUseReplaceText ) {
@@ -817,12 +730,11 @@ if ( $wmgUseRevisionSlider ) {
 }
 
 if ( $wmgUseRightFunctions ) {
-	require_once "$IP/extensions/RightFunctions/RightFunctions.php";
+	wfLoadExtension( 'RightFunctions' );
 }
 
 if ( $wmgUseRSS ) {
 	wfLoadExtension( 'RSS' );
-	$wgRSSUrlWhitelist = [ "*" ];
 }
 
 if ( $wmgUseSandboxLink ) {
@@ -830,19 +742,19 @@ if ( $wmgUseSandboxLink ) {
 }
 
 if ( $wmgUseScratchBlocks ) {
-	wfLoadExtension( "ScratchBlocks" );
+	wfLoadExtension( 'mw-ScratchBlocks4' );
 }
 
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 }
 
-if ( $wmgUseUrlShortener ) {
-	wfLoadExtension( 'UrlShortener' );
+if ( $wmgUseShortDescription ) {
+	wfLoadExtension( 'ShortDescription' );
 }
 
 if ( $wmgUseSimpleBlogPage ) {
-	require_once "$IP/extensions/SimpleBlogPage/SimpleBlogPage.php";
+	wfLoadExtension( 'SimpleBlogPage' );
 }
 
 if ( $wmgUseSimpleChanges ) {
@@ -850,7 +762,7 @@ if ( $wmgUseSimpleChanges ) {
 }
 
 if ( $wmgUseSimpleTooltip ) {
-	require_once "$IP/extensions/SimpleTooltip/SimpleTooltip.php";
+	wfLoadExtension( 'SimpleTooltip' );
 }
 
 if ( $wmgUseSlackNotifications ) {
@@ -901,7 +813,7 @@ if ( $wmgUseTabsCombination ) {
 }
 
 if ( $wmgUseTemplateData ) {
-        wfLoadExtension( 'TemplateData' );
+	wfLoadExtension( 'TemplateData' );
 }
 	
 if ( $wmgUseTemplateSandbox ) {
@@ -922,8 +834,6 @@ if ( $wmgUseTextExtracts ) {
 
 if ( $wmgUseTranslate ) {
 	wfLoadExtension( 'Translate' );
-
-	$wgULSGeoService = false;
 }
 
 if ( $wmgUseTranslationNotifications ) {
@@ -948,7 +858,6 @@ if ( $wmgUseTheme ) {
 
 if ( $wmgUseTimedMediaHandler ) {
 	wfLoadExtension( 'TimedMediaHandler' );
-	$wgFFmpeg2theoraLocation = '/usr/bin/ffmpeg2theora';
 }
 
 if ( $wmgUseTimeline ) {
@@ -981,7 +890,6 @@ if ( $wmgUseTwoColConflict ) {
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
-	$wgULSGeoService = false;
 }
 
 if ( $wmgUseUploadsLink ) {
@@ -989,23 +897,31 @@ if ( $wmgUseUploadsLink ) {
 }
 
 if ( $wmgUseUrlGetParameters ) {
-	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
+	wfLoadExtension( 'UrlGetParameters' );
+}
+
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
 }
 
 if ( $wmgUseUserFunctions ) {
-	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+	wfLoadExtension( 'UserFunctions' );
+}
+
+if ( $wmgUseUserPageEditProtection ) {
+	wfLoadExtension( 'UserPageEditProtection' );
 }
 
 if ( $wmgUseUserWelcome ) {
 	wfLoadExtension( 'SocialProfile/UserWelcome' );
 }
 
-if ( $wmgUseValidator ) {
-	require_once( "$IP/extensions/Validator/Validator.php" );
-}
-
 if ( $wmgUseVariables ) {
 	wfLoadExtension( 'Variables' );
+}
+
+if ( $wmgUseVariablesLua ) {
+	wfLoadExtension( 'VariablesLua' );
 }
 
 if ( $wmgUseVEForAll ) {
@@ -1018,12 +934,12 @@ if ( $wmgUseVideo ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
-
+	
 	if ( $wmgVisualEditorEnableDefault ) {
-		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-editor'] = "visualeditor";
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
 	} else {
-		$wi->config->settings['+wgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
 }
 
@@ -1033,8 +949,6 @@ if ( $wmgUseVoteNY ) {
 
 if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
-	$wgWebChatClients['Mibbit']['url'] = 'https://embed.mibbit.com/index.html';
-
 }
 
 if ( $wmgUseWikiCategoryTagCloud ) {
@@ -1045,17 +959,24 @@ if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
 
-$wgEnableWikibaseRepo = false;
-$wgEnableWikibaseClient = false;
-
-if ( $wmgUseWikibaseRepository ) {
-	$wgEnableWikibaseRepo = true;
-	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+if ( $wmgUseWikibaseClient ) {
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 }
 
-if ( $wmgUseWikibaseClient ) {
-	$wgEnableWikibaseClient = true;
-	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+if ( $wmgUseWikibaseLexeme ) {
+	wfLoadExtension( 'WikibaseLexeme' );
+}
+
+if ( $wmgUseWikibaseLocalMedia ) {
+       wfLoadExtension( 'WikibaseLocalMedia' );
+}
+
+if ( $wmgUseWikibaseQualityConstraints ) {
+	wfLoadExtension( 'WikibaseQualityConstraints' );
+}
+
+if ( $wmgUseWikibaseRepository ) {
+	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
 }
 
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
@@ -1064,11 +985,7 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 }
 
 if ( $wmgUseWikiForum ) {
-	//wfLoadExtension( 'WikiForum' );
-
-	$wgAvailableRights[] = 'wikiforum-admin';
-	$wgAvailableRights[] = 'wikiforum-moderator';
-	$wgCaptchaTriggers['wikiforum'] = true;
+	wfLoadExtension( 'WikiForum' );
 }
 
 if ( $wmgUsewikihiero ) {
@@ -1077,8 +994,6 @@ if ( $wmgUsewikihiero ) {
 
 if ( $wmgUseWikiLove ) {
 	wfLoadExtension( 'WikiLove' );
-
-	$wgWikiLoveGlobal = true;
 }
 
 if ( $wmgUseWikimediaIncubator ) {
@@ -1103,17 +1018,5 @@ if ( $wmgUseRegexFunctions ) {
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
 if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
-	// Required for Flow to work with rest.php
-	wfLoadExtension( "Parsoid", "$IP/vendor/wikimedia/parsoid/extension.json" );
-
-	// Automatically uses the local rest.php (hence url isn't set).
-	// We need to set 'forwardCookies' for private wikis and
-	// for pages restricted by protection.
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-                'url' => "$wgServer/w/rest.php",
- 		'domain' => $wgServer,
- 		'prefix' => $wgDBname,
- 		'forwardCookies' => true,
- 		'restbaseCompat' => false,
- 	];
+	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }

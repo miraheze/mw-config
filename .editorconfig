@@ -17,8 +17,3 @@ indent_style = tab
 # Markdown files
 [*.md]
 trim_trailing_whitespace = false
-
-# .travis.yml needs special care
-[.travis.yml]
-indent_style = space
-indent_size = 2
