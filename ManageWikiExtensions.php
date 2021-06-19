@@ -1749,7 +1749,7 @@ $wgManageWikiExtensions = [
 	],
 	'bluesky' => [
 		'name' => 'BlueSky',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Skin:BlueSky',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:BlueSky',
 		'var' => 'wmgUseBlueSky',
 		'conflicts' => false,
 		'requires' => [],
