@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 57;
+$wgMajorSiteNoticeID = 58;
 
 /**
 * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -23,7 +23,7 @@ $wgMajorSiteNoticeID = 57;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze will be performing maintenance on May 20th, 2021 between 20:00 UTC and 20:30 UTC. During this maintenance window, you will not be able to view or upload images or videos.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.36.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}

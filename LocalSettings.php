@@ -378,6 +378,31 @@ $wi->config->settings += [
 	'wgCheckUserForceSummary' => [
 		'default' => true,
 	],
+	'wgCheckUserEnableSpecialInvestigate' => [
+		'default' => true,
+	],
+	'wgCheckUserLogLogins' => [
+		'default' => true,
+	],
+	'wgCheckUserCAtoollink' => [
+		'default' => 'metawiki',
+	],
+	'wgCheckUserGBtoollink' => [
+		'default' => [
+			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
+	],
+	'wgCheckUserCAMultiLock' => [
+		'default' => [
+			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
+	],
 
 	// Citizen
 	'wgCitizenThemeDefault' => [
@@ -620,6 +645,11 @@ $wi->config->settings += [
 			],
 		],
 	],
+	'wgCosmosEnableWantedPages' => [
+		'default' => false,
+		'batmanwiki' => true,
+		'snapwikiwiki' => true,
+	],
 
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
@@ -752,17 +782,17 @@ $wi->config->settings += [
 		'default' => [
 			"$IP/maintenance/tables.sql",
 			"$IP/maintenance/tables-generated.sql",
-			"$IP/extensions/AbuseFilter/abusefilter.tables.sql",
+			"$IP/extensions/AbuseFilter/db_patches/mysql/abusefilter.sql",
 			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
-			"$IP/extensions/BetaFeatures/sql/create_counts.sql",
+			"$IP/extensions/BetaFeatures/sql/tables-generated.sql",
 			"$IP/extensions/CheckUser/cu_log.sql",
 			"$IP/extensions/CheckUser/cu_changes.sql",
 			"$IP/extensions/DataDump/sql/data_dump.sql",
 			"$IP/extensions/Echo/echo.sql",
-			"$IP/extensions/GlobalBlocking/sql/global_block_whitelist.sql",
+			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/urlshortcodes.sql"
+			"$IP/extensions/UrlShortener/schemas/tables-generated.sql"
 		],
 	],
 	'wgCreateWikiStateDays' => [
@@ -864,6 +894,24 @@ $wi->config->settings += [
 	'wgDBuser' => [
 		'default' => 'mediawiki',
 	],
+	'wgMiserMode' => [
+		'default' => false,
+		'batmanwiki' => true,
+		'commonswiki' => true,
+		'cosmoswiki' => true,
+		'darkangelwiki' => true,
+		'dcmultiversewiki' => true,
+		'devwiki' => true,
+		'memeswiki' => true,
+		'metawiki' => true,
+		'minecraftjapanwiki' => true,
+		'r4356thwiki' => true,
+		'snapwikiwiki' => true,
+		'templatewiki' => true,
+		'test3wiki' => true,
+		'testwiki' => true,
+		'theboyswiki' => true,
+	],
 	'wgReadOnly' => [
 		'default' => false,
 	],
@@ -948,11 +996,6 @@ $wi->config->settings += [
 	// Display Title
 	'wgDisplayTitleHideSubtitle' => [
 		'default' => false,
-	],
-
-	// DisqusTag
-	'egDisqusShortname' => [
-		'default' => '',
 	],
 
 	// DJVU
@@ -1140,6 +1183,9 @@ $wi->config->settings += [
 	'wmgUseCosmos' => [
 		'default' => false,
 	],
+	'wmgUseCountDownClock' => [
+		'default' => false,
+	],
 	'wmgUseCreatePage' => [
 		'default' => false,
 	],
@@ -1174,9 +1220,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseDisplayTitle' => [
-		'default' => false,
-	],
-	'wmgUseDisqusTag' => [
 		'default' => false,
 	],
 	'wmgUseDuskToDawn' => [
@@ -1463,9 +1506,6 @@ $wi->config->settings += [
 	'wmgUsePageAssessments' => [
 		'default' => false,
 	],
-	'wmgUsePageDisqus' => [
-		'default' => false,
-	],
 	'wmgUsePagedTiffHandler' => [
 		'default' => false,
 	],
@@ -1725,6 +1765,9 @@ $wi->config->settings += [
 	'wmgUseWikibaseLexeme' => [
 		'default' => false,
 	],
+	'wmgUseWikibaseLocalMedia' => [
+		'default' => false,
+	],
 	'wmgUseWikibaseQualityConstraints' => [
 		'default' => false,
 	],
@@ -1777,33 +1820,17 @@ $wi->config->settings += [
 	'wgFlaggedRevsTags' => [
 		'default' => [
 			'status' => [
-				'quality' => 1,
 				'levels' => 2,
-				'pristine' => 3,
 			],
 		],
 		'infectopedwiki' => [
 			'accuracy' => [
 				'levels' => 4,
-				'quality' => 2,
-				'pristine' => 4,
-			],
-			'depth' => [
-				'levels' => 4,
-				'quality' => 2,
-				'pristine' => 4,
-			],
-			'tone' => [
-				'levels' => 4,
-				'quality' => 1,
-				'pristine' => 4,
 			],
 		],
 		'isvwiki' => [
 			'status' => [
 				'levels' => 1,
-				'quality' => 2,
-				'pristine' => 4,
 			],
 		],
 	],
@@ -1936,9 +1963,8 @@ $wi->config->settings += [
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
 			5258, // Void (Board)
-			13554, // Paladox (SRE)
 			24689, // RobLa (Board)
-			57564, // RhinosF1 (SRE)
+			243629, // Samuel (Miraheze) - (RhinosF1 (SRE))
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 		],
@@ -2665,14 +2691,14 @@ $wi->config->settings += [
 				'suppressionlog' => true,
 				'suppressrevision' => true,
 			],
-			'user' => [
-				'mwoauthmanagemygrants' => true,
-				'user' => true,
-			],
 			'steward' => [
 				'centralauth-usermerge' => true,
 				'usermerge' => true,
 				'userrights' => true,
+			],
+			'user' => [
+				'mwoauthmanagemygrants' => true,
+				'user' => true,
 			],
 		],
     		'+allpediawiki' => [
@@ -2949,6 +2975,7 @@ $wi->config->settings += [
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
+				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-oversight',
 				'centralauth-rename',
@@ -3013,10 +3040,11 @@ $wi->config->settings += [
 				'editmyoptions', 
 				'editmyprivateinfo', 
 				'editmywatchlist', 
+				'globalblock-whitelist',
+				'ipblock-exempt',
 				'viewmyprivateinfo', 
 				'viewmywatchlist',
 				'managewiki',
-
 			],
 		],
 	],
@@ -3214,7 +3242,6 @@ $wi->config->settings += [
 	],
 	'wgNativeImageLazyLoading' => [
 		'default' => false,
-		'idolish7wiki' => true,
 	],
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
@@ -3375,11 +3402,6 @@ $wi->config->settings += [
 	],
 	'wgMWOAuthSecureTokenTransfer' => [
 		'default' => true,
-	],
-
-	// PageDisqus
-	'wgPageDisqusShortname' => [
-		'default' => '',
 	],
 
 	// Pagelang
@@ -4082,6 +4104,9 @@ $wi->config->settings += [
 	'wgLogo' => [
 		'default' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 	],
+	'wgIcon' => [
+		'default' => false,
+	],
 	'wgWordmark' => [
 		'default' => false,
 	],
@@ -4135,6 +4160,11 @@ $wi->config->settings += [
 	],
 	'wgTimelessWordmark' => [
 		'default' => null,
+	],
+
+	// Timeline
+	'wgTimelineFontDirectory' => [
+		'default' => '/usr/share/fonts/truetype/freefont',
 	],
 
 	// Timezone
@@ -4449,6 +4479,12 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgWikiSeoDisableLogoFallbackImage' => [
+		'default' => false,
+	],
+	'wgWikiSeoEnableAutoDescription' => [
+		'default' => false,
+	],
+	'wgWikiSeoTryCleanAutoDescription' => [
 		'default' => false,
 	],
 

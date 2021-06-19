@@ -17,7 +17,7 @@ $IP/extensions/BlogPage/extension.json
 $IP/extensions/CSS/extension.json
 $IP/extensions/Calendar/extension.json
 $IP/extensions/Cargo/extension.json
-$IP/extensions/CategorySortHeaders/CategorySortHeaders.php
+$IP/extensions/CategorySortHeaders/extension.json
 $IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
@@ -40,7 +40,8 @@ $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContributionScores/extension.json
 $IP/extensions/CookieWarning/extension.json
-$IP/extensions/CreatePage/CreatePage.php
+$IP/extensions/CountDownClock/extension.json
+$IP/extensions/CreatePage/extension.json
 $IP/extensions/CreatePageUw/extension.json
 $IP/extensions/CreateRedirect/extension.json
 $IP/extensions/CreateWiki/extension.json
@@ -54,7 +55,6 @@ $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DiscordNotifications/extension.json
 $IP/extensions/DiscussionTools/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
-$IP/extensions/DisqusTag/extension.json
 $IP/extensions/DisplayTitle/extension.json
 $IP/extensions/DummyFandoomMainpageTags/extension.json
 $IP/extensions/DynamicPageList/extension.json
@@ -106,9 +106,9 @@ $IP/extensions/JsCalendar/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
-$IP/extensions/LanguageSelector/LanguageSelector.php
-$IP/extensions/LastModified/LastModified.php
-$IP/extensions/LdapAuthentication/LdapAuthentication.php
+$IP/extensions/LanguageSelector/extension.json
+$IP/extensions/LastModified/extension.json
+$IP/extensions/LdapAuthentication/extension.json
 $IP/extensions/Lingo/extension.json
 $IP/extensions/LinkSuggest/extension.json
 $IP/extensions/LinkTarget/extension.json
@@ -141,7 +141,7 @@ $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MyVariables/extension.json
 $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json
-$IP/extensions/NewUserNotif/NewUserNotif.php
+$IP/extensions/NewUserNotif/extension.json
 $IP/extensions/NewestPages/extension.json
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/NoTitle/extension.json
@@ -153,7 +153,6 @@ $IP/extensions/OAuth/extension.json
 $IP/extensions/OpenGraphMeta/extension.json
 $IP/extensions/OrphanedTalkPages/extension.json
 $IP/extensions/PageAssessments/extension.json
-$IP/extensions/PageDisqus/extension.json
 $IP/extensions/PdfBook/extension.json
 $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json
@@ -163,7 +162,7 @@ $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/PdfHandler/extension.json
-$IP/extensions/PipeEscape/PipeEscape.php
+$IP/extensions/PipeEscape/extension.json
 $IP/extensions/Poem/extension.json
 $IP/extensions/PollNY/extension.json
 $IP/extensions/PortableInfobox/extension.json
@@ -188,7 +187,7 @@ $IP/extensions/Renameuser/extension.json
 $IP/extensions/ReplaceText/extension.json
 $IP/extensions/Report/extension.json
 $IP/extensions/RevisionSlider/extension.json
-$IP/extensions/RightFunctions/RightFunctions.php
+$IP/extensions/RightFunctions/extension.json
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/mw-ScratchBlocks4/extension.json
@@ -240,8 +239,8 @@ $IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UserMerge/extension.json
-$IP/extensions/UrlGetParameters/UrlGetParameters.php
-$IP/extensions/UserFunctions/UserFunctions.php
+$IP/extensions/UrlGetParameters/extension.json
+$IP/extensions/UserFunctions/extension.json
 $IP/extensions/UserPageEditProtection/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/Variables/extension.json
@@ -259,9 +258,10 @@ $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikiSEO/extension.json
 $IP/extensions/WikiTextLoggedInOut/extension.json
-$IP/extensions/Wikibase/client/WikibaseClient.php
-$IP/extensions/Wikibase/repo/Wikibase.php
+$IP/extensions/Wikibase/extension-client.json
+$IP/extensions/Wikibase/extension-repo.json
 $IP/extensions/WikibaseLexeme/extension.json
+$IP/extensions/WikibaseLocalMedia/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json

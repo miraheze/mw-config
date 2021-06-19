@@ -478,6 +478,7 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => [
 			'Freenode' => 'freenodeChat',
+			'Libera' => 'LiberaChat',
 			'Other Server' => 'Mibbit',
 		],
 		'overridedefault' => 'freenodeChat',
@@ -924,6 +925,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
+		'requires' => [],
+	],
+	'wgNativeImageLazyLoading' => [
+		'name' => 'Native Image Lazy Loading',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Toggles native image lazy loading, via the "loading" attribute.',
 		'requires' => [],
 	],
 	'wgSVGConverter' => [
@@ -1672,32 +1682,6 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'egDisqusShortname' => [
-		'name' => 'Disqus Shortname',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the DisqusTag extension.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
-	'wgPageDisqusShortname' => [
-		'name' => 'PageDisqus Shortname',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'restricted',
-		'help' => 'The Disqus shortname for your site. This is the identifier (or the hostname) you specify when entering your unique Disqus URL. This is required when using the PageDisqus extension.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
 	'wgHAWelcomeWelcomeUsername' => [
 		'name' => 'HAWelcome Welcome Username',
 		'from' => 'hawelcome',
@@ -1839,6 +1823,34 @@ $wgManageWikiSettings = [
 		'section' => 'seo',
 		'help' => 'Disable setting the logo as the fallback SEO image if no image was provided.',
 		'requires' => [],
+	],
+	'wgWikiSeoEnableAutoDescription' => [
+		'name' => 'Enable Auto Description (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'Enable to try to request a description from textextracts, if no description was given, or the description key is set to \'textextracts\'.',
+		'requires' => [
+			'extensions' => [
+				'textextracts',
+				'wikiseo',
+			],
+		],
+	],
+	'wgWikiSeoTryCleanAutoDescription' => [
+		'name' => 'Try Clean Auto Description (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'Enable if WikiSEO should try to remove dangling sentences when using descriptions from textextracts.',
+		'requires' => [
+			'extensions' => [
+				'textextracts',
+				'wikiseo',
+			],
+		],
 	],
 
 	// SocialTools
@@ -2127,7 +2139,7 @@ $wgManageWikiSettings = [
 	'wgWordmark' => [
 		'name' => 'Wordmark',
 		'from' => 'mediawiki',
-		'type' => 'url',
+		'type' => 'text',
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'This will set the value of <code>$wgLogos[\'wordmark\'][\'src\']</code>. Also used as wordmark for the various skins: Minerva copyright wordmark, Timeless mobile wordmark, modern Vector wordmark, and Cosmos wordmark. May be used elsewhere also.',
@@ -2153,6 +2165,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => 18,
 		'section' => 'styling',
 		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "18"',
+		'requires' => [],
+	],
+	'wgIcon' => [
+		'name' => 'Icon',
+		'from' => 'mediawiki',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'A version of the logo without wordmark and tagline.',
 		'requires' => [],
 	],
 	'wmgWikiapiaryFooterPageName' => [

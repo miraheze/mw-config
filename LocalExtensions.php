@@ -79,7 +79,7 @@ if ( $wmgUseCargo ) {
 }
 
 if ( $wmgUseCategorySortHeaders ) {
-	require_once "$IP/extensions/CategorySortHeaders/CategorySortHeaders.php";
+	wfLoadExtension( 'CategorySortHeaders' );
 }
 
 if ( $wmgUseCategoryTree ) {
@@ -157,8 +157,12 @@ if ( $wmgUseCosmos ) {
 	wfLoadSkin( 'Cosmos' );
 }
 
+if ( $wmgUseCountDownClock ) {
+	wfLoadExtension( 'CountDownClock' );
+}
+
 if ( $wmgUseCreatePage ) {
-	require_once "$IP/extensions/CreatePage/CreatePage.php";
+	wfLoadExtension( 'CreatePage' );
 }
 if ( $wmgUseCreatePageUw ) {
 	wfLoadExtension( 'CreatePageUw' );
@@ -205,10 +209,6 @@ if ( $wmgUseDiscussionTools ) {
 
 if ( $wmgUseDisplayTitle ) {
 	wfLoadExtension( 'DisplayTitle' );
-}
-
-if ( $wmgUseDisqusTag ) {
-	wfLoadExtension( 'DisqusTag' );
 }
 
 if ( $wmgUseDuskToDawn ) {
@@ -404,11 +404,11 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 }
 
 if ( $wmgUseLanguageSelector ) {
-	require_once "$IP/extensions/LanguageSelector/LanguageSelector.php";
+	wfLoadExtension( 'LanguageSelector' );
 }
 
 if ( $wmgUseLastModified ) {
-	require_once "$IP/extensions/LastModified/LastModified.php";
+	wfLoadExtension( 'LastModified' );
 }
 
 if ( $wmgUseLdap ) {
@@ -430,7 +430,8 @@ if ( $wmgUseLiberty ) {
 }
 
 if ( $wmgUseLingo ) {
-	wfLoadExtension( 'Lingo' );
+	// Disabled, see T7472
+	#wfLoadExtension( 'Lingo' );
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -570,7 +571,7 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseNewUserNotif ) {
-	require_once "$IP/extensions/NewUserNotif/NewUserNotif.php";
+	wfLoadExtension( 'NewUserNotif' );
 }
 
 if ( $wmgUseNimbus ) {
@@ -603,10 +604,6 @@ if ( $wmgUseOrphanedTalkPages ) {
 
 if ( $wmgUsePageAssessments ) {
 	wfLoadExtension( 'PageAssessments' );
-}
-
-if ( $wmgUsePageDisqus ) {
-	wfLoadExtension( 'PageDisqus' );
 }
 
 if ( $wmgUsePagedTiffHandler ) {
@@ -642,7 +639,7 @@ if ( $wmgUsePdfHandler ) {
 }
 
 if ( $wmgUsePipeEscape ) {
-	require_once "$IP/extensions/PipeEscape/PipeEscape.php";
+	wfLoadExtension( 'PipeEscape' );
 }
 
 if ( $wmgUsePivot ) {
@@ -733,7 +730,7 @@ if ( $wmgUseRevisionSlider ) {
 }
 
 if ( $wmgUseRightFunctions ) {
-	require_once "$IP/extensions/RightFunctions/RightFunctions.php";
+	wfLoadExtension( 'RightFunctions' );
 }
 
 if ( $wmgUseRSS ) {
@@ -900,7 +897,7 @@ if ( $wmgUseUploadsLink ) {
 }
 
 if ( $wmgUseUrlGetParameters ) {
-	require_once "$IP/extensions/UrlGetParameters/UrlGetParameters.php";
+	wfLoadExtension( 'UrlGetParameters' );
 }
 
 if ( $wmgUseUrlShortener ) {
@@ -908,7 +905,7 @@ if ( $wmgUseUrlShortener ) {
 }
 
 if ( $wmgUseUserFunctions ) {
-	require_once "$IP/extensions/UserFunctions/UserFunctions.php";
+	wfLoadExtension( 'UserFunctions' );
 }
 
 if ( $wmgUseUserPageEditProtection ) {
@@ -963,11 +960,15 @@ if ( $wmgUseWikidataPageBanner ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-	require_once "$IP/extensions/Wikibase/client/WikibaseClient.php";
+	wfLoadExtension( 'WikibaseClient', "$IP/extensions/Wikibase/extension-client.json" );
 }
 
 if ( $wmgUseWikibaseLexeme ) {
 	wfLoadExtension( 'WikibaseLexeme' );
+}
+
+if ( $wmgUseWikibaseLocalMedia ) {
+       wfLoadExtension( 'WikibaseLocalMedia' );
 }
 
 if ( $wmgUseWikibaseQualityConstraints ) {
@@ -975,7 +976,7 @@ if ( $wmgUseWikibaseQualityConstraints ) {
 }
 
 if ( $wmgUseWikibaseRepository ) {
-	require_once "$IP/extensions/Wikibase/repo/Wikibase.php";
+	wfLoadExtension( 'WikibaseRepository', "$IP/extensions/Wikibase/extension-repo.json" );
 }
 
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
