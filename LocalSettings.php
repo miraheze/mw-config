@@ -385,21 +385,21 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgCheckUserCAtoollink' => [
-		'default' => 'loginwiki',
+		'default' => 'metawiki',
 	],
 	'wgCheckUserGBtoollink' => [
 		'default' => [
-			'centralDB' => 'loginwiki',
+			'centralDB' => 'metawiki',
 			'groups' => [
-				'checkuser',
+				'steward',
 			],
 		],
 	],
 	'wgCheckUserCAMultiLock' => [
 		'default' => [
-			'centralDB' => 'loginwiki',
+			'centralDB' => 'metawiki',
 			'groups' => [
-				'checkuser',
+				'steward',
 			],
 		],
 	],
