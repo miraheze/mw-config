@@ -381,6 +381,28 @@ $wi->config->settings += [
 	'wgCheckUserEnableSpecialInvestigate' => [
 		'default' => true,
 	],
+	'wgCheckUserLogLogins' => [
+		'default' => true,
+	],
+	'wgCheckUserCAtoollink' => [
+		'default' => 'metawiki',
+	],
+	'wgCheckUserGBtoollink' => [
+		'default' => [
+			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
+	],
+	'wgCheckUserCAMultiLock' => [
+		'default' => [
+			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
+	],
 
 	// Citizen
 	'wgCitizenThemeDefault' => [
