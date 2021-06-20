@@ -25,7 +25,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
 
 $wi->setVariables(
-	'/srv/mediawiki/w/cache',
+	'/srv/mediawiki/cache',
 	[
 		'wiki'
 	],
@@ -206,7 +206,7 @@ $wi->config->settings += [
 
 	// Cache
 	'wgCacheDirectory' => [
-		'default' => '/srv/mediawiki/w/cache',
+		'default' => '/srv/mediawiki/cache',
 	],
 	'wgExtensionEntryPointListFiles' => [
 		'default' => [
@@ -804,7 +804,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgCreateWikiCacheDirectory' => [
-		'default' => '/srv/mediawiki/w/cache'
+		'default' => '/srv/mediawiki/cache'
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
@@ -2649,6 +2649,9 @@ $wi->config->settings += [
 			'syntaxhighlight_geshi',
 			'urlshortener',
 		],
+	],
+	'wgManageWikiCDBDirectory' => [
+		'default' => '/srv/mediawiki/cache/managewiki',
 	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
@@ -4698,10 +4701,10 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
-$wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
+$wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
+if ( !file_exists( '/srv/mediawiki/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
