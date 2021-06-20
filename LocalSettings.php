@@ -4701,7 +4701,7 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
-$wgLocalisationCacheConf['storeDirectory'] = "/srv/mediawiki/cache/l10n";
+$wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
 $wgLocalisationCacheConf['manualRecache'] = true;
 
 if ( !file_exists( '/srv/mediawiki/cache/l10n/l10n_cache-en.cdb' ) ) {
