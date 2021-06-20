@@ -267,6 +267,7 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
+$IP/skins/BlueSky/skin.json
 $IP/skins/Citizen/skin.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/Cosmos/skin.json
