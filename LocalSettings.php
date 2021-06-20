@@ -2722,7 +2722,7 @@ $wi->config->settings += [
 				'read' => true,
 			],
 		],
-		'+documentcontrolwiki' => [
+		'+famedatawiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
@@ -3737,7 +3737,7 @@ $wi->config->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
-		'+documentcontrolwiki' => [
+		'+famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
@@ -3816,7 +3816,7 @@ $wi->config->settings += [
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
 		],
-		'documentcontrolwiki' => [
+		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
