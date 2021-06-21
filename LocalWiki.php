@@ -227,7 +227,7 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 
 $wgHooks['MimeMagicInit'][] = 'onMimeMagicInit';
 function onMimeMagicInit( $mime ) {
-	$mime->addExtraTypes( 'application/x-font-opentype otf' );
+	$mime->addExtraTypes( 'application/vnd.ms-opentype otf' );
 }
 
 // Per-wiki settings
