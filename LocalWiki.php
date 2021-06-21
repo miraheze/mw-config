@@ -224,6 +224,12 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
+
+$wgHooks['MimeMagicInit'][] = 'onMimeMagicInit';
+function onMimeMagicInit( $mime ) {
+	$mime->addExtraTypes( 'application/x-font-opentype otf' );
+}
+
 // Per-wiki settings
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
