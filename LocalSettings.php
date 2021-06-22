@@ -644,6 +644,13 @@ $wi->config->settings += [
 				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 		],
+		'softcellwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
 	],
 	'wgCosmosEnableWantedPages' => [
 		'default' => false,
