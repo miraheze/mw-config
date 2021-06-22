@@ -1669,8 +1669,10 @@ $wi->config->settings += [
 	'wgScribuntoUseGeSHi' => [
 		'default' => true,
 	],
-	// Combo of Tabs + Tabber
-	'wmgUseTabsCombination' => [
+	'wmgUseTabber' => [
+		'default' => false,
+	],
+	'wmgUseTabs' => [
 		'default' => false,
 	],
 	'wmgUseTemplateData' => [
