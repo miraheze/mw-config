@@ -906,10 +906,18 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'tabscombination' => [
-		'name' => 'TabsCombination (Tabber + Tabs)',
+	'tabber' => [
+		'name' => 'Tabber',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabber',
+		'var' => 'wmgUseTabber',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'tabs' => [
+		'name' => 'Tabs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabs',
-		'var' => 'wmgUseTabsCombination',
+		'var' => 'wmgUseTabs',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
