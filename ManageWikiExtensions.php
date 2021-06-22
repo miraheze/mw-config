@@ -83,11 +83,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VisualEditor',
 		'var' => 'wmgUseVisualEditor',
 		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'templatedata',
-			],
-		],
+		'requires' => [],
 		'section' => 'editors',
 	],
 
