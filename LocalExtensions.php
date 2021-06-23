@@ -808,11 +808,12 @@ if ( $wmgUseSyntaxHighlightGeSHi ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
-if ( $wmgUseTabsCombination ) {
-	wfLoadExtensions( [
-		'Tabber',
-		'Tabs',
-	] );
+if ( $wmgUseTabber ) {
+	wfLoadExtension( 'Tabber' );
+}
+
+if ( $wmgUseTabs ) {
+	wfLoadExtension( 'Tabs' );
 }
 
 if ( $wmgUseTemplateData ) {
