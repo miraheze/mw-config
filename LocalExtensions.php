@@ -812,6 +812,10 @@ if ( $wmgUseTabber ) {
 	wfLoadExtension( 'Tabber' );
 }
 
+if ( $wmgUseTabberNeue ) {
+	wfLoadExtension( 'TabberNeue' );
+}
+
 if ( $wmgUseTabs ) {
 	wfLoadExtension( 'Tabs' );
 }
