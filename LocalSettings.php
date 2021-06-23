@@ -1672,6 +1672,9 @@ $wi->config->settings += [
 	'wmgUseTabber' => [
 		'default' => false,
 	],
+	'wmgUseTabberNeue' => [
+		'default' => false,
+	],
 	'wmgUseTabs' => [
 		'default' => false,
 	],
