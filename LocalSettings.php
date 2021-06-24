@@ -4322,6 +4322,21 @@ $wi->config->settings += [
 	'wgVectorDefaultSkinVersion' => [
 		'default' => '1',
 	],
+	'wgVectorUseWvuiSearch' => [
+		'default' => false,
+		'snapwikiwiki' => true,
+	],
+	'wgVectorWvuiSearchOptions' => [
+		'default' => [
+			'showThumbnail' => true,
+			'showDescription' => true,
+		],
+		'snapwikiwiki' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],
+			
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
