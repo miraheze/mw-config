@@ -4335,6 +4335,7 @@ $wi->config->settings += [
 			'showThumbnail' => false,
 			'showDescription' => false,
 		],
+	],
 			
 
 	// VisualEditor
