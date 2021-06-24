@@ -4317,7 +4317,7 @@ $wi->config->settings += [
 			'51.38.69.175:81', // cp13
 		],
 	],
-	
+
 	// Vector
 	'wgVectorDefaultSkinVersion' => [
 		'default' => '1',
@@ -4335,8 +4335,7 @@ $wi->config->settings += [
 			'showThumbnail' => false,
 			'showDescription' => false,
 		],
-	],
-			
+	],	
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
