@@ -773,7 +773,7 @@ if ( $wmgUseSlackNotifications ) {
 }
 
 if ( $wmgUseSnap! ) {
-	wfLoadExtension( 'Snap!' );
+	wfLoadSkin( 'Snap!' );
 }
 
 if ( $wmgUseSnapProjectEmbed ) {
