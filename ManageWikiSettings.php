@@ -2010,6 +2010,15 @@ $wgManageWikiSettings = [
 		'help' => 'Controls what games are enabled.',
 		'requires' => [],
 	],
+	'wgUserPageChoice' => [
+		'name' => 'User Page Choice',
+		'from' => 'socialprofile',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'socialtools',
+		'help' => 'Decides whether users should not be able to switch their own user page to be a wiki page, and only the social user profile will be enabled.',
+		'requires' => [],
+	],
 	'wgFriendingEnabled' => [
 		'name' => 'Friending Enabled',
 		'from' => 'socialprofile',
