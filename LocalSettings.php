@@ -1639,6 +1639,9 @@ $wi->config->settings += [
 	'wmgUseSlackNotifications' => [
 		'default' => false,
 	],
+	'wmgUseSnap!' => [
+		'default' => false,
+	],
 	'wmgUseSnapProjectEmbed' => [
 		'default' => false,
 	],
