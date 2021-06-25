@@ -772,7 +772,7 @@ if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
 }
 
-if ( $wmgUseSnap! ) {
+if ( $wmgUseSnap ) {
 	wfLoadSkin( 'Snap!' );
 }
 
