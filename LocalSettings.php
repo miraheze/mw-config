@@ -4077,6 +4077,9 @@ $wi->config->settings += [
 	'wgFriendingEnabled' => [
 		'default' => true,
 	],
+	'wgUserPageChoice' => [
+		'default' => true,
+	],
 
 	// Statistics
 	'wgArticleCountMethod' => [
