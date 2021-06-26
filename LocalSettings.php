@@ -1777,6 +1777,9 @@ $wi->config->settings += [
 	'wmgUseWebChat' => [
 		'default' => false,
 	],
+	'wmgUseWebP' => [
+		'default' => false,
+	],
 	'wmgUseWikibaseClient' => [
 		'default' => false,
 	],
