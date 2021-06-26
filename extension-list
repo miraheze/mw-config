@@ -251,6 +251,7 @@ $IP/extensions/Video/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/VoteNY/extension.json
 $IP/extensions/WebChat/extension.json
+$IP/extensions/WebP/extension.json
 $IP/extensions/WikiCategoryTagCloud/extension.json
 $IP/extensions/WikiDiscover/extension.json
 $IP/extensions/WikiEditor/extension.json
