@@ -1911,6 +1911,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'snapwikiskin' => [
+		'name' => 'Snap!',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Snap!_Wiki_Skin',
+		'var' => 'wmgUseSnapWikiSkin',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'truglass' => [
 		'name' => 'Truglass',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Truglass',

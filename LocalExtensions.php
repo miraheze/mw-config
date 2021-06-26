@@ -772,6 +772,10 @@ if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
 }
 
+if ( $wmgUseSnapWikiSkin ) {
+	wfLoadSkin( 'snapwikiskin' );
+}
+
 if ( $wmgUseSnapProjectEmbed ) {
 	wfLoadExtension( 'SnapProjectEmbed' );
 }
