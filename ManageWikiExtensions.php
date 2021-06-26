@@ -1911,10 +1911,10 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
-	'snap' => [
+	'snapwikiskin' => [
 		'name' => 'Snap!',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Snap!_Wiki_Skin',
-		'var' => 'wmgUseSnap',
+		'var' => 'wmgUseSnapWikiSkin',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
