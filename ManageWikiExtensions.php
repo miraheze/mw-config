@@ -143,6 +143,14 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'mediahandlers',
 	],
+	'webp' => [
+		'name' => 'WebP',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WebP',
+		'var' => 'wmgUseWebP',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'mediahandlers',
+	],
 
 	// Parser hooks
 	'htmlmetaadntitle' => [
