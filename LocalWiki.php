@@ -224,6 +224,21 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
+if ( $wmgUseWebP ) {
+	$wgLocalFileRepo = [
+		'class' => \MediaWiki\Extension\WebP\Repo\LocalWebPFileRepo::class,
+		'name' => 'local',
+		'directory' => $wgUploadDirectory,
+		'scriptDirUrl' => $wgScriptPath,
+		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+		'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => $wgThumbnailScriptPath,
+		'transformVia404' => false,
+		'deletedDir' => "{$wgUploadDirectory}/deleted",
+		'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0
+	];
+}
+
 // Per-wiki settings
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
