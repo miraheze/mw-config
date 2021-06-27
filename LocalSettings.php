@@ -4025,6 +4025,14 @@ $wi->config->settings += [
 		'default' => '',
 	],
 
+	// Snap! skin
+	'wgSnapwikiskinWvuiSearchOptions' => [
+		'default' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],
+	
 	// SocialProfile
 	'wgUserBoard' => [
 		'default' => false,
