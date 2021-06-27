@@ -3483,6 +3483,13 @@ $wi->config->settings += [
 			],
 		],
 	],
+	'wgParsoidSettings' => [
+		'default' => [
+			'useSelser' => true,
+			'linting' => true,
+			'nativeGalleryEnabled' => true,
+		],
+	],
 
 	// PdfHandler
 	'wgPdfProcessor' => [
