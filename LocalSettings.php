@@ -2607,16 +2607,22 @@ $wi->config->settings += [
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
 		'wmgUseLinter' => [
+			/** localhost */
 			'127.0.0.1' => true,
 			'::1' => true,
+			/** mw8 */
 			'51.195.236.221' => true,
 			'2001:41d0:800:178a::7' => true,
+			/** mw9 */
 			'51.195.236.222' => true,
 			'2001:41d0:800:178a::8' => true,
+			/** mw10 */
 			'51.195.236.254' => true,
 			'2001:41d0:800:1bbd::8' => true,
+			/** mw11 */
 			'51.195.236.255' => true,
 			'2001:41d0:800:1bbd::10' => true,
+			/** test3 */
 			'51.195.236.247' => true,
 			'2001:41d0:800:1bbd::14' => true,
 		],
