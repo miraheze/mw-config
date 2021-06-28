@@ -2020,8 +2020,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'autocreatepages' => [
-		'name' => 'AutoCreatePages',
-		'displayname' => 'Auto Create Pages',
+		'name' => 'AutoCreatePage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AutoCreatePage',
 		'var' => 'wmgUseAutoCreatePage',
 		'conflicts' => false,
