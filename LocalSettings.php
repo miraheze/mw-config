@@ -3483,8 +3483,11 @@ $wi->config->settings += [
 			],
 		],
 	],
-	'+wgParsoidSettings' => [
-		'wmgUseLinter' => [
+	'wgParsoidSettings' => [
+		'default' => [
+			'useSelser' => true,
+		],
+		'+wmgUseLinter' => [
 			'linting' => true,
 		],
 	],
