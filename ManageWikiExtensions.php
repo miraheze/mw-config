@@ -1977,7 +1977,8 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'articleratings' => [
-		'name' => 'ArticleRatings',
+		'name' => 'ArticleRating',
+		'displayname' => 'ArticleRatings',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleRatings',
 		'var' => 'wmgUseArticleRatings',
 		'conflicts' => false,
