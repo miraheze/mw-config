@@ -9,6 +9,7 @@
  * talk: true or false. If false, this config will not appear for talk namespaces.
  * constant: optional parameter. True or false. If true, the format will be $var = $val. Used for configuration options that don't apply to specific namespace(s). Doesn't work with the 'check' or 'vestyle' types.
  * blacklisted: array of namespace ids to blacklist the config from.
+ * whitelisted: array of namespace ids to allow the config to be shown in.
  * overridedefault: override default when no existing value exist. Can be a boolean, string, or array.
  * overridedefault[$namespace_id => $val]: namespace specific overrides. Also required a default key. See below.
  * overridedefault['default' => $val]: required when using namespace specific overrides. Sets a default for all other namespaces, which is not using the overrides set.
@@ -67,7 +68,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'constant' => true,
-		'blacklisted' => array_diff( array_keys( $wgExtraNamespaces ), [ NS_PROJECT ] ),
+		'whitelisted' => NS_PROJECT,
 		'overridedefault' => str_replace( ' ', '_', $wgSitename ),
 		'help' => 'Also be sure to update <code>$wgMetaNamespaceTalk</code>.',
 		'requires' => [],
@@ -79,7 +80,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => false,
 		'talk' => true,
 		'constant' => true,
-		'blacklisted' => array_diff( array_keys( $wgExtraNamespaces ), [ NS_PROJECT_TALK ] ),
+		'whitelisted' => NS_PROJECT_TALK,
 		'overridedefault' => str_replace( ' ', '_', "{$wgSitename}_talk" ),
 		'help' => 'Also be sure to update <code>$wgMetaNamespace</code>.',
 		'requires' => [],
@@ -152,9 +153,12 @@ $wgManageWikiNamespacesAdditional = [
 		'from' => 'commentstreams',
 		'type' => 'check',
 		'main' => true,
-		'talk' => true,
+		'talk' => false,
 		'blacklisted' => [],
-		'overridedefault' => false,
+		'overridedefault' => array_merge(
+			array_fill_keys( $wgContentNamespaces, true ),
+			[ 'default' => false ]
+		),
 		'help' => '',
 		'requires' => [],
 	],

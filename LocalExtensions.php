@@ -70,6 +70,10 @@ if ( $wmgUseBlogPage ) {
 	wfLoadExtension( 'BlogPage' );
 }
 
+if ( $wmgUseBlueSky ) {
+	wfLoadSkin( 'BlueSky' );
+}
+
 if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 }
@@ -430,8 +434,7 @@ if ( $wmgUseLiberty ) {
 }
 
 if ( $wmgUseLingo ) {
-	// Disabled, see T7472
-	#wfLoadExtension( 'Lingo' );
+	wfLoadExtension( 'Lingo' );
 }
 
 if ( $wmgUseLinkSuggest ) {
@@ -769,6 +772,10 @@ if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
 }
 
+if ( $wmgUseSnapWikiSkin ) {
+	wfLoadSkin( 'snapwikiskin' );
+}
+
 if ( $wmgUseSnapProjectEmbed ) {
 	wfLoadExtension( 'SnapProjectEmbed' );
 }
@@ -805,11 +812,16 @@ if ( $wmgUseSyntaxHighlightGeSHi ) {
 	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
-if ( $wmgUseTabsCombination ) {
-	wfLoadExtensions( [
-		'Tabber',
-		'Tabs',
-	] );
+if ( $wmgUseTabber ) {
+	wfLoadExtension( 'Tabber' );
+}
+
+if ( $wmgUseTabberNeue ) {
+	wfLoadExtension( 'TabberNeue' );
+}
+
+if ( $wmgUseTabs ) {
+	wfLoadExtension( 'Tabs' );
 }
 
 if ( $wmgUseTemplateData ) {

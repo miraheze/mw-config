@@ -50,7 +50,7 @@ $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
 // Per-wiki
-if ( $wgDBname === 'documentcontrolwiki' ) {
+if ( $wgDBname === 'famedatawiki' ) {
 	$wgWBRepoSettings['statementSections'] = [
 		'item' => [
 			'statements' => null,

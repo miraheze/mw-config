@@ -83,11 +83,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VisualEditor',
 		'var' => 'wmgUseVisualEditor',
 		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'templatedata',
-			],
-		],
+		'requires' => [],
 		'section' => 'editors',
 	],
 
@@ -290,7 +286,7 @@ $wgManageWikiExtensions = [
 		'name' => 'CommentStreams',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CommentStreams',
 		'var' => 'wmgUseCommentStreams',
-		'conflicts' => false,
+		'conflicts' => 'moderation',
 		'requires' => [],
 		'install' => [
 			'sql' => [
@@ -906,10 +902,26 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'tabscombination' => [
-		'name' => 'TabsCombination (Tabber + Tabs)',
+	'tabber' => [
+		'name' => 'Tabber',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabber',
+		'var' => 'wmgUseTabber',
+		'conflicts' => 'tabberneue',
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'tabberneue' => [
+		'name' => 'TabberNeue',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TabberNeue',
+		'var' => 'wmgUseTabberNeue',
+		'conflicts' => 'tabber',
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'tabs' => [
+		'name' => 'Tabs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabs',
-		'var' => 'wmgUseTabsCombination',
+		'var' => 'wmgUseTabs',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -1747,6 +1759,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'bluesky' => [
+		'name' => 'BlueSky',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:BlueSky',
+		'var' => 'wmgUseBlueSky',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'citizen' => [
 		'name' => 'Citizen',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Citizen',
@@ -1887,6 +1907,14 @@ $wgManageWikiExtensions = [
 		'name' => 'Refreshed',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Refreshed',
 		'var' => 'wmgUseRefreshed',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'snapwikiskin' => [
+		'name' => 'Snap!',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Snap!_Wiki_Skin',
+		'var' => 'wmgUseSnapWikiSkin',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',

@@ -216,6 +216,7 @@ $IP/extensions/SubPageList3/extension.json
 $IP/extensions/SubpageFun/extension.json
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
 $IP/extensions/Tabber/extension.json
+$IP/extensions/TabberNeue/extension.json
 $IP/extensions/Tabs/extension.json
 $IP/extensions/TemplateData/extension.json
 $IP/extensions/TemplateSandbox/extension.json
@@ -267,6 +268,7 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
+$IP/skins/BlueSky/skin.json
 $IP/skins/Citizen/skin.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/Cosmos/skin.json
@@ -293,3 +295,4 @@ $IP/skins/erudite/skin.json
 $IP/skins/foreground/skin.json
 $IP/skins/liberty/skin.json
 $IP/skins/pivot/skin.json
+$IP/skins/snapwikiskin/skin.json

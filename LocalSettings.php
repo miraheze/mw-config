@@ -25,7 +25,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
 
 $wi->setVariables(
-	'/srv/mediawiki/w/cache',
+	'/srv/mediawiki/cache',
 	[
 		'wiki'
 	],
@@ -206,7 +206,7 @@ $wi->config->settings += [
 
 	// Cache
 	'wgCacheDirectory' => [
-		'default' => '/srv/mediawiki/w/cache',
+		'default' => '/srv/mediawiki/cache',
 	],
 	'wgExtensionEntryPointListFiles' => [
 		'default' => [
@@ -380,6 +380,28 @@ $wi->config->settings += [
 	],
 	'wgCheckUserEnableSpecialInvestigate' => [
 		'default' => true,
+	],
+	'wgCheckUserLogLogins' => [
+		'default' => true,
+	],
+	'wgCheckUserCAtoollink' => [
+		'default' => 'metawiki',
+	],
+	'wgCheckUserGBtoollink' => [
+		'default' => [
+			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
+	],
+	'wgCheckUserCAMultiLock' => [
+		'default' => [
+			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
 	],
 
 	// Citizen
@@ -622,6 +644,13 @@ $wi->config->settings += [
 				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 		],
+		'softcellwiki' => [
+			'recentchanges' => false,
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
 	],
 	'wgCosmosEnableWantedPages' => [
 		'default' => false,
@@ -782,7 +811,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgCreateWikiCacheDirectory' => [
-		'default' => '/srv/mediawiki/w/cache'
+		'default' => '/srv/mediawiki/cache'
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
@@ -1091,6 +1120,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseBabel' => [
+		'default' => false,
+	],
+	'wmgUseBlueSky' => [
 		'default' => false,
 	],
 	// Must be on at all times except for ldapwikiwiki
@@ -1607,6 +1639,9 @@ $wi->config->settings += [
 	'wmgUseSlackNotifications' => [
 		'default' => false,
 	],
+	'wmgUseSnapWikiSkin' => [
+		'default' => false,
+	],
 	'wmgUseSnapProjectEmbed' => [
 		'default' => false,
 	],
@@ -1637,8 +1672,13 @@ $wi->config->settings += [
 	'wgScribuntoUseGeSHi' => [
 		'default' => true,
 	],
-	// Combo of Tabs + Tabber
-	'wmgUseTabsCombination' => [
+	'wmgUseTabber' => [
+		'default' => false,
+	],
+	'wmgUseTabberNeue' => [
+		'default' => false,
+	],
+	'wmgUseTabs' => [
 		'default' => false,
 	],
 	'wmgUseTemplateData' => [
@@ -2269,6 +2309,7 @@ $wi->config->settings += [
 		'+snapdatawiki' => [
 			'd',
 			'snapwiki',
+                      'wikimediacommons',
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
@@ -2566,12 +2607,24 @@ $wi->config->settings += [
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
 		'wmgUseLinter' => [
+			/** localhost */
 			'127.0.0.1' => true,
 			'::1' => true,
-			'51.195.236.212' => true,
-			'2001:41d0:800:178a::10' => true,
-			'51.195.236.246' => true,
-			'2001:41d0:800:1bbd::13' => true,
+			/** mw8 */
+			'51.195.236.221' => true,
+			'2001:41d0:800:178a::7' => true,
+			/** mw9 */
+			'51.195.236.222' => true,
+			'2001:41d0:800:178a::8' => true,
+			/** mw10 */
+			'51.195.236.254' => true,
+			'2001:41d0:800:1bbd::8' => true,
+			/** mw11 */
+			'51.195.236.255' => true,
+			'2001:41d0:800:1bbd::10' => true,
+			/** test3 */
+			'51.195.236.247' => true,
+			'2001:41d0:800:1bbd::14' => true,
 		],
 	],
 
@@ -2697,7 +2750,7 @@ $wi->config->settings += [
 				'read' => true,
 			],
 		],
-		'+documentcontrolwiki' => [
+		'+famedatawiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
@@ -3430,6 +3483,14 @@ $wi->config->settings += [
 			],
 		],
 	],
+	'wgParsoidSettings' => [
+		'default' => [
+			'useSelser' => true,
+		],
+		'+wmgUseLinter' => [
+			'linting' => true,
+		],
+	],
 
 	// PdfHandler
 	'wgPdfProcessor' => [
@@ -3712,7 +3773,7 @@ $wi->config->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
-		'+documentcontrolwiki' => [
+		'+famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
@@ -3791,7 +3852,7 @@ $wi->config->settings += [
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
 		],
-		'documentcontrolwiki' => [
+		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
@@ -3984,6 +4045,14 @@ $wi->config->settings += [
 		'default' => '',
 	],
 
+	// Snap! skin
+	'wgSnapwikiskinWvuiSearchOptions' => [
+		'default' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],
+	
 	// SocialProfile
 	'wgUserBoard' => [
 		'default' => false,
@@ -4038,6 +4107,9 @@ $wi->config->settings += [
 		],
 	],
 	'wgFriendingEnabled' => [
+		'default' => true,
+	],
+	'wgUserPageChoice' => [
 		'default' => true,
 	],
 
@@ -4280,11 +4352,25 @@ $wi->config->settings += [
 			'51.38.69.175:81', // cp13
 		],
 	],
-	
+
 	// Vector
 	'wgVectorDefaultSkinVersion' => [
 		'default' => '1',
 	],
+	'wgVectorUseWvuiSearch' => [
+		'default' => false,
+		'snapwikiwiki' => true,
+	],
+	'wgVectorWvuiSearchOptions' => [
+		'default' => [
+			'showThumbnail' => true,
+			'showDescription' => true,
+		],
+		'snapwikiwiki' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],	
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
@@ -4562,7 +4648,7 @@ $wi->config->settings += [
 			'JobQueueRedis' => 'debug',
 			'localisation' => false,
 			'ldap' => 'warning',
-			'Linter' => false,
+			'Linter' => 'debug',
 			'LocalFile' => 'warning',
 			'localhost' => false,
 			'LockManager' => false,
@@ -4673,10 +4759,10 @@ $wgUploadPath = "https://static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
-$wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
+$wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-if ( !file_exists( '/srv/mediawiki/w/cache/l10n/l10n_cache-en.cdb' ) ) {
+if ( !file_exists( '/srv/mediawiki/cache/l10n/l10n_cache-en.cdb' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
