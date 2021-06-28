@@ -14,6 +14,7 @@ $IP/extensions/AutoCreatePage/extension.json
 $IP/extensions/Babel/extension.json
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BlogPage/extension.json
+$IP/extensions/Bootstrap/extension.json
 $IP/extensions/CSS/extension.json
 $IP/extensions/Calendar/extension.json
 $IP/extensions/Cargo/extension.json
@@ -291,6 +292,7 @@ $IP/skins/Truglass/skin.json
 $IP/skins/Tweeki/skin.json
 $IP/skins/Vector/skin.json
 $IP/skins/apex/skin.json
+$IP/skins/chameleon/skin.json
 $IP/skins/erudite/skin.json
 $IP/skins/foreground/skin.json
 $IP/skins/liberty/skin.json

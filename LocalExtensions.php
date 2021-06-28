@@ -94,6 +94,11 @@ if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
+if ( $wmgUseChameleon ) {
+	wfLoadExtension( 'Bootstrap' );
+	wfLoadSkin( 'chameleon' );
+}
+
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
