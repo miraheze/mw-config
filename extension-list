@@ -17,6 +17,7 @@ $IP/extensions/BlogPage/extension.json
 $IP/extensions/Bootstrap/extension.json
 $IP/extensions/CSS/extension.json
 $IP/extensions/Calendar/extension.json
+$IP/extensions/Capiunto/extension.json
 $IP/extensions/Cargo/extension.json
 $IP/extensions/CategorySortHeaders/extension.json
 $IP/extensions/CategoryTree/extension.json
