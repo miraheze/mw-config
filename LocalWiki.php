@@ -232,7 +232,7 @@ if ( $wmgUseWebP ) {
 		'scriptDirUrl' => $wgScriptPath,
 		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
 		'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => $wgThumbnailScriptPath,
+		'thumbScriptUrl' => "$wgScriptPath/thumb.php",
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
 		'deletedDir' => "{$wgUploadDirectory}/deleted",
 		'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0
