@@ -3484,10 +3484,9 @@ $wi->config->settings += [
 		],
 	],
 	'wgParsoidSettings' => [
-		'default' => [
+		'wmgUseLinter' => [
 			'useSelser' => true,
 			'linting' => true,
-			'nativeGalleryEnabled' => true,
 		],
 	],
 
