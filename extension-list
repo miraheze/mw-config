@@ -90,7 +90,7 @@ $IP/extensions/GlobalWatchlist/extension.json
 $IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
-$IP/extensions/GroupsSidebar/GroupsSidebar.php
+$IP/extensions/GroupsSidebar/extension.json
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/HAWelcome/extension.json
 $IP/extensions/HeaderFooter/extension.json
