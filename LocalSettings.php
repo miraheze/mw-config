@@ -1142,6 +1142,9 @@ $wi->config->settings += [
 	'wmgUseCategoryTree' => [
 		'default' => false,
 	],
+	'wmgUseChameleon' => [
+		'default' => false,
+	],
 	'wmgUseCharInsert' => [
 		'default' => false,
 	],
