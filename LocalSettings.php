@@ -4787,8 +4787,11 @@ require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
 
+$wi->disabledExtensions = [
+	'3d',
+];
+
 $wi->readExtensions();
-$wi->config->extractAllGlobals( $wi->dbname );
 
 if ( $wi->missing ) {
 	require_once( '/srv/mediawiki/config/MissingWiki.php' );
