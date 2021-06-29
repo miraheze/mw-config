@@ -3,9 +3,9 @@
  * ManageWiki extensions and skins are added using the variable below.
  *
  * name: MUST match the name in extension.json, skin.json, or $wgExtensionCredits.
- * displayname: the displayed name of the setting on Special:ManageWikiExtensions.
+ * displayname: the plain text display name, or a localised message key to be displayed on ManageWikiExtensions.
  * linkPage: full url for an information page for the extension.
- * description: the description to be displayed, or a localised message key.
+ * description: the plain text description, or a localised message key to be displayed on ManageWikiExtensions.
  * var: the relevant var that enables the extension.
  * conflicts: string of extensions that cause this extension to not work.
  * requires: an array. See below for available options.
