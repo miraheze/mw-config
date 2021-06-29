@@ -7,9 +7,6 @@
 // Initialise WikiInitialise
 require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
-$wi->disabledExtensions = [
-	'3d',
-];
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once( '/srv/mediawiki/config/PrivateSettings.php' );
@@ -4789,6 +4786,10 @@ require_once( '/srv/mediawiki/config/GlobalCache.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
+
+$wi->disabledExtensions = [
+	'3d',
+];
 
 $wi->readExtensions();
 
