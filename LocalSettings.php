@@ -4788,7 +4788,7 @@ require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
 
 $wi->disabledExtensions = [
-	'3d',
+	'3d' => true,
 ];
 
 $wi->readExtensions();
