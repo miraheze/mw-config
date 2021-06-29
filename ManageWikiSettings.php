@@ -460,7 +460,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => '',
 		'section' => 'discussion',
-		'help' => 'IRC Server to connect to, not required when using the freenodeChat web client.',
+		'help' => 'IRC Server to connect to, not required when using the Libera web client.',
 		'requires' => [],
 	],
 	'wgWebChatChannel' => [
@@ -477,13 +477,12 @@ $wgManageWikiSettings = [
 		'from' => 'webchat',
 		'type' => 'list',
 		'options' => [
-			'Freenode' => 'freenodeChat',
 			'Libera' => 'LiberaChat',
 			'Other Server' => 'Mibbit',
 		],
-		'overridedefault' => 'freenodeChat',
+		'overridedefault' => 'Libera',
 		'section' => 'discussion',
-		'help' => 'This sets the web client to use. If you are not using Freenode, select Other Server.',
+		'help' => 'This sets the web client to use. If you are not using Libera, select Other Server.',
 		'requires' => [],
 	],
 	'wgWikiForumAllowAnonymous' => [
