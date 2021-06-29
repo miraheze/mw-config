@@ -4015,6 +4015,7 @@ $wi->config->extractAllGlobals( $wi->dbname );
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
 
+$wi->readCache();
 $wi->readExtensions();
 $wi->config->extractAllGlobals( $wi->dbname );
 
