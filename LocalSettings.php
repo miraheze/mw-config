@@ -4014,6 +4014,10 @@ $wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
+
+$wi->readExtensions();
+$wi->config->extractAllGlobals( $wi->dbname );
+
 require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
 
@@ -4049,10 +4053,6 @@ $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
 require_once( '/srv/mediawiki/config/Database.php' );
 require_once( '/srv/mediawiki/config/GlobalCache.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
-
-$wi->readExtensions();
-$wi->config->extractAllGlobals( $wi->dbname );
-
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
 
