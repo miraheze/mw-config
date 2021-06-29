@@ -5,7 +5,7 @@
  * name: MUST match the name in extension.json, skin.json, or $wgExtensionCredits.
  * displayname: the displayed name of the setting on Special:ManageWikiExtensions.
  * linkPage: full url for an information page for the extension.
- * description: The description to be displayed, or a localised message key.
+ * description: the description to be displayed, or a localised message key.
  * var: the relevant var that enables the extension.
  * conflicts: string of extensions that cause this extension to not work.
  * requires: an array. See below for available options.
