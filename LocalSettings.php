@@ -4009,12 +4009,11 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-// ManageWiki settings
-require_once __DIR__ . "/ManageWikiExtensions.php";
-
 $wi->readCache();
 $wi->config->extractAllGlobals( $wi->dbname );
 
+// ManageWiki settings
+require_once __DIR__ . "/ManageWikiExtensions.php";
 require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
 
@@ -4052,6 +4051,9 @@ require_once( '/srv/mediawiki/config/GlobalCache.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
+
+$wi->readExtensions();
+$wi->config->extractAllGlobals( $wi->dbname );
 
 if ( $wi->missing ) {
 	require_once( '/srv/mediawiki/config/MissingWiki.php' );
