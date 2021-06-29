@@ -4009,11 +4009,13 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
+$wi->readCache( false );
+$wi->config->extractAllGlobals( $wi->dbname );
+
 // ManageWiki settings
 require_once __DIR__ . "/ManageWikiExtensions.php";
 
-$wi->readCache();
-$wi->config->extractAllGlobals( $wi->dbname );
+$wi->readExtensions();
 
 require_once __DIR__ . "/ManageWikiNamespaces.php";
 require_once __DIR__ . "/ManageWikiSettings.php";
