@@ -7,6 +7,9 @@
 // Initialise WikiInitialise
 require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
+$wi->disabledExtensions = [
+	'3d',
+];
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once( '/srv/mediawiki/config/PrivateSettings.php' );
@@ -33,10 +36,6 @@ $wi->setVariables(
 		'miraheze.org' => 'wiki'
 	]
 );
-
-$wi->disabledExtensions = [
-	'3d',
-];
 
 $wi->config->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
