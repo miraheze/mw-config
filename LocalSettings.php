@@ -34,6 +34,10 @@ $wi->setVariables(
 	]
 );
 
+$wi->disabledExtensions = [
+	'3d',
+];
+
 $wi->config->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -4786,10 +4790,6 @@ require_once( '/srv/mediawiki/config/GlobalCache.php' );
 require_once( '/srv/mediawiki/config/GlobalLogging.php' );
 require_once( '/srv/mediawiki/config/LocalExtensions.php' );
 require_once( '/srv/mediawiki/config/Sitenotice.php' );
-
-$wi->disabledExtensions = [
-	'3d' => true,
-];
 
 $wi->readExtensions();
 
