@@ -2768,6 +2768,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'section' => 'other',
+		'entrypoint' => "$IP/extensions/SocialProfile/SocialProfile.php",
 	],
 	'spritesheet' => [
 		'name' => 'SpriteSheet',
