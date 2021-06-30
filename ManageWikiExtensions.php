@@ -2736,6 +2736,7 @@ $wgManageWikiExtensions = [
 	'socialprofile' => [
 		'name' => 'SocialProfile',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SocialProfile',
+		'description' => 'socialprofile-desc',
 		'var' => 'wmgUseSocialProfile',
 		'conflicts' => false,
 		'requires' => [],
