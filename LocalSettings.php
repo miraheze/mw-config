@@ -4455,7 +4455,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgWebChatClient' => [
-		'default' => 'freenodeChat',
+		'default' => 'Libera',
 	],
 
 	// WikiForum
