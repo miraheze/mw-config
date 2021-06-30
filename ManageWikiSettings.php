@@ -480,7 +480,7 @@ $wgManageWikiSettings = [
 			'Libera' => 'LiberaChat',
 			'Other Server' => 'Mibbit',
 		],
-		'overridedefault' => 'Libera',
+		'overridedefault' => 'LiberaChat',
 		'section' => 'discussion',
 		'help' => 'This sets the web client to use. If you are not using Libera, select Other Server.',
 		'requires' => [],
