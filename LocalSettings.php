@@ -1983,9 +1983,9 @@ $wi->config->settings += [
 		'default' => [
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
-			5258, // Void (Board)
+			5258, // Void (SRE and Board)
 			24689, // RobLa (Board)
-			243629, // Samuel (Miraheze) - (RhinosF1 (SRE))
+			243629, // RhinosF1 (SRE)
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 		],
