@@ -4702,6 +4702,7 @@ $wi->config->settings += [
 			'SQLBagOStuff' => false,
 			'squid' => false,
 			'StashEdit' => false,
+			'T263581' => false,
 			'texvc' => false,
 			'throttler' => false,
 			'thumbnail' => 'debug',
