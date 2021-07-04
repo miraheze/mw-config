@@ -3439,7 +3439,7 @@ $wi->config->settings += [
 	// Page Images
 	'wgPageImagesNamespaces' => [
 		'default' => NS_MAIN,
-		'vgportdbwiki' => [NS_MAIN, NS_PLATFORM, NS_SERIES, NS_COMPANY],
+		'vgportdbwiki' => [NS_MAIN, 3000, 3004, 3006],
 	],
 	
 	// Pagelang
