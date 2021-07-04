@@ -3437,7 +3437,7 @@ $wi->config->settings += [
 	],
 
 	// Page Images
-	'wgPageImagesNamespaces' = [
+	'wgPageImagesNamespaces' => [
 		'default' => NS_MAIN,
 		'vgportdbwiki' => [NS_MAIN, NS_PLATFORM, NS_SERIES, NS_COMPANY],
 	],
