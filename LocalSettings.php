@@ -3354,11 +3354,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
-	// MultiBoilerplate settings
-	'wgMultiBoilerplateDiplaySpecialPage' => [
-		'default' => false,
-	],
-
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => [
 		'default' => false,
@@ -3385,10 +3380,14 @@ $wi->config->settings += [
 
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'wmgUseMultiBoilerplate' => true,
+		'default' => true,
 	],
 	'wgMultiBoilerplateOptions' => [
-		'wmgUseMultiBoilerplate' => false,
+		'default' => false,
+	],
+	'wgMultiBoilerplateOverwrite' => [
+		'default' => false,
+		'vgportdbwiki' => true,
 	],
 
 	// New User Email Notification
