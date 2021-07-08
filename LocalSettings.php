@@ -3380,13 +3380,14 @@ $wi->config->settings += [
 
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'wmgUseMultiBoilerplate' => true,
+		'wmgUseMultiBoilerplate' => false,
+		'vgportdbwiki' => true,
 	],
 	'wgMultiBoilerplateOptions' => [
-		'default' => false,
+		'wmgUseMultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOverwrite' => [
-		'default' => false,
+		'wmgUseMultiBoilerplate' => false,
 		'vgportdbwiki' => true,
 	],
 
