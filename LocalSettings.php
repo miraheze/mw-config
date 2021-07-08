@@ -3380,7 +3380,7 @@ $wi->config->settings += [
 
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'default' => true,
+		'wmgUseMultiBoilerplate' => true,
 	],
 	'wgMultiBoilerplateOptions' => [
 		'default' => false,
