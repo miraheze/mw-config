@@ -2310,6 +2310,9 @@ $wi->config->settings += [
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
+		'+securitywiki' => [
+			'pv',
+		],
 		'+snapdatawiki' => [
 			'd',
 			'snapwiki',
