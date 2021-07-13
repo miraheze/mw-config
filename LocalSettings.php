@@ -4729,6 +4729,11 @@ $wi->config->settings += [
 			'XMP' => false,
 		],
 	],
+	// Contro MediaWiki Deprecation Warnings
+	'wgDeprecationReleaseLimit' = [
+		'default' => '1.35',
+		'test3wiki' => false,
+	],
 
 	// Email notifications on privileged actions configuration
 	'wgMirahezeMagicLogEmailConditions' => [
