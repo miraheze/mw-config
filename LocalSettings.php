@@ -4729,7 +4729,7 @@ $wi->config->settings += [
 			'XMP' => false,
 		],
 	],
-	// Contro MediaWiki Deprecation Warnings
+	// Control MediaWiki Deprecation Warnings
 	'wgDeprecationReleaseLimit' => [
 		'default' => '1.35',
 		'test3wiki' => false,
