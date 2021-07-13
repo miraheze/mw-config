@@ -4747,7 +4747,7 @@ $wi->config->settings += [
 	],
 	// Control MediaWiki Deprecation Warnings
 	'wgDeprecationReleaseLimit' => [
-		'default' => '1.35',
+		'default' => '1.34',
 		'test3wiki' => false,
 	],
 
