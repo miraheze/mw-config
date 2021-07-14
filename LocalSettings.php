@@ -703,6 +703,7 @@ $wi->config->settings += [
 			'graylog\d{1,2}',
 			'mem\d{1,2}',
 			'miraheze\d{0,2}',
+			'sslrequest',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
@@ -1073,7 +1074,7 @@ $wi->config->settings += [
 		'default' => 20,
 	],
 	
-	// Extensions and Skins
+	// Extensions
 	// Must be on at all times except for ldapwikiwiki
 	'wmgUseCentralAuth' => [
 		'default' => true,
@@ -1248,12 +1249,15 @@ $wi->config->settings += [
 		'default' => [
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
-			5258, // Void (Board)
+			5258, // Void (SRE and Board)
 			24689, // RobLa (Board)
-			243629, // Samuel (Miraheze) - (RhinosF1 (SRE))
+			243629, // RhinosF1 (SRE)
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 		],
+	],
+	'wgMirahezeSurveyEnabled' => [
+		'default' => false,
 	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
@@ -1573,6 +1577,9 @@ $wi->config->settings += [
 		],
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
+		],
+		'+securitywiki' => [
+			'pv',
 		],
 		'+snapdatawiki' => [
 			'd',
@@ -2618,11 +2625,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
-	// MultiBoilerplate settings
-	'wgMultiBoilerplateDiplaySpecialPage' => [
-		'default' => false,
-	],
-
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => [
 		'default' => false,
@@ -2649,10 +2651,15 @@ $wi->config->settings += [
 
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'wmgUseMultiBoilerplate' => true,
+		'wmgUseMultiBoilerplate' => false,
+		'vgportdbwiki' => true,
 	],
 	'wgMultiBoilerplateOptions' => [
 		'wmgUseMultiBoilerplate' => false,
+	],
+	'wgMultiBoilerplateOverwrite' => [
+		'wmgUseMultiBoilerplate' => false,
+		'vgportdbwiki' => true,
 	],
 
 	// New User Email Notification
@@ -2700,6 +2707,19 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
+	// Page Images
+	'wgPageImagesNamespaces' => [
+		'default' => [
+			NS_MAIN,
+		],
+		'vgportdbwiki' => [
+			NS_MAIN,
+			3000,
+			3004,
+			3006,
+		],
+	],
+	
 	// Pagelang
 	'wgPageLanguageUseDB' => [
 		'default' => false,
@@ -3720,7 +3740,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgWebChatClient' => [
-		'default' => 'freenodeChat',
+		'default' => 'LiberaChat',
 	],
 
 	// WikiForum
@@ -3967,6 +3987,7 @@ $wi->config->settings += [
 			'SQLBagOStuff' => false,
 			'squid' => false,
 			'StashEdit' => false,
+			'T263581' => false,
 			'texvc' => false,
 			'throttler' => false,
 			'thumbnail' => 'debug',
@@ -3991,6 +4012,11 @@ $wi->config->settings += [
 			'xff' => false,
 			'XMP' => false,
 		],
+	],
+	// Control MediaWiki Deprecation Warnings
+	'wgDeprecationReleaseLimit' => [
+		'default' => '1.34',
+		'test3wiki' => false,
 	],
 
 	// Email notifications on privileged actions configuration

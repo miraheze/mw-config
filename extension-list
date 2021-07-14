@@ -199,6 +199,7 @@ $IP/extensions/ShortDescription/extension.json
 $IP/extensions/SimpleBlogPage/extension.json
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/extension.json
+$IP/extensions/SkinPerPage/extension.json
 $IP/extensions/SlackNotifications/extension.json
 $IP/extensions/SnapProjectEmbed/extension.json
 $IP/extensions/SoftRedirector/extension.json
