@@ -863,7 +863,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'skinperpage' => [
-		'name' => 'SkinPerPage',
+		'name' => 'Skin per page',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SkinPerPage',
 		'var' => 'wmgUseSkinPerPage',
 		'conflicts' => false,
