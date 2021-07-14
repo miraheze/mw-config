@@ -1991,6 +1991,9 @@ $wi->config->settings += [
 			96304, // Universal Omega (SRE)
 		],
 	],
+	'wgMirahezeSurveyEnabled' => [
+		'default' => false,
+	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
