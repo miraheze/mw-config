@@ -1640,6 +1640,9 @@ $wi->config->settings += [
 	'wmgUseSimpleTooltip' => [
 		'default' => false,
 	],
+	'wmgUseSkinPerPage' => [
+		'default' => false,
+	],
 	'wmgUseSlackNotifications' => [
 		'default' => false,
 	],

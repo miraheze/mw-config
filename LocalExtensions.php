@@ -773,6 +773,10 @@ if ( $wmgUseSimpleTooltip ) {
 	wfLoadExtension( 'SimpleTooltip' );
 }
 
+if ( $wmgUseSkinPerPage ) {
+	wfLoadExtension( 'SkinPerPage' );
+}
+
 if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
 }
