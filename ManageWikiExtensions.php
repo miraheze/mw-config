@@ -862,6 +862,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'skinperpage' => [
+		'name' => 'SkinPerPage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SkinPerPage',
+		'var' => 'wmgUseSkinPerPage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'snapprojectembed' => [
 		'name' => 'Snap! Project Embed',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SnapProjectEmbed',
