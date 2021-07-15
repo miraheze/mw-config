@@ -94,6 +94,11 @@ if ( $wmgUseCapiunto ) {
 	wfLoadExtension( 'Capiunto' );
 }
 
+if ( $wmgUseChameleon ) {
+	wfLoadExtension( 'Bootstrap' );
+	wfLoadSkin( 'chameleon' );
+}
+
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
 }
@@ -766,6 +771,10 @@ if ( $wmgUseSimpleChanges ) {
 
 if ( $wmgUseSimpleTooltip ) {
 	wfLoadExtension( 'SimpleTooltip' );
+}
+
+if ( $wmgUseSkinPerPage ) {
+	wfLoadExtension( 'SkinPerPage' );
 }
 
 if ( $wmgUseSlackNotifications ) {

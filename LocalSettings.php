@@ -703,6 +703,7 @@ $wi->config->settings += [
 			'graylog\d{1,2}',
 			'mem\d{1,2}',
 			'miraheze\d{0,2}',
+			'sslrequest',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
@@ -1140,6 +1141,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseCategoryTree' => [
+		'default' => false,
+	],
+	'wmgUseChameleon' => [
 		'default' => false,
 	],
 	'wmgUseCharInsert' => [
@@ -1636,6 +1640,9 @@ $wi->config->settings += [
 	'wmgUseSimpleTooltip' => [
 		'default' => false,
 	],
+	'wmgUseSkinPerPage' => [
+		'default' => false,
+	],
 	'wmgUseSlackNotifications' => [
 		'default' => false,
 	],
@@ -1983,12 +1990,15 @@ $wi->config->settings += [
 		'default' => [
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
-			5258, // Void (Board)
+			5258, // Void (SRE and Board)
 			24689, // RobLa (Board)
-			243629, // Samuel (Miraheze) - (RhinosF1 (SRE))
+			243629, // RhinosF1 (SRE)
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 		],
+	],
+	'wgMirahezeSurveyEnabled' => [
+		'default' => false,
 	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
@@ -2309,9 +2319,13 @@ $wi->config->settings += [
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
+		'+securitywiki' => [
+			'pv',
+		],
 		'+snapdatawiki' => [
 			'd',
 			'snapwiki',
+                      'wikimediacommons',
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
@@ -2609,12 +2623,24 @@ $wi->config->settings += [
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
 		'wmgUseLinter' => [
+			/** localhost */
 			'127.0.0.1' => true,
 			'::1' => true,
-			'51.195.236.212' => true,
-			'2001:41d0:800:178a::10' => true,
-			'51.195.236.246' => true,
-			'2001:41d0:800:1bbd::13' => true,
+			/** mw8 */
+			'51.195.236.221' => true,
+			'2001:41d0:800:178a::7' => true,
+			/** mw9 */
+			'51.195.236.222' => true,
+			'2001:41d0:800:178a::8' => true,
+			/** mw10 */
+			'51.195.236.254' => true,
+			'2001:41d0:800:1bbd::8' => true,
+			/** mw11 */
+			'51.195.236.255' => true,
+			'2001:41d0:800:1bbd::10' => true,
+			/** test3 */
+			'51.195.236.247' => true,
+			'2001:41d0:800:1bbd::14' => true,
 		],
 	],
 
@@ -3340,11 +3366,6 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
-	// MultiBoilerplate settings
-	'wgMultiBoilerplateDiplaySpecialPage' => [
-		'default' => false,
-	],
-
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => [
 		'default' => false,
@@ -3371,10 +3392,15 @@ $wi->config->settings += [
 
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'wmgUseMultiBoilerplate' => true,
+		'wmgUseMultiBoilerplate' => false,
+		'vgportdbwiki' => true,
 	],
 	'wgMultiBoilerplateOptions' => [
 		'wmgUseMultiBoilerplate' => false,
+	],
+	'wgMultiBoilerplateOverwrite' => [
+		'wmgUseMultiBoilerplate' => false,
+		'vgportdbwiki' => true,
 	],
 
 	// New User Email Notification
@@ -3422,6 +3448,19 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
+	// Page Images
+	'wgPageImagesNamespaces' => [
+		'default' => [
+			NS_MAIN,
+		],
+		'vgportdbwiki' => [
+			NS_MAIN,
+			3000,
+			3004,
+			3006,
+		],
+	],
+	
 	// Pagelang
 	'wgPageLanguageUseDB' => [
 		'default' => false,
@@ -3471,6 +3510,14 @@ $wi->config->settings += [
  					'restbaseCompat' => false,
 				],
 			],
+		],
+	],
+	'wgParsoidSettings' => [
+		'default' => [
+			'useSelser' => true,
+		],
+		'+wmgUseLinter' => [
+			'linting' => true,
 		],
 	],
 
@@ -4027,6 +4074,14 @@ $wi->config->settings += [
 		'default' => '',
 	],
 
+	// Snap! skin
+	'wgSnapwikiskinWvuiSearchOptions' => [
+		'default' => [
+			'showThumbnail' => false,
+			'showDescription' => false,
+		],
+	],
+	
 	// SocialProfile
 	'wgUserBoard' => [
 		'default' => false,
@@ -4426,7 +4481,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgWebChatClient' => [
-		'default' => 'freenodeChat',
+		'default' => 'LiberaChat',
 	],
 
 	// WebP
@@ -4642,7 +4697,7 @@ $wi->config->settings += [
 			'JobQueueRedis' => 'debug',
 			'localisation' => false,
 			'ldap' => 'warning',
-			'Linter' => false,
+			'Linter' => 'debug',
 			'LocalFile' => 'warning',
 			'localhost' => false,
 			'LockManager' => false,
@@ -4693,6 +4748,7 @@ $wi->config->settings += [
 			'SQLBagOStuff' => false,
 			'squid' => false,
 			'StashEdit' => false,
+			'T263581' => false,
 			'texvc' => false,
 			'throttler' => false,
 			'thumbnail' => 'debug',
@@ -4717,6 +4773,11 @@ $wi->config->settings += [
 			'xff' => false,
 			'XMP' => false,
 		],
+	],
+	// Control MediaWiki Deprecation Warnings
+	'wgDeprecationReleaseLimit' => [
+		'default' => '1.34',
+		'test3wiki' => false,
 	],
 
 	// Email notifications on privileged actions configuration
