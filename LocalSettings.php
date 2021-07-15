@@ -3233,9 +3233,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgGitInfoCacheDirectory' => [
-		'default' => [
-			'/srv/mediawiki/cache/gitinfo',
-		],
+		'default' => '/srv/mediawiki/cache/gitinfo',
 	],
 	'wgAllowExternalImages' => [
 		'default' => false,
