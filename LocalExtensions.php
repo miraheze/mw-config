@@ -972,6 +972,10 @@ if ( $wmgUseWebChat ) {
 	wfLoadExtension( 'WebChat' );
 }
 
+if ( $wmgUseWebP ) {
+	wfLoadExtension( 'WebP' );
+}
+
 if ( $wmgUseWikiCategoryTagCloud ) {
 	wfLoadExtension( 'WikiCategoryTagCloud' );
 }

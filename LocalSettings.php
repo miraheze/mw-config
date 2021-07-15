@@ -1784,6 +1784,9 @@ $wi->config->settings += [
 	'wmgUseWebChat' => [
 		'default' => false,
 	],
+	'wmgUseWebP' => [
+		'default' => false,
+	],
 	'wmgUseWikibaseClient' => [
 		'default' => false,
 	],
@@ -4470,7 +4473,7 @@ $wi->config->settings += [
 		'wmgUseWikibaseRepository' => true,
 	],
 
-	// WebChat config
+	// WebChat
 	'wgWebChatServer' => [
 		'default' => false,
 	],
@@ -4479,6 +4482,26 @@ $wi->config->settings += [
 	],
 	'wgWebChatClient' => [
 		'default' => 'LiberaChat',
+	],
+
+	// WebP
+	'wgWebPCompressionQuality' => [
+		'wmgUseWebP' => 50,
+	],
+	'wgWebPFilterStrength' => [
+		'wmgUseWebP' => 50,
+	],
+	'wgWebPAutoFilter' => [
+		'wmgUseWebP' => true,
+	],
+	'wgWebPConvertInJobQueue' => [
+		'wmgUseWebP' => true,
+	],
+	'wgWebPEnableConvertOnUpload' => [
+		'wmgUseWebP' => true,
+	],
+	'wgWebPEnableConvertOnTransform' => [
+		'wmgUseWebP' => true,
 	],
 
 	// WikiForum
