@@ -2110,11 +2110,6 @@ $wi->config->settings += [
 		'ldapwikiwiki' => 'ldapwikiwiki',
 	],
 
-	// GlobalUsage
-	'wgGlobalUsageDatabase' => [
-		'default' => 'commonswiki',
-	],
-
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
 		'default' => 'https://login.miraheze.org/w/api.php',
