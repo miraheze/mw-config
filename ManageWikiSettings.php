@@ -2791,6 +2791,12 @@ if ( $wgMirahezeCommons && $wmgEnableSharedUploads && $wmgSharedUploadDBname ) {
 					'state' => 'public',
 				],
 			],
+			'script' => [
+ 				"$IP/maintenance/sql.php" => [
+					'wikidb' => $wmgSharedUploadDBname,
+					'quiet' => "$IP/extensions/GlobalUsage/sql/mysql/GlobalUsage.sql",
+				],
+			],
 		],
 	];
 }
