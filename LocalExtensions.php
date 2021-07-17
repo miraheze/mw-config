@@ -316,7 +316,7 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 }
 
-if ( $wgMirahezeCommons && !$cwPrivate ) {
+if ( ( $wgMirahezeCommons || $wmgEnableSharedUploads ) && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
