@@ -2772,37 +2772,3 @@ if ( $wmgUseGamepress && $wmgUseTheme ) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
 }
-
-if ( ( $wmgEnableSharedUploads && $wmgSharedUploadDBname ) || $wmgSharedUploadClientDBname ) {
-
-	$mirahezeCommonsOption = $wgMirahezeCommons ? [
-		'commonswiki' => 'commonswiki',
-	] : [];
-
-	$wgManageWikiSettings += [
-		'wmgGlobalUsageDatabase' => [
-			'name' => 'Global Usage Database',
-			'from' => 'mediawiki',
-			'type' => 'list',
-			'overridedefault' => 'commonswiki',
-			'section' => 'media',
-			'options' => array_merge( $mirahezeCommonsOption, [
-				$wmgSharedUploadDBname ?: $wgDBname => $wmgSharedUploadDBname ?: $wgDBname,
-			] ),
-			'help' => 'Select which database to use GlobalUsage with.',
-			'requires' => [
-				'visibility' => [
-					'state' => 'public',
-				],
-			],
-			'script' => [
- 				"$IP/maintenance/sql.php" => [
-					'wikidb' => $wmgSharedUploadDBname,
-					'quiet' => "$IP/extensions/GlobalUsage/sql/mysql/tables-generated.sql",
-				],
-			],
-		],
-	];
-
-	unset( $mirahezeCommonsOption );
-}
