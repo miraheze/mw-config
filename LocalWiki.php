@@ -201,6 +201,9 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	];
 }
 
+// GlobalUsage
+$wgGlobalUsageDatabase = $wmgGlobalUsageDatabase;
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
