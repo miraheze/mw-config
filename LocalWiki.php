@@ -202,7 +202,44 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 }
 
 // GlobalUsage
-$wgGlobalUsageDatabase = $wmgGlobalUsageDatabase;
+if ( $wgMirahezeCommons ) {
+	$wgGlobalUsageDatabase = 'commonswiki';
+} elseif ( ( $wmgEnableSharedUploads && $wmgSharedUploadDBname ) || $wmgSharedUploadClientDBname ) {
+	$wgGlobalUsageDatabase = $wmgSharedUploadDBname ?: $wgDBname;
+}
+
+if ( ( $wmgEnableSharedUploads && $wmgSharedUploadDBname ) || $wmgSharedUploadClientDBname ) {
+	$mirahezeCommonsOption = $wgMirahezeCommons ? [
+		'commonswiki' => 'commonswiki',
+	] : [];
+
+	$wgManageWikiSettings += [
+		'wgGlobalUsageDatabase' => [
+			'name' => 'Global Usage Database',
+			'from' => 'mediawiki',
+			'type' => 'list',
+			'overridedefault' => $wgMirahezeCommons ? 'commonswiki' : $wmgSharedUploadDBname ?: $wgDBname,
+			'section' => 'media',
+			'options' => array_merge( $mirahezeCommonsOption, [
+				$wmgSharedUploadDBname ?: $wgDBname => $wmgSharedUploadDBname ?: $wgDBname,
+			] ),
+			'help' => 'Select which database to use GlobalUsage with.',
+			'requires' => [
+				'visibility' => [
+					'state' => 'public',
+				],
+			],
+			'script' => [
+ 				"$IP/maintenance/sql.php" => [
+					'wikidb' => $wmgSharedUploadDBname ?: $wgDBname,
+					'quiet' => "$IP/extensions/GlobalUsage/sql/mysql/tables-generated.sql",
+				],
+			],
+		],
+	];
+
+	unset( $mirahezeCommonsOption );
+}
 
 // $wgLogos
 $wgLogos = [
