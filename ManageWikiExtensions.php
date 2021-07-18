@@ -179,33 +179,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'parserhooks',
 	],
-	'approvedrevs' => [
-		'name' => 'Approved Revs',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Approved_Revs',
-		'var' => 'wmgUseApprovedRevs',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'sql' => [
-				'approved_revs_files' => "$IP/extensions/ApprovedRevs/sql/ApprovedFiles.sql",
-				'approved_revs' => "$IP/extensions/ApprovedRevs/sql/ApprovedRevs.sql"
-			],
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'viewapprover',
-						'approverevisions',
-					],
-				],
-				'*' => [
-					'permissions' => [
-						'viewlinktolatest',
-					],
-				],
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'arrays' => [
 		'name' => 'Arrays',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Arrays',
@@ -1078,6 +1051,33 @@ $wgManageWikiExtensions = [
 	],
 
 	// Spam prevention
+	'approvedrevs' => [
+		'name' => 'Approved Revs',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Approved_Revs',
+		'var' => 'wmgUseApprovedRevs',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'approved_revs_files' => "$IP/extensions/ApprovedRevs/sql/ApprovedFiles.sql",
+				'approved_revs' => "$IP/extensions/ApprovedRevs/sql/ApprovedRevs.sql"
+			],
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'viewapprover',
+						'approverevisions',
+					],
+				],
+				'*' => [
+					'permissions' => [
+						'viewlinktolatest',
+					],
+				],
+			],
+		],
+		'section' => 'antispam',
+	],
 	'authorprotect' => [
 		'name' => 'AuthorProtect',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AuthorProtect',
