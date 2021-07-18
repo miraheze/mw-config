@@ -316,7 +316,7 @@ if ( $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GettingStarted' );
 }
 
-if ( ( $wgMirahezeCommons || $wmgEnableSharedUploads || $wmgSharedUploadClientDBname ) && !$cwPrivate ) {
+if ( ( $wgMirahezeCommons || ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) || ( $wmgSharedUploadClientDBname && in_array( $wmgSharedUploadClientDBname, $wgLocalDatabases ) ) ) && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
