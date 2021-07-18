@@ -204,11 +204,11 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 // GlobalUsage
 if ( $wgMirahezeCommons ) {
 	$wgGlobalUsageDatabase = 'commonswiki';
-} elseif ( ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) || $wmgSharedUploadClientDBname ) {
+} elseif ( ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) || ( $wmgSharedUploadClientDBname && in_array( $wmgSharedUploadClientDBname, $wgLocalDatabases ) ) ) {
 	$wgGlobalUsageDatabase = $wmgSharedUploadDBname ?: $wgDBname;
 }
 
-if ( ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) || $wmgSharedUploadClientDBname ) {
+if ( ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUploadDBname, $wgLocalDatabases ) ) || ( $wmgSharedUploadClientDBname && in_array( $wmgSharedUploadClientDBname, $wgLocalDatabases ) ) ) {
 	$mirahezeCommonsOption = $wgMirahezeCommons ? [
 		'commonswiki' => 'commonswiki',
 	] : [];
