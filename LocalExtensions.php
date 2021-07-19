@@ -256,6 +256,10 @@ if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
 }
 
+if ( $wmgUseEmbedVideo ) {
+	wfLoadExtension( 'EmbedVideo' );
+}
+
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }

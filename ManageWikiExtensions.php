@@ -104,6 +104,14 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'mediahandlers',
 	],
+	'embedvideo' => [
+		'name' => 'EmbedVideo',
+		'linkPage' => 'https://github.com/StarCitizenWiki/mediawiki-extensions-EmbedVideo',
+		'var' => 'wmgUseEmbedVideo',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'mediahandlers',
+	],
 	'pagedtiffhandler' => [
 		'name' => 'PagedTiffHandler',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PagedTiffHandler',
