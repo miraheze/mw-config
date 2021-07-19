@@ -2115,7 +2115,7 @@ $wi->config->settings += [
 		'default' => 'commonswiki',
 		'tuscriaturaswiki' => 'intercriaturaswiki',
 		'yourcreatureswiki' => 'intercriaturaswiki',
-		'intercriaturaswiki' => 'intercriaturaswiki'
+		'intercriaturaswiki' => 'intercriaturaswiki',
 	],
 
 	// GlobalUserPage
