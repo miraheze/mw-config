@@ -761,7 +761,7 @@ $wi->config->settings += [
 		'default' => 'sre@miraheze.org',
 	],
 	'wgCreateWikiPersistentModelFile' => [
-		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
+		'default' => false,
 	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
