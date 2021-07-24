@@ -1375,6 +1375,9 @@ $wi->config->settings += [
 	// GlobalUsage
 	'wgGlobalUsageDatabase' => [
 		'default' => 'commonswiki',
+		'tuscriaturaswiki' => 'intercriaturaswiki',
+		'yourcreatureswiki' => 'intercriaturaswiki',
+		'intercriaturaswiki' => 'intercriaturaswiki',
 	],
 
 	// GlobalUserPage
