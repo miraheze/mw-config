@@ -471,7 +471,7 @@ if ( $wmgUseLogoFunctions ) {
 }
 
 if ( $wmgUseLoopsCombo ) {
-	wfLoadExtension( 'Loops' );
+	//wfLoadExtension( 'Loops' );
 }
 
 if ( $wmgUseMagicNoCache ) {

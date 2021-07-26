@@ -570,11 +570,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Loops',
 		'var' => 'wmgUseLoopsCombo',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 		'section' => 'parserhooks',
 	],
 	'magicnocache' => [
