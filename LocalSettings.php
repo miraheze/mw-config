@@ -3452,6 +3452,9 @@ $wi->config->settings += [
 	'wgMWOAuthSecureTokenTransfer' => [
 		'default' => true,
 	],
+	'wgOAuth2PublicKey' => [
+                'default' => '/home/reception/OAuth2-publickey.key.pub'
+	],
 
 	// Page Images
 	'wgPageImagesNamespaces' => [
