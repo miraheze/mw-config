@@ -37,7 +37,7 @@ $wi->setVariables(
 $wi->config->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
-		'default' => '4',
+		'default' => '5',
 	],
 
 	// 3D
