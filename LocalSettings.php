@@ -3453,7 +3453,10 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgOAuth2PublicKey' => [
-                'default' => '/home/reception/OAuth2-publickey.key.pub'
+                'default' => '/srv/mediawiki/config/OAuth2.key.pub',
+	],
+	'wgOAuth2PrivateKey' => [
+                'default' => '/srv/mediawiki/config/OAuth2.key',
 	],
 
 	// Page Images
