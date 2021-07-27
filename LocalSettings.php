@@ -3452,6 +3452,12 @@ $wi->config->settings += [
 	'wgMWOAuthSecureTokenTransfer' => [
 		'default' => true,
 	],
+	'wgOAuth2PublicKey' => [
+                'default' => '/srv/mediawiki/config/OAuth2.key.pub',
+	],
+	'wgOAuth2PrivateKey' => [
+                'default' => '/srv/mediawiki/config/OAuth2.key',
+	],
 
 	// Page Images
 	'wgPageImagesNamespaces' => [
