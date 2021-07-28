@@ -73,7 +73,6 @@ if ( $wgDBname === 'famedatawiki' ) {
 	];
 }
 
-
 if ( $wgDBname === 'famepediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
 }
