@@ -74,5 +74,8 @@ if ( $wgDBname === 'famedatawiki' ) {
 }
 
 if ( $wgDBname === 'famepediawiki' ) {
+	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
+
+	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
 }
