@@ -51,7 +51,7 @@ $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
 // Per-wiki
 if ( $wgDBname === 'famedatawiki' ) {
-	$wgWBClientSettings['repoName'] = 'FAMEData';
+	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
 
 	$wgWBRepoSettings['statementSections'] = [
 		'item' => [
