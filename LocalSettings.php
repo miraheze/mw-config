@@ -373,6 +373,12 @@ $wi->config->settings += [
 	'wgNoticeUseTranslateExtension' => [
 		'default' => true,
 	],
+	
+	// Chameleon
+	'egChameleonLayoutFile' => [
+		'default' => '',
+		'lakehubwiki' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
+	],
 
 	// CheckUser
 	'wgCheckUserForceSummary' => [
