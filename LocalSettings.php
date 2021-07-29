@@ -711,7 +711,7 @@ $wi->config->settings += [
 			'miraheze\d{0,2}',
 			'sslrequest',
 			'jobchron\d{0,2}',
-			'task\d{0,2},
+			'task\d{0,2}',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
