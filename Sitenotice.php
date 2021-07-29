@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 58;
+$wgMajorSiteNoticeID = 59;
 
 /**
 * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 58;
 */
 
 # Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -23,11 +23,11 @@ $wgMajorSiteNoticeID = 58;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.36.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze will be strengthing Password Policies over the next 6 weeks. If you're password is not between 12 and 128 charecters, you will be required to change it. If you do not change when prompted, you may have to reset your password before logging in. To ensure you have no issues, please consider setting an email in your account and change your password when prompted.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
-} */
+}
 
 # Specific wiki SiteNotice
 /* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
