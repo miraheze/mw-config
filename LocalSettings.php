@@ -3577,7 +3577,7 @@ $wi->config->settings += [
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 128, 'suggestChangeOnLogin' => true ],
 					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 				'bot' => [
@@ -3586,7 +3586,7 @@ $wi->config->settings += [
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 128, 'suggestChangeOnLogin' => true ],
 					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 				'sysop' => [
@@ -3595,7 +3595,7 @@ $wi->config->settings += [
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 128, 'suggestChangeOnLogin' => true ],
 					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 				'bureaucrat' => [
@@ -3604,7 +3604,7 @@ $wi->config->settings += [
 					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+					'MaximalPasswordLength' => [ 'value' => 128, 'suggestChangeOnLogin' => true ],
 					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 			],
@@ -3627,7 +3627,7 @@ $wi->config->settings += [
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 128, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					],
 					'sysadmin' => [
@@ -3636,7 +3636,7 @@ $wi->config->settings += [
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 128, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					],
 					'trustandsafety' => [
@@ -3645,7 +3645,7 @@ $wi->config->settings += [
 						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+						'MaximalPasswordLength' => [ 'value' => 128, 'suggestChangeOnLogin' => true ],
 						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					],
 				],
