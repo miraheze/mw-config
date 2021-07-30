@@ -26,7 +26,7 @@ if ( $wmgUseAJAXPoll ) {
 }
 
 if ( $wmgUseAnisa ) {
-	wfLoadExtension( 'Anisa' );
+	wfLoadSkin( 'Anisa' );
 }
 
 if ( $wmgUseApex ) {
