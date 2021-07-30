@@ -1781,6 +1781,14 @@ $wgManageWikiExtensions = [
 	],
 
 	// Skins
+	'anisa' => [
+		'name' => 'Anisa',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Anisa',
+		'var' => 'wmgUseAnisa',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'apex' => [
 		'name' => 'Apex',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
