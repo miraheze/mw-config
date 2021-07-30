@@ -25,6 +25,10 @@ if ( $wmgUseAJAXPoll ) {
 	wfLoadExtension( 'AJAXPoll' );
 }
 
+if ( $wmgUseAnisa ) {
+	wfLoadExtension( 'Anisa' );
+}
+
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 	
