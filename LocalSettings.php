@@ -206,7 +206,7 @@ $wi->config->settings += [
 
 	// Cache
 	'wgCacheDirectory' => [
-		'default' => '/srv/mediawiki/cache',
+		'default' => '/srv/mediawiki-staging/l10ncache',
 	],
 	'wgExtensionEntryPointListFiles' => [
 		'default' => [
