@@ -1093,6 +1093,9 @@ $wi->config->settings += [
 	'wmgUseArrays' => [
 		'default' => false,
 	],
+	'wmgUseArticlePlaceholder' => [
+		'default' => false,
+	],
 	'wmgUseArticleRatings' => [
 		'default' => false,
 	],
