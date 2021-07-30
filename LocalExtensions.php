@@ -622,10 +622,6 @@ if ( $wmgUsePageAssessments ) {
 	wfLoadExtension( 'PageAssessments' );
 }
 
-if ( $wmgUsePageSchemas ) {
-	wfLoadExtension( 'PageSchemas' );
-}
-
 if ( $wmgUsePagedTiffHandler ) {
 	wfLoadExtension( 'PagedTiffHandler' );
 }
@@ -640,6 +636,10 @@ if ( $wmgUsePageImages ) {
 
 if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
+}
+
+if ( $wmgUsePageSchemas ) {
+	wfLoadExtension( 'PageSchemas' );
 }
 
 if ( $wmgUsePageTriage ) {
