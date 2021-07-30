@@ -2016,6 +2016,19 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'articleplaceholder' => [
+		'name' => 'ArticlePlaceholder',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticlePlaceholder',
+		'var' => 'wmgUseArticlePlaceholder',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'wikibaseclient',
+			],
+		],
+		'install' => [],
+		'section' => 'other',
+	],
 	'articleratings' => [
 		'name' => 'ArticleRating',
 		'displayname' => 'ArticleRatings',
