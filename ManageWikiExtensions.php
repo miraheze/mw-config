@@ -707,7 +707,6 @@ $wgManageWikiExtensions = [
 	'pdfbook' => [
 		'name' => 'PdfBook',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfBook',
-		'description' => 'pdfbook-desc',
 		'var' => 'wmgUsePdfBook',
 		'conflicts' => false,
 		'requires' => [],
