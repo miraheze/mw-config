@@ -4509,6 +4509,11 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
+	// WikiDiscover
+	'wgWikiDiscoverUseDescriptions' => [
+		'default' => true,
+	],
+	
 	// WikimediaIncubator
 	'wmincProjects' => [
 		'default' => [
