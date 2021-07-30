@@ -1081,6 +1081,9 @@ $wi->config->settings += [
 	'wmgUseAJAXPoll' => [
 		'default' => false,
 	],
+	'wmgUseAnisa' => [
+		'default' => false,
+	],
 	'wmgUseApex' => [
 		'default' => false,
 	],
