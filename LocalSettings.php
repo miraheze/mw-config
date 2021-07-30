@@ -1008,9 +1008,11 @@ $wi->config->settings += [
 	// DynamicPageList
 	'wgDLPAllowUnlimitedCategories' => [
 		'default' => false,
+		'vgportdbwiki' => true,
 	],
 	'wgDLPAllowUnlimitedResults' => [
 		'default' => false,
+		'vgportdbwiki' => true,
 	],
 
 	// Echo
