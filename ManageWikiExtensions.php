@@ -1516,6 +1516,23 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'pageschemas' => [
+		'name' => 'Page Schemas',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Schemas',
+		'var' => 'wmgUsePageSchemas',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'generatepages',
+					],
+				],
+			],
+		],
+		'section' => 'specialpages',
+	],
 	'pagetriage' => [
 		'name' => 'PageTriage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageTriage',

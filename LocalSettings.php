@@ -1526,6 +1526,9 @@ $wi->config->settings += [
 	'wmgUsePageNotice' => [
 		'default' => false,
 	],
+	'wmgUsePageSchemas' => [
+		'default' => false,
+	],
 	'wmgUsePageTriage' => [
 		'default' => false,
 	],

@@ -638,6 +638,10 @@ if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
 }
 
+if ( $wmgUsePageSchemas ) {
+	wfLoadExtension( 'PageSchemas' );
+}
+
 if ( $wmgUsePageTriage ) {
 	wfLoadExtension( 'PageTriage' );
 }
