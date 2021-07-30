@@ -1514,9 +1514,6 @@ $wi->config->settings += [
 	'wmgUsePageAssessments' => [
 		'default' => false,
 	],
-	'wmgUsePageSchemas' => [
-		'default' => false,
-	],
 	'wmgUsePagedTiffHandler' => [
 		'default' => false,
 	],
@@ -1527,6 +1524,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUsePageNotice' => [
+		'default' => false,
+	],
+	'wmgUsePageSchemas' => [
 		'default' => false,
 	],
 	'wmgUsePageTriage' => [
