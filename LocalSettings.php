@@ -1514,6 +1514,9 @@ $wi->config->settings += [
 	'wmgUsePageAssessments' => [
 		'default' => false,
 	],
+	'wmgUsePageSchemas' => [
+		'default' => false,
+	],
 	'wmgUsePagedTiffHandler' => [
 		'default' => false,
 	],
