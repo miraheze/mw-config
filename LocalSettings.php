@@ -3449,6 +3449,12 @@ $wi->config->settings += [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
 	],
+	'wgOAuth2GrantExpirationInterval' => [
+		'default' => 'PT4H',
+	],
+	'wgOAuth2RefreshTokenTTL' => [
+		'default' => 'P365D',
+	],
 	'wgMWOAuthSharedUserSource' => [
 		'default' => 'CentralAuth',
 	],
