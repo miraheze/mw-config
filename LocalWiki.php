@@ -283,6 +283,11 @@ if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
 }
 
+if ( $wgDBname === 'vgportdbwiki' ) {
+	$wgDplSettings['allowUnlimitedCategories'] = true;
+	$wgDplSettings['allowUnlimitedResults'] = true;
+}
+
 if ( $wgDBname === 'traceprojectwikiwiki' ) {
 	$wgDplSettings['allowUnlimitedCategories'] = true;
 	$wgDplSettings['allowUnlimitedResults'] = true;
