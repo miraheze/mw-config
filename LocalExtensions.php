@@ -526,6 +526,10 @@ if ( $wmgUseMinervaNeue ) {
 	wfLoadSkin( 'MinervaNeue' );
 }
 
+if ( $wmgUseMintyDocs ) {
+	wfLoadExtension( 'MintyDocs' );
+}
+
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 }
@@ -540,10 +544,6 @@ if ( $wmgUseModeration ) {
 
 if ( $wmgUseMonaco ) {
 	wfLoadSkin( 'Monaco' );
-}
-
-if ( $wmgUseMintyDocs ) {
-	wfLoadExtension( 'MintyDocs' );
 }
 
 if ( $wmgUseMsCalendar ) {
