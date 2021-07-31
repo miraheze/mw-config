@@ -635,6 +635,15 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'mintydocs' => [
+		'name' => 'MintyDocs',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MintyDocs',
+		'var' => 'wmgUseMintyDocs',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [],
+		'section' => 'parserhooks',
+	],
 	'mscalendar' => [
 		'name' => 'MsCalendar',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MsCalendar',

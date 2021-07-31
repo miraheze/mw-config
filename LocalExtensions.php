@@ -526,6 +526,10 @@ if ( $wmgUseMinervaNeue ) {
 	wfLoadSkin( 'MinervaNeue' );
 }
 
+if ( $wmgUseMintyDocs ) {
+	wfLoadExtension( 'MintyDocs' );
+}
+
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 }
