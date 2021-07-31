@@ -542,6 +542,10 @@ if ( $wmgUseMonaco ) {
 	wfLoadSkin( 'Monaco' );
 }
 
+if ( $wmgUseMintyDocs ) {
+	wfLoadExtension( 'MintyDocs' );
+}
+
 if ( $wmgUseMsCalendar ) {
 	wfLoadExtension( 'MsCalendar' );
 }
