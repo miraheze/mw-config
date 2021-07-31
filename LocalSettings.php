@@ -1445,6 +1445,9 @@ $wi->config->settings += [
 	'wmgUseMinervaNeue' => [
 		'default' => false,
 	],
+	'wmgUseMintyDocs' => [
+		'default' => false,
+	],
 	'wmgUseMobileFrontend' => [
 		'default' => false,
 	],
