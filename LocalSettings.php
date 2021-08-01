@@ -3224,7 +3224,7 @@ $wi->config->settings += [
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'default' => true,
 	],
-           'wgMinervaTalkAtTop' => [
+          'wgMinervaTalkAtTop' => [
  	'default' => [
  		'base' => false,
  		'beta' => false,
