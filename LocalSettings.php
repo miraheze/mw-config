@@ -3226,9 +3226,9 @@ $wi->config->settings += [
 	],
 	'wgMinervaTalkAtTop' => [
 		'default' => [
-		'base' => false,
-		'beta' => false,
-		'loggedin' => true,
+	'base' => false,
+	'beta' => false,
+	'loggedin' => true,
 	 ],
 		'isvwiki' => [
  		'base' => true,
