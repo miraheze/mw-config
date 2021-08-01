@@ -3688,6 +3688,7 @@ $wi->config->settings += [
 		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
+			'mf_amc_optin' => '1',
 		],
 		'+reviwikiwiki' => [
 			'rcenhancedfilters-disable' => 1,
