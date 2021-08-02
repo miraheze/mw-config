@@ -3223,18 +3223,18 @@ $wi->config->settings += [
 	],
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'default' => true,
-	],
+ 
 	'wgMinervaTalkAtTop' => [
 		'default' => [
-				'base' => false,
-				'beta' => false,
-				'loggedin' => true,
-	 ],
-		'isvwiki' => [
-				'base' => true,
-				'beta' => true,
-				'loggedin' => true,
- 	],
+			'base' => false,
+			'beta' => false,
+			'loggedin' => true,
+	],
+	'isvwiki' => [
+		'base' => true,
+		'beta' => true,
+		'loggedin' => true,
+	],
  ],
 
 	// Miraheze specific config
