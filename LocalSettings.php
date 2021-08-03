@@ -3236,6 +3236,54 @@ $wi->config->settings += [
 			'loggedin' => true,
 		],
 	],
+	'wgMinervaHistoryInPageActions' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMinervaAdvancedMainMenu' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMinervaPersonalMenu' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMinervaOverflowInPageActions' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
 
 	// Miraheze specific config
 	'wgServicesRepo' => [
@@ -3332,6 +3380,42 @@ $wi->config->settings += [
 	],
 	'wgMFStopRedirectCookieHost' => [
 		'wmgUseMobileFrontend' => $wi->hostname,
+	],
+	'wgMFUseDesktopSpecialHistoryPage' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMFUseDesktopSpecialWatchlistPage' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMFUseDesktopContributionsPage' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
 	],
 
 	// Moderation extension settings
@@ -3700,7 +3784,6 @@ $wi->config->settings += [
 		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
-			'mf_amc_optin' => '1',
 		],
 		'+reviwikiwiki' => [
 			'rcenhancedfilters-disable' => 1,
