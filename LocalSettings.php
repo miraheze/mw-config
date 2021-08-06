@@ -2323,7 +2323,7 @@ $wi->config->settings += [
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
-		'+securitywiki' => [
+		'+securipediawiki' => [
 			'pv',
 		],
 		'+snapdatawiki' => [
