@@ -710,6 +710,7 @@ $wi->config->settings += [
 			'mem\d{1,2}',
 			'miraheze\d{0,2}',
 			'sslrequest',
+			'security',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
