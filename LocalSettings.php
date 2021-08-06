@@ -233,9 +233,6 @@ $wi->config->settings += [
 	'wgCaptchaClass' => [
 		'default' => 'ReCaptchaNoCaptcha',
 	],
-	'wgReCaptchaSendRemoteIP' => [
-		'default' => false,
-	],
 	'wgCaptchaTriggers' => [
 		'default' => [
 			'edit' => false,
@@ -249,6 +246,12 @@ $wi->config->settings += [
 		'+wmgUseWikiForum' => [
 			'wikiforum' => true,	
 		],
+	],
+	'wgReCaptchaSendRemoteIP' => [
+		'default' => false,
+	],
+	'wgReCaptchaSiteKey' => [
+		'default' => '',
 	],
 
 	// Cargo
