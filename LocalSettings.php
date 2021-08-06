@@ -2310,7 +2310,7 @@ $wi->config->settings += [
 				'en',
 			],
 		],
-		'+r4356thwiki' => [
+		'+redminwiki' => [
 			'scratchwiki',
 			'snapwiki',
 		],
