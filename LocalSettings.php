@@ -1047,8 +1047,6 @@ $wi->config->settings += [
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
 	'wgExemptFromUserRobotsControl' => [
 		'default' => $wgContentNamespaces,
-		'reviwikiwiki' => [],
-		'thelonsdalebattalionwiki' => [],
 	],
 
 	// ElasticSearch
