@@ -4511,9 +4511,11 @@ $wi->config->settings += [
 	'wgVectorDefaultSkinVersion' => [
 		'default' => '1',
 	],
+	'wgVectorResponsive' => [
+		'default' => false,
+	],
 	'wgVectorUseWvuiSearch' => [
 		'default' => false,
-		'snapwikiwiki' => true,
 	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
