@@ -257,7 +257,7 @@ $wgManageWikiNamespacesAdditional = [
 		'requires' => [],
 	],
 	'wgExemptFromUserRobotsControl' => [
-		'name' => 'Exemption from user robots control?',
+		'name' => 'Exempt from user robots control?',
 		'from' => 'mediawiki',
 		'type' => 'check',
 		'main' => true,
