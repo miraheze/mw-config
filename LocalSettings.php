@@ -94,6 +94,9 @@ $wi->config->settings += [
 	'wgAbuseFilterPrivateDetailsForceReason' => [
 		'default' => true,
 	],
+	'wgAbuseFilterEmergencyDisableThreshold' => [
+		'default' => '0.40',
+	],
 
 	// AddThis
 	'wgAddThisHeader' => [
