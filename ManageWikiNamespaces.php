@@ -256,4 +256,18 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
 		'requires' => [],
 	],
+	'wgExemptFromUserRobotsControl' => [
+		'name' => 'Exemption from user robots control?',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'overridedefault' => array_merge(
+			array_fill_keys( $wgContentNamespaces, true ),
+			[ 'default' => false ]
+		),
+		'help' => 'If this is enabled, the <code>__INDEX__</code> and <code>__NOINDEX__</code> magic words will not function in this namespace.',
+		'requires' => [],
+	],
 ];
