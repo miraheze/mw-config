@@ -4205,6 +4205,10 @@ $wi->config->settings += [
 			'showThumbnail' => false,
 			'showDescription' => false,
 		],
+		'snapwikiwiki' => [
+			'showThumbnail' => true,
+			'showDescription' => false,
+		],	
 	],
 	
 	// SocialProfile
@@ -4521,7 +4525,7 @@ $wi->config->settings += [
 			'showDescription' => true,
 		],
 		'snapwikiwiki' => [
-			'showThumbnail' => false,
+			'showThumbnail' => true,
 			'showDescription' => false,
 		],
 	],	
