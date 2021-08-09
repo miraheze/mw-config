@@ -582,6 +582,18 @@ $wi->config->settings += [
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
 	],
+	'wgCosmosUseWVUISearch' => [
+		'default' => true,
+	],
+	'wgCosmosSearchUseActionAPI' => [
+		'default' => true,
+	],
+	'wgCosmosSearchDescriptionSource' => [
+		'default' => 'textextracts',
+	],
+	'wgCosmosMaxSearchResults' => [
+		'default' => 6,
+	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'default' => true,
 	],
