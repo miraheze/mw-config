@@ -1056,11 +1056,6 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
-	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
-	'wgExemptFromUserRobotsControl' => [
-		'default' => $wgContentNamespaces,
-	],
-
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
