@@ -94,6 +94,16 @@ $wi->config->settings += [
 	'wgAbuseFilterPrivateDetailsForceReason' => [
 		'default' => true,
 	],
+	'wgAbuseFilterEmergencyDisableThreshold' => [
+		'default' => [
+			'default' => 0.60,
+		],
+	],
+	'wgAbuseFilterEmergencyDisableCount' => [
+		'default' => [
+			'default' => 40,
+		],
+	],
 
 	// AddThis
 	'wgAddThisHeader' => [
@@ -376,7 +386,7 @@ $wi->config->settings += [
 	
 	// Chameleon
 	'egChameleonLayoutFile' => [
-		'default' => '',
+		'default' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
 		'lakehubwiki' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
 	],
 
@@ -572,6 +582,18 @@ $wi->config->settings += [
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
 	],
+	'wgCosmosUseWVUISearch' => [
+		'default' => true,
+	],
+	'wgCosmosSearchUseActionAPI' => [
+		'default' => true,
+	],
+	'wgCosmosSearchDescriptionSource' => [
+		'default' => 'textextracts',
+	],
+	'wgCosmosMaxSearchResults' => [
+		'default' => 6,
+	],
 	'wgCosmosSocialProfileModernTabs' => [
 		'default' => true,
 	],
@@ -711,7 +733,8 @@ $wi->config->settings += [
 			'miraheze\d{0,2}',
 			'sslrequest',
 			'jobchron\d{0,2}',
-			'task\d{0,2}',
+			'mwtask\d{0,2}',
+			'security',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
@@ -910,24 +933,6 @@ $wi->config->settings += [
 	'wgDBuser' => [
 		'default' => 'mediawiki',
 	],
-	'wgMiserMode' => [
-		'default' => false,
-		'batmanwiki' => true,
-		'commonswiki' => true,
-		'cosmoswiki' => true,
-		'darkangelwiki' => true,
-		'dcmultiversewiki' => true,
-		'devwiki' => true,
-		'memeswiki' => true,
-		'metawiki' => true,
-		'minecraftjapanwiki' => true,
-		'r4356thwiki' => true,
-		'snapwikiwiki' => true,
-		'templatewiki' => true,
-		'test3wiki' => true,
-		'testwiki' => true,
-		'theboyswiki' => true,
-	],
 	'wgReadOnly' => [
 		'default' => false,
 	],
@@ -1056,8 +1061,6 @@ $wi->config->settings += [
 	// Exempt from Robot Control (INDEX/NOINDEX namespaces)
 	'wgExemptFromUserRobotsControl' => [
 		'default' => $wgContentNamespaces,
-		'reviwikiwiki' => [],
-		'thelonsdalebattalionwiki' => [],
 	],
 
 	// ElasticSearch
@@ -1101,6 +1104,9 @@ $wi->config->settings += [
 	'wmgUseAJAXPoll' => [
 		'default' => false,
 	],
+	'wmgUseAnisa' => [
+		'default' => false,
+	],
 	'wmgUseApex' => [
 		'default' => false,
 	],
@@ -1108,6 +1114,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUseArrays' => [
+		'default' => false,
+	],
+	'wmgUseArticlePlaceholder' => [
 		'default' => false,
 	],
 	'wmgUseArticleRatings' => [
@@ -1459,6 +1468,9 @@ $wi->config->settings += [
 	'wmgUseMinervaNeue' => [
 		'default' => false,
 	],
+	'wmgUseMintyDocs' => [
+		'default' => false,
+	],
 	'wmgUseMobileFrontend' => [
 		'default' => false,
 	],
@@ -1541,6 +1553,9 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wmgUsePageNotice' => [
+		'default' => false,
+	],
+	'wmgUsePageSchemas' => [
 		'default' => false,
 	],
 	'wmgUsePageTriage' => [
@@ -1996,9 +2011,11 @@ $wi->config->settings += [
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
+			1, // John (SRE)
 			2, // Southparkfan (SRE and Board)
 			19, // Reception123 (SRE)
 			5258, // Void (SRE and Board)
+			13554, // Paladox (SRE)
 			24689, // RobLa (Board)
 			243629, // RhinosF1 (SRE)
 			73651, // Owen (Board)
@@ -2317,7 +2334,7 @@ $wi->config->settings += [
 				'en',
 			],
 		],
-		'+r4356thwiki' => [
+		'+redminwiki' => [
 			'scratchwiki',
 			'snapwiki',
 		],
@@ -2330,7 +2347,7 @@ $wi->config->settings += [
 		'+sesupportwiki' => [
 			'mrjaroslavikwiki',
 		],
-		'+securitywiki' => [
+		'+securipediawiki' => [
 			'pv',
 		],
 		'+snapdatawiki' => [
@@ -3232,6 +3249,66 @@ $wi->config->settings += [
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'default' => true,
 	],
+	'wgMinervaTalkAtTop' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'loggedin' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'loggedin' => true,
+		],
+	],
+	'wgMinervaHistoryInPageActions' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMinervaAdvancedMainMenu' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMinervaPersonalMenu' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMinervaOverflowInPageActions' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
 
 	// Miraheze specific config
 	'wgServicesRepo' => [
@@ -3272,6 +3349,9 @@ $wi->config->settings += [
 	],
 	'wgExternalLinkTarget' => [
 		'default' => false,
+	],
+	'wgGitInfoCacheDirectory' => [
+		'default' => '/srv/mediawiki/cache/gitinfo',
 	],
 	'wgAllowExternalImages' => [
 		'default' => false,
@@ -3325,6 +3405,42 @@ $wi->config->settings += [
 	],
 	'wgMFStopRedirectCookieHost' => [
 		'wmgUseMobileFrontend' => $wi->hostname,
+	],
+	'wgMFUseDesktopSpecialHistoryPage' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMFUseDesktopSpecialWatchlistPage' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
+	],
+	'wgMFUseDesktopContributionsPage' => [
+		'default' => [
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'beta' => true,
+			'amc' => true,
+		],
 	],
 
 	// Moderation extension settings
@@ -3453,6 +3569,12 @@ $wi->config->settings += [
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
+	],
+	'wgOAuth2GrantExpirationInterval' => [
+		'default' => 'PT4H',
+	],
+	'wgOAuth2RefreshTokenTTL' => [
+		'default' => 'P365D',
 	],
 	'wgMWOAuthSharedUserSource' => [
 		'default' => 'CentralAuth',
@@ -4099,6 +4221,10 @@ $wi->config->settings += [
 			'showThumbnail' => false,
 			'showDescription' => false,
 		],
+		'snapwikiwiki' => [
+			'showThumbnail' => true,
+			'showDescription' => false,
+		],	
 	],
 	
 	// SocialProfile
@@ -4394,8 +4520,6 @@ $wi->config->settings += [
 	'wgCdnServers' => [
 		'default' => [
 			'128.199.139.216:81', // cp3
-			// '51.195.236.219:81', // cp10
-			// '51.195.236.250:81', // cp11
 			'51.222.25.132:81', // cp12
 			'51.38.69.175:81', // cp13
 		],
@@ -4405,9 +4529,11 @@ $wi->config->settings += [
 	'wgVectorDefaultSkinVersion' => [
 		'default' => '1',
 	],
+	'wgVectorResponsive' => [
+		'default' => false,
+	],
 	'wgVectorUseWvuiSearch' => [
 		'default' => false,
-		'snapwikiwiki' => true,
 	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
@@ -4415,7 +4541,7 @@ $wi->config->settings += [
 			'showDescription' => true,
 		],
 		'snapwikiwiki' => [
-			'showThumbnail' => false,
+			'showThumbnail' => true,
 			'showDescription' => false,
 		],
 	],	
@@ -4511,6 +4637,11 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
+	// WikiDiscover
+	'wgWikiDiscoverUseDescriptions' => [
+		'default' => true,
+	],
+	
 	// WikimediaIncubator
 	'wmincProjects' => [
 		'default' => [

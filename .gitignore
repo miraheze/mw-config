@@ -1,3 +1,4 @@
 PrivateSettings.php 
 ExtensionMessageFiles.php
 *.php.save
+*.key

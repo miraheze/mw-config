@@ -25,6 +25,10 @@ if ( $wmgUseAJAXPoll ) {
 	wfLoadExtension( 'AJAXPoll' );
 }
 
+if ( $wmgUseAnisa ) {
+	wfLoadSkin( 'Anisa' );
+}
+
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
 	
@@ -40,6 +44,10 @@ if ( $wmgUseApprovedRevs ) {
 
 if ( $wmgUseArrays ) {
 	wfLoadExtension( 'Arrays' );
+}
+
+if ( $wmgUseArticlePlaceholder ) {
+	wfLoadExtension( 'ArticlePlaceholder' );
 }
 
 if ( $wmgUseArticleRatings ) {
@@ -518,6 +526,10 @@ if ( $wmgUseMinervaNeue ) {
 	wfLoadSkin( 'MinervaNeue' );
 }
 
+if ( $wmgUseMintyDocs ) {
+	wfLoadExtension( 'MintyDocs' );
+}
+
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 }
@@ -632,6 +644,10 @@ if ( $wmgUsePageImages ) {
 
 if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
+}
+
+if ( $wmgUsePageSchemas ) {
+	wfLoadExtension( 'PageSchemas' );
 }
 
 if ( $wmgUsePageTriage ) {

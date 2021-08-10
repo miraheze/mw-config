@@ -635,6 +635,15 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'mintydocs' => [
+		'name' => 'MintyDocs',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MintyDocs',
+		'var' => 'wmgUseMintyDocs',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [],
+		'section' => 'parserhooks',
+	],
 	'mscalendar' => [
 		'name' => 'MsCalendar',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MsCalendar',
@@ -707,7 +716,6 @@ $wgManageWikiExtensions = [
 	'pdfbook' => [
 		'name' => 'PdfBook',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfBook',
-		'description' => 'pdfbook-desc',
 		'var' => 'wmgUsePdfBook',
 		'conflicts' => false,
 		'requires' => [],
@@ -1517,6 +1525,23 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'pageschemas' => [
+		'name' => 'Page Schemas',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Schemas',
+		'var' => 'wmgUsePageSchemas',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'generatepages',
+					],
+				],
+			],
+		],
+		'section' => 'specialpages',
+	],
 	'pagetriage' => [
 		'name' => 'PageTriage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageTriage',
@@ -1782,6 +1807,14 @@ $wgManageWikiExtensions = [
 	],
 
 	// Skins
+	'anisa' => [
+		'name' => 'Anisa',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Anisa',
+		'var' => 'wmgUseAnisa',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'apex' => [
 		'name' => 'Apex',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
@@ -1990,6 +2023,19 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseAdvancedSearch',
 		'conflicts' => false,
 		'requires' => [],
+		'section' => 'other',
+	],
+	'articleplaceholder' => [
+		'name' => 'ArticlePlaceholder',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticlePlaceholder',
+		'var' => 'wmgUseArticlePlaceholder',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'wikibaseclient',
+			],
+		],
+		'install' => [],
 		'section' => 'other',
 	],
 	'articleratings' => [

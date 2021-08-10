@@ -6,6 +6,7 @@ $IP/extensions/AdminLinks/extension.json
 $IP/extensions/AdvancedSearch/extension.json
 $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/Arrays/extension.json
+$IP/extensions/ArticlePlaceholder/extension.json
 $IP/extensions/ArticleRatings/extension.json
 $IP/extensions/ArticleToCategory2/extension.json
 $IP/extensions/AuthorProtect/extension.json
@@ -130,6 +131,7 @@ $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MediaWikiChat/extension.json
 $IP/extensions/Mermaid/extension.json
+$IP/extensions/MintyDocs/extension.json
 $IP/extensions/MirahezeMagic/extension.json
 $IP/extensions/MobileDetect/MobileDetect.php
 $IP/extensions/MobileFrontend/extension.json
@@ -161,6 +163,7 @@ $IP/extensions/PDFEmbed/extension.json
 $IP/extensions/PageForms/extension.json
 $IP/extensions/PageImages/extension.json
 $IP/extensions/PageNotice/extension.json
+$IP/extensions/PageSchemas/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
@@ -272,6 +275,7 @@ $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/YouTube/extension.json
 $IP/extensions/cldr/extension.json
 $IP/extensions/wikihiero/extension.json
+$IP/skins/Anisa/skin.json
 $IP/skins/BlueSky/skin.json
 $IP/skins/Citizen/skin.json
 $IP/skins/CologneBlue/skin.json
