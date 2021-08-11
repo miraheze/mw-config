@@ -732,6 +732,8 @@ $wi->config->settings += [
 			'mem\d{1,2}',
 			'miraheze\d{0,2}',
 			'sslrequest',
+			'jobchron\d{0,2}',
+			'mwtask\d{0,2}',
 			'security',
 		],
 	],
