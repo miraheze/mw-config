@@ -4959,9 +4959,6 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-// Fonts
-putenv( "GDFONTPATH=/usr/share/fonts/truetype/freefont" );
-
 // Varnish
 
 // We set wgInternalServer to wgServer as we need this to get purging working (we convert wgServer from https:// to http://).
