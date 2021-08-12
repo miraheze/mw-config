@@ -4533,6 +4533,12 @@ $wi->config->settings += [
 	'wgVectorDefaultSkinVersion' => [
 		'default' => '1',
 	],
+	'wgVectorDefaultSkinVersionForExistingAccounts' => [
+		'default' => '1',
+	],
+	'wgVectorDefaultSkinVersionForNewAccounts' => [
+		'default' => '1',
+	],
 	'wgVectorResponsive' => [
 		'default' => false,
 	],
