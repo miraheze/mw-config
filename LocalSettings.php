@@ -251,7 +251,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgReCaptchaSiteKey' => [
-		'default' => '',
+		'default' => '6Lex_RITAAAAAFVY6qp9bQzrDxKx83Mj9uvwk8jP',
 	],
 
 	// Cargo
