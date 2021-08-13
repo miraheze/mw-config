@@ -262,6 +262,7 @@ $wi->config->settings += [
 	],
 	'wgReCaptchaSiteKey' => [
 		'default' => '6Lex_RITAAAAAFVY6qp9bQzrDxKx83Mj9uvwk8jP',
+		'test3wiki' => '6LcrxU4bAAAAAL6RgJePDZGCYsw-plPdk81qclKn',
 	],
 	'wgReCaptchaVersion' => [
 		'default' => 'v2',
