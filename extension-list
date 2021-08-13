@@ -124,6 +124,7 @@ $IP/extensions/LoginNotify/extension.json
 $IP/extensions/LogoFunctions/extension.json
 $IP/extensions/Loops/extension.json
 $IP/extensions/MagicNoCache/extension.json
+$IP/extensions/MagicNumberedHeadings/extension.json
 $IP/extensions/ManageWiki/extension.json
 $IP/extensions/Maps/extension.json
 $IP/extensions/MassEditRegex/extension.json
