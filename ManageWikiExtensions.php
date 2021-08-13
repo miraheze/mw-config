@@ -581,6 +581,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'magicnumberedheadings' => [
+		'name' => 'MagicNumberedHeadings',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNumberedHeadings',
+		'var' => 'wmgUseMagicNumberedHeadings',
+		'conflicts' => 'numberedheadings',
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'maps' => [
 		'name' => 'Maps',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Maps',
@@ -701,7 +709,7 @@ $wgManageWikiExtensions = [
 		'name' => 'NumberedHeadings',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NumberedHeadings',
 		'var' => 'wmgUseNumberedHeadings',
-		'conflicts' => false,
+		'conflicts' => 'magicnumberedheadings',
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
