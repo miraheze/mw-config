@@ -263,6 +263,10 @@ $wi->config->settings += [
 	'wgReCaptchaSiteKey' => [
 		'default' => '6Lex_RITAAAAAFVY6qp9bQzrDxKx83Mj9uvwk8jP',
 	],
+	'wgReCaptchaVersion' => [
+		'default' => 'v2',
+		'test3wiki' => 'v3',
+	],
 
 	// Cargo
 	'wgCargoFileDataColumns' => [
