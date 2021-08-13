@@ -1436,6 +1436,9 @@ $wi->config->settings += [
 	'wmgUseMagicNoCache' => [
 		'default' => false,
 	],
+	'wmgUseMagicNumberedHeadings' => [
+		'default' => false,
+	],
 	'wmgUseMaps' => [
 		'default' => false,
 	],
