@@ -10,7 +10,7 @@ wfLoadExtensions( [
 	'CreateWiki',
 	'CookieWarning',
 	'ConfirmEdit',
-	'ConfirmEdit/ReCaptchaNoCaptcha',
+	'MirahezeMagic/ReCaptchaNoCaptcha',
 	'DataDump',
 	'DiscordNotifications',
 	'DismissableSiteNotice',
