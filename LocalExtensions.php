@@ -487,7 +487,7 @@ if ( $wmgUseMagicNoCache ) {
 }
 
 if ( $wmgUseMagicNumberedHeadings ) {
-	#wfLoadExtension( 'MagicNumberedHeadings' );
+	wfLoadExtension( 'MagicNumberedHeadings' );
 }
 
 if ( $wmgUseMaps ) {
