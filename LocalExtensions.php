@@ -486,6 +486,10 @@ if ( $wmgUseMagicNoCache ) {
 	wfLoadExtension( 'MagicNoCache' );
 }
 
+if ( $wmgUseMagicNumberedHeadings ) {
+	wfLoadExtension( 'MagicNumberedHeadings' );
+}
+
 if ( $wmgUseMaps ) {
 	wfLoadExtension( 'Maps' );
 }
