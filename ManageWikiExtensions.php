@@ -2966,6 +2966,9 @@ $wgManageWikiExtensions = [
 			'sql' => [
 				'titlekey' => "$IP/extensions/TitleKey/sql/titlekey.sql"
 			],
+			'mwscript' => [
+				"$IP/extensions/TitleKey/maintenance/rebuildTitleKeys.php" => []
+			],
 		],
 		'section' => 'other',
 	],
