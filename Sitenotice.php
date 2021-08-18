@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 58;
 */
 
 # Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -23,11 +23,11 @@ $wgMajorSiteNoticeID = 58;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.36.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze is planning database maitenance begining at 21:00 UTC time on the 19th of August 2021. We apologize for any inconvenience caused by this.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
-} */
+}
 
 # Specific wiki SiteNotice
 /* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
