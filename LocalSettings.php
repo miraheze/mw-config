@@ -937,7 +937,7 @@ $wi->config->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => false,
+		'default' => 'Database maintenance in progress',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
