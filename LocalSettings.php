@@ -96,12 +96,12 @@ $wi->config->settings += [
 	],
 	'wgAbuseFilterEmergencyDisableThreshold' => [
 		'default' => [
-			'default' => 0.60,
+			'default' => 0.05,
 		],
 	],
 	'wgAbuseFilterEmergencyDisableCount' => [
 		'default' => [
-			'default' => 40,
+			'default' => 2,
 		],
 	],
 
