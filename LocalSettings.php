@@ -4412,6 +4412,10 @@ $wi->config->settings += [
 				'type' => 'url',
 				'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
 			],
+			'local' => [
+				'type' => 'localpage',
+				'src' => 'MediaWiki:Titleblacklist',
+			],
 		],
 	],
 	'wgTitleBlacklistUsernameSources' => [
