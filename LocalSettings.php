@@ -2547,6 +2547,7 @@ $wi->config->settings += [
 	// License
 	'wgRightsIcon' => [
 		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
+		'constantnoblewiki' => 'https://upload.wikimedia.org/wikipedia/commons/2/29/Freeculturalworks-pdbutton.svg',
 		'freesoftwarepediawiki' => 'https://upload.wikimedia.org/wikipedia/commons/4/42/GFDL_Logo.svg',
 		'jadtechwiki' => "https://$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
@@ -2555,12 +2556,14 @@ $wi->config->settings += [
 	],
 	'wgRightsPage' => [
 		'default' => '',
+		'constantnoblewiki' => 'Constant Noble:No rights reserved',
 		'diavwiki' => 'Project:Copyrights',
 		'quyranesswiki' => 'Project:Copyrights',
 		'taerelvariwiki' => 'Project:Copyrights',
 	],
 	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
+		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
 		'cvswiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'freesoftwarepediawiki' => 'GNU Free Documentation License',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2583,6 +2586,7 @@ $wi->config->settings += [
 	],
 	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'constantnoblewiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'cvswiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'freesoftwarepediawiki' => 'http://www.gnu.org/licenses/fdl-1.3.html',
 		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
