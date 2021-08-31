@@ -22,8 +22,9 @@ $outputHtml = <<<END
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Wiki not Found">
-		<title>Wiki not Found</title>
+		<meta name="description" content="Not Found">
+		<title>Not Found</title>
+		<link rel="shortcut icon" href="/favicon.ico">
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 		<style>
@@ -62,7 +63,10 @@ $outputHtml = <<<END
 	<div class="container">
 		<!-- Jumbotron -->
 		<div class="jumbotron">
-			<h1><img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg" alt="Miraheze Logo">Page not found</h1>
+			<a href="https://miraheze.org">
+				<img src="https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg" alt="Miraheze Logo">
+			</a>
+			<h1>Page not found</h1>
 			<p><em>$encUrl</em></p>
 			<p>We could not find the above page on our servers.</p>
 			<p><b>Did you mean: <a href="$encTarget">$encTarget</a></b></p>
