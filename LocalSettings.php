@@ -265,6 +265,9 @@ $wi->config->settings += [
 	],
 
 	// Cargo
+	'wgCargoDBuser' => [
+		'default' => 'cargouser',
+	],
 	'wgCargoFileDataColumns' => [
 		'default' => [],
 		'egoishwiki' => [
