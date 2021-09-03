@@ -16,12 +16,11 @@ if ( $cwClosed ) {
 			'undelete' => true,
 		],
 	];
-	
+
 	if ( $wmgUseComments ) {
 		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
 }
-
 
 // Public Wikis
 if ( !$cwPrivate ) {
@@ -150,17 +149,17 @@ if ( isset( $_SERVER['REMOTE_ADDR'] ) && in_array( $_SERVER['REMOTE_ADDR'], [ '5
 }
 
 // $wmgContactPageRecipientUser
-if( $wmgContactPageRecipientUser ) {
+if ( $wmgContactPageRecipientUser ) {
 	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
- 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
- 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
- 		'alt' => 'Monitored by WikiApiary'
- 	];
+	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
+		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
+		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
+		'alt' => 'Monitored by WikiApiary'
+	];
 }
 
 // $wgForeignFileRepos
@@ -232,7 +231,7 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 // Per-wiki settings
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-	
+
 	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
 	}
@@ -240,7 +239,7 @@ if ( $wgDBname === 'erislywiki' ) {
 
 if ( $wgDBname === 'libertygamewiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-	
+
 	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' );
 	}
@@ -267,7 +266,7 @@ if ( $wgDBname === 'metawiki' ) {
 	}
 }
 
-if ( $wgDBname === 'pokemundowiki') {
+if ( $wgDBname === 'pokemundowiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 	function onBeforePageDisplay( OutputPage $out ) {
@@ -278,7 +277,7 @@ if ( $wgDBname === 'pokemundowiki') {
 
 if ( $wgDBname === 'snapwikiwiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-	
+
 	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 	}

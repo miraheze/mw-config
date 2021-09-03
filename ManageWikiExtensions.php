@@ -3160,8 +3160,8 @@ $wgManageWikiExtensions = [
 			'extensions' => [
 				'wikibaserepository',
 				'universallanguageselector',
-			],	
-		],
+			],
+ ],
 		'section' => 'other',
 	],
 	'wikibaselocalmedia' => [
@@ -3172,8 +3172,8 @@ $wgManageWikiExtensions = [
 		'requires' => [
 			'extensions' => [
 				'wikibaserepository',
-			],	
-		],
+			],
+ ],
 		'section' => 'other',
 	],
 	'wikibasequalityconstraints' => [
@@ -3184,8 +3184,8 @@ $wgManageWikiExtensions = [
 		'requires' => [
 			'extensions' => [
 				'wikibaserepository',
-			],	
-		],
+			],
+ ],
 		'install' => [
 			'sql' => [
 				'wbqc_constraints' => "$IP/extensions/WikibaseQualityConstraints/sql/mysql/tables-generated.sql",
