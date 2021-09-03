@@ -2357,7 +2357,7 @@ $wi->config->settings += [
 		'+snapdatawiki' => [
 			'd',
 			'snapwiki',
-					  'wikimediacommons',
+			'wikimediacommons',
 		],
 		'+snapwikiwiki' => [
 			'scratchwiki',
@@ -2789,7 +2789,7 @@ $wi->config->settings += [
 				'user' => true,
 			],
 		],
-			'+allpediawiki' => [
+		'+allpediawiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
@@ -2818,7 +2818,7 @@ $wi->config->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
-			'+famepediawiki' => [
+		'+famepediawiki' => [
 			'Extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
@@ -2908,7 +2908,7 @@ $wi->config->settings += [
 				'editextendedconfirmedprotected' => true,
 			],
 		],
-			'+memeswiki' => [
+		'+memeswiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
@@ -2954,7 +2954,7 @@ $wi->config->settings += [
 				'createwiki' => true,
 			],
 		],
-			'+naasgamelandwiki' => [
+		'+naasgamelandwiki' => [
 			'bot' => [
 				'editarchiveprotected' => true,
 			],
@@ -3597,10 +3597,10 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgOAuth2PublicKey' => [
-				'default' => '/srv/mediawiki/config/OAuth2.key.pub',
+		'default' => '/srv/mediawiki/config/OAuth2.key.pub',
 	],
 	'wgOAuth2PrivateKey' => [
-				'default' => '/srv/mediawiki/config/OAuth2.key',
+		'default' => '/srv/mediawiki/config/OAuth2.key',
 	],
 
 	// Page Images
@@ -3936,7 +3936,7 @@ $wi->config->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-			'+allpediawiki' => [
+		'+allpediawiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'+althistorywiki' => [
@@ -4027,7 +4027,7 @@ $wi->config->settings += [
 	// Rights
 	'+wgAvailableRights' => [
 		'default' => [],
-			'allpediawiki' => [
+		'allpediawiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'althistorywiki' => [
