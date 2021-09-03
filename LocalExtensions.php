@@ -443,7 +443,7 @@ if ( $wmgUseLdap ) {
 			] ],
 			'sort' => 50, // must be smaller than local pw provider
 		],
- ];
+	];
 }
 
 if ( $wmgUseLiberty ) {
