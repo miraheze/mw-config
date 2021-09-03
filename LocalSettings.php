@@ -108,7 +108,7 @@ $wi->config->settings += [
 	// AddThis
 	'wgAddThisHeader' => [
 		'wmgUseAddThis' => false,
- ],
+	],
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
@@ -252,10 +252,10 @@ $wi->config->settings += [
 			'createaccount' => true,
 			'badlogin' => true,
 			'badloginperuser' => true
- ],
+		],
 		'+wmgUseWikiForum' => [
 			'wikiforum' => true,
- ],
+		],
 	],
 	'wgReCaptchaSendRemoteIP' => [
 		'default' => false,
@@ -2376,7 +2376,7 @@ $wi->config->settings += [
 	// JavascriptSlideshow
 	'wgHtml5' => [
 		'wmgUseJavascriptSlideshow' => true,
- ],
+	],
 
 	// Job Queue
 	'wgJobRunRate' => [
@@ -3696,12 +3696,12 @@ $wi->config->settings += [
 		'+simulatorwiki' => [
 			'moderated' => [
 				'skip-moderation' => true,
- ],
+			],
 		],
 		'+wmgUseMediaWikiChat' => [
 			'blockedfromchat' => [
 				'chat' => true,
- ],
+			],
 		],
 	],
 	'wgImplicitGroups' => [
@@ -4239,7 +4239,7 @@ $wi->config->settings += [
 			'showThumbnail' => true,
 			'showDescription' => false,
 		],
- ],
+	],
 
 	// SocialProfile
 	'wgUserBoard' => [
@@ -4716,7 +4716,7 @@ $wi->config->settings += [
 	// WikiLove
 	'wgWikiLoveGlobal' => [
 		'wmgUseWikiLove' => true,
- ],
+	],
 
 	// WikiSEO configs
 	'wgTwitterCardType' => [
