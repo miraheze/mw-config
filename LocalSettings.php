@@ -2338,6 +2338,15 @@ $wi->config->settings += [
 				'en',
 			],
 		],
+		'+polandballstaffwiki' => [
+			'polandballwiki',
+			'polandballwikisongcontestwiki',
+			'polcomwiki',
+		],
+		'+polcomwiki' => [
+			'polandballwiki',
+			'polandballwikisongcontestwiki',
+		],
 		'+redminwiki' => [
 			'scratchwiki',
 			'snapwiki',
