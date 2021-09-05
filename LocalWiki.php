@@ -321,7 +321,7 @@ if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
 		'descriptionCacheExpiry' => 86400 * 7,
 		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => 'polcomwiki',
+		'hasSharedCache' => false,
 		'wiki' => 'polcomwiki',
 		'descBaseUrl' => 'https://commons.polandballwiki.com/wiki/File:',
 	];
