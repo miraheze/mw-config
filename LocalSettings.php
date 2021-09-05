@@ -2344,6 +2344,7 @@ $wi->config->settings += [
 			'polcomwiki',
 		],
 		'+polcomwiki' => [
+			'c',
 			'polandballwiki',
 			'polandballwikisongcontestwiki',
 		],
