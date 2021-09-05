@@ -373,3 +373,18 @@ $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '
 // Slack
 $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
+
+if ( $wmgUseInstantCommons ) {
+	$wgForeignFileRepos[] = [
+		'class' => ForeignAPIRepo::class,
+		'name' => 'wikimediacommons',
+		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
+		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
+		'hashLevels' => 2,
+		'transformVia404' => true,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 43200,
+		'apiThumbCacheExpiry' => 86400,
+	];
+}
