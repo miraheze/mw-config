@@ -206,7 +206,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	];
 }
 
-if ( wgUseInstantCommons ) {
+if ( $wgUseInstantCommons ) {
 	$wgHooks['SetupAfterCache'][] = 'onSetupAfterCache';
 
 	function onSetupAfterCache() {
