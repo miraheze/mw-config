@@ -206,9 +206,15 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	];
 }
 
-foreach ( $wgForeignFileRepos as $key => $value ) {
-	if ( isset( $value['name'] ) && $value['name'] === 'wikimediacommons' ) {
-		$wgForeignFileRepos[$key]['apiThumbCacheExpiry'] = 86400;
+if ( wgUseInstantCommons ) {
+	$wgHooks['SetupAfterCache'][] = 'onSetupAfterCache';
+
+	function onSetupAfterCache() {
+		foreach ( $wgForeignFileRepos as $key => $value ) {
+			if ( isset( $value['name'] ) && $value['name'] === 'wikimediacommons' ) {
+				$wgForeignFileRepos[$key]['apiThumbCacheExpiry'] = 86400;
+			}
+		}
 	}
 }
 
