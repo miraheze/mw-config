@@ -206,12 +206,6 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	];
 }
 
-foreach ( $wgForeignFileRepos as $key => $value ) {
-	if ( isset( $value['name'] ) && $value['name'] === 'wikimediacommons' ) {
-		$wgForeignFileRepos[$key]['apiThumbCacheExpiry'] = 86400;
-	}
-}
-
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
