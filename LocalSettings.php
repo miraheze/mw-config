@@ -2007,7 +2007,7 @@ $wi->config->settings += [
 	],
 	'wmgUseInstantCommons' => [
 		'default' => true,
-	],e
+	],
 	'wgMaxImageArea' => [
 		'default' => '1.25e7',
 	],
