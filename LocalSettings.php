@@ -2003,8 +2003,11 @@ $wi->config->settings += [
 		],
 	],
 	'wgUseInstantCommons' => [
-		'default' => true,
+		'default' => false,
 	],
+	'wmgUseInstantCommons' => [
+		'default' => true,
+	],e
 	'wgMaxImageArea' => [
 		'default' => '1.25e7',
 	],
