@@ -206,11 +206,6 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	];
 }
 
-// InstantCommons
-if ( $wgUseInstantCommons ) {
-	$wgForeignFileRepos[array_flip(array_column($wgForeignFileRepos, 'name'))['wikimediacommons']]['apiThumbCacheExpiry'] = 86400;
-}
-
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
