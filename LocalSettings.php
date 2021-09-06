@@ -5,10 +5,7 @@
  */
 
 /**
-  * Configure PHP request timeouts. These should be slightly less than the Apache
-  * timeouts, so that the slightly more informative PHP error message is
-  * delivered to the user, and so that we can verify that PHP timeouts actually
-  * exist (T97192).
+  * Configure PHP request timeouts.
   */
  if ( PHP_SAPI === 'cli' ) {
  	// Should always be unlimited, this is probably redundant
@@ -5009,6 +5006,8 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 // We set wgInternalServer to wgServer as we need this to get purging working (we convert wgServer from https:// to http://).
 // https://www.mediawiki.org/wiki/Manual:$wgInternalServer
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
+
+$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
 
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
