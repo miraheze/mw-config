@@ -5,14 +5,13 @@ if ( $wmgSiteNoticeOptOut ) {
 	$wi->config->settings['wgNoticeProject']['default'] = 'optout';
 }
 
-
 # Increment this version number whenever you change the site notice
 $wgMajorSiteNoticeID = 58;
 
 /**
-* Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
-* or Google will use the sitenotice for their search result snippet.
-*/
+ * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
+ * or Google will use the sitenotice for their search result snippet.
+ */
 
 # Global SiteNotice
 /*if ( !$wmgSiteNoticeOptOut ) {

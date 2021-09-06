@@ -2,3 +2,8 @@ PrivateSettings.php
 ExtensionMessageFiles.php
 *.php.save
 *.key
+
+# Testing
+/composer.lock
+/vendor
+/node_modules
