@@ -212,11 +212,7 @@ if ( $wgUseInstantCommons ) {
 	function onSetupAfterCache() {
 		global $wgForeignFileRepos;
 
-		foreach ( $wgForeignFileRepos as $key => $value ) {
-			if ( isset( $value['name'] ) && $value['name'] === 'wikimediacommons' ) {
-				$wgForeignFileRepos[$key]['apiThumbCacheExpiry'] = 86400;
-			}
-		}
+		$wgForeignFileRepos[ array_flip( array_column( $wgForeignFileRepos, 'name' ) )['wikimediacommons'] ]['apiThumbCacheExpiry'] = 86400;
 	}
 }
 
