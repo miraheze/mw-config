@@ -3,7 +3,7 @@
  * LocalSettings.php for Miraheze.
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
-Test
+
 /**
  * Configure PHP request timeouts.
  */
