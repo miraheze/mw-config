@@ -4,6 +4,27 @@
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
 
+/**
+  * Configure PHP request timeouts.
+  */
+ if ( PHP_SAPI === 'cli' ) {
+ 	// Should always be unlimited, this is probably redundant
+ 	$wgRequestTimeLimit = 0;
+ } else {
+ 	switch ( $_SERVER['HTTP_HOST'] ?? '' ) {
+ 		case 'mwtask1.miraheze.org':
+ 			$wgRequestTimeLimit = 1200;
+ 			break;
+
+ 		default:
+ 			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+ 				$wgRequestTimeLimit = 200;
+ 			} else {
+ 				$wgRequestTimeLimit = 60;
+ 			}
+ 	}
+ }
+
 // Initialise WikiInitialise
 require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
@@ -4985,6 +5006,10 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 // We set wgInternalServer to wgServer as we need this to get purging working (we convert wgServer from https:// to http://).
 // https://www.mediawiki.org/wiki/Manual:$wgInternalServer
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
+
+if ( $wgRequestTimeLimit ) {
+	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
+}
 
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
