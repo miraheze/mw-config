@@ -4,6 +4,30 @@
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
 
+/**
+  * Configure PHP request timeouts. These should be slightly less than the Apache
+  * timeouts, so that the slightly more informative PHP error message is
+  * delivered to the user, and so that we can verify that PHP timeouts actually
+  * exist (T97192).
+  */
+ if ( PHP_SAPI === 'cli' ) {
+ 	// Should always be unlimited, this is probably redundant
+ 	$wgRequestTimeLimit = 0;
+ } else {
+ 	switch ( $_SERVER['HTTP_HOST'] ?? '' ) {
+ 		case 'mwtask1.miraheze.org':
+ 			$wgRequestTimeLimit = 1200;
+ 			break;
+
+ 		default:
+ 			if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+ 				$wgRequestTimeLimit = 200;
+ 			} else {
+ 				$wgRequestTimeLimit = 60;
+ 			}
+ 	}
+ }
+
 // Initialise WikiInitialise
 require_once( '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php' );
 $wi = new WikiInitialise();
