@@ -37,7 +37,6 @@ $IP/extensions/Collection/extension.json
 $IP/extensions/Commentbox/extension.json
 $IP/extensions/CommentStreams/extension.json
 $IP/extensions/Comments/extension.json
-$IP/extensions/ConfirmEdit/ReCaptchaNoCaptcha/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ContactPage/extension.json
@@ -135,6 +134,7 @@ $IP/extensions/MediaWikiChat/extension.json
 $IP/extensions/Mermaid/extension.json
 $IP/extensions/MintyDocs/extension.json
 $IP/extensions/MirahezeMagic/extension.json
+$IP/extensions/MirahezeMagic/ReCaptchaNoCaptcha/extension.json
 $IP/extensions/MobileDetect/MobileDetect.php
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MobileTabsPlugin/extension.json
