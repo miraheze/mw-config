@@ -5007,7 +5007,9 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 // https://www.mediawiki.org/wiki/Manual:$wgInternalServer
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
 
-$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
+if ( $wgRequestTimeLimit ) {
+	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
+}
 
 // Include other configuration files
 require_once( '/srv/mediawiki/config/Database.php' );
