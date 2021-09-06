@@ -261,12 +261,10 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgReCaptchaSiteKey' => [
-		'default' => '6Lex_RITAAAAAFVY6qp9bQzrDxKx83Mj9uvwk8jP',
-		'test3wiki' => '6LcrxU4bAAAAAL6RgJePDZGCYsw-plPdk81qclKn',
+		'default' => '6LcrxU4bAAAAAL6RgJePDZGCYsw-plPdk81qclKn',
 	],
 	'wgReCaptchaVersion' => [
-		'default' => 'v2',
-		'test3wiki' => 'v3',
+		'default' => 'v3',
 	],
 
 	// Cargo
