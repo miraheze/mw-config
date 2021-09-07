@@ -1110,7 +1110,7 @@ $wi->config->settings += [
 		'default' => 20,
 	],
 
-  // Extensions
+	// Extensions
 	// Must be on at all times except for ldapwikiwiki
 	'wmgUseCentralAuth' => [
 		'default' => true,
