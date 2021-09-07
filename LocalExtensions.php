@@ -1,5 +1,5 @@
 <?php
-if ( $wmgUseApex ) {	
+if ( $wmgUseApex ) {
 	$wgApexLogo = [
 		'1x' => $wgLogos['1x'],
 		'2x' => $wgLogos['1x'],
@@ -28,16 +28,16 @@ if ( $wmgUseGlobalWatchlist ) {
 
 if ( $wmgUseLdap ) {
 	wfLoadExtension( 'LdapAuthentication' );
-	
-	$wgAuthManagerAutoConfig['primaryauth'] += [	
-		LdapPrimaryAuthenticationProvider::class => [	
-			'class' => LdapPrimaryAuthenticationProvider::class,	
-			'args' => [ [	
-				'authoritative' => true, // don't allow local non-LDAP accounts	
-			] ],	
-			'sort' => 50, // must be smaller than local pw provider	
-		],	
-	];
+
+	$wgAuthManagerAutoConfig['primaryauth'] += [
+		LdapPrimaryAuthenticationProvider::class => [
+			'class' => LdapPrimaryAuthenticationProvider::class,
+			'args' => [ [
+				'authoritative' => true, // don't allow local non-LDAP accounts
+			] ],
+			'sort' => 50, // must be smaller than local pw provider
+		],
+ ];
 }
 
 if ( $wmgUseMultimediaViewer ) {
@@ -46,7 +46,7 @@ if ( $wmgUseMultimediaViewer ) {
 	}
 }
 
-if ( $wmgUsePopups ) {	
+if ( $wmgUsePopups ) {
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
 		$wgPopupsOptInDefaultState = '1';
@@ -55,7 +55,7 @@ if ( $wmgUsePopups ) {
 	}
 }
 
-if ( $wmgUseVisualEditor ) {	
+if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
