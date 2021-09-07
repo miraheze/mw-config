@@ -328,7 +328,7 @@ $wgManageWikiSettings = [
 		'help' => 'Shows a beta welcome for users of VisualEditor.',
 		'requires' => [],
 	],
-	
+
 	// Categories
 	'wgCategoryPagingLimit' => [
 		'name' => 'Category Paging Limit',
@@ -494,7 +494,7 @@ $wgManageWikiSettings = [
 		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
 		'requires' => [],
 	],
-	
+
 	// Edit
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
@@ -636,7 +636,7 @@ $wgManageWikiSettings = [
 		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
 		'requires' => [],
 		'script' => [
- 			"$IP/maintenance/updateArticleCount.php" => [
+			"$IP/maintenance/updateArticleCount.php" => [
 				'update' => false,
 			],
 		],
@@ -735,7 +735,7 @@ $wgManageWikiSettings = [
 		'help' => 'When user changes interface language via ULS, should we also switch the language of the translatable page?',
 		'requires' => [],
 	],
-	
+
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'name' => 'Minerva Always Show Language Button',
 		'from' => 'minervaneue',
@@ -1018,12 +1018,16 @@ $wgManageWikiSettings = [
 		'options' => [
 			'add' => 'add',
 			'alist' => 'alist',
+			'anim' => 'anim',
 			'apk' => 'apk',
 			'apng' => 'apng',
+			'ascii' => 'ascii',
+			'asset' => 'asset',
 			'asv' => 'asv',
 			'avi' => 'avi',
 			'bfwav' => 'bfwav',
 			'bib' => 'bib',
+			'blend' => 'blend',
 			'bmp' => 'bmp',
 			'bnk' => 'bnk',
 			'bst' => 'bst',
@@ -1031,8 +1035,10 @@ $wgManageWikiSettings = [
 			'bz2' => 'bz2',
 			'c' => 'c',
 			'cap' => 'cap',
+			'cfg' => 'cfg',
 			'chr' => 'chr',
 			'cls' => 'cls',
+			'controller' => 'controller',
 			'cpp' => 'cpp',
 			'crt' => 'crt',
 			'css' => 'css',
@@ -1045,6 +1051,7 @@ $wgManageWikiSettings = [
 			'doc' => 'doc',
 			'docx' => 'docx',
 			'eot' => 'eot',
+			'fbx' => 'fbx',
 			'fig' => 'fig',
 			'fla' => 'fla',
 			'flac' => 'flac',
@@ -1071,6 +1078,7 @@ $wgManageWikiSettings = [
 			'jfif' => 'jfif',
 			'jpeg' => 'jpeg',
 			'jpg' => 'jpg',
+			'key' => 'key',
 			'lua' => 'lua',
 			'm4a' => 'm4a',
 			'mat' => 'mat',
@@ -1117,6 +1125,8 @@ $wgManageWikiSettings = [
 			'rar' => 'rar',
 			'rtf' => 'rtf',
 			's3m' => 's3m',
+			'sav' => 'sav',
+			'sbi' => 'sbi',
 			'scss' => 'scss',
 			'sfnt' => 'sfnt',
 			'sh' => 'sh',
@@ -1130,12 +1140,16 @@ $wgManageWikiSettings = [
 			'tar' => 'tar',
 			'tar.gz' => 'tar.gz',
 			'tex' => 'tex',
+			'tga' => 'tga',
 			'tif' => 'tif',
 			'tiff' => 'tiff',
 			'ttf' => 'ttf',
 			'txt' => 'txt',
+			'unity' => 'unity',
+			'unitypackage' => 'unitypackage',
 			'val' => 'val',
 			'vit' => 'vit',
+			'vrm' => 'vrm',
 			'vsd' => 'vsd',
 			'vst' => 'vst',
 			'wav' => 'wav',
@@ -1263,7 +1277,7 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
 		'requires' => [],
-	],	
+	],
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
 		'from' => 'mediawiki',
@@ -1447,7 +1461,7 @@ $wgManageWikiSettings = [
 		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
 		'requires' => [],
 	],
-	
+
 	// Permissions
 	'wgImplicitGroups' => [
 		'name' => 'Implicit Groups',
@@ -1476,7 +1490,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	
+
 	// Preferences
 	'wgHiddenPrefs' => [
 		'name' => 'Hidden Preferences',
@@ -2095,7 +2109,7 @@ $wgManageWikiSettings = [
 		'help' => 'Enables default stuff to display on social profile pages by default',
 		'requires' => [],
 	],
-	
+
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
 		'name' => 'Default Skin',
@@ -2323,7 +2337,50 @@ $wgManageWikiSettings = [
 		'maxint' => 100,
 		'overridedefault' => 100,
 		'section' => 'styling',
-		'help' => 'Set the opacity level of the content area and custom sidebar for the Cosmos skin in precentage',
+		'help' => 'Set the opacity level of the content area and custom sidebar for the Cosmos skin in precentage.',
+		'requires' => [],
+	],
+	'wgCosmosUseWVUISearch' => [
+		'name' => 'Cosmos Use WVUI Search',
+		'from' => 'cosmos',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Whether to enable the WVUI search of Cosmos. If enabled, search suggestions may include descriptions and thumbnails.',
+		'requires' => [],
+	],
+	'wgCosmosSearchUseActionAPI' => [
+		'name' => 'Cosmos Search Use Action API',
+		'from' => 'cosmos',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Whether the WVUI search of Cosmos should use the MediaWiki action API instead of the REST API. Will have no effect unless <code>$wgCosmosUseWVUISearch</code> is enabled.',
+		'requires' => [],
+	],
+	'wgCosmosSearchDescriptionSource' => [
+		'name' => 'Cosmos Search Description Source',
+		'from' => 'cosmos',
+		'type' => 'list',
+		'options' => [
+			'pagedescription' => 'pagedescription',
+			'textextracts' => 'textextracts',
+			'wikidata' => 'wikidata',
+		],
+		'overridedefault' => 'textextracts',
+		'section' => 'styling',
+		'help' => 'Set the method to extract short description in the WVUI search within Cosmos. Will have no effect unless <code>$wgCosmosUseWVUISearch</code> and <code>$wgCosmosSearchUseActionAPI</code> are enabled.',
+		'requires' => [],
+	],
+	'wgCosmosMaxSearchResults' => [
+		'name' => 'Cosmos Max Search Results',
+		'from' => 'cosmos',
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 15,
+		'overridedefault' => 6,
+		'section' => 'styling',
+		'help' => 'Set the maximum number of search results given for the WVUI search within Cosmos. Will have no effect unless <code>$wgCosmosUseWVUISearch</code> and <code>$wgCosmosSearchUseActionAPI</code> are enabled.',
 		'requires' => [],
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
@@ -2515,6 +2572,50 @@ $wgManageWikiSettings = [
 		'help' => 'The version of the Vector skin to use as the default.',
 		'requires' => [],
 	],
+	'wgVectorDefaultSkinVersionForExistingAccounts' => [
+		'name' => 'Vector Default Skin Version For Existing Accounts',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'options' => [
+			'Legacy' => '1',
+			'New' => '2',
+		],
+		'overridedefault' => '1',
+		'section' => 'styling',
+		'help' => 'The version of the Vector skin to use as the default for existing accounts.',
+		'requires' => [],
+	],
+	'wgVectorDefaultSkinVersionForNewAccounts' => [
+		'name' => 'Vector Default Skin Version For New Accounts',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'options' => [
+			'Legacy' => '1',
+			'New' => '2',
+		],
+		'overridedefault' => '1',
+		'section' => 'styling',
+		'help' => 'The version of the Vector skin to use as the default for new accounts.',
+		'requires' => [],
+	],
+	'wgVectorResponsive' => [
+		'name' => 'Vector Responsive',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'When wgVectorDefaultSkinVersion is set to \'New\', turn Vector into a responsive skin by applying a view port and disabling the min-width?',
+		'requires' => [],
+	],
+	'wgVectorUseWvuiSearch' => [
+		'name' => 'Vector Use WVUI Search',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Enable Vector WVUI search?',
+		'requires' => [],
+	],
 	'wgCitizenThemeDefault' => [
 		'name' => 'Citizen Theme Default',
 		'from' => 'citizen',
@@ -2655,7 +2756,7 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.',
 		'requires' => [],
-	],	
+	],
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [

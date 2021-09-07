@@ -1,4 +1,5 @@
 name: Continuous integration
+
 on:
   create:
   push:
@@ -6,24 +7,43 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  build:
+  test:
+    name: Test and lint
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ['7.3']
+        php-versions: ['7.3']
     steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: PHP ${{ matrix.php }} 
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php }} 
-      - name: Run tests
-        run: |
-          bash phplint.sh
+    - uses: actions/checkout@v2
+      
+    - name: Install dependencies
+      run: |
+        composer validate
+        composer install --prefer-dist --no-progress
+
+    # Bypass the phpcbf non-standard exit code  
+    - name: Check PHP
+      run: |
+        sh phpcbf.sh
+        composer fix
+        composer test
+
+    # Only patch code when it is a push event
+    - name: Push the changes
+      if: github.event_name == 'push'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        git add .
+        git commit -am "CI: lint code to MediaWiki standards" -m "Check commit and GitHub actions for more details" || echo "No changes to commit"
+        git pull --rebase
+        git push
+
   notify-irc:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     if: ${{ always() && github.repository_owner == 'miraheze' && ( github.ref	== 'refs/heads/master' || github.event_name == 'pull_request' ) }}
     steps:

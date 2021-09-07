@@ -16,12 +16,11 @@ if ( $cwClosed ) {
 			'undelete' => true,
 		],
 	];
-	
+
 	if ( $wmgUseComments ) {
 		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
 }
-
 
 // Public Wikis
 if ( !$cwPrivate ) {
@@ -139,23 +138,28 @@ $wi->config->settings['wgDataDump']['default'] = [
 	],
 ];
 
+// Exempt from Robot Control (INDEX/NOINDEX namespaces)
+if ( !isset( $wgExemptFromUserRobotsControl ) ) {
+	$wgExemptFromUserRobotsControl = [];
+}
+
 // CookieWarning exempt ElectronPdfService
 if ( isset( $_SERVER['REMOTE_ADDR'] ) && in_array( $_SERVER['REMOTE_ADDR'], [ '51.195.236.212', '2001:41d0:800:178a::10', '51.195.236.246', '2001:41d0:800:1bbd::13' ] ) ) {
 	$wi->config->settings['wgCookieWarningEnabled']['default'] = false;
 }
 
 // $wmgContactPageRecipientUser
-if( $wmgContactPageRecipientUser ) {
+if ( $wmgContactPageRecipientUser ) {
 	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
- 	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
- 		'src' => 'https://wikiapiary.com/w/images/wikiapiary/b/b4/Monitored_by_WikiApiary.png',
- 		'url' => 'https://wikiapiary.com/wiki/' . str_replace(' ', '_', $wmgWikiapiaryFooterPageName),
- 		'alt' => 'Monitored by WikiApiary'
- 	];
+	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
+		'src' => 'https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
+		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
+		'alt' => 'Monitored by WikiApiary'
+	];
 }
 
 // $wgForeignFileRepos
@@ -201,6 +205,20 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	];
 }
 
+if ( $wgUseInstantCommons ) {
+	$wgHooks['SetupAfterCache'][] = 'onSetupAfterCache';
+
+	function onSetupAfterCache() {
+		global $wgForeignFileRepos;
+
+		foreach ( $wgForeignFileRepos as $key => $value ) {
+			if ( isset( $value['name'] ) && $value['name'] === 'wikimediacommons' ) {
+				$wgForeignFileRepos[$key]['apiThumbCacheExpiry'] = 86400;
+			}
+		}
+	}
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
@@ -227,7 +245,7 @@ if ( !preg_match( '/^(.*).miraheze.org$/', $wi->hostname ) ) {
 // Per-wiki settings
 if ( $wgDBname === 'erislywiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-	
+
 	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'PreMiD_Presence', 'Erisly' );
 	}
@@ -235,7 +253,7 @@ if ( $wgDBname === 'erislywiki' ) {
 
 if ( $wgDBname === 'libertygamewiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-	
+
 	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' );
 	}
@@ -262,7 +280,7 @@ if ( $wgDBname === 'metawiki' ) {
 	}
 }
 
-if ( $wgDBname === 'pokemundowiki') {
+if ( $wgDBname === 'pokemundowiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 	function onBeforePageDisplay( OutputPage $out ) {
@@ -273,7 +291,7 @@ if ( $wgDBname === 'pokemundowiki') {
 
 if ( $wgDBname === 'snapwikiwiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-	
+
 	function onBeforePageDisplay( OutputPage $out ) {
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 	}
@@ -281,6 +299,11 @@ if ( $wgDBname === 'snapwikiwiki' ) {
 
 if ( $wgDBname === 'newusopediawiki' ) {
 	$wgFilterLogTypes['comments'] = false;
+}
+
+if ( $wgDBname === 'vgportdbwiki' ) {
+	$wgDplSettings['allowUnlimitedCategories'] = true;
+	$wgDplSettings['allowUnlimitedResults'] = true;
 }
 
 if ( $wgDBname === 'traceprojectwikiwiki' ) {
