@@ -322,7 +322,23 @@ if ( $wgDBname === 'commonswiki' ) {
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 }
-
+// Image repository for polandballwikisongcontestwiki
+if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
+	$wgForeignFileRepos[] = [
+		'class' => 'ForeignDBViaLBRepo',
+		'name' => 'shared-polcomwiki',
+		'directory' => '/mnt/mediawiki-static/polcomwiki',
+		'url' => 'https://static.miraheze.org/polcomwiki',
+		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
+		'wiki' => 'polcomwiki',
+		'descBaseUrl' => 'https://commons.polandballwiki.com/wiki/File:',
+	];
+}
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
