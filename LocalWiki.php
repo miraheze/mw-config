@@ -322,6 +322,7 @@ if ( $wgDBname === 'commonswiki' ) {
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 }
+
 // Image repository for polandballwikisongcontestwiki
 if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
 	$wgForeignFileRepos[] = [
@@ -339,6 +340,7 @@ if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
 		'descBaseUrl' => 'https://commons.polandballwiki.com/wiki/File:',
 	];
 }
+
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
