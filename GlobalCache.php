@@ -31,7 +31,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
-$wgMainCacheType = 'memcached-mem-2';
+$wgMainCacheType = CACHE_DB;
 $wgSessionCacheType = 'memcached-mem-2';
 $wgSessionsInObjectCache = true;
 
