@@ -280,6 +280,10 @@ if ( $wgDBname === 'metawiki' ) {
 	}
 }
 
+if ( $wgDBname === 'newusopediawiki' ) {
+	$wgFilterLogTypes['comments'] = false;
+}
+
 if ( $wgDBname === 'pokemundowiki' ) {
 	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -289,41 +293,6 @@ if ( $wgDBname === 'pokemundowiki' ) {
 	}
 }
 
-if ( $wgDBname === 'snapwikiwiki' ) {
-	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-	function onBeforePageDisplay( OutputPage $out ) {
-		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
-	}
-}
-
-if ( $wgDBname === 'newusopediawiki' ) {
-	$wgFilterLogTypes['comments'] = false;
-}
-
-if ( $wgDBname === 'vgportdbwiki' ) {
-	$wgDplSettings['allowUnlimitedCategories'] = true;
-	$wgDplSettings['allowUnlimitedResults'] = true;
-}
-
-if ( $wgDBname === 'traceprojectwikiwiki' ) {
-	$wgDplSettings['allowUnlimitedCategories'] = true;
-	$wgDplSettings['allowUnlimitedResults'] = true;
-}
-
-if ( $wgDBname === 'commonswiki' ) {
-	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
-	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
-} else {
-	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
-		'url' => 'https://commons.miraheze.org/w/api.php'
-	];
-	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
-		'url' => 'https://commons.miraheze.org/w/api.php'
-	];
-}
-
-// Image repository for polandballwikisongcontestwiki
 if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
@@ -338,6 +307,38 @@ if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
 		'hasSharedCache' => false,
 		'wiki' => 'polcomwiki',
 		'descBaseUrl' => 'https://commons.polandballwiki.com/wiki/File:',
+	];
+}
+
+if ( $wgDBname === 'snapwikiwiki' ) {
+	$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+	function onBeforePageDisplay( OutputPage $out ) {
+		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
+	}
+}
+
+if ( $wgDBname === 'traceprojectwikiwiki' ) {
+	$wgDplSettings['allowUnlimitedCategories'] = true;
+	$wgDplSettings['allowUnlimitedResults'] = true;
+}
+
+if ( $wgDBname === 'vgportdbwiki' ) {
+	$wgDplSettings['allowUnlimitedCategories'] = true;
+	$wgDplSettings['allowUnlimitedResults'] = true;
+}
+
+// JsonConfig
+if ( $wgDBname === 'commonswiki' ) {
+	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
+	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
+} else {
+	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
+		'url' => 'https://commons.miraheze.org/w/api.php'
+	];
+
+	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
+		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 }
 
