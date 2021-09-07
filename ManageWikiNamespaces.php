@@ -20,7 +20,7 @@
  *
  * check: adds a checkbox. Format: $var[] = $namespace_id;
  * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
- * 
+ *
  * [$var][$namespace_id] = $val format:
  * database: adds a textbox with input validation, verifying that its value is a valid database name.
  * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).

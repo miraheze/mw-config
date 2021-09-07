@@ -3160,7 +3160,7 @@ $wgManageWikiExtensions = [
 			'extensions' => [
 				'wikibaserepository',
 				'universallanguageselector',
-			],	
+			],
 		],
 		'section' => 'other',
 	],
@@ -3172,7 +3172,7 @@ $wgManageWikiExtensions = [
 		'requires' => [
 			'extensions' => [
 				'wikibaserepository',
-			],	
+			],
 		],
 		'section' => 'other',
 	],
@@ -3184,7 +3184,7 @@ $wgManageWikiExtensions = [
 		'requires' => [
 			'extensions' => [
 				'wikibaserepository',
-			],	
+			],
 		],
 		'install' => [
 			'sql' => [

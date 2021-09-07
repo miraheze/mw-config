@@ -328,7 +328,7 @@ $wgManageWikiSettings = [
 		'help' => 'Shows a beta welcome for users of VisualEditor.',
 		'requires' => [],
 	],
-	
+
 	// Categories
 	'wgCategoryPagingLimit' => [
 		'name' => 'Category Paging Limit',
@@ -494,7 +494,7 @@ $wgManageWikiSettings = [
 		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
 		'requires' => [],
 	],
-	
+
 	// Edit
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
@@ -636,7 +636,7 @@ $wgManageWikiSettings = [
 		'help' => 'Method used to determine if a page in a content namespace should be counted as a valid content page (article).',
 		'requires' => [],
 		'script' => [
- 			"$IP/maintenance/updateArticleCount.php" => [
+			"$IP/maintenance/updateArticleCount.php" => [
 				'update' => false,
 			],
 		],
@@ -735,7 +735,7 @@ $wgManageWikiSettings = [
 		'help' => 'When user changes interface language via ULS, should we also switch the language of the translatable page?',
 		'requires' => [],
 	],
-	
+
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'name' => 'Minerva Always Show Language Button',
 		'from' => 'minervaneue',
@@ -1277,7 +1277,7 @@ $wgManageWikiSettings = [
 		'section' => 'notifications',
 		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
 		'requires' => [],
-	],	
+	],
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
 		'from' => 'mediawiki',
@@ -1461,7 +1461,7 @@ $wgManageWikiSettings = [
 		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
 		'requires' => [],
 	],
-	
+
 	// Permissions
 	'wgImplicitGroups' => [
 		'name' => 'Implicit Groups',
@@ -1490,7 +1490,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	
+
 	// Preferences
 	'wgHiddenPrefs' => [
 		'name' => 'Hidden Preferences',
@@ -2109,7 +2109,7 @@ $wgManageWikiSettings = [
 		'help' => 'Enables default stuff to display on social profile pages by default',
 		'requires' => [],
 	],
-	
+
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
 		'name' => 'Default Skin',
@@ -2756,7 +2756,7 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.',
 		'requires' => [],
-	],	
+	],
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
