@@ -5050,6 +5050,7 @@ if ( wfHostname() === 'test3' ) {
 }
 
 // Define last to avoid all dependencies
+require_once '/srv/mediawiki/config/Defines.php';
 require_once '/srv/mediawiki/config/LocalWiki.php';
 
 // Define last - Extension message files for loading extensions
