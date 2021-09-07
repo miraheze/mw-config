@@ -37,7 +37,7 @@ if ( $wmgUseLdap ) {
 			] ],
 			'sort' => 50, // must be smaller than local pw provider
 		],
- ];
+	];
 }
 
 if ( $wmgUseMultimediaViewer ) {
@@ -66,7 +66,7 @@ if ( $wmgUseVisualEditor ) {
 
 if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
-	require_once "/srv/mediawiki/config/Wikibase.php";
+	require_once '/srv/mediawiki/config/Wikibase.php';
 }
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
