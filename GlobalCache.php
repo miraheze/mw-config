@@ -37,7 +37,7 @@ $wgSessionsInObjectCache = true;
 
 $wgMessageCacheType = 'memcached-mem-1';
 $wgUseLocalMessageCache = true;
-$wgParserCacheType = 'memcached-mem-1';
+$wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = 'memcached-mem-1';
 
 $jobrunnerSettings = $wmgCacheSettings['jobrunner'];
