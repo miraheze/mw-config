@@ -5024,6 +5024,8 @@ if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
 }
 
+$wgScribuntoDefaultEngine = 'luasandbox';
+
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
 require_once '/srv/mediawiki/config/GlobalCache.php';
