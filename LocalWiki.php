@@ -206,9 +206,9 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 }
 
 if ( $wgUseInstantCommons ) {
-	$wgHooks['SetupAfterCache'][] = 'onSetupAfterCache';
+	$wgHooks['MediaWikiServices'][] = 'onMediaWikiServices';
 
-	function onSetupAfterCache() {
+	function onMediaWikiServices() {
 		global $wgForeignFileRepos;
 
 		foreach ( $wgForeignFileRepos as $key => $value ) {
