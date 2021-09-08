@@ -4165,6 +4165,9 @@ $wi->config->settings += [
 	'wgScribuntoUseCodeEditor' => [
 		'default' => true,
 	],
+	'wgScribuntoGatherFunctionStats' => [
+		'default' => true,
+	],
 	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
 	],
