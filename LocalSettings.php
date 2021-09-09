@@ -133,12 +133,15 @@ $wi->config->settings += [
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
-		'default' => [ [
-			'count' => 1,
-			'seconds' => 300,
-		], [
-			'count' => 5,
-			'seconds' => 86400,
+		'default' => [
+			[
+				'count' => 1,
+				'seconds' => 300,
+			],
+			[
+				'count' => 5,
+				'seconds' => 86400,
+			],
 		],
 	],
 	// https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpamBlacklist#Block_list_syntax
