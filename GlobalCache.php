@@ -35,10 +35,10 @@ $wgMainCacheType = 'memcached-mem-2';
 $wgSessionCacheType = 'memcached-mem-2';
 $wgSessionsInObjectCache = true;
 
-$wgMessageCacheType = 'memcached-mem-1';
+$wgMessageCacheType = CACHE_DB;
 $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
-$wgLanguageConverterCacheType = 'memcached-mem-1';
+$wgLanguageConverterCacheType = CACHE_DB;
 
 $jobrunnerSettings = $wmgCacheSettings['jobrunner'];
 $wgJobTypeConf['default'] = [
