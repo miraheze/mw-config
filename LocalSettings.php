@@ -5019,7 +5019,7 @@ require_once '/srv/mediawiki/config/LocalExtensions.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 
 if ( $wi->missing ) {
-	require_once '/srv/mediawiki/config/MissingWiki.php';
+	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
