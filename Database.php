@@ -11,14 +11,14 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 			'db11' => 1,
 		],
 		'c2' => [
- 			'db11' => 1,
- 		],
+			'db11' => 1,
+		],
 		'c3' => [
- 			'db12' => 1,
- 		],
+			'db12' => 1,
+		],
 		'c4' => [
- 			'db13' => 1,
- 		],
+			'db13' => 1,
+		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,

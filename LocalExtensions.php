@@ -25,9 +25,13 @@ if ( $wmgUseAJAXPoll ) {
 	wfLoadExtension( 'AJAXPoll' );
 }
 
+if ( $wmgUseAnisa ) {
+	wfLoadSkin( 'Anisa' );
+}
+
 if ( $wmgUseApex ) {
 	wfLoadSkin( 'apex' );
-	
+
 	$wgApexLogo = [
 		'1x' => $wgLogo,
 		'2x' => $wgLogo,
@@ -40,6 +44,10 @@ if ( $wmgUseApprovedRevs ) {
 
 if ( $wmgUseArrays ) {
 	wfLoadExtension( 'Arrays' );
+}
+
+if ( $wmgUseArticlePlaceholder ) {
+	wfLoadExtension( 'ArticlePlaceholder' );
 }
 
 if ( $wmgUseArticleRatings ) {
@@ -256,6 +264,10 @@ if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
 }
 
+if ( $wmgUseEmbedVideo ) {
+	wfLoadExtension( 'EmbedVideo' );
+}
+
 if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }
@@ -276,7 +288,7 @@ if ( $wmgUseFlow ) {
 	wfLoadExtension( 'Flow' );
 }
 
-if ( $wmgUseForcePreview) {
+if ( $wmgUseForcePreview ) {
 	wfLoadExtension( 'ForcePreview' );
 }
 
@@ -422,15 +434,15 @@ if ( $wmgUseLastModified ) {
 
 if ( $wmgUseLdap ) {
 	wfLoadExtension( 'LdapAuthentication' );
-	
-	$wgAuthManagerAutoConfig['primaryauth'] += [	
-		LdapPrimaryAuthenticationProvider::class => [	
-			'class' => LdapPrimaryAuthenticationProvider::class,	
-			'args' => [ [	
-				'authoritative' => true, // don't allow local non-LDAP accounts	
-			] ],	
-			'sort' => 50, // must be smaller than local pw provider	
-		],	
+
+	$wgAuthManagerAutoConfig['primaryauth'] += [
+		LdapPrimaryAuthenticationProvider::class => [
+			'class' => LdapPrimaryAuthenticationProvider::class,
+			'args' => [ [
+				'authoritative' => true, // don't allow local non-LDAP accounts
+			] ],
+			'sort' => 50, // must be smaller than local pw provider
+		],
 	];
 }
 
@@ -447,7 +459,7 @@ if ( $wmgUseLinkSuggest ) {
 }
 
 if ( $wmgUseLinkTarget ) {
-	wfLoadExtension ( 'LinkTarget' );
+	wfLoadExtension( 'LinkTarget' );
 }
 
 if ( $wmgUseLinkTitles ) {
@@ -472,6 +484,10 @@ if ( $wmgUseLoopsCombo ) {
 
 if ( $wmgUseMagicNoCache ) {
 	wfLoadExtension( 'MagicNoCache' );
+}
+
+if ( $wmgUseMagicNumberedHeadings ) {
+	wfLoadExtension( 'MagicNumberedHeadings' );
 }
 
 if ( $wmgUseMaps ) {
@@ -514,6 +530,10 @@ if ( $wmgUseMinervaNeue ) {
 	wfLoadSkin( 'MinervaNeue' );
 }
 
+if ( $wmgUseMintyDocs ) {
+	wfLoadExtension( 'MintyDocs' );
+}
+
 if ( $wmgUseMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 }
@@ -548,7 +568,7 @@ if ( $wmgUseMsUpload ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	wfLoadExtension( 'MultimediaViewer' );
-	
+
 	if ( $wmgUse3D ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 	}
@@ -630,6 +650,10 @@ if ( $wmgUsePageNotice ) {
 	wfLoadExtension( 'PageNotice' );
 }
 
+if ( $wmgUsePageSchemas ) {
+	wfLoadExtension( 'PageSchemas' );
+}
+
 if ( $wmgUsePageTriage ) {
 	wfLoadExtension( 'PageTriage' );
 }
@@ -668,7 +692,7 @@ if ( $wmgUsePortableInfobox ) {
 
 if ( $wmgUsePopups ) {
 	wfLoadExtension( 'Popups' );
-	
+
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
 		$wgPopupsOptInDefaultState = '1';
@@ -773,6 +797,10 @@ if ( $wmgUseSimpleTooltip ) {
 	wfLoadExtension( 'SimpleTooltip' );
 }
 
+if ( $wmgUseSkinPerPage ) {
+	wfLoadExtension( 'SkinPerPage' );
+}
+
 if ( $wmgUseSlackNotifications ) {
 	wfLoadExtension( 'SlackNotifications' );
 }
@@ -832,7 +860,7 @@ if ( $wmgUseTabs ) {
 if ( $wmgUseTemplateData ) {
 	wfLoadExtension( 'TemplateData' );
 }
-	
+
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 }
@@ -861,7 +889,7 @@ if ( $wmgUseTreeAndMenu ) {
 	wfLoadExtension( 'TreeAndMenu' );
 }
 
-if ( $wmgUseTruglass) {
+if ( $wmgUseTruglass ) {
 	wfLoadSkin( 'Truglass' );
 }
 
@@ -951,7 +979,7 @@ if ( $wmgUseVideo ) {
 
 if ( $wmgUseVisualEditor ) {
 	wfLoadExtension( 'VisualEditor' );
-	
+
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
@@ -985,7 +1013,7 @@ if ( $wmgUseWikibaseLexeme ) {
 }
 
 if ( $wmgUseWikibaseLocalMedia ) {
-       wfLoadExtension( 'WikibaseLocalMedia' );
+	   wfLoadExtension( 'WikibaseLocalMedia' );
 }
 
 if ( $wmgUseWikibaseQualityConstraints ) {

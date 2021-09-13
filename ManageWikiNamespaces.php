@@ -20,7 +20,7 @@
  *
  * check: adds a checkbox. Format: $var[] = $namespace_id;
  * vestyle: adds a checkbox. Format: [$var][$namespace_id] = true;
- * 
+ *
  * [$var][$namespace_id] = $val format:
  * database: adds a textbox with input validation, verifying that its value is a valid database name.
  * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).
@@ -254,6 +254,20 @@ $wgManageWikiNamespacesAdditional = [
 		],
 		'overridedefault' => $wgDefaultRobotPolicy,
 		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
+		'requires' => [],
+	],
+	'wgExemptFromUserRobotsControl' => [
+		'name' => 'Exempt from user robots control?',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'overridedefault' => array_merge(
+			array_fill_keys( $wgContentNamespaces, true ),
+			[ 'default' => false ]
+		),
+		'help' => 'If this is enabled, the <code>__INDEX__</code> and <code>__NOINDEX__</code> magic words will not function in this namespace.',
 		'requires' => [],
 	],
 ];
