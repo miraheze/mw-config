@@ -1314,6 +1314,9 @@ $wi->config->settings += [
 	'wmgUseEditSubpages' => [
 		'default' => false,
 	],
+	'wmgUseEmbedSpotify' => [
+		'default' => false,
+	],
 	'wmgUseEmbedVideo' => [
 		'default' => false,
 	],
