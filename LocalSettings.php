@@ -3440,6 +3440,12 @@ $wi->config->settings += [
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
 	],
+	'wgTidyConfig' => [
+		'default' => [
+			'driver' => 'RemexHtml',
+			'pwrap' => false,
+		],
+	],
 	'wmgWhitelistRead' => [
 		'default' => false,
 	],
@@ -4454,11 +4460,6 @@ $wi->config->settings += [
 	],
 	'wgTitleBlacklistBlockAutoAccountCreation' => [
 		'default' => false,
-	],
-	'wgTidyConfig' => [
-		'default' => [
-			'driver' => 'RemexHtml'
-		],
 	],
 
 	// Translate
