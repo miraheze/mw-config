@@ -327,6 +327,7 @@ $wi->config->settings += [
 	// Categories
 	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
 		'default' => 'uppercase',
+		'academiadesusardu' => 'uca-fr',
 		'holidayswiki' => 'numeric',
 		'supermanwiki' => 'numeric',
 		'wmgUseCategorySortHeaders' => 'CustomHeaderCollation',
