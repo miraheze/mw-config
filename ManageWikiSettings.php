@@ -1445,7 +1445,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Notify when a page is imported?'
+		'help' => 'Notify when a page is imported?',
 		'requires' => [],
 	],
 	'wgSlackIncomingWebhookUrl' => [
