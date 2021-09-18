@@ -2464,9 +2464,9 @@ $wgManageWikiSettings = [
 			'settings' => [
 				'setting' => 'wgEvelutionDisableRightRail',
 				'value' => 'false',
-				],
 			],
 		],
+	],
 	'wgLibertyMainColor' => [
 		'name' => 'Liberty Main Color',
 		'from' => 'liberty',
