@@ -1439,6 +1439,15 @@ $wgManageWikiSettings = [
 		'help' => 'Notify when an article is protected?',
 		'requires' => [],
 	],
+	'wgDiscordNotificationAfterImportPage' => [
+		'name' => 'Discord Notification Import Article',
+		'form' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Notify when a page is imported?'
+		'requires' => [],
+	],
 	'wgSlackIncomingWebhookUrl' => [
 		'name' => 'Slack Incoming Webhook URL',
 		'from' => 'slacknotifications',
