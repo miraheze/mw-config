@@ -264,6 +264,10 @@ if ( $wmgUseEditSubpages ) {
 	wfLoadExtension( 'EditSubpages' );
 }
 
+if ( $wmgUseEmbedSpotify ) {
+	wfLoadExtension( 'EmbedSpotify' );
+}
+
 if ( $wmgUseEmbedVideo ) {
 	wfLoadExtension( 'EmbedVideo' );
 }

@@ -389,6 +389,14 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'parserhooks',
 	],
+	'embedspotify' => [
+		'name' => 'EmbedSpotify',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EmbedSpotify',
+		'var' => 'wmgUseEmbedSpotify',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'timeline' => [
 		'name' => 'EasyTimeline',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EasyTimeline',
