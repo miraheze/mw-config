@@ -1441,7 +1441,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordNotificationAfterImportPage' => [
 		'name' => 'Discord Notification Import Article',
-		'form' => 'mediawiki',
+		'from' => 'mediawiki',
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
