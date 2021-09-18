@@ -2408,6 +2408,65 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgEvelutionDisableColorManagement' => [
+		'name' => 'Disable Evelution Theme Chooser',
+		'from' => 'evelution',
+		'type' => 'check',
+		'overridedefault' => 'false',
+		'section' => 'styling',
+		'help' => 'Disables access to visual colors and the theme chooser. Likewise, it uses a hardcoded theme with colors taken from the Vector skin.',
+		'requires' => [],
+	],
+	'wgEvelutionDisableRightRail' => [
+		'name' => 'Disable Evelution Right Rail',
+		'from' => 'evelution',
+		'type' => 'check',
+		'overridedefault' => 'false',
+		'section' => 'styling',
+		'help' => 'Disables the right rail that appears on appears on all pages (except Special Pages and MediaWiki Pages).',
+		'requires' => [],
+	],
+	'wgEvelutionForceOneHeader' => [
+		'name' => 'Always visible Evelution Desktop Community Header',
+		'from' => 'evelution',
+		'type' => 'check',
+		'overridedefault' => 'false'
+		'section' => 'styling'
+		'help' => 'On screens with 705 pixels or more, disables the desktop community header and forces the desktop sticky community header to be always visible.'
+		'requires' => [],
+	],
+	'wgEvelutionLeftPersonalLinks' => [
+		'name' => 'Move Evelution alignment of .upper-links container in the personal links to the left.',
+		'from' => 'evelution',
+		'type' => 'check',
+		'overridedefault' => 'false',
+		'section' => 'styling',
+		'help' => 'Change the alignment of the .upper-links container in the personal links from <code>center</code> to <code>left</code>.',
+		'requires' => [],
+	],
+	'wgEvelutionServerMode' => [
+		'name' => 'Change Evelution layout to be more server/development wiki-friendly',
+		'from' => 'evelution',
+		'type' => 'check',
+		'overridedefault' => 'false',
+		'section' => 'styling',
+		'help' => 'Changes the layout to be more server/development wiki-friendly (e.g. No Desktop Local Navigation, Addition of Left actions link before the content (which has the local navigation menus), smaller page header title, full width Small Breakpoint size, and no right rail on Help and Project namespaces).',
+		'requires' => [],
+	],
+	'wgEvelutionStickyRail' => [
+		'name' => 'Disable Evelution Sticky Rail',
+		'from' => 'evelution',
+		'type' => 'check',
+		'overridedefault' => 'true'
+		'section' => 'styling',
+		'help' => 'Removes the sticky behavior of Right Rail on larger screens with 700 pixels or more.',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgEvelutionDisableRightRail',
+				'value' => 'false',
+				],
+			],
+		],
 	'wgLibertyMainColor' => [
 		'name' => 'Liberty Main Color',
 		'from' => 'liberty',
