@@ -1440,7 +1440,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgDiscordNotificationAfterImportPage' => [
-		'name' => 'Discord Notification After Article Import',
+		'name' => 'Discord Notification After Import Page',
 		'from' => 'mediawiki',
 		'type' => 'check',
 		'overridedefault' => true,
