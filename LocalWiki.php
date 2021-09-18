@@ -52,7 +52,7 @@ if ( $wgDBname === 'pokemundowiki' ) {
 	}
 }
 
-in_array ( $wgDBname['polandballwikisongcontestwiki', 'polandsmallswiki', 'ballmediawiki'] ) {
+if ( in_array ( $wgDBname['polandballwikisongcontestwiki', 'polandsmallswiki', 'ballmediawiki'] ) ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared-polcomwiki',
