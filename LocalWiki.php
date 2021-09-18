@@ -52,7 +52,7 @@ if ( $wgDBname === 'pokemundowiki' ) {
 	}
 }
 
-if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
+if ( in_array ( $wgDBname, [ 'polandballwikisongcontestwiki', 'polandsmallswiki', 'ballmediawiki' ] ) ) {
 	$wgForeignFileRepos[] = [
 		'class' => 'ForeignDBViaLBRepo',
 		'name' => 'shared-polcomwiki',
@@ -65,7 +65,7 @@ if ( $wgDBname === 'polandballwikisongcontestwiki' ) {
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
 		'hasSharedCache' => false,
 		'wiki' => 'polcomwiki',
-		'descBaseUrl' => 'https://commons.polandballwiki.com/wiki/File:',
+		'descBaseUrl' => 'https://commons.ballmedia.org/wiki/File:',
 	];
 }
 
