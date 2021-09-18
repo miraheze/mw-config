@@ -406,16 +406,16 @@ $wi->config->settings += [
 		'metawiki' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
-		'default' => "https://meta.miraheze.org/w/index.php/Special:BannerLoader",
+		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
-		'default' => "https://meta.miraheze.org/w/index.php/Special:RecordImpression",
+		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
 	],
 	'wgCentralHost' => [
-		'default' => "https://meta.miraheze.org",
+		'default' => 'https://meta.miraheze.org',
 	],
 	'wgNoticeProject' => [
 		'default' => 'all',
@@ -2592,7 +2592,7 @@ $wi->config->settings += [
 	'wgLDAPOptions' => [
 		'ldapwikiwiki' => [
 			'miraheze' => [
-				"LDAP_OPT_X_TLS_CACERTFILE" => '/etc/ssl/certs/Sectigo.crt',
+				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
 			],
 		],
 	],
@@ -2668,9 +2668,9 @@ $wi->config->settings += [
 	'+wgUrlProtocols' => [
 		'default' => [],
 		// file protocol only allowed on private wikis
-		'gzewiki' => [ "file://" ],
-		'kaiwiki' => [ "file://" ],
-		'vtwiki' => [ "discord://" ],
+		'gzewiki' => [ 'file://' ],
+		'kaiwiki' => [ 'file://' ],
+		'vtwiki' => [ 'discord://' ],
 	],
 
 	// LinkTitles
@@ -3431,8 +3431,8 @@ $wi->config->settings += [
 			MEDIATYPE_BITMAP,
 			MEDIATYPE_AUDIO,
 			MEDIATYPE_VIDEO,
-			"image/svg+xml",
-			"application/pdf",
+			'image/svg+xml',
+			'application/pdf',
 		],
 		'+polytopewiki' => [
 			MEDIATYPE_TEXT,
@@ -4162,7 +4162,7 @@ $wi->config->settings += [
 	],
 	'wgRSSUrlWhitelist' => [
 		'wmgUseRSS' => [
-			"*",
+			'*',
 		],
 	],
 
@@ -4437,7 +4437,7 @@ $wi->config->settings += [
 
 	// Theme
 	'wgDefaultTheme' => [
-		'default' => "",
+		'default' => '',
 	],
 
 	// TitleBlacklist
@@ -4985,9 +4985,9 @@ $wi->readCache();
 $wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
-require_once __DIR__ . "/ManageWikiExtensions.php";
-require_once __DIR__ . "/ManageWikiNamespaces.php";
-require_once __DIR__ . "/ManageWikiSettings.php";
+require_once __DIR__ . '/ManageWikiExtensions.php';
+require_once __DIR__ . '/ManageWikiNamespaces.php';
+require_once __DIR__ . '/ManageWikiSettings.php';
 
 // Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
 //we have to work around this by creating a local config and merging.
