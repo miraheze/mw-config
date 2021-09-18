@@ -1364,7 +1364,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'notifications',
-		'help' => 'Ignore Minor Edits from Discord feeds',
+		'help' => 'Ignore Minor Edits from Discord feeds?',
 		'requires' => [],
 	],
 	'wgDiscordNotificationBlockedUser' => [
@@ -1373,7 +1373,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Notify on user or IP blocked in MediaWiki.',
+		'help' => 'Notify on user or IP blocked in MediaWiki?',
 		'requires' => [],
 	],
 	'wgDiscordNotificationNewUser' => [
@@ -1382,7 +1382,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Notify on new user added into MediaWiki.',
+		'help' => 'Notify on new user added into MediaWiki?',
 		'requires' => [],
 	],
 	'wgDiscordIncludePageUrls' => [
