@@ -783,6 +783,7 @@ $wi->config->settings += [
 			'jobchron\d{0,2}',
 			'mwtask\d{0,2}',
 			'security',
+                        'deployment',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
