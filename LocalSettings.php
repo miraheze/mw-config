@@ -61,6 +61,7 @@ $wi->config->settings += [
 		'default'   => true,
 		'test3wiki' => false,
 		'testwiki'  => false,
+		'snapwikiwiki' => false,
 	],
 
 	// invalidates user sessions - do not change unless it is an emergency.
