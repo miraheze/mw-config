@@ -2272,8 +2272,8 @@ $wi->config->settings += [
 			'YMMV_Trope' => 'ymmv',
 		],
 		'vgportdbwiki' => [
-			'Unverified_Games' => 'unverified',
-			'Incomplete_Pages' => 'unverified',
+			'Games_Lacking_Information_Online' => 'obscure',
+			'Incomplete_Pages' => 'incomplete',
 		],
 	],
 
