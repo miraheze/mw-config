@@ -2942,7 +2942,7 @@ $wgManageWikiSettings = [
 	]
 ];
 
-if ( $wmgUseGamepress && $wmgUseTheme ) {
+if ( $wi->config->settings['wmgUseGamepress'] && $wi->config->settings['wmgUseTheme'] ) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
