@@ -4235,7 +4235,7 @@ $wi->config->extractAllGlobals( $wi->dbname );
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [];
-$wi->readExtensions();
+$wi->loadExtensions();
 
 $wi->config->extractAllGlobals( $wi->dbname );
 
