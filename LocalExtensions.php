@@ -49,7 +49,7 @@ if ( $wmgUsePopups ) {
 }
 
 if ( $wmgUseSocialProfile ) {
-	require_once "$IP/extensions/SocialProfile/SocialProfile.php"l
+	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 }
 
 if ( $wmgUseVisualEditor ) {
