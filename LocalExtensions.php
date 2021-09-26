@@ -48,6 +48,10 @@ if ( $wmgUsePopups ) {
 	}
 }
 
+if ( $wmgUseSocialProfile ) {
+	require_once "$IP/extensions/SocialProfile/SocialProfile.php"l
+}
+
 if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
