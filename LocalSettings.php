@@ -4230,12 +4230,16 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 }
 
 $wi->readCache();
+
 $wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
+
+$wi->disabledExtensions = [];
+$wi->readExtensions();
 
 // Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
 //we have to work around this by creating a local config and merging.
@@ -4272,10 +4276,6 @@ require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/LocalExtensions.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
-
-$wi->disabledExtensions = [];
-
-$wi->readExtensions();
 
 if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
