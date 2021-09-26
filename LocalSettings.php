@@ -56,6 +56,14 @@ $wi->setVariables(
 );
 
 $wi->config->settings += [
+	// JQuery Migration Test - Remove during 1.37 deployment or pre 1.38
+	'wgIncludejQueryMigrate' => [
+		'default'   => true,
+		'test3wiki' => false,
+		'testwiki'  => false,
+		'snapwikiwiki' => false,
+	],
+
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '5',
@@ -133,7 +141,16 @@ $wi->config->settings += [
 
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
-		'default' => 5,
+		'default' => [
+			[
+				'count' => 1,
+				'seconds' => 300,
+			],
+			[
+				'count' => 5,
+				'seconds' => 86400,
+			],
+		],
 	],
 	// https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpamBlacklist#Block_list_syntax
 	'wgBlacklistSettings' => [
@@ -318,7 +335,9 @@ $wi->config->settings += [
 	// Categories
 	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
 		'default' => 'uppercase',
+		'academiadesusarduwiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
+		'supermanwiki' => 'numeric',
 		'wmgUseCategorySortHeaders' => 'CustomHeaderCollation',
 	],
 	'wgCategoryPagingLimit' => [
@@ -390,16 +409,16 @@ $wi->config->settings += [
 		'metawiki' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
-		'default' => "https://meta.miraheze.org/w/index.php/Special:BannerLoader",
+		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
-		'default' => "https://meta.miraheze.org/w/index.php/Special:RecordImpression",
+		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
 	],
 	'wgCentralHost' => [
-		'default' => "https://meta.miraheze.org",
+		'default' => 'https://meta.miraheze.org',
 	],
 	'wgNoticeProject' => [
 		'default' => 'all',
@@ -765,6 +784,7 @@ $wi->config->settings += [
 			'jobchron\d{0,2}',
 			'mwtask\d{0,2}',
 			'security',
+			'deployment',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
@@ -1490,8 +1510,8 @@ $wi->config->settings += [
 			'YMMV_Trope' => 'ymmv',
 		],
 		'vgportdbwiki' => [
-			'Unverified_Games' => 'unverified',
-			'Incomplete_Pages' => 'unverified',
+			'Games_Lacking_Information_Online' => 'obscure',
+			'Incomplete_Pages' => 'incomplete',
 		],
 	],
 
@@ -1605,6 +1625,16 @@ $wi->config->settings += [
 				'cs',
 				'en',
 			],
+		],
+		'+polandballstaffwiki' => [
+			'polandballwiki',
+			'polandballwikisongcontestwiki',
+			'polcomwiki',
+		],
+		'+polcomwiki' => [
+			'c',
+			'polandballwiki',
+			'polandballwikisongcontestwiki',
 		],
 		'+redminwiki' => [
 			'scratchwiki',
@@ -1810,7 +1840,7 @@ $wi->config->settings += [
 	'wgLDAPOptions' => [
 		'ldapwikiwiki' => [
 			'miraheze' => [
-				"LDAP_OPT_X_TLS_CACERTFILE" => '/etc/ssl/certs/Sectigo.crt',
+				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
 			],
 		],
 	],
@@ -1886,9 +1916,9 @@ $wi->config->settings += [
 	'+wgUrlProtocols' => [
 		'default' => [],
 		// file protocol only allowed on private wikis
-		'gzewiki' => [ "file://" ],
-		'kaiwiki' => [ "file://" ],
-		'vtwiki' => [ "discord://" ],
+		'gzewiki' => [ 'file://' ],
+		'kaiwiki' => [ 'file://' ],
+		'vtwiki' => [ 'discord://' ],
 	],
 
 	// LinkTitles
@@ -2649,8 +2679,8 @@ $wi->config->settings += [
 			MEDIATYPE_BITMAP,
 			MEDIATYPE_AUDIO,
 			MEDIATYPE_VIDEO,
-			"image/svg+xml",
-			"application/pdf",
+			'image/svg+xml',
+			'application/pdf',
 		],
 		'+polytopewiki' => [
 			MEDIATYPE_TEXT,
@@ -2664,6 +2694,12 @@ $wi->config->settings += [
 	],
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
+	],
+	'wgTidyConfig' => [
+		'default' => [
+			'driver' => 'RemexHtml',
+			'pwrap' => false,
+		],
 	],
 	'wmgWhitelistRead' => [
 		'default' => false,
@@ -3380,7 +3416,7 @@ $wi->config->settings += [
 	],
 	'wgRSSUrlWhitelist' => [
 		'wmgUseRSS' => [
-			"*",
+			'*',
 		],
 	],
 
@@ -3393,36 +3429,14 @@ $wi->config->settings += [
 	'wgCodeEditorEnableCore' => [
 		'default' => true,
 	],
+	'wgScribuntoDefaultEngine' => [
+		'default' => 'luasandbox',
+	],
 	'wgScribuntoUseCodeEditor' => [
 		'default' => true,
 	],
 	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
-	],
-	'wgScribuntoEngineConf' => [
-		'default' => [
-			'luasandbox' => [
-				'class' => "Scribunto_LuaSandboxEngine",
-				'memoryLimit' => 52428800,
-				'cpuLimit' => 10,
-				'profilerPeriod' => 0.02,
-				'allowEnvFuncs' => false,
-				'maxLangCacheSize' => 200
-			],
-			'luastandalone' => [
-				'class' => "Scribunto_LuaStandaloneEngine",
-				'errorFile' => null,
-				'luaPath' => null,
-				'memoryLimit' => 52428800,
-				'cpuLimit' => 10,
-				'profilerPeriod' => 0.02,
-				'allowEnvFuncs' => false,
-				'maxLangCacheSize' => 200
-			],
-			'luaautodetect' => [
-				'factory' => 'Scribunto_LuaEngine::newAutodetectEngine',
-			],
-		],
 	],
 
 	// Server
@@ -3677,7 +3691,7 @@ $wi->config->settings += [
 
 	// Theme
 	'wgDefaultTheme' => [
-		'default' => "",
+		'default' => '',
 	],
 
 	// TitleBlacklist
@@ -3701,11 +3715,6 @@ $wi->config->settings += [
 	],
 	'wgTitleBlacklistBlockAutoAccountCreation' => [
 		'default' => false,
-	],
-	'wgTidyConfig' => [
-		'default' => [
-			'driver' => 'RemexHtml'
-		],
 	],
 
 	// Translate
@@ -3809,6 +3818,7 @@ $wi->config->settings += [
 			'51.222.25.132:81', // cp12
 			'51.38.69.175:81', // cp13
 			'54.38.211.199:81', // cp14
+			'167.114.2.161:81', // cp15
 		],
 	],
 
@@ -4223,9 +4233,9 @@ $wi->readCache();
 $wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
-require_once __DIR__ . "/ManageWikiExtensions.php";
-require_once __DIR__ . "/ManageWikiNamespaces.php";
-require_once __DIR__ . "/ManageWikiSettings.php";
+require_once __DIR__ . '/ManageWikiExtensions.php';
+require_once __DIR__ . '/ManageWikiNamespaces.php';
+require_once __DIR__ . '/ManageWikiSettings.php';
 
 // Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
 //we have to work around this by creating a local config and merging.
@@ -4268,7 +4278,7 @@ $wi->disabledExtensions = [];
 $wi->readExtensions();
 
 if ( $wi->missing ) {
-	require_once '/srv/mediawiki/config/MissingWiki.php';
+	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
 // When using ?forceprofile=1, a profile can be found as an HTML comment
@@ -4286,6 +4296,7 @@ if ( wfHostname() === 'test3' ) {
 }
 
 // Define last to avoid all dependencies
+require_once '/srv/mediawiki/config/Defines.php';
 require_once '/srv/mediawiki/config/LocalWiki.php';
 
 // Define last - Extension message files for loading extensions
