@@ -4230,16 +4230,16 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 }
 
 $wi->readCache();
-$wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
+require_once __DIR__ . '/ManageWikiExtensions.php';
+$wi->disabledExtensions = [];
+$wi->readExtensions();
+$wi->config->extractAllGlobals( $wi->dbname );
+
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
-$wi->disabledExtensions = [];
-$wi->readExtensions();
-
-require_once __DIR__ . '/ManageWikiExtensions.php';
 
 // Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
 //we have to work around this by creating a local config and merging.
