@@ -436,7 +436,7 @@ $wi->config->settings += [
 	// Chameleon
 	'egChameleonLayoutFile' => [
 		'default' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
-		'lakehubwiki' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
+//		'lakehubwiki' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
 	],
 
 	// CheckUser
