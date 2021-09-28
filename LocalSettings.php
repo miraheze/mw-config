@@ -3014,6 +3014,11 @@ $wi->config->settings += [
 				'createwiki' => true,
 			],
 		],
+		'+moviepediawiki' => [
+			'bureaucrat' => [
+				'bureaucrat' => true,
+			],
+		],
 		'+naasgamelandwiki' => [
 			'bot' => [
 				'editarchiveprotected' => true,
@@ -4048,6 +4053,9 @@ $wi->config->settings += [
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'+moviepediawiki' => [
+			'bureaucrat',
 		],
 		'+naasgamelandwiki' => [
 			'editarchiveprotected',
