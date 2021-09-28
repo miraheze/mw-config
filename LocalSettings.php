@@ -1334,9 +1334,6 @@ $wi->config->settings += [
 	'wmgUseErudite' => [
 		'default' => false,
 	],
-	'wmgUseEvelution' => [
-		'default' => false,
-	],
 	'wmgUseFancyBoxThumbs' => [
 		'default' => false,
 	],

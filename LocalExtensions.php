@@ -276,10 +276,6 @@ if ( $wmgUseErudite ) {
 	wfLoadSkin( 'erudite' );
 }
 
-if ( $wmgUseEvelution ) {
-	wfLoadSkin( 'Evelution' );
-}
-
 if ( $wmgUseFancyBoxThumbs ) {
 	wfLoadExtension( 'FancyBoxThumbs' );
 }
