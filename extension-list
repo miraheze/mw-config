@@ -128,6 +128,7 @@ $IP/extensions/MagicNumberedHeadings/extension.json
 $IP/extensions/ManageWiki/extension.json
 $IP/extensions/Maps/extension.json
 $IP/extensions/Maps/extensions/Validator/Validator.php
+$IP/extensions/Maps/vendor/mediawiki/parser-hooks/ParserHooks.php
 $IP/extensions/MassEditRegex/extension.json
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
