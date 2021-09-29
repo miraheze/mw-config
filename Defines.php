@@ -208,6 +208,11 @@ $wgLogos = [
 	'1x' => $wgLogo,
 ];
 
+$wgApexLogo = [
+	'1x' => $wgLogos['1x'],
+	'2x' => $wgLogos['1x'],
+];
+
 if ( $wgIcon ) {
 	$wgLogos['icon'] = $wgIcon;
 }
