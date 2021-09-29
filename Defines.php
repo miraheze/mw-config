@@ -385,4 +385,3 @@ if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
 if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }
-
