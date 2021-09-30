@@ -9,12 +9,10 @@
  */
 if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask1.miraheze.org' ) {
 	$wgRequestTimeLimit = 1200;
+} elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+	$wgRequestTimeLimit = 200;
 } else {
-	if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-		$wgRequestTimeLimit = 200;
-	} else {
-		$wgRequestTimeLimit = 60;
-	}
+	$wgRequestTimeLimit = 60;
 }
 
 // Initialise WikiInitialise
