@@ -4,9 +4,7 @@
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
 
-/**
- * Configure PHP request timeouts.
- */
+// Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
 } elseif ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask1.miraheze.org' ) {
