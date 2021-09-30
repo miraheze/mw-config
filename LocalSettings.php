@@ -7,7 +7,7 @@
 /**
  * Configure PHP request timeouts.
  */
-if ( ( $_SERVER['HTTP_HOST'] ?? '' ) ===  'mwtask1.miraheze.org' ) {
+if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask1.miraheze.org' ) {
 	$wgRequestTimeLimit = 1200;
 } else {
 	if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
