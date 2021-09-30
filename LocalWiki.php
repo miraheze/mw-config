@@ -1,6 +1,6 @@
 <?php
 
-// Per-wiki settings that are incompatible with LocalSettings.php
+# Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
 	case 'erislywiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -41,6 +41,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
+
 		break;
 	case 'pokemundowiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -71,6 +72,7 @@ switch ( $wi->dbname ) {
 			'wiki' => 'polcomwiki',
 			'descBaseUrl' => 'https://commons.ballmedia.org/wiki/File:',
 		];
+
 		break;
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -84,5 +86,6 @@ switch ( $wi->dbname ) {
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
+
 		break;
 }
