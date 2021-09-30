@@ -8,6 +8,7 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'PreMiD_Presence', 'Erisly' );
 		}
+
 		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -15,6 +16,7 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' );
 		}
+
 		break;
 	case 'metawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -35,6 +37,7 @@ switch ( $wi->dbname ) {
 				'id' => 'n-donate',
 			];
 		}
+
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
@@ -46,6 +49,7 @@ switch ( $wi->dbname ) {
 			$out->addLink( [ 'rel' => 'preconnect', 'href' => 'https://fonts.gstatic.com' ] );
 			$out->addLink( [ 'rel' => 'stylesheet', 'href' => 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' ] );
 		}
+
 		break;
 	case '402611wiki':
 	case 'ballmediawiki':
@@ -74,6 +78,7 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
+
 		break;
 	case 'traceprojectwikiwiki':
 	case 'vgportdbwiki':
