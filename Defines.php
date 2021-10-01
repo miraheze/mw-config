@@ -13,7 +13,7 @@ if ( $wmgUseCollection ) {
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
-if ( $wmgUseDynamicPageList ) {
+if ( $wmgUseDynamicPageList3 ) {
 	$wgDplSettings['functionalRichness'] = 0;
 }
 
