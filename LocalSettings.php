@@ -1130,19 +1130,781 @@ $wi->config->settings += [
 		'default' => 20,
 	],
 
-	// Extensions
+	// Extensions and Skins
+	'wmgUse3D' => [
+		'default' => false,
+	],
+	'wmgUseAddThis' => [
+		'default' => false,
+	],
+	'wmgUseAddHTMLMetaAndTitle' => [
+		'default' => false,
+	],
+	'wmgUseAdminLinks' => [
+		'default' => false,
+	],
+	'wmgUseAdvancedSearch' => [
+		'default' => false,
+	],
+	'wmgUseAJAXPoll' => [
+		'default' => false,
+	],
+	'wmgUseAnisa' => [
+		'default' => false,
+	],
+	'wmgUseApex' => [
+		'default' => false,
+	],
+	'wmgUseApprovedRevs' => [
+		'default' => false,
+	],
+	'wmgUseArrays' => [
+		'default' => false,
+	],
+	'wmgUseArticlePlaceholder' => [
+		'default' => false,
+	],
+	'wmgUseArticleRatings' => [
+		'default' => false,
+	],
+	'wmgUseArticleToCategory2' => [
+		'default' => false,
+	],
+	'wmgUseAuthorProtect' => [
+		'default' => false,
+	],
+	'wmgUseAutoCreateCategoryPages' => [
+		'default' => false, // DO NOT enable on wikis that have more than 500 categories. See T1230
+	],
+	'wmgUseAutoCreatePage' => [
+		'default' => false,
+	],
+	'wmgUseBlogPage' => [
+		'default' => false,
+	],
+	'wmgUseBabel' => [
+		'default' => false,
+	],
+	'wmgUseBlueSky' => [
+		'default' => false,
+	],
 	// Must be on at all times except for ldapwikiwiki
 	'wmgUseCentralAuth' => [
 		'default' => true,
 		'ldapwikiwiki' => false,
 	],
+	'wmgUseCapiunto' => [
+		'default' => false,
+	],
+	'wmgUseCargo' => [
+		'default' => false,
+	],
+	'wmgUseCategorySortHeaders' => [
+		'default' => false,
+	],
+	'wmgUseCategoryTree' => [
+		'default' => false,
+	],
+	'wmgUseChameleon' => [
+		'default' => false,
+	],
+	'wmgUseCharInsert' => [
+		'default' => false,
+	],
+	'wmgUseCite' => [
+		'default' => false,
+	],
+	'wmgUseCiteThisPage' => [
+		'default' => false,
+	],
+	'wmgUseCitizen' => [
+		'default' => false,
+	],
+	'wmgUseCitoid' => [
+		'default' => false,
+	],
+	'wmgUseCleanChanges' => [
+		'default' => false,
+	],
+	'wmgUseCodeEditor' => [
+		'default' => false,
+	],
+	'wmgUseCodeMirror' => [
+		'default' => false,
+	],
+	'wmgUseCollapsibleVector' => [
+		'default' => false,
+	],
+	'wmgUseCollection' => [
+		'default' => false,
+	],
+	'wmgUseCommentbox' => [
+		'default' => false,
+	],
+	'wmgUseCommentStreams' => [
+		'default' => false,
+	],
+	'wmgUseComments' => [
+		'default' => false, // Sysop has 'commentadmin' by default
+	],
+	'wmgUseCommonsMetadata' => [
+		'default' => false,
+	],
+	'wmgUseContactPage' => [
+		'default' => false,
+	],
+	'wmgUseContributionScores' => [
+		'default' => false,
+	],
+	'wmgUseCosmos' => [
+		'default' => false,
+	],
+	'wmgUseCountDownClock' => [
+		'default' => false,
+	],
+	'wmgUseCreatePage' => [
+		'default' => false,
+	],
+	'wmgUseCreatePageUw' => [
+		'default' => false,
+	],
+	'wmgUseCreateRedirect' => [
+		'default' => false,
+	],
+	'wmgUseCSS' => [
+		'default' => false,
+	],
+	'wmgUseCalendarWikivoyage' => [
+		'default' => false,
+	],
+	'wmgUseDarkMode' => [
+		'default' => false,
+	],
+	'wmgUseDataTransfer' => [
+		'default' => false,
+	],
+	'wmgUseDeleteUserPages' => [
+		'default' => false,
+	],
+	'wmgUseDescription2' => [
+		'default' => false,
+	],
+	'wmgUseDisambiguator' => [
+		'default' => false,
+	],
+	'wmgUseDiscussionTools' => [
+		'default' => false,
+	],
+	'wmgUseDisplayTitle' => [
+		'default' => false,
+	],
+	'wmgUseDuskToDawn' => [
+		'default' => false,
+	],
+	'wmgUseDPLForum' => [
+		'default' => false,
+	],
+	'wmgUseDummyFandoomMainpageTags' => [
+		'default' => false,
+	],
+	'wmgUseDynamicPageList' => [
+		'default' => false,
+	],
+	'wmgUseDynamicPageList3' => [
+		'default' => false,
+	],
+	'wmgUseDynamicSidebar' => [
+		'default' => false,
+	],
+	'wmgUseEditcount' => [
+		'default' => false,
+	],
+	'wmgUseEditNotify' => [
+		'default' => false,
+	],
+	'wmgUseEditSubpages' => [
+		'default' => false,
+	],
+	'wmgUseEmbedSpotify' => [
+		'default' => false,
+	],
+	'wmgUseEmbedVideo' => [
+		'default' => false,
+	],
+	'wmgUseErudite' => [
+		'default' => false,
+	],
+	'wmgUseEvelution' => [
+		'default' => false,
+	],
+	'wmgUseFancyBoxThumbs' => [
+		'default' => false,
+	],
+	'wmgUseFemiwiki' => [
+		'default' => false,
+	],
+	'wmgUseFlaggedRevs' => [
+		'default' => false,
+	],
+	'wmgUseFlow' => [
+		'default' => false,
+	],
+	'wmgUseForcePreview' => [
+		'default' => false,
+	],
+	'wmgUseForeground' => [
+		'default' => false,
+	],
+	'wmgUseFontAwesome' => [
+		'default' => false,
+	],
+	'wmgUseGadgets' => [
+		'default' => false,
+	],
+	'wmgUseGamepress' => [
+		'default' => false,
+	],
+	'wmgUseGenealogy' => [
+		'default' => false,
+	],
+	'wmgUseGeoCrumbs' => [
+		'default' => false,
+	],
+	'wmgUseGeoData' => [
+		'default' => false,
+	],
+	'wmgUseGeoGebra' => [
+		'default' => false,
+	],
+	'wmgUseGettingStarted' => [
+		'default' => false,
+	],
+	'wmgUseGlobalUserPage' => [
+		'default' => false,
+	],
 	'wmgUseGlobalWatchlist' => [
 		'default' => false,
 		'loginwiki' => true,
 	],
+	'wmgUseGoogleDocs4MW' => [
+		'default' => false,
+	],
+	'wmgUseGoogleNewsSitemap' => [
+		'default' => false,
+	],
+	'wmgUseGraph' => [
+		'default' => false,
+	],
+	'wmgUseGroupsSidebar' => [
+		'default' => false,
+	],
+	'wmgUseGuidedTour' => [
+		'default' => false,
+	],
+	'wmgUseHasSomeColours' => [
+		'default' => false,
+	],
+	'wmgUseHAWelcome' => [
+		'default' => false,
+	],
+	'wmgUseHeaderFooter' => [
+		'default' => false,
+	],
+	'wmgUseHeaderTabs' => [
+		'default' => false,
+	],
+	'wmgUseHideSection' => [
+		'default' => false,
+	],
+	'wmgUseHighlightLinksInCategory' => [
+		'default' => false,
+	],
+	'wmgUseImageMap' => [
+		'default' => false,
+	],
+	'wmgUseImageRating' => [
+		'default' => false,
+	],
+	'wmgUseInputBox' => [
+		'default' => false,
+	],
+	'wmgUseJavascriptSlideshow' => [
+		'default' => false,
+	],
+	'wmgUseJosa' => [
+		'default' => false,
+	],
+	'wmgUseJSBreadCrumbs' => [
+		'default' => false,
+	],
+	'wmgUseJsCalendar' => [
+		'default' => false,
+	],
+	'wmgUseJsonConfig' => [
+		'default' => false,
+	],
+	'wmgUseKartographer' => [
+		'default' => false,
+	],
+	'wmgUseLabeledSectionTransclusion' => [
+		'default' => false,
+	],
+	'wmgUseLanguageSelector' => [
+		'default' => false,
+	],
+	'wmgUseLastModified' => [
+		'default' => false,
+	],
 	'wmgUseLdap' => [
 		'default' => false,
 		'ldapwikiwiki' => true,
+	],
+	'wmgUseLiberty' => [
+		'default' => false,
+	],
+	'wmgUseLingo' => [
+		'default' => false,
+	],
+	'wmgUseLinkSuggest' => [
+		'default' => false,
+	],
+	'wmgUseLinkTarget' => [
+		'default' => false,
+	],
+	'wmgUseLinkTitles' => [
+		'default' => false,
+	],
+	'wmgUseLinter' => [
+		'default' => false,
+	],
+	'wmgUseListings' => [
+		'default' => false,
+	],
+	'wmgUseLogoFunctions' => [
+		'default' => false,
+	],
+	'wmgUseLoopsCombo' => [
+		'default' => false,
+	],
+	'wmgUseMagicNoCache' => [
+		'default' => false,
+	],
+	'wmgUseMagicNumberedHeadings' => [
+		'default' => false,
+	],
+	'wmgUseMaps' => [
+		'default' => false,
+	],
+	'wmgUseMask' => [
+		'default' => false,
+	],
+	'wmgUseMassEditRegex' => [
+		'default' => false,
+	],
+	'wmgUseMassMessage' => [
+		'default' => false,
+	],
+	'wmgUseMath' => [
+		'default' => false,
+	],
+	'wmgUseMediaWikiChat' => [
+		'default' => false,
+	],
+	'wmgUseMedik' => [
+		'default' => false,
+	],
+	'wmgUseMermaid' => [
+		'default' => false,
+	],
+	'wmgUseMetrolook' => [
+		'default' => false,
+	],
+	'wmgUseMinervaNeue' => [
+		'default' => false,
+	],
+	'wmgUseMintyDocs' => [
+		'default' => false,
+	],
+	'wmgUseMobileFrontend' => [
+		'default' => false,
+	],
+	'wmgUseMobileTabsPlugin' => [
+		'default' => false,
+	],
+	'wmgUseModeration' => [
+		'default' => false,
+	],
+	'wmgUseMonaco' => [
+		'default' => false,
+	],
+	'wmgUseMsCalendar' => [
+		'default' => false,
+	],
+	'wmgUseMsCatSelect' => [
+		'default' => false,
+	],
+	'wmgUseMsLinks' => [
+		'default' => false,
+	],
+	'wmgUseMsUpload' => [
+		'default' => false,
+	],
+	'wmgUseMultimediaViewer' => [
+		'default' => false,
+	],
+	'wmgUseMultiBoilerplate' => [
+		'default' => false,
+	],
+	'wmgUseMyVariables' => [
+		'default' => false,
+	],
+	'wmgUseNewestPages' => [
+		'default' => false,
+	],
+	'wmgUseNewSignupPage' => [
+		'default' => false,
+	],
+	'wmgUseNewsletter' => [
+		'default' => false,
+	],
+	'wmgUseNewUserMessage' => [
+		'default' => false,
+	],
+	'wmgUseNewUserNotif' => [
+		'default' => false,
+	],
+	'wmgUseNimbus' => [
+		'default' => false,
+	],
+	'wmgUseNostalgia' => [
+		'default' => false,
+	],
+	'wmgUseNoTitle' => [
+		'default' => false,
+	],
+	'wmgUseNukeDPL' => [
+		'default' => false,
+	],
+	'wmgUseNumberedHeadings' => [
+		'default' => false,
+	],
+	'wmgUseOpenGraphMeta' => [
+		'default' => false,
+	],
+	'wmgUseOrphanedTalkPages' => [
+		'default' => false,
+	],
+	'wmgUsePageAssessments' => [
+		'default' => false,
+	],
+	'wmgUsePagedTiffHandler' => [
+		'default' => false,
+	],
+	'wmgUsePageForms' => [
+		'default' => false,
+	],
+	'wmgUsePageImages' => [
+		'default' => false,
+	],
+	'wmgUsePageNotice' => [
+		'default' => false,
+	],
+	'wmgUsePageSchemas' => [
+		'default' => false,
+	],
+	'wmgUsePageTriage' => [
+		'default' => false,
+	],
+	'wmgUsePdfBook' => [
+		'default' => false,
+	],
+	'wmgUsePDFEmbed' => [
+		'default' => false,
+	],
+	'wmgUsePdfHandler' => [
+		'default' => false,
+	],
+	'wmgUsePipeEscape' => [
+		'default' => false,
+	],
+	'wmgUsePivot' => [
+		'default' => false,
+	],
+	'wmgUsePoem' => [
+		'default' => false,
+	],
+	'wmgUsePopups' => [
+		'default' => false,
+	],
+	'wmgUsePollNY' => [
+		'default' => false,
+	],
+	'wmgUsePortableInfobox' => [
+		'default' => false,
+	],
+	'wmgUsePreloader' => [
+		'default' => false,
+	],
+	'wmgUseProofreadPage' => [
+		'default' => false,
+	],
+	'wmgUseProtectSite' => [
+		'default' => false,
+	],
+	'wmgUseProtectionIndicator' => [
+		'default' => false,
+	],
+	'wmgUsePurge' => [
+		'default' => false,
+	],
+	'wmgUseQuiz' => [
+		'default' => false,
+	],
+	'wmgUseQuizGame' => [
+		'default' => false,
+	],
+	'wmgUseRandomGameUnit' => [
+		'default' => false,
+	],
+	'wmgUseRandomImage' => [
+		'default' => false,
+	],
+	'wmgUseRandomSelection' => [
+		'default' => false,
+	],
+	'wmgUseRefreshed' => [
+		'default' => false,
+	],
+	'wmgUseRegexFunctions' => [
+		'default' => false,
+	],
+	'wmgUseRelatedArticles' => [
+		'default' => false,
+	],
+	'wmgUseReplaceText' => [
+		'default' => false,
+	],
+	'wmgUseReport' => [
+		'default' => false,
+	],
+	'wmgUseRevisionSlider' => [
+		'default' => false,
+	],
+	'wmgUseRightFunctions' => [
+		'default' => false,
+	],
+	'wmgUseRSS' => [
+		'default' => false,
+	],
+	'wmgUseSandboxLink' => [
+		'default' => false,
+	],
+	'wmgUseScore' => [
+		'default' => false,
+	],
+	'wmgUseScratchBlocks' => [
+		'default' => false,
+	],
+	'wmgUseUrlShortener' => [
+		'default' => false,
+	],
+	'wmgUseShortDescription' => [
+		'default' => false,
+	],
+	'wmgUseSimpleBlogPage' => [
+		'default' => false,
+	],
+	'wmgUseSimpleChanges' => [
+		'default' => false,
+	],
+	'wmgUseSimpleTooltip' => [
+		'default' => false,
+	],
+	'wmgUseSkinPerPage' => [
+		'default' => false,
+	],
+	'wmgUseSlackNotifications' => [
+		'default' => false,
+	],
+	'wmgUseSnapWikiSkin' => [
+		'default' => false,
+	],
+	'wmgUseSnapProjectEmbed' => [
+		'default' => false,
+	],
+	'wmgUseSoftRedirector' => [
+		'default' => false,
+	],
+	'wmgUseSocialProfile' => [
+		'default' => false,
+	],
+	'wmgUseSpoilers' => [
+		'default' => false,
+	],
+	'wmgUseSpriteSheet' => [
+		'default' => false,
+	],
+	'wmgUseStopForumSpam' => [
+		'default' => false,
+	],
+	'wmgUseSubpageFun' => [
+		'default' => false,
+	],
+	'wmgUseSubPageList3' => [
+		'default' => false,
+	],
+	'wmgUseSyntaxHighlightGeSHi' => [
+		'default' => false,
+	],
+	'wgScribuntoUseGeSHi' => [
+		'default' => true,
+	],
+	'wmgUseTabber' => [
+		'default' => false,
+	],
+	'wmgUseTabberNeue' => [
+		'default' => false,
+	],
+	'wmgUseTabs' => [
+		'default' => false,
+	],
+	'wmgUseTemplateData' => [
+		'default' => false,
+	],
+	'wmgUseTemplateSandbox' => [
+		'default' => false,
+	],
+	'wmgUseTemplateStyles' => [
+		'default' => false,
+	],
+	'wmgUseTemplateWizard' => [
+		'default' => false,
+	],
+	'wmgUseTextExtracts' => [
+		'default' => false,
+	],
+	'wmgUseTheme' => [
+		'default' => false,
+	],
+	'wmgUseTimedMediaHandler' => [
+		'default' => false,
+	],
+	'wmgUseTimeline' => [
+		'default' => false,
+	],
+	'wmgUseThanks' => [
+		'default' => false,
+	],
+	'wmgUseTimeMachine' => [
+		'default' => false,
+	],
+	'wmgUseTitleKey' => [
+		'default' => false,
+	],
+	'wmgUseTocTree' => [
+		'default' => false,
+	],
+	'wmgUseTranslate' => [
+		'default' => false,
+	],
+	'wmgUseTranslationNotifications' => [
+		'default' => false,
+	],
+	'wmgUseTreeAndMenu' => [
+		'default' => false,
+	],
+	'wmgUseTruglass' => [
+		'default' => false,
+	],
+	'wmgUseTweeki' => [
+		'default' => false,
+	],
+	'wmgUseTwitterTag' => [
+		'default' => false,
+	],
+	'wmgUseTwoColConflict' => [
+		'default' => false,
+	],
+	'wmgUseUniversalLanguageSelector' => [
+		'default' => false,
+	],
+	'wmgUseUploadsLink' => [
+		'default' => false,
+	],
+	'wmgUseUrlGetParameters' => [
+		'default' => false,
+	],
+	'wmgUseUserFunctions' => [
+		'default' => false,
+	],
+	'wmgUseUserPageEditProtection' => [
+		'default' => false,
+	],
+	'wmgUseUserWelcome' => [
+		'default' => false,
+	],
+	'wmgUseVEForAll' => [
+		'default' => false,
+	],
+	'wmgUseVoteNY' => [
+		'default' => false,
+	],
+	'wmgUseVideo' => [
+		'default' => false,
+	],
+	'wmgUseVisualEditor' => [
+		'default' => false,
+	],
+	'wmgUseVariables' => [
+		'default' => false,
+	],
+	'wmgUseVariablesLua' => [
+		'default' => false,
+	],
+	'wmgUseWebChat' => [
+		'default' => false,
+	],
+	'wmgUseWikibaseClient' => [
+		'default' => false,
+	],
+	'wmgUseWikibaseLexeme' => [
+		'default' => false,
+	],
+	'wmgUseWikibaseLocalMedia' => [
+		'default' => false,
+	],
+	'wmgUseWikibaseQualityConstraints' => [
+		'default' => false,
+	],
+	'wmgUseWikibaseRepository' => [
+		'default' => false,
+	],
+	'wmgUseWikiCategoryTagCloud' => [
+		'default' => false,
+	],
+	'wmgUseWikidataPageBanner' => [
+		'default' => false,
+	],
+	'wmgUseWikiForum' => [
+		'default' => false,
+	],
+	'wmgUsewikihiero' => [
+		'default' => false,
+	],
+	'wmgUseWikimediaIncubator' => [
+		'default' => false,
+	],
+	'wmgUseWikiLove' => [
+		'default' => false,
+	],
+	'wmgUseWikiSeo' => [
+		'default' => false,
+	],
+	'wmgUseWikiTextLoggedInOut' => [
+		'default' => false,
+	],
+	'wmgUseYouTube' => [
+		'default' => false,
 	],
 
 	// DataDump
@@ -4236,16 +4998,13 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
+// End settings requiring access to variables
+
 $wi->readCache();
 $wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [];
-$wi->loadExtensions();
-
-$wi->config->extractAllGlobals( $wi->dbname );
-
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
