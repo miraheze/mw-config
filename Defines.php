@@ -13,6 +13,10 @@ if ( $wmgUseCollection ) {
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
+if ( $wmgUseDynamicPageList3 ) {
+	$wgDplSettings['functionalRichness'] = 0;
+}
+
 if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
