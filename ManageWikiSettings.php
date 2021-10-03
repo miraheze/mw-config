@@ -1245,7 +1245,7 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to enable shared uploads from the wiki specified in <code>$wmgSharedUploadDBname</code>.',
 		'requires' => [
 			'settings' => [
-				'dbname' => $wmgSharedUploadDBname ?: '<code>$wmgSharedUploadDBname</code>',
+				'dbname' => $wi->config->get( 'wmgSharedUploadDBname', $wi->dbname ) ?: '<code>$wmgSharedUploadDBname</code>',
 				'setting' => 'wmgSharedUploadClientDBname',
 				'value' => $wi->dbname,
 			],
@@ -2942,7 +2942,9 @@ $wgManageWikiSettings = [
 	]
 ];
 
-if ( $wmgUseGamepress && $wmgUseTheme ) {
+if ( $wi->config->get( 'wmgUseGamepress', $wi->dbname ) &&
+	$wi->config->get( 'wmgUseTheme', $wi->dbname )
+) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
