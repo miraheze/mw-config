@@ -4262,6 +4262,8 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 $wgServer = $wi->server;
 $wgInternalServer = str_replace( 'https://', 'http://', $wi->server );
 
+$wgDBname = $wi->dbname;
+
 if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
 }
