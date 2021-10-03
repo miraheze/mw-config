@@ -222,7 +222,7 @@ $wi->config->settings['wgDataDump']['default'] = [
 ];
 
 // Exempt from Robot Control (INDEX/NOINDEX namespaces)
-if ( !isset( $wi->config->get( 'wgExemptFromUserRobotsControl', $wi->dbname ) ) ) {
+if ( !$wi->config->get( 'wgExemptFromUserRobotsControl', $wi->dbname ) ) {
 	$wi->config->get( 'wgExemptFromUserRobotsControl', $wi->dbname ) = [];
 }
 
