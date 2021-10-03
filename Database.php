@@ -21,7 +21,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		],
 	],
 	'serverTemplate' => [
-		'dbname' => $wgDBname,
+		'dbname' => $wi->dbname,
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
