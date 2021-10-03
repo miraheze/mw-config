@@ -9,7 +9,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgCacheSettings['memcached']['server'][1] ],
+	'servers'              => [ $wi->config->get( 'wmgCacheSettings', $wi->dbname )['memcached']['server'][1] ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
@@ -22,7 +22,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgCacheSettings['memcached']['server'][0] ],
+	'servers'              => [ $wi->config->get( 'wmgCacheSettings', $wi->dbname )['memcached']['server'][0] ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
@@ -40,7 +40,7 @@ $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgLanguageConverterCacheType = 'memcached-mem-1';
 
-$jobrunnerSettings = $wmgCacheSettings['jobrunner'];
+$jobrunnerSettings = $wi->config->get( 'wmgCacheSettings', $wi->dbname )['jobrunner'];
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
 	'redisServer' => $jobrunnerSettings['server'],
