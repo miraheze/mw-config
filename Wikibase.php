@@ -19,9 +19,9 @@ $wgWBRepoSettings['siteLinkGroups'] = [
 ];
 $wgWBRepoSettings['specialSiteLinkGroups'] = [];
 
-$wgWBClientSettings['repoUrl'] =  $wi->config->get( 'wmgWikibaseRepoUrl', $wi->dbname );
-$wgWBClientSettings['repoDatabase'] =  $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname );
-$wgWBClientSettings['changesDatabase'] =  $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname );
+$wgWBClientSettings['repoUrl'] = $wi->config->get( 'wmgWikibaseRepoUrl', $wi->dbname );
+$wgWBClientSettings['repoDatabase'] = $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname );
+$wgWBClientSettings['changesDatabase'] = $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname );
 $wgWBClientSettings['repositories'] = [
 	'' => [
 		'repoDatabase' => $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname ),
