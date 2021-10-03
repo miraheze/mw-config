@@ -85,7 +85,7 @@ $wmgMonologConfig = [
 ];
 
 // Add logging channels defined in $wmgMonologChannels
-foreach ( $wmgMonologChannels as $channel => $opts ) {
+foreach ( $wi->config->get( 'wmgMonologChannels', $wi->dbname ) as $channel => $opts ) {
 	if ( $opts === false ) {
 		// Log channel disabled on this wiki
 		$wmgMonologConfig['loggers'][$channel] = [
@@ -199,7 +199,7 @@ $wi->config->settings['wgMWLoggerDefaultSpi']['default'] = [
 	'args' => [ $wmgMonologConfig ],
 ];
 
-if ( $wmgLogToDisk ) {
+if ( $wi->config->get( 'wmgLogToDisk', $wi->dbname ) ) {
 	$wmgLogDir = "/var/log/mediawiki";
 
 	$wi->config->settings['wgDBerrorLog']['default'] = "$wmgLogDir/debuglogs/database.log";
