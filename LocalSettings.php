@@ -4239,10 +4239,10 @@ require_once __DIR__ . '/ManageWikiSettings.php';
 
 // Due to an issue with +wgDefaultUserOptions not allowing wiki overrides,
 //we have to work around this by creating a local config and merging.
-$wgDefaultUserOptions = array_merge( $wgDefaultUserOptions, $wmgDefaultUserOptions );
+$wgDefaultUserOptions = array_merge( $wgDefaultUserOptions, $wi->config->get( 'wmgDefaultUserOptions', $wi->dbname ) );
 
-$wgUploadPath = "https://static.miraheze.org/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
+$wgUploadPath = "https://static.miraheze.org/$wi->dbname";
+$wgUploadDirectory = "/mnt/mediawiki-static/$wi->dbname";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
@@ -4260,7 +4260,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 
 // We set wgInternalServer to wgServer as we need this to get purging working (we convert wgServer from https:// to http://).
 // https://www.mediawiki.org/wiki/Manual:$wgInternalServer
-$wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
+$wgInternalServer = str_replace( 'https://', 'http://', $wi->server );
 
 if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
