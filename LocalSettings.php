@@ -4308,7 +4308,7 @@ $wgConf = $wi->config;
 $wgHooks['SetupAfterCache'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname;
+	global $wgConf, $wi;
 
-	$wgConf->extractAllGlobals( $wgDBname );
+	$wgConf->extractAllGlobals( $wi->dbname );
 }
