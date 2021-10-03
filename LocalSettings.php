@@ -4304,6 +4304,7 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 
 // Last Stuff
 $wgHooks['SetupAfterCache'][] = 'extractGlobals';
+
 function extractGlobals() {
 	$wi->config->extractAllGlobals( $wi->dbname );
 	$wgConf = $wi->config;
