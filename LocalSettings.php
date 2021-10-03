@@ -4307,8 +4307,8 @@ $wgConf = $wi->config;
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wi;
+	global $wgConf, $wgDBname;
 
-	$wgConf->extractAllGlobals( $wi->dbname );
+	$wgConf->extractAllGlobals( $wgDBname );
 	$wi->loadExtensions();
 }
