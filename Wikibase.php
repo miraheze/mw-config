@@ -5,30 +5,30 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-$wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
-$wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyNamespaceID;
+$wgWBRepoSettings['entityNamespaces']['item'] = $wi->config->get( 'wmgWikibaseRepoItemNamespaceID', $wi->dbname );
+$wgWBRepoSettings['entityNamespaces']['property'] = $wi->config->get( 'wmgWikibaseRepoPropertyNamespaceID', $wi->dbname );
 $wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( $wgVersion );
-$wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
-$wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
-$wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
-$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ? $wmgFormatterUrlProperty : null;
-$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ? $wmgCanonicalUriProperty : null;
+$wgWBRepoSettings['allowEntityImport'] = $wi->config->get( 'wmgAllowEntityImport', $wi->dbname );
+$wgWBRepoSettings['enableEntitySearchUI'] = $wi->config->get( 'wmgEnableEntitySearchUI', $wi->dbname );
+$wgWBRepoSettings['federatedPropertiesEnabled'] = $wi->config->get( 'wmgFederatedPropertiesEnabled', $wi->dbname );
+$wgWBRepoSettings['formatterUrlProperty'] = $wi->config->get( 'wmgFormatterUrlProperty', $wi->dbname );
+$wgWBRepoSettings['canonicalUriProperty'] = $wi->config->get( 'wmgCanonicalUriProperty', $wi->dbname );
 
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
 ];
 $wgWBRepoSettings['specialSiteLinkGroups'] = [];
 
-$wgWBClientSettings['repoUrl'] = $wmgWikibaseRepoUrl;
-$wgWBClientSettings['repoDatabase'] = $wmgWikibaseRepoDatabase;
-$wgWBClientSettings['changesDatabase'] = $wmgWikibaseRepoDatabase;
+$wgWBClientSettings['repoUrl'] =  $wi->config->get( 'wmgWikibaseRepoUrl', $wi->dbname );
+$wgWBClientSettings['repoDatabase'] =  $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname );
+$wgWBClientSettings['changesDatabase'] =  $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname );
 $wgWBClientSettings['repositories'] = [
 	'' => [
-		'repoDatabase' => $wmgWikibaseRepoDatabase,
-		'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+		'repoDatabase' => $wi->config->get( 'wmgWikibaseRepoDatabase', $wi->dbname ),
+		'baseUri' => $wi->config->get( 'wmgWikibaseRepoUrl', $wi->dbname ) . '/entity/',
 		'entityNamespaces' => [
-			'item' => $wmgWikibaseItemNamespaceID,
-			'property' => $wmgWikibasePropertyNamespaceID
+			'item' => $wi->config->get( 'wmgWikibaseItemNamespaceID', $wi->dbname ),
+			'property' => $wi->config->get( 'wmgWikibasePropertyNamespaceID', $wi->dbname )
 		],
 		'prefixMapping' => [
 			'' => ''
@@ -50,7 +50,7 @@ $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
 // Per-wiki
-if ( $wgDBname === 'famedatawiki' ) {
+if ( $wi->dbname === 'famedatawiki' ) {
 	$wgWBRepoSettings['statementSections'] = [
 		'item' => [
 			'statements' => null,
@@ -73,7 +73,7 @@ if ( $wgDBname === 'famedatawiki' ) {
 	];
 }
 
-if ( $wgDBname === 'famepediawiki' ) {
+if ( $wi->dbname === 'famepediawiki' ) {
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
