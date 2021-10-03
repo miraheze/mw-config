@@ -252,7 +252,7 @@ $wgManageWikiNamespacesAdditional = [
 			'noindex,nofollow' => 'noindex,nofollow',
 			'index,nofollow' => 'index,nofollow',
 		],
-		'overridedefault' => $wgDefaultRobotPolicy,
+		'overridedefault' => $wi->config->get( 'wgDefaultRobotPolicy', $wi->dbname ),
 		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
 		'requires' => [],
 	],
