@@ -4303,7 +4303,7 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 
 // Last Stuff
 $wgConf = $wi->config;
-unset( $wi->config );
+unset( $wi );
 
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
@@ -4311,5 +4311,4 @@ function extractGlobals() {
 	global $wgConf, $wgDBname;
 
 	$wgConf->extractAllGlobals( $wgDBname );
-	$wi->loadExtensions();
 }
