@@ -4232,6 +4232,8 @@ $wi->readCache();
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [];
+
+$wgConf->extractAllGlobals( $wi->dbname )
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
