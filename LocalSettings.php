@@ -4233,9 +4233,6 @@ $wi->readCache();
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [];
 
-$wi->config->extractAllGlobals( $wi->dbname );
-$wi->loadExtensions();
-
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
@@ -4307,7 +4304,8 @@ $wgConf = $wi->config;
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname;
+	global $wgConf, $wi;
 
-	$wgConf->extractAllGlobals( $wgDBname );
+	$wgConf->extractAllGlobals( $wi->dbname );
+	$wi->loadExtensions();
 }
