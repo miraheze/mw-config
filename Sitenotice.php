@@ -1,6 +1,6 @@
 <?php
 
-if ( $wmgSiteNoticeOptOut ) {
+if ( $wi->config->get( 'wmgSiteNoticeOptOut', $wi->dbname ) ) {
 	# Only show important notices when optout
 	$wi->config->settings['wgNoticeProject']['default'] = 'optout';
 }
