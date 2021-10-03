@@ -46,6 +46,7 @@ $wi->setVariables(
 );
 
 $wgConf = $wi->config;
+$wgConf->extractAllGlobals( $wi->dbname );
 
 $wgConf->settings += [
 	// JQuery Migration Test - Remove during 1.37 deployment or pre 1.38
