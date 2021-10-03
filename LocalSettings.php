@@ -4259,6 +4259,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 
 // We set wgInternalServer to wgServer as we need this to get purging working (we convert wgServer from https:// to http://).
 // https://www.mediawiki.org/wiki/Manual:$wgInternalServer
+$wgServer = $wi->server;
 $wgInternalServer = str_replace( 'https://', 'http://', $wi->server );
 
 if ( $wgRequestTimeLimit ) {
