@@ -45,7 +45,9 @@ $wi->setVariables(
 	]
 );
 
-$wi->config->settings += [
+$wgConf = $wi->config;
+
+$wgConf->settings += [
 	// JQuery Migration Test - Remove during 1.37 deployment or pre 1.38
 	'wgIncludejQueryMigrate' => [
 		'default'   => true,
@@ -4224,7 +4226,7 @@ $wi->config->settings += [
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
-	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
+	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
 $wi->readCache();
@@ -4283,7 +4285,7 @@ if ( $wi->missing ) {
 // Disabled on production hosts because it seems to be causing performance issues (how ironic)
 if ( wfHostname() === 'test3' ) {
 	// Prevent cache (better be safe than sorry)
-	$wi->config->settings['wgUseCdn']['default'] = false;
+	$wgConf->settings['wgUseCdn']['default'] = false;
 
 	if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
@@ -4303,5 +4305,4 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 }
 
 // Last Stuff
-$wgConf = $wi->config;
 $wgConf->extractAllGlobals( $wi->dbname );
