@@ -5,11 +5,11 @@ if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 }
 
-if ( $wmgUseChameleon ) {
+if ( $wi->config->get( 'wmgUseChameleon', $wi->dbname ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
 
-if ( $wmgUseCollection ) {
+if ( $wi->config->get( 'wmgUseCollection', $wi->dbname ) ) {
 	wfLoadExtension( 'ElectronPdfService' );
 }
 
@@ -35,13 +35,13 @@ if ( $wmgUseLdap ) {
 	];
 }
 
-if ( $wmgUseMultimediaViewer ) {
-	if ( $wmgUse3D ) {
+if ( $wi->config->get( 'wmgUseMultimediaViewer', $wi->dbname ) ) {
+	if ( $wi->config->get( 'wmgUse3D', $wi->dbname ) ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 	}
 }
 
-if ( $wmgUsePopups ) {
+if ( $wi->config->get( 'wmgUsePopups', $wi->dbname ) ) {
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
 		$wgPopupsOptInDefaultState = '1';
@@ -50,11 +50,11 @@ if ( $wmgUsePopups ) {
 	}
 }
 
-if ( $wmgUseSocialProfile ) {
+if ( $wi->config->get( 'wmgUseSocialProfile', $wi->dbname ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 }
 
-if ( $wmgUseVisualEditor ) {
+if ( $wi->config->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
@@ -63,13 +63,20 @@ if ( $wmgUseVisualEditor ) {
 	}
 }
 
-if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
+if (
+	$wi->config->get( 'wmgUseWikibaseRepository', $wi->dbname ) ||
+	$wi->config->get( 'wmgUseWikibaseClient', $wi->dbname )
+) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
 }
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
-if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
+if (
+	$wi->config->get( 'wmgUseFlow', $wi->dbname ) ||
+	$wi->config->get( 'wmgUseVisualEditor', $wi->dbname ) ||
+	$wi->config->get( 'wmgUseLinter', $wi->dbname )
+) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }
 
@@ -88,7 +95,7 @@ if ( $cwClosed ) {
 		],
 	];
 
-	if ( $wmgUseComments ) {
+	if ( $wi->config->get( 'wmgUseComments', $wi->dbname ) ) {
 		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
 }
