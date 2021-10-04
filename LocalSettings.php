@@ -2247,6 +2247,9 @@ $wi->config->settings += [
 			'bureaucrat' => [
 				'bureaucrat' => true,
 			],
+			'founder' => [
+				'founder' => true,
+			],
 		],
 		'+naasgamelandwiki' => [
 			'bot' => [
@@ -3285,6 +3288,7 @@ $wi->config->settings += [
 		],
 		'+moviepediawiki' => [
 			'bureaucrat',
+			'founder',
 		],
 		'+naasgamelandwiki' => [
 			'editarchiveprotected',
