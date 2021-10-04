@@ -4232,14 +4232,13 @@ if ( !preg_match( '/^(.*)\.miraheze\.org$/', $wi->hostname, $matches ) ) {
 }
 
 $wi->readCache();
-$wi->config->extractAllGlobals( $wi->dbname );
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [];
-$wi->loadExtensions();
 
 $wi->config->extractAllGlobals( $wi->dbname );
+$wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
@@ -4307,5 +4306,13 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 }
 
 // Last Stuff
-$wi->config->extractAllGlobals( $wi->dbname );
 $wgConf = $wi->config;
+unset( $wi );
+
+$wgHooks['MediaWikiServices'][] = 'extractGlobals';
+
+function extractGlobals() {
+	global $wgConf, $wgDBname;
+
+	$wgConf->extractAllGlobals( $wgDBname );
+}
