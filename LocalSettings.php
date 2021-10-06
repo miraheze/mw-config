@@ -4288,7 +4288,8 @@ if ( wfHostname() === 'test3' ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
 
-	if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
+	$forceprofile = $_GET['forceprofile'] ?? 0;
+	if ( $forceprofile == 1 || PHP_SAPI === 'cli' ) {
 		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
 
 		$wgProfiler = [
