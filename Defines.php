@@ -348,9 +348,9 @@ switch ( $wmgWikiLicense ) {
 		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nd/4.0/';
 		break;
 	case 'cc-by-sa':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgRightsText = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
+		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
+		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
 	case 'cc-by-sa-2-0-kr':
 		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
@@ -373,13 +373,19 @@ switch ( $wmgWikiLicense ) {
 		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
 	case 'gpl-v3':
-		$wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
-		$wgRightsText = 'GPLv3';
-		$wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
+		$wi->config->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+		$wi->config->settings['wgRightsText']['default'] = 'GPLv3';
+		$wi->config->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
 		break;
 	case 'empty':
 		break;
 }
+
+$wi->config->settings['+wgFooterIcons']['default']['copyright']['copyright'] = [
+	'url' => $wi->config->get( 'wgRightsUrl', $wi->dbname ),
+	'src' => $wi->config->get( 'wgRightsIcon', $wi->dbname ),
+	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
+];
 
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
