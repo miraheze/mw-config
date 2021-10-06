@@ -381,6 +381,12 @@ switch ( $wmgWikiLicense ) {
 		break;
 }
 
+$wi->config->settings['+wgFooterIcons']['default']['copyright']['copyright'] = [
+	'url' => $wi->config->get( 'wgRightsUrl', $wi->dbname ),
+	'src' => $wi->config->get( 'wgRightsIcon', $wi->dbname ),
+	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
+];
+
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
