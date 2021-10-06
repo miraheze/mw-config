@@ -373,9 +373,9 @@ switch ( $wmgWikiLicense ) {
 		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
 	case 'gpl-v3':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
-		$wi->config->settings['wgRightsText']['default'] = 'GPLv3';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
+		$wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+		$wgRightsText = 'GPLv3';
+		$wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
 		break;
 	case 'empty':
 		break;
