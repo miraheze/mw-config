@@ -381,7 +381,7 @@ switch ( $wmgWikiLicense ) {
 		break;
 }
 
-$wi->config->settings['+wgFooterIcons']['default']['copyright']['copyright'] = [
+$wgFooterIcons['copyright']['copyright'] = [
 	'url' => $wi->config->get( 'wgRightsUrl', $wi->dbname ),
 	'src' => $wi->config->get( 'wgRightsIcon', $wi->dbname ),
 	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
