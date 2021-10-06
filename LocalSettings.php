@@ -4289,10 +4289,13 @@ if ( wfHostname() === 'test3' ) {
 	$wi->config->settings['wgUseCdn']['default'] = false;
 
 	if ( isset( $_GET['forceprofile'] ) && $_GET['forceprofile'] == 1 ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['output'] = [ 'ProfilerOutputText' ];
-		$wgProfiler['flags'] = TIDEWAYS_XHPROF_FLAGS_CPU;
-		$wgProfiler['visible'] = false;
+		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
+
+		$wgProfiler = [
+			'class' => 'ProfilerXhprof',
+			'output' => 'text',
+			'flags' => $xhprofFlags,
+		];
 	}
 }
 
