@@ -1855,6 +1855,7 @@ $wi->config->settings += [
 	],
 	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
+		'connorjwatwiki' => 'Creative Commons Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)',
 		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
 		'cvswiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'freesoftwarepediawiki' => 'GNU Free Documentation License',
@@ -1878,6 +1879,7 @@ $wi->config->settings += [
 	],
 	'wgRightsUrl' => [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+		'connorjwatwiki' => 'https://creativecommons.org/licenses/by-sa/2.5',
 		'constantnoblewiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'cvswiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'freesoftwarepediawiki' => 'http://www.gnu.org/licenses/fdl-1.3.html',
