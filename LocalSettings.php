@@ -2924,6 +2924,12 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// PageForms
+	'wgPageFormsLinkAllRedLinksToForms' => [
+		'default' => false,
+		'frontierrpgwiki' => true,
+	],
+
 	// Page Size
 	'wgMaxArticleSize' => [
 		'default' => 2048,
