@@ -1042,6 +1042,7 @@ $wgManageWikiSettings = [
 			'cpp' => 'cpp',
 			'crt' => 'crt',
 			'css' => 'css',
+			'cue' => 'cue',
 			'dae' => 'dae',
 			'dat' => 'dat',
 			'data' => 'data',
