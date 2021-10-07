@@ -2923,6 +2923,12 @@ $wi->config->settings += [
 	'wgPageLanguageUseDB' => [
 		'default' => false,
 	],
+	
+	// PageForms
+	'wgPageFormsLinkAllRedLinksToForms' => [
+		'default' => false,
+		'frontierrpgwiki' => true,
+	],
 
 	// Page Size
 	'wgMaxArticleSize' => [
