@@ -194,7 +194,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 }
 
-$wi->config->settings['wgMWLoggerDefaultSpi']['default'] = [
+$wgMWLoggerDefaultSpi = [
 	'class' => \MediaWiki\Logger\MonologSpi::class,
 	'args' => [ $wmgMonologConfig ],
 ];
@@ -202,9 +202,9 @@ $wi->config->settings['wgMWLoggerDefaultSpi']['default'] = [
 if ( $wmgLogToDisk ) {
 	$wmgLogDir = "/var/log/mediawiki";
 
-	$wi->config->settings['wgDBerrorLog']['default'] = "$wmgLogDir/debuglogs/database.log";
+	$wgDBerrorLog= "$wmgLogDir/debuglogs/database.log";
 
-	$wi->config->settings['wgDebugLogGroups']['default'] = [
+	$wgDebugLogGroups = [
 		'404' => "$wmgLogDir/debuglogs/404.log",
 		'api' => "$wmgLogDir/debuglogs/api.log",
 		'captcha' => "$wmgLogDir/debuglogs/captcha.log",
