@@ -202,7 +202,7 @@ $wgMWLoggerDefaultSpi = [
 if ( $wmgLogToDisk ) {
 	$wmgLogDir = "/var/log/mediawiki";
 
-	$wgDBerrorLog= "$wmgLogDir/debuglogs/database.log";
+	$wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
 
 	$wgDebugLogGroups = [
 		'404' => "$wmgLogDir/debuglogs/404.log",
