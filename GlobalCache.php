@@ -40,6 +40,7 @@ $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgParserCacheExpireTime = 86400 * 7;
 $wgLanguageConverterCacheType = 'memcached-mem-1';
+$wgInvalidateCacheOnLocalSettingsChange = false;
 
 $jobrunnerSettings = $wmgCacheSettings['jobrunner'];
 $wgJobTypeConf['default'] = [
