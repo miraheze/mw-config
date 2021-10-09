@@ -3381,24 +3381,24 @@ $wi->config->settings += [
 			'updatepoints',
 		],
 	],
-	
+
 	// RightFunctions
 	'wgRightFunctionsUserGroups' => [
 		'default' => [
-			'*', 
-			'user', 
-			'autoconfirmed', 
-			'sysop', 
+			'*',
+			'user',
+			'autoconfirmed',
+			'sysop',
 			'bureaucrat',
 		],
 		'+quoteunquotecampaignwiki' => [
-			'remi', 
-			'melon', 
-			'ink', 
-			'jaden', 
-			'thursday', 
-			'kyle', 
-			'voyd', 
+			'remi',
+			'melon',
+			'ink',
+			'jaden',
+			'thursday',
+			'kyle',
+			'voyd',
 			'sami',
 		],
 	],
