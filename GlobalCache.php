@@ -54,3 +54,8 @@ $wgJobTypeConf['default'] = [
 	'claimTTL' => 3600,
 	'daemonized' => true,
 ];
+
+if ( PHP_SAPI === 'cli' ) {
+	# APC not available in CLI mode
+	$wgLanguageConverterCacheType = CACHE_NONE;
+}
