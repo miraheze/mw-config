@@ -2110,7 +2110,7 @@ $wi->config->settings += [
 			],
 		],
 		'+famepediawiki' => [
-			'Extendedconfirmed' => [
+			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
 			'templateeditor' => [
