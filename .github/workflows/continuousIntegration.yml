@@ -30,6 +30,7 @@ jobs:
 
     # Only patch code when it is a push event
     - name: Push the changes
+      continue-on-error: true
       if: github.event_name == 'push'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
