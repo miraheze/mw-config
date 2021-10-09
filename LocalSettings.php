@@ -3382,6 +3382,27 @@ $wi->config->settings += [
 		],
 	],
 
+	// RightFunctions
+	'wgRightFunctionsUserGroups' => [
+		'default' => [
+			'*',
+			'user',
+			'autoconfirmed',
+			'sysop',
+			'bureaucrat',
+		],
+		'+quoteunquotecampaignwiki' => [
+			'remi',
+			'melon',
+			'ink',
+			'jaden',
+			'thursday',
+			'kyle',
+			'voyd',
+			'sami',
+		],
+	],
+
 	// RottenLinks
 	'wgRottenLinksCurlTimeout' => [
 		'default' => 10,
