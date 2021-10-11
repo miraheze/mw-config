@@ -975,7 +975,8 @@ $wi->config->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => false,
+		'default'  => false,
+		'test3wiki' => 'MW Upgrade Automation Test',
 	],
 	'wgSharedDB' => [
 		'default' => 'metawiki',
