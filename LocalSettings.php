@@ -15,6 +15,11 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 60;
 }
 
+if ( $wmgProfiler ?? [] ) {
+	$wgProfiler = $wmgProfiler;
+	$wgHTTPTimeout = 10;
+}
+
 // Initialise WikiInitialise
 require_once '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php';
 $wi = new WikiInitialise();
@@ -4308,22 +4313,9 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-// When using ?forceprofile=1, a profile can be found as an HTML comment
-// Disabled on production hosts because it seems to be causing performance issues (how ironic)
 if ( wfHostname() === 'test3' ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
-
-	$forceprofile = $_GET['forceprofile'] ?? 0;
-	if ( $forceprofile == 1 || PHP_SAPI === 'cli' ) {
-		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-
-		$wgProfiler = [
-			'class' => 'ProfilerXhprof',
-			'output' => 'text',
-			'flags' => $xhprofFlags,
-		];
-	}
 }
 
 // Define last to avoid all dependencies
