@@ -21,4 +21,18 @@ function wfSetupProfiler() {
 	}
 }
 
+function wfSetTimeLimit() {
+	// Configure PHP request timeouts.
+	if ( PHP_SAPI === 'cli' ) {
+		set_time_limit( 0 );
+	} elseif ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask1.miraheze.org' ) {
+		set_time_limit( 1200 );
+	} elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+		set_time_limit( 200 );
+	} else {
+		set_time_limit( 60 );
+	}
+}
+
 wfSetupProfiler();
+wfSetTimeLimit();
