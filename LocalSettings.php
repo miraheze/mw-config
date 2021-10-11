@@ -823,9 +823,6 @@ $wi->config->settings += [
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
 	],
-	'wgCreateWikiDBDirectory' => [
-		'default' => '/srv/mediawiki/dblist',
-	],
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
 	],
