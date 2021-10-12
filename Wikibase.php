@@ -6,20 +6,25 @@
 // on the wiki.
 
 if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
-	$wgWBRepoSettings['entitySources'] = [
-		'' => [
-			'repoDatabase' => $wmgWikibaseRepoDatabase,
+	$entitySources = [
+		'local' => [
 			'entityNamespaces' => [
 				'item' => $wmgWikibaseRepoItemNamespaceID,
 				'property' => $wmgWikibaseRepoPropertyNamespaceID,
 			],
+			'repoDatabase' => $wmgWikibaseRepoDatabase,
 			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+			'interwikiPrefix' => '',
 			'rdfNodeNamespacePrefix' => 'wd',
 			'rdfPredicateNamespacePrefix' => '',
-			'interwikiPrefix' => '',
-			'type' => 'db',
+			'type' => 'db'
 		],
 	];
+
+	$wgWBRepoSettings['entitySources'] = $entitySources;
+	$wgWBRepoSettings['localEntitySourceName'] = 'local';
+	$wgWBClientSettings['entitySources'] = $entitySources;
+	$wgWBClientSettings['itemAndPropertySourceName'] = 'local';
 }
 
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
