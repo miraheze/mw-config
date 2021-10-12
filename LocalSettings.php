@@ -4095,6 +4095,7 @@ $wi->config->settings += [
 		'default' => [
 			'404' => 'debug',
 			'AbuseFilter' => false,
+			'ActionFactory' => false,
 			'antispoof' => false,
 			'api' => 'warning',
 			'api-feature-usage' => false,
