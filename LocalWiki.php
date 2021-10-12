@@ -88,4 +88,9 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
+        case 'test3wiki':
+                $wgLocalFileRepo['useJsonMetadata'] = true;
+                $wgLocalFileRepo['useSplitMetadata'] = true;
+                
+                break;
 }
