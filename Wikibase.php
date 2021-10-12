@@ -7,7 +7,7 @@
 
 if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
 	$entitySources = [
-		'miraheze' => [
+		'local' => [
 			'entityNamespaces' => [
 				'item' => $wmgWikibaseRepoItemNamespaceID,
 				'property' => $wmgWikibaseRepoPropertyNamespaceID,
@@ -22,9 +22,9 @@ if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
 	];
 
 	$wgWBRepoSettings['entitySources'] = $entitySources;
-	$wgWBRepoSettings['localEntitySourceName'] = 'miraheze';
+	$wgWBRepoSettings['localEntitySourceName'] = 'local';
 	$wgWBClientSettings['entitySources'] = $entitySources;
-	$wgWBClientSettings['itemAndPropertySourceName'] = 'miraheze';
+	$wgWBClientSettings['itemAndPropertySourceName'] = 'local';
 }
 
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
