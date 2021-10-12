@@ -874,7 +874,8 @@ $wi->config->settings += [
 			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/tables-generated.sql"
+			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
+			"/srv/mediawiki/config/137updates.sql"
 		],
 	],
 	'wgCreateWikiStateDays' => [
