@@ -5,6 +5,23 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
+if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
+	$wgWBRepoSettings['entitySources'] = [
+		'' => [
+			'repoDatabase' => $wmgWikibaseRepoDatabase,
+			'entityNamespaces' => [
+				'item' => $wmgWikibaseRepoItemNamespaceID,
+				'property' => $wmgWikibaseRepoPropertyNamespaceID,
+			],
+			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => '',
+			'type' => 'db',
+		],
+	];
+}
+
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
 $wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyNamespaceID;
 $wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( $wgVersion );
