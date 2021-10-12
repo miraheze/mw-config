@@ -3869,7 +3869,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgVectorUseWvuiSearch' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
