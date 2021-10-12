@@ -16,6 +16,7 @@ function wfSetupProfiler() {
 		$wmgProfiler = [
 			'class' => 'ProfilerXhprof',
 			'flags' => $xhprofFlags,
+			'running' => true,
 			'output' => 'text',
 		];
 	}
