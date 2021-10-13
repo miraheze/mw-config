@@ -278,6 +278,7 @@ $wgManageWikiExtensions = [
 				'commentData' => "$IP/extensions/CommentStreams/sql/commentData.sql",
 				'votes' => "$IP/extensions/CommentStreams/sql/votes.sql",
 				'watch' => "$IP/extensions/CommentStreams/sql/watch.sql",
+				'cs137temp' => '/srv/mediawiki/config/commentstreams_temp.sql',
 			],
 		],
 		'section' => 'parserhooks',
