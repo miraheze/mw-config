@@ -3032,7 +3032,6 @@ $wi->config->settings += [
 			'policies' => [
 				'default' => [
 					'MinimalPasswordLength' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3041,7 +3040,6 @@ $wi->config->settings += [
 				'bot' => [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3050,7 +3048,6 @@ $wi->config->settings += [
 				'sysop' => [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3059,7 +3056,6 @@ $wi->config->settings += [
 				'bureaucrat' => [
 					'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 					'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
-					'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 					'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3069,7 +3065,6 @@ $wi->config->settings += [
 			'checks' => [
 				'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
 				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
-				'PasswordCannotMatchUsername' => 'PasswordPolicyChecks::checkPasswordCannotMatchUsername',
 				'PasswordCannotBeSubstringInUsername' => 'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
 				'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
 				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
@@ -3082,7 +3077,6 @@ $wi->config->settings += [
 					'steward' => [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3091,7 +3085,6 @@ $wi->config->settings += [
 					'sysadmin' => [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
@@ -3100,7 +3093,6 @@ $wi->config->settings += [
 					'trustandsafety' => [
 						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
 						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
