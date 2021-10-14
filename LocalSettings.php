@@ -1,5 +1,6 @@
 <?php
-/*
+
+/**
  * LocalSettings.php for Miraheze.
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
@@ -1122,21 +1123,6 @@ $wi->config->settings += [
 	],
 	'wgHTTPTimeout' => [
 		'default' => 20,
-	],
-
-	// Extensions
-	// Must be on at all times except for ldapwikiwiki
-	'wmgUseCentralAuth' => [
-		'default' => true,
-		'ldapwikiwiki' => false,
-	],
-	'wmgUseGlobalWatchlist' => [
-		'default' => false,
-		'loginwiki' => true,
-	],
-	'wmgUseLdap' => [
-		'default' => false,
-		'ldapwikiwiki' => true,
 	],
 
 	// DataDump
@@ -2843,15 +2829,15 @@ $wi->config->settings += [
 
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'wmgUseMultiBoilerplate' => false,
 		'vgportdbwiki' => true,
+		'wmgUseMultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOptions' => [
 		'wmgUseMultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOverwrite' => [
-		'wmgUseMultiBoilerplate' => false,
 		'vgportdbwiki' => true,
+		'wmgUseMultiBoilerplate' => false,
 	],
 
 	// New User Email Notification
@@ -3372,7 +3358,7 @@ $wi->config->settings += [
 			'editfragment',
 			'edittemplate',
 		],
-		'wmgUseSocialProfile' => [
+		'+wmgUseSocialProfile' => [
 			'updatepoints',
 		],
 	],
@@ -3779,7 +3765,7 @@ $wi->config->settings += [
 		'ciptamediawiki' => true,
 		'rhinosf1wiki' => true,
 		'staffwiki' => true,
-		'mikekilitterboxwiki' => true
+		'mikekilitterboxwiki' => true,
 	],
 	'wmgEnableSharedUploads' => [
 		'default' => false,
@@ -3835,7 +3821,7 @@ $wi->config->settings += [
 		'wmgUseUserPageEditProtection' => true,
 	],
 
-	// Vanish (MW 1.34+)
+	// Varnish
 	'wgUseCdn' => [
 		'default' => true,
 	],
@@ -3937,14 +3923,6 @@ $wi->config->settings += [
 	],
 	'wmgWikibaseRepoPropertyNamespaceID' => [
 		'default' => 862
-	],
-	'wgEnableWikibaseClient' => [
-		'default' => false,
-		'wmgUseWikibaseClient' => true,
-	],
-	'wgEnableWikibaseRepo' => [
-		'default' => false,
-		'wmgUseWikibaseRepository' => true,
 	],
 
 	// WebChat config
