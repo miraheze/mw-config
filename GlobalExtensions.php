@@ -1,4 +1,5 @@
 <?php
+
 require_once "$IP/extensions/MobileDetect/MobileDetect.php";
 
 wfLoadExtensions( [
@@ -24,7 +25,6 @@ wfLoadExtensions( [
 	'GlobalPreferences',
 	'IncidentReporting',
 	'Interwiki',
-	'LocalisationUpdate',
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
