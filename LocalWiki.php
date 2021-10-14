@@ -10,12 +10,30 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'ldapwikiwiki':
+		wfLoadExtension( 'LdapAuthentication' );
+
+		$wgAuthManagerAutoConfig['primaryauth'] += [
+			LdapPrimaryAuthenticationProvider::class => [
+				'class' => LdapPrimaryAuthenticationProvider::class,
+				'args' => [ [
+					'authoritative' => true, // don't allow local non-LDAP accounts
+				] ],
+				'sort' => 50, // must be smaller than local pw provider
+			],
+		];
+
+		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' );
 		}
+
+		break;
+	case 'loginwiki':
+		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
 	case 'metawiki':
