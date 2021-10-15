@@ -375,7 +375,7 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseDynamicPageList',
 		'conflicts' => 'dynamicpagelist3',
 		'requires' => [
-			'pages' => 50000,
+			'pages' => 75000,
 		],
 		'section' => 'parserhooks',
 	],
@@ -385,7 +385,7 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseDynamicPageList3',
 		'conflicts' => 'dynamicpagelist',
 		'requires' => [
-			'pages' => 50000,
+			'pages' => 75000,
 		],
 		'install' => [
 			'mwscript' => [
