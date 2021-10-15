@@ -4263,7 +4263,7 @@ require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [];
 
 $wi->config->extractAllGlobals( $wi->dbname );
-$wi->loadExtensions();
+$wi->loadExtensions( '/srv/mediawiki/config/ManageWikiExtensions.php' );
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
