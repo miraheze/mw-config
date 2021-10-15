@@ -14,7 +14,7 @@ $wgMajorSiteNoticeID = 58;
  */
 
 # Global SiteNotice
-/*if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -22,11 +22,11 @@ $wgMajorSiteNoticeID = 58;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze is planning database maintenance beginning at 21:00 UTC time on the 19th of August 2021. We apologize for any inconvenience caused by this.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze is planning file storage maintenance between 20:00 and 21:00 UTC on Tuesday 19th. During this process the file storage server will be read only so you will not be able to upload any images. We apologise for any inconvenience caused by this.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
-}*/
+}
 
 # Specific wiki SiteNotice
 /* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
