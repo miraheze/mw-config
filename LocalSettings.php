@@ -3779,7 +3779,7 @@ $wi->config->settings += [
 		'default' => false,
 		'ciptamediawiki' => true,
 		'rhinosf1wiki' => true,
-		'sta' => true,
+		'staffwiki' => true,
 		'mikekilitterboxwiki' => true
 	],
 	'wmgEnableSharedUploads' => [
