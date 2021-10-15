@@ -1306,6 +1306,7 @@ $wi->config->settings += [
 			243629, // RhinosF1 (SRE)
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
+			2639, // Agent Isai (SRE)
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
@@ -3778,7 +3779,7 @@ $wi->config->settings += [
 		'default' => false,
 		'ciptamediawiki' => true,
 		'rhinosf1wiki' => true,
-		'staffwiki' => true,
+		'sta' => true,
 		'mikekilitterboxwiki' => true
 	],
 	'wmgEnableSharedUploads' => [
