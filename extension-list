@@ -28,12 +28,10 @@ $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/extension.json
 $IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json
-$IP/extensions/Citoid/extension.json
 $IP/extensions/CleanChanges/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CollapsibleVector/extension.json
-$IP/extensions/Collection/extension.json
 $IP/extensions/Commentbox/extension.json
 $IP/extensions/CommentStreams/extension.json
 $IP/extensions/Comments/extension.json
