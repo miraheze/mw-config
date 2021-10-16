@@ -2982,6 +2982,10 @@ $wi->config->settings += [
 			],
 		],
 	],
+	'wgParserEnableLegacyMediaDOM' => [
+		'default' => true,
+		'test3wiki' => false,
+	],
 	'wgParsoidSettings' => [
 		'default' => [
 			'useSelser' => true,
