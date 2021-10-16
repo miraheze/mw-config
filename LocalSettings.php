@@ -4099,7 +4099,7 @@ $wi->config->settings += [
 			'api-feature-usage' => false,
 			'api-readonly' => false,
 			// When using this, use buffer.
-			'api-request' => false,
+			'api-request' => [ 'graylog' => 'debug', 'buffer' => true ],
 			'api-warning' => false,
 			'authentication' => false,
 			'authevents' => false,
