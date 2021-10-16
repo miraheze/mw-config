@@ -1229,6 +1229,9 @@ $wgManageWikiExtensions = [
 			'visibility' => [
 				'state' => 'public',
 			],
+			'permissions' => [
+				'managewiki-restricted',
+			],
 		],
 		'section' => 'specialpages',
 	],
@@ -2197,6 +2200,9 @@ $wgManageWikiExtensions = [
 			],
 			'visibility' => [
 				'state' => 'public',
+			],
+			'permissions' => [
+				'managewiki-restricted',
 			],
 		],
 		'section' => 'other',
