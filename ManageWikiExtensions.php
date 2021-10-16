@@ -1220,21 +1220,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'collection' => [
-		'name' => 'Collection + Electron (PDF)',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Collection',
-		'var' => 'wmgUseCollection',
-		'conflicts' => false,
-		'requires' => [
-			'visibility' => [
-				'state' => 'public',
-			],
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'contactpage' => [
 		'name' => 'ContactPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ContactPage',
@@ -2186,25 +2171,6 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'install' => [],
-		'section' => 'other',
-	],
-	'citoid' => [
-		'name' => 'Citoid',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Citoid',
-		'var' => 'wmgUseCitoid',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'cite',
-				'visualeditor',
-			],
-			'visibility' => [
-				'state' => 'public',
-			],
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
 		'section' => 'other',
 	],
 	'cleanchanges' => [
