@@ -9,10 +9,6 @@ if ( $wi->config->get( 'wmgUseChameleon', $wi->dbname ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
 
-if ( $wi->config->get( 'wmgUseCollection', $wi->dbname ) ) {
-	wfLoadExtension( 'ElectronPdfService' );
-}
-
 if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
