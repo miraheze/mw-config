@@ -2053,14 +2053,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'advancedsearch' => [
-		'name' => 'AdvancedSearch',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AdvancedSearch',
-		'var' => 'wmgUseAdvancedSearch',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'other',
-	],
 	'articleplaceholder' => [
 		'name' => 'ArticlePlaceholder',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticlePlaceholder',
