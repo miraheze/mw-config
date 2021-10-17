@@ -4206,6 +4206,7 @@ $wi->config->settings += [
 			'session-ip' => 'info',
 			'SimpleAntiSpam' => false,
 			'slow-parse' => 'debug',
+			'slow-parsoid' => 'debug',
 			'SocialProfile' => false,
 			'SpamBlacklist' => false,
 			'SpamBlacklistHit' => false,
