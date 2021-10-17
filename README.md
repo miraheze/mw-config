@@ -8,7 +8,7 @@ This repository contains our production MediaWiki configuration. Contributions (
 
 # Contributing
 
-Pull requests are welcome! Please read [contributing.md](.github/CONTRIBUTING.md) for more information!
+Pull requests are welcome! Please read [our contributing guide](.github/CONTRIBUTING.md) for more information!
 
 # Issues
 
