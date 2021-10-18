@@ -3456,6 +3456,9 @@ $wi->config->settings += [
 	'wgScratchBlocks4BlockVersion' => [
 		'default' => 3,
 	],
+	'wgScratchBlocks4Langs' => [
+		'default' => [],
+	],
 
 	// Scribunto
 	'wgCodeEditorEnableCore' => [
