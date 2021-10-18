@@ -489,17 +489,6 @@ $wi->config->settings += [
 		'wmgUseCitoid' => "https://{$wi->hostname}/{$wi->hostname}/",
 	],
 
-	// Collection
-	'wgCommunityCollectionNamespace' => [
-		'wmgUseCollection' => 5,
-	],
-	'wgCollectionMWServeURL' => [
-		'wmgUseCollection' => 'https://ocg-lb.miraheze.org',
-	],
-	'wgCollectionPODPartners' => [
-		'wmgUseCollection' => [],
-	],
-
 	// Comments
 	'wgCommentsDefaultAvatar' => [
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
@@ -4125,7 +4114,6 @@ $wi->config->settings += [
 			'ContentHandler' => false,
 			'CookieWarning' => false,
 			'cookie' => false,
-			'collection' => 'debug',
 			'CreateWiki' => 'debug',
 			'DBConnection' => 'warning',
 			'DBPerformance' => false,
