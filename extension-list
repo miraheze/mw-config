@@ -32,7 +32,6 @@ $IP/extensions/CleanChanges/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CollapsibleVector/extension.json
-$IP/extensions/Collection/extension.json
 $IP/extensions/Commentbox/extension.json
 $IP/extensions/CommentStreams/extension.json
 $IP/extensions/Comments/extension.json
@@ -65,7 +64,6 @@ $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
 $IP/extensions/EditNotify/extension.json
 $IP/extensions/Editcount/extension.json
-$IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EmbedSpotify/extension.json
 $IP/extensions/EmbedVideo/extension.json
 $IP/extensions/EventLogging/extension.json
