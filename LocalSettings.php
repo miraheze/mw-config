@@ -3666,6 +3666,11 @@ $wi->config->settings += [
 		'default' => 116,
 	],
 
+	// TabberNeue
+	'wgTabberNeueEnableMD5Hash' => [
+		'default' => true,
+	],
+
 	// TemplateStyles
 	'wgTemplateStylesAllowedUrls' => [
 		'default' => [
