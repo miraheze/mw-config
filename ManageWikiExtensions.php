@@ -1220,21 +1220,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'collection' => [
-		'name' => 'Collection + Electron (PDF)',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Collection',
-		'var' => 'wmgUseCollection',
-		'conflicts' => false,
-		'requires' => [
-			'visibility' => [
-				'state' => 'public',
-			],
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'contactpage' => [
 		'name' => 'ContactPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ContactPage',
