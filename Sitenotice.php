@@ -29,7 +29,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 }
 
 # Specific wiki SiteNotice
-/* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
+if ( $wmgUseCitoid ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -37,8 +37,8 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td>Unfortunately, between 3 January 2021 and 28 April 2021, Discord & Slack Webhook URLs were available via the MediaWiki API due to <a href="https://github.com/miraheze/ManageWiki/security/advisories/GHSA-jmc9-rv2f-g8vv">GHSA-jmc9-rv2f-g8vv</a>. We advise you to consider resetting and replacing your Discord or Slack webhook via Special:ManageWiki/settings.</td>
+				<td>Miraheze Site Reliability Engineering is proposing the removal of the Citoid extension, in order to decommission two servers that the extension requires. Please see <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Request_for_feedback_on_disabling_Citoid_and_Collection">the discussion</a> to voice your opinion on the matter.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
-} */
+}
