@@ -2747,6 +2747,14 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'ratepage' => [
+		'name' => 'RatePage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RatePage',
+		'var' => 'wmgUseRatePage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'relatedarticles' => [
 		'name' => 'RelatedArticles',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RelatedArticles',
