@@ -6,7 +6,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 59;
+$wgMajorSiteNoticeID = 60;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -22,7 +22,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze is planning file storage maintenance between 20:00 and 21:00 UTC on Tuesday, 19 October. During this process the file storage server will be read only so you will not be able to upload any images. We apologise for any inconvenience caused by this.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze is currently doing file storage maintenance right now. You won't be able to upload any files or make any changes until 21:00 UTC time. We apologise for any inconvenience caused by this.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
