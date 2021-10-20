@@ -1987,6 +1987,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'mirage' => [
+		'name' => 'Mirage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
+		'var' => 'wmgUseMirage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'monaco' => [
 		'name' => 'Monaco',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Monaco',
