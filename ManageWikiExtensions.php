@@ -2075,6 +2075,25 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseArticleCreationWorkflow',
 		'conflicts' => false,
 		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'createpagemainns',
+					],
+				],
+				'autoconfirmed' => [
+					'permissions' => [
+						'createpagemainns',
+					],
+				],
+				'user' => [
+					'permissions' => [
+						'createpagemainns',
+					],
+				],
+			],
+		],
 		'section' => 'other',
 	],
 	'articleplaceholder' => [
