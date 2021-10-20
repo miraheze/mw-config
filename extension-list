@@ -189,6 +189,7 @@ $IP/extensions/RSS/extension.json
 $IP/extensions/RandomGameUnit/extension.json
 $IP/extensions/RandomImage/extension.json
 $IP/extensions/RandomSelection/extension.json
+$IP/extensions/RatePage/extension.json
 $IP/extensions/RegexFunctions/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RemovePII/extension.json

@@ -2747,6 +2747,39 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'ratepage' => [
+		'name' => 'RatePage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RatePage',
+		'var' => 'wmgUseRatePage',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'ratepage_contest' => "$IP/extensions/RatePage/sql/create-table--ratepage-contest.sql",
+				'ratepage_vote' => "$IP/extensions/RatePage/sql/create-table--ratepage-vote.sql"
+			],
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'ratepage-vote',
+						'ratepage-contests-view-list',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'ratepage-contests-view-details',
+						'ratepage-contests-edit',
+					],
+				],
+				'bureaucrat' => [
+					'permissions' => [
+						'ratepage-contests-clear',
+					],
+				],
+			],
+		],
+		'section' => 'other',
+	],
 	'relatedarticles' => [
 		'name' => 'RelatedArticles',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RelatedArticles',
