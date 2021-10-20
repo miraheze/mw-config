@@ -1915,6 +1915,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'flatbox' => [
+		'name' => 'Flatbox',
+		'linkPage' => 'https://github.com/enginbyram/mediawiki-flatbox',
+		'var' => 'wmgUseFlatbox',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'foreground' => [
 		'name' => 'Foreground',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Foreground',
