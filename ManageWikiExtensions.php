@@ -2069,6 +2069,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'articlecreationworkflow' => [
+		'name' => 'ArticleCreationWorkflow',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleCreationWorkflow',
+		'var' => 'wmgUseArticleCreationWorkflow',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'articleplaceholder' => [
 		'name' => 'ArticlePlaceholder',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticlePlaceholder',
