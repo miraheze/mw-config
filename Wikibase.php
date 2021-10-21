@@ -93,6 +93,10 @@ if ( $wgDBname === 'famedatawiki' ) {
 			],
 		],
 	];
+	$wgWBClientSettings['otherProjectsLinks'] = function ( SettingsArray $settings ) {
+		$otherProjectsSitesProvider = WikibaseClient::getDefaultInstance()->getOtherProjectsSitesProvider();
+		return $otherProjectsSitesProvider->getOtherProjectsSiteIds( $settings->getSetting( 'siteLinkGroups' ) );
+	};
 }
 
 if ( $wgDBname === 'famepediawiki' ) {
@@ -100,4 +104,8 @@ if ( $wgDBname === 'famepediawiki' ) {
 
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
+	$wgWBClientSettings['otherProjectsLinks'] = function ( SettingsArray $settings ) {
+		$otherProjectsSitesProvider = WikibaseClient::getDefaultInstance()->getOtherProjectsSitesProvider();
+		return $otherProjectsSitesProvider->getOtherProjectsSiteIds( $settings->getSetting( 'siteLinkGroups' ) );
+	};
 }
