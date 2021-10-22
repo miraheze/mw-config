@@ -137,6 +137,7 @@ $IP/extensions/Mermaid/extension.json
 $IP/extensions/MintyDocs/extension.json
 $IP/extensions/MirahezeMagic/extension.json
 $IP/extensions/MirahezeMagic/ReCaptchaNoCaptcha/extension.json
+$IP/extensions/MixedNamespaceSearchSuggestions/extension.json
 $IP/extensions/MobileDetect/MobileDetect.php
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MobileTabsPlugin/extension.json
