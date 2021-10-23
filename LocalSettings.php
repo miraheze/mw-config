@@ -4271,7 +4271,9 @@ $wi->readCache();
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [];
+$wi->disabledExtensions = [
+	'AutoCreatePage',
+];
 
 $wi->config->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
