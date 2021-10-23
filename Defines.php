@@ -1,7 +1,7 @@
 <?php
 
 // Extensions
-if ( $wmgUseCentralAuth ) {
+if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtension( 'CentralAuth' );
 }
 
@@ -15,24 +15,6 @@ if ( $wi->config->get( 'wmgUseCollection', $wi->dbname ) ) {
 
 if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
-}
-
-if ( $wmgUseGlobalWatchlist ) {
-	wfLoadExtension( 'GlobalWatchlist' );
-}
-
-if ( $wmgUseLdap ) {
-	wfLoadExtension( 'LdapAuthentication' );
-
-	$wgAuthManagerAutoConfig['primaryauth'] += [
-		LdapPrimaryAuthenticationProvider::class => [
-			'class' => LdapPrimaryAuthenticationProvider::class,
-			'args' => [ [
-				'authoritative' => true, // don't allow local non-LDAP accounts
-			] ],
-			'sort' => 50, // must be smaller than local pw provider
-		],
-	];
 }
 
 if ( $wi->config->get( 'wmgUseMultimediaViewer', $wi->dbname ) ) {
