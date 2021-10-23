@@ -47,7 +47,7 @@ $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
 	'redisServer' => $jobrunnerSettings['server'],
 	'redisConfig' => [
-		'connectTimeout' => 6,
+		'connectTimeout' => 2,
 		'password' => $jobrunnerSettings['password'],
 		'compression' => 'gzip',
 	],
