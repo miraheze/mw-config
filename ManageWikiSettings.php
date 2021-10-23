@@ -701,15 +701,6 @@ $wgManageWikiSettings = [
 		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.',
 		'requires' => [],
 	],
-	'wgTabberNeueEnableMD5Hash' => [
-		'name' => 'Tabber Neue Enable MD5 Hash',
-		'from' => 'tabberneue',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'links',
-		'help' => 'Enable appending unique MD5 hash key to tabs?',
-		'requires' => [],
-	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
