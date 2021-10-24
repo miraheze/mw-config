@@ -2399,6 +2399,7 @@ $wi->config->settings += [
 				'userrights',
 				'userrights-interwiki',
 				'viewglobalprivatefiles',
+				'viewincidents',
 				'viewpmlog',
 				'viewsuppressed',
 			],
