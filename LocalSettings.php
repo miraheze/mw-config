@@ -627,6 +627,9 @@ $wi->config->settings += [
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
 	],
+	'wgCosmosContentWidth' => [
+		'default' => 'default',
+	],
 	'wgCosmosUseWVUISearch' => [
 		'default' => true,
 	],
