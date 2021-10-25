@@ -941,6 +941,9 @@ $wi->config->settings += [
 	'wgCreateWikiUseEchoNotifications' => [
 		'default' => true,
 	],
+	'wgCreateWikiUseExperimental' => [
+		'default' => true,
+	],
 	'wgCreateWikiUseInactiveWikis' => [
 		'default' => true,
 	],
@@ -4050,6 +4053,9 @@ $wi->config->settings += [
 
 	// CreateWiki Defined Special Variables
 	'cwClosed' => [
+		'default' => false,
+	],
+	'cwExperimental' => [
 		'default' => false,
 	],
 	'cwInactive' => [
