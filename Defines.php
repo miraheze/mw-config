@@ -104,10 +104,11 @@ if ( !$cwPrivate ) {
 	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
 }
 
+// Experimental Wikis
 if ( $cwExperimental ) {
-	$wgIncludejQueryMigrate => false;
+	$wgIncludejQueryMigrate = false;
 } else {
-	$wgIncludejQueryMigrate => true,
+	$wgIncludejQueryMigrate = true;
 }
 
 // $wmgPrivateUploads
