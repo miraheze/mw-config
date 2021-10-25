@@ -107,8 +107,16 @@ if ( !$cwPrivate ) {
 // Experimental Wikis
 if ( $cwExperimental ) {
 	$wgIncludejQueryMigrate = false;
+	if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
+		$wgParserEnableLegacyMediaDOM = false;
+	} else {
+		$wgUseNewMediaStructure = true;
+	}
 } else {
 	$wgIncludejQueryMigrate = true;
+	if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
+		$wgParserEnableLegacyMediaDOM = true;
+	}
 }
 
 // $wmgPrivateUploads
