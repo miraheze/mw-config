@@ -941,7 +941,7 @@ $wi->config->settings += [
 	'wgCreateWikiUseEchoNotifications' => [
 		'default' => true,
 	],
-	'CreateWikiUseExperimental' => [
+	'wgCreateWikiUseExperimental' => [
 		'default' => true,
 	],
 	'wgCreateWikiUseInactiveWikis' => [
