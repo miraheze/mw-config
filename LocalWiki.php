@@ -16,19 +16,19 @@ switch ( $wi->dbname ) {
 		break;
 	case 'hololivewiki':
 		$wgHooks['ParserCacheSaveComplete'][] = 'onParserCacheSaveComplete';
-		
+
 		function onParserCacheSaveComplete( ParserCache $parserCache, ParserOutput $parserOutput, Title $title, ParserOptions $parserOptions, int $revId ) {
-  			if ( $title->isMainPage() ) {
-				
-    				$timezone = new DateTimeZone( 'Asia/Tokyo' );
-    				$today = new DateTime( 'now', $timezone );
-    				$tomorrow = new DateTime( 'tomorrow', $timezone );
-    				$secondsUntilMidnightInTimezone = $tomorrow->getTimestamp() - $today->getTimestamp();
-				
-    				$parserOutput->updateCacheExpiry( $secondsUntilMidnightInTimezone );
-  			}
+			if ( $title->isMainPage() ) {
+
+					$timezone = new DateTimeZone( 'Asia/Tokyo' );
+					$today = new DateTime( 'now', $timezone );
+					$tomorrow = new DateTime( 'tomorrow', $timezone );
+					$secondsUntilMidnightInTimezone = $tomorrow->getTimestamp() - $today->getTimestamp();
+
+					$parserOutput->updateCacheExpiry( $secondsUntilMidnightInTimezone );
+			}
 		}
-		
+
 		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
