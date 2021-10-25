@@ -25,7 +25,7 @@ switch ( $wi->dbname ) {
     				$tomorrow = new DateTime( 'tomorrow', $timezone );
     				$secondsUntilMidnightInTimezone = $tomorrow->getTimestamp() - $today->getTimestamp();
 				
-    				$parserOutput->updateCacheExpiry( $secondsUntilMidnightInTimezone )
+    				$parserOutput->updateCacheExpiry( $secondsUntilMidnightInTimezone );
   			}
 		}
 		
