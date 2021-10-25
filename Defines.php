@@ -104,6 +104,12 @@ if ( !$cwPrivate ) {
 	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
 }
 
+if ( $cwExperimental ) {
+	$wgIncludejQueryMigrate => false;
+} else {
+	$wgIncludejQueryMigrate => true,
+}
+
 // $wmgPrivateUploads
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
