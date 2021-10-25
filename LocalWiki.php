@@ -19,7 +19,7 @@ switch ( $wi->dbname ) {
 
 		function onParserCacheSaveComplete( ParserCache $parserCache, ParserOutput $parserOutput, Title $title, ParserOptions $parserOptions, int $revId ) {
 			if ( $title->isMainPage() ) {
-				
+
 				$timezone = new DateTimeZone( 'Asia/Tokyo' );
 				$today = new DateTime( 'now', $timezone );
 				$tomorrow = new DateTime( 'tomorrow', $timezone );
