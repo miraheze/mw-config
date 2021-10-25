@@ -52,13 +52,6 @@ $wi->setVariables(
 );
 
 $wi->config->settings += [
-	// JQuery Migration Test - Remove during 1.37 deployment or pre 1.38
-	'wgIncludejQueryMigrate' => [
-		'default'   => true,
-		'test3wiki' => false,
-		'testwiki'  => false,
-		'snapwikiwiki' => false,
-	],
 
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
