@@ -84,6 +84,7 @@ $wi->config->settings += [
 	],
 	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki', // avoid dodgy data from 1.37
 	],
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
