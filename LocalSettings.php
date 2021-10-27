@@ -241,6 +241,7 @@ $wi->config->settings += [
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
 		'default' => 'mhglobal',
+		'test3wiki' => 'test3wiki',
 	],
 
 	// Cache
