@@ -3810,6 +3810,7 @@ $wi->config->settings += [
 	],
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki',
 	],
 	'wgUrlShortenerDomainsWhitelist' => [
 		'default' => [],
