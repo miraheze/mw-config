@@ -2881,6 +2881,7 @@ $wi->config->settings += [
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
+		'test3wiki' => 'test3wiki',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
 		'default' => 'PT4H',
