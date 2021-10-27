@@ -1893,11 +1893,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Evelution',
 		'var' => 'wmgUseEvelution',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 		'section' => 'skins',
 	],
 	'femiwiki' => [
