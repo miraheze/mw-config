@@ -487,11 +487,6 @@ $wi->config->settings += [
 		'default' => '#131a21',
 	],
 
-	// Citoid
-	'wgCitoidFullRestbaseURL' => [
-		'wmgUseCitoid' => "https://{$wi->hostname}/{$wi->hostname}/",
-	],
-
 	// Comments
 	'wgCommentsDefaultAvatar' => [
 		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',

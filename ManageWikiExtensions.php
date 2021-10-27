@@ -2200,22 +2200,6 @@ $wgManageWikiExtensions = [
 		'install' => [],
 		'section' => 'other',
 	],
-	'citoid' => [
-		'name' => 'Citoid',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Citoid',
-		'var' => 'wmgUseCitoid',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'cite',
-				'visualeditor',
-			],
-			'visibility' => [
-				'state' => 'public',
-			],
-		],
-		'section' => 'other',
-	],
 	'cleanchanges' => [
 		'name' => 'Clean Changes',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CleanChanges',
