@@ -1386,6 +1386,7 @@ $wi->config->settings += [
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
+		'test3wiki' => 'globaltest',
 	],
 
 	// GlobalCssJs
