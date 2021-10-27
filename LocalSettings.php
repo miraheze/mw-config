@@ -3761,6 +3761,26 @@ $wi->config->settings += [
 		'default' => [],
 	],
 
+	// Tweeki
+	'wgTweekiSkinUseBootstrap4' => [
+		'default' => false,
+	],
+	'wgTweekiSkinImagePageTOCTabs' => [
+		'default' => false,
+	],
+	'wgTweekiSkinFooterIcons' => [
+		'default' => false,
+	],
+	'wgTweekiSkinUseBtnParser' => [
+		'default' => false,
+	],
+	'wgTweekiSkinUseTooltips' => [
+		'default' => false,
+	],
+	'wgTweekiSkinUseIconWatch' => [
+		'default' => false,
+	],
+
 	// Uploads
 	'wmgPrivateUploads' => [
 		'default' => false,
