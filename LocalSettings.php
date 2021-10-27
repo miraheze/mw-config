@@ -451,6 +451,12 @@ $wi->config->settings += [
 				'steward',
 			],
 		],
+		'test3wiki' => [
+			'centralDB' => 'test3wiki',
+			'groups' => [
+				'steward',
+			],
+		],
 	],
 	'wgCheckUserCAMultiLock' => [
 		'default' => [
