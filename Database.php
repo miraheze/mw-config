@@ -42,6 +42,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'echo' => [
 			'db11' => 1, // should echo c1
 		],
+		'beta' => [
+			'db11' => 1, // should echo c1 (for now)
+		],
 	],
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
