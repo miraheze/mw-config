@@ -89,6 +89,7 @@ $wi->config->settings += [
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
 		'metawiki' => true,
+		'test3wiki' => true,
 	],
 	'wgAbuseFilterBlockDuration' => [
 		'default' => 'indefinte',
