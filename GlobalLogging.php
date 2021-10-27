@@ -209,7 +209,6 @@ if ( $wmgLogToDisk ) {
 		'api' => "$wmgLogDir/debuglogs/api.log",
 		'captcha' => "$wmgLogDir/debuglogs/captcha.log",
 		'CentralAuth' => "$wmgLogDir/debuglogs/CentralAuth.log",
-		'collection' => "$wmgLogDir/debuglogs/collection.log",
 		'CreateWiki' => "$wmgLogDir/debuglogs/CreateWiki.log",
 		'Echo' => "$wmgLogDir/debuglogs/Echo.log",
 		'error' => "$wmgLogDir/debuglogs/php-error.log",
