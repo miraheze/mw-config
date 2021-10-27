@@ -2,6 +2,10 @@
 
 # Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
+	case 'constantnoblewiki':
+		$wgDplSettings['maxResultCount'] = 2500;
+
+		break;
 	case 'erislywiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -10,12 +14,46 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'hololivewiki':
+		$wgHooks['ParserCacheSaveComplete'][] = 'onParserCacheSaveComplete';
+
+		function onParserCacheSaveComplete( ParserCache $parserCache, ParserOutput $parserOutput, Title $title, ParserOptions $parserOptions, int $revId ) {
+			if ( $title->isMainPage() ) {
+
+				$timezone = new DateTimeZone( 'Asia/Tokyo' );
+				$today = new DateTime( 'now', $timezone );
+				$tomorrow = new DateTime( 'tomorrow', $timezone );
+				$secondsUntilMidnightInTimezone = $tomorrow->getTimestamp() - $today->getTimestamp();
+
+				$parserOutput->updateCacheExpiry( $secondsUntilMidnightInTimezone );
+			}
+		}
+
+		break;
+	case 'ldapwikiwiki':
+		wfLoadExtension( 'LdapAuthentication' );
+
+		$wgAuthManagerAutoConfig['primaryauth'] += [
+			LdapPrimaryAuthenticationProvider::class => [
+				'class' => LdapPrimaryAuthenticationProvider::class,
+				'args' => [ [
+					'authoritative' => true, // don't allow local non-LDAP accounts
+				] ],
+				'sort' => 50, // must be smaller than local pw provider
+			],
+		];
+
+		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' );
 		}
+
+		break;
+	case 'loginwiki':
+		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
 	case 'metawiki':

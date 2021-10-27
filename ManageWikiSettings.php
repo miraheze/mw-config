@@ -701,15 +701,6 @@ $wgManageWikiSettings = [
 		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.',
 		'requires' => [],
 	],
-	'wgTabberNeueEnableMD5Hash' => [
-		'name' => 'Tabber Neue Enable MD5 Hash',
-		'from' => 'tabberneue',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'links',
-		'help' => 'Enable appending unique MD5 hash key to tabs?',
-		'requires' => [],
-	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
@@ -2235,6 +2226,20 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'styling',
 		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
+		'requires' => [],
+	],
+	'wgCosmosContentWidth' => [
+		'name' => 'Cosmos Content Width',
+		'from' => 'cosmos',
+		'type' => 'list',
+		'options' => [
+			'default' => 'default',
+			'full' => 'full',
+			'large' => 'large',
+		],
+		'overridedefault' => 'default',
+		'section' => 'styling',
+		'help' => 'Set the main content area width of the Cosmos skin.',
 		'requires' => [],
 	],
 	'wgCosmosBackgroundImage' => [

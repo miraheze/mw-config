@@ -374,9 +374,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList_(Wikimedia)',
 		'var' => 'wmgUseDynamicPageList',
 		'conflicts' => 'dynamicpagelist3',
-		'requires' => [
-			'pages' => 100000,
-		],
+		'requires' => [],
 		'section' => 'parserhooks',
 	],
 	'dynamicpagelist3' => [
@@ -384,9 +382,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList3',
 		'var' => 'wmgUseDynamicPageList3',
 		'conflicts' => 'dynamicpagelist',
-		'requires' => [
-			'pages' => 100000,
-		],
+		'requires' => [],
 		'install' => [
 			'mwscript' => [
 				"$IP/extensions/DynamicPageList3/maintenance/createTemplate.php" => [],
@@ -1885,17 +1881,21 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Evelution',
 		'var' => 'wmgUseEvelution',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 		'section' => 'skins',
 	],
 	'femiwiki' => [
 		'name' => 'Femiwiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Femiwiki',
 		'var' => 'wmgUseFemiwiki',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'flatbox' => [
+		'name' => 'Flatbox',
+		'linkPage' => 'https://github.com/enginbyram/mediawiki-flatbox',
+		'var' => 'wmgUseFlatbox',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
@@ -1960,6 +1960,14 @@ $wgManageWikiExtensions = [
 		'name' => 'MinervaNeue',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Minerva_Neue',
 		'var' => 'wmgUseMinervaNeue',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'mirage' => [
+		'name' => 'Mirage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
+		'var' => 'wmgUseMirage',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
@@ -2036,6 +2044,33 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseAddThis',
 		'conflicts' => false,
 		'requires' => [],
+		'section' => 'other',
+	],
+	'articlecreationworkflow' => [
+		'name' => 'ArticleCreationWorkflow',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleCreationWorkflow',
+		'var' => 'wmgUseArticleCreationWorkflow',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'createpagemainns',
+					],
+				],
+				'autoconfirmed' => [
+					'permissions' => [
+						'createpagemainns',
+					],
+				],
+				'user' => [
+					'permissions' => [
+						'createpagemainns',
+					],
+				],
+			],
+		],
 		'section' => 'other',
 	],
 	'articleplaceholder' => [
@@ -2437,6 +2472,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'mixednamespacesearchsuggestions' => [
+		'name' => 'MixedNamespaceSearchSuggestions',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MixedNamespaceSearchSuggestions',
+		'var' => 'wmgUseMixedNamespaceSearchSuggestions',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'mobilefrontend' => [
 		'name' => 'MobileFrontend',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend',
@@ -2707,6 +2750,39 @@ $wgManageWikiExtensions = [
 				'user' => [
 					'permissions' => [
 						'purge',
+					],
+				],
+			],
+		],
+		'section' => 'other',
+	],
+	'ratepage' => [
+		'name' => 'RatePage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RatePage',
+		'var' => 'wmgUseRatePage',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'ratepage_contest' => "$IP/extensions/RatePage/sql/create-table--ratepage-contest.sql",
+				'ratepage_vote' => "$IP/extensions/RatePage/sql/create-table--ratepage-vote.sql"
+			],
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'ratepage-vote',
+						'ratepage-contests-view-list',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'ratepage-contests-view-details',
+						'ratepage-contests-edit',
+					],
+				],
+				'bureaucrat' => [
+					'permissions' => [
+						'ratepage-contests-clear',
 					],
 				],
 			],

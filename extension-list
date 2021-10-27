@@ -5,6 +5,7 @@ $IP/extensions/AddHTMLMetaAndTitle/extension.json
 $IP/extensions/AdminLinks/extension.json
 $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/Arrays/extension.json
+$IP/extensions/ArticleCreationWorkflow/extension.json
 $IP/extensions/ArticlePlaceholder/extension.json
 $IP/extensions/ArticleRatings/extension.json
 $IP/extensions/ArticleToCategory2/extension.json
@@ -31,6 +32,7 @@ $IP/extensions/CleanChanges/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeMirror/extension.json
 $IP/extensions/CollapsibleVector/extension.json
+$IP/extensions/Collection/extension.json
 $IP/extensions/Commentbox/extension.json
 $IP/extensions/CommentStreams/extension.json
 $IP/extensions/Comments/extension.json
@@ -63,6 +65,7 @@ $IP/extensions/Echo/extension.json
 $IP/extensions/EditSubpages/extension.json
 $IP/extensions/EditNotify/extension.json
 $IP/extensions/Editcount/extension.json
+$IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EmbedSpotify/extension.json
 $IP/extensions/EmbedVideo/extension.json
 $IP/extensions/EventLogging/extension.json
@@ -133,6 +136,7 @@ $IP/extensions/Mermaid/extension.json
 $IP/extensions/MintyDocs/extension.json
 $IP/extensions/MirahezeMagic/extension.json
 $IP/extensions/MirahezeMagic/ReCaptchaNoCaptcha/extension.json
+$IP/extensions/MixedNamespaceSearchSuggestions/extension.json
 $IP/extensions/MobileDetect/MobileDetect.php
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MobileTabsPlugin/extension.json
@@ -186,6 +190,7 @@ $IP/extensions/RSS/extension.json
 $IP/extensions/RandomGameUnit/extension.json
 $IP/extensions/RandomImage/extension.json
 $IP/extensions/RandomSelection/extension.json
+$IP/extensions/RatePage/extension.json
 $IP/extensions/RegexFunctions/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RemovePII/extension.json
@@ -283,12 +288,14 @@ $IP/skins/Cosmos/skin.json
 $IP/skins/DuskToDawn/skin.json
 $IP/skins/Evelution/skin.json
 $IP/skins/Femiwiki/skin.json
+$IP/skins/Flatbox/skin.json
 $IP/skins/Gamepress/skin.json
 $IP/skins/HasSomeColours/skin.json
 $IP/skins/Mask/skin.json
 $IP/skins/Medik/skin.json
 $IP/skins/Metrolook/skin.json
 $IP/skins/MinervaNeue/skin.json
+$IP/skins/Mirage/skin.json
 $IP/skins/Modern/skin.json
 $IP/skins/Monaco/skin.json
 $IP/skins/MonoBook/skin.json

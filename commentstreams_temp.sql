@@ -2,7 +2,7 @@
 -- Source: cs_replies.json
 -- Do not modify this file directly.
 -- See https://www.mediawiki.org/wiki/Manual:Schema_changes
-CREATE TABLE /*_*/cs_replies (
+CREATE TABLE IF NOT EXISTS /*_*/cs_replies (
   cst_r_reply_page_id INT UNSIGNED NOT NULL,
   cst_r_comment_page_id INT UNSIGNED NOT NULL,
   PRIMARY KEY(cst_r_reply_page_id)
@@ -11,7 +11,7 @@ CREATE TABLE /*_*/cs_replies (
 -- Source: cs_comments.json
 -- Do not modify this file directly.
 -- See https://www.mediawiki.org/wiki/Manual:Schema_changes
-CREATE TABLE /*_*/cs_comments (
+CREATE TABLE IF NOT EXISTS /*_*/cs_comments (
   cst_c_comment_page_id INT UNSIGNED NOT NULL,
   cst_c_assoc_page_id INT UNSIGNED NOT NULL,
   cst_c_comment_title VARBINARY(255) NOT NULL,

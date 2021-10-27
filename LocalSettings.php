@@ -1,5 +1,6 @@
 <?php
-/*
+
+/**
  * LocalSettings.php for Miraheze.
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
@@ -51,13 +52,6 @@ $wi->setVariables(
 );
 
 $wi->config->settings += [
-	// JQuery Migration Test - Remove during 1.37 deployment or pre 1.38
-	'wgIncludejQueryMigrate' => [
-		'default'   => true,
-		'test3wiki' => false,
-		'testwiki'  => false,
-		'snapwikiwiki' => false,
-	],
 
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -90,10 +84,12 @@ $wi->config->settings += [
 	],
 	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki', // avoid dodgy data from 1.37
 	],
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
 		'metawiki' => true,
+		'test3wiki' => true,
 	],
 	'wgAbuseFilterBlockDuration' => [
 		'default' => 'indefinte',
@@ -245,6 +241,7 @@ $wi->config->settings += [
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
 		'default' => 'mhglobal',
+		'test3wiki' => 'test3wiki',
 	],
 
 	// Cache
@@ -454,6 +451,12 @@ $wi->config->settings += [
 				'steward',
 			],
 		],
+		'test3wiki' => [
+			'centralDB' => 'test3wiki',
+			'groups' => [
+				'steward',
+			],
+		],
 	],
 	'wgCheckUserCAMultiLock' => [
 		'default' => [
@@ -609,6 +612,9 @@ $wi->config->settings += [
 	],
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
+	],
+	'wgCosmosContentWidth' => [
+		'default' => 'default',
 	],
 	'wgCosmosUseWVUISearch' => [
 		'default' => true,
@@ -921,6 +927,9 @@ $wi->config->settings += [
 	'wgCreateWikiUseEchoNotifications' => [
 		'default' => true,
 	],
+	'wgCreateWikiUseExperimental' => [
+		'default' => true,
+	],
 	'wgCreateWikiUseInactiveWikis' => [
 		'default' => true,
 	],
@@ -1075,9 +1084,11 @@ $wi->config->settings += [
 	],
 	'wgEchoSharedTrackingCluster' => [
 		'default' => 'echo',
+		'test3wiki' => 'beta',
 	],
 	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
@@ -1106,21 +1117,6 @@ $wi->config->settings += [
 	],
 	'wgHTTPTimeout' => [
 		'default' => 20,
-	],
-
-	// Extensions
-	// Must be on at all times except for ldapwikiwiki
-	'wmgUseCentralAuth' => [
-		'default' => true,
-		'ldapwikiwiki' => false,
-	],
-	'wmgUseGlobalWatchlist' => [
-		'default' => false,
-		'loginwiki' => true,
-	],
-	'wmgUseLdap' => [
-		'default' => false,
-		'ldapwikiwiki' => true,
 	],
 
 	// DataDump
@@ -1382,6 +1378,7 @@ $wi->config->settings += [
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
+		'test3wiki' => 'testglobal',
 	],
 
 	// GlobalCssJs
@@ -2828,15 +2825,15 @@ $wi->config->settings += [
 
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'wmgUseMultiBoilerplate' => false,
 		'vgportdbwiki' => true,
+		'wmgUseMultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOptions' => [
 		'wmgUseMultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOverwrite' => [
-		'wmgUseMultiBoilerplate' => false,
 		'vgportdbwiki' => true,
+		'wmgUseMultiBoilerplate' => false,
 	],
 
 	// New User Email Notification
@@ -2876,6 +2873,7 @@ $wi->config->settings += [
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
+		'test3wiki' => 'test3wiki',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
 		'default' => 'PT4H',
@@ -2965,10 +2963,6 @@ $wi->config->settings += [
 				],
 			],
 		],
-	],
-	'wgParserEnableLegacyMediaDOM' => [
-		'default' => true,
-		'test3wiki' => false,
 	],
 	'wgParsoidSettings' => [
 		'default' => [
@@ -3361,7 +3355,7 @@ $wi->config->settings += [
 			'editfragment',
 			'edittemplate',
 		],
-		'wmgUseSocialProfile' => [
+		'+wmgUseSocialProfile' => [
 			'updatepoints',
 		],
 	],
@@ -3773,7 +3767,7 @@ $wi->config->settings += [
 		'ciptamediawiki' => true,
 		'rhinosf1wiki' => true,
 		'staffwiki' => true,
-		'mikekilitterboxwiki' => true
+		'mikekilitterboxwiki' => true,
 	],
 	'wmgEnableSharedUploads' => [
 		'default' => false,
@@ -3809,6 +3803,7 @@ $wi->config->settings += [
 	],
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki',
 	],
 	'wgUrlShortenerDomainsWhitelist' => [
 		'default' => [],
@@ -3829,7 +3824,7 @@ $wi->config->settings += [
 		'wmgUseUserPageEditProtection' => true,
 	],
 
-	// Vanish (MW 1.34+)
+	// Varnish
 	'wgUseCdn' => [
 		'default' => true,
 	],
@@ -3931,14 +3926,6 @@ $wi->config->settings += [
 	],
 	'wmgWikibaseRepoPropertyNamespaceID' => [
 		'default' => 862
-	],
-	'wgEnableWikibaseClient' => [
-		'default' => false,
-		'wmgUseWikibaseClient' => true,
-	],
-	'wgEnableWikibaseRepo' => [
-		'default' => false,
-		'wmgUseWikibaseRepository' => true,
 	],
 
 	// WebChat config
@@ -4055,6 +4042,9 @@ $wi->config->settings += [
 	'cwClosed' => [
 		'default' => false,
 	],
+	'cwExperimental' => [
+		'default' => false,
+	],
 	'cwInactive' => [
 		'default' => false,
 	],
@@ -4110,11 +4100,11 @@ $wi->config->settings += [
 			'CookieWarning' => false,
 			'cookie' => false,
 			'CreateWiki' => 'debug',
-			'DBConnection' => 'warning',
-			'DBPerformance' => false,
-			'DBQuery' => false,
-			'DBReplication' => false,
-			'DBTransaction' => false,
+			'DBConnection' => 'error',
+			'DBPerformance' => 'debug',
+			'DBQuery' => 'warning',
+			'DBReplication' => 'warning',
+			'DBTransaction' => 'debug',
 			'DeferredUpdates' => 'error',
 			'deprecated' => [ 'graylog' => 'debug', 'sample' => 100 ],
 			'diff' => 'debug',

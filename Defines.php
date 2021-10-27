@@ -1,7 +1,7 @@
 <?php
 
 // Extensions
-if ( $wmgUseCentralAuth ) {
+if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtension( 'CentralAuth' );
 }
 
@@ -11,24 +11,6 @@ if ( $wi->config->get( 'wmgUseChameleon', $wi->dbname ) ) {
 
 if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
-}
-
-if ( $wmgUseGlobalWatchlist ) {
-	wfLoadExtension( 'GlobalWatchlist' );
-}
-
-if ( $wmgUseLdap ) {
-	wfLoadExtension( 'LdapAuthentication' );
-
-	$wgAuthManagerAutoConfig['primaryauth'] += [
-		LdapPrimaryAuthenticationProvider::class => [
-			'class' => LdapPrimaryAuthenticationProvider::class,
-			'args' => [ [
-				'authoritative' => true, // don't allow local non-LDAP accounts
-			] ],
-			'sort' => 50, // must be smaller than local pw provider
-		],
-	];
 }
 
 if ( $wi->config->get( 'wmgUseMultimediaViewer', $wi->dbname ) ) {
@@ -116,6 +98,21 @@ if ( !$cwPrivate ) {
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
 	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
+}
+
+// Experimental Wikis
+if ( $cwExperimental ) {
+	$wgIncludejQueryMigrate = false;
+	if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
+		$wgParserEnableLegacyMediaDOM = false;
+	} else {
+		$wgUseNewMediaStructure = true;
+	}
+} else {
+	$wgIncludejQueryMigrate = true;
+	if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
+		$wgParserEnableLegacyMediaDOM = true;
+	}
 }
 
 // $wmgPrivateUploads
