@@ -1100,9 +1100,11 @@ $wi->config->settings += [
 	],
 	'wgEchoSharedTrackingCluster' => [
 		'default' => 'echo',
+		'test3wiki' => 'beta',
 	],
 	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
