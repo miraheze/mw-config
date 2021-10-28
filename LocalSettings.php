@@ -2035,6 +2035,7 @@ $wi->config->settings += [
 				'oathauth-enable' => true,
 				'editmyprivateinfo' => true,
 				'viewmyprivateinfo' => true,
+				'writeapi' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
@@ -2396,6 +2397,7 @@ $wi->config->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
+				'writeapi',
 			],
 			'*' => [
 				'read',
