@@ -56,7 +56,7 @@ $wgManageWikiSettings = [
 	// Anti-Spam
 	'wgAbuseFilterActions' => [
 		'name' => 'AbuseFilter Actions',
-		'from' => 'mediawiki',
+		'from' => 'abusefilter',
 		'global' => true,
 		'type' => 'list-multi-bool',
 		'allopts' => [
@@ -1377,7 +1377,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDismissableSiteNoticeForAnons' => [
 		'name' => 'Dismissable Site Notice For Anons',
-		'from' => 'mediawiki',
+		'from' => 'dismissablesitenotice',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1387,7 +1387,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordIncomingWebhookUrl' => [
 		'name' => 'Discord Incoming Webhook URL',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'text',
 		'overridedefault' => false,
@@ -1403,7 +1403,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordAvatarUrl' => [
 		'name' => 'Discord Notification Avatar URL',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'url',
 		'overridedefault' => '',
@@ -1413,7 +1413,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'name' => 'Discord Notification Ignore Minor Edits',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -1423,7 +1423,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordNotificationBlockedUser' => [
 		'name' => 'Discord Notification Blocked User',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1433,7 +1433,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordNotificationNewUser' => [
 		'name' => 'Discord Notification New User',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1443,7 +1443,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordIncludePageUrls' => [
 		'name' => 'Discord Include Page Urls',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1453,7 +1453,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordIncludeUserUrls' => [
 		'name' => 'Discord Include User Urls',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1463,7 +1463,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordIncludeDiffSize' => [
 		'name' => 'Discord Include Diff Size',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1473,7 +1473,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordNotificationMovedArticle' => [
 		'name' => 'Discord Notification Moved Article',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1483,7 +1483,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordNotificationFileUpload' => [
 		'name' => 'Discord Notification File Upload',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1493,7 +1493,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordNotificationProtectedArticle' => [
 		'name' => 'Discord Notification Protected Article',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1503,7 +1503,7 @@ $wgManageWikiSettings = [
 	],
 	'wgDiscordNotificationAfterImportPage' => [
 		'name' => 'Discord Notification After Import Page',
-		'from' => 'mediawiki',
+		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -2655,7 +2655,7 @@ $wgManageWikiSettings = [
 	],
 	'wgTimelessBackdropImage' => [
 		'name' => 'Timeless Backdrop Image',
-		'from' => 'mediawiki',
+		'from' => 'timeless',
 		'global' => true,
 		'type' => 'text',
 		'overridedefault' => 'cat.svg',
@@ -2665,7 +2665,7 @@ $wgManageWikiSettings = [
 	],
 	'wgTimelessLogo' => [
 		'name' => 'Timeless Logo',
-		'from' => 'mediawiki',
+		'from' => 'timeless',
 		'global' => true,
 		'type' => 'text',
 		'overridedefault' => null,
@@ -2675,7 +2675,7 @@ $wgManageWikiSettings = [
 	],
 	'wgTimelessWordmark' => [
 		'name' => 'Timeless Wordmark',
-		'from' => 'mediawiki',
+		'from' => 'timeless',
 		'global' => true,
 		'type' => 'text',
 		'overridedefault' => null,
@@ -2739,7 +2739,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVectorDefaultSkinVersion' => [
 		'name' => 'Vector Default Skin Version',
-		'from' => 'mediawiki',
+		'from' => 'vector',
 		'global' => true,
 		'type' => 'list',
 		'options' => [
@@ -2753,7 +2753,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVectorDefaultSkinVersionForExistingAccounts' => [
 		'name' => 'Vector Default Skin Version For Existing Accounts',
-		'from' => 'mediawiki',
+		'from' => 'vector',
 		'global' => true,
 		'type' => 'list',
 		'options' => [
@@ -2767,7 +2767,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVectorDefaultSkinVersionForNewAccounts' => [
 		'name' => 'Vector Default Skin Version For New Accounts',
-		'from' => 'mediawiki',
+		'from' => 'vector',
 		'global' => true,
 		'type' => 'list',
 		'options' => [
@@ -2781,7 +2781,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVectorResponsive' => [
 		'name' => 'Vector Responsive',
-		'from' => 'mediawiki',
+		'from' => 'vector',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -2791,7 +2791,7 @@ $wgManageWikiSettings = [
 	],
 	'wgVectorUseWvuiSearch' => [
 		'name' => 'Vector Use WVUI Search',
-		'from' => 'mediawiki',
+		'from' => 'vector',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
