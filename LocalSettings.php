@@ -974,8 +974,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgSharedDB' => [
-		'default' => 'metawiki', // REMOVE?
-		'test3wiki' => null,
+		'default' => null,
 	],
 	'wgSharedTables' => [
 		'default' => [],
