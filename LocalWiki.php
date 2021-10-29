@@ -120,12 +120,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'traceprojectwikiwiki':
-	case 'vgportdbwiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
-		$wgDplSettings['allowUnlimitedResults'] = true;
-
-		break;
 	case 'test3wiki':
 		$wgLocalFileRepo = [
 			'class' => LocalRepo::class,
@@ -142,6 +136,13 @@ switch ( $wi->dbname ) {
 			'reserializeMetadata' => $wgUpdateCompatibleMetadata,
 			'useJsonMetadata' => true,
 			'useSplitMetadata' => true,
-	];
+		];
+
+		break;
+	case 'traceprojectwikiwiki':
+	case 'vgportdbwiki':
+		$wgDplSettings['allowUnlimitedCategories'] = true;
+		$wgDplSettings['allowUnlimitedResults'] = true;
+
 		break;
 }
