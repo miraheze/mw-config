@@ -11,6 +11,8 @@ switch ( $wi->dbname ) {
 
 		function onSpecialPage_initList( &$specialPages ) {
 			unset( $specialPages['Export'] );
+
+			return true;
 		}
 
 		break;
