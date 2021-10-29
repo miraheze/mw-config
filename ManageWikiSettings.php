@@ -2957,7 +2957,7 @@ $wgManageWikiSettings = [
 		'from' => 'articlecreationworkflow',
 		'type' => 'check',
 		'overridedefault' => true,
-		'section' => 'edit',
+		'section' => 'styling',
 		'help' => 'Whether to load custom CSS for the ArticleCreationWorkflow landing page.',
 		'requires' => [],
 	],
