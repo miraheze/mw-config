@@ -672,6 +672,16 @@ $wgManageWikiSettings = [
 		'help' => 'Whether Header Tabs should add an edit link to the right of the tabs which let you edit only the tabs\' text.',
 		'requires' => [],
 	],
+	'wgArticleCreationLandingPage' => [
+		'name' => 'Article Creation Landing Page',
+		'from' => 'articlecreationworkflow',
+		'type' => 'wikipage',
+		'exists' => false,
+		'overridedefault' => 'Project:Article wizard',
+		'section' => 'edit',
+		'help' => 'The name of the wiki page to which users should be redirected if intercepted.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
@@ -2940,6 +2950,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'Allow user JavaScript pages. For example User:<user>/*.js.',
+		'requires' => [],
+	],
+	'wgUseCustomLandingPageStyles' => [
+		'name' => 'Use Custom Landing Page Styles',
+		'from' => 'articlecreationworkflow',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Whether to load custom CSS for the ArticleCreationWorkflow landing page.',
 		'requires' => [],
 	],
 	'wgDefaultTheme' => [
