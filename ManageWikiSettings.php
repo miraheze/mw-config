@@ -636,6 +636,42 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to allow users to select a expiry time when adding an item to their watchlist',
 		'requires' => [],
 	],
+	'wgHeaderTabsRenderSingleTab' => [
+		'name' => 'Header Tabs Render Single Tab',
+		'from' => 'headertabs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Whether Header Tabs should only activate if a single top-level header is found.',
+		'requires' => [],
+	],
+	'wgHeaderTabsDisableDefaultToc' => [
+		'name' => 'Header Tabs Disable Default Toc',
+		'from' => 'headertabs',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Whether Header Tabs should disable the MediaWiki article\'s table of contents when tabs are enabled for a given article.',
+		'requires' => [],
+	],
+	'wgHeaderTabsGenerateTabTocs' => [
+		'name' => 'Header Tabs Generate Tab Tocs',
+		'from' => 'headertabs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Whether Header Tabs should try to generate a TOC for each tab.',
+		'requires' => [],
+	],
+	'wgHeaderTabsEditTabLink' => [
+		'name' => 'Header Tabs Edit Tab Link',
+		'from' => 'headertabs',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'edit',
+		'help' => 'Whether Header Tabs should add an edit link to the right of the tabs which let you edit only the tabs\' text.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
