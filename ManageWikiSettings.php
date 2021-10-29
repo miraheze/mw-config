@@ -273,7 +273,7 @@ $wgManageWikiSettings = [
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'name' => 'Enable Echo Cross Wiki Beta Feature',
-		'from' => 'mediawiki',
+		'from' => 'echo',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -712,7 +712,7 @@ $wgManageWikiSettings = [
 	],
 	'wgRottenLinksCurlTimeout' => [
 		'name' => 'RottenLinks Timeout Threshold',
-		'from' => 'mediawiki',
+		'from' => 'rottenlinks',
 		'global' => true,
 		'type' => 'integer',
 		'minint' => 5,
@@ -861,7 +861,7 @@ $wgManageWikiSettings = [
 	],
 	'wgPFEnableStringFunctions' => [
 		'name' => 'Enable string function functionality',
-		'from' => 'mediawiki',
+		'from' => 'parserfunctions',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => false,
@@ -1338,7 +1338,7 @@ $wgManageWikiSettings = [
 	],
 	'wgEchoCrossWikiNotifications' => [
 		'name' => 'Echo Cross Wiki Notifications',
-		'from' => 'mediawiki',
+		'from' => 'echo',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
@@ -1348,7 +1348,7 @@ $wgManageWikiSettings = [
 	],
 	'wgEchoMentionStatusNotifications' => [
 		'name' => 'Echo Mention Status Notifications',
-		'from' => 'mediawiki',
+		'from' => 'echo',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
