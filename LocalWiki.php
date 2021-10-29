@@ -6,6 +6,16 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxResultCount'] = 2500;
 
 		break;
+	case 'dmlwikiwiki':
+		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
+
+		function onSpecialPage_initList( &$specialPages ) {
+			unset( $specialPages['Export'] );
+
+			return true;
+		}
+
+		break;
 	case 'erislywiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
