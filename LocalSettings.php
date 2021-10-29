@@ -178,6 +178,14 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
+	// ArticleCreationWorkflow
+	'wgArticleCreationLandingPage' => [
+		'default' => 'Project:Article wizard',
+	],
+	'wgUseCustomLandingPageStyles' => [
+		'default' => true,
+	],
+
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
