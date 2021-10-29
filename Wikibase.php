@@ -106,7 +106,7 @@ if ( $wgDBname === 'famepediawiki' ) {
 if ( $wgDBname === 'famepediawiki' || $wgDBname === 'famedatawiki' ) {
 	$wgWBClientSettings['otherProjectsLinks'] = [
 		'commonswiki',
-		'famedatawiki'
+		'famedatawiki',
 		'famepediawiki',
 		'metawiki',
 	];
