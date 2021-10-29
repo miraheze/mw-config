@@ -1489,6 +1489,20 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// HeaderTabs
+	'wgHeaderTabsRenderSingleTab' => [
+		'default' => false,
+	],
+	'wgHeaderTabsDisableDefaultToc' => [
+		'default' => true,
+	],
+	'wgHeaderTabsGenerateTabTocs' => [
+		'default' => false,
+	],
+	'wgHeaderTabsEditTabLink' => [
+		'default' => true,
+	],
+
 	// HideSection
 	'wgHideSectionImages' => [
 		'default' => false,
