@@ -205,7 +205,22 @@ $wi->config->settings += [
 			'showFooterIcons' => true,
 			'addThisPUBID' => '',
 			'useAddThisShare' => '',
-			'useAddThisFollow' => ''
+			'useAddThisFollow' => '',
+		],
+		'+dmlwikiwiki' => [
+			'showActionsForAnon' => true,
+			'fixedNavBar' => false,
+			'usePivotTabs' => true,
+			'showHelpUnderTools' => true,
+			'showRecentChangesUnderTools' => true,
+			'wikiName' => 'DML Wiki',
+			'wikiNameDesktop' => 'Welcome',
+			'navbarIcon' => true,
+			'preloadFontAwesome' => false,
+			'showFooterIcons' => true,
+			'addThisPUBID' => '',
+			'useAddThisShare' => '',
+			'useAddThisFollow' => '',
 		],
 		'+thegreatwarwiki' => [
 			'showActionsForAnon' => true,
@@ -220,7 +235,7 @@ $wi->config->settings += [
 			'showFooterIcons' => true,
 			'addThisPUBID' => '',
 			'useAddThisShare' => '',
-			'useAddThisFollow' => ''
+			'useAddThisFollow' => '',
 		],
 	],
 
