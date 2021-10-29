@@ -101,3 +101,12 @@ if ( $wgDBname === 'famepediawiki' ) {
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
 }
+
+if ( $wgDBname === 'famepediawiki' || $wgDBname === 'famedatawiki' ) {
+	$wgWBClientSettings['otherProjectsLinks'] = [
+		'commonswiki',
+		'famedatawiki',
+		'famepediawiki',
+		'metawiki',
+	];
+}
