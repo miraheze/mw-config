@@ -102,7 +102,6 @@ if ( $wgDBname === 'famepediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
 }
 
-
 if ( $wgDBname === 'famepediawiki' || $wgDBname === 'famedatawiki' ) {
 	$wgWBClientSettings['otherProjectsLinks'] = [
 		'commonswiki',
