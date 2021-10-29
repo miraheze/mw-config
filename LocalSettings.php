@@ -1836,6 +1836,7 @@ $wi->config->settings += [
 		'default' => '',
 		'constantnoblewiki' => 'Constant Noble:No rights reserved',
 		'diavwiki' => 'Project:Copyrights',
+		'dmlwikiwiki' => 'MediaWiki:Copyright',
 		'quyranesswiki' => 'Project:Copyrights',
 		'taerelvariwiki' => 'Project:Copyrights',
 	],
