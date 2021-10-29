@@ -1515,7 +1515,7 @@ $wi->config->settings += [
 		'default' => '/usr/local/bin/mediawiki-firejail-convert',
 	],
 
-	// ImageLimits
+	// Image Limits
 	'wgImageLimits' => [
 		'default' => [
 			[ 320, 240 ],
