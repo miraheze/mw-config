@@ -1515,6 +1515,24 @@ $wi->config->settings += [
 		'default' => '/usr/local/bin/mediawiki-firejail-convert',
 	],
 
+	// ImageLimits
+	'wgImageLimits' => [
+		'default' => [
+			[ 320, 240 ],
+			[ 640, 480 ],
+			[ 800, 600 ],
+			[ 1024, 768 ],
+			[ 1280, 1024 ],
+			[ 2560, 2048 ],
+			[ 2560, 2048 ],
+		],
+		'dmlwikiwiki' => [
+			[ 320, 240 ],
+			[ 640, 480 ],
+			[ 800, 800 ],
+		],
+	],
+
 	// IncidentReporting
 	'wgIncidentReportingDatabase' => [
 		'default' => 'incidents',
@@ -3117,10 +3135,10 @@ $wi->config->settings += [
 			'enotifwatchlistpages' => 0,
 			'math' => 'mathml',
 			'usebetatoolbar' => 1,
-			'usebetatoolbar-cgd' => 1
+			'usebetatoolbar-cgd' => 1,
 		],
 		'+bioencyclopediawiki' => [
-			'usenewrc' => 0
+			'usenewrc' => 0,
 		],
 		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
@@ -3129,12 +3147,15 @@ $wi->config->settings += [
 			'usebetatoolbar-cgd' => 0,
 			'visualeditor-enable-experimental' => 1,
 		],
+		'+dmlwikiwiki' => [
+			'imagesize' => 2,
+		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
 		'+reviwikiwiki' => [
 			'rcenhancedfilters-disable' => 1,
-			'usenewrc' => 0
+			'usenewrc' => 0,
 		],
 		'+solarawiki' => [
 			'usecodemirror' => 1,
