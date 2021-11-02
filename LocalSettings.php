@@ -3238,8 +3238,8 @@ $wi->config->settings += [
 	],
 
 	// RatePage
-	'wgRPRatingPageBlacklist' => [
-		'default' => [],
+	'wmgRPRatingPageBlacklist' => [
+		'default' => false,
 	],
 	'wgRPSidebarPosition' => [
 		'default' => 2,
