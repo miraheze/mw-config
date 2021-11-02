@@ -682,6 +682,36 @@ $wgManageWikiSettings = [
 		'help' => 'The name of the wiki page to which users should be redirected if intercepted.',
 		'requires' => [],
 	],
+	'wgRPRatingPageBlacklist' => [
+		'name' => 'Rating Page Blacklist',
+		'from' => 'ratepage',
+		'type' => 'wikipages',
+		'exists' => false,
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Page titles that are not allowed to be rated.',
+		'requires' => [],
+	],
+	'wgRPSidebarPosition' => [
+		'name' => 'Rate Page Sidebar Position',
+		'from' => 'ratepage',
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 9,
+		'overridedefault' => 2,
+		'section' => 'edit',
+		'help' => 'Integer indicating where in the sidebar should the widget be placed.',
+		'requires' => [],
+	],
+	'wgRPShowResultsBeforeVoting' => [
+		'name' => 'Rate Page Show Results Before Voting',
+		'from' => 'ratepage',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'edit',
+		'help' => 'Whether to show page\'s rating before the user votes.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
@@ -1039,6 +1069,20 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'This enables MediaViewer for everyone.',
 		'requires' => [],
+	],
+	'wgRPUseMMVModule' => [
+		'name' => 'Rate Page Use Multimedia Viewer Module',
+		'from' => 'ratepage',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Whether to use the optional MultimediaViewer feature.',
+		'requires' => [
+			'extensions' => [
+				'ratepage',
+				'multimediaviewer',
+			],
+		],
 	],
 	'wgMSU_checkAutoCat' => [
 		'name' => 'MsUpload check auto cat',
