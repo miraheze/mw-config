@@ -121,6 +121,36 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgNamespaceRobotPolicies' => [
+		'name' => 'What should the robot policy for this namespace be?',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'options' => [
+			'index,follow' => 'index,follow',
+			'noindex,nofollow' => 'noindex,nofollow',
+			'index,nofollow' => 'index,nofollow',
+		],
+		'overridedefault' => $wgDefaultRobotPolicy,
+		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
+		'requires' => [],
+	],
+	'wgExemptFromUserRobotsControl' => [
+		'name' => 'Exempt from user robots control?',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'overridedefault' => array_merge(
+			array_fill_keys( $wgContentNamespaces, true ),
+			[ 'default' => false ]
+		),
+		'help' => 'If this is enabled, the <code>__INDEX__</code> and <code>__NOINDEX__</code> magic words will not function in this namespace.',
+		'requires' => [],
+	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'name' => 'Enable ApprovedRevs in this namespace?',
 		'from' => 'approvedrevs',
@@ -238,36 +268,6 @@ $wgManageWikiNamespacesAdditional = [
 			'default' => false,
 		],
 		'help' => '',
-		'requires' => [],
-	],
-	'wgNamespaceRobotPolicies' => [
-		'name' => 'What should the robot policy for this namespace be?',
-		'from' => 'mediawiki',
-		'type' => 'list',
-		'main' => true,
-		'talk' => true,
-		'blacklisted' => [],
-		'options' => [
-			'index,follow' => 'index,follow',
-			'noindex,nofollow' => 'noindex,nofollow',
-			'index,nofollow' => 'index,nofollow',
-		],
-		'overridedefault' => $wgDefaultRobotPolicy,
-		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
-		'requires' => [],
-	],
-	'wgExemptFromUserRobotsControl' => [
-		'name' => 'Exempt from user robots control?',
-		'from' => 'mediawiki',
-		'type' => 'check',
-		'main' => true,
-		'talk' => true,
-		'blacklisted' => [],
-		'overridedefault' => array_merge(
-			array_fill_keys( $wgContentNamespaces, true ),
-			[ 'default' => false ]
-		),
-		'help' => 'If this is enabled, the <code>__INDEX__</code> and <code>__NOINDEX__</code> magic words will not function in this namespace.',
 		'requires' => [],
 	],
 ];
