@@ -3237,6 +3237,20 @@ $wi->config->settings += [
 		],
 	],
 
+	// RatePage
+	'wgRPRatingPageBlacklist' => [
+		'default' => [],
+	],
+	'wgRPSidebarPosition' => [
+		'default' => 2,
+	],
+	'wgRPShowResultsBeforeVoting' => [
+		'default' => false,
+	],
+	'wgRPUseMMVModule' => [
+		'default' => true,
+	],
+
 	// RecentChanges
 	'wgFeedLimit' => [
 		'default' => 50,
