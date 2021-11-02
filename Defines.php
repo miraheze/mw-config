@@ -126,6 +126,10 @@ if ( $wmgUsersNotifiedOnAllChanges ) {
 	$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
 }
 
+if ( $wmgRPRatingPageBlacklist ) {
+	$wgRPRatingPageBlacklist = explode( "\n", $wmgRPRatingPageBlacklist );
+}
+
 // DataDump
 $dataDumpDirectory = $wi->config->settings['wgDataDumpDirectory']['default'];
 $wi->config->settings['wgDataDump']['default'] = [
