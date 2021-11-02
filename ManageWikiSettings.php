@@ -682,7 +682,7 @@ $wgManageWikiSettings = [
 		'help' => 'The name of the wiki page to which users should be redirected if intercepted.',
 		'requires' => [],
 	],
-	'wgRPRatingPageBlacklist' => [
+	'wmgRPRatingPageBlacklist' => [
 		'name' => 'Rating Page Blacklist',
 		'from' => 'ratepage',
 		'type' => 'wikipages',
