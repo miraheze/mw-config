@@ -270,4 +270,15 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgRPRatingAllowedNamespaces' => [
+		'name' => 'Allow articles in this namespace to be rated with RatePage?',
+		'from' => 'ratepage',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'overridedefault' => true,
+		'help' => '',
+		'requires' => [],
+	],
 ];
