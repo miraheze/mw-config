@@ -1658,6 +1658,13 @@ $wi->config->settings += [
 				'en',
 			],
 		],
+
+		],
+		'+memedatawiki' => [
+			'd',
+			'fd'
+			],
+		],
 		'+polandballstaffwiki' => [
 			'polandballwiki',
 			'polandballwikisongcontestwiki',
