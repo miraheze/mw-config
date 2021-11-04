@@ -2047,6 +2047,9 @@ $wi->config->settings += [
 	'wgEmergencyContact' => [
 		'default' => 'noreply@miraheze.org',
 	],
+	'wgAllowHTMLEmail' => [
+		'default' => true,
+	],
 
 	// ManageWiki
 	'wgManageWiki' => [
