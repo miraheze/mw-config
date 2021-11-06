@@ -2036,6 +2036,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'wmau' => [
+		'name' => 'WMAU',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:WMAU',
+		'var' => 'wmgUseWMAU',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 
 	// Other
 	'addthis' => [
