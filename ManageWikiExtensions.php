@@ -1115,7 +1115,7 @@ $wgManageWikiExtensions = [
 		'name' => 'AuthorProtect',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AuthorProtect',
 		'var' => 'wmgUseAuthorProtect',
-		'conflicts' => false,
+		'conflicts' => 'lockauthor',
 		'requires' => [],
 		'install' => [
 			'permissions' => [
@@ -1127,6 +1127,23 @@ $wgManageWikiExtensions = [
 				'user' => [
 					'permissions' => [
 						'authorprotect',
+					],
+				],
+			],
+		],
+		'section' => 'antispam',
+	],
+	'lockauthor' => [
+		'name' => 'LockAuthor',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LockAuthor',
+		'var' => 'wmgUseLockAuthor',
+		'conflicts' => 'authorprotect',
+		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'editall',
 					],
 				],
 			],
