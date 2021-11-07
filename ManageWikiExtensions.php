@@ -280,6 +280,26 @@ $wgManageWikiExtensions = [
 				'watch' => "$IP/extensions/CommentStreams/sql/watch.sql",
 				'cs137temp' => '/srv/mediawiki/config/commentstreams_temp.sql',
 			],
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'cs-comment',
+					],
+				],
+				'csmoderator' => [
+					'permissions' => [
+						'cs-moderator-delete',
+					],
+				],
+				'bureaucrat' => [
+					'addgroups' => [
+						'csmoderator',
+					],
+					'removegroups' => [
+						'csmoderator',
+					],
+				],
+			],
 		],
 		'section' => 'parserhooks',
 	],
@@ -2943,6 +2963,18 @@ $wgManageWikiExtensions = [
 				'spritesheet' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet.sql",
 				'spritesheet_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet_rev.sql"
 
+			],
+			'permissions' => [
+				'autoconfirmed' => [
+					'permissions' => [
+						'edit_sprites',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'spritesheet_rollback',
+					],
+				],
 			],
 		],
 		'section' => 'other',
