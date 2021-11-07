@@ -117,6 +117,7 @@ $IP/extensions/LinkTitles/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/Listings/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
+$IP/extensions/LockAuthor/extension.json
 $IP/extensions/LoginNotify/extension.json
 $IP/extensions/LogoFunctions/extension.json
 $IP/extensions/Loops/extension.json
