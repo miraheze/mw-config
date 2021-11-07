@@ -2244,11 +2244,6 @@ $wi->config->settings += [
 				'managewiki-restricted' => true,
 			],
 		],
-		'+lhmnwiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'+memeswiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
@@ -3349,7 +3344,7 @@ $wi->config->settings += [
 			'co',
 		],
 		'+lhmnwiki' => [
-			'editextendedconfirmedprotected',
+			'editqualityarticles',
 		],
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
@@ -3424,7 +3419,7 @@ $wi->config->settings += [
 			'editextendedconfirmedprotected',
 		],
 		'lhmnwiki' => [
-			'editextendedconfirmedprotected',
+			'editqualityarticles',
 		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
