@@ -1676,7 +1676,7 @@ $wi->config->settings += [
 			'scratchwiki',
 			'snapwiki',
 		],
-		'+reviwikiwiki' => [
+		'+reviwiki' => [
 			'wikipedia' => [
 				'en',
 				'ko'
@@ -1916,7 +1916,7 @@ $wi->config->settings += [
 		'quyranesswiki' => '©2021 TheBurningPrincess (All Rights Reserved)',
 		'rctwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'revitwiki' => '©2013-2021 by Lionel J. Camara (All Rights Reserved)',
-		'reviwikiwiki' => 'Creative Commons Attribution Share Alike',
+		'reviwiki' => 'Creative Commons Attribution Share Alike',
 		'taerelvariwiki' => '©2021 TheBurningPrincess (All Rights Reserved)',
 		'wikidemocracywiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'wikigrowthwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -1940,7 +1940,7 @@ $wi->config->settings += [
 		'quyranesswiki' => 'https://quyraness.miraheze.org/wiki/MediaWiki:Copyright',
 		'rctwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
-		'reviwikiwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
+		'reviwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
 		'taerelvariwiki' => 'https://taerelvari.miraheze.org/wiki/MediaWiki:Copyright',
 		'wikidemocracywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'wikigrowthwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
@@ -3177,7 +3177,7 @@ $wi->config->settings += [
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
-		'+reviwikiwiki' => [
+		'+reviwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 		],
