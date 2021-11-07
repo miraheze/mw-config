@@ -968,6 +968,18 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'templatestylesextender' => [
+		'name' => 'TemplateStylesExtender',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TemplateStylesExtender',
+		'var' => 'wmgUseTemplateStylesExtender',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'templatestyles',
+			],
+		],
+		'section' => 'parserhooks',
+	],
 	'toctree' => [
 		'name' => 'TocTree',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TocTree',
