@@ -1228,7 +1228,7 @@ $wi->config->settings += [
 				'miraheze' => [
 					'src' => "https://$wmgUploadHostname/commonswiki/6/61/Hosted_by_Miraheze.png",
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Miraheze Wiki Hosting'
+					'alt' => 'Hosted by Miraheze'
 				]
 			]
 		]
