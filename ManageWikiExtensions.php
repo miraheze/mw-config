@@ -1610,7 +1610,7 @@ $wgManageWikiExtensions = [
 		'section' => 'specialpages',
 	],
 	'quizgame' => [
-		'name' => 'Quiz Game (SocialProfile)',
+		'name' => 'QuizGame',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:QuizGame',
 		'var' => 'wmgUseQuizGame',
 		'conflicts' => false,
