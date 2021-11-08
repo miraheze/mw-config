@@ -281,7 +281,7 @@ $wgManageWikiExtensions = [
 				'cs137temp' => '/srv/mediawiki/config/commentstreams_temp.sql',
 			],
 			'permissions' => [
-				'*' => [
+				'user' => [
 					'permissions' => [
 						'cs-comment',
 					],
