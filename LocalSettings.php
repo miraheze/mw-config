@@ -2080,11 +2080,6 @@ $wi->config->settings += [
 	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
 		'default' => [],
-		'rf1botwiki' => [
-			'bureaucrat' => [
-				'Repo_Maintainer',
-			],
-		],
 		'sesupportwiki' => [
 			'sysop' => [
 				'editor',
@@ -2322,16 +2317,6 @@ $wi->config->settings += [
 				'edit-admin-pages' => true,
 			],
 		],
-		'+quircwiki' => [
-			'QuIRC_Staff' => [
-				'editstaffprotected' => true,
-			],
-		],
-		'+rf1botwiki' => [
-			'Repo_Maintainer' => [
-				'editrepos' => true,
-			],
-		],
 		'+sesupportwiki' => [
 			'editor' => [
 				'editor' => true,
@@ -2383,11 +2368,6 @@ $wi->config->settings += [
 	],
 	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
 		'default' => [],
-		'rf1botwiki' => [
-			'bureaucrat' => [
-				'Repo_Maintainer',
-			],
-		],
 		'sesupportwiki' => [
 			'sysop' => [
 				'editor',
@@ -3357,12 +3337,6 @@ $wi->config->settings += [
 		'+naasgamelandwiki' => [
 			'editarchiveprotected',
 			'editofficialprotected',
-		],
-		'+quircwiki' => [
-			'editstaffprotected',
-		],
-		'+rf1botwiki' => [
-			'editrepos',
 		],
 		'+sesupportwiki' => [
 			'editor',
