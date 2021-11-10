@@ -3097,33 +3097,33 @@ $wi->config->settings += [
 		],
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
-				'default' => [
-					'steward' => [
-						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
-						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
-						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					],
-					'sysadmin' => [
-						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
-						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
-						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					],
-					'trustandsafety' => [
-						'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
-						'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-						'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
-						'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-					],
-				],
+		'default' => [
+			'steward' => [
+				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 			],
+			'sysadmin' => [
+				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+			],
+			'trustandsafety' => [
+				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+			],
+		],
+	],
 
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
