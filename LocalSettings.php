@@ -336,6 +336,15 @@ $wi->config->settings += [
 	],
 	'wgCargoPageDataColumns' => [
 		'default' => [],
+		'dmlwikiwiki' => [
+			'creationDate',
+			'modificationDate',
+			'creator',
+			'fullText',
+			'categories',
+			'numRevisions',
+			'isRedirect',
+		],
 		'egoishwiki' => [
 			'creationDate',
 			'modificationDate',
