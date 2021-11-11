@@ -419,6 +419,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enable in talk namespaces',
 		'requires' => [],
 	],
+	'wgCommentStreamsEnableSearch' => [
+		'name' => 'CommentStreams Enable Search',
+		'from' => 'commentstreams',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'discussion',
+		'help' => 'Allow comments and their titles to appear in search results and search auto-complete',
+		'requires' => [],
+	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
 		'name' => 'CommentStreams Newest Streams On Top',
 		'from' => 'commentstreams',
