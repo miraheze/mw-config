@@ -534,6 +534,9 @@ $wi->config->settings += [
 	'wgCommentStreamsEnableTalk' => [
 		'default' => false,
 	],
+	'wgCommentStreamsEnableSearch' => [
+		'default' => true,
+	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
 		'default' => false,
 	],
