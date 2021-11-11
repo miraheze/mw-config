@@ -425,7 +425,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'discussion',
-		'help' => 'Allow comments and their titles to appear in search results and search auto-complete',
+		'help' => 'Allow comments and their titles to appear in search results and search auto-complete?',
 		'requires' => [],
 	],
 	'wgCommentStreamsNewestStreamsOnTop' => [
