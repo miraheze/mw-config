@@ -16,14 +16,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'erislywiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
-			$out->addMeta( 'PreMiD_Presence', 'Erisly' );
-		}
-
-		break;
 	case 'hololivewiki':
 		$wgHooks['ParserCacheSaveComplete'][] = 'onParserCacheSaveComplete';
 
