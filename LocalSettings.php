@@ -1718,6 +1718,12 @@ $wi->config->settings += [
 			'zhwikipedia',
 		],
 	],
+	
+		],
+		'+zhwpwikiwiki' => [
+			'zhwp',
+		],
+	],
 
 	// JavascriptSlideshow
 	'wgHtml5' => [
