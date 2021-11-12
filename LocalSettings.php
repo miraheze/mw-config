@@ -1712,11 +1712,10 @@ $wi->config->settings += [
 		'+wikitrashwiki' => [
 			'wikipedia' => [
 				'it',
+			],
 		],
 		'+zhwpwikiwiki' => [
 			'zhwp',
-		],
-		
 		],
 		'+zhdelwiki' => [
 			'zhwikipedia',
