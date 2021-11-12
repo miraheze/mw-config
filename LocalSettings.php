@@ -1713,14 +1713,13 @@ $wi->config->settings += [
 			'wikipedia' => [
 				'it',
 			],
+		'+zhwpwikiwiki' => [
+			'zhwp',
+		],
+		
 		],
 		'+zhdelwiki' => [
 			'zhwikipedia',
-		],
-	
-		],
-		'+zhwpwikiwiki' => [
-			'zhwp',
 		],
 	],
 
