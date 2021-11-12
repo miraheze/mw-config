@@ -101,3 +101,21 @@ if ( $wgDBname === 'famepediawiki' ) {
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
 }
+
+if ( $wgDBname === 'gratisdatawiki' ) {
+	$wgWBRepoSettings['statementSections'] = [
+		'item' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [
+					'external-id',
+				],
+			],
+		],
+	];
+}
+
+if ( $wgDBname === 'gratispaideiawiki' ) {
+	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
+}
