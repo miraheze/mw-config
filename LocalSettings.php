@@ -1717,7 +1717,6 @@ $wi->config->settings += [
 		'+zhdelwiki' => [
 			'zhwikipedia',
 		],
-	],
 	
 		],
 		'+zhwpwikiwiki' => [
