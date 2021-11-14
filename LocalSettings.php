@@ -3324,6 +3324,10 @@ $wi->config->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
+		'+gratispaideiawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
 		'+hypopediawiki' => [
 			'bureaucrat',
 			'editextendedconfirmedprotected',
@@ -3398,6 +3402,10 @@ $wi->config->settings += [
 			'edittemplateprotected',
 		],
 		'famepediawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
