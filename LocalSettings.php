@@ -1714,6 +1714,11 @@ $wi->config->settings += [
 				'it',
 			],
 		],
+		'+zealandiawiki' => [
+			'wikia' => [
+				'adoriasim',
+			],
+		],
 		'+zhwpwikiwiki' => [
 			'zhwp',
 		],
