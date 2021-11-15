@@ -2333,6 +2333,11 @@ $wgManageWikiExtensions = [
 				'visualeditor',
 			],
 		],
+		'install' => [
+			'sql' => [
+				'discussiontools_subscription' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_subscription.sql",
+			],
+		],
 		'section' => 'other',
 	],
 	'dynamicsidebar' => [
