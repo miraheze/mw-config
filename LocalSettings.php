@@ -3332,6 +3332,11 @@ $wi->config->settings += [
 			'bureaucrat',
 			'editextendedconfirmedprotected',
 		],
+		'+hypotheticalhurricaneswiki' => [
+			'editextendedconfirmedprotected',
+			'editbureaucratprotected',
+			'editleaderprotected',
+		],
 		'+igrovyesistemywiki' => [
 			'trusted',
 			'sysmag',
@@ -3411,6 +3416,11 @@ $wi->config->settings += [
 		],
 		'hypopediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'hypotheticalhurricaneswiki' => [
+			'editextendedconfirmedprotected',
+			'editbureaucratprotected',
+			'editleaderprotected',
 		],
 		'lhmnwiki' => [
 			'editqualityarticles',
