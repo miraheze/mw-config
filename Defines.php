@@ -58,6 +58,8 @@ if (
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 }
 
+$wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
+
 // Closed Wikis
 if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
