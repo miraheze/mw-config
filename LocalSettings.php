@@ -2735,6 +2735,11 @@ $wi->config->settings += [
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
 	],
+	'+wgAllowedCorsHeaders' => [
+		'default' => [
+			'X-Miraheze-Debug',
+		],
+	],
 	'wgCrossSiteAJAXdomains' => [
 		'default' => [
 			'login.miraheze.org',
