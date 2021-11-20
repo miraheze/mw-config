@@ -2038,6 +2038,12 @@ $wi->config->settings += [
 		],
 	],
 
+	// Loops
+	'egLoopsCountLimit' => [
+		'default' => 100,
+		'constantnoblewiki' => 200,
+	],
+
 	// Mail
 	'wgEnableEmail' => [
 		'default' => true,
