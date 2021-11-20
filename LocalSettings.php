@@ -2735,6 +2735,12 @@ $wi->config->settings += [
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
 	],
+	'wgCrossSiteAJAXdomains' => [
+		'default' => [
+			'login.miraheze.org',
+			'meta.miraheze.org',
+		],
+	],
 	'wgTidyConfig' => [
 		'default' => [
 			'driver' => 'RemexHtml',
