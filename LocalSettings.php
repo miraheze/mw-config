@@ -1239,9 +1239,9 @@ $wi->config->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => "https://$wmgUploadHostname/metawiki/7/7e/Powered_by_Miraheze.png",
+					'src' => "https://$wmgUploadHostname/commonswiki/f/ff/Powered_by_Miraheze.svg",
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Miraheze Wiki Hosting'
+					'alt' => 'Hosted by Miraheze'
 				]
 			]
 		]
