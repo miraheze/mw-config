@@ -1658,6 +1658,12 @@ $wi->config->settings += [
 			'd',
 
 		],
+		'+bnwikiwiki' => [
+			'wikipedia' => [
+				'bn',
+				'en',
+			],
+		],
 		'+hypixelwiki' => [
 			'hypixelwikifandom',
 		],
