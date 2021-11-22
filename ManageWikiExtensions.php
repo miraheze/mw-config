@@ -1531,7 +1531,14 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NukeDPL',
 		'var' => 'wmgUseNukeDPL',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				[
+					'dynamicpagelist',
+					'dynamicpagelist3',
+				],
+			],
+		],
 		'install' => [
 			'permissions' => [
 				'sysop' => [
