@@ -1009,10 +1009,6 @@ $wi->config->settings += [
 	'wgReadOnly' => [
 		'default' => false,
 	],
-	'wgSharedDB' => [
-		'default' => 'metawiki', // REMOVE?
-		'test3wiki' => null,
-	],
 	'wgSharedTables' => [
 		'default' => [],
 	],
