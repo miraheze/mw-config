@@ -973,9 +973,6 @@ $wi->config->settings += [
 	'wgReadOnly' => [
 		'default' => false,
 	],
-	'wgSharedDB' => [
-		'default' => null,
-	],
 	'wgSharedTables' => [
 		'default' => [],
 	],
