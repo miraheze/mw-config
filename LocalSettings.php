@@ -3301,6 +3301,12 @@ $wi->config->settings += [
 	'wgRemovePIIHashPrefix' => [
 		'default' => 'MirahezeGDPR_',
 	],
+	'wgRemovePIIAllowedWikis' => [
+		'default' => [
+			'metawiki',
+			'test3wiki',
+		],
+	],
 
 	// ReplaceText
 	'wgReplaceTextResultsLimit' => [
