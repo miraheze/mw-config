@@ -3307,7 +3307,6 @@ $wi->config->settings += [
 	],
 	'wgRemovePIIAllowedWikis' => [
 		'default' => [
-			'loginwiki',
 			'metawiki',
 			'test3wiki',
 		],
