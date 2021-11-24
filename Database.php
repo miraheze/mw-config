@@ -43,7 +43,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 			'db11' => 1, // should echo c1
 		],
 		'beta' => [
-			'db11' => 1, // should echo c1 (for now)
+			'db12' => 1, // should echo c3 (where test3wiki is located)
 		],
 	],
 	'readOnlyBySection' => [
