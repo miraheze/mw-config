@@ -3372,6 +3372,7 @@ $wi->config->settings += [
 		],
 		'+lhmnwiki' => [
 			'editqualityarticles',
+			'editextendedconfirmedprotected',
 		],
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
@@ -3450,6 +3451,7 @@ $wi->config->settings += [
 		],
 		'lhmnwiki' => [
 			'editqualityarticles',
+			'editextendeconfirmedprotected',
 		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
