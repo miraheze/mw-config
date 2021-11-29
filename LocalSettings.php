@@ -2343,6 +2343,11 @@ $wi->config->settings += [
 				'edit-admin-pages' => true,
 			],
 		],
+		'+nicolopediawiki' => [
+			'templateeditor' => [
+				'edittemplateprotected' => true,
+			],
+		],
 		'+sesupportwiki' => [
 			'editor' => [
 				'editor' => true,
@@ -3386,6 +3391,9 @@ $wi->config->settings += [
 			'editarchiveprotected',
 			'editofficialprotected',
 		],
+		'+nicolopediawiki' => [
+			'edittemplateprotected',
+		],
 		'+sesupportwiki' => [
 			'editor',
 		],
@@ -3460,6 +3468,9 @@ $wi->config->settings += [
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
 			'editofficialprotected',
+		],
+		'nicolopediawiki' => [
+			'edittemplateprotected',
 		],
 		'simulatorwiki' => [
 			'editfragment',
