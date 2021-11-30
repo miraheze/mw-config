@@ -314,7 +314,7 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgReCaptchaSiteKey' => [
-		'default' => '6LcrxU4bAAAAAL6RgJePDZGCYsw-plPdk81qclKn',
+		'default' => '6LeR1msdAAAAAEMnmLm8lI0HMP5wFvYuQFdYX8NH',
 	],
 	'wgReCaptchaVersion' => [
 		'default' => 'v3',
