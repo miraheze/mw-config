@@ -113,6 +113,15 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 				],
 			],
 		],
+		'property' => [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [
+					'P142',
+				],
+			],
+		],
 	];
 }
 
