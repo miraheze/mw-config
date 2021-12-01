@@ -818,7 +818,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'randomgameunit' => [
-		'name' => 'RandomGameUnit (SocialProfile)',
+		'name' => 'RandomGameUnit',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomGameUnit',
 		'var' => 'wmgUseRandomGameUnit',
 		'conflicts' => false,
