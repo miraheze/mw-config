@@ -1311,7 +1311,6 @@ $wi->config->settings += [
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
 			1, // John (SRE)
-			2, // Southparkfan (Board)
 			19, // Reception123 (SRE)
 			5258, // Void (SRE and Board)
 			13554, // Paladox (SRE)
