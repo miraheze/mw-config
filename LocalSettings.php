@@ -2021,6 +2021,7 @@ $wi->config->settings += [
 	'egLoopsCountLimit' => [
 		'default' => 100,
 		'constantnoblewiki' => 200,
+		'dragontamerwiki' => 300,
 	],
 
 	// Mail
