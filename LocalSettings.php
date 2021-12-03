@@ -698,27 +698,33 @@ $wi->config->settings += [
 	'wgCosmosContentOpacityLevel' => [
 		'default' => 100,
 	],
-	'+wgCosmosEnabledRailModules' => [
-		'default' => [],
-		'batfamilywiki' => [
+	'wgCosmosEnabledRailModules' => [
+		'default' => [
+			'recentchanges' => 'normal',
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
+		'+batfamilywiki' => [
 			'recentchanges' => 0,
 		],
-		'batmanwiki' => [
+		'+batmanwiki' => [
 			'recentchanges' => 0,
 		],
-		'devilmanwiki' => [
+		'+devilmanwiki' => [
 			'recentchanges' => 0,
 		],
-		'malwiki' => [
+		'+malwiki' => [
 			'recentchanges' => 0,
 		],
-		'snapwikiwiki' => [
+		'+snapwikiwiki' => [
 			'recentchanges' => 0,
 		],
-		'softcellwiki' => [
+		'+softcellwiki' => [
 			'recentchanges' => 0,
 		],
-		'thewhiteroomwiki' => [
+		'+thewhiteroomwiki' => [
 			'recentchanges' => 0,
 		],
 	],
