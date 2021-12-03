@@ -698,55 +698,28 @@ $wi->config->settings += [
 	'wgCosmosContentOpacityLevel' => [
 		'default' => 100,
 	],
-	'wgCosmosEnabledRailModules' => [
-		'default' => [
-			'recentchanges' => 'normal',
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
-		],
+	'+wgCosmosEnabledRailModules' => [
+		'default' => [],
 		'batfamilywiki' => [
-			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
+			'recentchanges' => 0,
 		],
 		'batmanwiki' => [
-			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
+			'recentchanges' => 0,
+		],
+		'devilmanwiki' => [
+			'recentchanges' => 0,
 		],
 		'malwiki' => [
-			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
+			'recentchanges' => 0,
 		],
 		'snapwikiwiki' => [
-			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
-		],
-		'thewhiteroomwiki' => [
-			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
+			'recentchanges' => 0,
 		],
 		'softcellwiki' => [
-			'recentchanges' => false,
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
+			'recentchanges' => 0,
+		],
+		'thewhiteroomwiki' => [
+			'recentchanges' => 0,
 		],
 	],
 	'wgCosmosEnableWantedPages' => [
