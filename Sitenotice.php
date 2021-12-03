@@ -41,4 +41,4 @@ $wgMajorSiteNoticeID = 60;
 				</tr></tbody></table></div>
 		EOF;
 	}
-} 
+ }
