@@ -805,6 +805,7 @@ $wi->config->settings += [
 			'mwtask\d{0,2}',
 			'security',
 			'deployment',
+			'.*beta',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
