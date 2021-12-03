@@ -715,6 +715,9 @@ $wi->config->settings += [
 		'+devilmanwiki' => [
 			'recentchanges' => 0,
 		],
+		'+dragontamerwiki' => [
+			'recentchanges' => 0,
+		],
 		'+malwiki' => [
 			'recentchanges' => 0,
 		],
