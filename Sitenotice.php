@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 60;
 }*/
 
 # Specific wiki SiteNotice
- if ( $wmgUseLiberty ) {
+ if ( $wi->config->get( 'wmgUseLiberty', $wi->dbname ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
