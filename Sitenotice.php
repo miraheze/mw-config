@@ -14,7 +14,7 @@ $wgMajorSiteNoticeID = 60;
  */
 
 # Global SiteNotice
-/*if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -22,12 +22,12 @@ $wgMajorSiteNoticeID = 60;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze is currently doing file storage maintenance right now. You won't be able to upload any files or make any changes until 21:00 UTC time. We apologise for any inconvenience caused by this.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze will be upgrading to the latest version of MediaWiki (1.37) on Tuesday 7 December 2021 from <b><u>17:00 UTC</b></u> to approximately 20:00 UTC. During this time, you will not be able to edit your wiki. Please make sure to save any edits 5 minutes before the upgrade begins.  </div></td>
 			</tr></tbody></table>
 		EOF;
 	}
-}*/
-
+}
+/*
 # Specific wiki SiteNotice
  if ( $wmgUseLiberty ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -41,4 +41,4 @@ $wgMajorSiteNoticeID = 60;
 				</tr></tbody></table></div>
 		EOF;
 	}
- }
+ }*/
