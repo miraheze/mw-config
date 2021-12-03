@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 60;
 }*/
 
 # Specific wiki SiteNotice
-/* if ( $wgDiscordIncomingWebhookUrl || $wgSlackIncomingWebhookUrl ) {
+ if ( $wmgUseLiberty ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -37,8 +37,8 @@ $wgMajorSiteNoticeID = 60;
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td>Unfortunately, between 3 January 2021 and 28 April 2021, Discord & Slack Webhook URLs were available via the MediaWiki API due to <a href="https://github.com/miraheze/ManageWiki/security/advisories/GHSA-jmc9-rv2f-g8vv">GHSA-jmc9-rv2f-g8vv</a>. We advise you to consider resetting and replacing your Discord or Slack webhook via Special:ManageWiki/settings.</td>
+				<td>The Liberty skin will be removed on Sunday 5 December 2021 in preparation for the upcoming upgrade to MediaWiki 1.37 due to lack of compatibility with new MediaWiki version. Please see <CN link> for more information.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
-} */
+} 
