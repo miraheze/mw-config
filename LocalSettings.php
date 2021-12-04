@@ -1235,17 +1235,6 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
-	// Liberty
-	'wgLibertyMainColor' => [
-		'default' => '#4188F1',
-	],
-	'wgLibertySecondColor' => [
-		'default' => '#2774DC',
-	],
-	'wgLibertyUseGravatar' => [
-		'default' => false,
-	],
-
 	// Files
 	'wgEnableUploads' => [
 		'default' => true,
