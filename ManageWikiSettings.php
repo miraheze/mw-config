@@ -2944,8 +2944,8 @@ $wgManageWikiSettings = [
 		'help' => 'The color defined in the <code>theme-color</code> meta tag.',
 		'requires' => [],
 	],
-	'wgRelatedArticlesFooterWhitelistedSkins' => [
-		'name' => 'RelatedArticles Footer Whitelisted Skins',
+	'wgRelatedArticlesFooterAllowedSkins' => [
+		'name' => 'RelatedArticles Footer Allowed Skins',
 		'from' => 'relatedarticles',
 		'type' => 'skins',
 		'options' => [],
