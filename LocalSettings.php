@@ -92,7 +92,7 @@ $wi->config->settings += [
 		'test3wiki' => true,
 	],
 	'wgAbuseFilterBlockDuration' => [
-		'default' => 'indefinte',
+		'default' => 'indefinite',
 	],
 	'wgAbuseFilterAnonBlockDuration' => [
 		'default' => 2592000,
