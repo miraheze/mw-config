@@ -3257,7 +3257,7 @@ $wi->config->settings += [
 	],
 
 	// RelatedArticles
-	'wgRelatedArticlesFooterWhitelistedSkins' => [
+	'wgRelatedArticlesFooterAllowedSkins' => [
 		'default' => [
 			'minerva',
 			'timeless',
@@ -3917,9 +3917,6 @@ $wi->config->settings += [
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
 		'test3wiki' => 'test3wiki',
-	],
-	'wgUrlShortenerDomainsWhitelist' => [
-		'default' => [],
 	],
 	'wgUrlShortenerAllowedDomains' => [
 		'default' => [
