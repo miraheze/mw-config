@@ -97,7 +97,7 @@ $wi->config->settings += [
 	'wgAbuseFilterAnonBlockDuration' => [
 		'default' => 2592000,
 	],
-	'wgAbuseFilterRestrictions' => [
+	'wgAbuseFilterActionRestrictions' => [
 		'default' => [
 			'blockautopromote' => true,
 			'block' => true,
