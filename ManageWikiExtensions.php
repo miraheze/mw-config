@@ -553,7 +553,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Lingo',
 		'description' => 'Provides hover-over tool tips on pages from words defined on a wiki page',
 		'var' => 'wmgUseLingo',
-		'conflicts' => false,
+		'conflicts' => 'newsletter',
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
@@ -2582,7 +2582,7 @@ $wgManageWikiExtensions = [
 		'name' => 'Newsletter',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Newsletter',
 		'var' => 'wmgUseNewsletter',
-		'conflicts' => false,
+		'conflicts' => 'lingo',
 		'requires' => [],
 		'install' => [
 			'namespaces' => [
