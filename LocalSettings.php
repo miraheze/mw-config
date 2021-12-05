@@ -97,14 +97,6 @@ $wi->config->settings += [
 	'wgAbuseFilterAnonBlockDuration' => [
 		'default' => 2592000,
 	],
-	'wgAbuseFilterRestrictions' => [
-		'default' => [
-			'blockautopromote' => true,
-			'block' => true,
-			'degroup' => true,
-			'rangeblock' => true,
-		],
-	],
 	'wgAbuseFilterNotifications' => [
 		'default' => 'udp',
 	],
