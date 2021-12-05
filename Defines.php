@@ -2,7 +2,10 @@
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' ) {
-	wfLoadExtension( 'CentralAuth' );
+	wfLoadExtensions( [
+		'CentralAuth',
+		'GlobalPreferences',
+	] );
 }
 
 if ( $wi->config->get( 'wmgUseChameleon', $wi->dbname ) ) {
