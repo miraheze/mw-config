@@ -423,18 +423,23 @@ $wi->config->settings += [
 	'wgNoticeInfrastructure' => [
 		'default' => false,
 		'metawiki' => true,
+		'test3wiki' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
+		'test3wiki' => 'https://test3.miraheze.org/w/index.php/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
+		'test3wiki' => 'https://test3.miraheze.org/w/index.php/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki',
 	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
+		'default' => 'https://test3.miraheze.org',
 	],
 	'wgNoticeProject' => [
 		'default' => 'all',
