@@ -110,7 +110,7 @@ if ( $cwExperimental ) {
 	$wgParserEnableLegacyMediaDOM = false;
 } else {
 	$wgParserEnableLegacyMediaDOM = false;
-        $wgUseContentMediaStyles = true;
+		$wgUseContentMediaStyles = true;
 }
 
 // $wmgPrivateUploads
