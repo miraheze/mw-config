@@ -982,7 +982,7 @@ $wi->config->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => 'Miraheze is upgrading to MediaWiki 1.37. Please see the sitenotice for more information',
+		'default' => false,
 	],
 	'wgSharedTables' => [
 		'default' => [],
