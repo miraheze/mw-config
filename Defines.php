@@ -108,7 +108,7 @@ if ( !$cwPrivate ) {
 // Experimental Wikis
 if ( $cwExperimental ) {
 	$wgParserEnableLegacyMediaDOM = false;
-        $wgLocalFileRepo = [
+		$wgLocalFileRepo = [
 			'class' => LocalRepo::class,
 			'name' => 'local',
 			'directory' => $wgUploadDirectory,
