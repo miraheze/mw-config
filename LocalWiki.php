@@ -122,25 +122,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'test3wiki':
-		$wgLocalFileRepo = [
-			'class' => LocalRepo::class,
-			'name' => 'local',
-			'directory' => $wgUploadDirectory,
-			'scriptDirUrl' => $wgScriptPath,
-			'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-			'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
-			'thumbScriptUrl' => $wgThumbnailScriptPath,
-			'transformVia404' => !$wgGenerateThumbnailOnParse,
-			'deletedDir' => $wgDeletedDirectory,
-			'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
-			'updateCompatibleMetadata' => $wgUpdateCompatibleMetadata,
-			'reserializeMetadata' => $wgUpdateCompatibleMetadata,
-			'useJsonMetadata' => true,
-			'useSplitMetadata' => true,
-		];
-
-		break;
 	case 'traceprojectwikiwiki':
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
