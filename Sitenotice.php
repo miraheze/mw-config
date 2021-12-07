@@ -22,7 +22,7 @@ $wgMajorSiteNoticeID = 61;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze will be upgrading to the latest version of MediaWiki (1.37) on Tuesday 7 December 2021 from <b><u>17:00 UTC</b></u> to approximately 20:00 UTC. During this time, you will not be able to edit your wiki. Please make sure to save any edits 5 minutes before the upgrade begins.  </div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.37.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task or join our <a href="https://miraheze.org/discord" target="_blank">Discord server</a>.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
