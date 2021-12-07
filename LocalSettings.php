@@ -1574,6 +1574,7 @@ $wi->config->settings += [
 	],
 	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
+		'test3wiki' => 'test3wiki',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
