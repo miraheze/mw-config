@@ -4366,7 +4366,7 @@ $wi->readCache();
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [
-	'maps'
+	'Maps'
 ];
 
 $wi->config->extractAllGlobals( $wi->dbname );
