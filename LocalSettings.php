@@ -2490,6 +2490,7 @@ $wi->config->settings += [
 	'wgAllowGlobalMessaging' => [
 		'default' => false,
 		'metawiki' => true,
+		'test3wiki' => true,
 	],
 
 	// MatomoAnalytics
