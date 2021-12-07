@@ -275,10 +275,10 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'commentData' => "$IP/extensions/CommentStreams/sql/commentData.sql",
-				'votes' => "$IP/extensions/CommentStreams/sql/votes.sql",
-				'watch' => "$IP/extensions/CommentStreams/sql/watch.sql",
-				'cs137temp' => '/srv/mediawiki/config/commentstreams_temp.sql',
+				'cs_comments' => "$IP/extensions/CommentStreams/sql/mysql/cs_comments.sql",
+				'cs_replies' => "$IP/extensions/CommentStreams/sql/mysql/cs_replies.sql",
+				'cs_votes' => "$IP/extensions/CommentStreams/sql/mysql/cs_votes.sql",
+				'cs_watchlist' => "$IP/extensions/CommentStreams/sql/mysql/cs_watchlist.sql",
 			],
 			'permissions' => [
 				'user' => [
