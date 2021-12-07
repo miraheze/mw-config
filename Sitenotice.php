@@ -22,7 +22,7 @@ $wgMajorSiteNoticeID = 61;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.37.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task or join our <a href="https://miraheze.org/discord" target="_blank">Discord server</a>.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.37.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task or <a href="https://meta.miraheze.org/wiki/Community_noticeboard" target="_blank">community noticeboard</a> post.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
