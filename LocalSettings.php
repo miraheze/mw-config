@@ -1386,6 +1386,10 @@ $wi->config->settings += [
 			'wiki' => 'metawiki',
 			'source' => 'metawiki',
 		],
+		'test3wiki' => [
+			'wiki' => 'test3wiki',
+			'source' => 'test3wiki',
+		],
 	],
 	'+wgResourceLoaderSources' => [
 		'default' => [
@@ -1416,9 +1420,11 @@ $wi->config->settings += [
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
 		'default' => 'https://login.miraheze.org/w/api.php',
+		'test3wiki' => 'https://test3.miraheze.org/w/api.php',
 	],
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
+		'test3wiki' => 'test3wiki',
 	],
 
 	// Grant Permissions for BotPasswords and OAuth
