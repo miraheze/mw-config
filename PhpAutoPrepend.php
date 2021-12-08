@@ -20,7 +20,7 @@ function wfSetupProfiler() {
 			'output' => 'text',
 		];
 	}
-	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : '';
+	$host = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] ?? '';
 	if ( $host = 'mw8.miraheze.org' ) {
 		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
 		tideways_xhprof_enable( $xhprofFlags );
