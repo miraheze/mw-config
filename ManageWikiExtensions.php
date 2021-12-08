@@ -224,7 +224,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql"
+				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
+				'cargo_backlinks' => "$IP/extensions/Cargo/sql/cargo_backlinks.sql"
 			],
 			'permissions' => [
 				'*' => [
