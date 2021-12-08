@@ -26,7 +26,6 @@ if ( !$wmgSiteNoticeOptOut ) {
 			</tr></tbody></table>
 		EOF;
 	}
-
 }
 /*
 # Specific wiki SiteNotice
