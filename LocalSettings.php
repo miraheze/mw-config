@@ -1122,6 +1122,14 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// EmbedVideo
+	'wgEmbedVideoEnableVideoHandler' => [
+		'default' => true,
+	],
+	'wgEmbedVideoRequireConsent' => [
+		'default' => true,
+	],
+
 	// HTTP
 	'wgHTTPConnectTimeout' => [
 		'default' => 3.0,
