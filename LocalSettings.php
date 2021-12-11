@@ -1693,6 +1693,11 @@ $wi->config->settings += [
 		'+zealandiawiki' => [
 			'wikia' => [
 				'adoriasim',
+				'zealandian-republic',
+				'zealandia-polsim',
+				'zealandia-2',
+				'zealandian-legal-archives',
+				'zealandia-mapping',
 			],
 		],
 		'+zhwpwikiwiki' => [
