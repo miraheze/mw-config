@@ -14,7 +14,7 @@ $wgMajorSiteNoticeID = 62;
  */
 
 # Global SiteNotice
-if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -26,10 +26,10 @@ if ( !$wmgSiteNoticeOptOut ) {
 			</tr></tbody></table>
 		EOF;
 	}
-}
-/*
+} */
+
 # Specific wiki SiteNotice
- if ( $wmgUseLiberty ?? false ) {
+/* if ( $wmgUseLiberty ?? false ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -41,4 +41,4 @@ if ( !$wmgSiteNoticeOptOut ) {
 				</tr></tbody></table></div>
 		EOF;
 	}
- }*/
+ } */
