@@ -1147,59 +1147,27 @@ $wi->config->settings += [
 	],
 	'wgFlaggedRevsTags' => [
 		'default' => [
-			'status' => [
-				'levels' => 2,
+			'accuracy' => [
+				'levels' => 3,
+				'quality' => 2,
+				'pristine' => 4,
 			],
 		],
 		'infectopedwiki' => [
 			'accuracy' => [
 				'levels' => 4,
+				'quality' => 2,
+				'pristine' => 4,
 			],
 		],
-		'isvwiki' => [
+		'+isvwiki' => [
 			'status' => [
 				'levels' => 1,
 			],
 		],
 	],
-	'wgFlaggedRevsTagsRestrictions' => [
-		'default' => [
-			'status' => [
-				'review' => 1,
-				'autoreview' => 1,
-			],
-		],
-	],
-	'wgFlaggedRevsTagsAuto' => [
-		'default' => [
-			'status' => 1,
-		],
-	],
-	'wgFlaggedRevsAutopromote' => [
-		'default' => [
-			'days' => 14,
-			'edits' => 100,
-			'excludeLastDays' => 1,
-			'benchmarks' => 1,
-			'spacing' => 1,
-			'totalContentEdits' => 100,
-			'totalCheckedEdits' => 100,
-			'uniqueContentPages' => 10,
-			'editComments' => 80,
-			'userpageBytes' => 1,
-			'neverBlocked' => true,
-			'maxRevertedEditRatio' => 0.05,
-		],
-		'isvwiki' => false,
-	],
 	'wgFlaggedRevsAutoReview' => [
 		'default' => 3,
-	],
-	'wgFlaggedRevsRestrictionLevels' => [
-		'default' => [
-			'',
-			'sysop'
-		],
 	],
 	'wgSimpleFlaggedRevsUI' => [
 		'default' => true,
