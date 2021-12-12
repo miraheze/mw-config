@@ -4386,10 +4386,7 @@ $wi->readCache();
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [
-	'3d',
-	'Math'
-];
+$wi->disabledExtensions = [];
 
 $wi->config->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
