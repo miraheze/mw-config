@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 62;
 } */
 
 # Specific wiki SiteNotice
- if ( $wmgUseMath ?? false || $wmgUse3D ?? false ) {
+/* if ( $wmgUseLiberty ?? false ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -37,8 +37,8 @@ $wgMajorSiteNoticeID = 62;
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">The Math and 3D extensions are temporarily disabled for short maintenance. They should be re-enabled in a few minutes.</td>
+				<td style="font-size:125%">The Liberty skin will be removed on Sunday 5 December 2021 in preparation for the upcoming upgrade to MediaWiki 1.37 due to lack of compatibility with new MediaWiki version. Please see <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Removal_of_the_Liberty_skin">this post</a> for more information.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
- }
+ } */
