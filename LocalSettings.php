@@ -65,7 +65,7 @@ $wi->config->settings += [
 			'-a',
 			'-s',
 			'-ac -screen 0 1280x1024x24',
-			'/srv/3d2png/3d2png.js',
+			'/srv/3d2png/src/3d2png.js',
 		],
 	],
 
@@ -2878,7 +2878,7 @@ $wi->config->settings += [
 	// Math
 	'wgMathoidCli' => [
 		'default' => [
-			'/srv/mathoid/cli.js',
+			'/srv/mathoid/src/cli.js',
 			'-c',
 			'/etc/mathoid/config.yaml'
 		]
