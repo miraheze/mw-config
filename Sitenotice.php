@@ -37,7 +37,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">The Math and 3D extensions are temporarily disabled for short maintenance. They should be re-enabled in a few minutes. </td>
+				<td style="font-size:125%">The Math and 3D extensions are temporarily disabled for short maintenance. They should be re-enabled in a few minutes.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
