@@ -27,7 +27,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 		EOF;
 	}
 }
-/*
+
 # Specific wiki SiteNotice
  if ( $wmgUseMath ?? false || $wmgUse3D ?? false ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
@@ -41,4 +41,4 @@ if ( !$wmgSiteNoticeOptOut ) {
 				</tr></tbody></table></div>
 		EOF;
 	}
- }*/
+ }
