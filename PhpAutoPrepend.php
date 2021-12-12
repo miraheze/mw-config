@@ -20,19 +20,6 @@ function wfSetupProfiler() {
 			'output' => 'text',
 		];
 	}
-
-	if ( php_uname( 'n' ) === 'mw8' ) {
-		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-		tideways_xhprof_enable( $xhprofFlags );
-
-		$wmgProfiler = [
-			'class' => 'ProfilerXhprof',
-			'flags' => $xhprofFlags,
-			'running' => true,
-			'output' => 'ProfilerOutputDump',
-			'outputDir' => '/srv/mediawiki/cache/profile'
-		];
-	}
 }
 
 wfSetupProfiler();
