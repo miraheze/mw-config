@@ -3,7 +3,7 @@
 # Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
 	case 'constantnoblewiki':
-		$wgDplSettings['allowUnlimitedResults'] = true;
+		$wgDplSettings['maxResultCount'] = 2500;
 
 		break;
 	case 'dmlwikiwiki':
