@@ -4447,6 +4447,11 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once '/srv/mediawiki/config/ExtensionMessageFiles.php';
 }
 
+$wgActions['mcrundo'] = false;
+$wgActions['mcrrestore'] = false;
+$wgWhitelistRead = [];
+$wgWhitelistReadRegexp = [];
+
 // Last Stuff
 $wgConf = $wi->config;
 unset( $wi );
