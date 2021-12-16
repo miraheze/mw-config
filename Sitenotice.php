@@ -6,7 +6,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 62;
+$wgMajorSiteNoticeID = 63;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 62;
 } */
 
 # Specific wiki SiteNotice
-/* if ( $wmgUseLiberty ?? false ) {
+if ( $cwPrivate ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -37,8 +37,8 @@ $wgMajorSiteNoticeID = 62;
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">The Liberty skin will be removed on Sunday 5 December 2021 in preparation for the upcoming upgrade to MediaWiki 1.37 due to lack of compatibility with new MediaWiki version. Please see <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Removal_of_the_Liberty_skin">this post</a> for more information.</td>
+				<td style="font-size:125%">Due to an upstream issue with MediaWiki beyond our control, your wiki's contents could have been visible to certain malicious actors who purposefully attempted to view them. We have verified no one exploited the vulnerability to attempt and view private wiki contents in the last few days. Please see <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Security_disclosure">this Meta post</a> and <a href="https://www.mediawiki.org/wiki/2021-12_security_release/FAQ">this MediaWiki.org FAQ</a> for more information.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
- } */
+ }
