@@ -102,7 +102,7 @@ if ( !$cwPrivate ) {
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
-	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
+	// $wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
 }
 
 // Experimental Wikis
