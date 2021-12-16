@@ -37,7 +37,7 @@ if ( $wmgPrivateWiki = true ) {
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Due to an upstream issue with MediaWiki beyond our control, your wiki could have been visible to certain malicious actors who purposefully attempted to view it. We have verified no one exploited the vulnerability to attempt and view private wiki contents in the last few days. Please see <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Security_disclosure">this Meta post</a> and <a href="https://www.mediawiki.org/wiki/2021-12_security_release/FAQ">this MediaWiki.org FAQ</a> for more information.</td>
+				<td style="font-size:125%">Due to an upstream issue with MediaWiki beyond our control, your wiki's contents could have been visible to certain malicious actors who purposefully attempted to view them. We have verified no one exploited the vulnerability to attempt and view private wiki contents in the last few days. Please see <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Security_disclosure">this Meta post</a> and <a href="https://www.mediawiki.org/wiki/2021-12_security_release/FAQ">this MediaWiki.org FAQ</a> for more information.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
