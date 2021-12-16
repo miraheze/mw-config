@@ -104,6 +104,7 @@ if ( !$cwPrivate ) {
 	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
 	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
 
+	// Never allow Special:Preferences to be whitelisted (T8448)
 	if ( $wgWhitelistRead['Special:Preferences'] ?? false ) {
 		unset( $wgWhitelistRead['Special:Preferences'] );
 	}
