@@ -6,7 +6,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 62;
+$wgMajorSiteNoticeID = 63;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 62;
 } */
 
 # Specific wiki SiteNotice
-if ( $wmgPrivateWiki = true ) {
+if ( $cwPrivate ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
