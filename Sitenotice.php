@@ -41,4 +41,4 @@ if ( $cwPrivate ) {
 				</tr></tbody></table></div>
 		EOF;
 	}
- }
+}
