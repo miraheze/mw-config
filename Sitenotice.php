@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 63;
 } */
 
 # Specific wiki SiteNotice
-if ( $cwPrivate ) {
+/* if ( $cwPrivate ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -41,4 +41,4 @@ if ( $cwPrivate ) {
 				</tr></tbody></table></div>
 		EOF;
 	}
-}
+} */
