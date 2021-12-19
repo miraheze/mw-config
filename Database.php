@@ -43,7 +43,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 			'db11' => 1, // should echo c1
 		],
 		'beta' => [
-			'db12' => 1, // should echo c3 (where betawiki is located)
+			'db13' => 1, // should echo c4 (where betawiki is located)
 		],
 	],
 	'readOnlyBySection' => [
