@@ -112,17 +112,26 @@ if ( !$cwPrivate ) {
 
 // Experimental Wikis
 if ( $cwExperimental ) {
-	$wgIncludejQueryMigrate = false;
-	if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
-		$wgParserEnableLegacyMediaDOM = false;
-	} else {
-		$wgUseNewMediaStructure = true;
-	}
+	$wgParserEnableLegacyMediaDOM = false;
+
+	$wgLocalFileRepo = [
+		'class' => LocalRepo::class,
+		'name' => 'local',
+		'directory' => $wgUploadDirectory,
+		'scriptDirUrl' => $wgScriptPath,
+		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+		'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => $wgThumbnailScriptPath,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'deletedDir' => $wgDeletedDirectory,
+		'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
+		'updateCompatibleMetadata' => $wgUpdateCompatibleMetadata,
+		'reserializeMetadata' => $wgUpdateCompatibleMetadata,
+		'useJsonMetadata' => true,
+		'useSplitMetadata' => true,
+	];
 } else {
-	$wgIncludejQueryMigrate = true;
-	if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
-		$wgParserEnableLegacyMediaDOM = true;
-	}
+	$wgParserEnableLegacyMediaDOM = true;
 }
 
 // $wmgPrivateUploads
