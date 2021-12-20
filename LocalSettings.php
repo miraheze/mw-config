@@ -41,8 +41,8 @@ $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
 
-$betaWikis = ['betawiki'];  // not test3 as that will be binned
-if ( in_array($wi->dbname, $betaWikis) ) {
+$betaWikis = [ 'betawiki' ];  // not test3 as that will be binned
+if ( in_array( $wi->dbname, $betaWikis ) ) {
 	require_once '/srv/mediawiki/config/BetaSettings.php';
 } else {
 	require_once '/srv/mediawiki/config/ProductionSettings.php';
