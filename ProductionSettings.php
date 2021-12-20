@@ -6,7 +6,7 @@
 $wgAbuseFilterCentralDB = 'metawiki';
 
 // BotPasswords
-$wgBotPasswordsDatabase = 'metawiki';
+$wgBotPasswordsDatabase = 'mhglobal';
 
 // CentralNotice
 $wgCentralSelectedBannerDispatcher = 'https://meta.miraheze.org/w/index.php/Special:BannerLoader';
@@ -29,8 +29,8 @@ $wgGlobalCssJsConfig['source'] = 'metawiki';
 $wgGlobalCssJsConfig['wiki'] = 'metawiki';
 
 // GlobalUserPage
-$wgGlobalUserPageAPIUrl = 'https://meta.miraheze.org/w/api.php';
-$wgGlobalUserPageDBname = 'metawiki';
+$wgGlobalUserPageAPIUrl = 'https://login.miraheze.org/w/api.php';
+$wgGlobalUserPageDBname = 'loginwiki';
 
 // Interwiki
 $wgInterwikiCentralDB = 'metawiki';
