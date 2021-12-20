@@ -488,7 +488,6 @@ $wi->config->settings += [
 				'steward',
 			],
 		],
-		],
 	],
 	'wgCheckUserCAMultiLock' => [
 		'default' => [
