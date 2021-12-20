@@ -90,9 +90,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgAbuseFilterCentralDB' => [
-		'default' => 'metawiki',
 		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
 	],
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
@@ -264,9 +262,7 @@ $wi->config->settings += [
 
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
-		'default' => 'mhglobal',
 		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
 	],
 
 	// Cache
@@ -437,24 +433,16 @@ $wi->config->settings += [
 		'betawiki' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
-		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
 		'test3wiki' => 'https://test3.miraheze.org/w/index.php/Special:BannerLoader',
-		'betawiki' => 'https://beta.betaheze.org/w/index.php/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
-		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
 		'test3wiki' => 'https://test3.miraheze.org/w/index.php/Special:RecordImpression',
-		'betawiki' => 'https://beta.betaheze.org/w/index.php/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
-		'default' => 'metawiki',
 		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
 	],
 	'wgCentralHost' => [
-		'default' => 'https://meta.miraheze.org',
 		'test3wiki' => 'https://test3.miraheze.org',
-		'betawiki' => 'https://beta.betaheze.org',
 	],
 	'wgNoticeProject' => [
 		'default' => 'all',
@@ -489,8 +477,7 @@ $wi->config->settings += [
 		'default' => 'metawiki',
 	],
 	'wgCheckUserGBtoollink' => [
-		'default' => [
-			'centralDB' => 'metawiki',
+		'+default' => [
 			'groups' => [
 				'steward',
 			],
@@ -501,11 +488,6 @@ $wi->config->settings += [
 				'steward',
 			],
 		],
-		'betawiki' => [
-			'centralDB' => 'betawiki',
-			'groups' => [
-				'steward',
-			],
 		],
 	],
 	'wgCheckUserCAMultiLock' => [
@@ -1115,14 +1097,10 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'wgEchoSharedTrackingCluster' => [
-		'default' => 'echo',
 		'test3wiki' => 'beta',
-		'betawiki' => 'beta',
 	],
 	'wgEchoSharedTrackingDB' => [
-		'default' => 'metawiki',
 		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
@@ -1405,27 +1383,17 @@ $wi->config->settings += [
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		'metawiki' => false,
-		'betawiki' => true,
+		'betawiki' => false,
 	],
 	'wgGlobalBlockingDatabase' => [
-		'default' => 'mhglobal', // use mhglobal for global blocks
 		'test3wiki' => 'testglobal',
-		'betawiki' => 'testglobal',
 	],
 
 	// GlobalCssJs
 	'wgGlobalCssJsConfig' => [
-		'default' => [
-			'wiki' => 'metawiki',
-			'source' => 'metawiki',
-		],
 		'test3wiki' => [
 			'wiki' => 'test3wiki',
 			'source' => 'test3wiki',
-		],
-		'betawiki' => [
-			'wiki' => 'betawiki',
-			'source' => 'betawiki',
 		],
 	],
 	'+wgResourceLoaderSources' => [
@@ -1456,14 +1424,10 @@ $wi->config->settings += [
 
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
-		'default' => 'https://login.miraheze.org/w/api.php',
 		'test3wiki' => 'https://test3.miraheze.org/w/api.php',
-		'betawiki' => 'https://beta.betaheze.org/w/api.php',
 	],
 	'wgGlobalUserPageDBname' => [
-		'default' => 'loginwiki',
 		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
 	],
 
 	// Grant Permissions for BotPasswords and OAuth
@@ -2970,10 +2934,8 @@ $wi->config->settings += [
 
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
-		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
 		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
 		'default' => 'PT4H',
@@ -3982,9 +3944,7 @@ $wi->config->settings += [
 		'default' => '/m/$1',
 	],
 	'wgUrlShortenerDBName' => [
-		'default' => 'metawiki',
 		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
 	],
 	'wgUrlShortenerAllowedDomains' => [
 		'default' => [
@@ -4398,9 +4358,7 @@ $wi->config->settings += [
 	],
 	// Control MediaWiki Deprecation Warnings
 	'wgDeprecationReleaseLimit' => [
-		'default' => '1.34',
 		'test3wiki' => false,
-		'betawiki' => false,
 	],
 
 	// Email notifications on privileged actions configuration
