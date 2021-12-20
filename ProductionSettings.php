@@ -43,4 +43,4 @@ $wgMWOAuthCentralWiki = 'metawiki';
 $wgUrlShortenerDBName = 'metawiki';
 
 // Logging
-$wgDeprecationReleaseLimit = '1.34'
+$wgDeprecationReleaseLimit = '1.34';
