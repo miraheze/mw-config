@@ -1,3 +1,4 @@
+<?php
 /**
  * BetaSettings.php for Miraheze.
  */
