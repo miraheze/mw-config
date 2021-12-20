@@ -1,3 +1,4 @@
+<?php
 /**
  * ProductionSettings.php for Miraheze.
  */
