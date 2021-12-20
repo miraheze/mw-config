@@ -43,4 +43,4 @@ $wgMWOAuthCentralWiki = 'betawiki';
 $wgUrlShortenerDBName = 'betawiki';
 
 // Logging
-$wgDeprecationReleaseLimit = false
+$wgDeprecationReleaseLimit = false;
