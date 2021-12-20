@@ -126,8 +126,7 @@ if ( $cwExperimental ) {
 		'useSplitMetadata' => true,
 	];
 } else {
-	$wgParserEnableLegacyMediaDOM = false;
-	$wgUseContentMediaStyles = true;
+	$wgParserEnableLegacyMediaDOM = true;
 }
 
 // $wmgPrivateUploads
