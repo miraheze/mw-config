@@ -1543,34 +1543,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'pageforms' => [
-		'name' => 'PageForms',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Forms',
-		'var' => 'wmgUsePageForms',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'permissions' => [
-				'*' => [
-					'permissions' => [
-						'viewedittab',
-					],
-				],
-				'sysop' => [
-					'permissions' => [
-						'editrestrictedfields',
-					],
-				],
-				'user' => [
-					'permissions' => [
-						'createclass',
-						'multipageedit',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'pageschemas' => [
 		'name' => 'Page Schemas',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Schemas',
