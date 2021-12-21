@@ -162,7 +162,6 @@ $IP/extensions/OrphanedTalkPages/extension.json
 $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PdfBook/extension.json
 $IP/extensions/PDFEmbed/extension.json
-$IP/extensions/PageForms/extension.json
 $IP/extensions/PageImages/extension.json
 $IP/extensions/PageNotice/extension.json
 $IP/extensions/PageSchemas/extension.json
