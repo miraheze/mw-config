@@ -50,7 +50,7 @@ $wi->setVariables(
 		'miraheze.org' => 'wiki'
 	],
 	[
-		'betaheze.org' => 'beta'
+		'betaheze.org' => 'betaheze'
 	]
 );
 
