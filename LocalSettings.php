@@ -144,15 +144,24 @@ $wi->config->settings += [
 				],
 			],
 		],
+		'beta' => [
+			'spam' => [
+				'files' => [
+					'https://beta.betaheze.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
+				],
+			],
+		],
 	],
 	'wgLogSpamBlacklistHits' => [
 		'default' => false,
 		'metawiki' => true,
+		'beta' => true,
 	],
 	'wgTitleBlacklistLogHits' => [
 		'default' => false,
 		'loginwiki' => true,
 		'metawiki' => true,
+		'beta' => true,
 	],
 
 	// ApprovedRevs
@@ -472,6 +481,7 @@ $wi->config->settings += [
 	],
 	'wgCheckUserCAtoollink' => [
 		'default' => 'metawiki',
+		'beta' => 'betawiki',
 	],
 	'wgCheckUserGBtoollink' => [
 		'default' => [
@@ -490,6 +500,12 @@ $wi->config->settings += [
 	'wgCheckUserCAMultiLock' => [
 		'default' => [
 			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
+		'beta' => [
+			'centralDB' => 'betawiki',
 			'groups' => [
 				'steward',
 			],
@@ -3589,6 +3605,7 @@ $wi->config->settings += [
 	],
 	'wgServer' => [
 		'default' => 'https://miraheze.org',
+		'beta' => 'https://betaheze.org',
 	],
 	'wgShowHostnames' => [
 		'default' => true,
@@ -3840,6 +3857,16 @@ $wi->config->settings += [
 			'global' => [
 				'type' => 'url',
 				'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
+			],
+			'local' => [
+				'type' => 'localpage',
+				'src' => 'MediaWiki:Titleblacklist',
+			],
+		],
+		'beta' => [
+			'global' => [
+				'type' => 'url',
+				'src' => 'https://beta.betaheze.org/w/index.php?title=Title_blacklist&action=raw',
 			],
 			'local' => [
 				'type' => 'localpage',
