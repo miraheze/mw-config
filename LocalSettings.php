@@ -389,6 +389,9 @@ $wi->config->settings += [
 			'loginwiki',
 			'metawiki',
 		],
+		'betaheze' => [
+			'betawiki',
+		],
 	],
 	'wgCentralAuthAutoNew' => [
 		'default' => true,
@@ -404,6 +407,7 @@ $wi->config->settings += [
 	],
 	'wgCentralAuthCookieDomain' => [
 		'default' => '.miraheze.org',
+		'betaheze' => '.betaheze.org',
 	],
 	'wgCentralAuthCreateOnView' => [
 		'default' => true,
@@ -412,17 +416,21 @@ $wi->config->settings += [
 	],
 	'wgCentralAuthDatabase' => [
 		'default' => 'mhglobal',
+		'betaheze' => 'testglobal',
 	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => false,
 		'metawiki' => true,
+		'betawiki' => true,
 	],
 	'wgCentralAuthEnableUserMerge' => [
 		'default' => false,
 		'metawiki' => true,
+		'betawiki' => true,
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
@@ -1435,6 +1443,7 @@ $wi->config->settings += [
 	'wgGlobalPreferencesDB' => [
 		'default' => 'mhglobal',
 		'ldapwikiwiki' => 'ldapwikiwiki',
+		'betaheze' => 'testglobal',
 	],
 
 	// GlobalUsage
@@ -2955,6 +2964,7 @@ $wi->config->settings += [
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
 		'ldapwikiwiki' => 'ldapwikiwiki',
+		'betaheze' => 'testglobal',
 	],
 
 	// OAuth
