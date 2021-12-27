@@ -430,7 +430,7 @@ $wi->config->settings += [
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
-		'betaheze' => 'testglobal',
+		'betaheze' => 'betawiki',
 	],
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
