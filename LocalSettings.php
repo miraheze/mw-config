@@ -87,13 +87,11 @@ $wi->config->settings += [
 	],
 	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
 		'metawiki' => true,
-		'test3wiki' => true,
 		'betawiki' => true,
 	],
 	'wgAbuseFilterBlockDuration' => [
@@ -149,15 +147,24 @@ $wi->config->settings += [
 				],
 			],
 		],
+		'betaheze' => [
+			'spam' => [
+				'files' => [
+					'https://beta.betaheze.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
+				],
+			],
+		],
 	],
 	'wgLogSpamBlacklistHits' => [
 		'default' => false,
 		'metawiki' => true,
+		'betaheze' => true,
 	],
 	'wgTitleBlacklistLogHits' => [
 		'default' => false,
 		'loginwiki' => true,
 		'metawiki' => true,
+		'betaheze' => true,
 	],
 
 	// ApprovedRevs
@@ -261,8 +268,7 @@ $wi->config->settings += [
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
 		'default' => 'mhglobal',
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 
 	// Cache
@@ -429,28 +435,23 @@ $wi->config->settings += [
 	'wgNoticeInfrastructure' => [
 		'default' => false,
 		'metawiki' => true,
-		'test3wiki' => true,
 		'betawiki' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
-		'test3wiki' => 'https://test3.miraheze.org/w/index.php/Special:BannerLoader',
-		'betawiki' => 'https://beta.betaheze.org/w/index.php/Special:BannerLoader',
+		'betaheze' => 'https://beta.betaheze.org/w/index.php/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
-		'test3wiki' => 'https://test3.miraheze.org/w/index.php/Special:RecordImpression',
-		'betawiki' => 'https://beta.betaheze.org/w/index.php/Special:RecordImpression',
+		'betaheze' => 'https://beta.betaheze.org/w/index.php/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
-		'test3wiki' => 'https://test3.miraheze.org',
-		'betawiki' => 'https://beta.betaheze.org',
+		'betaheze' => 'https://beta.betaheze.org',
 	],
 	'wgNoticeProject' => [
 		'default' => 'all',
@@ -483,6 +484,7 @@ $wi->config->settings += [
 	],
 	'wgCheckUserCAtoollink' => [
 		'default' => 'metawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgCheckUserGBtoollink' => [
 		'default' => [
@@ -491,13 +493,7 @@ $wi->config->settings += [
 				'steward',
 			],
 		],
-		'test3wiki' => [
-			'centralDB' => 'test3wiki',
-			'groups' => [
-				'steward',
-			],
-		],
-		'betawiki' => [
+		'betaheze' => [
 			'centralDB' => 'betawiki',
 			'groups' => [
 				'steward',
@@ -507,6 +503,12 @@ $wi->config->settings += [
 	'wgCheckUserCAMultiLock' => [
 		'default' => [
 			'centralDB' => 'metawiki',
+			'groups' => [
+				'steward',
+			],
+		],
+		'betaheze' => [
+			'centralDB' => 'betawiki',
 			'groups' => [
 				'steward',
 			],
@@ -1112,13 +1114,11 @@ $wi->config->settings += [
 	],
 	'wgEchoSharedTrackingCluster' => [
 		'default' => 'echo',
-		'test3wiki' => 'beta',
-		'betawiki' => 'beta',
+		'betaheze' => 'beta',
 	],
 	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki',
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
@@ -1401,12 +1401,10 @@ $wi->config->settings += [
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		'metawiki' => false,
-		'betawiki' => true,
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal', // use mhglobal for global blocks
-		'test3wiki' => 'testglobal',
-		'betawiki' => 'testglobal',
+		'betaheze' => 'testglobal',
 	],
 
 	// GlobalCssJs
@@ -1415,11 +1413,7 @@ $wi->config->settings += [
 			'wiki' => 'metawiki',
 			'source' => 'metawiki',
 		],
-		'test3wiki' => [
-			'wiki' => 'test3wiki',
-			'source' => 'test3wiki',
-		],
-		'betawiki' => [
+		'betaheze' => [
 			'wiki' => 'betawiki',
 			'source' => 'betawiki',
 		],
@@ -1453,13 +1447,11 @@ $wi->config->settings += [
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
 		'default' => 'https://login.miraheze.org/w/api.php',
-		'test3wiki' => 'https://test3.miraheze.org/w/api.php',
-		'betawiki' => 'https://beta.betaheze.org/w/api.php',
+		'betaheze' => 'https://beta.betaheze.org/w/api.php',
 	],
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 
 	// Grant Permissions for BotPasswords and OAuth
@@ -1609,8 +1601,7 @@ $wi->config->settings += [
 	],
 	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
@@ -2545,7 +2536,6 @@ $wi->config->settings += [
 	'wgAllowGlobalMessaging' => [
 		'default' => false,
 		'metawiki' => true,
-		'test3wiki' => true,
 		'betawiki' => true,
 	],
 
@@ -2970,8 +2960,7 @@ $wi->config->settings += [
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
 		'default' => 'PT4H',
@@ -3345,7 +3334,6 @@ $wi->config->settings += [
 	'wgRemovePIIAllowedWikis' => [
 		'default' => [
 			'metawiki',
-			'test3wiki',
 			'betawiki',
 		],
 	],
@@ -3622,6 +3610,7 @@ $wi->config->settings += [
 	],
 	'wgServer' => [
 		'default' => 'https://miraheze.org',
+		'betaheze' => 'https://betaheze.org',
 	],
 	'wgShowHostnames' => [
 		'default' => true,
@@ -3879,6 +3868,16 @@ $wi->config->settings += [
 				'src' => 'MediaWiki:Titleblacklist',
 			],
 		],
+		'betaheze' => [
+			'global' => [
+				'type' => 'url',
+				'src' => 'https://beta.betaheze.org/w/index.php?title=Title_blacklist&action=raw',
+			],
+			'local' => [
+				'type' => 'localpage',
+				'src' => 'MediaWiki:Titleblacklist',
+			],
+		],
 	],
 	'wgTitleBlacklistUsernameSources' => [
 		'default' => '*',
@@ -3981,8 +3980,7 @@ $wi->config->settings += [
 	],
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
-		'test3wiki' => 'test3wiki',
-		'betawiki' => 'betawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgUrlShortenerAllowedDomains' => [
 		'default' => [
@@ -4397,8 +4395,7 @@ $wi->config->settings += [
 	// Control MediaWiki Deprecation Warnings
 	'wgDeprecationReleaseLimit' => [
 		'default' => '1.34',
-		'test3wiki' => false,
-		'betawiki' => false,
+		'betaheze' => false,
 	],
 
 	// Email notifications on privileged actions configuration
