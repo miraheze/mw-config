@@ -1013,7 +1013,6 @@ $wi->config->settings += [
 	],
 	'wgReadOnly' => [
 		'default' => false,
-		'betaheze' => 'Switching CentralAuth clusters.',
 	],
 	'wgSharedTables' => [
 		'default' => [],
