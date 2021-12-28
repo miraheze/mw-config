@@ -2776,6 +2776,9 @@ $wi->config->settings += [
 			'login.miraheze.org',
 			'meta.miraheze.org',
 		],
+		'betaheze' => [
+			'beta.betaheze.org',
+		],
 	],
 	'wgTidyConfig' => [
 		'default' => [
