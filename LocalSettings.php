@@ -618,13 +618,16 @@ $wi->config->settings += [
 
 	// Cookies
 	'wgCookieDomain' => [
-		'default' => ''
+		'default' => '',
+		'betaheze' => '.betaheze.org',
 	],
 	'wgCookieSameSite' => [
-		'default' => 'None'
+		'default' => 'None',
+		'betaheze' => 'Strict',
 	],
 	'wgUseSameSiteLegacyCookies' => [
-		'default' => true
+		'default' => true,
+		'betaheze' => false,
 	],
 	'wgCookieSetOnAutoblock' => [
 		'default' => true,
