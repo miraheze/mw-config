@@ -409,6 +409,10 @@ $wi->config->settings += [
 		'default' => '.miraheze.org',
 		'betaheze' => '.betaheze.org',
 	],
+	'wgCentralAuthCookiePrefix' => [
+		'default' => 'centralauth_',
+		'betaheze' => 'betacentralauth_',
+	],
 	'wgCentralAuthCreateOnView' => [
 		'default' => true,
 		'cwarswiki' => false,
