@@ -2,6 +2,10 @@
 
 # Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
+	case 'betawiki':
+		wfLoadExtension( 'GlobalWatchlist' );
+
+		break;
 	case 'constantnoblewiki':
 		$wgDplSettings['maxResultCount'] = 2500;
 
