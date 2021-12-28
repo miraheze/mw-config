@@ -31,15 +31,24 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'timeout'              => $wgMemCachedTimeout,
 ];
 
-$wgMainCacheType = 'memcached-mem-2';
-$wgSessionCacheType = 'memcached-mem-2';
+$wi->config->settings['wgMainCacheType']['default'] = 'memcached-mem-2';
+$wi->config->settings['wgMainCacheType']['betaheze'] = 'memcached-mem-1';
+
+$wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
+$wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
+
 $wgSessionsInObjectCache = true;
 
-$wgMessageCacheType = 'memcached-mem-1';
+$wi->config->settings['wgMessageCacheType']['default'] = 'memcached-mem-1';
+$wi->config->settings['wgMessageCacheType']['betaheze'] = 'memcached-mem-2';
+
 $wgUseLocalMessageCache = true;
 $wgParserCacheType = CACHE_DB;
 $wgParserCacheExpireTime = 86400 * 7;
-$wgLanguageConverterCacheType = 'memcached-mem-1';
+
+$wi->config->settings['wgLanguageConverterCacheType']['default'] = 'memcached-mem-1';
+$wi->config->settings['wgLanguageConverterCacheType']['betaheze'] = 'memcached-mem-2';
+
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $jobrunnerSettings = $wmgCacheSettings['jobrunner'];
