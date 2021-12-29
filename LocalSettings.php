@@ -2705,11 +2705,6 @@ $wi->config->settings += [
 		],
 	],
 
-	// Miraheze specific config
-	'wgServicesRepo' => [
-		'default' => '/srv/services/services',
-	],
-
 	// Miscellaneous
 	'wgSitename' => [
 		'default' => 'No sitename set!',
