@@ -66,5 +66,6 @@ $wgJobTypeConf['default'] = [
 
 if ( PHP_SAPI === 'cli' ) {
 	# APC not available in CLI mode
-	$wgLanguageConverterCacheType = CACHE_NONE;
+	$wi->config->settings['wgLanguageConverterCacheType']['default'] = CACHE_NONE;
+	$wi->config->settings['wgLanguageConverterCacheType']['betaheze'] = CACHE_NONE;
 }
