@@ -4005,6 +4005,9 @@ $wi->config->settings += [
 		'default' => [
 			'(.*\.)?miraheze\.org',
 		],
+		'betaheze' => [
+			'(.*\.)?betaheze\.org',
+		],
 	],
 
 	// UserFunctions
