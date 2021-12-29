@@ -798,7 +798,7 @@ $wi->config->settings += [
 			'jobrunner\d{1,2}',
 			'gluster\d{1,3}',
 			'ns\d{1,2}',
-			'bacula\d{1,3}',
+			'bacula\d{1,2}',
 			'misc\d{1,2}',
 			'mail\d{1,3}',
 			'ldap\d{1,3}',
