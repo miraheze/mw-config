@@ -820,6 +820,7 @@ $wi->config->settings += [
 			'cloud\d{1,2}',
 			'mon\d{1,3}',
 			'lizardfs\d{1,2}',
+			'elasticsearch\d{1,2}',
 			'rdb\d{1,2}',
 			'phab\d{1,3}',
 			'services\d{1,2}',
