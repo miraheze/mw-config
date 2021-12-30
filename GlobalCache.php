@@ -5,11 +5,19 @@ $wgMemCachedPersistent = false;
 // Set timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
 
+$ovlon = ['test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1'];
+if (in_array(wfHostname(), $ovlon) {
+	$wmgJobrunnerServer = '51.195.236.215:6379';
+	$wmgMem1Server = '51.195.236.223:11211';
+	$wmgMem2Server = '51.195.236.245:11211';
+} else
+    // no data for scsvg yet
+}
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgCacheSettings['memcached']['server'][1] ],
+	'servers'              => [ $wmgMem1Server ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
@@ -22,7 +30,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgCacheSettings['memcached']['server'][0] ],
+	'servers'              => [ $wmgMem2Server ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
@@ -51,13 +59,13 @@ $wi->config->settings['wgLanguageConverterCacheType']['betaheze'] = 'memcached-m
 
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-$jobrunnerSettings = $wmgCacheSettings['jobrunner'];
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => $jobrunnerSettings['server'],
+	'redisServer' => [
+		'server' => $wmgJobrunnerServer
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'password' => $jobrunnerSettings['password'],
+		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 	],
 	'claimTTL' => 3600,
