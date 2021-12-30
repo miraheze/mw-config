@@ -61,8 +61,7 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => [
-		'server' => $wmgJobrunnerServer
+	'redisServer' => $wmgJobrunnerServer,
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
