@@ -810,7 +810,7 @@ $wi->config->settings += [
 			'cp\d{1,3}',
 			'mw\d{1,3}',
 			'jobrunner\d{1,2}',
-			'gluster\d{1,3}',
+			'gluster(fs)?\d{1,3}',
 			'ns\d{1,2}',
 			'bacula\d{1,2}',
 			'misc\d{1,2}',
