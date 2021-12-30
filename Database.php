@@ -41,9 +41,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		'db11' => 'db11.miraheze.org',
-		'db12' => 'db12.miraheze.org',
-		'db13' => 'db13.miraheze.org',
+		'db11' => $wmgDB11Hostname,
+		'db12' => $wmgDB12Hostname,
+		'db13' => $wmgDB13Hostname,
 	],
 	'externalLoads' => [
 		'echo' => [
