@@ -860,7 +860,7 @@ $wi->config->settings += [
 			'Author request' => 'Declined at the request of the wiki requester.',
 			
 			// On hold reason(s):
-			'On hold' => 'On hold for review by another wiki creator or steward.',
+			'On hold pending review' => 'On hold pending review from another wiki creator or steward. Please do not resubmit this request.',
 		],
 	],
 	'wgCreateWikiCustomDomainPage' => [
