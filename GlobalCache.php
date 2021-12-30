@@ -10,7 +10,7 @@ if (in_array(wfHostname(), $ovlon)) {
 	$wmgJobrunnerServer = '51.195.236.215:6379';
 	$wmgMem1Server = '51.195.236.223:11211';
 	$wmgMem2Server = '51.195.236.245:11211';
-} else
+} else {
     // no data for scsvg yet
 }
 $wgObjectCaches['memcached-mem-1'] = [
