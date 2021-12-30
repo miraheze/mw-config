@@ -2867,9 +2867,6 @@ $wi->config->settings += [
 	'wgModerationEnableEditChange' => [
 		'default' => false,
 	],
-	'wgModerationIgnoredInNamespaces' => [
-		'default' => [],
-	],
 	'wgModerationOnlyInNamespaces' => [
 		'default' => [],
 		'simulatorwiki' => [
