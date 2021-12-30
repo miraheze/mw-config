@@ -1,5 +1,12 @@
 <?php
-
+$ovlon = ['test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1'];
+if (in_array(wfHostname(), $ovlon)) {
+	$wmgDB11Hostname = 'db11.miraheze.org';
+	$wmgDB12Hostname = 'db12.miraheze.org';
+	$wmgDB13Hostname = 'db13.miraheze.org';
+} else {
+	// no data for scsvg yet
+}
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => $wi->wikiDBClusters,
