@@ -814,7 +814,6 @@ $wi->config->settings += [
 			'gluster(fs)?\d{1,3}',
 			'ns\d{1,2}',
 			'bacula\d{1,2}',
-			'misc\d{1,2}',
 			'mail\d{0,3}',
 			'ldap\d{1,3}',
 			'cloud\d{1,2}',
