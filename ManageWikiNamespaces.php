@@ -281,4 +281,15 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgModerationIgnoredInNamespaces' => [
+		'name' => 'Allow non-automoderated users to bypass moderation in this namespace?',
+		'from' => 'moderation',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'overridedefault' => false,
+		'help' => '',
+		'requires' => [],
+	],
 ];
