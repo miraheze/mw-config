@@ -3272,24 +3272,6 @@ $wi->config->settings += [
 		],
 	],
 
-	// Redis
-	'wmgCacheSettings' => [
-		'default' => [
-			'memcached' => [
-				'server' => [
-					// Sessions and Object cache (mem2)
-					'51.195.236.245:11211',
-					// Parser and Message cache (mem1)
-					'51.195.236.223:11211'
-				],
-			],
-			'jobrunner' => [
-				'server' => '51.195.236.215:6379',
-				'password' => $wmgRedisPassword,
-			],
-		],
-	],
-
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
