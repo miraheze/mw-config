@@ -41,4 +41,4 @@ if ( $wmgUseComments ?? false ) {
 				</tr></tbody></table></div>
 		EOF;
 	}
-} 
+}
