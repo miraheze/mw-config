@@ -772,6 +772,8 @@ $wi->config->settings += [
 	// CreateWiki
 	'wgCreateWikiBlacklistedSubdomains' => [
 		'default' => [
+			'miraheze(.*)',
+			'betaheze(.*)',
 			'subdomain',
 			'example',
 			'beta(meta)?',
@@ -791,7 +793,6 @@ $wi->config->settings += [
 			'security',
 			'donate',
 			'blog',
-			'miraheze(.*)',
 			'sslrequest',
 			'deployment',
 			'hostmaster',
