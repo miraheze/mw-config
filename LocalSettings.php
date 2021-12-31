@@ -3829,6 +3829,9 @@ $wi->config->settings += [
 	'wgWordmarkWidth' => [
 		'default' => 116,
 	],
+	'wgMaxTocLevel' => [
+		'default' => 999,
+	],
 
 	// TabberNeue
 	'wgTabberNeueEnableMD5Hash' => [

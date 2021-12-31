@@ -2440,6 +2440,18 @@ $wgManageWikiSettings = [
 		'help' => 'A version of the logo without wordmark and tagline.',
 		'requires' => [],
 	],
+	'wgMaxTocLevel' => [
+		'name' => 'Max Toc Level',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 99999,
+		'overridedefault' => 999,
+		'section' => 'styling',
+		'help' => 'Maximum indent level of toc.',
+		'requires' => [],
+	],
 	'wmgWikiapiaryFooterPageName' => [
 		'name' => 'Wikiapiary Footer Page Name',
 		'from' => 'mediawiki',
