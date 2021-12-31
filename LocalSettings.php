@@ -2953,7 +2953,7 @@ $wi->config->settings += [
 
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => [
-		'default' => false,
+		'default' => true,
 	],
 
 	// MobileFrontend
