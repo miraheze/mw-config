@@ -234,6 +234,10 @@ $wi->config->settings['wgDataDump']['default'] = [
 
 // set ManageWikiNamespaces' variable defaults
 foreach ( array_keys( $wgManageWikiNamespacesAdditional ) as $var ) {
+	if ( isset( $wgManageWikiNamespacesAdditional[$var]['whitelisted'] ) ) {
+		continue;
+	}
+
 	if ( !isset( ${$var} ) ) {
 		${$var} = [];
 	}
