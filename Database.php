@@ -5,7 +5,9 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgDB12Hostname = 'db12.miraheze.org';
 	$wmgDB13Hostname = 'db13.miraheze.org';
 } else {
-	// no data for scsvg yet
+	$wmgDB11Hostname = 'db101.miraheze.org';
+	$wmgDB12Hostname = 'db111.miraheze.org';
+	$wmgDB13Hostname = 'db121.miraheze.org';
 }
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
