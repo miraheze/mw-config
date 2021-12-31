@@ -1,5 +1,14 @@
 <?php
-
+$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
+if ( in_array( wfHostname(), $ovlon ) ) {
+	$wmgDB11Hostname = 'db11.miraheze.org';
+	$wmgDB12Hostname = 'db12.miraheze.org';
+	$wmgDB13Hostname = 'db13.miraheze.org';
+} else {
+	$wmgDB11Hostname = 'db101.miraheze.org';
+	$wmgDB12Hostname = 'db111.miraheze.org';
+	$wmgDB13Hostname = 'db121.miraheze.org';
+}
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => $wi->wikiDBClusters,
@@ -34,9 +43,9 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		'db11' => 'db11.miraheze.org',
-		'db12' => 'db12.miraheze.org',
-		'db13' => 'db13.miraheze.org',
+		'db11' => $wmgDB11Hostname,
+		'db12' => $wmgDB12Hostname,
+		'db13' => $wmgDB13Hostname,
 	],
 	'externalLoads' => [
 		'echo' => [

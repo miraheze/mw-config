@@ -2084,6 +2084,20 @@ $wi->config->settings += [
 			/** test3 */
 			'51.195.236.247' => true,
 			'2001:41d0:800:1bbd::14' => true,
+			/** mw101 */
+			'2a10:6740::6:107' => true,
+			/** mw102 */
+			'2a10:6740::6:108' => true,
+			/** mw111 */
+			'2a10:6740::6:206' => true,
+			/** mw112 */
+			'2a10:6740::6:207' => true,
+			/** mw121 */
+			'2a10:6740::6:308' => true,
+			/** mw122 */
+			'2a10:6740::6:309' => true,
+			/** test101 */
+			'2a10:6740::6:109' => true,
 		],
 	],
 
@@ -3287,24 +3301,6 @@ $wi->config->settings += [
 		],
 	],
 
-	// Redis
-	'wmgCacheSettings' => [
-		'default' => [
-			'memcached' => [
-				'server' => [
-					// Sessions and Object cache (mem2)
-					'51.195.236.245:11211',
-					// Parser and Message cache (mem1)
-					'51.195.236.223:11211'
-				],
-			],
-			'jobrunner' => [
-				'server' => '51.195.236.215:6379',
-				'password' => $wmgRedisPassword,
-			],
-		],
-	],
-
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
@@ -4502,7 +4498,7 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-if ( wfHostname() === 'test3' ) {
+if ( in_array( wfHostname(), [ 'test3', 'test111' ] ) ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
 }
