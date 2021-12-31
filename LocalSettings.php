@@ -783,6 +783,7 @@ $wi->config->settings += [
 			'wikitest',
 			'help',
 			'noc',
+			'wc',
 			'm',
 			'sandbox',
 			'outreach',
