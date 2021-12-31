@@ -2343,6 +2343,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables default stuff to display on social profile pages by default',
 		'requires' => [],
 	],
+	'wgContribScoreIgnoreBots' => [
+		'name' => 'Contrib Score Ignore Bots',
+		'from' => 'contributionscores',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'socialtools',
+		'help' => 'Exclude bots users from the reporting?',
+		'requires' => [],
+	],
 
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
