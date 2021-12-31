@@ -1204,6 +1204,9 @@ $wi->config->settings += [
 	'wgFlaggedRevsProtection' => [
 		'default' => false,
 	],
+	'wgFlaggedRevsOverride' => [
+		'default' => true,
+	],
 	'wgFlaggedRevsTags' => [
 		'default' => [
 			'status' => [
