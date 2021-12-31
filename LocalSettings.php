@@ -794,6 +794,7 @@ $wi->config->settings += [
 			'security',
 			'donate',
 			'blog',
+			'sslhost',
 			'sslrequest',
 			'deployment',
 			'hostmaster',
