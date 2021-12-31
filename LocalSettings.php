@@ -616,6 +616,9 @@ $wi->config->settings += [
 	'wgContribScoreDisableCache' => [
 		'default' => true,
 	],
+	'wgContribScoreIgnoreBots' => [
+		'default' => false,
+	],
 
 	// Cookies
 	'wgCookieDomain' => [
