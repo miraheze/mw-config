@@ -232,9 +232,15 @@ $wi->config->settings['wgDataDump']['default'] = [
 	],
 ];
 
-// Exempt from Robot Control (INDEX/NOINDEX namespaces)
-if ( !isset( $wgExemptFromUserRobotsControl ) ) {
-	$wgExemptFromUserRobotsControl = [];
+// set ManageWikiNamespaces' variable defaults
+foreach ( array_keys( $wgManageWikiNamespacesAdditional ) as $var ) {
+	if ( isset( $wgManageWikiNamespacesAdditional[$var]['whitelisted'] ) ) {
+		continue;
+	}
+
+	if ( !isset( ${$var} ) ) {
+		${$var} = [];
+	}
 }
 
 // $wmgContactPageRecipientUser
