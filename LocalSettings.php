@@ -1709,6 +1709,12 @@ $wi->config->settings += [
 				'en',
 			],
 		],
+		'+mymensinghwiki' => [
+			'bnwikiwiki',
+			'wikipedia' => [
+				'bn',
+			],
+		],
 		'+polandballstaffwiki' => [
 			'polandballwiki',
 			'polandballwikisongcontestwiki',
