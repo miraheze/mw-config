@@ -1468,6 +1468,12 @@ $wi->config->settings += [
 				'loadScript' => '//meta.miraheze.org/w/load.php',
 			],
 		],
+		'betaheze' => [
+			'betawiki' => [
+				'apiScript' => '//beta.betaheze.org/w/api.php',
+				'loadScript' => '//beta.betaheze.org/w/load.php',
+			],
+		],
 	],
 	'wgUseGlobalSiteCssJs' => [
 		'default' => false,
