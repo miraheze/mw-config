@@ -3279,7 +3279,19 @@ $wi->config->settings += [
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
+		'+nintendowiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+		],
+		'+pokemon2wiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+		],
 		'+reviwiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+		],
+		'+smashbroswiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 		],
