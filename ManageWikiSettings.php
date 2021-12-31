@@ -218,6 +218,15 @@ $wgManageWikiSettings = [
 		'help' => 'This enables Flagged Revs Protection.',
 		'requires' => [],
 	],
+	'wgFlaggedRevsOverride' => [
+		'name' => 'Flagged Revs Override',
+		'from' => 'flaggedrevs',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'anti-spam',
+		'help' => 'Is a "stable version" used as the default display version for all pages in reviewable namespaces?',
+		'requires' => [],
+	],
 	'wgFlaggedRevsAutoReview' => [
 		'name' => 'FlaggedRevs Auto Review',
 		'from' => 'flaggedrevs',
