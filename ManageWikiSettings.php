@@ -838,6 +838,16 @@ $wgManageWikiSettings = [
 		'help' => 'This will adapt your wikis time over clock to whatever timezone you choose for all users, however it can be changed through user\'s preferences.',
 		'requires' => [],
 	],
+	'wgAmericanDates' => [
+		'name' => 'American Dates',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'localisation',
+		'help' => 'Use \'mdy\' instead of \'dmy\' as the default date format, e.g. \'May 12\' instead of \'12 May\'?',
+		'requires' => [],
+	],
 	'wgTranslateDocumentationLanguageCode' => [
 		'name' => 'Translate Documentation Language Code',
 		'from' => 'translate',
