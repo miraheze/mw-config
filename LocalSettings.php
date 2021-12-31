@@ -1337,6 +1337,9 @@ $wi->config->settings += [
 	'wgMaxImageArea' => [
 		'default' => '1.25e7',
 	],
+	'wgMaxAnimatedGifArea' => [
+		'default' => '1.25e7',
+	],
 	'wgMirahezeCommons' => [
 		'default' => true,
 	],
