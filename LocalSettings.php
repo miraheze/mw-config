@@ -1713,6 +1713,7 @@ $wi->config->settings += [
 			'bnwikiwiki',
 			'wikipedia' => [
 				'bn',
+				'en',
 			],
 		],
 		'+polandballstaffwiki' => [
