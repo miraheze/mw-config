@@ -858,7 +858,7 @@ $wi->config->settings += [
 			'Duplicate wiki' => 'Your proposed wiki appears to duplicate, either substantially or entirely, the content of an existing wiki (see the "Request Comments" tab for one or more link(s) to the existing wiki(s)). Could you please describe in a few more sentences by adding to, but not replacing, your existing description, the scope and focus for your wiki, and also assure us that your wiki will not be a complete or substantial duplication? Thank you.',
 			'Author request' => 'Declined at the request of the wiki requester.',
 
-			// On hold reason(s):
+			// On hold reasons:
 			'On hold pending response' => 'On hold pending response from the wiki requester (see the "Request Comments" tab). Please reply to the questions left by the wiki creator on this request but do not create another wiki request. Thank you.',
 			'On hold pending review' => 'On hold pending review from another wiki creator or steward. Please do not resubmit this request.',
 		],
