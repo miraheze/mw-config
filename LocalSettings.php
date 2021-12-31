@@ -3903,9 +3903,12 @@ $wi->config->settings += [
 		'default' => '/usr/share/fonts/truetype/freefont',
 	],
 
-	// Timezone
+	// Time
 	'wgLocaltimezone' => [
 		'default' => 'UTC',
+	],
+	'wgAmericanDates' => [
+		'default' => false,
 	],
 
 	// Theme
