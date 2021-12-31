@@ -1186,6 +1186,16 @@ $wgManageWikiSettings = [
 		'help' => 'Specifies the max pixels you can have in a image.',
 		'requires' => [],
 	],
+	'wgMaxAnimatedGifArea' => [
+		'name' => 'Max Animated Gif Area',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'text',
+		'overridedefault' => '1.25e7',
+		'section' => 'media',
+		'help' => 'Force thumbnailing of animated GIFs above this size to a single frame instead of an animated thumbnail.',
+		'requires' => [],
+	],
 	'wgCommonsMetadataForceRecalculate' => [
 		'name' => 'Force Remote Image Description Parsing',
 		'from' => 'commonsmetadata',
