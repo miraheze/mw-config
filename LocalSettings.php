@@ -836,7 +836,7 @@ $wi->config->settings += [
 			'jobchron\d+',
 			'mwtask(\d+)?',
 			'es\d+',
-			'bast\d+',
+			'bast(\d+)?',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
