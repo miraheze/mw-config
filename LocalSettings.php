@@ -826,7 +826,7 @@ $wi->config->settings += [
 			'lizardfs\d+',
 			'elasticsearch(\d+)?',
 			'rdb\d+',
-			'phab\d+',
+			'phab(\d+)?',
 			'services\d+',
 			'puppet\d+',
 			'test\d+',
