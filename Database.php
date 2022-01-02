@@ -4,10 +4,12 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgDB11Hostname = 'db11.miraheze.org';
 	$wmgDB12Hostname = 'db12.miraheze.org';
 	$wmgDB13Hostname = 'db13.miraheze.org';
+        $wmgROMsg = False;
 } else {
 	$wmgDB11Hostname = 'db101.miraheze.org';
 	$wmgDB12Hostname = 'db111.miraheze.org';
 	$wmgDB13Hostname = 'db121.miraheze.org';
+        $wmgROMsg = 'Please use the active DC';
 }
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
@@ -56,7 +58,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		],
 	],
 	'readOnlyBySection' => [
-		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
+		'DEFAULT' => $wmgROMsg,
 		//'c1' => 'Maintenance ongoing on the database server.',
 		//'c2' => 'Maintenance ongoing on the database server.',
 		//'c3' => 'Maintenance ongoing on the database server.',
