@@ -1,4 +1,5 @@
 <?php
+
 /**
  * LocalSettings.php for Miraheze.
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
