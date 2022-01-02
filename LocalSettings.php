@@ -2187,8 +2187,10 @@ $wi->config->settings += [
 			'globaluserpage',
 			'minervaneue',
 			'mobilefrontend',
+			'purge',
 			'syntaxhighlight_geshi',
 			'urlshortener',
+			'wikiseo',
 		],
 	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
