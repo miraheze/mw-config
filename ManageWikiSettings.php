@@ -3164,6 +3164,20 @@ $wgManageWikiSettings = [
 		'help' => 'Watch and unwatch as an icon rather than a link.',
 		'requires' => [],
 	],
+	'wgDarkModeTogglePosition' => [
+		'name' => 'Dark mode toggle link position',
+		'from' => 'darkmode',
+		'type' => 'list',
+		'options' => [
+			'Next to the user talk page link in personal URLs' => 'personal',
+			'In the footer, usually after the "Disclaimer" link.' => 'footer',
+			'In the sidebar within the navigation portlet.' => 'sidebar',
+		],
+		'overridedefault' => 'personal',
+		'section' => 'styling',
+		'help' => 'Where the dark mode toggle link should be placed.',
+		'requires' => [],
+	],
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [

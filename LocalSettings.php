@@ -1030,6 +1030,11 @@ $wi->config->settings += [
 		'default' => '/srv/GeoLite2-City.mmdb',
 	],
 
+	// Darkmode
+	'wgDarkModeTogglePosition' => [
+		'default' => 'personal',
+	],
+
 	// Database
 	'wgAllowSchemaUpdates' => [
 		'default' => false,
