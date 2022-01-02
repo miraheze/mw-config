@@ -63,3 +63,13 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		//'c4' => 'Maintenance ongoing on the database server.',
 	],
 ];
+
+if ( !in_array( wfHostname(), $ovlon ) ) {
+	$wi->config->settings['wgLBFactoryConf']['default']['readOnlyBySection'] = [
+		'DEFAULT' => 'Please use the active DC',
+		'c1' => 'Please use the active DC',
+		'c2' => 'Please use the active DC',
+		'c3' => 'Please use the active DC',
+		'c4' => 'Please use the active DC',
+	];
+}
