@@ -4537,7 +4537,7 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-if ( in_array( wfHostname(), [ 'test3', 'test111' ] ) ) {
+if ( in_array( wfHostname(), [ 'test3', 'test101' ] ) ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
 }
