@@ -22,7 +22,7 @@ $wgMajorSiteNoticeID = 65;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>We are aware of recent issues, including issues with pages loading extremely slow, or returning 502 or 503 errors. Over the next few weeks we are migrating to new infrastructure, <a href="https://blog.miraheze.org/post/17/introducing_scsvg/">SCSVG</a>. This migration has exacerbated the already existing issues which has plagued Miraheze for quite some time. Once the migration is complete loading should improve drastically. We deeply apologise for all the inconvenience this undoubtedly causes.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>We are aware of recent issues, including issues with pages loading extremely slow, or returning 502 or 503 errors. Over the next few weeks we are migrating to new infrastructure, <a href="https://blog.miraheze.org/post/17/introducing_scsvg/">SCSVG</a>. This migration has exacerbated the already existing issues which has plagued Miraheze for quite some time. Once the migration is complete, loading should improve drastically. For more information, click <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Upcoming_changes_and_performance_issues">here</a>. We deeply apologise for all the inconvenience this undoubtedly causes.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
