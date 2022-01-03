@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 64;
 } */
 
 # Specific wiki SiteNotice
-if ( $wmgUseComments ?? false ) {
+/* if ( $wmgUseComments ?? false ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -41,4 +41,4 @@ if ( $wmgUseComments ?? false ) {
 				</tr></tbody></table></div>
 		EOF;
 	}
-}
+} */
