@@ -1624,6 +1624,7 @@ $wi->config->settings += [
 	// IncidentReporting
 	'wgIncidentReportingDatabase' => [
 		'default' => 'incidents',
+		'default' => 'testincidents',
 	],
 	'wgIncidentReportingServices' => [
 		'default' => [
