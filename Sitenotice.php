@@ -6,7 +6,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 64;
+$wgMajorSiteNoticeID = 65;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -14,7 +14,7 @@ $wgMajorSiteNoticeID = 64;
  */
 
 # Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
+// if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -22,11 +22,11 @@ $wgMajorSiteNoticeID = 64;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze has upgraded to MediaWiki 1.37.0. If you encounter any technical issues, please create a <a href="https://phabricator.miraheze.org" target="_blank">Phabricator</a> task or <a href="https://meta.miraheze.org/wiki/Community_noticeboard" target="_blank">community noticeboard</a> post.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>We are aware of recent issues, including issues with page loading extremely slow, or returning 502 or 503 errors. Over the next few weeks we are migrating to a new infrastructure, <a href="https://blog.miraheze.org/post/17/introducing_scsvg/">SCSVG</a>. This migration has exacerbated the already existing issues which has plagued Miraheze for quite some time. Once the migration is complete loading should improve drastically. We deeply apologise for all the inconvenience the undoubtedly causes.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
-} */
+// }
 
 # Specific wiki SiteNotice
 /* if ( $wmgUseComments ?? false ) {
