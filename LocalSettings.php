@@ -800,6 +800,7 @@ $wi->config->settings += [
 			'security',
 			'donate',
 			'blog',
+			'status',
 			'sslhost',
 			'sslrequest',
 			'deployment',
