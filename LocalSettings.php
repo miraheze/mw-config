@@ -1361,7 +1361,6 @@ $wi->config->settings += [
 			19, // Reception123 (SRE)
 			5258, // Void (SRE and Board)
 			13554, // Paladox (SRE)
-			24689, // RobLa (Board)
 			243629, // RhinosF1 (SRE)
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
