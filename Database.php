@@ -1,32 +1,32 @@
 <?php
 $ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 if ( in_array( wfHostname(), $ovlon ) ) {
-	$wmgDB11Hostname = 'db11.miraheze.org';
-	$wmgDB12Hostname = 'db12.miraheze.org';
-	$wmgDB13Hostname = 'db13.miraheze.org';
+	$db1 = 'db11';
+	$db2 = 'db12';
+	$db3 = 'db13';
 } else {
-	$wmgDB11Hostname = 'db101.miraheze.org';
-	$wmgDB12Hostname = 'db111.miraheze.org';
-	$wmgDB13Hostname = 'db121.miraheze.org';
+	$db1 = 'db101';
+	$db2 = 'db111';
+	$db3 = 'db121';
 }
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db11' => 1,
+			$db1 => 1,
 		],
 		'c1' => [
-			'db11' => 1,
+			$db1 => 1,
 		],
 		'c2' => [
-			'db11' => 1,
+			$db1 => 1,
 		],
 		'c3' => [
-			'db12' => 1,
+			$db2 => 1,
 		],
 		'c4' => [
-			'db13' => 1,
+			$db3 => 1,
 		],
 	],
 	'serverTemplate' => [
@@ -43,16 +43,16 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		'db11' => $wmgDB11Hostname,
-		'db12' => $wmgDB12Hostname,
-		'db13' => $wmgDB13Hostname,
+		$db1 => "{$db1}.miraheze.org",
+		$db2 => "{$db2}.miraheze.org",
+		$db3 => "{$db3}.miraheze.org",
 	],
 	'externalLoads' => [
 		'echo' => [
-			'db11' => 1, // should echo c1
+			$db1 => 1, // should echo c1
 		],
 		'beta' => [
-			'db13' => 1, // should echo c4 (where betawiki is located)
+			$db3 => 1, // should echo c4 (where betawiki is located)
 		],
 	],
 	'readOnlyBySection' => [
@@ -73,3 +73,6 @@ if ( !in_array( wfHostname(), $ovlon ) ) {
 		'c4' => 'Please use the active DC',
 	];
 }
+
+// don't need to set these as globals
+unset( $db1, $db2, $db3 );
