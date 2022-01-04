@@ -4023,7 +4023,6 @@ $wi->config->settings += [
 	'wmgPrivateUploads' => [
 		'default' => false,
 		'ciptamediawiki' => true,
-		'rhinosf1wiki' => true,
 		'staffwiki' => true,
 		'mikekilitterboxwiki' => true,
 	],
