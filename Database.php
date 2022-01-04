@@ -75,4 +75,4 @@ if ( !in_array( wfHostname(), $ovlon ) ) {
 }
 
 // don't need to set these as globals
-unset( $db1, $db2, $db3 );
+unset( $db1, $db2, $db3, $ovlon );
