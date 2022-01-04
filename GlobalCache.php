@@ -11,7 +11,7 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgMem1Server = '51.195.236.223:11211';
 	$wmgMem2Server = '51.195.236.245:11211';
 } else {
-	$wmgJobrunnerServer = '2a10:6740::6:306:6379';
+	$wmgJobrunnerServer = 'jobchron121.miraheze.org:6379';
 	$wmgMem1Server = 'mem101.miraheze.org:11211';
 	$wmgMem2Server = 'mem121.mirahaheze.org:11211';
 }
