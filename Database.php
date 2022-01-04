@@ -49,7 +49,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	],
 	'externalLoads' => [
 		'echo' => [
-			$db1 => 1, // should echo c1
+			$db1 => 1, // should echo c1 (where metawiki is located)
 		],
 		'beta' => [
 			$db3 => 1, // should echo c4 (where betawiki is located)
