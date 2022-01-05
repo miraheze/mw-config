@@ -31,7 +31,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 ];
 
 $wgObjectCaches['memcached-mem-2'] = [
-	'class'                => 'MemcachedPhpBagOStuff',
+	'class'                => $wmgMemcachedClass,
 	'serializer'           => 'php',
 	'persistent'           => false,
 	'servers'              => [ $wmgMem2Server ],
