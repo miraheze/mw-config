@@ -16,7 +16,7 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgMem2Server = 'mem121.mirahaheze.org:11211';
 }
 $wgObjectCaches['memcached-mem-1'] = [
-	'class'                => 'MemcachedPeclBagOStuff',
+	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
 	'servers'              => [ $wmgMem1Server ],
@@ -29,7 +29,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 ];
 
 $wgObjectCaches['memcached-mem-2'] = [
-	'class'                => 'MemcachedPeclBagOStuff',
+	'class'                => 'MemcachedPhpBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
 	'servers'              => [ $wmgMem2Server ],
