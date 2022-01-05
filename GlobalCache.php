@@ -12,11 +12,12 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgMem2Server = '51.195.236.245:11211';
 	$wmgMemcachedClass = 'MemcachedPhpBagOStuff';
 } else {
-	$wmgJobrunnerServer = 'jobchron121.miraheze.org:6379';
+	$wmgJobrunnerServer = '[2a10:6740::6:306]:6379';
 	$wmgMem1Server = '[2a10:6740::6:105]:11211';
 	$wmgMem2Server = '[2a10:6740::6:308]:11211';
 	$wmgMemcachedClass = 'MemcachedPeclBagOStuff';
 }
+
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => $wmgMemcachedClass,
 	'serializer'           => 'php',
