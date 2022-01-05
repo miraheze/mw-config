@@ -18,7 +18,7 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgMemcachedClass = 'MemcachedPeclBagOStuff';
 }
 $wgObjectCaches['memcached-mem-1'] = [
-	'class'                => 'MemcachedPhpBagOStuff',
+	'class'                => $wmgMemcachedClass,
 	'serializer'           => 'php',
 	'persistent'           => false,
 	'servers'              => [ $wmgMem1Server ],
