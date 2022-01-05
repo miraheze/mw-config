@@ -245,6 +245,20 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgTemplateStylesNamespaces' => [
+		'name' => 'Can TemplateStyles be used in this namespace?',
+		'from' => 'templatestyles',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'blacklisted' => [],
+		'overridedefault' => [
+			10 => true,
+			'default' => false,
+		],
+		'help' => '',
+		'requires' => [],
+	],
 	'wgARENamespaces' => [
 		'name' => 'Enable Article Ratings in this namespace?',
 		'from' => 'articleratings',
