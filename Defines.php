@@ -232,11 +232,6 @@ $wi->config->settings['wgDataDump']['default'] = [
 	],
 ];
 
-// Exempt from Robot Control (INDEX/NOINDEX namespaces)
-if ( !isset( $wgExemptFromUserRobotsControl ) ) {
-	$wgExemptFromUserRobotsControl = [];
-}
-
 // $wmgContactPageRecipientUser
 if ( $wmgContactPageRecipientUser ) {
 	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
