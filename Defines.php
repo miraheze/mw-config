@@ -393,6 +393,11 @@ $wgFooterIcons['copyright']['copyright'] = [
 	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
 ];
 
+$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
+if ( !in_array( wfHostname(), $ovlon ) ) {
+	$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
+}
+
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
