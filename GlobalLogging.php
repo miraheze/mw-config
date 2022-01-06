@@ -221,6 +221,10 @@ if ( $wmgLogToDisk || !in_array( wfHostname(), $ovlon ) ) {
 		'Math' => "$wmgLogDir/debuglogs/Math.log",
 		'MatomoAnalytics' => "$wmgLogDir/debuglogs/MatomoAnalytics.log",
 		'ManageWiki' => "$wmgLogDir/debuglogs/ManageWiki.log",
+		'memcached' => [
+			'destination' => "$wmgLogDir/debuglogs/memcached.log",
+			'level' => \Psr\Log\LogLevel::ERROR,
+		],
 		'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 		'redis' => [
 			'destination' => "$wmgLogDir/debuglogs/redis.log",
