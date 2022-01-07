@@ -41,7 +41,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 $wgPasswordSender = 'noreply@miraheze.org';
-
+$wgMaxShellMemory = 204800
 $wmgUploadHostname = 'static.miraheze.org';
 
 $wi->setVariables(
