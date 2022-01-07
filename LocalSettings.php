@@ -4568,7 +4568,7 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname, $wgAPIModules;
+	global $wgConf, $wgDBname, $wgAPIModules, $wgRevokePermissions;
 
 	$wgConf->extractAllGlobals( $wgDBname );
 	$wgRevokePermissions['*']['upload'] = true;
