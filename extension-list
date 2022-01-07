@@ -169,6 +169,7 @@ $IP/extensions/PageSchemas/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
+$IP/extensions/Patroller/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/PipeEscape/extension.json
 $IP/extensions/Poem/extension.json
@@ -221,7 +222,9 @@ $IP/extensions/SocialProfile/UserWelcome/extension.json
 $IP/extensions/SpamBlacklist/extension.json
 $IP/extensions/Spoilers/extension.json
 $IP/extensions/SpriteSheet/extension.json
+$IP/extensions/StandardDialogs/extension.json
 $IP/extensions/StopForumSpam/extension.json
+$IP/extensions/StructuredNavigation/extension.json
 $IP/extensions/SubPageList3/extension.json
 $IP/extensions/SubpageFun/extension.json
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
