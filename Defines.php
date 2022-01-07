@@ -409,3 +409,4 @@ $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w
 // Scribunto
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 5;
 $wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 200;
+$wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 204800;
