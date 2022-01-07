@@ -6,7 +6,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 65;
+$wgMajorSiteNoticeID = 66;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -22,7 +22,7 @@ $wgMajorSiteNoticeID = 65;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>We are aware of recent issues, including issues with pages loading extremely slow, or returning 502 or 503 errors. Over the next few weeks we are migrating to new infrastructure, <a href="https://blog.miraheze.org/post/17/introducing_scsvg/">SCSVG</a>. This migration has exacerbated the already existing issues which has plagued Miraheze for quite some time. Once the migration is complete, loading should improve drastically. For more information, click <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Upcoming_changes_and_performance_issues">here</a>. We deeply apologise for all the inconvenience this undoubtedly causes.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>We will be migrating to newer and faster servers. <b>Migration will begin at 22:45 UTC on 14 January, 2021<b> and all wikis will be set to read-only for about 30 minutes. Please save your edits 5-10 minutes before! Images uploads will also be disabled at 19:45 UTC. For more information, click <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Things_to_note_for_the_upcoming_migration_and_downtime_notice">here</a>.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
