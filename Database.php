@@ -64,7 +64,7 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 	],
 ];
 
-if ( !in_array( wfHostname(), $ovlon ) ) {
+if ( in_array( wfHostname(), $ovlon ) ) {
 	$wi->config->settings['wgLBFactoryConf']['default']['readOnlyBySection'] = [
 		'DEFAULT' => 'Please use the active DC',
 		'c1' => 'Please use the active DC',
