@@ -1633,6 +1633,7 @@ $wi->config->settings += [
 			'DNS' => 'https://meta.miraheze.org/wiki/Tech:DNS',
 			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
 			'Grafana' => 'https://meta.miraheze.org/wiki/Tech:Grafana',
+			'Graylog' => 'https://meta.miraheze.org/wiki/Tech:Graylog',
 			'Icinga' => 'https://meta.miraheze.org/wiki/Tech:Icinga',
 			'LizardFS' => 'https://meta.miraheze.org/wiki/Tech:Lizardfs',
 			'Mail' => 'https://meta.miraheze.org/wiki/Tech:Mail',
