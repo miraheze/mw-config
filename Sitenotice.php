@@ -22,7 +22,7 @@ $wgMajorSiteNoticeID = 66;
 
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>We will be migrating to newer and faster servers. <b>Migration will begin at 22:45 UTC on 14 January, 2021<b> and all wikis will be set to read-only for about 30 minutes. Please save your edits 5-10 minutes before! Images uploads will also be disabled at 19:45 UTC. For more information, click <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Things_to_note_for_the_upcoming_migration_and_downtime_notice">here</a>.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>We will be migrating to newer and faster servers. <b>Migration will begin at 22:45 UTC on 14 January, 2022<b> and all wikis will be set to read-only for about 30 minutes. Please save your edits 5-10 minutes before! Images uploads will also be disabled at 19:45 UTC. For more information, click <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Things_to_note_for_the_upcoming_migration_and_downtime_notice">here</a>.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
