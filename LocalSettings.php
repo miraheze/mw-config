@@ -4571,7 +4571,7 @@ function extractGlobals() {
 	global $wgConf, $wgDBname, $wgAPIModules;
 
 	$wgConf->extractAllGlobals( $wgDBname );
-
+	$wgRevokePermissions['*']['upload'] = true;
 	$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 	if ( isset( $wgAPIModules['commentlist'] ) && in_array( wfHostname(), $ovlon ) ) {
 		unset( $wgAPIModules['commentlist'] );
