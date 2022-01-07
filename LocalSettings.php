@@ -2380,9 +2380,7 @@ $wi->config->settings += [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'centralauth-oversight' => true,
-				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
-				'createwiki' => true,
 				'globalblock' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
@@ -2397,7 +2395,7 @@ $wi->config->settings += [
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
-				'createwiki' => true,
+				'read' => true,
 			],
 		],
 		'+moviepediawiki' => [
