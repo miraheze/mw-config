@@ -2980,6 +2980,14 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'standarddialogs' => [
+		'name' => 'StandardDialogs',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StandardDialogs',
+		'var' => 'wmgUseStandardDialogs',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'flow' => [
 		'name' => 'Flow',
 		'displayname' => 'StructuredDiscussions (Flow)',
