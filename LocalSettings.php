@@ -1563,6 +1563,14 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// HasSomeColours
+	'wgHasSomeColoursColourOne' => [
+		'default' => '#555',
+	],
+	'wgHasSomeColoursColourTwo' => [
+		'default' => '#d77',
+	],
+
 	// HeaderTabs
 	'wgHeaderTabsRenderSingleTab' => [
 		'default' => false,
