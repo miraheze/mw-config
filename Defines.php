@@ -393,6 +393,12 @@ $wgFooterIcons['copyright']['copyright'] = [
 	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
 ];
 
+$wgLocalisationUpdateRepositories['github'] = [
+	'mediawiki' => 'https://raw.github.com/wikimedia/mediawiki/master/%PATH%',
+	'extension' => false,
+	'skin' => false,
+];
+
 $ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 if ( !in_array( wfHostname(), $ovlon ) ) {
 	$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
