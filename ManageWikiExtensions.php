@@ -1628,6 +1628,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'install' => [
+			'sql' => [
+				'patrollers' => "$IP/extensions/Patroller/sql/add-patrollers.sql",
+			],
 			'permissions' => [
 				'patroller' => [
 					'permissions' => [
