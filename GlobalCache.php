@@ -8,13 +8,13 @@ $wgMemCachedTimeout = 0.5 * 1e6;
 $ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgJobrunnerServer = '51.195.236.215:6379';
-	$wmgMem1Server = '51.195.236.223:11211';
-	$wmgMem2Server = '51.195.236.245:11211';
+	$wmgMem1Server = '127.0.0.1:11212';
+	$wmgMem2Server = '127.0.0.1:11213';
 	$wmgMemcachedClass = 'MemcachedPhpBagOStuff';
 } else {
 	$wmgJobrunnerServer = '[2a10:6740::6:306]:6379';
-	$wmgMem1Server = '[2a10:6740::6:105]:11211';
-	$wmgMem2Server = '[2a10:6740::6:308]:11211';
+	$wmgMem1Server = '127.0.0.1:11212';
+	$wmgMem2Server = '127.0.0.1:11213';
 	$wmgMemcachedClass = 'MemcachedPeclBagOStuff';
 }
 
