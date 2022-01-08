@@ -2,8 +2,8 @@
 
 $wgMemCachedPersistent = false;
 
-// Set timeout to 500ms (in microseconds)
-$wgMemCachedTimeout = 0.5 * 1e6;
+// Set timeout to 3s (in microseconds)
+$wgMemCachedTimeout = 3 * 1e6;
 
 $ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 if ( in_array( wfHostname(), $ovlon ) ) {
