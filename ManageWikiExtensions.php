@@ -1621,6 +1621,28 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'patroller' => [
+		'name' => 'Patroller',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Patroller',
+		'var' => 'wmgUsePatroller',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'patroller' => [
+					'permissions' => [
+						'patroller',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'patroller',
+					],
+				],
+			],
+		],
+		'section' => 'specialpages',
+	],
 	'quizgame' => [
 		'name' => 'QuizGame',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:QuizGame',
