@@ -31,9 +31,9 @@ $wgMajorSiteNoticeID = 66;
 
 # Specific wiki SiteNotice
 if ( $wgUseCategoryBrowser ?? true ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	$wgHooks['SiteNoticeAfter'][] = 'onCategoryBrowserSiteNotice';
 
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	function onCategoryBrowserSiteNotice( &$siteNotice, $skin ) {
 		global $wmgSiteNoticeOptOut, $snImportant;
 
 		$siteNotice .= <<<EOF
