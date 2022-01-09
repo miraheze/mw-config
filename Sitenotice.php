@@ -42,4 +42,4 @@ if ( $wgUseCategoryBrowser ?? true ) {
 				</tr></tbody></table></div>
 		EOF;
 	}
-} 
+}
