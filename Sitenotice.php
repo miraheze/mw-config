@@ -30,7 +30,7 @@ $wgMajorSiteNoticeID = 66;
 // }
 
 # Specific wiki SiteNotice
-/* if ( $wmgUseComments ?? false ) {
+if ( $wgUseCategoryBrowser ?? true ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
@@ -38,8 +38,8 @@ $wgMajorSiteNoticeID = 66;
 
 		$siteNotice .= <<<EOF
 				<div data-nosnippet><table class="wikitable" style="text-align:center;"><tbody><tr>
-				<td style="font-size:125%">Due to extreme performance issues with the "commentlist" API module, it has been disabled. As a result, Comments may not load while it is disabled. We apologize for the inconvience and are working upstream to fix the issue and reenable Comments as soon as possible. Please see <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Comments_disabled">this Meta post</a> for more information.</td>
+				<td style="font-size:125%">MediaWiki developers are considering removing <a href="https://www.mediawiki.org/wiki/Manual:$wgUseCategoryBrowser">Category Browser ($wgUseCategoryBrowser)</a>. <b>Miraheze is requesting your feedback on this so we can forward it to MediaWiki developers!</b> Let us know what you think <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Request_for_Feedback:_Removal_of_$wgUseCategoryBrowser_in_MediaWiki_1.38">here</a>.</td>
 				</tr></tbody></table></div>
 		EOF;
 	}
-} */
+} 
