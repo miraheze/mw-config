@@ -4142,6 +4142,21 @@ $wi->config->settings += [
 	'wgVisualEditorEnableVisualSectionEditing' => [
 		'default' => 'mobile',
 	],
+	'wgVisualEditorTransclusionDialogSuggestedValues' => [
+		'default' => false,
+	],
+	'wgVisualEditorTransclusionDialogInlineDescriptions' => [
+		'default' => false,
+	],
+	'wgVisualEditorTransclusionDialogBackButton' => [
+		'default' => false,
+	],
+	'wgVisualEditorTransclusionDialogNewSidebar' => [
+		'default' => false,
+	],
+	'wgVisualEditorTemplateSearchImprovements' => [
+		'default' => false,
+	],
 
 	// ProtectSite
 	'wgProtectSiteLimit' => [
