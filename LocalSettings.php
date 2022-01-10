@@ -4443,7 +4443,6 @@ $wi->config->settings += [
 			'OldRevisionImporter' => false,
 			'OutputBuffer' => false,
 			'PageTriage' => false,
-			'PageViewInfo' => false,
 			'Parser' => false,
 			'ParserCache' => false,
 			'preferences' => false,
