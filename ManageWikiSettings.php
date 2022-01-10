@@ -2794,6 +2794,24 @@ $wgManageWikiSettings = [
 		'help' => 'Removes the sticky behavior of Right Rail on larger screens with 700 pixels or more. Requires <code>$wgEvelutionDisableRightRail</code> to not be set to work.',
 		'requires' => [],
 	],
+	'wgHasSomeColoursColourOne' => [
+		'name' => 'HasSomeColours Colour One',
+		'from' => 'hassomecolours',
+		'type' => 'text',
+		'overridedefault' => '#555',
+		'section' => 'styling',
+		'help' => 'Primary colour for the HasSomeColours skin, for the header, footer, and various backgrounds.',
+		'requires' => [],
+	],
+	'wgHasSomeColoursColourTwo' => [
+		'name' => 'HasSomeColours Colour Two',
+		'from' => 'hassomecolours',
+		'type' => 'text',
+		'overridedefault' => '#d77',
+		'section' => 'styling',
+		'help' => 'Secondary colour for the HasSomeColours skin, for trim and others.',
+		'requires' => [],
+	],
 	'wgMedikColor' => [
 		'name' => 'Medik Color',
 		'from' => 'medik',
@@ -2850,11 +2868,13 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => [
 			'default' => 'default',
-			'full' => 'full'
+			'full' => 'full',
+			'narrow' => 'narrow',
+			'wide' => 'wide'
 		],
 		'overridedefault' => 'default',
 		'section' => 'styling',
-		'help' => 'At large screens, the main content container (with articles, texts, etc.) is 9/12 of the screen width and sidebar menu takes 2/12 of the screen width. It means that 1/12 of the screen width on the right side remains white. This is the default and looks good. But there can be cases when you need your wiki to extend to the full width of the screen even on the large screens. Then you can and set this to \'full\'. Then the main content container will take 10/12 of the screen width (and 2/12 remain for the sidebar menu).',
+		'help' => 'At large screens, the main content container (with articles, texts, etc.) is 9/12 of the screen width and sidebar menu takes 2/12 of the screen width. It means that 1/12 of the screen width on the right side remains white. This is the default and looks good. But there can be cases when you need your wiki to extend to the full width of the screen even on the large screens. Then you can and set this to \'full\'. Then the main content container will take 10/12 of the screen width (and 2/12 remain for the sidebar menu). If you need a narrow main content area, use \'narrow\' instead. Then the main content container will take 8/12 of the screen width (and 2/12 remain for the sidebar menu on the left and 2/12 for the white space on the right). If you need a wide main content with only a narrow left sidebar, use \'wide\'. Then the sidebar will be 1/12 and the main content 10/12 on large screens.',
 		'requires' => [],
 	],
 	'wgTimelessBackdropImage' => [
