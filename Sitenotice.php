@@ -28,7 +28,7 @@ $wgMajorSiteNoticeID = 66;
 // }
 
 # Specific wiki SiteNotice
-if ( $wgUseCategoryBrowser ?? true ) {
+if ( $wgUseCategoryBrowser ?? false ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onCategoryBrowserSiteNotice';
 
 	function onCategoryBrowserSiteNotice( &$siteNotice, $skin ) {
