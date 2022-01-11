@@ -1455,7 +1455,7 @@ $wi->config->settings += [
 		'metawiki' => false,
 	],
 	'wgGlobalBlockingDatabase' => [
-		'default' => 'mhglobal', // use mhglobal for global blocks
+		'default' => 'mhglobal',
 		'betaheze' => 'testglobal',
 	],
 
