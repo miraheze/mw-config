@@ -63,10 +63,6 @@ if (
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
-if ( wfHostname() === 'test3' ) {
-	$wgShellboxUrl = 'http://localhost:8080/shellbox';
-}
-
 // Closed Wikis
 if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
