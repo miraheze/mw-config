@@ -3653,12 +3653,6 @@ $wi->config->settings += [
 	],
 
 	// Score
-	'wgScoreLilyPond' => [
-		'default' => '/dev/null',
-	],
-	'wgScoreDisableExec' => [
-		'default' => true,
-	],
 	'wgScoreSafeMode' => [
 		'default' => true,
 	],
