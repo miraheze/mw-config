@@ -3653,6 +3653,11 @@ $wi->config->settings += [
 	],
 
 	// Score
+	'wgShellboxUrls' => [
+		'default' => [
+			'score' => 'http://localhost:8080/shellbox',
+		],
+	],
 	'wgScoreSafeMode' => [
 		'default' => true,
 	],
