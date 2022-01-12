@@ -64,7 +64,7 @@ if (
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
 if ( wfHostname() === 'test3' ) {
-	$wgShellboxUrl = 'http://shellbox.internal:8080/shellbox';
+	$wgShellboxUrl = 'http://localhost:8080/shellbox';
 }
 
 // Closed Wikis
