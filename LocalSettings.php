@@ -2089,14 +2089,6 @@ $wi->config->settings += [
 		],
 	],
 
-	// LiliPond
-	'wgScoreLilyPond' => [
-		'default' => '/dev/null',
-	],
-	'wgScoreDisableExec' => [
-		'default' => true,
-	],
-
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
 		'wmgUseLinter' => [
@@ -3658,6 +3650,20 @@ $wi->config->settings += [
 		'wmgUseRSS' => [
 			'*',
 		],
+	],
+
+	// Score
+	'wgScoreLilyPond' => [
+		'default' => '/dev/null',
+	],
+	'wgScoreDisableExec' => [
+		'default' => true,
+	],
+	'wgScoreSafeMode' => [
+		'default' => true,
+	],
+	'wgScoreImageMagickConvert' => [
+		'default' => '/usr/bin/convert',
 	],
 
 	// ScratchBlocks
