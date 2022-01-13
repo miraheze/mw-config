@@ -815,6 +815,7 @@ $wi->config->settings += [
 			'matomo',
 			'grafana',
 			'icinga',
+			'csw(\d+)?',
 			'misc\d+',
 			'db\d+',
 			'cp\d+',
