@@ -56,13 +56,14 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		],
 	],
 	'readOnlyBySection' => [
-		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
-		//'c1' => 'Maintenance ongoing on the database server.',
-		//'c2' => 'Maintenance ongoing on the database server.',
-		//'c3' => 'Maintenance ongoing on the database server.',
-		//'c4' => 'Maintenance ongoing on the database server.',
+		//'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
+
 
 if ( in_array( wfHostname(), $ovlon ) ) {
 	$wi->config->settings['wgLBFactoryConf']['default']['readOnlyBySection'] = [
@@ -73,6 +74,5 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 		'c4' => 'Please use the active DC',
 	];
 }
-
 // don't need to set these as globals
 unset( $db1, $db2, $db3, $ovlon );

@@ -815,6 +815,7 @@ $wi->config->settings += [
 			'matomo',
 			'grafana',
 			'icinga',
+			'csw(\d+)?',
 			'misc\d+',
 			'db\d+',
 			'cp\d+',
@@ -1455,7 +1456,7 @@ $wi->config->settings += [
 		'metawiki' => false,
 	],
 	'wgGlobalBlockingDatabase' => [
-		'default' => 'mhglobal', // use mhglobal for global blocks
+		'default' => 'mhglobal',
 		'betaheze' => 'testglobal',
 	],
 
@@ -1563,6 +1564,14 @@ $wi->config->settings += [
 		'default' => false,
 	],
 
+	// HasSomeColours
+	'wgHasSomeColoursColourOne' => [
+		'default' => '#555',
+	],
+	'wgHasSomeColoursColourTwo' => [
+		'default' => '#d77',
+	],
+
 	// HeaderTabs
 	'wgHeaderTabsRenderSingleTab' => [
 		'default' => false,
@@ -1628,6 +1637,8 @@ $wi->config->settings += [
 	'wgIncidentReportingServices' => [
 		'default' => [
 			'Bacula' => 'https://meta.miraheze.org/wiki/Tech:Bacula',
+			'Bastion' => 'https://meta.miraheze.org/wiki/Tech:Bastion',
+			'ElasticSearch' => 'https://meta.miraheze.org/wiki/Tech:ElasticSearch',
 			'DNS' => 'https://meta.miraheze.org/wiki/Tech:DNS',
 			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
 			'Grafana' => 'https://meta.miraheze.org/wiki/Tech:Grafana',
@@ -2397,7 +2408,7 @@ $wi->config->settings += [
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
-				'createwiki' => true,
+				'read' => true,
 			],
 		],
 		'+moviepediawiki' => [
@@ -4140,6 +4151,21 @@ $wi->config->settings += [
 	'wgVisualEditorEnableVisualSectionEditing' => [
 		'default' => 'mobile',
 	],
+	'wgVisualEditorTransclusionDialogSuggestedValues' => [
+		'default' => false,
+	],
+	'wgVisualEditorTransclusionDialogInlineDescriptions' => [
+		'default' => false,
+	],
+	'wgVisualEditorTransclusionDialogBackButton' => [
+		'default' => false,
+	],
+	'wgVisualEditorTransclusionDialogNewSidebar' => [
+		'default' => false,
+	],
+	'wgVisualEditorTemplateSearchImprovements' => [
+		'default' => false,
+	],
 
 	// ProtectSite
 	'wgProtectSiteLimit' => [
@@ -4418,7 +4444,6 @@ $wi->config->settings += [
 			'OldRevisionImporter' => false,
 			'OutputBuffer' => false,
 			'PageTriage' => false,
-			'PageViewInfo' => false,
 			'Parser' => false,
 			'ParserCache' => false,
 			'preferences' => false,
@@ -4568,9 +4593,13 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname, $wgAPIModules;
+	global $wgConf, $wgDBname, $wgAPIModules, $wgRevokePermissions, $wgUploadMaintenance;
 
 	$wgConf->extractAllGlobals( $wgDBname );
+	$wgRevokePermissions['*']['upload'] = true;
+	$wgRevokePermissions['*']['movefile'] = true;
+	$wgRevokePermissions['*']['createwiki'] = true;
+	$wgUploadMaintenance = true;
 
 	$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 	if ( isset( $wgAPIModules['commentlist'] ) && in_array( wfHostname(), $ovlon ) ) {

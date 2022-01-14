@@ -13,8 +13,8 @@ if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgMemcachedClass = 'MemcachedPhpBagOStuff';
 } else {
 	$wmgJobrunnerServer = '[2a10:6740::6:306]:6379';
-	$wmgMem1Server = '[2a10:6740::6:105]:11211';
-	$wmgMem2Server = '[2a10:6740::6:308]:11211';
+	$wmgMem1Server = '127.0.0.1:11212';
+	$wmgMem2Server = '127.0.0.1:11213';
 	$wmgMemcachedClass = 'MemcachedPeclBagOStuff';
 }
 

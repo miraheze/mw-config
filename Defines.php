@@ -63,6 +63,10 @@ if (
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
+if ( wfHostname() === 'test3' ) {
+	$wgShellboxUrl = 'http://localhost:8080/shellbox';
+}
+
 // Closed Wikis
 if ( $cwClosed ) {
 	$wi->config->settings['wgRevokePermissions']['default'] = [
@@ -87,7 +91,7 @@ if ( $cwClosed ) {
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
-		'uri' => 'udp://[2001:41d0:800:1bbd::3]:5070',
+		'uri' => 'udp://[2a10:6740::6:205]:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	];
@@ -396,6 +400,12 @@ $wgFooterIcons['copyright']['copyright'] = [
 $ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 if ( !in_array( wfHostname(), $ovlon ) ) {
 	$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
+
+	$wgLocalisationUpdateRepositories['github'] = [
+		'mediawiki' => 'https://raw.github.com/wikimedia/mediawiki/master/%PATH%',
+		'extension' => false,
+		'skin' => false,
+	];
 }
 
 // Discord
