@@ -2408,7 +2408,7 @@ $wi->config->settings += [
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
-				'createwiki' => true,
+				'read' => true,
 			],
 		],
 		'+moviepediawiki' => [
