@@ -4593,9 +4593,12 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname, $wgAPIModules;
+	global $wgConf, $wgDBname, $wgAPIModules, $wgRevokePermissions, $wgUploadMaintenance;
 
 	$wgConf->extractAllGlobals( $wgDBname );
+	$wgRevokePermissions['*']['upload'] = true;
+	$wgRevokePermissions['*']['movefile'] = true;
+	$wgUploadMaintenance = true;
 
 	$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 	if ( isset( $wgAPIModules['commentlist'] ) && in_array( wfHostname(), $ovlon ) ) {
