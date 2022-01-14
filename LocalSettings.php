@@ -4418,6 +4418,9 @@ $wi->config->settings += [
 	'wgWBQualityConstraintsAsReferencesId' => [
 		'default' => 'Q54828450',
 	],
+	'wgWBQualityConstraintsEnableSuggestionConstraintStatus' => [
+		'default' => false,
+	],
 
 	// WebChat config
 	'wgWebChatServer' => [

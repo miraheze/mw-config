@@ -3299,6 +3299,15 @@ $wgManageWikiSettings = [
 		'help' => 'To determine if federated properties should be enabled or not.',
 		'requires' => [],
 	],
+	'wgWBQualityConstraintsEnableSuggestionConstraintStatus' => [
+		'name' => 'Enable Suggestion Constraint Status',
+		'from' => 'wikibasequalityconstraints',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Whether to enable the \'constraint suggestion\' constraint status or not. This is a temporary configuration that will be removed once constraint suggestions are permanently enabled on Wikidata.',
+		'requires' => [],
+	],
 	'wmgFormatterUrlProperty' => [
 		'name' => 'Formatter Url Property',
 		'from' => 'wikibaserepository',
