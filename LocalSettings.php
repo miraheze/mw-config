@@ -4598,7 +4598,6 @@ function extractGlobals() {
 	$wgConf->extractAllGlobals( $wgDBname );
 	$wgRevokePermissions['*']['upload'] = true;
 	$wgRevokePermissions['*']['movefile'] = true;
-	$wgRevokePermissions['*']['createwiki'] = true;
 	$wgUploadMaintenance = true;
 
 	$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
