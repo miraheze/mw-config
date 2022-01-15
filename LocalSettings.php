@@ -19,9 +19,22 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 60;
 }
 
-if ( $wmgProfiler ?? [] ) {
-	$wgProfiler = $wmgProfiler;
-	$wgHTTPTimeout = 10;
+/**
+ * When using ?forceprofile=1, a profile can be found as an HTML comment
+ * Disabled on production hosts because it seems to be causing performance issues (how ironic)
+ */
+$forceprofile = $_GET['forceprofile'] ?? 0;
+if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways_xhprof' ) ) {
+	$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
+	tideways_xhprof_enable( $xhprofFlags );
+
+	$wgProfiler = [
+		'class' => 'ProfilerXhprof',
+		'flags' => $xhprofFlags,
+		'running' => true,
+		'output' => 'text',
+	];
+	$wgHTTPTimeout = 60;
 }
 
 // Initialise WikiInitialise
