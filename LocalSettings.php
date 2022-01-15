@@ -8,10 +8,7 @@
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
-} elseif (
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask1.miraheze.org' ||
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask111.miraheze.org'
-) {
+} elseif ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask111.miraheze.org' ) {
 	$wgRequestTimeLimit = 1200;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
