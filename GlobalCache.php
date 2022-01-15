@@ -5,6 +5,9 @@ $wgMemCachedPersistent = false;
 // Set timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
 
+$wgMemCachedServers = [];
+$wgMemCachedPersistent = false;
+
 $ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
 if ( in_array( wfHostname(), $ovlon ) ) {
 	$wmgJobrunnerServer = '51.195.236.215:6379';
