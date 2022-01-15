@@ -63,8 +63,8 @@ if (
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
-if ( wfHostname() === 'test3' ) {
-	$wgShellboxUrl = 'http://localhost:8080/shellbox';
+if ( wfHostname() === 'test101' ) {
+	// $wgShellboxUrl = 'http://localhost:8080/shellbox';
 }
 
 // Closed Wikis
@@ -397,16 +397,13 @@ $wgFooterIcons['copyright']['copyright'] = [
 	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
 ];
 
-$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
-if ( !in_array( wfHostname(), $ovlon ) ) {
-	$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
+$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
 
-	$wgLocalisationUpdateRepositories['github'] = [
-		'mediawiki' => 'https://raw.github.com/wikimedia/mediawiki/master/%PATH%',
-		'extension' => false,
-		'skin' => false,
-	];
-}
+$wgLocalisationUpdateRepositories['github'] = [
+	'mediawiki' => 'https://raw.github.com/wikimedia/mediawiki/master/%PATH%',
+	'extension' => false,
+	'skin' => false,
+];
 
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;

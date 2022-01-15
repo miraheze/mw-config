@@ -2115,29 +2115,7 @@ $wi->config->settings += [
 	'wgLinterSubmitterWhitelist' => [
 		'wmgUseLinter' => [
 			/** localhost */
-			'127.0.0.1' => true,
 			'::1' => true,
-			/** mw8 */
-			'51.195.236.221' => true,
-			'2001:41d0:800:178a::7' => true,
-			/** mw9 */
-			'51.195.236.222' => true,
-			'2001:41d0:800:178a::8' => true,
-			/** mw10 */
-			'51.195.236.254' => true,
-			'2001:41d0:800:1bbd::8' => true,
-			/** mw11 */
-			'51.195.236.255' => true,
-			'2001:41d0:800:1bbd::10' => true,
-			/** mw12 */
-			'51.195.236.220' => true,
-			'2001:41d0:800:178a::6' => true,
-			/** mw13 */
-			'51.195.236.251' => true,
-			'2001:41d0:800:1bbd::5' => true,
-			/** test3 */
-			'51.195.236.247' => true,
-			'2001:41d0:800:1bbd::14' => true,
 			/** mw101 */
 			'2a10:6740::6:107' => true,
 			/** mw102 */
@@ -4585,7 +4563,7 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-if ( in_array( wfHostname(), [ 'test3', 'test101' ] ) ) {
+if ( wfHostname() === 'test101' ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
 }
@@ -4606,12 +4584,7 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname, $wgAPIModules;
+	global $wgConf, $wgDBname;
 
 	$wgConf->extractAllGlobals( $wgDBname );
-
-	$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
-	if ( isset( $wgAPIModules['commentlist'] ) && in_array( wfHostname(), $ovlon ) ) {
-		unset( $wgAPIModules['commentlist'] );
-	}
 }
