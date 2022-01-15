@@ -5,24 +5,11 @@ $wgMemCachedPersistent = false;
 // Set timeout to 500ms (in microseconds)
 $wgMemCachedTimeout = 0.5 * 1e6;
 
-$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
-if ( in_array( wfHostname(), $ovlon ) ) {
-	$wmgJobrunnerServer = '51.195.236.215:6379';
-	$wmgMem1Server = '51.195.236.223:11211';
-	$wmgMem2Server = '51.195.236.245:11211';
-	$wmgMemcachedClass = 'MemcachedPhpBagOStuff';
-} else {
-	$wmgJobrunnerServer = '[2a10:6740::6:306]:6379';
-	$wmgMem1Server = '127.0.0.1:11212';
-	$wmgMem2Server = '127.0.0.1:11213';
-	$wmgMemcachedClass = 'MemcachedPeclBagOStuff';
-}
-
 $wgObjectCaches['memcached-mem-1'] = [
-	'class'                => $wmgMemcachedClass,
+	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgMem1Server ],
+	'servers'              => [ '127.0.0.1:11212' ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
@@ -32,10 +19,10 @@ $wgObjectCaches['memcached-mem-1'] = [
 ];
 
 $wgObjectCaches['memcached-mem-2'] = [
-	'class'                => $wmgMemcachedClass,
+	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgMem2Server ],
+	'servers'              => [ '127.0.0.1:11213' ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
@@ -66,7 +53,7 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => $wmgJobrunnerServer,
+	'redisServer' => '[2a10:6740::6:306]:6379',
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
