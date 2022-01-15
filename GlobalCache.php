@@ -46,8 +46,10 @@ $wi->config->settings['wgMessageCacheType']['default'] = 'memcached-mem-1';
 $wi->config->settings['wgMessageCacheType']['betaheze'] = 'memcached-mem-2';
 
 $wgUseLocalMessageCache = true;
-$wgParserCacheType = CACHE_ACCEL;
-$wgParserCacheExpireTime = 86400 * 7;
+
+$wi->config->settings['wgParserCacheType']['default'] = 'memcached-mem-1';
+$wi->config->settings['wgParserCacheType']['betaheze'] = CACHE_ACCEL;
+$wgParserCacheExpireTime = 86400 * 5;
 
 $wi->config->settings['wgLanguageConverterCacheType']['default'] = 'memcached-mem-1';
 $wi->config->settings['wgLanguageConverterCacheType']['betaheze'] = 'memcached-mem-2';
