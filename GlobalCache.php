@@ -45,7 +45,6 @@ $wgObjectCaches['memcached-mem-2'] = [
 
 $wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
 $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
-$wgSessionsInObjectCache = true;
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
