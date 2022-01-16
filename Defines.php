@@ -405,9 +405,11 @@ $wgLocalisationUpdateRepositories['github'] = [
 	'skin' => false,
 ];
 
-$wgMaxShellMemory = 235520; // 230MB
-$wgMaxShellFileSize = 51200; // 50MB
-$wgMaxShellTime = 50;
+if ( wfHostname() === 'mw101' ) {
+	$wgMaxShellMemory = 235520; // 230MB
+	$wgMaxShellFileSize = 51200; // 50MB
+	$wgMaxShellTime = 50;
+}
 
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
