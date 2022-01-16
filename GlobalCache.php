@@ -1,8 +1,8 @@
 <?php
 
 $wgMemCachedServers = [
-    '127.0.0.1:11212',
-    '127.0.0.1:11213',
+	'127.0.0.1:11212',
+	'127.0.0.1:11213',
 ];
 
 $wgMainCacheType = 'memcached-pecl';
