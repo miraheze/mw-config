@@ -128,3 +128,15 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 }
+
+if ( $wgDBname === 'horimiyawiki' ) {
+	$wgWBRepoSettings['statementSections'] = [
+		'item' => [
+			'statements' => null,
+			'identifiers' => [
+				'type' => 'dataType',
+				'dataTypes' => [ 'external-id' ],
+			],
+		],
+	];
+}
