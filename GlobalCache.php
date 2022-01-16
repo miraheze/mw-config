@@ -10,7 +10,7 @@ $wgMainCacheType = 'memcached-pecl';
 $wgUseLocalMessageCache = true;
 
 $wgParserCacheType = 'db-replicated';
-$wgParserCacheExpireTime = 86400 * 7;
+$wgParserCacheExpireTime = 86400 * 10;
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
