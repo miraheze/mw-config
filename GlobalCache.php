@@ -1,10 +1,5 @@
 <?php
 
-$wgMemCachedPersistent = false;
-
-// Set timeout to 500ms (in microseconds)
-$wgMemCachedTimeout = 0.5 * 1e6;
-
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
@@ -18,7 +13,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
+	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
 
 $wgObjectCaches['memcached-mem-2'] = [
@@ -31,7 +26,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
+	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
 
 $wi->config->settings['wgMainCacheType']['default'] = 'memcached-mem-2';
