@@ -405,7 +405,7 @@ $wgLocalisationUpdateRepositories['github'] = [
 	'skin' => false,
 ];
 
-$wgMaxShellMemory = 215040; // 210MB
+$wgMaxShellMemory = 204800; // 200MB
 $wgMaxShellFileSize = 51200; // 50MB
 $wgMaxShellTime = 50;
 
