@@ -409,6 +409,8 @@ $wgMaxShellMemory = 215040; // 210MB
 $wgMaxShellFileSize = 51200; // 50MB
 $wgMaxShellTime = 50;
 
+$wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
+
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
