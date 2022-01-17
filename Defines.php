@@ -411,7 +411,7 @@ $wgMaxShellTime = 50;
 
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
-$wgSVGConverters['inkscape'] = '$path/inkscape -w $width -e $output $input';
+$wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
