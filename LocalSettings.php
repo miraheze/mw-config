@@ -1339,6 +1339,9 @@ $wi->config->settings += [
 	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
 	],
+	'wgCopyUploadProxy' => [
+		'default' => 'http://bast.miraheze.org:8080',
+	],
 	'wgGenerateThumbnailOnParse' => [
 		'default' => false,
 	],
