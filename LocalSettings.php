@@ -1128,6 +1128,9 @@ $wi->config->settings += [
 	'wgDiscordIncomingWebhookUrl' => [
 		'default' => '',
 	],
+	'wgDiscordCurlProxy' => [
+		'default' => 'http://bast.miraheze.org:8080',
+	],
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
