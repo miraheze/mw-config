@@ -34,7 +34,7 @@ $wgMajorSiteNoticeID = 66;
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet><b>Bureacrats, if you wiki was incorrectly closed</b>: Go to <a href="/wiki/Special:ManageWiki/core">Special:ManageWiki/core</a> to reopen it. Your wiki may have been closed due to a bug (which we are aware of and working to fix). Please attempt to reopen it yourself first before seeking further assistance.</div></td>
+			<td style="font-size:125%"><div data-nosnippet><b>Bureaucrats, if you wiki was incorrectly closed</b>: Go to <a href="/wiki/Special:ManageWiki/core">Special:ManageWiki/core</a> and uncheck "Closed" to reopen it. Your wiki may have been closed due to a bug (which we are aware of and working to fix). Please attempt to reopen it yourself first before seeking further assistance.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
