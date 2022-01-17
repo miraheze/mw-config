@@ -411,6 +411,7 @@ $wgMaxShellTime = 50;
 
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
+$wgJobRunRate = 0.1; // run jobs every 10 page views rather than every one
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 // Discord
