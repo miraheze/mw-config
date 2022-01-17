@@ -1217,6 +1217,9 @@ $wi->config->settings += [
 	'wgHTTPTimeout' => [
 		'default' => 20,
 	],
+	'wgHTTPProxy' => [
+		'default' => 'http://bast.miraheze.org:8080',
+	],
 
 	// DataDump
 	'wgDataDump' => [
