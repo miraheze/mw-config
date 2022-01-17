@@ -2988,46 +2988,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'structurednavigation' => [
-		'name' => 'StructuredNavigation',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredNavigation',
-		'var' => 'wmgUseStructuredNavigation',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'namespaces' => [
-				'Navigation' => [
-					'id' => 2940,
-					'searchable' => 1,
-					'subpages' => 1,
-					'protection' => 'structurednav-edit',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'StructuredNavigation',
-					'additional' => []
-				],
-				'Navigation_talk' => [
-					'id' => 2941,
-					'searchable' => 0,
-					'subpages' => 1,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'wikitext',
-					'additional' => []
-				],
-			],
-			'permissions' => [
-				'user' => [
-					'permissions' => [
-						'structurednav-create',
-						'structurednav-edit',
-					],
-				],
-			],
-		],
-		'section' => 'other',
-	],
 	'flow' => [
 		'name' => 'Flow',
 		'displayname' => 'StructuredDiscussions (Flow)',
@@ -3087,6 +3047,46 @@ $wgManageWikiExtensions = [
 			],
 			'mwscript' => [
 				"$IP/extensions/Flow/maintenance/FlowCreateTemplates.php" => [],
+			],
+		],
+		'section' => 'other',
+	],
+	'structurednavigation' => [
+		'name' => 'StructuredNavigation',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredNavigation',
+		'var' => 'wmgUseStructuredNavigation',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'namespaces' => [
+				'Navigation' => [
+					'id' => 2940,
+					'searchable' => 1,
+					'subpages' => 1,
+					'protection' => 'structurednav-edit',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'StructuredNavigation',
+					'additional' => []
+				],
+				'Navigation_talk' => [
+					'id' => 2941,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+			],
+			'permissions' => [
+				'user' => [
+					'permissions' => [
+						'structurednav-create',
+						'structurednav-edit',
+					],
+				],
 			],
 		],
 		'section' => 'other',
