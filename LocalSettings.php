@@ -3090,44 +3090,6 @@ $wi->config->settings += [
 	],
 
 	// Parsoid
-	'+wgVirtualRestConfig' => [
-		'wmgUseFlow' => [
-			'modules' => [
-				'parsoid' => [
-					'url' => "{$wi->server}/w/rest.php",
-					'domain' => $wi->server,
-					'prefix' => $wi->dbname,
-					'forwardCookies' => true,
-					'restbaseCompat' => false,
-					'timeout' => 15,
-				],
-			],
-		],
-		'wmgUseLinter' => [
-			'modules' => [
-				'parsoid' => [
-					'url' => "{$wi->server}/w/rest.php",
-					'domain' => $wi->server,
-					'prefix' => $wi->dbname,
-					'forwardCookies' => true,
-					'restbaseCompat' => false,
-					'timeout' => 15,
-				],
-			],
-		],
-		'wmgUseVisualEditor' => [
-			'modules' => [
-				'parsoid' => [
-					'url' => "{$wi->server}/w/rest.php",
-					'domain' => $wi->server,
-					'prefix' => $wi->dbname,
-					'forwardCookies' => true,
-					'restbaseCompat' => false,
-					'timeout' => 15,
-				],
-			],
-		],
-	],
 	'wgParsoidSettings' => [
 		'default' => [
 			'useSelser' => true,
