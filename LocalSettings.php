@@ -1826,11 +1826,6 @@ $wi->config->settings += [
 		'wmgUseJavascriptSlideshow' => true,
 	],
 
-	// Job Queue
-	'wgJobRunRate' => [
-		'default' => 0,
-	],
-
 	// JsonConfig
 	'wgJsonConfigEnableLuaSupport' => [
 		'default' => true,
