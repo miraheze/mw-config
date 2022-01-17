@@ -59,6 +59,14 @@ if (
 	$wi->config->get( 'wmgUseLinter', $wi->dbname )
 ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+		'url' => "{$wi->server}/w/rest.php",
+		'domain' => $wi->server,
+		'prefix' => $wi->dbname,
+		'forwardCookies' => true,
+		'restbaseCompat' => false,
+		'timeout' => 15,
+	];
 }
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
