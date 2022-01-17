@@ -4164,6 +4164,218 @@ $wi->config->settings += [
 		'default' => 862
 	],
 
+	// WikibaseQualityConstraints
+	'wgWBQualityConstraintsInstanceOfId' => [
+		'default' => 'P31',
+	],
+	'wgWBQualityConstraintsSubclassOfId' => [
+		'default' => 'P279',
+	],
+	'wgWBQualityConstraintsPropertyConstraintId' => [
+		'default' => 'P2302',
+	],
+	'wgWBQualityConstraintsExceptionToConstraintId' => [
+		'default' => 'P2303',
+	],
+	'wgWBQualityConstraintsConstraintStatusId' => [
+		'default' => 'P2316',
+	],
+	'wgWBQualityConstraintsMandatoryConstraintId' => [
+		'default' => 'Q21502408',
+	],
+	'wgWBQualityConstraintsSuggestionConstraintId' => [
+		'default' => 'Q62026391',
+	],
+	'wgWBQualityConstraintsDistinctValuesConstraintId' => [
+		'default' => 'Q21502410',
+	],
+	'wgWBQualityConstraintsMultiValueConstraintId' => [
+		'default' => 'Q21510857',
+	],
+	'wgWBQualityConstraintsUsedAsQualifierConstraintId' => [
+		'default' => 'Q21510863',
+	],
+	'wgWBQualityConstraintsSingleValueConstraintId' => [
+		'default' => 'Q19474404',
+	],
+	'wgWBQualityConstraintsSymmetricConstraintId' => [
+		'default' => 'Q21510862',
+	],
+	'wgWBQualityConstraintsTypeConstraintId' => [
+		'default' => 'Q21503250',
+	],
+	'wgWBQualityConstraintsValueTypeConstraintId' => [
+		'default' => 'Q21510865',
+	],
+	'wgWBQualityConstraintsInverseConstraintId' => [
+		'default' => 'Q21510855',
+	],
+	'wgWBQualityConstraintsItemRequiresClaimConstraintId' => [
+		'default' => 'Q21503247',
+	],
+	'wgWBQualityConstraintsValueRequiresClaimConstraintId' => [
+		'default' => 'Q21510864',
+	],
+	'wgWBQualityConstraintsConflictsWithConstraintId' => [
+		'default' => 'Q21502838',
+	],
+	'wgWBQualityConstraintsOneOfConstraintId' => [
+		'default' => 'Q21510859',
+	],
+	'wgWBQualityConstraintsMandatoryQualifierConstraintId' => [
+		'default' => 'Q21510856',
+	],
+	'wgWBQualityConstraintsAllowedQualifiersConstraintId' => [
+		'default' => 'Q21510851',
+	],
+	'wgWBQualityConstraintsRangeConstraintId' => [
+		'default' => 'Q21510860',
+	],
+	'wgWBQualityConstraintsDifferenceWithinRangeConstraintId' => [
+		'default' => 'Q21510854',
+	],
+	'wgWBQualityConstraintsCommonsLinkConstraintId' => [
+		'default' => 'Q21510852',
+	],
+	'wgWBQualityConstraintsContemporaryConstraintId' => [
+		'default' => 'Q25796498',
+	],
+	'wgWBQualityConstraintsFormatConstraintId' => [
+		'default' => 'Q21502404',
+	],
+	'wgWBQualityConstraintsUsedForValuesOnlyConstraintId' => [
+		'default' => 'Q21528958',
+	],
+	'wgWBQualityConstraintsUsedAsReferenceConstraintId' => [
+		'default' => 'Q21528959',
+	],
+	'wgWBQualityConstraintsNoBoundsConstraintId' => [
+		'default' => 'Q51723761',
+	],
+	'wgWBQualityConstraintsAllowedUnitsConstraintId' => [
+		'default' => 'Q21514353',
+	],
+	'wgWBQualityConstraintsSingleBestValueConstraintId' => [
+		'default' => 'Q52060874',
+	],
+	'wgWBQualityConstraintsAllowedEntityTypesConstraintId' => [
+		'default' => 'Q52004125',
+	],
+	'wgWBQualityConstraintsCitationNeededConstraintId' => [
+		'default' => 'Q54554025',
+	],
+	'wgWBQualityConstraintsPropertyScopeConstraintId' => [
+		'default' => 'Q53869507',
+	],
+	'wgWBQualityConstraintsLexemeLanguageConstraintId' => [
+		'default' => 'Q55819106',
+	],
+	'wgWBQualityConstraintsLabelInLanguageConstraintId' => [
+		'default' => 'Q108139345',
+	],
+	'wgWBQualityConstraintsLanguagePropertyId' => [
+		'default' => 'P424',
+	],
+	'wgWBQualityConstraintsClassId' => [
+		'default' => 'P2308',
+	],
+	'wgWBQualityConstraintsRelationId' => [
+		'default' => 'P2309',
+	],
+	'wgWBQualityConstraintsInstanceOfRelationId' => [
+		'default' => 'Q21503252',
+	],
+	'wgWBQualityConstraintsSubclassOfRelationId' => [
+		'default' => 'Q21514624',
+	],
+	'wgWBQualityConstraintsInstanceOrSubclassOfRelationId' => [
+		'default' => 'Q30208840',
+	],
+	'wgWBQualityConstraintsPropertyId' => [
+		'default' => 'P2306',
+	],
+	'wgWBQualityConstraintsQualifierOfPropertyConstraintId' => [
+		'default' => 'P2305',
+	],
+	'wgWBQualityConstraintsMinimumQuantityId' => [
+		'default' => 'P2313',
+	],
+	'wgWBQualityConstraintsMaximumQuantityId' => [
+		'default' => 'P2312',
+	],
+	'wgWBQualityConstraintsMinimumDateId' => [
+		'default' => 'P2310',
+	],
+	'wgWBQualityConstraintsMaximumDateId' => [
+		'default' => 'P2311',
+	],
+	'wgWBQualityConstraintsNamespaceId' => [
+		'default' => 'P2307',
+	],
+	'wgWBQualityConstraintsFormatAsARegularExpressionId' => [
+		'default' => 'P1793',
+	],
+	'wgWBQualityConstraintsSyntaxClarificationId' => [
+		'default' => 'P2916',
+	],
+	'wgWBQualityConstraintsConstraintScopeId' => [
+		'default' => 'P4680',
+	],
+	'wgWBQualityConstraintsConstraintEntityTypesId' => [
+		'default' => 'P4680',
+	],
+	'wgWBQualityConstraintsSeparatorId' => [
+		'default' => 'P4155',
+	],
+	'wgWBQualityConstraintsConstraintCheckedOnMainValueId' => [
+		'default' => 'Q46466787',
+	],
+	'wgWBQualityConstraintsConstraintCheckedOnQualifiersId' => [
+		'default' => 'Q46466783',
+	],
+	'wgWBQualityConstraintsConstraintCheckedOnReferencesId' => [
+		'default' => 'Q46466805',
+	],
+	'wgWBQualityConstraintsNoneOfConstraintId' => [
+		'default' => 'Q52558054',
+	],
+	'wgWBQualityConstraintsIntegerConstraintId' => [
+		'default' => 'Q52848401',
+	],
+	'wgWBQualityConstraintsWikibaseItemId' => [
+		'default' => 'Q29934200',
+	],
+	'wgWBQualityConstraintsWikibasePropertyId' => [
+		'default' => 'Q29934218',
+	],
+	'wgWBQualityConstraintsWikibaseLexemeId' => [
+		'default' => 'Q51885771',
+	],
+	'wgWBQualityConstraintsWikibaseFormId' => [
+		'default' => 'Q54285143',
+	],
+	'wgWBQualityConstraintsWikibaseSenseId' => [
+		'default' => 'Q54285715',
+	],
+	'wgWBQualityConstraintsWikibaseMediaInfoId' => [
+		'default' => 'Q59712033',
+	],
+	'wgWBQualityConstraintsPropertyScopeId' => [
+		'default' => 'P5314',
+	],
+	'wgWBQualityConstraintsAsMainValueId' => [
+		'default' => 'Q54828448',
+	],
+	'wgWBQualityConstraintsAsQualifiersId' => [
+		'default' => 'Q54828449',
+	],
+	'wgWBQualityConstraintsAsReferencesId' => [
+		'default' => 'Q54828450',
+	],
+	'wgWBQualityConstraintsEnableSuggestionConstraintStatus' => [
+		'default' => false,
+	],
+
 	// WebChat config
 	'wgWebChatServer' => [
 		'default' => false,
