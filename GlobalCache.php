@@ -16,7 +16,7 @@ $wgEnableSidebarCache = true;
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-// session cache needs to be flipped for betaheze to avoid session conflicts
+// Prevent session cache from conflicting with production
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
@@ -44,7 +44,9 @@ $wgObjectCaches['memcached-mem-2'] = [
 ];
 
 $wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
+
 $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
+$wi->config->settings['wgMainStash']['betaheze'] = 'memcached-mem-1';
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
