@@ -6,14 +6,14 @@ $wgMemCachedServers = [
 ];
 
 $wgMainCacheType = 'memcached-pecl';
-
-$wgUseLocalMessageCache = true;
-
 $wgParserCacheType = 'db-replicated';
-$wgParserCacheExpireTime = 86400 * 10;
-
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
+$wgParserCacheExpireTime = 86400 * 10;
+$wgDLPQueryCacheTime = 120;
+
+$wgEnableSidebarCache = true;
+$wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 // session cache needs to be flipped for betaheze to avoid session conflicts
