@@ -12,7 +12,7 @@ $wgLanguageConverterCacheType = CACHE_ACCEL;
 $wgParserCacheExpireTime = 86400 * 10;
 $wgDLPQueryCacheTime = 120;
 
-$wgEnableSidebarCache = true;
+$wgEnableSidebarCache = false;
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
