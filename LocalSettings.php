@@ -294,19 +294,10 @@ $wi->config->settings += [
 		],
 	],
 	'wgPreprocessorCacheThreshold' => [
-		'default' => false,
-	],
-	'wgResourceLoaderMaxage' => [
-		'default' => [
-			'versioned' => 12 * 60 * 60,
-			'unversioned' => 5 * 60,
-		],
+		'default' => 2000,
 	],
 	'wgRevisionCacheExpiry' => [
-		'default' => 0,
-	],
-	'wgEnableSidebarCache' => [
-		'default' => false,
+		'default' => 86400 * 2, // 2 days
 	],
 
 	// Captcha
