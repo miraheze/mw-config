@@ -1362,7 +1362,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgUseInstantCommons' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgMaxImageArea' => [
 		'default' => '1.25e7',
