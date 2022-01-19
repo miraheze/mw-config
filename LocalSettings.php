@@ -2431,6 +2431,11 @@ $wi->config->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
+		'+pokemonarowiki' => [
+			'super_users' => [
+				'unrestricted_edit' => true,
+			],
+		],
 		'+sesupportwiki' => [
 			'editor' => [
 				'editor' => true,
@@ -3448,6 +3453,9 @@ $wi->config->settings += [
 		],
 		'+nicolopediawiki' => [
 			'edittemplateprotected',
+		],
+		'+pokemonarowiki' => [
+			'unrestricted_edit',
 		],
 		'+sesupportwiki' => [
 			'editor',
