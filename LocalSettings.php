@@ -2432,7 +2432,7 @@ $wi->config->settings += [
 			],
 		],
 		'+pokemonarowiki' => [
-			'super_user' => [
+			'super_users' => [
 				'unrestricted_edit' => true,
 			],
 		],
