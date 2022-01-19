@@ -3853,9 +3853,6 @@ $wi->config->settings += [
 	'wgOggThumbLocation' => [
 		'default' => false,
 	],
-	'wgEnableNiceBackgroundTranscodeJobs' => [
-		'default' => true,
-	],
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
 	],
