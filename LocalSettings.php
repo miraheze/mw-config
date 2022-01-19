@@ -293,9 +293,6 @@ $wi->config->settings += [
 			'/srv/mediawiki/config/extension-list'
 		],
 	],
-	'wgPreprocessorCacheThreshold' => [
-		'default' => 2000,
-	],
 	'wgRevisionCacheExpiry' => [
 		'default' => 86400 * 2, // 2 days
 	],
