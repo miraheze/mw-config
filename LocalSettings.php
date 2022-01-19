@@ -321,6 +321,9 @@ $wi->config->settings += [
 	'wgReCaptchaSiteKey' => [
 		'default' => '6LeR1msdAAAAAEMnmLm8lI0HMP5wFvYuQFdYX8NH',
 	],
+	'wgReCaptchaEnterpriseProjectId' => [
+		'default' => 'mediawikiteam',
+	],
 	'wgReCaptchaVersion' => [
 		'default' => 'v3',
 	],
