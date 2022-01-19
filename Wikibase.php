@@ -139,4 +139,8 @@ if ( $wgDBname === 'horimiyawiki' ) {
 			],
 		],
 	];
+	$wgPropertySuggesterInitialSuggestions = [
+		5,
+		30,
+	];
 }
