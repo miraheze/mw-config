@@ -3853,11 +3853,11 @@ $wi->config->settings += [
 	],
 
 	// TimedMediaHandler
-	'wgFFmpegLocation' => [
-		'default' => '/usr/bin/ffmpeg',
+	'wgOggThumbLocation' => [
+		'default' => false,
 	],
-	'wgFFmpeg2theoraLocation' => [
-		'wmgUseTimedMediaHandler' => '/usr/bin/ffmpeg2theora',
+	'wgEnableNiceBackgroundTranscodeJobs' => [
+		'default' => true,
 	],
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
