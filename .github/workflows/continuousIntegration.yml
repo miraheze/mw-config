@@ -28,7 +28,7 @@ jobs:
         composer fix
         composer test
 
-    - name: Sort extension-list alphabetically
+    - name: Check if extension-list is sorted alphabetically
       run: LC_ALL=C sort -c extension-list
 
     # Only patch code when it is a push event
