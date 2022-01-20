@@ -420,6 +420,7 @@ $wi->config->settings += [
 	'wgCentralAuthCreateOnView' => [
 		'default' => true,
 		'cwarswiki' => false,
+		'minecraftjapanwiki' => false,
 		'nenawikiwiki' => false,
 	],
 	'wgCentralAuthDatabase' => [
