@@ -3246,6 +3246,10 @@ $wi->config->settings += [
 		'+bioencyclopediawiki' => [
 			'usenewrc' => 0,
 		],
+		'+crocwiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
+		],
 		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
@@ -3255,6 +3259,10 @@ $wi->config->settings += [
 		],
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
+		],
+		'+dragonquest2wiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
 		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
