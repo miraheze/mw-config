@@ -15,18 +15,21 @@ jobs:
         php-versions: ['7.3']
     steps:
     - uses: actions/checkout@v2
-      
+
     - name: Install dependencies
       run: |
         composer validate
         composer install --prefer-dist --no-progress
 
-    # Bypass the phpcbf non-standard exit code  
+    # Bypass the phpcbf non-standard exit code
     - name: Check PHP
       run: |
         sh phpcbf.sh
         composer fix
         composer test
+
+    - name: Sort extension-list alphabetically
+      run: LC_ALL=C sort -c extension-list
 
     # Only patch code when it is a push event
     - name: Push the changes
