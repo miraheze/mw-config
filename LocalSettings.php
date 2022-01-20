@@ -3539,6 +3539,9 @@ $wi->config->settings += [
 		'nicolopediawiki' => [
 			'edittemplateprotected',
 		],
+		'pokemonarowiki' => [
+			'unrestricted_edit',
+		],
 		'simulatorwiki' => [
 			'editfragment',
 			'edittemplate',
