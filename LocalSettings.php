@@ -8,10 +8,7 @@
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
-} elseif (
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask1.miraheze.org' ||
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask111.miraheze.org'
-) {
+} elseif ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask111.miraheze.org' ) {
 	$wgRequestTimeLimit = 1200;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
@@ -19,9 +16,22 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 60;
 }
 
-if ( $wmgProfiler ?? [] ) {
-	$wgProfiler = $wmgProfiler;
-	$wgHTTPTimeout = 10;
+/**
+ * When using ?forceprofile=1, a profile can be found as an HTML comment
+ * Disabled on production hosts because it seems to be causing performance issues (how ironic)
+ */
+$forceprofile = $_GET['forceprofile'] ?? 0;
+if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways_xhprof' ) ) {
+	$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
+	tideways_xhprof_enable( $xhprofFlags );
+
+	$wgProfiler = [
+		'class' => 'ProfilerXhprof',
+		'flags' => $xhprofFlags,
+		'running' => true,
+		'output' => 'text',
+	];
+	$wgHTTPTimeout = 60;
 }
 
 // Initialise WikiInitialise
@@ -283,20 +293,8 @@ $wi->config->settings += [
 			'/srv/mediawiki/config/extension-list'
 		],
 	],
-	'wgPreprocessorCacheThreshold' => [
-		'default' => false,
-	],
-	'wgResourceLoaderMaxage' => [
-		'default' => [
-			'versioned' => 12 * 60 * 60,
-			'unversioned' => 5 * 60,
-		],
-	],
 	'wgRevisionCacheExpiry' => [
-		'default' => 0,
-	],
-	'wgEnableSidebarCache' => [
-		'default' => false,
+		'default' => 86400 * 2, // 2 days
 	],
 
 	// Captcha
@@ -322,6 +320,9 @@ $wi->config->settings += [
 	],
 	'wgReCaptchaSiteKey' => [
 		'default' => '6LeR1msdAAAAAEMnmLm8lI0HMP5wFvYuQFdYX8NH',
+	],
+	'wgReCaptchaEnterpriseProjectId' => [
+		'default' => 'mediawikiteam',
 	],
 	'wgReCaptchaVersion' => [
 		'default' => 'v3',
@@ -815,6 +816,7 @@ $wi->config->settings += [
 			'matomo',
 			'grafana',
 			'icinga',
+			'csw(\d+)?',
 			'misc\d+',
 			'db\d+',
 			'cp\d+',
@@ -1117,6 +1119,9 @@ $wi->config->settings += [
 	'wgDiscordIncomingWebhookUrl' => [
 		'default' => '',
 	],
+	'wgDiscordCurlProxy' => [
+		'default' => 'http://bast.miraheze.org:8080',
+	],
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
@@ -1202,6 +1207,9 @@ $wi->config->settings += [
 	],
 	'wgHTTPTimeout' => [
 		'default' => 20,
+	],
+	'wgHTTPProxy' => [
+		'default' => 'http://bast.miraheze.org:8080',
 	],
 
 	// DataDump
@@ -1324,6 +1332,9 @@ $wi->config->settings += [
 	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
+	],
+	'wgCopyUploadProxy' => [
+		'default' => 'http://bast.miraheze.org:8080',
 	],
 	'wgGenerateThumbnailOnParse' => [
 		'default' => false,
@@ -1815,11 +1826,6 @@ $wi->config->settings += [
 		'wmgUseJavascriptSlideshow' => true,
 	],
 
-	// Job Queue
-	'wgJobRunRate' => [
-		'default' => 0,
-	],
-
 	// JsonConfig
 	'wgJsonConfigEnableLuaSupport' => [
 		'default' => true,
@@ -1991,6 +1997,7 @@ $wi->config->settings += [
 		'jadtechwiki' => "https://$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
 		'revitwiki' => "https://$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
+		'spnatiwiki' => 'https://upload.wikimedia.org/wikipedia/commons/f/f8/License_icon-mit-88x31-2.svg',
 		'taerelvariwiki' => "https://$wmgUploadHostname/taerelvariwiki/0/03/Copyright.svg.png",
 	],
 	'wgRightsPage' => [
@@ -2018,6 +2025,7 @@ $wi->config->settings += [
 		'rctwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'revitwiki' => '©2013-2021 by Lionel J. Camara (All Rights Reserved)',
 		'reviwiki' => 'Creative Commons Attribution Share Alike',
+		'spnatiwiki' => 'Copyright (c) 2015 The SPNATI Contributors',
 		'taerelvariwiki' => '©2021 TheBurningPrincess (All Rights Reserved)',
 		'tlhwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'wikidemocracywiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2042,6 +2050,7 @@ $wi->config->settings += [
 		'rctwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
 		'reviwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
+		'spnatiwiki' => 'https://gitgud.io/spnati/spnati/-/blob/master/LICENSE',
 		'taerelvariwiki' => 'https://taerelvari.miraheze.org/wiki/MediaWiki:Copyright',
 		'tlhwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'wikidemocracywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
@@ -2093,29 +2102,7 @@ $wi->config->settings += [
 	'wgLinterSubmitterWhitelist' => [
 		'wmgUseLinter' => [
 			/** localhost */
-			'127.0.0.1' => true,
 			'::1' => true,
-			/** mw8 */
-			'51.195.236.221' => true,
-			'2001:41d0:800:178a::7' => true,
-			/** mw9 */
-			'51.195.236.222' => true,
-			'2001:41d0:800:178a::8' => true,
-			/** mw10 */
-			'51.195.236.254' => true,
-			'2001:41d0:800:1bbd::8' => true,
-			/** mw11 */
-			'51.195.236.255' => true,
-			'2001:41d0:800:1bbd::10' => true,
-			/** mw12 */
-			'51.195.236.220' => true,
-			'2001:41d0:800:178a::6' => true,
-			/** mw13 */
-			'51.195.236.251' => true,
-			'2001:41d0:800:1bbd::5' => true,
-			/** test3 */
-			'51.195.236.247' => true,
-			'2001:41d0:800:1bbd::14' => true,
 			/** mw101 */
 			'2a10:6740::6:107' => true,
 			/** mw102 */
@@ -2437,6 +2424,11 @@ $wi->config->settings += [
 		'+nicolopediawiki' => [
 			'templateeditor' => [
 				'edittemplateprotected' => true,
+			],
+		],
+		'+pokemonarowiki' => [
+			'super_users' => [
+				'unrestricted_edit' => true,
 			],
 		],
 		'+sesupportwiki' => [
@@ -3095,44 +3087,6 @@ $wi->config->settings += [
 	],
 
 	// Parsoid
-	'+wgVirtualRestConfig' => [
-		'wmgUseFlow' => [
-			'modules' => [
-				'parsoid' => [
-					'url' => "{$wi->server}/w/rest.php",
-					'domain' => $wi->server,
-					'prefix' => $wi->dbname,
-					'forwardCookies' => true,
-					'restbaseCompat' => false,
-					'timeout' => 15,
-				],
-			],
-		],
-		'wmgUseLinter' => [
-			'modules' => [
-				'parsoid' => [
-					'url' => "{$wi->server}/w/rest.php",
-					'domain' => $wi->server,
-					'prefix' => $wi->dbname,
-					'forwardCookies' => true,
-					'restbaseCompat' => false,
-					'timeout' => 15,
-				],
-			],
-		],
-		'wmgUseVisualEditor' => [
-			'modules' => [
-				'parsoid' => [
-					'url' => "{$wi->server}/w/rest.php",
-					'domain' => $wi->server,
-					'prefix' => $wi->dbname,
-					'forwardCookies' => true,
-					'restbaseCompat' => false,
-					'timeout' => 15,
-				],
-			],
-		],
-	],
 	'wgParsoidSettings' => [
 		'default' => [
 			'useSelser' => true,
@@ -3495,6 +3449,9 @@ $wi->config->settings += [
 		'+nicolopediawiki' => [
 			'edittemplateprotected',
 		],
+		'+pokemonarowiki' => [
+			'unrestricted_edit',
+		],
 		'+sesupportwiki' => [
 			'editor',
 		],
@@ -3641,7 +3598,7 @@ $wi->config->settings += [
 		'default' => '3600'
 	],
 	'wgRSSProxy' => [
-		'default' => false,
+		'default' => 'http://bast.miraheze.org:8080',
 	],
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s'
@@ -3912,11 +3869,8 @@ $wi->config->settings += [
 	],
 
 	// TimedMediaHandler
-	'wgFFmpegLocation' => [
-		'default' => '/usr/bin/ffmpeg',
-	],
-	'wgFFmpeg2theoraLocation' => [
-		'wmgUseTimedMediaHandler' => '/usr/bin/ffmpeg2theora',
+	'wgOggThumbLocation' => [
+		'default' => false,
 	],
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
@@ -4101,10 +4055,10 @@ $wi->config->settings += [
 	],
 	'wgCdnServers' => [
 		'default' => [
-			'51.195.220.68:81', // cp20
-			'198.244.148.90:81', // cp21
-			'149.56.140.43:81', // cp30
-			'149.56.141.75:81', // cp31
+			'[2001:41d0:801:2000::4c25]:81', // cp20
+			'[2001:41d0:801:2000::1b80]:81', // cp21
+			'[2607:5300:201:3100::929a]:81', // cp30
+			'[2607:5300:201:3100::5ebc]:81', // cp31
 		],
 	],
 
@@ -4212,6 +4166,218 @@ $wi->config->settings += [
 	],
 	'wmgWikibaseRepoPropertyNamespaceID' => [
 		'default' => 862
+	],
+
+	// WikibaseQualityConstraints
+	'wgWBQualityConstraintsInstanceOfId' => [
+		'default' => 'P31',
+	],
+	'wgWBQualityConstraintsSubclassOfId' => [
+		'default' => 'P279',
+	],
+	'wgWBQualityConstraintsPropertyConstraintId' => [
+		'default' => 'P2302',
+	],
+	'wgWBQualityConstraintsExceptionToConstraintId' => [
+		'default' => 'P2303',
+	],
+	'wgWBQualityConstraintsConstraintStatusId' => [
+		'default' => 'P2316',
+	],
+	'wgWBQualityConstraintsMandatoryConstraintId' => [
+		'default' => 'Q21502408',
+	],
+	'wgWBQualityConstraintsSuggestionConstraintId' => [
+		'default' => 'Q62026391',
+	],
+	'wgWBQualityConstraintsDistinctValuesConstraintId' => [
+		'default' => 'Q21502410',
+	],
+	'wgWBQualityConstraintsMultiValueConstraintId' => [
+		'default' => 'Q21510857',
+	],
+	'wgWBQualityConstraintsUsedAsQualifierConstraintId' => [
+		'default' => 'Q21510863',
+	],
+	'wgWBQualityConstraintsSingleValueConstraintId' => [
+		'default' => 'Q19474404',
+	],
+	'wgWBQualityConstraintsSymmetricConstraintId' => [
+		'default' => 'Q21510862',
+	],
+	'wgWBQualityConstraintsTypeConstraintId' => [
+		'default' => 'Q21503250',
+	],
+	'wgWBQualityConstraintsValueTypeConstraintId' => [
+		'default' => 'Q21510865',
+	],
+	'wgWBQualityConstraintsInverseConstraintId' => [
+		'default' => 'Q21510855',
+	],
+	'wgWBQualityConstraintsItemRequiresClaimConstraintId' => [
+		'default' => 'Q21503247',
+	],
+	'wgWBQualityConstraintsValueRequiresClaimConstraintId' => [
+		'default' => 'Q21510864',
+	],
+	'wgWBQualityConstraintsConflictsWithConstraintId' => [
+		'default' => 'Q21502838',
+	],
+	'wgWBQualityConstraintsOneOfConstraintId' => [
+		'default' => 'Q21510859',
+	],
+	'wgWBQualityConstraintsMandatoryQualifierConstraintId' => [
+		'default' => 'Q21510856',
+	],
+	'wgWBQualityConstraintsAllowedQualifiersConstraintId' => [
+		'default' => 'Q21510851',
+	],
+	'wgWBQualityConstraintsRangeConstraintId' => [
+		'default' => 'Q21510860',
+	],
+	'wgWBQualityConstraintsDifferenceWithinRangeConstraintId' => [
+		'default' => 'Q21510854',
+	],
+	'wgWBQualityConstraintsCommonsLinkConstraintId' => [
+		'default' => 'Q21510852',
+	],
+	'wgWBQualityConstraintsContemporaryConstraintId' => [
+		'default' => 'Q25796498',
+	],
+	'wgWBQualityConstraintsFormatConstraintId' => [
+		'default' => 'Q21502404',
+	],
+	'wgWBQualityConstraintsUsedForValuesOnlyConstraintId' => [
+		'default' => 'Q21528958',
+	],
+	'wgWBQualityConstraintsUsedAsReferenceConstraintId' => [
+		'default' => 'Q21528959',
+	],
+	'wgWBQualityConstraintsNoBoundsConstraintId' => [
+		'default' => 'Q51723761',
+	],
+	'wgWBQualityConstraintsAllowedUnitsConstraintId' => [
+		'default' => 'Q21514353',
+	],
+	'wgWBQualityConstraintsSingleBestValueConstraintId' => [
+		'default' => 'Q52060874',
+	],
+	'wgWBQualityConstraintsAllowedEntityTypesConstraintId' => [
+		'default' => 'Q52004125',
+	],
+	'wgWBQualityConstraintsCitationNeededConstraintId' => [
+		'default' => 'Q54554025',
+	],
+	'wgWBQualityConstraintsPropertyScopeConstraintId' => [
+		'default' => 'Q53869507',
+	],
+	'wgWBQualityConstraintsLexemeLanguageConstraintId' => [
+		'default' => 'Q55819106',
+	],
+	'wgWBQualityConstraintsLabelInLanguageConstraintId' => [
+		'default' => 'Q108139345',
+	],
+	'wgWBQualityConstraintsLanguagePropertyId' => [
+		'default' => 'P424',
+	],
+	'wgWBQualityConstraintsClassId' => [
+		'default' => 'P2308',
+	],
+	'wgWBQualityConstraintsRelationId' => [
+		'default' => 'P2309',
+	],
+	'wgWBQualityConstraintsInstanceOfRelationId' => [
+		'default' => 'Q21503252',
+	],
+	'wgWBQualityConstraintsSubclassOfRelationId' => [
+		'default' => 'Q21514624',
+	],
+	'wgWBQualityConstraintsInstanceOrSubclassOfRelationId' => [
+		'default' => 'Q30208840',
+	],
+	'wgWBQualityConstraintsPropertyId' => [
+		'default' => 'P2306',
+	],
+	'wgWBQualityConstraintsQualifierOfPropertyConstraintId' => [
+		'default' => 'P2305',
+	],
+	'wgWBQualityConstraintsMinimumQuantityId' => [
+		'default' => 'P2313',
+	],
+	'wgWBQualityConstraintsMaximumQuantityId' => [
+		'default' => 'P2312',
+	],
+	'wgWBQualityConstraintsMinimumDateId' => [
+		'default' => 'P2310',
+	],
+	'wgWBQualityConstraintsMaximumDateId' => [
+		'default' => 'P2311',
+	],
+	'wgWBQualityConstraintsNamespaceId' => [
+		'default' => 'P2307',
+	],
+	'wgWBQualityConstraintsFormatAsARegularExpressionId' => [
+		'default' => 'P1793',
+	],
+	'wgWBQualityConstraintsSyntaxClarificationId' => [
+		'default' => 'P2916',
+	],
+	'wgWBQualityConstraintsConstraintScopeId' => [
+		'default' => 'P4680',
+	],
+	'wgWBQualityConstraintsConstraintEntityTypesId' => [
+		'default' => 'P4680',
+	],
+	'wgWBQualityConstraintsSeparatorId' => [
+		'default' => 'P4155',
+	],
+	'wgWBQualityConstraintsConstraintCheckedOnMainValueId' => [
+		'default' => 'Q46466787',
+	],
+	'wgWBQualityConstraintsConstraintCheckedOnQualifiersId' => [
+		'default' => 'Q46466783',
+	],
+	'wgWBQualityConstraintsConstraintCheckedOnReferencesId' => [
+		'default' => 'Q46466805',
+	],
+	'wgWBQualityConstraintsNoneOfConstraintId' => [
+		'default' => 'Q52558054',
+	],
+	'wgWBQualityConstraintsIntegerConstraintId' => [
+		'default' => 'Q52848401',
+	],
+	'wgWBQualityConstraintsWikibaseItemId' => [
+		'default' => 'Q29934200',
+	],
+	'wgWBQualityConstraintsWikibasePropertyId' => [
+		'default' => 'Q29934218',
+	],
+	'wgWBQualityConstraintsWikibaseLexemeId' => [
+		'default' => 'Q51885771',
+	],
+	'wgWBQualityConstraintsWikibaseFormId' => [
+		'default' => 'Q54285143',
+	],
+	'wgWBQualityConstraintsWikibaseSenseId' => [
+		'default' => 'Q54285715',
+	],
+	'wgWBQualityConstraintsWikibaseMediaInfoId' => [
+		'default' => 'Q59712033',
+	],
+	'wgWBQualityConstraintsPropertyScopeId' => [
+		'default' => 'P5314',
+	],
+	'wgWBQualityConstraintsAsMainValueId' => [
+		'default' => 'Q54828448',
+	],
+	'wgWBQualityConstraintsAsQualifiersId' => [
+		'default' => 'Q54828449',
+	],
+	'wgWBQualityConstraintsAsReferencesId' => [
+		'default' => 'Q54828450',
+	],
+	'wgWBQualityConstraintsEnableSuggestionConstraintStatus' => [
+		'default' => false,
 	],
 
 	// WebChat config
@@ -4529,7 +4695,7 @@ $wi->readCache();
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [];
+$wi->disabledExtensions = [ 'shortdescription' ];
 
 $wi->config->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
@@ -4576,7 +4742,7 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-if ( in_array( wfHostname(), [ 'test3', 'test101' ] ) ) {
+if ( wfHostname() === 'test101' ) {
 	// Prevent cache (better be safe than sorry)
 	$wi->config->settings['wgUseCdn']['default'] = false;
 }
@@ -4597,12 +4763,7 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname, $wgAPIModules;
+	global $wgConf, $wgDBname;
 
 	$wgConf->extractAllGlobals( $wgDBname );
-
-	$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
-	if ( isset( $wgAPIModules['commentlist'] ) && in_array( wfHostname(), $ovlon ) ) {
-		unset( $wgAPIModules['commentlist'] );
-	}
 }

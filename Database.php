@@ -1,32 +1,23 @@
 <?php
-$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
-if ( in_array( wfHostname(), $ovlon ) ) {
-	$db1 = 'db11';
-	$db2 = 'db12';
-	$db3 = 'db13';
-} else {
-	$db1 = 'db101';
-	$db2 = 'db111';
-	$db3 = 'db121';
-}
+
 $wi->config->settings['wgLBFactoryConf']['default'] = [
 	'class' => 'LBFactoryMulti',
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			$db1 => 1,
+			'db101' => 1,
 		],
 		'c1' => [
-			$db1 => 1,
+			'db101' => 1,
 		],
 		'c2' => [
-			$db1 => 1,
+			'db101' => 1,
 		],
 		'c3' => [
-			$db2 => 1,
+			'db111' => 1,
 		],
 		'c4' => [
-			$db3 => 1,
+			'db121' => 1,
 		],
 	],
 	'serverTemplate' => [
@@ -43,36 +34,23 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		$db1 => "{$db1}.miraheze.org",
-		$db2 => "{$db2}.miraheze.org",
-		$db3 => "{$db3}.miraheze.org",
+		'db101' => 'db101.miraheze.org',
+		'db111' => 'db111.miraheze.org',
+		'db121' => 'db121.miraheze.org',
 	],
 	'externalLoads' => [
 		'echo' => [
-			$db1 => 1, // should echo c2 (where metawiki is located)
+			'db101' => 1, // should echo c2 (where metawiki is located)
 		],
 		'beta' => [
-			$db3 => 1, // should echo c4 (where betawiki is located)
+			'db121' => 1, // should echo c4 (where betawiki is located)
 		],
 	],
 	'readOnlyBySection' => [
-		// 'DEFAULT' => 'Maintenance ongoing on the database server.',
-		//'c1' => 'Maintenance ongoing on the database server.',
-		//'c2' => 'Maintenance ongoing on the database server.',
-		//'c3' => 'Maintenance ongoing on the database server.',
-		//'c4' => 'Maintenance ongoing on the database server.',
+		// 'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
+		//'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
-
-if ( !in_array( wfHostname(), $ovlon ) ) {
-	$wi->config->settings['wgLBFactoryConf']['default']['readOnlyBySection'] = [
-		'DEFAULT' => 'Please use the active DC',
-		'c1' => 'Please use the active DC',
-		'c2' => 'Please use the active DC',
-		'c3' => 'Please use the active DC',
-		'c4' => 'Please use the active DC',
-	];
-}
-
-// don't need to set these as globals
-unset( $db1, $db2, $db3, $ovlon );

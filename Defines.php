@@ -59,6 +59,14 @@ if (
 	$wi->config->get( 'wmgUseLinter', $wi->dbname )
 ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
+	$wgVirtualRestConfig['modules']['parsoid'] = [
+		'url' => "{$wi->server}/w/rest.php",
+		'domain' => $wi->server,
+		'prefix' => $wi->dbname,
+		'forwardCookies' => true,
+		'restbaseCompat' => false,
+		'timeout' => 15,
+	];
 }
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
@@ -87,7 +95,7 @@ if ( $cwClosed ) {
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => 'MirahezeIRCRCFeedFormatter',
-		'uri' => 'udp://[2001:41d0:800:1bbd::3]:5070',
+		'uri' => 'udp://[2a10:6740::6:205]:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	];
@@ -393,16 +401,22 @@ $wgFooterIcons['copyright']['copyright'] = [
 	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
 ];
 
-$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
-if ( !in_array( wfHostname(), $ovlon ) ) {
-	$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
+$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
 
-	$wgLocalisationUpdateRepositories['github'] = [
-		'mediawiki' => 'https://raw.github.com/wikimedia/mediawiki/master/%PATH%',
-		'extension' => false,
-		'skin' => false,
-	];
-}
+$wgLocalisationUpdateRepositories['github'] = [
+	'mediawiki' => 'https://raw.github.com/wikimedia/mediawiki/master/%PATH%',
+	'extension' => false,
+	'skin' => false,
+];
+
+$wgMaxShellMemory = 215040; // 210MB
+$wgMaxShellFileSize = 51200; // 50MB
+$wgMaxShellTime = 50;
+
+$wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
+
+$wgJobRunRate = 0;
+$wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
@@ -414,4 +428,4 @@ $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w
 
 // Scribunto
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 5;
-$wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 200;
+$wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 30;

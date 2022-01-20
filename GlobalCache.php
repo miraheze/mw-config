@@ -1,72 +1,54 @@
 <?php
 
-$wgMemCachedPersistent = false;
+$wgMemCachedServers = [
+	'127.0.0.1:11212',
+	'127.0.0.1:11213',
+];
 
-// Set timeout to 500ms (in microseconds)
-$wgMemCachedTimeout = 0.5 * 1e6;
+$wgMainCacheType = 'memcached-pecl';
+$wgParserCacheType = 'db-replicated';
+$wgLanguageConverterCacheType = CACHE_ACCEL;
 
-$ovlon = [ 'test3', 'mw8', 'mw9', 'mw10', 'mw11', 'mw12', 'mw13', 'mwtask1' ];
-if ( in_array( wfHostname(), $ovlon ) ) {
-	$wmgJobrunnerServer = '51.195.236.215:6379';
-	$wmgMem1Server = '51.195.236.223:11211';
-	$wmgMem2Server = '51.195.236.245:11211';
-	$wmgMemcachedClass = 'MemcachedPhpBagOStuff';
-} else {
-	$wmgJobrunnerServer = '[2a10:6740::6:306]:6379';
-	$wmgMem1Server = '127.0.0.1:11212';
-	$wmgMem2Server = '127.0.0.1:11213';
-	$wmgMemcachedClass = 'MemcachedPeclBagOStuff';
-}
+$wgParserCacheExpireTime = 86400 * 10;
+$wgDLPQueryCacheTime = 120;
 
+$wgEnableSidebarCache = false;
+$wgUseLocalMessageCache = true;
+$wgInvalidateCacheOnLocalSettingsChange = false;
+
+// session cache needs to be flipped for betaheze to avoid session conflicts
 $wgObjectCaches['memcached-mem-1'] = [
-	'class'                => $wmgMemcachedClass,
+	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgMem1Server ],
+	'servers'              => [ '127.0.0.1:11212' ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
+	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
 
 $wgObjectCaches['memcached-mem-2'] = [
-	'class'                => $wmgMemcachedClass,
+	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ $wmgMem2Server ],
+	'servers'              => [ '127.0.0.1:11213' ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout,
+	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
-
-$wi->config->settings['wgMainCacheType']['default'] = 'memcached-mem-2';
-$wi->config->settings['wgMainCacheType']['betaheze'] = 'memcached-mem-1';
 
 $wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
 $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
-$wgSessionsInObjectCache = true;
-
-$wi->config->settings['wgMessageCacheType']['default'] = 'memcached-mem-1';
-$wi->config->settings['wgMessageCacheType']['betaheze'] = 'memcached-mem-2';
-
-$wgUseLocalMessageCache = true;
-$wgParserCacheType = CACHE_DB;
-$wgParserCacheExpireTime = 86400 * 7;
-
-$wi->config->settings['wgLanguageConverterCacheType']['default'] = 'memcached-mem-1';
-$wi->config->settings['wgLanguageConverterCacheType']['betaheze'] = 'memcached-mem-2';
-
-$wgInvalidateCacheOnLocalSettingsChange = false;
-
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
-	'redisServer' => $wmgJobrunnerServer,
+	'redisServer' => '[2a10:6740::6:306]:6379',
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
@@ -78,6 +60,5 @@ $wgJobTypeConf['default'] = [
 
 if ( PHP_SAPI === 'cli' ) {
 	# APC not available in CLI mode
-	$wi->config->settings['wgLanguageConverterCacheType']['default'] = CACHE_NONE;
-	$wi->config->settings['wgLanguageConverterCacheType']['betaheze'] = CACHE_NONE;
+	$wgLanguageConverterCacheType = CACHE_NONE;
 }
