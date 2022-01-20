@@ -1,7 +1,7 @@
 <?php
 
 $wgMemCachedServers = [
-	// '127.0.0.1:11212',
+	'127.0.0.1:11212',
 	'127.0.0.1:11213',
 ];
 
@@ -17,7 +17,7 @@ $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 // session cache needs to be flipped for betaheze to avoid session conflicts
-/* $wgObjectCaches['memcached-mem-1'] = [
+$wgObjectCaches['memcached-mem-1'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
 	'serializer'           => 'php',
 	'persistent'           => false,
@@ -28,7 +28,7 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
-]; */
+];
 
 $wgObjectCaches['memcached-mem-2'] = [
 	'class'                => 'MemcachedPeclBagOStuff',
@@ -44,7 +44,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 ];
 
 $wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
-// $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
+$wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueRedis',
