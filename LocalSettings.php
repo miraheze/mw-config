@@ -4691,7 +4691,7 @@ $wi->readCache();
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [ 'shortdescription' ];
+$wi->disabledExtensions = [];
 
 $wi->config->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
