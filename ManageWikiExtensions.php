@@ -2776,6 +2776,18 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'propertysuggester' => [
+		'name' => 'PropertySuggester',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PropertySuggester',
+		'var' => 'wmgUsePropertySuggester',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'wikibaserepository',
+			],
+		],
+		'section' => 'other',
+	],
 	'protectionindicator' => [
 		'name' => 'ProtectionIndicator',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ProtectionIndicator',
