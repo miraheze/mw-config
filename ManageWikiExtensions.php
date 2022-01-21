@@ -3008,9 +3008,7 @@ $wgManageWikiExtensions = [
 					'content' => 0,
 					'aliases' => [],
 					'contentmodel' => 'flow-board',
-					'additional' => [
-						'wgCapitalLinkOverrides' => true,
-					]
+					'additional' => []
 				],
 			],
 			'permissions' => [
