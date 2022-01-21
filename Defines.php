@@ -267,37 +267,32 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 	}
 
 	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
+		'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
 		'name' => "shared-{$wmgSharedUploadDBname}",
 		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
-		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
+		'apibase' => "https://{$wmgSharedUploadBaseUrl}/w/api.php",
+		'hashLevels' => 2,
+		'thumbUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => $wmgSharedUploadDBname,
-		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
-		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
+		'abbrvThreshold' => 255,
+		'apiMetadataExpiry' => 86400,
+		'disabledMediaHandlers' => [ TiffHandler::class ],
 	];
 }
 
 // Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
+		'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
 		'name' => 'shared-commons',
 		'directory' => '/mnt/mediawiki-static/commonswiki',
-		'url' => 'https://static.miraheze.org/commonswiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
+		'apibase' => 'https://commons.miraheze.org/w/api.php',
+		'hashLevels' => 2,
+		'thumbUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'commonswiki',
-		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
+		'abbrvThreshold' => 255,
+		'apiMetadataExpiry' => 86400,
+		'disabledMediaHandlers' => [ TiffHandler::class ],
 	];
 }
 
