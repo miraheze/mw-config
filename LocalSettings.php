@@ -293,9 +293,6 @@ $wi->config->settings += [
 			'/srv/mediawiki/config/extension-list'
 		],
 	],
-	'wgRevisionCacheExpiry' => [
-		'default' => 86400 * 2, // 2 days
-	],
 
 	// Captcha
 	'wgCaptchaClass' => [
