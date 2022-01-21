@@ -431,5 +431,5 @@ $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
 
 // Scribunto
-$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 5;
+$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 4;
 $wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 30;
