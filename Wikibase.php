@@ -27,8 +27,8 @@ $wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyName
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
-$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ?? null;
-$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ?? null;
+$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ?: null;
+$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ?: null;
 
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
