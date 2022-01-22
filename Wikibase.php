@@ -5,42 +5,39 @@
 // You should only need to set $wgWBClientSettings['repoUrl'], $wgWBClientSettings['repoDatabase'] and $wgWBClientSettings['changesDatabase']
 // on the wiki.
 
-if ( version_compare( MW_VERSION, '1.37', '>=' ) ) {
-	$entitySources = [
-		'local' => [
-			'entityNamespaces' => [
-				'item' => $wmgWikibaseRepoItemNamespaceID,
-				'property' => $wmgWikibaseRepoPropertyNamespaceID,
-			],
-			'repoDatabase' => $wmgWikibaseRepoDatabase,
-			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
-			'interwikiPrefix' => '',
-			'rdfNodeNamespacePrefix' => 'wd',
-			'rdfPredicateNamespacePrefix' => '',
-			'type' => 'db'
+$entitySources = [
+	'local' => [
+		'entityNamespaces' => [
+			'item' => $wmgWikibaseRepoItemNamespaceID,
+			'property' => $wmgWikibaseRepoPropertyNamespaceID,
 		],
-	];
+		'repoDatabase' => $wmgWikibaseRepoDatabase,
+		'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+		'interwikiPrefix' => '',
+		'rdfNodeNamespacePrefix' => 'wd',
+		'rdfPredicateNamespacePrefix' => '',
+		'type' => 'db'
+	],
+];
 
-	$wgWBRepoSettings['entitySources'] = $entitySources;
-	$wgWBRepoSettings['localEntitySourceName'] = 'local';
-	$wgWBClientSettings['entitySources'] = $entitySources;
-	$wgWBClientSettings['itemAndPropertySourceName'] = 'local';
-}
-
+$wgWBRepoSettings['entitySources'] = $entitySources;
+$wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
 $wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyNamespaceID;
-$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wi->dbname . ':WBL/' . rawurlencode( $wgVersion );
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
-$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ? $wmgFormatterUrlProperty : null;
-$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ? $wmgCanonicalUriProperty : null;
+$wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ?? null;
+$wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ?? null;
 
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
 ];
+
 $wgWBRepoSettings['specialSiteLinkGroups'] = [];
 
+$wgWBClientSettings['entitySources'] = $entitySources;
+$wgWBClientSettings['itemAndPropertySourceName'] = 'local';
 $wgWBClientSettings['repoUrl'] = $wmgWikibaseRepoUrl;
 $wgWBClientSettings['repoDatabase'] = $wmgWikibaseRepoDatabase;
 $wgWBClientSettings['changesDatabase'] = $wmgWikibaseRepoDatabase;
@@ -57,6 +54,7 @@ $wgWBClientSettings['repositories'] = [
 		]
 	]
 ];
+
 $wgWBClientSettings['siteGlobalID'] = $wi->dbname;
 $wgWBClientSettings['repoScriptPath'] = '/w';
 $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
@@ -65,9 +63,11 @@ $wgWBClientSettings['repoNamespaces'] = [
 	'wikibase-item' => 'Item',
 	'wikibase-property' => 'Property'
 ];
+
 $wgWBClientSettings['siteLinksGroups'] = [
 	'miraheze'
 ];
+
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
@@ -139,8 +139,12 @@ if ( $wgDBname === 'horimiyawiki' ) {
 			],
 		],
 	];
+
 	$wgPropertySuggesterInitialSuggestions = [
 		5,
 		30,
 	];
 }
+
+// don't need these to be a global
+unset( $entitySources );
