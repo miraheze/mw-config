@@ -419,8 +419,7 @@ $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 $wgUseQuickInstantCommons = false;
-if ( $wi->config->get( 'wgUseInstantCommons', $wi->dbname ) ) {
-	$wi->config->settings['wgUseInstantCommons'][$wi->dbname] = false;
+if ( $wgUseInstantCommons ) {
 	$wgUseQuickInstantCommons = true;
 }
 
