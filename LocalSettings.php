@@ -4756,9 +4756,7 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname, $wgUseInstantCommons;
+	global $wgConf, $wgDBname;
 
 	$wgConf->extractAllGlobals( $wgDBname );
-
-	$wgUseInstantCommons = false;
 }
