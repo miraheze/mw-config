@@ -26,7 +26,7 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	tideways_xhprof_enable( $xhprofFlags );
 
 	$wgProfiler = [
-		'class' => 'ProfilerXhprof',
+		'class' => ProfilerXhprof::class,
 		'flags' => $xhprofFlags,
 		'running' => true,
 		'output' => 'text',
@@ -296,7 +296,7 @@ $wi->config->settings += [
 
 	// Captcha
 	'wgCaptchaClass' => [
-		'default' => 'ReCaptchaNoCaptcha',
+		'default' => ReCaptchaNoCaptcha::class,
 	],
 	'wgCaptchaTriggers' => [
 		'default' => [
@@ -1851,8 +1851,8 @@ $wi->config->settings += [
 	],
 	'wgJsonConfigModels' => [
 		'default' => [
-			'Map.JsonConfig' => 'JsonConfig\JCMapDataContent',
-			'Tabular.JsonConfig' => 'JsonConfig\JCTabularContent',
+			'Map.JsonConfig' => JsonConfig\JCMapDataContent::class,
+			'Tabular.JsonConfig' => JsonConfig\JCTabularContent::class,
 		],
 	],
 
