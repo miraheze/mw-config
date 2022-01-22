@@ -1334,9 +1334,6 @@ $wi->config->settings += [
 	'wgCopyUploadProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
-	'wgGenerateThumbnailOnParse' => [
-		'default' => false,
-	],
 	'wgFileExtensions' => [
 		'default' => [
 			'djvu',
