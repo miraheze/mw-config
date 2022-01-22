@@ -103,18 +103,18 @@ switch ( $wi->dbname ) {
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
 		$wgForeignFileRepos[] = [
-			'class' => 'ForeignDBViaLBRepo',
+			'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
 			'name' => 'shared-polcomwiki',
-			'directory' => '/mnt/mediawiki-static/polcomwiki',
-			'url' => 'https://static.miraheze.org/polcomwiki',
-			'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
+			'directory' => $wgUploadDirectory,
+			'apibase' => 'https://polcom.miraheze.org/w/api.php',
+			'hashLevels' => 2,
+			'thumbUrl' => false,
 			'fetchDescription' => true,
-			'descriptionCacheExpiry' => 86400 * 7,
-			'thumbScriptUrl' => false,
-			'transformVia404' => !$wgGenerateThumbnailOnParse,
-			'hasSharedCache' => false,
-			'wiki' => 'polcomwiki',
-			'descBaseUrl' => 'https://commons.ballmedia.org/wiki/File:',
+			'descriptionCacheExpiry' => 43200,
+			'transformVia404' => true,
+			'abbrvThreshold' => 255,
+			'apiMetadataExpiry' => 86400,
+			'disabledMediaHandlers' => [ TiffHandler::class ],
 		];
 
 		break;

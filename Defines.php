@@ -147,10 +147,11 @@ if ( $cwExperimental ) {
 }
 
 // $wmgPrivateUploads
+$wgGenerateThumbnailOnParse = false;
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
 	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
+	$wgGenerateThumbnailOnParse = true;
 }
 
 if ( $wmgUsersNotifiedOnAllChanges ) {
@@ -267,37 +268,36 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 	}
 
 	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
+		'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
 		'name' => "shared-{$wmgSharedUploadDBname}",
-		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
-		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
+		'directory' => $wgUploadDirectory,
+		'apibase' => "https://{$wmgSharedUploadBaseUrl}/w/api.php",
+		'hashLevels' => 2,
+		'thumbUrl' => false,
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => $wmgSharedUploadDBname,
-		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
-		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
+		'descriptionCacheExpiry' => 43200,
+		'transformVia404' => true,
+		'abbrvThreshold' => 255,
+		'apiMetadataExpiry' => 86400,
+		'disabledMediaHandlers' => [ TiffHandler::class ],
 	];
 }
 
 // Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
-		'class' => 'ForeignDBViaLBRepo',
-		'name' => 'shared-commons',
-		'directory' => '/mnt/mediawiki-static/commonswiki',
-		'url' => 'https://static.miraheze.org/commonswiki',
-		'hashLevels' => $wgHashedSharedUploadDirectory ? 2 : 0,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
+		'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
+		'name' => 'mirahezecommons',
+		'directory' => $wgUploadDirectory,
+		'apibase' => 'https://commons.miraheze.org/w/api.php',
+		'hashLevels' => 2,
+		'thumbUrl' => false,
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'commonswiki',
-		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
+		'descriptionCacheExpiry' => 43200,
+		'transformVia404' => true,
+		'abbrvThreshold' => 255,
+		'apiMetadataExpiry' => 86400,
+		'disabledMediaHandlers' => [ TiffHandler::class ],
 	];
 }
 
@@ -421,6 +421,12 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
+
+$wgUseQuickInstantCommons = false;
+if ( $wgUseInstantCommons ) {
+	$wgUseInstantCommons = false;
+	$wgUseQuickInstantCommons = true;
+}
 
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
