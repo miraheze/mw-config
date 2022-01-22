@@ -1350,7 +1350,7 @@ $wi->config->settings += [
 			'svg',
 		],
 	],
-	'wgUseQuickInstantCommons' => [
+	'wgUseInstantCommons' => [
 		'default' => true,
 	],
 	'wgMaxImageArea' => [
