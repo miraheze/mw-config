@@ -1080,9 +1080,9 @@ $wgManageWikiSettings = [
 		'help' => 'This option adds a textbox on Special:Upload enabling you to upload files from any URL.',
 		'requires' => [],
 	],
-	'wgUseQuickInstantCommons' => [
+	'wgUseInstantCommons' => [
 		'name' => 'Enable Wikimedia Commons Files',
-		'from' => 'quickinstantcommons',
+		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
