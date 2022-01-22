@@ -420,6 +420,7 @@ $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 $wgUseQuickInstantCommons = false;
 if ( $wgUseInstantCommons ) {
+	$wgUseInstantCommons = false;
 	$wgUseQuickInstantCommons = true;
 }
 
