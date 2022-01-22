@@ -98,7 +98,7 @@ if ( $cwClosed ) {
 // Public Wikis
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
-		'formatter' => 'MirahezeIRCRCFeedFormatter',
+		'formatter' => MirahezeIRCRCFeedFormatter::class,
 		'uri' => 'udp://[2a10:6740::6:205]:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
