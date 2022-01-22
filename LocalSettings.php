@@ -1889,7 +1889,7 @@ $wi->config->settings += [
 	],
 	'wgLDAPServerNames' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ldap2.miraheze.org',
+			'miraheze' => 'ldap111.miraheze.org',
 		],
 	],
 	'wgLDAPEncryptionType' => [
