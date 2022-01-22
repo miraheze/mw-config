@@ -150,7 +150,7 @@ if ( $cwExperimental ) {
 if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
 	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wi->config->settings['wgGenerateThumbnailOnParse']['default'] = true;
+	$wgGenerateThumbnailOnParse = true;
 }
 
 if ( $wmgUsersNotifiedOnAllChanges ) {
