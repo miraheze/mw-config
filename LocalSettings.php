@@ -367,7 +367,7 @@ $wi->config->settings += [
 		'academiadesusarduwiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
 		'supermanwiki' => 'numeric',
-		'wmgUseCategorySortHeaders' => 'CustomHeaderCollation',
+		'wmgUseCategorySortHeaders' => CustomHeaderCollation::class,
 	],
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
