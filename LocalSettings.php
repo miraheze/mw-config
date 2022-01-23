@@ -4473,6 +4473,9 @@ $wi->config->settings += [
 	'wgNaverSiteVerificationKey' => [
 		'default' => false,
 	],
+	'wgWikiSeoDefaultImage' => [
+		'default' => null,
+	],
 	'wgWikiSeoDisableLogoFallbackImage' => [
 		'default' => false,
 	],

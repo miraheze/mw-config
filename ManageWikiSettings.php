@@ -2127,6 +2127,15 @@ $wgManageWikiSettings = [
 		'help' => 'Site verification key for Naver.',
 		'requires' => [],
 	],
+	'wgWikiSeoDefaultImage' => [
+		'name' => 'Default SEO Image (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'text',
+		'overridedefault' => null,
+		'section' => 'seo',
+		'help' => 'Set a default image to display in embeds if no image is set on the page. Value must be a valid image file in the format of "File.png". If this variable is not set the site\'s logo will be used.',
+		'requires' => [],
+	],
 	'wgWikiSeoDisableLogoFallbackImage' => [
 		'name' => 'Disable Logo Fallback Image (WikiSEO)',
 		'from' => 'wikiseo',
