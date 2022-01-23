@@ -2,7 +2,7 @@
 
 $wgMemCachedServers = [
 	'127.0.0.1:11212',
-	// '127.0.0.1:11213',
+	'127.0.0.1:11213',
 ];
 
 $wgMainCacheType = 'memcached-pecl';
@@ -38,7 +38,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
 
-/* $wgObjectCaches['memcached-mem-2'] = [
+$wgObjectCaches['memcached-mem-2'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
 	'persistent'           => false,
@@ -49,9 +49,9 @@ $wgObjectCaches['memcached-mem-1'] = [
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
-]; */
+];
 
-$wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-1';
+$wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
 $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
 $wgJobTypeConf['default'] = [
