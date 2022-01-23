@@ -10,7 +10,7 @@ $wgParserCacheType = 'db-replicated';
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgParserCacheExpireTime = 86400 * 10; // 10 days
-$wgRevisionCacheExpiry = 86400 * 7; // 7 days
+$wgRevisionCacheExpiry = 86400 * 4; // 4 days
 $wgDLPQueryCacheTime = 120;
 
 // Currently we can't set this if GroupsSidebar us used.
@@ -26,7 +26,7 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 
 // session cache needs to be flipped for betaheze to avoid session conflicts
 $wgObjectCaches['memcached-mem-1'] = [
-	'class'                => 'MemcachedPeclBagOStuff',
+	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
 	'persistent'           => false,
 	'servers'              => [ '127.0.0.1:11212' ],
@@ -39,7 +39,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 ];
 
 $wgObjectCaches['memcached-mem-2'] = [
-	'class'                => 'MemcachedPeclBagOStuff',
+	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
 	'persistent'           => false,
 	'servers'              => [ '127.0.0.1:11213' ],
@@ -55,7 +55,7 @@ $wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
 $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
 $wgJobTypeConf['default'] = [
-	'class' => 'JobQueueRedis',
+	'class' => JobQueueRedis::class,
 	'redisServer' => '[2a10:6740::6:306]:6379',
 	'redisConfig' => [
 		'connectTimeout' => 2,

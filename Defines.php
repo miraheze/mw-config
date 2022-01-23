@@ -98,7 +98,7 @@ if ( $cwClosed ) {
 // Public Wikis
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
-		'formatter' => 'MirahezeIRCRCFeedFormatter',
+		'formatter' => MirahezeIRCRCFeedFormatter::class,
 		'uri' => 'udp://[2a10:6740::6:205]:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
@@ -268,7 +268,7 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 	}
 
 	$wgForeignFileRepos[] = [
-		'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
+		'class' => MediaWiki\Extension\QuickInstantCommons\Repo::class,
 		'name' => "shared-{$wmgSharedUploadDBname}",
 		'directory' => $wgUploadDirectory,
 		'apibase' => "https://{$wmgSharedUploadBaseUrl}/w/api.php",
@@ -286,7 +286,7 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 // Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
-		'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
+		'class' => MediaWiki\Extension\QuickInstantCommons\Repo::class,
 		'name' => 'mirahezecommons',
 		'directory' => $wgUploadDirectory,
 		'apibase' => 'https://commons.miraheze.org/w/api.php',
