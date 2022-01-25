@@ -11,9 +11,9 @@ switch ( $wi->dbname ) {
 		$wgDisableSearchUpdate = true;
 		$wgCirrusSearchClusters = [
 			'default' => [
-				[ 'host' => '[2a10:6740::6:103]', 'port' => 9200 ], // es101
-				[ 'host' => '[2a10:6740::6:202]', 'port' => 9200 ],  // es111
-				[ 'host' => '[2a10:6740::6:303]', 'port' => 9200 ],  // es121
+				[ 'host' => '2a10:6740::6:103', 'port' => 9200 ], // es101
+				[ 'host' => '2a10:6740::6:202', 'port' => 9200 ],  // es111
+				[ 'host' => '2a10:6740::6:303', 'port' => 9200 ],  // es121
 			]
 		];
 
