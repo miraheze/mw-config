@@ -3,10 +3,11 @@
 # Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
 	case 'betawiki':
-		wfLoadExtension( [ 'GlobalWatchlist',
-				  'Elastica',
-				  'CirrusSearch' ]
-				   );
+		wfLoadExtension( [
+			'GlobalWatchlist',
+			'Elastica',
+			'CirrusSearch',
+		] );
 		$wgDisableSearchUpdate = true;
 		$wgCirrusSearchClusters = [
 			'default' => [
