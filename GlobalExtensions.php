@@ -42,7 +42,6 @@ wfLoadExtensions( [
 	'SpamBlacklist',
 	'TitleBlacklist',
 	'TorBlock',
-	'UserMerge',
 	'WikiDiscover',
 	'WikiEditor',
 	'cldr'
