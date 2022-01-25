@@ -3,7 +3,19 @@
 # Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
 	case 'betawiki':
-		wfLoadExtension( 'GlobalWatchlist' );
+		wfLoadExtension( [
+			'GlobalWatchlist',
+			'Elastica',
+			'CirrusSearch',
+		] );
+		$wgDisableSearchUpdate = true;
+		$wgCirrusSearchClusters = [
+			'default' => [
+				[ 'host' => '2a10:6740::6:103', 'port' => 9200 ], // es101
+				[ 'host' => '2a10:6740::6:202', 'port' => 9200 ],  // es111
+				[ 'host' => '2a10:6740::6:303', 'port' => 9200 ],  // es121
+			]
+		];
 
 		break;
 	case 'constantnoblewiki':
