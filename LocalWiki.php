@@ -10,7 +10,7 @@ switch ( $wi->dbname ) {
 		] );
 		$wgDisableSearchUpdate = true;
 		$wgCirrusSearchClusters = [
-			'default' => ['https://es101.miraheze.org', 'https://es111.miraheze.org', 'https://es121.miraheze.org'],
+			'default' => [ 'https://es101.miraheze.org', 'https://es111.miraheze.org', 'https://es121.miraheze.org' ],
 		];
 
 		break;
