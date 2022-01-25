@@ -10,7 +10,7 @@ $wgParserCacheType = 'db-replicated';
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgParserCacheExpireTime = 86400 * 10; // 10 days
-$wgRevisionCacheExpiry = 86400 * 7; // 7 days
+$wgRevisionCacheExpiry = 86400 * 3; // 3 days
 $wgDLPQueryCacheTime = 120;
 
 // Currently we can't set this if GroupsSidebar us used.
