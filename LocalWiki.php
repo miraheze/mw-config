@@ -10,10 +10,7 @@ switch ( $wi->dbname ) {
 		] );
 		$wgDisableSearchUpdate = true;
 		$wgCirrusSearchClusters = [
-			'default' => [
-				[ 'host' => 'https://es101.miraheze.org', 'port' => 9200 ], // es101
-				[ 'host' => 'https://es111.miraheze.org', 'port' => 9200 ],  // es111
-				[ 'host' => 'https://es121.miraheze.org', 'port' => 9200 ],  // es121
+			'default' => ['https://es101.miraheze.org', 'https://es111.miraheze.org', 'https://es121.miraheze.org']
 			]
 		];
 
