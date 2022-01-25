@@ -259,7 +259,6 @@ $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UrlGetParameters/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/UserFunctions/extension.json
-$IP/extensions/UserMerge/extension.json
 $IP/extensions/UserPageEditProtection/extension.json
 $IP/extensions/VEForAll/extension.json
 $IP/extensions/Variables/extension.json
