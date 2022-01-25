@@ -3,7 +3,7 @@
 # Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
 	case 'betawiki':
-		wfLoadExtension( [
+		wfLoadExtensions( [
 			'GlobalWatchlist',
 			'Elastica',
 			'CirrusSearch',
