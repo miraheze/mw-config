@@ -3,7 +3,6 @@ $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddHTMLMetaAndTitle/extension.json
 $IP/extensions/AddThis/extension.json
 $IP/extensions/AdminLinks/extension.json
-$IP/extensions/AdvancedSearch/extension.json
 $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/Arrays/extension.json
 $IP/extensions/ArticleCreationWorkflow/extension.json
@@ -27,7 +26,6 @@ $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json
 $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/extension.json
-$IP/extensions/CirrusSearch/extension.json
 $IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json
 $IP/extensions/CleanChanges/extension.json
@@ -66,7 +64,6 @@ $IP/extensions/Echo/extension.json
 $IP/extensions/EditNotify/extension.json
 $IP/extensions/EditSubpages/extension.json
 $IP/extensions/Editcount/extension.json
-$IP/extensions/Elastica/extension.json
 $IP/extensions/EmbedSpotify/extension.json
 $IP/extensions/EmbedVideo/extension.json
 $IP/extensions/EventLogging/extension.json
