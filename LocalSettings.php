@@ -799,6 +799,7 @@ $wi->config->settings += [
 			'security',
 			'donate',
 			'blog',
+			'health',
 			'status',
 			'sslhost',
 			'sslrequest',
