@@ -3325,6 +3325,17 @@ $wi->config->settings += [
 		],
 	],
 
+	// PropertySuggester
+	'wgPropertySuggesterDeprecatedIds' => [
+		'default' => [],
+	],
+	'wgPropertySuggesterClassifyingPropertyIds' => [
+		'default' => [],
+	],
+	'wgPropertySuggesterInitialSuggestions' => [
+		'default' => [],
+	],
+
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
