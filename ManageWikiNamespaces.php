@@ -8,8 +8,8 @@
  * main: true or false. If false, this config will not appear for main namespaces.
  * talk: true or false. If false, this config will not appear for talk namespaces.
  * constant: optional parameter. True or false. If true, the format will be $var = $val. Used for configuration options that don't apply to specific namespace(s). Doesn't work with the 'check' or 'vestyle' types.
- * blacklisted: array of namespace ids to blacklist the config from.
- * whitelisted: array of namespace ids to allow the config to be shown in.
+ * excluded: array of namespace ids to exclude the config from being shown in.
+ * only: array of namespace ids to only allow the config to be shown in.
  * overridedefault: override default when no existing value exist. Can be a boolean, string, or array.
  * overridedefault[$namespace_id => $val]: namespace specific overrides. Also required a default key. See below.
  * overridedefault['default' => $val]: required when using namespace specific overrides. Sets a default for all other namespaces, which is not using the overrides set.
@@ -69,6 +69,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'constant' => true,
 		'whitelisted' => NS_PROJECT,
+		'only' => NS_PROJECT,
 		'overridedefault' => str_replace( ' ', '_', $wgSitename ),
 		'help' => 'Also be sure to update <code>$wgMetaNamespaceTalk</code>.',
 		'requires' => [],
@@ -81,6 +82,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'constant' => true,
 		'whitelisted' => NS_PROJECT_TALK,
+		'only' => NS_PROJECT_TALK,
 		'overridedefault' => str_replace( ' ', '_', "{$wgSitename}_talk" ),
 		'help' => 'Also be sure to update <code>$wgMetaNamespace</code>.',
 		'requires' => [],
@@ -92,6 +94,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => false,
 		'help' => '',
 		'requires' => [],
@@ -106,6 +109,10 @@ $wgManageWikiNamespacesAdditional = [
 			2,
 			8,
 		],
+		'excluded' => [
+			2,
+			8,
+		],
 		'overridedefault' => false,
 		'help' => 'Overrides <code>$wgCapitalLinks</code> for this namespace. Warning: This may break your existing wiki links.',
 		'requires' => [],
@@ -117,6 +124,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => false,
 		'help' => '',
 		'requires' => [],
@@ -128,6 +136,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'options' => [
 			'index,follow' => 'index,follow',
 			'noindex,nofollow' => 'noindex,nofollow',
@@ -144,6 +153,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => array_merge(
 			array_fill_keys( $wgContentNamespaces, true ),
 			[ 'default' => false ]
@@ -163,6 +173,12 @@ $wgManageWikiNamespacesAdditional = [
 			14,
 			15,
 		],
+		'excluded' => [
+			8,
+			9,
+			14,
+			15,
+		],
 		'overridedefault' => true,
 		'help' => '',
 		'requires' => [],
@@ -174,6 +190,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => false,
 		'help' => '',
 		'requires' => [],
@@ -185,6 +202,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => array_merge(
 			array_fill_keys( $wgContentNamespaces, true ),
 			[ 'default' => false ]
@@ -199,6 +217,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [ 8 ],
+		'excluded' => [ 8 ],
 		'overridedefault' => false,
 		'help' => '',
 		'requires' => [],
@@ -210,6 +229,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => [
 			NS_CATEGORY => true,
 			NS_FILE => true,
@@ -227,6 +247,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => false,
 		'help' => '',
 		'requires' => [],
@@ -238,6 +259,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => [
 			10 => true,
 			'default' => false,
@@ -252,6 +274,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => [
 			10 => true,
 			'default' => false,
@@ -266,6 +289,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => array_merge(
 			array_fill_keys( $wgContentNamespaces, true ),
 			[ 'default' => false ]
@@ -280,6 +304,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => false,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => [
 			0 => 'Template:Boilerplate',
 			'default' => false,
@@ -294,6 +319,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => true,
 		'help' => '',
 		'requires' => [],
@@ -305,6 +331,7 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'blacklisted' => [],
+		'excluded' => [],
 		'overridedefault' => false,
 		'help' => '',
 		'requires' => [],
