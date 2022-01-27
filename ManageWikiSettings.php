@@ -3333,7 +3333,7 @@ $wgManageWikiSettings = [
 		'type' => 'integers',
 		'overridedefault' => [],
 		'section' => 'wikibase',
-		'help' => 'A list of ints that won\'t be used for suggestions.',
+		'help' => 'A list of properties that won\'t be used for suggestions.',
 		'requires' => [],
 	],
 	'wgPropertySuggesterClassifyingPropertyIds' => [
@@ -3342,7 +3342,7 @@ $wgManageWikiSettings = [
 		'type' => 'integers',
 		'overridedefault' => [],
 		'section' => 'wikibase',
-		'help' => 'TBD',
+		'help' => 'A list of classifying properties.',
 		'requires' => [],
 	],
 	'wgPropertySuggesterInitialSuggestions' => [
@@ -3351,7 +3351,7 @@ $wgManageWikiSettings = [
 		'type' => 'integers',
 		'overridedefault' => [],
 		'section' => 'wikibase',
-		'help' => 'A list of ints that will be suggested when no statements exist.',
+		'help' => 'A list of properties that will be suggested when no statements exist.',
 		'requires' => [],
 	],
 	'wgWBQualityConstraintsInstanceOfId' => [
