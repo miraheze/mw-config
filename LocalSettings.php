@@ -2178,6 +2178,13 @@ $wi->config->settings += [
 			'permissions' => true,
 			'settings' => true
 		],
+		'betaheze' => [
+			'core' => true,
+			'extensions' => true,
+			'namespaces' => false,
+			'permissions' => false,
+			'settings' => true
+		],
 	],
 	'wgManageWikiExtensionsDefault' => [
 		'default' => [
