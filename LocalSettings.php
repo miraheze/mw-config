@@ -2178,7 +2178,7 @@ $wi->config->settings += [
 			'permissions' => true,
 			'settings' => true
 		],
-		'betaheze' => [
+		'betawiki' => [
 			'core' => true,
 			'extensions' => true,
 			'namespaces' => false,
