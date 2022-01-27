@@ -1499,7 +1499,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgUseGlobalSiteCssJs' => [
-		'default' => false,
+		'default' => true,
 	],
 
 	// GlobalPreferences
