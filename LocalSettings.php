@@ -793,6 +793,8 @@ $wi->config->settings += [
 			'sandbox',
 			'outreach',
 			'gazett?eer',
+			'semantic(mediawiki)?',
+			'smw',
 			'wikitech',
 			'wikis?',
 			'www',
