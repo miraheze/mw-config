@@ -2631,6 +2631,7 @@ $wi->config->settings += [
 	// MatomoAnalytics
 	'wgMatomoAnalyticsDatabase' => [
 		'default' => 'mhglobal',
+		'betaheze' => 'testglobal',
 	],
 	'wgMatomoAnalyticsServerURL' => [
 		'default' => 'https://matomo.miraheze.org/',
