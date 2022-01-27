@@ -1646,6 +1646,7 @@ $wi->config->settings += [
 	// IncidentReporting
 	'wgIncidentReportingDatabase' => [
 		'default' => 'incidents',
+		'betaheze' => 'testglobal',
 	],
 	'wgIncidentReportingServices' => [
 		'default' => [
