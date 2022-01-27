@@ -54,6 +54,14 @@ $wgObjectCaches['memcached-mem-2'] = [
 $wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
 $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
+if ( $wi->dbname === 'betawiki' ) {
+	$wgMainWANCache = 'betaheze';
+	$wgWANObjectCaches['betaheze'] = [
+		'class' => WANObjectCache::class,
+		'cacheId' => 'memcached-mem-1',
+	];
+}
+
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
 	'redisServer' => '[2a10:6740::6:306]:6379',
