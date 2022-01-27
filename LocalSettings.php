@@ -57,13 +57,15 @@ $wmgUploadHostname = 'static.miraheze.org';
 $wi->setVariables(
 	'/srv/mediawiki/cache',
 	[
-		'wiki'
+		'wiki',
+		'wikibeta',
 	],
 	[
-		'miraheze.org' => 'wiki'
+		'miraheze.org' => 'wiki',
+		'betaheze.org' => 'wikibeta',
 	],
 	[
-		'betaheze.org' => 'betaheze'
+		'betaheze.org' => 'betaheze',
 	]
 );
 
@@ -881,6 +883,7 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiDatabase' => [
 		'default' => 'mhglobal',
+		'betaheze' => 'testglobal',
 	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
@@ -897,6 +900,7 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
+		'betaheze' => 'betawiki',
 	],
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
@@ -995,6 +999,7 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiSubdomain' => [
 		'default' => 'miraheze.org',
+		'betaheze' => 'betaheze.org',
 	],
 	'wgCreateWikiUseClosedWikis' => [
 		'default' => true,
@@ -2244,6 +2249,14 @@ $wi->config->settings += [
 			'authors' => [
 				'torunblocked' => true,
 				'read' => true,
+			],
+		],
+		'+betawiki' => [
+			'bureaucrat' => [
+				'createwiki' => true,
+				'managewiki-editdefault' => true,
+				'managewiki-restricted' => true,
+				'requestwiki' => true,
 			],
 		],
 		'+bitcoindebateswiki' => [
