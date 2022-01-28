@@ -1,7 +1,6 @@
 {
 	"name": "miraheze/mw-config",
 	"description": "",
-	"license": "GPL-3.0-or-later",
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "38.0.0",
 		"mediawiki/minus-x": "1.1.1",
@@ -10,13 +9,14 @@
 	},
 	"scripts": {
 		"fix": [
-			"minus-x fix ."
+			"minus-x fix .",
+			"phpcbf; if [ $? -eq 1 ]; then exit 0; fi"
 		],
 		"test": [
 			"parallel-lint . --exclude node_modules --exclude vendor",
-			"phpcs --config-set ignore_warnings_on_exit 1",
-			"phpcs -p -s",
-			"minus-x check ."
-		]
+			"minus-x check .",
+			"@phpcs"
+		],
+		"phpcs": "phpcs -sp --cache"
 	}
 }
