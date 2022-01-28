@@ -2260,6 +2260,8 @@ $wi->config->settings += [
 				'managewiki-editdefault' => true,
 				'managewiki-restricted' => true,
 				'requestwiki' => true,
+				'globalgroupmembership',
+				'globalgrouppermissions',
 			],
 		],
 		'+bitcoindebateswiki' => [
