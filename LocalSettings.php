@@ -890,7 +890,10 @@ $wi->config->settings += [
 			'c2',
 			'c3',
 			'c4',
-		]
+		],
+		'betaheze' => [
+			'c4',
+		],
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
