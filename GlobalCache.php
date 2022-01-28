@@ -54,7 +54,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 $wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
 $wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
-if ( $wi->dbname === 'betawiki' ) {
+if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
 		'class' => WANObjectCache::class,
