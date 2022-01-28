@@ -1022,6 +1022,7 @@ $wi->config->settings += [
 	],
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
+		'betaheze' => false,
 	],
 
 	// CookieWarning
