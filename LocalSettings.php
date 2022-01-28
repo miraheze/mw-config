@@ -433,8 +433,8 @@ $wi->config->settings += [
 	],
 	'wgCentralAuthEnableUserMerge' => [
 		'default' => false,
-		'metawiki' => true,
-		'betawiki' => true,
+		'metawiki' => false,
+		'betawiki' => false,
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
@@ -2234,8 +2234,8 @@ $wi->config->settings += [
 				'suppressrevision' => true,
 			],
 			'steward' => [
-				'centralauth-usermerge' => true,
-				'usermerge' => true,
+				'centralauth-usermerge' => false,
+				'usermerge' => false,
 				'userrights' => true,
 			],
 			'user' => [
