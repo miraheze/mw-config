@@ -901,6 +901,10 @@ $wi->config->settings += [
 			'c1',
 		]
 	],
+	'wgCreateWikiDatabaseSuffix' => [
+		'default' => 'wiki',
+		'betaheze' => 'wikibeta',
+	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
 		'betaheze' => 'betawiki',
