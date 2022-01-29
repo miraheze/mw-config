@@ -43,12 +43,12 @@ class MirahezeFunctions {
 		];
 	}
 
-	public static function evalDbListExpression( $expr ) {
+	public static function evalDbListExpression( $expr, $type = 'json' ) {
 		$expr = trim( strtok( $expr, "#\n" ), "% " );
 		$tokens = preg_split( '/ +([-+&]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
-		$result = self::readDbListFile( basename( $tokens[0], '.dblist' ) );
+		$result = self::readDbListFile( basename( $tokens[0], ".$type" ) );
 		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
-			$dbs = self::readDbListFile( basename( $term, '.dblist' ) );
+			$dbs = self::readDbListFile( basename( $term, ".$type" ) );
 			if ( $op === '+' ) {
 				$result = array_unique( array_merge( $result, $dbs ) );
 			} elseif ( $op === '-' ) {
@@ -63,32 +63,48 @@ class MirahezeFunctions {
 		return $result;
 	}
 
-	public static function readDbListFile( $dblist, $onlyDBs = true ) {
-		$fileName = dirname( __DIR__, 2 ) . '/dblists/' . $dblist . '.dblist';
-		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
-		if ( !$lines ) {
-			throw new Exception( __METHOD__ . ": unable to read $dblist." );
-		}
+	public static function readDbListFile( $dblist, $onlyDBs = true, $type = 'json' ) {
+		if ( $type === 'json' ) {
+			global $wgCreateWikiCacheDirectory;
 
-		$dbs = [];
-		foreach ( $lines as $line ) {
-			// Ignore empty lines and lines that are comments
-			if ( $line !== '' && $line[0] !== '#' ) {
-				$explode = explode( '|', $line, 4 );
-
-				$dbs[ $explode[0] ] = [
-					'dbcluster' => $explode[1] ?? 'c1',
-					'server' => $explode[2] ?? $explode[0] . '.' . ( $_SERVER['HTTP_HOST'] ?? 'miraheze.org' ),
-					'sitename' => $explode[3] ?? 'No sitename set.',
+			// Let's fake a database list - default config should suffice
+			if ( !file_exists( $wgCreateWikiCacheDirectory . "/$dblist.json" ) ) {
+				$databasesArray = [
+					'timestamp' => 0,
+					'combi' => []
 				];
+			} else {
+				$databasesArray = json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/databases.json' ), true );
+			}
+
+			$databases = $databasesArray['combi'];
+		} else {
+			$fileName = dirname( __DIR__, 2 ) . '/dblists/' . $dblist . '.dblist';
+			$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
+			if ( !$lines ) {
+				throw new Exception( __METHOD__ . ": unable to read $dblist." );
+			}
+
+			$databases = [];
+			foreach ( $lines as $line ) {
+				// Ignore empty lines and lines that are comments
+				if ( $line !== '' && $line[0] !== '#' ) {
+					$explode = explode( '|', $line, 4 );
+
+					$databases[ $explode[0] ] = [
+						'c' => $explode[1] ?? 'c1',
+						'u' => $explode[2] ?? $explode[0] . '.' . ( $_SERVER['HTTP_HOST'] ?? 'miraheze.org' ),
+						's' => $explode[3] ?? 'No sitename set.',
+					];
+				}
 			}
 		}
 
 		if ( $onlyDBs ) {
-			return array_keys( $dbs );
+			return array_keys( $databases );
 		}
 
-		return $dbs;
+		return $databases;
 	}
 
 	public static function getRealm() {
@@ -123,7 +139,7 @@ class MirahezeFunctions {
 
 	public function getDatabaseClusters() {
 		$databases = self::readDbListFile( 'all', false );
-		$clusters = array_column( $databases, 'dbcluster' );
+		$clusters = array_column( $databases, 'c' );
 
 		return array_combine( array_keys( $databases ), $clusters );
 	}
