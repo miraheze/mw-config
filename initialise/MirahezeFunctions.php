@@ -123,7 +123,7 @@ class MirahezeFunctions {
 		$databases = self::readDbListFile( 'all', false );
 		$clusters = array_column( $databases, 'dbcluster' );
 
-		return array_combine( array_keys( $databases ), $clusters ) );
+		return array_combine( array_keys( $databases ), $clusters );
 	}
 
 	public function getServer() {
