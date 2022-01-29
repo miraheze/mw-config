@@ -34,9 +34,20 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
-// Initialise WikiInitialise
-require_once '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php';
-$wi = new WikiInitialise();
+require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
+
+$wi = new MirahezeFunctions;
+
+$wgConf = new SiteConfiguration;
+
+$wgConf->suffixes = array_keys( $wi::SUFFIXES );
+$wgConf->wikis = $wi::getLocalDatabases()[ $wi::getRealm() ];
+
+$wgLocalDatabases = $wgConf->getLocalDatabases();
+
+$wi->initialise();
+
+$wgDBname = $wi->dbname;
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
@@ -54,23 +65,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
 
-$wi->setVariables(
-	'/srv/mediawiki/cache',
-	[
-		'wiki',
-		'wikibeta',
-	],
-	[
-		'miraheze.org' => 'wiki',
-		'betaheze.org' => 'wikibeta',
-	],
-	[
-		'betaheze.org' => 'betaheze',
-	]
-);
-
-$wi->config->settings += [
-
+$wgConf->settings = [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '5',
