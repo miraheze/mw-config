@@ -181,7 +181,7 @@ class MirahezeFunctions {
 		global $wgConf;
 
 		$this->cacheArray ??= $this->getCacheArray();
- 
+
 		if ( !$this->cacheArray ) {
 			return;
 		}
