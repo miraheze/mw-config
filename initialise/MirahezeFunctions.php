@@ -74,7 +74,7 @@ class MirahezeFunctions {
 		foreach ( $lines as $line ) {
 			// Ignore empty lines and lines that are comments
 			if ( $line !== '' && $line[0] !== '#' ) {
-				$explode = explode( '|', $line );
+				$explode = explode( '|', $line, 4 );
 
 				$dbs[ $explode[0] ] = [
 					'dbcluster' => $explode[1] ?? 'c1',
