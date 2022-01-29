@@ -153,9 +153,9 @@ class MirahezeFunctions {
 			return false;
 		}
 
-		$this->cacheArray = json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ), true );
+		$this->cacheArray = (array)json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ), true );
 
-		return $this->cacheArray;
+		return (array)$this->cacheArray;
 	}
 
 	public function readCache() {
@@ -203,16 +203,12 @@ class MirahezeFunctions {
 
 		// Assign settings
 		if ( isset( $this->cacheArray['settings'] ) ) {
-			foreach ( (array)$this->cacheArray['settings'] as $var => $val ) {
-				$wgConf->settings[$var][$this->dbname] = $val;
-			}
+			extract( $this->cacheArray['settings'] );
 		}
 
 		// Assign extensions variables now
 		if ( isset( $this->cacheArray['extensions'] ) ) {
-			foreach ( (array)$this->cacheArray['extensions'] as $var ) {
-				$wgConf->settings[$var][$this->dbname] = true;
-			}
+			extract( array_fill_keys( $this->cacheArray['extensions'], true ) );
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
