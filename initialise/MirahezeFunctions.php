@@ -4,7 +4,8 @@ class MirahezeFunctions {
 	public $dbname;
 	public $server;
 	public $sitename;
-	public $missing = false;
+	public $missing;
+	public $wikiDBClusters;
 	public $disabledExtensions = [];
 
 	public const TAGS = [
@@ -24,6 +25,7 @@ class MirahezeFunctions {
 	public function initialise() {
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = $this->getCurrentDatabase();
+		$this->wikiDBClusters = $this->getDatabaseClusters();
 		$this->setDatabase();
 
 		$this->server = $this->getServer();
@@ -107,6 +109,19 @@ class MirahezeFunctions {
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 	}
 
+	public function getDatabaseClusters() {
+		global $wgConf;
+
+		$clusters = [];
+		foreach ( self::getLocalDatabases()['beta'] as $db ) {
+			$cacheArray = $this->getCacheArray( $db );
+
+			$clusters[$db] = $this->cacheArray['dbcluster'];
+		}
+
+		return $clusters;
+	}
+
 	public function getServer() {
 		global $wgConf;
 
@@ -145,15 +160,15 @@ class MirahezeFunctions {
 		return !in_array( $this->getCurrentDatabase(), $wgConf->wikis );
 	}
 
-	public function getCacheArray() {
+	public function getCacheArray( ?$dbName = null ) {
 		global $wgCreateWikiCacheDirectory;
 
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ) ) {
+		if ( !file_exists( $wgCreateWikiCacheDirectory . '/' . $dbName ?? $this->dbname . '.json' ) ) {
 			return false;
 		}
 
-		$this->cacheArray = (array)json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ), true );
+		$this->cacheArray = (array)json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $dbName ?? $this->dbname . '.json' ), true );
 
 		return (array)$this->cacheArray;
 	}
