@@ -211,12 +211,15 @@ class MirahezeFunctions {
 			}
 		}
 
-		$wgConf->siteParamsCallback = function () use ( $tags ) {
+		$tags = array_merge( ( $this->cacheArray['extensions'] ?? [] ), $tags );
+		$lang = $this->cacheArray['core']['wgLanguageCode'] ?? 'en';
+
+		$wgConf->siteParamsCallback = static function () use ( $tags, $lang ) {
 			return [
 				'suffix' => null,
-				'lang' => $this->cacheArray['core']['wgLanguageCode'],
-				'tags' => array_merge( ( $this->cacheArray['extensions'] ?? [] ), $tags ),
-				'params' => []
+				'lang' => $lang,
+				'tags' => $tags,
+				'params' => [],
 			];
 		};
 
