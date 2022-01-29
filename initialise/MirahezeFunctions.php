@@ -213,7 +213,7 @@ class MirahezeFunctions {
 
 		// Handle namespaces - additional settings will be done in ManageWiki
 		if ( isset( $this->cacheArray['namespaces'] ) ) {
-			foreach ( (array)$this->cacheArray['namespaces'] as $name => $ns ) {
+			foreach ( $this->cacheArray['namespaces'] as $name => $ns ) {
 				$wgConf->settings['wgExtraNamespaces'][$this->dbname][(int)$ns['id']] = $name;
 				$wgConf->settings['wgNamespacesToBeSearchedDefault'][$this->dbname][(int)$ns['id']] = $ns['searchable'];
 				$wgConf->settings['wgNamespacesWithSubpages'][$this->dbname][(int)$ns['id']] = $ns['subpages'];
@@ -235,7 +235,7 @@ class MirahezeFunctions {
 
 		// Handle Permissions
 		if ( isset( $this->cacheArray['permissions'] ) ) {
-			foreach ( (array)$this->cacheArray['permissions'] as $group => $perm ) {
+			foreach ( $this->cacheArray['permissions'] as $group => $perm ) {
 				foreach ( (array)$perm['permissions'] as $id => $right ) {
 					$wgConf->settings['wgGroupPermissions'][$this->dbname][$group][$right] = true;
 				}
@@ -313,7 +313,7 @@ class MirahezeFunctions {
 			foreach ( $wgManageWikiExtensions as $name => $ext ) {
 				$wgConf->settings[ $ext['var'] ]['default'] = false;
 
-				if ( in_array( $ext['var'], (array)$this->cacheArray['extensions'] ) &&
+				if ( in_array( $ext['var'], $this->cacheArray['extensions'] ) &&
 					!in_array( $name, $this->disabledExtensions )
 				) {
 					$path = $list[ $ext['name'] ] ?? false;
