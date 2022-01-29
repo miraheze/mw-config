@@ -273,7 +273,7 @@ class MirahezeFunctions {
 	}
 
 	public function loadExtensions() {
-		global $wgCreateWikiCacheDirectory, $wgConf,
+		global $wgCreateWikiCacheDirectory,
 			$wgExtensionDirectory, $wgStyleDirectory,
 			$wgManageWikiExtensions;
 
