@@ -62,7 +62,7 @@ class MirahezeFunctions {
 	}
 
 	public static function readDbListFile( $dblist, $onlyDBs = true ) {
-		$fileName = dirname( __DIR__ ) . '/../dblists/' . $dblist . '.dblist';
+		$fileName = dirname( __DIR__, 2 ) . '/dblists/' . $dblist . '.dblist';
 		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
 		if ( !$lines ) {
 			throw new Exception( __METHOD__ . ": unable to read $dblist." );
