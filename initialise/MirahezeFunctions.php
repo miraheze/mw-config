@@ -311,8 +311,6 @@ class MirahezeFunctions {
 
 		if ( isset( $this->cacheArray['extensions'] ) ) {
 			foreach ( $wgManageWikiExtensions as $name => $ext ) {
-				$wgConf->settings[ $ext['var'] ]['default'] = false;
-
 				if ( in_array( $ext['var'], $this->cacheArray['extensions'] ) &&
 					!in_array( $name, $this->disabledExtensions )
 				) {
