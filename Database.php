@@ -1,6 +1,6 @@
 <?php
 
-$wi->config->settings['wgLBFactoryConf']['default'] = [
+$wgConf->settings['wgLBFactoryConf']['default'] = [
 	'class' => LBFactoryMulti::class,
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
