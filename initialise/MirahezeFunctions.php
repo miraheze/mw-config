@@ -24,6 +24,8 @@ class MirahezeFunctions {
 	public function initialise() {
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = $this->getCurrentDatabase();
+		$this->setDatabase();
+
 		$this->server = $this->getServer();
 		$this->sitename = $this->getSitename();
 		$this->missing = $this->isMissing();
@@ -97,6 +99,12 @@ class MirahezeFunctions {
 				return $explode[0] . $suffix;
 			}
 		}
+	}
+
+	public function setDatabase() {
+		global $wgConf;
+
+		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 	}
 
 	public function getServer() {
