@@ -74,7 +74,7 @@ class MirahezeFunctions {
 			if ( $line !== '' && $line[0] !== '#' ) {
 				$explode = explode( '|', $line );
 
-				$dbs[ $explode[0] ] = [
+				$dbs[$explode[0]] = [
 					'dbcluster' => $explode[1] ?? 'c1',
 					'server' => $explode[2] ?? $explode[0] . '.' . ( $_SERVER['HTTP_HOST'] ?? 'miraheze.org' ),
 					'sitename' => $explode[3] ?? 'No sitename set.',
