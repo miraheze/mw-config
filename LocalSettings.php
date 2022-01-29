@@ -4710,7 +4710,7 @@ $wgConf->settings = [
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
-	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
+	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
 $wi->readCache();
@@ -4719,7 +4719,7 @@ $wi->readCache();
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [ 'datatransfer' ];
 
-$wi->config->extractAllGlobals( $wi->dbname );
+$wgConf->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
@@ -4766,7 +4766,7 @@ if ( $wi->missing ) {
 
 if ( wfHostname() === 'test101' ) {
 	// Prevent cache (better be safe than sorry)
-	$wi->config->settings['wgUseCdn']['default'] = false;
+	$wgConf->settings['wgUseCdn']['default'] = false;
 }
 
 // Define last to avoid all dependencies
@@ -4778,8 +4778,7 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once '/srv/mediawiki/config/ExtensionMessageFiles.php';
 }
 
-// Last Stuff
-$wgConf = $wi->config;
+// Don't need a global here
 unset( $wi );
 
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
