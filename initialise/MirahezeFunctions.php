@@ -57,7 +57,9 @@ class MirahezeFunctions {
 				$result = array_intersect( $result, $dbs );
 			}
 		}
+
 		sort( $result );
+
 		return $result;
 	}
 
