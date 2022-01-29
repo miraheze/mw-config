@@ -47,8 +47,6 @@ $wgLocalDatabases = $wgConf->getLocalDatabases();
 
 $wi->initialise();
 
-$wgDBname = $wi->dbname;
-
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
 
