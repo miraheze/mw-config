@@ -17,7 +17,7 @@ $wgDLPQueryCacheTime = 120;
 // This should ideally be patched upstream, converting the hook used
 // to SidebarBeforeOutput rather than SkinBuildSidebar, which is
 // more appropriate for this extension.
-if ( !$wi->config->get( 'wmgUseGroupsSidebar', $wi->dbname ) ) {
+if ( !$wgConf->get( 'wmgUseGroupsSidebar', $wi->dbname ) ) {
 	$wgEnableSidebarCache = true;
 }
 
@@ -51,8 +51,8 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
 
-$wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
-$wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
+$wgConf->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
+$wgConf->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
 if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 	$wgMainWANCache = 'betaheze';
