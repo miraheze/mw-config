@@ -34,8 +34,8 @@ class MirahezeFunctions {
 	}
 
 	public static function getLocalDatabases() {
-		$allDatabases = self::evalDbListExpression( 'all.dblist + beta.dblist - deleted.dblist' );
-		$productionDatabases = self::evalDbListExpression( 'all.dblist - deleted.dblist' );
+		$allDatabases = self::evalDbListExpression( 'all + beta' );
+		$productionDatabases = self::readDbListFile( 'all' );
 
 		return [
 			self::TAGS['default'] => $productionDatabases,
