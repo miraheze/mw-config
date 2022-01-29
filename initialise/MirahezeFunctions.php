@@ -36,7 +36,7 @@ class MirahezeFunctions {
 		return [
 			self::TAGS['default'] => $productionDatabases,
 			self::TAGS['beta'] => $allDatabases,
-		]
+		];
 	}
 
 	public static function evalDbListExpression( $expr ) {
