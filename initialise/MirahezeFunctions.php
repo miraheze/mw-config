@@ -61,8 +61,8 @@ class MirahezeFunctions {
 		return $result;
 	}
 
-	public static function readDbListFile( $dblist ) {
-		$fileName = dirname( __DIR__ ) . '/dblists/' . $dblist . '.dblist';
+	public static function readDbListFile( $dblist, $onlyDBs = true ) {
+		$fileName = dirname( __DIR__ ) . '/../dblists/' . $dblist . '.dblist';
 		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
 		if ( !$lines ) {
 			throw new Exception( __METHOD__ . ": unable to read $dblist." );
@@ -72,8 +72,18 @@ class MirahezeFunctions {
 		foreach ( $lines as $line ) {
 			// Ignore empty lines and lines that are comments
 			if ( $line !== '' && $line[0] !== '#' ) {
-				$dbs[] = $line;
+				$explode = explode( '|', $line );
+
+				$dbs[ $explode[0] ] = [
+					'dbcluster' => $explode[1] ?? 'c1',
+					'server' => $explode[2] ?? $explode[0] . '.' . ( $_SERVER['HTTP_HOST'] ?? 'miraheze.org' ),
+					'sitename' => $explode[3] ?? 'No sitename set.',
+				];
 			}
+		}
+
+		if ( $onlyDBs ) {
+			return array_keys( $dbs );
 		}
 
 		return $dbs;
@@ -110,16 +120,10 @@ class MirahezeFunctions {
 	}
 
 	public function getDatabaseClusters() {
-		global $wgConf;
+		$databases = self::readDbListFile( 'all', false );
+		$clusters = array_column( $databases, 'dbcluster' );
 
-		$clusters = [];
-		foreach ( self::getLocalDatabases()['beta'] as $db ) {
-			$cacheArray = $this->getCacheArray( $db );
-
-			$clusters[$db] = $this->cacheArray['dbcluster'];
-		}
-
-		return $clusters;
+		return array_combine( array_keys( $databases ), $clusters ) );
 	}
 
 	public function getServer() {
@@ -160,15 +164,15 @@ class MirahezeFunctions {
 		return !in_array( $this->getCurrentDatabase(), $wgConf->wikis );
 	}
 
-	public function getCacheArray( ?$dbName = null ) {
+	public function getCacheArray() {
 		global $wgCreateWikiCacheDirectory;
 
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( $wgCreateWikiCacheDirectory . '/' . $dbName ?? $this->dbname . '.json' ) ) {
+		if ( !file_exists( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ) ) {
 			return false;
 		}
 
-		$this->cacheArray = (array)json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $dbName ?? $this->dbname . '.json' ), true );
+		$this->cacheArray = (array)json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ), true );
 
 		return (array)$this->cacheArray;
 	}
