@@ -67,14 +67,16 @@ class MirahezeFunctions {
 		if ( $type === 'json' ) {
 			global $wgCreateWikiCacheDirectory;
 
-			// Let's fake a database list - default config should suffice
-			if ( !file_exists( $wgCreateWikiCacheDirectory . "/$dblist.json" ) ) {
-				$databasesArray = [
-					'timestamp' => 0,
-					'combi' => []
-				];
+			if ( $dblist === 'all' ) {
+				$dblist = 'databases';
+			}
+
+			if ( !file_exists( "$wgCreateWikiCacheDirectory/$dblist.json" ) ) {
+				$databases = [];
+
+				return $databases;
 			} else {
-				$databasesArray = json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/databases.json' ), true );
+				$databasesArray = json_decode( file_get_contents( "$wgCreateWikiCacheDirectory/$dblist.json" ), true );
 			}
 
 			$databases = $databasesArray['combi'];
