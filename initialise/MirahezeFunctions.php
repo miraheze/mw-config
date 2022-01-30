@@ -79,7 +79,7 @@ class MirahezeFunctions {
 				$databasesArray = json_decode( file_get_contents( "$wgCreateWikiCacheDirectory/$dblist.json" ), true );
 			}
 
-			$databases = $databasesArray['combi'];
+			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
 		} else {
 			$fileName = dirname( __DIR__, 2 ) . '/dblists/' . $dblist . '.dblist';
 			$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
@@ -140,7 +140,11 @@ class MirahezeFunctions {
 	}
 
 	public function getDatabaseClusters() {
-		$databases = self::readDbListFile( 'all', false );
+		$allDatabases = self::readDbListFile( 'all', false );
+		$deletedDatabases = self::readDbListFile( 'deleted', false );
+
+		$databases = array_merge( $allDatabases, $deletedDatabases );
+
 		$clusters = array_column( $databases, 'c' );
 
 		return array_combine( array_keys( $databases ), $clusters );
@@ -167,11 +171,15 @@ class MirahezeFunctions {
 	public function getSitename() {
 		global $wgConf;
 
-		$databases = self::readDbListFile( 'all', false );
+		$allDatabases = self::readDbListFile( 'all', false );
+		$deletedDatabases = self::readDbListFile( 'deleted', false );
+
+		$databases = array_merge( $allDatabases, $deletedDatabases );
+
 		$siteNameColumn = array_column( $databases, 's' );
 
 		$siteNames = array_combine( array_keys( $databases ), $siteNameColumn );
-		$siteNames['default'] = 'No sitename set.'
+		$siteNames['default'] = 'No sitename set.';
 
 		$wgConf->settings['wgSitename'] = $siteNames;
 
