@@ -149,33 +149,33 @@ class MirahezeFunctions {
 	public function getServer() {
 		global $wgConf;
 
-		$this->cacheArray ??= $this->getCacheArray();
+		$wgConf->settings['wgServer']['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
-		$explode = explode( '.', $this->hostname, 2 );
-
-		if ( $explode[0] == 'www' ) {
-			$explode = explode( '.', $explode[1], 2 );
+		$databases = self::readDbListFile( 'all', false );
+		foreach ( $databases as $db => $data ) {
+			foreach ( self::SUFFIXES as $suffix ) {
+				if ( substr( $db, -strlen( $suffix ) ) == $suffix ) {
+					$wgConf->settings['wgServer'][$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+				}
+			}
 		}
 
-		$domain = explode( '.', $_SERVER['SERVER_NAME'], 2 )[1];
-		$subdomain = $explode[0] . '.' . $domain;
-
-		$server = $this->cacheArray['url'] ?: ( 'https://' . $subdomain . '.' . $domain );
-		$wgConf->settings['wgServer'][$this->dbname] = $server;
-
-		return $server;
+		return $wgConf->settings['wgServer'][$this->dbname] ??
+			$wgConf->settings['wgServer']['default'];
 	}
 
 	public function getSitename() {
 		global $wgConf;
 
-		$this->cacheArray ??= $this->getCacheArray();
+		$databases = self::readDbListFile( 'all', false );
+		$siteNameColumn = array_column( $databases, 's' );
 
-		$siteName = $this->cacheArray['core']['wgSitename'];
+		$siteNames = array_combine( array_keys( $databases ), $siteNameColumn );
+		$siteNames['default'] = 'No sitename set.'
 
-		$wgConf->settings['wgSitename'][$this->dbname] = $siteName;
+		$wgConf->settings['wgSitename'] = $siteNames;
 
-		return $siteName;
+		return $siteNames[$this->dbname];
 	}
 
 	public function isMissing() {
@@ -206,11 +206,7 @@ class MirahezeFunctions {
 			return;
 		}
 
-		// Assign top level variables first
 		$wgConf->settings['wgLanguageCode'][$this->dbname] = $this->cacheArray['core']['wgLanguageCode'];
-		if ( $this->cacheArray['url'] ) {
-			$wgConf->settings['wgServer'][$this->dbname] = $this->cacheArray['url'];
-		}
 
 		// Assign states
 		$wgConf->settings['cwPrivate'][$this->dbname] = (bool)$this->cacheArray['states']['private'];
