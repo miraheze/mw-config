@@ -1,5 +1,7 @@
 <?php
 class MirahezeFunctions {
+	private $cacheArray;
+
 	public $hostname;
 	public $dbname;
 	public $server;
