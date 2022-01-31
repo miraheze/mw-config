@@ -1,5 +1,8 @@
 <?php
 
+// https://phabricator.miraheze.org/T8703
+header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
+
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtensions( [
