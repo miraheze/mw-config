@@ -56,7 +56,7 @@ class MirahezeFunctions {
 		$wgConf = new SiteConfiguration;
 
 		$wgConf->suffixes = array_keys( self::SUFFIXES );
-		$wgConf->wikis = $wi::getLocalDatabases()[ self::getRealm() ];
+		$wgConf->wikis = self::getLocalDatabases()[ self::getRealm() ];
 
 		// We need the CLI to be able to access 'deleted' wikis
 		if ( PHP_SAPI === 'cli' ) {
