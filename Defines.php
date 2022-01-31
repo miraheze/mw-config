@@ -1,10 +1,6 @@
 <?php
 
-$visibility = $cwPrivate ? 'Private' : 'Public';
-header( "X-Wiki-Visibility: {$visibility}" );
-
-// don't set global
-unset( $visibility );
+header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' ) {
