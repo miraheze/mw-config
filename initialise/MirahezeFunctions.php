@@ -10,13 +10,17 @@ class MirahezeFunctions {
 	public $wikiDBClusters;
 	public $disabledExtensions = [];
 
-	public const TAGS = [
-		'default' => 'default',
-		'beta' => 'betaheze',
+	private const CACHE_DIRECTORY = [
+		'default' => '/srv/mediawiki/cache',
 	];
 
-	public const REALMS = [
+	private const REALMS = [
 		'betaheze.org' => 'betaheze',
+	];
+
+	private const TAGS = [
+		'default' => 'default',
+		'beta' => 'betaheze',
 	];
 
 	public const SUFFIXES = [
@@ -67,18 +71,16 @@ class MirahezeFunctions {
 
 	public static function readDbListFile( $dblist, $onlyDBs = true, $type = 'json' ) {
 		if ( $type === 'json' ) {
-			global $wgCreateWikiCacheDirectory;
-
 			if ( $dblist === 'all' ) {
 				$dblist = 'databases';
 			}
 
-			if ( !file_exists( "$wgCreateWikiCacheDirectory/$dblist.json" ) ) {
+			if ( !file_exists( self::getCacheDirectory() . "/{$dblist}.json" ) ) {
 				$databases = [];
 
 				return $databases;
 			} else {
-				$databasesArray = json_decode( file_get_contents( "$wgCreateWikiCacheDirectory/$dblist.json" ), true );
+				$databasesArray = json_decode( file_get_contents( self::getCacheDirectory() . "/{$dblist}.json" ), true );
 			}
 
 			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
@@ -115,6 +117,10 @@ class MirahezeFunctions {
 		$domain = explode( '.', $_SERVER['SERVER_NAME'], 2 )[1];
 
 		return self::REALMS[$domain] ?? 'default';
+	}
+
+	public static function getCacheDirectory() {
+		return self::CACHE_DIRECTORY[self::getRealm()] ?? self::CACHE_DIRECTORY['default'];
 	}
 
 	public function getCurrentDatabase() {
@@ -195,14 +201,12 @@ class MirahezeFunctions {
 	}
 
 	public function getCacheArray() {
-		global $wgCreateWikiCacheDirectory;
-
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ) ) {
+		if ( !file_exists( self::getCacheDirectory() . '/' . $this->dbname . '.json' ) ) {
 			return false;
 		}
 
-		$this->cacheArray = (array)json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ), true );
+		$this->cacheArray = (array)json_decode( file_get_contents( self::getCacheDirectory() . '/' . $this->dbname . '.json' ), true );
 
 		return $this->cacheArray;
 	}
@@ -321,8 +325,7 @@ class MirahezeFunctions {
 	}
 
 	public function loadExtensions() {
-		global $wgCreateWikiCacheDirectory,
-			$wgExtensionDirectory, $wgStyleDirectory,
+		global $wgExtensionDirectory, $wgStyleDirectory,
 			$wgManageWikiExtensions;
 
 		$this->cacheArray ??= $this->getCacheArray();
@@ -331,7 +334,7 @@ class MirahezeFunctions {
 			return;
 		}
 
-		if ( !file_exists( "{$wgCreateWikiCacheDirectory}/extension-list.json" ) ) {
+		if ( !file_exists( self::getCacheDirectory() . '/extension-list.json' ) ) {
 			$queue = array_fill_keys( array_merge(
 					glob( $wgExtensionDirectory . '/*/extension*.json' ),
 					glob( $wgStyleDirectory . '/*/skin.json' )
@@ -352,9 +355,9 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( "{$wgCreateWikiCacheDirectory}/extension-list.json", json_encode( $list ), LOCK_EX );
+			file_put_contents( self::getCacheDirectory() . '/extension-list.json', json_encode( $list ), LOCK_EX );
 		} else {
-			$list = json_decode( file_get_contents( "{$wgCreateWikiCacheDirectory}/extension-list.json" ), true );
+			$list = json_decode( file_get_contents( self::getCacheDirectory() . '/extension-list.json' ), true );
 		}
 
 		if ( isset( $this->cacheArray['extensions'] ) ) {
