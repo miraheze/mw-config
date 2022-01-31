@@ -28,7 +28,18 @@ class MirahezeFunctions {
 		'wikibeta' => 'betaheze.org',
 	];
 
+	public function __construct() {
+		// Safeguard LocalSettings from being accessed
+		if ( !defined( 'MEDIAWIKI' ) ) {
+			die( 'Not an entry point.' );
+		}
+
+		$this->initialise();
+	}
+
 	public function initialise() {
+		self::setup();
+
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = $this->getCurrentDatabase();
 		$this->wikiDBClusters = $this->getDatabaseClusters();
@@ -37,6 +48,22 @@ class MirahezeFunctions {
 		$this->server = $this->getServer();
 		$this->sitename = $this->getSitename();
 		$this->missing = $this->isMissing();
+	}
+
+	public static function setup() {
+		global $wgConf, $wgLocalDatabases;
+
+		$wgConf = new SiteConfiguration;
+
+		$wgConf->suffixes = array_keys( self::SUFFIXES );
+		$wgConf->wikis = $wi::getLocalDatabases()[ self::getRealm() ];
+
+		// We need the CLI to be able to access 'deleted' wikis
+		if ( PHP_SAPI === 'cli' ) {
+			$wgConf->wikis = array_merge( $wgConf->wikis, self::readDbListFile( 'deleted' ) );
+		}
+
+		$wgLocalDatabases = $wgConf->getLocalDatabases();
 	}
 
 	public static function getLocalDatabases() {
