@@ -36,21 +36,7 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 
 require_once __DIR__ . '/initialise/MirahezeFunctions.php';
 
-$wi = new MirahezeFunctions;
-
-$wgConf = new SiteConfiguration;
-
-$wgConf->suffixes = array_keys( $wi::SUFFIXES );
-$wgConf->wikis = $wi::getLocalDatabases()[ $wi::getRealm() ];
-
-// We need the CLI to be able to access 'deleted' wikis
-if ( PHP_SAPI === 'cli' ) {
-	$wgConf->wikis = array_merge( $wgConf->wikis, $wi::readDbListFile( 'deleted' ) );
-}
-
-$wgLocalDatabases = $wgConf->getLocalDatabases();
-
-$wi->initialise();
+$wi = new MirahezeFunctions();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
