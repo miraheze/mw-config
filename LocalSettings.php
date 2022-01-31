@@ -34,9 +34,9 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
-require_once __DIR__ . '/initialise/MirahezeFunctions.php';
+require_once __DIR__ . '/initialise/MirahezeSiteConfiguration.php';
 
-$wi = new MirahezeFunctions();
+$wi = new MirahezeSiteConfiguration();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
