@@ -1,5 +1,5 @@
 <?php
-class MirahezeSiteConfiguration {
+class MirahezeFunctions {
 	private $cacheArray;
 
 	public $hostname;
