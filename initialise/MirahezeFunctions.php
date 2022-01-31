@@ -204,7 +204,7 @@ class MirahezeFunctions {
 
 		$this->cacheArray = (array)json_decode( file_get_contents( $wgCreateWikiCacheDirectory . '/' . $this->dbname . '.json' ), true );
 
-		return (array)$this->cacheArray;
+		return $this->cacheArray;
 	}
 
 	public function readCache() {
