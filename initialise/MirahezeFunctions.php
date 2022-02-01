@@ -28,15 +28,6 @@ class MirahezeFunctions {
 		'wikibeta' => 'betaheze.org',
 	];
 
-	public function __construct() {
-		// Safeguard LocalSettings from being accessed
-		if ( !defined( 'MEDIAWIKI' ) ) {
-			die( 'Not an entry point.' );
-		}
-
-		$this->initialise();
-	}
-
 	public function initialise() {
 		self::setup();
 
