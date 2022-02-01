@@ -5,6 +5,11 @@
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
 
+// Don't allow web access.
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'Not an entry point.' );
+}
+
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
@@ -36,7 +41,8 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 
 require_once __DIR__ . '/initialise/MirahezeFunctions.php';
 
-$wi = new MirahezeFunctions();
+$wi = new MirahezeFunctions;
+$wi->initialise();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
