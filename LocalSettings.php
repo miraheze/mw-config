@@ -3487,6 +3487,7 @@ $wi->config->settings += [
 			'editofficialprotected',
 		],
 		'+nicolopediawiki' => [
+			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
 		'+sesupportwiki' => [
@@ -3565,6 +3566,7 @@ $wi->config->settings += [
 			'editofficialprotected',
 		],
 		'nicolopediawiki' => [
+			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
 		'pokemonarowiki' => [
