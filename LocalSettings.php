@@ -429,11 +429,6 @@ $wi->config->settings += [
 		'metawiki' => true,
 		'betawiki' => true,
 	],
-	'wgCentralAuthEnableUserMerge' => [
-		'default' => false,  // remove with 1.38
-		'metawiki' => false,
-		'betawiki' => false,
-	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
 		'betaheze' => 'betawiki',
