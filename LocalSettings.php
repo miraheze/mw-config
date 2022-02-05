@@ -4557,8 +4557,8 @@ $wi->config->settings += [
 			// When using this, use buffer.
 			'api-request' => [ 'graylog' => 'debug', 'buffer' => true ],
 			'api-warning' => false,
-			'authentication' => false,
-			'authevents' => false,
+			'authentication' => 'info',
+			'authevents' => 'info',
 			'autoloader' => false,
 			'BlockManager' => false,
 			'BlogPage' => false,
