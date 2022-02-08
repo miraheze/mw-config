@@ -21,6 +21,11 @@ if ( !$wi->config->get( 'wmgUseGroupsSidebar', $wi->dbname ) ) {
 	$wgEnableSidebarCache = true;
 }
 
+// Disabling Sidebarcahce per wiki as a temporary solution (see T8732)
+if ( $wgDBname === 'solarawiki' ) {
+	$wgEnableSidebarCache = false;
+}
+
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
