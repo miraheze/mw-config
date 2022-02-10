@@ -872,6 +872,32 @@ $wgManageWikiSettings = [
 		'help' => 'Number of seconds before a RottenLinks request returns no response. Min: 5. Max: 120.',
 		'requires' => [],
 	],
+	'wgRelatedArticlesCardLimit' => [
+		'name' => 'Related Articles Card Limit',
+		'from' => 'relatedarticles',
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 20,
+		'overridedefault' => 3,
+		'section' => 'links',
+		'help' => 'Maximum number of articles that should be shown in RelatedArticles widget. This limit is derived from limits in TextExtracts and PageImages extensions.',
+		'requires' => [],
+	],
+	'wgRelatedArticlesDescriptionSource' => [
+		'name' => 'Related Articles Description Source',
+		'from' => 'relatedarticles',
+		'type' => 'list',
+		'options' => [
+			'None' => false,
+			'From the central wikibase repository or Extension:ShortDescription. Requires Wikibase Client.' => 'wikidata',
+			'Fetched from the prop=extracts api. Requires Extension:TextExtracts.' => 'textextracts',
+			'From the description page property. Requires Extension:Description2 or any other extension that sets the description page property.' => 'pagedescription',
+		],
+		'overridedefault' => false,
+		'section' => 'links',
+		'help' => 'Source to get the page description from.',
+		'requires' => [],
+	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
