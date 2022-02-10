@@ -786,6 +786,42 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to show page\'s rating before the user votes.',
 		'requires' => [],
 	],
+	'wgPageFormsRenameEditTabs' => [
+		'name' => 'Page Forms Rename Edit Tabs',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Rename the "edit with form" tab to "edit", and the "edit" tab to "edit source" (in whatever language the wiki is being viewed in).',
+		'requires' => [],
+	],
+	'wgPageFormsRenameMainEditTab' => [
+		'name' => 'Page Forms Rename Main Edit Tab',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Rename only the "edit" tab to "edit source" (in whatever language the wiki is being viewed in).',
+		'requires' => [],
+	],
+	'wgPageFormsSimpleUpload' => [
+		'name' => 'Page Forms Simple Upload',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Set uploadable fields to use the operating system\'s own uploading directly, instead of using MediaWiki\'s uploading system - this gives the user fewer options, but it is a simpler process, and on mobile devices it can present some interesting options, like uploading photos right after they are taken.',
+		'requires' => [],
+	],
+	'wgPageFormsLinkAllRedLinksToForms' => [
+		'name' => 'Page Forms Link All Red Links To Forms',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'For red links not defined by #formredlink and not pointing to a form-associated namespace, have every such link point to a helper page, that lets the user choose which of the wiki\'s forms to use to create this page - or to use no form at all.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [

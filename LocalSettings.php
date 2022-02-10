@@ -3085,6 +3085,15 @@ $wi->config->settings += [
 	],
 
 	// PageForms
+	'wgPageFormsRenameEditTabs' => [
+		'default' => false,
+	],
+	'wgPageFormsRenameMainEditTab' => [
+		'default' => false,
+	],
+	'$wgPageFormsSimpleUpload' => [
+		'default' => false,
+	],
 	'wgPageFormsLinkAllRedLinksToForms' => [
 		'default' => false,
 		'frontierrpgwiki' => true,
