@@ -107,6 +107,7 @@ if ( $wgDBname === 'famepediawiki' ) {
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
+	$wgWBRepoSettings['propertyOrderUrl'] = $wgServer. $wgScriptPath . '/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
 	$wgWBRepoSettings['statementSections'] = [
 		'item' => [
 			'statements' => null,
