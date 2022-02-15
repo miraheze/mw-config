@@ -144,11 +144,11 @@ $wi->config->settings += [
 	'wgAccountCreationThrottle' => [
 		'default' => [
 			[
-				'count' => 1,
+				'count' => 3, // Set to 1 before. Temporarily set to 3 to help with ReCaptcha issues.
 				'seconds' => 300,
 			],
 			[
-				'count' => 5,
+				'count' => 10, // Set to 5 before. Temporarily set to 3 to help with ReCaptcha issues.
 				'seconds' => 86400,
 			],
 		],
