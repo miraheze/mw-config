@@ -32,11 +32,13 @@ class MirahezeFunctions {
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = $this->getCurrentDatabase();
 		$this->wikiDBClusters = $this->getDatabaseClusters();
-		$this->setDatabase();
 
 		$this->server = $this->getServer();
 		$this->sitename = $this->getSitename();
 		$this->missing = $this->isMissing();
+
+		$this->setDatabase();
+		$this->setServers();
 	}
 
 	public static function getLocalDatabases() {
@@ -123,9 +125,30 @@ class MirahezeFunctions {
 		return self::CACHE_DIRECTORY[self::getRealm()] ?? self::CACHE_DIRECTORY['default'];
 	}
 
+	public static function getServers() {
+		$servers = [];
+		$databases = self::readDbListFile( 'all', false );
+
+		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
+
+		foreach ( $databases as $db => $data ) {
+			foreach ( self::SUFFIXES as $suffix ) {
+				if ( substr( $db, -strlen( $suffix ) ) == $suffix ) {
+					$servers[$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+				}
+			}
+		}
+
+		return $servers;
+	}
+
 	public function getCurrentDatabase() {
 		if ( defined( 'MW_DB' ) ) {
 			return MW_DB;
+		}
+
+		if ( isset( array_flip( self::getServers() )['https://' . $this->hostname] ) ) {
+			return array_flip( self::getServers() )['https://' . $this->hostname];
 		}
 
 		$explode = explode( '.', $this->hostname, 2 );
@@ -159,21 +182,14 @@ class MirahezeFunctions {
 	}
 
 	public function getServer() {
+		return self::getServers()[$this->getCurrentDatabase()] ??
+			self::getServers()['default'];
+	}
+
+	public function setServers() {
 		global $wgConf;
 
-		$wgConf->settings['wgServer']['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
-
-		$databases = self::readDbListFile( 'all', false );
-		foreach ( $databases as $db => $data ) {
-			foreach ( self::SUFFIXES as $suffix ) {
-				if ( substr( $db, -strlen( $suffix ) ) == $suffix ) {
-					$wgConf->settings['wgServer'][$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
-				}
-			}
-		}
-
-		return $wgConf->settings['wgServer'][$this->dbname] ??
-			$wgConf->settings['wgServer']['default'];
+		$wgConf->settings['wgServer'] = self::getServers();
 	}
 
 	public function getSitename() {
@@ -228,9 +244,7 @@ class MirahezeFunctions {
 		$wgConf->settings['cwInactive'][$this->dbname] = ( $this->cacheArray['states']['inactive'] == 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
 		$wgConf->settings['cwExperimental'][$this->dbname] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
 
-		$server = $wgConf->settings['wgServer'][$this->dbname] ?? $wgConf->settings['wgServer']['default'];
 		$tags = [];
-
 		if ( self::getRealm() !== 'default' ) {
 			$tags[] = self::getRealm();
 		}
