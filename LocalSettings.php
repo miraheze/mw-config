@@ -34,11 +34,11 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
-require_once __DIR__ . '/initialise/MirahezeFunctions.php';
+$wgConf = new SiteConfiguration;
+
+require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 
 $wi = new MirahezeFunctions;
-
-$wgConf = new SiteConfiguration;
 
 $wgConf->suffixes = array_keys( $wi::SUFFIXES );
 $wgConf->wikis = $wi::getLocalDatabases()[ $wi::getRealm() ];
