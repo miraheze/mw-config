@@ -3386,7 +3386,7 @@ $wi->config->settings += [
 	'wgRelatedArticlesCardLimit' => [
 		'default' => 3,
 	],
-	'$wgRelatedArticlesDescriptionSource' => [
+	'wgRelatedArticlesDescriptionSource' => [
 		'default' => false,
 	],
 
