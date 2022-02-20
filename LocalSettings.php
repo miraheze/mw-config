@@ -3383,7 +3383,7 @@ $wi->config->settings += [
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'wmgUseRelatedArticles' => false,
 	],
-	'$wgRelatedArticlesCardLimit' => [
+	'wgRelatedArticlesCardLimit' => [
 		'default' => 3,
 	],
 	'$wgRelatedArticlesDescriptionSource' => [
