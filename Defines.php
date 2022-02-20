@@ -8,7 +8,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtensions( [
 		'CentralAuth',
 		'GlobalPreferences',
-				'GlobalBlocking',
+		'GlobalBlocking',
 	] );
 }
 
