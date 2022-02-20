@@ -18,7 +18,6 @@ wfLoadExtensions( [
 	'EventLogging',
 	// Required by EventLogging
 	'EventStreamConfig',
-	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalNewFiles',
 	'IncidentReporting',
