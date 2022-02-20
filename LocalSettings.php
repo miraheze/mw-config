@@ -3341,9 +3341,6 @@ $wi->config->settings += [
 			'requestwiki' => [
 				'user' => [ 1, 3600 ],
 			],
-			'edit' => [
-				'anon' => [ 1, 120 ],
-			],
 		],
 	],
 
