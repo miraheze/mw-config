@@ -3091,7 +3091,7 @@ $wi->config->settings += [
 	'wgPageFormsRenameMainEditTab' => [
 		'default' => false,
 	],
-	'$wgPageFormsSimpleUpload' => [
+	'wgPageFormsSimpleUpload' => [
 		'default' => false,
 	],
 	'wgPageFormsLinkAllRedLinksToForms' => [
