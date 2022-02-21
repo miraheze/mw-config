@@ -1377,6 +1377,7 @@ $wi->config->settings += [
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 			2639, // Agent Isai (SRE)
+			6758, // MacFan4000 (SRE)
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
