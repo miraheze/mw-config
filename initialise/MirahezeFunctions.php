@@ -269,12 +269,16 @@ class MirahezeFunctions {
 
 		// Assign settings
 		if ( isset( $this->cacheArray['settings'] ) ) {
-			extract( $this->cacheArray['settings'] );
+			foreach ( $this->cacheArray['settings'] as $var => $val ) {
+				$wgConf->settings[$var][$this->dbname] = $val;
+			}
 		}
 
 		// Assign extensions variables now
 		if ( isset( $this->cacheArray['extensions'] ) ) {
-			extract( array_fill_keys( $this->cacheArray['extensions'], true ) );
+			foreach ( $this->cacheArray['extensions'] as $var ) {
+				$wgConf->settings[$var][$this->dbname] = true;
+			}
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
@@ -340,7 +344,7 @@ class MirahezeFunctions {
 
 	public function loadExtensions() {
 		global $wgExtensionDirectory, $wgStyleDirectory,
-			$wgManageWikiExtensions;
+			$wgManageWikiExtensions, $wgConf;
 
 		$this->cacheArray ??= $this->getCacheArray();
 
@@ -376,6 +380,8 @@ class MirahezeFunctions {
 
 		if ( isset( $this->cacheArray['extensions'] ) ) {
 			foreach ( $wgManageWikiExtensions as $name => $ext ) {
+				$wgConf->settings[ $ext['var'] ]['default'] = false;
+
 				if ( in_array( $ext['var'], $this->cacheArray['extensions'] ) &&
 					!in_array( $name, $this->disabledExtensions )
 				) {
