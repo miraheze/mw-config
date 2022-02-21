@@ -3096,7 +3096,6 @@ $wi->config->settings += [
 	],
 	'wgPageFormsLinkAllRedLinksToForms' => [
 		'default' => false,
-		'frontierrpgwiki' => true,
 	],
 
 	// Page Size
