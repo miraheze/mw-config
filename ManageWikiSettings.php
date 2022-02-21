@@ -889,14 +889,23 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => [
 			'None' => false,
-			'From the central wikibase repository or Extension:ShortDescription. Requires Wikibase Client.' => 'wikidata',
-			'Fetched from the prop=extracts api. Requires Extension:TextExtracts.' => 'textextracts',
-			'From the description page property. Requires Extension:Description2 or any other extension that sets the description page property.' => 'pagedescription',
+			'From the central wikibase repository or Extension:ShortDescription.' => 'wikidata',
+			'Fetched from the prop=extracts api.' => 'textextracts',
+			'From the description page property.' => 'pagedescription',
 		],
 		'overridedefault' => false,
 		'section' => 'links',
 		'help' => 'Source to get the page description from.',
-		'requires' => [],
+		'requires' => [
+			'relatedarticles',
+			[
+					'description2',
+					'shortdescription',
+					'textextracts',
+					'wikibaseclient',
+					'wikiseo',
+			],
+		],
 	],
 
 	// Localisation (E.G i18n/timezone etc)
