@@ -429,7 +429,7 @@ class MirahezeFunctions {
 			} else {
 				$combiList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster
+					'c' => $wiki->wiki_dbcluster,
 				];
 
 				if ( $wiki->wiki_url !== null ) {
@@ -458,7 +458,7 @@ class MirahezeFunctions {
 			if ( $wiki->wiki_deleted == 1 ) {
 				$deletedList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster
+					'c' => $wiki->wiki_dbcluster,
 				];
 			}
 		}
