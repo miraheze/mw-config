@@ -70,6 +70,6 @@ CHANGE  ir_value ir_value INT UNSIGNED NOT NULL;
 -- See https://www.mediawiki.org/wiki/Manual:Schema_changes
 -- FROM /srv/mediawiki/w/maintenance/archives/patch-templatelinks-target_id.sql
 ALTER TABLE  /*_*/templatelinks
-ADD  tl_target_id BIGINT UNSIGNED DEFAULT NULL;
+ADD  IF NOT EXISTS tl_target_id BIGINT UNSIGNED DEFAULT NULL;
 CREATE INDEX IF NOT EXISTS tl_target_id ON  /*_*/templatelinks (tl_target_id, tl_from);
 CREATE INDEX IF NOT EXISTS tl_backlinks_namespace_target_id ON  /*_*/templatelinks (    tl_from_namespace, tl_target_id,    tl_from  );
