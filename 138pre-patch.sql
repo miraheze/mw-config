@@ -31,7 +31,7 @@ CHANGE fa_major_mime fa_major_mime ENUM(
   ) DEFAULT 'unknown';
 
 -- FROM /srv/mediawiki/w/maintenance/archives/patch-linktarget.sql.sql
-CREATE TABLE /*_*/linktarget IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS /*_*/linktarget (
   lt_id BIGINT UNSIGNED AUTO_INCREMENT NOT NULL,
   lt_namespace INT NOT NULL,
   lt_title VARBINARY(255) NOT NULL,
@@ -71,5 +71,5 @@ CHANGE  ir_value ir_value INT UNSIGNED NOT NULL;
 -- FROM /srv/mediawiki/w/maintenance/archives/patch-templatelinks-target_id.sql
 ALTER TABLE  /*_*/templatelinks
 ADD  tl_target_id BIGINT UNSIGNED DEFAULT NULL;
-CREATE INDEX tl_target_id IF NOT EXISTS ON  /*_*/templatelinks (tl_target_id, tl_from);
-CREATE INDEX tl_backlinks_namespace_target_id IF NOT EXISTS ON  /*_*/templatelinks (    tl_from_namespace, tl_target_id,    tl_from  );
+CREATE INDEX IF NOT EXISTS tl_target_id ON  /*_*/templatelinks (tl_target_id, tl_from);
+CREATE INDEX IF NOT EXISTS tl_backlinks_namespace_target_id ON  /*_*/templatelinks (    tl_from_namespace, tl_target_id,    tl_from  );
