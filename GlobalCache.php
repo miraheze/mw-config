@@ -4,6 +4,7 @@ $wgMemCachedServers = [
 	'127.0.0.1:11212',
 	'127.0.0.1:11213',
 ];
+$wgRedisServerIP = '[2a10:6740::6:306]:6379'
 
 $wgMainCacheType = 'memcached-pecl';
 $wgParserCacheType = 'db-replicated';
@@ -60,11 +61,12 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 		'class' => WANObjectCache::class,
 		'cacheId' => 'memcached-mem-1',
 	];
+	$wgRedisServerIP = '[2a10:6740::6:109]:6379'
 }
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
-	'redisServer' => '[2a10:6740::6:306]:6379',
+	'redisServer' => $wgRedisServerIP,
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
