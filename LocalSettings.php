@@ -153,6 +153,27 @@ $wi->config->settings += [
 			],
 		],
 	],
+
+	'wgPasswordAttemptThrottle' => [
+		'default' => [  // For Miraheze, this is X attempts per IP globally - account is not taken into account
+			[
+				'count' => 5, // 5 attempts in 5 minutes
+				'seconds' => 300,
+			],
+			[
+				'count' => 40, // 40 attempts in 24 hours
+				'seconds' => 86400,
+			],
+			[
+				'count' => 60, // 60 attempts in 48 hours
+				'seconds' => 172800,
+			],
+			[
+				'count' => 75, // 75 attempts in 72 hours
+				'seconds' => 259200,
+			],
+		],
+	],
 	// https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpamBlacklist#Block_list_syntax
 	'wgBlacklistSettings' => [
 		'default' => [
