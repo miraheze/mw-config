@@ -155,7 +155,7 @@ $wi->config->settings += [
 	],
 
 	'wgPasswordAttemptThrottle' => [
-		'default' => [  // For Miraheze, this is X attempts per IP globally - account is not taken into account
+		'default' => [ // For Miraheze, this is X attempts per IP globally - account is not taken into account
 			[
 				'count' => 5, // 5 attempts in 5 minutes
 				'seconds' => 300,
