@@ -4540,7 +4540,25 @@ $wi->config->settings += [
 	'wgWikiSeoTryCleanAutoDescription' => [
 		'default' => false,
 	],
-
+	'wgMetadataGenerators' => [
+		'default' => '',
+		'gratispaideiawiki' => [
+			'Citation',
+			'OpenGraph',
+			'Twitter',
+			'SchemaOrg',
+		],
+	],
+	'wgTwitterSiteHandle' => [
+		'default' => '',
+		'gratisdatawiki' => '@gratisdatawiki',
+	],
+	'wgWikiSeoDefaultLanguage' => [
+		'default' => '',
+		'gratisdatawiki' => 'en-en',
+		'gratispaideiawiki' => 'en-en',
+	],
+	
 	// CreateWiki Defined Special Variables
 	'cwClosed' => [
 		'default' => false,
