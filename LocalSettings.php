@@ -1922,12 +1922,40 @@ $wi->config->settings += [
 	],
 	'wgKartographerDfltStyle' => [
 		'default' => '.',
+		'gratispaideiawiki' => [
+			'osm-intl',
+		],
+		'gratisdatawiki' => [
+			'osm-intl',
+		],
 	],
 	'wgKartographerSrcsetScales' => [
 		'default' => false,
+		'gratispaideiawiki' => [1.3, 1.5, 2, 2.6, 3],
+		'gratisdatawiki' => [],
 	],
 	'wgKartographerStyles' => [
 		'default' => [],
+		'gratispaideiawiki' => [
+			'osm-intl',
+			'osm',
+		],
+		'gratisdatawiki' => [
+			'osm-intl',
+			'osm',
+		],
+	],
+	'wgKartographerEnableMapFrame' => [
+		'default' => true,
+	],
+	'wgKartographerUsePageLanguage' => [
+		'default' => true,
+	],
+	'wgKartographerFallbackZoom' => [
+		'default' => '13',
+	],
+	'wgKartographerStaticMapframe' => [
+		'default' => false,
 	],
 
 	// Language
