@@ -95,10 +95,6 @@ if ( $wgDBname === 'famedatawiki' ) {
 	];
 }
 
-if ( $wgDBname === 'gratisdatawiki' ) {
-	$wgWBRepoSettings['allowEntityImport'] = false;
-}
-
 if ( $wgDBname === 'famepediawiki' ) {
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 
@@ -127,6 +123,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			],
 		],
 	];
+	$wgWBRepoSettings['allowEntityImport'] = false;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
