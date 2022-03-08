@@ -93,6 +93,21 @@ if ( $wgDBname === 'famedatawiki' ) {
 			],
 		],
 	];
+	// Formats that shall be available via Special:EntityData.
+	// The first format will be used as the default.
+	$wgWBRepoSettings['entityDataFormats'] = [
+		// using the API
+		'json', // default
+		'php',
+		// using purtle
+		'rdfxml',
+		'n3',
+		'turtle',
+		'ntriples',
+		'jsonld',
+		// hardcoded internal handling
+		'html',
+	];
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
