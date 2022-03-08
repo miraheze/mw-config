@@ -131,6 +131,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
+	$wgWBClientSettings['pageSchemaNamespaces'] = [];
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
