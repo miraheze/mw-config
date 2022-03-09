@@ -120,7 +120,7 @@ if ( $wgDBname === 'famedatawiki' ) {
 				str_replace( '$1', 'Special:EntityData/{entity_id}.ttl', $GLOBALS['wgArticlePath'] ),
 				'flavor=dump&revision={revision_id}'
 			),
-		],
+		];
 	};
 }
 
