@@ -108,7 +108,7 @@ if ( $wgDBname === 'famedatawiki' ) {
 		// hardcoded internal handling
 		'html',
 	];
-	$wgWBRepoSettings['entityDataCachePaths'] = function() [
+	$wgWBRepoSettings['entityDataCachePaths'] = function() {
 		return [
 			// JSON from entity page JS, compare wikibase.entityPage.entityLoaded.js
 			wfAppendQuery(
@@ -121,7 +121,7 @@ if ( $wgDBname === 'famedatawiki' ) {
 				'flavor=dump&revision={revision_id}'
 			),
 		],
-	];
+	};
 }
 
 if ( $wgDBname === 'famepediawiki' ) {
