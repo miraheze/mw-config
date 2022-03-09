@@ -130,16 +130,16 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	// Define constraints for various strings, such as multilingual terms (such as labels, descriptions and aliases).
 	$wgWBRepoSettings['string-limits'] = [
 		'multilang' => [
-			'length' => 250, // length constraint
+			'length' => 500, // length constraint
 		],
 		'VT:monolingualtext' => [
-			'length' => 400,
+			'length' => 700,
 		],
 		'VT:string' => [
-			'length' => 400,
+			'length' => 700,
 		],
 		'PT:url' => [
-			'length' => 500,
+			'length' => 1000,
 		],
 	];
 }
