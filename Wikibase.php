@@ -134,13 +134,13 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	// Some well-known properties' IDs which are used to format references
 	$wgWBClientSettings['wellKnownReferencePropertyIds'] = [
 		// (note: The keys are not chosen at random; the software knows exactly which ones they are and which ones they are not)
-		'referenceUrl' => null,
-		'title' => null,
-		'statedIn' => null,
-		'author' => null,
-		'publisher' => null,
-		'publicationDate' => null,
-		'retrievedDate' => null,
+		'referenceUrl' => 'P15',
+		'title' => 'P106',
+		'statedIn' => 'P75',
+		'author' => 'P127',
+		'publisher' => 'P125',
+		'publicationDate' => 'P110',
+		'retrievedDate' => 'P200',
 	];
 }
 if ( $wgDBname === 'benpediawiki' ) {
