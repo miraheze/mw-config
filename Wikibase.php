@@ -121,7 +121,7 @@ if ( $wgDBname === 'famedatawiki' ) {
 				'flavor=dump&revision={revision_id}'
 			),
 		];
-	};
+	}
 }
 
 if ( $wgDBname === 'famepediawiki' ) {
