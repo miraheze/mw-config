@@ -108,6 +108,20 @@ if ( $wgDBname === 'famedatawiki' ) {
 		// hardcoded internal handling
 		'html',
 	];
+	$wgWBRepoSettings['entityDataCachePaths'] = function() [
+		return [
+			// JSON from entity page JS, compare wikibase.entityPage.entityLoaded.js
+			wfAppendQuery(
+				str_replace( '$1', 'Special:EntityData/{entity_id}.json', $GLOBALS['wgArticlePath'] ),
+				'revision={revision_id}'
+			),
+			// Turtle from Query Service updater
+			wfAppendQuery(
+				str_replace( '$1', 'Special:EntityData/{entity_id}.ttl', $GLOBALS['wgArticlePath'] ),
+				'flavor=dump&revision={revision_id}'
+			),
+		],
+	];
 }
 
 if ( $wgDBname === 'famepediawiki' ) {
