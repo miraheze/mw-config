@@ -138,6 +138,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			],
 		],
 	];
+	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 	// Define constraints for various strings, such as multilingual terms (such as labels, descriptions and aliases).
 	$wgWBRepoSettings['string-limits'] = [
 		'multilang' => [
