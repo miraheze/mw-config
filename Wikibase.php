@@ -93,10 +93,21 @@ if ( $wgDBname === 'famedatawiki' ) {
 			],
 		],
 	];
-}
-
-if ( $wgDBname === 'gratisdatawiki' ) {
-	$wgWBRepoSettings['allowEntityImport'] = false;
+	// Formats that shall be available via Special:EntityData.
+	// The first format will be used as the default.
+	$wgWBRepoSettings['entityDataFormats'] = [
+		// using the API
+		'json', // default
+		'php',
+		// using purtle
+		'rdfxml',
+		'n3',
+		'turtle',
+		'ntriples',
+		'jsonld',
+		// hardcoded internal handling
+		'html',
+	];
 }
 
 if ( $wgDBname === 'famepediawiki' ) {
@@ -127,11 +138,23 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			],
 		],
 	];
+	$wgWBRepoSettings['allowEntityImport'] = false;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [0, 4, 14];
+	// Some well-known properties' IDs which are used to format references
+	$wgWBClientSettings['wellKnownReferencePropertyIds'] = [
+		// (note: The keys are not chosen at random; the software knows exactly which ones they are and which ones they are not)
+		'referenceUrl' => 'P15',
+		'title' => 'P106',
+		'statedIn' => 'P75',
+		'author' => 'P127',
+		'publisher' => 'P125',
+		'publicationDate' => 'P110',
+		'retrievedDate' => 'P200',
+	]
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
