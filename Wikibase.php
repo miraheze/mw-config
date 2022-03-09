@@ -170,7 +170,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'publisher' => 'P125',
 		'publicationDate' => 'P110',
 		'retrievedDate' => 'P200',
-	]
+	];
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
