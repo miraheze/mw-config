@@ -138,6 +138,21 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			],
 		],
 	];
+	// Define constraints for various strings, such as multilingual terms (such as labels, descriptions and aliases).
+	$wgWBRepoSettings['string-limits'] = [
+		'multilang' => [
+			'length' => 500, // length constraint
+		],
+		'VT:monolingualtext' => [
+			'length' => 700,
+		],
+		'VT:string' => [
+			'length' => 700,
+		],
+		'PT:url' => [
+			'length' => 1000,
+		],
+	];
 	$wgWBRepoSettings['allowEntityImport'] = false;
 }
 
