@@ -3125,6 +3125,26 @@ $wi->config->settings += [
 			3006,
 		],
 	],
+	'wgPageImagesDenylist' => [
+		'default' => [],
+		'gratispaideiawiki' => [
+			'type' => 'db',
+			'page' => 'MediaWiki:Pageimages-denylist',
+			'db' => false, 
+		],
+	],
+	'wgPageImagesExpandOpenSearchXml' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgPageImagesOpenGraphFallbackImage' => [
+		'default' => false,
+		'gratispaideiawiki' => 'https://static.miraheze.org/commonswiki/2/2a/Gratispaideia-logo.svg',
+	],
+	'wgPageImagesLeadSectionOnly' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
 
 	// Pagelang
 	'wgPageLanguageUseDB' => [
