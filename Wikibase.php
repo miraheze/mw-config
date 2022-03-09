@@ -127,6 +127,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			],
 		],
 	];
+	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
