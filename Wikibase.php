@@ -143,6 +143,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
+	$wgWBClientSettings['pageSchemaNamespaces'] = [0, 4, 14];
 	// Some well-known properties' IDs which are used to format references
 	$wgWBClientSettings['wellKnownReferencePropertyIds'] = [
 		// (note: The keys are not chosen at random; the software knows exactly which ones they are and which ones they are not)
@@ -153,7 +154,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'publisher' => 'P125',
 		'publicationDate' => 'P110',
 		'retrievedDate' => 'P200',
-	];
+	]
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
