@@ -4295,7 +4295,7 @@ $wi->config->settings += [
 	'wmgWikibaseClientEchoIcon' => [
 		'default' => [],
 		'gratispaideiawiki' => [
-			'url' => 'http://static.miraheze.org/commonswiki/e/e9/Gratisdata-dark.png',
+			'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 		],
 	],
 	'wmgEchoEnablePush' => [
