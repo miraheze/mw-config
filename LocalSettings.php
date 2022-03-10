@@ -3956,6 +3956,21 @@ $wi->config->settings += [
 			'css' => [],
 		],
 	],
+	
+	// TextExtracts
+	'wgExtractsRemoveClasses' => [
+		'default' => false,
+		'gratispaideiawiki' => [
+			'.metadata', // This is a good thing to remove in any case
+			'span.coordinates',
+			'span.geo-multi-punct',
+			'span.geo-nondefault',
+			'#coordinates',
+		],
+	],
+	'wgExtractsExtendOpenSearchXml' => [
+		'default' => false,
+	],		
 
 	// TimedMediaHandler
 	'wgOggThumbLocation' => [
