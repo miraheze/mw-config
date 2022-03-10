@@ -1931,7 +1931,13 @@ $wi->config->settings += [
 	],
 	'wgKartographerSrcsetScales' => [
 		'default' => false,
-		'gratispaideiawiki' => [1.3, 1.5, 2, 2.6, 3],
+		'gratispaideiawiki' => [
+			1.3, 
+			1.5, 
+			2, 
+			2.6, 
+			3,
+		],
 		'gratisdatawiki' => [],
 	],
 	'wgKartographerStyles' => [
