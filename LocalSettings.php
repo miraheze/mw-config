@@ -2927,6 +2927,8 @@ $wi->config->settings += [
 	],
 	'wgMFNoindexPages' => [
 		'wmgUseMobileFrontend' => false,
+		'gratisdatawiki' => true,
+		'gratispaideiawiki' => true,
 	],
 	'wgMFStopRedirectCookieHost' => [
 		'wmgUseMobileFrontend' => $wi->hostname,
@@ -2970,6 +2972,7 @@ $wi->config->settings += [
 	'wgMFUseWikibase' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
+		'gratisdatawiki' => true,
 	],
 	'wgMFDisplayWikibaseDescriptions' => [
 		'default' => [
@@ -3009,6 +3012,35 @@ $wi->config->settings += [
 	'wgMFLogWrappedInfoboxes' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
+	],
+	'wgMFQueryPropModules' => [
+		'default' => [ 
+			'pageprops', 
+		],
+		'gratisdatawiki' => [ 
+			'entityterms',
+		],
+	],
+	'wgMFSearchAPIParams' => [
+		'default' => [
+			'ppprop' => 'displaytitle',
+		],
+		'gratisdatawiki' => [
+			'wbetterms' => 'label',
+		],
+	],
+	'wgMFSearchGenerator' => [
+		'default' => [
+			'name' => 'prefixsearch',
+			'prefix' => 'ps',
+		],
+		'gratisdatawiki' => [
+			'name' => 'wbsearch',
+			'prefix' => 'wbs',
+		],
+	],
+	'wgMFNamespacesWithLeadParagraphs' => [
+		'default' => [ NS_MAIN ],
 	],
 
 	// Moderation extension settings
