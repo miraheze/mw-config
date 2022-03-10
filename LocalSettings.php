@@ -2967,6 +2967,49 @@ $wi->config->settings += [
 			'amc' => true,
 		],
 	],
+	'wgMFUseWikibase' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'default' => [
+			'search' => true,
+			'nearby' => true,
+			'watchlist' => true,
+			'tagline' => true,
+		],
+		'gratispaideiawiki' => [
+			'search' => true,
+			'nearby' => true,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+	],
+	'wgMFMobileFormatterOptions' => [
+		'default' => [
+			'excludeNamespaces' => [
+				10, 
+				-1,
+			],
+			'maxImages' => 1000,
+			'maxHeadings' => 4000,
+			'headings' => [ 
+				'h1', 
+				'h2', 
+				'h3', 
+				'h4', 
+				'h5', 
+				'h6', 
+			],
+		],
+	],
+	'wgMFNearby' => [
+		'default' => true, // Does not work nor get enabled on wikis w/o GeoData anyway
+	],
+	'wgMFLogWrappedInfoboxes' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
