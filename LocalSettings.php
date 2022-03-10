@@ -4256,8 +4256,82 @@ $wi->config->settings += [
 	'wmgWikibaseRepoPropertyNamespaceID' => [
 		'default' => 862
 	],
+	'wmgWikibaseAllowLocalShortDesc' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wmgWikibaseForceLocalShortDesc' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wmgWikibaseEnableData' => [
+		'default' => true,
+	],
+	'wmgWikibaseEntityAccessLimit' => [
+		'default' => 400,
+		'gratisdatawiki' => 500,
+	],
+	'wmgWikibaseAllowDataAccessInUserLanguage' => [
+		'default' => false,
+		'gratisdatawiki' => true,
+	],
+	'wmgWikibaseClientNamespacesWithRepoAccess' => [
+		'default' => [],
+		'gratisdatawiki' => [
+			NS_CATEGORY,
+			NS_PROJECT,
+			NS_TEMPLATE,
+			NS_HELP,
+			828, // NS_MODULE
+		],
+	],
+	'wmgWBRepoIdGenerator' => [
+		'default' => 'mysql-upsert',
+	],
+	'wmgWBRepoIdGeneratorInErrorPingLimiter' => [
+		'default' => 0,
+		'gratisdatawiki' => 9,
+	],
+	'wmgWikibaseClientEchoIcon' => [
+		'default' => [],
+		'gratispaideiawiki' => [
+			'url' => 'http://static.miraheze.org/commonswiki/e/e9/Gratisdata-dark.png',
+		],
+	],
+	'wmgEchoEnablePush' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	// Only enable this ('wmgWikibaseClientTrackLuaFunctionCallsPerWiki') conservatively, having this on to many
+	// wikis will take *a lot* of Graphite storage space.
+	'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup' => [
+		'default' => true,
+	],
+	'wmgWikibaseClientAddEntityUsagesBatchSize' => [
+		'default' => 100,
+	],
 
 	// WikibaseQualityConstraints
+	'wgWBQualityConstraintsEnableConstraintsCheckJobs' => [
+		'default' => false,
+		'gratisdatawiki' => true,
+	],
+	'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
+		'default' => 0, // 0% of edits trigger post edit job run constraint checks
+		'gratisdatawiki' => 100,
+	],
+	'wgWBQualityConstraintsFormatCheckerShellboxRatio' => [
+		'default' => 0,
+		'gratisdatawiki' => 1,
+	],
+	'wgWBQualityConstraintsTypeCheckMaxEntities' => [
+		'default' => 1000,
+		'gratisdatawiki' => 150,
+	],
 	'wgWBQualityConstraintsInstanceOfId' => [
 		'default' => 'P31',
 	],
