@@ -4268,7 +4268,7 @@ $wi->config->settings += [
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseEntityAccessLimit' => [
-		'gratisdatawiki' => 500,
+		'gratispaideiawiki' => 500,
 	],
 	'wmgWikibaseAllowDataAccessInUserLanguage' => [
 		'gratispaideiawiki' => true,
