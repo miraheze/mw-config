@@ -155,6 +155,8 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		],
 	];
 	$wgWBRepoSettings['allowEntityImport'] = false;
+	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
+	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
