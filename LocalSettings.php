@@ -4237,12 +4237,14 @@ $wi->config->settings += [
 	],
 	'wmgFormatterUrlProperty' => [
 		'default' => false,
+		'gratisdatawiki' => 'P8',
 	],
 	'wmgWikibaseRepoDatabase' => [
 		'default' => $wi->dbname
 	],
 	'wmgWikibaseRepoUrl' => [
-		'default' => 'https://wikidata.org'
+		'default' => 'https://wikidata.org',
+		'gratispaideiawiki' => 'https://gratisdata.miraheze.org'
 	],
 	'wmgWikibaseItemNamespaceID' => [
 		'default' => 0
@@ -4313,6 +4315,42 @@ $wi->config->settings += [
 	],
 	'wmgWikibaseClientAddEntityUsagesBatchSize' => [
 		'default' => 100,
+	],
+	'wmgWBRepoPreferredGeoDataProperties' => [
+		'default' => [],
+		'gratisdatawiki' => [
+			'P134',
+		],
+	],
+	'wmgWBRepoPreferredPageImagesProperties' => [
+		'default' => [],
+		'gratisdatawiki' => [
+			// Photos
+			'P386',
+			'P520',
+			'P521',
+			'P522',
+			'P523',
+			'P524',
+			// Complex graphics
+			'P135',
+			'P136',
+			'P387',
+			'P525',
+			// Simple graphics
+			'P526',
+			'P527',
+			'P528',
+			'P470',
+			'P529',
+			// Multi page content
+			'P530',
+			// Maps
+			'P531',
+			'P327',
+			'P532',
+			'P533',
+		],
 	],
 
 	// WikibaseQualityConstraints
