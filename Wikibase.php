@@ -173,6 +173,16 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'publicationDate' => 'P110',
 		'retrievedDate' => 'P200',
 	];
+	$wgWBClientSettings['echoIcon'] = $wmgWikibaseClientEchoIcon;
+	$wgWBClientSettings['sendEchoNotification'] = $wmgEchoEnablePush;
+	$wgWBClientSettings['trackLuaFunctionCallsPerSiteGroup'] = $wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup;
+	$wgWBClientSettings['trackLuaFunctionCallsPerWiki'] = $wmgWikibaseClientTrackLuaFunctionCallsPerWiki;
+	$wgWBClientSettings['allowLocalShortDesc'] = $wmgWikibaseAllowLocalShortDesc;
+	$wgWBClientSettings['forceLocalShortDesc'] = $wmgWikibaseForceLocalShortDesc;
+	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
+	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
+	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
+	$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
