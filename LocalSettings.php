@@ -4271,16 +4271,9 @@ $wi->config->settings += [
 		'gratisdatawiki' => 500,
 	],
 	'wmgWikibaseAllowDataAccessInUserLanguage' => [
-		'gratisdatawiki' => true,
+		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseClientNamespacesWithRepoAccess' => [
-		'gratisdatawiki' => [
-			NS_CATEGORY,
-			NS_PROJECT,
-			NS_TEMPLATE,
-			NS_HELP,
-			828, // NS_MODULE
-		],
 		'gratispaideiawiki' => [
 			NS_CATEGORY,
 			NS_PROJECT,
