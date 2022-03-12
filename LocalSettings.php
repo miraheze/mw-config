@@ -1507,6 +1507,80 @@ $wi->config->settings += [
 			'mode' => 'packed',
 		],
 	],
+	
+	// GeoData
+	'wgMaxGeoSearchRadius' => [
+		'gratispaideiawiki' => 10000,
+		'gratisdatawiki' => 10000,
+	],
+	'wgDefaultGlobe' => [
+		'gratispaideiawiki' => 'earth',
+		'gratisdatawiki' => 'earth',
+	],
+	'wgMaxCoordinatesPerPage' => [
+		'gratispaideiawiki' => 2000,
+		'gratisdatawiki' => 2000,
+	],
+	'wgDefaultDim' => [
+		'gratispaideiawiki' => 1000,
+		'gratidatawiki' => 1000,
+	],
+	// Controls what GeoData should do when it encounters some problem
+	// Reaction type:
+	// 'track' - Add tracking category
+	// 'fail' - Consider the tag invalid, display message and add tracking category
+	// 'none' - Do nothing
+	'wgGeoDataWarningLevel' => [
+		'gratispaideiawiki' => [
+			'unknown type' => 'track',
+			'unknown globe' => 'none',
+			'invalid region' => 'track',
+		],
+		'gratisdatawiki' => [
+			'unknown type' => 'track',
+			'unknown globe' => 'none',
+			'invalid region' => 'track',
+		],
+	],
+	'wgGeoDataIndexGranularity' => [
+		'gratispaideiawiki' => 10,
+		'gratisdatawiki' => 10,
+	],
+	'wgGeoDataBackend ' => [
+		'gratispaideiawiki' => 'elastic',
+		'gratisdatawiki' => 'elastic',
+	],
+	'wgGlobes' => [
+		'gratisdatawiki' => [
+			'http://gratisdata.miraheze.org/entity/Q476' => 'earth',
+			'http://gratisdata.miraheze.org/entity/Q987' => 'mercury',
+			'http://gratisdata.miraheze.org/entity/Q981' => 'venus',
+			'http://gratisdata.miraheze.org/entity/Q985' => 'moon',
+			'http://gratisdata.miraheze.org/entity/Q806' => 'mars',
+			'http://gratisdata.miraheze.org/entity/Q2126' => 'phobos',
+			'http://gratisdata.miraheze.org/entity/Q2118' => 'deimos',
+			'http://gratisdata.miraheze.org/entity/Q967' => 'ganymede',
+			'http://gratisdata.miraheze.org/entity/Q961' => 'callisto',
+			'http://gratisdata.miraheze.org/entity/Q990' => 'io',
+			'http://gratisdata.miraheze.org/entity/Q965' => 'europa',
+			'http://gratisdata.miraheze.org/entity/Q986' => 'mimas',
+			'http://gratisdata.miraheze.org/entity/Q964' => 'enceladus',
+			'http://gratisdata.miraheze.org/entity/Q984' => 'tethys',
+			'http://gratisdata.miraheze.org/entity/Q963' => 'dione',
+			'http://gratisdata.miraheze.org/entity/Q988' => 'rhea',
+			'http://gratisdata.miraheze.org/entity/Q983' => 'titan',
+			'http://gratisdata.miraheze.org/entity/Q2119' => 'hyperion',
+			'http://gratisdata.miraheze.org/entity/Q989' => 'iapetus',
+			'http://gratisdata.miraheze.org/entity/Q966' => 'phoebe',
+			'http://gratisdata.miraheze.org/entity/Q2122' => 'miranda',
+			'http://gratisdata.miraheze.org/entity/Q2117' => 'ariel',
+			'http://gratisdata.miraheze.org/entity/Q2129' => 'umbriel',
+			'http://gratisdata.miraheze.org/entity/Q2128' => 'titania',
+			'http://gratisdata.miraheze.org/entity/Q2125' => 'oberon',
+			'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
+			'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
+		],
+	],
 
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => [
