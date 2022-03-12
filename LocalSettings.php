@@ -259,6 +259,7 @@ $wi->config->settings += [
 	],
 	'wgPopupsReferencePreviewsBetaFeature' => [
 		'default' => true,
+		'gratispaideiawiki' => false,
 	],
 	'wgPivotFeatures' => [
 		'default' => [
