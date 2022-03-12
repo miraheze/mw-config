@@ -158,6 +158,20 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = $wmgWBRepoPreferredGeoDataProperties;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = $wmgWBRepoPreferredPageImagesProperties;
 	$wgWBRepoSettings['globeUris'] = $wgGlobes;
+	$wgWBRepoSettings['pagePropertiesRdf'] = [
+		'wb-sitelinks' => [
+			'name' => 'sitelinks',
+			'type' => 'integer',
+		],
+		'wb-claims' => [
+			'name' => 'statements',
+			'type' => 'integer'
+		],
+		'wb-identifiers' => [
+			'name' => 'identifiers',
+			'type' => 'integer'
+		],
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
