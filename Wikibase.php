@@ -155,6 +155,20 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		],
 	];
 	$wgWBRepoSettings['allowEntityImport'] = false;
+	$wgWBRepoSettings['pagePropertiesRdf'] = [
+		'wb-sitelinks' => [
+			'name' => 'sitelinks',
+			'type' => 'integer',
+		],
+		'wb-claims' => [
+			'name' => 'statements',
+			'type' => 'integer'
+		],
+		'wb-identifiers' => [
+			'name' => 'identifiers',
+			'type' => 'integer'
+		],
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -170,6 +184,10 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'publisher' => 'P125',
 		'publicationDate' => 'P110',
 		'retrievedDate' => 'P200',
+	];
+	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
+	$wgWBClientSettings['linkItemTags'] = [
+		'client-linkitem-change'
 	];
 }
 if ( $wgDBname === 'benpediawiki' ) {
