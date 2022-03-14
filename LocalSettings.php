@@ -3311,6 +3311,15 @@ $wi->config->settings += [
 	'wgPopupsOptInDefaultState' => [
 		'default' => 0,
 	],
+	'wgPopupsConflictingNavPopupsGadgetName' => [
+		'gratispaideiawiki' => 'Navigation_popups',
+	],
+	'wgPopupsConflictingRefTooltipsGadgetName' => [
+		'gratispaideiawiki' => 'ReferenceTooltips',
+	],
+	'wgPopupsOptInStateForNewAccounts' => [
+		'gratispaideiawiki' => 1,
+	],
 
 	// Preferences
 	'wmgDefaultUserOptions' => [
