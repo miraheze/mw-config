@@ -159,7 +159,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
-	$wgWBClientSettings['pageSchemaNamespaces'] = [0, 4, 14];
+	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0, 4, 14 ];
 	// Some well-known properties' IDs which are used to format references
 	$wgWBClientSettings['wellKnownReferencePropertyIds'] = [
 		// (note: The keys are not chosen at random; the software knows exactly which ones they are and which ones they are not)
