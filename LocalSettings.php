@@ -3131,7 +3131,7 @@ $wi->config->settings += [
 			'type' => 'db',
 			'page' => 'MediaWiki:Pageimages-denylist',
 			'db' => false,
- ],
+		],
 	],
 	'wgPageImagesExpandOpenSearchXml' => [
 		'default' => false,
