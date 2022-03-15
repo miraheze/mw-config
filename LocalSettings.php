@@ -225,7 +225,7 @@ $wi->config->settings += [
 	'wgUseCustomLandingPageStyles' => [
 		'default' => true,
 	],
-	
+
 	// ArticlePlaceholder
 	'wgArticlePlaceholderImageProperty' => [
 		'default' => 'P18',
@@ -3130,8 +3130,8 @@ $wi->config->settings += [
 		'gratispaideiawiki' => [
 			'type' => 'db',
 			'page' => 'MediaWiki:Pageimages-denylist',
-			'db' => false, 
-		],
+			'db' => false,
+ ],
 	],
 	'wgPageImagesExpandOpenSearchXml' => [
 		'default' => false,
@@ -4599,7 +4599,7 @@ $wi->config->settings += [
 		'gratisdatawiki' => 'en-en',
 		'gratispaideiawiki' => 'en-en',
 	],
-	
+
 	// CreateWiki Defined Special Variables
 	'cwClosed' => [
 		'default' => false,
