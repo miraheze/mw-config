@@ -2989,7 +2989,8 @@ $wi->config->settings += [
 		],
 	],
 	'wgMFMobileFormatterOptions' => [
-		'default' => [
+		'default' => [],
+		'gratispaideiawiki' => [
 			'excludeNamespaces' => [
 				10, 
 				-1,
@@ -3007,13 +3008,16 @@ $wi->config->settings += [
 		],
 	],
 	'wgMFNearby' => [
-		'default' => true, // Does not work nor get enabled on wikis w/o GeoData anyway
+		'default' => false, 
+		'gratispaideiawiki' => true, 
+		'gratisdatawiki' => true,
 	],
 	'wgMFLogWrappedInfoboxes' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	'wmgUseMobileApp' => [
+		'default' => false,
 		'gratispaideiawiki' => true,
 		'gratisdatawiki' => true,
 	],
@@ -3044,7 +3048,9 @@ $wi->config->settings += [
 		],
 	],
 	'wgMFNamespacesWithLeadParagraphs' => [
-		'default' => [ NS_MAIN ],
+		'default' => [],
+		'gratispaideiawiki' => [ NS_MAIN ],
+		'gratisdatawiki' => [ NS_MAIN ],
 	],
 
 	// Moderation extension settings
