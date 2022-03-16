@@ -896,16 +896,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'links',
 		'help' => 'Source to get the page description from.',
-		'requires' => [
-			[
-					'description2',
-					'shortdescription',
-					'textextracts',
-					'relatedarticles',
-					'wikibaseclient',
-					'wikiseo',
-			],
-		],
+		'requires' => [],
 	],
 
 	// Localisation (E.G i18n/timezone etc)

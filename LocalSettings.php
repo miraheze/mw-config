@@ -4089,12 +4089,12 @@ $wi->config->settings += [
 	'wgTweekiSkinUseIconWatch' => [
 		'default' => false,
 	],
-        'wgTweekiSkinHideAnon' => [
-                'subnav' => [
-                        'default' => true,
-                        'obeymewiki' => false,
-                ],
-        ],
+		'wgTweekiSkinHideAnon' => [
+				'subnav' => [
+						'default' => true,
+						'obeymewiki' => false,
+				],
+		],
 
 	// Uploads
 	'wmgPrivateUploads' => [
