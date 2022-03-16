@@ -3312,12 +3312,15 @@ $wi->config->settings += [
 		'default' => 0,
 	],
 	'wgPopupsConflictingNavPopupsGadgetName' => [
+                'default' => '',
 		'gratispaideiawiki' => 'Navigation_popups',
 	],
 	'wgPopupsConflictingRefTooltipsGadgetName' => [
+                'default' => '',
 		'gratispaideiawiki' => 'ReferenceTooltips',
 	],
 	'wgPopupsOptInStateForNewAccounts' => [
+                'default' => null,
 		'gratispaideiawiki' => 1,
 	],
 
