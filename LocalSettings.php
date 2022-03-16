@@ -4259,21 +4259,27 @@ $wi->config->settings += [
 		'default' => 862
 	],
 	'wmgWikibaseAllowLocalShortDesc' => [
+		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseForceLocalShortDesc' => [
+		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseEnableData' => [
+		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseEntityAccessLimit' => [
+		'default' => null,
 		'gratispaideiawiki' => 500,
 	],
 	'wmgWikibaseAllowDataAccessInUserLanguage' => [
+		'default' => null,
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseClientNamespacesWithRepoAccess' => [
+		'default' => [],
 		'gratispaideiawiki' => [
 			NS_CATEGORY,
 			NS_PROJECT,
@@ -4283,36 +4289,45 @@ $wi->config->settings += [
 		],
 	],
 	'wmgWBRepoIdGenerator' => [
+		'default' => '',
 		'gratisdatawiki' => 'mysql-upsert',
 	],
 	'wmgWBRepoIdGeneratorInErrorPingLimiter' => [
+		'default' => null,
 		'gratisdatawiki' => 9,
 	],
 	'wmgWikibaseClientEchoIcon' => [
+		'default' => [],
 		'gratispaideiawiki' => [
 			'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 		],
 	],
 	'wmgEchoEnablePush' => [
+		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	// Only enable this ('wmgWikibaseClientTrackLuaFunctionCallsPerWiki') conservatively, having this on to many
 	// wikis will take *a lot* of Graphite storage space.
 	'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
+		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup' => [
+		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseClientAddEntityUsagesBatchSize' => [
+		'default' => null,
 		'gratispaideiawiki' => 100,
 	],
 	'wmgWBRepoPreferredGeoDataProperties' => [
+		'default' => [],
 		'gratisdatawiki' => [
 			'P134',
 		],
 	],
 	'wmgWBRepoPreferredPageImagesProperties' => [
+		'default' => [],
 		'gratisdatawiki' => [
 			// Photos
 			'P386',
@@ -4344,15 +4359,19 @@ $wi->config->settings += [
 
 	// WikibaseQualityConstraints
 	'wgWBQualityConstraintsEnableConstraintsCheckJobs' => [
+		'default' => null,
 		'gratisdatawiki' => true,
 	],
 	'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
+		'default' => null,
 		'gratisdatawiki' => 100,
 	],
 	'wgWBQualityConstraintsFormatCheckerShellboxRatio' => [
+		'default' => null,
 		'gratisdatawiki' => 1,
 	],
 	'wgWBQualityConstraintsTypeCheckMaxEntities' => [
+		'default' => null,
 		'gratisdatawiki' => 150,
 	],
 	'wgWBQualityConstraintsInstanceOfId' => [
