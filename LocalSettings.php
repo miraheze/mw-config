@@ -4115,7 +4115,8 @@ $wi->config->settings += [
 		'gratispaideiawiki' => false,
 	],
 	'wgULSWebfontsEnabled' => [
-		'default' => false,
+		'default' => null,
+		'gratispaideiawiki' => false,
 	],
 
 	// UrlShortener
