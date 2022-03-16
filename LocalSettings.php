@@ -1510,18 +1510,22 @@ $wi->config->settings += [
 	
 	// GeoData
 	'wgMaxGeoSearchRadius' => [
+		'default' => null,
 		'gratispaideiawiki' => 10000,
 		'gratisdatawiki' => 10000,
 	],
 	'wgDefaultGlobe' => [
+		'default' => '',
 		'gratispaideiawiki' => 'earth',
 		'gratisdatawiki' => 'earth',
 	],
 	'wgMaxCoordinatesPerPage' => [
+		'default' => null,
 		'gratispaideiawiki' => 2000,
 		'gratisdatawiki' => 2000,
 	],
 	'wgDefaultDim' => [
+		'default' => null,
 		'gratispaideiawiki' => 1000,
 		'gratidatawiki' => 1000,
 	],
@@ -1531,6 +1535,7 @@ $wi->config->settings += [
 	// 'fail' - Consider the tag invalid, display message and add tracking category
 	// 'none' - Do nothing
 	'wgGeoDataWarningLevel' => [
+		'default' => [],
 		'gratispaideiawiki' => [
 			'unknown type' => 'track',
 			'unknown globe' => 'none',
@@ -1543,14 +1548,17 @@ $wi->config->settings += [
 		],
 	],
 	'wgGeoDataIndexGranularity' => [
+		'default' => null,
 		'gratispaideiawiki' => 10,
 		'gratisdatawiki' => 10,
 	],
 	'wgGeoDataBackend ' => [
+		'default' => 'db',
 		'gratispaideiawiki' => 'elastic',
 		'gratisdatawiki' => 'elastic',
 	],
 	'wgGlobes' => [
+		'default' => [],
 		'gratisdatawiki' => [
 			'http://gratisdata.miraheze.org/entity/Q476' => 'earth',
 			'http://gratisdata.miraheze.org/entity/Q987' => 'mercury',
