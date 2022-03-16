@@ -897,11 +897,11 @@ $wgManageWikiSettings = [
 		'section' => 'links',
 		'help' => 'Source to get the page description from.',
 		'requires' => [
-			'relatedarticles',
 			[
 					'description2',
 					'shortdescription',
 					'textextracts',
+					'relatedarticles',
 					'wikibaseclient',
 					'wikiseo',
 			],
