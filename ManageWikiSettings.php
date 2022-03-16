@@ -897,7 +897,6 @@ $wgManageWikiSettings = [
 		'section' => 'links',
 		'help' => 'Source to get the page description from.',
 		'requires' => [],
-		],
 	],
 
 	// Localisation (E.G i18n/timezone etc)
