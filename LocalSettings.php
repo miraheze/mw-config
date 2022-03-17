@@ -3959,7 +3959,22 @@ $wi->config->settings += [
 	
 	// TextExtracts
 	'wgExtractsRemoveClasses' => [
-		'default' => false,
+		'default' => [
+			'table',
+			'div',
+			'script',
+			'input',
+			'style',
+			'ul.gallery',
+			'.mw-editsection',
+			'sup.reference',
+			'ol.references',
+			'.error',
+			'.nomobile',
+			'.noprint',
+			'.noexcerpt',
+			'.sortkey',
+		],
 		'gratispaideiawiki' => [
 			'.metadata', // This is a good thing to remove in any case
 			'span.coordinates',
