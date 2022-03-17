@@ -4267,11 +4267,10 @@ $wi->config->settings += [
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseEnableData' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
+		'default' => true,
 	],
 	'wmgWikibaseEntityAccessLimit' => [
-		'default' => null,
+		'default' => 400,
 		'gratispaideiawiki' => 500,
 	],
 	'wmgWikibaseAllowDataAccessInUserLanguage' => [
@@ -4280,7 +4279,7 @@ $wi->config->settings += [
 	],
 	'wmgWikibaseClientNamespacesWithRepoAccess' => [
 		'default' => [],
-		'gratispaideiawiki' => [
+		'gratisdatawiki' => [
 			NS_CATEGORY,
 			NS_PROJECT,
 			NS_TEMPLATE,
@@ -4297,7 +4296,9 @@ $wi->config->settings += [
 		'gratisdatawiki' => 9,
 	],
 	'wmgWikibaseClientEchoIcon' => [
-		'default' => [],
+		'default' => [
+			'url' => '/static/images/wikibase/echoIcon.svg',
+		],
 		'gratispaideiawiki' => [
 			'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 		],
@@ -4306,19 +4307,23 @@ $wi->config->settings += [
 		'default' => false,
 		'gratispaideiawiki' => true,
 	],
-	// Only enable this ('wmgWikibaseClientTrackLuaFunctionCallsPerWiki') conservatively, having this on to many
-	// wikis will take *a lot* of Graphite storage space.
 	'wmgWikibaseClientTrackLuaFunctionCallsPerWiki' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
 	],
 	'wmgWikibaseClientTrackLuaFunctionCallsPerSiteGroup' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
+		'default' => true,
 	],
 	'wmgWikibaseClientAddEntityUsagesBatchSize' => [
+		'default' => 100,
+	],
+	'wmgWikibaseRepoLocalEntitySourceName' => [
 		'default' => null,
-		'gratispaideiawiki' => 100,
+		'gratisdatawiki' => 'gratisdata',
+	],
+	'wmgWikibaseClientItemAndPropertySourceName' => [
+		'default' => null,
+		'gratispaideiawiki' => 'gratisdata',
 	],
 	'wmgWBRepoPreferredGeoDataProperties' => [
 		'default' => [],
@@ -4358,20 +4363,23 @@ $wi->config->settings += [
 	],
 
 	// WikibaseQualityConstraints
+	'wgWBQualityConstraintsEnableConstraintsImportFromStatement' => [
+		'default' => true,
+	],
 	'wgWBQualityConstraintsEnableConstraintsCheckJobs' => [
-		'default' => null,
+		'default' => false,
 		'gratisdatawiki' => true,
 	],
 	'wgWBQualityConstraintsEnableConstraintsCheckJobsRatio' => [
-		'default' => null,
+		'default' => 0,
 		'gratisdatawiki' => 100,
 	],
 	'wgWBQualityConstraintsFormatCheckerShellboxRatio' => [
-		'default' => null,
+		'default' => 0,
 		'gratisdatawiki' => 1,
 	],
 	'wgWBQualityConstraintsTypeCheckMaxEntities' => [
-		'default' => null,
+		'default' => 1000,
 		'gratisdatawiki' => 150,
 	],
 	'wgWBQualityConstraintsInstanceOfId' => [
@@ -4379,6 +4387,34 @@ $wi->config->settings += [
 	],
 	'wgWBQualityConstraintsSubclassOfId' => [
 		'default' => 'P279',
+	],
+	'wgWBQualityConstraintsStartTimePropertyIds' => [
+		'default' => [
+			'P569',
+			'P571',
+			'P580',
+			'P585',
+		],
+		'gratisdatawiki' => [
+			'P26',
+			'P11',
+			'P174',
+			'P80',
+		],
+	],
+	'wgWBQualityConstraintsEndTimePropertyIds' => [
+		'default' => [
+			'P570',
+			'P576',
+			'P582',
+			'P585',
+		],
+		'gratisdatawiki' => [
+			'P132',
+			'P539',
+			'P175',
+			'P80',
+		],
 	],
 	'wgWBQualityConstraintsPropertyConstraintId' => [
 		'default' => 'P2302',
