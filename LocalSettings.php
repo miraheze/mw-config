@@ -3020,10 +3020,6 @@ $wi->config->settings += [
 		'gratispaideiawiki' => true, 
 		'gratisdatawiki' => true,
 	],
-	'wgMFLogWrappedInfoboxes' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
-	],
 	'wmgUseMobileApp' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
