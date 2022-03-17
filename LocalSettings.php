@@ -4115,7 +4115,7 @@ $wi->config->settings += [
 		'gratispaideiawiki' => false,
 	],
 	'wgULSWebfontsEnabled' => [
-		'default' => null,
+		'default' => true,
 		'gratispaideiawiki' => false,
 	],
 
