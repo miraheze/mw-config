@@ -4211,6 +4211,14 @@ $wi->config->settings += [
 		'wmgUseTranslate' => false,
 		'wmgUseUniversalLanguageSelector' => false,
 	],
+	'wgULSIMEEnabled' => [
+		'default' => true,
+		'gratispaideiawiki' => false,
+	],
+	'wgULSWebfontsEnabled' => [
+		'default' => true,
+		'gratispaideiawiki' => false,
+	],
 
 	// UrlShortener
 	'wgUrlShortenerTemplate' => [
