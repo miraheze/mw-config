@@ -1510,24 +1510,19 @@ $wi->config->settings += [
 	
 	// GeoData
 	'wgMaxGeoSearchRadius' => [
-		'default' => null,
-		'gratispaideiawiki' => 10000,
-		'gratisdatawiki' => 10000,
-	],
-	'wgDefaultGlobe' => [
-		'default' => '',
-		'gratispaideiawiki' => 'earth',
-		'gratisdatawiki' => 'earth',
+		'default' => 10000,
+		'gratispaideiawiki' => 20000,
+		'gratisdatawiki' => 20000,
 	],
 	'wgMaxCoordinatesPerPage' => [
-		'default' => null,
+		'default' => 500,
 		'gratispaideiawiki' => 2000,
 		'gratisdatawiki' => 2000,
 	],
 	'wgDefaultDim' => [
-		'default' => null,
-		'gratispaideiawiki' => 1000,
-		'gratidatawiki' => 1000,
+		'default' => 1000,
+		'gratispaideiawiki' => 2000,
+		'gratidatawiki' => 2000,
 	],
 	// Controls what GeoData should do when it encounters some problem
 	// Reaction type:
@@ -1535,22 +1530,11 @@ $wi->config->settings += [
 	// 'fail' - Consider the tag invalid, display message and add tracking category
 	// 'none' - Do nothing
 	'wgGeoDataWarningLevel' => [
-		'default' => [],
-		'gratispaideiawiki' => [
+		'default' => [
 			'unknown type' => 'track',
 			'unknown globe' => 'none',
 			'invalid region' => 'track',
 		],
-		'gratisdatawiki' => [
-			'unknown type' => 'track',
-			'unknown globe' => 'none',
-			'invalid region' => 'track',
-		],
-	],
-	'wgGeoDataIndexGranularity' => [
-		'default' => null,
-		'gratispaideiawiki' => 10,
-		'gratisdatawiki' => 10,
 	],
 	'wgGeoDataBackend ' => [
 		'default' => 'db',
