@@ -255,6 +255,11 @@ $wi->config->settings += [
 		'default' => '',
 		'gratispaideiawiki' => 'https://gratisdata.miraheze.org/w/api.php',
 	],
+	'wgArticlePlaceholderSearchIntegrationBackend' => [
+		'default' => '',
+		'gratispaideiawiki' => 'API',
+	],
+	
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
@@ -3485,9 +3490,17 @@ $wi->config->settings += [
 	],
 	'wgPropertySuggesterClassifyingPropertyIds' => [
 		'default' => [],
+		'gratisdatawiki' => [
+			3,
+			12,
+		],
 	],
 	'wgPropertySuggesterInitialSuggestions' => [
 		'default' => [],
+		'gratisdatawiki' => [
+			3,
+			12,
+		],
 	],
 
 	// RateLimits
