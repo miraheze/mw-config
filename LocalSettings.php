@@ -3969,8 +3969,7 @@ $wi->config->settings += [
 		],
 	],
 	'wgExtractsExtendOpenSearchXml' => [
-		'default' => null,
-		'gratispaideiawiki' => false,
+		'default' => false,
 	],		
 
 	// TimedMediaHandler
