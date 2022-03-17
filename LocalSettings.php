@@ -2935,6 +2935,8 @@ $wi->config->settings += [
 	],
 	'wgMFNoindexPages' => [
 		'wmgUseMobileFrontend' => false,
+		'gratisdatawiki' => true,
+		'gratispaideiawiki' => true,
 	],
 	'wgMFStopRedirectCookieHost' => [
 		'wmgUseMobileFrontend' => $wi->hostname,
@@ -2974,6 +2976,89 @@ $wi->config->settings += [
 			'beta' => true,
 			'amc' => true,
 		],
+	],
+	'wgMFUseWikibase' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+		'gratisdatawiki' => true,
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'default' => [
+			'search' => true,
+			'nearby' => true,
+			'watchlist' => true,
+			'tagline' => true,
+		],
+		'gratispaideiawiki' => [
+			'search' => true,
+			'nearby' => true,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+	],
+	'wgMFMobileFormatterOptions' => [
+		'default' => [],
+		'gratispaideiawiki' => [
+			'excludeNamespaces' => [
+				10, 
+				-1,
+			],
+			'maxImages' => 1000,
+			'maxHeadings' => 4000,
+			'headings' => [ 
+				'h1', 
+				'h2', 
+				'h3', 
+				'h4', 
+				'h5', 
+				'h6', 
+			],
+		],
+	],
+	'wgMFNearby' => [
+		'default' => false, 
+		'gratispaideiawiki' => true, 
+		'gratisdatawiki' => true,
+	],
+	'wgMFLogWrappedInfoboxes' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wmgUseMobileApp' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+		'gratisdatawiki' => true,
+	],
+	'wgMFQueryPropModules' => [
+		'default' => [ 
+			'pageprops', 
+		],
+		'gratisdatawiki' => [ 
+			'entityterms',
+		],
+	],
+	'wgMFSearchAPIParams' => [
+		'default' => [
+			'ppprop' => 'displaytitle',
+		],
+		'gratisdatawiki' => [
+			'wbetterms' => 'label',
+		],
+	],
+	'wgMFSearchGenerator' => [
+		'default' => [
+			'name' => 'prefixsearch',
+			'prefix' => 'ps',
+		],
+		'gratisdatawiki' => [
+			'name' => 'wbsearch',
+			'prefix' => 'wbs',
+		],
+	],
+	'wgMFNamespacesWithLeadParagraphs' => [
+		'default' => [],
+		'gratispaideiawiki' => [ NS_MAIN ],
+		'gratisdatawiki' => [ NS_MAIN ],
 	],
 
 	// Moderation extension settings
