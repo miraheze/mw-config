@@ -2923,6 +2923,7 @@ $wi->config->settings += [
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
 		'default' => false,
+		'gratispaideiawiki' => true,
 	],
 	'wgDefaultMobileSkin' => [
 		'default' => 'minerva',
@@ -2935,8 +2936,9 @@ $wi->config->settings += [
 	],
 	'wgMFNoindexPages' => [
 		'wmgUseMobileFrontend' => false,
-		'gratisdatawiki' => true,
-		'gratispaideiawiki' => true,
+		'default' => true,
+		'gratisdatawiki' => false,
+		'gratispaideiawiki' => false,
 	],
 	'wgMFStopRedirectCookieHost' => [
 		'wmgUseMobileFrontend' => $wi->hostname,
@@ -2977,6 +2979,35 @@ $wi->config->settings += [
 			'amc' => true,
 		],
 	],
+	'wgMFShowMobileViewToTablets' => [
+		'default' => true,
+	],
+	'wgMFDeviceWidthMobileSmall' => [
+		'default' => 200,
+		'gratispaideiawiki' => 280,
+		'gratisdatawiki' => 280,
+	],
+	'wgMFDeviceWidthTablet' => [
+		'default' => 768,
+	],
+	'wgMFVaryOnUA' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgMFTidyMobileViewSections' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'MFEnableWikidataDescriptions' => [
+		'default' => [
+			'base' => false,
+			'beta' => true,
+		],
+		'gratispaideiawiki' => [
+			'base' => true,
+			'beta' => true,
+		],
+	],
 	'wgMFUseWikibase' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
@@ -2984,10 +3015,10 @@ $wi->config->settings += [
 	],
 	'wgMFDisplayWikibaseDescriptions' => [
 		'default' => [
-			'search' => true,
-			'nearby' => true,
-			'watchlist' => true,
-			'tagline' => true,
+			'search' => false,
+			'nearby' => false,
+			'watchlist' => false,
+			'tagline' => false,
 		],
 		'gratispaideiawiki' => [
 			'search' => true,
@@ -2995,6 +3026,17 @@ $wi->config->settings += [
 			'watchlist' => true,
 			'tagline' => false,
 		],
+		'gratisdatawiki' => [
+			'search' => true,
+			'nearby' => true,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+	],
+	'wgMFNearbyEndpoint' => [
+		'default' => '',
+		'gratispaideiawiki' => 'https://gratispaideia.miraheze.org/w/api.php',
+		'gratisdatawiki' => 'https://gratisdata.miraheze.org/w/api.php',
 	],
 	'wgMFMobileFormatterOptions' => [
 		'default' => [],
