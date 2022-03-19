@@ -54,3 +54,4 @@ $wgConf->settings['wgLBFactoryConf']['default'] = [
 		//'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
+$wi->config->settings['wgMaxExecutionTimeForExpensiveQueries']['default'] = 20000;

@@ -4,6 +4,7 @@ $wgMemCachedServers = [
 	'127.0.0.1:11212',
 	'127.0.0.1:11213',
 ];
+$wgRedisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-pecl';
 $wgParserCacheType = 'db-replicated';
@@ -11,13 +12,16 @@ $wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgParserCacheExpireTime = 86400 * 10; // 10 days
 $wgRevisionCacheExpiry = 86400 * 3; // 3 days
+
 $wgDLPQueryCacheTime = 120;
+$wgDplSettings['queryCacheTime'] = 120;
 
 // Currently we can't set this if GroupsSidebar us used.
 // This should ideally be patched upstream, converting the hook used
 // to SidebarBeforeOutput rather than SkinBuildSidebar, which is
 // more appropriate for this extension.
-if ( !$wgConf->get( 'wmgUseGroupsSidebar', $wi->dbname ) ) {
+// Also disable sidebar cache for solarawiki as a solution to T8732
+if ( !$wgConf->get( 'wmgUseGroupsSidebar', $wi->dbname ) && $wgDBname !== 'solarawiki' ) {
 	$wgEnableSidebarCache = true;
 }
 
@@ -60,11 +64,12 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 		'class' => WANObjectCache::class,
 		'cacheId' => 'memcached-mem-1',
 	];
+	$wgRedisServerIP = '[2a10:6740::6:109]:6379';
 }
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
-	'redisServer' => '[2a10:6740::6:306]:6379',
+	'redisServer' => $wgRedisServerIP,
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,

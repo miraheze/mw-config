@@ -18,7 +18,6 @@ wfLoadExtensions( [
 	'EventLogging',
 	// Required by EventLogging
 	'EventStreamConfig',
-	'GlobalBlocking',
 	'GlobalCssJs',
 	'GlobalNewFiles',
 	'IncidentReporting',
@@ -42,7 +41,6 @@ wfLoadExtensions( [
 	'SpamBlacklist',
 	'TitleBlacklist',
 	'TorBlock',
-	'UserMerge',
 	'WikiDiscover',
 	'WikiEditor',
 	'cldr'

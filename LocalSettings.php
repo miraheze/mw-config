@@ -71,7 +71,7 @@ $wmgUploadHostname = 'static.miraheze.org';
 $wgConf->settings = [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
-		'default' => '5',
+		'default' => '6',
 	],
 
 	// 3D
@@ -142,12 +142,33 @@ $wgConf->settings = [
 	'wgAccountCreationThrottle' => [
 		'default' => [
 			[
-				'count' => 1,
+				'count' => 3, // Set to 1 before. Temporarily set to 3 to help with ReCaptcha issues.
 				'seconds' => 300,
 			],
 			[
-				'count' => 5,
+				'count' => 10, // Set to 5 before. Temporarily set to 3 to help with ReCaptcha issues.
 				'seconds' => 86400,
+			],
+		],
+	],
+
+	'wgPasswordAttemptThrottle' => [
+		'default' => [ // For Miraheze, this is X attempts per IP globally - account is not taken into account
+			[
+				'count' => 5, // 5 attempts in 5 minutes
+				'seconds' => 300,
+			],
+			[
+				'count' => 40, // 40 attempts in 24 hours
+				'seconds' => 86400,
+			],
+			[
+				'count' => 60, // 60 attempts in 48 hours
+				'seconds' => 172800,
+			],
+			[
+				'count' => 75, // 75 attempts in 72 hours
+				'seconds' => 259200,
 			],
 		],
 	],
@@ -194,6 +215,14 @@ $wgConf->settings = [
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
 	],
+	'egApprovedRevsShowApproveLatest' => [
+		'default' => null,
+		'primalfeararkwiki' => true,
+	],
+	'egApprovedRevsShowNotApprovedMessage' => [
+		'default' => null,
+		'primalfeararkwiki' => true,
+	],
 
 	// ArticleCreationWorkflow
 	'wgArticleCreationLandingPage' => [
@@ -203,6 +232,27 @@ $wgConf->settings = [
 		'default' => true,
 	],
 
+	// ArticlePlaceholder
+	'wgArticlePlaceholderImageProperty' => [
+		'default' => 'P18',
+		'gratispaideiawiki' => 'P386',
+	],
+	'wgArticlePlaceholderReferencesBlacklist' => [
+		'default' => 'P143',
+		'gratispaideiawiki' => 'P193',
+	],
+	'wgArticlePlaceholderSearchEngineIndexed' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgArticlePlaceholderSearchIntegrationEnabled' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgArticlePlaceholderRepoApiUrl' => [
+		'default' => '',
+		'gratispaideiawiki' => 'https://gratisdata.miraheze.org/w/api.php',
+	],
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
@@ -429,11 +479,6 @@ $wgConf->settings = [
 		'metawiki' => true,
 		'betawiki' => true,
 	],
-	'wgCentralAuthEnableUserMerge' => [
-		'default' => false,
-		'metawiki' => true,
-		'betawiki' => true,
-	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
 		'betaheze' => 'betawiki',
@@ -443,6 +488,9 @@ $wgConf->settings = [
 	],
 	'wgCentralAuthSilentLogin' => [
 		'default' => true,
+	],
+	'wgCentralAuthHiddenLevelMigrationStage' => [
+		'default' => SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_OLD,
 	],
 
 	// CentralNotice
@@ -856,6 +904,7 @@ $wgConf->settings = [
 				'Database exists (wiki still active)' => 'Wiki database name and subdomain already exist. Please visit the local wiki and contribute there. Please reach out to any local bureaucrat to request any permissions if you require them. If bureaucrats are not active on the wiki after a reasonable period of time, please start a local election and ask a Steward to evaluate it on the Stewards\' noticeboard. Thanks.',
 				'Database exists (wiki closed)' => 'Wiki database name already exists, but the wiki is closed. Please visit the requests for adoption page to request to reopen the wiki or ask for help on community noticeboard.',
 				'Database exists (wiki already deleted)' => 'Wiki database name already exists, but the wiki itself has already been deleted in accordance with the Dormancy Policy. I will request a Steward to undelete it for you. When it has been undeleted and reopened, please visit the local wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity; if you require a Dormancy Policy exemption, you should review the policy and request it once your wiki has at least 40-60 content pages. Thank you.',
+				'Database exists (unrelated purpose)' => 'Wiki database name and subdomain already exist. The wiki does not however seem to have the same purpose as the one you are requesting here, so you should therefore request a wiki with another subdomain.',
 				'Duplicate request' => 'Declining as a duplicate request, which needs more information. Please do not edit this request and instead go back into your original request. Also, please do not submit duplicate requests. Thank you.',
 				'Content Policy (unsubstantiated insult)' => 'Declining per Content Policy provision, "Miraheze does not host wikis with the sole purpose to spread unsubstantiated insult, hate or rumours against a person or group of people." Thank you for understanding.',
 				'Content Policy (makes it difficult for other wikis)' => 'Declining per Content Policy provision, "A wiki must not create problems which make it difficult for other wikis." Thank you for understanding.',
@@ -947,6 +996,7 @@ $wgConf->settings = [
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
+			"/srv/mediawiki/config/138pre-patch.sql",
 		],
 	],
 	'wgCreateWikiStateDays' => [
@@ -1379,6 +1429,7 @@ $wgConf->settings = [
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 			2639, // Agent Isai (SRE)
+			6758, // MacFan4000 (SRE)
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
@@ -2232,8 +2283,6 @@ $wgConf->settings = [
 				'suppressrevision' => true,
 			],
 			'steward' => [
-				'centralauth-usermerge' => true,
-				'usermerge' => true,
 				'userrights' => true,
 			],
 			'user' => [
@@ -2258,8 +2307,8 @@ $wgConf->settings = [
 				'managewiki-editdefault' => true,
 				'managewiki-restricted' => true,
 				'requestwiki' => true,
-				'globalgroupmembership',
-				'globalgrouppermissions',
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
 			],
 		],
 		'+bitcoindebateswiki' => [
@@ -3082,6 +3131,26 @@ $wgConf->settings = [
 			3006,
 		],
 	],
+	'wgPageImagesDenylist' => [
+		'default' => [],
+		'gratispaideiawiki' => [
+			'type' => 'db',
+			'page' => 'MediaWiki:Pageimages-denylist',
+			'db' => false,
+		],
+	],
+	'wgPageImagesExpandOpenSearchXml' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgPageImagesOpenGraphFallbackImage' => [
+		'default' => false,
+		'gratispaideiawiki' => 'https://static.miraheze.org/commonswiki/2/2a/Gratispaideia-logo.svg',
+	],
+	'wgPageImagesLeadSectionOnly' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
 
 	// Pagelang
 	'wgPageLanguageUseDB' => [
@@ -3387,6 +3456,12 @@ $wgConf->settings = [
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'wmgUseRelatedArticles' => false,
 	],
+	'wgRelatedArticlesCardLimit' => [
+		'default' => 3,
+	],
+	'wgRelatedArticlesDescriptionSource' => [
+		'default' => false,
+	],
 
 	// RemovePII
 	'wgRemovePIIHashPrefixOptions' => [
@@ -3484,6 +3559,7 @@ $wgConf->settings = [
 			'editofficialprotected',
 		],
 		'+nicolopediawiki' => [
+			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
 		'+sesupportwiki' => [
@@ -3562,6 +3638,7 @@ $wgConf->settings = [
 			'editofficialprotected',
 		],
 		'nicolopediawiki' => [
+			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
 		'pokemonarowiki' => [
@@ -4010,6 +4087,12 @@ $wgConf->settings = [
 	'wgTweekiSkinUseIconWatch' => [
 		'default' => false,
 	],
+		'wgTweekiSkinHideAnon' => [
+				'subnav' => [
+						'default' => true,
+						'obeymewiki' => false,
+				],
+		],
 
 	// Uploads
 	'wmgPrivateUploads' => [
@@ -4044,6 +4127,14 @@ $wgConf->settings = [
 	'wgULSGeoService' => [
 		'wmgUseTranslate' => false,
 		'wmgUseUniversalLanguageSelector' => false,
+	],
+	'wgULSIMEEnabled' => [
+		'default' => true,
+		'gratispaideiawiki' => false,
+	],
+	'wgULSWebfontsEnabled' => [
+		'default' => true,
+		'gratispaideiawiki' => false,
 	],
 
 	// UrlShortener
@@ -4516,6 +4607,24 @@ $wgConf->settings = [
 	'wgWikiSeoTryCleanAutoDescription' => [
 		'default' => false,
 	],
+	'wgMetadataGenerators' => [
+		'default' => '',
+		'gratispaideiawiki' => [
+			'Citation',
+			'OpenGraph',
+			'Twitter',
+			'SchemaOrg',
+		],
+	],
+	'wgTwitterSiteHandle' => [
+		'default' => '',
+		'gratisdatawiki' => '@gratisdatawiki',
+	],
+	'wgWikiSeoDefaultLanguage' => [
+		'default' => '',
+		'gratisdatawiki' => 'en-en',
+		'gratispaideiawiki' => 'en-en',
+	],
 
 	// CreateWiki Defined Special Variables
 	'cwClosed' => [
@@ -4559,8 +4668,8 @@ $wgConf->settings = [
 			// When using this, use buffer.
 			'api-request' => [ 'graylog' => 'debug', 'buffer' => true ],
 			'api-warning' => false,
-			'authentication' => false,
-			'authevents' => false,
+			'authentication' => 'info',
+			'authevents' => 'info',
 			'autoloader' => false,
 			'BlockManager' => false,
 			'BlogPage' => false,
@@ -4624,7 +4733,7 @@ $wgConf->settings = [
 			'localhost' => false,
 			'LockManager' => false,
 			'logging' => false,
-			'LoginNotify' => false,
+			'LoginNotify' => 'debug',
 			'ManageWiki' => 'debug',
 			'MassMessage' => false,
 			'Math' => 'info',
@@ -4646,6 +4755,7 @@ $wgConf->settings = [
 			'preferences' => false,
 			'purge' => false,
 			'query' => false,
+			'quickinstantcommons' => 'error',
 			'ratelimit' => false,
 			'readinglists' => false,
 			'recursion-guard' => false,
