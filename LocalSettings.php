@@ -218,11 +218,11 @@ $wi->config->settings += [
 		'default' => true,
 	],
 	'egApprovedRevsShowApproveLatest' => [
-		'default' => null,
+		'default' => false,
 		'primalfeararkwiki' => true,
 	],
 	'egApprovedRevsShowNotApprovedMessage' => [
-		'default' => null,
+		'default' => false,
 		'primalfeararkwiki' => true,
 	],
 
