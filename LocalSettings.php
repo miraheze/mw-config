@@ -3983,9 +3983,6 @@ $wi->config->settings += [
 			'#coordinates',
 		],
 	],
-	'wgExtractsExtendOpenSearchXml' => [
-		'default' => false,
-	],		
 
 	// TimedMediaHandler
 	'wgOggThumbLocation' => [
