@@ -4171,9 +4171,11 @@ $wi->config->settings += [
 		'default' => false,
 	],
 	'wgTweekiSkinHideAnon' => [
-		'subnav' => [
-			'default' => true,
-			'obeymewiki' => false,
+		'default' => [
+			'subnav' => true
+		],
+		'obeymewiki' => [
+			'subnav' => false,
 		],
 	],
 
