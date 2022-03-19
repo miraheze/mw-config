@@ -155,20 +155,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		],
 	];
 	$wgWBRepoSettings['allowEntityImport'] = false;
-	$wgWBRepoSettings['pagePropertiesRdf'] = [
-		'wb-sitelinks' => [
-			'name' => 'sitelinks',
-			'type' => 'integer',
-		],
-		'wb-claims' => [
-			'name' => 'statements',
-			'type' => 'integer'
-		],
-		'wb-identifiers' => [
-			'name' => 'identifiers',
-			'type' => 'integer'
-		],
-	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
