@@ -3092,8 +3092,12 @@ $wi->config->settings += [
 	],
 	'wgMFNamespacesWithLeadParagraphs' => [
 		'default' => [],
-		'gratispaideiawiki' => [ NS_MAIN ],
-		'gratisdatawiki' => [ NS_MAIN ],
+		'gratispaideiawiki' => [ 
+			NS_MAIN,
+		],
+		'gratisdatawiki' => [
+			NS_MAIN,
+		],
 	],
 
 	// Moderation extension settings
