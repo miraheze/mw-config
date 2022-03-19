@@ -3044,11 +3044,6 @@ $wi->config->settings += [
 		'gratispaideiawiki' => true, 
 		'gratisdatawiki' => true,
 	],
-	'wmgUseMobileApp' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
-		'gratisdatawiki' => true,
-	],
 	'wgMFQueryPropModules' => [
 		'default' => [ 
 			'pageprops', 
