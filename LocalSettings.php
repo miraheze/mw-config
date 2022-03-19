@@ -4286,6 +4286,9 @@ $wi->config->settings += [
 	'wmgWikibaseRepoPropertyNamespaceID' => [
 		'default' => 862
 	],
+	'wmgWikibaseRepoLexemeNamespaceID' => [
+		'default' => 146
+	],
 
 	// WikibaseQualityConstraints
 	'wgWBQualityConstraintsInstanceOfId' => [
