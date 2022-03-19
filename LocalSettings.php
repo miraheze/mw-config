@@ -2935,9 +2935,7 @@ $wi->config->settings += [
 		'wmgUseMobileFrontend' => 'X-Subdomain',
 	],
 	'wgMFNoindexPages' => [
-		'wmgUseMobileFrontend' => true,
-		'gratisdatawiki' => false,
-		'gratispaideiawiki' => false,
+		'wmgUseMobileFrontend' => false,
 	],
 	'wgMFStopRedirectCookieHost' => [
 		'wmgUseMobileFrontend' => $wi->hostname,
