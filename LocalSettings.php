@@ -3976,7 +3976,7 @@ $wi->config->settings += [
 			'.sortkey',
 		],
 		'+gratispaideiawiki' => [
-			'.metadata', // This is a good thing to remove in any case
+			'.metadata',
 			'span.coordinates',
 			'span.geo-multi-punct',
 			'span.geo-nondefault',
