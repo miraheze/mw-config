@@ -2976,26 +2976,11 @@ $wi->config->settings += [
 			'amc' => true,
 		],
 	],
-	'wgMFShowMobileViewToTablets' => [
-		'default' => true,
-	],
-	'wgMFDeviceWidthMobileSmall' => [
-		'default' => 200,
-		'gratispaideiawiki' => 280,
-		'gratisdatawiki' => 280,
-	],
-	'wgMFDeviceWidthTablet' => [
-		'default' => 768,
-	],
 	'wgMFVaryOnUA' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
 	],
-	'wgMFTidyMobileViewSections' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
-	],
-	'MFEnableWikidataDescriptions' => [
+	'wgMFEnableWikidataDescriptions' => [
 		'default' => [
 			'base' => false,
 			'beta' => true,
