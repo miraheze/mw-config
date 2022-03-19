@@ -3090,15 +3090,6 @@ $wi->config->settings += [
 			'prefix' => 'wbs',
 		],
 	],
-	'wgMFNamespacesWithLeadParagraphs' => [
-		'default' => [],
-		'gratispaideiawiki' => [ 
-			NS_MAIN,
-		],
-		'gratisdatawiki' => [
-			NS_MAIN,
-		],
-	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
