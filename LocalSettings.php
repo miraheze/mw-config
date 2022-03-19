@@ -217,14 +217,6 @@ $wi->config->settings += [
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
 	],
-	'egApprovedRevsShowApproveLatest' => [
-		'default' => null,
-		'primalfeararkwiki' => true,
-	],
-	'egApprovedRevsShowNotApprovedMessage' => [
-		'default' => null,
-		'primalfeararkwiki' => true,
-	],
 
 	// ArticleCreationWorkflow
 	'wgArticleCreationLandingPage' => [
