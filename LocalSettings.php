@@ -2923,6 +2923,7 @@ $wi->config->settings += [
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
 		'default' => false,
+		'gratispaideiawiki' => true,
 	],
 	'wgDefaultMobileSkin' => [
 		'default' => 'minerva',
@@ -2979,6 +2980,11 @@ $wi->config->settings += [
 		'default' => false,
 		'gratispaideiawiki' => true,
 	],
+	'wgMFUseWikibase' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+		'gratisdatawiki' => true,
+	],
 	'wgMFEnableWikidataDescriptions' => [
 		'default' => [
 			'base' => false,
@@ -2988,11 +2994,6 @@ $wi->config->settings += [
 			'base' => true,
 			'beta' => true,
 		],
-	],
-	'wgMFUseWikibase' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
-		'gratisdatawiki' => true,
 	],
 	'wgMFDisplayWikibaseDescriptions' => [
 		'default' => [
@@ -3014,15 +3015,15 @@ $wi->config->settings += [
 			'tagline' => false,
 		],
 	],
-	'wgMFNearbyEndpoint' => [
-		'default' => '',
-		'gratispaideiawiki' => 'https://gratispaideia.miraheze.org/w/api.php',
-		'gratisdatawiki' => 'https://gratisdata.miraheze.org/w/api.php',
-	],
 	'wgMFNearby' => [
 		'default' => false, 
 		'gratispaideiawiki' => true, 
 		'gratisdatawiki' => true,
+	],
+	'wgMFNearbyEndpoint' => [
+		'default' => '',
+		'gratispaideiawiki' => 'https://gratispaideia.miraheze.org/w/api.php',
+		'gratisdatawiki' => 'https://gratisdata.miraheze.org/w/api.php',
 	],
 	'wgMFQueryPropModules' => [
 		'default' => [ 
