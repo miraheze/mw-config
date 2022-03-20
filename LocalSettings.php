@@ -2923,6 +2923,7 @@ $wi->config->settings += [
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
 		'default' => false,
+		'gratispaideiawiki' => true,
 	],
 	'wgDefaultMobileSkin' => [
 		'default' => 'minerva',
