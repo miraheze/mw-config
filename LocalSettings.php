@@ -3020,25 +3020,6 @@ $wi->config->settings += [
 		'gratispaideiawiki' => 'https://gratispaideia.miraheze.org/w/api.php',
 		'gratisdatawiki' => 'https://gratisdata.miraheze.org/w/api.php',
 	],
-	'wgMFMobileFormatterOptions' => [
-		'default' => [],
-		'gratispaideiawiki' => [
-			'excludeNamespaces' => [
-				10, 
-				-1,
-			],
-			'maxImages' => 1000,
-			'maxHeadings' => 4000,
-			'headings' => [ 
-				'h1', 
-				'h2', 
-				'h3', 
-				'h4', 
-				'h5', 
-				'h6', 
-			],
-		],
-	],
 	'wgMFNearby' => [
 		'default' => false, 
 		'gratispaideiawiki' => true, 
