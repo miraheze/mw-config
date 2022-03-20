@@ -3507,6 +3507,11 @@ $wi->config->settings += [
 		'+bigforestwiki' => [
 			'editvoter',
 		],
+		'+celebswiki' => [
+			'editmoduleprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
+		],
 		'+cmgwiki' => [
 			'bureaucrat',
 			'sysop',
@@ -3606,6 +3611,11 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+		'celebswiki' => [
+			'editmoduleprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
