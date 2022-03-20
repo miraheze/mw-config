@@ -2976,6 +2976,32 @@ $wi->config->settings += [
 			'amc' => true,
 		],
 	],
+	'wgMFQueryPropModules' => [
+		'default' => [ 
+			'pageprops', 
+		],
+		'gratisdatawiki' => [ 
+			'entityterms',
+		],
+	],
+	'wgMFSearchAPIParams' => [
+		'default' => [
+			'ppprop' => 'displaytitle',
+		],
+		'gratisdatawiki' => [
+			'wbetterms' => 'label',
+		],
+	],
+	'wgMFSearchGenerator' => [
+		'default' => [
+			'name' => 'prefixsearch',
+			'prefix' => 'ps',
+		],
+		'gratisdatawiki' => [
+			'name' => 'wbsearch',
+			'prefix' => 'wbs',
+		],
+	],
 	'wgMFVaryOnUA' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
@@ -3024,32 +3050,6 @@ $wi->config->settings += [
 		'default' => '',
 		'gratispaideiawiki' => 'https://gratispaideia.miraheze.org/w/api.php',
 		'gratisdatawiki' => 'https://gratisdata.miraheze.org/w/api.php',
-	],
-	'wgMFQueryPropModules' => [
-		'default' => [ 
-			'pageprops', 
-		],
-		'gratisdatawiki' => [ 
-			'entityterms',
-		],
-	],
-	'wgMFSearchAPIParams' => [
-		'default' => [
-			'ppprop' => 'displaytitle',
-		],
-		'gratisdatawiki' => [
-			'wbetterms' => 'label',
-		],
-	],
-	'wgMFSearchGenerator' => [
-		'default' => [
-			'name' => 'prefixsearch',
-			'prefix' => 'ps',
-		],
-		'gratisdatawiki' => [
-			'name' => 'wbsearch',
-			'prefix' => 'wbs',
-		],
 	],
 
 	// Moderation extension settings
