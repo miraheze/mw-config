@@ -2923,7 +2923,6 @@ $wi->config->settings += [
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
 		'default' => false,
-		'gratispaideiawiki' => true,
 	],
 	'wgDefaultMobileSkin' => [
 		'default' => 'minerva',
@@ -3029,7 +3028,7 @@ $wi->config->settings += [
 		'default' => [ 
 			'pageprops', 
 		],
-		'+gratisdatawiki' => [ 
+		'gratisdatawiki' => [ 
 			'entityterms',
 		],
 	],
@@ -3037,7 +3036,7 @@ $wi->config->settings += [
 		'default' => [
 			'ppprop' => 'displaytitle',
 		],
-		'+gratisdatawiki' => [
+		'gratisdatawiki' => [
 			'wbetterms' => 'label',
 		],
 	],
@@ -3046,7 +3045,7 @@ $wi->config->settings += [
 			'name' => 'prefixsearch',
 			'prefix' => 'ps',
 		],
-		'+gratisdatawiki' => [
+		'gratisdatawiki' => [
 			'name' => 'wbsearch',
 			'prefix' => 'wbs',
 		],
