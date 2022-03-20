@@ -2975,6 +2975,55 @@ $wi->config->settings += [
 			'amc' => true,
 		],
 	],
+	'wgMFVaryOnUA' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgMFUseWikibase' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+		'gratisdatawiki' => true,
+	],
+	'wgMFEnableWikidataDescriptions' => [
+		'default' => [
+			'base' => false,
+			'beta' => true,
+		],
+		'gratispaideiawiki' => [
+			'base' => true,
+			'beta' => true,
+		],
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'default' => [
+			'search' => false,
+			'nearby' => false,
+			'watchlist' => false,
+			'tagline' => false,
+		],
+		'gratispaideiawiki' => [
+			'search' => true,
+			'nearby' => true,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+		'gratisdatawiki' => [
+			'search' => true,
+			'nearby' => true,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+	],
+	'wgMFNearby' => [
+		'default' => false, 
+		'gratispaideiawiki' => true, 
+		'gratisdatawiki' => true,
+	],
+	'wgMFNearbyEndpoint' => [
+		'default' => '',
+		'gratispaideiawiki' => 'https://gratispaideia.miraheze.org/w/api.php',
+		'gratisdatawiki' => 'https://gratisdata.miraheze.org/w/api.php',
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
