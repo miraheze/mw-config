@@ -1716,7 +1716,6 @@ $wi->config->settings += [
 			'Matomo' => 'https://meta.miraheze.org/wiki/Tech:Matomo',
 			'MediaWiki' => 'https://meta.miraheze.org/wiki/Tech:MediaWiki_appserver',
 			'Memcached' => 'https://meta.miraheze.org/wiki/Tech:Memcached',
-			'Nameservers' => 'https://meta.miraheze.org/wiki/Tech:Nameservers',
 			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
 			'NGINX' => 'https://meta.miraheze.org/wiki/Tech:Nginx',
 			'Parsoid' => 'https://meta.miraheze.org/wiki/Tech:Parsoid',
