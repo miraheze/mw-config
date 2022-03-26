@@ -1803,6 +1803,9 @@ $wi->config->settings += [
 			'wmincubator',
 			'wikiaincubatorplus',
 		],
+		'+loginwiki' => [
+			'testwikiwiki',
+		],
 		'+memedatawiki' => [
 			'd',
 			'fd',
