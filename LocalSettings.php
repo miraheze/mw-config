@@ -2572,6 +2572,7 @@ $wi->config->settings += [
 				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-oversight',
+				'centralauth-suppress',
 				'centralauth-rename',
 				'centralauth-unmerge',
 				'centralauth-usermerge',
