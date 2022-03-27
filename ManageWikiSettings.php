@@ -4080,7 +4080,43 @@ $wgManageWikiSettings = [
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Property namespace for Wikibase Repository.',
 		'requires' => [],
-	]
+	],
+	'wgArticlePlaceholderImageProperty' => [
+		'name' => 'Article Placeholder Image Property',
+		'from' => 'articleplaceholder',
+		'type' => 'text',
+		'overridedefault' => 'P18',
+		'section' => 'wikibase',
+		'help' => 'Sets the property used to display the main image of an item.',
+		'requires' => [],
+	],
+	'wgArticlePlaceholderSearchEngineIndexed' => [
+		'name' => 'Article Placeholder Search Engine Indexed',
+		'from' => 'articleplaceholder',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Configures whether placeholders will be indexable by search engines. Setting it to true will unconditionally enable indexing, while setting it to false will disable indexing.',
+		'requires' => [],
+	],
+	'wgArticlePlaceholderReferencesBlacklist' => [
+		'name' => 'Article Placeholder References Blacklist',
+		'from' => 'articleplaceholder',
+		'type' => 'text',
+		'overridedefault' => 'P143',
+		'section' => 'wikibase',
+		'help' => 'Takes a property ID and blacklists the references that use the given property.',
+		'requires' => [],
+	],
+	'wgArticlePlaceholderRepoApiUrl' => [
+		'name' => 'Article Placeholder Repo API URL',
+		'from' => 'articleplaceholder',
+		'type' => 'text',
+		'overridedefault' => 'https://www.wikidata.org/w/api.php',
+		'section' => 'wikibase',
+		'help' => 'Sets the property used to display the main image of an item.',
+		'requires' => [],
+	],
 ];
 
 if (
