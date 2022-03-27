@@ -3980,6 +3980,33 @@ $wi->config->settings += [
 			'css' => [],
 		],
 	],
+	
+	// TextExtracts
+	'wgExtractsRemoveClasses' => [
+		'default' => [
+			'table',
+			'div',
+			'script',
+			'input',
+			'style',
+			'ul.gallery',
+			'.mw-editsection',
+			'sup.reference',
+			'ol.references',
+			'.error',
+			'.nomobile',
+			'.noprint',
+			'.noexcerpt',
+			'.sortkey',
+		],
+		'+gratispaideiawiki' => [
+			'.metadata',
+			'span.coordinates',
+			'span.geo-multi-punct',
+			'span.geo-nondefault',
+			'#coordinates',
+		],
+	],
 
 	// TimedMediaHandler
 	'wgOggThumbLocation' => [
