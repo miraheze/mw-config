@@ -3029,13 +3029,13 @@ $wi->config->settings += [
 		],
 		'gratispaideiawiki' => [
 			'search' => true,
-			'nearby' => true,
+			'nearby' => false,
 			'watchlist' => true,
 			'tagline' => false,
 		],
 		'gratisdatawiki' => [
 			'search' => true,
-			'nearby' => true,
+			'nearby' => false,
 			'watchlist' => true,
 			'tagline' => false,
 		],
