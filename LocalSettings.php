@@ -2504,15 +2504,6 @@ $wi->config->settings += [
 				'editor' => true,
 			],
 		],
-		'+testwiki' => [
-			'consul' => [
-				'consul' => true,
-				'bureaucrat' => true,
-			],
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-		],
 		'+thesciencearchiveswiki' => [
 			'sysop' => [
 				'templateeditor' => true,
