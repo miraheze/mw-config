@@ -2504,14 +2504,6 @@ $wi->config->settings += [
 				'editor' => true,
 			],
 		],
-		'+thesciencearchiveswiki' => [
-			'sysop' => [
-				'templateeditor' => true,
-			],
-			'templateeditor' => [
-				'templateeditor' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
