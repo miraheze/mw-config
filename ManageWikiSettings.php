@@ -4100,7 +4100,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgArticlePlaceholderReferencesBlacklist' => [
-		'name' => 'Article Placeholde References Blacklist',
+		'name' => 'Article Placeholder References Blacklist',
 		'from' => 'articleplaceholder',
 		'type' => 'text',
 		'overridedefault' => 'P143',
@@ -4109,10 +4109,10 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgArticlePlaceholderRepoApiUrl' => [
-		'name' => 'Article Placeholde rImage Property',
+		'name' => 'Article Placeholder Repo API URL',
 		'from' => 'articleplaceholder',
 		'type' => 'text',
-		'overridedefault' => 'P18',
+		'overridedefault' => 'https://www.wikidata.org/w/api.php',
 		'section' => 'wikibase',
 		'help' => 'Sets the property used to display the main image of an item.',
 		'requires' => [],
