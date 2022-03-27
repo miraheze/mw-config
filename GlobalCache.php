@@ -12,7 +12,9 @@ $wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgParserCacheExpireTime = 86400 * 10; // 10 days
 $wgRevisionCacheExpiry = 86400 * 3; // 3 days
+
 $wgDLPQueryCacheTime = 120;
+$wgDplSettings['queryCacheTime'] = 120;
 
 // Currently we can't set this if GroupsSidebar us used.
 // This should ideally be patched upstream, converting the hook used

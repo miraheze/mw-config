@@ -217,6 +217,14 @@ $wi->config->settings += [
 	'egApprovedRevsAutomaticApprovals' => [
 		'default' => true,
 	],
+	'egApprovedRevsShowApproveLatest' => [
+		'default' => false,
+		'primalfeararkwiki' => true,
+	],
+	'egApprovedRevsShowNotApprovedMessage' => [
+		'default' => false,
+		'primalfeararkwiki' => true,
+	],
 
 	// ArticleCreationWorkflow
 	'wgArticleCreationLandingPage' => [
@@ -226,6 +234,27 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
+	// ArticlePlaceholder
+	'wgArticlePlaceholderImageProperty' => [
+		'default' => 'P18',
+		'gratispaideiawiki' => 'P386',
+	],
+	'wgArticlePlaceholderReferencesBlacklist' => [
+		'default' => 'P143',
+		'gratispaideiawiki' => 'P193',
+	],
+	'wgArticlePlaceholderSearchEngineIndexed' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgArticlePlaceholderSearchIntegrationEnabled' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgArticlePlaceholderRepoApiUrl' => [
+		'default' => '',
+		'gratispaideiawiki' => 'https://gratisdata.miraheze.org/w/api.php',
+	],
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
@@ -829,10 +858,11 @@ $wi->config->settings += [
 			'webmail',
 			'phabricator',
 			'static',
-			'matomo',
 			'grafana',
 			'icinga',
 			'csw(\d+)?',
+			'matomo(\d+)?',
+			'prometheus(\d+)?',
 			'misc\d+',
 			'db\d+',
 			'cp\d+',
@@ -1774,6 +1804,9 @@ $wi->config->settings += [
 			'wmincubator',
 			'wikiaincubatorplus',
 		],
+		'+loginwiki' => [
+			'testwikiwiki',
+		],
 		'+memedatawiki' => [
 			'd',
 			'fd',
@@ -2543,6 +2576,7 @@ $wi->config->settings += [
 				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-oversight',
+				'centralauth-suppress',
 				'centralauth-rename',
 				'centralauth-unmerge',
 				'centralauth-usermerge',
@@ -3001,11 +3035,6 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
-	// MobileFrontend
-	'wgMFNoMobilePages' => [
-		'default' => [],
-	],
-
 	// Math
 	'wgMathoidCli' => [
 		'default' => [
@@ -3104,6 +3133,26 @@ $wi->config->settings += [
 			3006,
 		],
 	],
+	'wgPageImagesDenylist' => [
+		'default' => [],
+		'gratispaideiawiki' => [
+			'type' => 'db',
+			'page' => 'MediaWiki:Pageimages-denylist',
+			'db' => false,
+		],
+	],
+	'wgPageImagesExpandOpenSearchXml' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
+	'wgPageImagesOpenGraphFallbackImage' => [
+		'default' => false,
+		'gratispaideiawiki' => 'https://static.miraheze.org/commonswiki/2/2a/Gratispaideia-logo.svg',
+	],
+	'wgPageImagesLeadSectionOnly' => [
+		'default' => false,
+		'gratispaideiawiki' => true,
+	],
 
 	// Pagelang
 	'wgPageLanguageUseDB' => [
@@ -3111,9 +3160,17 @@ $wi->config->settings += [
 	],
 
 	// PageForms
+	'wgPageFormsRenameEditTabs' => [
+		'default' => false,
+	],
+	'wgPageFormsRenameMainEditTab' => [
+		'default' => false,
+	],
+	'wgPageFormsSimpleUpload' => [
+		'default' => false,
+	],
 	'wgPageFormsLinkAllRedLinksToForms' => [
 		'default' => false,
-		'frontierrpgwiki' => true,
 	],
 
 	// Page Size
@@ -3409,6 +3466,12 @@ $wi->config->settings += [
 	'wgRelatedArticlesUseCirrusSearch' => [
 		'wmgUseRelatedArticles' => false,
 	],
+	'wgRelatedArticlesCardLimit' => [
+		'default' => 3,
+	],
+	'wgRelatedArticlesDescriptionSource' => [
+		'default' => false,
+	],
 
 	// RemovePII
 	'wgRemovePIIHashPrefixOptions' => [
@@ -3451,6 +3514,11 @@ $wi->config->settings += [
 		],
 		'+bigforestwiki' => [
 			'editvoter',
+		],
+		'+celebswiki' => [
+			'editmoduleprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'+cmgwiki' => [
 			'bureaucrat',
@@ -3551,6 +3619,11 @@ $wi->config->settings += [
 			'edittemplateprotected',
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
+		],
+		'celebswiki' => [
+			'editmoduleprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
@@ -3915,6 +3988,33 @@ $wi->config->settings += [
 			'css' => [],
 		],
 	],
+	
+	// TextExtracts
+	'wgExtractsRemoveClasses' => [
+		'default' => [
+			'table',
+			'div',
+			'script',
+			'input',
+			'style',
+			'ul.gallery',
+			'.mw-editsection',
+			'sup.reference',
+			'ol.references',
+			'.error',
+			'.nomobile',
+			'.noprint',
+			'.noexcerpt',
+			'.sortkey',
+		],
+		'+gratispaideiawiki' => [
+			'.metadata',
+			'span.coordinates',
+			'span.geo-multi-punct',
+			'span.geo-nondefault',
+			'#coordinates',
+		],
+	],
 
 	// TimedMediaHandler
 	'wgOggThumbLocation' => [
@@ -4034,6 +4134,14 @@ $wi->config->settings += [
 	'wgTweekiSkinUseIconWatch' => [
 		'default' => false,
 	],
+	'wgTweekiSkinHideAnon' => [
+		'default' => [
+			'subnav' => true
+		],
+		'obeymewiki' => [
+			'subnav' => false,
+		],
+	],
 
 	// Uploads
 	'wmgPrivateUploads' => [
@@ -4068,6 +4176,14 @@ $wi->config->settings += [
 	'wgULSGeoService' => [
 		'wmgUseTranslate' => false,
 		'wmgUseUniversalLanguageSelector' => false,
+	],
+	'wgULSIMEEnabled' => [
+		'default' => true,
+		'gratispaideiawiki' => false,
+	],
+	'wgULSWebfontsEnabled' => [
+		'default' => true,
+		'gratispaideiawiki' => false,
 	],
 
 	// UrlShortener
@@ -4539,6 +4655,24 @@ $wi->config->settings += [
 	],
 	'wgWikiSeoTryCleanAutoDescription' => [
 		'default' => false,
+	],
+	'wgMetadataGenerators' => [
+		'default' => '',
+		'gratispaideiawiki' => [
+			'Citation',
+			'OpenGraph',
+			'Twitter',
+			'SchemaOrg',
+		],
+	],
+	'wgTwitterSiteHandle' => [
+		'default' => '',
+		'gratisdatawiki' => '@gratisdatawiki',
+	],
+	'wgWikiSeoDefaultLanguage' => [
+		'default' => '',
+		'gratisdatawiki' => 'en-en',
+		'gratispaideiawiki' => 'en-en',
 	],
 
 	// CreateWiki Defined Special Variables
