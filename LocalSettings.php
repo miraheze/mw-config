@@ -237,24 +237,17 @@ $wi->config->settings += [
 	// ArticlePlaceholder
 	'wgArticlePlaceholderImageProperty' => [
 		'default' => 'P18',
-		'gratispaideiawiki' => 'P386',
 	],
 	'wgArticlePlaceholderReferencesBlacklist' => [
 		'default' => 'P143',
-		'gratispaideiawiki' => 'P193',
 	],
 	'wgArticlePlaceholderSearchEngineIndexed' => [
 		'default' => false,
-		'gratispaideiawiki' => true,
-	],
-	'wgArticlePlaceholderSearchIntegrationEnabled' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
 	],
 	'wgArticlePlaceholderRepoApiUrl' => [
-		'default' => '',
-		'gratispaideiawiki' => 'https://gratisdata.miraheze.org/w/api.php',
+		'default' => 'https://www.wikidata.org/w/api.php',
 	],
+
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
