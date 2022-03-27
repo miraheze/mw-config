@@ -3661,6 +3661,10 @@ $wi->config->settings += [
 			'editfragment',
 			'edittemplate',
 		],
+		'testwiki' => [
+			'bureaucrat',
+			'consul',
+		],
 		'+wmgUseSocialProfile' => [
 			'updatepoints',
 		],
