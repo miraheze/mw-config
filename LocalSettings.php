@@ -3040,16 +3040,6 @@ $wi->config->settings += [
 			'tagline' => false,
 		],
 	],
-	'wgMFNearby' => [
-		'default' => false, 
-		'gratispaideiawiki' => true, 
-		'gratisdatawiki' => true,
-	],
-	'wgMFNearbyEndpoint' => [
-		'default' => '',
-		'gratispaideiawiki' => 'https://gratispaideia.miraheze.org/w/api.php',
-		'gratisdatawiki' => 'https://gratisdata.miraheze.org/w/api.php',
-	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
