@@ -156,6 +156,10 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'publicationDate' => 'P110',
 		'retrievedDate' => 'P200',
 	];
+	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
+	$wgWBClientSettings['linkItemTags'] = [
+		'client-linkitem-change'
+	];
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
