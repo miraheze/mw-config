@@ -2504,23 +2504,6 @@ $wi->config->settings += [
 				'editor' => true,
 			],
 		],
-		'+testwiki' => [
-			'consul' => [
-				'consul' => true,
-				'bureaucrat' => true,
-			],
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-		],
-		'+thesciencearchiveswiki' => [
-			'sysop' => [
-				'templateeditor' => true,
-			],
-			'templateeditor' => [
-				'templateeditor' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
@@ -3660,6 +3643,10 @@ $wi->config->settings += [
 		'simulatorwiki' => [
 			'editfragment',
 			'edittemplate',
+		],
+		'testwiki' => [
+			'bureaucrat',
+			'consul',
 		],
 		'+wmgUseSocialProfile' => [
 			'updatepoints',
