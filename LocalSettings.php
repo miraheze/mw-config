@@ -3988,7 +3988,7 @@ $wi->config->settings += [
 			'css' => [],
 		],
 	],
-	
+
 	// TextExtracts
 	'wgExtractsRemoveClasses' => [
 		'default' => [
