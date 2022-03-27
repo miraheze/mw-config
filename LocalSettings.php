@@ -3034,11 +3034,6 @@ $wi->config->settings += [
 		'default' => true,
 	],
 
-	// MobileFrontend
-	'wgMFNoMobilePages' => [
-		'default' => [],
-	],
-
 	// Math
 	'wgMathoidCli' => [
 		'default' => [
