@@ -14,6 +14,11 @@ class MirahezeFunctions {
 		'default' => '/srv/mediawiki/cache',
 	];
 
+	private const GLOBAL_DATABASE = [
+		'default' => 'mhglobal',
+		'beta' => 'testglobal',
+	];
+
 	private const REALMS = [
 		'betaheze.org' => 'betaheze',
 	];
@@ -29,6 +34,8 @@ class MirahezeFunctions {
 	];
 
 	public function initialise() {
+		self::setupHooks();
+
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = $this->getCurrentDatabase();
 		$this->wikiDBClusters = $this->getDatabaseClusters();
@@ -113,6 +120,12 @@ class MirahezeFunctions {
 		}
 
 		return $databases;
+	}
+
+	public static function setupHooks() {
+		global $wgHooks;
+
+		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 	}
 
 	public static function getRealm() {
@@ -394,5 +407,89 @@ class MirahezeFunctions {
 				}
 			}
 		}
+	}
+
+	private static function getCombiList( $globalDatabase ) {
+		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
+		$allWikis = $dbr->select(
+			'cw_wikis',
+			[
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_deleted',
+				'wiki_url',
+				'wiki_sitename',
+			]
+		);
+
+		$combiList = [];
+		foreach ( $allWikis as $wiki ) {
+			if ( $wiki->wiki_deleted == 1 ) {
+				continue;
+			} else {
+				$combiList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+				];
+
+				if ( $wiki->wiki_url !== null ) {
+					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
+				}
+			}
+		}
+
+		return $combiList;
+	}
+
+	private static function getDeletedList( $globalDatabase ) {
+		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
+		$allWikis = $dbr->select(
+			'cw_wikis',
+			[
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_deleted',
+				'wiki_sitename',
+			]
+		);
+
+		$deletedList = [];
+		foreach ( $allWikis as $wiki ) {
+			if ( $wiki->wiki_deleted == 1 ) {
+				$deletedList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+				];
+			}
+		}
+
+		return $deletedList;
+	}
+
+	public static function onGenerateDatabaseLists( &$databaseLists ) {
+		$databaseLists = [
+			'beta' => [
+				'combi' => self::getCombiList(
+					self::GLOBAL_DATABASE['beta']
+				),
+			],
+			'databases' => [
+				'combi' => self::getCombiList(
+					self::GLOBAL_DATABASE['default']
+				),
+			],
+			'deleted' => [
+				'deleted' => 'databases',
+				'databases' => self::getDeletedList(
+					self::GLOBAL_DATABASE['default']
+				),
+			],
+			'deleted-beta' => [
+				'deleted' => 'databases',
+				'databases' => self::getDeletedList(
+					self::GLOBAL_DATABASE['beta']
+				),
+			],
+		];
 	}
 }
