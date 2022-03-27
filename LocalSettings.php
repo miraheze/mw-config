@@ -3005,11 +3005,6 @@ $wi->config->settings += [
 		'default' => false,
 		'gratispaideiawiki' => true,
 	],
-	'wgMFUseWikibase' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
-		'gratisdatawiki' => true,
-	],
 	'wgMFEnableWikidataDescriptions' => [
 		'default' => [
 			'base' => false,
