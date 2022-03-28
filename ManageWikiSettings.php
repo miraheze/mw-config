@@ -772,7 +772,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'editing',
-		'help' => 'whether to add the default sidebar section for the widget',
+		'help' => 'Whether to add the default sidebar section for the widget.',
 		'requires' => [],
 	],
 	'wgRPSidebarPosition' => [
