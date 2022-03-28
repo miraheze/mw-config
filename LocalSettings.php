@@ -3407,6 +3407,9 @@ $wi->config->settings += [
 	'wmgRPRatingPageBlacklist' => [
 		'default' => false,
 	],
+	'wgRPAddSidebarSection' => [
+		'default' => true,
+	],
 	'wgRPSidebarPosition' => [
 		'default' => 2,
 	],
