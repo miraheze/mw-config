@@ -2962,7 +2962,7 @@ $wi->config->settings += [
 	'wgMFQueryPropModules' => [
 		'default' => [
 			'pageprops',
- ],
+		],
 		'gratisdatawiki' => [
 			'entityterms',
 		],
