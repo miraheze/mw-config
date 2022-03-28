@@ -2435,6 +2435,9 @@ $wi->config->settings += [
 				'globalblock' => true,
 				'centralauth-lock' => true,
 			],
+			'requestwikiblocked' => [
+				'read' => true,
+			],
 			'steward' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -2957,10 +2960,10 @@ $wi->config->settings += [
 		],
 	],
 	'wgMFQueryPropModules' => [
-		'default' => [ 
-			'pageprops', 
-		],
-		'gratisdatawiki' => [ 
+		'default' => [
+			'pageprops',
+ ],
+		'gratisdatawiki' => [
 			'entityterms',
 		],
 	],
@@ -3242,6 +3245,11 @@ $wi->config->settings += [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
+		'+metawiki' => [
+			'requestwikiblocked' => [
+				'requestwiki' => true,
+			],
+		],
 		'+simulatorwiki' => [
 			'moderated' => [
 				'skip-moderation' => true,
