@@ -3001,10 +3001,6 @@ $wi->config->settings += [
 			'prefix' => 'wbs',
 		],
 	],
-	'wgMFVaryOnUA' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
-	],
 	'wgMFEnableWikidataDescriptions' => [
 		'default' => [
 			'base' => false,
