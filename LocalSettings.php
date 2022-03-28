@@ -2956,6 +2956,62 @@ $wi->config->settings += [
 			'amc' => true,
 		],
 	],
+	'wgMFQueryPropModules' => [
+		'default' => [ 
+			'pageprops', 
+		],
+		'gratisdatawiki' => [ 
+			'entityterms',
+		],
+	],
+	'wgMFSearchAPIParams' => [
+		'default' => [
+			'ppprop' => 'displaytitle',
+		],
+		'gratisdatawiki' => [
+			'wbetterms' => 'label',
+		],
+	],
+	'wgMFSearchGenerator' => [
+		'default' => [
+			'name' => 'prefixsearch',
+			'prefix' => 'ps',
+		],
+		'gratisdatawiki' => [
+			'name' => 'wbsearch',
+			'prefix' => 'wbs',
+		],
+	],
+	'wgMFEnableWikidataDescriptions' => [
+		'default' => [
+			'base' => false,
+			'beta' => true,
+		],
+		'gratispaideiawiki' => [
+			'base' => true,
+			'beta' => true,
+		],
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'default' => [
+			'search' => false,
+			'nearby' => false,
+			'watchlist' => false,
+			'tagline' => false,
+		],
+		'gratispaideiawiki' => [
+			'search' => true,
+			'nearby' => false,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+		'gratisdatawiki' => [
+			'search' => true,
+			'nearby' => false,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
