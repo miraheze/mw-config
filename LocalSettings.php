@@ -2960,10 +2960,10 @@ $wi->config->settings += [
 		],
 	],
 	'wgMFQueryPropModules' => [
-		'default' => [ 
-			'pageprops', 
-		],
-		'gratisdatawiki' => [ 
+		'default' => [
+			'pageprops',
+ ],
+		'gratisdatawiki' => [
 			'entityterms',
 		],
 	],
