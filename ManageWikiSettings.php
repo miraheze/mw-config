@@ -766,6 +766,15 @@ $wgManageWikiSettings = [
 		'help' => 'Page titles that are not allowed to be rated.',
 		'requires' => [],
 	],
+	'wgRPAddSidebarSection' => [
+		'name' => 'Rate Page Add Sidebar Section',
+		'from' => 'ratepage',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Whether to add the default sidebar section for the widget.',
+		'requires' => [],
+	],
 	'wgRPSidebarPosition' => [
 		'name' => 'Rate Page Sidebar Position',
 		'from' => 'ratepage',
