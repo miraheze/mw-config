@@ -10,7 +10,6 @@ $entitySources = [
 		'entityNamespaces' => [
 			'item' => $wmgWikibaseRepoItemNamespaceID,
 			'property' => $wmgWikibaseRepoPropertyNamespaceID,
-			'lexeme' => $wmgWikibaseRepoLexemeNamespaceID,
 		],
 		'repoDatabase' => $wmgWikibaseRepoDatabase,
 		'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
@@ -21,11 +20,15 @@ $entitySources = [
 	],
 ];
 
+if ( $wi->config->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
+	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
+	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
+}
+
 $wgWBRepoSettings['entitySources'] = $entitySources;
 $wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
 $wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyNamespaceID;
-$wgWBRepoSettings['entityNamespaces']['lexeme'] = $wmgWikibaseRepoLexemeNamespaceID;
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
 $wgWBRepoSettings['enableEntitySearchUI'] = $wmgEnableEntitySearchUI;
 $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled;
