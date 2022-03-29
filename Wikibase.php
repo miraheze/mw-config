@@ -170,6 +170,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
 }
+
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0, 4, 14 ];
