@@ -140,8 +140,36 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		],
 	];
 	$wgWBRepoSettings['allowEntityImport'] = false;
+	$wgWBRepoSettings['globeUris'] = [
+		'http://gratisdata.miraheze.org/entity/Q476' => 'earth',
+		'http://gratisdata.miraheze.org/entity/Q987' => 'mercury',
+		'http://gratisdata.miraheze.org/entity/Q981' => 'venus',
+		'http://gratisdata.miraheze.org/entity/Q985' => 'moon',
+		'http://gratisdata.miraheze.org/entity/Q806' => 'mars',
+		'http://gratisdata.miraheze.org/entity/Q2126' => 'phobos',
+		'http://gratisdata.miraheze.org/entity/Q2118' => 'deimos',
+		'http://gratisdata.miraheze.org/entity/Q967' => 'ganymede',
+		'http://gratisdata.miraheze.org/entity/Q961' => 'callisto',
+		'http://gratisdata.miraheze.org/entity/Q990' => 'io',
+		'http://gratisdata.miraheze.org/entity/Q965' => 'europa',
+		'http://gratisdata.miraheze.org/entity/Q986' => 'mimas',
+		'http://gratisdata.miraheze.org/entity/Q964' => 'enceladus',
+		'http://gratisdata.miraheze.org/entity/Q984' => 'tethys',
+		'http://gratisdata.miraheze.org/entity/Q963' => 'dione',
+		'http://gratisdata.miraheze.org/entity/Q988' => 'rhea',
+		'http://gratisdata.miraheze.org/entity/Q983' => 'titan',
+		'http://gratisdata.miraheze.org/entity/Q2119' => 'hyperion',
+		'http://gratisdata.miraheze.org/entity/Q989' => 'iapetus',
+		'http://gratisdata.miraheze.org/entity/Q966' => 'phoebe',
+		'http://gratisdata.miraheze.org/entity/Q2122' => 'miranda',
+		'http://gratisdata.miraheze.org/entity/Q2117' => 'ariel',
+		'http://gratisdata.miraheze.org/entity/Q2129' => 'umbriel',
+		'http://gratisdata.miraheze.org/entity/Q2128' => 'titania',
+		'http://gratisdata.miraheze.org/entity/Q2125' => 'oberon',
+		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
+		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
+	];
 }
-
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0, 4, 14 ];
