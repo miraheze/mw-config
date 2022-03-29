@@ -196,7 +196,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['allowLocalShortDesc'] = true;
 	$wgWBClientSettings['forceLocalShortDesc'] = true;
-	$wgWBClientSettings['allowDataTransclusion'] = true;
+	$wgWBClientSettings['showExternalRecentChanges'] = true;
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
