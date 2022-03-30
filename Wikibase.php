@@ -160,6 +160,12 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['linkItemTags'] = [
 		'client-linkitem-change'
 	];
+	$wgWBClientSettings['otherProjectsLinks'] = [
+		'gratisdatawiki',
+		'metawiki',
+		'commonswiki',
+		'benpediawiki',
+	];
 }
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
