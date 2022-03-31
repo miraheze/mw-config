@@ -29,6 +29,7 @@
  * skin: adds a drop down selection box for selecting a single enabled skin.
  * skins: adds a drop down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
+ * texts: see above, except multiple text values for inserting into a configuration array.
  * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
  * user: adds an autocomplete text box to select a single user on the wiki.
