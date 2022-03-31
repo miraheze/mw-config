@@ -63,6 +63,9 @@ if (
 	$wi->config->get( 'wmgUseLinter', $wi->dbname )
 ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
+
+	$wgVirtualRestConfig['global']['HTTPProxy'] = 'http://bast.miraheze.org:8080';
+
 	$wgVirtualRestConfig['modules']['parsoid'] = [
 		'url' => "{$wi->server}/w/rest.php",
 		'domain' => $wi->server,
