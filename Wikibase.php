@@ -194,9 +194,8 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['echoIcon'] = [
 		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 	];
-	$wgWBClientSettings['allowLocalShortDesc'] = true;
-	$wgWBClientSettings['forceLocalShortDesc'] = true;
 }
+
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 }
