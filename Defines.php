@@ -69,7 +69,6 @@ if (
 		'prefix' => $wi->dbname,
 		'forwardCookies' => true,
 		'restbaseCompat' => false,
-		'sslVerifyCert' => false,
 		'sslVerifyHost' => false,
 		'timeout' => 15,
 	];
