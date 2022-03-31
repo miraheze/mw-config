@@ -20,6 +20,11 @@ $entitySources = [
 	],
 ];
 
+if ( $wi->config->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
+	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
+	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
+}
+
 $wgWBRepoSettings['entitySources'] = $entitySources;
 $wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
