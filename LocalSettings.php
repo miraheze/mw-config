@@ -1117,17 +1117,8 @@ $wi->config->settings += [
 	],
 
 	// DiscordNotifications
-	'wgDiscordFromName' => [
-		'default' => '',
-	],
 	'wgDiscordAvatarUrl' => [
 		'default' => '',
-	],
-	'wgDiscordShowNewUserEmail' => [
-		'default' => false,
-	],
-	'wgDiscordShowNewUserIP' => [
-		'default' => false,
 	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
@@ -1150,11 +1141,14 @@ $wi->config->settings += [
 	'wgDiscordNotificationProtectedArticle' => [
 		'default' => true,
 	],
-	'wgDiscordNotificationsShowSuppressed' => [
+	'wgDiscordNotificationAfterImportPage' => [
+		'default' => true,
+	],
+	'wgDiscordNotificationShowSuppressed' => [
 		'default' => false,
 	],
 	'wgDiscordNotificationWikiUrl' => [
-		'default' => '',
+		'default' => $wi->server . '/w/',
 	],
 	'wgDiscordNotificationBlockedUser' => [
 		'default' => true,
@@ -1164,9 +1158,6 @@ $wi->config->settings += [
 	],
 	'wgDiscordShowNewUserFullName' => [
 		'default' => false,
-	],
-	'wgDiscordAdditionalIncomingWebhookUrls' => [
-		'default' => [],
 	],
 	'wgDiscordIncomingWebhookUrl' => [
 		'default' => '',
