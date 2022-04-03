@@ -432,10 +432,6 @@ if ( $wgUseInstantCommons ) {
 	$wgUseQuickInstantCommons = true;
 }
 
-// Discord
-$wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
-$wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
-
 // Slack
 $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
