@@ -19,4 +19,7 @@
 	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
 		<severity>0</severity>
 	</rule>
+	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
+		<exclude-pattern>initialise/MirahezeFunctions\.php</exclude-pattern>
+	</rule>
 </ruleset>
