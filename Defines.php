@@ -426,12 +426,6 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
-$wgUseQuickInstantCommons = false;
-if ( $wgUseInstantCommons ) {
-	$wgUseInstantCommons = false;
-	$wgUseQuickInstantCommons = true;
-}
-
 // Slack
 $wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
 $wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
