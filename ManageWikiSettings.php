@@ -29,6 +29,7 @@
  * skin: adds a drop down selection box for selecting a single enabled skin.
  * skins: adds a drop down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
+ * texts: see above, except multiple text values for inserting into a configuration array.
  * timezone: adds a dropdown for timezone selection.
  * url: adds a single line text entry which requires a full URL.
  * user: adds an autocomplete text box to select a single user on the wiki.
@@ -766,6 +767,15 @@ $wgManageWikiSettings = [
 		'help' => 'Page titles that are not allowed to be rated.',
 		'requires' => [],
 	],
+	'wgRPAddSidebarSection' => [
+		'name' => 'Rate Page Add Sidebar Section',
+		'from' => 'ratepage',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Whether to add the default sidebar section for the widget.',
+		'requires' => [],
+	],
 	'wgRPSidebarPosition' => [
 		'name' => 'Rate Page Sidebar Position',
 		'from' => 'ratepage',
@@ -784,6 +794,42 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'editing',
 		'help' => 'Whether to show page\'s rating before the user votes.',
+		'requires' => [],
+	],
+	'wgPageFormsRenameEditTabs' => [
+		'name' => 'Page Forms Rename Edit Tabs',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Rename the "edit with form" tab to "edit", and the "edit" tab to "edit source" (in whatever language the wiki is being viewed in).',
+		'requires' => [],
+	],
+	'wgPageFormsRenameMainEditTab' => [
+		'name' => 'Page Forms Rename Main Edit Tab',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Rename only the "edit" tab to "edit source" (in whatever language the wiki is being viewed in).',
+		'requires' => [],
+	],
+	'wgPageFormsSimpleUpload' => [
+		'name' => 'Page Forms Simple Upload',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Set uploadable fields to use the operating system\'s own uploading directly, instead of using MediaWiki\'s uploading system - this gives the user fewer options, but it is a simpler process, and on mobile devices it can present some interesting options, like uploading photos right after they are taken.',
+		'requires' => [],
+	],
+	'wgPageFormsLinkAllRedLinksToForms' => [
+		'name' => 'Page Forms Link All Red Links To Forms',
+		'from' => 'pageforms',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'For red links not defined by #formredlink and not pointing to a form-associated namespace, have every such link point to a helper page, that lets the user choose which of the wiki\'s forms to use to create this page - or to use no form at all.',
 		'requires' => [],
 	],
 
@@ -1107,14 +1153,14 @@ $wgManageWikiSettings = [
 		'help' => 'This option adds a textbox on Special:Upload enabling you to upload files from any URL.',
 		'requires' => [],
 	],
-	'wgUseInstantCommons' => [
+	'wgUseQuickInstantCommons' => [
 		'name' => 'Enable Wikimedia Commons Files',
-		'from' => 'mediawiki',
+		'from' => 'quickinstantcommons',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'This option allows you to use the WikiMedia Commons file database on your wiki.',
+		'help' => 'This option allows you to use the Wikimedia Commons file database on your wiki. This is a performance optimised version of the core <code>$wgUseInstantCommons</code>.',
 		'requires' => [],
 	],
 	'wgMirahezeCommons' => [
@@ -4044,7 +4090,43 @@ $wgManageWikiSettings = [
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Property namespace for Wikibase Repository.',
 		'requires' => [],
-	]
+	],
+	'wgArticlePlaceholderImageProperty' => [
+		'name' => 'Article Placeholder Image Property',
+		'from' => 'articleplaceholder',
+		'type' => 'text',
+		'overridedefault' => 'P18',
+		'section' => 'wikibase',
+		'help' => 'Sets the property used to display the main image of an item.',
+		'requires' => [],
+	],
+	'wgArticlePlaceholderSearchEngineIndexed' => [
+		'name' => 'Article Placeholder Search Engine Indexed',
+		'from' => 'articleplaceholder',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Configures whether placeholders will be indexable by search engines. Setting it to true will unconditionally enable indexing, while setting it to false will disable indexing.',
+		'requires' => [],
+	],
+	'wgArticlePlaceholderReferencesBlacklist' => [
+		'name' => 'Article Placeholder References Blacklist',
+		'from' => 'articleplaceholder',
+		'type' => 'text',
+		'overridedefault' => 'P143',
+		'section' => 'wikibase',
+		'help' => 'Takes a property ID and blacklists the references that use the given property.',
+		'requires' => [],
+	],
+	'wgArticlePlaceholderRepoApiUrl' => [
+		'name' => 'Article Placeholder Repo API URL',
+		'from' => 'articleplaceholder',
+		'type' => 'text',
+		'overridedefault' => 'https://www.wikidata.org/w/api.php',
+		'section' => 'wikibase',
+		'help' => 'Sets the property used to display the main image of an item.',
+		'requires' => [],
+	],
 ];
 
 if (

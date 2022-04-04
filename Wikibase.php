@@ -20,6 +20,11 @@ $entitySources = [
 	],
 ];
 
+if ( $wi->config->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
+	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
+	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
+}
+
 $wgWBRepoSettings['entitySources'] = $entitySources;
 $wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
@@ -93,21 +98,6 @@ if ( $wgDBname === 'famedatawiki' ) {
 			],
 		],
 	];
-	// Formats that shall be available via Special:EntityData.
-	// The first format will be used as the default.
-	$wgWBRepoSettings['entityDataFormats'] = [
-		// using the API
-		'json', // default
-		'php',
-		// using purtle
-		'rdfxml',
-		'n3',
-		'turtle',
-		'ntriples',
-		'jsonld',
-		// hardcoded internal handling
-		'html',
-	];
 }
 
 if ( $wgDBname === 'famepediawiki' ) {
@@ -155,6 +145,36 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		],
 	];
 	$wgWBRepoSettings['allowEntityImport'] = false;
+	$wgWBRepoSettings['preferredPageImagesProperties'] = [
+		// Photos
+		'P386',
+		'P520',
+		'P521',
+		'P522',
+		'P523',
+		'P524',
+		// Complex graphics
+		'P135',
+		'P136',
+		'P387',
+		'P525',
+		// Simple graphics
+		'P526',
+		'P527',
+		'P528',
+		'P470',
+		'P529',
+		// Multi page content
+		'P530',
+		// Maps
+		'P531',
+		'P327',
+		'P532',
+		'P533',
+	];
+	$wgWBRepoSettings['preferredGeoDataProperties'] = [
+		'P134',
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -171,7 +191,16 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'publicationDate' => 'P110',
 		'retrievedDate' => 'P200',
 	];
+	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
+	$wgWBClientSettings['linkItemTags'] = [
+		'client-linkitem-change'
+	];
+	$wgWBClientSettings['sendEchoNotification'] = true;
+	$wgWBClientSettings['echoIcon'] = [
+		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
+	];
 }
+
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 }

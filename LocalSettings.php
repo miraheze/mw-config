@@ -216,11 +216,11 @@ $wgConf->settings = [
 		'default' => true,
 	],
 	'egApprovedRevsShowApproveLatest' => [
-		'default' => null,
+		'default' => false,
 		'primalfeararkwiki' => true,
 	],
 	'egApprovedRevsShowNotApprovedMessage' => [
-		'default' => null,
+		'default' => false,
 		'primalfeararkwiki' => true,
 	],
 
@@ -235,24 +235,17 @@ $wgConf->settings = [
 	// ArticlePlaceholder
 	'wgArticlePlaceholderImageProperty' => [
 		'default' => 'P18',
-		'gratispaideiawiki' => 'P386',
 	],
 	'wgArticlePlaceholderReferencesBlacklist' => [
 		'default' => 'P143',
-		'gratispaideiawiki' => 'P193',
 	],
 	'wgArticlePlaceholderSearchEngineIndexed' => [
 		'default' => false,
-		'gratispaideiawiki' => true,
-	],
-	'wgArticlePlaceholderSearchIntegrationEnabled' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
 	],
 	'wgArticlePlaceholderRepoApiUrl' => [
-		'default' => '',
-		'gratispaideiawiki' => 'https://gratisdata.miraheze.org/w/api.php',
+		'default' => 'https://www.wikidata.org/w/api.php',
 	],
+
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
@@ -856,10 +849,11 @@ $wgConf->settings = [
 			'webmail',
 			'phabricator',
 			'static',
-			'matomo',
 			'grafana',
 			'icinga',
 			'csw(\d+)?',
+			'matomo(\d+)?',
+			'prometheus(\d+)?',
 			'misc\d+',
 			'db\d+',
 			'cp\d+',
@@ -1121,17 +1115,8 @@ $wgConf->settings = [
 	],
 
 	// DiscordNotifications
-	'wgDiscordFromName' => [
-		'default' => '',
-	],
 	'wgDiscordAvatarUrl' => [
 		'default' => '',
-	],
-	'wgDiscordShowNewUserEmail' => [
-		'default' => false,
-	],
-	'wgDiscordShowNewUserIP' => [
-		'default' => false,
 	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
@@ -1154,23 +1139,20 @@ $wgConf->settings = [
 	'wgDiscordNotificationProtectedArticle' => [
 		'default' => true,
 	],
-	'wgDiscordNotificationsShowSuppressed' => [
+	'wgDiscordNotificationAfterImportPage' => [
+		'default' => true,
+	],
+	'wgDiscordNotificationShowSuppressed' => [
 		'default' => false,
 	],
 	'wgDiscordNotificationWikiUrl' => [
-		'default' => '',
+		'default' => $wi->server . '/w/',
 	],
 	'wgDiscordNotificationBlockedUser' => [
 		'default' => true,
 	],
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
-	],
-	'wgDiscordShowNewUserFullName' => [
-		'default' => false,
-	],
-	'wgDiscordAdditionalIncomingWebhookUrls' => [
-		'default' => [],
 	],
 	'wgDiscordIncomingWebhookUrl' => [
 		'default' => '',
@@ -1405,7 +1387,7 @@ $wgConf->settings = [
 			'svg',
 		],
 	],
-	'wgUseInstantCommons' => [
+	'wgUseQuickInstantCommons' => [
 		'default' => true,
 	],
 	'wgMaxImageArea' => [
@@ -1800,6 +1782,9 @@ $wgConf->settings = [
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
+		],
+		'+loginwiki' => [
+			'testwikiwiki',
 		],
 		'+memedatawiki' => [
 			'd',
@@ -2436,6 +2421,9 @@ $wgConf->settings = [
 				'globalblock' => true,
 				'centralauth-lock' => true,
 			],
+			'requestwikiblocked' => [
+				'read' => true,
+			],
 			'steward' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -2505,23 +2493,6 @@ $wgConf->settings = [
 				'editor' => true,
 			],
 		],
-		'+testwiki' => [
-			'consul' => [
-				'consul' => true,
-				'bureaucrat' => true,
-			],
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-		],
-		'+thesciencearchiveswiki' => [
-			'sysop' => [
-				'templateeditor' => true,
-			],
-			'templateeditor' => [
-				'templateeditor' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
@@ -2570,6 +2541,7 @@ $wgConf->settings = [
 				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-oversight',
+				'centralauth-suppress',
 				'centralauth-rename',
 				'centralauth-unmerge',
 				'centralauth-usermerge',
@@ -2973,6 +2945,62 @@ $wgConf->settings = [
 			'amc' => true,
 		],
 	],
+	'wgMFQueryPropModules' => [
+		'default' => [
+			'pageprops',
+		],
+		'gratisdatawiki' => [
+			'entityterms',
+		],
+	],
+	'wgMFSearchAPIParams' => [
+		'default' => [
+			'ppprop' => 'displaytitle',
+		],
+		'gratisdatawiki' => [
+			'wbetterms' => 'label',
+		],
+	],
+	'wgMFSearchGenerator' => [
+		'default' => [
+			'name' => 'prefixsearch',
+			'prefix' => 'ps',
+		],
+		'gratisdatawiki' => [
+			'name' => 'wbsearch',
+			'prefix' => 'wbs',
+		],
+	],
+	'wgMFEnableWikidataDescriptions' => [
+		'default' => [
+			'base' => false,
+			'beta' => true,
+		],
+		'gratispaideiawiki' => [
+			'base' => true,
+			'beta' => true,
+		],
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'default' => [
+			'search' => false,
+			'nearby' => false,
+			'watchlist' => false,
+			'tagline' => false,
+		],
+		'gratispaideiawiki' => [
+			'search' => true,
+			'nearby' => false,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+		'gratisdatawiki' => [
+			'search' => true,
+			'nearby' => false,
+			'watchlist' => true,
+			'tagline' => false,
+		],
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
@@ -3026,11 +3054,6 @@ $wgConf->settings = [
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => [
 		'default' => true,
-	],
-
-	// MobileFrontend
-	'wgMFNoMobilePages' => [
-		'default' => [],
 	],
 
 	// Math
@@ -3158,9 +3181,17 @@ $wgConf->settings = [
 	],
 
 	// PageForms
+	'wgPageFormsRenameEditTabs' => [
+		'default' => false,
+	],
+	'wgPageFormsRenameMainEditTab' => [
+		'default' => false,
+	],
+	'wgPageFormsSimpleUpload' => [
+		'default' => false,
+	],
 	'wgPageFormsLinkAllRedLinksToForms' => [
 		'default' => false,
-		'frontierrpgwiki' => true,
 	],
 
 	// Page Size
@@ -3200,6 +3231,11 @@ $wgConf->settings = [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
+		'+metawiki' => [
+			'requestwikiblocked' => [
+				'requestwiki' => true,
+			],
+		],
 		'+simulatorwiki' => [
 			'moderated' => [
 				'skip-moderation' => true,
@@ -3421,6 +3457,9 @@ $wgConf->settings = [
 	'wmgRPRatingPageBlacklist' => [
 		'default' => false,
 	],
+	'wgRPAddSidebarSection' => [
+		'default' => true,
+	],
 	'wgRPSidebarPosition' => [
 		'default' => 2,
 	],
@@ -3504,6 +3543,11 @@ $wgConf->settings = [
 		],
 		'+bigforestwiki' => [
 			'editvoter',
+		],
+		'+celebswiki' => [
+			'editmoduleprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'+cmgwiki' => [
 			'bureaucrat',
@@ -3605,6 +3649,11 @@ $wgConf->settings = [
 			'editrestrictedtemplateprotected',
 			'editimportprotected',
 		],
+		'celebswiki' => [
+			'editmoduleprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
+		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -3647,6 +3696,10 @@ $wgConf->settings = [
 		'simulatorwiki' => [
 			'editfragment',
 			'edittemplate',
+		],
+		'testwiki' => [
+			'bureaucrat',
+			'consul',
 		],
 		'+wmgUseSocialProfile' => [
 			'updatepoints',
@@ -3969,6 +4022,33 @@ $wgConf->settings = [
 		],
 	],
 
+	// TextExtracts
+	'wgExtractsRemoveClasses' => [
+		'default' => [
+			'table',
+			'div',
+			'script',
+			'input',
+			'style',
+			'ul.gallery',
+			'.mw-editsection',
+			'sup.reference',
+			'ol.references',
+			'.error',
+			'.nomobile',
+			'.noprint',
+			'.noexcerpt',
+			'.sortkey',
+		],
+		'+gratispaideiawiki' => [
+			'.metadata',
+			'span.coordinates',
+			'span.geo-multi-punct',
+			'span.geo-nondefault',
+			'#coordinates',
+		],
+	],
+
 	// TimedMediaHandler
 	'wgOggThumbLocation' => [
 		'default' => false,
@@ -4087,12 +4167,14 @@ $wgConf->settings = [
 	'wgTweekiSkinUseIconWatch' => [
 		'default' => false,
 	],
-		'wgTweekiSkinHideAnon' => [
-				'subnav' => [
-						'default' => true,
-						'obeymewiki' => false,
-				],
+	'wgTweekiSkinHideAnon' => [
+		'default' => [
+			'subnav' => true
 		],
+		'obeymewiki' => [
+			'subnav' => false,
+		],
+	],
 
 	// Uploads
 	'wmgPrivateUploads' => [
