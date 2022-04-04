@@ -426,12 +426,6 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
-$wgUseQuickInstantCommons = false;
-if ( $wgUseInstantCommons ) {
-	$wgUseInstantCommons = false;
-	$wgUseQuickInstantCommons = true;
-}
-
 // Discord
 $wi->config->settings['wgDiscordFromName']['default'] = $wgSitename;
 $wi->config->settings['wgDiscordNotificationWikiUrl']['default'] = $wgServer . '/w/';
