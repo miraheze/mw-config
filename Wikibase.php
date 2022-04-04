@@ -199,6 +199,12 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['echoIcon'] = [
 		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 	];
+	$wgWBClientSettings['otherProjectsLinks'] = [
+		'gratisdatawiki',
+		'metawiki',
+		'commonswiki',
+		'benpediawiki',
+	];
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
