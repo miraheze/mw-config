@@ -1156,9 +1156,6 @@ $wi->config->settings += [
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
 	],
-	'wgDiscordShowNewUserFullName' => [
-		'default' => false,
-	],
 	'wgDiscordIncomingWebhookUrl' => [
 		'default' => '',
 	],
