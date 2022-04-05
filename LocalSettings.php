@@ -1240,6 +1240,29 @@ $wi->config->settings += [
 	'wgEmbedVideoRequireConsent' => [
 		'default' => true,
 	],
+	
+	// Evelution
+	'wgEvelutionLeftPersonalLinks' => [
+		'default' => false,
+	],
+	'wgEvelutionDisableColorManagement' => [
+		'default' => false,
+	],
+	'wgEvelutionDisableRightRail' => [
+		'default' => false,
+	],
+	'wgEvelutionServerMode' => [
+		'default' => false,
+	],
+	'wgEvelutionStickyRail' => [
+		'default' => true,
+	],
+	'wgEvelutionMonoLogo' => [
+		'default' => false,
+	],
+	'wgEvelutionChangeMessageBoxesToBanners' => [
+		'default' => false,
+	],
 
 	// HTTP
 	'wgHTTPConnectTimeout' => [
