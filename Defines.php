@@ -118,7 +118,7 @@ if ( !$cwPrivate ) {
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wgConf->settings['wgDataDumpDownloadUrl']['default'] = '';
-	$wgWhitelistRead = explode( "\n", $wmgWhitelistRead );
+	$wgWhitelistRead = is_string( $wmgWhitelistRead ) ? explode( "\n", $wmgWhitelistRead ) : $wmgWhitelistRead;
 
 	// Never allow Special:Preferences to be whitelisted (T8448)
 	if ( $wgWhitelistRead['Special:Preferences'] ?? false ) {
@@ -159,11 +159,11 @@ if ( $wmgPrivateUploads ) {
 }
 
 if ( $wmgUsersNotifiedOnAllChanges ) {
-	$wgUsersNotifiedOnAllChanges = explode( "\n", $wmgUsersNotifiedOnAllChanges );
+	$wgUsersNotifiedOnAllChanges = is_string( $wmgUsersNotifiedOnAllChanges ) ? explode( "\n", $wmgUsersNotifiedOnAllChanges ) : $wmgUsersNotifiedOnAllChanges;
 }
 
 if ( $wmgRPRatingPageBlacklist ) {
-	$wgRPRatingPageBlacklist = explode( "\n", $wmgRPRatingPageBlacklist );
+	$wgRPRatingPageBlacklist = is_string( $wmgRPRatingPageBlacklist ) ? explode( "\n", $wmgRPRatingPageBlacklist ) : $wmgRPRatingPageBlacklist;
 }
 
 // DataDump

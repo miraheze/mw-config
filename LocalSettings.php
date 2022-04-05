@@ -1238,6 +1238,29 @@ $wgConf->settings = [
 	'wgEmbedVideoRequireConsent' => [
 		'default' => true,
 	],
+	
+	// Evelution
+	'wgEvelutionLeftPersonalLinks' => [
+		'default' => false,
+	],
+	'wgEvelutionDisableColorManagement' => [
+		'default' => false,
+	],
+	'wgEvelutionDisableRightRail' => [
+		'default' => false,
+	],
+	'wgEvelutionServerMode' => [
+		'default' => false,
+	],
+	'wgEvelutionStickyRail' => [
+		'default' => true,
+	],
+	'wgEvelutionMonoLogo' => [
+		'default' => false,
+	],
+	'wgEvelutionChangeMessageBoxesToBanners' => [
+		'default' => false,
+	],
 
 	// HTTP
 	'wgHTTPConnectTimeout' => [
@@ -4735,6 +4758,13 @@ $wgConf->settings = [
 	],
 
 	// Logging configuation (Graylog)
+	
+	// Temporary config used to faciliate the migration
+	// to rsyslog.
+	'wmgSyslogHandler' => [
+		'default' => 'syslog-ng',
+		'betaheze' => 'rsyslog',
+	],
 	'wmgLogToDisk' => [
 		'default' => false,
 	],
