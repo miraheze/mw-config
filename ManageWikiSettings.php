@@ -2876,22 +2876,13 @@ $wgManageWikiSettings = [
 		'help' => 'Makes content area being always at its maximum width, and cannot be toggled back to its original width.',
 		'requires' => [],
 	],
-	'wgEvelutionDisableRightRailFromSpecificPages' => [
-		'name' => 'Disable Evelution Right Rail from specific pages',
-		'from' => 'evelution',
-		'type' => 'wikipages',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'Makes the wiki\'s logo behave like the wiki\'s wordmark (Making it masked so it adapts any color). This is highly recommended for plain black or white logos.',
-		'requires' => [],
-	],
 	'wgEvelutionMonoLogo' => [
 		'name' => 'Make Evelution Logo monochrome',
 		'from' => 'evelution',
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'Disables the right rail that appears on those pages while on <code>?action=view</code>.  Requires <code>$wgEvelutionDisableRightRail</code> to not be set to work.',
+		'help' => 'Makes the wiki\'s logo behave like the wiki\'s wordmark (Making it masked so it adapts any color). This is highly recommended for plain black or white logos.',
 		'requires' => [],
 	],
 	'wgEvelutionChangeMessageBoxesToBanners' => [
