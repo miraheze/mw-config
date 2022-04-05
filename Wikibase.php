@@ -20,6 +20,11 @@ $entitySources = [
 	],
 ];
 
+if ( $wi->config->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
+	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
+	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
+}
+
 $wgWBRepoSettings['entitySources'] = $entitySources;
 $wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
@@ -199,6 +204,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
+
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -219,7 +225,18 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['linkItemTags'] = [
 		'client-linkitem-change'
 	];
+	$wgWBClientSettings['sendEchoNotification'] = true;
+	$wgWBClientSettings['echoIcon'] = [
+		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
+	];
+	$wgWBClientSettings['otherProjectsLinks'] = [
+		'gratisdatawiki',
+		'metawiki',
+		'commonswiki',
+		'benpediawiki',
+	];
 }
+
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 }

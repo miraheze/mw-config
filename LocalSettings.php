@@ -1117,17 +1117,8 @@ $wi->config->settings += [
 	],
 
 	// DiscordNotifications
-	'wgDiscordFromName' => [
-		'default' => '',
-	],
 	'wgDiscordAvatarUrl' => [
 		'default' => '',
-	],
-	'wgDiscordShowNewUserEmail' => [
-		'default' => false,
-	],
-	'wgDiscordShowNewUserIP' => [
-		'default' => false,
 	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
@@ -1150,23 +1141,20 @@ $wi->config->settings += [
 	'wgDiscordNotificationProtectedArticle' => [
 		'default' => true,
 	],
-	'wgDiscordNotificationsShowSuppressed' => [
+	'wgDiscordNotificationAfterImportPage' => [
+		'default' => true,
+	],
+	'wgDiscordNotificationShowSuppressed' => [
 		'default' => false,
 	],
 	'wgDiscordNotificationWikiUrl' => [
-		'default' => '',
+		'default' => $wi->server . '/w/',
 	],
 	'wgDiscordNotificationBlockedUser' => [
 		'default' => true,
 	],
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
-	],
-	'wgDiscordShowNewUserFullName' => [
-		'default' => false,
-	],
-	'wgDiscordAdditionalIncomingWebhookUrls' => [
-		'default' => [],
 	],
 	'wgDiscordIncomingWebhookUrl' => [
 		'default' => '',
@@ -1251,6 +1239,29 @@ $wi->config->settings += [
 	],
 	'wgEmbedVideoRequireConsent' => [
 		'default' => true,
+	],
+
+	// Evelution
+	'wgEvelutionLeftPersonalLinks' => [
+		'default' => false,
+	],
+	'wgEvelutionDisableColorManagement' => [
+		'default' => false,
+	],
+	'wgEvelutionDisableRightRail' => [
+		'default' => false,
+	],
+	'wgEvelutionServerMode' => [
+		'default' => false,
+	],
+	'wgEvelutionStickyRail' => [
+		'default' => true,
+	],
+	'wgEvelutionMonoLogo' => [
+		'default' => false,
+	],
+	'wgEvelutionChangeMessageBoxesToBanners' => [
+		'default' => false,
 	],
 
 	// HTTP
@@ -1401,7 +1412,7 @@ $wi->config->settings += [
 			'svg',
 		],
 	],
-	'wgUseInstantCommons' => [
+	'wgUseQuickInstantCommons' => [
 		'default' => true,
 	],
 	'wgMaxImageArea' => [
@@ -4749,6 +4760,13 @@ $wi->config->settings += [
 	],
 
 	// Logging configuation (Graylog)
+
+	// Temporary config used to faciliate the migration
+	// to rsyslog.
+	'wmgSyslogHandler' => [
+		'default' => 'syslog-ng',
+		'betaheze' => 'rsyslog',
+	],
 	'wmgLogToDisk' => [
 		'default' => false,
 	],
