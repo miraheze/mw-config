@@ -1238,7 +1238,7 @@ $wgConf->settings = [
 	'wgEmbedVideoRequireConsent' => [
 		'default' => true,
 	],
-	
+
 	// Evelution
 	'wgEvelutionLeftPersonalLinks' => [
 		'default' => false,
@@ -4758,7 +4758,7 @@ $wgConf->settings = [
 	],
 
 	// Logging configuation (Graylog)
-	
+
 	// Temporary config used to faciliate the migration
 	// to rsyslog.
 	'wmgSyslogHandler' => [
