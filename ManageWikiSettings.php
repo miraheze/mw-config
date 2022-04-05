@@ -2846,7 +2846,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'Disables the right rail that appears on appears on all pages (except special pages, file pages, MediaWiki pages, and the main page).',
+		'help' => 'Disables the right rail that appears on all pages (except special pages, file pages, MediaWiki pages, and the main page).',
 		'requires' => [],
 	],
 	'wgEvelutionServerMode' => [
