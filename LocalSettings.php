@@ -1257,9 +1257,6 @@ $wi->config->settings += [
 	'wgEvelutionStickyRail' => [
 		'default' => true,
 	],
-	'wgEvelutionDisableRightRailFromSpecificPages' => [
-		'default' => [],
-	],
 	'wgEvelutionMonoLogo' => [
 		'default' => false,
 	],
