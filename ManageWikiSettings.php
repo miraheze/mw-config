@@ -2841,7 +2841,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgEvelutionDisableRightRail' => [
-		'name' => 'Disable Evelution Right Rail',
+		'name' => 'Evelution Disable Right Rail',
 		'from' => 'evelution',
 		'type' => 'check',
 		'overridedefault' => false,
