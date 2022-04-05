@@ -4737,6 +4737,13 @@ $wi->config->settings += [
 	],
 
 	// Logging configuation (Graylog)
+	
+	// Temporary config used to faciliate the migration
+	// to rsyslog.
+	'wmgSyslogHandler' => [
+		'default' => 'syslog-ng',
+		'betaheze' => 'rsyslog',
+	],
 	'wmgLogToDisk' => [
 		'default' => false,
 	],
