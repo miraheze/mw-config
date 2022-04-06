@@ -121,6 +121,20 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgCosmosRailBlacklistedNamespaces' => [
+		'name' => 'Disable Cosmos side rail in this namespace.',
+		'from' => 'cosmos',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [
+			8,
+			9,
+		],
+		'overridedefault' => false,
+		'help' => '',
+		'requires' => [],
+	],
 	'wgNamespaceRobotPolicies' => [
 		'name' => 'What should the robot policy for this namespace be?',
 		'from' => 'mediawiki',
