@@ -751,14 +751,6 @@ $wi->config->settings += [
 	'wgCosmosFooterBackgroundColor' => [
 		'default' => '#c0c0c0',
 	],
-	'wgCosmosRailBlacklistedNamespaces' => [
-		'default' => [
-			NS_SPECIAL,
-			NS_MEDIAWIKI,
-			NS_MEDIAWIKI_TALK
-		],
-			
-	],
 	'wgCosmosLinkColor' => [
 		'default' => '#0645ad',
 	],
