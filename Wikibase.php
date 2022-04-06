@@ -209,6 +209,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'commonswiki',
 		'benpediawiki',
 	];
+	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
