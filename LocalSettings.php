@@ -680,97 +680,35 @@ $wi->config->settings += [
 	],
 
 	// Cosmos
-	'wgCosmosWordmark' => [
-		'default' => false,
-	],
 	'wgCosmosBackgroundImage' => [
-		'default' => false,
-	],
-	'wgCosmosBackgroundImageSize' => [
-		'default' => 'cover',
-	],
-	'wgCosmosMainBackgroundColor' => [
-		'default' => '#1A1A1A',
-	],
-	'wgCosmosContentBackgroundColor' => [
-		'default' => '#ffffff',
-	],
-	'wgCosmosBannerBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosWikiHeaderBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosLinkColor' => [
-		'default' => '#0645ad',
-	],
-	'wgCosmosButtonBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosToolbarBackgroundColor' => [
-		'default' => '#000000',
-	],
-	'wgCosmosFooterBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
-		'default' => true,
-	],
-	'wgCosmosBackgroundImageRepeat' => [
 		'default' => false,
 	],
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
 	],
+	'wgCosmosBackgroundImageRepeat' => [
+		'default' => false,
+	],
+	'wgCosmosBackgroundImageSize' => [
+		'default' => 'cover',
+	],
+	'wgCosmosBannerBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosButtonBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosContentBackgroundColor' => [
+		'default' => '#ffffff',
+	],
 	'wgCosmosContentWidth' => [
 		'default' => 'default',
 	],
-	'wgCosmosUseWVUISearch' => [
-		'default' => true,
-	],
-	'wgCosmosSearchUseActionAPI' => [
-		'default' => true,
-	],
-	'wgCosmosSearchDescriptionSource' => [
-		'default' => 'textextracts',
-	],
-	'wgCosmosMaxSearchResults' => [
-		'default' => 6,
-	],
-	'wgCosmosSocialProfileModernTabs' => [
-		'default' => true,
-	],
-	'wgCosmosSocialProfileRoundAvatar' => [
-		'default' => true,
-	],
-	'wgCosmosSocialProfileShowEditCount' => [
-		'default' => true,
-	],
-	'wgCosmosSocialProfileAllowBio' => [
-		'default' => true,
-	],
-	'wgCosmosSocialProfileFollowBioRedirects' => [
-		'default' => false,
-	],
-	'wgCosmosSocialProfileShowGroupTags' => [
-		'default' => true,
-	],
-	'wgCosmosUseSocialProfileAvatar' => [
-		'default' => true,
-	],
-	'wgCosmosSocialProfileTagGroups' => [
-		'default' => [
-			'bureaucrat',
-			'bot',
-			'sysop',
-			'interface-admin'
-		],
-	],
-	'wgCosmosSocialProfileNumberofGroupTags' => [
-		'default' => 2,
-	],
 	'wgCosmosContentOpacityLevel' => [
 		'default' => 100,
+	],
+	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
+		'default' => true,
 	],
 	'wgCosmosEnabledRailModules' => [
 		'default' => [
@@ -810,7 +748,68 @@ $wi->config->settings += [
 		'batmanwiki' => true,
 		'snapwikiwiki' => true,
 	],
-
+	'wgCosmosFooterBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosLinkColor' => [
+		'default' => '#0645ad',
+	],
+	'wgCosmosMainBackgroundColor' => [
+		'default' => '#1A1A1A',
+	],
+	'wgCosmosMaxSearchResults' => [
+		'default' => 6,
+	],
+	'wgCosmosSearchDescriptionSource' => [
+		'default' => 'textextracts',
+	],
+	'wgCosmosSearchUseActionAPI' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileAllowBio' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileFollowBioRedirects' => [
+		'default' => false,
+	],
+	'wgCosmosSocialProfileModernTabs' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileNumberofGroupTags' => [
+		'default' => 2,
+	],
+	'wgCosmosSocialProfileRoundAvatar' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileShowEditCount' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileShowGroupTags' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileTagGroups' => [
+		'default' => [
+			'bureaucrat',
+			'bot',
+			'sysop',
+			'interface-admin'
+		],
+	],
+	'wgCosmosToolbarBackgroundColor' => [
+		'default' => '#000000',
+	],
+	'wgCosmosUseSocialProfileAvatar' => [
+		'default' => true,
+	],
+	'wgCosmosUseWVUISearch' => [
+		'default' => true,
+	],
+	'wgCosmosWikiHeaderBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosWordmark' => [
+		'default' => false,
+	],
 	// CreateWiki
 	'wgCreateWikiDisallowedSubdomains' => [
 		'default' => [
