@@ -753,9 +753,9 @@ $wi->config->settings += [
 	],
 	'wgCosmosRailBlacklistedNamespaces' => [
 		'default' => [
-			'NS_SPECIAL',
-			'NS_MEDIAWIKI',
-			'NS_MEDIAWIKI_TALK'
+			NS_SPECIAL,
+			NS_MEDIAWIKI,
+			NS_MEDIAWIKI_TALK
 		],
 			
 	],
