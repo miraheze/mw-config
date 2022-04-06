@@ -810,6 +810,7 @@ $wi->config->settings += [
 	'wgCosmosWordmark' => [
 		'default' => false,
 	],
+
 	// CreateWiki
 	'wgCreateWikiDisallowedSubdomains' => [
 		'default' => [
