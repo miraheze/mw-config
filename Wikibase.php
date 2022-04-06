@@ -175,6 +175,10 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = [
 		'P134',
 	];
+	$wgWBRepoSettings['siteLinkGroups'] = [
+		'miraheze',
+		'gratispaideia'
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
