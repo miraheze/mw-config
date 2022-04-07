@@ -58,7 +58,11 @@ class MirahezeFunctions {
 		];
 	}
 
-	public static function readDbListFile( $dblist, $onlyDBs = true, $database = null ) {
+	public static function readDbListFile( $dblist, $onlyDBs = true, $database = null, $fromServer = false ) {
+		if ( $database && $onlyDBs && !$fromServer ) {
+			return $database;
+		}
+
 		if ( $dblist === 'all' ) {
 			$dblist = 'databases';
 		}
@@ -72,8 +76,23 @@ class MirahezeFunctions {
 		}
 
 		if ( $database ) {
+			if ( $fromServer ) {
+				$database = array_keys(
+					array_filter(
+						$databasesArray['combi'] ?? $databasesArray['databases'],
+						static function( $data ) use ( $database ) {
+							return $data['u'] === $database;
+						}
+					);
+				)[0] ?? null;
+
+				if ( $onlyDBs ) {
+					return $database;
+				}
+			}
+
 			if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
-				$databases = [ $database => ( $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database] ) ];
+				$databases = $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
 			} else {
 				return null;
 			}
@@ -95,7 +114,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		$domain = StringUtils::explode( '.', self::getServer(), 2 )[1];
+		$domain = explode( '.', self::getServer(), 2 )[1];
 
 		return self::REALMS[$domain] ?? 'default';
 	}
@@ -113,6 +132,16 @@ class MirahezeFunctions {
 
 		if ( $database === 'default' ) {
 			return $servers['default'];
+		}
+
+		if ( $database ) {
+			foreach ( self::SUFFIXES as $suffix ) {
+				if ( substr( $database, -strlen( $suffix ) ) == $suffix ) {
+					$servers[$database] = $database['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+				}
+			}
+
+			return $servers;
 		}
 
 		foreach ( $databases as $db => $data ) {
@@ -133,8 +162,8 @@ class MirahezeFunctions {
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
-		if ( isset( array_flip( self::getServers() )['https://' . $hostname] ) ) {
-			return array_flip( self::getServers() )['https://' . $hostname];
+		if ( self::readDbListFile( 'all', true, 'https://' . $hostname, true ) ) {
+			return self::readDbListFile( 'all', true, 'https://' . $hostname, true );
 		}
 
 		$explode = explode( '.', $hostname, 2 );
