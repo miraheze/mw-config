@@ -4204,6 +4204,13 @@ $wi->config->settings += [
 		],
 	],
 
+	// UploadWizard
+	'wgUploadWizardConfig' => [
+		'wmgUseUploadWizard' => [
+			'campaignExpensiveStatsEnabled' => false,
+		],
+	],
+
 	// Uploads
 	'wmgPrivateUploads' => [
 		'default' => false,
