@@ -37,12 +37,12 @@ class MirahezeFunctions {
 		self::setupHooks();
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
-		$this->dbname = $this->getCurrentDatabase();
-		$this->wikiDBClusters = $this->getDatabaseClusters();
+		$this->dbname = self::getCurrentDatabase();
+		$this->wikiDBClusters = self::getDatabaseClusters();
 
-		$this->server = $this->getServer();
-		$this->sitename = $this->getSitename();
-		$this->missing = $this->isMissing();
+		$this->server = self::getServer();
+		$this->sitename = self::getSitename();
+		$this->missing = self::isMissing();
 
 		$this->setDatabase();
 		$this->setServers();
@@ -129,7 +129,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		$domain = explode( '.', $_SERVER['SERVER_NAME'], 2 )[1];
+		$domain = explode( '.', self::getServer(), 2 )[1];
 
 		return self::REALMS[$domain] ?? 'default';
 	}
@@ -155,16 +155,18 @@ class MirahezeFunctions {
 		return $servers;
 	}
 
-	public function getCurrentDatabase() {
+	public static function getCurrentDatabase() {
 		if ( defined( 'MW_DB' ) ) {
 			return MW_DB;
 		}
 
-		if ( isset( array_flip( self::getServers() )['https://' . $this->hostname] ) ) {
-			return array_flip( self::getServers() )['https://' . $this->hostname];
+		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
+
+		if ( isset( array_flip( self::getServers() )['https://' . $hostname] ) ) {
+			return array_flip( self::getServers() )['https://' . $hostname];
 		}
 
-		$explode = explode( '.', $this->hostname, 2 );
+		$explode = explode( '.', $hostname, 2 );
 
 		if ( $explode[0] == 'www' ) {
 			$explode = explode( '.', $explode[1], 2 );
@@ -183,7 +185,7 @@ class MirahezeFunctions {
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 	}
 
-	public function getDatabaseClusters() {
+	public static function getDatabaseClusters() {
 		$allDatabases = self::readDbListFile( 'all', false );
 		$deletedDatabases = self::readDbListFile( 'deleted', false );
 
@@ -194,8 +196,8 @@ class MirahezeFunctions {
 		return array_combine( array_keys( $databases ), $clusters );
 	}
 
-	public function getServer() {
-		return self::getServers()[$this->getCurrentDatabase()] ??
+	public static function getServer() {
+		return self::getServers()[self::getCurrentDatabase()] ??
 			self::getServers()['default'];
 	}
 
@@ -205,7 +207,7 @@ class MirahezeFunctions {
 		$wgConf->settings['wgServer'] = self::getServers();
 	}
 
-	public function getSitename() {
+	public static function getSitename() {
 		global $wgConf;
 
 		$allDatabases = self::readDbListFile( 'all', false );
@@ -220,13 +222,13 @@ class MirahezeFunctions {
 
 		$wgConf->settings['wgSitename'] = $siteNames;
 
-		return $siteNames[$this->dbname];
+		return $siteNames[self::getCurrentDatabase()];
 	}
 
-	public function isMissing() {
+	public static function isMissing() {
 		global $wgConf;
 
-		return !in_array( $this->getCurrentDatabase(), $wgConf->wikis );
+		return !in_array( self::getCurrentDatabase(), $wgConf->wikis );
 	}
 
 	public function getCacheArray() {
