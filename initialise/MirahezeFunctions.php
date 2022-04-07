@@ -49,7 +49,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getLocalDatabases() {
-		$allDatabases = self::readDbListFile( 'all' );
+		$allDatabases = array_merge( self::readDbListFile( 'all' ), self::readDbListFile( 'beta' ) );
 		$productionDatabases = self::readDbListFile( 'all' );
 
 		return [
@@ -58,62 +58,20 @@ class MirahezeFunctions {
 		];
 	}
 
-	public static function evalDbListExpression( $expr, $type = 'json' ) {
-		$expr = trim( strtok( $expr, "#\n" ), "% " );
-		$tokens = preg_split( '/ +([-+&]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
-		$result = self::readDbListFile( basename( $tokens[0], ".$type" ) );
-		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
-			$dbs = self::readDbListFile( basename( $term, ".$type" ) );
-			if ( $op === '+' ) {
-				$result = array_unique( array_merge( $result, $dbs ) );
-			} elseif ( $op === '-' ) {
-				$result = array_diff( $result, $dbs );
-			} elseif ( $op === '&' ) {
-				$result = array_intersect( $result, $dbs );
-			}
+	public static function readDbListFile( $dblist, $onlyDBs = true ) {
+		if ( $dblist === 'all' ) {
+			$dblist = 'databases';
 		}
 
-		sort( $result );
-
-		return $result;
-	}
-
-	public static function readDbListFile( $dblist, $onlyDBs = true, $type = 'json' ) {
-		if ( $type === 'json' ) {
-			if ( $dblist === 'all' ) {
-				$dblist = 'databases';
-			}
-
-			if ( !file_exists( self::getCacheDirectory() . "/{$dblist}.json" ) ) {
-				$databases = [];
-
-				return $databases;
-			} else {
-				$databasesArray = json_decode( file_get_contents( self::getCacheDirectory() . "/{$dblist}.json" ), true );
-			}
-
-			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
-		} else {
-			$fileName = dirname( __DIR__, 2 ) . '/dblists/' . $dblist . '.dblist';
-			$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
-			if ( !$lines ) {
-				throw new Exception( __METHOD__ . ": unable to read $dblist." );
-			}
-
+		if ( !file_exists( self::getCacheDirectory() . "/{$dblist}.json" ) ) {
 			$databases = [];
-			foreach ( $lines as $line ) {
-				// Ignore empty lines and lines that are comments
-				if ( $line !== '' && $line[0] !== '#' ) {
-					$explode = explode( '|', $line, 4 );
 
-					$databases[ $explode[0] ] = [
-						'c' => $explode[1] ?? 'c1',
-						'u' => $explode[2] ?? $explode[0] . '.' . ( $_SERVER['HTTP_HOST'] ?? 'miraheze.org' ),
-						's' => $explode[3] ?? 'No sitename set.',
-					];
-				}
-			}
+			return $databases;
+		} else {
+			$databasesArray = json_decode( file_get_contents( self::getCacheDirectory() . "/{$dblist}.json" ), true );
 		}
+
+		$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
 
 		if ( $onlyDBs ) {
 			return array_keys( $databases );
