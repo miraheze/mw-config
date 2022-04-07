@@ -20,7 +20,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze will be doing database maintenance on the 7th of April 2022 at 21:00 UTC time. We apologise for any inconvenience caused, this is emergency maintenance.</div></td>
+			<td style="font-size:125%"><div data-nosnippet><b>Miraheze will be doing emergency database maintenance on the 7th of April 2022 at 21:00 UTC time.</b> We apologise for any inconvenience caused.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
