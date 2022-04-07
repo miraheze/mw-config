@@ -154,6 +154,60 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'mediahandlers',
 	],
+	'uploadwizard' => [
+		'name' => 'Upload Wizard',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UploadWizard',
+		'var' => 'wmgUseUploadWizard',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'uw_campaigns' => "$IP/extensions/UploadWizard/sql/mysql/tables-generated.sql"
+			],
+			'namespaces' => [
+				'Campaign' => [
+					'id' => 460,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => 'upwizcampaigns',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'Campaign',
+					'additional' => []
+				],
+				'Campaign_talk' => [
+					'id' => 461,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+			],
+			'permissions' => [
+				'sysop' => [
+					'addgroups' => [
+						'upwizcampeditors',
+					],
+					'removegroups' => [
+						'upwizcampeditors',
+					],
+					'permissions' => [
+						'upwizcampaigns',
+						'mass-upload',
+					],
+				],
+				'upwizcampeditors' => [
+					'permissions' => [
+						'upwizcampaigns',
+					],
+				],
+			],
+		],
+		'section' => 'mediahandlers',
+	],
 
 	// Parser hooks
 	'htmlmetaadntitle' => [
