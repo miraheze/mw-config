@@ -25,7 +25,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 		EOF;
 	}
 
- }
+}
 
 # Specific wiki SiteNotice
 /* if ( $wgUseCategoryBrowser ?? false ) {
