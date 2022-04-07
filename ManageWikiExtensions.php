@@ -162,7 +162,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'uw_campaigns' => "$IP/extensions/UploadWizard/sql/mysql/tables-generated.sql"
+				'uw_campaigns' => "$IP/extensions/UploadWizard/sql/mysql/tables-generated.sql",
 			],
 			'namespaces' => [
 				'Campaign' => [
