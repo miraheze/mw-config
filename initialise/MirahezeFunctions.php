@@ -114,7 +114,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		$domain = explode( '.', self::getServers( self::getCurrentDatabase() ), 2 )[1];
+		$domain = StringUtils::explode( '.', self::getServers( self::getCurrentDatabase() ), 2 )[1];
 
 		return self::REALMS[$domain] ?? 'default';
 	}
