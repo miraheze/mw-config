@@ -96,6 +96,7 @@ $IP/extensions/HeaderFooter/extension.json
 $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json
+$IP/extensions/HitCounters/extension.json
 $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageRating/extension.json
 $IP/extensions/InputBox/extension.json
@@ -253,6 +254,7 @@ $IP/extensions/TreeAndMenu/extension.json
 $IP/extensions/TwitterTag/extension.json
 $IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
+$IP/extensions/UploadWizard/extension.json
 $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UrlGetParameters/extension.json
 $IP/extensions/UrlShortener/extension.json
