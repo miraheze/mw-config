@@ -49,7 +49,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getLocalDatabases() {
-		$allDatabases = self::evalDbListExpression( 'all' );
+		$allDatabases = self::readDbListFile( 'all' );
 		$productionDatabases = self::readDbListFile( 'all' );
 
 		return [
