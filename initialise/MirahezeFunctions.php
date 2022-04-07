@@ -114,17 +114,13 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		static $domain = null;
-
-		if ( $domain === null ) {
-			$domain = StringUtils::explode( '.', self::getServers( self::getCurrentDatabase() ), 2 )[1];
-		}
+		$domain = StringUtils::explode( '.', self::getServers( self::getCurrentDatabase() ), 2 )[1];
 
 		return self::REALMS[$domain] ?? 'default';
 	}
 
 	public static function getCacheDirectory() {
-		return self::CACHE_DIRECTORY[self::getRealm()] ?? self::CACHE_DIRECTORY['default'];
+		return self::CACHE_DIRECTORY['default'];
 	}
 
 	public static function getServers( $database = null ) {
