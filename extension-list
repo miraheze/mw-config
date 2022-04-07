@@ -73,7 +73,6 @@ $IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/FontAwesome/extension.json
 $IP/extensions/ForcePreview/extension.json
-$IP/extensions/HitCounters/extension.json
 $IP/extensions/Gadgets/extension.json
 $IP/extensions/Genealogy/extension.json
 $IP/extensions/GeoCrumbs/extension.json
@@ -97,6 +96,7 @@ $IP/extensions/HeaderFooter/extension.json
 $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json
+$IP/extensions/HitCounters/extension.json
 $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageRating/extension.json
 $IP/extensions/InputBox/extension.json
