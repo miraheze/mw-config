@@ -175,6 +175,10 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = [
 		'P134',
 	];
+	$wgWBRepoSettings['siteLinkGroups'] = [
+		'miraheze',
+		'gratispaideia'
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -205,10 +209,12 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'commonswiki',
 		'benpediawiki',
 	];
+	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
+	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 }
 
 if ( $wgDBname === 'horimiyawiki' ) {
