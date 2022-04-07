@@ -1105,7 +1105,7 @@ $wi->config->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => 'Emergency database maintenance in progress',
+		'default' => false,
 	],
 	'wgSharedTables' => [
 		'default' => [],
