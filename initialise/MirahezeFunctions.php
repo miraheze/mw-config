@@ -58,7 +58,7 @@ class MirahezeFunctions {
 		];
 	}
 
-	public static function readDbListFile( $dblist, $onlyDBs = true ) {
+	public static function readDbListFile( $dblist, $onlyDBs = true, $database = null ) {
 		if ( $dblist === 'all' ) {
 			$dblist = 'databases';
 		}
@@ -71,7 +71,15 @@ class MirahezeFunctions {
 			$databasesArray = json_decode( file_get_contents( self::getCacheDirectory() . "/{$dblist}.json" ), true );
 		}
 
-		$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+		if ( $database ) {
+			if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
+				$databases = [ $database => ( $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database] ) ];
+			} else {
+				return null;
+			}
+		} else {
+			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+		}
 
 		if ( $onlyDBs ) {
 			return array_keys( $databases );
@@ -96,11 +104,16 @@ class MirahezeFunctions {
 		return self::CACHE_DIRECTORY[self::getRealm()] ?? self::CACHE_DIRECTORY['default'];
 	}
 
-	public static function getServers() {
+	public static function getServers( $database = null ) {
 		$servers = [];
-		$databases = self::readDbListFile( 'all', false );
+
+		$databases = self::readDbListFile( 'all', false, $database );
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
+
+		if ( $database === 'default' ) {
+			return $servers['default'];
+		}
 
 		foreach ( $databases as $db => $data ) {
 			foreach ( self::SUFFIXES as $suffix ) {
@@ -155,8 +168,8 @@ class MirahezeFunctions {
 	}
 
 	public static function getServer() {
-		return self::getServers()[self::getCurrentDatabase()] ??
-			self::getServers()['default'];
+		return self::getServers( self::getCurrentDatabase() ) ??
+			self::getServers( 'default' );
 	}
 
 	public function setServers() {
