@@ -114,7 +114,11 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		$domain = StringUtils::explode( '.', self::getServers( self::getCurrentDatabase() ), 2 )[1];
+		static $domain = null;
+
+		if ( $domain === null ) {
+			$domain = StringUtils::explode( '.', self::getServers( self::getCurrentDatabase() ), 2 )[1];
+		}
 
 		return self::REALMS[$domain] ?? 'default';
 	}
@@ -168,10 +172,10 @@ class MirahezeFunctions {
 			return $database;
 		}
 
-		$explode = explode( '.', $hostname, 2 );
+		$explode = StringUtils::explode( '.', $hostname, 2 );
 
 		if ( $explode[0] == 'www' ) {
-			$explode = explode( '.', $explode[1], 2 );
+			$explode = StringUtils::explode( '.', $explode[1], 2 );
 		}
 
 		foreach ( self::SUFFIXES as $suffix => $site ) {
