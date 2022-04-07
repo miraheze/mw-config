@@ -83,7 +83,7 @@ class MirahezeFunctions {
 						static function( $data ) use ( $database ) {
 							return $data['u'] === $database;
 						}
-					);
+					)
 				)[0] ?? null;
 
 				if ( $onlyDBs ) {
