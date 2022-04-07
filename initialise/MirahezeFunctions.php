@@ -162,8 +162,10 @@ class MirahezeFunctions {
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
-		if ( self::readDbListFile( 'all', true, 'https://' . $hostname, true ) ) {
-			return self::readDbListFile( 'all', true, 'https://' . $hostname, true );
+		$database = self::readDbListFile( 'all', true, 'https://' . $hostname, true );
+
+		if ( $database !== null ) {
+			return $database;
 		}
 
 		$explode = explode( '.', $hostname, 2 );
