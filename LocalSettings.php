@@ -1801,6 +1801,9 @@ $wi->config->settings += [
 				'en',
 			],
 		],
+		'+celebswiki' => [
+			'simplewiki',
+		],
 		'+hypixelwiki' => [
 			'hypixelwikifandom',
 		],
