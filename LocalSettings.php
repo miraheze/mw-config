@@ -4945,6 +4945,10 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
+if ( RequestContext::getMain()->getUser()->getName() === 'MirahezeLogbot' ) {
+	$wi->config->settings['wgPasswordAttemptThrottle']['default'] = false;
+}
+
 $wi->readCache();
 
 // ManageWiki settings
