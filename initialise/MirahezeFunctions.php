@@ -10,9 +10,7 @@ class MirahezeFunctions {
 	public $wikiDBClusters;
 	public $disabledExtensions = [];
 
-	private const CACHE_DIRECTORY = [
-		'default' => '/srv/mediawiki/cache',
-	];
+	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
 	private const GLOBAL_DATABASE = [
 		'default' => 'mhglobal',
@@ -76,12 +74,12 @@ class MirahezeFunctions {
 			$dblist = 'deleted';
 		}
 
-		if ( !file_exists( self::getCacheDirectory() . "/{$dblist}.json" ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
 			$databases = [];
 
 			return $databases;
 		} else {
-			$databasesArray = json_decode( file_get_contents( self::getCacheDirectory() . "/{$dblist}.json" ), true );
+			$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
 		}
 
 		if ( $database ) {
@@ -126,10 +124,6 @@ class MirahezeFunctions {
 		$domain = explode( '.', self::getServer(), 2 )[1];
 
 		return self::REALMS[$domain] ?? 'default';
-	}
-
-	public static function getCacheDirectory() {
-		return self::CACHE_DIRECTORY['default'];
 	}
 
 	public static function getServers( $database = null ) {
@@ -237,11 +231,11 @@ class MirahezeFunctions {
 
 	public function getCacheArray() {
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::getCacheDirectory() . '/' . $this->dbname . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ) ) {
 			return false;
 		}
 
-		$this->cacheArray = (array)json_decode( file_get_contents( self::getCacheDirectory() . '/' . $this->dbname . '.json' ), true );
+		$this->cacheArray = (array)json_decode( file_get_contents( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ), true );
 
 		return $this->cacheArray;
 	}
@@ -371,7 +365,7 @@ class MirahezeFunctions {
 			return;
 		}
 
-		if ( !file_exists( self::getCacheDirectory() . '/extension-list.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/extension-list.json' ) ) {
 			$queue = array_fill_keys( array_merge(
 					glob( $wgExtensionDirectory . '/*/extension*.json' ),
 					glob( $wgStyleDirectory . '/*/skin.json' )
@@ -392,9 +386,9 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( self::getCacheDirectory() . '/extension-list.json', json_encode( $list ), LOCK_EX );
+			file_put_contents( self::CACHE_DIRECTORY . '/extension-list.json', json_encode( $list ), LOCK_EX );
 		} else {
-			$list = json_decode( file_get_contents( self::getCacheDirectory() . '/extension-list.json' ), true );
+			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
 		if ( isset( $this->cacheArray['extensions'] ) ) {
