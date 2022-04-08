@@ -41,6 +41,7 @@ class MirahezeFunctions {
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
 		$this->server = self::getServer();
+		var_dump( self::getServer() );
 		$this->sitename = self::getSitename();
 		$this->missing = self::isMissing();
 
