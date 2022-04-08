@@ -45,7 +45,7 @@ $wgConf->wikis = $wi::getLocalDatabases()[ $wi::getRealm() ];
 
 // We need the CLI to be able to access 'deleted' wikis
 if ( PHP_SAPI === 'cli' ) {
-	$wgConf->wikis = array_merge( $wgConf->wikis, $wi::readDbListFile( 'deleted' ) );
+	$wgConf->wikis = array_merge( $wgConf->wikis, $wi::readDbListFile( 'deleted-' . $wi::LISTS[$wi::getRealm()] ) );
 }
 
 $wgLocalDatabases = $wgConf->getLocalDatabases();
