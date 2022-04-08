@@ -1415,6 +1415,9 @@ $wi->config->settings += [
 	'wgUseQuickInstantCommons' => [
 		'default' => true,
 	],
+	'wgQuickInstantCommonsPrefetchMaxLimit' => [
+		'default' => 500,
+	],
 	'wgMaxImageArea' => [
 		'default' => '1.25e7',
 	],
