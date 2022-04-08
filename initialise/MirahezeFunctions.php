@@ -130,16 +130,14 @@ class MirahezeFunctions {
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
-		if ( $database === 'default' ) {
-			return $servers['default'];
-		}
-
 		if ( $database ) {
 			foreach ( self::SUFFIXES as $suffix ) {
 				if ( substr( $database, -strlen( $suffix ) ) == $suffix ) {
 					return $database['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
 				}
 			}
+
+			return $servers['default'];
 		}
 
 		foreach ( $databases as $db => $data ) {
@@ -195,8 +193,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getServer() {
-		return self::getServers( self::getCurrentDatabase() ) ?:
-			self::getServers( 'default' );
+		return self::getServers( self::getCurrentDatabase() );
 	}
 
 	public function setServers() {
