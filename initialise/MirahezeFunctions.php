@@ -140,8 +140,8 @@ class MirahezeFunctions {
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
 		if ( $database ) {
-			foreach ( self::SUFFIXES as $suffix ) {
-				if ( substr( $database, -strlen( $suffix ) ) == $suffix ) {
+			foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
+				if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
 					return $database['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
 				}
 			}
@@ -150,8 +150,8 @@ class MirahezeFunctions {
 		}
 
 		foreach ( $databases as $db => $data ) {
-			foreach ( self::SUFFIXES as $suffix ) {
-				if ( substr( $db, -strlen( $suffix ) ) == $suffix ) {
+			foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
+				if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
 					$servers[$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
 				}
 			}
@@ -173,12 +173,12 @@ class MirahezeFunctions {
 
 		$explode = explode( '.', $hostname, 2 );
 
-		if ( $explode[0] == 'www' ) {
+		if ( $explode[0] === 'www' ) {
 			$explode = explode( '.', $explode[1], 2 );
 		}
 
 		foreach ( self::SUFFIXES as $suffix => $site ) {
-			if ( $explode[1] == $site ) {
+			if ( $explode[1] === $site ) {
 				return $explode[0] . $suffix;
 			}
 		}
@@ -260,7 +260,7 @@ class MirahezeFunctions {
 		// Assign states
 		$wgConf->settings['cwPrivate'][$this->dbname] = (bool)$this->cacheArray['states']['private'];
 		$wgConf->settings['cwClosed'][$this->dbname] = (bool)$this->cacheArray['states']['closed'];
-		$wgConf->settings['cwInactive'][$this->dbname] = ( $this->cacheArray['states']['inactive'] == 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
+		$wgConf->settings['cwInactive'][$this->dbname] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
 		$wgConf->settings['cwExperimental'][$this->dbname] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
 
 		$tags = [];
@@ -491,7 +491,7 @@ class MirahezeFunctions {
 				),
 			],
 			'deleted-beta' => [
-				'deleted' => 'databases',
+				'deleted-beta' => 'databases',
 				'databases' => self::getDeletedList(
 					self::GLOBAL_DATABASE['beta']
 				),
