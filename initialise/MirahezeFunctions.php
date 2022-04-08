@@ -40,7 +40,7 @@ class MirahezeFunctions {
 		$this->dbname = self::getCurrentDatabase();
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
-		$this->server = self::getServers( $this->dbname );
+		$this->server = self::getServer();
 		$this->sitename = self::getSitename();
 		$this->missing = self::isMissing();
 
@@ -114,7 +114,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		$domain = explode( '.', self::getServers( self::getCurrentDatabase() ), 2 )[1];
+		$domain = explode( '.', self::getServer(), 2 )[1];
 
 		return self::REALMS[$domain] ?? 'default';
 	}
@@ -130,7 +130,7 @@ class MirahezeFunctions {
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
-		if ( $databases === null ) {
+		if ( $database === 'default' ) {
 			return $servers['default'];
 		}
 
@@ -162,10 +162,8 @@ class MirahezeFunctions {
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
-		$database = self::readDbListFile( 'all', true, 'https://' . $hostname, true );
-
-		if ( $database !== null ) {
-			return $database;
+		if ( self::readDbListFile( 'all', true, 'https://' . $hostname, true ) ) {
+			return self::readDbListFile( 'all', true, 'https://' . $hostname, true );
 		}
 
 		$explode = explode( '.', $hostname, 2 );
@@ -196,6 +194,11 @@ class MirahezeFunctions {
 		$clusters = array_column( $databases, 'c' );
 
 		return array_combine( array_keys( $databases ), $clusters );
+	}
+
+	public static function getServer() {
+		return self::getServers( self::getCurrentDatabase() ) ??
+			self::getServers( 'default' );
 	}
 
 	public function setServers() {
