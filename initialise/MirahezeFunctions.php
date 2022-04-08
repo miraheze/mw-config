@@ -28,6 +28,11 @@ class MirahezeFunctions {
 		'beta' => 'betaheze',
 	];
 
+	public const LISTS = [
+		'default' => 'production',
+		'betaheze' => 'beta',
+	];
+
 	public const SUFFIXES = [
 		'wiki' => 'miraheze.org',
 		'wikibeta' => 'betaheze.org',
@@ -49,8 +54,8 @@ class MirahezeFunctions {
 	}
 
 	public static function getLocalDatabases() {
-		$allDatabases = array_merge( self::readDbListFile( 'all' ), self::readDbListFile( 'beta' ) );
-		$productionDatabases = self::readDbListFile( 'all' );
+		$allDatabases = array_merge( self::readDbListFile( 'production' ), self::readDbListFile( 'beta' ) );
+		$productionDatabases = self::readDbListFile( 'production' );
 
 		return [
 			self::TAGS['default'] => $productionDatabases,
@@ -63,8 +68,12 @@ class MirahezeFunctions {
 			return $database;
 		}
 
-		if ( $dblist === 'all' ) {
+		if ( $dblist === 'production' ) {
 			$dblist = 'databases';
+		}
+
+		if ( $dblist === 'deleted-production' ) {
+			$dblist = 'deleted';
 		}
 
 		if ( !file_exists( self::getCacheDirectory() . "/{$dblist}.json" ) ) {
@@ -126,7 +135,7 @@ class MirahezeFunctions {
 	public static function getServers( $database = null ) {
 		$servers = [];
 
-		$databases = self::readDbListFile( 'all', false, $database );
+		$databases = self::readDbListFile( self::LISTS[self::getRealm()], false, $database );
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
@@ -158,8 +167,8 @@ class MirahezeFunctions {
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
-		if ( self::readDbListFile( 'all', true, 'https://' . $hostname, true ) ) {
-			return self::readDbListFile( 'all', true, 'https://' . $hostname, true );
+		if ( self::readDbListFile( self::LISTS[self::getRealm()], true, 'https://' . $hostname, true ) ) {
+			return self::readDbListFile( self::LISTS[self::getRealm()], true, 'https://' . $hostname, true );
 		}
 
 		$explode = explode( '.', $hostname, 2 );
@@ -182,8 +191,8 @@ class MirahezeFunctions {
 	}
 
 	public static function getDatabaseClusters() {
-		$allDatabases = self::readDbListFile( 'all', false );
-		$deletedDatabases = self::readDbListFile( 'deleted', false );
+		$allDatabases = self::readDbListFile( self::LISTS[self::getRealm()], false );
+		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -205,8 +214,8 @@ class MirahezeFunctions {
 	public static function getSitename() {
 		global $wgConf;
 
-		$allDatabases = self::readDbListFile( 'all', false );
-		$deletedDatabases = self::readDbListFile( 'deleted', false );
+		$allDatabases = self::readDbListFile( self::LISTS[self::getRealm()], false );
+		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
