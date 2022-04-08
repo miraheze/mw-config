@@ -369,6 +369,9 @@ $wi->config->settings += [
 	'wgReCaptchaVersion' => [
 		'default' => 'v3',
 	],
+	'wgReCaptchaMinimumScore' => [
+		'default' => 0.3,
+	],
 
 	// Cargo
 	'wgCargoDBuser' => [
