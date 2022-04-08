@@ -219,7 +219,7 @@ class MirahezeFunctions {
 
 		$wgConf->settings['wgSitename'] = $siteNames;
 
-		return $siteNames[self::getCurrentDatabase()];
+		return $siteNames[self::getCurrentDatabase()] ?? $siteNames['default'];
 	}
 
 	public static function isMissing() {
