@@ -41,7 +41,6 @@ class MirahezeFunctions {
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
 		$this->server = self::getServer();
-		var_dump( self::getServer() );
 		$this->sitename = self::getSitename();
 		$this->missing = self::isMissing();
 
@@ -138,11 +137,9 @@ class MirahezeFunctions {
 		if ( $database ) {
 			foreach ( self::SUFFIXES as $suffix ) {
 				if ( substr( $database, -strlen( $suffix ) ) == $suffix ) {
-					$servers[$database] = $database['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+					return $database['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
 				}
 			}
-
-			return $servers;
 		}
 
 		foreach ( $databases as $db => $data ) {
@@ -198,7 +195,7 @@ class MirahezeFunctions {
 	}
 
 	public static function getServer() {
-		return self::getServers( self::getCurrentDatabase() ) ??
+		return self::getServers( self::getCurrentDatabase() ) ?:
 			self::getServers( 'default' );
 	}
 
