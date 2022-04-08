@@ -101,7 +101,7 @@ class MirahezeFunctions {
 			}
 
 			if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
-				$databases = $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
+				return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
 			} else {
 				return null;
 			}
