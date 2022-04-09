@@ -4777,8 +4777,7 @@ $wi->config->settings += [
 	// Temporary config used to faciliate the migration
 	// to rsyslog.
 	'wmgSyslogHandler' => [
-		'default' => 'syslog-ng',
-		'betaheze' => 'rsyslog',
+		'default' => 'rsyslog',
 	],
 	'wmgLogToDisk' => [
 		'default' => false,
