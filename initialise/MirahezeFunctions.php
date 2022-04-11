@@ -80,11 +80,7 @@ class MirahezeFunctions {
 
 			return $databases;
 		} else {
-			static $databasesArray = null;
-
-			if ( $databasesArray === null ) {
-				$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
-			}
+			$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
 		}
 
 		if ( $database ) {
