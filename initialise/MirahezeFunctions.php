@@ -44,11 +44,12 @@ class MirahezeFunctions {
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
 		$this->server = self::getServer();
-		$this->sitename = self::getSitename();
+		$this->sitename = self::getSiteName();
 		$this->missing = self::isMissing();
 
 		$this->setDatabase();
 		$this->setServers();
+		$this->setSiteNames();
 	}
 
 	public static function getLocalDatabases() {
@@ -183,9 +184,10 @@ class MirahezeFunctions {
 	}
 
 	public function setDatabase() {
-		global $wgConf;
+		global $wgConf, $wgDBname;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
+		$wgDBname = $this->dbname;
 	}
 
 	public static function getDatabaseClusters() {
@@ -209,9 +211,13 @@ class MirahezeFunctions {
 		$wgConf->settings['wgServer'] = self::getServers();
 	}
 
-	public static function getSitename() {
+	public function setSiteNames() {
 		global $wgConf;
 
+		$wgConf->settings['wgSitename'] = self::getSiteNames();
+	}
+
+	public static function getSiteNames() {
 		$allDatabases = self::readDbListFile( self::LISTS[self::getRealm()], false );
 		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
@@ -222,9 +228,11 @@ class MirahezeFunctions {
 		$siteNames = array_combine( array_keys( $databases ), $siteNameColumn );
 		$siteNames['default'] = 'No sitename set.';
 
-		$wgConf->settings['wgSitename'] = $siteNames;
+		return $siteNames;
+	}
 
-		return $siteNames[self::getCurrentDatabase()] ?? $siteNames['default'];
+	public static function getSiteName() {
+		return self::getSiteNames()[self::getCurrentDatabase()] ?? self::getSiteNames()['default'];
 	}
 
 	public static function isMissing() {
