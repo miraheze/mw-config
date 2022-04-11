@@ -130,7 +130,6 @@ class MirahezeFunctions {
 		$servers = [];
 
 		static $databases = null;
-
 		if ( $databases === null ) {
 			$databases = self::readDbListFile( self::LISTS[self::getRealm()], false, $database );
 		}
@@ -165,8 +164,13 @@ class MirahezeFunctions {
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
-		if ( self::readDbListFile( self::LISTS[self::getRealm()], true, 'https://' . $hostname, true ) ) {
-			return self::readDbListFile( self::LISTS[self::getRealm()], true, 'https://' . $hostname, true );
+		static $database = null;
+		if ( $database === null ) {
+			$database = self::readDbListFile( self::LISTS[self::getRealm()], true, 'https://' . $hostname, true );
+		}
+
+		if ( $database ) {
+			return $database;
 		}
 
 		$explode = explode( '.', $hostname, 2 );
