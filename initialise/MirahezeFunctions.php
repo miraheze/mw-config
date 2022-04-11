@@ -129,10 +129,8 @@ class MirahezeFunctions {
 	public static function getServers( $database = null ) {
 		$servers = [];
 
-		static $databases = null;
-		if ( $databases === null ) {
-			$databases = self::readDbListFile( self::LISTS[self::getRealm()], false, $database );
-		}
+		$databases = self::readDbListFile( 'production', false, $database ) ?:
+			self::readDbListFile( 'beta', false, $database );
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
@@ -164,10 +162,8 @@ class MirahezeFunctions {
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
-		static $database = null;
-		if ( $database === null ) {
-			$database = self::readDbListFile( self::LISTS[self::getRealm()], true, 'https://' . $hostname, true );
-		}
+		$database = self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
+			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
 
 		if ( $database ) {
 			return $database;
