@@ -2830,9 +2830,6 @@ $wgConf->settings = [
 	],
 
 	// Miscellaneous
-	'wgSitename' => [
-		'default' => 'No sitename set!',
-	],
 	'wgAllowDisplayTitle' => [
 		'default' => true,
 	],
@@ -3833,10 +3830,6 @@ $wgConf->settings = [
 	],
 	'wgScriptPath' => [
 		'default' => '/w',
-	],
-	'wgServer' => [
-		'default' => 'https://miraheze.org',
-		'betaheze' => 'https://betaheze.org',
 	],
 	'wgShowHostnames' => [
 		'default' => true,
