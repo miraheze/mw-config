@@ -130,8 +130,8 @@ class MirahezeFunctions {
 	public static function getServers( $database = null ) {
 		$servers = [];
 
-		$databases = self::readDbListFile( 'production', false, $database ) ?:
-			self::readDbListFile( 'beta', false, $database );
+		$list = isset( self::readDbListFile( 'production' )[ self::getCurrentDatabase() ] ) ? 'production' : 'beta';
+                $databases = self::readDbListFile( $list, false, $database );
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
