@@ -129,14 +129,18 @@ class MirahezeFunctions {
 	public static function getServers( $database = null ) {
 		$servers = [];
 
-		$databases = self::readDbListFile( self::LISTS[self::getRealm()], false, $database );
+		static $databases = null;
+
+		if ( $databases === null ) {
+			$databases = self::readDbListFile( self::LISTS[self::getRealm()], false, $database );
+		}
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
 		if ( $database ) {
 			foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
 				if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
-					return $database['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+					return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
 				}
 			}
 
