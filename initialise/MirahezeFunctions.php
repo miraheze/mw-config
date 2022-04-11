@@ -184,10 +184,10 @@ class MirahezeFunctions {
 	}
 
 	public function setDatabase() {
-		global $wgConf, $wgDBname;
+		global $wgConf;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
-		$wgDBname = $this->dbname;
+		$wgConf->extractGlobal( 'wgDBname', $this->dbname );
 	}
 
 	public static function getDatabaseClusters() {
@@ -209,12 +209,14 @@ class MirahezeFunctions {
 		global $wgConf;
 
 		$wgConf->settings['wgServer'] = self::getServers();
+		$wgConf->extractGlobal( 'wgServer', $this->dbname );
 	}
 
 	public function setSiteNames() {
 		global $wgConf;
 
 		$wgConf->settings['wgSitename'] = self::getSiteNames();
+		$wgConf->extractGlobal( 'wgSitename', $this->dbname );
 	}
 
 	public static function getSiteNames() {
