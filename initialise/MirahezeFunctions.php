@@ -206,15 +206,17 @@ class MirahezeFunctions {
 	}
 
 	public function setServers() {
-		global $wgConf;
+		global $wgConf, $wgServer;
 
 		$wgConf->settings['wgServer'] = self::getServers();
+		$wgServer = self::getServer();
 	}
 
 	public function setSiteNames() {
-		global $wgConf;
+		global $wgConf, $wgSitename;
 
 		$wgConf->settings['wgSitename'] = self::getSiteNames();
+		$wgSitename = self::getSiteName();
 	}
 
 	public static function getSiteNames() {
