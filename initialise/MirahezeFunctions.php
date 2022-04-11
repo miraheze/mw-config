@@ -17,10 +17,6 @@ class MirahezeFunctions {
 		'beta' => 'testglobal',
 	];
 
-	private const REALMS = [
-		'betaheze.org' => 'betaheze',
-	];
-
 	private const TAGS = [
 		'default' => 'default',
 		'beta' => 'betaheze',
@@ -53,12 +49,12 @@ class MirahezeFunctions {
 	}
 
 	public static function getLocalDatabases() {
-		$allDatabases = array_merge( self::readDbListFile( 'production' ), self::readDbListFile( 'beta' ) );
+		$betaDatabases = self::readDbListFile( 'beta' );
 		$productionDatabases = self::readDbListFile( 'production' );
 
 		return [
 			self::TAGS['default'] => $productionDatabases,
-			self::TAGS['beta'] => $allDatabases,
+			self::TAGS['beta'] => $betaDatabases,
 		];
 	}
 
@@ -122,9 +118,8 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		$domain = explode( '.', self::getServer(), 2 )[1];
-
-		return self::REALMS[$domain] ?? 'default';
+		return isset( self::readDbListFile( 'production' )[ self::getCurrentDatabase() ] ) ?
+			self::TAGS['default'] : self::TAGS['beta'];
 	}
 
 	public static function getServers( $database = null ) {
