@@ -118,7 +118,7 @@ if ( !$cwPrivate ) {
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wgConf->settings['wgDataDumpDownloadUrl']['default'] = '';
-	$wgWhitelistRead = is_string( $wmgWhitelistRead ) ? explode( "\n", $wmgWhitelistRead ) : $wmgWhitelistRead;
+	$wgWhitelistRead = $wmgWhitelistRead;
 
 	// Never allow Special:Preferences to be whitelisted (T8448)
 	if ( $wgWhitelistRead['Special:Preferences'] ?? false ) {
@@ -156,14 +156,6 @@ if ( $wmgPrivateUploads ) {
 	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
 	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
 	$wgGenerateThumbnailOnParse = true;
-}
-
-if ( $wmgUsersNotifiedOnAllChanges ) {
-	$wgUsersNotifiedOnAllChanges = is_string( $wmgUsersNotifiedOnAllChanges ) ? explode( "\n", $wmgUsersNotifiedOnAllChanges ) : $wmgUsersNotifiedOnAllChanges;
-}
-
-if ( $wmgRPRatingPageBlacklist ) {
-	$wgRPRatingPageBlacklist = is_string( $wmgRPRatingPageBlacklist ) ? explode( "\n", $wmgRPRatingPageBlacklist ) : $wmgRPRatingPageBlacklist;
 }
 
 // DataDump
