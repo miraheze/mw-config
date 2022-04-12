@@ -27,24 +27,24 @@ abstract class ManageWikiTestCase extends TestCase {
 
 		$this->assertTrue(
 			$validator->isValid(),
-			self::readableError( $validator->getErrors() )
+			self::readableErrors( $validator->getErrors() )
 		);
 	}
 
 	abstract public function configProvider(): array;
 
 	/** @dataProvider configProvider */
-	public function testScheme( $config, $expected ) {
+	public function testGetScheme( $config, $expected ) {
 		$validator = new Validator();
 		$validator->validate( $config, $this->getSchema() );
 
 		$this->assertSame(
 			$expected,
-			self::readableError( $validator->getErrors() )
+			self::readableErrors( $validator->getErrors() )
 		);
 	}
 
-	public static function readableError( array $errors ): string {
+	private static function readableErrors( array $errors ): string {
 		$msgs = [];
 		foreach ( $errors as $err ) {
 			$msgs[] = "[{$err['property']}] {$err['message']}";
