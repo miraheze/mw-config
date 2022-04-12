@@ -2618,6 +2618,21 @@ $wgManageWikiSettings = [
 		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
 		'requires' => [],
 	],
+	'wgCosmosEnabledRailModules' => [
+		'associativeKey' => 'recentchanges',
+		'name' => 'Cosmos Recent Changes Rail Module',
+		'from' => 'cosmos',
+		'type' => 'list',
+		'options' => [
+			'<disabled>' => false,
+			'normal' => 'normal',
+			'sticky' => 'sticky',
+		],
+		'overridedefault' => 'normal',
+		'section' => 'styling',
+		'help' => 'Configure the recent changes rail module of the Cosmos skin.',
+		'requires' => [],
+	],
 	'wgCosmosContentWidth' => [
 		'name' => 'Cosmos Content Width',
 		'from' => 'cosmos',
