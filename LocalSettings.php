@@ -1154,8 +1154,8 @@ $wgConf->settings += [
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
 	],
-	'wgDiscordIncomingWebhookUrl' => [
-		'default' => '',
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'default' => [],
 	],
 	'wgDiscordCurlProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
