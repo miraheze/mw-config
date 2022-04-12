@@ -23,9 +23,9 @@
 			"parallel-lint . --exclude node_modules --exclude vendor",
 			"minus-x check .",
 			"@phpcs",
-			"@phpunit"
+			"@phpunit ./tests"
 		],
 		"phpcs": "phpcs -sp --cache",
-		"phpunit": "phpunit ./tests"
+		"phpunit": "phpunit"
 	}
 }
