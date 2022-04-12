@@ -12,7 +12,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	] );
 }
 
-if ( $wi->config->get( 'wmgUseChameleon', $wi->dbname ) ) {
+if ( $wgConf->get( 'wmgUseChameleon', $wi->dbname ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
 
@@ -20,13 +20,13 @@ if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
-if ( $wi->config->get( 'wmgUseMultimediaViewer', $wi->dbname ) ) {
-	if ( $wi->config->get( 'wmgUse3D', $wi->dbname ) ) {
+if ( $wgConf->get( 'wmgUseMultimediaViewer', $wi->dbname ) ) {
+	if ( $wgConf->get( 'wmgUse3D', $wi->dbname ) ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 	}
 }
 
-if ( $wi->config->get( 'wmgUsePopups', $wi->dbname ) ) {
+if ( $wgConf->get( 'wmgUsePopups', $wi->dbname ) ) {
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
 		$wgPopupsOptInDefaultState = '1';
@@ -35,22 +35,22 @@ if ( $wi->config->get( 'wmgUsePopups', $wi->dbname ) ) {
 	}
 }
 
-if ( $wi->config->get( 'wmgUseSocialProfile', $wi->dbname ) ) {
+if ( $wgConf->get( 'wmgUseSocialProfile', $wi->dbname ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 }
 
-if ( $wi->config->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
+if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
 	if ( $wmgVisualEditorEnableDefault ) {
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
+		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
+		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
 	} else {
-		$wi->config->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
 	}
 }
 
 if (
-	$wi->config->get( 'wmgUseWikibaseRepository', $wi->dbname ) ||
-	$wi->config->get( 'wmgUseWikibaseClient', $wi->dbname )
+	$wgConf->get( 'wmgUseWikibaseRepository', $wi->dbname ) ||
+	$wgConf->get( 'wmgUseWikibaseClient', $wi->dbname )
 ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
@@ -58,9 +58,9 @@ if (
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
 if (
-	$wi->config->get( 'wmgUseFlow', $wi->dbname ) ||
-	$wi->config->get( 'wmgUseVisualEditor', $wi->dbname ) ||
-	$wi->config->get( 'wmgUseLinter', $wi->dbname )
+	$wgConf->get( 'wmgUseFlow', $wi->dbname ) ||
+	$wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ||
+	$wgConf->get( 'wmgUseLinter', $wi->dbname )
 ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 	$wgVirtualRestConfig['modules']['parsoid'] = [
@@ -81,7 +81,7 @@ if ( wfHostname() === 'test101' ) {
 
 // Closed Wikis
 if ( $cwClosed ) {
-	$wi->config->settings['wgRevokePermissions']['default'] = [
+	$wgConf->settings['wgRevokePermissions']['default'] = [
 		'*' => [
 			'block' => true,
 			'createaccount' => true,
@@ -94,8 +94,8 @@ if ( $cwClosed ) {
 		],
 	];
 
-	if ( $wi->config->get( 'wmgUseComments', $wi->dbname ) ) {
-		$wi->config->settings['wgRevokePermissions']['default']['*']['comment'] = true;
+	if ( $wgConf->get( 'wmgUseComments', $wi->dbname ) ) {
+		$wgConf->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
 }
 
@@ -108,16 +108,16 @@ if ( !$cwPrivate ) {
 		'omit_bots' => true,
 	];
 
-	$wi->config->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = [ $wmgGlobalDiscordWebhookUrl ];
+	$wgConf->settings['wgDiscordAdditionalIncomingWebhookUrls']['default'] = [ $wmgGlobalDiscordWebhookUrl ];
 } else {
 	if ( $wmgPrivateUploads ) {
-		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
+		$wgConf->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
 	} else {
-		$wi->config->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
+		$wgConf->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
 	}
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
-	$wi->config->settings['wgDataDumpDownloadUrl']['default'] = '';
+	$wgConf->settings['wgDataDumpDownloadUrl']['default'] = '';
 	$wgWhitelistRead = is_string( $wmgWhitelistRead ) ? explode( "\n", $wmgWhitelistRead ) : $wmgWhitelistRead;
 
 	// Never allow Special:Preferences to be whitelisted (T8448)
@@ -167,8 +167,8 @@ if ( $wmgRPRatingPageBlacklist ) {
 }
 
 // DataDump
-$dataDumpDirectory = $wi->config->settings['wgDataDumpDirectory']['default'];
-$wi->config->settings['wgDataDump']['default'] = [
+$dataDumpDirectory = $wgConf->settings['wgDataDumpDirectory']['default'];
+$wgConf->settings['wgDataDump']['default'] = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
 		'generate' => [
@@ -251,12 +251,12 @@ $wi->config->settings['wgDataDump']['default'] = [
 
 // $wmgContactPageRecipientUser
 if ( $wmgContactPageRecipientUser ) {
-	$wi->config->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
+	$wgConf->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
-	$wi->config->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
+	$wgConf->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
 		'src' => 'https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
@@ -329,20 +329,20 @@ if ( $wgWordmark ) {
 
 // $wgUrlShortenerAllowedDomains
 if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
-	$wi->config->settings['wgUrlShortenerAllowedDomains']['default'] =
+	$wgConf->settings['wgUrlShortenerAllowedDomains']['default'] =
 		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
 // JsonConfig
 if ( $wgDBname === 'commonswiki' ) {
-	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
-	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
+	$wgConf->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
+	$wgConf->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
 } else {
-	$wi->config->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
+	$wgConf->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 
-	$wi->config->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
+	$wgConf->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 }
@@ -350,63 +350,63 @@ if ( $wgDBname === 'commonswiki' ) {
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/License_icon-copyright-88x31.svg/88px-License_icon-copyright-88x31.svg.png';
-		$wi->config->settings['wgRightsText']['default'] = 'All Rights Reserved';
-		$wi->config->settings['wgRightsUrl']['default'] = false;
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/License_icon-copyright-88x31.svg/88px-License_icon-copyright-88x31.svg.png';
+		$wgConf->settings['wgRightsText']['default'] = 'All Rights Reserved';
+		$wgConf->settings['wgRightsUrl']['default'] = false;
 		break;
 	case 'cc-by':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by/4.0';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
+		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by/4.0';
 		break;
 	case 'cc-by-nc':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc/4.0/';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
+		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc/4.0/';
 		break;
 	case 'cc-by-nd':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nd/4.0/';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png';
+		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nd/4.0/';
 		break;
 	case 'cc-by-sa':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/4.0/';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
 	case 'cc-by-sa-2-0-kr':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons BY-SA 2.0 Korea';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons BY-SA 2.0 Korea';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
 		break;
 	case 'cc-by-sa-nc':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
+		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 		break;
 	case 'cc-by-nc-nd':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png';
-		$wi->config->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png';
+		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
 		break;
 	case 'cc-pd':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
-		$wi->config->settings['wgRightsText']['default'] = 'CC0 Public Domain';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
+		$wgConf->settings['wgRightsText']['default'] = 'CC0 Public Domain';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
 	case 'gpl-v3':
-		$wi->config->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
-		$wi->config->settings['wgRightsText']['default'] = 'GPLv3';
-		$wi->config->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+		$wgConf->settings['wgRightsText']['default'] = 'GPLv3';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
 		break;
 	case 'empty':
 		break;
 }
 
 $wgFooterIcons['copyright']['copyright'] = [
-	'url' => $wi->config->get( 'wgRightsUrl', $wi->dbname ),
-	'src' => $wi->config->get( 'wgRightsIcon', $wi->dbname ),
-	'alt' => $wi->config->get( 'wgRightsText', $wi->dbname ),
+	'url' => $wgConf->get( 'wgRightsUrl', $wi->dbname ),
+	'src' => $wgConf->get( 'wgRightsIcon', $wi->dbname ),
+	'alt' => $wgConf->get( 'wgRightsText', $wi->dbname ),
 ];
 
 $wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
@@ -427,8 +427,8 @@ $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 // Slack
-$wi->config->settings['wgSlackFromName']['default'] = $wgSitename;
-$wi->config->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
+$wgConf->settings['wgSlackFromName']['default'] = $wgSitename;
+$wgConf->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
 
 // Scribunto
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 4;

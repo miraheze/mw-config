@@ -20,7 +20,7 @@ $entitySources = [
 	],
 ];
 
-if ( $wi->config->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
+if ( $wgConf->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
 	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
 	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
 }

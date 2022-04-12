@@ -9,9 +9,17 @@
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.Files.LineLength.TooLong" />
 		<exclude name="MediaWiki.Commenting.FunctionComment" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPublic" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPrivate" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
+	</rule>
+	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
+		<exclude-pattern>initialise/MirahezeFunctions\.php</exclude-pattern>
 	</rule>
 </ruleset>

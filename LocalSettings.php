@@ -34,9 +34,23 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
-// Initialise WikiInitialise
-require_once '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php';
-$wi = new WikiInitialise();
+$wgConf = new SiteConfiguration;
+
+require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
+
+$wi = new MirahezeFunctions;
+
+$wgConf->suffixes = array_keys( $wi::SUFFIXES );
+$wgConf->wikis = $wi::getLocalDatabases()[ $wi::getRealm() ];
+
+// We need the CLI to be able to access 'deleted' wikis
+if ( PHP_SAPI === 'cli' ) {
+	$wgConf->wikis = array_merge( $wgConf->wikis, $wi::readDbListFile( 'deleted-' . $wi::LISTS[$wi::getRealm()] ) );
+}
+
+$wgLocalDatabases = $wgConf->getLocalDatabases();
+
+$wi->initialise();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
@@ -54,23 +68,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
 
-$wi->setVariables(
-	'/srv/mediawiki/cache',
-	[
-		'wiki',
-		'wikibeta',
-	],
-	[
-		'miraheze.org' => 'wiki',
-		'betaheze.org' => 'wikibeta',
-	],
-	[
-		'betaheze.org' => 'betaheze',
-	]
-);
-
-$wi->config->settings += [
-
+$wgConf->settings = [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '6',
@@ -2835,9 +2833,6 @@ $wi->config->settings += [
 	],
 
 	// Miscellaneous
-	'wgSitename' => [
-		'default' => 'No sitename set!',
-	],
 	'wgAllowDisplayTitle' => [
 		'default' => true,
 	],
@@ -3838,10 +3833,6 @@ $wi->config->settings += [
 	],
 	'wgScriptPath' => [
 		'default' => '/w',
-	],
-	'wgServer' => [
-		'default' => 'https://miraheze.org',
-		'betaheze' => 'https://betaheze.org',
 	],
 	'wgShowHostnames' => [
 		'default' => true,
@@ -4951,7 +4942,7 @@ $wi->config->settings += [
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
-	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
+	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
 $wi->readCache();
@@ -4960,7 +4951,7 @@ $wi->readCache();
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [ 'datatransfer' ];
 
-$wi->config->extractAllGlobals( $wi->dbname );
+$wgConf->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
@@ -5007,7 +4998,7 @@ if ( $wi->missing ) {
 
 if ( wfHostname() === 'test101' ) {
 	// Prevent cache (better be safe than sorry)
-	$wi->config->settings['wgUseCdn']['default'] = false;
+	$wgConf->settings['wgUseCdn']['default'] = false;
 }
 
 // Define last to avoid all dependencies
@@ -5019,8 +5010,7 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once '/srv/mediawiki/config/ExtensionMessageFiles.php';
 }
 
-// Last Stuff
-$wgConf = $wi->config;
+// Don't need a global here
 unset( $wi );
 
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
