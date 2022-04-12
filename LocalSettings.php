@@ -5,6 +5,11 @@
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
 
+// Don't allow web access.
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'Not an entry point.' );
+}
+
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
@@ -58,11 +63,6 @@ require_once '/srv/mediawiki/config/PrivateSettings.php';
 // Load global skins and extensions
 require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
-
-// Don't allow web access.
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'Not an entry point.' );
-}
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
