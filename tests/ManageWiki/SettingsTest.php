@@ -144,16 +144,22 @@ class SettingsTest extends ManageWikiTestCase {
 					]
 				],
 				self::SCHEMA,
-				true
+				''
 			],
 			'An invalid configuration should not be passed the validation.' => [
 				[
 					'wgAbuseFilterActions' => [
-						'foo' => 'bar'
+						'type' => 'check',
 					]
 				],
 				self::SCHEMA,
-				false
+				implode( "\n", [
+					'[wgAbuseFilterActions.name] The property name is required',
+					'[wgAbuseFilterActions.from] The property from is required',
+					'[wgAbuseFilterActions.overridedefault] The property overridedefault is required',
+					'[wgAbuseFilterActions.section] The property section is required',
+					'[wgAbuseFilterActions.help] The property help is required',
+				] ),
 			],
 		];
 	}

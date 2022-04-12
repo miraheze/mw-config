@@ -36,7 +36,6 @@ abstract class ManageWikiTestCase extends TestCase {
 
 		$this->assertSame(
 			$expected,
-			$validator->isValid(),
 			self::readableError( $validator->getErrors() )
 		);
 	}
