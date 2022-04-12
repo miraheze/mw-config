@@ -174,7 +174,7 @@ $wgManageWikiSettings = [
 		'from' => 'protectsite',
 		'type' => 'list',
 		'options' => [
-			'indefinite' => 'indefinite',
+			'Indefinite' => 'indefinite',
 			'10 year' => '10 year',
 			'1 week' => '1 week',
 		],
@@ -971,7 +971,7 @@ $wgManageWikiSettings = [
 		'from' => 'translate',
 		'type' => 'list',
 		'options' => [
-			'info' => 'info',
+			'Info' => 'info',
 			'No Documentation' => false,
 			'qqq' => 'qqq',
 		],
