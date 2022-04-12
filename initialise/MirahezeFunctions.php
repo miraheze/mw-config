@@ -59,56 +59,62 @@ class MirahezeFunctions {
 	}
 
 	public static function readDbListFile( $dblist, $onlyDBs = true, $database = null, $fromServer = false ) {
-		if ( $database && $onlyDBs && !$fromServer ) {
-			return $database;
-		}
-
-		if ( $dblist === 'production' ) {
-			$dblist = 'databases';
-		}
-
-		if ( $dblist === 'deleted-production' ) {
-			$dblist = 'deleted';
-		}
-
-		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
-			$databases = [];
-
-			return $databases;
-		} else {
-			$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
-		}
-
-		if ( $database ) {
-			if ( $fromServer ) {
-				$database = array_keys(
-					array_filter(
-						$databasesArray['combi'] ?? $databasesArray['databases'],
-						static function( $data ) use ( $database ) {
-							return $data['u'] === $database;
-						}
-					)
-				)[0] ?? null;
-
-				if ( $onlyDBs ) {
+		$cache = ObjectCache::getLocalClusterInstance();
+		$cache->getWithSetCallback(
+			$cache->makeGlobalKey( 'CreateWiki', $dblist . $onlyDBs . $database . $fromServer ),
+			1000,
+			static function () use ( $dblist, $onlyDBs, $database, $fromServer ) {
+				if ( $database && $onlyDBs && !$fromServer ) {
 					return $database;
 				}
-			}
 
-			if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
-				return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
-			} else {
-				return null;
-			}
-		} else {
-			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
-		}
+				if ( $dblist === 'production' ) {
+					$dblist = 'databases';
+				}
 
-		if ( $onlyDBs ) {
-			return array_keys( $databases );
-		}
+				if ( $dblist === 'deleted-production' ) {
+					$dblist = 'deleted';
+				}
 
-		return $databases;
+				if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
+					$databases = [];
+
+					return $databases;
+				} else {
+					$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
+				}
+
+				if ( $database ) {
+					if ( $fromServer ) {
+						$database = array_keys(
+							array_filter(
+								$databasesArray['combi'] ?? $databasesArray['databases'],
+								static function( $data ) use ( $database ) {
+									return $data['u'] === $database;
+								}
+							)
+						)[0] ?? null;
+
+						if ( $onlyDBs ) {
+							return $database;
+						}
+					}
+
+					if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
+						return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
+					} else {
+						return null;
+					}
+				} else {
+					$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+				}
+
+				if ( $onlyDBs ) {
+					return array_keys( $databases );
+				}
+
+				return $databases;
+			} );
 	}
 
 	public static function setupHooks() {
