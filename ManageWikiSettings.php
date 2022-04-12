@@ -2624,7 +2624,7 @@ $wgManageWikiSettings = [
 		'from' => 'cosmos',
 		'type' => 'list',
 		'options' => [
-			'<disabled>' => 0,
+			'<disabled>' => false,
 			'normal' => 'normal',
 			'sticky' => 'sticky',
 		],
