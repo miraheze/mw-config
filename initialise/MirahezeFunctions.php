@@ -223,8 +223,11 @@ class MirahezeFunctions {
 	}
 
 	public static function getSiteNames() {
-		$allDatabases = self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		static $allDatabases = null;
+		static $deletedDatabases = null;
+
+		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
