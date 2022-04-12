@@ -8,6 +8,8 @@ use stdClass;
 
 abstract class ManageWikiTestCase extends TestCase {
 
+	abstract public function getSchema(): array;
+
 	public function mockConfig(): stdClass {
 		$mock = $this->getMockBuilder( stdClass::class )
 			->addMethods( [ 'get' ] )
@@ -17,9 +19,9 @@ abstract class ManageWikiTestCase extends TestCase {
 		return $mock;
 	}
 
-	public function assertSchema( $config, $schema ) {
+	public function assertSchema( $config ) {
 		$validator = new Validator();
-		$validator->validate( $config, $schema );
+		$validator->validate( $config, $this->getSchema() );
 
 		$this->assertTrue(
 			$validator->isValid(),
@@ -30,9 +32,9 @@ abstract class ManageWikiTestCase extends TestCase {
 	abstract public function configProvider(): array;
 
 	/** @dataProvider configProvider */
-	public function testScheme( $config, $schema, $expected ) {
+	public function testScheme( $config, $expected ) {
 		$validator = new Validator();
-		$validator->validate( $config, $schema );
+		$validator->validate( $config, $this->getSchema() );
 
 		$this->assertSame(
 			$expected,
