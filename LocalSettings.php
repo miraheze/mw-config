@@ -2889,7 +2889,7 @@ $wgConf->settings += [
 		],
 	],
 	'wmgWhitelistRead' => [
-		'default' => false,
+		'default' => [],
 	],
 
 	// MobileFrontend
@@ -3108,8 +3108,8 @@ $wgConf->settings += [
 	],
 
 	// Users Notified On All Changes
-	'wmgUsersNotifiedOnAllChanges' => [
-		'default' => '',
+	'wgUsersNotifiedOnAllChanges' => [
+		'default' => [],
 	],
 
 	// OATHAuth
@@ -3456,8 +3456,8 @@ $wgConf->settings += [
 	],
 
 	// RatePage
-	'wmgRPRatingPageBlacklist' => [
-		'default' => false,
+	'wgRPRatingPageBlacklist' => [
+		'default' => [],
 	],
 	'wgRPAddSidebarSection' => [
 		'default' => true,
