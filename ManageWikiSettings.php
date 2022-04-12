@@ -1241,7 +1241,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'Only load the iframe if the user clicks it?',
+		'help' => 'Only load the iframe if the user clicks it?',
 		'requires' => [],
 	],
 	'wgRPUseMMVModule' => [
