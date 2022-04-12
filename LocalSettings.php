@@ -3986,7 +3986,7 @@ $wgConf->settings += [
 		'default' => '/apple-touch-icon.png',
 	],
 	'wgCentralAuthLoginIcon' => [
-		'default' => '/usr/share/nginx/favicons/default.ico',
+		'default' => '/srv/mediawiki/favicons/default.ico',
 	],
 	'wgDefaultSkin' => [
 		'default' => 'vector',
