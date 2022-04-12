@@ -5009,7 +5009,7 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 }
 
 // Don't need a global here
-// unset( $wi );
+unset( $wi );
 
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
