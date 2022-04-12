@@ -118,8 +118,12 @@ class MirahezeFunctions {
 	}
 
 	public static function getRealm() {
-		return isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ?
+		static $realm = null;
+
+		$realm ??= isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ?
 			self::TAGS['default'] : self::TAGS['beta'];
+
+		return $realm;
 	}
 
 	public static function getServers( $database = null ) {
