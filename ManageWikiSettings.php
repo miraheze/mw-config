@@ -2628,7 +2628,13 @@ $wgManageWikiSettings = [
 			'normal' => 'normal',
 			'sticky' => 'sticky',
 		],
-		'overridedefault' => 'normal',
+		'overridedefault' => [
+			'recentchanges' => 'normal',
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
 		'section' => 'styling',
 		'help' => 'Configure the recent changes rail module of the Cosmos skin.',
 		'requires' => [],
