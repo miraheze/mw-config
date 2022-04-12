@@ -76,8 +76,7 @@ class MirahezeFunctions {
 
 				return $databases;
 			} else {
-				static $databasesArray = null;
-				$databasesArray ??= json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
+				$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
 			}
 
 			if ( $database ) {
@@ -126,8 +125,11 @@ class MirahezeFunctions {
 	public static function getServers( $database = null ) {
 		$servers = [];
 
-		$list = isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ? 'production' : 'beta';
-                $databases = self::readDbListFile( $list, false, $database );
+		static $list = null;
+		static $databases = null;
+
+		$list ??= isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ? 'production' : 'beta';
+                $databases ??= self::readDbListFile( $list, false, $database );
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
