@@ -21,6 +21,9 @@ class SettingsTest extends ManageWikiTestCase {
 							'type' => 'string',
 							'required' => true,
 						],
+						'associativeKey' => [
+							'type' => 'string',
+						],
 						'global' => [
 							'type' => 'boolean',
 						],

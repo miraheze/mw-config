@@ -716,30 +716,6 @@ $wgConf->settings += [
 				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 		],
-		'+batfamilywiki' => [
-			'recentchanges' => 0,
-		],
-		'+batmanwiki' => [
-			'recentchanges' => 0,
-		],
-		'+devilmanwiki' => [
-			'recentchanges' => 0,
-		],
-		'+dragontamerwiki' => [
-			'recentchanges' => 0,
-		],
-		'+malwiki' => [
-			'recentchanges' => 0,
-		],
-		'+snapwikiwiki' => [
-			'recentchanges' => 0,
-		],
-		'+softcellwiki' => [
-			'recentchanges' => 0,
-		],
-		'+thewhiteroomwiki' => [
-			'recentchanges' => 0,
-		],
 	],
 	'wgCosmosEnableWantedPages' => [
 		'default' => false,
