@@ -64,7 +64,7 @@ if (
 ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://' . wfHostname() . '.miraheze.org/w/rest.php',
+		'url' => 'https://mw-lb.miraheze.org/w/rest.php',
 		'domain' => $wi->server,
 		'prefix' => $wi->dbname,
 		'forwardCookies' => true,
