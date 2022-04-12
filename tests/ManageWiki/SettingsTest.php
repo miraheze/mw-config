@@ -7,7 +7,7 @@ class SettingsTest extends ManageWikiTestCase {
 		'type' => 'array',
 		'additionalProperties' => false,
 		'patternProperties' => [
-			'^(wg|eg|wmg)[a-zA-Z_][a-zA-Z0-9_]*$' => [
+			'^(wg|eg|wmg)[A-Z_][a-zA-Z0-9_]*$' => [
 				'type' => 'array',
 				'additionalProperties' => false,
 				'properties' => [
