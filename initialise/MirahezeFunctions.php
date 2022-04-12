@@ -60,9 +60,10 @@ class MirahezeFunctions {
 
 	public static function readDbListFile( $dblist, $onlyDBs = true, $database = null, $fromServer = false ) {
 		$cache = ObjectCache::getLocalClusterInstance();
+		$cacheTime = 1000;
 		$cache->getWithSetCallback(
 			$cache->makeGlobalKey( 'CreateWiki', $dblist . $onlyDBs . $database . $fromServer ),
-			1000,
+			$cacheTime,
 			static function () use ( $dblist, $onlyDBs, $database, $fromServer ) {
 				if ( $database && $onlyDBs && !$fromServer ) {
 					return $database;
@@ -114,7 +115,12 @@ class MirahezeFunctions {
 				}
 
 				return $databases;
-			} );
+			},
+			[
+				'lowTTL' => min( $cache::TTL_MINUTE, floor( $cacheTime * 0.75 ) ),
+				'pcTTL' => min( $cache::TTL_PROC_LONG, $cacheTime )
+			]
+		);
 	}
 
 	public static function setupHooks() {
