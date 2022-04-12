@@ -76,7 +76,8 @@ class MirahezeFunctions {
 
 				return $databases;
 			} else {
-				static $databasesArray ??= json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
+				static $databasesArray = null;
+				$databasesArray ??= json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
 			}
 
 			if ( $database ) {
@@ -158,7 +159,8 @@ class MirahezeFunctions {
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
-		$database = self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
+		static $database = null;
+		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
 			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
 
 		if ( $database ) {
