@@ -174,7 +174,7 @@ $wgManageWikiSettings = [
 		'from' => 'protectsite',
 		'type' => 'list',
 		'options' => [
-			'Indefinite' => 'indefinite',
+			'indefinite' => 'indefinite',
 			'10 year' => '10 year',
 			'1 week' => '1 week',
 		],
@@ -971,7 +971,7 @@ $wgManageWikiSettings = [
 		'from' => 'translate',
 		'type' => 'list',
 		'options' => [
-			'Info' => 'info',
+			'info' => 'info',
 			'No Documentation' => false,
 			'qqq' => 'qqq',
 		],
@@ -1241,7 +1241,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'Only load the iframe if the user clicks it?',
+		'help' => 'Only load the iframe if the user clicks it?',
 		'requires' => [],
 	],
 	'wgRPUseMMVModule' => [

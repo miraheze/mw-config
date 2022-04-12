@@ -8,6 +8,8 @@ use stdClass;
 
 abstract class ManageWikiTestCase extends TestCase {
 
+	public const REGEX_READABLE = '^[A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+$';
+
 	abstract public function getSchema(): array;
 
 	public function mockConfig(): stdClass {

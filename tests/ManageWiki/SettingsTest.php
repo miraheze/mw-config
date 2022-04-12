@@ -14,6 +14,7 @@ class SettingsTest extends ManageWikiTestCase {
 					'properties' => [
 						'name' => [
 							'type' => 'string',
+							'pattern' => self::REGEX_READABLE,
 							'required' => true,
 						],
 						'from' => [
@@ -60,6 +61,9 @@ class SettingsTest extends ManageWikiTestCase {
 						],
 						'options' => [
 							'type' => 'array',
+							'patternProperties' => [
+								self::REGEX_READABLE => []
+							]
 						],
 						'minint' => [
 							'type' => 'integer',
@@ -76,6 +80,7 @@ class SettingsTest extends ManageWikiTestCase {
 						],
 						'help' => [
 							'type' => 'string',
+							'pattern' => self::REGEX_READABLE,
 							'required' => true,
 						],
 						'requires' => [
