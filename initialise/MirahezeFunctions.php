@@ -132,7 +132,7 @@ class MirahezeFunctions {
 		static $list = null;
 		$list ??= isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ? 'production' : 'beta';
 
-				$databases = self::readDbListFile( $list, false, $database );
+		$databases = self::readDbListFile( $list, false, $database );
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
@@ -512,3 +512,4 @@ class MirahezeFunctions {
 		];
 	}
 }
+
