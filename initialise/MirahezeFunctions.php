@@ -49,13 +49,13 @@ class MirahezeFunctions {
 	}
 
 	public static function getLocalDatabases() {
-		$betaDatabases = self::readDbListFile( 'beta' );
-		$productionDatabases = self::readDbListFile( 'production' );
+		static $list = null;
+		static $databases = null;
 
-		return [
-			self::TAGS['default'] => $productionDatabases,
-			self::TAGS['beta'] => $betaDatabases,
-		];
+		$list ??= isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ? 'production' : 'beta';
+		$databases ??= self::readDbListFile( $list );
+
+		return $databases;
 	}
 
 	public static function readDbListFile( $dblist, $onlyDBs = true, $database = false, $fromServer = false ) {
