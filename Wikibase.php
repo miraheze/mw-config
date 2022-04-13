@@ -204,7 +204,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
-
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
