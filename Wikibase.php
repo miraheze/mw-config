@@ -208,7 +208,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
-	$wgWBRepoSettings['propertyOrderUrl'] = $wgServer. $wgScriptPath . '/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
+	$wgWBRepoSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
