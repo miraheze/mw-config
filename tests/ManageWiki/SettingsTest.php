@@ -149,11 +149,9 @@ class SettingsTest extends ManageWikiTestCase {
 						],
 						'exists' => [
 							'type' => 'boolean',
-							'description' => '',
 						],
 						'allopts' => [
 							'type' => 'array',
-							'description' => '',
 							'additionalProperties' => false,
 							'items' => [
 								'type' => 'string',
@@ -161,18 +159,15 @@ class SettingsTest extends ManageWikiTestCase {
 						],
 						'options' => [
 							'type' => 'array',
-							'description' => '',
 							'patternProperties' => [
 								self::REGEX_READABLE => []
 							]
 						],
 						'minint' => [
 							'type' => 'integer',
-							'description' => '',
 						],
 						'maxint' => [
 							'type' => 'integer',
-							'description' => '',
 						],
 						'section' => [
 							'type' => 'string',
@@ -247,7 +242,6 @@ class SettingsTest extends ManageWikiTestCase {
 						],
 						'script' => [
 							'type' => 'array',
-							'description' => '',
 							'properties' => [
 								'type' => 'array',
 								'additionalProperties' => false,
