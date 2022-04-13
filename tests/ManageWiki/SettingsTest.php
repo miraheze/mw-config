@@ -139,7 +139,7 @@ class SettingsTest extends ManageWikiTestCase {
 							'pattern' => self::REGEX_READABLE,
 							'required' => true,
 						],
-						'exists' => [
+						'mustexist' => [
 							'type' => 'boolean',
 						],
 						'allopts' => [
