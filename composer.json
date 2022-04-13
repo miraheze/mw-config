@@ -11,7 +11,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Miraheze\\Tests\\": "tests/"
+			"Miraheze\\Config\\Tests\\": "tests/"
 		}
 	},
 	"scripts": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Miraheze\Tests\ManageWiki;
+namespace Miraheze\Config\Tests\ManageWiki;
 
 class ExtensionsTest extends ManageWikiTestCase {
 	public function getSchema(): array {

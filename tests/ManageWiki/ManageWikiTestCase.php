@@ -1,6 +1,6 @@
 <?php
 
-namespace Miraheze\Tests\ManageWiki;
+namespace Miraheze\Config\Tests\ManageWiki;
 
 use JsonSchema\Validator;
 use PHPUnit\Framework\TestCase;
