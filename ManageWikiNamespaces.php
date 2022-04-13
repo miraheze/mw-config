@@ -30,8 +30,6 @@
  * list-multi: see above, just that multiple can be selected.
  * list-multi-bool: see above, just outputs are $this => $bool.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
- * namespace: adds dropdown to select one namespace.
- * namespaces: see above, except multiple namespaces.
  * preferences: adds a drop down selection box for selecting multiple user preferences.
  * skin: adds a drop down selection box for selecting a single enabled skin.
  * skins: adds a drop down selection box for selecting multiple enabled skins.
