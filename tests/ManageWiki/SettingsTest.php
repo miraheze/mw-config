@@ -75,14 +75,6 @@ class SettingsTest extends ManageWikiTestCase {
 									'description' => 'adds an array of "columns" and "rows". Columns are the top array and rows will be the values.',
 								],
 								[
-									'const' => 'namespace',
-									'description' => 'adds dropdown to select one namespace.',
-								],
-								[
-									'const' => 'namespaces',
-									'description' => 'see above, except multiple namespaces.',
-								],
-								[
 									'const' => 'preferences',
 									'description' => 'adds a drop down selection box for selecting multiple user preferences.',
 								],
