@@ -12,51 +12,148 @@ class SettingsTest extends ManageWikiTestCase {
 					'type' => 'array',
 					'additionalProperties' => false,
 					'properties' => [
+						'associativeKey' => [
+							'type' => 'string',
+							'description' => 'the associative array key. Only used if you are setting the associative value.',
+						],
 						'name' => [
 							'type' => 'string',
+							'description' => 'the displayed name of the setting on Special:ManageWiki/settings.',
 							'pattern' => self::REGEX_READABLE,
 							'required' => true,
 						],
 						'from' => [
 							'type' => 'string',
+							'description' => "a text entry of which extension is required for this setting to work. If added by MediaWiki core, use 'mediawiki'.",
 							'required' => true,
-						],
-						'associativeKey' => [
-							'type' => 'string',
 						],
 						'global' => [
 							'type' => 'boolean',
+							'description' => 'set to true if the setting is added by MediaWiki core or a global extension or skin.',
 						],
 						'type' => [
-							'type' => 'string',
-							'enum' => [
-								'check',
-								'database',
-								'integer',
-								'integers',
-								'list-multi-bool',
-								'list-multi',
-								'list',
-								'preferences',
-								'skin',
-								'skins',
-								'text',
-								'texts',
-								'timezone',
-								'url',
-								'user',
-								'usergroups',
-								'users',
-								'wikipage',
-								'wikipages',
+							'description' => 'configuration type.',
+							'anyOf' => [
+								[
+									'const' => 'check',
+									'description' => 'adds a checkbox.',
+								],
+								[
+									'const' => 'database',
+									'description' => 'adds a textbox with input validation, verifying that its value is a valid database name.',
+								],
+								[
+									'const' => 'float',
+									'description' => 'adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).',
+								],
+								[
+									'const' => 'integer',
+									'description' => 'adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).',
+								],
+								[
+									'const' => 'integers',
+									'description' => 'see above, just supports multiple and does not require a min or max integer value.',
+								],
+								[
+									'const' => 'language',
+									'description' => 'adds a dropdown for language selection (all which are known to MediaWiki).',
+								],
+								[
+									'const' => 'list',
+									'description' => 'adds a list of options (requires: options which is an array in form of display => internal value).',
+								],
+								[
+									'const' => 'list-multi',
+									'description' => 'see above, just that multiple can be selected.',
+								],
+								[
+									'const' => 'list-multi-bool',
+									'description' => 'see above, just outputs are $this => $bool.',
+								],
+								[
+									'const' => 'matrix',
+									'description' => 'adds an array of "columns" and "rows". Columns are the top array and rows will be the values.',
+								],
+								[
+									'const' => 'namespace',
+									'description' => 'adds dropdown to select one namespace.',
+								],
+								[
+									'const' => 'namespaces',
+									'description' => 'see above, except multiple namespaces.',
+								],
+								[
+									'const' => 'preferences',
+									'description' => 'adds a drop down selection box for selecting multiple user preferences.',
+								],
+								[
+									'const' => 'skin',
+									'description' => 'adds a drop down selection box for selecting a single enabled skin.',
+								],
+								[
+									'const' => 'skins',
+									'description' => 'adds a drop down selection box for selecting multiple enabled skins.',
+								],
+								[
+									'const' => 'text',
+									'description' => 'adds a single line text entry.',
+								],
+								[
+									'const' => 'texts',
+									'description' => 'see above, except multiple text values for inserting into a configuration array.',
+								],
+								[
+									'const' => 'timezone',
+									'description' => 'adds a dropdown for timezone selection.',
+								],
+								[
+									'const' => 'url',
+									'description' => 'adds a single line text entry which requires a full URL.',
+								],
+								[
+									'const' => 'user',
+									'description' => 'adds an autocomplete text box to select a single user on the wiki.',
+								],
+								[
+									'const' => 'users',
+									'description' => 'see above, except multiple users.',
+								],
+								[
+									'const' => 'usergroups',
+									'description' => 'adds a drop down selection box for selecting multiple user groups.',
+								],
+								[
+									'const' => 'userrights',
+									'description' => 'adds a drop down selection box for selecting multiple user rights.',
+								],
+								[
+									'const' => 'wikipage',
+									'description' => 'add a textbox which will return an autocomplete drop-down list of wikipages. Returns standardised MediaWiki pages.',
+								],
+								[
+									'const' => 'wikipages',
+									'description' => 'see above, except multiple wikipages.',
+								],
 							],
+							'required' => true,
+						],
+						'overridedefault' => [
+							'required' => true,
+							'description' => 'a string/array override default when no existing value exist.',
+						],
+						'help' => [
+							'type' => 'string',
+							'description' => 'string providing help information for the setting.',
+							'pattern' => self::REGEX_READABLE,
 							'required' => true,
 						],
 						'exists' => [
 							'type' => 'boolean',
+							'description' => '',
 						],
 						'allopts' => [
 							'type' => 'array',
+							'description' => '',
 							'additionalProperties' => false,
 							'items' => [
 								'type' => 'string',
@@ -64,47 +161,93 @@ class SettingsTest extends ManageWikiTestCase {
 						],
 						'options' => [
 							'type' => 'array',
+							'description' => '',
 							'patternProperties' => [
 								self::REGEX_READABLE => []
 							]
 						],
 						'minint' => [
 							'type' => 'integer',
+							'description' => '',
 						],
 						'maxint' => [
 							'type' => 'integer',
-						],
-						'overridedefault' => [
-							'required' => true,
+							'description' => '',
 						],
 						'section' => [
 							'type' => 'string',
-							'required' => true,
-						],
-						'help' => [
-							'type' => 'string',
-							'pattern' => self::REGEX_READABLE,
+							'description' => 'string name of groupings for settings.',
 							'required' => true,
 						],
 						'requires' => [
 							'type' => 'array',
-							'anyOf' => [
-								[
+							'additionalProperties' => false,
+							'properties' => [
+								'activeusers' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of active users a wiki may have in order to be able to modify this setting.',
+								],
+								'articles' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of articles a wiki may have in order to be able to modify this setting.',
+								],
+								'extensions' => [
 									'type' => 'array',
-									'patternProperties' => [
-										'extensions' => 'array',
+									'description' => "array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if requires more then one extension.",
+									'items' => [
+										'anyOf' => [
+											[
+												'type' => 'string'
+											],
+											[
+												'type' => 'array',
+												'items' => [
+													'type' => 'string'
+												],
+											],
+										]
+									]
+								],
+								'pages' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of pages a wiki may have in order to be able to modify this setting.',
+								],
+								'permissions' => [
+									'type' => 'array',
+									'description' => 'array of permissions a user must have to be able to modify this setting. Regardless of this value, a user must always have the managewiki permission.',
+									'items' => [
+										'type' => 'string'
+									]
+								],
+								'visibility' => [
+									'type' => 'array',
+									'additionalProperties' => false,
+									'properties' => [
+										'state' => [
+											'type' => 'string',
+											'description' => "Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.",
+											'enum' => [
+												'private',
+												'public',
+											],
+										],
+										'permissions' => [
+											'type' => 'array',
+											'description' => "Set to an array of permissions required for the setting to be visible.",
+											'items' => [
+												'type' => 'string',
+											],
+										],
 									],
 								],
-								[
+								'settings' => [
 									'type' => 'array',
-									'items' => [
-										'type' => 'string',
-									],
 								],
 							],
 						],
 						'script' => [
 							'type' => 'array',
+							'description' => '',
 							'properties' => [
 								'type' => 'array',
 								'additionalProperties' => false,
@@ -160,8 +303,8 @@ class SettingsTest extends ManageWikiTestCase {
 					'[wgAbuseFilterActions.name] The property name is required',
 					'[wgAbuseFilterActions.from] The property from is required',
 					'[wgAbuseFilterActions.overridedefault] The property overridedefault is required',
-					'[wgAbuseFilterActions.section] The property section is required',
 					'[wgAbuseFilterActions.help] The property help is required',
+					'[wgAbuseFilterActions.section] The property section is required',
 				] ),
 			],
 		];
