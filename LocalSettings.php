@@ -46,7 +46,7 @@ require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions;
 
 $wgConf->suffixes = array_keys( $wi::SUFFIXES );
-$wgConf->wikis = $wi::getLocalDatabases()[ $wi::getRealm() ];
+$wgConf->wikis = $wi::getLocalDatabases();
 
 // We need the CLI to be able to access 'deleted' wikis
 if ( PHP_SAPI === 'cli' ) {
