@@ -2,6 +2,7 @@
 /**
  * ManageWiki settings are added using the variable below.
  *
+ * associativeKey: the associative array key. Only used if you are setting the associative value.
  * name: the displayed name of the setting on Special:ManageWiki/settings.
  * from: a text entry of which extension is required for this setting to work. If added by MediaWiki core, use 'mediawiki'.
  * global: set to true if the setting is added by MediaWiki core or a global extension or skin.
