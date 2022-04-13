@@ -4409,6 +4409,34 @@ $wgConf->settings += [
 	'wgWBQualityConstraintsSubclassOfId' => [
 		'default' => 'P279',
 	],
+	'wgWBQualityConstraintsStartTimePropertyIds' => [
+		'default' => [
+			'P569',
+			'P571',
+			'P580',
+			'P585',
+		],
+		'gratisdatawiki' => [
+			'P26',
+			'P11',
+			'P174',
+			'P80',
+		],
+	],
+	'wgWBQualityConstraintsEndTimePropertyIds' => [
+		'default' => [
+			'P570',
+			'P576',
+			'P582',
+			'P585',
+		],
+		'gratisdatawiki' => [
+			'P132',
+			'P539',
+			'P175',
+			'P80',
+		],
+	],
 	'wgWBQualityConstraintsPropertyConstraintId' => [
 		'default' => 'P2302',
 	],
