@@ -2897,6 +2897,15 @@ $wgManageWikiSettings = [
 		'help' => 'Always forces the content area to its maximum width.',
 		'requires' => [],
 	],
+	'wgEvelutionDisableRightRailFromSpecificPages' => [
+		'name' => 'Evelution Disable Right Rail From Specific Pages',
+		'from' => 'evelution',
+		'type' => 'wikipages',
+		'overridedefault' => [],
+		'section' => 'styling',
+		'help' => 'Disables the right rail that appears on specific pages. Requires that <code>$wgEvelutionDisableRightRail</code> not be enabled in order for this to work.',
+		'requires' => [],
+	],
 	'wgEvelutionMonoLogo' => [
 		'name' => 'Evelution Mono Logo',
 		'from' => 'evelution',
