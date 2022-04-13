@@ -58,7 +58,7 @@ class MirahezeFunctions {
 		];
 	}
 
-	public static function readDbListFile( $dblist, $onlyDBs = true, $database = null, $fromServer = false ) {
+	public static function readDbListFile( $dblist, $onlyDBs = true, $database = false, $fromServer = false ) {
 			if ( $database && $onlyDBs && !$fromServer ) {
 				return $database;
 			}
@@ -81,14 +81,14 @@ class MirahezeFunctions {
 
 			if ( $database ) {
 				if ( $fromServer ) {
-					$database = array_keys(
-						array_filter(
-							$databasesArray['combi'] ?? $databasesArray['databases'],
-							static function ( $data ) use ( $database ) {
-								return $data['u'] === $database;
-							}
-						)
-					)[0] ?? null;
+					$server = $database;
+					$database = false;
+					foreach ( $databasesArray['combi'] ?? $databasesArray['databases'] as $key => $data ) {
+						if ( isset( $data['u'] ) && $data['u'] === $server ) {
+							$database = $key;
+							break;
+						}
+					}
 
 					if ( $onlyDBs ) {
 						return $database;
@@ -98,7 +98,7 @@ class MirahezeFunctions {
 				if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
 					return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
 				} else {
-					return null;
+					return false;
 				}
 			} else {
 				$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
