@@ -179,7 +179,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'miraheze',
 		'gratispaideia'
 	];
-  $wgWBRepoSettings['globeUris'] = [
+	$wgWBRepoSettings['globeUris'] = [
 		'http://gratisdata.miraheze.org/entity/Q476' => 'earth',
 		'http://gratisdata.miraheze.org/entity/Q987' => 'mercury',
 		'http://gratisdata.miraheze.org/entity/Q981' => 'venus',
@@ -207,7 +207,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q2125' => 'oberon',
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
-  ];
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
