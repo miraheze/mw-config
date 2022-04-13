@@ -2898,7 +2898,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgEvelutionDisableRightRailFromSpecificPages' => [
-		'name' => 'Evelution Disable Right Rail from specific pages',
+		'name' => 'Evelution Disable Right Rail From Specific Pages',
 		'from' => 'evelution',
 		'type' => 'wikipages',
 		'overridedefault' => false,
