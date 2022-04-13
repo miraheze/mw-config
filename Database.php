@@ -1,6 +1,6 @@
 <?php
 
-$wi->config->settings['wgLBFactoryConf']['default'] = [
+$wgConf->settings['wgLBFactoryConf']['default'] = [
 	'class' => LBFactoryMulti::class,
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
@@ -54,4 +54,5 @@ $wi->config->settings['wgLBFactoryConf']['default'] = [
 		//'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
-$wi->config->settings['wgMaxExecutionTimeForExpensiveQueries']['default'] = 20000;
+
+$wgConf->settings['wgMaxExecutionTimeForExpensiveQueries']['default'] = 20000;

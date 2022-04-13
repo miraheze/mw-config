@@ -2,11 +2,11 @@
 
 if ( $wmgSiteNoticeOptOut ) {
 	# Only show important notices when optout
-	$wi->config->settings['wgNoticeProject']['default'] = 'optout';
+	$wgConf->settings['wgNoticeProject']['default'] = 'optout';
 }
 
 # Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 66;
+$wgMajorSiteNoticeID = 67;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>

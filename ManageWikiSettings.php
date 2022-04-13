@@ -757,12 +757,12 @@ $wgManageWikiSettings = [
 		'help' => 'The name of the wiki page to which users should be redirected if intercepted.',
 		'requires' => [],
 	],
-	'wmgRPRatingPageBlacklist' => [
+	'wgRPRatingPageBlacklist' => [
 		'name' => 'Rating Page Blacklist',
 		'from' => 'ratepage',
 		'type' => 'wikipages',
 		'exists' => false,
-		'overridedefault' => false,
+		'overridedefault' => [],
 		'section' => 'editing',
 		'help' => 'Page titles that are not allowed to be rated.',
 		'requires' => [],
@@ -1241,7 +1241,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'Only load the iframe if the user clicks it?',
+		'help' => 'Only load the iframe if the user clicks it?',
 		'requires' => [],
 	],
 	'wgRPUseMMVModule' => [
@@ -1600,12 +1600,12 @@ $wgManageWikiSettings = [
 		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
 		'requires' => [],
 	],
-	'wmgUsersNotifiedOnAllChanges' => [
+	'wgUsersNotifiedOnAllChanges' => [
 		'name' => 'Users Notified On All Changes',
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'users',
-		'overridedefault' => false,
+		'overridedefault' => [],
 		'section' => 'notifications',
 		'help' => 'Array of usernames who will be sent a notification email for every change which occurs on a wiki.',
 		'requires' => [],
@@ -1659,14 +1659,14 @@ $wgManageWikiSettings = [
 		'help' => 'This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the site notice shown.',
 		'requires' => [],
 	],
-	'wgDiscordIncomingWebhookUrl' => [
-		'name' => 'Discord Incoming Webhook URL',
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'name' => 'Discord Additional Incoming Webhook URLs',
 		'from' => 'discordnotifications',
 		'global' => true,
-		'type' => 'text',
-		'overridedefault' => false,
+		'type' => 'texts',
+		'overridedefault' => [],
 		'section' => 'notifications',
-		'help' => 'URL of the Discord webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
+		'help' => 'Add the URLs of the Discord webhooks to send notifications to. Each URL added will have notifications sent to them simultaneously. These values will be hidden to all users except those with the managewiki right.',
 		'requires' => [
 			'visibility' => [
 				'permissions' => [
@@ -1840,7 +1840,7 @@ $wgManageWikiSettings = [
 		'global' => true,
 		'type' => 'wikipages',
 		'exists' => false,
-		'overridedefault' => false,
+		'overridedefault' => [],
 		'section' => 'permissions',
 		'help' => 'Pages anyone may view.',
 		'requires' => [
@@ -2616,6 +2616,27 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'styling',
 		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
+		'requires' => [],
+	],
+	'wgCosmosEnabledRailModules' => [
+		'associativeKey' => 'recentchanges',
+		'name' => 'Cosmos Recent Changes Rail Module',
+		'from' => 'cosmos',
+		'type' => 'list',
+		'options' => [
+			'disable' => false,
+			'normal' => 'normal',
+			'sticky' => 'sticky',
+		],
+		'overridedefault' => [
+			'recentchanges' => 'normal',
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
+		'section' => 'styling',
+		'help' => 'Configure the recent changes rail module of the Cosmos skin.',
 		'requires' => [],
 	],
 	'wgCosmosContentWidth' => [
@@ -4148,8 +4169,8 @@ $wgManageWikiSettings = [
 ];
 
 if (
-	$wi->config->get( 'wmgUseGamepress', $wi->dbname ) &&
-	$wi->config->get( 'wmgUseTheme', $wi->dbname )
+	$wgConf->get( 'wmgUseGamepress', $wi->dbname ) &&
+	$wgConf->get( 'wmgUseTheme', $wi->dbname )
 ) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';

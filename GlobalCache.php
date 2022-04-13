@@ -21,7 +21,7 @@ $wgDplSettings['queryCacheTime'] = 120;
 // to SidebarBeforeOutput rather than SkinBuildSidebar, which is
 // more appropriate for this extension.
 // Also disable sidebar cache for solarawiki as a solution to T8732
-if ( !$wi->config->get( 'wmgUseGroupsSidebar', $wi->dbname ) && $wgDBname !== 'solarawiki' ) {
+if ( !$wgConf->get( 'wmgUseGroupsSidebar', $wi->dbname ) && $wgDBname !== 'solarawiki' ) {
 	$wgEnableSidebarCache = true;
 }
 
@@ -55,8 +55,8 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
 
-$wi->config->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
-$wi->config->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
+$wgConf->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
+$wgConf->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
 
 if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 	$wgMainWANCache = 'betaheze';

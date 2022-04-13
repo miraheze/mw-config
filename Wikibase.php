@@ -20,7 +20,7 @@ $entitySources = [
 	],
 ];
 
-if ( $wi->config->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
+if ( $wgConf->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
 	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
 	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
 }
@@ -175,7 +175,11 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = [
 		'P134',
 	];
-	$wgWBRepoSettings['globeUris'] = [
+	$wgWBRepoSettings['siteLinkGroups'] = [
+		'miraheze',
+		'gratispaideia'
+	];
+  $wgWBRepoSettings['globeUris'] = [
 		'http://gratisdata.miraheze.org/entity/Q476' => 'earth',
 		'http://gratisdata.miraheze.org/entity/Q987' => 'mercury',
 		'http://gratisdata.miraheze.org/entity/Q981' => 'venus',
@@ -203,7 +207,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q2125' => 'oberon',
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
-	];
+  ];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -234,10 +238,12 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'commonswiki',
 		'benpediawiki',
 	];
+	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
+	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 }
 
 if ( $wgDBname === 'horimiyawiki' ) {

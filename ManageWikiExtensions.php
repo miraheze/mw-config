@@ -99,7 +99,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'settings' => [
-				'wgFileExtensions' => array_merge( $wi->config->get( 'wgFileExtensions', $wi->dbname ), [ 'stl' ] ),
+				'wgFileExtensions' => array_merge( $wgConf->get( 'wgFileExtensions', $wi->dbname ), [ 'stl' ] ),
 			],
 		],
 		'section' => 'mediahandlers',
@@ -148,6 +148,60 @@ $wgManageWikiExtensions = [
 				'autoconfirmed' => [
 					'permissions' => [
 						'transcode-reset',
+					],
+				],
+			],
+		],
+		'section' => 'mediahandlers',
+	],
+	'uploadwizard' => [
+		'name' => 'Upload Wizard',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UploadWizard',
+		'var' => 'wmgUseUploadWizard',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'uw_campaigns' => "$IP/extensions/UploadWizard/sql/mysql/tables-generated.sql",
+			],
+			'namespaces' => [
+				'Campaign' => [
+					'id' => 460,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => 'upwizcampaigns',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'Campaign',
+					'additional' => []
+				],
+				'Campaign_talk' => [
+					'id' => 461,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+			],
+			'permissions' => [
+				'sysop' => [
+					'addgroups' => [
+						'upwizcampeditors',
+					],
+					'removegroups' => [
+						'upwizcampeditors',
+					],
+					'permissions' => [
+						'upwizcampaigns',
+						'mass-upload',
+					],
+				],
+				'upwizcampeditors' => [
+					'permissions' => [
+						'upwizcampaigns',
 					],
 				],
 			],
@@ -1388,6 +1442,24 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseGoogleNewsSitemap',
 		'conflicts' => false,
 		'requires' => [],
+		'section' => 'specialpages',
+	],
+	'hitcounters' => [
+		'name' => 'HitCounters',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HitCounters',
+		'var' => 'wmgUseHitCounters',
+		'conflicts' => false,
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'install' => [
+			'sql' => [
+				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
+				'hit_counter_extension' => "$IP/extensions/HitCounters/sql/hit_counter_extension.sql",
+			],
+		],
 		'section' => 'specialpages',
 	],
 	'imagerating' => [

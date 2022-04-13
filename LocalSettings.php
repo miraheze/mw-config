@@ -5,6 +5,11 @@
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
  */
 
+// Don't allow web access.
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'Not an entry point.' );
+}
+
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
@@ -34,9 +39,23 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
-// Initialise WikiInitialise
-require_once '/srv/mediawiki/w/extensions/CreateWiki/includes/WikiInitialise.php';
-$wi = new WikiInitialise();
+$wgConf = new SiteConfiguration;
+
+require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
+
+$wi = new MirahezeFunctions;
+
+$wgConf->suffixes = array_keys( $wi::SUFFIXES );
+$wgConf->wikis = $wi::getLocalDatabases()[ $wi::getRealm() ];
+
+// We need the CLI to be able to access 'deleted' wikis
+if ( PHP_SAPI === 'cli' ) {
+	$wgConf->wikis = array_merge( $wgConf->wikis, $wi::readDbListFile( 'deleted-' . $wi::LISTS[$wi::getRealm()] ) );
+}
+
+$wgLocalDatabases = $wgConf->getLocalDatabases();
+
+$wi->initialise();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
@@ -45,32 +64,11 @@ require_once '/srv/mediawiki/config/PrivateSettings.php';
 require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
-// Don't allow web access.
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'Not an entry point.' );
-}
-
 $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
 
-$wi->setVariables(
-	'/srv/mediawiki/cache',
-	[
-		'wiki',
-		'wikibeta',
-	],
-	[
-		'miraheze.org' => 'wiki',
-		'betaheze.org' => 'wikibeta',
-	],
-	[
-		'betaheze.org' => 'betaheze',
-	]
-);
-
-$wi->config->settings += [
-
+$wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '6',
@@ -680,70 +678,66 @@ $wi->config->settings += [
 	],
 
 	// Cosmos
-	'wgCosmosWordmark' => [
-		'default' => false,
-	],
 	'wgCosmosBackgroundImage' => [
-		'default' => false,
-	],
-	'wgCosmosBackgroundImageSize' => [
-		'default' => 'cover',
-	],
-	'wgCosmosMainBackgroundColor' => [
-		'default' => '#1A1A1A',
-	],
-	'wgCosmosContentBackgroundColor' => [
-		'default' => '#ffffff',
-	],
-	'wgCosmosBannerBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosWikiHeaderBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosLinkColor' => [
-		'default' => '#0645ad',
-	],
-	'wgCosmosButtonBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosToolbarBackgroundColor' => [
-		'default' => '#000000',
-	],
-	'wgCosmosFooterBackgroundColor' => [
-		'default' => '#c0c0c0',
-	],
-	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
-		'default' => true,
-	],
-	'wgCosmosBackgroundImageRepeat' => [
 		'default' => false,
 	],
 	'wgCosmosBackgroundImageFixed' => [
 		'default' => true,
 	],
+	'wgCosmosBackgroundImageRepeat' => [
+		'default' => false,
+	],
+	'wgCosmosBackgroundImageSize' => [
+		'default' => 'cover',
+	],
+	'wgCosmosBannerBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosButtonBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosContentBackgroundColor' => [
+		'default' => '#ffffff',
+	],
 	'wgCosmosContentWidth' => [
 		'default' => 'default',
 	],
-	'wgCosmosUseWVUISearch' => [
+	'wgCosmosContentOpacityLevel' => [
+		'default' => 100,
+	],
+	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
 		'default' => true,
 	],
-	'wgCosmosSearchUseActionAPI' => [
-		'default' => true,
+	'wgCosmosEnabledRailModules' => [
+		'default' => [
+			'recentchanges' => 'normal',
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',
+			],
+		],
 	],
-	'wgCosmosSearchDescriptionSource' => [
-		'default' => 'textextracts',
+	'wgCosmosEnableWantedPages' => [
+		'default' => false,
+		'batmanwiki' => true,
+		'snapwikiwiki' => true,
+	],
+	'wgCosmosFooterBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosLinkColor' => [
+		'default' => '#0645ad',
+	],
+	'wgCosmosMainBackgroundColor' => [
+		'default' => '#1A1A1A',
 	],
 	'wgCosmosMaxSearchResults' => [
 		'default' => 6,
 	],
-	'wgCosmosSocialProfileModernTabs' => [
-		'default' => true,
+	'wgCosmosSearchDescriptionSource' => [
+		'default' => 'textextracts',
 	],
-	'wgCosmosSocialProfileRoundAvatar' => [
-		'default' => true,
-	],
-	'wgCosmosSocialProfileShowEditCount' => [
+	'wgCosmosSearchUseActionAPI' => [
 		'default' => true,
 	],
 	'wgCosmosSocialProfileAllowBio' => [
@@ -752,10 +746,19 @@ $wi->config->settings += [
 	'wgCosmosSocialProfileFollowBioRedirects' => [
 		'default' => false,
 	],
-	'wgCosmosSocialProfileShowGroupTags' => [
+	'wgCosmosSocialProfileModernTabs' => [
 		'default' => true,
 	],
-	'wgCosmosUseSocialProfileAvatar' => [
+	'wgCosmosSocialProfileNumberofGroupTags' => [
+		'default' => 2,
+	],
+	'wgCosmosSocialProfileRoundAvatar' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileShowEditCount' => [
+		'default' => true,
+	],
+	'wgCosmosSocialProfileShowGroupTags' => [
 		'default' => true,
 	],
 	'wgCosmosSocialProfileTagGroups' => [
@@ -766,49 +769,20 @@ $wi->config->settings += [
 			'interface-admin'
 		],
 	],
-	'wgCosmosSocialProfileNumberofGroupTags' => [
-		'default' => 2,
+	'wgCosmosToolbarBackgroundColor' => [
+		'default' => '#000000',
 	],
-	'wgCosmosContentOpacityLevel' => [
-		'default' => 100,
+	'wgCosmosUseSocialProfileAvatar' => [
+		'default' => true,
 	],
-	'wgCosmosEnabledRailModules' => [
-		'default' => [
-			'recentchanges' => 'normal',
-			'interface' => [
-				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',
-			],
-		],
-		'+batfamilywiki' => [
-			'recentchanges' => 0,
-		],
-		'+batmanwiki' => [
-			'recentchanges' => 0,
-		],
-		'+devilmanwiki' => [
-			'recentchanges' => 0,
-		],
-		'+dragontamerwiki' => [
-			'recentchanges' => 0,
-		],
-		'+malwiki' => [
-			'recentchanges' => 0,
-		],
-		'+snapwikiwiki' => [
-			'recentchanges' => 0,
-		],
-		'+softcellwiki' => [
-			'recentchanges' => 0,
-		],
-		'+thewhiteroomwiki' => [
-			'recentchanges' => 0,
-		],
+	'wgCosmosUseWVUISearch' => [
+		'default' => true,
 	],
-	'wgCosmosEnableWantedPages' => [
+	'wgCosmosWikiHeaderBackgroundColor' => [
+		'default' => '#c0c0c0',
+	],
+	'wgCosmosWordmark' => [
 		'default' => false,
-		'batmanwiki' => true,
-		'snapwikiwiki' => true,
 	],
 
 	// CreateWiki
@@ -1156,8 +1130,8 @@ $wi->config->settings += [
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
 	],
-	'wgDiscordIncomingWebhookUrl' => [
-		'default' => '',
+	'wgDiscordAdditionalIncomingWebhookUrls' => [
+		'default' => [],
 	],
 	'wgDiscordCurlProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
@@ -1415,6 +1389,9 @@ $wi->config->settings += [
 	'wgUseQuickInstantCommons' => [
 		'default' => true,
 	],
+	'wgQuickInstantCommonsPrefetchMaxLimit' => [
+		'default' => 500,
+	],
 	'wgMaxImageArea' => [
 		'default' => '1.25e7',
 	],
@@ -1520,7 +1497,39 @@ $wi->config->settings += [
 			'mode' => 'packed',
 		],
 	],
-
+	// GeoData
+	'wgGlobes' => [
+		'default' => [],
+		'gratisdatawiki' => [
+			'earth',
+			'mercury',
+			'venus',
+			'moon',
+			'mars',
+			'phobos',
+			'deimos',
+			'ganymede',
+			'callisto',
+			'io',
+			'europa',
+			'mimas',
+			'enceladus',
+			'tethys',
+			'dione',
+			'rhea',
+			'titan',
+			'hyperion',
+			'iapetus',
+			'phoebe',
+			'miranda',
+			'ariel',
+			'umbriel',
+			'titania',
+			'oberon',
+			'triton',
+			'pluto',
+		],
+	],
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
@@ -1800,6 +1809,9 @@ $wi->config->settings += [
 				'bn',
 				'en',
 			],
+		],
+		'+celebswiki' => [
+			'simplewiki',
 		],
 		'+hypixelwiki' => [
 			'hypixelwikifandom',
@@ -2829,9 +2841,6 @@ $wi->config->settings += [
 	],
 
 	// Miscellaneous
-	'wgSitename' => [
-		'default' => 'No sitename set!',
-	],
 	'wgAllowDisplayTitle' => [
 		'default' => true,
 	],
@@ -2912,7 +2921,7 @@ $wi->config->settings += [
 		],
 	],
 	'wmgWhitelistRead' => [
-		'default' => false,
+		'default' => [],
 	],
 
 	// MobileFrontend
@@ -3131,8 +3140,8 @@ $wi->config->settings += [
 	],
 
 	// Users Notified On All Changes
-	'wmgUsersNotifiedOnAllChanges' => [
-		'default' => '',
+	'wgUsersNotifiedOnAllChanges' => [
+		'default' => [],
 	],
 
 	// OATHAuth
@@ -3479,8 +3488,8 @@ $wi->config->settings += [
 	],
 
 	// RatePage
-	'wmgRPRatingPageBlacklist' => [
-		'default' => false,
+	'wgRPRatingPageBlacklist' => [
+		'default' => [],
 	],
 	'wgRPAddSidebarSection' => [
 		'default' => true,
@@ -3833,10 +3842,6 @@ $wi->config->settings += [
 	'wgScriptPath' => [
 		'default' => '/w',
 	],
-	'wgServer' => [
-		'default' => 'https://miraheze.org',
-		'betaheze' => 'https://betaheze.org',
-	],
 	'wgShowHostnames' => [
 		'default' => true,
 	],
@@ -3989,7 +3994,7 @@ $wi->config->settings += [
 		'default' => '/apple-touch-icon.png',
 	],
 	'wgCentralAuthLoginIcon' => [
-		'default' => '/usr/share/nginx/favicons/default.ico',
+		'default' => '/srv/mediawiki/favicons/default.ico',
 	],
 	'wgDefaultSkin' => [
 		'default' => 'vector',
@@ -4198,6 +4203,13 @@ $wi->config->settings += [
 		],
 		'obeymewiki' => [
 			'subnav' => false,
+		],
+	],
+
+	// UploadWizard
+	'wgUploadWizardConfig' => [
+		'wmgUseUploadWizard' => [
+			'campaignExpensiveStatsEnabled' => false,
 		],
 	],
 
@@ -4764,8 +4776,7 @@ $wi->config->settings += [
 	// Temporary config used to faciliate the migration
 	// to rsyslog.
 	'wmgSyslogHandler' => [
-		'default' => 'syslog-ng',
-		'betaheze' => 'rsyslog',
+		'default' => 'rsyslog',
 	],
 	'wmgLogToDisk' => [
 		'default' => false,
@@ -4939,7 +4950,7 @@ $wi->config->settings += [
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
-	$wi->config->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
+	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
 $wi->readCache();
@@ -4948,7 +4959,7 @@ $wi->readCache();
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [ 'datatransfer' ];
 
-$wi->config->extractAllGlobals( $wi->dbname );
+$wgConf->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
@@ -4995,7 +5006,7 @@ if ( $wi->missing ) {
 
 if ( wfHostname() === 'test101' ) {
 	// Prevent cache (better be safe than sorry)
-	$wi->config->settings['wgUseCdn']['default'] = false;
+	$wgConf->settings['wgUseCdn']['default'] = false;
 }
 
 // Define last to avoid all dependencies
@@ -5007,8 +5018,7 @@ if ( !defined( 'MW_NO_EXTENSION_MESSAGES' ) ) {
 	require_once '/srv/mediawiki/config/ExtensionMessageFiles.php';
 }
 
-// Last Stuff
-$wgConf = $wi->config;
+// Don't need a global here
 unset( $wi );
 
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
