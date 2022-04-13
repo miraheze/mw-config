@@ -20,7 +20,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 		$mock
 			->method( 'get' )
-			->willReturnCallback( static function( $settingName, $wiki, $suffix = null, $params = [],
+			->willReturnCallback( static function ( $settingName, $wiki, $suffix = null, $params = [],
 				$wikiTags = [] ) {
 					switch ( $settingName ) {
 						case 'wmgUseGamepress':
