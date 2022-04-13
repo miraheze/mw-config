@@ -8,7 +8,7 @@ class SettingsTest extends ManageWikiTestCase {
 			'type' => 'array',
 			'additionalProperties' => false,
 			'patternProperties' => [
-				'^(wg|eg|wmg)[A-Z_][a-zA-Z0-9_]*$' => [
+				self::REGEX_CONFIG => [
 					'type' => 'array',
 					'additionalProperties' => false,
 					'properties' => [
@@ -126,9 +126,7 @@ class SettingsTest extends ManageWikiTestCase {
 		$wmgSharedUploadDBname = '';
 		$wmgUploadHostname = '';
 		$wgConf = $this->mockConfig();
-		$wi = (object)[
-			'dbname' => '',
-		];
+		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiSettings.php';
 		$this->assertSchema( $wgManageWikiSettings );

@@ -9,6 +9,7 @@ use stdClass;
 abstract class ManageWikiTestCase extends TestCase {
 
 	public const REGEX_READABLE = '^[A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+$';
+	public const REGEX_CONFIG = '^(wg|eg|wmg)[A-Z_][a-zA-Z0-9_]*$';
 
 	abstract public function getSchema(): array;
 
@@ -16,9 +17,29 @@ abstract class ManageWikiTestCase extends TestCase {
 		$mock = $this->getMockBuilder( stdClass::class )
 			->addMethods( [ 'get' ] )
 			->getMock();
-		$mock->method( 'get' )->willReturn( false );
+
+		$mock
+			->method( 'get' )
+			->willReturnCallback( static function( $settingName, $wiki, $suffix = null, $params = [],
+				$wikiTags = [] ) {
+					switch ( $settingName ) {
+						case 'wmgUseGamepress':
+							return true;
+						case 'wmgUseTheme':
+							return true;
+						case 'wgFileExtensions':
+							return [];
+					}
+			} );
 
 		return $mock;
+	}
+
+	public function mockMirahezeFunctions() {
+		return (object)[
+			'dbname' => '',
+			'hostname' => '',
+		];
 	}
 
 	public function assertSchema( $config ) {
