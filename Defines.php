@@ -118,12 +118,6 @@ if ( !$cwPrivate ) {
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wgConf->settings['wgDataDumpDownloadUrl']['default'] = '';
-	$wgWhitelistRead = $wmgWhitelistRead;
-
-	// Never allow Special:Preferences to be whitelisted (T8448)
-	if ( $wgWhitelistRead['Special:Preferences'] ?? false ) {
-		unset( $wgWhitelistRead['Special:Preferences'] );
-	}
 }
 
 // Experimental Wikis
