@@ -2925,7 +2925,7 @@ $wgConf->settings += [
 			'pwrap' => false,
 		],
 	],
-	'wmgWhitelistRead' => [
+	'wgWhitelistRead' => [
 		'default' => [],
 	],
 

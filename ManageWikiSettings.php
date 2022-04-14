@@ -1834,7 +1834,7 @@ $wgManageWikiSettings = [
 		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
 		'requires' => [],
 	],
-	'wmgWhitelistRead' => [
+	'wgWhitelistRead' => [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
 		'global' => true,
