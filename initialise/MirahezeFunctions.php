@@ -52,7 +52,7 @@ class MirahezeFunctions {
 		static $list = null;
 		static $databases = null;
 
-		$list ??= isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ? 'production' : 'beta';
+		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
 		$databases ??= self::readDbListFile( $list );
 
 		return $databases;
@@ -120,8 +120,8 @@ class MirahezeFunctions {
 	public static function getRealm() {
 		static $realm = null;
 
-		$realm ??= isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ?
-			self::TAGS['default'] : self::TAGS['beta'];
+		$realm ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ?
+			self::TAGS['beta'] : self::TAGS['default'];
 
 		return $realm;
 	}
@@ -130,7 +130,7 @@ class MirahezeFunctions {
 		$servers = [];
 
 		static $list = null;
-		$list ??= isset( array_flip( self::readDbListFile( 'production' ) )[ self::getCurrentDatabase() ] ) ? 'production' : 'beta';
+		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
 
 		$databases = self::readDbListFile( $list, false, $database );
 
