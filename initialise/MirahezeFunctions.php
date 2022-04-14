@@ -265,6 +265,17 @@ class MirahezeFunctions {
 		$this->cacheArray ??= $this->getCacheArray();
 
 		if ( !$this->cacheArray ) {
+			if ( self::getRealm() !== 'default' ) {
+				$wgConf->siteParamsCallback = static function () {
+					return [
+						'suffix' => null,
+						'lang' => 'en',
+						'tags' => [ self::getRealm() ],
+						'params' => [],
+					];
+				};
+			}
+
 			return;
 		}
 
