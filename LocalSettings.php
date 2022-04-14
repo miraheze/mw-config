@@ -4990,7 +4990,7 @@ $wi->readCache();
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [ 'createredirect', 'datatransfer' ];
+$wi->disabledExtensions = [ 'createredirect' ];
 
 $wgConf->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
