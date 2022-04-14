@@ -2213,9 +2213,8 @@ $wgConf->settings += [
 
 	// Loops
 	'egLoopsCountLimit' => [
+		// DO NOT RAISE FOR ANY WIKI -- Universal Omega
 		'default' => 100,
-		'constantnoblewiki' => 200,
-		'dragontamerwiki' => 300,
 	],
 
 	// Mail
