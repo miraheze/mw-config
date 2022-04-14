@@ -2479,6 +2479,20 @@ $wgConf->settings += [
 				'noratelimit' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+			],
+			'sysadmin' => [
+				'userrights' => true,
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+				'userrights-interwiki' => true,
+			],
+			'trustandsafety' => [
+				'userrights' => true,
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+				'userrights-interwiki' => true,
 			],
 			'sysop' => [
 				'interwiki' => true,
@@ -2662,6 +2676,8 @@ $wgConf->settings += [
 			'steward',
 			'staff',
 			'interwiki-admin',
+			'sysadmin',
+			'trustandsafety',
 		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
@@ -3155,7 +3171,12 @@ $wgConf->settings += [
 		'ldapwikiwiki' => 'ldapwikiwiki',
 		'betaheze' => 'testglobal',
 	],
-
+	'wgOATHExclusiveRights' => [
+		'metawiki' => [
+			'edituserjs',
+			'editsitejs',
+		],
+	],
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
