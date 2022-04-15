@@ -227,7 +227,6 @@ if ( $wmgLogToDisk ) {
 			'destination' => "$wmgLogDir/debuglogs/redis.log",
 			'level' => \Psr\Log\LogLevel::WARNING,
 		],
-		'spf-tmp' => "$wmgLogDir/debuglogs/spf-tmp.log",
 		'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 		'VisualEditor' => "$wmgLogDir/debuglogs/VisualEditor.log",
 	];
