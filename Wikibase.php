@@ -128,6 +128,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			],
 		],
 	];
+	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 	// Define constraints for various strings, such as multilingual terms (such as labels, descriptions and aliases).
 	$wgWBRepoSettings['string-limits'] = [
@@ -233,6 +234,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 	];
 	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
+	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
