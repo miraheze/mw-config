@@ -69,7 +69,7 @@ if (
 		'prefix' => $wi->dbname,
 		'forwardCookies' => true,
 		'restbaseCompat' => false,
-		'timeout' => 60,
+		'timeout' => 30,
 	];
 }
 
