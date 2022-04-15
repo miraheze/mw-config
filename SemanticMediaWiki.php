@@ -2,7 +2,7 @@
 
 wfLoadExtension( 'SemanticMediaWiki' );
 
-$wgHooks['MediaWikiServices'][] = 'loadSemantics';
+$wgExtensionFunctions[] = 'loadSemantics';
 
 function loadSemantics() {
 	enableSemantics( 'semantic-mediawiki.betaheze.org' );
