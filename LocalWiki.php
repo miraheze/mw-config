@@ -118,10 +118,6 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
-	case 'smwwikibeta':
-		require_once '/srv/mediawiki/config/SemanticMediaWiki.php';
-
-		break;
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
