@@ -2483,10 +2483,8 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 			],
 			'sysadmin' => [
-				'userrights' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
-				'userrights-interwiki' => true,
 			],
 			'trustandsafety' => [
 				'userrights' => true,
