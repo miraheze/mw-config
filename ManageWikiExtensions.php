@@ -6,6 +6,7 @@
  * displayname: the plain text display name, or a localised message key to be displayed.
  * linkPage: full url for an information page for the extension.
  * description: the plain text description, or a localised message key to be displayed.
+ * help: additional help information for the extension.
  * var: the relevant var that enables the extension.
  * conflicts: string of extensions that cause this extension to not work.
  * requires: an array. See below for available options.
