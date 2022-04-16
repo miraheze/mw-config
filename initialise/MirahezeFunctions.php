@@ -17,22 +17,23 @@ class MirahezeFunctions {
 		'beta' => 'testglobal',
 	];
 
+	private const LISTS = [
+		'default' => 'production',
+		'betaheze' => 'beta',
+	];
+
+	private const SUFFIXES = [
+		'wiki' => 'miraheze.org',
+		'wikibeta' => 'betaheze.org',
+	];
+
 	private const TAGS = [
 		'default' => 'default',
 		'beta' => 'betaheze',
 	];
 
-	public const LISTS = [
-		'default' => 'production',
-		'betaheze' => 'beta',
-	];
-
-	public const SUFFIXES = [
-		'wiki' => 'miraheze.org',
-		'wikibeta' => 'betaheze.org',
-	];
-
 	public function initialise() {
+		self::setupSiteConfiguration();
 		self::setupHooks();
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
@@ -48,17 +49,39 @@ class MirahezeFunctions {
 		$this->setSiteNames();
 	}
 
-	public static function getLocalDatabases() {
+	private static function setupSiteConfiguration() {
+		global $wgConf, $wgLocalDatabases;
+
+		$wgConf = new SiteConfiguration();
+		$wgConf->suffixes = array_keys( self::SUFFIXES );
+		$wgConf->wikis = self::getLocalDatabases();
+
+		$wgLocalDatabases = $wgConf->getLocalDatabases();
+	}
+
+	private static function setupHooks() {
+		global $wgHooks;
+
+		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+	}
+
+	private static function getLocalDatabases() {
 		static $list = null;
 		static $databases = null;
 
 		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
+
+		// We need the CLI to be able to access 'deleted' wikis
+		if ( PHP_SAPI === 'cli' ) {
+			$databases ??= array_merge( self::readDbListFile( $list ), self::readDbListFile( 'deleted-' . $list ) );
+		}
+
 		$databases ??= self::readDbListFile( $list );
 
 		return $databases;
 	}
 
-	public static function readDbListFile( $dblist, $onlyDBs = true, $database = false, $fromServer = false ) {
+	private static function readDbListFile( $dblist, $onlyDBs = true, $database = false, $fromServer = false ) {
 			if ( $database && $onlyDBs && !$fromServer ) {
 				return $database;
 			}
@@ -111,13 +134,7 @@ class MirahezeFunctions {
 			return $databases;
 	}
 
-	public static function setupHooks() {
-		global $wgHooks;
-
-		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
-	}
-
-	public static function getRealm() {
+	private static function getRealm() {
 		static $realm = null;
 
 		$realm ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ?
@@ -126,7 +143,7 @@ class MirahezeFunctions {
 		return $realm;
 	}
 
-	public static function getServers( $database = null ) {
+	private static function getServers( $database = null ) {
 		$servers = [];
 
 		static $list = null;
@@ -157,7 +174,7 @@ class MirahezeFunctions {
 		return $servers;
 	}
 
-	public static function getCurrentDatabase() {
+	private static function getCurrentDatabase() {
 		if ( defined( 'MW_DB' ) ) {
 			return MW_DB;
 		}
@@ -185,14 +202,14 @@ class MirahezeFunctions {
 		}
 	}
 
-	public function setDatabase() {
+	private function setDatabase() {
 		global $wgConf;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 		$wgConf->extractGlobal( 'wgDBname', $this->dbname );
 	}
 
-	public static function getDatabaseClusters() {
+	private static function getDatabaseClusters() {
 		$allDatabases = self::readDbListFile( self::LISTS[self::getRealm()], false );
 		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
@@ -203,25 +220,25 @@ class MirahezeFunctions {
 		return array_combine( array_keys( $databases ), $clusters );
 	}
 
-	public static function getServer() {
+	private static function getServer() {
 		return self::getServers( self::getCurrentDatabase() );
 	}
 
-	public function setServers() {
+	private function setServers() {
 		global $wgConf;
 
 		$wgConf->settings['wgServer'] = self::getServers();
 		$wgConf->extractGlobal( 'wgServer', $this->dbname );
 	}
 
-	public function setSiteNames() {
+	private function setSiteNames() {
 		global $wgConf;
 
 		$wgConf->settings['wgSitename'] = self::getSiteNames();
 		$wgConf->extractGlobal( 'wgSitename', $this->dbname );
 	}
 
-	public static function getSiteNames() {
+	private static function getSiteNames() {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
@@ -238,17 +255,17 @@ class MirahezeFunctions {
 		return $siteNames;
 	}
 
-	public static function getSiteName() {
+	private static function getSiteName() {
 		return self::getSiteNames()[self::getCurrentDatabase()] ?? self::getSiteNames()['default'];
 	}
 
-	public static function isMissing() {
+	private static function isMissing() {
 		global $wgConf;
 
 		return !in_array( self::getCurrentDatabase(), $wgConf->wikis );
 	}
 
-	public function getCacheArray() {
+	private function getCacheArray() {
 		// If we don't have a cache file, let us exit here
 		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ) ) {
 			return false;
