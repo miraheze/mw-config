@@ -3138,7 +3138,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-					"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [],
+				"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [],
 			],
 			'namespaces' => [
 				'Property' => [
@@ -3247,6 +3247,14 @@ $wgManageWikiExtensions = [
 					'permissions' => [
 						'smw-vieweditpageinfo',
 					],
+				],
+			],
+		],
+		'remove' => [
+			'mwscript' => [
+				"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [
+					'delete' => false,
+					'nochecks' => false,
 				],
 			],
 		],
