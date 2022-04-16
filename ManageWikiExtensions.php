@@ -274,7 +274,7 @@ $wgManageWikiExtensions = [
 		'name' => 'Cargo',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Cargo',
 		'var' => 'wmgUseCargo',
-		'conflicts' => false,
+		'conflicts' => 'semanticmediawiki',
 		'requires' => [],
 		'install' => [
 			'sql' => [
@@ -3126,6 +3126,132 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'semanticmediawiki' => [
+		'name' => 'SemanticMediaWiki',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
+		'var' => 'wmgUseSemanticMediaWiki',
+		'conflicts' => false,
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'install' => [
+			'mwscript' => [
+					"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [],
+			],
+			'namespaces' => [
+				'Property' => [
+					'id' => 102,
+					'searchable' => 1,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 1,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Property_talk' => [
+					'id' => 103,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Concept' => [
+					'id' => 108,
+					'searchable' => 1,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 1,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Concept_talk' => [
+					'id' => 109,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Rule' => [
+					'id' => 112,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Rule_talk' => [
+					'id' => 113,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'smw/schema' => [
+					'id' => 114,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'smw/schema',
+					'additional' => []
+				],
+				'smw/schema_talk' => [
+					'id' => 115,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+			],
+			'permissions' => [
+				'smwadministrator' => [
+					'permissions' => [
+						'smw-admin',
+					],
+				],
+				'smwcurator' => [
+					'permissions' => [
+						'smw-patternedit',
+						'smw-schemaedit',
+						'smw-pageedit',
+						'smw-viewjobqueuewatchlist',
+						'smw-viewentityassociatedrevisionmismatch',
+						'smw-vieweditpageinfo',
+					],
+				],
+				'smweditor' => [
+					'permissions' => [
+						'smw-vieweditpageinfo',
+					],
+				],
+				'user' => [
+					'permissions' => [
+						'smw-vieweditpageinfo',
+					],
+				],
+			],
+		],
+		'section' => 'other',
+	],
 	'structurednavigation' => [
 		'name' => 'StructuredNavigation',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredNavigation',
@@ -3289,7 +3415,7 @@ $wgManageWikiExtensions = [
 		'displayname' => 'Wikibase (Client)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Client',
 		'var' => 'wmgUseWikibaseClient',
-		'conflicts' => false,
+		'conflicts' => 'semanticmediawiki',
 		'requires' => [],
 		'install' => [
 			'sql' => [
@@ -3312,7 +3438,7 @@ $wgManageWikiExtensions = [
 		'displayname' => 'Wikibase (Repository)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Repository',
 		'var' => 'wmgUseWikibaseRepository',
-		'conflicts' => false,
+		'conflicts' => 'semanticmediawiki',
 		'requires' => [],
 		'install' => [
 			'sql' => [
