@@ -3173,12 +3173,6 @@ $wgConf->settings += [
 		'ldapwikiwiki' => 'ldapwikiwiki',
 		'betaheze' => 'testglobal',
 	],
-	'wgOATHExclusiveRights' => [
-		'metawiki' => [
-			'edituserjs',
-			'editsitejs',
-		],
-	],
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
