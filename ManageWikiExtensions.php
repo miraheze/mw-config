@@ -3128,6 +3128,7 @@ $wgManageWikiExtensions = [
 	],
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',
+		'help' => 'Permanently "experimental", can be removed with little to no prior notice. WARNING: Removing this extension after it is enabled with clear all SemanticMediaWiki database tables as well.',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
 		'var' => 'wmgUseSemanticMediaWiki',
 		'conflicts' => false,
