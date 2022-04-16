@@ -68,6 +68,11 @@ class ExtensionsTest extends ManageWikiTestCase {
 							'type' => 'string',
 							'pattern' => self::REGEX_READABLE,
 						],
+						'help' => [
+							'type' => 'string',
+							'description' => 'additional help information for the extension.',
+							'pattern' => self::REGEX_READABLE,
+						],
 						'linkPage' => [
 							'type' => 'string',
 							'description' => 'full url for an information page for the extension.',
