@@ -1122,6 +1122,15 @@ $wgManageWikiSettings = [
 		'help' => 'Restrict {{DISPLAYTITLE}} to titles that normalize to the same canonical database key. Wikis with NoTitle extension installed have this config unset.',
 		'requires' => [],
 	],
+	'wgPortableInfoboxResponsiblyOpenCollapsed' => [
+		'name' => 'Portable Infobox Responsibly Open Collapsed',
+		'from' => 'portableinfobox',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'parserfunctions',
+		'help' => 'Open collapsed groups when the screen is narrow.',
+		'requires' => [],
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
