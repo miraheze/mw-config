@@ -20,6 +20,14 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'famedatawiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $out ) {
+			$out->addMeta( 'og:image:width', '1200' );
+		}
+
+		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
