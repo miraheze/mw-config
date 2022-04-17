@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Additional settings to add to ManageWikiNamespaces are added using the variable below.
  *
