@@ -2630,6 +2630,7 @@ $wgConf->settings += [
 				'renameuser',
 				'requestwiki',
 				'siteadmin',
+				'smw-admin',
 				'stopforumspam',
 				'suppressionlog',
 				'suppressrevision',
@@ -2670,6 +2671,7 @@ $wgConf->settings += [
 	'wgManageWikiPermissionsDisallowedGroups' => [
 		'default' => [
 			'checkuser',
+			'smwadministrator',
 			'oversight',
 			'steward',
 			'staff',
