@@ -65,6 +65,7 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 		'class' => WANObjectCache::class,
 		'cacheId' => 'memcached-mem-1',
 	];
+
 	$wgRedisServerIP = '[2a10:6740::6:109]:6379';
 }
 
