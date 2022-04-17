@@ -44,5 +44,5 @@ wfLoadExtensions( [
 	'TorBlock',
 	'WikiDiscover',
 	'WikiEditor',
-	'cldr'
+	'cldr',
 ] );
