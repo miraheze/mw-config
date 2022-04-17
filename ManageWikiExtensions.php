@@ -3225,11 +3225,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'permissions' => [
-				'smwadministrator' => [
-					'permissions' => [
-						'smw-admin',
-					],
-				],
 				'smwcurator' => [
 					'permissions' => [
 						'smw-patternedit',
