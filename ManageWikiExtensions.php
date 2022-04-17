@@ -3183,28 +3183,8 @@ $wgManageWikiExtensions = [
 					'contentmodel' => 'wikitext',
 					'additional' => []
 				],
-				'Rule' => [
-					'id' => 112,
-					'searchable' => 0,
-					'subpages' => 0,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'wikitext',
-					'additional' => []
-				],
-				'Rule_talk' => [
-					'id' => 113,
-					'searchable' => 0,
-					'subpages' => 0,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'wikitext',
-					'additional' => []
-				],
 				'smw/schema' => [
-					'id' => 114,
+					'id' => 112,
 					'searchable' => 0,
 					'subpages' => 0,
 					'protection' => '',
@@ -3214,6 +3194,26 @@ $wgManageWikiExtensions = [
 					'additional' => []
 				],
 				'smw/schema_talk' => [
+					'id' => 113,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Rule' => [
+					'id' => 114,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Rule_talk' => [
 					'id' => 115,
 					'searchable' => 0,
 					'subpages' => 0,
