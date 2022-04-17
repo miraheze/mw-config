@@ -1,4 +1,5 @@
 <?php
+
 class MirahezeFunctions {
 	private $cacheArray;
 
