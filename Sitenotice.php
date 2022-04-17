@@ -1,11 +1,11 @@
 <?php
 
 if ( $wmgSiteNoticeOptOut ) {
-	# Only show important notices when optout
+	// Only show important notices when optout
 	$wgConf->settings['wgNoticeProject']['default'] = 'optout';
 }
 
-# Increment this version number whenever you change the site notice
+// Increment this version number whenever you change the site notice
 $wgMajorSiteNoticeID = 67;
 
 /**
@@ -13,7 +13,7 @@ $wgMajorSiteNoticeID = 67;
  * or Google will use the sitenotice for their search result snippet.
  */
 
-# Global SiteNotice
+// Global SiteNotice
 /* if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter'; // show to all users
 
@@ -27,7 +27,7 @@ $wgMajorSiteNoticeID = 67;
 
  } */
 
-# Specific wiki SiteNotice
+// Specific wiki SiteNotice
 /* if ( $wgUseCategoryBrowser ?? false ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
