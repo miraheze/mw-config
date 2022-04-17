@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ManageWiki settings are added using the variable below.
  *
