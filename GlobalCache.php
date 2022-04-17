@@ -4,6 +4,7 @@ $wgMemCachedServers = [
 	'127.0.0.1:11212',
 	'127.0.0.1:11213',
 ];
+
 $wgRedisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-pecl';
@@ -80,6 +81,6 @@ $wgJobTypeConf['default'] = [
 ];
 
 if ( PHP_SAPI === 'cli' ) {
-	# APC not available in CLI mode
+	// APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
