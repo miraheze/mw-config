@@ -1,8 +1,9 @@
 <?php
+
 wfLoadSkins( [
 	'CologneBlue',
 	'Modern',
 	'MonoBook',
 	'Timeless',
-	'Vector'
+	'Vector',
 ] );
