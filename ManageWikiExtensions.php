@@ -3287,7 +3287,6 @@ $wgManageWikiExtensions = [
 	],
 	'wikibaseclient' => [
 		'name' => 'WikibaseClient',
-		'displayname' => 'Wikibase (Client)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Client',
 		'var' => 'wmgUseWikibaseClient',
 		'conflicts' => false,
@@ -3310,7 +3309,6 @@ $wgManageWikiExtensions = [
 	],
 	'wikibaserepository' => [
 		'name' => 'WikibaseRepository',
-		'displayname' => 'Wikibase (Repository)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Repository',
 		'var' => 'wmgUseWikibaseRepository',
 		'conflicts' => false,
