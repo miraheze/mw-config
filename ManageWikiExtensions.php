@@ -3227,10 +3227,8 @@ $wgManageWikiExtensions = [
 			'permissions' => [
 				'smwcurator' => [
 					'permissions' => [
-						'smw-patternedit',
 						'smw-schemaedit',
 						'smw-pageedit',
-						'smw-viewjobqueuewatchlist',
 						'smw-viewentityassociatedrevisionmismatch',
 						'smw-vieweditpageinfo',
 					],
