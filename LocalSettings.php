@@ -2631,6 +2631,8 @@ $wgConf->settings += [
 				'requestwiki',
 				'siteadmin',
 				'smw-admin',
+				'smw-patternedit',
+				'smw-viewjobqueuewatchlist',
 				'stopforumspam',
 				'suppressionlog',
 				'suppressrevision',
