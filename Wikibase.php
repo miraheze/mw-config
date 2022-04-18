@@ -176,10 +176,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['preferredGeoDataProperties'] = [
 		'P134',
 	];
-	$wgWBRepoSettings['siteLinkGroups'] = [
-		'miraheze',
-		'gratispaideia'
-	];
 	$wgWBRepoSettings['globeUris'] = [
 		'http://gratisdata.miraheze.org/entity/Q476' => 'earth',
 		'http://gratisdata.miraheze.org/entity/Q987' => 'mercury',
