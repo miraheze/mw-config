@@ -2489,7 +2489,7 @@ $wgConf->settings += [
 			'sysadmin' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
-				'oathauth-api-all' => true,
+				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
 			],
 			'trustandsafety' => [
