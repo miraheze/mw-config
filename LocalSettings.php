@@ -64,10 +64,6 @@ require_once '/srv/mediawiki/config/PrivateSettings.php';
 require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
-if ( $wi->dbname === 'smwwikibeta' ) {
-	require_once '/srv/mediawiki/config/SemanticMediaWiki.php';
-}
-
 $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
@@ -2634,6 +2630,9 @@ $wgConf->settings += [
 				'renameuser',
 				'requestwiki',
 				'siteadmin',
+				'smw-admin',
+				'smw-patternedit',
+				'smw-viewjobqueuewatchlist',
 				'stopforumspam',
 				'suppressionlog',
 				'suppressrevision',
@@ -2674,6 +2673,7 @@ $wgConf->settings += [
 	'wgManageWikiPermissionsDisallowedGroups' => [
 		'default' => [
 			'checkuser',
+			'smwadministrator',
 			'oversight',
 			'steward',
 			'staff',
