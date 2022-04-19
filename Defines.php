@@ -35,10 +35,6 @@ if ( $wgConf->get( 'wmgUsePopups', $wi->dbname ) ) {
 	}
 }
 
-if ( $wgConf->get( 'wmgUseSemanticMediaWiki', $wi->dbname ) ) {
-	require_once '/srv/mediawiki/config/SemanticMediaWiki.php';
-}
-
 if ( $wgConf->get( 'wmgUseSocialProfile', $wi->dbname ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 }
