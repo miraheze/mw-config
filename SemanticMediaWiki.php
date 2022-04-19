@@ -2,7 +2,7 @@
 
 $wgExtensionFunctions[] = 'loadSemantics';
 function loadSemantics() {
-	enableSemantics( $wi->hostname );
+	enableSemantics( $wi->server, true );
 }
 // $smwgUpgradeKey = 'smw:2022-04-18';
 $smwgPageSpecialProperties = [
