@@ -1,5 +1,4 @@
 <?php
-wfLoadExtension( 'SemanticMediaWiki' );
 
 $smwgUpgradeKey = 'smw:2022-04-15';
 $smwgPageSpecialProperties = [
