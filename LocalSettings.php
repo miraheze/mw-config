@@ -3447,6 +3447,10 @@ $wgConf->settings += [
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
+		'+metroidwiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+		],
 		'+nintendowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
@@ -3465,6 +3469,10 @@ $wgConf->settings += [
 		],
 		'+solarawiki' => [
 			'usecodemirror' => 1,
+		],
+		'+squareenixwiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 		],
 		'+yablestudiowiki' => [
 			'visualeditor-newwikitext' => 1,
