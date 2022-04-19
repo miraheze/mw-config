@@ -3410,6 +3410,11 @@ $wgConf->settings += [
 		'default' => 0,
 	],
 
+	// PortableInfobox
+	'wgPortableInfoboxResponsiblyOpenCollapsed' => [
+		'default' => true,
+	],
+
 	// Preferences
 	'wmgDefaultUserOptions' => [
 		'default' => [
