@@ -5013,7 +5013,7 @@ $wi->readCache();
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [ 'semanticmediawiki', 'createredirect', 'regexfunctions' ];
+$wi->disabledExtensions = [ 'createredirect', 'regexfunctions' ];
 
 $wgConf->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();
