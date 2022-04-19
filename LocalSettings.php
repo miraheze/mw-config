@@ -2496,7 +2496,6 @@ $wgConf->settings += [
 				'userrights' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
-				'globalblock' => true,
 				'userrights-interwiki' => true,
 				'centralauth-lock' => true,
 				'centralauth-rename' => true,
