@@ -67,13 +67,28 @@ if (
 	$wgConf->get( 'wmgUseLinter', $wi->dbname )
 ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://mw-lb.miraheze.org/w/rest.php',
-		'domain' => $wi->server,
-		'prefix' => $wi->dbname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-		'timeout' => 30,
+
+	if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
+		$wgVisualEditorParsoidAutoConfig = false;
+	}
+
+	$wgVirtualRestConfig = [
+		'paths' => [],
+		'modules' => [
+			'parsoid' => [
+				'url' => 'https://mw-lb.miraheze.org/w/rest.php',
+				'domain' => $wi->server,
+				'prefix' => $wi->dbname,
+				'forwardCookies' => (bool)$cwPrivate,
+				'restbaseCompat' => false,
+				'timeout' => 30,
+			],
+		],
+		'global' => [
+			'timeout' => 360,
+			'forwardCookies' => false,
+			'HTTPProxy' => null,
+		],
 	];
 }
 
