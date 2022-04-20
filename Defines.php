@@ -245,36 +245,38 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 	}
 
 	$wgForeignFileRepos[] = [
-		'class' => MediaWiki\Extension\QuickInstantCommons\Repo::class,
+		'class' => ForeignDBViaLBRepo::class,
 		'name' => "shared-{$wmgSharedUploadDBname}",
-		'directory' => $wgUploadDirectory,
-		'apibase' => "https://{$wmgSharedUploadBaseUrl}/w/api.php",
+		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
+		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
 		'hashLevels' => 2,
-		'thumbUrl' => false,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 43200,
-		'transformVia404' => true,
-		'abbrvThreshold' => 255,
-		'apiMetadataExpiry' => 86400,
-		'disabledMediaHandlers' => [ TiffHandler::class ],
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => $wmgSharedUploadDBname,
+		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
 	];
 }
 
 // Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
-		'class' => MediaWiki\Extension\QuickInstantCommons\Repo::class,
+		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
-		'directory' => $wgUploadDirectory,
-		'apibase' => 'https://commons.miraheze.org/w/api.php',
+		'directory' => '/mnt/mediawiki-static/commonswiki',
+		'url' => 'https://static.miraheze.org/commonswiki',
 		'hashLevels' => 2,
-		'thumbUrl' => false,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 43200,
-		'transformVia404' => true,
-		'abbrvThreshold' => 255,
-		'apiMetadataExpiry' => 86400,
-		'disabledMediaHandlers' => [ TiffHandler::class ],
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => 'commonswiki',
+		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
+		'scriptDirUrl' => 'https://commons.miraheze.org/w',
 	];
 }
 
