@@ -40,10 +40,6 @@ switch ( $wi->dbname ) {
 			if ( !isset( $meta['og:title'] ) ) {
 				$out->addMeta( 'og:title', $out->getHTMLTitle() );
 			}
-			$imageFile = self::getPageImage( $out->getContext()->getTitle() );
-			if ( !$imageFile ) {
-				return;
-			}
 			$thumb = $imageFile->transform( [ 'width' => 1200 ] );
 			if ( !$thumb ) {
 				return;
