@@ -26,8 +26,6 @@ $wgLBFactoryConf = [
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
 		'flags' => DBO_SSL,
-		'max lag' => 6,
-		'lagDetectionMethod' => 'Seconds_Behind_Master',
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 30,
@@ -63,10 +61,6 @@ $wgLBFactoryConf = [
 
 // Disallow web request database transactions that are slower than 3 seconds
 $wgMaxUserDBWriteDuration = 3;
-
-// Activate read-only mode for bots when lag is getting high.
-// This should be lower than 'max lag' above.
-$wgAPIMaxLagThreshold = 3;
 
 // Max execution time for expensive queries of special pages (in milliseconds)
 $wgMaxExecutionTimeForExpensiveQueries = 20000;
