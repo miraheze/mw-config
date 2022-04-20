@@ -28,6 +28,15 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'gratisdatawiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+		
+		function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
+			$meta = $out->getMetaTags();
+			
+			if ( !isset( $meta['og:type'] ) && !isset( $meta['twitter:card'] ) ) {
+		
+		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
