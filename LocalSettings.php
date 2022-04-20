@@ -2485,12 +2485,20 @@ $wgConf->settings += [
 			'sysadmin' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
+				'oathauth-verify-user' => true,
+				'oathauth-disable-for-user' => true,
 			],
 			'trustandsafety' => [
 				'userrights' => true,
+				'globalblock' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'userrights-interwiki' => true,
+				'centralauth-lock' => true,
+				'centralauth-rename' => true,
+				'handle-pii' => true,
+				'oathauth-disable-for-user' => true,
+				'oathauth-verify-user' => true,
 			],
 			'sysop' => [
 				'interwiki' => true,
