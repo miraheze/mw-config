@@ -90,6 +90,13 @@ if (
 			'HTTPProxy' => null,
 		],
 	];
+
+	if ( $wgConf->get( 'wmgUseFlow', $wi->dbname ) ) {
+		$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
+		$wgFlowParsoidPrefix = $wi->dbname;
+		$wgFlowParsoidTimeout = 30;
+		$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
+	}
 }
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
