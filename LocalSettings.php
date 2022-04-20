@@ -3230,14 +3230,6 @@ $wgConf->settings += [
 		'default' => false,
 		'gratispaideiawiki' => true,
 	],
-	'wgPageImagesOpenGraphFallbackImage' => [
-		'default' => false,
-		'gratispaideiawiki' => 'https://static.miraheze.org/commonswiki/2/2a/Gratispaideia-logo.svg',
-	],
-	'wgPageImagesLeadSectionOnly' => [
-		'default' => false,
-		'gratispaideiawiki' => true,
-	],
 
 	// Pagelang
 	'wgPageLanguageUseDB' => [
