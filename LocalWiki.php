@@ -45,6 +45,7 @@ switch ( $wi->dbname ) {
 				return;
 			}
 			$out->addMeta( 'og:image', wfExpandUrl( $thumb->getUrl(), PROTO_CANONICAL ) );
+			$out->addMeta( 'revisit-after', '1 days' );
 		}
 		
 		break;
