@@ -36,6 +36,11 @@ switch ( $wi->dbname ) {
 			
 			if ( !isset( $meta['og:type'] ) && !isset( $meta['twitter:card'] ) ) {
 				$out->addMeta( 'og:type', 'summary' );
+			}
+			if ( !isset( $meta['og:title'] ) ) {
+				$out->addMeta( 'og:title', $out->getHTMLTitle() );
+			}
+		}
 		
 		break;
 	case 'ldapwikiwiki':
