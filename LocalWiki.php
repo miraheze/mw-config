@@ -30,6 +30,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'gratisdatawiki':
 		$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 		
 		function onOutputPageParserOutput( OutputPage $out, ParserOutput $parserOutput ) {
 			$placeholders = $parserOutput->getExtensionData( 'wikibase-view-chunks' );
@@ -48,11 +49,8 @@ switch ( $wi->dbname ) {
 					$out->addLink( $link );
 				}
 			}
-			
-			return true;
 		}
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-			
+				
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'og:image:width', '1200' );
 			$out->addMeta( 'og:image', wfExpandUrl( $thumb->getUrl(), PROTO_CANONICAL ) );
