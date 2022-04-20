@@ -2490,6 +2490,7 @@ $wgConf->settings += [
 			],
 			'trustandsafety' => [
 				'userrights' => true,
+				'globalblock' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'userrights-interwiki' => true,
@@ -2497,7 +2498,7 @@ $wgConf->settings += [
 				'centralauth-rename' => true,
 				'handle-pii' => true,
 				'oathauth-disable-for-user' => true,
-				'globalblock' => true,
+				'oathauth-verify-user' => true,
 			],
 			'sysop' => [
 				'interwiki' => true,
