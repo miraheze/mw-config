@@ -53,7 +53,6 @@ switch ( $wi->dbname ) {
 				
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'og:image:width', '1200' );
-			$out->addMeta( 'revisit-after', '1 days' );
 		}
 		
 		break;
