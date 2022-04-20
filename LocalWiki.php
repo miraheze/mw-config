@@ -59,8 +59,6 @@ switch ( $wi->dbname ) {
 
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
-			$out->addMeta( 'revisit-after', '2 days' );
-			$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
 		}
 
 		$wgHooks['SkinBuildSidebar'][] = 'onSkinBuildSidebar';
