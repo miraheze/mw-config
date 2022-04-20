@@ -29,21 +29,32 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gratisdatawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+		$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
 		
-		function onBeforePageDisplay( OutputPage $out, Skin $skin ) {
-			$meta = $out->getMetaTags();
+		function onOutputPageParserOutput( OutputPage $out, ParserOutput $parserOutput ) {
+			$placeholders = $parserOutput->getExtensionData( 'wikibase-view-chunks' );
+			if ( $placeholders !== null ) {
+				$out->setProperty( 'wikibase-view-chunks', $placeholders );
+			}
+			$termsListItems = $parserOutput->getExtensionData( 'wikibase-terms-list-items' );
+			if ( $termsListItems !== null ) {
+				$out->setProperty( 'wikibase-terms-list-items', $termsListItems );
+			}
+			$meta = $parserOutput->getExtensionData( 'wikibase-meta-tags' );
+			$out->setProperty( 'wikibase-meta-tags', $meta );
+			$alternateLinks = $parserOutput->getExtensionData( 'wikibase-alternate-links' );
+			if ( $alternateLinks !== null ) {
+				foreach ( $alternateLinks as $link ) {
+					$out->addLink( $link );
+				}
+			}
 			
-			if ( !isset( $meta['og:type'] ) && !isset( $meta['twitter:card'] ) ) {
-				$out->addMeta( 'og:type', 'summary' );
-			}
-			if ( !isset( $meta['og:title'] ) ) {
-				$out->addMeta( 'og:title', $out->getHTMLTitle() );
-			}
-			$thumb = $imageFile->transform( [ 'width' => 1200 ] );
-			if ( !$thumb ) {
-				return;
-			}
+			return true;
+		}
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+			
+		function onBeforePageDisplay( OutputPage $out ) {
+			$out->addMeta( 'og:image:width', '1200' );
 			$out->addMeta( 'og:image', wfExpandUrl( $thumb->getUrl(), PROTO_CANONICAL ) );
 			$out->addMeta( 'revisit-after', '1 days' );
 		}
