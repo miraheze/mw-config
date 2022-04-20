@@ -1640,6 +1640,18 @@ $wgManageWikiSettings = [
 		'help' => 'Enable mention success/failure notifications.',
 		'requires' => [],
 	],
+	'wgEchoMaxMentionsInEditSummary' => [
+		'name' => 'Echo Max Mentions In Edit Summary',
+		'from' => 'echo',
+		'global' => true,
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 50,
+		'overridedefault' => 0,
+		'section' => 'notifications',
+		'help' => 'Maximum number of users that will be notified that they were linked from an edit summary or 0 for no notifications.',
+		'requires' => [],
+	],
 	'wmgSiteNoticeOptOut' => [
 		'name' => 'Opt out of global Miraheze notices',
 		'from' => 'mediawiki',

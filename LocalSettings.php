@@ -1195,6 +1195,9 @@ $wgConf->settings += [
 	'wgEchoMentionStatusNotifications' => [
 		'default' => true,
 	],
+	'wgEchoMaxMentionsInEditSummary' => [
+		'default' => 0,
+	],
 
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
