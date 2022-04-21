@@ -29,24 +29,29 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gratisdatawiki':
-		$wgHooks['OutputPageParserOutput'][] = 'onOutputPageParserOutput';
+		$wgHooks['overridePageMetaTags'][] = 'overridePageMetaTags';
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-		
-		function onOutputPageParserOutput( OutputPage $out, ParserOutput $parserOutput ) {
-			$placeholders = $parserOutput->getExtensionData( 'wikibase-view-chunks' );
-			if ( $placeholders !== null ) {
-				$out->setProperty( 'wikibase-view-chunks', $placeholders );
+		// The title of wikibase entities will be the label, if available, or else the entity id (e.g. 'Q42').
+		function overridePageMetaTags( OutputPage $outputPage ) {
+			$meta = $this->getOutput()->getProperty( 'wikibase-meta-tags' );
+			// This would remove description, social media tags, or any search engine optimization for diffs
+			if ( $this->isDiff() ) {
+				if ( isset( $meta['title'] ) ) {
+					$this->setDiffPageTitle( $outputPage, $meta['title'] );
+				}
 			}
-			$termsListItems = $parserOutput->getExtensionData( 'wikibase-terms-list-items' );
-			if ( $termsListItems !== null ) {
-				$out->setProperty( 'wikibase-terms-list-items', $termsListItems );
+			
+			if ( isset( $meta['title'] ) ) {
+				$this->setHTMLTitle( $outputPage, $meta['title'] );
+				$outputPage->addMeta( 'og:title', $meta['title'] );
 			}
-			$meta = $parserOutput->getExtensionData( 'wikibase-meta-tags' );
-			$out->setProperty( 'wikibase-meta-tags', $meta );
-			$alternateLinks = $parserOutput->getExtensionData( 'wikibase-alternate-links' );
-			if ( $alternateLinks !== null ) {
-				foreach ( $alternateLinks as $link ) {
-					$out->addLink( $link );
+			
+			if ( isset( $meta['description'] ) ) {
+				$outputPage->addMeta( 'description', $meta['description'] );
+				$outputPage->addMeta( 'og:description', $meta['description'] );
+				
+				if ( isset( $meta['title'] ) ) {
+					$outputPage->addMeta( 'og:type', 'summary' );
 				}
 			}
 		}
