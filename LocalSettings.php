@@ -4269,6 +4269,10 @@ $wgConf->settings += [
 	],
 	'wmgSharedUploadClientDBname' => [
 		'default' => false,
+		'gpcommonswiki' => [
+			'gratispaideiawiki',
+			'gratisdatawiki',
+		],
 	],
 
 	// UniversalLanguageSelector
