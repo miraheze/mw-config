@@ -29,10 +29,10 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gratisdatawiki':
-		$wgHooks['overridePageMetaTags'][] = 'overridePageMetaTags';
+		$wgHooks['overridePageMetaTags'][] = 'onoverridePageMetaTags';
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 		// The title of wikibase entities will be the label, if available, or else the entity id (e.g. 'Q42').
-		function overridePageMetaTags( OutputPage $outputPage ) {
+		function onoverridePageMetaTags( OutputPage $outputPage ) {
 			$meta = $this->getOutput()->getProperty( 'wikibase-meta-tags' );
 			// This would remove description, social media tags, or any search engine optimization for diffs
 			if ( $this->isDiff() ) {
