@@ -29,7 +29,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gratisdatawiki':
-		$wgHooks['OverridePageMetaTags'][] = 'onOverridePageMetaTags';
+		$wgHooks['overridePageMetaTags'][] = 'onOverridePageMetaTags';
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 		// The title of wikibase entities will be the label, if available, or else the entity id (e.g. 'Q42').
 		function onOverridePageMetaTags( OutputPage $outputPage ) {
