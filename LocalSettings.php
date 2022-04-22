@@ -4269,6 +4269,10 @@ $wgConf->settings += [
 		'wmgUseUploadWizard' => [
 			'campaignExpensiveStatsEnabled' => false,
 		],
+		'+gpcommonswiki' => [
+			'flickrApiUrl' => 'https://api.flickr.com/services/rest/?',
+			'flickrApiKey' => 'c436a013c03d8a823a4333ace4771ccd',
+		],
 	],
 
 	// Uploads
