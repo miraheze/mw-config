@@ -3228,6 +3228,10 @@ $wgConf->settings += [
 		'default' => [
 			NS_MAIN,
 		],
+		'gpcommonswiki' => [
+			NS_MAIN,
+			NS_CATEGORY,
+		],
 		'vgportdbwiki' => [
 			NS_MAIN,
 			3000,
@@ -3246,6 +3250,8 @@ $wgConf->settings += [
 	'wgPageImagesExpandOpenSearchXml' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
+		'gratisdatawiki' => true,
+		'gpcommonswiki' => true,
 	],
 
 	// Pagelang
