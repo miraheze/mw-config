@@ -93,7 +93,7 @@ switch ( $wi->dbname ) {
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
 		$wgForeignFileRepos[] = [
-			'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
+			'class' => \MediaWiki\Extension\QuickInstantCommons\Repo::class,
 			'name' => 'shared-polcomwiki',
 			'directory' => $wgUploadDirectory,
 			'apibase' => 'https://polcom.miraheze.org/w/api.php',
