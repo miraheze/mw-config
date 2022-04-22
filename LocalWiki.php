@@ -28,6 +28,24 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'gratispaideiawiki':
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => 'shared-gpcommonswiki',
+			'directory' => '/mnt/mediawiki-static/gpcommonswiki',
+			'url' => 'https://static.miraheze.org/gpcommonswiki',
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => !$wgGenerateThumbnailOnParse,
+			'hasSharedCache' => false,
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => 'gpcommonswiki',
+			'descBaseUrl' => 'https://gpcommons.miraheze.org/wiki/File:',
+			'scriptDirUrl' => 'https://gpcommons.miraheze.org/w',
+		];
+
+		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
