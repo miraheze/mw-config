@@ -1789,6 +1789,20 @@ $wgConf->settings += [
 		],
 	],
 
+	// ImportDump
+	'wgImportDumpCentralWiki' => [
+		'default' => 'metawiki',
+		'betaheze' => 'betawiki',
+	],
+	'wgImportDumpInterwikiMap' => [
+		'default' => [
+			'fandom.com' => 'wikia',
+		],
+	],
+	'wgImportDumpScriptCommand' => [
+		'default' => 'mwscript importDump.php {wiki} --no-updates --username-prefix={username-prefix} {file}',
+	],
+
 	// Imports
 	'wgImportSources' => [
 		'default' => [
