@@ -3534,6 +3534,10 @@ $wgConf->settings += [
 	'wgPropertySuggesterInitialSuggestions' => [
 		'default' => [],
 	],
+	'wgPropertySuggesterMinProbability' => [
+		'default' => 0.05,
+		'gratisdatawiki' => 0.069,
+	],
 
 	// RateLimits
 	'+wgRateLimits' => [
