@@ -1966,7 +1966,7 @@ $wgConf->settings += [
 				'license' => 'CC0-1.0',
 				'isLocal' => false,
 			],
-				
+		],
 	],
 	'wgJsonConfigInterwikiPrefix' => [
 		'default' => 'commons',
