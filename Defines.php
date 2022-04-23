@@ -67,14 +67,36 @@ if (
 	$wgConf->get( 'wmgUseLinter', $wi->dbname )
 ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
-	$wgVirtualRestConfig['modules']['parsoid'] = [
-		'url' => 'https://mw-lb.miraheze.org/w/rest.php',
-		'domain' => $wi->server,
-		'prefix' => $wi->dbname,
-		'forwardCookies' => true,
-		'restbaseCompat' => false,
-		'timeout' => 30,
+
+	if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
+		$wgVisualEditorParsoidAutoConfig = false;
+	}
+
+	$wgVirtualRestConfig = [
+		'paths' => [],
+		'modules' => [
+			'parsoid' => [
+				'url' => 'https://mw-lb.miraheze.org/w/rest.php',
+				'domain' => $wi->server,
+				'prefix' => $wi->dbname,
+				'forwardCookies' => (bool)$cwPrivate,
+				'restbaseCompat' => false,
+				'timeout' => 30,
+			],
+		],
+		'global' => [
+			'timeout' => 360,
+			'forwardCookies' => false,
+			'HTTPProxy' => null,
+		],
 	];
+
+	if ( $wgConf->get( 'wmgUseFlow', $wi->dbname ) ) {
+		$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
+		$wgFlowParsoidPrefix = $wi->dbname;
+		$wgFlowParsoidTimeout = 30;
+		$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
+	}
 }
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
@@ -245,36 +267,38 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 	}
 
 	$wgForeignFileRepos[] = [
-		'class' => MediaWiki\Extension\QuickInstantCommons\Repo::class,
+		'class' => ForeignDBViaLBRepo::class,
 		'name' => "shared-{$wmgSharedUploadDBname}",
-		'directory' => $wgUploadDirectory,
-		'apibase' => "https://{$wmgSharedUploadBaseUrl}/w/api.php",
+		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
+		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
 		'hashLevels' => 2,
-		'thumbUrl' => false,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 43200,
-		'transformVia404' => true,
-		'abbrvThreshold' => 255,
-		'apiMetadataExpiry' => 86400,
-		'disabledMediaHandlers' => [ TiffHandler::class ],
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => $wmgSharedUploadDBname,
+		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
 	];
 }
 
 // Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 	$wgForeignFileRepos[] = [
-		'class' => MediaWiki\Extension\QuickInstantCommons\Repo::class,
+		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
-		'directory' => $wgUploadDirectory,
-		'apibase' => 'https://commons.miraheze.org/w/api.php',
+		'directory' => '/mnt/mediawiki-static/commonswiki',
+		'url' => 'https://static.miraheze.org/commonswiki',
 		'hashLevels' => 2,
-		'thumbUrl' => false,
+		'thumbScriptUrl' => false,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'hasSharedCache' => false,
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 43200,
-		'transformVia404' => true,
-		'abbrvThreshold' => 255,
-		'apiMetadataExpiry' => 86400,
-		'disabledMediaHandlers' => [ TiffHandler::class ],
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => 'commonswiki',
+		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
+		'scriptDirUrl' => 'https://commons.miraheze.org/w',
 	];
 }
 

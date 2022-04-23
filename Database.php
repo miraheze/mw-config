@@ -1,6 +1,6 @@
 <?php
 
-$wgConf->settings['wgLBFactoryConf']['default'] = [
+$wgLBFactoryConf = [
 	'class' => LBFactoryMulti::class,
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
@@ -26,6 +26,10 @@ $wgConf->settings['wgLBFactoryConf']['default'] = [
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
 		'flags' => DBO_SSL,
+		'variables' => [
+			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
+			'innodb_lock_wait_timeout' => 30,
+		],
 		// MediaWiki checks if the certificate presented by MariaDB is signed
 		// by the certificate authority listed in 'sslCAFile'. In emergencies
 		// this could be set to /etc/ssl/certs/ca-certificates.crt (all trusted
@@ -55,4 +59,8 @@ $wgConf->settings['wgLBFactoryConf']['default'] = [
 	],
 ];
 
-$wgConf->settings['wgMaxExecutionTimeForExpensiveQueries']['default'] = 20000;
+// Disallow web request database transactions that are slower than 3 seconds
+$wgMaxUserDBWriteDuration = 3;
+
+// Max execution time for expensive queries of special pages (in milliseconds)
+$wgMaxExecutionTimeForExpensiveQueries = 20000;

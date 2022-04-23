@@ -1789,6 +1789,20 @@ $wgConf->settings += [
 		],
 	],
 
+	// ImportDump
+	'wgImportDumpCentralWiki' => [
+		'default' => 'metawiki',
+		'betaheze' => 'betawiki',
+	],
+	'wgImportDumpInterwikiMap' => [
+		'default' => [
+			'fandom.com' => 'wikia',
+		],
+	],
+	'wgImportDumpScriptCommand' => [
+		'default' => 'mwscript importDump.php {wiki} --no-updates --username-prefix={username-prefix} {file}',
+	],
+
 	// Imports
 	'wgImportSources' => [
 		'default' => [
@@ -3214,6 +3228,10 @@ $wgConf->settings += [
 		'default' => [
 			NS_MAIN,
 		],
+		'gpcommonswiki' => [
+			NS_MAIN,
+			NS_CATEGORY,
+		],
 		'vgportdbwiki' => [
 			NS_MAIN,
 			3000,
@@ -3232,6 +3250,8 @@ $wgConf->settings += [
 	'wgPageImagesExpandOpenSearchXml' => [
 		'default' => false,
 		'gratispaideiawiki' => true,
+		'gratisdatawiki' => true,
+		'gpcommonswiki' => true,
 	],
 
 	// Pagelang
@@ -5024,7 +5044,7 @@ $wi->readCache();
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [ 'createredirect', 'regexfunctions' ];
+$wi->disabledExtensions = [ 'editnotify', 'regexfunctions' ];
 
 $wgConf->extractAllGlobals( $wi->dbname );
 $wi->loadExtensions();

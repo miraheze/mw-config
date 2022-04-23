@@ -28,7 +28,12 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'gratisdatawiki':
+	case 'gpcommonswiki':
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+		
+		break;
+  case 'gratisdatawiki':
 		$wgHooks['overridePageMetaTags'][] = 'onOverridePageMetaTags';
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 		// The title of wikibase entities will be the label, if available, or else the entity id (e.g. 'Q42').
@@ -61,6 +66,24 @@ switch ( $wi->dbname ) {
 		}
 		
 		break;
+	case 'gratispaideiawiki':
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => 'shared-gpcommonswiki',
+			'directory' => '/mnt/mediawiki-static/gpcommonswiki',
+			'url' => 'https://static.miraheze.org/gpcommonswiki',
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => !$wgGenerateThumbnailOnParse,
+			'hasSharedCache' => false,
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => 'gpcommonswiki',
+			'descBaseUrl' => 'https://gpcommons.miraheze.org/wiki/File:',
+			'scriptDirUrl' => 'https://gpcommons.miraheze.org/w',
+		];
+
+		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
@@ -87,27 +110,6 @@ switch ( $wi->dbname ) {
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
-	case 'metawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
-			$out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
-			$out->addMeta( 'revisit-after', '2 days' );
-			$out->addMeta( 'keywords', 'miraheze, free, wiki hosting, mediawiki, mediawiki hosting, open source, hosting' );
-		}
-
-		$wgHooks['SkinBuildSidebar'][] = 'onSkinBuildSidebar';
-
-		function onSkinBuildSidebar( $skin, &$bar ) {
-			$bar['miraheze-sidebar-donate'][] = [
-				'text' => $skin->msg( 'miraheze-donate' ),
-				'href' => '/wiki/Special:MyLanguage/Donate',
-				'title' => $skin->msg( 'miraheze-donate' ),
-				'id' => 'n-donate',
-			];
-		}
-
-		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
@@ -128,18 +130,19 @@ switch ( $wi->dbname ) {
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
 		$wgForeignFileRepos[] = [
-			'class' => '\MediaWiki\Extension\QuickInstantCommons\Repo',
+			'class' => ForeignDBViaLBRepo::class,
 			'name' => 'shared-polcomwiki',
-			'directory' => $wgUploadDirectory,
-			'apibase' => 'https://polcom.miraheze.org/w/api.php',
+			'directory' => '/mnt/mediawiki-static/polcomwiki',
+			'url' => 'https://static.miraheze.org/polcomwiki',
 			'hashLevels' => 2,
-			'thumbUrl' => false,
+			'thumbScriptUrl' => false,
+			'transformVia404' => !$wgGenerateThumbnailOnParse,
+			'hasSharedCache' => false,
 			'fetchDescription' => true,
-			'descriptionCacheExpiry' => 43200,
-			'transformVia404' => true,
-			'abbrvThreshold' => 255,
-			'apiMetadataExpiry' => 86400,
-			'disabledMediaHandlers' => [ TiffHandler::class ],
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => 'polcomwiki',
+			'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
+			'scriptDirUrl' => 'https://polcom.miraheze.org/w',
 		];
 
 		break;
