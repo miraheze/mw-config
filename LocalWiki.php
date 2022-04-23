@@ -77,25 +77,6 @@ switch ( $wi->dbname ) {
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
-	case 'metawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
-			$out->addMeta( 'description', 'Miraheze is an open source project that offers free MediaWiki hosting, for everyone. Request your free wiki today!' );
-		}
-
-		$wgHooks['SkinBuildSidebar'][] = 'onSkinBuildSidebar';
-
-		function onSkinBuildSidebar( $skin, &$bar ) {
-			$bar['miraheze-sidebar-donate'][] = [
-				'text' => $skin->msg( 'miraheze-donate' ),
-				'href' => '/wiki/Special:MyLanguage/Donate',
-				'title' => $skin->msg( 'miraheze-donate' ),
-				'id' => 'n-donate',
-			];
-		}
-
-		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
