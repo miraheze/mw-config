@@ -216,6 +216,19 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'gpcommonswiki',
 		'benpediawiki'
 	];
+	$wgWBRepoSettings['updateRepoTags'] = [
+		'client-automatic-update'
+	];
+	$wgWBRepoSettings['viewUiTags'] = [
+		'gratisdata-ui'
+	];
+	$wgWBRepoSettings['specialPageTags'] = [
+		'gratisdata-ui'
+	];
+	$wgWBRepoSettings['termboxTags'] = [
+		'gratisdata-ui',
+		'termbox',
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
