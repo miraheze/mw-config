@@ -29,8 +29,8 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gpcommonswiki':
-		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 		
 		break;
 	case 'gratispaideiawiki':
