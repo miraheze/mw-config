@@ -107,6 +107,12 @@ if ( $wgDBname === 'famepediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
 }
 
+if ( $wgDBname === 'gpcommonswiki' ) {
+	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
+	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
+	
+}
+
 if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['statementSections'] = [
 		'item' => [
@@ -205,11 +211,16 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
+	$wgWBRepoSettings['localClientDatabases'] = [
+		'gratispaideiawiki',
+		'gpcommonswiki',
+		'benpediawiki'
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
-	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0, 4, 14 ];
+	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
 	// Some well-known properties' IDs which are used to format references
 	$wgWBClientSettings['wellKnownReferencePropertyIds'] = [
 		// (note: The keys are not chosen at random; the software knows exactly which ones they are and which ones they are not)
@@ -236,6 +247,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
+	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
 }
 
 if ( $wgDBname === 'horimiyawiki' ) {
