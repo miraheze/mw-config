@@ -28,6 +28,11 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'gpcommonswiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		
+		break;
 	case 'gratispaideiawiki':
 		$wgForeignFileRepos[] = [
 			'class' => ForeignDBViaLBRepo::class,
