@@ -3088,6 +3088,7 @@ $wgConf->settings += [
 	// Enable or disable notifications.
 	'wgModerationNotificationEnable' => [
 		'default' => false,
+		'obeymewiki' => true,
 	],
 	// Notify administrator only about new pages requests.
 	'wgModerationNotificationNewOnly' => [
@@ -3096,6 +3097,7 @@ $wgConf->settings += [
 	// Email to send notifications to.
 	'wgModerationEmail' => [
 		'default' => $wgPasswordSender,
+		'obeymewiki' => 'clarice_desand@yahoo.com',
 	],
 	'wgModerationPreviewLink' => [
 		'default' => false,
