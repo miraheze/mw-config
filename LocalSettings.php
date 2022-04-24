@@ -2305,6 +2305,9 @@ $wgConf->settings += [
 				'oathauth-enable' => true,
 				'editmyprivateinfo' => true,
 				'viewmyprivateinfo' => true,
+				'editmyoptions',
+				'editmyprivateinfo',
+				'editmywatchlist',
 				'writeapi' => true,
 			],
 			'checkuser' => [
