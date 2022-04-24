@@ -255,6 +255,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
+	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
