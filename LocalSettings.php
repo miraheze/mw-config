@@ -190,15 +190,10 @@ $wgConf->settings += [
 		],
 	],
 	'wgLogSpamBlacklistHits' => [
-		'default' => false,
-		'metawiki' => true,
-		'betaheze' => true,
+		'default' => true,
 	],
 	'wgTitleBlacklistLogHits' => [
-		'default' => false,
-		'loginwiki' => true,
-		'metawiki' => true,
-		'betaheze' => true,
+		'default' => true,
 	],
 
 	// ApprovedRevs
