@@ -5,7 +5,7 @@ $wgMemCachedServers = [
 	'127.0.0.1:11213',
 ];
 
-$wgRedisServerIP = '[2a10:6740::6:306]:6379';
+$redisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-pecl';
 $wgParserCacheType = 'db-replicated';
@@ -66,12 +66,12 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 		'cacheId' => 'memcached-mem-1',
 	];
 
-	$wgRedisServerIP = '[2a10:6740::6:109]:6379';
+	$redisServerIP = '[2a10:6740::6:109]:6379';
 }
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
-	'redisServer' => $wgRedisServerIP,
+	'redisServer' => $redisServerIP,
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
@@ -85,3 +85,4 @@ if ( PHP_SAPI === 'cli' ) {
 	// APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
+unset( $redisServerIP );
