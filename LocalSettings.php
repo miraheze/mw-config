@@ -1978,10 +1978,6 @@ $wgConf->settings += [
 			'Map.JsonConfig' => JsonConfig\JCMapDataContent::class,
 			'Tabular.JsonConfig' => JsonConfig\JCTabularContent::class,
 		],
-		'gpcommonswiki' => [
-			'Tabular.JsonConfig' => 'JsonConfig\JCTabularContent',
-			'Map.JsonConfig' => 'JsonConfig\JCMapDataContent',
-		],
 	],
 
 	// Kartographer
