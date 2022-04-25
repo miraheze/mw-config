@@ -1944,10 +1944,29 @@ $wgConf->settings += [
 				'isLocal' => false,
 			],
 		],
+		'gpcommonswiki' => [
+			'Tabular.JsonConfig' => [
+				'namespace' => 486,
+				'nsName' => 'Data',
+				// page name must end in ".tab", and contain at least one symbol
+				'pattern' => '/.\.tab$/',
+				'license' => 'CC0-1.0',
+				'isLocal' => false,
+			],
+			'Map.JsonConfig' => [
+				'namespace' => 486,
+				'nsName' => 'Data',
+				// page name must end in ".map", and contain at least one symbol
+				'pattern' => '/.\.map$/',
+				'license' => 'CC0-1.0',
+				'isLocal' => false,
+			],
+		],
 	],
 	'wgJsonConfigInterwikiPrefix' => [
 		'default' => 'commons',
 		'commonswiki' => 'meta',
+		'gpcommonswiki' => 'c',
 	],
 	'wgJsonConfigModels' => [
 		'default' => [
