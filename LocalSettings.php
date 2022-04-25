@@ -2303,7 +2303,6 @@ $wgConf->settings += [
 				'autocreateaccount' => true,
 				'read' => true,
 				'oathauth-enable' => true,
-				'editmyprivateinfo' => true,
 				'viewmyprivateinfo' => true,
 				'editmyoptions' => true,
 				'editmyprivateinfo' => true,
