@@ -216,6 +216,19 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'gpcommonswiki',
 		'benpediawiki'
 	];
+	$wgWBRepoSettings['updateRepoTags'] = [
+		'client-automatic-update'
+	];
+	$wgWBRepoSettings['viewUiTags'] = [
+		'gratisdata-ui'
+	];
+	$wgWBRepoSettings['specialPageTags'] = [
+		'gratisdata-ui'
+	];
+	$wgWBRepoSettings['termboxTags'] = [
+		'gratisdata-ui',
+		'termbox',
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -241,6 +254,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
+	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
