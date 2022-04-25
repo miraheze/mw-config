@@ -240,13 +240,11 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	$wgWBClientSettings['echoIcon'] = [
 		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 	];
-	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
-	$wgWBClientSettings['repoSiteId'] = 'gratisdatawiki';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
 }
 
