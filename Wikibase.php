@@ -110,7 +110,7 @@ if ( $wgDBname === 'famepediawiki' ) {
 if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
-	
+
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
