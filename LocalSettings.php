@@ -3473,6 +3473,7 @@ $wgConf->settings += [
 		'+crocwiki' => [
 			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
 		],
 		'+dcmultiversewiki' => [
 			'usecodemirror' => 1,
@@ -3487,6 +3488,7 @@ $wgConf->settings += [
 		'+dragonquest2wiki' => [
 			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
 		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
@@ -3494,14 +3496,17 @@ $wgConf->settings += [
 		'+metroidwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
+			'thumbsize' => 3,
 		],
 		'+nintendowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
+			'thumbsize' => 3,
 		],
 		'+pokemon2wiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
+			'thumbsize' => 3,
 		],
 		'+reviwiki' => [
 			'rcenhancedfilters-disable' => 1,
@@ -3510,6 +3515,7 @@ $wgConf->settings += [
 		'+smashbroswiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
+			'thumbsize' => 3,
 		],
 		'+solarawiki' => [
 			'usecodemirror' => 1,
@@ -3517,6 +3523,7 @@ $wgConf->settings += [
 		'+squareenixwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
+			'thumbsize' => 3,
 		],
 		'+yablestudiowiki' => [
 			'visualeditor-newwikitext' => 1,
