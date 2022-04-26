@@ -1966,7 +1966,6 @@ $wgConf->settings += [
 	'wgJsonConfigInterwikiPrefix' => [
 		'default' => 'commons',
 		'commonswiki' => 'meta',
-		'gpcommonswiki' => 'c',
 	],
 	'wgJsonConfigModels' => [
 		'default' => [
