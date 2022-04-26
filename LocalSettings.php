@@ -1779,6 +1779,12 @@ $wgConf->settings += [
 	],
 	'wgExtraLanguageNames' => [
 		'default' => [],
+		'gpcommonswiki' => [
+			'qqq' => 'Message documentation',
+		],
+		'gratisdatawiki' => [
+			'qqq' => 'Message documentation',
+		],
 		'isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
@@ -4338,7 +4344,6 @@ $wgConf->settings += [
 	],
 	'wgULSWebfontsEnabled' => [
 		'default' => true,
-		'gratispaideiawiki' => false,
 	],
 
 	// UrlShortener
