@@ -110,7 +110,27 @@ if ( $wgDBname === 'famepediawiki' ) {
 if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
-
+		// Some well-known properties' IDs which are used to format references
+	$wgWBClientSettings['wellKnownReferencePropertyIds'] = [
+		// (note: The keys are not chosen at random; the software knows exactly which ones they are and which ones they are not)
+		'referenceUrl' => 'P15',
+		'title' => 'P106',
+		'statedIn' => 'P75',
+		'author' => 'P127',
+		'publisher' => 'P125',
+		'publicationDate' => 'P110',
+		'retrievedDate' => 'P200',
+	];
+	$wgWBClientSettings['enableImplicitDescriptionUsage'] = true;
+	$wgWBClientSettings['linkItemTags'] = [
+		'client-linkitem-change'
+	];
+	$wgWBClientSettings['sendEchoNotification'] = true;
+	$wgWBClientSettings['echoIcon'] = [
+		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
+	];
+	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
+	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
