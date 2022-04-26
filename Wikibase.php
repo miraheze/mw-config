@@ -110,6 +110,30 @@ if ( $wgDBname === 'famepediawiki' ) {
 if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
+	$wgWBClientSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'gratisdatawiki',
+			'baseUri' => 'http://gratisdata.miraheze.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+		],
+		'gpcommons' => [
+			'entityNamespaces' => [
+				'mediainfo' => '6/mediainfo',
+			],
+			'repoDatabase' => 'gpcommonswiki',
+			'baseUri' => 'http://gpcommons.miraheze.org/entity/',
+			'rdfNodeNamespacePrefix' => 'sdc',
+			'rdfPredicateNamespacePrefix' => 'sdc',
+			'interwikiPrefix' => 'c',
+		],
+	];
 
 }
 
@@ -229,6 +253,20 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'gratisdata-ui',
 		'termbox',
 	];
+	$wgWBRepoSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'gratisdatawiki',
+			'baseUri' => 'http://gratisdata.miraheze.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+		],
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -255,6 +293,20 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
+	$wgWBClientSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 120,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'gratisdatawiki',
+			'baseUri' => 'http://gratisdata.miraheze.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+		],
+	];
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
