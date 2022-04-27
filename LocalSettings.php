@@ -3543,9 +3543,6 @@ $wgConf->settings += [
 			'usenewrc' => 1,
 		],
 	],
-	'wgHiddenPrefs' => [
-		'default' => [],
-	],
 
 	// Preloader
 	'wgPreloaderSource' => [
