@@ -3679,6 +3679,9 @@ $wgConf->settings += [
 			'pm',
 			'member',
 		],
+		'+collegecitoyenwiki' => [
+			'editextendedsemiprotected',
+		],
 		'+devwiki' => [
 			'editinterface',
 		],
@@ -3709,6 +3712,9 @@ $wgConf->settings += [
 			'bureaucrat',
 			'ceo',
 			'co',
+		],
+		'+knightnwiki' => [
+			'editextendedsemiprotected',
 		],
 		'+lhmnwiki' => [
 			'editqualityarticles',
@@ -3778,6 +3784,9 @@ $wgConf->settings += [
 			'edittemplateprotected',
 			'editfounderprotected',
 		],
+		'collegecitoyenwiki' => [
+			'editextendedsemiprotected',
+		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -3797,6 +3806,9 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'editbureaucratprotected',
 			'editleaderprotected',
+		],
+		'knightnwiki' => [
+			'editextendedsemiprotected',
 		],
 		'lhmnwiki' => [
 			'editqualityarticles',
