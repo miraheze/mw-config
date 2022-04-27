@@ -3492,6 +3492,11 @@ $wgConf->settings += [
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
+		'+mariowiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+			'thumbsize' => 3,
+		],
 		'+metroidwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
