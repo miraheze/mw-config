@@ -3283,6 +3283,8 @@ $wgConf->settings += [
 	// Pagelang
 	'wgPageLanguageUseDB' => [
 		'default' => false,
+		'gratisdatawiki' => true,
+		'gpcommonswiki' => true,
 	],
 
 	// PageForms
