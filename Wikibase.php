@@ -309,6 +309,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 			'interwikiPrefix' => 'd',
 		],
 	];
+	$wgWBClientSettings['itemAndPropertySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
