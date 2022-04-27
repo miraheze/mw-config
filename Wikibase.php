@@ -134,7 +134,6 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 			'interwikiPrefix' => 'c',
 		],
 	];
-	$wgWBClientSettings['localEntitySourceName'] = 'gpcommons';
 
 }
 
@@ -268,7 +267,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			'interwikiPrefix' => 'd',
 		],
 	];
-	$wgWBRepoSettings['localEntitySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -309,7 +307,6 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 			'interwikiPrefix' => 'd',
 		],
 	];
-	$wgWBClientSettings['itemAndPropertySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
