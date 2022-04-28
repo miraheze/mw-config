@@ -438,7 +438,7 @@ $wgScribuntoEngineConf = [
 		'class' => Scribunto_LuaSandboxEngine::class,
 		'memoryLimit' => 26214400,
 		'cpuLimit' => 4,
-		'profilerPeriod' => 0.02,		
+		'profilerPeriod' => 0.02,
 		'allowEnvFuncs' => false,
 		'maxLangCacheSize' => 30,
 	],
