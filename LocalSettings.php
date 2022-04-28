@@ -3966,11 +3966,6 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
-	// Shell
-	'wgMaxShellMemory' => [
-		'default' => 2097152
-	],
-
 	// SimpleChanges
 	'wgSimpleChangesOnlyContentNamespaces' => [
 		'default' => false,
