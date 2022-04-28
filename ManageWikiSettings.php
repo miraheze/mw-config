@@ -1599,6 +1599,15 @@ $wgManageWikiSettings = [
 		'help' => 'Point the upload navigation link in the sidebar to a custom URL.',
 		'requires' => [],
 	],
+	'wmgUploadWizardFlickrApiKey' => [
+		'name' => 'Upload Wizard Flickr Api Key',
+		'from' => 'uploadwizard',
+		'type' => 'text',
+		'overridedefault' => 'aeefff139445d825d4460796616f9349',
+		'section' => 'media',
+		'help' => 'Set a custom Flickr API key for UploadWizard.',
+		'requires' => [],
+	],
 
 	// Notifications
 	'wmgContactPageRecipientUser' => [
