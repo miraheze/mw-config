@@ -1788,6 +1788,9 @@ $wgConf->settings += [
 		'isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
+		'wikibenwiki' => [
+			'bw' => 'Benwegul',
+		],
 	],
 
 	// ImportDump
