@@ -249,6 +249,11 @@ if ( $wmgContactPageRecipientUser ) {
 	$wgConf->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
+// $wgUploadWizardConfig['flickrApiKey']
+if ( $wmgUploadWizardFlickrApiKey ?? false ) {
+	$wgConf->settings['wgUploadWizardConfig']['wmgUseUploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgConf->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
