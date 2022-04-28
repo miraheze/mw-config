@@ -2545,7 +2545,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-		'interwikisorting' => [
+	'interwikisorting' => [
 		'name' => 'InterwikiSorting'
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:InterwikiSorting',
 		'var' => 'wmgUseInterwikiSorting',
