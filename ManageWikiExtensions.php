@@ -2039,7 +2039,7 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
-	],	
+	],
 	'mask' => [
 		'name' => 'Mask',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mask',
