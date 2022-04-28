@@ -4323,6 +4323,9 @@ $wgConf->settings += [
 			'campaignExpensiveStatsEnabled' => false,
 		],
 	],
+	'wmgUploadWizardFlickrApiKey' => [
+		'wmgUseUploadWizard' => 'aeefff139445d825d4460796616f9349',
+	],
 
 	// Uploads
 	'wmgPrivateUploads' => [
