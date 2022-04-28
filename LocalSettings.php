@@ -1085,7 +1085,7 @@ $wgConf->settings += [
 
 	// Delete
 	'wgDeleteRevisionsLimit' => [
-		'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1,000 T5287
+		'default' => 1000, // databases don't have much memory - let's not overload them in future - set to 1,000 T5287
 	],
 
 	// DiscordNotifications
