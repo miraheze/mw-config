@@ -52,6 +52,10 @@ if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
 	}
 }
 
+if ( $wmgUploadWizardFlickrApiKey ?? false ) {
+	$wgConf->settings['wgUploadWizardConfig']['wmgUseUploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
+}
+
 if (
 	$wgConf->get( 'wmgUseWikibaseRepository', $wi->dbname ) ||
 	$wgConf->get( 'wmgUseWikibaseClient', $wi->dbname )
