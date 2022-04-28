@@ -52,10 +52,6 @@ if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
 	}
 }
 
-if ( $wmgUploadWizardFlickrApiKey ?? false ) {
-	$wgConf->settings['wgUploadWizardConfig']['wmgUseUploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
-}
-
 if (
 	$wgConf->get( 'wmgUseWikibaseRepository', $wi->dbname ) ||
 	$wgConf->get( 'wmgUseWikibaseClient', $wi->dbname )
@@ -251,6 +247,11 @@ $wgConf->settings['wgDataDump']['default'] = [
 // $wmgContactPageRecipientUser
 if ( $wmgContactPageRecipientUser ) {
 	$wgConf->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
+}
+
+// $wgUploadWizardConfig['flickrApiKey']
+if ( $wmgUploadWizardFlickrApiKey ?? false ) {
+	$wgConf->settings['wgUploadWizardConfig']['wmgUseUploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
 }
 
 // $wgFooterIcons
