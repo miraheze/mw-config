@@ -110,7 +110,7 @@ if ( $wgDBname === 'famepediawiki' ) {
 if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
-		// Some well-known properties' IDs which are used to format references
+	// Some well-known properties' IDs which are used to format references
 	$wgWBClientSettings['wellKnownReferencePropertyIds'] = [
 		// (note: The keys are not chosen at random; the software knows exactly which ones they are and which ones they are not)
 		'referenceUrl' => 'P15',
