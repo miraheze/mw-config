@@ -249,6 +249,11 @@ if ( $wmgContactPageRecipientUser ) {
 	$wgConf->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
 }
 
+// $wgUploadWizardConfig['flickrApiKey']
+if ( $wmgUploadWizardFlickrApiKey ?? false ) {
+	$wgConf->settings['wgUploadWizardConfig']['wmgUseUploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgConf->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
@@ -428,5 +433,13 @@ $wgConf->settings['wgSlackFromName']['default'] = $wgSitename;
 $wgConf->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
 
 // Scribunto
-$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 4;
-$wgScribuntoEngineConf['luasandbox']['maxLangCacheSize'] = 30;
+$wgScribuntoEngineConf = [
+	'luasandbox' => [
+		'class' => Scribunto_LuaSandboxEngine::class,
+		'memoryLimit' => 26214400,
+		'cpuLimit' => 4,
+		'profilerPeriod' => 0.02,
+		'allowEnvFuncs' => false,
+		'maxLangCacheSize' => 30,
+	],
+];

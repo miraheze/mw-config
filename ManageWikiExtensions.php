@@ -2545,6 +2545,18 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'interwikisorting' => [
+		'name' => 'InterwikiSorting',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:InterwikiSorting',
+		'var' => 'wmgUseInterwikiSorting',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'wikibaseclient',
+			],
+		],
+		'section' => 'other',
+	],
 	'jsbreadcrumbs' => [
 		'name' => 'JSBreadCrumbs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:JSBreadCrumbs',

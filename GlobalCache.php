@@ -5,7 +5,7 @@ $wgMemCachedServers = [
 	'127.0.0.1:11213',
 ];
 
-$wgRedisServerIP = '[2a10:6740::6:306]:6379';
+$redisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-pecl';
 $wgParserCacheType = 'db-replicated';
@@ -29,49 +29,50 @@ if ( !$wgConf->get( 'wmgUseGroupsSidebar', $wi->dbname ) && $wgDBname !== 'solar
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-// session cache needs to be flipped for betaheze to avoid session conflicts
-$wgObjectCaches['memcached-mem-1'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11212' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
-];
-
-$wgObjectCaches['memcached-mem-2'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11213' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
-];
-
-$wgConf->settings['wgSessionCacheType']['default'] = 'memcached-mem-2';
-$wgConf->settings['wgSessionCacheType']['betaheze'] = 'memcached-mem-1';
-
 if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
+	$redisServerIP = '[2a10:6740::6:109]:6379';
+
+	// Session cache needs to be flipped for betaheze to avoid session conflicts
+	$wgObjectCaches['memcached-mem-1'] = [
+		'class'                => MemcachedPeclBagOStuff::class,
+		'serializer'           => 'php',
+		'persistent'           => false,
+		'servers'              => [ '127.0.0.1:11212' ],
+		// Effectively disable the failure limit (0 is invalid)
+		'server_failure_limit' => 1e9,
+		// Effectively disable the retry timeout
+		'retry_timeout'        => -1,
+		'loggroup'             => 'memcached',
+		'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
+	];
+
+	$wgSessionCacheType = 'memcached-mem-1';
+
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
 		'class' => WANObjectCache::class,
 		'cacheId' => 'memcached-mem-1',
 	];
+} else {
+	$wgObjectCaches['memcached-mem-2'] = [
+		'class'                => MemcachedPeclBagOStuff::class,
+		'serializer'           => 'php',
+		'persistent'           => false,
+		'servers'              => [ '127.0.0.1:11213' ],
+		// Effectively disable the failure limit (0 is invalid)
+		'server_failure_limit' => 1e9,
+		// Effectively disable the retry timeout
+		'retry_timeout'        => -1,
+		'loggroup'             => 'memcached',
+		'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
+	];
 
-	$wgRedisServerIP = '[2a10:6740::6:109]:6379';
+	$wgSessionCacheType = 'memcached-mem-2';
 }
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
-	'redisServer' => $wgRedisServerIP,
+	'redisServer' => $redisServerIP,
 	'redisConfig' => [
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
@@ -85,3 +86,4 @@ if ( PHP_SAPI === 'cli' ) {
 	// APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
+unset( $redisServerIP );

@@ -249,6 +249,17 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'gratisdata-ui',
 		'termbox',
 	];
+	$wgWBRepoSettings['entityDataFormats'] = [
+		'json',
+		'php',
+		'rdfxml',
+		'n3',
+		'turtle',
+		'ntriples',
+		'html',
+		'jsonld',
+	];
+	$wgWBRepoSettings['taintedReferencesEnabled'] = true;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {

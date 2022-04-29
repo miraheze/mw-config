@@ -1085,7 +1085,7 @@ $wgConf->settings += [
 
 	// Delete
 	'wgDeleteRevisionsLimit' => [
-		'default' => '1000', // databases don't have much memory - let's not overload them in future - set to 1,000 T5287
+		'default' => 1000, // databases don't have much memory - let's not overload them in future - set to 1,000 T5287
 	],
 
 	// DiscordNotifications
@@ -1779,8 +1779,17 @@ $wgConf->settings += [
 	],
 	'wgExtraLanguageNames' => [
 		'default' => [],
+		'gpcommonswiki' => [
+			'qqq' => 'Message documentation',
+		],
+		'gratisdatawiki' => [
+			'qqq' => 'Message documentation',
+		],
 		'isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
+		],
+		'wikibenwiki' => [
+			'bw' => 'Benwegul',
 		],
 	],
 
@@ -2650,7 +2659,7 @@ $wgConf->settings += [
 				'globalblock-exempt',
 				'globalgroupmembership',
 				'globalgrouppermissions',
-				'handle-import-requests',
+				'handle-import-dump-requests',
 				'handle-pii',
 				'hideuser',
 				'interwiki',
@@ -2669,7 +2678,7 @@ $wgConf->settings += [
 				'oathauth-verify-user',
 				'oathauth-view-log',
 				'renameuser',
-				'requestimport',
+				'request-import-dump',
 				'requestwiki',
 				'siteadmin',
 				'smw-admin',
@@ -2684,7 +2693,7 @@ $wgConf->settings += [
 				'usermerge',
 				'userrights',
 				'userrights-interwiki',
-				'view-private-import-requests',
+				'view-private-import-dump-requests',
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
@@ -3218,6 +3227,12 @@ $wgConf->settings += [
 		'ldapwikiwiki' => 'ldapwikiwiki',
 		'betaheze' => 'testglobal',
 	],
+	'wgOATHExclusiveRights' => [
+		'metawiki' => [
+			'edituserjs',
+			'editsitejs',
+		],
+	],
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
@@ -3492,6 +3507,11 @@ $wgConf->settings += [
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
+		'+mariowiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+			'thumbsize' => 3,
+		],
 		'+metroidwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
@@ -3531,9 +3551,6 @@ $wgConf->settings += [
 		'+wmgUseCleanChanges' => [
 			'usenewrc' => 1,
 		],
-	],
-	'wgHiddenPrefs' => [
-		'default' => [],
 	],
 
 	// Preloader
@@ -3674,6 +3691,9 @@ $wgConf->settings += [
 			'pm',
 			'member',
 		],
+		'+collegecitoyenwiki' => [
+			'editextendedsemiprotected',
+		],
 		'+devwiki' => [
 			'editinterface',
 		],
@@ -3704,6 +3724,9 @@ $wgConf->settings += [
 			'bureaucrat',
 			'ceo',
 			'co',
+		],
+		'+knightnwiki' => [
+			'editextendedsemiprotected',
 		],
 		'+lhmnwiki' => [
 			'editqualityarticles',
@@ -3773,6 +3796,9 @@ $wgConf->settings += [
 			'edittemplateprotected',
 			'editfounderprotected',
 		],
+		'collegecitoyenwiki' => [
+			'editextendedsemiprotected',
+		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -3792,6 +3818,9 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'editbureaucratprotected',
 			'editleaderprotected',
+		],
+		'knightnwiki' => [
+			'editextendedsemiprotected',
 		],
 		'lhmnwiki' => [
 			'editqualityarticles',
@@ -3935,11 +3964,6 @@ $wgConf->settings += [
 	],
 	'wgUsePathInfo' => [
 		'default' => true,
-	],
-
-	// Shell
-	'wgMaxShellMemory' => [
-		'default' => 2097152
 	],
 
 	// SimpleChanges
@@ -4297,6 +4321,9 @@ $wgConf->settings += [
 			'campaignExpensiveStatsEnabled' => false,
 		],
 	],
+	'wmgUploadWizardFlickrApiKey' => [
+		'wmgUseUploadWizard' => 'aeefff139445d825d4460796616f9349',
+	],
 
 	// Uploads
 	'wmgPrivateUploads' => [
@@ -4338,7 +4365,6 @@ $wgConf->settings += [
 	],
 	'wgULSWebfontsEnabled' => [
 		'default' => true,
-		'gratispaideiawiki' => false,
 	],
 
 	// UrlShortener

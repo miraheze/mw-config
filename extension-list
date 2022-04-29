@@ -101,6 +101,7 @@ $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageRating/extension.json
 $IP/extensions/InputBox/extension.json
 $IP/extensions/Interwiki/extension.json
+$IP/extensions/InterwikiSorting/extension.json
 $IP/extensions/JSBreadCrumbs/extension.json
 $IP/extensions/JavascriptSlideshow/extension.json
 $IP/extensions/Josa/extension.json
