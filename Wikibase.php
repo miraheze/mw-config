@@ -110,6 +110,7 @@ if ( $wgDBname === 'famepediawiki' ) {
 if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
+	$wgWBClientSettings['disabledDataTypes'] = 'entity-schema';
 
 }
 
@@ -229,6 +230,18 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'gratisdata-ui',
 		'termbox',
 	];
+	$wgWBRepoSettings['disabledDataTypes'] = 'entity-schema';
+	$wgWBRepoSettings['entityDataFormats'] = [
+		'json',
+		'php',
+		'rdfxml',
+		'n3',
+		'turtle',
+		'ntriples',
+		'html',
+		'jsonld',
+	];
+	$wgWBRepoSettings['taintedReferencesEnabled'] = true;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -255,6 +268,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
+	$wgWBClientSettings['disabledDataTypes'] = 'entity-schema';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
