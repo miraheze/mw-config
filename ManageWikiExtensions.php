@@ -1339,6 +1339,9 @@ $wgManageWikiExtensions = [
 			'sql' => [
 				'createdpageslist ' => "$IP/extensions/CreatedPagesList/sql/patch-createdpageslist.sql",
 			],
+			'mwscript' => [
+				"$IP/extensions/CreatedPagesList/maintenance/recalculateTable.php" => [],
+			],
 		],
 		'section' => 'specialpages',
 	],
