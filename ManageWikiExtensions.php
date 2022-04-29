@@ -1331,6 +1331,22 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
+	'createdpageslist' => [
+		'name' => 'CreatedPagesList',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CreatedPagesList',
+		'var' => 'wmgUseCreatedPagesList',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'createdpageslist' => "$IP/extensions/CreatedPagesList/sql/patch-createdpageslist.sql",
+			],
+			'mwscript' => [
+				"$IP/extensions/CreatedPagesList/maintenance/recalculateTable.php" => [],
+			],
+		],
+		'section' => 'specialpages',
+	],
 	'createpageuw' => [
 		'name' => 'CreatePageUw',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CreatePageUw',
