@@ -162,8 +162,8 @@ class ExtensionsTest extends ManageWikiTestCase {
 		];
 	}
 
-	/** @covers $wgManageWikiSettings */
-	public function testManageWikiSettings() {
+	/** @covers $wgManageWikiExtensions */
+	public function testManageWikiExtensions() {
 		global $wgManageWikiExtensions, $wgConf, $wi, $IP;
 		define( 'MW_VERSION', null );
 
