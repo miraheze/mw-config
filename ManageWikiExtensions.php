@@ -3664,3 +3664,16 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 ];
+
+if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
+	$wgManageWikiExtensions += [
+		'categoryexplorer' => [
+			'name' => 'CategoryExplorer',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CategoryExplorer',
+			'var' => 'wmgUseCategoryExplorer',
+			'conflicts' => false,
+			'requires' => [],
+			'section' => 'other',
+		],
+	];
+}
