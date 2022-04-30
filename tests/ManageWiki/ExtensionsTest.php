@@ -165,6 +165,8 @@ class ExtensionsTest extends ManageWikiTestCase {
 	/** @covers $wgManageWikiSettings */
 	public function testManageWikiSettings() {
 		global $wgManageWikiExtensions, $wgConf, $wi, $IP;
+		define( 'MW_VERSION', null );
+
 		$IP = '';
 		$wgConf = $this->mockConfig();
 		$wi = $this->mockMirahezeFunctions();
