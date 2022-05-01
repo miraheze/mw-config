@@ -785,7 +785,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'namespacepreload' => [
-		'name' => 'NamespacePreload'
+		'name' => 'NamespacePreload',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NamespacePreload',
 		'var' => 'wmgUseNamespacePreload',
 		'conflicts' => false,
