@@ -784,6 +784,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'namespacepreload' => [
+		'name' => 'NamespacePreload',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NamespacePreload',
+		'var' => 'wmgUseNamespacePreload',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'notitle' => [
 		'name' => 'NoTitle',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NoTitle',
