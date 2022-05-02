@@ -5102,6 +5102,7 @@ $wi->disabledExtensions = [ 'editnotify', 'regexfunctions' ];
 if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 	$wi->disabledExtensions += [
 		'addthis', // Will be removed (T7876)
+		'foreground', // Will be removed (T9168)
 		'gettingstarted', // Will be removed (T8979)
 		'headerfooter', // Broken ("Call to undefined method ParserOptions::getUser()")
 		'magicnumberedheadings', // Will be removed (T8897)
