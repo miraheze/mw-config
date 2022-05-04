@@ -113,6 +113,19 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'polandballruwiki':
+		$wgHooks['BeforeInitialize'][] = 'onBeforeInitialize';
+
+		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, MediaWiki $mediaWiki ) {
+			if ( $title && $title->getNamespace() === 201 ) {
+				$newTitle = Title::newFromText( $title->getText(), 3 );
+				if ( $newTitle ) {
+					$output->redirect( $newTitle->getFullURL() );
+				}
+			}
+		}
+
+		break;
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
