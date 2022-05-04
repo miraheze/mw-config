@@ -114,13 +114,13 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'polandballruwiki':
-		$wgHooks['InitializeArticleMaybeRedirect'][] = 'onInitializeArticleMaybeRedirect';
+		$wgHooks['BeforeInitialize'][] = 'onBeforeInitialize';
 
-		function onInitializeArticleMaybeRedirect( $title, $request, &$ignoreRedirect, &$target, $article ) {
+		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, MediaWiki $mediaWiki ) {
 			if ( $title && $title->getNamespace() === 201 ) {
 				$newTitle = Title::newFromText( $title->getText(), 3 );
 				if ( $newTitle ) {
-					$target = $newTitle;
+					$output->redirect( $newTitle->getFullURL() );
 				}
 			}
 		}
