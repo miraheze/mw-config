@@ -120,6 +120,7 @@ switch ( $wi->dbname ) {
 			if ( $title && $title->getNamespace() === 201 ) {
 				$newTitle = Title::newFromText( $title->getText(), 3 );
 				if ( $newTitle && $newTitle->exists() ) {
+					$ignoreRedirect = true;
 					$target = $newTitle;
 				}
 			}
