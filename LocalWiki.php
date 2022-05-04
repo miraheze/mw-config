@@ -123,7 +123,6 @@ switch ( $wi->dbname ) {
 					$output->redirect( $newTitle->getFullURL() );
 				}
 			}
-
 		}
 
 		break;
