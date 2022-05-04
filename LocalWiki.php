@@ -119,7 +119,7 @@ switch ( $wi->dbname ) {
 		function onInitializeArticleMaybeRedirect( $title, $request, &$ignoreRedirect, &$target, $article ) {
 			if ( $title && $title->getNamespace() === 201 ) {
 				$newTitle = Title::newFromText( $title->getText(), 3 );
-				if ( $newTitle && $newTitle->exists() ) {
+				if ( $newTitle ) {
 					$target = $newTitle;
 				}
 			}
