@@ -3194,6 +3194,11 @@ $wgConf->settings += [
 		'wmgUseMultiBoilerplate' => false,
 	],
 
+	// NamespacePreload
+	'wgNamespacePreloadDoExpansion' => [
+		'default' => true,
+	],
+
 	// New User Email Notification
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
