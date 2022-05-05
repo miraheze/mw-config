@@ -833,6 +833,15 @@ $wgManageWikiSettings = [
 		'help' => 'For red links not defined by #formredlink and not pointing to a form-associated namespace, have every such link point to a helper page, that lets the user choose which of the wiki\'s forms to use to create this page - or to use no form at all.',
 		'requires' => [],
 	],
+	'wgNamespacePreloadDoExpansion' => [
+		'name' => 'Namespace Preload Do Expansion',
+		'from' => 'namespacepreload',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Whether to expand templates of the preloaded text.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
