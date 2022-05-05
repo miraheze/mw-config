@@ -14,7 +14,9 @@ switch ( $wi->dbname ) {
 		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
 
 		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
-			$footerItems['github'] = Linker::makeExternalLink( 'https://github.com/Datawiki-online', 'GitHub' );
+			if ( $key === 'places' ) {
+				$footerItems['github'] = Linker::makeExternalLink( 'https://github.com/Datawiki-online', 'GitHub' );
+			}
 		}
 
 		break;
