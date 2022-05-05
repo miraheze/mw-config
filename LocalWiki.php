@@ -10,6 +10,14 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxResultCount'] = 2500;
 
 		break;
+	case 'datawiki':
+		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
+
+		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
+			$footerItems['github'] = Linker::makeExternalLink( 'https://github.com/Datawiki-online', 'GitHub' );
+		}
+
+		break;
 	case 'dmlwikiwiki':
 		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
 
