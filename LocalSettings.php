@@ -4521,6 +4521,14 @@ $wgConf->settings += [
 		'default' => 862
 	],
 
+	// WikibaseLexeme
+	'wgLexemeLanguageCodePropertyId' => [
+		'default' => null,
+	],
+	'wgLexemeEnableDataTransclusion' => [
+		'default' => false,
+	],
+
 	// WikibaseQualityConstraints
 	'wgWBQualityConstraintsInstanceOfId' => [
 		'default' => 'P31',
