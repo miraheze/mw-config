@@ -3483,6 +3483,15 @@ $wgManageWikiSettings = [
 		'help' => 'Property to be used on properties that defines a formatter URL which is used to link external identifiers.',
 		'requires' => [],
 	],
+	'wgPropertySuggesterMinProbability' => [
+		'name' => 'Property Suggester Min Probability',
+		'from' => 'propertysuggester',
+		'type' => 'float',
+		'overridedefault' => 0.05,
+		'section' => 'wikibase',
+		'help' => 'A float that sets a minimum threshold for suggestions.',
+		'requires' => [],
+	],
 	'wgPropertySuggesterDeprecatedIds' => [
 		'name' => 'Property Suggester Deprecated Ids',
 		'from' => 'propertysuggester',
