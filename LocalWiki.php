@@ -10,7 +10,7 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxResultCount'] = 2500;
 
 		break;
-	case 'datawiki':
+	case 'datawikiwiki':
 		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
 
 		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
