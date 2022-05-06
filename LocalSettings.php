@@ -1793,7 +1793,7 @@ $wgConf->settings += [
 		],
 	],
 
-	//InterwikiSorting
+	// InterwikiSorting
 	'wgInterwikiSortingSort' => [
 		'default' => 'code',
 		'gratispaideiawiki' => 'alphabetic',
