@@ -1793,6 +1793,12 @@ $wgConf->settings += [
 		],
 	],
 
+	//InterwikiSorting
+	'wgInterwikiSortingSort' => [
+		'default' => 'code',
+		'gratispaideiawiki' => 'alphabetic',
+	],
+	
 	// ImportDump
 	'wgImportDumpCentralWiki' => [
 		'default' => 'metawiki',
