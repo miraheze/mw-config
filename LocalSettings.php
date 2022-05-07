@@ -3832,7 +3832,7 @@ $wgConf->settings += [
 		],
 		'lhmnwiki' => [
 			'editqualityarticles',
-			'editextendeconfirmedprotected',
+			'editextendedconfirmedprotected',
 		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
