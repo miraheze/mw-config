@@ -401,6 +401,11 @@ switch ( $wmgWikiLicense ) {
 		$wgConf->settings['wgRightsText']['default'] = 'GPLv3';
 		$wgConf->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
 		break;
+	case 'gfdl':
+		$wgConf->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gfdl-logo-tiny.png';
+		$wgConf->settings['wgRightsText']['default'] = 'GNU Free Document License 1.3';
+		$wgConf->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/fdl-1.3.en.html';
+		break;
 	case 'empty':
 		break;
 }
