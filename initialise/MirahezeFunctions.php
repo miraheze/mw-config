@@ -205,7 +205,10 @@ class MirahezeFunctions {
 	}
 
 	public static function getServer() {
-		return self::getServers( self::getCurrentDatabase() );
+		$server = self::getServers( self::getCurrentDatabase() );
+
+		return is_string( $server ) ? $server :
+			'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 	}
 
 	public function setServers() {
