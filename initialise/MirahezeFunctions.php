@@ -49,7 +49,7 @@ class MirahezeFunctions {
 		$this->setSiteNames();
 	}
 
-	public static function getLocalDatabases() {
+	public static function getLocalDatabases(): array {
 		static $list = null;
 		static $databases = null;
 
@@ -118,7 +118,7 @@ class MirahezeFunctions {
 		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 	}
 
-	public static function getRealm() {
+	public static function getRealm(): string {
 		static $realm = null;
 
 		$realm ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ?
@@ -137,10 +137,12 @@ class MirahezeFunctions {
 
 		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
-		if ( $database ) {
-			foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
-				if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
-					return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+		if ( $database !== null ) {
+			if ( is_string( $database ) && $database !== 'default' ) {
+				foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
+					if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
+						return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+					}
 				}
 			}
 
@@ -193,7 +195,7 @@ class MirahezeFunctions {
 		$wgConf->extractGlobal( 'wgDBname', $this->dbname );
 	}
 
-	public static function getDatabaseClusters() {
+	public static function getDatabaseClusters(): array {
 		$allDatabases = self::readDbListFile( self::LISTS[self::getRealm()], false );
 		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
@@ -204,11 +206,8 @@ class MirahezeFunctions {
 		return array_combine( array_keys( $databases ), $clusters );
 	}
 
-	public static function getServer() {
-		$server = self::getServers( self::getCurrentDatabase() );
-
-		return is_string( $server ) ? $server :
-			'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
+	public static function getServer(): string {
+		return self::getServers( self::getCurrentDatabase() ?: 'default' );
 	}
 
 	public function setServers() {
