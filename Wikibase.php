@@ -232,9 +232,9 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
 	$wgWBRepoSettings['localClientDatabases'] = [
-		'gratispaideiawiki',
-		'gpcommonswiki',
-		'benpediawiki'
+		'gratispaideia' => 'gratispaideiawiki',
+		'gpcommons' => 'gpcommonswiki',
+		'benpedia' => 'benpediawiki',
 	];
 	$wgWBRepoSettings['updateRepoTags'] = [
 		'client-automatic-update'
