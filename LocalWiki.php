@@ -43,6 +43,15 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
+	case 'gratisdatawiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://gpcommons.miraheze.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://gpcommons.miraheze.org/w/api.php'
+		];
+		
+		break;
 	case 'gratispaideiawiki':
 		$wgForeignFileRepos[] = [
 			'class' => ForeignDBViaLBRepo::class,
@@ -58,6 +67,12 @@ switch ( $wi->dbname ) {
 			'wiki' => 'gpcommonswiki',
 			'descBaseUrl' => 'https://gpcommons.miraheze.org/wiki/File:',
 			'scriptDirUrl' => 'https://gpcommons.miraheze.org/w',
+		];
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://gpcommons.miraheze.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
 
 		break;
