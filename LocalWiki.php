@@ -50,7 +50,7 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
-		
+
 		break;
 	case 'gratispaideiawiki':
 		$wgForeignFileRepos[] = [
