@@ -4245,10 +4245,10 @@ $wgManageWikiSettings = [
 		'type' => 'list',
 		'options' => [
 			'alphabetic' => 'alphabetic',
+			'alphabetic_fy' => 'alphabetic_fy',
 			'alphabetic_revised' => 'alphabetic_revised',
 			'alphabetic_sr' => 'alphabetic_sr',
-			'alphabetic_fy' => 'alphabetic_fy',
-			'alphabetic_svwiktionary' => 'alphabetic_svwiktionary',
+			'alphabetic_sv' => 'alphabetic_sv',
 			'code' => 'code',
 		],
 		'overridedefault' => 'code',
