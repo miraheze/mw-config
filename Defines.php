@@ -20,6 +20,10 @@ if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
+if ( $wgConf->get( 'wmgUseInterwikiSorting', $wi->dbname ) ) {
+	$wgInterwikiSortingInterwikiSortOrders = include __DIR__ . '/InterwikiSortOrders.php';
+}
+
 if ( $wgConf->get( 'wmgUseMultimediaViewer', $wi->dbname ) ) {
 	if ( $wgConf->get( 'wmgUse3D', $wi->dbname ) ) {
 		$wgMediaViewerExtensions['stl'] = 'mmv.3d';

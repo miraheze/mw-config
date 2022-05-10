@@ -4239,6 +4239,23 @@ $wgManageWikiSettings = [
 		'help' => 'Sets the property used to display the main image of an item.',
 		'requires' => [],
 	],
+	'wgInterwikiSortingSort' => [
+		'name' => 'Interwiki Sorting Sort',
+		'from' => 'interwikisorting',
+		'type' => 'list',
+		'options' => [
+			'alphabetic' => 'alphabetic',
+			'alphabetic_fy' => 'alphabetic_fy',
+			'alphabetic_revised' => 'alphabetic_revised',
+			'alphabetic_sr' => 'alphabetic_sr',
+			'alphabetic_sv' => 'alphabetic_sv',
+			'code' => 'code',
+		],
+		'overridedefault' => 'code',
+		'section' => 'wikibase',
+		'help' => 'The default sort order to use. The default, \'code\' orders alphabetically by interwiki code.',
+		'requires' => [],
+	],
 ];
 
 if (

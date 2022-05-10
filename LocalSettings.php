@@ -1793,6 +1793,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// InterwikiSorting
+	'wgInterwikiSortingSort' => [
+		'wmgUseInterwikiSorting' => 'code',
+	],
+
 	// ImportDump
 	'wgImportDumpCentralWiki' => [
 		'default' => 'metawiki',
