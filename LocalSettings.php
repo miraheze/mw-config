@@ -3071,6 +3071,9 @@ $wgConf->settings += [
 		'default' => [
 			'ppprop' => 'displaytitle',
 		],
+		'famedatawiki' => [
+			'wbetterms' => 'label',
+		],
 		'gratisdatawiki' => [
 			'wbetterms' => 'label',
 		],
@@ -3079,6 +3082,10 @@ $wgConf->settings += [
 		'default' => [
 			'name' => 'prefixsearch',
 			'prefix' => 'ps',
+		],
+		'famedatawiki' => [
+			'name' => 'wbsearch',
+			'prefix' => 'wbs',
 		],
 		'gratisdatawiki' => [
 			'name' => 'wbsearch',
@@ -3100,6 +3107,12 @@ $wgConf->settings += [
 			'search' => false,
 			'nearby' => false,
 			'watchlist' => false,
+			'tagline' => false,
+		],
+		'famedatawiki' => [
+			'search' => true,
+			'nearby' => false,
+			'watchlist' => true,
 			'tagline' => false,
 		],
 		'gratispaideiawiki' => [
