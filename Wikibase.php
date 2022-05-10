@@ -131,6 +131,22 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
+	$wgWBClientSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 862,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'gratisdatawiki',
+			'baseUri' => 'https://gratisdata.miraheze.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+			'type' => 'db'
+		],
+	];
+	$wgWBClientSettings['itemAndPropertySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
@@ -260,6 +276,22 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'jsonld',
 	];
 	$wgWBRepoSettings['taintedReferencesEnabled'] = true;
+	$wgWBRepoSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 862,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'gratisdatawiki',
+			'baseUri' => 'https://gratisdata.miraheze.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+			'type' => 'db'
+		],
+	];
+	$wgWBRepoSettings['localEntitySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -286,6 +318,22 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
+	$wgWBClientSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => 0,
+				'property' => 862,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => 'gratisdatawiki',
+			'baseUri' => 'https://gratisdata.miraheze.org/entity/',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'interwikiPrefix' => 'd',
+			'type' => 'db'
+		],
+	];
+	$wgWBClientSettings['itemAndPropertySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
