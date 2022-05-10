@@ -106,6 +106,10 @@ switch ( $wi->dbname ) {
 		$wgFilterLogTypes['comments'] = false;
 
 		break;
+	case 'persistwiki':
+		$wgDplSettings['maxCategoryCount'] = 10;
+
+		break;
 	case 'pokemundowiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
