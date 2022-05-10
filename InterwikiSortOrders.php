@@ -339,7 +339,7 @@ return [
 		'bat-smg',
 		'zh',
 		'zh-tw',
-		'zh-cn'
+		'zh-cn',
 	],
 	'alphabetic_fy' => [ // by language code, exepct 'y' is sorted like 'i'
 		'aa',
@@ -671,7 +671,7 @@ return [
 		'zh-yue',
 		'zh-min-nan',
 		'zh-tw',
-		'zu'
+		'zu',
 	],
 	'alphabetic_revised' => [ // by first word, e.g. 'id' as 'bahasa Indonesia'
 		'ace',
@@ -1005,7 +1005,7 @@ return [
 		'bat-smg',
 		'zh',
 		'zh-tw',
-		'zh-cn'
+		'zh-cn',
 	],
 	'alphabetic_sr' => [ // by first word, non-Cyrillic/non-Roman/non-Greek name by language code
 		'ace',
@@ -1339,7 +1339,7 @@ return [
 		'zh-classical',
 		'yue',
 		'zh-yue',
-		'bat-smg'
+		'bat-smg',
 	],
 	'alphabetic_sv' => [ // by first word, Roman letters first
 		'aa',
