@@ -1341,7 +1341,7 @@ return [
 		'zh-tw',
 		'zu'
 	],
-	'alphabetic_svwiktionary' => [ // by first word, Roman letters first
+	'alphabetic_sv' => [ // by first word, Roman letters first
 		'aa',
 		'af',
 		'ak',
