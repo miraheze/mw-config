@@ -13,6 +13,11 @@ class MirahezeFunctions {
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
+	private const DEFAULT_SERVER = [
+		'default' => 'miraheze.org',
+		'beta' => 'betaheze.org',
+	];
+
 	private const GLOBAL_DATABASE = [
 		'default' => 'mhglobal',
 		'beta' => 'testglobal',
@@ -130,12 +135,11 @@ class MirahezeFunctions {
 	public static function getServers( $database = null ) {
 		$servers = [];
 
+		static $default = null;
 		static $list = null;
+
 		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
-
 		$databases = self::readDbListFile( $list, false, $database );
-
-		$servers['default'] = 'https://' . self::SUFFIXES[ array_key_first( self::SUFFIXES ) ];
 
 		if ( $database !== null ) {
 			if ( is_string( $database ) && $database !== 'default' ) {
@@ -146,7 +150,8 @@ class MirahezeFunctions {
 				}
 			}
 
-			return $servers['default'];
+			$default ??= 'https://' . self::DEFAULT_SERVER[self::getRealm()];
+			return $default;
 		}
 
 		foreach ( $databases as $db => $data ) {
@@ -156,6 +161,9 @@ class MirahezeFunctions {
 				}
 			}
 		}
+
+		$default ??= 'https://' . self::DEFAULT_SERVER[self::getRealm()];
+		$servers['default'] = $default;
 
 		return $servers;
 	}
