@@ -1042,6 +1042,23 @@ $wgManageWikiSettings = [
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 		'requires' => [],
 	],
+	'wgInterwikiSortingSort' => [
+		'name' => 'Interwiki Sorting Sort',
+		'from' => 'interwikisorting',
+		'type' => 'list',
+		'options' => [
+			'alphabetic' => 'alphabetic',
+			'alphabetic_revised' => 'alphabetic_revised',
+			'alphabetic_sr' => 'alphabetic_sr',
+			'alphabetic_fy' => 'alphabetic_fy',
+			'alphabetic_svwiktionary' => 'alphabetic_svwiktionary',
+			'code' => 'code',
+		],
+		'overridedefault' => 'code',
+		'section' => 'localisation',
+		'help' => 'The default sort order to use. The default, \'code\' orders alphabetically by interwiki code.',
+		'requires' => [],
+	],
 
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
