@@ -44,12 +44,32 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gratisdatawiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+		
+		function onBeforePageDisplay( OutputPage $outputPage ) {
+			$out->addMeta( 'og:image:width', '1200' );
+			
+			if ( isset( $meta['title'] ) ) {
+				$outputPage->addMeta( 'og:title', $meta['title'] );
+			}
+			
+			if ( isset( $meta['description'] ) ) {
+				$outputPage->addMeta( 'description', $meta['description'] );
+				$outputPage->addMeta( 'og:description', $meta['description'] );
+				
+				if ( isset( $meta['title'] ) ) {
+					$outputPage->addMeta( 'og:type', 'summary' );
+				}
+			}
+		}
+		
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
+		
 
 		break;
 	case 'gratispaideiawiki':
