@@ -61,15 +61,13 @@ switch ( $wi->dbname ) {
 					$outputPage->addMeta( 'og:type', 'summary' );
 				}
 			}
-		}
-		
+		}	
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
-		];
-		
+		];	
 
 		break;
 	case 'gratispaideiawiki':
