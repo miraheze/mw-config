@@ -1,7 +1,7 @@
 <?php
 
 $wgLBFactoryConf = [
-	'class' => LBFactoryMulti::class,
+	'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
