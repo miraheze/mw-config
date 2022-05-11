@@ -47,7 +47,7 @@ switch ( $wi->dbname ) {
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 		
 		function onBeforePageDisplay( OutputPage $outputPage ) {
-			$out->addMeta( 'og:image:width', '1200' );
+			$outputPage->addMeta( 'og:image:width', '1200' );
 			
 			if ( isset( $meta['title'] ) ) {
 				$outputPage->addMeta( 'og:title', $meta['title'] );
