@@ -208,6 +208,7 @@ $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SemanticMediaWiki/extension.json
+$IP/extensions/SemanticScribunto/extension.json
 $IP/extensions/ShortDescription/extension.json
 $IP/extensions/SimpleBlogPage/extension.json
 $IP/extensions/SimpleChanges/extension.json
