@@ -49,6 +49,7 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $outputPage ) {
 			$outputPage->addMeta( 'og:image:width', '1200' );
 			
+			$meta = $outputPage->getProperty( 'wikibase-meta-tags' );
 			if ( isset( $meta['title'] ) ) {
 				$outputPage->addMeta( 'og:title', $meta['title'] );
 			}
