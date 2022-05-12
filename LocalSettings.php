@@ -4902,7 +4902,6 @@ $wgConf->settings += [
 	'wgMetadataGenerators' => [
 		'default' => '',
 		'gratispaideiawiki' => [
-			'Citation',
 			'OpenGraph',
 			'Twitter',
 			'SchemaOrg',
