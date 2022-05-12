@@ -15,7 +15,7 @@ class MirahezeFunctions {
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
-		'beta' => 'betaheze.org',
+		'betaheze' => 'betaheze.org',
 	];
 
 	private const GLOBAL_DATABASE = [
