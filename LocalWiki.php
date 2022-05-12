@@ -44,25 +44,6 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gratisdatawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-		
-		function onBeforePageDisplay( OutputPage $outputPage ) {
-			$outputPage->addMeta( 'og:image:width', '1200' );
-			
-			$meta = $outputPage->getProperty( 'wikibase-meta-tags' );
-			if ( isset( $meta['title'] ) ) {
-				$outputPage->addMeta( 'og:title', $meta['title'] );
-			}
-			
-			if ( isset( $meta['description'] ) ) {
-				$outputPage->addMeta( 'description', $meta['description'] );
-				$outputPage->addMeta( 'og:description', $meta['description'] );
-				
-				if ( isset( $meta['title'] ) ) {
-					$outputPage->addMeta( 'og:type', 'summary' );
-				}
-			}
-		}	
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
