@@ -3300,9 +3300,11 @@ $wgConf->settings += [
 	],
 	'wgPageImagesDenylist' => [
 		'wmgUsePageImages' => [
-			'type' => 'db',
-			'page' => 'MediaWiki:Pageimages-denylist',
-			'db' => false,
+			[
+				'type' => 'db',
+				'page' => 'MediaWiki:Pageimages-denylist',
+				'db' => false,
+			],
 		],
 	],
 	'wgPageImagesExpandOpenSearchXml' => [
