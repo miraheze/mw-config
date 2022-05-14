@@ -3301,9 +3301,11 @@ $wgConf->settings += [
 	'wgPageImagesDenylist' => [
 		'default' => [],
 		'gratispaideiawiki' => [
-			'type' => 'db',
-			'page' => 'MediaWiki:Pageimages-denylist',
-			'db' => false,
+			{
+				'type' => 'db',
+				'page' => 'MediaWiki:Pageimages-denylist',
+				'db' => false,
+			}
 		],
 	],
 	'wgPageImagesExpandOpenSearchXml' => [
