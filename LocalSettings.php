@@ -3299,7 +3299,8 @@ $wgConf->settings += [
 		],
 	],
 	'wgPageImagesDenylist' => [
-		'wmgUsePageImages' => [
+		'default' => [],
+		'gratispaideiawiki' => [
 			'type' => 'db',
 			'page' => 'MediaWiki:Pageimages-denylist',
 			'db' => false,
