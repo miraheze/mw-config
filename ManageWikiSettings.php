@@ -3228,15 +3228,6 @@ $wgManageWikiSettings = [
 		'help' => 'The condition of page tools visibility.',
 		'requires' => [],
 	],
-	'wgCitizenEnableDrawerSubSearch' => [
-		'name' => 'Citizen Enable Drawer Sub Search',
-		'from' => 'citizen',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'Enables the drawer search box for menu entries.',
-		'requires' => [],
-	],
 	'wgCitizenPortalAttach' => [
 		'name' => 'Citizen Portal Attach',
 		'from' => 'citizen',
