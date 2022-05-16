@@ -3255,6 +3255,68 @@ $wgManageWikiSettings = [
 		'help' => 'The color defined in the <code>theme-color</code> meta tag.',
 		'requires' => [],
 	],
+	'wgCitizenEnableSearch' => [
+		'name' => 'Citizen Enable Search',
+		'from' => 'citizen',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Enable or disable rich search suggestions',
+		'requires' => [],
+	],
+	'wgCitizenSearchGateway' => [
+		'name' => 'Citizen Search Gateway',
+		'from' => 'citizen',
+		'type' => 'list',
+		'options' => [
+			'Action API' => 'mwActionApi',
+			'REST API' => 'mwRestApi',
+		],
+		'overridedefault' => 'mwActionApi',
+		'section' => 'styling',
+		'help' => 'Which gateway to use for fetching search suggestion',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgCitizenEnableSearch',
+				'value' => true,
+			],
+		],
+	],
+	'wgCitizenSearchDescriptionSource' => [
+		'name' => 'Citizen Search Description Source',
+		'from' => 'citizen',
+		'type' => 'list',
+		'options' => [
+			'TextExtracts' => 'textextracts',
+			'ShortDescription/Wikidata' => 'wikidata',
+			'Description2/WikiSEO' => 'pagedescription',
+		],
+		'overridedefault' => 'textextracts',
+		'section' => 'styling',
+		'help' => 'Source of description text on search suggestions',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgCitizenSearchDescriptionSource',
+				'value' => 'mwActionApi',
+			],
+		],
+	],
+	'wgCitizenMaxSearchResults' => [
+		'name' => 'Citizen Max Search Results',
+		'from' => 'citizen',
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 15,
+		'overridedefault' => 6,
+		'section' => 'styling',
+		'help' => 'Max number of search suggestions',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgCitizenEnableSearch',
+				'value' => true,
+			],
+		],
+	],
 	'wgRelatedArticlesFooterAllowedSkins' => [
 		'name' => 'RelatedArticles Footer Allowed Skins',
 		'from' => 'relatedarticles',

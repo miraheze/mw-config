@@ -588,6 +588,18 @@ $wgConf->settings += [
 	'wgCitizenThemeColor' => [
 		'default' => '#131a21',
 	],
+	'wgCitizenEnableSearch' => [
+		'default' => true,
+	],
+	'wgCitizenSearchGateway' => [
+		'default' => 'mwActionApi',
+	],
+	'wgCitizenSearchDescriptionSource' => [
+		'default' => 'textextracts',
+	],
+	'wgCitizenMaxSearchResults' => [
+		'default' => 6,
+	],
 
 	// Comments
 	'wgCommentsDefaultAvatar' => [
