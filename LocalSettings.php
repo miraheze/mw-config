@@ -3370,6 +3370,11 @@ $wgConf->settings += [
 	],
 	'wgRevokePermissions' => [
 		'default' => [],
+		'+feignwiki' => [
+			'user' => [
+				'read' => true,
+			],
+		],
 		'+metawiki' => [
 			'requestwikiblocked' => [
 				'requestwiki' => true,
