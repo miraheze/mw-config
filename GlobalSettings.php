@@ -420,14 +420,6 @@ $wgFooterIcons['copyright']['copyright'] = [
 	'alt' => $wgConf->get( 'wgRightsText', $wi->dbname ),
 ];
 
-$wgLocalisationUpdateHttpRequestOptions['proxy'] = 'http://bast.miraheze.org:8080';
-
-$wgLocalisationUpdateRepositories['github'] = [
-	'mediawiki' => 'https://raw.github.com/wikimedia/mediawiki/master/%PATH%',
-	'extension' => false,
-	'skin' => false,
-];
-
 $wgMaxShellMemory = 215040; // 210MB
 $wgMaxShellFileSize = 51200; // 50MB
 $wgMaxShellTime = 50;

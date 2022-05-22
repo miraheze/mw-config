@@ -23,7 +23,6 @@ wfLoadExtensions( [
 	'GlobalNewFiles',
 	'IncidentReporting',
 	'Interwiki',
-	'LocalisationUpdate',
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
