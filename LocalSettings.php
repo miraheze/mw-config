@@ -1242,6 +1242,50 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// ExternalData
+	'wgExternalDataSources' => [
+		/**
+		 * @note Databases should NEVER be configured here!
+		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/Databases
+		 *
+		 * @note Programs should NEVER be configured here!
+		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/Local_programs
+		 *
+		 * @note LDAP should NEVER be configured here!
+		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/LDAP
+		 *
+		 * @note If configuring local files here, please be mindful of how it is done to avoid security implications
+		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/Local_files
+		 *
+		 * @note SOAP should NEVER be configured here, unless you understand it and can confirm the security of it is acceptable.
+		 */
+		'wmgUseExternalData' => [
+			'*' => [
+				'min cache seconds' => 3600,
+				'always use stale cache' => false,
+				'throttle key' => '$2nd_lvl_domain$',
+				'throttle interval' => 0,
+				'replacements' => [],
+				'allowed urls' => [],
+				'options' => [
+					'timeout' => 'default',
+				],
+				'encodings' => [
+					'ASCII',
+					'UTF-8',
+					'Windows-1251',
+					'Windows-1252',
+					'Windows-1254',
+					'KOI8-R',
+					'ISO-8859-1',
+				],
+				'params' => [],
+				'param filters' => [],
+				'verbose' => true,
+			],
+		],
+	],
+
 	// HTTP
 	'wgHTTPConnectTimeout' => [
 		'default' => 3.0,
