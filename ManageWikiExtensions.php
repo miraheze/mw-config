@@ -2455,6 +2455,23 @@ $wgManageWikiExtensions = [
 		'install' => [],
 		'section' => 'other',
 	],
+	'externaldata' => [
+		'name' => 'External Data',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data',
+		'var' => 'wmgUseExternalData',
+		'conflicts' => false,
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'install' => [
+			'sql' => [
+				'ed_url_cache' => "$IP/extensions/ExternalData/sql/ExternalData.sql"
+			],
+		],
+		'section' => 'other',
+	],
 	'fancyboxthumbs' => [
 		'name' => 'FancyBoxThumbs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FancyBoxThumbs',
