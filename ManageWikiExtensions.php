@@ -2456,7 +2456,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'externaldata' => [
-		'name' => 'ExternalData',
+		'name' => 'External Data',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data',
 		'var' => 'wmgUseExternalData',
 		'conflicts' => false,
