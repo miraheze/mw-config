@@ -2470,7 +2470,7 @@ $wgManageWikiExtensions = [
 				'ed_url_cache' => "$IP/extensions/ExternalData/sql/ExternalData.sql"
 			],
 		],
-		'section' => 'parserhooks',
+		'section' => 'other',
 	],
 	'fancyboxthumbs' => [
 		'name' => 'FancyBoxThumbs',
