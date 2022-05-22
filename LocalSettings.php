@@ -1254,7 +1254,7 @@ $wgConf->settings += [
 		 * @note LDAP should NEVER be configured here!
 		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/LDAP
 		 *
-		 * @note If configuring local files here, please be mindful of how it is done to avoid security implications
+		 * @note If configuring local files here, please be mindful of how it is done to avoid security implications.
 		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/Local_files
 		 *
 		 * @note SOAP should NEVER be configured here, unless you understand it and can confirm the security of it is acceptable.
