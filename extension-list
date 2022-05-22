@@ -69,6 +69,7 @@ $IP/extensions/EmbedSpotify/extension.json
 $IP/extensions/EmbedVideo/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
+$IP/extensions/ExternalData/extension.json
 $IP/extensions/FancyBoxThumbs/extension.json
 $IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
