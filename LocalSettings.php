@@ -3777,6 +3777,10 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
+		'+famepediatechwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -3879,6 +3883,10 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'famepediawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'famepediatechwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
