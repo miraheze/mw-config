@@ -260,6 +260,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'jsonld',
 	];
 	$wgWBRepoSettings['taintedReferencesEnabled'] = true;
+	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
