@@ -28,6 +28,7 @@ wfLoadExtensions( [
 	'MatomoAnalytics',
 	'MirahezeMagic',
 	'MirahezeMagic/ReCaptchaNoCaptcha',
+	'NativeSvgHandler',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
