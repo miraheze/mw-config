@@ -3838,6 +3838,9 @@ $wgConf->settings += [
 			'extendedconfirmed',
 			'owner',
 		],
+		'+ysmwikiwiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+wmgUseAuthorProtect' => [
 			'author',
 		],
@@ -3920,6 +3923,9 @@ $wgConf->settings += [
 		'testwiki' => [
 			'bureaucrat',
 			'consul',
+		],
+		'ysmwikiwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'+wmgUseSocialProfile' => [
 			'updatepoints',
