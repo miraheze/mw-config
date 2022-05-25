@@ -1825,9 +1825,11 @@ $wgConf->settings += [
 		'default' => [],
 		'gpcommonswiki' => [
 			'qqq' => 'Message documentation',
+			'pcm' => 'Naijá',
 		],
 		'gratisdatawiki' => [
 			'qqq' => 'Message documentation',
+			'pcm' => 'Naijá',
 		],
 		'isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
