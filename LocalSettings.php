@@ -3555,6 +3555,9 @@ $wgConf->settings += [
 		'+bioencyclopediawiki' => [
 			'usenewrc' => 0,
 		],
+		'+criticalrolewiki' => [
+			'thumbsize' => 3,
+		],
 		'+crocwiki' => [
 			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
