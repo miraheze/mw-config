@@ -3040,6 +3040,9 @@ $wgConf->settings += [
 		'betaheze' => [
 			'beta.betaheze.org',
 		],
+		'+gratisdatawiki' => [
+			'gratispaideia.miraheze.org',
+		],
 		'+gratispaideiawiki' => [
 			'gratisdata.miraheze.org',
 		],
