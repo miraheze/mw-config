@@ -399,7 +399,7 @@ class MirahezeFunctions {
 
 	public function loadExtensions() {
 		global $wgExtensionDirectory, $wgStyleDirectory,
-			$wgManageWikiExtensions, $wgConf;
+			$wgManageWikiExtensions;
 
 		$this->cacheArray ??= $this->getCacheArray();
 
