@@ -434,18 +434,36 @@ class MirahezeFunctions {
 		}
 
 		if ( isset( $this->cacheArray['extensions'] ) ) {
-			foreach ( $wgManageWikiExtensions as $name => $ext ) {
-				$wgConf->settings[ $ext['var'] ]['default'] = false;
+			extract( array_fill_keys( array_diff(
+					array_column( $wgManageWikiExtensions, 'var' ),
+					$this->cacheArray['extensions']
+				), false
+			), EXTR_SKIP );
 
-				if ( in_array( $ext['var'], $this->cacheArray['extensions'] ) &&
-					!in_array( $name, $this->disabledExtensions )
-				) {
-					$path = $list[ $ext['name'] ] ?? false;
+			$enabledExtensions = array_keys( array_diff(
+				array_filter( array_combine(
+					array_column( $wgManageWikiExtensions, 'name' ),
+					array_keys( $wgManageWikiExtensions )
+				) ),
+				$this->disabledExtensions
+			) );
 
-					$pathInfo = pathinfo( $path )['extension'] ?? false;
-					if ( $path && $pathInfo === 'json' ) {
-						ExtensionRegistry::getInstance()->queue( $path );
-					}
+			$activeExtensions = array_intersect(
+				array_keys( array_intersect(
+					array_flip( array_filter( array_flip(
+						array_column( $wgManageWikiExtensions, 'var', 'name' )
+					) ) ),
+					$this->cacheArray['extensions']
+				) ),
+				$enabledExtensions
+			);
+
+			foreach ( $activeExtensions as $name ) {
+				$path = $list[ $name ] ?? false;
+
+				$pathInfo = pathinfo( $path )['extension'] ?? false;
+				if ( $path && $pathInfo === 'json' ) {
+					ExtensionRegistry::getInstance()->queue( $path );
 				}
 			}
 		}
