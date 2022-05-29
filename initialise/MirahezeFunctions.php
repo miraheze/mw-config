@@ -333,7 +333,8 @@ class MirahezeFunctions {
 
 		// Assign extensions variables now
 		if ( isset( $this->cacheArray['extensions'] ) ) {
-			$GLOBALS += array_fill_keys( $this->cacheArray['extensions'], true );
+			global ${implode( ',', $this->cacheArray['extensions'] )};
+			extract( array_fill_keys( $this->cacheArray['extensions'], true ) );
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
@@ -434,11 +435,13 @@ class MirahezeFunctions {
 		}
 
 		if ( isset( $this->cacheArray['extensions'] ) ) {
-			$GLOBALS += array_fill_keys( array_diff(
-					array_column( $wgManageWikiExtensions, 'var' ),
-					$this->cacheArray['extensions']
-				), false
+			$extensionVariables = array_diff(
+				array_column( $wgManageWikiExtensions, 'var' ),
+				$this->cacheArray['extensions']
 			);
+
+			global ${implode( ',', $extensionVariables )};
+			extract( array_fill_keys( $extensionVariables, false ), EXTR_SKIP );
 
 			$enabledExtensions = array_keys( array_diff(
 				array_filter( array_combine(
