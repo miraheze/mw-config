@@ -333,9 +333,7 @@ class MirahezeFunctions {
 
 		// Assign extensions variables now
 		if ( isset( $this->cacheArray['extensions'] ) ) {
-			foreach ( $this->cacheArray['extensions'] as $var ) {
-				$wgConf->settings[$var][$this->dbname] = true;
-			}
+			extract( array_fill_keys( $this->cacheArray['extensions'], true ) );
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
