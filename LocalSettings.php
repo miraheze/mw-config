@@ -40,10 +40,7 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 }
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-
 $wi = new MirahezeFunctions();
-
-$wgLocalDatabases = $wgConf->getLocalDatabases();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
