@@ -28,6 +28,8 @@ $smwgPageSpecialProperties = [
 	'_ATTCH_LINK',
 ];
 
+${'smw.json'}[$wgDBname]['upgrade_key'] = $smwgUpgradeKey;
+
 if ( !class_exists( SMW\Setup::class ) ) {
 	require_once "$IP/extensions/SemanticMediaWiki/src/MediaWiki/HookDispatcherAwareTrait.php";
 	require_once "$IP/extensions/SemanticMediaWiki/src/Setup.php";
