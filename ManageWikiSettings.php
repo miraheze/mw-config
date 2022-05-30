@@ -3296,7 +3296,7 @@ $wgManageWikiSettings = [
 		'help' => 'Source of description text on search suggestions',
 		'requires' => [
 			'settings' => [
-				'setting' => 'wgCitizenSearchDescriptionSource',
+				'setting' => 'wgCitizenSearchGateway',
 				'value' => 'mwActionApi',
 			],
 		],
