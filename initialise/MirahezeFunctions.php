@@ -510,6 +510,33 @@ class MirahezeFunctions {
 		}
 	}
 
+	private static function getActiveList( $globalDatabase ) {
+		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
+		$activeWikis = $dbr->select(
+			'cw_wikis',
+			[
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_sitename',
+			], [
+				'wiki_closed' => 0,
+				'wiki_deleted' => 0,
+				'wiki_inactive' => 0,
+			],
+			__METHOD__
+		);
+
+		$activeList = [];
+		foreach ( $activeWikis as $wiki ) {
+			$activeList[$wiki->wiki_dbname] = [
+				's' => $wiki->wiki_sitename,
+				'c' => $wiki->wiki_dbcluster,
+			];
+		}
+
+		return $activeList;
+	}
+
 	private static function getCombiList( $globalDatabase ) {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
 		$allWikis = $dbr->select(
@@ -517,25 +544,23 @@ class MirahezeFunctions {
 			[
 				'wiki_dbcluster',
 				'wiki_dbname',
-				'wiki_deleted',
 				'wiki_url',
 				'wiki_sitename',
-			]
+			], [
+				'wiki_deleted' => 0,
+			],
+			__METHOD__
 		);
 
 		$combiList = [];
 		foreach ( $allWikis as $wiki ) {
-			if ( $wiki->wiki_deleted == 1 ) {
-				continue;
-			} else {
-				$combiList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
+			$combiList[$wiki->wiki_dbname] = [
+				's' => $wiki->wiki_sitename,
+				'c' => $wiki->wiki_dbcluster,
+			];
 
-				if ( $wiki->wiki_url !== null ) {
-					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
-				}
+			if ( $wiki->wiki_url !== null ) {
+				$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
 			}
 		}
 
@@ -544,24 +569,24 @@ class MirahezeFunctions {
 
 	private static function getDeletedList( $globalDatabase ) {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
-		$allWikis = $dbr->select(
+		$deletedWikis = $dbr->select(
 			'cw_wikis',
 			[
 				'wiki_dbcluster',
 				'wiki_dbname',
-				'wiki_deleted',
 				'wiki_sitename',
-			]
+			], [
+				'wiki_deleted' => 1,
+			],
+			__METHOD__
 		);
 
 		$deletedList = [];
-		foreach ( $allWikis as $wiki ) {
-			if ( $wiki->wiki_deleted == 1 ) {
-				$deletedList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
-			}
+		foreach ( $deletedWikis as $wiki ) {
+			$deletedList[$wiki->wiki_dbname] = [
+				's' => $wiki->wiki_sitename,
+				'c' => $wiki->wiki_dbcluster,
+			];
 		}
 
 		return $deletedList;
@@ -569,6 +594,18 @@ class MirahezeFunctions {
 
 	public static function onGenerateDatabaseLists( &$databaseLists ) {
 		$databaseLists = [
+			'active' => [
+				'active' => 'databases',
+				'databases' => self::getActiveList(
+					self::GLOBAL_DATABASE['default']
+				),
+			],
+			'active-beta' => [
+				'active-beta' => 'databases',
+				'databases' => self::getActiveList(
+					self::GLOBAL_DATABASE['beta']
+				),
+			],
 			'beta' => [
 				'combi' => self::getCombiList(
 					self::GLOBAL_DATABASE['beta']
