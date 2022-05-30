@@ -2051,6 +2051,12 @@ $wgConf->settings += [
 	'wgKartographerStyles' => [
 		'default' => [],
 	],
+	'wgKartographerStaticMapframe' => [
+		'default' => false,
+	],
+	'wgKartographerEnableMapFrame' => [
+		'default' => true,
+	],
 
 	// Language
 	'wgLanguageCode' => [
