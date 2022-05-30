@@ -28,7 +28,7 @@ $smwgPageSpecialProperties = [
 	'_ATTCH_LINK',
 ];
 
-$smwgMainCacheType = 'memcached-pecl';
+$smwgMainCacheType = CACHE_MEMCACHED;
 
 if ( !class_exists( SMW\Setup::class ) ) {
 	require_once "$IP/extensions/SemanticMediaWiki/src/MediaWiki/HookDispatcherAwareTrait.php";
