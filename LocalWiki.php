@@ -189,4 +189,8 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
+	case 'worldboxwiki':
+		unset( $wgSpecialPages['Analytics'] );
+
+		break;
 }
