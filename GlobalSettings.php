@@ -20,7 +20,7 @@ if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
-if ( $wmgUseInterwikiSorting ) {
+if ( $wi->isExtensionActive( 'interwikisorting' ) ) {
 	$wgInterwikiSortingInterwikiSortOrders = include __DIR__ . '/InterwikiSortOrders.php';
 }
 
@@ -56,16 +56,16 @@ if ( $wmgUseVisualEditor ) {
 	}
 }
 
-if ( $wmgUseWikibaseRepository || $wmgUseWikibaseClient ) {
+if ( $wi->isExtensionsActive( 'wikibaseclient', 'wikibaserepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
 }
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
-if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
+if ( $wi->isExtensionsActive( 'flow', 'visualeditor', 'linter' ) ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
-	if ( $wmgUseVisualEditor ) {
+	if ( $wi->isExtensionActive( 'visualeditor' ) ) {
 		$wgVisualEditorParsoidAutoConfig = false;
 	}
 
@@ -88,7 +88,7 @@ if ( $wmgUseFlow || $wmgUseVisualEditor || $wmgUseLinter ) {
 		],
 	];
 
-	if ( $wmgUseFlow ) {
+	if ( $wi->isExtensionActive( 'flow' ) ) {
 		$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
 		$wgFlowParsoidPrefix = $wi->dbname;
 		$wgFlowParsoidTimeout = 30;
@@ -117,7 +117,7 @@ if ( $cwClosed ) {
 		],
 	];
 
-	if ( $wmgUseComments ) {
+	if ( $wi->isExtensionActive( 'comments' ) ) {
 		$wgConf->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
 }
