@@ -445,6 +445,20 @@ class MirahezeFunctions {
 		return in_array( $extension, $activeExtensions );
 	}
 
+	public function isExtensionsActive( string ...$extensions, string $operator = 'OR' ): bool {
+		static $activeExtensions = null;
+
+		$activeExtensions ??= $this->getActiveExtensions();
+
+		if ( $operator === 'AND' ) {
+			return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
+		} elseif ( $operator === 'OR' ) {
+			return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
+		}
+
+		return false;
+	}
+
 	public function loadExtensions() {
 		global $wgExtensionDirectory, $wgStyleDirectory,
 			$wgManageWikiExtensions;
