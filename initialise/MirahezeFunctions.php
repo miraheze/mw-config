@@ -58,12 +58,21 @@ class MirahezeFunctions {
 	}
 
 	public static function getLocalDatabases(): array {
+		global $wgLocalDatabases;
+
 		static $list = null;
 		static $databases = null;
 
 		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
+
+		// We need the CLI to be able to access 'deleted' wikis
+		if ( PHP_SAPI === 'cli' ) {
+			$databases ??= array_merge( self::readDbListFile( $list ), self::readDbListFile( 'deleted-' . $list ) );
+		}
+
 		$databases ??= self::readDbListFile( $list );
 
+		$wgLocalDatabases = $databases;
 		return $databases;
 	}
 
@@ -133,11 +142,6 @@ class MirahezeFunctions {
 
 		$wgConf->suffixes = array_keys( self::SUFFIXES );
 		$wgConf->wikis = self::getLocalDatabases();
-
-		// We need the CLI to be able to access 'deleted' wikis
-		if ( PHP_SAPI === 'cli' ) {
-			$wgConf->wikis = array_merge( $wgConf->wikis, self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()] ) );
-		}
 	}
 
 	public static function getRealm(): string {
