@@ -422,9 +422,20 @@ class MirahezeFunctions {
 			array_diff( $allExtensions, $this->disabledExtensions )
 		);
 
-		return array_intersect( array_keys(
+		// To-Do: Deprecate globals, and make database/cache use extension keys or names
+		/* return array_intersect( array_keys(
 			array_intersect( array_flip( $allExtensions ), $this->cacheArray['extensions'] )
-		), $enabledExtensions );
+		), $enabledExtensions ); */
+
+		return array_intersect(
+			array_keys( array_intersect(
+				array_flip( array_filter( array_flip(
+					array_column( $wgManageWikiExtensions, 'var', 'name' )
+				) ) ),
+				$this->cacheArray['extensions']
+			) ),
+			$enabledExtensions
+		);
 	}
 
 	public function isExtensionActive( string $extension ): bool {
