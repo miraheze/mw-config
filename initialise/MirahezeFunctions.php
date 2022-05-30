@@ -401,7 +401,7 @@ class MirahezeFunctions {
 		$allExtensions = array_filter( array_combine(
 			array_column( $wgManageWikiExtensions, 'name' ),
 			array_keys( $wgManageWikiExtensions )
-		) )
+		) );
 
 		$enabledExtensions = array_keys(
 			array_diff( $allExtensions, $this->disabledExtensions )
