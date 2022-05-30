@@ -34,7 +34,8 @@ abstract class ManageWikiTestCase extends TestCase {
 	public function mockMirahezeFunctions(): stdClass {
 		$methods = [
 			'isAllOfExtensionsActive',
-			'isExtensionActive'
+			'isAnyOfExtensionsActive',
+			'isExtensionActive',
 		];
 
 		$mock = $this->getMockBuilder( stdClass::class )
