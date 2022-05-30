@@ -22,7 +22,4 @@
 	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
 		<exclude-pattern>initialise/MirahezeFunctions\.php</exclude-pattern>
 	</rule>
-	<rule ref="MediaWiki.Usage.ForbiddenFunctions.extract">
-		<exclude-pattern>initialise/MirahezeFunctions\.php</exclude-pattern>
-	</rule>
 </ruleset>
