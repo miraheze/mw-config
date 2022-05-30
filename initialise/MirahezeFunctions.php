@@ -13,6 +13,8 @@ class MirahezeFunctions {
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
+	private const EXTENSIONS_CONFIG_FILE = '/srv/mediawiki/config/ManageWikiExtensions.php';
+
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
 		'betaheze' => 'betaheze.org',
@@ -38,8 +40,9 @@ class MirahezeFunctions {
 		'wikibeta' => 'betaheze.org',
 	];
 
-	public function initialise() {
+	public function __construct() {
 		self::setupHooks();
+		self::setupSiteConfiguration();
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = self::getCurrentDatabase();
@@ -121,6 +124,20 @@ class MirahezeFunctions {
 		global $wgHooks;
 
 		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+	}
+
+	public static function setupSiteConfiguration() {
+		global $wgConf;
+
+		$wgConf = new SiteConfiguration();
+
+		$wgConf->suffixes = array_keys( self::SUFFIXES );
+		$wgConf->wikis = self::getLocalDatabases();
+
+		// We need the CLI to be able to access 'deleted' wikis
+		if ( PHP_SAPI === 'cli' ) {
+			$wgConf->wikis = array_merge( $wgConf->wikis, self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()] ) );
+		}
 	}
 
 	public static function getRealm(): string {
@@ -262,15 +279,15 @@ class MirahezeFunctions {
 		return !in_array( self::getCurrentDatabase(), $wgConf->wikis );
 	}
 
-	public function getCacheArray() {
+	public function getCacheArray(): array {
 		// If we don't have a cache file, let us exit here
 		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ) ) {
 			return false;
 		}
 
-		$this->cacheArray = (array)json_decode( file_get_contents( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ), true );
-
-		return $this->cacheArray;
+		return (array)json_decode( file_get_contents(
+			self::CACHE_DIRECTORY . '/' . $this->dbname . '.json'
+		), true );
 	}
 
 	public function readCache() {
@@ -329,12 +346,6 @@ class MirahezeFunctions {
 			foreach ( $this->cacheArray['settings'] as $var => $val ) {
 				$wgConf->settings[$var][$this->dbname] = $val;
 			}
-		}
-
-		// Assign extensions variables now
-		if ( isset( $this->cacheArray['extensions'] ) ) {
-			global ${implode( ',', $this->cacheArray['extensions'] )};
-			extract( array_fill_keys( $this->cacheArray['extensions'], true ) );
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
@@ -398,6 +409,56 @@ class MirahezeFunctions {
 		}
 	}
 
+	public function getActiveExtensions(): array {
+		require_once self::EXTENSIONS_CONFIG_FILE;
+		global $wgManageWikiExtensions;
+
+		$allExtensions = array_filter( array_combine(
+			array_column( $wgManageWikiExtensions, 'name' ),
+			array_keys( $wgManageWikiExtensions )
+		) );
+
+		$enabledExtensions = array_keys(
+			array_diff( $allExtensions, $this->disabledExtensions )
+		);
+
+		// To-Do: Deprecate 'var', and make database/cache use extension names
+		/* return array_intersect( array_keys(
+			array_intersect( array_flip( $allExtensions ), $this->cacheArray['extensions'] )
+		), $enabledExtensions ); */
+
+		return array_intersect(
+			array_keys( array_intersect(
+				array_flip( array_filter( array_flip(
+					array_column( $wgManageWikiExtensions, 'var', 'name' )
+				) ) ),
+				$this->cacheArray['extensions']
+			) ),
+			$enabledExtensions
+		);
+	}
+
+	public function isExtensionActive( string $extension ): bool {
+		static $activeExtensions = null;
+
+		$activeExtensions ??= $this->getActiveExtensions();
+		return in_array( $extension, $activeExtensions );
+	}
+
+	public function isAnyOfExtensionsActive( string ...$extensions ): bool {
+		static $activeExtensions = null;
+
+		$activeExtensions ??= $this->getActiveExtensions();
+		return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
+	}
+
+	public function isAllOfExtensionsActive( string ...$extensions ): bool {
+		static $activeExtensions = null;
+
+		$activeExtensions ??= $this->getActiveExtensions();
+		return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
+	}
+
 	public function loadExtensions() {
 		global $wgExtensionDirectory, $wgStyleDirectory,
 			$wgManageWikiExtensions;
@@ -435,33 +496,7 @@ class MirahezeFunctions {
 		}
 
 		if ( isset( $this->cacheArray['extensions'] ) ) {
-			$extensionVariables = array_diff(
-				array_column( $wgManageWikiExtensions, 'var' ),
-				$this->cacheArray['extensions']
-			);
-
-			global ${implode( ',', $extensionVariables )};
-			extract( array_fill_keys( $extensionVariables, false ), EXTR_SKIP );
-
-			$enabledExtensions = array_keys( array_diff(
-				array_filter( array_combine(
-					array_column( $wgManageWikiExtensions, 'name' ),
-					array_keys( $wgManageWikiExtensions )
-				) ),
-				$this->disabledExtensions
-			) );
-
-			$activeExtensions = array_intersect(
-				array_keys( array_intersect(
-					array_flip( array_filter( array_flip(
-						array_column( $wgManageWikiExtensions, 'var', 'name' )
-					) ) ),
-					$this->cacheArray['extensions']
-				) ),
-				$enabledExtensions
-			);
-
-			foreach ( $activeExtensions as $name ) {
+			foreach ( $this->getActiveExtensions() as $name ) {
 				$path = $list[ $name ] ?? false;
 
 				$pathInfo = pathinfo( $path )['extension'] ?? false;
