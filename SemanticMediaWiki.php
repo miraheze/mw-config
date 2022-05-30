@@ -27,3 +27,9 @@ $smwgPageSpecialProperties = [
 	'_MEDIA',
 	'_ATTCH_LINK',
 ];
+
+if ( function_exists( 'enableSemantics' ) ) {
+	enableSemantics(
+		parse_url( $wgServer )['host'] ?? $wgServer
+	);
+}

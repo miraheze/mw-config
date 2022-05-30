@@ -23,10 +23,6 @@ abstract class ManageWikiTestCase extends TestCase {
 			->willReturnCallback( static function ( $settingName, $wiki, $suffix = null, $params = [],
 				$wikiTags = [] ) {
 					switch ( $settingName ) {
-						case 'wmgUseGamepress':
-							return true;
-						case 'wmgUseTheme':
-							return true;
 						case 'wgFileExtensions':
 							return [];
 					}
@@ -35,11 +31,27 @@ abstract class ManageWikiTestCase extends TestCase {
 		return $mock;
 	}
 
-	public function mockMirahezeFunctions() {
-		return (object)[
-			'dbname' => '',
-			'hostname' => '',
+	public function mockMirahezeFunctions(): stdClass {
+		$methods = [
+			'isAllOfExtensionsActive',
+			'isAnyOfExtensionsActive',
+			'isExtensionActive',
 		];
+
+		$mock = $this->getMockBuilder( stdClass::class )
+			->addMethods( $methods )
+			->getMock();
+
+		$mock->dbname = '';
+		$mock->hostname = '';
+
+		foreach ( $methods as $m ) {
+			$mock
+				->method( $m )
+				->willReturn( true );
+		}
+
+		return $mock;
 	}
 
 	public function assertSchema( $config ) {

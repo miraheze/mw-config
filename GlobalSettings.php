@@ -12,7 +12,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	] );
 }
 
-if ( $wgConf->get( 'wmgUseChameleon', $wi->dbname ) ) {
+if ( $wi->isExtensionActive( 'chameleon' ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
 
@@ -20,17 +20,15 @@ if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
-if ( $wgConf->get( 'wmgUseInterwikiSorting', $wi->dbname ) ) {
+if ( $wi->isExtensionActive( 'InterwikiSorting' ) ) {
 	$wgInterwikiSortingInterwikiSortOrders = include __DIR__ . '/InterwikiSortOrders.php';
 }
 
-if ( $wgConf->get( 'wmgUseMultimediaViewer', $wi->dbname ) ) {
-	if ( $wgConf->get( 'wmgUse3D', $wi->dbname ) ) {
-		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
-	}
+if ( $wi->isAllOfExtensionsActive( '3d', 'MultimediaViewer' ) ) {
+	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 }
 
-if ( $wgConf->get( 'wmgUsePopups', $wi->dbname ) ) {
+if ( $wi->isExtensionActive( 'Popups' ) ) {
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
 		$wgPopupsOptInDefaultState = '1';
@@ -39,15 +37,15 @@ if ( $wgConf->get( 'wmgUsePopups', $wi->dbname ) ) {
 	}
 }
 
-if ( $wgConf->get( 'wmgUseSemanticMediaWiki', $wi->dbname ) ) {
+if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 	require_once '/srv/mediawiki/config/SemanticMediaWiki.php';
 }
 
-if ( $wgConf->get( 'wmgUseSocialProfile', $wi->dbname ) ) {
+if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 }
 
-if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
+if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
 		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
@@ -56,23 +54,16 @@ if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
 	}
 }
 
-if (
-	$wgConf->get( 'wmgUseWikibaseRepository', $wi->dbname ) ||
-	$wgConf->get( 'wmgUseWikibaseClient', $wi->dbname )
-) {
+if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
 }
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
-if (
-	$wgConf->get( 'wmgUseFlow', $wi->dbname ) ||
-	$wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ||
-	$wgConf->get( 'wmgUseLinter', $wi->dbname )
-) {
+if ( $wi->isAnyOfExtensionsActive( 'Flow', 'VisualEditor', 'Linter' ) ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
-	if ( $wgConf->get( 'wmgUseVisualEditor', $wi->dbname ) ) {
+	if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 		$wgVisualEditorParsoidAutoConfig = false;
 	}
 
@@ -95,7 +86,7 @@ if (
 		],
 	];
 
-	if ( $wgConf->get( 'wmgUseFlow', $wi->dbname ) ) {
+	if ( $wi->isExtensionActive( 'Flow' ) ) {
 		$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
 		$wgFlowParsoidPrefix = $wi->dbname;
 		$wgFlowParsoidTimeout = 30;
@@ -124,7 +115,7 @@ if ( $cwClosed ) {
 		],
 	];
 
-	if ( $wgConf->get( 'wmgUseComments', $wi->dbname ) ) {
+	if ( $wi->isExtensionActive( 'Comments' ) ) {
 		$wgConf->settings['wgRevokePermissions']['default']['*']['comment'] = true;
 	}
 }

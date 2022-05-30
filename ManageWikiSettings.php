@@ -4258,10 +4258,7 @@ $wgManageWikiSettings = [
 	],
 ];
 
-if (
-	$wgConf->get( 'wmgUseGamepress', $wi->dbname ) &&
-	$wgConf->get( 'wmgUseTheme', $wi->dbname )
-) {
+if ( $wi->isAllOfExtensionsActive( 'Gamepress', 'Theme' ) ) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
