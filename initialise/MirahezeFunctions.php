@@ -414,6 +414,12 @@ class MirahezeFunctions {
 	}
 
 	public function getActiveExtensions(): array {
+		$this->cacheArray ??= $this->getCacheArray();
+
+		if ( !$this->cacheArray ) {
+			return [];
+		}
+
 		require_once self::EXTENSIONS_CONFIG_FILE;
 		global $wgManageWikiExtensions;
 
