@@ -3202,6 +3202,7 @@ $wgManageWikiExtensions = [
 		'install' => [
 			'mwscript' => [
 				"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [],
+				"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [],
 			],
 			'namespaces' => [
 				'Property' => [
