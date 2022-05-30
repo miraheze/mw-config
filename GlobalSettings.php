@@ -56,13 +56,13 @@ if ( $wmgUseVisualEditor ) {
 	}
 }
 
-if ( $wi->isExtensionsActive( 'wikibaseclient', 'wikibaserepository' ) ) {
+if ( $wi->isAnyOfExtensionsActive( 'wikibaseclient', 'wikibaserepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
 }
 
 // If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
-if ( $wi->isExtensionsActive( 'flow', 'visualeditor', 'linter' ) ) {
+if ( $wi->isAnyOfExtensionsActive( 'flow', 'visualeditor', 'linter' ) ) {
 	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
 	if ( $wi->isExtensionActive( 'visualeditor' ) ) {
