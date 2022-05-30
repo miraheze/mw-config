@@ -422,7 +422,7 @@ class MirahezeFunctions {
 			array_diff( $allExtensions, $this->disabledExtensions )
 		);
 
-		// To-Do: Deprecate globals, and make database/cache use extension keys or names
+		// To-Do: Deprecate 'var', and make database/cache use extension names
 		/* return array_intersect( array_keys(
 			array_intersect( array_flip( $allExtensions ), $this->cacheArray['extensions'] )
 		), $enabledExtensions ); */
