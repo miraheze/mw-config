@@ -12,7 +12,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	] );
 }
 
-if ( $wmgUseChameleon ) {
+if ( $wi->isExtensionActive( 'Chameleon' ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
 
