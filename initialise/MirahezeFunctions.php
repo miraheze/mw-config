@@ -282,7 +282,7 @@ class MirahezeFunctions {
 	public function getCacheArray(): array {
 		// If we don't have a cache file, let us exit here
 		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ) ) {
-			return false;
+			return [];
 		}
 
 		return (array)json_decode( file_get_contents(
