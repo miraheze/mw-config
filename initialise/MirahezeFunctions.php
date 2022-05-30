@@ -445,18 +445,18 @@ class MirahezeFunctions {
 		return in_array( $extension, $activeExtensions );
 	}
 
-	public function isExtensionsActive( string ...$extensions, string $operator = 'OR' ): bool {
+	public function isAnyOfExtensionsActive( string ...$extensions ): bool {
 		static $activeExtensions = null;
 
 		$activeExtensions ??= $this->getActiveExtensions();
+		return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
+	}
 
-		if ( $operator === 'AND' ) {
-			return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
-		} elseif ( $operator === 'OR' ) {
-			return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
-		}
+	public function isAllOfExtensionsActive( string ...$extensions ): bool {
+		static $activeExtensions = null;
 
-		return false;
+		$activeExtensions ??= $this->getActiveExtensions();
+		return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
 	}
 
 	public function loadExtensions() {
