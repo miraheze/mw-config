@@ -28,8 +28,13 @@ $smwgPageSpecialProperties = [
 	'_ATTCH_LINK',
 ];
 
-if ( function_exists( 'enableSemantics' ) ) {
-	enableSemantics(
-		parse_url( $wgServer )['host'] ?? $wgServer
-	);
+$wgExtensionFunctions[] = 'loadSemantics';
+function loadSemantics() {
+	global $wgServer;
+
+	if ( function_exists( 'enableSemantics' ) ) {
+		enableSemantics(
+			parse_url( $wgServer )['host'] ?? $wgServer
+		);
+	}
 }
