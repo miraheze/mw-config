@@ -42,6 +42,7 @@ class MirahezeFunctions {
 
 	public function __construct() {
 		self::setupHooks();
+		self::setupSiteConfiguration();
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = self::getCurrentDatabase();
@@ -123,6 +124,20 @@ class MirahezeFunctions {
 		global $wgHooks;
 
 		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+	}
+
+	public static function setupSiteConfiguration() {
+		global $wgConf;
+
+		$wgConf = new SiteConfiguration();
+
+		$wgConf->suffixes = array_keys( self::SUFFIXES );
+		$wgConf->wikis = self::getLocalDatabases();
+
+		// We need the CLI to be able to access 'deleted' wikis
+		if ( PHP_SAPI === 'cli' ) {
+			$wgConf->wikis = array_merge( $wgConf->wikis, self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()] ) );
+		}
 	}
 
 	public static function getRealm(): string {
