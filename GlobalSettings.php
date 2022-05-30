@@ -24,10 +24,8 @@ if ( $wi->isExtensionActive( 'InterwikiSorting' ) ) {
 	$wgInterwikiSortingInterwikiSortOrders = include __DIR__ . '/InterwikiSortOrders.php';
 }
 
-if ( $wi->isExtensionActive( 'MultimediaViewer' ) ) {
-	if ( $wi->isExtensionActive( '3d' ) ) {
-		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
-	}
+if ( $wi->isAllOfExtensionsActive( '3d', 'MultimediaViewer' ) ) {
+	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 }
 
 if ( $wi->isExtensionActive( 'Popups' ) ) {
