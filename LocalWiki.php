@@ -96,6 +96,11 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'houkai2ndwiki':
+	case 'worldboxwiki':
+		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
+
+		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
@@ -187,10 +192,6 @@ switch ( $wi->dbname ) {
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
-
-		break;
-	case 'worldboxwiki':
-		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
 }
