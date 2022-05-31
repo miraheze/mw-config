@@ -190,7 +190,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'worldboxwiki':
-		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics has been disabled on this wiki.' );
+		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
 }
