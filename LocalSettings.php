@@ -2444,6 +2444,11 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
+		'+famepediatechwiki' => [
+			'wikistaff' => [
+				'editwikistaffprotected' => true,
+			],
+		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -3772,6 +3777,7 @@ $wgConf->settings += [
 		'+famepediatechwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+			'editwikistaffprotected',
 		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
@@ -3881,6 +3887,7 @@ $wgConf->settings += [
 		'famepediatechwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+			'editwikistaffprotected',
 		],
 		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
