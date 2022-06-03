@@ -2958,6 +2958,18 @@ $wgConf->settings += [
 			'amc' => true,
 		],
 	],
+	'wgMinervaShowCategories' => [
+		'default' => [
+			'base' => false,
+			'loggedin' => false,
+			'amc' => false,
+		],
+		'criticalrolewiki' => [
+			'base' => true,
+			'loggedin' => false,
+			'amc' => false,
+		],
+	],
 
 	// Miscellaneous
 	'wgAllowDisplayTitle' => [
