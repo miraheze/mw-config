@@ -841,6 +841,7 @@ $wgConf->settings += [
 			'mwtask(\d+)?',
 			'es\d+',
 			'bast(\d+)?',
+			'reports(\d+)?',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
