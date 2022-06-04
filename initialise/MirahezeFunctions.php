@@ -467,8 +467,6 @@ class MirahezeFunctions {
 	}
 
 	public function loadExtensions() {
-		global $wgExtensionDirectory, $wgStyleDirectory;
-
 		$this->cacheArray ??= $this->getCacheArray();
 
 		if ( !$this->cacheArray ) {
@@ -477,8 +475,8 @@ class MirahezeFunctions {
 
 		if ( !file_exists( self::CACHE_DIRECTORY . '/extension-list.json' ) ) {
 			$queue = array_fill_keys( array_merge(
-					glob( $wgExtensionDirectory . '/*/extension*.json' ),
-					glob( $wgStyleDirectory . '/*/skin.json' )
+					glob( '/srv/mediawiki/w/extensions/*/extension*.json' ),
+					glob( '/srv/mediawiki/w/skins/*/skin.json' )
 				),
 			true );
 
