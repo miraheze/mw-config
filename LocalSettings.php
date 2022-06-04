@@ -3042,6 +3042,20 @@ $wgConf->settings += [
 	'wgWhitelistRead' => [
 		'default' => [],
 	],
+	'wgDisabledVariants' => [
+		'default' => [],
+		'hkrailwiki' => [
+			'zh',
+			'zh-hant',
+			'zh-hans',
+		],
+	],
+	'wgDefaultLanguageVariant' => [
+		'default' => [],
+		'hkrailwiki' => [
+			'zh-hk',
+		],
+	],
 
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
