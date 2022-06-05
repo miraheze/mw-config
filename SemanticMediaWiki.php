@@ -34,3 +34,7 @@ if ( !class_exists( SMW\Setup::class ) ) {
 	require_once "$IP/extensions/SemanticMediaWiki/src/MediaWiki/HookDispatcherAwareTrait.php";
 	require_once "$IP/extensions/SemanticMediaWiki/src/Setup.php";
 }
+
+if ( $wgDBname === 'constantnoblewiki' ) {
+	array_push( $smwgPageSpecialProperties, '_CDAT' );
+}
