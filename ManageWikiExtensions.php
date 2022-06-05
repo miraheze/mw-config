@@ -1011,7 +1011,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabber',
 		'var' => 'wmgUseTabber',
 		'conflicts' => 'tabberneue',
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'Will be removed, please use TabberNeue instead.',
 		'section' => 'parserhooks',
 	],
 	'tabberneue' => [
