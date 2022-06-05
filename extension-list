@@ -234,7 +234,6 @@ $IP/extensions/StructuredNavigation/extension.json
 $IP/extensions/SubPageList3/extension.json
 $IP/extensions/SubpageFun/extension.json
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
-$IP/extensions/Tabber/extension.json
 $IP/extensions/TabberNeue/extension.json
 $IP/extensions/Tabs/extension.json
 $IP/extensions/TemplateData/extension.json

@@ -1006,24 +1006,11 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'tabber' => [
-		'name' => 'Tabber',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabber',
-		'var' => 'wmgUseTabber',
-		'conflicts' => 'tabberneue',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'Will be removed, please use TabberNeue instead.',
-		'section' => 'parserhooks',
-	],
 	'tabberneue' => [
 		'name' => 'TabberNeue',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TabberNeue',
 		'var' => 'wmgUseTabberNeue',
-		'conflicts' => 'tabber',
+		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
