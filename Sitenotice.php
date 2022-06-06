@@ -34,7 +34,7 @@ if ( $wi->isAnyOfExtensionsActive( 'AddThis', 'FancyBoxThumbs', 'Foreground', 'G
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>In preparation for the MediaWiki 1.38.0 upgrade on Miraheze, we will be removing the following extensions and skins on 12 June 2022: AddThis, FancyBoxThumbs, Foreground, GettingStarted, MagicNumberedHeadings, and Pivot. Some extensions listed here will be given replacements. You can learn more about this and what else to expect with the 1.38 upgrade <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/MediaWiki/1.38">here</a>. Please note that this is not a final upgrade notice, and we are still a couple of weeks away from upgrading. A final site notice will be givin one week prior to the upgrade.</div></td>
+			<td style="font-size:125%"><div data-nosnippet>In preparation for the MediaWiki 1.38.0 upgrade on Miraheze, we will be removing the following extensions and skins on 12 June 2022: AddThis, FancyBoxThumbs, Foreground, GettingStarted, MagicNumberedHeadings, and Pivot. Some extensions listed here will be given replacements. You can learn more about this and what else to expect with the 1.38 upgrade <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/MediaWiki/1.38">here</a>. Please note that this is <b>not</b> a final upgrade notice, and we are still a couple of weeks away from upgrading. A final site notice will be givin one week prior to the upgrade.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
