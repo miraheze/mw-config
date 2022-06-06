@@ -3576,6 +3576,9 @@ $wgConf->settings += [
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
+		'+kirbywiki' => [
+			'thumbsize' => 3,
+		],
 		'+mariowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
