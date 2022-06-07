@@ -2150,6 +2150,9 @@ $wgConf->settings += [
 			],
 		],
 	],
+	'wgLDAPDebug' => [
+		'ldapwikiwiki' => 1,
+	],
 
 	// License
 	'wgRightsIcon' => [
