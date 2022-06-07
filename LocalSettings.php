@@ -2115,7 +2115,7 @@ $wgConf->settings += [
 	],
 	'wgLDAPPasswordHash' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ssha',
+			'miraheze' => [],
 		],
 	],
 	'wgLDAPPreferences' => [
