@@ -20,7 +20,7 @@ $wgMajorSiteNoticeID = 69;
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze will be upgrading to the latest version of MediaWiki (1.38) on ___ _ June 2022 from <b><u>__:__ UTC</b></u> to approximately __:__ UTC. During this time, you will not be able to save changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins. </div></td>
+			<td style="font-size:125%"><div data-nosnippet>Miraheze will be upgrading to the latest version of MediaWiki (1.38) on Wednesday, 15 June 2022 from <b><u>20:00 UTC</b></u> to approximately 22:00 UTC. During this time, you will not be able to save changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins.</div></td>
 			</tr></tbody></table>
 		EOF;
 	}
