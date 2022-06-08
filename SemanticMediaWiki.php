@@ -1,7 +1,5 @@
 <?php
 
-$smwgUpgradeKey = 'smw:2022-04-15';
-
 $smwgNamespacesWithSemanticLinks = [
 	NS_MAIN => true,
 	NS_TALK => false,
