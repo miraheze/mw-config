@@ -4503,7 +4503,7 @@ $wgConf->settings += [
 	],
 
 	// Vector
-	'wgVectorSkinMigrationMode'  => [
+	'wgVectorSkinMigrationMode' => [
 		'default' => true, // Remove with 1.39
 	],
 	'wgVectorDefaultSkinVersion' => [
