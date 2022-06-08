@@ -3136,7 +3136,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'When using vector-2022, turn Vector into a responsive skin by applying a view port and disabling the min-width?',
+		'help' => 'Turn Vector-2022 into a responsive skin by applying a view port and disabling the min-width?',
 		'requires' => [],
 	],
 	'wgCitizenThemeDefault' => [
