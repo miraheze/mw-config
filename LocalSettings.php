@@ -1845,6 +1845,12 @@ $wgConf->settings += [
 	'wgImportDumpScriptCommand' => [
 		'default' => 'mwscript importDump.php {wiki} --no-updates --username-prefix={username-prefix} {file}',
 	],
+	'wgImportDumpUsersNotifiedOnAllRequests' => [
+		'default' => [
+			'Reception123',
+			'Universal Omega',
+		],
+	],
 
 	// Imports
 	'wgImportSources' => [
