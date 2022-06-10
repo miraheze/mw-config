@@ -2802,11 +2802,11 @@ $wgConf->settings += [
 	],
 
 	// Maps
-	'egMapsAvailableServices' => [
+	/* 'egMapsAvailableServices' => [
 		'default' => [
 			'leaflet',
 		],
-	],
+	], */
 	'egMapsDefaultService' => [
 		'wmgUseMaps' => 'leaflet',
 	],
@@ -5214,7 +5214,7 @@ if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 		'gettingstarted', // Will be removed (T8979)
 		'headerfooter', // Will be removed (T9357)
 		'magicnumberedheadings', // Will be removed (T8897)
-		'maps', // Broken (https://github.com/ProfessionalWiki/Maps/issues/689#issuecomment-1149187699)
+		// 'maps', // Broken (https://github.com/ProfessionalWiki/Maps/issues/689#issuecomment-1149187699)
 	];
 }
 
