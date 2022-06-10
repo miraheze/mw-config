@@ -22,7 +22,7 @@ $wgDplSettings['queryCacheTime'] = 120;
 // to SidebarBeforeOutput rather than SkinBuildSidebar, which is
 // more appropriate for this extension.
 // Also disable sidebar cache for solarawiki as a solution to T8732
-if ( !$wgConf->get( 'wmgUseGroupsSidebar', $wi->dbname ) && $wgDBname !== 'solarawiki' ) {
+if ( !$wi->isExtensionActive( 'GroupsSidebar' ) && $wgDBname !== 'solarawiki' ) {
 	$wgEnableSidebarCache = true;
 }
 
