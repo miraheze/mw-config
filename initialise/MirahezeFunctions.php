@@ -331,7 +331,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		$tags = array_merge( ( $this->cacheArray['extensions'] ?? [] ), $tags );
+		$tags = array_merge( $this->getActiveExtensions(), $tags );
 		$lang = $this->cacheArray['core']['wgLanguageCode'] ?? 'en';
 
 		$wgConf->siteParamsCallback = static function () use ( $tags, $lang ) {
