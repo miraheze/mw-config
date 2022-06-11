@@ -327,16 +327,20 @@ class MirahezeFunctions {
 			return [];
 		}
 
-		$settings['wgLanguageCode'] = $this->cacheArray['core']['wgLanguageCode'];
+		$settings['wgLanguageCode']['default'] = $this->cacheArray['core']['wgLanguageCode'];
 
 		// Assign states
-		$settings['cwPrivate'] = (bool)$this->cacheArray['states']['private'];
-		$settings['cwClosed'] = (bool)$this->cacheArray['states']['closed'];
-		$settings['cwInactive'] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
-		$settings['cwExperimental'] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
+		$settings['cwPrivate']['default'] = (bool)$this->cacheArray['states']['private'];
+		$settings['cwClosed']['default'] = (bool)$this->cacheArray['states']['closed'];
+		$settings['cwInactive']['default'] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
+		$settings['cwExperimental']['default'] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
 
 		// Assign settings
-		$settings = array_merge( $settings, $this->cacheArray['settings'] ?? [] );
+		if ( isset( $this->cacheArray['settings'] ) ) {
+			foreach ( $this->cacheArray['settings'] as $var => $val ) {
+				$settings[$var]['default'] = $val;
+			}
+		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
 		if ( isset( $this->cacheArray['namespaces'] ) ) {
@@ -395,17 +399,6 @@ class MirahezeFunctions {
 
 					$settings[$promoteVar]['default'][$group] = $perm['autopromote'];
 				}
-			}
-		}
-
-		return $settings;
-	}
-
-	public function getFinalManageWikiSettings(): array {
-		$settings = [];
-		foreach ( $this->getManageWikiConfigCache() as $key => $value ) {
-			if ( !isset( $this->getManageWikiConfigCache()[$key]['default'] ) ) {	
-				$settings[$key]['default'] = $value;
 			}
 		}
 
