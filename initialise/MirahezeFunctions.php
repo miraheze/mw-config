@@ -13,6 +13,8 @@ class MirahezeFunctions {
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
+	private const EXTENSIONS_CONFIG_FILE = __DIR__ . '/ManageWikiExtensions.php';
+
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
 		'betaheze' => 'betaheze.org',
@@ -421,19 +423,14 @@ class MirahezeFunctions {
 	}
 
 	public function getActiveExtensions(): array {
-		global $wgManageWikiExtensions;
-
-		if ( !$wgManageWikiExtensions ) {
-			throw new Exception(
-				'Trying to use MirahezeFunctions::getActiveExtensions() before ManageWikiExtensions.php is loaded'
-			);
-		}
-
 		$this->cacheArray ??= $this->getCacheArray();
 
 		if ( !$this->cacheArray ) {
 			return [];
 		}
+
+		require_once self::EXTENSIONS_CONFIG_FILE;
+		global $wgManageWikiExtensions;
 
 		$allExtensions = array_filter( array_combine(
 			array_column( $wgManageWikiExtensions, 'name' ),
