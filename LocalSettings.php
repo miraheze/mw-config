@@ -53,7 +53,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
 
-if ( count( $wi->getConfig ) < 10 ) {
+if ( count( $wi->getConfig() ) < 10 ) {
 	$wgConf->settings += [
 		// invalidates user sessions - do not change unless it is an emergency.
 		'wgAuthenticationTokenVersion' => [
