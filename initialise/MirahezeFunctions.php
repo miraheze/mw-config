@@ -429,6 +429,9 @@ class MirahezeFunctions {
 			return [];
 		}
 
+		global $wi;
+		$wi ??= new self();
+
 		require_once self::EXTENSIONS_CONFIG_FILE;
 		global $wgManageWikiExtensions;
 
