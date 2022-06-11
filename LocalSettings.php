@@ -5203,7 +5203,7 @@ $wgConf->fullLoadCallback = static function ( $conf ) use ( $wi ) {
 	global $wgDBname;
 
 	$settings = MirahezeFunctions::getCachedConfig( $wgDBname );
-	$overrides = $wi->getFinalManageWikiSettings();
+	$overrides = $wi->getManageWikiConfigCache();
 
 	foreach ( $overrides as $key => $value ) {
 		$settings[$key] = $value;
