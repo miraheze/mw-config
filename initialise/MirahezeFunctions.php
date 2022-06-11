@@ -295,12 +295,11 @@ class MirahezeFunctions {
 	}
 
 	public static function getCachedConfig( string $wiki = 'all' ): array {
-		global $wgDBname;
 		$wanObjectCache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		return $wanObjectCache->getWithSetCallback(
 			$wanObjectCache->makeGlobalKey(
 				'miraheze-config',
-				$wgDBname
+				self::getCurrentDatabase()
 			),
 			WANObjectCache::TTL_HOUR,
 			static function () use ( $wiki ) {
