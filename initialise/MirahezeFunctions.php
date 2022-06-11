@@ -331,7 +331,7 @@ class MirahezeFunctions {
 				};
 			}
 
-			return;
+			return [];
 		}
 
 		$settings['wgLanguageCode'] = $this->cacheArray['core']['wgLanguageCode'];
