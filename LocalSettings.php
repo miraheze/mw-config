@@ -5206,7 +5206,7 @@ $wgConf->fullLoadCallback = static function ( $conf ) use ( $wi ) {
 	$overrides = $wi->getFinalManageWikiSettings();
 
 	foreach ( $overrides as $key => $value ) {
-		if ( isset( $settings[$key] ) ) {
+		if ( isset( $settings[$key] ) && is_array( $settings[$key] ) ) {
 			$settings[$key] = array_merge( $settings[$key], $value );
 		} else {
 			$settings[$key] = $value;
