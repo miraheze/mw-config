@@ -299,7 +299,7 @@ class MirahezeFunctions {
 		return $wanObjectCache->getWithSetCallback(
 			$wanObjectCache->makeGlobalKey(
 				'miraheze-config',
-				self::getCurrentDatabase()
+				$wiki
 			),
 			WANObjectCache::TTL_HOUR,
 			static function () use ( $wiki ) {
@@ -320,6 +320,10 @@ class MirahezeFunctions {
 		if ( !$this->cacheArray ) {
 			return [];
 		}
+
+		$settings['wgDBname'] = $this->dbname;
+		$settings['wgServer'] = $this->server;
+		$settings['wgSitename'] = $this->sitename;
 
 		$settings['wgLanguageCode'] = $this->cacheArray['core']['wgLanguageCode'];
 
