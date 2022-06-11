@@ -53,7 +53,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
 
-if ( count( $wi->getConfig() ) < 10 ) {
+if ( count( $wi->getCachedConfig() ) < 10 ) {
 	$wgConf->settings += [
 		// invalidates user sessions - do not change unless it is an emergency.
 		'wgAuthenticationTokenVersion' => [
@@ -5195,6 +5195,11 @@ if ( count( $wi->getConfig() ) < 10 ) {
 			],
 		],
 	];
+} else {
+	$wgConf->fullLoadCallback = static function () {
+		global $wgConf;
+		$wgConf->settings = MirahezeFunctions::getCachedConfig();
+	};
 }
 
 // Start settings requiring external dependency checks/functions
