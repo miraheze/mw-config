@@ -327,39 +327,39 @@ class MirahezeFunctions {
 			return [];
 		}
 
-		$settings['wgLanguageCode']['default'] = $this->cacheArray['core']['wgLanguageCode'];
+		$settings['wgLanguageCode'][$this->dbname] = $this->cacheArray['core']['wgLanguageCode'];
 
 		// Assign states
-		$settings['cwPrivate']['default'] = (bool)$this->cacheArray['states']['private'];
-		$settings['cwClosed']['default'] = (bool)$this->cacheArray['states']['closed'];
-		$settings['cwInactive']['default'] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
-		$settings['cwExperimental']['default'] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
+		$settings['cwPrivate'][$this->dbname] = (bool)$this->cacheArray['states']['private'];
+		$settings['cwClosed'][$this->dbname] = (bool)$this->cacheArray['states']['closed'];
+		$settings['cwInactive'][$this->dbname] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
+		$settings['cwExperimental'][$this->dbname] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
 
 		// Assign settings
 		if ( isset( $this->cacheArray['settings'] ) ) {
 			foreach ( $this->cacheArray['settings'] as $var => $val ) {
-				$settings[$var]['default'] = $val;
+				$settings[$var][$this->dbname] = $val;
 			}
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
 		if ( isset( $this->cacheArray['namespaces'] ) ) {
 			foreach ( $this->cacheArray['namespaces'] as $name => $ns ) {
-				$settings['wgExtraNamespaces']['default'][(int)$ns['id']] = $name;
-				$settings['wgNamespacesToBeSearchedDefault']['default'][(int)$ns['id']] = $ns['searchable'];
-				$settings['wgNamespacesWithSubpages']['default'][(int)$ns['id']] = $ns['subpages'];
-				$settings['wgNamespaceContentModels']['default'][(int)$ns['id']] = $ns['contentmodel'];
+				$settings['wgExtraNamespaces'][$this->dbname][(int)$ns['id']] = $name;
+				$settings['wgNamespacesToBeSearchedDefault'][$this->dbname][(int)$ns['id']] = $ns['searchable'];
+				$settings['wgNamespacesWithSubpages'][$this->dbname][(int)$ns['id']] = $ns['subpages'];
+				$settings['wgNamespaceContentModels'][$this->dbname][(int)$ns['id']] = $ns['contentmodel'];
 
 				if ( $ns['content'] ) {
-					$settings['wgContentNamespaces']['default'][] = (int)$ns['id'];
+					$settings['wgContentNamespaces'][$this->dbname][] = (int)$ns['id'];
 				}
 
 				if ( $ns['protection'] ) {
-					$settings['wgNamespaceProtection']['default'][(int)$ns['id']] = [ $ns['protection'] ];
+					$settings['wgNamespaceProtection'][$this->dbname][(int)$ns['id']] = [ $ns['protection'] ];
 				}
 
 				foreach ( (array)$ns['aliases'] as $alias ) {
-					$settings['wgNamespaceAliases']['default'][$alias] = (int)$ns['id'];
+					$settings['wgNamespaceAliases'][$this->dbname][$alias] = (int)$ns['id'];
 				}
 			}
 		}
@@ -368,23 +368,23 @@ class MirahezeFunctions {
 		if ( isset( $this->cacheArray['permissions'] ) ) {
 			foreach ( $this->cacheArray['permissions'] as $group => $perm ) {
 				foreach ( (array)$perm['permissions'] as $id => $right ) {
-					$settings['wgGroupPermissions']['default'][$group][$right] = true;
+					$settings['wgGroupPermissions'][$this->dbname][$group][$right] = true;
 				}
 
 				foreach ( (array)$perm['addgroups'] as $name ) {
-					$settings['wgAddGroups']['default'][$group][] = $name;
+					$settings['wgAddGroups'][$this->dbname][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removegroups'] as $name ) {
-					$settings['wgRemoveGroups']['default'][$group][] = $name;
+					$settings['wgRemoveGroups'][$this->dbname][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['addself'] as $name ) {
-					$settings['wgGroupsAddToSelf']['default'][$group][] = $name;
+					$settings['wgGroupsAddToSelf'][$this->dbname][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removeself'] as $name ) {
-					$settings['wgGroupsRemoveFromSelf']['default'][$group][] = $name;
+					$settings['wgGroupsRemoveFromSelf'][$this->dbname][$group][] = $name;
 				}
 
 				if ( $perm['autopromote'] !== null ) {
@@ -397,7 +397,7 @@ class MirahezeFunctions {
 						$promoteVar = 'wgAutopromote';
 					}
 
-					$settings[$promoteVar]['default'][$group] = $perm['autopromote'];
+					$settings[$promoteVar][$this->dbname][$group] = $perm['autopromote'];
 				}
 			}
 		}
