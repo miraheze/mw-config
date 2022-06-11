@@ -52,10 +52,10 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
-$wgConf->fullLoadCallback = static function () {
+$wgConf->fullLoadCallback = static function ( $conf ) {
 	global $wgConf, $wi;
 	if ( count( MirahezeFunctions::getCachedConfig() ) > 10 ) {
-		$wgConf->settings += [
+		$conf->settings = [
 			// invalidates user sessions - do not change unless it is an emergency.
 			'wgAuthenticationTokenVersion' => [
 				'default' => '6',
@@ -5197,7 +5197,7 @@ $wgConf->fullLoadCallback = static function () {
 			],
 		];
 	} else {
-		$wgConf->settings = MirahezeFunctions::getCachedConfig();
+		$conf->settings = MirahezeFunctions::getCachedConfig();
 		$mirahezeFunctions = new MirahezeFunctions();
 		$mirahezeFunctions->readCache();
 	}
