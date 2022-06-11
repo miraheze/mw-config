@@ -5195,7 +5195,7 @@ $wgConf->settings += [
 ];
 
 $wgConf->fullLoadCallback = static function ( $conf ) use ( $wi ) {
-	global $wgDBname;
+	global $wgDBname, $wgConf;
 
 	$settings = array_merge(
 		$wi->getManageWikiConfigCache(),
@@ -5203,7 +5203,7 @@ $wgConf->fullLoadCallback = static function ( $conf ) use ( $wi ) {
 	);
 
 	foreach ( $settings as $key => $value ) {		
-		$conf->settings[$key]['default'] = $value;
+		$wgConf->settings[$key]['default'] = $value;
 	}
 };
 
