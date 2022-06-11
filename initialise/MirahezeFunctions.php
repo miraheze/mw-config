@@ -395,6 +395,15 @@ class MirahezeFunctions {
 		return $settings;
 	}
 
+	public function getFinalManageWikiSettings(): array {
+		$settings = [];
+		foreach ( $this->getManageWikiConfigCache() as $key => $value ) {		
+			$settings[$key]['default'] = $value;
+		}
+
+		return $settings;
+	}
+
 	public function getSettingValue( string $setting ) {
 		$this->cacheArray ??= $this->getCacheArray();
 
