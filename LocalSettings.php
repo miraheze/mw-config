@@ -5201,7 +5201,7 @@ $wgConf->settings += [
 
 	$settings = array_merge(
 		$mirahezeFunctions->getManageWikiConfigCache(),
-		MirahezeFunctions::getCachedConfig( $wgDBname )
+		$wgConf->getAll( $wgDBname ) + $wgConf->getAll( 'default' )
 	);
 
 	foreach ( $settings as $key => $value ) {		
