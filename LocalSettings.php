@@ -5228,7 +5228,6 @@ if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 	];
 }
 
-$wgConf->loadFullData();
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
@@ -5298,5 +5297,6 @@ $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 function extractGlobals() {
 	global $wgConf, $wgDBname;
 
+	$wgConf->loadFullData();
 	$wgConf->extractAllGlobals( $wgDBname );
 }
