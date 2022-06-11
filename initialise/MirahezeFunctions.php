@@ -336,26 +336,26 @@ class MirahezeFunctions {
 		$settings['cwExperimental'] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
 
 		// Assign settings
-		$settings += $this->cacheArray['settings'] ?? [];
+		$settings = array_merge( $settings, $this->cacheArray['settings'] ?? [] );
 
 		// Handle namespaces - additional settings will be done in ManageWiki
 		if ( isset( $this->cacheArray['namespaces'] ) ) {
 			foreach ( $this->cacheArray['namespaces'] as $name => $ns ) {
-				$settings['wgExtraNamespaces'][(int)$ns['id']] = $name;
-				$settings['wgNamespacesToBeSearchedDefault'][(int)$ns['id']] = $ns['searchable'];
-				$settings['wgNamespacesWithSubpages'][(int)$ns['id']] = $ns['subpages'];
-				$settings['wgNamespaceContentModels'][(int)$ns['id']] = $ns['contentmodel'];
+				$settings['wgExtraNamespaces']['default'][(int)$ns['id']] = $name;
+				$settings['wgNamespacesToBeSearchedDefault']['default'][(int)$ns['id']] = $ns['searchable'];
+				$settings['wgNamespacesWithSubpages']['default'][(int)$ns['id']] = $ns['subpages'];
+				$settings['wgNamespaceContentModels']['default'][(int)$ns['id']] = $ns['contentmodel'];
 
 				if ( $ns['content'] ) {
-					$settings['wgContentNamespaces'][] = (int)$ns['id'];
+					$settings['wgContentNamespaces']['default'][] = (int)$ns['id'];
 				}
 
 				if ( $ns['protection'] ) {
-					$settings['wgNamespaceProtection'][(int)$ns['id']] = [ $ns['protection'] ];
+					$settings['wgNamespaceProtection']['default'][(int)$ns['id']] = [ $ns['protection'] ];
 				}
 
 				foreach ( (array)$ns['aliases'] as $alias ) {
-					$settings['wgNamespaceAliases'][$alias] = (int)$ns['id'];
+					$settings['wgNamespaceAliases']['default'][$alias] = (int)$ns['id'];
 				}
 			}
 		}
@@ -364,23 +364,23 @@ class MirahezeFunctions {
 		if ( isset( $this->cacheArray['permissions'] ) ) {
 			foreach ( $this->cacheArray['permissions'] as $group => $perm ) {
 				foreach ( (array)$perm['permissions'] as $id => $right ) {
-					$settings['wgGroupPermissions'][$group][$right] = true;
+					$settings['wgGroupPermissions']['default'][$group][$right] = true;
 				}
 
 				foreach ( (array)$perm['addgroups'] as $name ) {
-					$settings['wgAddGroups'][$group][] = $name;
+					$settings['wgAddGroups']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removegroups'] as $name ) {
-					$settings['wgRemoveGroups'][$group][] = $name;
+					$settings['wgRemoveGroups']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['addself'] as $name ) {
-					$settings['wgGroupsAddToSelf'][$group][] = $name;
+					$settings['wgGroupsAddToSelf']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removeself'] as $name ) {
-					$settings['wgGroupsRemoveFromSelf'][$group][] = $name;
+					$settings['wgGroupsRemoveFromSelf']['default'][$group][] = $name;
 				}
 
 				if ( $perm['autopromote'] !== null ) {
@@ -393,7 +393,7 @@ class MirahezeFunctions {
 						$promoteVar = 'wgAutopromote';
 					}
 
-					$settings[$promoteVar][$group] = $perm['autopromote'];
+					$settings[$promoteVar]['default'][$group] = $perm['autopromote'];
 				}
 			}
 		}
@@ -403,8 +403,10 @@ class MirahezeFunctions {
 
 	public function getFinalManageWikiSettings(): array {
 		$settings = [];
-		foreach ( $this->getManageWikiConfigCache() as $key => $value ) {		
-			$settings[$key]['default'] = $value;
+		foreach ( $this->getManageWikiConfigCache() as $key => $value ) {
+			if ( !isset( $value['default'] ) ) {	
+				$settings[$key]['default'] = $value;
+			}
 		}
 
 		return $settings;
