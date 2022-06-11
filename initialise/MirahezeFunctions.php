@@ -320,17 +320,6 @@ class MirahezeFunctions {
 		$this->cacheArray ??= $this->getCacheArray();
 
 		if ( !$this->cacheArray ) {
-			if ( self::getRealm() !== 'default' ) {
-				$wgConf->siteParamsCallback = static function () {
-					return [
-						'suffix' => null,
-						'lang' => 'en',
-						'tags' => [ self::getRealm() ],
-						'params' => [],
-					];
-				};
-			}
-
 			return [];
 		}
 
@@ -341,33 +330,6 @@ class MirahezeFunctions {
 		$settings['cwClosed'] = (bool)$this->cacheArray['states']['closed'];
 		$settings['cwInactive'] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
 		$settings['cwExperimental'] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
-
-		$tags = [];
-		if ( self::getRealm() !== 'default' ) {
-			$tags[] = self::getRealm();
-		}
-
-		foreach ( $this->cacheArray['states'] as $state => $value ) {
-			if ( $value !== 'exempt' && (bool)$value ) {
-				$tags[] = $state;
-			}
-		}
-
-		$tags = array_merge( preg_filter( '/^/', 'ext-',
-				str_replace( ' ', '', $this->getActiveExtensions() )
-			), $tags
-		);
-
-		$lang = $this->cacheArray['core']['wgLanguageCode'] ?? 'en';
-
-		$wgConf->siteParamsCallback = static function () use ( $tags, $lang ) {
-			return [
-				'suffix' => null,
-				'lang' => $lang,
-				'tags' => $tags,
-				'params' => [],
-			];
-		};
 
 		// Assign settings
 		$settings += $this->cacheArray['settings'] ?? [];
@@ -500,11 +462,54 @@ class MirahezeFunctions {
 	}
 
 	public function loadExtensions() {
+		global $wgConf;
+
+		static $activeExtensions = null;
 		$this->cacheArray ??= $this->getCacheArray();
 
 		if ( !$this->cacheArray ) {
+			if ( self::getRealm() !== 'default' ) {
+				$wgConf->siteParamsCallback = static function () {
+					return [
+						'suffix' => null,
+						'lang' => 'en',
+						'tags' => [ self::getRealm() ],
+						'params' => [],
+					];
+				};
+			}
+
 			return;
 		}
+
+		$activeExtensions ??= $this->getActiveExtensions();
+
+		$tags = [];
+		if ( self::getRealm() !== 'default' ) {
+			$tags[] = self::getRealm();
+		}
+
+		foreach ( $this->cacheArray['states'] as $state => $value ) {
+			if ( $value !== 'exempt' && (bool)$value ) {
+				$tags[] = $state;
+			}
+		}
+
+		$tags = array_merge( preg_filter( '/^/', 'ext-',
+				str_replace( ' ', '', $activeExtensions )
+			), $tags
+		);
+
+		$lang = $this->cacheArray['core']['wgLanguageCode'] ?? 'en';
+
+		$wgConf->siteParamsCallback = static function () use ( $tags, $lang ) {
+			return [
+				'suffix' => null,
+				'lang' => $lang,
+				'tags' => $tags,
+				'params' => [],
+			];
+		};
 
 		if ( !file_exists( self::CACHE_DIRECTORY . '/extension-list.json' ) ) {
 			$queue = array_fill_keys( array_merge(
@@ -532,14 +537,12 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-		if ( isset( $this->cacheArray['extensions'] ) ) {
-			foreach ( $this->getActiveExtensions() as $name ) {
-				$path = $list[ $name ] ?? false;
+		foreach ( $activeExtensions as $name ) {
+			$path = $list[ $name ] ?? false;
 
-				$pathInfo = pathinfo( $path )['extension'] ?? false;
-				if ( $path && $pathInfo === 'json' ) {
-					ExtensionRegistry::getInstance()->queue( $path );
-				}
+			$pathInfo = pathinfo( $path )['extension'] ?? false;
+			if ( $path && $pathInfo === 'json' ) {
+				ExtensionRegistry::getInstance()->queue( $path );
 			}
 		}
 	}
