@@ -13,24 +13,6 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	abstract public function getSchema(): array;
 
-	public function mockConfig(): stdClass {
-		$mock = $this->getMockBuilder( stdClass::class )
-			->addMethods( [ 'get' ] )
-			->getMock();
-
-		$mock
-			->method( 'get' )
-			->willReturnCallback( static function ( $settingName, $wiki, $suffix = null, $params = [],
-				$wikiTags = [] ) {
-					switch ( $settingName ) {
-						case 'wgFileExtensions':
-							return [];
-					}
-			} );
-
-		return $mock;
-	}
-
 	public function mockMirahezeFunctions(): stdClass {
 		$methods = [
 			'isAllOfExtensionsActive',
@@ -50,6 +32,12 @@ abstract class ManageWikiTestCase extends TestCase {
 				->method( $m )
 				->willReturn( true );
 		}
+
+		$this->getMockBuilder( stdClass::class )
+			->addMethods( $methods )
+			->getMock()
+			->method( 'getSettingValue' )
+			->willReturn( [] );
 
 		return $mock;
 	}
