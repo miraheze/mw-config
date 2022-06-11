@@ -309,7 +309,7 @@ class MirahezeFunctions {
 					return $wgConf->settings;
 				}
 
-				return $wgConf->getAll( $wiki );
+				return $wgConf->getAll( $wiki ) + $wgConf->getAll( 'default' );
 			}
 		);
 	}
