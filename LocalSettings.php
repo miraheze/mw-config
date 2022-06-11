@@ -5199,10 +5199,9 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 
 	$mirahezeFunctions = new MirahezeFunctions();
 
-	$overrides = $mirahezeFunctions->getManageWikiConfigCache();
-	$settings = MirahezeFunctions::getCachedConfig( $wgDBname );
+	$allSettings = array_merge( MirahezeFunctions::getCachedConfig( $wgDBname ), $mirahezeFunctions->getManageWikiConfigCache() );
 
-	foreach ( $overrides as $key => $value ) {		
+	foreach ( $allSettings as $key => $value ) {		
 		$settings[$key]['default'] = $value;
 	}
 
