@@ -5194,19 +5194,6 @@ $wgConf->settings += [
 	],
 ];
 
-$wgConf->fullLoadCallback = static function ( $conf ) use ( $wi ) {
-	global $wgDBname, $wgConf;
-
-	$settings = array_merge(
-		$wi->getManageWikiConfigCache(),
-		$wgConf->getAll( $wgDBname ) + $wgConf->getAll( 'default' )
-	);
-
-	foreach ( $settings as $key => $value ) {		
-		$wgConf->settings[$key]['default'] = $value;
-	}
-};
-
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
@@ -5226,10 +5213,6 @@ if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 		'maps', // Broken (https://github.com/ProfessionalWiki/Maps/issues/689#issuecomment-1149187699)
 	];
 }
-
-/* foreach ( $wi->getManageWikiConfigCache() as $key => $value ) {		
-	$wgConf->settings[$key]['default'] = $value;
-} */
 
 $wgConf->extractAllGlobals( $wgDBname );
 $wi->loadExtensions();
