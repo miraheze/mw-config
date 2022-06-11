@@ -5195,10 +5195,11 @@ $wgConf->settings += [
 ];
 
 $wgConf->fullLoadCallback = static function ( $conf ) {
+	global $wgConf;
 	$mirahezeFunctions = new MirahezeFunctions();
 
 	$overrides = $mirahezeFunctions->getManageWikiConfigCache();
-	$settings = $conf->settings;
+	$settings = $wgConf->settings;
 
 	foreach ( $overrides as $key => $value ) {
 		if ( substr( $key, 0, 1 ) == '-' ) {
