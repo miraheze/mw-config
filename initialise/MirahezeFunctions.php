@@ -301,7 +301,7 @@ class MirahezeFunctions {
 				'miraheze-config',
 				$wiki
 			),
-			WANObjectCache::TTL_MINUTE,
+			WANObjectCache::TTL_SECOND,
 			static function () use ( $wiki ) {
 				global $wgConf;
 
