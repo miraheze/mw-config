@@ -406,9 +406,9 @@ switch ( $wmgWikiLicense ) {
 }
 
 $wgFooterIcons['copyright']['copyright'] = [
-	'url' => $wgConf->get( 'wgRightsUrl', $wi->dbname ),
-	'src' => $wgConf->get( 'wgRightsIcon', $wi->dbname ),
-	'alt' => $wgConf->get( 'wgRightsText', $wi->dbname ),
+	'url' => $wi->getSettingValue( 'wgRightsUrl' ),
+	'src' => $wi->getSettingValue( 'wgRightsIcon' ),
+	'alt' => $wi->getSettingValue( 'wgRightsText' ),
 ];
 
 $wgMaxShellMemory = 215040; // 210MB
