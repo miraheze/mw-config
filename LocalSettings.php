@@ -5203,11 +5203,11 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 	foreach ( $overrides as $key => $value ) {
 		if ( substr( $key, 0, 1 ) == '-' ) {
 			// Settings prefixed with - are completely overriden
-			$settings['default'][substr( $key, 1 )] = $value;
-		} elseif ( isset( $settings['default'][$key] ) ) {
-			$settings['default'][$key] = array_merge( $settings['default'][$key], $value );
+			$settings[substr( $key, 1 )]['default'] = $value;
+		} elseif ( isset( $settings[$key]['default'] ) ) {
+			$settings[$key]['default'] = array_merge( $settings[$key]['default'], $value );
 		} else {
-			$settings['default'][$key] = $value;
+			$settings[$key]['default'] = $value;
 		}
 	}
 
