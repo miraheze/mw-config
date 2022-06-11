@@ -5194,22 +5194,18 @@ $wgConf->settings += [
 	],
 ];
 
-/* $wgConf->fullLoadCallback = static function ( $conf ) {
+$wgConf->fullLoadCallback = static function ( $conf ) use ( $wi ) {
 	global $wgDBname;
 
-	$mirahezeFunctions = new MirahezeFunctions();
-
 	$settings = array_merge(
-		$mirahezeFunctions->getManageWikiConfigCache(),
-		$wgConf->getAll( $wgDBname ) + $wgConf->getAll( 'default' )
+		$wi->getManageWikiConfigCache(),
+		MirahezeFunctions::getCachedConfig( $wgDBname )
 	);
 
 	foreach ( $settings as $key => $value ) {		
-		$wgConf->settings[$key] = [ 'default' => $value ];
+		$conf->settings[$key]['default'] = $value;
 	}
-
-	$wgConf->extractAllGlobals( $wgDBname );
-}; */
+};
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
@@ -5231,11 +5227,11 @@ if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 	];
 }
 
-foreach ( $wi->getManageWikiConfigCache() as $key => $value ) {		
+/* foreach ( $wi->getManageWikiConfigCache() as $key => $value ) {		
 	$wgConf->settings[$key]['default'] = $value;
 }
 
-$wgConf->extractAllGlobals( $wgDBname );
+$wgConf->extractAllGlobals( $wgDBname ); */
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
