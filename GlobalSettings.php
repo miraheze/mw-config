@@ -246,7 +246,7 @@ if ( $wmgContactPageRecipientUser ) {
 
 // $wgUploadWizardConfig['flickrApiKey']
 if ( $wmgUploadWizardFlickrApiKey ?? false ) {
-	$wgConf->settings['wgUploadWizardConfig']['using-uploadwizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
+	$wgConf->settings['wgUploadWizardConfig']['ext-UploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
 }
 
 // $wgFooterIcons
