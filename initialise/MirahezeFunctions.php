@@ -301,7 +301,7 @@ class MirahezeFunctions {
 				'miraheze-config',
 				$wiki
 			),
-			WANObjectCache::TTL_HOUR,
+			WANObjectCache::TTL_MINUTE,
 			static function () use ( $wiki ) {
 				global $wgConf;
 
@@ -320,10 +320,6 @@ class MirahezeFunctions {
 		if ( !$this->cacheArray ) {
 			return [];
 		}
-
-		$settings['wgDBname'] = $this->dbname;
-		$settings['wgServer'] = $this->server;
-		$settings['wgSitename'] = $this->sitename;
 
 		$settings['wgLanguageCode'] = $this->cacheArray['core']['wgLanguageCode'];
 
