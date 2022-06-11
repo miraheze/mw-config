@@ -5200,15 +5200,8 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 	$overrides = $mirahezeFunctions->getManageWikiConfigCache();
 	$settings = MirahezeFunctions::getCachedConfig();
 
-	foreach ( $overrides as $key => $value ) {
-		if ( substr( $key, 0, 1 ) == '-' ) {
-			// Settings prefixed with - are completely overriden
-			$settings[substr( $key, 1 )]['default'] = $value;
-		} elseif ( isset( $settings[$key]['default'] ) ) {
-			$settings[$key]['default'] = array_merge( $settings[$key]['default'], $value );
-		} else {
-			$settings[$key]['default'] = $value;
-		}
+	foreach ( $overrides as $key => $value ) {		
+		$settings[$key]['default'] = $value;
 	}
 
 	$conf->settings = $settings;
