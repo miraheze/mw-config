@@ -5229,9 +5229,9 @@ if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 
 /* foreach ( $wi->getManageWikiConfigCache() as $key => $value ) {		
 	$wgConf->settings[$key]['default'] = $value;
-}
+} */
 
-$wgConf->extractAllGlobals( $wgDBname ); */
+$wgConf->extractAllGlobals( $wgDBname );
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
