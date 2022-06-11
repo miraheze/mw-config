@@ -5210,7 +5210,7 @@ $wgConf->settings += [
 		$settings[$key]['default'] = $value;
 	}
 
-	$wgConf->settings = $settings;
+	// $wgConf->settings = $settings;
 // };
 
 // Start settings requiring external dependency checks/functions
