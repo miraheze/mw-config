@@ -5200,8 +5200,8 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 	$mirahezeFunctions = new MirahezeFunctions();
 
 	$settings = array_merge(
-		MirahezeFunctions::getCachedConfig( $wgDBname ),
-		$mirahezeFunctions->getManageWikiConfigCache()
+		$mirahezeFunctions->getManageWikiConfigCache(),
+		MirahezeFunctions::getCachedConfig( $wgDBname )
 	);
 
 	foreach ( $settings as $key => $value ) {		
