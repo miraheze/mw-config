@@ -5205,10 +5205,9 @@ $wgConf->settings += [
 	);
 
 	foreach ( $settings as $key => $value ) {		
-		$settings[$key] = [ 'default' => $value ];
+		$wgConf->settings[$key] = [ 'default' => $value ];
 	}
 
-	$wgConf->settings = $settings;
 	$wgConf->extractAllGlobals( $wgDBname );
 //};
 
