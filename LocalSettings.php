@@ -5231,14 +5231,7 @@ if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 	];
 }
 
-$mirahezeFunctions = new MirahezeFunctions();
-
-$settings = array_merge(
-	$mirahezeFunctions->getManageWikiConfigCache(),
-	$wgConf->getAll( $wgDBname ) + $wgConf->getAll( 'default' )
-);
-
-foreach ( $settings as $key => $value ) {		
+foreach ( $wi->getManageWikiConfigCache() as $key => $value ) {		
 	$wgConf->settings[$key]['default'] = $value;
 }
 
