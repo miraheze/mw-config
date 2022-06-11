@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../ManageWikiExtensions.php';
+
 class MirahezeFunctions {
 	private $cacheArray;
 
@@ -12,8 +14,6 @@ class MirahezeFunctions {
 	public $disabledExtensions = [];
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
-
-	private const EXTENSIONS_CONFIG_FILE = __DIR__ . '/../ManageWikiExtensions.php';
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
@@ -429,10 +429,6 @@ class MirahezeFunctions {
 			return [];
 		}
 
-		global $wi;
-		$wi ??= new self();
-
-		require_once self::EXTENSIONS_CONFIG_FILE;
 		global $wgManageWikiExtensions;
 
 		$allExtensions = array_filter( array_combine(
