@@ -21,8 +21,8 @@ If you would like to add configuration options or extensions/skins to ManageWiki
   * Follow the current examples on ManageWikiExtensions.php to add new extensions to that file.
   * Update extension-list. Only needed if the extension or skin has an i18n directory. Add the path to the entry point file (extension/skin.json or the PHP entry point). Order alphabetically.
   * Add any necessary configuration variables to LocalSettings.php, LocalWiki.php, ManageWikiSettings.php, or ManageWikiNamespaces.php. Add to whichever is most appropriate.
-  * If an extension requires configuration to be set only when the extension is enabled on the wiki, add the `using-<extension_name>` tag to LocalSettings.php, as you would wiki databases or `default`.
-    * Note: the `<extension_name>` is the value from the `'name'` field of ManageWikiExtensions.php, without any capitalisation or whitespaces
+  * If an extension requires configuration to be set only when the extension is enabled on the wiki, add the `ext-<ExtensionName>` tag to LocalSettings.php, as you would wiki databases or `default`.
+   * Note: the `<ExtensionName>` is the value from the `'name'` field of ManageWikiExtensions.php, without any whitespaces
 * Make sure to look at the comment at the top of ManageWikiSettings.php, ManageWikiNamespaces.php, or ManageWikiExtensions.php for additional documentation.
 
 We use tabs with indent size 8 - if you use the GitHub editor this styling will be automatically applied.
@@ -33,7 +33,7 @@ Please note that wiki identifiers are formed by the name of the wiki followed by
 
 * LocalSettings.php wiki override values should be alphabetically sorted based on the wiki name. There are only two exceptions to this:
   * The `'default'` value, which should be always above all others.
-  * The `using-<extension_name>` values should have their own alphabetical order below all wiki database overrides.
+  * The `ext-<ExtensionName>` values should have their own alphabetical order below all wiki database overrides.
 
 # Questions?
 
