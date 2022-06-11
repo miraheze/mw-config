@@ -5195,17 +5195,18 @@ $wgConf->settings += [
 ];
 
 $wgConf->fullLoadCallback = static function ( $conf ) {
-	global $wgDBname;
+	global $wgConf;
 
 	$mirahezeFunctions = new MirahezeFunctions();
 
-	$allSettings = array_merge( MirahezeFunctions::getCachedConfig( $wgDBname ), $mirahezeFunctions->getManageWikiConfigCache() );
+	$settings = $wgConf->settings;
+	$overrides = $mirahezeFunctions->getManageWikiConfigCache();
 
-	foreach ( $allSettings as $key => $value ) {		
+	foreach ( $overrides as $key => $value ) {		
 		$settings[$key]['default'] = $value;
 	}
 
-	$conf->settings = $settings;
+	$wgConf->settings = $settings;
 };
 
 // Start settings requiring external dependency checks/functions
