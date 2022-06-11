@@ -404,10 +404,8 @@ class MirahezeFunctions {
 	public function getFinalManageWikiSettings(): array {
 		$settings = [];
 		foreach ( $this->getManageWikiConfigCache() as $key => $value ) {
-			if ( !isset( $value['default'] ) ) {	
+			if ( !isset( $this->getManageWikiConfigCache()[$key]['default'] ) ) {	
 				$settings[$key]['default'] = $value;
-			} else {
-				$settings[$key] = $value;
 			}
 		}
 
