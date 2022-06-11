@@ -13,7 +13,7 @@ class MirahezeFunctions {
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
-	private const EXTENSIONS_CONFIG_FILE = __DIR__ . '/ManageWikiExtensions.php';
+	private const EXTENSIONS_CONFIG_FILE = __DIR__ . '/../ManageWikiExtensions.php';
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
