@@ -5195,20 +5195,19 @@ $wgConf->settings += [
 ];
 
 $wgConf->fullLoadCallback = static function ( $conf ) {
-	global $wgConf;
 	$mirahezeFunctions = new MirahezeFunctions();
 
 	$overrides = $mirahezeFunctions->getManageWikiConfigCache();
-	$settings = $wgConf->settings;
+	$settings = MirahezeFunctions::getCachedConfig();
 
 	foreach ( $overrides as $key => $value ) {
 		if ( substr( $key, 0, 1 ) == '-' ) {
 			// Settings prefixed with - are completely overriden
-			$settings[substr( $key, 1 )] = $value;
-		} elseif ( isset( $settings[$key] ) ) {
-			$settings[$key] = array_merge( $settings[$key], $value );
+			$settings['default'][substr( $key, 1 )] = $value;
+		} elseif ( isset( $settings['default'][$key] ) ) {
+			$settings['default'][$key] = array_merge( $settings['default'][$key], $value );
 		} else {
-			$settings[$key] = $value;
+			$settings['default'][$key] = $value;
 		}
 	}
 
