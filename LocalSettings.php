@@ -5204,6 +5204,8 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 		$mirahezeFunctions->getManageWikiConfigCache()
 	);
 
+	extract( $settings );
+
 	foreach ( $settings as $key => $value ) {		
 		$settings[$key]['default'] = $value;
 	}
