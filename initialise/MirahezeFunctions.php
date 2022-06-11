@@ -406,6 +406,8 @@ class MirahezeFunctions {
 		foreach ( $this->getManageWikiConfigCache() as $key => $value ) {
 			if ( !isset( $value['default'] ) ) {	
 				$settings[$key]['default'] = $value;
+			} else {
+				$settings[$key] = $value;
 			}
 		}
 
