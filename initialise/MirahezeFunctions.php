@@ -315,8 +315,6 @@ class MirahezeFunctions {
 	}
 
 	public function getManageWikiConfigCache(): array {
-		global $wgConf;
-
 		$this->cacheArray ??= $this->getCacheArray();
 
 		if ( !$this->cacheArray ) {
