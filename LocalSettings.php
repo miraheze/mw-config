@@ -5195,8 +5195,6 @@ if ( count( $wi->getConfig() ) < 10 ) {
 			],
 		],
 	];
-} else {
-	$wgConf->settings = $wi->getConfig();
 }
 
 // Start settings requiring external dependency checks/functions
