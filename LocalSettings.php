@@ -5207,7 +5207,7 @@ $wgConf->settings += [
 	extract( $settings );
 
 	foreach ( $settings as $key => $value ) {		
-		$settings[$key]['default'] = $value;
+		$settings[$key] = [ 'default' => $value ];
 	}
 
 	// $wgConf->settings = $settings;
