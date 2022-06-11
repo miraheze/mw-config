@@ -294,7 +294,7 @@ class MirahezeFunctions {
 		), true );
 	}
 
-	public function getConfig( string $wiki = 'all' ): array {
+	public static function getCachedConfig( string $wiki = 'all' ): array {
 		$wanObjectCache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		return $wanObjectCache->getWithSetCallback(
 			$wanObjectCache->makeGlobalKey(
