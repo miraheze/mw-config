@@ -331,13 +331,11 @@ class MirahezeFunctions {
 			}
 		}
 
-		$activeExtensionTags = preg_filter( '/^/', 'using-',
-			array_map(
-				'strtolower', str_replace( ' ', '', $this->getActiveExtensions() )
-			)
+		$tags = array_merge( preg_filter( '/^/', 'ext-',
+				str_replace( ' ', '', $this->getActiveExtensions() )
+			), $tags
 		);
 
-		$tags = array_merge( $activeExtensionTags, $tags );
 		$lang = $this->cacheArray['core']['wgLanguageCode'] ?? 'en';
 
 		$wgConf->siteParamsCallback = static function () use ( $tags, $lang ) {
@@ -418,13 +416,13 @@ class MirahezeFunctions {
 	}
 
 	public function getActiveExtensions(): array {
+		global $wgManageWikiExtensions;
+
 		$this->cacheArray ??= $this->getCacheArray();
 
 		if ( !$this->cacheArray ) {
 			return [];
 		}
-
-		global $wgManageWikiExtensions;
 
 		$allExtensions = array_filter( array_combine(
 			array_column( $wgManageWikiExtensions, 'name' ),
@@ -437,7 +435,10 @@ class MirahezeFunctions {
 
 		// To-Do: Deprecate 'var', and make database/cache use extension names
 		/* return array_intersect( array_keys(
-			array_intersect( array_flip( $allExtensions ), $this->cacheArray['extensions'] )
+			array_intersect(
+				array_flip( $allExtensions ),
+				$this->cacheArray['extensions'] ?? []
+			)
 		), $enabledExtensions ); */
 
 		return array_intersect(
@@ -445,7 +446,7 @@ class MirahezeFunctions {
 				array_flip( array_filter( array_flip(
 					array_column( $wgManageWikiExtensions, 'var', 'name' )
 				) ) ),
-				$this->cacheArray['extensions']
+				$this->cacheArray['extensions'] ?? []
 			) ),
 			$enabledExtensions
 		);
