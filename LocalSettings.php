@@ -5214,7 +5214,6 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 	$conf->settings = $settings;
 };
 
-
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
