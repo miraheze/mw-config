@@ -5194,8 +5194,8 @@ $wgConf->settings += [
 	],
 ];
 
-// $wgConf->fullLoadCallback = static function ( $conf ) {
-	// global $wgDBname;
+$wgConf->fullLoadCallback = static function ( $conf ) {
+	global $wgDBname;
 
 	$mirahezeFunctions = new MirahezeFunctions();
 
@@ -5204,14 +5204,12 @@ $wgConf->settings += [
 		$mirahezeFunctions->getManageWikiConfigCache()
 	);
 
-	extract( $settings );
-
 	foreach ( $settings as $key => $value ) {		
 		$settings[$key] = [ 'default' => $value ];
 	}
 
-	// $wgConf->settings = $settings;
-// };
+	$conf->settings = $settings;
+};
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
