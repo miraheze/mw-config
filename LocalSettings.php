@@ -5209,6 +5209,7 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 	}
 
 	$conf->settings = $settings;
+	$conf->extractAllGlobals( $wgDBname );
 };
 
 // Start settings requiring external dependency checks/functions
