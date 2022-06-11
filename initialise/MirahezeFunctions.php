@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class MirahezeFunctions {
 	private $cacheArray;
 
@@ -290,6 +292,26 @@ class MirahezeFunctions {
 		return (array)json_decode( file_get_contents(
 			self::CACHE_DIRECTORY . '/' . $this->dbname . '.json'
 		), true );
+	}
+
+	public function getConfig( string $wiki = 'all' ): array {
+		$wanObjectCache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		return $wanObjectCache->getWithSetCallback(
+			$wanObjectCache->makeGlobalKey(
+				'miraheze-config',
+				$wiki
+			),
+			WANObjectCache::TTL_HOUR,
+			static function () use ( $wiki ) {
+				global $wgConf;
+
+				if ( $wiki === 'all' ) {
+					return $wgConf->settings;
+				}
+
+				return $wgConf->getAll( $wiki );
+			}
+		);
 	}
 
 	public function readCache() {
