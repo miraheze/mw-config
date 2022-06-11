@@ -320,26 +320,27 @@ class MirahezeFunctions {
 		$wgConf->settings['cwInactive'][$this->dbname] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
 		$wgConf->settings['cwExperimental'][$this->dbname] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
 
-		$wgConf->siteParamsCallback = function () {
-			$tags = [];
-			if ( self::getRealm() !== 'default' ) {
-				$tags[] = self::getRealm();
+		$tags = [];
+		if ( self::getRealm() !== 'default' ) {
+			$tags[] = self::getRealm();
+		}
+
+		foreach ( $this->cacheArray['states'] as $state => $value ) {
+			if ( $value !== 'exempt' && (bool)$value ) {
+				$tags[] = $state;
 			}
+		}
 
-			foreach ( $this->cacheArray['states'] as $state => $value ) {
-				if ( $value !== 'exempt' && (bool)$value ) {
-					$tags[] = $state;
-				}
-			}
+		$tags = array_merge( preg_filter( '/^/', 'ext-',
+				str_replace( ' ', '', $this->getActiveExtensions() )
+			), $tags
+		);
+		$lang = $this->cacheArray['core']['wgLanguageCode'] ?? 'en';
 
-			$tags = array_merge( preg_filter( '/^/', 'ext-',
-					str_replace( ' ', '', $this->getActiveExtensions() )
-				), $tags
-			);
-
+		$wgConf->siteParamsCallback = static function () use ( $tags, $lang ) {
 			return [
 				'suffix' => null,
-				'lang' => $this->cacheArray['core']['wgLanguageCode'] ?? 'en',
+				'lang' => $lang,
 				'tags' => $tags,
 				'params' => [],
 			];
@@ -411,6 +412,12 @@ class MirahezeFunctions {
 				}
 			}
 		}
+	}
+
+	public function getSettingValue( string $setting ) {
+		$this->cacheArray ??= $this->getCacheArray();
+
+		return $this->cacheArray['settings'][$setting] ?? null;
 	}
 
 	public function getActiveExtensions(): array {
