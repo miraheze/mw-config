@@ -61,7 +61,7 @@ $wgConf->settings += [
 
 	// 3D
 	'wg3dProcessor' => [
-		'using-3d' => [
+		'ext-3d' => [
 			'/usr/bin/xvfb-run',
 			'-a',
 			'-s',
@@ -120,7 +120,7 @@ $wgConf->settings += [
 
 	// AddThis
 	'wgAddThisHeader' => [
-		'using-addthis' => false,
+		'ext-AddThis' => false,
 	],
 
 	// Anti-spam
@@ -331,7 +331,7 @@ $wgConf->settings += [
 			'badlogin' => true,
 			'badloginperuser' => true
 		],
-		'+using-wikiforum' => [
+		'+ext-WikiForum' => [
 			'wikiforum' => true,
 		],
 	],
@@ -393,7 +393,7 @@ $wgConf->settings += [
 		'academiadesusarduwiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
 		'supermanwiki' => 'numeric',
-		'using-categorysortheaders' => CustomHeaderCollation::class,
+		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
@@ -1125,7 +1125,7 @@ $wgConf->settings += [
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
-		'using-description2' => true,
+		'ext-Description2' => true,
 	],
 
 	// DismissableSiteNotice
@@ -1230,7 +1230,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// ExternalData
+	// External Data
 	'wgExternalDataSources' => [
 		/**
 		 * @note Databases should NEVER be configured here!
@@ -1247,7 +1247,7 @@ $wgConf->settings += [
 		 *
 		 * @note SOAP should NEVER be configured here, unless you understand it and can confirm the security of it is acceptable.
 		 */
-		'using-externaldata' => [
+		'ext-ExternalData' => [
 			'*' => [
 				'min cache seconds' => 3600,
 				'always use stale cache' => false,
@@ -1829,7 +1829,7 @@ $wgConf->settings += [
 
 	// InterwikiSorting
 	'wgInterwikiSortingSort' => [
-		'using-interwikisorting' => 'code',
+		'ext-InterwikiSorting' => 'code',
 	],
 
 	// ImportDump
@@ -1972,7 +1972,7 @@ $wgConf->settings += [
 
 	// JavascriptSlideshow
 	'wgHtml5' => [
-		'using-javascriptslideshow' => true,
+		'ext-JavascriptSlideshow' => true,
 	],
 
 	// JsonConfig
@@ -2280,7 +2280,7 @@ $wgConf->settings += [
 
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
-		'using-linter' => [
+		'ext-Linter' => [
 			/** localhost */
 			'::1' => true,
 			/** mw101 */
@@ -2670,7 +2670,7 @@ $wgConf->settings += [
 				'edit-create' => true,
 			],
 		],
-		'+using-flow' => [
+		'+ext-Flow' => [
 			'oversight' => [
 				'flow-suppress' => true,
 			],
@@ -2807,10 +2807,10 @@ $wgConf->settings += [
 		],
 	],
 	'egMapsDefaultService' => [
-		'using-maps' => 'leaflet',
+		'ext-Maps' => 'leaflet',
 	],
 	'egMapsDisableSmwIntegration' => [
-		'using-maps' => true,
+		'ext-Maps' => true,
 	],
 
 	// MassMessage
@@ -2977,7 +2977,7 @@ $wgConf->settings += [
 	],
 	'wgRestrictDisplayTitle' => [
 		'default' => true,
-		'using-notitle' => false,
+		'ext-NoTitle' => false,
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
@@ -3026,7 +3026,7 @@ $wgConf->settings += [
 		'+polytopewiki' => [
 			MEDIATYPE_TEXT,
 		],
-		'+using-3d' => [
+		'+ext-3d' => [
 			'application/sla',
 		],
 	],
@@ -3066,13 +3066,13 @@ $wgConf->settings += [
 		'default' => '',
 	],
 	'wgMFMobileHeader' => [
-		'using-mobilefrontend' => 'X-Subdomain',
+		'ext-MobileFrontend' => 'X-Subdomain',
 	],
 	'wgMFNoindexPages' => [
-		'using-mobilefrontend' => false,
+		'ext-MobileFrontend' => false,
 	],
 	'wgMFStopRedirectCookieHost' => [
-		'using-mobilefrontend' => $wi->hostname,
+		'ext-MobileFrontend' => $wi->hostname,
 	],
 	'wgMFUseDesktopSpecialHistoryPage' => [
 		'default' => [
@@ -3253,14 +3253,14 @@ $wgConf->settings += [
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
 		'vgportdbwiki' => true,
-		'using-multiboilerplate' => false,
+		'ext-MultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOptions' => [
-		'using-multiboilerplate' => false,
+		'ext-MultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOverwrite' => [
 		'vgportdbwiki' => true,
-		'using-multiboilerplate' => false,
+		'ext-MultiBoilerplate' => false,
 	],
 
 	// NamespacePreload
@@ -3349,7 +3349,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgPageImagesDenylist' => [
-		'using-pageimages' => [
+		'ext-PageImages' => [
 			[
 				'type' => 'db',
 				'page' => 'MediaWiki:Pageimages-denylist',
@@ -3398,7 +3398,7 @@ $wgConf->settings += [
 		'default' => [
 			'useSelser' => true,
 		],
-		'+using-linter' => [
+		'+ext-Linter' => [
 			'linting' => true,
 		],
 	],
@@ -3430,7 +3430,7 @@ $wgConf->settings += [
 				'skip-moderation' => true,
 			],
 		],
-		'+using-mediawikichat' => [
+		'+ext-MediaWikiChat' => [
 			'blockedfromchat' => [
 				'chat' => true,
 			],
@@ -3629,7 +3629,7 @@ $wgConf->settings += [
 			'visualeditor-newwikitext' => 1,
 			'visualeditor-tabs' => 'multi-tab',
 		],
-		'+using-cleanchanges' => [
+		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
 		],
 	],
@@ -3643,7 +3643,7 @@ $wgConf->settings += [
 
 	// ProofreadPage
 	'wgProofreadPageNamespaceIds' => [
-		'using-proofreadpage' => [
+		'ext-ProofreadPage' => [
 			'index' => 252,
 			'page' => 250,
 		],
@@ -3713,7 +3713,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
-		'using-relatedarticles' => false,
+		'ext-RelatedArticles' => false,
 	],
 	'wgRelatedArticlesCardLimit' => [
 		'default' => 3,
@@ -3858,7 +3858,7 @@ $wgConf->settings += [
 		'+ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
-		'+using-authorprotect' => [
+		'+ext-AuthorProtect' => [
 			'author',
 		],
 	],
@@ -3949,7 +3949,7 @@ $wgConf->settings += [
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
-		'+using-socialprofile' => [
+		'+ext-SocialProfile' => [
 			'updatepoints',
 		],
 	],
@@ -4019,7 +4019,7 @@ $wgConf->settings += [
 		'default' => 'Y-m-d H:i:s'
 	],
 	'wgRSSUrlWhitelist' => [
-		'using-rss' => [
+		'ext-RSSfeed' => [
 			'*',
 		],
 	],
@@ -4417,12 +4417,12 @@ $wgConf->settings += [
 
 	// UploadWizard
 	'wgUploadWizardConfig' => [
-		'using-uploadwizard' => [
+		'ext-UploadWizard' => [
 			'campaignExpensiveStatsEnabled' => false,
 		],
 	],
 	'wmgUploadWizardFlickrApiKey' => [
-		'using-uploadwizard' => 'aeefff139445d825d4460796616f9349',
+		'ext-UploadWizard' => 'aeefff139445d825d4460796616f9349',
 	],
 
 	// Uploads
@@ -4456,8 +4456,8 @@ $wgConf->settings += [
 		'default' => 'personal',
 	],
 	'wgULSGeoService' => [
-		'using-translate' => false,
-		'using-universallanguageselector' => false,
+		'ext-Translate' => false,
+		'ext-UniversalLanguageSelector' => false,
 	],
 	'wgULSIMEEnabled' => [
 		'default' => true,
@@ -4491,7 +4491,7 @@ $wgConf->settings += [
 
 	// UserPageEditProtection
 	'wgOnlyUserEditUserPage' => [
-		'using-userpageeditprotection' => true,
+		'ext-UserPageEditProtection' => true,
 	],
 
 	// Varnish
@@ -4537,7 +4537,7 @@ $wgConf->settings += [
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
 		'default' => false,
-		'using-visualeditor' => true,
+		'ext-VisualEditor' => true,
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
@@ -4933,7 +4933,7 @@ $wgConf->settings += [
 	],
 	// WikiLove
 	'wgWikiLoveGlobal' => [
-		'using-wikilove' => true,
+		'ext-WikiLove' => true,
 	],
 
 	// WikiSEO configs
