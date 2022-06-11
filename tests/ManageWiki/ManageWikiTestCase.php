@@ -15,29 +15,24 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	public function mockMirahezeFunctions(): stdClass {
 		$methods = [
-			'isAllOfExtensionsActive',
-			'isAnyOfExtensionsActive',
-			'isExtensionActive',
+			'getSettingValue' => [],
+			'isAllOfExtensionsActive' => true,
+			'isAnyOfExtensionsActive' => true,
+			'isExtensionActive' => true,
 		];
 
 		$mock = $this->getMockBuilder( stdClass::class )
-			->addMethods( $methods )
+			->addMethods( array_keys( $methods ) )
 			->getMock();
 
 		$mock->dbname = '';
 		$mock->hostname = '';
 
-		foreach ( $methods as $m ) {
+		foreach ( $methods as $m => $returnValue ) {
 			$mock
 				->method( $m )
-				->willReturn( true );
+				->willReturn( $returnValue );
 		}
-
-		$this->getMockBuilder( stdClass::class )
-			->addMethods( $methods )
-			->getMock()
-			->method( 'getSettingValue' )
-			->willReturn( [] );
 
 		return $mock;
 	}
