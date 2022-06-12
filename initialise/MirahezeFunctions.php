@@ -311,7 +311,7 @@ class MirahezeFunctions {
 
 				$wikiSettings = $wgConf->getAll( $wiki ) + $wgConf->getAll( 'default' );
 				$settings = [];
-				foreach ( $wikiSettings as $key => $value ) {		
+				foreach ( $wikiSettings as $key => $value ) {
 					$settings[$key]['default'] = $value;
 				}
 
