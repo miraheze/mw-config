@@ -5122,18 +5122,10 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-$wgConf->fullLoadCallback = static function ( $conf ) {
-	global $wgDBname;
-
-	$settings = MirahezeFunctions::getCachedConfig( $wgDBname );
-	$overrides = MirahezeFunctions::getManageWikiConfigCache();
-
-	foreach ( $overrides as $key => $value ) {
-		$settings[$key] = $value;
-	}
-
-	$conf->settings = $settings;
-};
+$wgConf->settings = array_merge(
+	$wgConf->settings,
+	MirahezeFunctions::getManageWikiConfigCache()
+);
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
@@ -5215,6 +5207,5 @@ $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 function extractGlobals() {
 	global $wgConf, $wgDBname;
 
-	$wgConf->loadFullData();
 	$wgConf->extractAllGlobals( $wgDBname );
 }
