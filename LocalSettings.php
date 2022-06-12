@@ -1455,6 +1455,7 @@ $wgConf->settings += [
 	],
 	'wgMirahezeSurveyEnabled' => [
 		'default' => false,
+		'betawiki' => true,
 	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
