@@ -2725,11 +2725,6 @@ $wgConf->settings += [
 	],
 
 	// Maps
-	'eg2MapsAvailableServices' => [
-		'default' => [
-			'leaflet',
-		],
-	],
 	'egMapsDefaultService' => [
 		'ext-Maps' => 'leaflet',
 	],
@@ -5126,12 +5121,6 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [ 'editnotify', 'regexfunctions' ];
-
-if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
-	$wi::$disabledExtensions += [
-		'maps', // Broken (https://github.com/ProfessionalWiki/Maps/issues/689#issuecomment-1149187699)
-	];
-}
 
 $globals = MirahezeFunctions::getConfigGlobals();
 
