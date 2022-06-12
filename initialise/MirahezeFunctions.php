@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/StaticSiteConfiguration.php';
+
 class MirahezeFunctions {
 	private $cacheArray;
 
