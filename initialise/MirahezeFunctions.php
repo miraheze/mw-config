@@ -301,7 +301,7 @@ class MirahezeFunctions {
 				'miraheze-config',
 				$wiki
 			),
-			WANObjectCache::TTL_SECOND,
+			WANObjectCache::TTL_MINUTE,
 			static function () use ( $wiki ) {
 				global $wgConf;
 
@@ -406,11 +406,12 @@ class MirahezeFunctions {
 		return $settings;
 	}
 
-	public function getSettingValue( string $setting ) {
+	public function getSettingValue( string $setting, string $wiki = 'default' ) {
+		global $wgConf;
+
 		$this->cacheArray ??= self::getCacheArray();
 
-		return $this->cacheArray['settings'][$setting] ??
-			self::getCachedConfig( $this->dbname )[$setting]['default'] ?? null;
+		return $this->cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
 	}
 
 	public function getActiveExtensions(): array {
