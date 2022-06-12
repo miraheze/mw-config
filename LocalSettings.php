@@ -5203,10 +5203,10 @@ if (
 unset( $wi );
 
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
-
 function extractGlobals() {
 	$globals = MirahezeFunctions::getConfigGlobals();
 
-	// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
-	extract( $globals );
+	foreach ( $globals as $global => $value ) {
+		$GLOBALS[$global] = $value;
+	}
 }
