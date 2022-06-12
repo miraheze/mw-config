@@ -138,7 +138,7 @@ class MirahezeFunctions {
 	public static function setupSiteConfiguration() {
 		global $wgConf;
 
-		$wgConf = new StaticSiteConfiguration();
+		$wgConf = new SiteConfiguration();
 
 		$wgConf->suffixes = array_keys( self::SUFFIXES );
 		$wgConf->wikis = self::getLocalDatabases();
