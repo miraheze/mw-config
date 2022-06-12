@@ -155,7 +155,7 @@ class MirahezeFunctions {
 		return array_flip( self::SUFFIXES )[ self::DEFAULT_SERVER[self::getRealm()] ];
 	}
 
-	public static function getServers( $database = null ) {
+	public static function getServers( ?string $database = null, bool $deleted = false ) {
 		$servers = [];
 
 		static $default = null;
@@ -163,6 +163,10 @@ class MirahezeFunctions {
 
 		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
 		$databases = self::readDbListFile( $list, false, $database );
+
+		if ( $deleted ) {
+			$databases += self::readDbListFile( "deleted-$list", false, $database );
+		}
 
 		if ( $database !== null ) {
 			if ( is_string( $database ) && $database !== 'default' ) {
@@ -247,7 +251,7 @@ class MirahezeFunctions {
 	public function setServers() {
 		global $wgConf, $wgServer;
 
-		$wgConf->settings['wgServer'] = self::getServers();
+		$wgConf->settings['wgServer'] = self::getServers( null, true );
 		$wgServer = self::getServer();
 	}
 
