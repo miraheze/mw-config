@@ -52,6 +52,7 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
+
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -5122,22 +5123,21 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-$wgConf->settings = array_merge(
-	$wgConf->settings,
-	MirahezeFunctions::getManageWikiConfigCache()
-);
-
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [ 'editnotify', 'regexfunctions' ];
+$wi::disabledExtensions = [ 'editnotify', 'regexfunctions' ];
 
 if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
-	$wi->disabledExtensions += [
+	$wi::disabledExtensions += [
 		'maps', // Broken (https://github.com/ProfessionalWiki/Maps/issues/689#issuecomment-1149187699)
 	];
 }
 
-$wgConf->extractAllGlobals( $wgDBname );
+$globals = MirahezeFunctions::getConfigGlobals();
+
+// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
+extract( $globals );
+
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
