@@ -2725,7 +2725,7 @@ $wgConf->settings += [
 	],
 
 	// Maps
-	'egMapsAvailableServices' => [
+	'eg2MapsAvailableServices' => [
 		'default' => [
 			'leaflet',
 		],
