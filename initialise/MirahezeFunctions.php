@@ -314,7 +314,7 @@ class MirahezeFunctions {
 			filemtime( "$IP/includes/Defines.php" )
 		);
 
-		$globals = self::readFromStaticCache(
+		$globals = self::readFromCache(
 			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 			$confActualMtime
 		);
@@ -385,7 +385,7 @@ class MirahezeFunctions {
 
 		if ( $tmpFile ) {
 			if ( json_last_error() !== JSON_ERROR_NONE ) {
-				trigger_error( "Config cache failure: Encoding failed", E_USER_ERROR );
+				trigger_error( 'Config cache failure: Encoding failed', E_USER_ERROR );
 			} else {
 				if ( file_put_contents( $tmpFile, $cacheObject ) ) {
 					if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
@@ -396,6 +396,24 @@ class MirahezeFunctions {
 
 			unlink( $tmpFile );
 		}
+	}
+
+	public static function readFromCache( $confCacheFile, $confActualMtime ) {
+		$cacheRecord = @file_get_contents( $confCacheFile );
+
+		if ( $cacheRecord !== false ) {
+			$cacheObject = json_decode( $cacheRecord, true );
+
+			if ( json_last_error() === JSON_ERROR_NONE ) {
+				if ( ( $cacheObject['mtime'] ?? null ) === $confActualMtime ) {
+					return $cacheObject['globals'];
+				}
+			} else {
+				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
+			}
+		}
+
+		return null;
 	}
 
 	public static function getManageWikiConfigCache(): array {
