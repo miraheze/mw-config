@@ -1,7 +1,6 @@
 $IP/extensions/3D/extension.json
 $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddHTMLMetaAndTitle/extension.json
-$IP/extensions/AddThis/extension.json
 $IP/extensions/AdminLinks/extension.json
 $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/Arrays/extension.json
@@ -70,7 +69,6 @@ $IP/extensions/EmbedVideo/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
 $IP/extensions/ExternalData/extension.json
-$IP/extensions/FancyBoxThumbs/extension.json
 $IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/FontAwesome/extension.json
@@ -80,7 +78,6 @@ $IP/extensions/Genealogy/extension.json
 $IP/extensions/GeoCrumbs/extension.json
 $IP/extensions/GeoData/extension.json
 $IP/extensions/GeoGebra/extension.json
-$IP/extensions/GettingStarted/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalNewFiles/extension.json
@@ -94,7 +91,6 @@ $IP/extensions/Graph/extension.json
 $IP/extensions/GroupsSidebar/extension.json
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/HAWelcome/extension.json
-$IP/extensions/HeaderFooter/extension.json
 $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json
@@ -125,7 +121,6 @@ $IP/extensions/LoginNotify/extension.json
 $IP/extensions/LogoFunctions/extension.json
 $IP/extensions/Loops/extension.json
 $IP/extensions/MagicNoCache/extension.json
-$IP/extensions/MagicNumberedHeadings/extension.json
 $IP/extensions/ManageWiki/extension.json
 $IP/extensions/Maps/extension.json
 $IP/extensions/Maps/extensions/Validator/Validator.php
@@ -318,6 +313,4 @@ $IP/skins/WMAU/skin.json
 $IP/skins/apex/skin.json
 $IP/skins/chameleon/skin.json
 $IP/skins/erudite/skin.json
-$IP/skins/foreground/skin.json
-$IP/skins/pivot/skin.json
 $IP/skins/snapwikiskin/skin.json

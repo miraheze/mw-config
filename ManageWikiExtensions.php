@@ -36,18 +36,6 @@
 
 $wgManageWikiExtensions = [
 	// API
-	'gettingstarted' => [
-		'name' => 'GettingStarted',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GettingStarted',
-		'var' => 'wmgUseGettingStarted',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'guidedtour',
-			],
-		],
-		'section' => 'api',
-	],
 	'pageimages' => [
 		'name' => 'PageImages',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageImages',
@@ -664,14 +652,6 @@ $wgManageWikiExtensions = [
 		'name' => 'MagicNoCache',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNoCache',
 		'var' => 'wmgUseMagicNoCache',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
-	'magicnumberedheadings' => [
-		'name' => 'MagicNumberedHeadings',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNumberedHeadings',
-		'var' => 'wmgUseMagicNumberedHeadings',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -2039,14 +2019,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
-	'foreground' => [
-		'name' => 'Foreground',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Foreground',
-		'var' => 'wmgUseForeground',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
 	'gamepress' => [
 		'name' => 'Gamepress',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
@@ -2099,7 +2071,7 @@ $wgManageWikiExtensions = [
 		'name' => 'Mirage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
 		'var' => 'wmgUseMirage',
-		'conflicts' => 'addthis',
+		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
 	],
@@ -2123,14 +2095,6 @@ $wgManageWikiExtensions = [
 		'name' => 'Nostalgia',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nostalgia',
 		'var' => 'wmgUseNostalgia',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'pivot' => [
-		'name' => 'Pivot',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Pivot',
-		'var' => 'wmgUsePivot',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
@@ -2177,14 +2141,6 @@ $wgManageWikiExtensions = [
 	],
 
 	// Other
-	'addthis' => [
-		'name' => 'AddThis',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AddThis',
-		'var' => 'wmgUseAddThis',
-		'conflicts' => 'mirage',
-		'requires' => [],
-		'section' => 'other',
-	],
 	'articlecreationworkflow' => [
 		'name' => 'ArticleCreationWorkflow',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleCreationWorkflow',
@@ -2464,14 +2420,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
-	'fancyboxthumbs' => [
-		'name' => 'FancyBoxThumbs',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FancyBoxThumbs',
-		'var' => 'wmgUseFancyBoxThumbs',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'other',
-	],
 	'forcepreview' => [
 		'name' => 'ForcePreview',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ForcePreview',
@@ -2559,14 +2507,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'section' => 'other',
-	],
-	'headerfooter' => [
-		'name' => 'HeaderFooter',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Header_Footer',
-		'var' => 'wmgUseHeaderFooter',
-		'conflicts' => false,
-		'requires' => [],
 		'section' => 'other',
 	],
 	'hidesection' => [

@@ -179,16 +179,12 @@ class ExtensionsTest extends ManageWikiTestCase {
 		return [
 			'A valid configuration should be passed the validation.' => [
 				[
-					'gettingstarted' => [
-						'name' => 'GettingStarted',
+					'shortdescription' => [
+						'name' => 'ShortDescription',
 						'linkPage' => 'foo',
-						'var' => 'wmgUseGettingStarted',
+						'var' => 'wmgUseShortDescription',
 						'conflicts' => false,
-						'requires' => [
-							'extensions' => [
-								'guidedtour',
-							],
-						],
+						'requires' => [],
 						'section' => 'api',
 					],
 				],

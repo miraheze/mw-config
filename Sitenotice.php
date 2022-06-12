@@ -30,10 +30,10 @@ $wgMajorSiteNoticeID = 69;
 // }
 
 // Specific wiki SiteNotice
-if ( $wi->isAnyOfExtensionsActive( 'AddThis', 'FancyBoxThumbs', 'Foreground', 'GettingStarted', 'HeaderFooter', 'MagicNumberedHeadings', 'Pivot' ) ) {
-	$wgHooks['SiteNoticeAfter'][] = 'disabledExtensionsSiteNotice';
+/* if ( $wi->isAnyOfExtensionsActive( 'AddThis', 'FancyBoxThumbs', 'Foreground', 'GettingStarted', 'HeaderFooter', 'MagicNumberedHeadings', 'Pivot' ) ) {
+	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
-	function disabledExtensionsSiteNotice( &$siteNotice, $skin ) {
+	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
@@ -43,4 +43,4 @@ if ( $wi->isAnyOfExtensionsActive( 'AddThis', 'FancyBoxThumbs', 'Foreground', 'G
 			</tbody></table>
 		EOF;
 	}
-}
+} */

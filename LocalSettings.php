@@ -117,11 +117,6 @@ $wgConf->settings += [
 		],
 	],
 
-	// AddThis
-	'wgAddThisHeader' => [
-		'ext-AddThis' => false,
-	],
-
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
 		'default' => [
@@ -237,53 +232,6 @@ $wgConf->settings += [
 	],
 	'wgPopupsReferencePreviewsBetaFeature' => [
 		'default' => true,
-	],
-	'wgPivotFeatures' => [
-		'default' => [
-			'showActionsForAnon' => true,
-			'fixedNavBar' => false,
-			'usePivotTabs' => false,
-			'showHelpUnderTools' => true,
-			'showRecentChangesUnderTools' => true,
-			'wikiName' => $wi->sitename,
-			'wikiNameDesktop' => $wi->sitename,
-			'navbarIcon' => false,
-			'preloadFontAwesome' => false,
-			'showFooterIcons' => true,
-			'addThisPUBID' => '',
-			'useAddThisShare' => '',
-			'useAddThisFollow' => '',
-		],
-		'+dmlwikiwiki' => [
-			'showActionsForAnon' => true,
-			'fixedNavBar' => false,
-			'usePivotTabs' => true,
-			'showHelpUnderTools' => true,
-			'showRecentChangesUnderTools' => true,
-			'wikiName' => 'DML Wiki',
-			'wikiNameDesktop' => 'Welcome',
-			'navbarIcon' => true,
-			'preloadFontAwesome' => false,
-			'showFooterIcons' => true,
-			'addThisPUBID' => '',
-			'useAddThisShare' => '',
-			'useAddThisFollow' => '',
-		],
-		'+thegreatwarwiki' => [
-			'showActionsForAnon' => true,
-			'fixedNavBar' => true,
-			'usePivotTabs' => true,
-			'showHelpUnderTools' => false,
-			'showRecentChangesUnderTools' => false,
-			'wikiName' => $wi->sitename,
-			'wikiNameDesktop' => 'The Great War 1914-1918',
-			'navbarIcon' => false,
-			'preloadFontAwesome' => false,
-			'showFooterIcons' => true,
-			'addThisPUBID' => '',
-			'useAddThisShare' => '',
-			'useAddThisFollow' => '',
-		],
 	],
 
 	// Block
@@ -796,7 +744,8 @@ $wgConf->settings += [
 			'blog',
 			'health',
 			'status',
-			'ssl',
+			'acme',
+			'ssl(-acme)?',
 			'sslhost',
 			'sslrequest',
 			'letsencrypt',
@@ -1453,6 +1402,7 @@ $wgConf->settings += [
 	],
 	'wgMirahezeSurveyEnabled' => [
 		'default' => false,
+		'betawiki' => true,
 	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
@@ -1474,32 +1424,6 @@ $wgConf->settings += [
 	],
 	'wgUploadNavigationUrl' => [
 		'default' => false,
-	],
-
-	// Foreground
-	'wgForegroundFeatures' => [
-		'default' => [],
-		'egoishwiki' => [
-			'showActionsForAnon' => false,
-			'NavWrapperType' => 'divonly',
-			'showHelpUnderTools' => false,
-			'showRecentChangesUnderTools' => true,
-			'enableTabs' => true,
-			'wikiName' => '',
-			'navbarIcon' => true,
-			'IeEdgeCode' => 1,
-			'showFooterIcons' => 0,
-			'addThisFollowPUBID' => ''
-		],
-		'marionetworkwiki' => [
-			'enableTabs' => true,
-			'navbarIcon' => true,
-			'showFooterIcons' => true,
-			'wikiName' => ''
-		],
-		'rotompediawiki' => [
-			'navbarIcon' => true,
-		]
 	],
 
 	// Gallery Options
@@ -5087,7 +5011,6 @@ $wgConf->settings += [
 			'Flow' => 'debug',
 			'formatnum' => false,
 			'FSFileBackend' => false,
-			'GettingStarted' => false,
 			'gitinfo' => false,
 			'GlobalTitleFail' => false,
 			'GlobalWatchlist' => false,
@@ -5218,11 +5141,6 @@ $wi->disabledExtensions = [ 'editnotify', 'regexfunctions' ];
 
 if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 	$wi->disabledExtensions += [
-		'addthis', // Will be removed (T7876)
-		'foreground', // Will be removed (T9168)
-		'gettingstarted', // Will be removed (T8979)
-		'headerfooter', // Will be removed (T9357)
-		'magicnumberedheadings', // Will be removed (T8897)
 		'maps', // Broken (https://github.com/ProfessionalWiki/Maps/issues/689#issuecomment-1149187699)
 	];
 }
