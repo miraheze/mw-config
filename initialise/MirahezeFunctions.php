@@ -409,7 +409,8 @@ class MirahezeFunctions {
 	public function getSettingValue( string $setting ) {
 		$this->cacheArray ??= self::getCacheArray();
 
-		return $this->cacheArray['settings'][$setting] ?? null;
+		return $this->cacheArray['settings'][$setting] ??
+			self::getCachedConfig( $wgDBname )[$setting]['default'] ?? null;
 	}
 
 	public function getActiveExtensions(): array {
