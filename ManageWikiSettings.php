@@ -363,16 +363,6 @@ $wgManageWikiSettings = [
 		'help' => 'Paging limit for items in categories.',
 		'requires' => [],
 	],
-	'wgUseCategoryBrowser' => [
-		'name' => 'Use Category Browser',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'categories',
-		'help' => 'Enable experimental breadcrumb (or dmoz-style) category browsing?',
-		'requires' => [],
-	],
 	'wgMSCS_WarnNoCategories' => [
 		'name' => 'MsCatSelect warn no categories',
 		'from' => 'mscatselect',

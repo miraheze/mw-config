@@ -346,9 +346,6 @@ $wgConf->settings += [
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
 	],
-	'wgUseCategoryBrowser' => [
-		'default' => false,
-	],
 
 	// CategoryTree
 	'wgCategoryTreeDefaultMode' => [
