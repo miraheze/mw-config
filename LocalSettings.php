@@ -5212,7 +5212,6 @@ $wgConf->fullLoadCallback = static function ( $conf ) {
 	$conf->settings = $settings;
 };
 
-
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi->disabledExtensions = [ 'editnotify', 'regexfunctions' ];
