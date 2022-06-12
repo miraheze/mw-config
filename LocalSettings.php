@@ -5205,7 +5205,8 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname;
+	$globals = MirahezeFunctions::getConfigGlobals();
 
-	$wgConf->extractAllGlobals( $wgDBname );
+	// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
+	extract( $globals );
 }
