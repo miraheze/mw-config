@@ -315,6 +315,9 @@ class MirahezeFunctions {
 					$settings[$key]['default'] = $value;
 				}
 
+				$settings['wgServer'] = $wgConf->settings['wgServer'];
+				$settings['wgSitename'] = $wgConf->settings['wgSitename'];
+
 				return $settings;
 			}
 		);
