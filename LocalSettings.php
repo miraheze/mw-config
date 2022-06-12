@@ -5210,4 +5210,7 @@ function extractGlobals() {
 	foreach ( $globals as $global => $value ) {
 		$GLOBALS[$global] = $value;
 	}
+
+	global $wgConf;
+	$wgConf = new SiteConfiguration();
 }
