@@ -333,7 +333,7 @@ class MirahezeFunctions {
 
 			$globals = self::getConfigForCacheing();
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals ];
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
@@ -404,7 +404,11 @@ class MirahezeFunctions {
 		}
 	}
 
-	public static function readFromCache( $confCacheFile, $confActualMtime ) {
+	public static function readFromCache(
+		string $confCacheFile,
+		string $confActualMtime,
+		string $type = 'globals'
+	): ?array {
 		$cacheRecord = @file_get_contents( $confCacheFile );
 
 		if ( $cacheRecord !== false ) {
@@ -412,7 +416,7 @@ class MirahezeFunctions {
 
 			if ( json_last_error() === JSON_ERROR_NONE ) {
 				if ( ( $cacheObject['mtime'] ?? null ) === $confActualMtime ) {
-					return $cacheObject['globals'];
+					return $cacheObject[$type] ?? null;
 				}
 			} else {
 				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
@@ -517,6 +521,34 @@ class MirahezeFunctions {
 	}
 
 	public static function getActiveExtensions(): array {
+		global $IP, $wgDBname;
+
+		$confCacheFileName = "config-$wgDBname.json";
+
+		// To-Do: merge ManageWiki cache with main config cache,
+		// to automatically update when ManageWiki is updated
+		$confActualMtime = max(
+			// When config files are updated
+			filemtime( __DIR__ . '/../LocalSettings.php' ),
+			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
+
+			// When MediaWiki is upgraded
+			filemtime( "$IP/includes/Defines.php" ),
+
+			// When ManageWiki is changed
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+		);
+
+		$extensions = self::readFromCache(
+			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			$confActualMtime,
+			'extensions'
+		);
+
+		if ( $extensions ) {
+			return $extensions;
+		}
+
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
 
