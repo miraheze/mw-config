@@ -5199,11 +5199,11 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-$wgConf->fullLoadCallback = static function ( $conf ) use ( $wi ) {
+$wgConf->fullLoadCallback = static function ( $conf ) {
 	global $wgDBname;
 
 	$settings = MirahezeFunctions::getCachedConfig( $wgDBname );
-	$overrides = $wi->getManageWikiConfigCache();
+	$overrides = MirahezeFunctions::getManageWikiConfigCache();
 
 	foreach ( $overrides as $key => $value ) {
 		$settings[$key] = $value;
