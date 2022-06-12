@@ -5202,7 +5202,7 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 $wgConf->fullLoadCallback = static function ( $conf ) {
 	global $wgDBname;
 
-	$settings = MirahezeFunctions::getCachedConfig( $wgDBname );
+	$settings = $conf->settings;
 	$overrides = MirahezeFunctions::getManageWikiConfigCache();
 
 	foreach ( $overrides as $key => $value ) {
