@@ -5228,7 +5228,6 @@ if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
 	];
 }
 
-$wgConf->loadFullData();
 $wgConf->extractAllGlobals( $wgDBname );
 $wi->loadExtensions();
 
@@ -5299,5 +5298,6 @@ $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 function extractGlobals() {
 	global $wgConf, $wgDBname;
 
+	$wgConf->loadFullData();
 	$wgConf->extractAllGlobals( $wgDBname );
 }
