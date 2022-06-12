@@ -283,14 +283,14 @@ class MirahezeFunctions {
 		return !in_array( self::getCurrentDatabase(), $wgConf->wikis );
 	}
 
-	public function getCacheArray(): array {
+	public static function getCacheArray(): array {
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::getCurrentDatabase() . '.json' ) ) {
 			return [];
 		}
 
 		return (array)json_decode( file_get_contents(
-			self::CACHE_DIRECTORY . '/' . $this->dbname . '.json'
+			self::CACHE_DIRECTORY . '/' . self::getCurrentDatabase() . '.json'
 		), true );
 	}
 
@@ -320,71 +320,72 @@ class MirahezeFunctions {
 		);
 	}
 
-	public function getManageWikiConfigCache(): array {
-		$this->cacheArray ??= $this->getCacheArray();
+	public static function getManageWikiConfigCache(): array {
+		static $cacheArray = null;
+		$cacheArray ??= self::getCacheArray();
 
-		if ( !$this->cacheArray ) {
+		if ( !$cacheArray ) {
 			return [];
 		}
 
-		$settings['wgLanguageCode'][$this->dbname] = $this->cacheArray['core']['wgLanguageCode'];
+		$settings['wgLanguageCode']['default'] = $cacheArray['core']['wgLanguageCode'];
 
 		// Assign states
-		$settings['cwPrivate'][$this->dbname] = (bool)$this->cacheArray['states']['private'];
-		$settings['cwClosed'][$this->dbname] = (bool)$this->cacheArray['states']['closed'];
-		$settings['cwInactive'][$this->dbname] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
-		$settings['cwExperimental'][$this->dbname] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
+		$settings['cwPrivate']['default'] = (bool)$cacheArray['states']['private'];
+		$settings['cwClosed']['default'] = (bool)$cacheArray['states']['closed'];
+		$settings['cwInactive']['default'] = ( $cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$cacheArray['states']['inactive'];
+		$settings['cwExperimental']['default'] = (bool)( $cacheArray['states']['experimental'] ?? false );
 
 		// Assign settings
-		if ( isset( $this->cacheArray['settings'] ) ) {
-			foreach ( $this->cacheArray['settings'] as $var => $val ) {
-				$settings[$var][$this->dbname] = $val;
+		if ( isset( $cacheArray['settings'] ) ) {
+			foreach ( $cacheArray['settings'] as $var => $val ) {
+				$settings[$var]['default'] = $val;
 			}
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
-		if ( isset( $this->cacheArray['namespaces'] ) ) {
-			foreach ( $this->cacheArray['namespaces'] as $name => $ns ) {
-				$settings['wgExtraNamespaces'][$this->dbname][(int)$ns['id']] = $name;
-				$settings['wgNamespacesToBeSearchedDefault'][$this->dbname][(int)$ns['id']] = $ns['searchable'];
-				$settings['wgNamespacesWithSubpages'][$this->dbname][(int)$ns['id']] = $ns['subpages'];
-				$settings['wgNamespaceContentModels'][$this->dbname][(int)$ns['id']] = $ns['contentmodel'];
+		if ( isset( $cacheArray['namespaces'] ) ) {
+			foreach ( $cacheArray['namespaces'] as $name => $ns ) {
+				$settings['wgExtraNamespaces']['default'][(int)$ns['id']] = $name;
+				$settings['wgNamespacesToBeSearchedDefault']['default'][(int)$ns['id']] = $ns['searchable'];
+				$settings['wgNamespacesWithSubpages']['default'][(int)$ns['id']] = $ns['subpages'];
+				$settings['wgNamespaceContentModels']['default'][(int)$ns['id']] = $ns['contentmodel'];
 
 				if ( $ns['content'] ) {
-					$settings['wgContentNamespaces'][$this->dbname][] = (int)$ns['id'];
+					$settings['wgContentNamespaces']['default'][] = (int)$ns['id'];
 				}
 
 				if ( $ns['protection'] ) {
-					$settings['wgNamespaceProtection'][$this->dbname][(int)$ns['id']] = [ $ns['protection'] ];
+					$settings['wgNamespaceProtection']['default'][(int)$ns['id']] = [ $ns['protection'] ];
 				}
 
 				foreach ( (array)$ns['aliases'] as $alias ) {
-					$settings['wgNamespaceAliases'][$this->dbname][$alias] = (int)$ns['id'];
+					$settings['wgNamespaceAliases']['default'][$alias] = (int)$ns['id'];
 				}
 			}
 		}
 
 		// Handle Permissions
-		if ( isset( $this->cacheArray['permissions'] ) ) {
-			foreach ( $this->cacheArray['permissions'] as $group => $perm ) {
+		if ( isset( $cacheArray['permissions'] ) ) {
+			foreach ( $cacheArray['permissions'] as $group => $perm ) {
 				foreach ( (array)$perm['permissions'] as $id => $right ) {
-					$settings['wgGroupPermissions'][$this->dbname][$group][$right] = true;
+					$settings['wgGroupPermissions']['default'][$group][$right] = true;
 				}
 
 				foreach ( (array)$perm['addgroups'] as $name ) {
-					$settings['wgAddGroups'][$this->dbname][$group][] = $name;
+					$settings['wgAddGroups']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removegroups'] as $name ) {
-					$settings['wgRemoveGroups'][$this->dbname][$group][] = $name;
+					$settings['wgRemoveGroups']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['addself'] as $name ) {
-					$settings['wgGroupsAddToSelf'][$this->dbname][$group][] = $name;
+					$settings['wgGroupsAddToSelf']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removeself'] as $name ) {
-					$settings['wgGroupsRemoveFromSelf'][$this->dbname][$group][] = $name;
+					$settings['wgGroupsRemoveFromSelf']['default'][$group][] = $name;
 				}
 
 				if ( $perm['autopromote'] !== null ) {
@@ -397,7 +398,7 @@ class MirahezeFunctions {
 						$promoteVar = 'wgAutopromote';
 					}
 
-					$settings[$promoteVar][$this->dbname][$group] = $perm['autopromote'];
+					$settings[$promoteVar]['default'][$group] = $perm['autopromote'];
 				}
 			}
 		}
@@ -406,13 +407,13 @@ class MirahezeFunctions {
 	}
 
 	public function getSettingValue( string $setting ) {
-		$this->cacheArray ??= $this->getCacheArray();
+		$this->cacheArray ??= self::getCacheArray();
 
 		return $this->cacheArray['settings'][$setting] ?? null;
 	}
 
 	public function getActiveExtensions(): array {
-		$this->cacheArray ??= $this->getCacheArray();
+		$this->cacheArray ??= self::getCacheArray();
 
 		if ( !$this->cacheArray ) {
 			return [];
@@ -473,7 +474,7 @@ class MirahezeFunctions {
 		global $wgConf;
 
 		static $activeExtensions = null;
-		$this->cacheArray ??= $this->getCacheArray();
+		$this->cacheArray ??= self::getCacheArray();
 
 		if ( !$this->cacheArray ) {
 			if ( self::getRealm() !== 'default' ) {
