@@ -303,8 +303,11 @@ class MirahezeFunctions {
 
 		// Try configuration cache
 		$confCacheFileName = "config-$wgDBname.json";
+
+		// To-Do: merge ManageWiki cache with main config cache,
+		// to automatically update when ManageWiki is updated
 		$confActualMtime = max(
-			// When Config files are updated
+			// When config files are updated
 			filemtime( __DIR__ . '/../GlobalSettings.php' ),
 			filemtime( __DIR__ . '/../LocalSettings.php' ),
 			filemtime( __DIR__ . '/../LocalWiki.php' ),
@@ -313,7 +316,10 @@ class MirahezeFunctions {
 			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
 
 			// When MediaWiki is upgraded
-			filemtime( "$IP/includes/Defines.php" )
+			filemtime( "$IP/includes/Defines.php" ),
+
+			// When ManageWiki is changed
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
 
 		$globals = self::readFromCache(
