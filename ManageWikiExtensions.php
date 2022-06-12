@@ -89,7 +89,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'settings' => [
-				'wgFileExtensions' => array_merge( $wgConf->get( 'wgFileExtensions', $wi->dbname ), [ 'stl' ] ),
+				'wgFileExtensions' => array_merge( $wi->getSettingValue( 'wgFileExtensions' ), [ 'stl' ] ),
 			],
 		],
 		'section' => 'mediahandlers',

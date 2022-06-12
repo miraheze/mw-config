@@ -13,42 +13,25 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	abstract public function getSchema(): array;
 
-	public function mockConfig(): stdClass {
-		$mock = $this->getMockBuilder( stdClass::class )
-			->addMethods( [ 'get' ] )
-			->getMock();
-
-		$mock
-			->method( 'get' )
-			->willReturnCallback( static function ( $settingName, $wiki, $suffix = null, $params = [],
-				$wikiTags = [] ) {
-					switch ( $settingName ) {
-						case 'wgFileExtensions':
-							return [];
-					}
-			} );
-
-		return $mock;
-	}
-
 	public function mockMirahezeFunctions(): stdClass {
 		$methods = [
-			'isAllOfExtensionsActive',
-			'isAnyOfExtensionsActive',
-			'isExtensionActive',
+			'getSettingValue' => [],
+			'isAllOfExtensionsActive' => true,
+			'isAnyOfExtensionsActive' => true,
+			'isExtensionActive' => true,
 		];
 
 		$mock = $this->getMockBuilder( stdClass::class )
-			->addMethods( $methods )
+			->addMethods( array_keys( $methods ) )
 			->getMock();
 
 		$mock->dbname = '';
 		$mock->hostname = '';
 
-		foreach ( $methods as $m ) {
+		foreach ( $methods as $m => $returnValue ) {
 			$mock
 				->method( $m )
-				->willReturn( true );
+				->willReturn( $returnValue );
 		}
 
 		return $mock;

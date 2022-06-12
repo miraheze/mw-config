@@ -61,7 +61,7 @@ $wgConf->settings += [
 
 	// 3D
 	'wg3dProcessor' => [
-		'wmgUse3D' => [
+		'ext-3d' => [
 			'/usr/bin/xvfb-run',
 			'-a',
 			'-s',
@@ -279,7 +279,7 @@ $wgConf->settings += [
 			'badlogin' => true,
 			'badloginperuser' => true
 		],
-		'+wmgUseWikiForum' => [
+		'+ext-WikiForum' => [
 			'wikiforum' => true,
 		],
 	],
@@ -341,7 +341,7 @@ $wgConf->settings += [
 		'academiadesusarduwiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
 		'supermanwiki' => 'numeric',
-		'wmgUseCategorySortHeaders' => CustomHeaderCollation::class,
+		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
 	'wgCategoryPagingLimit' => [
 		'default' => 200,
@@ -1074,7 +1074,7 @@ $wgConf->settings += [
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
-		'wmgUseDescription2' => true,
+		'ext-Description2' => true,
 	],
 
 	// DismissableSiteNotice
@@ -1179,7 +1179,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// ExternalData
+	// External Data
 	'wgExternalDataSources' => [
 		/**
 		 * @note Databases should NEVER be configured here!
@@ -1196,7 +1196,7 @@ $wgConf->settings += [
 		 *
 		 * @note SOAP should NEVER be configured here, unless you understand it and can confirm the security of it is acceptable.
 		 */
-		'wmgUseExternalData' => [
+		'ext-ExternalData' => [
 			'*' => [
 				'min cache seconds' => 3600,
 				'always use stale cache' => false,
@@ -1753,7 +1753,7 @@ $wgConf->settings += [
 
 	// InterwikiSorting
 	'wgInterwikiSortingSort' => [
-		'wmgUseInterwikiSorting' => 'code',
+		'ext-InterwikiSorting' => 'code',
 	],
 
 	// ImportDump
@@ -1896,7 +1896,7 @@ $wgConf->settings += [
 
 	// JavascriptSlideshow
 	'wgHtml5' => [
-		'wmgUseJavascriptSlideshow' => true,
+		'ext-JavascriptSlideshow' => true,
 	],
 
 	// JsonConfig
@@ -2204,7 +2204,7 @@ $wgConf->settings += [
 
 	// Linter
 	'wgLinterSubmitterWhitelist' => [
-		'wmgUseLinter' => [
+		'ext-Linter' => [
 			/** localhost */
 			'::1' => true,
 			/** mw101 */
@@ -2594,7 +2594,7 @@ $wgConf->settings += [
 				'edit-create' => true,
 			],
 		],
-		'+wmgUseFlow' => [
+		'+ext-Flow' => [
 			'oversight' => [
 				'flow-suppress' => true,
 			],
@@ -2725,16 +2725,16 @@ $wgConf->settings += [
 	],
 
 	// Maps
-	'egMapsAvailableServices' => [
+	'eg2MapsAvailableServices' => [
 		'default' => [
 			'leaflet',
 		],
 	],
 	'egMapsDefaultService' => [
-		'wmgUseMaps' => 'leaflet',
+		'ext-Maps' => 'leaflet',
 	],
 	'egMapsDisableSmwIntegration' => [
-		'wmgUseMaps' => true,
+		'ext-Maps' => true,
 	],
 
 	// MassMessage
@@ -2901,7 +2901,7 @@ $wgConf->settings += [
 	],
 	'wgRestrictDisplayTitle' => [
 		'default' => true,
-		'wmgUseNoTitle' => false,
+		'ext-NoTitle' => false,
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
@@ -2950,7 +2950,7 @@ $wgConf->settings += [
 		'+polytopewiki' => [
 			MEDIATYPE_TEXT,
 		],
-		'+wmgUse3D' => [
+		'+ext-3d' => [
 			'application/sla',
 		],
 	],
@@ -2990,13 +2990,13 @@ $wgConf->settings += [
 		'default' => '',
 	],
 	'wgMFMobileHeader' => [
-		'wmgUseMobileFrontend' => 'X-Subdomain',
+		'ext-MobileFrontend' => 'X-Subdomain',
 	],
 	'wgMFNoindexPages' => [
-		'wmgUseMobileFrontend' => false,
+		'ext-MobileFrontend' => false,
 	],
 	'wgMFStopRedirectCookieHost' => [
-		'wmgUseMobileFrontend' => $wi->hostname,
+		'ext-MobileFrontend' => $wi->hostname,
 	],
 	'wgMFUseDesktopSpecialHistoryPage' => [
 		'default' => [
@@ -3177,14 +3177,14 @@ $wgConf->settings += [
 	// MultiBoilerplate
 	'wgMultiBoilerplateDisplaySpecialPage' => [
 		'vgportdbwiki' => true,
-		'wmgUseMultiBoilerplate' => false,
+		'ext-MultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOptions' => [
-		'wmgUseMultiBoilerplate' => false,
+		'ext-MultiBoilerplate' => false,
 	],
 	'wgMultiBoilerplateOverwrite' => [
 		'vgportdbwiki' => true,
-		'wmgUseMultiBoilerplate' => false,
+		'ext-MultiBoilerplate' => false,
 	],
 
 	// NamespacePreload
@@ -3273,7 +3273,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgPageImagesDenylist' => [
-		'wmgUsePageImages' => [
+		'ext-PageImages' => [
 			[
 				'type' => 'db',
 				'page' => 'MediaWiki:Pageimages-denylist',
@@ -3322,7 +3322,7 @@ $wgConf->settings += [
 		'default' => [
 			'useSelser' => true,
 		],
-		'+wmgUseLinter' => [
+		'+ext-Linter' => [
 			'linting' => true,
 		],
 	],
@@ -3354,7 +3354,7 @@ $wgConf->settings += [
 				'skip-moderation' => true,
 			],
 		],
-		'+wmgUseMediaWikiChat' => [
+		'+ext-MediaWikiChat' => [
 			'blockedfromchat' => [
 				'chat' => true,
 			],
@@ -3553,7 +3553,7 @@ $wgConf->settings += [
 			'visualeditor-newwikitext' => 1,
 			'visualeditor-tabs' => 'multi-tab',
 		],
-		'+wmgUseCleanChanges' => [
+		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
 		],
 	],
@@ -3567,7 +3567,7 @@ $wgConf->settings += [
 
 	// ProofreadPage
 	'wgProofreadPageNamespaceIds' => [
-		'wmgUseProofreadPage' => [
+		'ext-ProofreadPage' => [
 			'index' => 252,
 			'page' => 250,
 		],
@@ -3637,7 +3637,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
-		'wmgUseRelatedArticles' => false,
+		'ext-RelatedArticles' => false,
 	],
 	'wgRelatedArticlesCardLimit' => [
 		'default' => 3,
@@ -3782,7 +3782,7 @@ $wgConf->settings += [
 		'+ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
-		'+wmgUseAuthorProtect' => [
+		'+ext-AuthorProtect' => [
 			'author',
 		],
 	],
@@ -3873,7 +3873,7 @@ $wgConf->settings += [
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
-		'+wmgUseSocialProfile' => [
+		'+ext-SocialProfile' => [
 			'updatepoints',
 		],
 	],
@@ -3943,7 +3943,7 @@ $wgConf->settings += [
 		'default' => 'Y-m-d H:i:s'
 	],
 	'wgRSSUrlWhitelist' => [
-		'wmgUseRSS' => [
+		'ext-RSSfeed' => [
 			'*',
 		],
 	],
@@ -4341,12 +4341,12 @@ $wgConf->settings += [
 
 	// UploadWizard
 	'wgUploadWizardConfig' => [
-		'wmgUseUploadWizard' => [
+		'ext-UploadWizard' => [
 			'campaignExpensiveStatsEnabled' => false,
 		],
 	],
 	'wmgUploadWizardFlickrApiKey' => [
-		'wmgUseUploadWizard' => 'aeefff139445d825d4460796616f9349',
+		'ext-UploadWizard' => 'aeefff139445d825d4460796616f9349',
 	],
 
 	// Uploads
@@ -4380,8 +4380,8 @@ $wgConf->settings += [
 		'default' => 'personal',
 	],
 	'wgULSGeoService' => [
-		'wmgUseTranslate' => false,
-		'wmgUseUniversalLanguageSelector' => false,
+		'ext-Translate' => false,
+		'ext-UniversalLanguageSelector' => false,
 	],
 	'wgULSIMEEnabled' => [
 		'default' => true,
@@ -4415,7 +4415,7 @@ $wgConf->settings += [
 
 	// UserPageEditProtection
 	'wgOnlyUserEditUserPage' => [
-		'wmgUseUserPageEditProtection' => true,
+		'ext-UserPageEditProtection' => true,
 	],
 
 	// Varnish
@@ -4461,7 +4461,7 @@ $wgConf->settings += [
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
 		'default' => false,
-		'wmgUseVisualEditor' => true,
+		'ext-VisualEditor' => true,
 	],
 	'wgVisualEditorEnableWikitext' => [
 		'default' => false,
@@ -4857,7 +4857,7 @@ $wgConf->settings += [
 	],
 	// WikiLove
 	'wgWikiLoveGlobal' => [
-		'wmgUseWikiLove' => true,
+		'ext-WikiLove' => true,
 	],
 
 	// WikiSEO configs
@@ -5123,19 +5123,21 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-$wi->readCache();
-
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi->disabledExtensions = [ 'editnotify', 'regexfunctions' ];
+$wi::$disabledExtensions = [ 'editnotify', 'regexfunctions' ];
 
 if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
-	$wi->disabledExtensions += [
+	$wi::$disabledExtensions += [
 		'maps', // Broken (https://github.com/ProfessionalWiki/Maps/issues/689#issuecomment-1149187699)
 	];
 }
 
-$wgConf->extractAllGlobals( $wi->dbname );
+$globals = MirahezeFunctions::getConfigGlobals();
+
+// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
+extract( $globals );
+
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
@@ -5203,7 +5205,9 @@ unset( $wi );
 $wgHooks['MediaWikiServices'][] = 'extractGlobals';
 
 function extractGlobals() {
-	global $wgConf, $wgDBname;
+	$globals = MirahezeFunctions::getConfigGlobals();
 
-	$wgConf->extractAllGlobals( $wgDBname );
+	foreach ( $globals as $global => $value ) {
+		$GLOBALS[$global] = $value;
+	}
 }

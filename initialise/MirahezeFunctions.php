@@ -9,7 +9,7 @@ class MirahezeFunctions {
 	public $sitename;
 	public $missing;
 	public $wikiDBClusters;
-	public $disabledExtensions = [];
+	public static $disabledExtensions = [];
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
@@ -151,7 +151,11 @@ class MirahezeFunctions {
 		return $realm;
 	}
 
-	public static function getServers( $database = null ) {
+	public static function getCurrentSuffix(): string {
+		return array_flip( self::SUFFIXES )[ self::DEFAULT_SERVER[self::getRealm()] ];
+	}
+
+	public static function getServers( ?string $database = null, bool $deleted = false ) {
 		$servers = [];
 
 		static $default = null;
@@ -159,6 +163,10 @@ class MirahezeFunctions {
 
 		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
 		$databases = self::readDbListFile( $list, false, $database );
+
+		if ( $deleted ) {
+			$databases += self::readDbListFile( "deleted-$list", false, $database );
+		}
 
 		if ( $database !== null ) {
 			if ( is_string( $database ) && $database !== 'default' ) {
@@ -216,10 +224,10 @@ class MirahezeFunctions {
 	}
 
 	public function setDatabase() {
-		global $wgConf;
+		global $wgConf, $wgDBname;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
-		$wgConf->extractGlobal( 'wgDBname', $this->dbname );
+		$wgDBname = $this->dbname;
 	}
 
 	public static function getDatabaseClusters(): array {
@@ -241,17 +249,17 @@ class MirahezeFunctions {
 	}
 
 	public function setServers() {
-		global $wgConf;
+		global $wgConf, $wgServer;
 
-		$wgConf->settings['wgServer'] = self::getServers();
-		$wgConf->extractGlobal( 'wgServer', $this->dbname );
+		$wgConf->settings['wgServer'] = self::getServers( null, true );
+		$wgServer = self::getServer();
 	}
 
 	public function setSiteNames() {
-		global $wgConf;
+		global $wgConf, $wgSitename;
 
 		$wgConf->settings['wgSitename'] = self::getSiteNames();
-		$wgConf->extractGlobal( 'wgSitename', $this->dbname );
+		$wgSitename = self::getSiteName();
 	}
 
 	public static function getSiteNames() {
@@ -281,118 +289,213 @@ class MirahezeFunctions {
 		return !in_array( self::getCurrentDatabase(), $wgConf->wikis );
 	}
 
-	public function getCacheArray(): array {
+	public static function getCacheArray(): array {
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::getCurrentDatabase() . '.json' ) ) {
 			return [];
 		}
 
 		return (array)json_decode( file_get_contents(
-			self::CACHE_DIRECTORY . '/' . $this->dbname . '.json'
+			self::CACHE_DIRECTORY . '/' . self::getCurrentDatabase() . '.json'
 		), true );
 	}
 
-	public function readCache() {
-		global $wgConf;
+	public static function getConfigGlobals(): array {
+		global $IP, $wgDBname, $wgConf;
 
-		$this->cacheArray ??= $this->getCacheArray();
+		// Try configuration cache
+		$confCacheFileName = "config-$wgDBname.json";
 
-		if ( !$this->cacheArray ) {
-			if ( self::getRealm() !== 'default' ) {
-				$wgConf->siteParamsCallback = static function () {
-					return [
-						'suffix' => null,
-						'lang' => 'en',
-						'tags' => [ self::getRealm() ],
-						'params' => [],
-					];
-				};
+		// To-Do: merge ManageWiki cache with main config cache,
+		// to automatically update when ManageWiki is updated
+		$confActualMtime = max(
+			// When config files are updated
+			filemtime( __DIR__ . '/../GlobalSettings.php' ),
+			filemtime( __DIR__ . '/../LocalSettings.php' ),
+			filemtime( __DIR__ . '/../LocalWiki.php' ),
+			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
+			filemtime( __DIR__ . '/../ManageWikiNamespaces.php' ),
+			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
+
+			// When MediaWiki is upgraded
+			filemtime( "$IP/includes/Defines.php" ),
+
+			// When ManageWiki is changed
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+		);
+
+		$globals = self::readFromCache(
+			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			$confActualMtime
+		);
+
+		if ( !$globals ) {
+			$wgConf->settings = array_merge(
+				$wgConf->settings,
+				self::getManageWikiConfigCache()
+			);
+
+			$globals = self::getConfigForCacheing();
+
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
+
+			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
+			if ( time() > $minTime ) {
+				self::writeToCache(
+					$confCacheFileName, $confCacheObject
+				);
 			}
-
-			return;
 		}
 
-		$wgConf->settings['wgLanguageCode'][$this->dbname] = $this->cacheArray['core']['wgLanguageCode'];
+		return $globals;
+	}
+
+	public static function getConfigForCacheing() {
+		global $wgDBname, $wgConf;
+
+		$wikiTags = [];
+		if ( self::getRealm() !== 'default' ) {
+			$wikiTags[] = self::getRealm();
+		}
+
+		static $cacheArray = null;
+		$cacheArray ??= self::getCacheArray();
+		foreach ( $cacheArray['states'] ?? [] as $state => $value ) {
+			if ( $value !== 'exempt' && (bool)$value ) {
+				$wikiTags[] = $state;
+			}
+		}
+
+		$wikiTags = array_merge( preg_filter( '/^/', 'ext-',
+				str_replace( ' ', '', self::getActiveExtensions() )
+			), $wikiTags
+		);
+
+		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+		$dbSuffix = self::getCurrentSuffix();
+
+		$confParams = [
+			'lang' => $lang,
+			'site' => $site,
+		];
+
+		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
+
+		return $globals;
+	}
+
+	public static function writeToCache( string $cacheShard, array $configObject ) {
+		@mkdir( self::CACHE_DIRECTORY );
+		$tmpFile = tempnam( '/tmp/', $cacheShard );
+
+		$cacheObject = json_encode(
+			$configObject,
+			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+		) . "\n";
+
+		if ( $tmpFile ) {
+			if ( json_last_error() !== JSON_ERROR_NONE ) {
+				trigger_error( 'Config cache failure: Encoding failed', E_USER_ERROR );
+			} else {
+				if ( file_put_contents( $tmpFile, $cacheObject ) ) {
+					if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
+						return;
+					}
+				}
+			}
+
+			unlink( $tmpFile );
+		}
+	}
+
+	public static function readFromCache(
+		string $confCacheFile,
+		string $confActualMtime,
+		string $type = 'globals'
+	): ?array {
+		$cacheRecord = @file_get_contents( $confCacheFile );
+
+		if ( $cacheRecord !== false ) {
+			$cacheObject = json_decode( $cacheRecord, true );
+
+			if ( json_last_error() === JSON_ERROR_NONE ) {
+				if ( ( $cacheObject['mtime'] ?? null ) === $confActualMtime ) {
+					return $cacheObject[$type] ?? null;
+				}
+			} else {
+				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
+			}
+		}
+
+		return null;
+	}
+
+	public static function getManageWikiConfigCache(): array {
+		static $cacheArray = null;
+		$cacheArray ??= self::getCacheArray();
+
+		if ( !$cacheArray ) {
+			return [];
+		}
+
+		$settings['wgLanguageCode']['default'] = $cacheArray['core']['wgLanguageCode'];
 
 		// Assign states
-		$wgConf->settings['cwPrivate'][$this->dbname] = (bool)$this->cacheArray['states']['private'];
-		$wgConf->settings['cwClosed'][$this->dbname] = (bool)$this->cacheArray['states']['closed'];
-		$wgConf->settings['cwInactive'][$this->dbname] = ( $this->cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$this->cacheArray['states']['inactive'];
-		$wgConf->settings['cwExperimental'][$this->dbname] = (bool)( $this->cacheArray['states']['experimental'] ?? false );
-
-		$tags = [];
-		if ( self::getRealm() !== 'default' ) {
-			$tags[] = self::getRealm();
-		}
-
-		foreach ( $this->cacheArray['states'] as $state => $value ) {
-			if ( $value !== 'exempt' && (bool)$value ) {
-				$tags[] = $state;
-			}
-		}
-
-		$tags = array_merge( ( $this->cacheArray['extensions'] ?? [] ), $tags );
-		$lang = $this->cacheArray['core']['wgLanguageCode'] ?? 'en';
-
-		$wgConf->siteParamsCallback = static function () use ( $tags, $lang ) {
-			return [
-				'suffix' => null,
-				'lang' => $lang,
-				'tags' => $tags,
-				'params' => [],
-			];
-		};
+		$settings['cwPrivate']['default'] = (bool)$cacheArray['states']['private'];
+		$settings['cwClosed']['default'] = (bool)$cacheArray['states']['closed'];
+		$settings['cwInactive']['default'] = ( $cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$cacheArray['states']['inactive'];
+		$settings['cwExperimental']['default'] = (bool)( $cacheArray['states']['experimental'] ?? false );
 
 		// Assign settings
-		if ( isset( $this->cacheArray['settings'] ) ) {
-			foreach ( $this->cacheArray['settings'] as $var => $val ) {
-				$wgConf->settings[$var][$this->dbname] = $val;
+		if ( isset( $cacheArray['settings'] ) ) {
+			foreach ( $cacheArray['settings'] as $var => $val ) {
+				$settings[$var]['default'] = $val;
 			}
 		}
 
 		// Handle namespaces - additional settings will be done in ManageWiki
-		if ( isset( $this->cacheArray['namespaces'] ) ) {
-			foreach ( $this->cacheArray['namespaces'] as $name => $ns ) {
-				$wgConf->settings['wgExtraNamespaces'][$this->dbname][(int)$ns['id']] = $name;
-				$wgConf->settings['wgNamespacesToBeSearchedDefault'][$this->dbname][(int)$ns['id']] = $ns['searchable'];
-				$wgConf->settings['wgNamespacesWithSubpages'][$this->dbname][(int)$ns['id']] = $ns['subpages'];
-				$wgConf->settings['wgNamespaceContentModels'][$this->dbname][(int)$ns['id']] = $ns['contentmodel'];
+		if ( isset( $cacheArray['namespaces'] ) ) {
+			foreach ( $cacheArray['namespaces'] as $name => $ns ) {
+				$settings['wgExtraNamespaces']['default'][(int)$ns['id']] = $name;
+				$settings['wgNamespacesToBeSearchedDefault']['default'][(int)$ns['id']] = $ns['searchable'];
+				$settings['wgNamespacesWithSubpages']['default'][(int)$ns['id']] = $ns['subpages'];
+				$settings['wgNamespaceContentModels']['default'][(int)$ns['id']] = $ns['contentmodel'];
 
 				if ( $ns['content'] ) {
-					$wgConf->settings['wgContentNamespaces'][$this->dbname][] = (int)$ns['id'];
+					$settings['wgContentNamespaces']['default'][] = (int)$ns['id'];
 				}
 
 				if ( $ns['protection'] ) {
-					$wgConf->settings['wgNamespaceProtection'][$this->dbname][(int)$ns['id']] = [ $ns['protection'] ];
+					$settings['wgNamespaceProtection']['default'][(int)$ns['id']] = [ $ns['protection'] ];
 				}
 
 				foreach ( (array)$ns['aliases'] as $alias ) {
-					$wgConf->settings['wgNamespaceAliases'][$this->dbname][$alias] = (int)$ns['id'];
+					$settings['wgNamespaceAliases']['default'][$alias] = (int)$ns['id'];
 				}
 			}
 		}
 
 		// Handle Permissions
-		if ( isset( $this->cacheArray['permissions'] ) ) {
-			foreach ( $this->cacheArray['permissions'] as $group => $perm ) {
+		if ( isset( $cacheArray['permissions'] ) ) {
+			foreach ( $cacheArray['permissions'] as $group => $perm ) {
 				foreach ( (array)$perm['permissions'] as $id => $right ) {
-					$wgConf->settings['wgGroupPermissions'][$this->dbname][$group][$right] = true;
+					$settings['wgGroupPermissions']['default'][$group][$right] = true;
 				}
 
 				foreach ( (array)$perm['addgroups'] as $name ) {
-					$wgConf->settings['wgAddGroups'][$this->dbname][$group][] = $name;
+					$settings['wgAddGroups']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removegroups'] as $name ) {
-					$wgConf->settings['wgRemoveGroups'][$this->dbname][$group][] = $name;
+					$settings['wgRemoveGroups']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['addself'] as $name ) {
-					$wgConf->settings['wgGroupsAddToSelf'][$this->dbname][$group][] = $name;
+					$settings['wgGroupsAddToSelf']['default'][$group][] = $name;
 				}
 
 				foreach ( (array)$perm['removeself'] as $name ) {
-					$wgConf->settings['wgGroupsRemoveFromSelf'][$this->dbname][$group][] = $name;
+					$settings['wgGroupsRemoveFromSelf']['default'][$group][] = $name;
 				}
 
 				if ( $perm['autopromote'] !== null ) {
@@ -405,16 +508,55 @@ class MirahezeFunctions {
 						$promoteVar = 'wgAutopromote';
 					}
 
-					$wgConf->settings[$promoteVar][$this->dbname][$group] = $perm['autopromote'];
+					$settings[$promoteVar]['default'][$group] = $perm['autopromote'];
 				}
 			}
 		}
+
+		return $settings;
 	}
 
-	public function getActiveExtensions(): array {
-		$this->cacheArray ??= $this->getCacheArray();
+	public function getSettingValue( string $setting, string $wiki = 'default' ) {
+		global $wgConf;
 
-		if ( !$this->cacheArray ) {
+		$this->cacheArray ??= self::getCacheArray();
+
+		return $this->cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
+	}
+
+	public static function getActiveExtensions(): array {
+		global $IP, $wgDBname;
+
+		$confCacheFileName = "config-$wgDBname.json";
+
+		// To-Do: merge ManageWiki cache with main config cache,
+		// to automatically update when ManageWiki is updated
+		$confActualMtime = max(
+			// When config files are updated
+			filemtime( __DIR__ . '/../LocalSettings.php' ),
+			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
+
+			// When MediaWiki is upgraded
+			filemtime( "$IP/includes/Defines.php" ),
+
+			// When ManageWiki is changed
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+		);
+
+		$extensions = self::readFromCache(
+			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			$confActualMtime,
+			'extensions'
+		);
+
+		if ( $extensions ) {
+			return $extensions;
+		}
+
+		static $cacheArray = null;
+		$cacheArray ??= self::getCacheArray();
+
+		if ( !$cacheArray ) {
 			return [];
 		}
 
@@ -426,12 +568,15 @@ class MirahezeFunctions {
 		) );
 
 		$enabledExtensions = array_keys(
-			array_diff( $allExtensions, $this->disabledExtensions )
+			array_diff( $allExtensions, static::$disabledExtensions )
 		);
 
 		// To-Do: Deprecate 'var', and make database/cache use extension names
 		/* return array_intersect( array_keys(
-			array_intersect( array_flip( $allExtensions ), $this->cacheArray['extensions'] )
+			array_intersect(
+				array_flip( $allExtensions ),
+				$cacheArray['extensions'] ?? []
+			)
 		), $enabledExtensions ); */
 
 		return array_intersect(
@@ -439,7 +584,7 @@ class MirahezeFunctions {
 				array_flip( array_filter( array_flip(
 					array_column( $wgManageWikiExtensions, 'var', 'name' )
 				) ) ),
-				$this->cacheArray['extensions']
+				$cacheArray['extensions'] ?? []
 			) ),
 			$enabledExtensions
 		);
@@ -448,28 +593,40 @@ class MirahezeFunctions {
 	public function isExtensionActive( string $extension ): bool {
 		static $activeExtensions = null;
 
-		$activeExtensions ??= $this->getActiveExtensions();
+		$activeExtensions ??= self::getActiveExtensions();
 		return in_array( $extension, $activeExtensions );
 	}
 
 	public function isAnyOfExtensionsActive( string ...$extensions ): bool {
 		static $activeExtensions = null;
 
-		$activeExtensions ??= $this->getActiveExtensions();
+		$activeExtensions ??= self::getActiveExtensions();
 		return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
 	}
 
 	public function isAllOfExtensionsActive( string ...$extensions ): bool {
 		static $activeExtensions = null;
 
-		$activeExtensions ??= $this->getActiveExtensions();
+		$activeExtensions ??= self::getActiveExtensions();
 		return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
 	}
 
 	public function loadExtensions() {
-		$this->cacheArray ??= $this->getCacheArray();
+		$this->cacheArray ??= self::getCacheArray();
 
 		if ( !$this->cacheArray ) {
+			global $wgConf;
+			if ( self::getRealm() !== 'default' ) {
+				$wgConf->siteParamsCallback = static function () {
+					return [
+						'suffix' => null,
+						'lang' => 'en',
+						'tags' => [ self::getRealm() ],
+						'params' => [],
+					];
+				};
+			}
+
 			return;
 		}
 
@@ -499,14 +656,12 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-		if ( isset( $this->cacheArray['extensions'] ) ) {
-			foreach ( $this->getActiveExtensions() as $name ) {
-				$path = $list[ $name ] ?? false;
+		foreach ( self::getActiveExtensions() as $name ) {
+			$path = $list[ $name ] ?? false;
 
-				$pathInfo = pathinfo( $path )['extension'] ?? false;
-				if ( $path && $pathInfo === 'json' ) {
-					ExtensionRegistry::getInstance()->queue( $path );
-				}
+			$pathInfo = pathinfo( $path )['extension'] ?? false;
+			if ( $path && $pathInfo === 'json' ) {
+				ExtensionRegistry::getInstance()->queue( $path );
 			}
 		}
 	}
