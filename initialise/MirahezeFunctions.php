@@ -751,14 +751,12 @@ class MirahezeFunctions {
 	public static function onGenerateDatabaseLists( &$databaseLists ) {
 		$databaseLists = [
 			'active' => [
-				'active' => 'databases',
-				'databases' => self::getActiveList(
+				'combi' => self::getActiveList(
 					self::GLOBAL_DATABASE['default']
 				),
 			],
 			'active-beta' => [
-				'active-beta' => 'databases',
-				'databases' => self::getActiveList(
+				'combi' => self::getActiveList(
 					self::GLOBAL_DATABASE['beta']
 				),
 			],
