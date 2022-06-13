@@ -21,7 +21,7 @@ $wgMajorSiteNoticeID = 69;
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
-			<td style="font-size: 120%; border-left: 4px solid #180F67; background-color: #F7F6FF; padding: 10px 15px;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Information" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/OOjs_UI_icon_info.svg" decoding="async" width="50" height="50"></div> Miraheze will be upgrading to the latest version of MediaWiki, MediaWiki 1.38, on Wednesday, 15 June 2022 from <b><u>20:00 UTC</u></b> to approximately 22:00 UTC. During this time, you won't be able to make changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins.</div></div>
+			<td style="font-size: 120%; border-left: 4px solid #180F67; background-color: #F7F6FF; padding: 10px 15px;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Information" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/OOjs_UI_icon_info.svg" decoding="async" width="50" height="50"></div> Miraheze will be upgrading to the latest version of MediaWiki, MediaWiki 1.38, from Wednesday, 15 June 2022 <b><u>20:00 UTC</u></b> to 16 June 2022 at approximately 00:00 UTC. During this time, you won't be able to make changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins.</div></div>
 			</td></tr>
 			</tbody></table>
 		EOF;
