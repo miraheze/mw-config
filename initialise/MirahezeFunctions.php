@@ -335,7 +335,7 @@ class MirahezeFunctions {
 				self::getManageWikiConfigCache()
 			);
 
-			$globals = self::getConfigForCacheing();
+			$globals = self::getConfigForCaching();
 
 			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
 
@@ -350,7 +350,7 @@ class MirahezeFunctions {
 		return $globals;
 	}
 
-	public static function getConfigForCacheing() {
+	public static function getConfigForCaching() {
 		global $wgDBname, $wgConf;
 
 		$wikiTags = [];
