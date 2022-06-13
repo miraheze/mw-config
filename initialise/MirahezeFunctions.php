@@ -301,11 +301,14 @@ class MirahezeFunctions {
 		), true );
 	}
 
-	public static function getConfigGlobals(): array {
-		global $IP, $wgDBname, $wgConf;
+	public static function getConfigGlobals( ?string $wiki = null, $wgConf = null ): array {
+		global $IP, $wgDBname;
+
+		$wiki ??= $wgDBname;
+		$wgConf ??= new SiteConfiguration();
 
 		// Try configuration cache
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wiki.json";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -322,7 +325,7 @@ class MirahezeFunctions {
 			filemtime( "$IP/includes/Defines.php" ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wiki . '.json' )
 		);
 
 		$globals = self::readFromCache(
@@ -333,9 +336,9 @@ class MirahezeFunctions {
 		if ( !$globals ) {
 			wfLoadMirahezeConfig( $wgConf );
 
-			$globals = self::getConfigForCaching();
+			$globals = self::getConfigForCaching( $wiki, $wgConf );
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions( $wiki ) ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
@@ -357,9 +360,7 @@ class MirahezeFunctions {
 		return $config;
 	}
 
-	public static function getConfigForCaching() {
-		global $wgDBname, $wgConf;
-
+	public static function getConfigForCaching( string $wiki, $wgConf ) {
 		$wikiTags = [];
 		if ( self::getRealm() !== 'default' ) {
 			$wikiTags[] = self::getRealm();
@@ -374,11 +375,11 @@ class MirahezeFunctions {
 		}
 
 		$wikiTags = array_merge( preg_filter( '/^/', 'ext-',
-				str_replace( ' ', '', self::getActiveExtensions() )
+				str_replace( ' ', '', self::getActiveExtensions( $wiki ) )
 			), $wikiTags
 		);
 
-		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+		list( $site, $lang ) = $wgConf->siteFromDB( $wiki );
 		$dbSuffix = self::getCurrentSuffix();
 
 		$confParams = [
@@ -386,7 +387,7 @@ class MirahezeFunctions {
 			'site' => $site,
 		];
 
-		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
+		$globals = $wgConf->getAll( $wiki, $dbSuffix, $confParams, $wikiTags );
 
 		return $globals;
 	}
@@ -531,10 +532,10 @@ class MirahezeFunctions {
 		return $this->cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
 	}
 
-	public static function getActiveExtensions(): array {
-		global $IP, $wgDBname;
+	public static function getActiveExtensions( ?string $wiki = null ): array {
+		global $IP;
 
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wiki.json";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -547,7 +548,7 @@ class MirahezeFunctions {
 			filemtime( "$IP/includes/Defines.php" ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wiki . '.json' )
 		);
 
 		$extensions = self::readFromCache(
