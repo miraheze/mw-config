@@ -53,7 +53,10 @@ $wgPasswordSender = 'noreply@miraheze.org';
 
 $wmgUploadHostname = 'static.miraheze.org';
 
-require_once '/srv/mediawiki/config/LocalConfig.php';
+function wfLoadMirahezeConfig( $conf ) {
+	$settings = MirahezeFunctions::getFullConfig();
+	$conf->settings = $settings;
+}
 
 // Start settings requiring external dependency checks/functions
 if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
