@@ -140,6 +140,7 @@ class MirahezeFunctions {
 
 		$wgConf->suffixes = array_keys( self::SUFFIXES );
 		$wgConf->wikis = self::getLocalDatabases();
+		$wgConf->fullLoadCallback = 'wfLoadMirahezeConfig';
 	}
 
 	public static function getRealm(): string {
@@ -330,10 +331,7 @@ class MirahezeFunctions {
 		);
 
 		if ( !$globals ) {
-			$wgConf->settings = array_merge(
-				$wgConf->settings,
-				self::getManageWikiConfigCache()
-			);
+			wfLoadMirahezeConfig( $wgConf );
 
 			$globals = self::getConfigForCaching();
 
@@ -348,6 +346,15 @@ class MirahezeFunctions {
 		}
 
 		return $globals;
+	}
+
+	public static function getFullConfig(): array {
+		$config = array_merge(
+			require __DIR__ . '/../LocalConfig.php',
+			self::getManageWikiConfigCache()
+		);
+
+		return $config;
 	}
 
 	public static function getConfigForCaching() {
