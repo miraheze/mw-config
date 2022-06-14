@@ -38,9 +38,9 @@ class MirahezeFunctions {
 		'wikibeta' => 'betaheze.org',
 	];
 
-	public function __construct() {
+	public function __construct( $conf = null ) {
 		self::setupHooks();
-		self::setupSiteConfiguration();
+		self::setupSiteConfiguration( $conf );
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = self::getCurrentDatabase();
@@ -133,7 +133,7 @@ class MirahezeFunctions {
 		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 	}
 
-	public static function setupSiteConfiguration( $conf = null ) {
+	public static function setupSiteConfiguration( $conf ) {
 		global $wgConf;
 
 		$conf ??= new SiteConfiguration();
