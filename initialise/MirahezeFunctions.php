@@ -667,7 +667,6 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-
 		foreach ( self::getActiveExtensions() as $name ) {
 			$path = $list[ $name ] ?? false;
 
