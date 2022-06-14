@@ -1,5 +1,10 @@
 <?php
 
+require_once '/srv/mediawiki/config/vendor/autoload.php';
+
+use pcrov\JsonReader\InputStream\IOException;
+use pcrov\JsonReader\JsonReader;
+
 class MirahezeFunctions {
 	private $cacheArray;
 
@@ -413,18 +418,21 @@ class MirahezeFunctions {
 		string $confActualMtime,
 		string $type = 'globals'
 	): ?array {
-		$cacheRecord = @file_get_contents( $confCacheFile );
+		try {
+			$reader = new JsonReader();
+			$reader->open( $confCacheFile );
+			$reader->read( 'mtime' );
 
-		if ( $cacheRecord !== false ) {
-			$cacheObject = json_decode( $cacheRecord, true );
+			if ( ( $reader->value() ?? null ) === $confActualMtime ) {
+				while ( $reader->next() ) {
+					$value = $reader->value() ?? null;
+					$reader->close();
 
-			if ( json_last_error() === JSON_ERROR_NONE ) {
-				if ( ( $cacheObject['mtime'] ?? null ) === $confActualMtime ) {
-					return $cacheObject[$type] ?? null;
+					yield $value;
 				}
-			} else {
-				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
 			}
+		} catch ( IOException $e ) {
+			trigger_error( 'Config cache failure: Decoding failed', $e );
 		}
 
 		return null;
@@ -553,6 +561,7 @@ class MirahezeFunctions {
 			return $extensions;
 		}
 
+
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
 
@@ -656,12 +665,28 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-		foreach ( self::getActiveExtensions() as $name ) {
-			$path = $list[ $name ] ?? false;
+		try {
+			$reader = new JsonReader();
+			$reader->open( self::CACHE_DIRECTORY . '/config-' . $wgDBname . '.json' );
 
-			$pathInfo = pathinfo( $path )['extension'] ?? false;
-			if ( $path && $pathInfo === 'json' ) {
-				ExtensionRegistry::getInstance()->queue( $path );
+			while ( $reader->read( 'extensions' ) ) {
+				$path = $list[ $reader->value() ] ?? false;
+
+				$pathInfo = pathinfo( $path )['extension'] ?? false;
+				if ( $path && $pathInfo === 'json' ) {
+					ExtensionRegistry::getInstance()->queue( $path );
+				}
+			}
+
+			$reader->close();
+		} catch ( IOException $e ) {
+			foreach ( self::getActiveExtensions() as $name ) {
+				$path = $list[ $name ] ?? false;
+
+				$pathInfo = pathinfo( $path )['extension'] ?? false;
+				if ( $path && $pathInfo === 'json' ) {
+					ExtensionRegistry::getInstance()->queue( $path );
+				}
 			}
 		}
 	}
