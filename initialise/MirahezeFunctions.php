@@ -612,9 +612,9 @@ class MirahezeFunctions {
 	}
 
 	public function loadExtensions() {
-		$this->cacheArray ??= self::getCacheArray();
+		global $wgDBname;
 
-		if ( !$this->cacheArray ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
 			global $wgConf;
 			if ( self::getRealm() !== 'default' ) {
 				$wgConf->siteParamsCallback = static function () {
