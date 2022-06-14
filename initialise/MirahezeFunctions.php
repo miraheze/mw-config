@@ -673,7 +673,7 @@ class MirahezeFunctions {
 
 			while ( $reader->read( 'extensions' ) ) {
 				var_dump( $reader->value() );
-				$path = $list[ $reader->value() ] ?? false;
+				$path = $list[ $reader->value()[1] ] ?? false;
 
 				$pathInfo = pathinfo( $path )['extension'] ?? false;
 				if ( $path && $pathInfo === 'json' ) {
