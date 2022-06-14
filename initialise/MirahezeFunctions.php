@@ -672,6 +672,7 @@ class MirahezeFunctions {
 			$reader->open( self::CACHE_DIRECTORY . '/config-' . $wgDBname . '.json' );
 
 			while ( $reader->read( 'extensions' ) ) {
+				var_dump($reader->value());
 				$path = $list[ $reader->value() ] ?? false;
 
 				$pathInfo = pathinfo( $path )['extension'] ?? false;
