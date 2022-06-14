@@ -533,8 +533,9 @@ class MirahezeFunctions {
 	}
 
 	public static function getActiveExtensions( ?string $wiki = null ): array {
-		global $IP;
+		global $IP, $wgDBname;
 
+		$wiki ??= $wgDBname;
 		$confCacheFileName = "config-$wiki.json";
 
 		// To-Do: merge ManageWiki cache with main config cache,
