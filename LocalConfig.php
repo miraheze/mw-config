@@ -1,5 +1,10 @@
 <?php
 
+$wmgUploadHostname = 'static.miraheze.org';
+
+require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
+$wi = new MirahezeFunctions();
+
 return [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -507,7 +512,7 @@ return [
 		'default' => [
 			'default' => [
 				'RecipientUser' => null,
-				'SenderEmail' => $wgPasswordSender,
+				'SenderEmail' => 'noreply@miraheze.org',
 				'SenderName' => 'Miraheze No Reply',
 				'RequireDetails' => true,
 				'IncludeIP' => false, // Should never be set to true
@@ -833,19 +838,19 @@ return [
 	],
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
-			"$IP/maintenance/tables-generated.sql",
-			"$IP/extensions/AbuseFilter/db_patches/mysql/abusefilter.sql",
-			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
-			"$IP/extensions/BetaFeatures/sql/tables-generated.sql",
-			"$IP/extensions/CheckUser/cu_log.sql",
-			"$IP/extensions/CheckUser/cu_changes.sql",
-			"$IP/extensions/DataDump/sql/data_dump.sql",
-			"$IP/extensions/Echo/echo.sql",
-			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
-			"$IP/extensions/OAuth/schema/OAuth.sql",
-			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
-			"/srv/mediawiki/config/138pre-patch.sql",
+			'/srv/mediawiki/w/maintenance/tables-generated.sql',
+			'/srv/mediawiki/w/extensions/AbuseFilter/db_patches/mysql/abusefilter.sql',
+			'/srv/mediawiki/w/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql',
+			'/srv/mediawiki/w/extensions/BetaFeatures/sql/tables-generated.sql',
+			'/srv/mediawiki/w/extensions/CheckUser/cu_log.sql',
+			'/srv/mediawiki/w/extensions/CheckUser/cu_changes.sql',
+			'/srv/mediawiki/w/extensions/DataDump/sql/data_dump.sql',
+			'/srv/mediawiki/w/extensions/Echo/echo.sql',
+			'/srv/mediawiki/w/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql',
+			'/srv/mediawiki/w/extensions/OAuth/schema/OAuth.sql',
+			'/srv/mediawiki/w/extensions/RottenLinks/sql/rottenlinks.sql',
+			'/srv/mediawiki/w/extensions/UrlShortener/schemas/tables-generated.sql',
+			'/srv/mediawiki/config/138pre-patch.sql',
 		],
 	],
 	'wgCreateWikiStateDays' => [
@@ -1959,7 +1964,7 @@ return [
 	],
 	'wgLDAPProxyAgentPassword' => [
 		'ldapwikiwiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'miraheze' => $GLOBALS['wmgLdapPassword'],
 		],
 	],
 	'wgLDAPWriterDN' => [
@@ -1969,7 +1974,7 @@ return [
 	],
 	'wgLDAPWriterPassword' => [
 		'ldapwikiwiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'miraheze' => $GLOBALS['wmgLdapPassword'],
 		],
 	],
 	'wgLDAPWriteLocation' => [
@@ -2185,7 +2190,7 @@ return [
 			'IDHost' => 'miraheze.org',
 			'auth' => true,
 			'username' => 'noreply',
-			'password' => $wmgSMTPPassword,
+			'password' => $GLOBALS['wmgSMTPPassword'],
 		],
 	],
 	'wgEnotifWatchlist' => [
@@ -3055,7 +3060,7 @@ return [
 	],
 	// Email to send notifications to.
 	'wgModerationEmail' => [
-		'default' => $wgPasswordSender,
+		'default' => 'noreply@miraheze.org',
 		'obeymewiki' => 'clarice_desand@yahoo.com',
 	],
 	'wgModerationPreviewLink' => [
