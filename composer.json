@@ -32,7 +32,7 @@
 		"phpunit": "phpunit"
 	},
 	"config": {
-		"optimize-autoloader": true,
+		"classmap-authoritative": true,
 		"prepend-autoloader": false
 	}
 }
