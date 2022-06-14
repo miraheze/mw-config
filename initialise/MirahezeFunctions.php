@@ -671,15 +671,15 @@ class MirahezeFunctions {
 			$reader = new JsonReader();
 			$reader->open( self::CACHE_DIRECTORY . '/config-' . $wgDBname . '.json' );
 
-			while ( $reader->read( 'extensions' ) ) {
-				var_dump( $reader->value()[2] );
-				$path = $list[ $reader->value()[2] ] ?? false;
+			do {
+				var_dump( $reader->value() );
+				$path = $list[ $reader->value() ] ?? false;
 
 				$pathInfo = pathinfo( $path )['extension'] ?? false;
 				if ( $path && $pathInfo === 'json' ) {
 					ExtensionRegistry::getInstance()->queue( $path );
 				}
-			}
+			} while ( $reader->read( 'extensions' ) );
 
 			$reader->close();
 		} catch ( IOException $e ) {
