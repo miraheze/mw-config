@@ -32,7 +32,6 @@
 		"phpunit": "phpunit"
 	},
 	"config": {
-		"optimize-autoloader": true,
-		"apcu-autoloader": true
+		"classmap-authoritative": true
 	}
 }
