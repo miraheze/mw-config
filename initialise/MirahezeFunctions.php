@@ -564,7 +564,6 @@ class MirahezeFunctions {
 			return $extensions;
 		}
 
-
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
 
