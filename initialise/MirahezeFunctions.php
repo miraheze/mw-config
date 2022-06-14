@@ -133,10 +133,12 @@ class MirahezeFunctions {
 		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 	}
 
-	public static function setupSiteConfiguration() {
+	public static function setupSiteConfiguration( $conf = null ) {
 		global $wgConf;
 
-		$wgConf = new SiteConfiguration();
+		$conf ??= new SiteConfiguration();
+
+		$wgConf = $conf;
 
 		$wgConf->suffixes = array_keys( self::SUFFIXES );
 		$wgConf->wikis = self::getLocalDatabases();
