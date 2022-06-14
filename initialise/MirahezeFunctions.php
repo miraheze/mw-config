@@ -667,29 +667,13 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-		try {
-			$reader = new JsonReader();
-			$reader->open( self::CACHE_DIRECTORY . '/config-' . $wgDBname . '.json' );
 
-			do {
-				var_dump( $reader->value() );
-				$path = $list[ $reader->value() ] ?? false;
+		foreach ( self::getActiveExtensions() as $name ) {
+			$path = $list[ $name ] ?? false;
 
-				$pathInfo = pathinfo( $path )['extension'] ?? false;
-				if ( $path && $pathInfo === 'json' ) {
-					ExtensionRegistry::getInstance()->queue( $path );
-				}
-			} while ( $reader->read( 'extensions' ) );
-
-			$reader->close();
-		} catch ( IOException $e ) {
-			foreach ( self::getActiveExtensions() as $name ) {
-				$path = $list[ $name ] ?? false;
-
-				$pathInfo = pathinfo( $path )['extension'] ?? false;
-				if ( $path && $pathInfo === 'json' ) {
-					ExtensionRegistry::getInstance()->queue( $path );
-				}
+			$pathInfo = pathinfo( $path )['extension'] ?? false;
+			if ( $path && $pathInfo === 'json' ) {
+				ExtensionRegistry::getInstance()->queue( $path );
 			}
 		}
 	}
