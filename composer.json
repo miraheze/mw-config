@@ -30,5 +30,9 @@
 		],
 		"phpcs": "phpcs -sp --cache",
 		"phpunit": "phpunit"
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"apcu-autoloader": true
 	}
 }
