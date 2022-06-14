@@ -333,7 +333,7 @@ class MirahezeFunctions {
 			self::readFromCache(
 				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 				$confActualMtime
-			);
+			)
 		)[1] ?? null;
 
 		if ( !$globals ) {
@@ -557,7 +557,7 @@ class MirahezeFunctions {
 				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 				$confActualMtime,
 				'extensions'
-			);
+			)
 		)[2] ?? null;
 
 		if ( $extensions ) {
