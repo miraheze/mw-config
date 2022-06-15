@@ -305,6 +305,8 @@ class MirahezeFunctions {
 		), true );
 	}
 
+	private static $globals;
+
 	public static function getConfigGlobals(): array {
 		global $IP, $wgDBname, $wgConf;
 
@@ -327,21 +329,20 @@ class MirahezeFunctions {
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
 
-		static $globals = null;
-		$globals ??= iterator_to_array(
+		self::$globals ??= iterator_to_array(
 			self::readFromCache(
 				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 				$confActualMtime
 			)
 		)[1] ?? null;
 
-		if ( !$globals ) {
+		if ( !self::$globals ) {
 			$wgConf->settings = array_merge(
 				$wgConf->settings,
 				self::getManageWikiConfigCache()
 			);
 
-			$globals = self::getConfigForCaching();
+			self::$globals = self::getConfigForCaching();
 
 			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
 
@@ -353,7 +354,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		return $globals;
+		return self::$globals;
 	}
 
 	public static function getConfigForCaching() {
