@@ -1,9 +1,6 @@
 {
 	"name": "miraheze/mw-config",
 	"description": "",
-	"require": {
-		"pcrov/jsonreader": "^1.0"
-	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "39.0.0",
 		"mediawiki/minus-x": "1.1.1",
@@ -12,7 +9,7 @@
 		"phpunit/phpunit": "^9.5",
 		"justinrainbow/json-schema": "5.2.12"
 	},
-	"autoload-dev": {
+	"autoload": {
 		"psr-4": {
 			"Miraheze\\Config\\Tests\\": "tests/"
 		}
@@ -30,9 +27,5 @@
 		],
 		"phpcs": "phpcs -sp --cache",
 		"phpunit": "phpunit"
-	},
-	"config": {
-		"optimize-autoloader": true,
-		"prepend-autoloader": false
 	}
 }
