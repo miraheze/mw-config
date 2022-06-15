@@ -423,9 +423,9 @@ class MirahezeFunctions {
 			$reader->open( $confCacheFile );
 			$reader->read( 'mtime' );
 
-			if ( ( $reader->value() ?? null ) === $confActualMtime ) {
+			if ( $reader->value() === $confActualMtime ) {
 				do {
-					yield $reader->value() ?? null;
+					yield $reader->value();
 				} while ( $reader->read( $type ) );
 			}
 
