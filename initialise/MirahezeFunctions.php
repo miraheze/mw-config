@@ -305,7 +305,7 @@ class MirahezeFunctions {
 		), true );
 	}
 
-	private static $globals;
+	private static $activeExtensions;
 
 	public static function getConfigGlobals(): array {
 		global $IP, $wgDBname, $wgConf;
@@ -329,22 +329,25 @@ class MirahezeFunctions {
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
 
-		self::$globals ??= iterator_to_array(
+		static $globals = null;
+		$globals ??= iterator_to_array(
 			self::readFromCache(
 				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 				$confActualMtime
 			)
 		)[1] ?? null;
 
-		if ( !self::$globals ) {
+		if ( !$globals ) {
 			$wgConf->settings = array_merge(
 				$wgConf->settings,
 				self::getManageWikiConfigCache()
 			);
 
-			self::$globals = self::getConfigForCaching();
+			self::$activeExtensions ??= self::getActiveExtensions();
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
+			$globals = self::getConfigForCaching();
+
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::$activeExtensions ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
@@ -354,7 +357,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		return self::$globals;
+		return $globals;
 	}
 
 	public static function getConfigForCaching() {
@@ -373,8 +376,9 @@ class MirahezeFunctions {
 			}
 		}
 
+		self::$activeExtensions ??= self::getActiveExtensions();
 		$wikiTags = array_merge( preg_filter( '/^/', 'ext-',
-				str_replace( ' ', '', self::getActiveExtensions() )
+				str_replace( ' ', '', self::$activeExtensions )
 			), $wikiTags
 		);
 
@@ -602,8 +606,6 @@ class MirahezeFunctions {
 		);
 	}
 
-	private static $activeExtensions;
-
 	public function isExtensionActive( string $extension ): bool {
 		self::$activeExtensions ??= self::getActiveExtensions();
 		return in_array( $extension, self::$activeExtensions );
@@ -664,7 +666,8 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-		foreach ( self::getActiveExtensions() as $name ) {
+		self::$activeExtensions ??= self::getActiveExtensions();
+		foreach ( self::$activeExtensions as $name ) {
 			$path = $list[ $name ] ?? false;
 
 			$pathInfo = pathinfo( $path )['extension'] ?? false;
