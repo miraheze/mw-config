@@ -171,7 +171,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			'length' => 1000,
 		],
 	];
-	$wgWBRepoSettings['allowEntityImport'] = false;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = [
 		// Photos
 		'P386',
