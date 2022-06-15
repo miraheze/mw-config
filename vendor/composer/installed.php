@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'miraheze/mw-config',
-        'pretty_version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
-        'version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
-        'reference' => 'a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
+        'pretty_version' => 'dev-c25ced79ed8f79f9de02bbaaf0a087b36570e05e',
+        'version' => 'dev-c25ced79ed8f79f9de02bbaaf0a087b36570e05e',
+        'reference' => 'c25ced79ed8f79f9de02bbaaf0a087b36570e05e',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -89,9 +89,9 @@
             'dev_requirement' => true,
         ),
         'miraheze/mw-config' => array(
-            'pretty_version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
-            'version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
-            'reference' => 'a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
+            'pretty_version' => 'dev-c25ced79ed8f79f9de02bbaaf0a087b36570e05e',
+            'version' => 'dev-c25ced79ed8f79f9de02bbaaf0a087b36570e05e',
+            'reference' => 'c25ced79ed8f79f9de02bbaaf0a087b36570e05e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
