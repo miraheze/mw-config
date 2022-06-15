@@ -423,7 +423,7 @@ class MirahezeFunctions {
 			$cacheObject = json_decode( $cacheRecord, true );
 
 			if ( json_last_error() === JSON_ERROR_NONE ) {
-				if ( ( $cacheObject['mtime'] ?? null ) === $confActualMtime ) {
+				if ( ( $cacheObject['mtime'] ?? null ) == $confActualMtime ) {
 					return $cacheObject[$type] ?? null;
 				}
 			} else {
