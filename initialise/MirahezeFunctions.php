@@ -60,6 +60,16 @@ class MirahezeFunctions {
 		$this->setSiteNames();
 	}
 
+	private static $instance;
+
+	public static function getInstance(): self {
+		if ( self::$instance === null ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
 	public static function getLocalDatabases(): array {
 		global $wgLocalDatabases;
 
@@ -343,7 +353,7 @@ class MirahezeFunctions {
 
 			$globals = self::getConfigForCaching();
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getInstance()->getActiveExtensions() ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
@@ -373,7 +383,7 @@ class MirahezeFunctions {
 		}
 
 		$wikiTags = array_merge( preg_filter( '/^/', 'ext-',
-				str_replace( ' ', '', self::getActiveExtensions() )
+				str_replace( ' ', '', self::getInstance()->getActiveExtensions() )
 			), $wikiTags
 		);
 
@@ -532,7 +542,7 @@ class MirahezeFunctions {
 		return $this->cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
 	}
 
-	public static function getActiveExtensions(): array {
+	public function getActiveExtensions(): array {
 		global $IP, $wgDBname;
 
 		$confCacheFileName = "config-$wgDBname.json";
@@ -604,21 +614,21 @@ class MirahezeFunctions {
 	public function isExtensionActive( string $extension ): bool {
 		static $activeExtensions = null;
 
-		$activeExtensions ??= self::getActiveExtensions();
+		$activeExtensions ??= self::getInstance()->getActiveExtensions();
 		return in_array( $extension, $activeExtensions );
 	}
 
 	public function isAnyOfExtensionsActive( string ...$extensions ): bool {
 		static $activeExtensions = null;
 
-		$activeExtensions ??= self::getActiveExtensions();
+		$activeExtensions ??= self::getInstance()->getActiveExtensions();
 		return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
 	}
 
 	public function isAllOfExtensionsActive( string ...$extensions ): bool {
 		static $activeExtensions = null;
 
-		$activeExtensions ??= self::getActiveExtensions();
+		$activeExtensions ??= self::getInstance()->getActiveExtensions();
 		return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
 	}
 
@@ -667,7 +677,7 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-		foreach ( self::getActiveExtensions() as $name ) {
+		foreach ( self::getInstance()->getActiveExtensions() as $name ) {
 			$path = $list[ $name ] ?? false;
 
 			$pathInfo = pathinfo( $path )['extension'] ?? false;
