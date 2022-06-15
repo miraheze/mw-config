@@ -21,6 +21,7 @@ wfLoadExtensions( [
 	'EventStreamConfig',
 	'GlobalCssJs',
 	'GlobalNewFiles',
+	'ImportDump',
 	'IncidentReporting',
 	'Interwiki',
 	'LoginNotify',
