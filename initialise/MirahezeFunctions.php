@@ -428,6 +428,7 @@ class MirahezeFunctions {
 				}
 			} else {
 				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
+			}
 		}
 
 		return null;
