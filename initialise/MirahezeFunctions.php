@@ -605,17 +605,17 @@ class MirahezeFunctions {
 
 	public function isExtensionActive( string $extension ): bool {
 		self::$activeExtensions ??= self::getActiveExtensions();
-		return in_array( $extension, $activeExtensions );
+		return in_array( $extension, self::$activeExtensions );
 	}
 
 	public function isAnyOfExtensionsActive( string ...$extensions ): bool {
 		self::$activeExtensions ??= self::getActiveExtensions();
-		return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
+		return count( array_intersect( $extensions, self::$activeExtensions ) ) > 0;
 	}
 
 	public function isAllOfExtensionsActive( string ...$extensions ): bool {
 		self::$activeExtensions ??= self::getActiveExtensions();
-		return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
+		return count( array_intersect( $extensions, self::$activeExtensions ) ) === count( $extensions );
 	}
 
 	public function loadExtensions() {
