@@ -898,7 +898,6 @@ $wgConf->settings += [
 			"$IP/extensions/OAuth/schema/OAuth.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
-			"/srv/mediawiki/config/138pre-patch.sql",
 		],
 	],
 	'wgCreateWikiStateDays' => [
