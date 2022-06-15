@@ -35,7 +35,7 @@ jobs:
 
     - name: Push the changes
       continue-on-error: true
-      if: github.event_name == 'pull_request_disable'
+      if: github.event_name == 'pull_request'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
