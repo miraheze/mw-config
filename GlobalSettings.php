@@ -129,7 +129,7 @@ if ( !$cwPrivate ) {
 		'omit_bots' => true,
 	];
 
-	$wgConf->settings['wgDiscordIncomingWebhookUrl']['default'] = $wmgGlobalDiscordWebhookUrl;
+	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 } else {
 	if ( $wmgPrivateUploads ) {
 		$wgConf->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
