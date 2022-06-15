@@ -4,6 +4,6 @@ ExtensionMessageFiles.php
 *.key
 
 # Testing
-# /composer.lock
-# /vendor
+/composer.lock
+/vendor
 /node_modules
