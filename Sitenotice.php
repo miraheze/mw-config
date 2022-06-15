@@ -6,7 +6,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 69;
+$wgMajorSiteNoticeID = 70;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -21,7 +21,7 @@ $wgMajorSiteNoticeID = 69;
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
-			<td style="font-size: 120%; border-left: 4px solid #180F67; background-color: #F7F6FF; padding: 10px 15px;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Information" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/OOjs_UI_icon_info.svg" decoding="async" width="50" height="50"></div> Miraheze will be upgrading to the latest version of MediaWiki, MediaWiki 1.38, from Wednesday, 15 June 2022 <b><u>20:00 UTC</u></b> to 16 June 2022 at approximately 00:00 UTC. During this time, you won't be able to make changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins.</div></div>
+			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Information" src="https://upload.wikimedia.org/wikipedia/commons/7/73/MediaWiki-2020-installer-large-icon.svg" decoding="async" width="50" height="50"></div> Miraheze is currently upgrading to MediaWiki 1.38. The upgrade will finish on Thursday, 16 June 2022 at <b><u>00:00 UTC</u></b>. All wikis are in read-only mode at the moment meaning you cannot make changes to your wiki. Wikis may not be readable during this time. Thank you for your understanding.</div></div>
 			</td></tr>
 			</tbody></table>
 		EOF;
