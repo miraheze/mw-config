@@ -1010,7 +1010,7 @@ $wgConf->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => 'Miraheze is upgrading to MediaWiki 1.38.',
+		'default' => false,
 	],
 	'wgSharedTables' => [
 		'default' => [],
