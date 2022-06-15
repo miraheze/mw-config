@@ -75,56 +75,56 @@ class MirahezeFunctions {
 	}
 
 	public static function readDbListFile( $dblist, $onlyDBs = true, $database = false, $fromServer = false ) {
-			if ( $database && $onlyDBs && !$fromServer ) {
-				return $database;
-			}
+		if ( $database && $onlyDBs && !$fromServer ) {
+			return $database;
+		}
 
-			if ( $dblist === 'production' ) {
-				$dblist = 'databases';
-			}
+		if ( $dblist === 'production' ) {
+			$dblist = 'databases';
+		}
 
-			if ( $dblist === 'deleted-production' ) {
-				$dblist = 'deleted';
-			}
+		if ( $dblist === 'deleted-production' ) {
+			$dblist = 'deleted';
+		}
 
-			if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
-				$databases = [];
-
-				return $databases;
-			} else {
-				$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
-			}
-
-			if ( $database ) {
-				if ( $fromServer ) {
-					$server = $database;
-					$database = false;
-					foreach ( $databasesArray['combi'] ?? $databasesArray['databases'] as $key => $data ) {
-						if ( isset( $data['u'] ) && $data['u'] === $server ) {
-							$database = $key;
-							break;
-						}
-					}
-
-					if ( $onlyDBs ) {
-						return $database;
-					}
-				}
-
-				if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
-					return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
-				} else {
-					return false;
-				}
-			} else {
-				$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
-			}
-
-			if ( $onlyDBs ) {
-				return array_keys( $databases );
-			}
+		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
+			$databases = [];
 
 			return $databases;
+		} else {
+			$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
+		}
+
+		if ( $database ) {
+			if ( $fromServer ) {
+				$server = $database;
+				$database = false;
+				foreach ( $databasesArray['combi'] ?? $databasesArray['databases'] as $key => $data ) {
+					if ( isset( $data['u'] ) && $data['u'] === $server ) {
+						$database = $key;
+						break;
+					}
+				}
+
+				if ( $onlyDBs ) {
+					return $database;
+				}
+			}
+
+			if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
+				return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
+			} else {
+				return false;
+			}
+		} else {
+			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+		}
+
+		if ( $onlyDBs ) {
+			return array_keys( $databases );
+		}
+
+		return $databases;
 	}
 
 	public static function setupHooks() {
