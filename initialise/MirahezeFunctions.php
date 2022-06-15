@@ -423,7 +423,7 @@ class MirahezeFunctions {
 			$reader->open( $confCacheFile );
 			$reader->read( 'mtime' );
 
-			if ( $reader->value() === $confActualMtime ) {
+			if ( $reader->value() == $confActualMtime ) {
 				do {
 					yield $reader->value();
 				} while ( $reader->read( $type ) );
@@ -434,7 +434,7 @@ class MirahezeFunctions {
 			trigger_error( 'Config cache failure: Decoding failed', $e );
 		}
 
-		yield null;
+		return null;
 	}
 
 	public static function getManageWikiConfigCache(): array {
@@ -550,7 +550,8 @@ class MirahezeFunctions {
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
 
-		$extensions = iterator_to_array(
+		static $extensions = null;
+		$extensions ??= iterator_to_array(
 			self::readFromCache(
 				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 				$confActualMtime,
