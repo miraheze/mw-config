@@ -55,13 +55,17 @@ class MirahezeFunctions {
 		$this->setSiteNames();
 	}
 
+	private static $currentDatabase;
+
 	public static function getLocalDatabases(): array {
 		global $wgLocalDatabases;
 
 		static $list = null;
 		static $databases = null;
 
-		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ? 'beta' : 'production';
 
 		// We need the CLI to be able to access 'deleted' wikis
 		if ( PHP_SAPI === 'cli' ) {
@@ -145,7 +149,9 @@ class MirahezeFunctions {
 	public static function getRealm(): string {
 		static $realm = null;
 
-		$realm ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ?
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		$realm ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ?
 			self::TAGS['beta'] : self::TAGS['default'];
 
 		return $realm;
@@ -161,7 +167,9 @@ class MirahezeFunctions {
 		static $default = null;
 		static $list = null;
 
-		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::getCurrentDatabase() ] ) ? 'beta' : 'production';
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ? 'beta' : 'production';
 		$databases = self::readDbListFile( $list, false, $database );
 
 		if ( $deleted ) {
@@ -245,7 +253,9 @@ class MirahezeFunctions {
 	}
 
 	public static function getServer(): string {
-		return self::getServers( self::getCurrentDatabase() ?: 'default' );
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		return self::getServers( self::$currentDatabase ?: 'default' );
 	}
 
 	public function setServers() {
@@ -280,25 +290,33 @@ class MirahezeFunctions {
 	}
 
 	public static function getSiteName() {
-		return self::getSiteNames()[self::getCurrentDatabase()] ?? self::getSiteNames()['default'];
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		return self::getSiteNames()[ self::$currentDatabase ] ?? self::getSiteNames()['default'];
 	}
 
 	public static function isMissing() {
 		global $wgConf;
 
-		return !in_array( self::getCurrentDatabase(), $wgConf->wikis );
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		return !in_array( self::$currentDatabase, $wgConf->wikis );
 	}
 
 	public static function getCacheArray(): array {
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::getCurrentDatabase() . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' ) ) {
 			return [];
 		}
 
 		return (array)json_decode( file_get_contents(
-			self::CACHE_DIRECTORY . '/' . self::getCurrentDatabase() . '.json'
+			self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json'
 		), true );
 	}
+
+	private static $activeExtensions;
 
 	public static function getConfigGlobals(): array {
 		global $IP, $wgDBname, $wgConf;
@@ -310,9 +328,7 @@ class MirahezeFunctions {
 		// to automatically update when ManageWiki is updated
 		$confActualMtime = max(
 			// When config files are updated
-			filemtime( __DIR__ . '/../GlobalSettings.php' ),
 			filemtime( __DIR__ . '/../LocalSettings.php' ),
-			filemtime( __DIR__ . '/../LocalWiki.php' ),
 			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
 			filemtime( __DIR__ . '/../ManageWikiNamespaces.php' ),
 			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
@@ -324,7 +340,8 @@ class MirahezeFunctions {
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
 
-		$globals = self::readFromCache(
+		static $globals = null;
+		$globals ??= self::readFromCache(
 			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 			$confActualMtime
 		);
@@ -335,9 +352,11 @@ class MirahezeFunctions {
 				self::getManageWikiConfigCache()
 			);
 
+			self::$activeExtensions ??= self::getActiveExtensions();
+
 			$globals = self::getConfigForCaching();
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::getActiveExtensions() ];
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::$activeExtensions ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
@@ -366,8 +385,9 @@ class MirahezeFunctions {
 			}
 		}
 
+		self::$activeExtensions ??= self::getActiveExtensions();
 		$wikiTags = array_merge( preg_filter( '/^/', 'ext-',
-				str_replace( ' ', '', self::getActiveExtensions() )
+				str_replace( ' ', '', self::$activeExtensions )
 			), $wikiTags
 		);
 
@@ -419,7 +439,7 @@ class MirahezeFunctions {
 			$cacheObject = json_decode( $cacheRecord, true );
 
 			if ( json_last_error() === JSON_ERROR_NONE ) {
-				if ( ( $cacheObject['mtime'] ?? null ) === $confActualMtime ) {
+				if ( ( $cacheObject['mtime'] ?? null ) == $confActualMtime ) {
 					return $cacheObject[$type] ?? null;
 				}
 			} else {
@@ -543,7 +563,8 @@ class MirahezeFunctions {
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
 
-		$extensions = self::readFromCache(
+		static $extensions = null;
+		$extensions ??= self::readFromCache(
 			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 			$confActualMtime,
 			'extensions'
@@ -591,24 +612,18 @@ class MirahezeFunctions {
 	}
 
 	public function isExtensionActive( string $extension ): bool {
-		static $activeExtensions = null;
-
-		$activeExtensions ??= self::getActiveExtensions();
-		return in_array( $extension, $activeExtensions );
+		self::$activeExtensions ??= self::getActiveExtensions();
+		return in_array( $extension, self::$activeExtensions );
 	}
 
 	public function isAnyOfExtensionsActive( string ...$extensions ): bool {
-		static $activeExtensions = null;
-
-		$activeExtensions ??= self::getActiveExtensions();
-		return count( array_intersect( $extensions, $activeExtensions ) ) > 0;
+		self::$activeExtensions ??= self::getActiveExtensions();
+		return count( array_intersect( $extensions, self::$activeExtensions ) ) > 0;
 	}
 
 	public function isAllOfExtensionsActive( string ...$extensions ): bool {
-		static $activeExtensions = null;
-
-		$activeExtensions ??= self::getActiveExtensions();
-		return count( array_intersect( $extensions, $activeExtensions ) ) === count( $extensions );
+		self::$activeExtensions ??= self::getActiveExtensions();
+		return count( array_intersect( $extensions, self::$activeExtensions ) ) === count( $extensions );
 	}
 
 	public function loadExtensions() {
@@ -656,7 +671,8 @@ class MirahezeFunctions {
 			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
 		}
 
-		foreach ( self::getActiveExtensions() as $name ) {
+		self::$activeExtensions ??= self::getActiveExtensions();
+		foreach ( self::$activeExtensions as $name ) {
 			$path = $list[ $name ] ?? false;
 
 			$pathInfo = pathinfo( $path )['extension'] ?? false;
