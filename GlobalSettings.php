@@ -158,7 +158,7 @@ if ( $wmgPrivateUploads ) {
 
 // DataDump
 $dataDumpDirectory = $wgConf->settings['wgDataDumpDirectory']['default'];
-$wgConf->settings['wgDataDump']['default'] = [
+$wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
 		'generate' => [
