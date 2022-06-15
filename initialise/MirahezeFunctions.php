@@ -1,10 +1,5 @@
 <?php
 
-require_once '/srv/mediawiki/config/vendor/autoload.php';
-
-use pcrov\JsonReader\InputStream\IOException;
-use pcrov\JsonReader\JsonReader;
-
 class MirahezeFunctions {
 	private $cacheArray;
 
@@ -330,12 +325,10 @@ class MirahezeFunctions {
 		);
 
 		static $globals = null;
-		$globals ??= iterator_to_array(
-			self::readFromCache(
-				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
-				$confActualMtime
-			)
-		)[1] ?? null;
+		$globals ??= self::readFromCache(
+			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			$confActualMtime
+		);
 
 		if ( !$globals ) {
 			$wgConf->settings = array_merge(
@@ -423,21 +416,18 @@ class MirahezeFunctions {
 		string $confCacheFile,
 		string $confActualMtime,
 		string $type = 'globals'
-	): Generator {
-		try {
-			$reader = new JsonReader();
-			$reader->open( $confCacheFile );
-			$reader->read( 'mtime' );
+	): ?array {
+		$cacheRecord = @file_get_contents( $confCacheFile );
 
-			if ( $reader->value() == $confActualMtime ) {
-				do {
-					yield $reader->value();
-				} while ( $reader->read( $type ) );
-			}
+		if ( $cacheRecord !== false ) {
+			$cacheObject = json_decode( $cacheRecord, true );
 
-			$reader->close();
-		} catch ( IOException $e ) {
-			trigger_error( 'Config cache failure: Decoding failed', $e );
+			if ( json_last_error() === JSON_ERROR_NONE ) {
+				if ( ( $cacheObject['mtime'] ?? null ) === $confActualMtime ) {
+					return $cacheObject[$type] ?? null;
+				}
+			} else {
+				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
 		}
 
 		return null;
@@ -557,13 +547,11 @@ class MirahezeFunctions {
 		);
 
 		static $extensions = null;
-		$extensions ??= iterator_to_array(
-			self::readFromCache(
-				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
-				$confActualMtime,
-				'extensions'
-			)
-		)[2] ?? null;
+		$extensions ??= self::readFromCache(
+			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			$confActualMtime,
+			'extensions'
+		);
 
 		if ( $extensions ) {
 			return $extensions;
