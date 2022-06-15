@@ -327,7 +327,8 @@ class MirahezeFunctions {
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
 
-		$globals = iterator_to_array(
+		static $globals = null;
+		$globals ??= iterator_to_array(
 			self::readFromCache(
 				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
 				$confActualMtime
