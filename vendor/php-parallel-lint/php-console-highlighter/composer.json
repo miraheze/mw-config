@@ -1,0 +1,73 @@
+{
+    "name": "php-parallel-lint/php-console-highlighter",
+    "description": "Highlight PHP code in terminal",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jakub Onderka",
+            "email": "acci@acci.cz",
+            "homepage": "http://www.acci.cz/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"PHP_Parallel_Lint\\PhpConsoleHighlighter\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"PHP_Parallel_Lint\\PhpConsoleHighlighter\\Test\\": "tests/"}
+    },
+    "require": {
+        "php": ">=5.3.2",
+        "ext-tokenizer": "*",
+        "php-parallel-lint/php-console-color": "^1.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.36 || ^5.7.21 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
+        "php-parallel-lint/php-parallel-lint": "^1.0",
+        "php-parallel-lint/php-var-dump-check": "0.*",
+        "php-parallel-lint/php-code-style": "^2.0"
+    },
+    "replace": {
+        "jakub-onderka/php-console-highlighter": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts" : {
+        "phplint": [
+            "@php ./vendor/php-parallel-lint/php-parallel-lint/parallel-lint . -e php --exclude vendor --exclude .git"
+        ],
+        "vardumpcheck": [
+            "@php ./vendor/php-parallel-lint/php-var-dump-check/var-dump-check . --exclude vendor --exclude .git"
+        ],
+        "phpcs": [
+            "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --report-full --report-checkstyle=./build/logs/checkstyle.xml"
+        ],
+        "fixcs": [
+            "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+        ],
+        "phpunit": [
+            "@php ./vendor/phpunit/phpunit/phpunit --no-coverage"
+        ],
+        "coverage": [
+            "@php ./vendor/phpunit/phpunit/phpunit"
+        ],
+        "build": [
+            "@phplint",
+            "@vardumpcheck",
+            "@phpcs",
+            "@phpunit"
+        ]
+    },
+    "scripts-descriptions": {
+        "phplint": "Check syntax errors in PHP files",
+        "vardumpcheck": "Check PHP files for forgotten variable dumps",
+        "phpcs": "Check PHP code style",
+        "fixcs": "Auto-fix PHP code style",
+        "phpunit": "PHP unit",
+        "coverage": "PHP unit with code coverage",
+        "build": "Run all checks"
+    }
+}
