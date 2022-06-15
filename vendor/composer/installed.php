@@ -1,15 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'miraheze/mw-config',
-<<<<<<< HEAD
-        'pretty_version' => 'dev-e71ee978b07e943ee6d7429681418d463d57df5e',
-        'version' => 'dev-e71ee978b07e943ee6d7429681418d463d57df5e',
-        'reference' => 'e71ee978b07e943ee6d7429681418d463d57df5e',
-=======
-        'pretty_version' => 'dev-25669e6a267b5503ecb0f7e55ab8774061d430d2',
-        'version' => 'dev-25669e6a267b5503ecb0f7e55ab8774061d430d2',
-        'reference' => '25669e6a267b5503ecb0f7e55ab8774061d430d2',
->>>>>>> 84246880 (Revert "CI: lint code to MediaWiki standards")
+        'pretty_version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
+        'version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
+        'reference' => 'a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -95,15 +89,9 @@
             'dev_requirement' => true,
         ),
         'miraheze/mw-config' => array(
-<<<<<<< HEAD
-            'pretty_version' => 'dev-e71ee978b07e943ee6d7429681418d463d57df5e',
-            'version' => 'dev-e71ee978b07e943ee6d7429681418d463d57df5e',
-            'reference' => 'e71ee978b07e943ee6d7429681418d463d57df5e',
-=======
-            'pretty_version' => 'dev-25669e6a267b5503ecb0f7e55ab8774061d430d2',
-            'version' => 'dev-25669e6a267b5503ecb0f7e55ab8774061d430d2',
-            'reference' => '25669e6a267b5503ecb0f7e55ab8774061d430d2',
->>>>>>> 84246880 (Revert "CI: lint code to MediaWiki standards")
+            'pretty_version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
+            'version' => 'dev-a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
+            'reference' => 'a0e05931a17aee03fab458ba3b3d86bb4a5d8934',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
