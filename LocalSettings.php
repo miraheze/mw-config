@@ -1232,9 +1232,6 @@ $wgConf->settings += [
 	],
 
 	// DataDump
-	'wgDataDump' => [
-		'default' => []
-	],
 	'wgDataDumpDirectory' => [
 		'default' => "/mnt/mediawiki-static/{$wi->dbname}/dumps/",
 	],
