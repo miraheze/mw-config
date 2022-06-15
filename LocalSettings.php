@@ -3622,6 +3622,7 @@ $wgConf->settings += [
 			'minerva',
 			'timeless',
 			'vector',
+			'vector-2022',
 		],
 	],
 	'wgRelatedArticlesUseCirrusSearch' => [
@@ -4118,10 +4119,10 @@ $wgConf->settings += [
 		'default' => '/srv/mediawiki/favicons/default.ico',
 	],
 	'wgDefaultSkin' => [
-		'default' => 'vector',
+		'default' => 'vector-2022',
 	],
 	'wgFallbackSkin' => [
-		'default' => 'vector',
+		'default' => 'vector-2022',
 	],
 	'wgFavicon' => [
 		'default' => '/favicon.ico',
@@ -4420,19 +4421,22 @@ $wgConf->settings += [
 	],
 
 	// Vector
+	'wgVectorSkinMigrationMode' => [
+		'default' => true, // Remove with 1.39
+	],
 	'wgVectorDefaultSkinVersion' => [
-		'default' => '1',
+		'default' => '2', // Remove with 1.39
 	],
 	'wgVectorDefaultSkinVersionForExistingAccounts' => [
-		'default' => '1',
+		'default' => '2',
 	],
 	'wgVectorDefaultSkinVersionForNewAccounts' => [
-		'default' => '1',
+		'default' => '2',
 	],
 	'wgVectorResponsive' => [
 		'default' => false,
 	],
-	'wgVectorUseWvuiSearch' => [
+	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
 	],
 	'wgVectorWvuiSearchOptions' => [
