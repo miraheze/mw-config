@@ -1,0 +1,53 @@
+{
+    "name": "pcrov/jsonreader",
+    "homepage": "https://github.com/pcrov/jsonreader",
+    "description": "JSON Pull Parser",
+    "keywords": [
+        "json",
+        "streaming",
+        "pull",
+        "parser"
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Paul Crovella",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "ext-intl": "*",
+        "pcrov/unicode": "^0.1",
+        "psr/http-message": "^1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "nst/jsontestsuite": "^1"
+    },
+    "autoload": {
+        "psr-4": {
+            "pcrov\\JsonReader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "pcrov\\JsonReader\\": "test/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "nst/jsontestsuite",
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/nst/JSONTestSuite",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        }
+    ]
+}
