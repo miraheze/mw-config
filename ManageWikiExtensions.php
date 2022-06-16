@@ -3418,7 +3418,6 @@ $wgManageWikiExtensions = [
 				'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
 				'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
 				'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
-				'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_dispatch.sql",
 				'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
 				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql"
 			],
@@ -3437,7 +3436,6 @@ $wgManageWikiExtensions = [
 		'install' => [
 			'sql' => [
 				'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
-				'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_dispatch.sql",
 				'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
 				'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
 				'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
