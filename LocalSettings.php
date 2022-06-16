@@ -1230,14 +1230,6 @@ $wgConf->settings += [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
 
-	// DataDump
-	'wgDataDumpDirectory' => [
-		'default' => "/mnt/mediawiki-static/{$wi->dbname}/dumps/",
-	],
-	'wgDataDumpDownloadUrl' => [
-		'default' => "https://static.miraheze.org/{$wi->dbname}/dumps/\${filename}",
-	],
-
 	// FlaggedRevs
 	'wgFlaggedRevsProtection' => [
 		'default' => false,
