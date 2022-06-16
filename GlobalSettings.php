@@ -102,7 +102,7 @@ if ( wfHostname() === 'test101' ) {
 
 // Closed Wikis
 if ( $cwClosed ) {
-	$wgConf->settings['wgRevokePermissions']['default'] = [
+	$wgRevokePermissions = [
 		'*' => [
 			'block' => true,
 			'createaccount' => true,
@@ -116,7 +116,7 @@ if ( $cwClosed ) {
 	];
 
 	if ( $wi->isExtensionActive( 'Comments' ) ) {
-		$wgConf->settings['wgRevokePermissions']['default']['*']['comment'] = true;
+		$wgRevokePermissions['*']['comment'] = true;
 	}
 }
 
@@ -130,15 +130,18 @@ if ( !$cwPrivate ) {
 	];
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
+
+	$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
+	$wgDataDumpDownloadUrl = "https://static.miraheze.org/{$wi->dbname}/dumps/\${filename}";
 } else {
 	if ( $wmgPrivateUploads ) {
-		$wgConf->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
+		$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
 	} else {
-		$wgConf->settings['wgDataDumpDirectory']['default'] = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
+		$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
 	}
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
-	$wgConf->settings['wgDataDumpDownloadUrl']['default'] = '';
+	$wgDataDumpDownloadUrl = '';
 }
 
 // Experimental Wikis
@@ -157,7 +160,6 @@ if ( $wmgPrivateUploads ) {
 }
 
 // DataDump
-$dataDumpDirectory = $wgConf->settings['wgDataDumpDirectory']['default'];
 $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
@@ -169,7 +171,7 @@ $wgDataDump = [
 				'--logs',
 				'--uploads',
 				'--output',
-				"gzip:{$dataDumpDirectory}" . '${filename}',
+				"gzip:{$wgDataDumpDirectory}" . '${filename}',
 			],
 			'arguments' => [
 				'--namespaces'
@@ -209,7 +211,7 @@ $wgDataDump = [
 				'--exclude',
 				"{$wgUploadDirectory}/dumps",
 				'-zcvf',
-				$dataDumpDirectory . '${filename}',
+				$wgDataDumpDirectory . '${filename}',
 				"{$wgUploadDirectory}/"
 			],
 		],
@@ -251,7 +253,7 @@ if ( $wmgUploadWizardFlickrApiKey ?? false ) {
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
-	$wgConf->settings['+wgFooterIcons']['default']['poweredby']['wikiapiary'] = [
+	$wgFooterIcons['poweredby']['wikiapiary'] = [
 		'src' => 'https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'

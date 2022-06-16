@@ -1230,14 +1230,6 @@ $wgConf->settings += [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
 
-	// DataDump
-	'wgDataDumpDirectory' => [
-		'default' => "/mnt/mediawiki-static/{$wi->dbname}/dumps/",
-	],
-	'wgDataDumpDownloadUrl' => [
-		'default' => "https://static.miraheze.org/{$wi->dbname}/dumps/\${filename}",
-	],
-
 	// FlaggedRevs
 	'wgFlaggedRevsProtection' => [
 		'default' => false,
@@ -3329,7 +3321,7 @@ $wgConf->settings += [
 	'wgGroupsRemoveFromSelf' => [
 		'default' => [],
 	],
-	'wgRevokePermissions' => [
+	'+wgRevokePermissions' => [
 		'default' => [],
 		'+metawiki' => [
 			'requestwikiblocked' => [
@@ -5193,6 +5185,11 @@ function extractGlobals() {
 	$globals = MirahezeFunctions::getConfigGlobals();
 
 	foreach ( $globals as $global => $value ) {
-		$GLOBALS[$global] = $value;
+		if (
+			!isset( $GLOBALS['wgConf']->settings["+$global"] ) ||
+			array_key_exists( $global, MirahezeFunctions::getManageWikiConfigCache() )
+		) {
+			$GLOBALS[$global] = $value;
+		}
 	}
 }
