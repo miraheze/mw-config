@@ -5195,7 +5195,7 @@ function extractGlobals() {
 	foreach ( $globals as $global => $value ) {
 		if (
 			!isset( $GLOBALS['wgConf']->settings["+$global"] ) ||
-			in_array( $global, array_keys( MirahezeFunctions::getManageWikiConfigCache() ) )
+			array_key_exists( $global, MirahezeFunctions::getManageWikiConfigCache() )
 		) {
 			$GLOBALS[$global] = $value;
 		}
