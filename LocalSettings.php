@@ -2483,7 +2483,7 @@ $wgConf->settings += [
 			'steward' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
-				'centralauth-oversight' => true,
+				'centralauth-suppress' => true,
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
@@ -2616,7 +2616,6 @@ $wgConf->settings += [
 				'bigdelete',
 				'centralauth-createlocal',
 				'centralauth-lock',
-				'centralauth-oversight',
 				'centralauth-suppress',
 				'centralauth-rename',
 				'centralauth-unmerge',
