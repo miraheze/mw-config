@@ -5106,6 +5106,11 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches 
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
+if ( wfHostname() === 'test101' ) {
+	// Prevent cache (better be safe than sorry)
+	$wgConf->settings['wgUseCdn']['default'] = false;
+}
+
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [ 'editnotify', 'regexfunctions' ];
@@ -5157,11 +5162,6 @@ require_once '/srv/mediawiki/config/Sitenotice.php';
 
 if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
-}
-
-if ( wfHostname() === 'test101' ) {
-	// Prevent cache (better be safe than sorry)
-	$wgConf->settings['wgUseCdn']['default'] = false;
 }
 
 // Define last to avoid all dependencies
