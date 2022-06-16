@@ -2946,6 +2946,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'share' => [
+		'name' => 'Share',
+		'linkPage' => 'https://github.com/AgentIsai/Share',
+		'var' => 'wmgUseShare',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'simpleblogpage' => [
 		'name' => 'SimpleBlogPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleBlogPage',
