@@ -1885,7 +1885,7 @@ $wgConf->settings += [
 	'wgJsonConfigEnableLuaSupport' => [
 		'default' => true,
 	],
-	'wgJsonConfigs' => [
+	'+wgJsonConfigs' => [
 		'default' => [
 			'Map.JsonConfig' => [
 				'namespace' => 486,
