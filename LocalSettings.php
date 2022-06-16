@@ -5193,6 +5193,11 @@ function extractGlobals() {
 	$globals = MirahezeFunctions::getConfigGlobals();
 
 	foreach ( $globals as $global => $value ) {
-		$GLOBALS[$global] = $value;
+		if (
+			!isset( $GLOBALS['wgConf']->settings["+$global"] ) ||
+			in_array( $global, array_keys( MirahezeFunctions::getManageWikiConfigCache() ) )
+		) {
+			$GLOBALS[$global] = $value;
+		}
 	}
 }
