@@ -347,69 +347,66 @@ if ( $wgDBname === 'commonswiki' ) {
 // Licensing variables
 switch ( $wmgWikiLicense ) {
 	case 'arr':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/License_icon-copyright-88x31.svg/88px-License_icon-copyright-88x31.svg.png';
-		$wgConf->settings['wgRightsText']['default'] = 'All Rights Reserved';
-		$wgConf->settings['wgRightsUrl']['default'] = false;
+		$wgRightsIcon = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/License_icon-copyright-88x31.svg/88px-License_icon-copyright-88x31.svg.png';
+		$wgRightsText = 'All Rights Reserved';
+		$wgRightsUrl = false;
 		break;
 	case 'cc-by':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
-		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by/4.0';
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
+		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
 		break;
 	case 'cc-by-nc':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
-		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc/4.0/';
+		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png';
+		$wgRightsText = 'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc/4.0/';
 		break;
 	case 'cc-by-nd':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png';
-		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nd/4.0/';
+		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png';
+		$wgRightsText = 'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nd/4.0/';
 		break;
 	case 'cc-by-sa':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/4.0/';
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsText = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
 	case 'cc-by-sa-2-0-kr':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons BY-SA 2.0 Korea';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsText = 'Creative Commons BY-SA 2.0 Korea';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
 		break;
 	case 'cc-by-sa-nc':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
-		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
+		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 		break;
 	case 'cc-by-nc-nd':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png';
-		$wgConf->settings['wgRightsText']['default'] = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
+		$wgRightsIcon = 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png';
+		$wgRightsText = 'Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
 		break;
 	case 'cc-pd':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
-		$wgConf->settings['wgRightsText']['default'] = 'CC0 Public Domain';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
+		$wgRightsText = 'CC0 Public Domain';
+		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
 	case 'gpl-v3':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gplv3-or-later.png';
-		$wgConf->settings['wgRightsText']['default'] = 'GPLv3';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
+		$wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+		$wgRightsText = 'GPLv3';
+		$wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
 		break;
 	case 'gfdl':
-		$wgConf->settings['wgRightsIcon']['default'] = 'https://www.gnu.org/graphics/gfdl-logo-tiny.png';
-		$wgConf->settings['wgRightsText']['default'] = 'GNU Free Document License 1.3';
-		$wgConf->settings['wgRightsUrl']['default'] = 'https://www.gnu.org/licenses/fdl-1.3.en.html';
+		$wgRightsIcon = 'https://www.gnu.org/graphics/gfdl-logo-tiny.png';
+		$wgRightsText = 'GNU Free Document License 1.3';
+		$wgRightsUrl = 'https://www.gnu.org/licenses/fdl-1.3.en.html';
 		break;
 	case 'empty':
-		break;
+	default:
+		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsText = 'Creative Commons Attribution Share Alike';
+		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 }
-
-$wgFooterIcons['copyright']['copyright'] = [
-	'url' => $wgConf->get( 'wgRightsUrl', $wi->dbname ),
-	'src' => $wgConf->get( 'wgRightsIcon', $wi->dbname ),
-	'alt' => $wgConf->get( 'wgRightsText', $wi->dbname ),
-];
 
 $wgMaxShellMemory = 215040; // 210MB
 $wgMaxShellFileSize = 51200; // 50MB
