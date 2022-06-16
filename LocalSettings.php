@@ -436,9 +436,6 @@ $wgConf->settings += [
 		'default' => 'https://meta.miraheze.org',
 		'betaheze' => 'https://beta.betaheze.org',
 	],
-	'wgNoticeProject' => [
-		'default' => 'all',
-	],
 	'wgNoticeProjects' => [
 		'default' => [
 			'all',
