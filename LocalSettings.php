@@ -3321,7 +3321,7 @@ $wgConf->settings += [
 	'wgGroupsRemoveFromSelf' => [
 		'default' => [],
 	],
-	'wgRevokePermissions' => [
+	'+wgRevokePermissions' => [
 		'default' => [],
 		'+metawiki' => [
 			'requestwikiblocked' => [
