@@ -31,9 +31,9 @@ $wgMajorSiteNoticeID = 71;
 
 // Specific wiki SiteNotice
 if ( $wi->isAnyOfExtensionsActive( 'Vector' ) ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	$wgHooks['SiteNoticeAfter'][] = 'onVectorNoticeAfter';
 
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	function onVectorNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
