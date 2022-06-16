@@ -102,7 +102,7 @@ if ( wfHostname() === 'test101' ) {
 
 // Closed Wikis
 if ( $cwClosed ) {
-	$wgConf->settings['wgRevokePermissions']['default'] = [
+	$wgRevokePermissions = [
 		'*' => [
 			'block' => true,
 			'createaccount' => true,
@@ -116,7 +116,7 @@ if ( $cwClosed ) {
 	];
 
 	if ( $wi->isExtensionActive( 'Comments' ) ) {
-		$wgConf->settings['wgRevokePermissions']['default']['*']['comment'] = true;
+		$wgRevokePermissions['*']['comment'] = true;
 	}
 }
 
