@@ -422,10 +422,6 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
-// Slack
-$wgConf->settings['wgSlackFromName']['default'] = $wgSitename;
-$wgConf->settings['wgSlackNotificationWikiUrl']['default'] = $wgServer . '/w/';
-
 // Scribunto
 $wgScribuntoEngineConf = [
 	'luasandbox' => [
