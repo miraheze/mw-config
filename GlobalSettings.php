@@ -334,14 +334,14 @@ if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
 
 // JsonConfig
 if ( $wgDBname === 'commonswiki' ) {
-	$wgConf->settings['wgJsonConfigs']['default']['Map.JsonConfig']['store'] = true;
-	$wgConf->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['store'] = true;
+	$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+	$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 } else {
-	$wgConf->settings['wgJsonConfigs']['default']['Map.JsonConfig']['remote'] = [
+	$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 
-	$wgConf->settings['wgJsonConfigs']['default']['Tabular.JsonConfig']['remote'] = [
+	$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
 }
