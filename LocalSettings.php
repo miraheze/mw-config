@@ -3990,13 +3990,13 @@ $wgConf->settings += [
 
 	// SlackNotifications
 	'wgSlackFromName' => [
-		'default' => '',
+		'default' => $wi->sitename,
 	],
 	'wgSlackNotificationWikiUrlEnding' => [
 		'default' => 'index.php?title=',
 	],
 	'wgSlackNotificationWikiUrl' => [
-		'default' => '',
+		'default' => $wi->server . '/w/',
 	],
 	'wgSlackShowNewUserEmail' => [
 		'default' => false,
