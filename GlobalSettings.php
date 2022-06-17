@@ -410,6 +410,12 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 }
 
+$wgFooterIcons['copyright']['copyright'] = [
+	'url' => $wgRightsUrl,
+	'src' => $wgRightsIcon,
+	'alt' => $wgRightsText,
+];
+
 $wgMaxShellMemory = 215040; // 210MB
 $wgMaxShellFileSize = 51200; // 50MB
 $wgMaxShellTime = 50;
