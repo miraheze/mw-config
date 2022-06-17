@@ -245,7 +245,7 @@ $wgDataDump = [
 if ( $wi->isExtensionActive( 'ContactPage' ) ) {
 	$wgContactConfig = [
 		'default' => [
-			'RecipientUser' => $wmgContactPageRecipientUser,
+			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
 			'SenderEmail' => $wgPasswordSender,
 			'SenderName' => 'Miraheze No Reply',
 			'RequireDetails' => true,
