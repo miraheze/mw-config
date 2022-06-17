@@ -1459,7 +1459,6 @@ $wgManageWikiExtensions = [
 			'permissions' => [
 				'sysop' => [
 					'permissions' => [
-						'managementors',
 						'setmentor',
 					],
 				],
