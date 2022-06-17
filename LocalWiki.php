@@ -146,7 +146,6 @@ switch ( $wi->dbname ) {
 		break;
 	case '402611wiki':
 	case 'ballmediawiki':
-	case 'partyballwiki':
 	case 'polandballfanonwiki':
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
