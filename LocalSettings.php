@@ -1856,7 +1856,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'+wgJsonConfigs' => [
-		'default' => [
+		'ext-JsonConfig' => [
 			'Map.JsonConfig' => [
 				'namespace' => 486,
 				'nsName' => 'Data',
