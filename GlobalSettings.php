@@ -416,10 +416,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://www.gnu.org/licenses/fdl-1.3.en.html';
 		break;
 	case 'empty':
-	default:
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
-		$wgRightsText = 'Creative Commons Attribution Share Alike';
-		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
+		break;
 }
 
 $wgFooterIcons['copyright']['copyright'] = [
