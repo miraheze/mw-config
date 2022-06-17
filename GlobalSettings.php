@@ -47,10 +47,10 @@ if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 	if ( $wmgVisualEditorEnableDefault ) {
-		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 1;
-		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-editor'] = 'visualeditor';
+		$wgDefaultUserOptions['visualeditor-enable'] = 1;
+		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 	} else {
-		$wgConf->settings['+wmgDefaultUserOptions']['default']['visualeditor-enable'] = 0;
+		$wgDefaultUserOptions['visualeditor-enable'] = 0;
 	}
 }
 
