@@ -327,9 +327,21 @@ if ( $wgWordmark ) {
 }
 
 // $wgUrlShortenerAllowedDomains
+$wgUrlShortenerAllowedDomains = [
+	'(.*\.)?miraheze\.org',
+];
+
+if ( preg_match( '/^(.*).betaheze.org$/', $wi->hostname ) ) {
+	$wgUrlShortenerAllowedDomains = [
+		'(.*\.)?betaheze\.org',
+	];
+}
+
 if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
-	$wgConf->settings['wgUrlShortenerAllowedDomains']['default'] =
-		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
+	$wgUrlShortenerAllowedDomains = array_merge(
+		$wgUrlShortenerAllowedDomains,
+		[ preg_quote( str_replace( 'https://', '', $wgServer ) ) ]
+	);
 }
 
 // JsonConfig
