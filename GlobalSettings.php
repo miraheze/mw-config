@@ -332,7 +332,7 @@ $wgUrlShortenerAllowedDomains = [
 ];
 
 if ( preg_match( '/^(.*).betaheze.org$/', $wi->hostname ) ) {
-	$wgUrlShortenerAllowedDomains =  [
+	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?betaheze\.org',
 	];
 }
