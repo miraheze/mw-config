@@ -553,31 +553,8 @@ $wgConf->settings += [
 	],
 
 	// ContactPage
-	'wgContactConfig' => [
-		'default' => [
-			'default' => [
-				'RecipientUser' => null,
-				'SenderEmail' => $wgPasswordSender,
-				'SenderName' => 'Miraheze No Reply',
-				'RequireDetails' => true,
-				'IncludeIP' => false, // Should never be set to true
-				'MustBeLoggedIn' => false,
-				'AdditionalFields' => [
-					'Text' => [
-						'label-message' => 'emailmessage',
-						'type' => 'textarea',
-						'rows' => 20,
-						'required' => true,
-					],
-				],
-				'DisplayFormat' => 'table',
-				'RLModules' => [],
-				'RLStyleModules' => [],
-			],
-		],
-	],
 	'wmgContactPageRecipientUser' => [
-		'default' => false,
+		'default' => null,
 	],
 
 	// Contribution Scores
@@ -4317,11 +4294,6 @@ $wgConf->settings += [
 	],
 
 	// UploadWizard
-	'wgUploadWizardConfig' => [
-		'ext-UploadWizard' => [
-			'campaignExpensiveStatsEnabled' => false,
-		],
-	],
 	'wmgUploadWizardFlickrApiKey' => [
 		'ext-UploadWizard' => 'aeefff139445d825d4460796616f9349',
 	],
