@@ -241,14 +241,37 @@ $wgDataDump = [
 	],
 ];
 
-// $wmgContactPageRecipientUser
-if ( $wmgContactPageRecipientUser ) {
-	$wgConf->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
+// ContactPage configuration
+if ( $wi->isExtensionActive( 'ContactPage' ) ) {
+	$wgContactConfig = [
+		'default' => [
+			'RecipientUser' => $wmgContactPageRecipientUser,
+			'SenderEmail' => $wgPasswordSender,
+			'SenderName' => 'Miraheze No Reply',
+			'RequireDetails' => true,
+			'IncludeIP' => false, // Should never be set to true
+			'MustBeLoggedIn' => false,
+			'AdditionalFields' => [
+				'Text' => [
+					'label-message' => 'emailmessage',
+					'type' => 'textarea',
+					'rows' => 20,
+					'required' => true,
+				],
+			],
+			'DisplayFormat' => 'table',
+			'RLModules' => [],
+			'RLStyleModules' => [],
+		],
+	];
 }
 
-// $wgUploadWizardConfig['flickrApiKey']
-if ( $wmgUploadWizardFlickrApiKey ?? false ) {
-	$wgConf->settings['wgUploadWizardConfig']['ext-UploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
+// UploadWizard configuration
+if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
+	$wgUploadWizardConfig = [
+		'campaignExpensiveStatsEnabled' => false,
+		'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+	];
 }
 
 // $wgFooterIcons
