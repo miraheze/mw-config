@@ -1575,6 +1575,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// GrowthExperiments
+	'wgWelcomeSurveyEnabled' => [
+		'default' => false,
+	],
+
 	// HAWelcome
 	'wgHAWelcomeWelcomeUsername' => [
 		'default' => 'HAWelcome',
