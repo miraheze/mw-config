@@ -241,16 +241,6 @@ $wgDataDump = [
 	],
 ];
 
-// $wmgContactPageRecipientUser
-if ( $wmgContactPageRecipientUser ) {
-	$wgConf->settings['wgContactConfig']['default']['default']['RecipientUser'] = $wmgContactPageRecipientUser;
-}
-
-// $wgUploadWizardConfig['flickrApiKey']
-if ( $wmgUploadWizardFlickrApiKey ?? false ) {
-	$wgConf->settings['wgUploadWizardConfig']['ext-UploadWizard']['flickrApiKey'] = $wmgUploadWizardFlickrApiKey;
-}
-
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
@@ -324,12 +314,6 @@ if ( $wgWordmark ) {
 		'width' => $wgWordmarkWidth,
 		'height' => $wgWordmarkHeight,
 	];
-}
-
-// $wgUrlShortenerAllowedDomains
-if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
-	$wgConf->settings['wgUrlShortenerAllowedDomains']['default'] =
-		array_merge( $wgUrlShortenerAllowedDomains, [ preg_quote( str_replace( 'https://', '', $wgServer ) ) ] );
 }
 
 // JsonConfig
