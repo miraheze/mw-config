@@ -4373,14 +4373,6 @@ $wgConf->settings += [
 		'default' => 'metawiki',
 		'betaheze' => 'betawiki',
 	],
-	'wgUrlShortenerAllowedDomains' => [
-		'default' => [
-			'(.*\.)?miraheze\.org',
-		],
-		'betaheze' => [
-			'(.*\.)?betaheze\.org',
-		],
-	],
 
 	// UserFunctions
 	'wgUFEnablePersonalDataFunctions' => [
