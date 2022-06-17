@@ -2068,6 +2068,7 @@ $wgConf->settings += [
 
 	// License
 	'wgRightsIcon' => [
+		'default' => 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png',
 		'constantnoblewiki' => 'https://upload.wikimedia.org/wikipedia/commons/2/29/Freeculturalworks-pdbutton.svg',
 		'jadtechwiki' => "https://$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
@@ -2084,6 +2085,7 @@ $wgConf->settings += [
 		'taerelvariwiki' => 'Project:Copyrights',
 	],
 	'wgRightsText' => [
+		'default' => 'Creative Commons Attribution Share Alike',
 		'connorjwatwiki' => 'Creative Commons Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)',
 		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
 		'cvswiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2109,6 +2111,7 @@ $wgConf->settings += [
 		'worldtrainwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 	],
 	'wgRightsUrl' => [
+		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'connorjwatwiki' => 'https://creativecommons.org/licenses/by-sa/2.5',
 		'constantnoblewiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'cvswiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
