@@ -5088,7 +5088,7 @@ $wgConf->settings += [
 ];
 
 // Start settings requiring external dependency checks/functions
-if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname, $matches ) ) {
+if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname ) ) {
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
