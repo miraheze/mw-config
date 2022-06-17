@@ -2442,8 +2442,10 @@ $wgConf->settings += [
 			'sysadmin' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
+				'handle-import-dump-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
+				'view-private-import-dump-requests' => true,
 			],
 			'trustandsafety' => [
 				'userrights' => true,
@@ -2456,11 +2458,13 @@ $wgConf->settings += [
 				'handle-pii' => true,
 				'oathauth-disable-for-user' => true,
 				'oathauth-verify-user' => true,
+				'view-private-import-dump-requests' => true,
 			],
 			'sysop' => [
 				'interwiki' => true,
 			],
 			'user' => [
+				'request-import-dump' => true,
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
