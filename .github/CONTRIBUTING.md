@@ -12,6 +12,9 @@ Below is an example of what configuration variables added to our LocalSettings.p
  	],
 ```
 
+**Note:** anything set to the `$wgConf->settings` array anywhere else outside of LocalSettings.php will not be extracted to globals and thus unless you don't need them to, should be avoided.
+This is due to caching for the SiteConfiguration settings, which improves performance, but this is the trade-off for it.
+
 If you would like to add configuration options or extensions/skins to ManageWiki:
 * First add the config to LocalSettings.php, like above. However unlike above you would not add the wiki overrides.
 * Follow the other examples from either ManageWikiSettings.php or ManageWikiNamespaces.php to add configuration variables to the appropriate module of ManageWiki. For ManageWikiSettings.php, make sure they are in the appropriate section.
