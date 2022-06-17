@@ -1443,6 +1443,29 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
+	'growthexperiments' => [
+		'name' => 'GrowthExperiments',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
+		'var' => 'wmgUseGrowthExperiments',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_recommendations.sql",
+				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_submissions.sql",
+				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentee_data.sql",
+				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentor_mentee.sql",
+			],
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'setmentor',
+					],
+				],
+			],
+		],
+		'section' => 'specialpages',
+	],
 	'hitcounters' => [
 		'name' => 'HitCounters',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HitCounters',
