@@ -1768,19 +1768,12 @@ $wgConf->settings += [
 		'+celebswiki' => [
 			'simplewiki',
 		],
-		'+hypixelwiki' => [
-			'hypixelwikifandom',
-		],
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
 		],
 		'+loginwiki' => [
 			'testwikiwiki',
-		],
-		'+memedatawiki' => [
-			'd',
-			'fd',
 		],
 		'+mrjaroslavikwiki' => [
 			'wikipedia' => [
@@ -2051,7 +2044,6 @@ $wgConf->settings += [
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
 		'revitwiki' => "https://$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 		'spnatiwiki' => 'https://upload.wikimedia.org/wikipedia/commons/f/f8/License_icon-mit-88x31-2.svg',
-		'taerelvariwiki' => "https://$wmgUploadHostname/taerelvariwiki/0/03/Copyright.svg.png",
 	],
 	'wgRightsPage' => [
 		'default' => '',
@@ -2059,15 +2051,12 @@ $wgConf->settings += [
 		'diavwiki' => 'Project:Copyrights',
 		'dmlwikiwiki' => 'MediaWiki:Copyright',
 		'quyranesswiki' => 'Project:Copyrights',
-		'taerelvariwiki' => 'Project:Copyrights',
 	],
 	'wgRightsText' => [
 		'default' => 'Creative Commons Attribution Share Alike',
 		'connorjwatwiki' => 'Creative Commons Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)',
 		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
-		'cvswiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
-		'exstatiowiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'googologywiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'incubatorwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'isvwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2080,10 +2069,8 @@ $wgConf->settings += [
 		'reviwiki' => 'Creative Commons Attribution Share Alike',
 		'sekatetwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'spnatiwiki' => 'Copyright (c) 2015 The SPNATI Contributors',
-		'taerelvariwiki' => '©2021 TheBurningPrincess (All Rights Reserved)',
 		'tlhwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'wikidemocracywiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
-		'wikigrowthwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'wikilexiconwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'worldtrainwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 	],
@@ -2091,9 +2078,7 @@ $wgConf->settings += [
 		'default' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 		'connorjwatwiki' => 'https://creativecommons.org/licenses/by-sa/2.5',
 		'constantnoblewiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
-		'cvswiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
-		'exstatiowiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'googologywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'isvwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
@@ -2106,10 +2091,8 @@ $wgConf->settings += [
 		'reviwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
 		'sekatetwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'spnatiwiki' => 'https://gitgud.io/spnati/spnati/-/blob/master/LICENSE',
-		'taerelvariwiki' => 'https://taerelvari.miraheze.org/wiki/MediaWiki:Copyright',
 		'tlhwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'wikidemocracywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
-		'wikigrowthwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'wikilexiconwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'worldtrainwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 	],
@@ -2122,7 +2105,6 @@ $wgConf->settings += [
 		'default' => [],
 		// file protocol only allowed on private wikis
 		'gzewiki' => [ 'file://' ],
-		'kaiwiki' => [ 'file://' ],
 		'vtwiki' => [ 'discord://' ],
 	],
 
@@ -2409,11 +2391,6 @@ $wgConf->settings += [
 			],
 			'UserType7' => [
 				'UserType7' => true,
-			],
-		],
-		'+jacksonheightswiki' => [
-			'emailconfirmed' => [
-				'read' => true,
 			],
 		],
 		'+ldapwikiwiki' => [
@@ -3148,9 +3125,6 @@ $wgConf->settings += [
 	// New User Email Notification
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
-		'femmanwiki' => [
-			'gustav@nyvell.net'
-		],
 	],
 
 	// NewUserMessage configs
@@ -3433,9 +3407,6 @@ $wgConf->settings += [
 			'usebetatoolbar' => 1,
 			'usebetatoolbar-cgd' => 1,
 		],
-		'+bioencyclopediawiki' => [
-			'usenewrc' => 0,
-		],
 		'+criticalrolewiki' => [
 			'thumbsize' => 3,
 		],
@@ -3501,10 +3472,6 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
-		],
-		'+yablestudiowiki' => [
-			'visualeditor-newwikitext' => 1,
-			'visualeditor-tabs' => 'multi-tab',
 		],
 		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
@@ -3680,11 +3647,6 @@ $wgConf->settings += [
 			'bureaucrat',
 			'editextendedconfirmedprotected',
 		],
-		'+hypotheticalhurricaneswiki' => [
-			'editextendedconfirmedprotected',
-			'editbureaucratprotected',
-			'editleaderprotected',
-		],
 		'+igrovyesistemywiki' => [
 			'trusted',
 			'sysmag',
@@ -3724,9 +3686,6 @@ $wgConf->settings += [
 		'+testwiki' => [
 			'bureaucrat',
 			'consul',
-		],
-		'+thesciencearchiveswiki' => [
-			'templateeditor',
 		],
 		'+vnenderbotwiki' => [
 			'template',
@@ -3788,11 +3747,6 @@ $wgConf->settings += [
 		],
 		'hypopediawiki' => [
 			'editextendedconfirmedprotected',
-		],
-		'hypotheticalhurricaneswiki' => [
-			'editextendedconfirmedprotected',
-			'editbureaucratprotected',
-			'editleaderprotected',
 		],
 		'knightnwiki' => [
 			'editextendedsemiprotected',
@@ -4244,11 +4198,6 @@ $wgConf->settings += [
 				'en' => 'English is the source language.',
 			],
 		],
-		'minecraftathomewiki' => [
-			'*' => [
-				'en-gb' => 'This variant of English is not allowed to be translated.',
-			],
-		],
 		'spiralwiki' => [
 			'*' => [
 				'en' => 'English is the source language.',
@@ -4303,7 +4252,6 @@ $wgConf->settings += [
 		'default' => false,
 		'ciptamediawiki' => true,
 		'staffwiki' => true,
-		'mikekilitterboxwiki' => true,
 	],
 	'wmgEnableSharedUploads' => [
 		'default' => false,
