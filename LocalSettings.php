@@ -3051,10 +3051,8 @@ $wgConf->settings += [
 		],
 	],
 	'wgDefaultLanguageVariant' => [
-		'default' => [],
-		'hkrailwiki' => [
-			'zh-hk',
-		],
+		'default' => false,
+		'hkrailwiki' => 'zh-hk',
 	],
 
 	// MobileFrontend
