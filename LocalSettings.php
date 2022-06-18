@@ -1101,6 +1101,12 @@ $wgConf->settings += [
 		'default' => 0,
 	],
 
+	// Editing
+	'wgEditSubmitButtonLabelPublish' => [
+		'default' => false,
+		'ysmwikiwiki' => true,
+	],
+
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
