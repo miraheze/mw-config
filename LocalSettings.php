@@ -1731,7 +1731,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgImportDumpScriptCommand' => [
-		'default' => 'mwscript importDump.php {wiki} --no-updates --username-prefix={username-prefix} {file}',
+		'default' => 'mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} {file}',
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
