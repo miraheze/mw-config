@@ -3882,7 +3882,7 @@ $wgConf->settings += [
 
 	// RSS Settings
 	'wgRSSCacheAge' => [
-		'default' => '3600'
+		'default' => 3600,
 	],
 	'wgRSSProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
