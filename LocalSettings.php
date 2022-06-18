@@ -2962,12 +2962,12 @@ $wgConf->settings += [
 		'default' => [
 			'base' => false,
 			'loggedin' => false,
-			'amc' => false,
+			'amc' => true,
 		],
 		'criticalrolewiki' => [
 			'base' => true,
 			'loggedin' => false,
-			'amc' => false,
+			'amc' => true,
 		],
 	],
 
