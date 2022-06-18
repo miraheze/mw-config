@@ -1100,6 +1100,12 @@ $wgConf->settings += [
 	'wgEchoMaxMentionsInEditSummary' => [
 		'default' => 0,
 	],
+	
+	// Editing
+	'wgEditSubmitButtonLabelPublish' => [
+		'default' => false,
+		'ysmwikiwiki' => true,
+	],
 
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
