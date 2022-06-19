@@ -1739,7 +1739,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgImportDumpScriptCommand' => [
-		'default' => 'mwscript importDump.php {wiki} -y --no-updates --username-prefix=\'"{username-prefix}"\' {file} && mwscript rebuildAll.php {wiki} -y',
+		'default' => 'screen -d -m bash -c "mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} {file}; mwscript rebuildAll.php {wiki} -y"',
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
