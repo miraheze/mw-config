@@ -3923,9 +3923,6 @@ $wgConf->settings += [
 	'wgDisableOutputCompression' => [
 		'default' => true,
 	],
-	'wgScriptExtension' => [
-		'default' => '.php',
-	],
 	'wgScriptPath' => [
 		'default' => '/w',
 	],
