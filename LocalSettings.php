@@ -2458,7 +2458,6 @@ $wgConf->settings += [
 				'handle-import-dump-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
-				'request-import-dump' => true,
 				'view-private-import-dump-requests' => true,
 			],
 			'trustandsafety' => [
@@ -2478,6 +2477,7 @@ $wgConf->settings += [
 				'interwiki' => true,
 			],
 			'user' => [
+				'request-import-dump' => true,
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
