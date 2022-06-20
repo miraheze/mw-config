@@ -131,9 +131,6 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
-	$wgWBClientSettings['entitySources']['gratisdata'] = $entitySources['local'];
-	$wgWBClientSettings['entitySources']['gratisdata']['interwikiPrefix'] = 'd';
-	$wgWBClientSettings['itemAndPropertySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
@@ -263,9 +260,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	];
 	$wgWBRepoSettings['taintedReferencesEnabled'] = true;
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
-	$wgWBRepoSettings['entitySources']['gratisdata'] = $entitySources['local'];
-	$wgWBRepoSettings['entitySources']['gratisdata']['interwikiPrefix'] = 'd';
-	$wgWBRepoSettings['localEntitySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -292,9 +286,6 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
-	$wgWBClientSettings['entitySources']['gratisdata'] = $entitySources['local'];
-	$wgWBClientSettings['entitySources']['gratisdata']['interwikiPrefix'] = 'd';
-	$wgWBClientSettings['itemAndPropertySourceName'] = 'gratisdata';
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
