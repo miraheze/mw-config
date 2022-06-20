@@ -382,10 +382,23 @@ if ( $wgDBname === 'commonswiki' ) {
 }
 
 // Licensing variables
+
+/**
+ * Default values.
+ * We can not set these in LocalSettings.php, to prevent them
+ * from causing absolute overrides.
+ */
 $wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
 $wgRightsText = 'Creative Commons Attribution Share Alike';
 $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
+/**
+ * Override values from ManageWiki.
+ * If set in LocalSettings.php, this will be overridden
+ * by wiki values there, due to caching forcing SiteConfiguration
+ * values to be absolute overrides. This is however how licensing should
+ * be forced. LocalSettings.php values should take priority, which they do.
+ */
 switch ( $wmgWikiLicense ) {
 	case 'arr':
 		$wgRightsIcon = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/License_icon-copyright-88x31.svg/88px-License_icon-copyright-88x31.svg.png';
@@ -446,6 +459,10 @@ switch ( $wmgWikiLicense ) {
 		break;
 }
 
+/**
+ * Make sure it works to override the footer icon
+ * for other overrides in LocalSettings.php.
+ */
 if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 	$wgFooterIcons['copyright']['copyright'] = [
 		'url' => $wgConf->get( 'wgRightsUrl', $wi->dbname ),
