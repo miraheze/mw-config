@@ -507,9 +507,6 @@ $wgConf->settings += [
 	'wgCitizenShowPageTools' => [
 		'default' => true,
 	],
-	'wgCitizenEnableDrawerSubSearch' => [
-		'default' => false,
-	],
 	'wgCitizenPortalAttach' => [
 		'default' => 'first',
 	],
