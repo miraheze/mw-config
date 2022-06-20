@@ -1926,23 +1926,29 @@ $wgConf->settings += [
 	],
 
 	// Kartographer
-	'wgKartographerWikivoyageMode' => [
-		'default' => false,
+	'wgKartographerDfltStyle' => [
+		'default' => '.',
 	],
-	'wgKartographerUseMarkerStyle' => [
-		'default' => false,
+	'wgKartographerEnableMapFrame' => [
+		'default' => true,
 	],
 	'wgKartographerMapServer' => [
 		'default' => 'https://tile.openstreetmap.org',
 	],
-	'wgKartographerDfltStyle' => [
-		'default' => '.',
-	],
 	'wgKartographerSrcsetScales' => [
+		'default' => false,
+	],
+	'wgKartographerStaticMapframe' => [
 		'default' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [],
+	],
+	'wgKartographerUseMarkerStyle' => [
+		'default' => false,
+	],
+	'wgKartographerWikivoyageMode' => [
+		'default' => false,
 	],
 
 	// Language

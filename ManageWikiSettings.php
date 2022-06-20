@@ -1052,6 +1052,24 @@ $wgManageWikiSettings = [
 		'help' => 'Allows Kartographer to extract CSS style to be used by the link from the GeoJSON.',
 		'requires' => [],
 	],
+	'wgKartographerStaticMapframe' => [
+		'name' => 'Kartographer Static Mapframe',
+		'from' => 'kartographer',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'maps',
+		'help' => 'Disables the module that turns <mapframe> tags into interactive mini-maps that can be panned and zoomed without leaving the page.',
+		'requires' => [],
+	],
+	'wgKartographerEnableMapFrame' => [
+		'name' => 'Kartographer Enable Mapframe',
+		'from' => 'kartographer',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'maps',
+		'help' => 'Enables the <mapframe> tag to embed mini-maps directly into pages. The <maplink> tag is always enabled.',
+		'requires' => [],
+	],
 
 	// Parser Functions
 	'wgDLPAllowUnlimitedResults' => [
