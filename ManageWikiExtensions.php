@@ -36,18 +36,6 @@
 
 $wgManageWikiExtensions = [
 	// API
-	'gettingstarted' => [
-		'name' => 'GettingStarted',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GettingStarted',
-		'var' => 'wmgUseGettingStarted',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'guidedtour',
-			],
-		],
-		'section' => 'api',
-	],
 	'pageimages' => [
 		'name' => 'PageImages',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageImages',
@@ -101,7 +89,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'settings' => [
-				'wgFileExtensions' => array_merge( $wgConf->get( 'wgFileExtensions', $wi->dbname ), [ 'stl' ] ),
+				'wgFileExtensions' => array_merge( $wi->getSettingValue( 'wgFileExtensions' ), [ 'stl' ] ),
 			],
 		],
 		'section' => 'mediahandlers',
@@ -668,14 +656,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'magicnumberedheadings' => [
-		'name' => 'MagicNumberedHeadings',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNumberedHeadings',
-		'var' => 'wmgUseMagicNumberedHeadings',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
 	'maps' => [
 		'name' => 'Maps',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Maps',
@@ -1006,19 +986,11 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'tabber' => [
-		'name' => 'Tabber',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabber',
-		'var' => 'wmgUseTabber',
-		'conflicts' => 'tabberneue',
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
 	'tabberneue' => [
 		'name' => 'TabberNeue',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TabberNeue',
 		'var' => 'wmgUseTabberNeue',
-		'conflicts' => 'tabber',
+		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
@@ -1469,6 +1441,29 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseGoogleNewsSitemap',
 		'conflicts' => false,
 		'requires' => [],
+		'section' => 'specialpages',
+	],
+	'growthexperiments' => [
+		'name' => 'GrowthExperiments',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
+		'var' => 'wmgUseGrowthExperiments',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_recommendations.sql",
+				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_submissions.sql",
+				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentee_data.sql",
+				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentor_mentee.sql",
+			],
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'setmentor',
+					],
+				],
+			],
+		],
 		'section' => 'specialpages',
 	],
 	'hitcounters' => [
@@ -2047,14 +2042,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
-	'foreground' => [
-		'name' => 'Foreground',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Foreground',
-		'var' => 'wmgUseForeground',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
 	'gamepress' => [
 		'name' => 'Gamepress',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
@@ -2107,7 +2094,7 @@ $wgManageWikiExtensions = [
 		'name' => 'Mirage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
 		'var' => 'wmgUseMirage',
-		'conflicts' => 'addthis',
+		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
 	],
@@ -2131,14 +2118,6 @@ $wgManageWikiExtensions = [
 		'name' => 'Nostalgia',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nostalgia',
 		'var' => 'wmgUseNostalgia',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'pivot' => [
-		'name' => 'Pivot',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Pivot',
-		'var' => 'wmgUsePivot',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
@@ -2185,14 +2164,6 @@ $wgManageWikiExtensions = [
 	],
 
 	// Other
-	'addthis' => [
-		'name' => 'AddThis',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AddThis',
-		'var' => 'wmgUseAddThis',
-		'conflicts' => 'mirage',
-		'requires' => [],
-		'section' => 'other',
-	],
 	'articlecreationworkflow' => [
 		'name' => 'ArticleCreationWorkflow',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleCreationWorkflow',
@@ -2338,6 +2309,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'categoryexplorer' => [
+		'name' => 'CategoryExplorer',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CategoryExplorer',
+		'var' => 'wmgUseCategoryExplorer',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'categorysortheaders' => [
 		'name' => 'CategorySortHeaders',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CategorySortHeaders',
@@ -2455,12 +2434,21 @@ $wgManageWikiExtensions = [
 		'install' => [],
 		'section' => 'other',
 	],
-	'fancyboxthumbs' => [
-		'name' => 'FancyBoxThumbs',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FancyBoxThumbs',
-		'var' => 'wmgUseFancyBoxThumbs',
+	'externaldata' => [
+		'name' => 'External Data',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data',
+		'var' => 'wmgUseExternalData',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'install' => [
+			'sql' => [
+				'ed_url_cache' => "$IP/extensions/ExternalData/sql/ExternalData.sql"
+			],
+		],
 		'section' => 'other',
 	],
 	'forcepreview' => [
@@ -2550,14 +2538,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'section' => 'other',
-	],
-	'headerfooter' => [
-		'name' => 'HeaderFooter',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Header_Footer',
-		'var' => 'wmgUseHeaderFooter',
-		'conflicts' => false,
-		'requires' => [],
 		'section' => 'other',
 	],
 	'hidesection' => [
@@ -2985,6 +2965,14 @@ $wgManageWikiExtensions = [
 		'name' => 'SandboxLink',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SandboxLink',
 		'var' => 'wmgUseSandboxLink',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
+	'share' => [
+		'name' => 'Share',
+		'linkPage' => 'https://github.com/AgentIsai/Share',
+		'var' => 'wmgUseShare',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
@@ -3469,7 +3457,6 @@ $wgManageWikiExtensions = [
 				'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
 				'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
 				'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
-				'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_dispatch.sql",
 				'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
 				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql"
 			],
@@ -3488,7 +3475,6 @@ $wgManageWikiExtensions = [
 		'install' => [
 			'sql' => [
 				'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
-				'wb_changes_dispatch' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_dispatch.sql",
 				'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
 				'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
 				'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
@@ -3679,16 +3665,3 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 ];
-
-if ( version_compare( MW_VERSION, '1.38', '>=' ) ) {
-	$wgManageWikiExtensions += [
-		'categoryexplorer' => [
-			'name' => 'CategoryExplorer',
-			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CategoryExplorer',
-			'var' => 'wmgUseCategoryExplorer',
-			'conflicts' => false,
-			'requires' => [],
-			'section' => 'other',
-		],
-	];
-}

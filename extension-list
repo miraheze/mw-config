@@ -1,7 +1,6 @@
 $IP/extensions/3D/extension.json
 $IP/extensions/AJAXPoll/extension.json
 $IP/extensions/AddHTMLMetaAndTitle/extension.json
-$IP/extensions/AddThis/extension.json
 $IP/extensions/AdminLinks/extension.json
 $IP/extensions/ApprovedRevs/extension.json
 $IP/extensions/Arrays/extension.json
@@ -69,7 +68,7 @@ $IP/extensions/EmbedSpotify/extension.json
 $IP/extensions/EmbedVideo/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
-$IP/extensions/FancyBoxThumbs/extension.json
+$IP/extensions/ExternalData/extension.json
 $IP/extensions/FlaggedRevs/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/FontAwesome/extension.json
@@ -79,7 +78,6 @@ $IP/extensions/Genealogy/extension.json
 $IP/extensions/GeoCrumbs/extension.json
 $IP/extensions/GeoData/extension.json
 $IP/extensions/GeoGebra/extension.json
-$IP/extensions/GettingStarted/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalNewFiles/extension.json
@@ -91,15 +89,16 @@ $IP/extensions/GoogleDocs4MW/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
 $IP/extensions/GroupsSidebar/extension.json
+$IP/extensions/GrowthExperiments/extension.json
 $IP/extensions/GuidedTour/extension.json
 $IP/extensions/HAWelcome/extension.json
-$IP/extensions/HeaderFooter/extension.json
 $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json
 $IP/extensions/HitCounters/extension.json
 $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageRating/extension.json
+$IP/extensions/ImportDump/extension.json
 $IP/extensions/InputBox/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/InterwikiSorting/extension.json
@@ -119,13 +118,11 @@ $IP/extensions/LinkTarget/extension.json
 $IP/extensions/LinkTitles/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/Listings/extension.json
-$IP/extensions/LocalisationUpdate/extension.json
 $IP/extensions/LockAuthor/extension.json
 $IP/extensions/LoginNotify/extension.json
 $IP/extensions/LogoFunctions/extension.json
 $IP/extensions/Loops/extension.json
 $IP/extensions/MagicNoCache/extension.json
-$IP/extensions/MagicNumberedHeadings/extension.json
 $IP/extensions/ManageWiki/extension.json
 $IP/extensions/Maps/extension.json
 $IP/extensions/Maps/extensions/Validator/Validator.php
@@ -151,6 +148,7 @@ $IP/extensions/MultiBoilerplate/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MyVariables/extension.json
 $IP/extensions/NamespacePreload/extension.json
+$IP/extensions/NativeSvgHandler/extension.json
 $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/NewUserNotif/extension.json
@@ -208,6 +206,7 @@ $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
 $IP/extensions/SemanticMediaWiki/extension.json
+$IP/extensions/Share/extension.json
 $IP/extensions/ShortDescription/extension.json
 $IP/extensions/SimpleBlogPage/extension.json
 $IP/extensions/SimpleChanges/extension.json
@@ -233,7 +232,6 @@ $IP/extensions/StructuredNavigation/extension.json
 $IP/extensions/SubPageList3/extension.json
 $IP/extensions/SubpageFun/extension.json
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
-$IP/extensions/Tabber/extension.json
 $IP/extensions/TabberNeue/extension.json
 $IP/extensions/Tabs/extension.json
 $IP/extensions/TemplateData/extension.json
@@ -318,6 +316,4 @@ $IP/skins/WMAU/skin.json
 $IP/skins/apex/skin.json
 $IP/skins/chameleon/skin.json
 $IP/skins/erudite/skin.json
-$IP/skins/foreground/skin.json
-$IP/skins/pivot/skin.json
 $IP/skins/snapwikiskin/skin.json

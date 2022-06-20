@@ -1,7 +1,7 @@
 <?php
 
 $wgLBFactoryConf = [
-	'class' => LBFactoryMulti::class,
+	'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
@@ -28,7 +28,7 @@ $wgLBFactoryConf = [
 		'flags' => DBO_SSL,
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
-			'innodb_lock_wait_timeout' => 30,
+			'innodb_lock_wait_timeout' => 15,
 		],
 		// MediaWiki checks if the certificate presented by MariaDB is signed
 		// by the certificate authority listed in 'sslCAFile'. In emergencies

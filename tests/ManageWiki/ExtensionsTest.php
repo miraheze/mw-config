@@ -164,11 +164,10 @@ class ExtensionsTest extends ManageWikiTestCase {
 
 	/** @covers $wgManageWikiExtensions */
 	public function testManageWikiExtensions() {
-		global $wgManageWikiExtensions, $wgConf, $wi, $IP;
+		global $wgManageWikiExtensions, $wi, $IP;
 		define( 'MW_VERSION', null );
 
 		$IP = '';
-		$wgConf = $this->mockConfig();
 		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiExtensions.php';
@@ -180,16 +179,12 @@ class ExtensionsTest extends ManageWikiTestCase {
 		return [
 			'A valid configuration should be passed the validation.' => [
 				[
-					'gettingstarted' => [
-						'name' => 'GettingStarted',
+					'shortdescription' => [
+						'name' => 'ShortDescription',
 						'linkPage' => 'foo',
-						'var' => 'wmgUseGettingStarted',
+						'var' => 'wmgUseShortDescription',
 						'conflicts' => false,
-						'requires' => [
-							'extensions' => [
-								'guidedtour',
-							],
-						],
+						'requires' => [],
 						'section' => 'api',
 					],
 				],

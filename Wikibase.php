@@ -20,7 +20,7 @@ $entitySources = [
 	],
 ];
 
-if ( $wgConf->get( 'wmgUseWikibaseLexeme', $wi->dbname ) ) {
+if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
 	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
 	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
 }
@@ -174,7 +174,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 			'length' => 1000,
 		],
 	];
-	$wgWBRepoSettings['allowEntityImport'] = false;
 	$wgWBRepoSettings['preferredPageImagesProperties'] = [
 		// Photos
 		'P386',
@@ -263,6 +262,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'jsonld',
 	];
 	$wgWBRepoSettings['taintedReferencesEnabled'] = true;
+	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 	$wgWBRepoSettings['entitySources']['gratisdata'] = $entitySources['local'];
 	$wgWBRepoSettings['entitySources']['gratisdata']['interwikiPrefix'] = 'd';
 	$wgWBRepoSettings['localEntitySourceName'] = 'gratisdata';

@@ -13,33 +13,28 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	abstract public function getSchema(): array;
 
-	public function mockConfig(): stdClass {
+	public function mockMirahezeFunctions(): stdClass {
+		$methods = [
+			'getSettingValue' => [],
+			'isAllOfExtensionsActive' => true,
+			'isAnyOfExtensionsActive' => true,
+			'isExtensionActive' => true,
+		];
+
 		$mock = $this->getMockBuilder( stdClass::class )
-			->addMethods( [ 'get' ] )
+			->addMethods( array_keys( $methods ) )
 			->getMock();
 
-		$mock
-			->method( 'get' )
-			->willReturnCallback( static function ( $settingName, $wiki, $suffix = null, $params = [],
-				$wikiTags = [] ) {
-					switch ( $settingName ) {
-						case 'wmgUseGamepress':
-							return true;
-						case 'wmgUseTheme':
-							return true;
-						case 'wgFileExtensions':
-							return [];
-					}
-			} );
+		$mock->dbname = '';
+		$mock->hostname = '';
+
+		foreach ( $methods as $m => $returnValue ) {
+			$mock
+				->method( $m )
+				->willReturn( $returnValue );
+		}
 
 		return $mock;
-	}
-
-	public function mockMirahezeFunctions() {
-		return (object)[
-			'dbname' => '',
-			'hostname' => '',
-		];
 	}
 
 	public function assertSchema( $config ) {

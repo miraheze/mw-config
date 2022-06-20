@@ -1,12 +1,13 @@
 <?php
 
+$wgNoticeProject = 'all';
 if ( $wmgSiteNoticeOptOut ) {
 	// Only show important notices when optout
-	$wgConf->settings['wgNoticeProject']['default'] = 'optout';
+	$wgNoticeProject = 'optout';
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 67;
+$wgMajorSiteNoticeID = 71;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -19,23 +20,28 @@ $wgMajorSiteNoticeID = 67;
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>Miraheze will be migrating to newer and faster servers soon. <b>Migration will begin at 22:45 UTC on 14 January, 2022</b> and all wikis will be set to read-only for about 30 minutes. Please save your edits 5-10 minutes before! Images uploads will also be disabled at 19:45 UTC, and all new wiki creations will be paused beginning at 22:15 UTC. For more information, click <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Things_to_note_for_the_upcoming_migration_and_downtime_notice">here</a>.</div></td>
-			</tr></tbody></table>
+			<table style="width: 100% !important;">
+			<tbody><tr>
+			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="MediaWiki 1.38" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/MediaWiki-2020-large-icon.svg" decoding="async" width="50" height="50"></div> Miraheze has upgraded to MediaWiki 1.38. If you notice any bugs, please report them on <a href="https://meta.miraheze.org/wiki/Phabricator">Phabricator</a>, <a href="https://meta.miraheze.org/wiki/Discord">Discord</a>, or <a href="https://meta.miraheze.org/wiki/IRC">IRC</a>.</div></div>
+			</td></tr>
+			</tbody></table>
 		EOF;
 	}
 
- } */
+// } */
 
 // Specific wiki SiteNotice
-/* if ( $wgUseCategoryBrowser ?? false ) {
+/* if ( $wi->isAnyOfExtensionsActive( 'Vector' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
 
 	function onSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
-			<table class="wikitable" style="text-align:center;"><tbody><tr>
-			<td style="font-size:125%"><div data-nosnippet>MediaWiki developers are considering removing <a href="https://www.mediawiki.org/wiki/Manual:&#36;wgUseCategoryBrowser">Category Browser (&#36;wgUseCategoryBrowser)</a>. <b>Miraheze is requesting your feedback on this so we can forward it to MediaWiki developers!</b> Let us know what you think <a href="https://meta.miraheze.org/wiki/Community_noticeboard#Request_for_Feedback:_Removal_of_$wgUseCategoryBrowser_in_MediaWiki_1.38">here</a>.</div></td>
-			</tr></tbody></table>
+			<table style="width: 100% !important;">
+			<tbody><tr>
+			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Advisory" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/OOjs_UI_icon_info.svg" decoding="async" width="50" height="50"></div>MediaWiki 1.38 intoduced new changes to Vector which includes a new design. If you wish to revert to go back to Legacy Vector, go to Special:Preferences and select Legacy Vector. To rollback your wiki, go to Special:ManageWiki/settings -> Styling -> Default skin and set the default skin to 'vector' (not 'vector-2022').</div></div>
+			<div style="text-align:center;"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/MediaWiki/1.38" title="MediaWiki 1.38"><span class="mw-ui-button mw-ui-progressive mw-ui-small">Click here to learn more about the upgrade!</span></a></div></div>
+			</td></tr>
+			</tbody></table>
 		EOF;
 	}
 } */

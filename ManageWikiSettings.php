@@ -363,16 +363,6 @@ $wgManageWikiSettings = [
 		'help' => 'Paging limit for items in categories.',
 		'requires' => [],
 	],
-	'wgUseCategoryBrowser' => [
-		'name' => 'Use Category Browser',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'categories',
-		'help' => 'Enable experimental breadcrumb (or dmoz-style) category browsing?',
-		'requires' => [],
-	],
 	'wgMSCS_WarnNoCategories' => [
 		'name' => 'MsCatSelect warn no categories',
 		'from' => 'mscatselect',
@@ -1624,7 +1614,7 @@ $wgManageWikiSettings = [
 		'name' => 'Contact Page Recipient User',
 		'from' => 'contactpage',
 		'type' => 'user',
-		'overridedefault' => false,
+		'overridedefault' => null,
 		'section' => 'notifications',
 		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
 		'requires' => [],
@@ -2262,7 +2252,7 @@ $wgManageWikiSettings = [
 		'name' => 'Enable Auto Description (WikiSEO)',
 		'from' => 'wikiseo',
 		'type' => 'check',
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'seo',
 		'help' => 'Enable to try to request a description from textextracts, if no description was given, or the description key is set to \'textextracts\'.',
 		'requires' => [
@@ -2276,7 +2266,7 @@ $wgManageWikiSettings = [
 		'name' => 'Try Clean Auto Description (WikiSEO)',
 		'from' => 'wikiseo',
 		'type' => 'check',
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'seo',
 		'help' => 'Enable if WikiSEO should try to remove dangling sentences when using descriptions from textextracts.',
 		'requires' => [
@@ -2546,7 +2536,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'skin',
-		'overridedefault' => 'vector',
+		'overridedefault' => 'vector-2022',
 		'section' => 'styling',
 		'help' => 'Changes the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
 		'requires' => [],
@@ -3129,48 +3119,6 @@ $wgManageWikiSettings = [
 		'help' => 'If not set, then the img.line element (white divider line in the top menu, between the site name and the down arrow/"Upload file" link) won\'t be generated.',
 		'requires' => [],
 	],
-	'wgVectorDefaultSkinVersion' => [
-		'name' => 'Vector Default Skin Version',
-		'from' => 'vector',
-		'global' => true,
-		'type' => 'list',
-		'options' => [
-			'Legacy' => '1',
-			'New' => '2',
-		],
-		'overridedefault' => '1',
-		'section' => 'styling',
-		'help' => 'The version of the Vector skin to use as the default.',
-		'requires' => [],
-	],
-	'wgVectorDefaultSkinVersionForExistingAccounts' => [
-		'name' => 'Vector Default Skin Version For Existing Accounts',
-		'from' => 'vector',
-		'global' => true,
-		'type' => 'list',
-		'options' => [
-			'Legacy' => '1',
-			'New' => '2',
-		],
-		'overridedefault' => '1',
-		'section' => 'styling',
-		'help' => 'The version of the Vector skin to use as the default for existing accounts.',
-		'requires' => [],
-	],
-	'wgVectorDefaultSkinVersionForNewAccounts' => [
-		'name' => 'Vector Default Skin Version For New Accounts',
-		'from' => 'vector',
-		'global' => true,
-		'type' => 'list',
-		'options' => [
-			'Legacy' => '1',
-			'New' => '2',
-		],
-		'overridedefault' => '1',
-		'section' => 'styling',
-		'help' => 'The version of the Vector skin to use as the default for new accounts.',
-		'requires' => [],
-	],
 	'wgVectorResponsive' => [
 		'name' => 'Vector Responsive',
 		'from' => 'vector',
@@ -3178,17 +3126,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'When wgVectorDefaultSkinVersion is set to \'New\', turn Vector into a responsive skin by applying a view port and disabling the min-width?',
-		'requires' => [],
-	],
-	'wgVectorUseWvuiSearch' => [
-		'name' => 'Vector Use WVUI Search',
-		'from' => 'vector',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Enable Vector WVUI search?',
+		'help' => 'Turn Vector-2022 into a responsive skin by applying a view port and disabling the min-width?',
 		'requires' => [],
 	],
 	'wgCitizenThemeDefault' => [
@@ -3226,15 +3164,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'styling',
 		'help' => 'The condition of page tools visibility.',
-		'requires' => [],
-	],
-	'wgCitizenEnableDrawerSubSearch' => [
-		'name' => 'Citizen Enable Drawer Sub Search',
-		'from' => 'citizen',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'Enables the drawer search box for menu entries.',
 		'requires' => [],
 	],
 	'wgCitizenPortalAttach' => [
@@ -4239,12 +4168,26 @@ $wgManageWikiSettings = [
 		'help' => 'Sets the property used to display the main image of an item.',
 		'requires' => [],
 	],
+	'wgInterwikiSortingSort' => [
+		'name' => 'Interwiki Sorting Sort',
+		'from' => 'interwikisorting',
+		'type' => 'list',
+		'options' => [
+			'alphabetic' => 'alphabetic',
+			'alphabetic_fy' => 'alphabetic_fy',
+			'alphabetic_revised' => 'alphabetic_revised',
+			'alphabetic_sr' => 'alphabetic_sr',
+			'alphabetic_sv' => 'alphabetic_sv',
+			'code' => 'code',
+		],
+		'overridedefault' => 'code',
+		'section' => 'wikibase',
+		'help' => 'The default sort order to use. The default, \'code\' orders alphabetically by interwiki code.',
+		'requires' => [],
+	],
 ];
 
-if (
-	$wgConf->get( 'wmgUseGamepress', $wi->dbname ) &&
-	$wgConf->get( 'wmgUseTheme', $wi->dbname )
-) {
+if ( $wi->isAllOfExtensionsActive( 'Gamepress', 'Theme' ) ) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
