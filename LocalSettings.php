@@ -2604,6 +2604,7 @@ $wgConf->settings += [
 				'globalblock-exempt',
 				'globalgroupmembership',
 				'globalgrouppermissions',
+				'handle-import-dump-interwiki',
 				'handle-import-dump-requests',
 				'handle-pii',
 				'hideuser',
