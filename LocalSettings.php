@@ -1260,22 +1260,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgFlaggedRevsAutopromote' => [
-		// Extension default is actually false
-		'default' => [
-			'days' => 14,
-			'edits' => 100,
-			'excludeLastDays' => 1,
-			'benchmarks' => 1,
-			'spacing' => 1,
-			'totalContentEdits' => 100,
-			'totalCheckedEdits' => 100,
-			'uniqueContentPages' => 10,
-			'editComments' => 80,
-			'userpageBytes' => 1,
-			'neverBlocked' => true,
-			'maxRevertedEditRatio' => 0.05,
-		],
-		'isvwiki' => false,
+		'default' => false,
 	],
 	'wgFlaggedRevsAutoReview' => [
 		'default' => 3,
