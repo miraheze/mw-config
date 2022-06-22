@@ -219,7 +219,7 @@ $wgManageWikiNamespacesAdditional = [
 			6 => true,
 			10 => true,
 			'default' => false,
-		]
+		],
 		'help' => '',
 		'requires' => [],
 	],
