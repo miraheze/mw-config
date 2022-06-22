@@ -1411,6 +1411,8 @@ $wgManageWikiExtensions = [
 						'autoreview',
 						'stablesettings',
 						'movestable',
+						'review',
+						'unreviewedpages',
 					],
 					'addgroups' => [
 						'editor',
