@@ -2468,6 +2468,7 @@ $wgConf->settings += [
 			'sysadmin' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
+				'handle-import-dump-interwiki' => true,
 				'handle-import-dump-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
