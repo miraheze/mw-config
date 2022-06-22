@@ -1229,8 +1229,10 @@ $wgConf->settings += [
 	],
 	'wgFlaggedRevsTags' => [
 		'default' => [
-			'status' => [
-				'levels' => 2,
+			'accuracy' => [
+				'levels' => 3,
+				'quality' => 2,
+				'pristine' => 4,
 			],
 		],
 		'infectopedwiki' => [
@@ -1246,7 +1248,7 @@ $wgConf->settings += [
 	],
 	'wgFlaggedRevsTagsRestrictions' => [
 		'default' => [
-			'status' => [
+			'accuracy' => [
 				'review' => 1,
 				'autoreview' => 1,
 			],
@@ -1254,10 +1256,11 @@ $wgConf->settings += [
 	],
 	'wgFlaggedRevsTagsAuto' => [
 		'default' => [
-			'status' => 1,
+			'accuracy' => 1,
 		],
 	],
 	'wgFlaggedRevsAutopromote' => [
+		// Extension default is actually false
 		'default' => [
 			'days' => 14,
 			'edits' => 100,
@@ -1279,8 +1282,7 @@ $wgConf->settings += [
 	],
 	'wgFlaggedRevsRestrictionLevels' => [
 		'default' => [
-			'',
-			'sysop'
+			'sysop',
 		],
 	],
 	'wgSimpleFlaggedRevsUI' => [
