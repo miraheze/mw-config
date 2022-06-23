@@ -245,7 +245,7 @@ $wgConf->settings += [
 	'wgEnableBlockNoticeStats' => [
 		'default' => false,
 	],
-	'wgEnablePartialBlocks' => [
+	'wgEnablePartialActionBlocks' => [
 		'default' => true,
 	],
 
