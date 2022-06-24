@@ -411,7 +411,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCentralAuthHiddenLevelMigrationStage' => [
-		'default' => SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH,
+		'default' => SCHEMA_COMPAT_READ_OLD | SCHEMA_COMPAT_WRITE_BOTH, // Remove with 1.39
 	],
 
 	// CentralNotice
