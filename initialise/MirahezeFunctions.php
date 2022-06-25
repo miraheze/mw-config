@@ -42,13 +42,15 @@ class MirahezeFunctions {
 		self::setupHooks();
 		self::setupSiteConfiguration();
 
-		$this->hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 		$this->dbname = self::getCurrentDatabase();
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
 		$this->server = self::getServer();
 		$this->sitename = self::getSiteName();
 		$this->missing = self::isMissing();
+
+		$this->hostname = $_SERVER['HTTP_HOST'] ??
+			parse_url( $this->server, PHP_URL_HOST ) ?: 'undefined';
 
 		$this->setDatabase();
 		$this->setServers();
