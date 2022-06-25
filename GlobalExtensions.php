@@ -2,6 +2,14 @@
 
 require_once "$IP/extensions/MobileDetect/MobileDetect.php";
 
+if ( $wi->dbname !== 'ldapwikiwiki' ) {
+	wfLoadExtensions( [
+		'CentralAuth',
+		'GlobalPreferences',
+		'GlobalBlocking',
+	] );
+}
+
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
