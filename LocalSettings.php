@@ -3965,12 +3965,35 @@ $wgConf->settings += [
 	'wgSimpleChangesShowUser' => [
 		'default' => false,
 	],
-
+	// Share
+	'wgShareEmail' => [
+		'default' => false,
+	],
+	'wgShareFacebook' => [
+		'default' => true,
+	],
+	'wgShareLinkedIn' => [
+		'default' => false,
+	],
+	'wgShareReddit' => [
+		'default' => false,
+	],
+	'wgShareTumblr' => [
+		'default' => false,
+	],
+	'wgShareTwitter' => [
+		'default' => true,
+	],
+	'wgShareUseBasicButtons' => [
+		'default' => false,
+	],
+	'wgShareUsePlainLinks' => [
+		'default' => true,
+	],
 	// Site notice pt out
 	'wmgSiteNoticeOptOut' => [
 		'default' => false,
 	],
-
 	// Skins
 	'wgSkipSkins' => [
 		'default' => [],
