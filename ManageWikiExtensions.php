@@ -2975,6 +2975,20 @@ $wgManageWikiExtensions = [
 		'var' => 'wmgUseShare',
 		'conflicts' => false,
 		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'viewsharelinks',
+					],
+				],
+				'user' => [
+					'permissions' => [
+						'viewsharelinks',
+					],
+				],
+			],
+		],
 		'section' => 'other',
 	],
 	'simpleblogpage' => [
