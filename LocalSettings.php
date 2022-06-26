@@ -3990,12 +3990,12 @@ $wgConf->settings += [
 	'wgShareUsePlainLinks' => [
 		'default' => true,
 	],
-	
+
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => [
 		'default' => false,
 	],
-	
+
 	// Skins
 	'wgSkipSkins' => [
 		'default' => [],
