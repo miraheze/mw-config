@@ -5091,7 +5091,7 @@ $wi->loadExtensions();
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
-$wgUploadPath = "https://static.miraheze.org/$wgDBname";
+$wgUploadPath = "//static.miraheze.org/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
