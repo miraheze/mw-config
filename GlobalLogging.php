@@ -205,7 +205,7 @@ $wgMWLoggerDefaultSpi = [
 ];
 
 if ( $wmgLogToDisk ) {
-	$wmgLogDir = "/var/log/mediawiki";
+	$wmgLogDir = '/var/log/mediawiki';
 
 	$wgDBerrorLog = "$wmgLogDir/debuglogs/database.log";
 
@@ -243,8 +243,5 @@ if ( $wgCommandLineMode ) {
 	ini_set( 'display_errors', 1 );
 
 	$wgShowExceptionDetails = true;
-
-	$wgShowSQLErrors = true;
 	$wgDebugDumpSql = true;
-	$wgShowDBErrorBacktrace = true;
 }
