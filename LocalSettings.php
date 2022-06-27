@@ -4924,7 +4924,6 @@ $wgConf->settings += [
 			'cargo' => false,
 			'CentralAuth' => 'debug',
 			'CentralAuthRename' => false,
-			'CentralAuthUserMerge' => false,
 			'CentralAuthVerbose' => false,
 			'CentralNotice' => false,
 			'cite' => false,
