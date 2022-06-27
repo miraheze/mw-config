@@ -25,7 +25,7 @@ $wgLBFactoryConf = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		'flags' => DBO_SSL,
+		'flags' => DBO_SSL, // DBO_SSL is deprecated in 1.39; use 'ssl' parameter instead
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 15,
