@@ -38,11 +38,16 @@ foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 		'class'     => \MediaWiki\Logger\Monolog\SyslogHandler::class,
 		'formatter' => 'logstash',
 		'args'      => [
-			'mediawiki', // tag
-			'127.0.0.1', // host
-			10514,       // port
-			LOG_USER,    // facility
-			$logLevel,   // log level threshold
+			// tag
+			'mediawiki',
+			// host
+			'127.0.0.1',
+			// port
+			10514,
+			// facility
+			LOG_USER,
+			// log level threshold
+			$logLevel,
 		],
 	];
 }
