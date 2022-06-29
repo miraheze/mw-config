@@ -166,8 +166,14 @@ class MirahezeFunctions {
 	public static function getServers( ?string $database = null, bool $deleted = false ) {
 		global $wgConf;
 
-		if ( $database !== null && $wgConf->get( 'wgServer', $database ) ) {
-			return $wgConf->get( 'wgServer', $database );
+		if ( $database !== null ) {
+			if ( $wgConf->get( 'wgServer', $database ) ) {
+				return $wgConf->get( 'wgServer', $database );
+			}
+
+			if ( isset( $wgConf->settings['wgServer'] ) && count( $wgConf->settings['wgServer'] ) > 1 ) {
+				return 'https://' . self::DEFAULT_SERVER[self::getRealm()];
+			}
 		}
 
 		if ( isset( $wgConf->settings['wgServer'] ) && count( $wgConf->settings['wgServer'] ) > 1 ) {
