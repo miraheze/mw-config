@@ -166,7 +166,7 @@ class MirahezeFunctions {
 	public static function getServers( ?string $database = null, bool $deleted = false ) {
 		global $wgConf;
 
-		if ( $database !== null && $wgConf->get( 'wgServer', $database ) )  {
+		if ( $database !== null && $wgConf->get( 'wgServer', $database ) ) {
 			return $wgConf->get( 'wgServer', $database );
 		}
 
