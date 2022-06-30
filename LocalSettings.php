@@ -650,7 +650,7 @@ $wgConf->settings += [
 		'default' => 'textextracts',
 	],
 	'wgCosmosSearchUseActionAPI' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgCosmosSocialProfileAllowBio' => [
 		'default' => true,
