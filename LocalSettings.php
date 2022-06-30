@@ -523,7 +523,7 @@ $wgConf->settings += [
 		'default' => 'textextracts',
 	],
 	'wgCitizenMaxSearchResults' => [
-		'default' => 6,
+		'default' => 10,
 	],
 
 	// Comments
