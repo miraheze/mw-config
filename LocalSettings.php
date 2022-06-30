@@ -3516,6 +3516,11 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+rarewiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
+		],
 		'+reviwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
