@@ -2832,15 +2832,6 @@ $wgManageWikiSettings = [
 		'help' => 'Set the opacity level of the content area and custom sidebar for the Cosmos skin in precentage.',
 		'requires' => [],
 	],
-	'wgCosmosUseWVUISearch' => [
-		'name' => 'Cosmos Use WVUI Search',
-		'from' => 'cosmos',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Whether to enable the WVUI search of Cosmos. If enabled, search suggestions may include descriptions and thumbnails.',
-		'requires' => [],
-	],
 	'wgCosmosSearchUseActionAPI' => [
 		'name' => 'Cosmos Search Use Action API',
 		'from' => 'cosmos',
