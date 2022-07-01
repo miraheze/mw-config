@@ -1381,7 +1381,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
