@@ -3490,6 +3490,11 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'thumbsize' => 3,
 		],
+		'+finalfantasywiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
+		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
