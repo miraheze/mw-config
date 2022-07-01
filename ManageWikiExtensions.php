@@ -263,9 +263,14 @@ $wgManageWikiExtensions = [
 	'cargo' => [
 		'name' => 'Cargo',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Cargo',
+		'help' => '<b>Note:</b> Pending an SRE performance evaluation of Cargo, it should not be enabled on any new wikis.',
 		'var' => 'wmgUseCargo',
 		'conflicts' => 'semanticmediawiki',
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
