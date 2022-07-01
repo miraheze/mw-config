@@ -1373,7 +1373,6 @@ $wgConf->settings += [
 			19, // Reception123 (SRE)
 			5258, // Void (SRE and Board)
 			13554, // Paladox (SRE)
-			243629, // RhinosF1 (SRE)
 			73651, // Owen (Board)
 			96304, // Universal Omega (SRE)
 			2639, // Agent Isai (SRE)
