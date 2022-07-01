@@ -687,9 +687,6 @@ $wgConf->settings += [
 	'wgCosmosUseSocialProfileAvatar' => [
 		'default' => true,
 	],
-	'wgCosmosUseWVUISearch' => [
-		'default' => true,
-	],
 	'wgCosmosWikiHeaderBackgroundColor' => [
 		'default' => '#c0c0c0',
 	],
