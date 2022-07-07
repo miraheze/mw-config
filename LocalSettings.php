@@ -3484,6 +3484,11 @@ $wgConf->settings += [
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
 		],
+		'+donkeykongwiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
+		],
 		'+dragonquest2wiki' => [
 			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
