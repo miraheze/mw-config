@@ -35,4 +35,27 @@ if ( !class_exists( SMW\Setup::class ) ) {
 
 if ( $wgDBname === 'constantnoblewiki' ) {
 	array_push( $smwgPageSpecialProperties, '_CDAT' );
+
+	$smwgNamespacesWithSemanticLinks = [
+		NS_MAIN => true,
+		NS_TALK => false,
+		NS_USER => true,
+		NS_USER_TALK => false,
+		NS_PROJECT => true,
+		NS_PROJECT_TALK => false,
+		NS_FILE => true,
+		NS_FILE_TALK => false,
+		NS_MEDIAWIKI => true,
+		NS_MEDIAWIKI_TALK => false,
+		NS_TEMPLATE => true,
+		NS_TEMPLATE_TALK => false,
+		NS_HELP => true,
+		NS_HELP_TALK => false,
+		NS_CATEGORY => true,
+		NS_CATEGORY_TALK => false,
+		3034 => true,
+		3035 => false,
+		3036 => true,
+		3037 => false,
+	];
 }
