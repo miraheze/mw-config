@@ -5118,7 +5118,7 @@ if ( wfHostname() === 'test101' ) {
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi::$disabledExtensions = [ 'editnotify', 'regexfunctions' ];
+$wi::$disabledExtensions = [ 'regexfunctions' ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
 
