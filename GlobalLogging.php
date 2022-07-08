@@ -1,19 +1,29 @@
 <?php
 
 use MediaWiki\Logger\LoggerFactory;
+use MediaWiki\Logger\Monolog\BufferHandler;
+use MediaWiki\Logger\Monolog\LogstashFormatter;
+use MediaWiki\Logger\Monolog\SyslogHandler;
+use MediaWiki\Logger\Monolog\WikiProcessor;
+use MediaWiki\Logger\MonologSpi;
+use Monolog\Handler\NullHandler;
+use Monolog\Handler\SamplingHandler;
 use Monolog\Handler\WhatFailureGroupHandler;
+use Monolog\Processor\PsrLogMessageProcessor;
+use Monolog\Processor\WebProcessor;
+use Psr\Log\LogLevel;
 
 // Monolog logging configuration
 
 $wmgMonologProcessors = [
 	'wiki' => [
-		'class' => \MediaWiki\Logger\Monolog\WikiProcessor::class,
+		'class' => WikiProcessor::class,
 	],
 	'psr' => [
-		'class' => \Monolog\Processor\PsrLogMessageProcessor::class,
+		'class' => PsrLogMessageProcessor::class,
 	],
 	'web' => [
-		'class' => \Monolog\Processor\WebProcessor::class,
+		'class' => WebProcessor::class,
 	],
 	'mhconfig' => [
 		'factory' => static function () {
@@ -29,13 +39,13 @@ $wmgMonologProcessors = [
 
 $wmgMonologHandlers = [
 	'blackhole' => [
-		'class' => \Monolog\Handler\NullHandler::class,
+		'class' => NullHandler::class,
 	],
 ];
 
 foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 	$wmgMonologHandlers[ "graylog-$logLevel" ] = [
-		'class'     => \MediaWiki\Logger\Monolog\SyslogHandler::class,
+		'class'     => SyslogHandler::class,
 		'formatter' => 'logstash',
 		'args'      => [
 			// tag
@@ -83,7 +93,7 @@ $wmgMonologConfig = [
 	'handlers' => $wmgMonologHandlers,
 	'formatters' => [
 		'logstash' => [
-			'class' => \MediaWiki\Logger\Monolog\LogstashFormatter::class,
+			'class' => LogstashFormatter::class,
 			'args' => [ 'mediawiki', php_uname( 'n' ), '', '', 1 ],
 		],
 	],
@@ -129,7 +139,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				// Register a handler that will sample the event stream and
 				// pass events on to $handlerName for storage
 				$wmgMonologConfig['handlers'][$sampledHandler] = [
-					'class' => \Monolog\Handler\SamplingHandler::class,
+					'class' => SamplingHandler::class,
 					'args' => [
 						static function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
@@ -151,7 +161,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				// Register a handler that will buffer the event stream and
 				// pass events to the nested handler after closing the request
 				$wmgMonologConfig['handlers'][$bufferedHandler] = [
-					'class' => \MediaWiki\Logger\Monolog\BufferHandler::class,
+					'class' => BufferHandler::class,
 					'args' => [
 						static function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
@@ -200,7 +210,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 }
 
 $wgMWLoggerDefaultSpi = [
-	'class' => \MediaWiki\Logger\MonologSpi::class,
+	'class' => MonologSpi::class,
 	'args' => [ $wmgMonologConfig ],
 ];
 
@@ -225,12 +235,12 @@ if ( $wmgLogToDisk ) {
 		'ManageWiki' => "$wmgLogDir/debuglogs/ManageWiki.log",
 		'memcached' => [
 			'destination' => "$wmgLogDir/debuglogs/memcached.log",
-			'level' => \Psr\Log\LogLevel::ERROR,
+			'level' => LogLevel::ERROR,
 		],
 		'OAuth' => "$wmgLogDir/debuglogs/OAuth.log",
 		'redis' => [
 			'destination' => "$wmgLogDir/debuglogs/redis.log",
-			'level' => \Psr\Log\LogLevel::WARNING,
+			'level' => LogLevel::WARNING,
 		],
 		'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 		'VisualEditor' => "$wmgLogDir/debuglogs/VisualEditor.log",
