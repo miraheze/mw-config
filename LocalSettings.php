@@ -2263,6 +2263,8 @@ $wgConf->settings += [
 			'checkuser' => [
 				'checkuser' => true,
 				'checkuser-log' => true,
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true,
 			],
 			'interwiki-admin' => [
 				'interwiki' => true
