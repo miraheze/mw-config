@@ -4408,10 +4408,10 @@ $wgConf->settings += [
 		'default' => '2', // Remove with 1.39
 	],
 	'wgVectorDefaultSkinVersionForExistingAccounts' => [
-		'default' => '2',
+		'default' => '1',
 	],
 	'wgVectorDefaultSkinVersionForNewAccounts' => [
-		'default' => '2',
+		'default' => null,
 	],
 	'wgVectorResponsive' => [
 		'default' => false,
