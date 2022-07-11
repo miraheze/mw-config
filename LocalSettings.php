@@ -4405,7 +4405,7 @@ $wgConf->settings += [
 		'default' => false, // Remove with 1.39
 	],
 	'wgVectorDefaultSkinVersion' => [
-		'default' => '2', // Remove with 1.39
+		'default' => '1', // Remove with 1.39
 	],
 	'wgVectorDefaultSkinVersionForExistingAccounts' => [
 		'default' => '1',
