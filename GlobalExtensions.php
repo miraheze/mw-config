@@ -24,6 +24,7 @@ wfLoadExtensions( [
 	'ImportDump',
 	'IncidentReporting',
 	'Interwiki',
+	'IPInfo',
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
