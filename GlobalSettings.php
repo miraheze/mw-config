@@ -386,7 +386,6 @@ $vectorVersion = $wgDefaultSkin === 'vector-2022' ? '2' : '1';
 
 $wgVectorDefaultSkinVersion = $vectorVersion; // Remove with 1.39
 $wgVectorDefaultSkinVersionForExistingAccounts = $vectorVersion;
-$wgVectorDefaultSkinVersionForNewAccounts = $vectorVersion;
 
 // Don't need a global here
 unset( $vectorVersion );
