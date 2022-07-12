@@ -368,6 +368,25 @@ if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
 }
 
 // JsonConfig
+$wgJsonConfigs = [
+	'Map.JsonConfig' => [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".map", and contain at least one symbol
+		'pattern' => '/.\.map$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => false,
+	],
+	'Tabular.JsonConfig' => [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".tab", and contain at least one symbol
+		'pattern' => '/.\.tab$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => false,
+	],
+];
+
 if ( $wgDBname === 'commonswiki' ) {
 	$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 	$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
