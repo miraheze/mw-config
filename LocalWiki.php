@@ -39,6 +39,25 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gpcommonswiki':
+		$wgJsonConfigs = [
+			'Tabular.JsonConfig' => [
+				'namespace' => 486,
+				'nsName' => 'Data',
+				// page name must end in ".tab", and contain at least one symbol
+				'pattern' => '/.\.tab$/',
+				'license' => 'CC0-1.0',
+				'isLocal' => true,
+			],
+			'Map.JsonConfig' => [
+				'namespace' => 486,
+				'nsName' => 'Data',
+				// page name must end in ".map", and contain at least one symbol
+				'pattern' => '/.\.map$/',
+				'license' => 'CC0-1.0',
+				'isLocal' => true,
+			],
+		];
+
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
