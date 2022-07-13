@@ -387,10 +387,7 @@ $wgJsonConfigs = [
 	],
 ];
 
-if ( $wgDBname === 'commonswiki' ) {
-	$wgJsonConfigs['Map.JsonConfig']['store'] = true;
-	$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
-} else {
+if ( $wgDBname !== 'commonswiki' ) {
 	$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 		'url' => 'https://commons.miraheze.org/w/api.php'
 	];
