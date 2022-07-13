@@ -368,33 +368,35 @@ if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
 }
 
 // JsonConfig
-$wgJsonConfigs = [
-	'Map.JsonConfig' => [
-		'namespace' => 486,
-		'nsName' => 'Data',
-		// page name must end in ".map", and contain at least one symbol
-		'pattern' => '/.\.map$/',
-		'license' => 'CC-BY-SA 4.0',
-		'isLocal' => false,
-	],
-	'Tabular.JsonConfig' => [
-		'namespace' => 486,
-		'nsName' => 'Data',
-		// page name must end in ".tab", and contain at least one symbol
-		'pattern' => '/.\.tab$/',
-		'license' => 'CC-BY-SA 4.0',
-		'isLocal' => false,
-	],
-];
-
-if ( $wgDBname !== 'commonswiki' ) {
-	$wgJsonConfigs['Map.JsonConfig']['remote'] = [
-		'url' => 'https://commons.miraheze.org/w/api.php'
+if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
+	$wgJsonConfigs = [
+		'Map.JsonConfig' => [
+			'namespace' => 486,
+			'nsName' => 'Data',
+			// page name must end in ".map", and contain at least one symbol
+			'pattern' => '/.\.map$/',
+			'license' => 'CC-BY-SA 4.0',
+			'isLocal' => false,
+		],
+		'Tabular.JsonConfig' => [
+			'namespace' => 486,
+			'nsName' => 'Data',
+			// page name must end in ".tab", and contain at least one symbol
+			'pattern' => '/.\.tab$/',
+			'license' => 'CC-BY-SA 4.0',
+			'isLocal' => false,
+		],
 	];
 
-	$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
-		'url' => 'https://commons.miraheze.org/w/api.php'
-	];
+	if ( $wgDBname !== 'commonswiki' ) {
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.miraheze.org/w/api.php'
+		];
+
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.miraheze.org/w/api.php'
+		];
+	}
 }
 
 // Licensing variables
