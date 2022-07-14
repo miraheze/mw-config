@@ -6,6 +6,11 @@ switch ( $wi->dbname ) {
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
+	case 'commonswiki':
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
 	case 'constantnoblewiki':
 		$wgDplSettings['maxResultCount'] = 2500;
 
@@ -39,6 +44,12 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gpcommonswiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['license'] = 'CC0-1.0';
+		$wgJsonConfigs['Tabular.JsonConfig']['license'] = 'CC0-1.0';
+
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 

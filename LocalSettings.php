@@ -1863,44 +1863,6 @@ $wgConf->settings += [
 	'wgJsonConfigEnableLuaSupport' => [
 		'default' => true,
 	],
-	'+wgJsonConfigs' => [
-		'ext-JsonConfig' => [
-			'Map.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".map", and contain at least one symbol
-				'pattern' => '/.\.map$/',
-				'license' => 'CC-BY-SA 4.0',
-				'isLocal' => false,
-			],
-			'Tabular.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".tab", and contain at least one symbol
-				'pattern' => '/.\.tab$/',
-				'license' => 'CC-BY-SA 4.0',
-				'isLocal' => false,
-			],
-		],
-		'gpcommonswiki' => [
-			'Tabular.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".tab", and contain at least one symbol
-				'pattern' => '/.\.tab$/',
-				'license' => 'CC0-1.0',
-				'isLocal' => true,
-			],
-			'Map.JsonConfig' => [
-				'namespace' => 486,
-				'nsName' => 'Data',
-				// page name must end in ".map", and contain at least one symbol
-				'pattern' => '/.\.map$/',
-				'license' => 'CC0-1.0',
-				'isLocal' => true,
-			],
-		],
-	],
 	'wgJsonConfigInterwikiPrefix' => [
 		'default' => 'commons',
 		'commonswiki' => 'meta',
