@@ -997,7 +997,7 @@ $wgConf->settings += [
 		'default' => [],
 	],
 	'wgActorTableSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_TEMP, // Remove with 1.39
+		'default' => SCHEMA_COMPAT_WRITE_TEMP_AND_NEW | SCHEMA_COMPAT_READ_NEW, // Remove with 1.39
 		'betaheze' => SCHEMA_COMPAT_NEW,
 	],
 
