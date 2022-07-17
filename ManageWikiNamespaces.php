@@ -120,8 +120,8 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
-	'wgCosmosRailBlacklistedNamespaces' => [
-		'name' => 'Disable Cosmos side rail in this namespace.',
+	'wgCosmosRailDisabledNamespaces' => [
+		'name' => 'Disable Cosmos side rail in this namespace?',
 		'from' => 'cosmos',
 		'type' => 'check',
 		'main' => true,
