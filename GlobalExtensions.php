@@ -1,7 +1,5 @@
 <?php
 
-require_once "$IP/extensions/MobileDetect/MobileDetect.php";
-
 wfLoadExtensions( [
 	'AbuseFilter',
 	'AntiSpoof',
@@ -29,6 +27,7 @@ wfLoadExtensions( [
 	'MatomoAnalytics',
 	'MirahezeMagic',
 	'MirahezeMagic/ReCaptchaNoCaptcha',
+	'MobileDetect',
 	'NativeSvgHandler',
 	'Nuke',
 	'OATHAuth',
