@@ -4340,8 +4340,16 @@ $wgConf->settings += [
 	],
 
 	// UserFunctions
-	'wgUFEnablePersonalDataFunctions' => [
-		'default' => false, // DO NOT set to true under any circumstances --Reception123
+	/**
+	 * 'ip', 'realname' and/or 'useremail' should never
+	 * be enabled here under any circumstances, in order
+	 * to ensure privacy.
+	 */
+	'wgUFEnabledPersonalDataFunctions' => [
+		'default' => [
+			'nickname',
+			'username',
+		],
 	],
 
 	// UserPageEditProtection
