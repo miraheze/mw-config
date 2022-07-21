@@ -4233,7 +4233,7 @@ $wgConf->settings += [
 	],
 
 	// Translate
-	'wgTranslateBlacklist' => [
+	'wgTranslateDisabledTargetLanguages' => [
 		'default' => [],
 		'metawiki' => [
 			'*' => [
