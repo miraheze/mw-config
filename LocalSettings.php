@@ -4340,12 +4340,12 @@ $wgConf->settings += [
 	],
 
 	// UserFunctions
-	/**
-	 * 'ip', 'realname' and/or 'useremail' should never
-	 * be enabled here under any circumstances, in order
-	 * to ensure privacy.
-	 */
 	'wgUFEnabledPersonalDataFunctions' => [
+		/**
+		 * 'ip', 'realname' and/or 'useremail' should never
+		 * be enabled here under any circumstances, in order
+		 * to ensure privacy.
+		 */
 		'default' => [
 			'nickname',
 			'username',
