@@ -4394,6 +4394,85 @@ $wgConf->settings += [
 			'showDescription' => false,
 		],
 	],
+	'wgVectorMaxWidthOptions' => [
+		'default' => [
+			'exclude' => [
+				'mainpage' => false,
+				'querystring' => [
+					'action' => '(history|edit)',
+					'diff' => '.+',
+				],
+				'namespaces' => [
+					NS_SPECIAL,
+					NS_CATEGORY,
+				],
+			],
+			'include' => [
+				'Special:Preferences',
+			],
+		],
+		'+gratispaideiawiki' => [
+			'include' => [
+				'Special:Preferences',
+				'Special:UserLogin',
+				'Special:CreateAccount',
+			],
+		],
+		'+gpcommonswiki' => [
+			'include' => [
+				'Special:Preferences',
+				'Special:UserLogin',
+				'Special:CreateAccount',
+			],
+		],
+		'gratisdatawiki' => [
+			'exclude' => [
+				'mainpage' => false,
+				'querystring' => [
+					'action' => '(history|edit)',
+					'diff' => '.+',
+				],
+				'namespaces' => [
+					NS_MAIN,
+					NS_SPECIAL,
+					NS_CATEGORY,
+				],
+			],
+			'include' => [
+				'Special:Preferences',
+				'Special:UserLogin',
+				'Special:CreateAccount',
+			],
+		],
+	],
+	'wgVectorStickyHeader' => [
+		'default' => [
+			'logged_in' => true,
+			'logged_out' => false,
+		],
+		'gpcommonswiki' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'gratisdatawiki' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+	],
+	'wgVectorLanguageInHeader' => [
+		'default' => [
+			'logged_in' => true,
+			'logged_out' => true,
+		],
+		'gpcommonswiki' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'gratisdatawiki' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+	],
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
