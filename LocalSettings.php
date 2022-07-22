@@ -2742,6 +2742,10 @@ $wgConf->settings += [
 	'wgMinervaEnableSiteNotice' => [
 		'default' => true,
 	],
+	'wgMinervaApplyKnownTemplateHacks' => [
+		'default' => true,
+		'mcspringfieldserverwiki' => false,
+	],
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'default' => true,
 	],
@@ -2926,6 +2930,21 @@ $wgConf->settings += [
 	],
 	'wgMFMobileHeader' => [
 		'ext-MobileFrontend' => 'X-Subdomain',
+	],
+	'wgMFRemovableClasses' => [
+		'default' => [
+			'beta' => [],
+			'base' => [
+				'.navbox',
+				'.vertical-navbox',
+				'.nomobile',
+			],
+		],
+		'mcspringfieldserverwiki' => [
+			'base' => [
+				'.nomobile',
+			],
+		],
 	],
 	'wgMFNoindexPages' => [
 		'ext-MobileFrontend' => false,
