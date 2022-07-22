@@ -1283,9 +1283,9 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => "https://$wmgUploadHostname/commonswiki/f/ff/Powered_by_Miraheze.svg",
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze'
+					'src' => "https://$wmgUploadHostname/commonswiki/a/aa/Anniversary-Miraheze-7-year.svg",
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze-7-year',
+					'alt' => '7 years of Miraheze!'
 				]
 			]
 		]
