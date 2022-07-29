@@ -40,13 +40,15 @@ $wgObjectCaches['mysql-multiwrite'] = [
 		1 => [
 			'class' => 'SqlBagOStuff',
 			'servers' => [
-				'type'      => 'mysql',
-				'host'      => 'db101',
-				'dbname'    => 'parsercache',
-				'user'      => $wgDBuser,
-				'password'  => $wgDBpassword,
-				'flags'     => DBO_SSL,
-				'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+				[
+					'type'      => 'mysql',
+					'host'      => 'db101',
+					'dbname'    => 'parsercache',
+					'user'      => $wgDBuser,
+					'password'  => $wgDBpassword,
+					'flags'     => DBO_SSL,
+					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+				],
 			],
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
