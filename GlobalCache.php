@@ -38,7 +38,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				[
 					'type'      => 'mysql',
-					'host'      => 'db121',
+					'host'      => 'db121.miraheze.org',
 					'dbname'    => 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
