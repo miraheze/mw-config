@@ -4,7 +4,6 @@ $wgMemCachedServers = [
 	'127.0.0.1:11212',
 ];
 
-
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
