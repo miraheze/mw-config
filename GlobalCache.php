@@ -1,9 +1,5 @@
 <?php
 
-$wgMemCachedServers = [
-	'127.0.0.1:11212',
-];
-
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
@@ -42,7 +38,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				[
 					'type'      => 'mysql',
-					'host'      => 'db101',
+					'host'      => 'db121',
 					'dbname'    => 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
