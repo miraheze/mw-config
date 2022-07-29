@@ -17,12 +17,8 @@ $wgRevisionCacheExpiry = 86400 * 3; // 3 days
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
 
-// Currently we can't set this if GroupsSidebar us used.
-// This should ideally be patched upstream, converting the hook used
-// to SidebarBeforeOutput rather than SkinBuildSidebar, which is
-// more appropriate for this extension.
-// Also disable sidebar cache for solarawiki as a solution to T8732
-if ( !$wi->isExtensionActive( 'GroupsSidebar' ) && $wgDBname !== 'solarawiki' ) {
+// Disable sidebar cache for solarawiki as a solution to T8732
+if ( $wgDBname !== 'solarawiki' ) {
 	$wgEnableSidebarCache = true;
 }
 
