@@ -2770,9 +2770,9 @@ $wgManageWikiExtensions = [
 			'extensions' => [
 				'semanticmediawiki',
 			],
-		],		
+		],
 		'section' => 'other',
-	],	
+	],
 	'twocolconflict' => [
 		'name' => 'TwoColConflict',
 		'displayname' => 'Paragraph-based Edit Conflict Interface',
