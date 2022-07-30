@@ -2761,14 +2761,15 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'pageproperties' => [
+	'ss' => [
 		'name' => 'PageProperties',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageProperties',
 		'var' => 'wmgUsePageProperties',
 		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'semanticmediawiki',
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'page_properties' => "$IP/extensions/PageProperties/includes/page_properties.sql",
 			],
 		],
 		'section' => 'other',
