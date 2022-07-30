@@ -2761,7 +2761,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'ss' => [
+	'pageproperties' => [
 		'name' => 'PageProperties',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageProperties',
 		'var' => 'wmgUsePageProperties',
