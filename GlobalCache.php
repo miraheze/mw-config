@@ -1,14 +1,66 @@
 <?php
 
-$wgMemCachedServers = [
-	'127.0.0.1:11212',
-	'127.0.0.1:11213',
+$wgObjectCaches['memcached-mem-1'] = [
+	'class'                => MemcachedPeclBagOStuff::class,
+	'serializer'           => 'php',
+	'persistent'           => false,
+	'servers'              => [ '127.0.0.1:11212' ],
+	// Effectively disable the failure limit (0 is invalid)
+	'server_failure_limit' => 1e9,
+	// Effectively disable the retry timeout
+	'retry_timeout'        => -1,
+	'loggroup'             => 'memcached',
+	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
+
+$wgObjectCaches['memcached-mem-2'] = [
+	'class'                => MemcachedPeclBagOStuff::class,
+	'serializer'           => 'php',
+	'persistent'           => false,
+	'servers'              => [ '127.0.0.1:11213' ],
+	// Effectively disable the failure limit (0 is invalid)
+	'server_failure_limit' => 1e9,
+	// Effectively disable the retry timeout
+	'retry_timeout'        => -1,
+	'loggroup'             => 'memcached',
+	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
+];
+
+$wgObjectCaches['mysql-multiwrite'] = [
+	'class' => 'MultiWriteBagOStuff',
+	'caches' => [
+		0 => [
+			'factory' => [ 'ObjectCache', 'getInstance' ],
+			'args' => [ 'memcached-mem-1' ]
+		],
+		1 => [
+			'class' => 'SqlBagOStuff',
+			'servers' => [
+				[
+					'type'      => 'mysql',
+					'host'      => 'db121.miraheze.org',
+					'dbname'    => 'parsercache',
+					'user'      => $wgDBuser,
+					'password'  => $wgDBpassword,
+					'flags'     => DBO_SSL,
+					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+				],
+			],
+			'purgePeriod' => 0,
+			'tableName' => 'pc',
+			'reportDupes' => false
+		],
+	],
+	'replication' => 'async',
+	'reportDupes' => false
+];
+
+$wgSessionCacheType = 'memcached-mem-2';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
-$wgMainCacheType = 'memcached-pecl';
-$wgParserCacheType = 'db-replicated';
+$wgMainCacheType = 'memcached-mem-2';
+$wgParserCacheType = 'mysql-multiwrite';
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgParserCacheExpireTime = 86400 * 10; // 10 days
@@ -29,19 +81,6 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 	$redisServerIP = '[2a10:6740::6:109]:6379';
 
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
-	$wgObjectCaches['memcached-mem-1'] = [
-		'class'                => MemcachedPeclBagOStuff::class,
-		'serializer'           => 'php',
-		'persistent'           => false,
-		'servers'              => [ '127.0.0.1:11212' ],
-		// Effectively disable the failure limit (0 is invalid)
-		'server_failure_limit' => 1e9,
-		// Effectively disable the retry timeout
-		'retry_timeout'        => -1,
-		'loggroup'             => 'memcached',
-		'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
-	];
-
 	$wgSessionCacheType = 'memcached-mem-1';
 
 	$wgMainWANCache = 'betaheze';
@@ -49,21 +88,6 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 		'class' => WANObjectCache::class,
 		'cacheId' => 'memcached-mem-1',
 	];
-} else {
-	$wgObjectCaches['memcached-mem-2'] = [
-		'class'                => MemcachedPeclBagOStuff::class,
-		'serializer'           => 'php',
-		'persistent'           => false,
-		'servers'              => [ '127.0.0.1:11213' ],
-		// Effectively disable the failure limit (0 is invalid)
-		'server_failure_limit' => 1e9,
-		// Effectively disable the retry timeout
-		'retry_timeout'        => -1,
-		'loggroup'             => 'memcached',
-		'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
-	];
-
-	$wgSessionCacheType = 'memcached-mem-2';
 }
 
 $wgJobTypeConf['default'] = [
