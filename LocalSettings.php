@@ -3605,6 +3605,18 @@ $wgConf->settings += [
 	],
 
 	// RemovePII
+	'wgRemovePIIAllowedWikis' => [
+		'default' => [
+			'metawiki',
+			'betawiki',
+		],
+	],
+	'wgRemovePIIAutoPrefix' => [
+		'default' => 'MirahezeGDPR_',
+	],
+	'wgRemovePIIDPAValidationEndpoint' => [
+		'default' => 'https://reports.miraheze.org/api/dpa/{dpa_id}/{username}',
+	],
 	'wgRemovePIIHashPrefixOptions' => [
 		'default' => [
 			'Trust and Safety' => 'MirahezeGDPR_',
@@ -3613,12 +3625,6 @@ $wgConf->settings += [
 	],
 	'wgRemovePIIHashPrefix' => [
 		'default' => 'MirahezeGDPR_',
-	],
-	'wgRemovePIIAllowedWikis' => [
-		'default' => [
-			'metawiki',
-			'betawiki',
-		],
 	],
 
 	// ReplaceText
