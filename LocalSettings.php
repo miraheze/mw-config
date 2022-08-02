@@ -2133,8 +2133,8 @@ $wgConf->settings += [
 			'2a10:6740::6:403' => true,
 			/** mw132 */
 			'2a10:6740::6:404' => true,
-			/** test101 */
-			'2a10:6740::6:109' => true,
+			/** test131 */
+			'2a10:6740::6:406' => true,
 		],
 	],
 
@@ -5170,7 +5170,7 @@ if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname ) ) {
 	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
 }
 
-if ( wfHostname() === 'test101' ) {
+if ( wfHostname() === 'test131' ) {
 	// Prevent cache (better be safe than sorry)
 	$wgConf->settings['wgUseCdn']['default'] = false;
 }
