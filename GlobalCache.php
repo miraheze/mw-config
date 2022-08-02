@@ -14,20 +14,6 @@ $wgObjectCaches['memcached-mem-1'] = [
 	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
 ];
 
-// mem121
-$wgObjectCaches['memcached-mem-2'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11213' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
-];
-
 // mem131
 $wgObjectCaches['memcached-mem-3'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
