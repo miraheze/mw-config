@@ -13,7 +13,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
-} elseif ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask111.miraheze.org' ) {
+} elseif ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask141.miraheze.org' ) {
 	$wgRequestTimeLimit = 1200;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
@@ -2133,6 +2133,8 @@ $wgConf->settings += [
 			'2a10:6740::6:502' => true,
 			/** mw142 */
 			'2a10:6740::6:503' => true,
+			/** mwtask141 */
+			'2a10:6740::6:504' => true,
 			/** test131 */
 			'2a10:6740::6:406' => true,
 		],
