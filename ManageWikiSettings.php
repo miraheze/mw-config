@@ -3238,11 +3238,11 @@ $wgManageWikiSettings = [
 		'from' => 'citizen',
 		'type' => 'list',
 		'options' => [
-			'true' => true,
+			'true' => 1,
 			'login' => 'login',
 			'permission' => 'permission',
 		],
-		'overridedefault' => true,
+		'overridedefault' => 1,
 		'section' => 'styling',
 		'help' => 'The condition of page tools visibility.',
 		'requires' => [],
