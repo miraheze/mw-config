@@ -77,7 +77,6 @@ $redisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-mem-3';
 $wgParserCacheType = 'mysql-multiwrite';
-$wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgParserCacheExpireTime = 86400 * 10; // 10 days
 $wgRevisionCacheExpiry = 86400 * 3; // 3 days
