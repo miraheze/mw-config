@@ -501,11 +501,11 @@ $wgConf->settings += [
 	'wgCitizenEnableCollapsibleSections' => [
 		'default' => true,
 	],
-	'wgCitizenShowPageTools' => [
-		'default' => true,
-	],
 	'wgCitizenPortalAttach' => [
 		'default' => 'first',
+	],
+	'wgCitizenShowPageTools' => [
+		'default' => 1,
 	],
 	'wgCitizenThemeColor' => [
 		'default' => '#131a21',
