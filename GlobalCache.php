@@ -71,11 +71,11 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgSessionCacheType = 'memcached-mem-2';
+$wgSessionCacheType = 'memcached-mem-3';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
-$wgMainCacheType = 'memcached-mem-2';
+$wgMainCacheType = 'memcached-mem-3';
 $wgParserCacheType = 'mysql-multiwrite';
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
