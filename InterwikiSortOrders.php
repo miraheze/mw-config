@@ -7,7 +7,8 @@
  */
 
 return [
-	'alphabetic' => [ // by language name, e.g. 'id' as 'Indonesia, bahasa'
+	// by language name, e.g. 'id' as 'Indonesia, bahasa'
+	'alphabetic' => [
 		'ace',
 		'kbd',
 		'ady',
@@ -341,7 +342,8 @@ return [
 		'zh-tw',
 		'zh-cn',
 	],
-	'alphabetic_fy' => [ // by language code, exepct 'y' is sorted like 'i'
+	// by language code, exepct 'y' is sorted like 'i'
+	'alphabetic_fy' => [
 		'aa',
 		'ab',
 		'ace',
@@ -673,7 +675,8 @@ return [
 		'zh-tw',
 		'zu',
 	],
-	'alphabetic_revised' => [ // by first word, e.g. 'id' as 'bahasa Indonesia'
+	// by first word, e.g. 'id' as 'bahasa Indonesia'
+	'alphabetic_revised' => [
 		'ace',
 		'ady',
 		'kbd',
@@ -1007,7 +1010,8 @@ return [
 		'zh-tw',
 		'zh-cn',
 	],
-	'alphabetic_sr' => [ // by first word, non-Cyrillic/non-Roman/non-Greek name by language code
+	// by first word, non-Cyrillic/non-Roman/non-Greek name by language code
+	'alphabetic_sr' => [
 		'ace',
 		'ady',
 		'kbd',
@@ -1341,7 +1345,8 @@ return [
 		'zh-yue',
 		'bat-smg',
 	],
-	'alphabetic_sv' => [ // by first word, Roman letters first
+	// by first word, Roman letters first
+	'alphabetic_sv' => [
 		'aa',
 		'af',
 		'ak',
