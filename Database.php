@@ -25,16 +25,20 @@ $wgLBFactoryConf = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		'flags' => DBO_SSL, // DBO_SSL is deprecated in 1.39; use 'ssl' parameter instead
+		// DBO_SSL is deprecated in 1.39
+		// use 'ssl' parameter instead
+		'flags' => DBO_SSL,
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 15,
 		],
-		// MediaWiki checks if the certificate presented by MariaDB is signed
-		// by the certificate authority listed in 'sslCAFile'. In emergencies
-		// this could be set to /etc/ssl/certs/ca-certificates.crt (all trusted
-		// CAs), but setting this to one CA reduces attack vector and CAs
-		// to dig through when checking the certificate provided by MariaDB.
+		/**
+		 * MediaWiki checks if the certificate presented by MariaDB is signed
+		 * by the certificate authority listed in 'sslCAFile'. In emergencies
+		 * this could be set to /etc/ssl/certs/ca-certificates.crt (all trusted
+		 * CAs), but setting this to one CA reduces attack vector and CAs
+		 * to dig through when checking the certificate provided by MariaDB.
+		 */
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
@@ -44,18 +48,20 @@ $wgLBFactoryConf = [
 	],
 	'externalLoads' => [
 		'echo' => [
-			'db101' => 1, // should echo c2 (where metawiki is located)
+			// should echo c2 (where metawiki is located)
+			'db101' => 1,
 		],
 		'beta' => [
-			'db121' => 1, // should echo c4 (where betawiki is located)
+			// should echo c4 (where betawiki is located)
+			'db121' => 1,
 		],
 	],
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
-		//'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
-		//'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
-		//'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
-		//'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
 
