@@ -249,7 +249,8 @@ if ( $wi->isExtensionActive( 'ContactPage' ) ) {
 			'SenderEmail' => $wgPasswordSender,
 			'SenderName' => 'Miraheze No Reply',
 			'RequireDetails' => true,
-			'IncludeIP' => false, // Should never be set to true
+			// Should never be set to true
+			'IncludeIP' => false,
 			'MustBeLoggedIn' => false,
 			'AdditionalFields' => [
 				'Text' => [
@@ -402,7 +403,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 // Vector
 $vectorVersion = $wgDefaultSkin === 'vector-2022' ? '2' : '1';
 
-$wgVectorDefaultSkinVersion = $vectorVersion; // Remove with 1.39
+// Remove with 1.39
+$wgVectorDefaultSkinVersion = $vectorVersion;
 $wgVectorDefaultSkinVersionForExistingAccounts = $vectorVersion;
 
 // Don't need a global here
@@ -498,8 +500,13 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 	];
 }
 
-$wgMaxShellMemory = 215040; // 210MB
-$wgMaxShellFileSize = 51200; // 50MB
+// 210MB
+$wgMaxShellMemory = 215040;
+
+// 50MB
+$wgMaxShellFileSize = 51200;
+
+// 50 seconds
 $wgMaxShellTime = 50;
 
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
@@ -511,7 +518,8 @@ $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 $wgScribuntoEngineConf = [
 	'luasandbox' => [
 		'class' => Scribunto_LuaSandboxEngine::class,
-		'memoryLimit' => 50 * 1024 * 1024, // 50MB
+		/** 50MB */
+		'memoryLimit' => 50 * 1024 * 1024,
 		'cpuLimit' => 4,
 		'profilerPeriod' => 0.02,
 		'allowEnvFuncs' => false,
