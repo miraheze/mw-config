@@ -11,7 +11,8 @@ $wgObjectCaches['memcached-mem-1'] = [
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
+	// 500ms, in microseconds
+	'timeout'              => 0.5 * 1e6,
 ];
 
 // mem131
@@ -25,7 +26,8 @@ $wgObjectCaches['memcached-mem-3'] = [
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => 0.5 * 1e6, // 500ms, in microseconds
+	// 500ms, in microseconds
+	'timeout'              => 0.5 * 1e6,
 ];
 
 $wgObjectCaches['mysql-multiwrite'] = [
@@ -66,8 +68,11 @@ $redisServerIP = '[2a10:6740::6:306]:6379';
 $wgMainCacheType = 'memcached-mem-3';
 $wgParserCacheType = 'mysql-multiwrite';
 
-$wgParserCacheExpireTime = 86400 * 10; // 10 days
-$wgRevisionCacheExpiry = 86400 * 3; // 3 days
+// 10 days
+$wgParserCacheExpireTime = 86400 * 10;
+
+// 3 days
+$wgRevisionCacheExpiry = 86400 * 3;
 
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
@@ -109,4 +114,5 @@ if ( PHP_SAPI === 'cli' ) {
 	// APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
+
 unset( $redisServerIP );
