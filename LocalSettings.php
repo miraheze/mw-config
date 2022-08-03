@@ -122,32 +122,38 @@ $wgConf->settings += [
 	'wgAccountCreationThrottle' => [
 		'default' => [
 			[
-				'count' => 3, // Set to 1 before. Temporarily set to 3 to help with ReCaptcha issues.
+				'count' => 3,
 				'seconds' => 300,
 			],
 			[
-				'count' => 10, // Set to 5 before. Temporarily set to 3 to help with ReCaptcha issues.
+				'count' => 10,
 				'seconds' => 86400,
 			],
 		],
 	],
 
 	'wgPasswordAttemptThrottle' => [
-		'default' => [ // For Miraheze, this is X attempts per IP globally - account is not taken into account
+		'default' => [
+			// this is X attempts per IP globally
+			// user accounts are not taken into consideration
 			[
-				'count' => 5, // 5 attempts in 5 minutes
+				/** 5 attempts in 5 minutes */
+				'count' => 5,
 				'seconds' => 300,
 			],
 			[
-				'count' => 40, // 40 attempts in 24 hours
+				/** 40 attempts in 24 hours */
+				'count' => 40,
 				'seconds' => 86400,
 			],
 			[
-				'count' => 60, // 60 attempts in 48 hours
+				/** 60 attempts in 48 hours */
+				'count' => 60,
 				'seconds' => 172800,
 			],
 			[
-				'count' => 75, // 75 attempts in 72 hours
+				/** 75 attempts in 72 hours */
+				'count' => 75,
 				'seconds' => 259200,
 			],
 		],
@@ -237,7 +243,8 @@ $wgConf->settings += [
 
 	// Block
 	'wgAutoblockExpiry' => [
-		'default' => 86400, // 24 hours * 60 minutes * 60 seconds
+		// 24 hours * 60 minutes * 60 seconds
+		'default' => 86400,
 	],
 	'wgBlockAllowsUTEdit' => [
 		'default' => true,
@@ -333,7 +340,8 @@ $wgConf->settings += [
 	],
 
 	// Categories
-	'wgCategoryCollation' => [ // updateCollation.php should be ran after the change
+	'wgCategoryCollation' => [
+		// updateCollation.php should be ran after changing
 		'default' => 'uppercase',
 		'academiadesusarduwiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
@@ -408,7 +416,8 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCentralAuthHiddenLevelMigrationStage' => [
-		'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_NEW, // Remove with 1.39
+		// Remove with 1.39
+		'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_NEW,
 	],
 
 	// CentralNotice
@@ -994,12 +1003,15 @@ $wgConf->settings += [
 		'default' => [],
 	],
 	'wgActorTableSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_NEW, // Remove with 1.39
+		// Remove with 1.39
+		'default' => SCHEMA_COMPAT_NEW,
 	],
 
 	// Delete
 	'wgDeleteRevisionsLimit' => [
-		'default' => 1000, // databases don't have much memory - let's not overload them in future - set to 1,000 T5287
+		// databases don't have much memory
+		// let's not overload them (T5287)
+		'default' => 1000,
 	],
 
 	// DiscordNotifications
@@ -1349,14 +1361,22 @@ $wgConf->settings += [
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
-			1, // John (SRE)
-			19, // Reception123 (SRE)
-			5258, // Void (SRE and Board)
-			13554, // Paladox (SRE)
-			73651, // Owen (Board)
-			96304, // Universal Omega (SRE)
-			2639, // Agent Isai (SRE)
-			6758, // MacFan4000 (SRE)
+			/** John (SRE) */
+			1,
+			/** Reception123 (SRE) */
+			19,
+			/** Void (SRE and Board) */
+			5258,
+			/** Paladox (SRE) */
+			13554,
+			/** Owen (Board) */
+			73651,
+			/** Universal Omega (SRE and Board) */
+			96304,
+			/** Agent Isai (SRE) */
+			2639,
+			/** MacFan4000 (SRE) */
+			6758,
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
@@ -4033,7 +4053,7 @@ $wgConf->settings += [
 	'wgUserProfileDisplay' => [
 		'default' => [
 			'activity' => false,
-			'articles' => true, // Blog
+			'articles' => true,
 			'avatar' => true,
 			'awards' => true,
 			'board' => false,
@@ -4400,16 +4420,21 @@ $wgConf->settings += [
 	],
 	'wgCdnServers' => [
 		'default' => [
-			'[2001:41d0:801:2000::4c25]:81', // cp20
-			'[2001:41d0:801:2000::1b80]:81', // cp21
-			'[2607:5300:201:3100::929a]:81', // cp30
-			'[2607:5300:201:3100::5ebc]:81', // cp31
+			/** cp20 */
+			'[2001:41d0:801:2000::4c25]:81',
+			/** cp21 */
+			'[2001:41d0:801:2000::1b80]:81',
+			/** cp30 */
+			'[2607:5300:201:3100::929a]:81',
+			/** cp31 */
+			'[2607:5300:201:3100::5ebc]:81',
 		],
 	],
 
 	// Vector
 	'wgVectorSkinMigrationMode' => [
-		'default' => false, // Remove with 1.39
+		// Remove with 1.39
+		'default' => false,
 	],
 	'wgVectorResponsive' => [
 		'default' => false,
@@ -4893,15 +4918,22 @@ $wgConf->settings += [
 	],
 	'wmincTestWikiNamespaces' => [
 		'default' => [
-			NS_MAIN, NS_TALK,
-			NS_TEMPLATE, NS_TEMPLATE_TALK,
-			NS_CATEGORY, NS_CATEGORY_TALK,
-			828, 829 // NS_MODULE, NS_MODULE_TALK
+			NS_MAIN,
+			NS_TALK,
+			NS_TEMPLATE,
+			NS_TEMPLATE_TALK,
+			NS_CATEGORY,
+			NS_CATEGORY_TALK,
+			NS_MODULE,
+			NS_MODULE_TALK,
 		],
 		'idiotpediaincubatorwiki' => [
-			NS_MAIN, NS_TALK,
-			NS_CATEGORY, NS_CATEGORY_TALK,
-			828, 829 // NS_MODULE, NS_MODULE_TALK
+			NS_MAIN,
+			NS_TALK,
+			NS_CATEGORY,
+			NS_CATEGORY_TALK,
+			NS_MODULE,
+			NS_MODULE_TALK,
 		],
 	],
 	// WikiLove
@@ -5066,7 +5098,8 @@ $wgConf->settings += [
 			'headers-sent' => false,
 			'http' => 'warning',
 			'HitCounters' => false,
-			'HttpError' => 'error', // Only log http errors with a 500+ code
+			// Only log http errors with a 500+ code
+			'HttpError' => 'error',
 			// 'JobExecutor' => [ 'logstash' => 'warning' ],
 			'JobQueueRedis' => 'debug',
 			'localisation' => false,
@@ -5082,7 +5115,9 @@ $wgConf->settings += [
 			'Math' => 'info',
 			'MatomoAnalytics' => 'debug',
 			'Mime' => false,
-			'memcached' => [ 'graylog' => 'error' ], // Debug sprews too much information + sample (otherwise you'll get 2 million+ messages in a few minutes)
+			// debug sprews too much information + sample
+			// otherwise we get 2 million+ messages within a few minutes
+			'memcached' => [ 'graylog' => 'error' ],
 			'message-format' => false,
 			'MessageCache' => false,
 			'MessageCacheError' => false,
@@ -5103,7 +5138,9 @@ $wgConf->settings += [
 			'readinglists' => false,
 			'recursion-guard' => false,
 			'RecursiveLinkPurge' => false,
-			'redis' => [ 'graylog' => 'warning', 'sample' => 20 ], // Debug sprews too much information + sample (otherwise you'll get 2 million+ messages in a few minutes)
+			// debug sprews too much information + sample
+			// otherwise we get 2 million+ messages within a few minutes
+			'redis' => [ 'graylog' => 'warning', 'sample' => 20 ],
 			'Renameuser' => 'debug',
 			'resourceloader' => false,
 			'ResourceLoaderImage' => false,
@@ -5141,7 +5178,7 @@ $wgConf->settings += [
 			'VisualEditor' => 'debug',
 			'warning' => false,
 			'wfDebug' => false,
-			'wfLogDBError' => 'debug', // Former $wgDBerrorLog
+			'wfLogDBError' => 'debug',
 			'Wikibase' => false,
 			'Wikibase.NewItemIdFormatter' => false,
 			'WikibaseQualityConstraints' => false,
@@ -5206,10 +5243,8 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-// Varnish
-
-// We set wgInternalServer to wgServer as we need this to get purging working (we convert wgServer from https:// to http://).
-// https://www.mediawiki.org/wiki/Manual:$wgInternalServer
+// we set $wgInternalServer to $wgServer to get varnish cache purging working
+// we convert $wgServer to http://, as varnish does not support purging https requests
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
 
 if ( $wgRequestTimeLimit ) {
