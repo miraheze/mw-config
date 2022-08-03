@@ -119,9 +119,11 @@ switch ( $wi->dbname ) {
 			LdapPrimaryAuthenticationProvider::class => [
 				'class' => LdapPrimaryAuthenticationProvider::class,
 				'args' => [ [
-					'authoritative' => true, // don't allow local non-LDAP accounts
+					// don't allow local non-LDAP accounts
+					'authoritative' => true,
 				] ],
-				'sort' => 50, // must be smaller than local pw provider
+				// must be smaller than local pw provider
+				'sort' => 50,
 			],
 		];
 
