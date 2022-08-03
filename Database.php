@@ -63,4 +63,4 @@ $wgLBFactoryConf = [
 $wgMaxUserDBWriteDuration = 3;
 
 // Max execution time for expensive queries of special pages (in milliseconds)
-$wgMaxExecutionTimeForExpensiveQueries = 20000;
+$wgMaxExecutionTimeForExpensiveQueries = 30000;
