@@ -818,8 +818,9 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'c2',
-			'c3',
 			'c4',
+			'c5',
+			'c6',
 		],
 		'betaheze' => [
 			'c4',
