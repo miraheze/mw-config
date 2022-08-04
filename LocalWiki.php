@@ -140,6 +140,53 @@ switch ( $wi->dbname ) {
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
+	case 'metawiki':
+		$wgContactConfig['requestaccount'] = [
+			'RecipientUser' => 'Miraheze CVT',
+			'SenderName' => 'Account Creation Request Form via Meta',
+			'RequireDetails' => true,
+			'IncludeIP' => false,
+			'MustBeLoggedIn' => false,
+			'AdditionalFields' => [
+				'SelectIssue' => [
+					'label-message' => 'contactpage-requestaccount-selectissue',
+					'type' => 'radio',
+					'options-messages' => [
+						'contactpage-requestaccount-selectissue-abusefilterissue' => 'abusefilter',
+						'contactpage-requestaccount-selectissue-recaptchaissues' => 'captcha',
+						'version-other' => 'other',
+					],
+					'help-message' => 'contactpage-requestaccount-selectissue-help',
+					'required' => true,
+				],
+				'DescribeIssue' => [
+					'label-message' => 'contactpage-requestaccount-describeissue',
+					'type' => 'text',
+					'hide-if' => [
+						'!==',
+						'SelectIssue',
+						'other'
+					],
+					'help-message' => 'contactpage-requestaccount-describeissue-help',
+					'required' => true,
+				],
+				'SelectUsername' => [
+					'label-message' => 'contactpage-requestaccount-selectusername',
+					'type' => 'text',
+					'maxlength' => 50,
+					'help-message' => 'contactpage-requestaccount-selectusername-help',
+					'required' => true,
+				],
+				'OtherDetails' => [
+					'label-message' => 'contactpage-requestaccount-otherdetails',
+					'type' => 'textarea',
+					'help-message' => 'contactpage-requestaccount-otherdetails-help',
+					'required' => false,
+				],
+			],
+			'DisplayFormat' => 'raw',
+		];
+		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
