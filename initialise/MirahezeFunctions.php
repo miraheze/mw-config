@@ -486,7 +486,6 @@ class MirahezeFunctions {
 		return $globals;
 	}
 
-
 	/**
 	 * @param string $cacheShard
 	 * @param array $configObject
