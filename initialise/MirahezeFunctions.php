@@ -84,9 +84,13 @@ class MirahezeFunctions {
 	}
 
 	/**
-	 * @return array
+	 * @param string $dblist
+	 * @param string $database
+	 * @param bool $onlyDBs
+	 * @param bool $fromServer
+	 * @return array|string
 	 */
-	public static function readDbListFile( $dblist, $onlyDBs = true, $database = false, $fromServer = false ) {
+	public static function readDbListFile( string $dblist, string $database = '', bool $onlyDBs = true, bool $fromServer = false ) {
 		if ( $database && $onlyDBs && !$fromServer ) {
 			return $database;
 		}
@@ -208,7 +212,7 @@ class MirahezeFunctions {
 		$databases = self::readDbListFile( $list, false, $database );
 
 		if ( $deleted ) {
-			$databases += self::readDbListFile( "deleted-$list", false, $database );
+			$databases += self::readDbListFile( "deleted-$list", $database, false );
 		}
 
 		if ( $database !== null ) {
@@ -249,8 +253,8 @@ class MirahezeFunctions {
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
 		static $database = null;
-		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
-			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
+		$database ??= self::readDbListFile( 'production', 'https://' . $hostname, true, true ) ?:
+			self::readDbListFile( 'beta', 'https://' . $hostname, true, true );
 
 		if ( $database ) {
 			return $database;
@@ -283,8 +287,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], '', false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], '', false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -323,8 +327,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], '', false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], '', false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -466,6 +470,11 @@ class MirahezeFunctions {
 		return $globals;
 	}
 
+
+	/**
+	 * @param string $cacheShard
+	 * @param array $configObject
+	 */
 	public static function writeToCache( string $cacheShard, array $configObject ) {
 		@mkdir( self::CACHE_DIRECTORY );
 		$tmpFile = tempnam( '/tmp/', $cacheShard );
@@ -490,6 +499,12 @@ class MirahezeFunctions {
 		}
 	}
 
+	/**
+	 * @param string $confCacheFile
+	 * @param string $confActualMtime
+	 * @param string $type
+	 * @return ?array
+	 */
 	public static function readFromCache(
 		string $confCacheFile,
 		string $confActualMtime,
@@ -601,6 +616,11 @@ class MirahezeFunctions {
 		return $settings;
 	}
 
+	/**
+	 * @param string $setting
+	 * @param string $wiki
+	 * @return mixed
+	 */
 	public function getSettingValue( string $setting, string $wiki = 'default' ) {
 		global $wgConf;
 
@@ -679,16 +699,28 @@ class MirahezeFunctions {
 		);
 	}
 
+	/**
+	 * @param string $extension
+	 * @return bool
+	 */
 	public function isExtensionActive( string $extension ): bool {
 		self::$activeExtensions ??= self::getActiveExtensions();
 		return in_array( $extension, self::$activeExtensions );
 	}
 
+	/**
+	 * @param string ...$extensions
+	 * @return bool
+	 */
 	public function isAnyOfExtensionsActive( string ...$extensions ): bool {
 		self::$activeExtensions ??= self::getActiveExtensions();
 		return count( array_intersect( $extensions, self::$activeExtensions ) ) > 0;
 	}
 
+	/**
+	 * @param string ...$extensions
+	 * @return bool
+	 */
 	public function isAllOfExtensionsActive( string ...$extensions ): bool {
 		self::$activeExtensions ??= self::getActiveExtensions();
 		return count( array_intersect( $extensions, self::$activeExtensions ) ) === count( $extensions );
@@ -750,7 +782,11 @@ class MirahezeFunctions {
 		}
 	}
 
-	private static function getActiveList( $globalDatabase ) {
+	/**
+	 * @param string $globalDatabase
+	 * @return array
+	 */
+	private static function getActiveList( string $globalDatabase ): array {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
 		$activeWikis = $dbr->select(
 			'cw_wikis',
@@ -777,7 +813,11 @@ class MirahezeFunctions {
 		return $activeList;
 	}
 
-	private static function getCombiList( $globalDatabase ) {
+	/**
+	 * @param string $globalDatabase
+	 * @return array
+	 */
+	private static function getCombiList( string $globalDatabase ): array {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
 		$allWikis = $dbr->select(
 			'cw_wikis',
@@ -807,7 +847,11 @@ class MirahezeFunctions {
 		return $combiList;
 	}
 
-	private static function getDeletedList( $globalDatabase ) {
+	/**
+	 * @param string $globalDatabase
+	 * @return array
+	 */
+	private static function getDeletedList( string $globalDatabase ): array {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
 		$deletedWikis = $dbr->select(
 			'cw_wikis',
@@ -832,7 +876,10 @@ class MirahezeFunctions {
 		return $deletedList;
 	}
 
-	public static function onGenerateDatabaseLists( &$databaseLists ) {
+	/**
+	 * @param array &$databaseLists
+	 */
+	public static function onGenerateDatabaseLists( array &$databaseLists ) {
 		$databaseLists = [
 			'active' => [
 				'combi' => self::getActiveList(
