@@ -59,6 +59,9 @@ class MirahezeFunctions {
 
 	private static $currentDatabase;
 
+	/**
+	 * @return array
+	 */
 	public static function getLocalDatabases(): array {
 		global $wgLocalDatabases;
 
@@ -80,6 +83,9 @@ class MirahezeFunctions {
 		return $databases;
 	}
 
+	/**
+	 * @return array
+	 */
 	public static function readDbListFile( $dblist, $onlyDBs = true, $database = false, $fromServer = false ) {
 		if ( $database && $onlyDBs && !$fromServer ) {
 			return $database;
@@ -148,6 +154,9 @@ class MirahezeFunctions {
 		$wgConf->wikis = self::getLocalDatabases();
 	}
 
+	/**
+	 * @return string
+	 */
 	public static function getRealm(): string {
 		static $realm = null;
 
@@ -159,10 +168,18 @@ class MirahezeFunctions {
 		return $realm;
 	}
 
+	/**
+	 * @return string
+	 */
 	public static function getCurrentSuffix(): string {
 		return array_flip( self::SUFFIXES )[ self::DEFAULT_SERVER[self::getRealm()] ];
 	}
 
+	/**
+	 * @param ?string $database
+	 * @param bool $deleted
+	 * @return string|array
+	 */
 	public static function getServers( ?string $database = null, bool $deleted = false ) {
 		global $wgConf;
 
@@ -221,7 +238,10 @@ class MirahezeFunctions {
 		return $servers;
 	}
 
-	public static function getCurrentDatabase() {
+	/**
+	 * @return string
+	 */
+	public static function getCurrentDatabase(): string {
 		if ( defined( 'MW_DB' ) ) {
 			return MW_DB;
 		}
@@ -256,6 +276,9 @@ class MirahezeFunctions {
 		$wgDBname = $this->dbname;
 	}
 
+	/**
+	 * @return array
+	 */
 	public static function getDatabaseClusters(): array {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
@@ -270,6 +293,9 @@ class MirahezeFunctions {
 		return array_combine( array_keys( $databases ), $clusters );
 	}
 
+	/**
+	 * @return string
+	 */
 	public static function getServer(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
@@ -290,7 +316,10 @@ class MirahezeFunctions {
 		$wgSitename = $this->sitename;
 	}
 
-	public static function getSiteNames() {
+	/**
+	 * @return array
+	 */
+	public static function getSiteNames(): array {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
@@ -307,13 +336,19 @@ class MirahezeFunctions {
 		return $siteNames;
 	}
 
-	public static function getSiteName() {
+	/**
+	 * @return string
+	 */
+	public static function getSiteName(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		return self::getSiteNames()[ self::$currentDatabase ] ?? self::getSiteNames()['default'];
 	}
 
-	public static function isMissing() {
+	/**
+	 * @return bool
+	 */
+	public static function isMissing(): bool {
 		global $wgConf;
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
@@ -321,6 +356,9 @@ class MirahezeFunctions {
 		return !in_array( self::$currentDatabase, $wgConf->wikis );
 	}
 
+	/**
+	 * @return array
+	 */
 	public static function getCacheArray(): array {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
@@ -336,6 +374,9 @@ class MirahezeFunctions {
 
 	private static $activeExtensions;
 
+	/**
+	 * @return array
+	 */
 	public static function getConfigGlobals(): array {
 		global $IP, $wgDBname, $wgConf;
 
@@ -387,7 +428,10 @@ class MirahezeFunctions {
 		return $globals;
 	}
 
-	public static function getConfigForCaching() {
+	/**
+	 * @return array
+	 */
+	public static function getConfigForCaching(): array {
 		global $wgDBname, $wgConf;
 
 		$wikiTags = [];
@@ -468,6 +512,9 @@ class MirahezeFunctions {
 		return null;
 	}
 
+	/**
+	 * @return array
+	 */
 	public static function getManageWikiConfigCache(): array {
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
@@ -562,6 +609,9 @@ class MirahezeFunctions {
 		return $this->cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
 	}
 
+	/**
+	 * @return array
+	 */
 	public static function getActiveExtensions(): array {
 		global $IP, $wgDBname;
 
