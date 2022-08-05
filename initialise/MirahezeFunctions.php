@@ -114,7 +114,7 @@ class MirahezeFunctions {
 		if ( $database ) {
 			if ( $fromServer ) {
 				$server = $database;
-				$database = false;
+				$database = '';
 				foreach ( $databasesArray['combi'] ?? $databasesArray['databases'] as $key => $data ) {
 					if ( isset( $data['u'] ) && $data['u'] === $server ) {
 						$database = $key;
@@ -130,7 +130,7 @@ class MirahezeFunctions {
 			if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
 				return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
 			} else {
-				return false;
+				return '';
 			}
 		} else {
 			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
