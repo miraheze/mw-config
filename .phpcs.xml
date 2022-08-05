@@ -8,7 +8,6 @@
 	<exclude-pattern>*/out/*</exclude-pattern>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.Files.LineLength.TooLong" />
-		<exclude name="MediaWiki.Commenting.FunctionComment" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
@@ -18,5 +17,8 @@
 	</rule>
 	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
 		<exclude-pattern>initialise/MirahezeFunctions\.php</exclude-pattern>
+	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment">
+		<exclude-pattern>LocalWiki\.php</exclude-pattern>
 	</rule>
 </ruleset>
