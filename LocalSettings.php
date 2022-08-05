@@ -3855,6 +3855,10 @@ $wgConf->settings += [
 			'bureaucrat',
 			'consul',
 		],
+		'theredpionnerwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
