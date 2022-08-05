@@ -85,12 +85,12 @@ class MirahezeFunctions {
 
 	/**
 	 * @param string $dblist
-	 * @param string $database
 	 * @param bool $onlyDBs
+	 * @param ?string $database
 	 * @param bool $fromServer
 	 * @return array|string
 	 */
-	public static function readDbListFile( string $dblist, string $database = '', bool $onlyDBs = true, bool $fromServer = false ) {
+	public static function readDbListFile( string $dblist, bool $onlyDBs = true, ?string $database = null, bool $fromServer = false ) {
 		if ( $database && $onlyDBs && !$fromServer ) {
 			return $database;
 		}
@@ -212,7 +212,7 @@ class MirahezeFunctions {
 		$databases = self::readDbListFile( $list, false, $database );
 
 		if ( $deleted ) {
-			$databases += self::readDbListFile( "deleted-$list", $database, false );
+			$databases += self::readDbListFile( "deleted-$list", false, $database );
 		}
 
 		if ( $database !== null ) {
@@ -253,8 +253,8 @@ class MirahezeFunctions {
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
 		static $database = null;
-		$database ??= self::readDbListFile( 'production', 'https://' . $hostname, true, true ) ?:
-			self::readDbListFile( 'beta', 'https://' . $hostname, true, true );
+		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
+			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
 
 		if ( $database ) {
 			return $database;
@@ -287,8 +287,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], '', false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], '', false );
+		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -327,8 +327,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], '', false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], '', false );
+		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
