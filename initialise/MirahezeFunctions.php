@@ -182,7 +182,7 @@ class MirahezeFunctions {
 	/**
 	 * @param ?string $database
 	 * @param bool $deleted
-	 * @return string|array
+	 * @return array|string
 	 */
 	public static function getServers( ?string $database = null, bool $deleted = false ) {
 		global $wgConf;
@@ -271,6 +271,8 @@ class MirahezeFunctions {
 				return $explode[0] . $suffix;
 			}
 		}
+
+		return '';
 	}
 
 	public function setDatabase() {
@@ -538,6 +540,9 @@ class MirahezeFunctions {
 			return [];
 		}
 
+		$settings = [];
+
+		// Assign language code
 		$settings['wgLanguageCode']['default'] = $cacheArray['core']['wgLanguageCode'];
 
 		// Assign states
@@ -553,7 +558,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		// Handle namespaces - additional settings will be done in ManageWiki
+		// Handle namespaces
 		if ( isset( $cacheArray['namespaces'] ) ) {
 			foreach ( $cacheArray['namespaces'] as $name => $ns ) {
 				$settings['wgExtraNamespaces']['default'][(int)$ns['id']] = $name;
