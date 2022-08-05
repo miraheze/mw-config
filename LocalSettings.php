@@ -4924,16 +4924,20 @@ $wgConf->settings += [
 			NS_TEMPLATE_TALK,
 			NS_CATEGORY,
 			NS_CATEGORY_TALK,
-			NS_MODULE,
-			NS_MODULE_TALK,
+			/** NS_MODULE */
+			828,
+			/** NS_MODULE_TALK */
+			829,
 		],
 		'idiotpediaincubatorwiki' => [
 			NS_MAIN,
 			NS_TALK,
 			NS_CATEGORY,
 			NS_CATEGORY_TALK,
-			NS_MODULE,
-			NS_MODULE_TALK,
+			/** NS_MODULE */
+			828,
+			/** NS_MODULE_TALK */
+			829,
 		],
 	],
 	// WikiLove
