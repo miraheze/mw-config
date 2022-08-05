@@ -69,6 +69,7 @@ class MirahezeFunctions {
 		$this->setSiteNames();
 	}
 
+	/** @var string */
 	private static $currentDatabase;
 
 	/**
@@ -390,6 +391,7 @@ class MirahezeFunctions {
 		), true );
 	}
 
+	/** @var array */
 	private static $activeExtensions;
 
 	/**
