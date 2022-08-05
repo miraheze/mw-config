@@ -1,14 +1,26 @@
 <?php
 
 class MirahezeFunctions {
-	private $cacheArray;
 
-	public $hostname;
+	/** @var string */
 	public $dbname;
-	public $server;
-	public $sitename;
+
+	/** @var string */
+	public $hostname;
+
+	/** @var bool */
 	public $missing;
+
+	/** @var string */
+	public $server;
+
+	/** @var string */
+	public $sitename;
+
+	/** @var array */
 	public $wikiDBClusters;
+
+	/** @var array */
 	public static $disabledExtensions = [];
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
@@ -629,9 +641,14 @@ class MirahezeFunctions {
 	public function getSettingValue( string $setting, string $wiki = 'default' ) {
 		global $wgConf;
 
-		$this->cacheArray ??= self::getCacheArray();
+		static $cacheArray = null;
+		$cacheArray ??= self::getCacheArray();
 
-		return $this->cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
+		if ( !$cacheArray ) {
+			return $wgConf->get( $setting, $wiki );
+		}
+
+		return $cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
 	}
 
 	/**
