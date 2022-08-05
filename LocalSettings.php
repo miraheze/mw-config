@@ -2514,14 +2514,6 @@ $wgConf->settings += [
 				'editor' => true,
 			],
 		],
-		'+theredpionnerwiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-			'templateeditor' => [
-				'edittemplateprotected' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
@@ -3854,6 +3846,10 @@ $wgConf->settings += [
 		'testwiki' => [
 			'bureaucrat',
 			'consul',
+		],
+		'theredpionnerwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
 		],
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
