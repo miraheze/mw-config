@@ -2514,14 +2514,6 @@ $wgConf->settings += [
 				'editor' => true,
 			],
 		],
-		'+theredpionnerwiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-			'templateeditor' => [
-				'edittemplateprotected' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
