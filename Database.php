@@ -19,6 +19,12 @@ $wgLBFactoryConf = [
 		'c4' => [
 			'db121' => 1,
 		],
+		'c5' => [
+			'db131' => 1,
+		],
+		'c6' => [
+			'db141' => 1,
+		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -45,6 +51,8 @@ $wgLBFactoryConf = [
 		'db101' => 'db101.miraheze.org',
 		'db111' => 'db111.miraheze.org',
 		'db121' => 'db121.miraheze.org',
+		'db141' => 'db131.miraheze.org',
+		'db141' => 'db141.miraheze.org',
 	],
 	'externalLoads' => [
 		'beta' => [
@@ -66,6 +74,8 @@ $wgLBFactoryConf = [
 		// 'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c6' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
 
