@@ -207,3 +207,8 @@ switch ( $wi->dbname ) {
 
 		break;
 }
+
+$dbTempList = file_get_contents( '/srv/mediawiki/config/databaseDb111Migration.txt' );
+foreach ( $dbTempList as $db ) {
+	$wi->config->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
+}
