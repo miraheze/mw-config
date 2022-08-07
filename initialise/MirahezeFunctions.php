@@ -812,19 +812,20 @@ class MirahezeFunctions {
 	 */
 	private static function getActiveList( string $globalDatabase ): array {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
-		$activeWikis = $dbr->select(
-			'cw_wikis',
-			[
+		$activeWikis = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [
 				'wiki_dbcluster',
 				'wiki_dbname',
 				'wiki_sitename',
-			], [
+			] )
+			->where( [
 				'wiki_closed' => 0,
 				'wiki_deleted' => 0,
 				'wiki_inactive' => 0,
-			],
-			__METHOD__
-		);
+			] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
 		$activeList = [];
 		foreach ( $activeWikis as $wiki ) {
@@ -843,18 +844,17 @@ class MirahezeFunctions {
 	 */
 	private static function getCombiList( string $globalDatabase ): array {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
-		$allWikis = $dbr->select(
-			'cw_wikis',
-			[
+		$allWikis = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [
 				'wiki_dbcluster',
 				'wiki_dbname',
 				'wiki_url',
 				'wiki_sitename',
-			], [
-				'wiki_deleted' => 0,
-			],
-			__METHOD__
-		);
+			] )
+			->where( [ 'wiki_deleted' => 0 ] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
 		$combiList = [];
 		foreach ( $allWikis as $wiki ) {
@@ -877,17 +877,16 @@ class MirahezeFunctions {
 	 */
 	private static function getDeletedList( string $globalDatabase ): array {
 		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
-		$deletedWikis = $dbr->select(
-			'cw_wikis',
-			[
+		$deletedWikis = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [
 				'wiki_dbcluster',
 				'wiki_dbname',
 				'wiki_sitename',
-			], [
-				'wiki_deleted' => 1,
-			],
-			__METHOD__
-		);
+			] )
+			->where( [ 'wiki_deleted' => 1 ] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
 		$deletedList = [];
 		foreach ( $deletedWikis as $wiki ) {
