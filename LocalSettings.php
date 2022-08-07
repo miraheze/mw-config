@@ -5278,16 +5278,3 @@ if (
 
 // Don't need a global here
 unset( $wi );
-
-$wgHooks['MediaWikiServices'][] = 'extractGlobals';
-
-function extractGlobals() {
-	foreach ( $GLOBALS['globals'] as $global => $value ) {
-		if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) ) {
-			$GLOBALS[$global] = $value;
-		}
-	}
-
-	// Don't need a global here
-	unset( $GLOBALS['globals'] );
-}
