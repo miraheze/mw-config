@@ -382,10 +382,6 @@ $wgConf->settings += [
 	'wgCentralAuthCookies' => [
 		'default' => true,
 	],
-	'wgCentralAuthCookieDomain' => [
-		'default' => '.miraheze.org',
-		'betaheze' => '.betaheze.org',
-	],
 	'wgCentralAuthCookiePrefix' => [
 		'default' => 'centralauth_',
 		'betaheze' => 'betacentralauth_',
@@ -2971,9 +2967,6 @@ $wgConf->settings += [
 	'wgMFNoindexPages' => [
 		'ext-MobileFrontend' => false,
 	],
-	'wgMFStopRedirectCookieHost' => [
-		'ext-MobileFrontend' => $wi->hostname,
-	],
 	'wgMFUseDesktopSpecialHistoryPage' => [
 		'default' => [
 			'base' => false,
@@ -5218,10 +5211,6 @@ $wgConf->settings += [
 ];
 
 // Start settings requiring external dependency checks/functions
-if ( !preg_match( '/^(.*)\.(miraheze|betaheze)\.org$/', $wi->hostname ) ) {
-	// Set for custom domains
-	$wgConf->settings['wgCentralAuthCookieDomain'][$wi->dbname] = $wi->hostname;
-}
 
 if ( wfHostname() === 'test131' ) {
 	// Prevent cache (better be safe than sorry)
