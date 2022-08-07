@@ -8,7 +8,6 @@
 	<exclude-pattern>*/out/*</exclude-pattern>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="Generic.Files.LineLength.TooLong" />
-		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.allowedPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.allowedPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 	</rule>
