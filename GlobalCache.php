@@ -16,7 +16,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 ];
 
 // mem131
-$wgObjectCaches['memcached-mem-3'] = [
+$wgObjectCaches['memcached-mem-2'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
 	'persistent'           => false,
@@ -61,11 +61,11 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgSessionCacheType = 'memcached-mem-3';
+$wgSessionCacheType = 'memcached-mem-2';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
-$wgMainCacheType = 'memcached-mem-3';
+$wgMainCacheType = 'memcached-mem-2';
 $wgParserCacheType = 'mysql-multiwrite';
 
 // 10 days
