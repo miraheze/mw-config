@@ -824,6 +824,7 @@ class MirahezeFunctions {
 				'wiki_deleted' => 0,
 				'wiki_inactive' => 0,
 			] )
+			->useIndex( 'wiki_dbname' )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
@@ -853,6 +854,7 @@ class MirahezeFunctions {
 				'wiki_sitename',
 			] )
 			->where( [ 'wiki_deleted' => 0 ] )
+			->useIndex( 'wiki_dbname' )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
@@ -885,6 +887,7 @@ class MirahezeFunctions {
 				'wiki_sitename',
 			] )
 			->where( [ 'wiki_deleted' => 1 ] )
+			->useIndex( 'wiki_dbname' )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
