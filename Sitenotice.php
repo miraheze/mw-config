@@ -17,9 +17,7 @@ $wgMajorSiteNoticeID = 71;
 // Global SiteNotice
 /* if ( !$wmgSiteNoticeOptOut ) {
 	// show to all users
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	$wgHooks['SiteNoticeAfter'][] = static function ( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
@@ -33,9 +31,7 @@ $wgMajorSiteNoticeID = 71;
 
 // Specific wiki SiteNotice
 /* if ( $wi->isAnyOfExtensionsActive( 'Vector' ) ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
-
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	$wgHooks['SiteNoticeAfter'][] = static function ( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
