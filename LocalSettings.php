@@ -3748,8 +3748,8 @@ $wgConf->settings += [
 			'consul',
 		],
 		'+theredpionnerwiki' => [
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
+			'extendedconfirmed',
+			'templateeditor',
 		],
 		'+vnenderbotwiki' => [
 			'template',
@@ -3843,8 +3843,8 @@ $wgConf->settings += [
 			'consul',
 		],
 		'theredpionnerwiki' => [
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
+			'extendedconfirmed',
+			'templateeditor',
 		],
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
