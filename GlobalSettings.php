@@ -151,6 +151,18 @@ if ( $cwExperimental ) {
 	$wgParserEnableLegacyMediaDOM = true;
 }
 
+// Dynamic cookie settings dependant on $wgServer
+if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
+	$wgCentralAuthCookieDomain = '.miraheze.org';
+	$wgMFStopRedirectCookieHost = '.miraheze.org';
+elseif ( preg_match( '/betaheze\.org$/', $wi->server ) ) {
+	$wgCentralAuthCookieDomain = '.betaheze.org';
+	$wgMFStopRedirectCookieHost = '.betaheze.org';
+} else {
+	$wgCentralAuthCookieDomain = $wi->hostname;
+	$wgMFStopRedirectCookieHost = $wi->hostname;
+}
+
 // $wmgPrivateUploads
 $wgGenerateThumbnailOnParse = false;
 if ( $wmgPrivateUploads ) {
