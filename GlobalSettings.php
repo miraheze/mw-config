@@ -155,7 +155,7 @@ if ( $cwExperimental ) {
 if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.miraheze.org';
 	$wgMFStopRedirectCookieHost = '.miraheze.org';
-elseif ( preg_match( '/betaheze\.org$/', $wi->server ) ) {
+} elseif ( preg_match( '/betaheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.betaheze.org';
 	$wgMFStopRedirectCookieHost = '.betaheze.org';
 } else {
