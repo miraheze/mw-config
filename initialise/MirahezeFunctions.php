@@ -160,6 +160,7 @@ class MirahezeFunctions {
 		global $wgHooks;
 
 		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+		$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::extractGlobals';
 	}
 
 	public static function setupSiteConfiguration() {
@@ -937,5 +938,16 @@ class MirahezeFunctions {
 				),
 			],
 		];
+	}
+
+	public static function extractGlobals() {
+		foreach ( $GLOBALS['globals'] as $global => $value ) {
+			if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) ) {
+				$GLOBALS[$global] = $value;
+			}
+		}
+
+		// Don't need a global here
+		unset( $GLOBALS['globals'] );
 	}
 }
