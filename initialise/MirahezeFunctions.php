@@ -1,5 +1,8 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+use Wikimedia\Rdbms\DBConnRef;
+
 class MirahezeFunctions {
 
 	/** @var string */
@@ -811,7 +814,7 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	private static function getActiveList( string $globalDatabase ): array {
-		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
+		$dbr = self::getDatabaseConnection( $globalDatabase );
 		$activeWikis = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -844,7 +847,7 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	private static function getCombiList( string $globalDatabase ): array {
-		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
+		$dbr = self::getDatabaseConnection( $globalDatabase );
 		$allWikis = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -878,7 +881,7 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	private static function getDeletedList( string $globalDatabase ): array {
-		$dbr = wfGetDB( DB_REPLICA, [], $globalDatabase );
+		$dbr = self::getDatabaseConnection( $globalDatabase );
 		$deletedWikis = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -900,6 +903,17 @@ class MirahezeFunctions {
 		}
 
 		return $deletedList;
+	}
+
+	/**
+	 * @param string $databaseName
+	 * @return DBConnRef
+	 */
+	private static function getDatabaseConnection( string $databaseName ): DBConnRef {
+		return MediaWikiServices::getInstance()
+			->getDBLoadBalancerFactory()
+			->getMainLB( $databaseName )
+			->getMaintenanceConnectionRef( DB_REPLICA, [], $databaseName );
 	}
 
 	/**
