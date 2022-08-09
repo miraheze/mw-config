@@ -749,7 +749,7 @@ $wgConf->settings += [
 			'cp\d+',
 			'mw\d+',
 			'jobrunner\d+',
-			'gluster(fs)?\d+',
+			'gluster(fs)?(\d+)?',
 			'ns\d+',
 			'bacula\d+',
 			'mail(\d+)?',
