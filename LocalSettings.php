@@ -726,7 +726,7 @@ $wgConf->settings += [
 			'health',
 			'status',
 			'acme',
-			'ssl(-acme)?',
+			'ssl',
 			'sslhost',
 			'sslrequest',
 			'letsencrypt',
