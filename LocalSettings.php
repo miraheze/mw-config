@@ -770,7 +770,7 @@ $wgConf->settings += [
 			'jobchron\d+',
 			'mwtask(\d+)?',
 			'es\d+',
-			'bast(\d+)?',
+			'bast(ion)?(\d+)?',
 			'reports(\d+)?',
 		],
 	],
