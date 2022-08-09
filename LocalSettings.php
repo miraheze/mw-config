@@ -5218,14 +5218,6 @@ if ( wfHostname() === 'test131' ) {
 	$wgConf->settings['wgUseCdn']['default'] = false;
 }
 
-$dbTempList = file_get_contents( '/srv/mediawiki/config/databaseDb111Migration.txt' );
-$lines = explode( "\n", $dbTempList );
-foreach ( $lines as $db ) {
-	if ( $db !== '' ) {
-		$wgConf->settings['wgReadOnly'][$db] = 'Database maintenance in progess';
-	}
-}
-
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [ 'regexfunctions' ];
