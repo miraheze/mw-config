@@ -53,9 +53,13 @@ if ( $wgDBname === 'constantnoblewiki' ) {
 		NS_HELP_TALK => false,
 		NS_CATEGORY => true,
 		NS_CATEGORY_TALK => false,
+		3012 => true,
+		3013 => false,
 		3034 => true,
 		3035 => false,
 		3036 => true,
 		3037 => false,
+		3040 => true,
+		3041 => false,
 	];
 }
