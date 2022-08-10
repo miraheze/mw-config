@@ -86,7 +86,7 @@ $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
-	$redisServerIP = '[2a10:6740::6:109]:6379';
+	$redisServerIP = '[2a10:6740::6:406]:6379';
 
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
 	$wgSessionCacheType = 'memcached-mem-1';
