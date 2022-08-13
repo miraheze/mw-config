@@ -281,6 +281,21 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, moderators are allowed to edit pending changes before approving. DANGEROUS: moderator can accidentally delete the text of pending change. Enable this only when you use Moderation for pre-publish review.',
 		'requires' => [],
 	],
+	'wgModerationEmail' => [
+		'name' => 'Moderation Email',
+		'from' => 'moderation',
+		'type' => 'text',
+		'overridedefault' => $wgPasswordSender,
+		'section' => 'anti-spam',
+		'help' => 'Email address to send moderation notifications to.',
+		'requires' => [
+			'visibility' => [
+				'permissions' => [
+					'managewiki',
+				],
+			],
+		],
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [

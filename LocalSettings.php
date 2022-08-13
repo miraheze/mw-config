@@ -3086,7 +3086,6 @@ $wgConf->settings += [
 	// Email to send notifications to.
 	'wgModerationEmail' => [
 		'default' => $wgPasswordSender,
-		'obeymewiki' => 'clarice_desand@yahoo.com',
 	],
 	'wgModerationPreviewLink' => [
 		'default' => false,
