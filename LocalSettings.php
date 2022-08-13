@@ -5220,6 +5220,7 @@ if ( wfHostname() === 'test131' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
+	'editnotify',
 	'hitcounters',
 	'regexfunctions',
 ];
