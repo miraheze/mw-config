@@ -1070,6 +1070,9 @@ $wgConf->settings += [
 	],
 
 	// Display Title
+	'wgDisplayTitleFollowRedirects' => [
+		'default' => true,
+	],
 	'wgDisplayTitleHideSubtitle' => [
 		'default' => false,
 	],
