@@ -1853,6 +1853,12 @@ $wgConf->settings += [
 				'it',
 			],
 		],
+		'+yahyawiki' => [
+			'wikipedia' => [
+				'bn',
+				'en',
+			],
+		],
 		'+zealandiawiki' => [
 			'wikia' => [
 				'adoriasim',
