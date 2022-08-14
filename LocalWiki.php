@@ -108,8 +108,8 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'houkai2ndwiki':
-	case 'worldboxwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
+		$wgPageImagesScores['position'] = [ 9999, 6, 4, 3 ];
 
 		break;
 	case 'ldapwikiwiki':
@@ -260,6 +260,10 @@ switch ( $wi->dbname ) {
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
+
+		break;
+	case 'worldboxwiki':
+		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
 }
