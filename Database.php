@@ -53,15 +53,15 @@ $wgLBFactoryConf = [
 	'externalLoads' => [
 		'beta' => [
 			/** where the betawiki database is located */
-			'db121' => 1,
+			'db121.miraheze.org' => 1,
 		],
 		'echo' => [
 			/** where the metawiki database is located */
-			'db101' => 1,
+			'db101.miraheze.org' => 1,
 		],
 		'parsercache' => [
 			/** where the parsercache database is located */
-			'db121' => 1,
+			'db121.miraheze.org' => 1,
 		],
 	],
 	'readOnlyBySection' => [
