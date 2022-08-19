@@ -1314,12 +1314,11 @@ $wgConf->settings += [
 	'wgEnableUploads' => [
 		'default' => true,
 	],
-	// T3797
 	'wgMaxUploadSize' => [
-		'default' => 262144000,
-	],
-	'wgUploadSizeWarning' => [
-		'default' => 262144000,
+		/** T3797 - 250MB */
+		'default' => 1024 * 1024 * 250,
+		/** T9673 - 10MB */
+		'dragdownwiki' => 1024 * 1024 * 10,
 	],
 	'wgAllowCopyUploads' => [
 		'default' => false,
