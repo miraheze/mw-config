@@ -120,6 +120,20 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgAutoCreatePageNamespaces' => [
+		'name' => 'Should pages in this namespace be auto created?',
+		'from' => 'autocreatepage',
+		'type' => 'check',
+		'main' => true,
+		'talk' => false,
+		'excluded' => [],
+		'overridedefault' => array_merge(
+			array_fill_keys( $wgContentNamespaces, true ),
+			[ 'default' => false ]
+		),
+		'help' => '',
+		'requires' => [],
+	],
 	'wgCosmosRailDisabledNamespaces' => [
 		'name' => 'Disable Cosmos side rail in this namespace?',
 		'from' => 'cosmos',
