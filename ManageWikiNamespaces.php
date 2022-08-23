@@ -26,21 +26,21 @@
  * database: adds a textbox with input validation, verifying that its value is a valid database name.
  * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
- * language: adds a dropdown for language selection (all which are known to MediaWiki).
- * list: adds a list of options (requires: options which is an array in form of display => internal value).
+ * language: adds a drop-down for language selection (all which are known to MediaWiki).
+ * list: adds a list of options (requires: options, which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
  * list-multi-bool: see above, just outputs are $this => $bool.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
- * preferences: adds a drop down selection box for selecting multiple user preferences.
- * skin: adds a drop down selection box for selecting a single enabled skin.
- * skins: adds a drop down selection box for selecting multiple enabled skins.
+ * preferences: adds a drop-down selection box for selecting multiple user preferences.
+ * skin: adds a drop-down selection box for selecting a single enabled skin.
+ * skins: adds a drop-down selection box for selecting multiple enabled skins.
  * text: adds a single line text entry.
- * timezone: adds a dropdown for timezone selection.
+ * timezone: adds a drop-down for timezone selection.
  * url: adds a single line text entry which requires a full URL.
  * user: adds an autocomplete text box to select a single user on the wiki.
  * users: see above, except multiple users.
- * usergroups: adds a drop down selection box for selecting multiple user groups.
- * userrights: adds a drop down selection box for selecting multiple user rights.
+ * usergroups: adds a drop-down selection box for selecting multiple user groups.
+ * userrights: adds a drop-down selection box for selecting multiple user rights.
  * wikipage: add a textbox which will return an autocomplete drop-down list of wikipages. Returns standardised MediaWiki pages.
  * wikipages: see above, except multiple wikipages.
  *
@@ -48,7 +48,7 @@
  *
  * activeusers: max integer amount of active users a wiki may have in order to be able to modify this setting.
  * articles: max integer amount of articles a wiki may have in order to be able to modify this setting.
- * extensions: array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if requires more then one extension.
+ * extensions: array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if it requires more than one extension.
  * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
  * permissions: array of permissions a user must have to be able to modify this setting. Regardless of this value, a user must always have the managewiki permission.
  * visibility: an array. See below for available options.
