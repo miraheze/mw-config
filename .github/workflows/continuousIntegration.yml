@@ -34,7 +34,8 @@ jobs:
       run: LC_ALL=C sort -c extension-list
 
     - name: Check for common typos
-      run: ! grep -E -r --binary-files=without-match --color=always --file=typos --exclude=typos --exclude-dir=.git
+      run: |
+         ! grep -E -r --binary-files=without-match --color=always --file=typos --exclude=typos --exclude-dir=.git
 
     - name: Push the changes
       continue-on-error: true
