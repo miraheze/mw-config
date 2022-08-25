@@ -35,7 +35,7 @@ jobs:
 
     - name: Check for common typos
       run: |
-         ! grep -E -r --binary-files=without-match --color=always --file=typos --exclude=typos --exclude-dir=.git
+         ! grep -E -r --binary-files=without-match --color=always --file=typos --exclude=typos --exclude=LICENSE.md --exclude-dir=.git --exclude-dir=vendor
 
     - name: Push the changes
       continue-on-error: true
