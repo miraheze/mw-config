@@ -109,7 +109,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'houkai2ndwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
-		$wgPageImagesScores['position'] = [ 9999, 6, 4, 3 ];
+		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
 	case 'ldapwikiwiki':
