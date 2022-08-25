@@ -33,6 +33,10 @@ jobs:
     - name: Check if extension-list is sorted alphabetically
       run: LC_ALL=C sort -c extension-list
 
+    - name: Check for common typos
+      run: |
+         ! grep -E -r --binary-files=without-match --color=always --file=typos --exclude=typos --exclude=LICENSE.md --exclude-dir=.git --exclude-dir=vendor
+
     - name: Push the changes
       continue-on-error: true
       if: github.event_name == 'pull_request'
