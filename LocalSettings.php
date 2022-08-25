@@ -3451,6 +3451,11 @@ $wgConf->settings += [
 			'usebetatoolbar' => 1,
 			'usebetatoolbar-cgd' => 1,
 		],
+		'+crashspyrowiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
+		],
 		'+criticalrolewiki' => [
 			'thumbsize' => 3,
 		],
@@ -3518,6 +3523,11 @@ $wgConf->settings += [
 		'+reviwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
+		],
+		'+segawiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
 		],
 		'+smashbroswiki' => [
 			'rcenhancedfilters-disable' => 1,
