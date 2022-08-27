@@ -753,7 +753,7 @@ $wgConf->settings += [
 			'ns\d+',
 			'bacula\d+',
 			'mail(\d+)?',
-			'ldap\d+',
+			'ldap(\d+)?',
 			'cloud\d+',
 			'mon\d+',
 			'swift(\d+)?',
