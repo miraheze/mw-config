@@ -77,8 +77,8 @@ $wgRevisionCacheExpiry = 86400 * 3;
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
 
-// Disable sidebar cache for solarawiki as a solution to T8732
-if ( $wgDBname !== 'solarawiki' ) {
+// Disable sidebar cache for select wikis as a solution to T8732 and T9699
+if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' ) {
 	$wgEnableSidebarCache = true;
 }
 
