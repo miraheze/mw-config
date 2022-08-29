@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 72;
  */
 
 // Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	// show to all users
 	$wgHooks['SiteNoticeAfter'][] = static function ( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
@@ -25,8 +25,8 @@ $wgMajorSiteNoticeID = 72;
 			</td></tr>
 			</tbody></table>
 		EOF;
-	}
-} */
+	};
+}
 
 // Specific wiki SiteNotice
 /* if ( $wi->isAnyOfExtensionsActive( 'Vector' ) ) {
@@ -39,5 +39,5 @@ $wgMajorSiteNoticeID = 72;
 			</td></tr>
 			</tbody></table>
 		EOF;
-	}
+	};
 } */
