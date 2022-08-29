@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 71;
+$wgMajorSiteNoticeID = 72;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -15,19 +15,19 @@ $wgMajorSiteNoticeID = 71;
  */
 
 // Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	// show to all users
 	$wgHooks['SiteNoticeAfter'][] = static function ( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
-			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="MediaWiki 1.38" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/MediaWiki-2020-large-icon.svg" decoding="async" width="50" height="50"></div> Miraheze has upgraded to MediaWiki 1.38. If you notice any bugs, please report them on <a href="https://meta.miraheze.org/wiki/Phabricator">Phabricator</a>, <a href="https://meta.miraheze.org/wiki/Discord">Discord</a>, or <a href="https://meta.miraheze.org/wiki/IRC">IRC</a>.</div></div>
+			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="MediaWiki 1.38" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/MediaWiki-2020-large-icon.svg" decoding="async" width="50" height="50"></div> Miraheze will be performing necessary database maintenace tomorrow (August 30th 2022) between 2000-2030 UTC. During this period wikis will be inaccessible for a period of up to 10 minutes while restarts are done.</div></div>
 			</td></tr>
 			</tbody></table>
 		EOF;
 	}
 
-// } */
+}
 
 // Specific wiki SiteNotice
 /* if ( $wi->isAnyOfExtensionsActive( 'Vector' ) ) {
