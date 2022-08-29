@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 72;
  */
 
 // Global SiteNotice
-if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 	// show to all users
 	$wgHooks['SiteNoticeAfter'][] = static function ( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
@@ -26,8 +26,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 			</tbody></table>
 		EOF;
 	}
-
-}
+} */
 
 // Specific wiki SiteNotice
 /* if ( $wi->isAnyOfExtensionsActive( 'Vector' ) ) {
