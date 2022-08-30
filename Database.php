@@ -65,12 +65,12 @@ $wgLBFactoryConf = [
 		],
 	],
 	'readOnlyBySection' => [
-		// 'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'DEFAULT' => 'Database maintenance in progress. Please try again shortly.',
+		'c1' => 'Database maintenance in progress. Please try again shortly.',
+		'c2' => 'Database maintenance in progress. Please try again shortly.',
+		'c3' => 'Database maintenance in progress. Please try again shortly.',
+		'c4' => 'Database maintenance in progress. Please try again shortly.',
+		'c5' => 'Database maintenance in progress. Please try again shortly.',
 	],
 ];
 
