@@ -2058,6 +2058,16 @@ $wgManageWikiSettings = [
 		'help' => 'Shows changes to category membership as an action in Special:RecentChanges',
 		'requires' => [],
 	],
+	'wgUseRCPatrol' => [
+		'name' => 'Use RC patrolling to check for vandalism',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'recentchanges',
+		'help' => 'Use recent changes patrolling to check for vandalism. If set to false, exclamation points will no longer appear in recent changes next to unpatrolled edits',
+		'requires' => [],
+	],
 	'wgSimpleChangesOnlyContentNamespaces' => [
 		'name' => 'Display only content namespaces for Simple Changes',
 		'from' => 'simplechanges',
