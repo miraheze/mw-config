@@ -1935,7 +1935,7 @@ $wgConf->settings += [
 	],
 	'wgLDAPServerNames' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ldap141.miraheze.org',
+			'miraheze' => 'ldap.miraheze.org',
 		],
 	],
 	'wgLDAPEncryptionType' => [
