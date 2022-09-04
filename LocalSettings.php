@@ -3616,6 +3616,9 @@ $wgConf->settings += [
 	'wgRCLinkLimits' => [
 		'default' => [ 50, 100, 250, 500 ],
 	],
+	'wgUseRCPatrol' => [
+		'default' => true,
+	],
 
 	// RelatedArticles
 	'wgRelatedArticlesFooterAllowedSkins' => [
