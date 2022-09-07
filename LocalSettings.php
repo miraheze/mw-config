@@ -388,9 +388,12 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthCreateOnView' => [
 		'default' => true,
+		'cvtwiki' => false,
 		'cwarswiki' => false,
 		'minecraftjapanwiki' => false,
 		'nenawikiwiki' => false,
+		'staffwiki' => false,
+		'stewardswiki' => false
 	],
 	'wgCentralAuthDatabase' => [
 		'default' => 'mhglobal',
