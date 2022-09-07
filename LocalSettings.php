@@ -3494,6 +3494,7 @@ $wgConf->settings += [
 		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
+			'usecodemirror' => 1,
 		],
 		'+kirbywiki' => [
 			'thumbsize' => 3,
