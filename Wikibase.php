@@ -131,6 +131,12 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
+	// Data-Bridge
+	$wgWBClientSettings['dataBridgeEnabled'] = true;
+	$wgWBClientSettings['dataBridgeHrefRegExp'] = '^https://gratisdata\.miraheze\.org/wiki/((Q[1-9][0-9]*)).*#(P[1-9][0-9]*)$';
+	$wgWBClientSettings['dataBridgeEditTags'] = [
+		'data-bridge'
+	];
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
@@ -261,6 +267,8 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	];
 	$wgWBRepoSettings['taintedReferencesEnabled'] = true;
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
+	// Data-Bridge
+	$wgWBRepoSettings['dataBridgeEnabled'] = true;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -287,6 +295,12 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
+	// Data-Bridge
+	$wgWBClientSettings['dataBridgeEnabled'] = true;
+	$wgWBClientSettings['dataBridgeHrefRegExp'] = '^https://gratisdata\.miraheze\.org/wiki/((Q[1-9][0-9]*)).*#(P[1-9][0-9]*)$';
+	$wgWBClientSettings['dataBridgeEditTags'] = [
+		'data-bridge'
+	];
 }
 
 if ( $wgDBname === 'benpediawiki' ) {
