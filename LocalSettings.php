@@ -39,6 +39,9 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
+require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
+$wi = new MirahezeFunctions();
+
 if ( php_uname( 'n' ) === 'mw122' ) {
 	// Get response time
 	$elapsed = ( microtime( true ) - $_SERVER['REQUEST_TIME_FLOAT'] );
@@ -59,9 +62,6 @@ if ( php_uname( 'n' ) === 'mw122' ) {
 		];
 	}
 }
-
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-$wi = new MirahezeFunctions();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
