@@ -39,25 +39,17 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
-if ( php_uname( 'n' ) === 'mw122' ) {
-	// Get response time
-	$elapsed = ( microtime( true ) - $_SERVER['REQUEST_TIME_FLOAT'] );
+if ( $forceprofile == 2 && php_uname( 'n' ) === 'mw122' ) {
+	$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
+	tideways_xhprof_enable( $xhprofFlags );
 
-	// seconds to milliseconds
-	$responseTime = round( $elapsed * 1000 );
-
-	if ( $responseTime > 10000 ) {
-		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-		tideways_xhprof_enable( $xhprofFlags );
-
-		$wgProfiler = [
-			'class' => ProfilerXhprof::class,
-			'flags' => $xhprofFlags,
-			'running' => true,
-			'output' => 'ProfilerOutputDump',
-			'outputDir' => '/srv/mediawiki/cache/profile'
-		];
-	}
+	$wgProfiler = [
+		'class' => ProfilerXhprof::class,
+		'flags' => $xhprofFlags,
+		'running' => true,
+		'output' => 'ProfilerOutputDump',
+		'outputDir' => '/srv/mediawiki/cache/profile'
+	];
 }
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
