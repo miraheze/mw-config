@@ -5136,6 +5136,7 @@ $wgConf->settings += [
 			'JobQueueRedis' => 'debug',
 			'localisation' => false,
 			'ldap' => 'warning',
+			'LinkBatch' => false,
 			'Linter' => 'debug',
 			'LocalFile' => 'warning',
 			'localhost' => false,
