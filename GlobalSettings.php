@@ -527,14 +527,6 @@ $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 // Scribunto
-$wgScribuntoEngineConf = [
-	'luasandbox' => [
-		'class' => Scribunto_LuaSandboxEngine::class,
-		/** 50MB */
-		'memoryLimit' => 50 * 1024 * 1024,
-		'cpuLimit' => 4,
-		'profilerPeriod' => 0.02,
-		'allowEnvFuncs' => false,
-		'maxLangCacheSize' => 30,
-	],
-];
+/** 50MB */
+$wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
+$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 4;
