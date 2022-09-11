@@ -404,49 +404,58 @@ class MirahezeFunctions {
 	public static function getConfigGlobals(): array {
 		global $IP, $wgDBname, $wgConf;
 
-		// Try configuration cache
-		$confCacheFileName = "config-$wgDBname.json";
+		if ( version_compare( MW_VERSION, '1.39', '<' ) ) {
+			// Try configuration cache
+			$confCacheFileName = "config-$wgDBname.json";
 
-		// To-Do: merge ManageWiki cache with main config cache,
-		// to automatically update when ManageWiki is updated
-		$confActualMtime = max(
-			// When config files are updated
-			filemtime( __DIR__ . '/../LocalSettings.php' ),
-			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
-			filemtime( __DIR__ . '/../ManageWikiNamespaces.php' ),
-			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
+			// To-Do: merge ManageWiki cache with main config cache,
+			// to automatically update when ManageWiki is updated
+			$confActualMtime = max(
+				// When config files are updated
+				filemtime( __DIR__ . '/../LocalSettings.php' ),
+				filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
+				filemtime( __DIR__ . '/../ManageWikiNamespaces.php' ),
+				filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
 
-			// When MediaWiki is upgraded
-			filemtime( "$IP/includes/Defines.php" ),
+				// When MediaWiki is upgraded
+				filemtime( "$IP/includes/Defines.php" ),
 
-			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
-		);
+				// When ManageWiki is changed
+				@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			);
 
-		static $globals = null;
-		$globals ??= self::readFromCache(
-			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
-			$confActualMtime
-		);
+			static $globals = null;
+			$globals ??= self::readFromCache(
+				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+				$confActualMtime
+			);
 
-		if ( !$globals ) {
+			if ( !$globals ) {
+				$wgConf->settings = array_merge(
+					$wgConf->settings,
+					self::getManageWikiConfigCache()
+				);
+
+				self::$activeExtensions ??= self::getActiveExtensions();
+
+				$globals = self::getConfigForCaching();
+
+				$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::$activeExtensions ];
+
+				$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
+				if ( time() > $minTime ) {
+					self::writeToCache(
+						$confCacheFileName, $confCacheObject
+					);
+				}
+			}
+		} else {
 			$wgConf->settings = array_merge(
 				$wgConf->settings,
 				self::getManageWikiConfigCache()
 			);
 
-			self::$activeExtensions ??= self::getActiveExtensions();
-
 			$globals = self::getConfigForCaching();
-
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::$activeExtensions ];
-
-			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
-			if ( time() > $minTime ) {
-				self::writeToCache(
-					$confCacheFileName, $confCacheObject
-				);
-			}
 		}
 
 		return $globals;
@@ -485,9 +494,7 @@ class MirahezeFunctions {
 			'site' => $site,
 		];
 
-		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
-
-		return $globals;
+		return $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
 	}
 
 	/**
@@ -662,31 +669,33 @@ class MirahezeFunctions {
 	public static function getActiveExtensions(): array {
 		global $IP, $wgDBname;
 
-		$confCacheFileName = "config-$wgDBname.json";
+		if ( version_compare( MW_VERSION, '1.39', '<' ) ) {
+			$confCacheFileName = "config-$wgDBname.json";
 
-		// To-Do: merge ManageWiki cache with main config cache,
-		// to automatically update when ManageWiki is updated
-		$confActualMtime = max(
-			// When config files are updated
-			filemtime( __DIR__ . '/../LocalSettings.php' ),
-			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
+			// To-Do: merge ManageWiki cache with main config cache,
+			// to automatically update when ManageWiki is updated
+			$confActualMtime = max(
+				// When config files are updated
+				filemtime( __DIR__ . '/../LocalSettings.php' ),
+				filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
 
-			// When MediaWiki is upgraded
-			filemtime( "$IP/includes/Defines.php" ),
+				// When MediaWiki is upgraded
+				filemtime( "$IP/includes/Defines.php" ),
 
-			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
-		);
+				// When ManageWiki is changed
+				@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			);
 
-		static $extensions = null;
-		$extensions ??= self::readFromCache(
-			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
-			$confActualMtime,
-			'extensions'
-		);
+			static $extensions = null;
+			$extensions ??= self::readFromCache(
+				self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+				$confActualMtime,
+				'extensions'
+			);
 
-		if ( $extensions ) {
-			return $extensions;
+			if ( $extensions ) {
+				return $extensions;
+			}
 		}
 
 		static $cacheArray = null;
