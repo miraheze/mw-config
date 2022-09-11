@@ -3204,11 +3204,17 @@ $wgConf->settings += [
 	],
 	'wgOATHExclusiveRights' => [
 		'default' => [
+			'abusefilter-privatedetails',
+			'abusefilter-privatedetails-log',
 			'centralauth-lock',
+			'centralauth-rename',
 			'centralauth-suppress',
 			'checkuser',
+			'checkuser-log',
+			'globalblock',
 			'globalgrouppermissions',
 			'globalgroupmembership',
+			'suppressionlog',
 			'suppressrevision',
 			'userrights',
 			'userrights-interwiki',
