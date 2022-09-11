@@ -2771,6 +2771,7 @@ $wgConf->settings += [
 	],
 	'wgMinervaApplyKnownTemplateHacks' => [
 		'default' => true,
+		'isvwiki' => false,
 		'mcspringfieldserverwiki' => false,
 	],
 	'wgMinervaAlwaysShowLanguageButton' => [
@@ -2845,6 +2846,11 @@ $wgConf->settings += [
 		'criticalrolewiki' => [
 			'base' => true,
 			'loggedin' => false,
+			'amc' => true,
+		],
+		'isvwiki' => [
+			'base' => true,
+			'loggedin' => true,
 			'amc' => true,
 		],
 	],
