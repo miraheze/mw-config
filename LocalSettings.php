@@ -3203,6 +3203,16 @@ $wgConf->settings += [
 		'betaheze' => 'testglobal',
 	],
 	'wgOATHExclusiveRights' => [
+		'default' => [
+			'centralauth-lock',
+			'centralauth-suppress',
+			'checkuser',
+			'globalgrouppermissions',
+			'globalgroupmembership',
+			'suppressrevision',
+			'userrights',
+			'userrights-interwiki',
+		],
 		'metawiki' => [
 			'edituserjs',
 			'editsitejs',
