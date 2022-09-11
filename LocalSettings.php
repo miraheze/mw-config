@@ -3209,9 +3209,35 @@ $wgConf->settings += [
 		'betaheze' => 'testglobal',
 	],
 	'wgOATHExclusiveRights' => [
-		'metawiki' => [
+		'default' => [
+			'abusefilter-privatedetails',
+			'abusefilter-privatedetails-log',
+			'centralauth-lock',
+			'centralauth-rename',
+			'centralauth-suppress',
+			'checkuser',
+			'checkuser-log',
+			'globalblock',
+			'globalgrouppermissions',
+			'globalgroupmembership',
+			'suppressionlog',
+			'suppressrevision',
+			'userrights',
+			'userrights-interwiki',
+		],
+		'+metawiki' => [
 			'edituserjs',
 			'editsitejs',
+		],
+	],
+	'wgOATHRequiredForGroups' => [
+		'default' => [
+			'checkuser',
+			'oversight',
+			'steward',
+		],
+		'+metawiki' => [
+			'globalsysop',
 		],
 	],
 	// OAuth
