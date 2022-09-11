@@ -3213,7 +3213,7 @@ $wgConf->settings += [
 			'userrights',
 			'userrights-interwiki',
 		],
-		'metawiki' => [
+		'+metawiki' => [
 			'edituserjs',
 			'editsitejs',
 		],
