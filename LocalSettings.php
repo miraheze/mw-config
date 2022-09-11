@@ -5259,7 +5259,7 @@ $wi::$disabledExtensions = [
 
 if ( version_compare( MW_VERSION, '1.39', '>=' ) ) {
 	$wi::$disabledExtensions += [
-		// Broken ("SqlBagOStuff::__construct requires 'server', 'servers', or 'loadBalancerCallback'")
+		// Broken (https://phabricator.wikimedia.org/T317499)
 		'protectsite',
 	];
 }
