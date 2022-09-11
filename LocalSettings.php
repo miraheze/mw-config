@@ -5257,6 +5257,13 @@ $wi::$disabledExtensions = [
 	'regexfunctions',
 ];
 
+if ( version_compare( MW_VERSION, '1.39', '>=' ) ) {
+	$wi::$disabledExtensions += [
+		// Broken ("SqlBagOStuff::__construct requires 'server', 'servers', or 'loadBalancerCallback'")
+		'protectsite',
+	];
+}
+
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
