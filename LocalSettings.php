@@ -3224,7 +3224,7 @@ $wgConf->settings += [
 			'oversight',
 			'steward',
 		],
-		'metawiki' => [
+		'+metawiki' => [
 			'globalsysop',
 		],
 	],
