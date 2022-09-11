@@ -3208,6 +3208,16 @@ $wgConf->settings += [
 			'editsitejs',
 		],
 	],
+	'wgOATHRequiredForGroups' => [
+		'default' => [
+			'checkuser',
+			'oversight',
+			'steward',
+		],
+		'metawiki' => [
+			'globalsysop',
+		],
+	],
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
