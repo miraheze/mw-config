@@ -2458,6 +2458,98 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'flexdiagrams' => [
+		'name' => 'Flex Diagrams',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Flex_Diagrams',
+		'var' => 'wmgUseFlexDiagrams',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'namespaces' => [
+				'BPMN' => [
+					'id' => 740,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'flexdiagrams-bpmn',
+					'additional' => []
+				],
+				'BPMN_talk' => [
+					'id' => 741,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Gantt' => [
+					'id' => 742,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'flexdiagrams-gantt',
+					'additional' => []
+				],
+				'Gantt_talk' => [
+					'id' => 743,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Mermaid' => [
+					'id' => 744,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'flexdiagrams-mermaid',
+					'additional' => []
+				],
+				'Mermaid_talk' => [
+					'id' => 745,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Drawio' => [
+					'id' => 746,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'flexdiagrams-drawio',
+					'additional' => []
+				],
+				'Drawio_talk' => [
+					'id' => 747,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+			],
+		],
+		'section' => 'other',
+	],
 	'forcepreview' => [
 		'name' => 'ForcePreview',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ForcePreview',
