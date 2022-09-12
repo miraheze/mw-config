@@ -3588,6 +3588,18 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'wikibaseedtf' => [
+		'name' => 'Wikibase EDTF',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_EDTF',
+		'var' => 'wmgUseWikibaseEDTF',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'wikibaserepository',
+			],
+		],
+		'section' => 'other',
+	],
 	'wikibaselexeme' => [
 		'name' => 'WikibaseLexeme',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikibaseLexeme',
