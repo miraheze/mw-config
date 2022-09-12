@@ -2761,6 +2761,19 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'pageproperties' => [
+		'name' => 'PageProperties',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageProperties',
+		'var' => 'wmgUsePageProperties',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'page_properties' => "$IP/extensions/PageProperties/includes/page_properties.sql",
+			],
+		],
+		'section' => 'other',
+	],
 	'twocolconflict' => [
 		'name' => 'TwoColConflict',
 		'displayname' => 'Paragraph-based Edit Conflict Interface',
