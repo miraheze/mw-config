@@ -278,6 +278,7 @@ $IP/extensions/WikiSEO/extension.json
 $IP/extensions/WikiTextLoggedInOut/extension.json
 $IP/extensions/Wikibase/extension-client.json
 $IP/extensions/Wikibase/extension-repo.json
+$IP/extensions/WikibaseEdtf/extension.json
 $IP/extensions/WikibaseLexeme/extension.json
 $IP/extensions/WikibaseLocalMedia/extension.json
 $IP/extensions/WikibaseQualityConstraints/extension.json
