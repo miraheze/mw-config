@@ -70,6 +70,7 @@ $IP/extensions/EventLogging/extension.json
 $IP/extensions/EventStreamConfig/extension.json
 $IP/extensions/ExternalData/extension.json
 $IP/extensions/FlaggedRevs/extension.json
+$IP/extensions/FlexDiagrams/extension.json
 $IP/extensions/Flow/extension.json
 $IP/extensions/FontAwesome/extension.json
 $IP/extensions/ForcePreview/extension.json
@@ -206,6 +207,7 @@ $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/extension.json
 $IP/extensions/SecureLinkFixer/extension.json
+$IP/extensions/SemanticFormsSelect/extension.json
 $IP/extensions/SemanticMediaWiki/extension.json
 $IP/extensions/Share/extension.json
 $IP/extensions/ShortDescription/extension.json
