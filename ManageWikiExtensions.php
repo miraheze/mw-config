@@ -3413,6 +3413,19 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'semanticformsselect' => [
+		'name' => 'Semantic Forms Select',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Semantic_Forms_Select',
+		'var' => 'wmgUseSemanticFormsSelect',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'pageforms',
+				'semanticmediawiki',
+			],
+		],
+		'section' => 'other',
+	],
 	'structurednavigation' => [
 		'name' => 'StructuredNavigation',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredNavigation',
