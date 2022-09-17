@@ -29,7 +29,7 @@ $wgMajorSiteNoticeID = 72;
 } */
 
 // Specific wiki SiteNotice
-if ( $wi->isAnyOfExtensionsActive( 'WikiForum' ) ) {
+if ( $wi->isExtensionActive( 'WikiForum' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = static function ( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
