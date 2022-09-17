@@ -37,4 +37,4 @@ if ( $wi->isExtensionActive( 'WikiForum' ) ) {
 			</tr></tbody></table>
 		EOF;
 	};
-} 
+}
