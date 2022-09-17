@@ -5281,6 +5281,7 @@ $wi::$disabledExtensions = [
 	'editnotify',
 	'hitcounters',
 	'regexfunctions',
+	'wikiforum',
 ];
 
 if ( version_compare( MW_VERSION, '1.39', '>=' ) ) {
