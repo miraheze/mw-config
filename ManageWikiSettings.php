@@ -1557,6 +1557,7 @@ $wgManageWikiSettings = [
 			'pdf',
 			'png',
 			'svg',
+			'webp',
 		],
 		'section' => 'media',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
