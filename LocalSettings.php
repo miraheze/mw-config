@@ -1344,6 +1344,7 @@ $wgConf->settings += [
 			'pdf',
 			'png',
 			'svg',
+			'webp',
 		],
 	],
 	'wgUseQuickInstantCommons' => [
