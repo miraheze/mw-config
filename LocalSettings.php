@@ -345,6 +345,7 @@ $wgConf->settings += [
 		'default' => 'uppercase',
 		'academiadesusarduwiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
+		'levyraatiwikiwiki' => 'numeric',
 		'supermanwiki' => 'numeric',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
