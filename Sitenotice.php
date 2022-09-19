@@ -17,9 +17,9 @@ $wgMajorSiteNoticeID = 74;
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
 	// show to all users
-	$wgHooks['SiteNoticeAfter'][] = 'onSiteNoticeAfter';
+	$wgHooks['SiteNoticeAfter'][] = 'wfOnSiteNoticeAfter';
 
-	function onSiteNoticeAfter( &$siteNotice, $skin ) {
+	function wfOnSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
@@ -32,9 +32,9 @@ $wgMajorSiteNoticeID = 74;
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'WikiForum' ) ) {
-	$wgHooks['SiteNoticeAfter'][] = 'onOtherSiteNoticeAfter';
+	$wgHooks['SiteNoticeAfter'][] = 'wfOnConditionalSiteNoticeAfter';
 
-	function onOtherSiteNoticeAfter( &$siteNotice, $skin ) {
+	function wfOnConditionalSiteNoticeAfter( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
 			<table class="wikitable" style="text-align:center;"><tbody><tr>
 			<td style="font-size:125%"><div data-nosnippet>Due to a security vulnerability, WikiForum has been temporarily disabled on all wikis. </div></td>
