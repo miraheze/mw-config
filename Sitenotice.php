@@ -27,7 +27,8 @@ $wgMajorSiteNoticeID = 74;
 			</td></tr>
 			</tbody></table>
 		EOF;
-	};
+	}
+
 // }
 
 // Specific wiki SiteNotice
@@ -40,5 +41,6 @@ if ( $wi->isExtensionActive( 'WikiForum' ) ) {
 			<td style="font-size:125%"><div data-nosnippet>Due to a security vulnerability, WikiForum has been temporarily disabled on all wikis. </div></td>
 			</tr></tbody></table>
 		EOF;
-	};
+	}
+
 }
