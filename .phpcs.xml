@@ -11,6 +11,7 @@
 	</rule>
 	<rule ref="MediaWiki.Commenting.FunctionComment">
 		<exclude-pattern>LocalWiki\.php</exclude-pattern>
+		<exclude-pattern>Sitenotice\.php</exclude-pattern>
 	</rule>
 	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php" />
 	<arg name="extensions" value="php" />
