@@ -28,7 +28,6 @@ $wgMajorSiteNoticeID = 74;
 			</tbody></table>
 		EOF;
 	}
-
 // }
 
 // Specific wiki SiteNotice
@@ -42,5 +41,4 @@ if ( $wi->isExtensionActive( 'WikiForum' ) ) {
 			</tr></tbody></table>
 		EOF;
 	}
-
 }
