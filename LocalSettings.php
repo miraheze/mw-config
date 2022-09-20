@@ -760,7 +760,7 @@ $wgConf->settings += [
 			'ldap(\d+)?',
 			'cloud\d+',
 			'mon\d+',
-			'swift(fs)?(proxy)?(\d+)?',
+			'swift(ac|fs|proxy)?(\d+)?',
 			'lizardfs\d+',
 			'elasticsearch(\d+)?',
 			'rdb\d+',
