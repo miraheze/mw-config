@@ -69,6 +69,8 @@ $wgMainCacheType = 'memcached-mem-2';
 $wgMessageCacheType = 'memcached-mem-2';
 $wgParserCacheType = 'mysql-multiwrite';
 
+$wgLanguageConverterCacheType = CACHE_ACCEL;
+
 // 10 days
 $wgParserCacheExpireTime = 86400 * 10;
 
