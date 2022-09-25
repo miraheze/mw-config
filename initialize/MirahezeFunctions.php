@@ -703,17 +703,13 @@ class MirahezeFunctions {
 			array_keys( $wgManageWikiExtensions )
 		) );
 
-		$enabledExtensions = array_keys(
-			array_diff( $allExtensions, static::$disabledExtensions )
-		);
-
 		// To-Do: Deprecate 'var', and make database/cache use extension names
 		/* return array_intersect( array_keys(
 			array_intersect(
 				array_flip( $allExtensions ),
 				$cacheArray['extensions'] ?? []
 			)
-		), $enabledExtensions ); */
+		), array_keys( $allExtensions ) ); */
 
 		return array_intersect(
 			array_keys( array_intersect(
@@ -722,7 +718,7 @@ class MirahezeFunctions {
 				) ) ),
 				$cacheArray['extensions'] ?? []
 			) ),
-			$enabledExtensions
+			array_keys( $allExtensions )
 		);
 	}
 
@@ -799,7 +795,8 @@ class MirahezeFunctions {
 		}
 
 		self::$activeExtensions ??= self::getActiveExtensions();
-		foreach ( self::$activeExtensions as $name ) {
+		$enabledExtensions = array_diff( self::$activeExtensions, static::$disabledExtensions );
+		foreach ( $enabledExtensions as $name ) {
 			$path = $list[ $name ] ?? false;
 
 			$pathInfo = pathinfo( $path )['extension'] ?? false;
