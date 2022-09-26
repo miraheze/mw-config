@@ -24,7 +24,7 @@ class MirahezeFunctions {
 	public $wikiDBClusters;
 
 	/** @var array */
-	public static $disabledExtensions = [];
+	public $disabledExtensions = [];
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
@@ -795,7 +795,7 @@ class MirahezeFunctions {
 		}
 
 		self::$activeExtensions ??= self::getActiveExtensions();
-		$enabledExtensions = array_diff( self::$activeExtensions, static::$disabledExtensions );
+		$enabledExtensions = array_diff( self::$activeExtensions, $this->disabledExtensions );
 		foreach ( $enabledExtensions as $name ) {
 			$path = $list[ $name ] ?? false;
 
