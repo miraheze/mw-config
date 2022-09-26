@@ -5283,7 +5283,7 @@ if ( wfHostname() === 'test131' ) {
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
-$wi::$disabledExtensions = [
+$wi->disabledExtensions = [
 	'editnotify',
 	'hitcounters',
 	'regexfunctions',
@@ -5291,8 +5291,8 @@ $wi::$disabledExtensions = [
 ];
 
 if ( version_compare( MW_VERSION, '1.39', '>=' ) ) {
-	$wi::$disabledExtensions = array_merge(
-		$wi::$disabledExtensions, [
+	$wi->disabledExtensions = array_merge(
+		$wi->disabledExtensions, [
 			// Broken (https://phabricator.wikimedia.org/T317499)
 			'protectsite',
 		]
