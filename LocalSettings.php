@@ -1000,6 +1000,7 @@ $wgConf->settings += [
 	],
 	'wgReadOnly' => [
 		'default' => false,
+		'closinglogosgroupwiki' => 'This wiki is currently being renamed',
 	],
 	'wgSharedTables' => [
 		'default' => [],
