@@ -1770,7 +1770,7 @@ $wgConf->settings += [
 			'meta',
 			'loginwiki',
 			'mw',
-			'templatewiki',
+			'devwiki',
 			'wikipedia',
 			'metawikimedia',
 		],
