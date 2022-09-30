@@ -1797,6 +1797,9 @@ $wgConf->settings += [
 		'+celebswiki' => [
 			'simplewiki',
 		],
+		'+devwiki' => [
+			'templatewikiarchive',
+		],
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
