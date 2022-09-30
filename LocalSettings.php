@@ -1768,9 +1768,9 @@ $wgConf->settings += [
 	'wgImportSources' => [
 		'default' => [
 			'meta',
+			'dev',
 			'loginwiki',
 			'mw',
-			'devwiki',
 			'wikipedia',
 			'metawikimedia',
 		],
