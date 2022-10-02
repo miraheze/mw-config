@@ -331,7 +331,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
+		'hasSharedCache' => true,
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 86400 * 7,
 		'wiki' => 'commonswiki',
