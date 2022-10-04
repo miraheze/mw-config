@@ -26,6 +26,8 @@ $wgFileBackends[] = [
 	'readAffinity'       => true,
 	'readUsers'           => [ 'mw:media' ],
 	'writeUsers'          => [ 'mw:media' ],
+	'connTimeout'         => 10,
+	'reqTimeout'          => 900,
 ];
 
 $wgLocalFileRepo = [
