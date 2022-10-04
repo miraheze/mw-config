@@ -1362,6 +1362,9 @@ $wgConf->settings += [
 	'wgMirahezeCommons' => [
 		'default' => true,
 	],
+	'wmgEnableSwift' => [
+		'default' => false,
+	],
 	// Only the board and SRE are allowed access
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
@@ -5335,8 +5338,13 @@ if ( $wgRequestTimeLimit ) {
 require_once '/srv/mediawiki/config/Database.php';
 require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
-require_once '/srv/mediawiki/config/FileBackend.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
+
+// Swift is enabled on a per wiki base
+// In the future enable it on all.
+if ( $wmgEnableSwift ) {
+	require_once '/srv/mediawiki/config/FileBackend.php';
+}
 
 if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
