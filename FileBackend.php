@@ -44,6 +44,7 @@ $wgLocalFileRepo = [
 	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
 	'thumbDir' => "$wgUploadDirectory/thumb",
 	'isPrivate' => $wmgPrivateUpload,
+	# new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
 	'zones' => [
 		'public'  => [
 			'container' => 'mw',
@@ -76,9 +77,13 @@ $wgLocalFileRepo = [
 			'container' => 'mw',
 			'directory' => 'lockdir',
 		],
-		'timeline' => [
+		'timeline-render' => [
 			'container' => 'mw',
 			'directory' => 'timeline',
+		],
+		'score-render' => [
+			'container' => 'mw',
+			'directory' => 'score',
 		],
 		'math' => [
 			'container' => 'mw',
