@@ -5,7 +5,7 @@ $wmgUploadHostname = 'static-new.miraheze.org';
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
-	'wikiId'             => $wgDBname,
+	'wikiId'             => 'miraheze',
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
@@ -46,54 +46,55 @@ $wgLocalFileRepo = [
 	'deletedDir' => $wgDeletedDirectory,
 	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
 	'isPrivate' => $wmgPrivateUploads,
-	# new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
+	// new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
 	'zones' => [
 		'public'  => [
 			'container' => $container,
+			'directory' => $wgDBname,
 		],
 		'thumb'   => [
 			'container' => $container,
-			'directory' => 'thumb',
+			'directory' => "$wgDBname/thumb",
 		],
 		'temp'    => [
 			'container' => $container,
-			'directory' => 'temp',
+			'directory' => "$wgDBname/temp",
 		],
 		'deleted' => [
 			'container' => $container,
-			'directory' => 'deleted',
+			'directory' => "$wgDBname/deleted",
 		],
 		'archive' => [
 			'container' => $container,
-			'directory' => 'archive',
+			'directory' => "$wgDBname/archive",
 		],
 		'awards' => [
 			'container' => $container,
-			'directory' => 'awards',
+			'directory' => "$wgDBname/awards",
 		],
 		'avatars' => [
 			'container' => $container,
-			'directory' => 'avatars',
+			'directory' => "$wgDBname/avatars",
 		],
 		'lockdir' => [
 			'container' => $container,
-			'directory' => 'lockdir',
+			'directory' => "$wgDBname/lockdir",
 		],
 		'timeline-render' => [
 			'container' => $container,
-			'directory' => 'timeline',
+			'directory' => "$wgDBname/timeline",
 		],
 		'score-render' => [
 			'container' => $container,
-			'directory' => 'score',
+			'directory' => "$wgDBname/score",
 		],
 		'math' => [
 			'container' => $container,
-			'directory' => 'math',
+			'directory' => "$wgDBname/math",
 		],
 		'transcoded' => [
 			'container' => $container,
-			'directory' => 'transcoded',
+			'directory' => "$wgDBname/transcoded",
 		],
 	],
 ];
