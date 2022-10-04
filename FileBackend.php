@@ -8,7 +8,7 @@ $wgFileBackends[] = [
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
-	'swiftKey'           => $wmgSwiftAdminPassword,
+	'swiftKey'           => $wmgSwiftPassword,
 	'shardViaHashLevels' => [
 		'public'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
