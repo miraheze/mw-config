@@ -30,6 +30,8 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
+$container = $wmgPrivateUploads ? 'mw-private' : 'mw';
+
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
 	'name' => 'local',
@@ -47,50 +49,50 @@ $wgLocalFileRepo = [
 	# new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
 	'zones' => [
 		'public'  => [
-			'container' => 'mw',
+			'container' => $container,
 		],
 		'thumb'   => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'thumb',
 		],
 		'temp'    => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'temp',
 		],
 		'deleted' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'deleted',
 		],
 		'archive' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'archive',
 		],
 		'awards' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'awards',
 		],
 		'avatars' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'avatars',
 		],
 		'lockdir' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'lockdir',
 		],
 		'timeline-render' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'timeline',
 		],
 		'score-render' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'score',
 		],
 		'math' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'math',
 		],
 		'transcoded' => [
-			'container' => 'mw',
+			'container' => $container,
 			'directory' => 'transcoded',
 		],
 	],
