@@ -28,15 +28,13 @@ $wgFileBackends[] = [
 	'writeUsers'          => [ 'mw:media' ],
 ];
 
-$private = $wmgPrivateUpload ? "https://" . $wmgHostname . "/w/img_auth.php" : $wgUploadPath;
-
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
 	'name' => 'local',
 	'backend' => 'miraheze-swift',
 	'directory' => $wgUploadDirectory,
 	'scriptDirUrl' => $wgScriptPath,
-	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $private,
+	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
 	'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
 	'thumbScriptUrl' => $wgThumbnailScriptPath,
 	'transformVia404' => !$wgGenerateThumbnailOnParse,
