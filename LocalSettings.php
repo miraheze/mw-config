@@ -5311,7 +5311,6 @@ $wi->loadExtensions();
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
-if ( $wmgEnableSwift
 $wgUploadPath = $wmgEnableSwift ? 
 	"//static-new.miraheze.org/$wgDBname" :
 	"//static.miraheze.org/$wgDBname";
