@@ -38,7 +38,6 @@ $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
 	'name' => 'local',
 	'backend' => 'miraheze-swift',
-	'directory' => $wgUploadDirectory,
 	'scriptDirUrl' => $wgScriptPath,
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
 	'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
@@ -46,7 +45,6 @@ $wgLocalFileRepo = [
 	'transformVia404' => !$wgGenerateThumbnailOnParse,
 	'deletedDir' => $wgDeletedDirectory,
 	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
-	'thumbDir' => "$wgUploadDirectory/thumb",
 	'isPrivate' => $wmgPrivateUpload,
 	# new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
 	'zones' => [
