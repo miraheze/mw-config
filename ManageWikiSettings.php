@@ -854,7 +854,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'editing',
-		'help' => 'If true, user will be redirected to VisualEditor.',
+		'help' => 'If enabled, user will be redirected to VisualEditor.',
 		'requires' => [],
 	],
 
