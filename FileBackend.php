@@ -32,6 +32,19 @@ $wgFileBackends[] = [
 ];
 
 $container = $wmgPrivateUploads ? 'mw-private' : 'mw';
+// Public
+$dataDumpContainer = 'mw';
+
+$dataDumpPath = "$wgDBname/dumps";
+
+
+if ( $cwPrivate ) {
+	// Private
+	$dataDumpContainer = 'mw-private';
+	if ( !$wmgPrivateUploads ) {
+		$dataDumpPath = "dumps/$wgDBname";
+	}
+}
 
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
@@ -95,10 +108,9 @@ $wgLocalFileRepo = [
 			'container' => $container,
 			'directory' => "$wgDBname/transcoded",
 		],
-		// Dumps go in the private container.
 		'dumps-backup' => [
-			'container' => 'mw-private',
-			'directory' => "dumps/$wgDBname",
+			'container' => $dataDumpContainer,
+			'directory' => $dataDumpPath,
 		],
 	],
 ];
