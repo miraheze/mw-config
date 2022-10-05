@@ -1,7 +1,5 @@
 <?php
 
-$wmgUploadHostname = 'static-new.miraheze.org';
-
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
