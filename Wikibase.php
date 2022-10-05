@@ -127,7 +127,7 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	];
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = [
-		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
+		'url' => "https://$wmgUploadHostname/commonswiki/a/a4/GDechoIcon.svg",
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
