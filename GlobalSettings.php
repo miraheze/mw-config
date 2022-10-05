@@ -301,6 +301,12 @@ if ( $wi->isExtensionActive( 'score' ) ) {
 	}
 }
 
+if ( $wi->isExtensionActive( 'timeline' ) ) {
+	if ( $wmgEnableSwift ) {
+		$wgTimelineFileBackend = 'miraheze-swift';
+	}
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
