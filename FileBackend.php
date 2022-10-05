@@ -3,7 +3,7 @@
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
-	'wikiId'             => 'miraheze',
+	'wikiId'             => 'miraheze', // this makes the container start with miraheze-
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
@@ -93,6 +93,11 @@ $wgLocalFileRepo = [
 		'transcoded' => [
 			'container' => $container,
 			'directory' => "$wgDBname/transcoded",
+		],
+		// Dumps go in the private container.
+		'dumps' => [
+			'container' => 'mw-private',
+			'directory' => "dumps/$wgDBname",
 		],
 	],
 ];
