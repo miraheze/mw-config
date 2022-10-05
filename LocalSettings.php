@@ -51,7 +51,13 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
-$wmgUploadHostname = 'static.miraheze.org';
+// Use preg_match( '/^a(.*)/', $wgDBname ) to migrate wikis in alphabetical order.
+if ( $wgDBname === 'betawiki' ) {
+	$wmgEnableSwift = true;
+	$wmgUploadHostname = 'static-new.miraheze.org';
+} else {
+	$wmgUploadHostname = 'static.miraheze.org';
+}
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
@@ -1361,9 +1367,6 @@ $wgConf->settings += [
 	],
 	'wgMirahezeCommons' => [
 		'default' => true,
-	],
-	'wmgEnableSwift' => [
-		'default' => false,
 	],
 	// Only the board and SRE are allowed access
 	// DO NOT ADD UNAUTHORISED USERS
@@ -5311,9 +5314,7 @@ $wi->loadExtensions();
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
-$wgUploadPath = $wmgEnableSwift ?
-	"//static-new.miraheze.org/$wgDBname" :
-	"//static.miraheze.org/$wgDBname";
+$wgUploadPath = "//$wmgUploadHostname/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
