@@ -37,7 +37,6 @@ $dataDumpContainer = 'mw';
 
 $dataDumpPath = "$wgDBname/dumps";
 
-
 if ( $cwPrivate ) {
 	// Private
 	$dataDumpContainer = 'mw-private';
