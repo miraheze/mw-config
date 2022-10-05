@@ -132,7 +132,7 @@ if ( !$cwPrivate ) {
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 
 	$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
-	$wgDataDumpDownloadUrl = "https://static.miraheze.org/{$wi->dbname}/dumps/\${filename}";
+	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 } else {
 	if ( $wmgPrivateUploads ) {
 		$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
