@@ -3,7 +3,8 @@
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
-	'wikiId'             => 'miraheze', // this makes the container start with miraheze-
+	// This makes the container start with miraheze-.
+	'wikiId'             => 'miraheze',
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
