@@ -135,8 +135,8 @@ if ( !$cwPrivate ) {
 		$wgDataDumpFileBackend = 'miraheze-swift';
 	} else {
 		$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
-		$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 	}
+	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 } else {
 	if ( $wmgEnableSwift ) {
 		$wgDataDumpFileBackend = 'miraheze-swift';
