@@ -131,13 +131,21 @@ if ( !$cwPrivate ) {
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 
-	$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
-	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
-} else {
-	if ( $wmgPrivateUploads ) {
-		$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
+	if ( $wmgEnableSwift ) {
+		$wgDataDumpFileBackend = 'miraheze-swift';
 	} else {
-		$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
+		$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
+		$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
+	}
+} else {
+	if ( $wmgEnableSwift ) {
+		$wgDataDumpFileBackend = 'miraheze-swift';
+	} else {
+		if ( $wmgPrivateUploads ) {
+			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
+		} else {
+			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
+		}
 	}
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
@@ -285,6 +293,12 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 		'campaignExpensiveStatsEnabled' => false,
 		'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
 	];
+}
+
+if ( $wi->isExtensionActive( 'score' ) ) {
+	if ( $wmgEnableSwift ) {
+		$wgScoreFileBackend = 'miraheze-swift';
+	}
 }
 
 // $wgFooterIcons
