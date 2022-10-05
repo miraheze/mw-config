@@ -96,7 +96,7 @@ $wgLocalFileRepo = [
 			'directory' => "$wgDBname/transcoded",
 		],
 		// Dumps go in the private container.
-		'dumps' => [
+		'dumps-backup' => [
 			'container' => 'mw-private',
 			'directory' => "dumps/$wgDBname",
 		],
