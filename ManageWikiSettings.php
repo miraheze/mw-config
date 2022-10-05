@@ -848,6 +848,15 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to expand templates of the preloaded text.',
 		'requires' => [],
 	],
+	'wgCreatePageUwUseVE' => [
+		'name' => 'CreatePageUw Use VisualEditor',
+		'from' => 'createpageuw',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'If enabled, user will be redirected to VisualEditor.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
