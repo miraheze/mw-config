@@ -699,7 +699,7 @@ $wgConf->settings += [
 	'wgCosmosWordmark' => [
 		'default' => false,
 	],
-	
+
 	// CreatePageUw
 	'wgCreatePageUwUseVE' => [
 		'default' => false,
