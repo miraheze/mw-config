@@ -56,7 +56,7 @@ $wmgUploadHostname = 'static.miraheze.org';
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
-		'default' => '6',
+		'default' => '7',
 	],
 
 	// 3D
