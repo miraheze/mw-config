@@ -111,5 +111,9 @@ $wgLocalFileRepo = [
 			'container' => $dataDumpContainer,
 			'directory' => $dataDumpPath,
 		],
+		'ImportDump' => [
+			'container' => $container,
+			'directory' => "$wgImportDumpCentralWiki/ImportDump",
+		],
 	],
 ];
