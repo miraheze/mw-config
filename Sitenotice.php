@@ -27,6 +27,7 @@ $wgMajorSiteNoticeID = 76;
 			</tbody></table>
 		EOF;
 	}
+
 // }
 
 // Specific wiki SiteNotice
