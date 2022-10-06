@@ -295,13 +295,13 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 	];
 }
 
-if ( $wi->isExtensionActive( 'score' ) ) {
+if ( $wi->isExtensionActive( 'Score' ) ) {
 	if ( $wmgEnableSwift ) {
 		$wgScoreFileBackend = 'miraheze-swift';
 	}
 }
 
-if ( $wi->isExtensionActive( 'timeline' ) ) {
+if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
 	if ( $wmgEnableSwift ) {
 		$wgTimelineFileBackend = 'miraheze-swift';
 	}
