@@ -310,7 +310,8 @@ if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		'src' => "https://$wmgUploadHostname/commonswiki/b/b4/Monitored_by_WikiApiary.png",
+		// TODO: migrate to swift ($wmgUploadHostname)
+		'src' => "https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png",
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
 	];
@@ -347,7 +348,8 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
 		'directory' => '/mnt/mediawiki-static/commonswiki',
-		'url' => "https://$wmgUploadHostname/commonswiki",
+		// TODO: migrate to swift ($wmgUploadHostname)
+		'url' => "https://static.miraheze.org/commonswiki",
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
