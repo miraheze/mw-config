@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 76;
  */
 
 // Global SiteNotice
-///if ( !$wmgSiteNoticeOptOut ) {
+// if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
