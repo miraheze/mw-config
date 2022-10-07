@@ -51,7 +51,13 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
-$wmgUploadHostname = 'static.miraheze.org';
+// Use preg_match( '/^a(.*)/', $wgDBname ) to migrate wikis in alphabetical order.
+if ( $wgDBname === 'betawiki' ) {
+	$wmgEnableSwift = true;
+	$wmgUploadHostname = 'static-new.miraheze.org';
+} else {
+	$wmgUploadHostname = 'static.miraheze.org';
+}
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
@@ -4233,14 +4239,17 @@ $wgConf->settings += [
 			'audio' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
+				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
+				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//static-new\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
@@ -5313,7 +5322,7 @@ $wi->loadExtensions();
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
-$wgUploadPath = "//static.miraheze.org/$wgDBname";
+$wgUploadPath = "//$wmgUploadHostname/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
@@ -5341,6 +5350,12 @@ require_once '/srv/mediawiki/config/Database.php';
 require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
+
+// Swift is enabled on a per wiki base
+// In the future enable it on all.
+if ( $wmgEnableSwift ) {
+	require_once '/srv/mediawiki/config/FileBackend.php';
+}
 
 if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
