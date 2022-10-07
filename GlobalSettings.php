@@ -133,6 +133,7 @@ if ( !$cwPrivate ) {
 
 	if ( $wmgEnableSwift ) {
 		$wgDataDumpFileBackend = 'miraheze-swift';
+		$wgDataDumpDirectory = '';
 	} else {
 		$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
 	}
@@ -140,6 +141,7 @@ if ( !$cwPrivate ) {
 } else {
 	if ( $wmgEnableSwift ) {
 		$wgDataDumpFileBackend = 'miraheze-swift';
+		$wgDataDumpDirectory = '';
 	} else {
 		if ( $wmgPrivateUploads ) {
 			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
