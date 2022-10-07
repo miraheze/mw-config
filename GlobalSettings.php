@@ -327,21 +327,59 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadSubdomain}.miraheze.org";
 	}
 
-	$wgForeignFileRepos[] = [
-		'class' => ForeignDBViaLBRepo::class,
-		'name' => "shared-{$wmgSharedUploadDBname}",
-		'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
-		'url' => "https://{$wmgUploadHostname}/{$wmgSharedUploadDBname}",
-		'hashLevels' => 2,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => false,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => $wmgSharedUploadDBname,
-		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
-		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
-	];
+	if ( wfEnableSwift( $wmgSharedUploadDBname ) ) {
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => "shared-{$wmgSharedUploadDBname}",
+			'backend' => 'miraheze-swift',
+			'url' => "https://{$wmgUploadHostname}/{$wmgSharedUploadDBname}",
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => true,
+			'hasSharedCache' => true,
+			'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+			'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => $wmgSharedUploadDBname,
+			'initialCapital' => true,
+			'zones' => [
+				'public' => [
+					'container' => 'mw',
+					'directory' => $wmgSharedUploadDBname,
+				],
+				'thumb' => [
+					'container' => 'mw',
+					'directory' => "$wmgSharedUploadDBname/thumb",
+				],
+				'temp' => [
+					'container' => 'mw',
+					'directory' => "$wmgSharedUploadDBname/temp",
+				],
+				'deleted' => [
+					'container' => 'mw',
+					'directory' => "$wmgSharedUploadDBname/deleted",
+				],
+			],
+			'abbrvThreshold' => 160
+		];
+	} else {
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => "shared-{$wmgSharedUploadDBname}",
+			'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
+			'url' => "https://{$wmgUploadHostname}/{$wmgSharedUploadDBname}",
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => !$wgGenerateThumbnailOnParse,
+			'hasSharedCache' => false,
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => $wmgSharedUploadDBname,
+			'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+			'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
+		];
+	}
 }
 
 // Miraheze Commons
