@@ -51,6 +51,10 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
+/**
+ * @param string $dbname the database to check
+ * @return bool whether Swift should be enabled on $dbname
+ */
 function wfShouldEnableSwift( $dbname ) {
 	$shouldEnableSwift = false;
 	// Use preg_match( '/^a(.*)/', $dbname ) to migrate wikis in alphabetical order.
