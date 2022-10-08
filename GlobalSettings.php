@@ -384,22 +384,59 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 
 // Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
-	$wgForeignFileRepos[] = [
-		'class' => ForeignDBViaLBRepo::class,
-		'name' => 'mirahezecommons',
-		'directory' => '/mnt/mediawiki-static/commonswiki',
-		// TODO: migrate to swift ($wmgUploadHostname)
-		'url' => "https://static.miraheze.org/commonswiki",
-		'hashLevels' => 2,
-		'thumbScriptUrl' => false,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'hasSharedCache' => true,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400 * 7,
-		'wiki' => 'commonswiki',
-		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
-		'scriptDirUrl' => 'https://commons.miraheze.org/w',
-	];
+	if ( wfShouldEnableSwift( 'commonswiki' ) ) {
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => "mirahezecommons",
+			'backend' => 'miraheze-swift',
+			'url' => "https://{$wmgUploadHostname}/commonswiki",
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => true,
+			'hasSharedCache' => true,
+			'descBaseUrl' => "https://commons.miraheze.org/wiki/File:",
+			'scriptDirUrl' => "https://commons.miraheze.org/w",
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => 'commonswiki',
+			'initialCapital' => true,
+			'zones' => [
+				'public' => [
+					'container' => 'mw',
+					'directory' => 'commonswiki',
+				],
+				'thumb' => [
+					'container' => 'mw',
+					'directory' => 'commonswiki/thumb',
+				],
+				'temp' => [
+					'container' => 'mw',
+					'directory' => 'commonswiki/temp',
+				],
+				'deleted' => [
+					'container' => 'mw',
+					'directory' => 'commonswiki/deleted',
+				],
+			],
+			'abbrvThreshold' => 160
+		];
+	} else {
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => 'mirahezecommons',
+			'directory' => '/mnt/mediawiki-static/commonswiki',
+			'url' => "https://static.miraheze.org/commonswiki",
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => !$wgGenerateThumbnailOnParse,
+			'hasSharedCache' => true,
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => 'commonswiki',
+			'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
+			'scriptDirUrl' => 'https://commons.miraheze.org/w',
+		];
+	}
 }
 
 // $wgLogos
