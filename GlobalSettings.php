@@ -43,6 +43,10 @@ if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 
 if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
+
+	if ( $wmgEnableSwift ) {
+		$wgSocialProfileFileBackend = 'miraheze-swift';
+	}
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
