@@ -62,7 +62,7 @@ function wfShouldEnableSwift( $dbname ) {
 		$shouldEnableSwift = true;
 	}
 
-	return $shouldEnableSwift;	
+	return $shouldEnableSwift;
 }
 
 $wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
