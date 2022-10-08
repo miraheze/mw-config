@@ -327,7 +327,7 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadSubdomain}.miraheze.org";
 	}
 
-	if ( wfEnableSwift( $wmgSharedUploadDBname ) ) {
+	if ( wfShouldEnableSwift( $wmgSharedUploadDBname ) ) {
 		$wgForeignFileRepos[] = [
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => "shared-{$wmgSharedUploadDBname}",
