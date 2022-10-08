@@ -311,12 +311,18 @@ if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
+	$uploadHostname = wfShouldEnableSwift( 'commonswiki' ) ?
+		'static-new.miraheze.org' :
+		'static.miraheze.org';
+
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		// TODO: migrate to swift ($wmgUploadHostname)
-		'src' => "https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png",
+		'src' => "https://{$uploadHostname}/commonswiki/b/b4/Monitored_by_WikiApiary.png",
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
 	];
+
+	// Don't need a global here
+	unset( $uploadHostname );
 }
 
 // $wgForeignFileRepos
@@ -350,15 +356,15 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 				],
 				'thumb' => [
 					'container' => 'mw',
-					'directory' => "$wmgSharedUploadDBname/thumb",
+					'directory' => "{$wmgSharedUploadDBname}/thumb",
 				],
 				'temp' => [
 					'container' => 'mw',
-					'directory' => "$wmgSharedUploadDBname/temp",
+					'directory' => "{$wmgSharedUploadDBname}/temp",
 				],
 				'deleted' => [
 					'container' => 'mw',
-					'directory' => "$wmgSharedUploadDBname/deleted",
+					'directory' => "{$wmgSharedUploadDBname}/deleted",
 				],
 			],
 			'abbrvThreshold' => 160
@@ -389,7 +395,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => "mirahezecommons",
 			'backend' => 'miraheze-swift',
-			'url' => "https://static-new.miraheze.org/commonswiki",
+			'url' => 'https://static-new.miraheze.org/commonswiki',
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
 			'transformVia404' => true,
@@ -425,7 +431,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => 'mirahezecommons',
 			'directory' => '/mnt/mediawiki-static/commonswiki',
-			'url' => "https://static.miraheze.org/commonswiki",
+			'url' => 'https://static.miraheze.org/commonswiki',
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
 			'transformVia404' => !$wgGenerateThumbnailOnParse,
