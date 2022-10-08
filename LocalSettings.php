@@ -51,7 +51,7 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
-static function wfShouldEnableSwift( $dbname ) {
+function wfShouldEnableSwift( $dbname ) {
 	$shouldEnableSwift = false;
 	// Use preg_match( '/^a(.*)/', $dbname ) to migrate wikis in alphabetical order.
 	if ( $dbname === 'betawiki' ) {
