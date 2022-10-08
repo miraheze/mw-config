@@ -51,15 +51,25 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
-$wmgEnableSwift = false;
+/**
+ * @param string $dbname the database to check
+ * @return bool whether Swift should be enabled on $dbname
+ */
+function wfShouldEnableSwift( $dbname ) {
+	$shouldEnableSwift = false;
+	// Use preg_match( '/^a(.*)/', $dbname ) to migrate wikis in alphabetical order.
+	if ( $dbname === 'betawiki' ) {
+		$shouldEnableSwift = true;
+	}
 
-// Use preg_match( '/^a(.*)/', $wgDBname ) to migrate wikis in alphabetical order.
-if ( $wgDBname === 'betawiki' ) {
-	$wmgEnableSwift = true;
-	$wmgUploadHostname = 'static-new.miraheze.org';
-} else {
-	$wmgUploadHostname = 'static.miraheze.org';
+	return $shouldEnableSwift;
 }
+
+$wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
+
+$wmgUploadHostname = $wmgEnableSwift ?
+	'static-new.miraheze.org' :
+	'static.miraheze.org';
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
