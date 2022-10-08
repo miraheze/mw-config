@@ -5338,6 +5338,10 @@ require_once __DIR__ . '/ManageWikiSettings.php';
 $wgUploadPath = "//$wmgUploadHostname/$wgDBname";
 $wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
 
+if ( $wmgEnableSwift ) {
+	$wgUploadDirectory = false;
+}
+
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
 $wgLocalisationCacheConf['manualRecache'] = true;
