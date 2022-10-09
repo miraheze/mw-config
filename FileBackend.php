@@ -3,10 +3,8 @@
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
-	// This makes the container start with miraheze-dbname-.
-	// We re-rewrite the url so it hits a different container then specified here
-	// public go to miraheze-mw and private go to miraheze-mw-private.
-	'wikiId'             => 'miraheze-$wgDBname',
+	// This is the prefix for the container that it starts with.
+	'wikiId'             => 'miraheze-$wgDBname{$wmgPrivateUploads ? '-private' : '-public'}',
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
