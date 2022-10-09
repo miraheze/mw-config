@@ -3,8 +3,10 @@
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
-	// This makes the container start with miraheze-.
-	'wikiId'             => 'miraheze',
+	// This makes the container start with miraheze-dbname-.
+	// We re-rewrite the url so it hits a different container then specified here
+	// public go to miraheze-mw and private go to miraheze-mw-private.
+	'wikiId'             => 'miraheze-$wgDBname',
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
@@ -111,8 +113,9 @@ $wgLocalFileRepo = [
 			'container' => $dataDumpContainer,
 			'directory' => $dataDumpPath,
 		],
+		// As meta is the set wiki we use the public container.
 		'ImportDump' => [
-			'container' => $container,
+			'container' => 'miraheze-mw',
 			'directory' => "$wgImportDumpCentralWiki/ImportDump",
 		],
 	],
