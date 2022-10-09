@@ -50,7 +50,7 @@ $wgLocalFileRepo = [
 	'zones' => [
 		'ImportDump' => [
 			'container' => $importDumpContainer,
-			'directory' => "$wgImportDumpCentralWiki/ImportDump",
+			'directory' => 'ImportDump',
 		],
 	],
 ];
