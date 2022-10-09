@@ -32,19 +32,8 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-$container = $wmgPrivateUploads ? 'mw-private' : 'mw';
-// Public
-$dataDumpContainer = 'mw';
-
-$dataDumpPath = "$wgDBname/dumps";
-
-if ( $cwPrivate ) {
-	// Private
-	$dataDumpContainer = 'mw-private';
-	if ( !$wmgPrivateUploads ) {
-		$dataDumpPath = "dumps/$wgDBname";
-	}
-}
+// Add -ImportDump suffix.
+$importDumpContainer = $wgImportDumpCentralWiki ? "ImportDump-$wgImportDumpCentralWiki" : 'ImportDump';
 
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
@@ -58,11 +47,9 @@ $wgLocalFileRepo = [
 	'deletedDir' => $wgDeletedDirectory,
 	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
 	'isPrivate' => $wmgPrivateUploads,
-	// new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
 	'zones' => [
 		'ImportDump' => [
-			// Add -ImportDump suffix.
-			'container' => 'ImportDump',
+			'container' => $importDumpContainer,
 			'directory' => "$wgImportDumpCentralWiki/ImportDump",
 		],
 	],
