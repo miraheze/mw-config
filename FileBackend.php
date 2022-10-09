@@ -1,10 +1,11 @@
 <?php
 
+$containerPrefix = $wmgPrivateUploads ? 'prefix' : 'public';
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
-	// This makes the container start with miraheze-.
-	'wikiId'             => 'miraheze',
+	// This is the prefix for the container that it starts with.
+	'wikiId'             => "miraheze-$wgDBname-$containerPrefix",
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
@@ -31,19 +32,8 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-$container = $wmgPrivateUploads ? 'mw-private' : 'mw';
-// Public
-$dataDumpContainer = 'mw';
-
-$dataDumpPath = "$wgDBname/dumps";
-
-if ( $cwPrivate ) {
-	// Private
-	$dataDumpContainer = 'mw-private';
-	if ( !$wmgPrivateUploads ) {
-		$dataDumpPath = "dumps/$wgDBname";
-	}
-}
+// Add -ImportDump suffix.
+$importDumpContainer = $wgImportDumpCentralWiki ? "ImportDump-$wgImportDumpCentralWiki" : 'ImportDump';
 
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
@@ -57,63 +47,10 @@ $wgLocalFileRepo = [
 	'deletedDir' => $wgDeletedDirectory,
 	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
 	'isPrivate' => $wmgPrivateUploads,
-	// new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
 	'zones' => [
-		'public'  => [
-			'container' => $container,
-			'directory' => $wgDBname,
-		],
-		'thumb'   => [
-			'container' => $container,
-			'directory' => "$wgDBname/thumb",
-		],
-		'temp'    => [
-			'container' => $container,
-			'directory' => "$wgDBname/temp",
-		],
-		'deleted' => [
-			'container' => $container,
-			'directory' => "$wgDBname/deleted",
-		],
-		'archive' => [
-			'container' => $container,
-			'directory' => "$wgDBname/archive",
-		],
-		'awards' => [
-			'container' => $container,
-			'directory' => "$wgDBname/awards",
-		],
-		'avatars' => [
-			'container' => $container,
-			'directory' => "$wgDBname/avatars",
-		],
-		'lockdir' => [
-			'container' => $container,
-			'directory' => "$wgDBname/lockdir",
-		],
-		'timeline-render' => [
-			'container' => $container,
-			'directory' => "$wgDBname/timeline",
-		],
-		'score-render' => [
-			'container' => $container,
-			'directory' => "$wgDBname/score",
-		],
-		'math' => [
-			'container' => $container,
-			'directory' => "$wgDBname/math",
-		],
-		'transcoded' => [
-			'container' => $container,
-			'directory' => "$wgDBname/transcoded",
-		],
-		'dumps-backup' => [
-			'container' => $dataDumpContainer,
-			'directory' => $dataDumpPath,
-		],
 		'ImportDump' => [
-			'container' => $container,
-			'directory' => "$wgImportDumpCentralWiki/ImportDump",
+			'container' => $importDumpContainer,
+			'directory' => 'ImportDump',
 		],
 	],
 ];
