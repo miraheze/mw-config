@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 76;
  */
 
 // Global SiteNotice
-// if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -27,8 +27,7 @@ $wgMajorSiteNoticeID = 76;
 			</tbody></table>
 		EOF;
 	}
-
-// }
+} */
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'WikiForum' ) ) {
