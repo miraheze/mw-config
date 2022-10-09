@@ -59,61 +59,9 @@ $wgLocalFileRepo = [
 	'isPrivate' => $wmgPrivateUploads,
 	// new folders need to be added to puppet/modules/swift/files/SwiftMedia/miraheze/rewrite.py
 	'zones' => [
-		'public'  => [
-			'container' => $container,
-			'directory' => $wgDBname,
-		],
-		'thumb'   => [
-			'container' => $container,
-			'directory' => "$wgDBname/thumb",
-		],
-		'temp'    => [
-			'container' => $container,
-			'directory' => "$wgDBname/temp",
-		],
-		'deleted' => [
-			'container' => $container,
-			'directory' => "$wgDBname/deleted",
-		],
-		'archive' => [
-			'container' => $container,
-			'directory' => "$wgDBname/archive",
-		],
-		'awards' => [
-			'container' => $container,
-			'directory' => "$wgDBname/awards",
-		],
-		'avatars' => [
-			'container' => $container,
-			'directory' => "$wgDBname/avatars",
-		],
-		'lockdir' => [
-			'container' => $container,
-			'directory' => "$wgDBname/lockdir",
-		],
-		'timeline-render' => [
-			'container' => $container,
-			'directory' => "$wgDBname/timeline",
-		],
-		'score-render' => [
-			'container' => $container,
-			'directory' => "$wgDBname/score",
-		],
-		'math' => [
-			'container' => $container,
-			'directory' => "$wgDBname/math",
-		],
-		'transcoded' => [
-			'container' => $container,
-			'directory' => "$wgDBname/transcoded",
-		],
-		'dumps-backup' => [
-			'container' => $dataDumpContainer,
-			'directory' => $dataDumpPath,
-		],
-		// As meta is the set wiki we use the public container.
 		'ImportDump' => [
-			'container' => 'miraheze-mw',
+			// Add -ImportDump suffix.
+			'container' => 'ImportDump',
 			'directory' => "$wgImportDumpCentralWiki/ImportDump",
 		],
 	],
