@@ -53,7 +53,7 @@ $wgFileBackends[] = [
 			'container' => $container,
 			'directory' => "$wgDBname/timeline"
 		],
-	]
+	],
 	'shardViaHashLevels' => [
 		'public'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
