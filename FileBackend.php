@@ -1,16 +1,59 @@
 <?php
 
-$containerPrefix = $wmgPrivateUploads ? 'prefix' : 'public';
+$container = $wmgPrivateUploads ? 'miraheze-mw-private' : 'miraheze-mw';
+
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
 	// This is the prefix for the container that it starts with.
-	'wikiId'             => "miraheze-$wgDBname-$containerPrefix",
+	'wikiId'             => 'miraheze',
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
 	'swiftKey'           => $wmgSwiftPassword,
+	'containerPaths' => [
+		'local-public' => [
+			'container' => $container,
+			'directory' => $wgDBname
+		],
+		'local-thumb' => [
+			'container' => $container,
+			'directory' => "$wgDBname/thumb"
+		],
+		'local-temp' => [
+			'container' => $container,
+			'directory' => "$wgDBname/temp"
+		],
+		'local-deleted' => [
+			'container' => $container,
+			'directory' => "$wgDBname/deleted"
+		],
+		'local-deleted' => [
+			'container' => $container,
+			'directory' => "$wgDBname/deleted"
+		],
+		'avatars' => [
+			'container' => $container,
+			'directory' => "$wgDBname/avatars"
+		],
+		'award' => [
+			'container' => $container,
+			'directory' => "$wgDBname/avatars"
+		],
+		'dumps-backup' => [
+			'container' => $container,
+			'directory' => "$wgDBname/dumps"
+		],
+		'score-render' => [
+			'container' => $container,
+			'directory' => "$wgDBname/score-render"
+		],
+		'timeline-render' => [
+			'container' => $container,
+			'directory' => "$wgDBname/timeline"
+		],
+	]
 	'shardViaHashLevels' => [
 		'public'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
@@ -21,7 +64,7 @@ $wgFileBackends[] = [
 		'transcoded'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
 		'deleted'
-			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
+			=> [ 'levels' => 2, 'base' => 36, 'repeat' => 0 ],
 	],
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true,
@@ -31,9 +74,6 @@ $wgFileBackends[] = [
 	'connTimeout'         => 10,
 	'reqTimeout'          => 900,
 ];
-
-// Add -ImportDump suffix.
-$importDumpContainer = $wgImportDumpCentralWiki ? "ImportDump-$wgImportDumpCentralWiki" : 'ImportDump';
 
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
@@ -47,10 +87,5 @@ $wgLocalFileRepo = [
 	'deletedDir' => $wgDeletedDirectory,
 	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
 	'isPrivate' => $wmgPrivateUploads,
-	'zones' => [
-		'ImportDump' => [
-			'container' => $importDumpContainer,
-			'directory' => 'ImportDump',
-		],
-	],
+	'zones' => [],
 ];
