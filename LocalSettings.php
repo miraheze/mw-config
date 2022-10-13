@@ -3848,6 +3848,10 @@ $wgConf->settings += [
 			'extendedconfirmed',
 			'templateeditor',
 		],
+		'+trwdeploymentwiki' => [
+			'bureaucrat',
+			'consul',
+		],
 		'+vnenderbotwiki' => [
 			'template',
 			'extendedconfirmed',
@@ -3936,6 +3940,10 @@ $wgConf->settings += [
 			'edittemplate',
 		],
 		'testwiki' => [
+			'bureaucrat',
+			'consul',
+		],
+		'trwdeploymentwiki' => [
 			'bureaucrat',
 			'consul',
 		],
