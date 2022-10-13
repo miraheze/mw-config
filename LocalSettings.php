@@ -838,7 +838,7 @@ $wgConf->settings += [
 			],
 			'On hold reasons' => [
 				'On hold pending response' => 'On hold pending response from the wiki requester (see the "Request Comments" tab). Please reply to the questions left by the wiki creator on this request but do not create another wiki request. Thank you.',
-				'On hold pending review from another wiki creator' => 'On hold pending review from another Wiki creator or Steward. Please do not resubmit this request.',
+				'On hold pending review from another wiki creator' => 'On hold pending review from another Wiki creator or Steward.',
 			],
 		],
 	],
