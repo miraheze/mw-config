@@ -1,11 +1,10 @@
 <?php
 
-$containerPrefix = $wmgPrivateUploads ? 'prefix' : 'public';
 $wgFileBackends[] = [
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'miraheze-swift',
 	// This is the prefix for the container that it starts with.
-	'wikiId'             => "miraheze-$wgDBname-$containerPrefix",
+	'wikiId'             => 'miraheze',
 	'lockManager'        => 'nullLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
@@ -21,7 +20,7 @@ $wgFileBackends[] = [
 		'transcoded'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
 		'deleted'
-			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
+			=> [ 'levels' => 2, 'base' => 36, 'repeat' => 0 ],
 	],
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true,
@@ -47,10 +46,8 @@ $wgLocalFileRepo = [
 	'deletedDir' => $wgDeletedDirectory,
 	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
 	'isPrivate' => $wmgPrivateUploads,
-	'zones' => [
-		'ImportDump' => [
-			'container' => $importDumpContainer,
-			'directory' => 'ImportDump',
-		],
-	],
+	'zones' => $wmgPrivateUploads
+		? [
+			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
+		: [],
 ];
