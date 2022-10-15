@@ -31,23 +31,26 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-$wgLocalFileRepo = [
-	'class' => 'LocalRepo',
-	'name' => 'local',
-	'backend' => 'miraheze-swift',
-	'scriptDirUrl' => $wgScriptPath,
-	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-	'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
-	'thumbScriptUrl' => $wgThumbnailScriptPath,
-	'transformVia404' => !$wgGenerateThumbnailOnParse,
-	'deletedDir' => $wgDeletedDirectory,
-	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
-	'isPrivate' => $wmgPrivateUploads,
-	'zones' => $wmgPrivateUploads
-		? [
-			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
-		: [],
-];
+// Only use swift as the backend if enabled.
+if ( $wmgEnableSwift ) {
+	$wgLocalFileRepo = [
+		'class' => 'LocalRepo',
+		'name' => 'local',
+		'backend' => 'miraheze-swift',
+		'scriptDirUrl' => $wgScriptPath,
+		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+		'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
+		'thumbScriptUrl' => $wgThumbnailScriptPath,
+		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'deletedDir' => $wgDeletedDirectory,
+		'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
+		'isPrivate' => $wmgPrivateUploads,
+		'zones' => $wmgPrivateUploads
+			? [
+				'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
+			: [],
+	];
+}
 
 // Used for migrating from FS to Swift.
 $fsUploadDir = $wmgPrivateUploads ? "/mnt/mediawiki-static/private/$wgDBname" : "/mnt/mediawiki-static/$wgDBname";
