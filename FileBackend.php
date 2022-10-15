@@ -51,10 +51,26 @@ $wgLocalFileRepo = [
 
 // Used for migrating from FS to Swift.
 $fsUploadDir = $wmgPrivateUploads ? "/mnt/mediawiki-static/private/$wgDBname" : "/mnt/mediawiki-static/$wgDBname";
+
+$wgFileBackends[] = [
+	'class'              => 'FSFileBackend',
+	'name'               => 'local-backend-fs',
+	'lockManager'        => 'fsLockManager',
+	'containerPaths'     => [
+		'local-public'      => $fsUploadDir,
+		'local-thumb'       => "$fsUploadDir/thumb",
+		'local-transcoded'  => "$fsUploadDir/transcoded",
+		// 'local-deleted'     => "$fsUploadDir/deleted",
+		'local-temp'        => "$fsUploadDir/temp",
+	],
+	'fileMode' => 420,
+	'directoryMode' => 511,
+];
+
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
 	'name' => 'fs-local',
-	'backend' => 'local-backend',
+	'backend' => 'local-backend-fs',
 	'directory' => $fsUploadDir,
 	'scriptDirUrl' => $wgScriptPath,
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
