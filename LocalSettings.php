@@ -2258,6 +2258,8 @@ $wgConf->settings += [
 			'categorytree',
 			'cite',
 			'citethispage',
+			'codeeditor',
+			'codemirror',
 			'darkmode',
 			'globaluserpage',
 			'minervaneue',
