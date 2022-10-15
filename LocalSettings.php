@@ -2664,6 +2664,11 @@ $wgConf->settings += [
 				'viewsuppressed',
 				'writeapi',
 			],
+			'user' => [
+				'autoconfirmed',
+				'noratelimit',
+				'skipcaptcha',
+			],
 			'*' => [
 				'read',
 				'skipcaptcha',
@@ -2684,6 +2689,8 @@ $wgConf->settings += [
 				'viewmyprivateinfo',
 				'viewmywatchlist',
 				'managewiki',
+				'noratelimit',
+				'autoconfirmed',
 			],
 		],
 	],
