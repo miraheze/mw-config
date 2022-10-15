@@ -31,13 +31,31 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-// Add -ImportDump suffix.
-$importDumpContainer = $wgImportDumpCentralWiki ? "ImportDump-$wgImportDumpCentralWiki" : 'ImportDump';
-
 $wgLocalFileRepo = [
 	'class' => 'LocalRepo',
 	'name' => 'local',
 	'backend' => 'miraheze-swift',
+	'scriptDirUrl' => $wgScriptPath,
+	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+	'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
+	'thumbScriptUrl' => $wgThumbnailScriptPath,
+	'transformVia404' => !$wgGenerateThumbnailOnParse,
+	'deletedDir' => $wgDeletedDirectory,
+	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
+	'isPrivate' => $wmgPrivateUploads,
+	'zones' => $wmgPrivateUploads
+		? [
+			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
+		: [],
+];
+
+// Used for migrating from FS to Swift.
+$fsUploadDir = $wmgPrivateUploads ? "/mnt/mediawiki-static/private/$wgDBname" : "/mnt/mediawiki-static/$wgDBname";
+$wgLocalFileRepo = [
+	'class' => 'LocalRepo',
+	'name' => 'fs-local',
+	'backend' => 'local-backend',
+	'directory' => $fsUploadDir,
 	'scriptDirUrl' => $wgScriptPath,
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
 	'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
