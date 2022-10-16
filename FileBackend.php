@@ -68,7 +68,6 @@ $wgFileBackends[] = [
 		'avatars'           => "$fsUploadDir/avatars",
 		'awards'            => "$fsUploadDir/awards",
 		'dumps-backup'      => "$fsUploadDir/dumps",
-		'ImportDump'        => "$fsUploadDir/ImportDump",
 		'score-render'      => "$fsUploadDir/score",
 		'timeline-render'   => "$fsUploadDir/timeline",
 	],
