@@ -74,22 +74,3 @@ $wgFileBackends[] = [
 	'fileMode' => 420,
 	'directoryMode' => 511,
 ];
-
-$wgLocalFileRepo = [
-	'class' => 'LocalRepo',
-	'name' => 'fs-local',
-	'backend' => 'local-backend-fs',
-	'directory' => $fsUploadDir,
-	'scriptDirUrl' => $wgScriptPath,
-	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-	'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
-	'thumbScriptUrl' => $wgThumbnailScriptPath,
-	'transformVia404' => !$wgGenerateThumbnailOnParse,
-	'deletedDir' => $wgDeletedDirectory,
-	'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
-	'isPrivate' => $wmgPrivateUploads,
-	'zones' => $wmgPrivateUploads
-		? [
-			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
-		: [],
-];
