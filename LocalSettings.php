@@ -4105,6 +4105,12 @@ $wgConf->settings += [
 	'wgShareUsePlainLinks' => [
 		'default' => true,
 	],
+	
+	// ShortDescription
+	'wgShortDescriptionEnableTagline' => [
+		'default' => true,
+		'slymodswiki' => false,
+	],
 
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => [
