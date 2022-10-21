@@ -4109,7 +4109,6 @@ $wgConf->settings += [
 	// ShortDescription
 	'wgShortDescriptionEnableTagline' => [
 		'default' => true,
-		'slymodswiki' => false,
 	],
 
 	// Site notice opt out
