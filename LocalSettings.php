@@ -244,7 +244,29 @@ $wgConf->settings += [
 	'wgArticlePlaceholderRepoApiUrl' => [
 		'default' => 'https://www.wikidata.org/w/api.php',
 	],
-
+	
+	// Babel
+	'wgBabelCategoryNames' => [
+		'default' => [
+			'0' => false,
+			'1' => false,
+			'2' => false,
+			'3' => false,
+			'4' => false,
+			'5' => false,
+			'N' => false,
+		],
+		'metawiki' => [
+			'0' => 'User %code%-0',
+			'1' => 'User %code%-1',
+			'2' => 'User %code%-2',
+			'3' => 'User %code%-3',
+			'4' => 'User %code%-4',
+			'5' => 'User %code%-5',
+			'N' => 'User %code%-N',
+		],
+	],
+	
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
