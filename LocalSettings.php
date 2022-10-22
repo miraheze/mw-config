@@ -2669,10 +2669,8 @@ $wgConf->settings += [
 				'noratelimit',
 				'skipcaptcha',
 				'managewiki',
-				'generate-dump',
 				'globalblock-whitelist',
 				'ipblock-exempt',
-				'managewiki',
 			],
 			'*' => [
 				'read',
