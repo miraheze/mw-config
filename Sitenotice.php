@@ -22,7 +22,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 		$siteNotice .= <<<EOF
 			<table style="width: 100% !important;">
 			<tbody><tr>
-			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>Miraheze will be doing emergency maintenance on our file storage begging at 20:45 PM UTC time. The maintenance will last 30 minutes. We apologize for the inconvenience.</div></div>
+			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>Miraheze will be doing emergency maintenance on our file storage beginning at 20:45 PM UTC time. The maintenance will last 30 minutes. We apologize for the inconvenience.</div></div>
 			</td></tr>
 			</tbody></table>
 		EOF;
