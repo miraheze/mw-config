@@ -58,7 +58,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 function wfShouldEnableSwift( $dbname ) {
 	$shouldEnableSwift = false;
 	// Use preg_match( '/^a(.*)/', $dbname ) to migrate wikis in alphabetical order.
-	if ( $dbname === 'betawiki' || preg_match( '/^(.*)wikibeta/', $dbname ) ) {
+	if ( $dbname === 'betawiki' || preg_match( '/^(.*)wikibeta$/', $dbname ) ) {
 		$shouldEnableSwift = true;
 	}
 
