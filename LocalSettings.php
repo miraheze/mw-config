@@ -52,6 +52,10 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 
 /**
+ * DO NOT REMOVE FUNCTION
+ * It is used throughout, including within MirahezeMagic.
+ * It needs its usage removed before the function can be removed.
+ *
  * @param string $dbname the database to check
  * @return bool whether Swift should be enabled on $dbname
  */
