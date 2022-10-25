@@ -5253,6 +5253,7 @@ $wgConf->settings += [
 			'message-format' => false,
 			'MessageCache' => false,
 			'MessageCacheError' => false,
+			'MirahezeMagic' => 'error',
 			'mobile' => false,
 			'NewUserMessage' => false,
 			'OAuth' => 'info',
