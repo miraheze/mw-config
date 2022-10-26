@@ -61,8 +61,21 @@ $wgPasswordSender = 'noreply@miraheze.org';
  */
 function wfShouldEnableSwift( $dbname ) {
 	$shouldEnableSwift = false;
-	// Use preg_match( '/^a(.*)/', $dbname ) to migrate wikis in alphabetical order.
-	if ( $dbname === 'betawiki' || preg_match( '/^(.*)wikibeta$/', $dbname ) ) {
+
+	if (
+		// enable swift on all wikis matching this regular expression
+		// preg_match( '/^a(.*)/', $dbname ) ||
+
+		// enable swift on betawiki
+		$dbname === 'betawiki' ||
+
+		// enable swift on all other beta wikis
+		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
+
+		// enable swift on all new wikis
+		// which we no longer create a static directory for
+		!file_exists( '/mnt/mediawiki-static/' . $dbname )
+	) {
 		$shouldEnableSwift = true;
 	}
 
