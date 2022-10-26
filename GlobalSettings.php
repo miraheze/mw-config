@@ -355,20 +355,16 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 			'initialCapital' => true,
 			'zones' => [
 				'public' => [
-					'container' => 'mw',
-					'directory' => $wmgSharedUploadDBname,
+					'container' => 'local-public',
 				],
 				'thumb' => [
-					'container' => 'mw',
-					'directory' => "{$wmgSharedUploadDBname}/thumb",
+					'container' => 'local-thumb',
 				],
 				'temp' => [
-					'container' => 'mw',
-					'directory' => "{$wmgSharedUploadDBname}/temp",
+					'container' => 'local-temp',
 				],
 				'deleted' => [
-					'container' => 'mw',
-					'directory' => "{$wmgSharedUploadDBname}/deleted",
+					'container' => 'local-deleted',
 				],
 			],
 			'abbrvThreshold' => 160
@@ -412,20 +408,16 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 			'initialCapital' => true,
 			'zones' => [
 				'public' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki',
+					'container' => 'local-public',
 				],
 				'thumb' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki/thumb',
+					'container' => 'local-thumb',
 				],
 				'temp' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki/temp',
+					'container' => 'local-temp',
 				],
 				'deleted' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki/deleted',
+					'container' => 'local-deleted',
 				],
 			],
 			'abbrvThreshold' => 160
