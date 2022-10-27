@@ -62,7 +62,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 function wfShouldEnableSwift( $dbname ) {
 	return (
 		// enable swift on all wikis matching this regular expression
-		// preg_match( '/^a(.*)/', $dbname ) ||
+		preg_match( '/^([0-9]|a)/', $dbname ) ||
 
 		// enable swift on betawiki
 		$dbname === 'betawiki' ||
