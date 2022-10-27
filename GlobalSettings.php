@@ -206,7 +206,7 @@ $wgDataDump = [
 		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 		'htmlform' => [
@@ -244,7 +244,7 @@ $wgDataDump = [
 		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 	],
@@ -261,7 +261,7 @@ $wgDataDump = [
 		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 	],
