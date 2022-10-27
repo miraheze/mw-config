@@ -64,10 +64,7 @@ function wfShouldEnableSwift( $dbname ) {
 		// enable swift on all wikis matching this regular expression
 		preg_match( '/^([0-9]|a|b)/', $dbname ) ||
 
-		// enable swift on betawiki
-		$dbname === 'betawiki' ||
-
-		// enable swift on all other beta wikis
+		// enable swift on all beta wikis
 		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
 
 		// enable swift on all new wikis
