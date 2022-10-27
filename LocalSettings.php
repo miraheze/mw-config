@@ -244,7 +244,7 @@ $wgConf->settings += [
 	'wgArticlePlaceholderRepoApiUrl' => [
 		'default' => 'https://www.wikidata.org/w/api.php',
 	],
-	
+
 	// Babel
 	'wgBabelCategoryNames' => [
 		'default' => [
@@ -270,7 +270,7 @@ $wgConf->settings += [
 		'default' => '%code%',
 		'metawiki' => 'User %code%',
 	],
-	
+
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
