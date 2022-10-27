@@ -266,6 +266,10 @@ $wgConf->settings += [
 			'N' => 'User %code%-N',
 		],
 	],
+	'wgBabelMainCategory' => [
+		'default' => '%code%',
+		'metawiki' => 'User %code%',
+	],
 	
 	// BetaFeatures
 	'wgMediaViewerIsInBeta' => [
