@@ -60,13 +60,20 @@ $wgPasswordSender = 'noreply@miraheze.org';
  * @return bool whether Swift should be enabled on $dbname
  */
 function wfShouldEnableSwift( $dbname ) {
-	$shouldEnableSwift = false;
-	// Use preg_match( '/^a(.*)/', $dbname ) to migrate wikis in alphabetical order.
-	if ( $dbname === 'betawiki' || preg_match( '/^(.*)wikibeta$/', $dbname ) ) {
-		$shouldEnableSwift = true;
-	}
+	return (
+		// enable swift on all wikis matching this regular expression
+		// preg_match( '/^a(.*)/', $dbname ) ||
 
-	return $shouldEnableSwift;
+		// enable swift on betawiki
+		$dbname === 'betawiki' ||
+
+		// enable swift on all other beta wikis
+		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
+
+		// enable swift on all new wikis
+		// which we no longer create a static directory for
+		!file_exists( '/mnt/mediawiki-static/' . $dbname )
+	);
 }
 
 $wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
