@@ -203,7 +203,7 @@ $wgDataDump = [
 				'--namespaces'
 			],
 		],
-		'limit' => 1,
+		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
@@ -241,7 +241,7 @@ $wgDataDump = [
 				"{$wgUploadDirectory}/"
 			],
 		],
-		'limit' => 1,
+		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
@@ -258,7 +258,7 @@ $wgDataDump = [
 				'${filename}'
 			],
 		],
-		'limit' => 1,
+		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
