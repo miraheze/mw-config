@@ -248,13 +248,13 @@ $wgConf->settings += [
 	// Babel
 	'wgBabelCategoryNames' => [
 		'default' => [
-			'0' => false,
-			'1' => false,
-			'2' => false,
-			'3' => false,
-			'4' => false,
-			'5' => false,
-			'N' => false,
+			'0' => '%code%-0',
+			'1' => '%code%-1',
+			'2' => '%code%-2',
+			'3' => '%code%-3',
+			'4' => '%code%-4',
+			'5' => '%code%-5',
+			'N' => '%code%-N',
 		],
 		'metawiki' => [
 			'0' => 'User %code%-0',
