@@ -203,10 +203,10 @@ $wgDataDump = [
 				'--namespaces'
 			],
 		],
-		'limit' => 1,
+		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 		'htmlform' => [
@@ -241,10 +241,10 @@ $wgDataDump = [
 				"{$wgUploadDirectory}/"
 			],
 		],
-		'limit' => 1,
+		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 	],
@@ -258,10 +258,10 @@ $wgDataDump = [
 				'${filename}'
 			],
 		],
-		'limit' => 1,
+		'limit' => 0,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 	],
