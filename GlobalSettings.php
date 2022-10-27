@@ -203,7 +203,7 @@ $wgDataDump = [
 				'--namespaces'
 			],
 		],
-		'limit' => 0,
+		'limit' => -1,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'managewiki-restricted',
@@ -241,7 +241,7 @@ $wgDataDump = [
 				"{$wgUploadDirectory}/"
 			],
 		],
-		'limit' => 0,
+		'limit' => -1,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'managewiki-restricted',
@@ -258,7 +258,7 @@ $wgDataDump = [
 				'${filename}'
 			],
 		],
-		'limit' => 0,
+		'limit' => -1,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'managewiki-restricted',
