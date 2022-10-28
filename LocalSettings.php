@@ -1351,8 +1351,7 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					// TODO: migrate to swift ($wmgUploadHostname)
-					'src' => "https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg",
+					'src' => 'https://static-new.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Hosted by Miraheze'
 				]
