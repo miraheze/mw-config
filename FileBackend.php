@@ -41,7 +41,7 @@ if ( $wmgEnableSwift ) {
 		'scriptDirUrl' => $wgScriptPath,
 		'hashLevels' => 2,
 		'thumbScriptUrl' => $wgThumbnailScriptPath,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
+		'transformVia404' => true,
 		'deletedDir' => $wgDeletedDirectory,
 		'deletedHashLevels' => 3,
 		'abbrvThreshold' => 160,
