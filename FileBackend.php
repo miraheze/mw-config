@@ -11,15 +11,15 @@ $wgFileBackends[] = [
 	'swiftUser'          => 'mw:media',
 	'swiftKey'           => $wmgSwiftPassword,
 	'shardViaHashLevels' => [
-		'public'
+		'local-public'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'thumb'
+		'local-thumb'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'temp'
+		'local-temp'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'transcoded'
+		'local-transcoded'
 			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'deleted'
+		'local-deleted'
 			=> [ 'levels' => 2, 'base' => 36, 'repeat' => 0 ],
 	],
 	'parallelize'        => 'implicit',
