@@ -37,13 +37,14 @@ if ( $wmgEnableSwift ) {
 		'class' => 'LocalRepo',
 		'name' => 'local',
 		'backend' => 'miraheze-swift',
-		'scriptDirUrl' => $wgScriptPath,
 		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-		'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
+		'scriptDirUrl' => $wgScriptPath,
+		'hashLevels' => 2,
 		'thumbScriptUrl' => $wgThumbnailScriptPath,
 		'transformVia404' => !$wgGenerateThumbnailOnParse,
 		'deletedDir' => $wgDeletedDirectory,
-		'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
+		'deletedHashLevels' => 3,
+		'abbrvThreshold' => 160,
 		'isPrivate' => $wmgPrivateUploads,
 		'zones' => $wmgPrivateUploads
 			? [
