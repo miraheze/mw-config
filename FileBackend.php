@@ -37,6 +37,10 @@ if ( $wmgEnableSwift ) {
 	$wgUploadThumbnailRenderHttpCustomHost = 'static-new.miraheze.org';
 	$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
 
+	if ( $wmgPrivateUploads ) {
+		$wgUploadPath = '/w/img_auth.php';
+	}
+
 	$wgLocalFileRepo = [
 		'class' => 'LocalRepo',
 		'name' => 'local',
