@@ -54,7 +54,7 @@ if ( $wmgEnableSwift ) {
 		'deletedHashLevels' => 3,
 		'abbrvThreshold' => 160,
 		'isPrivate' => $wmgPrivateUploads,
-		'zones' => $wmgPrivateUploads
+		'zones' => ( $cwPrivate || $wmgPrivateUploads )
 			? [
 				'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
 			: [],
