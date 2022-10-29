@@ -33,9 +33,9 @@ $wgFileBackends[] = [
 
 // Only use swift as the backend if enabled.
 if ( $wmgEnableSwift ) {
-	/* $wgUploadThumbnailRenderMethod = 'http';
+	$wgUploadThumbnailRenderMethod = 'http';
 	$wgUploadThumbnailRenderHttpCustomHost = 'static-new.miraheze.org';
-	$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org'; */
+	$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
 
 	if ( $wmgPrivateUploads ) {
 		$wgUploadPath = '/w/img_auth.php';
