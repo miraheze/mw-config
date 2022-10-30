@@ -240,7 +240,7 @@ switch ( $wi->dbname ) {
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => 'shared-polcomwiki',
 			'directory' => '/mnt/mediawiki-static/polcomwiki',
-			'url' => "https://$wmgUploadHostname/polcomwiki",
+			'url' => 'https://static.miraheze.org/polcomwiki',
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
 			'transformVia404' => !$wgGenerateThumbnailOnParse,
