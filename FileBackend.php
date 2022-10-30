@@ -1,7 +1,7 @@
 <?php
 
 $wgFileBackends[] = [
-	'class'              => 'SwiftFileBackend',
+	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift',
 	// This is the prefix for the container that it starts with.
 	'wikiId'             => "miraheze-$wgDBname",
@@ -42,7 +42,7 @@ if ( $wmgEnableSwift ) {
 	}
 
 	$wgLocalFileRepo = [
-		'class' => 'LocalRepo',
+		'class' => LocalRepo::class,
 		'name' => 'local',
 		'backend' => 'miraheze-swift',
 		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
@@ -65,7 +65,7 @@ if ( $wmgEnableSwift ) {
 $fsUploadDir = $wmgPrivateUploads ? "/mnt/mediawiki-static/private/$wgDBname" : "/mnt/mediawiki-static/$wgDBname";
 
 $wgFileBackends[] = [
-	'class'              => 'FSFileBackend',
+	'class'              => FSFileBackend::class,
 	'name'               => 'local-backend-fs',
 	'lockManager'        => 'fsLockManager',
 	'containerPaths'     => [
