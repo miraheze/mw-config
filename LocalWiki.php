@@ -87,21 +87,39 @@ switch ( $wi->dbname ) {
 		$wgForeignFileRepos[] = [
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => 'shared-gpcommonswiki',
-			'directory' => '/mnt/mediawiki-static/gpcommonswiki',
-			'url' => "https://$wmgUploadHostname/gpcommonswiki",
+			'backend' => 'miraheze-swift',
+			'url' => 'https://static-new.miraheze.org/gpcommonswiki',
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
-			'transformVia404' => !$wgGenerateThumbnailOnParse,
-			'hasSharedCache' => false,
+			'transformVia404' => true,
+			'hasSharedCache' => true,
+			'descBaseUrl' => 'https://gpcommons.miraheze.org/wiki/File:',
+			'scriptDirUrl' => 'https://gpcommons.miraheze.org/w',
 			'fetchDescription' => true,
 			'descriptionCacheExpiry' => 86400 * 7,
 			'wiki' => 'gpcommonswiki',
-			'descBaseUrl' => 'https://gpcommons.miraheze.org/wiki/File:',
-			'scriptDirUrl' => 'https://gpcommons.miraheze.org/w',
+			'initialCapital' => true,
+			'zones' => [
+				'public' => [
+					'container' => 'local-public',
+				],
+				'thumb' => [
+					'container' => 'local-thumb',
+				],
+				'temp' => [
+					'container' => 'local-temp',
+				],
+				'deleted' => [
+					'container' => 'local-deleted',
+				],
+			],
+			'abbrvThreshold' => 160
 		];
+
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
+
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
