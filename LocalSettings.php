@@ -890,9 +890,6 @@ $wgConf->settings += [
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'sre@miraheze.org',
 	],
-	'wgCreateWikiPersistentModelFile' => [
-		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
-	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
 			'Alternate history wiki' => 'Alternate history wiki',
