@@ -71,6 +71,8 @@ function wfShouldEnableSwift( $dbname ) {
 
 		$dbname === 'staffwiki' ||
 
+		$dbname === 'ciptamediawiki' ||
+
 		// enable swift on all new wikis
 		// which we no longer create a static directory for
 		!file_exists( '/mnt/mediawiki-static/' . $dbname )
