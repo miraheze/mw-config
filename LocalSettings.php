@@ -66,6 +66,8 @@ function wfShouldEnableSwift( $dbname ) {
 
 		// enable swift on all beta wikis
 		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
+		
+		$dbname === 'metawiki' ||
 
 		// enable swift on all new wikis
 		// which we no longer create a static directory for
