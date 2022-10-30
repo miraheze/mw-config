@@ -10,18 +10,6 @@ $wgFileBackends[] = [
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
 	'swiftKey'           => $wmgSwiftPassword,
-	'shardViaHashLevels' => [
-		'local-public'
-			=> [ 'levels' => 0, 'base' => 16, 'repeat' => 1 ],
-		'local-thumb'
-			=> [ 'levels' => 0, 'base' => 16, 'repeat' => 1 ],
-		'local-temp'
-			=> [ 'levels' => 0, 'base' => 16, 'repeat' => 1 ],
-		'local-transcoded'
-			=> [ 'levels' => 0, 'base' => 16, 'repeat' => 1 ],
-		'local-deleted'
-			=> [ 'levels' => 0, 'base' => 36, 'repeat' => 0 ],
-	],
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true,
 	'readAffinity'       => true,
