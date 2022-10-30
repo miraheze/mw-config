@@ -1016,6 +1016,17 @@ $wgConf->settings += [
 	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
 	],
+	'wgCreateWikiUseSecureContainers' => [
+		'default' => false,
+		'betaheze' => true,
+	],
+	'wgCreateWikiExtraSecuredContainers' => [
+		'default' => [],
+		'betaheze' => [
+			'dumps-backup',
+			'timeline-render',
+		],
+	],
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
 		'betaheze' => false,
