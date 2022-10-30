@@ -4267,7 +4267,7 @@ $wgConf->settings += [
 		'default' => '/favicon.ico',
 	],
 	'wgLogo' => [
-		'default' => "https://static.miraheze.org/metawiki/3/35/Miraheze_Logo.svg",
+		'default' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 	],
 	'wgIcon' => [
 		'default' => false,
