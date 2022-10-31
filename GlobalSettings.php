@@ -177,12 +177,14 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgMFStopRedirectCookieHost = $wi->hostname;
 }
 
-// $wmgPrivateUploads
-$wgGenerateThumbnailOnParse = false;
-if ( $wmgPrivateUploads ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
+if ( !$wmgEnableSwift ) {
+	// $wmgPrivateUploads
+	$wgGenerateThumbnailOnParse = false;
+	if ( $wmgPrivateUploads ) {
+		$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+		$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
+		$wgGenerateThumbnailOnParse = true;
+	}
 }
 
 // DataDump
