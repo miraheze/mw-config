@@ -1459,6 +1459,9 @@ $wgConf->settings += [
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
+	'wgImagePreconnect' => [
+		'default' => true,
+	],
 	'wgShowArchiveThumbnails' => [
 		'default' => true,
 	],
