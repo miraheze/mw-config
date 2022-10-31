@@ -21,6 +21,7 @@ $wgFileBackends[] = [
 
 // Only use swift as the backend if enabled.
 if ( $wmgEnableSwift ) {
+	$wgGenerateThumbnailOnParse = false;
 	$wgUploadThumbnailRenderMethod = 'http';
 	$wgUploadThumbnailRenderHttpCustomHost = 'static-new.miraheze.org';
 	$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
