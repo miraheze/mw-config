@@ -177,12 +177,14 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgMFStopRedirectCookieHost = $wi->hostname;
 }
 
-// $wmgPrivateUploads
-$wgGenerateThumbnailOnParse = false;
-if ( $wmgPrivateUploads ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
+if ( !$wmgEnableSwift ) {
+	// $wmgPrivateUploads
+	$wgGenerateThumbnailOnParse = false;
+	if ( $wmgPrivateUploads ) {
+		$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+		$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
+		$wgGenerateThumbnailOnParse = true;
+	}
 }
 
 // DataDump
@@ -370,8 +372,8 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 			'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
-			'transformVia404' => !$wgGenerateThumbnailOnParse,
-			'hasSharedCache' => false,
+			'transformVia404' => true,
+			'hasSharedCache' => true,
 			'fetchDescription' => true,
 			'descriptionCacheExpiry' => 86400 * 7,
 			'wiki' => $wmgSharedUploadDBname,
