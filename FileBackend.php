@@ -27,6 +27,10 @@ if ( $wmgEnableSwift ) {
 
 	if ( $wmgPrivateUploads ) {
 		$wgUploadPath = '/w/img_auth.php';
+		$wgImgAuthUrlPathMap = [
+			'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
+			'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
+		];
 	}
 
 	$wgLocalFileRepo = [
