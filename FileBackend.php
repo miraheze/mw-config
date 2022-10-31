@@ -38,6 +38,8 @@ if ( $wmgEnableSwift ) {
 		'hashLevels' => 2,
 		'thumbScriptUrl' => $wgThumbnailScriptPath,
 		'transformVia404' => true,
+		'useJsonMetadata'   => true,
+		'useSplitMetadata'  => true,
 		'deletedHashLevels' => 3,
 		'abbrvThreshold' => 160,
 		'isPrivate' => $wmgPrivateUploads,
