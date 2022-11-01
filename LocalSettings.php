@@ -891,6 +891,15 @@ $wgConf->settings += [
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
 	],
+	'wgCreateWikiInactiveExemptReasonOptions' => [
+		'default' => [
+			'Wiki completed and made to be read',
+			'Wiki made for time-based gathering',
+			'Wiki made to be read',
+			'Temporary exemption for exceptional hardship, see DPE',
+			'Other, see DPE',
+		],
+	],
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'sre@miraheze.org',
 	],
