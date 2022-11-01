@@ -893,11 +893,11 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiInactiveExemptReasonOptions' => [
 		'default' => [
-			'Wiki completed and made to be read',
-			'Wiki made for time-based gathering',
-			'Wiki made to be read',
-			'Temporary exemption for exceptional hardship, see DPE',
-			'Other, see DPE',
+			'Wiki completed and made to be read' => 'comp',
+			'Wiki made for time-based gathering' => 'tbg',
+			'Wiki made to be read' => 'mtr'
+			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship'
+			'Other, see DPE' => 'other',
 		],
 	],
 	'wgCreateWikiNotificationEmail' => [
