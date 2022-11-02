@@ -1017,12 +1017,10 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCreateWikiUseSecureContainers' => [
-		'default' => false,
-		'betaheze' => true,
+		'default' => true,
 	],
 	'wgCreateWikiExtraSecuredContainers' => [
-		'default' => [],
-		'betaheze' => [
+		'default' => [
 			'dumps-backup',
 			'timeline-render',
 		],
@@ -4501,11 +4499,6 @@ $wgConf->settings += [
 	],
 
 	// Uploads
-	'wmgPrivateUploads' => [
-		'default' => false,
-		'ciptamediawiki' => true,
-		'staffwiki' => true,
-	],
 	'wmgEnableSharedUploads' => [
 		'default' => false,
 	],
