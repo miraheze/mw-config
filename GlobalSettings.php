@@ -147,11 +147,7 @@ if ( !$cwPrivate ) {
 		$wgDataDumpFileBackend = 'miraheze-swift';
 		$wgDataDumpDirectory = '';
 	} else {
-		if ( $wmgPrivateUploads ) {
-			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
-		} else {
-			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
-		}
+		$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
 	}
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
@@ -178,13 +174,7 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 }
 
 if ( !$wmgEnableSwift ) {
-	// $wmgPrivateUploads
 	$wgGenerateThumbnailOnParse = false;
-	if ( $wmgPrivateUploads ) {
-		$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-		$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-		$wgGenerateThumbnailOnParse = true;
-	}
 }
 
 // DataDump
