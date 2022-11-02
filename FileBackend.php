@@ -26,7 +26,7 @@ if ( $wmgEnableSwift ) {
 	$wgUploadThumbnailRenderHttpCustomHost = 'static-new.miraheze.org';
 	$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
 
-	if ( $wmgPrivateUploads ) {
+	if ( $cwPrivate ) {
 		$wgUploadPath = '/w/img_auth.php';
 		$wgImgAuthUrlPathMap = [
 			'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
@@ -47,7 +47,7 @@ if ( $wmgEnableSwift ) {
 		'useSplitMetadata'  => true,
 		'deletedHashLevels' => 3,
 		'abbrvThreshold' => 160,
-		'isPrivate' => $wmgPrivateUploads,
+		'isPrivate' => $cwPrivate,
 		'zones' => $cwPrivate
 			? [
 				'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
@@ -56,7 +56,7 @@ if ( $wmgEnableSwift ) {
 }
 
 // Used for migrating from FS to Swift.
-$fsUploadDir = $wmgPrivateUploads ? "/mnt/mediawiki-static/private/$wgDBname" : "/mnt/mediawiki-static/$wgDBname";
+$fsUploadDir = "/mnt/mediawiki-static/$wgDBname";
 
 $wgFileBackends[] = [
 	'class'              => FSFileBackend::class,
