@@ -35,7 +35,7 @@ if ( $wmgEnableSwift ) {
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
 		$skin->getOutput()->addInlineStyle(
-			'.mw-dismissable-notice-body { margin: unset; }' .
+			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
 			'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
 		);
 
