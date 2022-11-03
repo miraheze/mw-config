@@ -47,13 +47,9 @@ if ( $wmgEnableSwift ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
+		$skin->getOutput()->enableOOUI();
 		$skin->getOutput()->addInlineStyle(
 			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }'
-		);
-
-		OutputPage::setupOOUI(
-			strtolower( $skin->getSkinName() ),
-			$skin->getContext()->getLanguage()->getDir()
 		);
 
 		$siteNotice .= <<<EOF
