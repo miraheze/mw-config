@@ -20,11 +20,24 @@ $wgMajorSiteNoticeID = 77;
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		$siteNotice .= <<<EOF
-			<table style="width: 100% !important;">
-			<tbody><tr>
-			<td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;"><div style="padding-top:0.3em; padding-bottom:0.1em;"><div data-nosnippet><div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>Miraheze will be doing emergency maintenance on our file storage beginning at 20:45 PM UTC time. The maintenance will last 30 minutes. We apologize for the inconvenience.</div></div>
-			</td></tr>
-			</tbody></table>
+			<table style="width: 100%;">
+				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #ff1e00; background-color: #ff5200cf; padding: 10px 15px; color: whitesmoke;">
+					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
+						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
+						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
+							Miraheze will be doing emergency maintenance on our file storage beginning at 20:45 PM UTC time. The maintenance will last 30 minutes. We apologise for the inconvenience.
+						</div>
+
+						<!-- <span class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="...">
+								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
+								<span class="oo-ui-labelElement-label">Learn more</span>
+								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
+							</a>
+						</span> -->
+					</div>
+				</td></tr></tbody>
+			</table>
 		EOF;
 	}
 }*/
