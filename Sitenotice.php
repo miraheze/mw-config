@@ -65,7 +65,7 @@ if ( $wmgEnableSwift ) {
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							This wiki has been migrated to our new file backend software (Swift). If files appear missing for this wiki, please let us know by <a href="https://phabricator.miraheze.org/maniphest/task/edit/form/1">creating a task on Phabricator</a>. Thank you.
+							This wiki has been migrated to our new file storage software (Swift). If files appear missing for this wiki, please let us know by <a href="https://phabricator.miraheze.org/maniphest/task/edit/form/1">creating a task on Phabricator</a>. Thank you.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
