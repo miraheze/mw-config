@@ -51,6 +51,11 @@ if ( $wmgEnableSwift ) {
 			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }'
 		);
 
+		OutputPage::setupOOUI(
+			strtolower( $skin->getSkinName() ),
+			$skin->getContext()->getLanguage()->getDir()
+		);
+
 		$siteNotice .= <<<EOF
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #ff1e00; background-color: #ff5200cf; padding: 10px 15px; color: whitesmoke;">
