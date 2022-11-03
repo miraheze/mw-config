@@ -19,6 +19,12 @@ $wgMajorSiteNoticeID = 78;
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
+		$skin->getOutput()->enableOOUI();
+		$skin->getOutput()->addInlineStyle(
+			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
+			'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
+		);
+
 		$siteNotice .= <<<EOF
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #ff1e00; background-color: #ff5200cf; padding: 10px 15px; color: whitesmoke;">
@@ -28,7 +34,7 @@ $wgMajorSiteNoticeID = 78;
 							Miraheze will be doing emergency maintenance on our file storage beginning at 20:45 PM UTC time. The maintenance will last 30 minutes. We apologise for the inconvenience.
 						</div>
 
-						<!-- <span class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="...">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
 								<span class="oo-ui-labelElement-label">Learn more</span>
@@ -49,7 +55,8 @@ if ( $wmgEnableSwift ) {
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
 		$skin->getOutput()->enableOOUI();
 		$skin->getOutput()->addInlineStyle(
-			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }'
+			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
+			'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
 		);
 
 		$siteNotice .= <<<EOF
@@ -61,7 +68,7 @@ if ( $wmgEnableSwift ) {
 							This wiki has been migrated to our new file backend software (Swift). If files appear missing for this wiki, please let us know by <a href="https://phabricator.miraheze.org/maniphest/task/edit/form/1">creating a task on Phabricator</a>. Thank you.
 						</div>
 
-						<span class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Community_noticeboard#Note_from_SRE_Regarding_the_Swift_Migration">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
 								<span class="oo-ui-labelElement-label">Learn more</span>
