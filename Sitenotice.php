@@ -35,8 +35,7 @@ if ( $wmgEnableSwift ) {
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
 		$skin->getOutput()->addInlineStyle(
-			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
-			'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
+			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }'
 		);
 
 		$siteNotice .= <<<EOF
@@ -48,7 +47,7 @@ if ( $wmgEnableSwift ) {
 							This wiki has been migrated to our new file backend software (Swift). If files appear missing for this wiki, please let us know by creating a task on Phabricator. Thank you.
 						</div>
 
-						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+						<span class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Community_noticeboard#Note_from_SRE_Regarding_the_Swift_Migration">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
 								<span class="oo-ui-labelElement-label">Learn more</span>
