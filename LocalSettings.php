@@ -248,15 +248,6 @@ $wgConf->settings += [
 	// Babel
 	'wgBabelCategoryNames' => [
 		'default' => [
-			'0' => '%code%-0',
-			'1' => '%code%-1',
-			'2' => '%code%-2',
-			'3' => '%code%-3',
-			'4' => '%code%-4',
-			'5' => '%code%-5',
-			'N' => '%code%-N',
-		],
-		'metawiki' => [
 			'0' => 'User %code%-0',
 			'1' => 'User %code%-1',
 			'2' => 'User %code%-2',
@@ -267,8 +258,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgBabelMainCategory' => [
-		'default' => '%code%',
-		'metawiki' => 'User %code%',
+		'default' => 'User %code%',
 	],
 
 	// BetaFeatures
