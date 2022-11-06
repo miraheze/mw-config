@@ -1,7 +1,7 @@
 <?php
 
 $wgFileBackends[] = [
-	'class'              => 'SwiftFileBackend',
+	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift',
 	// This is the prefix for the container that it starts with.
 	'wikiId'             => "miraheze-$wgDBname",
@@ -10,18 +10,6 @@ $wgFileBackends[] = [
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
 	'swiftKey'           => $wmgSwiftPassword,
-	'shardViaHashLevels' => [
-		'public'
-			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'thumb'
-			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'temp'
-			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'transcoded'
-			=> [ 'levels' => 2, 'base' => 16, 'repeat' => 1 ],
-		'deleted'
-			=> [ 'levels' => 2, 'base' => 36, 'repeat' => 0 ],
-	],
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true,
 	'readAffinity'       => true,
@@ -33,19 +21,34 @@ $wgFileBackends[] = [
 
 // Only use swift as the backend if enabled.
 if ( $wmgEnableSwift ) {
+	$wgGenerateThumbnailOnParse = false;
+	$wgUploadThumbnailRenderMethod = 'http';
+	$wgUploadThumbnailRenderHttpCustomHost = 'static-new.miraheze.org';
+	$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
+
+	if ( $wmgPrivateUploads ) {
+		$wgUploadPath = '/w/img_auth.php';
+		$wgImgAuthUrlPathMap = [
+			'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
+			'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
+		];
+	}
+
 	$wgLocalFileRepo = [
-		'class' => 'LocalRepo',
+		'class' => LocalRepo::class,
 		'name' => 'local',
 		'backend' => 'miraheze-swift',
-		'scriptDirUrl' => $wgScriptPath,
 		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-		'hashLevels' => $wgHashedUploadDirectory ? 2 : 0,
+		'scriptDirUrl' => $wgScriptPath,
+		'hashLevels' => 2,
 		'thumbScriptUrl' => $wgThumbnailScriptPath,
-		'transformVia404' => !$wgGenerateThumbnailOnParse,
-		'deletedDir' => $wgDeletedDirectory,
-		'deletedHashLevels' => $wgHashedUploadDirectory ? 3 : 0,
+		'transformVia404' => true,
+		'useJsonMetadata'   => true,
+		'useSplitMetadata'  => true,
+		'deletedHashLevels' => 3,
+		'abbrvThreshold' => 160,
 		'isPrivate' => $wmgPrivateUploads,
-		'zones' => $wmgPrivateUploads
+		'zones' => $cwPrivate
 			? [
 				'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
 			: [],
@@ -56,7 +59,7 @@ if ( $wmgEnableSwift ) {
 $fsUploadDir = $wmgPrivateUploads ? "/mnt/mediawiki-static/private/$wgDBname" : "/mnt/mediawiki-static/$wgDBname";
 
 $wgFileBackends[] = [
-	'class'              => 'FSFileBackend',
+	'class'              => FSFileBackend::class,
 	'name'               => 'local-backend-fs',
 	'lockManager'        => 'fsLockManager',
 	'containerPaths'     => [

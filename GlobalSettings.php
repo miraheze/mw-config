@@ -177,12 +177,14 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgMFStopRedirectCookieHost = $wi->hostname;
 }
 
-// $wmgPrivateUploads
-$wgGenerateThumbnailOnParse = false;
-if ( $wmgPrivateUploads ) {
-	$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-	$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-	$wgGenerateThumbnailOnParse = true;
+if ( !$wmgEnableSwift ) {
+	// $wmgPrivateUploads
+	$wgGenerateThumbnailOnParse = false;
+	if ( $wmgPrivateUploads ) {
+		$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
+		$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
+		$wgGenerateThumbnailOnParse = true;
+	}
 }
 
 // DataDump
@@ -203,10 +205,10 @@ $wgDataDump = [
 				'--namespaces'
 			],
 		],
-		'limit' => 1,
+		'limit' => -1,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 		'htmlform' => [
@@ -241,10 +243,10 @@ $wgDataDump = [
 				"{$wgUploadDirectory}/"
 			],
 		],
-		'limit' => 1,
+		'limit' => -1,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'generate-dump',
+			'generate' => 'managewiki-restricted',
 			'delete' => 'delete-dump',
 		],
 	],
@@ -315,18 +317,11 @@ if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
-	$uploadHostname = wfShouldEnableSwift( 'commonswiki' ) ?
-		'static-new.miraheze.org' :
-		'static.miraheze.org';
-
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		'src' => "https://{$uploadHostname}/commonswiki/b/b4/Monitored_by_WikiApiary.png",
+		'src' => 'https://static-new.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
 	];
-
-	// Don't need a global here
-	unset( $uploadHostname );
 }
 
 // $wgForeignFileRepos
@@ -355,20 +350,16 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 			'initialCapital' => true,
 			'zones' => [
 				'public' => [
-					'container' => 'mw',
-					'directory' => $wmgSharedUploadDBname,
+					'container' => 'local-public',
 				],
 				'thumb' => [
-					'container' => 'mw',
-					'directory' => "{$wmgSharedUploadDBname}/thumb",
+					'container' => 'local-thumb',
 				],
 				'temp' => [
-					'container' => 'mw',
-					'directory' => "{$wmgSharedUploadDBname}/temp",
+					'container' => 'local-temp',
 				],
 				'deleted' => [
-					'container' => 'mw',
-					'directory' => "{$wmgSharedUploadDBname}/deleted",
+					'container' => 'local-deleted',
 				],
 			],
 			'abbrvThreshold' => 160
@@ -381,8 +372,8 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 			'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
-			'transformVia404' => !$wgGenerateThumbnailOnParse,
-			'hasSharedCache' => false,
+			'transformVia404' => true,
+			'hasSharedCache' => true,
 			'fetchDescription' => true,
 			'descriptionCacheExpiry' => 86400 * 7,
 			'wiki' => $wmgSharedUploadDBname,
@@ -394,59 +385,37 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 
 // Miraheze Commons
 if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
-	if ( wfShouldEnableSwift( 'commonswiki' ) ) {
-		$wgForeignFileRepos[] = [
-			'class' => ForeignDBViaLBRepo::class,
-			'name' => "mirahezecommons",
-			'backend' => 'miraheze-swift',
-			'url' => 'https://static-new.miraheze.org/commonswiki',
-			'hashLevels' => 2,
-			'thumbScriptUrl' => false,
-			'transformVia404' => true,
-			'hasSharedCache' => true,
-			'descBaseUrl' => "https://commons.miraheze.org/wiki/File:",
-			'scriptDirUrl' => "https://commons.miraheze.org/w",
-			'fetchDescription' => true,
-			'descriptionCacheExpiry' => 86400 * 7,
-			'wiki' => 'commonswiki',
-			'initialCapital' => true,
-			'zones' => [
-				'public' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki',
-				],
-				'thumb' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki/thumb',
-				],
-				'temp' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki/temp',
-				],
-				'deleted' => [
-					'container' => 'mw',
-					'directory' => 'commonswiki/deleted',
-				],
+	$wgForeignFileRepos[] = [
+		'class' => ForeignDBViaLBRepo::class,
+		'name' => 'mirahezecommons',
+		'backend' => 'miraheze-swift',
+		'url' => 'https://static-new.miraheze.org/commonswiki',
+		'hashLevels' => 2,
+		'thumbScriptUrl' => false,
+		'transformVia404' => true,
+		'hasSharedCache' => true,
+		'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
+		'scriptDirUrl' => 'https://commons.miraheze.org/w',
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => 'commonswiki',
+		'initialCapital' => true,
+		'zones' => [
+			'public' => [
+				'container' => 'local-public',
 			],
-			'abbrvThreshold' => 160
-		];
-	} else {
-		$wgForeignFileRepos[] = [
-			'class' => ForeignDBViaLBRepo::class,
-			'name' => 'mirahezecommons',
-			'directory' => '/mnt/mediawiki-static/commonswiki',
-			'url' => 'https://static.miraheze.org/commonswiki',
-			'hashLevels' => 2,
-			'thumbScriptUrl' => false,
-			'transformVia404' => !$wgGenerateThumbnailOnParse,
-			'hasSharedCache' => true,
-			'fetchDescription' => true,
-			'descriptionCacheExpiry' => 86400 * 7,
-			'wiki' => 'commonswiki',
-			'descBaseUrl' => 'https://commons.miraheze.org/wiki/File:',
-			'scriptDirUrl' => 'https://commons.miraheze.org/w',
-		];
-	}
+			'thumb' => [
+				'container' => 'local-thumb',
+			],
+			'temp' => [
+				'container' => 'local-temp',
+			],
+			'deleted' => [
+				'container' => 'local-deleted',
+			],
+		],
+		'abbrvThreshold' => 160
+	];
 }
 
 // $wgLogos
@@ -621,11 +590,9 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 	];
 }
 
-// 210MB
-$wgMaxShellMemory = 215040;
-
-// 50MB
-$wgMaxShellFileSize = 51200;
+// Kilobytes
+$wgMaxShellFileSize = 125 * 1024;
+$wgMaxShellMemory = 500 * 1024;
 
 // 50 seconds
 $wgMaxShellTime = 50;

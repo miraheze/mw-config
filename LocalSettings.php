@@ -52,17 +52,28 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 
 /**
+ * DO NOT REMOVE FUNCTION
+ * It is used throughout, including within MirahezeMagic.
+ * It needs its usage removed before the function can be removed.
+ *
  * @param string $dbname the database to check
  * @return bool whether Swift should be enabled on $dbname
  */
 function wfShouldEnableSwift( $dbname ) {
-	$shouldEnableSwift = false;
-	// Use preg_match( '/^a(.*)/', $dbname ) to migrate wikis in alphabetical order.
-	if ( $dbname === 'betawiki' ) {
-		$shouldEnableSwift = true;
-	}
+	return (
+		// enable swift on all wikis matching this regular expression
+		preg_match( '/^([0-9]|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|q)/', $dbname ) ||
 
-	return $shouldEnableSwift;
+		// enable swift on all beta wikis
+		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
+
+		// enable swift on staffwiki
+		$dbname === 'staffwiki' ||
+
+		// enable swift on all new wikis
+		// which we no longer create a static directory for
+		!file_exists( '/mnt/mediawiki-static/' . $dbname )
+	);
 }
 
 $wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
@@ -896,9 +907,6 @@ $wgConf->settings += [
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'sre@miraheze.org',
 	],
-	'wgCreateWikiPersistentModelFile' => [
-		'default' => '/mnt/mediawiki-static/requestmodel.phpml'
-	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
 			'Alternate history wiki' => 'Alternate history wiki',
@@ -934,6 +942,20 @@ $wgConf->settings += [
 			"$IP/extensions/Echo/echo.sql",
 			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
 			"$IP/extensions/OAuth/schema/OAuth.sql",
+			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
+			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
+		],
+		// 1.39
+		'betaheze' => [
+			"$IP/maintenance/tables-generated.sql",
+			"$IP/extensions/AbuseFilter/db_patches/mysql/tables-generated.sql",
+			"$IP/extensions/AntiSpoof/sql/mysql/tables-generated.sql",
+			"$IP/extensions/BetaFeatures/sql/tables-generated.sql",
+			"$IP/extensions/CheckUser/schema/mysql/tables-generated.sql",
+			"$IP/extensions/DataDump/sql/data_dump.sql",
+			"$IP/extensions/Echo/sql/mysql/tables-generated.sql",
+			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
+			"$IP/extensions/OAuth/schema/mysql/tables-generated.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
 		],
@@ -1006,6 +1028,17 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiUsePrivateWikis' => [
 		'default' => true,
+	],
+	'wgCreateWikiUseSecureContainers' => [
+		'default' => false,
+		'betaheze' => true,
+	],
+	'wgCreateWikiExtraSecuredContainers' => [
+		'default' => [],
+		'betaheze' => [
+			'dumps-backup',
+			'timeline-render',
+		],
 	],
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
@@ -1345,8 +1378,7 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					// TODO: migrate to swift ($wmgUploadHostname)
-					'src' => "https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg",
+					'src' => 'https://static-new.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Hosted by Miraheze'
 				]
@@ -1440,6 +1472,9 @@ $wgConf->settings += [
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
+	'wgImagePreconnect' => [
+		'default' => true,
+	],
 	'wgShowArchiveThumbnails' => [
 		'default' => true,
 	],
@@ -1471,6 +1506,15 @@ $wgConf->settings += [
 			'mode' => 'traditional',
 		],
 		'dcmultiversewiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'packed',
+		],
+		'rippaversewiki' => [
 			'imagesPerRow' => 0,
 			'imageWidth' => 120,
 			'imageHeight' => 120,
@@ -1688,6 +1732,9 @@ $wgConf->settings += [
 	'wgImageMagickConvertCommand' => [
 		'default' => '/usr/local/bin/mediawiki-firejail-convert',
 	],
+	'wgImageMagickTempDir' => [
+		'default' => '/tmp/magick-tmp',
+	],
 
 	// Image Limits
 	'wgImageLimits' => [
@@ -1719,6 +1766,7 @@ $wgConf->settings += [
 			'ElasticSearch' => 'https://meta.miraheze.org/wiki/Tech:ElasticSearch',
 			'DNS' => 'https://meta.miraheze.org/wiki/Tech:DNS',
 			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
+			'GlusterFS' => 'https://meta.miraheze.org/wiki/Tech:GlusterFS',
 			'Grafana' => 'https://meta.miraheze.org/wiki/Tech:Grafana',
 			'Icinga' => 'https://meta.miraheze.org/wiki/Tech:Icinga',
 			'LizardFS' => 'https://meta.miraheze.org/wiki/Tech:Lizardfs',
@@ -1735,6 +1783,7 @@ $wgConf->settings += [
 			'Redis' => 'https://meta.miraheze.org/wiki/Tech:Redis',
 			'Salt' => 'https://meta.miraheze.org/wiki/Tech:Salt',
 			'Service Providers' => false,
+			'Swift' => 'https://meta.miraheze.org/wiki/Tech:Swift',
 			'Varnish' => 'https://meta.miraheze.org/wiki/Tech:Varnish',
 		],
 	],
@@ -1805,8 +1854,8 @@ $wgConf->settings += [
 		],
 	],
 	'wgImportDumpScriptCommand' => [
-		'default' => 'screen -d -m bash -c "mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /mnt/mediawiki-static/metawiki/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y"',
-		'betawiki' => 'screen -d -m bash -c "swift download miraheze-mw betawiki/{file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
+		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
+		'betawiki' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-betawiki-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
@@ -5255,6 +5304,7 @@ $wgConf->settings += [
 			'message-format' => false,
 			'MessageCache' => false,
 			'MessageCacheError' => false,
+			'MirahezeMagic' => 'error',
 			'mobile' => false,
 			'NewUserMessage' => false,
 			'OAuth' => 'info',
