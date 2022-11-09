@@ -1182,6 +1182,15 @@ $wgManageWikiSettings = [
 		'help' => 'Open collapsed groups when the screen is narrow.',
 		'requires' => [],
 	],
+	'wgShortDescriptionEnableTagline' => [
+		'name' => 'ShortDescription Enable Tagline',
+		'from' => 'shortdescription',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'parserfunctions',
+		'help' => 'Enables short descritption in site tagline',
+		'requires' => [],
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
