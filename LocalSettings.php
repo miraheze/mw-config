@@ -3197,6 +3197,10 @@ $wgConf->settings += [
 			'tagline' => false,
 		],
 	],
+	'wgMFCollapseSectionsByDefault' => [
+		'default' => true,
+		'twistwoodtaleswiki' => false,
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
