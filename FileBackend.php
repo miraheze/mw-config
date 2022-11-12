@@ -19,6 +19,10 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
+if ( !$wmgEnableSwift ) {
+	$wgThumbPath = '/w/thumb_handler.php';
+}
+
 // Only use swift as the backend if enabled.
 if ( $wmgEnableSwift ) {
 	$wgGenerateThumbnailOnParse = false;
