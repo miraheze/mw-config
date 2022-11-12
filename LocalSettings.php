@@ -4171,7 +4171,7 @@ $wgConf->settings += [
 	'wgShareUsePlainLinks' => [
 		'default' => true,
 	],
-	
+
 	// ShortDescription
 	'wgShortDescriptionEnableTagline' => [
 		'default' => true,
