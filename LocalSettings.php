@@ -4132,6 +4132,9 @@ $wgConf->settings += [
 	'wgShowHostnames' => [
 		'default' => true,
 	],
+	'wgThumbPath' => [
+		'default' => '/w/thumb_handler.php'
+	],
 	'wgUsePathInfo' => [
 		'default' => true,
 	],
@@ -4171,7 +4174,7 @@ $wgConf->settings += [
 	'wgShareUsePlainLinks' => [
 		'default' => true,
 	],
-
+	
 	// ShortDescription
 	'wgShortDescriptionEnableTagline' => [
 		'default' => true,
