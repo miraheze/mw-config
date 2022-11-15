@@ -49,7 +49,7 @@ $wgMajorSiteNoticeID = 78;
 }*/
 
 // Specific wiki SiteNotice
-if ( $wmgEnableSwift ) {
+/*if ( $wmgEnableSwift ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
@@ -80,4 +80,4 @@ if ( $wmgEnableSwift ) {
 			</table>
 		EOF;
 	}
-}
+}*/
