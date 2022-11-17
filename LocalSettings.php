@@ -1763,6 +1763,7 @@ $wgConf->settings += [
 		'default' => [
 			'Bacula' => 'https://meta.miraheze.org/wiki/Tech:Bacula',
 			'Bastion' => 'https://meta.miraheze.org/wiki/Tech:Bastion',
+			'Cloud Infrastructure' => false,
 			'ElasticSearch' => 'https://meta.miraheze.org/wiki/Tech:ElasticSearch',
 			'DNS' => 'https://meta.miraheze.org/wiki/Tech:DNS',
 			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
