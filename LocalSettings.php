@@ -2268,11 +2268,11 @@ $wgConf->settings += [
 			/** mw132 */
 			'2a10:6740::6:404' => true,
 			/** mw141 */
-			'2a10:6740::6:502' => true,
+			// '2a10:6740::6:502' => true,
 			/** mw142 */
-			'2a10:6740::6:503' => true,
+			// '2a10:6740::6:503' => true,
 			/** mwtask141 */
-			'2a10:6740::6:504' => true,
+			// '2a10:6740::6:504' => true,
 			/** test131 */
 			'2a10:6740::6:406' => true,
 		],
@@ -5409,10 +5409,10 @@ $wgConf->settings += [
 
 // Start settings requiring external dependency checks/functions
 
-if ( wfHostname() === 'test131' ) {
+/* if ( wfHostname() === 'test131' ) {
 	// Prevent cache (better be safe than sorry)
 	$wgConf->settings['wgUseCdn']['default'] = false;
-}
+} */
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
