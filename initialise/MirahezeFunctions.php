@@ -149,7 +149,13 @@ class MirahezeFunctions {
 				return '';
 			}
 		} else {
-			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+			$databases = array_filter( $databasesArray['combi'] ?? $databasesArray['databases'], static function ( $data, $key ) {
+				if ( $GLOBALS['wgDBname'] && $key === $GLOBALS['wgDBname'] && $data['c'] === 'c3' ) {
+					require_once '/srv/mediawiki/ErrorPages/db141Wiki.php';
+				}
+
+				return $data['c'] !== 'c3';
+			}, ARRAY_FILTER_USE_BOTH );
 		}
 
 		if ( $onlyDBs ) {
