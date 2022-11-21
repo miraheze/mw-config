@@ -51,6 +51,13 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
+$wgSpecialPages['GlobalRenameProgress'] = DisabledSpecialPage::getCallback( 'GlobalRenameProgress', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
+$wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
+$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
+$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
+$wgSpecialPages['RequestImportDump'] = DisabledSpecialPage::getCallback( 'RequestImportDump', 'Currently server imports are on hold due to ongoing issues with one of our database servers (db141)' );
+$wgSpecialPages['RequestImportDumpQueue'] = DisabledSpecialPage::getCallback( 'RequestImportDumpQueue', 'Currently server imports are on hold due to ongoing issues with one of our database servers (db141)' );
+
 /**
  * DO NOT REMOVE FUNCTION
  * It is used throughout, including within MirahezeMagic.
@@ -447,8 +454,6 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => false,
-		'metawiki' => true,
-		'betawiki' => true,
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
@@ -879,7 +884,6 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'c2',
-			'c3',
 			'c4',
 			'c5',
 		],
@@ -891,6 +895,7 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
+			'c3',
 		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
@@ -2263,11 +2268,11 @@ $wgConf->settings += [
 			/** mw132 */
 			'2a10:6740::6:404' => true,
 			/** mw141 */
-			'2a10:6740::6:502' => true,
+			// '2a10:6740::6:502' => true,
 			/** mw142 */
-			'2a10:6740::6:503' => true,
+			// '2a10:6740::6:503' => true,
 			/** mwtask141 */
-			'2a10:6740::6:504' => true,
+			// '2a10:6740::6:504' => true,
 			/** test131 */
 			'2a10:6740::6:406' => true,
 		],
@@ -5404,10 +5409,10 @@ $wgConf->settings += [
 
 // Start settings requiring external dependency checks/functions
 
-if ( wfHostname() === 'test131' ) {
+/* if ( wfHostname() === 'test131' ) {
 	// Prevent cache (better be safe than sorry)
 	$wgConf->settings['wgUseCdn']['default'] = false;
-}
+} */
 
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
