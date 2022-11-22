@@ -22,6 +22,9 @@ $wgLBFactoryConf = [
 		'c5' => [
 			'db131' => 1,
 		],
+		'c6' => [
+			'db141' => 1,
+		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
