@@ -23,7 +23,7 @@ $wgLBFactoryConf = [
 			'db131' => 1,
 		],
 		'c6' => [
-			'db141' => 1,
+			'db142' => 1,
 		],
 	],
 	'serverTemplate' => [
@@ -52,6 +52,13 @@ $wgLBFactoryConf = [
 		'db121' => 'db121.miraheze.org',
 		'db131' => 'db131.miraheze.org',
 		'db141' => 'db141.miraheze.org',
+
+		/**
+		 * We do this to just differentiate between the new db141 and the old one
+		 * since the old one is still missing data, awaiting on further action, we don't want
+		 * to confuse users into thinking db141 is back, so we make any display of it as db142
+		 */
+		'db142' => 'db141.miraheze.org',
 	],
 	'externalLoads' => [
 		'beta' => [
@@ -74,6 +81,7 @@ $wgLBFactoryConf = [
 		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c6' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
 
