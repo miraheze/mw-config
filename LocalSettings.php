@@ -55,8 +55,6 @@ $wgSpecialPages['GlobalRenameProgress'] = DisabledSpecialPage::getCallback( 'Glo
 $wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
 $wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
 $wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
-$wgSpecialPages['RequestImportDump'] = DisabledSpecialPage::getCallback( 'RequestImportDump', 'Currently server imports are on hold due to ongoing issues with one of our database servers (db141)' );
-$wgSpecialPages['RequestImportDumpQueue'] = DisabledSpecialPage::getCallback( 'RequestImportDumpQueue', 'Currently server imports are on hold due to ongoing issues with one of our database servers (db141)' );
 
 /**
  * DO NOT REMOVE FUNCTION
