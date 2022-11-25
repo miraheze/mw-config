@@ -236,7 +236,7 @@ switch ( $wi->dbname ) {
 	case 'polandballfanonwiki':
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
-		if ( wfShouldEnableSwift( 'polcomwiki' ) ) {
+		/* if ( wfShouldEnableSwift( 'polcomwiki' ) ) {
 			$wgForeignFileRepos[] = [
 				'class' => ForeignDBViaLBRepo::class,
 				'name' => 'shared-polcomwiki',
@@ -284,7 +284,7 @@ switch ( $wi->dbname ) {
 				'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
 				'scriptDirUrl' => 'https://polcom.miraheze.org/w',
 			];
-		}
+		} */
 
 		break;
 	case 'polandballruwiki':
