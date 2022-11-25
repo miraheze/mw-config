@@ -51,10 +51,10 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
-$wgSpecialPages['GlobalRenameProgress'] = DisabledSpecialPage::getCallback( 'GlobalRenameProgress', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
-$wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
-$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
-$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'Currently global renames are disabled due to ongoing issues with one of our database servers (db141)' );
+$wgSpecialPages['GlobalRenameProgress'] = DisabledSpecialPage::getCallback( 'GlobalRenameProgress', 'miraheze-global-renames-disabled' );
+$wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'miraheze-global-renames-disabled' );
+$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'miraheze-global-renames-disabled' );
+$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'miraheze-global-renames-disabled' );
 
 /**
  * DO NOT REMOVE FUNCTION
