@@ -1658,6 +1658,28 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'install' => [
+            'namespaces' => [
+                'Form' => [
+                    'id' => 106,
+                    'searchable' => 1,
+                    'subpages' => 1,
+                    'protection' => '',
+                    'content' => 0,
+                    'aliases' => [],
+                    'contentmodel' => 'wikitext',
+                    'additional' => []
+                ],
+                'Form_talk' => [
+                    'id' => 107,
+                    'searchable' => 0,
+                    'subpages' => 0,
+                    'protection' => '',
+                    'content' => 0,
+                    'aliases' => [],
+                    'contentmodel' => 'wikitext',
+                    'additional' => []
+                ],
+            ],
 			'permissions' => [
 				'*' => [
 					'permissions' => [
@@ -1676,7 +1698,7 @@ $wgManageWikiExtensions = [
 					],
 				],
 			],
-		],
+        ],
 		'section' => 'specialpages',
 	],
 	'pageschemas' => [
