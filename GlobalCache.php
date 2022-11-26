@@ -12,7 +12,7 @@ $wgObjectCaches['memcached-mem-1'] = [
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	// 500ms, in microseconds
-	'timeout'              => 0.5 * 1e6,
+	'timeout'              => 1 * 1e6,
 ];
 
 // mem131
@@ -27,7 +27,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	// 500ms, in microseconds
-	'timeout'              => 0.5 * 1e6,
+	'timeout'              => 1 * 1e6,
 ];
 
 $wgObjectCaches['mysql-multiwrite'] = [
