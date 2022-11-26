@@ -1668,7 +1668,7 @@ $wgManageWikiExtensions = [
 					'aliases' => [],
 					'contentmodel' => 'wikitext',
 					'additional' => []
-					],
+				],
 				'Form_talk' => [
 					'id' => 107,
 					'searchable' => 0,
