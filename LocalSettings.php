@@ -579,6 +579,9 @@ $wgConf->settings += [
 	'wgCitizenMaxSearchResults' => [
 		'default' => 6,
 	],
+	'wgCitizenEnableCJKFonts' => [
+		'default' => false,
+	],
 
 	// Comments
 	'wgCommentsDefaultAvatar' => [

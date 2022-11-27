@@ -3380,6 +3380,15 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgCitizenEnableCJKFonts' => [
+		'name' => 'Citizen Enable CJK fonts',
+		'from' => 'citizen',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Enable included Noto Sans CJK for wikis that serves CJK languages',
+		'requires' => [],
+	],
 	'wgRelatedArticlesFooterAllowedSkins' => [
 		'name' => 'RelatedArticles Footer Allowed Skins',
 		'from' => 'relatedarticles',
