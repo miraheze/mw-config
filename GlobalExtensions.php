@@ -34,7 +34,6 @@ wfLoadExtensions( [
 	'OAuth',
 	'ParserFunctions',
 	'QuickInstantCommons',
-	'RemovePII',
 	'Renameuser',
 	'RottenLinks',
 	'Scribunto',
