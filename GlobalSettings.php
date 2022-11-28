@@ -9,6 +9,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 		'CentralAuth',
 		'GlobalPreferences',
 		'GlobalBlocking',
+		'RemovePII',
 	] );
 }
 
