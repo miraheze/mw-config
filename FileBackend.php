@@ -5,7 +5,7 @@ $wgFileBackends[] = [
 	'name'               => 'miraheze-swift',
 	// This is the prefix for the container that it starts with.
 	'wikiId'             => "miraheze-$wgDBname",
-	'lockManager'        => 'nullLockManager',
+	'lockManager'        => 'redisLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
@@ -17,6 +17,19 @@ $wgFileBackends[] = [
 	'writeUsers'          => [ 'mw:media' ],
 	'connTimeout'         => 10,
 	'reqTimeout'          => 900,
+];
+
+$redisServerIP = '[2a10:6740::6:306]:6379';
+
+$wgLockManagers[] = [
+	'name'         => 'redisLockManager',
+	'class'        => 'RedisLockManager',
+	'lockServers'  => [ 'rdb1' => $redisServerIP ],
+	'redisConfig'  => [
+		'connectTimeout' => 2,
+		'readTimeout'    => 2,
+		'password'       => $wmgRedisPassword
+	]
 ];
 
 // Only use swift as the backend if enabled.
@@ -77,3 +90,5 @@ $wgFileBackends[] = [
 	'fileMode' => 420,
 	'directoryMode' => 511,
 ];
+
+unset( $redisServerIP );
