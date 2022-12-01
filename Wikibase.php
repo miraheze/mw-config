@@ -237,11 +237,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
-	$wgWBRepoSettings['localClientDatabases'] = [
-		'gratispaideia' => 'gratispaideiawiki',
-		'gpcommons' => 'gpcommonswiki',
-		'benpedia' => 'benpediawiki',
-	];
 	$wgWBRepoSettings['updateRepoTags'] = [
 		'client-automatic-update'
 	];
@@ -269,6 +264,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 	// Data-Bridge
 	$wgWBRepoSettings['dataBridgeEnabled'] = true;
+	$wgWBRepoSettings['allowDataAccessInUserLanguage'] = true;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
