@@ -91,5 +91,3 @@ $wgFileBackends[] = [
 	'fileMode' => 420,
 	'directoryMode' => 511,
 ];
-
-unset( $redisServerIP );
