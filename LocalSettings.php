@@ -51,7 +51,6 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 
-$wgSpecialPages['GlobalRenameProgress'] = DisabledSpecialPage::getCallback( 'GlobalRenameProgress', 'miraheze-global-renames-disabled' );
 $wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'miraheze-global-renames-disabled' );
 $wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'miraheze-global-renames-disabled' );
 $wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'miraheze-global-renames-disabled' );
