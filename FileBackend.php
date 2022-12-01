@@ -19,16 +19,17 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-$redisServerIP = '[2a10:6740::6:306]:6379';
-
 $wgLockManagers[] = [
-	'name'         => 'redisLockManager',
-	'class'        => 'RedisLockManager',
-	'lockServers'  => [ 'rdb1' => $redisServerIP ],
-	'redisConfig'  => [
+	'name' => 'redisLockManager',
+	'class' => RedisLockManager::class,
+	'lockServers' => [
+		// jobchron121
+		'rdb1' => '[2a10:6740::6:306]:6379]',
+	],
+	'redisConfig' => [
 		'connectTimeout' => 2,
-		'readTimeout'    => 2,
-		'password'       => $wmgRedisPassword
+		'readTimeout' => 2,
+		'password' => $wmgRedisPassword,
 	]
 ];
 
