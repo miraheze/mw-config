@@ -265,6 +265,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	// Data-Bridge
 	$wgWBRepoSettings['dataBridgeEnabled'] = true;
 	$wgWBRepoSettings['allowDataAccessInUserLanguage'] = true;
+	$wgWBRepoSettings['entityAccessLimit'] = '500';
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
