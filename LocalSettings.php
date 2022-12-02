@@ -36,6 +36,7 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 		'running' => true,
 		'output' => 'text',
 	];
+
 	$wgHTTPTimeout = 60;
 }
 
