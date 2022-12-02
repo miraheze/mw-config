@@ -101,10 +101,6 @@ if ( $wi->isAnyOfExtensionsActive( 'Flow', 'VisualEditor', 'Linter' ) ) {
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
-if ( wfHostname() === 'test131' ) {
-	// $wgShellboxUrl = 'http://localhost:8080/shellbox';
-}
-
 // Closed Wikis
 if ( $cwClosed ) {
 	$wgRevokePermissions = [
