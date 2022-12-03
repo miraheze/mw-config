@@ -37,7 +37,7 @@ $wgMajorSiteNoticeID = 78;
 						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="...">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
-								<span class="oo-ui-labelElement-label">Learn more</span>
+								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 							</a>
 						</span> -->
@@ -71,7 +71,7 @@ $wgMajorSiteNoticeID = 78;
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Community_noticeboard#Note_from_SRE_Regarding_the_Swift_Migration">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
-								<span class="oo-ui-labelElement-label">Learn more</span>
+								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 							</a>
 						</span>
