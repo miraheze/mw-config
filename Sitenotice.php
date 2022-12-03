@@ -49,7 +49,10 @@ $wgMajorSiteNoticeID = 78;
 }*/
 
 // Specific wiki SiteNotice
-/*if ( $wmgEnableSwift ) {
+if (
+	$wmgEnableSwift &&
+	!preg_match( '/^([0-9]|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|q)/', $wgDBname )
+) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
@@ -80,4 +83,4 @@ $wgMajorSiteNoticeID = 78;
 			</table>
 		EOF;
 	}
-}*/
+}
