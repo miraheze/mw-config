@@ -5344,9 +5344,7 @@ $wgConf->settings += [
 			'readinglists' => false,
 			'recursion-guard' => false,
 			'RecursiveLinkPurge' => false,
-			// debug sprews too much information + sample
-			// otherwise we get 2 million+ messages within a few minutes
-			'redis' => [ 'graylog' => 'warning', 'sample' => 20 ],
+			'redis' => 'info'
 			'Renameuser' => 'debug',
 			'resourceloader' => false,
 			'ResourceLoaderImage' => false,
