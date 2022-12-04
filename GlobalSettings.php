@@ -45,9 +45,7 @@ if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 
-	if ( $wmgEnableSwift ) {
-		$wgSocialProfileFileBackend = 'miraheze-swift';
-	}
+	$wgSocialProfileFileBackend = 'miraheze-swift';
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
@@ -132,24 +130,13 @@ if ( !$cwPrivate ) {
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 
-	if ( $wmgEnableSwift ) {
-		$wgDataDumpFileBackend = 'miraheze-swift';
-		$wgDataDumpDirectory = '';
-	} else {
-		$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
-	}
+	$wgDataDumpFileBackend = 'miraheze-swift';
+	$wgDataDumpDirectory = '';
+
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 } else {
-	if ( $wmgEnableSwift ) {
-		$wgDataDumpFileBackend = 'miraheze-swift';
-		$wgDataDumpDirectory = '';
-	} else {
-		if ( $wmgPrivateUploads ) {
-			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
-		} else {
-			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
-		}
-	}
+	$wgDataDumpFileBackend = 'miraheze-swift';
+	$wgDataDumpDirectory = '';
 
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wgDataDumpDownloadUrl = '';
@@ -172,16 +159,6 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 } else {
 	$wgCentralAuthCookieDomain = $wi->hostname;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
-}
-
-if ( !$wmgEnableSwift ) {
-	// $wmgPrivateUploads
-	$wgGenerateThumbnailOnParse = false;
-	if ( $wmgPrivateUploads ) {
-		$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-		$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-		$wgGenerateThumbnailOnParse = true;
-	}
 }
 
 // DataDump
@@ -301,21 +278,17 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'Score' ) ) {
-	if ( $wmgEnableSwift ) {
-		$wgScoreFileBackend = 'miraheze-swift';
-	}
+	$wgScoreFileBackend = 'miraheze-swift';
 }
 
 if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
-	if ( $wmgEnableSwift ) {
-		$wgTimelineFileBackend = 'miraheze-swift';
-	}
+	$wgTimelineFileBackend = 'miraheze-swift';
 }
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		'src' => 'https://static-new.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
+		'src' => 'https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
 	];
@@ -333,7 +306,7 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => "shared-{$wmgSharedUploadDBname}",
 		'backend' => 'miraheze-swift',
-		'url' => "https://static-new.miraheze.org/{$wmgSharedUploadDBname}",
+		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,
@@ -368,7 +341,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
 		'backend' => 'miraheze-swift',
-		'url' => 'https://static-new.miraheze.org/commonswiki',
+		'url' => 'https://static.miraheze.org/commonswiki',
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,
