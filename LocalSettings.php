@@ -4288,7 +4288,7 @@ $wgConf->settings += [
 	// for ipv4 + ipv6 combined.
 	// TODO: Setup cron to update this automatically.
 	'wgSFSIPListLocation' => [
-		'default' => '/mnt/mediawiki-static/private/stopforumspam/listed_ip_30_ipv46_all.txt',
+		'default' => '/srv/mediawiki/stopforumspam/listed_ip_30_ipv46_all.txt',
 	],
 
 	// Styling
