@@ -45,9 +45,7 @@ if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 
-	if ( $wmgEnableSwift ) {
-		$wgSocialProfileFileBackend = 'miraheze-swift';
-	}
+	$wgSocialProfileFileBackend = 'miraheze-swift';
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
@@ -121,6 +119,9 @@ if ( $cwClosed ) {
 	}
 }
 
+$wgDataDumpFileBackend = 'miraheze-swift';
+$wgDataDumpDirectory = '';
+
 // Public Wikis
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
@@ -132,25 +133,8 @@ if ( !$cwPrivate ) {
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 
-	if ( $wmgEnableSwift ) {
-		$wgDataDumpFileBackend = 'miraheze-swift';
-		$wgDataDumpDirectory = '';
-	} else {
-		$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
-	}
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 } else {
-	if ( $wmgEnableSwift ) {
-		$wgDataDumpFileBackend = 'miraheze-swift';
-		$wgDataDumpDirectory = '';
-	} else {
-		if ( $wmgPrivateUploads ) {
-			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/{$wi->dbname}/dumps/";
-		} else {
-			$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
-		}
-	}
-
 	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
 	$wgDataDumpDownloadUrl = '';
 }
@@ -172,16 +156,6 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 } else {
 	$wgCentralAuthCookieDomain = $wi->hostname;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
-}
-
-if ( !$wmgEnableSwift ) {
-	// $wmgPrivateUploads
-	$wgGenerateThumbnailOnParse = false;
-	if ( $wmgPrivateUploads ) {
-		$wgUploadDirectory = "/mnt/mediawiki-static/private/$wgDBname";
-		$wgUploadPath = "https://{$wi->hostname}/w/img_auth.php";
-		$wgGenerateThumbnailOnParse = true;
-	}
 }
 
 // DataDump
@@ -301,15 +275,11 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'Score' ) ) {
-	if ( $wmgEnableSwift ) {
-		$wgScoreFileBackend = 'miraheze-swift';
-	}
+	$wgScoreFileBackend = 'miraheze-swift';
 }
 
 if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
-	if ( $wmgEnableSwift ) {
-		$wgTimelineFileBackend = 'miraheze-swift';
-	}
+	$wgTimelineFileBackend = 'miraheze-swift';
 }
 
 // $wgFooterIcons
