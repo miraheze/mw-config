@@ -78,11 +78,7 @@ function wfShouldEnableSwift( $dbname ) {
 	);
 }
 
-$wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
-
-$wmgUploadHostname = $wmgEnableSwift ?
-	'static-new.miraheze.org' :
-	'static.miraheze.org';
+$wmgUploadHostname = 'static.miraheze.org';
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
@@ -1382,7 +1378,7 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static-new.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Hosted by Miraheze'
 				]
@@ -4357,17 +4353,14 @@ $wgConf->settings += [
 			'audio' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
@@ -5440,11 +5433,6 @@ require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
 $wgUploadPath = "//$wmgUploadHostname/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
-
-if ( $wmgEnableSwift ) {
-	$wgUploadDirectory = false;
-}
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
