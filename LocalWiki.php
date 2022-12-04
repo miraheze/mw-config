@@ -236,55 +236,37 @@ switch ( $wi->dbname ) {
 	case 'polandballfanonwiki':
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
-		if ( wfShouldEnableSwift( 'polcomwiki' ) ) {
-			$wgForeignFileRepos[] = [
-				'class' => ForeignDBViaLBRepo::class,
-				'name' => 'shared-polcomwiki',
-				'backend' => 'miraheze-swift',
-				'url' => 'https://static-new.miraheze.org/polcomwiki',
-				'hashLevels' => 2,
-				'thumbScriptUrl' => false,
-				'transformVia404' => true,
-				'hasSharedCache' => true,
-				'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
-				'scriptDirUrl' => 'https://polcom.miraheze.org/w',
-				'fetchDescription' => true,
-				'descriptionCacheExpiry' => 86400 * 7,
-				'wiki' => 'polcomwiki',
-				'initialCapital' => true,
-				'zones' => [
-					'public' => [
-						'container' => 'local-public',
-					],
-					'thumb' => [
-						'container' => 'local-thumb',
-					],
-					'temp' => [
-						'container' => 'local-temp',
-					],
-					'deleted' => [
-						'container' => 'local-deleted',
-					],
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => 'shared-polcomwiki',
+			'backend' => 'miraheze-swift',
+			'url' => 'https://static-new.miraheze.org/polcomwiki',
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => true,
+			'hasSharedCache' => true,
+			'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
+			'scriptDirUrl' => 'https://polcom.miraheze.org/w',
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => 'polcomwiki',
+			'initialCapital' => true,
+			'zones' => [
+				'public' => [
+					'container' => 'local-public',
 				],
-				'abbrvThreshold' => 160
-			];
-		} else {
-			$wgForeignFileRepos[] = [
-				'class' => ForeignDBViaLBRepo::class,
-				'name' => 'shared-polcomwiki',
-				'directory' => '/mnt/mediawiki-static/polcomwiki',
-				'url' => 'https://static.miraheze.org/polcomwiki',
-				'hashLevels' => 2,
-				'thumbScriptUrl' => false,
-				'transformVia404' => true,
-				'hasSharedCache' => true,
-				'fetchDescription' => true,
-				'descriptionCacheExpiry' => 86400 * 7,
-				'wiki' => 'polcomwiki',
-				'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
-				'scriptDirUrl' => 'https://polcom.miraheze.org/w',
-			];
-		}
+				'thumb' => [
+					'container' => 'local-thumb',
+				],
+				'temp' => [
+					'container' => 'local-temp',
+				],
+				'deleted' => [
+					'container' => 'local-deleted',
+				],
+			],
+			'abbrvThreshold' => 160
+		];
 
 		break;
 	case 'polandballruwiki':
