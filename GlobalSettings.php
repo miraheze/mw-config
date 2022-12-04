@@ -130,16 +130,7 @@ if ( !$cwPrivate ) {
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 
-	$wgDataDumpFileBackend = 'miraheze-swift';
-	$wgDataDumpDirectory = '';
-
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
-} else {
-	$wgDataDumpFileBackend = 'miraheze-swift';
-	$wgDataDumpDirectory = '';
-
-	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
-	$wgDataDumpDownloadUrl = '';
 }
 
 // Experimental Wikis
@@ -162,6 +153,9 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 }
 
 // DataDump
+$wgDataDumpFileBackend = 'miraheze-swift';
+$wgDataDumpDirectory = '';
+
 $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
