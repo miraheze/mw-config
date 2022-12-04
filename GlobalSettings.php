@@ -285,7 +285,7 @@ if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		'src' => 'https://static-new.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
+		'src' => 'https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
 	];
@@ -304,7 +304,7 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => "shared-{$wmgSharedUploadDBname}",
 			'backend' => 'miraheze-swift',
-			'url' => "https://static-new.miraheze.org/{$wmgSharedUploadDBname}",
+			'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
 			'transformVia404' => true,
@@ -356,7 +356,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
 		'backend' => 'miraheze-swift',
-		'url' => 'https://static-new.miraheze.org/commonswiki',
+		'url' => 'https://static.miraheze.org/commonswiki',
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,
