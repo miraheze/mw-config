@@ -62,30 +62,13 @@ $wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalR
  * It needs its usage removed before the function can be removed.
  *
  * @param string $dbname the database to check
- * @return bool whether Swift should be enabled on $dbname
+ * @return bool true
  */
 function wfShouldEnableSwift( $dbname ) {
-	return (
-		// enable swift on all wikis matching this regular expression
-		preg_match( '/^([0-9]|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|x)/', $dbname ) ||
-
-		// enable swift on all beta wikis
-		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
-
-		// enable swift on staffwiki
-		$dbname === 'staffwiki' ||
-
-		// enable swift on all new wikis
-		// which we no longer create a static directory for
-		!file_exists( '/mnt/mediawiki-static/' . $dbname )
-	);
+	return true;
 }
 
-$wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
-
-$wmgUploadHostname = $wmgEnableSwift ?
-	'static-new.miraheze.org' :
-	'static.miraheze.org';
+$wmgUploadHostname = 'static.miraheze.org';
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
@@ -1385,7 +1368,7 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static-new.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Hosted by Miraheze'
 				]
@@ -4360,17 +4343,14 @@ $wgConf->settings += [
 			'audio' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
@@ -5443,11 +5423,7 @@ require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
 $wgUploadPath = "//$wmgUploadHostname/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
-
-if ( $wmgEnableSwift ) {
-	$wgUploadDirectory = false;
-}
+$wgUploadDirectory = false;
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
