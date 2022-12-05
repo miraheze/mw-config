@@ -51,24 +51,11 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
+$wmgUploadHostname = 'static.miraheze.org';
 
 $wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'miraheze-global-renames-disabled' );
 $wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'miraheze-global-renames-disabled' );
 $wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'miraheze-global-renames-disabled' );
-
-/**
- * DO NOT REMOVE FUNCTION
- * It is used throughout, including within MirahezeMagic.
- * It needs its usage removed before the function can be removed.
- *
- * @param string $dbname the database to check
- * @return bool true
- */
-function wfShouldEnableSwift( $dbname ) {
-	return true;
-}
-
-$wmgUploadHostname = 'static.miraheze.org';
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
