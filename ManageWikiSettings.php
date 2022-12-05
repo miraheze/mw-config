@@ -1364,16 +1364,6 @@ $wgManageWikiSettings = [
 		'help' => 'If set, the drag & drop area will be shown.',
 		'requires' => [],
 	],
-	'wgMaxImageArea' => [
-		'name' => 'Max Image Area',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'text',
-		'overridedefault' => '1.25e7',
-		'section' => 'media',
-		'help' => 'Specifies the max pixels you can have in a image.',
-		'requires' => [],
-	],
 	'wgMaxAnimatedGifArea' => [
 		'name' => 'Max Animated Gif Area',
 		'from' => 'mediawiki',
