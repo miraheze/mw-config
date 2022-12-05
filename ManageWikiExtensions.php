@@ -2894,6 +2894,7 @@ $wgManageWikiExtensions = [
 	],
 	'popups' => [
 		'name' => 'Popups',
+		'displayname' => 'Popups',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Popups',
 		'var' => 'wmgUsePopups',
 		'conflicts' => false,
