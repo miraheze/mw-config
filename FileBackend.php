@@ -41,6 +41,8 @@ $wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
 if ( $cwPrivate ) {
 	$wgUploadPath = '/w/img_auth.php';
 	$wgImgAuthUrlPathMap = [
+		'/avatars/' => 'mwstore://miraheze-swift/avatars/',
+		'/awards/' => 'mwstore://miraheze-swift/awards/',
 		'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
 		'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
 	];
