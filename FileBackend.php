@@ -44,6 +44,7 @@ if ( $cwPrivate ) {
 		'/avatars/' => 'mwstore://miraheze-swift/avatars/',
 		'/awards/' => 'mwstore://miraheze-swift/awards/',
 		'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
+		'/score/' => 'mwstore://miraheze-swift/score-render/',
 		'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
 	];
 }
