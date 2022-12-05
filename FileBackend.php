@@ -38,7 +38,7 @@ $wgUploadThumbnailRenderMethod = 'http';
 $wgUploadThumbnailRenderHttpCustomHost = 'static.miraheze.org';
 $wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
 
-if ( $wmgPrivateUploads ) {
+if ( $cwPrivate ) {
 	$wgUploadPath = '/w/img_auth.php';
 	$wgImgAuthUrlPathMap = [
 		'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
@@ -59,7 +59,7 @@ $wgLocalFileRepo = [
 	'useSplitMetadata'  => true,
 	'deletedHashLevels' => 3,
 	'abbrvThreshold' => 160,
-	'isPrivate' => $wmgPrivateUploads,
+	'isPrivate' => $cwPrivate,
 	'zones' => $cwPrivate
 		? [
 			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
