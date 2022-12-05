@@ -1411,7 +1411,7 @@ $wgConf->settings += [
 		'default' => 500,
 	],
 	'wgMaxImageArea' => [
-		'default' => '1.25e7',
+		'default' => false,
 	],
 	'wgMaxAnimatedGifArea' => [
 		'default' => '1.25e7',
