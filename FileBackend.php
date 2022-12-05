@@ -5,7 +5,7 @@ $wgFileBackends[] = [
 	'name'               => 'miraheze-swift',
 	// This is the prefix for the container that it starts with.
 	'wikiId'             => "miraheze-$wgDBname",
-	'lockManager'        => 'nullLockManager',
+	'lockManager'        => 'redisLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
@@ -19,61 +19,49 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-// Only use swift as the backend if enabled.
-if ( $wmgEnableSwift ) {
-	$wgGenerateThumbnailOnParse = false;
-	$wgUploadThumbnailRenderMethod = 'http';
-	$wgUploadThumbnailRenderHttpCustomHost = 'static-new.miraheze.org';
-	$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
+$wgLockManagers[] = [
+	'name' => 'redisLockManager',
+	'class' => RedisLockManager::class,
+	'lockServers' => [
+		// jobchron121
+		'rdb1' => '[2a10:6740::6:306]:6379',
+	],
+	'redisConfig' => [
+		'connectTimeout' => 2,
+		'readTimeout' => 2,
+		'password' => $wmgRedisPassword,
+	]
+];
 
-	if ( $cwPrivate ) {
-		$wgUploadPath = '/w/img_auth.php';
-		$wgImgAuthUrlPathMap = [
-			'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
-			'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
-		];
-	}
+$wgGenerateThumbnailOnParse = false;
+$wgUploadThumbnailRenderMethod = 'http';
+$wgUploadThumbnailRenderHttpCustomHost = 'static.miraheze.org';
+$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
 
-	$wgLocalFileRepo = [
-		'class' => LocalRepo::class,
-		'name' => 'local',
-		'backend' => 'miraheze-swift',
-		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-		'scriptDirUrl' => $wgScriptPath,
-		'hashLevels' => 2,
-		'thumbScriptUrl' => $wgThumbnailScriptPath,
-		'transformVia404' => true,
-		'useJsonMetadata'   => true,
-		'useSplitMetadata'  => true,
-		'deletedHashLevels' => 3,
-		'abbrvThreshold' => 160,
-		'isPrivate' => $cwPrivate,
-		'zones' => $cwPrivate
-			? [
-				'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
-			: [],
+if ( $cwPrivate ) {
+	$wgUploadPath = '/w/img_auth.php';
+	$wgImgAuthUrlPathMap = [
+		'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
+		'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
 	];
 }
 
-// Used for migrating from FS to Swift.
-$fsUploadDir = "/mnt/mediawiki-static/$wgDBname";
-
-$wgFileBackends[] = [
-	'class'              => FSFileBackend::class,
-	'name'               => 'local-backend-fs',
-	'lockManager'        => 'fsLockManager',
-	'containerPaths'     => [
-		'local-public'      => $fsUploadDir,
-		'local-thumb'       => "$fsUploadDir/thumb",
-		'local-transcoded'  => "$fsUploadDir/transcoded",
-		'local-deleted'     => "$fsUploadDir/deleted",
-		'local-temp'        => "$fsUploadDir/temp",
-		'avatars'           => "$fsUploadDir/avatars",
-		'awards'            => "$fsUploadDir/awards",
-		'dumps-backup'      => "$fsUploadDir/dumps",
-		'score-render'      => "$fsUploadDir/score",
-		'timeline-render'   => "$fsUploadDir/timeline",
-	],
-	'fileMode' => 420,
-	'directoryMode' => 511,
+$wgLocalFileRepo = [
+	'class' => LocalRepo::class,
+	'name' => 'local',
+	'backend' => 'miraheze-swift',
+	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+	'scriptDirUrl' => $wgScriptPath,
+	'hashLevels' => 2,
+	'thumbScriptUrl' => $wgThumbnailScriptPath,
+	'transformVia404' => true,
+	'useJsonMetadata'   => true,
+	'useSplitMetadata'  => true,
+	'deletedHashLevels' => 3,
+	'abbrvThreshold' => 160,
+	'isPrivate' => $cwPrivate,
+	'zones' => $cwPrivate
+		? [
+			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
+		: [],
 ];

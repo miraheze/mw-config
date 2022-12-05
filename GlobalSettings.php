@@ -9,6 +9,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 		'CentralAuth',
 		'GlobalPreferences',
 		'GlobalBlocking',
+		'RemovePII',
 	] );
 }
 
@@ -44,9 +45,7 @@ if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 
-	if ( $wmgEnableSwift ) {
-		$wgSocialProfileFileBackend = 'miraheze-swift';
-	}
+	$wgSocialProfileFileBackend = 'miraheze-swift';
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
@@ -100,10 +99,6 @@ if ( $wi->isAnyOfExtensionsActive( 'Flow', 'VisualEditor', 'Linter' ) ) {
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
-if ( wfHostname() === 'test131' ) {
-	// $wgShellboxUrl = 'http://localhost:8080/shellbox';
-}
-
 // Closed Wikis
 if ( $cwClosed ) {
 	$wgRevokePermissions = [
@@ -135,23 +130,7 @@ if ( !$cwPrivate ) {
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 
-	if ( $wmgEnableSwift ) {
-		$wgDataDumpFileBackend = 'miraheze-swift';
-		$wgDataDumpDirectory = '';
-	} else {
-		$wgDataDumpDirectory = "/mnt/mediawiki-static/{$wi->dbname}/dumps/";
-	}
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
-} else {
-	if ( $wmgEnableSwift ) {
-		$wgDataDumpFileBackend = 'miraheze-swift';
-		$wgDataDumpDirectory = '';
-	} else {
-		$wgDataDumpDirectory = "/mnt/mediawiki-static/private/dumps/{$wi->dbname}/";
-	}
-
-	// Unset wgDataDumpDownloadUrl so private wikis stream the download via Special:DataDump/download
-	$wgDataDumpDownloadUrl = '';
 }
 
 // Experimental Wikis
@@ -173,11 +152,10 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgMFStopRedirectCookieHost = $wi->hostname;
 }
 
-if ( !$wmgEnableSwift ) {
-	$wgGenerateThumbnailOnParse = false;
-}
-
 // DataDump
+$wgDataDumpFileBackend = 'miraheze-swift';
+$wgDataDumpDirectory = '';
+
 $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
@@ -294,21 +272,17 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'Score' ) ) {
-	if ( $wmgEnableSwift ) {
-		$wgScoreFileBackend = 'miraheze-swift';
-	}
+	$wgScoreFileBackend = 'miraheze-swift';
 }
 
 if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
-	if ( $wmgEnableSwift ) {
-		$wgTimelineFileBackend = 'miraheze-swift';
-	}
+	$wgTimelineFileBackend = 'miraheze-swift';
 }
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
-		'src' => 'https://static-new.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
+		'src' => 'https://static.miraheze.org/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
 	];
@@ -322,55 +296,37 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 		$wmgSharedUploadBaseUrl = "{$wmgSharedUploadSubdomain}.miraheze.org";
 	}
 
-	if ( wfShouldEnableSwift( $wmgSharedUploadDBname ) ) {
-		$wgForeignFileRepos[] = [
-			'class' => ForeignDBViaLBRepo::class,
-			'name' => "shared-{$wmgSharedUploadDBname}",
-			'backend' => 'miraheze-swift',
-			'url' => "https://static-new.miraheze.org/{$wmgSharedUploadDBname}",
-			'hashLevels' => 2,
-			'thumbScriptUrl' => false,
-			'transformVia404' => true,
-			'hasSharedCache' => true,
-			'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
-			'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
-			'fetchDescription' => true,
-			'descriptionCacheExpiry' => 86400 * 7,
-			'wiki' => $wmgSharedUploadDBname,
-			'initialCapital' => true,
-			'zones' => [
-				'public' => [
-					'container' => 'local-public',
-				],
-				'thumb' => [
-					'container' => 'local-thumb',
-				],
-				'temp' => [
-					'container' => 'local-temp',
-				],
-				'deleted' => [
-					'container' => 'local-deleted',
-				],
+	$wgForeignFileRepos[] = [
+		'class' => ForeignDBViaLBRepo::class,
+		'name' => "shared-{$wmgSharedUploadDBname}",
+		'backend' => 'miraheze-swift',
+		'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
+		'hashLevels' => 2,
+		'thumbScriptUrl' => false,
+		'transformVia404' => true,
+		'hasSharedCache' => true,
+		'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
+		'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => $wmgSharedUploadDBname,
+		'initialCapital' => true,
+		'zones' => [
+			'public' => [
+				'container' => 'local-public',
 			],
-			'abbrvThreshold' => 160
-		];
-	} else {
-		$wgForeignFileRepos[] = [
-			'class' => ForeignDBViaLBRepo::class,
-			'name' => "shared-{$wmgSharedUploadDBname}",
-			'directory' => "/mnt/mediawiki-static/{$wmgSharedUploadDBname}",
-			'url' => "https://static.miraheze.org/{$wmgSharedUploadDBname}",
-			'hashLevels' => 2,
-			'thumbScriptUrl' => false,
-			'transformVia404' => true,
-			'hasSharedCache' => true,
-			'fetchDescription' => true,
-			'descriptionCacheExpiry' => 86400 * 7,
-			'wiki' => $wmgSharedUploadDBname,
-			'descBaseUrl' => "https://{$wmgSharedUploadBaseUrl}/wiki/File:",
-			'scriptDirUrl' => "https://{$wmgSharedUploadBaseUrl}/w",
-		];
-	}
+			'thumb' => [
+				'container' => 'local-thumb',
+			],
+			'temp' => [
+				'container' => 'local-temp',
+			],
+			'deleted' => [
+				'container' => 'local-deleted',
+			],
+		],
+		'abbrvThreshold' => 160
+	];
 }
 
 // Miraheze Commons
@@ -379,7 +335,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons ) {
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
 		'backend' => 'miraheze-swift',
-		'url' => 'https://static-new.miraheze.org/commonswiki',
+		'url' => 'https://static.miraheze.org/commonswiki',
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
 		'transformVia404' => true,

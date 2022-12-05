@@ -36,6 +36,7 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 		'running' => true,
 		'output' => 'text',
 	];
+
 	$wgHTTPTimeout = 60;
 }
 
@@ -50,40 +51,11 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
+$wmgUploadHostname = 'static.miraheze.org';
 
-/**
- * DO NOT REMOVE FUNCTION
- * It is used throughout, including within MirahezeMagic.
- * It needs its usage removed before the function can be removed.
- *
- * @param string $dbname the database to check
- * @return bool whether Swift should be enabled on $dbname
- */
-function wfShouldEnableSwift( $dbname ) {
-	return (
-		// enable swift on all wikis matching this regular expression
-		preg_match( '/^([0-9]|a|b|c|d|e|f|g|h|i|j|k)/', $dbname ) ||
-
-		// enable swift on all beta wikis
-		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
-
-		$dbname === 'metawiki' ||
-
-		$dbname === 'staffwiki' ||
-
-		$dbname === 'ciptamediawiki' ||
-
-		// enable swift on all new wikis
-		// which we no longer create a static directory for
-		!file_exists( '/mnt/mediawiki-static/' . $dbname )
-	);
-}
-
-$wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
-
-$wmgUploadHostname = $wmgEnableSwift ?
-	'static-new.miraheze.org' :
-	'static.miraheze.org';
+$wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'miraheze-global-renames-disabled' );
+$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'miraheze-global-renames-disabled' );
+$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'miraheze-global-renames-disabled' );
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
@@ -257,6 +229,22 @@ $wgConf->settings += [
 	],
 	'wgArticlePlaceholderRepoApiUrl' => [
 		'default' => 'https://www.wikidata.org/w/api.php',
+	],
+
+	// Babel
+	'wgBabelCategoryNames' => [
+		'default' => [
+			'0' => 'User %code%-0',
+			'1' => 'User %code%-1',
+			'2' => 'User %code%-2',
+			'3' => 'User %code%-3',
+			'4' => 'User %code%-4',
+			'5' => 'User %code%-5',
+			'N' => 'User %code%-N',
+		],
+	],
+	'wgBabelMainCategory' => [
+		'default' => 'User %code%',
 	],
 
 	// BetaFeatures
@@ -434,8 +422,6 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => false,
-		'metawiki' => true,
-		'betawiki' => true,
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
@@ -562,6 +548,9 @@ $wgConf->settings += [
 	],
 	'wgCitizenMaxSearchResults' => [
 		'default' => 6,
+	],
+	'wgCitizenEnableCJKFonts' => [
+		'default' => false,
 	],
 
 	// Comments
@@ -820,7 +809,7 @@ $wgConf->settings += [
 			'Approval reasons' => [
 				'Perfect request' => 'Perfect. Clear purpose, scope, and topic. Please be advised this approval does not preclude other wikis from being approved and created that share this topic, provided they aren\'t 95-100% content forks of your wiki. Please ensure your wiki complies with all aspects of Content Policy and Code of Conduct at all times. Thank you.',
 				'Good request' => 'Pretty good. Purpose and description are a bit vague, but there is nonetheless a clear enough purpose, scope, and/or topic here. Please be advised this approval does not preclude other wikis from being approved and created that share this topic, provided they aren\'t 95-100% content forks of your wiki. Please ensure your wiki complies with all aspects of Content Policy and Code of Conduct at all times.',
-				'Okay request' => 'Okay-ish. Description doesn\'t meet our requirements, but in this case the sitename, URL, and categorisation suggest this is a wiki that would follow the Content Policy made clear by the preceding fields, and it is conditionally approved as such. Please be advised that if your wiki deviates too much from this approval, remedial action can be taken by a Steward which includes wiki closure and potential revocation of wiki requesting privledges, if necessary, and that this approval does not preclude approval of similar wikis sharing this likely topic. Please ensure your wiki complies with all aspects of Content Policy and Code of Conduct at all times. Thank you.',
+				'Okay request' => 'Okay-ish. Description doesn\'t meet our requirements, but in this case the sitename, URL, and categorisation suggest this is a wiki that would follow the Content Policy made clear by the preceding fields, and it is conditionally approved as such. Please be advised that if your wiki deviates too much from this approval, remedial action can be taken by a Steward which includes wiki closure and potential revocation of wiki requesting privileges, if necessary, and that this approval does not preclude approval of similar wikis sharing this likely topic. Please ensure your wiki complies with all aspects of Content Policy and Code of Conduct at all times. Thank you.',
 				'Categorised as private' => 'The purpose and scope of your wiki is clear enough. Please ensure your wiki complies with all aspects of the Content Policy at all times. Please also note that I have categorised your wiki as "Private". Thank you.',
 			],
 			'Decline reasons' => [
@@ -866,9 +855,9 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'c2',
-			'c3',
 			'c4',
 			'c5',
+			'c6',
 		],
 		'betaheze' => [
 			'c4',
@@ -878,6 +867,7 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
+			'c3',
 		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
@@ -1363,7 +1353,7 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static-new.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Hosted by Miraheze'
 				]
@@ -1491,6 +1481,15 @@ $wgConf->settings += [
 			'mode' => 'traditional',
 		],
 		'dcmultiversewiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'packed',
+		],
+		'rippaversewiki' => [
 			'imagesPerRow' => 0,
 			'imageWidth' => 120,
 			'imageHeight' => 120,
@@ -1739,9 +1738,11 @@ $wgConf->settings += [
 		'default' => [
 			'Bacula' => 'https://meta.miraheze.org/wiki/Tech:Bacula',
 			'Bastion' => 'https://meta.miraheze.org/wiki/Tech:Bastion',
+			'Cloud Infrastructure' => false,
 			'ElasticSearch' => 'https://meta.miraheze.org/wiki/Tech:ElasticSearch',
 			'DNS' => 'https://meta.miraheze.org/wiki/Tech:DNS',
 			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
+			'GlusterFS' => 'https://meta.miraheze.org/wiki/Tech:GlusterFS',
 			'Grafana' => 'https://meta.miraheze.org/wiki/Tech:Grafana',
 			'Icinga' => 'https://meta.miraheze.org/wiki/Tech:Icinga',
 			'LizardFS' => 'https://meta.miraheze.org/wiki/Tech:Lizardfs',
@@ -1758,6 +1759,7 @@ $wgConf->settings += [
 			'Redis' => 'https://meta.miraheze.org/wiki/Tech:Redis',
 			'Salt' => 'https://meta.miraheze.org/wiki/Tech:Salt',
 			'Service Providers' => false,
+			'Swift' => 'https://meta.miraheze.org/wiki/Tech:Swift',
 			'Varnish' => 'https://meta.miraheze.org/wiki/Tech:Varnish',
 		],
 	],
@@ -3171,6 +3173,10 @@ $wgConf->settings += [
 			'tagline' => false,
 		],
 	],
+	'wgMFCollapseSectionsByDefault' => [
+		'default' => true,
+		'twistwoodtaleswiki' => false,
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
@@ -3613,6 +3619,11 @@ $wgConf->settings += [
 			'usecodemirror' => 1,
 		],
 		'+kirbywiki' => [
+			'thumbsize' => 3,
+		],
+		'+luigismansionwiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
 			'thumbsize' => 3,
 		],
 		'+mariowiki' => [
@@ -4145,6 +4156,11 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// ShortDescription
+	'wgShortDescriptionEnableTagline' => [
+		'default' => true,
+	],
+
 	// Site notice opt out
 	'wmgSiteNoticeOptOut' => [
 		'default' => false,
@@ -4257,7 +4273,7 @@ $wgConf->settings += [
 	// for ipv4 + ipv6 combined.
 	// TODO: Setup cron to update this automatically.
 	'wgSFSIPListLocation' => [
-		'default' => '/mnt/mediawiki-static/private/stopforumspam/listed_ip_30_ipv46_all.txt',
+		'default' => '/srv/mediawiki/stopforumspam/listed_ip_30_ipv46_all.txt',
 	],
 
 	// Styling
@@ -4312,17 +4328,14 @@ $wgConf->settings += [
 			'audio' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
@@ -5291,9 +5304,7 @@ $wgConf->settings += [
 			'readinglists' => false,
 			'recursion-guard' => false,
 			'RecursiveLinkPurge' => false,
-			// debug sprews too much information + sample
-			// otherwise we get 2 million+ messages within a few minutes
-			'redis' => [ 'graylog' => 'warning', 'sample' => 20 ],
+			'redis' => 'info',
 			'Renameuser' => 'debug',
 			'resourceloader' => false,
 			'ResourceLoaderImage' => false,
@@ -5392,11 +5403,7 @@ require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
 $wgUploadPath = "//$wmgUploadHostname/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
-
-if ( $wmgEnableSwift ) {
-	$wgUploadDirectory = false;
-}
+$wgUploadDirectory = false;
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
