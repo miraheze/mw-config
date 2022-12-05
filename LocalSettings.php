@@ -51,38 +51,11 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
+$wmgUploadHostname = 'static.miraheze.org';
 
 $wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'miraheze-global-renames-disabled' );
 $wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'miraheze-global-renames-disabled' );
 $wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'miraheze-global-renames-disabled' );
-
-/**
- * DO NOT REMOVE FUNCTION
- * It is used throughout, including within MirahezeMagic.
- * It needs its usage removed before the function can be removed.
- *
- * @param string $dbname the database to check
- * @return bool whether Swift should be enabled on $dbname
- */
-function wfShouldEnableSwift( $dbname ) {
-	return (
-		// enable swift on all wikis matching this regular expression
-		preg_match( '/^([0-9]|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z)/', $dbname ) ||
-
-		// enable swift on all beta wikis
-		preg_match( '/^(.*)wikibeta$/', $dbname ) ||
-
-		// enable swift on all new wikis
-		// which we no longer create a static directory for
-		!file_exists( '/mnt/mediawiki-static/' . $dbname )
-	);
-}
-
-$wmgEnableSwift = wfShouldEnableSwift( $wgDBname );
-
-$wmgUploadHostname = $wmgEnableSwift ?
-	'static-new.miraheze.org' :
-	'static.miraheze.org';
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
@@ -1382,7 +1355,7 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static-new.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Hosted by Miraheze'
 				]
@@ -4302,7 +4275,7 @@ $wgConf->settings += [
 	// for ipv4 + ipv6 combined.
 	// TODO: Setup cron to update this automatically.
 	'wgSFSIPListLocation' => [
-		'default' => '/mnt/mediawiki-static/private/stopforumspam/listed_ip_30_ipv46_all.txt',
+		'default' => '/srv/mediawiki/stopforumspam/listed_ip_30_ipv46_all.txt',
 	],
 
 	// Styling
@@ -4357,17 +4330,14 @@ $wgConf->settings += [
 			'audio' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
-				'<^(?:https:)?//static-new\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
@@ -5440,11 +5410,7 @@ require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
 
 $wgUploadPath = "//$wmgUploadHostname/$wgDBname";
-$wgUploadDirectory = "/mnt/mediawiki-static/$wgDBname";
-
-if ( $wmgEnableSwift ) {
-	$wgUploadDirectory = false;
-}
+$wgUploadDirectory = false;
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
