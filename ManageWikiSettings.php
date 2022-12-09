@@ -1936,7 +1936,6 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'texts',
-		'exists' => false,
 		'overridedefault' => [],
 		'section' => 'permissions',
 		'help' => 'Pages that are matched by these regular expressions may be viewed by anyone.',
