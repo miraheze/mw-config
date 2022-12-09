@@ -3024,6 +3024,9 @@ $wgConf->settings += [
 	'wgWhitelistRead' => [
 		'default' => [],
 	],
+	'wgWhitelistReadRegexp' => [
+		'default' => [],
+	],
 	'wgDisabledVariants' => [
 		'default' => [],
 		'hkrailwiki' => [
