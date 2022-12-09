@@ -1931,6 +1931,20 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgWhitelistReadRegexp' => [
+		'name' => 'Whitelist Read Regular Expressions',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'texts',
+		'overridedefault' => [],
+		'section' => 'permissions',
+		'help' => 'Pages that are matched by these regular expressions may be viewed by anyone.',
+		'requires' => [
+			'visibility' => [
+				'state' => 'private',
+			],
+		],
+	],
 
 	// Preferences
 	'wgHiddenPrefs' => [
