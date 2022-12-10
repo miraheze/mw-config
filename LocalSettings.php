@@ -769,6 +769,7 @@ $wgConf->settings += [
 			'webmail',
 			'phabricator',
 			'static',
+			'upload',
 			'grafana',
 			'icinga',
 			'csw(\d+)?',
