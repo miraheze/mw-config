@@ -3548,6 +3548,31 @@ $wgManageWikiSettings = [
 		'help' => 'Where the dark mode toggle link should be placed.',
 		'requires' => [],
 	],
+	'egChameleonLayoutFile' => [
+		'name' => 'Chameleon layout file',
+		'from' => 'chameleon',
+		'type' => 'list',
+		'options' => [
+			'standard' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
+			'navhead' => '/srv/mediawiki/w/skins/chameleon/layouts/navhead.xml',
+			'fixedhead' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
+			'stickyhead' => '/srv/mediawiki/w/skins/chameleon/layouts/stickyhead.xml',
+			'clean' => '/srv/mediawiki/w/skins/chameleon/layouts/clean.xml',
+		],
+		'overridedefault' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
+		'section' => 'styling',
+		'help' => 'The layout to use for the Chameleon skin.',
+		'requires' => [],
+	],
+	'egChameleonEnableExternalLinkIcons' => [
+		'name' => 'Chameleon external link icons',
+		'from' => 'chameleon',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Whether or not to show the normal MediaWiki external link icon when using the Chameleon skin.',
+		'requires' => [],
+	],
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
