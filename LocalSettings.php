@@ -477,6 +477,9 @@ $wgConf->settings += [
 		'obeymewiki' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
 		'koopacabanawiki' => '/srv/mediawiki/w/skins/chameleon/layouts/navhead.xml',
 	],
+	'egChameleonEnableExternalLinkIcons' => [
+		'default' => false,
+	]
 
 	// CheckUser
 	'wgCheckUserForceSummary' => [
