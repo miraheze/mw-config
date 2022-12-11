@@ -38,7 +38,14 @@ $wgUploadThumbnailRenderMethod = 'http';
 $wgUploadThumbnailRenderHttpCustomHost = 'static.miraheze.org';
 $wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
 
+$wgThumbnailBuckets = [ 1920 ];
+$wgThumbnailMinimumBucketDistance = 100;
+
+// Thumbnail prerendering at upload time
+$wgUploadThumbnailRenderMap = [ 320, 640, 800, 1024, 1280, 1920 ];
+
 if ( $cwPrivate ) {
+	$wgUploadThumbnailRenderMap = [];
 	$wgUploadPath = '/w/img_auth.php';
 	$wgImgAuthUrlPathMap = [
 		'/avatars/' => 'mwstore://miraheze-swift/avatars/',
