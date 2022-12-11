@@ -479,7 +479,7 @@ $wgConf->settings += [
 	],
 	'egChameleonEnableExternalLinkIcons' => [
 		'default' => false,
-	]
+	],
 
 	// CheckUser
 	'wgCheckUserForceSummary' => [
