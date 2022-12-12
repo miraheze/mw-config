@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 79;
+$wgMajorSiteNoticeID = 80;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 79;
  */
 
 // Global SiteNotice
-/*if ( !$wmgSiteNoticeOptOut ) {
+// if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -31,7 +31,7 @@ $wgMajorSiteNoticeID = 79;
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Miraheze will be doing emergency maintenance on our file storage beginning at 20:45 PM UTC time. The maintenance will last 30 minutes. We apologise for the inconvenience.
+							Miraheze will be doing server maintenance beginning at 21:00 UTC on Sunday, 18 December 2022 lasting until 03:00 UTC on Monday, 19 December 2022. During this time, some wikis may be intermittently unavailable or go into read-only.
 						</div>
 
 						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
@@ -46,7 +46,8 @@ $wgMajorSiteNoticeID = 79;
 			</table>
 		EOF;
 	}
-}*/
+
+// }
 
 // Specific wiki SiteNotice
 /* if ( !preg_match( '/^([0-9]|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|q)/', $wgDBname ) ) {
