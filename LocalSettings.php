@@ -1800,16 +1800,19 @@ $wgConf->settings += [
 		'default' => [],
 		'gpcommonswiki' => [
 			'qqq' => 'Message documentation',
-			'pcm' => 'Naijá',
+			'pcm' => 'Nigerian Pidgin',
 		],
 		'gratisdatawiki' => [
 			'qqq' => 'Message documentation',
-			'pcm' => 'Naijá',
+			'pcm' => 'Nigerian Pidgin',
 		],
 		'isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
 		'wikibenwiki' => [
+			'bw' => 'Benwegul',
+		],
+		'benpediawiki' => [
 			'bw' => 'Benwegul',
 		],
 	],
