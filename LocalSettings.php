@@ -1798,6 +1798,9 @@ $wgConf->settings += [
 	],
 	'wgExtraLanguageNames' => [
 		'default' => [],
+		'benpediawiki' => [
+			'bw' => 'Benwegul',
+		],
 		'gpcommonswiki' => [
 			'qqq' => 'Message documentation',
 			'pcm' => 'Nigerian Pidgin',
@@ -1810,9 +1813,6 @@ $wgConf->settings += [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
 		'wikibenwiki' => [
-			'bw' => 'Benwegul',
-		],
-		'benpediawiki' => [
 			'bw' => 'Benwegul',
 		],
 	],
