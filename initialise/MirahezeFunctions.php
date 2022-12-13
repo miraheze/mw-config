@@ -154,7 +154,11 @@ class MirahezeFunctions {
 					require_once '/srv/mediawiki/ErrorPages/db141Wiki.php';
 				}
 
-				return $data['c'] !== 'c3';
+				if ( $GLOBALS['wgDBname'] && $key === $GLOBALS['wgDBname'] && in_array( $data['c'], $GLOBALS['wgDatabaseClustersMaintenance'] ) ) {
+					require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
+				}
+
+				return $data['c'] !== 'c3' && !in_array( $data['c'], $GLOBALS['wgDatabaseClustersMaintenance'] );
 			}, ARRAY_FILTER_USE_BOTH );
 		}
 
