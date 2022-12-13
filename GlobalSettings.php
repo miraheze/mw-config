@@ -159,6 +159,7 @@ $wgDataDumpDirectory = '';
 $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
+		'useBackendTempStore' => true,
 		'generate' => [
 			'type' => 'mwscript',
 			'script' => "$IP/maintenance/dumpBackup.php",
@@ -167,16 +168,16 @@ $wgDataDump = [
 				'--logs',
 				'--uploads',
 				'--output',
-				"gzip:{$wgDataDumpDirectory}" . '${filename}',
+				'gzip:/tmp/${filename}',
 			],
 			'arguments' => [
 				'--namespaces'
 			],
 		],
-		'limit' => -1,
+		'limit' => 1,
 		'permissions' => [
 			'view' => 'view-dump',
-			'generate' => 'managewiki-restricted',
+			'generate' => 'generate-dump',
 			'delete' => 'delete-dump',
 		],
 		'htmlform' => [
