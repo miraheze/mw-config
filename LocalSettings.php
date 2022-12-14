@@ -2193,6 +2193,15 @@ $wgConf->settings += [
 		'vtwiki' => [ 'discord://' ],
 	],
 
+	// LinkTarget
+	'wgLinkTargetParentClasses' => [
+		'default' => [],
+		'anewc0dawiki' => [
+			'newtablinks',
+			'wikiwalk',
+		],
+	],
+
 	// LinkTitles
 	'wgLinkTitlesFirstOnly' => [
 		'default' => true,
