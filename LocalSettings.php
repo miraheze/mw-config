@@ -2192,12 +2192,12 @@ $wgConf->settings += [
 		'gzewiki' => [ 'file://' ],
 		'vtwiki' => [ 'discord://' ],
 	],
-	
+
 	// LinkTarget
 	'wgLinkTargetParentClasses' => [
 		'default' => [],
 		'anewc0dawiki' => [
-			'newtablinks', 
+			'newtablinks',
 			'wikiwalk',
 		],
 	],
