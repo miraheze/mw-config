@@ -10,6 +10,7 @@ $wgFileBackends[] = [
 	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
 	'swiftKey'           => $wmgSwiftPassword,
+	'swiftTempUrlKey'    => $wmgSwiftTempUrlKey,
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true,
 	'readAffinity'       => true,
