@@ -3593,16 +3593,18 @@ $wgConf->settings += [
 			'usebetatoolbar-cgd' => 1,
 		],
 		'+crashspyrowiki' => [
-			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+criticalrolewiki' => [
 			'thumbsize' => 3,
 		],
 		'+crocwiki' => [
-			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+dcmultiversewiki' => [
@@ -3616,18 +3618,21 @@ $wgConf->settings += [
 			'imagesize' => 2,
 		],
 		'+donkeykongwiki' => [
-			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+dragonquest2wiki' => [
-			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+finalfantasywiki' => [
-			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+isvwiki' => [
@@ -3649,22 +3654,26 @@ $wgConf->settings += [
 		],
 		'+metroidwiki' => [
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+nintendowiki' => [
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+pokemon2wiki' => [
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+rarewiki' => [
-			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+reviwiki' => [
@@ -3672,12 +3681,14 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 		],
 		'+segawiki' => [
-			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
 		'+smashbroswiki' => [
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
@@ -3686,6 +3697,13 @@ $wgConf->settings += [
 		],
 		'+squareenixwiki' => [
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+			'thumbsize' => 3,
+		],
+		'+yoshiwiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
