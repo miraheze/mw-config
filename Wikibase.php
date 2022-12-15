@@ -75,6 +75,7 @@ $wgWBClientSettings['siteLinksGroups'] = [
 
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
+$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
 // Per-wiki
 if ( $wgDBname === 'famedatawiki' ) {
