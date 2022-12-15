@@ -267,6 +267,10 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['dataBridgeEnabled'] = true;
 	$wgWBRepoSettings['allowDataAccessInUserLanguage'] = true;
 	$wgWBRepoSettings['entityAccessLimit'] = 500;
+	$wgWBRepoSettings['localClientDatabases'] = [
+		'benpedia' => 'benpediawiki',
+		'gpcommons' => 'gpcommonswiki'
+	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
