@@ -4804,6 +4804,16 @@ $wgConf->settings += [
 	'wmgWikibaseRepoPropertyNamespaceID' => [
 		'default' => 862
 	],
+	'wmgWikibaseClientNamespacesWithRepoAccess' => [
+		'default' => [], // default [] means all namespaces are included
+		'gratisdatawiki' => [
+			NS_CATEGORY,
+			NS_PROJECT,
+			NS_TEMPLATE,
+			NS_HELP,
+			828 // NS_MODULE
+		],
+	],
 
 	// WikibaseLexeme
 	'wgLexemeLanguageCodePropertyId' => [
