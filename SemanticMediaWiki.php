@@ -62,4 +62,6 @@ if ( $wgDBname === 'constantnoblewiki' ) {
 		3040 => true,
 		3041 => false,
 	];
+
+	$smwgQMaxInlineLimit = 750;
 }
