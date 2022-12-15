@@ -4787,13 +4787,15 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wmgWikibaseClientNamespacesWithRepoAccess' => [
-		'default' => [], // default [] means all namespaces are included
+		// default [] means all namespaces are included
+		'default' => [],
 		'gratisdatawiki' => [
 			NS_CATEGORY,
 			NS_PROJECT,
 			NS_TEMPLATE,
 			NS_HELP,
-			828 // NS_MODULE
+			// NS_MODULE
+			828
 		],
 	],
 	'wmgWikibaseRepoDatabase' => [
