@@ -4798,6 +4798,15 @@ $wgConf->settings += [
 			828
 		],
 	],
+	'wmgWikibaseClientItemAndPropertySourceName' => [
+		'default' => null,
+		'benpediawiki' => 'gratisdata',
+		'gpcommonswiki' => 'gratisdata'
+	],
+	'wmgWikibaseRepoLocalEntitySourceName' => [
+		'default' => null,
+		'gratisdatawiki' => 'gratisdata'
+	],
 	'wmgWikibaseRepoDatabase' => [
 		'default' => $wi->dbname
 	],
