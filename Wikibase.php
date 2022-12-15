@@ -26,7 +26,7 @@ if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
 }
 
 $wgWBRepoSettings['entitySources'] = $entitySources;
-$wgWBRepoSettings['localEntitySourceName'] = 'local';
+$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
 $wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyNamespaceID;
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
@@ -42,7 +42,7 @@ $wgWBRepoSettings['siteLinkGroups'] = [
 $wgWBRepoSettings['specialSiteLinkGroups'] = [];
 
 $wgWBClientSettings['entitySources'] = $entitySources;
-$wgWBClientSettings['itemAndPropertySourceName'] = 'local';
+$wgWBClientSettings['itemAndPropertySourceName'] = $wmgWikibaseClientItemAndPropertySourceName;
 $wgWBClientSettings['repoUrl'] = $wmgWikibaseRepoUrl;
 $wgWBClientSettings['repoDatabase'] = $wmgWikibaseRepoDatabase;
 $wgWBClientSettings['changesDatabase'] = $wmgWikibaseRepoDatabase;
