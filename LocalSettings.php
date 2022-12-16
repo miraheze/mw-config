@@ -3583,6 +3583,9 @@ $wgConf->settings += [
 	'wgPortableInfoboxResponsiblyOpenCollapsed' => [
 		'default' => true,
 	],
+	'wgPortableInfoboxCacheRenderers' => [
+		'default' => true,
+	],
 
 	// Preferences
 	'+wgDefaultUserOptions' => [
