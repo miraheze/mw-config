@@ -138,6 +138,21 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['dataBridgeEditTags'] = [
 		'data-bridge'
 	];
+	$wgWBClientSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => $wmgWikibaseRepoItemNamespaceID,
+				'property' => $wmgWikibaseRepoPropertyNamespaceID,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => $wmgWikibaseRepoDatabase,
+			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+			'interwikiPrefix' => '',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'type' => 'db'
+		],
+	];
 }
 
 if ( $wgDBname === 'gratisdatawiki' ) {
@@ -270,6 +285,21 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['localClientDatabases'] = [
 		'benpedia' => 'benpediawiki',
 		'gpcommons' => 'gpcommonswiki'
+	];
+	$wgWBRepoSettings['entitySources'] = [
+		'gratisdata' => [
+			'entityNamespaces' => [
+				'item' => $wmgWikibaseRepoItemNamespaceID,
+				'property' => $wmgWikibaseRepoPropertyNamespaceID,
+				'lexeme' => 146,
+			],
+			'repoDatabase' => $wmgWikibaseRepoDatabase,
+			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
+			'interwikiPrefix' => '',
+			'rdfNodeNamespacePrefix' => 'wd',
+			'rdfPredicateNamespacePrefix' => '',
+			'type' => 'db'
+		],
 	];
 }
 
