@@ -1880,6 +1880,10 @@ $wgConf->settings += [
 		'+devwiki' => [
 			'templatewikiarchive',
 		],
+		'+hkrailwiki' => [
+			'hkrailfan',
+			'zhwikipedia',
+		],
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
