@@ -1,6 +1,6 @@
 <?php
 
-// mem101
+// mem141
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
