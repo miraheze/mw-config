@@ -4787,7 +4787,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wmgWikibaseClientNamespacesWithRepoAccess' => [
-		// default [] means all namespaces are included
 		'default' => [],
 		'gratisdatawiki' => [
 			NS_CATEGORY,
