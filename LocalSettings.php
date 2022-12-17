@@ -855,7 +855,6 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
-			'c2',
 			'c4',
 			'c5',
 			'c6',
@@ -868,6 +867,7 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
+			'c2',
 			'c3',
 		]
 	],
