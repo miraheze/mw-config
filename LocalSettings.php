@@ -4794,7 +4794,7 @@ $wgConf->settings += [
 			NS_PROJECT,
 			NS_TEMPLATE,
 			NS_HELP,
-			// NS_MODULE
+			/** NS_MODULE */
 			828
 		],
 	],
