@@ -162,7 +162,7 @@ class MirahezeFunctions {
 					}
 				}
 
-				return $data['c'] !== 'c3' && !in_array( $data['c'], $wgDatabaseClustersMaintenance );
+				return $data['c'] !== 'c3';
 			}, ARRAY_FILTER_USE_BOTH );
 		}
 
