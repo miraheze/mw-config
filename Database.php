@@ -5,7 +5,7 @@ $wgLBFactoryConf = [
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db101' => 1,
+			'db141' => 1,
 		],
 		'c1' => [
 			'db101' => 1,
