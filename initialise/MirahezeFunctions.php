@@ -150,8 +150,16 @@ class MirahezeFunctions {
 			}
 		} else {
 			$databases = array_filter( $databasesArray['combi'] ?? $databasesArray['databases'], static function ( $data, $key ) {
-				if ( $GLOBALS['wgDBname'] && $key === $GLOBALS['wgDBname'] && $data['c'] === 'c3' ) {
-					require_once '/srv/mediawiki/ErrorPages/db141Wiki.php';
+				global $wgDBname, $wgCommandLineMode, $wgDatabaseClustersMaintenance;
+
+				if ( $wgDBname && $key === $wgDBname ) {
+					if ( $data['c'] === 'c3' ) {
+						require_once '/srv/mediawiki/ErrorPages/db141Wiki.php';
+					}
+
+					if ( !$wgCommandLineMode && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
+						require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
+					}
 				}
 
 				return $data['c'] !== 'c3';
