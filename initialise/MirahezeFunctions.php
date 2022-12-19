@@ -162,7 +162,7 @@ class MirahezeFunctions {
 					}
 				}
 
-				return $data['c'] !== 'c3';
+				return $data['c'] !== 'c3' && $data['c'] !== 'c6';
 			}, ARRAY_FILTER_USE_BOTH );
 		}
 
