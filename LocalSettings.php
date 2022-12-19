@@ -40,6 +40,11 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 	$wgHTTPTimeout = 60;
 }
 
+
+
+// Show custom database maintenance error page on these clusters.
+$wgDatabaseClustersMaintenance = [ 'c6' ];
+
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
 
