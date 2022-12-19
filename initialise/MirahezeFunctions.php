@@ -153,7 +153,7 @@ class MirahezeFunctions {
 				global $wgDBname, $wgCommandLineMode, $wgDatabaseClustersMaintenance;
 
 				if ( $wgDBname && $key === $wgDBname ) {
-					if ( $data['c'] === 'c3' ) {
+					if ( $data['c'] === 'c3' || $data['c'] === 'c6' ) {
 						require_once '/srv/mediawiki/ErrorPages/db141Wiki.php';
 					}
 
