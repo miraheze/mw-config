@@ -73,7 +73,7 @@ $wgLBFactoryConf = [
 		'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
-		'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c6' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
