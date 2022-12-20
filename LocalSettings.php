@@ -1423,6 +1423,12 @@ $wgConf->settings += [
 	'wgMirahezeCommons' => [
 		'default' => true,
 	],
+	'wgMirahezeReportsBlockAlertKeywords' => [
+		'default' => [
+			'underage',
+			'death threats',
+		],
+	],
 	// Only the board and SRE are allowed access
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
