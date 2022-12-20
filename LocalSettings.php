@@ -5405,16 +5405,6 @@ $wgConf->settings += [
 		'default' => '1.34',
 		'betaheze' => false,
 	],
-
-	// Email notifications on privileged actions configuration
-	'wgMirahezeMagicLogEmailConditions' => [
-		'default' => [
-			'trustandsafety' => [
-				'group' => 'trustandsafety',
-				'email' => 'owen@miraheze.org',
-			],
-		],
-	],
 ];
 
 // Start settings requiring external dependency checks/functions
