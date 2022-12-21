@@ -3936,6 +3936,9 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
+		'+projectsekaiwiki' => [
+			'editguide',
+		],
 		'+sesupportwiki' => [
 			'editor',
 		],
@@ -4036,6 +4039,9 @@ $wgConf->settings += [
 		],
 		'pokemonarowiki' => [
 			'unrestricted_edit',
+		],
+		'projectsekaiwiki' => [
+			'editguide',
 		],
 		'simulatorwiki' => [
 			'editfragment',
