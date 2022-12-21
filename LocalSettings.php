@@ -3936,9 +3936,6 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+projectsekaiwiki' => [
-			'editguide',
-		],
 		'+sesupportwiki' => [
 			'editor',
 		],
