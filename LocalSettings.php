@@ -860,7 +860,6 @@ $wgConf->settings += [
 		'default' => [
 			'c4',
 			'c5',
-			'c6',
 		],
 		'betaheze' => [
 			'c4',
@@ -872,6 +871,7 @@ $wgConf->settings += [
 			'c1',
 			'c2',
 			'c3',
+			'c6',
 		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
