@@ -1614,6 +1614,12 @@ $wgConf->settings += [
 			'basic' => [
 				'user' => true,
 			],
+			'usedatadumpapi' => [
+				'view-dump' => true,
+				'view-image-dump' => true,
+				'generate-dump' => true,
+				'delete-dump' => true,
+			],
 		],
 		'+althistorywiki' => [
 			'editprotected' => [
