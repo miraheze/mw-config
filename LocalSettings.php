@@ -4042,6 +4042,9 @@ $wgConf->settings += [
 		'pokemonarowiki' => [
 			'unrestricted_edit',
 		],
+		'projectsekaiwiki' => [
+			'editguide',
+		],
 		'simulatorwiki' => [
 			'editfragment',
 			'edittemplate',
