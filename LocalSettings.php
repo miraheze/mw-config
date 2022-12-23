@@ -3660,6 +3660,7 @@ $wgConf->settings += [
 		'+luigismansionwiki' => [
 			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 			'thumbsize' => 3,
 		],
 		'+mariowiki' => [
