@@ -552,4 +552,4 @@ $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 // Scribunto
 /** 50MB */
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
-$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 4;
+$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
