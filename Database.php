@@ -14,7 +14,7 @@ $wgLBFactoryConf = [
 			'db101' => 1,
 		],
 		'c3' => [
-			'db141' => 1,
+			'db142' => 1,
 		],
 		'c4' => [
 			'db121' => 1,
@@ -52,6 +52,7 @@ $wgLBFactoryConf = [
 		'db121' => 'db121.miraheze.org',
 		'db131' => 'db131.miraheze.org',
 		'db141' => 'db141.miraheze.org',
+		'db142' => 'db142.miraheze.org',
 	],
 	'externalLoads' => [
 		'beta' => [
