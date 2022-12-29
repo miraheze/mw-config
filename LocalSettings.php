@@ -1051,7 +1051,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgCompressRevisions' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgDBadminuser' => [
 		'default' => 'wikiadmin',
