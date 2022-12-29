@@ -2182,20 +2182,6 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgCompressRevisions' => [
-		'name' => 'Compress Revisions',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'restricted',
-		'help' => "Compress new page revisions if possible. Site Reliability Engineering: after enabling this, don't forget to manually run <code>mwscript storage/compressOld.php {$wi->dbname} --type=gzip</code>.",
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
 	'wgExpensiveParserFunctionLimit' => [
 		'name' => 'Expensive Parser Function Limit',
 		'from' => 'mediawiki',
