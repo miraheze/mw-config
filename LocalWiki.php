@@ -2,6 +2,17 @@
 
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
+	case 'arquivopkmnwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['license'] = 'CC0-1.0';
+		$wgJsonConfigs['Tabular.JsonConfig']['license'] = 'CC0-1.0';
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
 	case 'betawiki':
 		wfLoadExtension( 'GlobalWatchlist' );
 
