@@ -2209,8 +2209,8 @@ $wgConf->settings += [
 	'wgLinkTargetParentClasses' => [
 		'default' => [],
 		'anewc0dawiki' => [
-			'newtablinks',
-			'wikiwalk',
+			[ 'newtablinks', 'wikiwalk' ],
+			'_self' => [ 'sametablinks' ]
 		],
 	],
 
