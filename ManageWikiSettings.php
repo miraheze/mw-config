@@ -2361,7 +2361,6 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'extensions' => [
 				'pageimages',
-				'textextracts',
 				'wikiseo',
 			],
 		],
