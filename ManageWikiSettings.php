@@ -2351,6 +2351,21 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgWikiSeoOverwritePageImage' => [
+		'name' => 'Overwrite PageImage (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'seo',
+		'help' => 'Enable if WikiSEO should overwrite the iamge set by extension PageImages.',
+		'requires' => [
+			'extensions' => [
+				'pageimages',
+				'textextracts',
+				'wikiseo',
+			],
+		],
+	],
 
 	// SocialTools
 	'wgCosmosSocialProfileModernTabs' => [
