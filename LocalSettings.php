@@ -3236,6 +3236,9 @@ $wgConf->settings += [
 			NS_FILE
 		],
 	],
+	'wgModerationIgnoredInNamespaces'=> [
+		'default' => [],
+	],
 
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => [
