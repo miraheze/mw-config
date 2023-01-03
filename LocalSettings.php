@@ -3665,6 +3665,7 @@ $wgConf->settings += [
 		],
 		'+mariowiki' => [
 			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
