@@ -3931,6 +3931,9 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
+		'+metawiki' => [
+			'autopatrolled',
+		],
 		'+moviepediawiki' => [
 			'bureaucrat',
 			'founder',
@@ -4032,6 +4035,9 @@ $wgConf->settings += [
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'metawiki' => [
+			'autopatrolled',
 		],
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
