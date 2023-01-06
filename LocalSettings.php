@@ -383,6 +383,10 @@ $wgConf->settings += [
 	'wgCategoryTreeCategoryPageMode' => [
 		'default' => 0,
 	],
+	'wgCategoryTreeMaxDepth' => [
+		'default' => [ 10 => 1, 20 => 1, 0 => 2 ],
+		'100acgwiki' => [ 10 => 5, 20 => 2, 0 => 4, 100 => 1 ],
+	],
 
 	// CentralAuth
 	'wgCentralAuthAutoCreateWikis' => [
