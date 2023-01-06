@@ -2203,7 +2203,7 @@ $wgConf->settings += [
 		// file protocol only allowed on private wikis
 		'gzewiki' => [ 'file://' ],
 		'vtwiki' => [ 'discord://' ],
-		'100acgwiki' => [ 'infoflow://' ]
+		'100acgwiki' => [ 'infoflow://' ],
 	],
 
 	// LinkTarget
