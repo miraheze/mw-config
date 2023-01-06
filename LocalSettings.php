@@ -806,7 +806,7 @@ $wgConf->settings += [
 			'es\d+',
 			'bast(ion)?(\d+)?',
 			'reports(\d+)?',
-			'(.*)wikia(.*)',
+			'(.*)wiki(pedi)?a(.*)',
 			'(.*)wikipedia(.*)',
 		],
 	],
