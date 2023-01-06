@@ -807,7 +807,6 @@ $wgConf->settings += [
 			'bast(ion)?(\d+)?',
 			'reports(\d+)?',
 			'(.*)wiki(pedi)?a(.*)',
-			'(.*)wikipedia(.*)',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
