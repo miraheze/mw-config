@@ -189,6 +189,12 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// AutoCreatePage
+	'egAutoCreatePageNamespaces' => [
+		'default' => [ NS_MAIN ],
+		'constantnoblewiki' => [ NS_MAIN, NS_TALK, 420, 3020, 3022, 3024 ], // geojson:, genre:, artist:, album:
+	],
+
 	// ApprovedRevs
 	'egApprovedRevsEnabledNamespaces' => [
 		'default' => [
