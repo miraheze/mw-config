@@ -1,4 +1,4 @@
-<?php
+ç<?php
 
 /**
  * LocalSettings.php for Miraheze.
@@ -192,7 +192,7 @@ $wgConf->settings += [
 	// AutoCreatePage
 	'egAutoCreatePageNamespaces' => [
 		'default' => [ NS_MAIN ],
-		'constantnoblewiki' => [ NS_MAIN, NS_TALK, 420, 3020, 3022, 3024 ], // geojson:, genre:, artist:, album:
+		'constantnoblewiki' => [ NS_MAIN, NS_TALK, 420, 3020, 3022, 3024 ],
 	],
 
 	// ApprovedRevs
