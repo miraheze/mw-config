@@ -3858,11 +3858,6 @@ $wgConf->settings += [
 		'default' => 'MirahezeGDPR_',
 	],
 
-	// ReplaceText
-	'wgReplaceTextResultsLimit' => [
-		'default' => 250,
-	],
-
 	// Restriction types
 	'wgRestrictionLevels' => [
 		'default' => [
