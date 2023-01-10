@@ -161,7 +161,7 @@ class MirahezeFunctions {
 						}
 					}
 
-					return $data['c'] !== 'c6';
+					return $wgCommandLineMode || !in_array( $data['c'], $wgDatabaseClustersMaintenance );
 				}, ARRAY_FILTER_USE_BOTH );
 			} else {
 				$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
