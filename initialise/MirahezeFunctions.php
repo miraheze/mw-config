@@ -163,7 +163,7 @@ class MirahezeFunctions {
 						}
 					}
 
-					return $wgCommandLineMode || !in_array( $data['c'], $wgDatabaseClustersMaintenance );
+					return true;
 				}, ARRAY_FILTER_USE_BOTH );
 			}
 		}
