@@ -149,17 +149,23 @@ class MirahezeFunctions {
 				return '';
 			}
 		} else {
-			$databases = array_filter( $databasesArray['combi'] ?? $databasesArray['databases'], static function ( $data, $key ) {
-				global $wgDBname, $wgCommandLineMode, $wgDatabaseClustersMaintenance;
+			global $wgDatabaseClustersMaintenance;
 
-				if ( $wgDBname && $key === $wgDBname ) {
-					if ( !$wgCommandLineMode && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
-						require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
+			if ( $wgDatabaseClustersMaintenance ) {
+				$databases = array_filter( $databasesArray['combi'] ?? $databasesArray['databases'], static function ( $data, $key ) {
+					global $wgDBname, $wgCommandLineMode, $wgDatabaseClustersMaintenance;
+
+					if ( $wgDBname && $key === $wgDBname ) {
+						if ( !$wgCommandLineMode && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
+							require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
+						}
 					}
-				}
 
-				return $data['c'] !== 'c6';
-			}, ARRAY_FILTER_USE_BOTH );
+					return $data['c'] !== 'c6';
+				}, ARRAY_FILTER_USE_BOTH );
+			} else {
+				$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+			}
 		}
 
 		if ( $onlyDBs ) {
