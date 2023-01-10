@@ -56,10 +56,6 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
 
-$wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'miraheze-global-renames-disabled' );
-$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'miraheze-global-renames-disabled' );
-$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'miraheze-global-renames-disabled' );
-
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -428,7 +424,7 @@ $wgConf->settings += [
 		'betaheze' => 'testglobal',
 	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
