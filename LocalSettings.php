@@ -874,7 +874,6 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
-			'c6',
 		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
