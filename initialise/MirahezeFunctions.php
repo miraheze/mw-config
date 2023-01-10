@@ -151,8 +151,10 @@ class MirahezeFunctions {
 		} else {
 			global $wgDatabaseClustersMaintenance;
 
+			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+
 			if ( $wgDatabaseClustersMaintenance ) {
-				$databases = array_filter( $databasesArray['combi'] ?? $databasesArray['databases'], static function ( $data, $key ) {
+				$databases = array_filter( $databases, static function ( $data, $key ) {
 					global $wgDBname, $wgCommandLineMode, $wgDatabaseClustersMaintenance;
 
 					if ( $wgDBname && $key === $wgDBname ) {
@@ -163,8 +165,6 @@ class MirahezeFunctions {
 
 					return $wgCommandLineMode || !in_array( $data['c'], $wgDatabaseClustersMaintenance );
 				}, ARRAY_FILTER_USE_BOTH );
-			} else {
-				$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
 			}
 		}
 
