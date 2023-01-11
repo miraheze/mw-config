@@ -5442,15 +5442,6 @@ $wi::$disabledExtensions = [
 	'wikiforum',
 ];
 
-if ( version_compare( MW_VERSION, '1.39', '>=' ) ) {
-	$wi::$disabledExtensions = array_merge(
-		$wi::$disabledExtensions, [
-			// Broken (https://phabricator.wikimedia.org/T317499)
-			'protectsite',
-		]
-	);
-}
-
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
