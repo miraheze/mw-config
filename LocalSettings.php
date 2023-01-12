@@ -1602,6 +1602,18 @@ $wgConf->settings += [
 		'tuscriaturaswiki' => 'intercriaturaswiki',
 		'yourcreatureswiki' => 'intercriaturaswiki',
 	],
+	'wgGlobalUsageSharedRepoWiki' => [
+		'default' => 'commonswiki',
+		'gpcommonswiki' => 'gpcommonswiki',
+		'gratisdatawiki' => 'gpcommonswiki',
+		'gratispaideiawiki' => 'gpcommonswiki',
+	],
+	'wgGlobalUsagePurgeBacklinks' => [
+		'default' => false,
+		'gpcommonswiki' => true,
+		'gratisdatawiki' => true,
+		'gratispaideiawiki' => true,
+	],
 
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
