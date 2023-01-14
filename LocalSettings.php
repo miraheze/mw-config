@@ -1978,6 +1978,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// IPInfo
+	'wgIPInfoGeoLite2Prefix' => [
+		'default' => '/srv/mediawiki/geoip/GeoLite2-',
+	],
+
 	// JavascriptSlideshow
 	'wgHtml5' => [
 		'ext-JavascriptSlideshow' => true,
