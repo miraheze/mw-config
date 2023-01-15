@@ -31,7 +31,7 @@ $wgMajorSiteNoticeID = 81;
 				<div data-nosnippet div style="padding-top:0.3em; padding-bottom:0.1em;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Information" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/OOjs_UI_icon_info.svg" decoding="async" width="50" height="50"></div>
-						<div style="padding-bottom: 15px; font-size: 13pt; color: white;">
+						<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
 							Miraheze will be upgrading to the latest version of MediaWiki (1.39) on Saturday, 21 January 2023 from <b><u>22:00 UTC</u></b> to approximately 01:00 UTC on Sunday, 22 January 2023. During this time, you will not be able to save changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins.
 						</div>
 
