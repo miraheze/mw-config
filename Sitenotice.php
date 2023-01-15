@@ -28,7 +28,6 @@ $wgMajorSiteNoticeID = 81;
 		$siteNotice .= <<<EOF
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #180F67; background-color: #F7F6FF; padding: 10px 15px;">
-				<div data-nosnippet div style="padding-top:0.3em; padding-bottom:0.1em;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Information" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/OOjs_UI_icon_info.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
