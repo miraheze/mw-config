@@ -27,20 +27,21 @@ $wgMajorSiteNoticeID = 81;
 
 		$siteNotice .= <<<EOF
 			<table style="width: 100%;">
-				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #ff1e00; background-color: #ff5200cf; padding: 10px 15px; color: whitesmoke;">
+				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #180F67; background-color: #F7F6FF; padding: 10px 15px;">
+				<div data-nosnippet div style="padding-top:0.3em; padding-bottom:0.1em;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
-						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
+						<div class="floatleft"><img alt="Information" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/OOjs_UI_icon_info.svg" decoding="async" width="50" height="50"></div>
+						<div style="padding-bottom: 15px; font-size: 13pt; color: white;">
 							Miraheze will be upgrading to the latest version of MediaWiki (1.39) on Saturday, 21 January 2023 from <b><u>22:00 UTC</u></b> to approximately 01:00 UTC on Sunday, 22 January 2023. During this time, you will not be able to save changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins.
 						</div>
 
-						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
-							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="...">
+						 <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Special:MyLanguage/MediaWiki/1.39">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
 								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 							</a>
-						</span> -->
+						</span>
 					</div>
 				</td></tr></tbody>
 			</table>
