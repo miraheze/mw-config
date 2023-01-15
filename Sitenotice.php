@@ -34,13 +34,13 @@ $wgMajorSiteNoticeID = 81;
 							Miraheze will be upgrading to the latest version of MediaWiki (1.39) on Saturday, 21 January 2023 from <b><u>22:00 UTC</u></b> to approximately 01:00 UTC on Sunday, 22 January 2023. During this time, you will not be able to save changes to your wiki. Please make sure to save any edits at least 5 minutes before the upgrade begins.
 						</div>
 
-						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
-							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="...">
+						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Special:MyLanguage/MediaWiki/1.39">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
 								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 							</a>
-						</span> -->
+						</span>
 					</div>
 				</td></tr></tbody>
 			</table>
