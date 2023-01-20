@@ -296,24 +296,6 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgModerationOnlyInNamespaces' => [
-		'name' => 'Moderation Only in Namespaces',
-		'from' => 'moderation',
-		'type' => 'integers',
-		'overridedefault' => [],
-		'section' => 'anti-spam',
-		'help' => 'If set to an array of namespace numbers (e.g. NS_MAIN, NS_FILE), moderation is only enabled in these namespaces (edits in other namespaces will bypass moderation).',
-		'requires' => [],
-	],
-	'wgModerationIgnoredInNamespaces' => [
-		'name' => 'Moderation Ignored in Namespaces',
-		'from' => 'moderation',
-		'type' => 'integers',
-		'overridedefault' => [],
-		'section' => 'anti-spam',
-		'help' => 'If set to an array of namespace numbers (e.g. NS_MAIN, NS_FILE), non-automoderated users can bypass moderation in these namespaces.',
-		'requires' => [],
-	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
