@@ -76,9 +76,9 @@ class MirahezeFunctions {
 	private static $currentDatabase;
 
 	/**
-	 * @return array
+	 * @return ?array
 	 */
-	public static function getLocalDatabases(): array {
+	public static function getLocalDatabases(): ?array {
 		global $wgLocalDatabases;
 
 		static $list = null;
