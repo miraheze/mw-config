@@ -316,9 +316,9 @@ class MirahezeFunctions {
 	}
 
 	/**
-	 * @return array
+	 * @return ?array
 	 */
-	public static function getDatabaseClusters(): array {
+	public static function getDatabaseClusters(): ?array {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
