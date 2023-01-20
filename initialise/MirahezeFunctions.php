@@ -244,7 +244,7 @@ class MirahezeFunctions {
 		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ? 'beta' : 'production';
 		$databases = self::readDbListFile( $list, false, $database );
 
-		if ( $deleted ) {
+		if ( $deleted && $databases ) {
 			$databases += self::readDbListFile( "deleted-$list", false, $database );
 		}
 
