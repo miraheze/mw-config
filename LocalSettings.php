@@ -5088,14 +5088,54 @@ $wgConf->settings += [
 	// WikimediaIncubator
 	'wmincProjects' => [
 		'default' => [
-			'p' => 'Wikipedia',
-			'b' => 'Wikibooks',
-			't' => 'Wiktionary',
-			'q' => 'Wikiquote',
-			'n' => 'Wikinews',
-			'y' => 'Wikivoyage',
-			's' => 'Wikisource',
-			'v' => 'Wikiversity',
+			'p' => [
+				'name' => 'Wikipedia',
+				'dbsuffix' => 'wiki',
+				'wikitag' => 'wikipedia',
+				'sister' => false
+			],
+			'b' => [
+				'name' => 'Wikibooks',
+				'dbsuffix' => 'wikibooks',
+				'wikitag' => 'wikibooks',
+				'sister' => false
+			],
+			't' => [
+				'name' => 'Wiktionary',
+				'dbsuffix' => 'wiktionary',
+				'wikitag' => 'wiktionary',
+				'sister' => false
+			],
+			'q' => [
+				'name' => 'Wikiquote',
+				'dbsuffix' => 'wikiquote',
+				'wikitag' => 'wikiquote',
+				'sister' => false
+			],
+			'n' => [
+				'name' => 'Wikinews',
+				'dbsuffix' => 'wikinews',
+				'wikitag' => 'wikinews',
+				'sister' => false
+			],
+			'y' => [
+				'name' => 'Wikivoyage',
+				'dbsuffix' => 'wikivoyage',
+				'wikitag' => 'wikivoyage',
+				'sister' => false
+			],
+			's' => [
+				'name' => 'Wikisource',
+				'dbsuffix' => 'wikisource',
+				'wikitag' => 'wikisource',
+				'sister' => true
+			],
+			'v' => [
+				'name' => 'Wikiversity',
+				'dbsuffix' => 'wikiversity',
+				'wikitag' => 'wikiversity',
+				'sister' => true
+			]
 		],
 	],
 	'wmincProjectSite' => [
