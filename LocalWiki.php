@@ -46,6 +46,10 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'dragontamerwiki':
+		$wgDplSettings['maxCategoryCount'] = 7;
+
+		break;
 	case 'famedatawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
