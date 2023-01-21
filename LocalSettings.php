@@ -1062,7 +1062,7 @@ $wgConf->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => 'Miraheze is currently upgrading to MediaWiki 1.39. This wiki is in read-only mode until 01:00, 22 January, 2023 (UTC). Please try again later.',
+		'default' => false,
 	],
 	'wgSharedTables' => [
 		'default' => [],
