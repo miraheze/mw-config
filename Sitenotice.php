@@ -31,7 +31,7 @@ $wgMajorSiteNoticeID = 81;
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Miraheze is currently upgrading to MediaWiki 1.39. The upgrade is scheduled to end at 01:00 (UTC), 22 January, 2023. Until the upgrade ends, you will be unable to edit and the wiki may go offline at moments.
+							Miraheze is currently upgrading to MediaWiki 1.39. The upgrade is scheduled to end at 01:00 (UTC), 22 January, 2023. While you may still edit, it is highly discouraged from making big ones as this wiki may face temporary errors which may impact the ability to save edits.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
