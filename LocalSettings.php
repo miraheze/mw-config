@@ -5437,7 +5437,9 @@ require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
 	'editnotify',
 	'hitcounters',
+	'pdfbook',
 	'regexfunctions',
+	'slacknotifications',
 	'wikiforum',
 ];
 
