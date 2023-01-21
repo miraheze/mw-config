@@ -439,9 +439,6 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 
 // Vector
 $vectorVersion = $wgDefaultSkin === 'vector-2022' ? '2' : '1';
-
-// Remove with 1.39
-$wgVectorDefaultSkinVersion = $vectorVersion;
 $wgVectorDefaultSkinVersionForExistingAccounts = $vectorVersion;
 
 // Don't need a global here

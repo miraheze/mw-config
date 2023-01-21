@@ -436,10 +436,6 @@ $wgConf->settings += [
 	'wgCentralAuthSilentLogin' => [
 		'default' => true,
 	],
-	'wgCentralAuthHiddenLevelMigrationStage' => [
-		// Remove with 1.39
-		'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_NEW,
-	],
 
 	// CentralNotice
 	'wgNoticeInfrastructure' => [
@@ -927,20 +923,6 @@ $wgConf->settings += [
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
 		],
-		// 1.39
-		'betaheze' => [
-			"$IP/maintenance/tables-generated.sql",
-			"$IP/extensions/AbuseFilter/db_patches/mysql/tables-generated.sql",
-			"$IP/extensions/AntiSpoof/sql/mysql/tables-generated.sql",
-			"$IP/extensions/BetaFeatures/sql/tables-generated.sql",
-			"$IP/extensions/CheckUser/schema/mysql/tables-generated.sql",
-			"$IP/extensions/DataDump/sql/data_dump.sql",
-			"$IP/extensions/Echo/sql/mysql/tables-generated.sql",
-			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
-			"$IP/extensions/OAuth/schema/mysql/tables-generated.sql",
-			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
-		],
 	],
 	'wgCreateWikiStateDays' => [
 		'default' => [
@@ -1065,10 +1047,6 @@ $wgConf->settings += [
 	],
 	'wgSharedTables' => [
 		'default' => [],
-	],
-	'wgActorTableSchemaMigrationStage' => [
-		// Remove with 1.39
-		'default' => SCHEMA_COMPAT_NEW,
 	],
 
 	// Delete
@@ -4660,10 +4638,6 @@ $wgConf->settings += [
 	],
 
 	// Vector
-	'wgVectorSkinMigrationMode' => [
-		// Remove with 1.39
-		'default' => false,
-	],
 	'wgVectorResponsive' => [
 		'default' => false,
 	],
