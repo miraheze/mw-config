@@ -3076,6 +3076,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'removeredlinks' => [
+		'name' => 'RemoveRedlinks',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RemoveRedlinks',
+		'var' => 'wmgUseRemoveRedlinks',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'revisionslider' => [
 		'name' => 'RevisionSlider',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RevisionSlider',
