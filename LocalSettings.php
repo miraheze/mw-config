@@ -2959,6 +2959,7 @@ $wgConf->settings += [
 	],
 	'wgEnableCanonicalServerLink' => [
 		'default' => false,
+		'comprehensibleinputwiki' => 'comprehensibleinputwiki.org',
 	],
 	'wgPageCreationLog' => [
 		'default' => true,
