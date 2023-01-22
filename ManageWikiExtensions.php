@@ -2144,6 +2144,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'pivot' => [
+		'name' => 'Pivot',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Pivot',
+		'var' => 'wmgUsePivot',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'refreshed' => [
 		'name' => 'Refreshed',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Refreshed',
