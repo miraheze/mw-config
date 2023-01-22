@@ -46,9 +46,8 @@ $wgObjectCaches['mysql-multiwrite'] = [
 					'dbname'    => 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
-					// DBO_SSL is deprecated in 1.39
-					// use 'ssl' parameter instead
-					'flags'     => DBO_SSL,
+					'ssl'       => true,
+					'flags'     => DBO_DEFAULT,
 					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 				],
 			],
