@@ -5128,13 +5128,13 @@ $wgConf->settings += [
 				'name' => 'Wikisource',
 				'dbsuffix' => 'wikisource',
 				'wikitag' => 'wikisource',
-				'sister' => true
+				'sister' => false
 			],
 			'v' => [
 				'name' => 'Wikiversity',
 				'dbsuffix' => 'wikiversity',
 				'wikitag' => 'wikiversity',
-				'sister' => true
+				'sister' => false
 			]
 		],
 	],
@@ -5142,11 +5142,6 @@ $wgConf->settings += [
 		'default' => [
 			'name' => 'Incubator Plus 2.0',
 			'short' => 'incplus',
-		],
-	],
-	'wmincSisterProjects' => [
-		'default' => [
-			'm' => 'Miraheze Meta',
 		],
 	],
 	'wmincExistingWikis' => [
