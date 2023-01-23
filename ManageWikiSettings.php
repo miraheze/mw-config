@@ -1867,21 +1867,6 @@ $wgManageWikiSettings = [
 		'help' => 'Notify when a page is imported?',
 		'requires' => [],
 	],
-	'wgSlackIncomingWebhookUrl' => [
-		'name' => 'Slack Incoming Webhook URL',
-		'from' => 'slacknotifications',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'notifications',
-		'help' => 'URL of the Slack webhook to send notifications to. This value will be hidden to all users except those with the managewiki right.',
-		'requires' => [
-			'visibility' => [
-				'permissions' => [
-					'managewiki',
-				],
-			],
-		],
-	],
 	'wgHAWelcomeStaffGroupName' => [
 		'name' => 'HAWelcome Staff Group Name',
 		'from' => 'hawelcome',
