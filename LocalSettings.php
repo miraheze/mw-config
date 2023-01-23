@@ -4232,26 +4232,6 @@ $wgConf->settings += [
 		'default' => [],
 	],
 
-	// SlackNotifications
-	'wgSlackFromName' => [
-		'default' => $wi->sitename,
-	],
-	'wgSlackNotificationWikiUrlEnding' => [
-		'default' => 'index.php?title=',
-	],
-	'wgSlackNotificationWikiUrl' => [
-		'default' => $wi->server . '/w/',
-	],
-	'wgSlackShowNewUserEmail' => [
-		'default' => false,
-	],
-	'wgSlackShowNewUserIP' => [
-		'default' => false,
-	],
-	'wgSlackIncomingWebhookUrl' => [
-		'default' => '',
-	],
-
 	// Snap! skin
 	'wgSnapwikiskinWvuiSearchOptions' => [
 		'default' => [
@@ -5462,9 +5442,7 @@ $wi::$disabledExtensions = [
 	'editnotify',
 	'hitcounters',
 	'lingo',
-	'pdfbook',
 	'regexfunctions',
-	'slacknotifications',
 	'wikiforum',
 ];
 
