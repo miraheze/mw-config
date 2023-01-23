@@ -1603,7 +1603,7 @@ $wgConf->settings += [
 		'yourcreatureswiki' => 'intercriaturaswiki',
 	],
 	'wgGlobalUsageSharedRepoWiki' => [
-		'default' => 'commonswiki',
+		'default' => false,
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
