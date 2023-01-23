@@ -793,18 +793,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'pdfbook' => [
-		'name' => 'PdfBook',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfBook',
-		'var' => 'wmgUsePdfBook',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'pdfembed' => [
 		'name' => 'PDFEmbed',
 		'displayname' => 'PDF Embed',
@@ -3162,18 +3150,6 @@ $wgManageWikiExtensions = [
 						'createblogpost',
 					],
 				],
-			],
-		],
-		'section' => 'other',
-	],
-	'slacknotifications' => [
-		'name' => 'Slack Notifications',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SlackNotifications',
-		'var' => 'wmgUseSlackNotifications',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
 			],
 		],
 		'section' => 'other',
