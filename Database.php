@@ -29,7 +29,7 @@ $wgLBFactoryConf = [
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
 		'ssl' => true,
-		'flags' => DBO_DEFAULT,
+		'flags' => 0,
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 15,
