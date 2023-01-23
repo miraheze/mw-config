@@ -1578,9 +1578,24 @@ $wgConf->settings += [
 	// GlobalUsage
 	'wgGlobalUsageDatabase' => [
 		'default' => 'commonswiki',
+		'gpcommonswiki' => 'gpcommonswiki',
+		'gratisdatawiki' => 'gpcommonswiki',
+		'gratispaideiawiki' => 'gpcommonswiki',
+		'intercriaturaswiki' => 'intercriaturaswiki',
 		'tuscriaturaswiki' => 'intercriaturaswiki',
 		'yourcreatureswiki' => 'intercriaturaswiki',
-		'intercriaturaswiki' => 'intercriaturaswiki',
+	],
+	'wgGlobalUsageSharedRepoWiki' => [
+		'default' => false,
+		'gpcommonswiki' => 'gpcommonswiki',
+		'gratisdatawiki' => 'gpcommonswiki',
+		'gratispaideiawiki' => 'gpcommonswiki',
+	],
+	'wgGlobalUsagePurgeBacklinks' => [
+		'default' => false,
+		'gpcommonswiki' => true,
+		'gratisdatawiki' => true,
+		'gratispaideiawiki' => true,
 	],
 
 	// GlobalUserPage
