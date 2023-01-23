@@ -250,18 +250,36 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case '402611wiki':
-	case 'ballmediawiki':
 	case 'readerswhoknowwiki':
 		$wgHooks['AdminLinks'] = 'onAdminLinks';
 		function onAdminLinks( &$adminLinksTree ) {
 			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
 			$generalRow = $general->getRow( 'main' );
-			$generalRow->addItem( ALItem::newFromEditLink( 'Common.js', 'Edit JS file' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'ArticlesHome' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'EditWatchlist' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'GlobalPreferences' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'UploadFile' ) );
+			$generalRow->addItem( ALItem::newFromEditLink( 'Portal', 'Draft portal' ) );
+			$generalRow->addItem( ALItem::newFromEditLink( 'Common.js', 'Edit JS file' ) );
+
+			$cosmos = $adminLinksTree->getSection( wfMessage( 'skinname-cosmos' )->text() );
+			$cosmosRow = $cosmos->getRow( 'cosmos' )
+			$cosmosRow->addItem( ALItem::newFromEditLink( 'Cosmos.js', 'Edit skin JS' ) );
+			$cosmosRow->addItem( ALItem::newFromEditLink( 'Cosmos.css', 'Edit skin CSS' ) );
+
+			$users = $adminLinksTree->getSection( wfMessage( 'adminlinks_users' )->text() );
+			$usersRow = $users->getRow( 'main' );
+			$usersRow->addItem( ALItem::newFromSpecialPage( 'BlockUser' ) );
+
+			$browseAndSearch = $adminLinksTree->getSection( wfMessage( 'adminlinks_browsesearch' )->text() );
+			$browseAndSearchRow = $browseAndSearch->getRow( 'main' );
+			$browseAndSearchRow->addItem( ALItem::newFromSpecialPage( 'UnusedFiles' ) );
 		}
 
 		break;
+	case '402611wiki':
+	case 'ballmediawiki':
 	case 'polandballfanonwiki':
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
