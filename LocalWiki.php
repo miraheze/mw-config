@@ -24,7 +24,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'comprehensiblewiki':
 		$wgExternalDataSources['*']['min cache seconds'] = 0;
-		
+
 		break;
 	case 'constantnoblewiki':
 		$wgDplSettings['maxResultCount'] = 2500;
