@@ -1768,7 +1768,11 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
 		'var' => 'wmgUseReplaceText',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'install' => [
 			'permissions' => [
 				'sysop' => [
