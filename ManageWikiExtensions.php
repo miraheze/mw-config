@@ -2434,6 +2434,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
+				'discussiontools_items' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_persistent.sql",
 				'discussiontools_subscription' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_subscription.sql",
 			],
 		],
