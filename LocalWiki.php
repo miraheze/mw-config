@@ -22,6 +22,10 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
+	case 'comprehensiblewiki':
+		$wgExternalDataSources['*']['min cache seconds'] = 0;
+		
+		break;
 	case 'constantnoblewiki':
 		$wgDplSettings['maxResultCount'] = 2500;
 
