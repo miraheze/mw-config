@@ -47,7 +47,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
 					'ssl'       => true,
-					'flags'     => DBO_DEFAULT,
+					'flags'     => 0,
 					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 				],
 			],
