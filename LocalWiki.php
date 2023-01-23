@@ -252,6 +252,16 @@ switch ( $wi->dbname ) {
 		break;
 	case '402611wiki':
 	case 'ballmediawiki':
+	case 'readerswhoknowwiki':
+		$wgHooks['AdminLinks'] = 'onAdminLinks';
+		function onAdminLinks( &$adminLinksTree ) {
+			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
+			$generalRow = $general->getRow( 'main' );
+			$generalRow->addItem( ALItem::newFromEditLink( 'Common.js', 'Edit JS file' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
+		}
+
+		break;
 	case 'polandballfanonwiki':
 	case 'polandballwikisongcontestwiki':
 	case 'polandsmallswiki':
