@@ -76,9 +76,9 @@ class MirahezeFunctions {
 	private static $currentDatabase;
 
 	/**
-	 * @return array
+	 * @return ?array
 	 */
-	public static function getLocalDatabases(): array {
+	public static function getLocalDatabases(): ?array {
 		global $wgLocalDatabases;
 
 		static $list = null;
@@ -149,21 +149,23 @@ class MirahezeFunctions {
 				return '';
 			}
 		} else {
-			$databases = array_filter( $databasesArray['combi'] ?? $databasesArray['databases'], static function ( $data, $key ) {
-				global $wgDBname, $wgCommandLineMode, $wgDatabaseClustersMaintenance;
+			global $wgDatabaseClustersMaintenance;
 
-				if ( $wgDBname && $key === $wgDBname ) {
-					if ( $data['c'] === 'c6' ) {
-						require_once '/srv/mediawiki/ErrorPages/db141Wiki.php';
+			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+
+			if ( $wgDatabaseClustersMaintenance ) {
+				$databases = array_filter( $databases, static function ( $data, $key ) {
+					global $wgDBname, $wgCommandLineMode, $wgDatabaseClustersMaintenance;
+
+					if ( $wgDBname && $key === $wgDBname ) {
+						if ( !$wgCommandLineMode && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
+							require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
+						}
 					}
 
-					if ( !$wgCommandLineMode && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
-						require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
-					}
-				}
-
-				return $data['c'] !== 'c6';
-			}, ARRAY_FILTER_USE_BOTH );
+					return true;
+				}, ARRAY_FILTER_USE_BOTH );
+			}
 		}
 
 		if ( $onlyDBs ) {
@@ -242,7 +244,7 @@ class MirahezeFunctions {
 		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ? 'beta' : 'production';
 		$databases = self::readDbListFile( $list, false, $database );
 
-		if ( $deleted ) {
+		if ( $deleted && $databases ) {
 			$databases += self::readDbListFile( "deleted-$list", false, $database );
 		}
 
@@ -314,9 +316,9 @@ class MirahezeFunctions {
 	}
 
 	/**
-	 * @return array
+	 * @return ?array
 	 */
-	public static function getDatabaseClusters(): array {
+	public static function getDatabaseClusters(): ?array {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 

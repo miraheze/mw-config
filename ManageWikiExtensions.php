@@ -793,14 +793,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'pdfbook' => [
-		'name' => 'PdfBook',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfBook',
-		'var' => 'wmgUsePdfBook',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
 	'pdfembed' => [
 		'name' => 'PDFEmbed',
 		'displayname' => 'PDF Embed',
@@ -1382,14 +1374,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'flaggedpages' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedpage_pending' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedtemplates' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedpage_config' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs_tracking' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs_promote' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs_statistics' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
+				'flaggedpages' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/tables-generated.sql",
 			],
 			'permissions' => [
 				'editor' => [
@@ -1458,10 +1443,10 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_recommendations.sql",
-				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_submissions.sql",
-				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentee_data.sql",
-				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentor_mentee.sql",
+				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_recommendations.sql",
+				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_submissions.sql",
+				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentee_data.sql",
+				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentor_mentee.sql",
 			],
 			'permissions' => [
 				'sysop' => [
@@ -2134,6 +2119,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'pivot' => [
+		'name' => 'Pivot',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Pivot',
+		'var' => 'wmgUsePivot',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'refreshed' => [
 		'name' => 'Refreshed',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Refreshed',
@@ -2416,6 +2409,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
+				'discussiontools_items' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_persistent.sql",
 				'discussiontools_subscription' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_subscription.sql",
 			],
 		],
@@ -3141,14 +3135,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'section' => 'other',
-	],
-	'slacknotifications' => [
-		'name' => 'Slack Notifications',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SlackNotifications',
-		'var' => 'wmgUseSlackNotifications',
-		'conflicts' => false,
-		'requires' => [],
 		'section' => 'other',
 	],
 	'softredirector' => [

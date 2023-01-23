@@ -20,6 +20,8 @@ $entitySources = [
 	],
 ];
 
+$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = MIGRATION_NEW;
+
 if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
 	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
 	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;

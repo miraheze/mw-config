@@ -46,6 +46,10 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'dragontamerwiki':
+		$wgDplSettings['maxCategoryCount'] = 7;
+
+		break;
 	case 'famedatawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -292,6 +296,10 @@ switch ( $wi->dbname ) {
 			}
 		}
 
+		break;
+	case 'sagan4wiki':
+	case 'sagan4alphawiki':
+		$wgCargoAllowedSQLFunctions[] = 'RAND';
 		break;
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';

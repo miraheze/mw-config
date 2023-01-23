@@ -97,6 +97,7 @@ $IP/extensions/HeaderTabs/extension.json
 $IP/extensions/HideSection/extension.json
 $IP/extensions/HighlightLinksInCategory/extension.json
 $IP/extensions/HitCounters/extension.json
+$IP/extensions/IPInfo/extension.json
 $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageRating/extension.json
 $IP/extensions/ImportDump/extension.json
@@ -172,7 +173,6 @@ $IP/extensions/PageSchemas/extension.json
 $IP/extensions/PageTriage/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/ParserFunctions/extension.json
-$IP/extensions/PdfBook/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/PipeEscape/extension.json
 $IP/extensions/Poem/extension.json
@@ -214,7 +214,6 @@ $IP/extensions/SimpleBlogPage/extension.json
 $IP/extensions/SimpleChanges/extension.json
 $IP/extensions/SimpleTooltip/extension.json
 $IP/extensions/SkinPerPage/extension.json
-$IP/extensions/SlackNotifications/extension.json
 $IP/extensions/SnapProjectEmbed/extension.json
 $IP/extensions/SocialProfile/SocialProfile.php
 $IP/extensions/SocialProfile/SystemGifts/extension.json
@@ -310,6 +309,7 @@ $IP/skins/Monaco/skin.json
 $IP/skins/MonoBook/skin.json
 $IP/skins/Nimbus/skin.json
 $IP/skins/Nostalgia/skin.json
+$IP/skins/Pivot/skin.json
 $IP/skins/Refreshed/skin.json
 $IP/skins/Timeless/skin.json
 $IP/skins/Truglass/skin.json

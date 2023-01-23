@@ -56,10 +56,6 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
 
-$wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'miraheze-global-renames-disabled' );
-$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'miraheze-global-renames-disabled' );
-$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'miraheze-global-renames-disabled' );
-
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -428,7 +424,7 @@ $wgConf->settings += [
 		'betaheze' => 'testglobal',
 	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
@@ -439,10 +435,6 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthSilentLogin' => [
 		'default' => true,
-	],
-	'wgCentralAuthHiddenLevelMigrationStage' => [
-		// Remove with 1.39
-		'default' => SCHEMA_COMPAT_READ_NEW | SCHEMA_COMPAT_WRITE_NEW,
 	],
 
 	// CentralNotice
@@ -486,6 +478,12 @@ $wgConf->settings += [
 	],
 
 	// CheckUser
+	'wgCheckUserActorMigrationStage' => [
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	],
+	'wgCheckUserLogActorMigrationStage' => [
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	],
 	'wgCheckUserForceSummary' => [
 		'default' => true,
 	],
@@ -830,7 +828,7 @@ $wgConf->settings += [
 				'Database exists (wiki closed)' => 'A wiki exists at the subdomain selected but is wiki. Please visit the Requests for reopening wikis page to request to reopen the wiki or ask for help on Community noticeboard.',
 				'Database exists (wiki already deleted)' => 'A wiki exists at the selected subdomain but has been deleted in accordance with the Dormancy Policy. I will request a Steward undelete it for you. When it has been undeleted and reopened, please visit the local wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity; if you require a Dormancy Policy exemption, you should review the policy and request it once your wiki has at least 40-60 content pages. Thank you.',
 				'Database exists (wiki undeleted)' => 'The selected wiki database name already exists and the wiki was closed, however, the wiki has now been reopened. Please visit the wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity. Please reach out to any local bureaucrat to request any permissions if you require them. If bureaucrats are not active on the wiki after a reasonable period of time, please start a local election and ask a Steward to evaluate it on the Stewards\' noticeboard. Thank you.',
-				'Database exists (unrelated purpose)' => 'A wiki exists at the selected subdomain but it is unrelated to your topic. Please select a different subdomain.',
+				'Database exists (unrelated purpose)' => 'Wiki database name and subdomain already exist. The wiki does not however seem to have the same purpose as the one you are requesting here, so you will need to request a different subdomain.  Please update this request once you have selected a new subdomain to reopen it for consideration.',
 				'Duplicate request' => 'Declining as a duplicate request, which needs more information. Please do not edit this request and instead go back into your original request. Also, please do not submit duplicate requests. Thank you.',
 				'Excessive requests' => 'Declining as you have requested an excessive amount of wikis. Thank you for your understanding. If you believe you have legitimate need for this amount of wikis, please reply to this request with a 2-3 sentence reasoning on why you need the wikis.',
 				'Vandal request' => 'Declining as this wiki request is product of either vandalism or trolling.',
@@ -878,7 +876,6 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
-			'c6',
 		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
@@ -920,21 +917,6 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiSQLfiles' => [
 		'default' => [
-			"$IP/maintenance/tables-generated.sql",
-			"$IP/extensions/AbuseFilter/db_patches/mysql/abusefilter.sql",
-			"$IP/extensions/AntiSpoof/sql/patch-antispoof.mysql.sql",
-			"$IP/extensions/BetaFeatures/sql/tables-generated.sql",
-			"$IP/extensions/CheckUser/cu_log.sql",
-			"$IP/extensions/CheckUser/cu_changes.sql",
-			"$IP/extensions/DataDump/sql/data_dump.sql",
-			"$IP/extensions/Echo/echo.sql",
-			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
-			"$IP/extensions/OAuth/schema/OAuth.sql",
-			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
-		],
-		// 1.39
-		'betaheze' => [
 			"$IP/maintenance/tables-generated.sql",
 			"$IP/extensions/AbuseFilter/db_patches/mysql/tables-generated.sql",
 			"$IP/extensions/AntiSpoof/sql/mysql/tables-generated.sql",
@@ -1071,10 +1053,6 @@ $wgConf->settings += [
 	],
 	'wgSharedTables' => [
 		'default' => [],
-	],
-	'wgActorTableSchemaMigrationStage' => [
-		// Remove with 1.39
-		'default' => SCHEMA_COMPAT_NEW,
 	],
 
 	// Delete
@@ -1983,6 +1961,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// IPInfo
+	'wgIPInfoGeoLite2Prefix' => [
+		'default' => '/srv/mediawiki/geoip/GeoLite2-',
+	],
+
 	// JavascriptSlideshow
 	'wgHtml5' => [
 		'ext-JavascriptSlideshow' => true,
@@ -2704,6 +2687,10 @@ $wgConf->settings += [
 				'hideuser',
 				'interwiki',
 				'investigate',
+				'ipinfo',
+				'ipinfo-view-basic',
+				'ipinfo-view-full',
+				'ipinfo-view-log',
 				'managewiki-restricted',
 				'managewiki-editdefault',
 				'moderation-checkuser',
@@ -4240,26 +4227,6 @@ $wgConf->settings += [
 		'default' => [],
 	],
 
-	// SlackNotifications
-	'wgSlackFromName' => [
-		'default' => $wi->sitename,
-	],
-	'wgSlackNotificationWikiUrlEnding' => [
-		'default' => 'index.php?title=',
-	],
-	'wgSlackNotificationWikiUrl' => [
-		'default' => $wi->server . '/w/',
-	],
-	'wgSlackShowNewUserEmail' => [
-		'default' => false,
-	],
-	'wgSlackShowNewUserIP' => [
-		'default' => false,
-	],
-	'wgSlackIncomingWebhookUrl' => [
-		'default' => '',
-	],
-
 	// Snap! skin
 	'wgSnapwikiskinWvuiSearchOptions' => [
 		'default' => [
@@ -4661,10 +4628,6 @@ $wgConf->settings += [
 	],
 
 	// Vector
-	'wgVectorSkinMigrationMode' => [
-		// Remove with 1.39
-		'default' => false,
-	],
 	'wgVectorResponsive' => [
 		'default' => false,
 	],
@@ -5115,25 +5078,60 @@ $wgConf->settings += [
 	// WikimediaIncubator
 	'wmincProjects' => [
 		'default' => [
-			'p' => 'Wikipedia',
-			'b' => 'Wikibooks',
-			't' => 'Wiktionary',
-			'q' => 'Wikiquote',
-			'n' => 'Wikinews',
-			'y' => 'Wikivoyage',
-			's' => 'Wikisource',
-			'v' => 'Wikiversity',
+			'p' => [
+				'name' => 'Wikipedia',
+				'dbsuffix' => 'wiki',
+				'wikitag' => 'wikipedia',
+				'sister' => false
+			],
+			'b' => [
+				'name' => 'Wikibooks',
+				'dbsuffix' => 'wikibooks',
+				'wikitag' => 'wikibooks',
+				'sister' => false
+			],
+			't' => [
+				'name' => 'Wiktionary',
+				'dbsuffix' => 'wiktionary',
+				'wikitag' => 'wiktionary',
+				'sister' => false
+			],
+			'q' => [
+				'name' => 'Wikiquote',
+				'dbsuffix' => 'wikiquote',
+				'wikitag' => 'wikiquote',
+				'sister' => false
+			],
+			'n' => [
+				'name' => 'Wikinews',
+				'dbsuffix' => 'wikinews',
+				'wikitag' => 'wikinews',
+				'sister' => false
+			],
+			'y' => [
+				'name' => 'Wikivoyage',
+				'dbsuffix' => 'wikivoyage',
+				'wikitag' => 'wikivoyage',
+				'sister' => false
+			],
+			's' => [
+				'name' => 'Wikisource',
+				'dbsuffix' => 'wikisource',
+				'wikitag' => 'wikisource',
+				'sister' => false
+			],
+			'v' => [
+				'name' => 'Wikiversity',
+				'dbsuffix' => 'wikiversity',
+				'wikitag' => 'wikiversity',
+				'sister' => false
+			]
 		],
 	],
 	'wmincProjectSite' => [
 		'default' => [
 			'name' => 'Incubator Plus 2.0',
 			'short' => 'incplus',
-		],
-	],
-	'wmincSisterProjects' => [
-		'default' => [
-			'm' => 'Miraheze Meta',
 		],
 	],
 	'wmincExistingWikis' => [
@@ -5438,18 +5436,10 @@ require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
 	'editnotify',
 	'hitcounters',
+	'lingo',
 	'regexfunctions',
 	'wikiforum',
 ];
-
-if ( version_compare( MW_VERSION, '1.39', '>=' ) ) {
-	$wi::$disabledExtensions = array_merge(
-		$wi::$disabledExtensions, [
-			// Broken (https://phabricator.wikimedia.org/T317499)
-			'protectsite',
-		]
-	);
-}
 
 $globals = MirahezeFunctions::getConfigGlobals();
 

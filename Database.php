@@ -22,18 +22,14 @@ $wgLBFactoryConf = [
 		'c5' => [
 			'db131' => 1,
 		],
-		'c6' => [
-			'db141' => 1,
-		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		// DBO_SSL is deprecated in 1.39
-		// use 'ssl' parameter instead
-		'flags' => DBO_SSL,
+		'ssl' => true,
+		'flags' => DBO_DEFAULT,
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 15,
@@ -51,7 +47,6 @@ $wgLBFactoryConf = [
 		'db101' => 'db101.miraheze.org',
 		'db121' => 'db121.miraheze.org',
 		'db131' => 'db131.miraheze.org',
-		'db141' => 'db141.miraheze.org',
 		'db142' => 'db142.miraheze.org',
 	],
 	'externalLoads' => [
@@ -75,7 +70,6 @@ $wgLBFactoryConf = [
 		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
-		'c6' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
 
