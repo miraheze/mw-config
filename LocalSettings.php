@@ -1198,6 +1198,10 @@ $wgConf->settings += [
 	'wgEmbedVideoRequireConsent' => [
 		'default' => true,
 	],
+	'wgEmbedVideoFetchExternalThumbnails' => [
+		'default' => true,
+		'comprehensibleinputwiki' => false,
+	],
 
 	// Evelution
 	'wgEvelutionLeftPersonalLinks' => [
