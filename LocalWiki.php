@@ -251,7 +251,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'paneidoversewiki':
-		$wgHooks['AdminLinks'] = 'onAdminLinks';
+		$wgHooks['AdminLinks'][] = 'onAdminLinks';
 		function onAdminLinks( &$adminLinksTree ) {
 			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
 			$generalRow = $general->getRow( 'main' );
