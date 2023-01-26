@@ -1313,6 +1313,7 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Fetch thumbnails from external video services?',
 		'requires' => [],
+	],
 	'wgEmbedVideoRequireConsent' => [
 		'name' => 'EmbedVideo Require Consent',
 		'from' => 'embedvideo',
