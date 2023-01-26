@@ -585,7 +585,17 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'editing',
-		'help' => 'Show more authors.',
+		'help' => 'If there are more authors than specified in $wgMaxCredits, link the rest in a separate credits page.',
+		'requires' => [],
+	],
+	'wgWikiEditorRealtimePreview' => [
+		'name' => 'Enable WikiEditor Realtime Preview mode?',
+		'from' => 'wikieditor',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Enables WikiEditor\'s Realtime Preview mode which shows you a realtime preview of your edits in a side pane.',
 		'requires' => [],
 	],
 	'wgVisualEditorEnableWikitext' => [
