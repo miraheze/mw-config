@@ -1200,7 +1200,6 @@ $wgConf->settings += [
 	],
 	'wgEmbedVideoFetchExternalThumbnails' => [
 		'default' => true,
-		'comprehensibleinputwiki' => false,
 	],
 
 	// Evelution
