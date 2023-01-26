@@ -455,6 +455,9 @@ $wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.
 $wgRightsText = 'Creative Commons Attribution Share Alike';
 $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
+// 'no-ipinfo' group not used on Miraheze but is on all wikis due to the nature of IPInfo
+unset($wgGroupPermissions['no-ipinfo']);
+
 /**
  * Override values from ManageWiki.
  * If set in LocalSettings.php, this will be overridden
