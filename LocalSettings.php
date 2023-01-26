@@ -5082,6 +5082,11 @@ $wgConf->settings += [
 		'default' => 'LiberaChat',
 	],
 
+	// WikiEditor
+	'wgWikiEditorRealtimePreview' => [
+		'default' => false,
+	],
+
 	// WikiForum
 	'wgWikiForumAllowAnonymous' => [
 		'default' => true,
