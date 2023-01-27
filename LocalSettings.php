@@ -43,8 +43,8 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenance = [];
 
-$wgSpecialPages['RequestWiki'] = DisabledSpecialPage::getCallback( 'RequestWiki', 'Due to current issues with wiki creations, all wiki rquests are currently on hold. We are working to resolve the issues ASAP and apologise for the inconvenience. They should hopefully be back soon.' );
-$wgSpecialPages['RequestWikiQueue'] = DisabledSpecialPage::getCallback( 'RequestWikiQueue', 'Due to current issues with wiki creations, all wiki rquests are currently on hold. We are working to resolve the issues ASAP and apologise for the inconvenience. They should hopefully be back soon' );
+$wgSpecialPages['RequestWiki'] = DisabledSpecialPage::getCallback( 'RequestWiki', 'Due to current issues with wiki creations, all wiki requests are currently disabled. We are working to resolve the issues ASAP and apologise for the inconvenience. They should hopefully be back soon.' );
+$wgSpecialPages['RequestWikiQueue'] = DisabledSpecialPage::getCallback( 'RequestWikiQueue', 'Due to current issues with wiki creations, all wiki requests are currently disabled. We are working to resolve the issues ASAP and apologise for the inconvenience. They should hopefully be back soon' );
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
