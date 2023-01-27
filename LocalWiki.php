@@ -263,11 +263,6 @@ switch ( $wi->dbname ) {
 			$generalRow->addItem( ALItem::newFromEditLink( 'Portal', 'Draft portal' ) );
 			$generalRow->addItem( ALItem::newFromEditLink( 'Common.js', 'Edit JS file' ) );
 
-			$cosmos = $adminLinksTree->getSection( wfMessage( 'skinname-cosmos' )->text() );
-			$cosmosRow = $cosmos->getRow( 'cosmos' );
-			$cosmosRow->addItem( ALItem::newFromEditLink( 'Cosmos.js', 'Edit skin JS' ) );
-			$cosmosRow->addItem( ALItem::newFromEditLink( 'Cosmos.css', 'Edit skin CSS' ) );
-
 			$users = $adminLinksTree->getSection( wfMessage( 'adminlinks_users' )->text() );
 			$usersRow = $users->getRow( 'main' );
 			$usersRow->addItem( ALItem::newFromSpecialPage( 'BlockUser' ) );
