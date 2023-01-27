@@ -16,7 +16,7 @@ $wgMajorSiteNoticeID = 82;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+/*	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		$skin->getOutput()->enableOOUI();
@@ -48,7 +48,7 @@ $wgMajorSiteNoticeID = 82;
 	}
 
 // }
-
+*/
 // Specific wiki SiteNotice
 /* if ( !preg_match( '/^([0-9]|a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|q)/', $wgDBname ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
