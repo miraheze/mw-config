@@ -22,7 +22,7 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'comprehensiblewiki':
+	case 'comprehensibleinputwiki':
 		$wgExternalDataSources['*']['min cache seconds'] = 0;
 
 		break;
