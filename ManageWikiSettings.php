@@ -1315,6 +1315,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enable the video media handlers for displaying embedded video in articles?',
 		'requires' => [],
 	],
+	'wgEmbedVideoFetchExternalThumbnails' => [
+		'name' => 'EmbedVideo Fetch External Thumbnails',
+		'from' => 'embedvideo',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Fetch thumbnails from external video services?',
+		'requires' => [],
+	],
 	'wgEmbedVideoRequireConsent' => [
 		'name' => 'EmbedVideo Require Consent',
 		'from' => 'embedvideo',
