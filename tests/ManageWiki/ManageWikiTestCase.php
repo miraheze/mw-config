@@ -13,7 +13,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	abstract public function getSchema(): array;
 
-	public function mockMirahezeFunctions(): stdClass {
+	public function mockWikiInitialise(): stdClass {
 		$methods = [
 			'getSettingValue' => [],
 			'isAllOfExtensionsActive' => true,
