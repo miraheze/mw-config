@@ -1,9 +1,11 @@
 <?php
 
+namespace Miraheze\Config\Setup;
+
 use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\DBConnRef;
 
-class MirahezeFunctions {
+class WikiInitialise {
 
 	/** @var string */
 	public $dbname;
