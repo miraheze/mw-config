@@ -180,8 +180,8 @@ class WikiInitialise {
 	public static function setupHooks() {
 		global $wgHooks;
 
-		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
-		$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = __CLASS__ . '::onGenerateDatabaseLists';
+		$wgHooks['MediaWikiServices'][] = __CLASS__ . '::onMediaWikiServices';
 	}
 
 	public static function setupSiteConfiguration() {
