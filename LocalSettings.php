@@ -1,5 +1,7 @@
 <?php
 
+use Miraheze\Config\Setup\WikiInitialise;
+
 /**
  * LocalSettings.php for Miraheze.
  * Authors of initial version: Southparkfan, John Lewis, Orain contributors
@@ -44,7 +46,7 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 $wgDatabaseClustersMaintenance = [];
 
 require_once '/srv/mediawiki/config/Setup/WikiInitialise.php';
-$wi = new Miraheze\Config\Setup\WikiInitialise();
+$wi = new WikiInitialise();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
@@ -5469,7 +5471,7 @@ $wi::$disabledExtensions = [
 	'wikiforum',
 ];
 
-$globals = MirahezeFunctions::getConfigGlobals();
+$globals = WikiInitialise::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
