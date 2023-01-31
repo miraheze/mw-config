@@ -679,17 +679,6 @@ $wgManageWikiSettings = [
 		'help' => 'To disable the editor on JavaScript and CSS pages in the MediaWiki, User and other core namespaces, unset this option.',
 		'requires' => [],
 	],
-	'wgReplaceTextResultsLimit' => [
-		'name' => 'Replace Text Results Limit',
-		'from' => 'replacetext',
-		'type' => 'integer',
-		'minint' => 10,
-		'maxint' => 500,
-		'overridedefault' => 250,
-		'section' => 'editing',
-		'help' => 'Limit for Replace Text results.',
-		'requires' => [],
-	],
 	'wgScribuntoUseCodeEditor' => [
 		'name' => 'Scribunto Use CodeEditor',
 		'from' => 'codeeditor',
