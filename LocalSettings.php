@@ -1781,7 +1781,7 @@ $wgConf->settings += [
 			'ElasticSearch',
 		],
 	],
-			
+
 	'wgIncidentReportingTaskUrl' => [
 		'default' => 'https://phabricator.miraheze.org/',
 	],
