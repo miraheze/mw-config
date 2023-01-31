@@ -1769,11 +1769,11 @@ $wgConf->settings += [
 	],
 	'wgIncidentReportingInactiveServices' => [
 		'default' => [
-			'Ganglia',
-			'GlusterFS',
-			'LizardFS',
-			'NFS',
-			'ElasticSearch',
+			'Ganglia' => 'https://meta.miraheze.org/wiki/Tech:Ganglia',
+			'GlusterFS' => 'https://meta.miraheze.org/wiki/Tech:GlusterFS',
+			'LizardFS' => 'https://meta.miraheze.org/wiki/Tech:LizardFS',
+			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
+			'ElasticSearch' => 'https://meta.miraheze.org/wiki/Tech:ElasticSearch',
 		],
 	],
 
