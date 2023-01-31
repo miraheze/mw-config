@@ -1772,6 +1772,16 @@ $wgConf->settings += [
 			'Varnish' => 'https://meta.miraheze.org/wiki/Tech:Varnish',
 		],
 	],
+	'wgIncidentReportingInactiveServices' => [
+		'default' => [
+			'Ganglia',
+			'GlusterFS',
+			'LizardFS',
+			'NFS',
+			'ElasticSearch',
+		],
+	],
+			
 	'wgIncidentReportingTaskUrl' => [
 		'default' => 'https://phabricator.miraheze.org/',
 	],
