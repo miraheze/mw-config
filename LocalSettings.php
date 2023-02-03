@@ -293,7 +293,10 @@ $wgConf->settings += [
 
 	// Captcha
 	'wgCaptchaClass' => [
-		'default' => ReCaptchaNoCaptcha::class,
+		'default' => MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha::class,
+	],
+	'wgHCaptchaSiteKey' => [
+		'default' => '27ec56a0-af2f-4a84-84d8-800b992926cb',
 	],
 	'wgCaptchaTriggers' => [
 		'default' => [
