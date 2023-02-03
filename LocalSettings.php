@@ -292,14 +292,8 @@ $wgConf->settings += [
 	],
 
 	// Captcha
-	'wgCaptchaClass' => [
-		'default' => MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha::class,
-	],
 	'wgHCaptchaSiteKey' => [
 		'default' => '27ec56a0-af2f-4a84-84d8-800b992926cb',
-	],
-	'wgHCaptchaProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
 	],
 	'wgCaptchaTriggers' => [
 		'default' => [
