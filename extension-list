@@ -35,8 +35,8 @@ $IP/extensions/CommentStreams/extension.json
 $IP/extensions/Commentbox/extension.json
 $IP/extensions/Comments/extension.json
 $IP/extensions/CommonsMetadata/extension.json
-$IP/extensions/ConfirmEdit/hCaptcha/extension.json
 $IP/extensions/ConfirmEdit/extension.json
+$IP/extensions/ConfirmEdit/hCaptcha/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContributionScores/extension.json
 $IP/extensions/CookieWarning/extension.json
