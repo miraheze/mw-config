@@ -292,9 +292,6 @@ $wgConf->settings += [
 	],
 
 	// Captcha
-	'wgHCaptchaSiteKey' => [
-		'default' => '27ec56a0-af2f-4a84-84d8-800b992926cb',
-	],
 	'wgCaptchaTriggers' => [
 		'default' => [
 			'edit' => false,
@@ -309,17 +306,8 @@ $wgConf->settings += [
 			'wikiforum' => true,
 		],
 	],
-	'wgReCaptchaSendRemoteIP' => [
-		'default' => false,
-	],
-	'wgReCaptchaSiteKey' => [
-		'default' => '6LeR1msdAAAAAEMnmLm8lI0HMP5wFvYuQFdYX8NH',
-	],
-	'wgReCaptchaVersion' => [
-		'default' => 'v3',
-	],
-	'wgReCaptchaMinimumScore' => [
-		'default' => 0.3,
+	'wgHCaptchaSiteKey' => [
+		'default' => '27ec56a0-af2f-4a84-84d8-800b992926cb',
 	],
 
 	// Cargo
