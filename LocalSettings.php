@@ -2007,7 +2007,7 @@ $wgConf->settings += [
 	],
 	'wgKartographerSimpleStyleMarkers' => [
 		'default' => true,
-		'leborkwiki' => false
+		'leborkwiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [],
