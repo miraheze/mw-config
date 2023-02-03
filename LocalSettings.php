@@ -1991,7 +1991,7 @@ $wgConf->settings += [
 
 	// Kartographer
 	'wgKartographerDfltStyle' => [
-		'default' => '.',
+		'default' => 'osm-intl',
 	],
 	'wgKartographerEnableMapFrame' => [
 		'default' => true,
@@ -2000,13 +2000,17 @@ $wgConf->settings += [
 		'default' => 'https://tile.openstreetmap.org',
 	],
 	'wgKartographerSrcsetScales' => [
-		'default' => false,
+		'default' => [1.3, 1.5, 2, 2.6, 3],
+			
 	],
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
 	],
 	'wgKartographerStyles' => [
-		'default' => [],
+		'default' => [
+			'osm-intl',
+			'osm',
+		],
 	],
 	'wgKartographerUseMarkerStyle' => [
 		'default' => false,
