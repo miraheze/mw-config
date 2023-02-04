@@ -2979,6 +2979,18 @@ $wgConf->settings += [
 	'wgCapitalLinks' => [
 		'default' => true,
 	],
+	'wgEnableMagicLinks' => [
+		'default' => [
+			'ISBN' => false,
+			'PMID' => false,
+			'RFC' => false,
+		],
+		'xtexvnetwiki' => [
+			'ISBN' => true,
+			'PMID' => false,
+			'RFC' => true,
+		],
+	],
 	'wgActiveUserDays' => [
 		'default' => 30,
 	],
@@ -3094,6 +3106,12 @@ $wgConf->settings += [
 		],
 		'mcspringfieldserverwiki' => [
 			'base' => [
+				'.nomobile',
+			],
+		],
+		'xtexvnetwiki' => [
+			'base' => [
+				'.vertical-navbox',
 				'.nomobile',
 			],
 		],
