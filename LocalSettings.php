@@ -2005,8 +2005,7 @@ $wgConf->settings += [
 		'default' => 'https://tile.openstreetmap.org',
 	],
 	'wgKartographerSrcsetScales' => [
-		'default' => [1.3, 1.5, 2, 2.6, 3],
-			
+		'default' => [1.3, 1.5, 2, 2.6, 3],	
 	],
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
@@ -2014,6 +2013,7 @@ $wgConf->settings += [
 	'wgKartographerSimpleStyleMarkers' => [
 		'default' => true,
 		'leborkwiki' => false,
+		'gratisdatawiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
