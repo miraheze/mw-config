@@ -40,6 +40,7 @@ wfLoadExtensions( [
 	'Scribunto',
 	// 'SecureLinkFixer',
 	'SpamBlacklist',
+	'StopForumSpam',
 	'TitleBlacklist',
 	'TorBlock',
 	'WikiDiscover',
