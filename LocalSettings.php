@@ -2987,7 +2987,7 @@ $wgConf->settings += [
 		],
 		'xtexvnetwiki' => [
 			'ISBN' => true,
-			'PMID' => true,
+			'PMID' => false,
 			'RFC' => true,
 		],
 	],
