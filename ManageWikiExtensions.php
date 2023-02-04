@@ -2590,7 +2590,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'geo_tags' => "$IP/extensions/GeoData/sql/db-backed.sql"
+				'geo_tags' => "$IP/extensions/GeoData/sql/mysql/tables-generated.sql"
 			],
 		],
 		'section' => 'other',
