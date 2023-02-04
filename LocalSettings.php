@@ -121,6 +121,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// AdminLinks
+	'wgAdminLinksDelimiter' => [
+		'default' => '•',
+	],
+
 	// Anti-spam
 	'wgAccountCreationThrottle' => [
 		'default' => [
