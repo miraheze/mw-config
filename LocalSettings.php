@@ -2010,6 +2010,10 @@ $wgConf->settings += [
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
 	],
+	'wgKartographerSimpleStyleMarkers' => [
+		'default' => true,
+		'leborkwiki' => false,
+	],
 	'wgKartographerStyles' => [
 		'default' => [],
 	],
