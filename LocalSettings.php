@@ -1997,6 +1997,9 @@ $wgConf->settings += [
 	// Kartographer
 	'wgKartographerDfltStyle' => [
 		'default' => 'osm-intl',
+		'gratisdatawiki' => '.',
+		'gratispaideiawiki' => '.',
+		'leborkwiki' => '.',
 	],
 	'wgKartographerEnableMapFrame' => [
 		'default' => true,
