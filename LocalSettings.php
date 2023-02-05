@@ -1997,6 +1997,9 @@ $wgConf->settings += [
 	// Kartographer
 	'wgKartographerDfltStyle' => [
 		'default' => 'osm-intl',
+		'gratisdatawiki' => '.',
+		'gratispaideiawiki' => '.',
+		'leborkwiki' => '.',
 	],
 	'wgKartographerEnableMapFrame' => [
 		'default' => true,
@@ -2743,6 +2746,14 @@ $wgConf->settings += [
 				'viewsuppressed',
 				'writeapi',
 			],
+			'user' => [
+				'autoconfirmed',
+				'noratelimit',
+				'skipcaptcha',
+				'managewiki',
+				'globalblock-whitelist',
+				'ipblock-exempt',
+			],
 			'*' => [
 				'read',
 				'skipcaptcha',
@@ -2763,6 +2774,8 @@ $wgConf->settings += [
 				'viewmyprivateinfo',
 				'viewmywatchlist',
 				'managewiki',
+				'noratelimit',
+				'autoconfirmed',
 			],
 		],
 	],
@@ -3712,7 +3725,7 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
-		'+pokemon2wiki' => [
+		'+pokemonwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
