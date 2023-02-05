@@ -323,4 +323,8 @@ switch ( $wi->dbname ) {
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
+	case 'wanderingstarswiki':
+		$wgPivotFeatures['showActionsForAnon'] = false;
+
+		break;
 }
