@@ -1401,6 +1401,28 @@ $wgConf->settings += [
 	'wgMirahezeCommons' => [
 		'default' => true,
 	],
+	'wgMirahezeReportsBlockAlertKeywords' => [
+		'default' => [
+			'underage',
+			'under age',
+			'under 13',
+			'death threats',
+			'death threat',
+			'child pornography',
+			'images of children',
+			'images of minors',
+			'suicide',
+			'kill me',
+			'kill themselves',
+			'kill themselfs',
+			'kill themself',
+			'murder',
+			'terrorist',
+			'terrorism',
+			'bomb threat',
+			'bomb hoax',
+		],
+	],
 	// Only the board and SRE are allowed access
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
