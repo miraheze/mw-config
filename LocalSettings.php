@@ -1102,7 +1102,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgDiscordExperimentalCVTMatchFilter' => [
-		'default' => [ '.*' ],
+		'default' => [ '(n[1i!*]gg[3*e]r|r[e3*]t[4@*a]rd|f[@*4]gg[0*o]t|ch[1!i*]nk)' ],
 	],
 
 	// Description2
