@@ -3565,6 +3565,23 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'Whether or not to show the normal MediaWiki external link icon when using the Chameleon skin.',
 		'requires' => [],
+	],*/
+	'wgPivotFeatures' => [
+		'name' => 'Pivot features',
+		'from' => 'pivot',
+		'global' => true,
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'showActionsForAnon',
+			'fixedNavBar',
+			'usePivotTabs',
+			'showHelpUnderTools',
+			'showRecentChangesUnderTools',
+			'navbarIcon',
+		],
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Enable and disable some features of the Pivot skin',
 	],
 
 	// Wikibase
