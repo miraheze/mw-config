@@ -3583,6 +3583,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Enable and disable some features of the Pivot skin',
+		'requires' => [],
 	],
 
 	// Wikibase
