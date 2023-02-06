@@ -1098,6 +1098,9 @@ $wgConf->settings += [
 	'wgDiscordCurlProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
+	'wgDiscordEnableExperimentalCVTFeatures' => [
+		'default' => true,
+	],
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
