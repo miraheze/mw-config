@@ -3585,7 +3585,7 @@ $wgManageWikiSettings = [
 			'FixedNavbar' => 'fixedNavBar',
 			'UsePivotTabs' => 'usePivotTabs',
 			'ShowHelpUnderTools' => 'showHelpUnderTools',
-			'ShowRecentChangesUnderTools' => 'showRecentChangesUnderTools'
+			'ShowRecentChangesUnderTools' => 'showRecentChangesUnderTools',
 			'NavbarIcon' => 'navbarIcon',
 			'PreloadFontAwesome' => 'preloadFontAwesome',
 		],
