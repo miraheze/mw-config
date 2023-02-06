@@ -1101,6 +1101,9 @@ $wgConf->settings += [
 	'wgDiscordEnableExperimentalCVTFeatures' => [
 		'default' => true,
 	],
+	'wgDiscordExperimentalCVTMatchFilter' => [
+		'default' => [ '.*' ],
+	],
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
