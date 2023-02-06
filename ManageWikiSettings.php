@@ -3580,6 +3580,15 @@ $wgManageWikiSettings = [
 			'navbarIcon',
 			'preloadFontAwesome',
 		],
+		'options' => [
+			'ShowActionsForAnon' => 'showActionsForAnon',
+			'FixedNavbar' => 'fixedNavBar',
+			'UsePivotTabs' => 'usePivotTabs',
+			'ShowHelpUnderTools' => 'showHelpUnderTools',
+			'ShowRecentChangesUnderTools' => 'showRecentChangesUnderTools'
+			'NavbarIcon' => 'navbarIcon',
+			'PreloadFontAwesome' => 'preloadFontAwesome',
+		],
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Enable and disable some features of the Pivot skin',
