@@ -1098,6 +1098,12 @@ $wgConf->settings += [
 	'wgDiscordCurlProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
+	'wgDiscordEnableExperimentalCVTFeatures' => [
+		'default' => true,
+	],
+	'wgDiscordExperimentalCVTMatchFilter' => [
+		'default' => [ '.*' ],
+	],
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
@@ -2030,7 +2036,7 @@ $wgConf->settings += [
 		'default' => 'https://tile.openstreetmap.org',
 	],
 	'wgKartographerSrcsetScales' => [
-		'default' => [1.3, 1.5, 2, 2.6, 3],
+		'default' => [ 1.3, 1.5, 2, 2.6, 3 ],
 	],
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
