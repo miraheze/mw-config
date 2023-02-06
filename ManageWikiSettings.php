@@ -3578,6 +3578,7 @@ $wgManageWikiSettings = [
 			'showHelpUnderTools',
 			'showRecentChangesUnderTools',
 			'navbarIcon',
+			'preloadFontAwesome',
 		],
 		'overridedefault' => false,
 		'section' => 'styling',
