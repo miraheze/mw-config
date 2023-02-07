@@ -2047,7 +2047,7 @@ $wgConf->settings += [
 			2,
 			2.6,
 			3,
- ],
+		],
 		'leborkwiki' => [
 			1,
 		],
