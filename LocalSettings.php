@@ -2041,13 +2041,13 @@ $wgConf->settings += [
 		'default' => 'https://tile.openstreetmap.org',
 	],
 	'wgKartographerSrcsetScales' => [
-		'default' => [ 
+		'default' => [
 			1.3,
 			1.5,
-			2, 
-			2.6, 
-			3, 
-		],
+			2,
+			2.6,
+			3,
+ ],
 		'leborkwiki' => [
 			1,
 		],
