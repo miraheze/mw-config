@@ -1092,6 +1092,11 @@ $wgConf->settings += [
 	'wgDiscordNotificationNewUser' => [
 		'default' => true,
 	],
+	'wgDiscordNotificationIncludeAutocreatedUsers' => [
+		'default' => true,
+		'loginwiki' => false,
+		'metawiki' => false,
+	],
 	'wgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
 	],
