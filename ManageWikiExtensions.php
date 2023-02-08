@@ -701,8 +701,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'mathlatexml' => "$IP/extensions/Math/db/mathlatexml.mysql.sql",
-				'mathoid' => "$IP/extensions/Math/db/mathoid.mysql.sql"
+				'mathlatexml' => "$IP/extensions/Math/sql/mysql/mathlatexml.sql",
+				'mathoid' => "$IP/extensions/Math/sql/mysql/mathoid.sql"
 			],
 		],
 		'section' => 'parserhooks',
