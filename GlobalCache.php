@@ -96,7 +96,7 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
 		'class' => WANObjectCache::class,
-		'cacheId' => 'memcached-mem-2',
+		'cacheId' => 'memcached-mem-1',
 	];
 }
 
