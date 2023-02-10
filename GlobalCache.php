@@ -64,7 +64,7 @@ $wgSessionCacheType = 'memcached-mem-2';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
-$wgMainCacheType = 'memcached-mem-2';
+$wgMainCacheType = 'memcached-mem-1';
 $wgMessageCacheType = 'memcached-mem-2';
 $wgParserCacheType = 'mysql-multiwrite';
 
