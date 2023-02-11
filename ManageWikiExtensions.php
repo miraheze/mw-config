@@ -3220,7 +3220,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'flow_revision' => "$IP/extensions/Flow/flow.sql"
+				'flow_revision' => "$IP/extensions/Flow/sql/mysql/tables-generated.sql"
 			],
 			'namespaces' => [
 				'Topic' => [
