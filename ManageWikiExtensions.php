@@ -2798,10 +2798,7 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'sql' => [
-				'nl_issues' => "$IP/extensions/Newsletter/sql/nl_issues.sql",
-				'nl_newsletters' => "$IP/extensions/Newsletter/sql/nl_newsletters.sql",
-				'nl_publishers' => "$IP/extensions/Newsletter/sql/nl_publishers.sql",
-				'nl_subscriptions' => "$IP/extensions/Newsletter/sql/nl_subscriptions.sql"
+				'nl_newsletters' => "$IP/extensions/Newsletter/sql/mysql/tables-generated.sql",
 			],
 		],
 		'section' => 'other',
