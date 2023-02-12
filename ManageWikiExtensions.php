@@ -1703,10 +1703,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'pagetriage_tags' => "$IP/extensions/PageTriage/sql/PageTriageTags.sql",
-				'pagetriage_page_tags' => "$IP/extensions/PageTriage/sql/PageTriagePageTags.sql",
-				'pagetriage_page' => "$IP/extensions/PageTriage/sql/PageTriagePage.sql",
-				'pagetriage_log' => "$IP/extensions/PageTriage/sql/PageTriageLog.sql"
+				'pagetriage_tags' => "$IP/extensions/PageTriage/sql/mysql/tables-generated.sql",
 			],
 		],
 		'section' => 'specialpages',
