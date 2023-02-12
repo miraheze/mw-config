@@ -802,6 +802,7 @@ $wgConf->settings += [
 			'bast(ion)?(\d+)?',
 			'reports(\d+)?',
 			'(.*)wiki(pedi)?a(.*)',
+			'opensearch(\d+)?',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
