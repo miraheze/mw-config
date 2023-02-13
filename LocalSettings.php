@@ -1212,6 +1212,10 @@ $wgConf->settings += [
 	'wgEmbedVideoFetchExternalThumbnails' => [
 		'default' => true,
 	],
+	'wgEmbedVideoDefaultWidth' => [
+		'default' => 320,
+		'inforevivalwiki' => 640,
+	],
 
 	// Evelution
 	'wgEvelutionLeftPersonalLinks' => [
