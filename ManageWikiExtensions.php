@@ -1842,6 +1842,7 @@ $wgManageWikiExtensions = [
 				'translate_sections' => "$IP/extensions/Translate/sql/mysql/translate_sections.sql",
 				'translate_stash' => "$IP/extensions/Translate/sql/mysql/translate_stash.sql",
 				'translate_tms' => "$IP/extensions/Translate/sql/mysql/translate_tm.sql",
+				'translate_translatable_bundles' => "$IP/extensions/Translate/sql/mysql/translate_translatable_bundles.sql",
 			],
 		],
 		'section' => 'specialpages',
