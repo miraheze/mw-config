@@ -302,6 +302,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'sagan4wiki':
+	case 'sagan4betawiki':
 	case 'sagan4alphawiki':
 		$wgCargoAllowedSQLFunctions[] = 'RAND';
 		break;
