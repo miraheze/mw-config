@@ -1536,7 +1536,7 @@ $wgConf->settings += [
 			'showDimensions' => true,
 			'mode' => 'packed',
 		],
-		'valiantcinematicuniversewiki' => [
+		'valiantcinematicuniversewikiwiki' => [
 			'imagesPerRow' => 0,
 			'imageWidth' => 120,
 			'imageHeight' => 120,
