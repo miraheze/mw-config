@@ -1961,6 +1961,12 @@ $wgConf->settings += [
 				'en',
 			],
 		],
+		'+ndgwiki' => [
+			'nenawiki',
+		],
+		'+nenawiki' => [
+			'ndgwiki',
+		],
 		'+polandballstaffwiki' => [
 			'polandballwiki',
 			'polandballwikisongcontestwiki',
