@@ -1107,6 +1107,9 @@ $wgConf->settings += [
 	'wgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
 	],
+	'wgDiscordExcludeBots' => [
+		'default' => true,
+	],
 	'wgDiscordCurlProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
