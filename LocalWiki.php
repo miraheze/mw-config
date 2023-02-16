@@ -250,6 +250,29 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'paneidoversewiki':
+		$wgHooks['AdminLinks'][] = 'onAdminLinks';
+		function onAdminLinks( &$adminLinksTree ) {
+			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
+			$generalRow = $general->getRow( 'main' );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'ArticlesHome' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'EditWatchlist' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'GlobalPreferences' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'UploadFile' ) );
+			$generalRow->addItem( ALItem::newFromEditLink( 'Portal', 'Draft portal' ) );
+			$generalRow->addItem( ALItem::newFromEditLink( 'Common.js', 'Edit JS file' ) );
+
+			$users = $adminLinksTree->getSection( wfMessage( 'adminlinks_users' )->text() );
+			$usersRow = $users->getRow( 'main' );
+			$usersRow->addItem( ALItem::newFromSpecialPage( 'BlockUser' ) );
+
+			$browseAndSearch = $adminLinksTree->getSection( wfMessage( 'adminlinks_browsesearch' )->text() );
+			$browseAndSearchRow = $browseAndSearch->getRow( 'main' );
+			$browseAndSearchRow->addItem( ALItem::newFromSpecialPage( 'UnusedFiles' ) );
+		}
+
+		break;
 	case '402611wiki':
 	case 'ballmediawiki':
 	case 'polandballfanonwiki':
