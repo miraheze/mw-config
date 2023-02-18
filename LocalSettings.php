@@ -5544,6 +5544,11 @@ $wgConf->settings += [
 		'default' => '1.34',
 		'betaheze' => false,
 	],
+	// Deprecated setting: https://www.mediawiki.org/wiki/Manual:$wgAllowImageTag
+	'wgAllowImageTag' => [
+		'default' => false,
+		'dgck81lnnwiki' => true,
+	],
 ];
 
 // Start settings requiring external dependency checks/functions
