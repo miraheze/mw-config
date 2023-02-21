@@ -2605,7 +2605,7 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
-			'autopatrolled' => [ 
+			'autopatrolled' => [
 				'autopatrolled' => true,
 			],
 			'confirmed' => [
