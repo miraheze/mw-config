@@ -2605,6 +2605,9 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
+			'autopatrolled' => [ 
+				'autopatrolled' => true,
+			],
 			'confirmed' => [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
@@ -2661,6 +2664,7 @@ $wgConf->settings += [
 			],
 			'sysop' => [
 				'interwiki' => true,
+				'autopatrolled' => true,
 			],
 			'user' => [
 				'request-import-dump' => true,
