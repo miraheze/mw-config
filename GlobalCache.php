@@ -35,7 +35,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'memcached-mem-2' ]
+			'args' => [ 'memcached-mem-1' ]
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
