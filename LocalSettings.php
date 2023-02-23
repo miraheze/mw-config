@@ -2519,11 +2519,6 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
-		'+famepediatechwiki' => [
-			'wikistaff' => [
-				'editwikistaffprotected' => true,
-			],
-		],
 		'+hypopediawiki' => [
 			'bureaucrat' => [
 				'bureaucrat' => true,
@@ -2589,6 +2584,11 @@ $wgConf->settings += [
 			],
 			'UserType7' => [
 				'UserType7' => true,
+			],
+		],
+		'+infopediawiki' => [
+			'wikistaff' => [
+				'editwikistaffprotected' => true,
 			],
 		],
 		'+ldapwikiwiki' => [
@@ -4017,11 +4017,6 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+famepediatechwiki' => [
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
-			'editwikistaffprotected',
-		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -4036,6 +4031,11 @@ $wgConf->settings += [
 			'bureaucrat',
 			'ceo',
 			'co',
+		],
+		'+infopediawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+			'editwikistaffprotected',
 		],
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
@@ -4130,17 +4130,17 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'famepediatechwiki' => [
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
-			'editwikistaffprotected',
-		],
 		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
 		'hypopediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'infopediawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+			'editwikistaffprotected',
 		],
 		'knightnwiki' => [
 			'editextendedsemiprotected',
