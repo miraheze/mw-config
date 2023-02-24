@@ -1132,6 +1132,7 @@ $wgConf->settings += [
 			'users' => [
 				// Exclude excessive bots from all feeds
 				'Creaturawikibot',
+				'FuzzyBot',
 				'HispanoBOT',
 			],
 		],
