@@ -1107,8 +1107,64 @@ $wgConf->settings += [
 	'wgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
 	],
-	'wgDiscordExcludeBots' => [
-		'default' => true,
+	'wgDiscordExcludeConditions' => [
+		'default' => [
+			'experimental' => [
+				'article_inserted' => [
+					'groups' => [
+						'sysop',
+					],
+					'permissions' => [
+						'bot',
+						'managewiki',
+					],
+				],
+				'article_saved' => [
+					'groups' => [
+						'sysop',
+					],
+					'permissions' => [
+						'bot',
+						'managewiki',
+					],
+				],
+			],
+			'users' => [
+				// Exclude excessive bots from all feeds
+				'Creaturawikibot',
+				'FuzzyBot',
+				'HispanoBOT',
+			],
+		],
+		'+commonswiki' => [
+			'groups' => [
+				'bot',
+			],
+		],
+		'+devwiki' => [
+			'groups' => [
+				'bot',
+			],
+		],
+		'+metawiki' => [
+			'article_inserted' => [
+				'groups' => [
+					'bot',
+					'flood',
+				],
+			],
+			'article_saved' => [
+				'groups' => [
+					'bot',
+					'flood',
+				],
+			],
+		],
+		'+testwiki' => [
+			'groups' => [
+				'bot',
+			],
+		],
 	],
 	'wgDiscordCurlProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
