@@ -1129,6 +1129,11 @@ $wgConf->settings += [
 					],
 				],
 			],
+			'users' => [
+				// Exclude excessive bots from all feeds
+				'Creaturawikibot',
+				'HispanoBOT',
+			],
 		],
 		'+commonswiki' => [
 			'groups' => [
