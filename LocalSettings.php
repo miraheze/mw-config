@@ -2118,6 +2118,7 @@ $wgConf->settings += [
 	// Kartographer
 	'wgKartographerDfltStyle' => [
 		'default' => 'osm-intl',
+		'bluepageswiki' => '.',
 		'gratisdatawiki' => '.',
 		'gratispaideiawiki' => '.',
 		'leborkwiki' => '.',
@@ -2136,6 +2137,9 @@ $wgConf->settings += [
 			2.6,
 			3,
 		],
+		'bluepageswiki' => [
+			1,
+		],
 		'leborkwiki' => [
 			1,
 		],
@@ -2145,8 +2149,9 @@ $wgConf->settings += [
 	],
 	'wgKartographerSimpleStyleMarkers' => [
 		'default' => true,
-		'leborkwiki' => false,
+		'bluepageswiki' => false,
 		'gratisdatawiki' => false,
+		'leborkwiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
