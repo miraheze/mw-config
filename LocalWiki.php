@@ -348,4 +348,28 @@ switch ( $wi->dbname ) {
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
+	case 'genshinimpactwiki':
+		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
+
+		function onHtmlPageLinkRendererEnd(
+			$linkRenderer,
+			$target,
+			$isKnown,
+			&$text,
+			&$attribs,
+			&$ret
+		) {
+			if ( $isKnown ) {
+				return true;
+			}
+
+			if ( $target->isExternal() ) {
+				return true;
+			}
+
+			$attribs['rel'] = 'nofollow';
+
+			return true;
+		}
+		break;
 }
