@@ -2121,6 +2121,7 @@ $wgConf->settings += [
 		'gratisdatawiki' => '.',
 		'gratispaideiawiki' => '.',
 		'leborkwiki' => '.',
+		'bluepageswiki' => '.',
 	],
 	'wgKartographerEnableMapFrame' => [
 		'default' => true,
@@ -2139,6 +2140,9 @@ $wgConf->settings += [
 		'leborkwiki' => [
 			1,
 		],
+		'bluepageswiki' => [
+			1,
+		],
 	],
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
@@ -2147,6 +2151,7 @@ $wgConf->settings += [
 		'default' => true,
 		'leborkwiki' => false,
 		'gratisdatawiki' => false,
+		'bluepageswiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
