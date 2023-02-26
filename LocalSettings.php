@@ -2673,7 +2673,7 @@ $wgConf->settings += [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
 			],
-			'globalsysop' => [
+			'global-sysop' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
@@ -3535,7 +3535,7 @@ $wgConf->settings += [
 			'steward',
 		],
 		'+metawiki' => [
-			'globalsysop',
+			'global-sysop',
 		],
 	],
 	// OAuth
@@ -3723,7 +3723,7 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
-			'globalsysop' => [
+			'global-sysop' => [
 				'MinimalPasswordLength' => [ 'value' => 12, 'suggestChangeOnLogin' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
