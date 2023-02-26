@@ -5,10 +5,10 @@ $wgLBFactoryConf = [
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db101' => 1,
+			'db131' => 1,
 		],
 		'c1' => [
-			'db101' => 1,
+			'db131' => 1,
 		],
 		'c2' => [
 			'db101' => 1,
@@ -56,7 +56,7 @@ $wgLBFactoryConf = [
 		],
 		'echo' => [
 			/** where the metawiki database is located */
-			'db101' => 1,
+			'db131' => 1,
 		],
 		'parsercache' => [
 			/** where the parsercache database is located */
