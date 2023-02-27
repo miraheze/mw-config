@@ -2607,8 +2607,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'page_assessments' => "$IP/extensions/PageAssessments/db/addReviewsTable.sql",
-				'page_assessments_projects' => "$IP/extensions/PageAssessments/db/addProjectsTable.sql"
+				'page_assessments_projects' => "$IP/extensions/PageAssessments/db/mysql/tables-generated.sql"
 			],
 		],
 		'section' => 'other',
