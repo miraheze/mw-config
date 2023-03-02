@@ -1107,6 +1107,10 @@ $wgConf->settings += [
 	'wgDiscordAdditionalIncomingWebhookUrls' => [
 		'default' => [],
 	],
+	'wgDiscordDisableEmbedFooter' => [
+		'default' => false,
+		'puzzleswikiwiki' => true,
+	],
 	'wgDiscordExcludeConditions' => [
 		'default' => [
 			'experimental' => [
