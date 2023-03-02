@@ -261,8 +261,8 @@ switch ( $wi->dbname ) {
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'EditWatchlist' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'GlobalPreferences' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'Upload' ) );
-			$generalRow->addItem( ALItem::newFromEditLink( 'Draft:Portal', 'Draft portal' ) );
 			$generalRow->addItem( ALItem::newFromEditLink( 'Common.js', 'Edit JS file' ) );
+			$generalRow->addItem( ALItem::newFromPage( 'Draft:Portal', 'Draft portal' ) );
 
 			$users = $adminLinksTree->getSection( wfMessage( 'adminlinks_users' )->text() );
 			$usersRow = $users->getRow( 'main' );
