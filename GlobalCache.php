@@ -60,25 +60,6 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'replication' => 'async',
 	'reportDupes' => false
 ];
-$wgObjectCaches['mysql-multiwrite'] = [
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => [
-		0 => [
-			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'mcrouter-with-onhost-tier' ]
-		],
-		1 => [
-			'class' => 'SqlBagOStuff',
-			'servers' => $pcServers,
-			'purgePeriod' => 0,
-			'tableName' => 'pc',
-			'shards' => 256,
-			'reportDupes' => false
-		],
-	],
-	'replication' => 'async',
-	'reportDupes' => false
-];
 
 $wgSessionCacheType = 'memcached-mem-2';
 
