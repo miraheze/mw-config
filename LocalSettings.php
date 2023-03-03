@@ -4217,7 +4217,7 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'metawiki' => [
-			'autopatrolled',
+			'editautopatrolprotected',
 		],
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
@@ -4238,8 +4238,8 @@ $wgConf->settings += [
 			'edittemplate',
 		],
 		'testwiki' => [
-			'bureaucrat',
-			'consul',
+			'editbureaucratprotected',
+			'editconsulprotected',
 		],
 		'trwdeploymentwiki' => [
 			'bureaucrat',
