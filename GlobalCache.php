@@ -99,20 +99,6 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 		'class' => WANObjectCache::class,
 		'cacheId' => 'memcached-mem-1',
 	];
-
-	$wgParsoidCacheConfig = [
-		/** defaults is MainStash */
-		'StashType' => null,
-
-		/** two hours */
-		'StashDuration' => 2 * 60 * 60,
-
-		/** cache all */
-		'CacheThresholdTime' => 0.0,
-
-		/** enable cache warming */
-		'WarmParsoidParserCache' => true,
-	];
 }
 
 $wgJobTypeConf['default'] = [
