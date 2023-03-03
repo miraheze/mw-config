@@ -2,7 +2,6 @@
 
 $wgLBFactoryConf = [
 	'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
-	'secret' => $wgSecretKey,
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
