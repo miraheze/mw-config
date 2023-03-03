@@ -42,11 +42,10 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				'parsercache' => [
 					'type'      => 'mysql',
-					'host'      => 'db121',
+					'host'      => '2a10:6740::6:302',
 					'dbname'    => 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
-					'ssl'       => true,
 					'flags'     => 0,
 					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 				],
