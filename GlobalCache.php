@@ -40,7 +40,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 		1 => [
 			'class' => SqlBagOStuff::class,
 			'servers' => [
-				[
+				'parsercache' => [
 					'type'      => 'mysql',
 					'host'      => 'db121.miraheze.org',
 					'dbname'    => 'parsercache',
@@ -53,6 +53,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			],
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
+			'shards' => 256,
 			'reportDupes' => false
 		],
 	],
@@ -97,6 +98,20 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 	$wgWANObjectCaches['betaheze'] = [
 		'class' => WANObjectCache::class,
 		'cacheId' => 'memcached-mem-1',
+	];
+
+	$wgParsoidCacheConfig = [
+		/** defaults is MainStash */
+		'StashType' => null,
+
+		/** two hours */
+		'StashDuration' => 2 * 60 * 60,
+
+		/** cache all */
+		'CacheThresholdTime' => 0.0,
+
+		/** enable cache warming */
+		'WarmParsoidParserCache' => true,
 	];
 }
 
