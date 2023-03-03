@@ -40,7 +40,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 		1 => [
 			'class' => SqlBagOStuff::class,
 			'servers' => [
-				'parsercache' => [
+				[
 					'type'      => 'mysql',
 					'host'      => 'db121.miraheze.org',
 					'dbname'    => 'parsercache',
