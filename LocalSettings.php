@@ -3727,17 +3727,17 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
-			'global-sysop' => [
-				'MinimalPasswordLength' => [ 'value' => 12, 'suggestChangeOnLogin' => true ],
-				'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+			'global-interwiki-admin' => [
+				'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 			],
-			'interwiki-admin' => [
-				'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-				'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
+			'global-sysop' => [
+				'MinimalPasswordLength' => [ 'value' => 12, 'suggestChangeOnLogin' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
