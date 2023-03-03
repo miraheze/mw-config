@@ -31,14 +31,14 @@ $wgObjectCaches['memcached-mem-2'] = [
 ];
 
 $wgObjectCaches['mysql-multiwrite'] = [
-	'class' => 'MultiWriteBagOStuff',
+	'class' => MultiWriteBagOStuff::class,
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
 			'args' => [ 'memcached-mem-1' ]
 		],
 		1 => [
-			'class' => 'SqlBagOStuff',
+			'class' => SqlBagOStuff::class,
 			'servers' => [
 				'parsercache' => [
 					'type'      => 'mysql',
