@@ -84,15 +84,13 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgCookieExpiration = 30 * 86400;
-$wgExtendedLoginCookieExpiration = 365 * 86400;
-$wgObjectCacheSessionExpiry = 86400;
-
 $wgSessionCacheType = 'memcached-mem-2';
 $wgCentralAuthSessionCacheType = 'memcached-mem-2';
 
 // The same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-replicated';
+
+$wgObjectCacheSessionExpiry = 86400;
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
