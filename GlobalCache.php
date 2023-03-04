@@ -85,7 +85,7 @@ $wgSessionCacheType = 'memcached-mem-2';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
-$wgMainCacheType = 'memcached-mem-2';
+$wgMainCacheType = 'memcached-mem-1';
 $wgMessageCacheType = 'memcached-mem-2';
 $wgParserCacheType = 'mysql-multiwrite';
 
@@ -117,7 +117,7 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
 		'class' => WANObjectCache::class,
-		'cacheId' => 'memcached-mem-1',
+		'cacheId' => 'memcached-mem-2',
 	];
 }
 
