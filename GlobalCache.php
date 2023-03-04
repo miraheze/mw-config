@@ -1,5 +1,9 @@
 <?php
 
+
+$wgMemCachedServers = [];
+$wgMemCachedPersistent = false;
+
 // mem141
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
@@ -81,12 +85,21 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
+$wgCookieExpiration = 30 * 86400;
+$wgExtendedLoginCookieExpiration = 365 * 86400;
+$wgObjectCacheSessionExpiry = 86400;
+
 $wgSessionCacheType = 'memcached-mem-2';
+$wgCentralAuthSessionCacheType = 'memcached-mem-2';
+
+// The same as $wgMainStash
+$wgMWOAuthSessionCacheType = 'db-replicated';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-mem-2';
 $wgMessageCacheType = 'memcached-mem-2';
+
 $wgParserCacheType = 'mysql-multiwrite';
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
@@ -113,6 +126,7 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
 	$wgSessionCacheType = 'memcached-mem-1';
+	$wgCentralAuthSessionCacheType = 'memcached-mem-1';
 
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
