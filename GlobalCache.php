@@ -85,12 +85,9 @@ $wgObjectCaches['mysql-multiwrite'] = [
 ];
 
 $wgSessionCacheType = 'memcached-mem-2';
-$wgCentralAuthSessionCacheType = 'memcached-mem-2';
 
-$wgMainStash = 'db-replicated';
+// Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-replicated';
-
-$wgObjectCacheSessionExpiry = 86400;
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
@@ -106,6 +103,9 @@ $wgParserCacheExpireTime = 86400 * 10;
 
 // 3 days
 $wgRevisionCacheExpiry = 86400 * 3;
+
+// 1 day
+$wgObjectCacheSessionExpiry = 86400;
 
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
@@ -123,7 +123,6 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
 	$wgSessionCacheType = 'memcached-mem-1';
-	$wgCentralAuthSessionCacheType = 'memcached-mem-1';
 
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
