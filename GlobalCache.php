@@ -1,6 +1,5 @@
 <?php
 
-
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
