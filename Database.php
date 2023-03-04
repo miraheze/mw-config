@@ -77,3 +77,7 @@ $wgMaxExecutionTimeForExpensiveQueries = 30000;
 
 // Compress revisions
 $wgCompressRevisions = true;
+
+// Miser mode
+$wgMiserMode = true;
+$wgQueryCacheLimit = 5000;
