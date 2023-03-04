@@ -1,5 +1,8 @@
 <?php
 
+$wgMemCachedServers = [];
+$wgMemCachedPersistent = false;
+
 // mem141
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
@@ -83,10 +86,14 @@ $wgObjectCaches['mysql-multiwrite'] = [
 
 $wgSessionCacheType = 'memcached-mem-2';
 
+// Same as $wgMainStash
+$wgMWOAuthSessionCacheType = 'db-replicated';
+
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-mem-2';
 $wgMessageCacheType = 'memcached-mem-2';
+
 $wgParserCacheType = 'mysql-multiwrite';
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
@@ -96,6 +103,9 @@ $wgParserCacheExpireTime = 86400 * 10;
 
 // 3 days
 $wgRevisionCacheExpiry = 86400 * 3;
+
+// 1 day
+$wgObjectCacheSessionExpiry = 86400;
 
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;

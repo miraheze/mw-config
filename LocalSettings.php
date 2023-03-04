@@ -601,6 +601,9 @@ $wgConf->settings += [
 	],
 
 	// Cookies
+	'wgCookieExpiration' => [
+		'default' => 30 * 86400,
+	],
 	'wgCookieSameSite' => [
 		'default' => 'None',
 	],
@@ -612,6 +615,9 @@ $wgConf->settings += [
 	],
 	'wgCookieSetOnIpBlock' => [
 		'default' => true,
+	],
+	'wgExtendedLoginCookieExpiration' => [
+		'default' => 365 * 86400,
 	],
 
 	// Cosmos
@@ -3244,6 +3250,9 @@ $wgConf->settings += [
 	'wgDefaultLanguageVariant' => [
 		'default' => false,
 		'hkrailwiki' => 'zh-hk',
+	],
+	'wgResourceLoaderMaxQueryLength' => [
+		'default' => 5000,
 	],
 
 	// MobileFrontend
