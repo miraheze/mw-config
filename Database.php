@@ -58,18 +58,6 @@ $wgLBFactoryConf = [
 			/** where the metawiki database is located */
 			'db131' => 1,
 		],
-		'pc1' => [
-			/** where the pc1 parsercache database is located */
-			'db121' => 1,
-		],
-		'pc2' => [
-			/** where the pc2 parsercache database is located */
-			'db131' => 1,
-		],
-		'pc3' => [
-			/** where the pc3 parsercache database is located */
-			'db141' => 1,
-		],
 	],
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
