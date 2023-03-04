@@ -87,7 +87,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 $wgSessionCacheType = 'memcached-mem-2';
 $wgCentralAuthSessionCacheType = 'memcached-mem-2';
 
-// The same as $wgMainStash
+$wgMainStash = 'db-replicated';
 $wgMWOAuthSessionCacheType = 'db-replicated';
 
 $wgObjectCacheSessionExpiry = 86400;
