@@ -123,6 +123,7 @@ if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
 
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
 	$wgSessionCacheType = 'memcached-mem-1';
+	$wgMWOAuthSessionCacheType = 'memcached-mem-1';
 
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
