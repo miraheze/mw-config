@@ -3245,6 +3245,9 @@ $wgConf->settings += [
 		'default' => false,
 		'hkrailwiki' => 'zh-hk',
 	],
+	'wgResourceLoaderMaxQueryLength' => [
+		'default' => 5000,
+	],
 
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
