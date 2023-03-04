@@ -53,7 +53,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			],
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
-			'shards' => 2,
+			'shards' => 10,
 			'reportDupes' => false
 		],
 	],
