@@ -58,9 +58,17 @@ $wgLBFactoryConf = [
 			/** where the metawiki database is located */
 			'db131' => 1,
 		],
-		'parsercache' => [
-			/** where the parsercache database is located */
+		'pc1' => [
+			/** where the pc1 parsercache database is located */
 			'db121' => 1,
+		],
+		'pc2' => [
+			/** where the pc2 parsercache database is located */
+			'db131' => 1,
+		],
+		'pc3' => [
+			/** where the pc3 parsercache database is located */
+			'db141' => 1,
 		],
 	],
 	'readOnlyBySection' => [
