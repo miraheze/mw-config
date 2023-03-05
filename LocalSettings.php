@@ -2534,6 +2534,7 @@ $wgConf->settings += [
 				'hideuser' => true,
 				'suppressionlog' => true,
 				'suppressrevision' => true,
+				'viewsuppressed' => true,
 			],
 			'steward' => [
 				'userrights' => true,
