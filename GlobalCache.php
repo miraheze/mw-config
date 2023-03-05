@@ -84,12 +84,20 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgSessionCacheType = 'memcached-mem-2';
+$redisServerIP = '[2a10:6740::6:306]:6379';
+
+$wgObjectCaches['redis-session'] = [
+	'class' => RedisBagOStuff::class,
+	'servers' => [ $redisServerIP ],
+	'password' => $wmgRedisPassword,
+	'loggroup' => 'redis',
+	'reportDupes' => false,
+];
+
+$wgSessionCacheType = 'redis-session';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-replicated';
-
-$redisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-mem-2';
 $wgMessageCacheType = 'memcached-mem-2';
