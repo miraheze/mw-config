@@ -190,7 +190,7 @@ switch ( $wi->dbname ) {
 				'RecipientUser' => 'Miraheze CVT',
 				'SenderName' => 'Account Creation Request Form via Meta',
 				'RequireDetails' => true,
-				'IncludeIP' => false,
+				'IncludeIP' => true,
 				'MustBeLoggedIn' => false,
 				'AdditionalFields' => [
 					'SelectIssue' => [
@@ -199,6 +199,7 @@ switch ( $wi->dbname ) {
 						'options-messages' => [
 							'contactpage-requestaccount-selectissue-abusefilterissue' => 'abusefilter',
 							'contactpage-requestaccount-selectissue-recaptchaissues' => 'captcha',
+							'contactpage-requestaccount-selectissue-globalblock' => 'globalblock',
 							'version-other' => 'other',
 						],
 						'help-message' => 'contactpage-requestaccount-selectissue-help',
@@ -213,6 +214,37 @@ switch ( $wi->dbname ) {
 							'other'
 						],
 						'help-message' => 'contactpage-requestaccount-describeissue-help',
+						'required' => true,
+					],
+					'SelectGlobalBlockIssue' => [
+						'label-message' => 'contactpage-requestaccount-describeglobalblockissue',
+						'type' => 'radio',
+						'hide-if' => [
+							'!==',
+							'SelectIssue',
+							'globalblock'
+						],
+						'options-messages' => [
+							'contactpage-requestaccount-describeglobalblockissue-crosswikiabuse' => 'crosswikiabuse',
+							'contactpage-requestaccount-describeglobalblockissue-crosswikispam' => 'crosswikispam',
+							'contactpage-requestaccount-describeglobalblockissue-crosswikivandalism' => 'crosswikivandalism',
+							'contactpage-requestaccount-describeglobalblockissue-lta' => 'lta',
+							'contactpage-requestaccount-describeglobalblockissue-nopp' => 'webhostorproxy',
+							'contactpage-requestaccount-describeglobalblockissue-ts' => 'trustandsafetyblock',
+							'version-other' => 'other',
+						],
+						'help-message' => 'contactpage-requestaccount-describeglobalblockissue-help',
+						'required' => true,
+					],
+					'OtherGlobalBlockIssue' => [
+						'label-message' => 'contactpage-requestaccount-describeglobalblockissue-otherissue',
+						'type' => 'text',
+						'hide-if' => [
+							'!==',
+							'SelectGlobalBlockIssue',
+							'other'
+						],
+						'help-message' => 'contactpage-requestaccount-describeglobalblockissue-otherissue',
 						'required' => true,
 					],
 					'SelectUsername' => [
