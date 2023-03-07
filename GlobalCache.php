@@ -92,7 +92,7 @@ $wgMWOAuthSessionCacheType = 'db-replicated';
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
 $wgMainCacheType = 'memcached-mem-2';
-$wgMessageCacheType = 'memcached-mem-2';
+$wgMessageCacheType = CACHE_DB;
 
 $wgParserCacheType = 'mysql-multiwrite';
 
