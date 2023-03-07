@@ -3772,6 +3772,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'splash' => [
+		'name' => 'Splash',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Splash',
+		'var' => 'wmgUseSplash',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'truglass' => [
 		'name' => 'Truglass',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Truglass',
