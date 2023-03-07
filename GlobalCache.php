@@ -84,7 +84,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgSessionCacheType = CACHE_DB;
+$wgSessionCacheType = 'memcached-mem-2';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-replicated';
