@@ -45,16 +45,6 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				'pc1' => [
 					'type'      => 'mysql',
-					'host'      => 'db121.miraheze.org',
-					'dbname'    => 'parsercache',
-					'user'      => $wgDBuser,
-					'password'  => $wgDBpassword,
-					'ssl'       => true,
-					'flags'     => 0,
-					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
-				],
-				'pc2' => [
-					'type'      => 'mysql',
 					'host'      => 'db131.miraheze.org',
 					'dbname'    => 'parsercache',
 					'user'      => $wgDBuser,
@@ -63,7 +53,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 					'flags'     => 0,
 					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 				],
-				'pc3' => [
+				'pc2' => [
 					'type'      => 'mysql',
 					'host'      => 'db142.miraheze.org',
 					'dbname'    => 'parsercache',
