@@ -1964,7 +1964,6 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'Reception123',
-			'Universal Omega',
 		],
 	],
 
