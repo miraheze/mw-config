@@ -1521,8 +1521,6 @@ $wgConf->settings += [
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
-			/** John (SRE) */
-			1,
 			/** Reception123 (SRE) */
 			19,
 			/** Void (SRE and Board) */
