@@ -151,6 +151,7 @@ $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MyVariables/extension.json
 $IP/extensions/NamespacePreload/extension.json
 $IP/extensions/NativeSvgHandler/extension.json
+$IP/extensions/NearbyPages/extension.json
 $IP/extensions/NewSignupPage/extension.json
 $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/NewUserNotif/extension.json
