@@ -82,3 +82,39 @@ $wgMajorSiteNoticeID = 82;
 		EOF;
 	}
 } */
+
+
+// Meta Tech NS sitenotice
+if ( $wgDBname === 'metawiki' ) {
+$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+function wfGlobalSiteNotice( &$siteNotice, $skin ) {
+	$title = $skin->getTitle();
+	if ( $title->getNamespace() !== 1600 ) {
+		return;
+	}
+
+	$skin->getOutput()->enableOOUI();
+	$skin->getOutput()->addInlineStyle(
+		'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
+		'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
+	);
+	$siteNotice .= <<<EOF
+    <table style="width: 100%;">
+        <tbody>
+            <tr>
+                <td style="border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px;">
+                    <div style="padding-top: 0.3em; padding-bottom: 0.1em; font-size: 100%;">
+                        <img alt="OOjs UI icon web-progressive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/OOjs_UI_icon_web-progressive.svg/35px-OOjs_UI_icon_web-progressive.svg.png" decoding="async" width="35" height="35" style="float: left; margin-right: 10px;">
+                        <div style="font-weight: bold;">Vacancy</div>
+                        SRE is looking for Software Engineers to join our MediaWiki Team to develop code to improve the user experience of Miraheze users, build tools that allow communities to grow, and tools that support our valuable volunteers in managing a dynamic and active global community. If you think this could be you, please do have a look at the <a href="https://meta.miraheze.org/wiki/Miraheze_Vacancies#Software_Engineer_(Developer)_(MediaWiki)">the Vacancies page</a> which includes more information.
+                    </div> <br /> Other vacancies are also available on that page.
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 10px;"></td>
+            </tr>
+        </tbody>
+    </table>
+EOF;
+	}
+}
