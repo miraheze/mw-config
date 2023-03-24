@@ -83,10 +83,10 @@ $wgMajorSiteNoticeID = 82;
 	}
 } */
 
-
 // Meta Tech NS sitenotice
 if ( $wgDBname === 'metawiki' ) {
 $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$title = $skin->getTitle();
 	if ( $title->getNamespace() !== 1600 ) {
@@ -116,5 +116,5 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
         </tbody>
     </table>
 EOF;
-	}
+}
 }
