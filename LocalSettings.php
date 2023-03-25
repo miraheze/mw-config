@@ -3851,6 +3851,11 @@ $wgConf->settings += [
 		'+kirbywiki' => [
 			'thumbsize' => 3,
 		],
+		'+landarwiki' => [
+			'usenewrc' => 0,
+			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+		],
 		'+luigismansionwiki' => [
 			'usenewrc' => 0,
 			'rcenhancedfilters-disable' => 1,
