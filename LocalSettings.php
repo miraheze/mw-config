@@ -2004,8 +2004,8 @@ $wgConf->settings += [
 			'templatewikiarchive',
 		],
 		'+hkrailwiki' => [
-			'hkrailfan',
 			'zhwikipedia',
+			'hkrailfan',
 		],
 		'+incubatorwiki' => [
 			'wmincubator',
@@ -2128,6 +2128,7 @@ $wgConf->settings += [
 		'bluepageswiki' => '.',
 		'gratisdatawiki' => '.',
 		'gratispaideiawiki' => '.',
+		'hkrailwiki' => '.',
 		'leborkwiki' => '.',
 	],
 	'wgKartographerEnableMapFrame' => [
@@ -2147,6 +2148,9 @@ $wgConf->settings += [
 		'bluepageswiki' => [
 			1,
 		],
+		'hkrailwiki' => [
+			1,
+		],
 		'leborkwiki' => [
 			1,
 		],
@@ -2158,6 +2162,7 @@ $wgConf->settings += [
 		'default' => true,
 		'bluepageswiki' => false,
 		'gratisdatawiki' => false,
+		'hkrailwiki' => false,
 		'leborkwiki' => false,
 	],
 	'wgKartographerStyles' => [
