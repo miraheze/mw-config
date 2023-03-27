@@ -376,6 +376,14 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
+	case 'wonderingstarswiki':
+		$wgPivotFeatures = [
+			'showActionsForAnon' => false,
+			'fixedNavBar' => true,
+			'usePivotTabs' => true,
+			'showRecentChangesUnderTools' => false,
+		];
+		break;
 	case 'worldboxwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
