@@ -1529,7 +1529,7 @@ $wgConf->settings += [
 			13554,
 			/** Owen (Board) */
 			73651,
-			/** Universal Omega (SRE and Board) */
+			/** Universal Omega (Board) */
 			96304,
 			/** Agent Isai (SRE) */
 			2639,
