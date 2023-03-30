@@ -1536,6 +1536,14 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'nearbypages' => [
+		'name' => 'NearbyPages',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NearbyPages',
+		'var' => 'wmgUseNearbyPages',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
 	'mediawikichat' => [
 		'name' => 'MediaWikiChat',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MediaWikiChat',
