@@ -2131,6 +2131,7 @@ $wgConf->settings += [
 		'gratisdatawiki' => '.',
 		'gratispaideiawiki' => '.',
 		'hkrailwiki' => '.',
+		'isvwiki' => '.',
 		'leborkwiki' => '.',
 	],
 	'wgKartographerEnableMapFrame' => [
@@ -2153,6 +2154,9 @@ $wgConf->settings += [
 		'hkrailwiki' => [
 			1,
 		],
+		'isvwiki' => [
+			1,
+		],
 		'leborkwiki' => [
 			1,
 		],
@@ -2165,6 +2169,7 @@ $wgConf->settings += [
 		'bluepageswiki' => false,
 		'gratisdatawiki' => false,
 		'hkrailwiki' => false,
+		'isvwiki' => false,
 		'leborkwiki' => false,
 	],
 	'wgKartographerStyles' => [
