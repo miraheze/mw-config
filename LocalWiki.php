@@ -15,10 +15,6 @@ switch ( $wi->dbname ) {
 		break;
 	case 'betawiki':
 		wfLoadExtension( 'GlobalWatchlist' );
-		
-		break;
-	case 'buttonmenwiki':
-		$wgPageImagesScores['width'] = 100;
 
 		break;
 	case 'commonswiki':
