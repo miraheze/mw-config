@@ -85,7 +85,7 @@ switch ( $wi->dbname ) {
 
 			return true;
 		}
-		
+
 		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
