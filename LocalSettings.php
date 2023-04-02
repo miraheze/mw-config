@@ -2474,6 +2474,12 @@ $wgConf->settings += [
 	'wgAllowHTMLEmail' => [
 		'default' => true,
 	],
+	'wgEnableSpecialMute' => [
+		'default' => true,
+	],
+	'wgEnableUserEmailMuteList' => [
+		'default' => true,
+	],
 
 	// ManageWiki
 	'wgManageWiki' => [
