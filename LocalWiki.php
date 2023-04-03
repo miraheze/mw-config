@@ -414,7 +414,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'zhtranswiki':
-		$wgChatKicks = true,
+		$wgChatKicks = true;
 		
 		break;
 }
