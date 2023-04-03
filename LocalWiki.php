@@ -413,8 +413,4 @@ switch ( $wi->dbname ) {
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
-	case 'zhtranswiki':
-		$wgChatKicks = true;
-		
-		break;
 }
