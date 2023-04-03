@@ -3003,6 +3003,9 @@ $wgConf->settings += [
 	'wgChatMeCommand' => [
 		'default' => false,
 	],
+	'wgChatKicks' => [
+		'default' => true,
+	],
 
 	// Medik settings
 	'wgMedikColor' => [
