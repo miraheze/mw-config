@@ -289,6 +289,13 @@ switch ( $wi->dbname ) {
 				'DisplayFormat' => 'raw',
 			],
 		];
+
+		$wgTranslateTranslationServices['Google'] = array(
+			'url' => 'https://translation.googleapis.com/language/translate/v2',
+			'key' => $wmgTranslateGoogleTranslateMetaKey,
+			'timeout' => 3,
+			'type' => 'google',
+		);
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
