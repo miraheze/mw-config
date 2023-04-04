@@ -5652,6 +5652,7 @@ $wi::$disabledExtensions = [
 	'lingo',
 	'regexfunctions',
 	'wikiforum',
+	'cargo',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
