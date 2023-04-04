@@ -2570,8 +2570,6 @@ $wgConf->settings += [
 				'managewiki-editdefault' => true,
 				'managewiki-restricted' => true,
 				'requestwiki' => true,
-				'globalgroupmembership' => true,
-				'globalgrouppermissions' => true,
 			],
 		],
 		'+bitcoindebateswiki' => [
