@@ -90,7 +90,7 @@ switch ( $wi->dbname ) {
 		function onPersonalUrls( array &$personal_urls, Title $title, SkinTemplate $skin ) {
 			$personal_urls[ 'preferences' ] = [
 				'text' => 'Preferences',
-				'href' => 'https://genshinimpact.miraheze.org/wiki/Genshin Impact Wiki:Preferences'
+				'href' => 'https://genshinimpact.miraheze.org/wiki/Genshin_Impact_Wiki:Preferences'
 			];
 		}
 		
