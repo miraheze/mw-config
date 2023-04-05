@@ -63,7 +63,8 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'genshinimpactwiki':
-		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
+		$wgHooks[ 'HtmlPageLinkRendererEnd' ][] = 'onHtmlPageLinkRendererEnd';
+		$wgHooks[ 'PersonalUrls' ][] = 'onPersonalUrls';
 
 		function onHtmlPageLinkRendererEnd(
 			$linkRenderer,
@@ -81,10 +82,19 @@ switch ( $wi->dbname ) {
 				return true;
 			}
 
-			$attribs['rel'] = 'nofollow';
+			$attribs[ 'rel' ] = 'nofollow';
 
 			return true;
 		}
+		
+		function onPersonalUrls( array &$personal_urls, Title $title, SkinTemplate $skin ) {
+			$personal_urls[ 'preferences' ] = [
+				'text' => 'Preferences',
+				'href' => 'https://genshinimpact.miraheze.org/wiki/Genshin Impact Wiki:Preferences'
+			];
+		}
+		
+		$wgAllowSiteCSSOnRestrictedPages = true;
 
 		break;
 	case 'gpcommonswiki':
