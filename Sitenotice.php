@@ -15,8 +15,8 @@ $wgMajorSiteNoticeID = 83;
  */
 
 // Global SiteNotice
-// if ( !$wmgSiteNoticeOptOut ) {
-/*	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+ if ( !$wmgSiteNoticeOptOut ) {
+	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		$skin->getOutput()->enableOOUI();
@@ -31,11 +31,11 @@ $wgMajorSiteNoticeID = 83;
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Miraheze has upgraded to MediaWiki 1.39. If you notice any bugs, please report them on <a href="https://meta.miraheze.org/wiki/Phabricator">Phabricator</a>, <a href="https://miraheze.org/discord">Discord</a>, or <a href="https://meta.miraheze.org/wiki/IRC">IRC</a>.
+							Due to a security vulernability with the now-disabled Cargo extension, all user sessions have been invalidated as a percaution. As a result you will need to re-login to your account to continue editing.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
-							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Special:MyLanguage/MediaWiki/1.39">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Cargo_disabled">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
 								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
@@ -47,8 +47,8 @@ $wgMajorSiteNoticeID = 83;
 		EOF;
 	}
 
-// }
-*/
+ }
+
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Cargo' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
@@ -85,9 +85,9 @@ if ( $wi->isExtensionActive( 'Cargo' ) ) {
 
 // Meta Tech NS sitenotice
 if ( $wgDBname === 'metawiki' ) {
-$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
 
-function wfGlobalSiteNotice( &$siteNotice, $skin ) {
+function wfMetaSiteNotice( &$siteNotice, $skin ) {
 	$title = $skin->getTitle();
 	if ( $title->getNamespace() !== 1600 ) {
 		return;
