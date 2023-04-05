@@ -1047,6 +1047,7 @@ $wgConf->settings += [
 	],
 	'wgReadOnly' => [
 		'default' => false,
+		'frackinuniversewiki' => 'Requested by Edward Chernenko, due to Cargo issues',
 	],
 	'wgSharedTables' => [
 		'default' => [],
