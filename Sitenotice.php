@@ -31,7 +31,7 @@ $wgMajorSiteNoticeID = 83;
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Due to a security vulernability with the now-disabled Cargo extension, all user sessions have been invalidated as a percaution. As a result you will need to re-login to your account to continue editing.
+							Due to a security vulnerability with the now-disabled Cargo extension, all user sessions have been invalidated as a precaution. As a result you will need to re-login to your account to continue editing.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
