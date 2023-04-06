@@ -82,7 +82,7 @@ switch ( $wi->dbname ) {
 				return true;
 			}
 
-			$attribs[ 'rel' ] = 'nofollow';
+			$attribs['rel'] = 'nofollow';
 
 			return true;
 		}
