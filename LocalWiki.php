@@ -127,31 +127,9 @@ switch ( $wi->dbname ) {
                     .wds-tabs__tab > a:hover {
                     color: #9393f6;
                     }
-                    
-                    #catlinks {
-                    background: #cca574;
-                    color: #000;
-                    }
-                    
-                    #catlinks a {
-                    color: darkblue !important;
-                    }
-                    
-                    .wikitable > caption {
-                    font-weight: unset;
-                    margin-bottom: 1%;
-                    }
-                    
+		    
                     .cosmos-footerLinks-list li a {
                     color: #9393f6;
-                    }
-                    
-                    body .wikitable > tr > th,
-                    body .wikitable > tr > td,
-                    body .wikitable > * > tr > th,
-                    body .wikitable > * > tr > td {
-                    color: #fff;
-                    background: #1a1d23;
                     }
                     
                     .wvui-typeahead-search__suggestions__footer__text {
