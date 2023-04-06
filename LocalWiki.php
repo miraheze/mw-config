@@ -65,6 +65,7 @@ switch ( $wi->dbname ) {
 	case 'genshinimpactwiki':
 		$wgHooks[ 'HtmlPageLinkRendererEnd' ][] = 'onHtmlPageLinkRendererEnd';
 		$wgHooks[ 'PersonalUrls' ][] = 'onPersonalUrls';
+		$wgHooks[ 'BeforePageDisplay' ][] = 'onBeforePageDisplay';
 
 		function onHtmlPageLinkRendererEnd(
 			$linkRenderer,
@@ -93,6 +94,167 @@ switch ( $wi->dbname ) {
 				'href' => 'https://genshinimpact.miraheze.org/wiki/Genshin_Impact_Wiki:Preferences'
 			];
 		}
+
+                function onBeforePageDisplay( OutputPage $out, Skin $skin ) { 
+                    $style = "
+                    /***
+                     getting too annoying
+                    sorry miraheze, i appreciate you but this just has to go
+                    ***/
+                    #siteNotice {
+                    display: none;
+                    }
+                    
+                    /***************
+                    fix text, background color, contrast, sizing, etc. in our custom dark mode theme
+                    ****************/
+                    body,
+                    html {
+                    color: #fff;
+                    }
+                    
+                    .cosmos-header .wds-dropdown__content,
+                    .cosmos-header .wds-dropdown__content > * {
+                    background: #000;
+                    color: #fff;
+                    }
+                    
+                    #p-cosmos-navigation a {
+                    color: #fff;
+                    }
+                    
+                    .cosmos-header .wds-dropdown__content:hover,
+                    .wds-tabs__tab > a:hover {
+                    color: #9393f6;
+                    }
+                    
+                    #catlinks {
+                    background: #cca574;
+                    color: #000;
+                    }
+                    
+                    #catlinks a {
+                    color: darkblue !important;
+                    }
+                    
+                    .wikitable > caption {
+                    font-weight: unset;
+                    margin-bottom: 1%;
+                    }
+                    
+                    .cosmos-footerLinks-list li a {
+                    color: #9393f6;
+                    }
+                    
+                    body .wikitable > tr > th,
+                    body .wikitable > tr > td,
+                    body .wikitable > * > tr > th,
+                    body .wikitable > * > tr > td {
+                    color: #fff;
+                    background: #1a1d23;
+                    }
+                    
+                    .wvui-typeahead-search__suggestions__footer__text {
+                    color: #000;
+                    }
+                    
+                    .editOptions,
+                    .editCheckboxes,
+                    .editOptions .oo-ui-fieldLayout-body .oo-ui-labelElement-label {
+                    color: #fff !important;
+                    }
+                    
+                    .pi-section-navigation .pi-section-tab,
+                    .pi-media-collection .pi-tab-link {
+                    background: #2e2f32;
+                    border: 0;
+                    }
+                    
+                    .navpopup {
+                    background: #2e2f32;
+                    box-shadow: none;
+                    color: #fff;
+                    }
+                    
+                    .popupData {
+                    /* broken spacing and other things, seems useless, no need to keep it */
+                    display: none;
+                    }
+
+                    #mw-content {
+                    background: #000;
+                    }
+                    
+                    /* popups, dialogs, modals */
+                    
+                    .cosmos-modal-content,
+                    #create-page-dialog__title {
+                    background: #1a1a1a;
+                    }
+                    
+                    .wds-dialog__content,
+                    .wds-dialog__title {
+                    color: #fff;
+                    }
+                    
+                    /**************
+                     remove the placeholder image from the search bar at the top of the page and then increase the search suggestion text size, the placeholder image is weird and shows up on plenty of results that do have images
+                    **************/
+                    
+                    .wvui-typeahead-suggestion__text {
+                    padding: 1%;
+                    }
+                    
+                    .wvui-typeahead-suggestion__thumbnail-placeholder {
+                    display: none;
+                    }
+                    
+                    /******/
+                    
+                    /* blank div with an empty ul */
+                    
+                    .create-page-dialog__proposals {
+                    display: none;
+                    }
+                    
+                    /******* useless toolbar entries *******/
+                    #t-recentchangeslinked {
+                    display: none;
+                    }
+                    
+                    #ca-copy-link {
+                    /* easy link is not helpful */
+                    display: none;
+                    }
+                    
+                    #t-word-count {
+                    /* nobody needs a word count */
+                    display: none;
+                    }
+                    
+                    #t-info {
+                    /* page information is useless trivia */
+                    display: none;
+                    }
+                    
+                    #t-print {
+                    /* nobody is going to print anything on this site and from what i can tell the firefox print dialogue works fine */
+                    display: none;
+                    }
+                    
+                    /*** make the toolbar look nicer ***/
+                    #cosmos-toolbar {
+                    border-radius: 5px;
+                    border: 1px solid #eee;
+                    background: #1a1d23;
+                    box-shadow: none;
+                    }
+                    ";
+
+                    if( $out->getPageTitle() == 'Log in' || $out->getPageTitle() == 'Create account' ) {
+                        $out->addInlineStyle( $style );
+                    }
+                }
 		
 		break;
 	case 'gpcommonswiki':
