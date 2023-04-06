@@ -94,8 +94,6 @@ switch ( $wi->dbname ) {
 			];
 		}
 		
-		$wgAllowSiteCSSOnRestrictedPages = true;
-
 		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
