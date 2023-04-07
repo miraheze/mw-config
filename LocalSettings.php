@@ -47,7 +47,7 @@ require_once "$IP/../config/initialise/MirahezeFunctions.php";
 $wi = new MirahezeFunctions();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
-require_once "$IP/../config/PrivateSettings.php';
+require_once "$IP/../config/PrivateSettings.php";
 
 // Load global skins and extensions
 require_once "$IP/../config/GlobalSkins.php";
