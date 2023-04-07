@@ -43,15 +43,15 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && extension_loaded( 'tideways
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenance = [];
 
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
+require_once "$IP/../config/initialise/MirahezeFunctions.php";
 $wi = new MirahezeFunctions();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
-require_once '/srv/mediawiki/config/PrivateSettings.php';
+require_once "$IP/../config/PrivateSettings.php';
 
 // Load global skins and extensions
-require_once '/srv/mediawiki/config/GlobalSkins.php';
-require_once '/srv/mediawiki/config/GlobalExtensions.php';
+require_once "$IP/../config/GlobalSkins.php";
+require_once "$IP/../config/GlobalExtensions.php";
 
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
@@ -288,7 +288,7 @@ $wgConf->settings += [
 
 	// Cache
 	'wgCacheDirectory' => [
-		'default' => '/srv/mediawiki/cache',
+		'default' => "$IP/../cache",
 	],
 	'wgExtensionEntryPointListFiles' => [
 		'default' => [
