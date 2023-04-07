@@ -420,4 +420,8 @@ switch ( $wi->dbname ) {
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
+	case 'meowpediawiki':
+		$wgCleanSignatures = false;
+		
+		break;
 }
