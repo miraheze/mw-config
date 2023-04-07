@@ -26,8 +26,6 @@ class MirahezeFunctions {
 	/** @var array */
 	public static $disabledExtensions = [];
 
-	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
-
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
 		'betaheze' => 'betaheze.org',
@@ -107,6 +105,8 @@ class MirahezeFunctions {
 	 * @return array|string
 	 */
 	public static function readDbListFile( string $dblist, bool $onlyDBs = true, ?string $database = null, bool $fromServer = false ) {
+		global $IP;
+
 		if ( $database && $onlyDBs && !$fromServer ) {
 			return $database;
 		}
@@ -119,12 +119,12 @@ class MirahezeFunctions {
 			$dblist = 'deleted';
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
+		if ( !file_exists( "$IP/cache/{$dblist}.json" ) ) {
 			$databases = [];
 
 			return $databases;
 		} else {
-			$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
+			$databasesArray = json_decode( file_get_contents( "$IP/cache/{$dblist}.json" ), true );
 		}
 
 		if ( $database ) {
@@ -399,15 +399,17 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getCacheArray(): array {
+		global $IP;
+
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' ) ) {
+		if ( !file_exists( "$IP/cache/" . self::$currentDatabase . '.json' ) ) {
 			return [];
 		}
 
 		return (array)json_decode( file_get_contents(
-			self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json'
+			"$IP/cache/" . self::$currentDatabase . '.json'
 		), true );
 	}
 
@@ -436,12 +438,12 @@ class MirahezeFunctions {
 			filemtime( "$IP/includes/Defines.php" ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( "$IP/cache/" .  $wgDBname . '.json' )
 		);
 
 		static $globals = null;
 		$globals ??= self::readFromCache(
-			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			"$IP/cache/" . $confCacheFileName,
 			$confActualMtime
 		);
 
@@ -511,7 +513,9 @@ class MirahezeFunctions {
 	 * @param array $configObject
 	 */
 	public static function writeToCache( string $cacheShard, array $configObject ) {
-		@mkdir( self::CACHE_DIRECTORY );
+		global $IP;
+
+		@mkdir( "$IP/cache" );
 		$tmpFile = tempnam( '/tmp/', $cacheShard );
 
 		$cacheObject = json_encode(
@@ -524,7 +528,7 @@ class MirahezeFunctions {
 				trigger_error( 'Config cache failure: Encoding failed', E_USER_ERROR );
 			} else {
 				if ( file_put_contents( $tmpFile, $cacheObject ) ) {
-					if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
+					if ( rename( $tmpFile, "$IP/cache/" . $cacheShard ) ) {
 						return;
 					}
 				}
@@ -691,12 +695,12 @@ class MirahezeFunctions {
 			filemtime( "$IP/includes/Defines.php" ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( "$IP/cache/" . $wgDBname . '.json' )
 		);
 
 		static $extensions = null;
 		$extensions ??= self::readFromCache(
-			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			"$IP/cache/" . $confCacheFileName,
 			$confActualMtime,
 			'extensions'
 		);
@@ -770,9 +774,9 @@ class MirahezeFunctions {
 	}
 
 	public function loadExtensions() {
-		global $wgDBname;
+		global $wgDBname, $IP;
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
+		if ( !file_exists( "$IP/cache/" . $wgDBname . '.json' ) ) {
 			global $wgConf;
 			if ( self::getRealm() !== 'default' ) {
 				$wgConf->siteParamsCallback = static function () {
@@ -788,7 +792,7 @@ class MirahezeFunctions {
 			return;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/extension-list.json' ) ) {
+		if ( !file_exists( "$IP/cache" . '/extension-list.json' ) ) {
 			$queue = array_fill_keys( array_merge(
 					glob( '/srv/mediawiki/w/extensions/*/extension*.json' ),
 					glob( '/srv/mediawiki/w/skins/*/skin.json' )
@@ -809,9 +813,9 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( self::CACHE_DIRECTORY . '/extension-list.json', json_encode( $list ), LOCK_EX );
+			file_put_contents( "$IP/cache" . '/extension-list.json', json_encode( $list ), LOCK_EX );
 		} else {
-			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
+			$list = json_decode( file_get_contents( "$IP/cache" . '/extension-list.json' ), true );
 		}
 
 		self::$activeExtensions ??= self::getActiveExtensions();
