@@ -438,7 +438,7 @@ class MirahezeFunctions {
 			filemtime( "$IP/includes/Defines.php" ),
 
 			// When ManageWiki is changed
-			@filemtime( "$IP/cache/" .  $wgDBname . '.json' )
+			@filemtime( "$IP/cache/" . $wgDBname . '.json' )
 		);
 
 		static $globals = null;
