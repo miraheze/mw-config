@@ -1978,6 +1978,17 @@ $wgManageWikiSettings = [
 		'help' => 'Whether the option to enable/disable Page Previews should be hidden on Preferences page. Please note if PopupsBetaFeature is set to true this option will be always hidden.',
 		'requires' => [],
 	],
+	// T10707
+	// https://github.com/miraheze/mw-config/pull/5187
+	'wgCleanSignatures' => [
+		'name' => 'Clean signature',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'preferences',
+		'help' => 'Prevents users from including templates in their user signature',
+		'requires' => [],
+	],
 
 	// Recent changes
 	'wgFeedLimit' => [
