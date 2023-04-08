@@ -5712,5 +5712,9 @@ if (
 	require_once __DIR__ . '/ExtensionMessageFiles.php';
 }
 
+// https://github.com/miraheze/mw-config/pull/5187#issuecomment-1500630025
+// https://www.mediawiki.org/wiki/Manual:$wgCleanSignatures
+$wgCleanSignatures = false;
+
 // Don't need a global here
 unset( $wi );
