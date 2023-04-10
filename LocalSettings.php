@@ -1928,6 +1928,20 @@ $wgConf->settings += [
 		'benpediawiki' => [
 			'bw' => 'Benwegul',
 		],
+		'factfinder3dwiki' => [
+			'eg' => 'Anchiartedlixh Lrieggulier',
+			'bl' => 'Betlix',
+			'et' => 'Entertidés Lettíno',
+			'gb' => 'Globiens',
+			'rb' => 'Robbochiex',
+		],
+		'fuutropediawiki' => [
+			'eg' => 'Anchiartedlixh Lrieggulier',
+			'bl' => 'Betlix',
+			'et' => 'Entertidés Lettíno',
+			'gb' => 'Globiens',
+			'rb' => 'Robbochiex',
+		],
 		'gpcommonswiki' => [
 			'qqq' => 'Message documentation',
 			'pcm' => 'Nigerian Pidgin',
