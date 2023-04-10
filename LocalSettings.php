@@ -2481,6 +2481,9 @@ $wgConf->settings += [
 	'wgEnableUserEmailMuteList' => [
 		'default' => true,
 	],
+	'wgEchoPerUserBlacklist' => [
+		'default' => true,
+	],
 
 	// ManageWiki
 	'wgManageWiki' => [
