@@ -1251,6 +1251,9 @@ $wgConf->settings += [
 	'wgEchoMaxMentionsInEditSummary' => [
 		'default' => 0,
 	],
+	'wgEchoPerUserBlacklist' => [
+		'default' => true,
+	],
 
 	// Editing
 	'wgEditSubmitButtonLabelPublish' => [
@@ -2487,6 +2490,12 @@ $wgConf->settings += [
 		'default' => 'noreply@miraheze.org',
 	],
 	'wgAllowHTMLEmail' => [
+		'default' => true,
+	],
+	'wgEnableSpecialMute' => [
+		'default' => true,
+	],
+	'wgEnableUserEmailMuteList' => [
 		'default' => true,
 	],
 
