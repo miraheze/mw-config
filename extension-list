@@ -313,6 +313,7 @@ $IP/skins/Nimbus/skin.json
 $IP/skins/Nostalgia/skin.json
 $IP/skins/Pivot/skin.json
 $IP/skins/Refreshed/skin.json
+$IP/skins/Splash/skin.json
 $IP/skins/Timeless/skin.json
 $IP/skins/Truglass/skin.json
 $IP/skins/Tweeki/skin.json
@@ -322,4 +323,3 @@ $IP/skins/apex/skin.json
 $IP/skins/chameleon/skin.json
 $IP/skins/erudite/skin.json
 $IP/skins/snapwikiskin/skin.json
-$IP/skins/splash/skin.json

@@ -15,10 +15,6 @@ switch ( $wi->dbname ) {
 		break;
 	case 'betawiki':
 		wfLoadExtension( 'GlobalWatchlist' );
-		
-		break;
-	case 'buttonmenwiki':
-		$wgPageImagesScores['width'] = 100;
 
 		break;
 	case 'commonswiki':
@@ -89,7 +85,7 @@ switch ( $wi->dbname ) {
 
 			return true;
 		}
-		
+
 		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
@@ -292,6 +288,13 @@ switch ( $wi->dbname ) {
 				],
 				'DisplayFormat' => 'raw',
 			],
+		];
+
+		$wgTranslateTranslationServices['Google'] = [
+			'url' => 'https://translation.googleapis.com/language/translate/v2',
+			'key' => $wmgTranslateGoogleTranslateMetaKey,
+			'timeout' => 3,
+			'type' => 'google',
 		];
 		break;
 	case 'newusopediawiki':

@@ -59,7 +59,7 @@ $wmgUploadHostname = 'static.miraheze.org';
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
-		'default' => '7',
+		'default' => '8',
 	],
 
 	// 3D
@@ -1047,6 +1047,7 @@ $wgConf->settings += [
 	],
 	'wgReadOnly' => [
 		'default' => false,
+		'frackinuniversewiki' => 'Requested by Edward Chernenko, due to Cargo issues',
 	],
 	'wgSharedTables' => [
 		'default' => [],
@@ -2576,8 +2577,6 @@ $wgConf->settings += [
 				'managewiki-editdefault' => true,
 				'managewiki-restricted' => true,
 				'requestwiki' => true,
-				'globalgroupmembership' => true,
-				'globalgrouppermissions' => true,
 			],
 		],
 		'+bitcoindebateswiki' => [
@@ -5660,6 +5659,7 @@ $wi::$disabledExtensions = [
 	'lingo',
 	'regexfunctions',
 	'wikiforum',
+	'cargo',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
