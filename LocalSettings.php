@@ -1251,7 +1251,7 @@ $wgConf->settings += [
 	'wgEchoMaxMentionsInEditSummary' => [
 		'default' => 0,
 	],
-		'wgEchoPerUserBlacklist' => [
+	'wgEchoPerUserBlacklist' => [
 		'default' => true,
 	],
 
