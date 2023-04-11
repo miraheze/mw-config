@@ -118,3 +118,39 @@ function wfMetaSiteNotice( &$siteNotice, $skin ) {
 EOF;
 }
 }
+
+// Cloud11/file issues
+$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
+
+function wfMetaSiteNotice( &$siteNotice, $skin ) {
+	$title = $skin->getTitle();
+	if ( $title->getNamespace() !== 6 ) {
+		return;
+	}
+
+	$skin->getOutput()->enableOOUI();
+	$skin->getOutput()->addInlineStyle(
+		'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
+		'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
+	);
+	$siteNotice .= <<<EOF
+			<table style="width: 100%;">
+				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;">
+					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
+						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
+						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
+							 Due to an issue with Cloud11, some files may not display. We are aware of this issue and hope it will be resolved soon.
+						</div>
+
+						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Cargo_disabled">
+								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
+								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
+								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
+							</a>
+						</span>
+					</div>
+				</td></tr></tbody>
+			</table>
+		EOF;
+}
