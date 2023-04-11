@@ -421,3 +421,5 @@ switch ( $wi->dbname ) {
 
 		break;
 }
+
+$wgCargoDBname = $wgDBname . 'cargo';
