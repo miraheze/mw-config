@@ -1453,7 +1453,7 @@ $wgConf->settings += [
 
 	// Files
 	'wgEnableUploads' => [
-		'default' => false, // Disabled due to T10717
+		'default' => true,
 	],
 	'wgMaxUploadSize' => [
 		/** T3797 - 250MB */
