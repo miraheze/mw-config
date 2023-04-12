@@ -1197,10 +1197,14 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Check or uncheck this option if you want to enable or disable the upload of files on your wiki.',
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 	],
 	'wgAllowCopyUploads' => [
 		'name' => 'Enable File Uploads Through URL',
