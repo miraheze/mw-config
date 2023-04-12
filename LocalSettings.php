@@ -2733,7 +2733,6 @@ $wgConf->settings += [
 				'centralauth-suppress' => true,
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
-				'createwiki' => true,
 				'globalblock' => true,
 				'managewiki' => true,
 				'managewiki-restricted' => true,
@@ -2774,7 +2773,7 @@ $wgConf->settings += [
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
-				'createwiki' => true,
+
 			],
 		],
 		'+moviepediawiki' => [
