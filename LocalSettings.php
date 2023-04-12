@@ -4133,7 +4133,7 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'+hypopediawiki' => [
-			'bureaucrat',
+			'editbureaucratprotected',
 			'editextendedconfirmedprotected',
 		],
 		'+igrovyesistemywiki' => [
@@ -4176,6 +4176,11 @@ $wgConf->settings += [
 		],
 		'+sesupportwiki' => [
 			'editor',
+		],
+		'+scratchpadwiki' => [
+			'editbureaucratprotected',
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
 		],
 		'+simulatorwiki' => [
 			'edittemplate',
@@ -4246,6 +4251,7 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'hypopediawiki' => [
+			'editbureaucratprotected',
 			'editextendedconfirmedprotected',
 		],
 		'infopediawiki' => [
@@ -4280,6 +4286,11 @@ $wgConf->settings += [
 		],
 		'projectsekaiwiki' => [
 			'editguide',
+		],
+		'scratchpadwiki' => [
+			'editbureaucratprotected',
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
 		],
 		'simulatorwiki' => [
 			'editfragment',
