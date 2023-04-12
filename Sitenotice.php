@@ -123,10 +123,6 @@ EOF;
 $wgHooks['SiteNoticeAfter'][] = 'wfFileIssuesSiteNotice';
 
 function wfFileIssuesSiteNotice( &$siteNotice, $skin ) {
-	$title = $skin->getTitle();
-	if ( $title->getNamespace() !== 6 ) {
-		return;
-	}
 
 	$skin->getOutput()->enableOOUI();
 	$skin->getOutput()->addInlineStyle(
