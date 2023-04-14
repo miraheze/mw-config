@@ -84,5 +84,5 @@ if ( $wgDBname === 'sagan4alphawiki' ) {
 	$smwgNamespacesWithSemanticLinks += [
 		3002 => true,
 		3003 => false,
-	]
+	];
 }
