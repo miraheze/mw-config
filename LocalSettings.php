@@ -2017,6 +2017,11 @@ $wgConf->settings += [
 				'en',
 			],
 		],
+		'+brolandiawiki' => [
+			'wikipedia' => [
+				'fr',
+			],
+		],
 		'+celebswiki' => [
 			'simplewiki',
 		],
