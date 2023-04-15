@@ -123,7 +123,6 @@ EOF;
 $wgHooks['SiteNoticeAfter'][] = 'wfFileIssuesSiteNotice';
 
 function wfFileIssuesSiteNotice( &$siteNotice, $skin ) {
-
 	$skin->getOutput()->enableOOUI();
 	$skin->getOutput()->addInlineStyle(
 		'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
