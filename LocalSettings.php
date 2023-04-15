@@ -3290,6 +3290,9 @@ $wgConf->settings += [
 	'wgResourceLoaderMaxQueryLength' => [
 		'default' => 5000,
 	],
+	'wgCleanSignatures' => [
+		'default' => true,
+	],
 
 	// MobileFrontend
 	'wgMFAutodetectMobileView' => [
