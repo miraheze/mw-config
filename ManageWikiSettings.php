@@ -856,6 +856,15 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, user will be redirected to VisualEditor.',
 		'requires' => [],
 	],
+	'wgCleanSignatures' => [
+		'name' => 'Clean Signatures',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'global' => 'true',
+		'section' => 'editing',
+		'help' => 'If enabled, removes (substitutes) templates in signatures.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
