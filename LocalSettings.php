@@ -889,6 +889,9 @@ $wgConf->settings += [
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
 	],
+	'wgCreateWikiEnableManageInactiveWikis' => [
+		'default' => true,
+	],
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'sre@miraheze.org',
 	],
