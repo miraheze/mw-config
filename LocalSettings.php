@@ -5748,6 +5748,9 @@ if ( $wi->missing ) {
 require_once '/srv/mediawiki/config/GlobalSettings.php';
 require_once '/srv/mediawiki/config/LocalWiki.php';
 
+// Configure late to ensure $wgDBname is set properly
+$wgCargoDBname = $wgDBname . 'cargo';
+
 // Define last - Extension message files for loading extensions
 if (
 	file_exists( __DIR__ . '/ExtensionMessageFiles.php' ) &&

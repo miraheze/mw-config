@@ -272,6 +272,9 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'install' => [
+			'mwscript' => [
+				"$IP/extensions/MirahezeMagic/maintenance/createCargoDB.php" => [],
+			],
 			'sql' => [
 				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
 				'cargo_backlinks' => "$IP/extensions/Cargo/sql/cargo_backlinks.sql"
