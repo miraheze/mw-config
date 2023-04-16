@@ -50,7 +50,7 @@ $wgMajorSiteNoticeID = 83;
  }*/
 
 // Specific wiki SiteNotice
-if ( $wi->isExtensionActive( 'Cargo' ) ) {
+/*if ( $wi->isExtensionActive( 'Cargo' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
@@ -81,7 +81,7 @@ if ( $wi->isExtensionActive( 'Cargo' ) ) {
 			</table>
 		EOF;
 	}
-}
+}*/
 
 // Meta Tech NS sitenotice
 if ( $wgDBname === 'metawiki' ) {
