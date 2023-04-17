@@ -547,10 +547,10 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 $wgJobRunRate = 0;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
+// We need all thumbs to be regenerated
+$wgThumbnailEpoch = 20230417011058;
+
 // Scribunto
 /** 50MB */
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
-
-// We need all thumbs to be regenerated
-$wgThumbnailEpoch = 20230417011058;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
