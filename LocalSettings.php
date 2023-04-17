@@ -4127,6 +4127,9 @@ $wgConf->settings += [
 		'+collegecitoyenwiki' => [
 			'editextendedsemiprotected',
 		],
+		'+csydeswiki' => [
+			'editblacklisted',
+		],
 		'+devwiki' => [
 			'editinterface',
 		],
@@ -4247,6 +4250,9 @@ $wgConf->settings += [
 		],
 		'collegecitoyenwiki' => [
 			'editextendedsemiprotected',
+		],
+		'csydeswiki' => [
+			'editblacklisted',
 		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
