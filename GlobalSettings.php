@@ -550,4 +550,7 @@ $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 // Scribunto
 /** 50MB */
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
+
+// We need all thumbs to be regenerated
+$wgThumbnailEpoch = 20230417011058;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
