@@ -43,6 +43,7 @@ wfLoadExtensions( [
 	'StopForumSpam',
 	'TitleBlacklist',
 	'TorBlock',
+	'WebAuthn',
 	'WikiDiscover',
 	'WikiEditor',
 	'cldr',
