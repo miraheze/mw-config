@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 83;
+$wgMajorSiteNoticeID = 84;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -50,7 +50,7 @@ $wgMajorSiteNoticeID = 83;
  }*/
 
 // Specific wiki SiteNotice
-/*if ( $wi->isExtensionActive( 'Cargo' ) ) {
+if ( $wi->isExtensionActive( 'Graph' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
@@ -64,13 +64,13 @@ $wgMajorSiteNoticeID = 83;
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #67440F; background-color: #FFF2F6; padding: 10px 15px; color: black;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" decoding="async" width="50" height="50"></div>
+						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Font_Awesome_5_solid_bug.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							 Cargo has been temporarily disabled due to a severe security concern. We hope it is fixed soon.
+							 Graph has been temporarily disabled due to a severe security bug.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
-							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Cargo_disabled">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Graph_disabled">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
 								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
@@ -81,7 +81,7 @@ $wgMajorSiteNoticeID = 83;
 			</table>
 		EOF;
 	}
-}*/
+}
 
 // Meta Tech NS sitenotice
 if ( $wgDBname === 'metawiki' ) {
