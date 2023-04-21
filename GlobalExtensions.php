@@ -30,6 +30,7 @@ wfLoadExtensions( [
 	'MirahezeMagic',
 	'MobileDetect',
 	'NativeSvgHandler',
+	'NewSignupPage',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
