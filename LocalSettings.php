@@ -2874,6 +2874,7 @@ $wgConf->settings += [
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
+				'bypasstoucheck',
 				'centralauth-createlocal',
 				'centralauth-lock',
 				'centralauth-suppress',
