@@ -2124,11 +2124,6 @@ $wgConf->settings += [
 		],
 	],
 
-	// IPInfo
-	'wgIPInfoGeoLite2Prefix' => [
-		'default' => '/srv/mediawiki/geoip/GeoLite2-',
-	],
-
 	// JavascriptSlideshow
 	'wgHtml5' => [
 		'ext-JavascriptSlideshow' => true,
@@ -2896,10 +2891,6 @@ $wgConf->settings += [
 				'hideuser',
 				'interwiki',
 				'investigate',
-				'ipinfo',
-				'ipinfo-view-basic',
-				'ipinfo-view-full',
-				'ipinfo-view-log',
 				'managewiki-restricted',
 				'managewiki-editdefault',
 				'moderation-checkuser',
