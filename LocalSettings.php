@@ -2722,6 +2722,9 @@ $wgConf->settings += [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
 			],
+			'global-renamer' => [
+				'centralauth-rename' => true,
+			],
 			'global-sysop' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
