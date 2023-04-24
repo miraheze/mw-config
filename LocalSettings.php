@@ -1579,54 +1579,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// Gallery Options
-	'wgGalleryOptions' => [
-		'default' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'traditional',
-		],
-		'dcmultiversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'rippaversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'theboyswiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'valiantcinematicuniversewikiwiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-	],
 	// GeoData
 	'wgGlobes' => [
 		'default' => [],
@@ -3868,13 +3820,6 @@ $wgConf->settings += [
 			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
-		],
-		'+dcmultiversewiki' => [
-			'usecodemirror' => 1,
-			'visualeditor-newwikitext' => 1,
-			'usebetatoolbar' => 0,
-			'usebetatoolbar-cgd' => 0,
-			'visualeditor-enable-experimental' => 1,
 		],
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
