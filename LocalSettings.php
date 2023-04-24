@@ -387,9 +387,6 @@ $wgConf->settings += [
 			'betawiki',
 		],
 	],
-	'wgCentralAuthAutoNew' => [
-		'default' => true,
-	],
 	'wgCentralAuthAutoMigrate' => [
 		'default' => true,
 	],
@@ -419,14 +416,23 @@ $wgConf->settings += [
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => true,
 	],
+	'wgCentralAuthGlobalBlockInterwikiPrefix' => [
+		'default' => 'meta',
+	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
 		'betaheze' => 'betawiki',
 	],
+	'wgCentralAuthOldNameAntiSpoofWiki' => [
+		'default' => 'metawiki',
+	],
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
 	],
-	'wgCentralAuthSilentLogin' => [
+	'wgGlobalRenameDenylist' => [
+		'default' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw',
+	],
+	'wgGlobalRenameDenylistRegex' => [
 		'default' => true,
 	],
 
