@@ -2802,7 +2802,7 @@ $wgConf->settings += [
 			],
 			'user' => [
 				'request-import-dump' => true,
-				'request-ssl' => true
+				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
