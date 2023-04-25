@@ -179,6 +179,7 @@ class MirahezeFunctions {
 		global $wgHooks;
 
 		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+		$wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
 		$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
 	}
 
@@ -581,6 +582,7 @@ class MirahezeFunctions {
 		// Assign states
 		$settings['cwPrivate']['default'] = (bool)$cacheArray['states']['private'];
 		$settings['cwClosed']['default'] = (bool)$cacheArray['states']['closed'];
+		$settings['cwLocked']['default'] = (bool)$cacheArray['states']['locked'] ?? false;
 		$settings['cwInactive']['default'] = ( $cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$cacheArray['states']['inactive'];
 		$settings['cwExperimental']['default'] = (bool)( $cacheArray['states']['experimental'] ?? false );
 
@@ -967,6 +969,22 @@ class MirahezeFunctions {
 				),
 			],
 		];
+	}
+
+	/**
+	 * @param string $wiki
+	 * @param DBConnRef $dbr
+	 * @param array &$jsonArray
+	 */
+	public static function onCreateWikiJsonBuilder( string $wiki, DBConnRef $dbr, array &$jsonArray ) {
+		$row = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [ 'wiki_locked' ] )
+			->where( [ 'wiki_dbname' => $wiki ] )
+			->caller( __METHOD__ )
+			->fetchRow();
+
+		$jsonArray['states']['locked'] = (bool)$row->wiki_locked;
 	}
 
 	public static function onMediaWikiServices() {
