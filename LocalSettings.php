@@ -2560,6 +2560,10 @@ $wgConf->settings += [
 				'managewiki-restricted' => true,
 				'requestwiki' => true,
 			],
+			'steward' => [
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+			],
 		],
 		'+bitcoindebateswiki' => [
 			'emailconfirmed' => [
