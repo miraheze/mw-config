@@ -2523,7 +2523,7 @@ $wgConf->settings += [
 			'interwiki-admin' => [
 				'interwiki' => true
 			],
-			'oversight' => [
+			'suppress' => [
 				'abusefilter-hidden-log' => true,
 				'abusefilter-hide-log' => true,
 				'browsearchive' => true,
@@ -2873,7 +2873,7 @@ $wgConf->settings += [
 			],
 		],
 		'+ext-Flow' => [
-			'oversight' => [
+			'suppress' => [
 				'flow-suppress' => true,
 			],
 		],
@@ -2999,6 +2999,7 @@ $wgConf->settings += [
 			'oversight',
 			'steward',
 			'staff',
+			'suppress',
 			'interwiki-admin',
 			'sysadmin',
 			'trustandsafety',
@@ -3611,7 +3612,7 @@ $wgConf->settings += [
 	'wgOATHRequiredForGroups' => [
 		'default' => [
 			'checkuser',
-			'oversight',
+			'suppress',
 			'steward',
 		],
 		'+metawiki' => [
