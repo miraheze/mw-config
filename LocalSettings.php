@@ -88,12 +88,12 @@ $wgConf->settings += [
 	],
 	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
 		'metawiki' => true,
-		'betawiki' => true,
+		'metawikibeta' => true,
 	],
 	'wgAbuseFilterBlockDuration' => [
 		'default' => 'indefinite',
@@ -283,7 +283,7 @@ $wgConf->settings += [
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
 		'default' => 'mhglobal',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 
 	// Cache
@@ -384,7 +384,8 @@ $wgConf->settings += [
 			'metawiki',
 		],
 		'betaheze' => [
-			'betawiki',
+			'loginwikibeta',
+			'metawikibeta',
 		],
 	],
 	'wgCentralAuthAutoMigrate' => [
@@ -421,7 +422,7 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'loginwikibeta',
 	],
 	'wgCentralAuthOldNameAntiSpoofWiki' => [
 		'default' => 'metawiki',
@@ -440,7 +441,7 @@ $wgConf->settings += [
 	'wgNoticeInfrastructure' => [
 		'default' => false,
 		'metawiki' => true,
-		'betawiki' => true,
+		'metawikibeta' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
@@ -452,7 +453,7 @@ $wgConf->settings += [
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
@@ -494,7 +495,7 @@ $wgConf->settings += [
 	],
 	'wgCheckUserCAtoollink' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCheckUserGBtoollink' => [
 		'default' => [
@@ -504,7 +505,7 @@ $wgConf->settings += [
 			],
 		],
 		'betaheze' => [
-			'centralDB' => 'betawiki',
+			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
 			],
@@ -518,7 +519,7 @@ $wgConf->settings += [
 			],
 		],
 		'betaheze' => [
-			'centralDB' => 'betawiki',
+			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
 			],
@@ -890,7 +891,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
@@ -1248,7 +1249,7 @@ $wgConf->settings += [
 	],
 	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
@@ -1629,8 +1630,8 @@ $wgConf->settings += [
 			'source' => 'metawiki',
 		],
 		'betaheze' => [
-			'wiki' => 'betawiki',
-			'source' => 'betawiki',
+			'wiki' => 'metawikibeta',
+			'source' => 'metawikibeta',
 		],
 	],
 	'+wgResourceLoaderSources' => [
@@ -1641,9 +1642,9 @@ $wgConf->settings += [
 			],
 		],
 		'betaheze' => [
-			'betawiki' => [
-				'apiScript' => '//beta.betaheze.org/w/api.php',
-				'loadScript' => '//beta.betaheze.org/w/load.php',
+			'metawikibeta' => [
+				'apiScript' => '//meta.betaheze.org/w/api.php',
+				'loadScript' => '//meta.betaheze.org/w/load.php',
 			],
 		],
 	],
@@ -1687,7 +1688,7 @@ $wgConf->settings += [
 	],
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'loginwikibeta',
 	],
 
 	// Grant Permissions for BotPasswords and OAuth
@@ -1864,7 +1865,7 @@ $wgConf->settings += [
 	],
 	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
@@ -1929,7 +1930,7 @@ $wgConf->settings += [
 	// ImportDump
 	'wgImportDumpCentralWiki' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgImportDumpInterwikiMap' => [
 		'default' => [
@@ -1939,7 +1940,7 @@ $wgConf->settings += [
 	],
 	'wgImportDumpScriptCommand' => [
 		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
-		'betawiki' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-betawiki-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
+		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
@@ -2553,7 +2554,7 @@ $wgConf->settings += [
 				'read' => true,
 			],
 		],
-		'+betawiki' => [
+		'+metawikibeta' => [
 			'bureaucrat' => [
 				'createwiki' => true,
 				'managewiki-editdefault' => true,
@@ -2966,7 +2967,7 @@ $wgConf->settings += [
 	'wgAllowGlobalMessaging' => [
 		'default' => false,
 		'metawiki' => true,
-		'betawiki' => true,
+		'metawikibeta' => true,
 	],
 
 	// MatomoAnalytics
