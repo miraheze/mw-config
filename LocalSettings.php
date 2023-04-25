@@ -2802,6 +2802,7 @@ $wgConf->settings += [
 			],
 			'user' => [
 				'request-import-dump' => true,
+				'request-ssl' => true
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
@@ -2998,7 +2999,6 @@ $wgConf->settings += [
 			'oversight',
 			'steward',
 			'staff',
-			'suppress',
 			'interwiki-admin',
 			'sysadmin',
 			'trustandsafety',
