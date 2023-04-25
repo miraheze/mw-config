@@ -4145,9 +4145,13 @@ $wgConf->settings += [
 			'editor',
 		],
 		'+scratchpadwiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
+			'',
+			'user',
+                        'autoconfirmed',
+			'templateeditor',
+			'extendedconfirmed',
+			'sysop',
+			'bureaucrat',
 		],
 		'+simulatorwiki' => [
 			'edittemplate',
@@ -4258,9 +4262,10 @@ $wgConf->settings += [
 			'editguide',
 		],
 		'scratchpadwiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
+			'templateeditor',
+			'extendedconfirmed',
+			'moderator',
+			'bureaucrat',
 		],
 		'simulatorwiki' => [
 			'editfragment',
