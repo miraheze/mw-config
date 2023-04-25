@@ -426,6 +426,7 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthOldNameAntiSpoofWiki' => [
 		'default' => 'metawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
@@ -2554,18 +2555,6 @@ $wgConf->settings += [
 				'read' => true,
 			],
 		],
-		'+metawikibeta' => [
-			'bureaucrat' => [
-				'createwiki' => true,
-				'managewiki-editdefault' => true,
-				'managewiki-restricted' => true,
-				'requestwiki' => true,
-			],
-			'steward' => [
-				'globalgroupmembership' => true,
-				'globalgrouppermissions' => true,
-			],
-		],
 		'+bitcoindebateswiki' => [
 			'emailconfirmed' => [
 				'read' => true,
@@ -2741,6 +2730,75 @@ $wgConf->settings += [
 			'sysop' => [
 				'interwiki' => true,
 				'autopatrolled' => true,
+			],
+			'user' => [
+				'request-import-dump' => true,
+				'requestwiki' => true,
+			],
+			'wikicreator' => [
+				'createwiki' => true,
+			],
+		],
+		'+metawikibeta' => [
+			'autopatrolled' => [
+				'autopatrolled' => true,
+			],
+			'confirmed' => [
+				'mwoauthproposeconsumer' => true,
+				'mwoauthupdateownconsumer' => true,
+			],
+			'global-renamer' => [
+				'centralauth-rename' => true,
+			],
+			'global-sysop' => [
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'globalblock' => true,
+			],
+			'proxybot' => [
+				'globalblock' => true,
+				'centralauth-lock' => true,
+			],
+			'requestwikiblocked' => [
+				'read' => true,
+			],
+			'steward' => [
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'centralauth-suppress' => true,
+				'centralauth-rename' => true,
+				'centralauth-unmerge' => true,
+				'createwiki' => true,
+				'globalblock' => true,
+				'managewiki' => true,
+				'managewiki-restricted' => true,
+				'noratelimit' => true,
+				'userrights' => true,
+				'userrights-interwiki' => true,
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+			],
+			'sysadmin' => [
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+				'handle-import-dump-interwiki' => true,
+				'handle-import-dump-requests' => true,
+				'oathauth-verify-user' => true,
+				'oathauth-disable-for-user' => true,
+				'view-private-import-dump-requests' => true,
+			],
+			'trustandsafety' => [
+				'userrights' => true,
+				'globalblock' => true,
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+				'userrights-interwiki' => true,
+				'centralauth-lock' => true,
+				'centralauth-rename' => true,
+				'handle-pii' => true,
+				'oathauth-disable-for-user' => true,
+				'oathauth-verify-user' => true,
+				'view-private-import-dump-requests' => true,
 			],
 			'user' => [
 				'request-import-dump' => true,
@@ -2940,6 +2998,7 @@ $wgConf->settings += [
 			'oversight',
 			'steward',
 			'staff',
+			'suppress',
 			'interwiki-admin',
 			'sysadmin',
 			'trustandsafety',
