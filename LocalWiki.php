@@ -289,7 +289,7 @@ switch ( $wi->dbname ) {
 				'DisplayFormat' => 'raw',
 			],
 			'requestbetaaccount' => [
-				'RecepientUser' => 'Miraheze Operations',
+				'RecipientUser' => 'Miraheze Operations',
 				'SenderName' => 'Betaheze account creation request (via Meta)',
 				'RequireDetails' => true,
 				'MustBeLoggedIn' => true,
