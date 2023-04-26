@@ -13,7 +13,7 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'betawiki':
+	case 'metawikibeta':
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
