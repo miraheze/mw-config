@@ -288,6 +288,28 @@ switch ( $wi->dbname ) {
 				],
 				'DisplayFormat' => 'raw',
 			],
+			'requestbetaaccount' => [
+				'RecepientUser' => 'Miraheze Operations',
+				'SenderName' => 'Betaheze account creation request (via Meta)',
+				'RequireDetails' => true,
+				'MustBeLoggedIn' => true,
+				'AdditionalFields' => [
+					'SelectUsername' => [
+						'label-message' => 'contactpage-requestbetaaccount-selectusername',
+						'type' => 'text',
+						'maxlength' => 50,
+						'help-message' => 'contactpage-requestbetaaccount-selectusername-help',
+						'required' => true,
+					],
+					'RequestReason' => [
+						'label-message' => 'contactpage-requestbetaaccount-requestreason',
+						'type' => 'textarea',
+						'help-message' => 'contactpage-requestaccount-requestreason-help',
+						'required' => true,
+					],
+				],
+				'DisplayFormat' => 'table',
+			],
 		];
 
 		$wgTranslateTranslationServices['Google'] = [
