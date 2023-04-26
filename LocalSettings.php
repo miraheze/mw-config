@@ -3623,7 +3623,7 @@ $wgConf->settings += [
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
 		'default' => 'PT4H',
@@ -4093,7 +4093,7 @@ $wgConf->settings += [
 	'wgRemovePIIAllowedWikis' => [
 		'default' => [
 			'metawiki',
-			'betawiki',
+			'metawikibeta',
 		],
 	],
 	'wgRemovePIIAutoPrefix' => [
@@ -4212,7 +4212,7 @@ $wgConf->settings += [
 		'+scratchpadwiki' => [
 			'',
 			'user',
-						'autoconfirmed',
+			'autoconfirmed',
 			'templateeditor',
 			'extendedconfirmed',
 			'moderator',
@@ -4879,7 +4879,7 @@ $wgConf->settings += [
 	],
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 
 	// UserFunctions
