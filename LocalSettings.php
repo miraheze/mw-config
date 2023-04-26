@@ -4212,7 +4212,7 @@ $wgConf->settings += [
 		'+scratchpadwiki' => [
 			'',
 			'user',
-                        'autoconfirmed',
+						'autoconfirmed',
 			'templateeditor',
 			'extendedconfirmed',
 			'moderator',
