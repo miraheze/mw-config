@@ -4895,6 +4895,9 @@ $wgConf->settings += [
 			'username',
 		],
 	],
+	'wgUFAllowedNamespaces' => [
+		'default' => '8',
+	],
 
 	// UserPageEditProtection
 	'wgOnlyUserEditUserPage' => [
