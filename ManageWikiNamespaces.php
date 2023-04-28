@@ -354,4 +354,17 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgUFAllowedNamespaces' => [
+		'name' => 'Allow UserFunctions to operate in this namespace?',
+		'from' => 'userfunctions',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		'overridedefault' => [
+			8 => true,
+			'default' => false,
+		'help' => '',
+		'requires' => [],
+	],
 ];
