@@ -364,6 +364,7 @@ $wgManageWikiNamespacesAdditional = [
 		'overridedefault' => [
 			8 => true,
 			'default' => false,
+		],
 		'help' => '',
 		'requires' => [],
 	],
