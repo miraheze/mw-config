@@ -171,14 +171,14 @@ $wgConf->settings += [
 		'default' => [
 			'spam' => [
 				'files' => [
-					'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_spam_blacklist&action=raw&sb_ver=1',
+					'https://meta.miraheze.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
 				],
 			],
 		],
 		'betaheze' => [
 			'spam' => [
 				'files' => [
-					'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_spam_blacklist&action=raw&sb_ver=1',
+					'https://beta.betaheze.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
 				],
 			],
 		],
@@ -446,11 +446,11 @@ $wgConf->settings += [
 	],
 	'wgCentralSelectedBannerDispatcher' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
-		'betaheze' => 'https://meta.betaheze.org/w/index.php/Special:BannerLoader',
+		'betaheze' => 'https://beta.betaheze.org/w/index.php/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
-		'betaheze' => 'https://meta.betaheze.org/w/index.php/Special:RecordImpression',
+		'betaheze' => 'https://beta.betaheze.org/w/index.php/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
@@ -458,7 +458,7 @@ $wgConf->settings += [
 	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
-		'betaheze' => 'https://meta.betaheze.org',
+		'betaheze' => 'https://beta.betaheze.org',
 	],
 	'wgNoticeProjects' => [
 		'default' => [
@@ -1685,7 +1685,7 @@ $wgConf->settings += [
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
 		'default' => 'https://login.miraheze.org/w/api.php',
-		'betaheze' => 'https://login.betaheze.org/w/api.php',
+		'betaheze' => 'https://beta.betaheze.org/w/api.php',
 	],
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
@@ -3286,8 +3286,7 @@ $wgConf->settings += [
 			'meta.miraheze.org',
 		],
 		'betaheze' => [
-			'login.miraheze.org',
-			'meta.betaheze.org',
+			'beta.betaheze.org',
 		],
 		'+gratisdatawiki' => [
 			'gratispaideia.miraheze.org',
@@ -4741,7 +4740,7 @@ $wgConf->settings += [
 		'default' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw',
+				'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
 			],
 			'local' => [
 				'type' => 'localpage',
@@ -4751,7 +4750,7 @@ $wgConf->settings += [
 		'betaheze' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw',
+				'src' => 'https://beta.betaheze.org/w/index.php?title=Title_blacklist&action=raw',
 			],
 			'local' => [
 				'type' => 'localpage',
@@ -4895,6 +4894,9 @@ $wgConf->settings += [
 			'username',
 		],
 	],
+	'wgUFAllowedNamespaces' => [
+		'default' => '8',
+	],	
 
 	// UserPageEditProtection
 	'wgOnlyUserEditUserPage' => [
