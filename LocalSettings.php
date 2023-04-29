@@ -3993,6 +3993,11 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+zhtranswiki' => [
+			'watchlistunwatchlinks' => true,
+			'uselivepreview' => true,
+			'toc-expand' => true,
+		],
 		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
 		],
