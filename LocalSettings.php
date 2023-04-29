@@ -3994,9 +3994,12 @@ $wgConf->settings += [
 			'thumbsize' => 3,
 		],
 		'+zhtranswiki' => [
-			'watchlistunwatchlinks' => true,
-			'uselivepreview' => true,
+			'echo-subscriptions-email-dt-subscription' => true,
+			'echo-subscriptions-email-mention' => true,
+			'echo-subscriptions-email-reverted' => true,
 			'toc-expand' => true,
+			'uselivepreview' => true,
+			'watchlistunwatchlinks' => true,
 		],
 		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
