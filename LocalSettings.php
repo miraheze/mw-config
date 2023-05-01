@@ -3996,8 +3996,13 @@ $wgConf->settings += [
 		],
 		'+zhtranswiki' => [
 			'echo-subscriptions-email-dt-subscription' => true,
+			'echo-subscriptions-email-dt-subscription-archiving' => true,
 			'echo-subscriptions-email-mention' => true,
 			'echo-subscriptions-email-reverted' => true,
+			'echo-subscriptions-web-failure' => true,
+			'echo-subscriptions-web-success' => true,
+			'echo-subscriptions-web-reverted' => true,
+			'enotifwatchlistpages' => true,
 			'toc-expand' => true,
 			'uselivepreview' => true,
 			'watchlistunwatchlinks' => true,
