@@ -4005,7 +4005,7 @@ $wgConf->settings += [
 			'echo-subscriptions-web-reverted' => true,
 			'enotifwatchlistpages' => true,
 			'toc-expand' => true,
-			'visualeditor-tabs' => prefer-wt,
+			'visualeditor-tabs' => 'prefer-wt',
 			'uselivepreview' => true,
 			'watchlistunwatchlinks' => true,
 		],
