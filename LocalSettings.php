@@ -480,11 +480,17 @@ $wgConf->settings += [
 	],
 
 	// CheckUser
+	// Remove in 1.40
 	'wgCheckUserActorMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	],
+	// Remove in 1.40
 	'wgCheckUserLogActorMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	],
+	// New for 1.40
+	'wgCheckUserEventTablesMigrationStage' => [
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
 	],
 	'wgCheckUserForceSummary' => [
 		'default' => true,
