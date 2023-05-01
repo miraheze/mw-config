@@ -433,6 +433,7 @@ $wgConf->settings += [
 	],
 	'wgGlobalRenameDenylist' => [
 		'default' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw',
+		'betaheze' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw', 
 	],
 	'wgGlobalRenameDenylistRegex' => [
 		'default' => true,
