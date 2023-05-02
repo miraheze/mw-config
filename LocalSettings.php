@@ -2001,6 +2001,12 @@ $wgConf->settings += [
 			'zhwikipedia',
 			'hkrailfan',
 		],
+		'+ilaiwiki' => [
+			'wikipedia' => [
+				'en',
+				'fr',
+			],
+		],
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
