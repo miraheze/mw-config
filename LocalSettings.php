@@ -211,6 +211,7 @@ $wgConf->settings += [
 	'egApprovedRevsShowNotApprovedMessage' => [
 		'default' => false,
 		'primalfeararkwiki' => true,
+		'zhtranswiki' => true,
 	],
 
 	// ArticleCreationWorkflow
@@ -4011,11 +4012,12 @@ $wgConf->settings += [
 			'echo-subscriptions-email-dt-subscription-archiving' => true,
 			'echo-subscriptions-email-mention' => true,
 			'echo-subscriptions-email-reverted' => true,
-			'echo-subscriptions-web-failure' => true,
-			'echo-subscriptions-web-success' => true,
+			'echo-subscriptions-web-mention-failure' => true,
+			'echo-subscriptions-web-mention-success' => true,
 			'echo-subscriptions-web-reverted' => true,
 			'enotifwatchlistpages' => true,
 			'toc-expand' => true,
+			'visualeditor-tabs' => 'prefer-wt',
 			'uselivepreview' => true,
 			'watchlistunwatchlinks' => true,
 		],
