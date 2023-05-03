@@ -88,12 +88,12 @@ $wgConf->settings += [
 	],
 	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
 		'metawiki' => true,
-		'betawiki' => true,
+		'metawikibeta' => true,
 	],
 	'wgAbuseFilterBlockDuration' => [
 		'default' => 'indefinite',
@@ -171,14 +171,14 @@ $wgConf->settings += [
 		'default' => [
 			'spam' => [
 				'files' => [
-					'https://meta.miraheze.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
+					'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_spam_blacklist&action=raw&sb_ver=1',
 				],
 			],
 		],
 		'betaheze' => [
 			'spam' => [
 				'files' => [
-					'https://beta.betaheze.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1',
+					'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_spam_blacklist&action=raw&sb_ver=1',
 				],
 			],
 		],
@@ -211,6 +211,7 @@ $wgConf->settings += [
 	'egApprovedRevsShowNotApprovedMessage' => [
 		'default' => false,
 		'primalfeararkwiki' => true,
+		'zhtranswiki' => true,
 	],
 
 	// ArticleCreationWorkflow
@@ -283,7 +284,7 @@ $wgConf->settings += [
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
 		'default' => 'mhglobal',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 
 	// Cache
@@ -384,11 +385,9 @@ $wgConf->settings += [
 			'metawiki',
 		],
 		'betaheze' => [
-			'betawiki',
+			'loginwikibeta',
+			'metawikibeta',
 		],
-	],
-	'wgCentralAuthAutoNew' => [
-		'default' => true,
 	],
 	'wgCentralAuthAutoMigrate' => [
 		'default' => true,
@@ -419,14 +418,25 @@ $wgConf->settings += [
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => true,
 	],
+	'wgCentralAuthGlobalBlockInterwikiPrefix' => [
+		'default' => 'meta',
+	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'loginwikibeta',
+	],
+	'wgCentralAuthOldNameAntiSpoofWiki' => [
+		'default' => 'metawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
 	],
-	'wgCentralAuthSilentLogin' => [
+	'wgGlobalRenameDenylist' => [
+		'default' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw',
+		'betaheze' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw', 
+	],
+	'wgGlobalRenameDenylistRegex' => [
 		'default' => true,
 	],
 
@@ -434,23 +444,23 @@ $wgConf->settings += [
 	'wgNoticeInfrastructure' => [
 		'default' => false,
 		'metawiki' => true,
-		'betawiki' => true,
+		'metawikibeta' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
-		'betaheze' => 'https://beta.betaheze.org/w/index.php/Special:BannerLoader',
+		'betaheze' => 'https://meta.betaheze.org/w/index.php/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
 		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
-		'betaheze' => 'https://beta.betaheze.org/w/index.php/Special:RecordImpression',
+		'betaheze' => 'https://meta.betaheze.org/w/index.php/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
-		'betaheze' => 'https://beta.betaheze.org',
+		'betaheze' => 'https://meta.betaheze.org',
 	],
 	'wgNoticeProjects' => [
 		'default' => [
@@ -471,10 +481,16 @@ $wgConf->settings += [
 	],
 
 	// CheckUser
+	// Remove in 1.40
 	'wgCheckUserActorMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 	],
+	// Remove in 1.40
 	'wgCheckUserLogActorMigrationStage' => [
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
+	],
+	// New for 1.40
+	'wgCheckUserEventTablesMigrationStage' => [
 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
 	'wgCheckUserForceSummary' => [
@@ -488,7 +504,7 @@ $wgConf->settings += [
 	],
 	'wgCheckUserCAtoollink' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCheckUserGBtoollink' => [
 		'default' => [
@@ -498,7 +514,7 @@ $wgConf->settings += [
 			],
 		],
 		'betaheze' => [
-			'centralDB' => 'betawiki',
+			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
 			],
@@ -512,7 +528,7 @@ $wgConf->settings += [
 			],
 		],
 		'betaheze' => [
-			'centralDB' => 'betawiki',
+			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
 			],
@@ -884,7 +900,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
@@ -1242,7 +1258,7 @@ $wgConf->settings += [
 	],
 	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
@@ -1573,54 +1589,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// Gallery Options
-	'wgGalleryOptions' => [
-		'default' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'traditional',
-		],
-		'dcmultiversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'rippaversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'theboyswiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'valiantcinematicuniversewikiwiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-	],
 	// GeoData
 	'wgGlobes' => [
 		'default' => [],
@@ -1671,8 +1639,8 @@ $wgConf->settings += [
 			'source' => 'metawiki',
 		],
 		'betaheze' => [
-			'wiki' => 'betawiki',
-			'source' => 'betawiki',
+			'wiki' => 'metawikibeta',
+			'source' => 'metawikibeta',
 		],
 	],
 	'+wgResourceLoaderSources' => [
@@ -1683,9 +1651,9 @@ $wgConf->settings += [
 			],
 		],
 		'betaheze' => [
-			'betawiki' => [
-				'apiScript' => '//beta.betaheze.org/w/api.php',
-				'loadScript' => '//beta.betaheze.org/w/load.php',
+			'metawikibeta' => [
+				'apiScript' => '//meta.betaheze.org/w/api.php',
+				'loadScript' => '//meta.betaheze.org/w/load.php',
 			],
 		],
 	],
@@ -1725,11 +1693,11 @@ $wgConf->settings += [
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
 		'default' => 'https://login.miraheze.org/w/api.php',
-		'betaheze' => 'https://beta.betaheze.org/w/api.php',
+		'betaheze' => 'https://login.betaheze.org/w/api.php',
 	],
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'loginwikibeta',
 	],
 
 	// Grant Permissions for BotPasswords and OAuth
@@ -1906,7 +1874,7 @@ $wgConf->settings += [
 	],
 	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
@@ -1971,7 +1939,7 @@ $wgConf->settings += [
 	// ImportDump
 	'wgImportDumpCentralWiki' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgImportDumpInterwikiMap' => [
 		'default' => [
@@ -1981,7 +1949,7 @@ $wgConf->settings += [
 	],
 	'wgImportDumpScriptCommand' => [
 		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
-		'betawiki' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-betawiki-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
+		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
@@ -2033,6 +2001,12 @@ $wgConf->settings += [
 		'+hkrailwiki' => [
 			'zhwikipedia',
 			'hkrailfan',
+		],
+		'+ilaiwiki' => [
+			'wikipedia' => [
+				'en',
+				'fr',
+			],
 		],
 		'+incubatorwiki' => [
 			'wmincubator',
@@ -2563,7 +2537,7 @@ $wgConf->settings += [
 			'interwiki-admin' => [
 				'interwiki' => true
 			],
-			'oversight' => [
+			'suppress' => [
 				'abusefilter-hidden-log' => true,
 				'abusefilter-hide-log' => true,
 				'browsearchive' => true,
@@ -2593,14 +2567,6 @@ $wgConf->settings += [
 			'authors' => [
 				'torunblocked' => true,
 				'read' => true,
-			],
-		],
-		'+betawiki' => [
-			'bureaucrat' => [
-				'createwiki' => true,
-				'managewiki-editdefault' => true,
-				'managewiki-restricted' => true,
-				'requestwiki' => true,
 			],
 		],
 		'+bitcoindebateswiki' => [
@@ -2722,6 +2688,9 @@ $wgConf->settings += [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
 			],
+			'global-renamer' => [
+				'centralauth-rename' => true,
+			],
 			'global-sysop' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -2778,6 +2747,76 @@ $wgConf->settings += [
 			],
 			'user' => [
 				'request-import-dump' => true,
+				'requestwiki' => true,
+			],
+			'wikicreator' => [
+				'createwiki' => true,
+			],
+		],
+		'+metawikibeta' => [
+			'autopatrolled' => [
+				'autopatrolled' => true,
+			],
+			'confirmed' => [
+				'mwoauthproposeconsumer' => true,
+				'mwoauthupdateownconsumer' => true,
+			],
+			'global-renamer' => [
+				'centralauth-rename' => true,
+			],
+			'global-sysop' => [
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'globalblock' => true,
+			],
+			'proxybot' => [
+				'globalblock' => true,
+				'centralauth-lock' => true,
+			],
+			'requestwikiblocked' => [
+				'read' => true,
+			],
+			'steward' => [
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'centralauth-suppress' => true,
+				'centralauth-rename' => true,
+				'centralauth-unmerge' => true,
+				'createwiki' => true,
+				'globalblock' => true,
+				'managewiki' => true,
+				'managewiki-restricted' => true,
+				'noratelimit' => true,
+				'userrights' => true,
+				'userrights-interwiki' => true,
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+			],
+			'sysadmin' => [
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+				'handle-import-dump-interwiki' => true,
+				'handle-import-dump-requests' => true,
+				'oathauth-verify-user' => true,
+				'oathauth-disable-for-user' => true,
+				'view-private-import-dump-requests' => true,
+			],
+			'trustandsafety' => [
+				'userrights' => true,
+				'globalblock' => true,
+				'globalgroupmembership' => true,
+				'globalgrouppermissions' => true,
+				'userrights-interwiki' => true,
+				'centralauth-lock' => true,
+				'centralauth-rename' => true,
+				'handle-pii' => true,
+				'oathauth-disable-for-user' => true,
+				'oathauth-verify-user' => true,
+				'view-private-import-dump-requests' => true,
+			],
+			'user' => [
+				'request-import-dump' => true,
+				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wikicreator' => [
@@ -2848,7 +2887,7 @@ $wgConf->settings += [
 			],
 		],
 		'+ext-Flow' => [
-			'oversight' => [
+			'suppress' => [
 				'flow-suppress' => true,
 			],
 		],
@@ -2974,6 +3013,7 @@ $wgConf->settings += [
 			'oversight',
 			'steward',
 			'staff',
+			'suppress',
 			'interwiki-admin',
 			'sysadmin',
 			'trustandsafety',
@@ -3001,7 +3041,7 @@ $wgConf->settings += [
 	'wgAllowGlobalMessaging' => [
 		'default' => false,
 		'metawiki' => true,
-		'betawiki' => true,
+		'metawikibeta' => true,
 	],
 
 	// MatomoAnalytics
@@ -3260,7 +3300,8 @@ $wgConf->settings += [
 			'meta.miraheze.org',
 		],
 		'betaheze' => [
-			'beta.betaheze.org',
+			'login.miraheze.org',
+			'meta.betaheze.org',
 		],
 		'+gratisdatawiki' => [
 			'gratispaideia.miraheze.org',
@@ -3586,7 +3627,7 @@ $wgConf->settings += [
 	'wgOATHRequiredForGroups' => [
 		'default' => [
 			'checkuser',
-			'oversight',
+			'suppress',
 			'steward',
 		],
 		'+metawiki' => [
@@ -3597,7 +3638,7 @@ $wgConf->settings += [
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
 		'default' => 'PT4H',
@@ -3860,13 +3901,6 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
-		'+dcmultiversewiki' => [
-			'usecodemirror' => 1,
-			'visualeditor-newwikitext' => 1,
-			'usebetatoolbar' => 0,
-			'usebetatoolbar-cgd' => 0,
-			'visualeditor-enable-experimental' => 1,
-		],
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
 		],
@@ -3973,6 +4007,20 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+zhtranswiki' => [
+			'echo-subscriptions-email-dt-subscription' => true,
+			'echo-subscriptions-email-dt-subscription-archiving' => true,
+			'echo-subscriptions-email-mention' => true,
+			'echo-subscriptions-email-reverted' => true,
+			'echo-subscriptions-web-mention-failure' => true,
+			'echo-subscriptions-web-mention-success' => true,
+			'echo-subscriptions-web-reverted' => true,
+			'enotifwatchlistpages' => true,
+			'toc-expand' => true,
+			'visualeditor-tabs' => 'prefer-wt',
+			'uselivepreview' => true,
+			'watchlistunwatchlinks' => true,
+		],
 		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
 		],
@@ -4074,7 +4122,7 @@ $wgConf->settings += [
 	'wgRemovePIIAllowedWikis' => [
 		'default' => [
 			'metawiki',
-			'betawiki',
+			'metawikibeta',
 		],
 	],
 	'wgRemovePIIAutoPrefix' => [
@@ -4191,9 +4239,14 @@ $wgConf->settings += [
 			'editor',
 		],
 		'+scratchpadwiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
+			'',
+			'user',
+			'autoconfirmed',
+			'templateeditor',
+			'extendedconfirmed',
+			'moderator',
+			'sysop',
+			'bureaucrat',
 		],
 		'+simulatorwiki' => [
 			'edittemplate',
@@ -4304,9 +4357,10 @@ $wgConf->settings += [
 			'editguide',
 		],
 		'scratchpadwiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
+			'templateeditor',
+			'extendedconfirmed',
+			'moderator',
+			'bureaucrat',
 		],
 		'simulatorwiki' => [
 			'editfragment',
@@ -4715,7 +4769,7 @@ $wgConf->settings += [
 		'default' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://meta.miraheze.org/w/index.php?title=Title_blacklist&action=raw',
+				'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw',
 			],
 			'local' => [
 				'type' => 'localpage',
@@ -4725,7 +4779,7 @@ $wgConf->settings += [
 		'betaheze' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://beta.betaheze.org/w/index.php?title=Title_blacklist&action=raw',
+				'src' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw',
 			],
 			'local' => [
 				'type' => 'localpage',
@@ -4854,7 +4908,7 @@ $wgConf->settings += [
 	],
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
-		'betaheze' => 'betawiki',
+		'betaheze' => 'metawikibeta',
 	],
 
 	// UserFunctions
@@ -4868,6 +4922,9 @@ $wgConf->settings += [
 			'nickname',
 			'username',
 		],
+	],
+	'wgUFAllowedNamespaces' => [
+		'default' => '8',
 	],
 
 	// UserPageEditProtection

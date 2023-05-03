@@ -51,7 +51,7 @@ $wgLBFactoryConf = [
 	],
 	'externalLoads' => [
 		'beta' => [
-			/** where the betawiki database is located */
+			/** where the metawikibeta database is located */
 			'db121' => 1,
 		],
 		'echo' => [
