@@ -20,6 +20,9 @@ class MirahezeFunctions {
 	/** @var string */
 	public $sitename;
 
+	/** @var string */
+	public $version;
+
 	/** @var array */
 	public $wikiDBClusters;
 
@@ -38,6 +41,8 @@ class MirahezeFunctions {
 		'beta' => 'testglobal',
 	];
 
+	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
+
 	private const TAGS = [
 		'default' => 'default',
 		'beta' => 'betaheze',
@@ -46,6 +51,11 @@ class MirahezeFunctions {
 	public const LISTS = [
 		'default' => 'production',
 		'betaheze' => 'beta',
+	];
+
+	public const MEDIAWIKI_VERSIONS = [
+		'beta' => '1.40',
+		'stable' => '1.39',
 	];
 
 	public const SUFFIXES = [
@@ -63,6 +73,7 @@ class MirahezeFunctions {
 		$this->server = self::getServer();
 		$this->sitename = self::getSiteName();
 		$this->missing = self::isMissing();
+		// $this->version = self::getMediaWikiVersion();
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ??
 			parse_url( $this->server, PHP_URL_HOST ) ?: 'undefined';
@@ -386,6 +397,57 @@ class MirahezeFunctions {
 	}
 
 	/**
+	 * @return string
+	 */
+	public static function getDefaultMediaWikiVersion(): string {
+		return php_uname( 'n' ) === 'test131.miraheze.org' ? 'beta' : 'stable';
+	}
+
+	/**
+	 * @param ?string $database
+	 * @return string
+	 */
+	public static function getMediaWikiVersion( ?string $database = null ): string {
+		if ( getenv( 'MIRAHEZE_WIKI_VERSION' ) ) {
+			return getenv( 'MIRAHEZE_WIKI_VERSION' );
+		}
+
+		if ( $database ) {
+			$mwVersion = self::readDbListFile( 'databases', false, $database )['v'] ?? null;
+			return $mwVersion ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
+		}
+
+		static $version = null;
+
+		if ( PHP_SAPI === 'cli' ) {
+			$version ??= explode( '/', $_SERVER['SCRIPT_NAME'] )[3] ?? null;
+			if ( !in_array( $version, self::MEDIAWIKI_VERSIONS ) ) {
+				$version = null;
+			}
+		}
+
+		self::$currentDatabase ??= self::getCurrentDatabase();
+		$version ??= self::readDbListFile( 'databases', false, self::$currentDatabase )['v'] ?? null;
+
+		return $version ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
+	}
+
+	/**
+	 * @param string $file
+	 * @return string
+	 */
+	public static function getMediaWiki( string $file ): string {
+		global $IP;
+
+		$IP = self::MEDIAWIKI_DIRECTORY . self::getMediaWikiVersion();
+
+		chdir( $IP );
+		putenv( "MW_INSTALL_PATH=$IP" );
+
+		return $IP . '/' . $file;
+	}
+
+	/**
 	 * @return bool
 	 */
 	public static function isMissing(): bool {
@@ -482,6 +544,8 @@ class MirahezeFunctions {
 
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
+
+		// $wikiTags[] = self::getMediaWikiVersion();
 		foreach ( $cacheArray['states'] ?? [] as $state => $value ) {
 			if ( $value !== 'exempt' && (bool)$value ) {
 				$wikiTags[] = $state;
@@ -861,10 +925,12 @@ class MirahezeFunctions {
 
 	/**
 	 * @param string $globalDatabase
+	 * @param ?string $version
 	 * @return array
 	 */
-	private static function getCombiList( string $globalDatabase ): array {
+	private static function getCombiList( string $globalDatabase, ?string $version = null ): array {
 		$dbr = self::getDatabaseConnection( $globalDatabase );
+		$wikiVersion = $version ? [ 'wiki_version' => $version ] : [];
 		$allWikis = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -872,8 +938,9 @@ class MirahezeFunctions {
 				'wiki_dbname',
 				'wiki_url',
 				'wiki_sitename',
+				// 'wiki_version',
 			] )
-			->where( [ 'wiki_deleted' => 0 ] )
+			->where( [ 'wiki_deleted' => 0 ] + $wikiVersion )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
@@ -882,6 +949,7 @@ class MirahezeFunctions {
 			$combiList[$wiki->wiki_dbname] = [
 				's' => $wiki->wiki_sitename,
 				'c' => $wiki->wiki_dbcluster,
+				// 'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
 			];
 
 			if ( $wiki->wiki_url !== null ) {
@@ -969,6 +1037,17 @@ class MirahezeFunctions {
 				),
 			],
 		];
+
+		/* foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
+			$databaseLists += [
+				$name . '-wikis' => [
+					'combi' => self::getCombiList(
+						self::GLOBAL_DATABASE,
+						$version
+					),
+				],
+			];
+		} */
 	}
 
 	/**
