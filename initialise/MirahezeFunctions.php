@@ -73,7 +73,7 @@ class MirahezeFunctions {
 		$this->server = self::getServer();
 		$this->sitename = self::getSiteName();
 		$this->missing = self::isMissing();
-		// $this->version = self::getMediaWikiVersion();
+		$this->version = self::getMediaWikiVersion();
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ??
 			parse_url( $this->server, PHP_URL_HOST ) ?: 'undefined';
@@ -545,7 +545,7 @@ class MirahezeFunctions {
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
 
-		// $wikiTags[] = self::getMediaWikiVersion();
+		$wikiTags[] = self::getMediaWikiVersion();
 		foreach ( $cacheArray['states'] ?? [] as $state => $value ) {
 			if ( $value !== 'exempt' && (bool)$value ) {
 				$wikiTags[] = $state;
@@ -938,7 +938,7 @@ class MirahezeFunctions {
 				'wiki_dbname',
 				'wiki_url',
 				'wiki_sitename',
-				// 'wiki_version',
+				'wiki_version',
 			] )
 			->where( [ 'wiki_deleted' => 0 ] + $wikiVersion )
 			->caller( __METHOD__ )
@@ -949,7 +949,7 @@ class MirahezeFunctions {
 			$combiList[$wiki->wiki_dbname] = [
 				's' => $wiki->wiki_sitename,
 				'c' => $wiki->wiki_dbcluster,
-				// 'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
+				'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
 			];
 
 			if ( $wiki->wiki_url !== null ) {
@@ -1038,7 +1038,7 @@ class MirahezeFunctions {
 			],
 		];
 
-		/* foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
+		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
 			$databaseLists += [
 				$name . '-wikis' => [
 					'combi' => self::getCombiList(
@@ -1047,7 +1047,7 @@ class MirahezeFunctions {
 					),
 				],
 			];
-		} */
+		}
 	}
 
 	/**
