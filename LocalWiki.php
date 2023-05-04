@@ -321,7 +321,14 @@ switch ( $wi->dbname ) {
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
-
+		
+		break;
+	case 'nycsubwaywiki':
+		unset($wgGroupPermissions['checkuser']);
+		unset($wgGroupPermissions['suppress']);
+		unset($wgGroupPermissions['interwiki-admin']);
+		unset($wgGroupPermissions['noip-info']);
+		
 		break;
 	case 'persistwiki':
 		$wgDplSettings['maxCategoryCount'] = 10;
