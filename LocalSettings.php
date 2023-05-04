@@ -2860,6 +2860,31 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
+		'+nycsubwaywiki' => [
+			'steward' => [
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'investigate' => true,
+				'ipinfo' => true,
+				'ipinfo-view-basic' => true,
+				'ipinfo-view-full' => true,
+				'ipinfo-view-log' => true,
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true,
+				'hideuser' => true,
+				'abusefilter-hide-log' => true,
+				'abusefilter-hidden-log' => true,
+				'suppressrevision' => true,
+				'viewsuppressed' => true,
+				'suppressionlog' => true,
+				'managewiki-restricted' => true,
+				'interwiki' => true,
+				'siteadmin' => true,
+				'bigdelete' => true,
+				'renameuser' => true,
+			],
+		],
+				
 		'+sesupportwiki' => [
 			'editor' => [
 				'editor' => true,
