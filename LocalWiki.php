@@ -324,7 +324,6 @@ switch ( $wi->dbname ) {
 		
 		break;
 	case 'nycsubwaywiki':
-		unset($wgGroupPermissions['checkuser']);
 		unset($wgGroupPermissions['suppress']);
 		unset($wgGroupPermissions['interwiki-admin']);
 		unset($wgGroupPermissions['noip-info']);
