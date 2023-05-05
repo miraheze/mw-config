@@ -2861,13 +2861,6 @@ $wgConf->settings += [
 			],
 		],
 		'+nycsubwaywiki' => [
-			'steward' => [
-				'managewiki-restricted' => true,
-				'interwiki' => true,
-				'siteadmin' => true,
-				'bigdelete' => true,
-				'renameuser' => true,
-			],
 			'checkuser' => [
 				'investigate' => true,
 				'ipinfo' => true,
