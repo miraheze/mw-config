@@ -4235,6 +4235,11 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
+		'nycsubwaywiki' => [
+			'',
+			'autoconfirmed',
+			'sysop',
+		],
 		'+sesupportwiki' => [
 			'editor',
 		],
