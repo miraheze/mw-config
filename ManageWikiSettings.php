@@ -2970,7 +2970,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'Whether the WVUI search of Cosmos should use the MediaWiki action API instead of the REST API. Will have no effect unless <code>$wgCosmosUseWVUISearch</code> is enabled.',
+		'help' => 'Whether the Codex search of Cosmos should use the MediaWiki action API instead of the REST API.',
 		'requires' => [],
 	],
 	'wgCosmosSearchDescriptionSource' => [
@@ -2984,7 +2984,7 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => 'textextracts',
 		'section' => 'styling',
-		'help' => 'Set the method to extract short description in the WVUI search within Cosmos. Will have no effect unless <code>$wgCosmosUseWVUISearch</code> and <code>$wgCosmosSearchUseActionAPI</code> are enabled.',
+		'help' => 'Set the method to extract short description in the Codex search within Cosmos. Will have no effect unless <code>$wgCosmosSearchUseActionAPI</code> is enabled.',
 		'requires' => [],
 	],
 	'wgCosmosMaxSearchResults' => [
@@ -2995,7 +2995,7 @@ $wgManageWikiSettings = [
 		'maxint' => 15,
 		'overridedefault' => 6,
 		'section' => 'styling',
-		'help' => 'Set the maximum number of search results given for the WVUI search within Cosmos. Will have no effect unless <code>$wgCosmosUseWVUISearch</code> and <code>$wgCosmosSearchUseActionAPI</code> are enabled.',
+		'help' => 'Set the maximum number of search results given for the Codex search within Cosmos. Will have no effect unless <code>$wgCosmosSearchUseActionAPI</code> is enabled.',
 		'requires' => [],
 	],
 	'wgCosmosEnablePortableInfoboxEuropaTheme' => [
