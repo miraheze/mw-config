@@ -4035,7 +4035,7 @@ $wgConf->settings += [
 	],
 
 	// Restriction types
-	// Per wmfphab:T230103, they should ideally follow the format of editXXprotected
+	// For i18n purposes, custom types should ideally follow the format of editXXprotected
 	'wgRestrictionLevels' => [
 		'default' => [
 			'',
