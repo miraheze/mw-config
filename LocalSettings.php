@@ -2680,9 +2680,6 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
-			'autopatrolled' => [
-				'autopatrolled' => true,
-			],
 			'confirmed' => [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
@@ -2713,6 +2710,7 @@ $wgConf->settings += [
 				'managewiki' => true,
 				'managewiki-restricted' => true,
 				'noratelimit' => true,
+				'oathauth-verify-user' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
 				'globalgroupmembership' => true,
@@ -2742,7 +2740,6 @@ $wgConf->settings += [
 			],
 			'sysop' => [
 				'interwiki' => true,
-				'autopatrolled' => true,
 			],
 			'user' => [
 				'request-import-dump' => true,
@@ -4141,6 +4138,7 @@ $wgConf->settings += [
 	],
 
 	// Restriction types
+	// For i18n purposes, custom types should ideally follow the format of editXXprotected
 	'wgRestrictionLevels' => [
 		'default' => [
 			'',
@@ -4220,7 +4218,7 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'+metawiki' => [
-			'autopatrolled',
+			'editautopatrolprotected',
 		],
 		'+moviepediawiki' => [
 			'bureaucrat',
@@ -4256,8 +4254,8 @@ $wgConf->settings += [
 			'edittemplate',
 		],
 		'+testwiki' => [
-			'bureaucrat',
-			'consul',
+			'editbureaucratprotected',
+			'editconsulprotected',
 		],
 		'+theredpionnerwiki' => [
 			'extendedconfirmed',
@@ -4344,7 +4342,7 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'metawiki' => [
-			'autopatrolled',
+			'editautopatrolprotected',
 		],
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
@@ -4371,8 +4369,8 @@ $wgConf->settings += [
 			'edittemplate',
 		],
 		'testwiki' => [
-			'bureaucrat',
-			'consul',
+			'editbureaucratprotected',
+			'editconsulprotected',
 		],
 		'trwdeploymentwiki' => [
 			'bureaucrat',
