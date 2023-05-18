@@ -3326,6 +3326,7 @@ $wgConf->settings += [
 	'wgDefaultLanguageVariant' => [
 		'default' => false,
 		'hkrailwiki' => 'zh-hk',
+		'zhtranswiki' => 'zh-cn',
 	],
 	'wgResourceLoaderMaxQueryLength' => [
 		'default' => 5000,
