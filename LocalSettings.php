@@ -4633,11 +4633,11 @@ $wgConf->settings += [
 	],
 
 	// StopForumSpam
-	// Download from https://www.stopforumspam.com/downloads (recommended listed_ip_30_all.zip)
+	// Downloaded from https://www.stopforumspam.com/downloads (recommended listed_ip_90_all.zip)
 	// for ipv4 + ipv6 combined.
-	// TODO: Setup cron to update this automatically.
+	// Cron runs automatically at midnight to update list.
 	'wgSFSIPListLocation' => [
-		'default' => '/srv/mediawiki/stopforumspam/listed_ip_30_ipv46_all.txt',
+		'default' => '/srv/mediawiki/stopforumspam/listed_ip_90_ipv46_all.txt',
 	],
 
 	// Styling
