@@ -5721,6 +5721,7 @@ $wgConf->settings += [
 			'SpamBlacklist' => false,
 			'SpamBlacklistHit' => false,
 			'SpamRegex' => false,
+			'StopForumSpam' => false,
 			'SQLBagOStuff' => false,
 			'squid' => false,
 			'StashEdit' => false,
