@@ -2670,6 +2670,9 @@ $wgConf->settings += [
 			'sysop' => [
 				'managewiki-restricted' => true,
 			],
+			'user' => [
+				'read' => true,
+			],
 		],
 		'+memeswiki' => [
 			'extendedconfirmed' => [
