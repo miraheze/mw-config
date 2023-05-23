@@ -434,8 +434,8 @@ $wgConf->settings += [
 	],
 	'wgGlobalRenameDenylist' => [
 		'default' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw',
-		'betaheze' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw', 
-	],
+		'betaheze' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw',
+ ],
 	'wgGlobalRenameDenylistRegex' => [
 		'default' => true,
 	],
@@ -5723,6 +5723,7 @@ $wgConf->settings += [
 			'SpamBlacklist' => false,
 			'SpamBlacklistHit' => false,
 			'SpamRegex' => false,
+			'StopForumSpam' => false,
 			'SQLBagOStuff' => false,
 			'squid' => false,
 			'StashEdit' => false,
