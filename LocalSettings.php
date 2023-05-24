@@ -1067,8 +1067,13 @@ $wgConf->settings += [
 	'wgReadOnly' => [
 		'default' => false,
 	],
+	'wgSharedDB' => [
+		'default' => null,
+		'srewiki' => 'ldapwikiwiki',
+	],
 	'wgSharedTables' => [
 		'default' => [],
+		'srewiki' => [ 'actor', 'user', 'user_properties' ],
 	],
 
 	// Delete
