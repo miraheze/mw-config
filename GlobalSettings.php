@@ -4,7 +4,7 @@
 header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
 
 // Extensions
-if ( $wi->dbname !== 'ldapwikiwiki' ) {
+if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	wfLoadExtensions( [
 		'CentralAuth',
 		'GlobalPreferences',
