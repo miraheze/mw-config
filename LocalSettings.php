@@ -5117,15 +5117,6 @@ $wgConf->settings += [
 		'default' => '1 hour',
 	],
 
-	// WebAuthn
-	'wgWebAuthnRelyingPartyName' => [
-		'default' => 'Miraheze',
-		'betaheze' => 'Betaheze',
-	],
-	'wgWebAuthnRelyingPartyID' => [
-		'default' => 'miraheze.org',
-		'betaheze' => 'betaheze.org',
-	],
 	// Wikibase
 	'wmgAllowEntityImport' => [
 		'default' => false,
