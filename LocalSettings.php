@@ -5199,9 +5199,11 @@ $wgConf->settings += [
 
 	// WebAuthn
 	'wgWebAuthnRelyingPartyName' => [
+		'default' => 'Miraheze',
 		'betaheze' => 'Betaheze',
 	],
 	'wgWebAuthnRelyingPartyID' => [
+		'default' => 'miraheze.org',
 		'betaheze' => 'betaheze.org',
 	],
 	// Wikibase
