@@ -3632,8 +3632,21 @@ $wgConf->settings += [
 			'suppress',
 			'steward',
 		],
+		'+ldapwikiwiki' => [
+			'user',
+		],
 		'+metawiki' => [
 			'global-sysop',
+			'interface-admin',
+			'sysadmin',
+			'trustandsafety'
+		],
+		// metawikibeta should mirror metawiki
+		'+metawikibeta' => [
+			'global-sysop',
+			'interface-admin',
+			'sysadmin',
+			'trustandsafety'
 		],
 	],
 	// OAuth
