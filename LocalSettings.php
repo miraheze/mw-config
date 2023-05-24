@@ -3726,8 +3726,8 @@ $wgConf->settings += [
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
-		'ldapwikiwiki' => 'ldapwikwiki',
-		'srewiki' => 'ldapwikiwiki',
+		'ldapwikiwiki' => false,
+		'srewiki' => false,
 		'betaheze' => 'metawikibeta',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
