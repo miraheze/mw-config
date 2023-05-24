@@ -325,7 +325,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'nycsubwaywiki':
 		unset( $wgGroupPermissions['interwiki-admin'] );
-		unset( $wgGroupPermissions['noip-info'] );
+		unset( $wgGroupPermissions['no-ipinfo'] );
 
 		break;
 	case 'persistwiki':
@@ -427,6 +427,22 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
+
+		break;
+	case 'srewiki':
+		wfLoadExtension( 'LdapAuthentication' );
+
+		$wgAuthManagerAutoConfig['primaryauth'] += [
+			LdapPrimaryAuthenticationProvider::class => [
+				'class' => LdapPrimaryAuthenticationProvider::class,
+				'args' => [ [
+					// don't allow local non-LDAP accounts
+					'authoritative' => true,
+				] ],
+				// must be smaller than local pw provider
+				'sort' => 50,
+			],
+		];
 
 		break;
 	case 'traceprojectwikiwiki':
