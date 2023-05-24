@@ -2193,9 +2193,15 @@ $wgConf->settings += [
 		'ldapwikiwiki' => [
 			'miraheze',
 		],
+		'srewiki' => [
+			'miraheze',
+		],
 	],
 	'wgLDAPServerNames' => [
 		'ldapwikiwiki' => [
+			'miraheze' => 'ldap.miraheze.org',
+		],
+		'srewiki' => [
 			'miraheze' => 'ldap.miraheze.org',
 		],
 	],
@@ -2203,9 +2209,15 @@ $wgConf->settings += [
 		'ldapwikiwiki' => [
 			'miraheze' => 'ssl',
 		],
+		'srewiki' => [
+			'miraheze' => 'ssl',
+		],
 	],
 	'wgLDAPSearchAttributes' => [
 		'ldapwikiwiki' => [
+			'miraheze' => 'uid',
+		],
+		'srewiki' => [
 			'miraheze' => 'uid',
 		],
 	],
@@ -2213,9 +2225,15 @@ $wgConf->settings += [
 		'ldapwikiwiki' => [
 			'miraheze' => 'dc=miraheze,dc=org',
 		],
+		'srewiki' => [
+			'miraheze' => 'dc=miraheze,dc=org',
+		],
 	],
 	'wgLDAPUserBaseDNs' => [
 		'ldapwikiwiki' => [
+			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+		],
+		'srewiki' => [
 			'miraheze' => 'ou=people,dc=miraheze,dc=org',
 		],
 	],
@@ -2223,9 +2241,15 @@ $wgConf->settings += [
 		'ldapwikiwiki' => [
 			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
 		],
+		'srewiki' => [
+			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+		],
 	],
 	'wgLDAPProxyAgentPassword' => [
 		'ldapwikiwiki' => [
+			'miraheze' => $wmgLdapPassword,
+		],
+		'srewiki' => [
 			'miraheze' => $wmgLdapPassword,
 		],
 	],
@@ -2233,9 +2257,15 @@ $wgConf->settings += [
 		'ldapwikiwiki' => [
 			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
 		],
+		'srewiki' => [
+			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+		],
 	],
 	'wgLDAPWriterPassword' => [
 		'ldapwikiwiki' => [
+			'miraheze' => $wmgLdapPassword,
+		],
+		'srewiki' => [
 			'miraheze' => $wmgLdapPassword,
 		],
 	],
@@ -2243,9 +2273,15 @@ $wgConf->settings += [
 		'ldapwikiwiki' => [
 			'miraheze' => 'ou=people,dc=miraheze,dc=org',
 		],
+		'srewiki' => [
+			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+		],
 	],
 	'wgLDAPAddLDAPUsers' => [
 		'ldapwikiwiki' => [
+			'miraheze' => true,
+		],
+		'srewiki' => [
 			'miraheze' => true,
 		],
 	],
@@ -2253,9 +2289,15 @@ $wgConf->settings += [
 		'ldapwikiwiki' => [
 			'miraheze' => true,
 		],
+		'srewiki' => [
+			'miraheze' => true,
+		],
 	],
 	'wgLDAPPasswordHash' => [
 		'ldapwikiwiki' => [
+			'miraheze' => 'ssha',
+		],
+		'srewiki' => [
 			'miraheze' => 'ssha',
 		],
 	],
@@ -2266,9 +2308,18 @@ $wgConf->settings += [
 				'realname' => 'givenName',
 			],
 		],
+		'srewiki' => [
+			'miraheze' => [
+				'email' => 'mail',
+				'realname' => 'givenName',
+			],
+		],
 	],
 	'wgLDAPUseFetchedUsername' => [
 		'ldapwikiwiki' => [
+			'miraheze' => true,
+		],
+		'srewiki' => [
 			'miraheze' => true,
 		],
 	],
@@ -2277,9 +2328,17 @@ $wgConf->settings += [
 			'miraheze' => false,
 			'invaliddomain' => false,
 		],
+		'srewiki' => [
+			'miraheze' => false,
+			'invaliddomain' => false,
+		],
 	],
 	'wgLDAPLowerCaseUsername' => [
 		'ldapwikiwiki' => [
+			'miraheze' => false,
+			'invaliddomain' => false,
+		],
+		'srewiki' => [
 			'miraheze' => false,
 			'invaliddomain' => false,
 		],
@@ -2290,9 +2349,15 @@ $wgConf->settings += [
 				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
 			],
 		],
+		'srewiki' => [
+			'miraheze' => [
+				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
+			],
+		],
 	],
 	'wgLDAPDebug' => [
 		'ldapwikiwiki' => 1,
+		'srewiki' => 1,
 	],
 
 	// License
@@ -2867,6 +2932,14 @@ $wgConf->settings += [
 			],
 			'sysop' => [
 				'editor' => true,
+			],
+		],
+		'+srewiki' => [
+			'sysop' => [
+				'managewiki-restricted' => true,
+			],
+			'user' => [
+				'read' => true,
 			],
 		],
 		'+vnenderbotwiki' => [
@@ -3602,6 +3675,7 @@ $wgConf->settings += [
 	'wgOATHAuthDatabase' => [
 		'default' => 'mhglobal',
 		'ldapwikiwiki' => 'ldapwikiwiki',
+		'srewiki' => 'ldapwikiwiki',
 		'betaheze' => 'testglobal',
 	],
 	'wgOATHExclusiveRights' => [
@@ -3652,7 +3726,8 @@ $wgConf->settings += [
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
-		'ldapwikiwiki' => false,
+		'ldapwikiwiki' => 'ldapwikwiki',
+		'srewiki' => 'ldapwikiwiki',
 		'betaheze' => 'metawikibeta',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
