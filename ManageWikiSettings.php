@@ -1705,7 +1705,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Wnable cross-wiki notifications.',
+		'help' => 'Enable cross-wiki notifications.',
 		'requires' => [],
 	],
 	'wgEchoMentionStatusNotifications' => [
@@ -1745,9 +1745,9 @@ $wgManageWikiSettings = [
 		'from' => 'echo',
 		'global' => true,
 		'type' => 'check',
-		'overridefault' => true,
+		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Enable watchlist emails (once per page).',
+		'help' => 'Whether to send email notifications each time a watched page is edited (if disabled) or only the first time the page is changed before being visited again by the user.',
 		'requires' => [],
 	],
 	'wmgSiteNoticeOptOut' => [
