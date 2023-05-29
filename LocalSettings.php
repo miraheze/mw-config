@@ -1277,6 +1277,12 @@ $wgConf->settings += [
 	'wgEchoPerUserBlacklist' => [
 		'default' => true,
 	],
+	'wgEchoWatchlistNotifications' => [
+		'default' => false,
+	],
+	'wgEchoWatchlistEmailOncePerPage' => [
+		'default' => true,
+	],
 
 	// Editing
 	'wgEditSubmitButtonLabelPublish' => [
