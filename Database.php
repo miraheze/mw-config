@@ -69,8 +69,8 @@ $wgLBFactoryConf = [
 	],
 ];
 
-// Disallow web request database transactions that are slower than 3 seconds
-$wgMaxUserDBWriteDuration = 6;
+// Disallow web request database transactions that are slower than 10 seconds
+$wgMaxUserDBWriteDuration = 10;
 
 // Max execution time for expensive queries of special pages (in milliseconds)
 $wgMaxExecutionTimeForExpensiveQueries = 30000;
