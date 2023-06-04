@@ -13,10 +13,6 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	] );
 }
 
-if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
-	wfLoadExtension( 'OOJSPlus' );
-}
-
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
