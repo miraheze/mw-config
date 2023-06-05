@@ -17,6 +17,10 @@ if ( $wi->isExtensionActive( 'chameleon' ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
 
+if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
+	wfLoadExtension( 'OOJSPlus' );
+}
+
 if ( $wgMirahezeCommons && !$cwPrivate ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
