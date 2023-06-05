@@ -788,6 +788,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'oojsplus' => [
+		'name' => 'OOJSPlus',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OOJSPlus',
+		'var' => 'wmgUseOOJSPlus',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'opengraphmeta' => [
 		'name' => 'OpenGraphMeta',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OpenGraphMeta',
@@ -3003,7 +3011,11 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StandardDialogs',
 		'var' => 'wmgUseStandardDialogs',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'oojsplus',
+			],
+		],
 		'section' => 'other',
 	],
 	'flow' => [
