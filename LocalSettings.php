@@ -2829,6 +2829,9 @@ $wgConf->settings += [
 			'wikicreator' => [
 				'createwiki' => true,
 			],
+			'wiki-creator' => [
+				'createwiki' => true,
+			],
 		],
 		'+metawikibeta' => [
 			'autopatrolled' => [
@@ -2896,7 +2899,7 @@ $wgConf->settings += [
 				'request-ssl' => true,
 				'requestwiki' => true,
 			],
-			'wikicreator' => [
+			'wiki-creator' => [
 				'createwiki' => true,
 			],
 		],
