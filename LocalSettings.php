@@ -2826,9 +2826,6 @@ $wgConf->settings += [
 				'request-import-dump' => true,
 				'requestwiki' => true,
 			],
-			'wikicreator' => [
-				'createwiki' => true,
-			],
 			'wiki-creator' => [
 				'createwiki' => true,
 			],
