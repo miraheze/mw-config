@@ -34,6 +34,7 @@ wfLoadExtensions( [
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
+	'Parsoid',
 	'QuickInstantCommons',
 	'Renameuser',
 	'RottenLinks',
