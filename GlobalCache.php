@@ -85,6 +85,12 @@ $wgMainCacheType = 'memcached-mem-1';
 $wgMessageCacheType = 'memcached-mem-1';
 
 $wgParserCacheType = 'mysql-multiwrite';
+$wgParsoidCacheConfig = [
+	'StashType' => 'db-replicated',
+	'StashDuration' => 86400 * 10,
+	'CacheThresholdTime' => 0.0,
+	'WarmParsoidParserCache' => true,
+];
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
