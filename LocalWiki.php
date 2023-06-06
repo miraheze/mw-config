@@ -13,10 +13,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'metawikibeta':
-		wfLoadExtension( 'GlobalWatchlist' );
-
-		break;
 	case 'commonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
@@ -318,8 +314,12 @@ switch ( $wi->dbname ) {
 		wfLoadExtensions( [
 			'GlobalWatchlist',
 			'ImportDump',
-			'IncidentReports',
+			'IncidentReporting',
 		] );
+
+		break;
+	case 'metawikibeta':
+		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
 	case 'newusopediawiki':
