@@ -138,13 +138,6 @@ if ( !$cwPrivate ) {
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 }
 
-// Experimental Wikis
-if ( $cwExperimental ) {
-	$wgParserEnableLegacyMediaDOM = false;
-} else {
-	$wgParserEnableLegacyMediaDOM = true;
-}
-
 // Dynamic cookie settings dependant on $wgServer
 if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.miraheze.org';
