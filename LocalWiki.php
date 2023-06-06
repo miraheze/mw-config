@@ -198,10 +198,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'loginwiki':
-		wfLoadExtension( 'GlobalWatchlist' );
-
-		break;
 	case 'metawiki':
 		$wgContactConfig = [
 			'default' => [
@@ -318,6 +314,13 @@ switch ( $wi->dbname ) {
 			'timeout' => 3,
 			'type' => 'google',
 		];
+
+		wfLoadExtensions( [
+			'GlobalWatchlist',
+			'ImportDump',
+			'IncidentReports',
+		] );
+
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
