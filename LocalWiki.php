@@ -13,10 +13,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'metawikibeta':
-		wfLoadExtension( 'GlobalWatchlist' );
-
-		break;
 	case 'commonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
@@ -198,10 +194,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'loginwiki':
-		wfLoadExtension( 'GlobalWatchlist' );
-
-		break;
 	case 'metawiki':
 		$wgContactConfig = [
 			'default' => [
@@ -318,6 +310,17 @@ switch ( $wi->dbname ) {
 			'timeout' => 3,
 			'type' => 'google',
 		];
+
+		wfLoadExtensions( [
+			'GlobalWatchlist',
+			'ImportDump',
+			'IncidentReporting',
+		] );
+
+		break;
+	case 'metawikibeta':
+		wfLoadExtension( 'GlobalWatchlist' );
+
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
