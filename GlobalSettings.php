@@ -196,25 +196,13 @@ $wgDataDump = [
 	],
 	'image' => [
 		'file_ending' => '.tar.gz',
+		'useBackendTempStore' => true,
 		'generate' => [
-			'type' => 'script',
-			'script' => '/usr/bin/tar',
+			'type' => 'mwscript',
+			'script' => "$IP/extensions/MirahezeMagic/maintenance/swiftDump.php",
 			'options' => [
-				'--exclude',
-				"{$wgUploadDirectory}/archive",
-				'--exclude',
-				"{$wgUploadDirectory}/deleted",
-				'--exclude',
-				"{$wgUploadDirectory}/lockdir",
-				'--exclude',
-				"{$wgUploadDirectory}/temp",
-				'--exclude',
-				"{$wgUploadDirectory}/thumb",
-				'--exclude',
-				"{$wgUploadDirectory}/dumps",
-				'-zcvf',
-				$wgDataDumpDirectory . '${filename}',
-				"{$wgUploadDirectory}/"
+				'--filename',
+				'${filename}'
 			],
 		],
 		'limit' => -1,
