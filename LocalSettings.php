@@ -1562,8 +1562,6 @@ $wgConf->settings += [
 			13554,
 			/** Owen (Board) */
 			73651,
-			/** Universal Omega (Board) */
-			96304,
 			/** MacFan4000 (SRE) */
 			6758,
 		],
