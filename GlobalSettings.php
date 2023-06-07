@@ -205,7 +205,7 @@ $wgDataDump = [
 				'${filename}'
 			],
 		],
-		'limit' => -1,
+		'limit' => 1,
 		'permissions' => [
 			'view' => 'view-dump',
 			'generate' => 'managewiki-restricted',
