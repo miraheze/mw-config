@@ -4787,7 +4787,6 @@ $wgConf->settings += [
 	],
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'default' => true,
-		'whentheycrywiki' => false,
 	],
 
 	// TemplateStyles
