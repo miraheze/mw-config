@@ -866,6 +866,15 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, removes (substitutes) templates in signatures.',
 		'requires' => [],
 	],
+	'wgTabberNeueUpdateLocationOnTabChange' => [
+		'name' => 'TabberNeue Update Location On Tab Change',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'If enabled, when a tab is selected, the URL displayed on the browser changes. Opening this URL makes that tab initially selected.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
