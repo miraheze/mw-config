@@ -4785,6 +4785,10 @@ $wgConf->settings += [
 	'wgTabberNeueEnableMD5Hash' => [
 		'default' => true,
 	],
+	'wgTabberNeueUpdateLocationOnTabChange' => [
+		'default' => true,
+		'whentheycrywiki' => false,
+	],
 
 	// TemplateStyles
 	'wgTemplateStylesAllowedUrls' => [
