@@ -308,9 +308,6 @@ $wgConf->settings += [
 			'badlogin' => true,
 			'badloginperuser' => true
 		],
-		'+ext-WikiForum' => [
-			'wikiforum' => true,
-		],
 	],
 	'wgHCaptchaSiteKey' => [
 		'default' => 'e6d26503-a3fb-47fb-9639-efe259a34a33',
@@ -5506,15 +5503,7 @@ $wgConf->settings += [
 	'wgWikiEditorRealtimePreview' => [
 		'default' => false,
 	],
-
-	// WikiForum
-	'wgWikiForumAllowAnonymous' => [
-		'default' => true,
-	],
-	'wgWikiForumLogsInRC' => [
-		'default' => true,
-	],
-
+	
 	// WikiDiscover
 	'wgWikiDiscoverUseDescriptions' => [
 		'default' => true,
