@@ -1556,8 +1556,6 @@ $wgConf->settings += [
 		'default' => [
 			/** Void (SRE and Board) */
 			5258,
-			/** Paladox (SRE) */
-			13554,
 			/** Owen (Board) */
 			73651,
 			/** MacFan4000 (SRE) */
