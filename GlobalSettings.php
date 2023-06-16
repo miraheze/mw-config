@@ -548,4 +548,4 @@ $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 
 //Disable RequestWiki
-SpecialPages['RequestWiki'] = DisabledSpecialPage::getCallback( 'RequestWiki', 'Regrettably, Miraheze is no longer accepting new wiki requests.' );
+$wgSpecialPages['RequestWiki'] = DisabledSpecialPage::getCallback( 'RequestWiki', 'Regrettably, Miraheze is no longer accepting new wiki requests.' );
