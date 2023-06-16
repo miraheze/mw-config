@@ -2818,10 +2818,6 @@ $wgConf->settings += [
 			],
 			'user' => [
 				'request-import-dump' => true,
-				'requestwiki' => true,
-			],
-			'wiki-creator' => [
-				'createwiki' => true,
 			],
 		],
 		'+metawikibeta' => [
