@@ -231,6 +231,28 @@ $wgDataDump = [
 	],
 ];
 
+if ( $wi->isExtensionActive( 'Flow' ) ) {
+	$wgDataDump['flow'] => [
+		'file_ending' => '.xml.gz',
+		'useBackendTempStore' => true,
+		'generate' => [
+			'type' => 'mwscript',
+			'script' => "$IP/extensions/Flow/maintenance/dumpBackup.php",
+			'options' => [
+				'--full',
+				'--output',
+				'gzip:/tmp/${filename}',
+			],
+		],
+		'limit' => 1,
+		'permissions' => [
+			'view' => 'view-dump',
+			'generate' => 'generate-dump',
+			'delete' => 'delete-dump',
+		],
+	];
+}
+
 // ContactPage configuration
 if ( $wi->isExtensionActive( 'ContactPage' ) ) {
 	$wgContactConfig = [
