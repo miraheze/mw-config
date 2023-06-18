@@ -232,7 +232,7 @@ $wgDataDump = [
 ];
 
 if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgDataDump['flow'] => [
+	$wgDataDump['flow'] = [
 		'file_ending' => '.xml.gz',
 		'useBackendTempStore' => true,
 		'generate' => [
