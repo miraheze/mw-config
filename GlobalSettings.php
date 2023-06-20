@@ -569,8 +569,5 @@ $wgThumbnailEpoch = 20230417011058;
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 
-// Disable RequestWiki
-$wgSpecialPages['RequestWiki'] = DisabledSpecialPage::getCallback( 'RequestWiki', 'Regrettably, Miraheze is no longer accepting new wiki requests.' );
-
 // Can be removed on 1.40+ (https://phabricator.wikimedia.org/T326147)
 $wgMFStripResponsiveImages = false;
