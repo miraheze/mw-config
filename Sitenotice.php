@@ -47,7 +47,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 		EOF;
 	}
 
- }
+}
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
