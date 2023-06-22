@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 84;
+$wgMajorSiteNoticeID = 85;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
