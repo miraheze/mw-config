@@ -31,7 +31,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Files unavailable" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							File uploads, deletions, and import requests allowed again.
+							File uploads, deletions, and import requests have been reenabled. Thank you for bearing with us and apologize for the inconvenience caused.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
