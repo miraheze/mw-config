@@ -29,9 +29,9 @@ if ( !$wmgSiteNoticeOptOut ) {
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px; color: black;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/OOjs_UI_icon_unLock-ltr.svg" decoding="async" width="50" height="50"></div>
+						<div class="floatleft"><img alt="Files unavailable" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Image uploads, deletions, and import requests are temporarily unavailable due to no space left on file servers.
+							File uploads, deletions, and import requests are temporarily unavailable due to our file servers running out of space.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
