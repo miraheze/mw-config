@@ -1213,6 +1213,20 @@ $wgConf->settings += [
 		'default' => 'en',
 	],
 
+	// DiscussionTools
+	'wgDiscussionTools_visualenhancements' => [
+		'isvwiki' => 'available',
+	],
+	'wgDiscussionTools_visualenhancements_reply' => [
+		'isvwiki' => 'available',
+	],
+	'wgDiscussionTools_visualenhancements_pageframe' => [
+		'isvwiki' => 'available',
+	],
+	'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
+		'isvwiki' => 'available',
+	],
+
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
 		'ext-Description2' => true,
