@@ -3005,6 +3005,12 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
+		'install' => [
+ 			'sql' => [
+ 				'mws_title_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_title_index.sql",
+ 				'mws_user_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_user_index.sql",
+ 			],
+ 		],
 	],
 	'flow' => [
 		'name' => 'Flow',
