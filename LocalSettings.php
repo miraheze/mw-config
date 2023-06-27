@@ -5652,7 +5652,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgWikiSeoTryCleanAutoDescription' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgMetadataGenerators' => [
 		'default' => '',
