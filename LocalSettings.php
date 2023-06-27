@@ -5649,7 +5649,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgWikiSeoEnableAutoDescription' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgWikiSeoTryCleanAutoDescription' => [
 		'default' => true,
