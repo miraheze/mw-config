@@ -1227,8 +1227,8 @@ $wgConf->settings += [
 		'isvwiki' => 'available',
 	],
 	'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
-		'default' => 'default',
-		'isvwiki' => 'available',
+		'default' => false,
+		'isvwiki' => true,
 	],
 
 	// Description2
