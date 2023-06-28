@@ -3651,6 +3651,11 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// T11025
+	'wgNearbyPagesUrl' => [
+		'default' => '/w/api.php',
+	],
+
 	// New User Email Notification
 	'wgNewUserNotifEmailTargets' => [
 		'default' => [],
