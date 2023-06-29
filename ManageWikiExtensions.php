@@ -2839,6 +2839,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'realme' => [
+		'name' => 'RealMe',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RealMe',
+		'var' => 'wmgUseRealMe',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'removeredlinks' => [
 		'name' => 'RemoveRedlinks',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RemoveRedlinks',
