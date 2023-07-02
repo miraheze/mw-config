@@ -66,36 +66,40 @@ if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 	require_once '/srv/mediawiki/config/Wikibase.php';
 }
 
-if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
-	$wgVisualEditorParsoidAutoConfig = false;
-}
+// If Flow, VisualEditor, or Linter is used, use the Parsoid php extension
+if ( $wi->isAnyOfExtensionsActive( 'Flow', 'VisualEditor', 'Linter' ) ) {
+	wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
 
-$wgVirtualRestConfig = [
-	'paths' => [],
-	'modules' => [
-	'parsoid' => [
-		'url' => 'https://mw-lb.miraheze.org/w/rest.php',
-		'domain' => $wi->server,
-		'prefix' => $wi->dbname,
-		'forwardCookies' => (bool)$cwPrivate,
-		'restbaseCompat' => false,
-		'timeout' => 30,
+	if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
+		$wgVisualEditorParsoidAutoConfig = false;
+	}
+
+	$wgVirtualRestConfig = [
+		'paths' => [],
+		'modules' => [
+			'parsoid' => [
+				'url' => 'https://mw-lb.miraheze.org/w/rest.php',
+				'domain' => $wi->server,
+				'prefix' => $wi->dbname,
+				'forwardCookies' => (bool)$cwPrivate,
+				'restbaseCompat' => false,
+				'timeout' => 30,
+			],
 		],
-	],
-	'global' => [
-		'timeout' => 360,
-		'forwardCookies' => false,
-		'HTTPProxy' => null,
-	],
-];
+		'global' => [
+			'timeout' => 360,
+			'forwardCookies' => false,
+			'HTTPProxy' => null,
+		],
+	];
 
-if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
-	$wgFlowParsoidPrefix = $wi->dbname;
-	$wgFlowParsoidTimeout = 30;
-	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
+	if ( $wi->isExtensionActive( 'Flow' ) ) {
+		$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
+		$wgFlowParsoidPrefix = $wi->dbname;
+		$wgFlowParsoidTimeout = 30;
+		$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
+	}
 }
-
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
