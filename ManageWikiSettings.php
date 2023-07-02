@@ -248,13 +248,13 @@ $wgManageWikiSettings = [
 		'help' => '',
 		'requires' => [],
 	],
-	'egApprovedRevsFileAutomaticApprovals' => [
-		'name' => 'Automatically approve new files',
+	'egApprovedRevsShowNotApprovedMessage' => [
+		'name' => 'Show not approved message',
 		'from' => 'approvedrevs',
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'anti-spam',
-		'help' => 'Uncheck this to require new files to be manually approved even if made by an administrator',
+		'help' => '',
 		'requires' => [],
 	],
 	'wgFlaggedRevsProtection' => [
