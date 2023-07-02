@@ -92,7 +92,7 @@ $wgVirtualRestConfig = [
 if ( $wi->isExtensionActive( 'Flow' ) ) {
 	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
 	$wgFlowParsoidPrefix = $wi->dbname;
-	$wgFlowParsoidTimeout = 30;
+	$wgFlowParsoidTimeout = 50;
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
 }
 
