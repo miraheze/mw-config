@@ -1226,10 +1226,6 @@ $wgConf->settings += [
 		'default' => 'default',
 		'isvwiki' => 'available',
 	],
-	'wgDiscussionTools_visualenhancements_newsectionlink_enable' => [
-		'default' => false,
-		'isvwiki' => true,
-	],
 
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
