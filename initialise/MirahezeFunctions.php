@@ -1068,13 +1068,15 @@ class MirahezeFunctions {
 	}
 
 	public static function onMediaWikiServices() {
-		foreach ( $GLOBALS['globals'] as $global => $value ) {
-			if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) ) {
-				$GLOBALS[$global] = $value;
+		if ( isset( $GLOBALS['globals'] ) ) {
+			foreach ( $GLOBALS['globals'] as $global => $value ) {
+				if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) ) {
+					$GLOBALS[$global] = $value;
+				}
 			}
-		}
 
-		// Don't need a global here
-		unset( $GLOBALS['globals'] );
+			// Don't need a global here
+			unset( $GLOBALS['globals'] );
+		}
 	}
 }
