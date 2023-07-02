@@ -46,3 +46,5 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr',
 ] );
+
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
