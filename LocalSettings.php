@@ -4532,6 +4532,9 @@ $wgConf->settings += [
 			'www.hinkler.com.au',
 		],
 	],
+	'wgRottenLinksHTTPProxy' => [
+		'default' => 'http://bast.miraheze.org:8080'
+	],
 
 	// Robot policy
 	'wgDefaultRobotPolicy' => [
