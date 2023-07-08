@@ -568,11 +568,11 @@ $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 $wgMFStripResponsiveImages = false;
 
 $wgCreateWikieContainers = [
-    'public' => $cwPrivate,
-    'thumb' => $cwPrivate,
-    'transcoded' => $cwPrivate,
-    'temp' => true,
-    'deleted' => true,
-    'dumps-backup' => $cwPrivate,
-    'timeline-render' => $cwPrivate
+	'public' => $cwPrivate,
+	'thumb' => $cwPrivate,
+	'transcoded' => $cwPrivate,
+	'temp' => true,
+	'deleted' => true,
+	'dumps-backup' => $cwPrivate,
+	'timeline-render' => $cwPrivate
 ];
