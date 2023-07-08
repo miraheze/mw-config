@@ -566,3 +566,13 @@ $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 
 // Can be removed on 1.40+ (https://phabricator.wikimedia.org/T326147)
 $wgMFStripResponsiveImages = false;
+
+$wgCreateWikieContainers = [
+    'public' => $cwPrivate,
+    'thumb' => $cwPrivate,
+    'transcoded' => $cwPrivate,
+    'temp' => true,
+    'deleted' => true,
+    'dumps-backup' => $cwPrivate,
+    'timeline-render' => $cwPrivate
+];
