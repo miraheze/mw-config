@@ -931,31 +931,37 @@ class MirahezeFunctions {
 	private static function getCombiList( string $globalDatabase, ?string $version = null ): array {
 		$dbr = self::getDatabaseConnection( $globalDatabase );
 		$wikiVersion = $version ? [ 'wiki_version' => $version ] : [];
-		$allWikis = $dbr->newSelectQueryBuilder()
-			->table( 'cw_wikis' )
-			->fields( [
-				'wiki_dbcluster',
-				'wiki_dbname',
-				'wiki_url',
-				'wiki_sitename',
-				'wiki_version',
-			] )
-			->where( [ 'wiki_deleted' => 0 ] + $wikiVersion )
-			->caller( __METHOD__ )
-			->fetchResultSet();
-
 		$combiList = [];
-		foreach ( $allWikis as $wiki ) {
-			$combiList[$wiki->wiki_dbname] = [
-				's' => $wiki->wiki_sitename,
-				'c' => $wiki->wiki_dbcluster,
-				'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
-			];
+		do {
+			$allWikis = $dbr->newSelectQueryBuilder()
+				->table( 'cw_wikis' )
+				->fields( [
+					'wiki_dbcluster',
+					'wiki_dbname',
+					'wiki_url',
+					'wiki_sitename',
+					'wiki_version',
+				] )
+				->where( [ 'wiki_deleted' => 0 ] + $wikiVersion )
+				->orderBy( 'wiki_dbname' )
+				->limit( 500 )
+				->caller( __METHOD__ )
+				->fetchResultSet();
 
-			if ( $wiki->wiki_url !== null ) {
-				$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
+			$count = $allWikis->numRows();
+
+			foreach ( $allWikis as $wiki ) {
+				$combiList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+					'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
+				];
+	
+				if ( $wiki->wiki_url !== null ) {
+					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
+				}
 			}
-		}
+		} while ( $count !== 0 );
 
 		return $combiList;
 	}
