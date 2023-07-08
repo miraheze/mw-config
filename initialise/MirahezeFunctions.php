@@ -956,7 +956,7 @@ class MirahezeFunctions {
 					'c' => $wiki->wiki_dbcluster,
 					'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
 				];
-	
+
 				if ( $wiki->wiki_url !== null ) {
 					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
 				}
