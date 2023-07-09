@@ -892,103 +892,6 @@ class MirahezeFunctions {
 	}
 
 	/**
-	 * @param string $globalDatabase
-	 * @return array
-	 */
-	private static function getActiveList( string $globalDatabase ): array {
-		$dbr = self::getDatabaseConnection( $globalDatabase );
-		$activeWikis = $dbr->newSelectQueryBuilder()
-			->table( 'cw_wikis' )
-			->fields( [
-				'wiki_dbcluster',
-				'wiki_dbname',
-				'wiki_sitename',
-			] )
-			->where( [
-				'wiki_closed' => 0,
-				'wiki_deleted' => 0,
-				'wiki_inactive' => 0,
-			] )
-			->caller( __METHOD__ )
-			->fetchResultSet();
-
-		$activeList = [];
-		foreach ( $activeWikis as $wiki ) {
-			$activeList[$wiki->wiki_dbname] = [
-				's' => $wiki->wiki_sitename,
-				'c' => $wiki->wiki_dbcluster,
-			];
-		}
-
-		return $activeList;
-	}
-
-	/**
-	 * @param string $globalDatabase
-	 * @param ?string $version
-	 * @return array
-	 */
-	private static function getCombiList( string $globalDatabase, ?string $version = null ): array {
-		$dbr = self::getDatabaseConnection( $globalDatabase );
-		$wikiVersion = $version ? [ 'wiki_version' => $version ] : [];
-		$allWikis = $dbr->newSelectQueryBuilder()
-			->table( 'cw_wikis' )
-			->fields( [
-				'wiki_dbcluster',
-				'wiki_dbname',
-				'wiki_url',
-				'wiki_sitename',
-				'wiki_version',
-			] )
-			->where( [ 'wiki_deleted' => 0 ] + $wikiVersion )
-			->caller( __METHOD__ )
-			->fetchResultSet();
-
-		$combiList = [];
-		foreach ( $allWikis as $wiki ) {
-			$combiList[$wiki->wiki_dbname] = [
-				's' => $wiki->wiki_sitename,
-				'c' => $wiki->wiki_dbcluster,
-				'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
-			];
-
-			if ( $wiki->wiki_url !== null ) {
-				$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
-			}
-		}
-
-		return $combiList;
-	}
-
-	/**
-	 * @param string $globalDatabase
-	 * @return array
-	 */
-	private static function getDeletedList( string $globalDatabase ): array {
-		$dbr = self::getDatabaseConnection( $globalDatabase );
-		$deletedWikis = $dbr->newSelectQueryBuilder()
-			->table( 'cw_wikis' )
-			->fields( [
-				'wiki_dbcluster',
-				'wiki_dbname',
-				'wiki_sitename',
-			] )
-			->where( [ 'wiki_deleted' => 1 ] )
-			->caller( __METHOD__ )
-			->fetchResultSet();
-
-		$deletedList = [];
-		foreach ( $deletedWikis as $wiki ) {
-			$deletedList[$wiki->wiki_dbname] = [
-				's' => $wiki->wiki_sitename,
-				'c' => $wiki->wiki_dbcluster,
-			];
-		}
-
-		return $deletedList;
-	}
-
-	/**
 	 * @param string $databaseName
 	 * @return DBConnRef
 	 */
@@ -1000,43 +903,90 @@ class MirahezeFunctions {
 	}
 
 	/**
+	 * @param string $globalDatabase
+	 * @return array
+	 */
+	private static function generateDatabaseLists( string $globalDatabase ) {
+		$dbr = self::getDatabaseConnection( $globalDatabase );
+		$allWikis = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [
+				 'wiki_dbcluster',
+				 'wiki_dbname',
+				 'wiki_url',
+				 'wiki_sitename',
+				 'wiki_version',
+				 'wiki_deleted',
+				 'wiki_closed',
+				 'wiki_inactive',
+			] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
+
+		$activeList = [];
+		$combiList = [];
+		$deletedList = [];
+		foreach ( $allWikis as $wiki ) {
+				'wiki_closed' => 0,
+				'wiki_deleted' => 0,
+				'wiki_inactive' => 0,
+			if ( $wiki->wiki_closed === 0 && $wiki->wiki_deleted === 0 && $wiki->wiki_inactive === 0 ) {
+				$activeList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+				];
+			}
+			if ( $wiki->wiki_deleted === 1 ) {
+				$deletedList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+				];
+			} else {
+				$combiList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+					'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
+				];
+	
+				if ( $wiki->wiki_url !== null ) {
+					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
+				}
+			}
+		}
+
+		return [
+			'active' => $activeList,
+			'databases' => $combiList,
+			'deleted' => $deletedList
+		];
+	}
+
+	/**
 	 * @param array &$databaseLists
 	 */
 	public static function onGenerateDatabaseLists( array &$databaseLists ) {
-		$default = self::generateDefaultDatabaseList( self::GLOBAL_DATABASE['default'] );
-		$beta = self::generateBetaDatabaseList( self::GLOBAL_DATABASE['beta'] );
+		$default = self::generateDatabaseLists( self::GLOBAL_DATABASE['default'] );
+		$beta = self::generateDatabaseLists( self::GLOBAL_DATABASE['beta'] );
 		$databaseLists = [
 			'active' => [
-				'combi' => self::getActiveList(
-					self::GLOBAL_DATABASE['default']
-				),
+				'combi' => $default['active']
 			],
 			'active-beta' => [
-				'combi' => self::getActiveList(
-					self::GLOBAL_DATABASE['beta']
-				),
+				'combi' => $beta['active']
 			],
 			'beta' => [
-				'combi' => self::getCombiList(
-					self::GLOBAL_DATABASE['beta']
-				),
+				'combi' => $beta['databases']
 			],
 			'databases' => [
-				'combi' => self::getCombiList(
-					self::GLOBAL_DATABASE['default']
-				),
+				'combi' => $default['databases']
 			],
 			'deleted' => [
 				'deleted' => 'databases',
-				'databases' => self::getDeletedList(
-					self::GLOBAL_DATABASE['default']
-				),
+				'databases' => $default['deleted']
 			],
 			'deleted-beta' => [
 				'deleted-beta' => 'databases',
-				'databases' => self::getDeletedList(
-					self::GLOBAL_DATABASE['beta']
-				),
+				'databases' => $beta['deleted']
 			],
 		];
 
