@@ -927,9 +927,6 @@ class MirahezeFunctions {
 		$combiList = [];
 		$deletedList = [];
 		foreach ( $allWikis as $wiki ) {
-				'wiki_closed' => 0,
-				'wiki_deleted' => 0,
-				'wiki_inactive' => 0,
 			if ( $wiki->wiki_closed === 0 && $wiki->wiki_deleted === 0 && $wiki->wiki_inactive === 0 ) {
 				$activeList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
