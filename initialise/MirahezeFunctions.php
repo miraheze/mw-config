@@ -1003,6 +1003,8 @@ class MirahezeFunctions {
 	 * @param array &$databaseLists
 	 */
 	public static function onGenerateDatabaseLists( array &$databaseLists ) {
+		$default = self::generateDefaultDatabaseList( self::GLOBAL_DATABASE['default'] );
+		$beta = self::generateBetaDatabaseList( self::GLOBAL_DATABASE['beta'] );
 		$databaseLists = [
 			'active' => [
 				'combi' => self::getActiveList(
