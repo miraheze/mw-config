@@ -1026,7 +1026,7 @@ $wgConf->settings += [
 			'temp' => 'private',
 			'deleted' => 'private',
 			'dumps-backup' => 'public-private',
-			'timeline-render' => 'public-private
+			'timeline-render' => 'public-private'
 		],
 	],
 	'wgCreateWikiUseJobQueue' => [
