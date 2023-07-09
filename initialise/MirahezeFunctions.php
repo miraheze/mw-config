@@ -926,6 +926,12 @@ class MirahezeFunctions {
 		$activeList = [];
 		$combiList = [];
 		$deletedList = [];
+		$versions = [];
+
+		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
+			$versions[$version] = [];
+		}
+
 		foreach ( $allWikis as $wiki ) {
 			if ( (int)$wiki->wiki_deleted === 1 ) {
 				$deletedList[$wiki->wiki_dbname] = [
@@ -949,13 +955,18 @@ class MirahezeFunctions {
 				if ( $wiki->wiki_url !== null ) {
 					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
 				}
+
+				if ( isset( $versions[$wiki->wiki_version] ) && $versions[$wiki->wiki_version] ) {
+					$versions[$wiki->wiki_version][$wiki->wiki_dbname] = $combiList[$wiki->wiki_dbname];
+				}
 			}
 		}
 
 		return [
 			'active' => $activeList,
 			'databases' => $combiList,
-			'deleted' => $deletedList
+			'deleted' => $deletedList,
+			'versions' => $versions
 		];
 	}
 
@@ -987,6 +998,16 @@ class MirahezeFunctions {
 				'databases' => $beta['deleted']
 			],
 		];
+
+		$realm = self::getRealm() === 'betaheze' ? 'beta' : 'default';
+		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
+			$databaseLists += [
+				$name . '-wikis' => [
+					'combi' => $realm === 'beta' ?
+						$beta['versions'][$version] : $default['versions'][$version]
+				],
+			];
+		}
 	}
 
 	/**
