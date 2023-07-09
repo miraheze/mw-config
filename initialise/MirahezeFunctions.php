@@ -986,18 +986,6 @@ class MirahezeFunctions {
 				'databases' => $beta['deleted']
 			],
 		];
-
-		$realm = self::getRealm() === 'betaheze' ? 'beta' : 'default';
-		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
-			$databaseLists += [
-				$name . '-wikis' => [
-					'combi' => self::getCombiList(
-						self::GLOBAL_DATABASE[$realm],
-						$version
-					),
-				],
-			];
-		}
 	}
 
 	/**
