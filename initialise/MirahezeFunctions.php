@@ -927,18 +927,19 @@ class MirahezeFunctions {
 		$combiList = [];
 		$deletedList = [];
 		foreach ( $allWikis as $wiki ) {
-			if ( $wiki->wiki_closed === 0 && $wiki->wiki_deleted === 0 && $wiki->wiki_inactive === 0 ) {
-				$activeList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
-			}
-			if ( $wiki->wiki_deleted === 1 ) {
+			if ( (int)$wiki->wiki_deleted === 1 ) {
 				$deletedList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
 					'c' => $wiki->wiki_dbcluster,
 				];
 			} else {
+				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
+					$activeList[$wiki->wiki_dbname] = [
+						's' => $wiki->wiki_sitename,
+						'c' => $wiki->wiki_dbcluster,
+					];
+				}
+
 				$combiList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
 					'c' => $wiki->wiki_dbcluster,
