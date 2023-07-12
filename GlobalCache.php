@@ -4,7 +4,7 @@ $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
 $beta = preg_match( '/^(.*)\.betaheze\.org$/', $wi->server );
-	
+
 // mem141
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
