@@ -35,12 +35,27 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'timeout'              => 1 * 1e6,
 ];
 
+// test131 (only use on test131. No prod traffic should use this).
+$wgObjectCaches['memcached-mem-test'] = [
+	'class'                => MemcachedPeclBagOStuff::class,
+	'serializer'           => 'php',
+	'persistent'           => false,
+	'servers'              => [ '127.0.0.1:11215' ],
+	// Effectively disable the failure limit (0 is invalid)
+	'server_failure_limit' => 1e9,
+	// Effectively disable the retry timeout
+	'retry_timeout'        => -1,
+	'loggroup'             => 'memcached',
+	// 500ms, in microseconds
+	'timeout'              => 1 * 1e6,
+];
+
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'memcached-mem-1' ]
+			'args' => [ $beta ? 'memcached-mem-test' : 'memcached-mem-1' ]
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
@@ -104,13 +119,13 @@ if ( $beta ) {
 	$redisServerIP = '[2a10:6740::6:406]:6379';
 
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
-	$wgSessionCacheType = 'memcached-mem-1';
-	$wgMWOAuthSessionCacheType = 'memcached-mem-1';
+	$wgSessionCacheType = 'memcached-mem-test';
+	$wgMWOAuthSessionCacheType = 'memcached-mem-test';
 
 	$wgMainWANCache = 'betaheze';
 	$wgWANObjectCaches['betaheze'] = [
 		'class' => WANObjectCache::class,
-		'cacheId' => 'memcached-mem-1',
+		'cacheId' => 'memcached-mem-test',
 	];
 }
 
