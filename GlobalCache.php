@@ -118,6 +118,9 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 if ( $beta ) {
 	$redisServerIP = '[2a10:6740::6:406]:6379';
 
+	$wgMainCacheType = 'memcached-mem-test';
+	$wgMessageCacheType = 'memcached-mem-test';
+
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
 	$wgSessionCacheType = 'memcached-mem-test';
 	$wgMWOAuthSessionCacheType = 'memcached-mem-test';
