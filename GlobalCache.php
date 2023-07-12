@@ -3,6 +3,8 @@
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
+$beta = preg_match( '/^(.*)\.betaheze\.org$/', $wi->server );
+
 // mem141
 $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
@@ -45,8 +47,8 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				'pc1' => [
 					'type'      => 'mysql',
-					'host'      => 'db131.miraheze.org',
-					'dbname'    => 'parsercache',
+					'host'      => $beta ? 'db121.miraheze.org' : 'db131.miraheze.org',
+					'dbname'    => $beta ? 'testparsercache' : 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
 					'ssl'       => true,
@@ -56,7 +58,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			],
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
-			'shards' => 256,
+			'shards' => $beta ? 1 : 256,
 			'reportDupes' => false
 		],
 	],
@@ -98,7 +100,7 @@ if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBnam
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
+if ( $beta ) {
 	$redisServerIP = '[2a10:6740::6:406]:6379';
 
 	// Session cache needs to be flipped for betaheze to avoid session conflicts
