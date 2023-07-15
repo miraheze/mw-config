@@ -1583,7 +1583,7 @@ $wgConf->settings += [
 		'default' => 262144,
 	],
 	'wgSVGConverter' => [
-		'default' => 'ImageMagick',
+		'default' => 'rsvg-secure',
 	],
 	'wgUploadMissingFileUrl' => [
 		'default' => false,
