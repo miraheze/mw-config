@@ -555,7 +555,7 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 $wgJobRunRate = 0;
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 50;
-$wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
+$wgSVGConverters['rsvg'] = '$path/mediawiki-firejail-rsvg-convert -w $width -h $height -o $output $input';
 
 // We need all thumbs to be regenerated
 $wgThumbnailEpoch = 20230715011058;

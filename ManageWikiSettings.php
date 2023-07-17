@@ -1291,20 +1291,6 @@ $wgManageWikiSettings = [
 		'help' => 'Toggles native image lazy loading, via the "loading" attribute.',
 		'requires' => [],
 	],
-	'wgSVGConverter' => [
-		'name' => 'SVG Converter',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'list',
-		'options' => [
-			'Inkscape' => 'inkscape',
-			'ImageMagick' => 'ImageMagick',
-		],
-		'overridedefault' => 'ImageMagick',
-		'section' => 'media',
-		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG. You may want to choose Inkscape if your SVG->PNG conversion results in a black image.',
-		'requires' => [],
-	],
 	'wgMediaViewerEnableByDefault' => [
 		'name' => 'MediaViewer Enable By Default',
 		'from' => 'multimediaviewer',

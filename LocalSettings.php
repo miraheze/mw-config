@@ -1585,7 +1585,10 @@ $wgConf->settings += [
 		'default' => 262144,
 	],
 	'wgSVGConverter' => [
-		'default' => 'ImageMagick',
+		'default' => 'rsvg',
+	],
+	'wgSVGConverterPath' => [
+		'default' => '/usr/local/bin'
 	],
 	'wgUploadMissingFileUrl' => [
 		'default' => false,
