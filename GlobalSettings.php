@@ -546,7 +546,7 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 
 // Kilobytes
 $wgMaxShellFileSize = 512 * 1024;
-$wgMaxShellMemory = 512 * 512;
+$wgMaxShellMemory = 1024 * 1024;
 
 // 50 seconds
 $wgMaxShellTime = 50;
@@ -554,6 +554,7 @@ $wgMaxShellTime = 50;
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 $wgJobRunRate = 0;
+$wgJobBackoffThrottling['htmlCacheUpdate'] = 50;
 $wgSVGConverters['rsvg'] = '$path/mediawiki-firejail-rsvg-convert -w $width -h $height -o $output $input';
 
 // We need all thumbs to be regenerated

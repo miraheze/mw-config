@@ -10,6 +10,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
+setlocale( LC_ALL, 'en_GB.UTF-8' );
+
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
@@ -1813,6 +1815,9 @@ $wgConf->settings += [
 	],
 	'wgImageMagickConvertCommand' => [
 		'default' => '/usr/local/bin/mediawiki-firejail-convert',
+	],
+	'wgSharpenParameter' => [
+		'default' => '0x0.8',
 	],
 	'wgImageMagickTempDir' => [
 		'default' => '/tmp/magick-tmp',
