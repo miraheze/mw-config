@@ -1585,6 +1585,9 @@ $wgConf->settings += [
 	'wgSVGConverter' => [
 		'default' => 'rsvg',
 	],
+	'wgSVGConverterPath' => [
+		'default' => '/usr/bin'
+	],
 	'wgUploadMissingFileUrl' => [
 		'default' => false,
 	],
