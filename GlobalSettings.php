@@ -554,6 +554,7 @@ $wgMaxShellTime = 50;
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 $wgJobRunRate = 0;
+$wgJobBackoffThrottling['htmlCacheUpdate'] = 50;
 $wgSVGConverters['inkscape'] = '$path/inkscape -w $width -o $output $input';
 
 // We need all thumbs to be regenerated
