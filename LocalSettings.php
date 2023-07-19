@@ -1022,6 +1022,8 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiContainers' => [
 		'default' => [
+			'avatars' => 'public-private',
+			'awards' => 'public-private',
 			'public' => 'public-private',
 			'thumb' => 'public-private',
 			'transcoded' => 'public-private',
