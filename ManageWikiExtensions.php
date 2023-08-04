@@ -2770,6 +2770,11 @@ $wgManageWikiExtensions = [
 				'wikibaserepository',
 			],
 		],
+		'install' => [
+			'sql' => [
+				'wbs_propertypairs' => "$IP/extensions/PropertySuggester/sql/mysql/tables-generated.sql"
+			],
+		],
 		'section' => 'other',
 	],
 	'protectionindicator' => [
