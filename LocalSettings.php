@@ -2111,6 +2111,10 @@ $wgConf->settings += [
 		],
 	],
 
+	'wgExportMaxHistory' => [
+		'default' => 1000
+	],
+
 	// IPInfo
 	'wgIPInfoGeoLite2Prefix' => [
 		'default' => '/srv/mediawiki/geoip/GeoLite2-',
