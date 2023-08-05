@@ -2115,6 +2115,10 @@ $wgConf->settings += [
 		'default' => 1000
 	],
 
+	'wgIgnoreImageErrors' => [
+		'default' => true
+	],
+
 	// IPInfo
 	'wgIPInfoGeoLite2Prefix' => [
 		'default' => '/srv/mediawiki/geoip/GeoLite2-',
