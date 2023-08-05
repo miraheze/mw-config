@@ -4805,9 +4805,6 @@ $wgConf->settings += [
 	'wgMaxTocLevel' => [
 		'default' => 999,
 	],
-	'wgSkinMetaTags' => [
-		'default' => [ 'og:title', 'og:type' ],
-	],
 
 	// TabberNeue
 	'wgTabberNeueEnableMD5Hash' => [
