@@ -290,6 +290,10 @@ if ( $wi->isExtensionActive( 'EasyTimeline' ) ) {
 	$wgTimelineFileBackend = 'miraheze-swift';
 }
 
+if ( !$wi->isExtensionActive( 'wikiseo' ) ) {
+	$wgSkinMetaTags = [ 'og:title', 'og:type' ];
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['poweredby']['wikiapiary'] = [
