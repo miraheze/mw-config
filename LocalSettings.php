@@ -1463,6 +1463,10 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	'wgWatchlistExpiry' => [
+		'default' => true
+	],
+
 	// Footers
 	'+wgFooterIcons' => [
 		'default' => [
