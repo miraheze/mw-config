@@ -55,7 +55,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ $beta ? 'memcached-mem-test' : 'memcached-mem-1' ]
+			'args' => [ $beta ? 'memcached-mem-test' : 'memcached-mem-2' ]
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
@@ -81,15 +81,15 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgSessionCacheType = 'memcached-mem-2';
+$wgSessionCacheType = 'memcached-mem-1';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-replicated';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
-$wgMainCacheType = 'memcached-mem-1';
-$wgMessageCacheType = 'memcached-mem-2';
+$wgMainCacheType = 'memcached-mem-2';
+$wgMessageCacheType = 'memcached-mem-1';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
