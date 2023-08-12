@@ -274,7 +274,7 @@ class MirahezeFunctions {
 		}
 
 		foreach ( $databases as $db => $data ) {
-			$servers[$db] = $data['u']
+			$servers[$db] = $data['u'];
 		}
 
 		$default ??= 'https://' . self::DEFAULT_SERVER[self::getRealm()];
