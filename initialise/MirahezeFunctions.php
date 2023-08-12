@@ -521,7 +521,7 @@ class MirahezeFunctions {
 			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::$activeExtensions ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
-			if ( time() > $minTime ) {
+			if ( time() < $minTime ) {
 				self::writeToCache(
 					$confCacheFileName, $confCacheObject
 				);
