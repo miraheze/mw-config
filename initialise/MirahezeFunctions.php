@@ -274,11 +274,7 @@ class MirahezeFunctions {
 		}
 
 		foreach ( $databases as $db => $data ) {
-			foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
-				if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
-					$servers[$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
-				}
-			}
+			$servers[$db] = $data['u']
 		}
 
 		$default ??= 'https://' . self::DEFAULT_SERVER[self::getRealm()];
@@ -948,6 +944,12 @@ class MirahezeFunctions {
 
 				if ( $wiki->wiki_url !== null ) {
 					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
+				} else {
+					foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
+						if ( substr( $wiki->wiki_dbname, -strlen( $suffix ) ) === $suffix ) {
+							$combiList[$wiki->wiki_dbname]['u'] = 'https://' . substr( $wiki->wiki_dbname, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+						}
+					}
 				}
 			}
 		}
