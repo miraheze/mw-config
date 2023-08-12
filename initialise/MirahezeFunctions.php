@@ -923,16 +923,24 @@ class MirahezeFunctions {
 		$combiList = [];
 		$deletedList = [];
 		foreach ( $allWikis as $wiki ) {
+			$subdomain = [];
+			foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
+				if ( substr( $wiki->wiki_dbname, -strlen( $suffix ) ) === $suffix ) {
+					$subdomain[$wiki->wiki_dbname] = 'https://' . substr( $wiki->wiki_dbname, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+				}
+			}
 			if ( (int)$wiki->wiki_deleted === 1 ) {
 				$deletedList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
 					'c' => $wiki->wiki_dbcluster,
+					'u' => $subdomain[$wiki->wiki_dbname],
 				];
 			} else {
 				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
 					$activeList[$wiki->wiki_dbname] = [
 						's' => $wiki->wiki_sitename,
 						'c' => $wiki->wiki_dbcluster,
+						'u' => $subdomain[$wiki->wiki_dbname],
 					];
 				}
 
@@ -942,14 +950,15 @@ class MirahezeFunctions {
 					'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
 				];
 
+				foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
+					if ( substr( $wiki->wiki_dbname, -strlen( $suffix ) ) === $suffix ) {
+						$combiList[$wiki->wiki_dbname]['u'] = 'https://' . substr( $wiki->wiki_dbname, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
+					}
+				}
 				if ( $wiki->wiki_url !== null ) {
 					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
 				} else {
-					foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
-						if ( substr( $wiki->wiki_dbname, -strlen( $suffix ) ) === $suffix ) {
-							$combiList[$wiki->wiki_dbname]['u'] = 'https://' . substr( $wiki->wiki_dbname, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
-						}
-					}
+					$combiList[$wiki->wiki_dbname]['u'] = $subdomain[$wiki->wiki_dbname];
 				}
 			}
 		}
