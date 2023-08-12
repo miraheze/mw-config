@@ -273,17 +273,8 @@ class MirahezeFunctions {
 			return $default;
 		}
 
-		if ( $databases ) {
-			foreach ( $databases as $db => $data ) {
-				$servers[$db] = $data['u'];
-			}
-		} else {
-			foreach ( $databases as $db => $data ) {
-				foreach ( array_flip( self::SUFFIXES ) as $suffix ) {
-					if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
-						$servers[$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . self::SUFFIXES[$suffix];
-					}
-				}
+		foreach ( $databases as $db => $data ) {
+			$servers[$db] = $data['u'];
 		}
 
 		$default ??= 'https://' . self::DEFAULT_SERVER[self::getRealm()];
