@@ -95,6 +95,8 @@ $wgParserCacheType = 'mysql-multiwrite';
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
+$wgQueryCacheLimit = 5000;
+
 // 10 days
 $wgParserCacheExpireTime = 86400 * 10;
 
