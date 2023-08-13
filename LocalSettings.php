@@ -5942,10 +5942,6 @@ $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-if ( !file_exists( '/srv/mediawiki/cache/l10n/l10n_cache-en.cdb' ) ) {
-	$wgLocalisationCacheConf['manualRecache'] = false;
-}
-
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
