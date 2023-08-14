@@ -187,11 +187,10 @@ class MirahezeFunctions {
 	}
 
 	public static function setupHooks() {
-		global $wgHooks;
-
-		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
-		$wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
-		$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->register( 'CreateWikiJsonGenerateDatabaseList', 'MirahezeFunctions::onGenerateDatabaseLists' );
+		$hookContainer->register( 'CreateWikiJsonBuilder', 'MirahezeFunctions::onCreateWikiJsonBuilder' );
+		$hookContainer->register( 'MediaWikiServices', 'MirahezeFunctions::onMediaWikiServices' );
 	}
 
 	public static function setupSiteConfiguration() {
