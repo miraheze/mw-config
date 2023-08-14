@@ -162,7 +162,7 @@ class MirahezeFunctions {
 		} else {
 			global $wgDatabaseClustersMaintenance;
 
-			$databases = $databasesArray['combi'] ?? $databasesArray['databases'];
+			$databases = $databasesArray['combi'] ?? $databasesArray['databases'] ?? [];
 
 			if ( $wgDatabaseClustersMaintenance ) {
 				$databases = array_filter( $databases, static function ( $data, $key ) {
