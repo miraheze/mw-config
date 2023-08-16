@@ -135,7 +135,8 @@ class MirahezeFunctions {
 
 			return $databases;
 		} else {
-			$databasesArray = json_decode( file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" ), true );
+			$wikiDatabaseFile = file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" );
+			$databasesArray = json_decode( $wikiDatabaseFile, true );
 		}
 
 		if ( $database ) {
@@ -469,9 +470,9 @@ class MirahezeFunctions {
 			return [];
 		}
 
-		return (array)json_decode( file_get_contents(
-			self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json'
-		), true );
+		$currentDatabaseFile = file_get_contents(
+			self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' );
+		return (array)json_decode( $currentDatabaseFile, true );
 	}
 
 	/** @var array */
@@ -877,7 +878,8 @@ class MirahezeFunctions {
 
 			file_put_contents( self::CACHE_DIRECTORY . '/extension-list.json', json_encode( $list ), LOCK_EX );
 		} else {
-			$list = json_decode( file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' ), true );
+			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' );
+			$list = json_decode( $extensionListFile, true );
 		}
 
 		self::$activeExtensions ??= self::getActiveExtensions();
