@@ -102,7 +102,7 @@ class MirahezeFunctions {
 
 		// We need the CLI to be able to access 'deleted' wikis
 		if ( PHP_SAPI === 'cli' ) {
-			$databases ??= array_merge( self::readDbListFile( $list ), self::readDbListFile( 'deleted-' . $list ) );
+			$databases ??= array_merge( $list === 'beta' ? $beta : self::readDbListFile( $list ), self::readDbListFile( 'deleted-' . $list ) );
 		}
 
 		$databases ??= $list === 'beta' ? $beta : self::readDbListFile( $list );
