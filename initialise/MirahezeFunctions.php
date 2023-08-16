@@ -97,14 +97,15 @@ class MirahezeFunctions {
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ? 'beta' : 'production';
+		$beta = self::readDbListFile( 'beta' );
+		$list ??= isset( array_flip( $beta )[ self::$currentDatabase ] ) ? 'beta' : 'production';
 
 		// We need the CLI to be able to access 'deleted' wikis
 		if ( PHP_SAPI === 'cli' ) {
-			$databases ??= array_merge( self::readDbListFile( $list ), self::readDbListFile( 'deleted-' . $list ) );
+			$databases ??= array_merge( $list === 'beta' ? $beta : self::readDbListFile( $list ), self::readDbListFile( 'deleted-' . $list ) );
+		} else {
+			$databases ??= self::readDbListFile( $list );
 		}
-
-		$databases ??= self::readDbListFile( $list );
 
 		$wgLocalDatabases = $databases;
 		return $databases;
