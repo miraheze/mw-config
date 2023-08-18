@@ -35,21 +35,6 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'timeout'              => 1 * 1e6,
 ];
 
-// test131 (only use on test131. No prod traffic should use this).
-$wgObjectCaches['memcached-mem-test'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11215' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	// 500ms, in microseconds
-	'timeout'              => 1 * 1e6,
-];
-
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,
 	'caches' => [
@@ -117,20 +102,28 @@ if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBnam
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 if ( $beta ) {
+	// test131 (only use on test131. No prod traffic should use this).
+	$wgObjectCaches['memcached-mem-test'] = [
+		'class'                => MemcachedPeclBagOStuff::class,
+		'serializer'           => 'php',
+		'persistent'           => false,
+		'servers'              => [ '127.0.0.1:11215' ],
+		// Effectively disable the failure limit (0 is invalid)
+		'server_failure_limit' => 1e9,
+		// Effectively disable the retry timeout
+		'retry_timeout'        => -1,
+		'loggroup'             => 'memcached',
+		// 500ms, in microseconds
+		'timeout'              => 1 * 1e6,
+	];
+
 	$redisServerIP = '[2a10:6740::6:406]:6379';
 
 	$wgMainCacheType = 'memcached-mem-test';
 	$wgMessageCacheType = 'memcached-mem-test';
 
-	// Session cache needs to be flipped for betaheze to avoid session conflicts
 	$wgSessionCacheType = 'memcached-mem-test';
 	$wgMWOAuthSessionCacheType = 'memcached-mem-test';
-
-	$wgMainWANCache = 'betaheze';
-	$wgWANObjectCaches['betaheze'] = [
-		'class' => WANObjectCache::class,
-		'cacheId' => 'memcached-mem-test',
-	];
 }
 
 $wgJobTypeConf['default'] = [
