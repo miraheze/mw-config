@@ -571,3 +571,6 @@ $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 
 // Can be removed on 1.40+ (https://phabricator.wikimedia.org/T326147)
 $wgMFStripResponsiveImages = false;
+
+// For Scribunto / wgCodeEditorEnableCore
+$wgULSNoImeSelectors[] = '.ace_editor textarea';
