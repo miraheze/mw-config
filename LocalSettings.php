@@ -4912,7 +4912,7 @@ $wgConf->settings += [
 		'default' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw',
+				'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw&tb_ver=1',
 			],
 			'local' => [
 				'type' => 'localpage',
@@ -4922,7 +4922,7 @@ $wgConf->settings += [
 		'betaheze' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw',
+				'src' => 'https://meta.betaheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw&tb_ver=1',
 			],
 			'local' => [
 				'type' => 'localpage',
