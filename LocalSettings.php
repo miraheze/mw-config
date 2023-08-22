@@ -4340,6 +4340,7 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 			'editwikistaffprotected',
+			'editreviewerprotected',
 		],
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
