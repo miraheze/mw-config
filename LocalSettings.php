@@ -1972,7 +1972,7 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'Agent Isai',
-			'Reception123',
+			'MacFan4000',
 		],
 	],
 
