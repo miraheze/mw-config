@@ -424,6 +424,10 @@ switch ( $wi->dbname ) {
 	case 'sagan4alphawiki':
 		$wgCargoAllowedSQLFunctions[] = 'RAND';
 		break;
+	case 'simpleelectronicswiki': 
+		$wgAbuseFilterNotifications = "rc";
+		$wgAbuseFilterNotificationsPrivate = true;
+		break; 
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
