@@ -94,6 +94,22 @@ $wgManageWikiSettings = [
 		'help' => 'The possible actions that can be taken by abuse filters. When adding a new action, check if it is restricted in <code>$wgAbuseFilterActionRestrictions</code> and, if it is, don\'t forget to add the abusefilter-modify-restricted right to the appropriate user groups.',
 		'requires' => [],
 	],
+	'wgAbuseFilterNotifications' => [
+		'name' => 'AbuseFilter Notifications',
+		'from' => 'abusefilter',
+		'global' => 'true',
+		'type' => 'list',
+		'options' => [
+			'False' => false,
+			'Recent Changes' => 'rc',
+			'UDP' => 'udp',
+			'RC and UDP' => 'rcandudp',
+		],
+		'overridedefault' => false,
+		'help' => 'Pings AbuseFilter hits to Special:RecentChanges, UDP, or both.',
+		'section' => 'anti-spam',
+		'requires' => [],
+	],
 	'wgAutoblockExpiry' => [
 		'name' => 'Autoblock Expiry',
 		'from' => 'mediawiki',
