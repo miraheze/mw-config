@@ -106,7 +106,7 @@ $wgManageWikiSettings = [
 			'RC and UDP' => 'rcandudp',
 		],
 		'overridedefault' => false,
-		'help' => 'Pings hits from private AbuseFilters to Special:RecentChanges.',
+		'help' => 'Pings AbuseFilter hits to Special:RecentChanges, UDP, or both.',
 		'section' => 'anti-spam',
 		'requires' => [],
 	],
@@ -116,7 +116,7 @@ $wgManageWikiSettings = [
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => false,
-		'help' => 'Pings AbuseFilter hits to Special:RecentChanges, UDP, or both.',
+		'help' => 'Pings hits from private AbuseFilters to Special:RecentChanges.',
 		'section' => 'anti-spam',
 		'requires' => [
 			'settings' => [
