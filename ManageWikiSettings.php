@@ -121,7 +121,12 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'settings' => [
 				'setting' => 'wgAbuseFilterNotifications',
-				'value' => 'rc' ?? 'rcandudp' ?? 'udp',
+				'value' => [
+					'rc',
+					'rcandudp', 
+					'udp',
+				],
+
 			],
 		],
 	],
