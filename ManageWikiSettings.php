@@ -98,6 +98,16 @@ $wgManageWikiSettings = [
 		'name' => 'AbuseFilter Notifications',
 		'from' => 'abusefilter',
 		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'help' => 'Pings hits from private AbuseFilters to Special:RecentChanges.',
+		'section' => 'anti-spam',
+		'requires' => [],
+	],
+	'wgAbuseFilterNotificationsPrivate' => [
+		'name' => 'Private AbuseFilter Notifications',
+		'from' => 'abusefilter',
+		'global' => true,
 		'type' => 'list',
 		'options' => [
 			'False' => false,
@@ -108,7 +118,12 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'help' => 'Pings AbuseFilter hits to Special:RecentChanges, UDP, or both.',
 		'section' => 'anti-spam',
-		'requires' => [],
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgAbuseFilterNotifications',
+				'value' => 'rc' ?? 'rcandudp' ?? 'udp',
+			],
+		],
 	],
 	'wgAutoblockExpiry' => [
 		'name' => 'Autoblock Expiry',
