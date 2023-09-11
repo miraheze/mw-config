@@ -1219,6 +1219,20 @@ $wgConf->settings += [
 		'default' => 'en',
 	],
 
+	// DiscussionTools
+	'wgDiscussionTools_visualenhancements' => [
+		'default' => 'default',
+		'isvwiki' => 'available',
+	],
+	'wgDiscussionTools_visualenhancements_reply' => [
+		'default' => 'default',
+		'isvwiki' => 'available',
+	],
+	'wgDiscussionTools_visualenhancements_pageframe' => [
+		'default' => 'default',
+		'isvwiki' => 'available',
+	],
+
 	// Description2
 	'wgEnableMetaDescriptionFunctions' => [
 		'ext-Description2' => true,
