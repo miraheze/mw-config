@@ -66,15 +66,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgObjectCaches['redis_local'] = [
-	'class'       => 'RedisBagOStuff',
-	'servers'     => [ $beta ? '/var/run/nutcracker/redis_mediawiki_test.sock' : '/var/run/nutcracker/redis_mediawiki.sock' ],
-	'password'    => $wmgRedisPassword,
-	'loggroup'    => 'redis',
-	'reportDupes' => false
-];
-
-$wgSessionCacheType = 'redis_local';
+$wgSessionCacheType = 'memcached-mem-1';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-replicated';
