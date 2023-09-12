@@ -1931,7 +1931,7 @@ $wgConf->settings += [
 	'wgExtraLanguageNames' => [
 		'default' => [],
 		'benpediawiki' => [
-			'bw' => 'Benwegul',
+			'qbg' => 'bengénesk',
 		],
 		'factfinder3dwiki' => [
 			'eg' => 'Anchiartedlixh Lrieggulier',
