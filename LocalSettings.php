@@ -1958,6 +1958,9 @@ $wgConf->settings += [
 		'isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
+		'sonaponawiki' => [
+			'tok' => 'toki pona',
+		],
 		'wikibenwiki' => [
 			'bw' => 'Benwegul',
 		],
