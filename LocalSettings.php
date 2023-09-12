@@ -2457,9 +2457,9 @@ $wgConf->settings += [
 			[ 'newtablinks', 'wikiwalk' ],
 			'_self' => [ 'sametablinks' ]
 		],
-		'sdiywiki' => '_blank' => [ 'extiw' ],
-		'scruffywiki' => '_blank' => [ 'extiw' ],
-		'simpleelectronicswiki' => '_blank' => [ 'extiw' ]
+		'sdiywiki' => ['_blank' => [ 'extiw' ]],
+		'scruffywiki' => ['_blank' => [ 'extiw' ]],
+		'simpleelectronicswiki' => ['_blank' => [ 'extiw' ]]
 	],
 
 	// LinkTitles
