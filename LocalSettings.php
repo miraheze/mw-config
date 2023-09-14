@@ -1024,11 +1024,11 @@ $wgConf->settings += [
 		'default' => [
 			'avatars' => 'public-private',
 			'awards' => 'public-private',
-			'public' => 'public-private',
-			'thumb' => 'public-private',
-			'transcoded' => 'public-private',
-			'temp' => 'private',
-			'deleted' => 'private',
+			'local-public' => 'public-private',
+			'local-thumb' => 'public-private',
+			'local-transcoded' => 'public-private',
+			'local-temp' => 'private',
+			'local-deleted' => 'private',
 			'dumps-backup' => 'public-private',
 			'timeline-render' => 'public-private'
 		],
