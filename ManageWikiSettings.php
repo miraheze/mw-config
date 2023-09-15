@@ -123,7 +123,7 @@ $wgManageWikiSettings = [
 				'setting' => 'wgAbuseFilterNotifications',
 				'value' => [
 					'rc',
-					'rcandudp', 
+					'rcandudp',
 					'udp',
 				],
 
