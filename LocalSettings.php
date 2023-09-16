@@ -5930,6 +5930,10 @@ $wi::$disabledExtensions = [
 	'graph',
 ];
 
+if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
+	array_push( $wi::$disabledExtensions, 'mixednamespacesearchsuggestions' );
+}
+
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
