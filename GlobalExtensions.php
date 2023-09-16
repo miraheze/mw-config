@@ -48,7 +48,7 @@ wfLoadExtensions( [
 
 // Renameuser is bundled into core from 1.40+
 if ( version_compare( MW_VERSION, '1.40', '<' ) ) {
-	wfLoadExtensions( 'Renameuser' );
+	wfLoadExtension( 'Renameuser' );
 }
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
