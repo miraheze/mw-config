@@ -71,7 +71,6 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 }
 
 $wgVirtualRestConfig = [
-	'paths' => [],
 	'modules' => [
 		'parsoid' => [
 			'url' => 'https://mw-lb.miraheze.org/w/rest.php',
@@ -79,10 +78,10 @@ $wgVirtualRestConfig = [
 			'prefix' => $wi->dbname,
 			'forwardCookies' => (bool)$cwPrivate,
 			'restbaseCompat' => false,
-			'timeout' => 30,
 		],
 	],
 	'global' => [
+		'domain' => $wgCanonicalServer,
 		'timeout' => 360,
 		'forwardCookies' => false,
 		'HTTPProxy' => null,
