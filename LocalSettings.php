@@ -5964,6 +5964,17 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
+if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
+	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+	// and to run migrateRevisionCommentTemp.php.
+	$wgCommentTempTableSchemaMigrationStage = [
+		'rev_comment' => MIGRATION_OLD,
+	];
+	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+	// and to run migrateExternallinks.
+	$wgExternalLinksSchemaMigrationStage = SCHEMA_COMPAT_OLD;
+}
+
 // we set $wgInternalServer to $wgServer to get varnish cache purging working
 // we convert $wgServer to http://, as varnish does not support purging https requests
 $wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
