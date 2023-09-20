@@ -2477,6 +2477,15 @@ $wgConf->settings += [
 			[ 'newtablinks', 'wikiwalk' ],
 			'_self' => [ 'sametablinks' ]
 		],
+		'scruffywiki' => [
+			'_self' => [ 'extiw' ],
+		],
+		'simpleelectronicswiki' => [
+			'_self' => [ 'extiw' ]
+		],
+		'sdiywikiwiki' => [
+			'_self' => [ 'extiw' ]
+		],
 	],
 
 	// LinkTitles
