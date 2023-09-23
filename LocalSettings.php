@@ -2478,13 +2478,13 @@ $wgConf->settings += [
 			'_self' => [ 'sametablinks' ]
 		],
 		'scruffywiki' => [
-			'_self' => [ 'extiw' ],
+			'_blank' => [ 'extiw' ],
 		],
 		'simpleelectronicswiki' => [
-			'_self' => [ 'extiw' ]
+			'_blank' => [ 'extiw' ]
 		],
 		'sdiywikiwiki' => [
-			'_self' => [ 'extiw' ]
+			'_blank' => [ 'extiw' ]
 		],
 	],
 
