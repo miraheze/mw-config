@@ -573,3 +573,5 @@ $wgMFStripResponsiveImages = false;
 
 // For Scribunto / wgCodeEditorEnableCore
 $wgULSNoImeSelectors[] = '.ace_editor textarea';
+
+$wgMaxMsgCacheEntrySize = 1024;
