@@ -25,6 +25,7 @@ wfLoadExtensions( [
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
+	'MessageCachePerformance',
 	'MirahezeMagic',
 	'MobileDetect',
 	'NativeSvgHandler',
