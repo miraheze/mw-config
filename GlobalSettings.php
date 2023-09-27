@@ -575,3 +575,27 @@ $wgMFStripResponsiveImages = false;
 $wgULSNoImeSelectors[] = '.ace_editor textarea';
 
 $wgMaxMsgCacheEntrySize = 1024;
+
+$mcpMessageCachePerformanceMsgPrefixes = [
+	'specialpages-specialpagegroup-',
+	'apioutput-view-',
+	'fallback-view-',
+	'anisa-action-',
+	'anisa-view-',
+	'bluesky-action-',
+	'bluesky-view-',
+	'citizen-action-',
+	'citizen-view-',
+	'cologneblue-action-',
+	'cologneblue-view-',
+	'metrolook-action-',
+	'metrolook-view-',
+	'timeless-action-',
+	'timeless-view-',
+	'vector-action-',
+	'vector-view-',
+	'conversion-ns',
+	'tooltip-',
+	'accesskey-',
+	'nstab-'
+];
