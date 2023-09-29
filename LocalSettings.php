@@ -5807,7 +5807,6 @@ $wgConf->settings += [
 			'GlobalWatchlist' => false,
 			'headers-sent' => false,
 			'http' => 'warning',
-			'HitCounters' => false,
 			// Only log http errors with a 500+ code
 			'HttpError' => 'error',
 			// 'JobExecutor' => [ 'logstash' => 'warning' ],
@@ -5915,7 +5914,6 @@ if ( wfHostname() === 'test131' ) {
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
 	'editnotify',
-	'hitcounters',
 	'lingo',
 	'regexfunctions',
 	'wikiforum',
