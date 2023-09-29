@@ -1453,24 +1453,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
-	'hitcounters' => [
-		'name' => 'HitCounters',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HitCounters',
-		'var' => 'wmgUseHitCounters',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'install' => [
-			'sql' => [
-				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
-				'hit_counter_extension' => "$IP/extensions/HitCounters/sql/hit_counter_extension.sql",
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'imagerating' => [
 		'name' => 'ImageRating',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ImageRating',
