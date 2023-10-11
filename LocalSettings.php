@@ -1923,7 +1923,7 @@ $wgConf->settings += [
 	'wgExtraLanguageNames' => [
 		'default' => [],
 		'benpediawiki' => [
-			'bw' => 'Benwegul',
+			'qbg' => 'bengénesk',
 		],
 		'factfinder3dwiki' => [
 			'eg' => 'Anchiartedlixh Lrieggulier',
@@ -1949,6 +1949,9 @@ $wgConf->settings += [
 		],
 		'isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
+		],
+		'sonaponawiki' => [
+			'tok' => 'toki pona',
 		],
 		'wikibenwiki' => [
 			'bw' => 'Benwegul',
