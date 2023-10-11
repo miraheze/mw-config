@@ -454,6 +454,11 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
+	case 'whentheycrywiki': 
+		$wgGalleryOptions['imageWidth'] = 200;
+		$wgGalleryOptions['imageHeight'] = 200;
+			
+		break;
 	case 'wonderingstarswiki':
 		$wgPivotFeatures = [
 			'showActionsForAnon' => false,
