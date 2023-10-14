@@ -11,6 +11,9 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 		'GlobalBlocking',
 		'RemovePII',
 	] );
+
+	$wgCookieSameSite = 'None';
+	$wgUseSameSiteLegacyCookies = true;
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
