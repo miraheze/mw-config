@@ -17,6 +17,10 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
+
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	}
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
