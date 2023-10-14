@@ -21,6 +21,8 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
 		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
 	}
+
+	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
