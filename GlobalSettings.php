@@ -14,6 +14,9 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 
 	$wgCookieSameSite = 'None';
 	$wgUseSameSiteLegacyCookies = true;
+
+	// Only allow users with global accounts to login
+	$wgCentralAuthStrict = true;
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
