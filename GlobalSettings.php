@@ -611,3 +611,11 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'accesskey-',
 	'nstab-'
 ];
+
+if ( $wi->getSettingValue( 'wgDefaultSkin' ) === 'minerva' ) {
+	// If Minerva is set as the default skin, disable auto detect logic.
+	$wgMFAutodetectMobileView = false;
+	$wgMFMobileHeader = 'Host';
+} else {
+	$wgMFAutodetectMobileView = true;
+}
