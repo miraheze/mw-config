@@ -618,4 +618,5 @@ if ( $wi->getSettingValue( 'wgDefaultSkin' ) === 'minerva' ) {
 	$wgMFMobileHeader = 'Host';
 } else {
 	$wgMFAutodetectMobileView = true;
+	$wgMFVaryOnUA = true;
 }
