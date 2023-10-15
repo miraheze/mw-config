@@ -3605,6 +3605,9 @@ $wgConf->settings += [
 		'default' => true,
 		'twistwoodtaleswiki' => false,
 	],
+	'wgMFCustomSiteModules' => [
+		'default' => true,
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
