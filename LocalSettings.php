@@ -3460,9 +3460,6 @@ $wgConf->settings += [
 	],
 
 	// MobileFrontend
-	'wgMFAutodetectMobileView' => [
-		'default' => false,
-	],
 	'wgDefaultMobileSkin' => [
 		'default' => 'minerva',
 	],
