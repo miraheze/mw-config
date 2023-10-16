@@ -144,8 +144,7 @@ if ( !$cwPrivate ) {
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 }
 
-// Experimental Wikis
-if ( $cwExperimental ) {
+if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
 	$wgParserEnableLegacyMediaDOM = false;
 } else {
 	$wgParserEnableLegacyMediaDOM = true;
