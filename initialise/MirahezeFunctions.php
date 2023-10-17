@@ -33,7 +33,7 @@ class MirahezeFunctions {
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
-		'betaheze' => 'betaheze.org',
+		'mirabeta' => 'mirabeta.org',
 	];
 
 	private const GLOBAL_DATABASE = [
@@ -45,12 +45,12 @@ class MirahezeFunctions {
 
 	private const TAGS = [
 		'default' => 'default',
-		'beta' => 'betaheze',
+		'beta' => 'mirabeta',
 	];
 
 	public const LISTS = [
 		'default' => 'production',
-		'betaheze' => 'beta',
+		'mirabeta' => 'beta',
 	];
 
 	public const MEDIAWIKI_VERSIONS = [
@@ -60,7 +60,7 @@ class MirahezeFunctions {
 
 	public const SUFFIXES = [
 		'wiki' => 'miraheze.org',
-		'wikibeta' => 'betaheze.org',
+		'wikibeta' => 'mirabeta.org',
 	];
 
 	public function __construct() {
