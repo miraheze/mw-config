@@ -154,9 +154,9 @@ if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
 if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.miraheze.org';
 	$wgMFStopRedirectCookieHost = '.miraheze.org';
-} elseif ( preg_match( '/betaheze\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.betaheze.org';
-	$wgMFStopRedirectCookieHost = '.betaheze.org';
+} elseif ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
+	$wgCentralAuthCookieDomain = '.mirabeta.org';
+	$wgMFStopRedirectCookieHost = '.mirabeta.org';
 } else {
 	$wgCentralAuthCookieDomain = $wi->hostname;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
@@ -416,13 +416,13 @@ $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?miraheze\.org',
 ];
 
-if ( preg_match( '/^(.*).betaheze.org$/', $wi->hostname ) ) {
+if ( preg_match( '/^(.*).mirabeta.org$/', $wi->hostname ) ) {
 	$wgUrlShortenerAllowedDomains = [
-		'(.*\.)?betaheze\.org',
+		'(.*\.)?mirabeta\.org',
 	];
 }
 
-if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
+if ( !preg_match( '/^(.*).(miraheze|mirabeta).org$/', $wi->hostname ) ) {
 	$wgUrlShortenerAllowedDomains = array_merge(
 		$wgUrlShortenerAllowedDomains,
 		[ preg_quote( str_replace( 'https://', '', $wgServer ) ) ]
