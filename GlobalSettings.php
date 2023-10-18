@@ -12,9 +12,6 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 		'RemovePII',
 	] );
 
-	$wgCookieSameSite = 'None';
-	$wgUseSameSiteLegacyCookies = true;
-
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
