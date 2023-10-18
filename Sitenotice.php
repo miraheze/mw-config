@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 86;
+$wgMajorSiteNoticeID = 87;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 86;
  */
 
 // Global SiteNotice
-/*if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -31,7 +31,7 @@ $wgMajorSiteNoticeID = 86;
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Maintenance" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Miraheze will be doing maintenance on the servers on the 6th of July at 22:00 UTC. Some wiki's will be unavailable, whilst others will be read-only during the period of 3 hours (ends at 01:00 UTC). Less if we complete it before the 3 hour window is up. We apologize for the inconvenience caused.
+							Miraheze will be upgrading to MediaWiki 1.40 on Saturday October 21st from 22:00 PM UTC until 02:00 AM UTC. There may be some downtime for wikis so please ensure you save your edits before the maintenance window.
 						</div>
 					</div>
 				</td></tr></tbody>
@@ -39,7 +39,7 @@ $wgMajorSiteNoticeID = 86;
 		EOF;
 	}
 
-}*/
+}
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
