@@ -28,7 +28,7 @@ if ( PHP_SAPI === 'cli' ) {
  * Disabled on production hosts because it seems to be causing performance issues (how ironic)
  */
 $forceprofile = $_GET['forceprofile'] ?? 0;
-if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && (extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) {
+if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) {
 	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
 		$xhprofFlags = XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY;
 		xhprof_enable( $xhprofFlags );
