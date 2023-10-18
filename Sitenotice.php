@@ -31,7 +31,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Maintenance" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Miraheze will be upgrading to MediaWiki 1.40 on Saturday, 21th of October at 22:00 PM UTC until 02:00 AM UTC. There may be some downtime for wikis so please ensure you save your edits before the maintenance window.
+							Miraheze will be upgrading to MediaWiki 1.40 on Saturday October 21st from 22:00 PM UTC until 02:00 AM UTC. There may be some downtime for wikis so please ensure you save your edits before the maintenance window.
 						</div>
 					</div>
 				</td></tr></tbody>
