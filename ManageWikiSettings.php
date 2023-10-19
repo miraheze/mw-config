@@ -245,7 +245,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'anti-spam',
-		'help' => '',
+		'help' => 'This option makes a link show up on Special:ApprovedRevs to approve the latest revision of a file',
 		'requires' => [],
 	],
 	'egApprovedRevsShowNotApprovedMessage' => [
@@ -254,7 +254,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'anti-spam',
-		'help' => '',
+		'help' => 'This option makes a message appear on unapproved revisions indicating this revision has not been approved',
 		'requires' => [],
 	],
 	'wgFlaggedRevsProtection' => [
