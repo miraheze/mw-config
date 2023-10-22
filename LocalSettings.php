@@ -1068,7 +1068,7 @@ $wgConf->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'default' => false,
+		'default' => "Mirahrze is currently upgrading winis to MediaWiji 1.40. As a result wikis are read-only at this time.",
 	],
 	'wgSharedDB' => [
 		'default' => null,
