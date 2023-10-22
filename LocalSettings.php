@@ -2866,6 +2866,9 @@ $wgConf->settings += [
 				'request-import-dump' => true,
 				'requestwiki' => true,
 			],
+			'wiki-creator' => [
+				'createwiki' => true,
+			],
 		],
 		'+metawikibeta' => [
 			'autopatrolled' => [
