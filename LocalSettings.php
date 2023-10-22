@@ -2441,6 +2441,7 @@ $wgConf->settings += [
 		'worldtrainwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 	],
 	'wgRightsUrl' => [
+		'default' => '',
 		'connorjwatwiki' => 'https://creativecommons.org/licenses/by-sa/2.5',
 		'constantnoblewiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
