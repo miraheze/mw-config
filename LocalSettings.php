@@ -71,13 +71,13 @@ $wgConf->settings += [
 
 	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
 	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_READ_NEW.
-		'wgCommentTempTableSchemaMigrationStage' => [
+	'wgCommentTempTableSchemaMigrationStage' => [
 		'default' => MIGRATION_OLD,
-		'mirabeta' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+		'mirabeta' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
 	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
 	// and to run migrateExternallinks. After set to SCHEMA_COMPAT_READ_NEW.
-		'wgExternalLinksSchemaMigrationStage' => [
+	'wgExternalLinksSchemaMigrationStage' => [
 		'default' => MIGRATION_OLD,
 	],
 
