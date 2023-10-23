@@ -503,7 +503,7 @@ $wgConf->settings += [
 	// CheckUser
 	// New for 1.40
 	'wgCheckUserEventTablesMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		'default' => SCHEMA_COMPAT_OLD,
 	],
 	'wgCheckUserForceSummary' => [
 		'default' => true,
