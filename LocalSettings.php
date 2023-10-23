@@ -69,6 +69,18 @@ $wgConf->settings += [
 		'default' => '8',
 	],
 
+	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_READ_NEW.
+        'wgCommentTempTableSchemaMigrationStage' => [
+		'default' => MIGRATION_OLD,
+		'mirabeta' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+	],
+	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
+	// and to run migrateExternallinks. After set to SCHEMA_COMPAT_READ_NEW.
+        'wgExternalLinksSchemaMigrationStage' => [
+		'default' => MIGRATION_OLD,
+	],
+
 	// 3D
 	'wg3dProcessor' => [
 		'ext-3d' => [
@@ -5975,17 +5987,6 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
-}
-
-if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
-	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
-	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_READ_NEW.
-	$wgCommentTempTableSchemaMigrationStage = [
-		'rev_comment' => MIGRATION_OLD,
-	];
-	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
-	// and to run migrateExternallinks. After set to SCHEMA_COMPAT_READ_NEW.
-	$wgExternalLinksSchemaMigrationStage = SCHEMA_COMPAT_OLD;
 }
 
 // we set $wgInternalServer to $wgServer to get varnish cache purging working
