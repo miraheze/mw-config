@@ -3423,7 +3423,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'mwActionApi',
 		'section' => 'styling',
 		'help' => 'Which gateway to use for fetching search suggestion',
-		'requires' => [ ],
+		'requires' => [],
 	],
 	'wgCitizenSearchDescriptionSource' => [
 		'name' => 'Citizen Search Description Source',
