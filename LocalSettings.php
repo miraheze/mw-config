@@ -5958,6 +5958,7 @@ $wi::$disabledExtensions = [
 	'regexfunctions',
 	'wikiforum',
 	'graph',
+	'growthexperiments', // Temporary, T11331
 ];
 
 if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
