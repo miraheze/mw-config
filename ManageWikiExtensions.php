@@ -1435,7 +1435,11 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
 		'var' => 'wmgUseGrowthExperiments',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'visualeditor',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_recommendations.sql",
