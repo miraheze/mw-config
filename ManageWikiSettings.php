@@ -3472,15 +3472,6 @@ $wgManageWikiSettings = [
 		'help' => 'List of skin names (e.g. "minerva", "vector") where related articles will be shown in the footer.',
 		'requires' => [],
 	],
-	'wgMultiBoilerplateDiplaySpecialPage' => [
-		'name' => 'MultiBoilerplate Diplay SpecialPage',
-		'from' => 'multiboilerplate',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'if set, will add to the wiki a page named Special:Boilerplates that shows the currently configured boilerplates.',
-		'requires' => [],
-	],
 	'wgAllowUserCss' => [
 		'name' => 'Allow User Css',
 		'from' => 'mediawiki',
