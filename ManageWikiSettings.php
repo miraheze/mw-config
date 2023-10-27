@@ -1119,6 +1119,15 @@ $wgManageWikiSettings = [
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 		'requires' => [],
 	],
+	'wgPageImagesLeadSectionOnly' => [
+		'name' => 'Only choose images from section 0',
+		'from' => 'pageimages',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'seo',
+		'help' => 'Uncheck if the PageImages extension should take into account images from all sections',
+		'requires' => [],
+	],
 
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
