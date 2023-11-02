@@ -70,7 +70,8 @@ $wgConf->settings += [
 	],
 
 	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
-	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_READ_NEW.
+	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW.
+	// If confident that it worked then set SCHEMA_COMPAT_NEW.
 	'wgCommentTempTableSchemaMigrationStage' => [
 		'default' => [
 			'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
