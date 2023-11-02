@@ -76,7 +76,7 @@ $wgConf->settings += [
 			'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		],
 		'mirabeta' => [
-			'rev_comment' => SCHEMA_COMPAT_READ_NEW,
+			'rev_comment' => SCHEMA_COMPAT_NEW,
 		],
 	],
 	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
