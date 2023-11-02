@@ -79,7 +79,7 @@ $wgConf->settings += [
 	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
 	// and to run migrateExternallinks. After set to SCHEMA_COMPAT_READ_NEW.
 	'wgExternalLinksSchemaMigrationStage' => [
-		'default' => MIGRATION_OLD,
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 		'mirabeta' => SCHEMA_COMPAT_READ_NEW,
 	],
 
