@@ -567,15 +567,6 @@ $wgManageWikiSettings = [
 		'help' => 'This sets the web client to use. If you are not using Libera, select Other Server.',
 		'requires' => [],
 	],
-	'wgWikiForumAllowAnonymous' => [
-		'name' => 'WikiForum Allow Anonymous',
-		'from' => 'wikiforum',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'discussion',
-		'help' => 'Allow Anonymous (users who are not logged in) to use WikiForum',
-		'requires' => [],
-	],
 
 	// Editing
 	'wmgWikiLicense' => [

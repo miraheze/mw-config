@@ -3544,41 +3544,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'wikiforum' => [
-		'name' => 'WikiForum',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
-		'var' => 'wmgUseWikiForum',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'sql' => [
-				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
-			],
-			'permissions' => [
-				'bureaucrat' => [
-					'addgroups' => [
-						'forumadmin',
-					],
-					'removegroups' => [
-						'forumadmin',
-					],
-				],
-				'forumadmin' => [
-					'permissions' => [
-						'wikiforum-admin',
-						'wikiforum-moderator',
-					],
-				],
-				'sysop' => [
-					'permissions' => [
-						'wikiforum-admin',
-						'wikiforum-moderator',
-					],
-				],
-			],
-		],
-		'section' => 'other',
-	],
 	'wikilove' => [
 		'name' => 'WikiLove',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiLove',
