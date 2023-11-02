@@ -47,6 +47,10 @@ wfLoadExtensions( [
 	'cldr',
 ] );
 
+if ( version_compare( MW_VERSION, '1.41', '>=' ) ) {
+	wfLoadExtension( 'ParserMigration' );
+}
+
 // Renameuser is bundled into core from 1.40+
 if ( version_compare( MW_VERSION, '1.40', '<' ) ) {
 	wfLoadExtension( 'Renameuser' );
