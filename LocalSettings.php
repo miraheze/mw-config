@@ -5964,6 +5964,10 @@ if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
 	array_push( $wi::$disabledExtensions, 'mixednamespacesearchsuggestions' );
 }
 
+if ( version_compare( MW_VERSION, '1.41', '>=' ) ) {
+	array_push( $wi::$disabledExtensions, 'mirage' );
+}
+
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
