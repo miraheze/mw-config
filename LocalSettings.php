@@ -28,9 +28,9 @@ if ( PHP_SAPI === 'cli' ) {
  * Disabled on production hosts because it seems to be causing performance issues (how ironic)
  */
 $forceprofile = $_GET['forceprofile'] ?? 0;
-if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
+if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
 	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
-		$xhprofFlags = XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY;
+		$xhprofFlags =  XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 		xhprof_enable( $xhprofFlags );
 	} else {
 		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
@@ -44,7 +44,22 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && ( extension_loaded( 'tidewa
 		'output' => 'text',
 	];
 
+	unset( $xhprofFlags );
+
 	$wgHTTPTimeout = 60;
+} elseif ( PHP_SAPI === 'cli' ) {
+	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
+		$xhprofFlags =  XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+	} else {
+		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
+	}
+
+	$wgProfiler = [
+		'class' => ProfilerXhprof::class,
+		'flags' => $xhprofFlags,
+		'output' => 'text',
+	];
+	unset( $xhprofFlags );
 }
 
 // Show custom database maintenance error page on these clusters.
