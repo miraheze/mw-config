@@ -74,7 +74,7 @@ $wgConf->settings += [
 	// If confident that it worked then set SCHEMA_COMPAT_NEW.
 	'wgCommentTempTableSchemaMigrationStage' => [
 		'default' => [
-			'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+			'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 		'mirabeta' => [
 			'rev_comment' => SCHEMA_COMPAT_NEW,
