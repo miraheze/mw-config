@@ -442,15 +442,6 @@ $wgConf->settings += [
 		'default' => 'centralauth_',
 		'mirabeta' => 'betacentralauth_',
 	],
-	'wgCentralAuthCreateOnView' => [
-		'default' => true,
-		'cvtwiki' => false,
-		'cwarswiki' => false,
-		'minecraftjapanwiki' => false,
-		'nenawikiwiki' => false,
-		'staffwiki' => false,
-		'stewardswiki' => false
-	],
 	'wgCentralAuthDatabase' => [
 		'default' => 'mhglobal',
 		'mirabeta' => 'testglobal',
