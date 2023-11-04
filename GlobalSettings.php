@@ -62,6 +62,8 @@ if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
+	$wgUseRestbaseVRS = false;
+	$wgVisualEditorDefaultParsoidClient = 'direct';
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
@@ -73,10 +75,6 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
-}
-
-if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
-	$wgVisualEditorParsoidAutoConfig = false;
 }
 
 $wgVirtualRestConfig = [
