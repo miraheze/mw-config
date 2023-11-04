@@ -5024,6 +5024,9 @@ $wgConf->settings += [
 	'wgTranslateTranslationServices' => [
 		'default' => [],
 	],
+	'wgTranslateTranslationDefaultService' => [
+		'default' => false,
+	],
 
 	// Tweeki
 	'wgTweekiSkinUseBootstrap4' => [
