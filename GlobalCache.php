@@ -81,7 +81,7 @@ $wgParsoidCacheConfig = [
 	'StashType' => 'db-replicated',
 	'StashDuration' => 86400 * 10,
 	'CacheThresholdTime' => 0.0,
-	'WarmParsoidParserCache' => true,
+	'WarmParsoidParserCache' => false,
 ];
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
