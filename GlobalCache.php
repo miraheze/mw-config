@@ -82,6 +82,7 @@ $disableWarmupArray = [
 	'allthetropeswiki',
 	'altversewiki',
 	'bluepageswiki',
+	'newusopediawiki',
 ];
 $disableWarmup = in_array( $wgDBname, $disableWarmupArray );
 $wgParsoidCacheConfig = [
