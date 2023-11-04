@@ -417,6 +417,7 @@ if ( preg_match( '/^(.*).mirabeta.org$/', $wi->hostname ) ) {
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?mirabeta\.org',
 	];
+	$wgParsoidEnableQueryString = true;
 }
 
 if ( !preg_match( '/^(.*).(miraheze|mirabeta).org$/', $wi->hostname ) ) {
