@@ -80,6 +80,7 @@ $wgParserCacheType = 'mysql-multiwrite';
 
 $disableWarmupArray = [
 	'allthetropeswiki',
+	'altversewiki',
 	'bluepageswiki',
 ];
 $disableWarmup = in_array( $wgDBname, $disableWarmupArray );
