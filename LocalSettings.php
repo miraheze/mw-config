@@ -47,7 +47,7 @@ if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_
 	unset( $xhprofFlags );
 
 	$wgHTTPTimeout = 60;
-} elseif ( PHP_SAPI === 'cli' &&  ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
+} elseif ( PHP_SAPI === 'cli' && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
 	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
 		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 	} else {
