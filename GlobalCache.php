@@ -77,6 +77,12 @@ $wgMainCacheType = 'memcached-mem-2';
 $wgMessageCacheType = 'memcached-mem-2';
 
 $wgParserCacheType = 'mysql-multiwrite';
+
+$disableWarmupArray = [
+	'allthetropeswiki',
+	'bluepageswiki',
+];
+$disableWarmup = in_array( $wgDBname, $disableWarmupArray );
 $wgParsoidCacheConfig = [
 	'StashType' => 'db-replicated',
 	'StashDuration' => 86400 * 10,
