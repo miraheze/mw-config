@@ -68,7 +68,6 @@ $wgObjectCaches['mysql-multiwrite'] = [
 
 $wgObjectCaches['db-mainstash'] = [
 	'class' => 'SqlBagOStuff',
-	'cluster' => 'extension2',
 	'server' => [
 		'type'      => 'mysql',
 		'host'      => $beta ? 'db121.miraheze.org' : 'db131.miraheze.org',
