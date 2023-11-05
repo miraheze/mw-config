@@ -86,12 +86,12 @@ $disableWarmupArray = [
 	'xedwiki',
 ];
 // $disableWarmup = in_array( $wgDBname, $disableWarmupArray );
-$disableWarmup = ( !$beta || !preg_match( '/^([0-9]|a)/', $wgDBname ) );
+$enableWarmup = ( $beta || preg_match( '/^([0-9]|a)/', $wgDBname ) );
 $wgParsoidCacheConfig = [
 	'StashType' => 'db-replicated',
 	'StashDuration' => 86400 * 10,
 	'CacheThresholdTime' => 0.0,
-	'WarmParsoidParserCache' => $disableWarmup ? false : true,
+	'WarmParsoidParserCache' => $enableWarmup ? true : false,
 ];
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
