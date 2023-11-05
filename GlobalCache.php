@@ -109,14 +109,14 @@ $disableWarmupArray = [
 	'xedwiki',
 ];
 // $disableWarmup = in_array( $wgDBname, $disableWarmupArray );
-$disableWarmup = true;
+$enableWarmup = ( $beta || preg_match( '/^([0-9]|a)/', $wgDBname ) );
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
 	'StashType' => null,
 	// 24h in production, VE will fail to save after this time.
 	'StashDuration' => 24 * 60 * 60,
 	'CacheThresholdTime' => 0.0,
-	'WarmParsoidParserCache' => $disableWarmup ? false : true,
+	'WarmParsoidParserCache' => $enableWarmup ? true : false,
 ];
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
