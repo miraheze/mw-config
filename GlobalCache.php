@@ -150,7 +150,6 @@ $wgJobTypeConf['default'] = [
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 	],
-	'claimTTL' => 3600,
 	'daemonized' => true,
 ];
 
