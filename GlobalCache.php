@@ -66,10 +66,33 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
+$wgObjectCaches['db-mainstash'] = [
+	'class' => 'SqlBagOStuff',
+	'server' => [
+		'type'      => 'mysql',
+		'host'      => $beta ? 'db121.miraheze.org' : 'db131.miraheze.org',
+		'dbname'    => $beta ? 'testmainstash' : 'mainstash',
+		'user'      => $wgDBuser,
+		'password'  => $wgDBpassword,
+		'ssl'       => true,
+		'flags'     => 0,
+		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+	],
+	'dbDomain' => 'mainstash',
+	'globalKeyLbDomain' => 'mainstash',
+	'tableName' => 'objectstash',
+	'multiPrimaryMode' => false,
+	'purgePeriod' => 100,
+	'purgeLimit' => 1000,
+	'reportDupes' => false
+];
+
+$wgMainStash = 'db-mainstash';
+
 $wgSessionCacheType = 'memcached-mem-1';
 
 // Same as $wgMainStash
-$wgMWOAuthSessionCacheType = 'db-replicated';
+$wgMWOAuthSessionCacheType = 'db-mainstash';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
@@ -85,11 +108,13 @@ $disableWarmupArray = [
 	'newusopediawiki',
 	'xedwiki',
 ];
-//$disableWarmup = in_array( $wgDBname, $disableWarmupArray );
+// $disableWarmup = in_array( $wgDBname, $disableWarmupArray );
 $disableWarmup = true;
 $wgParsoidCacheConfig = [
-	'StashType' => 'db-replicated',
-	'StashDuration' => 86400 * 10,
+	// Defaults to MainStash
+	'StashType' => null,
+	// 24h in production, VE will fail to save after this time.
+	'StashDuration' => 24 * 60 * 60,
 	'CacheThresholdTime' => 0.0,
 	'WarmParsoidParserCache' => $disableWarmup ? false : true,
 ];
