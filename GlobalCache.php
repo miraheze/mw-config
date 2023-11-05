@@ -109,7 +109,7 @@ $disableWarmupArray = [
 	'newusopediawiki',
 	'xedwiki',
 ];
-//$disableWarmup = in_array( $wgDBname, $disableWarmupArray );
+// $disableWarmup = in_array( $wgDBname, $disableWarmupArray );
 $disableWarmup = true;
 $wgParsoidCacheConfig = [
 	'StashType' => 'db-replicated',
