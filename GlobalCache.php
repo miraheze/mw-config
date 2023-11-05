@@ -164,7 +164,6 @@ if ( $beta ) {
 	$wgMessageCacheType = 'memcached-mem-test';
 
 	$wgSessionCacheType = 'memcached-mem-test';
-	$wgMWOAuthSessionCacheType = 'memcached-mem-test';
 }
 
 $wgJobTypeConf['default'] = [
