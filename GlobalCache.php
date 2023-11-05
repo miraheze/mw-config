@@ -109,7 +109,7 @@ $disableWarmupArray = [
 	'xedwiki',
 ];
 // $disableWarmup = in_array( $wgDBname, $disableWarmupArray );
-$enableWarmup = ( $beta || preg_match( '/^([0-9]|a|b)/', $wgDBname ) );
+$enableWarmup = ( $beta || preg_match( '/^([0-9]|a|b|c)/', $wgDBname ) );
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
 	'StashType' => null,
