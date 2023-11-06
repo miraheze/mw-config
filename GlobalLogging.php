@@ -76,8 +76,6 @@ $wmgMonologHandlers['what-debug'] = [
 // Post construction calls to make for new Logger instances
 $wmgMonologLoggerCalls = [
 	'setTimezone' => [ new DateTimeZone( 'UTC' ) ],
-	// https://phabricator.wikimedia.org/T116550 - Requires Monolog > 1.17.2
-	'useMicrosecondTimestamps' => [ false ],
 ];
 
 $wmgMonologConfig = [
