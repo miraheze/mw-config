@@ -101,7 +101,7 @@ $wgMessageCacheType = 'memcached-mem-2';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
-$enableWarmup = ( $beta || preg_match( '/^[0-9a-r]/', $wgDBname ) );
+$enableWarmup = ( $beta || preg_match( '/^[0-9a-r]/', $wgDBname ) ) && $wgDBname !== 'commonswiki';
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
 	'StashType' => null,
