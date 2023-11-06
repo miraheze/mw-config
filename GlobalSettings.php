@@ -699,6 +699,8 @@ $wgPoolCounterConf = [
 				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
+			'connectTimeout' => 2,
+			'readTimeout' => 2,
 			'password' => $wmgRedisPassword,
 			'compression' => 'gzip',
 		],
