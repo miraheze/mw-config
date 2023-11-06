@@ -614,10 +614,10 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'maxqueue' => 100,
 		'fastStale' => true,
-				'servers' => [
+		'servers' => [
 			'[2a10:6740::6:306]:6379'
 		],
-				'redisConfig' => [
+		'redisConfig' => [
 			'password' => $wmgRedisPassword,
 			'compression' => 'gzip',
 		],
@@ -627,10 +627,10 @@ $wgPoolCounterConf = [
 		'timeout' => 8,
 		'workers' => 2,
 		'maxqueue' => 100,
-				'servers' => [
+		'servers' => [
 			'[2a10:6740::6:306]:6379'
 		],
-				'redisConfig' => [
+		'redisConfig' => [
 			'password' => $wmgRedisPassword,
 			'compression' => 'gzip',
 		],
@@ -641,10 +641,10 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'slots' => 8,
 		'maxqueue' => 100,
-				'servers' => [
+		'servers' => [
 			'[2a10:6740::6:306]:6379'
 		],
-				'redisConfig' => [
+		'redisConfig' => [
 			'password' => $wmgRedisPassword,
 			'compression' => 'gzip',
 		],
@@ -654,10 +654,10 @@ $wgPoolCounterConf = [
 		'timeout' => 15,
 		'workers' => 2,
 		'maxqueue' => 25,
-				'servers' => [
+		'servers' => [
 			'[2a10:6740::6:306]:6379'
 		],
-				'redisConfig' => [
+		'redisConfig' => [
 			'password' => $wmgRedisPassword,
 			'compression' => 'gzip',
 		],
@@ -668,10 +668,10 @@ $wgPoolCounterConf = [
 		'workers' => 1,
 		'slots' => 16,
 		'maxqueue' => 20,
-				'servers' => [
+		'servers' => [
 			'[2a10:6740::6:306]:6379'
 		],
-				'redisConfig' => [
+		'redisConfig' => [
 			'password' => $wmgRedisPassword,
 			'compression' => 'gzip',
 		],
@@ -682,10 +682,10 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'maxqueue' => 5,
 		'slots' => 50,
-				'servers' => [
+		'servers' => [
 			'[2a10:6740::6:306]:6379'
 		],
-				'redisConfig' => [
+		'redisConfig' => [
 			'password' => $wmgRedisPassword,
 			'compression' => 'gzip',
 		],
