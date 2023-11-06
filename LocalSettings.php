@@ -3906,7 +3906,6 @@ $wgConf->settings += [
 	'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
 		'default' => 1.0,
 		'commonswiki' => 0.0,
-		'wikidatawiki' => 0.0,
 	],
 
 	// PdfHandler
