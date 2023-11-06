@@ -607,6 +607,7 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'nstab-'
 ];
 
+$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 $wgPoolCounterConf = [
 	'ArticleView' => [
 		'class' => 'PoolCounterRedis',
@@ -615,7 +616,9 @@ $wgPoolCounterConf = [
 		'maxqueue' => 100,
 		'fastStale' => true,
 		'servers' => [
-			'[2a10:6740::6:306]:6379'
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
 			'password' => $wmgRedisPassword,
@@ -628,7 +631,9 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'maxqueue' => 100,
 		'servers' => [
-			'[2a10:6740::6:306]:6379'
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
 			'password' => $wmgRedisPassword,
@@ -642,7 +647,9 @@ $wgPoolCounterConf = [
 		'slots' => 8,
 		'maxqueue' => 100,
 		'servers' => [
-			'[2a10:6740::6:306]:6379'
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
 			'password' => $wmgRedisPassword,
@@ -655,7 +662,9 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'maxqueue' => 25,
 		'servers' => [
-			'[2a10:6740::6:306]:6379'
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
 			'password' => $wmgRedisPassword,
@@ -669,7 +678,9 @@ $wgPoolCounterConf = [
 		'slots' => 16,
 		'maxqueue' => 20,
 		'servers' => [
-			'[2a10:6740::6:306]:6379'
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
 			'password' => $wmgRedisPassword,
@@ -683,7 +694,9 @@ $wgPoolCounterConf = [
 		'maxqueue' => 5,
 		'slots' => 50,
 		'servers' => [
-			'[2a10:6740::6:306]:6379'
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
 			'password' => $wmgRedisPassword,
