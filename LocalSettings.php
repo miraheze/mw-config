@@ -5894,6 +5894,7 @@ $wgConf->settings += [
 			'PageTriage' => false,
 			'ParserCache' => false,
 			'Parsoid' => 'warning',
+			'poolcounter' => 'debug',
 			'preferences' => false,
 			'purge' => false,
 			'query' => false,

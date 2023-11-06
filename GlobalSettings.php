@@ -606,3 +606,101 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'accesskey-',
 	'nstab-'
 ];
+
+$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$wgPoolCounterConf = [
+	'ArticleView' => [
+		'class' => 'PoolCounterRedis',
+		'timeout' => 15,
+		'workers' => 2,
+		'maxqueue' => 100,
+		'fastStale' => true,
+		'servers' => [
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
+		],
+		'redisConfig' => [
+			'password' => $wmgRedisPassword,
+			'compression' => 'gzip',
+		],
+	],
+	'FileRender' => [
+		'class' => 'PoolCounterRedis',
+		'timeout' => 8,
+		'workers' => 2,
+		'maxqueue' => 100,
+		'servers' => [
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
+		],
+		'redisConfig' => [
+			'password' => $wmgRedisPassword,
+			'compression' => 'gzip',
+		],
+	],
+	'FileRenderExpensive' => [
+		'class' => 'PoolCounterRedis',
+		'timeout' => 8,
+		'workers' => 2,
+		'slots' => 8,
+		'maxqueue' => 100,
+		'servers' => [
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
+		],
+		'redisConfig' => [
+			'password' => $wmgRedisPassword,
+			'compression' => 'gzip',
+		],
+	],
+	'SpecialContributions' => [
+		'class' => 'PoolCounterRedis',
+		'timeout' => 15,
+		'workers' => 2,
+		'maxqueue' => 25,
+		'servers' => [
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
+		],
+		'redisConfig' => [
+			'password' => $wmgRedisPassword,
+			'compression' => 'gzip',
+		],
+	],
+	'TranslateFetchTranslators' => [
+		'class' => 'PoolCounterRedis',
+		'timeout' => 8,
+		'workers' => 1,
+		'slots' => 16,
+		'maxqueue' => 20,
+		'servers' => [
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
+		],
+		'redisConfig' => [
+			'password' => $wmgRedisPassword,
+			'compression' => 'gzip',
+		],
+	],
+	'WikiLambdaFunctionCall' => [
+		'class' => 'PoolCounterRedis',
+		'timeout' => 1,
+		'workers' => 2,
+		'maxqueue' => 5,
+		'slots' => 50,
+		'servers' => [
+			$beta ?
+				'[2a10:6740::6:406]:6379' :
+				'[2a10:6740::6:306]:6379'
+		],
+		'redisConfig' => [
+			'password' => $wmgRedisPassword,
+			'compression' => 'gzip',
+		],
+	],
+];
