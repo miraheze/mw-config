@@ -5917,6 +5917,7 @@ $wgConf->settings += [
 			'SpamRegex' => false,
 			'StopForumSpam' => false,
 			'SQLBagOStuff' => false,
+			'SwiftBackend' => 'info'
 			'squid' => false,
 			'StashEdit' => false,
 			'T263581' => false,
