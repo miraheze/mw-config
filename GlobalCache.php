@@ -108,7 +108,7 @@ $wgParsoidCacheConfig = [
 	// 24h in production, VE will fail to save after this time.
 	'StashDuration' => 24 * 60 * 60,
 	'CacheThresholdTime' => 0.0,
-	'WarmParsoidParserCache' => $enableWarmup,
+	'WarmParsoidParserCache' => false,
 ];
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
