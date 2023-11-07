@@ -5968,11 +5968,16 @@ if ( wfHostname() === 'test131' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
-	'editnotify', // T10885
-	'hitcounters', // T10883
-	'regexfunctions', // T10882
-	'wikiforum', // T10871
-	'graph', // T10756
+	// T10885
+	'editnotify',
+	// T10883
+	'hitcounters',
+	// T10882
+	'regexfunctions',
+	// T10871
+	'wikiforum',
+	// T10756
+	'graph',
 ];
 
 if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
