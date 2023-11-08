@@ -621,8 +621,9 @@ $wgPoolCounterConf = [
 				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
+			'connectTimeout' => 2,
+			'readTimeout' => 2,
 			'password' => $wmgRedisPassword,
-			'compression' => 'gzip',
 		],
 	],
 	'FileRender' => [
@@ -636,8 +637,9 @@ $wgPoolCounterConf = [
 				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
+			'connectTimeout' => 2,
+			'readTimeout' => 2,
 			'password' => $wmgRedisPassword,
-			'compression' => 'gzip',
 		],
 	],
 	'FileRenderExpensive' => [
@@ -652,8 +654,9 @@ $wgPoolCounterConf = [
 				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
+			'connectTimeout' => 2,
+			'readTimeout' => 2,
 			'password' => $wmgRedisPassword,
-			'compression' => 'gzip',
 		],
 	],
 	'SpecialContributions' => [
@@ -667,8 +670,9 @@ $wgPoolCounterConf = [
 				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
+			'connectTimeout' => 2,
+			'readTimeout' => 2,
 			'password' => $wmgRedisPassword,
-			'compression' => 'gzip',
 		],
 	],
 	'TranslateFetchTranslators' => [
@@ -683,8 +687,9 @@ $wgPoolCounterConf = [
 				'[2a10:6740::6:306]:6379'
 		],
 		'redisConfig' => [
+			'connectTimeout' => 2,
+			'readTimeout' => 2,
 			'password' => $wmgRedisPassword,
-			'compression' => 'gzip',
 		],
 	],
 	'WikiLambdaFunctionCall' => [
@@ -702,7 +707,6 @@ $wgPoolCounterConf = [
 			'connectTimeout' => 2,
 			'readTimeout' => 2,
 			'password' => $wmgRedisPassword,
-			'compression' => 'gzip',
 		],
 	],
 ];
