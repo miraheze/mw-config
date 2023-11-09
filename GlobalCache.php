@@ -162,8 +162,8 @@ $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
 	'redisServer' => $redisServerIP,
 	'redisConfig' => [
-		'connectTimeout' => 5,
-		'readTimeout' => 5,
+		'connectTimeout' => 2,
+		'readTimeout' => 10,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 	],
