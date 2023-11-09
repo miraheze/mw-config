@@ -610,70 +610,30 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 $wgPoolCounterConf = [
 	'ArticleView' => [
-		'class' => 'PoolCounterRedis',
+		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 2,
 		'maxqueue' => 100,
 		'fastStale' => true,
-		'servers' => [
-			$beta ?
-				'[2a10:6740::6:406]:6379' :
-				'[2a10:6740::6:306]:6379'
-		],
-		'redisConfig' => [
-			'connectTimeout' => 2,
-			'readTimeout' => 2,
-			'password' => $wmgRedisPassword,
-		],
 	],
 	'FileRender' => [
-		'class' => 'PoolCounterRedis',
+		'class' => 'PoolCounter_Client',
 		'timeout' => 8,
 		'workers' => 2,
 		'maxqueue' => 100,
-		'servers' => [
-			$beta ?
-				'[2a10:6740::6:406]:6379' :
-				'[2a10:6740::6:306]:6379'
-		],
-		'redisConfig' => [
-			'connectTimeout' => 2,
-			'readTimeout' => 2,
-			'password' => $wmgRedisPassword,
-		],
 	],
 	'FileRenderExpensive' => [
-		'class' => 'PoolCounterRedis',
+		'class' => 'PoolCounter_Client',
 		'timeout' => 8,
 		'workers' => 2,
 		'slots' => 8,
 		'maxqueue' => 100,
-		'servers' => [
-			$beta ?
-				'[2a10:6740::6:406]:6379' :
-				'[2a10:6740::6:306]:6379'
-		],
-		'redisConfig' => [
-			'connectTimeout' => 2,
-			'readTimeout' => 2,
-			'password' => $wmgRedisPassword,
-		],
 	],
 	'SpecialContributions' => [
-		'class' => 'PoolCounterRedis',
+		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 2,
 		'maxqueue' => 25,
-		'servers' => [
-			$beta ?
-				'[2a10:6740::6:406]:6379' :
-				'[2a10:6740::6:306]:6379'
-		],
-		'redisConfig' => [
-			'connectTimeout' => 2,
-			'readTimeout' => 2,
-			'password' => $wmgRedisPassword,
-		],
 	],
 	'TranslateFetchTranslators' => [
 		'class' => 'PoolCounterRedis',
@@ -681,32 +641,18 @@ $wgPoolCounterConf = [
 		'workers' => 1,
 		'slots' => 16,
 		'maxqueue' => 20,
-		'servers' => [
-			$beta ?
-				'[2a10:6740::6:406]:6379' :
-				'[2a10:6740::6:306]:6379'
-		],
-		'redisConfig' => [
-			'connectTimeout' => 2,
-			'readTimeout' => 2,
-			'password' => $wmgRedisPassword,
-		],
 	],
 	'WikiLambdaFunctionCall' => [
-		'class' => 'PoolCounterRedis',
+		'class' => 'PoolCounter_Client',
 		'timeout' => 1,
 		'workers' => 2,
 		'maxqueue' => 5,
 		'slots' => 50,
-		'servers' => [
-			$beta ?
-				'[2a10:6740::6:406]:6379' :
-				'[2a10:6740::6:306]:6379'
-		],
-		'redisConfig' => [
-			'connectTimeout' => 2,
-			'readTimeout' => 2,
-			'password' => $wmgRedisPassword,
-		],
 	],
+];
+
+$wgPoolCountClientConf = [
+	'servers' => [ $beta ? '2a10:6740::6:406' : '2a10:6740::6:306' ],
+	'timeout' => 0.5,
+	'connect_timeout' => 0.01
 ];
