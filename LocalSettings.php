@@ -3695,14 +3695,6 @@ $wgConf->settings += [
 	],
 
 	// Math
-	'wgMathoidCli' => [
-		'default' => [
-			'/usr/bin/node',
-			'/srv/mathoid/src/cli.js',
-			'-c',
-			'/etc/mathoid/config.yaml'
-		]
-	],
 	'wgMathValidModes' => [
 		'default' => [
 			'mathml'
