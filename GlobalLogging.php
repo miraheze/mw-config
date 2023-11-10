@@ -246,9 +246,6 @@ if ( $wmgLogToDisk ) {
 }
 
 if ( $wgCommandLineMode ) {
-	if ( $_SERVER['SCRIPT_NAME'] === '/srv/mediawiki/w/maintenance/runJobs.php' ) {
-		error_reporting( E_ERROR );
-	}
 	ini_set( 'display_startup_errors', 1 );
 	ini_set( 'display_errors', 1 );
 
