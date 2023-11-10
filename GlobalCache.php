@@ -16,8 +16,8 @@ $wgObjectCaches['memcached-mem-1'] = [
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	// 500ms, in microseconds
-	'timeout'              => 0.25 * 1e6,
+	// 1000ms, in microseconds
+	'timeout'              => 1.0 * 1e6,
 ];
 
 // mem131
@@ -32,7 +32,7 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	// 500ms, in microseconds
-	'timeout'              => 0.25 * 1e6,
+	'timeout'              => 1.0 * 1e6,
 ];
 
 $wgObjectCaches['mysql-multiwrite'] = [
@@ -147,7 +147,7 @@ if ( $beta ) {
 		'retry_timeout'        => -1,
 		'loggroup'             => 'memcached',
 		// 500ms, in microseconds
-		'timeout'              => 0.5 * 1e6,
+		'timeout'              => 1.0 * 1e6,
 	];
 
 	$redisServerIP = '[2a10:6740::6:406]:6379';
