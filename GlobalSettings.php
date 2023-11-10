@@ -636,7 +636,7 @@ $wgPoolCounterConf = [
 		'maxqueue' => 25,
 	],
 	'TranslateFetchTranslators' => [
-		'class' => 'PoolCounterRedis',
+		'class' => 'PoolCounter_Client',
 		'timeout' => 8,
 		'workers' => 1,
 		'slots' => 16,
