@@ -163,7 +163,7 @@ $wgJobTypeConf['default'] = [
 	'redisServer' => $redisServerIP,
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'readTimeout' => 15,
+		'readTimeout' => 4,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 	],
