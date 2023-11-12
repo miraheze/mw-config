@@ -642,13 +642,6 @@ $wgPoolCounterConf = [
 		'slots' => 16,
 		'maxqueue' => 20,
 	],
-	'WikiLambdaFunctionCall' => [
-		'class' => 'PoolCounter_Client',
-		'timeout' => 1,
-		'workers' => 2,
-		'maxqueue' => 5,
-		'slots' => 50,
-	],
 ];
 
 $wgPoolCountClientConf = [
