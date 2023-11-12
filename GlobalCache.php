@@ -101,14 +101,14 @@ $wgMessageCacheType = 'memcached-mem-1';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
-$enableWarmup = ( $beta || preg_match( '/^[0-9a-r]/', $wgDBname ) ) && $wgDBname !== 'commonswiki';
+$enableWarmup = ( $beta || preg_match( '/^[0-9a-a]/', $wgDBname ) ) && $wgDBname !== 'commonswiki';
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
 	'StashType' => null,
 	// 24h in production, VE will fail to save after this time.
 	'StashDuration' => 24 * 60 * 60,
 	'CacheThresholdTime' => 0.0,
-	'WarmParsoidParserCache' => false,
+	'WarmParsoidParserCache' => $enableWarmup,
 ];
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
