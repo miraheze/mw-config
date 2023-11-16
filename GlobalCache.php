@@ -101,6 +101,8 @@ $wgMessageCacheType = 'memcached-mem-1';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
+$wgChronologyProtectorStash = 'memcached-mem-1';
+
 $enableWarmup = ( $beta || preg_match( '/^[0-9a-z]/', $wgDBname ) ) && $wgDBname !== 'commonswiki';
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
@@ -161,6 +163,8 @@ if ( $beta ) {
 	$wgMessageCacheType = 'memcached-mem-test';
 
 	$wgSessionCacheType = 'memcached-mem-test';
+
+	$wgChronologyProtectorStash = 'memcached-mem-test';
 }
 
 $wgJobTypeConf['default'] = [
