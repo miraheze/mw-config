@@ -3423,6 +3423,9 @@ $wgConf->settings += [
 			'legacy'
 		],
 	],
+	'wgMaxExecutionTimeForExpensiveQueries' => [
+		'default' => 30000,
+	],
 	'wgTrustedMediaFormats' => [
 		'default' => [
 			MEDIATYPE_BITMAP,
