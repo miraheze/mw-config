@@ -132,6 +132,7 @@ if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBnam
 	$wgEnableSidebarCache = true;
 }
 
+$wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 if ( $beta ) {
