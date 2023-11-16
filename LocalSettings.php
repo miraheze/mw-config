@@ -5143,6 +5143,9 @@ $wgConf->settings += [
 			'[2607:5300:205:200::1c93]:81',
 		],
 	],
+	'wgCdnMaxAge' => [
+		'default' => 432000,
+	],
 
 	// Vector
 	'wgVectorResponsive' => [
