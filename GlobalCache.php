@@ -101,6 +101,8 @@ $wgMessageCacheType = 'memcached-mem-1';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
+$wgChronologyProtectorStash = 'memcached-mem-1';
+
 $enableWarmup = ( $beta || preg_match( '/^[0-9a-z]/', $wgDBname ) ) && $wgDBname !== 'commonswiki';
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
@@ -127,7 +129,7 @@ $wgObjectCacheSessionExpiry = 86400;
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
 
-$wgSearchSuggestCacheExpiry =  10800;
+$wgSearchSuggestCacheExpiry = 10800;
 
 // Disable sidebar cache for select wikis as a solution to T8732, T9699, and T9884
 if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBname !== 'nonciclopediawiki' ) {
@@ -161,6 +163,8 @@ if ( $beta ) {
 	$wgMessageCacheType = 'memcached-mem-test';
 
 	$wgSessionCacheType = 'memcached-mem-test';
+
+	$wgChronologyProtectorStash = 'memcached-mem-test';
 }
 
 $wgJobTypeConf['default'] = [
