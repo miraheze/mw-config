@@ -135,6 +135,8 @@ if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBnam
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
+$wgResourceLoaderUseObjectCacheForDeps = true;
+
 if ( $beta ) {
 	// test131 (only use on test131. No prod traffic should use this).
 	$wgObjectCaches['memcached-mem-test'] = [
