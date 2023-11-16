@@ -651,3 +651,5 @@ $wgPoolCountClientConf = [
 
 // Mathoid
 $wgMathMathMLUrl = 'http://[2a10:6740::6:504]:10044/';
+
+$wgPropagateErrors = false;
