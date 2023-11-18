@@ -5147,9 +5147,9 @@ $wgConf->settings += [
 	'wgCdnServersNoPurge' => [
 		'default' => [
 			// bast121
-			'[2a10:6740::6:301]'
+			'[2a10:6740::6:301]',
 			// bast141
-			'[2a10:6740::6:509]'
+			'[2a10:6740::6:509]',
 		],
 	],
 	'wgCdnMaxAge' => [
