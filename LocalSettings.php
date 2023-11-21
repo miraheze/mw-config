@@ -5977,7 +5977,6 @@ require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
 	// T10885
 	'editnotify',
-	'lingo',
 	// T10882
 	'regexfunctions',
 	// T10871
