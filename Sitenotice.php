@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 87;
+$wgMajorSiteNoticeID = 88;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 87;
  */
 
 // Global SiteNotice
-/*if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -31,15 +31,14 @@ $wgMajorSiteNoticeID = 87;
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Maintenance" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							Miraheze will be upgrading to MediaWiki 1.40 on Saturday October 21st from 22:00 PM UTC until 02:00 AM UTC. There may be some downtime for wikis so please ensure you save your edits before the maintenance window.
+							File uploads are currently unavailable as a result of ongoing issues with our file storage server. <b><i>No files have been lost.</i></b> We are working to restore services now, and hope to have everything back up soon.
 						</div>
 					</div>
 				</td></tr></tbody>
 			</table>
 		EOF;
 	}
-
-}*/
+}
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
