@@ -282,7 +282,7 @@ switch ( $wi->dbname ) {
 			],
 			'requestbetaaccount' => [
 				'RecipientUser' => 'Miraheze Operations',
-				'SenderName' => 'Betaheze account creation request (via Meta)',
+				'SenderName' => 'Mirabeta account creation request (via Meta)',
 				'RequireDetails' => true,
 				'MustBeLoggedIn' => true,
 				'AdditionalFields' => [
@@ -452,6 +452,11 @@ switch ( $wi->dbname ) {
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
+
+		break;
+	case 'whentheycrywiki':
+		$wgGalleryOptions['imageWidth'] = 200;
+		$wgGalleryOptions['imageHeight'] = 200;
 
 		break;
 	case 'wonderingstarswiki':

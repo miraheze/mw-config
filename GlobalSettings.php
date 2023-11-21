@@ -11,6 +11,15 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 		'GlobalBlocking',
 		'RemovePII',
 	] );
+
+	// Only allow users with global accounts to login
+	$wgCentralAuthStrict = true;
+
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	}
+
+	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
@@ -53,6 +62,8 @@ if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
+	$wgUseRestbaseVRS = false;
+	$wgVisualEditorDefaultParsoidClient = 'direct';
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
@@ -64,10 +75,6 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
-}
-
-if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
-	$wgVisualEditorParsoidAutoConfig = false;
 }
 
 $wgVirtualRestConfig = [
@@ -132,8 +139,7 @@ if ( !$cwPrivate ) {
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 }
 
-// Experimental Wikis
-if ( $cwExperimental ) {
+if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
 	$wgParserEnableLegacyMediaDOM = false;
 } else {
 	$wgParserEnableLegacyMediaDOM = true;
@@ -143,9 +149,9 @@ if ( $cwExperimental ) {
 if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.miraheze.org';
 	$wgMFStopRedirectCookieHost = '.miraheze.org';
-} elseif ( preg_match( '/betaheze\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.betaheze.org';
-	$wgMFStopRedirectCookieHost = '.betaheze.org';
+} elseif ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
+	$wgCentralAuthCookieDomain = '.mirabeta.org';
+	$wgMFStopRedirectCookieHost = '.mirabeta.org';
 } else {
 	$wgCentralAuthCookieDomain = $wi->hostname;
 	$wgMFStopRedirectCookieHost = $wi->hostname;
@@ -405,13 +411,14 @@ $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?miraheze\.org',
 ];
 
-if ( preg_match( '/^(.*).betaheze.org$/', $wi->hostname ) ) {
+if ( preg_match( '/^(.*).mirabeta.org$/', $wi->hostname ) ) {
 	$wgUrlShortenerAllowedDomains = [
-		'(.*\.)?betaheze\.org',
+		'(.*\.)?mirabeta\.org',
 	];
+	$wgParsoidEnableQueryString = true;
 }
 
-if ( !preg_match( '/^(.*).(miraheze|betaheze).org$/', $wi->hostname ) ) {
+if ( !preg_match( '/^(.*).(miraheze|mirabeta).org$/', $wi->hostname ) ) {
 	$wgUrlShortenerAllowedDomains = array_merge(
 		$wgUrlShortenerAllowedDomains,
 		[ preg_quote( str_replace( 'https://', '', $wgServer ) ) ]
@@ -599,3 +606,50 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'accesskey-',
 	'nstab-'
 ];
+
+$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$wgPoolCounterConf = [
+	'ArticleView' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 2,
+		'maxqueue' => 100,
+		'fastStale' => true,
+	],
+	'FileRender' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 8,
+		'workers' => 2,
+		'maxqueue' => 100,
+	],
+	'FileRenderExpensive' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 8,
+		'workers' => 2,
+		'slots' => 8,
+		'maxqueue' => 100,
+	],
+	'SpecialContributions' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 2,
+		'maxqueue' => 25,
+	],
+	'TranslateFetchTranslators' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 8,
+		'workers' => 1,
+		'slots' => 16,
+		'maxqueue' => 20,
+	],
+];
+
+$wgPoolCountClientConf = [
+	'servers' => [ $beta ? '2a10:6740::6:406' : '2a10:6740::6:306' ],
+	'timeout' => 0.5,
+];
+
+// Mathoid
+$wgMathMathMLUrl = 'http://[2a10:6740::6:504]:10044/';
+
+$wgPropagateErrors = false;
