@@ -1434,9 +1434,6 @@ $wgConf->settings += [
 	'wgHTTPConnectTimeout' => [
 		'default' => 3.0,
 	],
-	'wgHTTPTimeout' => [
-		'default' => 20,
-	],
 	'wgHTTPProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
