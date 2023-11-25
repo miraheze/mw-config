@@ -206,6 +206,19 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 		'requires' => [],
 	],
+	'wgRSSUserAgent' => [
+		'name' => 'RSS User Agent',
+		'from' => 'rss',
+		'type' => 'text',
+		'overridedefault' => 'MediaWiki RSS extension',
+		'section' => 'other',
+		'help' => 'The User Agent that MediaWiki will use to fetch RSS feeds.',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
 		'from' => 'protectsite',
