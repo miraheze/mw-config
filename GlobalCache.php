@@ -116,8 +116,8 @@ $wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgQueryCacheLimit = 5000;
 
-// 7 days
-$wgParserCacheExpireTime = 86400 * 7;
+// 5 days
+$wgParserCacheExpireTime = 86400 * 5;
 
 // 3 days
 $wgRevisionCacheExpiry = 86400 * 3;
