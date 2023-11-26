@@ -10,14 +10,14 @@ $wgObjectCaches['memcached-mem-1'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11212' ],
+	'servers'              => [ '/var/run/nutcracker/nutcracker_1.sock:0' ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	// 1000ms, in microseconds
-	'timeout'              => 1.0 * 1e6,
+	// 500ms, in microseconds
+	'timeout'              => 0.5 * 1e6,
 ];
 
 // mem131
@@ -25,14 +25,14 @@ $wgObjectCaches['memcached-mem-2'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11214' ],
+	'servers'              => [ '/var/run/nutcracker/nutcracker_2.sock:0' ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
 	// 500ms, in microseconds
-	'timeout'              => 1.0 * 1e6,
+	'timeout'              => 0.5 * 1e6,
 ];
 
 $wgObjectCaches['mysql-multiwrite'] = [
@@ -146,14 +146,14 @@ if ( $beta ) {
 		'class'                => MemcachedPeclBagOStuff::class,
 		'serializer'           => 'php',
 		'persistent'           => false,
-		'servers'              => [ '127.0.0.1:11215' ],
+		'servers'              => [ '/var/run/nutcracker/nutcracker_test.sock:0' ],
 		// Effectively disable the failure limit (0 is invalid)
 		'server_failure_limit' => 1e9,
 		// Effectively disable the retry timeout
 		'retry_timeout'        => -1,
 		'loggroup'             => 'memcached',
 		// 500ms, in microseconds
-		'timeout'              => 1.0 * 1e6,
+		'timeout'              => 0.5 * 1e6,
 	];
 
 	$redisServerIP = '[2a10:6740::6:406]:6379';
