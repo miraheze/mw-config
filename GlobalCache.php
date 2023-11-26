@@ -87,20 +87,6 @@ $wgObjectCaches['db-mainstash'] = [
 	'reportDupes' => false
 ];
 
-$mcpMessageCachePerformanceMsgPrefixes = [
-	'specialpages-specialpagegroup-',
-	'apioutput-view-',
-	'fallback-view-',
-	'timeless-action-',
-	'timeless-view-',
-	'vector-action-',
-	'vector-view-',
-	'conversion-ns',
-	'tooltip-',
-	'accesskey-',
-	'nstab-'
-];
-
 $wgMainStash = 'db-mainstash';
 
 $wgSessionCacheType = 'memcached-mem-2';
