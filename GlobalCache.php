@@ -5,27 +5,11 @@ $wgMemCachedPersistent = false;
 
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 
-// mem141
-$wgObjectCaches['memcached-mem-1'] = [
+$wgObjectCaches['memcached-pecl'] = [
 	'class'                => MemcachedPeclBagOStuff::class,
 	'serializer'           => 'php',
 	'persistent'           => false,
-	'servers'              => [ '/var/run/nutcracker/nutcracker_1.sock:0' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	// 500ms, in microseconds
-	'timeout'              => 0.5 * 1e6,
-];
-
-// mem131
-$wgObjectCaches['memcached-mem-2'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '/var/run/nutcracker/nutcracker_2.sock:0' ],
+	'servers'              => [ '/var/run/nutcracker/nutcracker.sock:0' ],
 	// Effectively disable the failure limit (0 is invalid)
 	'server_failure_limit' => 1e9,
 	// Effectively disable the retry timeout
@@ -40,7 +24,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ $beta ? 'memcached-mem-test' : 'memcached-mem-1' ]
+			'args' => [ $beta ? 'memcached-pecl-beta' : 'memcached-pecl' ]
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
@@ -89,19 +73,19 @@ $wgObjectCaches['db-mainstash'] = [
 
 $wgMainStash = 'db-mainstash';
 
-$wgSessionCacheType = 'memcached-mem-2';
+$wgSessionCacheType = 'memcached-pecl';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-mainstash';
 
 $redisServerIP = '[2a10:6740::6:306]:6379';
 
-$wgMainCacheType = 'memcached-mem-2';
-$wgMessageCacheType = 'memcached-mem-1';
+$wgMainCacheType = 'memcached-pecl';
+$wgMessageCacheType = 'memcached-pecl';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
-$wgChronologyProtectorStash = 'memcached-mem-1';
+$wgChronologyProtectorStash = 'memcached-pecl';
 
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
@@ -142,11 +126,11 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 if ( $beta ) {
 	// test131 (only use on test131. No prod traffic should use this).
-	$wgObjectCaches['memcached-mem-test'] = [
+	$wgObjectCaches['memcached-pecl-beta'] = [
 		'class'                => MemcachedPeclBagOStuff::class,
 		'serializer'           => 'php',
 		'persistent'           => false,
-		'servers'              => [ '/var/run/nutcracker/nutcracker_test.sock:0' ],
+		'servers'              => [ '/var/run/nutcracker/nutcracker_beta.sock:0' ],
 		// Effectively disable the failure limit (0 is invalid)
 		'server_failure_limit' => 1e9,
 		// Effectively disable the retry timeout
@@ -158,12 +142,12 @@ if ( $beta ) {
 
 	$redisServerIP = '[2a10:6740::6:406]:6379';
 
-	$wgMainCacheType = 'memcached-mem-test';
-	$wgMessageCacheType = 'memcached-mem-test';
+	$wgMainCacheType = 'memcached-pecl-beta';
+	$wgMessageCacheType = 'memcached-pecl-beta';
 
-	$wgSessionCacheType = 'memcached-mem-test';
+	$wgSessionCacheType = 'memcached-pecl-beta';
 
-	$wgChronologyProtectorStash = 'memcached-mem-test';
+	$wgChronologyProtectorStash = 'memcached-pecl-beta';
 }
 
 $wgJobTypeConf['default'] = [
