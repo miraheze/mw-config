@@ -74,6 +74,9 @@ $wgObjectCaches['db-mainstash'] = [
 
 $wgMainStash = 'db-mainstash';
 
+$wgStatsCacheType = 'memcached-pecl';
+$wgMicroStashType = 'memcached-pecl';
+
 $wgSessionCacheType = 'memcached-pecl';
 
 // Same as $wgMainStash
@@ -145,6 +148,8 @@ if ( $beta ) {
 	$redisServerIP = '[2a10:6740::6:406]:6379';
 
 	$wgMainCacheType = 'memcached-pecl-beta';
+	$wgStatsCacheType = 'memcached-pecl-beta';
+	$wgMicroStashType = 'memcached-pecl-beta';
 	$wgMessageCacheType = 'memcached-pecl-beta';
 
 	$wgSessionCacheType = 'memcached-pecl-beta';
