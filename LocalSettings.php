@@ -12,6 +12,9 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 setlocale( LC_ALL, 'en_GB.UTF-8' );
 
+// 1400MiB
+ini_set( 'memory_limit', 1400 * 1024 * 1024 );
+
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
