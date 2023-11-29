@@ -5,27 +5,33 @@ $wgMemCachedPersistent = false;
 
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 
-$wgObjectCaches['memcached-pecl'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '/var/run/nutcracker/nutcracker.sock:0' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
+$wgObjectCaches['mcrouter'] = [
+	'class'                 => 'MemcachedPeclBagOStuff',
+	'serializer'            => 'php',
+	'persistent'            => false,
+	'servers'               => [ $beta ? '127.0.0.1:11213' : '/var/run/nutcracker/nutcracker.sock:0' ],
+	'server_failure_limit'  => 1e9,
+	'retry_timeout'         => -1,
+	'loggroup'              => 'memcached',
 	// 500ms, in microseconds
-	'timeout'              => 0.5 * 1e6,
+	'timeout'               => 0.5 * 1e6,
 	'allow_tcp_nagle_delay' => false,
 ];
+
+if ( $beta ) {
+	$wgWANObjectCache = [
+		// Specify the route prefix that mcrouter listens for and broadcasts.
+		// The route prefix is configured in Puppet (role::mediawiki::mcrouter).
+		'broadcastRoutingPrefix' => '/*/mw-wan/',
+	];
+}
 
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ $beta ? 'memcached-pecl-beta' : 'memcached-pecl' ]
+			'args' => [ 'mcrouter' ]
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
@@ -74,22 +80,20 @@ $wgObjectCaches['db-mainstash'] = [
 
 $wgMainStash = 'db-mainstash';
 
-$wgStatsCacheType = 'memcached-pecl';
-$wgMicroStashType = 'memcached-pecl';
+$wgStatsCacheType = 'mcrouter';
+$wgMicroStashType = 'mcrouter';
 
-$wgSessionCacheType = 'memcached-pecl';
+$wgSessionCacheType = 'mcrouter';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-mainstash';
 
-$redisServerIP = '[2a10:6740::6:306]:6379';
-
-$wgMainCacheType = 'memcached-pecl';
-$wgMessageCacheType = 'memcached-pecl';
+$wgMainCacheType = 'mcrouter';
+$wgMessageCacheType = 'mcrouter';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
-$wgChronologyProtectorStash = 'memcached-pecl';
+$wgChronologyProtectorStash = 'mcrouter';
 
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
@@ -128,34 +132,9 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $wgResourceLoaderUseObjectCacheForDeps = true;
 
-if ( $beta ) {
-	// test131 (only use on test131. No prod traffic should use this).
-	$wgObjectCaches['memcached-pecl-beta'] = [
-		'class'                => MemcachedPeclBagOStuff::class,
-		'serializer'           => 'php',
-		'persistent'           => false,
-		'servers'              => [ '/var/run/nutcracker/nutcracker_beta.sock:0' ],
-		// Effectively disable the failure limit (0 is invalid)
-		'server_failure_limit' => 1e9,
-		// Effectively disable the retry timeout
-		'retry_timeout'        => -1,
-		'loggroup'             => 'memcached',
-		// 500ms, in microseconds
-		'timeout'              => 0.5 * 1e6,
-		'allow_tcp_nagle_delay' => false
-	];
-
-	$redisServerIP = '[2a10:6740::6:406]:6379';
-
-	$wgMainCacheType = 'memcached-pecl-beta';
-	$wgStatsCacheType = 'memcached-pecl-beta';
-	$wgMicroStashType = 'memcached-pecl-beta';
-	$wgMessageCacheType = 'memcached-pecl-beta';
-
-	$wgSessionCacheType = 'memcached-pecl-beta';
-
-	$wgChronologyProtectorStash = 'memcached-pecl-beta';
-}
+$redisServerIP = $beta ?
+	'[2a10:6740::6:406]:6379' :
+	'[2a10:6740::6:306]:6379';
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
