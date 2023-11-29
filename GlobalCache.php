@@ -18,14 +18,6 @@ $wgObjectCaches['mcrouter'] = [
 	'allow_tcp_nagle_delay' => false,
 ];
 
-if ( $beta ) {
-	$wgWANObjectCache = [
-		// Specify the route prefix that mcrouter listens for and broadcasts.
-		// The route prefix is configured in Puppet (role::mediawiki::mcrouter).
-		'broadcastRoutingPrefix' => '/*/mw-wan/',
-	];
-}
-
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,
 	'caches' => [
