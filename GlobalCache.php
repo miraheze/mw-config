@@ -9,7 +9,7 @@ $wgObjectCaches['mcrouter'] = [
 	'class'                 => 'MemcachedPeclBagOStuff',
 	'serializer'            => 'php',
 	'persistent'            => false,
-	'servers'               => [ '127.0.0.1:11213' ],
+	'servers'               => [ $beta ? '127.0.0.1:11213' : '/var/run/nutcracker/nutcracker.sock:0' ],
 	'server_failure_limit'  => 1e9,
 	'retry_timeout'         => -1,
 	'loggroup'              => 'memcached',
@@ -18,11 +18,13 @@ $wgObjectCaches['mcrouter'] = [
 	'allow_tcp_nagle_delay' => false,
 ];
 
-$wgWANObjectCache = [
-	// Specify the route prefix that mcrouter listens for and broadcasts.
-	// The route prefix is configured in Puppet (role::mediawiki::mcrouter).
-	'broadcastRoutingPrefix' => '/*/mw-wan/',
-];
+if ( $beta ) {
+	$wgWANObjectCache = [
+		// Specify the route prefix that mcrouter listens for and broadcasts.
+		// The route prefix is configured in Puppet (role::mediawiki::mcrouter).
+		'broadcastRoutingPrefix' => '/*/mw-wan/',
+	];
+}
 
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,
