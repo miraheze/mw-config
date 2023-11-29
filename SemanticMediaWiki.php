@@ -26,8 +26,7 @@ $smwgPageSpecialProperties = [
 	'_ATTCH_LINK',
 ];
 
-$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
-$smwgMainCacheType = $beta ? 'memcached-pecl-beta' : 'memcached-pecl';
+$smwgMainCacheType = 'mcrouter';
 
 if ( !class_exists( SMW\Setup::class ) ) {
 	require_once "$IP/extensions/SemanticMediaWiki/src/MediaWiki/HookDispatcherAwareTrait.php";
