@@ -5835,7 +5835,6 @@ $wgConf->settings += [
 			'DBQuery' => false,
 			'DBReplication' => false,
 			'DBTransaction' => false,
-			'DeferredUpdates' => 'error',
 			'deprecated' => [ 'graylog' => 'debug', 'sample' => 100 ],
 			'diff' => 'debug',
 			'DuplicateParse' => false,
