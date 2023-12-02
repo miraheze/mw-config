@@ -522,7 +522,11 @@ $wgManageWikiExtensions = [
 				'jsonconfig',
 				'codeeditor',
 			],
+			'permissions' => [
+				'managewiki-restricted',
+			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10756">T10756</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'groupssidebar' => [
@@ -888,7 +892,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
 		'var' => 'wmgUseRegexFunctions',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10882">T10882</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'rightfunctions' => [
@@ -1467,6 +1476,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10883">T10883</a> for details.',
 		'install' => [
 			'sql' => [
 				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
@@ -2215,7 +2225,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
 		'var' => 'wmgUseEditNotify',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled, please see <a href="https://phabricator.miraheze.org/T10885">T10885</a> for details.',
 		'section' => 'other',
 	],
 	'editsubpages' => [
@@ -3549,7 +3564,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 		'var' => 'wmgUseWikiForum',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10871">T10871</a> for details.',
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
