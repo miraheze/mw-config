@@ -590,9 +590,7 @@ class MirahezeFunctions {
 				trigger_error( 'Config cache failure: Encoding failed', E_USER_ERROR );
 			} else {
 				if ( file_put_contents( $tmpFile, $cacheObject ) ) {
-					if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
-						return;
-					}
+					rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard );
 				}
 			}
 
