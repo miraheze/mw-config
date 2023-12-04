@@ -5025,6 +5025,18 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// TorBlock
+	'wgTorIPs' => [
+		'default' => [
+			'91.198.174.232',
+			'208.80.152.2',
+			'208.80.152.134'
+		]
+	],
+	'wgTorBlockProxy' => [
+		'default' => 'http://bast.miraheze.org:8080'
+	],
+
 	// Tweeki
 	'wgTweekiSkinUseBootstrap4' => [
 		'default' => false,
