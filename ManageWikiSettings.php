@@ -965,7 +965,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'links',
 		'help' => 'Output a <link rel="canonical"> tag on every page indicating the canonical server which should be used, i.e. $wgServer or $wgCanonicalServer.',
 		'requires' => [],
