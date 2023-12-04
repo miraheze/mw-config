@@ -54,8 +54,8 @@ class MirahezeFunctions {
 	];
 
 	public const MEDIAWIKI_VERSIONS = [
-		'beta' => '1.40',
-		'stable' => '1.39',
+		'beta' => '1.41',
+		'stable' => '1.40',
 	];
 
 	public const SUFFIXES = [
