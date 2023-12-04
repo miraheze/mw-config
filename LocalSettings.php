@@ -1527,8 +1527,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgMaxUploadSize' => [
-		/** T3797 - 250MB */
-		'default' => 1024 * 1024 * 250,
+		'default' => 1024 * 1024 * 4096,
 		/** T9673 - 10MB */
 		'dragdownwiki' => 1024 * 1024 * 10,
 	],
