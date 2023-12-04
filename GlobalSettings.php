@@ -3,11 +3,9 @@
 // https://phabricator.miraheze.org/T8703
 header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
 
-$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'WikiTideFunctions::onGenerateDatabaseLists';
-$wgHooks['ManageWikiCoreAddFormFields'][] = 'WikiTideFunctions::onManageWikiCoreAddFormFields';
-$wgHooks['ManageWikiCoreFormSubmission'][] = 'WikiTideFunctions::onManageWikiCoreFormSubmission';
-$wgHooks['MediaWikiServices'][] = 'WikiTideFunctions::onMediaWikiServices';
-$wgHooks['CreateWikiJsonBuilder'][] = 'WikiTideFunctions::onCreateWikiJsonBuilder';
+$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+$wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
