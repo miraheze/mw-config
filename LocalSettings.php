@@ -3856,6 +3856,9 @@ $wgConf->settings += [
 		'gratisdatawiki' => true,
 		'gpcommonswiki' => true,
 	],
+	'wgPageImagesLeadSectionOnly' => [
+		'default' => false
+	],
 
 	// Pagelang
 	'wgPageLanguageUseDB' => [
