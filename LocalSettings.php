@@ -481,12 +481,12 @@ $wgConf->settings += [
 		'metawikibeta' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
-		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
-		'mirabeta' => 'https://meta.mirabeta.org/w/index.php/Special:BannerLoader',
+		'default' => 'https://meta.miraheze.org/w/index.php?title=Special:BannerLoader',
+		'mirabeta' => 'https://meta.mirabeta.org/w/index.php?title=Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
-		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
-		'mirabeta' => 'https://meta.mirabeta.org/w/index.php/Special:RecordImpression',
+		'default' => 'https://meta.miraheze.org/w/index.php?title=Special:RecordImpression',
+		'mirabeta' => 'https://meta.mirabeta.org/w/index.php?title=Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
