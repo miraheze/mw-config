@@ -64,7 +64,6 @@ class MirahezeFunctions {
 	];
 
 	public function __construct() {
-		self::setupHooks();
 		self::setupSiteConfiguration();
 
 		$this->dbname = self::getCurrentDatabase();
@@ -185,14 +184,6 @@ class MirahezeFunctions {
 		}
 
 		return $databases;
-	}
-
-	public static function setupHooks() {
-		global $wgHooks;
-
-		$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
-		$wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
-		$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
 	}
 
 	public static function setupSiteConfiguration() {
