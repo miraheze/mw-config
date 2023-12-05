@@ -29,7 +29,6 @@ $wgLockManagers[] = [
 	],
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'readTimeout' => 2,
 		'password' => $wmgRedisPassword,
 	]
 ];
