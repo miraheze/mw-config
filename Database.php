@@ -78,3 +78,5 @@ $wgMaxExecutionTimeForExpensiveQueries = 30000;
 
 // Compress revisions
 $wgCompressRevisions = true;
+
+$wgSQLMode = null;
