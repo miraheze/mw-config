@@ -70,6 +70,12 @@ $wgLBFactoryConf = [
 	],
 ];
 
+
+// Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
+if ( PHP_SAPI === 'cli' ) {
+	$wgLBFactoryConf['loadMonitorClass'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+}
+
 // Disallow web request database transactions that are slower than 10 seconds
 $wgMaxUserDBWriteDuration = 10;
 
