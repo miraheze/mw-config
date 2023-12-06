@@ -76,20 +76,20 @@ if ( $wi->isExtensionActive( 'Graph' ) ) {
 
 // Meta Tech NS sitenotice
 if ( $wgDBname === 'metawiki' ) {
-$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
+	$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
 
-function wfMetaSiteNotice( &$siteNotice, $skin ) {
-	$title = $skin->getTitle();
-	if ( $title->getNamespace() !== 1600 ) {
-		return;
-	}
+	function wfMetaSiteNotice( &$siteNotice, $skin ) {
+		$title = $skin->getTitle();
+		if ( $title->getNamespace() !== 1600 ) {
+			return;
+		}
 
-	$skin->getOutput()->enableOOUI();
-	$skin->getOutput()->addInlineStyle(
+		$skin->getOutput()->enableOOUI();
+		$skin->getOutput()->addInlineStyle(
 		'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
 		'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
-	);
-	$siteNotice .= <<<EOF
+		);
+		$siteNotice .= <<<EOF
 	<table style="width: 100%;">
 		<tbody>
 			<tr>
@@ -107,5 +107,5 @@ function wfMetaSiteNotice( &$siteNotice, $skin ) {
 		</tbody>
 	</table>
 EOF;
-}
+	}
 }
