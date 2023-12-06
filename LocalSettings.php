@@ -10,6 +10,10 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
+if ( PHP_SAPI !== 'cli' ) {
+	header( "Cache-control: no-cache" );
+}
+
 setlocale( LC_ALL, 'en_GB.UTF-8' );
 
 // 1400MiB
