@@ -6,22 +6,22 @@ $wgLBFactoryConf = [
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db131' => 1,
+			'db131' => 0,
 		],
 		'c1' => [
-			'db131' => 1,
+			'db131' => 0,
 		],
 		'c2' => [
-			'db101' => 1,
+			'db101' => 0,
 		],
 		'c3' => [
-			'db142' => 1,
+			'db142' => 0,
 		],
 		'c4' => [
-			'db121' => 1,
+			'db121' => 0,
 		],
 		'c5' => [
-			'db131' => 1,
+			'db131' => 0,
 		],
 	],
 	'serverTemplate' => [
@@ -53,11 +53,11 @@ $wgLBFactoryConf = [
 	'externalLoads' => [
 		'beta' => [
 			/** where the metawikibeta database is located */
-			'db121' => 1,
+			'db121' => 0,
 		],
 		'echo' => [
 			/** where the metawiki database is located */
-			'db131' => 1,
+			'db131' => 0,
 		],
 	],
 	'readOnlyBySection' => [
