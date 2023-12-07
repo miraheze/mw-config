@@ -70,7 +70,6 @@ $wgLBFactoryConf = [
 	],
 ];
 
-
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
 if ( PHP_SAPI === 'cli' ) {
 	$wgLBFactoryConf['loadMonitorClass'] = '\Wikimedia\Rdbms\LoadMonitorNull';

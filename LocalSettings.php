@@ -5045,6 +5045,9 @@ $wgConf->settings += [
 	'wgTorTagChanges' => [
 		'default' => false
 	],
+	'wgTorDisableAdminBlocks' => [
+		'default' => false
+	],
 
 	// Tweeki
 	'wgTweekiSkinUseBootstrap4' => [
