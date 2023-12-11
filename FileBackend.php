@@ -29,7 +29,6 @@ $wgLockManagers[] = [
 	'name' => 'redisLockManager',
 	'class' => RedisLockManager::class,
 	'lockServers' => [
-		// jobchron121
 		'rdb1' => $redisServerIP,
 	],
 	'srvsByBucket' => [
