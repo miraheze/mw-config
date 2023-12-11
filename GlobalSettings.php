@@ -1,7 +1,9 @@
 <?php
 
-// https://phabricator.miraheze.org/T8703
-header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
+if ( PHP_SAPI !== 'cli' ) {
+	// https://phabricator.miraheze.org/T8703
+	header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
+}
 
 $wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
