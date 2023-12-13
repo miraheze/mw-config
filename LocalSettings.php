@@ -5921,6 +5921,7 @@ $wgConf->settings += [
 			'OutputBuffer' => false,
 			'PageTriage' => false,
 			'ParserCache' => false,
+			'ParsoidCachePrewarmJob' => 'error',
 			'Parsoid' => 'warning',
 			'poolcounter' => 'debug',
 			'preferences' => false,
