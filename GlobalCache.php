@@ -127,6 +127,8 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $wgResourceLoaderUseObjectCacheForDeps = true;
 
+$wgCdnMatchParameterOrder = false;
+
 $redisServerIP = $beta ?
 	'[2a10:6740::6:406]:6379' :
 	'[2a10:6740::6:306]:6379';
