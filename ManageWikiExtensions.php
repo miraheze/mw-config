@@ -1455,6 +1455,7 @@ $wgManageWikiExtensions = [
 				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_submissions.sql",
 				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentee_data.sql",
 				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentor_mentee.sql",
+				'growthexperiments_user_impact' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_user_impact.sql"
 			],
 			'permissions' => [
 				'sysop' => [
