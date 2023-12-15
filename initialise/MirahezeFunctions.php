@@ -473,7 +473,7 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getConfigGlobals(): array {
-		global $IP, $wgDBname, $wgConf;
+		global $IP, $wgDBname, $wgConf, $wgExtensionInfoMTime;
 
 		// Try configuration cache
 		$confCacheFileName = "config-$wgDBname.json";
@@ -493,6 +493,8 @@ class MirahezeFunctions {
 			// When ManageWiki is changed
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
+
+		$wgExtensionInfoMTime = $confActualMtime;
 
 		static $globals = null;
 		$globals ??= self::readFromCache(
