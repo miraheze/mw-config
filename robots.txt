@@ -79,7 +79,3 @@ Disallow: /
 # Block SeekportBot
 User-agent: SeekportBot
 Disallow: /
-
-# Dynamic sitemap url
-# Dynamic sitemap url
-Sitemap: {$wgServer}/sitemap.xml
