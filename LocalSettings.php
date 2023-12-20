@@ -358,6 +358,9 @@ $wgConf->settings += [
 		'+ext-WikiForum' => [
 			'wikiforum' => true,
 		],
+		'+ext-ContactPage' => [
+			'contactpage' => true,
+		],
 	],
 	'wgHCaptchaSiteKey' => [
 		'default' => 'e6d26503-a3fb-47fb-9639-efe259a34a33',
