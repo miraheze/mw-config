@@ -265,7 +265,7 @@ if ( $wi->isExtensionActive( 'ContactPage' ) ) {
 		'default' => [
 			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
 			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Miraheze No Reply',
+			'SenderName' => 'Contact Form on ' . $wgSitename,
 			'RequireDetails' => true,
 			// Should never be set to true
 			'IncludeIP' => false,
