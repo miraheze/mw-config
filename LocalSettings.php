@@ -2120,6 +2120,12 @@ $wgConf->settings += [
 		'+securipediawiki' => [
 			'pv',
 		],
+		'+shemwiki' => [
+			'wikipedia' => [
+			'en',
+			'fr'
+			],
+		],
 		'+snapdatawiki' => [
 			'd',
 			'snapwiki',
