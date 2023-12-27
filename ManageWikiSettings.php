@@ -1836,6 +1836,16 @@ $wgManageWikiSettings = [
 		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
 		'requires' => [],
 	],
+	'wgDiscordFromName' => [
+		'name' => 'Discord Notification Sender Name',
+		'from' => 'discordnotifications',
+		'global' => true,
+		'type' => 'text',
+		'overridedefault' => $wgSitename,
+		'section' => 'notifications',
+		'help' => 'Who should the message appear to be sent from?',
+		'requires' => [],
+	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'name' => 'Discord Notification Ignore Minor Edits',
 		'from' => 'discordnotifications',
