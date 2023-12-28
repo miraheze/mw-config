@@ -238,6 +238,16 @@ $wgConf->settings += [
 	],
 
 	// ApprovedRevs
+	'egApprovedRevsAutomaticApprovals' => [
+		'default' => true,
+	],
+	'egApprovedRevsBlankFileIfUnapproved' => [
+		'default' => false,
+	],
+	'egApprovedRevsBlankIfUnapproved' => [
+		'default' => false,
+		],
+	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'default' => [
 			NS_MAIN => true,
@@ -248,17 +258,17 @@ $wgConf->settings += [
 			NS_PROJECT => true
 		],
 	],
-	'egApprovedRevsAutomaticApprovals' => [
+	'egApprovedRevsFileAutomaticApprovals' => [
 		'default' => true,
+	],
+	'egApprovedRevsFileShowApproveLatest' => [
+		'default' => false,
 	],
 	'egApprovedRevsShowApproveLatest' => [
 		'default' => false,
-		'primalfeararkwiki' => true,
 	],
 	'egApprovedRevsShowNotApprovedMessage' => [
 		'default' => false,
-		'primalfeararkwiki' => true,
-		'zhtranswiki' => true,
 	],
 
 	// ArticleCreationWorkflow
