@@ -2073,8 +2073,8 @@ $wgConf->settings += [
 		],
 		'+ilaiwiki' => [
 			'wikipedia' => [
-				'en',
 				'fr',
+				'en',
 			],
 		],
 		'+incubatorwiki' => [
