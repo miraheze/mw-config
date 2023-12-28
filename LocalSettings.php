@@ -246,7 +246,6 @@ $wgConf->settings += [
 	],
 	'egApprovedRevsBlankIfUnapproved' => [
 		'default' => false,
-		],
 	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'default' => [
