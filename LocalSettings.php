@@ -2073,8 +2073,8 @@ $wgConf->settings += [
 		],
 		'+ilaiwiki' => [
 			'wikipedia' => [
-				'fr',
 				'en',
+				'fr',
 			],
 		],
 		'+incubatorwiki' => [
@@ -2131,8 +2131,8 @@ $wgConf->settings += [
 		],
 		'+shemwiki' => [
 			'wikipedia' => [
-			'en',
-			'fr'
+			'fr',
+			'en'
 			],
 		],
 		'+snapdatawiki' => [
