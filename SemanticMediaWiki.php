@@ -26,7 +26,7 @@ $smwgPageSpecialProperties = [
 	'_ATTCH_LINK',
 ];
 
-$smwgMainCacheType = 'memcached-mem-2';
+$smwgMainCacheType = 'mcrouter';
 
 if ( !class_exists( SMW\Setup::class ) ) {
 	require_once "$IP/extensions/SemanticMediaWiki/src/MediaWiki/HookDispatcherAwareTrait.php";
@@ -75,6 +75,10 @@ if ( $wgDBname === 'constantnoblewiki' ) {
 		3037 => false,
 		3040 => true,
 		3041 => false,
+		3044 => true,
+		3045 => false,
+		3050 => true,
+		3051 => false,
 	];
 
 	$smwgQMaxInlineLimit = 750;

@@ -272,6 +272,9 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'install' => [
+			'mwscript' => [
+				"$IP/extensions/MirahezeMagic/maintenance/createCargoDB.php" => [],
+			],
 			'sql' => [
 				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
 				'cargo_backlinks' => "$IP/extensions/Cargo/sql/cargo_backlinks.sql"
@@ -519,7 +522,11 @@ $wgManageWikiExtensions = [
 				'jsonconfig',
 				'codeeditor',
 			],
+			'permissions' => [
+				'managewiki-restricted',
+			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10756">T10756</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'groupssidebar' => [
@@ -885,7 +892,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
 		'var' => 'wmgUseRegexFunctions',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10882">T10882</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'rightfunctions' => [
@@ -1432,13 +1444,18 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
 		'var' => 'wmgUseGrowthExperiments',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'visualeditor',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_recommendations.sql",
 				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_submissions.sql",
 				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentee_data.sql",
 				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentor_mentee.sql",
+				'growthexperiments_user_impact' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_user_impact.sql"
 			],
 			'permissions' => [
 				'sysop' => [
@@ -1460,6 +1477,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10883">T10883</a> for details.',
 		'install' => [
 			'sql' => [
 				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
@@ -2208,7 +2226,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
 		'var' => 'wmgUseEditNotify',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled, please see <a href="https://phabricator.miraheze.org/T10885">T10885</a> for details.',
 		'section' => 'other',
 	],
 	'editsubpages' => [
@@ -2767,6 +2790,11 @@ $wgManageWikiExtensions = [
 				'wikibaserepository',
 			],
 		],
+		'install' => [
+			'sql' => [
+				'wbs_propertypairs' => "$IP/extensions/PropertySuggester/sql/mysql/tables-generated.sql"
+			],
+		],
 		'section' => 'other',
 	],
 	'protectionindicator' => [
@@ -3002,6 +3030,12 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
+		'install' => [
+			'sql' => [
+				'mws_title_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_title_index.sql",
+				'mws_user_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_user_index.sql",
+			],
+		],
 	],
 	'flow' => [
 		'name' => 'Flow',
@@ -3059,7 +3093,7 @@ $wgManageWikiExtensions = [
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
-		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well. <br/><b>Note: <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Stewards" target="_blank">Stewards</a>, please ensure that a member of the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:SRE_Volunteers" target="_blank">Site Reliability Engineering</a> team is available and not mobile in order to run <code>mwscript extensions/SemanticMediaWiki/setupStore.php</code> on every MediaWiki server after enabling this.</b>',
+		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well. <br/><b>Note: <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Stewards" target="_blank">Stewards</a>, please ensure that a member of the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:SRE_Volunteers" target="_blank">Site Reliability Engineering</a> team is available and not mobile in order to run <a href="https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki" target="_blank">a series of commands</a> on mwtask141 after enabling this.</b>',
 		'var' => 'wmgUseSemanticMediaWiki',
 		'conflicts' => false,
 		'requires' => [
@@ -3531,7 +3565,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 		'var' => 'wmgUseWikiForum',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10871">T10871</a> for details.',
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"

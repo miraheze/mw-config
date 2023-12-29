@@ -13,14 +13,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'betawiki':
-		wfLoadExtension( 'GlobalWatchlist' );
-		
-		break;
-	case 'buttonmenwiki':
-		$wgPageImagesScores['width'] = 100;
-
-		break;
 	case 'commonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
@@ -43,6 +35,17 @@ switch ( $wi->dbname ) {
 			}
 		}
 
+		break;
+	case 'dlfmwiki':
+		$wgHooks['TranslatePostInitGroups'][] = function ( &$list, &$deps, &$autoload ) {
+			$id = 'local-sys-msg';
+			$mg = new WikiMessageGroup( $id, 'local-messages' );
+			$mg->setLabel( 'Local System Messagss' );
+			$mg->setDescription( 'Messages used specially on this wiki.' );
+			$list[$id] = $mg;
+			return true;
+		};
+	
 		break;
 	case 'dmlwikiwiki':
 		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
@@ -89,7 +92,7 @@ switch ( $wi->dbname ) {
 
 			return true;
 		}
-		
+
 		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
@@ -202,10 +205,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'loginwiki':
-		wfLoadExtension( 'GlobalWatchlist' );
-
-		break;
 	case 'metawiki':
 		$wgContactConfig = [
 			'default' => [
@@ -292,10 +291,55 @@ switch ( $wi->dbname ) {
 				],
 				'DisplayFormat' => 'raw',
 			],
+			'requestbetaaccount' => [
+				'RecipientUser' => 'Miraheze Operations',
+				'SenderName' => 'Mirabeta account creation request (via Meta)',
+				'RequireDetails' => true,
+				'MustBeLoggedIn' => true,
+				'AdditionalFields' => [
+					'SelectUsername' => [
+						'label-message' => 'contactpage-requestbetaaccount-selectusername',
+						'type' => 'text',
+						'maxlength' => 50,
+						'help-message' => 'contactpage-requestbetaaccount-selectusername-help',
+						'required' => true,
+					],
+					'RequestReason' => [
+						'label-message' => 'contactpage-requestbetaaccount-requestreason',
+						'type' => 'textarea',
+						'help-message' => 'contactpage-requestaccount-requestreason-help',
+						'required' => true,
+					],
+				],
+				'DisplayFormat' => 'table',
+			],
 		];
+
+		$wgTranslateTranslationServices['Google'] = [
+			'url' => 'https://translation.googleapis.com/language/translate/v2',
+			'key' => $wmgTranslateGoogleTranslateMetaKey,
+			'timeout' => 3,
+			'type' => 'google',
+		];
+
+		wfLoadExtensions( [
+			'GlobalWatchlist',
+			'ImportDump',
+			'IncidentReporting',
+		] );
+
+		break;
+	case 'metawikibeta':
+		wfLoadExtension( 'GlobalWatchlist' );
+
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
+
+		break;
+	case 'nycsubwaywiki':
+		unset( $wgGroupPermissions['interwiki-admin'] );
+		unset( $wgGroupPermissions['no-ipinfo'] );
 
 		break;
 	case 'persistwiki':
@@ -399,10 +443,31 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'srewiki':
+		wfLoadExtension( 'LdapAuthentication' );
+
+		$wgAuthManagerAutoConfig['primaryauth'] += [
+			LdapPrimaryAuthenticationProvider::class => [
+				'class' => LdapPrimaryAuthenticationProvider::class,
+				'args' => [ [
+					// don't allow local non-LDAP accounts
+					'authoritative' => true,
+				] ],
+				// must be smaller than local pw provider
+				'sort' => 50,
+			],
+		];
+
+		break;
 	case 'traceprojectwikiwiki':
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
+
+		break;
+	case 'whentheycrywiki':
+		$wgGalleryOptions['imageWidth'] = 200;
+		$wgGalleryOptions['imageHeight'] = 200;
 
 		break;
 	case 'wonderingstarswiki':
