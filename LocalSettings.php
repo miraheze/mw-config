@@ -1125,7 +1125,7 @@ $wgConf->settings += [
 		'default' => '',
 	],
 	'wgDiscordFromName' => [
-		'default' => $wgSitename,
+		'default' => $wi->sitename,
 	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
