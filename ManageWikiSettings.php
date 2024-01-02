@@ -1113,6 +1113,19 @@ $wgManageWikiSettings = [
 		'help' => 'Language code for message documentation.',
 		'requires' => [],
 	],
+	'wgTranslateNumerals' => [
+		'name' => 'Use Western numerical system',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'options' => [
+			'true' => true,
+			'false' => false,
+		],
+		'overridedefault' => true,
+		'section' => 'localisation',
+		'help' => 'Whether to use the Western numerical system (0-9) instead of localised numerics',
+		'requires' => [],
+	],
 	'wgTranslatePageTranslationULS' => [
 		'name' => 'Translate Page Translation ULS',
 		'from' => 'translate',
