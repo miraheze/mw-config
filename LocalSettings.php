@@ -1629,6 +1629,8 @@ $wgConf->settings += [
 			73651,
 			/** MacFan4000 (SRE) */
 			6758,
+			/** Universal Omega (SRE) */
+			438966,
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
