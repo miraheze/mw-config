@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Miraheze\CreateWiki\RemoteWiki;
 use Wikimedia\Rdbms\DBConnRef;
 
 class MirahezeFunctions {
@@ -26,6 +27,9 @@ class MirahezeFunctions {
 	/** @var array */
 	public $wikiDBClusters;
 
+	/** @var string */
+	public $wikifarm;
+
 	/** @var array */
 	public static $disabledExtensions = [];
 
@@ -36,16 +40,20 @@ class MirahezeFunctions {
 		'mirabeta' => 'mirabeta.org',
 	];
 
-	private const GLOBAL_DATABASE = [
-		'default' => 'mhglobal',
-		'beta' => 'testglobal',
-	];
-
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
 	private const TAGS = [
 		'default' => 'default',
 		'beta' => 'mirabeta',
+	];
+
+	public const CENTRAL_WIKI = [
+		'default' => 'metawiki',
+	];
+
+	public const GLOBAL_DATABASE = [
+		'default' => 'mhglobal',
+		'beta' => 'testglobal',
 	];
 
 	public const LISTS = [
@@ -54,6 +62,7 @@ class MirahezeFunctions {
 	];
 
 	public const MEDIAWIKI_VERSIONS = [
+		'alpha' => '1.42',
 		'beta' => '1.41',
 		'stable' => '1.40',
 	];
@@ -73,6 +82,7 @@ class MirahezeFunctions {
 		$this->sitename = self::getSiteName();
 		$this->missing = self::isMissing();
 		$this->version = self::getMediaWikiVersion();
+		$this->wikifarm = self::getWikiFarm();
 
 		$this->hostname = $_SERVER['HTTP_HOST'] ??
 			parse_url( $this->server, PHP_URL_HOST ) ?: 'undefined';
@@ -91,19 +101,19 @@ class MirahezeFunctions {
 	public static function getLocalDatabases(): ?array {
 		global $wgLocalDatabases;
 
-		static $list = null;
+		static $wikiFarm = null;
 		static $databases = null;
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ? 'beta' : 'production';
+		$wikiFarm ??= self::getWikiFarm();
 
 		// We need the CLI to be able to access 'deleted' wikis
 		if ( PHP_SAPI === 'cli' ) {
-			$databases ??= array_merge( self::readDbListFile( $list ), self::readDbListFile( 'deleted-' . $list ) );
+			$databases ??= array_merge( self::readDbListFile( 'databases-' . $wikiFarm ), self::readDbListFile( 'deleted-' . $wikiFarm ) );
 		}
 
-		$databases ??= self::readDbListFile( $list );
+		$databases ??= self::readDbListFile( 'databases-' . $wikiFarm );
 
 		$wgLocalDatabases = $databases;
 		return $databases;
@@ -121,11 +131,11 @@ class MirahezeFunctions {
 			return $database;
 		}
 
-		if ( $dblist === 'production' ) {
+		if ( $dblist === 'databases-default' ) {
 			$dblist = 'databases';
 		}
 
-		if ( $dblist === 'deleted-production' ) {
+		if ( $dblist === 'deleted-default' ) {
 			$dblist = 'deleted';
 		}
 
@@ -198,22 +208,18 @@ class MirahezeFunctions {
 	/**
 	 * @return string
 	 */
-	public static function getRealm(): string {
-		static $realm = null;
-
+	public static function getWikiFarm(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		$realm ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ?
-			self::TAGS['beta'] : self::TAGS['default'];
-
-		return $realm;
+		return ( substr( self::$currentDatabase, -4 ) === 'wiki' ) ?
+			self::TAGS['default'] : self::TAGS['beta'];
 	}
 
 	/**
 	 * @return string
 	 */
 	public static function getCurrentSuffix(): string {
-		return array_flip( self::SUFFIXES )[ self::DEFAULT_SERVER[self::getRealm()] ];
+		return array_flip( self::SUFFIXES )[ self::DEFAULT_SERVER[self::getWikiFarm()] ];
 	}
 
 	/**
@@ -230,7 +236,7 @@ class MirahezeFunctions {
 			}
 
 			if ( isset( $wgConf->settings['wgServer'] ) && count( $wgConf->settings['wgServer'] ) > 1 ) {
-				return 'https://' . self::DEFAULT_SERVER[self::getRealm()];
+				return 'https://' . self::DEFAULT_SERVER[self::getWikiFarm()];
 			}
 		}
 
@@ -245,11 +251,12 @@ class MirahezeFunctions {
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		$list ??= isset( array_flip( self::readDbListFile( 'beta' ) )[ self::$currentDatabase ] ) ? 'beta' : 'production';
-		$databases = self::readDbListFile( $list, false, $database );
+		$wikiFarm ??= self::getWikiFarm();
+
+		$databases = self::readDbListFile( 'databases-' . $wikiFarm, false, $database );
 
 		if ( $deleted && $databases ) {
-			$databases += self::readDbListFile( "deleted-$list", false, $database );
+			$databases += self::readDbListFile( 'deleted-' . $wikiFarm, false, $database );
 		}
 
 		if ( $database !== null ) {
@@ -261,7 +268,7 @@ class MirahezeFunctions {
 				}
 			}
 
-			$default ??= 'https://' . self::DEFAULT_SERVER[self::getRealm()];
+			$default ??= 'https://' . self::DEFAULT_SERVER[$wikiFarm];
 			return $default;
 		}
 
@@ -273,7 +280,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		$default ??= 'https://' . self::DEFAULT_SERVER[self::getRealm()];
+		$default ??= 'https://' . self::DEFAULT_SERVER[$wikiFarm];
 		$servers['default'] = $default;
 
 		return $servers;
@@ -290,8 +297,9 @@ class MirahezeFunctions {
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
 
 		static $database = null;
-		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
-			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
+
+		$database ??= self::readDbListFile( 'databases-beta', true, 'https://' . $hostname, true ) ?:
+			self::readDbListFile( 'databases', true, 'https://' . $hostname, true );
 
 		if ( $database ) {
 			return $database;
@@ -313,10 +321,12 @@ class MirahezeFunctions {
 	}
 
 	public function setDatabase() {
-		global $wgConf, $wgDBname;
+		global $wgConf, $wgDBname, $wgCreateWikiDatabase;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 		$wgDBname = $this->dbname;
+
+		$wgCreateWikiDatabase = self::GLOBAL_DATABASE[$this->wikifarm];
 	}
 
 	/**
@@ -326,8 +336,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( 'databases-' . self::LISTS[self::getWikiFarm()], false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getWikiFarm()], false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -366,8 +376,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( 'databases-' . self::LISTS[self::getWikiFarm()], false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getWikiFarm()], false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -392,7 +402,7 @@ class MirahezeFunctions {
 	 * @return string
 	 */
 	public static function getDefaultMediaWikiVersion(): string {
-		return php_uname( 'n' ) === 'test131.miraheze.org' ? 'beta' : 'stable';
+		return ( php_uname( 'n' ) === 'test131.miraheze.org' && isset( self::MEDIAWIKI_VERSIONS['beta'] ) ) ? 'beta' : 'stable';
 	}
 
 	/**
@@ -405,21 +415,21 @@ class MirahezeFunctions {
 		}
 
 		if ( $database ) {
-			$mwVersion = self::readDbListFile( 'databases', false, $database )['v'] ?? null;
+			$mwVersion = self::readDbListFile( 'databases-' . self::LISTS[self::getWikiFarm()], false, $database )['v'] ?? null;
 			return $mwVersion ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
+		}
+
+		if ( PHP_SAPI === 'cli' ) {
+			$version = explode( '/', $_SERVER['SCRIPT_NAME'] )[3] ?? null;
+			if ( $version && in_array( $version, self::MEDIAWIKI_VERSIONS ) ) {
+				return $version;
+			}
 		}
 
 		static $version = null;
 
-		if ( PHP_SAPI === 'cli' ) {
-			$version ??= explode( '/', $_SERVER['SCRIPT_NAME'] )[3] ?? null;
-			if ( !in_array( $version, self::MEDIAWIKI_VERSIONS ) ) {
-				$version = null;
-			}
-		}
-
 		self::$currentDatabase ??= self::getCurrentDatabase();
-		$version ??= self::readDbListFile( 'databases', false, self::$currentDatabase )['v'] ?? null;
+		$version ??= self::readDbListFile( 'databases-' . self::LISTS[self::getWikiFarm()], false, self::$currentDatabase )['v'] ?? null;
 
 		return $version ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 	}
@@ -473,7 +483,7 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getConfigGlobals(): array {
-		global $IP, $wgDBname, $wgConf;
+		global $wgDBname, $wgConf, $wgExtensionInfoMTime;
 
 		// Try configuration cache
 		$confCacheFileName = "config-$wgDBname.json";
@@ -488,11 +498,13 @@ class MirahezeFunctions {
 			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
 
 			// When MediaWiki is upgraded
-			filemtime( "$IP/includes/Defines.php" ),
+			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
 		);
+
+		$wgExtensionInfoMTime = $confActualMtime;
 
 		static $globals = null;
 		$globals ??= self::readFromCache(
@@ -530,8 +542,8 @@ class MirahezeFunctions {
 		global $wgDBname, $wgConf;
 
 		$wikiTags = [];
-		if ( self::getRealm() !== 'default' ) {
-			$wikiTags[] = self::getRealm();
+		if ( self::getWikiFarm() !== 'default' ) {
+			$wikiTags[] = self::getWikiFarm();
 		}
 
 		static $cacheArray = null;
@@ -734,7 +746,7 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getActiveExtensions(): array {
-		global $IP, $wgDBname;
+		global $wgDBname;
 
 		$confCacheFileName = "config-$wgDBname.json";
 
@@ -746,7 +758,7 @@ class MirahezeFunctions {
 			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
 
 			// When MediaWiki is upgraded
-			filemtime( "$IP/includes/Defines.php" ),
+			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
 			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
@@ -781,23 +793,13 @@ class MirahezeFunctions {
 			array_diff( $allExtensions, static::$disabledExtensions )
 		);
 
-		// To-Do: Deprecate 'var', and make database/cache use extension names
-		/* return array_intersect( array_keys(
+		return array_keys( array_intersect_key(
+			$allExtensions,
 			array_intersect(
-				array_flip( $allExtensions ),
-				$cacheArray['extensions'] ?? []
+				array_flip( $cacheArray['extensions'] ?? [] ),
+				array_flip( $enabledExtensions )
 			)
-		), $enabledExtensions ); */
-
-		return array_intersect(
-			array_keys( array_intersect(
-				array_flip( array_filter( array_flip(
-					array_column( $wgManageWikiExtensions, 'var', 'name' )
-				) ) ),
-				$cacheArray['extensions'] ?? []
-			) ),
-			$enabledExtensions
-		);
+		) );
 	}
 
 	/**
@@ -831,25 +833,18 @@ class MirahezeFunctions {
 		global $wgDBname;
 
 		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
-			global $wgConf;
-			if ( self::getRealm() !== 'default' ) {
-				$wgConf->siteParamsCallback = static function () {
-					return [
-						'suffix' => null,
-						'lang' => 'en',
-						'tags' => [ self::getRealm() ],
-						'params' => [],
-					];
-				};
-			}
-
 			return;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/extension-list.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' ) ) {
+			if ( !is_dir( self::CACHE_DIRECTORY . '/' . $this->version ) ) {
+				// Create directory since it doesn't exist
+				mkdir( self::CACHE_DIRECTORY . '/' . $this->version );
+			}
+
 			$queue = array_fill_keys( array_merge(
-					glob( '/srv/mediawiki/w/extensions/*/extension*.json' ),
-					glob( '/srv/mediawiki/w/skins/*/skin.json' )
+					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/extensions/*/extension*.json' ),
+					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/skins/*/skin.json' )
 				),
 			true );
 
@@ -867,9 +862,9 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( self::CACHE_DIRECTORY . '/extension-list.json', json_encode( $list ), LOCK_EX );
+			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json', json_encode( $list ), LOCK_EX );
 		} else {
-			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' );
+			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' );
 			$list = json_decode( $extensionListFile, true );
 		}
 
@@ -885,6 +880,103 @@ class MirahezeFunctions {
 	}
 
 	/**
+	 * @param string $globalDatabase
+	 * @return array
+	 */
+	private static function getActiveList( string $globalDatabase ): array {
+		$dbr = self::getDatabaseConnection( $globalDatabase );
+		$activeWikis = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_sitename',
+			] )
+			->where( [
+				'wiki_closed' => 0,
+				'wiki_deleted' => 0,
+				'wiki_inactive' => 0,
+			] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
+
+		$activeList = [];
+		foreach ( $activeWikis as $wiki ) {
+			$activeList[$wiki->wiki_dbname] = [
+				's' => $wiki->wiki_sitename,
+				'c' => $wiki->wiki_dbcluster,
+			];
+		}
+
+		return $activeList;
+	}
+
+	/**
+	 * @param string $globalDatabase
+	 * @param ?string $version
+	 * @return array
+	 */
+	private static function getCombiList( string $globalDatabase, ?string $version = null ): array {
+		$dbr = self::getDatabaseConnection( $globalDatabase );
+		$wikiVersion = $version ? [ 'wiki_version' => $version ] : [];
+		$allWikis = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_url',
+				'wiki_sitename',
+				'wiki_version',
+			] )
+			->where( [ 'wiki_deleted' => 0 ] + $wikiVersion )
+			->caller( __METHOD__ )
+			->fetchResultSet();
+
+		$combiList = [];
+		foreach ( $allWikis as $wiki ) {
+			$combiList[$wiki->wiki_dbname] = [
+				's' => $wiki->wiki_sitename,
+				'c' => $wiki->wiki_dbcluster,
+				'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
+			];
+
+			if ( $wiki->wiki_url !== null ) {
+				$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
+			}
+		}
+
+		return $combiList;
+	}
+
+	/**
+	 * @param string $globalDatabase
+	 * @return array
+	 */
+	private static function getDeletedList( string $globalDatabase ): array {
+		$dbr = self::getDatabaseConnection( $globalDatabase );
+		$deletedWikis = $dbr->newSelectQueryBuilder()
+			->table( 'cw_wikis' )
+			->fields( [
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_sitename',
+			] )
+			->where( [ 'wiki_deleted' => 1 ] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
+
+		$deletedList = [];
+		foreach ( $deletedWikis as $wiki ) {
+			$deletedList[$wiki->wiki_dbname] = [
+				's' => $wiki->wiki_sitename,
+				'c' => $wiki->wiki_dbcluster,
+			];
+		}
+
+		return $deletedList;
+	}
+
+	/**
 	 * @param string $databaseName
 	 * @return DBConnRef
 	 */
@@ -896,90 +988,60 @@ class MirahezeFunctions {
 	}
 
 	/**
-	 * @param string $globalDatabase
-	 * @return array
-	 */
-	private static function generateDatabaseLists( string $globalDatabase ) {
-		$dbr = self::getDatabaseConnection( $globalDatabase );
-		$allWikis = $dbr->newSelectQueryBuilder()
-			->table( 'cw_wikis' )
-			->fields( [
-				 'wiki_dbcluster',
-				 'wiki_dbname',
-				 'wiki_url',
-				 'wiki_sitename',
-				 'wiki_version',
-				 'wiki_deleted',
-				 'wiki_closed',
-				 'wiki_inactive',
-			] )
-			->caller( __METHOD__ )
-			->fetchResultSet();
-
-		$activeList = [];
-		$combiList = [];
-		$deletedList = [];
-		foreach ( $allWikis as $wiki ) {
-			if ( (int)$wiki->wiki_deleted === 1 ) {
-				$deletedList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
-			} else {
-				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
-					$activeList[$wiki->wiki_dbname] = [
-						's' => $wiki->wiki_sitename,
-						'c' => $wiki->wiki_dbcluster,
-					];
-				}
-
-				$combiList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-					'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
-				];
-
-				if ( $wiki->wiki_url !== null ) {
-					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
-				}
-			}
-		}
-
-		return [
-			'active' => $activeList,
-			'databases' => $combiList,
-			'deleted' => $deletedList,
-		];
-	}
-
-	/**
 	 * @param array &$databaseLists
 	 */
 	public static function onGenerateDatabaseLists( array &$databaseLists ) {
-		$default = self::generateDatabaseLists( self::GLOBAL_DATABASE['default'] );
-		$beta = self::generateDatabaseLists( self::GLOBAL_DATABASE['beta'] );
 		$databaseLists = [
 			'active' => [
-				'combi' => $default['active']
+				'combi' => self::getActiveList(
+					self::GLOBAL_DATABASE['default']
+				),
 			],
 			'active-beta' => [
-				'combi' => $beta['active']
-			],
-			'beta' => [
-				'combi' => $beta['databases']
+				'combi' => self::getActiveList(
+					self::GLOBAL_DATABASE['beta']
+				),
 			],
 			'databases' => [
-				'combi' => $default['databases']
+				'combi' => self::getCombiList(
+					self::GLOBAL_DATABASE['default']
+				),
+			],
+			'databases-beta' => [
+				'combi' => self::getCombiList(
+					self::GLOBAL_DATABASE['beta']
+				),
 			],
 			'deleted' => [
 				'deleted' => 'databases',
-				'databases' => $default['deleted']
+				'databases' => self::getDeletedList(
+					self::GLOBAL_DATABASE['default']
+				),
 			],
 			'deleted-beta' => [
-				'deleted-beta' => 'databases',
-				'databases' => $beta['deleted']
+				'deleted' => 'databases',
+				'databases' => self::getDeletedList(
+					self::GLOBAL_DATABASE['beta']
+				),
 			],
 		];
+
+		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
+			$databaseLists += [
+				$name . '-wikis' => [
+					'combi' => self::getCombiList(
+						self::GLOBAL_DATABASE['default'],
+						$version
+					),
+				],
+				$name . '-wikis-beta' => [
+					'combi' => self::getCombiList(
+						self::GLOBAL_DATABASE['beta'],
+						$version
+					),
+				],
+			];
+		}
 	}
 
 	/**
@@ -998,10 +1060,57 @@ class MirahezeFunctions {
 		$jsonArray['states']['locked'] = (bool)$row->wiki_locked;
 	}
 
+	/**
+	 * @param bool $ceMW
+	 * @param IContextSource $context
+	 * @param string $dbName
+	 * @param array &$formDescriptor
+	 */
+	public static function onManageWikiCoreAddFormFields( $ceMW, $context, $dbName, &$formDescriptor ) {
+		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
+
+		$mwVersion = self::getMediaWikiVersion( $dbName );
+		$versions = array_unique( array_filter( self::MEDIAWIKI_VERSIONS, static function ( $version ) use ( $mwVersion ): bool {
+			return $mwVersion === $version || is_dir( self::MEDIAWIKI_DIRECTORY . $version );
+		} ) );
+
+		asort( $versions );
+
+		$formDescriptor['mediawiki-version'] = [
+			'label-message' => 'miraheze-label-managewiki-mediawiki-version',
+			'type' => 'select',
+			'options' => array_combine( $versions, $versions ),
+			'default' => $mwVersion,
+			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'cssclass' => 'managewiki-infuse',
+			'section' => 'main',
+		];
+	}
+
+	/**
+	 * @param IContextSource $context
+	 * @param string $dbName
+	 * @param DBConnRef $dbw
+	 * @param array $formData
+	 * @param RemoteWiki &$wiki
+	 */
+	public static function onManageWikiCoreFormSubmission( $context, $dbName, $dbw, $formData, &$wiki ) {
+		$version = self::getMediaWikiVersion( $dbName );
+		if ( $formData['mediawiki-version'] !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $formData['mediawiki-version'] ) ) {
+			$wiki->newRows['wiki_version'] = $formData['mediawiki-version'];
+			$wiki->changes['mediawiki-version'] = [
+				'old' => $version,
+				'new' => $formData['mediawiki-version']
+			];
+		}
+	}
+
 	public static function onMediaWikiServices() {
 		if ( isset( $GLOBALS['globals'] ) ) {
 			foreach ( $GLOBALS['globals'] as $global => $value ) {
-				if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) ) {
+				if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) &&
+					$global !== 'wgManageWikiPermissionsAdditionalRights'
+				) {
 					$GLOBALS[$global] = $value;
 				}
 			}
