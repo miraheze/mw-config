@@ -1133,6 +1133,9 @@ $wgConf->settings += [
 	'wgDiscordAvatarUrl' => [
 		'default' => '',
 	],
+	'wgDiscordFromName' => [
+		'default' => $wi->sitename,
+	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
 	],
