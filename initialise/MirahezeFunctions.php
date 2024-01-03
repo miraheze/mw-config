@@ -840,6 +840,18 @@ class MirahezeFunctions {
 		global $wgDBname;
 
 		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
+			global $wgConf;
+			if ( self::getRealm() !== 'default' ) {
+				$wgConf->siteParamsCallback = static function () {
+					return [
+						'suffix' => null,
+						'lang' => 'en',
+						'tags' => [ self::getRealm() ],
+						'params' => [],
+					];
+				};
+			}
+
 			return;
 		}
 
