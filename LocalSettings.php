@@ -4426,6 +4426,10 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
+		'+321nailswiki' => [
+			'templateeditor',
+			'extendedconfirmed',
+		],
 		'+allpediawiki' => [
 			'editextendedconfirmedprotected',
 		],
