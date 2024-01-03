@@ -789,13 +789,24 @@ class MirahezeFunctions {
 			array_diff( $allExtensions, static::$disabledExtensions )
 		);
 
-		return array_keys( array_intersect_key(
+		// To-Do: Deprecate 'var', and make database/cache use extension names
+		/* return array_keys( array_intersect_key(
 			$allExtensions,
 			array_intersect(
 				array_flip( $cacheArray['extensions'] ?? [] ),
 				array_flip( $enabledExtensions )
 			)
-		) );
+		) ); */
+
+		return array_intersect(
+			array_keys( array_intersect(
+				array_flip( array_filter( array_flip(
+					array_column( $wgManageWikiExtensions, 'var', 'name' )
+				) ) ),
+				$cacheArray['extensions'] ?? []
+			) ),
+			$enabledExtensions
+		);
 	}
 
 	/**
@@ -832,15 +843,15 @@ class MirahezeFunctions {
 			return;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' ) ) {
-			if ( !is_dir( self::CACHE_DIRECTORY . '/' . $this->version ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/extension-list.json' ) ) {
+			/* if ( !is_dir( self::CACHE_DIRECTORY . '/' . $this->version ) ) {
 				// Create directory since it doesn't exist
 				mkdir( self::CACHE_DIRECTORY . '/' . $this->version );
-			}
+			} */
 
 			$queue = array_fill_keys( array_merge(
-					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/extensions/*/extension*.json' ),
-					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/skins/*/skin.json' )
+					glob( self::MEDIAWIKI_DIRECTORY . 'extensions/*/extension*.json' ),
+					glob( self::MEDIAWIKI_DIRECTORY . 'skins/*/skin.json' )
 				),
 			true );
 
@@ -858,9 +869,9 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json', json_encode( $list ), LOCK_EX );
+			file_put_contents( self::CACHE_DIRECTORY . '/extension-list.json', json_encode( $list ), LOCK_EX );
 		} else {
-			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' );
+			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' );
 			$list = json_decode( $extensionListFile, true );
 		}
 
