@@ -322,7 +322,7 @@ class MirahezeFunctions {
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 		$wgDBname = $this->dbname;
 
-		$wgCreateWikiDatabase = self::GLOBAL_DATABASE[array_flip( SELF::TAGS )[$this->realm]];
+		$wgCreateWikiDatabase = self::GLOBAL_DATABASE[array_flip( self::TAGS )[$this->realm]];
 	}
 
 	/**
