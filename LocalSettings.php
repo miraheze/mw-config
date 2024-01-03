@@ -1628,12 +1628,14 @@ $wgConf->settings += [
 			5258,
 			/** Paladox (SRE) */
 			13554,
-			/** Owen (Board) */
+			/** Owen (SRE and Board) */
 			73651,
 			/** MacFan4000 (SRE) */
 			6758,
 			/** Universal Omega (SRE) */
 			438966,
+			/** Agent Isai (SRE) */
+			2639,
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
