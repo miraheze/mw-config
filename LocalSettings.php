@@ -2724,6 +2724,11 @@ $wgConf->settings += [
 				'editor',
 			],
 		],
+		'metawiki' => [
+			'sysadmin' => [
+				'sysadmin',
+			],
+		],
 	],
 	'wgManageWikiPermissionsAdditionalRights' => [
 		'default' => [
@@ -3122,6 +3127,11 @@ $wgConf->settings += [
 		'sesupportwiki' => [
 			'sysop' => [
 				'editor',
+			],
+		],
+		'metawiki' => [
+			'sysadmin' => [
+				'sysadmin',
 			],
 		],
 	],
