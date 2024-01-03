@@ -57,6 +57,13 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'dragonquestxwiki':
+		$wgPopupsConf['contentPreviews'] = [
+  			'image' => true,  
+  			'description' => false,
+		];
+
+		break;
 	case 'dragontamerwiki':
 		$wgDplSettings['maxCategoryCount'] = 7;
 
