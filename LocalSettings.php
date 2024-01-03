@@ -2026,15 +2026,15 @@ $wgConf->settings += [
 			],
 			'miraheze' => [
 				/** Miraheze */
-				'interwiki' => 'miraheze',
+				'interwiki' => 'mh',
 				'url' => 'https://$2.miraheze.org/wiki/$1',
+				'dbname' => '$2wiki',
 				'baseTransOnly' => true,
 			],
 			'wikitide' => [
 				/** WikiTide */
 				'interwiki' => 'wt',
 				'url' => 'https://$2.wikitide.org/wiki/$1',
-				'dbname' => '$2wiki',
 				'baseTransOnly' => true,
 			],
 			'wikiforge' => [
