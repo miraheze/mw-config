@@ -45,7 +45,7 @@ class MirahezeFunctions {
 		'beta' => 'testglobal',
 	];
 
-	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
+	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/w/';
 
 	private const TAGS = [
 		'default' => 'default',
