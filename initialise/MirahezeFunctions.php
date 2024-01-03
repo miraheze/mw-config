@@ -40,16 +40,16 @@ class MirahezeFunctions {
 		'mirabeta' => 'mirabeta.org',
 	];
 
+	private const GLOBAL_DATABASE = [
+		'default' => 'mhglobal',
+		'beta' => 'testglobal',
+	];
+
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
 	private const TAGS = [
 		'default' => 'default',
 		'beta' => 'mirabeta',
-	];
-
-	public const GLOBAL_DATABASE = [
-		'default' => 'mhglobal',
-		'beta' => 'testglobal',
 	];
 
 	public const LISTS = [
