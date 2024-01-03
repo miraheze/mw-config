@@ -37,7 +37,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'dlfmwiki':
-		$wgHooks['TranslatePostInitGroups'][] = function ( &$list, &$deps, &$autoload ) {
+		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
 			$id = 'local-sys-msg';
 			$mg = new WikiMessageGroup( $id, 'local-messages' );
 			$mg->setLabel( 'Local System Messagss' );
@@ -45,7 +45,7 @@ switch ( $wi->dbname ) {
 			$list[$id] = $mg;
 			return true;
 		};
-	
+
 		break;
 	case 'dmlwikiwiki':
 		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
