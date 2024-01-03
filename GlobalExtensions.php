@@ -21,6 +21,7 @@ wfLoadExtensions( [
 	'GlobalCssJs',
 	'GlobalNewFiles',
 	'Interwiki',
+	'InterwikiDispatcher',
 	'IPInfo',
 	'LoginNotify',
 	'ManageWiki',
