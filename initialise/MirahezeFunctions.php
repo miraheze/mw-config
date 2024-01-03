@@ -294,8 +294,8 @@ class MirahezeFunctions {
 
 		static $database = null;
 
-		$database ??= self::readDbListFile( 'beta', true, 'https://' . $hostname, true ) ?:
-			self::readDbListFile( 'production', true, 'https://' . $hostname, true );
+		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
+			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
 
 		if ( $database ) {
 			return $database;
