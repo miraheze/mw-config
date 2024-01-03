@@ -62,6 +62,8 @@ switch ( $wi->dbname ) {
   			'image' => true,  
   			'description' => false,
 		];
+
+		break;
 	case 'dragontamerwiki':
 		$wgDplSettings['maxCategoryCount'] = 7;
 
