@@ -915,10 +915,6 @@ $wgConf->settings += [
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
 	],
-	'wgCreateWikiDatabase' => [
-		'default' => 'mhglobal',
-		'mirabeta' => 'testglobal',
-	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'c2',
