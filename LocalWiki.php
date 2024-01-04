@@ -337,6 +337,10 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'metawikibeta':
+		$wgDplSettings['maxCategoryCount'] = 10;
+
+		break;
+	case 'metzowiki':
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
