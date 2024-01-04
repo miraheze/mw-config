@@ -340,6 +340,10 @@ switch ( $wi->dbname ) {
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
+	case 'metzowiki':
+		$wgDplSettings['maxCategoryCount'] = 10;
+
+		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
