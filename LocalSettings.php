@@ -5013,7 +5013,7 @@ $wgConf->settings += [
 			'span.geo-nondefault',
 			'#coordinates',
 		],
-		'-softcellwiki' => [
+		'softcellwiki' => [
 			'table',
 			'script',
 			'input',
