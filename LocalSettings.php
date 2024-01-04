@@ -1976,6 +1976,7 @@ $wgConf->settings += [
 	],
 	'wgExtraLanguageNames' => [
 		'default' => [
+			// Prevent mh from being treated as an interlanguage link (T11615)
 			'mh' => '',
 		],
 		'+benpediawiki' => [
