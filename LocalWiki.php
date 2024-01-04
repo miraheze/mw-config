@@ -337,11 +337,11 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'metawikibeta':
-		$wgDplSettings['maxCategoryCount'] = 10;
+		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
 	case 'metzowiki':
-		wfLoadExtension( 'GlobalWatchlist' );
+		$wgDplSettings['maxCategoryCount'] = 10;
 
 		break;
 	case 'newusopediawiki':
