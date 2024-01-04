@@ -953,18 +953,20 @@ class MirahezeFunctions {
 					];
 				}
 
+				$wikiVersion = ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
+
 				$combiList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
 					'c' => $wiki->wiki_dbcluster,
-					'v' => ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()],
+					'v' => $wikiVersion,
 				];
 
 				if ( $wiki->wiki_url !== null ) {
 					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
 				}
 
-				if ( isset( $versions[$wiki->wiki_version] ) ) {
-					$versions[$wiki->wiki_version][$wiki->wiki_dbname] = $combiList[$wiki->wiki_dbname];
+				if ( isset( $versions[$wikiVersion] ) ) {
+					$versions[$wikiVersion][$wiki->wiki_dbname] = $combiList[$wiki->wiki_dbname];
 				}
 			}
 		}
