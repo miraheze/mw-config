@@ -5013,6 +5013,21 @@ $wgConf->settings += [
 			'span.geo-nondefault',
 			'#coordinates',
 		],
+		'softcellwiki' => [
+			'table',
+			'script',
+			'input',
+			'style',
+			'ul.gallery',
+			'.mw-editsection',
+			'sup.reference',
+			'ol.references',
+			'.error',
+			'.nomobile',
+			'.noprint',
+			'.noexcerpt',
+			'.sortkey',
+		],
 	],
 
 	// TimedMediaHandler
