@@ -476,7 +476,7 @@ switch ( $wi->dbname ) {
 				'.noprint',
 				'.noexcerpt',
 				'.sortkey',
-			]
+			];
   		break;
 	case 'srewiki':
 		wfLoadExtension( 'LdapAuthentication' );
