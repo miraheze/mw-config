@@ -1975,39 +1975,41 @@ $wgConf->settings += [
 		],
 	],
 	'wgExtraLanguageNames' => [
-		'default' => [],
-		'benpediawiki' => [
+		'default' => [
+			'mh' => '',
+		],
+		'+benpediawiki' => [
 			'qbg' => 'bengénesk',
 		],
-		'factfinder3dwiki' => [
+		'+factfinder3dwiki' => [
 			'eg' => 'Anchiartedlixh Lrieggulier',
 			'bl' => 'Betlix',
 			'et' => 'Entertidés Lettíno',
 			'gb' => 'Globiens',
 			'rb' => 'Robbochiex',
 		],
-		'fuutropediawiki' => [
+		'+fuutropediawiki' => [
 			'eg' => 'Anchiartedlixh Lrieggulier',
 			'bl' => 'Betlix',
 			'et' => 'Entertidés Lettíno',
 			'gb' => 'Globiens',
 			'rb' => 'Robbochiex',
 		],
-		'gpcommonswiki' => [
+		'+gpcommonswiki' => [
 			'qqq' => 'Message documentation',
 			'pcm' => 'Nigerian Pidgin',
 		],
-		'gratisdatawiki' => [
+		'+gratisdatawiki' => [
 			'qqq' => 'Message documentation',
 			'pcm' => 'Nigerian Pidgin',
 		],
-		'isvwiki' => [
+		'+isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
-		'sonaponawiki' => [
+		'+sonaponawiki' => [
 			'tok' => 'toki pona',
 		],
-		'wikibenwiki' => [
+		'+wikibenwiki' => [
 			'bw' => 'Benwegul',
 		],
 	],
