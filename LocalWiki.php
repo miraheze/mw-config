@@ -459,6 +459,25 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'softcellwiki':
+		wfLoadExtension( 'TextExtracts' );
+
+		$wgExtractsRemoveClasses[] = [
+				'table',
+				'script',
+				'input',
+				'style',
+				'ul.gallery',
+				'.mw-editsection',
+				'sup.reference',
+				'ol.references',
+				'.error',
+				'.nomobile',
+				'.noprint',
+				'.noexcerpt',
+				'.sortkey',
+			]
+  		break;
 	case 'srewiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
