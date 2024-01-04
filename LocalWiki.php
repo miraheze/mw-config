@@ -353,7 +353,7 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxCategoryCount'] = 10;
 
 		break;
-	case 'picrosswikitide':
+	case 'picrosswiki':
 		$wgLogos = [
 			'svg' => "https://static.your.wf/picrosswikitide/0/0a/Pikuw.svg",
 		];
