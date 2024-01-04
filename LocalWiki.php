@@ -353,6 +353,11 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxCategoryCount'] = 10;
 
 		break;
+	case 'picrosswikitide':
+		$wgLogos = [
+			'svg' => "https://static.your.wf/picrosswikitide/0/0a/Pikuw.svg",
+		];
+		break;
 	case 'pokemundowiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
