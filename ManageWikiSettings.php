@@ -3502,15 +3502,6 @@ $wgManageWikiSettings = [
 		'help' => 'The color defined in the <code>theme-color</code> meta tag.',
 		'requires' => [],
 	],
-	'wgCitizenEnableSearch' => [
-		'name' => 'Citizen Enable Search',
-		'from' => 'citizen',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Enable or disable rich search suggestions',
-		'requires' => [],
-	],
 	'wgCitizenSearchGateway' => [
 		'name' => 'Citizen Search Gateway',
 		'from' => 'citizen',
@@ -3522,12 +3513,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'mwActionApi',
 		'section' => 'styling',
 		'help' => 'Which gateway to use for fetching search suggestion',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenEnableSearch',
-				'value' => true,
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenSearchDescriptionSource' => [
 		'name' => 'Citizen Search Description Source',
@@ -3541,12 +3527,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'textextracts',
 		'section' => 'styling',
 		'help' => 'Source of description text on search suggestions',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenSearchGateway',
-				'value' => 'mwActionApi',
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenMaxSearchResults' => [
 		'name' => 'Citizen Max Search Results',
@@ -3557,12 +3538,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 6,
 		'section' => 'styling',
 		'help' => 'Max number of search suggestions',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenEnableSearch',
-				'value' => true,
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenEnableCJKFonts' => [
 		'name' => 'Citizen Enable CJK fonts',
@@ -3584,15 +3560,6 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'styling',
 		'help' => 'List of skin names (e.g. "minerva", "vector") where related articles will be shown in the footer.',
-		'requires' => [],
-	],
-	'wgMultiBoilerplateDiplaySpecialPage' => [
-		'name' => 'MultiBoilerplate Diplay SpecialPage',
-		'from' => 'multiboilerplate',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'if set, will add to the wiki a page named Special:Boilerplates that shows the currently configured boilerplates.',
 		'requires' => [],
 	],
 	'wgAllowUserCss' => [

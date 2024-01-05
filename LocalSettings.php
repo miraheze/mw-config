@@ -593,9 +593,6 @@ $wgConf->settings += [
 	'wgCitizenThemeColor' => [
 		'default' => '#131a21',
 	],
-	'wgCitizenEnableSearch' => [
-		'default' => true,
-	],
 	'wgCitizenSearchGateway' => [
 		'default' => 'mwActionApi',
 	],
@@ -3797,10 +3794,6 @@ $wgConf->settings += [
 	],
 
 	// MultiBoilerplate
-	'wgMultiBoilerplateDisplaySpecialPage' => [
-		'vgportdbwiki' => true,
-		'ext-MultiBoilerplate' => false,
-	],
 	'wgMultiBoilerplateOptions' => [
 		'ext-MultiBoilerplate' => false,
 	],
