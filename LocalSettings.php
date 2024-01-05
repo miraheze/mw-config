@@ -3959,6 +3959,7 @@ $wgConf->settings += [
 	// Pagelang
 	'wgPageLanguageUseDB' => [
 		'default' => false,
+		'sonaponawiki' => true,
 	],
 
 	// PageForms
