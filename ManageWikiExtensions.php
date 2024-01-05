@@ -522,7 +522,11 @@ $wgManageWikiExtensions = [
 				'jsonconfig',
 				'codeeditor',
 			],
+			'permissions' => [
+				'managewiki-restricted',
+			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10756">T10756</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'groupssidebar' => [
@@ -888,7 +892,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
 		'var' => 'wmgUseRegexFunctions',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10882">T10882</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'rightfunctions' => [
@@ -1435,13 +1444,18 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
 		'var' => 'wmgUseGrowthExperiments',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'visualeditor',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_recommendations.sql",
 				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_submissions.sql",
 				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentee_data.sql",
 				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentor_mentee.sql",
+				'growthexperiments_user_impact' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_user_impact.sql"
 			],
 			'permissions' => [
 				'sysop' => [
@@ -1463,6 +1477,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10883">T10883</a> for details.',
 		'install' => [
 			'sql' => [
 				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
@@ -2211,7 +2226,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
 		'var' => 'wmgUseEditNotify',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled, please see <a href="https://phabricator.miraheze.org/T10885">T10885</a> for details.',
 		'section' => 'other',
 	],
 	'editsubpages' => [
@@ -2768,6 +2788,11 @@ $wgManageWikiExtensions = [
 		'requires' => [
 			'extensions' => [
 				'wikibaserepository',
+			],
+		],
+		'install' => [
+			'sql' => [
+				'wbs_propertypairs' => "$IP/extensions/PropertySuggester/sql/mysql/tables-generated.sql"
 			],
 		],
 		'section' => 'other',
@@ -3540,7 +3565,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 		'var' => 'wmgUseWikiForum',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10871">T10871</a> for details.',
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"

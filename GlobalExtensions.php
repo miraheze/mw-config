@@ -21,10 +21,12 @@ wfLoadExtensions( [
 	'GlobalCssJs',
 	'GlobalNewFiles',
 	'Interwiki',
+	'InterwikiDispatcher',
 	'IPInfo',
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
+	'MessageCachePerformance',
 	'MirahezeMagic',
 	'MobileDetect',
 	'NativeSvgHandler',
@@ -33,12 +35,11 @@ wfLoadExtensions( [
 	'OAuth',
 	'ParserFunctions',
 	'QuickInstantCommons',
-	'Renameuser',
 	'RottenLinks',
 	'Scribunto',
 	// 'SecureLinkFixer',
 	'SpamBlacklist',
-	'StopForumSpam',
+	// 'StopForumSpam',
 	'TitleBlacklist',
 	'TorBlock',
 	'WebAuthn',
@@ -46,3 +47,14 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr',
 ] );
+
+if ( version_compare( MW_VERSION, '1.41', '>=' ) ) {
+	wfLoadExtension( 'ParserMigration' );
+}
+
+// Renameuser is bundled into core from 1.40+
+if ( version_compare( MW_VERSION, '1.40', '<' ) ) {
+	wfLoadExtension( 'Renameuser' );
+}
+
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );

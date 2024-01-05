@@ -36,6 +36,17 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'dlfmwiki':
+		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
+			$id = 'local-sys-msg';
+			$mg = new WikiMessageGroup( $id, 'local-messages' );
+			$mg->setLabel( 'Local System Messagss' );
+			$mg->setDescription( 'Messages used specially on this wiki.' );
+			$list[$id] = $mg;
+			return true;
+		};
+
+		break;
 	case 'dmlwikiwiki':
 		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
 
@@ -44,6 +55,13 @@ switch ( $wi->dbname ) {
 
 			return true;
 		}
+
+		break;
+	case 'dragonquestxwiki':
+		$wgPopupsConf['contentPreviews'] = [
+			'image' => true,
+			'description' => false,
+		];
 
 		break;
 	case 'dragontamerwiki':
@@ -282,7 +300,7 @@ switch ( $wi->dbname ) {
 			],
 			'requestbetaaccount' => [
 				'RecipientUser' => 'Miraheze Operations',
-				'SenderName' => 'Betaheze account creation request (via Meta)',
+				'SenderName' => 'Mirabeta account creation request (via Meta)',
 				'RequireDetails' => true,
 				'MustBeLoggedIn' => true,
 				'AdditionalFields' => [
@@ -322,6 +340,10 @@ switch ( $wi->dbname ) {
 		wfLoadExtension( 'GlobalWatchlist' );
 
 		break;
+	case 'metzowiki':
+		$wgDplSettings['maxCategoryCount'] = 10;
+
+		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
@@ -334,6 +356,11 @@ switch ( $wi->dbname ) {
 	case 'persistwiki':
 		$wgDplSettings['maxCategoryCount'] = 10;
 
+		break;
+	case 'picrosswiki':
+		$wgLogos = [
+			'svg' => "https://static.miraheze.org/picrosswiki/0/0a/Pikuw.svg",
+		];
 		break;
 	case 'pokemundowiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -452,6 +479,11 @@ switch ( $wi->dbname ) {
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
+
+		break;
+	case 'whentheycrywiki':
+		$wgGalleryOptions['imageWidth'] = 200;
+		$wgGalleryOptions['imageHeight'] = 200;
 
 		break;
 	case 'wonderingstarswiki':

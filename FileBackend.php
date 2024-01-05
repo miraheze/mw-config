@@ -20,12 +20,19 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
+$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$redisServerIP = $beta ?
+	'[2a10:6740::6:406]:6379' :
+	'[2a10:6740::6:306]:6379';
+
 $wgLockManagers[] = [
 	'name' => 'redisLockManager',
 	'class' => RedisLockManager::class,
 	'lockServers' => [
-		// jobchron121
-		'rdb1' => '[2a10:6740::6:306]:6379',
+		'rdb1' => $redisServerIP,
+	],
+	'srvsByBucket' => [
+		0 => [ 'rdb1' ]
 	],
 	'redisConfig' => [
 		'connectTimeout' => 2,
