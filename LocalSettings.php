@@ -3588,6 +3588,9 @@ $wgConf->settings += [
 	'wgMFAutodetectMobileView' => [
 		'default' => true,
 	],
+	'wgMFDefaultEditor' => [
+		'default' => 'preference',
+	],
 	'wgDefaultMobileSkin' => [
 		'default' => 'minerva',
 	],
