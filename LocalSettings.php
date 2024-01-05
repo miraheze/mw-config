@@ -2511,7 +2511,7 @@ $wgConf->settings += [
 			'_blank' => [ '' ]
 		],
 	],
-	
+
 	// LinkTitles
 	'wgLinkTitlesFirstOnly' => [
 		'default' => true,
