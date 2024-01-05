@@ -3807,7 +3807,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
-	// T11025
+	// NearbyPages - T11025
 	'wgNearbyPagesUrl' => [
 		'default' => '/w/api.php',
 	],
