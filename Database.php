@@ -2,28 +2,26 @@
 
 $wgLBFactoryConf = [
 	'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
+	'secret' => $wgSecretKey,
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db101' => 1,
+			'db131' => 0,
 		],
 		'c1' => [
-			'db101' => 1,
+			'db131' => 0,
 		],
 		'c2' => [
-			'db101' => 1,
+			'db101' => 0,
 		],
 		'c3' => [
-			'db141' => 1,
+			'db142' => 0,
 		],
 		'c4' => [
-			'db121' => 1,
+			'db121' => 0,
 		],
 		'c5' => [
-			'db131' => 1,
-		],
-		'c6' => [
-			'db141' => 1,
+			'db131' => 0,
 		],
 	],
 	'serverTemplate' => [
@@ -31,9 +29,8 @@ $wgLBFactoryConf = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		// DBO_SSL is deprecated in 1.39
-		// use 'ssl' parameter instead
-		'flags' => DBO_SSL,
+		'ssl' => true,
+		'flags' => DBO_DEFAULT | ( $wgCommandLineMode ? DBO_DEBUG : 0 ),
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 15,
@@ -51,20 +48,16 @@ $wgLBFactoryConf = [
 		'db101' => 'db101.miraheze.org',
 		'db121' => 'db121.miraheze.org',
 		'db131' => 'db131.miraheze.org',
-		'db141' => 'db141.miraheze.org',
+		'db142' => 'db142.miraheze.org',
 	],
 	'externalLoads' => [
 		'beta' => [
-			/** where the betawiki database is located */
-			'db121' => 1,
+			/** where the metawikibeta database is located */
+			'db121' => 0,
 		],
 		'echo' => [
 			/** where the metawiki database is located */
-			'db101' => 1,
-		],
-		'parsercache' => [
-			/** where the parsercache database is located */
-			'db121' => 1,
+			'db131' => 0,
 		],
 	],
 	'readOnlyBySection' => [
@@ -74,12 +67,23 @@ $wgLBFactoryConf = [
 		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c6' => 'DC Switchover in progress. Please try again in a few minutes.',
 	],
 ];
 
-// Disallow web request database transactions that are slower than 3 seconds
-$wgMaxUserDBWriteDuration = 3;
+// Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
+if ( PHP_SAPI === 'cli' ) {
+	$wgLBFactoryConf['loadMonitorClass'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+}
+
+// Disallow web request database transactions that are slower than 10 seconds
+$wgMaxUserDBWriteDuration = 10;
 
 // Max execution time for expensive queries of special pages (in milliseconds)
 $wgMaxExecutionTimeForExpensiveQueries = 30000;
+
+$wgMiserMode = true;
+
+// Compress revisions
+$wgCompressRevisions = true;
+
+$wgSQLMode = null;

@@ -272,6 +272,9 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'install' => [
+			'mwscript' => [
+				"$IP/extensions/MirahezeMagic/maintenance/createCargoDB.php" => [],
+			],
 			'sql' => [
 				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
 				'cargo_backlinks' => "$IP/extensions/Cargo/sql/cargo_backlinks.sql"
@@ -519,7 +522,11 @@ $wgManageWikiExtensions = [
 				'jsonconfig',
 				'codeeditor',
 			],
+			'permissions' => [
+				'managewiki-restricted',
+			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10756">T10756</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'groupssidebar' => [
@@ -701,8 +708,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'mathlatexml' => "$IP/extensions/Math/db/mathlatexml.mysql.sql",
-				'mathoid' => "$IP/extensions/Math/db/mathoid.mysql.sql"
+				'mathlatexml' => "$IP/extensions/Math/sql/mysql/mathlatexml.sql",
+				'mathoid' => "$IP/extensions/Math/sql/mysql/mathoid.sql"
 			],
 		],
 		'section' => 'parserhooks',
@@ -789,14 +796,6 @@ $wgManageWikiExtensions = [
 		'name' => 'OpenGraphMeta',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OpenGraphMeta',
 		'var' => 'wmgUseOpenGraphMeta',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
-	'pdfbook' => [
-		'name' => 'PdfBook',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfBook',
-		'var' => 'wmgUsePdfBook',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -893,7 +892,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
 		'var' => 'wmgUseRegexFunctions',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10882">T10882</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'rightfunctions' => [
@@ -1265,14 +1269,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'antispam',
 	],
-	'stopforumspam' => [
-		'name' => 'StopForumSpam',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StopForumSpam',
-		'var' => 'wmgUseStopForumSpam',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'antispam',
-	],
 
 	// Special pages
 	'adminlinks' => [
@@ -1382,14 +1378,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'flaggedpages' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedpage_pending' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedtemplates' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedpage_config' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs_tracking' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs_promote' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
-				'flaggedrevs_statistics' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/FlaggedRevs.sql",
+				'flaggedpages' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/tables-generated.sql",
 			],
 			'permissions' => [
 				'editor' => [
@@ -1455,13 +1444,18 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
 		'var' => 'wmgUseGrowthExperiments',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'extensions' => [
+				'visualeditor',
+			],
+		],
 		'install' => [
 			'sql' => [
-				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_recommendations.sql",
-				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_link_submissions.sql",
-				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentee_data.sql",
-				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/maintenance/schemas/mysql/growthexperiments_mentor_mentee.sql",
+				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_recommendations.sql",
+				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_submissions.sql",
+				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentee_data.sql",
+				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentor_mentee.sql",
+				'growthexperiments_user_impact' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_user_impact.sql"
 			],
 			'permissions' => [
 				'sysop' => [
@@ -1483,6 +1477,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10883">T10883</a> for details.',
 		'install' => [
 			'sql' => [
 				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
@@ -1557,6 +1552,14 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'section' => 'specialpages',
+	],
+	'nearbypages' => [
+		'name' => 'NearbyPages',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NearbyPages',
+		'var' => 'wmgUseNearbyPages',
+		'conflicts' => false,
+		'requires' => [],
 		'section' => 'specialpages',
 	],
 	'mediawikichat' => [
@@ -1726,10 +1729,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'pagetriage_tags' => "$IP/extensions/PageTriage/sql/PageTriageTags.sql",
-				'pagetriage_page_tags' => "$IP/extensions/PageTriage/sql/PageTriagePageTags.sql",
-				'pagetriage_page' => "$IP/extensions/PageTriage/sql/PageTriagePage.sql",
-				'pagetriage_log' => "$IP/extensions/PageTriage/sql/PageTriageLog.sql"
+				'pagetriage_tags' => "$IP/extensions/PageTriage/sql/mysql/tables-generated.sql",
 			],
 		],
 		'section' => 'specialpages',
@@ -1772,23 +1772,6 @@ $wgManageWikiExtensions = [
 				'sysop' => [
 					'permissions' => [
 						'quizadmin',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
-	'replacetext' => [
-		'name' => 'Replace Text',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
-		'var' => 'wmgUseReplaceText',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'replacetext',
 					],
 				],
 			],
@@ -1885,6 +1868,7 @@ $wgManageWikiExtensions = [
 				'translate_sections' => "$IP/extensions/Translate/sql/mysql/translate_sections.sql",
 				'translate_stash' => "$IP/extensions/Translate/sql/mysql/translate_stash.sql",
 				'translate_tms' => "$IP/extensions/Translate/sql/mysql/translate_tm.sql",
+				'translate_translatable_bundles' => "$IP/extensions/Translate/sql/mysql/translate_translatable_bundles.sql",
 			],
 		],
 		'section' => 'specialpages',
@@ -1980,216 +1964,6 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'specialpages',
-	],
-
-	// Skins
-	'anisa' => [
-		'name' => 'Anisa',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Anisa',
-		'var' => 'wmgUseAnisa',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'apex' => [
-		'name' => 'Apex',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
-		'var' => 'wmgUseApex',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'bluesky' => [
-		'name' => 'BlueSky',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:BlueSky',
-		'var' => 'wmgUseBlueSky',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'chameleon' => [
-		'name' => 'chameleon',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Chameleon',
-		'var' => 'wmgUseChameleon',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'citizen' => [
-		'name' => 'Citizen',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Citizen',
-		'var' => 'wmgUseCitizen',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'cosmos' => [
-		'name' => 'Cosmos',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cosmos',
-		'var' => 'wmgUseCosmos',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'dusktodawn' => [
-		'name' => 'Dusk To Dawn',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:DuskToDawn',
-		'var' => 'wmgUseDuskToDawn',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'erudite' => [
-		'name' => 'Erudite',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Erudite',
-		'var' => 'wmgUseErudite',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'evelution' => [
-		'name' => 'Evelution',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Evelution',
-		'var' => 'wmgUseEvelution',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'femiwiki' => [
-		'name' => 'Femiwiki',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Femiwiki',
-		'var' => 'wmgUseFemiwiki',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'flatbox' => [
-		'name' => 'Flatbox',
-		'linkPage' => 'https://github.com/enginbyram/mediawiki-flatbox',
-		'var' => 'wmgUseFlatbox',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'gamepress' => [
-		'name' => 'Gamepress',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
-		'var' => 'wmgUseGamepress',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'hassomecolours' => [
-		'name' => 'HasSomeColours',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:HasSomeColours',
-		'var' => 'wmgUseHasSomeColours',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'mask' => [
-		'name' => 'Mask',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mask',
-		'var' => 'wmgUseMask',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'medik' => [
-		'name' => 'Medik',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Medik',
-		'var' => 'wmgUseMedik',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'metrolook' => [
-		'name' => 'Metrolook',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Metrolook',
-		'var' => 'wmgUseMetrolook',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'minervaneue' => [
-		'name' => 'MinervaNeue',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Minerva_Neue',
-		'var' => 'wmgUseMinervaNeue',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'mirage' => [
-		'name' => 'Mirage',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
-		'var' => 'wmgUseMirage',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'monaco' => [
-		'name' => 'Monaco',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Monaco',
-		'var' => 'wmgUseMonaco',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'nimbus' => [
-		'name' => 'Nimbus',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nimbus',
-		'var' => 'wmgUseNimbus',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'nostalgia' => [
-		'name' => 'Nostalgia',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nostalgia',
-		'var' => 'wmgUseNostalgia',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'refreshed' => [
-		'name' => 'Refreshed',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Refreshed',
-		'var' => 'wmgUseRefreshed',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'snapwikiskin' => [
-		'name' => 'Snap! Wiki Skin',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Snap!_Wiki_Skin',
-		'var' => 'wmgUseSnapWikiSkin',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'truglass' => [
-		'name' => 'Truglass',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Truglass',
-		'var' => 'wmgUseTruglass',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'tweeki' => [
-		'name' => 'Tweeki',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Tweeki',
-		'var' => 'wmgUseTweeki',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
-	'wmau' => [
-		'name' => 'WMAU',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:WMAU',
-		'var' => 'wmgUseWMAU',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
 	],
 
 	// Other
@@ -2433,6 +2207,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
+				'discussiontools_items' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_persistent.sql",
 				'discussiontools_subscription' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_subscription.sql",
 			],
 		],
@@ -2451,7 +2226,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
 		'var' => 'wmgUseEditNotify',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled, please see <a href="https://phabricator.miraheze.org/T10885">T10885</a> for details.',
 		'section' => 'other',
 	],
 	'editsubpages' => [
@@ -2613,7 +2393,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'geo_tags' => "$IP/extensions/GeoData/sql/db-backed.sql"
+				'geo_tags' => "$IP/extensions/GeoData/sql/mysql/tables-generated.sql"
 			],
 		],
 		'section' => 'other',
@@ -2829,10 +2609,7 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'sql' => [
-				'nl_issues' => "$IP/extensions/Newsletter/sql/nl_issues.sql",
-				'nl_newsletters' => "$IP/extensions/Newsletter/sql/nl_newsletters.sql",
-				'nl_publishers' => "$IP/extensions/Newsletter/sql/nl_publishers.sql",
-				'nl_subscriptions' => "$IP/extensions/Newsletter/sql/nl_subscriptions.sql"
+				'nl_newsletters' => "$IP/extensions/Newsletter/sql/mysql/tables-generated.sql",
 			],
 		],
 		'section' => 'other',
@@ -2861,8 +2638,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'page_assessments' => "$IP/extensions/PageAssessments/db/addReviewsTable.sql",
-				'page_assessments_projects' => "$IP/extensions/PageAssessments/db/addProjectsTable.sql"
+				'page_assessments_projects' => "$IP/extensions/PageAssessments/db/mysql/tables-generated.sql"
 			],
 		],
 		'section' => 'other',
@@ -3014,6 +2790,11 @@ $wgManageWikiExtensions = [
 				'wikibaserepository',
 			],
 		],
+		'install' => [
+			'sql' => [
+				'wbs_propertypairs' => "$IP/extensions/PropertySuggester/sql/mysql/tables-generated.sql"
+			],
+		],
 		'section' => 'other',
 	],
 	'protectionindicator' => [
@@ -3079,6 +2860,14 @@ $wgManageWikiExtensions = [
 		'name' => 'RelatedArticles',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RelatedArticles',
 		'var' => 'wmgUseRelatedArticles',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
+	'removeredlinks' => [
+		'name' => 'RemoveRedlinks',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RemoveRedlinks',
+		'var' => 'wmgUseRemoveRedlinks',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
@@ -3158,14 +2947,6 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
-		'section' => 'other',
-	],
-	'slacknotifications' => [
-		'name' => 'Slack Notifications',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SlackNotifications',
-		'var' => 'wmgUseSlackNotifications',
-		'conflicts' => false,
-		'requires' => [],
 		'section' => 'other',
 	],
 	'softredirector' => [
@@ -3249,6 +3030,12 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
+		'install' => [
+			'sql' => [
+				'mws_title_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_title_index.sql",
+				'mws_user_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_user_index.sql",
+			],
+		],
 	],
 	'flow' => [
 		'name' => 'Flow',
@@ -3259,7 +3046,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'flow_revision' => "$IP/extensions/Flow/flow.sql"
+				'flow_revision' => "$IP/extensions/Flow/sql/mysql/tables-generated.sql"
 			],
 			'namespaces' => [
 				'Topic' => [
@@ -3306,7 +3093,7 @@ $wgManageWikiExtensions = [
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
-		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well. <br/><b>Note: <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Stewards" target="_blank">Stewards</a>, please ensure that a member of the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:SRE_Volunteers" target="_blank">Site Reliability Engineering</a> team is available and not mobile in order to run <code>mwscript extensions/SemanticMediaWiki/setupStore.php</code> on every MediaWiki server after enabling this.</b>',
+		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well. <br/><b>Note: <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Stewards" target="_blank">Stewards</a>, please ensure that a member of the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:SRE_Volunteers" target="_blank">Site Reliability Engineering</a> team is available and not mobile in order to run <a href="https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki" target="_blank">a series of commands</a> on mwtask141 after enabling this.</b>',
 		'var' => 'wmgUseSemanticMediaWiki',
 		'conflicts' => false,
 		'requires' => [
@@ -3778,7 +3565,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 		'var' => 'wmgUseWikiForum',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10871">T10871</a> for details.',
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
@@ -3832,5 +3624,231 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'section' => 'other',
+	],
+
+	// Skins
+	'anisa' => [
+		'name' => 'Anisa',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Anisa',
+		'var' => 'wmgUseAnisa',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'apex' => [
+		'name' => 'Apex',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
+		'var' => 'wmgUseApex',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'bluesky' => [
+		'name' => 'BlueSky',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:BlueSky',
+		'var' => 'wmgUseBlueSky',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'chameleon' => [
+		'name' => 'chameleon',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Chameleon',
+		'var' => 'wmgUseChameleon',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'citizen' => [
+		'name' => 'Citizen',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Citizen',
+		'var' => 'wmgUseCitizen',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'cosmos' => [
+		'name' => 'Cosmos',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cosmos',
+		'var' => 'wmgUseCosmos',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'dusktodawn' => [
+		'name' => 'Dusk To Dawn',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:DuskToDawn',
+		'var' => 'wmgUseDuskToDawn',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'erudite' => [
+		'name' => 'Erudite',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Erudite',
+		'var' => 'wmgUseErudite',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'evelution' => [
+		'name' => 'Evelution',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Evelution',
+		'var' => 'wmgUseEvelution',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'femiwiki' => [
+		'name' => 'Femiwiki',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Femiwiki',
+		'var' => 'wmgUseFemiwiki',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'flatbox' => [
+		'name' => 'Flatbox',
+		'linkPage' => 'https://github.com/enginbyram/mediawiki-flatbox',
+		'var' => 'wmgUseFlatbox',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'gamepress' => [
+		'name' => 'Gamepress',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
+		'var' => 'wmgUseGamepress',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'hassomecolours' => [
+		'name' => 'HasSomeColours',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:HasSomeColours',
+		'var' => 'wmgUseHasSomeColours',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'mask' => [
+		'name' => 'Mask',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mask',
+		'var' => 'wmgUseMask',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'medik' => [
+		'name' => 'Medik',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Medik',
+		'var' => 'wmgUseMedik',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'metrolook' => [
+		'name' => 'Metrolook',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Metrolook',
+		'var' => 'wmgUseMetrolook',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'minervaneue' => [
+		'name' => 'MinervaNeue',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Minerva_Neue',
+		'var' => 'wmgUseMinervaNeue',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'mirage' => [
+		'name' => 'Mirage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
+		'var' => 'wmgUseMirage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'monaco' => [
+		'name' => 'Monaco',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Monaco',
+		'var' => 'wmgUseMonaco',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'nimbus' => [
+		'name' => 'Nimbus',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nimbus',
+		'var' => 'wmgUseNimbus',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'nostalgia' => [
+		'name' => 'Nostalgia',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nostalgia',
+		'var' => 'wmgUseNostalgia',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'pivot' => [
+		'name' => 'Pivot',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Pivot',
+		'var' => 'wmgUsePivot',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'refreshed' => [
+		'name' => 'Refreshed',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Refreshed',
+		'var' => 'wmgUseRefreshed',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'snapwikiskin' => [
+		'name' => 'Snap! Wiki Skin',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Snap!_Wiki_Skin',
+		'var' => 'wmgUseSnapWikiSkin',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'splash' => [
+		'name' => 'Splash',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Splash',
+		'var' => 'wmgUseSplash',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'truglass' => [
+		'name' => 'Truglass',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Truglass',
+		'var' => 'wmgUseTruglass',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'tweeki' => [
+		'name' => 'Tweeki',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Tweeki',
+		'var' => 'wmgUseTweeki',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'wmau' => [
+		'name' => 'WMAU',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:WMAU',
+		'var' => 'wmgUseWMAU',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
 	],
 ];
