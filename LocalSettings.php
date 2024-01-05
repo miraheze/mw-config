@@ -10,7 +10,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
+if ( PHP_SAPI !== 'cli' ) {
+	header( "Cache-control: no-cache" );
+}
+
 setlocale( LC_ALL, 'en_GB.UTF-8' );
+
+// 1400MiB
+ini_set( 'memory_limit', 1400 * 1024 * 1024 );
 
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
@@ -28,9 +35,9 @@ if ( PHP_SAPI === 'cli' ) {
  * Disabled on production hosts because it seems to be causing performance issues (how ironic)
  */
 $forceprofile = $_GET['forceprofile'] ?? 0;
-if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
+if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
 	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
-		$xhprofFlags = XHPROF_FLAGS_NO_BUILTINS | XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY;
+		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 		xhprof_enable( $xhprofFlags );
 	} else {
 		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
@@ -44,7 +51,22 @@ if ( ( $forceprofile == 1 || PHP_SAPI === 'cli' ) && ( extension_loaded( 'tidewa
 		'output' => 'text',
 	];
 
+	unset( $xhprofFlags );
+
 	$wgHTTPTimeout = 60;
+} elseif ( PHP_SAPI === 'cli' && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
+	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
+		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+	} else {
+		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
+	}
+
+	$wgProfiler = [
+		'class' => ProfilerXhprof::class,
+		'flags' => $xhprofFlags,
+		'output' => 'text',
+	];
+	unset( $xhprofFlags );
 }
 
 // Show custom database maintenance error page on these clusters.
@@ -70,20 +92,21 @@ $wgConf->settings += [
 	],
 
 	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
-	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_READ_NEW.
+	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW.
+	// If confident that it worked then set SCHEMA_COMPAT_NEW.
 	'wgCommentTempTableSchemaMigrationStage' => [
 		'default' => [
-			'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+			'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
 		],
 		'mirabeta' => [
-			'rev_comment' => SCHEMA_COMPAT_READ_NEW,
+			'rev_comment' => SCHEMA_COMPAT_NEW,
 		],
 	],
 	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
-	// and to run migrateExternallinks. After set to SCHEMA_COMPAT_READ_NEW.
+	// and to run migrateExternallinks. After set to SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW.
 	'wgExternalLinksSchemaMigrationStage' => [
-		'default' => MIGRATION_OLD,
-		'mirabeta' => SCHEMA_COMPAT_READ_NEW,
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		'mirabeta' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	],
 
 	// 3D
@@ -215,6 +238,15 @@ $wgConf->settings += [
 	],
 
 	// ApprovedRevs
+	'egApprovedRevsAutomaticApprovals' => [
+		'default' => true,
+	],
+	'egApprovedRevsBlankFileIfUnapproved' => [
+		'default' => false,
+	],
+	'egApprovedRevsBlankIfUnapproved' => [
+		'default' => false,
+	],
 	'egApprovedRevsEnabledNamespaces' => [
 		'default' => [
 			NS_MAIN => true,
@@ -225,17 +257,17 @@ $wgConf->settings += [
 			NS_PROJECT => true
 		],
 	],
-	'egApprovedRevsAutomaticApprovals' => [
+	'egApprovedRevsFileAutomaticApprovals' => [
 		'default' => true,
+	],
+	'egApprovedRevsFileShowApproveLatest' => [
+		'default' => false,
 	],
 	'egApprovedRevsShowApproveLatest' => [
 		'default' => false,
-		'primalfeararkwiki' => true,
 	],
 	'egApprovedRevsShowNotApprovedMessage' => [
 		'default' => false,
-		'primalfeararkwiki' => true,
-		'zhtranswiki' => true,
 	],
 
 	// ArticleCreationWorkflow
@@ -335,6 +367,9 @@ $wgConf->settings += [
 		'+ext-WikiForum' => [
 			'wikiforum' => true,
 		],
+		'+ext-ContactPage' => [
+			'contactpage' => true,
+		],
 	],
 	'wgHCaptchaSiteKey' => [
 		'default' => 'e6d26503-a3fb-47fb-9639-efe259a34a33',
@@ -426,15 +461,6 @@ $wgConf->settings += [
 		'default' => 'centralauth_',
 		'mirabeta' => 'betacentralauth_',
 	],
-	'wgCentralAuthCreateOnView' => [
-		'default' => true,
-		'cvtwiki' => false,
-		'cwarswiki' => false,
-		'minecraftjapanwiki' => false,
-		'nenawikiwiki' => false,
-		'staffwiki' => false,
-		'stewardswiki' => false
-	],
 	'wgCentralAuthDatabase' => [
 		'default' => 'mhglobal',
 		'mirabeta' => 'testglobal',
@@ -471,12 +497,12 @@ $wgConf->settings += [
 		'metawikibeta' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
-		'default' => 'https://meta.miraheze.org/w/index.php/Special:BannerLoader',
-		'mirabeta' => 'https://meta.mirabeta.org/w/index.php/Special:BannerLoader',
+		'default' => 'https://meta.miraheze.org/w/index.php?title=Special:BannerLoader',
+		'mirabeta' => 'https://meta.mirabeta.org/w/index.php?title=Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
-		'default' => 'https://meta.miraheze.org/w/index.php/Special:RecordImpression',
-		'mirabeta' => 'https://meta.mirabeta.org/w/index.php/Special:RecordImpression',
+		'default' => 'https://meta.miraheze.org/w/index.php?title=Special:RecordImpression',
+		'mirabeta' => 'https://meta.mirabeta.org/w/index.php?title=Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
@@ -886,15 +912,11 @@ $wgConf->settings += [
 	'wgCreateWikiCustomDomainPage' => [
 		'default' => 'Special:MyLanguage/Custom_domains',
 	],
-	'wgCreateWikiDatabase' => [
-		'default' => 'mhglobal',
-		'mirabeta' => 'testglobal',
-	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'c2',
+			'c3',
 			'c4',
-			'c5',
 		],
 		'mirabeta' => [
 			'c4',
@@ -904,7 +926,7 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			'c1',
-			'c3',
+			'c5'
 		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
@@ -1104,6 +1126,9 @@ $wgConf->settings += [
 	'wgDiscordAvatarUrl' => [
 		'default' => '',
 	],
+	'wgDiscordFromName' => [
+		'default' => $wi->sitename,
+	],
 	'wgDiscordIgnoreMinorEdits' => [
 		'default' => false,
 	],
@@ -1167,7 +1192,11 @@ $wgConf->settings += [
 					],
 					'permissions' => [
 						'bot',
-						'managewiki',
+						'managewiki-core',
+						'managewiki-extensions',
+						'managewiki-namespaces',
+						'managewiki-permissions',
+						'managewiki-settings',
 					],
 				],
 				'article_saved' => [
@@ -1176,7 +1205,11 @@ $wgConf->settings += [
 					],
 					'permissions' => [
 						'bot',
-						'managewiki',
+						'managewiki-core',
+						'managewiki-extensions',
+						'managewiki-namespaces',
+						'managewiki-permissions',
+						'managewiki-settings',
 					],
 				],
 			],
@@ -1421,12 +1454,6 @@ $wgConf->settings += [
 	],
 
 	// HTTP
-	'wgHTTPConnectTimeout' => [
-		'default' => 3.0,
-	],
-	'wgHTTPTimeout' => [
-		'default' => 20,
-	],
 	'wgHTTPProxy' => [
 		'default' => 'http://bast.miraheze.org:8080',
 	],
@@ -1520,8 +1547,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgMaxUploadSize' => [
-		/** T3797 - 250MB */
-		'default' => 1024 * 1024 * 250,
+		'default' => 1024 * 1024 * 4096,
 		/** T9673 - 10MB */
 		'dragdownwiki' => 1024 * 1024 * 10,
 	],
@@ -1555,7 +1581,7 @@ $wgConf->settings += [
 		'default' => 500,
 	],
 	'wgMaxImageArea' => [
-		'default' => false,
+		'default' => 10e7,
 	],
 	'wgMaxAnimatedGifArea' => [
 		'default' => '1.25e7',
@@ -1589,14 +1615,20 @@ $wgConf->settings += [
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
+			/** Reception123 (SRE) */
+			19,
 			/** Void (SRE and Board) */
 			5258,
 			/** Paladox (SRE) */
 			13554,
-			/** Owen (Board) */
+			/** Owen (SRE and Board) */
 			73651,
 			/** MacFan4000 (SRE) */
 			6758,
+			/** Universal Omega (SRE) */
+			438966,
+			/** Agent Isai (SRE) */
+			2639,
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
@@ -1940,40 +1972,75 @@ $wgConf->settings += [
 		],
 	],
 	'wgExtraLanguageNames' => [
-		'default' => [],
-		'benpediawiki' => [
+		'default' => [
+			// Prevent mh from being treated as an interlanguage link (T11615)
+			'mh' => '',
+		],
+		'+benpediawiki' => [
 			'qbg' => 'bengénesk',
 		],
-		'factfinder3dwiki' => [
+		'+factfinder3dwiki' => [
 			'eg' => 'Anchiartedlixh Lrieggulier',
 			'bl' => 'Betlix',
 			'et' => 'Entertidés Lettíno',
 			'gb' => 'Globiens',
 			'rb' => 'Robbochiex',
 		],
-		'fuutropediawiki' => [
+		'+fuutropediawiki' => [
 			'eg' => 'Anchiartedlixh Lrieggulier',
 			'bl' => 'Betlix',
 			'et' => 'Entertidés Lettíno',
 			'gb' => 'Globiens',
 			'rb' => 'Robbochiex',
 		],
-		'gpcommonswiki' => [
+		'+gpcommonswiki' => [
 			'qqq' => 'Message documentation',
 			'pcm' => 'Nigerian Pidgin',
 		],
-		'gratisdatawiki' => [
+		'+gratisdatawiki' => [
 			'qqq' => 'Message documentation',
 			'pcm' => 'Nigerian Pidgin',
 		],
-		'isvwiki' => [
+		'+isvwiki' => [
 			'isv' => 'Medžuslovjansky / Меджусловјанскы',
 		],
-		'sonaponawiki' => [
+		'+sonaponawiki' => [
 			'tok' => 'toki pona',
 		],
-		'wikibenwiki' => [
+		'+wikibenwiki' => [
 			'bw' => 'Benwegul',
+		],
+	],
+
+	// InterwikiDispatcher
+	'wgIWDPrefixes' => [
+		'default' => [
+			'fandom' => [
+				/** Fandom */
+				'interwiki' => 'fandom',
+				'url' => 'https://$2.fandom.com/wiki/$1',
+				'urlInt' => 'https://$2.fandom.com/$3/wiki/$1',
+				'baseTransOnly' => true,
+			],
+			'miraheze' => [
+				/** Miraheze */
+				'interwiki' => 'mh',
+				'url' => 'https://$2.miraheze.org/wiki/$1',
+				'dbname' => '$2wiki',
+				'baseTransOnly' => true,
+			],
+			'wikitide' => [
+				/** WikiTide */
+				'interwiki' => 'wt',
+				'url' => 'https://$2.wikitide.org/wiki/$1',
+				'baseTransOnly' => true,
+			],
+			'wikiforge' => [
+				/** WikiForge */
+				'interwiki' => 'wf',
+				'url' => 'https://$2.wikiforge.net/wiki/$1',
+				'baseTransOnly' => true,
+			],
 		],
 	],
 
@@ -2106,6 +2173,12 @@ $wgConf->settings += [
 		],
 		'+securipediawiki' => [
 			'pv',
+		],
+		'+shemwiki' => [
+			'wikipedia' => [
+			'fr',
+			'en'
+			],
 		],
 		'+snapdatawiki' => [
 			'd',
@@ -2499,13 +2572,13 @@ $wgConf->settings += [
 			'_self' => [ 'sametablinks' ]
 		],
 		'scruffywiki' => [
-			'_blank' => [ 'extiw' ],
+			'_blank' => [ '' ]
 		],
 		'simpleelectronicswiki' => [
-			'_blank' => [ 'extiw' ]
+			'_blank' => [ '' ]
 		],
 		'sdiywikiwiki' => [
-			'_blank' => [ 'extiw' ]
+			'_blank' => [ '' ]
 		],
 	],
 
@@ -2645,6 +2718,11 @@ $wgConf->settings += [
 		'sesupportwiki' => [
 			'sysop' => [
 				'editor',
+			],
+		],
+		'metawiki' => [
+			'sysadmin' => [
+				'sysadmin',
 			],
 		],
 	],
@@ -2843,7 +2921,11 @@ $wgConf->settings += [
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
 				'globalblock' => true,
-				'managewiki' => true,
+				'managewiki-core' => true,
+				'managewiki-extensions' => true,
+				'managewiki-namespaces' => true,
+				'managewiki-permissions' => true,
+				'managewiki-settings' => true,
 				'managewiki-restricted' => true,
 				'noratelimit' => true,
 				'oathauth-verify-user' => true,
@@ -2916,7 +2998,11 @@ $wgConf->settings += [
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
 				'globalblock' => true,
-				'managewiki' => true,
+				'managewiki-core',
+				'managewiki-extensions' => true,
+				'managewiki-namespaces' => true,
+				'managewiki-permissions' => true,
+				'managewiki-settings' => true,
 				'managewiki-restricted' => true,
 				'noratelimit' => true,
 				'userrights' => true,
@@ -3039,6 +3125,11 @@ $wgConf->settings += [
 				'editor',
 			],
 		],
+		'metawiki' => [
+			'sysadmin' => [
+				'sysadmin',
+			],
+		],
 	],
 	'wgManageWikiPermissionsDisallowedRights' => [
 		'default' => [
@@ -3117,7 +3208,11 @@ $wgConf->settings += [
 				'autoconfirmed',
 				'noratelimit',
 				'skipcaptcha',
-				'managewiki',
+				'managewiki-core',
+				'managewiki-extensions',
+				'managewiki-namespaces',
+				'managewiki-permissions',
+				'managewiki-settings',
 				'globalblock-whitelist',
 				'ipblock-exempt',
 			],
@@ -3140,7 +3235,11 @@ $wgConf->settings += [
 				'ipblock-exempt',
 				'viewmyprivateinfo',
 				'viewmywatchlist',
-				'managewiki',
+				'managewiki-core',
+				'managewiki-extensions',
+				'managewiki-namespaces',
+				'managewiki-permissions',
+				'managewiki-settings',
 				'noratelimit',
 				'autoconfirmed',
 			],
@@ -3384,7 +3483,7 @@ $wgConf->settings += [
 		'default' => 30,
 	],
 	'wgEnableCanonicalServerLink' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgPageCreationLog' => [
 		'default' => true,
@@ -3412,6 +3511,9 @@ $wgConf->settings += [
 			'html5',
 			'legacy'
 		],
+	],
+	'wgMaxExecutionTimeForExpensiveQueries' => [
+		'default' => 30000,
 	],
 	'wgTrustedMediaFormats' => [
 		'default' => [
@@ -3685,13 +3787,6 @@ $wgConf->settings += [
 	],
 
 	// Math
-	'wgMathoidCli' => [
-		'default' => [
-			'/srv/mathoid/src/cli.js',
-			'-c',
-			'/etc/mathoid/config.yaml'
-		]
-	],
 	'wgMathValidModes' => [
 		'default' => [
 			'mathml'
@@ -3850,6 +3945,9 @@ $wgConf->settings += [
 		'gratisdatawiki' => true,
 		'gpcommonswiki' => true,
 	],
+	'wgPageImagesLeadSectionOnly' => [
+		'default' => false
+	],
 
 	// Pagelang
 	'wgPageLanguageUseDB' => [
@@ -3888,6 +3986,10 @@ $wgConf->settings += [
 		'+ext-Linter' => [
 			'linting' => true,
 		],
+	],
+	'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
+		'default' => 1.0,
+		'commonswiki' => 0.0,
 	],
 
 	// PdfHandler
@@ -4315,6 +4417,10 @@ $wgConf->settings += [
 			'user',
 			'autoconfirmed',
 			'sysop'
+		],
+		'+321nailswiki' => [
+			'templateeditor',
+			'extendedconfirmed',
 		],
 		'+allpediawiki' => [
 			'editextendedconfirmedprotected',
@@ -4903,6 +5009,21 @@ $wgConf->settings += [
 			'span.geo-nondefault',
 			'#coordinates',
 		],
+		'softcellwiki' => [
+			'table',
+			'script',
+			'input',
+			'style',
+			'ul.gallery',
+			'.mw-editsection',
+			'sup.reference',
+			'ol.references',
+			'.error',
+			'.nomobile',
+			'.noprint',
+			'.noexcerpt',
+			'.sortkey',
+		],
 	],
 
 	// TimedMediaHandler
@@ -5009,6 +5130,27 @@ $wgConf->settings += [
 	],
 	'wgTranslateTranslationServices' => [
 		'default' => [],
+	],
+	'wgTranslateTranslationDefaultService' => [
+		'default' => false,
+	],
+
+	// TorBlock
+	'wgTorIPs' => [
+		'default' => [
+			'91.198.174.232',
+			'208.80.152.2',
+			'208.80.152.134'
+		]
+	],
+	'wgTorBlockProxy' => [
+		'default' => 'http://bast.miraheze.org:8080'
+	],
+	'wgTorTagChanges' => [
+		'default' => false
+	],
+	'wgTorDisableAdminBlocks' => [
+		'default' => false
 	],
 
 	// Tweeki
@@ -5125,6 +5267,18 @@ $wgConf->settings += [
 			/** cp35 */
 			'[2607:5300:205:200::1c93]:81',
 		],
+	],
+	// Temporary
+	'wgCdnServersNoPurge' => [
+		'default' => [
+			// bast121
+			'[2a10:6740::6:301]',
+			// bast141
+			'[2a10:6740::6:509]',
+		],
+	],
+	'wgCdnMaxAge' => [
+		'default' => 432000,
 	],
 
 	// Vector
@@ -5793,7 +5947,7 @@ $wgConf->settings += [
 			'caches' => false,
 			'captcha' => 'debug',
 			'cargo' => false,
-			'CentralAuth' => 'debug',
+			'CentralAuth' => 'info',
 			'CentralAuthRename' => false,
 			'CentralAuthVerbose' => false,
 			'CentralNotice' => false,
@@ -5809,7 +5963,6 @@ $wgConf->settings += [
 			'DBQuery' => false,
 			'DBReplication' => false,
 			'DBTransaction' => false,
-			'DeferredUpdates' => 'error',
 			'deprecated' => [ 'graylog' => 'debug', 'sample' => 100 ],
 			'diff' => 'debug',
 			'DuplicateParse' => false,
@@ -5849,9 +6002,9 @@ $wgConf->settings += [
 			'Linter' => 'debug',
 			'LocalFile' => 'warning',
 			'localhost' => false,
-			'LockManager' => false,
+			'LockManager' => 'warning',
 			'logging' => false,
-			'LoginNotify' => 'debug',
+			'LoginNotify' => 'info',
 			'ManageWiki' => 'debug',
 			'MassMessage' => false,
 			'Math' => 'info',
@@ -5862,17 +6015,19 @@ $wgConf->settings += [
 			'memcached' => [ 'graylog' => 'error' ],
 			'message-format' => false,
 			'MessageCache' => false,
-			'MessageCacheError' => false,
+			'MessageCacheError' => 'debug',
 			'MirahezeMagic' => 'debug',
 			'mobile' => false,
 			'NewUserMessage' => false,
 			'OAuth' => 'info',
-			'objectcache' => false,
+			'objectcache' => 'warning',
 			'OldRevisionImporter' => false,
 			'OutputBuffer' => false,
 			'PageTriage' => false,
 			'ParserCache' => false,
+			'ParsoidCachePrewarmJob' => 'error',
 			'Parsoid' => 'warning',
+			'poolcounter' => 'debug',
 			'preferences' => false,
 			'purge' => false,
 			'query' => false,
@@ -5900,6 +6055,7 @@ $wgConf->settings += [
 			'SpamRegex' => false,
 			'StopForumSpam' => false,
 			'SQLBagOStuff' => false,
+			'SwiftBackend' => 'info',
 			'squid' => false,
 			'StashEdit' => false,
 			'T263581' => false,
@@ -5909,7 +6065,7 @@ $wgConf->settings += [
 			'thumbnailaccess' => false,
 			'TitleBlacklist' => false,
 			'TitleBlacklist-cache' => false,
-			'torblock' => false,
+			'torblock' => 'debug',
 			'TranslationNotifications.Jobs' => false,
 			'Translate.Jobs' => false,
 			'Translate' => false,
@@ -5945,11 +6101,15 @@ if ( wfHostname() === 'test131' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
+	// T10885
 	'editnotify',
+	// T10883
 	'hitcounters',
-	'lingo',
+	// T10882
 	'regexfunctions',
+	// T10871
 	'wikiforum',
+	// T10756
 	'graph',
 ];
 

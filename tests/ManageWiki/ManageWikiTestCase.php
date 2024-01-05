@@ -27,6 +27,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 		$mock->dbname = '';
 		$mock->hostname = '';
+		$mock->sitename = '';
 
 		foreach ( $methods as $m => $returnValue ) {
 			$mock

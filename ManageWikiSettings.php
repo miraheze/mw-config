@@ -206,6 +206,19 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 		'requires' => [],
 	],
+	'wgRSSUserAgent' => [
+		'name' => 'RSS User Agent',
+		'from' => 'rss',
+		'type' => 'text',
+		'overridedefault' => 'MediaWiki RSS extension',
+		'section' => 'other',
+		'help' => 'The User Agent that MediaWiki will use to fetch RSS feeds.',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
 		'from' => 'protectsite',
@@ -246,6 +259,51 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
+		'requires' => [],
+	],
+	'egApprovedRevsBlankIfUnapproved' => [
+		'name' => 'Display unapproved pages as blank',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'Make pages without approved revisions show up as blank',
+		'requires' => [],
+	],
+	'egApprovedRevsBlankFileIfUnapproved' => [
+		'name' => 'Do not display unapproved images',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'Makes files without approved versions not show up when embedded',
+		'requires' => [],
+	],
+	'egApprovedRevsFileAutomaticApprovals' => [
+		'name' => 'Automatically approve new files',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'anti-spam',
+		'help' => 'Uncheck this to require new files to be manually approved even if made by an administrator',
+		'requires' => [],
+	],
+	'egApprovedRevsFileShowApproveLatest' => [
+		'name' => 'Show a link to approve the latest revision in Special:ApprovedRevs',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'This option makes a link show up on Special:ApprovedRevs to approve the latest revision of a file',
+		'requires' => [],
+	],
+	'egApprovedRevsShowNotApprovedMessage' => [
+		'name' => 'Show not approved message',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'This option makes a message appear on unapproved revisions indicating this revision has not been approved',
 		'requires' => [],
 	],
 	'wgFlaggedRevsProtection' => [
@@ -327,7 +385,7 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'visibility' => [
 				'permissions' => [
-					'managewiki',
+					'managewiki-settings',
 				],
 			],
 		],
@@ -965,7 +1023,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'check',
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'links',
 		'help' => 'Output a <link rel="canonical"> tag on every page indicating the canonical server which should be used, i.e. $wgServer or $wgCanonicalServer.',
 		'requires' => [],
@@ -1068,6 +1126,19 @@ $wgManageWikiSettings = [
 		'help' => 'Language code for message documentation.',
 		'requires' => [],
 	],
+	'wgTranslateNumerals' => [
+		'name' => 'Use Western numerical system',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'options' => [
+			'true' => true,
+			'false' => false,
+		],
+		'overridedefault' => true,
+		'section' => 'localisation',
+		'help' => 'Whether to use the Western numerical system (0-9) instead of localised numerics',
+		'requires' => [],
+	],
 	'wgTranslatePageTranslationULS' => [
 		'name' => 'Translate Page Translation ULS',
 		'from' => 'translate',
@@ -1117,6 +1188,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
+		'requires' => [],
+	],
+	'wgPageImagesLeadSectionOnly' => [
+		'name' => 'Only choose images from section 0',
+		'from' => 'pageimages',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'seo',
+		'help' => 'Uncheck if the PageImages extension should take into account images from all sections',
 		'requires' => [],
 	],
 
@@ -1821,7 +1901,7 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'visibility' => [
 				'permissions' => [
-					'managewiki',
+					'managewiki-settings',
 				],
 			],
 		],
@@ -1834,6 +1914,16 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'notifications',
 		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
+		'requires' => [],
+	],
+	'wgDiscordFromName' => [
+		'name' => 'Discord Notification Sender Name',
+		'from' => 'discordnotifications',
+		'global' => true,
+		'type' => 'text',
+		'overridedefault' => $wi->sitename,
+		'section' => 'notifications',
+		'help' => 'Who should the message appear to be sent from?',
 		'requires' => [],
 	],
 	'wgDiscordIgnoreMinorEdits' => [

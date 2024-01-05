@@ -1,7 +1,13 @@
 <?php
 
-// https://phabricator.miraheze.org/T8703
-header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
+if ( PHP_SAPI !== 'cli' ) {
+	// https://phabricator.miraheze.org/T8703
+	header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
+}
+
+$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+$wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
@@ -62,6 +68,8 @@ if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
+	$wgUseRestbaseVRS = false;
+	$wgVisualEditorDefaultParsoidClient = 'direct';
 	if ( $wmgVisualEditorEnableDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
@@ -73,10 +81,6 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
-}
-
-if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
-	$wgVisualEditorParsoidAutoConfig = false;
 }
 
 $wgVirtualRestConfig = [
@@ -103,6 +107,20 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 	$wgFlowParsoidTimeout = 50;
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
 }
+
+// Article paths
+$articlePath = str_replace( '$1', '', $wgArticlePath );
+
+$wgDiscordNotificationWikiUrl = $wi->server . $articlePath;
+$wgDiscordNotificationWikiUrlEnding = '';
+$wgDiscordNotificationWikiUrlEndingDeleteArticle = '?action=delete';
+$wgDiscordNotificationWikiUrlEndingDiff = '?diff=prev&oldid=';
+$wgDiscordNotificationWikiUrlEndingEditArticle = '?action=edit';
+$wgDiscordNotificationWikiUrlEndingHistory = '?action=history';
+$wgDiscordNotificationWikiUrlEndingUserRights = 'Special:UserRights?user=';
+
+// Don't need a global here
+unset( $articlePath );
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
@@ -261,7 +279,7 @@ if ( $wi->isExtensionActive( 'ContactPage' ) ) {
 		'default' => [
 			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
 			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Miraheze No Reply',
+			'SenderName' => 'Contact Form on ' . $wgSitename,
 			'RequireDetails' => true,
 			// Should never be set to true
 			'IncludeIP' => false,
@@ -417,6 +435,7 @@ if ( preg_match( '/^(.*).mirabeta.org$/', $wi->hostname ) ) {
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?mirabeta\.org',
 	];
+	$wgParsoidEnableQueryString = true;
 }
 
 if ( !preg_match( '/^(.*).(miraheze|mirabeta).org$/', $wi->hostname ) ) {
@@ -557,7 +576,7 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 
 // Kilobytes
 $wgMaxShellFileSize = 512 * 1024;
-$wgMaxShellMemory = 1024 * 1024;
+$wgMaxShellMemory = 512 * 1024;
 
 // 50 seconds
 $wgMaxShellTime = 50;
@@ -607,3 +626,51 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'accesskey-',
 	'nstab-'
 ];
+
+$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$wgPoolCounterConf = [
+	'ArticleView' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 2,
+		'maxqueue' => 100,
+		'fastStale' => true,
+	],
+	'FileRender' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 8,
+		'workers' => 2,
+		'maxqueue' => 100,
+	],
+	'FileRenderExpensive' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 8,
+		'workers' => 2,
+		'slots' => 8,
+		'maxqueue' => 100,
+	],
+	'SpecialContributions' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 2,
+		'maxqueue' => 25,
+	],
+	'TranslateFetchTranslators' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 8,
+		'workers' => 1,
+		'slots' => 16,
+		'maxqueue' => 20,
+	],
+];
+
+$wgPoolCountClientConf = [
+	'servers' => [ $beta ? '[2a10:6740::6:406]:7531' : '[2a10:6740::6:306]:7531' ],
+	'timeout' => 0.5,
+	'connect_timeout' => 0.01
+];
+
+// Mathoid
+$wgMathMathMLUrl = 'http://[2a10:6740::6:504]:10044/';
+
+$wgPropagateErrors = false;
