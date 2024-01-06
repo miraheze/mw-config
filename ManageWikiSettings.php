@@ -764,6 +764,20 @@ $wgManageWikiSettings = [
 		'help' => 'Enable various changes around searching for template names. (experimental)',
 		'requires' => [],
 	],
+	'wgMFDefaultEditor' => [
+		'name' => 'Default MobileFrontend Editor',
+		'from' => 'mobilefrontend',
+		'type' => 'list',
+		'overridedefault' => 'preference',
+		'options' => [
+			'Source editor' => 'source',
+			'Visual editor' => 'visual',
+			'Default to user preferences' => 'preference',
+		],
+		'section' => 'editing',
+		'help' => 'Default mobile editor to use when there is no user preference set.',
+		'requires' => [],
+	],
 	'wgCodeEditorEnableCore' => [
 		'name' => 'CodeEditor Enable Core',
 		'from' => 'codeeditor',
