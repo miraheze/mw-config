@@ -1612,9 +1612,9 @@ $wgConf->settings += [
 	// DO NOT ADD UNAUTHORISED USERS
 	'wgMirahezeStaffAccessIds' => [
 		'default' => [
-			/** Reception123 (SRE) */
+			/** Reception123 (SRE and Board) */
 			19,
-			/** Void (SRE and Board) */
+			/** Void (SRE) */
 			5258,
 			/** Paladox (SRE) */
 			13554,
@@ -1622,9 +1622,9 @@ $wgConf->settings += [
 			73651,
 			/** MacFan4000 (SRE) */
 			6758,
-			/** Universal Omega (SRE) */
+			/** Universal Omega (SRE and Board) */
 			438966,
-			/** Agent Isai (SRE) */
+			/** Agent Isai (SRE and Board) */
 			2639,
 			/** HareJ (Board) */
 			13892,
