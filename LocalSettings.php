@@ -218,14 +218,14 @@ $wgConf->settings += [
 		'default' => [
 			'spam' => [
 				'files' => [
-					'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_spam_blacklist&action=raw&sb_ver=1',
+					'https://meta.miraheze.org/wiki/MediaWiki:Global_spam_blacklist?action=raw&sb_ver=1',
 				],
 			],
 		],
 		'mirabeta' => [
 			'spam' => [
 				'files' => [
-					'https://meta.mirabeta.org/w/index.php?title=MediaWiki:Global_spam_blacklist&action=raw&sb_ver=1',
+					'https://meta.mirabeta.org/wiki/MediaWiki:Global_spam_blacklist?action=raw&sb_ver=1',
 				],
 			],
 		],
@@ -483,8 +483,8 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgGlobalRenameDenylist' => [
-		'default' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw',
-		'mirabeta' => 'https://meta.mirabeta.org/w/index.php?title=MediaWiki:Global_rename_blacklist&action=raw',
+		'default' => 'https://meta.miraheze.org/wiki/MediaWiki:Global_rename_blacklist?action=raw',
+		'mirabeta' => 'https://meta.mirabeta.org/wiki/MediaWiki:Global_rename_blacklist?action=raw',
 	],
 	'wgGlobalRenameDenylistRegex' => [
 		'default' => true,
@@ -497,12 +497,12 @@ $wgConf->settings += [
 		'metawikibeta' => true,
 	],
 	'wgCentralSelectedBannerDispatcher' => [
-		'default' => 'https://meta.miraheze.org/w/index.php?title=Special:BannerLoader',
-		'mirabeta' => 'https://meta.mirabeta.org/w/index.php?title=Special:BannerLoader',
+		'default' => 'https://meta.miraheze.org/wiki/Special:BannerLoader',
+		'mirabeta' => 'https://meta.mirabeta.org/wiki/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
-		'default' => 'https://meta.miraheze.org/w/index.php?title=Special:RecordImpression',
-		'mirabeta' => 'https://meta.mirabeta.org/w/index.php?title=Special:RecordImpression',
+		'default' => 'https://meta.miraheze.org/wiki/Special:RecordImpression',
+		'mirabeta' => 'https://meta.mirabeta.org/wiki/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
@@ -5065,7 +5065,7 @@ $wgConf->settings += [
 		'default' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://meta.miraheze.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw&tb_ver=1',
+				'src' => 'https://meta.miraheze.org/wiki/MediaWiki:Global_title_blacklist?action=raw&tb_ver=1',
 			],
 			'local' => [
 				'type' => 'localpage',
@@ -5075,7 +5075,7 @@ $wgConf->settings += [
 		'mirabeta' => [
 			'global' => [
 				'type' => 'url',
-				'src' => 'https://meta.mirabeta.org/w/index.php?title=MediaWiki:Global_title_blacklist&action=raw&tb_ver=1',
+				'src' => 'https://meta.mirabeta.org/wiki/MediaWiki:Global_title_blacklist?action=raw&tb_ver=1',
 			],
 			'local' => [
 				'type' => 'localpage',
