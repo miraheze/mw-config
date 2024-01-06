@@ -1626,6 +1626,12 @@ $wgConf->settings += [
 			438966,
 			/** Agent Isai (SRE) */
 			2639,
+			/** HareJ (Board) */
+			13892,
+			/** NotAracham (Board) */
+			345529,
+			/** Labster (Board) */
+			2551,
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
