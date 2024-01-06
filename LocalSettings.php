@@ -1632,6 +1632,8 @@ $wgConf->settings += [
 			345529,
 			/** Labster (Board) */
 			2551,
+			/** Original Authority (SRE) */
+			353865,
 		],
 	],
 	'wgMirahezeSurveyEnabled' => [
