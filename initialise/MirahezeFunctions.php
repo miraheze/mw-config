@@ -787,24 +787,10 @@ class MirahezeFunctions {
 			array_diff( $allExtensions, static::$disabledExtensions )
 		);
 
-		// To-Do: Deprecate 'var', and make database/cache use extension names
-		/* return array_keys( array_intersect_key(
-			$allExtensions,
-			array_intersect(
-				array_flip( $cacheArray['extensions'] ?? [] ),
-				array_flip( $enabledExtensions )
-			)
-		) ); */
-
-		return array_intersect(
-			array_keys( array_intersect(
-				array_flip( array_filter( array_flip(
-					array_column( $wgManageWikiExtensions, 'var', 'name' )
-				) ) ),
-				$cacheArray['extensions'] ?? []
-			) ),
+		return array_values( array_intersect(
+			$cacheArray['extensions'] ?? [],
 			$enabledExtensions
-		);
+		) );
 	}
 
 	/**
