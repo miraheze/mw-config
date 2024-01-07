@@ -45,7 +45,7 @@ class MirahezeFunctions {
 		'beta' => 'testglobal',
 	];
 
-	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/w/';
+	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
 	private const TAGS = [
 		'default' => 'default',
@@ -853,15 +853,15 @@ class MirahezeFunctions {
 			return;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/extension-list.json' ) ) {
-			/* if ( !is_dir( self::CACHE_DIRECTORY . '/' . $this->version ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' ) ) {
+			if ( !is_dir( self::CACHE_DIRECTORY . '/' . $this->version ) ) {
 				// Create directory since it doesn't exist
 				mkdir( self::CACHE_DIRECTORY . '/' . $this->version );
-			} */
+			}
 
 			$queue = array_fill_keys( array_merge(
-					glob( self::MEDIAWIKI_DIRECTORY . 'extensions/*/extension*.json' ),
-					glob( self::MEDIAWIKI_DIRECTORY . 'skins/*/skin.json' )
+					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/extensions/*/extension*.json' ),
+					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/skins/*/skin.json' )
 				),
 			true );
 
@@ -879,9 +879,9 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( self::CACHE_DIRECTORY . '/extension-list.json', json_encode( $list ), LOCK_EX );
+			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json', json_encode( $list ), LOCK_EX );
 		} else {
-			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/extension-list.json' );
+			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' );
 			$list = json_decode( $extensionListFile, true );
 		}
 

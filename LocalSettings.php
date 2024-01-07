@@ -524,7 +524,7 @@ $wgConf->settings += [
 
 	// Chameleon
 	'egChameleonLayoutFile' => [
-		'default' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
+		'default' => '/srv/mediawiki/' . $wi->version . '/skins/chameleon/layouts/standard.xml',
 	],
 	'egChameleonEnableExternalLinkIcons' => [
 		'default' => false,
@@ -608,7 +608,7 @@ $wgConf->settings += [
 
 	// Comments
 	'wgCommentsDefaultAvatar' => [
-		'default' => '/w/extensions/SocialProfile/avatars/default_ml.gif',
+		'default' => '/' . $wi->version . '/extensions/SocialProfile/avatars/default_ml.gif',
 	],
 	'wgCommentsInRecentChanges' => [
 		'default' => false,
@@ -3509,7 +3509,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgGitInfoCacheDirectory' => [
-		'default' => '/srv/mediawiki/cache/gitinfo',
+		'default' => '/srv/mediawiki/cache/' . $wi->version . '/gitinfo',
 	],
 	'wgAllowExternalImages' => [
 		'default' => false,
@@ -4376,6 +4376,23 @@ $wgConf->settings += [
 	],
 	'wgUseRCPatrol' => [
 		'default' => true,
+	],
+
+	// Resources
+	'wgExtensionAssetsPath' => [
+		'default' => '/' . $wi->version . '/extensions',
+	],
+	'wgLocalStylePath' => [
+		'default' => '/' . $wi->version . '/skins',
+	],
+	'wgResourceBasePath' => [
+		'default' => '/' . $wi->version,
+	],
+	'wgResourceLoaderMaxQueryLength' => [
+		'default' => 5000,
+	],
+	'wgStylePath' => [
+		'default' => '/' . $wi->version . '/skins',
 	],
 
 	// RelatedArticles
@@ -6141,7 +6158,7 @@ $wi::$disabledExtensions = [
 	'graph',
 ];
 
-if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
+if ( $wi->version >= 1.40 ) {
 	array_push( $wi::$disabledExtensions, 'mixednamespacesearchsuggestions' );
 }
 
@@ -6158,7 +6175,7 @@ require_once __DIR__ . '/ManageWikiSettings.php';
 $wgUploadPath = "//$wmgUploadHostname/$wgDBname";
 $wgUploadDirectory = false;
 
-if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
+if ( $wi->version >= 1.40 ) {
 	// These are not loaded by mergeMessageFileList.php on MediaWiki 1.40+ due to not being on ExtensionRegistry
 	$wgMessagesDirs['SocialProfile'] = $IP . '/extensions/SocialProfile/i18n';
 	$wgExtensionMessagesFiles['SocialProfileAlias'] = $IP . '/extensions/SocialProfile/SocialProfile.alias.php';
@@ -6168,8 +6185,12 @@ if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
 }
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
-$wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/l10n';
+$wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/' . $wi->version . '/l10n';
 $wgLocalisationCacheConf['manualRecache'] = true;
+
+if ( !file_exists( '/srv/mediawiki/cache/' . $wi->version . '/l10n/l10n_cache-en.cdb' ) ) {
+	$wgLocalisationCacheConf['manualRecache'] = false;
+}
 
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
@@ -6203,10 +6224,10 @@ $wgCargoDBname = $wgDBname . 'cargo';
 
 // Define last - Extension message files for loading extensions
 if (
-	file_exists( __DIR__ . '/ExtensionMessageFiles.php' ) &&
+	file_exists( __DIR__ . '/ExtensionMessageFiles-' . $wi->version . '.php' ) &&
 	!defined( 'MW_NO_EXTENSION_MESSAGES' )
 ) {
-	require_once __DIR__ . '/ExtensionMessageFiles.php';
+	require_once __DIR__ . '/ExtensionMessageFiles-' . $wi->version . '.php';
 }
 
 // Don't need a global here
