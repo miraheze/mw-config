@@ -277,6 +277,15 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'parserhooks',
 	],
+	'categorytests' => [
+		'name' => 'CategoryTests',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CategoryTests',
+		'var' => 'wmgUseCategoryTests',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [],
+		'section' => 'parserhooks',
+	],
 	'categorytree' => [
 		'name' => 'CategoryTree',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CategoryTree',
