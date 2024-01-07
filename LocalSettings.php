@@ -6156,6 +6156,7 @@ $wi::$disabledExtensions = [
 	'wikiforum',
 	// T10756
 	'graph',
+	'pageproperties'
 ];
 
 if ( $wi->version >= 1.40 ) {
