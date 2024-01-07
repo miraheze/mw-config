@@ -6156,6 +6156,7 @@ $wi::$disabledExtensions = [
 	'wikiforum',
 	// T10756
 	'graph',
+	// T11641
 	'pageproperties'
 ];
 
