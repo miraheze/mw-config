@@ -1,10 +1,5 @@
 <?php
 
-if ( PHP_SAPI !== 'cli' ) {
-	// https://phabricator.miraheze.org/T8703
-	header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
-}
-
 $wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
