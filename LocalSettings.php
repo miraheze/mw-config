@@ -2663,11 +2663,11 @@ $wgConf->settings += [
 	],
 	'wgSMTP' => [
 		'default' => [
-			'host' => 'mail.miraheze.org',
+			'host' => 'smtp-relay.gmail.com',
 			'port' => 25,
 			'IDHost' => 'miraheze.org',
 			'auth' => true,
-			'username' => 'noreply',
+			'username' => 'noreply@wikitide.org',
 			'password' => $wmgSMTPPassword,
 		],
 	],
