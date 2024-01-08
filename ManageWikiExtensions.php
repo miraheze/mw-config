@@ -2663,7 +2663,6 @@ $wgManageWikiExtensions = [
 	'realme' => [
 		'name' => 'RealMe',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RealMe',
-		'var' => 'wmgUseRealMe',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
