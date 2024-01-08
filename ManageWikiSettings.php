@@ -94,6 +94,42 @@ $wgManageWikiSettings = [
 		'help' => 'The possible actions that can be taken by abuse filters. When adding a new action, check if it is restricted in <code>$wgAbuseFilterActionRestrictions</code> and, if it is, don\'t forget to add the abusefilter-modify-restricted right to the appropriate user groups.',
 		'requires' => [],
 	],
+	'wgAbuseFilterNotifications' => [
+		'name' => 'AbuseFilter Notifications',
+		'from' => 'abusefilter',
+		'global' => true,
+		'type' => 'list',
+		'options' => [
+			'False' => false,
+			'Recent Changes' => 'rc',
+			'UDP' => 'udp',
+			'RC and UDP' => 'rcandudp',
+		],
+		'overridedefault' => false,
+		'help' => 'Pings AbuseFilter hits to Special:RecentChanges, UDP, or both.',
+		'section' => 'anti-spam',
+		'requires' => [],
+	],
+	'wgAbuseFilterNotificationsPrivate' => [
+		'name' => 'Private AbuseFilter Notifications',
+		'from' => 'abusefilter',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'help' => 'Pings hits from private AbuseFilters to Special:RecentChanges.',
+		'section' => 'anti-spam',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgAbuseFilterNotifications',
+				'value' => [
+					'rc',
+					'rcandudp',
+					'udp',
+				],
+
+			],
+		],
+	],
 	'wgAutoblockExpiry' => [
 		'name' => 'Autoblock Expiry',
 		'from' => 'mediawiki',
@@ -170,6 +206,19 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 		'requires' => [],
 	],
+	'wgRSSUserAgent' => [
+		'name' => 'RSS User Agent',
+		'from' => 'rss',
+		'type' => 'text',
+		'overridedefault' => 'MediaWiki RSS extension',
+		'section' => 'other',
+		'help' => 'The User Agent that MediaWiki will use to fetch RSS feeds.',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
 		'from' => 'protectsite',
@@ -210,6 +259,51 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'anti-spam',
 		'help' => 'Uncheck this box to require new revisions to be manually approved even if made by an administrator',
+		'requires' => [],
+	],
+	'egApprovedRevsBlankIfUnapproved' => [
+		'name' => 'Display unapproved pages as blank',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'Make pages without approved revisions show up as blank',
+		'requires' => [],
+	],
+	'egApprovedRevsBlankFileIfUnapproved' => [
+		'name' => 'Do not display unapproved images',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'Makes files without approved versions not show up when embedded',
+		'requires' => [],
+	],
+	'egApprovedRevsFileAutomaticApprovals' => [
+		'name' => 'Automatically approve new files',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'anti-spam',
+		'help' => 'Uncheck this to require new files to be manually approved even if made by an administrator',
+		'requires' => [],
+	],
+	'egApprovedRevsFileShowApproveLatest' => [
+		'name' => 'Show a link to approve the latest revision in Special:ApprovedRevs',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'This option makes a link show up on Special:ApprovedRevs to approve the latest revision of a file',
+		'requires' => [],
+	],
+	'egApprovedRevsShowNotApprovedMessage' => [
+		'name' => 'Show not approved message',
+		'from' => 'approvedrevs',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'anti-spam',
+		'help' => 'This option makes a message appear on unapproved revisions indicating this revision has not been approved',
 		'requires' => [],
 	],
 	'wgFlaggedRevsProtection' => [
@@ -291,7 +385,7 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'visibility' => [
 				'permissions' => [
-					'managewiki',
+					'managewiki-settings',
 				],
 			],
 		],
@@ -670,6 +764,20 @@ $wgManageWikiSettings = [
 		'help' => 'Enable various changes around searching for template names. (experimental)',
 		'requires' => [],
 	],
+	'wgMFDefaultEditor' => [
+		'name' => 'Default MobileFrontend Editor',
+		'from' => 'mobilefrontend',
+		'type' => 'list',
+		'overridedefault' => 'preference',
+		'options' => [
+			'Source editor' => 'source',
+			'Visual editor' => 'visual',
+			'Default to user preferences' => 'preference',
+		],
+		'section' => 'editing',
+		'help' => 'Default mobile editor to use when there is no user preference set.',
+		'requires' => [],
+	],
 	'wgCodeEditorEnableCore' => [
 		'name' => 'CodeEditor Enable Core',
 		'from' => 'codeeditor',
@@ -929,7 +1037,7 @@ $wgManageWikiSettings = [
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'check',
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'links',
 		'help' => 'Output a <link rel="canonical"> tag on every page indicating the canonical server which should be used, i.e. $wgServer or $wgCanonicalServer.',
 		'requires' => [],
@@ -1032,6 +1140,19 @@ $wgManageWikiSettings = [
 		'help' => 'Language code for message documentation.',
 		'requires' => [],
 	],
+	'wgTranslateNumerals' => [
+		'name' => 'Use Western numerical system',
+		'from' => 'mediawiki',
+		'type' => 'list',
+		'options' => [
+			'true' => true,
+			'false' => false,
+		],
+		'overridedefault' => true,
+		'section' => 'localisation',
+		'help' => 'Whether to use the Western numerical system (0-9) instead of localised numerics',
+		'requires' => [],
+	],
 	'wgTranslatePageTranslationULS' => [
 		'name' => 'Translate Page Translation ULS',
 		'from' => 'translate',
@@ -1081,6 +1202,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
+		'requires' => [],
+	],
+	'wgPageImagesLeadSectionOnly' => [
+		'name' => 'Only choose images from section 0',
+		'from' => 'pageimages',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'seo',
+		'help' => 'Uncheck if the PageImages extension should take into account images from all sections',
 		'requires' => [],
 	],
 
@@ -1289,20 +1419,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'media',
 		'help' => 'Toggles native image lazy loading, via the "loading" attribute.',
-		'requires' => [],
-	],
-	'wgSVGConverter' => [
-		'name' => 'SVG Converter',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'list',
-		'options' => [
-			'Inkscape' => 'inkscape',
-			'ImageMagick' => 'ImageMagick',
-		],
-		'overridedefault' => 'ImageMagick',
-		'section' => 'media',
-		'help' => 'This picks the converter to convert Scalable Vector Graphics (SVG) to PNG. You may want to choose Inkscape if your SVG->PNG conversion results in a black image.',
 		'requires' => [],
 	],
 	'wgMediaViewerEnableByDefault' => [
@@ -1799,7 +1915,7 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'visibility' => [
 				'permissions' => [
-					'managewiki',
+					'managewiki-settings',
 				],
 			],
 		],
@@ -1812,6 +1928,16 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'notifications',
 		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
+		'requires' => [],
+	],
+	'wgDiscordFromName' => [
+		'name' => 'Discord Notification Sender Name',
+		'from' => 'discordnotifications',
+		'global' => true,
+		'type' => 'text',
+		'overridedefault' => $wi->sitename,
+		'section' => 'notifications',
+		'help' => 'Who should the message appear to be sent from?',
 		'requires' => [],
 	],
 	'wgDiscordIgnoreMinorEdits' => [
@@ -3390,15 +3516,6 @@ $wgManageWikiSettings = [
 		'help' => 'The color defined in the <code>theme-color</code> meta tag.',
 		'requires' => [],
 	],
-	'wgCitizenEnableSearch' => [
-		'name' => 'Citizen Enable Search',
-		'from' => 'citizen',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Enable or disable rich search suggestions',
-		'requires' => [],
-	],
 	'wgCitizenSearchGateway' => [
 		'name' => 'Citizen Search Gateway',
 		'from' => 'citizen',
@@ -3410,12 +3527,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'mwActionApi',
 		'section' => 'styling',
 		'help' => 'Which gateway to use for fetching search suggestion',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenEnableSearch',
-				'value' => true,
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenSearchDescriptionSource' => [
 		'name' => 'Citizen Search Description Source',
@@ -3429,12 +3541,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'textextracts',
 		'section' => 'styling',
 		'help' => 'Source of description text on search suggestions',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenSearchGateway',
-				'value' => 'mwActionApi',
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenMaxSearchResults' => [
 		'name' => 'Citizen Max Search Results',
@@ -3445,12 +3552,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 6,
 		'section' => 'styling',
 		'help' => 'Max number of search suggestions',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenEnableSearch',
-				'value' => true,
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenEnableCJKFonts' => [
 		'name' => 'Citizen Enable CJK fonts',
@@ -3472,15 +3574,6 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'styling',
 		'help' => 'List of skin names (e.g. "minerva", "vector") where related articles will be shown in the footer.',
-		'requires' => [],
-	],
-	'wgMultiBoilerplateDiplaySpecialPage' => [
-		'name' => 'MultiBoilerplate Diplay SpecialPage',
-		'from' => 'multiboilerplate',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'if set, will add to the wiki a page named Special:Boilerplates that shows the currently configured boilerplates.',
 		'requires' => [],
 	],
 	'wgAllowUserCss' => [
@@ -3621,13 +3714,13 @@ $wgManageWikiSettings = [
 		'from' => 'chameleon',
 		'type' => 'list',
 		'options' => [
-			'standard' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
-			'navhead' => '/srv/mediawiki/w/skins/chameleon/layouts/navhead.xml',
-			'fixedhead' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
-			'stickyhead' => '/srv/mediawiki/w/skins/chameleon/layouts/stickyhead.xml',
-			'clean' => '/srv/mediawiki/w/skins/chameleon/layouts/clean.xml',
+			'standard' => '/srv/mediawiki/' . $wi->version . '/skins/chameleon/layouts/standard.xml',
+			'navhead' => '/srv/mediawiki/' . $wi->version . '/skins/chameleon/layouts/navhead.xml',
+			'fixedhead' => '/srv/mediawiki/' . $wi->version . '/skins/chameleon/layouts/fixedhead.xml',
+			'stickyhead' => '/srv/mediawiki/' . $wi->version . '/skins/chameleon/layouts/stickyhead.xml',
+			'clean' => '/srv/mediawiki/' . $wi->version . '/skins/chameleon/layouts/clean.xml',
 		],
-		'overridedefault' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
+		'overridedefault' => '/srv/mediawiki/' . $wi->version . '/skins/chameleon/layouts/standard.xml',
 		'section' => 'styling',
 		'help' => 'The layout to use for the Chameleon skin.',
 		'requires' => [],
@@ -4432,6 +4525,24 @@ $wgManageWikiSettings = [
 		'overridedefault' => 862,
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Property namespace for Wikibase Repository.',
+		'requires' => [],
+	],
+	'wmgWikibaseClientItemAndPropertySourceName' => [
+		'name' => 'Client Item and Property Source Name',
+		'from' => 'wikibaseclient',
+		'type' => 'text',
+		'overridedefault' => 'local',
+		'section' => 'wikibase',
+		'help' => 'Name of the providing Item and Property definitions (data is used from here, including sitelinks). Must match the name of the entity source as defined in entitySources setting. Leave as-is if unsure.',
+		'requires' => [],
+	],
+	'wmgWikibaseRepoLocalEntitySourceName' => [
+		'name' => 'Repository Local Entity Source Name',
+		'from' => 'wikibaserepository',
+		'type' => 'text',
+		'overridedefault' => 'local',
+		'section' => 'wikibase',
+		'help' => 'Name of the entity source of the local repo (the same site). Must match the name of the entity source as defined in entitySources setting. Leave as-is if unsure.',
 		'requires' => [],
 	],
 	'wgArticlePlaceholderImageProperty' => [

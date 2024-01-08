@@ -78,11 +78,6 @@ class ExtensionsTest extends ManageWikiTestCase {
 							'description' => 'full url for an information page for the extension.',
 							'required' => true,
 						],
-						'var' => [
-							'type' => 'string',
-							'description' => 'the relevant var that enables the extension.',
-							'pattern' => self::REGEX_CONFIG,
-						],
 						'conflicts' => [
 							'description' => 'string of extensions that cause this extension to not work.',
 							'anyOf' => [
@@ -182,7 +177,6 @@ class ExtensionsTest extends ManageWikiTestCase {
 					'shortdescription' => [
 						'name' => 'ShortDescription',
 						'linkPage' => 'foo',
-						'var' => 'wmgUseShortDescription',
 						'conflicts' => false,
 						'requires' => [],
 						'section' => 'api',
