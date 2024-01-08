@@ -6146,8 +6146,6 @@ if ( wfHostname() === 'test131' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
-	// Temporary: T11649
-	'chameleon',
 	// T10885
 	'editnotify',
 	// T10883
