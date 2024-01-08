@@ -32,6 +32,9 @@ if ( $wgArticlePath === '/wiki/$1' && isset( $_GET['diff'] ) ) {
 	}
 	$queryParameters ??= [];
 	$queryParameters['diff'] = $_GET['diff'];
+	if ( isset( $_GET['oldid'] ) ) {
+		$queryParameters['oldid'] = $_GET['oldid'];
+	}
 }
 
 if ( $queryString || isset( $queryParameters ) ) {
