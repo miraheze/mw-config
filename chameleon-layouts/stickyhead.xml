@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<?xml-model href="https://ProfessionalWiki.github.io/chameleon/schema/3.6/layout.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+This file is part of the MediaWiki skin Chameleon.
+
+@copyright 2013 - 2021, Stephan Gambke
+@license   GNU General Public License, version 3 (or any later version)
+
+The Chameleon skin is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+The Chameleon skin is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public License along
+with this program. If not, see <http://www.gnu.org/licenses/>.
+
+@author Stephan Gambke
+@since 1.0
+@ingroup Skins
+-->
+<structure xmlns="https://ProfessionalWiki.github.io/chameleon/schema/3.6/layout.rng">
+
+	<component type="NavbarHorizontal" class="small bg-darker">
+		<component type="Menu" message="secondary-menu"/>
+	</component>
+
+	<component type="NavbarHorizontal">
+		<modification type="Sticky"/>
+		<component type="Logo" position="head"/>
+		<component type="NavMenu" flatten="navigation"/>
+		<component type="PageTools" class="flex-row" position="right" hideSelectedNameSpace="yes"/>
+		<component type="SearchBar" class="order-first order-cmln-0" position="right" buttons="go"/>
+		<component type="PersonalTools" position="right"/>
+	</component>
+
+	<grid class="flex-fill">
+		<row>
+			<cell>
+				<component type="SiteNotice"/>
+			</cell>
+		</row>
+
+		<row>
+			<cell>
+				<component type="MainContent"/>
+			</cell>
+		</row>
+	</grid>
+
+	<grid class="mb-2 mt-4" mode="fluid">
+		<row>
+			<cell>
+				<component type="NavbarHorizontal" collapsible="no" class="small mb-2" >
+					<component type="Toolbox" flatten="no" class="dropup"/>
+					<component type="LangLinks" flatten="no" class="dropup"/>
+				</component>
+			</cell>
+		</row>
+
+		<row>
+			<cell>
+				<component type="FooterInfo"/>
+				<component type="FooterPlaces"/>
+			</cell>
+			<cell>
+				<component type="FooterIcons" class="justify-content-end"/>
+			</cell>
+		</row>
+	</grid>
+</structure>
