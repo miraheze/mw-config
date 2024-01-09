@@ -2663,8 +2663,8 @@ $wgConf->settings += [
 	],
 	'wgSMTP' => [
 		'default' => [
-			'host' => 'ssl://smtp.gmail.com',
-			'port' => 465,
+			'host' => 'smtp-relay.gmail.com',
+			'port' => 587,
 			'IDHost' => 'wikitide.org',
 			'auth' => true,
 			'username' => 'noreply@wikitide.org',
