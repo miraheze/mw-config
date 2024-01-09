@@ -1,7 +1,10 @@
 <?php
 
-// https://phabricator.miraheze.org/T8703
-header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
+$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+$wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
+$wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
+$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+$wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
@@ -102,6 +105,20 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
 }
 
+// Article paths
+$articlePath = str_replace( '$1', '', $wgArticlePath );
+
+$wgDiscordNotificationWikiUrl = $wi->server . $articlePath;
+$wgDiscordNotificationWikiUrlEnding = '';
+$wgDiscordNotificationWikiUrlEndingDeleteArticle = '?action=delete';
+$wgDiscordNotificationWikiUrlEndingDiff = '?diff=prev&oldid=';
+$wgDiscordNotificationWikiUrlEndingEditArticle = '?action=edit';
+$wgDiscordNotificationWikiUrlEndingHistory = '?action=history';
+$wgDiscordNotificationWikiUrlEndingUserRights = 'Special:UserRights?user=';
+
+// Don't need a global here
+unset( $articlePath );
+
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
 // Closed Wikis
@@ -137,12 +154,6 @@ if ( !$cwPrivate ) {
 	$wgDiscordExperimentalWebhook = $wmgDiscordExperimentalWebhook;
 
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
-}
-
-if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
-	$wgParserEnableLegacyMediaDOM = false;
-} else {
-	$wgParserEnableLegacyMediaDOM = true;
 }
 
 // Dynamic cookie settings dependant on $wgServer
@@ -259,7 +270,7 @@ if ( $wi->isExtensionActive( 'ContactPage' ) ) {
 		'default' => [
 			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
 			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Miraheze No Reply',
+			'SenderName' => 'Contact Form on ' . $wgSitename,
 			'RequireDetails' => true,
 			// Should never be set to true
 			'IncludeIP' => false,
@@ -466,12 +477,22 @@ unset( $vectorVersion );
 
 // Licensing variables
 
+$version = $wi->version;
+
+// Alpha is only available on the test server,
+// use beta (or stable if there currently is no beta)
+// for foreign metawiki links if the version is alpha.
+if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
+	$version = MirahezeFunctions::MEDIAWIKI_VERSIONS['beta'] ??
+		MirahezeFunctions::MEDIAWIKI_VERSIONS['stable'];
+}
+
 /**
  * Default values.
  * We can not set these in LocalSettings.php, to prevent them
  * from causing absolute overrides.
  */
-$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-sa.png';
 $wgRightsText = 'Creative Commons Attribution Share Alike';
 $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
@@ -489,7 +510,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = false;
 		break;
 	case 'cc-by':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by.png';
 		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
 		break;
@@ -504,17 +525,17 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nd/4.0/';
 		break;
 	case 'cc-by-sa':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-sa.png';
 		$wgRightsText = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
 	case 'cc-by-sa-2-0-kr':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-sa.png';
 		$wgRightsText = 'Creative Commons BY-SA 2.0 Korea';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
 		break;
 	case 'cc-by-sa-nc':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-nc-sa.png';
 		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 		break;
@@ -524,7 +545,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
 		break;
 	case 'cc-pd':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-0.png';
 		$wgRightsText = 'CC0 Public Domain';
 		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
@@ -542,6 +563,9 @@ switch ( $wmgWikiLicense ) {
 		break;
 }
 
+// Don't need a global here
+unset( $version );
+
 /**
  * Make sure it works to override the footer icon
  * for other overrides in LocalSettings.php.
@@ -556,7 +580,7 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 
 // Kilobytes
 $wgMaxShellFileSize = 512 * 1024;
-$wgMaxShellMemory = 1024 * 1024;
+$wgMaxShellMemory = 512 * 1024;
 
 // 50 seconds
 $wgMaxShellTime = 50;
@@ -645,8 +669,9 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '2a10:6740::6:406' : '2a10:6740::6:306' ],
+	'servers' => [ $beta ? '[2a10:6740::6:406]:7531' : '[2a10:6740::6:306]:7531' ],
 	'timeout' => 0.5,
+	'connect_timeout' => 0.01
 ];
 
 // Mathoid

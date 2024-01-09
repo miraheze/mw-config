@@ -5,34 +5,17 @@ $wgMemCachedPersistent = false;
 
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 
-// mem141
-$wgObjectCaches['memcached-mem-1'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11212' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	// 1000ms, in microseconds
-	'timeout'              => 1.0 * 1e6,
-];
-
-// mem131
-$wgObjectCaches['memcached-mem-2'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11214' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
+$wgObjectCaches['mcrouter'] = [
+	'class'                 => 'MemcachedPeclBagOStuff',
+	'serializer'            => 'php',
+	'persistent'            => false,
+	'servers'               => [ '127.0.0.1:11213' ],
+	'server_failure_limit'  => 1e9,
+	'retry_timeout'         => -1,
+	'loggroup'              => 'memcached',
 	// 500ms, in microseconds
-	'timeout'              => 1.0 * 1e6,
+	'timeout'               => 0.5 * 1e6,
+	'allow_tcp_nagle_delay' => false,
 ];
 
 $wgObjectCaches['mysql-multiwrite'] = [
@@ -40,14 +23,14 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ $beta ? 'memcached-mem-test' : 'memcached-mem-1' ]
+			'args' => [ 'mcrouter' ]
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
 			'servers' => [
 				'pc1' => [
 					'type'      => 'mysql',
-					'host'      => $beta ? 'db121.miraheze.org' : 'db131.miraheze.org',
+					'host'      => 'db121.miraheze.org',
 					'dbname'    => $beta ? 'testparsercache' : 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
@@ -89,19 +72,20 @@ $wgObjectCaches['db-mainstash'] = [
 
 $wgMainStash = 'db-mainstash';
 
-$wgSessionCacheType = 'memcached-mem-2';
+$wgStatsCacheType = 'mcrouter';
+$wgMicroStashType = 'mcrouter';
+
+$wgSessionCacheType = 'mcrouter';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-mainstash';
 
-$redisServerIP = '[2a10:6740::6:306]:6379';
-
-$wgMainCacheType = 'memcached-mem-2';
-$wgMessageCacheType = 'memcached-mem-1';
+$wgMainCacheType = 'mcrouter';
+$wgMessageCacheType = 'mcrouter';
 
 $wgParserCacheType = 'mysql-multiwrite';
 
-$wgChronologyProtectorStash = 'memcached-mem-1';
+$wgChronologyProtectorStash = 'mcrouter';
 
 $wgParsoidCacheConfig = [
 	// Defaults to MainStash
@@ -125,6 +109,9 @@ $wgRevisionCacheExpiry = 86400 * 3;
 // 1 day
 $wgObjectCacheSessionExpiry = 86400;
 
+// 7 days
+$wgDLPMaxCacheTime = 604800;
+
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
 
@@ -140,38 +127,17 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $wgResourceLoaderUseObjectCacheForDeps = true;
 
-if ( $beta ) {
-	// test131 (only use on test131. No prod traffic should use this).
-	$wgObjectCaches['memcached-mem-test'] = [
-		'class'                => MemcachedPeclBagOStuff::class,
-		'serializer'           => 'php',
-		'persistent'           => false,
-		'servers'              => [ '127.0.0.1:11215' ],
-		// Effectively disable the failure limit (0 is invalid)
-		'server_failure_limit' => 1e9,
-		// Effectively disable the retry timeout
-		'retry_timeout'        => -1,
-		'loggroup'             => 'memcached',
-		// 500ms, in microseconds
-		'timeout'              => 1.0 * 1e6,
-	];
+$wgCdnMatchParameterOrder = false;
 
-	$redisServerIP = '[2a10:6740::6:406]:6379';
-
-	$wgMainCacheType = 'memcached-mem-test';
-	$wgMessageCacheType = 'memcached-mem-test';
-
-	$wgSessionCacheType = 'memcached-mem-test';
-
-	$wgChronologyProtectorStash = 'memcached-mem-test';
-}
+$redisServerIP = $beta ?
+	'[2a10:6740::6:406]:6379' :
+	'[2a10:6740::6:306]:6379';
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
 	'redisServer' => $redisServerIP,
 	'redisConfig' => [
 		'connectTimeout' => 2,
-		'readTimeout' => 4,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 	],

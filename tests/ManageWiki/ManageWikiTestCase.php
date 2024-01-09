@@ -9,7 +9,7 @@ use stdClass;
 abstract class ManageWikiTestCase extends TestCase {
 
 	public const REGEX_READABLE = '^[A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+$';
-	public const REGEX_CONFIG = '^(wg|eg|wmg|smwg)[A-Z_][a-zA-Z0-9_]*$';
+	public const REGEX_CONFIG = '^(wg|eg|wmg|wgex|smwg)[A-Z_][a-zA-Z0-9_]*$';
 
 	abstract public function getSchema(): array;
 
@@ -27,6 +27,8 @@ abstract class ManageWikiTestCase extends TestCase {
 
 		$mock->dbname = '';
 		$mock->hostname = '';
+		$mock->sitename = '';
+		$mock->version = '';
 
 		foreach ( $methods as $m => $returnValue ) {
 			$mock

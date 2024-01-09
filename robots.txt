@@ -1,0 +1,81 @@
+# robots.txt for miraheze
+
+# Throttle access to certain pages
+User-Agent: *
+Allow: /w/api.php?action=mobileview&
+Allow: /w/load.php?
+Disallow: /w/
+Disallow: /geoip$
+Disallow: /rest_v1/
+Disallow: /wiki/Special:
+Disallow: /wiki/Spezial:
+Disallow: /wiki/Spesial:
+Disallow: /wiki/Special%3A
+Disallow: /wiki/Spezial%3A
+Disallow: /wiki/Spesial%3A
+Disallow: /wiki/Property:
+Disallow: /wiki/Property%3A
+Disallow: /wiki/property:
+Disallow: /wiki/Especial:
+Disallow: /wiki/Especial%3A
+Disallow: /wiki/especial:
+
+# Throttle YandexBot TODO: Crawl-delay is not respected since 2018
+# Throttle YandexBot
+User-Agent: YandexBot
+Crawl-Delay: 2.5
+
+# Throttle BingBot
+# Throttle BingBot
+User-agent: bingbot
+Crawl-delay: 5
+
+# Block SemrushBot
+# Block SemrushBot
+User-Agent: SemrushBot
+Disallow: /
+
+# Throttle MJ12Bot
+# Throttle MJ12Bot
+User-agent: MJ12bot
+Crawl-Delay: 10
+
+# Block AhrefsBot
+# Block AhrefsBot
+User-agent: AhrefsBot
+Disallow: /
+
+# Block Bytespider
+# Block Bytespider
+User-agent: Bytespider
+Disallow: /
+
+# Block PetalBot
+# Block PetalBot
+User-agent: PetalBot
+Disallow: /
+
+# Block DotBot
+# Block DotBot
+User-agent: DotBot
+Disallow: /
+
+# Block MegaIndex
+# Block MegaIndex
+User-agent: MegaIndex
+Disallow: /
+
+# Block serpstatbot
+# Block serpstatbot
+User-agent: serpstatbot
+Disallow: /
+
+# Block Barkrowler
+# Block Barkrowler
+User-agent: Barkrowler
+Disallow: /
+
+# Block SeekportBot
+# Block SeekportBot
+User-agent: SeekportBot
+Disallow: /
