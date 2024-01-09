@@ -2663,12 +2663,10 @@ $wgConf->settings += [
 	],
 	'wgSMTP' => [
 		'default' => [
-			'host' => 'tls://smtp-relay.gmail.com',
-			'port' => 587,
-			'IDHost' => 'wikitide.org',
-			'auth' => true,
-			'username' => 'noreply@wikitide.org',
-			'password' => $wmgSMTPPassword,
+			'host' => 'ssl://smtp-relay.gmail.com',
+			'port' => 465,
+			'IDHost' => 'miraheze.org',
+			'auth' => false,
 		],
 	],
 	'wgEnotifWatchlist' => [
