@@ -4593,6 +4593,10 @@ $wgConf->settings += [
 	// Rights
 	'+wgAvailableRights' => [
 		'default' => [],
+		'321nailswiki' => [
+			'templateeditor',
+			'extendedconfirmed',
+		],
 		'allpediawiki' => [
 			'editextendedconfirmedprotected',
 		],
