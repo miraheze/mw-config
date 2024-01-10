@@ -646,6 +646,7 @@ $wgConf->settings += [
 	'wmgContactPageRecipientUser' => [
 		'default' => null,
 	],
+
 	//Used to add a link to Special:Contact on the footer, not from extension
 	'wmgMirahezeContactPageFooter' => [
 		'default' => false,
