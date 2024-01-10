@@ -6207,21 +6207,6 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-// ManageWiki-controlled hooks
-
-$wgHooks['SkinAddFooterLinks'][] = function( Skin $skin, string $key, array &$footerlinks ) {
-	if ( $wmgMirahezeContactPageFooter ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a',
-				[
-					'href' => sprintf('%s/wiki/Special:Contact', $wgServer),
-					'rel' => 'noreferrer noopener'
-				],
-			$skin->msg( 'contactpage-label' )->text()
-			);
-		};
-	};
-};
 // Define last to avoid all dependencies
 require_once '/srv/mediawiki/config/GlobalSettings.php';
 require_once '/srv/mediawiki/config/LocalWiki.php';
