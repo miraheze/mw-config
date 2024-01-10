@@ -28,7 +28,7 @@ if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
 }
 
 $wgWBRepoSettings['entitySources'] = $entitySources;
-$wgWBRepoSettings['localEntitySourceName'] = $wmgWikibaseRepoLocalEntitySourceName;
+$wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
 $wgWBRepoSettings['entityNamespaces']['property'] = $wmgWikibaseRepoPropertyNamespaceID;
 $wgWBRepoSettings['allowEntityImport'] = $wmgAllowEntityImport;
@@ -44,7 +44,7 @@ $wgWBRepoSettings['siteLinkGroups'] = [
 $wgWBRepoSettings['specialSiteLinkGroups'] = [];
 
 $wgWBClientSettings['entitySources'] = $entitySources;
-$wgWBClientSettings['itemAndPropertySourceName'] = $wmgWikibaseClientItemAndPropertySourceName;
+$wgWBClientSettings['itemAndPropertySourceName'] = 'local';
 $wgWBClientSettings['repoUrl'] = $wmgWikibaseRepoUrl;
 $wgWBClientSettings['repoDatabase'] = $wmgWikibaseRepoDatabase;
 $wgWBClientSettings['changesDatabase'] = $wmgWikibaseRepoDatabase;
@@ -77,7 +77,6 @@ $wgWBClientSettings['siteLinksGroups'] = [
 
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
-$wgWBClientSettings['namespaces'] = $wmgWikibaseClientNamespacesWithRepoAccess;
 
 // Per-wiki
 if ( $wgDBname === 'famedatawiki' ) {
@@ -139,21 +138,6 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['dataBridgeHrefRegExp'] = '^https://gratisdata\.miraheze\.org/wiki/((Q[1-9][0-9]*)).*#(P[1-9][0-9]*)$';
 	$wgWBClientSettings['dataBridgeEditTags'] = [
 		'data-bridge'
-	];
-	$wgWBClientSettings['entitySources'] = [
-		'gratisdata' => [
-			'entityNamespaces' => [
-				'item' => $wmgWikibaseRepoItemNamespaceID,
-				'property' => $wmgWikibaseRepoPropertyNamespaceID,
-				'lexeme' => 146,
-			],
-			'repoDatabase' => $wmgWikibaseRepoDatabase,
-			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
-			'interwikiPrefix' => '',
-			'rdfNodeNamespacePrefix' => 'wd',
-			'rdfPredicateNamespacePrefix' => '',
-			'type' => 'db'
-		],
 	];
 }
 
@@ -284,25 +268,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['dataBridgeEnabled'] = true;
 	$wgWBRepoSettings['allowDataAccessInUserLanguage'] = true;
 	$wgWBRepoSettings['entityAccessLimit'] = 500;
-	$wgWBRepoSettings['localClientDatabases'] = [
-		'benpedia' => 'benpediawiki',
-		'gpcommons' => 'gpcommonswiki'
-	];
-	$wgWBRepoSettings['entitySources'] = [
-		'gratisdata' => [
-			'entityNamespaces' => [
-				'item' => $wmgWikibaseRepoItemNamespaceID,
-				'property' => $wmgWikibaseRepoPropertyNamespaceID,
-				'lexeme' => 146,
-			],
-			'repoDatabase' => $wmgWikibaseRepoDatabase,
-			'baseUri' => $wmgWikibaseRepoUrl . '/entity/',
-			'interwikiPrefix' => '',
-			'rdfNodeNamespacePrefix' => 'wd',
-			'rdfPredicateNamespacePrefix' => '',
-			'type' => 'db'
-		],
-	];
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
