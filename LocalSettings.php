@@ -6214,7 +6214,7 @@ $wgHooks['SkinAddFooterLinks'][] = function( Skin $skin, string $key, array &$fo
 		if ( $key === 'places' ) {
 			$footerlinks['contact'] = Html::element( 'a',
 				[
-					'href' => sprintf('%s/wiki/Special:Contact', $wgServer),  // URL to "Special:Contact"
+					'href' => sprintf('%s/wiki/Special:Contact', $wgServer),
 					'rel' => 'noreferrer noopener'
 				],
 			$skin->msg( 'contactpage-label' )->text()
