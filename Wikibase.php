@@ -140,7 +140,7 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['dataBridgeEditTags'] = [
 		'data-bridge'
 	];
-	$wgWBClientSettings['entitySources'] = [
+	$wgWBClientSettings['entitySources'] += [
 		'gratisdata' => [
 			'entityNamespaces' => [
 				'item' => $wmgWikibaseRepoItemNamespaceID,
@@ -288,7 +288,7 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'benpedia' => 'benpediawiki',
 		'gpcommons' => 'gpcommonswiki'
 	];
-	$wgWBRepoSettings['entitySources'] = [
+	$wgWBRepoSettings['entitySources'] += [
 		'gratisdata' => [
 			'entityNamespaces' => [
 				'item' => $wmgWikibaseRepoItemNamespaceID,
