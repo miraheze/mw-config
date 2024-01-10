@@ -1104,6 +1104,15 @@ $wgManageWikiSettings = [
 		'help' => 'Source to get the page description from.',
 		'requires' => [],
 	],
+	'wmgMirahezeContactPageFooter' => [
+		'name' => 'Miraheze Contact Page Footer',
+		'from' => 'contactpage',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'links',
+		'help' => 'If set, it adds a link to Special:Contact on the footer',
+		'requires' => [],
+	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
