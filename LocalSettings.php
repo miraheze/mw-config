@@ -22,7 +22,10 @@ ini_set( 'memory_limit', 1400 * 1024 * 1024 );
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
-} elseif ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask141.miraheze.org' ) {
+} elseif (
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask141.miraheze.org' ||
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net'
+) {
 	$wgRequestTimeLimit = 1200;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
