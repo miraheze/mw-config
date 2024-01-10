@@ -5477,23 +5477,6 @@ $wgConf->settings += [
 	'wmgFormatterUrlProperty' => [
 		'default' => false,
 	],
-	'wmgWikibaseClientNamespacesWithRepoAccess' => [
-		'default' => [],
-		'gratisdatawiki' => [
-			NS_CATEGORY,
-			NS_PROJECT,
-			NS_TEMPLATE,
-			NS_HELP,
-			/** NS_MODULE */
-			828
-		],
-	],
-	'wmgWikibaseClientItemAndPropertySourceName' => [
-		'default' => 'local',
-	],
-	'wmgWikibaseRepoLocalEntitySourceName' => [
-		'default' => 'local',
-	],
 	'wmgWikibaseRepoDatabase' => [
 		'default' => $wi->dbname
 	],
