@@ -17,8 +17,8 @@ if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) 
 				],
 			$skin->msg( 'contactpage-label' )->text()
 			);
-		}
-	}
+		};
+	};
 }
 
 // Extensions
