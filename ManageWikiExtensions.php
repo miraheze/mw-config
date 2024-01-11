@@ -866,6 +866,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'screenplay' => [
+		'name' => 'Screenplay',
+		'linkpage' => 'https://mediawiki.org/wiki/Extension:Screenplay',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks'
+	],
 	'simpletooltip' => [
 		'name' => 'SimpleTooltip',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleTooltip',
