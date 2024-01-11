@@ -868,7 +868,7 @@ $wgManageWikiExtensions = [
 	],
 	'screenplay' => [
 		'name' => 'Screenplay',
-		'linkpage' => 'https://mediawiki.org/wiki/Extension:Screenplay',
+		'linkPage' => 'https://mediawiki.org/wiki/Extension:Screenplay',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks'
