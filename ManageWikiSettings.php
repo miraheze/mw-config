@@ -1143,11 +1143,8 @@ $wgManageWikiSettings = [
 	'wgTranslateNumerals' => [
 		'name' => 'Use Western numerical system',
 		'from' => 'mediawiki',
-		'type' => 'list',
-		'options' => [
-			'true' => true,
-			'false' => false,
-		],
+		'global' => true,
+		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'localisation',
 		'help' => 'Whether to use the Western numerical system (0-9) instead of localised numerics',
