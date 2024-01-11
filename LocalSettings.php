@@ -5159,6 +5159,9 @@ $wgConf->settings += [
 	'wgTranslateDocumentationLanguageCode' => [
 		'default' => false,
 	],
+	'wgTranslateNumerals' => [
+		'default' => true,
+	],
 	'wgTranslatePageTranslationULS' => [
 		'default' => false,
 	],
