@@ -12,7 +12,7 @@ if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) 
 		if ( $key === 'places' ) {
 			$footerlinks['contact'] = Html::element( 'a',
 				[
-					'href' => sprintf('%s/wiki/Special:Contact', $wgServer),
+					'href' => sprintf('%s/wiki/Special:Contact', $wi->server),
 					'rel' => 'noreferrer noopener'
 				],
 			$skin->msg( 'contactpage-label' )->text()
