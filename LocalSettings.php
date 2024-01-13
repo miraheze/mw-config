@@ -647,7 +647,7 @@ $wgConf->settings += [
 		'default' => null,
 	],
 
-	//Used to add a link to Special:Contact on the footer, not from extension
+	// Used to add a link to Special:Contact on the footer, not from extension
 	'wmgMirahezeContactPageFooter' => [
 		'default' => false,
 	],
