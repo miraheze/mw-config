@@ -3064,6 +3064,14 @@ $wgConf->settings += [
 				'founder' => true,
 			],
 		],
+		'+mypediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'sysop' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+naasgamelandwiki' => [
 			'bot' => [
 				'editarchiveprotected' => true,
@@ -4535,6 +4543,9 @@ $wgConf->settings += [
 			'bureaucrat',
 			'founder',
 		],
+		'+mypediawiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+naasgamelandwiki' => [
 			'editarchiveprotected',
 			'editofficialprotected',
@@ -4658,6 +4669,9 @@ $wgConf->settings += [
 		],
 		'metawiki' => [
 			'editautopatrolprotected',
+		],
+		'mypediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
