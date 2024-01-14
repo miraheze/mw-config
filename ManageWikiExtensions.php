@@ -847,6 +847,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'sanecase' => [
+		'name' => 'SaneCase',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SaneCase',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'score' => [
 		'name' => 'Score',
 		'displayname' => 'Score (Disabled -- See T5863)',
