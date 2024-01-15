@@ -3498,7 +3498,7 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'help' => 'ID of the portlet to attach the global tools',
 		'requires' => [],
-	]
+	],
 	'wgCitizenShowPageTools' => [
 		'name' => 'Citizen Show Page Tools',
 		'from' => 'citizen',
