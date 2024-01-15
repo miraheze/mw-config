@@ -585,7 +585,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCitizenGlobalToolsPortlet' => [
-		'defauklt' => '',
+		'default' => '',
 	],
 	'wgCitizenShowPageTools' => [
 		'default' => 1,
