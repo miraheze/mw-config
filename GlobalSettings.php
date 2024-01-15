@@ -693,4 +693,10 @@ $wgPoolCountClientConf = [
 // Mathoid
 $wgMathMathMLUrl = 'http://[2602:294:0:b12::107]:10044/';
 
+// Disble ImportDump requests and uploads due to swift outage
+$wgSpecialPages['RequestImportDump'] = DisabledSpecialPage::getCallback( 'RequestImportDump', 'Currently ImportDump requests cannot be processed due to ongoing issues with our file storage' );
+$wgSpecialPages['RequestImportDumpQueue'] = DisabledSpecialPage::getCallback( 'RequestImportDumpQueue', 'Currently ImportDump requests cannot be processed due to ongoing issues with our file storage' );
+$wgRevokePermissions['*']['upload'] = true;
+$wgRevokePermissions['*']['movefile'] = true;
+$wgUploadMaintenance = true;
 $wgPropagateErrors = false;
