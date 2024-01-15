@@ -3490,6 +3490,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables or disable collapsible sections on content pages.',
 		'requires' => [],
 	],
+	'wgCitizenGlobalToolsPortlet' => [
+		'name' => 'Citizen Global Tools Portlet',
+		'from' => 'citizen',
+		'type' => 'text',
+		'overridedefault' => '',
+		'section' => 'styling',
+		'help' => 'ID of the portlet to attach the global tools',
+		'requires' => [],
+	]
 	'wgCitizenShowPageTools' => [
 		'name' => 'Citizen Show Page Tools',
 		'from' => 'citizen',
@@ -3502,15 +3511,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 1,
 		'section' => 'styling',
 		'help' => 'The condition of page tools visibility.',
-		'requires' => [],
-	],
-	'wgCitizenPortalAttach' => [
-		'name' => 'Citizen Portal Attach',
-		'from' => 'citizen',
-		'type' => 'text',
-		'overridedefault' => 'first',
-		'section' => 'styling',
-		'help' => 'Label of the portal to attach links to upload and special pages to.',
 		'requires' => [],
 	],
 	'wgCitizenThemeColor' => [
