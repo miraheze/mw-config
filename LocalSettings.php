@@ -584,8 +584,8 @@ $wgConf->settings += [
 	'wgCitizenEnableCollapsibleSections' => [
 		'default' => true,
 	],
-	'wgCitizenPortalAttach' => [
-		'default' => 'first',
+	'wgCitizenGlobalToolsPortlet' => [
+		'default' => '',
 	],
 	'wgCitizenShowPageTools' => [
 		'default' => 1,
