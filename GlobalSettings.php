@@ -8,17 +8,17 @@ $wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilde
 
 if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
 
-	$wgHooks['SkinAddFooterLinks'][] = function( Skin $skin, string $key, array &$footerlinks ) {
+	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
 		global $wgServer;
 		if ( $key === 'places' ) {
 			$footerlinks['contact'] = Html::element( 'a',
 				[
-					'href' => sprintf('%s/wiki/Special:Contact', $wgServer),
+					'href' => sprintf( '%s/wiki/Special:Contact', $wgServer ),
 					'rel' => 'noreferrer noopener'
 				],
 			$skin->msg( 'contactpage-label' )->text()
 			);
-		};
+		}
 	};
 }
 
