@@ -3318,10 +3318,10 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgMatomoAnalyticsSiteID' => [
-		'default' => 8590,
+		'default' => 1,
 	],
 	'wgMatomoAnalyticsGlobalID' => [
-		'default' => 8590,
+		'default' => 1,
 	],
 	'wgMatomoAnalyticsDisableCookie' => [
 		'default' => true,
