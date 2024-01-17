@@ -2649,8 +2649,6 @@ $wgConf->settings += [
 			'2a10:6740::6:503' => true,
 			/** mw143 */
 			'2a10:6740::6:513' => true,
-			/** test131 */
-			'2a10:6740::6:406' => true,
 			/** mw151 */
 			'2602:294:0:c8::105' => true,
 			/** mw152 */
@@ -6155,7 +6153,7 @@ $wgConf->settings += [
 
 // Start settings requiring external dependency checks/functions
 
-if ( wfHostname() === 'test131' ) {
+if ( wfHostname() === 'test151' ) {
 	// Prevent cache (better be safe than sorry)
 	$wgConf->settings['wgUseCdn']['default'] = false;
 }

@@ -129,13 +129,9 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-if ( php_uname( 'n' ) === 'test131' ) {
-	$redisServerIP = '[2a10:6740::6:406]:6379';
-} elseif ( php_uname( 'n' ) === 'test151' ) {
-	$redisServerIP = '[2602:294:0:c8::109]:6379';
-} else {
-	$redisServerIP = '[2a10:6740::6:306]:6379';
-}
+$redisServerIP = $beta ?
+	'[2602:294:0:c8::109]:6379' :
+	'[2a10:6740::6:306]:6379';
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
