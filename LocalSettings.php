@@ -4456,6 +4456,22 @@ $wgConf->settings += [
 		'default' => 'MirahezeGDPR_',
 	],
 
+	// RequestSSL
+	'wgRequestSSLCentralWiki' => [
+		'default' => 'metawiki',
+		'mirabeta' => 'metawikibeta',
+	],
+	'wgRequestSSLScriptCommand' => [
+		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
+	],
+	'wgRequestSSLUsersNotifiedOnAllRequests' => [
+		'default' => [
+			'MacFan4000',
+			'Original Authority',
+			'Reception123',
+		],
+	],
+
 	// Restriction types
 	// For i18n purposes, custom types should ideally follow the format of editXXprotected
 	'wgRestrictionLevels' => [

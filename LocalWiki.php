@@ -333,6 +333,7 @@ switch ( $wi->dbname ) {
 			'GlobalWatchlist',
 			'ImportDump',
 			'IncidentReporting',
+			'RequestSSL',
 		] );
 
 		break;
