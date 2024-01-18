@@ -414,6 +414,18 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'drafts' => [
+		'name' => 'Drafts',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Drafts',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'drafts' => "$IP/extensions/Drafts/sql/Drafts.sql",
+			],
+		],
+		'section' => 'parserhooks',
+	],
 	'dummyfandoommainpagetags' => [
 		'name' => 'DummyFandoomMainpageTags',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DummyFandoomMainpageTags',
