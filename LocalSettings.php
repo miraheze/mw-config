@@ -4463,9 +4463,8 @@ $wgConf->settings += [
 	],
 	'wgRequestSSLScriptCommand' => [
 		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
-		'metawikibeta' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
 	],
-	'wgImportDumpUsersNotifiedOnAllRequests' => [
+	'wgRequestSSLUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000',
 			'Original Authority',
