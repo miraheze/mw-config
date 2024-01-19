@@ -2958,9 +2958,11 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 				'handle-import-dump-interwiki' => true,
 				'handle-import-dump-requests' => true,
+				'handle-ssl-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
 				'view-private-import-dump-requests' => true,
+				'view-private-ssl-requests' => true,
 			],
 			'trustandsafety' => [
 				'userrights' => true,
@@ -2980,6 +2982,7 @@ $wgConf->settings += [
 			],
 			'user' => [
 				'request-import-dump' => true,
+				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wiki-creator' => [
