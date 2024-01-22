@@ -867,6 +867,7 @@ $wgConf->settings += [
 			'reports(\d+)?',
 			'(.*)wiki(pedi)?a(.*)',
 			'opensearch(\d+)?',
+			'mywiki',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
@@ -905,6 +906,7 @@ $wgConf->settings += [
 				'Content Policy (violence, hatred or harrassment)' => 'Declining per Content Policy provision, "Miraheze does not host wikis that promote violence, hatred, or harassment against a person or group of people." Thank you for your understanding.',
 				'Content Policy (Wikimedia-like wikis/forks)' => 'Declining per Content Policy provision, "Direct forks and forks where a substantial amount of content is copied from a Wikimedia project are not allowed." Thank you for your understanding.',
 				'Reception wiki' => 'Declining per resolution of a Request for Comment, "No new reception wikis will be accepted on the platform indefinitely." Thank you for your understanding.',
+				/* 'Content Policy (additional restrictions)' => 'Declining per the Content Policy's additional restrictions, which includes the topic of your wiki. Thank you for understanding.', */
 				'Author request' => 'Declined at the request of the wiki requester.',
 			],
 			'On hold reasons' => [
