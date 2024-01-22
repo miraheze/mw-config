@@ -5065,6 +5065,7 @@ $wgConf->settings += [
 		'default' => [
 			'table',
 			'div',
+			'figure',
 			'script',
 			'input',
 			'style',
