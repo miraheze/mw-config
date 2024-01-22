@@ -6181,8 +6181,6 @@ if ( wfHostname() === 'test151' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
-	// T10885
-	'editnotify',
 	// T10883
 	'hitcounters',
 	// T10882
