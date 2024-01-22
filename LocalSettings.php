@@ -2824,14 +2824,6 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
-		'+hypopediawiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'+igrovyesistemywiki' => [
 			'autopatrolled' => [
 				'trusted' => true,
@@ -3835,6 +3827,14 @@ $wgConf->settings += [
 		'ext-MultiBoilerplate' => false,
 	],
 
+	// NamespaceProtection
+	'wgNamespaceProtection' => [
+		'default' => [],
+		'scratchpadwiki' => [
+			NS_TEMPLATE => 'templateeditor',
+		],
+	],
+
 	// NamespacePreload
 	'wgNamespacePreloadDoExpansion' => [
 		'default' => true,
@@ -4532,10 +4532,6 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+hypopediawiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
-		],
 		'+igrovyesistemywiki' => [
 			'trusted',
 			'sysmag',
@@ -4669,10 +4665,6 @@ $wgConf->settings += [
 		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
-		],
-		'hypopediawiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
 		],
 		'infopediawiki' => [
 			'editextendedconfirmedprotected',
