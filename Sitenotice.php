@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 88;
  */
 
 // Global SiteNotice
-/*if ( !$wmgSiteNoticeOptOut ) {
+if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -31,14 +31,14 @@ $wgMajorSiteNoticeID = 88;
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Maintenance" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							File uploads are currently unavailable as a result of ongoing issues with our file storage server. <b><i>No files have been lost.</i></b> We are working to restore services now, and hope to have everything back up soon.
+							We are finally ready to begin migrating your images and files to our new US-based hardware! We plan to begin the process by tomorrow, and anticipate that it will take 3-4 weeks to complete. Please be advised that during this process there may be times when files are inaccessible. We thank you for your understanding and appreciate your patience while we work through this.
 						</div>
 					</div>
 				</td></tr></tbody>
 			</table>
 		EOF;
 	}
-}*/
+}
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
