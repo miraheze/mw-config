@@ -1120,6 +1120,24 @@ $wgConf->settings += [
 		'srewiki' => [ 'actor', 'user', 'user_properties', 'user_autocreate_serial' ],
 	],
 
+	// Drafts 
+	'egDraftsAutoSaveWait' => [
+		'default' => 120,
+	],
+	'egDraftsAutoSaveTimeout' => [
+		'default' => 10,
+	],
+	'egDraftsAutoSaveInputBased' => [
+		'default' => false,
+	],
+	'egDraftsLifeSpan' => [
+		'default' => 30,
+	],
+	'egDraftsCleanRatio' => [
+		'default' => 1000,
+	],
+	
+
 	// Delete
 	'wgDeleteRevisionsLimit' => [
 		// databases don't have much memory
