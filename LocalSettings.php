@@ -1271,7 +1271,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgDiscordCurlProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgDiscordEnableExperimentalCVTFeatures' => [
 		'default' => true,
@@ -1475,7 +1475,7 @@ $wgConf->settings += [
 
 	// HTTP
 	'wgHTTPProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 
 	// FlaggedRevs
@@ -1578,7 +1578,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgCopyUploadProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgFileExtensions' => [
 		'default' => [
@@ -4802,7 +4802,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgRottenLinksHTTPProxy' => [
-		'default' => 'http://bast.miraheze.org:8080'
+		'default' => 'http://bastion.wikitide.net:8080'
 	],
 
 	// Robot policy
@@ -4828,7 +4828,7 @@ $wgConf->settings += [
 		'default' => 3600,
 	],
 	'wgRSSProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s'
@@ -5250,7 +5250,7 @@ $wgConf->settings += [
 		]
 	],
 	'wgTorBlockProxy' => [
-		'default' => 'http://bast.miraheze.org:8080'
+		'default' => 'http://bastion.wikitide.net:8080'
 	],
 	'wgTorTagChanges' => [
 		'default' => false
