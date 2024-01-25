@@ -29,10 +29,18 @@ if ( !$wmgSiteNoticeOptOut ) {
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px; color: black;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-						<div class="floatleft"><img alt="Maintenance" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
+						<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/OOjs_UI_icon_upload.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							We are finally ready to begin migrating your images and files to our new US-based hardware! We plan to begin the process by tomorrow, and anticipate that it will take 3-4 weeks to complete. Please be advised that during this process there may be times when files are inaccessible. We thank you for your understanding and appreciate your patience while we work through this.
+							We have begun the migration to our new hardware and anticipate it will take 2-4 weeks to complete. During this time, there may be periods of sluggishness and brief file inaccessibility. We appreciate your patience while we work through this.
 						</div>
+
+						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Migration_to_new_servers">
+								<span class="oo-ui-iconElement-icon oo-ui-icon-notice"></span>
+								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
+								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
+							</a>
+						</span>
 					</div>
 				</td></tr></tbody>
 			</table>
