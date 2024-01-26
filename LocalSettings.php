@@ -1120,7 +1120,7 @@ $wgConf->settings += [
 		'srewiki' => [ 'actor', 'user', 'user_properties', 'user_autocreate_serial' ],
 	],
 
-	// Drafts 
+	// Drafts
 	'egDraftsAutoSaveWait' => [
 		'default' => 120,
 	],
@@ -1136,7 +1136,6 @@ $wgConf->settings += [
 	'egDraftsCleanRatio' => [
 		'default' => 1000,
 	],
-	
 
 	// Delete
 	'wgDeleteRevisionsLimit' => [

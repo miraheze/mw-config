@@ -1,5 +1,20 @@
 <?php
 
+$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141', 'mwtask181' ];
+if ( in_array( wfHostname(), $scsvg ) ) {
+	$wmgDB101Hostname = 'db101.miraheze.org';
+	$wmgDB121Hostname = 'db121.miraheze.org';
+	$wmgDB131Hostname = 'db131.miraheze.org';
+	$wmgDB142Hostname = 'db142.miraheze.org';
+	$wmgDBUseSSL = true;
+} else {
+	$wmgDB101Hostname = 'db151.wikitide.net';
+	$wmgDB121Hostname = 'db161.wikitide.net';
+	$wmgDB131Hostname = 'db171.wikitide.net';
+	$wmgDB142Hostname = 'db181.wikitide.net';
+	$wmgDBUseSSL = false;
+}
+
 $wgLBFactoryConf = [
 	'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
 	'secret' => $wgSecretKey,
@@ -29,7 +44,7 @@ $wgLBFactoryConf = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		'ssl' => true,
+		'ssl' => $wmgDBUseSSL,
 		'flags' => DBO_DEFAULT | ( $wgCommandLineMode ? DBO_DEBUG : 0 ),
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
@@ -45,10 +60,10 @@ $wgLBFactoryConf = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		'db101' => 'db101.miraheze.org',
-		'db121' => 'db121.miraheze.org',
-		'db131' => 'db131.miraheze.org',
-		'db142' => 'db142.miraheze.org',
+		'db101' => $wmgDB101Hostname,
+		'db121' => $wmgDB121Hostname,
+		'db131' => $wmgDB131Hostname,
+		'db142' => $wmgDB142Hostname,
 	],
 	'externalLoads' => [
 		'beta' => [
@@ -60,14 +75,14 @@ $wgLBFactoryConf = [
 			'db131' => 0,
 		],
 	],
-	'readOnlyBySection' => [
-		// 'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
-	],
+	'readOnlyBySection' => !in_array( wfHostname(), $scsvg ) ? [
+		'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
+	] : [],
 ];
 
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.

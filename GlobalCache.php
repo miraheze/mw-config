@@ -5,6 +5,17 @@ $wgMemCachedPersistent = false;
 
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 
+$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
+if ( in_array( wfHostname(), $scsvg ) ) {
+	$wmgDB121Hostname = 'db121.miraheze.org';
+	$wmgDB131Hostname = 'db131.miraheze.org';
+	$wmgDBUseSSL = true;
+} else {
+	$wmgDB121Hostname = 'db161.wikitide.net';
+	$wmgDB131Hostname = 'db171.wikitide.net';
+	$wmgDBUseSSL = false;
+}
+
 $wgObjectCaches['mcrouter'] = [
 	'class'                 => 'MemcachedPeclBagOStuff',
 	'serializer'            => 'php',
@@ -30,11 +41,11 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				'pc1' => [
 					'type'      => 'mysql',
-					'host'      => 'db121.miraheze.org',
+					'host'      => $wmgDB121Hostname,
 					'dbname'    => $beta ? 'testparsercache' : 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
-					'ssl'       => true,
+					'ssl'       => $wmgDBUseSSL,
 					'flags'     => 0,
 					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 				],
@@ -53,11 +64,11 @@ $wgObjectCaches['db-mainstash'] = [
 	'class' => 'SqlBagOStuff',
 	'server' => [
 		'type'      => 'mysql',
-		'host'      => $beta ? 'db121.miraheze.org' : 'db131.miraheze.org',
+		'host'      => $beta ? 'db161.wikitide.net' : $wmgDB131Hostname,
 		'dbname'    => $beta ? 'testmainstash' : 'mainstash',
 		'user'      => $wgDBuser,
 		'password'  => $wgDBpassword,
-		'ssl'       => true,
+		'ssl'       => $wmgDBUseSSL,
 		'flags'     => 0,
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
@@ -129,9 +140,13 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-$redisServerIP = $beta ?
-	'[2602:294:0:c8::109]:6379' :
-	'[2a10:6740::6:306]:6379';
+if ( in_array( wfHostname(), $scsvg ) ) {
+	$redisServerIP = '[2a10:6740::6:306]:6379';
+} else {
+	$redisServerIP = $beta ?
+		'[2602:294:0:c8::109]:6379' :
+		'[2602:294:0:b23::102]:6379';
+}
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
