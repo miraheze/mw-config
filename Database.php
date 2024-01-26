@@ -6,11 +6,13 @@ if ( in_array( wfHostname(), $scsvg ) ) {
 	$wmgDB121Hostname = 'db121.miraheze.org';
 	$wmgDB131Hostname = 'db131.miraheze.org';
 	$wmgDB142Hostname = 'db142.miraheze.org';
+	$wmgDBUseSSL = true;
 } else {
 	$wmgDB101Hostname = 'db151.wikitide.net';
 	$wmgDB121Hostname = 'db161.wikitide.net';
 	$wmgDB131Hostname = 'db171.wikitide.net';
 	$wmgDB142Hostname = 'db181.wikitide.net';
+	$wmgDBUseSSL = false;
 }
 
 $wgLBFactoryConf = [
@@ -42,7 +44,7 @@ $wgLBFactoryConf = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		'ssl' => true,
+		'ssl' => $wmgDBUseSSL,
 		'flags' => DBO_DEFAULT | ( $wgCommandLineMode ? DBO_DEBUG : 0 ),
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
