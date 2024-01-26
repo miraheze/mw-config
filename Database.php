@@ -75,14 +75,14 @@ $wgLBFactoryConf = [
 			'db131' => 0,
 		],
 	],
-	'readOnlyBySection' => [
-		// 'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
-	],
+	'readOnlyBySection' => !in_array( wfHostname(), $scsvg ) ? [
+		'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
+		'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
+	] : [],
 ];
 
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
