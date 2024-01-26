@@ -22,7 +22,7 @@ $wgFileBackends[] = [
 
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 $scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
-if ( $scsvg ) {
+if ( in_array( wfHostname(), $scsvg ) ) {
 	$redisServerIP = '[2a10:6740::6:306]:6379';
 } else {
 	$redisServerIP = $beta ?
