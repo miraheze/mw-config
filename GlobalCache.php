@@ -11,8 +11,10 @@ if ( in_array( wfHostname(), $scsvg ) ) {
 	$wmgDB131Hostname = 'db131.miraheze.org';
 	$wmgDBUseSSL = true;
 } else {
-	$wmgDB121Hostname = 'db161.wikitide.net';
-	$wmgDB131Hostname = 'db171.wikitide.net';
+	// db161
+	$wmgDB121Hostname = '10.0.16.128';
+	// db171
+	$wmgDB131Hostname = '10.0.17.119';
 	$wmgDBUseSSL = false;
 }
 
