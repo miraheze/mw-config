@@ -414,6 +414,18 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'drafts' => [
+		'name' => 'Drafts',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Drafts',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'drafts' => "$IP/extensions/Drafts/sql/Drafts.sql",
+			],
+		],
+		'section' => 'parserhooks',
+	],
 	'dummyfandoommainpagetags' => [
 		'name' => 'DummyFandoomMainpageTags',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DummyFandoomMainpageTags',
@@ -843,6 +855,13 @@ $wgManageWikiExtensions = [
 	'rss' => [
 		'name' => 'RSS feed',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RSS',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'sanecase' => [
+		'name' => 'SaneCase',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SaneCase',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -2071,18 +2090,6 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicSidebar',
 		'conflicts' => false,
 		'requires' => [],
-		'section' => 'other',
-	],
-	'editnotify' => [
-		'name' => 'EditNotify',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled, please see <a href="https://phabricator.miraheze.org/T10885">T10885</a> for details.',
 		'section' => 'other',
 	],
 	'editsubpages' => [

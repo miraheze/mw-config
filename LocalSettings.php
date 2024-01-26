@@ -584,8 +584,8 @@ $wgConf->settings += [
 	'wgCitizenEnableCollapsibleSections' => [
 		'default' => true,
 	],
-	'wgCitizenPortalAttach' => [
-		'default' => 'first',
+	'wgCitizenGlobalToolsPortlet' => [
+		'default' => '',
 	],
 	'wgCitizenShowPageTools' => [
 		'default' => 1,
@@ -1120,6 +1120,23 @@ $wgConf->settings += [
 		'srewiki' => [ 'actor', 'user', 'user_properties', 'user_autocreate_serial' ],
 	],
 
+	// Drafts
+	'egDraftsAutoSaveWait' => [
+		'default' => 120,
+	],
+	'egDraftsAutoSaveTimeout' => [
+		'default' => 10,
+	],
+	'egDraftsAutoSaveInputBased' => [
+		'default' => false,
+	],
+	'egDraftsLifeSpan' => [
+		'default' => 30,
+	],
+	'egDraftsCleanRatio' => [
+		'default' => 1000,
+	],
+
 	// Delete
 	'wgDeleteRevisionsLimit' => [
 		// databases don't have much memory
@@ -1253,7 +1270,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgDiscordCurlProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgDiscordEnableExperimentalCVTFeatures' => [
 		'default' => true,
@@ -1457,7 +1474,7 @@ $wgConf->settings += [
 
 	// HTTP
 	'wgHTTPProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 
 	// FlaggedRevs
@@ -1560,7 +1577,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgCopyUploadProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgFileExtensions' => [
 		'default' => [
@@ -2649,14 +2666,26 @@ $wgConf->settings += [
 			'2a10:6740::6:503' => true,
 			/** mw143 */
 			'2a10:6740::6:513' => true,
-			/** test131 */
-			'2a10:6740::6:406' => true,
+			/** mw151 */
+			'2602:294:0:c8::105' => true,
+			/** mw152 */
+			'2602:294:0:c8::106' => true,
+			/** mw161 */
+			'2602:294:0:b13::106' => true,
+			/** mw162 */
+			'2602:294:0:b13::107' => true,
+			/** mw171 */
+			'2602:294:0:b23::104' => true,
+			/** mw172 */
+			'2602:294:0:b23::105' => true,
 			/** mw181 */
 			'2602:294:0:b12::105' => true,
 			/** mw182 */
 			'2602:294:0:b12::106' => true,
 			/** mwtask181 */
 			'2602:294:0:b12::107' => true,
+			/** test151 */
+			'2602:294:0:c8::109' => true,
 		],
 	],
 
@@ -2954,9 +2983,11 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 				'handle-import-dump-interwiki' => true,
 				'handle-import-dump-requests' => true,
+				'handle-ssl-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
 				'view-private-import-dump-requests' => true,
+				'view-private-ssl-requests' => true,
 			],
 			'trustandsafety' => [
 				'userrights' => true,
@@ -2976,6 +3007,7 @@ $wgConf->settings += [
 			],
 			'user' => [
 				'request-import-dump' => true,
+				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wiki-creator' => [
@@ -3062,6 +3094,14 @@ $wgConf->settings += [
 			],
 			'founder' => [
 				'founder' => true,
+			],
+		],
+		'+mypediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'sysop' => [
+				'editextendedconfirmedprotected' => true,
 			],
 		],
 		'+naasgamelandwiki' => [
@@ -3310,10 +3350,10 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgMatomoAnalyticsSiteID' => [
-		'default' => 8590,
+		'default' => 1,
 	],
 	'wgMatomoAnalyticsGlobalID' => [
-		'default' => 8590,
+		'default' => 1,
 	],
 	'wgMatomoAnalyticsDisableCookie' => [
 		'default' => true,
@@ -4444,6 +4484,22 @@ $wgConf->settings += [
 		'default' => 'MirahezeGDPR_',
 	],
 
+	// RequestSSL
+	'wgRequestSSLCentralWiki' => [
+		'default' => 'metawiki',
+		'mirabeta' => 'metawikibeta',
+	],
+	'wgRequestSSLScriptCommand' => [
+		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
+	],
+	'wgRequestSSLUsersNotifiedOnAllRequests' => [
+		'default' => [
+			'MacFan4000',
+			'Original Authority',
+			'Reception123',
+		],
+	],
+
 	// Restriction types
 	// For i18n purposes, custom types should ideally follow the format of editXXprotected
 	'wgRestrictionLevels' => [
@@ -4534,6 +4590,9 @@ $wgConf->settings += [
 		'+moviepediawiki' => [
 			'bureaucrat',
 			'founder',
+		],
+		'+mypediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'+naasgamelandwiki' => [
 			'editarchiveprotected',
@@ -4659,6 +4718,9 @@ $wgConf->settings += [
 		'metawiki' => [
 			'editautopatrolprotected',
 		],
+		'mypediawiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'naasgamelandwiki' => [
 			'editarchiveprotected',
 			'editofficialprotected',
@@ -4739,7 +4801,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgRottenLinksHTTPProxy' => [
-		'default' => 'http://bast.miraheze.org:8080'
+		'default' => 'http://bastion.wikitide.net:8080'
 	],
 
 	// Robot policy
@@ -4765,7 +4827,7 @@ $wgConf->settings += [
 		'default' => 3600,
 	],
 	'wgRSSProxy' => [
-		'default' => 'http://bast.miraheze.org:8080',
+		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s'
@@ -5028,6 +5090,7 @@ $wgConf->settings += [
 		'default' => [
 			'table',
 			'div',
+			'figure',
 			'script',
 			'input',
 			'style',
@@ -5186,7 +5249,7 @@ $wgConf->settings += [
 		]
 	],
 	'wgTorBlockProxy' => [
-		'default' => 'http://bast.miraheze.org:8080'
+		'default' => 'http://bastion.wikitide.net:8080'
 	],
 	'wgTorTagChanges' => [
 		'default' => false
@@ -5304,10 +5367,16 @@ $wgConf->settings += [
 			'[2001:41d0:801:2000::5d68]:81',
 			/** cp25 */
 			'[2001:41d0:801:2000::3a18]:81',
+			/** cp26 */
+			'[2a02:c206:2161:9253::1]:81',
 			/** cp34 */
 			'[2607:5300:205:200::3121]:81',
 			/** cp35 */
 			'[2607:5300:205:200::1c93]:81',
+			/** cp41 */
+			'[2400:d320:2161:9775::1]:81',
+			/** cp51 */
+			'[2407:3641:2161:9774::1]:81',
 		],
 	],
 	// Temporary
@@ -6135,7 +6204,7 @@ $wgConf->settings += [
 
 // Start settings requiring external dependency checks/functions
 
-if ( wfHostname() === 'test131' ) {
+if ( wfHostname() === 'test151' ) {
 	// Prevent cache (better be safe than sorry)
 	$wgConf->settings['wgUseCdn']['default'] = false;
 }
@@ -6143,8 +6212,6 @@ if ( wfHostname() === 'test131' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
-	// T10885
-	'editnotify',
 	// T10883
 	'hitcounters',
 	// T10882

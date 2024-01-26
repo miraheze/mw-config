@@ -12,7 +12,7 @@ if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) 
 			$footerlinks['contact'] = Html::element( 'a',
 				[
 					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
-					'rel' => 'noreferrer noopener'
+					'rel' => 'noreferrer noopener',
 				],
 				$skin->msg( 'contactpage-label' )->text()
 			);
@@ -682,13 +682,20 @@ $wgPoolCounterConf = [
 	],
 ];
 
+$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
+if ( in_array( wfHostname(), $scsvg ) ) {
+	$redisServerIP = '[2a10:6740::6:306]:7531';
+} else {
+	$redisServerIP = $beta ?
+		'[2602:294:0:c8::109]:7531' :
+		'[2602:294:0:b23::102]:7531';
+}
+
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '[2a10:6740::6:406]:7531' : '[2a10:6740::6:306]:7531' ],
+	'servers' => [ $redisServerIP ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
 
 // Mathoid
 $wgMathMathMLUrl = 'http://[2602:294:0:b12::107]:10044/';
-
-$wgPropagateErrors = false;
