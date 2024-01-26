@@ -1,5 +1,18 @@
 <?php
 
+$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
+if ( in_array( wfHostname(), $scsvg ) ) {
+	$wmgDB101Hostname = 'db101.miraheze.org';
+	$wmgDB121Hostname = 'db121.miraheze.org';
+	$wmgDB131Hostname = 'db131.miraheze.org';
+	$wmgDB142Hostname = 'db142.miraheze.org';
+} else {
+	$wmgDB101Hostname = 'db151.wikitide.net';
+	$wmgDB121Hostname = 'db161.wikitide.net';
+	$wmgDB131Hostname = 'db171.wikitide.net';
+	$wmgDB142Hostname = 'db181.wikitide.net';
+}
+
 $wgLBFactoryConf = [
 	'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
 	'secret' => $wgSecretKey,
@@ -45,10 +58,10 @@ $wgLBFactoryConf = [
 		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
 	],
 	'hostsByName' => [
-		'db101' => 'db101.miraheze.org',
-		'db121' => 'db121.miraheze.org',
-		'db131' => 'db131.miraheze.org',
-		'db142' => 'db142.miraheze.org',
+		'db101' => $wmgDB101Hostname,
+		'db121' => $wmgDB121Hostname,
+		'db131' => $wmgDB131Hostname,
+		'db142' => $wmgDB142Hostname,
 	],
 	'externalLoads' => [
 		'beta' => [
