@@ -147,7 +147,7 @@ if ( in_array( wfHostname(), $scsvg ) ) {
 } else {
 	$redisServerIP = $beta ?
 		'[2602:294:0:c8::109]:6379' :
-		'[2602:294:0:b23::102]:6379';
+		'10.0.17.120:6379';
 }
 
 $wgJobTypeConf['default'] = [
