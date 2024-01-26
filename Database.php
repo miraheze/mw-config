@@ -8,10 +8,14 @@ if ( in_array( wfHostname(), $scsvg ) ) {
 	$wmgDB142Hostname = 'db142.miraheze.org';
 	$wmgDBUseSSL = true;
 } else {
-	$wmgDB101Hostname = 'db151.wikitide.net';
-	$wmgDB121Hostname = 'db161.wikitide.net';
-	$wmgDB131Hostname = 'db171.wikitide.net';
-	$wmgDB142Hostname = 'db181.wikitide.net';
+	// db151
+	$wmgDB101Hostname = '10.0.15.110';
+	// db161
+	$wmgDB121Hostname = '10.0.16.128';
+	// db171
+	$wmgDB131Hostname = '10.0.17.119';
+	// db181
+	$wmgDB142Hostname = '10.0.18.102';
 	$wmgDBUseSSL = false;
 }
 
