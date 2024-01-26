@@ -140,7 +140,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-if ( $scsvg ) {
+if ( in_array( wfHostname(), $scsvg ) ) {
 	$redisServerIP = '[2a10:6740::6:306]:6379';
 } else {
 	$redisServerIP = $beta ?
