@@ -1,6 +1,6 @@
 <?php
 
-$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
+$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141', 'mwtask181' ];
 if ( in_array( wfHostname(), $scsvg ) ) {
 	$wmgDB101Hostname = 'db101.miraheze.org';
 	$wmgDB121Hostname = 'db121.miraheze.org';
