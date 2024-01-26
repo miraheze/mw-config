@@ -2,20 +2,16 @@
 
 $scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141', 'mwtask181' ];
 if ( in_array( wfHostname(), $scsvg ) ) {
-	$wmgDB101Hostname = 'db101.miraheze.org';
-	$wmgDB121Hostname = 'db121.miraheze.org';
-	$wmgDB131Hostname = 'db131.miraheze.org';
-	$wmgDB142Hostname = 'db142.miraheze.org';
+	$wmgDB151Hostname = 'db101.miraheze.org';
+	$wmgDB161Hostname = 'db121.miraheze.org';
+	$wmgDB171Hostname = 'db131.miraheze.org';
+	$wmgDB181Hostname = 'db142.miraheze.org';
 	$wmgDBUseSSL = true;
 } else {
-	// db151
-	$wmgDB101Hostname = '10.0.15.110';
-	// db161
-	$wmgDB121Hostname = '10.0.16.128';
-	// db171
-	$wmgDB131Hostname = '10.0.17.119';
-	// db181
-	$wmgDB142Hostname = '10.0.18.102';
+	$wmgDB151Hostname = '10.0.15.110';
+	$wmgDB161Hostname = '10.0.16.128';
+	$wmgDB171Hostname = '10.0.17.119';
+	$wmgDB181Hostname = '10.0.18.102';
 	$wmgDBUseSSL = false;
 }
 
@@ -25,22 +21,22 @@ $wgLBFactoryConf = [
 	'sectionsByDB' => $wi->wikiDBClusters,
 	'sectionLoads' => [
 		'DEFAULT' => [
-			'db131' => 0,
+			'db171' => 0,
 		],
 		'c1' => [
-			'db131' => 0,
+			'db171' => 0,
 		],
 		'c2' => [
-			'db101' => 0,
+			'db151' => 0,
 		],
 		'c3' => [
-			'db142' => 0,
+			'db181' => 0,
 		],
 		'c4' => [
-			'db121' => 0,
+			'db161' => 0,
 		],
 		'c5' => [
-			'db131' => 0,
+			'db171' => 0,
 		],
 	],
 	'serverTemplate' => [
@@ -54,29 +50,22 @@ $wgLBFactoryConf = [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 15,
 		],
-		/**
-		 * MediaWiki checks if the certificate presented by MariaDB is signed
-		 * by the certificate authority listed in 'sslCAFile'. In emergencies
-		 * this could be set to /etc/ssl/certs/ca-certificates.crt (all trusted
-		 * CAs), but setting this to one CA reduces attack vector and CAs
-		 * to dig through when checking the certificate provided by MariaDB.
-		 */
-		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+		'sslCAFile' => $wmgDBUseSSL ? '/etc/ssl/certs/Sectigo.crt' : null,
 	],
 	'hostsByName' => [
-		'db101' => $wmgDB101Hostname,
-		'db121' => $wmgDB121Hostname,
-		'db131' => $wmgDB131Hostname,
-		'db142' => $wmgDB142Hostname,
+		'db151' => $wmgDB151Hostname,
+		'db161' => $wmgDB161Hostname,
+		'db171' => $wmgDB171Hostname,
+		'db181' => $wmgDB181Hostname,
 	],
 	'externalLoads' => [
 		'beta' => [
 			/** where the metawikibeta database is located */
-			'db121' => 0,
+			'db161' => 0,
 		],
 		'echo' => [
 			/** where the metawiki database is located */
-			'db131' => 0,
+			'db171' => 0,
 		],
 	],
 	'readOnlyBySection' => !in_array( wfHostname(), $scsvg ) ? [
