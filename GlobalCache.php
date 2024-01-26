@@ -7,14 +7,12 @@ $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 
 $scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
 if ( in_array( wfHostname(), $scsvg ) ) {
-	$wmgDB121Hostname = 'db121.miraheze.org';
-	$wmgDB131Hostname = 'db131.miraheze.org';
+	$wmgDB161Hostname = 'db121.miraheze.org';
+	$wmgDB171Hostname = 'db131.miraheze.org';
 	$wmgDBUseSSL = true;
 } else {
-	// db161
-	$wmgDB121Hostname = '10.0.16.128';
-	// db171
-	$wmgDB131Hostname = '10.0.17.119';
+	$wmgDB161Hostname = '10.0.16.128';
+	$wmgDB171Hostname = '10.0.17.119';
 	$wmgDBUseSSL = false;
 }
 
@@ -43,13 +41,13 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				'pc1' => [
 					'type'      => 'mysql',
-					'host'      => $wmgDB121Hostname,
+					'host'      => $wmgDB161Hostname,
 					'dbname'    => $beta ? 'testparsercache' : 'parsercache',
 					'user'      => $wgDBuser,
 					'password'  => $wgDBpassword,
 					'ssl'       => $wmgDBUseSSL,
 					'flags'     => 0,
-					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+					'sslCAFile' => $wmgDBUseSSL ? '/etc/ssl/certs/Sectigo.crt' : null,
 				],
 			],
 			'purgePeriod' => 0,
@@ -66,13 +64,13 @@ $wgObjectCaches['db-mainstash'] = [
 	'class' => 'SqlBagOStuff',
 	'server' => [
 		'type'      => 'mysql',
-		'host'      => $beta ? '10.0.16.128' : $wmgDB131Hostname,
+		'host'      => $beta ? '10.0.16.128' : $wmgDB171Hostname,
 		'dbname'    => $beta ? 'testmainstash' : 'mainstash',
 		'user'      => $wgDBuser,
 		'password'  => $wgDBpassword,
 		'ssl'       => $wmgDBUseSSL,
 		'flags'     => 0,
-		'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+		'sslCAFile' => $wmgDBUseSSL ? '/etc/ssl/certs/Sectigo.crt' : null,
 	],
 	'dbDomain' => 'mainstash',
 	'globalKeyLbDomain' => 'mainstash',
