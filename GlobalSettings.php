@@ -684,17 +684,8 @@ $wgPoolCounterConf = [
 	],
 ];
 
-$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
-if ( in_array( wfHostname(), $scsvg ) ) {
-	$redisServerIP = '[2a10:6740::6:306]:7531';
-} else {
-	$redisServerIP = $beta ?
-		'10.0.15.118:7531' :
-		'10.0.17.120:7531';
-}
-
 $wgPoolCountClientConf = [
-	'servers' => [ $redisServerIP ],
+	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.17.120:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
