@@ -72,7 +72,6 @@ if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenance = [
 	'c2',
-	'c3',
 	'c4',
 ];
 
