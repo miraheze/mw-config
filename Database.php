@@ -95,11 +95,3 @@ $wgMiserMode = true;
 $wgCompressRevisions = true;
 
 $wgSQLMode = null;
-
-$wgDatabaseClustersMaintenance = [
-	'c1',
-	'c2',
-	'c3',
-	'c4',
-	'c5',
-];
