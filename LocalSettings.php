@@ -70,7 +70,13 @@ if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_
 }
 
 // Show custom database maintenance error page on these clusters.
-$wgDatabaseClustersMaintenance = [];
+$wgDatabaseClustersMaintenance = [
+	'c1',
+	'c2',
+	'c3',
+	'c4',
+	'c5',
+];
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
