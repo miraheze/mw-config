@@ -26,8 +26,8 @@ if ( in_array( wfHostname(), $scsvg ) ) {
 	$redisServerIP = '[2a10:6740::6:306]:6379';
 } else {
 	$redisServerIP = $beta ?
-		'[2602:294:0:c8::109]:6379' :
-		'[2602:294:0:b23::102]:6379';
+		'10.0.15.118:6379' :
+		'10.0.17.120:6379';
 }
 
 $wgLockManagers[] = [
