@@ -31,10 +31,10 @@ if ( !$wmgSiteNoticeOptOut ) {
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/OOjs_UI_icon_upload.svg" decoding="async" width="50" height="50"></div>
 						<div style="font-weight: bold; color: black;">
-							Server migration has begun
+							Database migration finished; image migration ongoing
 						</div>
 						<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-							We have begun the migration to our new hardware and anticipate it will take 2-4 weeks to complete. During this time, there may be periods of sluggishness and brief file inaccessibility. We appreciate your patience while we work through this.
+							Database migration has finished. As a result, you may have noticed wikis are loading much faster than before. Thank you to our donors for making this possible! Image migration is still in progress. You may notice brief periods of missing files. We appreciate your patience while we work through this.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
