@@ -689,8 +689,8 @@ if ( in_array( wfHostname(), $scsvg ) ) {
 	$redisServerIP = '[2a10:6740::6:306]:7531';
 } else {
 	$redisServerIP = $beta ?
-		'[2602:294:0:c8::109]:7531' :
-		'[2602:294:0:b23::102]:7531';
+		'10.0.15.118:7531' :
+		'10.0.17.120:7531';
 }
 
 $wgPoolCountClientConf = [
@@ -700,4 +700,4 @@ $wgPoolCountClientConf = [
 ];
 
 // Mathoid
-$wgMathMathMLUrl = 'http://[2602:294:0:b12::107]:10044/';
+$wgMathMathMLUrl = 'http://10.0.18.106:10044/';
