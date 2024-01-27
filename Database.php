@@ -1,20 +1,5 @@
 <?php
 
-$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
-if ( in_array( wfHostname(), $scsvg ) ) {
-	$wmgDB151Hostname = 'db101.miraheze.org';
-	$wmgDB161Hostname = 'db121.miraheze.org';
-	$wmgDB171Hostname = 'db131.miraheze.org';
-	$wmgDB181Hostname = 'db142.miraheze.org';
-	$wmgDBUseSSL = true;
-} else {
-	$wmgDB151Hostname = '10.0.15.110';
-	$wmgDB161Hostname = '10.0.16.128';
-	$wmgDB171Hostname = '10.0.17.119';
-	$wmgDB181Hostname = '10.0.18.102';
-	$wmgDBUseSSL = false;
-}
-
 $wgLBFactoryConf = [
 	'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
 	'secret' => $wgSecretKey,
@@ -44,19 +29,17 @@ $wgLBFactoryConf = [
 		'user' => $wgDBuser,
 		'password' => $wgDBpassword,
 		'type' => 'mysql',
-		'ssl' => $wmgDBUseSSL,
 		'flags' => DBO_DEFAULT | ( $wgCommandLineMode ? DBO_DEBUG : 0 ),
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
 			'innodb_lock_wait_timeout' => 15,
 		],
-		'sslCAFile' => $wmgDBUseSSL ? '/etc/ssl/certs/Sectigo.crt' : null,
 	],
 	'hostsByName' => [
-		'db151' => $wmgDB151Hostname,
-		'db161' => $wmgDB161Hostname,
-		'db171' => $wmgDB171Hostname,
-		'db181' => $wmgDB181Hostname,
+		'db151' => '10.0.15.110',
+		'db161' => '10.0.16.128',
+		'db171' => '10.0.17.119',
+		'db181' => '10.0.18.102',
 	],
 	'externalLoads' => [
 		'beta' => [
@@ -68,14 +51,14 @@ $wgLBFactoryConf = [
 			'db171' => 0,
 		],
 	],
-	'readOnlyBySection' => !in_array( wfHostname(), $scsvg ) ? [
+	'readOnlyBySection' => [
 		'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
 		'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
 		'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
 		'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
 		'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
 		'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
-	] : [],
+	],
 ];
 
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.

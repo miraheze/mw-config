@@ -21,14 +21,9 @@ $wgFileBackends[] = [
 ];
 
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
-$scsvg = [ 'mw131', 'mw132', 'mw133', 'mw134', 'mw141', 'mw142', 'mw143', 'mwtask141' ];
-if ( in_array( wfHostname(), $scsvg ) ) {
-	$redisServerIP = '[2a10:6740::6:306]:6379';
-} else {
-	$redisServerIP = $beta ?
-		'10.0.15.118:6379' :
-		'10.0.17.120:6379';
-}
+$redisServerIP = $beta ?
+	'10.0.15.118:6379' :
+	'10.0.17.120:6379';
 
 $wgLockManagers[] = [
 	'name' => 'redisLockManager',
