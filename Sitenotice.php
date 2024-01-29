@@ -37,13 +37,13 @@ if ( !$wmgSiteNoticeOptOut ) {
 							All migration to our new servers has finished. Thank you to our donors for making this possible! If you are experiencing any issues, please <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Help_center">contact us</a>.
 						</div>
 
-						/* <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Migration_to_new_servers">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
 								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 							</a>
-						</span> */
+						</span> -->
 					</div>
 				</td></tr></tbody>
 			</table>
