@@ -29,21 +29,21 @@ if ( !$wmgSiteNoticeOptOut ) {
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px; color: black;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-						<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/OOjs_UI_icon_upload.svg" decoding="async" width="50" height="50"></div>
+						<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/d/df/OOjs_UI_icon_check.svg" decoding="async" width="50" height="50"></div>
 						<div style="font-weight: bold; color: black;">
-							Database migration finished; image migration ongoing
+							Migration has finished
 						</div>
 						<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-							Database migration has finished. As a result, you may have noticed wikis are loading much faster than before. Thank you to our donors for making this possible! Image migration is still in progress. You may notice brief periods of missing files. We appreciate your patience while we work through this.
+							All migration to our new servers has finished. Thank you to our donors for making this possible! If you are experiencing any issues, please <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Help_center">contact us</a>.
 						</div>
 
-						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+						/* <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Migration_to_new_servers">
 								<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
 								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 							</a>
-						</span>
+						</span> */
 					</div>
 				</td></tr></tbody>
 			</table>
