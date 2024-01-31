@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 88;
  */
 
 // Global SiteNotice
-if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -49,7 +49,7 @@ if ( !$wmgSiteNoticeOptOut ) {
 			</table>
 		EOF;
 	}
-}
+} */
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
