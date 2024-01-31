@@ -6,7 +6,7 @@ $wgMemCachedPersistent = false;
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 
 $wgObjectCaches['mcrouter'] = [
-	'class'                 => 'MemcachedPeclBagOStuff',
+	'class'                 => MemcachedPeclBagOStuff::class,
 	'serializer'            => 'php',
 	'persistent'            => false,
 	'servers'               => [ '127.0.0.1:11213' ],
@@ -29,12 +29,12 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'class' => SqlBagOStuff::class,
 			'servers' => [
 				'pc1' => [
-					'type'      => 'mysql',
-					'host'      => '10.0.16.128',
-					'dbname'    => $beta ? 'testparsercache' : 'parsercache',
-					'user'      => $wgDBuser,
-					'password'  => $wgDBpassword,
-					'flags'     => 0,
+					'type'     => 'mysql',
+					'host'     => '10.0.16.128',
+					'dbname'   => $beta ? 'testparsercache' : 'parsercache',
+					'user'     => $wgDBuser,
+					'password' => $wgDBpassword,
+					'flags'    => 0,
 				],
 			],
 			'purgePeriod' => 0,
@@ -48,14 +48,14 @@ $wgObjectCaches['mysql-multiwrite'] = [
 ];
 
 $wgObjectCaches['db-mainstash'] = [
-	'class' => 'SqlBagOStuff',
+	'class' => SqlBagOStuff::class,
 	'server' => [
-		'type'      => 'mysql',
-		'host'      => $beta ? '10.0.16.128' : '10.0.17.119',
-		'dbname'    => $beta ? 'testmainstash' : 'mainstash',
-		'user'      => $wgDBuser,
-		'password'  => $wgDBpassword,
-		'flags'     => 0,
+		'type'     => 'mysql',
+		'host'     => $beta ? '10.0.16.128' : '10.0.17.119',
+		'dbname'   => $beta ? 'testmainstash' : 'mainstash',
+		'user'     => $wgDBuser,
+		'password' => $wgDBpassword,
+		'flags'    => 0,
 	],
 	'dbDomain' => 'mainstash',
 	'globalKeyLbDomain' => 'mainstash',
