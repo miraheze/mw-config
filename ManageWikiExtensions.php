@@ -2092,18 +2092,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'editnotify' => [
-		'name' => 'EditNotify',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditNotify',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled, please see <a href="https://phabricator.miraheze.org/T10885">T10885</a> for details.',
-		'section' => 'other',
-	],
 	'editsubpages' => [
 		'name' => 'EditSubpages',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages',
