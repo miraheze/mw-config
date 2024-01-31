@@ -7,16 +7,14 @@ $wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
 $wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
 
 if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
-
 	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
-		global $wgServer;
 		if ( $key === 'places' ) {
 			$footerlinks['contact'] = Html::element( 'a',
 				[
-					'href' => sprintf( '%s/wiki/Special:Contact', $wgServer ),
-					'rel' => 'noreferrer noopener'
+					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
+					'rel' => 'noreferrer noopener',
 				],
-			$skin->msg( 'contactpage-label' )->text()
+				$skin->msg( 'contactpage-label' )->text()
 			);
 		}
 	};
