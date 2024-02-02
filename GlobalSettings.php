@@ -49,8 +49,9 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 	$wgCirrusSearchClusters = [
 		'default' => [
 			[
-				'host' => 'os162-private.wikitide.net',
-				'port' => 9200
+				'host' => 'opensearch-mw.wikitide.net',
+				'port' => 443,
+				'transport' => 'Elastica\Transport\Https',
 			],
 		],
 	];
