@@ -43,6 +43,23 @@ if ( $wi->isExtensionActive( 'chameleon' ) ) {
 	wfLoadExtension( 'Bootstrap' );
 }
 
+if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
+	wfLoadExtension( 'Elastica' );
+	$wgSearchType = 'CirrusSearch';
+	$wgCirrusSearchClusters = [
+		'default' => [
+			[
+				'host' => 'os162-private.wikitide.net',
+				'port' => 9200
+			],
+		],
+	];
+
+	if ( $wi->isExtensionActive( 'RelatedArticles' ) ) {
+		$wgRelatedArticlesUseCirrusSearch = true;
+	}
+}
+
 if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
 	wfLoadExtension( 'OOJSPlus' );
 }
