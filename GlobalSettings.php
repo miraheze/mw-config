@@ -177,7 +177,7 @@ if ( $cwClosed ) {
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => MirahezeIRCRCFeedFormatter::class,
-		'uri' => 'udp://[2602:294:0:b12::110]:5070',
+		'uri' => 'udp://10.0.17.143:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	];
