@@ -71,7 +71,15 @@ $wgMainStash = 'db-mainstash';
 $wgStatsCacheType = 'mcrouter';
 $wgMicroStashType = 'mcrouter';
 
-$wgSessionCacheType = 'mcrouter';
+$wgObjectCaches['redis-session'] = [
+	'class' => RedisBagOStuff::class,
+	'servers' => [ $beta ? '10.0.15.118:6379' : '10.0.15.142:6379' ],
+	'password' => $wmgRedisPassword,
+	'loggroup' => 'redis',
+	'reportDupes' => false,
+];
+
+$wgSessionCacheType = 'redis-session';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-mainstash';
