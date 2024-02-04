@@ -3574,12 +3574,15 @@ $wgManageWikiSettings = [
 		'from' => 'relatedarticles',
 		'type' => 'skins',
 		'overridedefault' => [
+			'citizen',
+			'cosmos',
 			'minerva',
 			'timeless',
 			'vector',
+			'vector-2022',
 		],
 		'section' => 'styling',
-		'help' => 'List of skin names (e.g. "minerva", "vector") where related articles will be shown in the footer.',
+		'help' => 'Skins where related articles will be shown in the footer.',
 		'requires' => [],
 	],
 	'wgAllowUserCss' => [
