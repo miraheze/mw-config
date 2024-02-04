@@ -1473,7 +1473,7 @@ $wgConf->settings += [
 		'+cslmodswiki' => [
 			'api.steampowered.com/*' => [
 				'replacements' => [
-					'STEAM_API_KEY' => $wmgExternalDataCredsCslmodswiki,
+					'STEAM_API_KEY' => $wmgExternalDataCredsCslmodswiki ?? '',
 				],
 			],
 		],
