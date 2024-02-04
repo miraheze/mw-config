@@ -4437,9 +4437,6 @@ $wgConf->settings += [
 			'vector-2022',
 		],
 	],
-	'wgRelatedArticlesUseCirrusSearch' => [
-		'ext-RelatedArticles' => false,
-	],
 	'wgRelatedArticlesCardLimit' => [
 		'default' => 3,
 	],
