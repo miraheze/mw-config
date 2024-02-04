@@ -4500,6 +4500,8 @@ $wgConf->settings += [
 	// RelatedArticles
 	'wgRelatedArticlesFooterAllowedSkins' => [
 		'default' => [
+			'citizen',
+			'cosmos',
 			'minerva',
 			'timeless',
 			'vector',
