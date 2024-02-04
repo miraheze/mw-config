@@ -3045,7 +3045,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'semanticscribunto' => [
-		'name' => 'Semantic Scribunto',
+		'name' => 'SemanticScribunto',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Semantic_Scribunto',
 		'conflicts' => false,
 		'requires' => [
