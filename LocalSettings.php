@@ -1470,6 +1470,13 @@ $wgConf->settings += [
 				'verbose' => true,
 			],
 		],
+		'+cslmodswiki' => [
+			'api.steampowered.com/*' => [
+				'replacements' => [
+					'STEAM_API_KEY' => $wmgExternalDataCredsCslmodswiki ?? '',
+				],
+			],
+		],
 	],
 
 	// HTTP
@@ -1545,10 +1552,52 @@ $wgConf->settings += [
 				'miraheze' => [
 					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze'
-				]
-			]
-		]
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+		],
+		'hsckwiki' => [
+			'poweredby' => [
+				'songnguxyz' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'url' => 'https://songngu.xyz',
+					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
+				],
+				'miraheze' => [
+					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+		],
+		'lhmnwiki' => [
+			'poweredby' => [
+				'songnguxyz' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'url' => 'https://songngu.xyz',
+					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
+				],
+				'miraheze' => [
+					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+		],
+		'snxyzincubatorwiki' => [
+			'poweredby' => [
+				'songnguxyz' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'url' => 'https://songngu.xyz',
+					'alt' => 'This project is a part of SongNgu.xyz',
+				],
+				'miraheze' => [
+					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+		],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
@@ -1569,6 +1618,8 @@ $wgConf->settings += [
 		'default' => 1024 * 1024 * 4096,
 		/** T9673 - 10MB */
 		'dragdownwiki' => 1024 * 1024 * 10,
+		/** 20MB - qixwikiwiki */
+		'qixwikiwiki' => 1024 * 1024 * 20,
 	],
 	'wgAllowCopyUploads' => [
 		'default' => false,
@@ -2604,10 +2655,10 @@ $wgConf->settings += [
 		'scruffywiki' => [
 			'_blank' => [ '' ]
 		],
-		'simpleelectronicswiki' => [
+		'sdiywikiwiki' => [
 			'_blank' => [ '' ]
 		],
-		'sdiywikiwiki' => [
+		'simpleelectronicswiki' => [
 			'_blank' => [ '' ]
 		],
 	],
@@ -3577,6 +3628,14 @@ $wgConf->settings += [
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
 	],
+	'wgShellboxUrls' => [
+		'default' => [
+			'default' => null,
+		],
+		'+ext-Score' => [
+			'score' => 'http://localhost:6024/shellbox',
+		],
+	],
 	'wgCrossSiteAJAXdomains' => [
 		'default' => [
 			'login.miraheze.org',
@@ -4367,6 +4426,16 @@ $wgConf->settings += [
 		'default' => 0.05,
 	],
 
+	// PWA
+	'wgPWAConfigs' => [
+		'ext-PWA' => [
+			'main' => [
+				'manifest' => 'manifest.json',
+				'patterns' => [ '/.*/' ],
+			],
+		],
+	],
+
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
@@ -4431,6 +4500,8 @@ $wgConf->settings += [
 	// RelatedArticles
 	'wgRelatedArticlesFooterAllowedSkins' => [
 		'default' => [
+			'citizen',
+			'cosmos',
 			'minerva',
 			'timeless',
 			'vector',
@@ -4821,6 +4892,14 @@ $wgConf->settings += [
 		],
 	],
 
+	// Score
+	'wgScoreImageMagickConvert' => [
+		'ext-Score' => '/usr/bin/convert',
+	],
+	'wgScoreSafeMode' => [
+		'ext-Score' => true,
+	],
+
 	// ScratchBlocks
 	'wgScratchBlocks4BlockVersion' => [
 		'default' => 3,
@@ -4870,6 +4949,7 @@ $wgConf->settings += [
 	'wgSimpleChangesShowUser' => [
 		'default' => false,
 	],
+
 	// Share
 	'wgShareEmail' => [
 		'default' => false,
@@ -5521,6 +5601,7 @@ $wgConf->settings += [
 		'default' => 'miraheze.org',
 		'mirabeta' => 'mirabeta.org',
 	],
+
 	// Wikibase
 	'wmgAllowEntityImport' => [
 		'default' => false,
@@ -5840,56 +5921,74 @@ $wgConf->settings += [
 				'name' => 'Wikipedia',
 				'dbsuffix' => 'wiki',
 				'wikitag' => 'wikipedia',
-				'sister' => false
+				'sister' => false,
 			],
 			'b' => [
 				'name' => 'Wikibooks',
 				'dbsuffix' => 'wikibooks',
 				'wikitag' => 'wikibooks',
-				'sister' => false
+				'sister' => false,
 			],
 			't' => [
 				'name' => 'Wiktionary',
 				'dbsuffix' => 'wiktionary',
 				'wikitag' => 'wiktionary',
-				'sister' => false
+				'sister' => false,
 			],
 			'q' => [
 				'name' => 'Wikiquote',
 				'dbsuffix' => 'wikiquote',
 				'wikitag' => 'wikiquote',
-				'sister' => false
+				'sister' => false,
 			],
 			'n' => [
 				'name' => 'Wikinews',
 				'dbsuffix' => 'wikinews',
 				'wikitag' => 'wikinews',
-				'sister' => false
+				'sister' => false,
 			],
 			'y' => [
 				'name' => 'Wikivoyage',
 				'dbsuffix' => 'wikivoyage',
 				'wikitag' => 'wikivoyage',
-				'sister' => false
+				'sister' => false,
 			],
 			's' => [
 				'name' => 'Wikisource',
 				'dbsuffix' => 'wikisource',
 				'wikitag' => 'wikisource',
-				'sister' => false
+				'sister' => false,
 			],
 			'v' => [
 				'name' => 'Wikiversity',
 				'dbsuffix' => 'wikiversity',
 				'wikitag' => 'wikiversity',
-				'sister' => false
-			]
+				'sister' => false,
+			],
+		],
+		'snxyzincubatorwiki' => [
+			'k' => [
+				'name' => 'Cookie Run: Kingdom Wiki',
+				'dbsuffix' => 'crk',
+				'wikitag' => 'cookierunkingdom',
+				'sister' => false,
+			],
+			'c' => [
+				'name' => 'Cookie Run Wiki',
+				'dbsuffix' => 'cr',
+				'wikitag' => 'cookierun',
+				'sister' => false,
+			],
 		],
 	],
 	'wmincProjectSite' => [
 		'default' => [
 			'name' => 'Incubator Plus 2.0',
 			'short' => 'incplus',
+		],
+		'snxyzincubatorwiki' => [
+			'name' => 'Pisces\'s Incubator',
+			'short' => 'pi',
 		],
 	],
 	'wmincExistingWikis' => [
@@ -5925,6 +6024,7 @@ $wgConf->settings += [
 			829,
 		],
 	],
+
 	// WikiLove
 	'wgWikiLoveGlobal' => [
 		'ext-WikiLove' => true,
