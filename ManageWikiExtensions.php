@@ -3085,6 +3085,17 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'semanticscribunto' => [
+		'name' => 'SemanticScribunto',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Semantic_Scribunto',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'semanticmediawiki',
+			],
+		],
+		'section' => 'other',
+	],
 	'structurednavigation' => [
 		'name' => 'StructuredNavigation',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredNavigation',
