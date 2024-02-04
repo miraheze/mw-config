@@ -712,3 +712,4 @@ $wgMathMathMLUrl = 'http://10.0.18.106:10044/';
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
 $wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
+$wgCaptchaStorageClass = MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore::class;
