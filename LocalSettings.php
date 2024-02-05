@@ -869,6 +869,7 @@ $wgConf->settings += [
 			'reports(\d+)?',
 			'(.*)wiki(pedi)?a(.*)',
 			'opensearch(\d+)?',
+			'phorge(\d+)?',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
