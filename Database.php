@@ -20,6 +20,9 @@ $wgLBFactoryConf = [
 		'c4' => [
 			'db181' => 0,
 		],
+		's1' => [
+			'db162' => 0,
+		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -35,6 +38,7 @@ $wgLBFactoryConf = [
 	'hostsByName' => [
 		'db151' => '10.0.15.110',
 		'db161' => '10.0.16.128',
+		'db162' -> '10.0.16.140',
 		'db171' => '10.0.17.119',
 		'db181' => '10.0.18.102',
 	],
@@ -45,16 +49,16 @@ $wgLBFactoryConf = [
 		],
 		'echo' => [
 			/** where the metawiki database is located */
-			'db171' => 0,
+			'db162' => 0,
 		],
 	],
 	'readOnlyBySection' => [
-		// 'DEFAULT' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c1' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c2' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c3' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c4' => 'DC Switchover in progress. Please try again in a few minutes.',
-		// 'c5' => 'DC Switchover in progress. Please try again in a few minutes.',
+		// 'DEFAULT' => 'Maintenance is in progress. Please try again in a few minutes.',
+		// 'c1' => 'Maintenance is in progress. Please try again in a few minutes.',
+		// 'c2' => 'Maintenance is in progress. Please try again in a few minutes.',
+		// 'c3' => 'Maintenance is in progress. Please try again in a few minutes.',
+		// 'c4' => 'Maintenance is in progress. Please try again in a few minutes.',
+		// 's1' => 'Maintenance is in progress. Please try again in a few minutes.',
 	],
 ];
 
