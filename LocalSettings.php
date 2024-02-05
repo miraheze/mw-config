@@ -924,7 +924,6 @@ $wgConf->settings += [
 			'c2',
 			'c3',
 			'c4',
-			's1',
 		],
 		'mirabeta' => [
 			'c4',
