@@ -1111,8 +1111,6 @@ $wgConf->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
-		'metawiki' => 'This wiki is temporarily down for maintenance.',
-		'loginwiki' => 'This wiki is temporarily down for maintenance.',
 		'default' => false,
 	],
 	'wgSharedDB' => [
