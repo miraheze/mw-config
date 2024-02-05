@@ -919,6 +919,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
+			'c1',
 			'c2',
 			'c3',
 			'c4',
@@ -929,10 +930,7 @@ $wgConf->settings += [
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
-		'default' => [
-			'c1',
-			'c5'
-		]
+		'default' => []
 	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
