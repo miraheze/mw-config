@@ -923,6 +923,7 @@ $wgConf->settings += [
 			'c2',
 			'c3',
 			'c4',
+			's1',
 		],
 		'mirabeta' => [
 			'c4',
@@ -930,7 +931,9 @@ $wgConf->settings += [
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
-		'default' => []
+		'default' => [
+			's1', // db162 is a core database where only mhglobal, metawiki, and loginwiki reside
+		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
@@ -1107,6 +1110,8 @@ $wgConf->settings += [
 		'default' => 'mediawiki',
 	],
 	'wgReadOnly' => [
+		'metawiki' => 'This wiki is temporarily down for maintenance.',
+		'loginwiki' => 'This wiki is temporarily down for maintenance.',
 		'default' => false,
 	],
 	'wgSharedDB' => [
