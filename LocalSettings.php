@@ -6303,7 +6303,9 @@ $wi::$disabledExtensions = [
 	// T10756
 	'graph',
 	// T11641
-	'pageproperties'
+	'pageproperties',
+	// Broken, once again...
+	'lingo'
 ];
 
 if ( $wi->version >= 1.40 ) {
