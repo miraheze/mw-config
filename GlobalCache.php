@@ -18,6 +18,11 @@ $wgObjectCaches['mcrouter'] = [
 	'allow_tcp_nagle_delay' => false,
 ];
 
+$wgMirahezeMagicMemcachedServers = [
+	[ '10.0.15.113', 11211 ],
+	[ '10.0.16.131', 11211 ],
+];
+
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,
 	'caches' => [
