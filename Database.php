@@ -49,7 +49,7 @@ $wgLBFactoryConf = [
 		],
 		'echo' => [
 			/** where the metawiki database is located */
-			'db162' => 0,
+			'db171' => 0,
 		],
 	],
 	'readOnlyBySection' => [
