@@ -932,7 +932,8 @@ $wgConf->settings += [
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
-			's1', // db162 is a core database where only mhglobal, metawiki, and loginwiki reside
+			 // db162 is a core database where only mhglobal, metawiki, and loginwiki reside
+			's1',
 		]
 	],
 	'wgCreateWikiDatabaseSuffix' => [
