@@ -20,9 +20,6 @@ $wgLBFactoryConf = [
 		'c4' => [
 			'db181' => 0,
 		],
-		's1' => [
-			'db162' => 0,
-		],
 	],
 	'serverTemplate' => [
 		'dbname' => $wgDBname,
@@ -38,7 +35,6 @@ $wgLBFactoryConf = [
 	'hostsByName' => [
 		'db151' => '10.0.15.110',
 		'db161' => '10.0.16.128',
-		'db162' => '10.0.16.140',
 		'db171' => '10.0.17.119',
 		'db181' => '10.0.18.102',
 	],
