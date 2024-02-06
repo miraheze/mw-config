@@ -446,8 +446,6 @@ class MirahezeFunctions {
 	 * @return bool
 	 */
 	public static function isDeleted(): bool {
-		global $wgConf;
-
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		$realm ??= self::getRealm();
