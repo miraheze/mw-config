@@ -93,7 +93,7 @@ $wgConf->settings += [
 
 	// 'pagelinks' table migration
 	'wgPageLinksSchemaMigrationStage' => [
- 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
 
 	// 3D
@@ -6354,7 +6354,7 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-if ( $wi->deleted ) {
+if ( $cwDeleted ) {
 	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
 }
 
