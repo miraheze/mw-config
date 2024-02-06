@@ -6365,7 +6365,7 @@ if ( $wi->missing ) {
 }
 
 if ( $wi->deleted ) {
-	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
+	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
 }
 
 // Define last to avoid all dependencies
