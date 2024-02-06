@@ -13,9 +13,6 @@ class MirahezeFunctions {
 	public $hostname;
 
 	/** @var bool */
-	public $deleted;
-
-	/** @var bool */
 	public $missing;
 
 	/** @var string */
@@ -79,7 +76,6 @@ class MirahezeFunctions {
 
 		$this->server = self::getServer();
 		$this->sitename = self::getSiteName();
-		$this->deleted = self::isDeleted();
 		$this->missing = self::isMissing();
 		$this->realm = self::getRealm();
 		$this->version = self::getMediaWikiVersion();
@@ -448,19 +444,6 @@ class MirahezeFunctions {
 	/**
 	 * @return bool
 	 */
-	public static function isDeleted(): bool {
-		self::$currentDatabase ??= self::getCurrentDatabase();
-
-		$realm ??= self::getRealm();
-
-		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[$realm] );
-		
-		return in_array( self::$currentDatabase, $deletedDatabases );
-	}
-
-	/**
-	 * @return bool
-	 */
 	public static function isMissing(): bool {
 		global $wgConf;
 
@@ -658,6 +641,7 @@ class MirahezeFunctions {
 		$settings['cwPrivate']['default'] = (bool)$cacheArray['states']['private'];
 		$settings['cwClosed']['default'] = (bool)$cacheArray['states']['closed'];
 		$settings['cwLocked']['default'] = (bool)$cacheArray['states']['locked'] ?? false;
+		$settings['cwDeleted']['default'] = (bool)$cacheArray['states']['deleted'] ?? false;
 		$settings['cwInactive']['default'] = ( $cacheArray['states']['inactive'] === 'exempt' ) ? 'exempt' : (bool)$cacheArray['states']['inactive'];
 		$settings['cwExperimental']['default'] = (bool)( $cacheArray['states']['experimental'] ?? false );
 
@@ -1025,11 +1009,15 @@ class MirahezeFunctions {
 	public static function onCreateWikiJsonBuilder( string $wiki, DBConnRef $dbr, array &$jsonArray ) {
 		$row = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
-			->fields( [ 'wiki_locked' ] )
+			->fields( [
+				 'wiki_deleted',
+				 'wiki_locked',
+			] )
 			->where( [ 'wiki_dbname' => $wiki ] )
 			->caller( __METHOD__ )
 			->fetchRow();
 
+		$jsonArray['states']['deleted'] = (bool)$row->wiki_deleted;
 		$jsonArray['states']['locked'] = (bool)$row->wiki_locked;
 	}
 
