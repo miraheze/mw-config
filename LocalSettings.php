@@ -6302,7 +6302,10 @@ $wi::$disabledExtensions = [
 	'pageproperties',
 	// Broken, once again...
 	'lingo',
+	// Disabled until Paladox's patch is merged
 	'ratepage',
+	// Disabled until Paladox's patch is merged
+	'authorprotect'
 ];
 
 if ( $wi->version >= 1.40 ) {
