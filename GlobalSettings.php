@@ -713,3 +713,8 @@ $wgMathMathMLUrl = 'http://10.0.18.106:10044/';
 // Needed as the server uses ipv4 only.
 $wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
 $wgCaptchaStorageClass = MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore::class;
+
+if ( getenv( 'JOBRUNNER_RUN' ) ) {
+	// fatals but not random I/O warnings
+	error_reporting( E_ERROR );
+}
