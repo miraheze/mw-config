@@ -4139,7 +4139,7 @@ $wgConf->settings += [
 	],
 
 	// Password policy
-	'wgPasswordPolicy' => [
+	/* 'wgPasswordPolicy' => [
 		'default' => [
 			'policies' => [
 				'default' => [
@@ -4227,7 +4227,7 @@ $wgConf->settings += [
 				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 			],
 		],
-	],
+	],*/
 
 	// Popups
 	'wgPopupsHideOptInOnPreferencesPage' => [
