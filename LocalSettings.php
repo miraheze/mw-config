@@ -91,22 +91,9 @@ $wgConf->settings += [
 		'default' => '8',
 	],
 
-	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
-	// and to run migrateRevisionCommentTemp.php. After set to SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW.
-	// If confident that it worked then set SCHEMA_COMPAT_NEW.
-	'wgCommentTempTableSchemaMigrationStage' => [
-		'default' => [
-			'rev_comment' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_NEW,
-		],
-		'mirabeta' => [
-			'rev_comment' => SCHEMA_COMPAT_NEW,
-		],
-	],
-	// Migrating requires SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
-	// and to run migrateExternallinks. After set to SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW.
-	'wgExternalLinksSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-		'mirabeta' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
+	// 'pagelinks' table migration
+	'wgPageLinksSchemaMigrationStage' => [
+ 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
 
 	// 3D
@@ -531,10 +518,6 @@ $wgConf->settings += [
 	],
 
 	// CheckUser
-	// New for 1.40
-	'wgCheckUserEventTablesMigrationStage' => [
-		'default' => SCHEMA_COMPAT_OLD,
-	],
 	'wgCheckUserForceSummary' => [
 		'default' => true,
 	],
