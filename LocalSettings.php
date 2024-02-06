@@ -6354,7 +6354,7 @@ if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
-if ( $wi->deleted ) {
+if ( $cwDeleted ) {
 	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
 }
 
