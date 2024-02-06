@@ -1811,6 +1811,12 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// GlobalNewFiles
+	'wgGlobalNewFilesDatabase' => [
+		'default' => 'mhglobal',
+		'mirabeta' => 'testglobal',
+	],
+
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => [
 		'default' => 'mhglobal',
