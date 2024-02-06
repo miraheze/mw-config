@@ -454,7 +454,7 @@ class MirahezeFunctions {
 		$realm ??= self::getRealm();
 
 		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[$realm] );
-		
+
 		return in_array( self::$currentDatabase, $deletedDatabases );
 	}
 
