@@ -13,6 +13,9 @@ class MirahezeFunctions {
 	public $hostname;
 
 	/** @var bool */
+	public $deleted;
+
+	/** @var bool */
 	public $missing;
 
 	/** @var string */
