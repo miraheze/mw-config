@@ -144,7 +144,7 @@ class MirahezeFunctions {
 			if ( $fromServer ) {
 				$server = $database;
 				$database = '';
-				foreach ( $databasesArray['combi'] ?? $databasesArray['databases'] as $key => $data ) {
+				foreach ( $databasesArray['combi'] as $key => $data ) {
 					if ( isset( $data['u'] ) && $data['u'] === $server ) {
 						$database = $key;
 						break;
@@ -156,15 +156,15 @@ class MirahezeFunctions {
 				}
 			}
 
-			if ( isset( $databasesArray['combi'][$database] ) || isset( $databasesArray['databases'][$database] ) ) {
-				return $databasesArray['combi'][$database] ?? $databasesArray['databases'][$database];
+			if ( isset( $databasesArray['combi'][$database] ) ) {
+				return $databasesArray['combi'][$database];
 			} else {
 				return '';
 			}
 		} else {
 			global $wgDatabaseClustersMaintenance;
 
-			$databases = $databasesArray['combi'] ?? $databasesArray['databases'] ?? [];
+			$databases = $databasesArray['combi'] ?? [];
 
 			if ( $wgDatabaseClustersMaintenance ) {
 				$databases = array_filter( $databases, static function ( $data, $key ) {
@@ -980,12 +980,10 @@ class MirahezeFunctions {
 				'combi' => $default['databases'],
 			],
 			'deleted' => [
-				'deleted' => 'databases',
-				'databases' => $default['deleted'],
+				'combi' => $default['deleted'],
 			],
 			'deleted-beta' => [
-				'deleted-beta' => 'databases',
-				'databases' => $beta['deleted'],
+				'combi' => $beta['deleted'],
 			],
 		];
 
