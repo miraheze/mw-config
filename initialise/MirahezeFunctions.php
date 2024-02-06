@@ -76,6 +76,7 @@ class MirahezeFunctions {
 
 		$this->server = self::getServer();
 		$this->sitename = self::getSiteName();
+		$this->deleted = self::isDeleted();
 		$this->missing = self::isMissing();
 		$this->realm = self::getRealm();
 		$this->version = self::getMediaWikiVersion();
@@ -439,6 +440,21 @@ class MirahezeFunctions {
 		putenv( "MW_INSTALL_PATH=$IP" );
 
 		return $IP . '/' . $file;
+	}
+
+	/**
+	 * @return bool
+	 */
+	public static function isDeleted(): bool {
+		global $wgConf;
+
+		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		$realm ??= self::getRealm();
+
+		$deletedDatabases = self::readDbListFile( 'deleted-' . self::LISTS[$realm] );
+		
+		return in_array( self::$currentDatabase, $deletedDatabases );
 	}
 
 	/**
