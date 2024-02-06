@@ -104,12 +104,8 @@ class MirahezeFunctions {
 
 		$realm ??= self::getRealm();
 
-		// We need the CLI to be able to access 'deleted' wikis
-		if ( PHP_SAPI === 'cli' ) {
-			$databases ??= array_merge( self::readDbListFile( self::LISTS[$realm] ), self::readDbListFile( 'deleted-' . self::LISTS[$realm] ) );
-		}
-
-		$databases ??= self::readDbListFile( self::LISTS[$realm] );
+		// We need the CLI *and* the web to be able to access 'deleted' wikis
+		$databases ??= array_merge( self::readDbListFile( self::LISTS[$realm] ), self::readDbListFile( 'deleted-' . self::LISTS[$realm] ) );
 
 		$wgLocalDatabases = $databases;
 		return $databases;
