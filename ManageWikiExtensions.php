@@ -2390,13 +2390,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'mixednamespacesearchsuggestions' => [
-		'name' => 'MixedNamespaceSearchSuggestions',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MixedNamespaceSearchSuggestions',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'other',
-	],
 	'mobilefrontend' => [
 		'name' => 'MobileFrontend',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend',
