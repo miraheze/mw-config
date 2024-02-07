@@ -6297,10 +6297,6 @@ $wi::$disabledExtensions = [
 	'authorprotect'
 ];
 
-if ( $wi->version >= 1.40 ) {
-	array_push( $wi::$disabledExtensions, 'mixednamespacesearchsuggestions' );
-}
-
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
