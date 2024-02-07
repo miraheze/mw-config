@@ -3369,7 +3369,7 @@ $wgConf->settings += [
 		'mirabeta' => 'testglobal',
 	],
 	'wgMatomoAnalyticsServerURL' => [
-		'default' => 'https://matomo.miraheze.org/',
+		'default' => 'https://analytics.wikitide.net/',
 	],
 	'wgMatomoAnalyticsUseDB' => [
 		'default' => true,
