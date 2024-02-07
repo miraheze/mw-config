@@ -3540,13 +3540,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
-	'flatbox' => [
-		'name' => 'Flatbox',
-		'linkPage' => 'https://github.com/enginbyram/mediawiki-flatbox',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
 	'gamepress' => [
 		'name' => 'Gamepress',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
