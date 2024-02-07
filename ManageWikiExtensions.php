@@ -188,14 +188,6 @@ $wgManageWikiExtensions = [
 	],
 
 	// Parser hooks
-	'htmlmetaadntitle' => [
-		'name' => 'AddHTMLMetaAndTitle',
-		'displayname' => 'Add HTML Meta and Title',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Add_HTML_Meta_and_Title',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
 	'ajaxpoll' => [
 		'name' => 'AJAX Poll',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AJAXPoll',
