@@ -50,9 +50,4 @@ if ( $wi->version >= 1.41 ) {
 	wfLoadExtension( 'ParserMigration' );
 }
 
-// Renameuser is bundled into core from 1.40+
-if ( $wi->version < 1.40 ) {
-	wfLoadExtension( 'Renameuser' );
-}
-
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
