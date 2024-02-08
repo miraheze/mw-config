@@ -1,5 +1,11 @@
 <?php
 
+use MediaWiki\Actions\ActionEntryPoint;
+use MediaWiki\Context\RequestContext;
+use MediaWiki\EntryPointEnvironment;
+use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
+
 define( 'MW_ENTRY_POINT', 'index' );
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
@@ -47,7 +53,7 @@ if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' ) ) {
 	/* if ( mb_strtolower( mb_substr( $title, 0, 1 ) ) === mb_substr( $title, 0, 1 ) ) {
 		$currentTitle = Title::newFromText( $title );
 		if ( $currentTitle ) {
-			$namespaceInfo = MediaWiki\MediaWikiServices::getInstance()->getNamespaceInfo();
+			$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
 			if ( $namespaceInfo->isCapitalized( $currentTitle->getNamespace() ) ) {
 				$decodedQueryString = urldecode( $_SERVER['QUERY_STRING'] ?? '' );
 				parse_str( $decodedQueryString, $queryParameters );
@@ -79,9 +85,17 @@ if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' ) ) {
 require_once MirahezeFunctions::getMediaWiki( 'includes/PHPVersionCheck.php' );
 wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ) );
 
-wfIndexMain();
+if ( version_compare( MW_VERSION, '1.42', '>=' ) ) {
+	( new ActionEntryPoint(
+		RequestContext::getMain(),
+		new EntryPointEnvironment(),
+		MediaWikiServices::getInstance()
+	) )->run();
+} else {
+	wfIndexMain();
 
-function wfIndexMain() {
-	$mediaWiki = new MediaWiki();
-	$mediaWiki->run();
+	function wfIndexMain() {
+		$mediaWiki = new MediaWiki();
+		$mediaWiki->run();
+	}
 }
