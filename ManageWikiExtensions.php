@@ -3525,6 +3525,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'foreground' => [
+		'name' => 'Foreground',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Foreground',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'gamepress' => [
 		'name' => 'Gamepress',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
