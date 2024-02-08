@@ -93,9 +93,9 @@ if ( version_compare( MW_VERSION, '1.42', '>=' ) ) {
 	) )->run();
 } else {
 	wfIndexMain();
+}
 
-	function wfIndexMain() {
-		$mediaWiki = new MediaWiki();
-		$mediaWiki->run();
-	}
+function wfIndexMain() {
+	$mediaWiki = new MediaWiki();
+	$mediaWiki->run();
 }
