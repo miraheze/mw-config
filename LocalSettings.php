@@ -6291,8 +6291,6 @@ $wi::$disabledExtensions = [
 	'pageproperties',
 	// Broken, once again...
 	'lingo',
-	// Disabled until Paladox's patch is merged
-	'ratepage',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
