@@ -6293,8 +6293,6 @@ $wi::$disabledExtensions = [
 	'lingo',
 	// Disabled until Paladox's patch is merged
 	'ratepage',
-	// Disabled until Paladox's patch is merged
-	'authorprotect'
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
