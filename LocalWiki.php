@@ -338,7 +338,10 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'metawikibeta':
-		wfLoadExtension( 'GlobalWatchlist' );
+		wfLoadExtensions( [
+			'GlobalWatchlist',
+			'RequestSSL',
+		] );
 
 		break;
 	case 'metzowiki':
