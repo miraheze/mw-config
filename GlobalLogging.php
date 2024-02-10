@@ -252,3 +252,7 @@ if ( $wgCommandLineMode ) {
 	$wgShowExceptionDetails = true;
 	$wgDebugDumpSql = true;
 }
+
+if ( wfHostname() === 'test151' ) {
+	$wgShowExceptionDetails = true;
+}
