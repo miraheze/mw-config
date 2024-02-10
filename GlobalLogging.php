@@ -207,11 +207,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 }
 
-$wgMWLoggerDefaultSpi = [
-	'class' => MonologSpi::class,
-	'args' => [ $wmgMonologConfig ],
-];
-
 if ( $wmgLogToDisk ) {
 	$wmgLogDir = '/var/log/mediawiki';
 
@@ -242,6 +237,11 @@ if ( $wmgLogToDisk ) {
 		],
 		'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 		'VisualEditor' => "$wmgLogDir/debuglogs/VisualEditor.log",
+	];
+} else {
+	$wgMWLoggerDefaultSpi = [
+		'class' => MonologSpi::class,
+		'args' => [ $wmgMonologConfig ],
 	];
 }
 
