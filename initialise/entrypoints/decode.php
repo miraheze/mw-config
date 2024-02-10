@@ -26,12 +26,16 @@ if ( $decodedUri && !str_contains( $queryString, 'title' ) ) {
 	$queryParameters['title'] = $title;
 }
 
-if ( $wgArticlePath === '/wiki/$1' && isset( $_GET['diff'] ) ) {
+if ( $wgArticlePath === '/wiki/$1' && ( isset( $_GET['diff'] ) || isset( $_GET['oldid'] ) ) ) {
 	if ( !$decodedUri ) {
 		$redirectUrl .= '/';
 	}
+
 	$queryParameters ??= [];
-	$queryParameters['diff'] = $_GET['diff'];
+	if ( isset( $_GET['diff'] ) ) {
+		$queryParameters['diff'] = $_GET['diff'];
+	}
+
 	if ( isset( $_GET['oldid'] ) ) {
 		$queryParameters['oldid'] = $_GET['oldid'];
 	}
