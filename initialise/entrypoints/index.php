@@ -8,7 +8,7 @@ use MediaWiki\Title\Title;
 
 define( 'MW_ENTRY_POINT', 'index' );
 
-putenv( 'MW_USE_LOCAL_SETTINGS_LOADER' );
+putenv( 'MW_USE_LOCAL_SETTINGS_LOADER=true' );
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 
