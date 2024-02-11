@@ -8,21 +8,7 @@ use MediaWiki\Title\Title;
 
 define( 'MW_ENTRY_POINT', 'index' );
 
-putenv( 'MW_USE_LOCAL_SETTINGS_LOADER=true' );
-
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-
-if ( $wi->missing ) {
-	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
-}
-
-if ( $cwDeleted ) {
-	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
-}
-
-// Don't need a global here
-unset( $wi );
-
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
 if ( $wgArticlePath === '/$1' && str_contains( strtoupper( $_SERVER['REQUEST_URI'] ), strtoupper( '/wiki/' ) ) ) {
@@ -34,6 +20,17 @@ if ( $wgArticlePath === '/$1' && str_contains( strtoupper( $_SERVER['REQUEST_URI
 	header( 'Location: /wiki' . $_SERVER['REQUEST_URI'], true, 301 );
 	exit();
 }
+
+if ( $wi->missing ) {
+	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
+}
+
+if ( $cwDeleted ) {
+	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
+}
+
+// Don't need a global here
+unset( $wi );
 
 // $wgArticlePath === '/$1' ||
 if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' ) ) {
