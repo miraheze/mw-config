@@ -33,7 +33,7 @@ wfLoadExtensions( [
 	'OAuth',
 	'ParserFunctions',
 	'QuickInstantCommons',
-	'ReportIncident',
+	//'ReportIncident',
 	'RottenLinks',
 	'Scribunto',
 	// 'SecureLinkFixer',
