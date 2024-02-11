@@ -2805,6 +2805,7 @@ $wgConf->settings += [
 				'editmyoptions' => true,
 				'editmyprivateinfo' => true,
 				'editmywatchlist' => true,
+				'reportincident' => true,
 				'writeapi' => true,
 			],
 			'checkuser' => [
@@ -3264,6 +3265,7 @@ $wgConf->settings += [
 				'oathauth-verify-user',
 				'oathauth-view-log',
 				'renameuser',
+				'reportincident',
 				'request-import-dump',
 				'requestwiki',
 				'siteadmin',
@@ -4466,6 +4468,19 @@ $wgConf->settings += [
 	],
 	'wgUseRCPatrol' => [
 		'default' => true,
+	],
+
+	// ReportIncident
+	'wgReportIncidentAdministratorsPage' => [
+		'default' => 'meta:Trust_and_Safety',
+	],
+	'wgReportIncidentEmailFromAddress' => [
+		'default' => $wgPasswordSender,
+	],
+	'wgReportIncidentRecipientEmails' => [
+		'default' => [
+			'ts@wikitide.org',
+		],
 	],
 
 	// Resources
