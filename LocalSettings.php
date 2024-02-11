@@ -2322,13 +2322,7 @@ $wgConf->settings += [
 
 	// Kartographer
 	'wgKartographerDfltStyle' => [
-		'default' => 'osm-intl',
-		'bluepageswiki' => '.',
-		'gratisdatawiki' => '.',
-		'gratispaideiawiki' => '.',
-		'hkrailwiki' => '.',
-		'isvwiki' => '.',
-		'leborkwiki' => '.',
+		'default' => '.',
 	],
 	'wgKartographerEnableMapFrame' => [
 		'default' => true,
