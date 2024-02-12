@@ -54,16 +54,8 @@ $wgObjectCaches['mysql-multiwrite'] = [
 
 $wgObjectCaches['db-mainstash'] = [
 	'class' => SqlBagOStuff::class,
-	'server' => [
-		'type'     => 'mysql',
-		'host'     => $beta ? '10.0.16.128' : '10.0.17.119',
-		'dbname'   => $beta ? 'testmainstash' : 'mainstash',
-		'user'     => $wgDBuser,
-		'password' => $wgDBpassword,
-		'flags'    => 0,
-	],
-	'dbDomain' => 'mainstash',
-	'globalKeyLbDomain' => 'mainstash',
+	'cluster' => $beta ? 'beta' : 'echo',
+	'dbDomain' => $beta ? 'testmainstash' : 'mainstash',
 	'tableName' => 'objectstash',
 	'multiPrimaryMode' => false,
 	'purgePeriod' => 100,
@@ -85,9 +77,16 @@ $wgObjectCaches['redis-session'] = [
 ];
 
 $wgSessionCacheType = 'redis-session';
+$wgCentralAuthSessionCacheType = 'redis-session';
+$wgEchoSeenTimeCacheType = 'redis-session';
+
+$wgSessionName = $wgDBname . 'Session';
 
 // Same as $wgMainStash
 $wgMWOAuthSessionCacheType = 'db-mainstash';
+
+// Same as $wgMainCacheType
+$wgMWOAuthNonceCacheType = 'mcrouter';
 
 $wgMainCacheType = 'mcrouter';
 $wgMessageCacheType = 'mcrouter';
