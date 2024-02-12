@@ -1036,31 +1036,29 @@ class MirahezeFunctions {
 
 		asort( $versions );
 
-		if ( $permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ) ) {
-			$mwSettings = new ManageWikiSettings( $dbName );
-			$setList = $mwSettings->list();
-			$formDescriptor['article-path'] = [
-				'label-message' => 'miraheze-label-managewiki-article-path',
-				'type' => 'select',
-				'options-messages' => [
-					'miraheze-label-managewiki-article-path-wiki' => '/wiki/$1',
-					'miraheze-label-managewiki-article-path-root' => '/$1',
-				],
-				'default' => $setList['wgArticlePath'] ?? '/wiki/$1',
-				'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
-				'cssclass' => 'managewiki-infuse',
-				'section' => 'main',
-			];
+		$mwSettings = new ManageWikiSettings( $dbName );
+		$setList = $mwSettings->list();
+		$formDescriptor['article-path'] = [
+			'label-message' => 'miraheze-label-managewiki-article-path',
+			'type' => 'select',
+			'options-messages' => [
+				'miraheze-label-managewiki-article-path-wiki' => '/wiki/$1',
+				'miraheze-label-managewiki-article-path-root' => '/$1',
+			],
+			'default' => $setList['wgArticlePath'] ?? '/wiki/$1',
+			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'cssclass' => 'managewiki-infuse',
+			'section' => 'main',
+		];
 
-			$formDescriptor['mainpage-is-domain-root'] = [
-				'label-message' => 'miraheze-label-managewiki-mainpage-is-domain-root',
-				'type' => 'check',
-				'default' => $setList['wgMainPageIsDomainRoot'] ?? false,
-				'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
-				'cssclass' => 'managewiki-infuse',
-				'section' => 'main',
-			];
-		}
+		$formDescriptor['mainpage-is-domain-root'] = [
+			'label-message' => 'miraheze-label-managewiki-mainpage-is-domain-root',
+			'type' => 'check',
+			'default' => $setList['wgMainPageIsDomainRoot'] ?? false,
+			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'cssclass' => 'managewiki-infuse',
+			'section' => 'main',
+		];
 
 		$formDescriptor['mediawiki-version'] = [
 			'label-message' => 'miraheze-label-managewiki-mediawiki-version',
