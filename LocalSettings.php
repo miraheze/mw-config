@@ -4548,6 +4548,7 @@ $wgConf->settings += [
 			'MacFan4000',
 			'Original Authority',
 			'Reception123',
+			'Universal Omega',
 		],
 	],
 
