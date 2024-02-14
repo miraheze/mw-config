@@ -3174,6 +3174,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'unlinkedwikibase' => [
+		'name' => 'UnlinkedWikibase',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UnlinkedWikibase',
+		'conflicts' => false,
+		'requires' => false,
+		'section' => 'other',
+	],
 	'uploadslink' => [
 		'name' => 'UploadsLink',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UploadsLink',
