@@ -50,7 +50,7 @@ $wgLBFactoryConf = [
 	],
 	'readOnlyBySection' => [
 		// 'DEFAULT' => 'Maintenance is in progress. Please try again in a few minutes.',
-		'c1' => 'Maintenance is in progress. Please try again in a few minutes.',
+		// 'c1' => 'Maintenance is in progress. Please try again in a few minutes.',
 		// 'c2' => 'Maintenance is in progress. Please try again in a few minutes.',
 		// 'c3' => 'Maintenance is in progress. Please try again in a few minutes.',
 		// 'c4' => 'Maintenance is in progress. Please try again in a few minutes.',
