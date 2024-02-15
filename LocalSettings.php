@@ -3644,6 +3644,7 @@ $wgConf->settings += [
 	],
 	'wgWhitelistReadRegexp' => [
 		'default' => [],
+		'kanrikyarawiki' => [ "#(?!(?:Draft(?:_talk)?:|Notes(?:_talk)?:|User(?:_talk)?:[^/]+/sandbox/))^#" ]
 	],
 	'wgDisabledVariants' => [
 		'default' => [],
