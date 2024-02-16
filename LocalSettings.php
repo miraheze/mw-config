@@ -1058,6 +1058,10 @@ $wgConf->settings += [
 		'mirabeta' => false,
 	],
 
+	'wgRequestWikiMinimumLength' => [
+		'default' => 250,
+	],
+
 	// CookieWarning
 	'wgCookieWarningMoreUrl' => [
 		'default' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#4._Cookies',
