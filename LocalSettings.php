@@ -5394,12 +5394,16 @@ $wgConf->settings += [
 	],
 
 	// UrlShortener
-	'wgUrlShortenerTemplate' => [
-		'default' => '/m/$1',
-	],
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
 		'mirabeta' => 'metawikibeta',
+	],
+	'wgUrlShortenerServer' => [
+		'metawiki' => 'wiki.surf',
+	],
+	'wgUrlShortenerTemplate' => [
+		'default' => '/m/$1',
+		'metawiki' => '/$1',
 	],
 
 	// UserFunctions
