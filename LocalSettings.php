@@ -2124,6 +2124,10 @@ $wgConf->settings += [
 		'default' => 'metawiki',
 		'mirabeta' => 'metawikibeta',
 	],
+	'wgImportDumpEnableAutomatedJob' => [
+		'default' => false,
+		'metawikibeta' => true,
+	],
 	'wgImportDumpInterwikiMap' => [
 		'default' => [
 			'fandom.com' => 'wikia',
