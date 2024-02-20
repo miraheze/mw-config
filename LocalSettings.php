@@ -1675,10 +1675,6 @@ $wgConf->settings += [
 			19,
 			/** Void (SRE) */
 			5258,
-			/** Paladox (SRE) */
-			13554,
-			/** Owen (SRE and Board) */
-			73651,
 			/** MacFan4000 (SRE) */
 			6758,
 			/** Universal Omega (SRE and Board) */
