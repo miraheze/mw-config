@@ -1762,7 +1762,7 @@ $wgConf->settings += [
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
-		'metawiki' => false,
+		// 'metawiki' => false,
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal',
