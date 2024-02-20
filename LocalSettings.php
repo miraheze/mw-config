@@ -2791,6 +2791,9 @@ $wgConf->settings += [
 			'sysadmin' => [
 				'sysadmin',
 			],
+			'trustandsafety' => [
+				'trustandsafety',
+			],
 		],
 	],
 	'wgManageWikiPermissionsAdditionalRights' => [
@@ -3207,6 +3210,9 @@ $wgConf->settings += [
 		'metawiki' => [
 			'sysadmin' => [
 				'sysadmin',
+			],
+			'trustandsafety' => [
+				'trustandsafety',
 			],
 		],
 	],
