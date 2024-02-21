@@ -2144,6 +2144,12 @@ $wgConf->settings += [
 			'Universal Omega',
 		],
 	],
+	'wgImportDumpUsersNotifiedOnFailedImports' => [
+		'default' => [],
+		'metawikibeta' => [
+			'Universal Omega',
+		],
+	],
 
 	// Imports
 	'wgImportSources' => [
