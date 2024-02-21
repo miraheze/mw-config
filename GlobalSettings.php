@@ -192,6 +192,9 @@ if ( !$cwPrivate ) {
 if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.miraheze.org';
 	$wgMFStopRedirectCookieHost = '.miraheze.org';
+} elseif ( preg_match( '/wikitide\.org$/', $wi->server ) ) {
+	$wgCentralAuthCookieDomain = '.wikitide.org';
+	$wgMFStopRedirectCookieHost = '.wikitide.org';
 } elseif ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.mirabeta.org';
 	$wgMFStopRedirectCookieHost = '.mirabeta.org';
