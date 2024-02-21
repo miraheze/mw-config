@@ -2128,7 +2128,7 @@ $wgConf->settings += [
 		'default' => [
 			'fandom.com' => 'wikia',
 			'miraheze.org' => 'mh',
-			'wikitide.org' => 'wt',
+			// 'wikitide.org' => 'wt',
 		],
 	],
 	'wgImportDumpScriptCommand' => [
