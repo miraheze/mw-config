@@ -2128,6 +2128,7 @@ $wgConf->settings += [
 		'default' => [
 			'fandom.com' => 'wikia',
 			'miraheze.org' => 'mh',
+			'wikitide.org' => 'wt',
 		],
 	],
 	'wgImportDumpScriptCommand' => [
@@ -5140,14 +5141,17 @@ $wgConf->settings += [
 			'audio' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
+				'<^(?:https:)?//static\\.wikitide\\.net/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
+				'<^(?:https:)?//static\\.wikitide\\.net/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//static\\.wikitide\\.net/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
