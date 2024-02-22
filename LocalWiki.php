@@ -331,7 +331,6 @@ switch ( $wi->dbname ) {
 
 		wfLoadExtensions( [
 			'GlobalWatchlist',
-			'ImportDump',
 			'IncidentReporting',
 			'RequestSSL',
 		] );

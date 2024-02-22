@@ -18,6 +18,7 @@ wfLoadExtensions( [
 	'EventLogging',
 	'GlobalCssJs',
 	'GlobalNewFiles',
+	'ImportDump',
 	'Interwiki',
 	'InterwikiDispatcher',
 	'IPInfo',
