@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use Miraheze\CreateWiki\RemoteWiki;
+use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
 use Wikimedia\Rdbms\DBConnRef;
 
 class MirahezeFunctions {
@@ -1035,6 +1036,30 @@ class MirahezeFunctions {
 
 		asort( $versions );
 
+		$mwSettings = new ManageWikiSettings( $dbName );
+		$setList = $mwSettings->list();
+		$formDescriptor['article-path'] = [
+			'label-message' => 'miraheze-label-managewiki-article-path',
+			'type' => 'select',
+			'options-messages' => [
+				'miraheze-label-managewiki-article-path-wiki' => '/wiki/$1',
+				'miraheze-label-managewiki-article-path-root' => '/$1',
+			],
+			'default' => $setList['wgArticlePath'] ?? '/wiki/$1',
+			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'cssclass' => 'managewiki-infuse',
+			'section' => 'main',
+		];
+
+		$formDescriptor['mainpage-is-domain-root'] = [
+			'label-message' => 'miraheze-label-managewiki-mainpage-is-domain-root',
+			'type' => 'check',
+			'default' => $setList['wgMainPageIsDomainRoot'] ?? false,
+			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'cssclass' => 'managewiki-infuse',
+			'section' => 'main',
+		];
+
 		$formDescriptor['mediawiki-version'] = [
 			'label-message' => 'miraheze-label-managewiki-mediawiki-version',
 			'type' => 'select',
@@ -1060,6 +1085,41 @@ class MirahezeFunctions {
 			$wiki->changes['mediawiki-version'] = [
 				'old' => $version,
 				'new' => $formData['mediawiki-version']
+			];
+		}
+
+		$mwSettings = new ManageWikiSettings( $dbName );
+
+		$articlePath = $mwSettings->list()['wgArticlePath'] ?? '';
+		if ( $formData['article-path'] !== $articlePath ) {
+			$mwSettings->modify( [ 'wgArticlePath' => $formData['article-path'] ] );
+			$mwSettings->commit();
+			$wiki->changes['article-path'] = [
+				'old' => $articlePath,
+				'new' => $formData['article-path']
+			];
+
+			$server = self::getServer();
+			$jobQueueGroupFactory = MediaWikiServices::getInstance()->getJobQueueGroupFactory();
+			$jobQueueGroupFactory->makeJobQueueGroup( $dbName )->push(
+				new CdnPurgeJob( [
+					'urls' => [
+						$server . '/wiki/',
+						$server . '/wiki',
+						$server . '/',
+						$server,
+					],
+				] )
+			);
+		}
+
+		$mainPageIsDomainRoot = $mwSettings->list()['wgMainPageIsDomainRoot'] ?? false;
+		if ( $formData['mainpage-is-domain-root'] !== $mainPageIsDomainRoot ) {
+			$mwSettings->modify( [ 'wgMainPageIsDomainRoot' => $formData['mainpage-is-domain-root'] ] );
+			$mwSettings->commit();
+			$wiki->changes['mainpage-is-domain-root'] = [
+				'old' => $mainPageIsDomainRoot,
+				'new' => $formData['mainpage-is-domain-root']
 			];
 		}
 	}
