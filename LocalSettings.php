@@ -2121,8 +2121,7 @@ $wgConf->settings += [
 		'mirabeta' => 'metawikibeta',
 	],
 	'wgImportDumpEnableAutomatedJob' => [
-		'default' => false,
-		'metawikibeta' => true,
+		'default' => true,
 	],
 	'wgImportDumpInterwikiMap' => [
 		'default' => [
@@ -2145,8 +2144,11 @@ $wgConf->settings += [
 		],
 	],
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
-		'default' => [],
-		'metawikibeta' => [
+		'default' => [
+			'Agent Isai',
+			'MacFan4000',
+			'Original Authority',
+			'Reception123',
 			'Universal Omega',
 		],
 	],
