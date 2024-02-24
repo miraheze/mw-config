@@ -80,6 +80,8 @@ $wgSessionCacheType = 'redis-session';
 $wgCentralAuthSessionCacheType = 'redis-session';
 $wgEchoSeenTimeCacheType = 'redis-session';
 
+$wgCreateWikiCacheType = 'redis-session';
+
 $wgSessionName = $wgDBname . 'Session';
 
 // Same as $wgMainStash
