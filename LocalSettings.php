@@ -6389,6 +6389,15 @@ if ( $wi->missing ) {
 }
 
 if ( $cwDeleted ) {
+	if ( $wgCommandLineMode ) {
+		wfHandleDeletedWiki();
+	} else {
+		define( 'MW_FINAL_SETUP_CALLBACK', 'wfHandleDeletedWiki' );
+	}
+}
+
+function wfHandleDeletedWiki() {
+	global $wgCommandLineMode, $wgDBname;
 	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
 }
 
