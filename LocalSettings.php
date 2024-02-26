@@ -6114,6 +6114,9 @@ $wgConf->settings += [
 	'cwClosed' => [
 		'default' => false,
 	],
+	'cwDeleted' => [
+		'default' => false,
+	],
 	'cwExperimental' => [
 		'default' => false,
 	],
