@@ -1,5 +1,11 @@
 <?php
 
+use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
+use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
+use MediaWiki\Html\Html;
+use MediaWiki\SpecialPage\SpecialPage;
+use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
+
 $wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
@@ -32,8 +38,8 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
-	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
-		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
 	}
 
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
@@ -715,7 +721,7 @@ $wgMathMathMLUrl = 'http://10.0.18.106:10044/';
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
 $wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
-$wgCaptchaStorageClass = MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore::class;
+$wgCaptchaStorageClass = CaptchaCacheStore::class;
 
 if ( getenv( 'JOBRUNNER_RUN' ) ) {
 	// fatals but not random I/O warnings
