@@ -6397,7 +6397,7 @@ if ( $cwDeleted ) {
 }
 
 function wfHandleDeletedWiki() {
-	global $wgCommandLineMode, $wgDBname;
+	global $wgCommandLineMode, $wgDBname, $wgLocalDatabases;
 	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
 }
 
