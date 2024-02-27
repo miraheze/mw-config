@@ -640,9 +640,6 @@ $wgThumbnailEpoch = 20230715011058;
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 
-// Can be removed on 1.40+ (https://phabricator.wikimedia.org/T326147)
-$wgMFStripResponsiveImages = false;
-
 // For Scribunto / wgCodeEditorEnableCore
 $wgULSNoImeSelectors[] = '.ace_editor textarea';
 
