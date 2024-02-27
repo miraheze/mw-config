@@ -172,7 +172,7 @@ class MirahezeFunctions {
 					global $wgDBname, $wgDatabaseClustersMaintenance;
 
 					if ( $wgDBname && $key === $wgDBname ) {
-						if ( !MW_ENTRY_POINT === 'cli' && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
+						if ( MW_ENTRY_POINT !== 'cli' && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
 							require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
 						}
 					}
