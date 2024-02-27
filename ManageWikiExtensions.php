@@ -500,7 +500,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10756">T10756</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10756">T10756</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'groupssidebar' => [
@@ -834,7 +834,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10882">T10882</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10882">T10882</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'rightfunctions' => [
@@ -1390,7 +1390,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10883">T10883</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10883">T10883</a> for details.',
 		'install' => [
 			'sql' => [
 				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
@@ -3407,7 +3407,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10871">T10871</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10871">T10871</a> for details.',
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"

@@ -1996,7 +1996,7 @@ $wgConf->settings += [
 			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
 			'NGINX' => 'https://meta.miraheze.org/wiki/Tech:Nginx',
 			'Parsoid' => 'https://meta.miraheze.org/wiki/Tech:Parsoid',
-			'Phabricator' => 'https://meta.miraheze.org/wiki/Tech:Phabricator',
+			'Phorge' => 'https://meta.miraheze.org/wiki/Tech:Phorge',
 			'Puppet Server' => 'https://meta.miraheze.org/wiki/Tech:Puppet',
 			'Redis' => 'https://meta.miraheze.org/wiki/Tech:Redis',
 			'Salt' => 'https://meta.miraheze.org/wiki/Tech:Salt',
@@ -2006,7 +2006,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgIncidentReportingTaskUrl' => [
-		'default' => 'https://phabricator.miraheze.org/',
+		'default' => 'https://issue-tracker.miraheze.org/',
 	],
 
 	// Interwiki
