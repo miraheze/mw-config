@@ -2066,20 +2066,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Permissions
-	'wgImplicitGroups' => [
-		'name' => 'Implicit Groups',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'usergroups',
-		'overridedefault' => [
-			'*',
-			'user',
-			'autoconfirmed'
-		],
-		'section' => 'permissions',
-		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
-		'requires' => [],
-	],
 	'wgWhitelistRead' => [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
@@ -2161,18 +2147,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 50,
 		'section' => 'recentchanges',
 		'help' => 'Set maximum number of results to return in syndication feeds (RSS, Atom) for eg Recentchanges, Newpages. Min. 1, Max. 5,000',
-		'requires' => [],
-	],
-	'wgRCMaxAge' => [
-		'name' => 'RecentChanges max age',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'integer',
-		'minint' => 1,
-		'maxint' => 62208000,
-		'overridedefault' => 180 * 24 * 3600,
-		'section' => 'recentchanges',
-		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will go.',
 		'requires' => [],
 	],
 	'wgRCLinkDays' => [
@@ -2300,7 +2274,41 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	// If necessary we can increase maxint.
+	'wgRCMaxAge' => [
+		'name' => 'RecentChanges max-age',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 62208000,
+		'overridedefault' => 180 * 24 * 3600,
+		'section' => 'recentchanges',
+		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	'wgImplicitGroups' => [
+		'name' => 'Implicit Groups',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'usergroups',
+		'overridedefault' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+		'section' => 'permissions',
+		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	// If necessary, we can increase maxint.
 	'wgMaxArticleSize' => [
 		'name' => 'Max Article Size',
 		'from' => 'mediawiki',
