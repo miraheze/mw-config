@@ -2,7 +2,7 @@
 	"name": "miraheze/mw-config",
 	"description": "",
 	"require-dev": {
-		"mediawiki/mediawiki-codesniffer": "42.0.0",
+		"mediawiki/mediawiki-codesniffer": "43.0.0",
 		"mediawiki/minus-x": "1.1.1",
 		"php-parallel-lint/php-console-highlighter": "1.0.0",
 		"php-parallel-lint/php-parallel-lint": "1.3.2",
