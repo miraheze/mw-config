@@ -909,7 +909,7 @@ $wgConf->settings += [
 			'c4',
 		],
 		'mirabeta' => [
-			'c4',
+			'c3',
 		],
 	],
 	// Use if you want to stop wikis being created on this cluster
