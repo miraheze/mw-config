@@ -1545,7 +1545,7 @@ $wgConf->settings += [
 		'hsckwiki' => [
 			'poweredby' => [
 				'songnguxyz' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 				],
@@ -1559,7 +1559,7 @@ $wgConf->settings += [
 		'lhmnwiki' => [
 			'poweredby' => [
 				'songnguxyz' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 				],
@@ -1569,21 +1569,7 @@ $wgConf->settings += [
 					'alt' => 'Hosted by Miraheze',
 				],
 			],
-		],
-		'snxyzincubatorwiki' => [
-			'poweredby' => [
-				'songnguxyz' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
-					'url' => 'https://songngu.xyz',
-					'alt' => 'This project is a part of SongNgu.xyz',
-				],
-				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze',
-				],
-			],
-		],
+		]
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
@@ -4648,10 +4634,6 @@ $wgConf->settings += [
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
 		],
-		'+lhmnwiki' => [
-			'editqualityarticles',
-			'editextendedconfirmedprotected',
-		],
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -4778,10 +4760,6 @@ $wgConf->settings += [
 		],
 		'knightnwiki' => [
 			'editextendedsemiprotected',
-		],
-		'lhmnwiki' => [
-			'editqualityarticles',
-			'editextendedconfirmedprotected',
 		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
