@@ -1,13 +1,30 @@
 <?php
 
-if ( PHP_SAPI !== 'cli' ) {
-	// https://phabricator.miraheze.org/T8703
-	header( 'X-Wiki-Visibility: ' . ( $cwPrivate ? 'Private' : 'Public' ) );
-}
+use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
+use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
+use MediaWiki\Html\Html;
+use MediaWiki\SpecialPage\SpecialPage;
+use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
 $wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+$wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
+$wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
 $wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
 $wgHooks['CreateWikiJsonBuilder'][] = 'MirahezeFunctions::onCreateWikiJsonBuilder';
+
+if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
+	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
+		if ( $key === 'places' ) {
+			$footerlinks['contact'] = Html::element( 'a',
+				[
+					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
+					'rel' => 'noreferrer noopener',
+				],
+				$skin->msg( 'contactpage-label' )->text()
+			);
+		}
+	};
+}
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
@@ -21,8 +38,8 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
-	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
-		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
 	}
 
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
@@ -30,6 +47,24 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
 	wfLoadExtension( 'Bootstrap' );
+}
+
+if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
+	wfLoadExtension( 'Elastica' );
+	$wgSearchType = 'CirrusSearch';
+	$wgCirrusSearchClusters = [
+		'default' => [
+			[
+				'host' => 'opensearch-mw.wikitide.net',
+				'port' => 443,
+				'transport' => 'Elastica\Transport\Https',
+			],
+		],
+	];
+
+	if ( $wi->isExtensionActive( 'RelatedArticles' ) ) {
+		$wgRelatedArticlesUseCirrusSearch = true;
+	}
 }
 
 if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
@@ -108,6 +143,20 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
 }
 
+// Article paths
+$articlePath = str_replace( '$1', '', $wgArticlePath );
+
+$wgDiscordNotificationWikiUrl = $wi->server . $articlePath;
+$wgDiscordNotificationWikiUrlEnding = '';
+$wgDiscordNotificationWikiUrlEndingDeleteArticle = '?action=delete';
+$wgDiscordNotificationWikiUrlEndingDiff = '?diff=prev&oldid=';
+$wgDiscordNotificationWikiUrlEndingEditArticle = '?action=edit';
+$wgDiscordNotificationWikiUrlEndingHistory = '?action=history';
+$wgDiscordNotificationWikiUrlEndingUserRights = 'Special:UserRights?user=';
+
+// Don't need a global here
+unset( $articlePath );
+
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
 // Closed Wikis
@@ -134,7 +183,7 @@ if ( $cwClosed ) {
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => MirahezeIRCRCFeedFormatter::class,
-		'uri' => 'udp://[2a10:6740::6:505]:5070',
+		'uri' => 'udp://10.0.17.143:5070',
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	];
@@ -145,16 +194,13 @@ if ( !$cwPrivate ) {
 	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 }
 
-if ( version_compare( MW_VERSION, '1.40', '>=' ) ) {
-	$wgParserEnableLegacyMediaDOM = false;
-} else {
-	$wgParserEnableLegacyMediaDOM = true;
-}
-
 // Dynamic cookie settings dependant on $wgServer
 if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.miraheze.org';
 	$wgMFStopRedirectCookieHost = '.miraheze.org';
+} elseif ( preg_match( '/wikitide\.org$/', $wi->server ) ) {
+	$wgCentralAuthCookieDomain = '.wikitide.org';
+	$wgMFStopRedirectCookieHost = '.wikitide.org';
 } elseif ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.mirabeta.org';
 	$wgMFStopRedirectCookieHost = '.mirabeta.org';
@@ -421,7 +467,7 @@ if ( preg_match( '/^(.*).mirabeta.org$/', $wi->hostname ) ) {
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?mirabeta\.org',
 	];
-	$wgParsoidEnableQueryString = true;
+	$wgParserMigrationEnableQueryString = true;
 }
 
 if ( !preg_match( '/^(.*).(miraheze|mirabeta).org$/', $wi->hostname ) ) {
@@ -472,12 +518,22 @@ unset( $vectorVersion );
 
 // Licensing variables
 
+$version = $wi->version;
+
+// Alpha is only available on the test server,
+// use beta (or stable if there currently is no beta)
+// for foreign metawiki links if the version is alpha.
+if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
+	$version = MirahezeFunctions::MEDIAWIKI_VERSIONS['beta'] ??
+		MirahezeFunctions::MEDIAWIKI_VERSIONS['stable'];
+}
+
 /**
  * Default values.
  * We can not set these in LocalSettings.php, to prevent them
  * from causing absolute overrides.
  */
-$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-sa.png';
 $wgRightsText = 'Creative Commons Attribution Share Alike';
 $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
@@ -495,7 +551,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = false;
 		break;
 	case 'cc-by':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by.png';
 		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
 		break;
@@ -510,17 +566,17 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nd/4.0/';
 		break;
 	case 'cc-by-sa':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-sa.png';
 		$wgRightsText = 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 		break;
 	case 'cc-by-sa-2-0-kr':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-sa.png';
 		$wgRightsText = 'Creative Commons BY-SA 2.0 Korea';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
 		break;
 	case 'cc-by-sa-nc':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-by-nc-sa.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-nc-sa.png';
 		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 		break;
@@ -530,7 +586,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
 		break;
 	case 'cc-pd':
-		$wgRightsIcon = 'https://meta.miraheze.org/w/resources/assets/licenses/cc-0.png';
+		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-0.png';
 		$wgRightsText = 'CC0 Public Domain';
 		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
@@ -547,6 +603,9 @@ switch ( $wmgWikiLicense ) {
 	case 'empty':
 		break;
 }
+
+// Don't need a global here
+unset( $version );
 
 /**
  * Make sure it works to override the footer icon
@@ -571,7 +630,7 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 $wgJobRunRate = 0;
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 50;
-$wgSVGConverters['rsvg'] = '$path/mediawiki-firejail-rsvg-convert -w $width -h $height -o $output $input';
+$wgSVGConverters['rsvg'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 
 // We need all thumbs to be regenerated
 $wgThumbnailEpoch = 20230715011058;
@@ -580,9 +639,6 @@ $wgThumbnailEpoch = 20230715011058;
 /** 50MB */
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
-
-// Can be removed on 1.40+ (https://phabricator.wikimedia.org/T326147)
-$wgMFStripResponsiveImages = false;
 
 // For Scribunto / wgCodeEditorEnableCore
 $wgULSNoImeSelectors[] = '.ace_editor textarea';
@@ -651,12 +707,20 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '[2a10:6740::6:406]:7531' : '[2a10:6740::6:306]:7531' ],
+	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.17.120:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
 
 // Mathoid
-$wgMathMathMLUrl = 'http://[2a10:6740::6:504]:10044/';
+$wgMathMathMLUrl = 'http://10.0.18.106:10044/';
 
-$wgPropagateErrors = false;
+// ConfirmEdit (hCaptcha)
+// Needed as the server uses ipv4 only.
+$wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
+$wgCaptchaStorageClass = CaptchaCacheStore::class;
+
+if ( getenv( 'JOBRUNNER_RUN' ) ) {
+	// fatals but not random I/O warnings
+	error_reporting( E_ERROR );
+}

@@ -37,7 +37,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'dlfmwiki':
-		$wgHooks['TranslatePostInitGroups'][] = function ( &$list, &$deps, &$autoload ) {
+		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
 			$id = 'local-sys-msg';
 			$mg = new WikiMessageGroup( $id, 'local-messages' );
 			$mg->setLabel( 'Local System Messagss' );
@@ -45,7 +45,7 @@ switch ( $wi->dbname ) {
 			$list[$id] = $mg;
 			return true;
 		};
-	
+
 		break;
 	case 'dmlwikiwiki':
 		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
@@ -55,6 +55,13 @@ switch ( $wi->dbname ) {
 
 			return true;
 		}
+
+		break;
+	case 'dragonquestxwiki':
+		$wgPopupsConf['contentPreviews'] = [
+			'image' => true,
+			'description' => false,
+		];
 
 		break;
 	case 'dragontamerwiki':
@@ -324,13 +331,20 @@ switch ( $wi->dbname ) {
 
 		wfLoadExtensions( [
 			'GlobalWatchlist',
-			'ImportDump',
 			'IncidentReporting',
+			'RequestSSL',
 		] );
 
 		break;
 	case 'metawikibeta':
-		wfLoadExtension( 'GlobalWatchlist' );
+		wfLoadExtensions( [
+			'GlobalWatchlist',
+			'RequestSSL',
+		] );
+
+		break;
+	case 'metzowiki':
+		$wgDplSettings['maxCategoryCount'] = 10;
 
 		break;
 	case 'newusopediawiki':
@@ -345,6 +359,11 @@ switch ( $wi->dbname ) {
 	case 'persistwiki':
 		$wgDplSettings['maxCategoryCount'] = 10;
 
+		break;
+	case 'picrosswiki':
+		$wgLogos = [
+			'svg' => "https://static.miraheze.org/picrosswiki/0/0a/Pikuw.svg",
+		];
 		break;
 	case 'pokemundowiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -379,44 +398,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case '402611wiki':
-	case 'ballmediawiki':
-	case 'polandballfanonwiki':
-	case 'polandballwikisongcontestwiki':
-	case 'polandsmallswiki':
-		$wgForeignFileRepos[] = [
-			'class' => ForeignDBViaLBRepo::class,
-			'name' => 'shared-polcomwiki',
-			'backend' => 'miraheze-swift',
-			'url' => 'https://static.miraheze.org/polcomwiki',
-			'hashLevels' => 2,
-			'thumbScriptUrl' => false,
-			'transformVia404' => true,
-			'hasSharedCache' => true,
-			'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
-			'scriptDirUrl' => 'https://polcom.miraheze.org/w',
-			'fetchDescription' => true,
-			'descriptionCacheExpiry' => 86400 * 7,
-			'wiki' => 'polcomwiki',
-			'initialCapital' => true,
-			'zones' => [
-				'public' => [
-					'container' => 'local-public',
-				],
-				'thumb' => [
-					'container' => 'local-thumb',
-				],
-				'temp' => [
-					'container' => 'local-temp',
-				],
-				'deleted' => [
-					'container' => 'local-deleted',
-				],
-			],
-			'abbrvThreshold' => 160
-		];
-
-		break;
 	case 'polandballruwiki':
 		$wgHooks['BeforeInitialize'][] = 'onBeforeInitialize';
 
@@ -441,6 +422,40 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
+
+		break;
+	case 'snxyzincubatorwiki':
+		$wgLogos = [
+			'1x' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
+			'svg' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
+			'icon' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
+			'wordmark' => [
+				'src' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
+				'1x' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
+				'width' => 135,
+				'height' => 20,
+			],
+			'tagline' => [
+				'src' => "https://static.wikitide.net/snxyzincubatorwiki/6/60/Tagline_EN.svg",
+				'width' => 135,
+				'height' => 15,
+			],
+			'variants' => [
+				'vi' => [
+					'wordmark' => [
+						'src' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
+						'1x' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
+						'width' => 135,
+						'height' => 20,
+					],
+					'tagline' => [
+						'src' => "https://static.wikitide.net/snxyzincubatorwiki/1/1b/Tagline_VI.svg",
+						'width' => 135,
+						'height' => 15,
+					],
+				],
+			],
+		];
 
 		break;
 	case 'srewiki':

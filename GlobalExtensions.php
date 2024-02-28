@@ -16,11 +16,11 @@ wfLoadExtensions( [
 	'Echo',
 	// Required by CentralNotice
 	'EventLogging',
-	// Required by EventLogging
-	'EventStreamConfig',
 	'GlobalCssJs',
 	'GlobalNewFiles',
+	'ImportDump',
 	'Interwiki',
+	'InterwikiDispatcher',
 	'IPInfo',
 	'LoginNotify',
 	'ManageWiki',
@@ -34,6 +34,7 @@ wfLoadExtensions( [
 	'OAuth',
 	'ParserFunctions',
 	'QuickInstantCommons',
+	// 'ReportIncident',
 	'RottenLinks',
 	'Scribunto',
 	// 'SecureLinkFixer',
@@ -47,13 +48,8 @@ wfLoadExtensions( [
 	'cldr',
 ] );
 
-if ( version_compare( MW_VERSION, '1.41', '>=' ) ) {
+if ( $wi->version >= 1.41 ) {
 	wfLoadExtension( 'ParserMigration' );
-}
-
-// Renameuser is bundled into core from 1.40+
-if ( version_compare( MW_VERSION, '1.40', '<' ) ) {
-	wfLoadExtension( 'Renameuser' );
 }
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );

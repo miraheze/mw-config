@@ -207,11 +207,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 }
 
-$wgMWLoggerDefaultSpi = [
-	'class' => MonologSpi::class,
-	'args' => [ $wmgMonologConfig ],
-];
-
 if ( $wmgLogToDisk ) {
 	$wmgLogDir = '/var/log/mediawiki';
 
@@ -243,6 +238,11 @@ if ( $wmgLogToDisk ) {
 		'thumbnail' => "$wmgLogDir/debuglogs/thumbnail.log",
 		'VisualEditor' => "$wmgLogDir/debuglogs/VisualEditor.log",
 	];
+} else {
+	$wgMWLoggerDefaultSpi = [
+		'class' => MonologSpi::class,
+		'args' => [ $wmgMonologConfig ],
+	];
 }
 
 if ( $wgCommandLineMode ) {
@@ -251,4 +251,8 @@ if ( $wgCommandLineMode ) {
 
 	$wgShowExceptionDetails = true;
 	$wgDebugDumpSql = true;
+}
+
+if ( wfHostname() === 'test151' || wfHostname() === 'mwtask181' ) {
+	$wgShowExceptionDetails = true;
 }

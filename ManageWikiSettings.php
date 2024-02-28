@@ -206,6 +206,19 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 		'requires' => [],
 	],
+	'wgRSSUserAgent' => [
+		'name' => 'RSS User Agent',
+		'from' => 'rss',
+		'type' => 'text',
+		'overridedefault' => 'MediaWiki RSS extension',
+		'section' => 'other',
+		'help' => 'The User Agent that MediaWiki will use to fetch RSS feeds.',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
 		'from' => 'protectsite',
@@ -372,7 +385,7 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'visibility' => [
 				'permissions' => [
-					'managewiki',
+					'managewiki-settings',
 				],
 			],
 		],
@@ -751,6 +764,20 @@ $wgManageWikiSettings = [
 		'help' => 'Enable various changes around searching for template names. (experimental)',
 		'requires' => [],
 	],
+	'wgMFDefaultEditor' => [
+		'name' => 'Default MobileFrontend Editor',
+		'from' => 'mobilefrontend',
+		'type' => 'list',
+		'overridedefault' => 'preference',
+		'options' => [
+			'Source editor' => 'source',
+			'Visual editor' => 'visual',
+			'Default to user preferences' => 'preference',
+		],
+		'section' => 'editing',
+		'help' => 'Default mobile editor to use when there is no user preference set.',
+		'requires' => [],
+	],
 	'wgCodeEditorEnableCore' => [
 		'name' => 'CodeEditor Enable Core',
 		'from' => 'codeeditor',
@@ -1077,6 +1104,15 @@ $wgManageWikiSettings = [
 		'help' => 'Source to get the page description from.',
 		'requires' => [],
 	],
+	'wmgMirahezeContactPageFooter' => [
+		'name' => 'Miraheze Contact Page Footer',
+		'from' => 'contactpage',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'links',
+		'help' => 'If set, it adds a link to Special:Contact on the footer',
+		'requires' => [],
+	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
@@ -1111,6 +1147,16 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Language code for message documentation.',
+		'requires' => [],
+	],
+	'wgTranslateNumerals' => [
+		'name' => 'Use Western numerical system',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'localisation',
+		'help' => 'Whether to use the Western numerical system (0-9) instead of localised numerics',
 		'requires' => [],
 	],
 	'wgTranslatePageTranslationULS' => [
@@ -1162,6 +1208,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'localisation',
 		'help' => 'Allows to change the page language for MediaWiki pages.',
+		'requires' => [],
+	],
+	'wgPageImagesLeadSectionOnly' => [
+		'name' => 'Only choose images from section 0',
+		'from' => 'pageimages',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'seo',
+		'help' => 'Uncheck if the PageImages extension should take into account images from all sections',
 		'requires' => [],
 	],
 
@@ -1866,7 +1921,7 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'visibility' => [
 				'permissions' => [
-					'managewiki',
+					'managewiki-settings',
 				],
 			],
 		],
@@ -1879,6 +1934,16 @@ $wgManageWikiSettings = [
 		'overridedefault' => '',
 		'section' => 'notifications',
 		'help' => 'Avatar to use for messages. If blank, uses the webhook\'s default avatar.',
+		'requires' => [],
+	],
+	'wgDiscordFromName' => [
+		'name' => 'Discord Notification Sender Name',
+		'from' => 'discordnotifications',
+		'global' => true,
+		'type' => 'text',
+		'overridedefault' => $wi->sitename,
+		'section' => 'notifications',
+		'help' => 'Who should the message appear to be sent from?',
 		'requires' => [],
 	],
 	'wgDiscordIgnoreMinorEdits' => [
@@ -2001,20 +2066,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Permissions
-	'wgImplicitGroups' => [
-		'name' => 'Implicit Groups',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'usergroups',
-		'overridedefault' => [
-			'*',
-			'user',
-			'autoconfirmed'
-		],
-		'section' => 'permissions',
-		'help' => 'Groups that aren\'t shown on Special:Listusers or somewhere else.',
-		'requires' => [],
-	],
 	'wgWhitelistRead' => [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
@@ -2096,18 +2147,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 50,
 		'section' => 'recentchanges',
 		'help' => 'Set maximum number of results to return in syndication feeds (RSS, Atom) for eg Recentchanges, Newpages. Min. 1, Max. 5,000',
-		'requires' => [],
-	],
-	'wgRCMaxAge' => [
-		'name' => 'RecentChanges max age',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'integer',
-		'minint' => 1,
-		'maxint' => 62208000,
-		'overridedefault' => 180 * 24 * 3600,
-		'section' => 'recentchanges',
-		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will go.',
 		'requires' => [],
 	],
 	'wgRCLinkDays' => [
@@ -2235,7 +2274,41 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	// If necessary we can increase maxint.
+	'wgRCMaxAge' => [
+		'name' => 'RecentChanges max-age',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 62208000,
+		'overridedefault' => 180 * 24 * 3600,
+		'section' => 'recentchanges',
+		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	'wgImplicitGroups' => [
+		'name' => 'Implicit Groups',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'usergroups',
+		'overridedefault' => [
+			'*',
+			'user',
+			'autoconfirmed'
+		],
+		'section' => 'permissions',
+		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	// If necessary, we can increase maxint.
 	'wgMaxArticleSize' => [
 		'name' => 'Max Article Size',
 		'from' => 'mediawiki',
@@ -3425,6 +3498,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables or disable collapsible sections on content pages.',
 		'requires' => [],
 	],
+	'wgCitizenGlobalToolsPortlet' => [
+		'name' => 'Citizen Global Tools Portlet',
+		'from' => 'citizen',
+		'type' => 'text',
+		'overridedefault' => '',
+		'section' => 'styling',
+		'help' => 'ID of the portlet to attach the global tools',
+		'requires' => [],
+	],
 	'wgCitizenShowPageTools' => [
 		'name' => 'Citizen Show Page Tools',
 		'from' => 'citizen',
@@ -3439,15 +3521,6 @@ $wgManageWikiSettings = [
 		'help' => 'The condition of page tools visibility.',
 		'requires' => [],
 	],
-	'wgCitizenPortalAttach' => [
-		'name' => 'Citizen Portal Attach',
-		'from' => 'citizen',
-		'type' => 'text',
-		'overridedefault' => 'first',
-		'section' => 'styling',
-		'help' => 'Label of the portal to attach links to upload and special pages to.',
-		'requires' => [],
-	],
 	'wgCitizenThemeColor' => [
 		'name' => 'Citizen Theme Color',
 		'from' => 'citizen',
@@ -3455,15 +3528,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#131a21',
 		'section' => 'styling',
 		'help' => 'The color defined in the <code>theme-color</code> meta tag.',
-		'requires' => [],
-	],
-	'wgCitizenEnableSearch' => [
-		'name' => 'Citizen Enable Search',
-		'from' => 'citizen',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Enable or disable rich search suggestions',
 		'requires' => [],
 	],
 	'wgCitizenSearchGateway' => [
@@ -3477,12 +3541,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'mwActionApi',
 		'section' => 'styling',
 		'help' => 'Which gateway to use for fetching search suggestion',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenEnableSearch',
-				'value' => true,
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenSearchDescriptionSource' => [
 		'name' => 'Citizen Search Description Source',
@@ -3496,12 +3555,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'textextracts',
 		'section' => 'styling',
 		'help' => 'Source of description text on search suggestions',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenSearchGateway',
-				'value' => 'mwActionApi',
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenMaxSearchResults' => [
 		'name' => 'Citizen Max Search Results',
@@ -3512,12 +3566,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 6,
 		'section' => 'styling',
 		'help' => 'Max number of search suggestions',
-		'requires' => [
-			'settings' => [
-				'setting' => 'wgCitizenEnableSearch',
-				'value' => true,
-			],
-		],
+		'requires' => [],
 	],
 	'wgCitizenEnableCJKFonts' => [
 		'name' => 'Citizen Enable CJK fonts',
@@ -3533,21 +3582,15 @@ $wgManageWikiSettings = [
 		'from' => 'relatedarticles',
 		'type' => 'skins',
 		'overridedefault' => [
+			'citizen',
+			'cosmos',
 			'minerva',
 			'timeless',
 			'vector',
+			'vector-2022',
 		],
 		'section' => 'styling',
-		'help' => 'List of skin names (e.g. "minerva", "vector") where related articles will be shown in the footer.',
-		'requires' => [],
-	],
-	'wgMultiBoilerplateDiplaySpecialPage' => [
-		'name' => 'MultiBoilerplate Diplay SpecialPage',
-		'from' => 'multiboilerplate',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'if set, will add to the wiki a page named Special:Boilerplates that shows the currently configured boilerplates.',
+		'help' => 'Skins where related articles will be shown in the footer.',
 		'requires' => [],
 	],
 	'wgAllowUserCss' => [
@@ -3688,13 +3731,13 @@ $wgManageWikiSettings = [
 		'from' => 'chameleon',
 		'type' => 'list',
 		'options' => [
-			'standard' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
-			'navhead' => '/srv/mediawiki/w/skins/chameleon/layouts/navhead.xml',
-			'fixedhead' => '/srv/mediawiki/w/skins/chameleon/layouts/fixedhead.xml',
-			'stickyhead' => '/srv/mediawiki/w/skins/chameleon/layouts/stickyhead.xml',
-			'clean' => '/srv/mediawiki/w/skins/chameleon/layouts/clean.xml',
+			'standard' => '/srv/mediawiki/config/chameleon-layouts/standard.xml',
+			'navhead' => '/srv/mediawiki/config/chameleon-layouts/navhead.xml',
+			'fixedhead' => '/srv/mediawiki/config/chameleon-layouts/fixedhead.xml',
+			'stickyhead' => '/srv/mediawiki/config/chameleon-layouts/stickyhead.xml',
+			'clean' => '/srv/mediawiki/config/chameleon-layouts/clean.xml',
 		],
-		'overridedefault' => '/srv/mediawiki/w/skins/chameleon/layouts/standard.xml',
+		'overridedefault' => '/srv/mediawiki/config/chameleon-layouts/standard.xml',
 		'section' => 'styling',
 		'help' => 'The layout to use for the Chameleon skin.',
 		'requires' => [],
@@ -3834,6 +3877,24 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'wikibase',
 		'help' => 'Whether to enable Lexeme data transclusion.',
+		'requires' => [],
+	],
+	'wgUnlinkedWikibaseBaseUrl' => [
+		'name' => 'Unlinked Wikibase base URL',
+		'from' => 'unlinkedwikibase',
+		'type' => 'url',
+		'overridedefault' => 'https://www.wikidata.org/wiki/',
+		'section' => 'wikibase',
+		'help' => 'The base URL of the Wikibase site to use.',
+		'requires' => [],
+	],
+	'wgUnlinkedWikibaseBaseQueryEndpoint' => [
+		'name' => 'Unlinked Wikibase Query Endpoint',
+		'from' => 'unlinkedwikibase',
+		'type' => 'url',
+		'overridedefault' => 'https://query.wikidata.org/bigdata/namespace/wdq/sparql',
+		'section' => 'wikibase',
+		'help' => 'The query service Sparql endpoint',
 		'requires' => [],
 	],
 	'wgWBQualityConstraintsInstanceOfId' => [

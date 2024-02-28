@@ -15,7 +15,7 @@ $wgMajorSiteNoticeID = 88;
  */
 
 // Global SiteNotice
-/*if ( !$wmgSiteNoticeOptOut ) {
+/* if ( !$wmgSiteNoticeOptOut ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -29,16 +29,27 @@ $wgMajorSiteNoticeID = 88;
 			<table style="width: 100%;">
 				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px; color: black;">
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-						<div class="floatleft"><img alt="Maintenance" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/OOjs_UI_icon_imageLock-ltr.svg" decoding="async" width="50" height="50"></div>
-						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							File uploads are currently unavailable as a result of ongoing issues with our file storage server. <b><i>No files have been lost.</i></b> We are working to restore services now, and hope to have everything back up soon.
+						<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/d/df/OOjs_UI_icon_check.svg" decoding="async" width="50" height="50"></div>
+						<div style="font-weight: bold; color: black;">
+							Migration has finished
 						</div>
+						<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
+							All migration to our new servers has finished. Thank you to our donors for making this possible! If you are experiencing any issues, please <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Help_center">contact us</a>.
+						</div>
+
+						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Migration_to_new_servers">
+								<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
+								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
+								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
+							</a>
+						</span> -->
 					</div>
 				</td></tr></tbody>
 			</table>
 		EOF;
 	}
-}*/
+} */
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
