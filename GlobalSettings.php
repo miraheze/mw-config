@@ -154,8 +154,58 @@ $wgDiscordNotificationWikiUrlEndingEditArticle = '?action=edit';
 $wgDiscordNotificationWikiUrlEndingHistory = '?action=history';
 $wgDiscordNotificationWikiUrlEndingUserRights = 'Special:UserRights?user=';
 
-// Don't need a global here
-unset( $articlePath );
+/** TODO:
+ * Add to ManageWiki (core)
+ * Add rewrites to decode.php and index.php
+ */
+$wgActionPaths['view'] = $wgArticlePath;
+
+// ?action=raw is not supported by this
+// according to documentation
+$actions = [
+	'delete',
+	'edit',
+	'history',
+	'info',
+	'markpatrolled',
+	'protect',
+	'purge',
+	'render',
+	'revert',
+	'rollback',
+	'submit',
+	'unprotect',
+	'unwatch',
+	'watch',
+];
+
+foreach ( $actions as $action ) {
+	$wgActionPaths[$action] = $wgArticlePath . '?action=' . $action;
+}
+
+if ( ( $wgMirahezeActionPathsFormat ?? 'default' ) !== 'default' ) {
+	switch ( $wgMirahezeActionPathsFormat ) {
+		case 'specialpages':
+			$wgActionPaths['edit'] = $articlePath . 'Special:EditPage/$1';
+			$wgActionPaths['submit'] = $wgActionPaths['edit'];
+			$wgActionPaths['delete'] = $articlePath . 'Special:DeletePage/$1';
+			$wgActionPaths['protect'] = $articlePath . 'Special:ProtectPage/$1';
+			$wgActionPaths['unprotect'] = $wgActionPaths['protect'];
+			$wgActionPaths['history'] = $articlePath . 'Special:PageHistory/$1';
+			$wgActionPaths['info'] = $articlePath . 'Special:PageInfo/$1';
+			break;
+		case '$1/action':
+		case 'action/$1':
+			foreach ( $actions as $action ) {
+				$wgActionPaths[$action] = $articlePath . str_replace( 'action', $action, $wgMirahezeActionPathsFormat );
+			}
+
+			break;
+	}
+}
+
+// Don't need globals here
+unset( $actions, $articlePath );
 
 $wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
 
