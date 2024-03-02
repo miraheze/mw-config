@@ -3067,7 +3067,7 @@ $wgConf->settings += [
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
 				'globalblock' => true,
-				'managewiki-core',
+				'managewiki-core' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
 				'managewiki-permissions' => true,
