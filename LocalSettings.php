@@ -3031,6 +3031,9 @@ $wgConf->settings += [
 				'oathauth-verify-user' => true,
 				'view-private-import-dump-requests' => true,
 			],
+			'sysop' => [
+				'interwiki' => true,
+			],
 			'user' => [
 				'request-import-dump' => true,
 				'request-ssl' => true,
