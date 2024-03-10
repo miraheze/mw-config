@@ -2810,9 +2810,6 @@ $wgConf->settings += [
 				'abusefilter-privatedetails' => true,
 				'abusefilter-privatedetails-log' => true,
 			],
-			'interwiki-admin' => [
-				'interwiki' => true
-			],
 			'suppress' => [
 				'abusefilter-hidden-log' => true,
 				'abusefilter-hide-log' => true,
@@ -2960,9 +2957,19 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
+			'checkuser' => [
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'securepoll-view-voter-pii' => true,
+			],
 			'confirmed' => [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
+			],
+			'electionadmin' => [
+				'securepoll-create-poll' => true,
 			],
 			'global-renamer' => [
 				'centralauth-rename' => true,
@@ -2975,9 +2982,6 @@ $wgConf->settings += [
 			'proxybot' => [
 				'globalblock' => true,
 				'centralauth-lock' => true,
-			],
-			'requestwikiblocked' => [
-				'read' => true,
 			],
 			'steward' => [
 				'abusefilter-modify-global' => true,
@@ -3026,9 +3030,6 @@ $wgConf->settings += [
 				'oathauth-disable-for-user' => true,
 				'oathauth-verify-user' => true,
 				'view-private-import-dump-requests' => true,
-			],
-			'sysop' => [
-				'interwiki' => true,
 			],
 			'user' => [
 				'request-import-dump' => true,
@@ -3250,7 +3251,6 @@ $wgConf->settings += [
 				'handle-import-dump-requests',
 				'handle-pii',
 				'hideuser',
-				'interwiki',
 				'investigate',
 				'ipinfo',
 				'ipinfo-view-basic',
@@ -3274,6 +3274,7 @@ $wgConf->settings += [
 				'request-import-dump',
 				'requestwiki',
 				'siteadmin',
+				'securepoll-view-voter-pii',
 				'smw-admin',
 				'smw-patternedit',
 				'smw-viewjobqueuewatchlist',
@@ -3302,6 +3303,7 @@ $wgConf->settings += [
 				'managewiki-settings',
 				'globalblock-whitelist',
 				'ipblock-exempt',
+				'interwiki',
 			],
 			'*' => [
 				'read',
@@ -3319,6 +3321,7 @@ $wgConf->settings += [
 				'editmyprivateinfo',
 				'editmywatchlist',
 				'globalblock-whitelist',
+				'interwiki',
 				'ipblock-exempt',
 				'viewmyprivateinfo',
 				'viewmywatchlist',
@@ -3343,6 +3346,9 @@ $wgConf->settings += [
 			'interwiki-admin',
 			'sysadmin',
 			'trustandsafety',
+		],
+		'+metawiki' => [
+			'electionadmin',
 		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
@@ -3954,6 +3960,7 @@ $wgConf->settings += [
 			'globalblock',
 			'globalgrouppermissions',
 			'globalgroupmembership',
+			'securepoll-view-voter-pii',
 			'suppressionlog',
 			'suppressrevision',
 			'userrights',
@@ -3974,6 +3981,7 @@ $wgConf->settings += [
 			'user',
 		],
 		'+metawiki' => [
+			'electionadmin',
 			'global-sysop',
 			'interface-admin',
 			'sysadmin',
@@ -4180,14 +4188,6 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
-			'global-interwiki-admin' => [
-				'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-				'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
-				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
-				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-			],
 			'global-sysop' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
@@ -4919,6 +4919,14 @@ $wgConf->settings += [
 	],
 	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
+	],
+
+	// SecurePoll
+	'wgSecurePollUseLogging' => [
+		'default' => true,
+	],
+	'wgSecurePollUseNamespace' => [
+		'default' => true,
 	],
 
 	// Server
