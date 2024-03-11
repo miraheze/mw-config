@@ -1702,7 +1702,7 @@ $wgManageWikiExtensions = [
 		'section' => 'specialpages',
 	],
 	'semanticdrilldown' => [
-        	'name' => 'Semantic Drilldown',
+        	'name' => 'SemanticDrilldown',
         	'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Semantic_Drilldown',
         	'conflicts' => false,
         	'requires' => [
