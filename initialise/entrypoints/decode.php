@@ -4,6 +4,7 @@ require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 $uri = strtok( $_SERVER['REQUEST_URI'], '?' );
 $queryString = $_SERVER['QUERY_STRING'] ?? '';
