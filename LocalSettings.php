@@ -3552,6 +3552,72 @@ $wgConf->settings += [
 		],
 	],
 
+	// MirahezeMagic
+	'wgMirahezeMagicAccessIdsMap' => [
+		'default' => [
+			// Only the board are allowed access
+			// DO NOT ADD UNAUTHORIZED USERS
+			'iowiki' => [
+				/** Reception123 */
+				19,
+				/** Universal Omega */
+				438966,
+				/** Agent Isai */
+				2639,
+				/** HareJ */
+				13892,
+				/** NotAracham */
+				345529,
+				/** Labster */
+				2551,
+			],
+			// Only the board and SRE allowed access
+			// DO NOT ADD UNAUTHORIZED USERS
+			'staffwiki' => [
+				/** Reception123 (SRE and Board) */
+				19,
+				/** Void (SRE) */
+				5258,
+				/** MacFan4000 (SRE) */
+				6758,
+				/** Universal Omega (SRE and Board) */
+				438966,
+				/** Agent Isai (SRE and Board) */
+				2639,
+				/** HareJ (Board) */
+				13892,
+				/** NotAracham (Board) */
+				345529,
+				/** Labster (Board) */
+				2551,
+				/** Original Authority (SRE) */
+				353865,
+			],
+			// Only the board and SRE allowed access
+			// DO NOT ADD UNAUTHORIZED USERS
+			'srewiki' => [
+				/** Reception123 (SRE and Board) */
+				19,
+				/** Void (SRE) */
+				5258,
+				/** MacFan4000 (SRE) */
+				6758,
+				/** Universal Omega (SRE and Board) */
+				438966,
+				/** Agent Isai (SRE and Board) */
+				2639,
+				/** HareJ (Board) */
+				13892,
+				/** NotAracham (Board) */
+				345529,
+				/** Labster (Board) */
+				2551,
+				/** Original Authority (SRE) */
+				353865,
+			],
+		],
+	],
+
 	// Miscellaneous
 	'wgAllowDisplayTitle' => [
 		'default' => true,
