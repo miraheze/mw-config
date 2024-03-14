@@ -3592,6 +3592,8 @@ $wgConf->settings += [
 				2551,
 				/** Original Authority (SRE) */
 				353865,
+				/** Alex (Miraheze) — OrangeStar (SRE) */
+				464360,
 			],
 			// Only the board and SRE allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
@@ -3614,6 +3616,8 @@ $wgConf->settings += [
 				2551,
 				/** Original Authority (SRE) */
 				353865,
+				/** Alex (Miraheze) — OrangeStar (SRE) */
+				464360,
 			],
 		],
 	],
