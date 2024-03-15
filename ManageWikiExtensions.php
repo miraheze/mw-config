@@ -899,7 +899,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'snapblocks' => [
-		'name' => 'Snap! Blocks',
+		'name' => 'Snapblocks',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Snapblocks',
 		'conflicts' => false,
 		'requires' => [],
