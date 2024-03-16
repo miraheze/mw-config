@@ -2698,6 +2698,7 @@ $wgConf->settings += [
 	'wgSMTP' => [
 		'default' => [
 			'host' => 'ssl://smtp-relay.gmail.com',
+			'localhost' => '::1',
 			'port' => 465,
 			'IDHost' => 'miraheze.org',
 			'auth' => false,
