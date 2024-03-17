@@ -82,6 +82,9 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
 
+$wgStatsFormat = 'dogstatsd';
+$wgStatsTarget = 'udp://localhost:9125';
+
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
