@@ -938,7 +938,7 @@ $wgConf->settings += [
 			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
 			'Other, see DPE' => 'other',
 		],
-  ],
+	],
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'sre@miraheze.org',
 	],
