@@ -2762,8 +2762,8 @@ $wgConf->settings += [
 			],
 		],
 		'metawiki' => [
-			'sysadmin' => [
-				'sysadmin',
+			'sre' => [
+				'sre',
 			],
 			'trustandsafety' => [
 				'trustandsafety',
@@ -2986,7 +2986,7 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 				'view-private-import-requests' => true,
 			],
-			'sysadmin' => [
+			'sre' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'handle-import-request-interwiki' => true,
@@ -3068,7 +3068,7 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 				'view-private-import-requests' => true,
 			],
-			'sysadmin' => [
+			'sre' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'handle-import-request-interwiki' => true,
@@ -3192,8 +3192,8 @@ $wgConf->settings += [
 			],
 		],
 		'metawiki' => [
-			'sysadmin' => [
-				'sysadmin',
+			'sre' => [
+				'sre',
 			],
 			'trustandsafety' => [
 				'trustandsafety',
@@ -3326,7 +3326,7 @@ $wgConf->settings += [
 			'staff',
 			'suppress',
 			'interwiki-admin',
-			'sysadmin',
+			'sre',
 			'trustandsafety',
 		],
 		'+metawiki' => [
@@ -4036,14 +4036,14 @@ $wgConf->settings += [
 			'electionadmin',
 			'global-sysop',
 			'interface-admin',
-			'sysadmin',
+			'sre',
 			'trustandsafety'
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
 			'global-sysop',
 			'interface-admin',
-			'sysadmin',
+			'sre',
 			'trustandsafety'
 		],
 	],
@@ -4256,7 +4256,7 @@ $wgConf->settings += [
 				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 			],
-			'sysadmin' => [
+			'sre' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
