@@ -1701,6 +1701,17 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'semanticdrilldown' => [
+        	'name' => 'SemanticDrilldown',
+        	'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Semantic_Drilldown',
+        	'conflicts' => false,
+        	'requires' => [
+            		'extensions' => [
+                		'semanticmediawiki',
+            		],
+        	],
+        	'section' => 'specialpages',
+    	],
 	'simplechanges' => [
 		'name' => 'SimpleChanges',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleChanges',
