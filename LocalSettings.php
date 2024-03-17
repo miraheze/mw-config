@@ -11,7 +11,7 @@ if ( PHP_SAPI !== 'cli' ) {
 	header( "Cache-control: no-cache" );
 }
 
-setlocale( LC_ALL, 'en_GB.UTF-8' );
+setlocale( LC_ALL, 'en_US.UTF-8' );
 
 // 1400MiB
 ini_set( 'memory_limit', 1400 * 1024 * 1024 );
