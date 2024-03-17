@@ -9,24 +9,24 @@ wfLoadExtensions( [
 	'CreateWiki',
 	'CookieWarning',
 	'ConfirmEdit',
+	'ConfirmEdit/hCaptcha',
 	'DataDump',
 	'DiscordNotifications',
 	'DismissableSiteNotice',
 	'Echo',
 	// Required by CentralNotice
 	'EventLogging',
-	// Required by EventLogging
-	'EventStreamConfig',
 	'GlobalCssJs',
 	'GlobalNewFiles',
 	'ImportDump',
-	'IncidentReporting',
 	'Interwiki',
+	'InterwikiDispatcher',
+	'IPInfo',
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
+	'MessageCachePerformance',
 	'MirahezeMagic',
-	'MirahezeMagic/ReCaptchaNoCaptcha',
 	'MobileDetect',
 	'NativeSvgHandler',
 	'Nuke',
@@ -34,15 +34,22 @@ wfLoadExtensions( [
 	'OAuth',
 	'ParserFunctions',
 	'QuickInstantCommons',
-	'RemovePII',
-	'Renameuser',
+	// 'ReportIncident',
 	'RottenLinks',
 	'Scribunto',
-	'SecureLinkFixer',
+	// 'SecureLinkFixer',
 	'SpamBlacklist',
+	// 'StopForumSpam',
 	'TitleBlacklist',
 	'TorBlock',
+	'WebAuthn',
 	'WikiDiscover',
 	'WikiEditor',
 	'cldr',
 ] );
+
+if ( $wi->version >= 1.41 ) {
+	wfLoadExtension( 'ParserMigration' );
+}
+
+wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );

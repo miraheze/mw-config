@@ -1,33 +1,26 @@
 <?php
 
-// mem101
-$wgObjectCaches['memcached-mem-1'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11212' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
+$wgMemCachedServers = [];
+$wgMemCachedPersistent = false;
+
+$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+
+$wgObjectCaches['mcrouter'] = [
+	'class'                 => MemcachedPeclBagOStuff::class,
+	'serializer'            => 'php',
+	'persistent'            => false,
+	'servers'               => [ '127.0.0.1:11213' ],
+	'server_failure_limit'  => 1e9,
+	'retry_timeout'         => -1,
+	'loggroup'              => 'memcached',
 	// 500ms, in microseconds
-	'timeout'              => 0.5 * 1e6,
+	'timeout'               => 0.5 * 1e6,
+	'allow_tcp_nagle_delay' => false,
 ];
 
-// mem131
-$wgObjectCaches['memcached-mem-2'] = [
-	'class'                => MemcachedPeclBagOStuff::class,
-	'serializer'           => 'php',
-	'persistent'           => false,
-	'servers'              => [ '127.0.0.1:11214' ],
-	// Effectively disable the failure limit (0 is invalid)
-	'server_failure_limit' => 1e9,
-	// Effectively disable the retry timeout
-	'retry_timeout'        => -1,
-	'loggroup'             => 'memcached',
-	// 500ms, in microseconds
-	'timeout'              => 0.5 * 1e6,
+$wgMirahezeMagicMemcachedServers = [
+	[ '10.0.15.113', 11211 ],
+	[ '10.0.16.131', 11211 ],
 ];
 
 $wgObjectCaches['mysql-multiwrite'] = [
@@ -35,25 +28,23 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'memcached-mem-1' ]
+			'args' => [ 'mcrouter' ]
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
 			'servers' => [
-				[
-					'type'      => 'mysql',
-					'host'      => 'db121.miraheze.org',
-					'dbname'    => 'parsercache',
-					'user'      => $wgDBuser,
-					'password'  => $wgDBpassword,
-					// DBO_SSL is deprecated in 1.39
-					// use 'ssl' parameter instead
-					'flags'     => DBO_SSL,
-					'sslCAFile' => '/etc/ssl/certs/Sectigo.crt',
+				'pc1' => [
+					'type'     => 'mysql',
+					'host'     => '10.0.16.128',
+					'dbname'   => $beta ? 'testparsercache' : 'parsercache',
+					'user'     => $wgDBuser,
+					'password' => $wgDBpassword,
+					'flags'    => 0,
 				],
 			],
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
+			'shards' => $beta ? 1 : 256,
 			'reportDupes' => false
 		],
 	],
@@ -61,45 +52,96 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
-$wgSessionCacheType = 'memcached-mem-2';
+$wgObjectCaches['db-mainstash'] = [
+	'class' => SqlBagOStuff::class,
+	'cluster' => $beta ? 'beta' : 'echo',
+	'dbDomain' => $beta ? 'testmainstash' : 'mainstash',
+	'tableName' => 'objectstash',
+	'multiPrimaryMode' => false,
+	'purgePeriod' => 100,
+	'purgeLimit' => 1000,
+	'reportDupes' => false
+];
 
-$redisServerIP = '[2a10:6740::6:306]:6379';
+$wgMainStash = 'db-mainstash';
 
-$wgMainCacheType = 'memcached-mem-2';
-$wgMessageCacheType = 'memcached-mem-2';
+$wgStatsCacheType = 'mcrouter';
+$wgMicroStashType = 'mcrouter';
+
+$wgObjectCaches['redis-session'] = [
+	'class' => RedisBagOStuff::class,
+	'servers' => [ $beta ? '10.0.15.118:6379' : '10.0.15.142:6379' ],
+	'password' => $wmgRedisPassword,
+	'loggroup' => 'redis',
+	'reportDupes' => false,
+];
+
+$wgSessionCacheType = 'redis-session';
+$wgCentralAuthSessionCacheType = 'redis-session';
+$wgEchoSeenTimeCacheType = 'redis-session';
+
+$wgCreateWikiCacheType = 'redis-session';
+
+$wgSessionName = $wgDBname . 'Session';
+
+// Same as $wgMainStash
+$wgMWOAuthSessionCacheType = 'db-mainstash';
+
+// Same as $wgMainCacheType
+$wgMWOAuthNonceCacheType = 'mcrouter';
+
+$wgMainCacheType = 'mcrouter';
+$wgMessageCacheType = 'mcrouter';
+
 $wgParserCacheType = 'mysql-multiwrite';
+
+$wgChronologyProtectorStash = 'mcrouter';
+
+$wgParsoidCacheConfig = [
+	// Defaults to MainStash
+	'StashType' => null,
+	// 24h in production, VE will fail to save after this time.
+	'StashDuration' => 24 * 60 * 60,
+	'CacheThresholdTime' => $wgDBname === 'commonswiki' ? 1.0 : 0.0,
+	'WarmParsoidParserCache' => $wgDBname !== 'commonswiki' ? true : false,
+];
 
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
-// 10 days
-$wgParserCacheExpireTime = 86400 * 10;
+$wgQueryCacheLimit = 5000;
+
+// 7 days
+$wgParserCacheExpireTime = 86400 * 7;
 
 // 3 days
 $wgRevisionCacheExpiry = 86400 * 3;
 
+// 1 day
+$wgObjectCacheSessionExpiry = 86400;
+
+// 7 days
+$wgDLPMaxCacheTime = 604800;
+
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
 
-// Disable sidebar cache for select wikis as a solution to T8732 and T9699
-if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' ) {
+$wgSearchSuggestCacheExpiry = 10800;
+
+// Disable sidebar cache for select wikis as a solution to T8732, T9699, and T9884
+if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBname !== 'nonciclopediawiki' ) {
 	$wgEnableSidebarCache = true;
 }
 
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-if ( preg_match( '/^(.*)\.betaheze\.org$/', $wi->server ) ) {
-	$redisServerIP = '[2a10:6740::6:406]:6379';
+$wgResourceLoaderUseObjectCacheForDeps = true;
 
-	// Session cache needs to be flipped for betaheze to avoid session conflicts
-	$wgSessionCacheType = 'memcached-mem-1';
+$wgCdnMatchParameterOrder = false;
 
-	$wgMainWANCache = 'betaheze';
-	$wgWANObjectCaches['betaheze'] = [
-		'class' => WANObjectCache::class,
-		'cacheId' => 'memcached-mem-1',
-	];
-}
+$redisServerIP = $beta ?
+	'10.0.15.118:6379' :
+	'10.0.17.120:6379';
 
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueRedis::class,
@@ -109,7 +151,6 @@ $wgJobTypeConf['default'] = [
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 	],
-	'claimTTL' => 3600,
 	'daemonized' => true,
 ];
 

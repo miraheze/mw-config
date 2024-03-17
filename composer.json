@@ -2,12 +2,12 @@
 	"name": "miraheze/mw-config",
 	"description": "",
 	"require-dev": {
-		"mediawiki/mediawiki-codesniffer": "39.0.0",
+		"mediawiki/mediawiki-codesniffer": "43.0.0",
 		"mediawiki/minus-x": "1.1.1",
 		"php-parallel-lint/php-console-highlighter": "1.0.0",
 		"php-parallel-lint/php-parallel-lint": "1.3.2",
 		"phpunit/phpunit": "^9.5",
-		"justinrainbow/json-schema": "5.2.12"
+		"justinrainbow/json-schema": "5.2.13"
 	},
 	"autoload": {
 		"psr-4": {
@@ -27,5 +27,12 @@
 		],
 		"phpcs": "phpcs -sp --cache",
 		"phpunit": "phpunit"
+	},
+	"config": {
+		"prepend-autoloader": false,
+		"optimize-autoloader": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	}
 }

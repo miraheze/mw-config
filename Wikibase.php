@@ -20,6 +20,8 @@ $entitySources = [
 	],
 ];
 
+$wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = MIGRATION_NEW;
+
 if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
 	$entitySources['local']['entityNamespaces']['lexeme'] = 146;
 	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
@@ -127,7 +129,7 @@ if ( $wgDBname === 'gpcommonswiki' ) {
 	];
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = [
-		'url' => 'https://static-new.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
+		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;
@@ -237,11 +239,6 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 		'http://gratisdata.miraheze.org/entity/Q982' => 'triton',
 		'http://gratisdata.miraheze.org/entity/Q2123' => 'pluto',
 	];
-	$wgWBRepoSettings['localClientDatabases'] = [
-		'gratispaideia' => 'gratispaideiawiki',
-		'gpcommons' => 'gpcommonswiki',
-		'benpedia' => 'benpediawiki',
-	];
 	$wgWBRepoSettings['updateRepoTags'] = [
 		'client-automatic-update'
 	];
@@ -269,6 +266,8 @@ if ( $wgDBname === 'gratisdatawiki' ) {
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
 	// Data-Bridge
 	$wgWBRepoSettings['dataBridgeEnabled'] = true;
+	$wgWBRepoSettings['allowDataAccessInUserLanguage'] = true;
+	$wgWBRepoSettings['entityAccessLimit'] = 500;
 }
 
 if ( $wgDBname === 'gratispaideiawiki' ) {
@@ -291,7 +290,7 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 	];
 	$wgWBClientSettings['sendEchoNotification'] = true;
 	$wgWBClientSettings['echoIcon'] = [
-		'url' => 'https://static-new.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
+		'url' => 'https://static.miraheze.org/commonswiki/a/a4/GDechoIcon.svg',
 	];
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://gratisdata.miraheze.org/wiki/MediaWiki:Wikibase-SortedProperties?action=raw&sp_ver=1';
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = true;

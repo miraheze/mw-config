@@ -1,14 +1,32 @@
 <?php
 
+use MediaWiki\Linker\Linker;
+use MediaWiki\Output\OutputPage;
+use MediaWiki\Request\WebRequest;
+use MediaWiki\SpecialPage\DisabledSpecialPage;
+use MediaWiki\Title\Title;
+use MediaWiki\User\User;
+
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
-	case 'betawiki':
-		wfLoadExtension( 'GlobalWatchlist' );
+	case 'arquivopkmnwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['license'] = 'CC0-1.0';
+		$wgJsonConfigs['Tabular.JsonConfig']['license'] = 'CC0-1.0';
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
 	case 'commonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
+	case 'comprehensibleinputwiki':
+		$wgExternalDataSources['*']['min cache seconds'] = 0;
 
 		break;
 	case 'constantnoblewiki':
@@ -25,6 +43,17 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'dlfmwiki':
+		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
+			$id = 'local-sys-msg';
+			$mg = new WikiMessageGroup( $id, 'local-messages' );
+			$mg->setLabel( 'Local System Messagss' );
+			$mg->setDescription( 'Messages used specially on this wiki.' );
+			$list[$id] = $mg;
+			return true;
+		};
+
+		break;
 	case 'dmlwikiwiki':
 		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
 
@@ -35,11 +64,47 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'dragonquestxwiki':
+		$wgPopupsConf['contentPreviews'] = [
+			'image' => true,
+			'description' => false,
+		];
+
+		break;
+	case 'dragontamerwiki':
+		$wgDplSettings['maxCategoryCount'] = 7;
+
+		break;
 	case 'famedatawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'og:image:width', '1200' );
+		}
+
+		break;
+	case 'genshinimpactwiki':
+		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
+
+		function onHtmlPageLinkRendererEnd(
+			$linkRenderer,
+			$target,
+			$isKnown,
+			&$text,
+			&$attribs,
+			&$ret
+		) {
+			if ( $isKnown ) {
+				return true;
+			}
+
+			if ( $target->isExternal() ) {
+				return true;
+			}
+
+			$attribs['rel'] = 'nofollow';
+
+			return true;
 		}
 
 		break;
@@ -88,7 +153,7 @@ switch ( $wi->dbname ) {
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => 'shared-gpcommonswiki',
 			'backend' => 'miraheze-swift',
-			'url' => 'https://static-new.miraheze.org/gpcommonswiki',
+			'url' => 'https://static.miraheze.org/gpcommonswiki',
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
 			'transformVia404' => true,
@@ -154,10 +219,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'loginwiki':
-		wfLoadExtension( 'GlobalWatchlist' );
-
-		break;
 	case 'metawiki':
 		$wgContactConfig = [
 			'default' => [
@@ -171,7 +232,7 @@ switch ( $wi->dbname ) {
 				'RecipientUser' => 'Miraheze CVT',
 				'SenderName' => 'Account Creation Request Form via Meta',
 				'RequireDetails' => true,
-				'IncludeIP' => false,
+				'IncludeIP' => true,
 				'MustBeLoggedIn' => false,
 				'AdditionalFields' => [
 					'SelectIssue' => [
@@ -180,6 +241,7 @@ switch ( $wi->dbname ) {
 						'options-messages' => [
 							'contactpage-requestaccount-selectissue-abusefilterissue' => 'abusefilter',
 							'contactpage-requestaccount-selectissue-recaptchaissues' => 'captcha',
+							'contactpage-requestaccount-selectissue-globalblock' => 'globalblock',
 							'version-other' => 'other',
 						],
 						'help-message' => 'contactpage-requestaccount-selectissue-help',
@@ -194,6 +256,37 @@ switch ( $wi->dbname ) {
 							'other'
 						],
 						'help-message' => 'contactpage-requestaccount-describeissue-help',
+						'required' => true,
+					],
+					'SelectGlobalBlockIssue' => [
+						'label-message' => 'contactpage-requestaccount-describeglobalblockissue',
+						'type' => 'radio',
+						'hide-if' => [
+							'!==',
+							'SelectIssue',
+							'globalblock'
+						],
+						'options-messages' => [
+							'contactpage-requestaccount-describeglobalblockissue-crosswikiabuse' => 'crosswikiabuse',
+							'contactpage-requestaccount-describeglobalblockissue-crosswikispam' => 'crosswikispam',
+							'contactpage-requestaccount-describeglobalblockissue-crosswikivandalism' => 'crosswikivandalism',
+							'contactpage-requestaccount-describeglobalblockissue-lta' => 'lta',
+							'contactpage-requestaccount-describeglobalblockissue-nopp' => 'webhostorproxy',
+							'contactpage-requestaccount-describeglobalblockissue-ts' => 'trustandsafetyblock',
+							'version-other' => 'other',
+						],
+						'help-message' => 'contactpage-requestaccount-describeglobalblockissue-help',
+						'required' => true,
+					],
+					'OtherGlobalBlockIssue' => [
+						'label-message' => 'contactpage-requestaccount-describeglobalblockissue-otherissue',
+						'type' => 'text',
+						'hide-if' => [
+							'!==',
+							'SelectGlobalBlockIssue',
+							'other'
+						],
+						'help-message' => 'contactpage-requestaccount-describeglobalblockissue-otherissue',
 						'required' => true,
 					],
 					'SelectUsername' => [
@@ -212,15 +305,73 @@ switch ( $wi->dbname ) {
 				],
 				'DisplayFormat' => 'raw',
 			],
+			'requestbetaaccount' => [
+				'RecipientUser' => 'Miraheze Operations',
+				'SenderName' => 'Mirabeta account creation request (via Meta)',
+				'RequireDetails' => true,
+				'MustBeLoggedIn' => true,
+				'AdditionalFields' => [
+					'SelectUsername' => [
+						'label-message' => 'contactpage-requestbetaaccount-selectusername',
+						'type' => 'text',
+						'maxlength' => 50,
+						'help-message' => 'contactpage-requestbetaaccount-selectusername-help',
+						'required' => true,
+					],
+					'RequestReason' => [
+						'label-message' => 'contactpage-requestbetaaccount-requestreason',
+						'type' => 'textarea',
+						'help-message' => 'contactpage-requestaccount-requestreason-help',
+						'required' => true,
+					],
+				],
+				'DisplayFormat' => 'table',
+			],
 		];
+
+		$wgTranslateTranslationServices['Google'] = [
+			'url' => 'https://translation.googleapis.com/language/translate/v2',
+			'key' => $wmgTranslateGoogleTranslateMetaKey,
+			'timeout' => 3,
+			'type' => 'google',
+		];
+
+		wfLoadExtensions( [
+			'GlobalWatchlist',
+			'IncidentReporting',
+			'RequestSSL',
+			'SecurePoll',
+		] );
+
+		break;
+	case 'metawikibeta':
+		wfLoadExtensions( [
+			'GlobalWatchlist',
+			'RequestSSL',
+		] );
+
+		break;
+	case 'metzowiki':
+		$wgDplSettings['maxCategoryCount'] = 10;
+
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
 		break;
+	case 'nycsubwaywiki':
+		unset( $wgGroupPermissions['interwiki-admin'] );
+		unset( $wgGroupPermissions['no-ipinfo'] );
+
+		break;
 	case 'persistwiki':
 		$wgDplSettings['maxCategoryCount'] = 10;
 
+		break;
+	case 'picrosswiki':
+		$wgLogos = [
+			'svg' => "https://static.miraheze.org/picrosswiki/0/0a/Pikuw.svg",
+		];
 		break;
 	case 'pokemundowiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -231,59 +382,27 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case '402611wiki':
-	case 'ballmediawiki':
-	case 'polandballfanonwiki':
-	case 'polandballwikisongcontestwiki':
-	case 'polandsmallswiki':
-		if ( wfShouldEnableSwift( 'polcomwiki' ) ) {
-			$wgForeignFileRepos[] = [
-				'class' => ForeignDBViaLBRepo::class,
-				'name' => 'shared-polcomwiki',
-				'backend' => 'miraheze-swift',
-				'url' => 'https://static-new.miraheze.org/polcomwiki',
-				'hashLevels' => 2,
-				'thumbScriptUrl' => false,
-				'transformVia404' => true,
-				'hasSharedCache' => true,
-				'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
-				'scriptDirUrl' => 'https://polcom.miraheze.org/w',
-				'fetchDescription' => true,
-				'descriptionCacheExpiry' => 86400 * 7,
-				'wiki' => 'polcomwiki',
-				'initialCapital' => true,
-				'zones' => [
-					'public' => [
-						'container' => 'local-public',
-					],
-					'thumb' => [
-						'container' => 'local-thumb',
-					],
-					'temp' => [
-						'container' => 'local-temp',
-					],
-					'deleted' => [
-						'container' => 'local-deleted',
-					],
-				],
-				'abbrvThreshold' => 160
-			];
-		} else {
-			$wgForeignFileRepos[] = [
-				'class' => ForeignDBViaLBRepo::class,
-				'name' => 'shared-polcomwiki',
-				'directory' => '/mnt/mediawiki-static/polcomwiki',
-				'url' => 'https://static.miraheze.org/polcomwiki',
-				'hashLevels' => 2,
-				'thumbScriptUrl' => false,
-				'transformVia404' => true,
-				'hasSharedCache' => true,
-				'fetchDescription' => true,
-				'descriptionCacheExpiry' => 86400 * 7,
-				'wiki' => 'polcomwiki',
-				'descBaseUrl' => 'https://polcom.miraheze.org/wiki/File:',
-				'scriptDirUrl' => 'https://polcom.miraheze.org/w',
-			];
+	case 'paneidoversewiki':
+		$wgHooks['AdminLinks'][] = 'onAdminLinks';
+
+		function onAdminLinks( &$adminLinksTree ) {
+			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
+			$generalRow = $general->getRow( 'main' );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'ArticlesHome' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'EditWatchlist' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'GlobalPreferences' ) );
+			$generalRow->addItem( ALItem::newFromSpecialPage( 'Upload' ) );
+			$generalRow->addItem( ALItem::newFromEditLink( 'Common.js', 'Edit JS file' ) );
+			$generalRow->addItem( ALItem::newFromPage( 'Draft:Portal', 'Draft portal' ) );
+
+			$users = $adminLinksTree->getSection( wfMessage( 'adminlinks_users' )->text() );
+			$usersRow = $users->getRow( 'main' );
+			$usersRow->addItem( ALItem::newFromSpecialPage( 'BlockUser' ) );
+
+			$browseAndSearch = $adminLinksTree->getSection( wfMessage( 'adminlinks_browsesearch' )->text() );
+			$browseAndSearchRow = $browseAndSearch->getRow( 'main' );
+			$browseAndSearchRow->addItem( ALItem::newFromSpecialPage( 'UnusedFiles' ) );
 		}
 
 		break;
@@ -300,6 +419,11 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'sagan4wiki':
+	case 'sagan4betawiki':
+	case 'sagan4alphawiki':
+		$wgCargoAllowedSQLFunctions[] = 'RAND';
+		break;
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -308,11 +432,74 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'snxyzincubatorwiki':
+		$wgLogos = [
+			'1x' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
+			'svg' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
+			'icon' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
+			'wordmark' => [
+				'src' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
+				'1x' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
+				'width' => 135,
+				'height' => 20,
+			],
+			'tagline' => [
+				'src' => "https://static.wikitide.net/snxyzincubatorwiki/6/60/Tagline_EN.svg",
+				'width' => 135,
+				'height' => 15,
+			],
+			'variants' => [
+				'vi' => [
+					'wordmark' => [
+						'src' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
+						'1x' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
+						'width' => 135,
+						'height' => 20,
+					],
+					'tagline' => [
+						'src' => "https://static.wikitide.net/snxyzincubatorwiki/1/1b/Tagline_VI.svg",
+						'width' => 135,
+						'height' => 15,
+					],
+				],
+			],
+		];
+
+		break;
+	case 'srewiki':
+		wfLoadExtension( 'LdapAuthentication' );
+
+		$wgAuthManagerAutoConfig['primaryauth'] += [
+			LdapPrimaryAuthenticationProvider::class => [
+				'class' => LdapPrimaryAuthenticationProvider::class,
+				'args' => [ [
+					// don't allow local non-LDAP accounts
+					'authoritative' => true,
+				] ],
+				// must be smaller than local pw provider
+				'sort' => 50,
+			],
+		];
+
+		break;
 	case 'traceprojectwikiwiki':
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
 
+		break;
+	case 'whentheycrywiki':
+		$wgGalleryOptions['imageWidth'] = 200;
+		$wgGalleryOptions['imageHeight'] = 200;
+
+		break;
+	case 'wonderingstarswiki':
+		$wgPivotFeatures = [
+			'showActionsForAnon' => false,
+			'fixedNavBar' => true,
+			'usePivotTabs' => true,
+			'showRecentChangesUnderTools' => false,
+		];
 		break;
 	case 'worldboxwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );

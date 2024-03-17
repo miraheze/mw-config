@@ -20,9 +20,8 @@ If you would like to add configuration options or extensions/skins to ManageWiki
 * Follow the other examples from either ManageWikiSettings.php or ManageWikiNamespaces.php to add configuration variables to the appropriate module of ManageWiki. For ManageWikiSettings.php, make sure they are in the appropriate section.
 * Make sure that the `'overridedefault'` set in ManageWikiSettings.php or ManageWikiNamespaces.php match that of the default set via LocalSettings.php.
 * To add extensions to ManageWikiExtensions.php:
-  * First make sure the extension submodule is installed on Miraheze in the miraheze/mediawiki repository. See https://meta.miraheze.org/wiki/Tech:Adding_a_new_extension for more information on this and the below documentation.
+  * First make sure the extension is added for Miraheze in the [mediawiki-repos.yaml file](https://github.com/miraheze/mediawiki-repos/blob/master/mediawiki-repos.yaml) in the miraheze/mediawiki-repos repository.
   * Follow the current examples on ManageWikiExtensions.php to add new extensions to that file.
-  * Update extension-list. Only needed if the extension or skin has an i18n directory. Add the path to the entry point file (extension/skin.json or the PHP entry point). Order alphabetically.
   * Add any necessary configuration variables to LocalSettings.php, LocalWiki.php, ManageWikiSettings.php, or ManageWikiNamespaces.php. Add to whichever is most appropriate.
   * If an extension requires configuration to be set only when the extension is enabled on the wiki, add the `ext-<ExtensionName>` tag to LocalSettings.php, as you would wiki databases or `default`.
    * Note: the `<ExtensionName>` is the value from the `'name'` field of ManageWikiExtensions.php, without any whitespaces
