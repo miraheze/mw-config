@@ -1,9 +1,6 @@
 <?php
 
-/**
- * LocalSettings.php for Miraheze.
- * Authors of initial version: Southparkfan, John Lewis, Orain contributors
- */
+/** LocalSettings.php for Miraheze. */
 
 // Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
