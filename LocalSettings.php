@@ -3351,7 +3351,7 @@ $wgConf->settings += [
 		'ext-Maps' => 'leaflet',
 	],
 	'egMapsDisableSmwIntegration' => [
-		'ext-Maps' => true,
+		'ext-Maps' => false,
 	],
 
 	// MassMessage
