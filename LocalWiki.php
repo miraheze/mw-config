@@ -505,4 +505,10 @@ switch ( $wi->dbname ) {
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
+	case 'genshinimapctwiki':
+		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
+		$wgMatomoAnalyticsDisableJS = true;
+		$wgMatomoAnalyticsDisableCookie = true;
+
+		break;
 }
