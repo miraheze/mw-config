@@ -2788,6 +2788,7 @@ $wgConf->settings += [
 		'default' => [
 			'*' => [
 				'autocreateaccount' => true,
+				'centralauth-merge' => true,
 				'read' => true,
 				'oathauth-enable' => true,
 				'viewmyprivateinfo' => true,
