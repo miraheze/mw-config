@@ -142,6 +142,24 @@ $wgCdnMatchParameterOrder = false;
 if ( $beta || $wi->dbname === 'testwiki' ) {
 	wfLoadExtension( 'EventBus' );
 
+	$wgEnableEventBus = 'TYPE_ALL';
+
+	// These do nothing while in testing but should be like this when in production
+	if ( $cwPrivate ) {
+		$wgEnableEventBus = 'TYPE_JOB';
+	}
+
+	if ( $wi->dbname === 'loginwiki' ) {
+		$wgEnableEventBus = 'TYPE_JOB|TYPE_PURGE';
+	}
+
+	// Used to look up the event service URL in ProductionServices to which
+	// the EventBus (and possibly other) extension will produce an event
+	// stream to by default.  (If the event stream has an stream config in
+	// wgEventStreams with the 'destination_event_service' setting, EventBus
+	// will used that as the destination event service for the event stream instead.)
+	$wgEventServiceDefault = 'eventgate';
+
 	$wgEventServices = [
 		'eventgate' => [
 			'url' => 'http://10.0.18.147:8192/v1/events',
