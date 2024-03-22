@@ -11,9 +11,6 @@ class MirahezeFunctions {
 	/** @var string */
 	public $dbname;
 
-	/** @var string */
-	public $hostname;
-
 	/** @var bool */
 	public $missing;
 
@@ -81,9 +78,6 @@ class MirahezeFunctions {
 		$this->missing = self::isMissing();
 		$this->realm = self::getRealm();
 		$this->version = self::getMediaWikiVersion();
-
-		$this->hostname = $_SERVER['HTTP_HOST'] ??
-			parse_url( $this->server, PHP_URL_HOST ) ?: 'undefined';
 
 		$this->setDatabase();
 		$this->setServers();

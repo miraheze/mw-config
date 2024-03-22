@@ -255,8 +255,14 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.mirabeta.org';
 	$wgMFStopRedirectCookieHost = '.mirabeta.org';
 } else {
-	$wgCentralAuthCookieDomain = $wi->hostname;
-	$wgMFStopRedirectCookieHost = $wi->hostname;
+	$wgCentralAuthCookieDomain = '';
+	if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
+		$parsedUrl = wfParseUrl( $wi->server );
+		$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
+
+		// Don't need a global here
+		unset( $parsedUrl );
+	}
 }
 
 // DataDump
@@ -511,19 +517,20 @@ if ( $wgWordmark ) {
 // $wgUrlShortenerAllowedDomains
 $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?miraheze\.org',
+	'(.*\.)?wikitide\.org',
 ];
 
-if ( preg_match( '/^(.*).mirabeta.org$/', $wi->hostname ) ) {
+if ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?mirabeta\.org',
 	];
 	$wgParserMigrationEnableQueryString = true;
 }
 
-if ( !preg_match( '/^(.*).(miraheze|mirabeta).org$/', $wi->hostname ) ) {
+if ( !preg_match( '/(miraheze|mirabeta|wikitide)\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = array_merge(
 		$wgUrlShortenerAllowedDomains,
-		[ preg_quote( str_replace( 'https://', '', $wgServer ) ) ]
+		[ preg_quote( str_replace( 'https://', '', $wi->server ) ) ]
 	);
 }
 
