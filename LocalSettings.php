@@ -6251,6 +6251,7 @@ $wgConf->settings += [
 			'EditConstraintRunner' => 'error',
 			'error' => 'debug',
 			'error-json' => false,
+			'EventBus' => [ 'graylog' => 'error' ],
 			'EventLogging' => false,
 			'EventStreamConfig' => false,
 			'exception' => 'debug',
