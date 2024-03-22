@@ -143,7 +143,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-if ( $beta || $wi->dbname === 'testwiki' ) {
+if ( $wi->dbname === '' ) {
 	wfLoadExtension( 'EventBus' );
 
 	$wgEnableEventBus = 'TYPE_ALL';
