@@ -256,11 +256,13 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgMFStopRedirectCookieHost = '.mirabeta.org';
 } else {
 	$wgCentralAuthCookieDomain = '';
-	$parsedUrl = wfParseUrl( $wi->server );
-	$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
+	if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
+		$parsedUrl = wfParseUrl( $wi->server );
+		$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
 
-	// Don't need a global here
-	unset( $parsedUrl );
+		// Don't need a global here
+		unset( $parsedUrl );
+	}
 }
 
 // DataDump
