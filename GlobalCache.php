@@ -153,11 +153,6 @@ if ( $beta || $wi->dbname === 'testwiki' ) {
 		$wgEnableEventBus = 'TYPE_JOB|TYPE_PURGE';
 	}
 
-	// Used to look up the event service URL in ProductionServices to which
-	// the EventBus (and possibly other) extension will produce an event
-	// stream to by default.  (If the event stream has an stream config in
-	// wgEventStreams with the 'destination_event_service' setting, EventBus
-	// will used that as the destination event service for the event stream instead.)
 	$wgEventServiceDefault = 'eventgate';
 
 	$wgEventServices = [
