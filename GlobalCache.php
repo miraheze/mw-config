@@ -139,24 +139,47 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-$redisServerIP = $beta ?
-	'10.0.15.118:6379' :
-	'10.0.17.120:6379';
+if ( $beta || $wi->dbname === 'testwiki' ) {
+	wfLoadExtension( 'EventBus' );
 
-$wgJobTypeConf['default'] = [
-	'class' => JobQueueRedis::class,
-	'redisServer' => $redisServerIP,
-	'redisConfig' => [
-		'connectTimeout' => 2,
-		'password' => $wmgRedisPassword,
-		'compression' => 'gzip',
-	],
-	'daemonized' => true,
-];
+	$wgEventServices = [
+		'eventgate' => [
+			'url' => 'http://10.0.18.147:8192/v1/events',
+			'timeout' => 5,
+		],
+	];
+
+	$wgRCFeeds['eventbus'] = [
+		'formatter' => EventBusRCFeedFormatter::class,
+		'class' => EventBusRCFeedEngine::class,
+	];
+
+	$wgJobTypeConf['default'] = [
+		'class' => JobQueueEventBus::class,
+		'readOnlyReason' => false
+	];
+
+	$wgEventBusEnableRunJobAPI = true;
+} else {
+	$redisServerIP = $beta ?
+		'10.0.15.118:6379' :
+		'10.0.17.120:6379';
+
+	$wgJobTypeConf['default'] = [
+		'class' => JobQueueRedis::class,
+		'redisServer' => $redisServerIP,
+		'redisConfig' => [
+			'connectTimeout' => 2,
+			'password' => $wmgRedisPassword,
+			'compression' => 'gzip',
+		],
+		'daemonized' => true,
+	];
+
+	unset( $redisServerIP );
+}
 
 if ( PHP_SAPI === 'cli' ) {
 	// APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
-
-unset( $redisServerIP );
