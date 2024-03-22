@@ -1069,7 +1069,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
-		'mirabeta' => false,
+		'mirabetawiki' => false,
 	],
 
 	'wgRequestWikiMinimumLength' => [
