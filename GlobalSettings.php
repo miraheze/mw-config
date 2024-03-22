@@ -258,7 +258,7 @@ if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '';
 	$parsedUrl = wfParseUrl( $server );
 	$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
-	
+
 	// Don't need a global here
 	unset( $parsedUrl );
 }
