@@ -139,7 +139,6 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-
 if ( $beta ) {
 	wfLoadExtension( 'EventBus' );
 
