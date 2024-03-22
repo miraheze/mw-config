@@ -3345,7 +3345,7 @@ $wgManageWikiExtensions = [
 				]
 			],
 			'settings' => [
-				'wmgWikibaseRepoUrl' => 'https://' . $wi->hostname,
+				'wmgWikibaseRepoUrl' => $wi->server,
 				'wmgWikibaseItemNamespaceID' => 860,
 				'wmgWikibasePropertyNamespaceID' => 862
 			]
