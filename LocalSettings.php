@@ -4952,6 +4952,10 @@ $wgConf->settings += [
 	],
 
 	// RSS Settings
+	'wgRSSAllowImageTag' => [
+		'default' => false,
+		'jwmeetingwiki' => true,
+	],
 	'wgRSSCacheAge' => [
 		'default' => 3600,
 	],
@@ -4959,7 +4963,7 @@ $wgConf->settings += [
 		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgRSSDateDefaultFormat' => [
-		'default' => 'Y-m-d H:i:s'
+		'default' => 'Y-m-d H:i:s',
 	],
 	'wgRSSUrlWhitelist' => [
 		'ext-RSSfeed' => [
