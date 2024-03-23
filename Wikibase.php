@@ -37,6 +37,8 @@ $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled
 $wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ?: null;
 $wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ?: null;
 
+$wgWBRepoSettings['siteGlobalID'] = $wgDBname;
+
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
 ];
