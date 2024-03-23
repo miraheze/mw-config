@@ -4182,6 +4182,13 @@ $wgConf->settings += [
 	],
 	'+wgRevokePermissions' => [
 		'default' => [],
+		'+cookbookwiki' => [
+			'users_blocked_from_commenting' => [
+				'comment' => true,
+				'commentlinks' => true,
+				'comment-delete-own' => true,
+			],
+		],
 		'+metawiki' => [
 			'requestwikiblocked' => [
 				'requestwiki' => true,
