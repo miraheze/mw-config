@@ -62,7 +62,7 @@ $wgWBClientSettings['repositories'] = [
 	]
 ];
 
-$wgWBClientSettings['siteGlobalID'] = $wi->dbname;
+$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 $wgWBClientSettings['repoScriptPath'] = '/w';
 $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
 $wgWBClientSettings['siteGroup'] = 'miraheze';
