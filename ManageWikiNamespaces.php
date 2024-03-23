@@ -321,6 +321,17 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgNamespaceLogos' => [
+		'name' => 'File name of the logo you want to use for this namespace.',
+		'from' => 'logofunctions',
+		'type' => 'text',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		'overridedefault' => [],
+		'help' => '',
+		'requires' => [],
+	],
 	'wgRPRatingAllowedNamespaces' => [
 		'name' => 'Allow articles in this namespace to be rated with RatePage?',
 		'from' => 'ratepage',
