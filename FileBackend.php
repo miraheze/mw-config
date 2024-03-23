@@ -64,6 +64,13 @@ if ( $cwPrivate ) {
 	];
 }
 
+
+if ( $wgDBname === 'hololivewiki' ) {
+	// default: 3600 * 6 (6 hours)
+	// hololivewiki: 86400 * 7 (7 days) (T11973)
+	$wgUploadStashMaxAge = 86400 * 7;
+}
+
 $wgLocalFileRepo = [
 	'class' => LocalRepo::class,
 	'name' => 'local',
