@@ -6390,6 +6390,8 @@ $wi::$disabledExtensions = [
 	'graph',
 	// T11641
 	'pageproperties',
+	// T11970
+	'drafts',
 	// Broken, once again...
 	'lingo',
 ];
