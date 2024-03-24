@@ -3897,6 +3897,15 @@ $wgManageWikiSettings = [
 		'help' => 'The query service Sparql endpoint',
 		'requires' => [],
 	],
+	'wgUnlinkedWikibaseStatementsParserFunc' => [
+		'name' => 'Enable Statements parser function for UnlinkedWikibase',
+		'from' => 'unlinkedwikibase',
+		'type' => 'check',
+		'overridedefault' => 'false',
+		'section' => 'wikibase',
+		'help' => 'Allow the use of <code>{{#statements:}}</code> parser functions with UnlinkedWikibase.',
+		'requires' => [],
+	],
 	'wgWBQualityConstraintsInstanceOfId' => [
 		'name' => 'Instance Of Id',
 		'from' => 'wikibasequalityconstraints',
