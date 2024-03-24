@@ -95,8 +95,8 @@ $wgConf->settings += [
 
 	'wgPrivilegedGroups' => [
 		'default' => ['bureaucrat', 'checkuser', 'interface-admin', 'suppress', 'sysop'],
-		'+metawiki' => ['steward', 'sre']
-	]
+		'+metawiki' => ['steward', 'sre'],
+	],
 
 	// 'pagelinks' table migration
 	'wgPageLinksSchemaMigrationStage' => [
