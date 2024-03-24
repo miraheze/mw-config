@@ -24,9 +24,10 @@ if ( !isset( $event['database'] ) ) {
 }
 
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
+define( 'MW_DB', $event['database'] );
 
 require_once __DIR__ . '/../initialise/MirahezeFunctions.php';
-require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php', $event['database'] );
+require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
 // fatals but not random I/O warnings
 error_reporting( E_ERROR );
