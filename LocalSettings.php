@@ -93,6 +93,11 @@ $wgConf->settings += [
 		'default' => '8',
 	],
 
+	'wgPrivilegedGroups' => [
+		'default' => ['bureaucrat', 'checkuser', 'interface-admin', 'suppress', 'sysop'],
+		'+metawiki' => ['steward', 'sre'],
+	],
+
 	// 'pagelinks' table migration
 	'wgPageLinksSchemaMigrationStage' => [
 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
