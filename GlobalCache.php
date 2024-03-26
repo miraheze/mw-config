@@ -149,7 +149,8 @@ if (
 	$wi->dbname === 'testwiki' ||
 	$wi->dbname === 'loginwiki' ||
 	$wi->dbname === 'iowiki' ||
-	$wi->dbname === 'staffwiki'
+	$wi->dbname === 'staffwiki' ||
+	$wi->isExtensionActive( 'SemanticMediaWiki' )
 ) {
 	wfLoadExtension( 'EventBus' );
 
