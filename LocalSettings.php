@@ -5416,6 +5416,11 @@ $wgConf->settings += [
 		'default' => false
 	],
 
+	// UnlinkedWikibase
+	'wgUnlinkedWikibaseStatementsParserFunc' => [
+		'default' => false,
+	],
+	
 	// Tweeki
 	'wgTweekiSkinUseBootstrap4' => [
 		'default' => false,
