@@ -146,7 +146,7 @@ $wgCdnMatchParameterOrder = false;
 
 if (
 	$beta ||
-    	$wi->dbname === 'testwiki' ||
+		$wi->dbname === 'testwiki' ||
 	$wi->dbname === 'loginwiki' ||
 	$wi->dbname === 'iowiki' ||
 	$wi->dbname === 'staffwiki'
