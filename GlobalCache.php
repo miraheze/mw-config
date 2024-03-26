@@ -144,12 +144,17 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-if ( $beta || $wi->dbname === 'testwiki' ) {
+if (
+	$beta ||
+	$wi->dbname === 'testwiki' ||
+	$wi->dbname === 'loginwiki' ||
+	$wi->dbname === 'iowiki' ||
+	$wi->dbname === 'staffwiki'
+) {
 	wfLoadExtension( 'EventBus' );
 
 	$wgEnableEventBus = 'TYPE_ALL';
 
-	// These do nothing while in testing but should be like this when in production
 	if ( $cwPrivate ) {
 		$wgEnableEventBus = 'TYPE_JOB';
 	}
