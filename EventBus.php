@@ -1,0 +1,42 @@
+<?php
+
+$wgEnableEventBus = 'TYPE_ALL';
+
+if ( $cwPrivate ) {
+	$wgEnableEventBus = 'TYPE_JOB';
+}
+
+if ( $wi->dbname === 'loginwiki' ) {
+	$wgEnableEventBus = 'TYPE_JOB|TYPE_PURGE';
+}
+
+$wgEventServiceDefault = 'eventgate';
+
+$wgEventServices = [
+	'eventgate' => [
+		'url' => 'http://10.0.18.147:8192/v1/events',
+		'timeout' => 5,
+	],
+];
+
+$wgEventRelayerConfig = [
+	'cdn-url-purges' => [
+		'class' => CdnPurgeEventRelayer::class,
+		'stream' => 'resource-purge',
+	],
+	'default' => [
+		'class' => EventRelayerNull::class,
+	],
+];
+
+$wgRCFeeds['eventbus'] = [
+	'formatter' => EventBusRCFeedFormatter::class,
+	'class' => EventBusRCFeedEngine::class,
+];
+
+$wgJobTypeConf['default'] = [
+	'class' => JobQueueEventBus::class,
+	'readOnlyReason' => false
+];
+
+$wgEventBusEnableRunJobAPI = true;
