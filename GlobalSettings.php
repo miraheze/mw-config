@@ -3,7 +3,6 @@
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\Html\Html;
-use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
@@ -25,11 +24,6 @@ if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) 
 			);
 		}
 	};
-}
-
-// T11999: Disable Special:RequestWikiQueue outside of metawiki
-if ( $wi->dbname !== 'metawiki' ) {
-	$wgSpecialPages['RequestWikiQueue'] = DisabledSpecialPage::getCallback( 'RequestWikiQueue', 'createwiki-requestwikiqueue-disabled' );
 }
 
 // Extensions
