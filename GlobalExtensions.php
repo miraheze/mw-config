@@ -14,6 +14,7 @@ wfLoadExtensions( [
 	'DiscordNotifications',
 	'DismissableSiteNotice',
 	'Echo',
+	'EventBus',
 	// Required by CentralNotice
 	'EventLogging',
 	'GlobalCssJs',
