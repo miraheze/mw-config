@@ -22,7 +22,7 @@ if ( PHP_SAPI === 'cli' ) {
 } elseif (
 	( $_SERVER['HTTP_HOST'] ?? '' ) === 'jobrunner.wikitide.net' ||
 	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask171.wikitide.net' ||
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net' 
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net'
 ) {
 	$wgRequestTimeLimit = 1200;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
@@ -5424,7 +5424,7 @@ $wgConf->settings += [
 	'wgUnlinkedWikibaseStatementsParserFunc' => [
 		'default' => false,
 	],
-	
+
 	// Tweeki
 	'wgTweekiSkinUseBootstrap4' => [
 		'default' => false,
