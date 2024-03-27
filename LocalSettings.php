@@ -6298,8 +6298,7 @@ $wgConf->settings += [
 			'HitCounters' => false,
 			// Only log http errors with a 500+ code
 			'HttpError' => 'error',
-			// 'JobExecutor' => [ 'logstash' => 'warning' ],
-			'JobQueueRedis' => 'debug',
+			'JobExecutor' => [ 'graylog' => 'warning' ],
 			'localisation' => false,
 			'ldap' => 'warning',
 			'LinkBatch' => false,
