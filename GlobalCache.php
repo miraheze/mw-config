@@ -150,6 +150,7 @@ if (
 	$wi->dbname === 'loginwiki' ||
 	$wi->dbname === 'iowiki' ||
 	$wi->dbname === 'staffwiki' ||
+	( $wi->isExtensionActive( 'CirrusSearch' ) && $wi->dbname !== 'metawiki' ) ||
 	$wi->isExtensionActive( 'SemanticMediaWiki' ) ||
 	$wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' )
 ) {
