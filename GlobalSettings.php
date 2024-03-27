@@ -764,7 +764,7 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.17.120:7531' ],
+	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
