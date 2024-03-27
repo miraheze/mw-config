@@ -23,7 +23,7 @@ $wgFileBackends[] = [
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 $redisServerIP = $beta ?
 	'10.0.15.118:6379' :
-	'10.0.17.120:6379';
+	'10.0.15.142:6379';
 
 $wgLockManagers[] = [
 	'name' => 'redisLockManager',
