@@ -150,7 +150,8 @@ if (
 	$wi->dbname === 'loginwiki' ||
 	$wi->dbname === 'iowiki' ||
 	$wi->dbname === 'staffwiki' ||
-	$wi->isExtensionActive( 'SemanticMediaWiki' )
+	$wi->isExtensionActive( 'SemanticMediaWiki' ) ||
+	$wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' )
 ) {
 	wfLoadExtension( 'EventBus' );
 
