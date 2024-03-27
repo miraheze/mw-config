@@ -145,14 +145,15 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 $wgCdnMatchParameterOrder = false;
 
 if (
-	$beta ||
+	$wi->dbname !== 'metawiki'
+	/* $beta ||
 	$wi->dbname === 'testwiki' ||
 	$wi->dbname === 'loginwiki' ||
 	$wi->dbname === 'iowiki' ||
 	$wi->dbname === 'staffwiki' ||
 	( $wi->isExtensionActive( 'CirrusSearch' ) && $wi->dbname !== 'metawiki' ) ||
 	$wi->isExtensionActive( 'SemanticMediaWiki' ) ||
-	$wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' )
+	$wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) */
 ) {
 	wfLoadExtension( 'EventBus' );
 
