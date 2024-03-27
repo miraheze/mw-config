@@ -145,7 +145,8 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 $wgCdnMatchParameterOrder = false;
 
 if (
-	$wi->dbname !== 'metawiki'
+	true
+	// $wi->dbname !== 'metawiki'
 	/* $beta ||
 	$wi->dbname === 'testwiki' ||
 	$wi->dbname === 'loginwiki' ||
