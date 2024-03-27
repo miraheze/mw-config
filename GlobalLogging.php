@@ -253,6 +253,6 @@ if ( $wgCommandLineMode ) {
 	$wgDebugDumpSql = true;
 }
 
-if ( wfHostname() === 'test151' || wfHostname() === 'mwtask181' ) {
+if ( wfHostname() === 'test151' || wfHostname() === 'mwtask171' || wfHostname() === 'mwtask181' ) {
 	$wgShowExceptionDetails = true;
 }
