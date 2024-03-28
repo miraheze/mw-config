@@ -15,8 +15,8 @@ wfLoadExtensions( [
 	'DismissableSiteNotice',
 	'Echo',
 	'EventBus',
-	// Required by CentralNotice
 	'EventLogging',
+	'EventStreamConfig',
 	'GlobalCssJs',
 	'GlobalNewFiles',
 	'ImportDump',
