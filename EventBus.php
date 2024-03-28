@@ -20,7 +20,7 @@ $wgEventServiceDefault = 'eventgate';
 $wgEventServices = [
 	'eventgate' => [
 		'url' => 'http://10.0.18.147:8192/v1/events',
-		'timeout' => 5,
+		'timeout' => 62,
 	],
 ];
 
