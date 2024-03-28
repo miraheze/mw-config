@@ -44,4 +44,4 @@ $wgJobTypeConf['default'] = [
 	'readOnlyReason' => false
 ];
 
-$wgEventBusEnableRunJobAPI = true;
+$wgEventBusEnableRunJobAPI = wfHostname() === 'mwtask171' || wfHostname() === 'mwtask181';
