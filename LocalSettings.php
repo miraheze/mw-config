@@ -2391,117 +2391,117 @@ $wgConf->settings += [
 	],
 	'wgLDAPServerNames' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ldap.miraheze.org',
+			'wikitide' => 'ldap.wikitide.net',
 		],
 		'srewiki' => [
-			'miraheze' => 'ldap.miraheze.org',
+			'wikitide' => 'ldap.wikitide.net',
 		],
 	],
 	'wgLDAPEncryptionType' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ssl',
+			'wikitide' => 'ssl',
 		],
 		'srewiki' => [
-			'miraheze' => 'ssl',
+			'wikitide' => 'ssl',
 		],
 	],
 	'wgLDAPSearchAttributes' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'uid',
+			'wikitide' => 'uid',
 		],
 		'srewiki' => [
-			'miraheze' => 'uid',
+			'wikitide' => 'uid',
 		],
 	],
 	'wgLDAPBaseDNs' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'dc=miraheze,dc=org',
+			'wikitide' => 'dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'dc=miraheze,dc=org',
+			'wikitide' => 'dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPUserBaseDNs' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPProxyAgent' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPProxyAgentPassword' => [
 		'ldapwikiwiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 		'srewiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 	],
 	'wgLDAPWriterDN' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPWriterPassword' => [
 		'ldapwikiwiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 		'srewiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 	],
 	'wgLDAPWriteLocation' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPAddLDAPUsers' => [
 		'ldapwikiwiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 		'srewiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 	],
 	'wgLDAPUpdateLDAP' => [
 		'ldapwikiwiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 		'srewiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 	],
 	'wgLDAPPasswordHash' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ssha',
+			'wikitide' => 'ssha',
 		],
 		'srewiki' => [
-			'miraheze' => 'ssha',
+			'wikitide' => 'ssha',
 		],
 	],
 	'wgLDAPPreferences' => [
 		'ldapwikiwiki' => [
-			'miraheze' => [
+			'wikitide' => [
 				'email' => 'mail',
 				'realname' => 'givenName',
 			],
 		],
 		'srewiki' => [
-			'miraheze' => [
+			'wikitide' => [
 				'email' => 'mail',
 				'realname' => 'givenName',
 			],
@@ -2509,41 +2509,41 @@ $wgConf->settings += [
 	],
 	'wgLDAPUseFetchedUsername' => [
 		'ldapwikiwiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 		'srewiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 	],
 	'wgLDAPLowerCaseUsernameScheme' => [
 		'ldapwikiwiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 		'srewiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 	],
 	'wgLDAPLowerCaseUsername' => [
 		'ldapwikiwiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 		'srewiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 	],
 	'wgLDAPOptions' => [
 		'ldapwikiwiki' => [
-			'miraheze' => [
-				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
+			'wikitide' => [
+				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/LetsEncrypt.crt',
 			],
 		],
 		'srewiki' => [
-			'miraheze' => [
-				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
+			'wikitide' => [
+				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/LetsEncrypt.crt',
 			],
 		],
 	],
