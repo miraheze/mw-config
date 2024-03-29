@@ -2106,7 +2106,7 @@ $wgConf->settings += [
 		'mirabeta' => 'metawikibeta',
 	],
 	'wgImportDumpEnableAutomatedJob' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgImportDumpInterwikiMap' => [
 		'default' => [
