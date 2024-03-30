@@ -764,6 +764,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enable various changes around searching for template names. (experimental)',
 		'requires' => [],
 	],
+	'wgMFCollapseSectionsByDefault' => [
+		'name' => 'Collapse sections by default on MobileFrontend',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Enabling this will collapse sections by default when the page loads when using MobileFrontend.',
+		'requires' => [],
+	],
 	'wgMFDefaultEditor' => [
 		'name' => 'Default MobileFrontend Editor',
 		'from' => 'mobilefrontend',
