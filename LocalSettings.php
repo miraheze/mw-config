@@ -996,10 +996,10 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiStateDays' => [
 		'default' => [
-			'inactive' => 45,
-			'closed' => 15,
-			'removed' => 120,
-			'deleted' => 14
+			'inactive' => 60,
+			'closed' => 60,
+			'removed' => 245,
+			'deleted' => 31
 		],
 	],
 	'wgCreateWikiCacheDirectory' => [
