@@ -1559,9 +1559,9 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze',
+					'src' => 'https://static.miraheze.org/commonswiki/9/96/Powered_By_Orain.png',
+					'url' => 'https://meta.orain.org/wiki/Main_Page',
+					'alt' => 'Hosted by Orain',
 				],
 			],
 		],
@@ -1573,9 +1573,9 @@ $wgConf->settings += [
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 				],
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze',
+					'src' => 'https://static.miraheze.org/commonswiki/9/96/Powered_By_Orain.png',
+					'url' => 'https://meta.orain.org/wiki/Main_Page',
+					'alt' => 'Hosted by Orain',
 				],
 			],
 		],
@@ -1587,8 +1587,8 @@ $wgConf->settings += [
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 				],
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'src' => 'https://static.miraheze.org/commonswiki/9/96/Powered_By_Orain.png',
+					'url' => 'https://meta.orain.org/wiki/Main_Page',
 					'alt' => 'Hosted by Miraheze',
 				],
 			],
