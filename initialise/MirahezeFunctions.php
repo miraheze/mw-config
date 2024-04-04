@@ -264,7 +264,7 @@ class MirahezeFunctions {
 			if ( is_string( $database ) && $database !== 'default' ) {
 				foreach ( array_keys( self::SUFFIXES ) as $suffix ) {
 					if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
-						return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . $databases['d'] ?? self::SUFFIXES[$suffix][0];
+						return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . ( $databases['d'] ?? self::SUFFIXES[$suffix][0] );
 					}
 				}
 			}
@@ -276,7 +276,7 @@ class MirahezeFunctions {
 		foreach ( $databases as $db => $data ) {
 			foreach ( array_keys( self::SUFFIXES ) as $suffix ) {
 				if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
-					$servers[$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $data['d'] ?? self::SUFFIXES[$suffix][0];
+					$servers[$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . ( $data['d'] ?? self::SUFFIXES[$suffix][0] );
 				}
 			}
 		}
