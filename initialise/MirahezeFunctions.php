@@ -320,7 +320,7 @@ class MirahezeFunctions {
 
 		foreach ( self::SUFFIXES as $suffix => $sites ) {
 			if ( $explode[1] === self::getPrimaryDomain( $explode[0] . $suffix . 'beta' ) ) {
-				return $explode[0] . $suffix;
+				return $explode[0] . $suffix . 'beta';
 			}
 		}
 
