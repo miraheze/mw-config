@@ -204,9 +204,15 @@ class MirahezeFunctions {
 	}
 
 	/**
+	 * @param ?string $database
 	 * @return string
 	 */
-	public static function getRealm(): string {
+	public static function getRealm( ?string $database = null ): string {
+		if ( $database ) {
+			return ( substr( $database, -4 ) === 'wiki' ) ?
+				self::TAGS['default'] : self::TAGS['beta'];
+		}
+
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		return ( substr( self::$currentDatabase, -4 ) === 'wiki' ) ?
@@ -312,7 +318,7 @@ class MirahezeFunctions {
 		}
 
 		foreach ( self::SUFFIXES as $suffix => $sites ) {
-			if ( in_array( $explode[1], $sites ) ) {
+			if ( $explode[1] === self::getPrimaryDomain( $explode[0] . $suffix ) ) {
 				return $explode[0] . $suffix;
 			}
 		}
@@ -352,8 +358,8 @@ class MirahezeFunctions {
 	 */
 	public static function getPrimaryDomain( ?string $database = null ): string {
 		if ( $database ) {
-			$primaryDomain = self::readDbListFile( self::LISTS[self::getRealm()], false, $database )['d'] ?? null;
-			return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm()];
+			$primaryDomain = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['d'] ?? null;
+			return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm( $database )];
 		}
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
