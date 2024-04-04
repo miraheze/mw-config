@@ -219,7 +219,7 @@ class MirahezeFunctions {
 	public static function getCurrentSuffix(): string {
 		return array_keys( array_filter( self::SUFFIXES, static function ( $v ) {
 			return in_array( self::DEFAULT_SERVER[self::getRealm()], $v );
-		} ) );
+		} ) )[0];
 	}
 
 	/**
