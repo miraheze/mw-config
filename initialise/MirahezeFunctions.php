@@ -39,6 +39,7 @@ class MirahezeFunctions {
 		],
 		'mirabeta' => [
 			'mirabeta.org',
+			'orain.org',
 		],
 	];
 
