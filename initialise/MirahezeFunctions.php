@@ -32,8 +32,6 @@ class MirahezeFunctions {
 	/** @var array */
 	public static $disabledExtensions = [];
 
-	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
-
 	private const ALLOWED_DOMAINS = [
 		'default' => [
 			'miraheze.org',
@@ -43,6 +41,8 @@ class MirahezeFunctions {
 			'mirabeta.org',
 		],
 	];
+
+	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
