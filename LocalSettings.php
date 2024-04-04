@@ -36,14 +36,9 @@ if ( PHP_SAPI === 'cli' ) {
  * Disabled on production hosts because it seems to be causing performance issues (how ironic)
  */
 $forceprofile = $_GET['forceprofile'] ?? 0;
-if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
-	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
-		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-		xhprof_enable( $xhprofFlags );
-	} else {
-		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-		tideways_xhprof_enable( $xhprofFlags );
-	}
+if ( $forceprofile == 1 && extension_loaded( 'xhprof' ) ) {
+	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+	xhprof_enable( $xhprofFlags );
 
 	$wgProfiler = [
 		'class' => ProfilerXhprof::class,
@@ -52,21 +47,20 @@ if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_
 		'output' => 'text',
 	];
 
+	// Don't need a global here
 	unset( $xhprofFlags );
 
 	$wgHTTPTimeout = 60;
-} elseif ( PHP_SAPI === 'cli' && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
-	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
-		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-	}
+} elseif ( PHP_SAPI === 'cli' && extension_loaded( 'xhprof' ) ) {
+	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 
 	$wgProfiler = [
 		'class' => ProfilerXhprof::class,
 		'flags' => $xhprofFlags,
 		'output' => 'text',
 	];
+
+	// Don't need a global here
 	unset( $xhprofFlags );
 }
 
