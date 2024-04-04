@@ -34,6 +34,7 @@ wfLoadExtensions( [
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
+	'ParserMigration',
 	'QuickInstantCommons',
 	// 'ReportIncident',
 	'RottenLinks',
@@ -48,9 +49,5 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr',
 ] );
-
-if ( $wi->version >= 1.41 ) {
-	wfLoadExtension( 'ParserMigration' );
-}
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
