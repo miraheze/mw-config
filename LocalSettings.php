@@ -6469,7 +6469,7 @@ if ( $wi->missing ) {
 }
 
 if ( $cwDeleted ) {
-	if ( $wgCommandLineMode ) {
+	if ( MW_ENTRY_POINT === 'cli' ) {
 		wfHandleDeletedWiki();
 	} else {
 		define( 'MW_FINAL_SETUP_CALLBACK', 'wfHandleDeletedWiki' );
