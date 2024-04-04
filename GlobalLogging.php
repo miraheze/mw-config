@@ -262,7 +262,7 @@ if ( $wmgLogToDisk ) {
 	];
 }
 
-if ( $wgCommandLineMode ) {
+if ( MW_ENTRY_POINT === 'cli' ) {
 	ini_set( 'display_startup_errors', 1 );
 	ini_set( 'display_errors', 1 );
 
