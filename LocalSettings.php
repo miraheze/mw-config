@@ -24,7 +24,7 @@ if ( PHP_SAPI === 'cli' ) {
 	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask171.wikitide.net' ||
 	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net'
 ) {
-	$wgRequestTimeLimit = 1200;
+	$wgRequestTimeLimit = 86400;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
 } else {
