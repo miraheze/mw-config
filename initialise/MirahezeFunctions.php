@@ -270,7 +270,7 @@ class MirahezeFunctions {
 				foreach ( array_keys( self::SUFFIXES ) as $suffix ) {
 					if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
 						$defaultServer = $databases['d'] ?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[$realm], self::SUFFIXES[$suffix] ) ];
-						return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' .  $defaultServer;
+						return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
 					}
 				}
 			}
