@@ -207,7 +207,7 @@ if ( ( $wgMirahezeActionPathsFormat ?? 'default' ) !== 'default' ) {
 // Don't need globals here
 unset( $actions, $articlePath );
 
-$wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
+$wgAllowedCorsHeaders[] = 'X-WikiTide-Debug';
 
 // Closed Wikis
 if ( $cwClosed ) {
