@@ -373,6 +373,16 @@ class MirahezeFunctions {
 	/**
 	 * @return string
 	 */
+	public static function getDefaultServer(): string {
+		static $realm = null;
+		$realm ??= self::getRealm();
+
+		return self::DEFAULT_SERVER[$realm];
+	}
+
+	/**
+	 * @return string
+	 */
 	public static function getServer(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
