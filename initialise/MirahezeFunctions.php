@@ -269,7 +269,7 @@ class MirahezeFunctions {
 			if ( is_string( $database ) && $database !== 'default' ) {
 				foreach ( array_keys( self::SUFFIXES ) as $suffix ) {
 					if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
-						$defaultServer = $databases['d'] ?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[$realm], self::SUFFIXES[$suffix] ) ];
+						$defaultServer = $databases['d'] ?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[self::getRealm()], self::SUFFIXES[$suffix] ) ];
 						return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
 					}
 				}
@@ -282,7 +282,7 @@ class MirahezeFunctions {
 		foreach ( $databases as $db => $data ) {
 			foreach ( array_keys( self::SUFFIXES ) as $suffix ) {
 				if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
-					$defaultServer = $data['d'] ?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[$realm], self::SUFFIXES[$suffix] ) ];
+					$defaultServer = $data['d'] ?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[self::getRealm()], self::SUFFIXES[$suffix] ) ];
 					$servers[$db] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
 				}
 			}
