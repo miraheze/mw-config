@@ -295,9 +295,10 @@ class MirahezeFunctions {
 	}
 
 	/**
+	 * @param bool $ignorePrimary
 	 * @return string
 	 */
-	public static function getCurrentDatabase(): string {
+	public static function getCurrentDatabase( bool $ignorePrimary = false ): string {
 		if ( defined( 'MW_DB' ) ) {
 			return MW_DB;
 		}
@@ -320,7 +321,7 @@ class MirahezeFunctions {
 		}
 
 		foreach ( self::SUFFIXES as $suffix => $sites ) {
-			if ( in_array( $explode[1], $sites ) && $explode[1] === self::getPrimaryDomain( $explode[0] . $suffix ) ) {
+			if ( in_array( $explode[1], $sites ) && ( $ignorePrimary || $explode[1] === self::getPrimaryDomain( $explode[0] . $suffix ) ) ) {
 				return $explode[0] . $suffix;
 			}
 		}
