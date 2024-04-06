@@ -9,7 +9,7 @@ if (
 	header( 'Location: ' . str_replace(
 		MirahezeFunctions::getDefaultServer( MirahezeFunctions::getCurrentDatabase( true ) ),
 		MirahezeFunctions::getPrimaryDomain( MirahezeFunctions::getCurrentDatabase( true ) ),
-		$_SERVER['HTTP_HOST']
+		'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']
 	), true, 301 );
 	exit();
 }
