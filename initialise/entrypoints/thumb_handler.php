@@ -3,7 +3,7 @@
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 
 if (
-	MirahezeFunctions::getPrimaryDomain( MirahezeFunctions::getCurrentDatabase( true ) ) !== MirahezeFunctions::getDefaultServer() &&
+	MirahezeFunctions::getPrimaryDomain( MirahezeFunctions::getCurrentDatabase( true ) ) !== MirahezeFunctions::getDefaultServer( MirahezeFunctions::getCurrentDatabase( true ) ) &&
 	str_contains( strtoupper( $_SERVER['REQUEST_URI'] ), strtoupper( MirahezeFunctions::getDefaultServer( MirahezeFunctions::getCurrentDatabase( true ) ) ) )
 ) {
 	header( 'Location: ' . str_replace(
