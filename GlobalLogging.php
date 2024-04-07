@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Extension\EventBus\Adapters\Monolog\EventBusMonologHandler;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Logger\Monolog\BufferHandler;
 use MediaWiki\Logger\Monolog\LogstashFormatter;
@@ -112,6 +113,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	$opts = array_merge(
 		[
 			'graylog' => 'debug',
+			'eventbus' => false,
 			'buffer' => false,
 			'sample' => false,
 		],
@@ -120,7 +122,22 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 
 	$handlers = [];
 
-	// Configure Logstash handler
+	if ( $opts['eventbus'] ) {
+		$eventBusHandler = "eventbus-{$opts['eventbus']}";
+		if ( !isset( $wmgMonologConfig['handlers'][$eventBusHandler] ) ) {
+			// Register handler that will only pass events of the given log level
+			$wmgMonologConfig['handlers'][$eventBusHandler] = [
+				'class' => EventBusMonologHandler::class,
+				'args' => [
+					// EventServiceName
+					'eventgate',
+				]
+			];
+		}
+		$handlers[] = $eventBusHandler;
+	}
+
+	// Configure Graylog handler
 	if ( $opts['graylog'] ) {
 		$level = $opts['graylog'];
 		$graylogHandler = "graylog-{$level}";
@@ -245,7 +262,7 @@ if ( $wmgLogToDisk ) {
 	];
 }
 
-if ( $wgCommandLineMode ) {
+if ( MW_ENTRY_POINT === 'cli' ) {
 	ini_set( 'display_startup_errors', 1 );
 	ini_set( 'display_errors', 1 );
 
@@ -253,6 +270,6 @@ if ( $wgCommandLineMode ) {
 	$wgDebugDumpSql = true;
 }
 
-if ( wfHostname() === 'test151' || wfHostname() === 'mwtask181' ) {
+if ( wfHostname() === 'test151' || wfHostname() === 'mwtask171' || wfHostname() === 'mwtask181' ) {
 	$wgShowExceptionDetails = true;
 }

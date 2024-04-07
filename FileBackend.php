@@ -23,7 +23,7 @@ $wgFileBackends[] = [
 $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 $redisServerIP = $beta ?
 	'10.0.15.118:6379' :
-	'10.0.17.120:6379';
+	'10.0.15.142:6379';
 
 $wgLockManagers[] = [
 	'name' => 'redisLockManager',
@@ -62,6 +62,12 @@ if ( $cwPrivate ) {
 		'/score/' => 'mwstore://miraheze-swift/score-render/',
 		'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
 	];
+}
+
+if ( $wgDBname === 'hololivewiki' ) {
+	// default: 3600 * 6 (6 hours)
+	// hololivewiki: 86400 * 7 (7 days) (T11973)
+	$wgUploadStashMaxAge = 86400 * 7;
 }
 
 $wgLocalFileRepo = [

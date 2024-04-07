@@ -1,9 +1,6 @@
 <?php
 
-/**
- * LocalSettings.php for Miraheze.
- * Authors of initial version: Southparkfan, John Lewis, Orain contributors
- */
+/** LocalSettings.php for Miraheze. */
 
 // Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
@@ -14,7 +11,7 @@ if ( PHP_SAPI !== 'cli' ) {
 	header( "Cache-control: no-cache" );
 }
 
-setlocale( LC_ALL, 'en_GB.UTF-8' );
+setlocale( LC_ALL, 'en_US.UTF-8' );
 
 // 1400MiB
 ini_set( 'memory_limit', 1400 * 1024 * 1024 );
@@ -22,8 +19,12 @@ ini_set( 'memory_limit', 1400 * 1024 * 1024 );
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
-} elseif ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net' ) {
-	$wgRequestTimeLimit = 1200;
+} elseif (
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'jobrunner.wikitide.net' ||
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask171.wikitide.net' ||
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net'
+) {
+	$wgRequestTimeLimit = 86400;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
 } else {
@@ -35,14 +36,9 @@ if ( PHP_SAPI === 'cli' ) {
  * Disabled on production hosts because it seems to be causing performance issues (how ironic)
  */
 $forceprofile = $_GET['forceprofile'] ?? 0;
-if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
-	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
-		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-		xhprof_enable( $xhprofFlags );
-	} else {
-		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-		tideways_xhprof_enable( $xhprofFlags );
-	}
+if ( $forceprofile == 1 && extension_loaded( 'xhprof' ) ) {
+	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+	xhprof_enable( $xhprofFlags );
 
 	$wgProfiler = [
 		'class' => ProfilerXhprof::class,
@@ -51,21 +47,20 @@ if ( $forceprofile == 1 && ( extension_loaded( 'tideways_xhprof' ) || extension_
 		'output' => 'text',
 	];
 
+	// Don't need a global here
 	unset( $xhprofFlags );
 
 	$wgHTTPTimeout = 60;
-} elseif ( PHP_SAPI === 'cli' && ( extension_loaded( 'tideways_xhprof' ) || extension_loaded( 'xhprof' ) ) ) {
-	if ( version_compare( PHP_VERSION, '8.2', '>=' ) ) {
-		$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$xhprofFlags = TIDEWAYS_XHPROF_FLAGS_CPU | TIDEWAYS_XHPROF_FLAGS_MEMORY | TIDEWAYS_XHPROF_FLAGS_NO_BUILTINS;
-	}
+} elseif ( PHP_SAPI === 'cli' && extension_loaded( 'xhprof' ) ) {
+	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 
 	$wgProfiler = [
 		'class' => ProfilerXhprof::class,
 		'flags' => $xhprofFlags,
 		'output' => 'text',
 	];
+
+	// Don't need a global here
 	unset( $xhprofFlags );
 }
 
@@ -85,10 +80,20 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
 
+$wgStatsFormat = 'dogstatsd';
+$wgStatsTarget = 'udp://localhost:9125';
+// graphite151
+$wgStatsdServer = '10.0.15.145';
+
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
 		'default' => '8',
+	],
+
+	'wgPrivilegedGroups' => [
+		'default' => [ 'bureaucrat', 'checkuser', 'interface-admin', 'suppress', 'sysop' ],
+		'+metawiki' => [ 'steward', 'sre' ],
 	],
 
 	// 'pagelinks' table migration
@@ -852,49 +857,52 @@ $wgConf->settings += [
 			'reports(\d+)?',
 			'(.*)wiki(pedi)?a(.*)',
 			'opensearch(\d+)?',
+			'mywiki',
 			'phorge(\d+)?',
 		],
 	],
 	'wgCreateWikiCannedResponses' => [
 		'default' => [
 			'Approval reasons' => [
-				'Perfect request' => 'Perfect. Clear purpose, scope, and topic. Please ensure your wiki complies with all aspects of the Content Policy and Code of Conduct at all times and that it does not deviate from the approved scope or else your wiki may be closed. Thank you for choosing Miraheze!',
-				'Good request' => 'Pretty good. Purpose and description are a bit vague, but there is nonetheless a clear enough purpose, scope, and/or topic here. Please ensure your wiki complies with all aspects of the Content Policy and Code of Conduct at all times and that it does not deviate from the approved scope or else your wiki will be closed. Thank you for choosing Miraheze!',
-				'Okay request' => 'Okay-ish. Description doesn\'t meet our requirements, but in this case the sitename, URL, and categorisation suggest this is a wiki that would follow the Content Policy made clear by the preceding fields, and it is conditionally approved as such. Please be advised that if your wiki deviates too much from this approval, remedial action can be taken by a Steward which includes wiki closure and potential revocation of wiki requesting privileges, if necessary. Please ensure your wiki complies with all aspects of Content Policy and Code of Conduct at all times. Thank you.',
-				'Categorised as private' => 'The purpose and scope of your wiki is clear enough. Please ensure your wiki complies with all aspects of the Content Policy and Code of Conduct at all times or it may be closed. Please also note that I have categorised your wiki as "Private". Thank you.',
+				'Perfect request' => 'Perfect. Clear purpose, scope, and topic. Please ensure your wiki complies with all aspects of the Content Policy at all times and that it does not deviate from the approved scope or else your wiki may be closed. Thank you for choosing Miraheze!',
+				'Good request' => 'Pretty good. Purpose and description are a bit vague, but there is nonetheless a clear enough purpose, scope, and/or topic here. Please ensure your wiki complies with all aspects of the Content Policy at all times and that it does not deviate from the approved scope or else your wiki will be closed. Thank you for choosing Miraheze!',
+				'Okay request' => 'Okay-ish. Description is somewhat vague, but the sitename, URL, and categorization suggest that this is a wiki that would follow the Content Policy made clear by the preceding fields, and it is conditionally approved as such. Please be advised that if your wiki deviates too much from this approval, remedial action can be taken by a Steward, up to and including wiki closure and potential revocation of wiki requesting privileges if necessary. Please ensure your wiki complies with all aspects of Content Policy at all times. Thank you.',
+				'Categorized as private' => 'The purpose and scope of your wiki is clear enough. Please ensure your wiki complies with all aspects of the Content Policy at all times or it may be closed. Please also note that I have categorized your wiki as "Private". Thank you.',
 			],
 			'Decline reasons' => [
-				'Needs more details' => 'Can you give us a few more details on the purpose for, scope of, and topic of your wiki, and briefly describe some of your wiki\'s content in approximately 2-3 sentences? Additionally can you elaborate on your wiki\'s scope and topical focus a bit further? A few sentences describing the scope of your wiki and the sort of content it will contain should be helpful. Please go back into your original request and add to, but do not replace, your existing description. Thank you.',
-				'Invalid or unclear subdomain' => 'The scope and purpose of the wiki seem clear enough. However, your requested subdomain is either invalid, is too generic, conveys a Miraheze affiliation, or suggests the wiki is an English language or multilingual wiki when it is not. Please change it to something that better reflects your wiki\'s purpose and scope. Thank you.',
-				'Invalid sitename/subdomain (obscene wording)' => 'The scope and purpose of the wiki seem clear enough. However, the requested wiki name or subdomain is in violation of our Content Policy which prohibits obscene wording in wiki names and subdomains. Please change it to something that is better. Thank you.',
-				'Use Public Test Wiki' => 'Please use Public Test Wiki, https://publictestwiki.com, to test the administrator and bureaucrat tools (as well as Miraheze since the wiki is hosted by us). You should review and follow all TestWiki:Policies, especially TestWiki:Testing policy and TestWiki:Main policy, reverting all tests you perform in the reverse order which you performed them. Request permissions at TestWiki:Request permissions. Thank you.',
-				'Database exists (wiki active)' => 'A wiki already exists at the selected subdomain. Please visit the local wiki and contribute there. Please reach out to any local bureaucrat to request any permissions if you require them. If bureaucrats are not active on the wiki after a reasonable period of time, please start a local election and ask a Steward to evaluate it on the Stewards\' noticeboard. Thanks.',
-				'Database exists (wiki closed)' => 'A wiki exists at the subdomain selected but is closed. Please visit the Requests for reopening wikis page to request to reopen the wiki or ask for help on Community noticeboard.',
-				'Database exists (wiki already deleted)' => 'A wiki exists at the selected subdomain but has been deleted in accordance with the Dormancy Policy. I will request a Steward undelete it for you. When it has been undeleted and reopened, please visit the local wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity; if you require a Dormancy Policy exemption, you should review the policy and request it once your wiki has at least 40-60 content pages. Thank you.',
-				'Database exists (wiki undeleted)' => 'The selected wiki database name already exists and the wiki was closed, however, the wiki has now been reopened. Please visit the wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity. Please reach out to any local bureaucrat to request any permissions if you require them. If bureaucrats are not active on the wiki after a reasonable period of time, please start a local election and ask a Steward to evaluate it on the Stewards\' noticeboard. Thank you.',
-				'Database exists (unrelated purpose)' => 'Wiki database name and subdomain already exist. The wiki does not however seem to have the same purpose as the one you are requesting here, so you will need to request a different subdomain.  Please update this request once you have selected a new subdomain to reopen it for consideration.',
-				'Duplicate request' => 'Declining as a duplicate request, which needs more information. Please do not edit this request and instead go back into your original request. Also, please do not submit duplicate requests. Thank you.',
-				'Excessive requests' => 'Declining as you have requested an excessive amount of wikis. Thank you for your understanding. If you believe you have legitimate need for this amount of wikis, please reply to this request with a 2-3 sentence reasoning on why you need the wikis.',
+				'Needs more details' => 'Can you give us more details on the purpose for, scope of, and topic of your wiki, ideally in at least 2-3 sentences? Please update your request via the "Edit request" tab and add to, but do not replace, your existing description. Thank you.',
+				'Invalid or unclear subdomain' => 'The scope and purpose of your wiki seem clear enough. However, the requested subdomain is either invalid, too generic, conveys a Miraheze affiliation, or suggests that the wiki is an English language or multilingual wiki when it is not. Please change it to something that better reflects your wiki\'s purpose and scope. Thank you.',
+				'Invalid sitename/subdomain (obscene wording)' => 'The scope and purpose of your wiki seem clear enough. However, the requested wiki name or subdomain is in violation of our Content Policy, which prohibits obscene wording in wiki names and subdomains. Please change it to something that is appropriate. Thank you.',
+				'Use Public Test Wiki' => 'Please use Public Test Wiki (https://publictestwiki.com) to test the administrator and bureaucrat tools, as well as Miraheze since the wiki is hosted by us. Please follow all local policies, reverting all tests you perform in the reverse order which you performed them. Local permissions can be requested at TestWiki:Request permissions. Thank you.',
+				'Database exists (wiki active)' => 'A wiki already exists at the selected subdomain. Please visit the local wiki and contribute there. Please reach out to any local bureaucrat to request any permissions if you require them; if bureaucrats are not active on the wiki after a reasonable period of time, please start a local election and ask a Steward to evaluate it at Steward requests. Thank you.',
+				'Database exists (wiki closed)' => 'A wiki already exists at the selected subdomain selected but is closed. Please visit the Requests for reopening wikis page to request to reopen the wiki or ask for help on the Community portal.',
+				'Database exists (wiki already deleted)' => 'A wiki already exists at the selected subdomain but has been deleted in accordance with the Dormancy Policy. I will request a Steward undelete it for you. When it has been undeleted and reopened, please visit the local wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity; if you require a Dormancy Policy exemption, you should review the policy and request it once your wiki has at least 40-60 content pages. Thank you.',
+				'Database exists (wiki undeleted)' => 'A wiki already exists at the selected subdomain; it was previously closed/deleted but has been reopened. Please visit the wiki and ensure you make at least one edit or log action every 45 days. Wikis are only deleted after 6 months of complete inactivity. Please reach out to any local bureaucrat to request any permissions if you require them. If bureaucrats are not active on the wiki after a reasonable period of time, please start a local election and ask a Steward to evaluate it at Steward requests. Thank you.',
+				'Database exists (unrelated purpose)' => 'A wiki already exists at the selected subdomain; however, the wiki does not seem to have the same purpose as the one you are requesting here, so you will need to request a different subdomain. Please update this request once you have selected a new subdomain to reopen it for consideration.',
+				'Duplicate request (not enough information)' => 'Declining as a duplicate request that needs more information. Please do not edit this request; instead, you should go back into your original request and refrain from submitting duplicate requests in the future. Thank you.',
+				'Duplicate request (already approved)' => 'Declining as a duplicate of a request that has already been approved. Any changes to your wiki should be made via ManageWiki locally or requested at Steward requests or Phabricator whenever unavailable via ManageWiki. Thank you.',
+				'Excessive requests' => 'Declining as you have requested an excessive amount of wikis. If you believe you have legitimate need for this amount of wikis, please reply to this request with a 2-3 sentence reasoning on why you need the wikis.',
 				'Vandal request' => 'Declining as this wiki request is product of either vandalism or trolling.',
 				'Content Policy (commercial activity)' => 'Declining per Content Policy provision, "The primary purpose of your wiki cannot be for commercial activity." Thank you for understanding. If in error, please edit this wiki request and articulate a clearer purpose and scope for your wiki that makes it clear how this wiki would not violate this criterion of Content Policy.',
 				'Content Policy (deceive, defraud or mislead)' => 'Declining per Content Policy provision, "Miraheze does not host wikis with the sole purpose of deceiving, defrauding, or misleading people." Thank you for your understanding.',
-				'Content Policy (duplicate/similar wiki)' => 'Your proposed wiki appears to duplicate, either substantially or entirely, the scope of an existing wiki, which is prohibited by the Content Policy. Could you please describe in a few more sentences by adding to, but not replacing, your existing description, the scope and focus for your wiki, and also assure us that your wiki will not be a complete or substantial duplication? If your wiki fouses on a subtopic of a bigger wiki, please clarify that. Thank you.',
+				'Content Policy (duplicate/similar wiki)' => 'Your proposed wiki appears to duplicate, either substantially or entirely, the scope of an existing wiki, which is prohibited by the Content Policy. Please contribute to the existing wiki instead; if you feel that this is in error, please describe in a few sentences how your wiki will not violate this policy. Thank you.',
 				'Content Policy (file sharing service)' => 'Declining per Content Policy provision, "Miraheze does not host wikis whose main purpose is to act as a file sharing service." Thank you for your understanding.',
 				'Content Policy (forks)' => 'Declining per Content Policy provision, "Direct forks of other Miraheze wikis where no attempts at mediations are made are not allowed." Thank you for your understanding.',
-				'Content Policy (illegal UK activity)' => 'Declining per Content Policy provision, "Miraheze does not host any content that is illegal in the United Kingdom." Thank you for understanding. If you believe this decline reason was used incorrectly, please address this with the declining wiki creator on their user talk page first before escalating your concern to the Stewards\' noticeboard. Thank you.',
-				'Content Policy (makes it difficult for other wikis)' => 'Declining per Content Policy provision, "A wiki must not create problems which make it difficult for other wikis." Thank you for understanding.',
-				'Content Policy (no anarchy wikis)' => 'Declining per Content Policy provision, "Miraheze does not host wikis that operate on the basis of an anarchy system (i.e. no leadership and no rules)." Thank you for understanding.',
+				'Content Policy (illegal US activity)' => 'Declining per Content Policy provision, "Miraheze does not host any content that is illegal in the United States." Thank you for understanding. If you believe this decline reason was used incorrectly, please address this with the declining wiki creator on their user talk page first before escalating your concern to Steward requests. Thank you.',
+				'Content Policy (makes it difficult for other wikis)' => 'Declining per Content Policy provision, "A wiki must not create problems which make it difficult for other wikis." Thank you for your understanding.',
+				'Content Policy (no anarchy wikis)' => 'Declining per Content Policy provision, "Miraheze does not host wikis that operate on the basis of an anarchy system (i.e. no leadership and no rules)." Thank you for your understanding.',
 				'Content Policy (sexual nature involving minors)' => 'Declining per Content Policy provision, "Miraheze does not host wikis of a sexual nature which involve minors in any way." Thank you for your understanding.',
 				'Content Policy (toxic communities)' => 'Declining per Content Policy provision, "Miraheze does not host wikis where the community has developed in such a way as to be characterised as toxic." Thank you for your understanding.',
-				'Content Policy (unsubstantiated insult)' => 'Declining per Content Policy provision, "Miraheze does not host wikis which spread unsubstantiated insult, hate or rumours against a person or group of people." Thank you for understanding.',
+				'Content Policy (unsubstantiated insult)' => 'Declining per Content Policy provision, "Miraheze does not host wikis which spread unsubstantiated insult, hate or rumours against a person or group of people." Thank you for your understanding.',
 				'Content Policy (violence, hatred or harrassment)' => 'Declining per Content Policy provision, "Miraheze does not host wikis that promote violence, hatred, or harassment against a person or group of people." Thank you for your understanding.',
 				'Content Policy (Wikimedia-like wikis/forks)' => 'Declining per Content Policy provision, "Direct forks and forks where a substantial amount of content is copied from a Wikimedia project are not allowed." Thank you for your understanding.',
-				'Reception wiki' => 'Declining per resolution of a Request for Comment, "No new reception wikis will be accepted on the platform." Thank you for your understanding.',
+				'Content Policy (Reception wiki)' => 'Declining per Content Policy provision, "Wikis should not be structured around bullet-point, good/bad commentary." Thank you for your understanding.',
+				/* 'Content Policy (additional restrictions)' => 'Declining per the Content Policy's additional restrictions, which includes the topic of your wiki. Thank you for your understanding.', */
 				'Author request' => 'Declined at the request of the wiki requester.',
 			],
 			'On hold reasons' => [
-				'On hold pending response' => 'On hold pending response from the wiki requester (see the "Request Comments" tab). Please reply to the questions left by the wiki creator on this request but do not create another wiki request. Thank you.',
-				'On hold pending review from another wiki creator' => 'On hold pending review from another Wiki creator or Steward.',
+				'On hold pending response' => 'On hold pending response from the wiki requester (see the "Request Comments" tab). Please reply to the questions left by the wiki creator on this request, but do not create another wiki request. Thank you.',
+				'On hold pending review from another wiki creator' => 'On hold pending review from another wiki creator or a Steward.',
 			],
 		],
 	],
@@ -909,7 +917,7 @@ $wgConf->settings += [
 			'c4',
 		],
 		'mirabeta' => [
-			'c4',
+			'c2',
 		],
 	],
 	// Use if you want to stop wikis being created on this cluster
@@ -929,6 +937,15 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiEnableManageInactiveWikis' => [
 		'default' => true,
+	],
+	'wgCreateWikiInactiveExemptReasonOptions' => [
+		'default' => [
+			'Wiki completed and made to be read' => 'comp',
+			'Wiki made for time-based gathering' => 'tbg',
+			'Wiki made to be read' => 'mtr',
+			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
+			'Other, see DPE' => 'other',
+		],
 	],
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'sre@miraheze.org',
@@ -973,10 +990,10 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiStateDays' => [
 		'default' => [
-			'inactive' => 45,
-			'closed' => 15,
-			'removed' => 120,
-			'deleted' => 14
+			'inactive' => 60,
+			'closed' => 60,
+			'removed' => 245,
+			'deleted' => 31
 		],
 	],
 	'wgCreateWikiCacheDirectory' => [
@@ -1055,7 +1072,11 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
-		'mirabeta' => false,
+		'metawikibeta' => false,
+	],
+
+	'wgRequestWikiMinimumLength' => [
+		'default' => 250,
 	],
 
 	// CookieWarning
@@ -1541,7 +1562,7 @@ $wgConf->settings += [
 		'hsckwiki' => [
 			'poweredby' => [
 				'songnguxyz' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 				],
@@ -1555,7 +1576,7 @@ $wgConf->settings += [
 		'lhmnwiki' => [
 			'poweredby' => [
 				'songnguxyz' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 				],
@@ -1565,21 +1586,7 @@ $wgConf->settings += [
 					'alt' => 'Hosted by Miraheze',
 				],
 			],
-		],
-		'snxyzincubatorwiki' => [
-			'poweredby' => [
-				'songnguxyz' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
-					'url' => 'https://songngu.xyz',
-					'alt' => 'This project is a part of SongNgu.xyz',
-				],
-				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze',
-				],
-			],
-		],
+		]
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
@@ -1663,34 +1670,6 @@ $wgConf->settings += [
 			'bomb hoax',
 		],
 	],
-	// Only the board and SRE are allowed access
-	// DO NOT ADD UNAUTHORISED USERS
-	'wgMirahezeStaffAccessIds' => [
-		'default' => [
-			/** Reception123 (SRE and Board) */
-			19,
-			/** Void (SRE) */
-			5258,
-			/** Paladox (SRE) */
-			13554,
-			/** Owen (SRE and Board) */
-			73651,
-			/** MacFan4000 (SRE) */
-			6758,
-			/** Universal Omega (SRE and Board) */
-			438966,
-			/** Agent Isai (SRE and Board) */
-			2639,
-			/** HareJ (Board) */
-			13892,
-			/** NotAracham (Board) */
-			345529,
-			/** Labster (Board) */
-			2551,
-			/** Original Authority (SRE) */
-			353865,
-		],
-	],
 	'wgMirahezeSurveyEnabled' => [
 		'default' => false,
 	],
@@ -1720,6 +1699,28 @@ $wgConf->settings += [
 	],
 	'wgUploadNavigationUrl' => [
 		'default' => false,
+	],
+
+	// Gallery Options
+	'wgGalleryOptions' => [
+		'default' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'traditional',
+		],
+		'dccomicswiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'packed',
+		],
 	],
 
 	// GeoData
@@ -1758,7 +1759,7 @@ $wgConf->settings += [
 	// GlobalBlocking
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
-		'metawiki' => false,
+		// 'metawiki' => false,
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal',
@@ -1996,7 +1997,7 @@ $wgConf->settings += [
 			'NFS' => 'https://meta.miraheze.org/wiki/Tech:NFS',
 			'NGINX' => 'https://meta.miraheze.org/wiki/Tech:Nginx',
 			'Parsoid' => 'https://meta.miraheze.org/wiki/Tech:Parsoid',
-			'Phabricator' => 'https://meta.miraheze.org/wiki/Tech:Phabricator',
+			'Phorge' => 'https://meta.miraheze.org/wiki/Tech:Phorge',
 			'Puppet Server' => 'https://meta.miraheze.org/wiki/Tech:Puppet',
 			'Redis' => 'https://meta.miraheze.org/wiki/Tech:Redis',
 			'Salt' => 'https://meta.miraheze.org/wiki/Tech:Salt',
@@ -2006,7 +2007,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgIncidentReportingTaskUrl' => [
-		'default' => 'https://phabricator.miraheze.org/',
+		'default' => 'https://issue-tracker.miraheze.org/',
 	],
 
 	// Interwiki
@@ -2120,19 +2121,34 @@ $wgConf->settings += [
 		'default' => 'metawiki',
 		'mirabeta' => 'metawikibeta',
 	],
+	'wgImportDumpEnableAutomatedJob' => [
+		'default' => true,
+	],
 	'wgImportDumpInterwikiMap' => [
 		'default' => [
 			'fandom.com' => 'wikia',
 			'miraheze.org' => 'mh',
+			// 'wikitide.org' => 'wt',
 		],
 	],
 	'wgImportDumpScriptCommand' => [
-		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
-		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file} -o /home/$USER/{file}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file}"',
+		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file-name}"',
+		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file-name}"',
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'Agent Isai',
+			'Alex (Miraheze)',
+			'MacFan4000',
+			'Original Authority',
+			'Reception123',
+			'Universal Omega',
+		],
+	],
+	'wgImportDumpUsersNotifiedOnFailedImports' => [
+		'default' => [
+			'Agent Isai',
+			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
 			'Reception123',
@@ -2391,117 +2407,117 @@ $wgConf->settings += [
 	],
 	'wgLDAPServerNames' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ldap.miraheze.org',
+			'wikitide' => 'ldap.wikitide.net',
 		],
 		'srewiki' => [
-			'miraheze' => 'ldap.miraheze.org',
+			'wikitide' => 'ldap.wikitide.net',
 		],
 	],
 	'wgLDAPEncryptionType' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ssl',
+			'wikitide' => 'ssl',
 		],
 		'srewiki' => [
-			'miraheze' => 'ssl',
+			'wikitide' => 'ssl',
 		],
 	],
 	'wgLDAPSearchAttributes' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'uid',
+			'wikitide' => 'uid',
 		],
 		'srewiki' => [
-			'miraheze' => 'uid',
+			'wikitide' => 'uid',
 		],
 	],
 	'wgLDAPBaseDNs' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'dc=miraheze,dc=org',
+			'wikitide' => 'dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'dc=miraheze,dc=org',
+			'wikitide' => 'dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPUserBaseDNs' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPProxyAgent' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPProxyAgentPassword' => [
 		'ldapwikiwiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 		'srewiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 	],
 	'wgLDAPWriterDN' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'cn=write-user,dc=miraheze,dc=org',
+			'wikitide' => 'cn=write-user,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPWriterPassword' => [
 		'ldapwikiwiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 		'srewiki' => [
-			'miraheze' => $wmgLdapPassword,
+			'wikitide' => $wmgLdapPassword,
 		],
 	],
 	'wgLDAPWriteLocation' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 		'srewiki' => [
-			'miraheze' => 'ou=people,dc=miraheze,dc=org',
+			'wikitide' => 'ou=people,dc=miraheze,dc=org',
 		],
 	],
 	'wgLDAPAddLDAPUsers' => [
 		'ldapwikiwiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 		'srewiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 	],
 	'wgLDAPUpdateLDAP' => [
 		'ldapwikiwiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 		'srewiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 	],
 	'wgLDAPPasswordHash' => [
 		'ldapwikiwiki' => [
-			'miraheze' => 'ssha',
+			'wikitide' => 'ssha',
 		],
 		'srewiki' => [
-			'miraheze' => 'ssha',
+			'wikitide' => 'ssha',
 		],
 	],
 	'wgLDAPPreferences' => [
 		'ldapwikiwiki' => [
-			'miraheze' => [
+			'wikitide' => [
 				'email' => 'mail',
 				'realname' => 'givenName',
 			],
 		],
 		'srewiki' => [
-			'miraheze' => [
+			'wikitide' => [
 				'email' => 'mail',
 				'realname' => 'givenName',
 			],
@@ -2509,41 +2525,41 @@ $wgConf->settings += [
 	],
 	'wgLDAPUseFetchedUsername' => [
 		'ldapwikiwiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 		'srewiki' => [
-			'miraheze' => true,
+			'wikitide' => true,
 		],
 	],
 	'wgLDAPLowerCaseUsernameScheme' => [
 		'ldapwikiwiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 		'srewiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 	],
 	'wgLDAPLowerCaseUsername' => [
 		'ldapwikiwiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 		'srewiki' => [
-			'miraheze' => false,
+			'wikitide' => false,
 			'invaliddomain' => false,
 		],
 	],
 	'wgLDAPOptions' => [
 		'ldapwikiwiki' => [
-			'miraheze' => [
-				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
+			'wikitide' => [
+				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/LetsEncrypt.crt',
 			],
 		],
 		'srewiki' => [
-			'miraheze' => [
-				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/Sectigo.crt',
+			'wikitide' => [
+				'LDAP_OPT_X_TLS_CACERTFILE' => '/etc/ssl/certs/LetsEncrypt.crt',
 			],
 		],
 	],
@@ -2721,6 +2737,7 @@ $wgConf->settings += [
 	'wgSMTP' => [
 		'default' => [
 			'host' => 'ssl://smtp-relay.gmail.com',
+			'localhost' => '::1',
 			'port' => 465,
 			'IDHost' => 'miraheze.org',
 			'auth' => false,
@@ -2784,8 +2801,11 @@ $wgConf->settings += [
 			],
 		],
 		'metawiki' => [
-			'sysadmin' => [
-				'sysadmin',
+			'sre' => [
+				'sre',
+			],
+			'trustandsafety' => [
+				'trustandsafety',
 			],
 		],
 	],
@@ -2807,9 +2827,6 @@ $wgConf->settings += [
 				'checkuser-log' => true,
 				'abusefilter-privatedetails' => true,
 				'abusefilter-privatedetails-log' => true,
-			],
-			'interwiki-admin' => [
-				'interwiki' => true
 			],
 			'suppress' => [
 				'abusefilter-hidden-log' => true,
@@ -2958,9 +2975,19 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
+			'checkuser' => [
+				'abusefilter-privatedetails' => true,
+				'abusefilter-privatedetails-log' => true,
+				'checkuser' => true,
+				'checkuser-log' => true,
+				'securepoll-view-voter-pii' => true,
+			],
 			'confirmed' => [
 				'mwoauthproposeconsumer' => true,
 				'mwoauthupdateownconsumer' => true,
+			],
+			'electionadmin' => [
+				'securepoll-create-poll' => true,
 			],
 			'global-renamer' => [
 				'centralauth-rename' => true,
@@ -2974,9 +3001,6 @@ $wgConf->settings += [
 				'globalblock' => true,
 				'centralauth-lock' => true,
 			],
-			'requestwikiblocked' => [
-				'read' => true,
-			],
 			'steward' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -2985,6 +3009,8 @@ $wgConf->settings += [
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
 				'globalblock' => true,
+				'handle-import-request-interwiki' => true,
+				'handle-import-requests' => true,
 				'managewiki-core' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
@@ -2997,16 +3023,17 @@ $wgConf->settings += [
 				'userrights-interwiki' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
+				'view-private-import-requests' => true,
 			],
-			'sysadmin' => [
+			'sre' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
-				'handle-import-dump-interwiki' => true,
-				'handle-import-dump-requests' => true,
+				'handle-import-request-interwiki' => true,
+				'handle-import-requests' => true,
 				'handle-ssl-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
-				'view-private-import-dump-requests' => true,
+				'view-private-import-requests' => true,
 				'view-private-ssl-requests' => true,
 			],
 			'trustandsafety' => [
@@ -3020,13 +3047,13 @@ $wgConf->settings += [
 				'handle-pii' => true,
 				'oathauth-disable-for-user' => true,
 				'oathauth-verify-user' => true,
-				'view-private-import-dump-requests' => true,
+				'view-private-import-requests' => true,
 			],
 			'sysop' => [
 				'interwiki' => true,
 			],
 			'user' => [
-				'request-import-dump' => true,
+				'request-import' => true,
 				'request-ssl' => true,
 				'requestwiki' => true,
 			],
@@ -3065,7 +3092,9 @@ $wgConf->settings += [
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
 				'globalblock' => true,
-				'managewiki-core',
+				'handle-import-request-interwiki' => true,
+				'handle-import-requests' => true,
+				'managewiki-core' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
 				'managewiki-permissions' => true,
@@ -3076,15 +3105,16 @@ $wgConf->settings += [
 				'userrights-interwiki' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
+				'view-private-import-requests' => true,
 			],
-			'sysadmin' => [
+			'sre' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
-				'handle-import-dump-interwiki' => true,
-				'handle-import-dump-requests' => true,
+				'handle-import-request-interwiki' => true,
+				'handle-import-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
-				'view-private-import-dump-requests' => true,
+				'view-private-import-requests' => true,
 			],
 			'trustandsafety' => [
 				'userrights' => true,
@@ -3097,10 +3127,10 @@ $wgConf->settings += [
 				'handle-pii' => true,
 				'oathauth-disable-for-user' => true,
 				'oathauth-verify-user' => true,
-				'view-private-import-dump-requests' => true,
+				'view-private-import-requests' => true,
 			],
 			'user' => [
-				'request-import-dump' => true,
+				'request-import' => true,
 				'request-ssl' => true,
 				'requestwiki' => true,
 			],
@@ -3201,8 +3231,11 @@ $wgConf->settings += [
 			],
 		],
 		'metawiki' => [
-			'sysadmin' => [
-				'sysadmin',
+			'sre' => [
+				'sre',
+			],
+			'trustandsafety' => [
+				'trustandsafety',
 			],
 		],
 	],
@@ -3235,11 +3268,10 @@ $wgConf->settings += [
 				'globalblock-exempt',
 				'globalgroupmembership',
 				'globalgrouppermissions',
-				'handle-import-dump-interwiki',
-				'handle-import-dump-requests',
+				'handle-import-request-interwiki',
+				'handle-import-requests',
 				'handle-pii',
 				'hideuser',
-				'interwiki',
 				'investigate',
 				'ipinfo',
 				'ipinfo-view-basic',
@@ -3260,9 +3292,10 @@ $wgConf->settings += [
 				'oathauth-view-log',
 				'renameuser',
 				'reportincident',
-				'request-import-dump',
+				'request-import',
 				'requestwiki',
 				'siteadmin',
+				'securepoll-view-voter-pii',
 				'smw-admin',
 				'smw-patternedit',
 				'smw-viewjobqueuewatchlist',
@@ -3274,7 +3307,7 @@ $wgConf->settings += [
 				'updatepoints',
 				'userrights',
 				'userrights-interwiki',
-				'view-private-import-dump-requests',
+				'view-private-import-requests',
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
@@ -3291,6 +3324,7 @@ $wgConf->settings += [
 				'managewiki-settings',
 				'globalblock-whitelist',
 				'ipblock-exempt',
+				'interwiki',
 			],
 			'*' => [
 				'read',
@@ -3308,6 +3342,7 @@ $wgConf->settings += [
 				'editmyprivateinfo',
 				'editmywatchlist',
 				'globalblock-whitelist',
+				'interwiki',
 				'ipblock-exempt',
 				'viewmyprivateinfo',
 				'viewmywatchlist',
@@ -3330,8 +3365,11 @@ $wgConf->settings += [
 			'staff',
 			'suppress',
 			'interwiki-admin',
-			'sysadmin',
+			'sre',
 			'trustandsafety',
+		],
+		'+metawiki' => [
+			'electionadmin',
 		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
@@ -3349,7 +3387,7 @@ $wgConf->settings += [
 		'ext-Maps' => 'leaflet',
 	],
 	'egMapsDisableSmwIntegration' => [
-		'ext-Maps' => true,
+		'ext-Maps' => false,
 	],
 
 	// MassMessage
@@ -3532,6 +3570,76 @@ $wgConf->settings += [
 		],
 	],
 
+	// MirahezeMagic
+	'wgMirahezeMagicAccessIdsMap' => [
+		'default' => [
+			// Only the board are allowed access
+			// DO NOT ADD UNAUTHORIZED USERS
+			'iowiki' => [
+				/** Reception123 */
+				19,
+				/** Universal Omega */
+				438966,
+				/** Agent Isai */
+				2639,
+				/** HareJ */
+				13892,
+				/** NotAracham */
+				345529,
+				/** Labster */
+				2551,
+			],
+			// Only the board and SRE allowed access
+			// DO NOT ADD UNAUTHORIZED USERS
+			'staffwiki' => [
+				/** Reception123 (SRE and Board) */
+				19,
+				/** Void (SRE) */
+				5258,
+				/** MacFan4000 (SRE) */
+				6758,
+				/** Universal Omega (SRE and Board) */
+				438966,
+				/** Agent Isai (SRE and Board) */
+				2639,
+				/** HareJ (Board) */
+				13892,
+				/** NotAracham (Board) */
+				345529,
+				/** Labster (Board) */
+				2551,
+				/** Original Authority (SRE) */
+				353865,
+				/** Alex (Miraheze) — OrangeStar (SRE) */
+				464360,
+			],
+			// Only the board and SRE allowed access
+			// DO NOT ADD UNAUTHORIZED USERS
+			'srewiki' => [
+				/** Reception123 (SRE and Board) */
+				19,
+				/** Void (SRE) */
+				5258,
+				/** MacFan4000 (SRE) */
+				6758,
+				/** Universal Omega (SRE and Board) */
+				438966,
+				/** Agent Isai (SRE and Board) */
+				2639,
+				/** HareJ (Board) */
+				13892,
+				/** NotAracham (Board) */
+				345529,
+				/** Labster (Board) */
+				2551,
+				/** Original Authority (SRE) */
+				353865,
+				/** Alex (Miraheze) — OrangeStar (SRE) */
+				464360,
+			],
+		],
+	],
+
 	// Miscellaneous
 	'wgAllowDisplayTitle' => [
 		'default' => true,
@@ -3644,6 +3752,7 @@ $wgConf->settings += [
 	],
 	'wgWhitelistReadRegexp' => [
 		'default' => [],
+		'kanrikyarawiki' => [ "#(?!(?:Draft(?: talk)?:|Notes(?: talk)?:|User(?: talk)?:[^/]+/sandbox/))^#" ]
 	],
 	'wgDisabledVariants' => [
 		'default' => [],
@@ -3942,6 +4051,7 @@ $wgConf->settings += [
 			'globalblock',
 			'globalgrouppermissions',
 			'globalgroupmembership',
+			'securepoll-view-voter-pii',
 			'suppressionlog',
 			'suppressrevision',
 			'userrights',
@@ -3962,16 +4072,17 @@ $wgConf->settings += [
 			'user',
 		],
 		'+metawiki' => [
+			'electionadmin',
 			'global-sysop',
 			'interface-admin',
-			'sysadmin',
+			'sre',
 			'trustandsafety'
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
 			'global-sysop',
 			'interface-admin',
-			'sysadmin',
+			'sre',
 			'trustandsafety'
 		],
 	],
@@ -4096,6 +4207,13 @@ $wgConf->settings += [
 	],
 	'+wgRevokePermissions' => [
 		'default' => [],
+		'+cookbookwiki' => [
+			'users_blocked_from_commenting' => [
+				'comment' => true,
+				'commentlinks' => true,
+				'comment-delete-own' => true,
+			],
+		],
 		'+metawiki' => [
 			'requestwikiblocked' => [
 				'requestwiki' => true,
@@ -4168,14 +4286,6 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
-			'global-interwiki-admin' => [
-				'MinimalPasswordLength' => [ 'value' => 8, 'suggestChangeOnLogin' => true ],
-				'MinimumPasswordLengthToLogin' => [ 'value' => 6, 'suggestChangeOnLogin' => true ],
-				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
-				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
-			],
 			'global-sysop' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
@@ -4192,7 +4302,7 @@ $wgConf->settings += [
 				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 			],
-			'sysadmin' => [
+			'sre' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
@@ -4548,6 +4658,7 @@ $wgConf->settings += [
 			'MacFan4000',
 			'Original Authority',
 			'Reception123',
+			'Universal Omega',
 		],
 	],
 
@@ -4626,10 +4737,6 @@ $wgConf->settings += [
 		],
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
-		],
-		'+lhmnwiki' => [
-			'editqualityarticles',
-			'editextendedconfirmedprotected',
 		],
 		'+memeswiki' => [
 			'editextendedconfirmedprotected',
@@ -4758,10 +4865,6 @@ $wgConf->settings += [
 		'knightnwiki' => [
 			'editextendedsemiprotected',
 		],
-		'lhmnwiki' => [
-			'editqualityarticles',
-			'editextendedconfirmedprotected',
-		],
 		'memeswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -4874,6 +4977,10 @@ $wgConf->settings += [
 	],
 
 	// RSS Settings
+	'wgRSSAllowImageTag' => [
+		'default' => false,
+		'jwmeetingwiki' => true,
+	],
 	'wgRSSCacheAge' => [
 		'default' => 3600,
 	],
@@ -4881,7 +4988,7 @@ $wgConf->settings += [
 		'default' => 'http://bastion.wikitide.net:8080',
 	],
 	'wgRSSDateDefaultFormat' => [
-		'default' => 'Y-m-d H:i:s'
+		'default' => 'Y-m-d H:i:s',
 	],
 	'wgRSSUrlWhitelist' => [
 		'ext-RSSfeed' => [
@@ -4914,6 +5021,14 @@ $wgConf->settings += [
 	],
 	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
+	],
+
+	// SecurePoll
+	'wgSecurePollUseLogging' => [
+		'default' => true,
+	],
+	'wgSecurePollUseNamespace' => [
+		'default' => true,
 	],
 
 	// Server
@@ -5128,14 +5243,17 @@ $wgConf->settings += [
 			'audio' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
+				'<^(?:https:)?//static\\.wikitide\\.net/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
+				'<^(?:https:)?//static\\.wikitide\\.net/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//static\\.wikitide\\.net/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
@@ -5318,6 +5436,11 @@ $wgConf->settings += [
 		'default' => false
 	],
 
+	// UnlinkedWikibase
+	'wgUnlinkedWikibaseStatementsParserFunc' => [
+		'default' => false,
+	],
+
 	// Tweeki
 	'wgTweekiSkinUseBootstrap4' => [
 		'default' => false,
@@ -5388,12 +5511,16 @@ $wgConf->settings += [
 	],
 
 	// UrlShortener
-	'wgUrlShortenerTemplate' => [
-		'default' => '/m/$1',
-	],
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
 		'mirabeta' => 'metawikibeta',
+	],
+	'wgUrlShortenerServer' => [
+		'metawiki' => 'wiki.surf',
+	],
+	'wgUrlShortenerTemplate' => [
+		'default' => '/m/$1',
+		'metawiki' => '/$1',
 	],
 
 	// UserFunctions
@@ -6086,6 +6213,9 @@ $wgConf->settings += [
 	'cwClosed' => [
 		'default' => false,
 	],
+	'cwDeleted' => [
+		'default' => false,
+	],
 	'cwExperimental' => [
 		'default' => false,
 	],
@@ -6121,8 +6251,7 @@ $wgConf->settings += [
 			'api' => 'warning',
 			'api-feature-usage' => false,
 			'api-readonly' => false,
-			// When using this, use buffer.
-			'api-request' => [ 'graylog' => 'debug', 'buffer' => true ],
+			'api-request' => [ 'graylog' => 'debug', 'eventbus' => 'debug', 'buffer' => true ],
 			'api-warning' => false,
 			'authentication' => 'info',
 			'authevents' => 'info',
@@ -6130,7 +6259,7 @@ $wgConf->settings += [
 			'BlockManager' => false,
 			'BlogPage' => false,
 			'BounceHandler' => false,
-			'cache-cookies' => false,
+			'cache-cookies' => 'debug',
 			'caches' => false,
 			'captcha' => 'debug',
 			'cargo' => false,
@@ -6138,6 +6267,11 @@ $wgConf->settings += [
 			'CentralAuthRename' => false,
 			'CentralAuthVerbose' => false,
 			'CentralNotice' => false,
+			'CirrusSearch' => 'debug',
+			'CirrusSearchDeprecation' => 'debug',
+			'cirrussearch-request' => [ 'graylog' => false, 'eventbus' => 'debug', 'buffer' => true ],
+			'CirrusSearchChangeFailed' => 'debug',
+			'CirrusSearchSlowRequests' => 'debug',
 			'cite' => false,
 			'ContentHandler' => false,
 			'CookieWarning' => false,
@@ -6146,7 +6280,7 @@ $wgConf->settings += [
 			'rdbms' => 'warning',
 			'DeferredUpdates' => 'error',
 			'DBConnection' => 'warning',
-			'DBPerformance' => false,
+			'DBPerformance' => 'debug',
 			'DBQuery' => false,
 			'DBReplication' => false,
 			'DBTransaction' => false,
@@ -6160,8 +6294,8 @@ $wgConf->settings += [
 			'EditConstraintRunner' => 'error',
 			'error' => 'debug',
 			'error-json' => false,
-			'EventLogging' => false,
-			'EventStreamConfig' => false,
+			'EventBus' => [ 'graylog' => 'error' ],
+			'EventLogging' => 'debug',
 			'exception' => 'debug',
 			'exception-json' => false,
 			'exec' => 'debug',
@@ -6181,8 +6315,7 @@ $wgConf->settings += [
 			'HitCounters' => false,
 			// Only log http errors with a 500+ code
 			'HttpError' => 'error',
-			// 'JobExecutor' => [ 'logstash' => 'warning' ],
-			'JobQueueRedis' => 'debug',
+			'JobExecutor' => [ 'graylog' => 'warning' ],
 			'localisation' => false,
 			'ldap' => 'warning',
 			'LinkBatch' => false,
@@ -6226,7 +6359,7 @@ $wgConf->settings += [
 			'redis' => 'info',
 			'Renameuser' => 'debug',
 			'resourceloader' => false,
-			'ResourceLoaderImage' => false,
+			'ResourceLoaderImage' => 'debug',
 			'RevisionStore' => false,
 			'runJobs' => 'warning',
 			'SaveParse' => false,
@@ -6298,6 +6431,8 @@ $wi::$disabledExtensions = [
 	'graph',
 	// T11641
 	'pageproperties',
+	// T11970
+	'drafts',
 	// Broken, once again...
 	'lingo',
 ];
@@ -6315,14 +6450,12 @@ require_once __DIR__ . '/ManageWikiSettings.php';
 $wgUploadPath = "//$wmgUploadHostname/$wgDBname";
 $wgUploadDirectory = false;
 
-if ( $wi->version >= 1.40 ) {
-	// These are not loaded by mergeMessageFileList.php on MediaWiki 1.40+ due to not being on ExtensionRegistry
-	$wgMessagesDirs['SocialProfile'] = $IP . '/extensions/SocialProfile/i18n';
-	$wgExtensionMessagesFiles['SocialProfileAlias'] = $IP . '/extensions/SocialProfile/SocialProfile.alias.php';
-	$wgMessagesDirs['SocialProfileUserProfile'] = $IP . '/extensions/SocialProfile/UserProfile/i18n';
-	$wgExtensionMessagesFiles['SocialProfileNamespaces'] = $IP . '/extensions/SocialProfile/SocialProfile.namespaces.php';
-	$wgExtensionMessagesFiles['AvatarMagic'] = $IP . '/extensions/SocialProfile/UserProfile/includes/avatar/Avatar.i18n.magic.php';
-}
+// These are not loaded by mergeMessageFileList.php due to not being on ExtensionRegistry
+$wgMessagesDirs['SocialProfile'] = $IP . '/extensions/SocialProfile/i18n';
+$wgExtensionMessagesFiles['SocialProfileAlias'] = $IP . '/extensions/SocialProfile/SocialProfile.alias.php';
+$wgMessagesDirs['SocialProfileUserProfile'] = $IP . '/extensions/SocialProfile/UserProfile/i18n';
+$wgExtensionMessagesFiles['SocialProfileNamespaces'] = $IP . '/extensions/SocialProfile/SocialProfile.namespaces.php';
+$wgExtensionMessagesFiles['AvatarMagic'] = $IP . '/extensions/SocialProfile/UserProfile/includes/avatar/Avatar.i18n.magic.php';
 
 $wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/' . $wi->version . '/l10n';
@@ -6346,6 +6479,8 @@ if ( $wgRequestTimeLimit ) {
 
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
+require_once '/srv/mediawiki/config/EventBus.php';
+require_once '/srv/mediawiki/config/EventStreamConfig.php';
 require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
@@ -6356,6 +6491,14 @@ if ( $wi->missing ) {
 }
 
 if ( $cwDeleted ) {
+	if ( MW_ENTRY_POINT === 'cli' ) {
+		wfHandleDeletedWiki();
+	} else {
+		define( 'MW_FINAL_SETUP_CALLBACK', 'wfHandleDeletedWiki' );
+	}
+}
+
+function wfHandleDeletedWiki() {
 	require_once '/srv/mediawiki/ErrorPages/DeletedWiki.php';
 }
 

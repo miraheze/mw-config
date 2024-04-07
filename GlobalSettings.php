@@ -1,5 +1,11 @@
 <?php
 
+use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
+use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
+use MediaWiki\Html\Html;
+use MediaWiki\SpecialPage\SpecialPage;
+use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
+
 $wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
@@ -32,8 +38,8 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
-	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
-		$wgAuthManagerAutoConfig['primaryauth'][\MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
+	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
+		$wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
 	}
 
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
@@ -148,10 +154,60 @@ $wgDiscordNotificationWikiUrlEndingEditArticle = '?action=edit';
 $wgDiscordNotificationWikiUrlEndingHistory = '?action=history';
 $wgDiscordNotificationWikiUrlEndingUserRights = 'Special:UserRights?user=';
 
-// Don't need a global here
-unset( $articlePath );
+/** TODO:
+ * Add to ManageWiki (core)
+ * Add rewrites to decode.php and index.php
+ */
+$wgActionPaths['view'] = $wgArticlePath;
 
-$wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
+// ?action=raw is not supported by this
+// according to documentation
+$actions = [
+	'delete',
+	'edit',
+	'history',
+	'info',
+	'markpatrolled',
+	'protect',
+	'purge',
+	'render',
+	'revert',
+	'rollback',
+	'submit',
+	'unprotect',
+	'unwatch',
+	'watch',
+];
+
+foreach ( $actions as $action ) {
+	$wgActionPaths[$action] = $wgArticlePath . '?action=' . $action;
+}
+
+if ( ( $wgMirahezeActionPathsFormat ?? 'default' ) !== 'default' ) {
+	switch ( $wgMirahezeActionPathsFormat ) {
+		case 'specialpages':
+			$wgActionPaths['edit'] = $articlePath . 'Special:EditPage/$1';
+			$wgActionPaths['submit'] = $wgActionPaths['edit'];
+			$wgActionPaths['delete'] = $articlePath . 'Special:DeletePage/$1';
+			$wgActionPaths['protect'] = $articlePath . 'Special:ProtectPage/$1';
+			$wgActionPaths['unprotect'] = $wgActionPaths['protect'];
+			$wgActionPaths['history'] = $articlePath . 'Special:PageHistory/$1';
+			$wgActionPaths['info'] = $articlePath . 'Special:PageInfo/$1';
+			break;
+		case '$1/action':
+		case 'action/$1':
+			foreach ( $actions as $action ) {
+				$wgActionPaths[$action] = $articlePath . str_replace( 'action', $action, $wgMirahezeActionPathsFormat );
+			}
+
+			break;
+	}
+}
+
+// Don't need globals here
+unset( $actions, $articlePath );
+
+$wgAllowedCorsHeaders[] = 'X-WikiTide-Debug';
 
 // Closed Wikis
 if ( $cwClosed ) {
@@ -192,12 +248,21 @@ if ( !$cwPrivate ) {
 if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.miraheze.org';
 	$wgMFStopRedirectCookieHost = '.miraheze.org';
+} elseif ( preg_match( '/wikitide\.org$/', $wi->server ) ) {
+	$wgCentralAuthCookieDomain = '.wikitide.org';
+	$wgMFStopRedirectCookieHost = '.wikitide.org';
 } elseif ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
 	$wgCentralAuthCookieDomain = '.mirabeta.org';
 	$wgMFStopRedirectCookieHost = '.mirabeta.org';
 } else {
-	$wgCentralAuthCookieDomain = $wi->hostname;
-	$wgMFStopRedirectCookieHost = $wi->hostname;
+	$wgCentralAuthCookieDomain = '';
+	if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
+		$parsedUrl = wfParseUrl( $wi->server );
+		$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
+
+		// Don't need a global here
+		unset( $parsedUrl );
+	}
 }
 
 // DataDump
@@ -452,19 +517,20 @@ if ( $wgWordmark ) {
 // $wgUrlShortenerAllowedDomains
 $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?miraheze\.org',
+	'(.*\.)?wikitide\.org',
 ];
 
-if ( preg_match( '/^(.*).mirabeta.org$/', $wi->hostname ) ) {
+if ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?mirabeta\.org',
 	];
 	$wgParserMigrationEnableQueryString = true;
 }
 
-if ( !preg_match( '/^(.*).(miraheze|mirabeta).org$/', $wi->hostname ) ) {
+if ( !preg_match( '/(miraheze|mirabeta|wikitide)\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = array_merge(
 		$wgUrlShortenerAllowedDomains,
-		[ preg_quote( str_replace( 'https://', '', $wgServer ) ) ]
+		[ preg_quote( str_replace( 'https://', '', $wi->server ) ) ]
 	);
 }
 
@@ -621,7 +687,7 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 $wgJobRunRate = 0;
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 50;
-$wgSVGConverters['rsvg'] = '$path/mediawiki-firejail-rsvg-convert -w $width -h $height -o $output $input';
+$wgSVGConverters['rsvg'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 
 // We need all thumbs to be regenerated
 $wgThumbnailEpoch = 20230715011058;
@@ -630,9 +696,6 @@ $wgThumbnailEpoch = 20230715011058;
 /** 50MB */
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
-
-// Can be removed on 1.40+ (https://phabricator.wikimedia.org/T326147)
-$wgMFStripResponsiveImages = false;
 
 // For Scribunto / wgCodeEditorEnableCore
 $wgULSNoImeSelectors[] = '.ace_editor textarea';
@@ -701,7 +764,7 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.17.120:7531' ],
+	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
@@ -712,9 +775,4 @@ $wgMathMathMLUrl = 'http://10.0.18.106:10044/';
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
 $wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
-$wgCaptchaStorageClass = MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore::class;
-
-if ( getenv( 'JOBRUNNER_RUN' ) ) {
-	// fatals but not random I/O warnings
-	error_reporting( E_ERROR );
-}
+$wgCaptchaStorageClass = CaptchaCacheStore::class;

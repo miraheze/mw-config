@@ -80,6 +80,8 @@ $wgSessionCacheType = 'redis-session';
 $wgCentralAuthSessionCacheType = 'redis-session';
 $wgEchoSeenTimeCacheType = 'redis-session';
 
+$wgCreateWikiCacheType = 'redis-session';
+
 $wgSessionName = $wgDBname . 'Session';
 
 // Same as $wgMainStash
@@ -137,24 +139,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-$redisServerIP = $beta ?
-	'10.0.15.118:6379' :
-	'10.0.17.120:6379';
-
-$wgJobTypeConf['default'] = [
-	'class' => JobQueueRedis::class,
-	'redisServer' => $redisServerIP,
-	'redisConfig' => [
-		'connectTimeout' => 2,
-		'password' => $wmgRedisPassword,
-		'compression' => 'gzip',
-	],
-	'daemonized' => true,
-];
-
 if ( PHP_SAPI === 'cli' ) {
 	// APC not available in CLI mode
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
-
-unset( $redisServerIP );

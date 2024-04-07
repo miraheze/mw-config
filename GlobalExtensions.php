@@ -14,10 +14,12 @@ wfLoadExtensions( [
 	'DiscordNotifications',
 	'DismissableSiteNotice',
 	'Echo',
-	// Required by CentralNotice
+	'EventBus',
 	'EventLogging',
+	'EventStreamConfig',
 	'GlobalCssJs',
 	'GlobalNewFiles',
+	'ImportDump',
 	'Interwiki',
 	'InterwikiDispatcher',
 	'IPInfo',
@@ -32,6 +34,7 @@ wfLoadExtensions( [
 	'OATHAuth',
 	'OAuth',
 	'ParserFunctions',
+	'ParserMigration',
 	'QuickInstantCommons',
 	// 'ReportIncident',
 	'RottenLinks',
@@ -46,9 +49,5 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr',
 ] );
-
-if ( $wi->version >= 1.41 ) {
-	wfLoadExtension( 'ParserMigration' );
-}
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );

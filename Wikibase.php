@@ -37,6 +37,8 @@ $wgWBRepoSettings['federatedPropertiesEnabled'] = $wmgFederatedPropertiesEnabled
 $wgWBRepoSettings['formatterUrlProperty'] = $wmgFormatterUrlProperty ?: null;
 $wgWBRepoSettings['canonicalUriProperty'] = $wmgCanonicalUriProperty ?: null;
 
+$wgWBRepoSettings['siteGlobalID'] = $wgDBname;
+
 $wgWBRepoSettings['siteLinkGroups'] = [
 	'miraheze'
 ];
@@ -62,7 +64,7 @@ $wgWBClientSettings['repositories'] = [
 	]
 ];
 
-$wgWBClientSettings['siteGlobalID'] = $wi->dbname;
+$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 $wgWBClientSettings['repoScriptPath'] = '/w';
 $wgWBClientSettings['repoArticlePath'] = '/wiki/$1';
 $wgWBClientSettings['siteGroup'] = 'miraheze';

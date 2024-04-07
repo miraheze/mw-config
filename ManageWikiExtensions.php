@@ -500,7 +500,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10756">T10756</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10756">T10756</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'groupssidebar' => [
@@ -834,7 +834,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10882">T10882</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10882">T10882</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'rightfunctions' => [
@@ -899,7 +899,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'snapblocks' => [
-		'name' => 'Snap! Blocks',
+		'name' => 'Snapblocks',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Snapblocks',
 		'conflicts' => false,
 		'requires' => [],
@@ -1390,7 +1390,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10883">T10883</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10883">T10883</a> for details.',
 		'install' => [
 			'sql' => [
 				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
@@ -1701,6 +1701,17 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'semanticdrilldown' => [
+			'name' => 'SemanticDrilldown',
+			'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Semantic_Drilldown',
+			'conflicts' => false,
+			'requires' => [
+					'extensions' => [
+						'semanticmediawiki',
+					],
+			],
+			'section' => 'specialpages',
+		],
 	'simplechanges' => [
 		'name' => 'SimpleChanges',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleChanges',
@@ -3181,6 +3192,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'unlinkedwikibase' => [
+		'name' => 'UnlinkedWikibase',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UnlinkedWikibase',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'uploadslink' => [
 		'name' => 'UploadsLink',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UploadsLink',
@@ -3327,7 +3345,7 @@ $wgManageWikiExtensions = [
 				]
 			],
 			'settings' => [
-				'wmgWikibaseRepoUrl' => 'https://' . $wi->hostname,
+				'wmgWikibaseRepoUrl' => $wi->server,
 				'wmgWikibaseItemNamespaceID' => 860,
 				'wmgWikibasePropertyNamespaceID' => 862
 			]
@@ -3407,7 +3425,7 @@ $wgManageWikiExtensions = [
 				'managewiki-restricted',
 			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://phabricator.miraheze.org/T10871">T10871</a> for details.',
+		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10871">T10871</a> for details.',
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
