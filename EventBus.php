@@ -55,7 +55,6 @@ $jobQueueRedis = [
 	'daemonized' => true,
 ];
 
-$wgJobTypeConf['CentralAuthCreateLocalAccountJob'] = $jobQueueRedis;
 $wgJobTypeConf['LocalPageMoveJob'] = $jobQueueRedis;
 $wgJobTypeConf['LocalRenameUserJob'] = $jobQueueRedis;
 $wgJobTypeConf['RemovePIIJob'] = $jobQueueRedis;
