@@ -1701,6 +1701,28 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Gallery Options
+	'wgGalleryOptions' => [
+		'default' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'traditional',
+		],
+		'dccomicswiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'packed',
+		],
+	],
+
 	// GeoData
 	'wgGlobes' => [
 		'default' => [],
