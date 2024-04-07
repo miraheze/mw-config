@@ -3008,6 +3008,7 @@ $wgConf->settings += [
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
+				'createwiki-deleterequest' => true,
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
@@ -3036,6 +3037,10 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 				'view-private-ssl-requests' => true,
 			],
+			'suppress' => [
+				'createwiki-suppressrequest' => true,
+				'createwiki-suppressionlog' => true,
+			],
 			'trustandsafety' => [
 				'userrights' => true,
 				'globalblock' => true,
@@ -3059,6 +3064,7 @@ $wgConf->settings += [
 			],
 			'wiki-creator' => [
 				'createwiki' => true,
+				'createwiki-deleterequest' => true,
 			],
 		],
 		'+metawikibeta' => [
@@ -3260,6 +3266,9 @@ $wgConf->settings += [
 				'checkuser',
 				'checkuser-log',
 				'createwiki',
+				'createwiki-deleterequest',
+				'createwiki-suppressionlog',
+				'createwiki-suppressrequest',
 				'editincidents',
 				'editothersprofiles-private',
 				'flow-suppress',
