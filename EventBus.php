@@ -56,8 +56,6 @@ $jobQueueRedis = [
 ];
 
 $wgJobTypeConf['CentralAuthCreateLocalAccountJob'] = $jobQueueRedis;
-$wgJobTypeConf['ImportDumpJob'] = $jobQueueRedis;
-$wgJobTypeConf['ImportDumpNotifyJob'] = $jobQueueRedis;
 $wgJobTypeConf['LocalPageMoveJob'] = $jobQueueRedis;
 $wgJobTypeConf['LocalRenameUserJob'] = $jobQueueRedis;
 $wgJobTypeConf['RemovePIIJob'] = $jobQueueRedis;
