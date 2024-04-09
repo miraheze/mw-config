@@ -328,13 +328,20 @@ class MirahezeFunctions {
 		return '';
 	}
 
+	/**
+	 * @return string
+	 */
+	public function getGlobalDatabase(): string {
+		return self::GLOBAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+	}
+
 	public function setDatabase() {
 		global $wgConf, $wgDBname, $wgCreateWikiDatabase;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 		$wgDBname = $this->dbname;
 
-		$wgCreateWikiDatabase = self::GLOBAL_DATABASE[array_flip( self::TAGS )[$this->realm]];
+		$wgCreateWikiDatabase = $this->getGlobalDatabase();
 	}
 
 	/**
