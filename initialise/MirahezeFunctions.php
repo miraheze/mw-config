@@ -42,12 +42,16 @@ class MirahezeFunctions {
 		],
 	];
 
+	private const BETA_HOSTNAME = 'test151';
+
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
 		'mirabeta' => 'mirabeta.org',
 	];
+
+	private const DEFAULT_SUFFIX = 'wiki';
 
 	private const GLOBAL_DATABASE = [
 		'default' => 'mhglobal',
@@ -209,13 +213,13 @@ class MirahezeFunctions {
 	 */
 	public static function getRealm( ?string $database = null ): string {
 		if ( $database ) {
-			return ( substr( $database, -4 ) === 'wiki' ) ?
+			return ( substr( $database, -strlen( self::DEFAULT_SUFFIX ) ) === self::DEFAULT_SUFFIX ) ?
 				self::TAGS['default'] : self::TAGS['beta'];
 		}
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		return ( substr( self::$currentDatabase, -4 ) === 'wiki' ) ?
+		return ( substr( self::$currentDatabase, -strlen( self::DEFAULT_SUFFIX ) ) === self::DEFAULT_SUFFIX ) ?
 			self::TAGS['default'] : self::TAGS['beta'];
 	}
 
@@ -370,19 +374,12 @@ class MirahezeFunctions {
 	}
 
 	/**
-	 * @param ?string $database
+	 * @param string $database
 	 * @return string
 	 */
-	public static function getPrimaryDomain( ?string $database = null ): string {
-		if ( $database ) {
-			$primaryDomain = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['d'] ?? null;
-			return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm( $database )];
-		}
-
-		self::$currentDatabase ??= self::getCurrentDatabase();
-		$primaryDomain ??= self::readDbListFile( self::LISTS[self::getRealm()], false, self::$currentDatabase )['d'] ?? null;
-
-		return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm()];
+	public static function getPrimaryDomain( string $database ): string {
+		$primaryDomain = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['d'] ?? null;
+		return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm( $database )];
 	}
 
 	/**
@@ -452,7 +449,7 @@ class MirahezeFunctions {
 	 * @return string
 	 */
 	public static function getDefaultMediaWikiVersion(): string {
-		return ( php_uname( 'n' ) === 'test151' && isset( self::MEDIAWIKI_VERSIONS['beta'] ) ) ? 'beta' : 'stable';
+		return ( php_uname( 'n' ) === self::BETA_HOSTNAME && isset( self::MEDIAWIKI_VERSIONS['beta'] ) ) ? 'beta' : 'stable';
 	}
 
 	/**
@@ -465,7 +462,7 @@ class MirahezeFunctions {
 		}
 
 		if ( $database ) {
-			$mwVersion = self::readDbListFile( self::LISTS[self::getRealm()], false, $database )['v'] ?? null;
+			$mwVersion = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['v'] ?? null;
 			return $mwVersion ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 		}
 
@@ -590,8 +587,8 @@ class MirahezeFunctions {
 		global $wgDBname, $wgConf;
 
 		$wikiTags = [];
-		if ( self::getRealm() !== 'default' ) {
-			$wikiTags[] = self::getRealm();
+		if ( self::getRealm( $wgDBname ) !== 'default' ) {
+			$wikiTags[] = self::getRealm( $wgDBname );
 		}
 
 		static $cacheArray = null;
@@ -880,7 +877,7 @@ class MirahezeFunctions {
 
 		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
 			global $wgConf;
-			if ( self::getRealm() !== 'default' ) {
+			if ( self::getRealm( $wgDBname ) !== 'default' ) {
 				$wgConf->siteParamsCallback = static function () {
 					return [
 						'suffix' => null,
