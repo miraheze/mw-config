@@ -35,6 +35,11 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 		'RemovePII',
 	] );
 
+	if ( $wi->version >= '1.42' ) {
+		$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => $wi->getGlobalDatabase() ];
+		$wgVirtualDomainsMapping['virtual-globalblocking'] = [ 'db' => $wi->getGlobalDatabase() ];
+	}
+
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
@@ -116,6 +121,11 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
+}
+
+if ( $wi->version >= '1.42' ) {
+	$wgVirtualDomainsMapping['virtual-botpasswords'] = [ 'db' => $wi->getGlobalDatabase() ];
+	$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => $wi->getGlobalDatabase() ];
 }
 
 $wgVirtualRestConfig = [
