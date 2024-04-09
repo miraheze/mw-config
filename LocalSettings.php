@@ -6446,6 +6446,10 @@ $wi::$disabledExtensions = [
 	'lingo',
 ];
 
+if ( $wi->version >= '1.42' ) {
+	array_push( $wi::$disabledExtensions, 'chameleon' );
+}
+
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
