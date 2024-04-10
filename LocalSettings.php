@@ -3750,12 +3750,6 @@ $wgConf->settings += [
 			'gratispaideia.miraheze.org',
 		],
 	],
-	'wgTidyConfig' => [
-		'default' => [
-			'driver' => 'RemexHtml',
-			'pwrap' => false,
-		],
-	],
 	'wgWhitelistRead' => [
 		'default' => [],
 	],
