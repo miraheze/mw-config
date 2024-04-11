@@ -67,8 +67,8 @@ class MirahezeFunctions {
 	];
 
 	public const MEDIAWIKI_VERSIONS = [
-		'alpha' => '1.42',
-		'beta' => '1.41',
+		'alpha' => '1.43',
+		'beta' => '1.42',
 		'stable' => '1.41',
 	];
 
@@ -329,13 +329,20 @@ class MirahezeFunctions {
 		return '';
 	}
 
+	/**
+	 * @return string
+	 */
+	public function getGlobalDatabase(): string {
+		return self::GLOBAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+	}
+
 	public function setDatabase() {
 		global $wgConf, $wgDBname, $wgCreateWikiDatabase;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 		$wgDBname = $this->dbname;
 
-		$wgCreateWikiDatabase = self::GLOBAL_DATABASE[array_flip( self::TAGS )[$this->realm]];
+		$wgCreateWikiDatabase = $this->getGlobalDatabase();
 	}
 
 	/**
@@ -979,7 +986,7 @@ class MirahezeFunctions {
 					];
 				}
 
-				$primaryDomain = ( $wiki->wiki_primary_domain ?? null ) ?: self::DEFAULT_SERVER[self::getRealm()];
+				$primaryDomain = ( $wiki->wiki_primary_domain ?? null ) ?: self::DEFAULT_SERVER[self::getRealm( $wiki->wiki_dbname )];
 				$wikiVersion = ( $wiki->wiki_version ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 
 				$combiList[$wiki->wiki_dbname] = [
@@ -1085,7 +1092,7 @@ class MirahezeFunctions {
 		$formDescriptor['primary-domain'] = [
 			'label-message' => 'miraheze-label-managewiki-primary-domain',
 			'type' => 'select',
-			'options' => array_combine( self::ALLOWED_DOMAINS[self::getRealm()], self::ALLOWED_DOMAINS[self::getRealm()] ),
+			'options' => array_combine( self::ALLOWED_DOMAINS[self::getRealm( $dbName )], self::ALLOWED_DOMAINS[self::getRealm( $dbName )] ),
 			'default' => self::getPrimaryDomain( $dbName ),
 			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
 			'cssclass' => 'managewiki-infuse',

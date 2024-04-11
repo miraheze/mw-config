@@ -35,6 +35,12 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 		'RemovePII',
 	] );
 
+	if ( $wi->version >= '1.42' ) {
+		$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => $wi->getGlobalDatabase() ];
+		$wgVirtualDomainsMapping['virtual-globalblocking'] = [ 'db' => $wi->getGlobalDatabase() ];
+		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => $wi->getGlobalDatabase() ];
+	}
+
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
@@ -43,6 +49,12 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	}
 
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
+}
+
+if ( $wi->dbname === 'ldapwikiwiki' || $wi->dbname === 'srewiki' ) {
+	if ( $wi->version >= '1.42' ) {
+		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'ldapwikiwiki' ];
+	}
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {

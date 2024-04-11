@@ -1701,6 +1701,28 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Gallery Options
+	'wgGalleryOptions' => [
+		'default' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'traditional',
+		],
+		'dccomicswiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 120,
+			'imageHeight' => 120,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'packed',
+		],
+	],
+
 	// GeoData
 	'wgGlobes' => [
 		'default' => [],
@@ -2986,6 +3008,7 @@ $wgConf->settings += [
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
+				'createwiki-deleterequest' => true,
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
@@ -3014,6 +3037,10 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 				'view-private-ssl-requests' => true,
 			],
+			'suppress' => [
+				'createwiki-suppressrequest' => true,
+				'createwiki-suppressionlog' => true,
+			],
 			'trustandsafety' => [
 				'userrights' => true,
 				'globalblock' => true,
@@ -3037,6 +3064,7 @@ $wgConf->settings += [
 			],
 			'wiki-creator' => [
 				'createwiki' => true,
+				'createwiki-deleterequest' => true,
 			],
 		],
 		'+metawikibeta' => [
@@ -3238,6 +3266,9 @@ $wgConf->settings += [
 				'checkuser',
 				'checkuser-log',
 				'createwiki',
+				'createwiki-deleterequest',
+				'createwiki-suppressionlog',
+				'createwiki-suppressrequest',
 				'editincidents',
 				'editothersprofiles-private',
 				'flow-suppress',
@@ -3717,12 +3748,6 @@ $wgConf->settings += [
 		],
 		'+gratisdatawiki' => [
 			'gratispaideia.miraheze.org',
-		],
-	],
-	'wgTidyConfig' => [
-		'default' => [
-			'driver' => 'RemexHtml',
-			'pwrap' => false,
 		],
 	],
 	'wgWhitelistRead' => [
@@ -6414,6 +6439,14 @@ $wi::$disabledExtensions = [
 	// Broken, once again...
 	'lingo',
 ];
+
+if ( $wi->version >= '1.42' ) {
+	array_push( $wi::$disabledExtensions, 'chameleon' );
+	array_push( $wi::$disabledExtensions, 'evelution' );
+	array_push( $wi::$disabledExtensions, 'femiwiki' );
+	array_push( $wi::$disabledExtensions, 'snapwikiskin' );
+	array_push( $wi::$disabledExtensions, 'tweeki' );
+}
 
 $globals = MirahezeFunctions::getConfigGlobals();
 
