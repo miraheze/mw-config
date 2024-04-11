@@ -59,6 +59,8 @@ $wgJobTypeConf['LocalPageMoveJob'] = $jobQueueRedis;
 $wgJobTypeConf['LocalRenameUserJob'] = $jobQueueRedis;
 $wgJobTypeConf['RemovePIIJob'] = $jobQueueRedis;
 $wgJobTypeConf['SetContainersAccessJob'] = $jobQueueRedis;
+$wgJobTypeConf['securePollPopulateVoterList'] = $jobQueueRedis;
+$wgJobTypeConf['EchoNotificationJob'] = $jobQueueRedis;
 
 // Don't need a global here
 unset( $jobQueueRedis );
