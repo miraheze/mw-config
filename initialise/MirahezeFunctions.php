@@ -51,8 +51,6 @@ class MirahezeFunctions {
 		'mirabeta' => 'mirabeta.org',
 	];
 
-	private const DEFAULT_SUFFIX = 'wiki';
-
 	private const GLOBAL_DATABASE = [
 		'default' => 'mhglobal',
 		'beta' => 'testglobal',
@@ -213,13 +211,13 @@ class MirahezeFunctions {
 	 */
 	public static function getRealm( ?string $database = null ): string {
 		if ( $database ) {
-			return ( substr( $database, -strlen( self::DEFAULT_SUFFIX ) ) === self::DEFAULT_SUFFIX ) ?
+			return ( substr( $database, -strlen( array_keys( self::SUFFIXES )[0] ) ) === array_keys( self::SUFFIXES )[0] ) ?
 				self::TAGS['default'] : self::TAGS['beta'];
 		}
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		return ( substr( self::$currentDatabase, -strlen( self::DEFAULT_SUFFIX ) ) === self::DEFAULT_SUFFIX ) ?
+		return ( substr( self::$currentDatabase, -strlen( array_keys( self::SUFFIXES )[0] ) ) === array_keys( self::SUFFIXES )[0] ) ?
 			self::TAGS['default'] : self::TAGS['beta'];
 	}
 
