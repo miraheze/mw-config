@@ -4774,7 +4774,7 @@ $wgConf->settings += [
 			'sysop',
 		],
 		'+phightingwiki' => [
-			'edittrusteduserprotected'
+			'edittrusteduserprotected',
 		],
 		'+sesupportwiki' => [
 			'editor',
