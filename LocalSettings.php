@@ -3189,6 +3189,11 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
+		'+phightingwiki' => [
+			'trusted_users' => [
+				'edittrusteduserprotected' => true,
+			]
+		],
 		'+sesupportwiki' => [
 			'editor' => [
 				'editor' => true,
@@ -4768,6 +4773,9 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'sysop',
 		],
+		'+phightingwiki' => [
+			'edittrusteduserprotected'
+		]
 		'+sesupportwiki' => [
 			'editor',
 		],
@@ -4885,6 +4893,9 @@ $wgConf->settings += [
 		'nicolopediawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'phightingwiki' => [
+			'edittrusteduserprotected',
 		],
 		'pokemonarowiki' => [
 			'unrestricted_edit',
