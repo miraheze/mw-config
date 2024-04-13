@@ -5041,6 +5041,9 @@ $wgConf->settings += [
 	'wgSecurePollUseLogging' => [
 		'default' => true,
 	],
+	'wgSecurePollSingleTransferableVoteEnabled' => [
+		'default' => true,
+	],
 	'wgSecurePollUseNamespace' => [
 		'default' => true,
 	],
