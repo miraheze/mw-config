@@ -35,6 +35,12 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 		'RemovePII',
 	] );
 
+	if ( $wi->version >= '1.42' ) {
+		$wgVirtualDomainsMapping['virtual-centralauth'] = [ 'db' => $wi->getGlobalDatabase() ];
+		$wgVirtualDomainsMapping['virtual-globalblocking'] = [ 'db' => $wi->getGlobalDatabase() ];
+		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => $wi->getGlobalDatabase() ];
+	}
+
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
@@ -43,6 +49,12 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	}
 
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
+}
+
+if ( $wi->dbname === 'ldapwikiwiki' || $wi->dbname === 'srewiki' ) {
+	if ( $wi->version >= '1.42' ) {
+		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'ldapwikiwiki' ];
+	}
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
@@ -121,7 +133,7 @@ if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 $wgVirtualRestConfig = [
 	'modules' => [
 		'parsoid' => [
-			'url' => 'https://mw-lb.miraheze.org/w/rest.php',
+			'url' => 'https://mw-lb.wikitide.net/w/rest.php',
 			'domain' => $wi->server,
 			'prefix' => $wi->dbname,
 			'forwardCookies' => (bool)$cwPrivate,
@@ -137,7 +149,7 @@ $wgVirtualRestConfig = [
 ];
 
 if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
+	$wgFlowParsoidURL = 'https://mw-lb.wikitide.net/w/rest.php';
 	$wgFlowParsoidPrefix = $wi->dbname;
 	$wgFlowParsoidTimeout = 50;
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
@@ -207,7 +219,7 @@ if ( ( $wgMirahezeActionPathsFormat ?? 'default' ) !== 'default' ) {
 // Don't need globals here
 unset( $actions, $articlePath );
 
-$wgAllowedCorsHeaders[] = 'X-Miraheze-Debug';
+$wgAllowedCorsHeaders[] = 'X-WikiTide-Debug';
 
 // Closed Wikis
 if ( $cwClosed ) {
@@ -245,29 +257,20 @@ if ( !$cwPrivate ) {
 }
 
 // Dynamic cookie settings dependant on $wgServer
-if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.miraheze.org';
-	$wgMFStopRedirectCookieHost = '.miraheze.org';
-} elseif ( preg_match( '/orain\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.orain.org';
-	$wgMFStopRedirectCookieHost = '.orain.org';
-} elseif ( preg_match( '/wiki\.surf$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.wiki.surf';
-	$wgMFStopRedirectCookieHost = '.wiki.surf';
-} elseif ( preg_match( '/wikitide\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.wikitide.org';
-	$wgMFStopRedirectCookieHost = '.wikitide.org';
-} elseif ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.mirabeta.org';
-	$wgMFStopRedirectCookieHost = '.mirabeta.org';
-} else {
-	$wgCentralAuthCookieDomain = '';
-	if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
-		$parsedUrl = wfParseUrl( $wi->server );
-		$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
+foreach ( $wi->getAllowedDomains() as $domain ) {
+	if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
+		$wgCentralAuthCookieDomain = '.' . $domain;
+		$wgMFStopRedirectCookieHost = '.' . $domain;
+		break;
+	} else {
+		$wgCentralAuthCookieDomain = '';
+		if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
+			$parsedUrl = wfParseUrl( $wi->server );
+			$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
 
-		// Don't need a global here
-		unset( $parsedUrl );
+			// Don't need a global here
+			unset( $parsedUrl );
+		}
 	}
 }
 

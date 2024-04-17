@@ -44,4 +44,26 @@ $wgJobTypeConf['default'] = [
 	'readOnlyReason' => false
 ];
 
+$jobQueueRedis = [
+	'class' => JobQueueRedis::class,
+	'redisServer' => '10.0.17.120:6379',
+	'redisConfig' => [
+		'connectTimeout' => 2,
+		'password' => $wmgRedisPassword,
+		'compression' => 'gzip',
+	],
+	'daemonized' => true,
+];
+
+$wgJobTypeConf['LocalPageMoveJob'] = $jobQueueRedis;
+$wgJobTypeConf['LocalRenameUserJob'] = $jobQueueRedis;
+$wgJobTypeConf['RemovePIIJob'] = $jobQueueRedis;
+$wgJobTypeConf['SetContainersAccessJob'] = $jobQueueRedis;
+$wgJobTypeConf['securePollPopulateVoterList'] = $jobQueueRedis;
+$wgJobTypeConf['EchoNotificationJob'] = $jobQueueRedis;
+$wgJobTypeConf['RecordLintJob'] = $jobQueueRedis;
+
+// Don't need a global here
+unset( $jobQueueRedis );
+
 $wgEventBusEnableRunJobAPI = wfHostname() === 'mwtask171' || wfHostname() === 'mwtask181';
