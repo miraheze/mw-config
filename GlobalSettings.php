@@ -257,23 +257,20 @@ if ( !$cwPrivate ) {
 }
 
 // Dynamic cookie settings dependant on $wgServer
-if ( preg_match( '/miraheze\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.miraheze.org';
-	$wgMFStopRedirectCookieHost = '.miraheze.org';
-} elseif ( preg_match( '/wikitide\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.wikitide.org';
-	$wgMFStopRedirectCookieHost = '.wikitide.org';
-} elseif ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
-	$wgCentralAuthCookieDomain = '.mirabeta.org';
-	$wgMFStopRedirectCookieHost = '.mirabeta.org';
-} else {
-	$wgCentralAuthCookieDomain = '';
-	if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
-		$parsedUrl = wfParseUrl( $wi->server );
-		$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
+foreach ( $wi->getAllowedDomains() as $domain ) {
+	if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
+		$wgCentralAuthCookieDomain = '.' . $domain;
+		$wgMFStopRedirectCookieHost = '.' . $domain;
+		break;
+	} else {
+		$wgCentralAuthCookieDomain = '';
+		if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
+			$parsedUrl = wfParseUrl( $wi->server );
+			$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
 
-		// Don't need a global here
-		unset( $parsedUrl );
+			// Don't need a global here
+			unset( $parsedUrl );
+		}
 	}
 }
 
