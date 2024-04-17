@@ -330,7 +330,7 @@ class MirahezeFunctions {
 
 		return '';
 	}
-	
+
 	/**
 	 * @return array
 	 */
