@@ -328,6 +328,13 @@ class MirahezeFunctions {
 
 		return '';
 	}
+	
+	/**
+	 * @return array
+	 */
+	public function getAllowedDomains(): array {
+		return self::ALLOWED_DOMAINS[$this->realm];
+	}
 
 	/**
 	 * @return string
