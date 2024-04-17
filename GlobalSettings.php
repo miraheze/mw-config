@@ -257,7 +257,7 @@ if ( !$cwPrivate ) {
 }
 
 // Dynamic cookie settings dependant on $wgServer
-foreach ( $wi->getAllowedDomains() as $domain ) {
+foreach ( array_flip( $wi->getAllowedDomains() ) as $domain ) {
 	if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
 		$wgCentralAuthCookieDomain = '.' . $domain;
 		$wgMFStopRedirectCookieHost = '.' . $domain;
