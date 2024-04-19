@@ -752,8 +752,9 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OreDict',
 		'conflicts' => false,
 		'install' => [
-		'sql' => [
-			'ext_oredict_items' => "$IP/extensions/OreDict/install/sql/ext_oredict_items.sql"
+			'sql' => [
+				'ext_oredict_items' => "$IP/extensions/OreDict/install/sql/ext_oredict_items.sql"
+			],
 		],
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -997,11 +998,12 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tilesheets',
 		'conflicts' => false,
 		'install' => [
-		'sql' => [
-			'ext_tilesheet_images' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_images.sql",
-			'ext_tilesheet_items' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_items.sql",
-			'ext_tilesheet_languages' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_languages.sql",
-			'ext_tilesheet_tilelinks' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_tilelinks.sql"
+			'sql' => [
+				'ext_tilesheet_images' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_images.sql",
+				'ext_tilesheet_items' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_items.sql",
+				'ext_tilesheet_languages' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_languages.sql",
+				'ext_tilesheet_tilelinks' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_tilelinks.sql"
+			],
 		],
 		'requires' => [
 			'extensions' => [
