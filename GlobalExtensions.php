@@ -29,6 +29,7 @@ wfLoadExtensions( [
 	'MessageCachePerformance',
 	'MirahezeMagic',
 	'MobileDetect',
+	'MultiPurge',
 	'NativeSvgHandler',
 	'Nuke',
 	'OATHAuth',
