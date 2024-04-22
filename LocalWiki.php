@@ -480,9 +480,7 @@ switch ( $wi->dbname ) {
 			NS_HELP => 'guide',
 			NS_HELP_TALK => 'guide-talk',
 			NS_CATEGORY => 'category',
-			NS_CATEGORY_TALK => 'category-talk',
-			NS_HELP => 'guide',
-			NS_HELP_TALK => 'guide-talk'
+			NS_CATEGORY_TALK => 'category-talk'
 		];
 		break;
 	case 'srewiki':
