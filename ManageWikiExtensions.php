@@ -101,6 +101,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'mediahandlers',
 	],
+	'mediaspoiler' => [
+		'name' => 'MediaSpoiler',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MediaSpoiler',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'mediahandlers',
+	],
 	'pdfhandler' => [
 		'name' => 'PDF Handler',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfHandler',
