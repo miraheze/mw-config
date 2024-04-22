@@ -466,6 +466,23 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'spacewiki':
+		$wgExtraNamespaces += [
+			NS_TALK => 'talk',
+			NS_USER => 'user',
+			NS_USER_TALK => 'user-talk',
+			NS_FILE => 'file',
+			NS_FILE_TALK => 'file-talk',
+			NS_MEDIAWIKI => 'mediawiki',
+			NS_MEDIAWIKI_TALK => 'mediawiki-talk',
+			NS_TEMPLATE => 'template',
+			NS_TEMPLATE_TALK => 'template-talk',
+			NS_HELP => 'guide',
+			NS_HELP_TALK => 'guide-talk',
+			NS_CATEGORY => 'category',
+			NS_CATEGORY_TALK => 'category-talk'
+		];
+		break;
 	case 'srewiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
