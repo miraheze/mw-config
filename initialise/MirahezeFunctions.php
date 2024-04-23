@@ -37,6 +37,9 @@ class MirahezeFunctions {
 			'miraheze.org',
 			'wikitide.org',
 		],
+		'internal' => [
+			'wikitide.net',
+		],
 		'mirabeta' => [
 			'mirabeta.org',
 		],
@@ -49,11 +52,18 @@ class MirahezeFunctions {
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
 		'mirabeta' => 'mirabeta.org',
+		'internal' => 'wikitide.net',
 	];
 
 	private const GLOBAL_DATABASE = [
 		'default' => 'mhglobal',
 		'beta' => 'testglobal',
+		'internal' => 'mhglobal',
+	];
+
+	private const INTERNAL_LDAP_WIKIS = [
+		'ldapwikiwiki',
+		'srewiki',
 	];
 
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
@@ -61,10 +71,12 @@ class MirahezeFunctions {
 	private const TAGS = [
 		'default' => 'default',
 		'beta' => 'mirabeta',
+		'internal' => 'internal',
 	];
 
 	public const LISTS = [
 		'default' => 'production',
+		'internal' => 'production',
 		'mirabeta' => 'beta',
 	];
 
@@ -75,7 +87,10 @@ class MirahezeFunctions {
 	];
 
 	public const SUFFIXES = [
-		'wiki' => self::ALLOWED_DOMAINS['default'],
+		'wiki' => array_merge(
+			self::ALLOWED_DOMAINS['default'],
+			self::ALLOWED_DOMAINS['internal']
+		),
 		'wikibeta' => self::ALLOWED_DOMAINS['mirabeta'],
 	];
 
@@ -211,11 +226,19 @@ class MirahezeFunctions {
 	 */
 	public static function getRealm( ?string $database = null ): string {
 		if ( $database ) {
+			if ( in_array( $database, self::INTERNAL_LDAP_WIKIS ) ) {
+				return self::TAGS['internal'];
+			}
+
 			return ( substr( $database, -strlen( array_keys( self::SUFFIXES )[0] ) ) === array_keys( self::SUFFIXES )[0] ) ?
 				self::TAGS['default'] : self::TAGS['beta'];
 		}
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		if ( in_array( self::$currentDatabase, self::INTERNAL_LDAP_WIKIS ) ) {
+			return self::TAGS['internal'];
+		}
 
 		return ( substr( self::$currentDatabase, -strlen( array_keys( self::SUFFIXES )[0] ) ) === array_keys( self::SUFFIXES )[0] ) ?
 			self::TAGS['default'] : self::TAGS['beta'];
