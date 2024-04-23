@@ -87,10 +87,7 @@ class MirahezeFunctions {
 	];
 
 	public const SUFFIXES = [
-		'wiki' => array_merge(
-			self::ALLOWED_DOMAINS['default'],
-			self::ALLOWED_DOMAINS['internal']
-		),
+		'wiki' => self::ALLOWED_DOMAINS['default'] + self::ALLOWED_DOMAINS['internal'],
 		'wikibeta' => self::ALLOWED_DOMAINS['mirabeta'],
 	];
 
