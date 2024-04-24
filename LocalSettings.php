@@ -3594,9 +3594,7 @@ $wgConf->settings += [
 				19,
 				/** Universal Omega */
 				438966,
-				/** Agent Isai */
-				2639,
-				/** HareJ */
+				/** Harej */
 				13892,
 				/** NotAracham */
 				345529,
@@ -3614,9 +3612,7 @@ $wgConf->settings += [
 				6758,
 				/** Universal Omega (SRE and Board) */
 				438966,
-				/** Agent Isai (SRE and Board) */
-				2639,
-				/** HareJ (Board) */
+				/** Harej (Board) */
 				13892,
 				/** NotAracham (Board) */
 				345529,
@@ -3638,9 +3634,7 @@ $wgConf->settings += [
 				6758,
 				/** Universal Omega (SRE and Board) */
 				438966,
-				/** Agent Isai (SRE and Board) */
-				2639,
-				/** HareJ (Board) */
+				/** Harej (Board) */
 				13892,
 				/** NotAracham (Board) */
 				345529,
