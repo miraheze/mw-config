@@ -528,4 +528,7 @@ switch ( $wi->dbname ) {
 		$wgMatomoAnalyticsDisableCookie = true;
 
 		break;
+	case 'swsewiki':
+		$wgRestrictDisplayTitle = false;
+		break;
 }
