@@ -3983,12 +3983,12 @@ $wgConf->settings += [
 	'wgMultiPurgeEnabledServices' => [
 		'default' => [
 			'Cloudflare',
-			'Varnish',
+			// 'Varnish',
 		],
 	],
 	'wgMultiPurgeServiceOrder' => [
 		'default' => [
-			'Varnish',
+			// 'Varnish',
 			'Cloudflare',
 		],
 	],
