@@ -6344,7 +6344,8 @@ $wgConf->settings += [
 			'error' => 'debug',
 			'error-json' => false,
 			'EventBus' => [ 'graylog' => 'error' ],
-			'EventLogging' => 'debug',
+			// Please make sure wgEventLoggingBaseUri is set before re-enabling this group
+			'EventLogging' => false,
 			'exception' => 'debug',
 			'exception-json' => false,
 			'exec' => 'debug',
@@ -6368,6 +6369,8 @@ $wgConf->settings += [
 			'localisation' => false,
 			'ldap' => 'warning',
 			'LinkBatch' => false,
+			// Generates logs for all pages with links to special pages or interwiki links
+			'LinkCache' => false,
 			'Linter' => 'debug',
 			'LocalFile' => 'warning',
 			'localhost' => false,
