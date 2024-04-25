@@ -3982,14 +3982,14 @@ $wgConf->settings += [
 	// MultiPurge
 	'wgMultiPurgeEnabledServices' => [
 		'default' => [
-			'cloudflare',
-			// 'varnish',
+			'Cloudflare',
+			'Varnish',
 		],
 	],
 	'wgMultiPurgeServiceOrder' => [
 		'default' => [
-			// 'varnish',
-			'cloudflare',
+			'Varnish',
+			'Cloudflare',
 		],
 	],
 
@@ -5573,7 +5573,7 @@ $wgConf->settings += [
 	'wgUseCdn' => [
 		'default' => true,
 	],
-	'wgCdnServers' => [
+	'wgMultiPurgeVarnishServers' => [
 		'default' => [
 			/** cp28 */
 			'[2001:470:25:715::2]:81',
