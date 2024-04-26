@@ -2399,10 +2399,10 @@ $wgConf->settings += [
 	// LDAP
 	'wgLDAPDomainNames' => [
 		'ldapwikiwiki' => [
-			'miraheze',
+			'wikitide',
 		],
 		'srewiki' => [
-			'miraheze',
+			'wikitide',
 		],
 	],
 	'wgLDAPServerNames' => [
