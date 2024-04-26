@@ -3622,6 +3622,8 @@ $wgConf->settings += [
 				353865,
 				/** Alex (Miraheze) — OrangeStar (SRE) */
 				464360,
+				/** Evalprime (SRE) */
+				342246,
 			],
 			// Only the board and SRE allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
@@ -3644,6 +3646,8 @@ $wgConf->settings += [
 				353865,
 				/** Alex (Miraheze) — OrangeStar (SRE) */
 				464360,
+				/** Evalprime (SRE) */
+				342246,
 			],
 		],
 	],
