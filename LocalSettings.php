@@ -2137,7 +2137,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
-			'Agent Isai',
 			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
@@ -2147,7 +2146,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
 		'default' => [
-			'Agent Isai',
 			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
