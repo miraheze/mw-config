@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 89;
 // Global SiteNotice
 //if ( !$wmgSiteNoticeOptOut ) {
 $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
-
+/*
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
 	$skin->getOutput()->addInlineStyle(
@@ -50,7 +50,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	EOF;
 }
 //}
-
+*/
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
