@@ -928,6 +928,11 @@ $wgConf->settings += [
 		'default' => 'wiki',
 		'mirabeta' => 'wikibeta',
 	],
+	'wgCreateWikiDisableRESTAPI' => [
+		'default' => true,
+		'metawiki' => true,
+		'metawikibeta' => false,
+	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
 		'mirabeta' => 'metawikibeta',
