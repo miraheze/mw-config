@@ -930,7 +930,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiDisableRESTAPI' => [
 		'default' => true,
-		'metawiki' => true,
+		'metawiki' => false,
 		'metawikibeta' => false,
 	],
 	'wgCreateWikiGlobalWiki' => [
