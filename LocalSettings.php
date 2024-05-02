@@ -4710,6 +4710,10 @@ $wgConf->settings += [
 		'+bigforestwiki' => [
 			'editvoter',
 		],
+	        '+brandonwmwiki' => [
+			'editbureaucratprotected',
+			'editconsulprotected',
+		],
 		'+celebswiki' => [
 			'editmoduleprotected',
 			'edittemplateprotected',
