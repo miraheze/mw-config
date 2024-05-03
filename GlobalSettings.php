@@ -27,7 +27,7 @@ if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) 
 	};
 }
 
-if ( $wi->dbname !== 'metawiki' && $wi->dbname !== 'metawikibeta' ) {
+if ( $wi->dbname !== 'metawiki' && $wi->dbname !== 'metawikibeta' && $wi->dbname !== 'requestssltestwikibeta' ) {
 	$wgSpecialPages['RequestWikiQueue'] = DisabledSpecialPage::getCallback( 'RequestWikiQueue', 'createwiki-requestwikiqueue-disabled' );
 	$wgSpecialPages['RequestWiki'] = DisabledSpecialPage::getCallback( 'RequestWiki', 'createwiki-requestwiki-disabled' );
 	$wgSpecialPages['CreateWiki'] = DisabledSpecialPage::getCallback( 'CreateWiki', 'createwiki-createwiki-disabled' );
