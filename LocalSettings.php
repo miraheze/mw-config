@@ -5266,6 +5266,9 @@ $wgConf->settings += [
 	],
 
 	// TabberNeue
+	'wgTabberNeueParseTabName' => [
+		'default' => false,
+	],
 	'wgTabberNeueEnableMD5Hash' => [
 		'default' => true,
 	],
