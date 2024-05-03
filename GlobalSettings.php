@@ -3,6 +3,7 @@
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\Html\Html;
+use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
@@ -24,6 +25,12 @@ if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) 
 			);
 		}
 	};
+}
+
+if ( $wi->dbname !== 'metawiki' && $wi->dbname !== 'metawikibeta' ) {
+	$wgSpecialPages['RequestWikiQueue'] = DisabledSpecialPage::getCallback( 'RequestWikiQueue', 'createwiki-requestwikiqueue-disabled' );
+	$wgSpecialPages['RequestWiki'] = DisabledSpecialPage::getCallback( 'RequestWiki', 'createwiki-requestwiki-disabled' );
+	$wgSpecialPages['CreateWiki'] = DisabledSpecialPage::getCallback( 'CreateWiki', 'createwiki-createwiki-disabled' );
 }
 
 // Extensions
