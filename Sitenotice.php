@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 88;
+$wgMajorSiteNoticeID = 89;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -15,42 +15,42 @@ $wgMajorSiteNoticeID = 88;
  */
 
 // Global SiteNotice
-/* if ( !$wmgSiteNoticeOptOut ) {
-	$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+//if ( !$wmgSiteNoticeOptOut ) {
+$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+/*
+function wfGlobalSiteNotice( &$siteNotice, $skin ) {
+	$skin->getOutput()->enableOOUI();
+	$skin->getOutput()->addInlineStyle(
+		'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
+		'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
+	);
 
-	function wfGlobalSiteNotice( &$siteNotice, $skin ) {
-		$skin->getOutput()->enableOOUI();
-		$skin->getOutput()->addInlineStyle(
-			'.mw-dismissable-notice .mw-dismissable-notice-body { margin: unset; }' .
-			'.skin-cosmos #sitenotice-learnmore-button { margin-left: 50px; }'
-		);
-
-		$siteNotice .= <<<EOF
-			<table style="width: 100%;">
-				<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px; color: black;">
-					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-						<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/d/df/OOjs_UI_icon_check.svg" decoding="async" width="50" height="50"></div>
-						<div style="font-weight: bold; color: black;">
-							Migration has finished
-						</div>
-						<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-							All migration to our new servers has finished. Thank you to our donors for making this possible! If you are experiencing any issues, please <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Help_center">contact us</a>.
-						</div>
-
-						<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
-							<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Migration_to_new_servers">
-								<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
-								<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
-								<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
-							</a>
-						</span> -->
+	$siteNotice .= <<<EOF
+		<table style="width: 100%;">
+			<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px; color: black;">
+				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
+					<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/d/df/OOjs_UI_icon_check.svg" decoding="async" width="50" height="50"></div>
+					<div style="font-weight: bold; color: black;">
+						Planned brief downtime
 					</div>
-				</td></tr></tbody>
-			</table>
-		EOF;
-	}
-} */
+					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
+						There will be maintenance on April 28th, 2024 at 05:00 UTC. This maintenance will likely last until about 05:30 (about 30 minutes) during this time all wikis and other Miraheze services will be completly unavailable. We apologize for the inconvenience.
+					</div>
 
+					<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+						<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Migration_to_new_servers">
+							<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
+							<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
+							<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
+						</a>
+					</span> -->
+				</div>
+			</td></tr></tbody>
+		</table>
+	EOF;
+}
+//}
+*/
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';

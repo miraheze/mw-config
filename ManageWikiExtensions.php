@@ -101,6 +101,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'mediahandlers',
 	],
+	'mediaspoiler' => [
+		'name' => 'MediaSpoiler',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MediaSpoiler',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'mediahandlers',
+	],
 	'pdfhandler' => [
 		'name' => 'PDF Handler',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PdfHandler',
@@ -747,6 +754,18 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'oredict' => [
+		'name' => 'OreDict',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OreDict',
+		'conflicts' => false,
+		'install' => [
+			'sql' => [
+				'ext_oredict_items' => "$IP/extensions/OreDict/install/sql/ext_oredict_items.sql"
+			],
+		],
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'pdfembed' => [
 		'name' => 'PDFEmbed',
 		'displayname' => 'PDF Embed',
@@ -977,6 +996,25 @@ $wgManageWikiExtensions = [
 		'requires' => [
 			'extensions' => [
 				'templatestyles',
+			],
+		],
+		'section' => 'parserhooks',
+	],
+	'tilesheets' => [
+		'name' => 'Tilesheets',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tilesheets',
+		'conflicts' => false,
+		'install' => [
+			'sql' => [
+				'ext_tilesheet_images' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_images.sql",
+				'ext_tilesheet_items' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_items.sql",
+				'ext_tilesheet_languages' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_languages.sql",
+				'ext_tilesheet_tilelinks' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_tilelinks.sql"
+			],
+		],
+		'requires' => [
+			'extensions' => [
+				'oredict',
 			],
 		],
 		'section' => 'parserhooks',

@@ -928,6 +928,11 @@ $wgConf->settings += [
 		'default' => 'wiki',
 		'mirabeta' => 'wikibeta',
 	],
+	'wgCreateWikiDisableRESTAPI' => [
+		'default' => true,
+		'metawiki' => false,
+		'metawikibeta' => false,
+	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
 		'mirabeta' => 'metawikibeta',
@@ -1081,7 +1086,7 @@ $wgConf->settings += [
 
 	// CookieWarning
 	'wgCookieWarningMoreUrl' => [
-		'default' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#4._Cookies',
+		'default' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#2._Cookies',
 	],
 	'wgCookieWarningEnabled' => [
 		'default' => true,
@@ -2137,7 +2142,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
-			'Agent Isai',
 			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
@@ -2147,7 +2151,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
 		'default' => [
-			'Agent Isai',
 			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
@@ -2399,10 +2402,10 @@ $wgConf->settings += [
 	// LDAP
 	'wgLDAPDomainNames' => [
 		'ldapwikiwiki' => [
-			'miraheze',
+			'wikitide',
 		],
 		'srewiki' => [
-			'miraheze',
+			'wikitide',
 		],
 	],
 	'wgLDAPServerNames' => [
@@ -3594,9 +3597,7 @@ $wgConf->settings += [
 				19,
 				/** Universal Omega */
 				438966,
-				/** Agent Isai */
-				2639,
-				/** HareJ */
+				/** Harej */
 				13892,
 				/** NotAracham */
 				345529,
@@ -3614,9 +3615,7 @@ $wgConf->settings += [
 				6758,
 				/** Universal Omega (SRE and Board) */
 				438966,
-				/** Agent Isai (SRE and Board) */
-				2639,
-				/** HareJ (Board) */
+				/** Harej (Board) */
 				13892,
 				/** NotAracham (Board) */
 				345529,
@@ -3626,6 +3625,8 @@ $wgConf->settings += [
 				353865,
 				/** Alex (Miraheze) — OrangeStar (SRE) */
 				464360,
+				/** Evalprime (SRE) */
+				342246,
 			],
 			// Only the board and SRE allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
@@ -3638,9 +3639,7 @@ $wgConf->settings += [
 				6758,
 				/** Universal Omega (SRE and Board) */
 				438966,
-				/** Agent Isai (SRE and Board) */
-				2639,
-				/** HareJ (Board) */
+				/** Harej (Board) */
 				13892,
 				/** NotAracham (Board) */
 				345529,
@@ -3650,6 +3649,8 @@ $wgConf->settings += [
 				353865,
 				/** Alex (Miraheze) — OrangeStar (SRE) */
 				464360,
+				/** Evalprime (SRE) */
+				342246,
 			],
 		],
 	],
@@ -3983,6 +3984,20 @@ $wgConf->settings += [
 	],
 	'wgMSU_confirmReplace' => [
 		'default' => false,
+	],
+
+	// MultiPurge
+	'wgMultiPurgeEnabledServices' => [
+		'default' => [
+			'Cloudflare',
+			// 'Varnish',
+		],
+	],
+	'wgMultiPurgeServiceOrder' => [
+		'default' => [
+			// 'Varnish',
+			'Cloudflare',
+		],
 	],
 
 	// MultimediaViewer (not beta)
@@ -4694,6 +4709,10 @@ $wgConf->settings += [
 		],
 		'+bigforestwiki' => [
 			'editvoter',
+		],
+	        '+brandonwmwiki' => [
+			'editbureaucratprotected',
+			'editconsulprotected',
 		],
 		'+celebswiki' => [
 			'editmoduleprotected',
@@ -5565,27 +5584,51 @@ $wgConf->settings += [
 	'wgUseCdn' => [
 		'default' => true,
 	],
-	'wgCdnServers' => [
+	'wgMultiPurgeVarnishServers' => [
 		'default' => [
 			/** cp28 */
-			'[2001:470:25:715::2]:81',
+			// 'http://[2001:470:25:715::2]:81',
 			/** cp36 */
-			'[2602:294:0:b13::110]:81',
+			'http://[2602:294:0:b13::110]:81',
 			/** cp37 */
-			'[2602:294:0:b23::112]:81',
+			'http://[2602:294:0:b23::112]:81',
 			/** cp41 */
-			'[2400:d320:2161:9775::1]:81',
+			'http://[2400:d320:2161:9775::1]:81',
 			/** cp51 */
-			'[2407:3641:2161:9774::1]:81',
+			'http://[2407:3641:2161:9774::1]:81',
 		],
 	],
-	// Temporary
+	// Temporary; except CloudFlare
 	'wgCdnServersNoPurge' => [
 		'default' => [
 			// bast161
 			'[2602:294:0:b13::101]',
 			// bast181
 			'[2602:294:0:b12::102]',
+			// CloudFlare IPs - https://www.cloudflare.com/ips/
+			// Sept. 2023 edition; make sure to keep updated or bad things happen!
+			'103.21.244.0/22',
+			'103.22.200.0/22',
+			'103.31.4.0/22',
+			'104.16.0.0/13',
+			'104.24.0.0/14',
+			'108.162.192.0/18',
+			'131.0.72.0/22',
+			'141.101.64.0/18',
+			'162.158.0.0/15',
+			'172.64.0.0/13',
+			'173.245.48.0/20',
+			'188.114.96.0/20',
+			'190.93.240.0/20',
+			'197.234.240.0/22',
+			'198.41.128.0/17',
+			'2400:cb00::/32',
+			'2606:4700::/32',
+			'2803:f800::/32',
+			'2405:b500::/32',
+			'2405:8100::/32',
+			'2a06:98c0::/29',
+			'2c0f:f248::/32',
 		],
 	],
 	'wgCdnMaxAge' => [
@@ -6312,7 +6355,8 @@ $wgConf->settings += [
 			'error' => 'debug',
 			'error-json' => false,
 			'EventBus' => [ 'graylog' => 'error' ],
-			'EventLogging' => 'debug',
+			// Please make sure wgEventLoggingBaseUri is set before re-enabling this group
+			'EventLogging' => false,
 			'exception' => 'debug',
 			'exception-json' => false,
 			'exec' => 'debug',
@@ -6336,6 +6380,8 @@ $wgConf->settings += [
 			'localisation' => false,
 			'ldap' => 'warning',
 			'LinkBatch' => false,
+			// Generates logs for all pages with links to special pages or interwiki links
+			'LinkCache' => false,
 			'Linter' => 'debug',
 			'LocalFile' => 'warning',
 			'localhost' => false,
