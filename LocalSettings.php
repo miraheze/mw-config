@@ -3381,7 +3381,6 @@ $wgConf->settings += [
 			'steward',
 			'staff',
 			'suppress',
-			'interwiki-admin',
 			'sre',
 			'trustandsafety',
 		],
