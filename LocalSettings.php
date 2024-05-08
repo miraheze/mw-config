@@ -4355,6 +4355,9 @@ $wgConf->settings += [
 	'wgPortableInfoboxResponsiblyOpenCollapsed' => [
 		'default' => true,
 	],
+	'wgPortableInfoboxUseFileDescriptionPage' => [
+		'default' => false,
+	],
 	'wgPortableInfoboxCacheRenderers' => [
 		'default' => true,
 	],
