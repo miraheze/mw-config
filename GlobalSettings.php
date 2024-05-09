@@ -619,7 +619,7 @@ $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
  */
 switch ( $wmgWikiLicense ) {
 	case 'arr':
-		$wgRightsIcon = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/License_icon-copyright-88x31.svg/88px-License_icon-copyright-88x31.svg.png';
+		$wgRightsIcon = 'https://static.miraheze.org/commonswiki/6/67/License_icon-copyright-88x31.svg';
 		$wgRightsText = 'All Rights Reserved';
 		$wgRightsUrl = false;
 		break;
