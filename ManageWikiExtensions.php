@@ -2940,7 +2940,12 @@ $wgManageWikiExtensions = [
 		'displayname' => 'StructuredDiscussions (Flow)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredDiscussions',
 		'conflicts' => false,
-		'requires' => [],
+		'help' => 'Deprecated by WMF, who recommends DiscussionTools instead.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'flow_revision' => "$IP/extensions/Flow/sql/mysql/tables-generated.sql"
