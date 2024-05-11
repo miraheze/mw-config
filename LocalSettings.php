@@ -4774,7 +4774,7 @@ $wgConf->settings += [
 		'+bigforestwiki' => [
 			'editvoter',
 		],
-		'+brandonwmwiki' => 
+		'+brandonwmwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
