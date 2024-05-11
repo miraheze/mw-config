@@ -419,6 +419,14 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'rainversewiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [ 
+        		'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+	        	'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
 	case 'sagan4alphawiki':
