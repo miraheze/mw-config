@@ -1345,6 +1345,15 @@ $wgManageWikiSettings = [
 		'help' => 'Open collapsed groups when the screen is narrow.',
 		'requires' => [],
 	],
+	'wgPortableInfoboxUseFileDescriptionPage' => [
+		'name' => 'Portable Infobox Use File Description Page',
+		'from' => 'portableinfobox',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'parserfunctions',
+		'help' => 'Make embedded images link to their file description page.',
+		'requires' => [],
+	],
 	'wgShortDescriptionEnableTagline' => [
 		'name' => 'ShortDescription Enable Tagline',
 		'from' => 'shortdescription',
