@@ -9,6 +9,20 @@ use MediaWiki\User\User;
 
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
+	case 'aieseattlewiki':
+		$wgUploadWizardConfig = [
+	'tutorial' => [
+	 	'skip' => true
+		],
+	'licensing' => [
+		'ownWorkDefault' => 'own',
+		'ownWork' => [
+			'type' => 'or',
+			'template' => 'licensing',
+			'licenses' => 'generic',
+			],
+		],
+	];
 	case 'arquivopkmnwiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
