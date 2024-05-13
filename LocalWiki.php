@@ -352,7 +352,8 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'metzowiki':
-		$wgDplSettings['maxCategoryCount'] = 10;
+		$wgDplSettings['allowUnlimitedCategories'] = true;
+	        $wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
 	case 'newusopediawiki':
