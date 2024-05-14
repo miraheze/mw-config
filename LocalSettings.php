@@ -5336,6 +5336,10 @@ $wgConf->settings += [
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'default' => true,
 	],
+	'wgTabberNeueParseTabName' => [
+		'default' => false,
+		'kanjouwiki' => true,
+	],
 
 	// TemplateStyles
 	'wgTemplateStylesAllowedUrls' => [
