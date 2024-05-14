@@ -353,7 +353,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'metzowiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
-	        $wgDplSettings['allowUnlimitedResults'] = true;
+		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
 	case 'newusopediawiki':
