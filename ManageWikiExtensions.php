@@ -2591,7 +2591,6 @@ $wgManageWikiExtensions = [
 	],
 	'pagelanguage' => [
 		'name' => 'PageLanguage',
-		'displayname' => 'PageLanguage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageLanguage',
 		'conflicts' => false,
 		'requires' => [],
@@ -2599,7 +2598,6 @@ $wgManageWikiExtensions = [
 	],
 	'perpagelanguage' => [
 		'name' => 'PerPageLanguage',
-		'displayname' => 'PerPageLanguage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PerPageLanguage',
 		'conflicts' => false,
 		'requires' => [],
