@@ -23,6 +23,7 @@ switch ( $wi->dbname ) {
 			],
 		],
 	];
+		break;
 	case 'arquivopkmnwiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
