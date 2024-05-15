@@ -352,7 +352,8 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'metzowiki':
-		$wgDplSettings['maxCategoryCount'] = 10;
+		$wgDplSettings['allowUnlimitedCategories'] = true;
+		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
 	case 'newusopediawiki':
@@ -418,6 +419,14 @@ switch ( $wi->dbname ) {
 			}
 		}
 
+		break;
+	case 'rainversewiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
 		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
