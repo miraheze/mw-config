@@ -5337,7 +5337,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgTabberNeueParseTabName' => [
-		'default' => true,
+		'default' => false,
 	],
 
 	// TemplateStyles
