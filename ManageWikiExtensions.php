@@ -2601,6 +2601,11 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PerPageLanguage',
 		'conflicts' => false,
 		'requires' => [],
+		'install' => [
+			'settings' => [
+				'wgPageLanguageUseDB' => true,
+			],
+		],
 		'section' => 'other',
 	],
 	'popups' => [
