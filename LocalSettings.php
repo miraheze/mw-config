@@ -5151,6 +5151,18 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// SimpleBatchUpload
+	'wgSimpleBatchUploadMaxFilesPerBatch' => [
+		'default' => [
+			'*' => 5,
+			'autoconfirmed' => 25,
+			'bureaucrat' => 500,
+			'confirmed' => 50,
+			'sysop' => 250,
+			'user' => 5,
+		],
+	],
+
 	// SimpleChanges
 	'wgSimpleChangesOnlyContentNamespaces' => [
 		'default' => false,
