@@ -1365,7 +1365,7 @@ $wgManageWikiSettings = [
 	],
 	'wgTabberNeueParseTabName' => [
 		'name' => 'TabberNeue Parse Tab Name',
-  		'from' => 'tabberneue',
+		'from' => 'tabberneue',
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
