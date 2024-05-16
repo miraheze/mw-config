@@ -86,7 +86,7 @@ if ( $wi->isExtensionActive( 'Graph' ) ) {
 }
 
 // Meta Tech NS sitenotice
-if ( $wgDBname === 'metawiki' ) {
+/* if ( $wgDBname === 'metawiki' ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
 
 	function wfMetaSiteNotice( &$siteNotice, $skin ) {
@@ -119,4 +119,4 @@ if ( $wgDBname === 'metawiki' ) {
 	</table>
 EOF;
 	}
-}
+} */
