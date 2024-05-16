@@ -2590,7 +2590,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'pagelanguage' => [
-		'name' => 'PageLanguage',
+		'name' => 'Page Language',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageLanguage',
 		'conflicts' => false,
 		'requires' => [],
