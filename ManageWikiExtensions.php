@@ -115,6 +115,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'mediahandlers',
 	],
+	'simplebatchupload' => [
+		'name' => 'SimpleBatchUpload',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleBatchUpload',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'mediahandlers',
+	],
 	'timedmediahandler' => [
 		'name' => 'TimedMediaHandler',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler',
