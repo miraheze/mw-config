@@ -5336,6 +5336,9 @@ $wgConf->settings += [
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'default' => true,
 	],
+	'wgTabberNeueParseTabName' => [
+		'default' => false,
+	],
 
 	// TemplateStyles
 	'wgTemplateStylesAllowedUrls' => [

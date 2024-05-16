@@ -1363,6 +1363,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables short descritption in site tagline',
 		'requires' => [],
 	],
+	'wgTabberNeueParseTabName' => [
+		'name' => 'TabberNeue Parse Tab Name',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'parserfunctions',
+		'help' => 'Parse tab name as wikitext.',
+		'requires' => [],
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
