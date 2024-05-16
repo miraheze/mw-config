@@ -11,18 +11,21 @@ use MediaWiki\User\User;
 switch ( $wi->dbname ) {
 	case 'aieseattlewiki':
 		$wgUploadWizardConfig = [
-	'tutorial' => [
-	 	'skip' => true
-		],
-	'licensing' => [
-		'ownWorkDefault' => 'own',
-		'ownWork' => [
-			'type' => 'or',
-			'template' => 'licensing',
-			'licenses' => 'generic',
+			'campaignExpensiveStatsEnabled' => false,
+			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+			'tutorial' => [
+				'skip' => true,
 			],
-		],
-	];
+			'licensing' => [
+				'ownWorkDefault' => 'own',
+				'ownWork' => [
+					'type' => 'or',
+					'template' => 'licensing',
+					'licenses' => 'generic',
+				],
+			],
+		];
+
 		break;
 	case 'arquivopkmnwiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
