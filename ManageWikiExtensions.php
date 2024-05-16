@@ -2589,9 +2589,27 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'pagelanguage' => [
+		'name' => 'Page Language',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PageLanguage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
+	'perpagelanguage' => [
+		'name' => 'PerPageLanguage',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PerPageLanguage',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'settings' => [
+				'wgPageLanguageUseDB' => true,
+			],
+		],
+		'section' => 'other',
+	],
 	'popups' => [
 		'name' => 'Popups',
-		'displayname' => 'Popups',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Popups',
 		'conflicts' => false,
 		'requires' => [
