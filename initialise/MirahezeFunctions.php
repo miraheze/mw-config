@@ -63,7 +63,7 @@ class MirahezeFunctions {
 
 	private const INTERNAL_LDAP_WIKIS = [
 		'ldapwikiwiki',
-		'srewiki',
+		'techwiki',
 	];
 
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
