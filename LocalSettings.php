@@ -4189,12 +4189,13 @@ $wgConf->settings += [
 		'default' => [
 			NS_MAIN,
 		],
-		'gpcommonswiki' => [
-			NS_MAIN,
+		'+giannawiki' => [
+			3000
+		],
+		'+gpcommonswiki' => [
 			NS_CATEGORY,
 		],
-		'vgportdbwiki' => [
-			NS_MAIN,
+		'+vgportdbwiki' => [
 			3000,
 			3004,
 			3006,
