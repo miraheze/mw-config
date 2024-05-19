@@ -101,31 +101,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'genshinimpactwiki':
-		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
-
-		function onHtmlPageLinkRendererEnd(
-			$linkRenderer,
-			$target,
-			$isKnown,
-			&$text,
-			&$attribs,
-			&$ret
-		) {
-			if ( $isKnown ) {
-				return true;
-			}
-
-			if ( $target->isExternal() ) {
-				return true;
-			}
-
-			$attribs['rel'] = 'nofollow';
-
-			return true;
-		}
-
-		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
@@ -553,6 +528,29 @@ switch ( $wi->dbname ) {
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgMatomoAnalyticsDisableJS = true;
 		$wgMatomoAnalyticsDisableCookie = true;
+
+		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
+
+		function onHtmlPageLinkRendererEnd(
+			$linkRenderer,
+			$target,
+			$isKnown,
+			&$text,
+			&$attribs,
+			&$ret
+		) {
+			if ( $isKnown ) {
+				return true;
+			}
+
+			if ( $target->isExternal() ) {
+				return true;
+			}
+
+			$attribs['rel'] = 'nofollow';
+
+			return true;
+		}
 
 		break;
 }
