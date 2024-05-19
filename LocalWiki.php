@@ -539,11 +539,7 @@ switch ( $wi->dbname ) {
 			&$attribs,
 			&$ret
 		) {
-			if ( $isKnown ) {
-				return true;
-			}
-
-			if ( $target->isExternal() ) {
+			if ( $isKnown || $target->isExternal() ) {
 				return true;
 			}
 
