@@ -93,7 +93,7 @@ $wgConf->settings += [
 
 	'wgPrivilegedGroups' => [
 		'default' => [ 'bureaucrat', 'checkuser', 'interface-admin', 'suppress', 'sysop' ],
-		'+metawiki' => [ 'steward', 'sre' ],
+		'+metawiki' => [ 'steward', 'techteam' ],
 	],
 
 	// 'pagelinks' table migration
@@ -2854,8 +2854,8 @@ $wgConf->settings += [
 			],
 		],
 		'metawiki' => [
-			'sre' => [
-				'sre',
+			'techteam' => [
+				'techteam',
 			],
 			'trustandsafety' => [
 				'trustandsafety',
@@ -3079,7 +3079,7 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 				'view-private-import-requests' => true,
 			],
-			'sre' => [
+			'techteam' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'handle-import-request-interwiki' => true,
@@ -3166,7 +3166,7 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 				'view-private-import-requests' => true,
 			],
-			'sre' => [
+			'techteam' => [
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'handle-import-request-interwiki' => true,
@@ -3295,8 +3295,8 @@ $wgConf->settings += [
 			],
 		],
 		'metawiki' => [
-			'sre' => [
-				'sre',
+			'techteam' => [
+				'techteam',
 			],
 			'trustandsafety' => [
 				'trustandsafety',
@@ -3431,7 +3431,7 @@ $wgConf->settings += [
 			'steward',
 			'staff',
 			'suppress',
-			'sre',
+			'techteam',
 			'trustandsafety',
 		],
 		'+metawiki' => [
@@ -4147,14 +4147,14 @@ $wgConf->settings += [
 			'electionadmin',
 			'global-sysop',
 			'interface-admin',
-			'sre',
+			'techteam',
 			'trustandsafety'
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
 			'global-sysop',
 			'interface-admin',
-			'sre',
+			'techteam',
 			'trustandsafety'
 		],
 	],
