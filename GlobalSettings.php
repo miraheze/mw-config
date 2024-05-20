@@ -58,6 +58,10 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 }
 
+if ( $wi->version >= '1.42' ) {
+	$wgVirtualDomainsMapping['virtual-importdump'] = [ 'db' => $wi->getCentralDatabase() ];
+}
+
 if ( $wi->dbname === 'ldapwikiwiki' || $wi->dbname === 'srewiki' ) {
 	if ( $wi->version >= '1.42' ) {
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'ldapwikiwiki' ];
