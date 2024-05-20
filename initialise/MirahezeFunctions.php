@@ -46,6 +46,11 @@ class MirahezeFunctions {
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
+	private const CENTRAL_DATABASE = [
+		'default' => 'metawiki',
+		'beta' => 'metawikibeta',
+	];
+
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
 		'mirabeta' => 'mirabeta.org',
@@ -336,6 +341,13 @@ class MirahezeFunctions {
 	 */
 	public function getAllowedDomains(): array {
 		return self::ALLOWED_DOMAINS[$this->realm];
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getCentralDatabase(): string {
+		return self::CENTRAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
 	}
 
 	/**
