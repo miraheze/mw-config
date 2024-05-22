@@ -1605,6 +1605,20 @@ $wgConf->settings += [
 					'alt' => 'Hosted by Miraheze',
 				],
 			],
+		'tnowiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.miraheze.org/tnowiki/0/05/Mediawiki.png',
+					"url" => "https://www.mediawiki.org/",
+					"alt" => "Powered by MediaWiki",
+				],
+				'miraheze' => [
+					'src' => 'https://static.miraheze.org/tnowiki/4/49/Miraheze.png',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				]
+			]
+		]
 		]
 	],
 	'wmgWikiapiaryFooterPageName' => [
