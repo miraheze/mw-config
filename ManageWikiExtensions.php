@@ -593,6 +593,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'linkcards' => [
+		'name' => 'LinkCards',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Extension:LinkCards',
+		'description' => 'Adds two parser functions for the easy display of grids of clickable image-and-title cards.'
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'linktitles' => [
 		'name' => 'LinkTitles',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkTitles',
