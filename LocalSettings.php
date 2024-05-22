@@ -1609,8 +1609,8 @@ $wgConf->settings += [
 			'poweredby' => [
 				'mediawiki' => [
 					'src' => 'https://static.miraheze.org/tnowiki/0/05/Mediawiki.png',
-					"url" => "https://www.mediawiki.org/",
-					"alt" => "Powered by MediaWiki",
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
 				],
 				'miraheze' => [
 					'src' => 'https://static.miraheze.org/tnowiki/4/49/Miraheze.png',
