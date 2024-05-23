@@ -5047,6 +5047,10 @@ $wgConf->settings += [
 			'localhost',
 			'127.0.0.1',
 		],
+		'+rainversewiki' => [
+			'jocelynsamara.deviantart.com',
+			'www.deviantart.com',
+		],
 		'+snapwikiwiki' => [
 			'smerge.imp.fu-berlin.de',
 			'www.hinkler.com.au',
