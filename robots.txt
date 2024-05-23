@@ -1,113 +1,15 @@
 # robots.txt for Miraheze
 
 # Throttle access to certain pages
+# Do not include special pages and other pages where indexing is undesirable if they are likely to be linked to; use noindex instead.
+# That's because Google can still index pages in here without crawling them if the pages are linked to
+# See https://developers.google.com/search/docs/crawling-indexing/robots/intro
 User-Agent: *
 Allow: /w/api.php?action=mobileview&
 Allow: /w/load.php?
 Disallow: /w/
 Disallow: /geoip$
 Disallow: /rest_v1/
-Disallow: /wiki/Special:
-Disallow: /wiki/Spezial:
-Disallow: /wiki/Spesial:
-Disallow: /wiki/Special%3A
-Disallow: /wiki/Spezial%3A
-Disallow: /wiki/Spesial%3A
-Disallow: /wiki/Property:
-Disallow: /wiki/Property%3A
-Disallow: /wiki/property:
-Disallow: /wiki/Especial:
-Disallow: /wiki/Especial%3A
-Disallow: /wiki/especial:
-Disallow: /wiki/Eri:
-Disallow: /wiki/Eri%3a
-Disallow: /wiki/eri:
-Disallow: /wiki/eri%3a
-Disallow: /wiki/speciale:
-Disallow: /wiki/speciale%3a
-Disallow: /wiki/Speciale:
-Disallow: /wiki/Speciale%3a
-Disallow: /wiki/speci%C3%A1lis:
-Disallow: /wiki/speci%C3%A1lis%ea
-Disallow: /wiki/Speci%C3%A1lis:
-Disallow: /wiki/Speci%C3%A1lis%3a
-Disallow: /wiki/istimewa:
-Disallow: /wiki/istimewa%3a
-Disallow: /wiki/Istimewa:
-Disallow: /wiki/Istimewa%3a
-Disallow: /wiki/Speciaal:
-Disallow: /wiki/Speciaal%3a
-Disallow: /wiki/%D8%AE%D8%A7%D8%B5%3a
-Disallow: /wiki/%D8%AE%D8%A7%D8%B5:
-Disallow: /wiki/Speci%C3%A1ln%C3%AD%3a
-Disallow: /wiki/Speci%C3%A1ln%C3%AD:
-Disallow: /wiki/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C%3a
-Disallow: /wiki/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C:
-Disallow: /wiki/%D9%88%DB%8C%DA%98%D9%87%3a
-Disallow: /wiki/%D9%88%DB%8C%DA%98%D9%87:
-Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93%3a
-Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93:
-Disallow: /wiki/%E7%89%B9%E5%88%A5%3a
-Disallow: /wiki/%E7%89%B9%E5%88%A5:
-Disallow: /wiki/%ED%8A%B9%EC%88%98%3a
-Disallow: /wiki/%ED%8A%B9%EC%88%98:
-Disallow: /wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%3a
-Disallow: /wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:
-Disallow: /wiki/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9:
-Disallow: /wiki/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9%3a
-Disallow: /wiki/%D0%9F%D0%BE%D1%81%D0%B5%D0%B1%D0%BD%D0%BE
-Disallow: /wiki/%D0%9F%D0%BE%D1%81%D0%B5%D0%B1%D0%BD%D0%BE%3a
-# Pattern matching is not officially supported by the robots.txt spec, but some crawlers, like Googlebot, support it
-Disallow: /wiki/Special:*
-Disallow: /wiki/Spezial:*
-Disallow: /wiki/Spesial:*
-Disallow: /wiki/Special%3A*
-Disallow: /wiki/Spezial%3A*
-Disallow: /wiki/Spesial%3A*
-Disallow: /wiki/Property:*
-Disallow: /wiki/Property%3A*
-Disallow: /wiki/property:*
-Disallow: /wiki/Especial:*
-Disallow: /wiki/Especial%3A*
-Disallow: /wiki/especial:*
-Disallow: /wiki/Eri:*
-Disallow: /wiki/Eri%3a*
-Disallow: /wiki/eri:*
-Disallow: /wiki/eri%3a*
-Disallow: /wiki/speciale:*
-Disallow: /wiki/speciale%3a*
-Disallow: /wiki/Speciale:*
-Disallow: /wiki/Speciale%3a*
-Disallow: /wiki/speci%C3%A1lis:*
-Disallow: /wiki/speci%C3%A1lis%ea
-Disallow: /wiki/Speci%C3%A1lis:*
-Disallow: /wiki/Speci%C3%A1lis%3a*
-Disallow: /wiki/istimewa:*
-Disallow: /wiki/istimewa%3a*
-Disallow: /wiki/Istimewa:*
-Disallow: /wiki/Istimewa%3a*
-Disallow: /wiki/Speciaal:*
-Disallow: /wiki/Speciaal%3a*
-Disallow: /wiki/%D8%AE%D8%A7%D8%B5%3a*
-Disallow: /wiki/%D8%AE%D8%A7%D8%B5:*
-Disallow: /wiki/Speci%C3%A1ln%C3%AD%3a*
-Disallow: /wiki/Speci%C3%A1ln%C3%AD:*
-Disallow: /wiki/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C%3a*
-Disallow: /wiki/%CE%95%CE%B9%CE%B4%CE%B9%CE%BA%CF%8C:*
-Disallow: /wiki/%D9%88%DB%8C%DA%98%D9%87%3a*
-Disallow: /wiki/%D9%88%DB%8C%DA%98%D9%87:*
-Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93%3a*
-Disallow: /wiki/%D7%9E%D7%99%D7%95%D7%97%D7%93:*
-Disallow: /wiki/%E7%89%B9%E5%88%A5%3a*
-Disallow: /wiki/%E7%89%B9%E5%88%A5:*
-Disallow: /wiki/%ED%8A%B9%EC%88%98%3a*
-Disallow: /wiki/%ED%8A%B9%EC%88%98:*
-Disallow: /wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F%3a*
-Disallow: /wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:*
-Disallow: /wiki/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9:*
-Disallow: /wiki/%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9%3a*
-Disallow: /wiki/%D0%9F%D0%BE%D1%81%D0%B5%D0%B1%D0%BD%D0%BE
-Disallow: /wiki/%D0%9F%D0%BE%D1%81%D0%B5%D0%B1%D0%BD%D0%BE%3a*
 
 # Block SemrushBot
 User-Agent: SemrushBot
@@ -147,7 +49,7 @@ Disallow: /
 
 # Keep Crawl-Delay rules at the bottom
 # Bots that don't understand Crawl-Delay might break when encountering it
-# See https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129
+# See https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129 (English) and https://webtan.impress.co.jp/e/2022/11/04/43611 (Japanese)
 
 # Throttle MJ12Bot
 User-agent: MJ12bot
