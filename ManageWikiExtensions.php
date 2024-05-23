@@ -596,7 +596,6 @@ $wgManageWikiExtensions = [
 	'linkcards' => [
 		'name' => 'LinkCards',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkCards',
-		'description' => 'Adds two parser functions for the easy display of grids of clickable image-and-title cards.',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
