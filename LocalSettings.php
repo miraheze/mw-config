@@ -1568,7 +1568,7 @@ $wgConf->settings += [
 	],
 	'wgShortPagesNamespaceExclusions' => [
 		'default' => [],
-		'turcriaturaswiki' => [ NS_CATEGORY ],
+		'tuscriaturaswiki' => [ NS_CATEGORY ],
 	],
 
 	// Footers
