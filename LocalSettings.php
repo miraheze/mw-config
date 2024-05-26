@@ -1566,7 +1566,7 @@ $wgConf->settings += [
 	'wgWatchlistExpiry' => [
 		'default' => true
 	],
-	'wgShortPagesNamespaceExclusion' => [
+	'wgShortPagesNamespaceExclusions' => [
 		'default' => [],
 		'turcriaturaswiki' => [ NS_CATEGORY ],
 	],
