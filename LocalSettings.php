@@ -1566,6 +1566,10 @@ $wgConf->settings += [
 	'wgWatchlistExpiry' => [
 		'default' => true
 	],
+	'wgShortPagesNamespaceExclusion' => [
+		'default' => [],
+		'turcriaturaswiki' => [ NS_CATEGORY ],
+	],
 
 	// Footers
 	'+wgFooterIcons' => [
