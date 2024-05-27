@@ -2957,14 +2957,6 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
-		'+hypopediawiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'+igrovyesistemywiki' => [
 			'autopatrolled' => [
 				'trusted' => true,
@@ -4829,9 +4821,16 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+hypopediawiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
+		'+hypotheticalweatherwiki' => [
+			'',
+			'user',
+			'autoconfirmed',
+			'templateeditor',
+			'extendedconfirmed',
+	                'author',
+			'moderator',
+			'sysop',
+			'bureaucrat',
 		],
 		'+igrovyesistemywiki' => [
 			'trusted',
@@ -4966,9 +4965,11 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'hypopediawiki' => [
-			'editbureaucratprotected',
-			'editextendedconfirmedprotected',
+		'hypotheticalweatherwiki' => [
+			'templateeditor',
+			'extendedconfirmed',
+			'moderator',
+			'bureaucrat',
 		],
 		'infopediawiki' => [
 			'editextendedconfirmedprotected',
