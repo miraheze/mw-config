@@ -62,4 +62,4 @@ Crawl-Delay: 2.5
 
 # Throttle BingBot
 User-agent: bingbot
-Crawl-delay: 5
+Crawl-delay: 20
