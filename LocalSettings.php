@@ -1585,11 +1585,11 @@ $wgConf->settings += [
 		'hsckwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					"src" => "https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg",
-					"url" => "https://www.mediawiki.org",
-					"alt" => "Xây dựng trên MediaWiki",
-					"height" => "42",
-					"width" => "127",
+					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Xây dựng trên MediaWiki',
+					'height' => "42",
+					'width' => "127",
 				],
 				'songnguxyz' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
@@ -1645,7 +1645,6 @@ $wgConf->settings += [
 					'alt' => 'Hosted by Miraheze',
 				]
 			]
-		]
 		]
 	],
 	'wmgWikiapiaryFooterPageName' => [
