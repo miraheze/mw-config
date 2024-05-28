@@ -1604,7 +1604,7 @@ $wgConf->settings += [
 					'alt' => 'Lưu trữ bởi Miraheze',
 					"height" => "42",
 				        "width" => "127"
-				]
+				],
 			],
 		],
 		'lhmnwiki' => [
@@ -1629,7 +1629,7 @@ $wgConf->settings += [
 					'alt' => 'Lưu trữ bởi Miraheze',
 					"height" => "42",
 				        "width" => "127"
-				]
+				],
 			],
 		],
 		'tnowiki' => [
@@ -2669,7 +2669,7 @@ $wgConf->settings += [
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
 		'revitwiki' => "https://$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 		'spnatiwiki' => 'https://upload.wikimedia.org/wikipedia/commons/f/f8/License_icon-mit-88x31-2.svg',
-		'lhmnwiki' => 'https://static.miraheze.org/lhmnwiki/4/4e/CC-BY-SA-4.svg'
+		'lhmnwiki' => "https://static.miraheze.org/lhmnwiki/4/4e/CC-BY-SA-4.svg",
 	],
 	'wgRightsPage' => [
 		'default' => '',
