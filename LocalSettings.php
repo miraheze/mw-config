@@ -1584,31 +1584,54 @@ $wgConf->settings += [
 		],
 		'hsckwiki' => [
 			'poweredby' => [
+				'mediawiki' => [
+					"src" => "https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg",
+					"url" => "https://www.mediawiki.org",
+					"alt" => "Xây dựng trên MediaWiki",
+					"height" => "42",
+					"width" => "127",
+				],
 				'songnguxyz' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
+					"height" => "42",
+				        "width" => "127"
 				],
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze',
-				],
+					'alt' => 'Lưu trữ bởi Miraheze',
+					"height" => "42",
+				        "width" => "127"
+				]
 			],
 		],
 		'lhmnwiki' => [
 			'poweredby' => [
+				'mediawiki' => [
+					"src" => "https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg",
+					"url" => "https://www.mediawiki.org",
+					"alt" => "Xây dựng trên MediaWiki",
+					"height" => "42",
+					"width" => "127",
+				],
 				'songnguxyz' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
+					"height" => "42",
+				        "width" => "127"
 				],
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze',
-				],
+					'alt' => 'Lưu trữ bởi Miraheze',
+					"height" => "42",
+				        "width" => "127"
+				]
 			],
+		],
 		'tnowiki' => [
 			'poweredby' => [
 				'mediawiki' => [
@@ -2646,6 +2669,7 @@ $wgConf->settings += [
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
 		'revitwiki' => "https://$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 		'spnatiwiki' => 'https://upload.wikimedia.org/wikipedia/commons/f/f8/License_icon-mit-88x31-2.svg',
+		'lhmnwiki' => 'https://static.miraheze.org/lhmnwiki/4/4e/CC-BY-SA-4.svg'
 	],
 	'wgRightsPage' => [
 		'default' => '',
