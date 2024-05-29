@@ -1602,8 +1602,8 @@ $wgConf->settings += [
 					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "70",
-				        "width" => "70"
+					"height" => "50",
+				        "width" => "50"
 				],
 			],
 		],
@@ -1613,8 +1613,8 @@ $wgConf->settings += [
 					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "42",
-					'width' => "127",
+					'height' => "50",
+					'width' => "155",
 				],
 				'songnguxyz' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
@@ -1627,8 +1627,8 @@ $wgConf->settings += [
 					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "70",
-				        "width" => "70"
+					"height" => "50",
+				        "width" => "50"
 				],
 			],
 			'copyright' => [
@@ -1637,7 +1637,7 @@ $wgConf->settings += [
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
 					'height' => "50",
-					'width' => "110",
+					'width' => "150",
 				],
 			],
 		],
@@ -2677,7 +2677,6 @@ $wgConf->settings += [
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
 		'revitwiki' => "https://$wmgUploadHostname/revitwiki/d/d8/All_Rights_Reserved.png",
 		'spnatiwiki' => 'https://upload.wikimedia.org/wikipedia/commons/f/f8/License_icon-mit-88x31-2.svg',
-		'lhmnwiki' => null,
 	],
 	'wgRightsPage' => [
 		'default' => '',
