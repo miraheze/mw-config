@@ -6590,6 +6590,9 @@ $wgConf->settings += [
 			'thumbnailaccess' => false,
 			'TitleBlacklist' => false,
 			'TitleBlacklist-cache' => false,
+			// T12167 -- stop spamming Graylog; fixed in 1.42 so remove once 
+			// we are on 1.42
+			'TitleKey' => false, 
 			'torblock' => 'debug',
 			'TranslationNotifications.Jobs' => false,
 			'Translate.Jobs' => false,
