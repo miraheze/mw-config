@@ -1584,51 +1584,60 @@ $wgConf->settings += [
 		],
 		'hsckwiki' => [
 			'poweredby' => [
-				'mediawiki' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
-					'url' => 'https://www.mediawiki.org',
-					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "42",
-					'width' => "127",
-				],
 				'songnguxyz' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
+					"height" => "32",
 				        "width" => "200"
 				],
 				'miraheze' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "50",
-				        "width" => "50"
+					"height" => "60",
+				        "width" => "60"
+				],
+				'mediawiki' => [
+					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Xây dựng trên MediaWiki',
+					'height' => "60",
+					'width' => "185",
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.miraheze.org/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
+					'height' => "50",
+					'width' => "150",
 				],
 			],
 		],
 		'lhmnwiki' => [
 			'poweredby' => [
-				'mediawiki' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
-					'url' => 'https://www.mediawiki.org',
-					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "50",
-					'width' => "155",
-				],
 				'songnguxyz' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
+					"height" => "32",
 				        "width" => "200"
 				],
 				'miraheze' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "50",
-				        "width" => "50"
+					"height" => "60",
+				        "width" => "60"
+				],
+				'mediawiki' => [
+					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Xây dựng trên MediaWiki',
+					'height' => "60",
+					'width' => "185",
 				],
 			],
 			'copyright' => [
