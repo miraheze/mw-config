@@ -4827,7 +4827,7 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'templateeditor',
 			'extendedconfirmed',
-	                'author',
+			'author',
 			'moderator',
 			'sysop',
 			'bureaucrat',
