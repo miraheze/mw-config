@@ -243,12 +243,13 @@ switch ( $wi->dbname ) {
 				}
 			}
 			
-		$wgUploadWizardConfig = [
+		wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
 			'tutorial' => [
 				'skip' => false,
 			],
 			'altUploadForm' => 'Special:Upload',
+			'enableFormData' => true,
 			'autoAdd' => [
 			 	'wikitext' => [
 					'Tập tin này được tải lên bằng Trình thuật sĩ.'
@@ -261,6 +262,7 @@ switch ( $wi->dbname ) {
 					'vi' => 'Tiếng Việt',
 					'en' => 'English'
 			],
+		]
 		];
 	
 		break;
