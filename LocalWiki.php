@@ -235,7 +235,7 @@ switch ( $wi->dbname ) {
 						$source = 'Bản thân';
 					}
 					if ( preg_match( '/\[\[([^|]+)\|[^]]+\]\]/', $author, $matches ) ) {
-						$author = $matches[1]; // Unlink the author
+						$author = $matches[1];
 					}
 					if ( $licenseDetails ) {
 						$license = $licenseDetails;
