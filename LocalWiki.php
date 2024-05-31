@@ -206,39 +206,40 @@ switch ( $wi->dbname ) {
 		break;
 	case 'lhmnwiki':
 		$wgHooks['ParserPreSaveTransformComplete'][] = function ( Parser $parser, string &$text ) {
-		if ( preg_match( '/=={{int:filedesc}}==
-			{{Hộp tập tin
-			\|(.*)
-			\|(.*)
-			\|(.*)
-			\|(.*)
-			\|(.*)
-			\|(.*)
-			}}
+			if ( preg_match( '/=={{int:filedesc}}==
+				{{Hộp tập tin
+				\|(.*)
+				\|(.*)
+				\|(.*)
+				\|(.*)
+				\|(.*)
+				\|(.*)
+				}}
+				
+				=={{int:license-header}}==
+				{{(.*)}}
+				*(.*)/', $text, $matches ) ) {
+	
+					// Get data
+					$description = $matches[1];
+					$date = $matches[2];
+					$source = $matches[3];
+					$author = $matches[4];
+					$permission = $matches[5];
+					$otherVersions = $matches[6];
+					$license = $matches[7];
+					$licenseDetails = $matches[8];
 			
-			=={{int:license-header}}==
-			{{(.*)}}
-			*(.*)/', $text, $matches ) ) {
-
-				// Get data
-				$description = $matches[1];
-				$date = $matches[2];
-				$source = $matches[3];
-				$author = $matches[4];
-				$permission = $matches[5];
-				$otherVersions = $matches[6];
-				$license = $matches[7];
-				$licenseDetails = $matches[8];
-		
-				// Process data
-				if ( $source === '{{own}}' ) {
-					$source = 'Bản thân';
-				}
-				if ( preg_match( '/\[\[([^|]+)\|[^]]+\]\]/', $author, $matches ) ) {
-					$author = $matches[1]; // Unlink the author
-				}
-				if ( $licenseDetails ) {
-					$license = $licenseDetails;
+					// Process data
+					if ( $source === '{{own}}' ) {
+						$source = 'Bản thân';
+					}
+					if ( preg_match( '/\[\[([^|]+)\|[^]]+\]\]/', $author, $matches ) ) {
+						$author = $matches[1]; // Unlink the author
+					}
+					if ( $licenseDetails ) {
+						$license = $licenseDetails;
+					}
 				}
 			}
 			
