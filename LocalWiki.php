@@ -243,7 +243,7 @@ switch ( $wi->dbname ) {
 				}
 			}
 			
-		wgUploadWizardConfig = [
+		$wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
 			'tutorial' => [
 				'skip' => false,
