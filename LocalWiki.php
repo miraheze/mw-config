@@ -220,7 +220,7 @@ switch ( $wi->dbname ) {
 			 		],
 			],
 			'uwLanguages' => [
-					'vi' => 'Tiếng Việt'
+					'vi' => 'Tiếng Việt',
 					'en' => 'English'
 			],
 		];
