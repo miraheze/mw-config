@@ -204,6 +204,29 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'lhmnwiki':
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'tutorial' => [
+				'skip' => false,
+			],
+			'altUploadForm' => 'Special:Upload',
+			'enableFormData' => true,
+			'autoAdd' => [
+				'wikitext' => [
+					'Tập tin này được tải lên bằng Trình thuật sĩ.'
+					],
+				'categories' => [
+					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'	
+					],
+			],
+			'uwLanguages' => [
+					'vi' => 'Tiếng Việt',
+					'en' => 'English'
+			],
+		];
+
+		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
