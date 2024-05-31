@@ -241,7 +241,7 @@ switch ( $wi->dbname ) {
 						$license = $licenseDetails;
 					}
 				}
-			}
+			};
 			
 		$wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
