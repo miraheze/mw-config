@@ -204,6 +204,63 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'lhmnwiki':
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'tutorial' => [
+				'skip' => false,
+			],
+			'altUploadForm' => 'Special:Upload',
+			'autoAdd' => [
+			 	'wikitext' => [
+					'Tập tin này được tải lên bằng Trình thuật sĩ.'
+					],
+			 	'categories' => [
+			 		 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'	
+			 		],
+			],
+			'uwLanguages' => [
+					'vi' => 'Tiếng Việt'
+					'en' => 'English'
+			],
+		];
+		$wgHooks['ParserPreSaveTransformComplete'][] = function ( Parser $parser, string &$text ) {
+		if ( preg_match( '/=={{int:filedesc}}==
+			{{Hộp tập tin
+			\|(.*)
+			\|(.*)
+			\|(.*)
+			\|(.*)
+			\|(.*)
+			\|(.*)
+			}}
+			
+			=={{int:license-header}}==
+			{{(.*)}}
+			*(.*)/', $text, $matches ) ) {
+
+		// Get data
+		$description = $matches[1];
+		$date = $matches[2];
+		$source = $matches[3];
+		$author = $matches[4];
+		$permission = $matches[5];
+		$otherVersions = $matches[6];
+		$license = $matches[7];
+		$licenseDetails = $matches[8];
+
+		// Process data
+		if ( $source === '{{own}}' ) {
+			$source = 'Bản thân';
+		}
+		if ( preg_match( '/\[\[([^|]+)\|[^]]+\]\]/', $author, $matches ) ) {
+			$author = $matches[1]; // Unlink the author
+		}
+		if ( $licenseDetails ) {
+			$license = $licenseDetails;
+		}
+
+		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -432,40 +489,6 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
-
-		break;
-	case 'snxyzincubatorwiki':
-		$wgLogos = [
-			'1x' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'svg' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'icon' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'wordmark' => [
-				'src' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
-				'1x' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
-				'width' => 135,
-				'height' => 20,
-			],
-			'tagline' => [
-				'src' => "https://static.wikitide.net/snxyzincubatorwiki/6/60/Tagline_EN.svg",
-				'width' => 135,
-				'height' => 15,
-			],
-			'variants' => [
-				'vi' => [
-					'wordmark' => [
-						'src' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
-						'1x' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
-						'width' => 135,
-						'height' => 20,
-					],
-					'tagline' => [
-						'src' => "https://static.wikitide.net/snxyzincubatorwiki/1/1b/Tagline_VI.svg",
-						'width' => 135,
-						'height' => 15,
-					],
-				],
-			],
-		];
 
 		break;
 	case 'spacewiki':
