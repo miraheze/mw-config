@@ -262,7 +262,6 @@ switch ( $wi->dbname ) {
 					'vi' => 'Tiếng Việt',
 					'en' => 'English'
 			],
-		]
 		];
 	
 		break;
