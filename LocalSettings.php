@@ -1937,6 +1937,11 @@ $wgConf->settings += [
 				'importupload' => true,
 			],
 		],
+		'+phightingwiki' => [
+			'editprotected' => [
+				'edittrusteduserprotected' => true
+			]
+		],
 		'+simulatorwiki' => [
 			'editprotected' => [
 				'editfragment' => true,
