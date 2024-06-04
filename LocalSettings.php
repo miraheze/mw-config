@@ -2864,6 +2864,7 @@ $wgConf->settings += [
 			'mobilefrontend',
 			'purge',
 			'syntaxhighlight_geshi',
+			'templatestyles',
 			'textextracts',
 			'urlshortener',
 			'wikiseo',
