@@ -204,6 +204,82 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'lhmnwiki':
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'tutorial' => [
+				'skip' => false,
+			],
+			'altUploadForm' => 'Special:Upload',
+			'enableFormData' => true,
+			'autoAdd' => [
+				'wikitext' => [
+					'Tập tin này được tải lên bằng Trình thuật sĩ.'
+					],
+				'categories' => [
+					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'	
+					],
+			],
+			'uwLanguages' => [
+					'vi' => 'Tiếng Việt',
+					'en' => 'English'
+			],
+			'licenses' => [
+			                'lhmn' => [
+			                        'msg' => 'mwe-upwiz-license-lhmn',
+			                        'url' => '//facebook.com/lophocmatngu',
+			                ],
+			                'snxyz' => [
+			                        'msg' => 'mwe-upwiz-license-snxyz',
+			                        'url' => '//songngu.xyz/License',
+			                ]
+			        ],
+			'licensing' => [
+				'defaultType' => 'ownwork',
+				'ownWorkDefault' => 'choice',
+				'thirdParty' => [
+					'type' => 'or',
+					'licenseGroups' => [
+						[
+							'head' => 'mwe-upwiz-license-lhmn-head',
+							'subhead' => 'mwe-upwiz-license-lhmn-subhead',
+							'licenses' => [
+								'lhmn'
+							],
+							'template' => 'LHMN'
+						],
+						[
+							'head' => 'mwe-upwiz-license-snxyz-head',
+							'subhead' => 'mwe-upwiz-license-snxyz-subhead',
+							'licenses' => [
+								'snxyz'
+							],
+							'template' => 'SNXYZ'
+						],
+						[
+							'head' => 'mwe-upwiz-license-cc-head',
+							'subhead' => 'mwe-upwiz-license-cc-subhead',
+							'licenses' => [
+								'cc-zero',
+								'cc-by-4.0',
+								'cc-by-3.0',
+								'cc-by-2.5',
+								'cc-by-sa-4.0',
+								'cc-by-sa-3.0',
+								'cc-by-sa-2.5'
+							]
+						],
+						[
+							'head' => 'mwe-upwiz-license-custom-head',
+							'special' => 'custom',
+							'licenses' => [ 'custom' ]
+						]
+					]
+				]
+			]
+		];
+
+		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
