@@ -2766,13 +2766,13 @@ $wgConf->settings += [
 			[ 'newtablinks', 'wikiwalk' ],
 			'_self' => [ 'sametablinks' ]
 		],
-		'scruffywiki' => [
+		'scruffwiki' => [
 			'_blank' => [ '' ]
 		],
 		'sdiywikiwiki' => [
 			'_blank' => [ '' ]
 		],
-		'simpleelectronicswiki' => [
+		'simpleelectronicswikiwiki' => [
 			'_blank' => [ '' ]
 		],
 	],
