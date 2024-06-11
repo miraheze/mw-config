@@ -1115,6 +1115,23 @@ $wgConf->settings += [
 		'default' => '/srv/GeoLite2-City.mmdb',
 	],
 
+	// CustomSearchProfiles
+	'wgCustomSearchProfilesProfiles' => [
+		'default' => [],
+		'rainversewiki' => [
+			'comic' => [
+				'namespaces' => [
+					3002, // Rain
+					3004, // MIS
+					3006, // Rainbow
+				],
+			],
+			'mainspace' => [
+				'namespaces' => [ NS_MAIN ],
+			],
+		],
+	],
+
 	// Darkmode
 	'wgDarkModeTogglePosition' => [
 		'default' => 'personal',
