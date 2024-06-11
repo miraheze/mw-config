@@ -1121,9 +1121,12 @@ $wgConf->settings += [
 		'rainversewiki' => [
 			'comic' => [
 				'namespaces' => [
-					3002, // Rain
-					3004, // MIS
-					3006, // Rainbow
+					// Rain
+					3002,
+					// MIS
+					3004,
+					// Rainbow
+					3006,
 				],
 			],
 			'mainspace' => [
