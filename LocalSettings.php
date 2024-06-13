@@ -1749,6 +1749,7 @@ $wgConf->settings += [
 	],
 	'wgMirahezeSurveyEnabled' => [
 		'default' => false,
+		'staffwiki' => true,
 	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
