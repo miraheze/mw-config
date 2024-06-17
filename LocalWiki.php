@@ -510,40 +510,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'snxyzincubatorwiki':
-		$wgLogos = [
-			'1x' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'svg' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'icon' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'wordmark' => [
-				'src' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
-				'1x' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
-				'width' => 135,
-				'height' => 20,
-			],
-			'tagline' => [
-				'src' => "https://static.wikitide.net/snxyzincubatorwiki/6/60/Tagline_EN.svg",
-				'width' => 135,
-				'height' => 15,
-			],
-			'variants' => [
-				'vi' => [
-					'wordmark' => [
-						'src' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
-						'1x' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
-						'width' => 135,
-						'height' => 20,
-					],
-					'tagline' => [
-						'src' => "https://static.wikitide.net/snxyzincubatorwiki/1/1b/Tagline_VI.svg",
-						'width' => 135,
-						'height' => 15,
-					],
-				],
-			],
-		];
-
-		break;
 	case 'spacewiki':
 		$wgExtraNamespaces += [
 			NS_TALK => 'talk',
