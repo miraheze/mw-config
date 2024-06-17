@@ -3842,6 +3842,12 @@ $wgConf->settings += [
 			'zh-hant',
 			'zh-hans',
 		],
+		'zhtardiswiki' => [
+			'zh-hans',
+			'zh-hant',
+			'zh-mo',
+			'zh-my',
+		],
 	],
 	'wgDefaultLanguageVariant' => [
 		'default' => false,
