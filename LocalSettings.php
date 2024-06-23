@@ -4837,6 +4837,7 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'+gengbaikewiki' => [
+			'bureaucrat',
 			'interwiki',
 		],
 		'+gratispaideiawiki' => [
