@@ -1583,7 +1583,7 @@ $wgConf->settings += [
 			],
 		],
 		'lhmnwiki' => [
-			'poweredby' => [
+			'hostedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
@@ -1598,6 +1598,8 @@ $wgConf->settings += [
 					"height" => "60",
 				        "width" => "60"
 				],
+			],
+			'poweredby' => [
 				'mediawiki' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
