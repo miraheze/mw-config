@@ -2943,7 +2943,11 @@ $wgManageWikiExtensions = [
 		'name' => 'SpriteSheet',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpriteSheet',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+						'managewiki-restricted',
+					],
+		],
 		'install' => [
 			'sql' => [
 				'spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
