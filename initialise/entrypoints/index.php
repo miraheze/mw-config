@@ -22,7 +22,13 @@ if ( $wgArticlePath === '/$1' && str_contains( strtoupper( $_SERVER['REQUEST_URI
 }
 
 // $wgArticlePath === '/$1' ||
-if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' ) ) {
+// T12263: Avoid redirecting main page to domain root if a POST is being done.
+// This is because the POST is likely an action to be done (such as editing the
+// page), and a 301 redirect would cause the HTTP client to potentially switch to
+// a GET request and discard the request body.
+// We could switch to a 308, which is guaranteed to continue using POST, but that
+// just adds an extra, unnecessary redirect.
+if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' && $_SERVER['REQUEST_METHOD'] !== 'POST' ) ) {
 	// Try to redirect the main page to domain root if using $wgMainPageIsDomainRoot
 	$title = '';
 	if ( isset( $_SERVER['REQUEST_URI'] ) ) {
