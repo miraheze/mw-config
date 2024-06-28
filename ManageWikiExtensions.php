@@ -608,6 +608,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'linkcards' => [
+		'name' => 'LinkCards',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkCards',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'linktitles' => [
 		'name' => 'LinkTitles',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkTitles',
