@@ -101,6 +101,14 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'furrnationswiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
