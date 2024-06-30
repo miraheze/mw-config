@@ -4196,14 +4196,14 @@ $wgConf->settings += [
 		],
 		'+metawiki' => [
 			'electionadmin',
-			'global-sysop',
+			'global-admin',
 			'interface-admin',
 			'techteam',
 			'trustandsafety'
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
-			'global-sysop',
+			'global-admin',
 			'interface-admin',
 			'techteam',
 			'trustandsafety'
