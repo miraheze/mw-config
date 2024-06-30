@@ -3090,7 +3090,7 @@ $wgConf->settings += [
 			'global-renamer' => [
 				'centralauth-rename' => true,
 			],
-			'global-sysop' => [
+			'global-admin' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
@@ -3176,7 +3176,7 @@ $wgConf->settings += [
 			'global-renamer' => [
 				'centralauth-rename' => true,
 			],
-			'global-sysop' => [
+			'global-admin' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
@@ -4410,7 +4410,7 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
-			'global-sysop' => [
+			'global-admin' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
