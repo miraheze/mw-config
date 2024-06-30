@@ -3642,6 +3642,16 @@ $wgManageWikiSettings = [
 		'help' => 'Allow user JavaScript pages. For example User:<user>/*.js.',
 		'requires' => [],
 	],
+	'wgUseLegacyMediaStyles' => [
+		'name' => 'Enable deprecated thumbnail styles',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Whether or not to use old thumbnail styles. This should be enabled if there are templates that depend on classes such as .thumb, .tright, and .thumbinner.',
+		'requires' => [],
+	],
 	'wgUseCustomLandingPageStyles' => [
 		'name' => 'Use Custom Landing Page Styles',
 		'from' => 'articlecreationworkflow',
