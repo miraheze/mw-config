@@ -5376,6 +5376,9 @@ $wgConf->settings += [
 	'wgAllowUserJs' => [
 		'default' => true,
 	],
+	'wgUseLegacyMediaStyles' => [
+		'default' => false,
+	],
 	'wgAppleTouchIcon' => [
 		'default' => '/apple-touch-icon.png',
 	],
