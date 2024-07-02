@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 89;
 // Global SiteNotice
 //if ( !$wmgSiteNoticeOptOut ) {
 $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
-/*
+
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
 	$skin->getOutput()->addInlineStyle(
@@ -34,7 +34,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 						Planned brief downtime
 					</div>
 					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-						There will be maintenance on April 28th, 2024 at 05:00 UTC. This maintenance will likely last until about 05:30 (about 30 minutes) during this time all wikis and other Miraheze services will be completly unavailable. We apologize for the inconvenience.
+						There will be emergency maintenance on July 5th, 2024 at 00:00 UTC. This maintenance will likely last until about 00:30 (about 30 minutes), but could last a bit longer. During this time all wikis and other Miraheze services will be completly unavailable. We apologize for the inconvenience.
 					</div>
 
 					<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
@@ -50,7 +50,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	EOF;
 }
 //}
-*/
+
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
