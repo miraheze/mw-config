@@ -14,6 +14,7 @@ $wgMajorSiteNoticeID = 89;
  * or Google will use the sitenotice for their search result snippet.
  */
 
+/*
 // Global SiteNotice
 //if ( !$wmgSiteNoticeOptOut ) {
 $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
@@ -50,6 +51,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	EOF;
 }
 //}
+*/
 
 // Specific wiki SiteNotice
 if ( $wi->isExtensionActive( 'Graph' ) ) {
