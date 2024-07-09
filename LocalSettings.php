@@ -1609,14 +1609,14 @@ $wgConf->settings += [
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					"height" => "32",
-						"width" => "200"
+					"width" => "200",
 				],
 				'miraheze' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					"height" => "60",
-						"width" => "60"
+					"width" => "60",
 				],
 			],
 			'poweredby' => [
