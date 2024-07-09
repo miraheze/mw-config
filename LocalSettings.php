@@ -1609,14 +1609,14 @@ $wgConf->settings += [
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					"height" => "32",
-				        "width" => "200"
+						"width" => "200"
 				],
 				'miraheze' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					"height" => "60",
-				        "width" => "60"
+						"width" => "60"
 				],
 			],
 			'poweredby' => [
@@ -6580,9 +6580,9 @@ $wgConf->settings += [
 			'thumbnailaccess' => false,
 			'TitleBlacklist' => false,
 			'TitleBlacklist-cache' => false,
-			// T12167 -- stop spamming Graylog; fixed in 1.42 so remove once 
+			// T12167 -- stop spamming Graylog; fixed in 1.42 so remove once
 			// we are on 1.42
-			'TitleKey' => false, 
+			'TitleKey' => false,
 			'torblock' => 'debug',
 			'TranslationNotifications.Jobs' => false,
 			'Translate.Jobs' => false,
