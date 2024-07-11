@@ -6641,8 +6641,7 @@ if ( $wi->version >= '1.42' ) {
 	array_push( $wi::$disabledExtensions, 'femiwiki' );
 	array_push( $wi::$disabledExtensions, 'snapwikiskin' );
 	array_push( $wi::$disabledExtensions, 'tweeki' );
-	// schema has changed in 1.42 into the mysql folder
-	array_push( $wi::$disabledExtensions, 'urlshortener' );
+	$wgConf->settings['wgCreateWikiSQLfiles']['default'][10] = "$IP/extensions/UrlShortener/schemas/mysql/tables-generated.sql";
 }
 
 $globals = MirahezeFunctions::getConfigGlobals();
