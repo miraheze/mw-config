@@ -223,25 +223,25 @@ switch ( $wi->dbname ) {
 			'autoAdd' => [
 				'wikitext' => [
 					'Tập tin này được tải lên bằng Trình thuật sĩ.'
-					],
+				],
 				'categories' => [
-					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'	
-					],
+					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'
+				],
 			],
 			'uwLanguages' => [
-					'vi' => 'Tiếng Việt',
-					'en' => 'English'
+				'vi' => 'Tiếng Việt',
+				'en' => 'English'
 			],
 			'licenses' => [
-			                'lhmn' => [
-			                        'msg' => 'mwe-upwiz-license-lhmn',
-			                        'url' => '//facebook.com/lophocmatngu',
-			                ],
-			                'snxyz' => [
-			                        'msg' => 'mwe-upwiz-license-snxyz',
-			                        'url' => '//songngu.xyz/License',
-			                ]
-			        ],
+				'lhmn' => [
+					'msg' => 'mwe-upwiz-license-lhmn',
+					'url' => '//facebook.com/lophocmatngu',
+				],
+				'snxyz' => [
+					'msg' => 'mwe-upwiz-license-snxyz',
+					'url' => '//songngu.xyz/License',
+				]
+			],
 			'licensing' => [
 				'defaultType' => 'ownwork',
 				'ownWorkDefault' => 'choice',
