@@ -5147,8 +5147,14 @@ $wgConf->settings += [
 		'default' => false,
 		'jwmeetingwiki' => true,
 	],
+	'wgRSSAllowLinkTag' => [
+		'default' => false,
+	],
 	'wgRSSCacheAge' => [
 		'default' => 3600,
+	],
+	'wgRSSItemMaxLength' => [
+		'default' => 200,
 	],
 	'wgRSSProxy' => [
 		'default' => 'http://bastion.wikitide.net:8080',

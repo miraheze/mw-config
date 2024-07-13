@@ -206,6 +206,34 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 		'requires' => [],
 	],
+	'wgRSSAllowLinkTag' => [
+		'name' => 'Allow links in RSS feeds',
+		'from' => 'rss',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'If enabled, links (<a> tags) will be shown. If disabled, the tags are escaped.',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
+	'wgRSSItemMaxLength' => [
+		'name' => 'Description length of RSS items',
+		'from' => 'rss',
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 4294967295,
+		'overridedefault' => 200,
+		'section' => 'other',
+		'help' => 'The maximum length of an RSS item\'s body',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
 	'wgRSSUserAgent' => [
 		'name' => 'RSS User Agent',
 		'from' => 'rss',
