@@ -6644,6 +6644,7 @@ if ( $wi->version >= '1.42' ) {
 	array_push( $wi::$disabledExtensions, 'chameleon' );
 	array_push( $wi::$disabledExtensions, 'evelution' );
 	array_push( $wi::$disabledExtensions, 'femiwiki' );
+	array_push( $wi::$disabledExtensions, 'ratepage' );
 	array_push( $wi::$disabledExtensions, 'snapwikiskin' );
 	array_push( $wi::$disabledExtensions, 'tweeki' );
 	$wgConf->settings['wgCreateWikiSQLfiles']['default'][10] = "$IP/extensions/UrlShortener/schemas/mysql/tables-generated.sql";
