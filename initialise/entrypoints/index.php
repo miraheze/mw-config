@@ -91,17 +91,8 @@ if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' && $_SERVER['R
 require_once MirahezeFunctions::getMediaWiki( 'includes/PHPVersionCheck.php' );
 wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ) );
 
-if ( version_compare( MW_VERSION, '1.42', '>=' ) ) {
-	( new ActionEntryPoint(
-		RequestContext::getMain(),
-		new EntryPointEnvironment(),
-		MediaWikiServices::getInstance()
-	) )->run();
-} else {
-	wfIndexMain();
-}
-
-function wfIndexMain() {
-	$mediaWiki = new MediaWiki();
-	$mediaWiki->run();
-}
+( new ActionEntryPoint(
+	RequestContext::getMain(),
+	new EntryPointEnvironment(),
+	MediaWikiServices::getInstance()
+) )->run();
