@@ -6643,6 +6643,7 @@ $wi::$disabledExtensions = [
 if ( $wi->version >= '1.42' ) {
 	array_push( $wi::$disabledExtensions, 'chameleon' );
 	array_push( $wi::$disabledExtensions, 'evelution' );
+	array_push( $wi::$disabledExtensions, 'eveskin' );
 	array_push( $wi::$disabledExtensions, 'femiwiki' );
 	array_push( $wi::$disabledExtensions, 'ratepage' );
 	array_push( $wi::$disabledExtensions, 'rightfunctions' );
