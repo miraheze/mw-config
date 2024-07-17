@@ -4860,7 +4860,6 @@ $wgConf->settings += [
 		],
 		'+gengbaikewiki' => [
 			'bureaucrat',
-			'interwiki',
 		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
