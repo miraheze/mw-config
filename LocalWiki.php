@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Linker\Linker;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
@@ -487,7 +488,7 @@ switch ( $wi->dbname ) {
 	case 'polandballruwiki':
 		$wgHooks['BeforeInitialize'][] = 'onBeforeInitialize';
 
-		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, MediaWiki $mediaWiki ) {
+		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, ActionEntryPoint $mediaWikiEntryPoint ) {
 			if ( $title && $title->getNamespace() === 201 ) {
 				$newTitle = Title::newFromText( $title->getText(), 3 );
 				if ( $newTitle ) {
