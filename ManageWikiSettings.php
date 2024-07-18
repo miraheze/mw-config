@@ -212,7 +212,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'other',
-		'help' => 'If enabled, links (<a> tags) will be shown. If disabled, the tags are escaped.',
+		'help' => 'If enabled, links (&lt;a&gt; tags) will be shown. If disabled, the tags are escaped.',
 		'requires' => [
 			'extensions' => [
 				'rss',
