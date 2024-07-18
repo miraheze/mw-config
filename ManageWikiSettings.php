@@ -1016,6 +1016,7 @@ $wgManageWikiSettings = [
 		'from' => 'tabberneue',
 		'type' => 'check',
 		'overridedefault' => true,
+		'section' => 'editing',
 		'help' => 'If enabled, activates smooth scroll animation when changing tabs',
 		'requires' => [],
 	],
