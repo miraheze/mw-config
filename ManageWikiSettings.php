@@ -1011,6 +1011,14 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, removes (substitutes) templates in signatures.',
 		'requires' => [],
 	],
+	'wgTabberNeueEnableAnimation' => [
+		'name' => 'TabberNeue Enable Animation',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => true,
+		'help' => 'If enabled, activates smooth scroll animation when changing tabs',
+		'requires' => [],
+	],
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'name' => 'TabberNeue Update Location On Tab Change',
 		'from' => 'tabberneue',
