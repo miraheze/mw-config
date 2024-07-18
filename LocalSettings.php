@@ -1004,7 +1004,7 @@ $wgConf->settings += [
 			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
 			"$IP/extensions/OAuth/schema/mysql/tables-generated.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
+			"$IP/extensions/UrlShortener/schemas/mysql/tables-generated.sql",
 		],
 	],
 	'wgCreateWikiStateDays' => [
@@ -6649,7 +6649,6 @@ if ( $wi->version >= '1.42' ) {
 	array_push( $wi::$disabledExtensions, 'rightfunctions' );
 	array_push( $wi::$disabledExtensions, 'snapwikiskin' );
 	array_push( $wi::$disabledExtensions, 'tweeki' );
-	$wgConf->settings['wgCreateWikiSQLfiles']['default'][10] = "$IP/extensions/UrlShortener/schemas/mysql/tables-generated.sql";
 }
 
 $globals = MirahezeFunctions::getConfigGlobals();
