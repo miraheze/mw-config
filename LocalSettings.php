@@ -6527,7 +6527,7 @@ $wgConf->settings += [
 			'LoginNotify' => 'info',
 			'ManageWiki' => 'debug',
 			'MassMessage' => false,
-			'Math' => 'info',
+			'Math' => 'debug',
 			'MatomoAnalytics' => 'debug',
 			'Mime' => false,
 			// debug sprews too much information + sample
