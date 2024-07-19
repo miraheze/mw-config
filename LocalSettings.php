@@ -1004,7 +1004,7 @@ $wgConf->settings += [
 			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
 			"$IP/extensions/OAuth/schema/mysql/tables-generated.sql",
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
-			"$IP/extensions/UrlShortener/schemas/tables-generated.sql",
+			"$IP/extensions/UrlShortener/schemas/mysql/tables-generated.sql",
 		],
 	],
 	'wgCreateWikiStateDays' => [
@@ -1113,6 +1113,26 @@ $wgConf->settings += [
 	],
 	'wgCookieWarningGeoIp2Path' => [
 		'default' => '/srv/GeoLite2-City.mmdb',
+	],
+
+	// CustomSearchProfiles
+	'wgCustomSearchProfilesProfiles' => [
+		'default' => [],
+		'rainversewiki' => [
+			'comic' => [
+				'namespaces' => [
+					// Rain
+					3002,
+					// MIS
+					3004,
+					// Rainbow
+					3006,
+				],
+			],
+			'mainspace' => [
+				'namespaces' => [ NS_MAIN ],
+			],
+		],
 	],
 
 	// Darkmode
@@ -1589,14 +1609,14 @@ $wgConf->settings += [
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					"height" => "32",
-				        "width" => "200"
+					"width" => "200",
 				],
 				'miraheze' => [
 					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					"height" => "60",
-				        "width" => "60"
+					"width" => "60",
 				],
 			],
 			'poweredby' => [
@@ -3070,7 +3090,7 @@ $wgConf->settings += [
 			'global-renamer' => [
 				'centralauth-rename' => true,
 			],
-			'global-sysop' => [
+			'global-admin' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
@@ -3156,7 +3176,7 @@ $wgConf->settings += [
 			'global-renamer' => [
 				'centralauth-rename' => true,
 			],
-			'global-sysop' => [
+			'global-admin' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
@@ -4176,14 +4196,14 @@ $wgConf->settings += [
 		],
 		'+metawiki' => [
 			'electionadmin',
-			'global-sysop',
+			'global-admin',
 			'interface-admin',
 			'techteam',
 			'trustandsafety'
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
-			'global-sysop',
+			'global-admin',
 			'interface-admin',
 			'techteam',
 			'trustandsafety'
@@ -4390,7 +4410,7 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
-			'global-sysop' => [
+			'global-admin' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
@@ -4406,7 +4426,7 @@ $wgConf->settings += [
 				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 			],
-			'sre' => [
+			'techteam' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
@@ -4839,7 +4859,7 @@ $wgConf->settings += [
 			'edittemplateprotected',
 		],
 		'+gengbaikewiki' => [
-			'interwiki',
+			'bureaucrat',
 		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
@@ -5126,8 +5146,14 @@ $wgConf->settings += [
 		'default' => false,
 		'jwmeetingwiki' => true,
 	],
+	'wgRSSAllowLinkTag' => [
+		'default' => false,
+	],
 	'wgRSSCacheAge' => [
 		'default' => 3600,
+	],
+	'wgRSSItemMaxLength' => [
+		'default' => 200,
 	],
 	'wgRSSProxy' => [
 		'default' => 'http://bastion.wikitide.net:8080',
@@ -5713,8 +5739,10 @@ $wgConf->settings += [
 	],
 	'wgMultiPurgeVarnishServers' => [
 		'default' => [
-			/** cp28 */
-			// 'http://[2001:470:25:715::2]:81',
+			/** cp26 */
+			'http://[2a02:c206:2161:9253::1]:81',
+			/** cp27 */
+			'http://[2a02:c206:2162:6187::1]:81',
 			/** cp36 */
 			'http://[2602:294:0:b13::110]:81',
 			/** cp37 */
@@ -6557,9 +6585,6 @@ $wgConf->settings += [
 			'thumbnailaccess' => false,
 			'TitleBlacklist' => false,
 			'TitleBlacklist-cache' => false,
-			// T12167 -- stop spamming Graylog; fixed in 1.42 so remove once 
-			// we are on 1.42
-			'TitleKey' => false, 
 			'torblock' => 'debug',
 			'TranslationNotifications.Jobs' => false,
 			'Translate.Jobs' => false,
@@ -6615,11 +6640,12 @@ $wi::$disabledExtensions = [
 if ( $wi->version >= '1.42' ) {
 	array_push( $wi::$disabledExtensions, 'chameleon' );
 	array_push( $wi::$disabledExtensions, 'evelution' );
+	array_push( $wi::$disabledExtensions, 'eveskin' );
 	array_push( $wi::$disabledExtensions, 'femiwiki' );
+	array_push( $wi::$disabledExtensions, 'ratepage' );
+	array_push( $wi::$disabledExtensions, 'rightfunctions' );
 	array_push( $wi::$disabledExtensions, 'snapwikiskin' );
 	array_push( $wi::$disabledExtensions, 'tweeki' );
-	// schema has changed in 1.42 into the mysql folder
-	array_push( $wi::$disabledExtensions, 'urlshortener' );
 }
 
 $globals = MirahezeFunctions::getConfigGlobals();

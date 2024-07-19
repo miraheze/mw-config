@@ -405,6 +405,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'customsearchprofiles' => [
+		'name' => 'CustomSearchProfiles',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CustomSearchProfiles',
+		'help' => 'Note: This extension is currently not configurable in ManageWiki. Please create a task on Phorge or a pull request to configure it.',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'customsubtitle' => [
 		'name' => 'CustomSubtitle',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CustomSubtitle',
@@ -597,6 +605,13 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Lingo',
 		'description' => 'Provides hover-over tool tips on pages from words defined on a wiki page',
 		'conflicts' => 'newsletter',
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'linkcards' => [
+		'name' => 'LinkCards',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkCards',
+		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
@@ -2943,7 +2958,11 @@ $wgManageWikiExtensions = [
 		'name' => 'SpriteSheet',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpriteSheet',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+						'managewiki-restricted',
+					],
+		],
 		'install' => [
 			'sql' => [
 				'spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
@@ -3627,6 +3646,13 @@ $wgManageWikiExtensions = [
 	'evelution' => [
 		'name' => 'Evelution',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Evelution',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'eveskin' => [
+		'name' => "Eveskin",
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Eveskin',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',

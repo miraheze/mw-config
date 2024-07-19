@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Linker\Linker;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
@@ -100,6 +101,14 @@ switch ( $wi->dbname ) {
 			$out->addMeta( 'og:image:width', '1200' );
 		}
 
+		break;
+	case 'furrnationswiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
 		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
@@ -215,25 +224,25 @@ switch ( $wi->dbname ) {
 			'autoAdd' => [
 				'wikitext' => [
 					'Tập tin này được tải lên bằng Trình thuật sĩ.'
-					],
+				],
 				'categories' => [
-					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'	
-					],
+					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'
+				],
 			],
 			'uwLanguages' => [
-					'vi' => 'Tiếng Việt',
-					'en' => 'English'
+				'vi' => 'Tiếng Việt',
+				'en' => 'English'
 			],
 			'licenses' => [
-			                'lhmn' => [
-			                        'msg' => 'mwe-upwiz-license-lhmn',
-			                        'url' => '//facebook.com/lophocmatngu',
-			                ],
-			                'snxyz' => [
-			                        'msg' => 'mwe-upwiz-license-snxyz',
-			                        'url' => '//songngu.xyz/License',
-			                ]
-			        ],
+				'lhmn' => [
+					'msg' => 'mwe-upwiz-license-lhmn',
+					'url' => '//facebook.com/lophocmatngu',
+				],
+				'snxyz' => [
+					'msg' => 'mwe-upwiz-license-snxyz',
+					'url' => '//songngu.xyz/License',
+				]
+			],
 			'licensing' => [
 				'defaultType' => 'ownwork',
 				'ownWorkDefault' => 'choice',
@@ -479,7 +488,7 @@ switch ( $wi->dbname ) {
 	case 'polandballruwiki':
 		$wgHooks['BeforeInitialize'][] = 'onBeforeInitialize';
 
-		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, MediaWiki $mediaWiki ) {
+		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, ActionEntryPoint $mediaWikiEntryPoint ) {
 			if ( $title && $title->getNamespace() === 201 ) {
 				$newTitle = Title::newFromText( $title->getText(), 3 );
 				if ( $newTitle ) {
