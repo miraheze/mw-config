@@ -12,7 +12,7 @@ require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
 // T12214: Avoid redirects if action=raw is set
-if ( RequestContext::getMain()->getActionName() !== "raw" ) {
+if ( RequestContext::getMain()->getActionName() !== 'raw' ) {
 	if ( $wgArticlePath === '/$1' && str_contains( strtoupper( $_SERVER['REQUEST_URI'] ), strtoupper( '/wiki/' ) ) ) {
 		// Redirect to the same page maintaining the path
 		header( 'Location: ' . str_replace( '/wiki/', '/', $_SERVER['REQUEST_URI'] ), true, 301 );
