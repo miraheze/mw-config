@@ -2742,6 +2742,7 @@ $wgConf->settings += [
 	// Links?
 	'+wgUrlProtocols' => [
 		'default' => [],
+		'downgradegameswiki' => [ 'steam://' ],
 		// file protocol only allowed on private wikis
 		'gzewiki' => [ 'file://' ],
 		'vtwiki' => [ 'discord://' ],
