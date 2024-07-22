@@ -368,6 +368,12 @@ $wgConf->settings += [
 	],
 
 	// Cargo
+	'+wgCargoAllowedSQLFunctions' => [
+		'default' => [],
+		'rainversewiki' => [
+			'NATURAL_SORT_KEY',
+		],
+	],
 	'wgCargoDBuser' => [
 		'default' => 'cargouser',
 	],
