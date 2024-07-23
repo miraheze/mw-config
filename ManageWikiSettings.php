@@ -334,6 +334,15 @@ $wgManageWikiSettings = [
 		'help' => 'This option makes a message appear on unapproved revisions indicating this revision has not been approved',
 		'requires' => [],
 	],
+	'wgDisplayFeedsInSidebar' => [
+		'Display feeds in sidebar',
+		'from' => 'featuredfeeds',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'other',
+		'help' => 'This option controls whether or not feeds will be linked to in the sidebar',
+		'requires' => [],
+	],
 	'wgFlaggedRevsProtection' => [
 		'name' => 'Flagged Revs Protection',
 		'from' => 'flaggedrevs',
