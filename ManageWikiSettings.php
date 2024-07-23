@@ -335,7 +335,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgDisplayFeedsInSidebar' => [
-		'Display feeds in sidebar',
+		'name' => 'Display feeds in sidebar',
 		'from' => 'featuredfeeds',
 		'type' => 'check',
 		'overridedefault' => true,
