@@ -1533,12 +1533,16 @@ $wgConf->settings += [
 	],
 
 	// FeaturedFeeds
-
 	'wgFeaturedFeedsDefaults' => [
 		'default' => [
 			'limit' => 10,
-			'inUserLanguage' => true,
+			'frequency' => 'daily',
+			'inUserLanguage' => false,
 		],
+	],
+
+	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
+		'default' => false,
 	],
 
 	'wgDisplayFeedsInSidebar' => [

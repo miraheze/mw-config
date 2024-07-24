@@ -415,6 +415,16 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 	];
 }
 
+// FeaturedFeeds configuration
+
+if ( $wi->isExtensionActive( 'FeaturedFeeds' ) ) {
+	if ( $wmgMirahezeFeaturedFeedsInUserLanguage ) {
+		$wgFeaturedFeedsDefaults['inUserLanguage'] = true;
+	} else {
+		$wgFeaturedFeedsDefaults['inUserLanguage'] = false;
+	}
+}
+
 if ( $wi->isExtensionActive( 'Score' ) ) {
 	$wgScoreFileBackend = 'miraheze-swift';
 }

@@ -343,6 +343,14 @@ $wgManageWikiSettings = [
 		'help' => 'This option controls whether or not feeds will be linked to in the sidebar',
 		'requires' => [],
 	],
+	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
+		'name' => 'Should feeds honor the user\'s preferred language?',
+		'from' => 'featuredfeeds',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'This option sets <code>$wgFeaturedFeedsDefaults["inUserLanguage"]</code>',
+	],
 	'wgFlaggedRevsProtection' => [
 		'name' => 'Flagged Revs Protection',
 		'from' => 'flaggedrevs',
