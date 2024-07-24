@@ -1347,6 +1347,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
+	'featuredfeeds' => [
+		'name' => 'FeaturedFeeds',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FeaturedFeeds',
+		'help' => '<b>Configuration of </b><code>$wgFeaturedFeeds</code><b> is not possible in ManageWiki.</b><br/> File a task on <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Phorge">Phorge</a> or a pull request on our mw-config repository with the desired configuration',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other'
+	],
 	'flaggedrevs' => [
 		'name' => 'FlaggedRevs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FlaggedRevs',

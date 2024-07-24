@@ -1532,6 +1532,23 @@ $wgConf->settings += [
 		'default' => 'http://bastion.wikitide.net:8080',
 	],
 
+	// FeaturedFeeds
+	'wgFeaturedFeedsDefaults' => [
+		'default' => [
+			'limit' => 10,
+			'frequency' => 'daily',
+			'inUserLanguage' => false,
+		],
+	],
+
+	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
+		'default' => false,
+	],
+
+	'wgDisplayFeedsInSidebar' => [
+		'default' => true,
+	],
+
 	// FlaggedRevs
 	'wgFlaggedRevsProtection' => [
 		'default' => false,
