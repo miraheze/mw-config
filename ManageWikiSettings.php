@@ -350,6 +350,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'other',
 		'help' => 'This option sets <code>$wgFeaturedFeedsDefaults["inUserLanguage"]</code>',
+		'requires' => [],
 	],
 	'wgFlaggedRevsProtection' => [
 		'name' => 'Flagged Revs Protection',
