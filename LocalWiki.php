@@ -428,6 +428,7 @@ switch ( $wi->dbname ) {
 			'RequestSSL',
 		] );
 
+		/*
 		$wgFeaturedFeeds['test'] = [
 			'page' => 'feedtest',
 			'title' => 'feedtest-title',
@@ -435,6 +436,7 @@ switch ( $wi->dbname ) {
 			'description' => 'feedtest-description',
 			'entryName' => 'feedtest-entryname',
 		];
+		*/
 
 		break;
 	case 'metzowiki':
