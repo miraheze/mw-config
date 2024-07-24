@@ -431,6 +431,7 @@ switch ( $wi->dbname ) {
 		$wgFeaturedFeeds['test'] = [
 			'page' => 'feedtest',
 			'title' => 'feedtest-title',
+			'short-title' => 'feedtest-short-title',
 			'description' => 'feedtest-description',
 			'entryName' => 'feedtest-entryname',
 		];
