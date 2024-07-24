@@ -428,6 +428,13 @@ switch ( $wi->dbname ) {
 			'RequestSSL',
 		] );
 
+		$wgFeaturedFeeds['test'] = [
+			'page' => 'feedtest',
+			'title' => 'feedtest-title',
+			'feedtest-description',
+			'entryName' => 'feedtest-entryname',
+		];
+
 		break;
 	case 'metzowiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
