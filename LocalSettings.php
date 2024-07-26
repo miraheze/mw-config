@@ -2768,6 +2768,7 @@ $wgConf->settings += [
 		'downgradegameswiki' => [ 'steam://' ],
 		// file protocol only allowed on private wikis
 		'gzewiki' => [ 'file://' ],
+		'rainversewiki' => [ 'gemini://' ],
 		'vtwiki' => [ 'discord://' ],
 		'100acgwiki' => [ 'infoflow://' ],
 	],
