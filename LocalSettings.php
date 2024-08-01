@@ -571,6 +571,12 @@ $wgConf->settings += [
 		],
 	],
 
+	// CirrusSearch
+	'wgCirrusSearchPrefixSearchStartsWithAnyWord' => [
+		'default' => false,
+		'rainversewiki' => true,
+	],
+
 	// Citizen
 	'wgCitizenThemeDefault' => [
 		'default' => 'auto',
