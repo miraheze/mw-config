@@ -4353,7 +4353,7 @@ $wgConf->settings += [
 		'default' => 'espeak',
 	],
 	'wgPhonosInlineAudioPlayerMode' => [
-		'default' => true,
+		'default' => false,
 	],
 
 	'wgTemporaryParsoidHandlerParserCacheWriteRatio' => [
