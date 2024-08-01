@@ -4337,10 +4337,10 @@ $wgConf->settings += [
 
 	// Phonos
 	'wgPhonosEspeak' => [
-		'default' => '/usr/bin/espeak',
+		'default' => '/usr/local/bin/mediawiki-firejail-espeak',
 	],
 	'wgPhonosLame' => [
-		'default' => '/usr/bin/lame',
+		'default' => '/usr/local/bin/mediawiki-firejail-lame',
 	],
 	'wgPhonosEngine' => [
 		/*
