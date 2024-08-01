@@ -805,6 +805,14 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'parserhooks',
 	],
+	'phonos' => [
+		'name' => 'Phonos',
+		'displayname' => 'Phonos',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Phonos',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'pipeescape' => [
 		'name' => 'Pipe Escape',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Pipe_Escape',

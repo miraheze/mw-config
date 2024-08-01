@@ -106,6 +106,10 @@ if ( $wi->isAllOfExtensionsActive( '3d', 'MultimediaViewer' ) ) {
 	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 }
 
+if ( $wi->isExtensionActive( 'Phonos' ) ) {
+	$wgPhonosFileBackend = 'miraheze-swift';
+}
+
 if ( $wi->isExtensionActive( 'Popups' ) ) {
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
