@@ -4497,7 +4497,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgPopupsTextExtractsIntroOnly' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgPopupsOptInDefaultState' => [
 		'default' => 0,
