@@ -4496,6 +4496,9 @@ $wgConf->settings += [
 	'wgPopupsHideOptInOnPreferencesPage' => [
 		'default' => false,
 	],
+	'wgPopupsTextExtractsIntroOnly' => [
+		'default' => false,
+	],
 	'wgPopupsOptInDefaultState' => [
 		'default' => 0,
 	],
