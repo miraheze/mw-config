@@ -515,6 +515,14 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
+
+		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
+
+		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerlinks ) {
+			if ( $key === 'info' && $skin->getSkinName() !== 'citizen' ) {
+				$footerlinks['tagline'] = $skin->msg( 'citizen-footer-tagline' )->parse();
+			}
+		}
 		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
