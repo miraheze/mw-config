@@ -1046,6 +1046,16 @@ $wgManageWikiSettings = [
 		'section' => 'editing',
 		'help' => 'If enabled, when a tab is selected, the URL displayed on the browser changes. Opening this URL makes that tab initially selected.',
 		'requires' => [],
+	'wgEnableEditRecovery' => [
+		'name' => 'Enable Edit Recovery',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'global' => true,
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Enables [[mw:Help:Edit Recovery|Edit Recovery]] on this wiki, must be enabled in [[Special:preferences|]].'
+		'requires' => []
+	]
 	],
 
 	// Links
