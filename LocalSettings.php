@@ -90,6 +90,10 @@ $wgConf->settings += [
 	'wgAuthenticationTokenVersion' => [
 		'default' => '8',
 	],
+	
+	'wgEnableEditRecovery' => [
+		'default' => true
+	],
 
 	'wgPrivilegedGroups' => [
 		'default' => [ 'bureaucrat', 'checkuser', 'interface-admin', 'suppress', 'sysop' ],
@@ -1420,7 +1424,7 @@ $wgConf->settings += [
 		'default' => false,
 		'ysmwikiwiki' => true,
 	],
-
+ 
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
