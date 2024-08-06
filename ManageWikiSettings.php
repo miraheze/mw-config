@@ -1053,7 +1053,7 @@ $wgManageWikiSettings = [
 		'global' => true,
 		'overridedefault' => true,
 		'section' => 'editing',
-		'help' => 'Enables [[mw:Help:Edit Recovery|Edit Recovery]] on this wiki, must be enabled in [[Special:preferences|]].'
+		'help' => 'Enables [[mw:Help:Edit Recovery|Edit Recovery]] on this wiki, must be enabled in [[Special:preferences|]].',
 		'requires' => []
 	]
 	],
