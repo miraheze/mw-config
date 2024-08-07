@@ -5476,6 +5476,9 @@ $wgConf->settings += [
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'default' => true,
 	],
+	'wgTabberNeueUseCodex' => [
+		'default' => false,
+	],
 	'wgTabberNeueParseTabName' => [
 		'default' => false,
 	],
