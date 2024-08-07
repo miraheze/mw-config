@@ -692,12 +692,6 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Math',
 		'conflicts' => false,
 		'requires' => [],
-		'install' => [
-			'sql' => [
-				'mathlatexml' => "$IP/extensions/Math/sql/mysql/mathlatexml.sql",
-				'mathoid' => "$IP/extensions/Math/sql/mysql/mathoid.sql"
-			],
-		],
 		'section' => 'parserhooks',
 	],
 	'mermaid' => [
@@ -803,6 +797,14 @@ $wgManageWikiExtensions = [
 				],
 			],
 		],
+		'section' => 'parserhooks',
+	],
+	'phonos' => [
+		'name' => 'Phonos',
+		'displayname' => 'Phonos',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Phonos',
+		'conflicts' => false,
+		'requires' => [],
 		'section' => 'parserhooks',
 	],
 	'pipeescape' => [

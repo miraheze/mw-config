@@ -2232,6 +2232,20 @@ $wgManageWikiSettings = [
 		'help' => 'Whether the option to enable/disable Page Previews should be hidden on Preferences page. Please note if PopupsBetaFeature is set to true this option will be always hidden.',
 		'requires' => [],
 	],
+	'wgPopupsTextExtractsIntroOnly' => [
+		'name' => 'Popups Use intro text only when using TextExtracts',
+		'from' => 'popups',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'preferences',
+		'help' => 'Whether or not Page Previews will only request the intro paragraph from TextExtracts or not',
+		'requires' => [
+			'extensions' => [
+				'popups',
+				'textextracts',
+			],
+		],
+	],
 
 	// Recent changes
 	'wgFeedLimit' => [

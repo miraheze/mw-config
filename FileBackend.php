@@ -60,6 +60,7 @@ if ( $cwPrivate ) {
 		'/awards/' => 'mwstore://miraheze-swift/awards/',
 		'/dumps/' => 'mwstore://miraheze-swift/dumps-backup/',
 		'/score/' => 'mwstore://miraheze-swift/score-render/',
+		'/phonos-render/' => 'mwstore://miraheze-swift/phonos-render/',
 		'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
 	];
 }
