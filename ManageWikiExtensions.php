@@ -1043,6 +1043,13 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'parserhooks',
 	],
+	'timezoneconverter' => [
+		'name' => 'TimezoneConverter',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimezoneConverter',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'toctree' => [
 		'name' => 'TocTree',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TocTree',
