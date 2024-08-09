@@ -1417,6 +1417,13 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'googleforms' => [
+		'name' => 'CustomSearchProfiles',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleForms',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'googlenewssitemap' => [
 		'name' => 'GoogleNewsSitemap',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleNewsSitemap',
