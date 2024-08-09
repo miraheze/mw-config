@@ -3688,6 +3688,21 @@ $wgManageWikiSettings = [
 		'help' => 'Enable included Noto Sans CJK for wikis that serves CJK languages',
 		'requires' => [],
 	],
+	'wgCitizenOverflowNowrapClasses' => [
+		'name' => 'Citizen Overflow No-wrap Classes',
+		'from' => 'citizen',
+		'type' => 'texts',
+		'overridedefault' => [
+			'citizen-table-nowrap',
+			'cargoDynamicTable',
+			'dataTable',
+			'smw-datatable',
+			'srf-datatable',
+		],
+		'section' => 'styling',
+		'help' => 'Defines CSS classes ignored by overflow wrapper',
+		'requires' => [],
+	],
 	'wgRelatedArticlesFooterAllowedSkins' => [
 		'name' => 'RelatedArticles Footer Allowed Skins',
 		'from' => 'relatedarticles',

@@ -603,6 +603,15 @@ $wgConf->settings += [
 	'wgCitizenEnableCJKFonts' => [
 		'default' => false,
 	],
+	'wgCitizenOverflowNowrapClasses' => [
+		'default' => [
+			'citizen-table-nowrap',
+			'cargoDynamicTable',
+			'dataTable',
+			'smw-datatable',
+			'srf-datatable',
+		],
+	],
 
 	// Comments
 	'wgCommentsDefaultAvatar' => [
