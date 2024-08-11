@@ -106,6 +106,10 @@ if ( $wi->isAllOfExtensionsActive( '3d', 'MultimediaViewer' ) ) {
 	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 }
 
+if ( $wi->isExtensionActive( 'Phonos' ) ) {
+	$wgPhonosFileBackend = 'miraheze-swift';
+}
+
 if ( $wi->isExtensionActive( 'Popups' ) ) {
 	if ( $wmgShowPopupsByDefault ) {
 		$wgPopupsHideOptInOnPreferencesPage = true;
@@ -413,6 +417,16 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 		'campaignExpensiveStatsEnabled' => false,
 		'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
 	];
+}
+
+// FeaturedFeeds configuration
+
+if ( $wi->isExtensionActive( 'FeaturedFeeds' ) ) {
+	if ( $wmgMirahezeFeaturedFeedsInUserLanguage ) {
+		$wgFeaturedFeedsDefaults['inUserLanguage'] = true;
+	} else {
+		$wgFeaturedFeedsDefaults['inUserLanguage'] = false;
+	}
 }
 
 if ( $wi->isExtensionActive( 'Score' ) ) {
