@@ -1795,7 +1795,11 @@ $wgConf->settings += [
 		'default' => 'rsvg',
 	],
 	'wgSVGConverterPath' => [
-		'default' => '/usr/local/bin'
+		'default' => '/usr/local/bin',
+	],
+	'wgSVGNativeRendering' => [
+		'default' => false,
+		'cloudstreamwiki' => true,
 	],
 	'wgUploadMissingFileUrl' => [
 		'default' => false,
