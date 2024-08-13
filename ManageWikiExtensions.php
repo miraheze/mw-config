@@ -3339,6 +3339,22 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'userprofilev2' => [
+		'name' => 'UserProfileV2',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UserProfileV2',
+		'conflicts' => 'socialprofile',
+		'requires' => [],
+		'install' => [
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'profilemanager',
+					],
+				],
+			],
+		],
+		'section' => 'other',
+	],
 	'variables' => [
 		'name' => 'Variables',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Variables',
