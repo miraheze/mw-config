@@ -3895,7 +3895,7 @@ $wgManageWikiSettings = [
 		'help' => 'Whether or not to show the normal MediaWiki external link icon when using the Chameleon skin.',
 		'requires' => [],
 	],
-	'egUserProfileV2Color' => [
+	'wgUserProfileV2Color' => [
 		'name' => 'UserProfileV2 Accent Color',
 		'from' => 'userprofilev2',
 		'type' => 'text',
@@ -3904,7 +3904,7 @@ $wgManageWikiSettings = [
 		'help' => 'The accent/secondary color used for UserProfileV2. This is used as a background colour for the user group tags and the avatar edit button.',
 		'requires' => [],
 	],
-	'egUserProfileV2AvatarBorderRadius' => [
+	'wgUserProfileV2AvatarBorderRadius' => [
 		'name' => 'UserProfileV2 Avatar Border-radius',
 		'from' => 'userprofilev2',
 		'type' => 'text',
