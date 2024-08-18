@@ -523,6 +523,7 @@ switch ( $wi->dbname ) {
 				$footerlinks['tagline'] = $skin->msg( 'citizen-footer-tagline' )->parse();
 			}
 		}
+
 		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
