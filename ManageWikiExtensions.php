@@ -542,6 +542,7 @@ $wgManageWikiExtensions = [
 	'headertabs' => [
 		'name' => 'Header Tabs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Header_Tabs',
+		'help' => 'Note: This extension is currently incompatible with MediaWiki 1.42, and so does nothing at the moment.',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
