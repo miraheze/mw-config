@@ -197,6 +197,69 @@ switch ( $wi->dbname ) {
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
+	case 'kagagawiki':
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+			'uwLanguages' => [
+				'ja' => '日本語',
+				'en' => 'English',
+			],
+			'licenses' => [
+				'cc-by-sa-4.0' => [
+					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0',
+					'icons' => [ 'cc-by', 'cc-sa' ],
+					'url' => '//creativecommons.org/licenses/by-sa/4.0/',
+					'languageCodePrefix' => 'deed.',
+				],
+				'cc-zero' => [
+					'msg' => 'mwe-upwiz-license-cc-zero',
+					'icons' => [ 'cc-zero' ],
+					'url' => '//creativecommons.org/publicdomain/zero/1.0/',
+					'languageCodePrefix' => 'deed.',
+				],
+				'rs-inc' => [
+					'msg' => 'mwe-upwiz-license-rs-inc',
+					'templates' => [ 'rs-inc' ],
+					'url' => '//rightsstatements.org/page/InC/1.0/',
+				],
+				'rs-und' => [
+					'msg' => 'mwe-upwiz-license-rs-und',
+					'templates' => [ 'rs-und' ],
+					'url' => '//rightsstatements.org/page/UND/1.0/',
+				],
+			],
+			'licensing' => [
+				'ownWork' => [
+					'type' => 'or',
+					'template' => 'self',
+					'defaults' => 'cc-by-sa-4.0',
+					'licenses' => [
+						'cc-by-sa-4.0',
+						'cc-zero',
+						'rs-inc',
+						'rs-und',
+					],
+				],
+				'thirdParty' => [
+					'type' => 'or',
+					'defaults' => 'cc-by-sa-4.0',
+					'licenseGroups' => [
+						[
+							'head' => 'mwe-upwiz-license-cc-head',
+							'subhead' => 'mwe-upwiz-license-cc-subhead',
+							'licenses' => [
+								'cc-by-sa-4.0',
+								'cc-zero',
+								'rs-inc',
+								'rs-und',
+							],
+						],
+					],
+				],
+			],
+		];
+		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
