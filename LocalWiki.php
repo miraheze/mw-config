@@ -199,6 +199,8 @@ switch ( $wi->dbname ) {
 		break;
 	case 'kagagawiki':
 		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
 			'uwLanguages' => [
 				'ja' => '日本語',
 				'en' => 'English',
