@@ -1898,6 +1898,13 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'unusedredirects' => [
+		'name' => 'UnusedRedirects',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UnusedRedirects',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
 	'urlshortener' => [
 		'name' => 'UrlShortener',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UrlShortener',
