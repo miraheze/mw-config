@@ -201,30 +201,27 @@ switch ( $wi->dbname ) {
 		$wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
 			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+			'debug' => false,
+			'altUploadForm' => 'Special:Upload',
+			'feedbackLink' => false,
+			'alternativeUploadToolsPage' => false,
+			'enableFormData' => true,
+			'enableMultipleFiles' => true,
+			'enableMultiFileSelect' => true,
 			'uwLanguages' => [
 				'ja' => '日本語',
 				'en' => 'English',
 			],
 			'licenses' => [
-				'cc-by-sa-4.0' => [
-					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0-text',
-					'icons' => [ 'cc-by', 'cc-sa' ],
-					'url' => '//creativecommons.org/licenses/by-sa/4.0/',
-					'languageCodePrefix' => 'deed.',
-				],
-				'cc-zero' => [
-					'msg' => 'mwe-upwiz-license-cc-zero-text',
-					'icons' => [ 'cc-zero' ],
-					'url' => '//creativecommons.org/publicdomain/zero/1.0/',
-					'languageCodePrefix' => 'deed.',
-				],
 				'rs-inc' => [
 					'msg' => 'mwe-upwiz-license-rs-inc-text',
+					'msgExplain' => 'mwe-upwiz-license-rs-inc-explain',
 					'templates' => [ 'rs-inc' ],
 					'url' => '//rightsstatements.org/page/InC/1.0/',
 				],
 				'rs-und' => [
 					'msg' => 'mwe-upwiz-license-rs-und-text',
+					'msgExplain' => 'mwe-upwiz-license-rs-und-explain',
 					'templates' => [ 'rs-und' ],
 					'url' => '//rightsstatements.org/page/UND/1.0/',
 				],
