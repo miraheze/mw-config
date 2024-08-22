@@ -204,7 +204,7 @@ switch ( $wi->dbname ) {
 			'uwLanguages' => [
 				'ja' => '日本語',
 				'en' => 'English',
-  			],
+			],
 			'licenses' => [
 				'cc-by-sa-4.0' => [
 					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0',
@@ -219,14 +219,14 @@ switch ( $wi->dbname ) {
 					'languageCodePrefix' => 'deed.',
 				],
 				'rs-inc' => [
-				      'msg' => 'mwe-upwiz-license-rs-inc',
-				      'templates' => [ 'rs-inc' ],
-				      'url' => '//rightsstatements.org/page/InC/1.0/',
+					'msg' => 'mwe-upwiz-license-rs-inc',
+					'templates' => [ 'rs-inc' ],
+					'url' => '//rightsstatements.org/page/InC/1.0/',
 				],
 				'rs-und' => [
-				      'msg' => 'mwe-upwiz-license-rs-und',
-				      'templates' => [ 'rs-und' ],
-				      'url' => '//rightsstatements.org/page/UND/1.0/',
+					'msg' => 'mwe-upwiz-license-rs-und',
+					'templates' => [ 'rs-und' ],
+					'url' => '//rightsstatements.org/page/UND/1.0/',
 				],
 			],
 			'licensing' => [
@@ -237,8 +237,8 @@ switch ( $wi->dbname ) {
 					'licenses' => [
 						'cc-by-sa-4.0',
 						'cc-zero',
-        					'rs-inc',
-        					'rs-und',
+						'rs-inc',
+						'rs-und',
 					],
 				],
 				'thirdParty' => [
@@ -250,8 +250,8 @@ switch ( $wi->dbname ) {
 							'subhead' => 'mwe-upwiz-license-cc-subhead',
 							'licenses' => [
 								'cc-by-sa-4.0',
-							        'cc-zero',
-							        'rs-inc',
+								'cc-zero',
+								'rs-inc',
 								'rs-und',
 							],
 						],
