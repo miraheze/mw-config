@@ -215,7 +215,6 @@ switch ( $wi->dbname ) {
 		break;
 	case 'lhmnwiki':
 		$wgUploadWizardConfig = [
-			'campaignExpensiveStatsEnabled' => false,
 			'tutorial' => [
 				'skip' => false,
 			],
@@ -237,10 +236,6 @@ switch ( $wi->dbname ) {
 				'lhmn' => [
 					'msg' => 'mwe-upwiz-license-lhmn',
 					'url' => '//facebook.com/lophocmatngu',
-				],
-				'snxyz' => [
-					'msg' => 'mwe-upwiz-license-snxyz',
-					'url' => '//songngu.xyz/License',
 				]
 			],
 			'licensing' => [
@@ -256,14 +251,6 @@ switch ( $wi->dbname ) {
 								'lhmn'
 							],
 							'template' => 'LHMN'
-						],
-						[
-							'head' => 'mwe-upwiz-license-snxyz-head',
-							'subhead' => 'mwe-upwiz-license-snxyz-subhead',
-							'licenses' => [
-								'snxyz'
-							],
-							'template' => 'SNXYZ'
 						],
 						[
 							'head' => 'mwe-upwiz-license-cc-head',
