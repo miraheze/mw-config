@@ -4838,9 +4838,6 @@ $wgConf->settings += [
 	'wgRemovePIIAutoPrefix' => [
 		'default' => 'MirahezeGDPR_',
 	],
-	'wgRemovePIIDPAValidationEndpoint' => [
-		'default' => 'https://reports.miraheze.org/api/dpa/{dpa_id}/{username}',
-	],
 	'wgRemovePIIHashPrefixOptions' => [
 		'default' => [
 			'Trust and Safety' => 'MirahezeGDPR_',
