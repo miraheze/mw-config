@@ -213,6 +213,22 @@ switch ( $wi->dbname ) {
 				'en' => 'English',
 			],
 			'licenses' => [
+				'cc-by-sa-4.0' => [
+					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-by-sa-4.0-explain',
+					'icons' => [ 'cc-by', 'cc-sa' ],
+					'url' => '//creativecommons.org/licenses/by-sa/4.0/',
+					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => $uwCcAvailableLanguages
+				],
+				'cc-zero' => [
+					'msg' => 'mwe-upwiz-license-cc-zero-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-zero-explain',
+					'icons' => [ 'cc-zero' ],
+					'url' => '//creativecommons.org/publicdomain/zero/1.0/',
+					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => $uwCcAvailableLanguages
+				],
 				'rs-inc' => [
 					'msg' => 'mwe-upwiz-license-rs-inc-text',
 					'msgExplain' => 'mwe-upwiz-license-rs-inc-explain',
@@ -255,6 +271,7 @@ switch ( $wi->dbname ) {
 					],
 				],
 			],
+			'templateOptions' => [],
 		];
 		break;
 	case 'ldapwikiwiki':
