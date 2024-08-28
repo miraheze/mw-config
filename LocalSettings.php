@@ -3732,62 +3732,66 @@ $wgConf->settings += [
 			'iowiki' => [
 				/** Reception123 */
 				19,
-				/** Universal Omega */
-				438966,
+				/** Labster */
+				2551,
 				/** Harej */
 				13892,
 				/** NotAracham */
 				345529,
-				/** Labster */
-				2551,
+				/** Universal Omega */
+				438966,
 			],
 			// Only the board and SRE allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
 			'staffwiki' => [
 				/** Reception123 (SRE and Board) */
 				19,
-				/** Void (SRE) */
-				5258,
-				/** MacFan4000 (SRE) */
-				6758,
-				/** Universal Omega (SRE and Board) */
-				438966,
-				/** Harej (Board) */
-				13892,
-				/** NotAracham (Board) */
-				345529,
 				/** Labster (Board) */
 				2551,
-				/** Original Authority (SRE) */
-				353865,
-				/** Alex (Miraheze) — OrangeStar (SRE) */
-				464360,
+				/** Void (SRE) */
+				5258,
+				/** TheresNoTime (SRE) */
+				5943,
+				/** MacFan4000 (SRE) */
+				6758,
+				/** Harej (Board) */
+				13892,
 				/** Evalprime (SRE) */
 				342246,
+				/** NotAracham (Board) */
+				345529,
+				/** Original Authority (SRE) */
+				353865,
+				/** Universal Omega (SRE and Board) */
+				438966,
+				/** Alex (Miraheze) — OrangeStar (SRE) */
+				464360,
 			],
 			// Only the board and SRE allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
 			'srewiki' => [
 				/** Reception123 (SRE and Board) */
 				19,
-				/** Void (SRE) */
-				5258,
-				/** MacFan4000 (SRE) */
-				6758,
-				/** Universal Omega (SRE and Board) */
-				438966,
-				/** Harej (Board) */
-				13892,
-				/** NotAracham (Board) */
-				345529,
 				/** Labster (Board) */
 				2551,
-				/** Original Authority (SRE) */
-				353865,
-				/** Alex (Miraheze) — OrangeStar (SRE) */
-				464360,
+				/** Void (SRE) */
+				5258,
+				/** TheresNoTime (SRE) */
+				5943,
+				/** MacFan4000 (SRE) */
+				6758,
+				/** Harej (Board) */
+				13892,
 				/** Evalprime (SRE) */
 				342246,
+				/** NotAracham (Board) */
+				345529,
+				/** Original Authority (SRE) */
+				353865,
+				/** Universal Omega (SRE and Board) */
+				438966,
+				/** Alex (Miraheze) — OrangeStar (SRE) */
+				464360,
 			],
 		],
 	],
