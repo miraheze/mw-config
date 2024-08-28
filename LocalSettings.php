@@ -986,7 +986,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgCreateWikiNotificationEmail' => [
-		'default' => 'sre@miraheze.org',
+		'default' => 'tech@wikitide.org',
 	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
@@ -3741,56 +3741,56 @@ $wgConf->settings += [
 				/** Universal Omega */
 				438966,
 			],
-			// Only the board and SRE allowed access
+			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
 			'staffwiki' => [
-				/** Reception123 (SRE and Board) */
+				/** Reception123 (Technology team and Board) */
 				19,
 				/** Labster (Board) */
 				2551,
-				/** Void (SRE) */
+				/** Void (Technology team) */
 				5258,
-				/** TheresNoTime (SRE) */
+				/** TheresNoTime (Technology team) */
 				5943,
-				/** MacFan4000 (SRE) */
+				/** MacFan4000 (Technology team) */
 				6758,
 				/** Harej (Board) */
 				13892,
-				/** Evalprime (SRE) */
+				/** Evalprime (Technology team) */
 				342246,
 				/** NotAracham (Board) */
 				345529,
-				/** Original Authority (SRE) */
+				/** Original Authority (Technology team) */
 				353865,
-				/** Universal Omega (SRE and Board) */
+				/** Universal Omega (Technology team and Board) */
 				438966,
-				/** Alex (Miraheze) — OrangeStar (SRE) */
+				/** Alex (Miraheze) — OrangeStar (Technology team) */
 				464360,
 			],
-			// Only the board and SRE allowed access
+			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
 			'srewiki' => [
-				/** Reception123 (SRE and Board) */
+				/** Reception123 (Technology team and Board) */
 				19,
 				/** Labster (Board) */
 				2551,
-				/** Void (SRE) */
+				/** Void (Technology team) */
 				5258,
-				/** TheresNoTime (SRE) */
+				/** TheresNoTime (Technology team) */
 				5943,
-				/** MacFan4000 (SRE) */
+				/** MacFan4000 (Technology team) */
 				6758,
 				/** Harej (Board) */
 				13892,
-				/** Evalprime (SRE) */
+				/** Evalprime (Technology team) */
 				342246,
 				/** NotAracham (Board) */
 				345529,
-				/** Original Authority (SRE) */
+				/** Original Authority (Technology team) */
 				353865,
-				/** Universal Omega (SRE and Board) */
+				/** Universal Omega (Technology team and Board) */
 				438966,
-				/** Alex (Miraheze) — OrangeStar (SRE) */
+				/** Alex (Miraheze) — OrangeStar (Technology team) */
 				464360,
 			],
 		],
