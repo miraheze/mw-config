@@ -280,11 +280,11 @@ foreach ( $wi->getAllowedDomains() as $domain ) {
 	} else {
 		$wgCentralAuthCookieDomain = '';
 		if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
-			$parsedUrl = wfParseUrl( $wi->server );
-			$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
+			$host = parse_url( $wi->server, PHP_URL_HOST );
+			$wgMFStopRedirectCookieHost = $host !== false ? $host : null;
 
 			// Don't need a global here
-			unset( $parsedUrl );
+			unset( $host );
 		}
 	}
 }
