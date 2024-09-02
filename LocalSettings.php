@@ -131,7 +131,7 @@ $wgConf->settings += [
 	],
 	'wgAbuseFilterCentralDB' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgAbuseFilterIsCentral' => [
 		'default' => false,
@@ -218,7 +218,7 @@ $wgConf->settings += [
 				],
 			],
 		],
-		'mirabeta' => [
+		'beta' => [
 			'spam' => [
 				'files' => [
 					'https://meta.mirabeta.org/wiki/MediaWiki:Global_spam_blacklist?action=raw&sb_ver=1',
@@ -336,7 +336,7 @@ $wgConf->settings += [
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
 		'default' => 'mhglobal',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 
 	// Cache
@@ -445,7 +445,7 @@ $wgConf->settings += [
 			'loginwiki',
 			'metawiki',
 		],
-		'mirabeta' => [
+		'beta' => [
 			'loginwikibeta',
 			'metawikibeta',
 		],
@@ -461,11 +461,11 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthCookiePrefix' => [
 		'default' => 'centralauth_',
-		'mirabeta' => 'betacentralauth_',
+		'beta' => 'betacentralauth_',
 	],
 	'wgCentralAuthDatabase' => [
 		'default' => 'mhglobal',
-		'mirabeta' => 'testglobal',
+		'beta' => 'testglobal',
 	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => true,
@@ -475,18 +475,18 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthLoginWiki' => [
 		'default' => 'loginwiki',
-		'mirabeta' => 'loginwikibeta',
+		'beta' => 'loginwikibeta',
 	],
 	'wgCentralAuthOldNameAntiSpoofWiki' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
 	],
 	'wgGlobalRenameDenylist' => [
 		'default' => 'https://meta.miraheze.org/wiki/MediaWiki:Global_rename_blacklist?action=raw',
-		'mirabeta' => 'https://meta.mirabeta.org/wiki/MediaWiki:Global_rename_blacklist?action=raw',
+		'beta' => 'https://meta.mirabeta.org/wiki/MediaWiki:Global_rename_blacklist?action=raw',
 	],
 	'wgGlobalRenameDenylistRegex' => [
 		'default' => true,
@@ -500,19 +500,19 @@ $wgConf->settings += [
 	],
 	'wgCentralSelectedBannerDispatcher' => [
 		'default' => 'https://meta.miraheze.org/wiki/Special:BannerLoader',
-		'mirabeta' => 'https://meta.mirabeta.org/wiki/Special:BannerLoader',
+		'beta' => 'https://meta.mirabeta.org/wiki/Special:BannerLoader',
 	],
 	'wgCentralBannerRecorder' => [
 		'default' => 'https://meta.miraheze.org/wiki/Special:RecordImpression',
-		'mirabeta' => 'https://meta.mirabeta.org/wiki/Special:RecordImpression',
+		'beta' => 'https://meta.mirabeta.org/wiki/Special:RecordImpression',
 	],
 	'wgCentralDBname' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
-		'mirabeta' => 'https://meta.mirabeta.org',
+		'beta' => 'https://meta.mirabeta.org',
 	],
 	'wgNoticeProjects' => [
 		'default' => [
@@ -544,7 +544,7 @@ $wgConf->settings += [
 	],
 	'wgCheckUserCAtoollink' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgCheckUserGBtoollink' => [
 		'default' => [
@@ -553,7 +553,7 @@ $wgConf->settings += [
 				'steward',
 			],
 		],
-		'mirabeta' => [
+		'beta' => [
 			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
@@ -567,7 +567,7 @@ $wgConf->settings += [
 				'steward',
 			],
 		],
-		'mirabeta' => [
+		'beta' => [
 			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
@@ -955,7 +955,7 @@ $wgConf->settings += [
 			'c3',
 			'c4',
 		],
-		'mirabeta' => [
+		'beta' => [
 			'c2',
 		],
 	],
@@ -965,7 +965,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
-		'mirabeta' => 'wikibeta',
+		'beta' => 'wikibeta',
 	],
 	'wgCreateWikiDisableRESTAPI' => [
 		'default' => true,
@@ -974,7 +974,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiGlobalWiki' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
@@ -1081,7 +1081,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiSubdomain' => [
 		'default' => 'miraheze.org',
-		'mirabeta' => 'mirabeta.org',
+		'beta' => 'mirabeta.org',
 	],
 	'wgCreateWikiUseClosedWikis' => [
 		'default' => true,
@@ -1410,11 +1410,11 @@ $wgConf->settings += [
 	],
 	'wgEchoSharedTrackingCluster' => [
 		'default' => 'echo',
-		'mirabeta' => 'beta',
+		'beta' => 'beta',
 	],
 	'wgEchoSharedTrackingDB' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
@@ -1914,7 +1914,7 @@ $wgConf->settings += [
 	],
 	'wgGlobalBlockingDatabase' => [
 		'default' => 'mhglobal',
-		'mirabeta' => 'testglobal',
+		'beta' => 'testglobal',
 	],
 
 	// GlobalCssJs
@@ -1923,7 +1923,7 @@ $wgConf->settings += [
 			'wiki' => 'metawiki',
 			'source' => 'metawiki',
 		],
-		'mirabeta' => [
+		'beta' => [
 			'wiki' => 'metawikibeta',
 			'source' => 'metawikibeta',
 		],
@@ -1935,7 +1935,7 @@ $wgConf->settings += [
 				'loadScript' => '//meta.miraheze.org/w/load.php',
 			],
 		],
-		'mirabeta' => [
+		'beta' => [
 			'metawikibeta' => [
 				'apiScript' => '//meta.mirabeta.org/w/api.php',
 				'loadScript' => '//meta.mirabeta.org/w/load.php',
@@ -1949,13 +1949,13 @@ $wgConf->settings += [
 	// GlobalNewFiles
 	'wgGlobalNewFilesDatabase' => [
 		'default' => 'mhglobal',
-		'mirabeta' => 'testglobal',
+		'beta' => 'testglobal',
 	],
 
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => [
 		'default' => 'mhglobal',
-		'mirabeta' => 'testglobal',
+		'beta' => 'testglobal',
 	],
 
 	// GlobalUsage
@@ -1984,11 +1984,11 @@ $wgConf->settings += [
 	// GlobalUserPage
 	'wgGlobalUserPageAPIUrl' => [
 		'default' => 'https://login.miraheze.org/w/api.php',
-		'mirabeta' => 'https://login.mirabeta.org/w/api.php',
+		'beta' => 'https://login.mirabeta.org/w/api.php',
 	],
 	'wgGlobalUserPageDBname' => [
 		'default' => 'loginwiki',
-		'mirabeta' => 'loginwikibeta',
+		'beta' => 'loginwikibeta',
 	],
 
 	// Grant Permissions for BotPasswords and OAuth
@@ -2131,7 +2131,7 @@ $wgConf->settings += [
 	// IncidentReporting
 	'wgIncidentReportingDatabase' => [
 		'default' => 'incidents',
-		'mirabeta' => 'testglobal',
+		'beta' => 'testglobal',
 	],
 	'wgIncidentReportingServices' => [
 		'default' => [
@@ -2172,7 +2172,7 @@ $wgConf->settings += [
 	],
 	'wgInterwikiCentralDB' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
@@ -2275,7 +2275,7 @@ $wgConf->settings += [
 	// ImportDump
 	'wgImportDumpCentralWiki' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgImportDumpEnableAutomatedJob' => [
 		'default' => true,
@@ -3562,7 +3562,7 @@ $wgConf->settings += [
 	// MatomoAnalytics
 	'wgMatomoAnalyticsDatabase' => [
 		'default' => 'mhglobal',
-		'mirabeta' => 'testglobal',
+		'beta' => 'testglobal',
 	],
 	'wgMatomoAnalyticsServerURL' => [
 		'default' => 'https://analytics.wikitide.net/',
@@ -3897,7 +3897,7 @@ $wgConf->settings += [
 			'login.miraheze.org',
 			'meta.miraheze.org',
 		],
-		'mirabeta' => [
+		'beta' => [
 			'login.miraheze.org',
 			'meta.mirabeta.org',
 		],
@@ -4215,7 +4215,7 @@ $wgConf->settings += [
 		'default' => 'mhglobal',
 		'ldapwikiwiki' => 'ldapwikiwiki',
 		'srewiki' => 'ldapwikiwiki',
-		'mirabeta' => 'testglobal',
+		'beta' => 'testglobal',
 	],
 	'wgOATHExclusiveRights' => [
 		'default' => [
@@ -4269,7 +4269,7 @@ $wgConf->settings += [
 		'default' => 'metawiki',
 		'ldapwikiwiki' => false,
 		'srewiki' => false,
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgOAuth2GrantExpirationInterval' => [
 		'default' => 'PT4H',
@@ -4866,7 +4866,7 @@ $wgConf->settings += [
 	// RequestSSL
 	'wgRequestSSLCentralWiki' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgRequestSSLScriptCommand' => [
 		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
@@ -5626,7 +5626,7 @@ $wgConf->settings += [
 				'src' => 'MediaWiki:Titleblacklist',
 			],
 		],
-		'mirabeta' => [
+		'beta' => [
 			'global' => [
 				'type' => 'url',
 				'src' => 'https://meta.mirabeta.org/wiki/MediaWiki:Global_title_blacklist?action=raw&tb_ver=1',
@@ -5784,7 +5784,7 @@ $wgConf->settings += [
 	// UrlShortener
 	'wgUrlShortenerDBName' => [
 		'default' => 'metawiki',
-		'mirabeta' => 'metawikibeta',
+		'beta' => 'metawikibeta',
 	],
 	'wgUrlShortenerServer' => [
 		'metawiki' => 'wiki.surf',
@@ -6016,11 +6016,11 @@ $wgConf->settings += [
 	// WebAuthn
 	'wgWebAuthnRelyingPartyName' => [
 		'default' => 'Miraheze',
-		'mirabeta' => 'mirabeta',
+		'beta' => 'beta',
 	],
 	'wgWebAuthnRelyingPartyID' => [
 		'default' => 'miraheze.org',
-		'mirabeta' => 'mirabeta.org',
+		'beta' => 'mirabeta.org',
 	],
 
 	// Wikibase
@@ -6689,7 +6689,7 @@ $wgConf->settings += [
 	// Control MediaWiki Deprecation Warnings
 	'wgDeprecationReleaseLimit' => [
 		'default' => '1.34',
-		'mirabeta' => false,
+		'beta' => false,
 	],
 ];
 

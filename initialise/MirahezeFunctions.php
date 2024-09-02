@@ -37,7 +37,7 @@ class MirahezeFunctions {
 			'miraheze.org',
 			'wikitide.org',
 		],
-		'mirabeta' => [
+		'beta' => [
 			'mirabeta.org',
 		],
 	];
@@ -53,7 +53,7 @@ class MirahezeFunctions {
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
-		'mirabeta' => 'mirabeta.org',
+		'beta' => 'mirabeta.org',
 	];
 
 	private const GLOBAL_DATABASE = [
@@ -65,12 +65,12 @@ class MirahezeFunctions {
 
 	private const TAGS = [
 		'default' => 'default',
-		'beta' => 'mirabeta',
+		'beta' => 'beta',
 	];
 
 	public const LISTS = [
 		'default' => 'production',
-		'mirabeta' => 'beta',
+		'beta' => 'beta',
 	];
 
 	public const MEDIAWIKI_VERSIONS = [
@@ -81,7 +81,7 @@ class MirahezeFunctions {
 
 	public const SUFFIXES = [
 		'wiki' => self::ALLOWED_DOMAINS['default'],
-		'wikibeta' => self::ALLOWED_DOMAINS['mirabeta'],
+		'wikibeta' => self::ALLOWED_DOMAINS['beta'],
 	];
 
 	public function __construct() {
