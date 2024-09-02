@@ -8,18 +8,10 @@ $beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
 // Retain $wgCdnServers for wikis not using cloudflare (wikitide.org domain or custom domains)
 if ( !$beta && !preg_match( '/^(.*)\.miraheze\.org$/', $wi->server ) ) {
 	$wgCdnServers = [
-		/** cp26 */
-		'[2a02:c206:2161:9253::1]:81',
-		/** cp27 */
-		'[2a02:c206:2162:6187::1]:81',
 		/** cp36 */
 		'[2602:294:0:b13::110]:81',
 		/** cp37 */
 		'[2602:294:0:b23::112]:81',
-		/** cp41 */
-		'[2400:d320:2161:9775::1]:81',
-		/** cp51 */
-		'[2407:3641:2161:9774::1]:81',
 	];
 }
 
