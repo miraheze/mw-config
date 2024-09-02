@@ -554,14 +554,15 @@ $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?wikitide\.org',
 ];
 
-if ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
+if ( preg_match( '/(mirabeta|nexttide)\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?mirabeta\.org',
+		'(.*\.)?nexttide\.org',
 	];
 	$wgParserMigrationEnableQueryString = true;
 }
 
-if ( !preg_match( '/(miraheze|mirabeta|wikitide)\.org$/', $wi->server ) ) {
+if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = array_merge(
 		$wgUrlShortenerAllowedDomains,
 		[ preg_quote( str_replace( 'https://', '', $wi->server ) ) ]
@@ -760,7 +761,7 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'nstab-'
 ];
 
-$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 $wgPoolCounterConf = [
 	'ArticleView' => [
 		'class' => 'PoolCounter_Client',
