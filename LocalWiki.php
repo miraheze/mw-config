@@ -448,7 +448,7 @@ switch ( $wi->dbname ) {
 			],
 			'requestbetaaccount' => [
 				'RecipientUser' => 'Miraheze Operations',
-				'SenderName' => 'Mirabeta account creation request (via Meta)',
+				'SenderName' => 'Beta account creation request (via Meta)',
 				'RequireDetails' => true,
 				'MustBeLoggedIn' => true,
 				'AdditionalFields' => [
