@@ -20,7 +20,7 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 $redisServerIP = $beta ?
 	'10.0.15.118:6379' :
 	'10.0.15.142:6379';
