@@ -37,11 +37,12 @@ class MirahezeFunctions {
 			'miraheze.org',
 			'wikitide.org',
 		],
+		'beta' => [
+			'mirabeta.org',
+			'nexttide.org',
+		],
 		'internal' => [
 			'wikitide.net',
-		],
-		'mirabeta' => [
-			'mirabeta.org',
 		],
 	];
 
@@ -49,9 +50,14 @@ class MirahezeFunctions {
 
 	private const CACHE_DIRECTORY = '/srv/mediawiki/cache';
 
+	private const CENTRAL_DATABASE = [
+		'default' => 'metawiki',
+		'beta' => 'metawikibeta',
+	];
+
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
-		'mirabeta' => 'mirabeta.org',
+		'beta' => 'mirabeta.org',
 		'internal' => 'wikitide.net',
 	];
 
@@ -70,25 +76,25 @@ class MirahezeFunctions {
 
 	private const TAGS = [
 		'default' => 'default',
-		'beta' => 'mirabeta',
+		'beta' => 'beta',
 		'internal' => 'internal',
 	];
 
 	public const LISTS = [
 		'default' => 'production',
+		'beta' => 'beta',
 		'internal' => 'production',
-		'mirabeta' => 'beta',
 	];
 
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.43',
 		'beta' => '1.42',
-		'stable' => '1.41',
+		'stable' => '1.42',
 	];
 
 	public const SUFFIXES = [
 		'wiki' => self::ALLOWED_DOMAINS['default'] + self::ALLOWED_DOMAINS['internal'],
-		'wikibeta' => self::ALLOWED_DOMAINS['mirabeta'],
+		'wikibeta' => self::ALLOWED_DOMAINS['beta'],
 	];
 
 	public function __construct() {
@@ -356,6 +362,13 @@ class MirahezeFunctions {
 	 */
 	public function getAllowedDomains(): array {
 		return self::ALLOWED_DOMAINS[$this->realm];
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getCentralDatabase(): string {
+		return self::CENTRAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
 	}
 
 	/**

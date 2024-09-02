@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Linker\Linker;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
@@ -9,6 +10,24 @@ use MediaWiki\User\User;
 
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
+	case 'aieseattlewiki':
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+			'tutorial' => [
+				'skip' => true,
+			],
+			'licensing' => [
+				'ownWorkDefault' => 'own',
+				'ownWork' => [
+					'type' => 'or',
+					'template' => 'licensing',
+					'licenses' => 'generic',
+				],
+			],
+		];
+
+		break;
 	case 'arquivopkmnwiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
@@ -83,30 +102,13 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'genshinimpactwiki':
-		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
-
-		function onHtmlPageLinkRendererEnd(
-			$linkRenderer,
-			$target,
-			$isKnown,
-			&$text,
-			&$attribs,
-			&$ret
-		) {
-			if ( $isKnown ) {
-				return true;
-			}
-
-			if ( $target->isExternal() ) {
-				return true;
-			}
-
-			$attribs['rel'] = 'nofollow';
-
-			return true;
-		}
-
+	case 'furrnationswiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
 		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
@@ -195,6 +197,69 @@ switch ( $wi->dbname ) {
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
+	case 'kagagawiki':
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+			'uwLanguages' => [
+				'ja' => '日本語',
+				'en' => 'English',
+			],
+			'licenses' => [
+				'cc-by-sa-4.0' => [
+					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0',
+					'icons' => [ 'cc-by', 'cc-sa' ],
+					'url' => '//creativecommons.org/licenses/by-sa/4.0/',
+					'languageCodePrefix' => 'deed.',
+				],
+				'cc-zero' => [
+					'msg' => 'mwe-upwiz-license-cc-zero',
+					'icons' => [ 'cc-zero' ],
+					'url' => '//creativecommons.org/publicdomain/zero/1.0/',
+					'languageCodePrefix' => 'deed.',
+				],
+				'rs-inc' => [
+					'msg' => 'mwe-upwiz-license-rs-inc',
+					'templates' => [ 'rs-inc' ],
+					'url' => '//rightsstatements.org/page/InC/1.0/',
+				],
+				'rs-und' => [
+					'msg' => 'mwe-upwiz-license-rs-und',
+					'templates' => [ 'rs-und' ],
+					'url' => '//rightsstatements.org/page/UND/1.0/',
+				],
+			],
+			'licensing' => [
+				'ownWork' => [
+					'type' => 'or',
+					'template' => 'self',
+					'defaults' => 'cc-by-sa-4.0',
+					'licenses' => [
+						'cc-by-sa-4.0',
+						'cc-zero',
+						'rs-inc',
+						'rs-und',
+					],
+				],
+				'thirdParty' => [
+					'type' => 'or',
+					'defaults' => 'cc-by-sa-4.0',
+					'licenseGroups' => [
+						[
+							'head' => 'mwe-upwiz-license-cc-head',
+							'subhead' => 'mwe-upwiz-license-cc-subhead',
+							'licenses' => [
+								'cc-by-sa-4.0',
+								'cc-zero',
+								'rs-inc',
+								'rs-und',
+							],
+						],
+					],
+				],
+			],
+		];
+		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
@@ -208,6 +273,82 @@ switch ( $wi->dbname ) {
 				// must be smaller than local pw provider
 				'sort' => 50,
 			],
+		];
+
+		break;
+	case 'lhmnwiki':
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'tutorial' => [
+				'skip' => false,
+			],
+			'altUploadForm' => 'Special:Upload',
+			'enableFormData' => true,
+			'autoAdd' => [
+				'wikitext' => [
+					'Tập tin này được tải lên bằng Trình thuật sĩ.'
+				],
+				'categories' => [
+					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'
+				],
+			],
+			'uwLanguages' => [
+				'vi' => 'Tiếng Việt',
+				'en' => 'English'
+			],
+			'licenses' => [
+				'lhmn' => [
+					'msg' => 'mwe-upwiz-license-lhmn',
+					'url' => '//facebook.com/lophocmatngu',
+				],
+				'snxyz' => [
+					'msg' => 'mwe-upwiz-license-snxyz',
+					'url' => '//songngu.xyz/License',
+				]
+			],
+			'licensing' => [
+				'defaultType' => 'ownwork',
+				'ownWorkDefault' => 'choice',
+				'thirdParty' => [
+					'type' => 'or',
+					'licenseGroups' => [
+						[
+							'head' => 'mwe-upwiz-license-lhmn-head',
+							'subhead' => 'mwe-upwiz-license-lhmn-subhead',
+							'licenses' => [
+								'lhmn'
+							],
+							'template' => 'LHMN'
+						],
+						[
+							'head' => 'mwe-upwiz-license-snxyz-head',
+							'subhead' => 'mwe-upwiz-license-snxyz-subhead',
+							'licenses' => [
+								'snxyz'
+							],
+							'template' => 'SNXYZ'
+						],
+						[
+							'head' => 'mwe-upwiz-license-cc-head',
+							'subhead' => 'mwe-upwiz-license-cc-subhead',
+							'licenses' => [
+								'cc-zero',
+								'cc-by-4.0',
+								'cc-by-3.0',
+								'cc-by-2.5',
+								'cc-by-sa-4.0',
+								'cc-by-sa-3.0',
+								'cc-by-sa-2.5'
+							]
+						],
+						[
+							'head' => 'mwe-upwiz-license-custom-head',
+							'special' => 'custom',
+							'licenses' => [ 'custom' ]
+						]
+					]
+				]
+			]
 		];
 
 		break;
@@ -307,7 +448,7 @@ switch ( $wi->dbname ) {
 			],
 			'requestbetaaccount' => [
 				'RecipientUser' => 'Miraheze Operations',
-				'SenderName' => 'Mirabeta account creation request (via Meta)',
+				'SenderName' => 'Beta account creation request (via Meta)',
 				'RequireDetails' => true,
 				'MustBeLoggedIn' => true,
 				'AdditionalFields' => [
@@ -350,9 +491,20 @@ switch ( $wi->dbname ) {
 			'RequestSSL',
 		] );
 
+		/*
+		$wgFeaturedFeeds['test'] = [
+			'page' => 'feedtest',
+			'title' => 'feedtest-title',
+			'short-title' => 'feedtest-short-title',
+			'description' => 'feedtest-description',
+			'entryName' => 'feedtest-entryname',
+		];
+		*/
+
 		break;
 	case 'metzowiki':
-		$wgDplSettings['maxCategoryCount'] = 10;
+		$wgDplSettings['allowUnlimitedCategories'] = true;
+		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
 	case 'newusopediawiki':
@@ -409,7 +561,7 @@ switch ( $wi->dbname ) {
 	case 'polandballruwiki':
 		$wgHooks['BeforeInitialize'][] = 'onBeforeInitialize';
 
-		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, MediaWiki $mediaWiki ) {
+		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, ActionEntryPoint $mediaWikiEntryPoint ) {
 			if ( $title && $title->getNamespace() === 201 ) {
 				$newTitle = Title::newFromText( $title->getText(), 3 );
 				if ( $newTitle ) {
@@ -426,6 +578,15 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
+
+		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
+
+		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerlinks ) {
+			if ( $key === 'info' && $skin->getSkinName() !== 'citizen' ) {
+				$footerlinks['tagline'] = $skin->msg( 'citizen-footer-tagline' )->parse();
+			}
+		}
+
 		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
@@ -439,57 +600,6 @@ switch ( $wi->dbname ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
 
-		break;
-	case 'snxyzincubatorwiki':
-		$wgLogos = [
-			'1x' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'svg' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'icon' => "https://static.wikitide.net/snxyzincubatorwiki/2/2e/Incubator_Logo.2023.svg",
-			'wordmark' => [
-				'src' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
-				'1x' => "https://static.wikitide.net/snxyzincubatorwiki/d/d5/Wordmark_EN.svg",
-				'width' => 135,
-				'height' => 20,
-			],
-			'tagline' => [
-				'src' => "https://static.wikitide.net/snxyzincubatorwiki/6/60/Tagline_EN.svg",
-				'width' => 135,
-				'height' => 15,
-			],
-			'variants' => [
-				'vi' => [
-					'wordmark' => [
-						'src' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
-						'1x' => "https://static.wikitide.net/snxyzincubatorwiki/4/41/Wordmark_VI.svg",
-						'width' => 135,
-						'height' => 20,
-					],
-					'tagline' => [
-						'src' => "https://static.wikitide.net/snxyzincubatorwiki/1/1b/Tagline_VI.svg",
-						'width' => 135,
-						'height' => 15,
-					],
-				],
-			],
-		];
-
-		break;
-	case 'spacewiki':
-		$wgExtraNamespaces += [
-			NS_TALK => 'talk',
-			NS_USER => 'user',
-			NS_USER_TALK => 'user-talk',
-			NS_FILE => 'file',
-			NS_FILE_TALK => 'file-talk',
-			NS_MEDIAWIKI => 'mediawiki',
-			NS_MEDIAWIKI_TALK => 'mediawiki-talk',
-			NS_TEMPLATE => 'template',
-			NS_TEMPLATE_TALK => 'template-talk',
-			NS_HELP => 'guide',
-			NS_HELP_TALK => 'guide-talk',
-			NS_CATEGORY => 'category',
-			NS_CATEGORY_TALK => 'category-talk'
-		];
 		break;
 	case 'srewiki':
 		wfLoadExtension( 'LdapAuthentication' );
@@ -534,6 +644,25 @@ switch ( $wi->dbname ) {
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgMatomoAnalyticsDisableJS = true;
 		$wgMatomoAnalyticsDisableCookie = true;
+
+		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
+
+		function onHtmlPageLinkRendererEnd(
+			$linkRenderer,
+			$target,
+			$isKnown,
+			&$text,
+			&$attribs,
+			&$ret
+		) {
+			if ( $isKnown || $target->isExternal() ) {
+				return true;
+			}
+
+			$attribs['rel'] = 'nofollow';
+
+			return true;
+		}
 
 		break;
 }

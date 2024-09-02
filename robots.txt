@@ -1,37 +1,15 @@
 # robots.txt for Miraheze
 
 # Throttle access to certain pages
+# Do not include special pages and other pages where indexing is undesirable if they are likely to be linked to; use noindex instead.
+# That's because Google can still index pages in here without crawling them if the pages are linked to
+# See https://developers.google.com/search/docs/crawling-indexing/robots/intro
 User-Agent: *
 Allow: /w/api.php?action=mobileview&
 Allow: /w/load.php?
 Disallow: /w/
 Disallow: /geoip$
 Disallow: /rest_v1/
-Disallow: /wiki/Special:
-Disallow: /wiki/Spezial:
-Disallow: /wiki/Spesial:
-Disallow: /wiki/Special%3A
-Disallow: /wiki/Spezial%3A
-Disallow: /wiki/Spesial%3A
-Disallow: /wiki/Property:
-Disallow: /wiki/Property%3A
-Disallow: /wiki/property:
-Disallow: /wiki/Especial:
-Disallow: /wiki/Especial%3A
-Disallow: /wiki/especial:
-# Pattern matching is not officially supported by the robots.txt spec, but some crawlers, like Googlebot, support it
-Disallow: /wiki/Special:*
-Disallow: /wiki/Spezial:*
-Disallow: /wiki/Spesial:*
-Disallow: /wiki/Special%3A*
-Disallow: /wiki/Spezial%3A*
-Disallow: /wiki/Spesial%3A*
-Disallow: /wiki/Property:*
-Disallow: /wiki/Property%3A*
-Disallow: /wiki/property:*
-Disallow: /wiki/Especial:*
-Disallow: /wiki/Especial%3A*
-Disallow: /wiki/especial:*
 
 # Block SemrushBot
 User-Agent: SemrushBot
@@ -71,7 +49,7 @@ Disallow: /
 
 # Keep Crawl-Delay rules at the bottom
 # Bots that don't understand Crawl-Delay might break when encountering it
-# See https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129
+# See https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129 (English) and https://webtan.impress.co.jp/e/2022/11/04/43611 (Japanese)
 
 # Throttle MJ12Bot
 User-agent: MJ12bot
@@ -84,4 +62,4 @@ Crawl-Delay: 2.5
 
 # Throttle BingBot
 User-agent: bingbot
-Crawl-delay: 5
+Crawl-delay: 20

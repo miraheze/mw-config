@@ -58,6 +58,10 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 }
 
+if ( $wi->version >= '1.42' ) {
+	$wgVirtualDomainsMapping['virtual-importdump'] = [ 'db' => $wi->getCentralDatabase() ];
+}
+
 if ( $wi->dbname === 'ldapwikiwiki' || $wi->dbname === 'srewiki' ) {
 	if ( $wi->version >= '1.42' ) {
 		$wgVirtualDomainsMapping['virtual-oathauth'] = [ 'db' => 'ldapwikiwiki' ];
@@ -100,6 +104,10 @@ if ( $wi->isExtensionActive( 'InterwikiSorting' ) ) {
 
 if ( $wi->isAllOfExtensionsActive( '3d', 'MultimediaViewer' ) ) {
 	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+}
+
+if ( $wi->isExtensionActive( 'Phonos' ) ) {
+	$wgPhonosFileBackend = 'miraheze-swift';
 }
 
 if ( $wi->isExtensionActive( 'Popups' ) ) {
@@ -272,11 +280,11 @@ foreach ( $wi->getAllowedDomains() as $domain ) {
 	} else {
 		$wgCentralAuthCookieDomain = '';
 		if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
-			$parsedUrl = wfParseUrl( $wi->server );
-			$wgMFStopRedirectCookieHost = $parsedUrl !== false ? $parsedUrl['host'] : null;
+			$host = parse_url( $wi->server, PHP_URL_HOST );
+			$wgMFStopRedirectCookieHost = $host !== false ? $host : null;
 
 			// Don't need a global here
-			unset( $parsedUrl );
+			unset( $host );
 		}
 	}
 }
@@ -411,6 +419,16 @@ if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 	];
 }
 
+// FeaturedFeeds configuration
+
+if ( $wi->isExtensionActive( 'FeaturedFeeds' ) ) {
+	if ( $wmgMirahezeFeaturedFeedsInUserLanguage ) {
+		$wgFeaturedFeedsDefaults['inUserLanguage'] = true;
+	} else {
+		$wgFeaturedFeedsDefaults['inUserLanguage'] = false;
+	}
+}
+
 if ( $wi->isExtensionActive( 'Score' ) ) {
 	$wgScoreFileBackend = 'miraheze-swift';
 }
@@ -536,14 +554,15 @@ $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?wikitide\.org',
 ];
 
-if ( preg_match( '/mirabeta\.org$/', $wi->server ) ) {
+if ( preg_match( '/(mirabeta|nexttide)\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = [
 		'(.*\.)?mirabeta\.org',
+		'(.*\.)?nexttide\.org',
 	];
 	$wgParserMigrationEnableQueryString = true;
 }
 
-if ( !preg_match( '/(miraheze|mirabeta|wikitide)\.org$/', $wi->server ) ) {
+if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server ) ) {
 	$wgUrlShortenerAllowedDomains = array_merge(
 		$wgUrlShortenerAllowedDomains,
 		[ preg_quote( str_replace( 'https://', '', $wi->server ) ) ]
@@ -742,7 +761,7 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'nstab-'
 ];
 
-$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 $wgPoolCounterConf = [
 	'ArticleView' => [
 		'class' => 'PoolCounter_Client',

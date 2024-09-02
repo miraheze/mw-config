@@ -206,6 +206,34 @@ $wgManageWikiSettings = [
 		'help' => 'Actions that can be restricted.',
 		'requires' => [],
 	],
+	'wgRSSAllowLinkTag' => [
+		'name' => 'Allow links in RSS feeds',
+		'from' => 'rss',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'If enabled, links (&lt;a&gt; tags) will be shown. If disabled, the tags are escaped.',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
+	'wgRSSItemMaxLength' => [
+		'name' => 'Description length of RSS items',
+		'from' => 'rss',
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 4294967295,
+		'overridedefault' => 200,
+		'section' => 'other',
+		'help' => 'The maximum length of an RSS item\'s body',
+		'requires' => [
+			'extensions' => [
+				'rss',
+			],
+		],
+	],
 	'wgRSSUserAgent' => [
 		'name' => 'RSS User Agent',
 		'from' => 'rss',
@@ -304,6 +332,24 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'anti-spam',
 		'help' => 'This option makes a message appear on unapproved revisions indicating this revision has not been approved',
+		'requires' => [],
+	],
+	'wgDisplayFeedsInSidebar' => [
+		'name' => 'Display feeds in sidebar',
+		'from' => 'featuredfeeds',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'other',
+		'help' => 'This option controls whether or not feeds will be linked to in the sidebar',
+		'requires' => [],
+	],
+	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
+		'name' => 'Should feeds honor the user\'s preferred language?',
+		'from' => 'featuredfeeds',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'This option sets <code>$wgFeaturedFeedsDefaults["inUserLanguage"]</code>',
 		'requires' => [],
 	],
 	'wgFlaggedRevsProtection' => [
@@ -983,6 +1029,15 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, removes (substitutes) templates in signatures.',
 		'requires' => [],
 	],
+	'wgTabberNeueEnableAnimation' => [
+		'name' => 'TabberNeue Enable Animation',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'If enabled, activates smooth scroll animation when changing tabs',
+		'requires' => [],
+	],
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'name' => 'TabberNeue Update Location On Tab Change',
 		'from' => 'tabberneue',
@@ -991,6 +1046,25 @@ $wgManageWikiSettings = [
 		'section' => 'editing',
 		'help' => 'If enabled, when a tab is selected, the URL displayed on the browser changes. Opening this URL makes that tab initially selected.',
 		'requires' => [],
+	],
+	'wgTabberNeueUseCodex' => [
+		'name' => 'TabberNeue Use Codex',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'If enabled, uses Codex to render Tabber. This is experimental and many features may not work as expected.',
+		'requires' => [],
+	],
+	'wgEnableEditRecovery' => [
+		'name' => 'Enable Edit Recovery',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'global' => true,
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Enables Edit Recovery on this wiki, must be enabled in Special:Preferences.',
+		'requires' => []
 	],
 
 	// Links
@@ -1363,6 +1437,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables short descritption in site tagline',
 		'requires' => [],
 	],
+	'wgTabberNeueParseTabName' => [
+		'name' => 'TabberNeue Parse Tab Name',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'parserfunctions',
+		'help' => 'Parse tab name as wikitext.',
+		'requires' => [],
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
@@ -1678,7 +1761,10 @@ $wgManageWikiSettings = [
 			'sea' => 'sea',
 			'sfnt' => 'sfnt',
 			'sh' => 'sh',
+			'sm2d' => 'sm2d',
 			'smc' => 'smc',
+			'smis' => 'smis',
+			'smms' => 'smms',
 			'spc' => 'spc',
 			'spl' => 'spl',
 			'stl' => 'stl',
@@ -2154,6 +2240,20 @@ $wgManageWikiSettings = [
 		'section' => 'preferences',
 		'help' => 'Whether the option to enable/disable Page Previews should be hidden on Preferences page. Please note if PopupsBetaFeature is set to true this option will be always hidden.',
 		'requires' => [],
+	],
+	'wgPopupsTextExtractsIntroOnly' => [
+		'name' => 'Popups Use intro text only when using TextExtracts',
+		'from' => 'popups',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'preferences',
+		'help' => 'Whether or not Page Previews will only request the intro paragraph from TextExtracts or not',
+		'requires' => [
+			'extensions' => [
+				'popups',
+				'textextracts',
+			],
+		],
 	],
 
 	// Recent changes
@@ -3595,6 +3695,21 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Enable included Noto Sans CJK for wikis that serves CJK languages',
+		'requires' => [],
+	],
+	'wgCitizenOverflowNowrapClasses' => [
+		'name' => 'Citizen Overflow No-wrap Classes',
+		'from' => 'citizen',
+		'type' => 'texts',
+		'overridedefault' => [
+			'citizen-table-nowrap',
+			'cargoDynamicTable',
+			'dataTable',
+			'smw-datatable',
+			'srf-datatable',
+		],
+		'section' => 'styling',
+		'help' => 'Defines CSS classes ignored by overflow wrapper',
 		'requires' => [],
 	],
 	'wgRelatedArticlesFooterAllowedSkins' => [
