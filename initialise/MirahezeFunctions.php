@@ -39,6 +39,7 @@ class MirahezeFunctions {
 		],
 		'beta' => [
 			'mirabeta.org',
+			'nexttide.org',
 		],
 	];
 
