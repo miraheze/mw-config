@@ -64,11 +64,6 @@ class MirahezeFunctions {
 
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
-	private const TAGS = [
-		'default' => 'default',
-		'beta' => 'beta',
-	];
-
 	public const LISTS = [
 		'default' => 'production',
 		'beta' => 'beta',
@@ -218,13 +213,13 @@ class MirahezeFunctions {
 	public static function getRealm( ?string $database = null ): string {
 		if ( $database ) {
 			return ( substr( $database, -strlen( array_keys( self::SUFFIXES )[0] ) ) === array_keys( self::SUFFIXES )[0] ) ?
-				self::TAGS['default'] : self::TAGS['beta'];
+				'default' : 'beta';
 		}
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		return ( substr( self::$currentDatabase, -strlen( array_keys( self::SUFFIXES )[0] ) ) === array_keys( self::SUFFIXES )[0] ) ?
-			self::TAGS['default'] : self::TAGS['beta'];
+			'default' : 'beta';
 	}
 
 	/**
@@ -348,14 +343,14 @@ class MirahezeFunctions {
 	 * @return string
 	 */
 	public function getCentralDatabase(): string {
-		return self::CENTRAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+		return self::CENTRAL_DATABASE[$this->realm];
 	}
 
 	/**
 	 * @return string
 	 */
 	public function getGlobalDatabase(): string {
-		return self::GLOBAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+		return self::GLOBAL_DATABASE[$this->realm];
 	}
 
 	public function setDatabase() {
