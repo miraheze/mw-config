@@ -3,7 +3,7 @@
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
-$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 
 // Retain $wgCdnServers for wikis not using cloudflare (wikitide.org domain or custom domains)
 if ( !$beta && !preg_match( '/^(.*)\.miraheze\.org$/', $wi->server ) ) {
