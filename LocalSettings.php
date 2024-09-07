@@ -3777,6 +3777,8 @@ $wgConf->settings += [
 				438966,
 				/** Alex (Miraheze) — OrangeStar (Technology team) */
 				464360,
+				/** Agent Isai (Technology team) */
+				512002,
 			],
 			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
@@ -3803,6 +3805,8 @@ $wgConf->settings += [
 				438966,
 				/** Alex (Miraheze) — OrangeStar (Technology team) */
 				464360,
+				/** Agent Isai (Technology team) */
+				512002,
 			],
 		],
 	],
