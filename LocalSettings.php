@@ -4930,6 +4930,9 @@ $wgConf->settings += [
 		'+collegecitoyenwiki' => [
 			'editextendedsemiprotected',
 		],
+		'+cricketnepalwiki' => [
+			'edittemplateprotected',
+		],
 		'+csydeswiki' => [
 			'editblacklisted',
 		],
