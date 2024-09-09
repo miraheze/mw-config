@@ -21,6 +21,8 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
 } elseif (
 	( $_SERVER['HTTP_HOST'] ?? '' ) === 'jobrunner.wikitide.net' ||
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask151.wikitide.net' ||
+	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask161.wikitide.net' ||
 	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask171.wikitide.net' ||
 	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net'
 ) {
@@ -2866,18 +2868,40 @@ $wgConf->settings += [
 			'2602:294:0:c8::105' => true,
 			/** mw152 */
 			'2602:294:0:c8::106' => true,
+			/** mw153 */
+			'2602:294:0:c8::113' => true,
+			/** mw154 */
+			'2602:294:0:c8::114' => true,
 			/** mw161 */
 			'2602:294:0:b13::106' => true,
 			/** mw162 */
 			'2602:294:0:b13::107' => true,
+			/** mw163 */
+			'2602:294:0:b13::114' => true,
+			/** mw164 */
+			'2602:294:0:b13::115' => true,
 			/** mw171 */
 			'2602:294:0:b23::104' => true,
 			/** mw172 */
 			'2602:294:0:b23::105' => true,
+			/** mw173 */
+			'2602:294:0:b23::115' => true,
+			/** mw174 */
+			'2602:294:0:b23::116' => true,
 			/** mw181 */
 			'2602:294:0:b12::105' => true,
 			/** mw182 */
 			'2602:294:0:b12::106' => true,
+			/** mw183 */
+			'2602:294:0:b12::113' => true,
+			/** mw184 */
+			'2602:294:0:b12::114' => true,
+			/** mwtask151 */
+			'2602:294:0:c8::115' => true,
+			/** mwtask161 */
+			'2602:294:0:b13::116' => true,
+			/** mwtask171 */
+			'2602:294:0:b23::114' => true,
 			/** mwtask181 */
 			'2602:294:0:b12::107' => true,
 			/** test151 */

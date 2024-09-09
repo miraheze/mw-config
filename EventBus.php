@@ -66,4 +66,8 @@ $wgJobTypeConf['RecordLintJob'] = $jobQueueRedis;
 // Don't need a global here
 unset( $jobQueueRedis );
 
-$wgEventBusEnableRunJobAPI = wfHostname() === 'mwtask171' || wfHostname() === 'mwtask181';
+$wgEventBusEnableRunJobAPI =
+	wfHostname() === 'mwtask151' ||
+	wfHostname() === 'mwtask161' ||
+	wfHostname() === 'mwtask171' ||
+	wfHostname() === 'mwtask181';
