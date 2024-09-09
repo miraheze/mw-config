@@ -270,6 +270,12 @@ if ( MW_ENTRY_POINT === 'cli' ) {
 	$wgDebugDumpSql = true;
 }
 
-if ( wfHostname() === 'test151' || wfHostname() === 'mwtask171' || wfHostname() === 'mwtask181' ) {
+if (
+	wfHostname() === 'mwtask151' ||
+	wfHostname() === 'mwtask161' ||
+	wfHostname() === 'mwtask171' ||
+	wfHostname() === 'mwtask181' ||
+	wfHostname() === 'test151'
+) {
 	$wgShowExceptionDetails = true;
 }
