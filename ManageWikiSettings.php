@@ -1767,6 +1767,7 @@ $wgManageWikiSettings = [
 			'smms' => 'smms',
 			'spc' => 'spc',
 			'spl' => 'spl',
+			'srt' => 'srt',
 			'stl' => 'stl',
 			'sty' => 'sty',
 			'sv4' => 'sv4',
