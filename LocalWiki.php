@@ -198,33 +198,53 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'kagagawiki':
+		$uwCcAvailableLanguages = [
+			'an', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el',
+			'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'fy', 'ga',
+			'gl', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ko', 'lt',
+			'lv', 'ms', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ro', 'ru', 'sk',
+			'sl', 'sr-latn', 'sv', 'tr', 'uk', 'zh-hans', 'zh-hant'
+		];
 		$wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
 			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+			'debug' => false,
+			'altUploadForm' => 'Special:Upload',
+			'feedbackLink' => false,
+			'alternativeUploadToolsPage' => false,
+			'enableFormData' => true,
+			'enableMultipleFiles' => true,
+			'enableMultiFileSelect' => true,
 			'uwLanguages' => [
 				'ja' => '日本語',
 				'en' => 'English',
 			],
 			'licenses' => [
 				'cc-by-sa-4.0' => [
-					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0',
+					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-by-sa-4.0-explain',
 					'icons' => [ 'cc-by', 'cc-sa' ],
 					'url' => '//creativecommons.org/licenses/by-sa/4.0/',
 					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => $uwCcAvailableLanguages
 				],
 				'cc-zero' => [
-					'msg' => 'mwe-upwiz-license-cc-zero',
+					'msg' => 'mwe-upwiz-license-cc-zero-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-zero-explain',
 					'icons' => [ 'cc-zero' ],
 					'url' => '//creativecommons.org/publicdomain/zero/1.0/',
 					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => $uwCcAvailableLanguages
 				],
 				'rs-inc' => [
-					'msg' => 'mwe-upwiz-license-rs-inc',
+					'msg' => 'mwe-upwiz-license-rs-inc-text',
+					'msgExplain' => 'mwe-upwiz-license-rs-inc-explain',
 					'templates' => [ 'rs-inc' ],
 					'url' => '//rightsstatements.org/page/InC/1.0/',
 				],
 				'rs-und' => [
-					'msg' => 'mwe-upwiz-license-rs-und',
+					'msg' => 'mwe-upwiz-license-rs-und-text',
+					'msgExplain' => 'mwe-upwiz-license-rs-und-explain',
 					'templates' => [ 'rs-und' ],
 					'url' => '//rightsstatements.org/page/UND/1.0/',
 				],
@@ -258,6 +278,7 @@ switch ( $wi->dbname ) {
 					],
 				],
 			],
+			'templateOptions' => [],
 		];
 		break;
 	case 'ldapwikiwiki':
