@@ -82,10 +82,10 @@ require_once '/srv/mediawiki/config/GlobalExtensions.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.miraheze.org';
 
-$wgStatsFormat = 'dogstatsd';
-$wgStatsTarget = 'udp://localhost:9125';
+// $wgStatsFormat = 'dogstatsd';
+// $wgStatsTarget = 'udp://localhost:9125';
 // graphite151
-$wgStatsdServer = '10.0.15.145';
+// $wgStatsdServer = '10.0.15.145';
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
