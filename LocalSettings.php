@@ -2104,8 +2104,13 @@ $wgConf->settings += [
 	'wgImageMagickConvertCommand' => [
 		'default' => '/usr/local/bin/mediawiki-firejail-convert',
 	],
+	'wgJpegPixelFormat' => [
+		'default' => 'yuv420',
+		'dominionstrategywiki' => 'yuv444',
+	],
 	'wgSharpenParameter' => [
 		'default' => '0x0.8',
+		'dominionstrategywiki' => '0x0.0',
 	],
 	'wgImageMagickTempDir' => [
 		'default' => '/tmp/magick-tmp',
