@@ -198,6 +198,13 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'kagagawiki':
+		$uwCcAvailableLanguages = [
+			'an', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el',
+			'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'fy', 'ga',
+			'gl', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ko', 'lt',
+			'lv', 'ms', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ro', 'ru', 'sk',
+			'sl', 'sr-latn', 'sv', 'tr', 'uk', 'zh-hans', 'zh-hant'
+		];
 		$wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
 			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
