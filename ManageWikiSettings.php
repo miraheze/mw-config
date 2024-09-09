@@ -1767,6 +1767,7 @@ $wgManageWikiSettings = [
 			'smms' => 'smms',
 			'spc' => 'spc',
 			'spl' => 'spl',
+			'srt' => 'srt',
 			'stl' => 'stl',
 			'sty' => 'sty',
 			'sv4' => 'sv4',
@@ -1824,6 +1825,15 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'media',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
+		'requires' => [],
+	],
+	'wgEnableTranscode' => [
+		'name' => 'TimedMediaHandler Enable Transcode',
+		'from' => 'timedmediahandler',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'If transcoding is enabled for this wiki (if disabled, no transcode jobs are added and no transcode status is displayed). Note if remote embedding an asset we will still check if the remote repo has transcoding enabled and associated flavors for that media embed.',
 		'requires' => [],
 	],
 	'wgTmhEnableMp4Uploads' => [

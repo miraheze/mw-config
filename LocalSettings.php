@@ -5596,6 +5596,9 @@ $wgConf->settings += [
 	],
 
 	// TimedMediaHandler
+	'wgEnableTranscode' => [
+		'default' => true,
+	],
 	'wgOggThumbLocation' => [
 		'default' => false,
 	],
