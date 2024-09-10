@@ -192,6 +192,11 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'hommwiki':
+		$wgEnabledAudioTranscodeSet = [];
+		$wgEnabledTranscodeSet = [];
+
+		break;
 	case 'houkai2ndwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
