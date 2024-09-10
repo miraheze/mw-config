@@ -1,5 +1,22 @@
 <?php
 
+/*
+ * This can be dangerous!
+ * Remember to run setupStore.php and follow the instructions on
+ * Tech:Semantic MediaWiki under the following conditions:
+ *  - Semantic MediaWiki is enabled on a new wiki
+ *  - Semantic MediaWiki is upgraded
+ *  - MediaWiki is upgraded
+ *  - $smwgPageSpecialProperties is changed
+ *  - $smwgFixedProperties is changed
+ *  - $smwgDefaultStore is changed
+ *  - $smwgEnabledFulltextSearch is changed
+ *  - $smwgEntityCollation is changed
+ *  - $smwgFieldTypeFeatures is changed
+ * @see https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki
+ */
+$smwgIgnoreUpgradeKeyCheck = true;
+
 $smwgNamespacesWithSemanticLinks = [
 	NS_MAIN => true,
 	NS_TALK => false,
