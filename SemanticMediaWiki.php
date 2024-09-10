@@ -4,14 +4,15 @@
  * This can be dangerous!
  * Remember to run setupStore.php and follow the instructions on
  * Tech:Semantic MediaWiki under the following conditions:
- *  - Any properties are changed (such as $smwgPageSpecialProperties or $smwgFixedProperties)
+ *  - Semantic MediaWiki is enabled on a new wiki
+ *  - $smwgPageSpecialProperties is changed
+ *  - $smwgFixedProperties is changed
  *  - $smwgDefaultStore is changed
  *  - $smwgEnabledFulltextSearch is changed
  *  - $smwgEntityCollation is changed
  *  - $smwgFieldTypeFeatures is changed
  *  - Semantic MediaWiki is upgraded
  *  - MediaWiki is upgraded
- *  - Semantic MediaWiki is enabled on a new wiki
  * @see https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki
  */
 $smwgIgnoreUpgradeKeyCheck = true;
