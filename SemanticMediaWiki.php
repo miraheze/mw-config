@@ -11,6 +11,7 @@
  *  - $smwgFieldTypeFeatures is changed
  *  - Semantic MediaWiki is upgraded
  *  - MediaWiki is upgraded
+ *  - Semantic MediaWiki is enabled on a new wiki
  * @see https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki
  */
 $smwgIgnoreUpgradeKeyCheck = true;
