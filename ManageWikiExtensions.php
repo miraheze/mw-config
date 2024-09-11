@@ -757,6 +757,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'network' => [
+		'name' => 'Network',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Network',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'notitle' => [
 		'name' => 'NoTitle',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NoTitle',
