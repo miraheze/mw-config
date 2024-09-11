@@ -1793,6 +1793,7 @@ $wgManageWikiSettings = [
 			'vrm' => 'vrm',
 			'vsd' => 'vsd',
 			'vst' => 'vst',
+			'vtt' => 'vtt',
 			'wav' => 'wav',
 			'webm' => 'webm',
 			'webp' => 'webp',
