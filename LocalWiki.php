@@ -194,7 +194,6 @@ switch ( $wi->dbname ) {
 		break;
 	case 'hommwiki':
 		$wgEnabledAudioTranscodeSet = [];
-		$wgEnabledTranscodeSet = [];
 
 		break;
 	case 'houkai2ndwiki':
