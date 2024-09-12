@@ -1126,6 +1126,10 @@ $wgConf->settings += [
 		'default' => 250,
 	],
 
+	'wgRequestWikiConfirmAgreement' => [
+		'default' => true,
+	],
+
 	// CookieWarning
 	'wgCookieWarningMoreUrl' => [
 		'default' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#2._Cookies',
