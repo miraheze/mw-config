@@ -193,7 +193,17 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'hommwiki':
+		// T12565: This is a workaround for an upstream bug, please remove when the bug fix is merged
 		$wgEnabledAudioTranscodeSet = [];
+
+		// T12565: This is a code crime to make the workaround for said upstream bug work, I apologize for my sins.
+		// Yes, [[mw:Manual:Extension.json/Schema#ExtensionFunctions]] states that "extension functions cannot
+		// be used to programmatically update configuration variables or register hooks", but this brings results and
+		// the alternative is reflection, so it could be worse.
+		$wgExtensionFunctions[] = function () {
+			global $wgEnabledAudioTranscodeSet;
+			$wgEnabledAudioTranscodeSet = [];
+		};
 
 		break;
 	case 'houkai2ndwiki':
