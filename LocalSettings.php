@@ -2802,6 +2802,7 @@ $wgConf->settings += [
 	// Links?
 	'+wgUrlProtocols' => [
 		'default' => [],
+		'cloudstreamwiki' => [ 'cloudstreamrepo://' ],
 		'downgradegameswiki' => [ 'steam://' ],
 		// file protocol only allowed on private wikis
 		'gzewiki' => [ 'file://' ],
