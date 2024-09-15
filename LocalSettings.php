@@ -4961,8 +4961,8 @@ $wgConf->settings += [
 			'editextendedsemiprotected',
 		],
 		'+cricketnepalwiki' => [
+			'editbureaucratprotected',
 			'edittemplateprotected',
-	                'editbureaucratprotected',
 		],
 		'+csydeswiki' => [
 			'editblacklisted',
@@ -5115,8 +5115,8 @@ $wgConf->settings += [
 			'editextendedsemiprotected',
 		],
 		'cricketnepalwiki' => [
+			'editbureaucratprotected',
 			'edittemplateprotected',
-	                'editbureaucratprotected',
 		],
 		'csydeswiki' => [
 			'editblacklisted',
