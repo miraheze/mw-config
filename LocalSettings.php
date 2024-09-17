@@ -5560,16 +5560,22 @@ $wgConf->settings += [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
 				'<^(?:https:)?//static\\.wikitide\\.net/>',
+				'<^(?:https:)?//[a-zA-Z0-9\\-]\\.(miraheze|wikitide)\\.org/w/img_auth\\.php/>',
+				'<^(?:https:)?//' . preg_quote( $wi->server ) . '/w/img_auth\\.php/>',
 			],
 			'image' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/>',
 				'<^(?:https:)?//static\\.miraheze\\.org/>',
 				'<^(?:https:)?//static\\.wikitide\\.net/>',
+				'<^(?:https:)?//[a-zA-Z0-9\\-]\\.(miraheze|wikitide)\\.org/w/img_auth\\.php/>',
+				'<^(?:https:)?//' . preg_quote( $wi->server ) . '/w/img_auth\\.php/>',
 			],
 			'svg' => [
 				'<^(?:https:)?//upload\\.wikimedia\\.org/wikipedia/commons/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.miraheze\\.org/[^?#]*\\.svg(?:[?#]|$)>',
 				'<^(?:https:)?//static\\.wikitide\\.net/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//[a-zA-Z0-9\\-]\\.(miraheze|wikitide)\\.org/w/img_auth\\.php/[^?#]*\\.svg(?:[?#]|$)>',
+				'<^(?:https:)?//' . preg_quote( $wi->server ) . '/w/img_auth\\.php/[^?#]*\\.svg(?:[?#]|$)>',
 			],
 			'font' => [],
 			'namespace' => [
