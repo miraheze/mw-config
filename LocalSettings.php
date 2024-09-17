@@ -3799,6 +3799,8 @@ $wgConf->settings += [
 				5943,
 				/** MacFan4000 (Technology team) */
 				6758,
+				/** Paladox (Technology team) */
+				13554,
 				/** Harej (Board) */
 				13892,
 				/** Evalprime (Technology team) */
@@ -3825,6 +3827,8 @@ $wgConf->settings += [
 				5943,
 				/** MacFan4000 (Technology team) */
 				6758,
+				/** Paladox (Technology team) */
+				13554,
 				/** Harej (Board) */
 				13892,
 				/** Evalprime (Technology team) */
