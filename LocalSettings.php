@@ -4966,7 +4966,7 @@ $wgConf->settings += [
 		],
 		'+cricketnepalwiki' => [
 			'editbureaucratprotected',
-	                'editconsulprotected',
+			'editconsulprotected',
 			'edittemplateprotected',
 		],
 		'+csydeswiki' => [
@@ -5121,7 +5121,7 @@ $wgConf->settings += [
 		],
 		'cricketnepalwiki' => [
 			'editbureaucratprotected',
-	                'editconsulprotected',
+			'editconsulprotected',
 			'edittemplateprotected',
 		],
 		'csydeswiki' => [
