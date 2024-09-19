@@ -87,9 +87,7 @@ class MirahezeFunctions {
 
 		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
 		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
-			global $wgDBname;
-			require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/MissingWiki.php';
-			die( 1 );
+			die( 'INVALID DATABASE! YOU CAN NOT USE THE DATABASE OF A DIFFERENT REALM!' );
 		}
 
 		$this->wikiDBClusters = self::getDatabaseClusters();
