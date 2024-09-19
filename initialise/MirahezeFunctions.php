@@ -87,7 +87,7 @@ class MirahezeFunctions {
 
 		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
 		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
-			die( 'INVALID DATABASE! YOU CAN NOT USE THE DATABASE OF A DIFFERENT REALM!' );
+			die( 'INVALID DATABASE! YOU CAN NOT USE THE DATABASE OF A DIFFERENT REALM!' . PHP_EOL );
 		}
 
 		$this->wikiDBClusters = self::getDatabaseClusters();
