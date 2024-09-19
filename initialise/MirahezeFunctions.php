@@ -69,11 +69,6 @@ class MirahezeFunctions {
 		'beta' => 'beta',
 	];
 
-	public const LISTS = [
-		'default' => 'production',
-		'beta' => 'beta',
-	];
-
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.43',
 		'beta' => '1.43',
@@ -89,6 +84,12 @@ class MirahezeFunctions {
 		self::setupSiteConfiguration();
 
 		$this->dbname = self::getCurrentDatabase();
+
+		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
+		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
+			die( 'INVALID DATABASE! YOU CAN NOT USE THE DATABASE OF A DIFFERENT REALM!' . PHP_EOL );
+		}
+
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
 		$this->server = self::getServer();
@@ -111,15 +112,12 @@ class MirahezeFunctions {
 	public static function getLocalDatabases(): ?array {
 		global $wgLocalDatabases;
 
-		static $realm = null;
 		static $databases = null;
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		$realm ??= self::getRealm();
-
 		// We need the CLI *and* the web to be able to access 'deleted' wikis
-		$databases ??= array_merge( self::readDbListFile( self::LISTS[$realm] ), self::readDbListFile( 'deleted-' . self::LISTS[$realm] ) );
+		$databases ??= array_merge( self::readDbListFile( 'databases' ), self::readDbListFile( 'deleted' ) );
 
 		$wgLocalDatabases = $databases;
 		return $databases;
@@ -135,14 +133,6 @@ class MirahezeFunctions {
 	public static function readDbListFile( string $dblist, bool $onlyDBs = true, ?string $database = null, bool $fromServer = false ) {
 		if ( $database && $onlyDBs && !$fromServer ) {
 			return $database;
-		}
-
-		if ( $dblist === 'production' ) {
-			$dblist = 'databases';
-		}
-
-		if ( $dblist === 'deleted-production' ) {
-			$dblist = 'deleted';
 		}
 
 		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
@@ -186,7 +176,7 @@ class MirahezeFunctions {
 
 					if ( $wgDBname && $key === $wgDBname ) {
 						if ( MW_ENTRY_POINT !== 'cli' && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
-							require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
+							require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/databaseMaintenance.php';
 						}
 					}
 
@@ -267,10 +257,10 @@ class MirahezeFunctions {
 
 		$realm ??= self::getRealm();
 
-		$databases = self::readDbListFile( self::LISTS[$realm], false, $database );
+		$databases = self::readDbListFile( 'databases', false, $database );
 
 		if ( $deleted && $databases ) {
-			$databases += self::readDbListFile( 'deleted-' . self::LISTS[$realm], false, $database );
+			$databases += self::readDbListFile( 'deleted', false, $database );
 		}
 
 		if ( $database !== null ) {
@@ -315,8 +305,7 @@ class MirahezeFunctions {
 
 		static $database = null;
 
-		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
-			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
+		$database ??= self::readDbListFile( 'databases', true, 'https://' . $hostname, true );
 
 		if ( $database ) {
 			return $database;
@@ -374,8 +363,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( 'databases', false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -389,7 +378,7 @@ class MirahezeFunctions {
 	 * @return string
 	 */
 	public static function getPrimaryDomain( string $database ): string {
-		$primaryDomain = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['d'] ?? null;
+		$primaryDomain = self::readDbListFile( 'databases', false, $database )['d'] ?? null;
 		return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm( $database )];
 	}
 
@@ -434,8 +423,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( 'databases', false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -473,7 +462,7 @@ class MirahezeFunctions {
 		}
 
 		if ( $database ) {
-			$mwVersion = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['v'] ?? null;
+			$mwVersion = self::readDbListFile( 'databases', false, $database )['v'] ?? null;
 			return $mwVersion ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 		}
 
@@ -487,7 +476,7 @@ class MirahezeFunctions {
 		static $version = null;
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
-		$version ??= self::readDbListFile( self::LISTS[self::getRealm()], false, self::$currentDatabase )['v'] ?? null;
+		$version ??= self::readDbListFile( 'databases', false, self::$currentDatabase )['v'] ?? null;
 
 		return $version ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 	}
@@ -1033,36 +1022,28 @@ class MirahezeFunctions {
 	 * @param array &$databaseLists
 	 */
 	public static function onGenerateDatabaseLists( array &$databaseLists ) {
-		$default = self::generateDatabaseLists( self::GLOBAL_DATABASE['default'] );
-		$beta = self::generateDatabaseLists( self::GLOBAL_DATABASE['beta'] );
+		$isBeta = php_uname( 'n' ) === self::BETA_HOSTNAME;
+
+		$databases = self::generateDatabaseLists(
+			self::GLOBAL_DATABASE[ $isBeta ? 'beta' : 'default' ]
+		);
+
 		$databaseLists = [
 			'active' => [
-				'combi' => $default['active'],
-			],
-			'active-beta' => [
-				'combi' => $beta['active'],
-			],
-			'beta' => [
-				'combi' => $beta['databases'],
+				'combi' => $databases['active'],
 			],
 			'databases' => [
-				'combi' => $default['databases'],
+				'combi' => $databases['databases'],
 			],
 			'deleted' => [
-				'combi' => $default['deleted'],
-			],
-			'deleted-beta' => [
-				'combi' => $beta['deleted'],
+				'combi' => $databases['deleted'],
 			],
 		];
 
 		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
 			$databaseLists += [
 				$name . '-wikis' => [
-					'combi' => $default['versions'][$version],
-				],
-				$name . '-wikis-beta' => [
-					'combi' => $beta['versions'][$version],
+					'combi' => $databases['versions'][$version],
 				],
 			];
 		}
