@@ -88,7 +88,7 @@ class MirahezeFunctions {
 		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
 		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
 			global $wgDBname;
-			require_once MEDIAWIKI_DIRECTORY . 'ErrorPages/MissingWiki.php';
+			require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/MissingWiki.php';
 			die( 1 );
 		}
 
@@ -178,7 +178,7 @@ class MirahezeFunctions {
 
 					if ( $wgDBname && $key === $wgDBname ) {
 						if ( MW_ENTRY_POINT !== 'cli' && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
-							require_once MEDIAWIKI_DIRECTORY . 'ErrorPages/databaseMaintenance.php';
+							require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/databaseMaintenance.php';
 						}
 					}
 
