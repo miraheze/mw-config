@@ -84,6 +84,12 @@ class MirahezeFunctions {
 		self::setupSiteConfiguration();
 
 		$this->dbname = self::getCurrentDatabase();
+
+		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
+		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
+			die( 1 );
+		}
+
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
 		$this->server = self::getServer();
