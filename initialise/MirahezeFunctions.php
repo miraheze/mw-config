@@ -1002,22 +1002,14 @@ class MirahezeFunctions {
 		);
 
 		$databaseLists = [
-			'active' => [
-				$databases['active'],
-			],
-			'databases' => [
-				$databases['databases'],
-			],
-			'deleted' => [
-				$databases['deleted'],
-			],
+			'active' => $databases['active'],
+			'databases' => $databases['databases'],
+			'deleted' => $databases['deleted'],
 		];
 
 		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
 			$databaseLists += [
-				$name . '-wikis' => [
-					$databases['versions'][$version],
-				],
+				$name . '-wikis' => $databases['versions'][$version],
 			];
 		}
 	}
