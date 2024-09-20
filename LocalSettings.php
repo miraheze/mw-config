@@ -66,6 +66,8 @@ if ( $forceprofile == 1 && extension_loaded( 'xhprof' ) ) {
 	unset( $xhprofFlags );
 }
 
+$wgCreateWikiUsePhpCache = true;
+
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenance = [];
 
