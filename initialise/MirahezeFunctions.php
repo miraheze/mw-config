@@ -509,13 +509,12 @@ class MirahezeFunctions {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php' ) ) {
 			return [];
 		}
 
-		$currentDatabaseFile = file_get_contents(
-			self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' );
-		return (array)json_decode( $currentDatabaseFile, true );
+		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
+		return include $currentDatabaseFile;
 	}
 
 	/** @var array */
@@ -543,7 +542,7 @@ class MirahezeFunctions {
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
 		);
 
 		static $globals = null;
@@ -768,7 +767,7 @@ class MirahezeFunctions {
 	public static function getActiveExtensions(): array {
 		global $wgDBname;
 
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wgDBname.php";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -781,7 +780,7 @@ class MirahezeFunctions {
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
 		);
 
 		static $extensions = null;
@@ -849,7 +848,7 @@ class MirahezeFunctions {
 	public function loadExtensions() {
 		global $wgDBname;
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' ) ) {
 			global $wgConf;
 			if ( self::getRealm( $wgDBname ) !== 'default' ) {
 				$wgConf->siteParamsCallback = static function () {
@@ -1026,9 +1025,9 @@ class MirahezeFunctions {
 	/**
 	 * @param string $wiki
 	 * @param DBConnRef $dbr
-	 * @param array &$jsonArray
+	 * @param array &$cacheArray
 	 */
-	public static function onCreateWikiJsonBuilder( string $wiki, DBConnRef $dbr, array &$jsonArray ) {
+	public static function onCreateWikiPhpBuilder( string $wiki, DBConnRef $dbr, array &$cacheArray ) {
 		$row = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -1039,8 +1038,8 @@ class MirahezeFunctions {
 			->caller( __METHOD__ )
 			->fetchRow();
 
-		$jsonArray['states']['deleted'] = (bool)$row->wiki_deleted;
-		$jsonArray['states']['locked'] = (bool)$row->wiki_locked;
+		$cacheArray['states']['deleted'] = (bool)$row->wiki_deleted;
+		$cacheArray['states']['locked'] = (bool)$row->wiki_locked;
 	}
 
 	/**
