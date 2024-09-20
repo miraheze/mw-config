@@ -7,11 +7,11 @@ use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
-$wgHooks['CreateWikiJsonGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
+$wgHooks['CreateWikiPhpBuilder'][] = 'MirahezeFunctions::onCreateWikiPhpBuilder';
+$wgHooks['CreateWikiPhpGenerateDatabaseList'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
 $wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
-$wgHooks['CreateWikiPhpBuilder'][] = 'MirahezeFunctions::onCreateWikiPhpBuilder';
 
 if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
 	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
