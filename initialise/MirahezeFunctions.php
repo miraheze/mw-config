@@ -139,13 +139,12 @@ class MirahezeFunctions {
 			return $database;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
-			$databases = [];
+		$filePath = self::CACHE_DIRECTORY . "/{$dblist}.php";
 
-			return $databases;
+		if ( !file_exists( $filePath ) ) {
+			return [];
 		} else {
-			$wikiDatabaseFile = file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" );
-			$databasesArray = json_decode( $wikiDatabaseFile, true );
+			$databasesArray = include $filePath;
 		}
 
 		if ( $database ) {
@@ -164,11 +163,7 @@ class MirahezeFunctions {
 				}
 			}
 
-			if ( isset( $databasesArray['combi'][$database] ) ) {
-				return $databasesArray['combi'][$database];
-			} else {
-				return '';
-			}
+			return $databasesArray['combi'][$database] ?? '';
 		} else {
 			global $wgDatabaseClustersMaintenance;
 
@@ -189,11 +184,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		if ( $onlyDBs ) {
-			return array_keys( $databases );
-		}
-
-		return $databases;
+		return $onlyDBs ? array_keys( $databases ) : $databases;
 	}
 
 	public static function setupSiteConfiguration() {
@@ -537,7 +528,7 @@ class MirahezeFunctions {
 		global $wgDBname, $wgConf;
 
 		// Try configuration cache
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wgDBname.php";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -630,26 +621,11 @@ class MirahezeFunctions {
 	 */
 	public static function writeToCache( string $cacheShard, array $configObject ) {
 		@mkdir( self::CACHE_DIRECTORY );
-		$tmpFile = tempnam( '/tmp/', $cacheShard );
+		$filePath = self::CACHE_DIRECTORY . '/' . $cacheShard;
 
-		$cacheObject = json_encode(
-			$configObject,
-			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-		) . "\n";
+		$cacheObject = '<?php return ' . var_export( $configObject, true ) . ';';
 
-		if ( $tmpFile ) {
-			if ( json_last_error() !== JSON_ERROR_NONE ) {
-				trigger_error( 'Config cache failure: Encoding failed', E_USER_ERROR );
-			} else {
-				if ( file_put_contents( $tmpFile, $cacheObject ) ) {
-					if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
-						return;
-					}
-				}
-			}
-
-			unlink( $tmpFile );
-		}
+		file_put_contents( $filePath, $cacheObject );
 	}
 
 	/**
@@ -663,17 +639,11 @@ class MirahezeFunctions {
 		string $confActualMtime,
 		string $type = 'globals'
 	): ?array {
-		$cacheRecord = @file_get_contents( $confCacheFile );
+		$cacheRecord = @include $confCacheFile;
 
 		if ( $cacheRecord !== false ) {
-			$cacheObject = json_decode( $cacheRecord, true );
-
-			if ( json_last_error() === JSON_ERROR_NONE ) {
-				if ( ( $cacheObject['mtime'] ?? null ) == $confActualMtime ) {
-					return $cacheObject[$type] ?? null;
-				}
-			} else {
-				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
+			if ( ( $cacheRecord['mtime'] ?? null ) == $confActualMtime ) {
+				return $cacheRecord[$type] ?? null;
 			}
 		}
 
