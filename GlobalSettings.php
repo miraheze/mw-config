@@ -621,13 +621,14 @@ if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
 }
 
 $beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
+$mirahost = $beta ? 'mirabeta' : 'miraheze';
 
 /**
  * Default values.
  * We can not set these in LocalSettings.php, to prevent them
  * from causing absolute overrides.
  */
-$wgRightsIcon = "https://meta.{$beta ? 'mirabeta' : 'miraheze'}.org/{$version}/resources/assets/licenses/cc-by-sa.png";
+$wgRightsIcon = "https://meta.{$mirahost}.org/{$version}/resources/assets/licenses/cc-by-sa.png";
 $wgRightsText = 'Creative Commons Attribution Share Alike';
 $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
