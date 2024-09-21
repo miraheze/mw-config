@@ -629,9 +629,9 @@ class MirahezeFunctions {
 					return;
 				}
 			}
-		}
 
-		unlink( $tmpFile );
+			unlink( $tmpFile );
+		}
 	}
 
 	/**
