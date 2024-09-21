@@ -828,7 +828,7 @@ class MirahezeFunctions {
 	public static function handleDisabledExtensions() {
 		global $wgManageWikiExtensions;
 
-		foreach ( static::disabledExtensions as $name => $reason ) {
+		foreach ( static::$disabledExtensions as $name => $reason ) {
 			$wgManageWikiExtensions[$name]['help'] = '<b>Note</b>: This extension has been globally disabled. The following reason was given: ' . $reason;
 			$wgManageWikiExtensions[$name]['requires'] = [
 				'permissions' => [
