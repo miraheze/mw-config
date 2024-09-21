@@ -630,6 +630,8 @@ class MirahezeFunctions {
 				}
 			}
 		}
+
+		unlink( $tmpFile );
 	}
 
 	/**
