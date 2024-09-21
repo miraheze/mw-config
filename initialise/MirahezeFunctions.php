@@ -816,7 +816,7 @@ class MirahezeFunctions {
 		) );
 
 		$enabledExtensions = array_keys(
-			array_diff( $allExtensions, array_keys( static::disabledExtensions ) )
+			array_diff( $allExtensions, array_keys( static::$disabledExtensions ) )
 		);
 
 		return array_values( array_intersect(
