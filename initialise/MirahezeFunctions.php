@@ -151,7 +151,7 @@ class MirahezeFunctions {
 			if ( $fromServer ) {
 				$server = $database;
 				$database = '';
-				foreach ( $databasesArray as $key => $data ) {
+				foreach ( $databasesArray['databases'] as $key => $data ) {
 					if ( isset( $data['u'] ) && $data['u'] === $server ) {
 						$database = $key;
 						break;
@@ -163,11 +163,11 @@ class MirahezeFunctions {
 				}
 			}
 
-			return $databasesArray[$database] ?? '';
+			return $databasesArray['databases'][$database] ?? '';
 		} else {
 			global $wgDatabaseClustersMaintenance;
 
-			$databases = $databasesArray ?? [];
+			$databases = $databasesArray['databases'] ?? [];
 
 			if ( $wgDatabaseClustersMaintenance ) {
 				$databases = array_filter( $databases, static function ( $data, $key ) {
