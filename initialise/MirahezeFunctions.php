@@ -871,17 +871,16 @@ class MirahezeFunctions {
 			return;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php' ) ) {
 			if ( !is_dir( self::CACHE_DIRECTORY . '/' . $this->version ) ) {
 				// Create directory since it doesn't exist
 				mkdir( self::CACHE_DIRECTORY . '/' . $this->version );
 			}
 
 			$queue = array_fill_keys( array_merge(
-					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/extensions/*/extension*.json' ),
-					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/skins/*/skin.json' )
-				),
-			true );
+				glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/extensions/*/extension*.json' ),
+				glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/skins/*/skin.json' )
+			), true );
 
 			$processor = new ExtensionProcessor();
 
@@ -897,10 +896,14 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json', json_encode( $list ), LOCK_EX );
+			// Write the list to a PHP cache file
+			$phpContent = "<?php\n\n" .
+				"/**\n * Auto-generated extension list cache.\n */\n\n" .
+				'return ' . var_export( $list, true ) . ";\n";
+
+			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php', $phpContent, LOCK_EX );
 		} else {
-			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' );
-			$list = json_decode( $extensionListFile, true );
+			$list = include self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php';
 		}
 
 		self::$activeExtensions ??= self::getActiveExtensions();
