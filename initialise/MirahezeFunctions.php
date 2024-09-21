@@ -816,13 +816,26 @@ class MirahezeFunctions {
 		) );
 
 		$enabledExtensions = array_keys(
-			array_diff( $allExtensions, static::$disabledExtensions )
+			array_diff( $allExtensions, array_keys( static::disabledExtensions ) )
 		);
 
 		return array_values( array_intersect(
 			$cacheArray['extensions'] ?? [],
 			$enabledExtensions
 		) );
+	}
+
+	public static function handleDisabledExtensions() {
+		global $wgManageWikiExtensions;
+
+		foreach ( static::disabledExtensions as $extension => $reason ) {
+			$wgManageWikiExtensions[$name]['help'] = '<b>Note</b>: This extension has been globally disabled for the following reason: ' . $reason;
+			$wgManageWikiExtensions[$name]['requires'] = [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			];
+		}
 	}
 
 	/**
@@ -905,6 +918,8 @@ class MirahezeFunctions {
 		} else {
 			$list = include self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php';
 		}
+
+		self::handleDisabledExtensions();
 
 		self::$activeExtensions ??= self::getActiveExtensions();
 		foreach ( self::$activeExtensions as $name ) {
