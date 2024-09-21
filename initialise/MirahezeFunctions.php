@@ -139,20 +139,19 @@ class MirahezeFunctions {
 			return $database;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
-			$databases = [];
+		$filePath = self::CACHE_DIRECTORY . "/{$dblist}.php";
 
-			return $databases;
+		if ( !file_exists( $filePath ) ) {
+			return [];
 		} else {
-			$wikiDatabaseFile = file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" );
-			$databasesArray = json_decode( $wikiDatabaseFile, true );
+			$databasesArray = include $filePath;
 		}
 
 		if ( $database ) {
 			if ( $fromServer ) {
 				$server = $database;
 				$database = '';
-				foreach ( $databasesArray['combi'] as $key => $data ) {
+				foreach ( $databasesArray['databases'] as $key => $data ) {
 					if ( isset( $data['u'] ) && $data['u'] === $server ) {
 						$database = $key;
 						break;
@@ -164,15 +163,11 @@ class MirahezeFunctions {
 				}
 			}
 
-			if ( isset( $databasesArray['combi'][$database] ) ) {
-				return $databasesArray['combi'][$database];
-			} else {
-				return '';
-			}
+			return $databasesArray['databases'][$database] ?? '';
 		} else {
 			global $wgDatabaseClustersMaintenance;
 
-			$databases = $databasesArray['combi'] ?? [];
+			$databases = $databasesArray['databases'] ?? [];
 
 			if ( $wgDatabaseClustersMaintenance ) {
 				$databases = array_filter( $databases, static function ( $data, $key ) {
@@ -189,11 +184,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		if ( $onlyDBs ) {
-			return array_keys( $databases );
-		}
-
-		return $databases;
+		return $onlyDBs ? array_keys( $databases ) : $databases;
 	}
 
 	public static function setupSiteConfiguration() {
@@ -518,13 +509,12 @@ class MirahezeFunctions {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php' ) ) {
 			return [];
 		}
 
-		$currentDatabaseFile = file_get_contents(
-			self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' );
-		return (array)json_decode( $currentDatabaseFile, true );
+		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
+		return include $currentDatabaseFile;
 	}
 
 	/** @var array */
@@ -537,7 +527,7 @@ class MirahezeFunctions {
 		global $wgDBname, $wgConf;
 
 		// Try configuration cache
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wgDBname.php";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -552,7 +542,7 @@ class MirahezeFunctions {
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
 		);
 
 		static $globals = null;
@@ -630,26 +620,11 @@ class MirahezeFunctions {
 	 */
 	public static function writeToCache( string $cacheShard, array $configObject ) {
 		@mkdir( self::CACHE_DIRECTORY );
-		$tmpFile = tempnam( '/tmp/', $cacheShard );
+		$filePath = self::CACHE_DIRECTORY . '/' . $cacheShard;
 
-		$cacheObject = json_encode(
-			$configObject,
-			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-		) . "\n";
+		$cacheObject = '<?php return ' . var_export( $configObject, true ) . ';';
 
-		if ( $tmpFile ) {
-			if ( json_last_error() !== JSON_ERROR_NONE ) {
-				trigger_error( 'Config cache failure: Encoding failed', E_USER_ERROR );
-			} else {
-				if ( file_put_contents( $tmpFile, $cacheObject ) ) {
-					if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
-						return;
-					}
-				}
-			}
-
-			unlink( $tmpFile );
-		}
+		file_put_contents( $filePath, $cacheObject );
 	}
 
 	/**
@@ -663,17 +638,11 @@ class MirahezeFunctions {
 		string $confActualMtime,
 		string $type = 'globals'
 	): ?array {
-		$cacheRecord = @file_get_contents( $confCacheFile );
+		$cacheRecord = @include $confCacheFile;
 
 		if ( $cacheRecord !== false ) {
-			$cacheObject = json_decode( $cacheRecord, true );
-
-			if ( json_last_error() === JSON_ERROR_NONE ) {
-				if ( ( $cacheObject['mtime'] ?? null ) == $confActualMtime ) {
-					return $cacheObject[$type] ?? null;
-				}
-			} else {
-				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
+			if ( ( $cacheRecord['mtime'] ?? null ) == $confActualMtime ) {
+				return $cacheRecord[$type] ?? null;
 			}
 		}
 
@@ -798,7 +767,7 @@ class MirahezeFunctions {
 	public static function getActiveExtensions(): array {
 		global $wgDBname;
 
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wgDBname.php";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -811,7 +780,7 @@ class MirahezeFunctions {
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
 		);
 
 		static $extensions = null;
@@ -879,7 +848,7 @@ class MirahezeFunctions {
 	public function loadExtensions() {
 		global $wgDBname;
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' ) ) {
 			global $wgConf;
 			if ( self::getRealm( $wgDBname ) !== 'default' ) {
 				$wgConf->siteParamsCallback = static function () {
@@ -1033,22 +1002,14 @@ class MirahezeFunctions {
 		);
 
 		$databaseLists = [
-			'active' => [
-				'combi' => $databases['active'],
-			],
-			'databases' => [
-				'combi' => $databases['databases'],
-			],
-			'deleted' => [
-				'combi' => $databases['deleted'],
-			],
+			'active' => $databases['active'],
+			'databases' => $databases['databases'],
+			'deleted' => $databases['deleted'],
 		];
 
 		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
 			$databaseLists += [
-				$name . '-wikis' => [
-					'combi' => $databases['versions'][$version],
-				],
+				$name . '-wikis' => $databases['versions'][$version],
 			];
 		}
 	}
@@ -1056,9 +1017,9 @@ class MirahezeFunctions {
 	/**
 	 * @param string $wiki
 	 * @param DBConnRef $dbr
-	 * @param array &$jsonArray
+	 * @param array &$cacheArray
 	 */
-	public static function onCreateWikiJsonBuilder( string $wiki, DBConnRef $dbr, array &$jsonArray ) {
+	public static function onCreateWikiPhpBuilder( string $wiki, DBConnRef $dbr, array &$cacheArray ) {
 		$row = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -1069,8 +1030,8 @@ class MirahezeFunctions {
 			->caller( __METHOD__ )
 			->fetchRow();
 
-		$jsonArray['states']['deleted'] = (bool)$row->wiki_deleted;
-		$jsonArray['states']['locked'] = (bool)$row->wiki_locked;
+		$cacheArray['states']['deleted'] = (bool)$row->wiki_deleted;
+		$cacheArray['states']['locked'] = (bool)$row->wiki_locked;
 	}
 
 	/**
