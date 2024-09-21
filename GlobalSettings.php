@@ -763,7 +763,6 @@ $mcpMessageCachePerformanceMsgPrefixes = [
 	'nstab-'
 ];
 
-$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 $wgPoolCounterConf = [
 	'ArticleView' => [
 		'class' => 'PoolCounter_Client',
