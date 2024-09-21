@@ -597,6 +597,8 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'rainversewiki':
+		$wgCargoAllowedSQLFunctions[] = 'NATURAL_SORT_KEY';
+
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
