@@ -620,11 +620,16 @@ class MirahezeFunctions {
 	 */
 	public static function writeToCache( string $cacheShard, array $configObject ) {
 		@mkdir( self::CACHE_DIRECTORY );
-		$filePath = self::CACHE_DIRECTORY . '/' . $cacheShard;
 
-		$cacheObject = '<?php return ' . var_export( $configObject, true ) . ';';
+		$tmpFile = tempnam( '/tmp/', $cacheShard );
 
-		file_put_contents( $filePath, $cacheObject );
+		if ( $tmpFile ) {
+			if ( file_put_contents( $tmpFile, '<?php return ' . var_export( $configObject, true ) . ';' ) ) {
+				if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
+					return;
+				}
+			}
+		}
 	}
 
 	/**
