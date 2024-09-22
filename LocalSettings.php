@@ -6788,11 +6788,11 @@ $wgMessagesDirs['SocialProfileUserProfile'] = $IP . '/extensions/SocialProfile/U
 $wgExtensionMessagesFiles['SocialProfileNamespaces'] = $IP . '/extensions/SocialProfile/SocialProfile.namespaces.php';
 $wgExtensionMessagesFiles['AvatarMagic'] = $IP . '/extensions/SocialProfile/UserProfile/includes/avatar/Avatar.i18n.magic.php';
 
-$wgLocalisationCacheConf['storeClass'] = LCStoreCDB::class;
+$wgLocalisationCacheConf['storeClass'] = LCStoreStaticArray::class;
 $wgLocalisationCacheConf['storeDirectory'] = '/srv/mediawiki/cache/' . $wi->version . '/l10n';
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-if ( !file_exists( '/srv/mediawiki/cache/' . $wi->version . '/l10n/l10n_cache-en.cdb' ) ) {
+if ( !file_exists( '/srv/mediawiki/cache/' . $wi->version . '/l10n/en.l10n.php' ) ) {
 	$wgLocalisationCacheConf['manualRecache'] = false;
 }
 
