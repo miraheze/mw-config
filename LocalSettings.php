@@ -6773,7 +6773,6 @@ if ( $wi->version >= '1.42' ) {
 	array_push( $wi::$disabledExtensions, 'eveskin' );
 	array_push( $wi::$disabledExtensions, 'femiwiki' );
 	array_push( $wi::$disabledExtensions, 'snapwikiskin' );
-	array_push( $wi::$disabledExtensions, 'tweeki' );
 }
 
 $globals = MirahezeFunctions::getConfigGlobals();
