@@ -6810,7 +6810,10 @@ if ( $wgRequestTimeLimit ) {
 
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
-// require_once '/srv/mediawiki/config/EventBus.php';
+$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
+if ( $beta ) {
+	require_once '/srv/mediawiki/config/EventBus.php';
+}
 require_once '/srv/mediawiki/config/EventStreamConfig.php';
 require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
