@@ -11,7 +11,7 @@ if ( $cwPrivate ) {
 	$wgEnableEventBus = 'TYPE_JOB';
 }
 
-if ( $wi->dbname === 'loginwiki' ) {
+if ( $wi->dbname === 'loginwiki' || $wi->dbname === 'loginwikibeta' ) {
 	$wgEnableEventBus = 'TYPE_JOB|TYPE_PURGE';
 }
 
@@ -44,30 +44,9 @@ $wgJobTypeConf['default'] = [
 	'readOnlyReason' => false
 ];
 
-$jobQueueRedis = [
-	'class' => JobQueueRedis::class,
-	'redisServer' => '10.0.17.120:6379',
-	'redisConfig' => [
-		'connectTimeout' => 2,
-		'password' => $wmgRedisPassword,
-		'compression' => 'gzip',
-	],
-	'daemonized' => true,
-];
-
-$wgJobTypeConf['LocalPageMoveJob'] = $jobQueueRedis;
-$wgJobTypeConf['LocalRenameUserJob'] = $jobQueueRedis;
-$wgJobTypeConf['RemovePIIJob'] = $jobQueueRedis;
-$wgJobTypeConf['SetContainersAccessJob'] = $jobQueueRedis;
-$wgJobTypeConf['securePollPopulateVoterList'] = $jobQueueRedis;
-$wgJobTypeConf['EchoNotificationJob'] = $jobQueueRedis;
-$wgJobTypeConf['RecordLintJob'] = $jobQueueRedis;
-
-// Don't need a global here
-unset( $jobQueueRedis );
-
 $wgEventBusEnableRunJobAPI =
 	wfHostname() === 'mwtask151' ||
 	wfHostname() === 'mwtask161' ||
 	wfHostname() === 'mwtask171' ||
-	wfHostname() === 'mwtask181';
+	wfHostname() === 'mwtask181' ||
+	wfHostname() === 'test151';
