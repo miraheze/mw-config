@@ -6751,29 +6751,22 @@ if ( wfHostname() === 'test151' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
-	// T10883
-	'hitcounters',
-	// T10882
-	'regexfunctions',
-	// T10871
-	'wikiforum',
-	// T10756
-	'graph',
-	// T11641
-	'pageproperties',
-	// T11970
-	'drafts',
-	// Broken, once again...
-	'lingo',
-];
+	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
+	'graph' => '<a href="https://issue-tracker.miraheze.org/T10756">T10756</a>',
+	'hitcounters' => '<a href="https://issue-tracker.miraheze.org/T10882">T10882</a>',
+	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
+	'regexfunctions' => '<a href="https://issue-tracker.miraheze.org/T10871">T10871</a>',
+	'score' => '<a href="https://issue-tracker.miraheze.org/T5863">T5863</a>',
+	'wikiforum' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 
-if ( $wi->version >= '1.42' ) {
-	array_push( $wi::$disabledExtensions, 'chameleon' );
-	array_push( $wi::$disabledExtensions, 'evelution' );
-	array_push( $wi::$disabledExtensions, 'eveskin' );
-	array_push( $wi::$disabledExtensions, 'femiwiki' );
-	array_push( $wi::$disabledExtensions, 'snapwikiskin' );
-}
+	'lingo' => 'Currently broken',
+
+	'chameleon' => 'Incompatible with MediaWiki 1.42',
+	'evelution' => 'Incompatible with MediaWiki 1.42',
+	'eveskin' => 'Incompatible with MediaWiki 1.42',
+	'femiwiki' => 'Incompatible with MediaWiki 1.42',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.42'
+];
 
 $globals = MirahezeFunctions::getConfigGlobals();
 

@@ -525,11 +525,7 @@ $wgManageWikiExtensions = [
 				'jsonconfig',
 				'codeeditor',
 			],
-			'permissions' => [
-				'managewiki-restricted',
-			],
 		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10756">T10756</a> for details.',
 		'section' => 'parserhooks',
 	],
 	'groupssidebar' => [
@@ -880,12 +876,7 @@ $wgManageWikiExtensions = [
 		'name' => 'RegexFunctions',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10882">T10882</a> for details.',
+		'requires' => [],
 		'section' => 'parserhooks',
 	],
 	'rightfunctions' => [
@@ -911,14 +902,9 @@ $wgManageWikiExtensions = [
 	],
 	'score' => [
 		'name' => 'Score',
-		'displayname' => 'Score (Disabled -- See T5863)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Score',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 		'section' => 'parserhooks',
 	],
 	'scratchblocks' => [
@@ -1477,12 +1463,7 @@ $wgManageWikiExtensions = [
 		'name' => 'HitCounters',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HitCounters',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10883">T10883</a> for details.',
+		'requires' => [],
 		'install' => [
 			'sql' => [
 				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
@@ -3567,12 +3548,7 @@ $wgManageWikiExtensions = [
 		'name' => 'WikiForum',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10871">T10871</a> for details.',
+		'requires' => [],
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
