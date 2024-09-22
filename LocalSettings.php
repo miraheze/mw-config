@@ -6766,7 +6766,6 @@ $wi::$disabledExtensions = [
 	'eveskin' => 'Incompatible with MediaWiki 1.42',
 	'femiwiki' => 'Incompatible with MediaWiki 1.42',
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.42',
-	'tweeki' => 'Incompatible with MediaWiki 1.42',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
