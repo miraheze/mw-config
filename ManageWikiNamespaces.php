@@ -221,6 +221,17 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgCodeMirrorLineNumberingNamespaces' => [
+		'name' => 'Enable CodeMirror in this namespace?',
+		'from' => 'codemirror',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		'overridedefault' => true,
+		'help' => '',
+		'requires' => [],
+	],
 	'wgFlaggedRevsNamespaces' => [
 		'name' => 'Enable FlaggedRevs in this namespace?',
 		'from' => 'flaggedrevs',
