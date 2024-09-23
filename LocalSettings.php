@@ -13,20 +13,22 @@ if ( PHP_SAPI !== 'cli' ) {
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
-// 1400MiB
-ini_set( 'memory_limit', 1400 * 1024 * 1024 );
+$mwtask = preg_match( '/^mwtask(.+)\.wikitide\.net$/', $_SERVER['HTTP_HOST'] ?? '' );
+// Higher on mwtask
+if ( $mwtask ) {
+	// 2000MiB
+	ini_set( 'memory_limit', 2000 * 1024 * 1024 );
+} else {
+	// 1400MiB
+	ini_set( 'memory_limit', 1400 * 1024 * 1024 );
+}
 
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
-} elseif (
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'jobrunner.wikitide.net' ||
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask151.wikitide.net' ||
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask161.wikitide.net' ||
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask171.wikitide.net' ||
-	( $_SERVER['HTTP_HOST'] ?? '' ) === 'mwtask181.wikitide.net'
-) {
-	$wgRequestTimeLimit = 86400;
+} elseif ( $mwtask ) {
+	// We have to set this to the highest we require a job to run for.
+	$wgRequestTimeLimit = 259200;
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
 } else {
