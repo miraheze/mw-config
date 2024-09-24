@@ -149,7 +149,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-$useEventBus = strpos( $wi->server, 'https://allthetropes.org' ) === 0;
+$useEventBus = preg_match( '/^[0-9a]/', $wgDBname ) || $wgDBname === 'metawiki';
 if ( !$useEventBus ) {
 	$redisServerIP = $beta ?
 		'10.0.15.118:6379' :
