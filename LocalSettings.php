@@ -6810,8 +6810,8 @@ if ( $wgRequestTimeLimit ) {
 
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
-$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
-if ( $beta ) {
+$useEventBus = strpos( $wi->server, 'https://allthetropes.org' ) === 0;
+if ( $useEventBus ) {
 	require_once '/srv/mediawiki/config/EventBus.php';
 }
 require_once '/srv/mediawiki/config/EventStreamConfig.php';
