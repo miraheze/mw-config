@@ -6810,7 +6810,7 @@ if ( $wgRequestTimeLimit ) {
 
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
-$useEventBus = strpos( $wi->server, 'https://allthetropes.org' ) === 0;
+$useEventBus = preg_match( '/^[0-9a]/', $wgDBname ) || $wgDBname === 'metawiki';
 if ( $useEventBus ) {
 	require_once '/srv/mediawiki/config/EventBus.php';
 }
