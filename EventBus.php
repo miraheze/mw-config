@@ -5,6 +5,8 @@ use MediaWiki\Extension\EventBus\Adapters\JobQueue\JobQueueEventBus;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedFormatter;
 
+require_once '/srv/mediawiki/config/JobQueueEventBusBeta.php';
+
 $wgEnableEventBus = 'TYPE_ALL';
 
 if ( $cwPrivate ) {
