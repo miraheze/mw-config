@@ -13,12 +13,12 @@ $betaStream = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server ) ? 
 
 $wgEventStreams = [
 	'/^mediawiki\\.job\\..+/' => [
-		'schema_title' => "mediawiki/{$betaStream}job",
+		'schema_title' => "mediawiki/job",
 		'destination_event_service' => 'eventgate',
 		'canary_events_enabled' => false,
 	],
 	'/^mediawiki\\.beta\\.job\\..+/' => [
-		'schema_title' => "mediawiki/{$betaStream}job",
+		'schema_title' => "mediawiki/beta/job",
 		'destination_event_service' => 'eventgate',
 		'canary_events_enabled' => false,
 	],
