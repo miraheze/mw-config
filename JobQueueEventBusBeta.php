@@ -1,13 +1,6 @@
 <?php
 
-use ArrayIterator;
-use IJobSpecification;
-use Iterator;
-use Job;
-use JobQueue;
-use JobQueueError;
 use MediaWiki\Extension\EventBus\EventBus;
-use RunnableJob;
 
 /**
  * Class is a copy of https://github.com/wikimedia/mediawiki-extensions-EventBus/blob/ea8ab686e80f56ac1e1c44296b8c823d4d769ee7/includes/Adapters/JobQueue/JobQueueEventBus.php
