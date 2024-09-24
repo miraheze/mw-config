@@ -149,7 +149,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-$useEventBus = preg_match( '/^[0-9a]/', $wgDBname ) || $wgDBname === 'metawiki';
+$useEventBus = preg_match( '/^[0-9a-d]/', $wgDBname ) || $wgDBname === 'metawiki';
 if ( !$useEventBus ) {
 	$redisServerIP = $beta ?
 		'10.0.15.118:6379' :
