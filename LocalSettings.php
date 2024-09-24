@@ -13,7 +13,7 @@ if ( PHP_SAPI !== 'cli' ) {
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
-$mwtask = preg_match( '/^mwtask(.+)\.wikitide\.net$/', $_SERVER['HTTP_HOST'] ?? '' );
+$mwtask = preg_match( '/^mwtask(.+)\.wikitide\.net$/', wfHostname() );
 // Higher on mwtask
 if ( $mwtask ) {
 	// 2000MiB
