@@ -149,7 +149,8 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-if ( !$beta ) {
+$useEventBus = strpos( $wi->server, 'allthetropes.org' ) === 0;
+if ( !$useEventBus ) {
 	$redisServerIP = $beta ?
 		'10.0.15.118:6379' :
 		'10.0.17.120:6379';
@@ -167,6 +168,8 @@ if ( !$beta ) {
 
 	unset( $redisServerIP );
 }
+
+unset( $useEventBus );
 
 if ( PHP_SAPI === 'cli' ) {
 	// APC not available in CLI mode
