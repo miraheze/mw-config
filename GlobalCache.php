@@ -149,7 +149,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-$useEventBus = strpos( $wi->server, 'allthetropes.org' ) === 0;
+$useEventBus = strpos( $wi->server, 'https://allthetropes.org' ) === 0;
 if ( !$useEventBus ) {
 	$redisServerIP = $beta ?
 		'10.0.15.118:6379' :
