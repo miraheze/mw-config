@@ -516,18 +516,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'graph' => [
-		'name' => 'Graph',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Graph',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'jsonconfig',
-				'codeeditor',
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'groupssidebar' => [
 		'name' => 'GroupsSidebar',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GroupsSidebar',

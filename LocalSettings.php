@@ -6753,7 +6753,6 @@ if ( wfHostname() === 'test151' ) {
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
 	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
-	'graph' => '<a href="https://issue-tracker.miraheze.org/T10756">T10756</a>',
 	'hitcounters' => '<a href="https://issue-tracker.miraheze.org/T10882">T10882</a>',
 	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 	'regexfunctions' => '<a href="https://issue-tracker.miraheze.org/T10871">T10871</a>',
