@@ -149,8 +149,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-$useEventBus = preg_match( '/^[0-9a-m]/', $wgDBname );
-if ( !$useEventBus ) {
+if ( !$beta ) {
 	$redisServerIP = $beta ?
 		'10.0.15.118:6379' :
 		'10.0.17.120:6379';
