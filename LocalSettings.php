@@ -6810,7 +6810,7 @@ if ( $wgRequestTimeLimit ) {
 
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
-$useEventBus = preg_match( '/^[0-9a-d]/', $wgDBname ) || $wgDBname === 'metawiki';
+$useEventBus = preg_match( '/^[0-9a-h]/', $wgDBname ) || $wgDBname === 'metawiki';
 if ( $useEventBus ) {
 	require_once '/srv/mediawiki/config/EventBus.php';
 }
