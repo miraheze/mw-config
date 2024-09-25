@@ -13,7 +13,7 @@ if ( PHP_SAPI !== 'cli' ) {
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
-$mwtask = preg_match( '/^mwtask(.+)\.wikitide\.net$/', $_SERVER['HTTP_HOST'] ?? '' );
+$mwtask = strpos( wfHostname(), 'mwtask' ) === 0;
 // Higher on mwtask
 if ( $mwtask ) {
 	// 2000MiB
@@ -4585,7 +4585,7 @@ $wgConf->settings += [
 	'+wgDefaultUserOptions' => [
 		'default' => [
 			'enotifwatchlistpages' => 0,
-			'math' => 'mathml',
+			'math' => 'mathjax',
 			'usebetatoolbar' => 1,
 			'usebetatoolbar-cgd' => 1,
 		],
@@ -6753,7 +6753,6 @@ if ( wfHostname() === 'test151' ) {
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
 	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
-	'graph' => '<a href="https://issue-tracker.miraheze.org/T10756">T10756</a>',
 	'hitcounters' => '<a href="https://issue-tracker.miraheze.org/T10882">T10882</a>',
 	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 	'regexfunctions' => '<a href="https://issue-tracker.miraheze.org/T10871">T10871</a>',
@@ -6811,8 +6810,8 @@ if ( $wgRequestTimeLimit ) {
 
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
-$beta = preg_match( '/^(.*)\.mirabeta\.org$/', $wi->server );
-if ( $beta ) {
+$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
+if ( !$beta ) {
 	require_once '/srv/mediawiki/config/EventBus.php';
 }
 require_once '/srv/mediawiki/config/EventStreamConfig.php';
