@@ -4610,7 +4610,7 @@ $wgConf->settings += [
 	'+wgDefaultUserOptions' => [
 		'default' => [
 			'enotifwatchlistpages' => 0,
-			'math' => 'mathml',
+			'math' => 'mathjax',
 			'usebetatoolbar' => 1,
 			'usebetatoolbar-cgd' => 1,
 		],
@@ -4643,6 +4643,9 @@ $wgConf->settings += [
 		],
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
+		],
+		'+dominionstrategywiki' => [
+			'usecodemirror' => 1,
 		],
 		'+donkeykongwiki' => [
 			'rcenhancedfilters-disable' => 1,
