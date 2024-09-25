@@ -10,6 +10,10 @@ use MediaWiki\User\User;
 
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
+	case 'abyssalwiki':
+		$wgUploadNavigationUrl = '/wiki/Abyssal_Wiki:Upload_files';
+
+		break;
 	case 'aieseattlewiki':
 		$wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
