@@ -106,6 +106,14 @@ if ( $wgDBname === 'famedatawiki' ) {
 
 if ( $wgDBname === 'famepediawiki' ) {
 	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
+	$wgWBRepoSettings['siteLinkGroups'] = [
+		'famepedia' => [
+			'site' => 'famepedia',
+			'title' => 'Famepedia',
+			'namespace' => 0,  // Namespace 0 is typically used for articles
+			'interwiki' => 'famepedia'
+		],
+	];
 
 	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
 	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
