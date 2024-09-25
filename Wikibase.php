@@ -110,7 +110,7 @@ if ( $wgDBname === 'famepediawiki' ) {
 		'famepedia' => [
 			'site' => 'famepedia',
 			'title' => 'Famepedia',
-			'namespace' => 0,  // Namespace 0 is typically used for articles
+			'namespace' => 0,
 			'interwiki' => 'famepedia'
 		],
 	];
