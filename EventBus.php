@@ -5,6 +5,8 @@ use MediaWiki\Extension\EventBus\Adapters\JobQueue\JobQueueEventBus;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
 use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedFormatter;
 
+require_once '/srv/mediawiki/config/JobQueueEventBusBeta.php';
+
 $wgEnableEventBus = 'TYPE_ALL';
 
 if ( $cwPrivate ) {
@@ -39,14 +41,14 @@ $wgRCFeeds['eventbus'] = [
 	'class' => EventBusRCFeedEngine::class,
 ];
 
+$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 $wgJobTypeConf['default'] = [
-	'class' => JobQueueEventBus::class,
+	'class' => preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server ) ?
+		JobQueueEventBusBeta::class :
+		JobQueueEventBus::class,
 	'readOnlyReason' => false
 ];
 
 $wgEventBusEnableRunJobAPI =
-	wfHostname() === 'mwtask151' ||
-	wfHostname() === 'mwtask161' ||
-	wfHostname() === 'mwtask171' ||
-	wfHostname() === 'mwtask181' ||
-	wfHostname() === 'test151';
+	strpos( wfHostname(), 'mwtask' ) === 0 ||
+	strpos( wfHostname(), 'test' ) === 0;
