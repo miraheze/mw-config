@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Config\SiteConfiguration;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use Miraheze\CreateWiki\RemoteWiki;
 use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
