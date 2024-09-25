@@ -4610,7 +4610,7 @@ $wgConf->settings += [
 	'+wgDefaultUserOptions' => [
 		'default' => [
 			'enotifwatchlistpages' => 0,
-			'math' => 'mathjax',
+			'math' => 'mathml',
 			'usebetatoolbar' => 1,
 			'usebetatoolbar-cgd' => 1,
 		],
