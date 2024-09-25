@@ -525,54 +525,14 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getConfigGlobals(): array {
-		global $wgDBname, $wgConf;
+		global $wgConf;
 
-		// Try configuration cache
-		$confCacheFileName = "config-$wgDBname.php";
-
-		// To-Do: merge ManageWiki cache with main config cache,
-		// to automatically update when ManageWiki is updated
-		$confActualMtime = max(
-			// When config files are updated
-			filemtime( __DIR__ . '/../LocalSettings.php' ),
-			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
-			filemtime( __DIR__ . '/../ManageWikiNamespaces.php' ),
-			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
-
-			// When MediaWiki is upgraded
-			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
-
-			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
+		$wgConf->settings = array_merge(
+			$wgConf->settings,
+			self::getManageWikiConfigCache()
 		);
 
-		static $globals = null;
-		$globals ??= self::readFromCache(
-			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
-			$confActualMtime
-		);
-
-		if ( !$globals ) {
-			$wgConf->settings = array_merge(
-				$wgConf->settings,
-				self::getManageWikiConfigCache()
-			);
-
-			self::$activeExtensions ??= self::getActiveExtensions();
-
-			$globals = self::getConfigForCaching();
-
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::$activeExtensions ];
-
-			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
-			if ( time() > $minTime ) {
-				self::writeToCache(
-					$confCacheFileName, $confCacheObject
-				);
-			}
-		}
-
-		return $globals;
+		return self::getConfigForCaching();
 	}
 
 	/**
@@ -613,48 +573,6 @@ class MirahezeFunctions {
 		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
 
 		return $globals;
-	}
-
-	/**
-	 * @param string $cacheShard
-	 * @param array $configObject
-	 */
-	public static function writeToCache( string $cacheShard, array $configObject ) {
-		@mkdir( self::CACHE_DIRECTORY );
-
-		$tmpFile = tempnam( '/tmp/', $cacheShard );
-
-		if ( $tmpFile ) {
-			if ( file_put_contents( $tmpFile, '<?php return ' . var_export( $configObject, true ) . ';' ) ) {
-				if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
-					return;
-				}
-			}
-
-			unlink( $tmpFile );
-		}
-	}
-
-	/**
-	 * @param string $confCacheFile
-	 * @param string $confActualMtime
-	 * @param string $type
-	 * @return ?array
-	 */
-	public static function readFromCache(
-		string $confCacheFile,
-		string $confActualMtime,
-		string $type = 'globals'
-	): ?array {
-		$cacheRecord = @include $confCacheFile;
-
-		if ( $cacheRecord !== false ) {
-			if ( ( $cacheRecord['mtime'] ?? null ) == $confActualMtime ) {
-				return $cacheRecord[$type] ?? null;
-			}
-		}
-
-		return null;
 	}
 
 	/**
@@ -773,35 +691,6 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getActiveExtensions(): array {
-		global $wgDBname;
-
-		$confCacheFileName = "config-$wgDBname.php";
-
-		// To-Do: merge ManageWiki cache with main config cache,
-		// to automatically update when ManageWiki is updated
-		$confActualMtime = max(
-			// When config files are updated
-			filemtime( __DIR__ . '/../LocalSettings.php' ),
-			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
-
-			// When MediaWiki is upgraded
-			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
-
-			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
-		);
-
-		static $extensions = null;
-		$extensions ??= self::readFromCache(
-			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
-			$confActualMtime,
-			'extensions'
-		);
-
-		if ( $extensions ) {
-			return $extensions;
-		}
-
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
 
