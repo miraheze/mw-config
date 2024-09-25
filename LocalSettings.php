@@ -1648,6 +1648,15 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'beta' => [
+			'poweredby' => [
+				'miraheze' => [
+					'src' => 'https://static.miraheze.org/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+		],
 		'lhmnwiki' => [
 			'hostedby' => [
 				'songnguxyz' => [
