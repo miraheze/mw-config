@@ -954,7 +954,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'syntaxhighlight_geshi' => [
-		'name' => 'SyntaxHighlight',
+		'name' => 'SyntaxHighlight_GeSHi',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SyntaxHighlight',
 		'conflicts' => false,
 		'requires' => [],
