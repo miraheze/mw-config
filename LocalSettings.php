@@ -76,6 +76,10 @@ $wgDatabaseClustersMaintenance = [];
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
 
+$_SERVER['MW_WIKI_NAME'] = $wi->dbname;
+$wgWikiFarmSettingsDirectory = '/srv/mediawiki/cache';
+$wgWikiFarmSettingsExtension = 'php';
+
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
 
