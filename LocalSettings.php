@@ -6789,7 +6789,6 @@ $wi::$disabledExtensions = [
 	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
 	'hitcounters' => '<a href="https://issue-tracker.miraheze.org/T10882">T10882</a>',
 	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
-	'regexfunctions' => '<a href="https://issue-tracker.miraheze.org/T10871">T10871</a>',
 	'score' => '<a href="https://issue-tracker.miraheze.org/T5863">T5863</a>',
 	'wikiforum' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 

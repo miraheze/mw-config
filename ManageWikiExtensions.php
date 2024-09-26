@@ -860,13 +860,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'regexfunctions' => [
-		'name' => 'RegexFunctions',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
 	'rightfunctions' => [
 		'name' => 'RightFunctions',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RightFunctions',
