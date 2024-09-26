@@ -2019,14 +2019,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
-	'articletocategory2' => [
-		'name' => 'ArticleToCategory2',
-		'displayname' => 'Article To Category 2',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleToCategory2',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'other',
-	],
 	'autocreatecategorypages' => [
 		'name' => 'AutoCreateCategoryPages',
 		'displayname' => 'Auto Create Category Pages',
