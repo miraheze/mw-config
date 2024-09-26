@@ -532,14 +532,6 @@ class MirahezeFunctions {
 		}
 
 		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
-		$settings = new MediaWiki\Settings\SettingsBuilder(
-        		MW_INSTALL_PATH,
-        		ExtensionRegistry::getInstance(),
-        		new MediaWiki\Settings\Config\GlobalConfigBuilder( '' ),
-        		new MediaWiki\Settings\Config\PhpIniSink()
-		);
-		$wgSettings2->load( new MediaWiki\Settings\Source\PhpSettingsSource( '/srv/mediawiki/cache/' . $wi->dbname . '.php' ) );
-		$wgSettings2->apply();
 		return include $currentDatabaseFile;
 	}
 
