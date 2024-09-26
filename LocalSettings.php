@@ -6811,7 +6811,7 @@ $wgSettings2 = new MediaWiki\Settings\SettingsBuilder(
         new MediaWiki\Settings\Config\GlobalConfigBuilder( '' ),
         new MediaWiki\Settings\Config\PhpIniSink()
 );
-$wgSettings2->load( MediaWiki\Settings\Source\PhpSettingsSource('/srv/mediawiki/cache/config-' . $wi->dbname . '.php' ) );
+$wgSettings2->load( new MediaWiki\Settings\Source\PhpSettingsSource('/srv/mediawiki/cache/config-' . $wi->dbname . '.php' ) );
 $wgSettings2->apply();
 $wi->applyManageWiki();
 
