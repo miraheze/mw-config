@@ -6808,8 +6808,7 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
-//$wi->loadExtensions();
-
+// $wi->loadExtensions();
 
 $wgSettings->load( new PhpSettingsSource( '/srv/mediawiki/cache/' . $wi->dbname . '.php' ) );
 
