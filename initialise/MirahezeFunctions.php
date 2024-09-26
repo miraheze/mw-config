@@ -525,12 +525,12 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getConfigGlobals(): array {
-		global $wgConf;
+		/*global $wgConf;
 
 		$wgConf->settings = array_merge(
 			$wgConf->settings,
 			self::getManageWikiConfigCache()
-		);
+		);*/
 
 		return self::getConfigForCaching();
 	}
@@ -1072,7 +1072,7 @@ class MirahezeFunctions {
 	}
 
 	public static function onMediaWikiServices() {
-		if ( isset( $GLOBALS['globals'] ) ) {
+		/*if ( isset( $GLOBALS['globals'] ) ) {
 			foreach ( $GLOBALS['globals'] as $global => $value ) {
 				if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) &&
 					$global !== 'wgManageWikiPermissionsAdditionalRights'
@@ -1083,6 +1083,6 @@ class MirahezeFunctions {
 
 			// Don't need a global here
 			unset( $GLOBALS['globals'] );
-		}
+		}*/
 	}
 }
