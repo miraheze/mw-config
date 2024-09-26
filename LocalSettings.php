@@ -6675,7 +6675,6 @@ $wgConf->settings += [
 			'GlobalWatchlist' => false,
 			'headers-sent' => false,
 			'http' => 'warning',
-			'HitCounters' => false,
 			// Only log http errors with a 500+ code
 			'HttpError' => 'error',
 			'JobExecutor' => [ 'graylog' => 'warning' ],
@@ -6787,7 +6786,6 @@ if ( wfHostname() === 'test151' ) {
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
 	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
-	'hitcounters' => '<a href="https://issue-tracker.miraheze.org/T10882">T10882</a>',
 	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 	'score' => '<a href="https://issue-tracker.miraheze.org/T5863">T5863</a>',
 	'wikiforum' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
