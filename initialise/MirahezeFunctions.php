@@ -553,16 +553,11 @@ class MirahezeFunctions {
 		);
 
 		if ( !$globals ) {
-			$wgConf->settings = array_merge(
-				$wgConf->settings,
-				self::getManageWikiConfigCache()
-			);
-
 			self::$activeExtensions ??= self::getActiveExtensions();
 
 			$globals = self::getConfigForCaching();
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'globals' => $globals, 'extensions' => self::$activeExtensions ];
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'config-overrides' => $globals, 'extensions' => []/*self::$activeExtensions*/ ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
@@ -644,7 +639,7 @@ class MirahezeFunctions {
 	public static function readFromCache(
 		string $confCacheFile,
 		string $confActualMtime,
-		string $type = 'globals'
+		string $type = 'config-overrides'
 	): ?array {
 		$cacheRecord = @include $confCacheFile;
 
@@ -1183,7 +1178,7 @@ class MirahezeFunctions {
 	}
 
 	public static function onMediaWikiServices() {
-		if ( isset( $GLOBALS['globals'] ) ) {
+		/*if ( isset( $GLOBALS['globals'] ) ) {
 			foreach ( $GLOBALS['globals'] as $global => $value ) {
 				if ( !isset( $GLOBALS['wgConf']->settings["+$global"] ) &&
 					$global !== 'wgManageWikiPermissionsAdditionalRights'
@@ -1194,6 +1189,6 @@ class MirahezeFunctions {
 
 			// Don't need a global here
 			unset( $GLOBALS['globals'] );
-		}
+		}*/
 	}
 }
