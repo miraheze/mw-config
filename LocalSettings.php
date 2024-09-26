@@ -76,7 +76,7 @@ $wgDatabaseClustersMaintenance = [];
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
 
-$_SERVER['MW_WIKI_NAME'] = 'config-' . $wi->dbname;
+$_SERVER['MW_WIKI_NAME'] = $wi->dbname;
 $wgWikiFarmSettingsDirectory = '/srv/mediawiki/cache';
 $wgWikiFarmSettingsExtension = 'php';
 
