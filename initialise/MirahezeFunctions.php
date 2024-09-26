@@ -574,7 +574,7 @@ class MirahezeFunctions {
 
 			$globals = self::getConfigForCaching();
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'config-overrides' => $globals, 'extensions' => self::$activeExtensions['extensions'], 'skins' => self::$activeExtensions['skins'] ];
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'config' => $globals, 'config-overrides' => self::getCacheArray(), 'extensions' => self::$activeExtensions, 'skins' => self::getActiveSkins() ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
@@ -779,6 +779,64 @@ class MirahezeFunctions {
 		}
 
 		return $cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
+	}
+
+
+	/**
+	 * @return array
+	 */
+	public static function getActiveSkins(): array {
+		global $wgDBname;
+
+		$confCacheFileName = "config-$wgDBname.php";
+
+		// To-Do: merge ManageWiki cache with main config cache,
+		// to automatically update when ManageWiki is updated
+		$confActualMtime = max(
+			// When config files are updated
+			filemtime( __DIR__ . '/../LocalSettings.php' ),
+			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
+
+			// When MediaWiki is upgraded
+			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
+
+			// When ManageWiki is changed
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
+		);
+
+		static $extensions = null;
+		$extensions ??= self::readFromCache(
+			self::CACHE_DIRECTORY . '/' . $confCacheFileName,
+			$confActualMtime,
+			'skins'
+		);
+
+		if ( $extensions ) {
+			return $extensions;
+		}
+
+		static $cacheArray = null;
+		$cacheArray ??= self::getCacheArray();
+
+		if ( !$cacheArray ) {
+			return [];
+		}
+
+		global $wgManageWikiExtensions;
+
+		$allExtensions = array_filter( array_combine(
+			array_column( $wgManageWikiExtensions, 'name' ),
+			array_keys( $wgManageWikiExtensions )
+		) );
+
+		$enabledExtensions = array_keys(
+			array_diff( $allExtensions, array_keys( static::$disabledExtensions ) )
+		);
+
+		return array_values( array_intersect(
+			$cacheArray['skins'] ?? [],
+			$enabledExtensions
+		) );
 	}
 
 	/**
