@@ -2,6 +2,8 @@
 
 /** LocalSettings.php for Miraheze. */
 
+use MediaWiki\Settings\Source\PhpSettingsSource;
+
 // Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
@@ -75,10 +77,6 @@ $wgDatabaseClustersMaintenance = [];
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
-
-$_SERVER['MW_WIKI_NAME'] = $wi->dbname;
-$wgWikiFarmSettingsDirectory = '/srv/mediawiki/cache';
-$wgWikiFarmSettingsExtension = 'php';
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
@@ -6810,7 +6808,10 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
-$wi->loadExtensions();
+//$wi->loadExtensions();
+
+
+$wgSettings->load( new PhpSettingsSource( '/srv/mediawiki/cache/' . $wi->dbname . '.php' ) );
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
