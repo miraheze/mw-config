@@ -503,6 +503,23 @@ class MirahezeFunctions {
 		return !in_array( self::$currentDatabase, $wgConf->wikis );
 	}
 
+	public function applyManageWiki() {
+		// If we don't have a cache file, let us exit here
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.php' ) ) {
+			return;
+		}
+
+		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . $this->dbname . '.php';
+		$settings = new MediaWiki\Settings\SettingsBuilder(
+        		MW_INSTALL_PATH,
+        		ExtensionRegistry::getInstance(),
+        		new MediaWiki\Settings\Config\GlobalConfigBuilder( '' ),
+        		new MediaWiki\Settings\Config\PhpIniSink()
+		);
+		$settings->load( new MediaWiki\Settings\Source\PhpSettingsSource( $currentDatabaseFile ) );
+		$settings->apply();
+	}
+
 	/**
 	 * @return array
 	 */
@@ -515,6 +532,14 @@ class MirahezeFunctions {
 		}
 
 		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
+		$settings = new MediaWiki\Settings\SettingsBuilder(
+        		MW_INSTALL_PATH,
+        		ExtensionRegistry::getInstance(),
+        		new MediaWiki\Settings\Config\GlobalConfigBuilder( '' ),
+        		new MediaWiki\Settings\Config\PhpIniSink()
+		);
+		$wgSettings2->load( new MediaWiki\Settings\Source\PhpSettingsSource( '/srv/mediawiki/cache/' . $wi->dbname . '.php' ) );
+		$wgSettings2->apply();
 		return include $currentDatabaseFile;
 	}
 
@@ -557,7 +582,7 @@ class MirahezeFunctions {
 
 			$globals = self::getConfigForCaching();
 
-			$confCacheObject = [ 'mtime' => $confActualMtime, 'config-overrides' => $globals, 'extensions' => []/*self::$activeExtensions*/ ];
+			$confCacheObject = [ 'mtime' => $confActualMtime, 'config-overrides' => $globals, 'extensions' => self::$activeExtensions['extensions'], 'skins' => self::$activeExtensions['skins'] ];
 
 			$minTime = $confActualMtime + intval( ini_get( 'opcache.revalidate_freq' ) );
 			if ( time() > $minTime ) {
