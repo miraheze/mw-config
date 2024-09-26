@@ -5752,6 +5752,12 @@ $wgConf->settings += [
 				'en' => 'English is the source language.',
 			],
 		],
+		'rainworldwiki' => [
+			'*' => [
+				'zh' => 'Translate in zh-hans instead please',
+				'zh-cn' => 'Translate in zh-hans instead please',
+			],
+		],
 		'spiralwiki' => [
 			'*' => [
 				'en' => 'English is the source language.',
