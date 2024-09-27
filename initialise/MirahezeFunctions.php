@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Config\SiteConfiguration;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use Miraheze\CreateWiki\RemoteWiki;
 use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
@@ -37,8 +38,9 @@ class MirahezeFunctions {
 			'miraheze.org',
 			'wikitide.org',
 		],
-		'mirabeta' => [
+		'beta' => [
 			'mirabeta.org',
+			'nexttide.org',
 		],
 	];
 
@@ -53,7 +55,7 @@ class MirahezeFunctions {
 
 	private const DEFAULT_SERVER = [
 		'default' => 'miraheze.org',
-		'mirabeta' => 'mirabeta.org',
+		'beta' => 'mirabeta.org',
 	];
 
 	private const GLOBAL_DATABASE = [
@@ -65,29 +67,34 @@ class MirahezeFunctions {
 
 	private const TAGS = [
 		'default' => 'default',
-		'beta' => 'mirabeta',
-	];
-
-	public const LISTS = [
-		'default' => 'production',
-		'mirabeta' => 'beta',
+		'beta' => 'beta',
 	];
 
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.43',
-		'beta' => '1.42',
+		'beta' => '1.43',
 		'stable' => '1.42',
 	];
 
 	public const SUFFIXES = [
 		'wiki' => self::ALLOWED_DOMAINS['default'],
-		'wikibeta' => self::ALLOWED_DOMAINS['mirabeta'],
+		'wikibeta' => self::ALLOWED_DOMAINS['beta'],
 	];
 
 	public function __construct() {
 		self::setupSiteConfiguration();
 
 		$this->dbname = self::getCurrentDatabase();
+
+		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
+		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
+			if ( MW_ENTRY_POINT === 'cli' ) {
+				die( 'INVALID DATABASE! YOU CAN NOT USE THE DATABASE OF A DIFFERENT REALM!' . PHP_EOL );
+			}
+
+			require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/MissingWiki.php';
+		}
+
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
 		$this->server = self::getServer();
@@ -110,15 +117,12 @@ class MirahezeFunctions {
 	public static function getLocalDatabases(): ?array {
 		global $wgLocalDatabases;
 
-		static $realm = null;
 		static $databases = null;
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		$realm ??= self::getRealm();
-
 		// We need the CLI *and* the web to be able to access 'deleted' wikis
-		$databases ??= array_merge( self::readDbListFile( self::LISTS[$realm] ), self::readDbListFile( 'deleted-' . self::LISTS[$realm] ) );
+		$databases ??= array_merge( self::readDbListFile( 'databases' ), self::readDbListFile( 'deleted' ) );
 
 		$wgLocalDatabases = $databases;
 		return $databases;
@@ -136,28 +140,19 @@ class MirahezeFunctions {
 			return $database;
 		}
 
-		if ( $dblist === 'production' ) {
-			$dblist = 'databases';
-		}
+		$filePath = self::CACHE_DIRECTORY . "/{$dblist}.php";
 
-		if ( $dblist === 'deleted-production' ) {
-			$dblist = 'deleted';
-		}
-
-		if ( !file_exists( self::CACHE_DIRECTORY . "/{$dblist}.json" ) ) {
-			$databases = [];
-
-			return $databases;
+		if ( !file_exists( $filePath ) ) {
+			return [];
 		} else {
-			$wikiDatabaseFile = file_get_contents( self::CACHE_DIRECTORY . "/{$dblist}.json" );
-			$databasesArray = json_decode( $wikiDatabaseFile, true );
+			$databasesArray = include $filePath;
 		}
 
 		if ( $database ) {
 			if ( $fromServer ) {
 				$server = $database;
 				$database = '';
-				foreach ( $databasesArray['combi'] as $key => $data ) {
+				foreach ( $databasesArray['databases'] as $key => $data ) {
 					if ( isset( $data['u'] ) && $data['u'] === $server ) {
 						$database = $key;
 						break;
@@ -169,15 +164,11 @@ class MirahezeFunctions {
 				}
 			}
 
-			if ( isset( $databasesArray['combi'][$database] ) ) {
-				return $databasesArray['combi'][$database];
-			} else {
-				return '';
-			}
+			return $databasesArray['databases'][$database] ?? '';
 		} else {
 			global $wgDatabaseClustersMaintenance;
 
-			$databases = $databasesArray['combi'] ?? [];
+			$databases = $databasesArray['databases'] ?? [];
 
 			if ( $wgDatabaseClustersMaintenance ) {
 				$databases = array_filter( $databases, static function ( $data, $key ) {
@@ -185,7 +176,7 @@ class MirahezeFunctions {
 
 					if ( $wgDBname && $key === $wgDBname ) {
 						if ( MW_ENTRY_POINT !== 'cli' && in_array( $data['c'], $wgDatabaseClustersMaintenance ) ) {
-							require_once '/srv/mediawiki/ErrorPages/databaseMaintenance.php';
+							require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/databaseMaintenance.php';
 						}
 					}
 
@@ -194,11 +185,7 @@ class MirahezeFunctions {
 			}
 		}
 
-		if ( $onlyDBs ) {
-			return array_keys( $databases );
-		}
-
-		return $databases;
+		return $onlyDBs ? array_keys( $databases ) : $databases;
 	}
 
 	public static function setupSiteConfiguration() {
@@ -266,10 +253,10 @@ class MirahezeFunctions {
 
 		$realm ??= self::getRealm();
 
-		$databases = self::readDbListFile( self::LISTS[$realm], false, $database );
+		$databases = self::readDbListFile( 'databases', false, $database );
 
 		if ( $deleted && $databases ) {
-			$databases += self::readDbListFile( 'deleted-' . self::LISTS[$realm], false, $database );
+			$databases += self::readDbListFile( 'deleted', false, $database );
 		}
 
 		if ( $database !== null ) {
@@ -314,8 +301,7 @@ class MirahezeFunctions {
 
 		static $database = null;
 
-		$database ??= self::readDbListFile( 'production', true, 'https://' . $hostname, true ) ?:
-			self::readDbListFile( 'beta', true, 'https://' . $hostname, true );
+		$database ??= self::readDbListFile( 'databases', true, 'https://' . $hostname, true );
 
 		if ( $database ) {
 			return $database;
@@ -373,8 +359,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( 'databases', false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -388,7 +374,7 @@ class MirahezeFunctions {
 	 * @return string
 	 */
 	public static function getPrimaryDomain( string $database ): string {
-		$primaryDomain = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['d'] ?? null;
+		$primaryDomain = self::readDbListFile( 'databases', false, $database )['d'] ?? null;
 		return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm( $database )];
 	}
 
@@ -433,8 +419,8 @@ class MirahezeFunctions {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
-		$allDatabases ??= self::readDbListFile( self::LISTS[self::getRealm()], false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted-' . self::LISTS[self::getRealm()], false );
+		$allDatabases ??= self::readDbListFile( 'databases', false );
+		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
 
 		$databases = array_merge( $allDatabases, $deletedDatabases );
 
@@ -472,7 +458,7 @@ class MirahezeFunctions {
 		}
 
 		if ( $database ) {
-			$mwVersion = self::readDbListFile( self::LISTS[self::getRealm( $database )], false, $database )['v'] ?? null;
+			$mwVersion = self::readDbListFile( 'databases', false, $database )['v'] ?? null;
 			return $mwVersion ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 		}
 
@@ -486,7 +472,7 @@ class MirahezeFunctions {
 		static $version = null;
 
 		self::$currentDatabase ??= self::getCurrentDatabase();
-		$version ??= self::readDbListFile( self::LISTS[self::getRealm()], false, self::$currentDatabase )['v'] ?? null;
+		$version ??= self::readDbListFile( 'databases', false, self::$currentDatabase )['v'] ?? null;
 
 		return $version ?? self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 	}
@@ -524,13 +510,12 @@ class MirahezeFunctions {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php' ) ) {
 			return [];
 		}
 
-		$currentDatabaseFile = file_get_contents(
-			self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.json' );
-		return (array)json_decode( $currentDatabaseFile, true );
+		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
+		return include $currentDatabaseFile;
 	}
 
 	/** @var array */
@@ -543,7 +528,7 @@ class MirahezeFunctions {
 		global $wgDBname, $wgConf;
 
 		// Try configuration cache
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wgDBname.php";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -558,7 +543,7 @@ class MirahezeFunctions {
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
 		);
 
 		static $globals = null;
@@ -636,21 +621,13 @@ class MirahezeFunctions {
 	 */
 	public static function writeToCache( string $cacheShard, array $configObject ) {
 		@mkdir( self::CACHE_DIRECTORY );
+
 		$tmpFile = tempnam( '/tmp/', $cacheShard );
 
-		$cacheObject = json_encode(
-			$configObject,
-			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-		) . "\n";
-
 		if ( $tmpFile ) {
-			if ( json_last_error() !== JSON_ERROR_NONE ) {
-				trigger_error( 'Config cache failure: Encoding failed', E_USER_ERROR );
-			} else {
-				if ( file_put_contents( $tmpFile, $cacheObject ) ) {
-					if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
-						return;
-					}
+			if ( file_put_contents( $tmpFile, '<?php return ' . var_export( $configObject, true ) . ';' ) ) {
+				if ( rename( $tmpFile, self::CACHE_DIRECTORY . '/' . $cacheShard ) ) {
+					return;
 				}
 			}
 
@@ -669,17 +646,11 @@ class MirahezeFunctions {
 		string $confActualMtime,
 		string $type = 'globals'
 	): ?array {
-		$cacheRecord = @file_get_contents( $confCacheFile );
+		$cacheRecord = @include $confCacheFile;
 
 		if ( $cacheRecord !== false ) {
-			$cacheObject = json_decode( $cacheRecord, true );
-
-			if ( json_last_error() === JSON_ERROR_NONE ) {
-				if ( ( $cacheObject['mtime'] ?? null ) == $confActualMtime ) {
-					return $cacheObject[$type] ?? null;
-				}
-			} else {
-				trigger_error( 'Config cache failure: Decoding failed', E_USER_ERROR );
+			if ( ( $cacheRecord['mtime'] ?? null ) == $confActualMtime ) {
+				return $cacheRecord[$type] ?? null;
 			}
 		}
 
@@ -804,7 +775,7 @@ class MirahezeFunctions {
 	public static function getActiveExtensions(): array {
 		global $wgDBname;
 
-		$confCacheFileName = "config-$wgDBname.json";
+		$confCacheFileName = "config-$wgDBname.php";
 
 		// To-Do: merge ManageWiki cache with main config cache,
 		// to automatically update when ManageWiki is updated
@@ -817,7 +788,7 @@ class MirahezeFunctions {
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
 
 			// When ManageWiki is changed
-			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' )
+			@filemtime( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' )
 		);
 
 		static $extensions = null;
@@ -846,13 +817,26 @@ class MirahezeFunctions {
 		) );
 
 		$enabledExtensions = array_keys(
-			array_diff( $allExtensions, static::$disabledExtensions )
+			array_diff( $allExtensions, array_keys( static::$disabledExtensions ) )
 		);
 
 		return array_values( array_intersect(
 			$cacheArray['extensions'] ?? [],
 			$enabledExtensions
 		) );
+	}
+
+	public static function handleDisabledExtensions() {
+		global $wgManageWikiExtensions;
+
+		foreach ( static::$disabledExtensions as $name => $reason ) {
+			$wgManageWikiExtensions[$name]['help'] = '<b>Note</b>: This extension has been globally disabled. The following reason was given: ' . $reason;
+			$wgManageWikiExtensions[$name]['requires'] = [
+				'permissions' => [
+					'managewiki-restricted',
+				],
+			];
+		}
 	}
 
 	/**
@@ -885,7 +869,7 @@ class MirahezeFunctions {
 	public function loadExtensions() {
 		global $wgDBname;
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' ) ) {
 			global $wgConf;
 			if ( self::getRealm( $wgDBname ) !== 'default' ) {
 				$wgConf->siteParamsCallback = static function () {
@@ -901,24 +885,23 @@ class MirahezeFunctions {
 			return;
 		}
 
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' ) ) {
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php' ) ) {
 			if ( !is_dir( self::CACHE_DIRECTORY . '/' . $this->version ) ) {
 				// Create directory since it doesn't exist
 				mkdir( self::CACHE_DIRECTORY . '/' . $this->version );
 			}
 
 			$queue = array_fill_keys( array_merge(
-					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/extensions/*/extension*.json' ),
-					glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/skins/*/skin.json' )
-				),
-			true );
+				glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/extensions/*/extension*.json' ),
+				glob( self::MEDIAWIKI_DIRECTORY . $this->version . '/skins/*/skin.json' )
+			), true );
 
 			$processor = new ExtensionProcessor();
 
 			foreach ( $queue as $path => $mtime ) {
 				$json = file_get_contents( $path );
 				$info = json_decode( $json, true );
-				$version = $info['manifest_version'];
+				$version = $info['manifest_version'] ?? 2;
 
 				$processor->extractInfo( $path, $info, $version );
 			}
@@ -927,11 +910,17 @@ class MirahezeFunctions {
 
 			$list = array_column( $data['credits'], 'path', 'name' );
 
-			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json', json_encode( $list ), LOCK_EX );
+			// Write the list to a PHP cache file
+			$phpContent = "<?php\n\n" .
+				"/**\n * Auto-generated extension list cache.\n */\n\n" .
+				'return ' . var_export( $list, true ) . ";\n";
+
+			file_put_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php', $phpContent, LOCK_EX );
 		} else {
-			$extensionListFile = file_get_contents( self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.json' );
-			$list = json_decode( $extensionListFile, true );
+			$list = include self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php';
 		}
+
+		self::handleDisabledExtensions();
 
 		self::$activeExtensions ??= self::getActiveExtensions();
 		foreach ( self::$activeExtensions as $name ) {
@@ -1032,37 +1021,21 @@ class MirahezeFunctions {
 	 * @param array &$databaseLists
 	 */
 	public static function onGenerateDatabaseLists( array &$databaseLists ) {
-		$default = self::generateDatabaseLists( self::GLOBAL_DATABASE['default'] );
-		$beta = self::generateDatabaseLists( self::GLOBAL_DATABASE['beta'] );
+		$isBeta = php_uname( 'n' ) === self::BETA_HOSTNAME;
+
+		$databases = self::generateDatabaseLists(
+			self::GLOBAL_DATABASE[ $isBeta ? 'beta' : 'default' ]
+		);
+
 		$databaseLists = [
-			'active' => [
-				'combi' => $default['active'],
-			],
-			'active-beta' => [
-				'combi' => $beta['active'],
-			],
-			'beta' => [
-				'combi' => $beta['databases'],
-			],
-			'databases' => [
-				'combi' => $default['databases'],
-			],
-			'deleted' => [
-				'combi' => $default['deleted'],
-			],
-			'deleted-beta' => [
-				'combi' => $beta['deleted'],
-			],
+			'active' => $databases['active'],
+			'databases' => $databases['databases'],
+			'deleted' => $databases['deleted'],
 		];
 
 		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
 			$databaseLists += [
-				$name . '-wikis' => [
-					'combi' => $default['versions'][$version],
-				],
-				$name . '-wikis-beta' => [
-					'combi' => $beta['versions'][$version],
-				],
+				$name . '-wikis' => $databases['versions'][$version],
 			];
 		}
 	}
@@ -1070,9 +1043,9 @@ class MirahezeFunctions {
 	/**
 	 * @param string $wiki
 	 * @param DBConnRef $dbr
-	 * @param array &$jsonArray
+	 * @param array &$cacheArray
 	 */
-	public static function onCreateWikiJsonBuilder( string $wiki, DBConnRef $dbr, array &$jsonArray ) {
+	public static function onCreateWikiPhpBuilder( string $wiki, DBConnRef $dbr, array &$cacheArray ) {
 		$row = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -1083,8 +1056,8 @@ class MirahezeFunctions {
 			->caller( __METHOD__ )
 			->fetchRow();
 
-		$jsonArray['states']['deleted'] = (bool)$row->wiki_deleted;
-		$jsonArray['states']['locked'] = (bool)$row->wiki_locked;
+		$cacheArray['states']['deleted'] = (bool)$row->wiki_deleted;
+		$cacheArray['states']['locked'] = (bool)$row->wiki_locked;
 	}
 
 	/**

@@ -29,7 +29,7 @@ $wgLBFactoryConf = [
 		'flags' => DBO_DEFAULT | ( MW_ENTRY_POINT === 'cli' ? DBO_DEBUG : 0 ),
 		'variables' => [
 			// https://mariadb.com/docs/reference/mdb/system-variables/innodb_lock_wait_timeout
-			'innodb_lock_wait_timeout' => 15,
+			'innodb_lock_wait_timeout' => 120,
 		],
 	],
 	'hostsByName' => [

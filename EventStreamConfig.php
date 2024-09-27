@@ -9,6 +9,16 @@ $wgEventStreamsDefaultSettings = [
 	'canary_events_enabled' => true,
 ];
 
+if ( $cwPrivate ) {
+	$wgEventStreamsDefaultSettings += [
+		'producers' => [
+			'mediawiki_eventbus' => [
+				'enabled' => false,
+			],
+		]
+	];
+}
+
 $wgEventStreams = [
 	'/^mediawiki\\.job\\..+/' => [
 		'schema_title' => 'mediawiki/job',
@@ -33,6 +43,20 @@ $wgEventStreams = [
 		'message_key_fields' => [
 			'wiki_id' => 'wiki_id',
 			'page_id' => 'page_id',
+		],
+	],
+	// mediawiki.cirrussearch.page_rerender stream for private wikis
+	'mediawiki.cirrussearch.page_rerender.private.v1' => [
+		'schema_title' => 'mediawiki/cirrussearch/page_rerender',
+		'destination_event_service' => 'eventgate-main',
+		'message_key_fields' => [
+			'wiki_id' => 'wiki_id',
+			'page_id' => 'page_id',
+		],
+		'producers' => [
+			'mediawiki_eventbus' => [
+				'enabled' => false,
+			],
 		],
 	],
 	'mediawiki.page-create' => [
@@ -112,3 +136,8 @@ $wgEventStreams = [
 		'destination_event_service' => 'eventgate',
 	],
 ];
+
+if ( $cwPrivate ) {
+	$wgEventStreams['/^mediawiki\\.job\\..+/']['producers']['mediawiki_eventbus']['enabled'] = true;
+	$wgEventStreams['mediawiki.cirrussearch.page_rerender.private.v1']['producers']['mediawiki_eventbus']['enabled'] = true;
+}

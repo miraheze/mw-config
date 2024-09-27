@@ -192,10 +192,98 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'hommwiki':
+		$wgEnabledAudioTranscodeSet = [];
+
+		break;
 	case 'houkai2ndwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
+		break;
+	case 'kagagawiki':
+		$uwCcAvailableLanguages = [
+			'an', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el',
+			'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'fy', 'ga',
+			'gl', 'hi', 'hr', 'hu', 'id', 'is', 'it', 'ja', 'ko', 'lt',
+			'lv', 'ms', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ro', 'ru', 'sk',
+			'sl', 'sr-latn', 'sv', 'tr', 'uk', 'zh-hans', 'zh-hant'
+		];
+		$wgUploadWizardConfig = [
+			'campaignExpensiveStatsEnabled' => false,
+			'flickrApiKey' => $wmgUploadWizardFlickrApiKey,
+			'debug' => false,
+			'altUploadForm' => 'Special:Upload',
+			'feedbackLink' => false,
+			'alternativeUploadToolsPage' => false,
+			'enableFormData' => true,
+			'enableMultipleFiles' => true,
+			'enableMultiFileSelect' => true,
+			'uwLanguages' => [
+				'ja' => '日本語',
+				'en' => 'English',
+			],
+			'licenses' => [
+				'cc-by-sa-4.0' => [
+					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-by-sa-4.0-explain',
+					'icons' => [ 'cc-by', 'cc-sa' ],
+					'url' => '//creativecommons.org/licenses/by-sa/4.0/',
+					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => $uwCcAvailableLanguages
+				],
+				'cc-zero' => [
+					'msg' => 'mwe-upwiz-license-cc-zero-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-zero-explain',
+					'icons' => [ 'cc-zero' ],
+					'url' => '//creativecommons.org/publicdomain/zero/1.0/',
+					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => $uwCcAvailableLanguages
+				],
+				'rs-inc' => [
+					'msg' => 'mwe-upwiz-license-rs-inc-text',
+					'msgExplain' => 'mwe-upwiz-license-rs-inc-explain',
+					'templates' => [ 'rs-inc' ],
+					'url' => '//rightsstatements.org/page/InC/1.0/',
+				],
+				'rs-und' => [
+					'msg' => 'mwe-upwiz-license-rs-und-text',
+					'msgExplain' => 'mwe-upwiz-license-rs-und-explain',
+					'templates' => [ 'rs-und' ],
+					'url' => '//rightsstatements.org/page/UND/1.0/',
+				],
+			],
+			'licensing' => [
+				'ownWork' => [
+					'type' => 'or',
+					'template' => 'self',
+					'defaults' => 'cc-by-sa-4.0',
+					'licenses' => [
+						'cc-by-sa-4.0',
+						'cc-zero',
+						'rs-inc',
+						'rs-und',
+					],
+				],
+				'thirdParty' => [
+					'type' => 'or',
+					'defaults' => 'cc-by-sa-4.0',
+					'licenseGroups' => [
+						[
+							'head' => 'mwe-upwiz-license-cc-head',
+							'subhead' => 'mwe-upwiz-license-cc-subhead',
+							'licenses' => [
+								'cc-by-sa-4.0',
+								'cc-zero',
+								'rs-inc',
+								'rs-und',
+							],
+						],
+					],
+				],
+			],
+			'templateOptions' => [],
+		];
 		break;
 	case 'ldapwikiwiki':
 		wfLoadExtension( 'LdapAuthentication' );
@@ -381,7 +469,7 @@ switch ( $wi->dbname ) {
 			],
 			'requestbetaaccount' => [
 				'RecipientUser' => 'Miraheze Operations',
-				'SenderName' => 'Mirabeta account creation request (via Meta)',
+				'SenderName' => 'Beta account creation request (via Meta)',
 				'RequireDetails' => true,
 				'MustBeLoggedIn' => true,
 				'AdditionalFields' => [
@@ -505,6 +593,8 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'rainversewiki':
+		$wgCargoAllowedSQLFunctions[] = 'NATURAL_SORT_KEY';
+
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
@@ -519,6 +609,7 @@ switch ( $wi->dbname ) {
 				$footerlinks['tagline'] = $skin->msg( 'citizen-footer-tagline' )->parse();
 			}
 		}
+
 		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
@@ -532,23 +623,6 @@ switch ( $wi->dbname ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
 
-		break;
-	case 'spacewiki':
-		$wgExtraNamespaces += [
-			NS_TALK => 'talk',
-			NS_USER => 'user',
-			NS_USER_TALK => 'user-talk',
-			NS_FILE => 'file',
-			NS_FILE_TALK => 'file-talk',
-			NS_MEDIAWIKI => 'mediawiki',
-			NS_MEDIAWIKI_TALK => 'mediawiki-talk',
-			NS_TEMPLATE => 'template',
-			NS_TEMPLATE_TALK => 'template-talk',
-			NS_HELP => 'guide',
-			NS_HELP_TALK => 'guide-talk',
-			NS_CATEGORY => 'category',
-			NS_CATEGORY_TALK => 'category-talk'
-		];
 		break;
 	case 'srewiki':
 		wfLoadExtension( 'LdapAuthentication' );

@@ -516,22 +516,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'graph' => [
-		'name' => 'Graph',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Graph',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'jsonconfig',
-				'codeeditor',
-			],
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10756">T10756</a> for details.',
-		'section' => 'parserhooks',
-	],
 	'groupssidebar' => [
 		'name' => 'GroupsSidebar',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GroupsSidebar',
@@ -542,6 +526,7 @@ $wgManageWikiExtensions = [
 	'headertabs' => [
 		'name' => 'Header Tabs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Header_Tabs',
+		'help' => 'Note: This extension is currently incompatible with MediaWiki 1.42, and so does nothing at the moment.',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -756,6 +741,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'network' => [
+		'name' => 'Network',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Network',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'notitle' => [
 		'name' => 'NoTitle',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NoTitle',
@@ -868,18 +860,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'regexfunctions' => [
-		'name' => 'RegexFunctions',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexFunctions',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10882">T10882</a> for details.',
-		'section' => 'parserhooks',
-	],
 	'rightfunctions' => [
 		'name' => 'RightFunctions',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RightFunctions',
@@ -903,14 +883,9 @@ $wgManageWikiExtensions = [
 	],
 	'score' => [
 		'name' => 'Score',
-		'displayname' => 'Score (Disabled -- See T5863)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Score',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 		'section' => 'parserhooks',
 	],
 	'scratchblocks' => [
@@ -1041,6 +1016,13 @@ $wgManageWikiExtensions = [
 				'oredict',
 			],
 		],
+		'section' => 'parserhooks',
+	],
+	'timezoneconverter' => [
+		'name' => 'TimezoneConverter',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimezoneConverter',
+		'conflicts' => false,
+		'requires' => [],
 		'section' => 'parserhooks',
 	],
 	'toctree' => [
@@ -1417,6 +1399,13 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'googleforms' => [
+		'name' => 'GoogleForms',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleForms',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'googlenewssitemap' => [
 		'name' => 'GoogleNewsSitemap',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleNewsSitemap',
@@ -1451,24 +1440,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
-	'hitcounters' => [
-		'name' => 'HitCounters',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:HitCounters',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10883">T10883</a> for details.',
-		'install' => [
-			'sql' => [
-				'hit_counter' => "$IP/extensions/HitCounters/sql/page_counter.sql",
-				'hit_counter_extension' => "$IP/extensions/HitCounters/sql/hit_counter_extension.sql",
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'imagerating' => [
 		'name' => 'ImageRating',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ImageRating',
@@ -1496,7 +1467,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'linter' => "$IP/extensions/Linter/sql/tables-generated.sql"
+				'linter' => "$IP/extensions/Linter/sql/mysql/tables-generated.sql"
 			],
 		],
 		'section' => 'specialpages',
@@ -1750,6 +1721,7 @@ $wgManageWikiExtensions = [
 	'replacetext' => [
 		'name' => 'Replace Text',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
+		'help' => 'Stewards and Wiki Mechanics: This extension should NOT be enabled on wikis created before May 12 without consulting the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology Team</a> first',
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
@@ -1889,6 +1861,13 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'unusedredirects' => [
+		'name' => 'UnusedRedirects',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UnusedRedirects',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
 	'urlshortener' => [
 		'name' => 'UrlShortener',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UrlShortener',
@@ -2025,14 +2004,6 @@ $wgManageWikiExtensions = [
 				'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
 			],
 		],
-		'section' => 'other',
-	],
-	'articletocategory2' => [
-		'name' => 'ArticleToCategory2',
-		'displayname' => 'Article To Category 2',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleToCategory2',
-		'conflicts' => false,
-		'requires' => [],
 		'section' => 'other',
 	],
 	'autocreatecategorypages' => [
@@ -3069,7 +3040,7 @@ $wgManageWikiExtensions = [
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
-		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well. <br/><b>Note: <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Stewards" target="_blank">Stewards</a>, please ensure that a member of the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:SRE_Volunteers" target="_blank">Site Reliability Engineering</a> team is available and not mobile in order to run <a href="https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki" target="_blank">a series of commands</a> on mwtask181 after enabling this.</b>',
+		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well. <br/><b>Note: <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Stewards" target="_blank">Stewards</a>, please ensure that a member of the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology team</a> is available and not mobile in order to run <a href="https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki" target="_blank">a series of commands</a> on an mwtask server after enabling this.</b>',
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
@@ -3553,12 +3524,7 @@ $wgManageWikiExtensions = [
 		'name' => 'WikiForum',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiForum',
 		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'help' => 'This extension has been globally disabled. See <a href="https://issue-tracker.miraheze.org/T10871">T10871</a> for details.',
+		'requires' => [],
 		'install' => [
 			'sql' => [
 				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"

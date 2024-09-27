@@ -54,7 +54,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 */
 
 // Specific wiki SiteNotice
-if ( $wi->isExtensionActive( 'Graph' ) ) {
+/* if ( $wi->isExtensionActive( 'Graph' ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfConditionalSiteNotice';
 
 	function wfConditionalSiteNotice( &$siteNotice, $skin ) {
@@ -70,7 +70,7 @@ if ( $wi->isExtensionActive( 'Graph' ) ) {
 					<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 						<div class="floatleft"><img alt="Miraheze Logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Font_Awesome_5_solid_bug.svg" decoding="async" width="50" height="50"></div>
 						<div style="padding-bottom: 15px; font-size: 13pt; font-weight: bold;">
-							 Graph has been temporarily disabled due to a severe security bug.
+							 Graph has been permanently discontinued due to a severe security issue.
 						</div>
 
 						<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
@@ -85,7 +85,7 @@ if ( $wi->isExtensionActive( 'Graph' ) ) {
 			</table>
 		EOF;
 	}
-}
+} */
 
 // Meta Tech NS sitenotice
 /* if ( $wgDBname === 'metawiki' ) {
