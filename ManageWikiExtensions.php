@@ -2216,7 +2216,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'ed_url_cache' => "$IP/extensions/ExternalData/sql/ExternalData.sql"
+				'ed_url_cache' => "$IP/extensions/ExternalData/sql/mysql/ExternalData.sql"
 			],
 		],
 		'section' => 'other',
