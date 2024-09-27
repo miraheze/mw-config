@@ -3015,15 +3015,6 @@ $wgManageWikiSettings = [
 		'help' => 'Exclude bots users from the reporting?',
 		'requires' => [],
 	],
-	'wgUserProfileV2UseGlobalAvatars' => [
-		'name' => 'UserProfileV2 Use Global Avatar',
-		'from' => 'userprofilev2',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'socialtools',
-		'help' => 'Whether or not to signal that global avatars are being used in this wiki.',
-		'requires' => [],
-	],
 
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
@@ -3904,24 +3895,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Whether or not to show the normal MediaWiki external link icon when using the Chameleon skin.',
-		'requires' => [],
-	],
-	'wgUserProfileV2Color' => [
-		'name' => 'UserProfileV2 Accent Color',
-		'from' => 'userprofilev2',
-		'type' => 'text',
-		'overridedefault' => '#E1E1E1',
-		'section' => 'styling',
-		'help' => 'The accent/secondary color used for UserProfileV2. This is used as a background colour for the user group tags and the avatar edit button.',
-		'requires' => [],
-	],
-	'wgUserProfileV2AvatarBorderRadius' => [
-		'name' => 'UserProfileV2 Avatar Border-radius',
-		'from' => 'userprofilev2',
-		'type' => 'text',
-		'overridedefault' => "50%",
-		'section' => 'styling',
-		'help' => 'The border-radius applied to the UserProfileV2 avatar.',
 		'requires' => [],
 	],
 	
