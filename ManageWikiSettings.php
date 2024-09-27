@@ -3897,7 +3897,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether or not to show the normal MediaWiki external link icon when using the Chameleon skin.',
 		'requires' => [],
 	],
-	
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
