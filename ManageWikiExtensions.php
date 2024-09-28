@@ -516,6 +516,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'googleforms' => [
+		'name' => 'GoogleForms',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleForms',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'groupssidebar' => [
 		'name' => 'GroupsSidebar',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GroupsSidebar',
@@ -1405,13 +1412,6 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'section' => 'specialpages',
-	],
-	'googleforms' => [
-		'name' => 'GoogleForms',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleForms',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
 	],
 	'googlenewssitemap' => [
 		'name' => 'GoogleNewsSitemap',
