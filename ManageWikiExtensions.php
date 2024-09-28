@@ -2172,6 +2172,13 @@ $wgManageWikiExtensions = [
 		'install' => [],
 		'section' => 'other',
 	],
+	'datamaps' => [
+		'name' => 'DataMaps',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DataMaps',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'description2' => [
 		'name' => 'Description2',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Description2',

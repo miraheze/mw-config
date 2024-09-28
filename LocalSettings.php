@@ -1191,6 +1191,17 @@ $wgConf->settings += [
 		'srewiki' => [ 'actor', 'user', 'user_properties', 'user_autocreate_serial' ],
 	],
 
+	// DataMaps
+	'wgDataMapsEnableCreateMap' => [
+		'default' => true,
+	],
+	'wgDataMapsEnableVisualEditor' => [
+		'default' => true,
+	],
+	'wgDataMapsAllowExperimentalFeatures' => [
+		'default' => false,
+	],
+
 	// Drafts
 	'egDraftsAutoSaveWait' => [
 		'default' => 120,
