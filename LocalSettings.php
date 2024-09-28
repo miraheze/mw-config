@@ -1191,6 +1191,17 @@ $wgConf->settings += [
 		'srewiki' => [ 'actor', 'user', 'user_properties', 'user_autocreate_serial' ],
 	],
 
+	// DataMaps
+	'wgDataMapsEnableCreateMap' => [
+		'default' => true,
+	],
+	'wgDataMapsEnableVisualEditor' => [
+		'default' => true,
+	],
+	'wgDataMapsAllowExperimentalFeatures' => [
+		'default' => false,
+	],
+
 	// Drafts
 	'egDraftsAutoSaveWait' => [
 		'default' => 120,
@@ -5697,6 +5708,20 @@ $wgConf->settings += [
 	// Theme
 	'wgDefaultTheme' => [
 		'default' => '',
+	],
+
+	// Title Icon
+	'wgTitleIcon_EnableIconInPageTitle' => [
+		'default' => true,
+	],
+	'wgTitleIcon_EnableIconInSearchTitle' => [
+		'default' => true,
+	],
+	'wgTitleIcon_CSSSelector' => [
+		'default' => '#firstHeading',
+	],
+	'wgTitleIcon_UseFileNameAsToolTip' => [
+		'default' => true,
 	],
 
 	// TitleBlacklist

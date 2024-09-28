@@ -516,6 +516,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'googleforms' => [
+		'name' => 'GoogleForms',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleForms',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'groupssidebar' => [
 		'name' => 'GroupsSidebar',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GroupsSidebar',
@@ -1039,6 +1046,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'titleicon' => [
+		'name' => 'Title Icon',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Title_Icon',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'twittertag' => [
 		'name' => 'Twitter Tag',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TwitterTag',
@@ -1398,13 +1412,6 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'section' => 'specialpages',
-	],
-	'googleforms' => [
-		'name' => 'GoogleForms',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleForms',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
 	],
 	'googlenewssitemap' => [
 		'name' => 'GoogleNewsSitemap',
@@ -1777,6 +1784,13 @@ $wgManageWikiExtensions = [
 	'simplechanges' => [
 		'name' => 'SimpleChanges',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleChanges',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
+	'speciallycursed' => [
+		'name' => 'SpeciallyCursed',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpeciallyCursed',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'specialpages',
@@ -2156,6 +2170,13 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'install' => [],
+		'section' => 'other',
+	],
+	'datamaps' => [
+		'name' => 'DataMaps',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DataMaps',
+		'conflicts' => false,
+		'requires' => [],
 		'section' => 'other',
 	],
 	'description2' => [
