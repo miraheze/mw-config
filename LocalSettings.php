@@ -13,6 +13,12 @@ if ( PHP_SAPI !== 'cli' ) {
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
+if (
+	(preg_match("(?i)(mobi|240x240|240x320|320x320|alcatel|android|audiovox|bada|benq|blackberry|cdm-|compal-|docomo|ericsson|hiptop|htc[-_]|huawei|ipod|kddi-|kindle|meego|midp|mitsu|mmp\\/|mot-|motor|ngm_|nintendo|opera.m|palm|panasonic|philips|phone|playstation|portalmmm|sagem-|samsung|sanyo|sec-|semc-browser|sendo|sharp|silk|softbank|symbian|teleca|up.browser|vodafone|webos", $_SERVER['HTTP_USER_AGENT'])
+	 && !($_COOKIE["stopMobileRedirect"] === true || $_COOKIE["mf_useformat"] === 'desktop')) || $_COOKIE["mf_useformat"]) {
+	header( "X-Subdomain: M" );
+}
+
 $mwtask = strpos( wfHostname(), 'mwtask' ) === 0;
 // Higher on mwtask
 if ( $mwtask ) {
