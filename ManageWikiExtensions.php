@@ -1788,6 +1788,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
+	'speciallycursed' => [
+		'name' => 'SpeciallyCursed',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpeciallyCursed',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
 	'templatesandbox' => [
 		'name' => 'TemplateSandbox',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TemplateSandbox',
