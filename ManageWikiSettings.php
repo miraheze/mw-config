@@ -1446,6 +1446,42 @@ $wgManageWikiSettings = [
 		'help' => 'Parse tab name as wikitext.',
 		'requires' => [],
 	],
+	'wgTitleIcon_EnableIconInPageTitle' => [
+		'name' => 'Title Icon: Enable icon on page titles',
+		'from' => 'titleicon',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'parserfunctions',
+		'help' => 'Whether or not to show icons on the title heading when viewing pages.',
+		'requires' => [],
+	],
+	'wgTitleIcon_EnableIconInSearchTitle' => [
+		'name' => 'Title Icon: Enable icon on search results',
+		'from' => 'titleicon',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'parserfunctions',
+		'help' => 'Whether or not to show icons on the pages shown in search results.',
+		'requires' => [],
+	],
+	'wgTitleIcon_CSSSelector' => [
+		'name' => 'Title Icon: CSS Selector for the page title',
+		'from' => 'titleicon',
+		'type' => 'check',
+		'overridedefault' => '#firstHeading',
+		'section' => 'parserfunctions',
+		'help' => 'The CSS selector used to locate the page title, used by $wgTitleIcon_EnableIconInPageTitle.',
+		'requires' => [],
+	],
+	'wgTitleIcon_UseFileNameAsToolTip' => [
+		'name' => 'Title Icon: Use file name as tooltip',
+		'from' => 'titleicon',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'parserfunctions',
+		'help' => 'For file type icons, whether or not to use the file name (excluding the file extension) as the tooltip. If disabled, the tooltip will be the page where the parser function is used.',
+		'requires' => [],
+	],
 
 	// Media/File
 	'wgEnableUploads' => [

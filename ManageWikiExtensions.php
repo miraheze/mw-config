@@ -1039,6 +1039,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'titleicon' => [
+		'name' => 'Title Icon',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Title_Icon',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'twittertag' => [
 		'name' => 'Twitter Tag',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TwitterTag',
