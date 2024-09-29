@@ -4568,14 +4568,7 @@ $wgConf->settings += [
 					'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 				],
 			],
-			'checks' => [
-				'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
-				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
-				'PasswordCannotBeSubstringInUsername' => 'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
-				'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
-				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
-				'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
-			],
+			// Checks is set near bottom due to requring different config under 1.43+
 		],
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
@@ -5972,7 +5965,7 @@ $wgConf->settings += [
 	'wgOnlyUserEditUserPage' => [
 		'ext-UserPageEditProtection' => true,
 	],
-	
+
 	// UserProfileV2
 	'wgUserProfileV2Color' => [
 		'default' => '#E1E1E1',
@@ -6858,6 +6851,26 @@ $wgConf->settings += [
 if ( wfHostname() === 'test151' ) {
 	// Prevent cache (better be safe than sorry)
 	$wgConf->settings['wgUseCdn']['default'] = false;
+}
+
+if ( $wi->version >= '1.43' ) {
+	$wgConf->settings['wgPasswordPolicy']['default']['checks'] += [
+		'MinimalPasswordLength' => 'MediaWiki\Password\PasswordPolicyChecks::checkMinimalPasswordLength',
+		'MinimumPasswordLengthToLogin' => 'MediaWiki\Password\PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
+		'PasswordCannotBeSubstringInUsername' => 'MediaWiki\Password\PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
+		'PasswordCannotMatchDefaults' => 'MediaWiki\Password\PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
+		'MaximalPasswordLength' => 'MediaWiki\Password\PasswordPolicyChecks::checkMaximalPasswordLength',
+		'PasswordNotInCommonList' => 'MediaWiki\Password\PasswordPolicyChecks::checkPasswordNotInCommonList',
+	];
+} else {
+	$wgConf->settings['wgPasswordPolicy']['default']['checks'] += [
+		'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
+		'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
+		'PasswordCannotBeSubstringInUsername' => 'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
+		'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
+		'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
+		'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
+	];
 }
 
 // ManageWiki settings
