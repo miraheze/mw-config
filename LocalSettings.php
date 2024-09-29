@@ -91,6 +91,8 @@ $wmgUploadHostname = 'static.miraheze.org';
 // graphite151
 // $wgStatsdServer = '10.0.15.145';
 
+$passwordNamespaceClassName = $wi->version >= '1.43' ? 'MediaWiki\Password\' : '';
+
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
@@ -4569,12 +4571,12 @@ $wgConf->settings += [
 				],
 			],
 			'checks' => [
-				'MinimalPasswordLength' => 'PasswordPolicyChecks::checkMinimalPasswordLength',
-				'MinimumPasswordLengthToLogin' => 'PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
-				'PasswordCannotBeSubstringInUsername' => 'PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
-				'PasswordCannotMatchDefaults' => 'PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
-				'MaximalPasswordLength' => 'PasswordPolicyChecks::checkMaximalPasswordLength',
-				'PasswordNotInCommonList' => 'PasswordPolicyChecks::checkPasswordNotInCommonList',
+				'MinimalPasswordLength' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkMinimalPasswordLength",
+				'MinimumPasswordLengthToLogin' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkMinimumPasswordLengthToLogin",
+				'PasswordCannotBeSubstringInUsername' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername",
+				'PasswordCannotMatchDefaults' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkPasswordCannotMatchDefaults",
+				'MaximalPasswordLength' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkMaximalPasswordLength",
+				'PasswordNotInCommonList' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkPasswordNotInCommonList",
 			],
 		],
 	],
