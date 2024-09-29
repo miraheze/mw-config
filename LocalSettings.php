@@ -6860,6 +6860,18 @@ if ( wfHostname() === 'test151' ) {
 	$wgConf->settings['wgUseCdn']['default'] = false;
 }
 
+
+if ( $wi->version >= '1.43' ) {
+	$wgConf->settings['wgPasswordPolicy']['default']['policies' += [
+		'MinimalPasswordLength' => 'MediaWiki\Password\PasswordPolicyChecks::checkMinimalPasswordLength',
+		'MinimumPasswordLengthToLogin' => 'MediaWiki\Password\PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
+		'PasswordCannotBeSubstringInUsername' => 'MediaWiki\Password\PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
+		'PasswordCannotMatchDefaults' => 'MediaWiki\Password\PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
+		'MaximalPasswordLength' => 'MediaWiki\Password\PasswordPolicyChecks::checkMaximalPasswordLength',
+		'PasswordNotInCommonList' => 'MediaWiki\Password\PasswordPolicyChecks::checkPasswordNotInCommonList',
+	];
+}
+
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
