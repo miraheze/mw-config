@@ -303,55 +303,54 @@ switch ( $wi->dbname ) {
 		break;
 	case 'lhmnwiki':
 		$wgUploadWizardConfig = [
-			'campaignExpensiveStatsEnabled' => false,
 			'tutorial' => [
 				'skip' => false,
+				'template' => 'WLHMN_UW.svg',
+				'width' => 900,
 			],
 			'altUploadForm' => 'Special:Upload',
 			'enableFormData' => true,
-			'autoAdd' => [
-				'wikitext' => [
-					'Tập tin này được tải lên bằng Trình thuật sĩ.'
-				],
-				'categories' => [
-					 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ'
-				],
+			'trackingCategory' => [
+				'all' => 'Tập tin được tải lên bằng trải nghiệm Trình thuật sĩ',
+				'campaign' => 'Tập tin được tải lên thuộc chủ đề $1'
 			],
 			'uwLanguages' => [
 				'vi' => 'Tiếng Việt',
 				'en' => 'English'
 			],
 			'licenses' => [
+				'snxyz' => [
+					'msg' => 'mwe-upwiz-license-snxyz',
+					'msgExplain' => 'mwe-upwiz-license-snxyz-explain',
+					'url' => '//songngu.xyz/license',
+					'template' => 'SNXYZ'
+				],
 				'lhmn' => [
 					'msg' => 'mwe-upwiz-license-lhmn',
 					'url' => '//facebook.com/lophocmatngu',
-				],
-				'snxyz' => [
-					'msg' => 'mwe-upwiz-license-snxyz',
-					'url' => '//songngu.xyz/License',
+					'template' => 'LHMN'
 				]
 			],
 			'licensing' => [
 				'defaultType' => 'ownwork',
-				'ownWorkDefault' => 'choice',
+				'ownWorkDefault' => 'notown',
+				'ownWork' => [
+					'type' => 'or',
+					'template' => 'self',
+					'licenses' => [
+						'snxyz',
+						'cc-zero',
+						'cc-by-4.0',
+						'cc-by-sa-4.0',
+					]
+				],
 				'thirdParty' => [
 					'type' => 'or',
 					'licenseGroups' => [
 						[
 							'head' => 'mwe-upwiz-license-lhmn-head',
-							'subhead' => 'mwe-upwiz-license-lhmn-subhead',
-							'licenses' => [
-								'lhmn'
-							],
-							'template' => 'LHMN'
-						],
-						[
-							'head' => 'mwe-upwiz-license-snxyz-head',
-							'subhead' => 'mwe-upwiz-license-snxyz-subhead',
-							'licenses' => [
-								'snxyz'
-							],
-							'template' => 'SNXYZ'
+							'defaults' => [ 'lhmn' ],
+							'licenses' => ['lhmn']
 						],
 						[
 							'head' => 'mwe-upwiz-license-cc-head',
@@ -359,18 +358,15 @@ switch ( $wi->dbname ) {
 							'licenses' => [
 								'cc-zero',
 								'cc-by-4.0',
-								'cc-by-3.0',
-								'cc-by-2.5',
 								'cc-by-sa-4.0',
-								'cc-by-sa-3.0',
-								'cc-by-sa-2.5'
 							]
 						],
 						[
-							'head' => 'mwe-upwiz-license-custom-head',
+							'head' => 'mwe-upwiz-license-other-head',
 							'special' => 'custom',
-							'licenses' => [ 'custom' ]
-						]
+							'defaults' => [ 'custom' ],
+							'licenses' => [ 'custom' ],
+						],
 					]
 				]
 			]
