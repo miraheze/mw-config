@@ -91,7 +91,7 @@ $wmgUploadHostname = 'static.miraheze.org';
 // graphite151
 // $wgStatsdServer = '10.0.15.145';
 
-$passwordNamespaceClassName = $wi->version >= '1.43' ? 'MediaWiki\Password\' : '';
+$passwordNamespaceClassName = $wi->version >= '1.43' ? 'MediaWiki\\Password\\' : '';
 
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
