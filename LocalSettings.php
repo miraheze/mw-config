@@ -5972,7 +5972,7 @@ $wgConf->settings += [
 	'wgOnlyUserEditUserPage' => [
 		'ext-UserPageEditProtection' => true,
 	],
-	
+
 	// UserProfileV2
 	'wgUserProfileV2Color' => [
 		'default' => '#E1E1E1',
@@ -6859,7 +6859,6 @@ if ( wfHostname() === 'test151' ) {
 	// Prevent cache (better be safe than sorry)
 	$wgConf->settings['wgUseCdn']['default'] = false;
 }
-
 
 if ( $wi->version >= '1.43' ) {
 	$wgConf->settings['wgPasswordPolicy']['default']['policies'] += [

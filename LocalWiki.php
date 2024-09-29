@@ -350,7 +350,7 @@ switch ( $wi->dbname ) {
 						[
 							'head' => 'mwe-upwiz-license-lhmn-head',
 							'defaults' => [ 'lhmn' ],
-							'licenses' => ['lhmn']
+							'licenses' => [ 'lhmn' ]
 						],
 						[
 							'head' => 'mwe-upwiz-license-cc-head',
