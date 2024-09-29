@@ -6861,7 +6861,7 @@ if ( wfHostname() === 'test151' ) {
 }
 
 if ( $wi->version >= '1.43' ) {
-	$wgConf->settings['wgPasswordPolicy']['default']['policies'] += [
+	$wgConf->settings['wgPasswordPolicy']['default']['checks'] += [
 		'MinimalPasswordLength' => 'MediaWiki\Password\PasswordPolicyChecks::checkMinimalPasswordLength',
 		'MinimumPasswordLengthToLogin' => 'MediaWiki\Password\PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
 		'PasswordCannotBeSubstringInUsername' => 'MediaWiki\Password\PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
