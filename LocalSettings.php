@@ -5360,6 +5360,12 @@ $wgConf->settings += [
 		'default' => 0.99,
 	],
 
+	// Search
+	'wgSearchType' => [
+		'ext-CirrusSearch' => 'CirrusSearch',
+		'ext-TitleKey' => MediaWiki\Extension\TitleKey\SearchEngine::class,
+	],
+
 	// SecurePoll
 	'wgSecurePollUseLogging' => [
 		'default' => true,
