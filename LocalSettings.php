@@ -5798,17 +5798,6 @@ $wgConf->settings += [
 	'wgOnlyUserEditUserPage' => [
 		'ext-UserPageEditProtection' => true,
 	],
-	
-	// UserProfileV2
-	'wgUserProfileV2Color' => [
-		'default' => '#E1E1E1',
-	],
-	'wgUserProfileV2AvatarBorderRadius' => [
-		'default' => '50%',
-	],
-	'wgUserProfileV2UseGlobalAvatars' => [
-		'default' => false,
-	],
 
 	// Varnish
 	'wgUseCdn' => [
