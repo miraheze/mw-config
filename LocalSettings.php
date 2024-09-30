@@ -1115,6 +1115,7 @@ $wgConf->settings += [
 			'dumps-backup' => 'public-private',
 			'phonos-render' => 'public-private',
 			'timeline-render' => 'public-private'
+			'upv2avatars' => 'public-private',
 		],
 	],
 	'wgCreateWikiUseJobQueue' => [
