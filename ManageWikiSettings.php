@@ -3004,15 +3004,6 @@ $wgManageWikiSettings = [
 		'help' => 'Exclude bots users from the reporting?',
 		'requires' => [],
 	],
-	'wgUserProfileV2UseGlobalAvatars' => [
-		'name' => 'UserProfileV2 Use Global Avatar',
-		'from' => 'userprofilev2',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'socialtools',
-		'help' => 'Whether or not to signal that global avatars are being used in this wiki.',
-		'requires' => [],
-	],
 
 	// Styling (E.G skins/logos etc)
 	'wgDefaultSkin' => [
