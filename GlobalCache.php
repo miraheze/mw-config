@@ -149,7 +149,7 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 
 $wgCdnMatchParameterOrder = false;
 
-if ( !$beta ) {
+if ( !beta ) {
 	$redisServerIP = $beta ?
 		'10.0.15.118:6379' :
 		'10.0.17.120:6379';

@@ -5974,7 +5974,7 @@ $wgConf->settings += [
 	'wgOnlyUserEditUserPage' => [
 		'ext-UserPageEditProtection' => true,
 	],
-	
+
 	// UserProfileV2
 	'wgUserProfileV2Color' => [
 		'default' => '#E1E1E1',
@@ -6922,7 +6922,7 @@ if ( $wgRequestTimeLimit ) {
 // Include other configuration files
 require_once '/srv/mediawiki/config/Database.php';
 $beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
-if ( $beta ) {
+if ( !$beta ) {
 	require_once '/srv/mediawiki/config/EventBus.php';
 }
 require_once '/srv/mediawiki/config/EventStreamConfig.php';
