@@ -128,6 +128,10 @@ if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	$wgSocialProfileFileBackend = 'miraheze-swift';
 }
 
+if ( $wi->isExtensionActive( 'UserProfileV2' ) ) {
+	$wgUserProfileV2Backend = 'miraheze-swift';
+}
+
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 	$wgUseRestbaseVRS = false;
 	$wgVisualEditorDefaultParsoidClient = 'direct';
