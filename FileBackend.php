@@ -62,6 +62,7 @@ if ( $cwPrivate ) {
 		'/score/' => 'mwstore://miraheze-swift/score-render/',
 		'/phonos-render/' => 'mwstore://miraheze-swift/phonos-render/',
 		'/timeline/' => 'mwstore://miraheze-swift/timeline-render/',
+		'/upv2avatars/' => 'mwstore://miraheze-swift/upv2avatars/',
 	];
 }
 

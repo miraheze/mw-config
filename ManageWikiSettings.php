@@ -3975,7 +3975,6 @@ $wgManageWikiSettings = [
 		'help' => 'The border-radius applied to the UserProfileV2 avatar.',
 		'requires' => [],
 	],
-	
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [
