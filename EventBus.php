@@ -10,11 +10,6 @@ $wgEnableEventBus = 'TYPE_ALL';
 
 if ( $cwPrivate ) {
 	$wgEnableEventBus = 'TYPE_JOB|TYPE_EVENT';
-	$wgEventBusStreamNamesMap = [
-		'mediawiki.page_change.v1' => 'mediawiki.page_change.private.v1',
-		'mediawiki.cirrussearch.page_rerender.v1' =>
-			'mediawiki.cirrussearch.page_rerender.private.v1',
-	];
 }
 
 if ( $wi->dbname === 'loginwiki' || $wi->dbname === 'loginwikibeta' ) {
