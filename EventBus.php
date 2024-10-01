@@ -31,10 +31,6 @@ $wgEventServices = [
 ];
 
 $wgEventRelayerConfig = [
-	'cdn-url-purges' => [
-		'class' => CdnPurgeEventRelayer::class,
-		'stream' => 'resource-purge',
-	],
 	'default' => [
 		'class' => EventRelayerNull::class,
 	],
