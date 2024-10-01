@@ -36,11 +36,6 @@ $wgEventRelayerConfig = [
 	],
 ];
 
-$wgRCFeeds['eventbus'] = [
-	'formatter' => EventBusRCFeedFormatter::class,
-	'class' => EventBusRCFeedEngine::class,
-];
-
 $wgJobTypeConf['default'] = [
 	'class' => JobQueueEventBus::class,
 	'readOnlyReason' => false
