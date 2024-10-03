@@ -5712,6 +5712,7 @@ $wgConf->settings += [
 			'.noprint',
 			'.noexcerpt',
 			'.sortkey',
+			'#toc',
 		],
 	],
 
