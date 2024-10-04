@@ -724,6 +724,19 @@ $wgMaxShellTime = 50;
 
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
+$mwtask = strpos( wfHostname(), 'mwtask' ) === 0;
+if ( $mwTask ) {
+	if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
+		$wgMaxShellWallClockTime = 86400;
+	} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner-high.' ) === 0 ) {
+		$wgMaxShellWallClockTime = 259200;
+	} else {
+		$wgMaxShellWallClockTime = 60;
+	}
+} else {
+	$wgMaxShellWallClockTime = 60;
+}
+
 $wgJobRunRate = 0;
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 50;
 $wgSVGConverters['rsvg'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
