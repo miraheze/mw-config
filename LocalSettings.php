@@ -2622,6 +2622,9 @@ $wgConf->settings += [
 	'wgLanguageCode' => [
 		'default' => 'en',
 	],
+	'wgUseXssLanguage' => [
+		'beta' => true,
+	],
 
 	// LDAP
 	'wgLDAPDomainNames' => [
