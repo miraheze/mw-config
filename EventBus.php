@@ -1,9 +1,6 @@
 <?php
 
-use MediaWiki\Extension\EventBus\Adapters\EventRelayer\CdnPurgeEventRelayer;
 use MediaWiki\Extension\EventBus\Adapters\JobQueue\JobQueueEventBus;
-use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedEngine;
-use MediaWiki\Extension\EventBus\Adapters\RCFeed\EventBusRCFeedFormatter;
 use Wikimedia\EventRelayer\EventRelayerNull;
 
 $wgEnableEventBus = 'TYPE_ALL';
