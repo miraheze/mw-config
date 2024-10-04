@@ -26,13 +26,15 @@ if ( $mwtask ) {
 // Configure PHP request timeouts.
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
-} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
-	$wgRequestTimeLimit = 86400;
-} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner-high.' ) === 0 ) {
-	$wgRequestTimeLimit = 259200;
-} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner.' ) === 0 ) {
-	// We have to set this to the highest we require a job to run for.
-	$wgRequestTimeLimit = 1200;
+} elseif ( $mwtask ) {
+	if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
+		$wgRequestTimeLimit = 86400;
+	} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner-high.' ) === 0 ) {
+		$wgRequestTimeLimit = 259200;
+	} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner.' ) === 0 ) {
+		// We have to set this to the highest we require a job to run for.
+		$wgRequestTimeLimit = 1200;
+	}
 } elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$wgRequestTimeLimit = 200;
 } else {
