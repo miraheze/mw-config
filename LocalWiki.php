@@ -199,7 +199,6 @@ switch ( $wi->dbname ) {
 	case 'houkai2ndwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
-meta
 		break;
 	case 'kagagawiki':
 		$uwCcAvailableLanguages = [
