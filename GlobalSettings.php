@@ -724,7 +724,7 @@ $wgMaxShellTime = 50;
 
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
-$mwtask = strpos( wfHostname(), 'mwtask' ) === 0;
+$mwTask = strpos( wfHostname(), 'mwtask' ) === 0;
 if ( $mwTask ) {
 	if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
 		$wgMaxShellWallClockTime = 86400;
