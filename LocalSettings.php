@@ -971,6 +971,9 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => []
 	],
+	'wgManageWikiDatabaseClustersInactive' => [
+		'default' => []
+	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
 		'beta' => 'wikibeta',
