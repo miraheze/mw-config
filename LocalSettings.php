@@ -5590,8 +5590,8 @@ $wgConf->settings += [
 			'points_winner_monthly' => 500,
 			'user_image' => 1000,
 			'poll_vote' => 10,
-			'quiz_points' => 10,
-			'quiz_created' => 15,
+			'quiz_points' => 1,
+			'quiz_created' => 5,
 		],
 	],
 	'wgFriendingEnabled' => [
