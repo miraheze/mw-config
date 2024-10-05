@@ -424,16 +424,6 @@ switch ( $wi->dbname ) {
 				'Đại học' => 50000,
 				'Cao học' => 100000
 			];
-			// User point for each actions and the namespaces that counts toward
-			$wgUserStatsPointValues['edit'] = 50;
-			$wgUserStatsPointValues['gift_rec'] = 100;
-			$wgUserStatsPointValues['points_winner_weekly'] = 200;
-			$wgUserStatsPointValues['points_winner_monthly'] = 500;
-			$wgUserStatsPointValues['user_image'] = 1000;
-			$wgUserStatsPointValues['poll_vote'] = 10;
-			$wgUserStatsPointValues['quiz_points'] = 10;
-			$wgUserStatsPointValues['quiz_created'] = 15;
-			$wgNamespacesForEditPoints = [ 0 ];
 		
 		break;
 	case 'libertygamewiki':
