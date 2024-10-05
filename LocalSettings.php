@@ -1002,6 +1002,15 @@ $wgConf->settings += [
 			'Other, see DPE' => 'other',
 		],
 	],
+	'wgManageWikiInactiveExemptReasonOptions' => [
+		'default' => [
+			'Wiki completed and made to be read' => 'comp',
+			'Wiki made for time-based gathering' => 'tbg',
+			'Wiki made to be read' => 'mtr',
+			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
+			'Other, see DPE' => 'other',
+		],
+	],
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'tech@wikitide.org',
 	],
@@ -1098,6 +1107,9 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCreateWikiUseCustomDomains' => [
+		'default' => true,
+	],
+	'wgManageWikiUseCustomDomains' => [
 		'default' => true,
 	],
 	'wgCreateWikiUseEchoNotifications' => [
