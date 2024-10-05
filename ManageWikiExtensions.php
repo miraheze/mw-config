@@ -2956,38 +2956,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
-	'spritesheet' => [
-		'name' => 'SpriteSheet',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SpriteSheet',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-						'managewiki-restricted',
-					],
-		],
-		'install' => [
-			'sql' => [
-				'spritename' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename.sql",
-				'spritename_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritename_rev.sql",
-				'spritesheet' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet.sql",
-				'spritesheet_rev' => "$IP/extensions/SpriteSheet/install/sql/spritesheet_table_spritesheet_rev.sql"
-
-			],
-			'permissions' => [
-				'autoconfirmed' => [
-					'permissions' => [
-						'edit_sprites',
-					],
-				],
-				'sysop' => [
-					'permissions' => [
-						'spritesheet_rollback',
-					],
-				],
-			],
-		],
-		'section' => 'other',
-	],
 	'standarddialogs' => [
 		'name' => 'StandardDialogs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StandardDialogs',
