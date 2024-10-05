@@ -311,6 +311,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'lhmnwiki':
+		// UploadWizard configurations
 		$wgUploadWizardConfig = [
 			'tutorial' => [
 				'skip' => false,
@@ -328,21 +329,42 @@ switch ( $wi->dbname ) {
 				'en' => 'English'
 			],
 			'licenses' => [
+				'cc-by-sa-4.0' => [
+					'msg' => 'mwe-upwiz-license-cc-by-sa-4.0-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-by-sa-4.0-explain',
+					'icons' => [ 'cc-by', 'cc-sa' ],
+					'url' => '//creativecommons.org/licenses/by-sa/4.0/',
+					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => 'en'
+				],
+				'cc-zero' => [
+					'msg' => 'mwe-upwiz-license-cc-zero-text',
+					'msgExplain' => 'mwe-upwiz-source-ownwork-cc-zero-explain',
+					'icons' => [ 'cc-zero' ],
+					'url' => '//creativecommons.org/publicdomain/zero/1.0/',
+					'languageCodePrefix' => 'deed.',
+					'availableLanguages' => 'en'
+				],
 				'snxyz' => [
 					'msg' => 'mwe-upwiz-license-snxyz',
 					'msgExplain' => 'mwe-upwiz-license-snxyz-explain',
-					'url' => '//songngu.xyz/license',
-					'template' => 'SNXYZ'
+					'url' => '//songngu.xyz/',
+					'template' => 'SNXYZ',
+					'languageCodePrefix' => 'licenses.',
+					'availableLanguages' => 'vi'
 				],
 				'lhmn' => [
 					'msg' => 'mwe-upwiz-license-lhmn',
-					'url' => '//facebook.com/lophocmatngu',
-					'template' => 'LHMN'
+					'msgExplain' => 'mwe-upwiz-license-lhmn-explain',
+					'url' => '//go.lophocmatngu.wiki/',
+					'template' => 'LHMN',
+					'languageCodePrefix' => 'licenses.',
+					'availableLanguages' => 'vi'
 				]
 			],
 			'licensing' => [
-				'defaultType' => 'ownwork',
-				'ownWorkDefault' => 'notown',
+				'defaultType' => 'thirdParty',
+				'ownWorkDefault' => 'choices',
 				'ownWork' => [
 					'type' => 'or',
 					'template' => 'self',
@@ -380,7 +402,39 @@ switch ( $wi->dbname ) {
 				]
 			]
 		];
-
+		
+		// SocialProfile/UserStats configurations
+		require_once( "$IP/extensions/SocialProfile/UserStats/EditCount.php" );
+			// User level definitions
+			$wgUserLevels = [
+				'Lớp lá' => 0,
+				'Mầm non' => 1000,
+				'Lớp 1' => 1500,
+				'Lớp 2' => 2000,
+				'Lớp 3' => 3000,
+				'Lớp 4' => 4000,
+				'Lớp 5' => 5000,
+				'Lớp 6' => 6500,
+				'Lớp 7' => 7500,
+				'Lớp 8' => 8500,
+				'Lớp 9' => 9500,
+				'Lớp 10' => 11000,
+				'Lớp 11' => 13000,
+				'Lớp 12' => 15000,
+				'Đại học' => 50000,
+				'Cao học' => 100000
+			];
+			// User point for each actions and the namespaces that counts toward
+			$wgUserStatsPointValues['edit'] = 50;
+			$wgUserStatsPointValues['gift_rec'] = 100;
+			$wgUserStatsPointValues['points_winner_weekly'] = 200;
+			$wgUserStatsPointValues['points_winner_monthly'] = 500;
+			$wgUserStatsPointValues['user_image'] = 1000;
+			$wgUserStatsPointValues['poll_vote'] = 10;
+			$wgUserStatsPointValues['quiz_points'] = 10;
+			$wgUserStatsPointValues['quiz_created'] = 15;
+			$wgNamespacesForEditPoints = [ 0 ];
+		
 		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
