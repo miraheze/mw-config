@@ -4688,6 +4688,9 @@ $wgConf->settings += [
 			'usebetatoolbar' => 1,
 			'usebetatoolbar-cgd' => 1,
 		],
+		'+abyssalwiki' => [
+			'usecodemirror' => 1,
+		],
 		'+crashspyrowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
