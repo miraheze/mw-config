@@ -404,7 +404,7 @@ switch ( $wi->dbname ) {
 		];
 		
 		// SocialProfile/UserStats configurations
-		require_once( "$IP/extensions/SocialProfile/UserStats/EditCount.php" );
+		require_once "$IP/extensions/SocialProfile/UserStats/EditCount.php";
 			// User level definitions
 			$wgUserLevels = [
 				'Lớp lá' => 0,
