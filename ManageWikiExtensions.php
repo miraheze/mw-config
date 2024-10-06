@@ -2109,7 +2109,7 @@ $wgManageWikiExtensions = [
 	'cirrussearch' => [
 		'name' => 'CirrusSearch',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CirrusSearch',
-		'conflicts' => false,
+		'conflicts' => 'titlekey',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3250,7 +3250,7 @@ $wgManageWikiExtensions = [
 	'titlekey' => [
 		'name' => 'TitleKey',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TitleKey',
-		'conflicts' => false,
+		'conflicts' => 'cirrussearch',
 		'requires' => [],
 		'install' => [
 			'sql' => [
