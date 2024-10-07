@@ -741,6 +741,10 @@ if ( $mwTask ) {
 
 $wgJobRunRate = 0;
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 50;
+
+$wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
+$wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscodePrioritized';
+
 $wgSVGConverters['rsvg'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 
 // We need all thumbs to be regenerated
