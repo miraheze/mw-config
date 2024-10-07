@@ -1099,6 +1099,9 @@ $wgConf->settings += [
 	'wgCreateWikiUseCategories' => [
 		'default' => true,
 	],
+	'wgCreateWikiRequestCountWarnThreshold' => [
+		'default' => 5,
+	],
 	'wgCreateWikiSubdomain' => [
 		'default' => 'miraheze.org',
 		'beta' => 'mirabeta.org',
@@ -1142,11 +1145,9 @@ $wgConf->settings += [
 	'wgCreateWikiUseJobQueue' => [
 		'default' => true,
 	],
-
 	'wgRequestWikiMinimumLength' => [
 		'default' => 250,
 	],
-
 	'wgRequestWikiConfirmAgreement' => [
 		'default' => true,
 	],
