@@ -951,9 +951,6 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wgCreateWikiCustomDomainPage' => [
-		'default' => 'Special:MyLanguage/Custom_domains',
-	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'c1',
@@ -964,13 +961,6 @@ $wgConf->settings += [
 		'beta' => [
 			'c2',
 		],
-	],
-	// Use if you want to stop wikis being created on this cluster
-	'wgCreateWikiDatabaseClustersInactive' => [
-		'default' => []
-	],
-	'wgManageWikiDatabaseClustersInactive' => [
-		'default' => []
 	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
@@ -990,24 +980,6 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiEnableManageInactiveWikis' => [
 		'default' => true,
-	],
-	'wgCreateWikiInactiveExemptReasonOptions' => [
-		'default' => [
-			'Wiki completed and made to be read' => 'comp',
-			'Wiki made for time-based gathering' => 'tbg',
-			'Wiki made to be read' => 'mtr',
-			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
-			'Other, see DPE' => 'other',
-		],
-	],
-	'wgManageWikiInactiveExemptReasonOptions' => [
-		'default' => [
-			'Wiki completed and made to be read' => 'comp',
-			'Wiki made for time-based gathering' => 'tbg',
-			'Wiki made to be read' => 'mtr',
-			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
-			'Other, see DPE' => 'other',
-		],
 	],
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'tech@wikitide.org',
@@ -1094,9 +1066,6 @@ $wgConf->settings += [
 			'Uncategorised' => 'uncategorised',
 		],
 	],
-	'wgCreateWikiUseCategories' => [
-		'default' => true,
-	],
 	'wgCreateWikiRequestCountWarnThreshold' => [
 		'default' => 5,
 	],
@@ -1105,12 +1074,6 @@ $wgConf->settings += [
 		'beta' => 'mirabeta.org',
 	],
 	'wgCreateWikiUseClosedWikis' => [
-		'default' => true,
-	],
-	'wgCreateWikiUseCustomDomains' => [
-		'default' => true,
-	],
-	'wgManageWikiUseCustomDomains' => [
 		'default' => true,
 	],
 	'wgCreateWikiUseEchoNotifications' => [
@@ -3043,6 +3006,22 @@ $wgConf->settings += [
 			'permissions' => true,
 			'settings' => true
 		],
+	],
+	// Use if you want to stop wikis being created on this cluster
+	'wgManageWikiDatabaseClustersInactive' => [
+		'default' => [],
+	],
+	'wgManageWikiInactiveExemptReasonOptions' => [
+		'default' => [
+			'Wiki completed and made to be read' => 'comp',
+			'Wiki made for time-based gathering' => 'tbg',
+			'Wiki made to be read' => 'mtr',
+			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
+			'Other, see DPE' => 'other',
+		],
+	],
+	'wgManageWikiUseCustomDomains' => [
+		'default' => true,
 	],
 	'wgManageWikiExtensionsDefault' => [
 		'default' => [
