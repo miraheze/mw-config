@@ -200,7 +200,7 @@ switch ( $wi->dbname ) {
 		// Yes, [[mw:Manual:Extension.json/Schema#ExtensionFunctions]] states that "extension functions cannot
 		// be used to programmatically update configuration variables or register hooks", but this brings results and
 		// the alternative is reflection, so it could be worse.
-		$wgExtensionFunctions[] = function () {
+		$wgExtensionFunctions[] = static function () {
 			global $wgEnabledAudioTranscodeSet;
 			$wgEnabledAudioTranscodeSet = [];
 		};
@@ -402,7 +402,7 @@ switch ( $wi->dbname ) {
 				]
 			]
 		];
-		
+
 		// SocialProfile/UserStats configurations
 		require_once "$IP/extensions/SocialProfile/UserStats/EditCount.php";
 			// User level definitions
@@ -424,7 +424,7 @@ switch ( $wi->dbname ) {
 				'Đại học' => 800000,
 				'Cao học' => 1000000
 			];
-		
+
 		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';

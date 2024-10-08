@@ -6,6 +6,7 @@ use MediaWiki\MediaWikiServices;
 use Miraheze\CreateWiki\RemoteWiki;
 use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
 use Wikimedia\Rdbms\DBConnRef;
+use Wikimedia\Rdbms\IReadableDatabase;
 
 class MirahezeFunctions {
 
@@ -1042,10 +1043,14 @@ class MirahezeFunctions {
 
 	/**
 	 * @param string $wiki
-	 * @param DBConnRef $dbr
+	 * @param IReadableDatabase $dbr
 	 * @param array &$cacheArray
 	 */
-	public static function onCreateWikiPhpBuilder( string $wiki, DBConnRef $dbr, array &$cacheArray ) {
+	public static function onCreateWikiDataFactoryBuilder(
+		string $wiki,
+		IReadableDatabase $dbr,
+		array &$cacheArray
+	) {
 		$row = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
