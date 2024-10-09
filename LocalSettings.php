@@ -6910,10 +6910,21 @@ $wi::$disabledExtensions = [
 
 $globals = MirahezeFunctions::getConfigGlobals();
 
-// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
-extract( $globals );
 
-$wi->loadExtensions();
+// phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
+// extract( $globals );
+
+$wgSettings2 = new MediaWiki\Settings\SettingsBuilder(
+        MW_INSTALL_PATH,
+        ExtensionRegistry::getInstance(),
+        new MediaWiki\Settings\Config\GlobalConfigBuilder( '' ),
+        new MediaWiki\Settings\Config\PhpIniSink()
+);
+$wgSettings2->load( new MediaWiki\Settings\Source\PhpSettingsSource('/srv/mediawiki/cache/config-' . $wi->dbname . '.php' ) );
+$wgSettings2->apply();
+$wi->applyManageWiki();
+
+// $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
