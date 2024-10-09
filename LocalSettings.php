@@ -6809,6 +6809,7 @@ $wgConf->settings += [
 			'MessageCacheError' => 'debug',
 			'MirahezeMagic' => 'debug',
 			'mobile' => false,
+			'MultiPurge' => 'warning',
 			'NewUserMessage' => false,
 			'OAuth' => 'info',
 			'objectcache' => 'warning',
