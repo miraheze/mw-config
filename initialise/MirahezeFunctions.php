@@ -3,7 +3,7 @@
 use MediaWiki\Config\SiteConfiguration;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
-use Miraheze\CreateWiki\RemoteWiki;
+use Miraheze\CreateWiki\Services\RemoteWikiFactory;
 use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
 use Wikimedia\Rdbms\DBConnRef;
 use Wikimedia\Rdbms\IReadableDatabase;
@@ -1131,24 +1131,21 @@ class MirahezeFunctions {
 	 * @param string $dbName
 	 * @param DBConnRef $dbw
 	 * @param array $formData
-	 * @param RemoteWiki &$wiki
+	 * @param RemoteWikiFactory &$remoteWiki
 	 */
-	public static function onManageWikiCoreFormSubmission( $context, $dbName, $dbw, $formData, &$wiki ) {
+	public static function onManageWikiCoreFormSubmission( $context, $dbName, $dbw, $formData, &$remoteWiki ) {
 		$version = self::getMediaWikiVersion( $dbName );
 		if ( $formData['mediawiki-version'] !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $formData['mediawiki-version'] ) ) {
-			$wiki->newRows['wiki_version'] = $formData['mediawiki-version'];
-			$wiki->changes['mediawiki-version'] = [
-				'old' => $version,
-				'new' => $formData['mediawiki-version']
-			];
+			$remoteWiki->addNewRow( 'wiki_version', $formData['mediawiki-version'] );
+			$remoteWiki->trackChange( 'mediawiki-version', $version, $formData['mediawiki-version'] );
 		}
 
 		if ( $formData['primary-domain'] !== self::getPrimaryDomain( $dbName ) ) {
-			$wiki->newRows['wiki_primary_domain'] = $formData['primary-domain'];
-			$wiki->changes['primary-domain'] = [
-				'old' => self::getPrimaryDomain( $dbName ),
-				'new' => $formData['primary-domain']
-			];
+			$remoteWiki->addNewRow( 'wiki_primary_domain', $formData['primary-domain'] );
+			$remoteWiki->trackChange( 'primary-domain',
+				self::getPrimaryDomain( $dbName ),
+				$formData['primary-domain']
+			);
 		}
 
 		$mwSettings = new ManageWikiSettings( $dbName );
@@ -1157,10 +1154,8 @@ class MirahezeFunctions {
 		if ( $formData['article-path'] !== $articlePath ) {
 			$mwSettings->modify( [ 'wgArticlePath' => $formData['article-path'] ] );
 			$mwSettings->commit();
-			$wiki->changes['article-path'] = [
-				'old' => $articlePath,
-				'new' => $formData['article-path']
-			];
+
+			$remoteWiki->trackChange( 'article-path', $articlePath, $formData['article-path'] );
 
 			$server = self::getServer();
 			$jobQueueGroupFactory = MediaWikiServices::getInstance()->getJobQueueGroupFactory();
@@ -1180,10 +1175,11 @@ class MirahezeFunctions {
 		if ( $formData['mainpage-is-domain-root'] !== $mainPageIsDomainRoot ) {
 			$mwSettings->modify( [ 'wgMainPageIsDomainRoot' => $formData['mainpage-is-domain-root'] ] );
 			$mwSettings->commit();
-			$wiki->changes['mainpage-is-domain-root'] = [
-				'old' => $mainPageIsDomainRoot,
-				'new' => $formData['mainpage-is-domain-root']
-			];
+
+			$remoteWiki->trackChange( 'mainpage-is-domain-root',
+				$mainPageIsDomainRoot,
+				$formData['mainpage-is-domain-root']
+			);
 		}
 	}
 
