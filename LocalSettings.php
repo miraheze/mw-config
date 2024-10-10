@@ -6655,14 +6655,13 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgWikiSeoEnableAutoDescription' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgWikiSeoTryCleanAutoDescription' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgMetadataGenerators' => [
-		'default' => '',
-		'gratispaideiawiki' => [
+		'default' => [
 			'OpenGraph',
 			'Twitter',
 			'SchemaOrg',
