@@ -963,6 +963,7 @@ class MirahezeFunctions {
 				 'wiki_deleted',
 				 'wiki_closed',
 				 'wiki_inactive',
+				 'wiki_private',
 			] )
 			->caller( __METHOD__ )
 			->fetchResultSet();
@@ -970,6 +971,8 @@ class MirahezeFunctions {
 		$activeList = [];
 		$combiList = [];
 		$deletedList = [];
+		$publicList = [];
+		$privateList = [];
 		$versions = [];
 
 		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
@@ -1008,12 +1011,24 @@ class MirahezeFunctions {
 					$versions[$wikiVersion][$wiki->wiki_dbname] = $combiList[$wiki->wiki_dbname];
 				}
 			}
+
+			if ( (int)$wiki->wiki_private === 1 ) {
+				$privateList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+			} else {
+				$publicList[$wiki->wiki_dbname] = [
+					's' => $wiki->wiki_sitename,
+					'c' => $wiki->wiki_dbcluster,
+			}
 		}
 
 		return [
 			'active' => $activeList,
 			'databases' => $combiList,
 			'deleted' => $deletedList,
+			'public' => $publicList,
+			'private' => $privateList,
 			'versions' => $versions,
 		];
 	}
@@ -1032,6 +1047,8 @@ class MirahezeFunctions {
 			'active' => $databases['active'],
 			'databases' => $databases['databases'],
 			'deleted' => $databases['deleted'],
+			'public' => $databases['public'],
+			'private' $databases['private'],
 		];
 
 		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
