@@ -1016,10 +1016,12 @@ class MirahezeFunctions {
 				$privateList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
 					'c' => $wiki->wiki_dbcluster,
+				];
 			} else {
 				$publicList[$wiki->wiki_dbname] = [
 					's' => $wiki->wiki_sitename,
 					'c' => $wiki->wiki_dbcluster,
+				];
 			}
 		}
 
