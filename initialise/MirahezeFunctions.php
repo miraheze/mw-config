@@ -1050,7 +1050,7 @@ class MirahezeFunctions {
 			'databases' => $databases['databases'],
 			'deleted' => $databases['deleted'],
 			'public' => $databases['public'],
-			'private' $databases['private'],
+			'private' => $databases['private'],
 		];
 
 		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
