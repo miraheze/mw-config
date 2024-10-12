@@ -16,8 +16,8 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 $mwtask = strpos( wfHostname(), 'mwtask' ) === 0;
 // Higher on mwtask
 if ( $mwtask ) {
-	// 2000MiB
-	ini_set( 'memory_limit', 2000 * 1024 * 1024 );
+	// 4000MiB
+	ini_set( 'memory_limit', 4000 * 1024 * 1024 );
 } else {
 	// 1400MiB
 	ini_set( 'memory_limit', 1400 * 1024 * 1024 );
