@@ -598,9 +598,6 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'TimedMediaHandler' ) ) {
-	// enable transcoding on all wikis that allow uploads
-	$wgEnableTranscode = $wgEnableUploads;
-
 	// The default $wgEnabledTranscodeSet will include WebM VP9 flat file
 	// transcodes from 240p to 2160p. Leave them enabled site-wide.
 	//
