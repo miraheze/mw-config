@@ -597,6 +597,52 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	}
 }
 
+if ( $wi->isExtensionActive( 'TimedMediaHandler' ) ) {
+	// enable transcoding on all wikis that allow uploads
+	$wgEnableTranscode = $wgEnableUploads;
+
+	// The default $wgEnabledTranscodeSet will include WebM VP9 flat file
+	// transcodes from 240p to 2160p. Leave them enabled site-wide.
+	//
+	// Also enable a single WebM VP8 flat file for backwards compatibility.
+	$wgEnabledTranscodeSet['360p.webm'] = true;
+
+	// Temporarilly disable 1440p and 2160p transcodes:
+	// they're very slow to generate and we need to tune
+	$wgEnabledTranscodeSet['1440p.vp9.webm'] = false;
+	$wgEnabledTranscodeSet['2160p.vp9.webm'] = false;
+
+	// tmh1/2 have 12 cores and need lots of shared memory
+	// for ffmpeg, which mmaps large input files
+	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
+
+	// This allows using 2x the threads for VP9 encoding, but will
+	// fail if running a too-old ffmpeg version.
+	$wgFFmpegVP9RowMT = true;
+
+	// VP9 encoding benefits from more threads; up to 4 for HD or
+	// 8 when using row-based multithreading.
+	//
+	// Note compression of second pass is "spiky", alternating between
+	// single-threaded and multithreaded portions, so you can somewhat
+	// overcommit process threads per CPU thread.
+	$wgFFmpegThreads = 4;
+
+	// HD transcodes of full-length films/docs/conference vids can
+	// take several hours, and sometimes over 12. Bump up from default
+	// 8 hour limit to 16 to avoid wasting the time we've already spent
+	// when breaking these off.
+	// Then double that for VP9, which is more intense on the CPU.
+	$wgTranscodeBackgroundTimeLimit = 32 * 3600;
+
+	// ffmpeg tends to use about 175% CPU when dual-threaded, so hits
+	// say an 8-hour ulimit in 4-6 hours. This tends to cut
+	// off very large files at very high resolution just before
+	// they finish, wasting a lot of time.
+	// Pad it back out so we don't waste that CPU time with a fail!
+	$wgTranscodeBackgroundTimeLimit *= $wgFFmpegThreads;
+}
+
 // Vector
 $vectorVersion = $wgDefaultSkin === 'vector-2022' ? '2' : '1';
 $wgVectorDefaultSkinVersionForExistingAccounts = $vectorVersion;
