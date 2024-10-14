@@ -11,12 +11,11 @@ $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDa
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
 $wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
-
 $wgHooks['BeforePageDisplay'][] = function ( &$out, &$skin ) {
-    if ( $out->getTitle()->isSpecialPage() ) {
-        $out->setRobotPolicy( 'noindex,nofollow' );
-    }
-    return true;
+	if ( $out->getTitle()->isSpecialPage() ) {
+		$out->setRobotPolicy( 'noindex,nofollow' );
+	}
+	return true;
 };
 
 if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
