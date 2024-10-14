@@ -615,7 +615,8 @@ if ( $wi->isExtensionActive( 'TimedMediaHandler' ) ) {
 	$wgEnabledTranscodeSet['1440p.vp9.webm'] = false;
 	$wgEnabledTranscodeSet['2160p.vp9.webm'] = false;
 
-	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
+	// 4GB
+	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024;
 
 	// This allows using 2x the threads for VP9 encoding, but will
 	// fail if running a too-old ffmpeg version.
