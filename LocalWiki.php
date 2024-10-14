@@ -404,7 +404,9 @@ switch ( $wi->dbname ) {
 		];
 
 		// SocialProfile/UserStats configurations
-		require_once "$IP/extensions/SocialProfile/UserStats/EditCount.php";
+		if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
+			require_once "$IP/extensions/SocialProfile/UserStats/EditCount.php";
+		
 			// User level definitions
 			$wgUserLevels = [
 				'Lớp lá' => 0,
@@ -424,7 +426,7 @@ switch ( $wi->dbname ) {
 				'Đại học' => 800000,
 				'Cao học' => 1000000
 			];
-
+		}
 		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
