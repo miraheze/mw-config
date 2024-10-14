@@ -11,6 +11,12 @@ $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDa
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
 $wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+$wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
+	if ( $out->getTitle()->isSpecialPage() ) {
+		$out->setRobotPolicy( 'noindex,nofollow' );
+	}
+	return true;
+};
 
 if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
 	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
@@ -609,7 +615,8 @@ if ( $wi->isExtensionActive( 'TimedMediaHandler' ) ) {
 	$wgEnabledTranscodeSet['1440p.vp9.webm'] = false;
 	$wgEnabledTranscodeSet['2160p.vp9.webm'] = false;
 
-	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
+	// 4GB
+	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024;
 
 	// This allows using 2x the threads for VP9 encoding, but will
 	// fail if running a too-old ffmpeg version.
