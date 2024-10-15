@@ -5411,7 +5411,7 @@ $wgConf->settings += [
 	// Search
 	'wgSearchType' => [
 		'ext-CirrusSearch' => 'CirrusSearch',
-		'ext-TitleKey' => MediaWiki\Extension\TitleKey\SearchEngine::class,
+		'ext-TitleKey' => MediaWiki\Extension\TitleKey\SearchEngineMySQL::class,
 	],
 
 	// SecurePoll
