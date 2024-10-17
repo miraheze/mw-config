@@ -986,6 +986,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
+			'Select an option...' => '',
 			'Alternate history wiki' => 'Alternate history wiki',
 			'Class or group project education wiki' => 'Class or group project education wiki',
 			'Curriculum resource wiki' => 'Curriculum resource wiki',
