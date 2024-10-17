@@ -696,6 +696,48 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'tuscriaturaswiki':
+		$wgHooks['AfterFinalPageOutput'][] = 'onAfterFinalPageOutput';
+		function onAfterFinalPageOutput( $output ) {
+			$title = $output->getTitle();
+			if ( $title === null || $title->getNamespace() < 3000 ) {
+				return true;
+			}
+
+			$subjectNamespace = $title->getNamespace();
+			if ( $subjectNamespace % 2 === 1 ) {
+				$subjectNamespace--;
+			}
+
+			$logoTitle = Title::makeTitle( $subjectNamespace, 'Portada' );
+			$logoLink = $logoTitle->getLinkUrl();
+
+			// The output format is effectively "\$1{$logoLink}\$2"
+			$regexes = [
+				'Apex' => '/(<div id="p-logo"><a style="[^"]+" href=")[^"]+(")/',
+				'erudite' => '/(<a href=")[^"]+(" title="[^"]+" rel="home">)/',
+				'minerva' => '/(<div class="branding-box">\s*<a href=")[^"]+(")/',
+				'tweeki' => '/(<a href=")[^"]+(" class="navbar-brand">)/',
+				'vector' => '/(<a class="mw-wiki-logo" href=")[^"]+(")/',
+				'vector-2022' => '/(<a href=")[^"]+(" class="mw-logo")/',
+			];
+			$regex = $regexes[$output->getSkin()->getSkinName()] ?? null;
+			if ( $regex === null ) {
+				return true;
+			}
+
+			$html = ob_get_clean();
+			$html = preg_replace_callback( $regex, function ( $matches ) use ( $logoLink ) {
+				$note = '<!-- Link modified by Miraheze in LocalWiki.php -->';
+				return $note . $matches[1] . htmlspecialchars( $logoLink, ENT_QUOTES ) . $matches[2];
+			}, $html, 1 ) ?? $html;
+
+			ob_start();
+			echo $html;
+			return true;
+		}
+
+		break;
 	case 'traceprojectwikiwiki':
 	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
