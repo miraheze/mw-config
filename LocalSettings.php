@@ -959,7 +959,7 @@ $wgConf->settings += [
 			'c4',
 		],
 		'beta' => [
-			'c2',
+			'c1',
 		],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
