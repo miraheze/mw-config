@@ -1,6 +1,6 @@
 <?php
 
-if ( strpos( wfHostname(), 'test' ) ) {
+if ( strpos( wfHostname(), 'test' ) === 0 ) {
 	// Mirabeta database configuration
 	$wgLBFactoryConf = [
 		'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
