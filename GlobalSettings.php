@@ -494,7 +494,7 @@ if ( $wmgEnableSharedUploads && $wmgSharedUploadDBname && in_array( $wmgSharedUp
 }
 
 // Miraheze Commons
-if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons && strpos( wfHostname(), 'test' ) === false ) ) {
+if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons && strpos( wfHostname(), 'test' ) === false ) {
 	$wgForeignFileRepos[] = [
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
