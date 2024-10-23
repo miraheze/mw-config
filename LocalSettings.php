@@ -386,6 +386,7 @@ $wgConf->settings += [
 	// Cargo
 	'wgCargoDBuser' => [
 		'default' => 'cargouser',
+		'beta' => 'cargouser2024',
 	],
 	'wgCargoFileDataColumns' => [
 		'default' => [],
@@ -1162,9 +1163,11 @@ $wgConf->settings += [
 	],
 	'wgDBadminuser' => [
 		'default' => 'wikiadmin',
+		'beta' => 'wikiadmin2024',
 	],
 	'wgDBuser' => [
 		'default' => 'mediawiki',
+		'beta' => 'mediawiki2024',
 	],
 	'wgReadOnly' => [
 		'default' => false,
