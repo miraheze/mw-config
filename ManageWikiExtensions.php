@@ -2173,7 +2173,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'datamaps' => [
-		'name' => 'DataMaps',
+		'name' => 'Interactive Data Maps',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DataMaps',
 		'conflicts' => false,
 		'requires' => [],
