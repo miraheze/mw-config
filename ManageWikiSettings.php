@@ -255,14 +255,6 @@ $wgManageWikiSettings = [
 		'section' => 'other',
 		'help' => 'Whether or not to enable the visual map creation dialog.',
 	],
-	'wgDataMapsEnableVisualEditor' => [
-		'name' => 'DataMaps: Enable visual editor',
-		'from' => 'datamaps',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'other',
-		'help' => 'Whether or not to enable the visual map editor (this does not refer to the VisualEditor extension).',
-	],
 	'wgDataMapsAllowExperimentalFeatures' => [
 		'name' => 'DataMaps: Allow experimental features',
 		'from' => 'datamaps',
