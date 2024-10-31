@@ -1183,7 +1183,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgDataMapsEnableVisualEditor' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgDataMapsAllowExperimentalFeatures' => [
 		'default' => false,
