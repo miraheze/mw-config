@@ -717,6 +717,7 @@ switch ( $wi->dbname ) {
 				'Apex' => '/(<div id="p-logo"><a style="[^"]+" href=")[^"]+(")/',
 				'erudite' => '/(<a href=")[^"]+(" title="[^"]+" rel="home">)/',
 				'minerva' => '/(<div class="branding-box">\s*<a href=")[^"]+(")/',
+				'timeless' => '/(<a class="mw-wiki-logo [\w\-]+" href=")[^"]+(")/',
 				'tweeki' => '/(<a href=")[^"]+(" class="navbar-brand">)/',
 				'vector' => '/(<a class="mw-wiki-logo" href=")[^"]+(")/',
 				'vector-2022' => '/(<a href=")[^"]+(" class="mw-logo")/',
