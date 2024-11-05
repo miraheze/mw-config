@@ -698,6 +698,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'tuscriaturaswiki':
 		$wgHooks['AfterFinalPageOutput'][] = 'onAfterFinalPageOutput';
+
 		function onAfterFinalPageOutput( $output ) {
 			$title = $output->getTitle();
 			if ( $title === null || $title->getNamespace() < 3000 ) {
@@ -728,7 +729,7 @@ switch ( $wi->dbname ) {
 			}
 
 			$html = ob_get_clean();
-			$html = preg_replace_callback( $regex, function ( $matches ) use ( $logoLink ) {
+			$html = preg_replace_callback( $regex, static function ( $matches ) use ( $logoLink ) {
 				$note = '<!-- Link modified by Miraheze in LocalWiki.php -->';
 				return $note . $matches[1] . htmlspecialchars( $logoLink, ENT_QUOTES ) . $matches[2];
 			}, $html, 1 ) ?? $html;

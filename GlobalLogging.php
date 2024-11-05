@@ -7,7 +7,6 @@ use MediaWiki\Logger\Monolog\LogstashFormatter;
 use MediaWiki\Logger\Monolog\SyslogHandler;
 use MediaWiki\Logger\Monolog\WikiProcessor;
 use MediaWiki\Logger\MonologSpi;
-use Monolog\Handler\NullHandler;
 use Monolog\Handler\SamplingHandler;
 use Monolog\Handler\WhatFailureGroupHandler;
 use Monolog\Processor\PsrLogMessageProcessor;
