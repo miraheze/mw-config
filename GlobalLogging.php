@@ -38,11 +38,7 @@ $wmgMonologProcessors = [
 	],
 ];
 
-$wmgMonologHandlers = [
-	'blackhole' => [
-		'class' => NullHandler::class,
-	],
-];
+$wmgMonologHandlers = [];
 
 foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 	$wmgMonologHandlers[ "graylog-$logLevel" ] = [
@@ -103,7 +99,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts === false ) {
 		// Log channel disabled on this wiki
 		$wmgMonologConfig['loggers'][$channel] = [
-			'handlers' => [ 'blackhole' ],
+			'handlers' => [],
 			'calls' => $wmgMonologLoggerCalls,
 		];
 		continue;
@@ -216,9 +212,9 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		];
 
 	} else {
-		// No handlers configured, so use the blackhole route
+		// Log channel disabled on this wiki
 		$wmgMonologConfig['loggers'][$channel] = [
-			'handlers' => [ 'blackhole' ],
+			'handlers' => [],
 			'calls' => $wmgMonologLoggerCalls,
 		];
 	}
