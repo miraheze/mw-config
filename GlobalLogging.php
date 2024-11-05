@@ -211,12 +211,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			'calls' => $wmgMonologLoggerCalls,
 		];
 
-	} else {
-		// Log channel disabled on this wiki
-		$wmgMonologConfig['loggers'][$channel] = [
-			'handlers' => [],
-			'calls' => $wmgMonologLoggerCalls,
-		];
 	}
 }
 
