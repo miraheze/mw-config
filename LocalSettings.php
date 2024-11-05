@@ -6717,6 +6717,8 @@ $wgConf->settings += [
 	],
 	'wmgMonologChannels' => [
 		'default' => [
+			// Enable logging errors from all channels not configured otherwise
+			'@default' => 'error',
 			'404' => 'debug',
 			'AbuseFilter' => false,
 			'ActionFactory' => false,
