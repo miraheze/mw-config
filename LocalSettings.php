@@ -984,6 +984,11 @@ $wgConf->settings += [
 	'wgCreateWikiNotificationEmail' => [
 		'default' => 'tech@wikitide.org',
 	],
+	'wgCreateWikiOpenAIConfig' => [
+		'+metawiki' => [
+			'dryrun' => true
+		],
+	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
 			'Select an option...' => '',
