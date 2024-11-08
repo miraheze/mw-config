@@ -5851,6 +5851,16 @@ $wgConf->settings += [
 		'metawiki' => [
 			'*' => [
 				'en' => 'English is the source language.',
+				'cpx' => 'This language code should remain unused. Localise in cpx-hans, cpx-hant or cpx-latn please.',
+				'gan' => 'This language code should remain unused. Localise in gan-hant or gan-hans please.',
+				'wuu' => 'This language code should remain unused. Localise in wuu-hans or wuu-hant please.',
+				'yue' => 'This language code should remain unused. Localise in yue-hans or yue-hant please.',
+				'zh' => 'This language code should remain unused. Localise in zh-hans, zh-hant or zh-hk please.',
+				'zh-cn' => 'This language code should remain unused. Localise in zh-hans please.',
+				'zh-tw' => 'This language code should remain unused. Localise in zh-hant please.',
+				'zh-mo' => 'This language code should remain unused. Localise in zh-hk please.',
+				'zh-my' => 'This language code should remain unused. Localise in zh-sg please.',
+				'zh-sg' => 'This language code should remain unused. Localise in zh-hans please.',
 			],
 		],
 		'rainworldwiki' => [
