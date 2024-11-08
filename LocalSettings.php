@@ -2792,6 +2792,7 @@ $wgConf->settings += [
 		'quyranesswiki' => 'Project:Copyrights',
 	],
 	'wgRightsText' => [
+		'animalroyale' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
 		'connorjwatwiki' => 'Creative Commons Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)',
 		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2816,9 +2817,10 @@ $wgConf->settings += [
 	],
 	'wgRightsUrl' => [
 		'default' => '',
+		'animalroyale' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
 		'connorjwatwiki' => 'https://creativecommons.org/licenses/by-sa/2.5',
 		'constantnoblewiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
-		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
+		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0',
 		'glitchcitywiki' => 'https://creativecommons.org/licenses/by-nc/3.0',
 		'googologywiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'incubatorwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
