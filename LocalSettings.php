@@ -1108,7 +1108,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgRequestWikiMinimumLength' => [
-		'default' => 250,
+		'default' => 350,
 	],
 	'wgRequestWikiConfirmAgreement' => [
 		'default' => true,
