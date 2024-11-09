@@ -254,6 +254,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'other',
 		'help' => 'Whether or not to enable the visual map creation dialog.',
+		'requires' => [],
 	],
 	'wgDataMapsAllowExperimentalFeatures' => [
 		'name' => 'DataMaps: Allow experimental features',
@@ -262,6 +263,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'other',
 		'help' => 'Whether or not to enable any disabled-by-default experimental features.',
+		'requires' => [],
 	],
 	'wgProtectSiteLimit' => [
 		'name' => 'Protect Site Limit',
