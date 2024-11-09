@@ -894,6 +894,7 @@ $wgPoolCountClientConf = [
 
 // Mathoid
 $wgMathMathMLUrl = 'http://10.0.18.106:10044/';
+$wgMathSvgRenderer = 'mathoid';
 
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
