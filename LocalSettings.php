@@ -5347,14 +5347,6 @@ $wgConf->settings += [
 		],
 	],
 
-	// Referrer Policy
-	'wgReferrerPolicy' => [
-		'default' => [
-			'origin-when-cross-origin',
-			'origin'
-		],
-	],
-
 	// RSS Settings
 	'wgRSSAllowImageTag' => [
 		'default' => false,
