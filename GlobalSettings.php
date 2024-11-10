@@ -894,8 +894,8 @@ $wgPoolCountClientConf = [
 
 // Mathoid
 $wgMathMathMLUrl = $beta ?
-	'http://10.0.15.118:10044/' :
-	'http://10.0.18.106:10044/';
+	'http://10.0.15.118:10044' :
+	'http://10.0.18.106:10044';
 $wgMathSvgRenderer = 'mathoid';
 
 // ConfirmEdit (hCaptcha)
