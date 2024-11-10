@@ -893,9 +893,16 @@ $wgPoolCountClientConf = [
 ];
 
 // Mathoid
+$mathoidHosts = [
+	'http://10.0.15.150:10044',
+	'http://10.0.16.157:10044',
+	'http://10.0.17.144:10044',
+	'http://10.0.18.106:10044',
+	
+];
 $wgMathMathMLUrl = $beta ?
 	'http://10.0.15.118:10044' :
-	'http://10.0.18.106:10044';
+	$mathoidHosts[array_rand( $mathoidHosts )];
 $wgMathSvgRenderer = 'mathoid';
 
 // ConfirmEdit (hCaptcha)
