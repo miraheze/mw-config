@@ -913,3 +913,7 @@ $wgCaptchaStorageClass = CaptchaCacheStore::class;
 
 // 12 MB
 $wgAPIMaxResultSize = 12582912;
+
+$wgReferrerPolicy = $cwPrivate ?
+	'no-referrer' :
+	[ 'origin-when-cross-origin', 'origin' ];
