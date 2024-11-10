@@ -116,6 +116,15 @@ $wgParsoidCacheConfig = [
 	'WarmParsoidParserCache' => $wgDBname !== 'commonswiki' ? true : false,
 ];
 
+if ( $wgDBname === 'commonswiki' ) {
+	$wgParserCacheFilterConfig['parsoid-pcache'] += [
+		// disable parsoid-pcache for file description pages on commons
+		NS_FILE => [
+			'minCpuTime' => PHP_INT_MAX // cache none
+		],
+	];
+}
+
 $wgLanguageConverterCacheType = CACHE_ACCEL;
 
 $wgQueryCacheLimit = 5000;
