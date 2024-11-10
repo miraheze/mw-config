@@ -904,6 +904,7 @@ $wgMathMathMLUrl = $beta ?
 	'http://10.0.15.118:10044' :
 	$mathoidHosts[array_rand( $mathoidHosts )];
 $wgMathSvgRenderer = 'mathoid';
+$wgMathUseInternalRestbasePath = false;
 
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
