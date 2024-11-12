@@ -2024,10 +2024,7 @@ $wgConf->settings += [
 		'gratispaideiawiki' => 'gpcommonswiki',
 	],
 	'wgGlobalUsagePurgeBacklinks' => [
-		'default' => false,
-		'gpcommonswiki' => true,
-		'gratisdatawiki' => true,
-		'gratispaideiawiki' => true,
+		'default' => true,
 	],
 
 	// GlobalUserPage
