@@ -810,6 +810,9 @@ $wgConf->settings += [
 	],
 
 	// CreateWiki
+	'wgCreateWikiAIThreshold' => [
+		'default' => -1,
+	],
 	'wgCreateWikiDisallowedSubdomains' => [
 		'default' => [
 			'(.*)miraheze(.*)',
