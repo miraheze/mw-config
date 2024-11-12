@@ -912,7 +912,7 @@ $wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
 $wgCaptchaStorageClass = CaptchaCacheStore::class;
 
 // 12 MB
-$wgAPIMaxResultSize = 12582912;
+// $wgAPIMaxResultSize = 12582912;
 
 $wgReferrerPolicy = $cwPrivate ?
 	'no-referrer' :
