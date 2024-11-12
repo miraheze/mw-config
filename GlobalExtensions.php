@@ -9,7 +9,7 @@ wfLoadExtensions( [
 	'CreateWiki',
 	'CookieWarning',
 	'ConfirmEdit',
-	'ConfirmEdit/hCaptcha',
+	'ConfirmEdit/Turnstile',
 	'DataDump',
 	'DiscordNotifications',
 	'DismissableSiteNotice',
