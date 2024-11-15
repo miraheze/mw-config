@@ -6,6 +6,9 @@ use MediaWiki\Html\Html;
 use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
+$wgSpecialPages['CreateAccount'] = DisabledSpecialPage::getCallback( 'CreateAccount', 'Account creation temporarily disabled by the Miraheze technology team for maintenance.' );
+$wgSpecialPages['Import'] = DisabledSpecialPage::getCallback( 'Import', 'Import temporarily disabled by the Miraheze technology team for maintenance.' );
+
 $wgHooks['CreateWikiDataFactoryBuilder'][] = 'MirahezeFunctions::onCreateWikiDataFactoryBuilder';
 $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
