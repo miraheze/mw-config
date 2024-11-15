@@ -100,7 +100,7 @@ $passwordNamespaceClassName = $wi->version >= '1.43' ? 'MediaWiki\\Password\\' :
 $wgConf->settings += [
 	// invalidates user sessions - do not change unless it is an emergency.
 	'wgAuthenticationTokenVersion' => [
-		'default' => '8',
+		'default' => '9',
 	],
 
 	'wgEnableEditRecovery' => [
