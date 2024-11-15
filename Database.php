@@ -86,11 +86,11 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 			],
 		],
 		'readOnlyBySection' => [
-			// 'DEFAULT' => 'Maintenance is in progress. Please try again in a few minutes.',
-			// 'c1' => 'Maintenance is in progress. Please try again in a few minutes.',
-			// 'c2' => 'Maintenance is in progress. Please try again in a few minutes.',
-			// 'c3' => 'Maintenance is in progress. Please try again in a few minutes.',
-			// 'c4' => 'Maintenance is in progress. Please try again in a few minutes.',
+			'DEFAULT' => 'Maintenance is in progress. Please try again in a few minutes.',
+			'c1' => 'Maintenance is in progress. Please try again in a few minutes.',
+			'c2' => 'Maintenance is in progress. Please try again in a few minutes.',
+			'c3' => 'Maintenance is in progress. Please try again in a few minutes.',
+			'c4' => 'Maintenance is in progress. Please try again in a few minutes.',
 			// 's1' => 'Maintenance is in progress. Please try again in a few minutes.',
 		],
 	];
