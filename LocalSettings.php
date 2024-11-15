@@ -98,9 +98,9 @@ $wmgUploadHostname = 'static.miraheze.org';
 $passwordNamespaceClassName = $wi->version >= '1.43' ? 'MediaWiki\\Password\\' : '';
 
 $wgConf->settings += [
-	// invalidates user sessions - do not change unless it is an emergency.
+	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
-		'default' => '9',
+		'default' => '10',
 	],
 
 	'wgEnableEditRecovery' => [
