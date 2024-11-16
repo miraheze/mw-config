@@ -269,8 +269,6 @@ if ( !$cwPrivate ) {
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 	$wgDiscordExperimentalWebhook = $wmgDiscordExperimentalWebhook;
-
-	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 }
 
 // Dynamic cookie settings dependant on $wgServer
@@ -299,6 +297,8 @@ $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
 		'useBackendTempStore' => true,
+		'chunkSize' => 1 * 1024 * 1024,
+		'minChunkSize' => 10,
 		'generate' => [
 			'type' => 'mwscript',
 			'script' => "$IP/maintenance/dumpBackup.php",
@@ -331,6 +331,8 @@ $wgDataDump = [
 	'image' => [
 		'file_ending' => '.tar.gz',
 		'useBackendTempStore' => true,
+		'chunkSize' => 1 * 1024 * 1024,
+		'minChunkSize' => 10,
 		'generate' => [
 			'type' => 'mwscript',
 			'script' => "$IP/extensions/MirahezeMagic/maintenance/swiftDump.php",
