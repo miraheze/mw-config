@@ -1658,6 +1658,20 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'cafewiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://hybridcafe.wiki/w/img_auth.php/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://hybridcafe.wiki/w/img_auth.php/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				]
+			]
+		],
 		'lhmnwiki' => [
 			'hostedby' => [
 				'songnguxyz' => [
@@ -2778,6 +2792,7 @@ $wgConf->settings += [
 
 	// License
 	'wgRightsIcon' => [
+		'cafewiki' => 'https://hybridcafe.wiki/w/img_auth.php/0/0f/Badge-ccbysa.svg',
 		'constantnoblewiki' => 'https://upload.wikimedia.org/wikipedia/commons/2/29/Freeculturalworks-pdbutton.svg',
 		'jadtechwiki' => "https://$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
@@ -2792,7 +2807,7 @@ $wgConf->settings += [
 		'quyranesswiki' => 'Project:Copyrights',
 	],
 	'wgRightsText' => [
-		'animalroyale' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
+		'animalroyalewiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
 		'connorjwatwiki' => 'Creative Commons Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)',
 		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
