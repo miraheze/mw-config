@@ -84,11 +84,11 @@ $wi = new MirahezeFunctions();
 require_once '/srv/mediawiki/config/PrivateSettings.php';
 
 // Load global skins and extensions
-require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
+require_once '/srv/mediawiki/config/GlobalSkins.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
-$wmgUploadHostname = 'static.miraheze.org';
+$wmgUploadHostname = 'static.wikitide.net';
 
 // $wgStatsFormat = 'dogstatsd';
 // $wgStatsTarget = 'udp://localhost:9125';
@@ -1643,7 +1643,7 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg',
+					'src' => 'https://static.wikitide.net/commonswiki/f/ff/Powered_by_Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
 				],
@@ -1652,23 +1652,37 @@ $wgConf->settings += [
 		'beta' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
 				],
 			],
 		],
+		'cafewiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://hybridcafe.wiki/w/img_auth.php/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://hybridcafe.wiki/w/img_auth.php/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				]
+			]
+		],
 		'lhmnwiki' => [
 			'hostedby' => [
 				'songnguxyz' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					"height" => "32",
 					"width" => "200",
 				],
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					"height" => "60",
@@ -1677,7 +1691,7 @@ $wgConf->settings += [
 			],
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
 					'height' => "60",
@@ -1686,7 +1700,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
 					'height' => "50",
@@ -1697,14 +1711,14 @@ $wgConf->settings += [
 		'cgwiki' => [
 			'hostedby' => [
 				'songnguxyz' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					"height" => "32",
 					"width" => "200",
 				],
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					"height" => "60",
@@ -1713,7 +1727,7 @@ $wgConf->settings += [
 			],
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/9/9b/MediaWiki.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
 					'height' => "60",
@@ -1722,7 +1736,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.miraheze.org/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
 					'height' => "50",
@@ -1733,12 +1747,12 @@ $wgConf->settings += [
 		'tnowiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.miraheze.org/tnowiki/0/05/Mediawiki.png',
+					'src' => 'https://static.wikitide.net/tnowiki/0/05/Mediawiki.png',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
 				'miraheze' => [
-					'src' => 'https://static.miraheze.org/tnowiki/4/49/Miraheze.png',
+					'src' => 'https://static.wikitide.net/tnowiki/4/49/Miraheze.png',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Hosted by Miraheze',
 				]
@@ -2778,6 +2792,7 @@ $wgConf->settings += [
 
 	// License
 	'wgRightsIcon' => [
+		'cafewiki' => 'https://hybridcafe.wiki/w/img_auth.php/0/0f/Badge-ccbysa.svg',
 		'constantnoblewiki' => 'https://upload.wikimedia.org/wikipedia/commons/2/29/Freeculturalworks-pdbutton.svg',
 		'jadtechwiki' => "https://$wmgUploadHostname/jadtechwiki/d/d8/CopyrightIcon.png",
 		'quyranesswiki' => "https://$wmgUploadHostname/quyranesswiki/0/03/Copyright.svg.png",
@@ -2792,7 +2807,7 @@ $wgConf->settings += [
 		'quyranesswiki' => 'Project:Copyrights',
 	],
 	'wgRightsText' => [
-		'animalroyale' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
+		'animalroyalewiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
 		'connorjwatwiki' => 'Creative Commons Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)',
 		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
