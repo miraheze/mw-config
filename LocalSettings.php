@@ -84,8 +84,8 @@ $wi = new MirahezeFunctions();
 require_once '/srv/mediawiki/config/PrivateSettings.php';
 
 // Load global skins and extensions
-require_once '/srv/mediawiki/config/GlobalSkins.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
+require_once '/srv/mediawiki/config/GlobalSkins.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
