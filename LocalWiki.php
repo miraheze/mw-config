@@ -155,7 +155,7 @@ switch ( $wi->dbname ) {
 			'class' => ForeignDBViaLBRepo::class,
 			'name' => 'shared-gpcommonswiki',
 			'backend' => 'miraheze-swift',
-			'url' => 'https://static.miraheze.org/gpcommonswiki',
+			'url' => 'https://static.wikitide.net/gpcommonswiki',
 			'hashLevels' => 2,
 			'thumbScriptUrl' => false,
 			'transformVia404' => true,
@@ -599,7 +599,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'picrosswiki':
 		$wgLogos = [
-			'svg' => "https://static.miraheze.org/picrosswiki/0/0a/Pikuw.svg",
+			'svg' => "https://static.wikitide.net/picrosswiki/0/0a/Pikuw.svg",
 		];
 		break;
 	case 'pokemundowiki':

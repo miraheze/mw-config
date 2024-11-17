@@ -6,8 +6,8 @@ $wgFileBackends[] = [
 	// This is the prefix for the container that it starts with.
 	'wikiId'             => "miraheze-$wgDBname",
 	'lockManager'        => 'redisLockManager',
-	'swiftAuthUrl'       => 'https://swift-lb.miraheze.org/auth',
-	'swiftStorageUrl'    => 'https://swift-lb.miraheze.org/v1/AUTH_mw',
+	'swiftAuthUrl'       => 'https://swift-lb.wikitide.net/auth',
+	'swiftStorageUrl'    => 'https://swift-lb.wikitide.net/v1/AUTH_mw',
 	'swiftUser'          => 'mw:media',
 	'swiftKey'           => $wmgSwiftPassword,
 	'swiftTempUrlKey'    => '',
@@ -43,8 +43,8 @@ $wgLockManagers[] = [
 
 $wgGenerateThumbnailOnParse = false;
 $wgUploadThumbnailRenderMethod = 'http';
-$wgUploadThumbnailRenderHttpCustomHost = 'static.miraheze.org';
-$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.miraheze.org';
+$wgUploadThumbnailRenderHttpCustomHost = 'static.wikitide.net';
+$wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.wikitide.net';
 
 $wgThumbnailBuckets = [ 1920 ];
 $wgThumbnailMinimumBucketDistance = 100;
