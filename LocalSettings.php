@@ -1189,7 +1189,7 @@ $wgConf->settings += [
 				'db' => $wi->getGlobalDatabase()
 			],
 			'virtual-importdump' => [
-				'db' => $wi->getGlobalDatabase()
+				'db' => $wi->getCentralDatabase()
 			],
 			'virtual-matomoanalytics' => [
 				'db' => $wi->getGlobalDatabase()
