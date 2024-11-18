@@ -23,8 +23,8 @@ $wgObjectCaches['mcrouter'] = [
 	'server_failure_limit'  => 1e9,
 	'retry_timeout'         => -1,
 	'loggroup'              => 'memcached',
-	// 500ms, in microseconds
-	'timeout'               => 0.5 * 1e6,
+	// 250ms, in microseconds
+	'timeout'               => 0.25 * 1e6,
 	'allow_tcp_nagle_delay' => false,
 ];
 
