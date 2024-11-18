@@ -490,6 +490,11 @@ $wgConf->settings += [
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
 	],
+	'wmgCentralAuthAutoLoginWikis' => [
+		'default' => [
+			'.miraheze.org' => 'metawiki'
+		],
+	],
 	'wgGlobalRenameDenylist' => [
 		'default' => 'https://meta.miraheze.org/wiki/MediaWiki:Global_rename_blacklist?action=raw',
 		'beta' => 'https://meta.mirabeta.org/wiki/MediaWiki:Global_rename_blacklist?action=raw',
