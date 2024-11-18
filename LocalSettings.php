@@ -1180,6 +1180,35 @@ $wgConf->settings += [
 		'default' => [],
 		'srewiki' => [ 'actor', 'user', 'user_properties', 'user_autocreate_serial' ],
 	],
+	'wgVirtualDomainsMapping' => [
+		'default' => [
+			'virtual-centralauth' => [
+				'db' => $wi->getGlobalDatabase()
+			],
+			'virtual-globalblocking' => [
+				'db' => $wi->getGlobalDatabase()
+			],
+			'virtual-importdump' => [
+				'db' => $wi->getGlobalDatabase()
+			],
+			'virtual-matomoanalytics' => [
+				'db' => $wi->getGlobalDatabase()
+			],
+			'virtual-oathauth' => [
+				'db' => $wi->getGlobalDatabase()
+			],
+		],
+		'ldapwikiwiki' => [
+			'virtual-oathauth' => [
+				'db' => 'ldapwikiwiki'
+			],
+		],
+		'srewiki' => [
+			'virtual-oathauth' => [
+				'db' => 'ldapwikiwiki'
+			],
+		]
+	],
 
 	// DataMaps
 	'wgDataMapsEnableCreateMap' => [
