@@ -44,6 +44,8 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
+	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
+
 	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
 		$wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
 	}
