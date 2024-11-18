@@ -2363,10 +2363,6 @@ $wgConf->settings += [
 	],
 
 	// ImportDump
-	'wgImportDumpCentralWiki' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
-	],
 	'wgImportDumpEnableAutomatedJob' => [
 		'default' => true,
 	],
