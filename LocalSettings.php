@@ -344,6 +344,10 @@ $wgConf->settings += [
 	'wgEnablePartialActionBlocks' => [
 		'default' => true,
 	],
+	// 'block' table migration, remove for 1.43
+	'wgBlockTargetMigrationStage' => [
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	],
 
 	// Bot passwords
 	'wgBotPasswordsDatabase' => [
