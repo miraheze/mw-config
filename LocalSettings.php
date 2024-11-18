@@ -469,10 +469,6 @@ $wgConf->settings += [
 		'default' => 'centralauth_',
 		'beta' => 'betacentralauth_',
 	],
-	'wgCentralAuthDatabase' => [
-		'default' => 'mhglobal',
-		'beta' => 'testglobal',
-	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => true,
 	],
@@ -1974,10 +1970,6 @@ $wgConf->settings += [
 	'wgApplyGlobalBlocks' => [
 		'default' => true,
 		// 'metawiki' => false,
-	],
-	'wgGlobalBlockingDatabase' => [
-		'default' => 'mhglobal',
-		'beta' => 'testglobal',
 	],
 
 	// GlobalCssJs
@@ -3673,10 +3665,6 @@ $wgConf->settings += [
 	],
 
 	// MatomoAnalytics
-	'wgMatomoAnalyticsDatabase' => [
-		'default' => 'mhglobal',
-		'beta' => 'testglobal',
-	],
 	'wgMatomoAnalyticsServerURL' => [
 		'default' => 'https://analytics.wikitide.net/',
 	],
@@ -4329,12 +4317,6 @@ $wgConf->settings += [
 	],
 
 	// OATHAuth
-	'wgOATHAuthDatabase' => [
-		'default' => 'mhglobal',
-		'ldapwikiwiki' => 'ldapwikiwiki',
-		'srewiki' => 'ldapwikiwiki',
-		'beta' => 'testglobal',
-	],
 	'wgOATHExclusiveRights' => [
 		'default' => [
 			'abusefilter-privatedetails',
