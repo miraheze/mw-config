@@ -2046,12 +2046,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// GlobalNewFiles
-	'wgGlobalNewFilesDatabase' => [
-		'default' => 'mhglobal',
-		'beta' => 'testglobal',
-	],
-
 	// GlobalPreferences
 	'wgGlobalPreferencesDB' => [
 		'default' => 'mhglobal',
