@@ -64,6 +64,11 @@ class MirahezeFunctions {
 		'beta' => 'testglobal',
 	];
 
+	private const INCIDENTS_DATABASE = [
+		'default' => 'incidents',
+		'beta' => 'testglobal',
+	];
+
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
 	private const TAGS = [
@@ -342,6 +347,13 @@ class MirahezeFunctions {
 	 */
 	public function getGlobalDatabase(): string {
 		return self::GLOBAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getIncidentsDatabase(): string {
+		return self::INCIDENTS_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
 	}
 
 	public function setDatabase() {

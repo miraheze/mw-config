@@ -1203,6 +1203,9 @@ $wgConf->settings += [
 			'virtual-importdump' => [
 				'db' => $wi->getCentralDatabase(),
 			],
+			'virtual-incidentreporting' => [
+				'db' => $wi->getIncidentsDatabase(),
+			],
 			'virtual-matomoanalytics' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
