@@ -1192,31 +1192,34 @@ $wgConf->settings += [
 	'wgVirtualDomainsMapping' => [
 		'default' => [
 			'virtual-centralauth' => [
-				'db' => $wi->getGlobalDatabase()
+				'db' => $wi->getGlobalDatabase(),
 			],
 			'virtual-globalblocking' => [
-				'db' => $wi->getGlobalDatabase()
+				'db' => $wi->getGlobalDatabase(),
+			],
+			'virtual-globalnewfiles' => [
+				'db' => $wi->getGlobalDatabase(),
 			],
 			'virtual-importdump' => [
-				'db' => $wi->getCentralDatabase()
+				'db' => $wi->getCentralDatabase(),
 			],
 			'virtual-matomoanalytics' => [
-				'db' => $wi->getGlobalDatabase()
+				'db' => $wi->getGlobalDatabase(),
 			],
 			'virtual-oathauth' => [
-				'db' => $wi->getGlobalDatabase()
+				'db' => $wi->getGlobalDatabase(),
 			],
 		],
 		'ldapwikiwiki' => [
 			'virtual-oathauth' => [
-				'db' => 'ldapwikiwiki'
+				'db' => 'ldapwikiwiki',
 			],
 		],
 		'srewiki' => [
 			'virtual-oathauth' => [
-				'db' => 'ldapwikiwiki'
+				'db' => 'ldapwikiwiki',
 			],
-		]
+		],
 	],
 
 	// DataMaps
