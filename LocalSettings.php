@@ -1194,9 +1194,6 @@ $wgConf->settings += [
 			'virtual-centralauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
-			'virtual-createwiki' => [
-				'db' => $wi->getGlobalDatabase(),
-			],
 			'virtual-createwiki-central' => [
 				'db' => $wi->getCentralDatabase(),
 			],
