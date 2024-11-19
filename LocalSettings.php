@@ -2228,10 +2228,6 @@ $wgConf->settings += [
 	],
 
 	// IncidentReporting
-	'wgIncidentReportingDatabase' => [
-		'default' => 'incidents',
-		'beta' => 'testglobal',
-	],
 	'wgIncidentReportingServices' => [
 		'default' => [
 			'Bacula' => 'https://meta.miraheze.org/wiki/Tech:Bacula',
