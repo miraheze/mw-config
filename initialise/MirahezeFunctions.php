@@ -5,7 +5,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use Miraheze\CreateWiki\Services\RemoteWikiFactory;
 use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
-use Wikimedia\Rdbms\DBConnRef;
+use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
 
 class MirahezeFunctions {
@@ -950,13 +950,11 @@ class MirahezeFunctions {
 
 	/**
 	 * @param string $databaseName
-	 * @return DBConnRef
+	 * @return IReadableDatabase
 	 */
-	private static function getDatabaseConnection( string $databaseName ): DBConnRef {
-		return MediaWikiServices::getInstance()
-			->getDBLoadBalancerFactory()
-			->getMainLB( $databaseName )
-			->getMaintenanceConnectionRef( DB_REPLICA, [], $databaseName );
+	private static function getDatabaseConnection( string $databaseName ): IReadableDatabase {
+		return MediaWikiServices::getInstance()->getConnectionProvider()
+			->getReplicaDatabase( $databaseName );
 	}
 
 	/**
@@ -1162,7 +1160,7 @@ class MirahezeFunctions {
 	/**
 	 * @param IContextSource $context
 	 * @param string $dbName
-	 * @param DBConnRef $dbw
+	 * @param IDatabase $dbw
 	 * @param array $formData
 	 * @param RemoteWikiFactory &$remoteWiki
 	 */
