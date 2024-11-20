@@ -744,7 +744,7 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 
 // Kilobytes
 $wgMaxShellFileSize = 512 * 1024;
-$wgMaxShellMemory = 512 * 1024;
+$wgMaxShellMemory = 1024 * 1024;
 
 // 50 seconds
 $wgMaxShellTime = 50;
