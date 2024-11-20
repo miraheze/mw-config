@@ -139,9 +139,6 @@ $wgDiscussionToolsTalkPageParserCacheExpiry = 86400 * 10;
 // 3 days
 $wgRevisionCacheExpiry = 86400 * 3;
 
-// 1 day
-$wgObjectCacheSessionExpiry = 86400;
-
 // 7 days
 $wgDLPMaxCacheTime = 604800;
 
