@@ -1208,6 +1208,9 @@ $wgConf->settings += [
 			'virtual-oathauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-requestssl' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 		],
 		'+beta' => [
 			'virtual-botpasswords' => [
