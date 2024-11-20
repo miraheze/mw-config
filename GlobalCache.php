@@ -136,9 +136,6 @@ $wgParserCacheExpireTime = 86400 * 15;
 // 10 days
 $wgDiscussionToolsTalkPageParserCacheExpiry = 86400 * 10;
 
-// Old revision parser cache expire in 1 hour
-$wgOldRevisionParserCacheExpireTime = 3600;
-
 // 3 days
 $wgRevisionCacheExpiry = 86400 * 3;
 
