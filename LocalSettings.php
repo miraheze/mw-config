@@ -349,12 +349,6 @@ $wgConf->settings += [
 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
 
-	// Bot passwords
-	'wgBotPasswordsDatabase' => [
-		'default' => 'mhglobal',
-		'beta' => 'metawikibeta',
-	],
-
 	// Cache
 	'wgCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache',
@@ -1187,6 +1181,9 @@ $wgConf->settings += [
 	],
 	'+wgVirtualDomainsMapping' => [
 		'default' => [
+			'virtual-botpasswords' => [
+				'db' => $wi->getGlobalDatabase(),
+			],
 			'virtual-centralauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
@@ -1210,6 +1207,11 @@ $wgConf->settings += [
 			],
 			'virtual-oathauth' => [
 				'db' => $wi->getGlobalDatabase(),
+			],
+		],
+		'+beta' => [
+			'virtual-botpasswords' => [
+				'db' => 'metawikibeta',
 			],
 		],
 		'ldapwikiwiki' => [
