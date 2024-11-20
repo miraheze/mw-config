@@ -1189,7 +1189,7 @@ $wgConf->settings += [
 		'default' => [],
 		'srewiki' => [ 'actor', 'user', 'user_properties', 'user_autocreate_serial' ],
 	],
-	'wgVirtualDomainsMapping' => [
+	'+wgVirtualDomainsMapping' => [
 		'default' => [
 			'virtual-centralauth' => [
 				'db' => $wi->getGlobalDatabase(),
