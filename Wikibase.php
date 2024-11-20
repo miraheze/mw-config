@@ -80,6 +80,8 @@ $wgWBClientSettings['siteLinksGroups'] = [
 $wgWBClientSettings['purgeCacheBatchSize'] = 100;
 $wgWBClientSettings['recentChangesBatchSize'] = 100;
 
+$wgMFUseWikibase = true;
+
 // Per-wiki
 if ( $wgDBname === 'famedatawiki' ) {
 	$wgWBRepoSettings['statementSections'] = [
