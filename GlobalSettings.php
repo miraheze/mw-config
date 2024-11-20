@@ -896,6 +896,7 @@ $wgMathUseInternalRestbasePath = false;
 // Needed as the server uses ipv4 only.
 $wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
 $wgCaptchaStorageClass = CaptchaCacheStore::class;
+$wgCaptchaRegexes[] = '/<a +href/i';
 
 // 12 MB
 // $wgAPIMaxResultSize = 12582912;
