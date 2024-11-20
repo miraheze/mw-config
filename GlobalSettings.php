@@ -906,3 +906,10 @@ $wgReferrerPolicy = $cwPrivate ?
 	[ 'origin-when-cross-origin', 'origin' ];
 
 $wgHTTPImportTimeout = 50;
+
+$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
+$wgLoginNotifyAttemptsNewIP = 3;
+$wgLoginNotifyUseSeenTable = true;
+$wgLoginNotifyUseCheckUser = false;
+$wgLoginNotifySeenExpiry = 80 * 86400;
+$wgLoginNotifySeenBucketSize = 8 * 86400;
