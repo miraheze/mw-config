@@ -903,3 +903,5 @@ $wgCaptchaStorageClass = CaptchaCacheStore::class;
 $wgReferrerPolicy = $cwPrivate ?
 	'no-referrer' :
 	[ 'origin-when-cross-origin', 'origin' ];
+
+$wgHTTPImportTimeout = 50;
