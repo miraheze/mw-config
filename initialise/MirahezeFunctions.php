@@ -357,12 +357,11 @@ class MirahezeFunctions {
 	}
 
 	public function setDatabase() {
-		global $wgConf, $wgDBname, $wgCreateWikiDatabase, $wgVirtualDomainsMapping;
+		global $wgConf, $wgDBname, $wgVirtualDomainsMapping;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 		$wgDBname = $this->dbname;
 
-		$wgCreateWikiDatabase = $this->getGlobalDatabase();
 		$wgVirtualDomainsMapping['virtual-createwiki'] = [
 			'db' => $this->getGlobalDatabase(),
 		];
