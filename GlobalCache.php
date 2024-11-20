@@ -75,7 +75,6 @@ $wgObjectCaches['db-mainstash'] = [
 
 $wgMainStash = 'db-mainstash';
 
-$wgStatsCacheType = 'mcrouter';
 $wgMicroStashType = 'mcrouter';
 
 $wgObjectCaches['redis-session'] = [
