@@ -5024,10 +5024,6 @@ $wgConf->settings += [
 	],
 
 	// RequestSSL
-	'wgRequestSSLCentralWiki' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
-	],
 	'wgRequestSSLScriptCommand' => [
 		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
 	],
