@@ -983,10 +983,6 @@ $wgConf->settings += [
 		'metawiki' => false,
 		'metawikibeta' => false,
 	],
-	'wgCreateWikiGlobalWiki' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
-	],
 	'wgCreateWikiEmailNotifications' => [
 		'default' => true,
 	],
