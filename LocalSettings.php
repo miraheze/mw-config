@@ -3003,6 +3003,12 @@ $wgConf->settings += [
 			'2602:294:0:c8::109' => true,
 		],
 	],
+	'wgLinterWriteNamespaceColumnStage' => [
+		'default' => true,
+	],
+	'wgLinterWriteTagAndTemplateColumnsStage' => [
+		'default' => true,
+	],
 
 	// Loops
 	'egLoopsCountLimit' => [
