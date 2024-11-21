@@ -3033,9 +3033,6 @@ $wgConf->settings += [
 	'wgLoginNotifySeenExpiry' => [
 		'default' => 80 * 86400,
 	],
-	'wgLoginNotifyUseCheckUser' => [
-		'default' => true,
-	],
 	'wgLoginNotifyUseSeenTable' => [
 		'default' => true,
 	],
