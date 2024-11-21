@@ -51,6 +51,8 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	}
 
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
+
+	$wgLoginNotifyUseCentralId = true;
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {

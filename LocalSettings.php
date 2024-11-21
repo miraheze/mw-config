@@ -1203,6 +1203,9 @@ $wgConf->settings += [
 			'virtual-incidentreporting' => [
 				'db' => $wi->getIncidentsDatabase(),
 			],
+			'virtual-LoginNotify' => [
+				'db' => $wi->getGlobalDatabase(),
+			],
 			'virtual-matomoanalytics' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
@@ -1219,11 +1222,17 @@ $wgConf->settings += [
 			],
 		],
 		'ldapwikiwiki' => [
+			'virtual-LoginNotify' => [
+				'db' => 'ldapwikiwiki',
+			],
 			'virtual-oathauth' => [
 				'db' => 'ldapwikiwiki',
 			],
 		],
 		'srewiki' => [
+			'virtual-LoginNotify' => [
+				'db' => 'ldapwikiwiki',
+			],
 			'virtual-oathauth' => [
 				'db' => 'ldapwikiwiki',
 			],
