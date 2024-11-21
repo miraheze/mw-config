@@ -898,7 +898,7 @@ $wgCaptchaStorageClass = CaptchaCacheStore::class;
 $wgCaptchaRegexes[] = '/<a +href/i';
 
 // 12 MB
-// $wgAPIMaxResultSize = 12582912;
+$wgAPIMaxResultSize = 12582912;
 
 $wgReferrerPolicy = $cwPrivate ?
 	'no-referrer' :
@@ -906,9 +906,5 @@ $wgReferrerPolicy = $cwPrivate ?
 
 $wgHTTPImportTimeout = 50;
 
+// Notifications
 $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
-$wgLoginNotifyAttemptsNewIP = 3;
-$wgLoginNotifyUseSeenTable = true;
-$wgLoginNotifyUseCheckUser = false;
-$wgLoginNotifySeenExpiry = 80 * 86400;
-$wgLoginNotifySeenBucketSize = 8 * 86400;

@@ -1188,6 +1188,9 @@ $wgConf->settings += [
 			'virtual-centralauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-checkuser-global' => [
+				'db' => $wi->getGlobalDatabase(),
+			],
 			'virtual-createwiki-central' => [
 				'db' => $wi->getCentralDatabase(),
 			],
@@ -3017,6 +3020,23 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgLinterWriteTagAndTemplateColumnsStage' => [
+		'default' => true,
+	],
+
+	// LoginNotify
+	'wgLoginNotifyAttemptsNewIP' => [
+		'default' => 3,
+	],
+	'wgLoginNotifySeenBucketSize' => [
+		'default' => 8 * 86400,
+	]
+	'wgLoginNotifySeenExpiry' => [
+		'default' => 80 * 86400,
+	],
+	'wgLoginNotifyUseCheckUser' => [
+		'default' => true,
+	],
+	'wgLoginNotifyUseSeenTable' => [
 		'default' => true,
 	],
 
