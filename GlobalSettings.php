@@ -257,8 +257,6 @@ if ( !$cwPrivate ) {
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
 	$wgDiscordExperimentalWebhook = $wmgDiscordExperimentalWebhook;
-
-	$wgDataDumpDownloadUrl = "https://{$wmgUploadHostname}/{$wi->dbname}/dumps/\${filename}";
 }
 
 // Dynamic cookie settings dependant on $wgServer
@@ -281,7 +279,6 @@ foreach ( $wi->getAllowedDomains() as $domain ) {
 
 // DataDump
 $wgDataDumpFileBackend = 'miraheze-swift';
-$wgDataDumpDirectory = '';
 
 $wgDataDump = [
 	'xml' => [
