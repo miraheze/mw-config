@@ -316,6 +316,9 @@ $wgDataDump = [
 	'image' => [
 		'file_ending' => '.tar.gz',
 		'useBackendTempStore' => true,
+		'logFailedExitCodeComments' => [
+			75 => 'The dump is too large. Please contact a member of the Technology team to assist with generating this dump.',
+		],
 		'generate' => [
 			'type' => 'mwscript',
 			'script' => "$IP/extensions/MirahezeMagic/maintenance/swiftDump.php",
