@@ -1203,6 +1203,9 @@ $wgConf->settings += [
 			'virtual-incidentreporting' => [
 				'db' => $wi->getIncidentsDatabase(),
 			],
+			'virtual-LoginNotify' => [
+				'db' => $wi->getGlobalDatabase(),
+			],
 			'virtual-matomoanalytics' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
