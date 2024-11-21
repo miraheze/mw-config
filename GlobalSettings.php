@@ -318,7 +318,7 @@ $wgDataDump = [
 		'file_ending' => '.tar.gz',
 		'useBackendTempStore' => true,
 		'logFailedExitCodeComments' => [
-			75 => 'Dump to large, please request a member of the Technology team to create this dump',
+			75 => 'The dump is too large. Please contact a member of the Technology team to assist with creating this dump.',
 		],
 		'generate' => [
 			'type' => 'mwscript',
