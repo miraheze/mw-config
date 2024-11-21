@@ -114,7 +114,9 @@ $wgConf->settings += [
 
 	// 'pagelinks' table migration
 	'wgPageLinksSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+		'default' => $wi->version >= 1.43 ?
+			SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW :
+			SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD
 	],
 
 	// 3D
