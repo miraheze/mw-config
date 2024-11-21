@@ -3029,7 +3029,7 @@ $wgConf->settings += [
 	],
 	'wgLoginNotifySeenBucketSize' => [
 		'default' => 8 * 86400,
-	]
+	],
 	'wgLoginNotifySeenExpiry' => [
 		'default' => 80 * 86400,
 	],
