@@ -1222,11 +1222,17 @@ $wgConf->settings += [
 			],
 		],
 		'ldapwikiwiki' => [
+			'virtual-LoginNotify' => [
+				'db' => 'ldapwikiwiki',
+			],
 			'virtual-oathauth' => [
 				'db' => 'ldapwikiwiki',
 			],
 		],
 		'srewiki' => [
+			'virtual-LoginNotify' => [
+				'db' => 'ldapwikiwiki',
+			],
 			'virtual-oathauth' => [
 				'db' => 'ldapwikiwiki',
 			],
