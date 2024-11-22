@@ -5137,6 +5137,9 @@ $wgConf->settings += [
 		'+gengbaikewiki' => [
 			'bureaucrat',
 		],
+		'+googlewiki' => [
+			'editbureauratprotected',
+		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -5300,6 +5303,9 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 			'editwikistaffprotected',
+		],
+		'googlewiki' => [
+			'editbureaucratprotected',
 		],
 		'knightnwiki' => [
 			'editextendedsemiprotected',
