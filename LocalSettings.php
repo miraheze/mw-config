@@ -4417,6 +4417,9 @@ $wgConf->settings += [
 			'suppress',
 			'steward',
 		],
+		'+cafewiki' => [
+			'sysop',
+		],
 		'+ldapwikiwiki' => [
 			'user',
 		],
