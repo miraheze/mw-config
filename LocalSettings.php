@@ -1904,10 +1904,6 @@ $wgConf->settings += [
 			'bomb hoax',
 		],
 	],
-	'wgMirahezeSurveyEnabled' => [
-		'default' => false,
-		'staffwiki' => true,
-	],
 	'wgEnableImageWhitelist' => [
 		'default' => false,
 	],
