@@ -2077,6 +2077,7 @@ $wgConf->settings += [
 		'intercriaturaswiki' => 'intercriaturaswiki',
 		'tuscriaturaswiki' => 'intercriaturaswiki',
 		'yourcreatureswiki' => 'intercriaturaswiki',
+		'beta' => false,
 	],
 	'wgGlobalUsageSharedRepoWiki' => [
 		'default' => false,
