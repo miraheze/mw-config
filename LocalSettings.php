@@ -6887,6 +6887,7 @@ $wgConf->settings += [
 			'formatnum' => false,
 			'FSFileBackend' => false,
 			'gitinfo' => false,
+			'GlobalNewFiles' => 'info',
 			'GlobalTitleFail' => false,
 			'GlobalWatchlist' => false,
 			'headers-sent' => false,
