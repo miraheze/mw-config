@@ -1835,6 +1835,9 @@ $wgConf->settings += [
 	'wgEnableUploads' => [
 		'default' => true,
 	],
+	'wgEnableAsyncUploads' => [
+		'default' => true,
+	],
 	'wgMaxUploadSize' => [
 		'default' => 1024 * 1024 * 4096,
 		/** T9673 - 10MB */
