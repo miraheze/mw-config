@@ -717,6 +717,7 @@ switch ( $wi->dbname ) {
 			'General' => 800000,
 			'General of the Army' => 1000000,
 		);
+		break;
 	case 'tuscriaturaswiki':
 		$wgHooks['AfterFinalPageOutput'][] = 'onAfterFinalPageOutput';
 
