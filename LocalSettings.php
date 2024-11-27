@@ -1920,7 +1920,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgSVGMetadataCutoff' => [
-		'default' => 262144,
+		'default' => 5242880,
 	],
 	'wgSVGConverter' => [
 		'default' => 'rsvg',
