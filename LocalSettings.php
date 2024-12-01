@@ -689,9 +689,6 @@ $wgConf->settings += [
 	'wgCookieSameSite' => [
 		'default' => 'None',
 	],
-	'wgUseSameSiteLegacyCookies' => [
-		'default' => true,
-	],
 	'wgCookieSetOnAutoblock' => [
 		'default' => true,
 	],
