@@ -2918,6 +2918,9 @@ $wgConf->settings += [
 			[ 'newtablinks', 'wikiwalk' ],
 			'_self' => [ 'sametablinks' ]
 		],
+		'randrwiki' => [
+			'_blank' => [ '' ]
+		],
 		'scruffwiki' => [
 			'_blank' => [ '' ]
 		],
