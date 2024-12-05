@@ -697,13 +697,13 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'testwikibeta':
-		$wgUserLevels = array(
+		$wgUserLevels = [
 			'Recruit' => 0,
 			'Apprentice' => 1200,
 			'Private' => 1750,
 			'Corporal' => 2500,
 			'Sergeant' => 5000,
-			'Gunnery Sergeant' =>10000,
+			'Gunnery Sergeant' => 10000,
 			'Lieutenant' => 20000,
 			'Captain' => 35000,
 			'Major' => 50000,
@@ -716,7 +716,7 @@ switch ( $wi->dbname ) {
 			'Lieutenant General' => 650000,
 			'General' => 800000,
 			'General of the Army' => 1000000,
-		);
+		];
 		break;
 	case 'tuscriaturaswiki':
 		$wgHooks['AfterFinalPageOutput'][] = 'onAfterFinalPageOutput';
