@@ -28,6 +28,11 @@ $wgObjectCaches['mcrouter'] = [
 	'allow_tcp_nagle_delay' => false,
 ];
 
+$wgObjectCaches['mcrouter-primary-dc'] = array_merge(
+	$wgObjectCaches['mcrouter'],
+	[ 'routingPrefix' => "/wikitide/mw/" ]
+);
+
 $wgMirahezeMagicMemcachedServers = [
 	[ '10.0.15.113', 11211 ],
 	[ '10.0.16.131', 11211 ],
@@ -75,7 +80,7 @@ $wgObjectCaches['db-mainstash'] = [
 
 $wgMainStash = 'db-mainstash';
 
-$wgMicroStashType = 'mcrouter';
+$wgMicroStashType = 'mcrouter-primary-dc';
 
 $wgObjectCaches['redis-session'] = [
 	'class' => RedisBagOStuff::class,
