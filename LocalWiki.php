@@ -192,6 +192,11 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'gui7814sgtafanonwiki':
+	    $wgDplSettings['maxCategoryCount'] = 1000;
+	    $wgDplSettings['maxResultCount'] = 1000;
+
+	    break;
 	case 'hommwiki':
 		// T12565: This is a workaround for an upstream bug, please remove when the bug fix is merged
 		$wgEnabledAudioTranscodeSet = [];
