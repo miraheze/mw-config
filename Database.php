@@ -96,10 +96,13 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 	];
 }
 
+$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitor';
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
 if ( PHP_SAPI === 'cli' ) {
-	$wgLBFactoryConf['loadMonitorClass'] = \Wikimedia\Rdbms\LoadMonitorNull::class;
+	$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
 }
+
+$wgLBFactoryConf['loadMonitor']['maxConnCount'] = 350;
 
 // Disallow web request database transactions that are slower than 10 seconds
 $wgMaxUserDBWriteDuration = 10;
