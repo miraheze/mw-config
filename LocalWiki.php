@@ -364,7 +364,7 @@ switch ( $wi->dbname ) {
 			],
 			'licensing' => [
 				'defaultType' => 'thirdParty',
-				'ownWorkDefault' => 'choices',
+				'ownWorkDefault' => 'choice',
 				'ownWork' => [
 					'type' => 'or',
 					'template' => 'self',
