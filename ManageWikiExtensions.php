@@ -874,6 +874,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'robloxapi' => [
+		'name' => 'RobloxAPI',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Extension:RobloxAPI',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'rss' => [
 		'name' => 'RSS feed',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RSS',
