@@ -1168,6 +1168,7 @@ $wgConf->settings += [
 	],
 	'wgReadOnly' => [
 		'default' => false,
+		'testwiki' => 'Security reasons. Will be restored soon.', 
 	],
 	'wgSharedDB' => [
 		'default' => null,
