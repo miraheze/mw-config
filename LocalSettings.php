@@ -1727,7 +1727,7 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/commonswiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
-				]
+				],
 			],
 		],
 		'cafewiki' => [
