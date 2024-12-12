@@ -1829,7 +1829,30 @@ $wgConf->settings += [
 					'alt' => 'Hosted by Miraheze',
 				]
 			]
-		]
+		],
+		'utgwiki' => [
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
