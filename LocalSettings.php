@@ -1716,6 +1716,20 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'aceistanwiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://upload.wikimedia.org/wikipedia/commons/a/aa/MediaWiki-2020-logo-horizontal.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/commonswiki/1/1c/Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				]
+			],
+		],
 		'cafewiki' => [
 			'poweredby' => [
 				'mediawiki' => [
