@@ -3980,8 +3980,6 @@ $wgConf->settings += [
 				353865,
 				/** Universal Omega (Technology team and Board) */
 				438966,
-				/** Alex (Miraheze) — OrangeStar (Technology team) */
-				464360,
 				/** Agent Isai (Technology team) */
 				512002,
 			],
@@ -4010,8 +4008,6 @@ $wgConf->settings += [
 				353865,
 				/** Universal Omega (Technology team and Board) */
 				438966,
-				/** Alex (Miraheze) — OrangeStar (Technology team) */
-				464360,
 				/** Agent Isai (Technology team) */
 				512002,
 			],
