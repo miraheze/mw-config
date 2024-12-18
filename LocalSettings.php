@@ -2,6 +2,8 @@
 
 /** LocalSettings.php for Miraheze. */
 
+use MediaWiki\Settings\Source\PhpSettingsSource;
+
 // Don't allow web access.
 if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
@@ -7060,7 +7062,9 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
-$wi->loadExtensions();
+// $wi->loadExtensions();
+
+$wgSettings->load( new PhpSettingsSource( '/srv/mediawiki/cache/' . $wi->dbname . '.php' ) );
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
 require_once __DIR__ . '/ManageWikiSettings.php';
