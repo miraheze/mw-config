@@ -1719,14 +1719,21 @@ $wgConf->settings += [
 		'aceistanwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://upload.wikimedia.org/wikipedia/commons/a/aa/MediaWiki-2020-logo-horizontal.svg',
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/commonswiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg',
+					'url' => 'https://www.gnu.org/licenses/gpl-3.0-standalone.html',
+					'alt' => 'GPLv3',
 				],
 			],
 		],
