@@ -4348,18 +4348,12 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// MultiPurge
+	// MultiPurge (TODO: Remove extension)
 	'wgMultiPurgeEnabledServices' => [
-		'default' => [
-			'Cloudflare',
-			// 'Varnish',
-		],
+		'default' => null
 	],
 	'wgMultiPurgeServiceOrder' => [
-		'default' => [
-			// 'Varnish',
-			'Cloudflare',
-		],
+		'default' => null
 	],
 
 	// MultimediaViewer (not beta)

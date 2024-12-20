@@ -5,8 +5,7 @@ $wgMemCachedPersistent = false;
 
 $beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 
-// Retain $wgCdnServers for wikis not using cloudflare (wikitide.org domain or custom domains)
-if ( !$beta && !preg_match( '/^(.*)\.miraheze\.org$/', $wi->server ) ) {
+if ( !$beta ) {
 	$wgCdnServers = [
 		/** cp36 */
 		'[2602:294:0:b13::110]:81',
