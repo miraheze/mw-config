@@ -112,6 +112,11 @@ $wgConf->settings += [
 		'+metawiki' => [ 'steward', 'techteam' ],
 	],
 
+	'wgParserEnableUserLanguage' => [
+		'default' => false,
+		'utgwiki' => true,
+	],
+
 	// 'pagelinks' table migration
 	'wgPageLinksSchemaMigrationStage' => [
 		'default' => SCHEMA_COMPAT_NEW,
