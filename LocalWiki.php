@@ -315,7 +315,7 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
-	case 'lhmnwiki': // thiết lập Wiki Lớp Học Mật Ngữ (lophocmatngu.wiki)
+	case 'lhmnwiki':
 		// UploadWizard
 		$wgUploadWizardConfig = [
 			'tutorial' => [
@@ -434,7 +434,7 @@ switch ( $wi->dbname ) {
 		}
 		
 		// ContactForm
-		$wgContactConfig['default'] = [ // Biểu mẫu mặc định
+		$wgContactConfig['default'] = [
 			'RecipientEmail' => 'hotro@lophocmatngu.wiki',
 			'SenderName' => 'Liên hệ từ WLHMN',
 			'RequireDetails' => true,
@@ -455,7 +455,7 @@ switch ( $wi->dbname ) {
 			'FieldsMergeStrategy' => null
 		];
 
-		$wgContactConfig['banquyen'] = [ // Biểu mẫu yêu cầu gỡ bỏ
+		$wgContactConfig['banquyen'] = [
 			'RecipientEmail' => 'banquyen@lophocmatngu.wiki',
 			'SenderName' => 'Xử lý bản quyền WLHMN',
 			'RequireDetails' => true,
@@ -464,8 +464,8 @@ switch ( $wi->dbname ) {
 			'SubjectReadonly' => true,
 			'UseCustomBlockMessage' => false,
 			'Redirect' => null,
-			'RLModules' => [], // Resource loader modules to add to the form display page.
-			'RLStyleModules' => [], // Resource loader CSS modules to add to the form display page.
+			'RLModules' => [],
+			'RLStyleModules' => [],
 			'AdditionalFields' => [
 				'DiaChi' => [
 					'class' => 'HTMLTextField',
@@ -540,17 +540,17 @@ switch ( $wi->dbname ) {
 			
 		$wgHooks['SkinAddFooterLinks'][] = function( Skin $skin, string $key, array &$footerlinks ) {
 			if ( $key === 'places' ) {
-				$footerlinks['contact'] = Html::element( 'a',
+				$footerlinks['lienhe'] = Html::element( 'a',
 					[
-						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ',  // URL to "Special:Contact"
-						'rel' => 'noreferrer noopener'  // not required, but recommended for security reasons
+						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ',
+						'rel' => 'noreferrer noopener'
 					],
 				$skin->msg( 'contactpage-label' )->text()
 				);
-				$footerlinks['copyright'] = Html::element( 'a',
+				$footerlinks['banquyen'] = Html::element( 'a',
 					[
-						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',  // URL to "Special:Contact"
-						'rel' => 'noreferrer noopener'  // not required, but recommended for security reasons
+						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
+						'rel' => 'noreferrer noopener'
 					],
 				$skin->msg( 'crpage-label' )->text()
 				);
