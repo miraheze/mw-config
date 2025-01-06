@@ -1220,8 +1220,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'moderation' => "$IP/extensions/Moderation/sql/patch-moderation.sql",
-				'moderation_block' => "$IP/extensions/Moderation/sql/patch-moderation_block.sql"
+				'moderation' => "$IP/extensions/Moderation/sql/mysql/tables-generated.sql",
+				'moderation_block' => "$IP/extensions/Moderation/sql/mysql/tables-generated.sql"
 			],
 			'permissions' => [
 				'automoderated' => [
