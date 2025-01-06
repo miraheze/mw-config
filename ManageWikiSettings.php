@@ -2700,7 +2700,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'seo',
-		'help' => 'Enable if WikiSEO should overwrite the iamge set by extension PageImages.',
+		'help' => 'Enable if WikiSEO should overwrite the image set by extension PageImages.',
 		'requires' => [
 			'extensions' => [
 				'pageimages',
