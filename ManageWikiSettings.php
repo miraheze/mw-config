@@ -361,6 +361,15 @@ $wgManageWikiSettings = [
 		'help' => 'This option controls whether or not feeds will be linked to in the sidebar',
 		'requires' => [],
 	],
+	'wgExportAllowListContributors' => [
+		'name' => 'Allow exporting contributor list on Special:Export',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'Whether or not to allow exporting a list of contributors to exported pages on Special:Export',
+		'requires' => [],
+	],
 	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
 		'name' => 'Should feeds honor the user\'s preferred language?',
 		'from' => 'featuredfeeds',
