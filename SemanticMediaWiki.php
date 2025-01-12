@@ -17,6 +17,8 @@
  */
 $smwgIgnoreUpgradeKeyCheck = true;
 
+$smwgConfigFileDir = '/srv/mediawiki/';
+
 $smwgNamespacesWithSemanticLinks = [
 	NS_MAIN => true,
 	NS_TALK => false,
