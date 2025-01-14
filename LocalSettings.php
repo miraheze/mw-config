@@ -2653,6 +2653,10 @@ $wgConf->settings += [
 		'default' => 1000
 	],
 
+	'wgExportAllowListContributors' => [
+		'default' => false,
+	],
+
 	'wgIgnoreImageErrors' => [
 		'default' => true
 	],
