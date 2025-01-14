@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /** LocalSettings.php for Miraheze. */
 
