@@ -804,6 +804,14 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Create Page
+	'wgCreatePageEditExisting' => [
+		'default' => false,
+	],
+	'wgCreatePageUseVisualEditor' => [
+		'default' => false,
+	],
+
 	// CreatePageUw
 	'wgCreatePageUwUseVE' => [
 		'default' => false,
