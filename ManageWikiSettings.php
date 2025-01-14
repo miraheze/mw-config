@@ -3885,6 +3885,20 @@ $wgManageWikiSettings = [
 		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.',
 		'requires' => [],
 	],
+	'wgThemeToggleSwitcherStyle' => [
+		'name' => 'Switcher style for ThemeToggle',
+		'from' => 'themetoggle',
+		'type' => 'list',
+		'options' => [
+			'auto' => 'auto',
+			'simple' => 'simple',
+			'dropdown' => 'dropdown',
+		],
+		'overridedefault' => 'auto',
+		'section' => 'styling',
+		'help' => 'Controls which theme switcher module is used. If auto, uses simple when there is two or less themes, and dropdown otherwise.',
+		'requires' => [],
+	],
 	'wgTweekiSkinUseBootstrap4' => [
 		'name' => 'Use Bootstrap 4 for Tweeki',
 		'from' => 'tweeki',
