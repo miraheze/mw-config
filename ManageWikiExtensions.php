@@ -3247,6 +3247,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'themetoggle' => [
+		'name' => 'ThemeToggle',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Extension:ThemeToggle',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'thanks' => [
 		'name' => 'Thanks',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Thanks',
