@@ -3248,7 +3248,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'themetoggle' => [
-		'name' => 'ThemeToggle',
+		'name' => 'Theme Toggle',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Extension:ThemeToggle',
 		'conflicts' => false,
 		'requires' => [],
