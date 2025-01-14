@@ -1352,6 +1352,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
+	'editcountneue' => [
+		'name' => 'EditCountNeue',
+		'displayname' => 'EditCountNeue',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditCountNeue',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
 	'featuredfeeds' => [
 		'name' => 'FeaturedFeeds',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FeaturedFeeds',
