@@ -2099,6 +2099,13 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'breadcrumbs2' => [
+		'name' => 'BreadCrumbs2',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:BreadCrumbs2',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'capiunto' => [
 		'name' => 'Capiunto',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Capiunto',
