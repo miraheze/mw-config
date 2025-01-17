@@ -10,34 +10,6 @@ use MediaWiki\User\User;
 
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
-	case 'acuralegendwiki':
-		/* The following code block is a [modification] of [Extension:IndentSections]
-		 * and is licensed under the [MIT License].
-		 *
-		 * [modification]: https://issue-tracker.miraheze.org/T12969
-		 * [Extension:IndentSections]: https://www.mediawiki.org/wiki/Extension:IndentSections
-		 * [MIT License]: https://opensource.org/licenses/mit-license.php
-		 */
-		$wgHooks['BeforePageDisplay'][] = 'fnIndentSectionsBeforePageDisplay';
-
-		function fnIndentSectionsBeforePageDisplay( $out, $skin ) {
-			$text = $out->getHTML();
-
-			for ( $i = 6; $i >= 1; $i -= 1 ) {
-				$pattern = sprintf( '/(<h%d>\s*?<span class="(?:editsection|mw-headline)".+?<\/h%d>)(.*?)(?=(<h[1-%d]>|\Z))/ms', $i, $i, $i );
-				//$pattern = sprintf( '/(<a[^>]+><\/a><h%d>\s*?<span class="(?:editsection|mw-headline)">.*?<\/h%d>)(.*?)(?=(<a[^>]+><\/a><h[1-%d]>|\Z))/ms', $i, $i, $i );
-				$text2 = preg_replace( $pattern, '$1<blockquote style="margin:0px 0px 0px 1.5em">$2</blockquote>', $text );
-				if ( $text2 !== null ) {
-					$text = $text2;
-				}
-			}
-
-			$out->clearHTML();
-			$out->addHTML( $text );
-			return true;
-		}
-
-		break;
 	case 'aieseattlewiki':
 		$wgUploadWizardConfig = [
 			'campaignExpensiveStatsEnabled' => false,
