@@ -4030,8 +4030,6 @@ $wgConf->settings += [
 				13554,
 				/** Harej (Board) */
 				13892,
-				/** Evalprime (Technology team) */
-				342246,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
@@ -4058,8 +4056,6 @@ $wgConf->settings += [
 				13554,
 				/** Harej (Board) */
 				13892,
-				/** Evalprime (Technology team) */
-				342246,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
