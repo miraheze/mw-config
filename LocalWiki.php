@@ -25,7 +25,7 @@ switch ( $wi->dbname ) {
 
 			for ( $i = 6; $i >= 1; $i -= 1 ) {
 				$pattern = sprintf( '/(<h%d>\s*?<span class="(?:editsection|mw-headline)".+?<\/h%d>)(.*?)(?=(<h[1-%d]>|\Z))/ms', $i, $i, $i );
-				//$pattern = sprintf( '/(<a[^>]+><\/a><h%d>\s*?<span class="(?:editsection|mw-headline)">.*?<\/h%d>)(.*?)(?=(<a[^>]+><\/a><h[1-%d]>|\Z))/ms', $i, $i, $i );
+				// $pattern = sprintf( '/(<a[^>]+><\/a><h%d>\s*?<span class="(?:editsection|mw-headline)">.*?<\/h%d>)(.*?)(?=(<a[^>]+><\/a><h[1-%d]>|\Z))/ms', $i, $i, $i );
 				$text2 = preg_replace( $pattern, '$1<blockquote style="margin:0px 0px 0px 1.5em">$2</blockquote>', $text );
 				if ( $text2 !== null ) {
 					$text = $text2;

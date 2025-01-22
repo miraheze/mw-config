@@ -762,6 +762,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'numberheadings' => [
+		'name' => 'NumberHeadings',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NumberHeadings',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'opengraphmeta' => [
 		'name' => 'OpenGraphMeta',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OpenGraphMeta',
