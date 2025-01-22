@@ -700,6 +700,10 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'roguetown2ewiki':
+		$wgMinervaNightMode['base'] = true;
+
+		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
 	case 'sagan4alphawiki':
