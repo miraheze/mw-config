@@ -1750,7 +1750,7 @@ $wgConf->settings += [
 				],
 			],
 		],
-	        'jbcstudioswiki' => [
+			'jbcstudioswiki' => [
 			'poweredby' => [
 				'mediawiki' => [
 					'src' => 'https://static.wikitide.net/jbcstudioswiki/f/f7/Poweredbymediawiki_badge.svg',
