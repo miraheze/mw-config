@@ -49,8 +49,8 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		</table>
 	EOF;
 }
-// }
 
+// }
 
 // Specific wiki SiteNotice
 /* if ( $wi->isExtensionActive( 'Graph' ) ) {
