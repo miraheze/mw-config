@@ -7,16 +7,15 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 89;
+$wgMajorSiteNoticeID = 90;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
  * or Google will use the sitenotice for their search result snippet.
  */
 
-/*
 // Global SiteNotice
-if ( !$wmgSiteNoticeOptOut ) {
+// if ( !$wmgSiteNoticeOptOut ) {
 $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -38,20 +37,20 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 						Miraheze will be upgrading to MediaWiki 1.43 on Monday, 27 January, 2025 from 18:00 (UTC) to 19:00 (UTC). We do not expect any downtime but for peace of mind, we suggest saving your last edits 5 minutes before the start of the maintenance period.
 					</div>
 
-					<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+					<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
 						<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/MediaWiki/1.43">
 							<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
 							<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 							<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 						</a>
-					</span> -->
+					</span>
 				</div>
 			</td></tr></tbody>
 		</table>
 	EOF;
 }
-}
 
+// }
 
 // Specific wiki SiteNotice
 /* if ( $wi->isExtensionActive( 'Graph' ) ) {
