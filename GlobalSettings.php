@@ -160,6 +160,16 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
 }
 
+/**
+ * Increase the time that entries are kept in the stash when Moderation is enabled
+ * so that they are not evicted before cleanupUploadStash.php is run and they have not been
+ * approved. See T13115 for more details
+ */
+if ( $wi->isExtensionActive( 'Moderation' ) ) {
+	// 2 weeks should be sufficient time
+	$wgUploadStash = 2 * 7 * 24 * 3600; 
+}
+
 // Article paths
 $articlePath = str_replace( '$1', '', $wgArticlePath );
 
