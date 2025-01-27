@@ -167,7 +167,7 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
  */
 if ( $wi->isExtensionActive( 'Moderation' ) ) {
 	// 2 weeks should be sufficient time
-	$wgUploadStashMaxAge = 2 * 7 * 24 * 3600; 
+	$wgUploadStashMaxAge = 2 * 7 * 24 * 3600;
 }
 
 // Article paths
