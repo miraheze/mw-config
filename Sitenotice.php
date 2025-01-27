@@ -31,10 +31,10 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 					<div style="float: left;"><img alt="MediaWiki upgrade" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/OOjs_UI_icon_newWindow-ltr.svg" decoding="async" width="40" height="40"></div>
 					<div style="font-weight: bold; color: black;">
-						MediaWiki upgrade on Monday, 27 January
+						MediaWiki upgrade in progress...
 					</div>
 					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-						Miraheze will be upgrading to MediaWiki 1.43 on Monday, 27 January, 2025 from 18:00 (UTC) to 19:00 (UTC). We do not expect any downtime but for peace of mind, we suggest saving your last edits 5 minutes before the start of the maintenance period.
+						Miraheze is currently upgrading to MediaWiki 1.43. The upgrade is expected to end by 7PM UTC. During this time, you may notice some occasional errors.
 					</div>
 
 					<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
