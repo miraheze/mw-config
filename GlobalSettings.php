@@ -162,12 +162,12 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 
 /**
  * Increase the time that entries are kept in the stash when Moderation is enabled
- * so that they are not evicted before cleanupUploadStash.php is run and they have not been
- * approved. See T13115 for more details
+ * so that they are not deleted by cleanupUploadStash.php before they have
+ * a chance to be approved. See T13115 for more details
  */
 if ( $wi->isExtensionActive( 'Moderation' ) ) {
 	// 2 weeks should be sufficient time
-	$wgUploadStash = 2 * 7 * 24 * 3600; 
+	$wgUploadStashMaxAge = 2 * 7 * 24 * 3600; 
 }
 
 // Article paths
