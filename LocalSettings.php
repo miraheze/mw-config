@@ -1710,15 +1710,6 @@ $wgConf->settings += [
 		'default' => [
 			'poweredby' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/commonswiki/f/ff/Powered_by_Miraheze.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
-					'alt' => 'Hosted by Miraheze',
-				],
-			],
-		],
-		'beta' => [
-			'poweredby' => [
-				'miraheze' => [
 					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
