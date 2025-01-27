@@ -31,10 +31,10 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 					<div style="float: left;"><img alt="MediaWiki upgrade" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/OOjs_UI_icon_newWindow-ltr.svg" decoding="async" width="40" height="40"></div>
 					<div style="font-weight: bold; color: black;">
-						MediaWiki upgrade in progress...
+						MediaWiki upgrade completed
 					</div>
 					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-						Miraheze is currently upgrading to MediaWiki 1.43. The upgrade is expected to end by 7PM UTC. During this time, you may notice some occasional errors.
+						Miraheze has upgraded to MediaWiki 1.43! Please report any issues you encounter on <a href="https://meta.miraheze.org/wiki/Discord">Discord</a> or <a href="https://meta.miraheze.org/wiki/Phorge">Phorge</a>.
 					</div>
 
 					<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
