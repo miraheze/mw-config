@@ -702,6 +702,8 @@ switch ( $wi->dbname ) {
 		break;
 	case 'roguetown2ewiki':
 		$wgMinervaNightMode['base'] = true;
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
 
 		break;
 	case 'sagan4wiki':
