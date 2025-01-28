@@ -56,7 +56,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 						File Uploads Broken
 					</div>
 					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-						We are aware of an issue that is currently preventing file uploads. Our team is investigating, and will get uploads restored as soon as possible.
+						We are aware of an issue that is currently preventing file uploads. Our team is investigating, and will get uploads restored as soon as possible. We also have had reports of existing images being broken for private wikis. This may also start happening on public wikis as the cache expires.
 					</div>
 				</div>
 			</td></tr></tbody>
