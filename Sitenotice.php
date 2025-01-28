@@ -47,6 +47,20 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 				</div>
 			</td></tr></tbody>
 		</table>
+
+		<table style="width: 100%;">
+			<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
+					<div style="float: left;"><img alt="MediaWiki upgrade" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/OOjs_UI_icon_notice.svg" decoding="async" width="40" height="40"></div>
+					<div style="font-weight: bold; color: black;">
+						File Uploads Broken
+					</div>
+					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
+						We are aware of an issue that is currently preventing file uploads. Our team is investigating, and will get uploads restored as soon as possible.
+					</div>
+				</div>
+			</td></tr></tbody>
+		</table>
 	EOF;
 }
 
