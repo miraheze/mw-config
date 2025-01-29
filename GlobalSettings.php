@@ -537,7 +537,6 @@ $wgApexLogo = [
 ];
 
 if ( $wgIcon ) {
-	// This is the fallback for
 	$wgLogos['icon'] = $wgIcon;
 } else {
 	$wgTimelessLogo = $wgLogo;
