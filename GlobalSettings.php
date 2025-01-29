@@ -538,6 +538,8 @@ $wgApexLogo = [
 
 if ( $wgIcon ) {
 	$wgLogos['icon'] = $wgIcon;
+} else {
+	$wgLogos['icon'] = $wgLogo;
 }
 
 if ( $wgWordmark ) {
