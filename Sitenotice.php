@@ -16,7 +16,7 @@ $wgMajorSiteNoticeID = 90;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -48,7 +48,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</td></tr></tbody>
 		</table>
 	EOF;
-}
+} */
 
 // }
 
