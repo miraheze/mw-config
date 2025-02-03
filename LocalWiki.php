@@ -130,6 +130,10 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'fischwiki':
+		$wgLogRestrictions['newusers'] = 'read';
+
+		break;
 	case 'furrnationswiki':
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
