@@ -4120,6 +4120,9 @@ $wgConf->settings += [
 			'RFC' => true,
 		],
 	],
+	'wgEnableProtectionIndicators' => [
+		'default' => false
+	]
 	'wgActiveUserDays' => [
 		'default' => 30,
 	],
@@ -4838,6 +4841,9 @@ $wgConf->settings += [
 	],
 	'wgPortableInfoboxCacheRenderers' => [
 		'default' => true,
+	],
+	'wgPortableInfoboxCustomImageWidth' => [
+		'default' => 300,
 	],
 
 	// Preferences
