@@ -6883,7 +6883,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgWikiSeoTryCleanAutoDescription' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgMetadataGenerators' => [
 		'default' => [
