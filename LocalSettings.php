@@ -5251,7 +5251,7 @@ $wgConf->settings += [
 			'bureaucrat',
 		],
 		'+googlewiki' => [
-			'editbureauratprotected',
+			'editbureaucratprotected',
 		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
