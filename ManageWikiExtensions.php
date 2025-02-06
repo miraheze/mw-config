@@ -3290,7 +3290,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'titlekey' => "$IP/extensions/TitleKey/sql/titlekey.sql"
+				'titlekey' => "$IP/extensions/TitleKey/db_patches/tables-generated.sql"
 			],
 			'mwscript' => [
 				"$IP/extensions/TitleKey/maintenance/rebuildTitleKeys.php" => []
