@@ -2972,6 +2972,7 @@ $wgConf->settings += [
 	],
 	'wgRightsText' => [
 		'animalroyalewiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
+		'animalroyalezhwiki' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
 		'connorjwatwiki' => 'Creative Commons Attribution-ShareAlike 2.5 Generic (CC BY-SA 2.5)',
 		'constantnoblewiki' => 'CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
 		'exlinkwikiwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -2997,7 +2998,8 @@ $wgConf->settings += [
 	],
 	'wgRightsUrl' => [
 		'default' => '',
-		'animalroyale' => 'https://creativecommons.org/licenses/by-nc-sa/3.0',
+		'animalroyalewiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0',
+		'animalroyalezhwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0',
 		'connorjwatwiki' => 'https://creativecommons.org/licenses/by-sa/2.5',
 		'constantnoblewiki' => 'https://creativecommons.org/publicdomain/zero/1.0/',
 		'exlinkwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
