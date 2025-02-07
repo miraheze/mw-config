@@ -4983,10 +4983,10 @@ $wgConf->settings += [
 			'usecodemirror' => 1,
 		],
 		'+ssbuniversewiki' => [
-		    'rcenhancedfilters-disable' => 1,
-		    'wlenhancedfilters-disable' => 1,
-		    'usenewrc' => 0,
-		    'thumbsize' => 3,
+			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+			'thumbsize' => 3,
 		],
 		'+squareenixwiki' => [
 			'rcenhancedfilters-disable' => 1,
