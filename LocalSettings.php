@@ -119,7 +119,7 @@ $wgConf->settings += [
 
 	// 'pagelinks' table migration
 	'wgPageLinksSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_NEW,
+		'default' => SCHEMA_COMPAT_WRITE_NEW | SCHEMA_COMPAT_READ_NEW,
 	],
 
 	// 3D
