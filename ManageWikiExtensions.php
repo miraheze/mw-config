@@ -468,8 +468,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/DynamicPageList3/maintenance/createTemplate.php" => [],
-				"$IP/extensions/DynamicPageList3/maintenance/createView.php" => [],
+				"$IP/extensions/DynamicPageList3/maintenance/CreateTemplate.php" => [],
+				"$IP/extensions/DynamicPageList3/maintenance/CreateView.php" => [],
 			],
 		],
 		'section' => 'parserhooks',
