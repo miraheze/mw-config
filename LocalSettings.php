@@ -3032,6 +3032,7 @@ $wgConf->settings += [
 		'default' => [],
 		'cloudstreamwiki' => [ 'cloudstreamrepo://' ],
 		'downgradegameswiki' => [ 'steam://' ],
+		'cafewiki' => ['roblox://'],
 		// file protocol only allowed on private wikis
 		'gzewiki' => [ 'file://' ],
 		'rainversewiki' => [ 'gemini://' ],
