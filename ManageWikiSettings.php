@@ -3429,6 +3429,17 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+    'wgPortableInfoboxCustomImageWidth' => [
+		'name' => 'PortableInfobox Custom Image Width (px)',
+		'from' => 'portableinfobox',
+		'type' => 'integer',
+        'minint' => 0,
+		'maxint' => 3000,
+        'overridedefault' => 300,
+		'section' => 'styling',
+		'help' => 'Size (in px) of image thumbnails used in infoboxes.',
+		'requires' => [],
+	],
 	'wgEvelutionLeftPersonalLinks' => [
 		'name' => 'Evelution Left Personal Links',
 		'from' => 'evelution',
@@ -4008,6 +4019,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => "50%",
 		'section' => 'styling',
 		'help' => 'The border-radius applied to the UserProfileV2 avatar.',
+		'requires' => [],
+	],
+    'wgEnableProtectionIndicators' => [
+		'name' => 'Enable Core Protection Indicators',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Whether to show indicators on a page when it is protected.',
 		'requires' => [],
 	],
 

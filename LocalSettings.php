@@ -4871,6 +4871,9 @@ $wgConf->settings += [
 	'wgPortableInfoboxCacheRenderers' => [
 		'default' => true,
 	],
+    'wgPortableInfoboxCustomImageWidth' => [
+		'default' => 300,
+	],
 
 	// Preferences
 	'+wgDefaultUserOptions' => [
@@ -5902,6 +5905,9 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgTabberNeueParseTabName' => [
+		'default' => false,
+	],
+    'wgEnableProtectionIndicators' => [
 		'default' => false,
 	],
 
