@@ -3053,10 +3053,10 @@ $wgConf->settings += [
 		'default' => [],
 		'cloudstreamwiki' => [ 'cloudstreamrepo://' ],
 		'downgradegameswiki' => [ 'steam://' ],
-		'cafewiki' => ['roblox://'],
-		'urbanshadewiki' => ['roblox://'], 
-		'utgwiki' => ['roblox://'],
-		'farmwiki' => ['roblox://'],
+		'cafewiki' => [ 'roblox://' ],
+		'urbanshadewiki' => [ 'roblox://' ],
+		'utgwiki' => [ 'roblox://' ],
+		'farmwiki' => [ 'roblox://' ],
 		// file protocol only allowed on private wikis
 		'gzewiki' => [ 'file://' ],
 		'rainversewiki' => [ 'gemini://' ],
@@ -4871,7 +4871,7 @@ $wgConf->settings += [
 	'wgPortableInfoboxCacheRenderers' => [
 		'default' => true,
 	],
-    'wgPortableInfoboxCustomImageWidth' => [
+	'wgPortableInfoboxCustomImageWidth' => [
 		'default' => 300,
 	],
 
@@ -5011,10 +5011,10 @@ $wgConf->settings += [
 			'usecodemirror' => 1,
 		],
 		'+ssbuniversewiki' => [
-		    'rcenhancedfilters-disable' => 1,
-		    'wlenhancedfilters-disable' => 1,
-		    'usenewrc' => 0,
-		    'thumbsize' => 3,
+			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
+			'usenewrc' => 0,
+			'thumbsize' => 3,
 		],
 		'+squareenixwiki' => [
 			'rcenhancedfilters-disable' => 1,
@@ -5907,7 +5907,7 @@ $wgConf->settings += [
 	'wgTabberNeueParseTabName' => [
 		'default' => false,
 	],
-    'wgEnableProtectionIndicators' => [
+	'wgEnableProtectionIndicators' => [
 		'default' => false,
 	],
 

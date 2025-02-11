@@ -3429,13 +3429,13 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-    'wgPortableInfoboxCustomImageWidth' => [
+	'wgPortableInfoboxCustomImageWidth' => [
 		'name' => 'PortableInfobox Custom Image Width (px)',
 		'from' => 'portableinfobox',
 		'type' => 'integer',
-        'minint' => 0,
+		'minint' => 0,
 		'maxint' => 3000,
-        'overridedefault' => 300,
+		'overridedefault' => 300,
 		'section' => 'styling',
 		'help' => 'Size (in px) of image thumbnails used in infoboxes.',
 		'requires' => [],
@@ -4030,7 +4030,7 @@ $wgManageWikiSettings = [
 		'help' => 'The border-radius applied to the UserProfileV2 avatar.',
 		'requires' => [],
 	],
-    'wgEnableProtectionIndicators' => [
+	'wgEnableProtectionIndicators' => [
 		'name' => 'Enable Core Protection Indicators',
 		'from' => 'mediawiki',
 		'type' => 'check',
