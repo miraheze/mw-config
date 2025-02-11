@@ -3429,13 +3429,13 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-    'wgPortableInfoboxCustomImageWidth' => [
+	'wgPortableInfoboxCustomImageWidth' => [
 		'name' => 'PortableInfobox Custom Image Width (px)',
 		'from' => 'portableinfobox',
 		'type' => 'integer',
-        'minint' => 0,
+		'minint' => 0,
 		'maxint' => 3000,
-        'overridedefault' => 300,
+		'overridedefault' => 300,
 		'section' => 'styling',
 		'help' => 'Size (in px) of image thumbnails used in infoboxes.',
 		'requires' => [],
@@ -3546,6 +3546,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#FFBE00',
 		'section' => 'styling',
 		'help' => 'The Medik color scheme (navbar background, underlines etc.).',
+		'requires' => [],
+	],
+	'wgMedikMobileSitename' => [
+	'name' => 'Medik Mobile Sitename',
+		'from' => 'medik',
+		'type' => 'text',
+		'overridedefault' => 'null',
+		'section' => 'styling',
+		'help' => 'If your wikis name is longer than about 13 to 15 characters, you can define a shorter one only for the mobile screen. On desktop, $wgSitename will be displayed as usual.',
 		'requires' => [],
 	],
 	'wgMedikShowLogo' => [
@@ -4021,7 +4030,7 @@ $wgManageWikiSettings = [
 		'help' => 'The border-radius applied to the UserProfileV2 avatar.',
 		'requires' => [],
 	],
-    'wgEnableProtectionIndicators' => [
+	'wgEnableProtectionIndicators' => [
 		'name' => 'Enable Core Protection Indicators',
 		'from' => 'mediawiki',
 		'type' => 'check',
