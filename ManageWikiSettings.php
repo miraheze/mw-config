@@ -3548,6 +3548,15 @@ $wgManageWikiSettings = [
 		'help' => 'The Medik color scheme (navbar background, underlines etc.).',
 		'requires' => [],
 	],
+	'wgMedikMobileSitename' => [
+	'name' => 'Medik Mobile Sitename',
+		'from' => 'medik',
+		'type' => 'text',
+		'overridedefault' => 'null',
+		'section' => 'styling',
+		'help' => 'If your wikis name is longer than about 13 to 15 characters, you can define a shorter one only for the mobile screen. On desktop, $wgSitename will be displayed as usual.',
+		'requires' => [],
+	],
 	'wgMedikShowLogo' => [
 		'name' => 'Medik Show Logo',
 		'from' => 'medik',
