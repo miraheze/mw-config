@@ -166,13 +166,9 @@ $wgResourceLoaderUseObjectCacheForDeps = true;
 $wgCdnMatchParameterOrder = false;
 
 if ( $beta ) {
-	$redisServerIP = $beta ?
-		'10.0.15.118:6379' :
-		'10.0.17.120:6379';
-
 	$wgJobTypeConf['default'] = [
 		'class' => JobQueueRedis::class,
-		'redisServer' => $redisServerIP,
+		'redisServer' => '10.0.15.118:6379',
 		'redisConfig' => [
 			'connectTimeout' => 2,
 			'password' => $wmgRedisPassword,
@@ -180,8 +176,6 @@ if ( $beta ) {
 		],
 		'daemonized' => true,
 	];
-
-	unset( $redisServerIP );
 }
 
 if ( PHP_SAPI === 'cli' ) {
