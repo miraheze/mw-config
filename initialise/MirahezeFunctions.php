@@ -3,6 +3,8 @@
 use MediaWiki\Config\SiteConfiguration;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Registration\ExtensionProcessor;
+use MediaWiki\Registration\ExtensionRegistry;
 use Miraheze\CreateWiki\Services\RemoteWikiFactory;
 use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
 use Wikimedia\Rdbms\IDatabase;
