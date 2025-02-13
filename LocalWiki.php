@@ -475,7 +475,7 @@ switch ( $wi->dbname ) {
 				'Cao học' => 1000000
 			];
 		}
-		
+
 		// ContactForm
 		$wgContactConfig['default'] = [
 			'RecipientEmail' => 'hotro@lophocmatngu.wiki',
@@ -541,7 +541,7 @@ switch ( $wi->dbname ) {
 					'help-message' => 'banquyen-help-giaithich7',
 					'type' => 'textarea',
 					'required' => true,
-				],	
+				],
 				'LienKet' => [
 					'label-message' => 'banquyen-label-url',
 					'help-message' => 'banquyen-help-giaithich8',
@@ -580,8 +580,10 @@ switch ( $wi->dbname ) {
 			],
 			'FieldsMergeStrategy' => 'replace',
 		];
-			
-		$wgHooks['SkinAddFooterLinks'][] = static function( Skin $skin, string $key, array &$footerlinks ) {
+
+		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
+
+		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
 			if ( $key === 'places' ) {
 				$footerlinks['lienhe'] = Html::element( 'a',
 					[
@@ -590,6 +592,7 @@ switch ( $wi->dbname ) {
 					],
 					$skin->msg( 'contactpage-label' )->text()
 				);
+
 				$footerlinks['banquyen'] = Html::element( 'a',
 					[
 						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
@@ -597,8 +600,8 @@ switch ( $wi->dbname ) {
 					],
 					$skin->msg( 'crpage-label' )->text()
 				);
-			};
-		};
+			}
+		}
 
 		break;
 	case 'libertygamewiki':
