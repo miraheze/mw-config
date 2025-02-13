@@ -2168,10 +2168,10 @@ $wgManageWikiExtensions = [
 			'mwscript' => [
 				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
-					'skipLinks' => false,
-					'indexOnSkip' => false,
+					'skipLinks' => true,
+					'indexOnSkip' => true,
 					'repeat-with' => [
-						'skipParse' => false,
+						'skipParse' => true,
 					],
 				],
 			],
