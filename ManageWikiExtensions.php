@@ -2017,6 +2017,19 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'articlefeedbackv5' => [
+		'name' => 'ArticleFeedbackv5',
+		'displayname' => 'ArticleFeedbackv5',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleFeedbackv5',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'ratings' => "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.sql"
+			],
+		],
+		'section' => 'other',
+	],
 	'articleplaceholder' => [
 		'name' => 'ArticlePlaceholder',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticlePlaceholder',
