@@ -590,6 +590,7 @@ switch ( $wi->dbname ) {
 					],
 					$skin->msg( 'contactpage-label' )->text()
 				);
+
 				$footerlinks['banquyen'] = Html::element( 'a',
 					[
 						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
@@ -597,8 +598,8 @@ switch ( $wi->dbname ) {
 					],
 					$skin->msg( 'crpage-label' )->text()
 				);
-			};
-		};
+			}
+		}
 
 		break;
 	case 'libertygamewiki':
