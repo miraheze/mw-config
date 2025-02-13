@@ -596,7 +596,7 @@ switch ( $wi->dbname ) {
 					[
 						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
 						'rel' => 'noreferrer noopener',
-					]
+					],
 					$skin->msg( 'crpage-label' )->text()
 				);
 			};
