@@ -5364,6 +5364,11 @@ $wgConf->settings += [
 		'+simulatorwiki' => [
 			'edittemplate',
 		],
+		'+swordartonlinezhwiki' => [
+			'edittech',
+			'editextended',
+			'editpatrol',
+		],
 		'+testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
@@ -5494,6 +5499,11 @@ $wgConf->settings += [
 		'simulatorwiki' => [
 			'editfragment',
 			'edittemplate',
+		],
+		'swordartonlinezhwiki' => [
+			'edittech',
+			'editextended',
+			'editpatrol',
 		],
 		'testwiki' => [
 			'editbureaucratprotected',
