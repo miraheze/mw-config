@@ -1733,7 +1733,7 @@ $wgConf->settings += [
 				'copyright' => [
 					'src' => 'https://static.wikitide.net/aceistanwiki/a/af/Gpl.svg',
 					'url' => 'https://www.gnu.org/licenses/gpl-3.0-standalone.html',
-					'alt' => 'GPL Free as in Freedom',
+					'alt' => 'GPL 3.0',
 				],
 			],
 		],
