@@ -1731,9 +1731,9 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg',
+					'src' => 'https://static.wikitide.net/aceistanwiki/a/af/Gpl.svg',
 					'url' => 'https://www.gnu.org/licenses/gpl-3.0-standalone.html',
-					'alt' => 'GPLv3',
+					'alt' => 'GPL 3.0',
 				],
 			],
 		],
