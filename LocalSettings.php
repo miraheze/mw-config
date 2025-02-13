@@ -95,8 +95,6 @@ $wmgUploadHostname = 'static.wikitide.net';
 // graphite151
 // $wgStatsdServer = '10.0.15.145';
 
-$passwordNamespaceClassName = $wi->version >= '1.43' ? 'MediaWiki\\Password\\' : '';
-
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
@@ -4807,12 +4805,12 @@ $wgConf->settings += [
 				],
 			],
 			'checks' => [
-				'MinimalPasswordLength' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkMinimalPasswordLength",
-				'MinimumPasswordLengthToLogin' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkMinimumPasswordLengthToLogin",
-				'PasswordCannotBeSubstringInUsername' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername",
-				'PasswordCannotMatchDefaults' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkPasswordCannotMatchDefaults",
-				'MaximalPasswordLength' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkMaximalPasswordLength",
-				'PasswordNotInCommonList' => "{$passwordNamespaceClassName}PasswordPolicyChecks::checkPasswordNotInCommonList",
+				'MinimalPasswordLength' => 'MediaWiki\\Password\\PasswordPolicyChecks::checkMinimalPasswordLength',
+				'MinimumPasswordLengthToLogin' => 'MediaWiki\\Password\\PasswordPolicyChecks::checkMinimumPasswordLengthToLogin',
+				'PasswordCannotBeSubstringInUsername' => 'MediaWiki\\Password\\PasswordPolicyChecks::checkPasswordCannotBeSubstringInUsername',
+				'PasswordCannotMatchDefaults' => 'MediaWiki\\Password\\PasswordPolicyChecks::checkPasswordCannotMatchDefaults',
+				'MaximalPasswordLength' => 'MediaWiki\\Password\\PasswordPolicyChecks::checkMaximalPasswordLength',
+				'PasswordNotInCommonList' => 'MediaWiki\\Password\\PasswordPolicyChecks::checkPasswordNotInCommonList',
 			],
 		],
 	],
