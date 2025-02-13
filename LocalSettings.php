@@ -4475,6 +4475,25 @@ $wgConf->settings += [
 	'wgMediaViewerEnableByDefault' => [
 		'default' => true,
 	],
+	'wgMediaViewerThumbnailBucketSizes' => [
+		'default' => [
+			320,
+			800,
+			1024,
+			1280,
+			1920,
+			2560,
+			2880,
+		],
+		'strinovawiki' => [
+			320,
+			800,
+			1024,
+			1280,
+			1920,
+			2560,
+		],
+	],
 
 	// Math
 	'wgMathValidModes' => [
