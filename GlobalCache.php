@@ -1,5 +1,9 @@
 <?php
 
+use Wikimedia\ObjectCache\MemcachedPeclBagOStuff;
+use Wikimedia\ObjectCache\MultiWriteBagOStuff;
+use Wikimedia\ObjectCache\RedisBagOStuff;
+
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
