@@ -1,12 +1,14 @@
 <?php
 
 use MediaWiki\Actions\ActionEntryPoint;
+use MediaWiki\Html\Html;
 use MediaWiki\Linker\Linker;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
+
 
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
@@ -449,9 +451,9 @@ switch ( $wi->dbname ) {
 				'Text' => [
 					'label-message' => 'emailmessage',
 					'type' => 'textarea',
-					'required' => true
-					]
+					'required' => true,
 				],
+			],
 			'FieldsMergeStrategy' => null
 		];
 
@@ -471,25 +473,25 @@ switch ( $wi->dbname ) {
 					'class' => 'HTMLTextField',
 					'label-message' => 'banquyen-label-diachi',
 					'help-message' => 'banquyen-help-giaithich2',
-					'required' => true
+					'required' => true,
 				],
 				'ToChuc' => [
 					'class' => 'HTMLTextField',
 					'label-message' => 'banquyen-label-tochuc',
 					'help-message' => 'banquyen-help-giaithich3',
-					'required' => false
+					'required' => false,
 				],
 				'ChucVu' => [
 					'class' => 'HTMLTextField',
 					'label-message' => 'banquyen-label-chucvu',
 					'help-message' => 'banquyen-help-giaithich4',
-					'required' => true
+					'required' => true,
 				],
 				'SoDienThoai' => [
 					'class' => 'HTMLTextField',
 					'label-message' => 'banquyen-label-sdt',
 					'help-message' => 'banquyen-help-giaithich5',
-					'required' => true
+					'required' => true,
 				],
 				'DoiTuong' => [
 					'class' => 'HTMLSelectField',
@@ -504,55 +506,55 @@ switch ( $wi->dbname ) {
 					'help-message' => 'banquyen-help-giaithich8',
 					'type' => 'textarea',
 					'rows' => 5,
-					'required' => true
+					'required' => true,
 				],
 				'NoiDung' => [
 					'label-message' => 'banquyen-label-giaithich',
 					'help-message' => 'banquyen-help-giaithich9',
 					'type' => 'textarea',
 					'rows' => 10,
-					'required' => true
+					'required' => true,
 				],
 				'XacNhan1' => [
 					'class' => 'HTMLCheckField',
 					'label-message' => 'banquyen-label-xacnhan1',
-					'required' => true
+					'required' => true,
 				],
 				'XacNhan2' => [
 					'class' => 'HTMLCheckField',
 					'label-message' => 'banquyen-label-xacnhan2',
-					'required' => true
+					'required' => true,
 				],
 				'XacNhan3' => [
 					'class' => 'HTMLCheckField',
 					'label-message' => 'banquyen-label-xacnhan3',
-					'required' => true
+					'required' => true,
 				],
 				'KySo' => [
 					'class' => 'HTMLTextField',
 					'label-message' => 'banquyen-label-chuky',
 					'help-message' => 'banquyen-help-giaithich6',
-					'required' => true
+					'required' => true,
 				]
 			],
 			'FieldsMergeStrategy' => 'replace'
 		];
 			
-		$wgHooks['SkinAddFooterLinks'][] = function( Skin $skin, string $key, array &$footerlinks ) {
+		$wgHooks['SkinAddFooterLinks'][] = static function( Skin $skin, string $key, array &$footerlinks ) {
 			if ( $key === 'places' ) {
 				$footerlinks['lienhe'] = Html::element( 'a',
 					[
 						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ',
-						'rel' => 'noreferrer noopener'
+						'rel' => 'noreferrer noopener',
 					],
-				$skin->msg( 'contactpage-label' )->text()
+					$skin->msg( 'contactpage-label' )->text()
 				);
 				$footerlinks['banquyen'] = Html::element( 'a',
 					[
 						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
-						'rel' => 'noreferrer noopener'
-					],
-				$skin->msg( 'crpage-label' )->text()
+						'rel' => 'noreferrer noopener',
+					]
+					$skin->msg( 'crpage-label' )->text()
 				);
 			};
 		};
