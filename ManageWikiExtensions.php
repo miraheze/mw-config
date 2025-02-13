@@ -923,6 +923,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks'
 	],
+	'simplecalendar' => [
+		'name' => 'SimpleCalendar',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleCalendar',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'simpletooltip' => [
 		'name' => 'SimpleTooltip',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleTooltip',
