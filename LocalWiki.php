@@ -2,14 +2,12 @@
 
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Html\Html;
-use MediaWiki\Linker\Linker;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-
 
 // Per-wiki settings that are incompatible with LocalSettings.php
 switch ( $wi->dbname ) {
@@ -578,9 +576,9 @@ switch ( $wi->dbname ) {
 					'label-message' => 'banquyen-label-chuky',
 					'help-message' => 'banquyen-help-giaithich6',
 					'required' => true,
-				]
+				],
 			],
-			'FieldsMergeStrategy' => 'replace'
+			'FieldsMergeStrategy' => 'replace',
 		];
 			
 		$wgHooks['SkinAddFooterLinks'][] = static function( Skin $skin, string $key, array &$footerlinks ) {
