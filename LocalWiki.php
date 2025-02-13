@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Actions\ActionEntryPoint;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
@@ -358,7 +359,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'lhmnwiki':
-		// UploadWizard configurations
+		// UploadWizard
 		$wgUploadWizardConfig = [
 			'tutorial' => [
 				'skip' => false,
@@ -450,11 +451,11 @@ switch ( $wi->dbname ) {
 			]
 		];
 
-		// SocialProfile/UserStats configurations
+		// SocialProfile/UserStats
 		if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 			require_once "$IP/extensions/SocialProfile/UserStats/EditCount.php";
 
-			// User level definitions
+			// Định nghĩa cấp độ
 			$wgUserLevels = [
 				'Lớp lá' => 0,
 				'Mầm non' => 1200,
@@ -474,6 +475,131 @@ switch ( $wi->dbname ) {
 				'Cao học' => 1000000
 			];
 		}
+		
+		// ContactForm
+		$wgContactConfig['default'] = [
+			'RecipientEmail' => 'hotro@lophocmatngu.wiki',
+			'SenderName' => 'Liên hệ từ WLHMN',
+			'RequireDetails' => true,
+			'NameReadonly' => false,
+			'EmailReadonly' => false,
+			'SubjectReadonly' => false,
+			'UseCustomBlockMessage' => false,
+			'Redirect' => null,
+			'RLModules' => [],
+			'RLStyleModules' => [],
+			'AdditionalFields' => [
+				'Text' => [
+					'label-message' => 'emailmessage',
+					'type' => 'textarea',
+					'required' => true,
+				],
+			],
+			'FieldsMergeStrategy' => null
+		];
+
+		$wgContactConfig['banquyen'] = [
+			'RecipientEmail' => 'banquyen@lophocmatngu.wiki',
+			'SenderName' => 'Xử lý bản quyền WLHMN',
+			'RequireDetails' => true,
+			'NameReadonly' => false,
+			'EmailReadonly' => false,
+			'SubjectReadonly' => true,
+			'UseCustomBlockMessage' => false,
+			'Redirect' => null,
+			'RLModules' => [],
+			'RLStyleModules' => [],
+			'AdditionalFields' => [
+				'DiaChi' => [
+					'class' => 'HTMLTextField',
+					'label-message' => 'banquyen-label-diachi',
+					'help-message' => 'banquyen-help-giaithich2',
+					'required' => true,
+				],
+				'ToChuc' => [
+					'class' => 'HTMLTextField',
+					'label-message' => 'banquyen-label-tochuc',
+					'help-message' => 'banquyen-help-giaithich3',
+					'required' => false,
+				],
+				'ChucVu' => [
+					'class' => 'HTMLTextField',
+					'label-message' => 'banquyen-label-chucvu',
+					'help-message' => 'banquyen-help-giaithich4',
+					'required' => true,
+				],
+				'SoDienThoai' => [
+					'class' => 'HTMLTextField',
+					'label-message' => 'banquyen-label-sdt',
+					'help-message' => 'banquyen-help-giaithich5',
+					'required' => true,
+				],
+				'DoiTuong' => [
+					'class' => 'HTMLSelectField',
+					'label-message' => 'banquyen-label-luachon',
+					'options-message' => 'banquyen-list-luachon',
+					'help-message' => 'banquyen-help-giaithich7',
+					'type' => 'textarea',
+					'required' => true,
+				],	
+				'LienKet' => [
+					'label-message' => 'banquyen-label-url',
+					'help-message' => 'banquyen-help-giaithich8',
+					'type' => 'textarea',
+					'rows' => 5,
+					'required' => true,
+				],
+				'NoiDung' => [
+					'label-message' => 'banquyen-label-giaithich',
+					'help-message' => 'banquyen-help-giaithich9',
+					'type' => 'textarea',
+					'rows' => 10,
+					'required' => true,
+				],
+				'XacNhan1' => [
+					'class' => 'HTMLCheckField',
+					'label-message' => 'banquyen-label-xacnhan1',
+					'required' => true,
+				],
+				'XacNhan2' => [
+					'class' => 'HTMLCheckField',
+					'label-message' => 'banquyen-label-xacnhan2',
+					'required' => true,
+				],
+				'XacNhan3' => [
+					'class' => 'HTMLCheckField',
+					'label-message' => 'banquyen-label-xacnhan3',
+					'required' => true,
+				],
+				'KySo' => [
+					'class' => 'HTMLTextField',
+					'label-message' => 'banquyen-label-chuky',
+					'help-message' => 'banquyen-help-giaithich6',
+					'required' => true,
+				],
+			],
+			'FieldsMergeStrategy' => 'replace',
+		];
+			
+		$wgHooks['SkinAddFooterLinks'][] = static function( Skin $skin, string $key, array &$footerlinks ) {
+			if ( $key === 'places' ) {
+				$footerlinks['lienhe'] = Html::element( 'a',
+					[
+						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ',
+						'rel' => 'noreferrer noopener',
+					],
+					$skin->msg( 'contactpage-label' )->text()
+				);
+				$footerlinks['banquyen'] = Html::element( 'a',
+					[
+						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
+						'rel' => 'noreferrer noopener',
+					],
+					$skin->msg( 'crpage-label' )->text()
+				);
+			};
+		};
+
 		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
