@@ -7,7 +7,7 @@
 		"php-parallel-lint/php-console-highlighter": "1.0.0",
 		"php-parallel-lint/php-parallel-lint": "1.4.0",
 		"phpunit/phpunit": "9.6.21",
-		"justinrainbow/json-schema": "6.0.0"
+		"justinrainbow/json-schema": "6.1.0"
 	},
 	"autoload": {
 		"psr-4": {
