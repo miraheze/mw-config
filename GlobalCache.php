@@ -165,8 +165,6 @@ if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBnam
 $wgUseLocalMessageCache = true;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-$wgResourceLoaderUseObjectCacheForDeps = true;
-
 $wgCdnMatchParameterOrder = false;
 
 if ( $beta ) {
