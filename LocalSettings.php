@@ -4886,6 +4886,9 @@ $wgConf->settings += [
 		'+abyssalwiki' => [
 			'usecodemirror' => 1,
 		],
+		'+combatinitiationwiki' => [
+			'vector-theme' => 'os',
+		],
 		'+crashspyrowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,

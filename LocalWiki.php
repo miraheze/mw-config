@@ -67,6 +67,12 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
+	case 'combatinitiationwiki':
+		$wgVectorNightMode['beta'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+		$wgVectorNightMode['logged_in'] = true;
+
+		break;
 	case 'commonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
