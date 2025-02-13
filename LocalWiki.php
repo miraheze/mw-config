@@ -580,8 +580,10 @@ switch ( $wi->dbname ) {
 			],
 			'FieldsMergeStrategy' => 'replace',
 		];
-			
-		$wgHooks['SkinAddFooterLinks'][] = static function( Skin $skin, string $key, array &$footerlinks ) {
+	
+		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
+
+		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
 			if ( $key === 'places' ) {
 				$footerlinks['lienhe'] = Html::element( 'a',
 					[
