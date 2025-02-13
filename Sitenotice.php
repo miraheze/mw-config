@@ -7,17 +7,16 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 89;
+$wgMajorSiteNoticeID = 90;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
  * or Google will use the sitenotice for their search result snippet.
  */
 
-/*
 // Global SiteNotice
-//if ( !$wmgSiteNoticeOptOut ) {
-$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+// if ( !$wmgSiteNoticeOptOut ) {
+/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -28,30 +27,30 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 
 	$siteNotice .= <<<EOF
 		<table style="width: 100%;">
-			<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px; color: black;">
+			<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-					<div class="floatleft"><img alt="Server migration" src="https://upload.wikimedia.org/wikipedia/commons/d/df/OOjs_UI_icon_check.svg" decoding="async" width="50" height="50"></div>
+					<div style="float: left;"><img alt="MediaWiki upgrade" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/OOjs_UI_icon_newWindow-ltr.svg" decoding="async" width="40" height="40"></div>
 					<div style="font-weight: bold; color: black;">
-						Planned brief downtime
+						MediaWiki upgrade completed
 					</div>
 					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-						There will be emergency maintenance on July 5th, 2024 at 00:00 UTC. This maintenance will likely last until about 00:30 (about 30 minutes), but could last a bit longer. During this time all wikis and other Miraheze services will be completly unavailable. We apologize for the inconvenience.
+						Miraheze has upgraded to MediaWiki 1.43! Please report any issues you encounter on <a href="https://meta.miraheze.org/wiki/Discord">Discord</a> or <a href="https://meta.miraheze.org/wiki/Phorge">Phorge</a>.
 					</div>
 
-					<!-- <span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
-						<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/Tech:SRE_noticeboard#Migration_to_new_servers">
+					<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
+						<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/MediaWiki/1.43">
 							<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
 							<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
 							<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
 						</a>
-					</span> -->
+					</span>
 				</div>
 			</td></tr></tbody>
 		</table>
 	EOF;
-}
-//}
-*/
+} */
+
+// }
 
 // Specific wiki SiteNotice
 /* if ( $wi->isExtensionActive( 'Graph' ) ) {

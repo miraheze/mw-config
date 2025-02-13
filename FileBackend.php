@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\FileBackend\SwiftFileBackend;
+
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift',

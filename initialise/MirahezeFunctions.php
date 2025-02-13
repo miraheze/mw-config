@@ -3,6 +3,8 @@
 use MediaWiki\Config\SiteConfiguration;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Registration\ExtensionProcessor;
+use MediaWiki\Registration\ExtensionRegistry;
 use Miraheze\CreateWiki\Services\RemoteWikiFactory;
 use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
 use Wikimedia\Rdbms\IDatabase;
@@ -78,8 +80,8 @@ class MirahezeFunctions {
 
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.44',
-		'beta' => '1.43',
-		'stable' => '1.42',
+		'beta' => '1.44',
+		'stable' => '1.43',
 	];
 
 	public const SUFFIXES = [
@@ -319,9 +321,11 @@ class MirahezeFunctions {
 			$explode = explode( '.', $explode[1], 2 );
 		}
 
-		foreach ( self::SUFFIXES as $suffix => $sites ) {
-			if ( in_array( $explode[1], $sites ) && ( $ignorePrimary || $explode[1] === self::getPrimaryDomain( $explode[0] . $suffix ) ) ) {
-				return $explode[0] . $suffix;
+		if ( isset( $explode[1] ) ) {
+			foreach ( self::SUFFIXES as $suffix => $sites ) {
+				if ( in_array( $explode[1], $sites ) && ( $ignorePrimary || $explode[1] === self::getPrimaryDomain( $explode[0] . $suffix ) ) ) {
+					return $explode[0] . $suffix;
+				}
 			}
 		}
 

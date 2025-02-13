@@ -361,6 +361,15 @@ $wgManageWikiSettings = [
 		'help' => 'This option controls whether or not feeds will be linked to in the sidebar',
 		'requires' => [],
 	],
+	'wgExportAllowListContributors' => [
+		'name' => 'Allow exporting contributor list on Special:Export',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'Whether or not to allow exporting a list of contributors to exported pages on Special:Export',
+		'requires' => [],
+	],
 	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
 		'name' => 'Should feeds honor the user\'s preferred language?',
 		'from' => 'featuredfeeds',
@@ -1026,6 +1035,24 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'editing',
 		'help' => 'Whether to expand templates of the preloaded text.',
+		'requires' => [],
+	],
+	'wgCreatePageEditExisting' => [
+		'name' => 'Create Page Edit Existing Pages',
+		'from' => 'Create Page',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'If enabled, existing pages will be edited instead of viewed.',
+		'requires' => [],
+	],
+	'wgCreatePageUseVisualEditor' => [
+		'name' => 'Create Page Use VisualEditors',
+		'from' => 'Create Page',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'If enabled, VisualEditor will be used for editing.',
 		'requires' => [],
 	],
 	'wgCreatePageUwUseVE' => [
@@ -2684,7 +2711,7 @@ $wgManageWikiSettings = [
 		'name' => 'Try Clean Auto Description (WikiSEO)',
 		'from' => 'wikiseo',
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'seo',
 		'help' => 'Enable if WikiSEO should try to remove dangling sentences when using descriptions from textextracts.',
 		'requires' => [
@@ -2700,7 +2727,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'seo',
-		'help' => 'Enable if WikiSEO should overwrite the iamge set by extension PageImages.',
+		'help' => 'Enable if WikiSEO should overwrite the image set by extension PageImages.',
 		'requires' => [
 			'extensions' => [
 				'pageimages',
@@ -3402,6 +3429,17 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgPortableInfoboxCustomImageWidth' => [
+		'name' => 'PortableInfobox Custom Image Width (px)',
+		'from' => 'portableinfobox',
+		'type' => 'integer',
+		'minint' => 0,
+		'maxint' => 3000,
+		'overridedefault' => 300,
+		'section' => 'styling',
+		'help' => 'Size (in px) of image thumbnails used in infoboxes.',
+		'requires' => [],
+	],
 	'wgEvelutionLeftPersonalLinks' => [
 		'name' => 'Evelution Left Personal Links',
 		'from' => 'evelution',
@@ -3508,6 +3546,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => '#FFBE00',
 		'section' => 'styling',
 		'help' => 'The Medik color scheme (navbar background, underlines etc.).',
+		'requires' => [],
+	],
+	'wgMedikMobileSitename' => [
+	'name' => 'Medik Mobile Sitename',
+		'from' => 'medik',
+		'type' => 'text',
+		'overridedefault' => 'null',
+		'section' => 'styling',
+		'help' => 'If your wikis name is longer than about 13 to 15 characters, you can define a shorter one only for the mobile screen. On desktop, $wgSitename will be displayed as usual.',
 		'requires' => [],
 	],
 	'wgMedikShowLogo' => [
@@ -3620,7 +3667,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles">MediaWiki:Metrolook-tiles</a>. If "Metrolook Down Arrow" is not set and "Metrolook Bartile" is not set, then the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles-second">MediaWiki:Metrolook-tiles-second</a>.',
+		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles">MediaWiki:Metrolook-tiles</a>. If "Metrolook Down Arrow" is set and "Metrolook Bartile" is not set, then the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles-second">MediaWiki:Metrolook-tiles-second</a>.',
 		'requires' => [],
 	],
 	'wgMetrolookMobile' => [
@@ -3858,6 +3905,20 @@ $wgManageWikiSettings = [
 		'help' => 'Version of ScratchBlocks to show when the version attribute has not been defined.',
 		'requires' => [],
 	],
+	'wgThemeToggleSwitcherStyle' => [
+		'name' => 'Switcher style for ThemeToggle',
+		'from' => 'themetoggle',
+		'type' => 'list',
+		'options' => [
+			'auto' => 'auto',
+			'simple' => 'simple',
+			'dropdown' => 'dropdown',
+		],
+		'overridedefault' => 'auto',
+		'section' => 'styling',
+		'help' => 'Controls which theme switcher module is used. If auto, uses simple when there is two or less themes, and dropdown otherwise.',
+		'requires' => [],
+	],
 	'wgTweekiSkinUseBootstrap4' => [
 		'name' => 'Use Bootstrap 4 for Tweeki',
 		'from' => 'tweeki',
@@ -3967,6 +4028,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => "50%",
 		'section' => 'styling',
 		'help' => 'The border-radius applied to the UserProfileV2 avatar.',
+		'requires' => [],
+	],
+	'wgEnableProtectionIndicators' => [
+		'name' => 'Enable Core Protection Indicators',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Whether to show indicators on a page when it is protected.',
 		'requires' => [],
 	],
 

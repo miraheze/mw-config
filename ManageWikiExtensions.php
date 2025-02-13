@@ -468,8 +468,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/DynamicPageList3/maintenance/createTemplate.php" => [],
-				"$IP/extensions/DynamicPageList3/maintenance/createView.php" => [],
+				"$IP/extensions/DynamicPageList3/maintenance/CreateTemplate.php" => [],
+				"$IP/extensions/DynamicPageList3/maintenance/CreateView.php" => [],
 			],
 		],
 		'section' => 'parserhooks',
@@ -762,6 +762,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'numberheadings' => [
+		'name' => 'NumberHeadings',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NumberHeadings',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'opengraphmeta' => [
 		'name' => 'OpenGraphMeta',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:OpenGraphMeta',
@@ -915,6 +922,13 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks'
+	],
+	'simplecalendar' => [
+		'name' => 'SimpleCalendar',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleCalendar',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
 	],
 	'simpletooltip' => [
 		'name' => 'SimpleTooltip',
@@ -1220,8 +1234,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'moderation' => "$IP/extensions/Moderation/sql/patch-moderation.sql",
-				'moderation_block' => "$IP/extensions/Moderation/sql/patch-moderation_block.sql"
+				'moderation' => "$IP/extensions/Moderation/sql/mysql/tables-generated.sql",
+				'moderation_block' => "$IP/extensions/Moderation/sql/mysql/tables-generated.sql"
 			],
 			'permissions' => [
 				'automoderated' => [
@@ -1348,6 +1362,14 @@ $wgManageWikiExtensions = [
 		'name' => 'Editcount',
 		'displayname' => 'EditCount',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Editcount',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
+	'editcountneue' => [
+		'name' => 'EditCountNeue',
+		'displayname' => 'EditCountNeue',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditCountNeue',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'specialpages',
@@ -1995,6 +2017,19 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'articlefeedbackv5' => [
+		'name' => 'ArticleFeedbackv5',
+		'displayname' => 'ArticleFeedbackv5',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleFeedbackv5',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'ratings' => "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.sql"
+			],
+		],
+		'section' => 'other',
+	],
 	'articleplaceholder' => [
 		'name' => 'ArticlePlaceholder',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticlePlaceholder',
@@ -2091,6 +2126,13 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
+	'breadcrumbs2' => [
+		'name' => 'BreadCrumbs2',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:BreadCrumbs2',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'capiunto' => [
 		'name' => 'Capiunto',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Capiunto',
@@ -2126,10 +2168,10 @@ $wgManageWikiExtensions = [
 			'mwscript' => [
 				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
-					'skipLinks' => false,
-					'indexOnSkip' => false,
+					'skipLinks' => true,
+					'indexOnSkip' => true,
 					'repeat-with' => [
-						'skipParse' => false,
+						'skipParse' => true,
 					],
 				],
 			],
@@ -3036,7 +3078,7 @@ $wgManageWikiExtensions = [
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
-		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well. <br/><b>Note: <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Stewards" target="_blank">Stewards</a>, please ensure that a member of the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology team</a> is available and not mobile in order to run <a href="https://meta.miraheze.org/wiki/Tech:Semantic_MediaWiki" target="_blank">a series of commands</a> on an mwtask server after enabling this.</b>',
+		'help' => '<br/> Permanently "experimental" and may be removed with little to no prior notice. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well.',
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
@@ -3247,6 +3289,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'themetoggle' => [
+		'name' => 'Theme Toggle',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Extension:ThemeToggle',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'thanks' => [
 		'name' => 'Thanks',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Thanks',
@@ -3261,7 +3310,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'titlekey' => "$IP/extensions/TitleKey/sql/titlekey.sql"
+				'titlekey' => "$IP/extensions/TitleKey/db_patches/tables-generated.sql"
 			],
 			'mwscript' => [
 				"$IP/extensions/TitleKey/maintenance/rebuildTitleKeys.php" => []

@@ -15,6 +15,12 @@ $decodedUri = str_replace( '/index.php', '', $decodedUri );
 
 $articlePath = str_replace( '/$1', '', $wgArticlePath );
 $redirectUrl = ( $articlePath ?: '/' ) . $decodedUri;
+// T13127: $decodedUri can be empty (e.g. /w/index.php?any=query), so append /
+// if that is the case in order to prevent a redirect at best, and the query
+// parameters being ignored in the redirect if worse.
+if ( $decodedUri === '' ) {
+	$redirectUrl .= '/';
+}
 
 if ( $decodedUri && !str_contains( $queryString, 'title' ) ) {
 	$path = parse_url( $decodedUri, PHP_URL_PATH );
@@ -28,10 +34,6 @@ if ( $decodedUri && !str_contains( $queryString, 'title' ) ) {
 }
 
 if ( $wgArticlePath === '/wiki/$1' && ( isset( $_GET['diff'] ) || isset( $_GET['oldid'] ) ) ) {
-	if ( !$decodedUri ) {
-		$redirectUrl .= '/';
-	}
-
 	$queryParameters ??= [];
 	if ( isset( $_GET['diff'] ) ) {
 		$queryParameters['diff'] = $_GET['diff'];
