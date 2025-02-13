@@ -466,10 +466,6 @@ $wgConf->settings += [
 		'default' => 'centralauth_',
 		'beta' => 'betacentralauth_',
 	],
-	'wgCentralAuthDatabase' => [
-		'default' => 'mhglobal',
-		'beta' => 'testglobal',
-	],
 	'wgCentralAuthEnableGlobalRenameRequest' => [
 		'default' => true,
 	],
