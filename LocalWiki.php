@@ -1,7 +1,7 @@
 <?php
 
 use MediaWiki\Actions\ActionEntryPoint;
-use MediaWiki\Linker\Linker;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
@@ -91,7 +91,11 @@ switch ( $wi->dbname ) {
 
 		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
 			if ( $key === 'places' ) {
-				$footerItems['github'] = Linker::makeExternalLink( 'https://github.com/Datawiki-online', 'GitHub' );
+				$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+				$footerItems['github'] = $linkRenderer->makeExternalLink(
+					'https://github.com/Datawiki-online',
+					'GitHub', $skin->getTitle()
+				);
 			}
 		}
 
