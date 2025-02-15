@@ -6022,6 +6022,7 @@ $wgConf->settings += [
 			'.noprint',
 			'.noexcerpt',
 			'.sortkey',
+			'.mw-empty-elt',
 		],
 		'+gratispaideiawiki' => [
 			'.metadata',
