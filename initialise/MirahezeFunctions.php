@@ -167,7 +167,7 @@ class MirahezeFunctions {
 			return $databasesArray['databases'][ $database ] ?? '';
 		} else {
 			global $wgDatabaseClustersMaintenance;
-			$databases = $databasesArray['databases'] ?? [ ];
+			$databases = $databasesArray['databases'] ?? [];
 
 			if ( $wgDatabaseClustersMaintenance ) {
 				$databases = array_filter( $databases, static function ( $data, $key ) use ( $wgDatabaseClustersMaintenance ) {
@@ -195,7 +195,7 @@ class MirahezeFunctions {
 	public static function getRealm( ?string $database = null ): string {
 		if ( $database ) {
 			$defaultSuffix = array_keys( self::SUFFIXES )[0];
-			return ( substr( $database, - strlen( $defaultSuffix ) ) === $defaultSuffix )
+			return ( substr( $database, -strlen( $defaultSuffix ) ) === $defaultSuffix )
 				? self::TAGS['default']
 				: self::TAGS['beta'];
 		}
@@ -203,7 +203,7 @@ class MirahezeFunctions {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 		$defaultSuffix = array_keys( self::SUFFIXES )[0];
 
-		return ( substr( self::$currentDatabase, - strlen( $defaultSuffix ) ) === $defaultSuffix )
+		return ( substr( self::$currentDatabase, -strlen( $defaultSuffix ) ) === $defaultSuffix )
 			? self::TAGS['default']
 			: self::TAGS['beta'];
 	}
@@ -250,9 +250,9 @@ class MirahezeFunctions {
 		if ( $database !== null ) {
 			if ( is_string( $database ) && $database !== 'default' ) {
 				foreach ( array_keys( self::SUFFIXES ) as $suffix ) {
-					if ( substr( $database, - strlen( $suffix ) ) === $suffix ) {
+					if ( substr( $database, -strlen( $suffix ) ) === $suffix ) {
 						$defaultServer = $databases['d'] ?? self::SUFFIXES[ $suffix ][ array_search( self::DEFAULT_SERVER[ $realm ], self::SUFFIXES[ $suffix ] ) ];
-						return $databases['u'] ?? 'https://' . substr( $database, 0, - strlen( $suffix ) ) . '.' . $defaultServer;
+						return $databases['u'] ?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
 					}
 				}
 			}
@@ -263,9 +263,9 @@ class MirahezeFunctions {
 
 		foreach ( $databases as $db => $data ) {
 			foreach ( array_keys( self::SUFFIXES ) as $suffix ) {
-				if ( substr( $db, - strlen( $suffix ) ) === $suffix ) {
+				if ( substr( $db, -strlen( $suffix ) ) === $suffix ) {
 					$defaultServer = $data['d'] ?? self::SUFFIXES[ $suffix ][ array_search( self::DEFAULT_SERVER[ $realm ], self::SUFFIXES[ $suffix ] ) ];
-					$servers[ $db ] = $data['u'] ?? 'https://' . substr( $db, 0, - strlen( $suffix ) ) . '.' . $defaultServer;
+					$servers[ $db ] = $data['u'] ?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
 				}
 			}
 		}
@@ -580,12 +580,12 @@ class MirahezeFunctions {
 				if ( $ns['content'] ) {
 					$settings['wgContentNamespaces']['default'][] = (int)$ns['id'];
 				}
-	
+
 				if ( $ns['protection'] ) {
 					$settings['wgNamespaceProtection']['default'][(int)$ns['id']] = [ $ns['protection'] ];
 				}
 
-				foreach ( ( array ) $ns['aliases'] as $alias ) {
+				foreach ( (array)$ns['aliases'] as $alias ) {
 					$settings['wgNamespaceAliases']['default'][$alias] = (int)$ns['id'];
 				}
 			}
@@ -665,7 +665,7 @@ class MirahezeFunctions {
 			return [];
 		}
 
-		$allExtensions	= array_filter( array_combine(
+		$allExtensions = array_filter( array_combine(
 			array_column( $wgManageWikiExtensions, 'name' ),
 			array_keys( $wgManageWikiExtensions )
 		) );
@@ -801,7 +801,7 @@ class MirahezeFunctions {
 					'c' => $wiki->wiki_dbcluster,
 				];
 			} else {
-				if ( ( int ) $wiki->wiki_closed === 0 && ( int ) $wiki->wiki_inactive === 0 ) {
+				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
 					$activeList[ $wiki->wiki_dbname ] = [
 						's' => $wiki->wiki_sitename,
 						'c' => $wiki->wiki_dbcluster,
@@ -887,7 +887,7 @@ class MirahezeFunctions {
 	): void {
 		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
 		$mwVersion = self::getMediaWikiVersion( $dbName );
-		$versions = array_unique( array_filter( self::MEDIAWIKI_VERSIONS, static function ( $version ) use ( $mwVersion ) : bool {
+		$versions = array_unique( array_filter( self::MEDIAWIKI_VERSIONS, static function ( $version ) use ( $mwVersion ): bool {
 			return $mwVersion === $version || is_dir( self::MEDIAWIKI_DIRECTORY . $version );
 		} ) );
 		asort( $versions );
