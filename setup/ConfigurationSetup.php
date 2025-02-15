@@ -1236,5 +1236,3 @@ class ConfigurationSetup {
 		}
 	}
 }
-
-class_alias( ConfigurationSetup::class, 'MirahezeFunctions' );
