@@ -1,3 +1,3 @@
 <?php
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-require MirahezeFunctions::getMediaWiki( 'api.php' );
+require_once '/srv/mediawiki/config/setup/ConfigurationSetup.php';
+require Miraheze\Config\ConfigurationSetup::getMediaWiki( 'api.php' );

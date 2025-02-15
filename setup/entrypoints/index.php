@@ -5,11 +5,12 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\EntryPointEnvironment;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use Miraheze\Config\ConfigurationSetup;
 
 define( 'MW_ENTRY_POINT', 'index' );
 
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
+require_once '/srv/mediawiki/config/setup/ConfigurationSetup.php';
+require ConfigurationSetup::getMediaWiki( 'includes/WebStart.php' );
 
 if ( $wgArticlePath === '/$1' && str_contains( strtoupper( $_SERVER['REQUEST_URI'] ), strtoupper( '/wiki/' ) ) ) {
 	// Redirect to the same page maintaining the path
@@ -88,7 +89,7 @@ if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' && $_SERVER['R
 	unset( $title );
 }
 
-require_once MirahezeFunctions::getMediaWiki( 'includes/PHPVersionCheck.php' );
+require_once ConfigurationSetup::getMediaWiki( 'includes/PHPVersionCheck.php' );
 wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ) );
 
 ( new ActionEntryPoint(

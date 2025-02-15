@@ -1,3 +1,3 @@
 <?php
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-require MirahezeFunctions::getMediaWiki( 'img_auth.php' );
+require_once '/srv/mediawiki/config/setup/ConfigurationSetup.php';
+require Miraheze\Config\ConfigurationSetup::getMediaWiki( 'img_auth.php' );

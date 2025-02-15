@@ -1,5 +1,7 @@
 <?php
 
+use Miraheze\Config\ConfigurationSetup;
+
 /** LocalSettings.php for Miraheze. */
 
 // Don't allow web access.
@@ -77,8 +79,8 @@ if ( $forceprofile == 1 && extension_loaded( 'xhprof' ) ) {
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenance = [];
 
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-$wi = new MirahezeFunctions();
+require_once '/srv/mediawiki/config/setup/ConfigurationSetup.php';
+$wi = new ConfigurationSetup();
 
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
@@ -7235,7 +7237,7 @@ $wi::$disabledExtensions = [
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.42',
 ];
 
-$globals = MirahezeFunctions::getConfigGlobals();
+$globals = ConfigurationSetup::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );

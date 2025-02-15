@@ -1,6 +1,6 @@
 <?php
 
-namespace Miraheze\Config\Setup;
+namespace Miraheze\Config;
 
 use CdnPurgeJob;
 use MediaWiki\Config\SiteConfiguration;

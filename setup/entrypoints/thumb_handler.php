@@ -1,11 +1,13 @@
 <?php
 
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
+use Miraheze\Config\ConfigurationSetup;
 
-$currentDatabase = MirahezeFunctions::getCurrentDatabase( true );
+require_once '/srv/mediawiki/config/setup/ConfigurationSetup.php';
 
-$primaryDomain = MirahezeFunctions::getPrimaryDomain( $currentDatabase );
-$defaultServer = MirahezeFunctions::getDefaultServer( $currentDatabase );
+$currentDatabase = ConfigurationSetup::getCurrentDatabase( true );
+
+$primaryDomain = ConfigurationSetup::getPrimaryDomain( $currentDatabase );
+$defaultServer = ConfigurationSetup::getDefaultServer( $currentDatabase );
 
 if (
 	$primaryDomain !== $defaultServer &&
@@ -18,4 +20,4 @@ if (
 	exit();
 }
 
-require MirahezeFunctions::getMediaWiki( 'thumb_handler.php' );
+require ConfigurationSetup::getMediaWiki( 'thumb_handler.php' );

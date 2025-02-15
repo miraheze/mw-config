@@ -23,6 +23,7 @@
 // This is for beta, DO NOT USE for production. Use RunSingleJob instead.
 
 use MediaWiki\MediaWikiServices;
+use Miraheze\Config\ConfigurationSetup;
 
 if ( !in_array( $_SERVER['REMOTE_ADDR'], [ '127.0.0.1', '0:0:0:0:0:0:0:1', '::1' ], true ) ) {
 	http_response_code( 500 );
@@ -36,8 +37,8 @@ if ( !in_array( $_SERVER['REMOTE_ADDR'], [ '127.0.0.1', '0:0:0:0:0:0:0:1', '::1'
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 define( 'MW_DB', isset( $_GET['wiki'] ) ? $_GET['wiki'] : '' );
 
-require_once __DIR__ . '/../initialise/MirahezeFunctions.php';
-require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
+require_once __DIR__ . '/../setup/ConfigurationSetup.php';
+require ConfigurationSetup::getMediaWiki( 'includes/WebStart.php' );
 
 // fatals but not random I/O warnings
 error_reporting( E_ERROR );
