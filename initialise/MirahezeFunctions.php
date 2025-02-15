@@ -23,8 +23,8 @@ class MirahezeFunctions {
 
 	public static array $disabledExtensions = [];
 
-	private static ?string $currentDatabase;
-	private static ?array $activeExtensions;
+	private static ?string $currentDatabase = null;
+	private static ?array $activeExtensions = null;
 
 	private const ALLOWED_DOMAINS = [
 		'default' => [
