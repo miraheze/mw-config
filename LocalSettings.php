@@ -115,11 +115,6 @@ $wgConf->settings += [
 		'utgwiki' => true,
 	],
 
-	// 'pagelinks' table migration
-	'wgPageLinksSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_NEW,
-	],
-
 	// 3D
 	'wg3dProcessor' => [
 		'ext-3d' => [
