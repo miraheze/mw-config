@@ -1,5 +1,8 @@
 <?php
 
+namespace Miraheze\Config;
+
+use CdnPurgeJob;
 use MediaWiki\Config\SiteConfiguration;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
@@ -10,7 +13,7 @@ use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\IReadableDatabase;
 
-class MirahezeFunctions {
+class ConfigurationSetup {
 
 	/** @var string */
 	public $dbname;
@@ -472,8 +475,8 @@ class MirahezeFunctions {
 	 * @return string
 	 */
 	public static function getMediaWikiVersion( ?string $database = null ): string {
-		if ( getenv( 'MIRAHEZE_WIKI_VERSION' ) ) {
-			return getenv( 'MIRAHEZE_WIKI_VERSION' );
+		if ( getenv( 'WIKI_VERSION' ) ) {
+			return getenv( 'WIKI_VERSION' );
 		}
 
 		if ( $database ) {
@@ -1233,3 +1236,5 @@ class MirahezeFunctions {
 		}
 	}
 }
+
+class_alias( ConfigurationSetup::class, 'MirahezeFunctions' );
