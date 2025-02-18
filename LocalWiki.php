@@ -396,7 +396,7 @@ switch ( $wi->dbname ) {
 				'snxyz' => [
 					'msg' => 'mwe-upwiz-license-snxyz',
 					'msgExplain' => 'mwe-upwiz-license-snxyz-explain',
-					'url' => '//songngu.xyz/',
+					'url' => '//songngu.xyz/giayphep',
 					'template' => 'SNXYZ',
 					'languageCodePrefix' => 'licenses.',
 					'availableLanguages' => 'vi'
@@ -603,6 +603,10 @@ switch ( $wi->dbname ) {
 			}
 		}
 
+		// Other configs
+		# Manually enable Core Protection Indicator (1.43)
+		$wgEnableProtectionIndicators = true;
+	
 		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
