@@ -602,10 +602,6 @@ switch ( $wi->dbname ) {
 				);
 			}
 		}
-
-		// Other configs
-		# Manually enable Core Protection Indicator (1.43)
-		$wgEnableProtectionIndicators = true;
 	
 		break;
 	case 'libertygamewiki':
