@@ -396,7 +396,7 @@ switch ( $wi->dbname ) {
 				'snxyz' => [
 					'msg' => 'mwe-upwiz-license-snxyz',
 					'msgExplain' => 'mwe-upwiz-license-snxyz-explain',
-					'url' => '//songngu.xyz/',
+					'url' => '//songngu.xyz/giayphep',
 					'template' => 'SNXYZ',
 					'languageCodePrefix' => 'licenses.',
 					'availableLanguages' => 'vi'
