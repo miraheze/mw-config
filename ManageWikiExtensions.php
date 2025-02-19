@@ -2166,6 +2166,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
+				"$IP/extensions/MirahezeMagic/maintenance/resetWikiCaches.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
 					'skipLinks' => true,
