@@ -602,7 +602,6 @@ switch ( $wi->dbname ) {
 				);
 			}
 		}
-	
 		break;
 	case 'libertygamewiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
