@@ -26,18 +26,26 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	);
 
 	$siteNotice .= <<<EOF
-		<table style="width: 100%;">
-			<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+			<tbody>
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-					<div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div>
-					<div style="font-weight: bold; color: black;">
-						Server Maintenance 02/22
-					</div>
-					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-						On February 22nd, 2025 from 18:45 until 23:30 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
-					</div>
+					<tr>
+						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
+						<td>
+							<div style="font-weight: bold; color: black;">
+								Server Maintenance 02/22
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
+								On February 22nd, 2025 from 18:45 until 23:30 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
+							</div>
+						</td>
+					</tr>
 				</div>
-			</td></tr></tbody>
+			</tbody>
 		</table>
 	EOF;
 }
