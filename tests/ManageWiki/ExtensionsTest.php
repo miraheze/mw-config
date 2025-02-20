@@ -163,7 +163,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 		define( 'MW_VERSION', null );
 
 		$IP = '';
-		$wi = $this->mockMirahezeFunctions();
+		$wi = $this->mockConfigurationSetup();
 
 		require_once __DIR__ . '/../../ManageWikiExtensions.php';
 		$this->assertSchema( $wgManageWikiExtensions );

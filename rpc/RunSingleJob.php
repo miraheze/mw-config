@@ -23,6 +23,7 @@
 
 use MediaWiki\Extension\EventBus\JobExecutor;
 use MediaWiki\MediaWikiServices;
+use Miraheze\Config\ConfigurationSetup;
 
 if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
 	http_response_code( 405 );
@@ -47,8 +48,8 @@ if ( !isset( $event['database'] ) ) {
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 define( 'MW_DB', $event['database'] );
 
-require_once __DIR__ . '/../initialise/MirahezeFunctions.php';
-require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
+require_once __DIR__ . '/../setup/ConfigurationSetup.php';
+require ConfigurationSetup::getMediaWiki( 'includes/WebStart.php' );
 
 // fatals but not random I/O warnings
 error_reporting( E_ERROR );

@@ -6,13 +6,14 @@ use MediaWiki\Html\Html;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
 use MediaWiki\SpecialPage\SpecialPage;
+use Miraheze\Config\ConfigurationSetup;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
-$wgHooks['CreateWikiDataFactoryBuilder'][] = 'MirahezeFunctions::onCreateWikiDataFactoryBuilder';
-$wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
-$wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
-$wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
-$wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+$wgHooks['CreateWikiDataFactoryBuilder'][] = ConfigurationSetup::class . '::onCreateWikiDataFactoryBuilder';
+$wgHooks['CreateWikiGenerateDatabaseLists'][] = ConfigurationSetup::class . '::onGenerateDatabaseLists';
+$wgHooks['ManageWikiCoreAddFormFields'][] = ConfigurationSetup::class . '::onManageWikiCoreAddFormFields';
+$wgHooks['ManageWikiCoreFormSubmission'][] = ConfigurationSetup::class . '::onManageWikiCoreFormSubmission';
+$wgHooks['MediaWikiServices'][] = ConfigurationSetup::class . '::onMediaWikiServices';
 $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 	if ( $out->getTitle()->isSpecialPage() ) {
 		$out->setRobotPolicy( 'noindex,nofollow' );
@@ -659,9 +660,9 @@ $version = $wi->version;
 // Alpha is only available on the test server,
 // use beta (or stable if there currently is no beta)
 // for foreign metawiki links if the version is alpha.
-if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
-	$version = MirahezeFunctions::MEDIAWIKI_VERSIONS['beta'] ??
-		MirahezeFunctions::MEDIAWIKI_VERSIONS['stable'];
+if ( $wi->version === ConfigurationSetup::MEDIAWIKI_VERSIONS['alpha'] ) {
+	$version = ConfigurationSetup::MEDIAWIKI_VERSIONS['beta'] ??
+		ConfigurationSetup::MEDIAWIKI_VERSIONS['stable'];
 }
 
 $beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
