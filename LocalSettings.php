@@ -7228,6 +7228,7 @@ $wi::$disabledExtensions = [
 	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
 	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 	'score' => '<a href="https://issue-tracker.miraheze.org/T5863">T5863</a>',
+	'simpleblogpage' => '<a href="https://issue-tracker.miraheze.org/T13252">T13252</a>',
 	'wikiforum' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 
 	'lingo' => 'Currently broken',
