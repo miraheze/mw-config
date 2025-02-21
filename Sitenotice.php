@@ -33,14 +33,14 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
 						<td>
 							<div style="font-weight: bold; color: black;">
-								Server Maintenance 02/22
+								Server Maintenance Postponed
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On February 22nd, 2025 from 18:45 until 23:30 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
+								The maintenance previously scheduled for 02/22 has been postponed, due to late arriving parts. We will update this notice when a new maintenance date is known.
 							</div>
 						</td>
 					</tr>
