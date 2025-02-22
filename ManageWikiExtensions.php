@@ -2159,11 +2159,7 @@ $wgManageWikiExtensions = [
 		'name' => 'CirrusSearch',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CirrusSearch',
 		'conflicts' => 'titlekey',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 		'install' => [
 			'mwscript' => [
 				"$IP/extensions/MirahezeMagic/maintenance/resetWikiCaches.php" => [],
