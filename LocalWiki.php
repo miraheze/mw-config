@@ -769,6 +769,15 @@ switch ( $wi->dbname ) {
 		unset( $wgGroupPermissions['no-ipinfo'] );
 
 		break;
+	case 'openfrontwiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+
+		break;
 	case 'persistwiki':
 		$wgDplSettings['maxCategoryCount'] = 10;
 
