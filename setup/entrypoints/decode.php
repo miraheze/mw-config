@@ -1,10 +1,12 @@
 <?php
 
-require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
-require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use Miraheze\Config\ConfigurationSetup;
+
+require_once '/srv/mediawiki/config/setup/ConfigurationSetup.php';
+require ConfigurationSetup::getMediaWiki( 'includes/WebStart.php' );
 
 $uri = strtok( $_SERVER['REQUEST_URI'], '?' );
 $queryString = $_SERVER['QUERY_STRING'] ?? '';
