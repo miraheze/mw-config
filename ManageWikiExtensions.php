@@ -2939,11 +2939,31 @@ $wgManageWikiExtensions = [
 					'protection' => 'edit',
 					'content' => 0,
 					'aliases' => [],
-					'contentmodel' => 'wikitext',
+					'contentmodel' => 'blog_post',
 					'additional' => []
 				],
 				'User_blog_talk' => [
 					'id' => 503,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Blog' => [
+					'id' => 1502,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'blog_post',
+					'additional' => []
+				],
+				'Blog_talk' => [
+					'id' => 1503,
 					'searchable' => 0,
 					'subpages' => 1,
 					'protection' => '',
