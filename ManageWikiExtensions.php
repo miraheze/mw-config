@@ -2954,7 +2954,7 @@ $wgManageWikiExtensions = [
 				],
 				'Blog' => [
 					'id' => 1502,
-					'searchable' => 0,
+					'searchable' => 1,
 					'subpages' => 1,
 					'protection' => '',
 					'content' => 0,
