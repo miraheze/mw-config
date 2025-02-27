@@ -4489,14 +4489,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// MultiPurge (TODO: Remove extension)
-	'wgMultiPurgeEnabledServices' => [
-		'default' => null
-	],
-	'wgMultiPurgeServiceOrder' => [
-		'default' => null
-	],
-
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => [
 		'default' => true,
@@ -6345,14 +6337,6 @@ $wgConf->settings += [
 	'wgUseCdn' => [
 		'default' => true,
 	],
-	'wgMultiPurgeVarnishServers' => [
-		'default' => [
-			/** cp36 */
-			'http://[2602:294:0:b13::110]:81',
-			/** cp37 */
-			'http://[2602:294:0:b23::112]:81',
-		],
-	],
 	// Temporary; except CloudFlare
 	'wgCdnServersNoPurge' => [
 		'default' => [
@@ -7142,7 +7126,6 @@ $wgConf->settings += [
 			'MessageCacheError' => 'debug',
 			'MirahezeMagic' => 'debug',
 			'mobile' => false,
-			'MultiPurge' => 'warning',
 			'NewUserMessage' => false,
 			'OAuth' => 'info',
 			'objectcache' => 'warning',
