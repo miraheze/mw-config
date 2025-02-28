@@ -16,7 +16,7 @@ $wgMajorSiteNoticeID = 91;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+ $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -40,7 +40,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On February 26th, 2025 from 18:45 until 23:30 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
+								On March 1st, 2025 from 18:45 until 20:45 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
 							</div>
 						</td>
 					</tr>
@@ -48,7 +48,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-} */
+} 
 
 // }
 
