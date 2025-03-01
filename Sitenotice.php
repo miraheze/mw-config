@@ -48,7 +48,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-} 
+}
 
 // }
 
