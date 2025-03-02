@@ -2776,25 +2776,7 @@ $wgConf->settings += [
 		'default' => 'https://tile.openstreetmap.org',
 	],
 	'wgKartographerSrcsetScales' => [
-		'default' => [
-			1.3,
-			1.5,
-			2,
-			2.6,
-			3,
-		],
-		'bluepageswiki' => [
-			1,
-		],
-		'hkrailwiki' => [
-			1,
-		],
-		'isvwiki' => [
-			1,
-		],
-		'leborkwiki' => [
-			1,
-		],
+		'default' => [ ],
 	],
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
