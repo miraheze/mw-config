@@ -1757,7 +1757,7 @@ $wgManageWikiExtensions = [
 	'replacetext' => [
 		'name' => 'Replace Text',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
-		'help' => 'Stewards and Wiki Mechanics: This extension should NOT be enabled on wikis created before May 12 without consulting the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology Team</a> first',
+		'help' => 'Stewards and Wiki Mechanics: This extension should NOT be enabled on wikis created before 12 May 2024 without consulting the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology Team</a> first',
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
@@ -3044,7 +3044,7 @@ $wgManageWikiExtensions = [
 		'displayname' => 'StructuredDiscussions (Flow)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredDiscussions',
 		'conflicts' => false,
-		'help' => 'Deprecated by WMF, who recommends DiscussionTools instead.',
+		'help' => 'No new installed permitted: Deprecated by WMF, please use DiscussionTools instead.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
