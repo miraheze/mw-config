@@ -145,6 +145,13 @@ switch ( $wi->dbname ) {
 		$wgLogRestrictions['newusers'] = 'read';
 
 		break;
+	case 'ftlmultiversewiki':
+		$wgJsonConfigs['Data.JsonConfig'] = [
+			'namespace' => 486,
+			'nsName' => 'Data',
+		];
+
+		break;
 	case 'furrnationswiki':
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
