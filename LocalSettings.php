@@ -2776,7 +2776,7 @@ $wgConf->settings += [
 		'default' => 'https://tile.openstreetmap.org',
 	],
 	'wgKartographerSrcsetScales' => [
-		'default' => [ ],
+		'default' => [],
 	],
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
