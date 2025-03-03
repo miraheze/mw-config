@@ -7030,6 +7030,8 @@ $wgConf->settings += [
 			'BlockManager' => false,
 			'BlogPage' => false,
 			'BounceHandler' => false,
+			// Invalid message parameter
+			'Bug58676' => 'debug',
 			'cache-cookies' => 'debug',
 			'caches' => false,
 			'captcha' => 'debug',
