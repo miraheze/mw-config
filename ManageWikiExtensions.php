@@ -2025,7 +2025,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'ratings' => "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.sql"
+				'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
 			],
 		],
 		'section' => 'other',
