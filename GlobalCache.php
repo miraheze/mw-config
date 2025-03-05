@@ -44,6 +44,12 @@ $wgMirahezeMagicMemcachedServers = [
 	[ '10.0.20.148', 11211 ]
 ];
 
+if ( $beta ) {
+	$wgMirahezeMagicMemcachedServers = [
+		[ '10.0.15.118', 11211 ],
+	];
+}
+
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,
 	'caches' => [
