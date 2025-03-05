@@ -872,7 +872,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'softcellwiki':
-		$wgExtensionFunctions[] = function () {
+		$wgExtensionFunctions[] = static function () {
 			global $wgEchoNotifications;
 
 			foreach ( $wgEchoNotifications as &$event ) {
