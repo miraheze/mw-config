@@ -876,7 +876,7 @@ switch ( $wi->dbname ) {
 			global $wgEchoNotifications;
 
 			foreach ( $wgEchoNotifications as &$event ) {
-				$event['section'] = 'message';
+				$event['section'] = 'alert';
 			}
 		};
 
