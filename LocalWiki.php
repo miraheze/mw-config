@@ -150,6 +150,7 @@ switch ( $wi->dbname ) {
 			'namespace' => 486,
 			'nsName' => 'Data',
 		];
+		$wgJsonConfigModels['Data.JsonConfig'] = null;
 
 		break;
 	case 'furrnationswiki':
