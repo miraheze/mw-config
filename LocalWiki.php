@@ -871,6 +871,16 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'softcellwiki':
+		$wgExtensionFunctions[] = function () {
+			global $wgEchoNotifications;
+
+			foreach ( $wgEchoNotifications as &$event ) {
+				$event['section'] = 'message';
+			}
+		};
+
+		break;
 	case 'srewiki':
 		wfLoadExtension( 'LdapAuthentication' );
 
