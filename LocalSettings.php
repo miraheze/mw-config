@@ -4152,6 +4152,7 @@ $wgConf->settings += [
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
+		'ladinowiki' => false,
 	],
 	'wgEnableMagicLinks' => [
 		'default' => [
