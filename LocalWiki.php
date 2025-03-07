@@ -68,6 +68,19 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
+	case 'battlebornwiki':
+	case 'gogiganticwiki':
+	case 'pizzatowerwiki':
+	case 'softcellwiki':
+		$wgExtensionFunctions[] = static function () {
+			global $wgEchoNotifications;
+
+			foreach ( $wgEchoNotifications as &$event ) {
+				$event['section'] = 'alert';
+			}
+		};
+
+		break;
 	case 'combatinitiationwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
@@ -869,16 +882,6 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
-
-		break;
-	case 'softcellwiki':
-		$wgExtensionFunctions[] = static function () {
-			global $wgEchoNotifications;
-
-			foreach ( $wgEchoNotifications as &$event ) {
-				$event['section'] = 'alert';
-			}
-		};
 
 		break;
 	case 'srewiki':
