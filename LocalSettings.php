@@ -1782,6 +1782,20 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'fischwiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://cafe.miraheze.org/w/img_auth.php/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://cafe.miraheze.org/w/img_auth.php/8/81/Miraheze_badge.svg',
+					'url' => 'https://miraheze.org',
+					'alt' => 'Hosted by Miraheze',
+				]
+			],
+		],
 		'outlasterwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
