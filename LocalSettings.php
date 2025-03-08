@@ -4132,6 +4132,8 @@ $wgConf->settings += [
 				353865,
 				/** Universal Omega (Technology team and Board) */
 				438966,
+				/** BlankEclair (Technology team) */
+				468499,
 				/** Agent Isai (Technology team) */
 				512002,
 			],
