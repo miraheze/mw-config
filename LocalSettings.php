@@ -4094,8 +4094,6 @@ $wgConf->settings += [
 				2551,
 				/** Void (Technology team) */
 				5258,
-				/** TheresNoTime (Technology team) */
-				5943,
 				/** MacFan4000 (Technology team) */
 				6758,
 				/** Paladox (Technology team) */
@@ -4122,8 +4120,6 @@ $wgConf->settings += [
 				2551,
 				/** Void (Technology team) */
 				5258,
-				/** TheresNoTime (Technology team) */
-				5943,
 				/** MacFan4000 (Technology team) */
 				6758,
 				/** Paladox (Technology team) */
