@@ -33,6 +33,10 @@
  * sql: array of sql files to install with extension, mapped table name => sql file path.
  */
 
+use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
+use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
+use Miraheze\MirahezeMagic\Maintenance\ResetWikiCaches;
+
 $wgManageWikiExtensions = [
 	// API
 	'pageimages' => [
@@ -261,7 +265,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/MirahezeMagic/maintenance/createCargoDB.php" => [],
+				CreateCargoDB::class => [],
 			],
 			'sql' => [
 				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
@@ -2166,7 +2170,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/MirahezeMagic/maintenance/resetWikiCaches.php" => [],
+				ResetWikiCaches::class => [],
 				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
 					'skipLinks' => true,
@@ -3437,7 +3441,7 @@ $wgManageWikiExtensions = [
 				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql"
 			],
 			'mwscript' => [
-				"$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php" => [],
+				PopulateWikibaseSitesTable::class => [],
 			],
 		],
 		'section' => 'other',
