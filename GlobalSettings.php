@@ -6,6 +6,8 @@ use MediaWiki\Html\Html;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
 use MediaWiki\SpecialPage\SpecialPage;
+use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
+use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
 $wgHooks['CreateWikiDataFactoryBuilder'][] = 'MirahezeFunctions::onCreateWikiDataFactoryBuilder';
@@ -333,7 +335,7 @@ $wgDataDump = [
 		],
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/extensions/MirahezeMagic/maintenance/swiftDump.php",
+			'script' => SwiftDump::class,
 			'options' => [
 				'--filename',
 				'${filename}'
@@ -350,7 +352,7 @@ $wgDataDump = [
 		'file_ending' => '.json',
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+			'script' => GenerateManageWikiBackup::class,
 			'options' => [
 				'--filename',
 				'${filename}'
