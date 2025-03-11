@@ -710,8 +710,8 @@ $wgManageWikiSettings = [
 
 	// Editing
 	'wgCampaignEventsProgramsAndEventsDashboardInstance' => [
-		'name' => 'CampaignEvents Programs and Events Dashboard Instance'
-		'from' => 'campaignevents'
+		'name' => 'CampaignEvents Programs and Events Dashboard Instance',
+		'from' => 'campaignevents',
 		'type' => 'list',
 		'options' => [
 			'Production' => 'production',
@@ -723,8 +723,8 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgCampaignEventsEnableWikimediaParticipantQuestions' => [
-		'name' => 'CampaignEvents Enable Wikimedia Participant Questions'
-		'from' => 'campaignevents'
+		'name' => 'CampaignEvents Enable Wikimedia Participant Questions',
+		'from' => 'campaignevents',
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'editing',
