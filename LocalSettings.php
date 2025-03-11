@@ -1515,6 +1515,20 @@ $wgConf->settings += [
 		'ysmwikiwiki' => true,
 	],
 
+	// EditSimilar
+	'wgEditSimilarMaxResultsPool' => [
+		'default' => 50,
+	],
+	'wgEditSimilarMaxResultsToDisplay' => [
+		'default' => 3,
+	],
+	'wgEditSimilarCounterValue' => [
+		'default' => 1,
+	],
+	'wgEditSimilarAlwaysShowThanks' => [
+		'default' => false,
+	],
+
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
