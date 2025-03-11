@@ -146,6 +146,11 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxCategoryCount'] = 7;
 
 		break;
+	case 'dungeonrngwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+
+		break;
 	case 'famedatawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
