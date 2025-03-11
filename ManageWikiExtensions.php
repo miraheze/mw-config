@@ -2272,6 +2272,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'editsimilar' => [
+		'name' => 'EditSimilar',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSimilar',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [],
+		'section' => 'other',
+	],
 	'editsubpages' => [
 		'name' => 'EditSubpages',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages',
