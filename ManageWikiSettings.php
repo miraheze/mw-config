@@ -709,6 +709,42 @@ $wgManageWikiSettings = [
 	],
 
 	// Editing
+	'$wgEditSimilarMaxResultsPool' => [
+		'name' => 'EditSimilar Max Results Pool',
+		'from' => 'editsimilar',
+		'type' => 'integer',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'This is the maximum pool of results to choose randomly from.',
+		'requires' => [],
+	],
+ 	'$wgEditSimilarMaxResultsToDisplay' => [
+		'name' => 'EditSimilar Max Results to Display',
+		'from' => 'editsimilar',
+		'type' => 'integer',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'The maximum number of chosen results to display.',
+		'requires' => [],
+	],
+	'$wgEditSimilarCounterValue' => [
+		'name' => 'EditSimilar Counter Value',
+		'from' => 'editsimilar',
+		'type' => 'integer',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'This number specifies per which number of edits will show the results\' message, this means every time results are found a message is shown.',
+		'requires' => [],
+	],
+	'wgEditSimilarAlwaysShowThanks' => [
+		'name' => 'EditSimilar Always Show Thanks',
+		'from' => 'editsimilar',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Whether to thank for an edit even when there are no results.',
+		'requires' => [],
+	],
 	'wmgWikiLicense' => [
 		'name' => 'Content License',
 		'from' => 'mediawiki',
