@@ -709,28 +709,34 @@ $wgManageWikiSettings = [
 	],
 
 	// Editing
-	'$wgEditSimilarMaxResultsPool' => [
+	'wgEditSimilarMaxResultsPool' => [
 		'name' => 'EditSimilar Max Results Pool',
 		'from' => 'editsimilar',
 		'type' => 'integer',
+		'minint' 0,
+		'maxint' => 100,
 		'overridedefault' => 50,
 		'section' => 'editing',
 		'help' => 'This is the maximum pool of results to choose randomly from.',
 		'requires' => [],
 	],
- 	'$wgEditSimilarMaxResultsToDisplay' => [
+ 	'wgEditSimilarMaxResultsToDisplay' => [
 		'name' => 'EditSimilar Max Results to Display',
 		'from' => 'editsimilar',
 		'type' => 'integer',
+		'minint' 0,
+		'maxint' => 100,
 		'overridedefault' => 3,
 		'section' => 'editing',
 		'help' => 'The maximum number of chosen results to display.',
 		'requires' => [],
 	],
-	'$wgEditSimilarCounterValue' => [
+	'wgEditSimilarCounterValue' => [
 		'name' => 'EditSimilar Counter Value',
 		'from' => 'editsimilar',
 		'type' => 'integer',
+		'minint' 0,
+		'maxint' => 10,
 		'overridedefault' => 1,
 		'section' => 'editing',
 		'help' => 'This number specifies per which number of edits will show the results\' message, this means every time results are found a message is shown.',
