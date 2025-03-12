@@ -376,17 +376,6 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
-	'wgRPRatingAllowedNamespaces' => [
-		'name' => 'Allow RatePage to operate in this namespace?',
-		'from' => 'ratepage',
-		'type' => 'check',
-		'main' => true,
-		'talk' => true,
-		'excluded' => [],
-		'overridedefault' => false,
-		'help' => '',
-		'requires' => [],
-	],
 	'wgUFAllowedNamespaces' => [
 		'name' => 'Allow UserFunctions to operate in this namespace?',
 		'from' => 'userfunctions',
