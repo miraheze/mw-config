@@ -4742,6 +4742,11 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// ParserMigration
+	'wgParserMigrationEnableQueryString' => [
+		'default' => true,
+	],
+
 	// Parsoid
 	'wgParsoidSettings' => [
 		'default' => [

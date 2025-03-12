@@ -563,7 +563,6 @@ if ( preg_match( '/(mirabeta|nexttide)\.org$/', $wi->server ) ) {
 		'(.*\.)?mirabeta\.org',
 		'(.*\.)?nexttide\.org',
 	];
-	$wgParserMigrationEnableQueryString = true;
 }
 
 if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server ) ) {
