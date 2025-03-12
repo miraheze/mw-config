@@ -720,7 +720,7 @@ $wgManageWikiSettings = [
 		'help' => 'This is the maximum pool of results to choose randomly from.',
 		'requires' => [],
 	],
- 	'wgEditSimilarMaxResultsToDisplay' => [
+	'wgEditSimilarMaxResultsToDisplay' => [
 		'name' => 'EditSimilar Max Results to Display',
 		'from' => 'editsimilar',
 		'type' => 'integer',
