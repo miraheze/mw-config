@@ -3755,6 +3755,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'lakeus' => [
+		'name' => 'Lakeus',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Lakeus',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'mask' => [
 		'name' => 'Mask',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mask',
