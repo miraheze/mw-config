@@ -4166,6 +4166,8 @@ $wgConf->settings += [
 				13554,
 				/** Harej (Board) */
 				13892,
+				/** RhinosF1 (Miraheze) (Technology team) */
+				243629,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
@@ -4192,6 +4194,8 @@ $wgConf->settings += [
 				13554,
 				/** Harej (Board) */
 				13892,
+				/** RhinosF1 (Miraheze) (Technology team) */
+				243629,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
