@@ -5190,7 +5190,7 @@ $wgConf->settings += [
 
 	// RatePage
 	'wgRPRatingAllowedNamespaces' => [
-		'default' => '0',
+		'default' => [ NS_MAIN ],
 	],
 	'wgRPRatingPageBlacklist' => [
 		'default' => [],
