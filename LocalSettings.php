@@ -2851,6 +2851,20 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Lakeus
+	'wgLakeusShowRepositoryLink' => [
+		'default' => true,
+	],
+	'wgLakeusSiteNoticeHasBorder' => [
+		'default' => false,
+	],
+	'wgLakeusShouldAnimatePortlets' => [
+		'default' => false,
+	],
+	'wgLakeusShowStickyTOC' => [
+		'default' => false,
+	],
+
 	// Language
 	'wgLanguageCode' => [
 		'default' => 'en',
