@@ -871,6 +871,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'randomimagebycategory' => [
+		'name' => 'RandomImageByCategory',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomImageByCategory',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'randomselection' => [
 		'name' => 'RandomSelection',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomSelection',
