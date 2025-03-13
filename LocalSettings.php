@@ -5317,7 +5317,7 @@ $wgConf->settings += [
 			'Original Authority',
 			'Reception123',
 			'Universal Omega',
-					'RhinosF1 (Miraheze)',
+			'RhinosF1 (Miraheze)',
 		],
 	],
 
