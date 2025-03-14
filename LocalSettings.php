@@ -5203,14 +5203,17 @@ $wgConf->settings += [
 	],
 
 	// RatePage
+	'wgRPRatingAllowedNamespaces' => [
+		'default' => [ NS_MAIN ],
+	],
 	'wgRPRatingPageBlacklist' => [
 		'default' => [],
 	],
-	'wgRPAddSidebarSection' => [
-		'default' => true,
-	],
 	'wgRPSidebarPosition' => [
 		'default' => 2,
+	],
+	'wgRPAddSidebarSection' => [
+		'default' => true,
 	],
 	'wgRPShowResultsBeforeVoting' => [
 		'default' => false,
