@@ -1215,6 +1215,9 @@ $wgConf->settings += [
 			'virtual-incidentreporting' => [
 				'db' => $wi->getIncidentsDatabase(),
 			],
+			'virtual-interwiki' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-LoginNotify' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
