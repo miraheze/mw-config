@@ -3858,6 +3858,7 @@ $wgConf->settings += [
 				'oathauth-verify-user',
 				'oathauth-view-log',
 				'renameuser',
+				'renameuser-global',
 				'reportincident',
 				'request-import',
 				'request-ssl',
