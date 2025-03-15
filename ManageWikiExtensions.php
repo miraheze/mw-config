@@ -871,6 +871,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'randomimagebycategory' => [
+		'name' => 'RandomImageByCategory',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomImageByCategory',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'randomselection' => [
 		'name' => 'RandomSelection',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomSelection',
@@ -3805,6 +3812,13 @@ $wgManageWikiExtensions = [
 	'hassomecolours' => [
 		'name' => 'HasSomeColours',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:HasSomeColours',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'lakeus' => [
+		'name' => 'Lakeus',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Lakeus',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
