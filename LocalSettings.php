@@ -2583,6 +2583,7 @@ $wgConf->settings += [
 				/** WikiTide */
 				'interwiki' => 'wt',
 				'url' => 'https://$2.wikitide.org/wiki/$1',
+				'dbname' => '$2wiki',
 				'baseTransOnly' => true,
 			],
 			'wikiforge' => [
