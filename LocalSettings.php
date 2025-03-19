@@ -2816,6 +2816,9 @@ $wgConf->settings += [
 			'Map.JsonConfig' => JsonConfig\JCMapDataContent::class,
 			'Tabular.JsonConfig' => JsonConfig\JCTabularContent::class,
 		],
+		'+ftlmultiversewiki' => [
+			'Data.JsonConfig' => null,
+		],
 	],
 
 	// Kartographer
