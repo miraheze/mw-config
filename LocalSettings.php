@@ -353,6 +353,14 @@ $wgConf->settings += [
 		],
 	],
 
+	// CampaignEvents
+	'wgCampaignEventsProgramsAndEventsDashboardInstance' => [
+		'default' => null,
+	],
+	'wgCampaignEventsEnableWikimediaParticipantQuestions' => [
+		'default' => true,
+	],
+	
 	// Captcha
 	'wgCaptchaTriggers' => [
 		'default' => [
