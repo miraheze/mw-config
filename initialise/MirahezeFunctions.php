@@ -844,10 +844,6 @@ class MirahezeFunctions {
 		];
 	}
 
-	/**
-	 * @param array &$databaseLists
-	 * @return void
-	 */
 	public static function onGenerateDatabaseLists( array &$databaseLists ): void {
 		$isBeta = self::getHostname() === self::BETA_HOSTNAME;
 
