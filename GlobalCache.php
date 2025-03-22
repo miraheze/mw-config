@@ -15,6 +15,8 @@ if ( !$beta ) {
 		'[2602:294:0:b13::110]:81',
 		/** cp37 */
 		'[2602:294:0:b23::112]:81',
+		/** cp38 */
+		'[2602:294:0:b33::102]:81',
 	];
 }
 
@@ -39,7 +41,14 @@ $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 $wgMirahezeMagicMemcachedServers = [
 	[ '10.0.15.113', 11211 ],
 	[ '10.0.16.131', 11211 ],
+	[ '10.0.20.148', 11211 ]
 ];
+
+if ( $beta ) {
+	$wgMirahezeMagicMemcachedServers = [
+		[ '10.0.15.118', 11211 ],
+	];
+}
 
 $wgObjectCaches['mysql-multiwrite'] = [
 	'class' => MultiWriteBagOStuff::class,

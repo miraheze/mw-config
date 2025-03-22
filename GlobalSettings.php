@@ -6,6 +6,8 @@ use MediaWiki\Html\Html;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
 use MediaWiki\SpecialPage\SpecialPage;
+use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
+use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
 $wgHooks['CreateWikiDataFactoryBuilder'][] = 'MirahezeFunctions::onCreateWikiDataFactoryBuilder';
@@ -262,7 +264,7 @@ if ( $cwClosed ) {
 if ( !$cwPrivate ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => MirahezeIRCRCFeedFormatter::class,
-		'uri' => 'udp://10.0.17.143:5070',
+		'uri' => 'udp://10.0.17.143:' . [ 5070, 5072 ][array_rand( [ 5070, 5072 ] )],
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
 	];
@@ -333,7 +335,7 @@ $wgDataDump = [
 		],
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/extensions/MirahezeMagic/maintenance/swiftDump.php",
+			'script' => SwiftDump::class,
 			'options' => [
 				'--filename',
 				'${filename}'
@@ -350,7 +352,7 @@ $wgDataDump = [
 		'file_ending' => '.json',
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/extensions/MirahezeMagic/maintenance/generateManageWikiBackup.php",
+			'script' => GenerateManageWikiBackup::class,
 			'options' => [
 				'--filename',
 				'${filename}'
@@ -561,7 +563,6 @@ if ( preg_match( '/(mirabeta|nexttide)\.org$/', $wi->server ) ) {
 		'(.*\.)?mirabeta\.org',
 		'(.*\.)?nexttide\.org',
 	];
-	$wgParserMigrationEnableQueryString = true;
 }
 
 if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server ) ) {

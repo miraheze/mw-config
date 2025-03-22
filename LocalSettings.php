@@ -1215,6 +1215,9 @@ $wgConf->settings += [
 			'virtual-incidentreporting' => [
 				'db' => $wi->getIncidentsDatabase(),
 			],
+			'virtual-interwiki' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-LoginNotify' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
@@ -1515,6 +1518,20 @@ $wgConf->settings += [
 		'ysmwikiwiki' => true,
 	],
 
+	// EditSimilar
+	'wgEditSimilarMaxResultsPool' => [
+		'default' => 50,
+	],
+	'wgEditSimilarMaxResultsToDisplay' => [
+		'default' => 3,
+	],
+	'wgEditSimilarCounterValue' => [
+		'default' => 1,
+	],
+	'wgEditSimilarAlwaysShowThanks' => [
+		'default' => false,
+	],
+
 	// ElasticSearch
 	'wmgDisableSearchUpdate' => [
 		'default' => false,
@@ -1761,6 +1778,27 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'ballgamewiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/ballgamewiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/ballgamewiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/ballgamewiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
 		'cafewiki' => [
 			'poweredby' => [
 				'mediawiki' => [
@@ -1780,6 +1818,20 @@ $wgConf->settings += [
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
 				],
+			],
+		],
+		'fischwiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/cafewiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/cafewiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://miraheze.org',
+					'alt' => 'Hosted by Miraheze',
+				]
 			],
 		],
 		'outlasterwiki' => [
@@ -2531,6 +2583,7 @@ $wgConf->settings += [
 				/** WikiTide */
 				'interwiki' => 'wt',
 				'url' => 'https://$2.wikitide.org/wiki/$1',
+				'dbname' => '$2wiki',
 				'baseTransOnly' => true,
 			],
 			'wikiforge' => [
@@ -2763,6 +2816,9 @@ $wgConf->settings += [
 			'Map.JsonConfig' => JsonConfig\JCMapDataContent::class,
 			'Tabular.JsonConfig' => JsonConfig\JCTabularContent::class,
 		],
+		'+ftlmultiversewiki' => [
+			'Data.JsonConfig' => null,
+		],
 	],
 
 	// Kartographer
@@ -2776,25 +2832,7 @@ $wgConf->settings += [
 		'default' => 'https://tile.openstreetmap.org',
 	],
 	'wgKartographerSrcsetScales' => [
-		'default' => [
-			1.3,
-			1.5,
-			2,
-			2.6,
-			3,
-		],
-		'bluepageswiki' => [
-			1,
-		],
-		'hkrailwiki' => [
-			1,
-		],
-		'isvwiki' => [
-			1,
-		],
-		'leborkwiki' => [
-			1,
-		],
+		'default' => [],
 	],
 	'wgKartographerStaticMapframe' => [
 		'default' => false,
@@ -2817,6 +2855,20 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgKartographerWikivoyageMode' => [
+		'default' => false,
+	],
+
+	// Lakeus
+	'wgLakeusShowRepositoryLink' => [
+		'default' => true,
+	],
+	'wgLakeusSiteNoticeHasBorder' => [
+		'default' => false,
+	],
+	'wgLakeusShouldAnimatePortlets' => [
+		'default' => false,
+	],
+	'wgLakeusShowStickyTOC' => [
 		'default' => false,
 	],
 
@@ -3029,7 +3081,7 @@ $wgConf->settings += [
 		'privadowiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'quyranesswiki' => '©2021 TheBurningPrincess (All Rights Reserved)',
 		'rctwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
-		'revitwiki' => '©2013-2024 by Lionel J. Camara (All Rights Reserved)',
+		'revitwiki' => '©2013-2025 by Lionel J. Camara (All Rights Reserved)',
 		'reviwiki' => 'Creative Commons Attribution Share Alike',
 		'sekatetwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'spnatiwiki' => 'Copyright (c) 2015 The SPNATI Contributors',
@@ -3077,7 +3129,7 @@ $wgConf->settings += [
 		'default' => [],
 		'cloudstreamwiki' => [ 'cloudstreamrepo://' ],
 		'downgradegameswiki' => [ 'steam://' ],
-		'cafewiki' => [ 'roblox://' ],
+		'cafewiki' => [ 'roblox://', 'discord://' ],
 		'urbanshadewiki' => [ 'roblox://' ],
 		'utgwiki' => [ 'roblox://' ],
 		'farmwiki' => [ 'roblox://' ],
@@ -3148,6 +3200,7 @@ $wgConf->settings += [
 	'wgLinterSubmitterWhitelist' => [
 		'ext-Linter' => [
 			/** localhost */
+			'127.0.0.1',
 			'::1' => true,
 			/** mw151 */
 			'2602:294:0:c8::105' => true,
@@ -3155,32 +3208,36 @@ $wgConf->settings += [
 			'2602:294:0:c8::106' => true,
 			/** mw153 */
 			'2602:294:0:c8::113' => true,
-			/** mw154 */
-			'2602:294:0:c8::114' => true,
 			/** mw161 */
 			'2602:294:0:b13::106' => true,
 			/** mw162 */
 			'2602:294:0:b13::107' => true,
 			/** mw163 */
 			'2602:294:0:b13::114' => true,
-			/** mw164 */
-			'2602:294:0:b13::115' => true,
 			/** mw171 */
 			'2602:294:0:b23::104' => true,
 			/** mw172 */
 			'2602:294:0:b23::105' => true,
 			/** mw173 */
 			'2602:294:0:b23::115' => true,
-			/** mw174 */
-			'2602:294:0:b23::116' => true,
 			/** mw181 */
 			'2602:294:0:b12::105' => true,
 			/** mw182 */
 			'2602:294:0:b12::106' => true,
 			/** mw183 */
 			'2602:294:0:b12::113' => true,
-			/** mw184 */
-			'2602:294:0:b12::114' => true,
+			/** mw191 */
+			'2602:294:0:b33::103' => true,
+			/** mw192 */
+			'2602:294:0:b33::104' => true,
+			/** mw193 */
+			'2602:294:0:b33::105' => true,
+			/** mw201 */
+			'2602:294:0:b39::102' => true,
+			/** mw202 */
+			'2602:294:0:b39::103' => true,
+			/** mw203 */
+			'2602:294:0:b39::104' => true,
 			/** mwtask151 */
 			'2602:294:0:c8::115' => true,
 			/** mwtask161 */
@@ -3769,6 +3826,9 @@ $wgConf->settings += [
 				'centralauth-unmerge',
 				'checkuser',
 				'checkuser-log',
+				'checkuser-temporary-account',
+				'checkuser-temporary-account-no-preference',
+				'checkuser-temporary-account-log',
 				'createwiki',
 				'createwiki-deleterequest',
 				'createwiki-suppressionlog',
@@ -3805,6 +3865,7 @@ $wgConf->settings += [
 				'oathauth-verify-user',
 				'oathauth-view-log',
 				'renameuser',
+				'renameuser-global',
 				'reportincident',
 				'request-import',
 				'request-ssl',
@@ -4107,20 +4168,22 @@ $wgConf->settings += [
 				2551,
 				/** Void (Technology team) */
 				5258,
-				/** TheresNoTime (Technology team) */
-				5943,
 				/** MacFan4000 (Technology team) */
 				6758,
 				/** Paladox (Technology team) */
 				13554,
 				/** Harej (Board) */
 				13892,
+				/** RhinosF1 (Miraheze) (Technology team) */
+				243629,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
 				353865,
 				/** Universal Omega (Technology team and Board) */
 				438966,
+				/** BlankEclair (Miraheze) (Technology team) */
+				592845,
 				/** Agent Isai (Technology team) */
 				512002,
 			],
@@ -4133,20 +4196,22 @@ $wgConf->settings += [
 				2551,
 				/** Void (Technology team) */
 				5258,
-				/** TheresNoTime (Technology team) */
-				5943,
 				/** MacFan4000 (Technology team) */
 				6758,
 				/** Paladox (Technology team) */
 				13554,
 				/** Harej (Board) */
 				13892,
+				/** RhinosF1 (Miraheze) (Technology team) */
+				243629,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
 				353865,
 				/** Universal Omega (Technology team and Board) */
 				438966,
+				/** BlankEclair (Miraheze) (Technology team) */
+				592845,
 				/** Agent Isai (Technology team) */
 				512002,
 			],
@@ -4487,14 +4552,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// MultiPurge (TODO: Remove extension)
-	'wgMultiPurgeEnabledServices' => [
-		'default' => null
-	],
-	'wgMultiPurgeServiceOrder' => [
-		'default' => null
-	],
-
 	// MultimediaViewer (not beta)
 	'wgMediaViewerEnableByDefault' => [
 		'default' => true,
@@ -4709,6 +4766,11 @@ $wgConf->settings += [
 	// ParserFunctions
 	'wgPFEnableStringFunctions' => [
 		'default' => false,
+	],
+
+	// ParserMigration
+	'wgParserMigrationEnableQueryString' => [
+		'default' => true,
 	],
 
 	// Parsoid
@@ -5149,14 +5211,17 @@ $wgConf->settings += [
 	],
 
 	// RatePage
+	'wgRPRatingAllowedNamespaces' => [
+		'default' => [ NS_MAIN ],
+	],
 	'wgRPRatingPageBlacklist' => [
 		'default' => [],
 	],
-	'wgRPAddSidebarSection' => [
-		'default' => true,
-	],
 	'wgRPSidebarPosition' => [
 		'default' => 2,
+	],
+	'wgRPAddSidebarSection' => [
+		'default' => true,
 	],
 	'wgRPShowResultsBeforeVoting' => [
 		'default' => false,
@@ -5263,6 +5328,7 @@ $wgConf->settings += [
 			'Original Authority',
 			'Reception123',
 			'Universal Omega',
+			'RhinosF1 (Miraheze)',
 		],
 	],
 
@@ -6166,17 +6232,12 @@ $wgConf->settings += [
 				'tg' => 'This language code should remain unused. Localise in tg-cyrl or tg-latn please.',
 				'wuu' => 'This language code should remain unused. Localise in wuu-hans or wuu-hant please.',
 				'yue' => 'This language code should remain unused. Localise in yue-hans or yue-hant please.',
-				// 'zh' => 'This language code should remain unused. Localise in zh-hans, zh-hant or zh-hk please.',
-				// 'zh-cn' => 'This language code should remain unused. Localise in zh-hans please.',
-				// 'zh-tw' => 'This language code should remain unused. Localise in zh-hant please.',
-				'zh-mo' => 'This language code should remain unused. Localise in zh-hk please.',
-				'zh-my' => 'This language code should remain unused. Localise in zh-hans please.',
-				'zh-sg' => 'This language code should remain unused. Localise in zh-hans please.',
-			],
-			'page' => [
 				'zh' => 'This language code should remain unused. Localise in zh-hans, zh-hant or zh-hk please.',
 				'zh-cn' => 'This language code should remain unused. Localise in zh-hans please.',
 				'zh-tw' => 'This language code should remain unused. Localise in zh-hant please.',
+				'zh-mo' => 'This language code should remain unused. Localise in zh-hk please.',
+				'zh-my' => 'This language code should remain unused. Localise in zh-hans please.',
+				'zh-sg' => 'This language code should remain unused. Localise in zh-hans please.',
 			],
 		],
 		'rainworldwiki' => [
@@ -6347,14 +6408,6 @@ $wgConf->settings += [
 	// Varnish
 	'wgUseCdn' => [
 		'default' => true,
-	],
-	'wgMultiPurgeVarnishServers' => [
-		'default' => [
-			/** cp36 */
-			'http://[2602:294:0:b13::110]:81',
-			/** cp37 */
-			'http://[2602:294:0:b23::112]:81',
-		],
 	],
 	// Temporary; except CloudFlare
 	'wgCdnServersNoPurge' => [
@@ -7062,6 +7115,8 @@ $wgConf->settings += [
 			'BlockManager' => false,
 			'BlogPage' => false,
 			'BounceHandler' => false,
+			// Invalid message parameter
+			'Bug58676' => 'debug',
 			'cache-cookies' => 'debug',
 			'caches' => false,
 			'captcha' => 'debug',
@@ -7145,7 +7200,6 @@ $wgConf->settings += [
 			'MessageCacheError' => 'debug',
 			'MirahezeMagic' => 'debug',
 			'mobile' => false,
-			'MultiPurge' => 'warning',
 			'NewUserMessage' => false,
 			'OAuth' => 'info',
 			'objectcache' => 'warning',
@@ -7214,7 +7268,7 @@ $wgConf->settings += [
 	],
 	// Control MediaWiki Deprecation Warnings
 	'wgDeprecationReleaseLimit' => [
-		'default' => '1.39',
+		'default' => '1.34',
 		'beta' => false,
 	],
 ];
@@ -7229,11 +7283,11 @@ if ( wfHostname() === 'test151' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
-	'datatransfer' => 'Disabled for security reasons, see <a href="https://issue-tracker.miraheze.org/T12870">T12870</a>',
 	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
 	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
 	'score' => '<a href="https://issue-tracker.miraheze.org/T5863">T5863</a>',
-	'wikiforum' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
+	'simpleblogpage' => '<a href="https://issue-tracker.miraheze.org/T13252">T13252</a>',
+	'wikiforum' => '<a href="https://issue-tracker.miraheze.org/T13064">T13064</a>',
 
 	'lingo' => 'Currently broken',
 

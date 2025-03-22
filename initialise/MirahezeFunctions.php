@@ -844,9 +844,17 @@ class MirahezeFunctions {
 		];
 	}
 
+	/**
+	 * @param array &$databaseLists
+	 * @return void
+	 */
 	public static function onGenerateDatabaseLists( array &$databaseLists ): void {
 		$isBeta = self::getHostname() === self::BETA_HOSTNAME;
-		$databases = self::generateDatabaseLists( self::GLOBAL_DATABASE[ $isBeta ? 'beta' : 'default' ] );
+
+		$databases = self::generateDatabaseLists(
+			self::GLOBAL_DATABASE[ $isBeta ? 'beta' : 'default' ]
+		);
+
 		$databaseLists = [
 			'active' => $databases['active'],
 			'databases' => $databases['databases'],
@@ -880,9 +888,10 @@ class MirahezeFunctions {
 	}
 
 	public static function onManageWikiCoreAddFormFields(
-		bool $ceMW,
 		IContextSource $context,
+		RemoteWikiFactory $remoteWiki,
 		string $dbName,
+		bool $ceMW,
 		array &$formDescriptor
 	): void {
 		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
@@ -938,10 +947,10 @@ class MirahezeFunctions {
 
 	public static function onManageWikiCoreFormSubmission(
 		IContextSource $context,
-		string $dbName,
 		IDatabase $dbw,
-		array $formData,
-		RemoteWikiFactory &$remoteWiki
+		RemoteWikiFactory $remoteWiki,
+		string $dbName,
+		array $formData
 	): void {
 		$version = self::getMediaWikiVersion( $dbName );
 		if ( $formData['mediawiki-version'] !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $formData['mediawiki-version'] ) ) {

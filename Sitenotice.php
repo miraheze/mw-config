@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 90;
+$wgMajorSiteNoticeID = 91;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -16,7 +16,8 @@ $wgMajorSiteNoticeID = 90;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+/*
+ $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -26,29 +27,30 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	);
 
 	$siteNotice .= <<<EOF
-		<table style="width: 100%;">
-			<tbody><tr><td style="font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+			<tbody>
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
-					<div style="float: left;"><img alt="MediaWiki upgrade" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/OOjs_UI_icon_newWindow-ltr.svg" decoding="async" width="40" height="40"></div>
-					<div style="font-weight: bold; color: black;">
-						MediaWiki upgrade completed
-					</div>
-					<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-						Miraheze has upgraded to MediaWiki 1.43! Please report any issues you encounter on <a href="https://meta.miraheze.org/wiki/Discord">Discord</a> or <a href="https://meta.miraheze.org/wiki/Phorge">Phorge</a>.
-					</div>
-
-					<span id="sitenotice-learnmore-button" class="oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-iconElement oo-ui-labelElement oo-ui-buttonWidget">
-						<a class="oo-ui-buttonElement-button" role="button" tabindex="0" href="https://meta.miraheze.org/wiki/MediaWiki/1.43">
-							<span class="oo-ui-iconElement-icon oo-ui-icon-info"></span>
-							<span class="oo-ui-labelElement-label">{$skin->msg( 'miraheze-sitenotice-learnmore' )->escaped()}</span>
-							<span class="oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator"></span>
-						</a>
-					</span>
+					<tr>
+						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
+						<td>
+							<div style="font-weight: bold; color: black;">
+								Server maintenance
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
+								On March 5th, 2025 from 18:45 until 20:45 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
+							</div>
+						</td>
+					</tr>
 				</div>
-			</td></tr></tbody>
+			</tbody>
 		</table>
 	EOF;
-} */
+}
+*/
 
 // }
 

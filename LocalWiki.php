@@ -68,6 +68,19 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
+	case 'battlebornwiki':
+	case 'gogiganticwiki':
+	case 'pizzatowerwiki':
+	case 'softcellwiki':
+		$wgExtensionFunctions[] = static function () {
+			global $wgEchoNotifications;
+
+			foreach ( $wgEchoNotifications as &$event ) {
+				$event['section'] = 'alert';
+			}
+		};
+
+		break;
 	case 'combatinitiationwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
@@ -133,6 +146,11 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxCategoryCount'] = 7;
 
 		break;
+	case 'dungeonrngwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+
+		break;
 	case 'famedatawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -143,6 +161,20 @@ switch ( $wi->dbname ) {
 		break;
 	case 'fischwiki':
 		$wgLogRestrictions['newusers'] = 'read';
+
+		break;
+	case 'ftlmultiversewiki':
+		// Intentionally empty out $wgJsonConfigs because of this error:
+		// JsonConfig: Invalid $wgJsonConfigs['Map.JsonConfig']: Namespace 486 is already set to handle model 'json' [Called from JsonConfig\JCSingleton::parseConfiguration in /srv/mediawiki/1.43/extensions/JsonConfig/includes/JCSingleton.php at line 147] in /srv/mediawiki/1.43/includes/debug/MWDebug.php on line 498.
+		// and because it seems like a bureaucrat doesn't really care for them:
+		// https://issue-tracker.miraheze.org/T13275#266704
+		$wgJsonConfigs = [
+			'Data.JsonConfig' => [
+				'namespace' => 486,
+				'nsName' => 'Data',
+			],
+		];
+		// $wgJsonConfigModels['Data.JsonConfig'] is set in LocalSettings.php <3
 
 		break;
 	case 'furrnationswiki':
@@ -396,7 +428,7 @@ switch ( $wi->dbname ) {
 				'snxyz' => [
 					'msg' => 'mwe-upwiz-license-snxyz',
 					'msgExplain' => 'mwe-upwiz-license-snxyz-explain',
-					'url' => '//songngu.xyz/',
+					'url' => '//songngu.xyz/giayphep',
 					'template' => 'SNXYZ',
 					'languageCodePrefix' => 'licenses.',
 					'availableLanguages' => 'vi'
@@ -767,6 +799,15 @@ switch ( $wi->dbname ) {
 	case 'nycsubwaywiki':
 		unset( $wgGroupPermissions['interwiki-admin'] );
 		unset( $wgGroupPermissions['no-ipinfo'] );
+
+		break;
+	case 'openfrontwiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
 
 		break;
 	case 'persistwiki':

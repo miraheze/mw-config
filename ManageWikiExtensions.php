@@ -33,6 +33,10 @@
  * sql: array of sql files to install with extension, mapped table name => sql file path.
  */
 
+use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
+use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
+use Miraheze\MirahezeMagic\Maintenance\ResetWikiCaches;
+
 $wgManageWikiExtensions = [
 	// API
 	'pageimages' => [
@@ -261,7 +265,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/MirahezeMagic/maintenance/createCargoDB.php" => [],
+				CreateCargoDB::class => [],
 			],
 			'sql' => [
 				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
@@ -863,6 +867,13 @@ $wgManageWikiExtensions = [
 	'randomimage' => [
 		'name' => 'RandomImage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomImage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'randomimagebycategory' => [
+		'name' => 'RandomImageByCategory',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomImageByCategory',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -1754,10 +1765,17 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
+	'refreshspecial' => [
+		'name' => 'RefreshSpecial',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RefreshSpecial',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'specialpages',
+	],
 	'replacetext' => [
 		'name' => 'Replace Text',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
-		'help' => 'Stewards and Wiki Mechanics: This extension should NOT be enabled on wikis created before May 12 without consulting the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology Team</a> first',
+		'help' => 'Stewards and Wiki Mechanics: This extension should NOT be enabled on wikis created before 12 May 2024 without consulting the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology Team</a> first',
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
@@ -2025,7 +2043,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'ratings' => "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.sql"
+				'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
 			],
 		],
 		'section' => 'other',
@@ -2166,6 +2184,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
+				ResetWikiCaches::class => [],
 				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
 					'skipLinks' => true,
@@ -2265,6 +2284,14 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicSidebar',
 		'conflicts' => false,
 		'requires' => [],
+		'section' => 'other',
+	],
+	'editsimilar' => [
+		'name' => 'EditSimilar',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSimilar',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [],
 		'section' => 'other',
 	],
 	'editsubpages' => [
@@ -2938,11 +2965,31 @@ $wgManageWikiExtensions = [
 					'protection' => 'edit',
 					'content' => 0,
 					'aliases' => [],
-					'contentmodel' => 'wikitext',
+					'contentmodel' => 'blog_post',
 					'additional' => []
 				],
 				'User_blog_talk' => [
 					'id' => 503,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => []
+				],
+				'Blog' => [
+					'id' => 1502,
+					'searchable' => 1,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'blog_post',
+					'additional' => []
+				],
+				'Blog_talk' => [
+					'id' => 1503,
 					'searchable' => 0,
 					'subpages' => 1,
 					'protection' => '',
@@ -3023,7 +3070,7 @@ $wgManageWikiExtensions = [
 		'displayname' => 'StructuredDiscussions (Flow)',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredDiscussions',
 		'conflicts' => false,
-		'help' => 'Deprecated by WMF, who recommends DiscussionTools instead.',
+		'help' => 'No new installed permitted: Deprecated by WMF, please use DiscussionTools instead.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3416,7 +3463,7 @@ $wgManageWikiExtensions = [
 				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql"
 			],
 			'mwscript' => [
-				"$IP/extensions/MirahezeMagic/maintenance/populateWikibaseSitesTable.php" => [],
+				PopulateWikibaseSitesTable::class => [],
 			],
 		],
 		'section' => 'other',
@@ -3718,6 +3765,13 @@ $wgManageWikiExtensions = [
 	'hassomecolours' => [
 		'name' => 'HasSomeColours',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:HasSomeColours',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'lakeus' => [
+		'name' => 'Lakeus',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Lakeus',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
