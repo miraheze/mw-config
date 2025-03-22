@@ -965,7 +965,7 @@ class MirahezeFunctions {
 	 * @param string $globalDatabase
 	 * @return array
 	 */
-	private static function generateDatabaseLists( string $globalDatabase ) {
+	private static function generateDatabaseLists( string $globalDatabase ): array {
 		$dbr = self::getDatabaseConnection( $globalDatabase );
 		$allWikis = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
@@ -1053,8 +1053,9 @@ class MirahezeFunctions {
 
 	/**
 	 * @param array &$databaseLists
+	 * @return void
 	 */
-	public static function onGenerateDatabaseLists( array &$databaseLists ) {
+	public static function onGenerateDatabaseLists( array &$databaseLists ): void {
 		$isBeta = php_uname( 'n' ) === self::BETA_HOSTNAME;
 
 		$databases = self::generateDatabaseLists(
@@ -1080,12 +1081,13 @@ class MirahezeFunctions {
 	 * @param string $wiki
 	 * @param IReadableDatabase $dbr
 	 * @param array &$cacheArray
+	 * @return void
 	 */
 	public static function onCreateWikiDataFactoryBuilder(
 		string $wiki,
 		IReadableDatabase $dbr,
 		array &$cacheArray
-	) {
+	): void {
 		$row = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
@@ -1101,12 +1103,20 @@ class MirahezeFunctions {
 	}
 
 	/**
-	 * @param bool $ceMW
 	 * @param IContextSource $context
+	 * @param RemoteWikiFactory $remoteWiki
 	 * @param string $dbName
+	 * @param bool $ceMW
 	 * @param array &$formDescriptor
+	 * @return void
 	 */
-	public static function onManageWikiCoreAddFormFields( $ceMW, $context, $dbName, &$formDescriptor ) {
+	public static function onManageWikiCoreAddFormFields(
+		IContextSource $context,
+		RemoteWikiFactory $remoteWiki,
+		string $dbName,
+		bool $ceMW,
+		array &$formDescriptor
+	): void {
 		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
 
 		$mwVersion = self::getMediaWikiVersion( $dbName );
@@ -1163,12 +1173,19 @@ class MirahezeFunctions {
 
 	/**
 	 * @param IContextSource $context
-	 * @param string $dbName
 	 * @param IDatabase $dbw
+	 * @param RemoteWikiFactory $remoteWiki
+	 * @param string $dbName
 	 * @param array $formData
-	 * @param RemoteWikiFactory &$remoteWiki
+	 * @return void
 	 */
-	public static function onManageWikiCoreFormSubmission( $context, $dbName, $dbw, $formData, &$remoteWiki ) {
+	public static function onManageWikiCoreFormSubmission(
+		IContextSource $context,
+		IDatabase $dbw,
+		RemoteWikiFactory $remoteWiki,
+		string $dbName,
+		array $formData
+	): void {
 		$version = self::getMediaWikiVersion( $dbName );
 		if ( $formData['mediawiki-version'] !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $formData['mediawiki-version'] ) ) {
 			$remoteWiki->addNewRow( 'wiki_version', $formData['mediawiki-version'] );
