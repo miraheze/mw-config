@@ -124,7 +124,7 @@ class MirahezeFunctions {
 				self::readDbListFile( 'deleted' )
 			);
 		}
-		
+
 		$wgLocalDatabases = $databases;
 		return $databases;
 	}
