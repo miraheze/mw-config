@@ -1758,13 +1758,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
-	'refreshspecial' => [
-		'name' => 'RefreshSpecial',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RefreshSpecial',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'specialpages',
-	],
 	'replacetext' => [
 		'name' => 'Replace Text',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
