@@ -4973,6 +4973,9 @@ $wgConf->settings += [
 	'wgPortableInfoboxUseFileDescriptionPage' => [
 		'default' => false,
 	],
+	'wgPortableInfoboxUseHeadings' => [
+		'default' => true,
+	],
 	'wgPortableInfoboxCacheRenderers' => [
 		'default' => true,
 	],

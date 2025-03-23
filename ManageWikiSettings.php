@@ -1515,6 +1515,15 @@ $wgManageWikiSettings = [
 		'help' => 'Make embedded images link to their file description page.',
 		'requires' => [],
 	],
+	'wgPortableInfoboxUseHeadings' => [
+		'name' => 'Portable Infobox Use Headings',
+		'from' => 'portableinfobox',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'parserfunctions',
+		'help' => 'Whether or not to use heading tags for infobox titles and group headers (may cause incompatibilities with some extensions).',
+		'requires' => [],
+	],
 	'wgShortDescriptionEnableTagline' => [
 		'name' => 'ShortDescription Enable Tagline',
 		'from' => 'shortdescription',
