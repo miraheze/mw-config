@@ -405,7 +405,7 @@ switch ( $wi->dbname ) {
 				return true;
 			}
 
-			$context = $this->getContext();
+			$context = $editPage->getContext();
 			if (
 				// If redlink=1 is set
 				$context->getRequest()->getBool( 'redlink' )
