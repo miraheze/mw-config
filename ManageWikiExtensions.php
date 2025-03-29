@@ -1303,7 +1303,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'campaign_events' => '$IP/extensions/CampaignEvents/db_patches/tables-generated.sql',
+				'campaign_events' => '$IP/extensions/CampaignEvents/db_patches/mysql/tables-generated.sql',
 			],
 			'namespaces' => [
 				'Event' => [
