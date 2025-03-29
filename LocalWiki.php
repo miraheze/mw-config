@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Actions\ActionEntryPoint;
+use MediaWiki\EditPage\EditPage;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
@@ -390,6 +391,35 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'cgwiki':
+		// T13424: Redirect User:Example?action=edit&redlink=1 -> User:Example
+		// to display the UserProfileV2 stuff when following redlinks (if the
+		// user wants to intentionally edit their user page, then a request
+		// URI of User:Example?action=edit will be sent)
+		$wgHooks['AlternateEdit'][] = 'onAlternateEdit';
+
+		function onAlternateEdit( EditPage $editPage ) {
+			$title = $editPage->getTitle();
+			// Bail if we're not in a user page
+			if ( !$title->inNamespace( NS_USER ) ) {
+				return true;
+			}
+
+			$context = $editPage->getContext();
+			if (
+				// If redlink=1 is set
+				$context->getRequest()->getBool( 'redlink' )
+				// and if we're not on a subpage
+				&& $title->equals( $title->getRootTitle() )
+			) {
+				$context->getOutput()->redirect( $title->getFullURL() );
+				return false;
+			}
+
+			return true;
+		};
+
+		// Intentional fallthrough as stuff here is meant to apply for cgwiki + lhmnwiki
 	case 'lhmnwiki':
 		// UploadWizard
 		$wgUploadWizardConfig = [
