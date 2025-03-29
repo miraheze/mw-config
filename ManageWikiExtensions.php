@@ -1300,6 +1300,7 @@ $wgManageWikiExtensions = [
 		'name' => 'CampaignEvents',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CampaignEvents',
 		'conflicts' => false,
+		'help' => 'Stewards: Do not enable this without T&S authority',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',

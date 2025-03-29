@@ -360,7 +360,7 @@ $wgConf->settings += [
 	'wgCampaignEventsEnableWikimediaParticipantQuestions' => [
 		'default' => true,
 	],
-	
+
 	// Captcha
 	'wgCaptchaTriggers' => [
 		'default' => [
@@ -3897,6 +3897,7 @@ $wgConf->settings += [
 				'viewpmlog',
 				'viewsuppressed',
 				'writeapi',
+				'campaignevents-organize-events',
 			],
 			'user' => [
 				'autoconfirmed',

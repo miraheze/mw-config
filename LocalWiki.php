@@ -417,7 +417,7 @@ switch ( $wi->dbname ) {
 			}
 
 			return true;
-		};
+		}
 
 		// Intentional fallthrough as stuff here is meant to apply for cgwiki + lhmnwiki
 	case 'lhmnwiki':
