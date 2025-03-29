@@ -1300,7 +1300,11 @@ $wgManageWikiExtensions = [
 		'name' => 'CampaignEvents',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CampaignEvents',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'campaign_events' => "$IP/extensions/CampaignEvents/db_patches/mysql/tables-generated.sql",
