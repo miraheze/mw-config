@@ -2354,23 +2354,10 @@ $wgConf->settings += [
 				'edittrusteduserprotected' => true
 			]
 		],
-		'+simulatorwiki' => [
-			'editprotected' => [
-				'editfragment' => true,
-				'edittemplate' => true,
-			],
-			'import' => [
-				'import' => true,
-				'importupload' => true,
-			],
-		],
 	],
 	'+wgGrantPermissionGroups' => [
 		'default' => [],
 		'althistorywiki' => [
-			'import' => 'administration',
-		],
-		'simulatorwiki' => [
 			'import' => 'administration',
 		],
 	],
@@ -3170,30 +3157,56 @@ $wgConf->settings += [
 	],
 
 	// LinkTitles
+	'wgLinkTitlesCheckRedirect' => [
+		'default' => true,
+	],
+	'wgLinkTitlesEnableNoTargetMagicWord' => [
+		'default' => false,
+	],
 	'wgLinkTitlesFirstOnly' => [
 		'default' => true,
-		'simulatorwiki' => false,
+	],
+	'wgLinkTitlesBlackList' => [
+		'default' => [],
+	],
+	'wgLinkTitlesMinimumTitleLength' => [
+		'default' => 4,
+	],
+	'wgLinkTitlesParseHeadings' => [
+		'default' => false,
 	],
 	'wgLinkTitlesParseOnEdit' => [
 		'default' => true,
-		'simulatorwiki' => false,
+	],
+	'wgLinkTitlesParseOnRender' => [
+		'default' => false,
+	],
+	'wgLinkTitlesPreferShortTitles' => [
+		'default' => false,
+	],
+	'wgLinkTitlesSmartMode' => [
+		'default' => true,
 	],
 	'wgLinkTitlesSameNamespace' => [
 		'default' => true,
-		'simulatorwiki' => false,
+	],
+	'wgLinkTitlesSkipTemplates' => [
+		'default' => false,
+	],
+	'wgLinkTitlesSpecialPageReloadAfter' => [
+		'default' => 1,
 	],
 	'wgLinkTitlesSourceNamespaces' => [
 		'default' => [],
-		'simulatorwiki' => [
-			NS_MAIN,
-			3000,
-		],
 	],
 	'wgLinkTitlesTargetNamespaces' => [
 		'default' => [],
-		'simulatorwiki' => [
-			NS_MAIN,
-		],
+	],
+	'wgLinkTitlesWordStartOnly' => [
+		'default' => false,
+	],
+	'wgLinkTitlesWordEndOnly' => [
+		'default' => false,
 	],
 
 	// LiliPond
@@ -4533,9 +4546,6 @@ $wgConf->settings += [
 	],
 	'wgModerationOnlyInNamespaces' => [
 		'default' => [],
-		'simulatorwiki' => [
-			3000,
-		],
 		'talenteddeviantswiki' => [
 			NS_MAIN,
 			NS_FILE
@@ -4844,11 +4854,6 @@ $wgConf->settings += [
 		'+metawiki' => [
 			'requestwikiblocked' => [
 				'requestwiki' => true,
-			],
-		],
-		'+simulatorwiki' => [
-			'moderated' => [
-				'skip-moderation' => true,
 			],
 		],
 		'+ext-MediaWikiChat' => [
@@ -5485,9 +5490,6 @@ $wgConf->settings += [
 			'sysop',
 			'bureaucrat',
 		],
-		'+simulatorwiki' => [
-			'edittemplate',
-		],
 		'+swordartonlinezhwiki' => [
 			'edittech',
 			'editextended',
@@ -5619,10 +5621,6 @@ $wgConf->settings += [
 			'extendedconfirmed',
 			'moderator',
 			'bureaucrat',
-		],
-		'simulatorwiki' => [
-			'editfragment',
-			'edittemplate',
 		],
 		'swordartonlinezhwiki' => [
 			'edittech',
