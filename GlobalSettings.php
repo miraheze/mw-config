@@ -36,6 +36,35 @@ if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) 
 	};
 }
 
+// log suspicious or sensitive login attempts
+$wgHooks['AuthManagerLoginAuthenticateAudit'][] = static function ( $response, $user, $username ) {
+	$guessed = false;
+	if ( !$user && $username ) {
+		$user = MediaWikiServices::getInstance()
+			->getUserFactory()
+			->newFromName( $username );
+		$guessed = true;
+	}
+	if ( !$user || !in_array( $response->status,
+		[ AuthenticationResponse::PASS, AuthenticationResponse::FAIL ], true )
+	) {
+		return;
+	}
+	global $wgRequest;
+	$successful = $response->status === AuthenticationResponse::PASS;
+	$channel = $successful ? 'goodpass' : 'badpass';
+	$logger = LoggerFactory::getInstance( $channel );
+	$verb = $successful ? 'succeeded' : 'failed';
+	$logger->info( "Login $verb for {name} from {clientip}: {messagestr}", [
+		'successful' => $successful,
+		'name' => $user->getName(),
+		'clientip' => $wgRequest->getIP(),
+		'guessed' => $guessed,
+		'msgname' => $response->message ? $response->message->getKey() : '-',
+		'messagestr' => $response->message ? $response->message->inLanguage( 'en' )->text() : '',
+	] );
+};
+
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	wfLoadExtensions( [
