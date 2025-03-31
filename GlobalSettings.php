@@ -629,7 +629,7 @@ if ( $wi->isExtensionActive( 'TimedMediaHandler' ) ) {
 	// Note compression of second pass is "spiky", alternating between
 	// single-threaded and multithreaded portions, so you can somewhat
 	// overcommit process threads per CPU thread.
-	$wgFFmpegThreads = 8;
+	$wgFFmpegThreads = 4;
 
 	// HD transcodes of full-length films/docs/conference vids can
 	// take several hours, and sometimes over 12. Bump up from default
