@@ -1662,7 +1662,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
-		'help' => 'Parse page content whenever an edit is saved by adding links through wikitext, unless the \"minor edit\" box is checked.',
+		'help' => 'Parse page content whenever an edit is saved by adding links through wikitext, unless the \'minor edit\' box is checked.',
 		'requires' => [],
 	],
 	'wgLinkTitlesParseOnRender' => [
