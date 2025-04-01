@@ -1252,6 +1252,13 @@ class MirahezeFunctions {
 			unset( $GLOBALS['globals'] );
 		}
 	}
+
+	/**
+	* @param AuthenticationResponse	$response
+	* @param User | null	$user
+	* @param string | null	$username
+	* @param string[]	$extraData
+	*/
 	public static function onAuthManagerLoginAuthenticateAudit ( $response, $user, $username ) {
 		$guessed = false;
 		if ( !$user && $username ) {
@@ -1265,7 +1272,7 @@ class MirahezeFunctions {
 		) {
 			return;
 		}
-		global $wgRequest;
+		$request = RequestContext::getMain()->getRequest()
 		$successful = $response->status === AuthenticationResponse::PASS;
 		$channel = $successful ? 'goodpass' : 'badpass';
 		$logger = LoggerFactory::getInstance( $channel );
@@ -1273,7 +1280,7 @@ class MirahezeFunctions {
 		$logger->info( "Login $verb for {name} from {clientip}: {messagestr}", [
 			'successful' => $successful,
 			'name' => $user->getName(),
-			'clientip' => $wgRequest->getIP(),
+			'clientip' => $request->getIP(),
 			'guessed' => $guessed,
 			'msgname' => $response->message ? $response->message->getKey() : '-',
 			'messagestr' => $response->message ? $response->message->inLanguage( 'en' )->text() : '',
