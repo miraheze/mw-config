@@ -1272,7 +1272,7 @@ class MirahezeFunctions {
 		) {
 			return;
 		}
-		$request = RequestContext::getMain()->getRequest()
+		$request = RequestContext::getMain()->getRequest();
 		$successful = $response->status === AuthenticationResponse::PASS;
 		$channel = $successful ? 'goodpass' : 'badpass';
 		$logger = LoggerFactory::getInstance( $channel );
