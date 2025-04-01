@@ -1254,11 +1254,11 @@ class MirahezeFunctions {
 	}
 
 	/**
-	* @param AuthenticationResponse	$response
-	* @param User | null $user
-	* @param string | null $username
-	*/
-	public static function onAuthManagerLoginAuthenticateAudit ( $response, $user, $username ) {
+	 * @param AuthenticationResponse $response
+	 * @param User | null $user
+	 * @param string | null $username
+	 */
+	public static function onAuthManagerLoginAuthenticateAudit( $response, $user, $username ) {
 		$guessed = false;
 		if ( !$user && $username ) {
 			$user = MediaWikiServices::getInstance()
