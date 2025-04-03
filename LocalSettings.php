@@ -2950,6 +2950,9 @@ $wgConf->settings += [
 			[ 'newtablinks', 'wikiwalk' ],
 			'_self' => [ 'sametablinks' ]
 		],
+		'randrwiki' => [
+			'_blank' => [ '' ]
+		],
 		'scruffwiki' => [
 			'_blank' => [ '' ]
 		],
@@ -3201,6 +3204,11 @@ $wgConf->settings += [
 			'user' => [
 				'mwoauthmanagemygrants' => true,
 				'user' => true,
+			],
+		],
+		'+allpediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
 			],
 		],
 		'+autocountwiki' => [
@@ -4703,6 +4711,18 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+dccomicswiki' => [
+			'usecodemirror' => 1,
+			'visualeditor-newwikitext' => 1,
+			'usebetatoolbar' => 0,
+			'usebetatoolbar-cgd' => 0,
+		],
+		'+dcmultiversewiki' => [
+			'usecodemirror' => 1,
+			'visualeditor-newwikitext' => 1,
+			'usebetatoolbar' => 0,
+			'usebetatoolbar-cgd' => 0,
+		],
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
 		],
@@ -4954,6 +4974,9 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
+		'+allpediawiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+321nailswiki' => [
 			'templateeditor',
 			'extendedconfirmed',
@@ -4982,6 +5005,9 @@ $wgConf->settings += [
 		'+famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'+gengbaikewiki' => [
+			'bureaucrat',
 		],
 		'+googlewiki' => [
 			'editbureaucratprotected',
@@ -5083,6 +5109,9 @@ $wgConf->settings += [
 			'templateeditor',
 			'extendedconfirmed',
 		],
+		'allpediawiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'cricketnepalwiki' => [
 			'editbureaucratprotected',
 			'editstaffprotected',
@@ -5123,6 +5152,9 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 		],
 		'phightingwiki' => [
+			'edittrusteduserprotected',
+		],
+		'pokemonarowiki' => [
 			'edittrusteduserprotected',
 		],
 		'projectsekaiwiki' => [
