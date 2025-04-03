@@ -2599,10 +2599,6 @@ $wgConf->settings += [
 		'+devwiki' => [
 			'templatewikiarchive',
 		],
-		'+hkrailwiki' => [
-			'zhwikipedia',
-			'hkrailfan',
-		],
 		'+incubatorwiki' => [
 			'wmincubator',
 			'wikiaincubatorplus',
@@ -2732,7 +2728,6 @@ $wgConf->settings += [
 		'default' => true,
 		'bluepageswiki' => false,
 		'gratisdatawiki' => false,
-		'hkrailwiki' => false,
 		'isvwiki' => false,
 		'leborkwiki' => false,
 	],
@@ -4053,11 +4048,6 @@ $wgConf->settings += [
 	],
 	'wgDisabledVariants' => [
 		'default' => [],
-		'hkrailwiki' => [
-			'zh',
-			'zh-hant',
-			'zh-hans',
-		],
 		'zhtardiswiki' => [
 			'zh-hans',
 			'zh-hant',
@@ -4067,7 +4057,6 @@ $wgConf->settings += [
 	],
 	'wgDefaultLanguageVariant' => [
 		'default' => false,
-		'hkrailwiki' => 'zh-hk',
 		'zhtranswiki' => 'zh-cn',
 	],
 	'wgResourceLoaderMaxQueryLength' => [
