@@ -1579,9 +1579,6 @@ $wgConf->settings += [
 	'wgEvelutionDisableRightRail' => [
 		'default' => false,
 	],
-	'wgEvelutionServerMode' => [
-		'default' => false,
-	],
 	'wgEvelutionStickyRail' => [
 		'default' => true,
 	],
@@ -1592,6 +1589,9 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgEvelutionChangeMessageBoxesToBanners' => [
+		'default' => false,
+	],
+	'wgEvelutionEnableTaskbarAppLabelsOnLargeScreens' => [
 		'default' => false,
 	],
 
