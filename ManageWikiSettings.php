@@ -3540,15 +3540,6 @@ $wgManageWikiSettings = [
 		'help' => 'Disables the right rail that appears on all pages (except special pages, file pages, MediaWiki pages, and the main page).',
 		'requires' => [],
 	],
-	'wgEvelutionServerMode' => [
-		'name' => 'Evelution Server Mode',
-		'from' => 'evelution',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'Changes the layout to be more server/development wiki-friendly (e.g. no desktop local navigation, addition of left actions link before the content (which has the local navigation menus), smaller page header title, full width small breakpoint size, and no right rail on the help and project namespaces).',
-		'requires' => [],
-	],
 	'wgEvelutionStickyRail' => [
 		'name' => 'Evelution Sticky Rail',
 		'from' => 'evelution',
@@ -3592,6 +3583,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'All errorboxes, warningboxes, successboxes and messageboxes except the ones with the <code>.noconvert</code> CSS class will be converted into banner notifications.',
+		'requires' => [],
+	],
+	'wgEvelutionEnableTaskbarAppLabelsOnLargeScreens' => [
+		'name' => 'Evelution Enable Taskbar App Labels On Larger Screens',
+		'from' => 'evelution',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Taskbar apps will have their label shown next to the icon rather than when hovering on it in a tooltip above the app icon',
 		'requires' => [],
 	],
 	'wgHasSomeColoursColourOne' => [
