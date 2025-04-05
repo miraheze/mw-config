@@ -273,7 +273,7 @@ if ( !$cwPrivate ) {
 	$wgDiscordExperimentalWebhook = $wmgDiscordExperimentalWebhook;
 }
 
-// Dynamic cookie settings dependant on $wgServer
+// Dynamic cookie settings dependent on $wgServer
 foreach ( $wi->getAllowedDomains() as $domain ) {
 	if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
 		$wgMFStopRedirectCookieHost = '.' . $domain;
