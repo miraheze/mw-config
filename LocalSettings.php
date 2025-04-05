@@ -1765,6 +1765,15 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'animalroyalewiki' => [
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/animalroyalewiki/f/f2/CC_BY-NC-SA_logo.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
+				],
+			],
+		],
 		'jbcstudioswiki' => [
 			'poweredby' => [
 				'mediawiki' => [
