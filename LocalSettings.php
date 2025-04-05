@@ -1541,32 +1541,6 @@ $wgConf->settings += [
 		'inforevivalwiki' => 640,
 	],
 
-	// Evelution
-	'wgEvelutionLeftPersonalLinks' => [
-		'default' => false,
-	],
-	'wgEvelutionDisableColorManagement' => [
-		'default' => false,
-	],
-	'wgEvelutionDisableRightRail' => [
-		'default' => false,
-	],
-	'wgEvelutionServerMode' => [
-		'default' => false,
-	],
-	'wgEvelutionStickyRail' => [
-		'default' => true,
-	],
-	'wgEvelutionDisableRightRailFromSpecificPages' => [
-		'default' => [],
-	],
-	'wgEvelutionMonoLogo' => [
-		'default' => false,
-	],
-	'wgEvelutionChangeMessageBoxesToBanners' => [
-		'default' => false,
-	],
-
 	// External Data
 	'wgExternalDataSources' => [
 		/**
@@ -6855,7 +6829,6 @@ $wi::$disabledExtensions = [
 	'lingo' => 'Currently broken',
 
 	'chameleon' => 'Incompatible with MediaWiki 1.42',
-	'evelution' => 'Incompatible with MediaWiki 1.42',
 	'femiwiki' => 'Incompatible with MediaWiki 1.42',
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.42',
 ];
