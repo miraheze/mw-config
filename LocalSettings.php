@@ -6431,7 +6431,8 @@ $wgConf->settings += [
 			// localhost is a must!
 			'127.0.0.1',
 			// CloudFlare IPs - https://www.cloudflare.com/ips/
-			// Sept. 2023 edition; make sure to keep updated or bad things happen!
+			// April. 2025 edition; make sure to keep updated or bad things happen!
+			// Please keep this list in the same order as listed on the above Cloudflare page for easy checking against that
 			'103.21.244.0/22',
 			'103.22.200.0/22',
 			'103.31.4.0/22',
