@@ -3772,13 +3772,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
-	'evelution' => [
-		'name' => 'Evelution',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Evelution',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
 	'femiwiki' => [
 		'name' => 'Femiwiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Femiwiki',
