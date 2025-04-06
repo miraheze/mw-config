@@ -88,6 +88,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'constantnoblewiki':
 		$wgDplSettings['maxResultCount'] = 2500;
+		$wgDplSettings['maxCategoryCount'] = 100;
 
 		break;
 	case 'dlfmwiki':
