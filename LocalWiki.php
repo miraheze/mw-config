@@ -58,17 +58,6 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
-	case 'arquivopkmnwiki':
-		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
-		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
-
-		$wgJsonConfigs['Map.JsonConfig']['license'] = 'CC0-1.0';
-		$wgJsonConfigs['Tabular.JsonConfig']['license'] = 'CC0-1.0';
-
-		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
-		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
-
-		break;
 	case 'battlebornwiki':
 	case 'gogiganticwiki':
 	case 'pizzatowerwiki':
@@ -99,20 +88,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'constantnoblewiki':
 		$wgDplSettings['maxResultCount'] = 2500;
-
-		break;
-	case 'datawikiwiki':
-		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
-
-		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
-			if ( $key === 'places' ) {
-				$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
-				$footerItems['github'] = $linkRenderer->makeExternalLink(
-					'https://github.com/Datawiki-online',
-					'GitHub', $skin->getTitle()
-				);
-			}
-		}
+		$wgDplSettings['maxCategoryCount'] = 100;
 
 		break;
 	case 'dlfmwiki':
@@ -647,30 +623,22 @@ switch ( $wi->dbname ) {
 
 		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
 			if ( $key === 'places' ) {
-				$footerlinks['lienhe'] = Html::element( 'a',
+				$footerlinks['lienhe'] = Html::rawElement( 'a',
 					[
 						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ',
-						'rel' => 'noreferrer noopener',
+						'rel' => 'nofollow noreferrer noopener',
 					],
 					$skin->msg( 'contactpage-label' )->text()
 				);
 
-				$footerlinks['banquyen'] = Html::element( 'a',
+				$footerlinks['banquyen'] = Html::rawElement( 'a',
 					[
 						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
-						'rel' => 'noreferrer noopener',
+						'rel' => 'nofollow noreferrer noopener',
 					],
 					$skin->msg( 'crpage-label' )->text()
 				);
 			}
-		}
-
-		break;
-	case 'libertygamewiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
-			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' );
 		}
 
 		break;
@@ -826,11 +794,6 @@ switch ( $wi->dbname ) {
 		$wgFilterLogTypes['comments'] = false;
 
 		break;
-	case 'nycsubwaywiki':
-		unset( $wgGroupPermissions['interwiki-admin'] );
-		unset( $wgGroupPermissions['no-ipinfo'] );
-
-		break;
 	case 'openfrontwiki':
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
@@ -848,15 +811,6 @@ switch ( $wi->dbname ) {
 		$wgLogos = [
 			'svg' => "https://static.wikitide.net/picrosswiki/0/0a/Pikuw.svg",
 		];
-		break;
-	case 'pokemundowiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
-			$out->addLink( [ 'rel' => 'preconnect', 'href' => 'https://fonts.gstatic.com' ] );
-			$out->addLink( [ 'rel' => 'stylesheet', 'href' => 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' ] );
-		}
-
 		break;
 	case 'paneidoversewiki':
 		$wgHooks['AdminLinks'][] = 'onAdminLinks';
@@ -933,22 +887,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'srewiki':
-		wfLoadExtension( 'LdapAuthentication' );
-
-		$wgAuthManagerAutoConfig['primaryauth'] += [
-			LdapPrimaryAuthenticationProvider::class => [
-				'class' => LdapPrimaryAuthenticationProvider::class,
-				'args' => [ [
-					// don't allow local non-LDAP accounts
-					'authoritative' => true,
-				] ],
-				// must be smaller than local pw provider
-				'sort' => 50,
-			],
-		];
-
-		break;
 	case 'testwikibeta':
 		$wgUserLevels = [
 			'Recruit' => 0,
@@ -1016,7 +954,6 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'traceprojectwikiwiki':
-	case 'vgportdbwiki':
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgDplSettings['allowUnlimitedResults'] = true;
 
@@ -1024,18 +961,6 @@ switch ( $wi->dbname ) {
 	case 'whentheycrywiki':
 		$wgGalleryOptions['imageWidth'] = 200;
 		$wgGalleryOptions['imageHeight'] = 200;
-
-		break;
-	case 'wonderingstarswiki':
-		$wgPivotFeatures = [
-			'showActionsForAnon' => false,
-			'fixedNavBar' => true,
-			'usePivotTabs' => true,
-			'showRecentChangesUnderTools' => false,
-		];
-		break;
-	case 'worldboxwiki':
-		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 
 		break;
 	case 'genshinimpactwiki':
