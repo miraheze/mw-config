@@ -1718,7 +1718,7 @@ $wgManageWikiSettings = [
 		'maxint' => 1800,
 		'overridedefault' => 1,
 		'section' => 'parserfunctions',
-		'help' => 'The Special:LinkTitles page performs batch processing of pages repeatedly calling itself, this happens to prevent timeouts of the server.',
+		'help' => 'The Special:LinkTitles page performs batch processing of pages by repeatedly calling itself, as a measure to prevent timeouts of the server.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
