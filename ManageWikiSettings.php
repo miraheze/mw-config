@@ -1657,7 +1657,7 @@ $wgManageWikiSettings = [
 		],
 	],
 	'wgLinkTitlesParseOnEdit' => [
-		'name' => 'Link Titles Prase On Edit',
+		'name' => 'Link Titles Parse On Edit',
 		'from' => 'linktitles',
 		'type' => 'check',
 		'overridedefault' => true,
