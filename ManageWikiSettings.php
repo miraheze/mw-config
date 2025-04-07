@@ -1680,7 +1680,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
-		'help' => 'Prasing will begin with shorter page titles first before longer page titles.',
+		'help' => 'Parsing will begin with shorter page titles first before longer page titles.',
 		'requires' => [],
 	],
 	'wgLinkTitlesSmartMode' => [
