@@ -908,6 +908,8 @@ switch ( $wi->dbname ) {
 				);
 			}
 		}
+	
+		break;
 	case 'testwikibeta':
 		$wgUserLevels = [
 			'Recruit' => 0,
