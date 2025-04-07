@@ -1671,7 +1671,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
-		'help' => 'Parse page content whenever the page is rendered for viewing, this will not add the links through wikitext.',
+		'help' => 'Parse page content whenever the page is rendered for viewing, instead of doing so whenever the page is saved.',
 		'requires' => [],
 	],
 	'wgLinkTitlesPreferShortTitles' => [
