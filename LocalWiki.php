@@ -887,6 +887,29 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'stopxwiki':
+		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
+	
+		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
+			if ( $key === 'places' ) {
+				$footerlinks['contact'] = Html::rawElement( 'a',
+					[
+						'href' => 'mailto:tekannabrand@gmail.com',
+						'rel' => 'nofollow noreferrer noopener',
+					],
+					$skin->msg( 'contactpage' )->text()
+				);
+				$footerlinks['stopxpolicy'] = Html::rawElement( 'a',
+					[
+						'href' => 'https://tekannabrand.org/wiki/TermsOfService',
+						'rel' => 'nofollow noreferrer noopener',
+					],
+					$skin->msg( 'stopxpolicypage' )->text()
+				);
+			}
+		}
+	
+		break;
 	case 'testwikibeta':
 		$wgUserLevels = [
 			'Recruit' => 0,
