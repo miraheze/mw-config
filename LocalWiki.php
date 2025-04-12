@@ -90,8 +90,6 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxResultCount'] = 2500;
 		$wgDplSettings['maxCategoryCount'] = 100;
 
-		// All of the below values except for SMW_DV_PVUC, are the defaults for $smwgDVFeatures
-		$smwgDVFeatures = SMW_DV_PROV_REDI | SMW_DV_MLTV_LCODE | SMW_DV_PVAP | SMW_DV_WPV_DTITLE | SMW_DV_TIMEV_CM | SMW_DV_PPLB | SMW_DV_PROV_LHNT | SMW_DV_PVUC;
 		break;
 	case 'dlfmwiki':
 		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
