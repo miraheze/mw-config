@@ -53,6 +53,8 @@ if ( !class_exists( SMW\Setup::class ) ) {
 if ( $wgDBname === 'constantnoblewiki' ) {
 	array_push( $smwgPageSpecialProperties, '_CDAT' );
 
+	$smwgDVFeatures = $smwgDVFeatures | SMW_DV_PVUC;
+
 	$smwgNamespacesWithSemanticLinks = [
 		NS_MAIN => true,
 		NS_TALK => false,
