@@ -163,6 +163,7 @@ $wgDLPMaxCacheTime = 604800;
 
 $wgDLPQueryCacheTime = 120;
 $wgDplSettings['queryCacheTime'] = 120;
+$wgDplSettings['recursivePreprocess'] = true;
 
 $wgSearchSuggestCacheExpiry = 10800;
 
