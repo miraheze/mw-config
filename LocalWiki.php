@@ -3,7 +3,6 @@
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\EditPage\EditPage;
 use MediaWiki\Html\Html;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
@@ -889,7 +888,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'stopxwiki':
 		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
-	
+
 		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
 			if ( $key === 'places' ) {
 				$footerlinks['contact'] = Html::rawElement( 'a',
@@ -908,7 +907,7 @@ switch ( $wi->dbname ) {
 				);
 			}
 		}
-	
+
 		break;
 	case 'testwikibeta':
 		$wgUserLevels = [
