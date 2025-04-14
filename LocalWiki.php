@@ -789,6 +789,10 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
+	case 'namuwitchwiki':
+		$wgDisableLangConversion = true;
+	
+		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
