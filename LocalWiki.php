@@ -791,7 +791,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'namuwitchwiki':
 		$wgDisableLangConversion = true;
-	
+
 		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
