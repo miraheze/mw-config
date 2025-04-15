@@ -3360,6 +3360,7 @@ $wgConf->settings += [
 			],
 			'electionadmin' => [
 				'securepoll-create-poll' => true,
+				'securepoll-edit-poll' => true,
 			],
 			'global-renamer' => [
 				'centralauth-rename' => true,
