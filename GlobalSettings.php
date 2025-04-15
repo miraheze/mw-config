@@ -773,7 +773,7 @@ if ( $mwTask ) {
 	} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner-high.' ) === 0 ) {
 		$wgMaxShellWallClockTime = 259200;
 	} else {
-		$wgMaxShellWallClockTime = 60;
+		$wgMaxShellWallClockTime = 1200;
 	}
 } else {
 	$wgMaxShellWallClockTime = 60;
