@@ -4770,6 +4770,9 @@ $wgConf->settings += [
 			'flow-topiclist-sortby' => 'newest',
 			'usecodemirror' => 1,
 		],
+		'+kaiserreichwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+kirbywiki' => [
 			'thumbsize' => 3,
 		],
