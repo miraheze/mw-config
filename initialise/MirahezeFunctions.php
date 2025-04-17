@@ -1137,7 +1137,7 @@ class MirahezeFunctions {
 		];
 
 		$mwSettings = new ManageWikiSettings( $dbName );
-		$setList = $mwSettings->list();
+		$setList = $mwSettings->list( null );
 		$formDescriptor['article-path'] = [
 			'label-message' => 'miraheze-label-managewiki-article-path',
 			'type' => 'select',
@@ -1202,7 +1202,7 @@ class MirahezeFunctions {
 
 		$mwSettings = new ManageWikiSettings( $dbName );
 
-		$articlePath = $mwSettings->list()['wgArticlePath'] ?? '';
+		$articlePath = $mwSettings->list( 'wgArticlePath' ) ?? '/wiki/$1';
 		if ( $formData['article-path'] !== $articlePath ) {
 			$mwSettings->modify( [ 'wgArticlePath' => $formData['article-path'] ] );
 			$mwSettings->commit();
@@ -1223,7 +1223,7 @@ class MirahezeFunctions {
 			);
 		}
 
-		$mainPageIsDomainRoot = $mwSettings->list()['wgMainPageIsDomainRoot'] ?? false;
+		$mainPageIsDomainRoot = $mwSettings->list( 'wgMainPageIsDomainRoot' ) ?? false;
 		if ( $formData['mainpage-is-domain-root'] !== $mainPageIsDomainRoot ) {
 			$mwSettings->modify( [ 'wgMainPageIsDomainRoot' => $formData['mainpage-is-domain-root'] ] );
 			$mwSettings->commit();
