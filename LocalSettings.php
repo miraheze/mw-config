@@ -4725,6 +4725,12 @@ $wgConf->settings += [
 		'+abyssalwiki' => [
 			'usecodemirror' => 1,
 		],
+		'+acwiki' => [
+			'usenewrc' = 0,
+			'thumbsize' = 3,
+			'rcenhancedfilters-disable' = 1,
+			'wlenhancedfilters-disable' = 1,
+		],
 		'+combatinitiationwiki' => [
 			'vector-theme' => 'os',
 		],
