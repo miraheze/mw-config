@@ -4726,10 +4726,10 @@ $wgConf->settings += [
 			'usecodemirror' => 1,
 		],
 		'+acwiki' => [
-			'usenewrc' = 0,
-			'thumbsize' = 3,
-			'rcenhancedfilters-disable' = 1,
-			'wlenhancedfilters-disable' = 1,
+			'usenewrc' => 0,
+			'thumbsize' => 3,
+			'rcenhancedfilters-disable' => 1,
+			'wlenhancedfilters-disable' => 1,
 		],
 		'+combatinitiationwiki' => [
 			'vector-theme' => 'os',
