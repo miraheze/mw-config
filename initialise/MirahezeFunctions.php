@@ -973,7 +973,6 @@ class MirahezeFunctions {
 				 'wiki_dbcluster',
 				 'wiki_dbname',
 				 'wiki_url',
-				 'wiki_primary_domain',
 				 'wiki_sitename',
 				 'wiki_deleted',
 				 'wiki_closed',
@@ -1011,7 +1010,7 @@ class MirahezeFunctions {
 
 				$extraData = json_decode( $wiki->wiki_extra ?: '[]', true );
 
-				$primaryDomain = ( $wiki->wiki_primary_domain ?? null ) ?: self::DEFAULT_SERVER[self::getRealm( $wiki->wiki_dbname )];
+				$primaryDomain = ( $extraData['primary-domain'] ?? null ) ?: self::DEFAULT_SERVER[self::getRealm( $wiki->wiki_dbname )];
 				$wikiVersion = ( $extraData['mediawiki-version'] ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 
 				$combiList[$wiki->wiki_dbname] = [
@@ -1190,18 +1189,19 @@ class MirahezeFunctions {
 	): void {
 		$version = self::getMediaWikiVersion( $dbName );
 		$mediawikiVersion = $formData['mediawiki-version'] ?? $version;
-
 		if ( $mediawikiVersion !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $mediawikiVersion ) ) {
-			$remoteWiki->setExtraFieldData( 'mediawiki-version', $mediawikiVersion, default: $version );
+			$remoteWiki->setExtraFieldData(
+				'mediawiki-version', $mediawikiVersion, default: $version
+			);
 		}
 
-		/* if ( $formData['primary-domain'] !== self::getPrimaryDomain( $dbName ) ) {
-			$remoteWiki->addNewRow( 'wiki_primary_domain', $formData['primary-domain'] );
-			$remoteWiki->trackChange( 'primary-domain',
-				self::getPrimaryDomain( $dbName ),
-				$formData['primary-domain']
+		$domain = self::getPrimaryDomain( $dbName );
+		$primaryDomain = $formData['primary-domain'] ?? $domain;
+		if ( $primaryDomain !== $domain ) {
+			$remoteWiki->setExtraFieldData(
+				'primary-domain', $primaryDomain, default: $domain
 			);
-		} */
+		}
 
 		$mwSettings = new ManageWikiSettings( $dbName );
 
