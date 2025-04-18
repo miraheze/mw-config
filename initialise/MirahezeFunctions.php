@@ -1186,7 +1186,7 @@ class MirahezeFunctions {
 		string $dbName,
 		array $formData
 	): void {
-		$version = self::getMediaWikiVersion( $dbName );
+		/* $version = self::getMediaWikiVersion( $dbName );
 		if ( $formData['mediawiki-version'] !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $formData['mediawiki-version'] ) ) {
 			$remoteWiki->addNewRow( 'wiki_version', $formData['mediawiki-version'] );
 			$remoteWiki->trackChange( 'mediawiki-version', $version, $formData['mediawiki-version'] );
@@ -1198,7 +1198,7 @@ class MirahezeFunctions {
 				self::getPrimaryDomain( $dbName ),
 				$formData['primary-domain']
 			);
-		}
+		} */
 
 		$mwSettings = new ManageWikiSettings( $dbName );
 
