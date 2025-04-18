@@ -2003,6 +2003,22 @@ $wgConf->settings += [
 			],
 		],
 	],
+	'systemsgeneralwiki' => [
+		 	   'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Miraheze-Logo.svg/2048px-Miraheze-Logo.svg.png',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://upload.wikimedia.org/wikipedia/commons/a/a3/MediaWiki_logo_1.png',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
 	],
