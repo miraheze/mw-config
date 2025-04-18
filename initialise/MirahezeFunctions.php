@@ -1189,7 +1189,7 @@ class MirahezeFunctions {
 		array $formData
 	): void {
 		$version = self::getMediaWikiVersion( $dbName );
-		$mediawikiVersion = $formData['mediawiki-version'] ?? null;
+		$mediawikiVersion = $formData['mediawiki-version'] ?? $version;
 
 		if ( $mediawikiVersion !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $mediawikiVersion ) ) {
 			$remoteWiki->setExtraFieldData( 'mediawiki-version', $mediawikiVersion, default: $version );
