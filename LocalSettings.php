@@ -1937,6 +1937,27 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'systemsgeneralwiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://wiki.zaori.org/w/images/0/0c/MediaWiki_logo.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://grahamnoble.com/wp-content/uploads/2018/05/by-nc-nd-300x105.png',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'CC BY-NC-SA 4.0',
+				],
+			],
+		],
 		'tnowiki' => [
 			'poweredby' => [
 				'mediawiki' => [
@@ -2002,22 +2023,6 @@ $wgConf->settings += [
 				],
 			],
 		],
-	],
-	'systemsgeneralwiki' => [
-		 	   'hostedby' => [
-				'miraheze' => [
-					'src' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Miraheze-Logo.svg/2048px-Miraheze-Logo.svg.png',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
-					'alt' => 'Hosted by Miraheze',
-				],
-			],
-			'poweredby' => [
-				'mediawiki' => [
-					'src' => 'https://upload.wikimedia.org/wikipedia/commons/a/a3/MediaWiki_logo_1.png',
-					'url' => 'https://www.mediawiki.org',
-					'alt' => 'Powered by MediaWiki',
-				],
-			],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
