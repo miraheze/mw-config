@@ -3137,39 +3137,9 @@ $wgConf->settings += [
 	],
 
 	// ManageWiki
-	'wgManageWiki' => [
-		'default' => [
-			'core' => true,
-			'extensions' => true,
-			'namespaces' => true,
-			'permissions' => true,
-			'settings' => true
-		],
-	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgManageWikiDatabaseClustersInactive' => [
 		'default' => [],
-	],
-	'wgManageWikiInactiveExemptReasonOptions' => [
-		'default' => [
-			'Wiki completed and made to be read' => 'comp',
-			'Wiki made for time-based gathering' => 'tbg',
-			'Wiki made to be read' => 'mtr',
-			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
-			'Other, see DPE' => 'other',
-		],
-	],
-	'wgManageWikiModulesEnabled' => [
-		'default' => [
-			'core' => true,
-			'extensions' => true,
-			'namespaces' => true,
-			'permissions' => true,
-			'settings' => true,
-		],
-	],
-	'wgManageWikiUseCustomDomains' => [
-		'default' => true,
 	],
 	'wgManageWikiExtensionsDefault' => [
 		'default' => [
@@ -3190,7 +3160,47 @@ $wgConf->settings += [
 			'wikiseo',
 		],
 	],
+	'wgManageWikiForceSidebarLinks' => [
+		'default' => false,
+	],
+	'wgManageWikiHelpUrl' => [
+		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
+	],
+	'wgManageWikiInactiveExemptReasonOptions' => [
+		'default' => [
+			'Wiki completed and made to be read' => 'comp',
+			'Wiki made for time-based gathering' => 'tbg',
+			'Wiki made to be read' => 'mtr',
+			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
+			'Other, see DPE' => 'other',
+		],
+	],
+	'wgManageWikiModulesEnabled' => [
+		'default' => [
+			'core' => true,
+			'extensions' => true,
+			'namespaces' => true,
+			'permissions' => true,
+			'settings' => true,
+		],
+	],
 	'wgManageWikiPermissionsAdditionalAddGroups' => [
+		'default' => [],
+		'sesupportwiki' => [
+			'sysop' => [
+				'editor',
+			],
+		],
+		'metawiki' => [
+			'techteam' => [
+				'techteam',
+			],
+			'trustandsafety' => [
+				'trustandsafety',
+			],
+		],
+	],
+	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
 		'default' => [],
 		'sesupportwiki' => [
 			'sysop' => [
@@ -3594,20 +3604,22 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wgManageWikiPermissionsAdditionalRemoveGroups' => [
-		'default' => [],
-		'sesupportwiki' => [
-			'sysop' => [
-				'editor',
-			],
+	'wgManageWikiPermissionsDefaultPrivateGroup' => [
+		'default' => 'member',
+	],
+	'wgManageWikiPermissionsDisallowedGroups' => [
+		'default' => [
+			'checkuser',
+			'smwadministrator',
+			'oversight',
+			'steward',
+			'staff',
+			'suppress',
+			'techteam',
+			'trustandsafety',
 		],
-		'metawiki' => [
-			'techteam' => [
-				'techteam',
-			],
-			'trustandsafety' => [
-				'trustandsafety',
-			],
+		'+metawiki' => [
+			'electionadmin',
 		],
 	],
 	'wgManageWikiPermissionsDisallowedRights' => [
@@ -3738,29 +3750,8 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wgManageWikiPermissionsDisallowedGroups' => [
-		'default' => [
-			'checkuser',
-			'smwadministrator',
-			'oversight',
-			'steward',
-			'staff',
-			'suppress',
-			'techteam',
-			'trustandsafety',
-		],
-		'+metawiki' => [
-			'electionadmin',
-		],
-	],
-	'wgManageWikiPermissionsDefaultPrivateGroup' => [
-		'default' => 'member',
-	],
-	'wgManageWikiHelpUrl' => [
-		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
-	],
-	'wgManageWikiForceSidebarLinks' => [
-		'default' => false,
+	'wgManageWikiUseCustomDomains' => [
+		'default' => true,
 	],
 
 	// Maps
