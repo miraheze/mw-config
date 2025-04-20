@@ -71,6 +71,10 @@ class SettingsTest extends ManageWikiTestCase {
 									'description' => 'see above, just outputs are $this => $bool.',
 								],
 								[
+									'const' => 'list-multi-int',
+									'description' => 'see above, just saves values as a list of integers rather than strings.',
+								],
+								[
 									'const' => 'matrix',
 									'description' => 'adds an array of "columns" and "rows". Columns are the top array and rows will be the values.',
 								],
@@ -128,9 +132,6 @@ class SettingsTest extends ManageWikiTestCase {
 								],
 							],
 							'required' => true,
-						],
-						'list-multi-int' => [
-							'type' => 'boolean',
 						],
 						'overridedefault' => [
 							'required' => true,
