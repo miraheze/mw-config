@@ -3159,6 +3159,15 @@ $wgConf->settings += [
 			'Other, see DPE' => 'other',
 		],
 	],
+	'wgManageWikiModulesEnabled' => [
+		'default' => [
+			'core' => true,
+			'extensions' => true,
+			'namespaces' => true,
+			'permissions' => true,
+			'settings' => true,
+		],
+	],
 	'wgManageWikiUseCustomDomains' => [
 		'default' => true,
 	],
