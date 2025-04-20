@@ -129,6 +129,9 @@ class SettingsTest extends ManageWikiTestCase {
 							],
 							'required' => true,
 						],
+						'list-multi-int' => [
+							'type' => 'boolean',
+						],
 						'overridedefault' => [
 							'required' => true,
 							'description' => 'a string/array override default when no existing value exist.',
