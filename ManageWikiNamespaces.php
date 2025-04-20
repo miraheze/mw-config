@@ -30,6 +30,7 @@
  * list: adds a list of options (requires: options, which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
  * list-multi-bool: see above, just outputs are $this => $bool.
+ * list-multi-int: see above, just saves values as a list of integers rather than strings.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * preferences: adds a drop-down selection box for selecting multiple user preferences.
  * skin: adds a drop-down selection box for selecting a single enabled skin.
