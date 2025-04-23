@@ -1107,7 +1107,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgCreateWikiUseJobQueue' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgRequestWikiMinimumLength' => [
 		'default' => 350,
