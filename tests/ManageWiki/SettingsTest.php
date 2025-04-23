@@ -159,6 +159,12 @@ class SettingsTest extends ManageWikiTestCase {
 								self::REGEX_READABLE => []
 							]
 						],
+						'minfloat' => [
+							'type' => 'float',
+						],
+						'maxfloat' => [
+							'type' => 'float',
+						],
 						'minint' => [
 							'type' => 'integer',
 						],
