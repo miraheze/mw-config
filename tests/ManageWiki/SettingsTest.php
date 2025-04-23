@@ -160,10 +160,10 @@ class SettingsTest extends ManageWikiTestCase {
 							]
 						],
 						'minfloat' => [
-							'type' => 'double',
+							'type' => 'number',
 						],
 						'maxfloat' => [
-							'type' => 'double',
+							'type' => 'number',
 						],
 						'minint' => [
 							'type' => 'integer',
