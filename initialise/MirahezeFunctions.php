@@ -710,7 +710,13 @@ class MirahezeFunctions {
 		// Handle namespaces
 		if ( isset( $cacheArray['namespaces'] ) ) {
 			foreach ( $cacheArray['namespaces'] as $name => $ns ) {
-				$settings['wgExtraNamespaces']['default'][(int)$ns['id']] = $name;
+				if ( (int)$ns['id'] === NS_PROJECT ) {
+					$settings['wgMetaNamespace']['default'] = $name;
+				} elseif ( (int)$ns['id'] === NS_PROJECT_TALK ) {
+					$settings['wgMetaNamespaceTalk']['default'] = $name;
+				} else {
+					$settings['wgExtraNamespaces']['default'][(int)$ns['id']] = $name;
+				}
 				$settings['wgNamespacesToBeSearchedDefault']['default'][(int)$ns['id']] = $ns['searchable'];
 				$settings['wgNamespacesWithSubpages']['default'][(int)$ns['id']] = $ns['subpages'];
 				$settings['wgNamespaceContentModels']['default'][(int)$ns['id']] = $ns['contentmodel'];

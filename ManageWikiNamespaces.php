@@ -61,30 +61,6 @@
  */
 
 $wgManageWikiNamespacesAdditional = [
-	'wgMetaNamespace' => [
-		'name' => 'What should the main namespace name for the project namespace be?',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'main' => true,
-		'talk' => false,
-		'constant' => true,
-		'only' => NS_PROJECT,
-		'overridedefault' => str_replace( [ ' ', ':' ], '_', $wgSitename ),
-		'help' => 'Also be sure to update <code>$wgMetaNamespaceTalk</code>.',
-		'requires' => [],
-	],
-	'wgMetaNamespaceTalk' => [
-		'name' => 'What should the talk namespace name for the project namespace be?',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'main' => false,
-		'talk' => true,
-		'constant' => true,
-		'only' => NS_PROJECT_TALK,
-		'overridedefault' => str_replace( [ ' ', ':' ], '_', "{$wgSitename}_talk" ),
-		'help' => 'Also be sure to update <code>$wgMetaNamespace</code>.',
-		'requires' => [],
-	],
 	'wgExtraSignatureNamespaces' => [
 		'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages?',
 		'from' => 'mediawiki',
