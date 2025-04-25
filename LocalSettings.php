@@ -6830,6 +6830,14 @@ $wgConf->settings += [
 		'default' => '1.34',
 		'beta' => false,
 	],
+
+	// Meta namespace
+	'wgMetaNamespace' => [
+		'default' => str_replace( [ ' ', ':' ], '_', $wi->sitename ),
+	],
+	'wgMetaNamespaceTalk' => [
+		'default' => str_replace( [ ' ', ':' ], '_', "{$wi->sitename}_talk" ),
+	],
 ];
 
 // Start settings requiring external dependency checks/functions
