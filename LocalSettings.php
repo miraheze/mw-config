@@ -5201,7 +5201,7 @@ $wgConf->settings += [
 		'projectsekaiwiki' => [
 			'editguide',
 		],
-		'swordartonlinezhwiki' => [
+		'saozhwiki' => [
 			'edittech',
 			'editextended',
 			'editpatrol',
