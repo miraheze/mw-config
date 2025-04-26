@@ -154,7 +154,7 @@ $wgManageWikiNamespacesAdditional = [
 			array_fill_keys( $wgContentNamespaces, true ),
 			[ 'default' => false ]
 		),
-		'help' => 'If this is enabled, the <code>__INDEX__</code> and <code>__NOINDEX__</code> magic words will not function in this namespace.',
+		'help' => 'If this is enabled, the <code><nowiki>__INDEX__</nowiki></code> and <code><nowiki>__NOINDEX__</nowiki></code> magic words will not function in this namespace.',
 		'requires' => [],
 	],
 	'egApprovedRevsEnabledNamespaces' => [
