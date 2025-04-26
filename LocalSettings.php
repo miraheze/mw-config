@@ -6850,17 +6850,17 @@ if ( wfHostname() === 'test151' ) {
 // ManageWiki settings
 require_once __DIR__ . '/ManageWikiExtensions.php';
 $wi::$disabledExtensions = [
-	'drafts' => '<a href="https://issue-tracker.miraheze.org/T11970">T11970</a>',
-	'pageproperties' => '<a href="https://issue-tracker.miraheze.org/T11641">T11641</a>',
-	'score' => '<a href="https://issue-tracker.miraheze.org/T5863">T5863</a>',
-	'simpleblogpage' => '<a href="https://issue-tracker.miraheze.org/T13252">T13252</a>',
-	'wikiforum' => '<a href="https://issue-tracker.miraheze.org/T13064">T13064</a>',
+	'drafts' => '[[phorge:T11970|T11970]]',
+	'pageproperties' => '[[phorge:T11641|T11641]]',
+	'score' => '[[phorge:T5863|T5863]]',
+	'simpleblogpage' => '[[phorge:T13252|T13252]]',
+	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
 
-	'chameleon' => 'Incompatible with MediaWiki 1.42',
-	'femiwiki' => 'Incompatible with MediaWiki 1.42',
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.42',
+	'chameleon' => 'Incompatible with MediaWiki 1.43',
+	'femiwiki' => 'Incompatible with MediaWiki 1.43',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.43',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();

@@ -1499,7 +1499,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
-		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s <a href="https://www.mediawiki.org/wiki/Module:String">documentation page</a>',
+		'help' => 'This option adds support a couple of functions for basic string handling. Example: #pos function returns the position of a given search term within the string. You can learn more in MediaWiki\'s [https://www.mediawiki.org/wiki/Module:String documentation page].',
 		'requires' => [],
 	],
 	'wgAllowDisplayTitle' => [
@@ -3343,7 +3343,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
 		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
+		'help' => 'This will replace Miraheze\'s default logo. See [[m:Special:MyLanguage/ManageWiki|this link]] for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
 		'requires' => [],
 	],
 	'wgFavicon' => [
@@ -3353,7 +3353,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => '/favicon.ico',
 		'section' => 'styling',
-		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> for how you can add one.',
+		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See [[m:Special:MyLanguage/ManageWiki|this link]] for how you can add one.',
 		'requires' => [],
 	],
 	'wgAppleTouchIcon' => [
@@ -3363,7 +3363,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => '/apple-touch-icon.png',
 		'section' => 'styling',
-		'help' => 'Favicon for Apple mobile devices. See <a href="https://meta.miraheze.org/wiki/ManageWiki#How_do_I_change_my_logo.2Ffavicon.3F">this link</a> on how you can add one.',
+		'help' => 'Favicon for Apple mobile devices. See [[m:Special:MyLanguage/ManageWiki|this link]] on how you can add one.',
 		'requires' => [],
 	],
 	'wgWordmark' => [
@@ -3429,7 +3429,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => '',
 		'section' => 'styling',
-		'help' => 'Set to your wiki\'s page name at <a href="https://www.wikiapiary.com">Wikiapiary</a> to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
+		'help' => 'Set to your wiki\'s page name at [https://www.wikiapiary.com Wikiapiary] to add the monitored by Wikiapary footer icon. If you do not have an article there for your wiki, please leave this field blank.',
 		'requires' => [],
 	],
 	'wgCosmosEnabledRailModules' => [
@@ -3841,7 +3841,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles">MediaWiki:Metrolook-tiles</a>. If "Metrolook Down Arrow" is set and "Metrolook Bartile" is not set, then the tile menu will be generated from <a href="/wiki/MediaWiki:Metrolook-tiles-second">MediaWiki:Metrolook-tiles-second</a>.',
+		'help' => 'When "Metrolook Down Arrow" is enabled and "Metrolook Bartile" is enabled, the tile menu will be generated from [[MediaWiki:Metrolook-tiles]]. If "Metrolook Down Arrow" is set and "Metrolook Bartile" is not set, then the tile menu will be generated from [[MediaWiki:Metrolook-tiles-second]].',
 		'requires' => [],
 	],
 	'wgMetrolookMobile' => [
