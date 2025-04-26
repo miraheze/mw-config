@@ -409,14 +409,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'customsearchprofiles' => [
-		'name' => 'CustomSearchProfiles',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CustomSearchProfiles',
-		'help' => 'Note: This extension is currently not configurable in ManageWiki. Please create a task on Phorge or a pull request to configure it.',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'other',
-	],
 	'customsubtitle' => [
 		'name' => 'CustomSubtitle',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CustomSubtitle',
@@ -1437,14 +1429,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'featuredfeeds' => [
-		'name' => 'FeaturedFeeds',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FeaturedFeeds',
-		'help' => '<b>Configuration of </b><code>$wgFeaturedFeeds</code><b> is not possible in ManageWiki.</b><br/> File a task on <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Phorge">Phorge</a> or a pull request on our mw-config repository with the desired configuration',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'other'
-	],
 	'flaggedrevs' => [
 		'name' => 'FlaggedRevs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FlaggedRevs',
@@ -1820,7 +1804,7 @@ $wgManageWikiExtensions = [
 	'replacetext' => [
 		'name' => 'Replace Text',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Replace_Text',
-		'help' => 'Stewards and Wiki Mechanics: This extension should NOT be enabled on wikis created before 12 May 2024 without consulting the <a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Tech:Volunteers" target="_blank">Technology Team</a> first',
+		'help' => 'Stewards and Wiki Mechanics: This extension should NOT be enabled on wikis created before 12 May 2024 without consulting the [[m:Special:MyLanguage/Tech:Volunteers|Technology Team]] first.',
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
@@ -2270,6 +2254,14 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'customsearchprofiles' => [
+		'name' => 'CustomSearchProfiles',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CustomSearchProfiles',
+		'help' => 'Note: This extension is currently not configurable in ManageWiki. Please create a task on Phorge or a pull request to configure it.',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'darkmode' => [
 		'name' => 'DarkMode',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DarkMode',
@@ -2362,6 +2354,14 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'section' => 'other',
+	],
+	'featuredfeeds' => [
+		'name' => 'FeaturedFeeds',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FeaturedFeeds',
+		'help' => '<b>Configuration of</b> <code>$wgFeaturedFeeds</code> <b>is not possible in ManageWiki.</b>\nFile a task on [[m:Special:MyLanguage/Phorge|Phorge]] or a pull request on our mw-config repository with the desired configuration.',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other'
 	],
 	'flexdiagrams' => [
 		'name' => 'Flex Diagrams',
