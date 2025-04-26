@@ -8,10 +8,6 @@ class ExtensionsTest extends ManageWikiTestCase {
 			'type' => 'array',
 			'additionalProperties' => false,
 			'properties' => [
-				'files' => [
-					'type' => 'array',
-					'description' => 'mapped to location => source.',
-				],
 				'mwscript' => [
 					'type' => 'array',
 					'description' => 'mapped to script path => array of options.',
