@@ -944,13 +944,13 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
-			'c1',
-			'c2',
-			'c3',
-			'c4',
+			'db151 (c1)' => 'c1',
+			'db161 (c2)' => 'c2',
+			'db171 (c3)' => 'c3',
+			'db181 (c4)' => 'c4',
 		],
 		'beta' => [
-			'c1',
+			'db172 (c1)' => 'c1',
 		],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
