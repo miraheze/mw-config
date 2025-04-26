@@ -8,7 +8,7 @@ use stdClass;
 
 abstract class ManageWikiTestCase extends TestCase {
 
-	public const REGEX_READABLE = '^(?!.*<a href=)(?!.*<br\s*/?>)([A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+\\n?)*$';
+	public const REGEX_READABLE = '^(?!.*<a href=)(?!.*<br\s*/?>)([A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+(\\n)?)*$';
 	public const REGEX_CONFIG = '^(wg|eg|wmg|wgex|smwg)[A-Z_][a-zA-Z0-9_]*$';
 
 	abstract public function getSchema(): array;
