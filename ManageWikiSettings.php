@@ -1509,7 +1509,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
-		'help' => 'Allows use of {{DISPLAYTITLE}} magic word.',
+		'help' => 'Allows use of <nowiki>{{DISPLAYTITLE}}</nowiki> magic word.',
 		'requires' => [],
 	],
 	'wgRestrictDisplayTitle' => [
@@ -1519,7 +1519,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
-		'help' => 'Restrict {{DISPLAYTITLE}} to titles that normalize to the same canonical database key. Wikis with NoTitle extension installed have this config unset.',
+		'help' => 'Restrict <nowiki>{{DISPLAYTITLE}}</nowiki> to titles that normalize to the same canonical database key. Wikis with NoTitle extension installed have this config unset.',
 		'requires' => [],
 	],
 	'wgPortableInfoboxResponsiblyOpenCollapsed' => [
@@ -1618,7 +1618,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'parserfunctions',
-		'help' => 'If a page that is linked on the current page contains the magic word __NOAUTOLINKTARGET__, then the page title is returned as-is and is unlinked.',
+		'help' => 'If a page that is linked on the current page contains the magic word <nowiki>__NOAUTOLINKTARGET__</nowiki>, then the page title is returned as-is and is unlinked.',
 		'requires' => [],
 	],
 	'wgLinkTitlesFirstOnly' => [
@@ -1627,7 +1627,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
-		'help' => 'Only link the first occurence of a pages title on any given page, this does not cover piped links that replace page titles e.g. [[Foobar|Foo Bar]].',
+		'help' => 'Only link the first occurence of a pages title on any given page, this does not cover piped links that replace page titles e.g. <nowiki>[[Foobar|Foo Bar]]</nowiki>.',
 		'requires' => [],
 	],
 	'wgLinkTitlesMinimumTitleLength' => [
@@ -4368,7 +4368,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'wikibase',
-		'help' => 'Allow the use of <code>{{#statements:}}</code> parser functions with UnlinkedWikibase.',
+		'help' => 'Allow the use of <code><nowiki>{{#statements:}}</nowiki></code> parser functions with UnlinkedWikibase.',
 		'requires' => [],
 	],
 	'wgWBQualityConstraintsInstanceOfId' => [
