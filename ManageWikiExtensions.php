@@ -25,7 +25,6 @@
  *
  * 'install'/'remove' can be one of:
  *
- * files: array, mapped to location => source.
  * mwscript: array, mapped to script path => array of options.
  * namespaces: array of which namespaces and namespace data to install with extension; 'remove' only needs namespace ID.
  * permissions: array of which permissions to install with extension.
