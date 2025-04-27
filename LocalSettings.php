@@ -4879,7 +4879,7 @@ $wgConf->settings += [
 		'default' => [],
 		'metawiki' => [
 			'requestwiki' => [
-				'user' => [ 2, 86400 ],
+				'user' => [ 1, 259200 ],
 			],
 		],
 	],
