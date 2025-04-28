@@ -1124,8 +1124,6 @@ class MirahezeFunctions {
 		bool $ceMW,
 		array &$formDescriptor
 	): void {
-		$permissionManager = MediaWikiServices::getInstance()->getPermissionManager();
-
 		$mwVersion = self::getMediaWikiVersion( $dbName );
 		$versions = array_unique( array_filter( self::MEDIAWIKI_VERSIONS, static function ( $version ) use ( $mwVersion ): bool {
 			return $mwVersion === $version || is_dir( self::MEDIAWIKI_DIRECTORY . $version );
@@ -1138,7 +1136,7 @@ class MirahezeFunctions {
 			'type' => 'select',
 			'options' => array_combine( self::ALLOWED_DOMAINS[self::getRealm( $dbName )], self::ALLOWED_DOMAINS[self::getRealm( $dbName )] ),
 			'default' => self::getPrimaryDomain( $dbName ),
-			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
 			'cssclass' => 'managewiki-infuse',
 			'section' => 'main',
 		];
@@ -1153,7 +1151,7 @@ class MirahezeFunctions {
 				'miraheze-label-managewiki-article-path-root' => '/$1',
 			],
 			'default' => $setList['wgArticlePath'] ?? '/wiki/$1',
-			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
 			'cssclass' => 'managewiki-infuse',
 			'section' => 'main',
 		];
@@ -1162,7 +1160,7 @@ class MirahezeFunctions {
 			'label-message' => 'miraheze-label-managewiki-mainpage-is-domain-root',
 			'type' => 'check',
 			'default' => $setList['wgMainPageIsDomainRoot'] ?? false,
-			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
 			'cssclass' => 'managewiki-infuse',
 			'section' => 'main',
 		];
@@ -1172,7 +1170,7 @@ class MirahezeFunctions {
 			'type' => 'select',
 			'options' => array_combine( $versions, $versions ),
 			'default' => $mwVersion,
-			'disabled' => !$permissionManager->userHasRight( $context->getUser(), 'managewiki-restricted' ),
+			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
 			'cssclass' => 'managewiki-infuse',
 			'section' => 'main',
 		];
