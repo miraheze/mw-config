@@ -595,6 +595,9 @@ $wgConf->settings += [
 	'wgCitizenMaxSearchResults' => [
 		'default' => 6,
 	],
+	'wgCitizenEnableCommandPalette' => [
+		'default' => false,
+	],
 	'wgCitizenEnableCJKFonts' => [
 		'default' => false,
 	],
