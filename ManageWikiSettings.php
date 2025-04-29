@@ -459,7 +459,7 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
- 	'wgWPBBannerProperty' => [
+	'wgWPBBannerProperty' => [
 		'name' => 'WikidataPageBanner Banner Property',
 		'from' => 'wikidatapagebanner',
 		'type' => 'text',
