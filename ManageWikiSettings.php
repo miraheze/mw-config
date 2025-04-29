@@ -924,8 +924,33 @@ $wgManageWikiSettings = [
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
 		'requires' => [],
 	],
+	'wgMFAmcOutreach' => [
+		'name' => 'MobileFrontend AMC Outreach',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Whether the AMC Outreach feature is available for users.',
+		'requires' => [],
+	],
+	'wgMFAmcOutreachMinEditCount' => [
+ 		'name' => 'MobileFrontend AMC Outreach Min Edit Count',
+   		'from' => 'mobilefrontend',
+     		'type' => 'integer',
+       		'minint' => 0,
+		'maxint' => 1000,
+  		'overridedefault' => 100,
+    		'sectiom' => 'editing',
+      		'help' => 'When AMC Outreach is enabled, this option sets the minimum number of edits a user must make before they are eligible to see the AMC Outreach feature.',
+		'requires' => [
+  			'settings' => [
+     				'setting' => 'wgMFAmcOutreach',
+	 			'value' => true,
+			],
+		],
+	],
 	'wgMFAdvancedMobileContributions' => [
-		'name' => 'MobileFrontend',
+		'name' => 'MobileFrontend Advanced Mobile Contributions',
 		'from' => 'mobilefrontend',
 		'type' => 'check',
 		'overridedefault' => true,
@@ -965,7 +990,7 @@ $wgManageWikiSettings = [
 		],
 	],
 	'wgMFFallbackEditor' => [
-		'name' => 'MobileFrontend ',
+		'name' => 'MobileFrontend Fallback Editor',
 		'from' => 'mobilefrontend',
 		'type' => 'list',
 		'overridedefault' => 'visual',
@@ -981,8 +1006,17 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgMFLogWrappedInfoboxes' => [
+		'name' => 'MobileFrontend Wrapped Infoboxes',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Log when finding infoboxes that are wrapped with a container.',
+		'requires' => [],
+	],
 	'wgMFShowFirstParagraphBeforeInfobox' => [
-		'name' => 'MobileFrontend',
+		'name' => 'MobileFrontend Show First Paragraph Before Infobox',
 		'from' => 'mobilefrontend',
 		'type' => 'list-multi-bool',
 		'allopts' => [
@@ -1019,6 +1053,29 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'editing',
 		'help' => 'Enables WikiEditor\'s Realtime Preview mode which shows you a realtime preview of your edits in a side pane.',
+		'requires' => [],
+	],
+	'wgMFUseDesktopSpecialEditWatchlistPage' => [
+		'name' => 'MobileFrontend Use Desktop Special Edit Watchlist Page',
+		'from' => 'mobilefrontend',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'amc',
+			'beta',
+			'base',
+		],
+		'options' => [
+			'Poll' => 'amc',
+			'PictureGame' => 'beta',
+			'Quiz' => 'base',
+		],
+		'overridedefault' => [
+			'amc' => true,
+			'beta' => false,
+			'base' => false,
+		],
+		'section' => 'editing',
+		'help' => 'Enables the desktop version of the Special:EditWatchlist page, can be overriden by user preferences.',
 		'requires' => [],
 	],
 	'wgVisualEditorEnableWikitext' => [
