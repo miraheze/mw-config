@@ -6477,7 +6477,7 @@ $wgConf->settings += [
 
 	// WikidataPageBanner
 	'wgWPBImage' => [
-		"default" => "foo.jpg",
+		"default" => null,
 	],
 	'wgWPBBannerProperty' => [
 		"default" => "P948",
