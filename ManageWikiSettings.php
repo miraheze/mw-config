@@ -4480,8 +4480,8 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
-	'wgMFDisplayWikibaseDescriptions' => [
-		'name' => 'MobileFrontend Display Wikibase Descriptions',
+	'wgMFEnableWikidataDescriptions' => [
+		'name' => 'MobileFrontend Enable Wikidata Descriptions',
 		'from' => 'mobilefrontend',
 		'type' => 'list-multi-bool',
 		'allopts' => [
