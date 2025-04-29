@@ -6477,26 +6477,26 @@ $wgConf->settings += [
 
 	// WikidataPageBanner
 	'wgWPBImage' => [
-		"default" => null,
+		'default' => null,
 	],
 	'wgWPBBannerProperty' => [
-		"default" => "P948",
+		'default' => "P948",
 	],
 	'wgWPBEnableDefaultBanner' => [
-		"default" => true,
+		'default' => true,
 	],
 	'wgWPBNamespaces' => [
-		"default" => [
+		'default' => [
 			NS_MAIN
 		],
 	],
 	'wgWPBDisabledNamespaces' => [
-		"default" => [
+		'default' => [
 			NS_FILE
 		],
 	],
 	'wgWPBStandardSizes' => [
-		"default" => [
+		'default' => [
 			320,
 			640,
 			1280,
@@ -6504,18 +6504,18 @@ $wgConf->settings += [
 		],
 	],
 	'wgWPBEnablePageImagesBanners' => [
-		"default" => true,
+		'default' => true,
 	],
 	'wgWPBDisplaySubtitleAfterBannerSkins' => [
-		"default" => [
+		'default' => [
 			"minerva"
 		],
 	],
 	'wgWPBEnableHeadingOverride' => [
-		"default" => true,
+		'default' => true,
 	],
 	'wgWPBEnableMainPage' => [
-		"default" => false,
+		'default' => false,
 	],
 
 	// WikiDiscover
