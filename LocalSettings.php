@@ -6480,7 +6480,7 @@ $wgConf->settings += [
 		'default' => null,
 	],
 	'wgWPBBannerProperty' => [
-		'default' => "P948",
+		'default' => 'P948',
 	],
 	'wgWPBEnableDefaultBanner' => [
 		'default' => true,
