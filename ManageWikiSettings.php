@@ -590,6 +590,15 @@ $wgManageWikiSettings = [
 		'help' => 'This makes Media Viewer a beta feature thus this will not be enabled for all users.',
 		'requires' => [],
 	],
+	'wgMFEnableBeta' => [
+		'name' => 'MobileFrontend Enable Beta',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'beta',
+		'help' => 'Whether to enable beta mode to allow experimental features for anonymous users.',
+		'requires' => [],
+	],
 	'wgPopupsReferencePreviewsBetaFeature' => [
 		'name' => 'Popups Reference Previews Beta Feature',
 		'from' => 'popups',
@@ -915,6 +924,83 @@ $wgManageWikiSettings = [
 		'help' => 'The number of days within which a person must make edits to be considered an "active" user.',
 		'requires' => [],
 	],
+	'wgMFAdvancedMobileContributions' => [
+		'name' => 'MobileFrontend',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'Whether Advanced mode is enabled for mobile users or not.',
+		'requires' => [],
+	],
+	'wgMFEnableVEWikitextEditor' => [
+		'name' => 'MobileFrontend Enable VisualEditor\'s Wikitext Editor Mode',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Enable Extension:VisualEditor\'s wikitext editor instead of MobileFrontend\'s source editor.',
+		'requires' => [
+			'extensions' => [
+				'visualeditor',
+			],
+		],
+	],
+	'wgMFDefaultEditor' => [
+		'name' => 'MobileFrontend Default Editor',
+		'from' => 'mobilefrontend',
+		'type' => 'list',
+		'overridedefault' => 'preference',
+		'options' => [
+			'Source editor' => 'source',
+			'Visual editor' => 'visual',
+			'Default to user preferences' => 'preference',
+		],
+		'section' => 'editing',
+		'help' => 'Default mobile editor to use when there is no user preference set.',
+		'requires' => [
+			'extensions' => [
+				'visualeditor',
+			],
+		],
+	],
+	'wgMFFallbackEditor' => [
+		'name' => 'MobileFrontend ',
+		'from' => 'mobilefrontend',
+		'type' => 'list',
+		'overridedefault' => 'visual',
+		'options' => [
+			'Source editor' => 'source',
+			'Visual editor' => 'visual'
+		],
+		'section' => 'editing',
+		'help' => 'When $wgMFDefaultEditor is set to <code>preference</code> and no desktop preference is set, use this editor. Set to <code>source</code> or <code>visual</code>.',
+		'requires' => [
+			'extensions' => [
+				'visualeditor',
+			],
+		],
+	],
+	'wgMFShowFirstParagraphBeforeInfobox' => [
+		'name' => 'MobileFrontend',
+		'from' => 'mobilefrontend',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'beta',
+			'base',
+		],
+		'options' => [
+			'Beta  feature' => 'beta',
+			'Default' => 'base',
+		],
+		'overridedefault' => [
+			'beta' => true,
+			'base' => true,
+		],
+		'section' => 'editing',
+		'help' => 'Move the first paragraph of the article to be placed before the infobox.',
+		'requires' => [],
+	],
 	'wgShowCreditsIfMax' => [
 		'name' => 'Editing attribution',
 		'from' => 'mediawiki',
@@ -1005,29 +1091,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'editing',
 		'help' => 'Enable various changes around searching for template names. (experimental)',
-		'requires' => [],
-	],
-	'wgMFCollapseSectionsByDefault' => [
-		'name' => 'Collapse sections by default on MobileFrontend',
-		'from' => 'mobilefrontend',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Enabling this will collapse sections by default when the page loads when using MobileFrontend.',
-		'requires' => [],
-	],
-	'wgMFDefaultEditor' => [
-		'name' => 'Default MobileFrontend Editor',
-		'from' => 'mobilefrontend',
-		'type' => 'list',
-		'overridedefault' => 'preference',
-		'options' => [
-			'Source editor' => 'source',
-			'Visual editor' => 'visual',
-			'Default to user preferences' => 'preference',
-		],
-		'section' => 'editing',
-		'help' => 'Default mobile editor to use when there is no user preference set.',
 		'requires' => [],
 	],
 	'wgCodeEditorEnableCore' => [
@@ -1891,6 +1954,15 @@ $wgManageWikiSettings = [
 		'help' => 'This option allows you to use the Wikimedia Commons file database on your wiki. This is a performance optimised version of the core <code>$wgUseInstantCommons</code>.',
 		'requires' => [],
 	],
+	'wgMFLazyLoadSkipSmallImages' => [
+		'name' => 'MobileFrontend Lazy Load Skip Small Images',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Skip lazy-loading transforms on small-dimensions images.',
+		'requires' => [],
+	],
 	'wgMirahezeCommons' => [
 		'name' => 'Enable Miraheze Commons (linking to commons.miraheze.org)',
 		'from' => 'mediawiki',
@@ -2652,6 +2724,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => [],
 		'section' => 'preferences',
 		'help' => 'An array of preferences to hide from Special:Preferences.',
+		'requires' => [],
+	],
+	'wgMFEnableMobilePreferences' => [
+		'name' => 'MobileFrontend Mobile Preferences',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'Enable mobile preferences in Special:Preferences (currently only accessible via desktop). Currently this allows users to disable many of mobile\'s special page optimisations.',
 		'requires' => [],
 	],
 	'wgSkipSkins' => [
@@ -3447,6 +3528,16 @@ $wgManageWikiSettings = [
 	],
 
 	// Styling (E.G skins/logos etc)
+	'wgAppleTouchIcon' => [
+		'name' => 'Apple Touch Icon',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'text',
+		'overridedefault' => '/apple-touch-icon.png',
+		'section' => 'styling',
+		'help' => 'Favicon for Apple mobile devices. See [[m:Special:MyLanguage/ManageWiki|this link]] on how you can add one.',
+		'requires' => [],
+	],
 	'wgDefaultSkin' => [
 		'name' => 'Default Skin',
 		'from' => 'mediawiki',
@@ -3466,16 +3557,6 @@ $wgManageWikiSettings = [
 		'help' => 'Changes the default mobile skin to be used by the Mobile Frontend extension. Some skins may not be compatable.',
 		'requires' => [],
 	],
-	'wgLogo' => [
-		'name' => 'Logo',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'text',
-		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
-		'section' => 'styling',
-		'help' => 'This will replace Miraheze\'s default logo. See [[m:Special:MyLanguage/ManageWiki|this link]] for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
-		'requires' => [],
-	],
 	'wgFavicon' => [
 		'name' => 'Favicon',
 		'from' => 'mediawiki',
@@ -3486,15 +3567,106 @@ $wgManageWikiSettings = [
 		'help' => 'A favicon is a shortcut image that is displayed on your visitor\'s browser address bar and in the bookmarks page. Most often it is a smaller version of the logo. See [[m:Special:MyLanguage/ManageWiki|this link]] for how you can add one.',
 		'requires' => [],
 	],
-	'wgAppleTouchIcon' => [
-		'name' => 'Apple Touch Icon',
+	'wgIcon' => [
+		'name' => 'Icon',
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'text',
-		'overridedefault' => '/apple-touch-icon.png',
+		'overridedefault' => false,
 		'section' => 'styling',
-		'help' => 'Favicon for Apple mobile devices. See [[m:Special:MyLanguage/ManageWiki|this link]] on how you can add one.',
+		'help' => 'A version of the logo without wordmark and tagline.',
 		'requires' => [],
+	],
+	'wgLogo' => [
+		'name' => 'Logo',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'text',
+		'overridedefault' => "https://$wmgUploadHostname/metawiki/3/35/Miraheze_Logo.svg",
+		'section' => 'styling',
+		'help' => 'This will replace Miraheze\'s default logo. See [[m:Special:MyLanguage/ManageWiki|this link]] for how you can change it. Also sets the value of <code>$wgLogos[\'1x\']</code>.',
+		'requires' => [],
+	],
+	'wgMFAutodetectMobileView' => [
+		'name' => 'MobileFrontend Autodetect Mobile View',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Set this to true to automatically show mobile view depending on a person\'s user-agent.',
+		'requires' => [],
+	],
+	'wgMFCollapseSectionsByDefault' => [
+		'name' => 'MobileFrontend Collapse Sections By Default',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Enabling this will collapse sections by default when the page loads when using MobileFrontend.',
+		'requires' => [],
+	],
+	'wgMFCustomSiteModules' => [
+		'name' => 'MobileFrontend Custom Site Modules',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'If set to true, MediaWiki:Mobile.css will be used instead of MediaWiki:Common.css and MediaWiki:skinname.css for mobile views.',
+		'requires' => [],
+	],
+	'wgMFEnableFontChanger' => [
+		'name' => 'MobileFrontend Enable Font Changer',
+		'from' => 'mobilefrontend',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'beta',
+			'base',
+		],
+		'options' => [
+			'Beta  feature' => 'beta',
+			'Default' => 'base',
+		],
+		'overridedefault' => [
+			'beta' => true,
+			'base' => true,
+		],
+		'section' => 'styling',
+		'help' => 'Enable the font-size options for mobile users.',
+		'requires' => [],
+	],
+	'wgMFLazyLoadImages' => [
+		'name' => 'MobileFrontend Lazy Load Images',
+		'from' => 'mobilefrontend',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'beta',
+			'base',
+		],
+		'options' => [
+			'Beta feature' => 'beta',
+			'Default' => 'base',
+		],
+		'overridedefault' => [
+			'beta' => true,
+			'base' => true,
+		],
+		'section' => 'styling',
+		'help' => 'Loads images lazily when they come close to the viewport, this setting does not respect $wgNativeImageLazyLoading, so you will need to set this one separetly.',
+		'requires' => [],
+	],
+	'wgMFShowMobileViewToTablets' => [
+		'name' => 'MobilefrontEnd Show Mobile View To Tablets',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Controls whether tablets should be shown the mobile site or the desktop site.',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgMFAutodetectMobileView',
+				'value' => true,
+			]
+		],
 	],
 	'wgWordmark' => [
 		'name' => 'Wordmark',
@@ -3528,16 +3700,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 18,
 		'section' => 'styling',
 		'help' => 'This will set the height value of the wordmark set by <code>$wgWordmark</code>. For use with the Minerva skin\'s copyright wordmark, this should be set to "18"',
-		'requires' => [],
-	],
-	'wgIcon' => [
-		'name' => 'Icon',
-		'from' => 'mediawiki',
-		'global' => true,
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'styling',
-		'help' => 'A version of the logo without wordmark and tagline.',
 		'requires' => [],
 	],
 	'wgMaxTocLevel' => [
@@ -4355,6 +4517,78 @@ $wgManageWikiSettings = [
 	],
 
 	// Wikibase
+	'wgMFUseWikibase' => [
+		'name' => 'MobileFrontend Use Wikibase',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'wikibase',
+		'help' => 'Wether to enable support for Extension:Wikibase and its associated supported features.',
+		'requires' => [
+			'extensions' => [
+				'wikibase',
+			],
+		],
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'name' => 'MobileFrontend Display Wikibase Descriptions',
+		'from' => 'mobilefrontend',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'beta',
+			'base',
+		],
+		'options' => [
+			'Beta feature' => 'beta',
+			'Default' => 'base',
+		],
+		'overridedefault' => [
+			'beta' => true,
+			'base' => false,
+		],
+		'section' => 'wikibase',
+		'help' => 'Will show wikidata descriptions in the defined UI environments from $wgMFDisplayWikibaseDescriptions.',
+		'requires' => [
+			'extensions' => [
+				'wikibase',
+			],
+			'settings' => [
+				'setting' => 'wgMFUseWikibase',
+				'value' => true,
+			],
+		],
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'name' => 'MobileFrontend Display Wikibase Descriptions',
+		'from' => 'mobilefrontend',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'search',
+			'watchlist',
+			'tagline',
+		],
+		'options' => [
+			'Search' => 'search',
+			'Watchlist' => 'watchlist',
+			'Tagline' => 'tagline',
+		],
+		'overridedefault' => [
+			'search' => false,
+			'watchlist' => false,
+			'tagline' => false,
+		],
+		'section' => 'wikibase',
+		'help' => 'Which features will use Extension:Wikibase descriptions.',
+		'requires' => [
+			'extensions' => [
+				'wikibase',
+			],
+			'settings' => [
+				'setting' => 'wgMFUseWikibase',
+				'value' => true,
+			],
+		],
+	],
 	'wmgWikibaseRepoUrl' => [
 		'name' => 'Repository URL',
 		'from' => 'wikibaseclient',
