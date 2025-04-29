@@ -6508,7 +6508,7 @@ $wgConf->settings += [
 	],
 	'wgWPBDisplaySubtitleAfterBannerSkins' => [
 		'default' => [
-			"minerva"
+			'minerva'
 		],
 	],
 	'wgWPBEnableHeadingOverride' => [
