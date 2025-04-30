@@ -2100,9 +2100,6 @@ $wgConf->settings += [
 	'wgVerifyMimeType' => [
 		'default' => true,
 	],
-	'wgSVGNativeRendering' => [
-		'default' => true,
-	],
 	'wgSVGMetadataCutoff' => [
 		'default' => 5242880,
 	],
@@ -2113,8 +2110,7 @@ $wgConf->settings += [
 		'default' => '/usr/local/bin',
 	],
 	'wgSVGNativeRendering' => [
-		'default' => false,
-		'cloudstreamwiki' => true,
+		'default' => true,
 	],
 	'wgUploadMissingFileUrl' => [
 		'default' => false,
