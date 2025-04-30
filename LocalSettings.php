@@ -2100,6 +2100,9 @@ $wgConf->settings += [
 	'wgVerifyMimeType' => [
 		'default' => true,
 	],
+	'wgSVGNativeRendering' => [
+		'default' => true,
+	],
 	'wgSVGMetadataCutoff' => [
 		'default' => 5242880,
 	],
