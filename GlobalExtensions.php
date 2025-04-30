@@ -27,7 +27,6 @@ wfLoadExtensions( [
 	'MatomoAnalytics',
 	'MirahezeMagic',
 	'MobileDetect',
-	'NativeSvgHandler',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
