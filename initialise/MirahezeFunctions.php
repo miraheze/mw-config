@@ -5,7 +5,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
-use Miraheze\ManageWiki\Helpers\ManageWikiModuleFactory;
+use Miraheze\ManageWiki\Helpers\ModuleFactory;
 use Wikimedia\Rdbms\IReadableDatabase;
 
 class MirahezeFunctions {
@@ -1109,7 +1109,7 @@ class MirahezeFunctions {
 
 	/**
 	 * @param IContextSource $context
-	 * @param ManageWikiModuleFactory $moduleFactory
+	 * @param ModuleFactory $moduleFactory
 	 * @param string $dbname
 	 * @param bool $ceMW
 	 * @param array &$formDescriptor
@@ -1117,7 +1117,7 @@ class MirahezeFunctions {
 	 */
 	public static function onManageWikiCoreAddFormFields(
 		IContextSource $context,
-		ManageWikiModuleFactory $moduleFactory,
+		ModuleFactory $moduleFactory,
 		string $dbname,
 		bool $ceMW,
 		array &$formDescriptor
@@ -1176,14 +1176,14 @@ class MirahezeFunctions {
 
 	/**
 	 * @param IContextSource $context
-	 * @param ManageWikiModuleFactory $moduleFactory
+	 * @param ModuleFactory $moduleFactory
 	 * @param string $dbname
 	 * @param array $formData
 	 * @return void
 	 */
 	public static function onManageWikiCoreFormSubmission(
 		IContextSource $context,
-		ManageWikiModuleFactory $moduleFactory,
+		ModuleFactory $moduleFactory,
 		string $dbname,
 		array $formData
 	): void {
