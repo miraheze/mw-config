@@ -2570,6 +2570,33 @@ $wgManageWikiSettings = [
 		'help' => 'This configuration variable toggles if the signature of the welcomer should be the one they have set in their preferences.',
 		'requires' => [],
 	],
+	'wgNewUserSuppressRC' => [
+		'name' => 'NewUserMessage Suppress In Recent Changes',
+		'from' => 'newusermessage',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'Hides the new user message creation from Special:RecentChanges.',
+		'requires' => [],
+	],
+	'wgNewUserMinorEdit' => [
+		'name' => 'NewUserMessage Minor Edit',
+		'from' => 'newusermessage',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'notifications',
+		'help' => 'Sets the new user message creation as a minor edit.',
+		'requires' => [],
+	],
+	'wgNewUserMessageOnAutoCreate' => [
+		'name' => 'NewUserMessage On Auto Create',
+		'from' => 'newusermessage',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'notifications',
+		'help' => 'Sends a new user message when a new user is auto-created by CentralAuth.',
+		'requires' => [],
+	],
 
 	// Permissions
 	'wgWhitelistRead' => [
