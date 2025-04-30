@@ -5,9 +5,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
-use Miraheze\CreateWiki\Services\RemoteWikiFactory;
-use Miraheze\ManageWiki\Helpers\ManageWikiSettings;
-use Wikimedia\Rdbms\IDatabase;
+use Miraheze\ManageWiki\Helpers\ConfigModuleFactory;
 use Wikimedia\Rdbms\IReadableDatabase;
 
 class MirahezeFunctions {
@@ -1111,20 +1109,20 @@ class MirahezeFunctions {
 
 	/**
 	 * @param IContextSource $context
-	 * @param RemoteWikiFactory $remoteWiki
-	 * @param string $dbName
+	 * @param ConfigModuleFactory $moduleFactory
+	 * @param string $dbname
 	 * @param bool $ceMW
 	 * @param array &$formDescriptor
 	 * @return void
 	 */
 	public static function onManageWikiCoreAddFormFields(
 		IContextSource $context,
-		RemoteWikiFactory $remoteWiki,
-		string $dbName,
+		ConfigModuleFactory $moduleFactory,
+		string $dbname,
 		bool $ceMW,
 		array &$formDescriptor
 	): void {
-		$mwVersion = self::getMediaWikiVersion( $dbName );
+		$mwVersion = self::getMediaWikiVersion( $dbname );
 		$versions = array_unique( array_filter( self::MEDIAWIKI_VERSIONS, static function ( $version ) use ( $mwVersion ): bool {
 			return $mwVersion === $version || is_dir( self::MEDIAWIKI_DIRECTORY . $version );
 		} ) );
@@ -1134,14 +1132,14 @@ class MirahezeFunctions {
 		$formDescriptor['primary-domain'] = [
 			'label-message' => 'miraheze-label-managewiki-primary-domain',
 			'type' => 'select',
-			'options' => array_combine( self::ALLOWED_DOMAINS[self::getRealm( $dbName )], self::ALLOWED_DOMAINS[self::getRealm( $dbName )] ),
-			'default' => self::getPrimaryDomain( $dbName ),
+			'options' => array_combine( self::ALLOWED_DOMAINS[self::getRealm( $dbname )], self::ALLOWED_DOMAINS[self::getRealm( $dbname )] ),
+			'default' => self::getPrimaryDomain( $dbname ),
 			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
 			'cssclass' => 'managewiki-infuse',
 			'section' => 'main',
 		];
 
-		$mwSettings = new ManageWikiSettings( $dbName );
+		$mwSettings = $moduleFactory->settings( $dbname );
 		$setList = $mwSettings->list( null );
 		$formDescriptor['article-path'] = [
 			'label-message' => 'miraheze-label-managewiki-article-path',
@@ -1178,28 +1176,27 @@ class MirahezeFunctions {
 
 	/**
 	 * @param IContextSource $context
-	 * @param IDatabase $dbw
-	 * @param RemoteWikiFactory $remoteWiki
-	 * @param string $dbName
+	 * @param ConfigModuleFactory $moduleFactory
+	 * @param string $dbname
 	 * @param array $formData
 	 * @return void
 	 */
 	public static function onManageWikiCoreFormSubmission(
 		IContextSource $context,
-		IDatabase $dbw,
-		RemoteWikiFactory $remoteWiki,
-		string $dbName,
+		ConfigModuleFactory $moduleFactory,
+		string $dbname,
 		array $formData
 	): void {
-		$version = self::getMediaWikiVersion( $dbName );
+		$version = self::getMediaWikiVersion( $dbname );
 		$mediawikiVersion = $formData['mediawiki-version'] ?? $version;
+		$remoteWiki = $moduleFactory->core( $dbname );
 		if ( $mediawikiVersion !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $mediawikiVersion ) ) {
 			$remoteWiki->setExtraFieldData(
 				'mediawiki-version', $mediawikiVersion, default: $version
 			);
 		}
 
-		$domain = self::getPrimaryDomain( $dbName );
+		$domain = self::getPrimaryDomain( $dbname );
 		$primaryDomain = $formData['primary-domain'] ?? $domain;
 		if ( $primaryDomain !== $domain ) {
 			$remoteWiki->setExtraFieldData(
@@ -1207,8 +1204,7 @@ class MirahezeFunctions {
 			);
 		}
 
-		$mwSettings = new ManageWikiSettings( $dbName );
-
+		$mwSettings = $moduleFactory->settings( $dbname );
 		$articlePath = $mwSettings->list( 'wgArticlePath' ) ?? '/wiki/$1';
 		if ( $formData['article-path'] !== $articlePath ) {
 			$mwSettings->modify( [ 'wgArticlePath' => $formData['article-path'] ] );
@@ -1218,7 +1214,7 @@ class MirahezeFunctions {
 
 			$server = self::getServer();
 			$jobQueueGroupFactory = MediaWikiServices::getInstance()->getJobQueueGroupFactory();
-			$jobQueueGroupFactory->makeJobQueueGroup( $dbName )->push(
+			$jobQueueGroupFactory->makeJobQueueGroup( $dbname )->push(
 				new CdnPurgeJob( [
 					'urls' => [
 						$server . '/wiki/',
