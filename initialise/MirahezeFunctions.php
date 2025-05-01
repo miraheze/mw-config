@@ -5,7 +5,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
-use Miraheze\ManageWiki\Helpers\ModuleFactory;
+use Miraheze\ManageWiki\Helpers\Factories\ModuleFactory;
 use Wikimedia\Rdbms\IReadableDatabase;
 
 class MirahezeFunctions {
