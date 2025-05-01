@@ -3,7 +3,9 @@
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\EditPage\EditPage;
 use MediaWiki\Html\Html;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Parser\Parser;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\Title\Title;
@@ -941,6 +943,155 @@ switch ( $wi->dbname ) {
 			'General' => 800000,
 			'General of the Army' => 1000000,
 		];
+		break;
+	case 'tkuwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( &$out, &$skin ) {
+			$title = $out->getTitle();
+
+			if ( !$title instanceof Title ) {
+				return;
+			}
+
+			$service = MediaWikiServices::getInstance();
+			$languageNameUtils = $service->getLanguageNameUtils();
+			$nsText = $title->getNsText();
+			$mainText = $title->getText();
+
+			if (
+				$languageNameUtils->isSupportedLanguage( strtolower( $nsText ) ) &&
+				$out->getDisplayTitle() === Parser::formatPageTitle( $nsText, ':', $mainText )
+			) {
+				$out->setPageTitle( $title->getText() );
+			}
+		};
+
+		$wgHooks['PageContentLanguage'][] = 'onPageContentLanguage';
+
+		function onPageContentLanguage( $title, &$pageLang, $userLang ) {
+			$service = MediaWikiServices::getInstance();
+			$languageNameUtils = $service->getLanguageNameUtils();
+
+			if (
+				$title->inNamespaces(
+					NS_SPECIAL,
+					NS_MAIN,
+					NS_TALK,
+					NS_USER,
+					NS_USER_TALK,
+					NS_PROJECT,
+					NS_PROJECT_TALK,
+					NS_FILE,
+					NS_FILE_TALK,
+					NS_MEDIAWIKI_TALK,
+					NS_TEMPLATE,
+					NS_TEMPLATE_TALK,
+					NS_HELP,
+					NS_HELP_TALK,
+					NS_CATEGORY,
+					NS_CATEGORY_TALK,
+				) ||
+				(
+					$title->isTalkPage() &&
+					$languageNameUtils->isSupportedLanguage(
+						strtolower( $title->getSubjectPage()->getNsText() )
+					)
+				)
+			) {
+				$pageLang = $service->getLanguageFactory()->getLanguage( 'zh-hant' );
+
+				return;
+			}
+
+			$nsTextLc = strtolower( $title->getNsText() );
+
+			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
+				$pageLang = $service->getLanguageFactory()->getLanguage( $nsTextLc );
+			}
+		};
+
+		$wgHooks['SkinTemplateNavigation::Universal'][] = 'SkinTemplateNavigation__Universal';
+
+		function SkinTemplateNavigation__Universal( $skinTemplate, &$links ) {
+			$title = $skinTemplate->getRelevantTitle();
+
+			if ( $title->canExist() ) {
+				$subjectPage = $title->getSubjectPage();
+
+				if ( $subjectPage->isMainPage() ) {
+					return;
+				}
+
+				$service = MediaWikiServices::getInstance();
+				$languageNameUtils = $service->getLanguageNameUtils();
+				$nsText = $subjectPage->getNsText();
+				$subjectId = $title->getNamespaceKey( '' );
+				$userCanRead = $skinTemplate->getAuthority()->probablyCan( 'read', $title );
+				$isTalk = $title->isTalkPage();
+
+				if ( $languageNameUtils->isSupportedLanguage( strtolower( $nsText ) ) ) {
+					$subjectMsg = [ 'nstab-main' ];
+
+					$links['namespaces'][$subjectId] = $skinTemplate->tabAction(
+						$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
+					);
+					$links['associated-pages'][$subjectId] = $skinTemplate->tabAction(
+						$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
+					);
+				}
+			}
+		};
+
+		$wgHooks['UserGetLanguageObject'][] = 'onUserGetLanguageObject';
+
+		function onUserGetLanguageObject( $user, &$code, $context ) {
+			$service = MediaWikiServices::getInstance();
+			$languageNameUtils = $service->getLanguageNameUtils();
+			$title = $context->getTitle();
+
+			if ( $user->isRegistered() || !$title ) {
+				return;
+			}
+
+			if (
+				$title->inNamespaces(
+					NS_SPECIAL,
+					NS_MAIN,
+					NS_TALK,
+					NS_USER,
+					NS_USER_TALK,
+					NS_PROJECT,
+					NS_PROJECT_TALK,
+					NS_FILE,
+					NS_FILE_TALK,
+					NS_MEDIAWIKI_TALK,
+					NS_TEMPLATE,
+					NS_TEMPLATE_TALK,
+					NS_HELP,
+					NS_HELP_TALK,
+					NS_CATEGORY,
+					NS_CATEGORY_TALK,
+				) ||
+				(
+					$title->isTalkPage() &&
+					$languageNameUtils->isSupportedLanguage(
+						strtolower( $title->getSubjectPage()->getNsText() )
+					)
+				)
+			) {
+				$code = 'zh-hant';
+
+				return;
+			}
+
+			$nsTextLc = strtolower( $title->getNsText() );
+
+			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
+				$code = $nsTextLc;
+			}
+		};
+
 		break;
 	case 'tuscriaturaswiki':
 		$wgHooks['AfterFinalPageOutput'][] = 'onAfterFinalPageOutput';
