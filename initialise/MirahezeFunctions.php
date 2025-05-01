@@ -1140,7 +1140,7 @@ class MirahezeFunctions {
 		];
 
 		$mwSettings = $moduleFactory->settings( $dbname );
-		$setList = $mwSettings->list( null );
+		$setList = $mwSettings->list( var: null );
 		$formDescriptor['article-path'] = [
 			'label-message' => 'miraheze-label-managewiki-article-path',
 			'type' => 'select',
@@ -1189,9 +1189,9 @@ class MirahezeFunctions {
 	): void {
 		$version = self::getMediaWikiVersion( $dbname );
 		$mediawikiVersion = $formData['mediawiki-version'] ?? $version;
-		$remoteWiki = $moduleFactory->core( $dbname );
+		$mwCore = $moduleFactory->core( $dbname );
 		if ( $mediawikiVersion !== $version && is_dir( self::MEDIAWIKI_DIRECTORY . $mediawikiVersion ) ) {
-			$remoteWiki->setExtraFieldData(
+			$mwCore->setExtraFieldData(
 				'mediawiki-version', $mediawikiVersion, default: $version
 			);
 		}
@@ -1199,7 +1199,7 @@ class MirahezeFunctions {
 		$domain = self::getPrimaryDomain( $dbname );
 		$primaryDomain = $formData['primary-domain'] ?? $domain;
 		if ( $primaryDomain !== $domain ) {
-			$remoteWiki->setExtraFieldData(
+			$mwCore->setExtraFieldData(
 				'primary-domain', $primaryDomain, default: $domain
 			);
 		}
@@ -1207,10 +1207,10 @@ class MirahezeFunctions {
 		$mwSettings = $moduleFactory->settings( $dbname );
 		$articlePath = $mwSettings->list( 'wgArticlePath' ) ?? '/wiki/$1';
 		if ( $formData['article-path'] !== $articlePath ) {
-			$mwSettings->modify( [ 'wgArticlePath' => $formData['article-path'] ] );
+			$mwSettings->modify( [ 'wgArticlePath' => $formData['article-path'] ], default: '/wiki/$1' );
 			$mwSettings->commit();
 
-			$remoteWiki->trackChange( 'article-path', $articlePath, $formData['article-path'] );
+			$mwCore->trackChange( 'article-path', $articlePath, $formData['article-path'] );
 
 			$server = self::getServer();
 			$jobQueueGroupFactory = MediaWikiServices::getInstance()->getJobQueueGroupFactory();
@@ -1228,10 +1228,10 @@ class MirahezeFunctions {
 
 		$mainPageIsDomainRoot = $mwSettings->list( 'wgMainPageIsDomainRoot' ) ?? false;
 		if ( $formData['mainpage-is-domain-root'] !== $mainPageIsDomainRoot ) {
-			$mwSettings->modify( [ 'wgMainPageIsDomainRoot' => $formData['mainpage-is-domain-root'] ] );
+			$mwSettings->modify( [ 'wgMainPageIsDomainRoot' => $formData['mainpage-is-domain-root'] ], default: false );
 			$mwSettings->commit();
 
-			$remoteWiki->trackChange( 'mainpage-is-domain-root',
+			$mwCore->trackChange( 'mainpage-is-domain-root',
 				$mainPageIsDomainRoot,
 				$formData['mainpage-is-domain-root']
 			);
