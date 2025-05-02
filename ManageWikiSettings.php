@@ -4303,6 +4303,15 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to show indicators on a page when it is protected.',
 		'requires' => [],
 	],
+	'wgDynamicSidebarUsePageCategories' => [
+		'name' => 'DynamicSidebar Enable Page Category Sidebars',
+		'from' => 'dynamicsidebar',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Allow creating sidebars that will be shown on pages in specific categories.',
+		'requires' => [],
+	],
 
 	// Wikibase
 	'wmgWikibaseRepoUrl' => [

@@ -1458,6 +1458,11 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// DynamicSidebar
+	'wgDynamicSidebarUsePageCategories' => [
+		'default' => false,
+	],
+
 	// Echo
 	'wgEchoCrossWikiNotifications' => [
 		'default' => true,
