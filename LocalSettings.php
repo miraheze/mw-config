@@ -4354,9 +4354,14 @@ $wgConf->settings += [
 	],
 
 	// NewUserMessage configs
+	'wgNewUserSuppressRC' => [
+		'default' => false,
+	],
+	'wgNewUserMinorEdit' => [
+		'default' => true,
+	],
 	'wgNewUserMessageOnAutoCreate' => [
 		'default' => false,
-		'nmfwikiwiki' => true,
 	],
 
 	// nofollow links
