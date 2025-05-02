@@ -5031,6 +5031,10 @@ $wgConf->settings += [
 			'pm',
 			'member',
 		],
+		'+codinghutwiki' => [
+			'editbureaucratprotected',
+			'experiencedcodinghutter'
+		],
 		'+cricketnepalwiki' => [
 			'editbureaucratprotected',
 			'editstaffprotected',
@@ -5151,6 +5155,10 @@ $wgConf->settings += [
 		],
 		'allpediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'codinghutwiki' => [
+			'editbureaucratprotected',
+			'experiencedcodinghutter'
 		],
 		'cricketnepalwiki' => [
 			'editbureaucratprotected',
