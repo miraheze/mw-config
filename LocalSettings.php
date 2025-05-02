@@ -409,6 +409,7 @@ $wgConf->settings += [
 		'default' => 'uppercase',
 		'holidayswiki' => 'numeric',
 		'levyraatiwikiwiki' => 'numeric',
+		'historikawiki' => 'uca-cs',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
 	'wgCategoryPagingLimit' => [
