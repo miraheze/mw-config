@@ -965,7 +965,7 @@ switch ( $wi->dbname ) {
 			) {
 				$out->setPageTitle( $title->getText() );
 			}
-		}
+		};
 
 		$wgHooks['PageContentLanguage'][] = 'onPageContentLanguage';
 
@@ -1009,7 +1009,7 @@ switch ( $wi->dbname ) {
 			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
 				$pageLang = $service->getLanguageFactory()->getLanguage( $nsTextLc );
 			}
-		}
+		};
 
 		$wgHooks['SkinTemplateNavigation::Universal'][] = 'SkinTemplateNavigation__Universal';
 
@@ -1041,7 +1041,7 @@ switch ( $wi->dbname ) {
 					);
 				}
 			}
-		}
+		};
 
 		$wgHooks['UserGetLanguageObject'][] = 'onUserGetLanguageObject';
 
@@ -1090,7 +1090,7 @@ switch ( $wi->dbname ) {
 			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
 				$code = $nsTextLc;
 			}
-		}
+		};
 
 		break;
 	case 'tuscriaturaswiki':
