@@ -1580,6 +1580,12 @@ $wgConf->settings += [
 				'allowed urls' => [],
 				'options' => [
 					'timeout' => 'default',
+					// MediaWiki's documentation (to be specific, MediaWiki\Http\HttpRequestFactory#create()) states that this
+					// should be enabled only for trusted URLs, as an attacker-controlled URL can cause a redirect to bounce
+					// off to intranet services. However, we do not have any filtering on the URL, so an attacker already has
+					// SSRF by virtue of having ExternalData enabled. Therefore, the issue raised by the docs are a non-issue
+					// for this specific usecase.
+					'followRedirects' => true,
 				],
 				'encodings' => [
 					'ASCII',
