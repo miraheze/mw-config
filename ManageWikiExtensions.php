@@ -1898,6 +1898,7 @@ $wgManageWikiExtensions = [
 				'*' => [
 					'permissions' => [
 						'translate',
+						'unfuzzy'
 					],
 				],
 				'sysop' => [
