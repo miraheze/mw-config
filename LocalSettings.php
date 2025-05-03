@@ -3194,7 +3194,7 @@ $wgConf->settings += [
 	],
 	'wgManageWikiModulesEnabled' => [
 		'default' => [
-			'core' => true,
+			'core' => false,
 			'extensions' => true,
 			'namespaces' => true,
 			'permissions' => true,
