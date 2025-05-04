@@ -134,6 +134,23 @@ class MirahezeFunctions {
 		return $databases;
 	}
 
+	public function applyManageWiki() {
+		// If we don't have a cache file, let us exit here
+		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $this->dbname . '.php' ) ) {
+			return;
+		}
+
+		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . $this->dbname . '.php';
+		$settings = new MediaWiki\Settings\SettingsBuilder(
+        		MW_INSTALL_PATH,
+        		Miraheze\ManageWiki\Helpers\ManageWikiExtensionRegistry::getInstance(),
+        		new MediaWiki\Settings\Config\GlobalConfigBuilder( '' ),
+        		new MediaWiki\Settings\Config\PhpIniSink()
+		);
+		$settings->load( new MediaWiki\Settings\Source\PhpSettingsSource( $currentDatabaseFile ) );
+		$settings->apply();
+	}
+
 	/**
 	 * @param string $dblist
 	 * @param bool $onlyDBs
