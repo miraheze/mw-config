@@ -570,12 +570,12 @@ class MirahezeFunctions {
 		);
 
 		if ( !$globals ) {
-			$wgConf->settings = array_merge(
+			/* $wgConf->settings = array_merge(
 				$wgConf->settings,
 				self::getManageWikiConfigCache()
-			);
+			); */
 
-			self::$activeExtensions ??= self::getActiveExtensions();
+			// self::$activeExtensions ??= self::getActiveExtensions();
 
 			$globals = self::getConfigForCaching();
 
@@ -890,6 +890,7 @@ class MirahezeFunctions {
 	}
 
 	public function loadExtensions() {
+		return;
 		global $wgDBname;
 
 		if ( !file_exists( self::CACHE_DIRECTORY . '/' . $wgDBname . '.php' ) ) {
