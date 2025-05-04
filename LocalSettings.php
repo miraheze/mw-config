@@ -90,6 +90,7 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
 
+require_once '/srv/mediawiki/1.44/extensions/ManageWiki/Helpers/ManageWikiExtensionRegistry.php';
 $wi->applyManageWiki();
 
 // $wgStatsFormat = 'dogstatsd';
