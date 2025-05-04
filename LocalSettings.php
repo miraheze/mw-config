@@ -2005,7 +2005,7 @@ $wgConf->settings += [
 		'damnationwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => ' https://static.wikitide.net/damnationwiki/a/a9/Poweredby_mediawiki_white.svg',
+					'src' => 'https://static.wikitide.net/damnationwiki/a/a9/Poweredby_mediawiki_white.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
