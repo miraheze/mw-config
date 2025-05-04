@@ -477,7 +477,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'timeline' => [
-		'name' => 'EasyTimeline',
+		'name' => 'Timeline',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EasyTimeline',
 		'conflicts' => false,
 		'requires' => [],
@@ -984,7 +984,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'syntaxhighlight_geshi' => [
-		'name' => 'SyntaxHighlight',
+		'name' => 'SyntaxHighlight_GeSHi',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SyntaxHighlight',
 		'conflicts' => false,
 		'requires' => [],
@@ -3723,7 +3723,7 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 	'apex' => [
-		'name' => 'Apex',
+		'name' => 'apex',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
 		'conflicts' => false,
 		'requires' => [],
@@ -3758,14 +3758,14 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 	'dusktodawn' => [
-		'name' => 'Dusk To Dawn',
+		'name' => 'DuskToDawn',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:DuskToDawn',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
 	],
 	'erudite' => [
-		'name' => 'Erudite',
+		'name' => 'erudite',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Erudite',
 		'conflicts' => false,
 		'requires' => [],
@@ -3877,7 +3877,7 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 	'snapwikiskin' => [
-		'name' => 'Snap! Wiki Skin',
+		'name' => 'snapwikiskin',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Snap!_Wiki_Skin',
 		'conflicts' => false,
 		'requires' => [],
