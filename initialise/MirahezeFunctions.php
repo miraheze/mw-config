@@ -1140,7 +1140,7 @@ class MirahezeFunctions {
 		];
 
 		$mwSettings = $moduleFactory->settings( $dbname );
-		$setList = $mwSettings->list( var: null );
+		$setList = $mwSettings->listAll();
 		$formDescriptor['article-path'] = [
 			'label-message' => 'miraheze-label-managewiki-article-path',
 			'type' => 'select',
