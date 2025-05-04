@@ -1731,7 +1731,7 @@ $wgManageWikiExtensions = [
 		'section' => 'specialpages',
 	],
 	'pageschemas' => [
-		'name' => 'Page Schemas',
+		'name' => 'PageSchemas',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Schemas',
 		'conflicts' => false,
 		'requires' => [],
