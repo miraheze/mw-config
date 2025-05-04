@@ -1759,7 +1759,7 @@ $wgManageWikiExtensions = [
 		'section' => 'specialpages',
 	],
 	'protectsite' => [
-		'name' => 'Protect Site',
+		'name' => 'ProtectSite',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ProtectSite',
 		'conflicts' => false,
 		'requires' => [],
