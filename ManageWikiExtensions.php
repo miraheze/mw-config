@@ -3720,6 +3720,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Anisa',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'apex' => [
@@ -3727,6 +3728,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Apex',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'bluesky' => [
@@ -3734,6 +3736,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:BlueSky',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'chameleon' => [
@@ -3741,6 +3744,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Chameleon',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'citizen' => [
@@ -3748,6 +3752,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Citizen',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'cosmos' => [
@@ -3755,6 +3760,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cosmos',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'dusktodawn' => [
@@ -3762,6 +3768,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:DuskToDawn',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'erudite' => [
@@ -3769,6 +3776,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Erudite',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'femiwiki' => [
@@ -3776,6 +3784,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Femiwiki',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'foreground' => [
@@ -3783,6 +3792,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Foreground',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'gamepress' => [
@@ -3790,6 +3800,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Gamepress',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'hassomecolours' => [
@@ -3797,6 +3808,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:HasSomeColours',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'lakeus' => [
@@ -3804,6 +3816,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Lakeus',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'mask' => [
@@ -3811,6 +3824,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mask',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'medik' => [
@@ -3818,6 +3832,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Medik',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'metrolook' => [
@@ -3825,6 +3840,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Metrolook',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'minervaneue' => [
@@ -3832,6 +3848,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Minerva_Neue',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'mirage' => [
@@ -3839,6 +3856,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'monaco' => [
@@ -3846,6 +3864,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Monaco',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'nimbus' => [
@@ -3853,6 +3872,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nimbus',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'nostalgia' => [
@@ -3860,6 +3880,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Nostalgia',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'pivot' => [
@@ -3867,6 +3888,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Pivot',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'refreshed' => [
@@ -3874,6 +3896,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Refreshed',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'snapwikiskin' => [
@@ -3881,6 +3904,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Snap!_Wiki_Skin',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'splash' => [
@@ -3888,6 +3912,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Splash',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'truglass' => [
@@ -3895,6 +3920,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Truglass',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'tweeki' => [
@@ -3902,6 +3928,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Tweeki',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 	'wmau' => [
@@ -3909,6 +3936,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:WMAU',
 		'conflicts' => false,
 		'requires' => [],
+		'skin' => true,
 		'section' => 'skins',
 	],
 ];
