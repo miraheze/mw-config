@@ -572,6 +572,13 @@ if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server )
 	);
 }
 
+//DataMaps
+if ( $wi->isExtensionActive( 'DataMaps' ) ) {
+	if ($wgDataMapsEnableFandomPortingTools) {
+		$wgDataMapsNamespaceId = true;
+	}
+}
+
 // JsonConfig
 if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	$wgJsonConfigs = [
