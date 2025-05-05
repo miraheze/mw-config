@@ -573,7 +573,7 @@ if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server )
 }
 
 //DataMaps
-if ( $wi->isExtensionActive( 'DataMaps' ) ) {
+if ( $wi->isExtensionActive( 'Interactive Data Maps' ) ) {
 	if ($wgDataMapsEnableFandomPortingTools) {
 		$wgDataMapsNamespaceId = 2900;
 	}
