@@ -406,8 +406,13 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'other',
-		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension.',
+		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension. Restricted as this is only temporarily enabled for a maintenance sctipt run',
 		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 	],
 	'wgDisplayFeedsInSidebar' => [
 		'name' => 'Display feeds in sidebar',
