@@ -2023,6 +2023,20 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'damnationwiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/damnationwiki/a/a9/Poweredby_mediawiki_white.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/damnationwiki/1/11/Powered_by_Miraheze_%28no_box%29_white.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+		],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
