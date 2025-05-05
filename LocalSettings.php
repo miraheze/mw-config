@@ -75,7 +75,7 @@ if ( $forceprofile == 1 && extension_loaded( 'xhprof' ) ) {
 }
 
 // Show custom database maintenance error page on these clusters.
-$wgDatabaseClustersMaintenance = ['c4'];
+$wgDatabaseClustersMaintenance = [];
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
