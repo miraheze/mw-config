@@ -1251,6 +1251,9 @@ $wgConf->settings += [
 	'wgDataMapsAllowExperimentalFeatures' => [
 		'default' => false,
 	],
+	'wgDataMapsEnableFandomPortingTools' => [
+		'default' => false,
+	],
 
 	// Drafts
 	'egDraftsAutoSaveWait' => [

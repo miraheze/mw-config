@@ -400,6 +400,15 @@ $wgManageWikiSettings = [
 		'help' => 'Whether or not to enable any disabled-by-default experimental features.',
 		'requires' => [],
 	],
+	'wgDataMapsEnableFandomPortingTools' => [
+		'name' => 'DataMaps: Enable FANDOM porting tools',
+		'from' => 'datamaps',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension.',
+		'requires' => [],
+	],
 	'wgDisplayFeedsInSidebar' => [
 		'name' => 'Display feeds in sidebar',
 		'from' => 'featuredfeeds',
