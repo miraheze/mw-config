@@ -961,9 +961,17 @@ switch ( $wi->dbname ) {
 
 			if (
 				$languageNameUtils->isSupportedLanguage( strtolower( $nsText ) ) &&
-				$out->getDisplayTitle() === Parser::formatPageTitle( $nsText, ':', $mainText )
+				$out->getPageTitle() === Parser::formatPageTitle( $nsText, ':', $mainText )
 			) {
-				$out->setPageTitle( $title->getText() );
+				$out->setPageTitle( Parser::formatPageTitle( '', ':', $title->getText() ) );
+
+				if ( $title->isMainPage() ) {
+					$msg = $out->msg( 'pagetitle-view-mainpage' );
+
+					if ( !$msg->isDisabled() ) {
+						$out->setHTMLTitle( $msg );
+					}
+				}
 			}
 		}
 
@@ -990,7 +998,7 @@ switch ( $wi->dbname ) {
 					NS_HELP,
 					NS_HELP_TALK,
 					NS_CATEGORY,
-					NS_CATEGORY_TALK,
+					NS_CATEGORY_TALK
 				) ||
 				(
 					$title->isTalkPage() &&
@@ -1071,7 +1079,7 @@ switch ( $wi->dbname ) {
 					NS_HELP,
 					NS_HELP_TALK,
 					NS_CATEGORY,
-					NS_CATEGORY_TALK,
+					NS_CATEGORY_TALK
 				) ||
 				(
 					$title->isTalkPage() &&
