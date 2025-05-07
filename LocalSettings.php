@@ -1233,6 +1233,9 @@ $wgConf->settings += [
 			'virtual-botpasswords' => [
 				'db' => 'metawikibeta',
 			],
+			'virtual-centralnotice' => [
+				'db' => 'metawikibeta',
+			],
 		],
 		'ldapwikiwiki' => [
 			'virtual-LoginNotify' => [
