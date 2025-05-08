@@ -3,6 +3,7 @@
 namespace Miraheze\Config\Tests\ManageWiki;
 
 class ExtensionsTest extends ManageWikiTestCase {
+
 	public function getSchema(): array {
 		$installOrRemove = [
 			'type' => 'array',
@@ -166,7 +167,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 	}
 
 	/** @inheritDoc */
-	public function configProvider(): array {
+	public static function configProvider(): array {
 		return [
 			'A valid configuration should be passed the validation.' => [
 				[

@@ -3,6 +3,7 @@
 namespace Miraheze\Config\Tests\ManageWiki;
 
 class SettingsTest extends ManageWikiTestCase {
+
 	public function getSchema(): array {
 		return [
 			'type' => 'array',
@@ -272,7 +273,7 @@ class SettingsTest extends ManageWikiTestCase {
 	}
 
 	/** @inheritDoc */
-	public function configProvider(): array {
+	public static function configProvider(): array {
 		return [
 			'A valid configuration should be passed the validation.' => [
 				[
