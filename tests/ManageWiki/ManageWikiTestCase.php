@@ -49,7 +49,7 @@ abstract class ManageWikiTestCase extends TestCase {
 		);
 	}
 
-	abstract public function configProvider(): array;
+	abstract public static function configProvider(): array;
 
 	/** @dataProvider configProvider */
 	public function testGetScheme( $config, $expected ) {
