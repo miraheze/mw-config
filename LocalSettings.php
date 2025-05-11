@@ -1702,7 +1702,7 @@ $wgConf->settings += [
 	// Footers
 	'+wgFooterIcons' => [
 		'default' => [
-			'poweredby' => [
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1717,6 +1717,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1745,6 +1747,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1759,6 +1763,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/jbcstudioswiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1780,6 +1786,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/ballgamewiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1801,6 +1809,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://hybridcafe.wiki/w/img_auth.php/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1822,6 +1832,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/cafewiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://miraheze.org',
@@ -1836,6 +1848,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/outlasterwiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1857,6 +1871,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/farmwiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1878,6 +1894,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/fraudulentfronterawiki/9/97/Poweredbymh.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -1901,6 +1919,8 @@ $wgConf->settings += [
 					"height" => "32",
 					"width" => "200",
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
@@ -1937,6 +1957,8 @@ $wgConf->settings += [
 					"height" => "32",
 					"width" => "200",
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
@@ -1971,6 +1993,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/tnowiki/4/49/Miraheze.png',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
@@ -2038,6 +2062,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'cargo' => [
 				'cargo' => [
 					'src' => 'https://static.wikitide.net/yonicversewiki/a/a5/Wiki_Citizen_Footer_Badge.svg#cargo',
 					'url' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Cargo',
@@ -2059,6 +2085,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/damnationwiki/1/11/Powered_by_Miraheze_%28no_box%29_white.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
@@ -2073,6 +2101,8 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/noobsincombatcoldfrontwiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
