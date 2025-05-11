@@ -447,7 +447,7 @@ if ( !$wi->isExtensionActive( 'wikiseo' ) ) {
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
-	$wgFooterIcons['poweredby']['wikiapiary'] = [
+	$wgFooterIcons['wikiapairy']['wikiapiary'] = [
 		'src' => 'https://static.wikitide.net/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
