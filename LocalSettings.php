@@ -481,9 +481,6 @@ $wgConf->settings += [
 	'wgGlobalRenameDenylistRegex' => [
 		'default' => true,
 	],
-	'wgCentralAuthEnableSul3' => [
-		'default' => false,
-	],
 
 	// CentralNotice
 	'wgNoticeInfrastructure' => [
