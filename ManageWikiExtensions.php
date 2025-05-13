@@ -34,7 +34,6 @@
 
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
-use Miraheze\MirahezeMagic\Maintenance\ResetWikiCaches;
 
 $wgManageWikiExtensions = [
 	// API
@@ -2213,7 +2212,6 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				ResetWikiCaches::class => [],
 				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
 					'skipLinks' => true,
