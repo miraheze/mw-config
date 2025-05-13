@@ -50,6 +50,12 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 
+	if ( version_compare( MW_VERSION, '1.44', '>=' ) ) {
+		$wgCentralAuthEnableSul3 = false;
+	} else {
+		$wgCentralAuthEnableSul3 = [];
+	}
+
 	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
 		$wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
 	}
@@ -931,3 +937,4 @@ $wgHTTPImportTimeout = 50;
 
 // Notifications
 $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
+
