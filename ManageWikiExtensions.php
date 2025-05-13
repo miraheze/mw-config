@@ -1435,7 +1435,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'flaggedpages' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/tables-generated.sql",
+				'flaggedpages' => "$IP/extensions/FlaggedRevs/includes/backend/schema/mysql/tables-generated.sql",
 			],
 			'permissions' => [
 				'editor' => [
