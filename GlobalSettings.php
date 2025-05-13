@@ -937,4 +937,3 @@ $wgHTTPImportTimeout = 50;
 
 // Notifications
 $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
-
