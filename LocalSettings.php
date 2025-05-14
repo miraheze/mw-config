@@ -4846,6 +4846,12 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
 		],
+		'+banjokazooiewiki' => [
+			'rcenhancedfilters-disable' => 1,
+			'thumbsize' => 3,
+			'usenewrc' => 0,
+			'wlenhancedfilters-disable' => 1,
+		],
 		'+combatinitiationwiki' => [
 			'vector-theme' => 'os',
 		],
