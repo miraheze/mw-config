@@ -2135,6 +2135,27 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'toyboxfunhousewiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/toyboxfunhousewiki/3/3c/Powered_by_MEDIAWIKI.png',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/toyboxfunhousewiki/9/9b/Hosted_by_MIRAHEZE.png',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/toyboxfunhousewiki/0/0e/CC_BY-SA.png',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
