@@ -91,6 +91,12 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['maxResultCount'] = 2500;
 		$wgDplSettings['maxCategoryCount'] = 100;
 
+		// T13620: Show AbuseFilter changes in RecentChanges
+		$wgExtensionFunctions[] = static function () {
+			global $wgLogRestrictions;
+			unset( $wgLogRestrictions['abusefilter'] );
+		};
+
 		break;
 	case 'dlfmwiki':
 		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
