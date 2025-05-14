@@ -41,7 +41,7 @@ $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 $wgMirahezeMagicMemcachedServers = [
 	[ '10.0.15.113', 11211 ],
 	[ '10.0.16.131', 11211 ],
-	[ '10.0.20.148', 11211 ]
+	[ '10.0.20.148', 11211 ],
 	[ '10.0.19.154', 11211 ]
 ];
 
