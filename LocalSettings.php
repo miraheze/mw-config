@@ -2552,7 +2552,6 @@ $wgConf->settings += [
 		],
 		'+commonswiki' => [
 			'wikimediacommons',
-			'w',
 			'eswiki',
 			'wikispecies',
 		],
