@@ -34,7 +34,6 @@
 
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
-use Miraheze\MirahezeMagic\Maintenance\ResetWikiCaches;
 
 $wgManageWikiExtensions = [
 	// API
@@ -1435,7 +1434,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'flaggedpages' => "$IP/extensions/FlaggedRevs/backend/schema/mysql/tables-generated.sql",
+				'flaggedpages' => "$IP/extensions/FlaggedRevs/includes/backend/schema/mysql/tables-generated.sql",
 			],
 			'permissions' => [
 				'editor' => [
@@ -2213,7 +2212,6 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				ResetWikiCaches::class => [],
 				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
 				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
 					'skipLinks' => true,
