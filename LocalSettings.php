@@ -954,6 +954,10 @@ $wgConf->settings += [
 			'db172 (c1)' => 'c1',
 		],
 	],
+	// Use if you want to stop wikis being created on this cluster
+	'wgCreateWikiDatabaseClustersInactive' => [
+		'default' => [],
+	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
 		'beta' => 'wikibeta',
@@ -1068,6 +1072,15 @@ $wgConf->settings += [
 			'Song Contest' => 'songcontest',
 			'Sports' => 'sport',
 			'Uncategorised' => 'uncategorised',
+		],
+	],
+	'wgCreateWikiInactiveExemptReasonOptions' => [
+		'default' => [
+			'Wiki completed and made to be read' => 'comp',
+			'Wiki made for time-based gathering' => 'tbg',
+			'Wiki made to be read' => 'mtr',
+			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
+			'Other, see DPE' => 'other',
 		],
 	],
 	'wgCreateWikiRequestCountWarnThreshold' => [
