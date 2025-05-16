@@ -3302,10 +3302,6 @@ $wgConf->settings += [
 	],
 
 	// ManageWiki
-	// Use if you want to stop wikis being created on this cluster
-	'wgManageWikiDatabaseClustersInactive' => [
-		'default' => [],
-	],
 	'wgManageWikiExtensionsDefault' => [
 		'default' => [
 			'categorytree',
@@ -3330,15 +3326,6 @@ $wgConf->settings += [
 	],
 	'wgManageWikiHelpUrl' => [
 		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
-	],
-	'wgManageWikiInactiveExemptReasonOptions' => [
-		'default' => [
-			'Wiki completed and made to be read' => 'comp',
-			'Wiki made for time-based gathering' => 'tbg',
-			'Wiki made to be read' => 'mtr',
-			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
-			'Other, see DPE' => 'other',
-		],
 	],
 	'wgManageWikiModulesEnabled' => [
 		'default' => [
