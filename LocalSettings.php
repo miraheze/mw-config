@@ -5197,7 +5197,8 @@ $wgConf->settings += [
 		],
 		'+codinghutwiki' => [
 			'editbureaucratprotected',
-			'experiencedcodinghutter'
+			'experiencedcodinghutter',
+			'templateeditor'
 		],
 		'+cricketnepalwiki' => [
 			'editbureaucratprotected',
@@ -5322,7 +5323,8 @@ $wgConf->settings += [
 		],
 		'codinghutwiki' => [
 			'editbureaucratprotected',
-			'experiencedcodinghutter'
+			'experiencedcodinghutter',
+			'templateeditor'
 		],
 		'cricketnepalwiki' => [
 			'editbureaucratprotected',
