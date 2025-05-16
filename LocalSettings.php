@@ -5200,6 +5200,9 @@ $wgConf->settings += [
 			'experiencedcodinghutter',
 			'templateeditor'
 		],
+		'+constantnoblewiki' => [
+			'editfounderprotected'
+		],
 		'+cricketnepalwiki' => [
 			'editbureaucratprotected',
 			'editstaffprotected',
@@ -5325,6 +5328,9 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'experiencedcodinghutter',
 			'templateeditor'
+		],
+		'constantnoblewiki' => [
+			'editfounderprotected'
 		],
 		'cricketnepalwiki' => [
 			'editbureaucratprotected',
