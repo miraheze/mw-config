@@ -4580,10 +4580,10 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'wikibase',
-		'help' => 'Wether to enable support for Extension:Wikibase and its associated supported features.',
+		'help' => 'Whether to enable support for Extension:Wikibase and its associated supported features.',
 		'requires' => [
 			'extensions' => [
-				'wikibase',
+				'wikibaseclient',
 			],
 		],
 	],
@@ -4607,7 +4607,7 @@ $wgManageWikiSettings = [
 		'help' => 'Will show wikidata descriptions in the defined UI environments from $wgMFDisplayWikibaseDescriptions.',
 		'requires' => [
 			'extensions' => [
-				'wikibase',
+				'wikibaseclient',
 			],
 			'settings' => [
 				'setting' => 'wgMFUseWikibase',
@@ -4638,7 +4638,7 @@ $wgManageWikiSettings = [
 		'help' => 'Which features will use Extension:Wikibase descriptions.',
 		'requires' => [
 			'extensions' => [
-				'wikibase',
+				'wikibaseclient',
 			],
 			'settings' => [
 				'setting' => 'wgMFUseWikibase',
