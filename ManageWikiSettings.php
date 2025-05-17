@@ -4323,6 +4323,15 @@ $wgManageWikiSettings = [
 		'help' => 'Max number of search suggestions',
 		'requires' => [],
 	],
+	'wgCitizenEnableCommandPalette' => [
+		'name' => 'Citizen Enable Command Palette',
+		'from' => 'citizen',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Enable the experimental command palette feature',
+		'requires' => [],
+	],
 	'wgCitizenEnableCJKFonts' => [
 		'name' => 'Citizen Enable CJK fonts',
 		'from' => 'citizen',
