@@ -181,10 +181,7 @@ class SettingsTest extends ManageWikiTestCase {
 							'type' => 'array',
 							'additionalProperties' => false,
 							'properties' => [
-								'activeusers' => [
-									'type' => 'integer',
-									'description' => 'max integer amount of active users a wiki may have in order to be able to modify this setting.',
-								],
+
 								'articles' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of articles a wiki may have in order to be able to modify this setting.',
@@ -206,6 +203,10 @@ class SettingsTest extends ManageWikiTestCase {
 										]
 									]
 								],
+								'files' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of files a wiki may have in order to be able to modify this setting.',
+								],
 								'pages' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of pages a wiki may have in order to be able to modify this setting.',
@@ -216,6 +217,13 @@ class SettingsTest extends ManageWikiTestCase {
 									'items' => [
 										'type' => 'string'
 									]
+								],
+								'settings' => [
+									'type' => 'array',
+								],
+								'users' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of users a wiki may have in order to be able to modify this setting.',
 								],
 								'visibility' => [
 									'type' => 'array',
@@ -237,9 +245,6 @@ class SettingsTest extends ManageWikiTestCase {
 											],
 										],
 									],
-								],
-								'settings' => [
-									'type' => 'array',
 								],
 							],
 						],
