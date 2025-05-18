@@ -181,7 +181,6 @@ class SettingsTest extends ManageWikiTestCase {
 							'type' => 'array',
 							'additionalProperties' => false,
 							'properties' => [
-
 								'articles' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of articles a wiki may have in order to be able to modify this setting.',
