@@ -47,9 +47,9 @@
  * files: max integer amount of files a wiki may have in order to be able to modify this setting.
  * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
  * permissions: array of permissions a user must have to be able to modify this setting. Regardless of this value, a user must always have the managewiki permission.
+ * settings: an array.
  * users: max integer amount of users a wiki may have in order to be able to modify this setting.
  * visibility: an array. See below for available options.
- * settings: an array.
  *
  * 'visibility' can be one of:
  *
