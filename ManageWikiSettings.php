@@ -53,8 +53,8 @@
  *
  * 'visibility' can be one of:
  *
- * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  * permissions: an array. Set to an array of permissions required for the setting to be visible.
+ * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  */
 
 $wgManageWikiSettings = [
