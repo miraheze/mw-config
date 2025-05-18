@@ -181,10 +181,6 @@ class SettingsTest extends ManageWikiTestCase {
 							'type' => 'array',
 							'additionalProperties' => false,
 							'properties' => [
-								'activeusers' => [
-									'type' => 'integer',
-									'description' => 'max integer amount of active users a wiki may have in order to be able to modify this setting.',
-								],
 								'articles' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of articles a wiki may have in order to be able to modify this setting.',
@@ -206,6 +202,10 @@ class SettingsTest extends ManageWikiTestCase {
 										]
 									]
 								],
+								'files' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of files a wiki may have in order to be able to modify this setting.',
+								],
 								'pages' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of pages a wiki may have in order to be able to modify this setting.',
@@ -217,29 +217,33 @@ class SettingsTest extends ManageWikiTestCase {
 										'type' => 'string'
 									]
 								],
+								'settings' => [
+									'type' => 'array',
+								],
+								'users' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of users a wiki may have in order to be able to modify this setting.',
+								],
 								'visibility' => [
 									'type' => 'array',
 									'additionalProperties' => false,
 									'properties' => [
+										'permissions' => [
+											'type' => 'array',
+											'description' => 'Set to an array of permissions required for the setting to be visible.',
+											'items' => [
+												'type' => 'string',
+											],
+										],
 										'state' => [
 											'type' => 'string',
-											'description' => "Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.",
+											'description' => 'Can be either \'private\' or \'public\'. If set to \'private\' this setting will only be visible on private wikis. If set to \'public\' it will only be visible on public wikis.',
 											'enum' => [
 												'private',
 												'public',
 											],
 										],
-										'permissions' => [
-											'type' => 'array',
-											'description' => "Set to an array of permissions required for the setting to be visible.",
-											'items' => [
-												'type' => 'string',
-											],
-										],
 									],
-								],
-								'settings' => [
-									'type' => 'array',
 								],
 							],
 						],
