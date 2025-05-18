@@ -4976,6 +4976,12 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 		],
+		'+rippaversewiki' => [
+			'usecodemirror' => 1,
+			'visualeditor-newwikitext' => 1,
+			'usebetatoolbar' => 0,
+			'usebetatoolbar-cgd' => 0,
+		],
 		'+ssbuniversewiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
