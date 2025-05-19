@@ -2721,6 +2721,7 @@ $wgConf->settings += [
 			'Original Authority',
 			'Reception123',
 			'Universal Omega',
+			'RhinosF1 (Miraheze)',
 		],
 	],
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
@@ -2730,6 +2731,7 @@ $wgConf->settings += [
 			'Original Authority',
 			'Reception123',
 			'Universal Omega',
+			'RhinosF1 (Miraheze)',
 		],
 	],
 
