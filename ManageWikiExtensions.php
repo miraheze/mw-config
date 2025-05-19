@@ -16,11 +16,12 @@
  *
  * 'requires' can be one of:
  *
- * activeusers: max integer amount of active users a wiki may have in order to enable this extension.
  * articles: max integer amount of articles a wiki may have in order to enable this extension.
  * extensions: array of other extensions that must be enabled in order to enable this extension.
+ * files: max integer amount of files a wiki may have in order to enable this extension.
  * pages: max integer amount of pages a wiki may have in order to enable this extension.
  * permissions: array of permissions a user must have to be able to enable this extension. Regardless of this value, a user must always have the managewiki permission.
+ * users: max integer amount of users a wiki may have in order to enable this extension.
  * visibility['state']: can be either 'private' or 'public'. If set to 'private' this extension can only be enabled on private wikis. If set to 'public' it can only be enabled on public wikis.
  *
  * 'install'/'remove' can be one of:

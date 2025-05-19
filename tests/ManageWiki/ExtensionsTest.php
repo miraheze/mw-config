@@ -90,10 +90,6 @@ class ExtensionsTest extends ManageWikiTestCase {
 							'type' => 'array',
 							'additionalProperties' => false,
 							'properties' => [
-								'activeusers' => [
-									'type' => 'integer',
-									'description' => 'max integer amount of active users a wiki may have in order to enable this extension.',
-								],
 								'articles' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of articles a wiki may have in order to enable this extension.',
@@ -115,6 +111,10 @@ class ExtensionsTest extends ManageWikiTestCase {
 										]
 									]
 								],
+								'files' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of files a wiki may have in order to enable this extension.',
+								],
 								'pages' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of pages a wiki may have in order to enable this extension.',
@@ -124,6 +124,10 @@ class ExtensionsTest extends ManageWikiTestCase {
 									'items' => [
 										'type' => 'string'
 									]
+								],
+								'users' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of users a wiki may have in order to enable this extension.',
 								],
 								'visibility' => [
 									'type' => 'array',

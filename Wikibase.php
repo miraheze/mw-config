@@ -331,5 +331,9 @@ if ( $wgDBname === 'horimiyawiki' ) {
 	];
 }
 
+if ( $wgDBname === 'utgwiki' ) {
+	$wgWBRepoSettings['localClientDatabases'] = [ 'utgwiki' ];
+}
+
 // don't need these to be a global
 unset( $entitySources );

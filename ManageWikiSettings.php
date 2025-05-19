@@ -42,18 +42,19 @@
  *
  * 'requires' can be one of:
  *
- * activeusers: max integer amount of active users a wiki may have in order to be able to modify this setting.
  * articles: max integer amount of articles a wiki may have in order to be able to modify this setting.
  * extensions: array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if it requires more than one extension.
+ * files: max integer amount of files a wiki may have in order to be able to modify this setting.
  * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
  * permissions: array of permissions a user must have to be able to modify this setting. Regardless of this value, a user must always have the managewiki permission.
- * visibility: an array. See below for available options.
  * settings: an array.
+ * users: max integer amount of users a wiki may have in order to be able to modify this setting.
+ * visibility: an array. See below for available options.
  *
  * 'visibility' can be one of:
  *
- * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  * permissions: an array. Set to an array of permissions required for the setting to be visible.
+ * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  */
 
 $wgManageWikiSettings = [
