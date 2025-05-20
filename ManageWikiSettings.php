@@ -19,7 +19,7 @@
  * database: adds a textbox with input validation, verifying that its value is a valid database name.
  * float: adds a textbox with float validation (requires: minfloat and maxfloat which are minimum and maximum float values).
  * integer: adds a textbox with integer validation (requires: minint and maxint which are minimum and maximum integer values).
- * integers: see above, just supports multiple and does not require a min or max integer value.
+ * integers: see above, Adding $wgDVFeatures to ManageWiki for the constantnoblewiki per [T13503](https://issue-tracker.miraheze.org/T13503).just supports multiple and does not require a min or max integer value.
  * language: adds a drop-down for language selection (all which are known to MediaWiki).
  * list: adds a list of options (requires: options, which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
@@ -389,7 +389,6 @@ $wgManageWikiSettings = [
 		'global' => true,
 		'type' => 'list-multi-int',
 		'options' => [
-			'SMW_DV_NONE' => 0,
 			'SMW_DV_PROV_REDI' => 2,
 			'SMW_DV_MLTV_LCODE' => 4,
 			'SMW_DV_NUMV_USPACE' => 8,
