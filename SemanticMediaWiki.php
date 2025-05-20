@@ -48,6 +48,10 @@ $smwgMainCacheType = 'mcrouter';
 if ( $wgDBname === 'constantnoblewiki' ) {
 	array_push( $smwgPageSpecialProperties, '_CDAT' );
 
+	// 1974 is the sum of all of the constants that you want to define below in sequence: 2+4+16+32+256+512+1024+128).
+	// SMW_DV_PROV_REDI, SMW_DV_MLTV_LCODE, SMW_DV_PVAP, SMW_DV_WPV_DTITLE, SMW_DV_TIMEV_CM, SMW_DV_PPLB, SMW_DV_PROV_LHNT, SMW_DV_PVUC
+	$smwgDVFeatures = 1974;
+	
 	$smwgNamespacesWithSemanticLinks = [
 		NS_MAIN => true,
 		NS_TALK => false,
