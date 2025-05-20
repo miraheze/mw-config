@@ -163,9 +163,9 @@ $LEWikis = array("antiguabarbudacalypsowiki",
 		   "z1randomizerwiki"
 		 );
 if ( in_arrray($LEWikis, $wgDBname ) {
-	$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
+	$wgHooks['SiteNoticeAfter'][] = 'wfLESiteNotice';
 
-	function wfMetaSiteNotice( &$siteNotice, $skin ) {
+	function wfLESiteNotice( &$siteNotice, $skin ) {
 		$title = $skin->getTitle();
 
 		$skin->getOutput()->enableOOUI();
