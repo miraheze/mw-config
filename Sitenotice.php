@@ -193,3 +193,4 @@ if ( in_arrray( $LEWikis, $wgDBname ) ) {
 EOF;
 	}
 }
+unset( $LEWikis );
