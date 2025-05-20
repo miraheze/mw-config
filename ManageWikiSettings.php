@@ -1029,8 +1029,8 @@ $wgManageWikiSettings = [
 			'Default' => 'base',
 		],
 		'overridedefault' => [
-			'beta' => false,
-			'base' => false,
+			'beta' => true,
+			'base' => true,
 		],
 		'section' => 'editing',
 		'help' => 'Move the first paragraph of the article to be placed before the infobox.',
