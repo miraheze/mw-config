@@ -89,7 +89,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 } */
 
 // LE Domain sitenotice
-$LEWikis = array("antiguabarbudacalypsowiki",
+$LEWikis = [ "antiguabarbudacalypsowiki",
 		   "archivesofhavnorwiki",
 		   "anomalyzonewikiwiki",
 		   "baharnawiki",
@@ -161,8 +161,8 @@ $LEWikis = array("antiguabarbudacalypsowiki",
 		   "worldlesswiki",
 		   "yepediawiki",
 		   "z1randomizerwiki"
-		 );
-if ( in_arrray($LEWikis, $wgDBname) ) {
+		 ];
+if ( in_arrray( $LEWikis, $wgDBname ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfLESiteNotice';
 
 	function wfLESiteNotice( &$siteNotice, $skin ) {
