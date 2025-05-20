@@ -1025,12 +1025,12 @@ $wgManageWikiSettings = [
 			'base',
 		],
 		'options' => [
-			'Beta  feature' => 'beta',
+			'Beta feature' => 'beta',
 			'Default' => 'base',
 		],
 		'overridedefault' => [
-			'beta' => true,
-			'base' => true,
+			'beta' => false,
+			'base' => false,
 		],
 		'section' => 'editing',
 		'help' => 'Move the first paragraph of the article to be placed before the infobox.',
