@@ -2716,7 +2716,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
-			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
 			'Reception123',
@@ -2726,7 +2725,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
 		'default' => [
-			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
 			'Reception123',
