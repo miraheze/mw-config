@@ -153,7 +153,7 @@ $LEWikis = [
 	"yepediawiki",
 	"z1randomizerwiki"
 ];
-if ( in_arrray( $LEWikis, $wgDBname, true ) ) {
+if ( in_array( $LEWikis, $wgDBname, true ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfLESiteNotice';
 
 	function wfLESiteNotice( &$siteNotice, $skin ) {
