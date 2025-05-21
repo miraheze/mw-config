@@ -3327,6 +3327,15 @@ $wgConf->settings += [
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
 	],
+	'wgManageWikiHandledUnknownContentModels' => [
+		'default' => [
+			// Flow is being removed and no longer enabled no new wikis
+			'flow-board',
+			// Interactivemap is a Fandom extension and the compatibility
+			// mode in DataMaps does not work.
+			'interactivemap',
+		],
+	],
 	'wgManageWikiHelpUrl' => [
 		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
 	],
