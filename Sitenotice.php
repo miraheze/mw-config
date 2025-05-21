@@ -88,15 +88,76 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	}
 } */
 
-// Meta Tech NS sitenotice
-/* if ( $wgDBname === 'metawiki' ) {
-	$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
+// LE Domain sitenotice
+$LEWikis = [
+	"archivesofhavnorwiki",
+	"anomalyzonewikiwiki",
+	"baharnawiki",
+	"baligawiki",
+	"balloonfightwiki",
+	"tfoswiki",
+	"binrayarchiveswiki",
+	"blackmagicwiki",
+	"boneswordwiki",
+	"clinithequewiki",
+	"corruwiki",
+	"ccidwiki",
+	"decimatedrivewiki",
+	"echoeswiki",
+	"ekumenwiki",
+	"electowikiwiki",
+	"evilgeniuswiki",
+	"exmormonwiki",
+	"fairytailwiki",
+	"corsiwiki",
+	"fanojowiki",
+	"farthestfrontierwiki",
+	"ff8wiki",
+	"hastursnotebookwiki",
+	"hellowhirledwiki",
+	"empireinflameswiki",
+	"holostarswiki",
+	"iceriawiki",
+	"wandelenwiki",
+	"elthleadwiki",
+	"lotrminecraftmodwiki",
+	"lotrruwiki",
+	"magistrowiki",
+	"maxcapacitywiki",
+	"mockgovernmentswiki",
+	"ncuwiki",
+	"occhygienewikiwiki",
+	"osrwikiwiki",
+	"partopediawiki",
+	"pso2ngswiki",
+	"psychoengineeringwiki",
+	"raidrushwiki",
+	"removededmsongswiki",
+	"richterianwiki",
+	"rodzinkaplwiki",
+	"sptwikiwiki",
+	"terraformingwiki",
+	"thegreatwarwiki",
+	"thestarsarerightwiki",
+	"transgenderwiki",
+	"trollpastawiki",
+	"vilexiawiki",
+	"voecwiki",
+	"uavolunteerresourceswiki",
+	"weavefarerswiki",
+	"wikicawiki",
+	"momawiki",
+	"wizardiawiki",
+	"wonderfuleverydaywiki",
+	"worldlesswiki",
+	"yepediawiki",
+	"z1randomizerwiki"
+];
+if ( in_arrray( $LEWikis, $wgDBname, true ) ) {
+	$wgHooks['SiteNoticeAfter'][] = 'wfLESiteNotice';
 
-	function wfMetaSiteNotice( &$siteNotice, $skin ) {
+	function wfLESiteNotice( &$siteNotice, $skin ) {
 		$title = $skin->getTitle();
-		if ( $title->getNamespace() !== 1600 ) {
-			return;
-		}
 
 		$skin->getOutput()->enableOOUI();
 		$skin->getOutput()->addInlineStyle(
@@ -107,12 +168,11 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	<table style="width: 100%;">
 		<tbody>
 			<tr>
-				<td style="border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px;">
+				<td style="border-left: 4px solid #fc3; background-color: #ea9999; padding: 10px 15px;">
 					<div style="padding-top: 0.3em; padding-bottom: 0.1em; font-size: 100%;">
-						<img alt="OOjs UI icon web-progressive" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/OOjs_UI_icon_web-progressive.svg" decoding="async" width="35" height="35" style="float: left; margin-right: 10px;">
-						<div style="font-weight: bold;">Vacancy</div>
-						SRE is looking for Software Engineers to join our MediaWiki Team to develop code to improve the user experience of Miraheze users, build tools that allow communities to grow, and tools that support our valuable volunteers in managing a dynamic and active global community. If you think this could be you, please do have a look at the <a href="https://meta.miraheze.org/wiki/Miraheze_Vacancies#Software_Engineer_(Developer)_(MediaWiki)">the Vacancies page</a> which includes more information.
-					</div> <br /> Other vacancies are also available on that page.
+						<img alt="OOjs UI icon web-progressive" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/OOjs_UI_icon_notice.svg" decoding="async" width="35" height="35" style="float: left; margin-right: 10px;">
+						<div style="font-weight: bold;">Custom domain</div>
+						The custom domain for this wiki is currently using our DNS service which is actively being phased out, so that we may route all traffic through Cloudflare. Bureaucrats were notified multiple times, but no action was taken. This is an alert that unless the domain owner follows the instructions <a href="https://issue-tracker.miraheze.org/T13309">here,</a> upon expiration of this wiki's SSL certificate the domain will be removed, and the wiki will revert to its original miraheze.org subdomain.
 				</td>
 			</tr>
 			<tr>
@@ -122,4 +182,5 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	</table>
 EOF;
 	}
-} */
+}
+unset( $LEWikis );
