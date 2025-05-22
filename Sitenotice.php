@@ -142,7 +142,6 @@ $LEWikis = [
 	"wonderfuleverydaywiki",
 	"worldlesswiki",
 	"yepediawiki",
-	"z1randomizerwiki"
 ];
 if ( in_array( $wgDBname, $LEWikis, true ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfLESiteNotice';
