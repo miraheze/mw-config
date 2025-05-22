@@ -100,7 +100,6 @@ $LEWikis = [
 	"blackmagicwiki",
 	"boneswordwiki",
 	"clinithequewiki",
-	"corruwiki",
 	"decimatedrivewiki",
 	"echoeswiki",
 	"ekumenwiki",
