@@ -168,7 +168,7 @@ if ( in_array( $wgDBname, $LEWikis, true ) ) {
 					<div style="padding-top: 0.3em; padding-bottom: 0.1em; font-size: 100%;">
 						<img alt="OOjs UI icon web-progressive" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/OOjs_UI_icon_notice.svg" decoding="async" width="35" height="35" style="float: left; margin-right: 10px;">
 						<div style="font-weight: bold;">Custom domain</div>
-						The custom domain for this wiki is currently using our DNS service which is actively being phased out, so that we may route all traffic through Cloudflare. Bureaucrats were notified multiple times, but no action was taken. This is an alert that unless the domain owner follows the instructions <a href="https://issue-tracker.miraheze.org/T13309">here,</a> the domain will be removed without further notice, and the wiki will revert to its original miraheze.org subdomain.
+						The custom domain for this wiki is currently using our DNS service which is actively being phased out, so that we may route all traffic through Cloudflare. This is an alert that unless the domain owner follows the instructions <a href="https://issue-tracker.miraheze.org/T13309">here,</a> the domain will be removed without further notice, and the wiki will revert to its original miraheze.org subdomain.
 					</div>
 				</td>
 			</tr>
