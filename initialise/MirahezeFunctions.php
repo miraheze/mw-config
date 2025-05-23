@@ -678,7 +678,6 @@ class MirahezeFunctions {
 	 * @return array
 	 */
 	public static function getManageWikiConfigCache(): array {
-		global $wgDBname;
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
 
@@ -702,7 +701,7 @@ class MirahezeFunctions {
 		// Assign settings
 		if ( isset( $cacheArray['settings'] ) ) {
 			foreach ( $cacheArray['settings'] as $var => $val ) {
-				$settings[$var][$wgDBname] = $val;
+				$settings[$var]['default'] = $val;
 			}
 		}
 
