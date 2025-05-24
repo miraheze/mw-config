@@ -4300,6 +4300,9 @@ $wgConf->settings += [
 			'tagline' => false,
 		],
 	],
+	'wgMFEnableBeta' => [
+		'default' => true,
+	],
 	'wgMFEnableFontChanger' => [
 		'default' => [
 			'beta' => true,
