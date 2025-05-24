@@ -3726,15 +3726,6 @@ $wgManageWikiSettings = [
 			]
 		],
 	],
-	'wgMobileUrlCallback' => [
-		'name' => 'MobileFrontend Mobile URL Callback',
-		'from' => 'mobilefrontend',
-		'type' => 'text',
-		'overridedefault' => '',
-		'section' => 'styling',
-		'help' => 'A callback that takes a domain name, and changes it into a mobile domain name. When that is not possible, it should return its input unchanged. On wikifarms, the domain name might belong to another wiki.',
-		'requires' => [],
-	],
 	'wgWordmark' => [
 		'name' => 'Wordmark',
 		'from' => 'mediawiki',
