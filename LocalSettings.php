@@ -2716,7 +2716,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
-			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
 			'Reception123',
@@ -2726,7 +2725,6 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
 		'default' => [
-			'Alex (Miraheze)',
 			'MacFan4000',
 			'Original Authority',
 			'Reception123',
@@ -3328,6 +3326,18 @@ $wgConf->settings += [
 	],
 	'wgManageWikiForceSidebarLinks' => [
 		'default' => false,
+	],
+	'wgManageWikiHandledUnknownContentModels' => [
+		// Only add content models here that is not possible to get working on new wikis.
+		// Content models that are possible should be setup when doing imports etc...
+		// to avoid potential content model mismatch issues.
+		'default' => [
+			// Flow is being removed and no longer enabled no new wikis
+			'flow-board',
+			// Interactivemap is a Fandom extension and the compatibility
+			// mode in DataMaps does not work.
+			'interactivemap',
+		],
 	],
 	'wgManageWikiHelpUrl' => [
 		'default' => '//meta.miraheze.org/wiki/Special:MyLanguage/ManageWiki',
@@ -7015,6 +7025,7 @@ $wgConf->settings += [
 			'resourceloader' => false,
 			'ResourceLoaderImage' => 'debug',
 			'RevisionStore' => false,
+			'RobloxAPI' => 'warning',
 			'runJobs' => 'warning',
 			'SaveParse' => false,
 			'security' => 'debug',

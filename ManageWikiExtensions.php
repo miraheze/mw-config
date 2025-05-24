@@ -3550,7 +3550,7 @@ $wgManageWikiExtensions = [
 					'protection' => '',
 					'content' => 0,
 					'aliases' => [],
-					'contentmodel' => 'wikitext',
+					'contentmodel' => 'wikibase-item',
 					'additional' => []
 				],
 				'Item_talk' => [
@@ -3570,7 +3570,7 @@ $wgManageWikiExtensions = [
 					'protection' => '',
 					'content' => 0,
 					'aliases' => [],
-					'contentmodel' => 'wikitext',
+					'contentmodel' => 'wikibase-property',
 					'additional' => []
 				],
 				'Property_talk' => [
