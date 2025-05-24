@@ -1066,9 +1066,9 @@ $wgManageWikiSettings = [
 			'base',
 		],
 		'options' => [
-			'Poll' => 'amc',
-			'PictureGame' => 'beta',
-			'Quiz' => 'base',
+			'AMC' => 'amc',
+			'Beta feature' => 'beta',
+			'Default' => 'base',
 		],
 		'overridedefault' => [
 			'amc' => true,
