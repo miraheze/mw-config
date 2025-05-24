@@ -3708,7 +3708,7 @@ $wgManageWikiSettings = [
 			'beta' => true,
 			'base' => true,
 		],
-		'section' => 'styling',
+		'section' => 'media',
 		'help' => 'Loads images lazily when they come close to the viewport, this setting does not respect $wgNativeImageLazyLoading, so you will need to set this one separetly.',
 		'requires' => [],
 	],
