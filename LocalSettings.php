@@ -4392,8 +4392,8 @@ $wgConf->settings += [
 	],
 	'wgMFShowFirstParagraphBeforeInfobox' => [
 		'default' => [
-			'base' => false,
-			'beta' => false,
+			'base' => true,
+			'beta' => true,
 		],
 	],
 	'wgMFShowMobileViewToTablets' => [
@@ -4408,9 +4408,6 @@ $wgConf->settings += [
 	],
 	'wgMFUseWikibase' => [
 		'default' => false,
-	],
-	'wgMobileUrlTemplate' => [
-		'default' => '',
 	],
 
 	// Moderation extension settings
