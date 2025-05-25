@@ -7101,6 +7101,7 @@ $wi::$disabledExtensions = [
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
+	'mintydocs' => 'Security vulnerabilities',
 
 	'chameleon' => 'Incompatible with MediaWiki 1.43',
 	'femiwiki' => 'Incompatible with MediaWiki 1.43',
