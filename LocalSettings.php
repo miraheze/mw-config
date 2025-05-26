@@ -3394,7 +3394,6 @@ $wgConf->settings += [
 				'editmyprivateinfo' => true,
 				'editmywatchlist' => true,
 				'reportincident' => true,
-				'writeapi' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
@@ -3871,7 +3870,6 @@ $wgConf->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-				'writeapi',
 				'campaignevents-organize-events',
 			],
 			'user' => [
