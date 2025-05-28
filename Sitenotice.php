@@ -114,7 +114,6 @@ $LEWikis = [
 	"empireinflameswiki",
 	"iceriawiki",
 	"wandelenwiki",
-	"elthleadwiki",
 	"lotrminecraftmodwiki",
 	"lotrruwiki",
 	"magistrowiki",
