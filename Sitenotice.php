@@ -87,7 +87,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		EOF;
 	}
 } */
-
+/*
 // LE Domain sitenotice
 $LEWikis = [
 	"archivesofhavnorwiki",
@@ -174,3 +174,4 @@ EOF;
 	}
 }
 unset( $LEWikis );
+*/
