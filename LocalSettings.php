@@ -5288,7 +5288,7 @@ $wgConf->settings += [
 		],
 		'+saozhwiki' => [
 			'edittech',
-			'editextended',
+			'editarbiter',
 			'editpatrol',
 		],
 		'+sesupportwiki' => [
@@ -5401,7 +5401,7 @@ $wgConf->settings += [
 		],
 		'saozhwiki' => [
 			'edittech',
-			'editextended',
+			'editarbiter',
 			'editpatrol',
 		],
 		'scratchpadwiki' => [
