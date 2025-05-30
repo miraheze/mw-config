@@ -4278,20 +4278,84 @@ $wgConf->settings += [
 	],
 
 	// MobileFrontend
+	'wgDefaultMobileSkin' => [
+		'default' => 'minerva',
+	],
+	'wgMFAdvancedMobileContributions' => [
+		'default' => true,
+	],
+	'wgMFAmcOutreach' => [
+		'default' => false,
+	],
+	'wgMFAmcOutreachMinEditCount' => [
+		'default' => 100,
+	],
 	'wgMFAutodetectMobileView' => [
 		'default' => true,
+	],
+	'wgMFCustomSiteModules' => [
+		'default' => false,
+	],
+	'wgMFDisplayWikibaseDescriptions' => [
+		'default' => [
+			'search' => false,
+			'nearby' => false,
+			'watchlist' => false,
+			'tagline' => false,
+		],
+	],
+	'wgMFEnableBeta' => [
+		'default' => true,
+	],
+	'wgMFEnableFontChanger' => [
+		'default' => [
+			'beta' => true,
+			'base' => true,
+		],
+	],
+	'wgMFEnableMobilePreferences' => [
+		'default' => false,
+	],
+	'wgMFEnableVEWikitextEditor' => [
+		'default' => false,
+	],
+	'wgMFEnableWikidataDescriptions' => [
+		'default' => [
+			'beta' => true,
+			'base' => false,
+		],
 	],
 	'wgMFDefaultEditor' => [
 		'default' => 'preference',
 	],
-	'wgDefaultMobileSkin' => [
-		'default' => 'minerva',
+	'wgMFFallbackEditor' => [
+		'default' => 'visual',
 	],
-	'wgMobileUrlTemplate' => [
-		'default' => '',
+	'wgMFLazyLoadImages' => [
+		'default' => [
+			'beta' => true,
+			'base' => true,
+		]
+	],
+	'wgMFLazyLoadSkipSmallImages' => [
+		'default' => false,
+	],
+	'wgMFLogWrappedInfoboxes' => [
+		'default' => true,
 	],
 	'wgMFMobileHeader' => [
 		'ext-MobileFrontend' => 'X-Subdomain',
+	],
+	'wgMFNoindexPages' => [
+		'ext-MobileFrontend' => false,
+	],
+	'wgMFQueryPropModules' => [
+		'default' => [
+			'pageprops',
+		],
+		'gratisdatawiki' => [
+			'entityterms',
+		],
 	],
 	'wgMFRemovableClasses' => [
 		'default' => [
@@ -4306,53 +4370,6 @@ $wgConf->settings += [
 			'base' => [
 				'.nomobile',
 			],
-		],
-	],
-	'wgMFNoindexPages' => [
-		'ext-MobileFrontend' => false,
-	],
-	'wgMFUseDesktopSpecialHistoryPage' => [
-		'default' => [
-			'base' => false,
-			'beta' => false,
-			'amc' => true,
-		],
-		'isvwiki' => [
-			'base' => true,
-			'beta' => true,
-			'amc' => true,
-		],
-	],
-	'wgMFUseDesktopSpecialWatchlistPage' => [
-		'default' => [
-			'base' => false,
-			'beta' => false,
-			'amc' => true,
-		],
-		'isvwiki' => [
-			'base' => true,
-			'beta' => true,
-			'amc' => true,
-		],
-	],
-	'wgMFUseDesktopContributionsPage' => [
-		'default' => [
-			'base' => false,
-			'beta' => false,
-			'amc' => true,
-		],
-		'isvwiki' => [
-			'base' => true,
-			'beta' => true,
-			'amc' => true,
-		],
-	],
-	'wgMFQueryPropModules' => [
-		'default' => [
-			'pageprops',
-		],
-		'gratisdatawiki' => [
-			'entityterms',
 		],
 	],
 	'wgMFSearchAPIParams' => [
@@ -4380,47 +4397,24 @@ $wgConf->settings += [
 			'prefix' => 'wbs',
 		],
 	],
-	'wgMFEnableWikidataDescriptions' => [
+	'wgMFShowFirstParagraphBeforeInfobox' => [
 		'default' => [
-			'base' => false,
-			'beta' => true,
-		],
-		'gratispaideiawiki' => [
 			'base' => true,
 			'beta' => true,
 		],
 	],
-	'wgMFDisplayWikibaseDescriptions' => [
+	'wgMFShowMobileViewToTablets' => [
+		'default' => true,
+	],
+	'wgMFUseDesktopSpecialEditWatchlistPage' => [
 		'default' => [
-			'search' => false,
-			'nearby' => false,
-			'watchlist' => false,
-			'tagline' => false,
-		],
-		'famedatawiki' => [
-			'search' => true,
-			'nearby' => false,
-			'watchlist' => true,
-			'tagline' => false,
-		],
-		'gratispaideiawiki' => [
-			'search' => true,
-			'nearby' => false,
-			'watchlist' => true,
-			'tagline' => false,
-		],
-		'gratisdatawiki' => [
-			'search' => true,
-			'nearby' => false,
-			'watchlist' => true,
-			'tagline' => false,
+			'base' => false,
+			'beta' => false,
+			'amc' => true,
 		],
 	],
-	'wgMFCollapseSectionsByDefault' => [
-		'default' => true,
-	],
-	'wgMFCustomSiteModules' => [
-		'default' => true,
+	'wgMFUseWikibase' => [
+		'default' => false,
 	],
 
 	// Moderation extension settings
