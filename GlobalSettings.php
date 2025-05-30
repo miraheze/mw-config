@@ -336,6 +336,8 @@ $wgDataDump = [
 	'image' => [
 		'file_ending' => '.tar.gz',
 		'useBackendTempStore' => true,
+		'chunkSize' => 2 * 1024 * 1024,
+		'startChunkSize' => 4 * 1024 * 1024,
 		'logFailedExitCodeComments' => [
 			75 => 'The dump is too large. Please contact a member of the Technology team to assist with generating this dump.',
 		],
