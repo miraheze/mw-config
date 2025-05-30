@@ -3394,7 +3394,6 @@ $wgConf->settings += [
 				'editmyprivateinfo' => true,
 				'editmywatchlist' => true,
 				'reportincident' => true,
-				'writeapi' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
@@ -3871,7 +3870,6 @@ $wgConf->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-				'writeapi',
 				'campaignevents-organize-events',
 			],
 			'user' => [
@@ -4117,10 +4115,14 @@ $wgConf->settings += [
 				2551,
 				/** Harej */
 				13892,
+				/** Raidarr */
+				249078,
 				/** NotAracham */
 				345529,
 				/** Universal Omega */
 				438966,
+				/** Agent Isai */
+				512002,
 			],
 			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
@@ -4139,6 +4141,8 @@ $wgConf->settings += [
 				13892,
 				/** RhinosF1 (Miraheze) (Technology team) */
 				243629,
+				/** Raidarr (Board) */
+				249078,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
@@ -4147,7 +4151,7 @@ $wgConf->settings += [
 				438966,
 				/** BlankEclair (Miraheze) (Technology team) */
 				592845,
-				/** Agent Isai (Technology team) */
+				/** Agent Isai (Technology team and Board) */
 				512002,
 			],
 		],
@@ -7095,6 +7099,7 @@ $wi::$disabledExtensions = [
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
+	'mintydocs' => 'Security vulnerabilities',
 
 	'chameleon' => 'Incompatible with MediaWiki 1.43',
 	'femiwiki' => 'Incompatible with MediaWiki 1.43',
