@@ -47,7 +47,7 @@ $smwgMainCacheType = 'mcrouter';
 
 if ( $wgDBname === 'constantnoblewiki' ) {
 	array_push( $smwgPageSpecialProperties, '_CDAT' );
-	
+
 	$smwgNamespacesWithSemanticLinks = [
 		NS_MAIN => true,
 		NS_TALK => false,
