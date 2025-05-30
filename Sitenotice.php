@@ -87,7 +87,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		EOF;
 	}
 } */
-
+/*
 // LE Domain sitenotice
 $LEWikis = [
 	"archivesofhavnorwiki",
@@ -114,7 +114,6 @@ $LEWikis = [
 	"empireinflameswiki",
 	"iceriawiki",
 	"wandelenwiki",
-	"elthleadwiki",
 	"lotrminecraftmodwiki",
 	"lotrruwiki",
 	"magistrowiki",
@@ -175,3 +174,4 @@ EOF;
 	}
 }
 unset( $LEWikis );
+*/
