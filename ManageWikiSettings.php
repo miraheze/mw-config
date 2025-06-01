@@ -383,6 +383,33 @@ $wgManageWikiSettings = [
 	],
 
 	// Other (extensions without a defined category)
+	'smwgDVFeatures' => [
+		'name' => 'Semantic MediaWiki DV Features',
+		'from' => 'semanticmediawiki',
+		'global' => true,
+		'type' => 'list-multi-int',
+		'options' => [
+			'SMW_DV_PROV_REDI' => 2,
+			'SMW_DV_MLTV_LCODE' => 4,
+			'SMW_DV_NUMV_USPACE' => 8,
+			'SMW_DV_PVAP' => 16,
+			'SMW_DV_WPV_DTITLE' => 32,
+			'SMW_DV_PROV_DTITLE' => 64,
+			'SMW_DV_PVUC' => 128,
+			'SMW_DV_TIMEV_CM' => 256,
+			'SMW_DV_PPLB' => 512,
+			'SMW_DV_PROV_LHNT' => 1024,
+			'SMW_DV_WPV_PIPETRICK' => 2048,
+		],
+		'overridedefault' => [ 2, 4, 16, 32, 256, 512, 1024 ],
+		'section' => 'other',
+		'help' => 'Sets the available features regarding property data values.',
+		'requires' => [
+			'extensions' => [
+				'semanticmediawiki',
+			],
+		],
+	],
 	'wgDataMapsEnableCreateMap' => [
 		'name' => 'DataMaps: Enable CreateMap',
 		'from' => 'datamaps',
