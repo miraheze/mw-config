@@ -937,15 +937,15 @@ $wgManageWikiSettings = [
 	'wgMFAmcOutreachMinEditCount' => [
 		'name' => 'MobileFrontend AMC Outreach Min Edit Count',
 		'from' => 'mobilefrontend',
-			'type' => 'integer',
-			'minint' => 0,
+		'type' => 'integer',
+		'minint' => 0,
 		'maxint' => 1000,
 		'overridedefault' => 100,
-			'section' => 'editing',
-			'help' => 'When AMC Outreach is enabled, this option sets the minimum number of edits a user must make before they are eligible to see the AMC Outreach feature.',
+		'section' => 'editing',
+		'help' => 'When AMC Outreach is enabled, this option sets the minimum number of edits a user must make before they are eligible to see the AMC Outreach feature.',
 		'requires' => [
 			'settings' => [
-					'setting' => 'wgMFAmcOutreach',
+				'setting' => 'wgMFAmcOutreach',
 				'value' => true,
 			],
 		],
