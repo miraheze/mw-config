@@ -1227,9 +1227,6 @@ $wgConf->settings += [
 			'virtual-LoginNotify' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
-			'virtual-managewiki' => [
-				'db' => $wi->getGlobalDatabase(),
-			],
 			'virtual-managewiki-central' => [
 				'db' => $wi->getCentralDatabase(),
 			],
