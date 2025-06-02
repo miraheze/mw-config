@@ -367,6 +367,10 @@ class MirahezeFunctions {
 		$wgVirtualDomainsMapping['virtual-createwiki'] = [
 			'db' => $this->getGlobalDatabase(),
 		];
+
+		$wgVirtualDomainsMapping['virtual-managewiki'] = [
+			'db' => $this->getGlobalDatabase(),
+		];
 	}
 
 	/**
