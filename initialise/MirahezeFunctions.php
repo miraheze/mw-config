@@ -756,7 +756,7 @@ class MirahezeFunctions {
 					$settings['wgGroupsRemoveFromSelf']['default'][$group][] = $name;
 				}
 
-				if ( $perm['autopromote'] !== null ) {
+				if ( (array)$perm['autopromote'] !== [] ) {
 					$onceId = array_search( 'once', $perm['autopromote'] );
 
 					if ( !is_bool( $onceId ) ) {
