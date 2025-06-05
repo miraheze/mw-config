@@ -415,6 +415,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'details' => [
+		'name' => 'Details',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Extension:Details',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'displaytitle' => [
 		'name' => 'DisplayTitle',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Display_Title',
