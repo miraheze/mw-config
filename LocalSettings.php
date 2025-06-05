@@ -1422,7 +1422,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgDiscordCurlProxy' => [
-		'default' => 'http://bastion.wikitide.net:8080',
+		'default' => 'http://bastion.fsslc.wtnet:8080',
 	],
 	'wgDiscordEnableExperimentalCVTFeatures' => [
 		'default' => true,
@@ -1625,7 +1625,7 @@ $wgConf->settings += [
 
 	// HTTP
 	'wgHTTPProxy' => [
-		'default' => 'http://bastion.wikitide.net:8080',
+		'default' => 'http://bastion.fsslc.wtnet:8080',
 	],
 
 	// FeaturedFeeds
@@ -2224,7 +2224,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgCopyUploadProxy' => [
-		'default' => 'http://bastion.wikitide.net:8080',
+		'default' => 'http://bastion.fsslc.wtnet:8080',
 	],
 	'wgFileExtensions' => [
 		'default' => [
@@ -5475,7 +5475,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgRottenLinksHTTPProxy' => [
-		'default' => 'http://bastion.wikitide.net:8080'
+		'default' => 'http://bastion.fsslc.wtnet:8080'
 	],
 
 	// Robot policy
@@ -5503,7 +5503,7 @@ $wgConf->settings += [
 		'default' => 200,
 	],
 	'wgRSSProxy' => [
-		'default' => 'http://bastion.wikitide.net:8080',
+		'default' => 'http://bastion.fsslc.wtnet:8080',
 	],
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s',
@@ -6063,7 +6063,7 @@ $wgConf->settings += [
 		]
 	],
 	'wgTorBlockProxy' => [
-		'default' => 'http://bastion.wikitide.net:8080'
+		'default' => 'http://bastion.fsslc.wtnet:8080'
 	],
 	'wgTorTagChanges' => [
 		'default' => false
