@@ -148,7 +148,7 @@ if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 $wgVirtualRestConfig = [
 	'modules' => [
 		'parsoid' => [
-			'url' => 'https://mw-lb.wikitide.net/w/rest.php',
+			'url' => 'https://mw-lb.miraheze.org/w/rest.php',
 			'domain' => $wi->server,
 			'prefix' => $wi->dbname,
 			'forwardCookies' => (bool)$cwPrivate,
@@ -164,7 +164,7 @@ $wgVirtualRestConfig = [
 ];
 
 if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgFlowParsoidURL = 'https://mw-lb.wikitide.net/w/rest.php';
+	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
 	$wgFlowParsoidPrefix = $wi->dbname;
 	$wgFlowParsoidTimeout = 50;
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
