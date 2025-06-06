@@ -2458,6 +2458,15 @@ $wgManageWikiSettings = [
 		'help' => 'Set a custom Flickr API key for UploadWizard.',
 		'requires' => [],
 	],
+	'wgPhonosInlineAudioPlayerMode' => [
+		'name' => 'Phonos Inline Audio Player Mode',
+		'from' => 'phonos',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Disable IPA rendering and only allow playing existing audio files.',
+		'requires' => [],
+	],
 
 	// Notifications
 	'wmgContactPageRecipientUser' => [
