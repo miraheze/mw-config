@@ -6142,13 +6142,8 @@ $wgConf->settings += [
 	'wgUseCdn' => [
 		'default' => true,
 	],
-	// Temporary; except CloudFlare
 	'wgCdnServersNoPurge' => [
 		'default' => [
-			// bast161
-			'2602:294:0:b13::101',
-			// bast181
-			'2602:294:0:b12::102',
 			// localhost is a must!
 			'127.0.0.1',
 			// CloudFlare IPs - https://www.cloudflare.com/ips/
