@@ -897,6 +897,15 @@ switch ( $wi->dbname ) {
 	case 'sagan4alphawiki':
 		$wgCargoAllowedSQLFunctions[] = 'RAND';
 		break;
+	case 'shintowiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+
+		break;
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
