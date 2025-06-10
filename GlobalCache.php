@@ -11,11 +11,11 @@ $beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
 
 if ( !$beta ) {
 	$wgCdnServers = [
-		/** cp36 */
+		/** cp161 */
 		'10.0.16.137:81',
-		/** cp37 */
+		/** cp171 */
 		'10.0.17.138:81',
-		/** cp38 */
+		/** cp191 */
 		'10.0.19.146:81',
 	];
 }
