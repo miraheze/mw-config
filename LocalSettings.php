@@ -1272,6 +1272,11 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Details
+	'wgDetailsMWCollapsibleCompatibility' => [
+		'default' => true,
+	],
+
 	// Drafts
 	'egDraftsAutoSaveWait' => [
 		'default' => 120,
