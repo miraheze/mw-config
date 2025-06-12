@@ -1970,6 +1970,15 @@ $wgManageWikiSettings = [
 		'help' => 'Restrict the linking of occurences of page titles to the end of the word. Enable $wgLinkTitlesWordStartOnly if you want exact page title case matching.',
 		'requires' => [],
 	],
+	'wgDetailsMWCollapsibleCompatibility' => [
+		'name' => 'Details mw-collapsible Compatibility',
+		'from' => 'details',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'parserfunctions',
+		'help' => 'Load CSS and JavaScript to enhance the details and summary tags, causing them to behave like elements with the mw-collapsible class and be styled like wikitables.',
+		'requires' => [],
+	],
 
 	// Media/File
 	'wgEnableUploads' => [
