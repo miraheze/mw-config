@@ -4124,6 +4124,8 @@ $wgConf->settings += [
 				592845,
 				/** Agent Isai (Technology team and Board) */
 				512002,
+				/** SomeRandomDeveloper (Technology team) */
+				542825,
 			],
 		],
 	],
