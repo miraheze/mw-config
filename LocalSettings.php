@@ -5817,6 +5817,12 @@ $wgConf->settings += [
 		],
 	],
 
+	// TemplateStylesExtender
+	'wgTemplateStylesExtenderEnableUnscopingSupport' => [
+		'default' => false,
+		'lostrealitieswiki' => true,
+	],
+
 	// TextExtracts
 	'wgExtractsRemoveClasses' => [
 		'default' => [
