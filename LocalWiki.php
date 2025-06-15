@@ -633,28 +633,6 @@ switch ( $wi->dbname ) {
 			'FieldsMergeStrategy' => 'replace',
 		];
 
-		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
-
-		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
-			if ( $key === 'places' ) {
-				$footerlinks['lienhe'] = Html::rawElement( 'a',
-					[
-						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'contactpage-label' )->text()
-				);
-
-				$footerlinks['banquyen'] = Html::rawElement( 'a',
-					[
-						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'crpage-label' )->text()
-				);
-			}
-		}
-
 		break;
 	case 'metawiki':
 		$wgContactConfig = [
@@ -911,29 +889,6 @@ switch ( $wi->dbname ) {
 
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
-		}
-
-		break;
-	case 'stopxwiki':
-		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
-
-		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
-			if ( $key === 'places' ) {
-				$footerlinks['contact'] = Html::rawElement( 'a',
-					[
-						'href' => 'mailto:tekannabrand@gmail.com',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'contactpage' )->text()
-				);
-				$footerlinks['stopxpolicy'] = Html::rawElement( 'a',
-					[
-						'href' => 'https://tekannabrand.org/wiki/TermsOfService',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'stopxpolicypage' )->text()
-				);
-			}
 		}
 
 		break;
