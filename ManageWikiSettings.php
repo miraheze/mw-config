@@ -4346,9 +4346,9 @@ $wgManageWikiSettings = [
 		'name' => 'Citizen Enable Command Palette',
 		'from' => 'citizen',
 		'type' => 'check',
-		'overridedefault' => false,
+		'overridedefault' => true,
 		'section' => 'styling',
-		'help' => 'Enable the experimental command palette feature',
+		'help' => 'Enable the command palette instead of the legacy search bar',
 		'requires' => [],
 	],
 	'wgCitizenEnableCJKFonts' => [

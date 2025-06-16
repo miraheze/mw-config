@@ -598,7 +598,7 @@ $wgConf->settings += [
 		'default' => 6,
 	],
 	'wgCitizenEnableCommandPalette' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgCitizenEnableCJKFonts' => [
 		'default' => false,
