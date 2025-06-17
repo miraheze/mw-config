@@ -3172,6 +3172,15 @@ $wgManageWikiSettings = [
 		'help' => 'Site verification key for Pinterest Console.',
 		'requires' => [],
 	],
+	'wgNortonSiteVerificationKey' => [
+		'name' => 'Norton Site Verification Key (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'Site verification key for Norton Safe Web.',
+		'requires' => [],
+	],
 	'wgNaverSiteVerificationKey' => [
 		'name' => 'Naver Site Verification Key (WikiSEO)',
 		'from' => 'wikiseo',
