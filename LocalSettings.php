@@ -5775,9 +5775,6 @@ $wgConf->settings += [
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'default' => true,
 	],
-	'wgTabberNeueUseCodex' => [
-		'default' => false,
-	],
 	'wgTabberNeueParseTabName' => [
 		'default' => false,
 	],
@@ -6791,9 +6788,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgYandexSiteVerificationKey' => [
-		'default' => false,
-	],
-	'wgAlexaSiteVerificationKey' => [
 		'default' => false,
 	],
 	'wgPinterestSiteVerificationKey' => [
