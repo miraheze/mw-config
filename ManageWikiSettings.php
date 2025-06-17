@@ -3154,15 +3154,6 @@ $wgManageWikiSettings = [
 		'help' => 'Site verification key for Yandex Webmasters.',
 		'requires' => [],
 	],
-	'wgAlexaSiteVerificationKey' => [
-		'name' => 'Alexa Site Verification Key (WikiSEO)',
-		'from' => 'wikiseo',
-		'type' => 'text',
-		'overridedefault' => false,
-		'section' => 'seo',
-		'help' => 'Site verification key for Alexa Console.',
-		'requires' => [],
-	],
 	'wgPinterestSiteVerificationKey' => [
 		'name' => 'Pinterest Site Verification Key (WikiSEO)',
 		'from' => 'wikiseo',

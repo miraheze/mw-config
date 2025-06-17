@@ -6793,9 +6793,6 @@ $wgConf->settings += [
 	'wgYandexSiteVerificationKey' => [
 		'default' => false,
 	],
-	'wgAlexaSiteVerificationKey' => [
-		'default' => false,
-	],
 	'wgPinterestSiteVerificationKey' => [
 		'default' => false,
 	],
