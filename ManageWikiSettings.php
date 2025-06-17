@@ -1383,15 +1383,6 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, when a tab is selected, the URL displayed on the browser changes. Opening this URL makes that tab initially selected.',
 		'requires' => [],
 	],
-	'wgTabberNeueUseCodex' => [
-		'name' => 'TabberNeue Use Codex',
-		'from' => 'tabberneue',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'editing',
-		'help' => 'If enabled, uses Codex to render Tabber. This is experimental and many features may not work as expected.',
-		'requires' => [],
-	],
 	'wgEnableEditRecovery' => [
 		'name' => 'Enable Edit Recovery',
 		'from' => 'mediawiki',
