@@ -6799,6 +6799,9 @@ $wgConf->settings += [
 	'wgPinterestSiteVerificationKey' => [
 		'default' => false,
 	],
+	'wgNortonSiteVerificationKey' => [
+		'default' => false,
+	],
 	'wgNaverSiteVerificationKey' => [
 		'default' => false,
 	],
