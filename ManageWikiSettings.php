@@ -458,12 +458,8 @@ $wgManageWikiSettings = [
 			'.mw-empty-elt',
 		],
 		'section' => 'other',
-		'help' => 'Elements which will be excluded from extraction.',
-		'requires' => [
-			'extensions' => [
-				'textextracts',
-			],
-		],
+		'help' => 'Selectors for elements which will be excluded from extraction.',
+		'requires' => [],
 	],
 	'wgRSSAllowLinkTag' => [
 		'name' => 'Allow links in RSS feeds',
