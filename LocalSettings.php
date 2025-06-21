@@ -5774,9 +5774,6 @@ $wgConf->settings += [
 	],
 
 	// TabberNeue
-	'wgTabberNeueEnableMD5Hash' => [
-		'default' => true,
-	],
 	'wgTabberNeueUpdateLocationOnTabChange' => [
 		'default' => true,
 	],
