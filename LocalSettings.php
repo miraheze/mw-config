@@ -5777,11 +5777,17 @@ $wgConf->settings += [
 	],
 
 	// TabberNeue
-	'wgTabberNeueUpdateLocationOnTabChange' => [
+	'wgTabberNeueAddTabPrefix' => [
+		'default' => true,
+	],
+	'wgTabberNeueEnableAnimation' => [
 		'default' => true,
 	],
 	'wgTabberNeueParseTabName' => [
 		'default' => false,
+	],
+	'wgTabberNeueUpdateLocationOnTabChange' => [
+		'default' => true,
 	],
 
 	// TemplateStyles
