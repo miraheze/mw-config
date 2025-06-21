@@ -4153,6 +4153,9 @@ $wgConf->settings += [
 			'RFC' => false,
 		],
 	],
+	'wgEnableProtectionIndicators' => [
+		'default' => false,
+	],
 	'wgActiveUserDays' => [
 		'default' => 30,
 	],
@@ -5778,9 +5781,6 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgTabberNeueParseTabName' => [
-		'default' => false,
-	],
-	'wgEnableProtectionIndicators' => [
 		'default' => false,
 	],
 
