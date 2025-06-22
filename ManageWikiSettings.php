@@ -1819,15 +1819,6 @@ $wgManageWikiSettings = [
 		'help' => 'Enables short descritption in site tagline',
 		'requires' => [],
 	],
-	'wgTabberNeueParseTabName' => [
-		'name' => 'TabberNeue Parse Tab Name',
-		'from' => 'tabberneue',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'parserfunctions',
-		'help' => 'Parse tab name as wikitext.',
-		'requires' => [],
-	],
 	'wgTitleIcon_EnableIconInPageTitle' => [
 		'name' => 'Title Icon: Enable icon on page titles',
 		'from' => 'titleicon',
