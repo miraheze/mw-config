@@ -1926,14 +1926,14 @@ $wgConf->settings += [
 				],
 			],
 		],
-		'lhmnwiki' => [
+		'100bangaiwiki' => [
 			'hostedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "32",
-					"width" => "200",
+					"height" => "42",
+					"width" => "110",
 				],
 			],
 			'miraheze' => [
@@ -1941,8 +1941,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "60",
-					"width" => "60",
+					"height" => "50",
+					"width" => "50",
 				],
 			],
 			'poweredby' => [
@@ -1950,8 +1950,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "60",
-					'width' => "185",
+					'height' => "42",
+					'width' => "110",
 				],
 			],
 			'copyright' => [
@@ -1959,8 +1959,46 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
-					'height' => "50",
-					'width' => "150",
+					'height' => "42",
+					'width' => "110",
+				],
+			],
+		],
+		'lhmnwiki' => [
+			'hostedby' => [
+				'songnguxyz' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'url' => 'https://songngu.xyz',
+					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
+					"height" => "42",
+					"width" => "110",
+				],
+			],
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Lưu trữ bởi Miraheze',
+					"height" => "50",
+					"width" => "50",
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Xây dựng trên MediaWiki',
+					'height' => "42",
+					'width' => "110",
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
+					'height' => "42",
+					'width' => "110",
 				],
 			],
 		],
@@ -1970,8 +2008,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "32",
-					"width" => "200",
+					"height" => "42",
+					"width" => "110",
 				],
 			],
 			'miraheze' => [
@@ -1979,8 +2017,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "60",
-					"width" => "60",
+					"height" => "50",
+					"width" => "50",
 				],
 			],
 			'poweredby' => [
@@ -1988,8 +2026,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "60",
-					'width' => "185",
+					'height' => "42",
+					'width' => "110",
 				],
 			],
 			'copyright' => [
@@ -1997,8 +2035,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
-					'height' => "50",
-					'width' => "150",
+					'height' => "42",
+					'width' => "110",
 				],
 			],
 		],
@@ -3412,6 +3450,11 @@ $wgConf->settings += [
 		'+bitcoindebateswiki' => [
 			'emailconfirmed' => [
 				'read' => true,
+			],
+		],
+		'+cgwiki' => [
+			'cg' => [
+				'editcgprotected' => true,
 			],
 		],
 		'+cmgwiki' => [
@@ -5186,6 +5229,9 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
+		'+cgwiki' => [
+			'editcgprotected',
+		],
 		'+cmgwiki' => [
 			'bureaucrat',
 			'sysop',
@@ -5320,6 +5366,9 @@ $wgConf->settings += [
 		],
 		'allpediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'cgwiki' => [
+			'editcgprotected'
 		],
 		'codinghutwiki' => [
 			'editbureaucratprotected',
