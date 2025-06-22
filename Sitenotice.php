@@ -16,7 +16,6 @@ $wgMajorSiteNoticeID = 91;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-/*
  $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -41,7 +40,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On March 5th, 2025 from 18:45 until 20:45 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
+								On Monday June 23rd, we will be conducting a hardware repair on one of our hypervisors (cloud15) which will require a full shutdown of the server. This will begin at 18:30 UTC and last around 90 minutes until 20:00 UTC. This will involve a full outage of all wikis on db151/c1 and editing, viewing files and account logins will be unstable on all other wikis.
 							</div>
 						</td>
 					</tr>
@@ -50,7 +49,6 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		</table>
 	EOF;
 }
-*/
 
 // }
 
