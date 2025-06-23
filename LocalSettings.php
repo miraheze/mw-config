@@ -5230,7 +5230,11 @@ $wgConf->settings += [
 			'editconsulprotected',
 		],
 		'+cgwiki' => [
-			'editcgprotected',
+			'',
+			'user',
+			'autoconfirmed',
+			'cg',
+			'sysop',
 		],
 		'+cmgwiki' => [
 			'bureaucrat',
