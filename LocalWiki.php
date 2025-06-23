@@ -1,8 +1,6 @@
 <?php
 
 use MediaWiki\Actions\ActionEntryPoint;
-use MediaWiki\EditPage\EditPage;
-use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\Parser;
