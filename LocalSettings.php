@@ -4196,6 +4196,9 @@ $wgConf->settings += [
 			'RFC' => false,
 		],
 	],
+	'wgEnableProtectionIndicators' => [
+		'default' => false,
+	],
 	'wgActiveUserDays' => [
 		'default' => 30,
 	],
@@ -5823,17 +5826,17 @@ $wgConf->settings += [
 	],
 
 	// TabberNeue
-	'wgTabberNeueEnableMD5Hash' => [
+	'wgTabberNeueAddTabPrefix' => [
 		'default' => true,
 	],
-	'wgTabberNeueUpdateLocationOnTabChange' => [
+	'wgTabberNeueEnableAnimation' => [
 		'default' => true,
 	],
 	'wgTabberNeueParseTabName' => [
 		'default' => false,
 	],
-	'wgEnableProtectionIndicators' => [
-		'default' => false,
+	'wgTabberNeueUpdateLocationOnTabChange' => [
+		'default' => true,
 	],
 
 	// TemplateStyles

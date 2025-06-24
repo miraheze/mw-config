@@ -1393,6 +1393,15 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, removes (substitutes) templates in signatures.',
 		'requires' => [],
 	],
+	'wgTabberNeueAddTabPrefix' => [
+		'name' => 'TabberNeue Add Tab Prefix',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'editing',
+		'help' => 'If enabled, tabpanel IDs will be prepended with "tabber-" to avoid conflicts with page headings.',
+		'requires' => [],
+	],
 	'wgTabberNeueEnableAnimation' => [
 		'name' => 'TabberNeue Enable Animation',
 		'from' => 'tabberneue',
@@ -1400,6 +1409,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'editing',
 		'help' => 'If enabled, activates smooth scroll animation when changing tabs',
+		'requires' => [],
+	],
+	'wgTabberNeueParseTabName' => [
+		'name' => 'TabberNeue Parse Tab Name',
+		'from' => 'tabberneue',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'If enabled, tab names will be parsed as wikitext. This can have a performance impact and cause unexpected behaviors.',
 		'requires' => [],
 	],
 	'wgTabberNeueUpdateLocationOnTabChange' => [
@@ -1799,15 +1817,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
 		'help' => 'Enables short descritption in site tagline',
-		'requires' => [],
-	],
-	'wgTabberNeueParseTabName' => [
-		'name' => 'TabberNeue Parse Tab Name',
-		'from' => 'tabberneue',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'parserfunctions',
-		'help' => 'Parse tab name as wikitext.',
 		'requires' => [],
 	],
 	'wgTitleIcon_EnableIconInPageTitle' => [
