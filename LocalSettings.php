@@ -5331,6 +5331,9 @@ $wgConf->settings += [
 			'sysop',
 			'bureaucrat',
 		],
+		'+stickmancomicwiki' => [
+			'editbureaucratprotected',
+		],
 		'+testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
@@ -5439,6 +5442,9 @@ $wgConf->settings += [
 			'extendedconfirmed',
 			'moderator',
 			'bureaucrat',
+		],
+		'stickmancomicwiki' => [
+			'editbureaucratprotected',
 		],
 		'testwiki' => [
 			'editbureaucratprotected',
