@@ -1816,7 +1816,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'parserfunctions',
-		'help' => 'Enables short descritption in site tagline',
+		'help' => 'Enables short description in site tagline',
 		'requires' => [],
 	],
 	'wgTitleIcon_EnableIconInPageTitle' => [
