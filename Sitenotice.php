@@ -27,7 +27,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	);
 
 	$siteNotice .= <<<EOF
-		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !important;">
 			<tbody>
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 					<tr>
