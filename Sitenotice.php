@@ -16,7 +16,7 @@ $wgMajorSiteNoticeID = 91;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-/*
+
  $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
@@ -41,7 +41,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On Monday June 23rd, we will be conducting a hardware repair on one of our hypervisors (cloud15) which will require a full shutdown of the server. This will begin at 18:30 UTC and last around 90 minutes until 20:00 UTC. This will involve a full outage of all wikis on db151/c1 and editing, viewing files and account logins will be unstable on all other wikis.
+								On Thursday June 26th, we will be conducting emergency maintenance on our hypervisors (cloud15) which will require a full shutdown of the server. This will begin at 19:00 UTC and last around 90 minutes until 20:30 UTC. This will involve a full outage of all wikis on db151/c1 and editing, viewing files and account logins will be unstable on all other wikis.
 							</div>
 						</td>
 					</tr>
@@ -50,7 +50,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		</table>
 	EOF;
 }
-*/
+
 // }
 
 // Specific wiki SiteNotice
