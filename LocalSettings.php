@@ -5252,7 +5252,7 @@ $wgConf->settings += [
 		'+cricketnepalwiki' => [
 			'editbureaucratprotected',
 			'editstaffprotected',
-			'edittemplateprotected',
+                        'editfounderprotected',
 		],
 		'+csydeswiki' => [
 			'editblacklisted',
