@@ -1139,7 +1139,7 @@ class MirahezeFunctions {
 			'options' => array_combine( self::ALLOWED_DOMAINS[self::getRealm( $dbname )], self::ALLOWED_DOMAINS[self::getRealm( $dbname )] ),
 			'default' => self::getPrimaryDomain( $dbname ),
 			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
-			'cssclass' => 'managewiki-infuse',
+			'cssclass' => 'ext-managewiki-infuse',
 			'section' => 'main',
 		];
 
@@ -1154,7 +1154,7 @@ class MirahezeFunctions {
 			],
 			'default' => $setList['wgArticlePath'] ?? '/wiki/$1',
 			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
-			'cssclass' => 'managewiki-infuse',
+			'cssclass' => 'ext-managewiki-infuse',
 			'section' => 'main',
 		];
 
@@ -1163,7 +1163,7 @@ class MirahezeFunctions {
 			'type' => 'check',
 			'default' => $setList['wgMainPageIsDomainRoot'] ?? false,
 			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
-			'cssclass' => 'managewiki-infuse',
+			'cssclass' => 'ext-managewiki-infuse',
 			'section' => 'main',
 		];
 
@@ -1173,7 +1173,7 @@ class MirahezeFunctions {
 			'options' => array_combine( $versions, $versions ),
 			'default' => $mwVersion,
 			'disabled' => !$context->getAuthority()->isAllowed( 'managewiki-restricted' ),
-			'cssclass' => 'managewiki-infuse',
+			'cssclass' => 'ext-managewiki-infuse',
 			'section' => 'main',
 		];
 	}
