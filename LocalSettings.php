@@ -3969,6 +3969,9 @@ $wgConf->settings += [
 	'wgMatomoAnalyticsDisableCookie' => [
 		'default' => true,
 	],
+	'wgMatomoAnalyticsEnableCustomDimensionsUserType' => [
+		'default' => true,
+	],
 
 	// MediaWikiChat settings
 	'wgChatLinkUsernames' => [
