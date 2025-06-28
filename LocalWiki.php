@@ -910,6 +910,14 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'towerworldwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $out ) {
+			$out->addMeta( 'theme-color', '#2fd991' );
+		}
+
+		break;
 	case 'tuscriaturaswiki':
 		$wgHooks['AfterFinalPageOutput'][] = 'onAfterFinalPageOutput';
 
