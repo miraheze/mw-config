@@ -3452,11 +3452,6 @@ $wgConf->settings += [
 				'read' => true,
 			],
 		],
-		'+cgwiki' => [
-			'cg' => [
-				'editcgprotected' => true,
-			],
-		],
 		'+cmgwiki' => [
 			'gst' => [
 				'read' => true,
@@ -5236,7 +5231,11 @@ $wgConf->settings += [
 			'editconsulprotected',
 		],
 		'+cgwiki' => [
-			'editcgprotected',
+			'',
+			'user',
+			'autoconfirmed',
+			'cg',
+			'sysop',
 		],
 		'+cmgwiki' => [
 			'bureaucrat',
@@ -5377,7 +5376,7 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 		],
 		'cgwiki' => [
-			'editcgprotected'
+			'cg'
 		],
 		'codinghutwiki' => [
 			'editbureaucratprotected',
