@@ -7116,6 +7116,12 @@ $wi::$disabledExtensions = [
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.43',
 ];
 
+if ( $wi->version >= 1.44 ) {
+	$wi::$disabledExtensions += [
+		'growthexperiments' => 'Requires CommunityConfiguration be installed'
+	];
+}
+
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
