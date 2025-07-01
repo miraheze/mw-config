@@ -6083,6 +6083,16 @@ $wgConf->settings += [
 	'wgTweekiSkinFooterIcons' => [
 		'default' => false,
 	],
+	'wgTweekiSkinGridNone' => [
+		'default' => [
+			'mainoffset' => 1, 
+			'mainwidth' => 10,
+		],
+		'factoriopluswiki' => [
+			'mainoffset' => 0, 
+			'mainwidth' => 12,
+		],
+	],
 	'wgTweekiSkinUseBtnParser' => [
 		'default' => false,
 	],
