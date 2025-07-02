@@ -2264,6 +2264,8 @@ $wgConf->settings += [
 		'dragdownwiki' => 1024 * 1024 * 10,
 		/** T12515 - 2MB */
 		'irisstationwiki' => 1024 * 1024 * 2,
+		/** T13930 - 5MB */
+		'wikigeniuswiki' => 1024 * 1024 * 5,
 	],
 	'wgAllowCopyUploads' => [
 		'default' => false,
