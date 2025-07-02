@@ -1854,7 +1854,7 @@ $wgConf->settings += [
 					'src' => 'https://hybridcafe.wiki/w/img_auth.php/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
-				]
+				],
 			],
 			'copyright' => [
 				'copyright' => [
