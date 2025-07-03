@@ -1941,8 +1941,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "50",
-					"width" => "50",
+					"height" => "45",
+					"width" => "45",
 				],
 			],
 			'poweredby' => [
@@ -1965,7 +1965,7 @@ $wgConf->settings += [
 			],
 		],
 		'lhmnwiki' => [
-			'hostedby' => [
+			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
@@ -1973,14 +1973,21 @@ $wgConf->settings += [
 					"height" => "42",
 					"width" => "110",
 				],
+				'indiewikifed' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/a/ab/IWF_Logo.svg',
+					'url' => 'https://lophocmatngu.wiki/WLHMN:IWF',
+					'alt' => 'Một thành viên của Liên Minh Wiki Tự Do',
+					"height" => "45",
+					"width" => "45",
+				],
 			],
 			'miraheze' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "50",
-					"width" => "50",
+					"height" => "45",
+					"width" => "45",
 				],
 			],
 			'poweredby' => [
@@ -2017,8 +2024,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "50",
-					"width" => "50",
+					"height" => "45",
+					"width" => "45",
 				],
 			],
 			'poweredby' => [
