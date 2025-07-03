@@ -2039,9 +2039,9 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
-					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-NC-SA 4.0)',
+					'src' => 'https://static.wikitide.net/cgwiki/2/27/CC_BY-NC-SA-4.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Ghi công - Phi thương mại - Chia sẻ tương tự 4.0 (CC BY-NC-SA 4.0)',
 					'height' => "42",
 					'width' => "110",
 				],
@@ -3459,11 +3459,6 @@ $wgConf->settings += [
 		'+bitcoindebateswiki' => [
 			'emailconfirmed' => [
 				'read' => true,
-			],
-		],
-		'+cgwiki' => [
-			'cg' => [
-				'editcgprotected' => true,
 			],
 		],
 		'+cmgwiki' => [
@@ -5245,7 +5240,11 @@ $wgConf->settings += [
 			'editconsulprotected',
 		],
 		'+cgwiki' => [
-			'editcgprotected',
+			'',
+			'user',
+			'autoconfirmed',
+			'cg',
+			'sysop',
 		],
 		'+cmgwiki' => [
 			'bureaucrat',
@@ -5386,7 +5385,7 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 		],
 		'cgwiki' => [
-			'editcgprotected'
+			'cg'
 		],
 		'codinghutwiki' => [
 			'editbureaucratprotected',
