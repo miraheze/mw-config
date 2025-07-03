@@ -1974,11 +1974,11 @@ $wgConf->settings += [
 					"width" => "110",
 				],
 				'indiewikifed' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/a/ab/IWF_Logo.svg',
-					'url' => 'https://lophocmatngu.wiki/WLHMN:IWF',
+					'src' => 'https://static.wikitide.net/lhmnwiki/a/a2/IWF_Footer.svg',
+					'url' => 'https://lophocmatngu.wiki/WLHMN:Independent_Wiki_Federation',
 					'alt' => 'Một thành viên của Liên Minh Wiki Tự Do',
-					"height" => "45",
-					"width" => "45",
+					"height" => "40",
+					"width" => "110",
 				],
 			],
 			'miraheze' => [
@@ -2041,7 +2041,7 @@ $wgConf->settings += [
 				'copyright' => [
 					'src' => 'https://static.wikitide.net/cgwiki/2/27/CC_BY-NC-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
-					'alt' => 'Creative Commons Ghi công - Phi thương mại - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
+					'alt' => 'Creative Commons Ghi công - Phi thương mại - Chia sẻ tương tự 4.0 (CC BY-NC-SA 4.0)',
 					'height' => "42",
 					'width' => "110",
 				],
