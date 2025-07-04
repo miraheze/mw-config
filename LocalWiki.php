@@ -1,9 +1,12 @@
 <?php
 
 use MediaWiki\Actions\ActionEntryPoint;
+use MediaWiki\Context\RequestContext;
+use MediaWiki\Language\LanguageCode;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\Title\Title;
@@ -754,78 +757,175 @@ switch ( $wi->dbname ) {
 		];
 		break;
 	case 'tkuwiki':
+		// Helper function
+		function getTitleInfo( $title ) {
+			if ( !$title instanceof Title ) {
+				return false;
+			}
+
+			$service = MediaWikiServices::getInstance();
+			$languageConverterFactory = $service->getLanguageConverterFactory();
+			$languageNameUtils = $service->getLanguageNameUtils();
+			$languageFactory = $service->getLanguageFactory();
+
+			$displayTitleNsText = $title->getNsText();
+			$displayTitleMainText = $title->getText();
+			$titleRootText = $title->getRootText();
+			$pageLangCode = false;
+			$isMainPage = false;
+
+			if (
+				$languageNameUtils->isSupportedLanguage(
+					LanguageCode::bcp47ToInternal( $displayTitleNsText )
+				)
+			) {
+				$pageLangCode = LanguageCode::bcp47ToInternal( $displayTitleNsText );
+				$displayTitleNsText = '';
+			} elseif (
+				$languageNameUtils->isSupportedLanguage(
+					LanguageCode::bcp47ToInternal( $titleRootText )
+				)
+			) {
+				$pageLangCode = LanguageCode::bcp47ToInternal( $titleRootText );
+				$displayTitleMainText = substr(
+					$displayTitleMainText,
+					strrpos( $displayTitleMainText, '/' ) + 1
+				);
+			}
+
+			if ( $pageLangCode === false ) {
+				return false;
+			}
+
+			$pageLang = $languageFactory->getLanguage( $pageLangCode );
+			$pageLangConverter = $languageConverterFactory
+				->getLanguageConverter( $pageLang );
+			$pageViewLang = $pageLangConverter->getPreferredVariant();
+			$langMainPage = wfMessage( 'mainpage' )
+				->inLanguage( $pageLang )
+				->text();
+
+			if ( $title->getContentModel() !== CONTENT_MODEL_WIKITEXT ) {
+				$pageLangConverter = $languageConverterFactory
+					->getLanguageConverter(
+						$languageFactory->getLanguage( 'en' )
+					);
+				$pageViewLang = $pageLangConverter->getPreferredVariant();
+			}
+
+			if (
+				$displayTitleNsText === '' &&
+				$displayTitleMainText === $langMainPage
+			) {
+				$isMainPage = true;
+				$displayTitleNsText = '';
+				$displayTitleMainText = wfMessage( 'mainpage' )
+					->inLanguage( $pageViewLang )
+					->text();
+			} else {
+				$displayTitleNsText = $pageLangConverter
+					->convertNamespace( $title->getNamespace(), $pageViewLang );
+				$displayTitleMainText = $pageLangConverter
+					->translate( $displayTitleMainText, $pageViewLang );
+			}
+
+			return [
+				'disaply_title_ns_text' => $displayTitleNsText,
+				'display_title_main_text' => $displayTitleMainText,
+				'page_lang' => $pageLang,
+				'page_view_lang' => $pageViewLang,
+				'is_main_page' => $isMainPage,
+			];
+		}
+
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( &$out, &$skin ) {
 			$title = $out->getTitle();
+			$titleInfo = getTitleInfo( $title );
 
-			if ( !$title instanceof Title ) {
+			if (
+				$out->getContext()->getActionName() !== 'view' ||
+				$titleInfo === false ||
+				$out->getMetadata()->getPageProperty( 'displaytitle' ) !== null
+			) {
 				return;
 			}
 
-			$service = MediaWikiServices::getInstance();
-			$languageNameUtils = $service->getLanguageNameUtils();
-			$nsText = $title->getNsText();
-			$mainText = $title->getText();
+			$pageTitle = Parser::formatPageTitle(
+				$titleInfo['disaply_title_ns_text'],
+				':',
+				$titleInfo['display_title_main_text']
+			);
+			$pageTitlePlain = Sanitizer::stripAllTags( $pageTitle );
+			$pageTitleMsg = $out->msg( 'pagetitle' )
+				->inLanguage( $titleInfo['page_view_lang'] )
+				->params( $pageTitlePlain );
 
-			if (
-				$languageNameUtils->isSupportedLanguage( strtolower( $nsText ) ) &&
-				$out->getPageTitle() === Parser::formatPageTitle( $nsText, ':', $mainText )
-			) {
-				$out->setPageTitle( Parser::formatPageTitle( '', ':', $title->getText() ) );
+			$out->setPageTitle( $pageTitle );
+			$out->setHTMLTitle( $pageTitleMsg->text() );
+		}
 
-				if ( $title->isMainPage() ) {
-					$msg = $out->msg( 'pagetitle-view-mainpage' );
+		$wgHooks['GetDefaultSortkey'][] = 'onGetDefaultSortkey';
 
-					if ( !$msg->isDisabled() ) {
-						$out->setHTMLTitle( $msg );
-					}
-				}
+		function onGetDefaultSortkey( $title, &$sortkey ) {
+			$titleInfo = getTitleInfo( $title );
+
+			if ( $titleInfo === false ) {
+				return;
 			}
+
+			$sortkey = $titleInfo[ 'display_title_main_text' ];
+		}
+
+		$wgHooks['GetPreferences'][] = 'onGetPreferences';
+
+		function onGetPreferences( $user, &$preferences ) {
+			$preferences['language']['options'] = [
+				'x-default - ' . wfMessage( 'pagelang-use-default' )->text() => 'x-default',
+			] + $preferences['language']['options'];
 		}
 
 		$wgHooks['PageContentLanguage'][] = 'onPageContentLanguage';
 
 		function onPageContentLanguage( $title, &$pageLang, $userLang ) {
 			$service = MediaWikiServices::getInstance();
-			$languageNameUtils = $service->getLanguageNameUtils();
+			$titleInfo = getTitleInfo( $title );
 
-			if (
-				$title->inNamespaces(
-					NS_SPECIAL,
-					NS_MAIN,
-					NS_TALK,
-					NS_USER,
-					NS_USER_TALK,
-					NS_PROJECT,
-					NS_PROJECT_TALK,
-					NS_FILE,
-					NS_FILE_TALK,
-					NS_MEDIAWIKI_TALK,
-					NS_TEMPLATE,
-					NS_TEMPLATE_TALK,
-					NS_HELP,
-					NS_HELP_TALK,
-					NS_CATEGORY,
-					NS_CATEGORY_TALK
-				) ||
-				(
-					$title->isTalkPage() &&
-					$languageNameUtils->isSupportedLanguage(
-						strtolower( $title->getSubjectPage()->getNsText() )
-					)
-				)
-			) {
-				$pageLang = $service->getLanguageFactory()->getLanguage( 'zh-hant' );
+			if ( $titleInfo === false ) {
+				if ( $title->getContentModel() === CONTENT_MODEL_WIKITEXT ) {
+					$pageLang = $service->getLanguageFactory()
+						->getLanguage( 'zh-hant' );
+				}
 
 				return;
 			}
 
-			$nsTextLc = strtolower( $title->getNsText() );
+			$pageLang = $titleInfo['page_lang'];
+		}
 
-			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
-				$pageLang = $service->getLanguageFactory()->getLanguage( $nsTextLc );
+		$wgHooks['ParserAfterParse'][] = 'onParserAfterParse';
+
+		function onParserAfterParse( $parser, &$text, $stripState ) {
+			$title = $parser->getPage();
+			$titleInfo = getTitleInfo( $title );
+
+			if (
+				$titleInfo === false ||
+				$parser->getOutput()->getPageProperty( 'displaytitle' ) !== null
+			) {
+				return;
 			}
+
+			$pageTitle = Parser::formatPageTitle(
+				$titleInfo['disaply_title_ns_text'],
+				':',
+				$titleInfo['display_title_main_text']
+			);
+			$pageTitlePlain = Sanitizer::stripAllTags( $pageTitle );
+
+			$parser->getOutput()
+				->setPageProperty( 'displaytitle', $pageTitlePlain );
 		}
 
 		$wgHooks['SkinTemplateNavigation::Universal'][] = 'SkinTemplateNavigation__Universal';
@@ -840,73 +940,73 @@ switch ( $wi->dbname ) {
 					return;
 				}
 
-				$service = MediaWikiServices::getInstance();
-				$languageNameUtils = $service->getLanguageNameUtils();
-				$nsText = $subjectPage->getNsText();
+				$subjectPageTitleInfo = getTitleInfo( $title );
+
+				if ( $subjectPageTitleInfo === false ) {
+					return;
+				}
+
 				$subjectId = $title->getNamespaceKey( '' );
 				$userCanRead = $skinTemplate->getAuthority()->probablyCan( 'read', $title );
 				$isTalk = $title->isTalkPage();
 
-				if ( $languageNameUtils->isSupportedLanguage( strtolower( $nsText ) ) ) {
-					$subjectMsg = [ 'nstab-main' ];
-
-					$links['namespaces'][$subjectId] = $skinTemplate->tabAction(
-						$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
-					);
-					$links['associated-pages'][$subjectId] = $skinTemplate->tabAction(
-						$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
-					);
+				if ( $subjectPageTitleInfo['disaply_title_ns_text'] !== '' ) {
+					return;
 				}
+
+				$subjectMsg = [ 'nstab-main' ];
+
+				if ( $subjectPageTitleInfo['is_main_page'] ) {
+					array_unshift( $subjectMsg, 'nstab-mainpage' );
+				}
+
+				$links['namespaces'][$subjectId] = $skinTemplate->tabAction(
+					$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
+				);
+				$links['associated-pages'][$subjectId] = $skinTemplate->tabAction(
+					$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
+				);
 			}
+		}
+
+		$wgHooks['UserGetDefaultOptions'][] = 'onUserGetDefaultOptions';
+
+		function onUserGetDefaultOptions( &$defaultOptions ) {
+			$defaultOptions['language'] = 'x-default';
 		}
 
 		$wgHooks['UserGetLanguageObject'][] = 'onUserGetLanguageObject';
 
 		function onUserGetLanguageObject( $user, &$code, $context ) {
-			$service = MediaWikiServices::getInstance();
-			$languageNameUtils = $service->getLanguageNameUtils();
+			$request = $context->getRequest();
 			$title = $context->getTitle();
+			$titleInfo = getTitleInfo( $title );
 
-			if ( $user->isRegistered() || !$title ) {
+			if (
+				$request->getRawVal( 'uselang' ) ||
+				!$title
+			) {
 				return;
 			}
 
+			$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+			$userUseDefaultLang = $user->isRegistered() &&
+				$userOptionsLookup->getOption( $user, 'language' ) === 'x-default';
+
 			if (
-				$title->inNamespaces(
-					NS_SPECIAL,
-					NS_MAIN,
-					NS_TALK,
-					NS_USER,
-					NS_USER_TALK,
-					NS_PROJECT,
-					NS_PROJECT_TALK,
-					NS_FILE,
-					NS_FILE_TALK,
-					NS_MEDIAWIKI_TALK,
-					NS_TEMPLATE,
-					NS_TEMPLATE_TALK,
-					NS_HELP,
-					NS_HELP_TALK,
-					NS_CATEGORY,
-					NS_CATEGORY_TALK
-				) ||
-				(
-					$title->isTalkPage() &&
-					$languageNameUtils->isSupportedLanguage(
-						strtolower( $title->getSubjectPage()->getNsText() )
-					)
-				)
+				$titleInfo === false ||
+				!$userUseDefaultLang
 			) {
+				return;
+			}
+
+			if ( $title->getContentModel() !== CONTENT_MODEL_WIKITEXT ) {
 				$code = 'zh-hant';
 
 				return;
 			}
 
-			$nsTextLc = strtolower( $title->getNsText() );
-
-			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
-				$code = $nsTextLc;
-			}
+			$code = RequestContext::sanitizeLangCode( $titleInfo['page_view_lang'] );
 		}
 
 		break;
