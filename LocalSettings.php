@@ -6093,11 +6093,11 @@ $wgConf->settings += [
 	],
 	'wgTweekiSkinGridNone' => [
 		'default' => [
-			'mainoffset' => 1, 
+			'mainoffset' => 1,
 			'mainwidth' => 10,
 		],
 		'factoriopluswiki' => [
-			'mainoffset' => 0, 
+			'mainoffset' => 0,
 			'mainwidth' => 12,
 		],
 	],
