@@ -540,6 +540,40 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons && strpos( wfHostname(), 
 	];
 }
 
+if ( $wgDBname !== 'commonswikibeta' && $wgMirahezeCommons && strpos( wfHostname(), 'test' ) === true ) {
+	$wgForeignFileRepos[] = [
+		'class' => ForeignDBViaLBRepo::class,
+		'name' => 'mirahezecommons',
+		'backend' => 'miraheze-swift',
+		'url' => 'https://static.wikitide.net/commonswikibeta',
+		'hashLevels' => 2,
+		'thumbScriptUrl' => false,
+		'transformVia404' => true,
+		'hasSharedCache' => true,
+		'descBaseUrl' => 'https://commons.mirabeta.org/wiki/File:',
+		'scriptDirUrl' => 'https://commons.mirabeta.org/w',
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => 'commonswikibeta',
+		'initialCapital' => true,
+		'zones' => [
+			'public' => [
+				'container' => 'local-public',
+			],
+			'thumb' => [
+				'container' => 'local-thumb',
+			],
+			'temp' => [
+				'container' => 'local-temp',
+			],
+			'deleted' => [
+				'container' => 'local-deleted',
+			],
+		],
+		'abbrvThreshold' => 160
+	];
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
