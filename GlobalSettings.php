@@ -540,7 +540,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons && strpos( wfHostname(), 
 	];
 }
 
-if ( $wgDBname !== 'commonswikibeta' && $wgMirahezeCommons && strpos( wfHostname(), 'test' ) === true ) {
+if ( $wgDBname !== 'commonswikibeta' && $wgMirahezeCommons && strpos( wfHostname(), 'test' ) !== false ) {
 	$wgForeignFileRepos[] = [
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
