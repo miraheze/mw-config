@@ -5342,6 +5342,9 @@ $wgConf->settings += [
 			'sysop',
 			'bureaucrat',
 		],
+		'+starstruckwiki' => [
+			'editinterfaceadminprotected',
+		],
 		'+stickmancomicwiki' => [
 			'editbureaucratprotected',
 		],
@@ -5453,6 +5456,9 @@ $wgConf->settings += [
 			'extendedconfirmed',
 			'moderator',
 			'bureaucrat',
+		],
+		'starstruckwiki' => [
+			'editinterfaceadminprotected',
 		],
 		'stickmancomicwiki' => [
 			'editbureaucratprotected',
