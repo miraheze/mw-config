@@ -894,7 +894,7 @@ switch ( $wi->dbname ) {
 			$pageTitleMsg = $out->msg( 'pagetitle' )
 				->inLanguage( $titleInfo['page_view_lang'] )
 				->params( $pageTitlePlain );
-			
+
 			if ( $titleInfo['is_main_page'] ) {
 				$pageTitleMsg = $out->msg( 'pagetitle-view-mainpage' )
 					->inLanguage( $titleInfo['page_view_lang'] )
