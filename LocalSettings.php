@@ -6978,6 +6978,7 @@ $wgConf->settings += [
 			'DBTransaction' => false,
 			'deprecated' => [ 'graylog' => 'debug', 'sample' => 100 ],
 			'diff' => 'debug',
+			'DiscordNotifications' => 'warning',
 			'DuplicateParse' => false,
 			'dynamic-sidebar' => false,
 			'editpage' => false,
