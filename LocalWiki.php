@@ -2,6 +2,7 @@
 
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
@@ -1117,6 +1118,41 @@ switch ( $wi->dbname ) {
 	case 'whentheycrywiki':
 		$wgGalleryOptions['imageWidth'] = 200;
 		$wgGalleryOptions['imageHeight'] = 200;
+
+		break;
+	case 'wikigeniuswiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $output ) {
+			$output->addHeadItem( 'script-schema-ldjson', Html::rawElement( 'script', [ 'type' => 'application/ld+json' ], <<<END
+				{
+				  "@context": "https://schema.org",
+				  "@type": "Organization",
+				  "name": "WikiGenius",
+				  "url": "https://wikigenius.org/",
+				  "logo": "https://static.wikitide.net/wikigeniuswiki/6/68/Wikigenius_logo_02.png",
+				  "foundingDate": "2023-07-22",
+				  "founder": {
+				    "@type": "Person",
+				    "name": "Shovon Ahmed",
+				    "sameAs": [
+				      "https://g.co/kgs/VEEEjKG",
+				      "https://www.google.com/search?kgmid=/g/11r3_4dnj8"
+				    ]
+				  },
+				  "sameAs": [
+				    "https://www.facebook.com/profile.php?id=61574894462519",
+				    "https://www.instagram.com/wiki.genius/",
+				    "https://www.linkedin.com/company/wikigenius10/"
+				  ],
+				  "address": {
+				    "@type": "PostalAddress",
+				    "addressRegion": "Florida",
+				    "addressCountry": "United States"
+				  }
+				}
+			END ) );
+		}
 
 		break;
 	case 'genshinimpactwiki':
