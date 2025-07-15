@@ -3799,14 +3799,15 @@ $wgConf->settings += [
 	'wgManageWikiPermissionsDisallowedGroups' => [
 		'default' => [
 			'checkuser',
+			'checkuser-temporary-account-viewer',
 			'smwadministrator',
 			'oversight',
 			'steward',
 			'staff',
 			'suppress',
+			'temporary-account-viewer',
 			'techteam',
 			'trustandsafety',
-			'temporary-account-viewer',
 		],
 		'+metawiki' => [
 			'electionadmin',
