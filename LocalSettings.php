@@ -3799,11 +3799,13 @@ $wgConf->settings += [
 	'wgManageWikiPermissionsDisallowedGroups' => [
 		'default' => [
 			'checkuser',
+			'checkuser-temporary-account-viewer',
 			'smwadministrator',
 			'oversight',
 			'steward',
 			'staff',
 			'suppress',
+			'temporary-account-viewer',
 			'techteam',
 			'trustandsafety',
 		],
@@ -3834,6 +3836,7 @@ $wgConf->settings += [
 				'checkuser-temporary-account',
 				'checkuser-temporary-account-no-preference',
 				'checkuser-temporary-account-log',
+				'checkuser-temporary-account-auto-reveal',
 				'createwiki',
 				'createwiki-deleterequest',
 				'createwiki-suppressionlog',
