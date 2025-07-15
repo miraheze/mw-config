@@ -3806,6 +3806,7 @@ $wgConf->settings += [
 			'suppress',
 			'techteam',
 			'trustandsafety',
+			'temporary-account-viewer',
 		],
 		'+metawiki' => [
 			'electionadmin',
