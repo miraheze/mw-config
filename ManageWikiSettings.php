@@ -2849,6 +2849,15 @@ $wgManageWikiSettings = [
 		'help' => 'Array of skins to remove as a choice from user\'s preferences.',
 		'requires' => [],
 	],
+	'wmgCodeMirrorEnableDefault' => [
+		'name' => 'Enable CodeMirror syntax highlighting by default',
+		'from' => 'codemirror',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'preferences',
+		'help' => 'This enables CodeMirror syntax highlighting by default for all. Sets <code>$wgDefaultUserOptions[\'usecodemirror\'] = 1;</code>',
+		'requires' => [],
+	],
 	'wmgVisualEditorEnableDefault' => [
 		'name' => 'Make VisualEditor the default editor for all',
 		'from' => 'visualeditor',

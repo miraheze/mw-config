@@ -140,6 +140,14 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 	}
 }
 
+if ( $wi->isExtensionActive( 'CodeMirror' ) ) {
+	if ( $wmgCodeMirrorEnableDefault ) {
+		$wgDefaultUserOptions['usecodemirror'] = 1;
+	} else {
+		$wgDefaultUserOptions['usecodemirror'] = 0;
+	}
+}
+
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 	// Includes Wikibase Configuration. There is a global and per-wiki system here.
 	require_once '/srv/mediawiki/config/Wikibase.php';
