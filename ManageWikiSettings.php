@@ -2853,7 +2853,7 @@ $wgManageWikiSettings = [
 		'name' => 'Enable CodeMirror syntax highlighting by default',
 		'from' => 'codemirror',
 		'type' => 'check',
-		'overridedefault' => true,
+		'overridedefault' => false,
 		'section' => 'preferences',
 		'help' => 'This enables CodeMirror syntax highlighting by default for all. Sets <code>$wgDefaultUserOptions[\'usecodemirror\'] = 1;</code>',
 		'requires' => [],
