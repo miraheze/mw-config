@@ -141,11 +141,7 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'CodeMirror' ) ) {
-	if ( $wmgCodeMirrorEnableDefault ) {
-		$wgDefaultUserOptions['usecodemirror'] = 1;
-	} else {
-		$wgDefaultUserOptions['usecodemirror'] = 0;
-	}
+	$wgDefaultUserOptions['usecodemirror'] = (int)$wmgCodeMirrorEnableDefault;
 }
 
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
