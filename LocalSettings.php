@@ -1320,16 +1320,24 @@ $wgConf->settings += [
 	'wgDiscordIncludeDiffSize' => [
 		'default' => true,
 	],
-	'wgDiscordNotificationMovedArticle' => [
-		'default' => true,
+	'wgDiscordNotificationEnabledActions' => [
+		'default' => [
+			'AddedArticle' => true,
+			'EditedArticle' => true,
+			'MovedArticle' => true,
+			'ProtectedArticle' => true,
+			'RemovedArticle' => true,
+			'UnremovedArticle' => true,
+			'AfterImportPage' => true,
+			'FileUpload' => true,
+			'BlockedUser' => true,
+			'NewUser' => true,
+			'UserGroupsChanged' => true,
+			'Flow' => true,
+			'ModerationPending' => true,
+		],
 	],
-	'wgDiscordNotificationFileUpload' => [
-		'default' => true,
-	],
-	'wgDiscordNotificationProtectedArticle' => [
-		'default' => true,
-	],
-	'wgDiscordNotificationAfterImportPage' => [
+	'wgDiscordNotificationShowImage' => [
 		'default' => true,
 	],
 	'wgDiscordNotificationShowSuppressed' => [
@@ -1339,9 +1347,6 @@ $wgConf->settings += [
 		'default' => 'https://meta.miraheze.org/',
 	],
 	'wgDiscordNotificationBlockedUser' => [
-		'default' => true,
-	],
-	'wgDiscordNotificationNewUser' => [
 		'default' => true,
 	],
 	'wgDiscordNotificationIncludeAutocreatedUsers' => [
