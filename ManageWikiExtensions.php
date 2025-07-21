@@ -1931,6 +1931,7 @@ $wgManageWikiExtensions = [
 				'translate_cache' => "$IP/extensions/Translate/sql/mysql/translate_cache.sql",
 				'translate_groupreviews' => "$IP/extensions/Translate/sql/mysql/translate_groupreviews.sql",
 				'translate_groupstats' => "$IP/extensions/Translate/sql/mysql/translate_groupstats.sql",
+				'translate_message_group_subscriptions' => "$IP/extensions/Translate/sql/mysql/translate_message_group_subscriptions.sql",
 				'translate_messageindex' => "$IP/extensions/Translate/sql/mysql/translate_messageindex.sql",
 				'translate_metadata' => "$IP/extensions/Translate/sql/mysql/translate_metadata.sql",
 				'translate_reviews' => "$IP/extensions/Translate/sql/mysql/translate_reviews.sql",
