@@ -323,6 +323,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
+				'cs_associated_pages' => "$IP/extensions/CommentStreams/sql/mysql/cs_associated_pages.sql",
 				'cs_comments' => "$IP/extensions/CommentStreams/sql/mysql/cs_comments.sql",
 				'cs_replies' => "$IP/extensions/CommentStreams/sql/mysql/cs_replies.sql",
 				'cs_votes' => "$IP/extensions/CommentStreams/sql/mysql/cs_votes.sql",
