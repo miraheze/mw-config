@@ -1203,6 +1203,9 @@ $wgConf->settings += [
 			'virtual-centralauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-centralnotice' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-checkuser-global' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
@@ -1242,9 +1245,6 @@ $wgConf->settings += [
 		],
 		'+beta' => [
 			'virtual-botpasswords' => [
-				'db' => 'metawikibeta',
-			],
-			'virtual-centralnotice' => [
 				'db' => 'metawikibeta',
 			],
 		],
