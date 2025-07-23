@@ -33,6 +33,7 @@
  * sql: array of sql files to install with extension, mapped table name => sql file path.
  */
 
+use MediaWiki\Extension\DynamicPageList4\Maintenance\CreateView;
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
 
@@ -3925,3 +3926,18 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
+
+if ( $wi->version >= 1.44 ) {
+	$wgManageWikiExtensions['dynamicpagelist3'] = [
+		'name' => 'DynamicPageList4',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList3',
+		'conflicts' => 'dynamicpagelist',
+		'requires' => [],
+		'install' => [
+			'mwscript' => [
+				CreateView::class => [],
+			],
+		],
+		'section' => 'parserhooks',
+	];
+}
