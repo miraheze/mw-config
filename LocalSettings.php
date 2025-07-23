@@ -3442,6 +3442,7 @@ $wgConf->settings += [
 			],
 			'user' => [
 				'mwoauthmanagemygrants' => true,
+				'sendemail' => false,
 				'user' => true,
 			],
 		],
@@ -3590,6 +3591,7 @@ $wgConf->settings += [
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
 				'createwiki-deleterequest' => true,
+				'sendemail' => true,
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
@@ -3608,6 +3610,7 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 			],
 			'techteam' => [
+				'sendemail' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'handle-import-request-interwiki' => true,
@@ -3624,6 +3627,7 @@ $wgConf->settings += [
 			],
 			'trustandsafety' => [
 				'userrights' => true,
+				'sendemail' => true,
 				'globalblock' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
@@ -3678,6 +3682,7 @@ $wgConf->settings += [
 				'centralauth-rename' => true,
 				'centralauth-unmerge' => true,
 				'createwiki' => true,
+				'sendemail' => true,
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
@@ -3695,6 +3700,7 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 			],
 			'techteam' => [
+				'sendemail' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'handle-import-request-interwiki' => true,
@@ -3704,6 +3710,7 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 			],
 			'trustandsafety' => [
+				'sendemail' => true,
 				'userrights' => true,
 				'globalblock' => true,
 				'globalgroupmembership' => true,
@@ -3843,6 +3850,7 @@ $wgConf->settings += [
 				'createwiki-suppressrequest',
 				'editincidents',
 				'editothersprofiles-private',
+				'sendemail',
 				'flow-suppress',
 				'generate-random-hash',
 				'globalblock',
