@@ -730,24 +730,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Discussion
-	'wgChatLinkUsernames' => [
-		'name' => 'Chat Link to Usernames',
-		'from' => 'mediawikichat',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'discussion',
-		'help' => 'Link to user pages in the main chat window.',
-		'requires' => [],
-	],
-	'wgChatMeCommand' => [
-		'name' => 'Chat Me Command',
-		'from' => 'mediawikichat',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'discussion',
-		'help' => 'Enable "/me <text>" command that prints a status-type message.',
-		'requires' => [],
-	],
 	'wgCommentStreamsEnableTalk' => [
 		'name' => 'CommentStreams Enable Talk',
 		'from' => 'commentstreams',
