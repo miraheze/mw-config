@@ -1606,57 +1606,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'mediawikichat' => [
-		'name' => 'MediaWikiChat',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MediaWikiChat',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'sql' => [
-				'chat' => "$IP/extensions/MediaWikiChat/sql/chat.sql",
-				'chat_users' => "$IP/extensions/MediaWikiChat/sql/chat_users.sql"
-			],
-			'permissions' => [
-				'blockedfromchat' => [
-					'permissions' => [
-						'viewmyprivateinfo',
-					],
-				],
-				'chatmod' => [
-					'permissions' => [
-						'chat',
-						'modchat',
-					],
-					'addgroups' => [
-						'blockedfromchat',
-					],
-					'removegroups' => [
-						'blockedfromchat',
-					],
-				],
-				'user' => [
-					'permissions' => [
-						'chat',
-					],
-				],
-				'sysop' => [
-					'permissions' => [
-						'chat',
-						'modchat',
-					],
-					'addgroups' => [
-						'chatmod',
-						'blockedfromchat',
-					],
-					'removegroups' => [
-						'chatmod',
-						'blockedfromchat',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'newestpages' => [
 		'name' => 'Newest Pages',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Newest_Pages',

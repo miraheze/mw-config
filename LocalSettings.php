@@ -3980,14 +3980,6 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
-	// MediaWikiChat settings
-	'wgChatLinkUsernames' => [
-		'default' => false,
-	],
-	'wgChatMeCommand' => [
-		'default' => false,
-	],
-
 	// Medik settings
 	'wgMedikColor' => [
 		'default' => '#FFBE00',
@@ -4775,11 +4767,6 @@ $wgConf->settings += [
 		'+metawiki' => [
 			'requestwikiblocked' => [
 				'requestwiki' => true,
-			],
-		],
-		'+ext-MediaWikiChat' => [
-			'blockedfromchat' => [
-				'chat' => true,
 			],
 		],
 	],
