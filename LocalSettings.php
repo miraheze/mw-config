@@ -2760,7 +2760,7 @@ $wgConf->settings += [
 		],
 		'+utgwiki' => [
 			'translate' => [
-				'interwiki' => 'tl',
+				'interwiki' => 'transl',
 				'url' => 'https://utg-miraheze-org.translate.goog/wiki/$2?_x_tr_sl=en&_x_tr_tl=$1',
 				'baseTransOnly' => true,
 			],
