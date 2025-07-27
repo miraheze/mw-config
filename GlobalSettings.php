@@ -22,20 +22,6 @@ $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 	return true;
 };
 
-if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a',
-				[
-					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
-					'rel' => 'noreferrer noopener',
-				],
-				$skin->msg( 'contactpage-label' )->text()
-			);
-		}
-	};
-}
-
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 	wfLoadExtensions( [
