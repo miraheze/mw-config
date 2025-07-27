@@ -372,11 +372,11 @@ $wgConf->settings += [
 			'badlogin' => true,
 			'badloginperuser' => true
 		],
+		'+metawiki' => [
+			'contactpage' => true,
+		],
 		'+ext-WikiForum' => [
 			'wikiforum' => true,
-		],
-		'+ext-ContactPage' => [
-			'contactpage' => true,
 		],
 	],
 	'wgHCaptchaSiteKey' => [
@@ -646,16 +646,6 @@ $wgConf->settings += [
 
 	// CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
-		'default' => false,
-	],
-
-	// ContactPage
-	'wmgContactPageRecipientUser' => [
-		'default' => null,
-	],
-
-	// Used to add a link to Special:Contact on the footer, not from extension
-	'wmgMirahezeContactPageFooter' => [
 		'default' => false,
 	],
 
