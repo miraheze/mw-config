@@ -383,32 +383,6 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 	];
 }
 
-// ContactPage configuration
-if ( $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgContactConfig = [
-		'default' => [
-			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
-			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Contact Form on ' . $wgSitename,
-			'RequireDetails' => true,
-			// Should never be set to true
-			'IncludeIP' => false,
-			'MustBeLoggedIn' => false,
-			'AdditionalFields' => [
-				'Text' => [
-					'label-message' => 'emailmessage',
-					'type' => 'textarea',
-					'rows' => 20,
-					'required' => true,
-				],
-			],
-			'DisplayFormat' => 'table',
-			'RLModules' => [],
-			'RLStyleModules' => [],
-		],
-	];
-}
-
 // UploadWizard configuration
 if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 	$wgUploadWizardConfig = [
