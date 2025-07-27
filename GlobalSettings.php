@@ -2,10 +2,8 @@
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
-use MediaWiki\Html\Html;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
-use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
@@ -21,20 +19,6 @@ $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 	}
 	return true;
 };
-
-if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a',
-				[
-					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
-					'rel' => 'noreferrer noopener',
-				],
-				$skin->msg( 'contactpage-label' )->text()
-			);
-		}
-	};
-}
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
@@ -395,32 +379,6 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
 			'delete' => 'delete-dump',
-		],
-	];
-}
-
-// ContactPage configuration
-if ( $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgContactConfig = [
-		'default' => [
-			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
-			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Contact Form on ' . $wgSitename,
-			'RequireDetails' => true,
-			// Should never be set to true
-			'IncludeIP' => false,
-			'MustBeLoggedIn' => false,
-			'AdditionalFields' => [
-				'Text' => [
-					'label-message' => 'emailmessage',
-					'type' => 'textarea',
-					'rows' => 20,
-					'required' => true,
-				],
-			],
-			'DisplayFormat' => 'table',
-			'RLModules' => [],
-			'RLStyleModules' => [],
 		],
 	];
 }

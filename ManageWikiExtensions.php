@@ -1366,13 +1366,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'contactpage' => [
-		'name' => 'ContactPage',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ContactPage',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'specialpages',
-	],
 	'contributionscores' => [
 		'name' => 'ContributionScores',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Contribution_Scores',

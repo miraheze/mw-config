@@ -1542,15 +1542,6 @@ $wgManageWikiSettings = [
 		'help' => 'Source to get the page description from.',
 		'requires' => [],
 	],
-	'wmgMirahezeContactPageFooter' => [
-		'name' => 'Miraheze Contact Page Footer',
-		'from' => 'contactpage',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'links',
-		'help' => 'If set, it adds a link to Special:Contact on the footer',
-		'requires' => [],
-	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
@@ -2488,15 +2479,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Notifications
-	'wmgContactPageRecipientUser' => [
-		'name' => 'Contact Page Recipient User',
-		'from' => 'contactpage',
-		'type' => 'user',
-		'overridedefault' => null,
-		'section' => 'notifications',
-		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
-		'requires' => [],
-	],
 	'wgUsersNotifiedOnAllChanges' => [
 		'name' => 'Users Notified On All Changes',
 		'from' => 'mediawiki',

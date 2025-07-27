@@ -478,6 +478,13 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'metawiki':
+		wfLoadExtensions( [
+			'ContactPage',
+			'GlobalWatchlist',
+			'IncidentReporting',
+			'RequestSSL',
+			'SecurePoll',
+		] );
 		$wgContactConfig = [
 			'default' => [
 				'RecipientUser' => null,
@@ -594,16 +601,10 @@ switch ( $wi->dbname ) {
 			'type' => 'google',
 		];
 
-		wfLoadExtensions( [
-			'GlobalWatchlist',
-			'IncidentReporting',
-			'RequestSSL',
-			'SecurePoll',
-		] );
-
 		break;
 	case 'metawikibeta':
 		wfLoadExtensions( [
+			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
 			'RequestSSL',
