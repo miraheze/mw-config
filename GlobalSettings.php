@@ -2,10 +2,8 @@
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
-use MediaWiki\Html\Html;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
-use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
