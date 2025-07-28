@@ -6977,6 +6977,7 @@ $wgConf->settings += [
 			'DiscordNotifications' => 'warning',
 			'DuplicateParse' => false,
 			'dynamic-sidebar' => false,
+			'DynamicPageList4' => 'debug',
 			'editpage' => false,
 			'Echo' => 'debug',
 			'EditConflict' => 'error',
