@@ -565,6 +565,10 @@ $wgConf->settings += [
 			],
 		],
 	],
+	'wgCheckUserGlobalContributionsCentralWikiId' => [
+		'default' => 'metawiki',
+		'beta' => 'metawikibeta',
+	],
 
 	// CirrusSearch
 	'wgCirrusSearchPrefixSearchStartsWithAnyWord' => [
