@@ -4,7 +4,7 @@ namespace Miraheze\Config\Tests\ManageWiki;
 
 class ExtensionsTest extends ManageWikiTestCase {
 
-	public function getSchema(): array {
+	public function getSchema(): object {
 		$installOrRemove = [
 			'type' => 'array',
 			'additionalProperties' => false,
@@ -42,7 +42,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 				],
 			],
 		];
-		return [
+		return json_decode( json_encode( [
 			'type' => 'array',
 			'additionalProperties' => false,
 			'patternProperties' => [
@@ -155,7 +155,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 					],
 				],
 			],
-		];
+		] ) );
 	}
 
 	/** @covers $wgManageWikiExtensions */
