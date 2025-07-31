@@ -273,7 +273,7 @@ class SettingsTest extends ManageWikiTestCase {
 		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiSettings.php';
-		$this->assertSchema( json_decode( json_encode( $wgManageWikiSettings ) );
+		$this->assertSchema( json_decode( json_encode( $wgManageWikiSettings ) ) );
 	}
 
 	/** @inheritDoc */
