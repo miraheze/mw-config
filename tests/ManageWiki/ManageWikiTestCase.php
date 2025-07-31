@@ -41,7 +41,6 @@ abstract class ManageWikiTestCase extends TestCase {
 	}
 
 	public function assertSchema( $config ) {
-		$config = (object)$config;
 		$validator = new Validator();
 		$validator->validate( $config, $this->getSchema() );
 
