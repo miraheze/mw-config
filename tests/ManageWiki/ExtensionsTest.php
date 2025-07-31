@@ -10,11 +10,11 @@ class ExtensionsTest extends ManageWikiTestCase {
 			'additionalProperties' => false,
 			'properties' => [
 				'mwscript' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'mapped to script path => array of options.',
 				],
 				'namespaces' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => "array of which namespaces and namespace data to install with extension; 'remove' only needs namespace ID.",
 					'patternProperties' => [
 						'^[A-Z][A-Za-z_]+$' => [
@@ -23,21 +23,21 @@ class ExtensionsTest extends ManageWikiTestCase {
 					],
 				],
 				'permissions' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'array of which permissions to install with extension.',
 					'properties' => [
 						'type' => 'array',
 					]
 				],
 				'settings' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'array of ManageWikiSettings to modify when the extension is enabled, mapped variable => value.',
 					'patternProperties' => [
 						self::REGEX_CONFIG => []
 					],
 				],
 				'sql' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'array of sql files to install with extension, mapped table name => sql file path.',
 				],
 			],
