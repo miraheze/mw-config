@@ -167,7 +167,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiExtensions.php';
-		$this->assertSchema( $wgManageWikiExtensions );
+		$this->assertSchema( json_decode( json_encode( $wgManageWikiExtensions ) ) );
 	}
 
 	/** @inheritDoc */
