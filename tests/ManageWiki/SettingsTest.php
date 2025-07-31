@@ -155,7 +155,7 @@ class SettingsTest extends ManageWikiTestCase {
 							],
 						],
 						'options' => [
-							'type' => 'array',
+							'type' => 'object',
 							'patternProperties' => [
 								self::REGEX_READABLE => []
 							]
@@ -178,7 +178,7 @@ class SettingsTest extends ManageWikiTestCase {
 							'required' => true,
 						],
 						'requires' => [
-							'type' => 'array',
+							'type' => 'object',
 							'additionalProperties' => false,
 							'properties' => [
 								'articles' => [
@@ -218,14 +218,14 @@ class SettingsTest extends ManageWikiTestCase {
 									]
 								],
 								'settings' => [
-									'type' => 'array',
+									'type' => 'object',
 								],
 								'users' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of users a wiki may have in order to be able to modify this setting.',
 								],
 								'visibility' => [
-									'type' => 'array',
+									'type' => 'object',
 									'additionalProperties' => false,
 									'properties' => [
 										'permissions' => [
