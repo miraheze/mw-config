@@ -2,8 +2,6 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
-use JsonSchema\Validator;
-
 class SettingsTest extends ManageWikiTestCase {
 
 	public function getSchema(): array {
@@ -311,16 +309,5 @@ class SettingsTest extends ManageWikiTestCase {
 				] ),
 			],
 		];
-	}
-
-	#[DataProvider('configProvider')]
-	public function testGetScheme( $config, $expected ) {
-		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
-
-		$this->assertSame(
-			$expected,
-			self::readableErrors( $validator->getErrors() )
-		);
 	}
 }
