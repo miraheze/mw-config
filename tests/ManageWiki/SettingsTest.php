@@ -2,10 +2,12 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Constraints\BaseConstraint;
+
 class SettingsTest extends ManageWikiTestCase {
 
 	public function getSchema(): object {
-		return json_decode( json_encode( [
+		return BaseConstraint::arrayToObjectRecursive( [
 			'type' => 'object',
 			'additionalProperties' => false,
 			'patternProperties' => [
@@ -260,7 +262,7 @@ class SettingsTest extends ManageWikiTestCase {
 					],
 				],
 			],
-		] ) );
+		] );
 	}
 
 	/** @covers $wgManageWikiSettings */
@@ -273,7 +275,7 @@ class SettingsTest extends ManageWikiTestCase {
 		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiSettings.php';
-		$this->assertSchema( json_decode( json_encode( $wgManageWikiSettings ) ) );
+		$this->assertSchema( BaseConstraint::arrayToObjectRecursive( $wgManageWikiSettings ) );
 	}
 
 	/** @inheritDoc */
