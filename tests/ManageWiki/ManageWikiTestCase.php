@@ -3,8 +3,8 @@
 namespace Miraheze\Config\Tests\ManageWiki;
 
 use JsonSchema\Validator;
+use MirahezeFunctions;
 use PHPUnit\Framework\TestCase;
-use stdClass;
 
 abstract class ManageWikiTestCase extends TestCase {
 
@@ -13,7 +13,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	abstract public function getSchema(): array;
 
-	public function mockMirahezeFunctions(): stdClass {
+	public function mockMirahezeFunctions(): MirahezeFunctions {
 		$methods = [
 			'getSettingValue' => [],
 			'isAllOfExtensionsActive' => true,
@@ -21,7 +21,7 @@ abstract class ManageWikiTestCase extends TestCase {
 			'isExtensionActive' => true,
 		];
 
-		$mock = $this->getMockBuilder( stdClass::class )
+		$mock = $this->getMockBuilder( MirahezeFunctions::class )
 			->onlyMethods( array_keys( $methods ) )
 			->getMock();
 
