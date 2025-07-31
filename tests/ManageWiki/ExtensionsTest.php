@@ -18,7 +18,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 					'description' => "array of which namespaces and namespace data to install with extension; 'remove' only needs namespace ID.",
 					'patternProperties' => [
 						'^[A-Z][A-Za-z_]+$' => [
-							'type' => 'array',
+							'type' => 'object',
 						],
 					],
 				],
