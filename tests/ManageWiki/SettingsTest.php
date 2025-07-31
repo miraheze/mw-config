@@ -6,7 +6,7 @@ class SettingsTest extends ManageWikiTestCase {
 
 	public function getSchema(): object {
 		return json_decode( json_encode( [
-			'type' => 'array',
+			'type' => 'object',
 			'additionalProperties' => false,
 			'patternProperties' => [
 				self::REGEX_CONFIG => [
