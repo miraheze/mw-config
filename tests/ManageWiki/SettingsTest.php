@@ -4,8 +4,8 @@ namespace Miraheze\Config\Tests\ManageWiki;
 
 class SettingsTest extends ManageWikiTestCase {
 
-	public function getSchema(): array {
-		return [
+	public function getSchema(): object {
+		return json_decode( json_encode( [
 			'type' => 'array',
 			'additionalProperties' => false,
 			'patternProperties' => [
@@ -260,7 +260,7 @@ class SettingsTest extends ManageWikiTestCase {
 					],
 				],
 			],
-		];
+		] ) );
 	}
 
 	/** @covers $wgManageWikiSettings */
