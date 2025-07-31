@@ -47,7 +47,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 			'additionalProperties' => false,
 			'patternProperties' => [
 				'^[a-z0-9_-]+$' => [
-					'type' => 'array',
+					'type' => 'object',
 					'additionalProperties' => false,
 					'properties' => [
 						'name' => [
