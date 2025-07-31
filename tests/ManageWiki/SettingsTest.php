@@ -248,7 +248,7 @@ class SettingsTest extends ManageWikiTestCase {
 							],
 						],
 						'script' => [
-							'type' => 'array',
+							'type' => 'object',
 							'properties' => [
 								'type' => 'array',
 								'additionalProperties' => false,
