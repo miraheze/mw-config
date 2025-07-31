@@ -3,7 +3,7 @@
 namespace Miraheze\Config\Tests\ManageWiki;
 
 use JsonSchema\Validator;
-use MirahezeFunctions;
+use Miraheze\Config\Tests\Mock\MirahezeFunctions;
 use PHPUnit\Framework\TestCase;
 
 abstract class ManageWikiTestCase extends TestCase {
