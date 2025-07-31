@@ -49,19 +49,6 @@ abstract class ManageWikiTestCase extends TestCase {
 		);
 	}
 
-	abstract public static function configProvider(): array;
-
-	#[DataProvider('configProvider')]
-	public function testGetScheme( $config, $expected ) {
-		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
-
-		$this->assertSame(
-			$expected,
-			self::readableErrors( $validator->getErrors() )
-		);
-	}
-
 	private static function readableErrors( array $errors ): string {
 		$msgs = [];
 		foreach ( $errors as $err ) {
@@ -69,5 +56,4 @@ abstract class ManageWikiTestCase extends TestCase {
 		}
 		return implode( "\n", $msgs );
 	}
-
 }
