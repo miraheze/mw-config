@@ -2,6 +2,7 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Constraints\Constraint;
 use JsonSchema\Validator;
 use Miraheze\Config\Tests\Mock\MirahezeFunctions;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -42,7 +43,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	public function assertSchema( $config ) {
 		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
+		$validator->validate( $config, $this->getSchema(), Constraint::CHECK_MODE_TYPE_CAST );
 
 		$this->assertTrue(
 			$validator->isValid(),
@@ -55,7 +56,7 @@ abstract class ManageWikiTestCase extends TestCase {
 	#[DataProvider( 'configProvider' )]
 	public function testGetScheme( $config, $expected ) {
 		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
+		$validator->validate( $config, $this->getSchema(), Constraint::CHECK_MODE_TYPE_CAST );
 
 		$this->assertSame(
 			$expected,
