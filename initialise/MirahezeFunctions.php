@@ -115,7 +115,8 @@ class MirahezeFunctions {
 			...self::readDbListFile( 'deleted' ),
 		];
 
-		return $wgLocalDatabases = $databases;
+		$wgLocalDatabases = $databases;
+		return $databases;
 	}
 
 	public static function readDbListFile(
@@ -425,7 +426,8 @@ class MirahezeFunctions {
 	}
 
 	public static function getMediaWikiVersion( ?string $database = null ): string {
-		if ( $envVersion = getenv( 'MIRAHEZE_WIKI_VERSION' ) ) {
+		$envVersion = getenv( 'MIRAHEZE_WIKI_VERSION' );
+		if ( $envVersion ) {
 			return $envVersion;
 		}
 
