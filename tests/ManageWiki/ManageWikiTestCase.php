@@ -4,6 +4,7 @@ namespace Miraheze\Config\Tests\ManageWiki;
 
 use JsonSchema\Validator;
 use Miraheze\Config\Tests\Mock\MirahezeFunctions;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 abstract class ManageWikiTestCase extends TestCase {
@@ -55,5 +56,18 @@ abstract class ManageWikiTestCase extends TestCase {
 			$msgs[] = "[{$err['property']}] {$err['message']}";
 		}
 		return implode( "\n", $msgs );
+	}
+
+	abstract public static function configProvider(): array;
+
+	#[DataProvider( 'configProvider' )]
+	public function testGetScheme( $config, $expected ) {
+		$validator = new Validator();
+		$validator->validate( $config, $this->getSchema() );
+
+		$this->assertSame(
+			$expected,
+			self::readableErrors( $validator->getErrors() )
+		);
 	}
 }
