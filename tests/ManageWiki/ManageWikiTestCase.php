@@ -50,14 +50,6 @@ abstract class ManageWikiTestCase extends TestCase {
 		);
 	}
 
-	private static function readableErrors( array $errors ): string {
-		$msgs = [];
-		foreach ( $errors as $err ) {
-			$msgs[] = "[{$err['property']}] {$err['message']}";
-		}
-		return implode( "\n", $msgs );
-	}
-
 	abstract public static function configProvider(): array;
 
 	#[DataProvider( 'configProvider' )]
@@ -69,5 +61,13 @@ abstract class ManageWikiTestCase extends TestCase {
 			$expected,
 			self::readableErrors( $validator->getErrors() )
 		);
+	}
+
+	private static function readableErrors( array $errors ): string {
+		$msgs = [];
+		foreach ( $errors as $err ) {
+			$msgs[] = "[{$err['property']}] {$err['message']}";
+		}
+		return implode( "\n", $msgs );
 	}
 }
