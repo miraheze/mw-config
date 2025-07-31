@@ -2,6 +2,8 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Validator;
+
 class ExtensionsTest extends ManageWikiTestCase {
 
 	public function getSchema(): array {
@@ -170,7 +172,6 @@ class ExtensionsTest extends ManageWikiTestCase {
 		$this->assertSchema( $wgManageWikiExtensions );
 	}
 
-	/** @inheritDoc */
 	public static function configProvider(): array {
 		return [
 			'A valid configuration should be passed the validation.' => [
@@ -197,5 +198,16 @@ class ExtensionsTest extends ManageWikiTestCase {
 				] )
 			],
 		];
+	}
+
+	#[DataProvider('configProvider')]
+	public function testGetScheme( $config, $expected ) {
+		$validator = new Validator();
+		$validator->validate( $config, $this->getSchema() );
+
+		$this->assertSame(
+			$expected,
+			self::readableErrors( $validator->getErrors() )
+		);
 	}
 }
