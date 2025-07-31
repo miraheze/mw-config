@@ -2,6 +2,7 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Constraints\Constraint;
 use JsonSchema\Validator;
 use Miraheze\Config\Tests\Mock\MirahezeFunctions;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -12,7 +13,7 @@ abstract class ManageWikiTestCase extends TestCase {
 	public const REGEX_READABLE = '^(?!.*<a href=)(?!.*<br\s*>)[A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+$';
 	public const REGEX_CONFIG = '^(wg|eg|wmg|wgex|smwg)[A-Z_][a-zA-Z0-9_]*$';
 
-	abstract public function getSchema(): array;
+	abstract public function getSchema(): object;
 
 	public function mockMirahezeFunctions(): MirahezeFunctions {
 		$methods = [
@@ -42,7 +43,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	public function assertSchema( $config ) {
 		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
+		$validator->validate( $config, $this->getSchema(), Constraint::CHECK_MODE_TYPE_CAST );
 
 		$this->assertTrue(
 			$validator->isValid(),
@@ -55,7 +56,7 @@ abstract class ManageWikiTestCase extends TestCase {
 	#[DataProvider( 'configProvider' )]
 	public function testGetScheme( $config, $expected ) {
 		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
+		$validator->validate( $config, $this->getSchema(), Constraint::CHECK_MODE_TYPE_CAST );
 
 		$this->assertSame(
 			$expected,
