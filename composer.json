@@ -10,6 +10,9 @@
 		"justinrainbow/json-schema": "6.0.0"
 	},
 	"autoload": {
+		"classmap": [
+			"initialise/"
+		],
 		"psr-4": {
 			"Miraheze\\Config\\Tests\\": "tests/"
 		}
