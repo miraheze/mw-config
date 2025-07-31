@@ -51,7 +51,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	abstract public static function configProvider(): array;
 
-	/** @dataProvider configProvider */
+	#[DataProvider( 'configProvider' )]
 	public function testGetScheme( $config, $expected ) {
 		$validator = new Validator();
 		$validator->validate( $config, $this->getSchema() );
