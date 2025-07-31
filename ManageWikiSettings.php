@@ -468,11 +468,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'other',
 		'help' => 'If enabled, links (&lt;a&gt; tags) will be shown. If disabled, the tags are escaped.',
-		'requires' => [
-			'extensions' => [
-				'rss',
-			],
-		],
+		'requires' => [],
 	],
 	'wgRSSItemMaxLength' => [
 		'name' => 'Description length of RSS items',
@@ -483,11 +479,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 200,
 		'section' => 'other',
 		'help' => 'The maximum length of an RSS item\'s body',
-		'requires' => [
-			'extensions' => [
-				'rss',
-			],
-		],
+		'requires' => [],
 	],
 	'wgRSSUserAgent' => [
 		'name' => 'RSS User Agent',
@@ -496,11 +488,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'MediaWiki RSS extension',
 		'section' => 'other',
 		'help' => 'The User Agent that MediaWiki will use to fetch RSS feeds.',
-		'requires' => [
-			'extensions' => [
-				'rss',
-			],
-		],
+		'requires' => [],
 	],
 	'wgWPBBannerProperty' => [
 		'name' => 'WikidataPageBanner Banner Property',
@@ -2116,7 +2104,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to use the optional MultimediaViewer feature.',
 		'requires' => [
 			'extensions' => [
-				'ratepage',
 				'multimediaviewer',
 			],
 		],
@@ -2840,7 +2827,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether or not Page Previews will only request the intro paragraph from TextExtracts or not',
 		'requires' => [
 			'extensions' => [
-				'popups',
 				'textextracts',
 			],
 		],
@@ -3201,7 +3187,6 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'extensions' => [
 				'textextracts',
-				'wikiseo',
 			],
 		],
 	],
@@ -3215,7 +3200,6 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'extensions' => [
 				'textextracts',
-				'wikiseo',
 			],
 		],
 	],
@@ -3229,7 +3213,6 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'extensions' => [
 				'pageimages',
-				'wikiseo',
 			],
 		],
 	],
@@ -3244,7 +3227,6 @@ $wgManageWikiSettings = [
 		'help' => 'Modern profile tabs for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3258,7 +3240,6 @@ $wgManageWikiSettings = [
 		'help' => 'Make avatar round on profile pages for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3272,7 +3253,6 @@ $wgManageWikiSettings = [
 		'help' => 'Show edit count on profile pages for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3286,7 +3266,6 @@ $wgManageWikiSettings = [
 		'help' => 'Allow users to add a bio from Special:MyPage/bio and display it on their user page?',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3300,7 +3279,6 @@ $wgManageWikiSettings = [
 		'help' => 'Follow redirects from Special:MyPage/bio and display the redirect target as bio instead? (experimental)',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3314,7 +3292,6 @@ $wgManageWikiSettings = [
 		'help' => 'Show user group tags on profile pages for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3328,7 +3305,6 @@ $wgManageWikiSettings = [
 		'help' => 'Use social profile avatar in the top banner for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3347,7 +3323,6 @@ $wgManageWikiSettings = [
 		'help' => 'User groups to show on profile pages for the Cosmos skin when social profile is enabled. They will be shown in order of priority.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3363,7 +3338,6 @@ $wgManageWikiSettings = [
 		'help' => 'Number of user group tags to show on profile pages for the Cosmos skin when social profile and the profile group tags are enabled. Min. 1; Max. 5.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3994,7 +3968,6 @@ $wgManageWikiSettings = [
 		'help' => 'Enable the Europa theme on infoboxes when using the Cosmos skin, if you have the PortableInfobox extension enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'portableinfobox',
 			],
 		],
