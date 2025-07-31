@@ -6,7 +6,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 
 	public function getSchema(): object {
 		$installOrRemove = [
-			'type' => 'array',
+			'type' => 'object',
 			'additionalProperties' => false,
 			'properties' => [
 				'mwscript' => [
@@ -87,7 +87,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 							],
 						],
 						'requires' => [
-							'type' => 'array',
+							'type' => 'object',
 							'additionalProperties' => false,
 							'properties' => [
 								'articles' => [
