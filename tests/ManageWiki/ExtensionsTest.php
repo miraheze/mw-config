@@ -43,7 +43,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 			],
 		];
 		return json_decode( json_encode( [
-			'type' => 'array',
+			'type' => 'object',
 			'additionalProperties' => false,
 			'patternProperties' => [
 				'^[a-z0-9_-]+$' => [
