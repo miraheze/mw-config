@@ -10,7 +10,7 @@ class SettingsTest extends ManageWikiTestCase {
 			'additionalProperties' => false,
 			'patternProperties' => [
 				self::REGEX_CONFIG => [
-					'type' => 'object',
+					'type' => 'array',
 					'additionalProperties' => false,
 					'properties' => [
 						'associativeKey' => [
