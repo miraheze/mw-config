@@ -22,7 +22,7 @@ abstract class ManageWikiTestCase extends TestCase {
 		];
 
 		$mock = $this->getMockBuilder( stdClass::class )
-			->addMethods( array_keys( $methods ) )
+			->onlyMethods( array_keys( $methods ) )
 			->getMock();
 
 		$mock->dbname = '';
