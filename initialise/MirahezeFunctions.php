@@ -296,9 +296,9 @@ class MirahezeFunctions {
 		}
 
 		// Explode the hostname to get potential subdomain + suffix
-		$parts = explode( '.', $hostname, 3 );
+		$parts = explode( '.', $hostname, 2 );
 		if ( $parts[0] === 'www' ) {
-			$parts = array_slice( $parts, 1 );
+			$parts = explode( '.', $parts[1], 2 );
 		}
 
 		[ $subdomain, $domain ] = $parts + [ '', '' ];
