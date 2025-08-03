@@ -7203,7 +7203,11 @@ require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
 
 if ( $wi->missing ) {
-	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
+	if ( !preg_match( '/\.(miraheze\.org|wikitide\.org|wikitide\.com)$/', $wgServer ) ) {
+		require_once '/srv/mediawiki/ErrorPages/UnknownWiki.php';
+	} else {
+		require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
+	}
 }
 
 if ( $cwDeleted ) {
