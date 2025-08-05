@@ -933,3 +933,10 @@ $wgHTTPImportTimeout = 50;
 
 // Notifications
 $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
+
+// Disble ImportDump requests and uploads
+$wgSpecialPages['RequestImportDump'] = DisabledSpecialPage::getCallback( 'RequestImportDump', 'ImportDump is temporarily unavailable. Please try again later.' );
+$wgSpecialPages['RequestImportDumpQueue'] = DisabledSpecialPage::getCallback( 'RequestImportDumpQueue', 'ImportDump is temporarily unavailable. Please try again later.' );
+$wgRevokePermissions['*']['upload'] = true;
+$wgRevokePermissions['*']['movefile'] = true;
+$wgUploadMaintenance = true;
