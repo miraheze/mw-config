@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 91;
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
 
- /*$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+ $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -27,21 +27,21 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	);
 
 	$siteNotice .= <<<EOF
-		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !important;">
+		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #fef6e7; border-left-color: #fc3; padding: 10px 15px; color: black !important;">
 			<tbody>
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 					<tr>
-						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
+						<td rowspan=2><div style="float: left;"><img alt="Files unavailable" src="https://upload.wikimedia.org/wikipedia/commons/0/01/OOjs_UI_icon_imageBroken.svg" decoding="async" width="40" height="40"></div></td>
 						<td>
 							<div style="font-weight: bold; color: black;">
-								Server maintenance
+								Files temporarily unavailable
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On Thursday June 26th, we will be conducting emergency maintenance on our hypervisors (cloud15 and cloud20) which will require a full shutdown of the server. This will begin at 19:00 UTC and last around 90 minutes until 21:00 UTC. This will involve a full outage of all wikis on db151/c1 and editing, viewing files and account logins will be unstable on all other wikis.
+								All file-related operations (such as uploads, viewing images, wiki backups, etc.) are temporarily unavailable while we work to conduct essential maintenance. We hope to get this resolved as soon as possible.
 							</div>
 						</td>
 					</tr>
@@ -49,7 +49,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-}*/
+}
 
 // }
 
