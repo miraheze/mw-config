@@ -5208,6 +5208,17 @@ $wgConf->settings += [
 	],
 
 	// RequestSSL
+	'wgRequestSSLDisallowedDomains' => [
+		'default' => [
+			'miraheze.org',
+			'miraheze.wiki',
+			'orain.org',
+			'wikitide.org',
+			'wikitide.com',
+			'wikitide.net',
+			'wiki.surf',
+		],
+	],
 	'wgRequestSSLScriptCommand' => [
 		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
 	],
