@@ -79,8 +79,7 @@ $wgManageWikiExtensions = [
 
 	// Media handlers
 	'3d' => [
-		'name' => '3d',
-		'displayname' => '3D',
+		'name' => '3D',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:3D',
 		'conflicts' => false,
 		'requires' => [],
@@ -2021,7 +2020,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'articlefeedbackv5' => [
-		'name' => 'ArticleFeedbackv5',
+		'name' => 'Article Feedback',
 		'displayname' => 'ArticleFeedbackv5',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleFeedbackv5',
 		'conflicts' => false,
