@@ -100,6 +100,11 @@ switch ( $wi->dbname ) {
 		};
 
 		break;
+	case 'dappervolkwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+
+		break;
 	case 'dlfmwiki':
 		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
 			$id = 'local-sys-msg';
