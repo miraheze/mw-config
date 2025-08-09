@@ -1812,6 +1812,35 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'blockstarplanetwiki' => [
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/blockstarplanetwiki/4/49/Miraheze.png',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+					'height' => '65',
+					'width' => '65',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/blockstarplanetwiki/f/fe/CreativeCommons.png',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+					'height' => '65',
+					'width' => '65',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/blockstarplanetwiki/0/05/Mediawiki.png',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+					'height' => '65',
+					'width' => '65',
+				],
+			],
+		],
 		'cafewiki' => [
 			'poweredby' => [
 				'mediawiki' => [
