@@ -13,7 +13,7 @@ if ( PHP_SAPI !== 'cli' ) {
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
-$mwtask = strpos( wfHostname(), 'mwtask' ) === 0;
+$mwtask = str_starts_with( wfHostname(), 'mwtask' );
 // Higher on mwtask
 if ( $mwtask ) {
 	// 3000MiB
@@ -27,15 +27,15 @@ if ( $mwtask ) {
 if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 0;
 } elseif ( $mwtask ) {
-	if ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'videoscaler.' ) === 0 ) {
+	$host = $_SERVER['HTTP_HOST'] ?? '';
+	if ( str_starts_with( $host, 'videoscaler.' ) ) {
 		$wgRequestTimeLimit = 86400;
-	} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner-high.' ) === 0 ) {
+	} elseif ( str_starts_with( $host, 'jobrunner-high.' ) ) {
 		$wgRequestTimeLimit = 259200;
-	} elseif ( strpos( $_SERVER['HTTP_HOST'] ?? '', 'jobrunner.' ) === 0 ) {
-		// We have to set this to the highest we require a job to run for.
+	} elseif ( str_starts_with( $host, 'jobrunner.' ) ) {
 		$wgRequestTimeLimit = 1200;
 	}
-} elseif ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+} elseif ( ( $_SERVER['REQUEST_METHOD'] ?? '' ) === 'POST' ) {
 	$wgRequestTimeLimit = 200;
 } else {
 	$wgRequestTimeLimit = 60;
@@ -45,8 +45,8 @@ if ( PHP_SAPI === 'cli' ) {
  * When using ?forceprofile=1, a profile can be found as an HTML comment
  * Disabled on production hosts because it seems to be causing performance issues (how ironic)
  */
-$forceprofile = $_GET['forceprofile'] ?? 0;
-if ( $forceprofile == 1 && extension_loaded( 'xhprof' ) ) {
+$forceprofile = (int)( $_GET['forceprofile'] ?? 0 );
+if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 	xhprof_enable( $xhprofFlags );
 
@@ -89,11 +89,6 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
-
-// $wgStatsFormat = 'dogstatsd';
-// $wgStatsTarget = 'udp://localhost:9125';
-// graphite151
-// $wgStatsdServer = '10.0.15.145';
 
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
