@@ -1233,6 +1233,9 @@ $wgConf->settings += [
 			'virtual-oathauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-requestcustomdomain' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-requestssl' => [
 				'db' => $wi->getCentralDatabase(),
 			],
@@ -5232,6 +5235,32 @@ $wgConf->settings += [
 	],
 	'wgRemovePIIHashPrefix' => [
 		'default' => 'MirahezeGDPR_',
+	],
+
+	// RequestCustomDomain
+	'wgRequestCustomDomainDisallowedDomains' => [
+		'default' => [
+			'miraheze.org',
+			'miraheze.wiki',
+			'mira.wiki',
+			'orain.org',
+			'wikitide.org',
+			'wikitide.com',
+			'wikitide.net',
+			'wiki.surf',
+		],
+	],
+	'wgRequestCustomDomainScriptCommand' => [
+		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
+	],
+	'wgRequestCustomDomainUsersNotifiedOnAllRequests' => [
+		'default' => [
+			'MacFan4000',
+			'Original Authority',
+			'Reception123',
+			'Universal Omega',
+			'RhinosF1 (Miraheze)',
+		],
 	],
 
 	// RequestSSL
