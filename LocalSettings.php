@@ -1236,9 +1236,6 @@ $wgConf->settings += [
 			'virtual-requestcustomdomain' => [
 				'db' => $wi->getCentralDatabase(),
 			],
-			'virtual-requestssl' => [
-				'db' => $wi->getCentralDatabase(),
-			],
 		],
 		'+beta' => [
 			'virtual-botpasswords' => [
@@ -5254,32 +5251,6 @@ $wgConf->settings += [
 		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
 	],
 	'wgRequestCustomDomainUsersNotifiedOnAllRequests' => [
-		'default' => [
-			'MacFan4000',
-			'Original Authority',
-			'Reception123',
-			'Universal Omega',
-			'RhinosF1 (Miraheze)',
-		],
-	],
-
-	// RequestSSL
-	'wgRequestSSLDisallowedDomains' => [
-		'default' => [
-			'miraheze.org',
-			'miraheze.wiki',
-			'mira.wiki',
-			'orain.org',
-			'wikitide.org',
-			'wikitide.com',
-			'wikitide.net',
-			'wiki.surf',
-		],
-	],
-	'wgRequestSSLScriptCommand' => [
-		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
-	],
-	'wgRequestSSLUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000',
 			'Original Authority',
