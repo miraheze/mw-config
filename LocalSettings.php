@@ -5210,6 +5210,7 @@ $wgConf->settings += [
 		'default' => [
 			'miraheze.org',
 			'miraheze.wiki',
+			'mira.wiki',
 			'orain.org',
 			'wikitide.org',
 			'wikitide.com',
