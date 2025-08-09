@@ -3617,12 +3617,9 @@ $wgConf->settings += [
 				'handle-custom-domain-requests' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
-				'handle-ssl-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
-				'view-private-custom-domain-requests' => true,
 				'view-private-import-requests' => true,
-				'view-private-ssl-requests' => true,
 			],
 			'suppress' => [
 				'createwiki-suppressrequest' => true,
@@ -3648,7 +3645,6 @@ $wgConf->settings += [
 			'user' => [
 				'request-custom-domain' => true,
 				'request-import' => true,
-				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wiki-creator' => [
@@ -3730,7 +3726,6 @@ $wgConf->settings += [
 			'user' => [
 				'request-custom-domain' => true,
 				'request-import' => true,
-				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wiki-creator' => [
@@ -3866,7 +3861,6 @@ $wgConf->settings += [
 				'handle-custom-domain-requests',
 				'handle-import-request-interwiki',
 				'handle-import-requests',
-				'handle-ssl-requests',
 				'handle-pii',
 				'hideuser',
 				'investigate',
@@ -3892,7 +3886,6 @@ $wgConf->settings += [
 				'reportincident',
 				'request-custom-domain',
 				'request-import',
-				'request-ssl',
 				'requestwiki',
 				'siteadmin',
 				'securepoll-view-voter-pii',
@@ -3907,9 +3900,7 @@ $wgConf->settings += [
 				'updatepoints',
 				'userrights',
 				'userrights-interwiki',
-				'view-private-custom-domain-requests',
 				'view-private-import-requests',
-				'view-private-ssl-requests',
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
