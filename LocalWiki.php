@@ -612,7 +612,7 @@ switch ( $wi->dbname ) {
 			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
-			// 'RequestCustomDomain',
+			'RequestCustomDomain',
 		] );
 
 		/*
