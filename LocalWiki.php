@@ -487,7 +487,7 @@ switch ( $wi->dbname ) {
 			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
-			'RequestSSL',
+			// 'RequestCustomDomain',
 			'SecurePoll',
 		] );
 		$wgContactConfig = [
