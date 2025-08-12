@@ -110,6 +110,7 @@ $wgCentralAuthSessionCacheType = 'redis-session';
 $wgEchoSeenTimeCacheType = 'redis-session';
 
 $wgCreateWikiCacheType = 'redis-session';
+$wgManageWikiCacheType = 'mysql-multiwrite';
 
 $wgSessionName = $wgDBname . 'Session';
 
