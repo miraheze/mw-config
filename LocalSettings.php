@@ -1228,7 +1228,7 @@ $wgConf->settings += [
 			'virtual-oathauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
-			'virtual-requestssl' => [
+			'virtual-requestcustomdomain' => [
 				'db' => $wi->getCentralDatabase(),
 			],
 		],
@@ -1804,6 +1804,35 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/ballgamewiki/0/0f/Badge-ccbysa.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
+		'blockstarplanetwiki' => [
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/blockstarplanetwiki/4/49/Miraheze.png',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+					'height' => '65',
+					'width' => '65',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/blockstarplanetwiki/f/fe/CreativeCommons.png',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+					'height' => '65',
+					'width' => '65',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/blockstarplanetwiki/0/05/Mediawiki.png',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+					'height' => '65',
+					'width' => '65',
 				],
 			],
 		],
@@ -3324,6 +3353,9 @@ $wgConf->settings += [
 	],
 
 	// ManageWiki
+	'wgManageWikiCacheDirectory' => [
+		'default' => '/srv/mediawiki/cache',
+	],
 	'wgManageWikiExtensionsDefault' => [
 		'default' => [
 			'categorytree',
@@ -3609,13 +3641,12 @@ $wgConf->settings += [
 				'sendemail' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
+				'handle-custom-domain-requests' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
-				'handle-ssl-requests' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
 				'view-private-import-requests' => true,
-				'view-private-ssl-requests' => true,
 			],
 			'suppress' => [
 				'createwiki-suppressrequest' => true,
@@ -3639,8 +3670,8 @@ $wgConf->settings += [
 				'interwiki' => true,
 			],
 			'user' => [
+				'request-custom-domain' => true,
 				'request-import' => true,
-				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wiki-creator' => [
@@ -3720,8 +3751,8 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 			],
 			'user' => [
+				'request-custom-domain' => true,
 				'request-import' => true,
-				'request-ssl' => true,
 				'requestwiki' => true,
 			],
 			'wiki-creator' => [
@@ -3854,9 +3885,9 @@ $wgConf->settings += [
 				'globalblock-exempt',
 				'globalgroupmembership',
 				'globalgrouppermissions',
+				'handle-custom-domain-requests',
 				'handle-import-request-interwiki',
 				'handle-import-requests',
-				'handle-ssl-requests',
 				'handle-pii',
 				'hideuser',
 				'investigate',
@@ -3880,8 +3911,8 @@ $wgConf->settings += [
 				'renameuser',
 				'renameuser-global',
 				'reportincident',
+				'request-custom-domain',
 				'request-import',
-				'request-ssl',
 				'requestwiki',
 				'siteadmin',
 				'securepoll-view-voter-pii',
@@ -3897,7 +3928,6 @@ $wgConf->settings += [
 				'userrights',
 				'userrights-interwiki',
 				'view-private-import-requests',
-				'view-private-ssl-requests',
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
@@ -4181,6 +4211,8 @@ $wgConf->settings += [
 				512002,
 				/** SomeRandomDeveloper (Technology team) */
 				542825,
+				/** Skye (Technology team) */
+				583331,
 			],
 		],
 	],
@@ -5200,11 +5232,23 @@ $wgConf->settings += [
 		'default' => 'MirahezeGDPR_',
 	],
 
-	// RequestSSL
-	'wgRequestSSLScriptCommand' => [
+	// RequestCustomDomain
+	'wgRequestCustomDomainDisallowedDomains' => [
+		'default' => [
+			'miraheze.org',
+			'miraheze.wiki',
+			'mira.wiki',
+			'orain.org',
+			'wikitide.org',
+			'wikitide.com',
+			'wikitide.net',
+			'wiki.surf',
+		],
+	],
+	'wgRequestCustomDomainScriptCommand' => [
 		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
 	],
-	'wgRequestSSLUsersNotifiedOnAllRequests' => [
+	'wgRequestCustomDomainUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000',
 			'Original Authority',
