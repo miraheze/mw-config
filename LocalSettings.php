@@ -3358,6 +3358,9 @@ $wgConf->settings += [
 	],
 
 	// ManageWiki
+	'wgManageWikiCacheDirectory' => [
+		'default' => '/srv/mediawiki/cache',
+	],
 	'wgManageWikiExtensionsDefault' => [
 		'default' => [
 			'categorytree',
