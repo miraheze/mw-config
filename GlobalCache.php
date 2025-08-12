@@ -7,7 +7,8 @@ use Wikimedia\ObjectCache\RedisBagOStuff;
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
-$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
+$beta = str_ends_with( $wi->server, '.mirabeta.org' )
+	|| str_ends_with( $wi->server, '.nexttide.org' );
 
 if ( !$beta ) {
 	$wgCdnServers = [
@@ -23,28 +24,28 @@ if ( !$beta ) {
 }
 
 $wgObjectCaches['mcrouter'] = [
-	'class'                 => MemcachedPeclBagOStuff::class,
-	'serializer'            => 'php',
-	'persistent'            => false,
-	'servers'               => [ '127.0.0.1:11213' ],
-	'server_failure_limit'  => 1e9,
-	'retry_timeout'         => -1,
-	'loggroup'              => 'memcached',
+	'class' => MemcachedPeclBagOStuff::class,
+	'serializer' => 'php',
+	'persistent' => false,
+	'servers' => [ '127.0.0.1:11213' ],
+	'server_failure_limit' => 1e9,
+	'retry_timeout' => -1,
+	'loggroup' => 'memcached',
 	// 250ms, in microseconds
-	'timeout'               => 0.25 * 1e6,
+	'timeout' => 0.25 * 1e6,
 	'allow_tcp_nagle_delay' => false,
 ];
 
 $wgObjectCaches['mcrouter-primary-dc'] = array_merge(
 	$wgObjectCaches['mcrouter'],
-	[ 'routingPrefix' => "/wikitide/mw/" ]
+	[ 'routingPrefix' => '/wikitide/mw/' ]
 );
 
 $wgMirahezeMagicMemcachedServers = [
 	[ '10.0.15.113', 11211 ],
 	[ '10.0.16.131', 11211 ],
 	[ '10.0.20.148', 11211 ],
-	[ '10.0.19.154', 11211 ]
+	[ '10.0.19.154', 11211 ],
 ];
 
 if ( $beta ) {
@@ -58,28 +59,28 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'caches' => [
 		0 => [
 			'factory' => [ 'ObjectCache', 'getInstance' ],
-			'args' => [ 'mcrouter' ]
+			'args' => [ 'mcrouter' ],
 		],
 		1 => [
 			'class' => SqlBagOStuff::class,
 			'servers' => [
 				'pc1' => [
-					'type'     => 'mysql',
-					'host'     => $beta ? '10.0.17.158' : '10.0.16.128',
-					'dbname'   => $beta ? 'testparsercache' : 'parsercache',
-					'user'     => $wgDBuser,
+					'type' => 'mysql',
+					'host' => $beta ? '10.0.17.158' : '10.0.16.128',
+					'dbname' => $beta ? 'testparsercache' : 'parsercache',
+					'user' => $wgDBuser,
 					'password' => $wgDBpassword,
-					'flags'    => 0,
+					'flags' => 0,
 				],
 			],
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
 			'shards' => $beta ? 1 : 256,
-			'reportDupes' => false
+			'reportDupes' => false,
 		],
 	],
 	'replication' => 'async',
-	'reportDupes' => false
+	'reportDupes' => false,
 ];
 
 $wgObjectCaches['db-mainstash'] = [
@@ -90,11 +91,10 @@ $wgObjectCaches['db-mainstash'] = [
 	'multiPrimaryMode' => false,
 	'purgePeriod' => 100,
 	'purgeLimit' => 1000,
-	'reportDupes' => false
+	'reportDupes' => false,
 ];
 
 $wgMainStash = 'db-mainstash';
-
 $wgMicroStashType = 'mcrouter-primary-dc';
 
 $wgObjectCaches['redis-session'] = [
@@ -141,7 +141,7 @@ if ( $wgDBname === 'commonswiki' ) {
 		// disable parsoid-pcache for file description pages on commons
 		NS_FILE => [
 			// cache none
-			'minCpuTime' => PHP_INT_MAX
+			'minCpuTime' => PHP_INT_MAX,
 		],
 	];
 }
