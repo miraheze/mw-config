@@ -161,8 +161,8 @@ $wgSessionCacheType = 'redis-session';
 $wgCentralAuthSessionCacheType = 'redis-session';
 $wgEchoSeenTimeCacheType = 'redis-session';
 
-$wgCreateWikiCacheType = 'redis-session';
-$wgManageWikiCacheType = 'redis-session';
+$wgCreateWikiCacheType = 'mcrouter';
+$wgManageWikiCacheType = 'mcrouter';
 
 $wgSessionName = $wgDBname . 'Session';
 
