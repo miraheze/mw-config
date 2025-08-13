@@ -2784,6 +2784,16 @@ $wgManageWikiSettings = [
 	],
 
 	// Preferences
+	'wgDefaultUserOptions' => [
+		'name' => 'Default User Options',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'matrix',
+		'overridedefault' => [],
+		'section' => 'preferences',
+		'help' => 'An array of default user options to set for new and anonymous users.',
+		'requires' => [],
+	],
 	'wgHiddenPrefs' => [
 		'name' => 'Hidden Preferences',
 		'from' => 'mediawiki',
@@ -2811,6 +2821,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => [],
 		'section' => 'preferences',
 		'help' => 'Array of skins to remove as a choice from user\'s preferences.',
+		'requires' => [],
+	],
+	'wmgCodeMirrorEnableDefault' => [
+		'name' => 'Enable CodeMirror syntax highlighting by default',
+		'from' => 'codemirror',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'This enables CodeMirror syntax highlighting by default for all. Sets <code>$wgDefaultUserOptions[\'usecodemirror\'] = 1;</code>',
 		'requires' => [],
 	],
 	'wmgVisualEditorEnableDefault' => [
