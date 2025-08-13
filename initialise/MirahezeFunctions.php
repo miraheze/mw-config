@@ -648,6 +648,8 @@ class MirahezeFunctions {
 				$settings['wgMetaNamespace']['default'] = $name;
 			} elseif ( $id === NS_PROJECT_TALK ) {
 				$settings['wgMetaNamespaceTalk']['default'] = $name;
+			} else {
+				$settings['wgExtraNamespaces']['default'][$id] = $name;
 			}
 		}
 
