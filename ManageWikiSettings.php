@@ -2820,7 +2820,7 @@ $wgManageWikiSettings = [
 	],
 
 	// Preferences
-	'+wgDefaultUserOptions' => [
+	'wgDefaultUserOptions' => [
 		'name' => 'Default User Options',
 		'from' => 'mediawiki',
 		'global' => true,
