@@ -2820,6 +2820,16 @@ $wgManageWikiSettings = [
 	],
 
 	// Preferences
+	'+wgDefaultUserOptions' => [
+		'name' => 'Default User Options',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'matrix',
+		'overridedefault' => [],
+		'section' => 'preferences',
+		'help' => 'An array of default user options to set for new and anonymous users.',
+		'requires' => [],
+	],
 	'wgHiddenPrefs' => [
 		'name' => 'Hidden Preferences',
 		'from' => 'mediawiki',
