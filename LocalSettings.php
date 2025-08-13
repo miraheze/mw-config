@@ -1036,6 +1036,7 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
+			'Select an option...' => '',
 			'Art & Architecture' => 'artarc',
 			'Automotive' => 'automotive',
 			'Business & Finance' => 'businessfinance',
