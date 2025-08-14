@@ -960,25 +960,6 @@ class MirahezeFunctions {
 		}
 	}
 
-	public static function onCreateWikiDataFactoryBuilder(
-		string $wiki,
-		IReadableDatabase $dbr,
-		array &$cacheArray
-	): void {
-		$row = $dbr->newSelectQueryBuilder()
-			->table( 'cw_wikis' )
-			->fields( [
-				 'wiki_deleted',
-				 'wiki_locked',
-			] )
-			->where( [ 'wiki_dbname' => $wiki ] )
-			->caller( __METHOD__ )
-			->fetchRow();
-
-		$cacheArray['states']['deleted'] = (bool)$row->wiki_deleted;
-		$cacheArray['states']['locked'] = (bool)$row->wiki_locked;
-	}
-
 	public static function onManageWikiCoreAddFormFields(
 		IContextSource $context,
 		ModuleFactory $moduleFactory,
