@@ -2,15 +2,12 @@
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
-use MediaWiki\Html\Html;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
-use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
-$wgHooks['CreateWikiDataFactoryBuilder'][] = 'MirahezeFunctions::onCreateWikiDataFactoryBuilder';
 $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
@@ -21,20 +18,6 @@ $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 	}
 	return true;
 };
-
-if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a',
-				[
-					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
-					'rel' => 'noreferrer noopener',
-				],
-				$skin->msg( 'contactpage-label' )->text()
-			);
-		}
-	};
-}
 
 // Extensions
 if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
@@ -304,8 +287,8 @@ $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
 		'useBackendTempStore' => true,
-		'chunkSize' => 2 * 1024 * 1024,
-		'startChunkSize' => 4 * 1024 * 1024,
+		'chunkSize' => 512 * 1024 * 1024,
+		'startChunkSize' => 1 * 1024 * 1024 * 1024,
 		'generate' => [
 			'type' => 'mwscript',
 			'script' => "$IP/maintenance/dumpBackup.php",
@@ -338,8 +321,8 @@ $wgDataDump = [
 	'image' => [
 		'file_ending' => '.tar.gz',
 		'useBackendTempStore' => true,
-		'chunkSize' => 2 * 1024 * 1024,
-		'startChunkSize' => 4 * 1024 * 1024,
+		'chunkSize' => 512 * 1024 * 1024,
+		'startChunkSize' => 1 * 1024 * 1024 * 1024,
 		'logFailedExitCodeComments' => [
 			75 => 'The dump is too large. Please contact a member of the Technology team to assist with generating this dump.',
 		],
@@ -395,32 +378,6 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
 			'delete' => 'delete-dump',
-		],
-	];
-}
-
-// ContactPage configuration
-if ( $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgContactConfig = [
-		'default' => [
-			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
-			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Contact Form on ' . $wgSitename,
-			'RequireDetails' => true,
-			// Should never be set to true
-			'IncludeIP' => false,
-			'MustBeLoggedIn' => false,
-			'AdditionalFields' => [
-				'Text' => [
-					'label-message' => 'emailmessage',
-					'type' => 'textarea',
-					'rows' => 20,
-					'required' => true,
-				],
-			],
-			'DisplayFormat' => 'table',
-			'RLModules' => [],
-			'RLStyleModules' => [],
 		],
 	];
 }

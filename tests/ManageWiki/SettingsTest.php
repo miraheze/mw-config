@@ -2,15 +2,17 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Constraints\BaseConstraint;
+
 class SettingsTest extends ManageWikiTestCase {
 
-	public function getSchema(): array {
-		return [
-			'type' => 'array',
+	public function getSchema(): object {
+		return BaseConstraint::arrayToObjectRecursive( [
+			'type' => 'object',
 			'additionalProperties' => false,
 			'patternProperties' => [
 				self::REGEX_CONFIG => [
-					'type' => 'array',
+					'type' => 'object',
 					'additionalProperties' => false,
 					'properties' => [
 						'associativeKey' => [
@@ -155,7 +157,7 @@ class SettingsTest extends ManageWikiTestCase {
 							],
 						],
 						'options' => [
-							'type' => 'array',
+							'type' => 'object',
 							'patternProperties' => [
 								self::REGEX_READABLE => []
 							]
@@ -178,7 +180,7 @@ class SettingsTest extends ManageWikiTestCase {
 							'required' => true,
 						],
 						'requires' => [
-							'type' => 'array',
+							'type' => 'object',
 							'additionalProperties' => false,
 							'properties' => [
 								'articles' => [
@@ -218,14 +220,14 @@ class SettingsTest extends ManageWikiTestCase {
 									]
 								],
 								'settings' => [
-									'type' => 'array',
+									'type' => 'object',
 								],
 								'users' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of users a wiki may have in order to be able to modify this setting.',
 								],
 								'visibility' => [
-									'type' => 'array',
+									'type' => 'object',
 									'additionalProperties' => false,
 									'properties' => [
 										'permissions' => [
@@ -248,7 +250,7 @@ class SettingsTest extends ManageWikiTestCase {
 							],
 						],
 						'script' => [
-							'type' => 'array',
+							'type' => 'object',
 							'properties' => [
 								'type' => 'array',
 								'additionalProperties' => false,
@@ -260,7 +262,7 @@ class SettingsTest extends ManageWikiTestCase {
 					],
 				],
 			],
-		];
+		] );
 	}
 
 	/** @covers $wgManageWikiSettings */
@@ -273,7 +275,7 @@ class SettingsTest extends ManageWikiTestCase {
 		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiSettings.php';
-		$this->assertSchema( $wgManageWikiSettings );
+		$this->assertSchema( BaseConstraint::arrayToObjectRecursive( $wgManageWikiSettings ) );
 	}
 
 	/** @inheritDoc */

@@ -11,42 +11,43 @@ define( 'MW_ENTRY_POINT', 'index' );
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
-if ( $wgArticlePath === '/$1' && str_contains( strtoupper( $_SERVER['REQUEST_URI'] ), strtoupper( '/wiki/' ) ) ) {
-	// Redirect to the same page maintaining the path
-	header( 'Location: ' . str_replace( '/wiki/', '/', $_SERVER['REQUEST_URI'] ), true, 301 );
-	exit();
-} elseif ( $wgArticlePath === '/wiki/$1' && !str_contains( $_SERVER['REQUEST_URI'], '/wiki/' ) && !str_contains( $_SERVER['REQUEST_URI'], '/w/' ) && !( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] === '/' ) ) {
-	// Redirect to the same page maintaining the path
-	header( 'Location: /wiki' . $_SERVER['REQUEST_URI'], true, 301 );
+// Normalize request URI
+$requestUri = $_SERVER['REQUEST_URI'] ?? '';
+$requestMethod = $_SERVER['REQUEST_METHOD'] ?? '';
+$articlePath = $wgArticlePath ?? '';
+$mainPageRoot = $wgMainPageIsDomainRoot ?? false;
+
+// Normalize for comparisons
+$lowerUri = strtolower( $requestUri );
+
+if ( $articlePath === '/$1' && str_contains( $lowerUri, '/wiki/' ) ) {
+	header( 'Location: ' . str_replace( '/wiki/', '/', $requestUri ), true, 301 );
 	exit();
 }
 
-// $wgArticlePath === '/$1' ||
-// T12263: Avoid redirecting main page to domain root if a POST is being done.
-// This is because the POST is likely an action to be done (such as editing the
-// page), and a 301 redirect would cause the HTTP client to potentially switch to
-// a GET request and discard the request body.
-// We could switch to a 308, which is guaranteed to continue using POST, but that
-// just adds an extra, unnecessary redirect.
-if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' && $_SERVER['REQUEST_METHOD'] !== 'POST' ) ) {
-	// Try to redirect the main page to domain root if using $wgMainPageIsDomainRoot
-	$title = '';
-	if ( isset( $_SERVER['REQUEST_URI'] ) ) {
-		$path = parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH );
-		$segments = explode( '/', $path );
-		$title = end( $segments );
+if (
+	$articlePath === '/wiki/$1'
+	&& !str_contains( $requestUri, '/wiki/' )
+	&& !str_contains( $requestUri, '/w/' )
+	&& !( $mainPageRoot && $requestUri === '/' )
+) {
+	header( 'Location: /wiki' . $requestUri, true, 301 );
+	exit();
+}
 
-		$title = str_replace( '%20', '_', $title );
-	}
+if ( $mainPageRoot && $requestUri !== '/' && $requestMethod !== 'POST' ) {
+	$path = parse_url( $requestUri, PHP_URL_PATH ) ?? '';
+	$segments = explode( '/', $path );
+	$title = str_replace( '%20', '_', end( $segments ) ?: '' );
 
-	// Check if the title matches the main page title
-	if ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' && $title === str_replace( ' ', '_', wfMessage( 'mainpage' )->text() ) && !str_contains( $_SERVER['REQUEST_URI'], '/wiki/' ) ) {
+	$mainPageTitle = str_replace( ' ', '_', wfMessage( 'mainpage' )->text() );
+	if ( $title === $mainPageTitle && !str_contains( $requestUri, '/wiki/' ) ) {
 		$currentTitle = Title::newFromText( $segments[1] ?? $title );
 		if ( $currentTitle && $currentTitle->getNamespace() !== NS_SPECIAL ) {
-			// Redirect to the domain root
-			$redirectUrl = str_replace( $title, '', $_SERVER['REQUEST_URI'] );
-			$redirectUrl = str_replace( '?useformat=mobile', '', $redirectUrl );
-			$redirectUrl = str_replace( '&useformat=mobile', '', $redirectUrl );
+			$redirectUrl = str_replace(
+				[ $title, '?useformat=mobile', '&useformat=mobile' ],
+				'', $requestUri
+			);
 
 			header( 'Location: ' . $redirectUrl, true, 301 );
 			exit();
@@ -56,40 +57,12 @@ if ( ( $wgMainPageIsDomainRoot && $_SERVER['REQUEST_URI'] !== '/' && $_SERVER['R
 		unset( $currentTitle );
 	}
 
-	/* if ( mb_strtolower( mb_substr( $title, 0, 1 ) ) === mb_substr( $title, 0, 1 ) ) {
-		$currentTitle = Title::newFromText( $title );
-		if ( $currentTitle ) {
-			$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
-			if ( $namespaceInfo->isCapitalized( $currentTitle->getNamespace() ) ) {
-				$decodedQueryString = urldecode( $_SERVER['QUERY_STRING'] ?? '' );
-				parse_str( $decodedQueryString, $queryParameters );
-				if ( isset( $queryParameters['useformat'] ) ) {
-					$_GET['useformat'] = $queryParameters['useformat'];
-					unset( $queryParameters['useformat'] );
-				}
-
-				$uri = strtok( str_replace( $title, ucfirst( $title ), $_SERVER['REQUEST_URI'] ), '?' );
-				$decodedUri = urldecode( $uri );
-				$redirectUrl = $decodedUri . '?' . http_build_query( $queryParameters );
-
-				header( 'Location: ' . $redirectUrl, true, 301 );
-				exit();
-			}
-
-			// Don't need a global here
-			unset( $namespaceInfo );
-		}
-
-		// Don't need a global here
-		unset( $currentTitle );
-	} */
-
 	// Don't need a global here
 	unset( $title );
 }
 
 require_once MirahezeFunctions::getMediaWiki( 'includes/PHPVersionCheck.php' );
-wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ) );
+wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ?? '' ) );
 
 ( new ActionEntryPoint(
 	RequestContext::getMain(),

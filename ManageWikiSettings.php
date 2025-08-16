@@ -407,7 +407,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'other',
-		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension. Restricted as this is only temporarily enabled for a maintenance sctipt run',
+		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension. Restricted as this is only temporarily enabled for a maintenance script run',
 		'requires' => [],
 		'requires' => [
 			'permissions' => [
@@ -730,24 +730,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Discussion
-	'wgChatLinkUsernames' => [
-		'name' => 'Chat Link to Usernames',
-		'from' => 'mediawikichat',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'discussion',
-		'help' => 'Link to user pages in the main chat window.',
-		'requires' => [],
-	],
-	'wgChatMeCommand' => [
-		'name' => 'Chat Me Command',
-		'from' => 'mediawikichat',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'discussion',
-		'help' => 'Enable "/me <text>" command that prints a status-type message.',
-		'requires' => [],
-	],
 	'wgCommentStreamsEnableTalk' => [
 		'name' => 'CommentStreams Enable Talk',
 		'from' => 'commentstreams',
@@ -1560,15 +1542,6 @@ $wgManageWikiSettings = [
 		'help' => 'Source to get the page description from.',
 		'requires' => [],
 	],
-	'wmgMirahezeContactPageFooter' => [
-		'name' => 'Miraheze Contact Page Footer',
-		'from' => 'contactpage',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'links',
-		'help' => 'If set, it adds a link to Special:Contact on the footer',
-		'requires' => [],
-	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
@@ -2220,6 +2193,7 @@ $wgManageWikiSettings = [
 			'avi' => 'avi',
 			'bfwav' => 'bfwav',
 			'bib' => 'bib',
+			'bin' => 'bin',
 			'blend' => 'blend',
 			'bmp' => 'bmp',
 			'bnk' => 'bnk',
@@ -2271,6 +2245,7 @@ $wgManageWikiSettings = [
 			'ipe' => 'ipe',
 			'ips' => 'ips',
 			'it' => 'it',
+			'jed' => 'jed',
 			'jfif' => 'jfif',
 			'jpeg' => 'jpeg',
 			'jpg' => 'jpg',
@@ -2282,10 +2257,10 @@ $wgManageWikiSettings = [
 			'md' => 'md',
 			'mid' => 'mid',
 			'midi' => 'midi',
+			'mkv' => 'mkv',
 			'mma' => 'mma',
 			'mmf' => 'mmf',
 			'mmt' => 'mmt',
-			'mkv' => 'mkv',
 			'mod' => 'mod',
 			'mov' => 'mov',
 			'mp3' => 'mp3',
@@ -2386,8 +2361,8 @@ $wgManageWikiSettings = [
 			'djvu',
 			'gif',
 			'ico',
-			'jpg',
 			'jpeg',
+			'jpg',
 			'ogg',
 			'pdf',
 			'png',
@@ -2506,15 +2481,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Notifications
-	'wmgContactPageRecipientUser' => [
-		'name' => 'Contact Page Recipient User',
-		'from' => 'contactpage',
-		'type' => 'user',
-		'overridedefault' => null,
-		'section' => 'notifications',
-		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
-		'requires' => [],
-	],
 	'wgUsersNotifiedOnAllChanges' => [
 		'name' => 'Users Notified On All Changes',
 		'from' => 'mediawiki',
@@ -3552,15 +3518,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Decides whether to enable friending or not.',
-		'requires' => [],
-	],
-	'wgUserBoard' => [
-		'name' => 'User Board',
-		'from' => 'socialprofile',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'socialtools',
-		'help' => 'Displays UserBoard-related things on social profile pages.',
 		'requires' => [],
 	],
 	'wgUserProfileDisplay' => [
