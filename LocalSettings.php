@@ -1345,9 +1345,6 @@ $wgConf->settings += [
 	'wgDiscordNotificationCentralAuthWikiUrl' => [
 		'default' => 'https://meta.miraheze.org/',
 	],
-	'wgDiscordNotificationBlockedUser' => [
-		'default' => true,
-	],
 	'wgDiscordNotificationIncludeAutocreatedUsers' => [
 		'default' => true,
 		'commonswiki' => false,
