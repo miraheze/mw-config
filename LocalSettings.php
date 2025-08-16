@@ -1333,7 +1333,6 @@ $wgConf->settings += [
 			'BlockedUser' => true,
 			'NewUser' => true,
 			'UserGroupsChanged' => true,
-			'Flow' => true,
 			'ModerationPending' => true,
 		],
 	],

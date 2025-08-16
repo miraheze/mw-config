@@ -2699,7 +2699,6 @@ $wgManageWikiSettings = [
 			'BlockedUser',
 			'NewUser',
 			'UserGroupsChanged',
-			'Flow',
 			'ModerationPending',			
 		],
 		'options' => [
@@ -2714,7 +2713,6 @@ $wgManageWikiSettings = [
 			'User Blocked ' => 'BlockedUser',
 			'New User' => 'NewUser',
 			'User Groups Changed' => 'UserGroupsChanged',
-			'Flow/StructuredDiscussions' => 'Flow',
 			'Pending Moderation ' => 'ModerationPending',
 		],
 		'overridedefault' => [
@@ -2729,7 +2727,6 @@ $wgManageWikiSettings = [
 			'BlockedUser' => true,
 			'NewUser' => true,
 			'UserGroupsChanged' => true,
-			'Flow' => true,
 			'ModerationPending' => true,
 		],
 		'section' => 'notifications',
@@ -2743,7 +2740,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'If enabled, the uploaded image will be shown in the Discord embed.',
+		'help' => 'If enabled, uploaded images will be shown in the Discord embed.',
 		'requires' => [],
 	],
 	'wgHAWelcomeStaffGroupName' => [
