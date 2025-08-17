@@ -365,11 +365,14 @@ $wgManageWikiNamespacesAdditional = [
 	'wgUFAllowedNamespaces' => [
 		'name' => 'Allow UserFunctions to operate in this namespace?',
 		'from' => 'userfunctions',
-		'type' => 'check',
+		'type' => 'vestyle',
 		'main' => true,
 		'talk' => true,
 		'excluded' => [],
-		'overridedefault' => false,
+		'overridedefault' => [
+			NS_MEDIAWIKI => true,
+			'default' => false,
+		],
 		'help' => '',
 		'requires' => [],
 	],

@@ -6233,7 +6233,9 @@ $wgConf->settings += [
 		],
 	],
 	'wgUFAllowedNamespaces' => [
-		'default' => '8',
+		'default' => [
+			NS_MEDIAWIKI => true,
+		],
 	],
 
 	// UserPageEditProtection
