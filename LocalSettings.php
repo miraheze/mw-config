@@ -6234,7 +6234,7 @@ $wgConf->settings += [
 	],
 	'wgUFAllowedNamespaces' => [
 		'default' => [
-			'8' => true,
+			8 => true,
 		],
 	],
 
