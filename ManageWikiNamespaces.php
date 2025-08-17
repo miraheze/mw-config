@@ -369,7 +369,10 @@ $wgManageWikiNamespacesAdditional = [
 		'main' => true,
 		'talk' => true,
 		'excluded' => [],
-		'overridedefault' => false,
+		'overridedefault' => [
+			8 => true,
+			'default' => false,
+		],
 		'help' => '',
 		'requires' => [],
 	],
