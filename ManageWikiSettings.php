@@ -408,7 +408,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'other',
 		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension. Restricted as this is only temporarily enabled for a maintenance script run',
-		'requires' => [],
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -5418,17 +5417,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 0,
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Item namespace on the upstream Wikibase installation. Leave as-is if unsure.',
-		'requires' => [],
-	],
-	'wmgWikibasePropertyNamespaceID' => [
-		'name' => 'Property Namespace ID',
-		'from' => 'wikibaseclient',
-		'type' => 'integer',
-		'minint' => 0,
-		'maxint' => 9999,
-		'overridedefault' => 120,
-		'section' => 'wikibase',
-		'help' => 'Namespace ID of the Property namespace on the upstream Wikibase installation. Leave as-is if unsure.',
 		'requires' => [],
 	],
 	'wmgWikibaseRepoItemNamespaceID' => [

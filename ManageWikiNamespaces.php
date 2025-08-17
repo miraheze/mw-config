@@ -182,17 +182,6 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
-	'wgWPBNamespaces' => [
-		'name' => 'Enable WikidataPageBanner in this namespace?',
-		'from' => 'wikidatapagebanner',
-		'type' => 'check',
-		'main' => true,
-		'talk' => true,
-		'excluded' => [],
-		'overridedefault' => false,
-		'help' => '',
-		'requires' => [],
-	],
 	'wgCommentStreamsAllowedNamespaces' => [
 		'name' => 'Can comments appear in this namespace?',
 		'from' => 'commentstreams',
