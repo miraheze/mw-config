@@ -2665,7 +2665,7 @@ $wgManageWikiSettings = [
 			'BlockedUser',
 			'NewUser',
 			'UserGroupsChanged',
-			'ModerationPending',			
+			'ModerationPending',
 		],
 		'options' => [
 			'New Page' => 'AddedArticle',
