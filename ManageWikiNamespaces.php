@@ -370,7 +370,7 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'excluded' => [],
 		'overridedefault' => [
-			8 => true,
+			NS_MEDIAWIKI => true,
 			'default' => false,
 		],
 		'help' => '',
