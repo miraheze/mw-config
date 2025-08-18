@@ -796,8 +796,8 @@ class MirahezeFunctions {
 		}
 
 		$listFile = self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php';
-		$extensionList = @include $listFile;
-		if ( $extensionList === false || $extensionList === [] ) {
+		$list = @include $listFile;
+		if ( $list === false ) {
 			$versionDir = self::CACHE_DIRECTORY . '/' . $this->version;
 			if ( !is_dir( $versionDir ) ) {
 				// Create directory since it doesn't exist
@@ -814,16 +814,16 @@ class MirahezeFunctions {
 			}
 
 			$data = $processor->getExtractedInfo();
-			$extensionList = array_column( $data['credits'], 'path', 'name' );
+			$list = array_column( $data['credits'], 'path', 'name' );
 
-			$contents = StaticArrayWriter::write( $extensionList, 'Auto-generated extension list cache.' );
+			$contents = StaticArrayWriter::write( $list, 'Auto-generated extension list cache.' );
 			file_put_contents( $listFile, $contents, LOCK_EX );
 		}
 
 		self::handleDisabledExtensions();
 		self::$activeExtensions ??= self::getActiveExtensions();
 		foreach ( self::$activeExtensions as $name ) {
-			$path = $extensionList[$name] ?? null;
+			$path = $list[$name] ?? null;
 			if ( $path && pathinfo( $path, PATHINFO_EXTENSION ) === 'json' ) {
 				ExtensionRegistry::getInstance()->queue( $path );
 			}
