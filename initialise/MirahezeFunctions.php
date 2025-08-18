@@ -6,7 +6,6 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
 use Miraheze\ManageWiki\Helpers\Factories\ModuleFactory;
-use Wikimedia\AtEase\AtEase;
 use Wikimedia\Rdbms\IReadableDatabase;
 use Wikimedia\StaticArrayWriter;
 
@@ -127,12 +126,7 @@ class MirahezeFunctions {
 			return $database;
 		}
 
-		$filePath = self::CACHE_DIRECTORY . "/$dblist.php";
-		$databasesArray = AtEase::quietCall(
-			static fn ( string $path ): array|false => include $path,
-			$filePath
-		);
-
+		$databasesArray = @include self::CACHE_DIRECTORY . "/$dblist.php";
 		if ( $databasesArray === false || $databasesArray === [] ) {
 			return [];
 		}
@@ -471,10 +465,7 @@ class MirahezeFunctions {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
 		$filePath = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
-		$cacheData = AtEase::quietCall(
-			static fn ( string $path ): array|false => include $path,
-			$filePath
-		);
+		$cacheData = @include $filePath;
 
 		// If we don't have a cache file, return an empty array
 		if ( $cacheData === false ) {
@@ -498,7 +489,7 @@ class MirahezeFunctions {
 			filemtime( __DIR__ . '/../ManageWikiNamespaces.php' ),
 			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
-			filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
+			@filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
 		);
 
 		static $globals = null;
@@ -590,11 +581,7 @@ class MirahezeFunctions {
 		string $type,
 		int $confActualMtime
 	): ?array {
-		$cacheRecord = AtEase::quietCall(
-			static fn ( string $path ): array|false => include $path,
-			$confCacheFile
-		);
-
+		$cacheRecord = @include $confCacheFile;
 		if ( $cacheRecord === false ) {
 			return null;
 		}
@@ -719,7 +706,7 @@ class MirahezeFunctions {
 			filemtime( __DIR__ . '/../LocalSettings.php' ),
 			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
-			filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
+			@filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
 		);
 
 		static $extensions = null;
@@ -793,12 +780,7 @@ class MirahezeFunctions {
 	public function loadExtensions(): void {
 		global $wgDBname;
 
-		$filePath = self::CACHE_DIRECTORY . "/$wgDBname.php";
-		$cacheData = AtEase::quietCall(
-			static fn ( string $path ): array|false => include $path,
-			$filePath
-		);
-
+		$cacheData = @include self::CACHE_DIRECTORY . "/$wgDBname.php";
 		if ( $cacheData === false || $cacheData === [] ) {
 			global $wgConf;
 			if ( self::getRealm( $wgDBname ) !== 'default' ) {
@@ -814,11 +796,7 @@ class MirahezeFunctions {
 		}
 
 		$listFile = self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php';
-		$extensionList = AtEase::quietCall(
-			static fn ( string $path ): array|false => include $path,
-			$listFile
-		);
-
+		$extensionList = @include $listFile;
 		if ( $extensionList === false || $extensionList === [] ) {
 			$versionDir = self::CACHE_DIRECTORY . '/' . $this->version;
 			if ( !is_dir( $versionDir ) ) {
