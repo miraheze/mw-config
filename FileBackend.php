@@ -2,6 +2,7 @@
 
 use Wikimedia\FileBackend\SwiftFileBackend;
 
+$wgMirahezeMagicSwiftKey = $wmgSwiftPassword;
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift',
