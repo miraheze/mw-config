@@ -6,6 +6,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
 use Miraheze\ManageWiki\Helpers\Factories\ModuleFactory;
+use Wikimedia\AtEase\AtEase;
 use Wikimedia\Rdbms\IReadableDatabase;
 use Wikimedia\StaticArrayWriter;
 
@@ -61,11 +62,6 @@ class MirahezeFunctions {
 	];
 
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
-
-	private const TAGS = [
-		'default' => 'default',
-		'beta' => 'beta',
-	];
 
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.44',
@@ -132,11 +128,14 @@ class MirahezeFunctions {
 		}
 
 		$filePath = self::CACHE_DIRECTORY . "/$dblist.php";
-		if ( !file_exists( $filePath ) ) {
+		$databasesArray = AtEase::quietCall(
+			static fn ( string $path ): array|false => include $path,
+			$filePath
+		);
+
+		if ( $databasesArray === false || $databasesArray === [] ) {
 			return [];
 		}
-
-		$databasesArray = include $filePath;
 
 		// Lookup a single database by server URL
 		if ( $database ) {
@@ -196,9 +195,7 @@ class MirahezeFunctions {
 	public static function getRealm( ?string $database = null ): string {
 		$database ??= self::$currentDatabase ??= self::getCurrentDatabase();
 		$suffix = array_key_first( self::SUFFIXES );
-		return str_ends_with( $database, $suffix )
-			? self::TAGS['default']
-			: self::TAGS['beta'];
+		return str_ends_with( $database, $suffix ) ? 'default' : 'beta';
 	}
 
 	public static function getCurrentSuffix(): string {
@@ -302,7 +299,6 @@ class MirahezeFunctions {
 		}
 
 		[ $subdomain, $domain ] = $parts + [ '', '' ];
-
 		foreach ( self::SUFFIXES as $suffix => $sites ) {
 			if (
 				$domain === $sites[ array_search( $domain, $sites, true ) ] &&
@@ -320,15 +316,15 @@ class MirahezeFunctions {
 	}
 
 	public function getCentralDatabase(): string {
-		return self::CENTRAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+		return self::CENTRAL_DATABASE[$this->realm];
 	}
 
 	public function getGlobalDatabase(): string {
-		return self::GLOBAL_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+		return self::GLOBAL_DATABASE[$this->realm];
 	}
 
 	public function getIncidentsDatabase(): string {
-		return self::INCIDENTS_DATABASE[ array_flip( self::TAGS )[$this->realm] ];
+		return self::INCIDENTS_DATABASE[$this->realm];
 	}
 
 	public function setDatabase(): void {
@@ -474,13 +470,18 @@ class MirahezeFunctions {
 	public static function getCacheArray(): array {
 		self::$currentDatabase ??= self::getCurrentDatabase();
 
-		// If we don't have a cache file, let us exit here
-		if ( !file_exists( self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php' ) ) {
+		$filePath = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
+		$cacheData = AtEase::quietCall(
+			static fn ( string $path ): array|false => include $path,
+			$filePath
+		);
+
+		// If we don't have a cache file, return an empty array
+		if ( $cacheData === false ) {
 			return [];
 		}
 
-		$currentDatabaseFile = self::CACHE_DIRECTORY . '/' . self::$currentDatabase . '.php';
-		return include $currentDatabaseFile;
+		return $cacheData;
 	}
 
 	public static function getConfigGlobals(): array {
@@ -497,7 +498,7 @@ class MirahezeFunctions {
 			filemtime( __DIR__ . '/../ManageWikiNamespaces.php' ),
 			filemtime( __DIR__ . '/../ManageWikiSettings.php' ),
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
-			@filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
+			filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
 		);
 
 		static $globals = null;
@@ -589,11 +590,17 @@ class MirahezeFunctions {
 		string $type,
 		int $confActualMtime
 	): ?array {
-		$cacheRecord = @include $confCacheFile;
-		if ( $cacheRecord !== false ) {
-			if ( ( $cacheRecord['mtime'] ?? null ) === $confActualMtime ) {
-				return $cacheRecord[$type] ?? null;
-			}
+		$cacheRecord = AtEase::quietCall(
+			static fn ( string $path ): array|false => include $path,
+			$confCacheFile
+		);
+
+		if ( $cacheRecord === false ) {
+			return null;
+		}
+
+		if ( ( $cacheRecord['mtime'] ?? null ) === $confActualMtime ) {
+			return $cacheRecord[$type] ?? null;
 		}
 
 		return null;
@@ -602,8 +609,7 @@ class MirahezeFunctions {
 	public static function getManageWikiConfigCache(): array {
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
-
-		if ( !$cacheArray ) {
+		if ( $cacheArray === [] ) {
 			return [];
 		}
 
@@ -713,7 +719,7 @@ class MirahezeFunctions {
 			filemtime( __DIR__ . '/../LocalSettings.php' ),
 			filemtime( __DIR__ . '/../ManageWikiExtensions.php' ),
 			filemtime( MW_INSTALL_PATH . '/includes/Defines.php' ),
-			@filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
+			filemtime( self::CACHE_DIRECTORY . "/$wgDBname.php" )
 		);
 
 		static $extensions = null;
@@ -728,8 +734,7 @@ class MirahezeFunctions {
 
 		static $cacheArray = null;
 		$cacheArray ??= self::getCacheArray();
-
-		if ( !$cacheArray ) {
+		if ( $cacheArray === [] ) {
 			return [];
 		}
 
@@ -788,8 +793,13 @@ class MirahezeFunctions {
 	public function loadExtensions(): void {
 		global $wgDBname;
 
-		$cacheFile = self::CACHE_DIRECTORY . "/$wgDBname.php";
-		if ( !file_exists( $cacheFile ) ) {
+		$filePath = self::CACHE_DIRECTORY . "/$wgDBname.php";
+		$cacheData = AtEase::quietCall(
+			static fn ( string $path ): array|false => include $path,
+			$filePath
+		);
+
+		if ( $cacheData === false || $cacheData === [] ) {
 			global $wgConf;
 			if ( self::getRealm( $wgDBname ) !== 'default' ) {
 				$wgConf->siteParamsCallback = static fn (): array => [
@@ -804,7 +814,12 @@ class MirahezeFunctions {
 		}
 
 		$listFile = self::CACHE_DIRECTORY . '/' . $this->version . '/extension-list.php';
-		if ( !file_exists( $listFile ) ) {
+		$extensionList = AtEase::quietCall(
+			static fn ( string $path ): array|false => include $path,
+			$listFile
+		);
+
+		if ( $extensionList === false || $extensionList === [] ) {
 			$versionDir = self::CACHE_DIRECTORY . '/' . $this->version;
 			if ( !is_dir( $versionDir ) ) {
 				// Create directory since it doesn't exist
@@ -821,18 +836,16 @@ class MirahezeFunctions {
 			}
 
 			$data = $processor->getExtractedInfo();
-			$list = array_column( $data['credits'], 'path', 'name' );
+			$extensionList = array_column( $data['credits'], 'path', 'name' );
 
-			$contents = StaticArrayWriter::write( $list, 'Auto-generated extension list cache.' );
+			$contents = StaticArrayWriter::write( $extensionList, 'Auto-generated extension list cache.' );
 			file_put_contents( $listFile, $contents, LOCK_EX );
-		} else {
-			$list = include $listFile;
 		}
 
 		self::handleDisabledExtensions();
 		self::$activeExtensions ??= self::getActiveExtensions();
 		foreach ( self::$activeExtensions as $name ) {
-			$path = $list[$name] ?? null;
+			$path = $extensionList[$name] ?? null;
 			if ( $path && pathinfo( $path, PATHINFO_EXTENSION ) === 'json' ) {
 				ExtensionRegistry::getInstance()->queue( $path );
 			}
