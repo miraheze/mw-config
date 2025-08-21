@@ -5235,6 +5235,10 @@ $wgConf->settings += [
 	],
 
 	// RequestCustomDomain
+	'wgRequestCustomDomainDatabaseSuffix' => [
+		'default' => 'wiki',
+		'beta' => 'wikibeta',
+	],
 	'wgRequestCustomDomainDisallowedDomains' => [
 		'default' => [
 			'miraheze.org',
@@ -5249,6 +5253,10 @@ $wgConf->settings += [
 	],
 	'wgRequestCustomDomainScriptCommand' => [
 		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
+	],
+	'wgRequestCustomDomainSubdomain' => [
+		'default' => 'miraheze.org',
+		'beta' => 'mirabeta.org',
 	],
 	'wgRequestCustomDomainUsersNotifiedOnAllRequests' => [
 		'default' => [
