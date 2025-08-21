@@ -5251,9 +5251,6 @@ $wgConf->settings += [
 			'wiki.surf',
 		],
 	],
-	'wgRequestCustomDomainScriptCommand' => [
-		'default' => 'sudo /root/ssl-certificate -d {customdomain} -g -p',
-	],
 	'wgRequestCustomDomainSubdomain' => [
 		'default' => 'miraheze.org',
 		'beta' => 'mirabeta.org',
