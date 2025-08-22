@@ -282,10 +282,6 @@ switch ( $wi->dbname ) {
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
-	case 'jbcstudioswiki':
-		$wgGalleryOptions['mode'] = 'packed';
-
-		break;
 	case 'kaiserreichwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
