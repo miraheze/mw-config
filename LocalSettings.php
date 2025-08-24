@@ -4953,9 +4953,6 @@ $wgConf->settings += [
 			'usebetatoolbar' => 1,
 			'usebetatoolbar-cgd' => 1,
 		],
-		'+abyssalwiki' => [
-			'usecodemirror' => 1,
-		],
 		'+acwiki' => [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
@@ -4987,22 +4984,17 @@ $wgConf->settings += [
 			'thumbsize' => 3,
 		],
 		'+dccomicswiki' => [
-			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 		],
 		'+dcmultiversewiki' => [
-			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 		],
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
-		],
-		'+dominionstrategywiki' => [
-			'usecodemirror' => 1,
 		],
 		'+fanpediawiki' => [
 			'rcenhancedfilters-disable' => 1,
@@ -5012,7 +5004,6 @@ $wgConf->settings += [
 		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
-			'usecodemirror' => 1,
 		],
 		'+kaiserreichwiki' => [
 			'vector-theme' => 'night',
@@ -5048,7 +5039,6 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 		],
 		'+rippaversewiki' => [
-			'usecodemirror' => 1,
 			'visualeditor-newwikitext' => 1,
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
@@ -5076,6 +5066,9 @@ $wgConf->settings += [
 		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
 		],
+	],
+	'wmgCodeMirrorEnableDefault' => [
+		'default' => false,
 	],
 
 	// Preloader
