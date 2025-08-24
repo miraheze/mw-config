@@ -234,9 +234,6 @@ $wgConf->settings += [
 	'wgLogSpamBlacklistHits' => [
 		'default' => true,
 	],
-	'wgTitleBlacklistLogHits' => [
-		'default' => true,
-	],
 
 	// ApprovedRevs
 	'egApprovedRevsAutomaticApprovals' => [
@@ -1548,9 +1545,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wmgShowPopupsByDefault' => [
-		'default' => false,
-	],
-	'wgWatchlistExpiry' => [
 		'default' => false,
 	],
 
@@ -4345,9 +4339,6 @@ $wgConf->settings += [
 		'default' => false,
 		'zhtranswiki' => 'zh-cn',
 	],
-	'wgResourceLoaderMaxQueryLength' => [
-		'default' => 5000,
-	],
 	'wgCleanSignatures' => [
 		'default' => true,
 	],
@@ -5820,7 +5811,6 @@ $wgConf->settings += [
 			'delete' => 500,
 			'edit' => 500,
 			'unprotect' => 500,
-			'edit' => 500,
 			'rollback' => 500,
 			'revert' => 500,
 			'vote' => 100,
