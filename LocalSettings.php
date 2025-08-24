@@ -6064,6 +6064,17 @@ $wgConf->settings += [
 	// Translate
 	'wgTranslateDisabledTargetLanguages' => [
 		'default' => [],
+		'astralpartywiki' => [
+			'*' => [
+				'zh' => 'Translate in zh-hans or zh-hant instead please.',
+				'zh-cn' => 'Translate in zh-hans instead please.',
+				'zh-my' => 'Translate in zh-hans instead please.',
+				'zh-sg' => 'Translate in zh-hans instead please.',
+				'zh-tw' => 'Translate in zh-hant instead please.',
+				'zh-hk' => 'Translate in zh-hant instead please.',
+				'zh-mo' => 'Translate in zh-hant instead please.',
+			],
+		],
 		'metawiki' => [
 			'*' => [
 				'en' => 'English is the source language.',
