@@ -2929,6 +2929,33 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'searchdigest' => [
+		'name' => 'SearchDigest',
+		'linkPage' => 'https://github.com/weirdgloop/mediawiki-extensions-SearchDigest',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'searchdigest' => "$IP/extensions/SearchDigest/sql/searchdigest.sql",
+				'patch_searchdigest_sd_misses_touched' => "$IP/extensions/SearchDigest/sql/patch_searchdigest_sd_misses_touched.sql",
+				'searchdigest_blocks' => "$IP/extensions/SearchDigest/sql/searchdigest_blocks.sql"
+			],
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'searchdigest-reader',
+						'searchdigest-reader-stats',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'searchdigest-block',
+					],
+				],
+			],
+		],
+		'section' => 'other',
+	],
 	'share' => [
 		'name' => 'Share',
 		'linkPage' => 'https://github.com/AgentIsai/Share',
