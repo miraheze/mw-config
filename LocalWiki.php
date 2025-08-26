@@ -635,6 +635,14 @@ switch ( $wi->dbname ) {
 		$wgDisableLangConversion = true;
 
 		break;
+	case 'needforspeedwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
 	case 'newusopediawiki':
 		$wgFilterLogTypes['comments'] = false;
 
