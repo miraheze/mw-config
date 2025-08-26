@@ -87,7 +87,7 @@ require_once '/srv/mediawiki/config/PrivateSettings.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 require_once '/srv/mediawiki/config/GlobalSkins.php';
 
-$wgPasswordSender = 'noreply@miraheze.org';
+$wgPasswordSender = 'noreply@wikitide.org';
 $wmgUploadHostname = 'static.wikitide.net';
 $wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
 
@@ -3350,7 +3350,7 @@ $wgConf->settings += [
 			'host' => 'ssl://smtp-relay.gmail.com',
 			'localhost' => '::1',
 			'port' => 465,
-			'IDHost' => 'miraheze.org',
+			'IDHost' => 'wikitide.org',
 			'auth' => false,
 		],
 	],
@@ -3364,7 +3364,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgEmergencyContact' => [
-		'default' => 'noreply@miraheze.org',
+		'default' => 'noreply@wikitide.org',
 	],
 	'wgAllowHTMLEmail' => [
 		'default' => true,
