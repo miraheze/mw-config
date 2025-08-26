@@ -87,7 +87,7 @@ require_once '/srv/mediawiki/config/PrivateSettings.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 require_once '/srv/mediawiki/config/GlobalSkins.php';
 
-$wgPasswordSender = 'noreply@miraheze.org';
+$wgPasswordSender = 'noreply@wikitide.org';
 $wmgUploadHostname = 'static.wikitide.net';
 
 $wgConf->settings += [
@@ -2784,12 +2784,6 @@ $wgConf->settings += [
 				'dbname' => '$2wiki',
 				'baseTransOnly' => true,
 			],
-			'wikiforge' => [
-				/** WikiForge */
-				'interwiki' => 'wf',
-				'url' => 'https://$2.wikiforge.net/wiki/$1',
-				'baseTransOnly' => true,
-			],
 		],
 		'+utgwiki' => [
 			'translate' => [
@@ -2817,8 +2811,8 @@ $wgConf->settings += [
 		],
 	],
 	'wgImportDumpScriptCommand' => [
-		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file-name}"',
-		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump.php {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall.php {wiki} -y; mwscript initSiteStats.php {wiki} --active --update -y; rm /home/$USER/{file-name}"',
+		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
+		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
@@ -2852,7 +2846,6 @@ $wgConf->settings += [
 		'+batmanwiki' => [
 			'batmanwikifandom',
 			'd',
-
 		],
 		'+bnwikiwiki' => [
 			'wikipedia' => [
@@ -3332,7 +3325,7 @@ $wgConf->settings += [
 			'host' => 'ssl://smtp-relay.gmail.com',
 			'localhost' => '::1',
 			'port' => 465,
-			'IDHost' => 'miraheze.org',
+			'IDHost' => 'wikitide.org',
 			'auth' => false,
 		],
 	],
@@ -3346,7 +3339,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgEmergencyContact' => [
-		'default' => 'noreply@miraheze.org',
+		'default' => 'noreply@wikitide.org',
 	],
 	'wgAllowHTMLEmail' => [
 		'default' => true,
