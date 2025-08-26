@@ -188,6 +188,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// AdvancedSearch
+	'wgAdvancedSearchDeepcatEnabled' => [
+		'default' => false,
+	],
+
 	'wgPasswordAttemptThrottle' => [
 		'default' => [
 			// this is X attempts per IP globally
