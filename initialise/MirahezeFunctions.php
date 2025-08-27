@@ -321,6 +321,11 @@ class MirahezeFunctions {
 		return self::INCIDENTS_DATABASE[$this->realm];
 	}
 
+	public function isBeta(): bool {
+		return str_ends_with( $this->server, '.mirabeta.org' )
+			|| str_ends_with( $this->server, '.nexttide.org' );
+	}
+
 	public function setDatabase(): void {
 		global $wgConf, $wgDBname, $wgVirtualDomainsMapping;
 
