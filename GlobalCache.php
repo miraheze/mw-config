@@ -7,10 +7,7 @@ use Wikimedia\ObjectCache\RedisBagOStuff;
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
-$beta = str_ends_with( $wi->server, '.mirabeta.org' )
-	|| str_ends_with( $wi->server, '.nexttide.org' );
-
-if ( !$beta ) {
+if ( !$wi->isBeta() ) {
 	$wgCdnServers = [
 		/** cp161 */
 		'10.0.16.137:81',
@@ -100,7 +97,7 @@ $wgMirahezeMagicMemcachedServers = [
 	[ '10.0.19.154', 11211 ],
 ];
 
-if ( $beta ) {
+if ( $wi->isBeta() ) {
 	$wgMirahezeMagicMemcachedServers = [
 		[ '10.0.15.118', 11211 ],
 	];
@@ -118,8 +115,8 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				'pc1' => [
 					'type' => 'mysql',
-					'host' => $beta ? '10.0.17.158' : '10.0.16.128',
-					'dbname' => $beta ? 'testparsercache' : 'parsercache',
+					'host' => $wi->isBeta() ? '10.0.17.158' : '10.0.16.128',
+					'dbname' => $wi->isBeta() ? 'testparsercache' : 'parsercache',
 					'user' => $wgDBuser,
 					'password' => $wgDBpassword,
 					'flags' => 0,
@@ -127,7 +124,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			],
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
-			'shards' => $beta ? 1 : 256,
+			'shards' => $wi->isBeta() ? 1 : 256,
 			'reportDupes' => false,
 		],
 	],
@@ -137,8 +134,8 @@ $wgObjectCaches['mysql-multiwrite'] = [
 
 $wgObjectCaches['db-mainstash'] = [
 	'class' => SqlBagOStuff::class,
-	'cluster' => $beta ? 'beta' : 'echo',
-	'dbDomain' => $beta ? 'testmainstash' : 'mainstash',
+	'cluster' => $wi->isBeta() ? 'beta' : 'echo',
+	'dbDomain' => $wi->isBeta() ? 'testmainstash' : 'mainstash',
 	'tableName' => 'objectstash',
 	'multiPrimaryMode' => false,
 	'purgePeriod' => 100,
@@ -151,7 +148,7 @@ $wgMicroStashType = 'mcrouter-primary-dc';
 
 $wgObjectCaches['redis-session'] = [
 	'class' => RedisBagOStuff::class,
-	'servers' => [ $beta ? '10.0.15.118:6379' : '10.0.15.142:6379' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:6379' : '10.0.15.142:6379' ],
 	'password' => $wmgRedisPassword,
 	'loggroup' => 'redis',
 	'reportDupes' => false,
@@ -233,7 +230,7 @@ $wgInvalidateCacheOnLocalSettingsChange = false;
 
 $wgCdnMatchParameterOrder = false;
 
-if ( $beta ) {
+if ( $wi->isBeta() ) {
 	$wgJobTypeConf['default'] = [
 		'class' => JobQueueRedis::class,
 		'redisServer' => '10.0.15.118:6379',

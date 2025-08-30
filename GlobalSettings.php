@@ -673,8 +673,7 @@ if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
 		MirahezeFunctions::MEDIAWIKI_VERSIONS['stable'];
 }
 
-$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
-$mirahost = $beta ? 'mirabeta' : 'miraheze';
+$mirahost = $wi->isBeta() ? 'mirabeta' : 'miraheze';
 
 /**
  * Default values.
@@ -896,7 +895,7 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
@@ -909,7 +908,7 @@ $mathoidHosts = [
 	'http://10.0.18.106:10044',
 ];
 
-$wgMathMathMLUrl = $beta ?
+$wgMathMathMLUrl = $wi->isBeta() ?
 	'http://10.0.15.118:10044' :
 	$mathoidHosts[array_rand( $mathoidHosts )];
 $wgMathSvgRenderer = 'mathoid';
