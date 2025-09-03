@@ -64,12 +64,40 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 		],
 	];
 
+	// Default is null which makes it 10000.
+	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
+
 	$wgCirrusSearchExtraIndexSettings = [
 		// Number of merge threads to use. Use only 1 thread
 		// (instead of 3) to avoid updates interfering with
 		// actual searches
 		'merge.scheduler.max_thread_count' => 1,
 	];
+
+	// Turn off leading wildcard matches, they are a very slow and inefficient query
+	$wgCirrusSearchAllowLeadingWildcard = false;
+
+	// Our cluster often has issues completing master actions
+	// within the default 30s timeout.
+	$wgCirrusSearchMasterTimeout = '5m';
+
+	// Lower the timeouts - the defaults are too high and allow to scan too many
+	// pages. Keep client timeout relatively high in comparaison,
+	// but not higher than 60sec as it's the max time allowed for GET requests.
+	// we really don't want to timeout the client before the shard retrieval (we may
+	// release the poolcounter before the end of the query on the backend)
+	$wgCirrusSearchClientSideSearchTimeout = [
+		'comp_suggest' => 10,
+		'prefix' => 10,
+		// GET requests timeout at 60s, give some room to treat request timeout
+		'default' => 40,
+		'regex' => 50,
+	];
+
+	// cache morelike queries to ObjectCache for 24 hours
+	$wgCirrusSearchMoreLikeThisTTL = 86400;
+
+	$wgCirrusSearchRefreshInterval = 30;
 
 	if ( $wi->isExtensionActive( 'RelatedArticles' ) ) {
 		$wgRelatedArticlesUseCirrusSearch = true;
