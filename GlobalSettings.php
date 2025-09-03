@@ -64,6 +64,13 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 		],
 	];
 
+	$wgCirrusSearchExtraIndexSettings = [
+		// Number of merge threads to use. Use only 1 thread
+		// (instead of 3) to avoid updates interfering with
+		// actual searches
+		'merge.scheduler.max_thread_count' => 1,
+	];
+
 	if ( $wi->isExtensionActive( 'RelatedArticles' ) ) {
 		$wgRelatedArticlesUseCirrusSearch = true;
 	}
