@@ -20,7 +20,7 @@ $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 };
 
 // Extensions
-if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
+if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtensions( [
 		'CentralAuth',
 		'GlobalPreferences',
