@@ -2029,6 +2029,41 @@ $wgManageWikiExtensions = [
 			'sql' => [
 				'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
 			],
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'aft-reader',
+					],
+				],
+				'user' => [
+					'permissions' => [
+						'aft-member',
+					],
+				],
+				'autoconfirmed' => [
+					'permissions' => [
+						'aft-editor',
+					],
+				],
+				'confirmed' => [
+					'permissions' => [
+						'aft-editor',
+					],
+				],
+				'rollbacker' => [
+					'permissions' => [
+						'aft-editor',
+						'aft-monitor',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'aft-editor',
+						'aft-monitor',
+						'aft-administrator',
+					],
+				],
+			],
 		],
 		'section' => 'other',
 	],
