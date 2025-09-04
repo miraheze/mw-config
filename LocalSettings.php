@@ -4036,7 +4036,8 @@ $wgConf->settings += [
 	],
 	'wgMediaModerationRecipientList' => [
 		'default' => [
-			'ts@wikitide.org',
+			// Don't put plain text email here.
+			base64_decode( 'dHNAd2lraXRpZGUub3Jn' ),
 		],
 	],
 
