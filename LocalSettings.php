@@ -7105,6 +7105,7 @@ $wgConf->settings += [
 			'MassMessage' => false,
 			'Math' => 'info',
 			'MatomoAnalytics' => 'debug',
+			'mediamoderation' => 'debug',
 			'Mime' => false,
 			// debug sprews too much information + sample
 			// otherwise we get 2 million+ messages within a few minutes
