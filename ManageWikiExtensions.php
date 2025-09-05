@@ -3916,4 +3916,7 @@ if ( $wi->version >= 1.44 ) {
 		],
 		'section' => 'parserhooks',
 	];
+
+	// table dropped in >= 1.44
+	unset( $wgManageWikiExtensions['wikibaserepository']['install']['sql']['wbt_type'] );
 }
