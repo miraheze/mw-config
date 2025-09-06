@@ -33,6 +33,7 @@
  * sql: array of sql files to install with extension, mapped table name => sql file path.
  */
 
+use MediaWiki\Extension\DynamicPageList4\Maintenance\CreateView;
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
 
@@ -78,8 +79,7 @@ $wgManageWikiExtensions = [
 
 	// Media handlers
 	'3d' => [
-		'name' => '3d',
-		'displayname' => '3D',
+		'name' => '3D',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:3D',
 		'conflicts' => false,
 		'requires' => [],
@@ -1160,8 +1160,13 @@ $wgManageWikiExtensions = [
 	'youtube' => [
 		'name' => 'YouTube',
 		'linkPage' => 'https://github.com/miraheze/YouTube',
+		'help' => 'This extension will be removed with the upcoming MediaWiki 1.44 upgrade. Please use the EmbedVideo extension instead.',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'section' => 'parserhooks',
 	],
 
@@ -1356,13 +1361,6 @@ $wgManageWikiExtensions = [
 	'citethispage' => [
 		'name' => 'CiteThisPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CiteThisPage',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'specialpages',
-	],
-	'contactpage' => [
-		'name' => 'ContactPage',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ContactPage',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'specialpages',
@@ -1598,57 +1596,6 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NearbyPages',
 		'conflicts' => false,
 		'requires' => [],
-		'section' => 'specialpages',
-	],
-	'mediawikichat' => [
-		'name' => 'MediaWikiChat',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MediaWikiChat',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'sql' => [
-				'chat' => "$IP/extensions/MediaWikiChat/sql/chat.sql",
-				'chat_users' => "$IP/extensions/MediaWikiChat/sql/chat_users.sql"
-			],
-			'permissions' => [
-				'blockedfromchat' => [
-					'permissions' => [
-						'viewmyprivateinfo',
-					],
-				],
-				'chatmod' => [
-					'permissions' => [
-						'chat',
-						'modchat',
-					],
-					'addgroups' => [
-						'blockedfromchat',
-					],
-					'removegroups' => [
-						'blockedfromchat',
-					],
-				],
-				'user' => [
-					'permissions' => [
-						'chat',
-					],
-				],
-				'sysop' => [
-					'permissions' => [
-						'chat',
-						'modchat',
-					],
-					'addgroups' => [
-						'chatmod',
-						'blockedfromchat',
-					],
-					'removegroups' => [
-						'chatmod',
-						'blockedfromchat',
-					],
-				],
-			],
-		],
 		'section' => 'specialpages',
 	],
 	'newestpages' => [
@@ -1926,6 +1873,7 @@ $wgManageWikiExtensions = [
 				'translate_cache' => "$IP/extensions/Translate/sql/mysql/translate_cache.sql",
 				'translate_groupreviews' => "$IP/extensions/Translate/sql/mysql/translate_groupreviews.sql",
 				'translate_groupstats' => "$IP/extensions/Translate/sql/mysql/translate_groupstats.sql",
+				'translate_message_group_subscriptions' => "$IP/extensions/Translate/sql/mysql/translate_message_group_subscriptions.sql",
 				'translate_messageindex' => "$IP/extensions/Translate/sql/mysql/translate_messageindex.sql",
 				'translate_metadata' => "$IP/extensions/Translate/sql/mysql/translate_metadata.sql",
 				'translate_reviews' => "$IP/extensions/Translate/sql/mysql/translate_reviews.sql",
@@ -2072,7 +2020,7 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 	],
 	'articlefeedbackv5' => [
-		'name' => 'ArticleFeedbackv5',
+		'name' => 'Article Feedback',
 		'displayname' => 'ArticleFeedbackv5',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleFeedbackv5',
 		'conflicts' => false,
@@ -2080,6 +2028,41 @@ $wgManageWikiExtensions = [
 		'install' => [
 			'sql' => [
 				'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
+			],
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'aft-reader',
+					],
+				],
+				'user' => [
+					'permissions' => [
+						'aft-member',
+					],
+				],
+				'autoconfirmed' => [
+					'permissions' => [
+						'aft-editor',
+					],
+				],
+				'confirmed' => [
+					'permissions' => [
+						'aft-editor',
+					],
+				],
+				'rollbacker' => [
+					'permissions' => [
+						'aft-editor',
+						'aft-monitor',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'aft-editor',
+						'aft-monitor',
+						'aft-administrator',
+					],
+				],
 			],
 		],
 		'section' => 'other',
@@ -3919,3 +3902,21 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
+
+if ( $wi->version >= 1.44 ) {
+	$wgManageWikiExtensions['dynamicpagelist3'] = [
+		'name' => 'DynamicPageList4',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
+		'conflicts' => 'dynamicpagelist',
+		'requires' => [],
+		'install' => [
+			'mwscript' => [
+				CreateView::class => [],
+			],
+		],
+		'section' => 'parserhooks',
+	];
+
+	// table dropped in >= 1.44
+	unset( $wgManageWikiExtensions['wikibaserepository']['install']['sql']['wbt_type'] );
+}

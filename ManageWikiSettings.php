@@ -407,8 +407,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'other',
-		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension. Restricted as this is only temporarily enabled for a maintenance sctipt run',
-		'requires' => [],
+		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension. Restricted as this is only temporarily enabled for a maintenance script run',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -468,11 +467,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'other',
 		'help' => 'If enabled, links (&lt;a&gt; tags) will be shown. If disabled, the tags are escaped.',
-		'requires' => [
-			'extensions' => [
-				'rss',
-			],
-		],
+		'requires' => [],
 	],
 	'wgRSSItemMaxLength' => [
 		'name' => 'Description length of RSS items',
@@ -483,11 +478,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 200,
 		'section' => 'other',
 		'help' => 'The maximum length of an RSS item\'s body',
-		'requires' => [
-			'extensions' => [
-				'rss',
-			],
-		],
+		'requires' => [],
 	],
 	'wgRSSUserAgent' => [
 		'name' => 'RSS User Agent',
@@ -496,11 +487,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 'MediaWiki RSS extension',
 		'section' => 'other',
 		'help' => 'The User Agent that MediaWiki will use to fetch RSS feeds.',
-		'requires' => [
-			'extensions' => [
-				'rss',
-			],
-		],
+		'requires' => [],
 	],
 	'wgWPBBannerProperty' => [
 		'name' => 'WikidataPageBanner Banner Property',
@@ -730,24 +717,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Discussion
-	'wgChatLinkUsernames' => [
-		'name' => 'Chat Link to Usernames',
-		'from' => 'mediawikichat',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'discussion',
-		'help' => 'Link to user pages in the main chat window.',
-		'requires' => [],
-	],
-	'wgChatMeCommand' => [
-		'name' => 'Chat Me Command',
-		'from' => 'mediawikichat',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'discussion',
-		'help' => 'Enable "/me <text>" command that prints a status-type message.',
-		'requires' => [],
-	],
 	'wgCommentStreamsEnableTalk' => [
 		'name' => 'CommentStreams Enable Talk',
 		'from' => 'commentstreams',
@@ -1560,15 +1529,6 @@ $wgManageWikiSettings = [
 		'help' => 'Source to get the page description from.',
 		'requires' => [],
 	],
-	'wmgMirahezeContactPageFooter' => [
-		'name' => 'Miraheze Contact Page Footer',
-		'from' => 'contactpage',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'links',
-		'help' => 'If set, it adds a link to Special:Contact on the footer',
-		'requires' => [],
-	],
 
 	// Localisation (E.G i18n/timezone etc)
 	'wgLocaltimezone' => [
@@ -2143,7 +2103,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to use the optional MultimediaViewer feature.',
 		'requires' => [
 			'extensions' => [
-				'ratepage',
 				'multimediaviewer',
 			],
 		],
@@ -2220,6 +2179,7 @@ $wgManageWikiSettings = [
 			'avi' => 'avi',
 			'bfwav' => 'bfwav',
 			'bib' => 'bib',
+			'bin' => 'bin',
 			'blend' => 'blend',
 			'bmp' => 'bmp',
 			'bnk' => 'bnk',
@@ -2271,6 +2231,7 @@ $wgManageWikiSettings = [
 			'ipe' => 'ipe',
 			'ips' => 'ips',
 			'it' => 'it',
+			'jed' => 'jed',
 			'jfif' => 'jfif',
 			'jpeg' => 'jpeg',
 			'jpg' => 'jpg',
@@ -2282,10 +2243,10 @@ $wgManageWikiSettings = [
 			'md' => 'md',
 			'mid' => 'mid',
 			'midi' => 'midi',
+			'mkv' => 'mkv',
 			'mma' => 'mma',
 			'mmf' => 'mmf',
 			'mmt' => 'mmt',
-			'mkv' => 'mkv',
 			'mod' => 'mod',
 			'mov' => 'mov',
 			'mp3' => 'mp3',
@@ -2386,8 +2347,8 @@ $wgManageWikiSettings = [
 			'djvu',
 			'gif',
 			'ico',
-			'jpg',
 			'jpeg',
+			'jpg',
 			'ogg',
 			'pdf',
 			'png',
@@ -2506,15 +2467,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Notifications
-	'wmgContactPageRecipientUser' => [
-		'name' => 'Contact Page Recipient User',
-		'from' => 'contactpage',
-		'type' => 'user',
-		'overridedefault' => null,
-		'section' => 'notifications',
-		'help' => 'Set to a valid username with a confirmed email. This user will be the recipient user of the ContactPage extension.',
-		'requires' => [],
-	],
 	'wgUsersNotifiedOnAllChanges' => [
 		'name' => 'Users Notified On All Changes',
 		'from' => 'mediawiki',
@@ -2652,26 +2604,6 @@ $wgManageWikiSettings = [
 		'help' => 'Ignore Minor Edits from Discord feeds?',
 		'requires' => [],
 	],
-	'wgDiscordNotificationBlockedUser' => [
-		'name' => 'Discord Notification Blocked User',
-		'from' => 'discordnotifications',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'notifications',
-		'help' => 'Notify on user or IP blocked in MediaWiki?',
-		'requires' => [],
-	],
-	'wgDiscordNotificationNewUser' => [
-		'name' => 'Discord Notification New User',
-		'from' => 'discordnotifications',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'notifications',
-		'help' => 'Notify on new user added into MediaWiki?',
-		'requires' => [],
-	],
 	'wgDiscordIncludePageUrls' => [
 		'name' => 'Discord Include Page Urls',
 		'from' => 'discordnotifications',
@@ -2702,44 +2634,65 @@ $wgManageWikiSettings = [
 		'help' => 'Show the edit size in notification message?',
 		'requires' => [],
 	],
-	'wgDiscordNotificationMovedArticle' => [
-		'name' => 'Discord Notification Moved Article',
+	'wgDiscordNotificationEnabledActions' => [
+		'name' => 'Discord Notification Enabled Actions',
 		'from' => 'discordnotifications',
 		'global' => true,
-		'type' => 'check',
-		'overridedefault' => true,
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'AddedArticle',
+			'EditedArticle',
+			'MovedArticle',
+			'ProtectedArticle',
+			'RemovedArticle',
+			'UnremovedArticle',
+			'AfterImportPage',
+			'FileUpload',
+			'BlockedUser',
+			'NewUser',
+			'UserGroupsChanged',
+			'ModerationPending',
+		],
+		'options' => [
+			'New Page' => 'AddedArticle',
+			'Page Edited ' => 'EditedArticle',
+			'Page Moved' => 'MovedArticle',
+			'Page Protected' => 'ProtectedArticle',
+			'Page Removed' => 'RemovedArticle',
+			'Page Unremoved' => 'UnremovedArticle',
+			'Page Imported' => 'AfterImportPage',
+			'File Uploaded' => 'FileUpload',
+			'User Blocked ' => 'BlockedUser',
+			'New User' => 'NewUser',
+			'User Groups Changed' => 'UserGroupsChanged',
+			'Pending Moderation ' => 'ModerationPending',
+		],
+		'overridedefault' => [
+			'AddedArticle' => true,
+			'EditedArticle' => true,
+			'MovedArticle' => true,
+			'ProtectedArticle' => true,
+			'RemovedArticle' => true,
+			'UnremovedArticle' => true,
+			'AfterImportPage' => true,
+			'FileUpload' => true,
+			'BlockedUser' => true,
+			'NewUser' => true,
+			'UserGroupsChanged' => true,
+			'ModerationPending' => true,
+		],
 		'section' => 'notifications',
-		'help' => 'Notify on article move?',
+		'help' => 'Actions that will trigger a notification.',
 		'requires' => [],
 	],
-	'wgDiscordNotificationFileUpload' => [
-		'name' => 'Discord Notification File Upload',
+	'wgDiscordNotificationShowImage' => [
+		'name' => 'Discord Notification Show Image',
 		'from' => 'discordnotifications',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'notifications',
-		'help' => 'Notify on file upload?',
-		'requires' => [],
-	],
-	'wgDiscordNotificationProtectedArticle' => [
-		'name' => 'Discord Notification Protected Article',
-		'from' => 'discordnotifications',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'notifications',
-		'help' => 'Notify when an article is protected?',
-		'requires' => [],
-	],
-	'wgDiscordNotificationAfterImportPage' => [
-		'name' => 'Discord Notification After Import Page',
-		'from' => 'discordnotifications',
-		'global' => true,
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'notifications',
-		'help' => 'Notify when a page is imported?',
+		'help' => 'If enabled, uploaded images will be shown in the Discord embed.',
 		'requires' => [],
 	],
 	'wgHAWelcomeStaffGroupName' => [
@@ -2885,7 +2838,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether or not Page Previews will only request the intro paragraph from TextExtracts or not',
 		'requires' => [
 			'extensions' => [
-				'popups',
 				'textextracts',
 			],
 		],
@@ -3246,7 +3198,6 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'extensions' => [
 				'textextracts',
-				'wikiseo',
 			],
 		],
 	],
@@ -3260,7 +3211,6 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'extensions' => [
 				'textextracts',
-				'wikiseo',
 			],
 		],
 	],
@@ -3274,7 +3224,6 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'extensions' => [
 				'pageimages',
-				'wikiseo',
 			],
 		],
 	],
@@ -3289,7 +3238,6 @@ $wgManageWikiSettings = [
 		'help' => 'Modern profile tabs for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3303,7 +3251,6 @@ $wgManageWikiSettings = [
 		'help' => 'Make avatar round on profile pages for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3317,7 +3264,6 @@ $wgManageWikiSettings = [
 		'help' => 'Show edit count on profile pages for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3331,7 +3277,6 @@ $wgManageWikiSettings = [
 		'help' => 'Allow users to add a bio from Special:MyPage/bio and display it on their user page?',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3345,7 +3290,6 @@ $wgManageWikiSettings = [
 		'help' => 'Follow redirects from Special:MyPage/bio and display the redirect target as bio instead? (experimental)',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3359,7 +3303,6 @@ $wgManageWikiSettings = [
 		'help' => 'Show user group tags on profile pages for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3373,7 +3316,6 @@ $wgManageWikiSettings = [
 		'help' => 'Use social profile avatar in the top banner for the Cosmos skin when social profile is enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3392,7 +3334,6 @@ $wgManageWikiSettings = [
 		'help' => 'User groups to show on profile pages for the Cosmos skin when social profile is enabled. They will be shown in order of priority.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3408,7 +3349,6 @@ $wgManageWikiSettings = [
 		'help' => 'Number of user group tags to show on profile pages for the Cosmos skin when social profile and the profile group tags are enabled. Min. 1; Max. 5.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'socialprofile',
 			],
 		],
@@ -3560,15 +3500,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'socialtools',
 		'help' => 'Decides whether to enable friending or not.',
-		'requires' => [],
-	],
-	'wgUserBoard' => [
-		'name' => 'User Board',
-		'from' => 'socialprofile',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'socialtools',
-		'help' => 'Displays UserBoard-related things on social profile pages.',
 		'requires' => [],
 	],
 	'wgUserProfileDisplay' => [
@@ -4048,7 +3979,6 @@ $wgManageWikiSettings = [
 		'help' => 'Enable the Europa theme on infoboxes when using the Cosmos skin, if you have the PortableInfobox extension enabled.',
 		'requires' => [
 			'extensions' => [
-				'cosmos',
 				'portableinfobox',
 			],
 		],
@@ -5496,17 +5426,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => 0,
 		'section' => 'wikibase',
 		'help' => 'Namespace ID of the Item namespace on the upstream Wikibase installation. Leave as-is if unsure.',
-		'requires' => [],
-	],
-	'wmgWikibasePropertyNamespaceID' => [
-		'name' => 'Property Namespace ID',
-		'from' => 'wikibaseclient',
-		'type' => 'integer',
-		'minint' => 0,
-		'maxint' => 9999,
-		'overridedefault' => 120,
-		'section' => 'wikibase',
-		'help' => 'Namespace ID of the Property namespace on the upstream Wikibase installation. Leave as-is if unsure.',
 		'requires' => [],
 	],
 	'wmgWikibaseRepoItemNamespaceID' => [

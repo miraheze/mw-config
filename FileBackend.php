@@ -2,6 +2,7 @@
 
 use Wikimedia\FileBackend\SwiftFileBackend;
 
+$wgMirahezeMagicSwiftKey = $wmgSwiftPassword;
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift',
@@ -22,8 +23,7 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
-$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
-$redisServerIP = $beta ?
+$redisServerIP = $wi->isBeta() ?
 	'10.0.15.118:6379' :
 	'10.0.15.142:6379';
 
@@ -34,7 +34,7 @@ $wgLockManagers[] = [
 		'rdb1' => $redisServerIP,
 	],
 	'srvsByBucket' => [
-		0 => [ 'rdb1' ]
+		0 => [ 'rdb1' ],
 	],
 	'redisConfig' => [
 		'connectTimeout' => 2,
@@ -88,8 +88,7 @@ $wgLocalFileRepo = [
 	'deletedHashLevels' => 3,
 	'abbrvThreshold' => 160,
 	'isPrivate' => $cwPrivate,
-	'zones' => $cwPrivate
-		? [
-			'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ] ]
-		: [],
+	'zones' => $cwPrivate ? [
+		'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ],
+	] : [],
 ];

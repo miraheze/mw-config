@@ -2,15 +2,12 @@
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
-use MediaWiki\Html\Html;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
-use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
-$wgHooks['CreateWikiDataFactoryBuilder'][] = 'MirahezeFunctions::onCreateWikiDataFactoryBuilder';
 $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
@@ -22,22 +19,8 @@ $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 	return true;
 };
 
-if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a',
-				[
-					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
-					'rel' => 'noreferrer noopener',
-				],
-				$skin->msg( 'contactpage-label' )->text()
-			);
-		}
-	};
-}
-
 // Extensions
-if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
+if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtensions( [
 		'CentralAuth',
 		'GlobalPreferences',
@@ -80,6 +63,41 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 			],
 		],
 	];
+
+	// Default is null which makes it 10000.
+	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
+
+	$wgCirrusSearchExtraIndexSettings = [
+		// Number of merge threads to use. Use only 1 thread
+		// (instead of 3) to avoid updates interfering with
+		// actual searches
+		'merge.scheduler.max_thread_count' => 1,
+	];
+
+	// Turn off leading wildcard matches, they are a very slow and inefficient query
+	$wgCirrusSearchAllowLeadingWildcard = false;
+
+	// Our cluster often has issues completing master actions
+	// within the default 30s timeout.
+	$wgCirrusSearchMasterTimeout = '5m';
+
+	// Lower the timeouts - the defaults are too high and allow to scan too many
+	// pages. Keep client timeout relatively high in comparaison,
+	// but not higher than 60sec as it's the max time allowed for GET requests.
+	// we really don't want to timeout the client before the shard retrieval (we may
+	// release the poolcounter before the end of the query on the backend)
+	$wgCirrusSearchClientSideSearchTimeout = [
+		'comp_suggest' => 10,
+		'prefix' => 10,
+		// GET requests timeout at 60s, give some room to treat request timeout
+		'default' => 40,
+		'regex' => 50,
+	];
+
+	// cache morelike queries to ObjectCache for 24 hours
+	$wgCirrusSearchMoreLikeThisTTL = 86400;
+
+	$wgCirrusSearchRefreshInterval = 30;
 
 	if ( $wi->isExtensionActive( 'RelatedArticles' ) ) {
 		$wgRelatedArticlesUseCirrusSearch = true;
@@ -308,8 +326,8 @@ $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
 		'useBackendTempStore' => true,
-		'chunkSize' => 2 * 1024 * 1024,
-		'startChunkSize' => 4 * 1024 * 1024,
+		'chunkSize' => 512 * 1024 * 1024,
+		'startChunkSize' => 1 * 1024 * 1024 * 1024,
 		'generate' => [
 			'type' => 'mwscript',
 			'script' => "$IP/maintenance/dumpBackup.php",
@@ -342,8 +360,8 @@ $wgDataDump = [
 	'image' => [
 		'file_ending' => '.tar.gz',
 		'useBackendTempStore' => true,
-		'chunkSize' => 2 * 1024 * 1024,
-		'startChunkSize' => 4 * 1024 * 1024,
+		'chunkSize' => 512 * 1024 * 1024,
+		'startChunkSize' => 1 * 1024 * 1024 * 1024,
 		'logFailedExitCodeComments' => [
 			75 => 'The dump is too large. Please contact a member of the Technology team to assist with generating this dump.',
 		],
@@ -399,32 +417,6 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
 			'delete' => 'delete-dump',
-		],
-	];
-}
-
-// ContactPage configuration
-if ( $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgContactConfig = [
-		'default' => [
-			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
-			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Contact Form on ' . $wgSitename,
-			'RequireDetails' => true,
-			// Should never be set to true
-			'IncludeIP' => false,
-			'MustBeLoggedIn' => false,
-			'AdditionalFields' => [
-				'Text' => [
-					'label-message' => 'emailmessage',
-					'type' => 'textarea',
-					'rows' => 20,
-					'required' => true,
-				],
-			],
-			'DisplayFormat' => 'table',
-			'RLModules' => [],
-			'RLStyleModules' => [],
 		],
 	];
 }
@@ -720,8 +712,7 @@ if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
 		MirahezeFunctions::MEDIAWIKI_VERSIONS['stable'];
 }
 
-$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
-$mirahost = $beta ? 'mirabeta' : 'miraheze';
+$mirahost = $wi->isBeta() ? 'mirabeta' : 'miraheze';
 
 /**
  * Default values.
@@ -943,7 +934,7 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01
 ];
@@ -956,7 +947,7 @@ $mathoidHosts = [
 	'http://10.0.18.106:10044',
 ];
 
-$wgMathMathMLUrl = $beta ?
+$wgMathMathMLUrl = $wi->isBeta() ?
 	'http://10.0.15.118:10044' :
 	$mathoidHosts[array_rand( $mathoidHosts )];
 $wgMathSvgRenderer = 'mathoid';

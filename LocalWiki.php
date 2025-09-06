@@ -100,6 +100,11 @@ switch ( $wi->dbname ) {
 		};
 
 		break;
+	case 'dappervolkwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+
+		break;
 	case 'dlfmwiki':
 		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
 			$id = 'local-sys-msg';
@@ -478,6 +483,13 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'metawiki':
+		wfLoadExtensions( [
+			'ContactPage',
+			'GlobalWatchlist',
+			'IncidentReporting',
+			'RequestCustomDomain',
+			'SecurePoll',
+		] );
 		$wgContactConfig = [
 			'default' => [
 				'RecipientUser' => null,
@@ -594,19 +606,13 @@ switch ( $wi->dbname ) {
 			'type' => 'google',
 		];
 
-		wfLoadExtensions( [
-			'GlobalWatchlist',
-			'IncidentReporting',
-			'RequestSSL',
-			'SecurePoll',
-		] );
-
 		break;
 	case 'metawikibeta':
 		wfLoadExtensions( [
+			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
-			'RequestSSL',
+			'RequestCustomDomain',
 		] );
 
 		/*
@@ -627,6 +633,14 @@ switch ( $wi->dbname ) {
 		break;
 	case 'namuwitchwiki':
 		$wgDisableLangConversion = true;
+
+		break;
+	case 'needforspeedwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
 	case 'newusopediawiki':
