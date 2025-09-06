@@ -62,6 +62,8 @@ class MirahezeFunctions {
 
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
+	private const NEW_WIKI_MEDIAWIKI_VERSION = '1.44';
+
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.44',
 		'beta' => '1.44',
@@ -1064,6 +1066,20 @@ class MirahezeFunctions {
 				$formData['mainpage-is-domain-root']
 			);
 		}
+	}
+
+	private static function onCreateWikiCreation( string $dbname, bool $private ): void {
+		if ( self::NEW_WIKI_MEDIAWIKI_VERSION === self::getDefaultMediaWikiVersion() ) {
+			return;
+		}
+
+		$moduleFactory = MediaWikiServices::getInstance()->get( 'ManageWikiModuleFactory' );
+		$mwCore = $moduleFactory->core( $dbname );
+		$mwCore->setExtraFieldData( 'mediawiki-version',
+			self::NEW_WIKI_MEDIAWIKI_VERSION,
+			self::getDefaultMediaWikiVersion()
+		);
+		$mwCore->commit();
 	}
 
 	public static function onMediaWikiServices(): void {
