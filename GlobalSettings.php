@@ -155,6 +155,7 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
+		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 	}
 }
 
