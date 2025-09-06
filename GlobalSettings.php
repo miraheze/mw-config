@@ -8,6 +8,7 @@ use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
+$wgHooks['CreateWikiCreation'][] = 'MirahezeFunctions::onCreateWikiCreation';
 $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
