@@ -19,7 +19,6 @@ $entitySources = [
 		'type' => 'db'
 	],
 ];
-
 $wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = MIGRATION_NEW;
 
 if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
@@ -27,6 +26,7 @@ if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
 	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
 }
 
+$wgWBRepoSettings['defaultEntityNamespaces'] = false;
 $wgWBRepoSettings['entitySources'] = $entitySources;
 $wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
