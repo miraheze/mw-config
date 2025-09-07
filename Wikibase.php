@@ -19,6 +19,7 @@ $entitySources = [
 		'type' => 'db'
 	],
 ];
+
 $wgWBClientSettings['tmpUnconnectedPagePagePropMigrationStage'] = MIGRATION_NEW;
 
 if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
