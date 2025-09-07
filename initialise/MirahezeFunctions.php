@@ -12,6 +12,7 @@ use Wikimedia\StaticArrayWriter;
 class MirahezeFunctions {
 
 	public readonly string $dbname;
+	public readonly string $defaultPath;
 	public readonly string $realm;
 	public readonly string $server;
 	public readonly string $sitename;
@@ -78,6 +79,7 @@ class MirahezeFunctions {
 	public function __construct() {
 		self::setupSiteConfiguration();
 		$this->dbname = self::getCurrentDatabase();
+		$this->defaultPath = self::MEDIAWIKI_DIRECTORY . self::NEW_WIKI_MEDIAWIKI_VERSION;
 
 		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
 		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
