@@ -12,7 +12,6 @@ use Wikimedia\StaticArrayWriter;
 class MirahezeFunctions {
 
 	public readonly string $dbname;
-	public readonly string $defaultPath;
 	public readonly string $realm;
 	public readonly string $server;
 	public readonly string $sitename;
@@ -63,8 +62,6 @@ class MirahezeFunctions {
 
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
-	private const NEW_WIKI_MEDIAWIKI_VERSION = '1.44';
-
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.44',
 		'beta' => '1.44',
@@ -79,7 +76,6 @@ class MirahezeFunctions {
 	public function __construct() {
 		self::setupSiteConfiguration();
 		$this->dbname = self::getCurrentDatabase();
-		$this->defaultPath = self::MEDIAWIKI_DIRECTORY . self::NEW_WIKI_MEDIAWIKI_VERSION;
 
 		$expectedSuffix = php_uname( 'n' ) === self::BETA_HOSTNAME ? 'wikibeta' : 'wiki';
 		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
@@ -1068,20 +1064,6 @@ class MirahezeFunctions {
 				$formData['mainpage-is-domain-root']
 			);
 		}
-	}
-
-	private static function onCreateWikiCreation( string $dbname, bool $private ): void {
-		if ( self::NEW_WIKI_MEDIAWIKI_VERSION === self::getDefaultMediaWikiVersion() ) {
-			return;
-		}
-
-		$moduleFactory = MediaWikiServices::getInstance()->get( 'ManageWikiModuleFactory' );
-		$mwCore = $moduleFactory->core( $dbname );
-		$mwCore->setExtraFieldData( 'mediawiki-version',
-			self::NEW_WIKI_MEDIAWIKI_VERSION,
-			self::getDefaultMediaWikiVersion()
-		);
-		$mwCore->commit();
 	}
 
 	public static function onMediaWikiServices(): void {
