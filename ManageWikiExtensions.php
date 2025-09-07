@@ -1157,18 +1157,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'youtube' => [
-		'name' => 'YouTube',
-		'linkPage' => 'https://github.com/miraheze/YouTube',
-		'help' => 'This extension will be removed with the upcoming MediaWiki 1.44 upgrade. Please use the EmbedVideo extension instead.',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'parserhooks',
-	],
 
 	// Spam prevention
 	'approvedrevs' => [
