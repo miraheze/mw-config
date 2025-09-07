@@ -1488,33 +1488,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'growthexperiments' => [
-		'name' => 'GrowthExperiments',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'visualeditor',
-			],
-		],
-		'install' => [
-			'sql' => [
-				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_recommendations.sql",
-				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_submissions.sql",
-				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentee_data.sql",
-				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentor_mentee.sql",
-				'growthexperiments_user_impact' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_user_impact.sql"
-			],
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'setmentor',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'imagerating' => [
 		'name' => 'ImageRating',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ImageRating',
