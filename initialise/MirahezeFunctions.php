@@ -846,20 +846,22 @@ class MirahezeFunctions {
 		$allWikis = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
-				 'wiki_dbcluster',
-				 'wiki_dbname',
-				 'wiki_url',
-				 'wiki_sitename',
-				 'wiki_deleted',
-				 'wiki_closed',
-				 'wiki_inactive',
-				 'wiki_private',
-				 'wiki_extra',
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_url',
+				'wiki_sitename',
+				'wiki_deleted',
+				'wiki_closed',
+				'wiki_inactive',
+				'wiki_private',
+				'wiki_extra',
 			] )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
 		$activeList = [];
+		$closedList = [];
+		$inactiveList = [];
 		$combiList = [];
 		$deletedList = [];
 		$publicList = [];
@@ -879,6 +881,20 @@ class MirahezeFunctions {
 			} else {
 				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
 					$activeList[$wiki->wiki_dbname] = [
+						's' => $wiki->wiki_sitename,
+						'c' => $wiki->wiki_dbcluster,
+					];
+				}
+
+				if ( (int)$wiki->wiki_closed === 1 ) {
+					$closedList[$wiki->wiki_dbname] = [
+						's' => $wiki->wiki_sitename,
+						'c' => $wiki->wiki_dbcluster,
+					];
+				}
+
+				if ( (int)$wiki->wiki_inactive === 1 ) {
+					$inactiveList[$wiki->wiki_dbname] = [
 						's' => $wiki->wiki_sitename,
 						'c' => $wiki->wiki_dbcluster,
 					];
@@ -920,6 +936,8 @@ class MirahezeFunctions {
 
 		return [
 			'active' => $activeList,
+			'closed' => $closedList,
+			'inactive' => $inactiveList,
 			'databases' => $combiList,
 			'deleted' => $deletedList,
 			'public' => $publicList,
