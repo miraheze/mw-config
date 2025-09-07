@@ -3905,6 +3905,8 @@ if ( $wi->version >= 1.44 ) {
 		'section' => 'parserhooks',
 	];
 
+	$wgManageWikiExtensions['commentstreams']['install']['sql']['cs_associated_pages'] = "$IP/extensions/CommentStreams/sql/mysql/cs_associated_pages.sql";
+
 	// table dropped in >= 1.44
 	unset( $wgManageWikiExtensions['wikibaserepository']['install']['sql']['wbt_type'] );
 }
