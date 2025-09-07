@@ -1071,7 +1071,7 @@ class MirahezeFunctions {
 	}
 
 	private static function onCreateWikiCreation( string $dbname, bool $private ): void {
-		if ( self::NEW_WIKI_MEDIAWIKI_VERSION === self::getDefaultMediaWikiVersion() ) {
+		if ( self::NEW_WIKI_MEDIAWIKI_VERSION === '1.43' ) {
 			return;
 		}
 
