@@ -1079,7 +1079,7 @@ class MirahezeFunctions {
 		$mwCore = $moduleFactory->core( $dbname );
 		$mwCore->setExtraFieldData( 'mediawiki-version',
 			self::NEW_WIKI_MEDIAWIKI_VERSION,
-			self::getDefaultMediaWikiVersion()
+			'1.43'
 		);
 		$mwCore->commit();
 	}
