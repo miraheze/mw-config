@@ -861,9 +861,9 @@ class MirahezeFunctions {
 
 		$activeList = [];
 		$closedList = [];
-		$inactiveList = [];
 		$combiList = [];
 		$deletedList = [];
+		$inactiveList = [];
 		$publicList = [];
 		$privateList = [];
 		$versions = [];
@@ -937,9 +937,9 @@ class MirahezeFunctions {
 		return [
 			'active' => $activeList,
 			'closed' => $closedList,
-			'inactive' => $inactiveList,
 			'databases' => $combiList,
 			'deleted' => $deletedList,
+			'inactive' => $inactiveList,
 			'public' => $publicList,
 			'private' => $privateList,
 			'versions' => $versions,
@@ -954,8 +954,10 @@ class MirahezeFunctions {
 
 		$databaseLists = [
 			'active' => $databases['active'],
+			'closed' => $databases['closed'],
 			'databases' => $databases['databases'],
 			'deleted' => $databases['deleted'],
+			'inactive' => $databases['inactive'],
 			'public' => $databases['public'],
 			'private' => $databases['private'],
 		];
