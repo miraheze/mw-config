@@ -1227,11 +1227,11 @@ $wgConf->settings += [
 			],
 		],
 		'+beta' => [
-			'virtual-globaljsonlinks' => [
-				'db' => 'commonswikibeta',
-			],
 			'virtual-botpasswords' => [
 				'db' => 'metawikibeta',
+			],
+			'virtual-globaljsonlinks' => [
+				'db' => 'commonswikibeta',
 			],
 		],
 		'ldapwikiwiki' => [
