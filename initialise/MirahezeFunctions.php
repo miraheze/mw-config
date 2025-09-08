@@ -342,7 +342,7 @@ class MirahezeFunctions {
 		];
 	}
 
-	public static function getDatabaseClusters(): ?array {
+	public static function getDatabaseClusters(): array {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
@@ -351,7 +351,7 @@ class MirahezeFunctions {
 
 		$databases = [ ...$allDatabases, ...$deletedDatabases ];
 		if ( !$databases ) {
-			return null;
+			return [];
 		}
 
 		return array_combine(
