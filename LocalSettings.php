@@ -1195,6 +1195,9 @@ $wgConf->settings += [
 			'virtual-globalblocking' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-globaljsonlinks' => [
+				'db' => 'commonswiki',
+			],
 			'virtual-globalnewfiles' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
@@ -1224,6 +1227,9 @@ $wgConf->settings += [
 			],
 		],
 		'+beta' => [
+			'virtual-globaljsonlinks' => [
+				'db' => 'commonswikibeta',
+			],
 			'virtual-botpasswords' => [
 				'db' => 'metawikibeta',
 			],
