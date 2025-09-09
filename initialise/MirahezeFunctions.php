@@ -65,7 +65,6 @@ class MirahezeFunctions {
 	public const MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.45',
 		'beta' => '1.44',
-		'legacy' => '1.43',
 		'stable' => '1.44',
 	];
 
