@@ -323,6 +323,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
+				'cs_associated_pages' => "$IP/extensions/CommentStreams/sql/mysql/cs_associated_pages.sql",
 				'cs_comments' => "$IP/extensions/CommentStreams/sql/mysql/cs_comments.sql",
 				'cs_replies' => "$IP/extensions/CommentStreams/sql/mysql/cs_replies.sql",
 				'cs_votes' => "$IP/extensions/CommentStreams/sql/mysql/cs_votes.sql",
@@ -464,14 +465,13 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'dynamicpagelist3' => [
-		'name' => 'DynamicPageList3',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList3',
+		'name' => 'DynamicPageList4',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
 		'conflicts' => 'dynamicpagelist',
 		'requires' => [],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/DynamicPageList3/maintenance/CreateTemplate.php" => [],
-				"$IP/extensions/DynamicPageList3/maintenance/CreateView.php" => [],
+				CreateView::class => [],
 			],
 		],
 		'section' => 'parserhooks',
@@ -3478,7 +3478,6 @@ $wgManageWikiExtensions = [
 				'wbt_term_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 				'wbt_text_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 				'wbt_text' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
-				'wbt_type' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql",
 				'wbt_property_terms' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 			],
@@ -3863,23 +3862,3 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
-
-if ( $wi->version >= 1.44 ) {
-	$wgManageWikiExtensions['dynamicpagelist3'] = [
-		'name' => 'DynamicPageList4',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
-		'conflicts' => 'dynamicpagelist',
-		'requires' => [],
-		'install' => [
-			'mwscript' => [
-				CreateView::class => [],
-			],
-		],
-		'section' => 'parserhooks',
-	];
-
-	$wgManageWikiExtensions['commentstreams']['install']['sql']['cs_associated_pages'] = "$IP/extensions/CommentStreams/sql/mysql/cs_associated_pages.sql";
-
-	// table dropped in >= 1.44
-	unset( $wgManageWikiExtensions['wikibaserepository']['install']['sql']['wbt_type'] );
-}
