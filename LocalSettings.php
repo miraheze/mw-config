@@ -7191,9 +7191,10 @@ $wi::$disabledExtensions = [
 	'lingo' => 'Currently broken',
 	'mintydocs' => 'Security vulnerabilities',
 
-	'chameleon' => 'Incompatible with MediaWiki 1.43',
-	'femiwiki' => 'Incompatible with MediaWiki 1.43',
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.43',
+	// Are these still incompatible?
+	'chameleon' => 'Incompatible with MediaWiki 1.44',
+	'femiwiki' => 'Incompatible with MediaWiki 1.44',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.44',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
