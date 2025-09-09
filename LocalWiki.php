@@ -156,7 +156,7 @@ switch ( $wi->dbname ) {
 		break;
 	case 'ftlmultiversewiki':
 		// Intentionally empty out $wgJsonConfigs because of this error:
-		// JsonConfig: Invalid $wgJsonConfigs['Map.JsonConfig']: Namespace 486 is already set to handle model 'json' [Called from JsonConfig\JCSingleton::parseConfiguration in /srv/mediawiki/1.43/extensions/JsonConfig/includes/JCSingleton.php at line 147] in /srv/mediawiki/1.43/includes/debug/MWDebug.php on line 498.
+		// JsonConfig: Invalid $wgJsonConfigs['Map.JsonConfig']: Namespace 486 is already set to handle model 'json'
 		// and because it seems like a bureaucrat doesn't really care for them:
 		// https://issue-tracker.miraheze.org/T13275#266704
 		$wgJsonConfigs = [
