@@ -2693,10 +2693,6 @@ $wgConf->settings += [
 	'wgEnableScaryTranscluding' => [
 		'default' => true,
 	],
-	'wgInterwikiCentralDB' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
-	],
 	'wgExtraInterlanguageLinkPrefixes' => [
 		'default' => [
 			'simple',
