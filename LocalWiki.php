@@ -151,6 +151,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'fischwiki':
+		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgLogRestrictions['newusers'] = 'read';
 
 		break;
