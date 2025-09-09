@@ -48,8 +48,4 @@ wfLoadExtensions( [
 	'cldr',
 ] );
 
-if ( $wi->version < 1.44 ) {
-	wfLoadExtension( 'Interwiki' );
-}
-
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );
