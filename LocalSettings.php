@@ -89,6 +89,7 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
+$wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
 
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
@@ -1420,7 +1421,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgDiscordCurlProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080',
+		'default' => $wmgHTTPProxy,
 	],
 	'wgDiscordEnableExperimentalCVTFeatures' => [
 		'default' => true,
@@ -1620,7 +1621,7 @@ $wgConf->settings += [
 
 	// HTTP
 	'wgHTTPProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080',
+		'default' => $wmgHTTPProxy,
 	],
 
 	// FeaturedFeeds
@@ -2300,7 +2301,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgCopyUploadProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080',
+		'default' => $wmgHTTPProxy,
 	],
 	'wgFileExtensions' => [
 		'default' => [
@@ -4020,7 +4021,7 @@ $wgConf->settings += [
 		'default' => 'noreply@wikitide.org',
 	],
 	'wgMediaModerationHttpProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080',
+		'default' => $wmgHTTPProxy,
 	],
 	'wgMediaModerationRecipientList' => [
 		'default' => [
@@ -4563,6 +4564,9 @@ $wgConf->settings += [
 		'default' => [
 			'mathml'
 		],
+	],
+	'wgMathHTTPProxy' => [
+		'default' => $wmgHTTPProxy,
 	],
 
 	// MultiBoilerplate
@@ -5556,7 +5560,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgRottenLinksHTTPProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080'
+		'default' => $wmgHTTPProxy,
 	],
 
 	// Robot policy
@@ -5584,7 +5588,7 @@ $wgConf->settings += [
 		'default' => 200,
 	],
 	'wgRSSProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080',
+		'default' => $wmgHTTPProxy,
 	],
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s',
