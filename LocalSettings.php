@@ -1345,6 +1345,7 @@ $wgConf->settings += [
 	'wgDiscordDisableEmbedFooter' => [
 		'default' => false,
 		'puzzleswikiwiki' => true,
+		'themanaworldwiki' => true,
 	],
 	'wgDiscordExcludeConditions' => [
 		'default' => [
