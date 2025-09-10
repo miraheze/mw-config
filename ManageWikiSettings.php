@@ -1408,6 +1408,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables Edit Recovery on this wiki, must be enabled in Special:Preferences.',
 		'requires' => []
 	],
+	'wgCodeMirrorV6' => [
+		'name' => 'Enable CodeMirror 6',
+		'from' => 'codemirror',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Enables CodeMirror 6, which provides various improvements to the code editor, including code folding and autocompletion.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
