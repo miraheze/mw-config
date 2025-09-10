@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\JobQueue\JobQueueRedis;
 use Wikimedia\ObjectCache\MemcachedPeclBagOStuff;
 use Wikimedia\ObjectCache\MultiWriteBagOStuff;
 use Wikimedia\ObjectCache\RedisBagOStuff;
