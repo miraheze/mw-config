@@ -2,6 +2,7 @@
 
 use MediaWiki\Config\SiteConfiguration;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\JobQueue\Jobs\CdnPurgeJob;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
