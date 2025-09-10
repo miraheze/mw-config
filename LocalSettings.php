@@ -615,6 +615,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// CodeMirror
+	'wgCodeMirrorV6' => [
+		'default' => false,
+	],
+
 	// Comments
 	'wgCommentsDefaultAvatar' => [
 		'default' => '/' . $wi->version . '/extensions/SocialProfile/avatars/default_ml.gif',
