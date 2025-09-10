@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\FileRepo\LocalRepo;
 use Wikimedia\FileBackend\SwiftFileBackend;
 
 $wgMirahezeMagicSwiftKey = $wmgSwiftPassword;
