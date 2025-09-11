@@ -100,6 +100,10 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 	}
 }
 
+if ( $wi->isExtensionActive( 'DynamicPageList4' ) ) {
+	$wgDplSettings['maxCategoryCount'] = 10;
+}
+
 if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
 	wfLoadExtension( 'OOJSPlus' );
 }
