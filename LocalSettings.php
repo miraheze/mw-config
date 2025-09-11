@@ -5541,6 +5541,19 @@ $wgConf->settings += [
 		],
 	],
 
+	// RobloxAPI
+	'wgRobloxAPICachingExpiries' => [
+		'ext-RobloxAPI' => [
+			'*' => 1800,
+			'assetDetails' => 43200,
+			'assetThumbnail' => 7200,
+			'groupData' => 3600,
+			'userAvatarThumbnail' => 3600,
+			'userId' => 86400,
+			'userInfo' => 86400,
+		],
+	],
+
 	// RottenLinks
 	'wgRottenLinksCurlTimeout' => [
 		'default' => 10,
