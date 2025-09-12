@@ -460,20 +460,8 @@ $wgManageWikiExtensions = [
 	'dynamicpagelist' => [
 		'name' => 'DynamicPageList',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList_(Wikimedia)',
-		'conflicts' => 'dynamicpagelist3',
+		'conflicts' => 'dynamicpagelist4',
 		'requires' => [],
-		'section' => 'parserhooks',
-	],
-	'dynamicpagelist3' => [
-		'name' => 'DynamicPageList4',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
-		'conflicts' => 'dynamicpagelist',
-		'requires' => [],
-		'install' => [
-			'mwscript' => [
-				CreateView::class => [],
-			],
-		],
 		'section' => 'parserhooks',
 	],
 	'dynamicpagelist4' => [
@@ -1586,7 +1574,7 @@ $wgManageWikiExtensions = [
 			'extensions' => [
 				[
 					'dynamicpagelist',
-					'dynamicpagelist3',
+					'dynamicpagelist4',
 				],
 			],
 		],
