@@ -5412,6 +5412,9 @@ $wgConf->settings += [
 			'extendedconfirmed',
 			'owner',
 		],
+		'+weltseelewiki' => [
+			'editresearcherprotected',
+		],
 		'+ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -5521,6 +5524,9 @@ $wgConf->settings += [
 		'trwdeploymentwiki' => [
 			'bureaucrat',
 			'consul',
+		],
+		'weltseelewiki' => [
+			'editresearcherprotected',
 		],
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
