@@ -5639,9 +5639,6 @@ $wgConf->settings += [
 	'wgSearchDigestMinimumMisses' => [
 		'default' => 10,
 	],
-	'SearchDigestStrikeValidPages' => [
-		'default' => true,
-	],
 
 	// SecurePoll
 	'wgSecurePollUseLogging' => [
