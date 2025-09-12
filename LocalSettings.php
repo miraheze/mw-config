@@ -1120,21 +1120,18 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
-	// CookieWarning
-	'wgCookieWarningMoreUrl' => [
-		'default' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#2._Cookies',
-	],
-	'wgCookieWarningEnabled' => [
-		'default' => true,
-	],
-	'wgCookieWarningGeoIPLookup' => [
-		'default' => 'php',
-	],
-	'wgCookieWarningGeoIp2' => [
-		'default' => true,
-	],
-	'wgCookieWarningGeoIp2Path' => [
-		'default' => '/srv/GeoLite2-City.mmdb',
+	// CookieConsent
+	'wgCookieConsentCategories' => [
+		'default' => [
+			'preference' => [
+				'namemsg' => 'cookieconsent-category-name-preference',
+				'descriptionmsg' => 'cookieconsent-category-desc-preference',
+			],
+			'statistics' => [
+				'namemsg' => 'cookieconsent-category-name-statistics',
+				'descriptionmsg' => 'cookieconsent-category-desc-statistics',
+			],
+		],
 	],
 
 	// CustomSearchProfiles
