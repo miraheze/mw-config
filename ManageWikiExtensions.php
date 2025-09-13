@@ -33,6 +33,9 @@
  * sql: array of sql files to install with extension, mapped table name => sql file path.
  */
 
+use CirrusSearch\Maintenance\ForceSearchIndex;
+use CirrusSearch\Maintenance\UpdateSearchIndexConfig;
+use Flow\Maintenance\FlowCreateTemplates;
 use MediaWiki\Extension\DynamicPageList4\Maintenance\CreateView;
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
@@ -1370,7 +1373,7 @@ $wgManageWikiExtensions = [
 				'createdpageslist' => "$IP/extensions/CreatedPagesList/sql/patch-createdpageslist.sql",
 			],
 			'mwscript' => [
-				"$IP/extensions/CreatedPagesList/maintenance/recalculateTable.php" => [],
+				'extensions/CreatedPagesList/recalculateTable' => [],
 			],
 		],
 		'section' => 'specialpages',
@@ -2164,8 +2167,8 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/CirrusSearch/maintenance/UpdateSearchIndexConfig.php" => [],
-				"$IP/extensions/CirrusSearch/maintenance/ForceSearchIndex.php" => [
+				UpdateSearchIndexConfig::class => [],
+				ForceSearchIndex::class => [
 					'skipLinks' => true,
 					'indexOnSkip' => true,
 					'repeat-with' => [
@@ -3143,7 +3146,7 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'mwscript' => [
-				"$IP/extensions/Flow/maintenance/FlowCreateTemplates.php" => [],
+				FlowCreateTemplates::class => [],
 			],
 		],
 		'section' => 'other',
@@ -3160,7 +3163,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [],
+				'extensions/SemanticMediaWiki/setupStore' => [],
 			],
 			'namespaces' => [
 				'Property' => [
@@ -3267,7 +3270,7 @@ $wgManageWikiExtensions = [
 		],
 		'remove' => [
 			'mwscript' => [
-				"$IP/extensions/SemanticMediaWiki/maintenance/setupStore.php" => [
+				'extensions/SemanticMediaWiki/setupStore' => [
 					'delete' => false,
 					'nochecks' => false,
 				],
@@ -3386,7 +3389,7 @@ $wgManageWikiExtensions = [
 				'titlekey' => "$IP/extensions/TitleKey/db_patches/tables-generated.sql"
 			],
 			'mwscript' => [
-				"$IP/extensions/TitleKey/maintenance/rebuildTitleKeys.php" => []
+				'extensions/TitleKey/rebuildTitleKeys' => []
 			],
 		],
 		'section' => 'other',

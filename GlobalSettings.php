@@ -139,7 +139,6 @@ if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 
 if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
-
 	$wgSocialProfileFileBackend = 'miraheze-swift';
 }
 
@@ -331,7 +330,7 @@ $wgDataDump = [
 		'startChunkSize' => 1 * 1024 * 1024 * 1024,
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/maintenance/dumpBackup.php",
+			'script' => 'dumpBackup',
 			'options' => [
 				'--full',
 				'--logs',
@@ -406,7 +405,7 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 		'useBackendTempStore' => true,
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/extensions/Flow/maintenance/dumpBackup.php",
+			'script' => 'extensions/Flow/dumpBackup',
 			'options' => [
 				'--full',
 				'--output',
