@@ -2073,8 +2073,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/thechurchofthestatuewiki/7/75/Black_mediawiki.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
-					'height' => '88',
-					'width' => '88',
+					'height' => '25',
+					'width' => '25',
 				],
 			],
 			'miraheze' => [
@@ -2082,8 +2082,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/thechurchofthestatuewiki/1/1f/Miraheze_black.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
-					'height' => '88',
-					'width' => '88',
+					'height' => '25',
+					'width' => '25',
 				]
 			],
 			'copyright' => [
