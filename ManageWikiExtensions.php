@@ -2936,9 +2936,11 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'searchdigest' => "$IP/extensions/SearchDigest/sql/searchdigest.sql",
-				'patch_searchdigest_sd_misses_touched' => "$IP/extensions/SearchDigest/sql/patch_searchdigest_sd_misses_touched.sql",
-				'searchdigest_blocks' => "$IP/extensions/SearchDigest/sql/searchdigest_blocks.sql"
+				'searchdigest' => "extensions/SearchDigest/sql/searchdigest.sql",				
+				'searchdigest_blocks' => "extensions/SearchDigest/sql/searchdigest_blocks.sql",
+				'indexes' => [
+					'sd_misses_touched' => "extensions/SearchDigest/sql/patch_searchdigest_sd_misses_touched.sql",
+				],
 			],
 			'permissions' => [
 				'*' => [
