@@ -267,8 +267,7 @@ class SettingsTest extends ManageWikiTestCase {
 
 	/** @covers $wgManageWikiSettings */
 	public function testManageWikiSettings() {
-		global $wgManageWikiSettings, $IP, $wgPasswordSender, $wmgSharedUploadDBname, $wmgUploadHostname, $wi;
-		$IP = '';
+		global $wgManageWikiSettings, $wgPasswordSender, $wmgSharedUploadDBname, $wmgUploadHostname, $wi;
 		$wgPasswordSender = '';
 		$wmgSharedUploadDBname = '';
 		$wmgUploadHostname = '';
