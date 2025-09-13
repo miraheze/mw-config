@@ -5673,7 +5673,7 @@ $wgConf->settings += [
 		'ext-TitleKey' => MediaWiki\Extension\TitleKey\SearchEngineMySQL::class,
 	],
 
-	//SearchDigest
+	// SearchDigest
 	'wgSearchDigestCreateRedirect' => [
 		'default' => true,
 	],
