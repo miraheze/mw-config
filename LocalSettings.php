@@ -3943,6 +3943,7 @@ $wgConf->settings += [
 				'request-import',
 				'requestwiki',
 				'siteadmin',
+				'searchdigest-admin',
 				'securepoll-view-voter-pii',
 				'smw-admin',
 				'smw-patternedit',
@@ -5676,6 +5677,17 @@ $wgConf->settings += [
 	'wgSearchType' => [
 		'ext-CirrusSearch' => 'CirrusSearch',
 		'ext-TitleKey' => MediaWiki\Extension\TitleKey\SearchEngineMySQL::class,
+	],
+
+	//SearchDigest
+	'wgSearchDigestCreateRedirect' => [
+		'default' => true,
+	],
+	'wgSearchDigestDateThreshold' => [
+		'default' => 604800,
+	],
+	'wgSearchDigestMinimumMisses' => [
+		'default' => 10,
 	],
 
 	// SecurePoll
