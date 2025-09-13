@@ -657,6 +657,13 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// ConfirmEdit
+	'wgConfirmEditEnabledAbuseFilterCustomActions' => [
+		'default' => [
+			'showcaptcha',
+		],
+	],
+
 	// Contribution Scores
 	'wgContribScoreDisableCache' => [
 		'default' => true,
