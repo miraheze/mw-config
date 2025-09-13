@@ -3350,7 +3350,6 @@ $wgConf->settings += [
 			'host' => 'ssl://smtp-relay.gmail.com',
 			'localhost' => '::1',
 			'port' => 465,
-			'IDHost' => 'wikitide.org',
 			'auth' => false,
 		],
 	],
