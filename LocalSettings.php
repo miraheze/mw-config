@@ -3364,7 +3364,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgEmergencyContact' => [
-		'default' => 'noreply@wikitide.org',
+		'default' => $wgPasswordSender,
 	],
 	'wgAllowHTMLEmail' => [
 		'default' => true,
@@ -4040,7 +4040,7 @@ $wgConf->settings += [
 
 	// MediaModeration
 	'wgMediaModerationFrom' => [
-		'default' => 'noreply@wikitide.org',
+		'default' => $wgPasswordSender,
 	],
 	'wgMediaModerationHttpProxy' => [
 		'default' => $wmgHTTPProxy,
