@@ -2870,7 +2870,6 @@ $wgConf->settings += [
 		'+batmanwiki' => [
 			'batmanwikifandom',
 			'd',
-
 		],
 		'+bnwikiwiki' => [
 			'wikipedia' => [
