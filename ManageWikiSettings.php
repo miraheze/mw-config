@@ -1428,6 +1428,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables Edit Recovery on this wiki, must be enabled in Special:Preferences.',
 		'requires' => []
 	],
+	'wgCodeMirrorV6' => [
+		'name' => 'Enable CodeMirror 6',
+		'from' => 'codemirror',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Enables CodeMirror 6, which provides various improvements to the code editor, including code folding and autocompletion.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
@@ -2820,6 +2829,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => [],
 		'section' => 'preferences',
 		'help' => 'Array of skins to remove as a choice from user\'s preferences.',
+		'requires' => [],
+	],
+	'wmgCodeMirrorEnableDefault' => [
+		'name' => 'Enable CodeMirror syntax highlighting by default',
+		'from' => 'codemirror',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'preferences',
+		'help' => 'This enables CodeMirror syntax highlighting by default for all. Sets <code>$wgDefaultUserOptions[\'usecodemirror\'] = 1;</code>',
 		'requires' => [],
 	],
 	'wmgVisualEditorEnableDefault' => [

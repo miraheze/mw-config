@@ -323,6 +323,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
+				'cs_associated_pages' => "$IP/extensions/CommentStreams/sql/mysql/cs_associated_pages.sql",
 				'cs_comments' => "$IP/extensions/CommentStreams/sql/mysql/cs_comments.sql",
 				'cs_replies' => "$IP/extensions/CommentStreams/sql/mysql/cs_replies.sql",
 				'cs_votes' => "$IP/extensions/CommentStreams/sql/mysql/cs_votes.sql",
@@ -459,19 +460,18 @@ $wgManageWikiExtensions = [
 	'dynamicpagelist' => [
 		'name' => 'DynamicPageList',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList_(Wikimedia)',
-		'conflicts' => 'dynamicpagelist3',
+		'conflicts' => 'dynamicpagelist4',
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'dynamicpagelist3' => [
-		'name' => 'DynamicPageList3',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList3',
+	'dynamicpagelist4' => [
+		'name' => 'DynamicPageList4',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
 		'conflicts' => 'dynamicpagelist',
 		'requires' => [],
 		'install' => [
 			'mwscript' => [
-				"$IP/extensions/DynamicPageList3/maintenance/CreateTemplate.php" => [],
-				"$IP/extensions/DynamicPageList3/maintenance/CreateView.php" => [],
+				CreateView::class => [],
 			],
 		],
 		'section' => 'parserhooks',
@@ -1157,18 +1157,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'youtube' => [
-		'name' => 'YouTube',
-		'linkPage' => 'https://github.com/miraheze/YouTube',
-		'help' => 'This extension will be removed with the upcoming MediaWiki 1.44 upgrade. Please use the EmbedVideo extension instead.',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'parserhooks',
-	],
 
 	// Spam prevention
 	'approvedrevs' => [
@@ -1500,33 +1488,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'growthexperiments' => [
-		'name' => 'GrowthExperiments',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GrowthExperiments',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'visualeditor',
-			],
-		],
-		'install' => [
-			'sql' => [
-				'growthexperiments_link_recommendations' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_recommendations.sql",
-				'growthexperiments_link_submissions' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_link_submissions.sql",
-				'growthexperiments_mentee_data' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentee_data.sql",
-				'growthexperiments_mentor_mentee' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_mentor_mentee.sql",
-				'growthexperiments_user_impact' => "$IP/extensions/GrowthExperiments/sql/mysql/growthexperiments_user_impact.sql"
-			],
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'setmentor',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'imagerating' => [
 		'name' => 'ImageRating',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ImageRating',
@@ -1613,7 +1574,7 @@ $wgManageWikiExtensions = [
 			'extensions' => [
 				[
 					'dynamicpagelist',
-					'dynamicpagelist3',
+					'dynamicpagelist4',
 				],
 			],
 		],
@@ -2028,6 +1989,41 @@ $wgManageWikiExtensions = [
 		'install' => [
 			'sql' => [
 				'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
+			],
+			'permissions' => [
+				'*' => [
+					'permissions' => [
+						'aft-reader',
+					],
+				],
+				'user' => [
+					'permissions' => [
+						'aft-member',
+					],
+				],
+				'autoconfirmed' => [
+					'permissions' => [
+						'aft-editor',
+					],
+				],
+				'confirmed' => [
+					'permissions' => [
+						'aft-editor',
+					],
+				],
+				'rollbacker' => [
+					'permissions' => [
+						'aft-editor',
+						'aft-monitor',
+					],
+				],
+				'sysop' => [
+					'permissions' => [
+						'aft-editor',
+						'aft-monitor',
+						'aft-administrator',
+					],
+				],
 			],
 		],
 		'section' => 'other',
@@ -3513,7 +3509,6 @@ $wgManageWikiExtensions = [
 				'wbt_term_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 				'wbt_text_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 				'wbt_text' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
-				'wbt_type' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql",
 				'wbt_property_terms' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
 			],
@@ -3898,18 +3893,3 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
-
-if ( $wi->version >= 1.44 ) {
-	$wgManageWikiExtensions['dynamicpagelist3'] = [
-		'name' => 'DynamicPageList4',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
-		'conflicts' => 'dynamicpagelist',
-		'requires' => [],
-		'install' => [
-			'mwscript' => [
-				CreateView::class => [],
-			],
-		],
-		'section' => 'parserhooks',
-	];
-}

@@ -1,9 +1,13 @@
 <?php
 
+use Wikimedia\Rdbms\LBFactoryMulti;
+use Wikimedia\Rdbms\LoadMonitor;
+use Wikimedia\Rdbms\LoadMonitorNull;
+
 if ( strpos( wfHostname(), 'test' ) === 0 ) {
 	// Mirabeta database configuration
 	$wgLBFactoryConf = [
-		'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
+		'class' => LBFactoryMulti::class,
 		'secret' => $wgSecretKey,
 		'sectionsByDB' => $wi->wikiDBClusters,
 		'sectionLoads' => [
@@ -42,7 +46,7 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 } else {
 	// Production database configuration
 	$wgLBFactoryConf = [
-		'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
+		'class' => LBFactoryMulti::class,
 		'secret' => $wgSecretKey,
 		'sectionsByDB' => $wi->wikiDBClusters,
 		'sectionLoads' => [
@@ -96,10 +100,10 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 	];
 }
 
-$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitor';
+$wgLBFactoryConf['loadMonitor']['class'] = LoadMonitor::class;
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
 if ( PHP_SAPI === 'cli' ) {
-	$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+	$wgLBFactoryConf['loadMonitor']['class'] = LoadMonitorNull::class;
 }
 
 $wgLBFactoryConf['loadMonitor']['maxConnCount'] = 350;

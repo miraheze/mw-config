@@ -2,6 +2,7 @@
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
+use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
@@ -20,7 +21,7 @@ $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 };
 
 // Extensions
-if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
+if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtensions( [
 		'CentralAuth',
 		'GlobalPreferences',
@@ -30,14 +31,9 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
+	$wgCentralAuthEnableSul3 = false;
 
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-
-	if ( version_compare( MW_VERSION, '1.44', '>=' ) ) {
-		$wgCentralAuthEnableSul3 = false;
-	} else {
-		$wgCentralAuthEnableSul3 = [];
-	}
 
 	if ( isset( $wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class] ) ) {
 		$wgAuthManagerAutoConfig['primaryauth'][LocalPasswordPrimaryAuthenticationProvider::class]['args'][0]['loginOnly'] = true;
@@ -64,9 +60,48 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 		],
 	];
 
+	// Default is null which makes it 10000.
+	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
+
+	$wgCirrusSearchExtraIndexSettings = [
+		// Number of merge threads to use. Use only 1 thread
+		// (instead of 3) to avoid updates interfering with
+		// actual searches
+		'merge.scheduler.max_thread_count' => 1,
+	];
+
+	// Turn off leading wildcard matches, they are a very slow and inefficient query
+	$wgCirrusSearchAllowLeadingWildcard = false;
+
+	// Our cluster often has issues completing master actions
+	// within the default 30s timeout.
+	$wgCirrusSearchMasterTimeout = '5m';
+
+	// Lower the timeouts - the defaults are too high and allow to scan too many
+	// pages. Keep client timeout relatively high in comparaison,
+	// but not higher than 60sec as it's the max time allowed for GET requests.
+	// we really don't want to timeout the client before the shard retrieval (we may
+	// release the poolcounter before the end of the query on the backend)
+	$wgCirrusSearchClientSideSearchTimeout = [
+		'comp_suggest' => 10,
+		'prefix' => 10,
+		// GET requests timeout at 60s, give some room to treat request timeout
+		'default' => 40,
+		'regex' => 50,
+	];
+
+	// cache morelike queries to ObjectCache for 24 hours
+	$wgCirrusSearchMoreLikeThisTTL = 86400;
+
+	$wgCirrusSearchRefreshInterval = 30;
+
 	if ( $wi->isExtensionActive( 'RelatedArticles' ) ) {
 		$wgRelatedArticlesUseCirrusSearch = true;
 	}
+}
+
+if ( $wi->isExtensionActive( 'DynamicPageList4' ) ) {
+	$wgDplSettings['maxCategoryCount'] = 10;
 }
 
 if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
@@ -120,7 +155,12 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
+		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 	}
+}
+
+if ( $wi->isExtensionActive( 'CodeMirror' ) ) {
+	$wgDefaultUserOptions['usecodemirror'] = (int)$wmgCodeMirrorEnableDefault;
 }
 
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
@@ -663,25 +703,14 @@ unset( $vectorVersion );
 
 // Licensing variables
 
-$version = $wi->version;
-
-// Alpha is only available on the test server,
-// use beta (or stable if there currently is no beta)
-// for foreign metawiki links if the version is alpha.
-if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
-	$version = MirahezeFunctions::MEDIAWIKI_VERSIONS['beta'] ??
-		MirahezeFunctions::MEDIAWIKI_VERSIONS['stable'];
-}
-
-$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
-$mirahost = $beta ? 'mirabeta' : 'miraheze';
+$mirahost = $wi->isBeta() ? 'mirabeta' : 'miraheze';
 
 /**
  * Default values.
  * We can not set these in LocalSettings.php, to prevent them
  * from causing absolute overrides.
  */
-$wgRightsIcon = "https://meta.{$mirahost}.org/{$version}/resources/assets/licenses/cc-by-sa.png";
+$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-by-sa.png";
 $wgRightsText = 'Creative Commons Attribution Share Alike';
 $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
@@ -699,7 +728,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = false;
 		break;
 	case 'cc-by':
-		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by.png';
+		$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-by.png";
 		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
 		break;
@@ -722,7 +751,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
 		break;
 	case 'cc-by-sa-nc':
-		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-nc-sa.png';
+		$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-by-nc-sa.png";
 		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 		break;
@@ -732,7 +761,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
 		break;
 	case 'cc-pd':
-		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-0.png';
+		$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-0.png";
 		$wgRightsText = 'CC0 Public Domain';
 		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
@@ -751,7 +780,7 @@ switch ( $wmgWikiLicense ) {
 }
 
 // Don't need a global here
-unset( $version );
+unset( $mirahost );
 
 /**
  * Make sure it works to override the footer icon
@@ -896,9 +925,9 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
 	'timeout' => 0.5,
-	'connect_timeout' => 0.01
+	'connect_timeout' => 0.01,
 ];
 
 // Mathoid
@@ -909,7 +938,7 @@ $mathoidHosts = [
 	'http://10.0.18.106:10044',
 ];
 
-$wgMathMathMLUrl = $beta ?
+$wgMathMathMLUrl = $wi->isBeta() ?
 	'http://10.0.15.118:10044' :
 	$mathoidHosts[array_rand( $mathoidHosts )];
 $wgMathSvgRenderer = 'mathoid';
