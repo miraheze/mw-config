@@ -2808,12 +2808,6 @@ $wgConf->settings += [
 				'dbname' => '$2wiki',
 				'baseTransOnly' => true,
 			],
-			'wikiforge' => [
-				/** WikiForge */
-				'interwiki' => 'wf',
-				'url' => 'https://$2.wikiforge.net/wiki/$1',
-				'baseTransOnly' => true,
-			],
 		],
 		'+utgwiki' => [
 			'translate' => [
