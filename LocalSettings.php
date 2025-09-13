@@ -976,7 +976,8 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCreateWikiNotificationEmail' => [
-		'default' => 'tech@wikitide.org',
+		// Don't put plain text email here.
+		'default' => base64_decode( 'dGVjaEB3aWtpdGlkZS5vcmc=' ),
 	],
 	'wgCreateWikiPurposes' => [
 		'default' => [
@@ -5199,7 +5200,8 @@ $wgConf->settings += [
 	],
 	'wgReportIncidentRecipientEmails' => [
 		'default' => [
-			'ts@wikitide.org',
+			// Don't put plain text email here.
+			base64_decode( 'dHNAd2lraXRpZGUub3Jn' ),
 		],
 	],
 
