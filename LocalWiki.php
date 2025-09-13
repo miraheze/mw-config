@@ -2,6 +2,7 @@
 
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
 use MediaWiki\MediaWikiServices;
@@ -9,6 +10,7 @@ use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Request\WebRequest;
+use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
@@ -151,12 +153,13 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'fischwiki':
+		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgLogRestrictions['newusers'] = 'read';
 
 		break;
 	case 'ftlmultiversewiki':
 		// Intentionally empty out $wgJsonConfigs because of this error:
-		// JsonConfig: Invalid $wgJsonConfigs['Map.JsonConfig']: Namespace 486 is already set to handle model 'json' [Called from JsonConfig\JCSingleton::parseConfiguration in /srv/mediawiki/1.43/extensions/JsonConfig/includes/JCSingleton.php at line 147] in /srv/mediawiki/1.43/includes/debug/MWDebug.php on line 498.
+		// JsonConfig: Invalid $wgJsonConfigs['Map.JsonConfig']: Namespace 486 is already set to handle model 'json'
 		// and because it seems like a bureaucrat doesn't really care for them:
 		// https://issue-tracker.miraheze.org/T13275#266704
 		$wgJsonConfigs = [
@@ -633,6 +636,14 @@ switch ( $wi->dbname ) {
 		break;
 	case 'namuwitchwiki':
 		$wgDisableLangConversion = true;
+
+		break;
+	case 'needforspeedwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
 	case 'newusopediawiki':

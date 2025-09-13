@@ -2,6 +2,7 @@
 
 use MediaWiki\Config\SiteConfiguration;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\JobQueue\Jobs\CdnPurgeJob;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
@@ -63,9 +64,9 @@ class MirahezeFunctions {
 	private const MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
 	public const MEDIAWIKI_VERSIONS = [
-		'alpha' => '1.44',
+		'alpha' => '1.45',
 		'beta' => '1.44',
-		'stable' => '1.43',
+		'stable' => '1.44',
 	];
 
 	public const SUFFIXES = [
@@ -321,6 +322,11 @@ class MirahezeFunctions {
 		return self::INCIDENTS_DATABASE[$this->realm];
 	}
 
+	public function isBeta(): bool {
+		return str_ends_with( $this->server, '.mirabeta.org' )
+			|| str_ends_with( $this->server, '.nexttide.org' );
+	}
+
 	public function setDatabase(): void {
 		global $wgConf, $wgDBname, $wgVirtualDomainsMapping;
 
@@ -336,7 +342,7 @@ class MirahezeFunctions {
 		];
 	}
 
-	public static function getDatabaseClusters(): ?array {
+	public static function getDatabaseClusters(): array {
 		static $allDatabases = null;
 		static $deletedDatabases = null;
 
@@ -345,7 +351,7 @@ class MirahezeFunctions {
 
 		$databases = [ ...$allDatabases, ...$deletedDatabases ];
 		if ( !$databases ) {
-			return null;
+			return [];
 		}
 
 		return array_combine(
@@ -840,22 +846,24 @@ class MirahezeFunctions {
 		$allWikis = $dbr->newSelectQueryBuilder()
 			->table( 'cw_wikis' )
 			->fields( [
-				 'wiki_dbcluster',
-				 'wiki_dbname',
-				 'wiki_url',
-				 'wiki_sitename',
-				 'wiki_deleted',
-				 'wiki_closed',
-				 'wiki_inactive',
-				 'wiki_private',
-				 'wiki_extra',
+				'wiki_dbcluster',
+				'wiki_dbname',
+				'wiki_url',
+				'wiki_sitename',
+				'wiki_deleted',
+				'wiki_closed',
+				'wiki_inactive',
+				'wiki_private',
+				'wiki_extra',
 			] )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
 		$activeList = [];
+		$closedList = [];
 		$combiList = [];
 		$deletedList = [];
+		$inactiveList = [];
 		$publicList = [];
 		$privateList = [];
 		$versions = [];
@@ -873,6 +881,20 @@ class MirahezeFunctions {
 			} else {
 				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
 					$activeList[$wiki->wiki_dbname] = [
+						's' => $wiki->wiki_sitename,
+						'c' => $wiki->wiki_dbcluster,
+					];
+				}
+
+				if ( (int)$wiki->wiki_closed === 1 ) {
+					$closedList[$wiki->wiki_dbname] = [
+						's' => $wiki->wiki_sitename,
+						'c' => $wiki->wiki_dbcluster,
+					];
+				}
+
+				if ( (int)$wiki->wiki_inactive === 1 ) {
+					$inactiveList[$wiki->wiki_dbname] = [
 						's' => $wiki->wiki_sitename,
 						'c' => $wiki->wiki_dbcluster,
 					];
@@ -914,8 +936,10 @@ class MirahezeFunctions {
 
 		return [
 			'active' => $activeList,
+			'closed' => $closedList,
 			'databases' => $combiList,
 			'deleted' => $deletedList,
+			'inactive' => $inactiveList,
 			'public' => $publicList,
 			'private' => $privateList,
 			'versions' => $versions,
@@ -930,8 +954,10 @@ class MirahezeFunctions {
 
 		$databaseLists = [
 			'active' => $databases['active'],
+			'closed' => $databases['closed'],
 			'databases' => $databases['databases'],
 			'deleted' => $databases['deleted'],
+			'inactive' => $databases['inactive'],
 			'public' => $databases['public'],
 			'private' => $databases['private'],
 		];

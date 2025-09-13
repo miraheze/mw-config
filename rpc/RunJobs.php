@@ -22,6 +22,9 @@
 
 // This is for beta, DO NOT USE for production. Use RunSingleJob instead.
 
+use MediaWiki\Exception\MWExceptionHandler;
+use MediaWiki\MediaWikiServices;
+
 if ( !in_array( $_SERVER['REMOTE_ADDR'], [ '127.0.0.1', '0:0:0:0:0:0:0:1', '::1' ], true ) ) {
 	http_response_code( 500 );
 	die( "Only loopback requests are allowed.\n" );
@@ -43,12 +46,12 @@ ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 
 // Session consistency is not helpful here and will slow things down in some cases
-$chronologyProtector = MediaWiki\MediaWikiServices::getInstance()->getChronologyProtector();
+$chronologyProtector = MediaWikiServices::getInstance()->getChronologyProtector();
 $chronologyProtector->setEnabled( false );
 
 try {
 	$mediawiki = new MediaWiki();
-	$runner = MediaWiki\MediaWikiServices::getInstance()->getJobRunner();
+	$runner = MediaWikiServices::getInstance()->getJobRunner();
 	$response = $runner->run( [
 		'type'     => isset( $_GET['type'] ) ? $_GET['type'] : false,
 		'maxJobs'  => isset( $_GET['maxjobs'] ) ? $_GET['maxjobs'] : 5000,
