@@ -135,7 +135,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'transcode' => "$IP/extensions/TimedMediaHandler/sql/tables-generated.sql"
+				'transcode' => 'extensions/TimedMediaHandler/sql/tables-generated.sql',
 			],
 			'permissions' => [
 				'sysop' => [
@@ -160,7 +160,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'uw_campaigns' => "$IP/extensions/UploadWizard/sql/mysql/tables-generated.sql",
+				'uw_campaigns' => 'extensions/UploadWizard/sql/mysql/tables-generated.sql',
 			],
 			'namespaces' => [
 				'Campaign' => [
@@ -215,8 +215,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'ajaxpoll_info' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_info.sql",
-				'ajaxpoll_vote' => "$IP/extensions/AJAXPoll/sql/create-table--ajaxpoll_vote.sql"
+				'ajaxpoll_info' => 'extensions/AJAXPoll/sql/create-table--ajaxpoll_info.sql',
+				'ajaxpoll_vote' => 'extensions/AJAXPoll/sql/create-table--ajaxpoll_vote.sql',
 			],
 			'permissions' => [
 				'user' => [
@@ -243,7 +243,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'babel' => "$IP/extensions/Babel/sql/tables-generated.sql"
+				'babel' => 'extensions/Babel/sql/tables-generated.sql',
 			],
 		],
 		'section' => 'parserhooks',
@@ -270,8 +270,8 @@ $wgManageWikiExtensions = [
 				CreateCargoDB::class => [],
 			],
 			'sql' => [
-				'cargo_tables' => "$IP/extensions/Cargo/sql/Cargo.sql",
-				'cargo_backlinks' => "$IP/extensions/Cargo/sql/cargo_backlinks.sql"
+				'cargo_tables' => 'extensions/Cargo/sql/Cargo.sql',
+				'cargo_backlinks' => 'extensions/Cargo/sql/cargo_backlinks.sql',
 			],
 			'permissions' => [
 				'*' => [
@@ -326,11 +326,11 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'cs_associated_pages' => "$IP/extensions/CommentStreams/sql/mysql/cs_associated_pages.sql",
-				'cs_comments' => "$IP/extensions/CommentStreams/sql/mysql/cs_comments.sql",
-				'cs_replies' => "$IP/extensions/CommentStreams/sql/mysql/cs_replies.sql",
-				'cs_votes' => "$IP/extensions/CommentStreams/sql/mysql/cs_votes.sql",
-				'cs_watchlist' => "$IP/extensions/CommentStreams/sql/mysql/cs_watchlist.sql",
+				'cs_associated_pages' => 'extensions/CommentStreams/sql/mysql/cs_associated_pages.sql',
+				'cs_comments' => 'extensions/CommentStreams/sql/mysql/cs_comments.sql',
+				'cs_replies' => 'extensions/CommentStreams/sql/mysql/cs_replies.sql',
+				'cs_votes' => 'extensions/CommentStreams/sql/mysql/cs_votes.sql',
+				'cs_watchlist' => 'extensions/CommentStreams/sql/mysql/cs_watchlist.sql',
 			],
 			'permissions' => [
 				'user' => [
@@ -362,9 +362,9 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'Comments' => "$IP/extensions/Comments/sql/comments.sql",
-				'Comments_block' => "$IP/extensions/Comments/sql/comments_block.sql",
-				'Comments_Vote' => "$IP/extensions/Comments/sql/comments_vote.sql",
+				'Comments' => 'extensions/Comments/sql/comments.sql',
+				'Comments_block' => 'extensions/Comments/sql/comments_block.sql',
+				'Comments_Vote' => 'extensions/Comments/sql/comments_vote.sql',
 			],
 			'permissions' => [
 				'*' => [
@@ -448,7 +448,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'drafts' => "$IP/extensions/Drafts/sql/Drafts.sql",
+				'drafts' => 'extensions/Drafts/sql/Drafts.sql',
 			],
 		],
 		'section' => 'parserhooks',
@@ -713,7 +713,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'mscal_content' => "$IP/extensions/MsCalendar/sql/MsCalendar.sql"
+				'mscal_content' => 'extensions/MsCalendar/sql/MsCalendar.sql',
 			],
 		],
 		'section' => 'parserhooks',
@@ -787,7 +787,7 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'install' => [
 			'sql' => [
-				'ext_oredict_items' => "$IP/extensions/OreDict/install/sql/ext_oredict_items.sql"
+				'ext_oredict_items' => 'extensions/OreDict/install/sql/ext_oredict_items.sql',
 			],
 		],
 		'requires' => [],
@@ -1045,10 +1045,10 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'install' => [
 			'sql' => [
-				'ext_tilesheet_images' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_images.sql",
-				'ext_tilesheet_items' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_items.sql",
-				'ext_tilesheet_languages' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_languages.sql",
-				'ext_tilesheet_tilelinks' => "$IP/extensions/Tilesheets/install/sql/ext_tilesheet_tilelinks.sql"
+				'ext_tilesheet_images' => 'extensions/Tilesheets/install/sql/ext_tilesheet_images.sql',
+				'ext_tilesheet_items' => 'extensions/Tilesheets/install/sql/ext_tilesheet_items.sql',
+				'ext_tilesheet_languages' => 'extensions/Tilesheets/install/sql/ext_tilesheet_languages.sql',
+				'ext_tilesheet_tilelinks' => 'extensions/Tilesheets/install/sql/ext_tilesheet_tilelinks.sql',
 			],
 		],
 		'requires' => [
@@ -1118,7 +1118,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'Vote' => "$IP/extensions/VoteNY/sql/vote.mysql"
+				'Vote' => 'extensions/VoteNY/sql/vote.mysql',
 			],
 			'permissions' => [
 				'user' => [
@@ -1169,8 +1169,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'approved_revs_files' => "$IP/extensions/ApprovedRevs/sql/ApprovedFiles.sql",
-				'approved_revs' => "$IP/extensions/ApprovedRevs/sql/ApprovedRevs.sql"
+				'approved_revs_files' => 'extensions/ApprovedRevs/sql/ApprovedFiles.sql',
+				'approved_revs' => 'extensions/ApprovedRevs/sql/ApprovedRevs.sql',
 			],
 			'permissions' => [
 				'sysop' => [
@@ -1232,8 +1232,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'moderation' => "$IP/extensions/Moderation/sql/mysql/tables-generated.sql",
-				'moderation_block' => "$IP/extensions/Moderation/sql/mysql/tables-generated.sql"
+				'moderation' => 'extensions/Moderation/sql/mysql/tables-generated.sql',
+				'moderation_block' => 'extensions/Moderation/sql/mysql/tables-generated.sql',
 			],
 			'permissions' => [
 				'automoderated' => [
@@ -1302,7 +1302,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'campaign_events' => "$IP/extensions/CampaignEvents/db_patches/mysql/tables-generated.sql",
+				'campaign_events' => 'extensions/CampaignEvents/db_patches/mysql/tables-generated.sql',
 			],
 			'namespaces' => [
 				'Event' => [
@@ -1370,7 +1370,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'createdpageslist' => "$IP/extensions/CreatedPagesList/sql/patch-createdpageslist.sql",
+				'createdpageslist' => 'extensions/CreatedPagesList/sql/patch-createdpageslist.sql',
 			],
 			'mwscript' => [
 				'extensions/CreatedPagesList/recalculateTable' => [],
@@ -1431,7 +1431,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'flaggedpages' => "$IP/extensions/FlaggedRevs/includes/backend/schema/mysql/tables-generated.sql",
+				'flaggedpages' => 'extensions/FlaggedRevs/includes/backend/schema/mysql/tables-generated.sql',
 			],
 			'permissions' => [
 				'editor' => [
@@ -1518,7 +1518,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'linter' => "$IP/extensions/Linter/sql/mysql/tables-generated.sql"
+				'linter' => 'extensions/Linter/sql/mysql/tables-generated.sql',
 			],
 		],
 		'section' => 'specialpages',
@@ -1671,7 +1671,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'pagetriage_tags' => "$IP/extensions/PageTriage/sql/mysql/tables-generated.sql",
+				'pagetriage_tags' => 'extensions/PageTriage/sql/mysql/tables-generated.sql',
 			],
 		],
 		'section' => 'specialpages',
@@ -1703,10 +1703,10 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'quizgame_answers' => "$IP/extensions/QuizGame/sql/quizgame_answers.sql",
-				'quizgame_choice' => "$IP/extensions/QuizGame/sql/quizgame_choice.sql",
-				'quizgame_questions' => "$IP/extensions/QuizGame/sql/quizgame_questions.sql",
-				'quizgame_user_view' => "$IP/extensions/QuizGame/sql/quizgame_user_view.sql"
+				'quizgame_answers' => 'extensions/QuizGame/sql/quizgame_answers.sql',
+				'quizgame_choice' => 'extensions/QuizGame/sql/quizgame_choice.sql',
+				'quizgame_questions' => 'extensions/QuizGame/sql/quizgame_questions.sql',
+				'quizgame_user_view' => 'extensions/QuizGame/sql/quizgame_user_view.sql',
 			],
 			'permissions' => [
 				'sysop' => [
@@ -1746,7 +1746,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'report_reports' => "$IP/extensions/Report/sql/table.sql",
+				'report_reports' => 'extensions/Report/sql/table.sql',
 			],
 			'permissions' => [
 				'user' => [
@@ -1833,18 +1833,18 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'sql' => [
-				'revtag' => "$IP/extensions/Translate/sql/mysql/revtag.sql",
-				'translate_cache' => "$IP/extensions/Translate/sql/mysql/translate_cache.sql",
-				'translate_groupreviews' => "$IP/extensions/Translate/sql/mysql/translate_groupreviews.sql",
-				'translate_groupstats' => "$IP/extensions/Translate/sql/mysql/translate_groupstats.sql",
-				'translate_message_group_subscriptions' => "$IP/extensions/Translate/sql/mysql/translate_message_group_subscriptions.sql",
-				'translate_messageindex' => "$IP/extensions/Translate/sql/mysql/translate_messageindex.sql",
-				'translate_metadata' => "$IP/extensions/Translate/sql/mysql/translate_metadata.sql",
-				'translate_reviews' => "$IP/extensions/Translate/sql/mysql/translate_reviews.sql",
-				'translate_sections' => "$IP/extensions/Translate/sql/mysql/translate_sections.sql",
-				'translate_stash' => "$IP/extensions/Translate/sql/mysql/translate_stash.sql",
-				'translate_tms' => "$IP/extensions/Translate/sql/mysql/translate_tm.sql",
-				'translate_translatable_bundles' => "$IP/extensions/Translate/sql/mysql/translate_translatable_bundles.sql",
+				'revtag' => 'extensions/Translate/sql/mysql/revtag.sql',
+				'translate_cache' => 'extensions/Translate/sql/mysql/translate_cache.sql',
+				'translate_groupreviews' => 'extensions/Translate/sql/mysql/translate_groupreviews.sql',
+				'translate_groupstats' => 'extensions/Translate/sql/mysql/translate_groupstats.sql',
+				'translate_message_group_subscriptions' => 'extensions/Translate/sql/mysql/translate_message_group_subscriptions.sql',
+				'translate_messageindex' => 'extensions/Translate/sql/mysql/translate_messageindex.sql',
+				'translate_metadata' => 'extensions/Translate/sql/mysql/translate_metadata.sql',
+				'translate_reviews' => 'extensions/Translate/sql/mysql/translate_reviews.sql',
+				'translate_sections' => 'extensions/Translate/sql/mysql/translate_sections.sql',
+				'translate_stash' => 'extensions/Translate/sql/mysql/translate_stash.sql',
+				'translate_tms' => 'extensions/Translate/sql/mysql/translate_tm.sql',
+				'translate_translatable_bundles' => 'extensions/Translate/sql/mysql/translate_translatable_bundles.sql',
 			],
 		],
 		'section' => 'specialpages',
@@ -1902,8 +1902,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'oldvideo' => "$IP/extensions/Video/sql/oldvideo.sql",
-				'video' => "$IP/extensions/Video/sql/video.sql",
+				'oldvideo' => 'extensions/Video/sql/oldvideo.sql',
+				'video' => 'extensions/Video/sql/video.sql',
 			],
 			'permissions' => [
 				'user' => [
@@ -1991,7 +1991,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'aft_feedback' => "$IP/extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql"
+				'aft_feedback' => 'extensions/ArticleFeedbackv5/sql/ArticleFeedbackv5.sql',
 			],
 			'permissions' => [
 				'*' => [
@@ -2058,7 +2058,7 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'sql' => [
-				'ratings' => "$IP/extensions/ArticleRatings/ratings.sql"
+				'ratings' => 'extensions/ArticleRatings/ratings.sql',
 			],
 		],
 		'section' => 'other',
@@ -2263,8 +2263,8 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'discussiontools_items' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_persistent.sql",
-				'discussiontools_subscription' => "$IP/extensions/DiscussionTools/sql/mysql/discussiontools_subscription.sql",
+				'discussiontools_items' => 'extensions/DiscussionTools/sql/mysql/discussiontools_persistent.sql',
+				'discussiontools_subscription' => 'extensions/DiscussionTools/sql/mysql/discussiontools_subscription.sql',
 			],
 		],
 		'section' => 'other',
@@ -2303,7 +2303,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'ed_url_cache' => "$IP/extensions/ExternalData/sql/mysql/ExternalData.sql"
+				'ed_url_cache' => 'extensions/ExternalData/sql/mysql/ExternalData.sql',
 			],
 		],
 		'section' => 'other',
@@ -2444,7 +2444,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'geo_tags' => "$IP/extensions/GeoData/sql/mysql/tables-generated.sql"
+				'geo_tags' => 'extensions/GeoData/sql/mysql/tables-generated.sql',
 			],
 		],
 		'section' => 'other',
@@ -2634,7 +2634,7 @@ $wgManageWikiExtensions = [
 				],
 			],
 			'sql' => [
-				'nl_newsletters' => "$IP/extensions/Newsletter/sql/mysql/tables-generated.sql",
+				'nl_newsletters' => 'extensions/Newsletter/sql/mysql/tables-generated.sql',
 			],
 		],
 		'section' => 'other',
@@ -2660,7 +2660,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'page_assessments_projects' => "$IP/extensions/PageAssessments/db/mysql/tables-generated.sql"
+				'page_assessments_projects' => 'extensions/PageAssessments/db/mysql/tables-generated.sql',
 			],
 		],
 		'section' => 'other',
@@ -2729,9 +2729,9 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'poll_choice' => "$IP/extensions/PollNY/sql/poll_choice.sql",
-				'poll_question' => "$IP/extensions/PollNY/sql/poll_question.sql",
-				'poll_user_vote' => "$IP/extensions/PollNY/sql/poll_user_vote.sql",
+				'poll_choice' => 'extensions/PollNY/sql/poll_choice.sql',
+				'poll_question' => 'extensions/PollNY/sql/poll_question.sql',
+				'poll_user_vote' => 'extensions/PollNY/sql/poll_user_vote.sql',
 			],
 			'permissions' => [
 				'*' => [
@@ -2755,7 +2755,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'pr_index' => "$IP/extensions/ProofreadPage/sql/tables-generated.sql"
+				'pr_index' => 'extensions/ProofreadPage/sql/tables-generated.sql',
 			],
 			'namespaces' => [
 				'Page' => [
@@ -2825,7 +2825,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'wbs_propertypairs' => "$IP/extensions/PropertySuggester/sql/mysql/tables-generated.sql"
+				'wbs_propertypairs' => 'extensions/PropertySuggester/sql/mysql/tables-generated.sql',
 			],
 		],
 		'section' => 'other',
@@ -2868,8 +2868,8 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'ratepage_contest' => "$IP/extensions/RatePage/sql/create-table--ratepage-contest.sql",
-				'ratepage_vote' => "$IP/extensions/RatePage/sql/create-table--ratepage-vote.sql"
+				'ratepage_contest' => 'extensions/RatePage/sql/create-table--ratepage-contest.sql',
+				'ratepage_vote' => 'extensions/RatePage/sql/create-table--ratepage-vote.sql',
 			],
 			'permissions' => [
 				'*' => [
@@ -3053,20 +3053,20 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'user_profile' => "$IP/extensions/SocialProfile/UserProfile/sql/user_profile.sql",
-				'user_fields_privacy' => "$IP/extensions/SocialProfile/UserProfile/sql/user_fields_privacy.sql",
-				'user_system_messages' => "$IP/extensions/SocialProfile/UserStats/sql/user_system_messages.sql",
-				'user_points_monthly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_monthly.sql",
-				'user_points_archive' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_archive.sql",
-				'user_points_weekly' => "$IP/extensions/SocialProfile/UserStats/sql/user_points_weekly.sql",
-				'user_stats' => "$IP/extensions/SocialProfile/UserStats/sql/user_stats.sql",
-				'user_system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/user_system_gift.sql",
-				'system_gift' => "$IP/extensions/SocialProfile/SystemGifts/sql/system_gift.sql",
-				'user_relationship' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship.sql",
-				'user_relationship_request' => "$IP/extensions/SocialProfile/UserRelationship/sql/user_relationship_request.sql",
-				'user_gift' => "$IP/extensions/SocialProfile/UserGifts/sql/user_gift.sql",
-				'gift' => "$IP/extensions/SocialProfile/UserGifts/sql/gift.sql",
-				'user_board' => "$IP/extensions/SocialProfile/UserBoard/sql/user_board.sql"
+				'user_profile' => 'extensions/SocialProfile/UserProfile/sql/user_profile.sql',
+				'user_fields_privacy' => 'extensions/SocialProfile/UserProfile/sql/user_fields_privacy.sql',
+				'user_system_messages' => 'extensions/SocialProfile/UserStats/sql/user_system_messages.sql',
+				'user_points_monthly' => 'extensions/SocialProfile/UserStats/sql/user_points_monthly.sql',
+				'user_points_archive' => 'extensions/SocialProfile/UserStats/sql/user_points_archive.sql',
+				'user_points_weekly' => 'extensions/SocialProfile/UserStats/sql/user_points_weekly.sql',
+				'user_stats' => 'extensions/SocialProfile/UserStats/sql/user_stats.sql',
+				'user_system_gift' => 'extensions/SocialProfile/SystemGifts/sql/user_system_gift.sql',
+				'system_gift' => 'extensions/SocialProfile/SystemGifts/sql/system_gift.sql',
+				'user_relationship' => 'extensions/SocialProfile/UserRelationship/sql/user_relationship.sql',
+				'user_relationship_request' => 'extensions/SocialProfile/UserRelationship/sql/user_relationship_request.sql',
+				'user_gift' => 'extensions/SocialProfile/UserGifts/sql/user_gift.sql',
+				'gift' => 'extensions/SocialProfile/UserGifts/sql/gift.sql',
+				'user_board' => 'extensions/SocialProfile/UserBoard/sql/user_board.sql',
 			],
 			'permissions' => [
 				'sysop' => [
@@ -3089,8 +3089,8 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 		'install' => [
 			'sql' => [
-				'mws_title_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_title_index.sql",
-				'mws_user_index' => "$IP/extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_user_index.sql",
+				'mws_title_index' => 'extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_title_index.sql',
+				'mws_user_index' => 'extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_user_index.sql',
 			],
 		],
 	],
@@ -3107,7 +3107,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'flow_revision' => "$IP/extensions/Flow/sql/mysql/tables-generated.sql"
+				'flow_revision' => 'extensions/Flow/sql/mysql/tables-generated.sql',
 			],
 			'namespaces' => [
 				'Topic' => [
@@ -3386,7 +3386,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'titlekey' => "$IP/extensions/TitleKey/db_patches/tables-generated.sql"
+				'titlekey' => 'extensions/TitleKey/db_patches/tables-generated.sql',
 			],
 			'mwscript' => [
 				'extensions/TitleKey/rebuildTitleKeys' => []
@@ -3484,12 +3484,12 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'wbc_entity_usage' => "$IP/extensions/Wikibase/client/sql/mysql/entity_usage.sql",
-				'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
-				'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
-				'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
-				'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
-				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql"
+				'wbc_entity_usage' => 'extensions/Wikibase/client/sql/mysql/entity_usage.sql',
+				'wb_items_per_site' => 'extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql',
+				'wb_id_counters' => 'extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql',
+				'wb_changes' => 'extensions/Wikibase/repo/sql/mysql/wb_changes.sql',
+				'wb_changes_subscription' => 'extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql',
+				'wb_property_info' => 'extensions/Wikibase/repo/sql/mysql/wb_property_info.sql',
 			],
 			'mwscript' => [
 				PopulateWikibaseSitesTable::class => [],
@@ -3504,16 +3504,16 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'wb_changes' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes.sql",
-				'wb_changes_subscription' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql",
-				'wb_items_per_site' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql",
-				'wb_id_counters' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql",
-				'wbt_item_terms' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
-				'wbt_term_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
-				'wbt_text_in_lang' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
-				'wbt_text' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
-				'wb_property_info' => "$IP/extensions/Wikibase/repo/sql/mysql/wb_property_info.sql",
-				'wbt_property_terms' => "$IP/extensions/Wikibase/repo/sql/mysql/term_store.sql",
+				'wb_changes' => 'extensions/Wikibase/repo/sql/mysql/wb_changes.sql',
+				'wb_changes_subscription' => 'extensions/Wikibase/repo/sql/mysql/wb_changes_subscription.sql',
+				'wb_items_per_site' => 'extensions/Wikibase/repo/sql/mysql/wb_items_per_site.sql',
+				'wb_id_counters' => 'extensions/Wikibase/repo/sql/mysql/wb_id_counters.sql',
+				'wbt_item_terms' => 'extensions/Wikibase/repo/sql/mysql/term_store.sql',
+				'wbt_term_in_lang' => 'extensions/Wikibase/repo/sql/mysql/term_store.sql',
+				'wbt_text_in_lang' => 'extensions/Wikibase/repo/sql/mysql/term_store.sql',
+				'wbt_text' => 'extensions/Wikibase/repo/sql/mysql/term_store.sql',
+				'wb_property_info' => 'extensions/Wikibase/repo/sql/mysql/wb_property_info.sql',
+				'wbt_property_terms' => 'extensions/Wikibase/repo/sql/mysql/term_store.sql',
 			],
 			'permissions' => [
 				'*' => [
@@ -3628,7 +3628,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'sql' => [
-				'wbqc_constraints' => "$IP/extensions/WikibaseQualityConstraints/sql/mysql/tables-generated.sql",
+				'wbqc_constraints' => 'extensions/WikibaseQualityConstraints/sql/mysql/tables-generated.sql',
 			],
 		],
 		'section' => 'other',
@@ -3647,7 +3647,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'wikiforum_forums' => "$IP/extensions/WikiForum/sql/wikiforum.sql"
+				'wikiforum_forums' => 'extensions/WikiForum/sql/wikiforum.sql',
 			],
 			'permissions' => [
 				'bureaucrat' => [
@@ -3681,7 +3681,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'wikilove_log' => "$IP/extensions/WikiLove/patches/tables-generated.sql"
+				'wikilove_log' => 'extensions/WikiLove/patches/tables-generated.sql',
 			],
 		],
 		'section' => 'other',
