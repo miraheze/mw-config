@@ -1373,7 +1373,7 @@ $wgManageWikiExtensions = [
 				'createdpageslist' => 'extensions/CreatedPagesList/sql/patch-createdpageslist.sql',
 			],
 			'mwscript' => [
-				'extensions/CreatedPagesList/recalculateTable' => [],
+				'CreatedPagesList:recalculateTable' => [],
 			],
 		],
 		'section' => 'specialpages',
@@ -3163,7 +3163,7 @@ $wgManageWikiExtensions = [
 		],
 		'install' => [
 			'mwscript' => [
-				'extensions/SemanticMediaWiki/setupStore' => [],
+				'SemanticMediaWiki:setupStore' => [],
 			],
 			'namespaces' => [
 				'Property' => [
@@ -3270,7 +3270,7 @@ $wgManageWikiExtensions = [
 		],
 		'remove' => [
 			'mwscript' => [
-				'extensions/SemanticMediaWiki/setupStore' => [
+				'SemanticMediaWiki:setupStore' => [
 					'delete' => false,
 					'nochecks' => false,
 				],
@@ -3389,7 +3389,7 @@ $wgManageWikiExtensions = [
 				'titlekey' => 'extensions/TitleKey/db_patches/tables-generated.sql',
 			],
 			'mwscript' => [
-				'extensions/TitleKey/rebuildTitleKeys' => []
+				'TitleKey:rebuildTitleKeys' => []
 			],
 		],
 		'section' => 'other',
