@@ -5157,6 +5157,7 @@ $wgConf->settings += [
 		'metawiki' => [
 			'requestwiki' => [
 				'ip-all' => [ 1, 259200 ],
+				'user' => [ 1, 259200 ],
 			],
 		],
 	],
