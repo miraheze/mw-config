@@ -566,7 +566,7 @@ $wgConf->settings += [
 	],
 	'wgCheckUserGlobalContributionsCentralWikiId' => [
 		'default' => null,
-		//'default' => 'metawiki',
+		// 'default' => 'metawiki',
 		//'beta' => 'metawikibeta',
 	],
 
