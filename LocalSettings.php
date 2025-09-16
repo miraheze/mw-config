@@ -565,8 +565,9 @@ $wgConf->settings += [
 		],
 	],
 	'wgCheckUserGlobalContributionsCentralWikiId' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
+		'default' => null,
+		//'default' => 'metawiki',
+		//'beta' => 'metawikibeta',
 	],
 
 	// CirrusSearch
