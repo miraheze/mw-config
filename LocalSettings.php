@@ -2133,10 +2133,13 @@ $wgConf->settings += [
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Powered by MediaWiki',
 				],
+			],
+			'poweredbysmw' => [
 				'semanticmediawiki' => [
 					'src' => 'https://static.wikitide.net/universalunionwiki/7/77/SemanticMediaWiki.svg',
 					'url' => 'https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki',
 					'alt' => 'Powered by Semantic MediaWiki',
+					'class' => 'smw-footer',
 				],
 			],
 			'copyright' => [
