@@ -7262,6 +7262,7 @@ $wi::$disabledExtensions = [
 
 	'lingo' => 'Currently broken',
 	'mintydocs' => 'Security vulnerabilities',
+	'semanticdrilldown' => 'Security vulnerabilities; Incompatible with MediaWiki 1.44',
 
 	// Are these still incompatible?
 	'chameleon' => 'Incompatible with MediaWiki 1.44',
