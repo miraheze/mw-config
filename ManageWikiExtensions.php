@@ -493,6 +493,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'floatingui' => [
+		'name' => 'FloatingUI',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FloatingUI',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'genealogy' => [
 		'name' => 'Genealogy',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Genealogy',
