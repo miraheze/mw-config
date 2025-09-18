@@ -91,6 +91,13 @@ $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
 $wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
 
+$wgStatsFormat = 'dogstatsd';
+$wgStatsTarget = 'udp://localhost:9125';
+
+if ( $wi->isBeta() ) {
+	$wgStatsPrefix = 'BetaMediaWiki';
+}
+
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
