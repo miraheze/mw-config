@@ -94,9 +94,9 @@ $wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
 $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
 
-if ( $wi->isBeta() ) {
+/* if ( $wi->isBeta() ) {
 	$wgStatsPrefix = 'BetaMediaWiki';
-}
+} */
 
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
