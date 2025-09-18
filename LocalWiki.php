@@ -289,6 +289,11 @@ switch ( $wi->dbname ) {
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
+	case 'hullrotwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+
+		break;
 	case 'kaiserreichwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
