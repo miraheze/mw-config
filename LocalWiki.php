@@ -76,6 +76,10 @@ switch ( $wi->dbname ) {
 		};
 
 		break;
+	case 'bluearchivewiki':
+		$wgDplSettings['allowUnlimitedCategories'] = true;
+
+		break;
 	case 'combatinitiationwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
