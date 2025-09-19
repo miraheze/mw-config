@@ -387,4 +387,22 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
+	'wgMFNamespacesWithoutCollapsibleSections' => [
+		'name' => 'Disable collapsible sections in this namespace?',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		// See https://github.com/wikimedia/mediawiki-extensions-MobileFrontend?tab=readme-ov-file#wgmfnamespaceswithoutcollapsiblesections
+		'overridedefault' => [
+			NS_FILE => true,
+			NS_CATEGORY => true,
+			NS_SPECIAL => true,
+			NS_MEDIA => true,
+			'default' => false,
+		],
+		'help' => 'If enabled, collapsible sections will be disabled in this namespace on mobile devices.',
+		'requires' => [],
+	],
 ];
