@@ -94,10 +94,6 @@ $wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
 $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
 
-/* if ( $wi->isBeta() ) {
-	$wgStatsPrefix = 'BetaMediaWiki';
-} */
-
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
@@ -7059,6 +7055,14 @@ $wgConf->settings += [
 	],
 	'wgForceHTTPS' => [
 		'default' => true,
+	],
+
+	// Schema migration
+	'wgCategoryLinksSchemaMigrationStage' => [
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
+	],
+	'wgFileSchemaMigrationStage' => [
+		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
 
 	// Logging configuation (Graylog)
