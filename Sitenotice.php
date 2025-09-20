@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 91;
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
 
- /*$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+ $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -41,7 +41,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On Thursday June 26th, we will be conducting emergency maintenance on our hypervisors (cloud15 and cloud20) which will require a full shutdown of the server. This will begin at 19:00 UTC and last around 90 minutes until 21:00 UTC. This will involve a full outage of all wikis on db151/c1 and editing, viewing files and account logins will be unstable on all other wikis.
+								Miraheze will be conducting server maintenance on Monday, September 21st, 2025 at 16:00 UTC. Maintenance will last around an hour or less. During that time, some images may fail to load. Editing will remain unaffected.
 							</div>
 						</td>
 					</tr>
@@ -49,7 +49,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-}*/
+}
 
 // }
 
