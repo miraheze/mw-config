@@ -41,7 +41,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								Miraheze will be conducting server maintenance on Monday, September 21st, 2025 at 16:00 UTC. Maintenance will last around an hour or less. During that time, some images may fail to load. Editing will remain unaffected.
+								Miraheze will be conducting server maintenance on Monday, September 22nd, 2025 at 15:00 UTC. Maintenance will last around an hour or less. During that time, some images may fail to load. Editing will remain unaffected.
 							</div>
 						</td>
 					</tr>
