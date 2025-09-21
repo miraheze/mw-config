@@ -76,6 +76,10 @@ switch ( $wi->dbname ) {
 		};
 
 		break;
+	case 'bluearchivewiki':
+		$wgDplSettings['allowUnlimitedCategories'] = true;
+
+		break;
 	case 'combatinitiationwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
@@ -283,6 +287,11 @@ switch ( $wi->dbname ) {
 	case 'houkai2ndwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
+
+		break;
+	case 'hullrotwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
 
 		break;
 	case 'kaiserreichwiki':
