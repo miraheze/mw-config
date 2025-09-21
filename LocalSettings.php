@@ -4397,14 +4397,6 @@ $wgConf->settings += [
 			NS_SPECIAL,
 			NS_MEDIA,
 		],
-		'twistwoodtaleswiki' => [
-			// Attempt to replace deprecated wgMFCollapseSectionsByDefault setting
-			NS_MAIN,
-			NS_FILE,
-			NS_CATEGORY,
-			NS_SPECIAL,
-			NS_MEDIA,
-		],
 	],
 	'wgMFAdvancedMobileContributions' => [
 		'default' => true,
