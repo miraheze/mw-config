@@ -4208,6 +4208,11 @@ $wgConf->settings += [
 			'loggedin' => true,
 			'amc' => true,
 		],
+		'osmaniawiki' => [
+			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
+		],
 	],
 
 	// MirahezeMagic
