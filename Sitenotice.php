@@ -34,14 +34,14 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
 						<td>
 							<div style="font-weight: bold; color: black;">
-								Server maintenance
+								Server maintenance ongoing
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								Miraheze will be conducting server maintenance on Monday, September 22nd, 2025 at 15:00 UTC. Maintenance will last around an hour or less. During that time, some images may fail to load. Editing will remain unaffected.
+								Miraheze is currently conducting server maintenance until 16:00 UTC. During this time, some images may fail to load. Editing remains unaffected.
 							</div>
 						</td>
 					</tr>
