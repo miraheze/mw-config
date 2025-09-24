@@ -814,7 +814,7 @@ $wgConf->settings += [
 	// CreateWiki
 	'wgCreateWikiAIConfig' => [
 		'default' => [
-			'baseurl' => 'http://ai.wikitide.net:11434',
+			'baseurl' => 'https://ai.wikitide.net',
 			'dryrun' => false,
 			'model' => 'createwiki-ai',
 		],
