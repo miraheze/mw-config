@@ -111,6 +111,10 @@ switch ( $wi->dbname ) {
 		$wgVectorNightMode['logged_out'] = true;
 
 		break;
+	case 'dathereckoningwiki':
+		$wgLogos = [
+			'svg' => "https://static.wikitide.net/dathereckoningwiki/d/d1/Dragon_Age_Logo.png",
+		];
 	case 'dlfmwiki':
 		$wgHooks['TranslatePostInitGroups'][] = static function ( &$list, &$deps, &$autoload ) {
 			$id = 'local-sys-msg';
