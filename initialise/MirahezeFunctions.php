@@ -82,7 +82,7 @@ class MirahezeFunctions {
 		if ( !str_ends_with( $this->dbname, $expectedSuffix ) ) {
 			if ( MW_ENTRY_POINT === 'cli' ) {
 				fwrite(STDERR, 'INVALID DATABASE! YOU CAN NOT USE THE DATABASE OF A DIFFERENT REALM!' . PHP_EOL );
-				exit(2)
+				exit(2);
 			}
 
 			require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/MissingWiki.php';
