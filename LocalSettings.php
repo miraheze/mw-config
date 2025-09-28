@@ -7303,7 +7303,6 @@ $wi::$disabledExtensions = [
 
 	// Are these still incompatible?
 	'chameleon' => 'Incompatible with MediaWiki 1.44',
-	'femiwiki' => 'Incompatible with MediaWiki 1.44',
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.44',
 ];
 
