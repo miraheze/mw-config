@@ -109,15 +109,12 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 
 	$opts = is_array( $opts ) ? $opts : [ 'graylog' => $opts ];
-	$opts = array_merge(
-		[
-			'graylog' => 'debug',
-			'eventbus' => false,
-			'buffer' => false,
-			'sample' => false,
-		],
-		$opts
-	);
+	$opts += [
+		'eventbus' => false,
+		'sample' => false,
+		'buffer' => false,
+		'graylog' => 'info',
+	];
 
 	$handlers = [];
 
@@ -149,18 +146,16 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$sample = $opts['sample'];
 		foreach ( $handlers as $idx => $handlerName ) {
 			$sampledHandler = "$handlerName-sampled-$sample";
-			if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
-				// Register a handler that will sample the event stream and
-				// pass events on to $handlerName for storage
-				$wmgMonologConfig['handlers'][$sampledHandler] = [
-					'class' => SamplingHandler::class,
-					'args' => [
-						static fn (): HandlerInterface =>
-							LoggerFactory::getProvider()->getHandler( $handlerName ),
-						$sample,
-					],
-				];
-			}
+			// Register a handler that will sample the event stream and
+			// pass events on to $handlerName for storage
+			$wmgMonologConfig['handlers'][$sampledHandler] ??= [
+				'class' => SamplingHandler::class,
+				'args' => [
+					static fn (): HandlerInterface =>
+						LoggerFactory::getProvider()->getHandler( $handlerName ),
+					$sample,
+				],
+			];
 			$handlers[$idx] = $sampledHandler;
 		}
 	}
@@ -168,17 +163,15 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts['buffer'] ) {
 		foreach ( $handlers as $idx => $handlerName ) {
 			$bufferedHandler = "$handlerName-buffered";
-			if ( !isset( $wmgMonologConfig['handlers'][$bufferedHandler] ) ) {
-				// Register a handler that will buffer the event stream and
-				// pass events to the nested handler after closing the request
-				$wmgMonologConfig['handlers'][$bufferedHandler] = [
-					'class' => BufferHandler::class,
-					'args' => [
-						static fn (): HandlerInterface =>
-							LoggerFactory::getProvider()->getHandler( $handlerName ),
-					],
-				];
-			}
+			// Register a handler that will buffer the event stream and
+			// pass events to the nested handler after closing the request
+			$wmgMonologConfig['handlers'][$bufferedHandler] ??= [
+				'class' => BufferHandler::class,
+				'args' => [
+					static fn (): HandlerInterface =>
+						LoggerFactory::getProvider()->getHandler( $handlerName ),
+				],
+			];
 			$handlers[$idx] = $bufferedHandler;
 		}
 	}
@@ -187,17 +180,15 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		// wrap the collection of handlers in a WhatFailureGroupHandler
 		// to swallow any exceptions that might leak out otherwise
 		$failureGroupHandler = 'failuregroup|' . implode( '|', $handlers );
-		if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
-			$wmgMonologConfig['handlers'][$failureGroupHandler] = [
-				'class' => WhatFailureGroupHandler::class,
-				'args' => [
-					static fn (): array => array_map(
-						[ LoggerFactory::getProvider(), 'getHandler' ],
-						$handlers
-					),
-				],
-			];
-		}
+		$wmgMonologConfig['handlers'][$failureGroupHandler] ??= [
+			'class' => WhatFailureGroupHandler::class,
+			'args' => [
+				static fn (): array => array_map(
+					[ LoggerFactory::getProvider(), 'getHandler' ],
+					$handlers
+				),
+			],
+		];
 
 		$wmgMonologConfig['loggers'][$channel] = [
 			'handlers' => [ $failureGroupHandler ],
