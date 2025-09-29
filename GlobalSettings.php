@@ -765,12 +765,12 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
 	case 'gpl-v3':
-		$wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+		$wgRightsIcon = 'https://static.wikitide.net/commonswiki/d/d8/Gplv3-or-later.png';
 		$wgRightsText = 'GPLv3';
 		$wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
 		break;
 	case 'gfdl':
-		$wgRightsIcon = 'https://www.gnu.org/graphics/gfdl-logo-tiny.png';
+		$wgRightsIcon = 'https://static.wikitide.net/commonswiki/6/61/Gfdl-logo-tiny.png';
 		$wgRightsText = 'GNU Free Document License 1.3';
 		$wgRightsUrl = 'https://www.gnu.org/licenses/fdl-1.3.en.html';
 		break;
