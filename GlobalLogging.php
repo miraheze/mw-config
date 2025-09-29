@@ -3,6 +3,7 @@
 use MediaWiki\Extension\EventBus\Adapters\Monolog\EventBusMonologHandler;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Logger\Monolog\BufferHandler;
+use MediaWiki\Logger\Monolog\ContextProcessor;
 use MediaWiki\Logger\Monolog\LogstashFormatter;
 use MediaWiki\Logger\Monolog\SyslogHandler;
 use MediaWiki\Logger\Monolog\WikiProcessor;
@@ -22,6 +23,9 @@ $wmgMonologProcessors = [
 	],
 	'psr' => [
 		'class' => PsrLogMessageProcessor::class,
+	],
+	'context' => [
+		'class' => ContextProcessor::class,
 	],
 	'web' => [
 		'class' => WebProcessor::class,
