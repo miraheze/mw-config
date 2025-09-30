@@ -4371,6 +4371,21 @@ $wgManageWikiSettings = [
 		'help' => 'Defines CSS classes ignored by overflow wrapper',
 		'requires' => [],
 	],
+	'wgCitizenHeaderPosition' => [
+		'name' => 'Citizen Header Position',
+		'from' => 'citizen',
+		'type' => 'list',
+		'options' => [
+			'Left' => 'left',
+			'Right' => 'right',
+			'Top' => 'top',
+			'Bottom' => 'bottom',
+		],
+		'overridedefault' => 'left',
+		'section' => 'styling',
+		'help' => 'Position of the header on the desktop layout of the Citizen skin.',
+		'requires' => [],
+	],
 	'wgRelatedArticlesFooterAllowedSkins' => [
 		'name' => 'RelatedArticles Footer Allowed Skins',
 		'from' => 'relatedarticles',
