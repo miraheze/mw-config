@@ -619,6 +619,9 @@ $wgConf->settings += [
 			'srf-datatable',
 		],
 	],
+	'wgCitizenHeaderPosition' => [
+		'default' => 'left',
+	],
 
 	// CodeMirror
 	'wgCodeMirrorV6' => [
