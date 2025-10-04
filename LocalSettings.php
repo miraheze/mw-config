@@ -569,8 +569,11 @@ $wgConf->settings += [
 	],
 	'wgCheckUserGlobalContributionsCentralWikiId' => [
 		'default' => null,
-		// 'default' => 'metawiki',
-		//'beta' => 'metawikibeta',
+		'default' => 'metawiki',
+		'beta' => 'metawikibeta',
+	],
+	'wgCheckUserGlobalContributionsSkippedWikiIds' => [
+		'default' => MirahezeFunctions::readDbListFile( 'private' )
 	],
 
 	// CirrusSearch
