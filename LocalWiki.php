@@ -761,6 +761,12 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'stopitslenderwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+		$wgVectorNightMode['beta'] = true;
+
+		break;
 	case 'testwikibeta':
 		$wgUserLevels = [
 			'Recruit' => 0,

@@ -5123,6 +5123,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+stopitslenderwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+zhtranswiki' => [
 			'echo-subscriptions-email-dt-subscription' => true,
 			'echo-subscriptions-email-dt-subscription-archiving' => true,
