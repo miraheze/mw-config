@@ -3669,15 +3669,6 @@ $wgManageWikiSettings = [
 		'help' => 'Set this to true to automatically show mobile view depending on a person\'s user-agent.',
 		'requires' => [],
 	],
-	'wgMFCollapseSectionsByDefault' => [
-		'name' => 'MobileFrontend Collapse Sections By Default',
-		'from' => 'mobilefrontend',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'styling',
-		'help' => 'Enabling this will collapse sections by default when the page loads when using MobileFrontend.',
-		'requires' => [],
-	],
 	'wgMFCustomSiteModules' => [
 		'name' => 'MobileFrontend Custom Site Modules',
 		'from' => 'mobilefrontend',
