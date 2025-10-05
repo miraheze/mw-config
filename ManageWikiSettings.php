@@ -1429,7 +1429,7 @@ $wgManageWikiSettings = [
 		'requires' => []
 	],
 	'wgCodeMirrorV6' => [
-		'name' => 'Enable CodeMirror 6',
+		'name' => 'Enable CodeMirror 6 (experimental)',
 		'from' => 'codemirror',
 		'type' => 'check',
 		'overridedefault' => false,
