@@ -821,7 +821,7 @@ $wgManageWikiExtensions = [
 		'name' => 'ParserPower',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Extension:ParserPower',
 		'description' => 'A collection of extended parser functions for MediaWiki, particularly including functions for dealing with lists of values separated by a dynamically-specified delimiter.',
-		'conflicts' => 'pageforms',
+		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
