@@ -557,6 +557,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'imgtag' => [
+		'name' => 'ImgTag',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ImgTag',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
 	'inputbox' => [
 		'name' => 'InputBox',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:InputBox',

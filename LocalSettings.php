@@ -2414,6 +2414,9 @@ $wgConf->settings += [
 	'wgImagePreconnect' => [
 		'default' => true,
 	],
+	'wgImgTagSanitizeDomain' => [
+		'default' => false,
+	],
 	'wgShowArchiveThumbnails' => [
 		'default' => true,
 	],
