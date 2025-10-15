@@ -640,9 +640,6 @@ $wgConf->settings += [
 	],
 
 	// CommentStreams
-	'wgCommentStreamsEnableTalk' => [
-		'default' => false,
-	],
 	'wgCommentStreamsEnableSearch' => [
 		'default' => true,
 	],
