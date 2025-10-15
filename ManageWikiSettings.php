@@ -737,15 +737,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Discussion
-	'wgCommentStreamsEnableTalk' => [
-		'name' => 'CommentStreams Enable Talk',
-		'from' => 'commentstreams',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'discussion',
-		'help' => 'Enable in talk namespaces',
-		'requires' => [],
-	],
 	'wgCommentStreamsEnableSearch' => [
 		'name' => 'CommentStreams Enable Search',
 		'from' => 'commentstreams',
