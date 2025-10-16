@@ -65,8 +65,10 @@ if ( $wgDBname === 'constantnoblewiki' ) {
 		NS_HELP_TALK => false,
 		NS_CATEGORY => true,
 		NS_CATEGORY_TALK => false,
+		3002 => true,
 		3008 => true,
 		3009 => false,
+		3010 => true,
 		3012 => true,
 		3013 => false,
 		3018 => true,
@@ -94,4 +96,18 @@ if ( $wgDBname === 'constantnoblewiki' ) {
 	];
 
 	$smwgQMaxInlineLimit = 750;
+} elseif ( $wgDBname === 'vanillaeuropawiki' ) {
+	$smwgNamespacesWithSemanticLinks = array_merge(
+		$smwgNamespacesWithSemanticLinks,
+		[
+			3000 => true,
+			3001 => false,
+			3002 => true,
+			3003 => false,
+			3004 => true,
+			3005 => false,
+			3006 => true,
+			3007 => false,
+		]
+	);
 }

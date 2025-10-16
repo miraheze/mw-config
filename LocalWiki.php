@@ -1,12 +1,16 @@
 <?php
 
 use MediaWiki\Actions\ActionEntryPoint;
-use MediaWiki\EditPage\EditPage;
+use MediaWiki\Context\RequestContext;
+use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Html\Html;
+use MediaWiki\Language\LanguageCode;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\Parser;
+use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Request\WebRequest;
+use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
@@ -72,6 +76,10 @@ switch ( $wi->dbname ) {
 		};
 
 		break;
+	case 'bluearchivewiki':
+		$wgDplSettings['allowUnlimitedCategories'] = true;
+
+		break;
 	case 'combatinitiationwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
@@ -96,6 +104,11 @@ switch ( $wi->dbname ) {
 			global $wgLogRestrictions;
 			unset( $wgLogRestrictions['abusefilter'] );
 		};
+
+		break;
+	case 'dappervolkwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
 
 		break;
 	case 'dlfmwiki':
@@ -144,12 +157,13 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'fischwiki':
+		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgLogRestrictions['newusers'] = 'read';
 
 		break;
 	case 'ftlmultiversewiki':
 		// Intentionally empty out $wgJsonConfigs because of this error:
-		// JsonConfig: Invalid $wgJsonConfigs['Map.JsonConfig']: Namespace 486 is already set to handle model 'json' [Called from JsonConfig\JCSingleton::parseConfiguration in /srv/mediawiki/1.43/extensions/JsonConfig/includes/JCSingleton.php at line 147] in /srv/mediawiki/1.43/includes/debug/MWDebug.php on line 498.
+		// JsonConfig: Invalid $wgJsonConfigs['Map.JsonConfig']: Namespace 486 is already set to handle model 'json'
 		// and because it seems like a bureaucrat doesn't really care for them:
 		// https://issue-tracker.miraheze.org/T13275#266704
 		$wgJsonConfigs = [
@@ -275,6 +289,11 @@ switch ( $wi->dbname ) {
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
+	case 'hullrotwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+
+		break;
 	case 'kaiserreichwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
@@ -381,35 +400,6 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
-	case 'cgwiki':
-		// T13424: Redirect User:Example?action=edit&redlink=1 -> User:Example
-		// to display the UserProfileV2 stuff when following redlinks (if the
-		// user wants to intentionally edit their user page, then a request
-		// URI of User:Example?action=edit will be sent)
-		$wgHooks['AlternateEdit'][] = 'onAlternateEdit';
-
-		function onAlternateEdit( EditPage $editPage ) {
-			$title = $editPage->getTitle();
-			// Bail if we're not in a user page
-			if ( !$title->inNamespace( NS_USER ) ) {
-				return true;
-			}
-
-			$context = $editPage->getContext();
-			if (
-				// If redlink=1 is set
-				$context->getRequest()->getBool( 'redlink' )
-				// and if we're not on a subpage
-				&& $title->equals( $title->getRootTitle() )
-			) {
-				$context->getOutput()->redirect( $title->getFullURL() );
-				return false;
-			}
-
-			return true;
-		}
-
-		// Intentional fallthrough as stuff here is meant to apply for cgwiki + lhmnwiki
 	case 'lhmnwiki':
 		// UploadWizard
 		$wgUploadWizardConfig = [
@@ -503,160 +493,15 @@ switch ( $wi->dbname ) {
 			]
 		];
 
-		// SocialProfile/UserStats
-		if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
-			require_once "$IP/extensions/SocialProfile/UserStats/EditCount.php";
-
-			// Định nghĩa cấp độ
-			$wgUserLevels = [
-				'Lớp lá' => 0,
-				'Mầm non' => 1200,
-				'Lớp 1' => 5000,
-				'Lớp 2' => 10000,
-				'Lớp 3' => 20000,
-				'Lớp 4' => 35000,
-				'Lớp 5' => 50000,
-				'Lớp 6' => 75000,
-				'Lớp 7' => 100000,
-				'Lớp 8' => 150000,
-				'Lớp 9' => 250000,
-				'Lớp 10' => 350000,
-				'Lớp 11' => 500000,
-				'Lớp 12' => 650000,
-				'Đại học' => 800000,
-				'Cao học' => 1000000
-			];
-		}
-
-		// ContactForm
-		$wgContactConfig['default'] = [
-			'RecipientEmail' => 'hotro@lophocmatngu.wiki',
-			'SenderName' => 'Liên hệ từ WLHMN',
-			'RequireDetails' => true,
-			'NameReadonly' => false,
-			'EmailReadonly' => false,
-			'SubjectReadonly' => false,
-			'UseCustomBlockMessage' => false,
-			'Redirect' => null,
-			'RLModules' => [],
-			'RLStyleModules' => [],
-			'AdditionalFields' => [
-				'Text' => [
-					'label-message' => 'emailmessage',
-					'type' => 'textarea',
-					'required' => true,
-				],
-			],
-			'FieldsMergeStrategy' => null
-		];
-
-		$wgContactConfig['banquyen'] = [
-			'RecipientEmail' => 'banquyen@lophocmatngu.wiki',
-			'SenderName' => 'Xử lý bản quyền WLHMN',
-			'RequireDetails' => true,
-			'NameReadonly' => false,
-			'EmailReadonly' => false,
-			'SubjectReadonly' => true,
-			'UseCustomBlockMessage' => false,
-			'Redirect' => null,
-			'RLModules' => [],
-			'RLStyleModules' => [],
-			'AdditionalFields' => [
-				'DiaChi' => [
-					'class' => 'HTMLTextField',
-					'label-message' => 'banquyen-label-diachi',
-					'help-message' => 'banquyen-help-giaithich2',
-					'required' => true,
-				],
-				'ToChuc' => [
-					'class' => 'HTMLTextField',
-					'label-message' => 'banquyen-label-tochuc',
-					'help-message' => 'banquyen-help-giaithich3',
-					'required' => false,
-				],
-				'ChucVu' => [
-					'class' => 'HTMLTextField',
-					'label-message' => 'banquyen-label-chucvu',
-					'help-message' => 'banquyen-help-giaithich4',
-					'required' => true,
-				],
-				'SoDienThoai' => [
-					'class' => 'HTMLTextField',
-					'label-message' => 'banquyen-label-sdt',
-					'help-message' => 'banquyen-help-giaithich5',
-					'required' => true,
-				],
-				'DoiTuong' => [
-					'class' => 'HTMLSelectField',
-					'label-message' => 'banquyen-label-luachon',
-					'options-message' => 'banquyen-list-luachon',
-					'help-message' => 'banquyen-help-giaithich7',
-					'type' => 'textarea',
-					'required' => true,
-				],
-				'LienKet' => [
-					'label-message' => 'banquyen-label-url',
-					'help-message' => 'banquyen-help-giaithich8',
-					'type' => 'textarea',
-					'rows' => 5,
-					'required' => true,
-				],
-				'NoiDung' => [
-					'label-message' => 'banquyen-label-giaithich',
-					'help-message' => 'banquyen-help-giaithich9',
-					'type' => 'textarea',
-					'rows' => 10,
-					'required' => true,
-				],
-				'XacNhan1' => [
-					'class' => 'HTMLCheckField',
-					'label-message' => 'banquyen-label-xacnhan1',
-					'required' => true,
-				],
-				'XacNhan2' => [
-					'class' => 'HTMLCheckField',
-					'label-message' => 'banquyen-label-xacnhan2',
-					'required' => true,
-				],
-				'XacNhan3' => [
-					'class' => 'HTMLCheckField',
-					'label-message' => 'banquyen-label-xacnhan3',
-					'required' => true,
-				],
-				'KySo' => [
-					'class' => 'HTMLTextField',
-					'label-message' => 'banquyen-label-chuky',
-					'help-message' => 'banquyen-help-giaithich6',
-					'required' => true,
-				],
-			],
-			'FieldsMergeStrategy' => 'replace',
-		];
-
-		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
-
-		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
-			if ( $key === 'places' ) {
-				$footerlinks['lienhe'] = Html::rawElement( 'a',
-					[
-						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'contactpage-label' )->text()
-				);
-
-				$footerlinks['banquyen'] = Html::rawElement( 'a',
-					[
-						'href' => 'https://lophocmatngu.wiki/Đặc_biệt:Liên_hệ/banquyen',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'crpage-label' )->text()
-				);
-			}
-		}
-
 		break;
 	case 'metawiki':
+		wfLoadExtensions( [
+			'ContactPage',
+			'GlobalWatchlist',
+			'IncidentReporting',
+			'RequestCustomDomain',
+			'SecurePoll',
+		] );
 		$wgContactConfig = [
 			'default' => [
 				'RecipientUser' => null,
@@ -773,19 +618,13 @@ switch ( $wi->dbname ) {
 			'type' => 'google',
 		];
 
-		wfLoadExtensions( [
-			'GlobalWatchlist',
-			'IncidentReporting',
-			'RequestSSL',
-			'SecurePoll',
-		] );
-
 		break;
 	case 'metawikibeta':
 		wfLoadExtensions( [
+			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
-			'RequestSSL',
+			'RequestCustomDomain',
 		] );
 
 		/*
@@ -806,6 +645,14 @@ switch ( $wi->dbname ) {
 		break;
 	case 'namuwitchwiki':
 		$wgDisableLangConversion = true;
+
+		break;
+	case 'needforspeedwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
 	case 'newusopediawiki':
@@ -897,6 +744,15 @@ switch ( $wi->dbname ) {
 	case 'sagan4alphawiki':
 		$wgCargoAllowedSQLFunctions[] = 'RAND';
 		break;
+	case 'shintowiki':
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.org/w/api.php'
+		];
+
+		break;
 	case 'snapwikiwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -905,27 +761,10 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'stopxwiki':
-		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
-
-		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerItems ) {
-			if ( $key === 'places' ) {
-				$footerlinks['contact'] = Html::rawElement( 'a',
-					[
-						'href' => 'mailto:tekannabrand@gmail.com',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'contactpage' )->text()
-				);
-				$footerlinks['stopxpolicy'] = Html::rawElement( 'a',
-					[
-						'href' => 'https://tekannabrand.org/wiki/TermsOfService',
-						'rel' => 'nofollow noreferrer noopener',
-					],
-					$skin->msg( 'stopxpolicypage' )->text()
-				);
-			}
-		}
+	case 'stopitslenderwiki':
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+		$wgVectorNightMode['beta'] = true;
 
 		break;
 	case 'testwikibeta':
@@ -951,82 +790,223 @@ switch ( $wi->dbname ) {
 		];
 		break;
 	case 'tkuwiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( &$out, &$skin ) {
-			$title = $out->getTitle();
-
+		// Helper function
+		function getTitleInfo( $title ) {
 			if ( !$title instanceof Title ) {
-				return;
+				return false;
 			}
 
 			$service = MediaWikiServices::getInstance();
+			$languageConverterFactory = $service->getLanguageConverterFactory();
 			$languageNameUtils = $service->getLanguageNameUtils();
-			$nsText = $title->getNsText();
-			$mainText = $title->getText();
+			$languageFactory = $service->getLanguageFactory();
+
+			$displayTitleNsText = $title->getNsText();
+			$displayTitleMainText = $title->getText();
+			$slashDividerPos = strpos( $displayTitleMainText, '/' );
+
+			$titleRootText = $slashDividerPos === false ?
+				$displayTitleMainText :
+				substr( $displayTitleMainText, 0, $slashDividerPos );
+			$pageLangCode = false;
+			$isMainPage = false;
 
 			if (
-				$languageNameUtils->isSupportedLanguage( strtolower( $nsText ) ) &&
-				$out->getPageTitle() === Parser::formatPageTitle( $nsText, ':', $mainText )
+				$languageNameUtils->isSupportedLanguage(
+					LanguageCode::bcp47ToInternal( $displayTitleNsText )
+				)
 			) {
-				$out->setPageTitle( Parser::formatPageTitle( '', ':', $title->getText() ) );
+				$pageLangCode = LanguageCode::bcp47ToInternal( $displayTitleNsText );
+				$displayTitleNsText = '';
+			} elseif (
+				$languageNameUtils->isSupportedLanguage(
+					LanguageCode::bcp47ToInternal( $titleRootText )
+				)
+			) {
+				$pageLangCode = LanguageCode::bcp47ToInternal( $titleRootText );
 
-				if ( $title->isMainPage() ) {
-					$msg = $out->msg( 'pagetitle-view-mainpage' );
+				if ( $slashDividerPos !== false ) {
+					$titleTextAfterSlash = substr(
+						$displayTitleMainText,
+						$slashDividerPos + 1
+					);
 
-					if ( !$msg->isDisabled() ) {
-						$out->setHTMLTitle( $msg );
+					if ( $titleTextAfterSlash !== '' ) {
+						$displayTitleMainText = $titleTextAfterSlash;
 					}
 				}
 			}
+
+			if ( $pageLangCode === false ) {
+				return false;
+			}
+
+			$pageLang = $languageFactory->getLanguage( $pageLangCode );
+			$pageLangConverter = $languageConverterFactory
+				->getLanguageConverter( $pageLang );
+			$pageViewLang = $pageLangConverter->getPreferredVariant();
+			$siteMainPage = wfMessage( 'mainpage' )
+				->inContentLanguage()
+				->text();
+			$langMainPage = wfMessage( 'mainpage' )
+				->inLanguage( $pageLang )
+				->text();
+			$overrideMainPage = $langMainPage === $siteMainPage;
+
+			if ( $overrideMainPage ) {
+				$langMainPage = wfMessage( 'mainpage-url' )
+					->inLanguage( $pageLang )
+					->text();
+			}
+
+			if ( $title->getContentModel() !== CONTENT_MODEL_WIKITEXT ) {
+				$pageLangConverter = $languageConverterFactory
+					->getLanguageConverter(
+						$languageFactory->getLanguage( 'en' )
+					);
+				$pageViewLang = $pageLangConverter->getPreferredVariant();
+			}
+
+			if (
+				$title->isMainPage() ||
+				(
+					$displayTitleNsText === '' &&
+					$displayTitleMainText === $langMainPage
+				)
+			) {
+				$isMainPage = true;
+				$displayTitleNsText = '';
+				$displayTitleMainText = wfMessage( 'mainpage' )
+					->inLanguage( $pageViewLang )
+					->text();
+
+				if ( $overrideMainPage ) {
+					$displayTitleMainText = wfMessage( 'mainpage-url' )
+						->inLanguage( $pageViewLang )
+						->text();
+				}
+			} else {
+				$displayTitleNsText = $pageLangConverter
+					->convertNamespace( $title->getNamespace(), $pageViewLang );
+				$displayTitleMainText = $pageLangConverter
+					->translate( $displayTitleMainText, $pageViewLang );
+			}
+
+			return [
+				'display_title_ns_text' => $displayTitleNsText,
+				'display_title_main_text' => $displayTitleMainText,
+				'page_lang' => $pageLang,
+				'page_view_lang' => $pageViewLang,
+				'is_main_page' => $isMainPage,
+			];
+		}
+
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		// Remove the language tag from page display title
+		// and show the localized namespace name in display title
+		// when in view action and without {{DISPLAYTITLE: being set.
+		function onBeforePageDisplay( &$out, &$skin ) {
+			$title = $out->getTitle();
+			$titleInfo = getTitleInfo( $title );
+
+			if (
+				$out->getContext()->getActionName() !== 'view' ||
+				$titleInfo === false ||
+				$out->getMetadata()->getPageProperty( 'displaytitle' ) !== null
+			) {
+				return;
+			}
+
+			$pageTitle = Parser::formatPageTitle(
+				$titleInfo['display_title_ns_text'],
+				':',
+				$titleInfo['display_title_main_text']
+			);
+			$pageTitlePlain = Sanitizer::stripAllTags( $pageTitle );
+			$pageTitleMsg = $out->msg( 'pagetitle' )
+				->inLanguage( $titleInfo['page_view_lang'] )
+				->params( $pageTitlePlain );
+
+			if ( $titleInfo['is_main_page'] ) {
+				$pageTitleMsg = $out->msg( 'pagetitle-view-mainpage' )
+					->inLanguage( $titleInfo['page_view_lang'] )
+					->params( $pageTitlePlain );
+			}
+
+			$out->setPageTitle( $pageTitle );
+			$out->setHTMLTitle( $pageTitleMsg->text() );
+		}
+
+		$wgHooks['GetDefaultSortkey'][] = 'onGetDefaultSortkey';
+
+		// Remove language tag from default sort key.
+		function onGetDefaultSortkey( $title, &$sortkey ) {
+			$titleInfo = getTitleInfo( $title );
+
+			if ( $titleInfo === false ) {
+				return;
+			}
+
+			$sortkey = $titleInfo[ 'display_title_main_text' ];
+		}
+
+		$wgHooks['GetPreferences'][] = 'onGetPreferences';
+
+		// Add per page language preference option.
+		function onGetPreferences( $user, &$preferences ) {
+			$preferences['language']['options'] = [
+				'x-default - ' . wfMessage( 'pagelang-use-default' )->text() => 'x-default',
+			] + $preferences['language']['options'];
 		}
 
 		$wgHooks['PageContentLanguage'][] = 'onPageContentLanguage';
 
+		// Set page language based on language tag in page title.
 		function onPageContentLanguage( $title, &$pageLang, $userLang ) {
 			$service = MediaWikiServices::getInstance();
-			$languageNameUtils = $service->getLanguageNameUtils();
+			$titleInfo = getTitleInfo( $title );
 
-			if (
-				$title->inNamespaces(
-					NS_SPECIAL,
-					NS_MAIN,
-					NS_TALK,
-					NS_USER,
-					NS_USER_TALK,
-					NS_PROJECT,
-					NS_PROJECT_TALK,
-					NS_FILE,
-					NS_FILE_TALK,
-					NS_MEDIAWIKI_TALK,
-					NS_TEMPLATE,
-					NS_TEMPLATE_TALK,
-					NS_HELP,
-					NS_HELP_TALK,
-					NS_CATEGORY,
-					NS_CATEGORY_TALK
-				) ||
-				(
-					$title->isTalkPage() &&
-					$languageNameUtils->isSupportedLanguage(
-						strtolower( $title->getSubjectPage()->getNsText() )
-					)
-				)
-			) {
-				$pageLang = $service->getLanguageFactory()->getLanguage( 'zh-hant' );
+			if ( $titleInfo === false ) {
+				if ( $title->getContentModel() === CONTENT_MODEL_WIKITEXT ) {
+					$pageLang = $service->getLanguageFactory()
+						->getLanguage( 'zh-hant' );
+				}
 
 				return;
 			}
 
-			$nsTextLc = strtolower( $title->getNsText() );
+			$pageLang = $titleInfo['page_lang'];
+		}
 
-			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
-				$pageLang = $service->getLanguageFactory()->getLanguage( $nsTextLc );
+		$wgHooks['ParserAfterParse'][] = 'onParserAfterParse';
+
+		// Set displaytitle page property with the language tag removed.
+		function onParserAfterParse( $parser, &$text, $stripState ) {
+			$title = $parser->getPage();
+			$titleInfo = getTitleInfo( $title );
+
+			if (
+				$titleInfo === false ||
+				$parser->getOutput()->getPageProperty( 'displaytitle' ) !== null
+			) {
+				return;
 			}
+
+			$pageTitle = Parser::formatPageTitle(
+				$titleInfo['display_title_ns_text'],
+				':',
+				$titleInfo['display_title_main_text']
+			);
+			$pageTitlePlain = Sanitizer::stripAllTags( $pageTitle );
+
+			$parser->getOutput()
+				->setPageProperty( 'displaytitle', $pageTitlePlain );
 		}
 
 		$wgHooks['SkinTemplateNavigation::Universal'][] = 'SkinTemplateNavigation__Universal';
 
+		// Set the system message used on the namespace tabs (nstab).
 		function SkinTemplateNavigation__Universal( $skinTemplate, &$links ) {
 			$title = $skinTemplate->getRelevantTitle();
 
@@ -1037,73 +1017,84 @@ switch ( $wi->dbname ) {
 					return;
 				}
 
-				$service = MediaWikiServices::getInstance();
-				$languageNameUtils = $service->getLanguageNameUtils();
-				$nsText = $subjectPage->getNsText();
+				$subjectPageTitleInfo = getTitleInfo( $title );
+
+				if ( $subjectPageTitleInfo === false ) {
+					return;
+				}
+
 				$subjectId = $title->getNamespaceKey( '' );
 				$userCanRead = $skinTemplate->getAuthority()->probablyCan( 'read', $title );
 				$isTalk = $title->isTalkPage();
 
-				if ( $languageNameUtils->isSupportedLanguage( strtolower( $nsText ) ) ) {
-					$subjectMsg = [ 'nstab-main' ];
-
-					$links['namespaces'][$subjectId] = $skinTemplate->tabAction(
-						$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
-					);
-					$links['associated-pages'][$subjectId] = $skinTemplate->tabAction(
-						$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
-					);
+				if ( $subjectPageTitleInfo['display_title_ns_text'] !== '' ) {
+					return;
 				}
+
+				$subjectMsg = [ 'nstab-main' ];
+
+				if ( $subjectPageTitleInfo['is_main_page'] ) {
+					array_unshift( $subjectMsg, 'nstab-mainpage' );
+				}
+
+				$links['namespaces'][$subjectId] = $skinTemplate->tabAction(
+					$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
+				);
+				$links['associated-pages'][$subjectId] = $skinTemplate->tabAction(
+					$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
+				);
 			}
+		}
+
+		$wgHooks['UserGetDefaultOptions'][] = 'onUserGetDefaultOptions';
+
+		// Set the added per page language preference option as default.
+		function onUserGetDefaultOptions( &$defaultOptions ) {
+			$defaultOptions['language'] = 'x-default';
 		}
 
 		$wgHooks['UserGetLanguageObject'][] = 'onUserGetLanguageObject';
 
+		// Set the user interface language based on page by default.
 		function onUserGetLanguageObject( $user, &$code, $context ) {
-			$service = MediaWikiServices::getInstance();
-			$languageNameUtils = $service->getLanguageNameUtils();
+			$request = $context->getRequest();
 			$title = $context->getTitle();
+			$titleInfo = getTitleInfo( $title );
 
-			if ( $user->isRegistered() || !$title ) {
+			if (
+				$request->getRawVal( 'uselang' ) ||
+				!$title
+			) {
+				return;
+			}
+
+			$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
+			$userUseDefaultLang = !$user->isRegistered() ||
+				$userOptionsLookup->getOption( $user, 'language' ) === 'x-default';
+
+			if ( !$userUseDefaultLang ) {
 				return;
 			}
 
 			if (
-				$title->inNamespaces(
-					NS_SPECIAL,
-					NS_MAIN,
-					NS_TALK,
-					NS_USER,
-					NS_USER_TALK,
-					NS_PROJECT,
-					NS_PROJECT_TALK,
-					NS_FILE,
-					NS_FILE_TALK,
-					NS_MEDIAWIKI_TALK,
-					NS_TEMPLATE,
-					NS_TEMPLATE_TALK,
-					NS_HELP,
-					NS_HELP_TALK,
-					NS_CATEGORY,
-					NS_CATEGORY_TALK
-				) ||
-				(
-					$title->isTalkPage() &&
-					$languageNameUtils->isSupportedLanguage(
-						strtolower( $title->getSubjectPage()->getNsText() )
-					)
-				)
+				$titleInfo === false ||
+				$title->isSpecialPage() ||
+				$title->getContentModel() !== CONTENT_MODEL_WIKITEXT
 			) {
 				$code = 'zh-hant';
 
 				return;
 			}
 
-			$nsTextLc = strtolower( $title->getNsText() );
+			$code = RequestContext::sanitizeLangCode( $titleInfo['page_view_lang'] );
+		}
 
-			if ( $languageNameUtils->isSupportedLanguage( $nsTextLc ) ) {
-				$code = $nsTextLc;
-			}
+		break;
+	case 'towerworldwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $out ) {
+			$out->addMeta( 'theme-color', '#2fd991' );
 		}
 
 		break;
@@ -1159,6 +1150,41 @@ switch ( $wi->dbname ) {
 	case 'whentheycrywiki':
 		$wgGalleryOptions['imageWidth'] = 200;
 		$wgGalleryOptions['imageHeight'] = 200;
+
+		break;
+	case 'wikigeniuswiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $output ) {
+			$output->addHeadItem( 'script-schema-ldjson', Html::rawElement( 'script', [ 'type' => 'application/ld+json' ], <<<END
+				{
+				  "@context": "https://schema.org",
+				  "@type": "Organization",
+				  "name": "WikiGenius",
+				  "url": "https://wikigenius.org/",
+				  "logo": "https://static.wikitide.net/wikigeniuswiki/6/68/Wikigenius_logo_02.png",
+				  "foundingDate": "2023-07-22",
+				  "founder": {
+				    "@type": "Person",
+				    "name": "Shovon Ahmed",
+				    "sameAs": [
+				      "https://g.co/kgs/VEEEjKG",
+				      "https://www.google.com/search?kgmid=/g/11r3_4dnj8"
+				    ]
+				  },
+				  "sameAs": [
+				    "https://www.facebook.com/profile.php?id=61574894462519",
+				    "https://www.instagram.com/wiki.genius/",
+				    "https://www.linkedin.com/company/wikigenius10/"
+				  ],
+				  "address": {
+				    "@type": "PostalAddress",
+				    "addressRegion": "Florida",
+				    "addressCountry": "United States"
+				  }
+				}
+			END ) );
+		}
 
 		break;
 	case 'genshinimpactwiki':

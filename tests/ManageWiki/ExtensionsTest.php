@@ -2,52 +2,55 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Constraints\BaseConstraint;
+
 class ExtensionsTest extends ManageWikiTestCase {
 
-	public function getSchema(): array {
+	public function getSchema(): object {
 		$installOrRemove = [
-			'type' => 'array',
+			'type' => 'object',
 			'additionalProperties' => false,
 			'properties' => [
 				'mwscript' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'mapped to script path => array of options.',
 				],
 				'namespaces' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => "array of which namespaces and namespace data to install with extension; 'remove' only needs namespace ID.",
 					'patternProperties' => [
 						'^[A-Z][A-Za-z_]+$' => [
-							'type' => 'array',
+							'type' => 'object',
 						],
 					],
 				],
 				'permissions' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'array of which permissions to install with extension.',
 					'properties' => [
 						'type' => 'array',
 					]
 				],
 				'settings' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'array of ManageWikiSettings to modify when the extension is enabled, mapped variable => value.',
 					'patternProperties' => [
 						self::REGEX_CONFIG => []
 					],
 				],
 				'sql' => [
-					'type' => 'array',
+					'type' => 'object',
 					'description' => 'array of sql files to install with extension, mapped table name => sql file path.',
 				],
 			],
 		];
-		return [
-			'type' => 'array',
+
+		return BaseConstraint::arrayToObjectRecursive( [
+			'type' => 'object',
 			'additionalProperties' => false,
 			'patternProperties' => [
 				'^[a-z0-9_-]+$' => [
-					'type' => 'array',
+					'type' => 'object',
 					'additionalProperties' => false,
 					'properties' => [
 						'name' => [
@@ -87,7 +90,7 @@ class ExtensionsTest extends ManageWikiTestCase {
 							],
 						],
 						'requires' => [
-							'type' => 'array',
+							'type' => 'object',
 							'additionalProperties' => false,
 							'properties' => [
 								'articles' => [
@@ -155,19 +158,16 @@ class ExtensionsTest extends ManageWikiTestCase {
 					],
 				],
 			],
-		];
+		] );
 	}
 
 	/** @covers $wgManageWikiExtensions */
 	public function testManageWikiExtensions() {
-		global $wgManageWikiExtensions, $wi, $IP;
-		define( 'MW_VERSION', null );
-
-		$IP = '';
+		global $wgManageWikiExtensions, $wi;
 		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiExtensions.php';
-		$this->assertSchema( $wgManageWikiExtensions );
+		$this->assertSchema( BaseConstraint::arrayToObjectRecursive( $wgManageWikiExtensions ) );
 	}
 
 	/** @inheritDoc */

@@ -16,8 +16,8 @@ $wgMajorSiteNoticeID = 91;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-/*
- $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+
+/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -27,21 +27,21 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	);
 
 	$siteNotice .= <<<EOF
-		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !important;">
 			<tbody>
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 					<tr>
 						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
 						<td>
 							<div style="font-weight: bold; color: black;">
-								Server maintenance
+								Server maintenance ongoing
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On March 5th, 2025 from 18:45 until 20:45 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
+								Miraheze is currently conducting server maintenance until 16:00 UTC. During this time, some images may fail to load. Editing remains unaffected.
 							</div>
 						</td>
 					</tr>
@@ -49,8 +49,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-}
-*/
+} */
 
 // }
 
@@ -87,7 +86,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		EOF;
 	}
 } */
-
+/*
 // LE Domain sitenotice
 $LEWikis = [
 	"archivesofhavnorwiki",
@@ -103,7 +102,6 @@ $LEWikis = [
 	"decimatedrivewiki",
 	"echoeswiki",
 	"ekumenwiki",
-	"electowikiwiki",
 	"evilgeniuswiki",
 	"exmormonwiki",
 	"fairytailwiki",
@@ -111,13 +109,10 @@ $LEWikis = [
 	"fanojowiki",
 	"farthestfrontierwiki",
 	"ff8wiki",
-	"hastursnotebookwiki",
 	"hellowhirledwiki",
 	"empireinflameswiki",
-	"holostarswiki",
 	"iceriawiki",
 	"wandelenwiki",
-	"elthleadwiki",
 	"lotrminecraftmodwiki",
 	"lotrruwiki",
 	"magistrowiki",
@@ -133,9 +128,7 @@ $LEWikis = [
 	"richterianwiki",
 	"rodzinkaplwiki",
 	"sptwikiwiki",
-	"terraformingwiki",
 	"thegreatwarwiki",
-	"thestarsarerightwiki",
 	"transgenderwiki",
 	"vilexiawiki",
 	"voecwiki",
@@ -147,7 +140,6 @@ $LEWikis = [
 	"wonderfuleverydaywiki",
 	"worldlesswiki",
 	"yepediawiki",
-	"z1randomizerwiki"
 ];
 if ( in_array( $wgDBname, $LEWikis, true ) ) {
 	$wgHooks['SiteNoticeAfter'][] = 'wfLESiteNotice';
@@ -181,3 +173,4 @@ EOF;
 	}
 }
 unset( $LEWikis );
+*/
