@@ -2818,7 +2818,7 @@ $wgConf->settings += [
 				/** Fandom */
 				'interwiki' => 'fandom',
 				'url' => 'https://$2.fandom.com/wiki/$1',
-				
+				'urlInt' => 'https://$2.fandom.com/$3/wiki/$1',
 				'baseTransOnly' => true,
 			],
 			'miraheze' => [
