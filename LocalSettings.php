@@ -2836,7 +2836,7 @@ $wgConf->settings += [
 				'baseTransOnly' => true,
 			],
 			'wiki_gg' => [
-				/** WikiTide */
+				/** Wiki.gg */
 				'interwiki' => 'wgg',
 				'url' => 'https://$2.wiki.gg/wiki/$1',
 				'urlInt' => 'https://$2.wiki.gg/$3/wiki/$1',	
