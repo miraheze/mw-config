@@ -5481,6 +5481,10 @@ $wgConf->settings += [
 			'bureaucrat',
 			'consul',
 		],
+		'+ultimatelevelbuilderwiki' => [
+			'editemailconfirmedprotected',
+			'editextendedconfirmedprotected',
+		],
 		'+vnenderbotwiki' => [
 			'template',
 			'extendedconfirmed',
@@ -5594,6 +5598,10 @@ $wgConf->settings += [
 		'testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
+		],
+		'ultimatelevelbuilderwiki' => [
+			'editemailconfirmedprotected',
+			'editextendedconfirmedprotected',
 		],
 		'trwdeploymentwiki' => [
 			'bureaucrat',
