@@ -2835,6 +2835,13 @@ $wgConf->settings += [
 				'dbname' => '$2wiki',
 				'baseTransOnly' => true,
 			],
+			'wiki_gg' => [
+				/** Wiki.gg */
+				'interwiki' => 'wgg',
+				'url' => 'https://$2.wiki.gg/wiki/$1',
+				'urlInt' => 'https://$2.wiki.gg/$3/wiki/$1',	
+				'baseTransOnly' => true,
+			],
 		],
 		'+utgwiki' => [
 			'translate' => [
