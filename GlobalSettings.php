@@ -640,8 +640,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 		],
 	];
 
-	if ( $wgDBname !== 'commonswiki' ||
-		$wgDBname !== 'gpcommonswiki' ||
+	if ( $wgDBname !== 'commonswiki' &&
+		$wgDBname !== 'gpcommonswiki' &&
 		$wgDBname !== 'needforspeedwiki'
 	) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
