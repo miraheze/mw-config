@@ -5393,6 +5393,10 @@ $wgConf->settings += [
 		'+csydeswiki' => [
 			'editblacklisted',
 		],
+	    '+cloudcrafterwiki' => [
+            'editconsulprotected',
+            'editbureaucratprotected',
+        ],
 		'+devwiki' => [
 			'editinterface',
 		],
@@ -5535,6 +5539,10 @@ $wgConf->settings += [
 			'editstaffprotected',
 			'edittemplateprotected',
 		],
+	    'cloudcrafterwiki' => [
+            'editconsulprotected',
+            'editbureaucratprotected',
+        ],
 		'csydeswiki' => [
 			'editblacklisted',
 		],
