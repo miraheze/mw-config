@@ -2583,6 +2583,8 @@ $wgConf->settings += [
 	// GlobalUsage
 	'wgGlobalUsageDatabase' => [
 		'default' => 'commonswiki',
+	    'cloudcraftercommonswiki' => 'cloudcraftercommonswiki',
+	    'cloudcrafterwiki' => 'cloudcraftercommonswiki',
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
@@ -2593,7 +2595,9 @@ $wgConf->settings += [
 	],
 	'wgGlobalUsageSharedRepoWiki' => [
 		'default' => false,
-		'gpcommonswiki' => 'gpcommonswiki',
+		'cloudcraftercommonswiki' => 'cloudcraftercommonswiki',
+	    'cloudcrafterwiki' => 'cloudcraftercommonswiki',
+	    'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
 	],
