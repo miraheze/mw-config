@@ -5371,6 +5371,13 @@ $wgConf->settings += [
 			'cg',
 			'sysop',
 		],
+	    '+cloudcrafterwiki' => [
+	        'editconsulprotected',
+            'editbureaucratprotected',
+	        'editfounderprotected',
+	        'editstaffprotected',
+			'edittemplateprotected',
+		],
 		'+cmgwiki' => [
 			'bureaucrat',
 			'sysop',
@@ -5393,10 +5400,6 @@ $wgConf->settings += [
 		'+csydeswiki' => [
 			'editblacklisted',
 		],
-	    '+cloudcrafterwiki' => [
-            'editconsulprotected',
-            'editbureaucratprotected',
-        ],
 		'+devwiki' => [
 			'editinterface',
 		],
@@ -5526,6 +5529,13 @@ $wgConf->settings += [
 		'cgwiki' => [
 			'cg'
 		],
+	    '+cloudcrafterwiki' => [
+	        'editconsulprotected',
+            'editbureaucratprotected',
+	        'editfounderprotected',
+	        'editstaffprotected',
+			'edittemplateprotected',
+		],
 		'codinghutwiki' => [
 			'editbureaucratprotected',
 			'experiencedcodinghutter',
@@ -5539,10 +5549,6 @@ $wgConf->settings += [
 			'editstaffprotected',
 			'edittemplateprotected',
 		],
-	    'cloudcrafterwiki' => [
-            'editconsulprotected',
-            'editbureaucratprotected',
-        ],
 		'csydeswiki' => [
 			'editblacklisted',
 		],
