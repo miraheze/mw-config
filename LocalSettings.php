@@ -5493,6 +5493,10 @@ $wgConf->settings += [
 		'+weltseelewiki' => [
 			'editresearcherprotected',
 		],
+		'+xyywiki' => [
+			'editautopatrolprotected',
+			'edittechprotected',
+		],
 		'+ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -5609,6 +5613,10 @@ $wgConf->settings += [
 		],
 		'weltseelewiki' => [
 			'editresearcherprotected',
+		],
+		'xyywiki' => [
+			'editautopatrolprotected',
+			'edittechprotected',
 		],
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
