@@ -3111,8 +3111,8 @@ $wgManageWikiExtensions = [
 		'section' => 'other',
 		'install' => [
 			'sql' => [
-				'mws_title_index' => 'extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_title_index.sql',
-				'mws_user_index' => 'extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mws_user_index.sql',
+				'mws_title_index' => 'extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mysql/mws_title_index.sql',
+				'mws_user_index' => 'extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mysql/mws_user_index.sql',
 			],
 		],
 	],
