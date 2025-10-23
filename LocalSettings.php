@@ -3433,7 +3433,6 @@ $wgConf->settings += [
 			'templatestyles',
 			'textextracts',
 			'thanks',
-			'timedmediahandler',
 			'urlshortener',
 			'wikiseo',
 		],
