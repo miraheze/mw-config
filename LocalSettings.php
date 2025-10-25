@@ -6102,6 +6102,12 @@ $wgConf->settings += [
 	'wgTmhEnableMp4Uploads' => [
 		'default' => false,
 	],
+	'wgTmhFluidsynthLocation' => [
+		'default' => '/usr/bin/fluidsynth',
+	],
+	'wgTmhSoundfontLocation' => [
+		'default' => '/usr/share/sounds/sf2/FluidR3_GM.sf2',
+	],
 
 	// Timeless
 	'wgTimelessBackdropImage' => [
