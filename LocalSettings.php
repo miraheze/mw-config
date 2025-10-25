@@ -5371,6 +5371,13 @@ $wgConf->settings += [
 			'cg',
 			'sysop',
 		],
+	    '+cloudcrafterwiki' => [
+	        'editconsulprotected',
+            'editbureaucratprotected',
+	        'editfounderprotected',
+	        'editstaffprotected',
+			'edittemplateprotected',
+		],
 		'+cmgwiki' => [
 			'bureaucrat',
 			'sysop',
@@ -5525,6 +5532,13 @@ $wgConf->settings += [
 		],
 		'cgwiki' => [
 			'cg'
+		],
+	    '+cloudcrafterwiki' => [
+	        'editconsulprotected',
+            'editbureaucratprotected',
+	        'editfounderprotected',
+	        'editstaffprotected',
+			'edittemplateprotected',
 		],
 		'codinghutwiki' => [
 			'editbureaucratprotected',
