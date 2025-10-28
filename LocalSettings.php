@@ -3078,7 +3078,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgLakeusWikiDefaultColorScheme' => [
-		'default' => ''
+		'default' => '',
 		'hellmetwiki' => 'corge'
 	]
 
@@ -3526,19 +3526,9 @@ $wgConf->settings += [
 				'suppressrevision' => true,
 				'viewsuppressed' => true,
 			],
-			'steward' => array_merge(
-				array_fill_keys(
-				        array_unique(
-				            array_merge(
-				                ...array_values($GLOBALS['wgRestrictionLevels'] ?? [])
-				            )
-				        ),
-						true
-			    ),
-				[
-					'userrights' => true,
-				]
-			),
+			'steward' => [
+				'userrights' => true,
+			],
 			'user' => [
 				'mwoauthmanagemygrants' => true,
 				'sendemail' => false,
