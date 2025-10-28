@@ -3077,6 +3077,10 @@ $wgConf->settings += [
 	'wgLakeusShowStickyTOC' => [
 		'default' => false,
 	],
+	'wgLakeusWikiDefaultColorScheme' => [
+		'default' => ''
+		'hellmetwiki' => 'corge'
+	]
 
 	// Language
 	'wgLanguageCode' => [
