@@ -3526,9 +3526,19 @@ $wgConf->settings += [
 				'suppressrevision' => true,
 				'viewsuppressed' => true,
 			],
-			'steward' => [
-				'userrights' => true,
-			],
+			'steward' => array_merge(
+				array_fill_keys(
+				        array_unique(
+				            array_merge(
+				                ...array_values($GLOBALS['wgRestrictionLevels'] ?? [])
+				            )
+				        ),
+						true
+			    ),
+				[
+					'userrights' => true,
+				]
+			),
 			'user' => [
 				'mwoauthmanagemygrants' => true,
 				'sendemail' => false,
