@@ -109,11 +109,6 @@ $wgConf->settings += [
 		'+metawiki' => [ 'steward', 'techteam' ],
 	],
 
-	'wgParserEnableUserLanguage' => [
-		'default' => false,
-		'utgwiki' => true,
-	],
-
 	// 3D
 	'wg3dProcessor' => [
 		'ext-3d' => [
