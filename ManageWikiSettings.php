@@ -1987,15 +1987,15 @@ $wgManageWikiSettings = [
 		'help' => 'Load CSS and JavaScript to enhance the details and summary tags, causing them to behave like elements with the mw-collapsible class and be styled like wikitables.',
 		'requires' => [],
 	],
-    'wgParserEnableUserLanguage' => [
-	    'name' => 'Enable USERLANGUAGE Magic Word',
-	    'from' => 'mediawiki',
-	    'type' => 'check',
-	    'overridedefault' => false,
-	    'global' => true,
-	    'help' => 'If enabled, the <nowiki>{{USERLANGUAGE}}</nowiki> magic word will return the actual interface language of the viewer.',
-        'section' => 'parserfunctions',
-	    'requires' => [],
+	'wgParserEnableUserLanguage' => [
+		'name' => 'Enable USERLANGUAGE Magic Word',
+		'from' => 'mediawiki',
+		'type' => 'check',
+		'overridedefault' => false,
+		'global' => true,
+		'help' => 'If enabled, the <nowiki>{{USERLANGUAGE}}</nowiki> magic word will return the actual interface language of the viewer.',
+		'section' => 'parserfunctions',
+		'requires' => [],
 	],
         
 	// Media/File
