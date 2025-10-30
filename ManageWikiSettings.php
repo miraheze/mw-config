@@ -1996,7 +1996,7 @@ $wgManageWikiSettings = [
 	    'help' => 'If enabled, the <nowiki>{{USERLANGUAGE}}</nowiki> magic word will return the actual interface language of the viewer.',
         'section' => 'parserfunctions',
 	    'requires' => [],
-	]
+	],
         
 	// Media/File
 	'wgEnableUploads' => [
