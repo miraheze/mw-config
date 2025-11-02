@@ -420,7 +420,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'other',
-		'help' => 'Enables or disables the OpenGraph meta tags'
+		'help' => 'Enables or disables the OpenGraph meta tags',
 		'requires' => [],
 	],
 	'wgDisplayFeedsInSidebar' => [
