@@ -415,11 +415,12 @@ $wgManageWikiSettings = [
 		],
 	],
 	'wgPageImagesOpenGraph' => [
-		'name' => 'Enables or disables the OpenGraph meta tags',
+		'name' => 'OpenGraph meta tags',
 		'from' => 'pageimages',
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'other',
+		'help' => 'Enables or disables the OpenGraph meta tags'
 		'requires' => [],
 	],
 	'wgDisplayFeedsInSidebar' => [
