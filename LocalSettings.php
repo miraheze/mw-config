@@ -4795,6 +4795,9 @@ $wgConf->settings += [
 	'wgPageImagesLeadSectionOnly' => [
 		'default' => false
 	],
+	'wgPageImagesOpenGraph' => [
+		'default' => true
+	],
 
 	// Pagelang
 	'wgPageLanguageUseDB' => [
