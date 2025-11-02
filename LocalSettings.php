@@ -3078,8 +3078,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgLakeusWikiDefaultColorScheme' => [
-		'default' => '',
-		'hellmetwiki' => 'corge'
+		'default' => 'light',
 	]
 
 	// Language
