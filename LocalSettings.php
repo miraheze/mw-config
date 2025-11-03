@@ -3079,7 +3079,7 @@ $wgConf->settings += [
 	],
 	'wgLakeusWikiDefaultColorScheme' => [
 		'default' => 'light',
-	]
+	],
 
 	// Language
 	'wgLanguageCode' => [
