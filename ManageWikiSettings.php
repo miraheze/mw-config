@@ -4182,7 +4182,7 @@ $wgManageWikiSettings = [
 			'OS' => 'os',
 		],
 		'section' => 'styling',
-		'help' => 'Determine the default color scheme of the wiki when choosing "Use wiki default" in Preferences.'
+		'help' => 'Determine the default color scheme of the wiki when choosing "Use wiki default" in Preferences.',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
