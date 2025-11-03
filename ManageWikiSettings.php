@@ -4163,6 +4163,20 @@ $wgManageWikiSettings = [
 		'help' => 'Shows the sticky TOC.',
 		'requires' => [],
 	],
+	'wgLakeusWikiDefaultColorScheme' => [
+		'name' => 'Lakeus Theme Default',
+		'from' => 'lakeus',
+		'type' => 'list',
+		'options' => [
+			'os' => 'os',
+			'dark' => 'dark',
+			'light' => 'light',
+		],
+		'overridedefault' => 'os',
+		'section' => 'styling',
+		'help' => 'Default color scheme when choosing "Use wiki default" in Preferences.',
+		'requires' => [],
+	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
 		'from' => 'metrolook',
