@@ -4182,7 +4182,7 @@ $wgManageWikiSettings = [
 			'OS' => 'os',
 		],
 		'section' => 'styling',
-		'help' => 'Determine the default color scheme of the wiki when choosing "Use wiki default" in Preferences.'
+		'help' => 'Determine the default color scheme of the wiki when choosing "Use wiki default" in Preferences.',
 	],
 	'wgMetrolookDownArrow' => [
 		'name' => 'Metrolook Down Arrow',
@@ -4612,6 +4612,20 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'styling',
 		'help' => 'Allow creating sidebars that will be shown on pages in specific categories.',
+		'requires' => [],
+	],
+	'wgMirageTheme' => [
+		'name' => 'Mirage Theme',
+		'from' => 'mirage',
+		'type' => 'list',
+		'options' => [
+			'Use Theme Extension' => false,
+			'Light Mode (Neutral)' => 'Neutral',
+			'Dark Mode (DarkMirage)' => 'DarkMirage',
+		],
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'The theme to use for the Mirage skin.',
 		'requires' => [],
 	],
 

@@ -4237,6 +4237,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// Mirage
+	'wgMirageTheme' => [
+		'default' => false,
+	],
+
 	// MirahezeMagic
 	'wgMirahezeMagicAccessIdsMap' => [
 		'default' => [
