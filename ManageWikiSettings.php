@@ -4164,7 +4164,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgLakeusWikiDefaultColorScheme' => [
-		'name' => 'Lakeus Theme Default',
+		'name' => 'Lakeus Default Theme',
 		'from' => 'lakeus',
 		'type' => 'list',
 		'options' => [
@@ -4172,7 +4172,7 @@ $wgManageWikiSettings = [
 			'dark' => 'dark',
 			'light' => 'light',
 		],
-		'overridedefault' => 'os',
+		'overridedefault' => 'light',
 		'section' => 'styling',
 		'help' => 'Default color scheme when choosing "Use wiki default" in Preferences.',
 		'requires' => [],
