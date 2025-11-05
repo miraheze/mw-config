@@ -3077,6 +3077,9 @@ $wgConf->settings += [
 	'wgLakeusShowStickyTOC' => [
 		'default' => false,
 	],
+	'wgLakeusWikiDefaultColorScheme' => [
+		'default' => 'light',
+	],
 
 	// Language
 	'wgLanguageCode' => [
