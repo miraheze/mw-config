@@ -5069,6 +5069,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+dappervolkwiki' => [
+			'vector-theme' => 'os',
+		],
 		'+dccomicswiki' => [
 			'visualeditor-newwikitext' => 1,
 			'usebetatoolbar' => 0,
