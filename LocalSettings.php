@@ -4235,6 +4235,12 @@ $wgConf->settings += [
 	],
 
 	// Mirage
+	'wgMirageEnableImageWordmark' => [
+		'default' => true,
+	],
+	'wgMirageHiddenRightRailModules' => [
+		'default' => [],
+	],
 	'wgMirageTheme' => [
 		'default' => false,
 	],
