@@ -3418,6 +3418,9 @@ $wgConf->settings += [
 		'default' => '/srv/mediawiki/cache',
 	],
 	'wgManageWikiExtensionsDefault' => [
+		// WARNING: When adding a new extension here, please check whether there are any SQL files that need to be run
+		// during installation! The installation steps defined in ManageWikiExtensions will not be executed here.
+		// Instead, the relevant SQL files should be added to $wgCreateWikiSQLFiles (see also T14385 and T14400).
 		'default' => [
 			'categorytree',
 			'cite',
