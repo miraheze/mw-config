@@ -4238,6 +4238,12 @@ $wgConf->settings += [
 	],
 
 	// Mirage
+	'wgMirageEnableImageWordmark' => [
+		'default' => true,
+	],
+	'wgMirageHiddenRightRailModules' => [
+		'default' => [],
+	],
 	'wgMirageTheme' => [
 		'default' => false,
 	],
@@ -5071,6 +5077,9 @@ $wgConf->settings += [
 			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
+		],
+		'+dappervolkwiki' => [
+			'vector-theme' => 'os',
 		],
 		'+dccomicswiki' => [
 			'visualeditor-newwikitext' => 1,
