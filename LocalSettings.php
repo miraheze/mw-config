@@ -4599,6 +4599,14 @@ $wgConf->settings += [
 		'default' => [],
 	],
 
+	// Monaco
+	'wgMonacoAllowUseTheme' => [
+		'default' => true,
+	],
+	'wgMonacoTheme' => [
+		'default' => 'sapphire',
+	],
+
 	// MsCatSelect vars
 	'wgMSCS_WarnNoCategories' => [
 		'default' => true,
