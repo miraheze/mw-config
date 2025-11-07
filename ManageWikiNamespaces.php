@@ -187,7 +187,7 @@ $wgManageWikiNamespacesAdditional = [
 		'from' => 'commentstreams',
 		'type' => 'check',
 		'main' => true,
-		'talk' => false,
+		'talk' => true,
 		'excluded' => [],
 		'overridedefault' => array_merge(
 			array_fill_keys( $wgContentNamespaces, true ),
