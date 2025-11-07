@@ -1967,14 +1967,15 @@ $wgConf->settings += [
 				],
 			],
 		],
-		'100bangaiwiki' => [
+		'100bangaiwiki',
+		'snxyzmetawiki' => [
 			'hostedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
-					"width" => "110",
+					"height" => "36",
+					"width" => "118",
 				],
 			],
 			'miraheze' => [
@@ -1982,8 +1983,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "45",
-					"width" => "45",
+					"height" => "36",
+					"width" => "36",
 				],
 			],
 			'poweredby' => [
@@ -2011,8 +2012,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
-					"width" => "110",
+					"height" => "36",
+					"width" => "118",
 				],
 				'indiewikifed' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/a/a2/IWF_Footer.svg',
@@ -2027,8 +2028,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "45",
-					"width" => "45",
+					"height" => "36",
+					"width" => "36",
 				],
 			],
 			'poweredby' => [
@@ -2056,8 +2057,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
-					"width" => "110",
+					"height" => "36",
+					"width" => "118",
 				],
 			],
 			'miraheze' => [
@@ -2065,8 +2066,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "45",
-					"width" => "45",
+					"height" => "36",
+					"width" => "36",
 				],
 			],
 			'poweredby' => [
