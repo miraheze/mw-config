@@ -321,6 +321,8 @@ foreach ( $wi->getAllowedDomains() as $domain ) {
 
 // DataDump
 $wgDataDumpFileBackend = 'miraheze-swift';
+// T14516 - disable retries
+$wgDataDumpAllowRetries = false;
 
 $wgDataDump = [
 	'xml' => [
