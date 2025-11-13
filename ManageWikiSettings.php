@@ -2414,7 +2414,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'The database name for the wiki to allow to use this wiki as the file repository for that wiki. This value must be a valid Miraheze-hosted wiki database.',
+		'help' => 'The database name of the wiki that will use this wiki as its file repository. This value must be a valid Miraheze-hosted wiki database.',
 		'requires' => [
 			'visibility' => [
 				'state' => 'public',
@@ -2428,7 +2428,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'The database name for the wiki to use as the file repository. This value must be a valid Miraheze-hosted wiki database. The databse in this field will be used for granting permission from the client database. This <b>can not</b> be a private wiki database.',
+		'help' => 'The database name for the wiki to use as the file repository. This value must be a valid Miraheze-hosted wiki database. The database in this field will be used for granting permission from the client database. This <b>can not</b> be a private wiki database.',
 		'requires' => [],
 	],
 	'wmgEnableSharedUploads' => [
