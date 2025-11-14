@@ -965,3 +965,6 @@ $wgHTTPImportTimeout = 50;
 
 // Notifications
 $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
+
+// RecentChanges
+$wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;

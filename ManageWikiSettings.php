@@ -3012,6 +3012,22 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wmgDefaultRecentChangesDays' => [
+		'name' => 'Default Recent Changes Days',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'integer',
+		'minint' => 1,
+		'maxint' => 360,
+		'overridedefault' => 7,
+		'section' => 'recentchanges',
+		'help' => 'Default amount of days to show at Special:RecentChanges. Users can override this at Special:Preferences.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
 	'wgImplicitGroups' => [
 		'name' => 'Implicit Groups',
 		'from' => 'mediawiki',
