@@ -5298,7 +5298,8 @@ $wgConf->settings += [
 		'default' => 50,
 	],
 	'wgRCMaxAge' => [
-		'default' => 180 * 24 * 3600,
+		// 30 days
+		'default' => 30 * 86400,
 	],
 	'wgRCLinkDays' => [
 		'default' => [ 1, 3, 7, 14, 30 ],
