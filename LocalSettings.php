@@ -5309,6 +5309,9 @@ $wgConf->settings += [
 	'wgUseRCPatrol' => [
 		'default' => true,
 	],
+	'wmgDefaultRecentChangesDays' => [
+		'default' => 7,
+	],
 
 	// ReportIncident
 	'wgReportIncidentAdministratorsPage' => [
