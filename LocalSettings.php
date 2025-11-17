@@ -4854,7 +4854,10 @@ $wgConf->settings += [
 		'gpcommonswiki' => true,
 	],
 	'wgPageImagesLeadSectionOnly' => [
-		'default' => false
+		'default' => false,
+	],
+	'wgPageImagesOpenGraph' => [
+		'default' => true,
 	],
 
 	// Pagelang

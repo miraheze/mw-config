@@ -1655,6 +1655,15 @@ $wgManageWikiSettings = [
 		'help' => 'Uncheck if the PageImages extension should take into account images from all sections',
 		'requires' => [],
 	],
+	'wgPageImagesOpenGraph' => [
+		'name' => 'PageImages Enable OpenGraph',
+		'from' => 'pageimages',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'seo',
+		'help' => 'Controls whether OpenGraph meta tags should be added to the page by PageImages.',
+		'requires' => [],
+	],
 
 	// Maps (E.G navigation)
 	'wgKartographerWikivoyageMode' => [
