@@ -7471,7 +7471,7 @@ if ( $cwDeleted ) {
 	if ( MW_ENTRY_POINT === 'cli' ) {
 		wfHandleDeletedWiki();
 	} else {
-		define( 'MW_FINAL_SETUP_CALLBACK', 'wfHandleDeletedWiki' );
+		$wgHooks['BeforeInitialize'][] = 'wfHandleDeletedWiki';
 	}
 }
 
