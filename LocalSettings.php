@@ -5202,6 +5202,7 @@ $wgConf->settings += [
 			'thumbsize' => 3,
 		],
 		'+stopitslenderwiki' => [
+			'minerva-theme' => 'night',
 			'vector-theme' => 'night',
 		],
 		'+zhtranswiki' => [
