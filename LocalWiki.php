@@ -762,6 +762,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'stopitslenderwiki':
+		$wgMinervaNightMode['base'] = true;
 		$wgVectorNightMode['logged_in'] = true;
 		$wgVectorNightMode['logged_out'] = true;
 		$wgVectorNightMode['beta'] = true;
