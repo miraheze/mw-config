@@ -109,6 +109,7 @@ switch ( $wi->dbname ) {
 	case 'dappervolkwiki':
 		$wgVectorNightMode['logged_in'] = true;
 		$wgVectorNightMode['logged_out'] = true;
+		$wgDplSettings['maxCategoryCount'] = 15;
 
 		break;
 	case 'dlfmwiki':
