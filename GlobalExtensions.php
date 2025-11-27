@@ -34,6 +34,7 @@ wfLoadExtensions( [
 	'ParserFunctions',
 	'ParserMigration',
 	'QuickInstantCommons',
+	'QuickSurveys',
 	// 'ReportIncident',
 	'RottenLinks',
 	'Scribunto',
