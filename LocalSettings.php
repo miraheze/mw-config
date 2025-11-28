@@ -1784,24 +1784,24 @@ $wgConf->settings += [
 				],
 			],
 		],
-		'jbcstudioswiki' => [
+		'itemasylumwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/jbcstudioswiki/f/f7/Poweredbymediawiki_badge.svg',
+					'src' => 'https://static.wikitide.net/itemasylumwiki/f/f7/Poweredbymediawiki_badge.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/jbcstudioswiki/8/81/Miraheze_badge.svg',
+					'src' => 'https://static.wikitide.net/itemasylumwiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
 				],
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/jbcstudioswiki/b/b0/Ccbysa_badge.svg',
+					'src' => 'https://static.wikitide.net/itemasylumwiki/b/b0/Ccbysa_badge.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
 				],
@@ -2547,7 +2547,7 @@ $wgConf->settings += [
 			'showDimensions' => true,
 			'mode' => 'packed',
 		],
-		'jbcstudioswiki' => [
+		'itemasylumwiki' => [
 			'imagesPerRow' => 0,
 			'imageWidth' => 120,
 			'imageHeight' => 120,
