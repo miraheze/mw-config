@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
+use MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Password\InvalidPassword;
@@ -951,6 +952,7 @@ $wgMathUseInternalRestbasePath = false;
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
 $wgHCaptchaProxy = 'http://bastion.fsslc.wtnet:8080';
+$wgCaptchaClass = HCaptcha::class;
 $wgCaptchaStorageClass = CaptchaCacheStore::class;
 $wgCaptchaRegexes[] = '/<a +href/i';
 
