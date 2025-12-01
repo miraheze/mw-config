@@ -184,6 +184,9 @@ switch ( $wi->dbname ) {
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
 		break;
+	case 'fwtdwiki':
+		$wgMinervaNightMode['base'] = true;
+		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;

@@ -5177,6 +5177,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+fwtdwiki' => [
+			'minerva-theme' => 'night',
+		],
 		'+isvwiki' => [
 			'flow-topiclist-sortby' => 'newest',
 		],
