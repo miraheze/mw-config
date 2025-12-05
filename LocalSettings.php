@@ -976,9 +976,7 @@ $wgConf->settings += [
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
-		'default' => [
-			'c2'
-		],
+		'default' => [],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
