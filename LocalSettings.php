@@ -5204,6 +5204,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+piggywiki' => [
+			'vector-theme' => 'night',
+		],
 		'+pokemonwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
