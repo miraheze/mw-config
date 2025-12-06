@@ -6607,6 +6607,10 @@ $wgConf->settings += [
 				'Special:CreateAccount',
 			],
 		],
+		'piggywiki' => [
+			'exclude' => [],
+			'include' => [],
+		],
 	],
 	'wgVectorStickyHeader' => [
 		'default' => [

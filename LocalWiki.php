@@ -686,11 +686,6 @@ switch ( $wi->dbname ) {
 		$wgVectorNightMode['logged_out'] = true;
 		$wgVectorNightMode['logged_in'] = true;
 
-		$wgVectorMaxWidthOptions = [
-			'exclude' => [],
-			'include' => [],
-		];
-
 		break;
 	case 'paneidoversewiki':
 		$wgHooks['AdminLinks'][] = 'onAdminLinks';
