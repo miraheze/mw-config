@@ -65,6 +65,9 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 			'c4' => [
 				'db181' => 0,
 			],
+			's1' => [
+				'db192' => 0,
+			],
 		],
 		'serverTemplate' => [
 			'dbname' => $wgDBname,
@@ -82,11 +85,12 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 			'db161' => '10.0.16.128',
 			'db171' => '10.0.17.119',
 			'db181' => '10.0.18.102',
+			'db192'	=> '10.0.19.170',
 		],
 		'externalLoads' => [
 			'echo' => [
 				/** where the metawiki database is located */
-				'db171' => 0,
+				'db192' => 0,
 			],
 		],
 		'readOnlyBySection' => [

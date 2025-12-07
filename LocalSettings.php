@@ -969,6 +969,7 @@ $wgConf->settings += [
 			'db161 (c2)' => 'c2',
 			'db171 (c3)' => 'c3',
 			'db181 (c4)' => 'c4',
+			'db192 (s1)' => 's1',
 		],
 		'beta' => [
 			'db172 (c1)' => 'c1',
@@ -976,7 +977,10 @@ $wgConf->settings += [
 	],
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
-		'default' => [],
+		'default' => [
+			// DO NOT USE S1! RESERVED FOR CORE DATABASES
+			's1',
+		],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
 		'default' => 'wiki',
