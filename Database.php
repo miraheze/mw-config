@@ -51,7 +51,7 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 		'sectionsByDB' => $wi->wikiDBClusters,
 		'sectionLoads' => [
 			'DEFAULT' => [
-				'db171' => 0,
+				'db192' => 0,
 			],
 			'c1' => [
 				'db151' => 0,
