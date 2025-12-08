@@ -5499,6 +5499,9 @@ $wgConf->settings += [
 		'+csydeswiki' => [
 			'editblacklisted',
 		],
+		'+damnationwiki' => [
+			'editmoderatorprotected',
+		],
 		'+devwiki' => [
 			'editinterface',
 		],
@@ -5647,6 +5650,9 @@ $wgConf->settings += [
 		],
 		'csydeswiki' => [
 			'editblacklisted',
+		],
+		'damnationwiki' => [
+			'editmoderatorprotected',
 		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
