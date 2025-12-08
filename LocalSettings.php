@@ -5236,6 +5236,9 @@ $wgConf->settings += [
 			'minerva-theme' => 'night',
 			'vector-theme' => 'night',
 		],
+		'+zenithwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+zhtranswiki' => [
 			'echo-subscriptions-email-dt-subscription' => true,
 			'echo-subscriptions-email-dt-subscription-archiving' => true,
