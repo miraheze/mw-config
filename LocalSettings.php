@@ -979,7 +979,7 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
 			// DO NOT USE S1! RESERVED FOR CORE DATABASES
-			's1',
+			's1'
 		],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
