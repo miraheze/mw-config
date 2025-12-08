@@ -3729,6 +3729,7 @@ $wgConf->settings += [
 			'global-admin' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
+				'centralauth-rename' => true,
 				'globalblock' => true,
 			],
 			'proxybot' => [
