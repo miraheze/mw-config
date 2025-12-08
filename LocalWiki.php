@@ -1198,6 +1198,12 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'zenithwiki':
+		$wgVectorNightMode['beta'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+		$wgVectorNightMode['logged_in'] = true;
+
+		break;
 	case 'genshinimpactwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgMatomoAnalyticsDisableJS = true;
