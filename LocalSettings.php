@@ -5139,6 +5139,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'wlenhancedfilters-disable' => 1,
 		],
+		'+cecuwiki' => [
+			'vector-theme' => 'os',
+		],
 		'+combatinitiationwiki' => [
 			'vector-theme' => 'os',
 		],
