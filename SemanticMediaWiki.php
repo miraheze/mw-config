@@ -110,4 +110,16 @@ if ( $wgDBname === 'constantnoblewiki' ) {
 			3007 => false,
 		]
 	);
+} elseif ( $wgDBname === 'gwikiwiki' ) {
+	$smwgNamespacesWithSemanticLinks = array_merge(
+		$smwgNamespacesWithSemanticLinks,
+		[
+			3000 => true,
+			3001 => false,
+			3002 => true,
+			3003 => false,
+			3006 => true,
+			3007 => false,
+		]
+	);
 }
