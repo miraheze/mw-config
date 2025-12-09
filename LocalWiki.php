@@ -80,6 +80,12 @@ switch ( $wi->dbname ) {
 		$wgDplSettings['allowUnlimitedCategories'] = true;
 
 		break;
+	case 'cecuwiki':
+		$wgVectorNightMode['beta'] = true;
+		$wgVectorNightMode['logged_in'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+
+		break;
 	case 'combatinitiationwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
