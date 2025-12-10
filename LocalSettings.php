@@ -5515,6 +5515,9 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
+		'+fischwiki' => [
+			'editmoderatorprotected',
+		],
 		'+gengbaikewiki' => [
 			'bureaucrat',
 		],
@@ -5663,6 +5666,9 @@ $wgConf->settings += [
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'fischwiki' => [
+			'editmoderatorprotected',
 		],
 		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
