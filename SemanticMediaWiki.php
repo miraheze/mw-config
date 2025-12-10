@@ -97,29 +97,23 @@ if ( $wgDBname === 'constantnoblewiki' ) {
 
 	$smwgQMaxInlineLimit = 750;
 } elseif ( $wgDBname === 'vanillaeuropawiki' ) {
-	$smwgNamespacesWithSemanticLinks = array_merge(
-		$smwgNamespacesWithSemanticLinks,
-		[
-			3000 => true,
-			3001 => false,
-			3002 => true,
-			3003 => false,
-			3004 => true,
-			3005 => false,
-			3006 => true,
-			3007 => false,
-		]
-	);
+	$smwgNamespacesWithSemanticLinks += [
+		3000 => true,
+		3001 => false,
+		3002 => true,
+		3003 => false,
+		3004 => true,
+		3005 => false,
+		3006 => true,
+		3007 => false,
+	];
 } elseif ( $wgDBname === 'gwikiwiki' ) {
-	$smwgNamespacesWithSemanticLinks = array_merge(
-		$smwgNamespacesWithSemanticLinks,
-		[
-			3000 => true,
-			3001 => false,
-			3002 => true,
-			3003 => false,
-			3006 => true,
-			3007 => false,
-		]
-	);
+	$smwgNamespacesWithSemanticLinks += [
+		3000 => true,
+		3001 => false,
+		3002 => true,
+		3003 => false,
+		3006 => true,
+		3007 => false,
+	];
 }
