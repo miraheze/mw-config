@@ -76,6 +76,7 @@ $wgManageWikiExtensions = [
 		'name' => 'VisualEditor',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:VisualEditor',
 		'conflicts' => false,
+		'help' => 'Note: This extension can take up to 5 minutes to fully activate due to browser caching. Try to perform a [[w:WP:REFRESH|hard refresh or cache purge]], which makes it available on your browser immediately.',
 		'requires' => [],
 		'section' => 'editors',
 	],
