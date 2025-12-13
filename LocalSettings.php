@@ -409,6 +409,7 @@ $wgConf->settings += [
 	'wgCategoryCollation' => [
 		// updateCollation.php should be ran after changing
 		'default' => 'uppercase',
+		'extoniawiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
 		'levyraatiwikiwiki' => 'numeric',
 		'historikawiki' => 'uca-cs',
