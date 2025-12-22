@@ -1110,7 +1110,6 @@ class MirahezeFunctions {
 
 		// Don't need a global here
 		unset( $GLOBALS['globals'] );
-		
 	}
 
 	/**
