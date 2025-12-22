@@ -9,7 +9,7 @@ $defaultServer = MirahezeFunctions::getDefaultServer( $currentDatabase );
 
 if (
 	$primaryDomain !== $defaultServer &&
-	str_contains( strtoupper( $_SERVER['HTTP_HOST'] ), strtoupper( $defaultServer ) )
+	str_contains( strtolower( $_SERVER['HTTP_HOST'] ), strtolower( $defaultServer ) )
 ) {
 	header( 'Location: ' . str_replace(
 		$defaultServer, $primaryDomain,

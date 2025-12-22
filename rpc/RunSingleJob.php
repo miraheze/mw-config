@@ -21,6 +21,7 @@
  * @link https://phabricator.wikimedia.org/source/mediawiki-config/browse/master/rpc/RunSingleJob.php
  */
 
+use MediaWiki\Exception\MWExceptionHandler;
 use MediaWiki\Extension\EventBus\JobExecutor;
 use MediaWiki\MediaWikiServices;
 
@@ -56,8 +57,8 @@ ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 
 // Session consistency is not helpful here and will slow things down in some cases
-$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-$lbFactory->disableChronologyProtection();
+$chronologyProtector = MediaWikiServices::getInstance()->getChronologyProtector();
+$chronologyProtector->setEnabled( false );
 
 try {
 	$mediawiki = new MediaWiki();

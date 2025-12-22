@@ -2,18 +2,20 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Constraints\Constraint;
 use JsonSchema\Validator;
+use Miraheze\Config\Tests\Mock\MirahezeFunctions;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use stdClass;
 
 abstract class ManageWikiTestCase extends TestCase {
 
-	public const REGEX_READABLE = '^[A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+$';
+	public const REGEX_READABLE = '^(?!.*<a href=)(?!.*<br\s*>)[A-Za-z0-9 _,;:!?“”(){}*/&#<=>|\.\'\"\[\]\$-]+$';
 	public const REGEX_CONFIG = '^(wg|eg|wmg|wgex|smwg)[A-Z_][a-zA-Z0-9_]*$';
 
-	abstract public function getSchema(): array;
+	abstract public function getSchema(): object;
 
-	public function mockMirahezeFunctions(): stdClass {
+	public function mockMirahezeFunctions(): MirahezeFunctions {
 		$methods = [
 			'getSettingValue' => [],
 			'isAllOfExtensionsActive' => true,
@@ -21,8 +23,8 @@ abstract class ManageWikiTestCase extends TestCase {
 			'isExtensionActive' => true,
 		];
 
-		$mock = $this->getMockBuilder( stdClass::class )
-			->addMethods( array_keys( $methods ) )
+		$mock = $this->getMockBuilder( MirahezeFunctions::class )
+			->onlyMethods( array_keys( $methods ) )
 			->getMock();
 
 		$mock->dbname = '';
@@ -41,7 +43,7 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	public function assertSchema( $config ) {
 		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
+		$validator->validate( $config, $this->getSchema(), Constraint::CHECK_MODE_TYPE_CAST );
 
 		$this->assertTrue(
 			$validator->isValid(),
@@ -49,12 +51,12 @@ abstract class ManageWikiTestCase extends TestCase {
 		);
 	}
 
-	abstract public function configProvider(): array;
+	abstract public static function configProvider(): array;
 
-	/** @dataProvider configProvider */
+	#[DataProvider( 'configProvider' )]
 	public function testGetScheme( $config, $expected ) {
 		$validator = new Validator();
-		$validator->validate( $config, $this->getSchema() );
+		$validator->validate( $config, $this->getSchema(), Constraint::CHECK_MODE_TYPE_CAST );
 
 		$this->assertSame(
 			$expected,
@@ -69,5 +71,4 @@ abstract class ManageWikiTestCase extends TestCase {
 		}
 		return implode( "\n", $msgs );
 	}
-
 }

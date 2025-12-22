@@ -2,14 +2,17 @@
 
 namespace Miraheze\Config\Tests\ManageWiki;
 
+use JsonSchema\Constraints\BaseConstraint;
+
 class SettingsTest extends ManageWikiTestCase {
-	public function getSchema(): array {
-		return [
-			'type' => 'array',
+
+	public function getSchema(): object {
+		return BaseConstraint::arrayToObjectRecursive( [
+			'type' => 'object',
 			'additionalProperties' => false,
 			'patternProperties' => [
 				self::REGEX_CONFIG => [
-					'type' => 'array',
+					'type' => 'object',
 					'additionalProperties' => false,
 					'properties' => [
 						'associativeKey' => [
@@ -69,6 +72,10 @@ class SettingsTest extends ManageWikiTestCase {
 								[
 									'const' => 'list-multi-bool',
 									'description' => 'see above, just outputs are $this => $bool.',
+								],
+								[
+									'const' => 'list-multi-int',
+									'description' => 'see above, just saves values as a list of integers rather than strings.',
 								],
 								[
 									'const' => 'matrix',
@@ -150,10 +157,16 @@ class SettingsTest extends ManageWikiTestCase {
 							],
 						],
 						'options' => [
-							'type' => 'array',
+							'type' => 'object',
 							'patternProperties' => [
 								self::REGEX_READABLE => []
 							]
+						],
+						'minfloat' => [
+							'type' => 'number',
+						],
+						'maxfloat' => [
+							'type' => 'number',
 						],
 						'minint' => [
 							'type' => 'integer',
@@ -167,13 +180,9 @@ class SettingsTest extends ManageWikiTestCase {
 							'required' => true,
 						],
 						'requires' => [
-							'type' => 'array',
+							'type' => 'object',
 							'additionalProperties' => false,
 							'properties' => [
-								'activeusers' => [
-									'type' => 'integer',
-									'description' => 'max integer amount of active users a wiki may have in order to be able to modify this setting.',
-								],
 								'articles' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of articles a wiki may have in order to be able to modify this setting.',
@@ -195,6 +204,10 @@ class SettingsTest extends ManageWikiTestCase {
 										]
 									]
 								],
+								'files' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of files a wiki may have in order to be able to modify this setting.',
+								],
 								'pages' => [
 									'type' => 'integer',
 									'description' => 'max integer amount of pages a wiki may have in order to be able to modify this setting.',
@@ -206,34 +219,38 @@ class SettingsTest extends ManageWikiTestCase {
 										'type' => 'string'
 									]
 								],
+								'settings' => [
+									'type' => 'object',
+								],
+								'users' => [
+									'type' => 'integer',
+									'description' => 'max integer amount of users a wiki may have in order to be able to modify this setting.',
+								],
 								'visibility' => [
-									'type' => 'array',
+									'type' => 'object',
 									'additionalProperties' => false,
 									'properties' => [
+										'permissions' => [
+											'type' => 'array',
+											'description' => 'Set to an array of permissions required for the setting to be visible.',
+											'items' => [
+												'type' => 'string',
+											],
+										],
 										'state' => [
 											'type' => 'string',
-											'description' => "Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.",
+											'description' => 'Can be either \'private\' or \'public\'. If set to \'private\' this setting will only be visible on private wikis. If set to \'public\' it will only be visible on public wikis.',
 											'enum' => [
 												'private',
 												'public',
 											],
 										],
-										'permissions' => [
-											'type' => 'array',
-											'description' => "Set to an array of permissions required for the setting to be visible.",
-											'items' => [
-												'type' => 'string',
-											],
-										],
 									],
-								],
-								'settings' => [
-									'type' => 'array',
 								],
 							],
 						],
 						'script' => [
-							'type' => 'array',
+							'type' => 'object',
 							'properties' => [
 								'type' => 'array',
 								'additionalProperties' => false,
@@ -245,24 +262,23 @@ class SettingsTest extends ManageWikiTestCase {
 					],
 				],
 			],
-		];
+		] );
 	}
 
 	/** @covers $wgManageWikiSettings */
 	public function testManageWikiSettings() {
-		global $wgManageWikiSettings, $IP, $wgPasswordSender, $wmgSharedUploadDBname, $wmgUploadHostname, $wi;
-		$IP = '';
+		global $wgManageWikiSettings, $wgPasswordSender, $wmgSharedUploadDBname, $wmgUploadHostname, $wi;
 		$wgPasswordSender = '';
 		$wmgSharedUploadDBname = '';
 		$wmgUploadHostname = '';
 		$wi = $this->mockMirahezeFunctions();
 
 		require_once __DIR__ . '/../../ManageWikiSettings.php';
-		$this->assertSchema( $wgManageWikiSettings );
+		$this->assertSchema( BaseConstraint::arrayToObjectRecursive( $wgManageWikiSettings ) );
 	}
 
 	/** @inheritDoc */
-	public function configProvider(): array {
+	public static function configProvider(): array {
 		return [
 			'A valid configuration should be passed the validation.' => [
 				[

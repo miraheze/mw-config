@@ -25,9 +25,9 @@ wfLoadExtensions( [
 	'LoginNotify',
 	'ManageWiki',
 	'MatomoAnalytics',
+	'MediaModeration',
 	'MirahezeMagic',
 	'MobileDetect',
-	'NativeSvgHandler',
 	'Nuke',
 	'OATHAuth',
 	'OAuth',
@@ -47,9 +47,5 @@ wfLoadExtensions( [
 	'WikiEditor',
 	'cldr',
 ] );
-
-if ( $wi->version < 1.44 ) {
-	wfLoadExtension( 'Interwiki' );
-}
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );

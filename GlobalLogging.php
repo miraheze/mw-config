@@ -3,10 +3,12 @@
 use MediaWiki\Extension\EventBus\Adapters\Monolog\EventBusMonologHandler;
 use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\Logger\Monolog\BufferHandler;
+use MediaWiki\Logger\Monolog\ContextProcessor;
 use MediaWiki\Logger\Monolog\LogstashFormatter;
 use MediaWiki\Logger\Monolog\SyslogHandler;
 use MediaWiki\Logger\Monolog\WikiProcessor;
 use MediaWiki\Logger\MonologSpi;
+use Monolog\Handler\HandlerInterface;
 use Monolog\Handler\SamplingHandler;
 use Monolog\Handler\WhatFailureGroupHandler;
 use Monolog\Processor\PsrLogMessageProcessor;
@@ -22,18 +24,20 @@ $wmgMonologProcessors = [
 	'psr' => [
 		'class' => PsrLogMessageProcessor::class,
 	],
+	'context' => [
+		'class' => ContextProcessor::class,
+	],
 	'web' => [
 		'class' => WebProcessor::class,
 	],
 	'mhconfig' => [
-		'factory' => static function () {
-			return static function ( array $record ) {
+		'factory' => static function (): Closure {
+			return static function ( array $record ): array {
 				global $wgLBFactoryConf, $wgDBname;
 				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
-
 				return $record;
 			};
-		}
+		},
 	],
 ];
 
@@ -41,9 +45,9 @@ $wmgMonologHandlers = [];
 
 foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
 	$wmgMonologHandlers[ "graylog-$logLevel" ] = [
-		'class'     => SyslogHandler::class,
+		'class' => SyslogHandler::class,
 		'formatter' => 'logstash',
-		'args'      => [
+		'args' => [
 			// tag
 			'mediawiki',
 			// host
@@ -62,10 +66,10 @@ $wmgMonologHandlers['what-debug'] = [
 	'class'     => WhatFailureGroupHandler::class,
 	'formatter' => 'logstash',
 	'args' => [
-		static function () {
-			$provider = LoggerFactory::getProvider();
-			return array_map( [ $provider, 'getHandler' ], [ 'graylog-debug' ] );
-		}
+		static fn (): array => array_map(
+			[ LoggerFactory::getProvider(), 'getHandler' ],
+			[ 'graylog-debug' ]
+		),
 	],
 ];
 
@@ -105,15 +109,12 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	}
 
 	$opts = is_array( $opts ) ? $opts : [ 'graylog' => $opts ];
-	$opts = array_merge(
-		[
-			'graylog' => 'debug',
-			'eventbus' => false,
-			'buffer' => false,
-			'sample' => false,
-		],
-		$opts
-	);
+	$opts += [
+		'eventbus' => false,
+		'sample' => false,
+		'buffer' => false,
+		'graylog' => 'info',
+	];
 
 	$handlers = [];
 
@@ -126,7 +127,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				'args' => [
 					// EventServiceName
 					'eventgate',
-				]
+				],
 			];
 		}
 		$handlers[] = $eventBusHandler;
@@ -135,7 +136,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	// Configure Graylog handler
 	if ( $opts['graylog'] ) {
 		$level = $opts['graylog'];
-		$graylogHandler = "graylog-{$level}";
+		$graylogHandler = "graylog-$level";
 		if ( isset( $wmgMonologHandlers[ $graylogHandler ] ) ) {
 			$handlers[] = $graylogHandler;
 		}
@@ -144,43 +145,33 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts['sample'] ) {
 		$sample = $opts['sample'];
 		foreach ( $handlers as $idx => $handlerName ) {
-			$sampledHandler = "{$handlerName}-sampled-{$sample}";
-			if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
-				// Register a handler that will sample the event stream and
-				// pass events on to $handlerName for storage
-				$wmgMonologConfig['handlers'][$sampledHandler] = [
-					'class' => SamplingHandler::class,
-					'args' => [
-						static function () use ( $handlerName ) {
-							return LoggerFactory::getProvider()->getHandler(
-								$handlerName
-							);
-						},
-						$sample,
-					],
-				];
-			}
+			$sampledHandler = "$handlerName-sampled-$sample";
+			// Register a handler that will sample the event stream and
+			// pass events on to $handlerName for storage
+			$wmgMonologConfig['handlers'][$sampledHandler] ??= [
+				'class' => SamplingHandler::class,
+				'args' => [
+					static fn (): HandlerInterface =>
+						LoggerFactory::getProvider()->getHandler( $handlerName ),
+					$sample,
+				],
+			];
 			$handlers[$idx] = $sampledHandler;
 		}
 	}
 
 	if ( $opts['buffer'] ) {
 		foreach ( $handlers as $idx => $handlerName ) {
-			$bufferedHandler = "{$handlerName}-buffered";
-			if ( !isset( $wmgMonologConfig['handlers'][$bufferedHandler] ) ) {
-				// Register a handler that will buffer the event stream and
-				// pass events to the nested handler after closing the request
-				$wmgMonologConfig['handlers'][$bufferedHandler] = [
-					'class' => BufferHandler::class,
-					'args' => [
-						static function () use ( $handlerName ) {
-							return LoggerFactory::getProvider()->getHandler(
-								$handlerName
-							);
-						},
-					],
-				];
-			}
+			$bufferedHandler = "$handlerName-buffered";
+			// Register a handler that will buffer the event stream and
+			// pass events to the nested handler after closing the request
+			$wmgMonologConfig['handlers'][$bufferedHandler] ??= [
+				'class' => BufferHandler::class,
+				'args' => [
+					static fn (): HandlerInterface =>
+						LoggerFactory::getProvider()->getHandler( $handlerName ),
+				],
+			];
 			$handlers[$idx] = $bufferedHandler;
 		}
 	}
@@ -189,20 +180,15 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		// wrap the collection of handlers in a WhatFailureGroupHandler
 		// to swallow any exceptions that might leak out otherwise
 		$failureGroupHandler = 'failuregroup|' . implode( '|', $handlers );
-		if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
-			$wmgMonologConfig['handlers'][$failureGroupHandler] = [
-				'class' => WhatFailureGroupHandler::class,
-				'args' => [
-					static function () use ( $handlers ) {
-						$provider = LoggerFactory::getProvider();
-						return array_map(
-							[ $provider, 'getHandler' ],
-							$handlers
-						);
-					}
-				],
-			];
-		}
+		$wmgMonologConfig['handlers'][$failureGroupHandler] ??= [
+			'class' => WhatFailureGroupHandler::class,
+			'args' => [
+				static fn (): array => array_map(
+					[ LoggerFactory::getProvider(), 'getHandler' ],
+					$handlers
+				),
+			],
+		];
 
 		$wmgMonologConfig['loggers'][$channel] = [
 			'handlers' => [ $failureGroupHandler ],
@@ -259,12 +245,6 @@ if ( MW_ENTRY_POINT === 'cli' ) {
 	$wgDebugDumpSql = true;
 }
 
-if (
-	wfHostname() === 'mwtask151' ||
-	wfHostname() === 'mwtask161' ||
-	wfHostname() === 'mwtask171' ||
-	wfHostname() === 'mwtask181' ||
-	wfHostname() === 'test151'
-) {
+if ( str_starts_with( wfHostname(), 'mwtask' ) || wfHostname() === 'test151' ) {
 	$wgShowExceptionDetails = true;
 }

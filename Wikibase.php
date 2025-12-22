@@ -27,6 +27,7 @@ if ( $wi->isExtensionActive( 'WikibaseLexeme' ) ) {
 	$wgWBRepoSettings['entityNamespaces']['lexeme'] = 146;
 }
 
+$wgWBRepoSettings['defaultEntityNamespaces'] = false;
 $wgWBRepoSettings['entitySources'] = $entitySources;
 $wgWBRepoSettings['localEntitySourceName'] = 'local';
 $wgWBRepoSettings['entityNamespaces']['item'] = $wmgWikibaseRepoItemNamespaceID;
@@ -329,6 +330,10 @@ if ( $wgDBname === 'horimiyawiki' ) {
 			],
 		],
 	];
+}
+
+if ( $wgDBname === 'utgwiki' ) {
+	$wgWBRepoSettings['localClientDatabases'] = [ 'utgwiki' ];
 }
 
 // don't need these to be a global

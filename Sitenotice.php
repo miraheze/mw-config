@@ -16,8 +16,8 @@ $wgMajorSiteNoticeID = 91;
 
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
-/*
- $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+
+/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -27,21 +27,21 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	);
 
 	$siteNotice .= <<<EOF
-		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !imporant;">
+		<table style="width: 100%; font-size: 120%; border-left: 4px solid #fc3; background-color: #d5fdf4; border-left-color: #00af89; padding: 10px 15px; color: black !important;">
 			<tbody>
 				<div data-nosnippet style="padding-top:0.3em; padding-bottom:0.1em;">
 					<tr>
 						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
 						<td>
 							<div style="font-weight: bold; color: black;">
-								Server maintenance
+								Server maintenance ongoing
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								On March 5th, 2025 from 18:45 until 20:45 UTC we will be performing maintenance on our servers. During this time we expect intermittent outages of all services, so we highly recommend saving your edits before then.
+								Miraheze is currently conducting server maintenance until 16:00 UTC. During this time, some images may fail to load. Editing remains unaffected.
 							</div>
 						</td>
 					</tr>
@@ -49,8 +49,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-}
-*/
+} */
 
 // }
 
@@ -87,16 +86,66 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 		EOF;
 	}
 } */
+/*
+// LE Domain sitenotice
+$LEWikis = [
+	"archivesofhavnorwiki",
+	"anomalyzonewikiwiki",
+	"baharnawiki",
+	"baligawiki",
+	"balloonfightwiki",
+	"tfoswiki",
+	"binrayarchiveswiki",
+	"blackmagicwiki",
+	"boneswordwiki",
+	"clinithequewiki",
+	"decimatedrivewiki",
+	"echoeswiki",
+	"ekumenwiki",
+	"evilgeniuswiki",
+	"exmormonwiki",
+	"fairytailwiki",
+	"corsiwiki",
+	"fanojowiki",
+	"farthestfrontierwiki",
+	"ff8wiki",
+	"hellowhirledwiki",
+	"empireinflameswiki",
+	"iceriawiki",
+	"wandelenwiki",
+	"lotrminecraftmodwiki",
+	"lotrruwiki",
+	"magistrowiki",
+	"maxcapacitywiki",
+	"mockgovernmentswiki",
+	"occhygienewikiwiki",
+	"osrwikiwiki",
+	"partopediawiki",
+	"pso2ngswiki",
+	"psychoengineeringwiki",
+	"raidrushwiki",
+	"removededmsongswiki",
+	"richterianwiki",
+	"rodzinkaplwiki",
+	"sptwikiwiki",
+	"thegreatwarwiki",
+	"transgenderwiki",
+	"vilexiawiki",
+	"voecwiki",
+	"uavolunteerresourceswiki",
+	"weavefarerswiki",
+	"wikicawiki",
+	"momawiki",
+	"wizardiawiki",
+	"wonderfuleverydaywiki",
+	"worldlesswiki",
+	"yepediawiki",
+];
+if ( in_array( $wgDBname, $LEWikis, true ) ) {
+	$wgHooks['SiteNoticeAfter'][] = 'wfLESiteNotice';
 
-// Meta Tech NS sitenotice
-/* if ( $wgDBname === 'metawiki' ) {
-	$wgHooks['SiteNoticeAfter'][] = 'wfMetaSiteNotice';
-
-	function wfMetaSiteNotice( &$siteNotice, $skin ) {
+	function wfLESiteNotice( &$siteNotice, $skin ) {
 		$title = $skin->getTitle();
-		if ( $title->getNamespace() !== 1600 ) {
-			return;
-		}
 
 		$skin->getOutput()->enableOOUI();
 		$skin->getOutput()->addInlineStyle(
@@ -107,12 +156,12 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	<table style="width: 100%;">
 		<tbody>
 			<tr>
-				<td style="border-left: 4px solid #fc3; background-color: #fef6e7; padding: 10px 15px;">
+				<td style="border-left: 4px solid #000000; background-color: #ea9999; padding: 10px 15px;">
 					<div style="padding-top: 0.3em; padding-bottom: 0.1em; font-size: 100%;">
-						<img alt="OOjs UI icon web-progressive" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/OOjs_UI_icon_web-progressive.svg" decoding="async" width="35" height="35" style="float: left; margin-right: 10px;">
-						<div style="font-weight: bold;">Vacancy</div>
-						SRE is looking for Software Engineers to join our MediaWiki Team to develop code to improve the user experience of Miraheze users, build tools that allow communities to grow, and tools that support our valuable volunteers in managing a dynamic and active global community. If you think this could be you, please do have a look at the <a href="https://meta.miraheze.org/wiki/Miraheze_Vacancies#Software_Engineer_(Developer)_(MediaWiki)">the Vacancies page</a> which includes more information.
-					</div> <br /> Other vacancies are also available on that page.
+						<img alt="OOjs UI icon web-progressive" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/OOjs_UI_icon_notice.svg" decoding="async" width="35" height="35" style="float: left; margin-right: 10px;">
+						<div style="font-weight: bold;">Custom domain</div>
+						The custom domain for this wiki is currently using our DNS service which is actively being phased out, so that we may route all traffic through Cloudflare. This is an alert that unless the domain owner follows the instructions <a href="https://issue-tracker.miraheze.org/T13309">here,</a> the domain will be removed without further notice, and the wiki will revert to its original miraheze.org subdomain.
+					</div>
 				</td>
 			</tr>
 			<tr>
@@ -122,4 +171,6 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	</table>
 EOF;
 	}
-} */
+}
+unset( $LEWikis );
+*/

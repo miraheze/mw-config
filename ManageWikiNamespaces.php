@@ -30,6 +30,7 @@
  * list: adds a list of options (requires: options, which is an array in form of display => internal value).
  * list-multi: see above, just that multiple can be selected.
  * list-multi-bool: see above, just outputs are $this => $bool.
+ * list-multi-int: see above, just saves values as a list of integers rather than strings.
  * matrix: adds an array of "columns" and "rows". Columns are the top array and rows will be the values.
  * preferences: adds a drop-down selection box for selecting multiple user preferences.
  * skin: adds a drop-down selection box for selecting a single enabled skin.
@@ -46,44 +47,21 @@
  *
  * 'requires' can be one of:
  *
- * activeusers: max integer amount of active users a wiki may have in order to be able to modify this setting.
  * articles: max integer amount of articles a wiki may have in order to be able to modify this setting.
  * extensions: array of extensions that must be enabled in order to modify this setting. Different from 'from'. Only use if it requires more than one extension.
+ * files: max integer amount of files a wiki may have in order to be able to modify this setting.
  * pages: max integer amount of pages a wiki may have in order to be able to modify this setting.
  * permissions: array of permissions a user must have to be able to modify this setting. Regardless of this value, a user must always have the managewiki permission.
+ * users: max integer amount of users a wiki may have in order to be able to modify this setting.
  * visibility: an array. See below for available options.
  *
  * 'visibility' can be one of:
  *
- * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  * permissions: an array. Set to an array of permissions required for the setting to be visible.
+ * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  */
 
 $wgManageWikiNamespacesAdditional = [
-	'wgMetaNamespace' => [
-		'name' => 'What should the main namespace name for the project namespace be?',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'main' => true,
-		'talk' => false,
-		'constant' => true,
-		'only' => NS_PROJECT,
-		'overridedefault' => str_replace( [ ' ', ':' ], '_', $wgSitename ),
-		'help' => 'Also be sure to update <code>$wgMetaNamespaceTalk</code>.',
-		'requires' => [],
-	],
-	'wgMetaNamespaceTalk' => [
-		'name' => 'What should the talk namespace name for the project namespace be?',
-		'from' => 'mediawiki',
-		'type' => 'text',
-		'main' => false,
-		'talk' => true,
-		'constant' => true,
-		'only' => NS_PROJECT_TALK,
-		'overridedefault' => str_replace( [ ' ', ':' ], '_', "{$wgSitename}_talk" ),
-		'help' => 'Also be sure to update <code>$wgMetaNamespace</code>.',
-		'requires' => [],
-	],
 	'wgExtraSignatureNamespaces' => [
 		'name' => 'Enable "Signature" button on the edit toolbar under both main and talk pages?',
 		'from' => 'mediawiki',
@@ -158,11 +136,19 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => true,
 		'excluded' => [],
 		'options' => [
+			'index' => 'index',
+			'follow' => 'follow',
+			'nofollow' => 'nofollow',
+			'noindex' => 'noindex',
 			'index,follow' => 'index,follow',
-			'noindex,nofollow' => 'noindex,nofollow',
 			'index,nofollow' => 'index,nofollow',
+			'noindex,follow' => 'noindex,follow',
+			'noindex,nofollow' => 'noindex,nofollow',
 		],
-		'overridedefault' => $wgDefaultRobotPolicy,
+		'overridedefault' => [
+			NS_SPECIAL => 'noindex',
+			'default' => $wgDefaultRobotPolicy,
+		],
 		'help' => 'Overrides <code>$wgDefaultRobotPolicy</code> for this namespace.',
 		'requires' => [],
 	],
@@ -177,7 +163,7 @@ $wgManageWikiNamespacesAdditional = [
 			array_fill_keys( $wgContentNamespaces, true ),
 			[ 'default' => false ]
 		),
-		'help' => 'If this is enabled, the <code>__INDEX__</code> and <code>__NOINDEX__</code> magic words will not function in this namespace.',
+		'help' => 'If this is enabled, the <code><nowiki>__INDEX__</nowiki></code> and <code><nowiki>__NOINDEX__</nowiki></code> magic words will not function in this namespace.',
 		'requires' => [],
 	],
 	'egApprovedRevsEnabledNamespaces' => [
@@ -196,23 +182,12 @@ $wgManageWikiNamespacesAdditional = [
 		'help' => '',
 		'requires' => [],
 	],
-	'wgWPBNamespaces' => [
-		'name' => 'Enable WikidataPageBanner in this namespace?',
-		'from' => 'wikidatapagebanner',
-		'type' => 'check',
-		'main' => true,
-		'talk' => true,
-		'excluded' => [],
-		'overridedefault' => false,
-		'help' => '',
-		'requires' => [],
-	],
 	'wgCommentStreamsAllowedNamespaces' => [
 		'name' => 'Can comments appear in this namespace?',
 		'from' => 'commentstreams',
 		'type' => 'check',
 		'main' => true,
-		'talk' => false,
+		'talk' => true,
 		'excluded' => [],
 		'overridedefault' => array_merge(
 			array_fill_keys( $wgContentNamespaces, true ),
@@ -379,12 +354,55 @@ $wgManageWikiNamespacesAdditional = [
 	'wgUFAllowedNamespaces' => [
 		'name' => 'Allow UserFunctions to operate in this namespace?',
 		'from' => 'userfunctions',
+		'type' => 'vestyle',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		'overridedefault' => [
+			NS_MEDIAWIKI => true,
+			'default' => false,
+		],
+		'help' => '',
+		'requires' => [],
+	],
+	'wgWPBNamespaces' => [
+		'name' => 'Allow WikidataPageBanner to work in these namespaces?',
+		'from' => 'WikidataPageBanner',
 		'type' => 'check',
 		'main' => true,
 		'talk' => true,
 		'excluded' => [],
 		'overridedefault' => false,
 		'help' => '',
+		'requires' => [],
+	],
+	'wgWPBDisabledNamespaces' => [
+		'name' => 'Disable WikidataPageBanner from working in these namespaces?',
+		'from' => 'WikidataPageBanner',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		'overridedefault' => false,
+		'help' => '',
+		'requires' => [],
+	],
+	'wgMFNamespacesWithoutCollapsibleSections' => [
+		'name' => 'Disable collapsible sections in this namespace?',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		// See https://github.com/wikimedia/mediawiki-extensions-MobileFrontend?tab=readme-ov-file#wgmfnamespaceswithoutcollapsiblesections
+		'overridedefault' => [
+			NS_FILE => true,
+			NS_CATEGORY => true,
+			NS_SPECIAL => true,
+			NS_MEDIA => true,
+			'default' => false,
+		],
+		'help' => 'If enabled, collapsible sections will be disabled in this namespace on mobile devices.',
 		'requires' => [],
 	],
 ];

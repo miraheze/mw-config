@@ -1,16 +1,15 @@
 <?php
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
+use MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
-use MediaWiki\Html\Html;
+use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
-use MediaWiki\SpecialPage\SpecialPage;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
 
-$wgHooks['CreateWikiDataFactoryBuilder'][] = 'MirahezeFunctions::onCreateWikiDataFactoryBuilder';
 $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDatabaseLists';
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
@@ -24,22 +23,8 @@ $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 	return true;
 };
 
-if ( $wmgMirahezeContactPageFooter && $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
-		if ( $key === 'places' ) {
-			$footerlinks['contact'] = Html::element( 'a',
-				[
-					'href' => htmlspecialchars( SpecialPage::getTitleFor( 'Contact' )->getFullURL() ),
-					'rel' => 'noreferrer noopener',
-				],
-				$skin->msg( 'contactpage-label' )->text()
-			);
-		}
-	};
-}
-
 // Extensions
-if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
+if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	wfLoadExtensions( [
 		'CentralAuth',
 		'GlobalPreferences',
@@ -49,6 +34,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' && $wi->dbname !== 'srewiki' ) {
 
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
+	$wgCentralAuthEnableSul3 = false;
 
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 
@@ -77,9 +63,48 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 		],
 	];
 
+	// Default is null which makes it 10000.
+	$wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
+
+	$wgCirrusSearchExtraIndexSettings = [
+		// Number of merge threads to use. Use only 1 thread
+		// (instead of 3) to avoid updates interfering with
+		// actual searches
+		'merge.scheduler.max_thread_count' => 1,
+	];
+
+	// Turn off leading wildcard matches, they are a very slow and inefficient query
+	$wgCirrusSearchAllowLeadingWildcard = false;
+
+	// Our cluster often has issues completing master actions
+	// within the default 30s timeout.
+	$wgCirrusSearchMasterTimeout = '5m';
+
+	// Lower the timeouts - the defaults are too high and allow to scan too many
+	// pages. Keep client timeout relatively high in comparaison,
+	// but not higher than 60sec as it's the max time allowed for GET requests.
+	// we really don't want to timeout the client before the shard retrieval (we may
+	// release the poolcounter before the end of the query on the backend)
+	$wgCirrusSearchClientSideSearchTimeout = [
+		'comp_suggest' => 10,
+		'prefix' => 10,
+		// GET requests timeout at 60s, give some room to treat request timeout
+		'default' => 40,
+		'regex' => 50,
+	];
+
+	// cache morelike queries to ObjectCache for 24 hours
+	$wgCirrusSearchMoreLikeThisTTL = 86400;
+
+	$wgCirrusSearchRefreshInterval = 30;
+
 	if ( $wi->isExtensionActive( 'RelatedArticles' ) ) {
 		$wgRelatedArticlesUseCirrusSearch = true;
 	}
+}
+
+if ( $wi->isExtensionActive( 'DynamicPageList4' ) ) {
+	$wgDplSettings['maxCategoryCount'] = 10;
 }
 
 if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
@@ -117,7 +142,6 @@ if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 
 if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
-
 	$wgSocialProfileFileBackend = 'miraheze-swift';
 }
 
@@ -133,7 +157,12 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 		$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 	} else {
 		$wgDefaultUserOptions['visualeditor-enable'] = 0;
+		$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 	}
+}
+
+if ( $wi->isExtensionActive( 'CodeMirror' ) ) {
+	$wgDefaultUserOptions['usecodemirror'] = (int)$wmgCodeMirrorEnableDefault;
 }
 
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
@@ -144,7 +173,7 @@ if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
 $wgVirtualRestConfig = [
 	'modules' => [
 		'parsoid' => [
-			'url' => 'https://mw-lb.wikitide.net/w/rest.php',
+			'url' => 'https://mw-lb.miraheze.org/w/rest.php',
 			'domain' => $wi->server,
 			'prefix' => $wi->dbname,
 			'forwardCookies' => (bool)$cwPrivate,
@@ -160,7 +189,7 @@ $wgVirtualRestConfig = [
 ];
 
 if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgFlowParsoidURL = 'https://mw-lb.wikitide.net/w/rest.php';
+	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
 	$wgFlowParsoidPrefix = $wi->dbname;
 	$wgFlowParsoidTimeout = 50;
 	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
@@ -295,14 +324,18 @@ foreach ( $wi->getAllowedDomains() as $domain ) {
 
 // DataDump
 $wgDataDumpFileBackend = 'miraheze-swift';
+// T14516 - disable retries
+$wgDataDumpAllowRetries = false;
 
 $wgDataDump = [
 	'xml' => [
 		'file_ending' => '.xml.gz',
 		'useBackendTempStore' => true,
+		'chunkSize' => 512 * 1024 * 1024,
+		'startChunkSize' => 1 * 1024 * 1024 * 1024,
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/maintenance/dumpBackup.php",
+			'script' => 'dumpBackup',
 			'options' => [
 				'--full',
 				'--logs',
@@ -332,6 +365,8 @@ $wgDataDump = [
 	'image' => [
 		'file_ending' => '.tar.gz',
 		'useBackendTempStore' => true,
+		'chunkSize' => 512 * 1024 * 1024,
+		'startChunkSize' => 1 * 1024 * 1024 * 1024,
 		'logFailedExitCodeComments' => [
 			75 => 'The dump is too large. Please contact a member of the Technology team to assist with generating this dump.',
 		],
@@ -375,7 +410,7 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 		'useBackendTempStore' => true,
 		'generate' => [
 			'type' => 'mwscript',
-			'script' => "$IP/extensions/Flow/maintenance/dumpBackup.php",
+			'script' => 'extensions/Flow/dumpBackup',
 			'options' => [
 				'--full',
 				'--output',
@@ -387,32 +422,6 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 			'view' => 'view-dump',
 			'generate' => 'generate-dump',
 			'delete' => 'delete-dump',
-		],
-	];
-}
-
-// ContactPage configuration
-if ( $wi->isExtensionActive( 'ContactPage' ) ) {
-	$wgContactConfig = [
-		'default' => [
-			'RecipientUser' => $wmgContactPageRecipientUser ?? null,
-			'SenderEmail' => $wgPasswordSender,
-			'SenderName' => 'Contact Form on ' . $wgSitename,
-			'RequireDetails' => true,
-			// Should never be set to true
-			'IncludeIP' => false,
-			'MustBeLoggedIn' => false,
-			'AdditionalFields' => [
-				'Text' => [
-					'label-message' => 'emailmessage',
-					'type' => 'textarea',
-					'rows' => 20,
-					'required' => true,
-				],
-			],
-			'DisplayFormat' => 'table',
-			'RLModules' => [],
-			'RLStyleModules' => [],
 		],
 	];
 }
@@ -449,7 +458,7 @@ if ( !$wi->isExtensionActive( 'wikiseo' ) ) {
 
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
-	$wgFooterIcons['poweredby']['wikiapiary'] = [
+	$wgFooterIcons['wikiapairy']['wikiapiary'] = [
 		'src' => 'https://static.wikitide.net/commonswiki/b/b4/Monitored_by_WikiApiary.png',
 		'url' => 'https://wikiapiary.com/wiki/' . str_replace( ' ', '_', $wmgWikiapiaryFooterPageName ),
 		'alt' => 'Monitored by WikiApiary'
@@ -532,6 +541,40 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons && strpos( wfHostname(), 
 	];
 }
 
+if ( $wgDBname !== 'commonswikibeta' && $wgMirahezeCommons && strpos( wfHostname(), 'test' ) !== false ) {
+	$wgForeignFileRepos[] = [
+		'class' => ForeignDBViaLBRepo::class,
+		'name' => 'mirahezecommons',
+		'backend' => 'miraheze-swift',
+		'url' => 'https://static.wikitide.net/commonswikibeta',
+		'hashLevels' => 2,
+		'thumbScriptUrl' => false,
+		'transformVia404' => true,
+		'hasSharedCache' => true,
+		'descBaseUrl' => 'https://commons.mirabeta.org/wiki/File:',
+		'scriptDirUrl' => 'https://commons.mirabeta.org/w',
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400 * 7,
+		'wiki' => 'commonswikibeta',
+		'initialCapital' => true,
+		'zones' => [
+			'public' => [
+				'container' => 'local-public',
+			],
+			'thumb' => [
+				'container' => 'local-thumb',
+			],
+			'temp' => [
+				'container' => 'local-temp',
+			],
+			'deleted' => [
+				'container' => 'local-deleted',
+			],
+		],
+		'abbrvThreshold' => 160
+	];
+}
+
 // $wgLogos
 $wgLogos = [
 	'1x' => $wgLogo,
@@ -574,6 +617,13 @@ if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server )
 	);
 }
 
+// DataMaps
+if ( $wi->isExtensionActive( 'Interactive Data Maps' ) ) {
+	if ( $wgDataMapsEnableFandomPortingTools ) {
+		$wgDataMapsNamespaceId = 2900;
+	}
+}
+
 // JsonConfig
 if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	$wgJsonConfigs = [
@@ -595,7 +645,10 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 		],
 	];
 
-	if ( $wgDBname !== 'commonswiki' ) {
+	if ( $wgDBname !== 'commonswiki' &&
+		$wgDBname !== 'gpcommonswiki' &&
+		$wgDBname !== 'needforspeedwiki'
+	) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.miraheze.org/w/api.php'
 		];
@@ -657,25 +710,14 @@ unset( $vectorVersion );
 
 // Licensing variables
 
-$version = $wi->version;
-
-// Alpha is only available on the test server,
-// use beta (or stable if there currently is no beta)
-// for foreign metawiki links if the version is alpha.
-if ( $wi->version === MirahezeFunctions::MEDIAWIKI_VERSIONS['alpha'] ) {
-	$version = MirahezeFunctions::MEDIAWIKI_VERSIONS['beta'] ??
-		MirahezeFunctions::MEDIAWIKI_VERSIONS['stable'];
-}
-
-$beta = preg_match( '/^(.*)\.(mirabeta|nexttide)\.org$/', $wi->server );
-$mirahost = $beta ? 'mirabeta' : 'miraheze';
+$mirahost = $wi->isBeta() ? 'mirabeta' : 'miraheze';
 
 /**
  * Default values.
  * We can not set these in LocalSettings.php, to prevent them
  * from causing absolute overrides.
  */
-$wgRightsIcon = "https://meta.{$mirahost}.org/{$version}/resources/assets/licenses/cc-by-sa.png";
+$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-by-sa.png";
 $wgRightsText = 'Creative Commons Attribution Share Alike';
 $wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
@@ -693,7 +735,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = false;
 		break;
 	case 'cc-by':
-		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by.png';
+		$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-by.png";
 		$wgRightsText = 'Creative Commons Attribution 4.0 International (CC BY 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by/4.0';
 		break;
@@ -716,7 +758,7 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-sa/2.0/kr';
 		break;
 	case 'cc-by-sa-nc':
-		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-by-nc-sa.png';
+		$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-by-nc-sa.png";
 		$wgRightsText = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)';
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-sa/4.0/';
 		break;
@@ -726,17 +768,17 @@ switch ( $wmgWikiLicense ) {
 		$wgRightsUrl = 'https://creativecommons.org/licenses/by-nc-nd/4.0/';
 		break;
 	case 'cc-pd':
-		$wgRightsIcon = 'https://meta.miraheze.org/' . $version . '/resources/assets/licenses/cc-0.png';
+		$wgRightsIcon = "https://meta.$mirahost.org/{$wi->version}/resources/assets/licenses/cc-0.png";
 		$wgRightsText = 'CC0 Public Domain';
 		$wgRightsUrl = 'https://creativecommons.org/publicdomain/zero/1.0/';
 		break;
 	case 'gpl-v3':
-		$wgRightsIcon = 'https://www.gnu.org/graphics/gplv3-or-later.png';
+		$wgRightsIcon = 'https://static.wikitide.net/commonswiki/d/d8/Gplv3-or-later.png';
 		$wgRightsText = 'GPLv3';
 		$wgRightsUrl = 'https://www.gnu.org/licenses/gpl-3.0-standalone.html';
 		break;
 	case 'gfdl':
-		$wgRightsIcon = 'https://www.gnu.org/graphics/gfdl-logo-tiny.png';
+		$wgRightsIcon = 'https://static.wikitide.net/commonswiki/6/61/Gfdl-logo-tiny.png';
 		$wgRightsText = 'GNU Free Document License 1.3';
 		$wgRightsUrl = 'https://www.gnu.org/licenses/fdl-1.3.en.html';
 		break;
@@ -745,7 +787,7 @@ switch ( $wmgWikiLicense ) {
 }
 
 // Don't need a global here
-unset( $version );
+unset( $mirahost );
 
 /**
  * Make sure it works to override the footer icon
@@ -761,7 +803,7 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 
 // Kilobytes
 $wgMaxShellFileSize = 512 * 1024;
-$wgMaxShellMemory = 1024 * 1024;
+$wgMaxShellMemory = 1024 * 1024 * 2;
 
 // 50 seconds
 $wgMaxShellTime = 50;
@@ -890,9 +932,9 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $beta ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
 	'timeout' => 0.5,
-	'connect_timeout' => 0.01
+	'connect_timeout' => 0.01,
 ];
 
 // Mathoid
@@ -903,7 +945,7 @@ $mathoidHosts = [
 	'http://10.0.18.106:10044',
 ];
 
-$wgMathMathMLUrl = $beta ?
+$wgMathMathMLUrl = $wi->isBeta() ?
 	'http://10.0.15.118:10044' :
 	$mathoidHosts[array_rand( $mathoidHosts )];
 $wgMathSvgRenderer = 'mathoid';
@@ -911,7 +953,8 @@ $wgMathUseInternalRestbasePath = false;
 
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
-$wgHCaptchaProxy = 'http://bastion.wikitide.net:8080';
+$wgHCaptchaProxy = 'http://bastion.fsslc.wtnet:8080';
+$wgCaptchaClass = HCaptcha::class;
 $wgCaptchaStorageClass = CaptchaCacheStore::class;
 $wgCaptchaRegexes[] = '/<a +href/i';
 
@@ -926,3 +969,6 @@ $wgHTTPImportTimeout = 50;
 
 // Notifications
 $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
+
+// RecentChanges
+$wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;

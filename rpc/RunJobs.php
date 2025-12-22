@@ -22,6 +22,7 @@
 
 // This is for beta, DO NOT USE for production. Use RunSingleJob instead.
 
+use MediaWiki\Exception\MWExceptionHandler;
 use MediaWiki\MediaWikiServices;
 
 if ( !in_array( $_SERVER['REMOTE_ADDR'], [ '127.0.0.1', '0:0:0:0:0:0:0:1', '::1' ], true ) ) {
@@ -45,8 +46,8 @@ ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 
 // Session consistency is not helpful here and will slow things down in some cases
-$lbFactory = MediaWikiServices::getInstance()->getDBLoadBalancerFactory();
-$lbFactory->disableChronologyProtection();
+$chronologyProtector = MediaWikiServices::getInstance()->getChronologyProtector();
+$chronologyProtector->setEnabled( false );
 
 try {
 	$mediawiki = new MediaWiki();

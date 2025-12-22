@@ -1,9 +1,13 @@
 <?php
 
+use Wikimedia\Rdbms\LBFactoryMulti;
+use Wikimedia\Rdbms\LoadMonitor;
+use Wikimedia\Rdbms\LoadMonitorNull;
+
 if ( strpos( wfHostname(), 'test' ) === 0 ) {
 	// Mirabeta database configuration
 	$wgLBFactoryConf = [
-		'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
+		'class' => LBFactoryMulti::class,
 		'secret' => $wgSecretKey,
 		'sectionsByDB' => $wi->wikiDBClusters,
 		'sectionLoads' => [
@@ -42,12 +46,12 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 } else {
 	// Production database configuration
 	$wgLBFactoryConf = [
-		'class' => \Wikimedia\Rdbms\LBFactoryMulti::class,
+		'class' => LBFactoryMulti::class,
 		'secret' => $wgSecretKey,
 		'sectionsByDB' => $wi->wikiDBClusters,
 		'sectionLoads' => [
 			'DEFAULT' => [
-				'db171' => 0,
+				'db192' => 0,
 			],
 			'c1' => [
 				'db151' => 0,
@@ -60,6 +64,9 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 			],
 			'c4' => [
 				'db181' => 0,
+			],
+			's1' => [
+				'db192' => 0,
 			],
 		],
 		'serverTemplate' => [
@@ -78,11 +85,12 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 			'db161' => '10.0.16.128',
 			'db171' => '10.0.17.119',
 			'db181' => '10.0.18.102',
+			'db192'	=> '10.0.19.170',
 		],
 		'externalLoads' => [
 			'echo' => [
 				/** where the metawiki database is located */
-				'db171' => 0,
+				'db192' => 0,
 			],
 		],
 		'readOnlyBySection' => [
@@ -96,10 +104,10 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 	];
 }
 
-$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitor';
+$wgLBFactoryConf['loadMonitor']['class'] = LoadMonitor::class;
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
 if ( PHP_SAPI === 'cli' ) {
-	$wgLBFactoryConf['loadMonitor']['class'] = '\Wikimedia\Rdbms\LoadMonitorNull';
+	$wgLBFactoryConf['loadMonitor']['class'] = LoadMonitorNull::class;
 }
 
 $wgLBFactoryConf['loadMonitor']['maxConnCount'] = 350;
