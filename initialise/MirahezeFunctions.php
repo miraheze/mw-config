@@ -1112,12 +1112,7 @@ class MirahezeFunctions {
 		unset( $GLOBALS['globals'] );
 	}
 
-	/**
-	 * @param AuthenticationResponse $response
-	 * @param User | null $user
-	 * @param string | null $username
-	 */
-	public static function onAuthManagerLoginAuthenticateAudit( $response, $user, $username ) {
+	public static function onAuthManagerLoginAuthenticateAudit( AuthenticationResponse $response, ?User $user, ?string $username, array $extraData ): void {
 		$guessed = false;
 		if ( !$user && $username ) {
 			$user = MediaWikiServices::getInstance()
