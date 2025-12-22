@@ -14,6 +14,8 @@ $wgHooks['CreateWikiGenerateDatabaseLists'][] = 'MirahezeFunctions::onGenerateDa
 $wgHooks['ManageWikiCoreAddFormFields'][] = 'MirahezeFunctions::onManageWikiCoreAddFormFields';
 $wgHooks['ManageWikiCoreFormSubmission'][] = 'MirahezeFunctions::onManageWikiCoreFormSubmission';
 $wgHooks['MediaWikiServices'][] = 'MirahezeFunctions::onMediaWikiServices';
+// log suspicious or sensitive login attempts
+$wgHooks['AuthManagerLoginAuthenticateAudit'][] = 'MirahezeFunctions::onAuthManagerLoginAuthenticateAudit';
 $wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 	if ( $out->getTitle()->isSpecialPage() ) {
 		$out->setRobotPolicy( 'noindex,nofollow' );
